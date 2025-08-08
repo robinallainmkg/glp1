@@ -1,0 +1,25 @@
+{
+  "name": "glp1-affiliate-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "astro preview",
+    "generate": "node scripts/generate-from-csv.mjs glp-1_clusters_2025-08-07.csv",
+    "generate-database": "node scripts/generate-database-v2.mjs",
+    "apply:prompt": "node scripts/apply-prompt.mjs prompts/next-prompt.txt",
+    "clean": "rm -rf dist .astro",
+    "type-check": "astro check",
+    "lint": "echo 'No linting configured yet'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "dependencies": {
+    "astro": "^4.10.0",
+    "gray-matter": "^4.0.3",
+    "papaparse": "^5.4.1",
+    "slugify": "^1.6.6"
+  }
+}

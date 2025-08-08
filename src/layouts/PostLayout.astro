@@ -1,0 +1,743 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    author: string;
+    date: string;
+    readingTime: number;
+    category: string;
+    keywords?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+
+// Fonction pour générer les encarts d'affiliation adaptés à la catégorie
+function getAffiliateBoxes(category: string) {
+  const boxes = {
+    'glp1-cout': [
+      {
+        title: '💰 Complément Minceur Recommandé',
+        description: 'Optimisez vos résultats avec ce complément naturel spécialement formulé pour accompagner votre traitement GLP-1.',
+        cta: 'Découvrir le Complément',
+        price: '39,90 €'
+      },
+      {
+        title: '🧴 Crème Anti-Vergetures Premium',
+        description: 'Prévenez l\'apparition de vergetures durant votre perte de poids avec cette crème enrichie en collagène.',
+        cta: 'Commander Maintenant',
+        price: '49,90 €'
+      }
+    ],
+    'medicaments-glp1': [
+      {
+        title: '💊 Kit de Suivi Glycémie',
+        description: 'Surveillez facilement votre glycémie avec ce kit complet incluant lecteur connecté et bandelettes.',
+        cta: 'Voir le Kit',
+        price: '89,90 €'
+      },
+      {
+        title: '🧴 Gel Apaisant Injection',
+        description: 'Apaisez les zones d\'injection avec ce gel rafraîchissant aux extraits naturels d\'aloe vera.',
+        cta: 'Acheter le Gel',
+        price: '24,90 €'
+      }
+    ],
+    'glp1-perte-de-poids': [
+      {
+        title: '⚖️ Balance Connectée Premium',
+        description: 'Suivez précisément vos progrès avec cette balance intelligente qui analyse composition corporelle.',
+        cta: 'Découvrir la Balance',
+        price: '79,90 €'
+      },
+      {
+        title: '🌟 Sérum Raffermissant Corps',
+        description: 'Maintenez la fermeté de votre peau pendant la perte de poids avec ce sérum aux peptides.',
+        cta: 'Commander le Sérum',
+        price: '59,90 €'
+      }
+    ],
+    'effets-secondaires-glp1': [
+      {
+        title: '🌿 Complément Digestif Naturel',
+        description: 'Soulagez les nausées et inconforts digestifs avec ce complément aux extraits de gingembre.',
+        cta: 'Essayer le Complément',
+        price: '29,90 €'
+      },
+      {
+        title: '💧 Électrolytes Premium',
+        description: 'Maintenez votre hydratation optimale avec cette boisson aux électrolytes sans sucre.',
+        cta: 'Commander',
+        price: '34,90 €'
+      }
+    ],
+    'glp1-diabete': [
+      {
+        title: '📱 Application Suivi Diabète',
+        description: 'Gérez votre diabète efficacement avec cette app premium de suivi glycémique et alimentaire.',
+        cta: 'Télécharger l\'App',
+        price: '9,99 €/mois'
+      },
+      {
+        title: '🍯 Édulcorant Naturel Bio',
+        description: 'Sucrez vos aliments sans impact glycémique avec cet édulcorant naturel certifié bio.',
+        cta: 'Découvrir',
+        price: '19,90 €'
+      }
+    ],
+    'regime-glp1': [
+      {
+        title: '🥗 Livre de Recettes GLP-1',
+        description: 'Plus de 100 recettes délicieuses adaptées aux traitements GLP-1 par une nutritionniste.',
+        cta: 'Acheter le Livre',
+        price: '24,90 €'
+      },
+      {
+        title: '🧊 Blender Haute Performance',
+        description: 'Préparez facilement vos smoothies protéinés avec ce blender professionnel compact.',
+        cta: 'Voir le Blender',
+        price: '149,90 €'
+      }
+    ],
+    'alternatives-glp1': [
+      {
+        title: '🌿 Complément Coupe-Faim Naturel',
+        description: 'Alternative naturelle aux GLP-1 avec des extraits de plantes reconnues pour réduire l\'appétit.',
+        cta: 'Découvrir l\'Alternative',
+        price: '44,90 €'
+      },
+      {
+        title: '🍵 Thé Minceur Bio Premium',
+        description: 'Mélange exclusif de plantes bio pour accompagner naturellement votre perte de poids.',
+        cta: 'Commander le Thé',
+        price: '27,90 €'
+      }
+    ],
+    'medecins-glp1-france': [
+      {
+        title: '📋 Consultation Nutrition en Ligne',
+        description: 'Bénéficiez d\'un suivi personnalisé avec nos nutritionnistes spécialisés GLP-1.',
+        cta: 'Réserver une Consultation',
+        price: '79,90 €'
+      },
+      {
+        title: '📊 Bilan Métabolique Complet',
+        description: 'Analysez votre métabolisme avec ce bilan sanguin complet à domicile.',
+        cta: 'Commander le Bilan',
+        price: '149,90 €'
+      }
+    ],
+    'recherche-glp1': [
+      {
+        title: '📚 Accès Études Scientifiques',
+        description: 'Base de données premium avec accès aux dernières études sur les traitements GLP-1.',
+        cta: 'Accéder aux Études',
+        price: '19,90 €/mois'
+      },
+      {
+        title: '🔬 Kit Test Métabolique',
+        description: 'Analysez votre réponse métabolique avec ce kit de tests à domicile.',
+        cta: 'Commander le Kit',
+        price: '99,90 €'
+      }
+    ]
+  };
+
+  return boxes[category] || boxes['glp1-perte-de-poids'];
+}
+
+const affiliateBoxes = getAffiliateBoxes(frontmatter.category);
+
+// Fonction pour obtenir l'auteur avec sa spécialité
+function getAuthorInfo(authorName: string) {
+  const authors = {
+    'Dr. Émilie Martin': {
+      name: 'Dr. Émilie Martin',
+      role: 'Médecin spécialisée en endocrinologie',
+      expertise: 'Diabétologie et traitements GLP-1',
+      avatar: '👩‍⚕️'
+    },
+    'Julien Lefèvre': {
+      name: 'Julien Lefèvre',
+      role: 'Nutritionniste certifié',
+      expertise: 'Nutrition et perte de poids',
+      avatar: '👨‍🍳'
+    },
+    'Sophie Dubois': {
+      name: 'Sophie Dubois',
+      role: 'Experte beauté et cosmétiques',
+      expertise: 'Soins de la peau et bien-être',
+      avatar: '👩‍💄'
+    },
+    'Karim Benali': {
+      name: 'Karim Benali',
+      role: 'Journaliste santé',
+      expertise: 'Recherche médicale et innovation',
+      avatar: '✍️'
+    }
+  };
+
+  return authors[authorName] || authors['Dr. Émilie Martin'];
+}
+
+const authorInfo = getAuthorInfo(frontmatter.author);
+---
+
+<BaseLayout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  keywords={frontmatter.keywords}
+>
+  <div class="container">
+    <article class="post">
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="article-category-badge">
+          {frontmatter.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+        </div>
+        <h1 class="article-title">{frontmatter.title}</h1>
+        <p class="article-description">{frontmatter.description}</p>
+        
+        <div class="article-meta">
+          <div class="author-info">
+            <span class="author-avatar">{authorInfo.avatar}</span>
+            <div class="author-details">
+              <span class="author-name">{authorInfo.name}</span>
+              <span class="author-role">{authorInfo.role}</span>
+            </div>
+          </div>
+          <div class="article-stats">
+            <span class="reading-time">📖 {frontmatter.readingTime} min de lecture</span>
+            <span class="publish-date">📅 {new Date(frontmatter.date).toLocaleDateString('fr-FR')}</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Table of Contents -->
+      <div class="table-of-contents" id="toc">
+        <h3>📋 Dans cet article</h3>
+        <ul id="toc-list">
+          <!-- Généré automatiquement par JavaScript -->
+        </ul>
+      </div>
+
+      <!-- Article Content -->
+      <div class="article-content">
+        <!-- Premier encart d'affiliation après l'introduction -->
+        <div class="affiliate-box" id="affiliate-box-1">
+          <div class="affiliate-content">
+            <h3>{affiliateBoxes[0].title}</h3>
+            <p>{affiliateBoxes[0].description}</p>
+            <div class="affiliate-cta">
+              <span class="affiliate-price">{affiliateBoxes[0].price}</span>
+              <a href="#" class="btn btn-secondary">{affiliateBoxes[0].cta}</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenu principal de l'article -->
+        <div class="content-wrapper">
+          <slot />
+        </div>
+
+        <!-- Deuxième encart d'affiliation avant la conclusion -->
+        <div class="affiliate-box" id="affiliate-box-2">
+          <div class="affiliate-content">
+            <h3>{affiliateBoxes[1].title}</h3>
+            <p>{affiliateBoxes[1].description}</p>
+            <div class="affiliate-cta">
+              <span class="affiliate-price">{affiliateBoxes[1].price}</span>
+              <a href="#" class="btn btn-secondary">{affiliateBoxes[1].cta}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Author Bio -->
+      <div class="author-bio">
+        <div class="author-bio-avatar">
+          <span class="author-avatar-large">{authorInfo.avatar}</span>
+        </div>
+        <div class="author-bio-content">
+          <h4>À propos de {authorInfo.name}</h4>
+          <p class="author-bio-role">{authorInfo.role}</p>
+          <p class="author-bio-expertise">Spécialisé(e) en {authorInfo.expertise}</p>
+          <p class="author-bio-description">
+            Expert(e) reconnu(e) dans le domaine des traitements GLP-1 en France, 
+            {authorInfo.name} partage ses connaissances pour vous accompagner dans votre parcours de santé.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <section class="faq" id="faq">
+        <h2>❓ Questions Fréquentes</h2>
+        <div class="faq-container">
+          <!-- FAQ générée automatiquement ou définie dans le frontmatter -->
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <nav class="article-navigation">
+        <div class="nav-section">
+          <h4>📚 Articles Similaires</h4>
+          <div class="related-articles">
+            <!-- Généré automatiquement selon la catégorie -->
+          </div>
+        </div>
+        <div class="nav-section">
+          <h4>🏠 Retour aux catégories</h4>
+          <a href={`/${frontmatter.category}/`} class="btn btn-outline">
+            Voir tous les articles {frontmatter.category.replace('-', ' ')}
+          </a>
+        </div>
+      </nav>
+    </article>
+  </div>
+
+  <style>
+    /* Article Styles */
+    .post {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--spacing-8) 0;
+    }
+
+    .article-header {
+      margin-bottom: var(--spacing-12);
+      text-align: center;
+    }
+
+    .article-category-badge {
+      display: inline-block;
+      background: var(--accent-green);
+      color: white;
+      padding: var(--spacing-2) var(--spacing-4);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .article-title {
+      font-size: var(--font-size-4xl);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: var(--spacing-4);
+      color: var(--gray-900);
+    }
+
+    .article-description {
+      font-size: var(--font-size-xl);
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-8);
+      font-weight: 400;
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-6);
+      background: var(--gray-50);
+      border-radius: var(--radius-xl);
+      flex-wrap: wrap;
+      gap: var(--spacing-4);
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+    }
+
+    .author-avatar {
+      font-size: var(--font-size-2xl);
+    }
+
+    .author-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-name {
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .author-role {
+      font-size: var(--font-size-sm);
+      color: var(--gray-600);
+    }
+
+    .article-stats {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-1);
+      font-size: var(--font-size-sm);
+      color: var(--gray-600);
+    }
+
+    /* Table of Contents */
+    .table-of-contents {
+      background: white;
+      border: 2px solid var(--primary-blue);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-6);
+      margin-bottom: var(--spacing-8);
+    }
+
+    .table-of-contents h3 {
+      color: var(--primary-blue);
+      margin-bottom: var(--spacing-4);
+      font-size: var(--font-size-lg);
+    }
+
+    #toc-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #toc-list li {
+      margin-bottom: var(--spacing-2);
+    }
+
+    #toc-list a {
+      color: var(--gray-700);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      display: block;
+      padding: var(--spacing-2);
+      border-radius: var(--radius-md);
+    }
+
+    #toc-list a:hover {
+      background: var(--gray-100);
+      color: var(--primary-blue);
+    }
+
+    /* Article Content */
+    .article-content {
+      font-size: var(--font-size-lg);
+      line-height: 1.8;
+      color: var(--gray-700);
+    }
+
+    .content-wrapper h2 {
+      font-size: var(--font-size-3xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin: var(--spacing-12) 0 var(--spacing-6);
+      padding-bottom: var(--spacing-3);
+      border-bottom: 3px solid var(--primary-blue);
+    }
+
+    .content-wrapper h3 {
+      font-size: var(--font-size-2xl);
+      font-weight: 600;
+      color: var(--gray-900);
+      margin: var(--spacing-10) 0 var(--spacing-4);
+    }
+
+    .content-wrapper h4 {
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      color: var(--gray-800);
+      margin: var(--spacing-8) 0 var(--spacing-3);
+    }
+
+    .content-wrapper p {
+      margin-bottom: var(--spacing-6);
+      line-height: 1.8;
+    }
+
+    .content-wrapper ul,
+    .content-wrapper ol {
+      margin-bottom: var(--spacing-6);
+      padding-left: var(--spacing-6);
+    }
+
+    .content-wrapper li {
+      margin-bottom: var(--spacing-2);
+      line-height: 1.7;
+    }
+
+    .content-wrapper blockquote {
+      background: var(--gray-50);
+      border-left: 4px solid var(--primary-blue);
+      padding: var(--spacing-4) var(--spacing-6);
+      margin: var(--spacing-8) 0;
+      border-radius: var(--radius-lg);
+      font-style: italic;
+      color: var(--gray-700);
+    }
+
+    .content-wrapper strong {
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .content-wrapper em {
+      color: var(--primary-blue);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* Affiliate Boxes */
+    .affiliate-box {
+      background: linear-gradient(135deg, var(--accent-green-light), var(--accent-green));
+      color: white;
+      padding: var(--spacing-8);
+      border-radius: var(--radius-xl);
+      margin: var(--spacing-12) 0;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .affiliate-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .affiliate-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .affiliate-box h3 {
+      color: white;
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .affiliate-box p {
+      color: white;
+      opacity: 0.95;
+      margin-bottom: var(--spacing-6);
+      line-height: 1.6;
+      font-size: var(--font-size-lg);
+    }
+
+    .affiliate-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-4);
+      flex-wrap: wrap;
+    }
+
+    .affiliate-price {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: white;
+    }
+
+    .affiliate-box .btn {
+      background: white;
+      color: var(--accent-green);
+      font-weight: 700;
+      padding: var(--spacing-4) var(--spacing-8);
+      font-size: var(--font-size-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .affiliate-box .btn:hover {
+      background: var(--gray-100);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      color: var(--accent-green);
+      text-decoration: none;
+    }
+
+    /* Author Bio */
+    .author-bio {
+      display: flex;
+      gap: var(--spacing-6);
+      background: white;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-8);
+      margin: var(--spacing-12) 0;
+    }
+
+    .author-bio-avatar {
+      flex-shrink: 0;
+    }
+
+    .author-avatar-large {
+      font-size: var(--font-size-5xl);
+      display: block;
+    }
+
+    .author-bio-content h4 {
+      color: var(--gray-900);
+      font-size: var(--font-size-xl);
+      margin-bottom: var(--spacing-2);
+    }
+
+    .author-bio-role {
+      color: var(--primary-blue);
+      font-weight: 600;
+      margin-bottom: var(--spacing-1);
+    }
+
+    .author-bio-expertise {
+      color: var(--gray-600);
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--spacing-3);
+    }
+
+    .author-bio-description {
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq {
+      margin: var(--spacing-16) 0;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: var(--spacing-8);
+      font-size: var(--font-size-3xl);
+    }
+
+    /* Navigation */
+    .article-navigation {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-8);
+      margin-top: var(--spacing-16);
+      padding-top: var(--spacing-8);
+      border-top: 2px solid var(--gray-200);
+    }
+
+    .nav-section h4 {
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .related-articles {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-title {
+        font-size: var(--font-size-3xl);
+      }
+
+      .article-description {
+        font-size: var(--font-size-lg);
+      }
+
+      .article-meta {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .author-bio {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .affiliate-cta {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .article-navigation {
+        grid-template-columns: 1fr;
+      }
+
+      .content-wrapper h2 {
+        font-size: var(--font-size-2xl);
+      }
+    }
+  </style>
+
+  <script>
+    // Génération automatique de la table des matières
+    document.addEventListener('DOMContentLoaded', function() {
+      const tocList = document.getElementById('toc-list');
+      const headings = document.querySelectorAll('.content-wrapper h2, .content-wrapper h3');
+      
+      if (headings.length > 0 && tocList) {
+        headings.forEach((heading, index) => {
+          // Créer un ID pour le heading
+          const id = `heading-${index}`;
+          heading.id = id;
+          
+          // Créer l'élément de la TOC
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = `#${id}`;
+          a.textContent = heading.textContent;
+          a.style.paddingLeft = heading.tagName === 'H3' ? '20px' : '0';
+          
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+      } else {
+        // Cacher la TOC s'il n'y a pas de headings
+        document.getElementById('toc').style.display = 'none';
+      }
+      
+      // Smooth scroll pour les liens de la TOC
+      document.querySelectorAll('#toc-list a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+
+    // Insertion automatique des encarts d'affiliation
+    document.addEventListener('DOMContentLoaded', function() {
+      const content = document.querySelector('.content-wrapper');
+      const paragraphs = content.querySelectorAll('p');
+      const affiliateBox1 = document.getElementById('affiliate-box-1');
+      const affiliateBox2 = document.getElementById('affiliate-box-2');
+      
+      if (paragraphs.length >= 3) {
+        // Insérer le premier encart après le 3ème paragraphe (après l'intro)
+        const targetParagraph1 = paragraphs[2];
+        if (targetParagraph1 && affiliateBox1) {
+          targetParagraph1.parentNode.insertBefore(affiliateBox1, targetParagraph1.nextSibling);
+        }
+        
+        // Insérer le deuxième encart avant les 3 derniers paragraphes
+        if (paragraphs.length >= 6) {
+          const targetParagraph2 = paragraphs[paragraphs.length - 3];
+          if (targetParagraph2 && affiliateBox2) {
+            targetParagraph2.parentNode.insertBefore(affiliateBox2, targetParagraph2);
+          }
+        }
+      }
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,742 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+}
+
+const { title, description, keywords = "" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href={canonicalURL}>
+  
+  <!-- SEO Meta Tags -->
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {keywords && <meta name="keywords" content={keywords}>}
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content="/og-image.jpg">
+  
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={canonicalURL}>
+  <meta property="twitter:title" content={title}>
+  <meta property="twitter:description" content={description}>
+  <meta property="twitter:image" content="/og-image.jpg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav-brand">
+        <a href="/" class="brand-link">
+          <img src="/logo.svg" alt="GLP-1 France" class="brand-logo">
+        </a>
+      </div>
+
+      <!-- Barre de recherche -->
+      <div class="search-container">
+        <div class="search-box">
+          <input 
+            type="text" 
+            placeholder="Rechercher un article..." 
+            id="search-input"
+            class="search-input"
+            autocomplete="off"
+          >
+          <div class="search-icon">🔍</div>
+          <div id="search-results" class="search-results hidden"></div>
+          <div id="search-suggestions" class="search-suggestions hidden"></div>
+        </div>
+      </div>
+      
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="/glp1-cout/" class="nav-link">Prix</a>
+          </li>
+          <li class="nav-item">
+            <a href="/medicaments-glp1/" class="nav-link">Médicaments</a>
+          </li>
+          <li class="nav-item">
+            <a href="/glp1-perte-de-poids/" class="nav-link">Perte de Poids</a>
+          </li>
+          <li class="nav-item">
+            <a href="/effets-secondaires-glp1/" class="nav-link">Effets</a>
+          </li>
+          <li class="nav-item">
+            <a href="/avant-apres-glp1/" class="nav-link">Témoignages</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Plus ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="/experts/" class="dropdown-link">Nos Experts</a></li>
+              <li><a href="/guide-beaute-perte-de-poids-glp1/" class="dropdown-link">Guide Gratuit</a></li>
+              <li><a href="/glp1-diabete/" class="dropdown-link">Diabète</a></li>
+              <li><a href="/regime-glp1/" class="dropdown-link">Régime</a></li>
+              <li><a href="/alternatives-glp1/" class="dropdown-link">Alternatives</a></li>
+              <li><a href="/medecins-glp1-france/" class="dropdown-link">Médecins</a></li>
+              <li><a href="/recherche-glp1/" class="dropdown-link">Recherche</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </header>
+  
+  <main class="main">
+    <slot />
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">GLP-1 France</h3>
+          <p class="footer-text">
+            Votre guide complet sur les traitements GLP-1 en France. 
+            Informations médicales, conseils et actualités.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="/glp1-cout/">Prix & Achat</a></li>
+            <li><a href="/medicaments-glp1/">Médicaments</a></li>
+            <li><a href="/glp1-perte-de-poids/">Perte de Poids</a></li>
+            <li><a href="/effets-secondaires-glp1/">Effets Secondaires</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Ressources</h4>
+          <ul class="footer-links">
+            <li><a href="/glp1-diabete/">GLP-1 et Diabète</a></li>
+            <li><a href="/regime-glp1/">Régime Alimentaire</a></li>
+            <li><a href="/alternatives-glp1/">Alternatives</a></li>
+            <li><a href="/medecins-glp1-france/">Médecins</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Newsletter</h4>
+          <p class="footer-text">Recevez nos derniers conseils et actualités GLP-1</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Votre email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">S'abonner</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 GLP-1 France. Tous droits réservés. | 
+          <a href="/mentions-legales/">Mentions légales</a> | 
+          <a href="/politique-confidentialite/">Politique de confidentialité</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    navToggle?.addEventListener('click', () => {
+      navMenu?.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu?.classList.remove('active');
+        navToggle?.classList.remove('active');
+      });
+    });
+
+    // Dropdown menu functionality
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      
+      toggle?.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+    });
+
+    // Base de données des articles pour la recherche - Étendue avec plus d'articles
+    const articlesData = [
+      // Prix & Coût
+      {
+        title: "Acheter Wegovy en France",
+        slug: "/glp1-cout/acheter-wegovy-en-france/",
+        category: "Prix & Coût",
+        keywords: ["wegovy", "acheter", "france", "pharmacie", "ordonnance", "prix"]
+      },
+      {
+        title: "Wegovy Prix",
+        slug: "/glp1-cout/wegovy-prix/",
+        category: "Prix & Coût", 
+        keywords: ["wegovy", "prix", "coût", "remboursement", "tarif"]
+      },
+      {
+        title: "Saxenda Prix Pharmacie",
+        slug: "/glp1-cout/saxenda-prix-pharmacie/",
+        category: "Prix & Coût",
+        keywords: ["saxenda", "prix", "pharmacie", "coût", "liraglutide"]
+      },
+      {
+        title: "Opération pour Maigrir Prix",
+        slug: "/glp1-cout/operation-pour-maigrir-prix/",
+        category: "Prix & Coût",
+        keywords: ["chirurgie", "opération", "prix", "sleeve", "bypass", "coût"]
+      },
+      {
+        title: "Wegovy Remboursement Mutuelle",
+        slug: "/glp1-cout/wegovy-remboursement-mutuelle/",
+        category: "Prix & Coût",
+        keywords: ["wegovy", "remboursement", "mutuelle", "sécu", "prise en charge"]
+      },
+      {
+        title: "Anneau Gastrique Prix CMU",
+        slug: "/glp1-cout/anneau-gastrique-prix-cmu/",
+        category: "Prix & Coût",
+        keywords: ["anneau", "gastrique", "cmu", "prix", "chirurgie", "bariatrique"]
+      },
+
+      // Médicaments
+      {
+        title: "Médicament pour Maigrir Très Puissant",
+        slug: "/medicaments-glp1/medicament-pour-maigrir-tres-puissant/",
+        category: "Médicaments",
+        keywords: ["médicament", "puissant", "maigrir", "efficace", "glp1"]
+      },
+      {
+        title: "Médicament Américain pour Maigrir",
+        slug: "/medicaments-glp1/medicament-americain-pour-maigrir/",
+        category: "Médicaments",
+        keywords: ["américain", "usa", "médicament", "wegovy", "ozempic", "innovation"]
+      },
+      {
+        title: "Mounjaro Injection pour Maigrir",
+        slug: "/medicaments-glp1/mounjaro-injection-pour-maigrir/",
+        category: "Médicaments",
+        keywords: ["mounjaro", "injection", "tirzepatide", "eli lilly", "nouveau"]
+      },
+      {
+        title: "Trulicity Danger",
+        slug: "/medicaments-glp1/trulicity-danger/",
+        category: "Médicaments",
+        keywords: ["trulicity", "danger", "effets", "dulaglutide", "sécurité"]
+      },
+      {
+        title: "Dosage Trulicity",
+        slug: "/medicaments-glp1/dosage-trulicity/",
+        category: "Médicaments",
+        keywords: ["trulicity", "dosage", "posologie", "dose", "prescription"]
+      },
+      {
+        title: "Liraglutide Perte de Poids Avis",
+        slug: "/medicaments-glp1/liraglutide-perte-de-poids-avis/",
+        category: "Médicaments",
+        keywords: ["liraglutide", "avis", "perte de poids", "saxenda", "témoignages"]
+      },
+
+      // Perte de Poids
+      {
+        title: "GLP-1 et Perte de Poids",
+        slug: "/glp1-perte-de-poids/glp1-perte-de-poids/",
+        category: "Perte de Poids",
+        keywords: ["glp1", "perte", "poids", "efficacité", "mécanisme"]
+      },
+      {
+        title: "Avant Après GLP-1",
+        slug: "/glp1-perte-de-poids/avant-apres-glp1/",
+        category: "Perte de Poids",
+        keywords: ["avant", "après", "témoignages", "transformation", "résultats"]
+      },
+      {
+        title: "Ozempic Régime",
+        slug: "/glp1-perte-de-poids/ozempic-regime/",
+        category: "Perte de Poids",
+        keywords: ["ozempic", "régime", "alimentation", "protocole", "menu"]
+      },
+      {
+        title: "Pilule qui Fait Maigrir",
+        slug: "/glp1-perte-de-poids/pilule-qui-fait-maigrir/",
+        category: "Perte de Poids",
+        keywords: ["pilule", "oral", "mysimba", "orlistat", "comprimé"]
+      },
+      {
+        title: "Chirurgie Bariatrique",
+        slug: "/glp1-perte-de-poids/chirurgie-bariatrique/",
+        category: "Perte de Poids",
+        keywords: ["chirurgie", "bariatrique", "sleeve", "bypass", "gastroplastie"]
+      },
+      {
+        title: "Diabète Amaigrissement Rapide",
+        slug: "/glp1-perte-de-poids/diabete-amaigrissement-rapide/",
+        category: "Perte de Poids",
+        keywords: ["diabète", "amaigrissement", "rapide", "perte de poids", "glp1"]
+      },
+
+      // Effets Secondaires
+      {
+        title: "Ozempic Danger",
+        slug: "/effets-secondaires-glp1/ozempic-danger/",
+        category: "Effets Secondaires",
+        keywords: ["ozempic", "danger", "effets", "secondaires", "risques"]
+      },
+      {
+        title: "Wegovy Danger",
+        slug: "/effets-secondaires-glp1/wegovy-danger/",
+        category: "Effets Secondaires",
+        keywords: ["wegovy", "danger", "sécurité", "risques", "effets"]
+      },
+      {
+        title: "Wegovy Dosage",
+        slug: "/effets-secondaires-glp1/wegovy-dosage/",
+        category: "Effets Secondaires",
+        keywords: ["wegovy", "dosage", "posologie", "escalade", "dose"]
+      },
+      {
+        title: "Insulevel Effet Indésirable",
+        slug: "/effets-secondaires-glp1/insulevel-effet-indesirable/",
+        category: "Effets Secondaires",
+        keywords: ["insulevel", "effet", "indésirable", "secondaire", "sécurité"]
+      },
+
+      // Médecins
+      {
+        title: "Endocrinologue pour Maigrir",
+        slug: "/medecins-glp1-france/endocrinologue-pour-maigrir/",
+        category: "Médecins",
+        keywords: ["endocrinologue", "maigrir", "spécialiste", "consultation", "prescription"]
+      },
+      {
+        title: "Clinique pour Obésité",
+        slug: "/medecins-glp1-france/clinique-pour-obesite/",
+        category: "Médecins",
+        keywords: ["clinique", "obésité", "centre", "spécialisé", "traitement"]
+      },
+
+      // Alternatives
+      {
+        title: "Semaglutide Naturel",
+        slug: "/alternatives-glp1/semaglutide-naturel/",
+        category: "Alternatives",
+        keywords: ["semaglutide", "naturel", "alternative", "plantes", "bio"]
+      },
+      {
+        title: "Peut-on Guérir du Diabète",
+        slug: "/alternatives-glp1/peut-on-guerir-du-diabete/",
+        category: "Alternatives",
+        keywords: ["guérir", "diabète", "rémission", "guérison", "traitement"]
+      },
+
+      // Diabète
+      {
+        title: "Traitement Insulinique",
+        slug: "/glp1-diabete/traitement-insulinique/",
+        category: "Diabète",
+        keywords: ["insuline", "traitement", "diabète", "injection", "protocole"]
+      }
+    ];
+
+    // Mots-clés populaires basés sur les recherches réelles
+    const popularKeywords = [
+      "wegovy prix", "ozempic danger", "saxenda avis", "mounjaro injection",
+      "médicament pour maigrir", "avant après glp1", "endocrinologue spécialisé",
+      "chirurgie bariatrique prix", "trulicity dosage", "ozempic régime",
+      "wegovy remboursement", "glp1 efficacité", "semaglutide naturel",
+      "clinique obésité", "pilule maigrir", "liraglutide avis"
+    ];
+
+    // Système de recherche
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchSuggestions = document.getElementById('search-suggestions');
+
+    let searchTimeout;
+
+    searchInput?.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      
+      // Clear previous timeout
+      clearTimeout(searchTimeout);
+      
+      if (query.length === 0) {
+        hideSearchResults();
+        showPopularKeywords();
+        return;
+      }
+
+      if (query.length === 1) {
+        showAutocompleteSuggestions(query);
+        return;
+      }
+
+      if (query.length < 2) {
+        hideSearchResults();
+        return;
+      }
+
+      // Debounce search
+      searchTimeout = setTimeout(() => {
+        performSearch(query);
+      }, 200); // Réduit de 300ms à 200ms pour plus de réactivité
+    });
+
+    searchInput?.addEventListener('focus', () => {
+      if (searchInput.value.length === 0) {
+        showPopularKeywords();
+      }
+    });
+
+    searchInput?.addEventListener('blur', () => {
+      // Délai plus long pour permettre les clics sur les suggestions
+      setTimeout(() => {
+        hideSearchResults();
+      }, 300);
+    });
+
+    function performSearch(query) {
+      // Nettoie et normalise la requête
+      const cleanQuery = query.trim().toLowerCase();
+      if (cleanQuery.length === 0) {
+        hideSearchResults();
+        return;
+      }
+
+      // Recherche améliorée avec score de pertinence
+      const results = articlesData.map(article => {
+        let score = 0;
+        
+        // Score pour correspondance exacte dans le titre
+        if (article.title.toLowerCase().includes(cleanQuery)) {
+          score += 10;
+        }
+        
+        // Score pour correspondance partielle dans le titre
+        const titleWords = article.title.toLowerCase().split(' ');
+        const queryWords = cleanQuery.split(' ');
+        queryWords.forEach(queryWord => {
+          titleWords.forEach(titleWord => {
+            if (titleWord.includes(queryWord) && queryWord.length > 2) {
+              score += 5;
+            }
+          });
+        });
+        
+        // Score pour correspondance dans les mots-clés
+        article.keywords.forEach(keyword => {
+          if (keyword.toLowerCase().includes(cleanQuery)) {
+            score += 7;
+          }
+          queryWords.forEach(queryWord => {
+            if (keyword.toLowerCase().includes(queryWord) && queryWord.length > 2) {
+              score += 3;
+            }
+          });
+        });
+        
+        // Score pour correspondance dans la catégorie
+        if (article.category.toLowerCase().includes(cleanQuery)) {
+          score += 4;
+        }
+        
+        return { ...article, score };
+      })
+      .filter(article => article.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 8); // Augmenté à 8 résultats
+
+      // Force l'affichage des résultats même s'il y en a peu
+      displaySearchResults(results, cleanQuery);
+    }
+
+    function displaySearchResults(results, query) {
+      selectedIndex = -1; // Reset keyboard selection
+      
+      if (results.length === 0) {
+        searchResults.innerHTML = `
+          <div class="search-result-item no-results">
+            <div class="search-result-title">Aucun résultat pour "${query}"</div>
+            <div class="search-result-category">Essayez avec des mots-clés comme "wegovy", "ozempic" ou "prix"</div>
+          </div>
+        `;
+      } else {
+        searchResults.innerHTML = `
+          <div class="search-header">
+            <span class="search-count">${results.length} résultat${results.length > 1 ? 's' : ''} pour "${query}"</span>
+          </div>
+          ${results.map(article => `
+            <a href="${article.slug}" class="search-result-item">
+              <div class="search-result-title">${highlightQuery(article.title, query)}</div>
+              <div class="search-result-category">
+                <span class="category-badge">${article.category}</span>
+                ${article.score > 10 ? '<span class="relevance-badge">✓ Très pertinent</span>' : ''}
+              </div>
+            </a>
+          `).join('')}
+        `;
+      }
+      
+      searchResults.classList.remove('hidden');
+      searchSuggestions.classList.add('hidden');
+    }
+
+    function showPopularKeywords() {
+      selectedIndex = -1; // Reset keyboard selection
+      
+      searchSuggestions.innerHTML = `
+        <div class="suggestions-header">Recherches populaires :</div>
+        ${popularKeywords.map(keyword => `
+          <div class="suggestion-item" data-keyword="${keyword}">
+            ${keyword}
+          </div>
+        `).join('')}
+      `;
+      
+      searchSuggestions.classList.remove('hidden');
+      searchResults.classList.add('hidden');
+
+      // Add click handlers for suggestions with event delegation
+      attachSuggestionHandlers();
+    }
+    
+    function showAutocompleteSuggestions(query) {
+      selectedIndex = -1; // Reset keyboard selection
+      
+      // Suggestions d'autocomplétion basées sur les mots-clés populaires et les titres d'articles
+      const allTerms = [
+        ...popularKeywords,
+        ...articlesData.map(article => article.title.toLowerCase()),
+        ...articlesData.flatMap(article => article.keywords)
+      ];
+      
+      const suggestions = allTerms
+        .filter(term => term.toLowerCase().startsWith(query.toLowerCase()))
+        .slice(0, 6)
+        .map(term => term.toLowerCase().replace(/^\w/, c => c.toUpperCase())); // Capitalise la première lettre
+      
+      if (suggestions.length > 0) {
+        searchSuggestions.innerHTML = `
+          <div class="suggestions-header">Suggestions :</div>
+          ${suggestions.map(suggestion => `
+            <div class="suggestion-item autocomplete-suggestion" data-suggestion="${suggestion}">
+              <span class="suggestion-icon">🔍</span>
+              ${suggestion}
+            </div>
+          `).join('')}
+        `;
+        
+        searchSuggestions.classList.remove('hidden');
+        searchResults.classList.add('hidden');
+
+        // Add click handlers for autocomplete suggestions with event delegation
+        attachSuggestionHandlers();
+      } else {
+        hideSearchResults();
+      }
+    }
+
+    // Fonction pour attacher les gestionnaires d'événements aux suggestions
+    function attachSuggestionHandlers() {
+      // Supprime les anciens gestionnaires pour éviter les doublons
+      const suggestionItems = document.querySelectorAll('.suggestion-item');
+      
+      suggestionItems.forEach(item => {
+        // Clone l'élément pour supprimer tous les event listeners existants
+        const newItem = item.cloneNode(true);
+        item.parentNode.replaceChild(newItem, item);
+        
+        // Ajoute le nouveau gestionnaire d'événement
+        newItem.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const keyword = newItem.dataset.keyword || newItem.dataset.suggestion;
+          if (keyword) {
+            searchInput.value = keyword;
+            searchInput.focus();
+            
+            // Déclenche la recherche immédiatement
+            performSearch(keyword.toLowerCase());
+          }
+        });
+      });
+    }
+
+    // Navigation au clavier dans les résultats de recherche
+    let selectedIndex = -1;
+    
+    searchInput?.addEventListener('keydown', (e) => {
+      const visibleItems = document.querySelectorAll('.search-result-item:not(.no-results), .suggestion-item');
+      
+      if (visibleItems.length === 0) return;
+      
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          selectedIndex = Math.min(selectedIndex + 1, visibleItems.length - 1);
+          updateSelection(visibleItems);
+          break;
+          
+        case 'ArrowUp':
+          e.preventDefault();
+          selectedIndex = Math.max(selectedIndex - 1, -1);
+          updateSelection(visibleItems);
+          break;
+          
+        case 'Enter':
+          e.preventDefault();
+          if (selectedIndex >= 0 && visibleItems[selectedIndex]) {
+            const item = visibleItems[selectedIndex];
+            if (item.classList.contains('suggestion-item')) {
+              const suggestion = item.dataset.suggestion || item.dataset.keyword;
+              if (suggestion) {
+                searchInput.value = suggestion;
+                performSearch(suggestion.toLowerCase());
+              }
+            } else if (item.href) {
+              window.location.href = item.href;
+            }
+          } else if (searchInput.value.trim().length > 1) {
+            // Si aucun élément n'est sélectionné mais qu'il y a du texte, lance la recherche
+            performSearch(searchInput.value.trim().toLowerCase());
+          }
+          break;
+          
+        case 'Escape':
+          hideSearchResults();
+          searchInput.blur();
+          selectedIndex = -1;
+          break;
+      }
+    });
+    
+    function updateSelection(items) {
+      items.forEach((item, index) => {
+        item.classList.toggle('keyboard-selected', index === selectedIndex);
+      });
+    }
+
+    function hideSearchResults() {
+      searchResults.classList.add('hidden');
+      searchSuggestions.classList.add('hidden');
+      selectedIndex = -1;
+    }
+
+    function highlightQuery(text, query) {
+      const regex = new RegExp(`(${query})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Make article cards fully clickable
+    function makeArticleCardsClickable() {
+      document.querySelectorAll('.article-card, .featured-article').forEach(card => {
+        // Skip cards that already have a click handler
+        if (card.dataset.clickableInitialized) return;
+        
+        // Find the main link in the card
+        const mainLink = card.querySelector('.article-title a, .featured-title a');
+        
+        if (mainLink) {
+          // Mark as initialized
+          card.dataset.clickableInitialized = 'true';
+          
+          // Add click handler to the entire card
+          card.addEventListener('click', (e) => {
+            // Only handle clicks that aren't already on links or buttons
+            if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON' && !e.target.closest('a, button')) {
+              window.location.href = mainLink.href;
+            }
+          });
+          
+          // Add keyboard accessibility
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('role', 'article');
+          card.setAttribute('aria-label', `Lire l'article: ${mainLink.textContent}`);
+          
+          // Handle keyboard navigation
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              window.location.href = mainLink.href;
+            }
+          });
+          
+          // Update cursor style
+          card.style.cursor = 'pointer';
+        }
+      });
+    }
+
+    // Initialize clickable cards when DOM is loaded
+    document.addEventListener('DOMContentLoaded', makeArticleCardsClickable);
+    
+    // Re-initialize after any dynamic content changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length > 0) {
+          makeArticleCardsClickable();
+        }
+      });
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  </script>
+</body>
+</html>

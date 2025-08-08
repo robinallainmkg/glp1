@@ -1,0 +1,88 @@
+{
+  "siteName": "GLP-1 France – Guide & Conseils",
+  "locale": "fr-FR",
+  "market": "FR",
+  "currency": "EUR",
+  "units": "metric",
+  "theme": {
+    "primary": "#2563EB",
+    "accent": "#16A34A",
+    "rounded": true,
+    "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'"
+  },
+  "menu": {
+    "desktopVisible": true
+  },
+  "authors": [
+    {
+      "name": "Dr. Émilie Martin",
+      "role": "Rédaction médicale",
+      "specialties": ["diabetes", "medications", "side-effects"]
+    },
+    {
+      "name": "Julien Lefèvre",
+      "role": "Nutrition & sport",
+      "specialties": ["weight-loss", "diet", "exercise"]
+    },
+    {
+      "name": "Sophie Dubois",
+      "role": "Beauté & cosmétique",
+      "specialties": ["skincare", "beauty", "wellness"]
+    },
+    {
+      "name": "Karim Benali",
+      "role": "Éditeur en chef",
+      "specialties": ["research", "alternatives", "doctors"]
+    }
+  ],
+  "readingTime": {
+    "wpm": 200,
+    "minClamp": 3,
+    "maxClamp": 15
+  },
+  "affiliate": {
+    "boxShortcode": "[affiliate-box]",
+    "positions": [
+      "after-intro",
+      "before-conclusion"
+    ]
+  },
+  "categories": {
+    "glp1-cout": {
+      "name": "Prix et Achat",
+      "description": "Informations sur les prix, remboursements et où acheter les traitements GLP-1 en France"
+    },
+    "medicaments-glp1": {
+      "name": "Médicaments GLP-1",
+      "description": "Guide complet des médicaments GLP-1 : posologie, prescription et utilisation"
+    },
+    "glp1-perte-de-poids": {
+      "name": "Perte de Poids",
+      "description": "Comment les GLP-1 aident à perdre du poids : résultats, témoignages et conseils"
+    },
+    "effets-secondaires-glp1": {
+      "name": "Effets Secondaires",
+      "description": "Comprendre et gérer les effets secondaires des traitements GLP-1"
+    },
+    "glp1-diabete": {
+      "name": "GLP-1 et Diabète",
+      "description": "L'utilisation des GLP-1 dans le traitement du diabète de type 2"
+    },
+    "regime-glp1": {
+      "name": "Régime et Alimentation",
+      "description": "Conseils alimentaires et recettes adaptées aux traitements GLP-1"
+    },
+    "alternatives-glp1": {
+      "name": "Alternatives",
+      "description": "Alternatives naturelles et autres traitements pour la perte de poids"
+    },
+    "medecins-glp1-france": {
+      "name": "Médecins en France",
+      "description": "Trouver des médecins spécialisés dans les traitements GLP-1 en France"
+    },
+    "recherche-glp1": {
+      "name": "Recherche et Innovation",
+      "description": "Dernières études et innovations dans les traitements GLP-1"
+    }
+  }
+}

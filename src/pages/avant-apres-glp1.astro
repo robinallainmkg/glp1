@@ -1,0 +1,403 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Sophie L.",
+    age: 42,
+    city: "Paris",
+    image: "/images/testimonials/sophie-before-after.jpg",
+    weightLoss: "18 kilos",
+    duration: "7 mois",
+    testimonial: "J'ai commencé un traitement GLP-1 sur recommandation de mon médecin, et en 7 mois j'ai perdu 18 kilos. Je suis ravie du résultat sur ma santé, mais j'ai vite remarqué que ma peau manquait de fermeté, surtout au niveau des bras et du ventre. J'ai intégré une crème raffermissante matin et soir, et après 3 mois, la différence est visible. Le plus dur ? Adapter ma garde-robe !",
+    skinCare: "Crème raffermissante matin et soir pendant 3 mois",
+    author: "Élodie Carpentier"
+  },
+  {
+    id: 2,
+    name: "Karim B.",
+    age: 36,
+    city: "Lyon",
+    weightLoss: "14 kilos",
+    duration: "6 mois",
+    testimonial: "Avant de commencer, j'étais sceptique. Mais après 6 mois, j'ai perdu 14 kilos et retrouvé une énergie incroyable. Côté esthétique, j'ai eu quelques vergetures sur les cuisses, probablement à cause de la perte rapide. J'ai suivi les conseils de mon dermatologue et appliqué une huile riche en vitamine E. Aujourd'hui, elles sont beaucoup moins visibles et ma peau est plus souple.",
+    skinCare: "Huile riche en vitamine E sur recommandation dermatologique",
+    author: "Dr. Claire Morel"
+  },
+  {
+    id: 3,
+    name: "Amélie D.",
+    age: 50,
+    city: "Marseille",
+    weightLoss: "20 kilos",
+    duration: "Non spécifiée",
+    testimonial: "Le GLP-1 m'a aidée à perdre 20 kilos, ce qui a changé mon quotidien. Le seul bémol, c'est que mon visage semblait plus fatigué. J'ai donc investi dans un sérum hydratant et raffermissant conseillé par une amie esthéticienne. Après 2 mois, j'ai retrouvé un teint plus lumineux et une peau repulpée.",
+    skinCare: "Sérum hydratant et raffermissant pendant 2 mois",
+    author: "Élodie Carpentier"
+  }
+];
+---
+
+<BaseLayout 
+  title="Témoignages Avant/Après GLP-1 : Transformations Réelles et Conseils Beauté"
+  description="Découvrez des témoignages authentiques de personnes ayant utilisé les traitements GLP-1, leurs résultats de perte de poids et leurs conseils beauté pour prendre soin de leur peau."
+  keywords="témoignages GLP-1, avant après, perte de poids, soins peau, transformation"
+>
+
+<div class="container">
+  <!-- Header de la page -->
+  <header class="testimonials-header">
+    <h1>🌟 Témoignages Avant/Après GLP-1</h1>
+    <p class="testimonials-intro">
+      Découvrez les histoires vraies de personnes qui ont transformé leur vie grâce aux traitements GLP-1. 
+      Au-delà de la perte de poids, ils partagent leurs conseils beauté et soins de la peau pour accompagner leur transformation.
+    </p>
+  </header>
+
+  <!-- Statistiques rapides -->
+  <section class="testimonials-stats">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">52</div>
+        <div class="stat-label">kilos perdus au total</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">témoignages authentiques</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">résultats positifs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="testimonials-section">
+    {testimonials.map((testimonial, index) => (
+      <article class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-info">
+            <h2>{testimonial.name}, {testimonial.age} ans, {testimonial.city}</h2>
+            <div class="testimonial-results">
+              <span class="weight-loss">📉 {testimonial.weightLoss}</span>
+              <span class="duration">⏱️ {testimonial.duration}</span>
+            </div>
+          </div>
+          <div class="testimonial-author">
+            <span>Suivi par {testimonial.author}</span>
+          </div>
+        </div>
+
+        {testimonial.image && index === 0 && (
+          <div class="testimonial-image">
+            <img src={testimonial.image} alt={`Transformation avant/après de ${testimonial.name}`} />
+          </div>
+        )}
+
+        <div class="testimonial-content">
+          <blockquote>
+            "{testimonial.testimonial}"
+          </blockquote>
+          
+          <div class="skin-care-tip">
+            <h3>💡 Conseil beauté</h3>
+            <p>{testimonial.skinCare}</p>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <!-- Conseils généraux -->
+  <section class="general-tips">
+    <h2>🎯 Conseils Généraux pour Votre Transformation</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🧴</div>
+        <h3>Soins de la peau</h3>
+        <p>Hydratez votre peau quotidiennement avec des crèmes raffermissantes pour maintenir son élasticité pendant la perte de poids.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">👗</div>
+        <h3>Garde-robe</h3>
+        <p>Prévoyez un budget pour renouveler votre garde-robe progressivement. Investissez d'abord dans des basiques ajustables.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🏃‍♀️</div>
+        <h3>Activité physique</h3>
+        <p>Complétez votre traitement par une activité physique adaptée pour maintenir votre masse musculaire et tonifier votre peau.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">👩‍⚕️</div>
+        <h3>Suivi médical</h3>
+        <p>Maintenez un suivi régulier avec votre médecin et n'hésitez pas à consulter un dermatologue pour des conseils personnalisés.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>🌟 Prêt(e) à commencer votre transformation ?</h2>
+      <p>Consultez nos guides complets sur les traitements GLP-1 et découvrez les solutions adaptées à votre situation.</p>
+      <div class="cta-buttons">
+        <a href="/medicaments-glp1/" class="btn-primary">Explorer les traitements</a>
+        <a href="/glp1-perte-de-poids/" class="btn-secondary">Guide perte de poids</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+    padding: var(--spacing-6) 0;
+  }
+
+  .testimonials-header h1 {
+    font-size: var(--font-size-3xl);
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .testimonials-intro {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .testimonials-stats {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-6);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: var(--spacing-4);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: var(--spacing-1);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+  }
+
+  .testimonials-section {
+    margin-bottom: var(--spacing-12);
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-100);
+  }
+
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .testimonial-info h2 {
+    font-size: var(--font-size-xl);
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .testimonial-results {
+    display: flex;
+    gap: var(--spacing-4);
+  }
+
+  .weight-loss, .duration {
+    background: var(--primary-light);
+    color: var(--primary-blue);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .testimonial-author {
+    background: var(--gray-100);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    color: var(--gray-700);
+  }
+
+  .testimonial-image {
+    margin: var(--spacing-4) 0;
+    text-align: center;
+  }
+
+  .testimonial-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .testimonial-content blockquote {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--gray-700);
+    font-style: italic;
+    margin: var(--spacing-4) 0;
+    padding-left: var(--spacing-4);
+    border-left: 4px solid var(--primary-blue);
+  }
+
+  .skin-care-tip {
+    background: var(--gray-50);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    margin-top: var(--spacing-4);
+  }
+
+  .skin-care-tip h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-2);
+    font-size: var(--font-size-md);
+  }
+
+  .general-tips {
+    margin-bottom: var(--spacing-12);
+  }
+
+  .general-tips h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+    color: var(--gray-900);
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-6);
+  }
+
+  .tip-card {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-100);
+  }
+
+  .tip-icon {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .tip-card h3 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .tip-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h2 {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .cta-content p {
+    margin-bottom: var(--spacing-6);
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .btn-primary {
+    background: white;
+    color: var(--primary-blue);
+  }
+
+  .btn-primary:hover {
+    background: var(--gray-100);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: var(--primary-blue);
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-header {
+      flex-direction: column;
+      gap: var(--spacing-3);
+    }
+
+    .testimonial-results {
+      justify-content: center;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
+</BaseLayout>

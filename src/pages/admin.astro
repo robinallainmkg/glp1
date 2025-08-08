@@ -1,0 +1,569 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+// Vérifier si l'utilisateur est authentifié côté serveur
+const isAuthenticated = true; // Pour le moment, on désactive la vérification côté serveur
+
+// Générer la base de données si nécessaire
+if (fs.existsSync('data/articles-database.json')) {
+  try {
+    const { execSync } = await import('child_process');
+    execSync('node scripts/generate-database.mjs', { cwd: process.cwd() });
+  } catch (error) {
+    console.log('Génération de la base en cours...');
+  }
+}
+
+// Charger la base de données
+let database = { categories: [], allArticles: [], totalArticles: 0, totalCategories: 0 };
+try {
+  const dbPath = path.join(process.cwd(), 'data/articles-database.json');
+  const dbContent = fs.readFileSync(dbPath, 'utf8');
+  const parsed = JSON.parse(dbContent);
+  
+  if (parsed.collections) {
+    database.categories = Object.entries(parsed.collections).map(([name, articles]) => ({
+      name,
+      articles: articles || [],
+      count: (articles || []).length
+    }));
+    
+    database.allArticles = Object.values(parsed.collections).flat();
+    database.totalArticles = database.allArticles.length;
+    database.totalCategories = Object.keys(parsed.collections).length;
+  }
+} catch (error) {
+  console.log('Erreur lors du chargement de la base de données:', error.message);
+}
+
+// Statistiques avancées
+const stats = {
+  totalWords: database.allArticles.reduce((sum, article) => sum + (article.word_count || 0), 0),
+  averageReadingTime: database.allArticles.length ? 
+    Math.round(database.allArticles.reduce((sum, article) => sum + parseInt(article.reading_time || 0), 0) / database.allArticles.length) : 0,
+  authorsCount: [...new Set(database.allArticles.map(article => article.author))].length,
+  lastUpdate: new Date().toLocaleDateString('fr-FR')
+};
+---
+
+<BaseLayout 
+  title="Administration - GLP-1 France" 
+  description="Dashboard d'administration pour la gestion des articles GLP-1 France"
+>
+
+<main class="admin-container">
+  <div class="admin-header">
+    <div class="header-content">
+      <h1>🔧 Administration GLP-1 France</h1>
+      <p class="header-subtitle">Tableau de bord de gestion des contenus</p>
+    </div>
+    <button class="logout-btn" onclick="logout()">Déconnexion</button>
+  </div>
+
+  <!-- Statistiques générales -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📚</div>
+        <div class="stat-content">
+          <h3>{database.totalCategories}</h3>
+          <p>Collections</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📄</div>
+        <div class="stat-content">
+          <h3>{database.totalArticles}</h3>
+          <p>Articles</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✍️</div>
+        <div class="stat-content">
+          <h3>{stats.totalWords.toLocaleString()}</h3>
+          <p>Mots au total</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-content">
+          <h3>{stats.averageReadingTime} min</h3>
+          <p>Lecture moyenne</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-content">
+          <h3>{stats.authorsCount}</h3>
+          <p>Auteurs</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🔄</div>
+        <div class="stat-content">
+          <h3>{stats.lastUpdate}</h3>
+          <p>Dernière MAJ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtres et recherche -->
+  <section class="admin-filters">
+    <div class="filters-row">
+      <input 
+        type="text" 
+        id="adminSearch" 
+        placeholder="Rechercher un article..." 
+        class="admin-search"
+      >
+      <select id="categoryFilter" class="filter-select">
+        <option value="">Toutes les collections</option>
+        {database.categories.map(cat => (
+          <option value={cat.name}>{cat.name} ({cat.count})</option>
+        ))}
+      </select>
+      <select id="authorFilter" class="filter-select">
+        <option value="">Tous les auteurs</option>
+        {[...new Set(database.allArticles.map(article => article.author))].map(author => (
+          <option value={author}>{author}</option>
+        ))}
+      </select>
+      <select id="sortFilter" class="filter-select">
+        <option value="title">Trier par titre</option>
+        <option value="date">Trier par date</option>
+        <option value="reading_time">Trier par temps de lecture</option>
+        <option value="word_count">Trier par nombre de mots</option>
+      </select>
+      <button onclick="refreshDatabase()" class="refresh-btn">🔄 Actualiser</button>
+    </div>
+  </section>
+
+  <!-- Liste des articles par catégorie -->
+  <section class="articles-section">
+    {database.categories.map(category => (
+      <div class="category-section">
+        <div class="category-header">
+          <h2 class="category-title">
+            📁 {category.name} 
+            <span class="article-count">({category.count} articles)</span>
+          </h2>
+        </div>
+        
+        <div class="articles-table-container">
+          <table class="articles-table">
+            <thead>
+              <tr>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Mots</th>
+                <th>Lecture</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {category.articles.map(article => (
+                <tr class="article-row" data-category={category.name} data-author={article.author} data-title={article.title}>
+                  <td class="article-title">
+                    <strong>{article.title}</strong>
+                    <br>
+                    <span class="article-description">{article.description}</span>
+                  </td>
+                  <td class="article-author">{article.author}</td>
+                  <td class="article-words">{article.word_count || 'N/A'}</td>
+                  <td class="article-reading">{article.reading_time || 'N/A'} min</td>
+                  <td class="article-actions">
+                    <button 
+                      class="action-btn preview-btn" 
+                      onclick={`togglePreview('${article.slug}')`}
+                      title="Aperçu"
+                    >
+                      👁️
+                    </button>
+                    <button 
+                      class="action-btn edit-btn" 
+                      onclick={`editArticle('${article.slug}')`}
+                      title="Éditer"
+                    >
+                      ✏️
+                    </button>
+                    <a 
+                      href={`/${category.name}/${article.slug}/`} 
+                      target="_blank" 
+                      class="action-btn view-btn"
+                      title="Voir en ligne"
+                    >
+                      🔗
+                    </a>
+                  </td>
+                </tr>
+                <tr class="article-preview" id={`preview-${article.slug}`} style="display: none;">
+                  <td colspan="5">
+                    <div class="preview-content">
+                      <div class="preview-header">
+                        <h4>Aperçu de l'article</h4>
+                        <button onclick={`togglePreview('${article.slug}')`} class="close-preview">✕</button>
+                      </div>
+                      <div class="preview-details">
+                        <p><strong>Mots-clés:</strong> {article.keywords}</p>
+                        <p><strong>Intention:</strong> {article.intent}</p>
+                        <p><strong>Caractères:</strong> {article.character_count}</p>
+                        {article.paragraphs && article.paragraphs.length > 0 && (
+                          <div class="preview-paragraphs">
+                            <p><strong>Aperçu du contenu:</strong></p>
+                            <div class="paragraph-preview">
+                              {article.paragraphs.slice(0, 2).map((para, index) => (
+                                <p>{para.substring(0, 150)}...</p>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    ))}
+  </section>
+</main>
+
+<style>
+  .admin-container {
+    min-height: 100vh;
+    background: var(--gray-50);
+    padding: var(--spacing-6);
+  }
+
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .header-content h1 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .header-subtitle {
+    color: var(--gray-600);
+    margin: 0;
+  }
+
+  .logout-btn {
+    background: var(--red-600);
+    color: white;
+    border: none;
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .logout-btn:hover {
+    background: var(--red-700);
+  }
+
+  .stats-section {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-4);
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0 0 var(--spacing-1) 0;
+  }
+
+  .stat-content p {
+    color: var(--gray-600);
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .admin-filters {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .filters-row {
+    display: flex;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+
+  .admin-search {
+    flex: 1;
+    min-width: 200px;
+    padding: var(--spacing-3);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+  }
+
+  .filter-select {
+    padding: var(--spacing-3);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    background: white;
+  }
+
+  .refresh-btn {
+    background: var(--primary-600);
+    color: white;
+    border: none;
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .articles-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+  }
+
+  .category-section {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .category-header {
+    background: var(--primary-50);
+    padding: var(--spacing-4);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .category-title {
+    margin: 0;
+    color: var(--primary-900);
+  }
+
+  .article-count {
+    color: var(--primary-600);
+    font-weight: normal;
+  }
+
+  .articles-table-container {
+    overflow-x: auto;
+  }
+
+  .articles-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .articles-table th {
+    background: var(--gray-50);
+    padding: var(--spacing-3);
+    text-align: left;
+    font-weight: 600;
+    color: var(--gray-700);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .articles-table td {
+    padding: var(--spacing-4);
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .article-title strong {
+    color: var(--gray-900);
+  }
+
+  .article-description {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+  }
+
+  .article-actions {
+    display: flex;
+    gap: var(--spacing-2);
+  }
+
+  .action-btn {
+    padding: var(--spacing-2);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .preview-btn {
+    background: var(--gray-100);
+    color: var(--gray-600);
+  }
+
+  .edit-btn {
+    background: var(--blue-100);
+    color: var(--blue-600);
+  }
+
+  .view-btn {
+    background: var(--green-100);
+    color: var(--green-600);
+  }
+
+  .action-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .article-preview td {
+    background: var(--gray-50);
+  }
+
+  .preview-content {
+    padding: var(--spacing-6);
+  }
+
+  .preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .close-preview {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .preview-details p {
+    margin-bottom: var(--spacing-2);
+  }
+
+  .paragraph-preview p {
+    background: white;
+    padding: var(--spacing-3);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-2);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .admin-container {
+      padding: var(--spacing-4);
+    }
+    
+    .admin-header {
+      flex-direction: column;
+      gap: var(--spacing-4);
+      text-align: center;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .filters-row {
+      flex-direction: column;
+    }
+    
+    .admin-search {
+      min-width: auto;
+    }
+  }
+</style>
+
+<script>
+  // Fonctions globales pour l'administration
+  window.logout = function() {
+    localStorage.removeItem('admin_session');
+    localStorage.removeItem('admin_login_time');
+    window.location.href = '/admin-login/';
+  };
+
+  window.togglePreview = function(slug) {
+    const previewRow = document.getElementById(`preview-${slug}`);
+    if (previewRow) {
+      previewRow.style.display = previewRow.style.display === 'none' ? 'table-row' : 'none';
+    }
+  };
+
+  window.editArticle = function(slug) {
+    alert(`Fonction d'édition pour ${slug} - À implémenter`);
+  };
+
+  window.refreshDatabase = function() {
+    location.reload();
+  };
+
+  // Filtrage des articles
+  function filterArticles() {
+    const search = document.getElementById('adminSearch').value.toLowerCase();
+    const categoryFilter = document.getElementById('categoryFilter').value;
+    const authorFilter = document.getElementById('authorFilter').value;
+    
+    const rows = document.querySelectorAll('.article-row');
+    
+    rows.forEach(row => {
+      const title = row.dataset.title.toLowerCase();
+      const category = row.dataset.category;
+      const author = row.dataset.author;
+      
+      const matchesSearch = search === '' || title.includes(search);
+      const matchesCategory = categoryFilter === '' || category === categoryFilter;
+      const matchesAuthor = authorFilter === '' || author === authorFilter;
+      
+      row.style.display = matchesSearch && matchesCategory && matchesAuthor ? 'table-row' : 'none';
+    });
+  }
+
+  // Initialisation
+  document.addEventListener('DOMContentLoaded', function() {
+    // Vérifier l'authentification
+    const isAuthenticated = localStorage.getItem('admin_session') === 'authenticated';
+    if (!isAuthenticated) {
+      window.location.href = '/admin-login/';
+      return;
+    }
+    
+    // Ajouter les événements de filtrage
+    document.getElementById('adminSearch').addEventListener('input', filterArticles);
+    document.getElementById('categoryFilter').addEventListener('change', filterArticles);
+    document.getElementById('authorFilter').addEventListener('change', filterArticles);
+  });
+</script>
+
+</BaseLayout>

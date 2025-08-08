@@ -1,0 +1,539 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Fonction pour lire le contenu des dossiers de catégories
+async function getCategoryContent() {
+  const categories = [
+    { slug: 'glp1-cout', name: 'Prix et Achat', icon: '💰', description: 'Prix, remboursements et où acheter les traitements GLP-1 en France' },
+    { slug: 'medicaments-glp1', name: 'Médicaments GLP-1', icon: '💊', description: 'Guide des médicaments GLP-1 : posologie, prescription et utilisation' },
+    { slug: 'glp1-perte-de-poids', name: 'Perte de Poids', icon: '📉', description: 'Comment les GLP-1 aident à perdre du poids : résultats et témoignages' },
+    { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: '⚠️', description: 'Comprendre et gérer les effets secondaires des traitements GLP-1' },
+    { slug: 'glp1-diabete', name: 'GLP-1 et Diabète', icon: '🩺', description: 'L\'utilisation des GLP-1 dans le traitement du diabète de type 2' },
+    { slug: 'regime-glp1', name: 'Régime et Alimentation', icon: '🥗', description: 'Conseils alimentaires et recettes adaptées aux traitements GLP-1' },
+    { slug: 'alternatives-glp1', name: 'Alternatives', icon: '🌿', description: 'Alternatives naturelles et autres traitements pour la perte de poids' },
+    { slug: 'medecins-glp1-france', name: 'Médecins en France', icon: '👨‍⚕️', description: 'Trouver des médecins spécialisés dans les traitements GLP-1 en France' },
+    { slug: 'recherche-glp1', name: 'Recherche et Innovation', icon: '🔬', description: 'Dernières études et innovations dans les traitements GLP-1' }
+  ];
+
+  // Ensure Astro.root is available and fallback to process.cwd()
+  const astroRoot = Astro.root || process.cwd();
+  const contentPath = path.resolve(astroRoot, 'src', 'content');
+  
+  for (const category of categories) {
+    try {
+      const categoryPath = path.join(contentPath, category.slug);
+      if (fs.existsSync(categoryPath)) {
+        const files = fs.readdirSync(categoryPath);
+        category.articleCount = files.filter(file => file.endsWith('.md')).length;
+      } else {
+        category.articleCount = 0;
+      }
+    } catch (error) {
+      category.articleCount = 0;
+    }
+  }
+  
+  return categories;
+}
+
+const categories = await getCategoryContent();
+---
+
+<BaseLayout 
+  title="GLP-1 France – Guide Complet des Traitements GLP-1 en France"
+  description="Découvrez tout sur les traitements GLP-1 en France : prix, efficacité, effets secondaires et où les acheter. Guide complet par des experts médicaux."
+  keywords="GLP-1, Wegovy, Ozempic, diabète, perte de poids, France, prix, effets secondaires"
+>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Guide Complet des Traitements <span class="text-gradient">GLP-1</span> en France
+        </h1>
+        <p class="hero-description">
+          Découvrez tout ce que vous devez savoir sur les traitements GLP-1 : efficacité pour la perte de poids, 
+          gestion du diabète, prix en France, effets secondaires et conseils d'experts.
+        </p>
+        <div class="hero-actions">
+          <a href="#categories" class="btn btn-primary btn-lg">Explorer les Guides</a>
+          <a href="/guide-beaute-perte-de-poids-glp1/" class="btn btn-outline btn-lg">Guide Beauté & GLP-1</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Articles Experts</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Auteurs Spécialisés</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Contenu Français</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Affiliate Box -->
+    <div class="affiliate-box">
+      <h3>🌟 Complément Beauté Recommandé pour les Utilisateurs de GLP-1</h3>
+      <p>
+        Les traitements GLP-1 peuvent parfois affecter l'éclat de la peau. Découvrez notre complément 
+        spécialement formulé pour maintenir une peau radieuse pendant votre parcours de perte de poids.
+      </p>
+      <a href="#" class="btn">Découvrir le Complément ✨</a>
+    </div>
+
+    <!-- Categories Grid -->
+    <section id="categories" class="categories-section">
+      <div class="section-header">
+        <h2 class="section-title">Explorez Nos Guides Spécialisés</h2>
+        <p class="section-description">
+          Chaque catégorie contient des articles détaillés rédigés par nos experts médicaux et spécialistes.
+        </p>
+      </div>
+      
+      <div class="grid grid-3">
+        {categories.map((category) => (
+          <a href={`/${category.slug}/`} class="category-card">
+            <div class="category-icon">{category.icon}</div>
+            <h3 class="category-title">{category.name}</h3>
+            <p class="category-description">{category.description}</p>
+            <div class="category-meta">
+              <span class="article-count">{category.articleCount} articles</span>
+              <span class="read-more">Lire →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="featured-section">
+      <div class="section-header">
+        <h2 class="section-title">Articles les Plus Consultés</h2>
+        <p class="section-description">
+          Les sujets qui intéressent le plus nos lecteurs français
+        </p>
+      </div>
+      
+      <div class="grid grid-2">
+        <article class="featured-article">
+          <div class="article-category">Prix & Achat</div>
+          <h3 class="article-title">
+            <a href="/glp1-cout/acheter-wegovy-en-france/">Comment Acheter Wegovy en France en 2025</a>
+          </h3>
+          <p class="article-excerpt">
+            Guide complet pour acheter Wegovy légalement en France : prix, ordonnance, pharmacies et remboursement.
+          </p>
+          <div class="article-meta">
+            <span class="author">Dr. Émilie Martin</span>
+            <span class="reading-time">8 min de lecture</span>
+          </div>
+        </article>
+        
+        <article class="featured-article">
+          <div class="article-category">Perte de Poids</div>
+          <h3 class="article-title">
+            <a href="/glp1-perte-de-poids/avant-apres-glp1/">Résultats Avant/Après : Témoignages GLP-1</a>
+          </h3>
+          <p class="article-excerpt">
+            Découvrez les témoignages réels d'utilisateurs français avec photos avant/après et conseils.
+          </p>
+          <div class="article-meta">
+            <span class="author">Julien Lefèvre</span>
+            <span class="reading-time">12 min de lecture</span>
+          </div>
+        </article>
+        
+        <article class="featured-article">
+          <div class="article-category">Médicaments</div>
+          <h3 class="article-title">
+            <a href="/medicaments-glp1/ozempic-posologie/">Ozempic : Posologie et Mode d'Emploi</a>
+          </h3>
+          <p class="article-excerpt">
+            Tout savoir sur la posologie d'Ozempic : doses, injection, précautions et suivi médical.
+          </p>
+          <div class="article-meta">
+            <span class="author">Dr. Émilie Martin</span>
+            <span class="reading-time">10 min de lecture</span>
+          </div>
+        </article>
+        
+        <article class="featured-article">
+          <div class="article-category">Effets Secondaires</div>
+          <h3 class="article-title">
+            <a href="/effets-secondaires-glp1/effets-secondaires-wegovy/">Effets Secondaires Wegovy : Guide Complet</a>
+          </h3>
+          <p class="article-excerpt">
+            Comprendre, prévenir et gérer les effets secondaires de Wegovy avec nos conseils d'experts.
+          </p>
+          <div class="article-meta">
+            <span class="author">Dr. Émilie Martin</span>
+            <span class="reading-time">15 min de lecture</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2 class="cta-title">Recevez Nos Derniers Conseils GLP-1</h2>
+        <p class="cta-description">
+          Inscrivez-vous à notre newsletter pour recevoir les dernières actualités, conseils beauté 
+          et informations sur les traitements GLP-1 en France.
+        </p>
+        <form class="newsletter-form-home" action="#" method="post">
+          <input type="email" placeholder="Votre adresse email" class="newsletter-input-home" required>
+          <button type="submit" class="btn btn-secondary">S'abonner Gratuitement</button>
+        </form>
+        <p class="cta-privacy">
+          🔒 Vos données sont sécurisées. Désinscription possible à tout moment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">✅</div>
+          <h4>Informations Vérifiées</h4>
+          <p>Contenu validé par des professionnels de santé français</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🇫🇷</div>
+          <h4>Spécialisé France</h4>
+          <p>Prix, réglementations et prescriptions selon la législation française</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">📊</div>
+          <h4>Données Actualisées</h4>
+          <p>Informations mises à jour régulièrement selon les dernières études</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💬</div>
+          <h4>Communauté Active</h4>
+          <p>Échanges et témoignages de la communauté française GLP-1</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: var(--spacing-16) 0 var(--spacing-12);
+      background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+      border-radius: var(--radius-2xl);
+      margin-bottom: var(--spacing-12);
+    }
+
+    .hero-title {
+      font-size: var(--font-size-5xl);
+      font-weight: 800;
+      margin-bottom: var(--spacing-6);
+      line-height: 1.1;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: var(--font-size-xl);
+      color: var(--gray-600);
+      max-width: 800px;
+      margin: 0 auto var(--spacing-8);
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--spacing-4);
+      justify-content: center;
+      margin-bottom: var(--spacing-12);
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: var(--spacing-8);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: var(--font-size-3xl);
+      font-weight: 800;
+      color: var(--primary-blue);
+    }
+
+    .stat-label {
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    /* Categories Section */
+    .categories-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--spacing-12);
+    }
+
+    .section-title {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .section-description {
+      font-size: var(--font-size-lg);
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-8);
+      text-decoration: none;
+      color: inherit;
+      border: 2px solid var(--gray-200);
+      transition: var(--transition);
+      display: block;
+      height: 100%;
+    }
+
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-blue);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .category-icon {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .category-title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      margin-bottom: var(--spacing-3);
+      color: var(--gray-900);
+    }
+
+    .category-description {
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-5);
+    }
+
+    .category-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: var(--font-size-sm);
+    }
+
+    .article-count {
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .read-more {
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+
+    /* Featured Articles */
+    .featured-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .featured-article {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-6);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .featured-article:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .article-category {
+      display: inline-block;
+      background: var(--accent-green);
+      color: white;
+      padding: var(--spacing-1) var(--spacing-3);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--spacing-3);
+    }
+
+    .article-title {
+      margin-bottom: var(--spacing-3);
+    }
+
+    .article-title a {
+      color: var(--gray-900);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article-title a:hover {
+      color: var(--primary-blue);
+    }
+
+    .article-excerpt {
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-4);
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+    }
+
+    .author {
+      font-weight: 500;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+      color: white;
+      padding: var(--spacing-12);
+      border-radius: var(--radius-2xl);
+      text-align: center;
+      margin-bottom: var(--spacing-16);
+    }
+
+    .cta-title {
+      color: white;
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .cta-description {
+      font-size: var(--font-size-lg);
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto var(--spacing-8);
+    }
+
+    .newsletter-form-home {
+      display: flex;
+      gap: var(--spacing-3);
+      max-width: 500px;
+      margin: 0 auto var(--spacing-4);
+    }
+
+    .newsletter-input-home {
+      flex: 1;
+      padding: var(--spacing-4);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: var(--font-size-base);
+    }
+
+    .cta-privacy {
+      font-size: var(--font-size-sm);
+      opacity: 0.8;
+    }
+
+    /* Trust Section */
+    .trust-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-6);
+    }
+
+    .trust-item {
+      text-align: center;
+      padding: var(--spacing-6);
+    }
+
+    .trust-icon {
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .trust-item h4 {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      margin-bottom: var(--spacing-2);
+      color: var(--gray-900);
+    }
+
+    .trust-item p {
+      color: var(--gray-600);
+      font-size: var(--font-size-sm);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: var(--font-size-3xl);
+      }
+      
+      .hero-description {
+        font-size: var(--font-size-lg);
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero-stats {
+        gap: var(--spacing-6);
+      }
+      
+      .newsletter-form-home {
+        flex-direction: column;
+      }
+      
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>

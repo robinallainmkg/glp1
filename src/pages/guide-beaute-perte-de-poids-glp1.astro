@@ -1,0 +1,670 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Guide Beauté et Perte de Poids avec GLP-1 – Téléchargement Gratuit"
+  description="Téléchargez gratuitement notre guide complet : conseils beauté, routine skincare et nutrition optimisée pour les utilisateurs de traitements GLP-1 en France."
+  keywords="GLP-1, beauté, skincare, perte de poids, guide gratuit, téléchargement, cosmétiques, Wegovy, Ozempic"
+>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="landing-hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          ✨ Guide Gratuit ✨
+        </div>
+        <h1 class="landing-title">
+          Guide Beauté & Perte de Poids avec <span class="text-gradient">GLP-1</span>
+        </h1>
+        <p class="landing-subtitle">
+          Découvrez les secrets pour maintenir une peau éclatante et une apparence radieuse 
+          tout au long de votre parcours de perte de poids avec les traitements GLP-1.
+        </p>
+        
+        <div class="value-points">
+          <div class="value-point">
+            <span class="value-icon">💄</span>
+            <span>Routine beauté adaptée aux GLP-1</span>
+          </div>
+          <div class="value-point">
+            <span class="value-icon">🧴</span>
+            <span>Produits cosmétiques recommandés</span>
+          </div>
+          <div class="value-point">
+            <span class="value-icon">🥗</span>
+            <span>Nutrition pour une peau éclatante</span>
+          </div>
+          <div class="value-point">
+            <span class="value-icon">📊</span>
+            <span>Suivi et conseils personnalisés</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-container">
+        <form class="landing-form" id="beautyGuideForm">
+          <h3 class="form-title">Téléchargez Votre Guide Gratuit</h3>
+          <p class="form-subtitle">
+            Recevez immédiatement le guide + nos conseils exclusifs par email
+          </p>
+          
+          <div class="form-group">
+            <label for="firstName">Prénom *</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="treatment">Quel traitement vous intéresse ?</label>
+            <select id="treatment" name="treatment">
+              <option value="">Sélectionner...</option>
+              <option value="wegovy">Wegovy</option>
+              <option value="ozempic">Ozempic</option>
+              <option value="saxenda">Saxenda</option>
+              <option value="trulicity">Trulicity</option>
+              <option value="autre">Autre</option>
+              <option value="pas-encore-decide">Pas encore décidé</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="concerns">Vos principales préoccupations beauté :</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="concerns" value="peau-seche">
+                <span class="checkmark"></span>
+                Peau sèche
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="concerns" value="perte-cheveux">
+                <span class="checkmark"></span>
+                Perte de cheveux
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="concerns" value="fatigue-teint">
+                <span class="checkmark"></span>
+                Fatigue du teint
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="concerns" value="elasticite-peau">
+                <span class="checkmark"></span>
+                Élasticité de la peau
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group consent">
+            <label class="checkbox-label">
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+              J'accepte de recevoir des conseils beauté et des recommandations produits par email
+            </label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
+            📥 Télécharger le Guide Gratuit
+          </button>
+          
+          <p class="form-disclaimer">
+            🔒 Vos données sont protégées. Désinscription possible à tout moment.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section">
+      <div class="section-header">
+        <h2 class="section-title">Aperçu de Votre Guide Gratuit</h2>
+        <p class="section-description">
+          Plus de 25 pages de conseils exclusifs adaptés aux utilisateurs de GLP-1 en France
+        </p>
+      </div>
+      
+      <div class="preview-grid">
+        <div class="preview-item">
+          <div class="preview-icon">🧴</div>
+          <h4>Skincare Routine Optimisée</h4>
+          <p>Une routine de soins en 6 étapes spécialement conçue pour contrer les effets des traitements GLP-1 sur la peau</p>
+        </div>
+        
+        <div class="preview-item">
+          <div class="preview-icon">💊</div>
+          <h4>Compléments Recommandés</h4>
+          <p>Les vitamines et minéraux essentiels pour maintenir l'éclat de votre peau pendant la perte de poids</p>
+        </div>
+        
+        <div class="preview-item">
+          <div class="preview-icon">🍎</div>
+          <h4>Nutrition Beauté</h4>
+          <p>Plan alimentaire pour nourrir votre peau de l'intérieur tout en maximisant l'efficacité des GLP-1</p>
+        </div>
+        
+        <div class="preview-item">
+          <div class="preview-icon">💄</div>
+          <h4>Maquillage Adapté</h4>
+          <p>Techniques et produits pour un teint parfait même lors des fluctuations de poids</p>
+        </div>
+        
+        <div class="preview-item">
+          <div class="preview-icon">📱</div>
+          <h4>Application Mobile</h4>
+          <p>Suivi quotidien de votre routine beauté avec rappels et conseils personnalisés</p>
+        </div>
+        
+        <div class="preview-item">
+          <div class="preview-icon">👥</div>
+          <h4>Communauté Privée</h4>
+          <p>Accès à notre groupe Facebook privé avec d'autres utilisatrices de GLP-1</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <h2 class="section-title">Ce Que Disent Nos Lectrices</h2>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            "Grâce aux conseils de ce guide, j'ai maintenu une peau éclatante tout au long de ma perte de 15kg avec Wegovy. Les recommandations de produits sont parfaites !"
+          </div>
+          <div class="testimonial-author">
+            <strong>Marie L.</strong> - Paris
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            "Enfin un guide qui comprend les spécificités des traitements GLP-1 ! Les conseils nutrition beauté ont vraiment fait la différence."
+          </div>
+          <div class="testimonial-author">
+            <strong>Sophie D.</strong> - Lyon
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            "J'ai évité la plupart des problèmes de peau que mes amies ont eus avec Ozempic. Ce guide est une mine d'or !"
+          </div>
+          <div class="testimonial-author">
+            <strong>Céline M.</strong> - Bordeaux
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Affiliate Recommendations -->
+    <section class="affiliate-section">
+      <div class="section-header">
+        <h2 class="section-title">Nos Produits Recommandés</h2>
+        <p class="section-description">
+          Sélection exclusive de produits testés et approuvés par notre communauté
+        </p>
+      </div>
+      
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">🧴</div>
+          <h4 class="product-title">Sérum Hydratation Intense</h4>
+          <p class="product-description">
+            Sérum à l'acide hyaluronique spécialement formulé pour les peaux sèches dues aux traitements GLP-1.
+          </p>
+          <div class="product-price">49,90 €</div>
+          <a href="#" class="btn btn-secondary">Commander</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">💊</div>
+          <h4 class="product-title">Complément Cheveux & Ongles</h4>
+          <p class="product-description">
+            Complex vitamines B, biotine et zinc pour renforcer cheveux et ongles fragilisés.
+          </p>
+          <div class="product-price">29,90 €</div>
+          <a href="#" class="btn btn-secondary">Commander</a>
+        </div>
+        
+        <div class="product-card">
+          <div class="product-image">🌟</div>
+          <h4 class="product-title">Crème Anti-Âge Régénérante</h4>
+          <p class="product-description">
+            Formule enrichie en collagène et peptides pour maintenir l'élasticité de la peau.
+          </p>
+          <div class="product-price">69,90 €</div>
+          <a href="#" class="btn btn-secondary">Commander</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="section-header">
+        <h2 class="section-title">Questions Fréquentes</h2>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            Le guide est-il vraiment gratuit ?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Oui, le guide est entièrement gratuit. Vous recevrez également nos conseils hebdomadaires par email, mais vous pouvez vous désinscrire à tout moment.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Les conseils sont-ils adaptés à tous les traitements GLP-1 ?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Oui, nos conseils beauté s'appliquent à tous les traitements GLP-1 (Wegovy, Ozempic, Saxenda, Trulicity, etc.) car ils agissent de manière similaire sur l'organisme.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Puis-je appliquer ces conseils si je débute mon traitement ?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Absolument ! Il est même recommandé de commencer la routine beauté dès le début du traitement pour prévenir les problèmes potentiels.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Les produits recommandés sont-ils disponibles en France ?
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            Oui, tous les produits recommandés sont disponibles en France, soit en pharmacie, soit en ligne avec livraison rapide.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    /* Landing Hero */
+    .landing-hero {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: var(--spacing-12);
+      align-items: start;
+      padding: var(--spacing-12) 0;
+      margin-bottom: var(--spacing-16);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-green), var(--accent-green-light));
+      color: white;
+      padding: var(--spacing-2) var(--spacing-4);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: var(--font-size-sm);
+      margin-bottom: var(--spacing-6);
+    }
+
+    .landing-title {
+      font-size: var(--font-size-5xl);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: var(--spacing-6);
+    }
+
+    .landing-subtitle {
+      font-size: var(--font-size-xl);
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-8);
+    }
+
+    .value-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-4);
+    }
+
+    .value-point {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    .value-icon {
+      font-size: var(--font-size-xl);
+    }
+
+    /* Form */
+    .form-container {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-8);
+      box-shadow: var(--shadow-xl);
+      border: 2px solid var(--gray-200);
+      position: sticky;
+      top: var(--spacing-20);
+    }
+
+    .form-title {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-2);
+      text-align: center;
+    }
+
+    .form-subtitle {
+      color: var(--gray-600);
+      text-align: center;
+      margin-bottom: var(--spacing-6);
+      font-size: var(--font-size-sm);
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-5);
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: var(--spacing-2);
+      font-size: var(--font-size-sm);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: var(--spacing-3);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      font-size: var(--font-size-base);
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .checkbox-group {
+      display: grid;
+      gap: var(--spacing-2);
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-2);
+      cursor: pointer;
+      font-weight: 400;
+      font-size: var(--font-size-sm);
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: auto;
+      margin: 0;
+    }
+
+    .consent {
+      background: var(--gray-50);
+      padding: var(--spacing-4);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+    }
+
+    .btn-full {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .form-disclaimer {
+      text-align: center;
+      font-size: var(--font-size-xs);
+      color: var(--gray-500);
+      margin-top: var(--spacing-3);
+    }
+
+    /* Preview Section */
+    .preview-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-6);
+    }
+
+    .preview-item {
+      background: white;
+      padding: var(--spacing-6);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gray-200);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .preview-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .preview-icon {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .preview-item h4 {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      margin-bottom: var(--spacing-3);
+      color: var(--gray-900);
+    }
+
+    .preview-item p {
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background: var(--gray-50);
+      padding: var(--spacing-12);
+      border-radius: var(--radius-2xl);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-6);
+    }
+
+    .testimonial {
+      background: white;
+      padding: var(--spacing-6);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .testimonial-content {
+      font-style: italic;
+      color: var(--gray-700);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .testimonial-author {
+      color: var(--gray-600);
+      font-size: var(--font-size-sm);
+    }
+
+    /* Products */
+    .affiliate-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-6);
+    }
+
+    .product-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-6);
+      border: 2px solid var(--gray-200);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .product-card:hover {
+      border-color: var(--accent-green);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .product-image {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .product-title {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      margin-bottom: var(--spacing-3);
+      color: var(--gray-900);
+    }
+
+    .product-description {
+      color: var(--gray-600);
+      line-height: 1.5;
+      margin-bottom: var(--spacing-4);
+      font-size: var(--font-size-sm);
+    }
+
+    .product-price {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--accent-green);
+      margin-bottom: var(--spacing-4);
+    }
+
+    /* FAQ */
+    .faq-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .landing-hero {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+      }
+
+      .form-container {
+        position: static;
+        margin-top: var(--spacing-8);
+      }
+
+      .value-points {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .landing-title {
+        font-size: var(--font-size-3xl);
+      }
+
+      .landing-subtitle {
+        font-size: var(--font-size-lg);
+      }
+
+      .preview-grid,
+      .products-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    // Form handling
+    document.getElementById('beautyGuideForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Collect form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+      
+      // Simulate form submission
+      const button = this.querySelector('button[type="submit"]');
+      const originalText = button.textContent;
+      
+      button.textContent = '⏳ Envoi en cours...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        button.textContent = '✅ Guide envoyé !';
+        
+        // Show success message
+        const successMessage = document.createElement('div');
+        successMessage.innerHTML = `
+          <div style="background: var(--accent-green); color: white; padding: var(--spacing-4); border-radius: var(--radius-lg); margin-top: var(--spacing-4); text-align: center;">
+            <h4 style="margin: 0 0 var(--spacing-2); color: white;">🎉 Merci ${data.firstName || ''} !</h4>
+            <p style="margin: 0; opacity: 0.9;">Votre guide a été envoyé à ${data.email}. Vérifiez votre boîte mail (et vos spams).</p>
+          </div>
+        `;
+        
+        this.parentNode.insertBefore(successMessage, this.nextSibling);
+        this.style.display = 'none';
+        
+        // Here you would integrate with your email service (Klaviyo, etc.)
+        console.log('Form data:', data);
+        
+      }, 2000);
+    });
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+  </script>
+</BaseLayout>

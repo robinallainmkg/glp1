@@ -1,0 +1,376 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+// Charger les données des auteurs
+let authorsData;
+let authors = [];
+try {
+  const authorsPath = path.join(process.cwd(), 'data/authors-testimonials.json');
+  authorsData = JSON.parse(fs.readFileSync(authorsPath, 'utf8'));
+  authors = Object.entries(authorsData.authors || {});
+} catch (error) {
+  console.log('Erreur chargement auteurs:', error.message);
+  authorsData = { authors: {} };
+}
+
+// Charger les statistiques des articles par auteur
+let articlesData;
+const authorStats = {};
+try {
+  const articlesPath = path.join(process.cwd(), 'data/articles-database.json');
+  articlesData = JSON.parse(fs.readFileSync(articlesPath, 'utf8'));
+  
+  for (const [collection, articles] of Object.entries(articlesData.collections || {})) {
+    for (const article of articles) {
+      if (!authorStats[article.author]) {
+        authorStats[article.author] = 0;
+      }
+      authorStats[article.author]++;
+    }
+  }
+} catch (error) {
+  console.log('Erreur chargement articles:', error.message);
+}
+---
+
+<BaseLayout 
+  title="Nos Experts GLP-1" 
+  description="Découvrez notre équipe d'experts spécialisés dans les traitements GLP-1, la nutrition, la cosmétique et le bien-être. Des professionnels qualifiés pour vous accompagner dans vos questions de santé."
+>
+  <main class="main-content">
+    <div class="container">
+      <!-- En-tête -->
+      <div class="hero-section">
+        <h1>Nos Experts GLP-1</h1>
+        <p class="hero-description">
+          Notre équipe d'experts vous accompagne avec des contenus fiables et spécialisés. 
+          Découvrez leurs parcours, leurs spécialités et leur expertise dans le domaine des traitements GLP-1.
+        </p>
+      </div>
+
+      <!-- Grille des auteurs -->
+      <div class="authors-grid">
+        {authors.map(([authorId, author]) => (
+          <div class="author-card">
+            <div class="author-header">
+              <div class="author-avatar">
+                <span class="author-initials">
+                  {author.name.split(' ').map(n => n.charAt(0)).join('')}
+                </span>
+              </div>
+              <div class="author-info">
+                <h3 class="author-name">{author.name}</h3>
+                <p class="author-title">{author.title}</p>
+                <div class="author-stats">
+                  <span class="article-count">
+                    {authorStats[authorId] || 0} articles
+                  </span>
+                  <span class="experience">{author.experience}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="author-bio">
+              <p>{author.bio}</p>
+            </div>
+
+            <div class="author-specialties">
+              <h4>Spécialités</h4>
+              <div class="specialties-tags">
+                {author.specialties.map(specialty => (
+                  <span class="specialty-tag">{specialty}</span>
+                ))}
+              </div>
+            </div>
+
+            <div class="author-education">
+              <h4>Formation</h4>
+              <p class="education-text">{author.education}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Section pourquoi faire confiance -->
+      <div class="trust-section">
+        <h2>Pourquoi faire confiance à nos experts ?</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">🎓</div>
+            <h3>Formation spécialisée</h3>
+            <p>Tous nos experts possèdent une formation reconnue dans leur domaine d'expertise.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">📚</div>
+            <h3>Expérience confirmée</h3>
+            <p>Des années d'expérience pratique et de recherche dans les domaines de la santé et du bien-être.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🔬</div>
+            <h3>Sources fiables</h3>
+            <p>Nos contenus s'appuient sur des données scientifiques et des sources médicales reconnues.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✅</div>
+            <h3>Transparence</h3>
+            <p>Nous privilégions l'information factuelle et la transparence dans tous nos articles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section">
+        <h2>Une question sur les traitements GLP-1 ?</h2>
+        <p>Consultez nos articles spécialisés rédigés par nos experts pour obtenir des informations fiables et actualisées.</p>
+        <a href="/" class="cta-button">Explorer nos articles</a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+    padding: var(--spacing-12) 0;
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    border-radius: var(--radius-xl);
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-16);
+  }
+
+  .author-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-8);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-100);
+    transition: var(--transition);
+  }
+
+  .author-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .author-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .author-initials {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .author-info {
+    flex: 1;
+  }
+
+  .author-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-1);
+  }
+
+  .author-title {
+    font-size: 1rem;
+    color: var(--primary-600);
+    font-weight: 600;
+    margin-bottom: var(--spacing-3);
+  }
+
+  .author-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+
+  .article-count {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    font-weight: 600;
+  }
+
+  .experience {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+  }
+
+  .author-bio {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .author-bio p {
+    color: var(--gray-700);
+    line-height: 1.6;
+  }
+
+  .author-specialties,
+  .author-education {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .author-specialties h4,
+  .author-education h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .specialties-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+
+  .specialty-tag {
+    background: var(--primary-50);
+    color: var(--primary-700);
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .education-text {
+    color: var(--gray-600);
+    font-style: italic;
+  }
+
+  .trust-section {
+    background: var(--gray-50);
+    padding: var(--spacing-12);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--spacing-16);
+    text-align: center;
+  }
+
+  .trust-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-8);
+  }
+
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-8);
+  }
+
+  .trust-item {
+    text-align: center;
+  }
+
+  .trust-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .trust-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .trust-item p {
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: var(--spacing-12);
+    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+    border-radius: var(--radius-xl);
+    color: white;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-6);
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: var(--primary-600);
+    padding: var(--spacing-4) var(--spacing-8);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .authors-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+    
+    .author-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .trust-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

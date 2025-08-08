@@ -1,0 +1,134 @@
+{
+  "authors": {
+    "dr-claire-morel": {
+      "name": "Dr. Claire Morel",
+      "title": "Médecin nutritionniste",
+      "bio": "Médecin spécialisée en nutrition clinique et médecine préventive, le Dr. Claire Morel accompagne ses patients dans la gestion du poids et la prévention des maladies métaboliques. Elle apporte une vision scientifique et factuelle sur l'impact des traitements GLP-1 et leurs effets sur la santé globale.",
+      "specialties": [
+        "Nutrition clinique",
+        "Médecine préventive",
+        "Gestion du poids",
+        "Maladies métaboliques",
+        "Traitements GLP-1",
+        "Diabète type 2"
+      ],
+      "education": "Doctorat en Médecine, Spécialisation en Endocrinologie-Diabétologie-Nutrition",
+      "experience": "15 ans d'expérience en nutrition clinique",
+      "expertise_keywords": ["nutrition", "diabete", "medicament", "traitement", "ozempic", "wegovy", "saxenda", "glp-1", "insuline"]
+    },
+    "julien-armand": {
+      "name": "Julien Armand",
+      "title": "Journaliste santé & bien-être",
+      "bio": "Journaliste indépendant depuis plus de 10 ans, Julien Armand couvre les sujets liés à la santé, au bien-être et à la forme physique. Son approche pédagogique permet de rendre accessibles les données médicales et scientifiques au grand public.",
+      "specialties": [
+        "Journalisme santé",
+        "Vulgarisation médicale",
+        "Recherche économique",
+        "Accès aux soins",
+        "Politique de santé publique"
+      ],
+      "education": "Master en Journalisme, Spécialisation Santé & Sciences",
+      "experience": "10 ans de journalisme spécialisé en santé",
+      "expertise_keywords": ["prix", "cout", "remboursement", "pharmacie", "achat", "operation", "chirurgie", "clinique"]
+    },
+    "elodie-carpentier": {
+      "name": "Élodie Carpentier",
+      "title": "Spécialiste cosmétique & dermo-soins",
+      "bio": "Passionnée par la cosmétique et diplômée en formulation de soins dermo-cosmétiques, Élodie Carpentier décrypte les produits et ingrédients pour aider chacun à choisir les solutions adaptées à sa peau, notamment après une perte de poids rapide.",
+      "specialties": [
+        "Formulation cosmétique",
+        "Soins dermo-cosmétiques",
+        "Peau et perte de poids",
+        "Ingrédients actifs",
+        "Conseil en beauté"
+      ],
+      "education": "Master en Formulation Cosmétique, Certification Dermo-Cosmétique",
+      "experience": "8 ans en développement de produits cosmétiques",
+      "expertise_keywords": ["beaute", "peau", "soin", "cosmetique", "avant-apres", "effet", "secondaire"]
+    },
+    "marc-delattre": {
+      "name": "Marc Delattre",
+      "title": "Rédacteur sport & forme",
+      "bio": "Ancien coach sportif, Marc Delattre partage ses connaissances sur l'activité physique, la récupération et l'hygiène de vie. Ses articles allient conseils pratiques et suivi des dernières tendances fitness.",
+      "specialties": [
+        "Coaching sportif",
+        "Activité physique adaptée",
+        "Récupération",
+        "Hygiène de vie",
+        "Nutrition sportive",
+        "Tendances fitness"
+      ],
+      "education": "BPJEPS Activités de la Forme, Formation Nutrition Sportive",
+      "experience": "12 ans de coaching sportif et rédaction",
+      "expertise_keywords": ["sport", "exercice", "regime", "perte", "poids", "maigrir", "obesite", "personne"]
+    }
+  },
+  "testimonials": [
+    {
+      "id": "sophie-l-paris",
+      "name": "Sophie L.",
+      "age": 42,
+      "city": "Paris",
+      "weight_loss": "18 kilos",
+      "duration": "7 mois",
+      "treatment": "GLP-1",
+      "testimonial": "J'ai commencé un traitement GLP-1 sur recommandation de mon médecin, et en 7 mois j'ai perdu 18 kilos. Je suis ravie du résultat sur ma santé, mais j'ai vite remarqué que ma peau manquait de fermeté, surtout au niveau des bras et du ventre. J'ai intégré une crème raffermissante matin et soir, et après 3 mois, la différence est visible. Le plus dur ? Adapter ma garde-robe !",
+      "skin_care_routine": "Crème raffermissante matin et soir pendant 3 mois",
+      "challenges": ["Fermeté de la peau", "Renouvellement garde-robe"],
+      "solutions": ["Crème raffermissante", "Budget vêtements échelonné"],
+      "image": "/images/testimonials/sophie-before-after.jpg",
+      "verified": true,
+      "review_date": "2025-01-15"
+    },
+    {
+      "id": "karim-b-lyon",
+      "name": "Karim B.",
+      "age": 36,
+      "city": "Lyon",
+      "weight_loss": "14 kilos",
+      "duration": "6 mois",
+      "treatment": "GLP-1",
+      "testimonial": "Avant de commencer, j'étais sceptique. Mais après 6 mois, j'ai perdu 14 kilos et retrouvé une énergie incroyable. Côté esthétique, j'ai eu quelques vergetures sur les cuisses, probablement à cause de la perte rapide. J'ai suivi les conseils de mon dermatologue et appliqué une huile riche en vitamine E. Aujourd'hui, elles sont beaucoup moins visibles et ma peau est plus souple.",
+      "skin_care_routine": "Huile riche en vitamine E sur recommandation dermatologique",
+      "challenges": ["Vergetures", "Perte de poids rapide"],
+      "solutions": ["Huile vitamine E", "Suivi dermatologique"],
+      "verified": true,
+      "review_date": "2025-02-08"
+    },
+    {
+      "id": "amelie-d-marseille",
+      "name": "Amélie D.",
+      "age": 50,
+      "city": "Marseille",
+      "weight_loss": "20 kilos",
+      "duration": "Non spécifiée",
+      "treatment": "GLP-1",
+      "testimonial": "Le GLP-1 m'a aidée à perdre 20 kilos, ce qui a changé mon quotidien. Le seul bémol, c'est que mon visage semblait plus fatigué. J'ai donc investi dans un sérum hydratant et raffermissant conseillé par une amie esthéticienne. Après 2 mois, j'ai retrouvé un teint plus lumineux et une peau repulpée.",
+      "skin_care_routine": "Sérum hydratant et raffermissant pendant 2 mois",
+      "challenges": ["Visage fatigué", "Perte de volume facial"],
+      "solutions": ["Sérum hydratant", "Conseils esthéticienne"],
+      "verified": true,
+      "review_date": "2025-01-28"
+    }
+  ],
+  "skin_care_tips": [
+    {
+      "category": "Hydratation",
+      "tip": "Utilisez une crème hydratante riche matin et soir pour maintenir l'élasticité de la peau",
+      "products": ["Crème raffermissante", "Sérum acide hyaluronique"],
+      "timing": "Quotidien"
+    },
+    {
+      "category": "Vergetures",
+      "tip": "Appliquez une huile riche en vitamine E sur les zones susceptibles de développer des vergetures",
+      "products": ["Huile de vitamine E", "Huile d'amande douce", "Beurre de karité"],
+      "timing": "2 fois par jour"
+    },
+    {
+      "category": "Fermeté",
+      "tip": "Utilisez des soins raffermissants et pratiquez des massages drainants",
+      "products": ["Crème raffermissante", "Huile de massage"],
+      "timing": "Quotidien + massage 3x/semaine"
+    }
+  ]
+}

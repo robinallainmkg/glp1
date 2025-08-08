@@ -1,0 +1,227 @@
+---
+// Page de connexion pour le dashboard admin
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Vérifier si l'utilisateur est déjà connecté (côté client)
+// Cette vérification sera faite en JavaScript
+
+// Variable pour compatibilité template
+const errorMessage = '';
+---
+
+<BaseLayout 
+  title="Connexion Admin - GLP-1 France"
+  description="Accès administrateur au dashboard de gestion"
+  keywords="admin, connexion, authentification"
+>
+
+<div class="container">
+  <div class="login-container">
+    <div class="login-card">
+      <h1>🔐 Connexion Administrateur</h1>
+      <p class="login-subtitle">Accédez au dashboard de gestion des articles</p>
+      
+      {errorMessage && (
+        <div class="error-message">
+          ⚠️ {errorMessage}
+        </div>
+      )}
+      
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="password">Mot de passe administrateur</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            required 
+            placeholder="Entrez le mot de passe"
+            autocomplete="current-password"
+          />
+        </div>
+        
+        <button type="submit" class="login-btn">
+          Se connecter
+        </button>
+      </form>
+      
+      <div id="errorDisplay" class="error-message" style="display: none;">
+        ⚠️ <span id="errorText"></span>
+      </div>
+      
+      <div class="login-info">
+        <p>💡 <strong>Mot de passe de test:</strong> <code>glp1admin2024</code></p>
+        <p>En production, cette authentification devrait être renforcée.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: var(--spacing-8) 0;
+}
+
+.login-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-12);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-4);
+  color: var(--gray-800);
+  font-size: var(--font-size-2xl);
+}
+
+.login-subtitle {
+  text-align: center;
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-8);
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-6);
+  border-left: 4px solid #dc2626;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-6);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.login-btn {
+  width: 100%;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-btn:hover {
+  background: var(--primary-blue-dark);
+  transform: translateY(-1px);
+}
+
+.login-info {
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--gray-200);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.login-info code {
+  background: var(--gray-100);
+  padding: var(--spacing-1);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+}
+</style>
+
+<script>
+// Vérifier si l'utilisateur est déjà connecté
+document.addEventListener('DOMContentLoaded', function() {
+  const isAuthenticated = localStorage.getItem('admin_session') === 'authenticated';
+  
+  if (isAuthenticated) {
+    window.location.href = '/admin/';
+    return;
+  }
+  
+  // Gérer la soumission du formulaire
+  const loginForm = document.getElementById('loginForm');
+  const passwordInput = document.getElementById('password');
+  const errorDisplay = document.getElementById('errorDisplay');
+  const errorText = document.getElementById('errorText');
+  
+  loginForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const password = passwordInput.value;
+    const correctPassword = 'glp1admin2024';
+    
+    if (password === correctPassword) {
+      // Authentification réussie
+      localStorage.setItem('admin_session', 'authenticated');
+      localStorage.setItem('admin_login_time', new Date().getTime().toString());
+      
+      // Redirection vers le dashboard
+      window.location.href = '/admin/';
+    } else {
+      // Afficher l'erreur
+      errorText.textContent = 'Mot de passe incorrect';
+      errorDisplay.style.display = 'block';
+      
+      // Secouer le formulaire
+      loginForm.style.animation = 'shake 0.6s';
+      setTimeout(() => {
+        loginForm.style.animation = '';
+      }, 600);
+      
+      // Effacer le champ mot de passe
+      passwordInput.value = '';
+      passwordInput.focus();
+    }
+  });
+  
+  // Masquer l'erreur quand l'utilisateur tape
+  passwordInput.addEventListener('input', function() {
+    errorDisplay.style.display = 'none';
+  });
+});
+
+// Animation de secousse pour les erreurs
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes shake {
+    0%, 20%, 40%, 60%, 80% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-5px);
+    }
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+</BaseLayout>

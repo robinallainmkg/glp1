@@ -1,0 +1,672 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// En mode statique, la vérification se fera côté client
+
+// Traitement du rafraîchissement de la base de données (côté serveur si possible)
+if (Astro.url.searchParams.get('refresh') === 'true') {
+  try {
+    const { execSync } = await import('child_process');
+    execSync('node scripts/generate-database-v2.mjs', { cwd: process.cwd() });
+    return Astro.redirect('/admin?refreshed=true');
+  } catch (error) {
+    console.error('Erreur lors du rafraîchissement:', error);
+  }
+}
+
+// Lire la base de données des articles
+const databasePath = path.resolve(process.cwd(), 'data/articles-database.json');
+let database = { categories: [], allArticles: [], totalArticles: 0, totalCategories: 0 };
+
+try {
+  const rawData = fs.readFileSync(databasePath, 'utf-8');
+  database = JSON.parse(rawData);
+} catch (error) {
+  console.error('Erreur lecture base de données:', error);
+  // Régénérer la base de données si elle n'existe pas
+  try {
+    const { execSync } = await import('child_process');
+    execSync('node scripts/generate-database-v2.mjs', { cwd: process.cwd() });
+    const newRawData = fs.readFileSync(databasePath, 'utf-8');
+    database = JSON.parse(newRawData);
+  } catch (genError) {
+    console.error('Erreur génération base de données:', genError);
+  }
+}
+
+// Calculer des statistiques avancées
+const stats = {
+  totalWords: database.allArticles?.reduce((sum, a) => sum + (a.calculated?.wordCount || Math.round(a.characterCount / 5)), 0) || 0,
+  totalReadingTime: database.allArticles?.reduce((sum, a) => sum + parseInt(a.calculated?.readingTime || a.readingTime || 0), 0) || 0,
+  avgReadingTime: database.totalArticles > 0 ? Math.round(database.allArticles.reduce((sum, a) => sum + parseInt(a.calculated?.readingTime || a.readingTime || 0), 0) / database.totalArticles) : 0,
+  longestArticle: database.allArticles?.sort((a, b) => (b.calculated?.characterCount || b.characterCount) - (a.calculated?.characterCount || a.characterCount))[0] || null,
+  shortestArticle: database.allArticles?.sort((a, b) => (a.calculated?.characterCount || a.characterCount) - (b.calculated?.characterCount || b.characterCount))[0] || null,
+  mostActiveAuthor: {},
+  categoryDistribution: {}
+};
+
+// Analyser les auteurs
+const authorCounts = {};
+database.allArticles?.forEach(article => {
+  const author = article.editable?.author || article.author || 'Non spécifié';
+  authorCounts[author] = (authorCounts[author] || 0) + 1;
+}) || [];
+stats.mostActiveAuthor = Object.entries(authorCounts).sort((a, b) => b[1] - a[1])[0] || ['Aucun', 0];
+
+// Distribution par catégorie
+database.categories?.forEach(cat => {
+  stats.categoryDistribution[cat.displayName] = cat.articleCount;
+}) || [];
+
+// Vérifier si on vient d'un rafraîchissement
+const isRefreshed = Astro.url.searchParams.get('refreshed') === 'true';
+---
+
+<BaseLayout 
+  title="Dashboard Admin - GLP-1 France"
+  description="Dashboard administrateur pour gérer les articles et catégories"
+  keywords="admin, dashboard, gestion, articles"
+>
+
+<div class="container">
+  {isRefreshed && (
+    <div class="success-notification">
+      ✅ Base de données actualisée avec succès !
+    </div>
+  )}
+  
+  <div class="admin-dashboard">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="header-top">
+        <h1>🔧 Dashboard Admin</h1>
+        <div class="header-actions">
+          <button class="btn-primary" onclick="refreshDatabase()">🔄 Actualiser</button>
+          <button class="btn-secondary" onclick="logout()">🚪 Déconnexion</button>
+        </div>
+      </div>
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <div class="stat-number">{database.metadata?.totalCategories || database.totalCategories}</div>
+          <div class="stat-label">Collections</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{database.metadata?.totalArticles || database.totalArticles}</div>
+          <div class="stat-label">Articles</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{Math.round((database.metadata?.totalArticles || database.totalArticles) / (database.metadata?.totalCategories || database.totalCategories))}</div>
+          <div class="stat-label">Articles/Collection</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{stats.avgReadingTime}</div>
+          <div class="stat-label">Min lecture moy.</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filtres -->
+    <section class="filters-section">
+      <div class="filters-container">
+        <input type="text" id="adminSearch" placeholder="🔍 Rechercher un article..." class="search-filter">
+        <select id="categoryFilter" class="filter-select">
+          <option value="">Toutes les catégories</option>
+          {database.categories?.map(cat => (
+            <option value={cat.name}>{cat.displayName}</option>
+          ))}
+        </select>
+        <select id="authorFilter" class="filter-select">
+          <option value="">Tous les auteurs</option>
+          {Array.from(new Set(database.allArticles?.map(a => a.editable?.author || a.author))).map(author => (
+            <option value={author}>{author}</option>
+          ))}
+        </select>
+      </div>
+    </section>
+
+    <!-- Tableau des articles -->
+    <section class="dashboard-section">
+      <h2>📖 Tous les Articles ({database.metadata?.totalArticles || database.totalArticles})</h2>
+      <div class="articles-table-container">
+        <table class="articles-table" id="articlesTable">
+          <thead>
+            <tr>
+              <th>Titre</th>
+              <th>Catégorie</th>
+              <th>Auteur</th>
+              <th>Lecture</th>
+              <th>Caractères</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {database.allArticles?.map((article) => (
+              <tr 
+                class="article-row filterable-row" 
+                data-category={article.category}
+                data-author={article.editable?.author || article.author}
+                data-title={article.editable?.title || article.title}
+                data-reading-time={article.calculated?.readingTime || article.readingTime}
+                data-character-count={article.calculated?.characterCount || article.characterCount}
+              >
+                <td class="article-title-col">
+                  <a href={article.url} class="article-link" target="_blank">{article.editable?.title || article.title}</a>
+                </td>
+                <td>
+                  <span class="category-badge">{database.categories?.find(c => c.name === article.category)?.displayName || article.category}</span>
+                </td>
+                <td>{article.editable?.author || article.author}</td>
+                <td>{article.calculated?.readingTime || article.readingTime} min</td>
+                <td>{(article.calculated?.characterCount || article.characterCount)?.toLocaleString()}</td>
+                <td class="actions-col">
+                  <button class="action-btn preview-btn" onclick={`togglePreview('${article.slug}')`}>👁️</button>
+                  <a href={article.url} class="action-btn view-btn" target="_blank">🔗</a>
+                </td>
+              </tr>
+              <tr class="article-preview" id={`preview-${article.slug}`} style="display: none;">
+                <td colspan="6">
+                  <div class="preview-content">
+                    <div class="preview-header">
+                      <h4>📝 Aperçu de l'article</h4>
+                      <div class="article-stats">
+                        <span>📊 {(article.calculated?.characterCount || article.characterCount)?.toLocaleString()} caractères</span>
+                        <span>⏱️ {article.calculated?.readingTime || article.readingTime} min de lecture</span>
+                        <span>🏷️ {article.editable?.keywords || article.keywords}</span>
+                        <span>📍 {article.editable?.intent || article.intent}</span>
+                      </div>
+                    </div>
+                    <div class="preview-sections">
+                      {article.editable?.paragraphs ? (
+                        article.editable.paragraphs.map((paragraph, index) => (
+                          <div class="preview-section">
+                            <h4>Paragraphe {paragraph.id || index + 1}</h4>
+                            <p>{paragraph.content}</p>
+                          </div>
+                        ))
+                      ) : (
+                        <>
+                          <div class="preview-section">
+                            <h4>Paragraphe 1</h4>
+                            <p>{article.paragraph1 || 'Non disponible'}</p>
+                          </div>
+                          {article.paragraph2 && (
+                            <div class="preview-section">
+                              <h4>Paragraphe 2</h4>
+                              <p>{article.paragraph2}</p>
+                            </div>
+                          )}
+                          {article.paragraph3 && (
+                            <div class="preview-section">
+                              <h4>Paragraphe 3</h4>
+                              <p>{article.paragraph3}</p>
+                            </div>
+                          )}
+                          {article.paragraph4 && (
+                            <div class="preview-section">
+                              <h4>Paragraphe 4</h4>
+                              <p>{article.paragraph4}</p>
+                            </div>
+                          )}
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            )) || []}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Statistiques avancées -->
+    <section class="dashboard-section">
+      <h2>📊 Statistiques Avancées</h2>
+      <div class="advanced-stats">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">📝</div>
+            <div class="stat-info">
+              <span class="stat-number">{stats.totalWords.toLocaleString()}</span>
+              <span class="stat-label">Mots total</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-info">
+              <span class="stat-number">{stats.totalReadingTime}</span>
+              <span class="stat-label">Minutes de lecture</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">👤</div>
+            <div class="stat-info">
+              <span class="stat-number">{stats.mostActiveAuthor[0]}</span>
+              <span class="stat-label">Auteur principal ({stats.mostActiveAuthor[1]} articles)</span>
+            </div>
+          </div>
+          {stats.longestArticle && (
+            <div class="stat-item">
+              <div class="stat-icon">📄</div>
+              <div class="stat-info">
+                <span class="stat-number">{(stats.longestArticle.calculated?.characterCount || stats.longestArticle.characterCount)?.toLocaleString()}</span>
+                <span class="stat-label">Article le plus long</span>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  /* Styles du dashboard admin */
+  .admin-dashboard {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-6);
+  }
+
+  .success-notification {
+    background: #dcfce7;
+    color: #166534;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-6);
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .dashboard-header {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-6);
+  }
+
+  .header-top h1 {
+    color: var(--primary-blue);
+    margin: 0;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: var(--spacing-3);
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: var(--spacing-3) var(--spacing-4);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .btn-primary {
+    background: var(--primary-blue);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-dark);
+  }
+
+  .btn-secondary {
+    background: var(--gray-200);
+    color: var(--gray-700);
+  }
+
+  .btn-secondary:hover {
+    background: var(--gray-300);
+  }
+
+  .dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-4);
+  }
+
+  .stat-card {
+    background: white;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-100);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-blue);
+    display: block;
+    margin-bottom: var(--spacing-1);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+  }
+
+  .filters-section {
+    margin-bottom: var(--spacing-6);
+  }
+
+  .filters-container {
+    display: flex;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+
+  .search-filter, .filter-select {
+    padding: var(--spacing-3);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  .search-filter {
+    flex: 2;
+    min-width: 250px;
+  }
+
+  .filter-select {
+    min-width: 150px;
+  }
+
+  .dashboard-section {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-100);
+  }
+
+  .dashboard-section h2 {
+    margin-bottom: var(--spacing-4);
+    color: var(--gray-900);
+  }
+
+  .articles-table-container {
+    overflow-x: auto;
+  }
+
+  .articles-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .articles-table th,
+  .articles-table td {
+    padding: var(--spacing-3);
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .articles-table th {
+    background: var(--gray-50);
+    font-weight: 600;
+    color: var(--gray-700);
+  }
+
+  .article-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .article-link:hover {
+    text-decoration: underline;
+  }
+
+  .category-badge {
+    background: var(--primary-light);
+    color: var(--primary-blue);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+  }
+
+  .actions-col {
+    display: flex;
+    gap: var(--spacing-2);
+  }
+
+  .action-btn {
+    background: var(--gray-100);
+    border: none;
+    padding: var(--spacing-2);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+  }
+
+  .action-btn:hover {
+    background: var(--gray-200);
+  }
+
+  .article-preview {
+    background: var(--gray-50);
+  }
+
+  .preview-content {
+    padding: var(--spacing-4);
+  }
+
+  .preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .preview-header h4 {
+    margin: 0;
+    color: var(--gray-900);
+  }
+
+  .article-stats {
+    display: flex;
+    gap: var(--spacing-4);
+    flex-wrap: wrap;
+  }
+
+  .article-stats span {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+  }
+
+  .preview-sections {
+    display: grid;
+    gap: var(--spacing-4);
+  }
+
+  .preview-section h4 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-2);
+    font-size: var(--font-size-sm);
+  }
+
+  .preview-section p {
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .advanced-stats {
+    margin-top: var(--spacing-4);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-4);
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    padding: var(--spacing-4);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+  }
+
+  .stat-icon {
+    font-size: var(--font-size-xl);
+  }
+
+  .stat-info {
+    flex: 1;
+  }
+
+  .stat-info .stat-number {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-1);
+  }
+
+  .stat-info .stat-label {
+    font-size: var(--font-size-xs);
+  }
+
+  @media (max-width: 768px) {
+    .header-top {
+      flex-direction: column;
+      gap: var(--spacing-4);
+    }
+
+    .filters-container {
+      flex-direction: column;
+    }
+
+    .dashboard-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .articles-table th:nth-child(3),
+    .articles-table td:nth-child(3),
+    .articles-table th:nth-child(4),
+    .articles-table td:nth-child(4) {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Variables globales
+  let articlesDatabase = null;
+
+  // Vérification de l'authentification côté client
+  document.addEventListener('DOMContentLoaded', function() {
+    const isAuthenticated = localStorage.getItem('admin_session') === 'authenticated';
+    
+    if (!isAuthenticated) {
+      window.location.href = '/admin-login/';
+      return;
+    }
+    
+    // Vérifier si la session n'a pas expiré (24h)
+    const loginTime = localStorage.getItem('admin_login_time');
+    if (loginTime) {
+      const now = new Date().getTime();
+      const twentyFourHours = 24 * 60 * 60 * 1000;
+      
+      if (now - parseInt(loginTime) > twentyFourHours) {
+        localStorage.removeItem('admin_session');
+        localStorage.removeItem('admin_login_time');
+        window.location.href = '/admin-login/';
+        return;
+      }
+    }
+  });
+
+  function logout() {
+    localStorage.removeItem('admin_session');
+    localStorage.removeItem('admin_login_time');
+    window.location.href = '/admin-login/';
+  }
+
+  function refreshDatabase() {
+    const confirmation = confirm('Êtes-vous sûr de vouloir actualiser la base de données ? Cette opération peut prendre quelques secondes.');
+    if (confirmation) {
+      window.location.href = '/admin?refresh=true';
+    }
+  }
+
+  function togglePreview(slug) {
+    const preview = document.getElementById(`preview-${slug}`);
+    if (preview) {
+      preview.style.display = preview.style.display === 'none' ? 'table-row' : 'none';
+    }
+  }
+
+  function filterArticles() {
+    const searchTerm = document.getElementById('adminSearch')?.value.toLowerCase() || '';
+    const categoryFilter = document.getElementById('categoryFilter')?.value || '';
+    const authorFilter = document.getElementById('authorFilter')?.value || '';
+    
+    const rows = Array.from(document.querySelectorAll('.filterable-row'));
+    let visibleCount = 0;
+    
+    rows.forEach(row => {
+      const title = (row.dataset.title || '').toLowerCase();
+      const category = row.dataset.category || '';
+      const author = row.dataset.author || '';
+      
+      const matchesSearch = title.includes(searchTerm);
+      const matchesCategory = !categoryFilter || category === categoryFilter;
+      const matchesAuthor = !authorFilter || author === authorFilter;
+      
+      if (matchesSearch && matchesCategory && matchesAuthor) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+        // Masquer aussi l'aperçu si ouvert
+        const articleLink = row.querySelector('.article-link');
+        if (articleLink) {
+          const slug = articleLink.href.split('/').filter(Boolean).pop();
+          const preview = document.getElementById(`preview-${slug}`);
+          if (preview) preview.style.display = 'none';
+        }
+      }
+    });
+    
+    console.log(`🔍 ${visibleCount} articles affichés`);
+  }
+
+  // Gestionnaires d'événements pour les filtres
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('adminSearch');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const authorFilter = document.getElementById('authorFilter');
+    
+    if (searchInput) {
+      searchInput.addEventListener('input', filterArticles);
+    }
+    
+    if (categoryFilter) {
+      categoryFilter.addEventListener('change', filterArticles);
+    }
+    
+    if (authorFilter) {
+      authorFilter.addEventListener('change', filterArticles);
+    }
+  });
+</script>
+
+</BaseLayout>
