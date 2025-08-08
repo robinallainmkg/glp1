@@ -19,8 +19,8 @@ Site d'information sur les traitements GLP-1 avec système d'administration int�
 
 ```bash
 # Cloner le projet
-git clone <votre-repo-url>
-cd glp1-affiliate-site
+git clone https://github.com/robinallainmkg/glp1.git
+cd glp1
 
 # Installer les dépendances
 npm install

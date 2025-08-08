@@ -52,8 +52,8 @@ git commit -m "Initial commit: Site GLP-1 France v1.0"
 
 ### 4. **Pousser vers GitHub**
 ```bash
-# Créer le repo sur GitHub (PRIVÉ recommandé)
-git remote add origin https://github.com/VOTRE-USERNAME/glp1-affiliate-site.git
+# Créer le repo sur GitHub (PRIVÉ recommandé) - FAIT ✅
+git remote add origin https://github.com/robinallainmkg/glp1.git
 git branch -M main  
 git push -u origin main
 ```
@@ -77,7 +77,7 @@ vercel
 À configurer dans Vercel/Netlify :
 
 ```
-SITE_URL=https://votre-domaine.com
+SITE_URL=https://glp1-france.fr
 NODE_ENV=production  
 ADMIN_PASSWORD=mot_de_passe_très_sécurisé_123!
 ```
@@ -86,8 +86,8 @@ ADMIN_PASSWORD=mot_de_passe_très_sécurisé_123!
 
 ```bash
 # Cloner
-git clone https://github.com/VOTRE-USERNAME/glp1-affiliate-site.git
-cd glp1-affiliate-site
+git clone https://github.com/robinallainmkg/glp1.git
+cd glp1
 
 # Installer
 npm install

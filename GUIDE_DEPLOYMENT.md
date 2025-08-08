@@ -34,7 +34,7 @@ cp .env.example .env.local
 3. **Modifier astro.config.mjs**
 ```javascript
 // Remplacer 'votre-domaine.com' par votre domaine réel
-site: 'https://glp1-france.com'
+site: 'https://glp1-france.fr'
 ```
 
 ## 🌟 Migration vers GitHub
@@ -54,7 +54,7 @@ git commit -m "Initial commit: Site GLP-1 France v1.0"
 
 ### 3. Connecter et Pousser
 ```bash
-git remote add origin https://github.com/VOTRE-USERNAME/glp1-affiliate-site.git
+git remote add origin https://github.com/robinallainmkg/glp1.git
 git branch -M main
 git push -u origin main
 ```
@@ -120,14 +120,14 @@ vercel
 3. **Configuration des Domaines**
 ```bash
 # Ajouter votre domaine personnalisé
-vercel domains add glp1-france.com
-vercel alias set your-project-name.vercel.app glp1-france.com
+vercel domains add glp1-france.fr
+vercel alias set your-project-name.vercel.app glp1-france.fr
 ```
 
 4. **Variables d'Environnement**
 Dans le dashboard Vercel:
 ```
-SITE_URL=https://glp1-france.com
+SITE_URL=https://glp1-france.fr
 NODE_ENV=production
 ADMIN_PASSWORD=votre_mot_de_passe_très_sécurisé_123!
 ```
@@ -143,7 +143,7 @@ ADMIN_PASSWORD=votre_mot_de_passe_très_sécurisé_123!
 
 4. **Variables d'Environnement** dans Netlify:
 ```
-SITE_URL=https://glp1-france.com
+SITE_URL=https://glp1-france.fr
 NODE_ENV=production
 ADMIN_PASSWORD=votre_mot_de_passe_très_sécurisé_123!
 ```
@@ -177,8 +177,8 @@ jobs:
 ### Cloner sur Nouvel Ordinateur
 ```bash
 # Cloner le repo
-git clone https://github.com/VOTRE-USERNAME/glp1-affiliate-site.git
-cd glp1-affiliate-site
+git clone https://github.com/robinallainmkg/glp1.git
+cd glp1
 
 # Installer les dépendances  
 npm install
