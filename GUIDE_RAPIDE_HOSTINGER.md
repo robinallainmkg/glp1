@@ -19,9 +19,15 @@
    - Entrer : `glp1-france.fr`
    - Confirmer
 
-4. **Noter les serveurs DNS** (fournis par Hostinger)
+4. **Noter les serveurs DNS** (vos serveurs DNS Hostinger) :
+   ```
+   ns1.dns-parking.com
+   ns2.dns-parking.com
+   ```
 5. **Configurer chez votre registrar** :
-   - Remplacer les serveurs DNS par ceux de Hostinger
+   - Remplacer les serveurs DNS actuels par :
+     - `ns1.dns-parking.com`
+     - `ns2.dns-parking.com`
    - ⏰ **Attendre 24-48h** pour la propagation
 
 ### **ÉTAPE 2 : Upload du Site (5 min)**

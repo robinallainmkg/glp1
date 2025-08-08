@@ -19,7 +19,7 @@
    - Confirmer l'ajout
 
 2. **Noter les serveurs DNS Hostinger** :
-   Hostinger vous donnera les serveurs DNS (exemple) :
+   Hostinger vous donnera vos serveurs DNS :
    ```
    ns1.dns-parking.com
    ns2.dns-parking.com
@@ -28,7 +28,9 @@
 3. **Configurer chez votre registrar** :
    - Aller chez votre registrar de domaine (OVH, Gandi, Namecheap, etc.)
    - Section "Gestion DNS" ou "Serveurs de noms"
-   - Remplacer par les serveurs DNS Hostinger
+   - Remplacer par les serveurs DNS Hostinger :
+     - `ns1.dns-parking.com`
+     - `ns2.dns-parking.com`
    - ⏰ **Attendre 24-48h pour la propagation**
 
 #### Si votre domaine est CHEZ HOSTINGER :

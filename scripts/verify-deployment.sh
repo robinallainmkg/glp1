@@ -41,14 +41,30 @@ test_url() {
 # Fonction de test DNS
 test_dns() {
     echo "🌐 Test de résolution DNS..."
+    echo "Serveurs DNS Hostinger attendus :"
+    echo "  - ns1.dns-parking.com"
+    echo "  - ns2.dns-parking.com"
+    echo ""
+    
     nslookup_result=$(nslookup $DOMAIN 2>/dev/null)
     
     if [[ $nslookup_result == *"Address:"* ]]; then
         echo -e "${GREEN}✅ DNS résolu${NC}"
         echo "$nslookup_result" | grep "Address:" | tail -n 1
+        
+        # Vérifier les serveurs DNS
+        ns_result=$(nslookup -type=ns $DOMAIN 2>/dev/null)
+        if [[ $ns_result == *"dns-parking.com"* ]]; then
+            echo -e "${GREEN}✅ Serveurs DNS Hostinger détectés${NC}"
+        else
+            echo -e "${YELLOW}⚠️  Vérifiez les serveurs DNS chez votre registrar${NC}"
+        fi
     else
         echo -e "${RED}❌ DNS non résolu${NC}"
-        echo "⚠️  Vérifiez la propagation DNS sur https://dnschecker.org"
+        echo "⚠️  Vérifiez :"
+        echo "   1. Configuration chez votre registrar"
+        echo "   2. Propagation DNS (peut prendre jusqu'à 48h)"
+        echo "   3. Test sur https://dnschecker.org"
     fi
     echo ""
 }
