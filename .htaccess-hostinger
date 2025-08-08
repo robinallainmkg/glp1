@@ -1,0 +1,180 @@
+# ==============================================================================
+# .htaccess pour GLP-1 France - Configuration Hostinger Optimisée
+# ==============================================================================
+
+# Enable mod_rewrite
+RewriteEngine On
+
+# ------------------------------------------------------------------------------
+# SÉCURITÉ ET REDIRECTIONS
+# ------------------------------------------------------------------------------
+
+# Force HTTPS (obligatoire pour les sites modernes)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Suppression du www (optionnel - ajustez selon vos préférences)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Protection contre les injections de headers
+Header always unset "X-Powered-By"
+Header always unset "Server"
+
+# ------------------------------------------------------------------------------
+# GESTION DES ROUTES SPA (Single Page Application)
+# ------------------------------------------------------------------------------
+
+# Astro génère des fichiers statiques, mais on garde la logique SPA pour les 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
+
+# ------------------------------------------------------------------------------
+# PROTECTION ADMIN (Important pour la sécurité)
+# ------------------------------------------------------------------------------
+
+# Protection basique de l'admin - À PERSONNALISER
+<FilesMatch "admin.*">
+    Order allow,deny
+    Allow from all
+    
+    # DÉCOMMENTER ET AJOUTER VOTRE IP POUR RESTRICTION :
+    # Deny from all
+    # Allow from 123.456.789.0  # Remplacez par votre IP
+    # Allow from 192.168.1.0/24 # Ou votre réseau local
+</FilesMatch>
+
+# Protection des fichiers sensibles
+<FilesMatch "\.(json|md|txt|log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protection du fichier .htaccess lui-même
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# ------------------------------------------------------------------------------
+# OPTIMISATION CACHE (Améliore les performances)
+# ------------------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Documents HTML (courte durée pour les mises à jour)
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # CSS et JavaScript (longue durée car les noms de fichiers changent avec Astro)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    
+    # Images (longue durée)
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    
+    # Autres fichiers
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/plain "access plus 1 month"
+</IfModule>
+
+# Cache headers alternatifs si mod_expires n'est pas disponible
+<IfModule mod_headers.c>
+    # CSS et JS avec hash - cache long
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+    
+    # Images - cache long
+    <FilesMatch "\.(png|jpg|jpeg|gif|svg|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # HTML - cache court
+    <FilesMatch "\.html$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# COMPRESSION GZIP (Réduit la taille des fichiers)
+# ------------------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+    # Compresser les types de fichiers texte
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    
+    # Exclure les images déjà compressées
+    SetEnvIfNoCase Request_URI \
+        \.(?:gif|jpe?g|png|webp)$ no-gzip dont-vary
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# PAGES D'ERREUR PERSONNALISÉES
+# ------------------------------------------------------------------------------
+
+# 404 - Page non trouvée
+ErrorDocument 404 /index.html
+
+# 500 - Erreur serveur
+ErrorDocument 500 /index.html
+
+# 403 - Accès interdit
+ErrorDocument 403 /index.html
+
+# ------------------------------------------------------------------------------
+# SÉCURITÉ AVANCÉE
+# ------------------------------------------------------------------------------
+
+# Désactiver la signature du serveur
+ServerSignature Off
+
+# Empêcher l'affichage du contenu des dossiers
+Options -Indexes
+
+# Protection XSS
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Content Security Policy (à ajuster selon vos besoins)
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# REDIRECTIONS SPÉCIFIQUES (à ajouter si nécessaire)
+# ------------------------------------------------------------------------------
+
+# Exemple : Rediriger une ancienne URL vers une nouvelle
+# RewriteRule ^ancienne-page/?$ /nouvelle-page [R=301,L]
+
+# Exemple : Rediriger toutes les pages vers HTTPS (déjà fait en haut)
+# RewriteRule ^(.*)$ https://glp1-france.fr/$1 [R=301,L]
+
+# ==============================================================================
+# FIN DE CONFIGURATION
+# ==============================================================================
