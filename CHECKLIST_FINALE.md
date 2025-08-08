@@ -6,12 +6,16 @@
 
 - [x] **`.gitignore`** : Configuré pour Astro, Node.js, et fichiers sensibles
 - [x] **`.env.example`** : Modèle des variables d'environnement
+- [x] **`.env.production`** : Configuration production avec toutes les variables
 - [x] **`README.md`** : Documentation complète du projet
-- [x] **`package.json`** : Scripts optimisés pour développement et déploiement
+- [x] **`package.json`** : Scripts optimisés (dev, build, deploy, generate)
+- [x] **`scripts/deploy.mjs`** : Script de déploiement automatisé
 - [x] **`vercel.json`** : Configuration Vercel avec sécurité
 - [x] **`netlify.toml`** : Configuration Netlify alternative
-- [x] **`astro.config.mjs`** : Configuration Astro optimisée
+- [x] **`astro.config.mjs`** : Configuration Astro optimisée avec domaine
 - [x] **Build testé** : ✅ 23 pages générées sans erreur
+- [x] **Database générée** : ✅ 74 articles dans 9 catégories
+- [x] **Git configuré** : ✅ Branches main, develop, staging créées et pushées
 
 ### 🗂️ Structure Projet Optimisée
 
@@ -31,46 +35,38 @@ glp1-affiliate-site/
 
 ## 🚀 Actions Suivantes
 
-### 1. **Modifier astro.config.mjs**
-```javascript
-// Remplacer par votre vrai domaine
-site: 'https://votre-domaine-reel.com'
+### 1. **Tester le déploiement automatisé**
+```bash
+# Test en staging
+npm run deploy:staging
+
+# Déploiement production  
+npm run deploy:production
 ```
 
-### 2. **Créer .env.local**
+### 2. **Créer .env.local pour développement**
 ```bash
 cp .env.example .env.local
 # Éditer avec vos valeurs locales
 ```
 
-### 3. **Initialiser Git**
-```bash
-git init
-git add .
-git commit -m "Initial commit: Site GLP-1 France v1.0"
-```
-
-### 4. **Pousser vers GitHub**
-```bash
-# Créer le repo sur GitHub (PRIVÉ recommandé) - FAIT ✅
-git remote add origin https://github.com/robinallainmkg/glp1.git
-git branch -M main  
-git push -u origin main
-```
-
-### 5. **Déployer en Production**
-
-**Option Vercel (Recommandé)** :
+### 3. **Déployer sur Vercel (Recommandé)**
 ```bash
 npm i -g vercel
-vercel
-# Suivre les instructions
+vercel --prod
+# Configurer les variables d'environnement depuis .env.production
 ```
 
-**Option Netlify** :
+### 4. **Ou déployer sur Netlify**
 - Connecter GitHub sur netlify.com
-- Importer le projet
+- Importer le projet https://github.com/robinallainmkg/glp1
 - Configuration automatique avec netlify.toml
+- Ajouter les variables d'environnement depuis .env.production
+
+### 5. **Configurer le domaine personnalisé**
+- Acheter `glp1-france.fr` (ou votre domaine)
+- Le pointer vers Vercel/Netlify
+- Configurer HTTPS automatique
 
 ## 🔐 Variables d'Environnement Production
 
