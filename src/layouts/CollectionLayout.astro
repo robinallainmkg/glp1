@@ -1,0 +1,581 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  collection: {
+    id: string;
+    name: string;
+    slug: string;
+    description: string;
+    icon: string;
+    color: string;
+    seoTitle: string;
+    seoDescription: string;
+    keywords: string[];
+    image?: string;
+  };
+  articles: Array<{
+    slug: string;
+    title: string;
+    description: string;
+    author: string;
+    url: string;
+    wordCount: number;
+    readingTime: number;
+    lastModified: string;
+  }>;
+  currentPage?: number;
+  totalPages?: number;
+}
+
+const { collection, articles, currentPage = 1, totalPages = 1 } = Astro.props;
+
+// Fonction pour obtenir les informations de l'auteur
+function getAuthorInfo(authorName: string) {
+  const authors = {
+    'Dr. Émilie Martin': {
+      name: 'Dr. Émilie Martin',
+      role: 'Endocrinologue spécialisée',
+      avatar: '👩‍⚕️',
+      expertise: 'Diabète et traitements GLP-1'
+    },
+    'Sophie Dubois': {
+      name: 'Sophie Dubois',
+      role: 'Nutritionniste certifiée',
+      avatar: '👩‍🍳',
+      expertise: 'Nutrition et perte de poids'
+    },
+    'Julien Lefèvre': {
+      name: 'Julien Lefèvre',
+      role: 'Pharmacien spécialisé',
+      avatar: '👨‍💼',
+      expertise: 'Médicaments et prescriptions'
+    },
+    'Marie Dubois': {
+      name: 'Marie Dubois',
+      role: 'Diététicienne',
+      avatar: '👩‍⚕️',
+      expertise: 'Régimes thérapeutiques'
+    }
+  };
+
+  return authors[authorName] || authors['Dr. Émilie Martin'];
+}
+
+// Fonction pour formater la date
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('fr-FR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+---
+
+<BaseLayout 
+  title={collection.seoTitle}
+  description={collection.seoDescription}
+  keywords={collection.keywords.join(', ')}
+>
+  <div class="collection-container">
+    <!-- Collection Header -->
+    <header class="collection-header">
+      <div class="collection-hero" style={`background: linear-gradient(135deg, ${collection.color}15 0%, ${collection.color}05 100%)`}>
+        <div class="collection-hero-content">
+          <div class="collection-icon" style={`background: ${collection.color}20`}>
+            <span class="icon-emoji">{collection.icon}</span>
+          </div>
+          <div class="collection-info">
+            <h1 class="collection-title">{collection.name}</h1>
+            <p class="collection-description">{collection.description}</p>
+            <div class="collection-stats">
+              <span class="stat-item">
+                <span class="stat-icon">📄</span>
+                <span class="stat-text">{articles.length} article{articles.length > 1 ? 's' : ''}</span>
+              </span>
+              <span class="stat-item">
+                <span class="stat-icon">⏱️</span>
+                <span class="stat-text">{Math.ceil(articles.reduce((sum, article) => sum + article.readingTime, 0))} min de lecture</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+      <div class="articles-header">
+        <h2>Articles de la collection</h2>
+        <div class="articles-filters">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="recent">Récents</button>
+          <button class="filter-btn" data-filter="popular">Populaires</button>
+        </div>
+      </div>
+
+      <div class="articles-grid">
+        {articles.map((article) => {
+          const authorInfo = getAuthorInfo(article.author);
+          return (
+            <article class="article-card">
+              <div class="article-card-header">
+                <div class="collection-badge" style={`background: ${collection.color}20; color: ${collection.color}`}>
+                  {collection.icon} {collection.name}
+                </div>
+                <div class="article-meta">
+                  <span class="reading-time">{article.readingTime} min</span>
+                  <span class="word-count">{article.wordCount} mots</span>
+                </div>
+              </div>
+              
+              <div class="article-card-content">
+                <h3 class="article-title">
+                  <a href={article.url}>{article.title}</a>
+                </h3>
+                <p class="article-description">{article.description}</p>
+              </div>
+
+              <div class="article-card-footer">
+                <div class="author-info">
+                  <span class="author-avatar">{authorInfo.avatar}</span>
+                  <div class="author-details">
+                    <span class="author-name">{authorInfo.name}</span>
+                    <span class="author-role">{authorInfo.role}</span>
+                  </div>
+                </div>
+                <div class="article-date">
+                  <span class="date-icon">📅</span>
+                  <span class="date-text">{formatDate(article.lastModified)}</span>
+                </div>
+              </div>
+
+              <div class="article-card-action">
+                <a href={article.url} class="read-more-btn">
+                  Lire l'article
+                  <span class="btn-icon">→</span>
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Pagination si nécessaire -->
+    {totalPages > 1 && (
+      <nav class="pagination">
+        <div class="pagination-info">
+          Page {currentPage} sur {totalPages}
+        </div>
+        <div class="pagination-controls">
+          {currentPage > 1 && (
+            <a href={`/${collection.slug}/?page=${currentPage - 1}`} class="pagination-btn">
+              ← Précédent
+            </a>
+          )}
+          {currentPage < totalPages && (
+            <a href={`/${collection.slug}/?page=${currentPage + 1}`} class="pagination-btn">
+              Suivant →
+            </a>
+          )}
+        </div>
+      </nav>
+    )}
+
+    <!-- Navigation vers autres collections -->
+    <section class="related-collections">
+      <h2>Autres collections</h2>
+      <div class="collections-grid">
+        <!-- Cette section sera alimentée dynamiquement -->
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+.collection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Collection Header */
+.collection-header {
+  margin-bottom: 3rem;
+}
+
+.collection-hero {
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.collection-hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.collection-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+}
+
+.icon-emoji {
+  font-size: 2.5rem;
+}
+
+.collection-info {
+  flex: 1;
+}
+
+.collection-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: var(--color-slate-900);
+  line-height: 1.2;
+}
+
+.collection-description {
+  font-size: 1.25rem;
+  color: var(--color-slate-600);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.collection-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-slate-700);
+  font-weight: 500;
+}
+
+.stat-icon {
+  font-size: 1.1rem;
+}
+
+/* Articles Section */
+.articles-section {
+  margin-bottom: 3rem;
+}
+
+.articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.articles-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin: 0;
+}
+
+.articles-filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-slate-300);
+  background: white;
+  color: var(--color-slate-600);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--color-blue-500);
+  color: white;
+  border-color: var(--color-blue-500);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Article Cards */
+.article-card {
+  background: white;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-blue-300);
+}
+
+.article-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.collection-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+}
+
+.article-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-slate-500);
+}
+
+.article-card-content {
+  margin-bottom: 1.5rem;
+}
+
+.article-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.article-title a {
+  color: var(--color-slate-900);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.article-title a:hover {
+  color: var(--color-blue-600);
+}
+
+.article-description {
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.article-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-slate-100);
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  font-size: 1.5rem;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--color-slate-900);
+  font-size: 0.875rem;
+}
+
+.author-role {
+  font-size: 0.75rem;
+  color: var(--color-slate-500);
+}
+
+.article-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-slate-500);
+}
+
+.article-card-action {
+  margin-top: 1rem;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-blue-500);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.read-more-btn:hover {
+  background: var(--color-blue-600);
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  transition: transform 0.2s ease;
+}
+
+.read-more-btn:hover .btn-icon {
+  transform: translateX(2px);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-slate-200);
+}
+
+.pagination-info {
+  color: var(--color-slate-600);
+  font-weight: 500;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.pagination-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-slate-100);
+  color: var(--color-slate-700);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover {
+  background: var(--color-blue-500);
+  color: white;
+}
+
+/* Related Collections */
+.related-collections {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-slate-200);
+}
+
+.related-collections h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin: 0 0 2rem 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .collection-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .collection-title {
+    font-size: 2rem;
+  }
+  
+  .collection-stats {
+    justify-content: center;
+  }
+  
+  .articles-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+</style>
+
+<script>
+// Gestion des filtres d'articles
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const articleCards = document.querySelectorAll('.article-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Retirer la classe active de tous les boutons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Ajouter la classe active au bouton cliqué
+      this.classList.add('active');
+
+      const filter = this.dataset.filter;
+
+      articleCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'block';
+        } else if (filter === 'recent') {
+          // Logique pour filtrer les articles récents
+          // Pour l'instant, on affiche tous
+          card.style.display = 'block';
+        } else if (filter === 'popular') {
+          // Logique pour filtrer les articles populaires
+          // Pour l'instant, on affiche tous
+          card.style.display = 'block';
+        }
+      });
+    });
+  });
+});
+</script>

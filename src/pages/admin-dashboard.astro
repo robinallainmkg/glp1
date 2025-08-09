@@ -7,11 +7,22 @@ import path from 'node:path';
 const databasePath = path.resolve(process.cwd(), 'data/articles-database.json');
 let database = { categories: [], allArticles: [], totalArticles: 0, totalCategories: 0 };
 
+// Charger les collections
+const collectionsPath = path.resolve(process.cwd(), 'data/collections.json');
+let collectionsData = { collections: [] };
+
 try {
   const rawData = fs.readFileSync(databasePath, 'utf-8');
   database = JSON.parse(rawData);
 } catch (error) {
   console.error('Erreur lecture base de données:', error);
+}
+
+try {
+  const collectionsRaw = fs.readFileSync(collectionsPath, 'utf-8');
+  collectionsData = JSON.parse(collectionsRaw);
+} catch (error) {
+  console.error('Erreur lecture collections:', error);
 }
 
 const themeMapping = {

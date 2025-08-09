@@ -1,19 +1,20 @@
 # Site GLP-1 France
 
-Site d'information sur les traitements GLP-1 avec système d'administration intégré.
+Site d'information sur les traitements GLP-1 avec système d'administration intégré et déploiement automatisé.
 
 ## 🚀 Technologies
 
 - **Framework**: Astro 4.x
 - **Styles**: CSS personnalisé avec variables CSS
 - **Scripts**: Node.js pour la génération de contenu
-- **Déploiement**: Compatible avec Vercel, Netlify, GitHub Pages
+- **Déploiement**: Hostinger via SSH (automatisé), compatible Vercel/Netlify
 
 ## 📋 Prérequis
 
 - Node.js 18+ 
 - npm ou yarn
 - Git
+- **Pour le déploiement**: SSH client, clé ED25519
 
 ## 🛠️ Installation
 
@@ -34,6 +35,46 @@ npm run generate-database
 # Lancer le serveur de développement
 npm run dev
 ```
+
+## 🚀 Déploiement
+
+### Quick Start (Windows)
+
+```powershell
+# Test de déploiement
+npm run deploy:dry
+
+# Déploiement réel
+npm run deploy
+
+# Afficher la clé SSH publique
+npm run deploy:show-key
+```
+
+### Configuration SSH (première fois)
+
+1. **Générer la clé SSH** :
+```bash
+ssh-keygen -t ed25519 -f ~/.ssh/glp1_ed25519 -C "glp1-france@hostinger"
+```
+
+2. **Configurer sur Hostinger** :
+   - Panel Hostinger → SSH Access
+   - Coller la clé publique (`npm run deploy:show-key`)
+   - Sauvegarder
+
+3. **Tester la connexion** :
+```bash
+ssh -i ~/.ssh/glp1_ed25519 -p 65002 u403023291@147.79.98.140
+```
+
+### Déploiement Cross-Platform
+
+- **Windows** : Scripts PowerShell + Git Bash
+- **macOS/Linux** : Scripts Bash natifs
+- **Tous** : SSH + SCP pour le transfert
+
+📖 **Guide complet** : [GUIDE_DEPLOYMENT_COMPLET.md](./GUIDE_DEPLOYMENT_COMPLET.md)
 
 ## ⚡️ Build et ouverture automatique du site local
 
@@ -102,7 +143,68 @@ Accès admin via `/admin-login/` avec authentification par session.
 
 ## 🚀 Déploiement
 
-### Vercel (Recommandé)
+### 🏗️ Déploiement Automatisé Hostinger (Recommandé)
+
+Le projet inclut un système de déploiement automatisé vers Hostinger avec backup et vérifications intégrées.
+
+#### Configuration Initiale
+
+1. **Configurer SSH** (voir [Guide SSH](GUIDE_CONFIGURATION_SSH.md))
+2. **Créer la configuration de production** :
+```bash
+cp .env.production.example .env.production
+# Éditer .env.production avec vos paramètres Hostinger
+```
+
+#### Scripts de Déploiement
+
+```bash
+# Déploiement complet avec backup
+npm run deploy
+
+# Déploiement rapide sans backup  
+npm run deploy:quick
+
+# Test de déploiement (sans upload réel)
+npm run deploy:dry
+
+# Vérification post-déploiement
+npm run deploy:check
+
+# Rollback vers version précédente
+npm run deploy:rollback
+```
+
+#### Fonctionnalités du Système de Déploiement
+
+- ✅ **Build automatique** avec vérification d'erreurs
+- ✅ **Backup distant** avant chaque déploiement
+- ✅ **Synchronisation rsync** optimisée avec exclusions
+- ✅ **Vérification post-déploiement** (HTTP, SSL, métriques)
+- ✅ **Rollback automatique** en cas de problème
+- ✅ **Logs détaillés** pour chaque déploiement
+- ✅ **Nettoyage automatique** des anciens backups
+
+#### Workflow de Déploiement Recommandé
+
+```bash
+# 1. Tester en local
+npm run build
+npm run preview
+
+# 2. Test dry-run
+npm run deploy:dry
+
+# 3. Déploiement réel
+npm run deploy
+
+# 4. Vérification
+npm run deploy:check
+```
+
+### 🌐 Autres Plateformes
+
+#### Vercel
 
 ```bash
 # Installer Vercel CLI
@@ -112,7 +214,7 @@ npm i -g vercel
 vercel
 ```
 
-### Netlify
+#### Netlify
 
 ```bash
 # Build command: npm run build

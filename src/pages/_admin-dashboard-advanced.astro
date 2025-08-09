@@ -1,0 +1,1634 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Charger la base de données d'articles
+const databasePath = path.resolve(process.cwd(), 'data/articles-database.json');
+let database = { categories: [], allArticles: [], totalArticles: 0, totalCategories: 0 };
+
+// Charger les collections
+const collectionsPath = path.resolve(process.cwd(), 'data/collections.json');
+let collectionsData = { collections: [] };
+
+try {
+  const rawData = fs.readFileSync(databasePath, 'utf-8');
+  database = JSON.parse(rawData);
+} catch (error) {
+  console.error('Erreur lecture base de données:', error);
+}
+
+try {
+  const collectionsRaw = fs.readFileSync(collectionsPath, 'utf-8');
+  collectionsData = JSON.parse(collectionsRaw);
+} catch (error) {
+  console.error('Erreur lecture collections:', error);
+}
+
+const collections = collectionsData.collections || [];
+const allArticlesEnriched = database.allArticles?.map(article => ({
+  ...article,
+  collection: collections.find(c => c.id === article.category)
+})) || [];
+---
+
+<BaseLayout 
+  title="Dashboard Admin Advanced - GLP1 France"
+  description="Interface de gestion avancée des collections et articles avec analyseur SEO"
+  keywords="admin, dashboard, gestion, collections, articles, seo">
+
+<div class="admin-container">
+  <!-- Header avec navigation -->
+  <header class="admin-header">
+    <div class="admin-header-content">
+      <div class="header-left">
+        <h1>🎛️ Dashboard Admin Advanced</h1>
+        <p class="header-subtitle">Gestion complète des contenus et collections</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-primary" onclick="openArticleEditor()">
+          📝 Nouvel Article
+        </button>
+        <button class="btn btn-secondary" onclick="openCollectionEditor()">
+          📁 Nouvelle Collection
+        </button>
+        <button class="btn btn-accent" onclick="runSEOAnalysis()">
+          🔍 Analyse SEO
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="admin-nav">
+    <button class="nav-tab active" data-tab="dashboard">
+      📊 Tableau de Bord
+    </button>
+    <button class="nav-tab" data-tab="articles">
+      📄 Articles ({database.totalArticles})
+    </button>
+    <button class="nav-tab" data-tab="collections">
+      📁 Collections ({collections.length})
+    </button>
+    <button class="nav-tab" data-tab="seo">
+      🔍 Analyse SEO
+    </button>
+    <button class="nav-tab" data-tab="settings">
+      ⚙️ Paramètres
+    </button>
+  </nav>
+
+  <!-- Contenu Principal -->
+  <main class="admin-main">
+    
+    <!-- Tab 1: Dashboard Overview -->
+    <section id="tab-dashboard" class="tab-content active">
+      <div class="dashboard-grid">
+        
+        <!-- Statistiques générales -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📄</div>
+            <div class="stat-info">
+              <div class="stat-number">{database.totalArticles}</div>
+              <div class="stat-label">Articles Total</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">📁</div>
+            <div class="stat-info">
+              <div class="stat-number">{collections.length}</div>
+              <div class="stat-label">Collections</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Auteurs</div>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-info">
+              <div class="stat-number">{Math.round(allArticlesEnriched.reduce((sum, a) => sum + (a.wordCount || 0), 0) / database.totalArticles)}</div>
+              <div class="stat-label">Mots/Article</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collections Overview -->
+        <div class="collections-overview">
+          <h2>Collections</h2>
+          <div class="collections-grid">
+            {collections.map(collection => {
+              const articleCount = database.categories?.find(c => c.name === collection.id)?.articleCount || 0;
+              return (
+                <div class="collection-card" data-collection={collection.id}>
+                  <div class="collection-header">
+                    <div class="collection-icon" style={`background: ${collection.color}20`}>
+                      <span style={`color: ${collection.color}`}>{collection.icon}</span>
+                    </div>
+                    <div class="collection-actions">
+                      <button class="btn-icon" onclick={`editCollection('${collection.id}')`} title="Éditer">
+                        ✏️
+                      </button>
+                      <button class="btn-icon" onclick={`viewCollectionArticles('${collection.id}')`} title="Voir articles">
+                        👁️
+                      </button>
+                    </div>
+                  </div>
+                  <div class="collection-content">
+                    <h3>{collection.name}</h3>
+                    <p>{collection.description}</p>
+                    <div class="collection-stats">
+                      <span class="stat">{articleCount} articles</span>
+                      <span class="stat" style={`color: ${collection.color}`}>#{collection.slug}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <!-- Activité récente -->
+        <div class="recent-activity">
+          <h2>Activité Récente</h2>
+          <div class="activity-list">
+            {allArticlesEnriched.slice(0, 5).map(article => (
+              <div class="activity-item">
+                <div class="activity-icon">📝</div>
+                <div class="activity-content">
+                  <div class="activity-title">{article.title}</div>
+                  <div class="activity-meta">
+                    <span class="activity-author">{article.author}</span>
+                    <span class="activity-date">{new Date(article.lastModified).toLocaleDateString('fr-FR')}</span>
+                  </div>
+                </div>
+                <div class="activity-actions">
+                  <button class="btn-small" onclick={`editArticle('${article.slug}')`}>
+                    Éditer
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Articles Management -->
+    <section id="tab-articles" class="tab-content">
+      <div class="articles-header">
+        <h2>Gestion des Articles</h2>
+        <div class="articles-filters">
+          <input type="text" id="article-search" placeholder="Rechercher un article..." class="search-input">
+          <select id="collection-filter" class="filter-select">
+            <option value="">Toutes les collections</option>
+            {collections.map(collection => (
+              <option value={collection.id}>{collection.name}</option>
+            ))}
+          </select>
+          <select id="author-filter" class="filter-select">
+            <option value="">Tous les auteurs</option>
+            <option value="Dr. Émilie Martin">Dr. Émilie Martin</option>
+            <option value="Sophie Dubois">Sophie Dubois</option>
+            <option value="Julien Lefèvre">Julien Lefèvre</option>
+            <option value="Marie Dubois">Marie Dubois</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="articles-table-container">
+        <table class="articles-table">
+          <thead>
+            <tr>
+              <th>Titre</th>
+              <th>Collection</th>
+              <th>Auteur</th>
+              <th>Mots</th>
+              <th>SEO Score</th>
+              <th>Modifié</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allArticlesEnriched.map(article => {
+              const seoScore = calculateSEOScore(article);
+              return (
+                <tr class="article-row" data-collection={article.category} data-author={article.author}>
+                  <td>
+                    <div class="article-title-cell">
+                      <strong>{article.title}</strong>
+                      <small>{article.description}</small>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="collection-badge" style={`background: ${article.collection?.color}20; color: ${article.collection?.color}`}>
+                      {article.collection?.icon} {article.collection?.name}
+                    </div>
+                  </td>
+                  <td>{article.author}</td>
+                  <td>
+                    <span class={`word-count ${article.wordCount < 300 ? 'low' : article.wordCount > 1000 ? 'high' : 'good'}`}>
+                      {article.wordCount}
+                    </span>
+                  </td>
+                  <td>
+                    <div class={`seo-score score-${getSEOScoreClass(seoScore)}`}>
+                      {seoScore}/100
+                    </div>
+                  </td>
+                  <td>{new Date(article.lastModified).toLocaleDateString('fr-FR')}</td>
+                  <td>
+                    <div class="action-buttons">
+                      <button class="btn-icon" onclick={`editArticle('${article.slug}')`} title="Éditer">
+                        ✏️
+                      </button>
+                      <button class="btn-icon" onclick={`previewArticle('${article.url}')`} title="Prévisualiser">
+                        👁️
+                      </button>
+                      <button class="btn-icon" onclick={`analyzeArticleSEO('${article.slug}')`} title="Analyse SEO">
+                        🔍
+                      </button>
+                      <button class="btn-icon danger" onclick={`deleteArticle('${article.slug}')`} title="Supprimer">
+                        🗑️
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tab 3: Collections Management -->
+    <section id="tab-collections" class="tab-content">
+      <div class="collections-manager">
+        <h2>Gestion des Collections</h2>
+        
+        <div class="collections-actions">
+          <button class="btn btn-primary" onclick="openCollectionEditor()">
+            ➕ Nouvelle Collection
+          </button>
+          <button class="btn btn-secondary" onclick="reorderCollections()">
+            🔄 Réorganiser
+          </button>
+          <button class="btn btn-accent" onclick="exportCollections()">
+            📤 Exporter
+          </button>
+        </div>
+
+        <div class="collections-detailed-grid">
+          {collections.map(collection => {
+            const articleCount = database.categories?.find(c => c.name === collection.id)?.articleCount || 0;
+            const totalWords = allArticlesEnriched
+              .filter(a => a.category === collection.id)
+              .reduce((sum, a) => sum + (a.wordCount || 0), 0);
+            
+            return (
+              <div class="collection-detailed-card">
+                <div class="collection-card-header">
+                  <div class="collection-icon-large" style={`background: ${collection.color}20`}>
+                    <span style={`color: ${collection.color}`}>{collection.icon}</span>
+                  </div>
+                  <div class="collection-actions">
+                    <button class="btn-icon" onclick={`editCollection('${collection.id}')`}>✏️</button>
+                    <button class="btn-icon" onclick={`duplicateCollection('${collection.id}')`}>📋</button>
+                    <button class="btn-icon danger" onclick={`deleteCollection('${collection.id}')`}>🗑️</button>
+                  </div>
+                </div>
+                
+                <div class="collection-card-content">
+                  <h3>{collection.name}</h3>
+                  <p>{collection.description}</p>
+                  
+                  <div class="collection-detailed-stats">
+                    <div class="stat-row">
+                      <span class="stat-label">Articles:</span>
+                      <span class="stat-value">{articleCount}</span>
+                    </div>
+                    <div class="stat-row">
+                      <span class="stat-label">Mots total:</span>
+                      <span class="stat-value">{totalWords.toLocaleString()}</span>
+                    </div>
+                    <div class="stat-row">
+                      <span class="stat-label">Slug:</span>
+                      <span class="stat-value">/{collection.slug}/</span>
+                    </div>
+                    <div class="stat-row">
+                      <span class="stat-label">Template:</span>
+                      <span class="stat-value">{collection.template}</span>
+                    </div>
+                  </div>
+
+                  <div class="collection-keywords">
+                    <strong>Mots-clés:</strong>
+                    <div class="keywords-list">
+                      {collection.keywords?.map(keyword => (
+                        <span class="keyword-tag">{keyword}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="collection-card-footer">
+                  <button class="btn btn-small" onclick={`viewCollectionArticles('${collection.id}')`}>
+                    Voir Articles
+                  </button>
+                  <button class="btn btn-small" onclick={`openCollectionSEO('${collection.id}')`}>
+                    Analyse SEO
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: SEO Analysis -->
+    <section id="tab-seo" class="tab-content">
+      <div class="seo-analyzer">
+        <h2>Analyseur SEO Automatique</h2>
+        
+        <div class="seo-overview">
+          <div class="seo-stats">
+            <div class="seo-stat-card">
+              <div class="seo-stat-number">{allArticlesEnriched.filter(a => calculateSEOScore(a) >= 80).length}</div>
+              <div class="seo-stat-label">Articles Excellents (80+)</div>
+            </div>
+            <div class="seo-stat-card">
+              <div class="seo-stat-number">{allArticlesEnriched.filter(a => calculateSEOScore(a) >= 60 && calculateSEOScore(a) < 80).length}</div>
+              <div class="seo-stat-label">Articles Bons (60-79)</div>
+            </div>
+            <div class="seo-stat-card">
+              <div class="seo-stat-number">{allArticlesEnriched.filter(a => calculateSEOScore(a) < 60).length}</div>
+              <div class="seo-stat-label">Articles à Améliorer (<60)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seo-recommendations">
+          <h3>Recommandations Prioritaires</h3>
+          <div class="recommendations-list">
+            <div class="recommendation-item">
+              <div class="recommendation-icon">⚠️</div>
+              <div class="recommendation-content">
+                <strong>Articles trop courts détectés</strong>
+                <p>{allArticlesEnriched.filter(a => a.wordCount < 300).length} articles ont moins de 300 mots. Recommandation: 500+ mots.</p>
+              </div>
+              <button class="btn btn-small" onclick="showShortArticles()">Voir Liste</button>
+            </div>
+            
+            <div class="recommendation-item">
+              <div class="recommendation-icon">📝</div>
+              <div class="recommendation-content">
+                <strong>Optimisation des meta descriptions</strong>
+                <p>Vérifier que toutes les descriptions font entre 150-160 caractères pour un affichage optimal.</p>
+              </div>
+              <button class="btn btn-small" onclick="showMetaOptimization()">Analyser</button>
+            </div>
+            
+            <div class="recommendation-item">
+              <div class="recommendation-icon">🔗</div>
+              <div class="recommendation-content">
+                <strong>Maillage interne</strong>
+                <p>Améliorer les liens entre articles de collections similaires pour renforcer l'autorité topique.</p>
+              </div>
+              <button class="btn btn-small" onclick="showInternalLinking()">Suggestions</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outil d'analyse d'article individuel -->
+        <div class="seo-article-analyzer">
+          <h3>Analyser un Article Spécifique</h3>
+          <div class="analyzer-form">
+            <select id="seo-article-select" class="analyzer-select">
+              <option value="">Choisir un article...</option>
+              {allArticlesEnriched.map(article => (
+                <option value={article.slug}>{article.title}</option>
+              ))}
+            </select>
+            <button class="btn btn-primary" onclick="analyzeSelectedArticle()">
+              🔍 Analyser
+            </button>
+          </div>
+          
+          <div id="seo-results" class="seo-results" style="display: none;">
+            <!-- Les résultats d'analyse apparaîtront ici -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: Settings -->
+    <section id="tab-settings" class="tab-content">
+      <div class="settings-panel">
+        <h2>Paramètres du Dashboard</h2>
+        
+        <div class="settings-sections">
+          <div class="settings-section">
+            <h3>Préférences SEO</h3>
+            <div class="setting-item">
+              <label>Nombre de mots minimum recommandé:</label>
+              <input type="number" value="500" class="setting-input">
+            </div>
+            <div class="setting-item">
+              <label>Longueur meta description idéale:</label>
+              <input type="number" value="155" class="setting-input">
+            </div>
+          </div>
+          
+          <div class="settings-section">
+            <h3>Outils de Maintenance</h3>
+            <button class="btn btn-secondary" onclick="regenerateDatabase()">
+              🔄 Régénérer Base de Données
+            </button>
+            <button class="btn btn-secondary" onclick="optimizeImages()">
+              🖼️ Optimiser Images
+            </button>
+            <button class="btn btn-accent" onclick="exportBackup()">
+              💾 Export Backup Complet
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Modals -->
+<div id="article-editor-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Éditeur d'Article</h3>
+      <button class="modal-close" onclick="closeModal('article-editor-modal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <!-- Contenu de l'éditeur d'article -->
+      <div class="editor-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Titre de l'article:</label>
+            <input type="text" id="article-title" class="form-input">
+          </div>
+          <div class="form-group">
+            <label>Description:</label>
+            <textarea id="article-description" class="form-textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Collections:</label>
+            <div class="collections-selector">
+              {collections.map(collection => (
+                <label class="checkbox-label">
+                  <input type="checkbox" name="article-collections" value={collection.id}>
+                  <span class="checkbox-custom"></span>
+                  {collection.icon} {collection.name}
+                </label>
+              ))}
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Auteur:</label>
+            <select id="article-author" class="form-select">
+              <option value="Dr. Émilie Martin">Dr. Émilie Martin</option>
+              <option value="Sophie Dubois">Sophie Dubois</option>
+              <option value="Julien Lefèvre">Julien Lefèvre</option>
+              <option value="Marie Dubois">Marie Dubois</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Contenu de l'article:</label>
+          <div class="editor-toolbar">
+            <button type="button" class="toolbar-btn" onclick="insertMarkdown('## ')">H2</button>
+            <button type="button" class="toolbar-btn" onclick="insertMarkdown('### ')">H3</button>
+            <button type="button" class="toolbar-btn" onclick="insertMarkdown('**', '**')">Gras</button>
+            <button type="button" class="toolbar-btn" onclick="insertMarkdown('*', '*')">Italique</button>
+            <button type="button" class="toolbar-btn" onclick="insertMarkdown('[', '](url)')">Lien</button>
+          </div>
+          <textarea id="article-content" class="form-textarea large" rows="15"></textarea>
+        </div>
+
+        <!-- Aperçu SEO en temps réel -->
+        <div class="seo-preview">
+          <h4>Aperçu SEO</h4>
+          <div id="seo-preview-content">
+            <div class="seo-metric">
+              <span class="seo-label">Nombre de mots:</span>
+              <span id="word-count-preview" class="seo-value">0</span>
+            </div>
+            <div class="seo-metric">
+              <span class="seo-label">Score SEO:</span>
+              <span id="seo-score-preview" class="seo-value">0/100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('article-editor-modal')">Annuler</button>
+      <button class="btn btn-primary" onclick="saveArticle()">💾 Sauvegarder</button>
+    </div>
+  </div>
+</div>
+
+</BaseLayout>
+
+<script is:inline>
+{
+  // Variables globales
+  let currentTab = 'dashboard';
+  let currentArticle = null;
+  let collections = collectionsData.collections || [];
+
+  // Fonction pour calculer le score SEO
+  function calculateSEOScore(article) {
+    let score = 0;
+    
+    // Nombre de mots (30 points max)
+    if (article.wordCount >= 500) score += 30;
+    else if (article.wordCount >= 300) score += 20;
+    else if (article.wordCount >= 200) score += 10;
+    
+    // Titre (20 points)
+    if (article.title && article.title.length > 30 && article.title.length < 70) score += 20;
+    else if (article.title && article.title.length > 10) score += 10;
+    
+    // Description (20 points)
+    if (article.description && article.description.length > 140 && article.description.length < 160) score += 20;
+    else if (article.description && article.description.length > 50) score += 10;
+    
+    // Présence de mots-clés (15 points)
+    if (article.keywords && article.keywords.length > 0) score += 15;
+    
+    // Auteur assigné (10 points)
+    if (article.author && article.author.length > 0) score += 10;
+    
+    // Fraîcheur du contenu (5 points)
+    const daysSinceUpdate = (Date.now() - new Date(article.lastModified).getTime()) / (1000 * 60 * 60 * 24);
+    if (daysSinceUpdate < 30) score += 5;
+    else if (daysSinceUpdate < 90) score += 3;
+    
+    return Math.min(score, 100);
+  }
+
+  // Fonction pour obtenir la classe CSS du score SEO
+  function getSEOScoreClass(score) {
+    if (score >= 80) return 'excellent';
+    if (score >= 60) return 'good';
+    if (score >= 40) return 'average';
+    return 'poor';
+  }
+
+  // Gestion des onglets
+  function switchTab(tabName) {
+    // Masquer tous les contenus d'onglet
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    
+    // Désactiver tous les boutons d'onglet
+    document.querySelectorAll('.nav-tab').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    // Activer l'onglet sélectionné
+    document.getElementById(`tab-${tabName}`).classList.add('active');
+    document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+    
+    currentTab = tabName;
+  }
+
+  // Fonctions pour l'éditeur d'articles
+  function openArticleEditor(articleSlug = null) {
+    currentArticle = articleSlug;
+    
+    if (articleSlug) {
+      // Charger l'article existant
+      loadArticleForEditing(articleSlug);
+    } else {
+      // Nouveau article
+      clearArticleEditor();
+    }
+    
+    document.getElementById('article-editor-modal').style.display = 'flex';
+  }
+
+  function loadArticleForEditing(slug) {
+    // Cette fonction chargerait les données de l'article
+    // Pour l'instant, simulation
+    console.log('Chargement article:', slug);
+  }
+
+  function clearArticleEditor() {
+    document.getElementById('article-title').value = '';
+    document.getElementById('article-description').value = '';
+    document.getElementById('article-content').value = '';
+    // Désélectionner toutes les collections
+    document.querySelectorAll('input[name="article-collections"]').forEach(cb => {
+      cb.checked = false;
+    });
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+
+  function saveArticle() {
+    const title = document.getElementById('article-title').value;
+    const description = document.getElementById('article-description').value;
+    const content = document.getElementById('article-content').value;
+    const author = document.getElementById('article-author').value;
+    
+    const selectedCollections = Array.from(document.querySelectorAll('input[name="article-collections"]:checked'))
+      .map(cb => cb.value);
+
+    // Validation
+    if (!title || !description || !content) {
+      alert('Veuillez remplir tous les champs obligatoires');
+      return;
+    }
+
+    // Ici, vous enverriez les données au serveur
+    console.log('Sauvegarde article:', {
+      title,
+      description,
+      content,
+      author,
+      collections: selectedCollections
+    });
+
+    alert('Article sauvegardé avec succès!');
+    closeModal('article-editor-modal');
+  }
+
+  // Fonctions pour les collections
+  function openCollectionEditor(collectionId = null) {
+    // Ouvrir l'éditeur de collection
+    console.log('Ouverture éditeur collection:', collectionId);
+  }
+
+  function editCollection(collectionId) {
+    openCollectionEditor(collectionId);
+  }
+
+  function viewCollectionArticles(collectionId) {
+    switchTab('articles');
+    // Filtrer par collection
+    document.getElementById('collection-filter').value = collectionId;
+    filterArticles();
+  }
+
+  // Fonctions d'analyse SEO
+  function runSEOAnalysis() {
+    switchTab('seo');
+  }
+
+  function analyzeArticleSEO(articleSlug) {
+    console.log('Analyse SEO pour:', articleSlug);
+    // Implémenter l'analyse SEO détaillée
+  }
+
+  function analyzeSelectedArticle() {
+    const selectedSlug = document.getElementById('seo-article-select').value;
+    if (!selectedSlug) {
+      alert('Veuillez sélectionner un article');
+      return;
+    }
+    
+    analyzeArticleSEO(selectedSlug);
+  }
+
+  // Fonctions de filtrage
+  function filterArticles() {
+    const searchTerm = document.getElementById('article-search').value.toLowerCase();
+    const collectionFilter = document.getElementById('collection-filter').value;
+    const authorFilter = document.getElementById('author-filter').value;
+
+    document.querySelectorAll('.article-row').forEach(row => {
+      const title = row.querySelector('.article-title-cell strong').textContent.toLowerCase();
+      const collection = row.dataset.collection;
+      const author = row.dataset.author;
+
+      const matchesSearch = title.includes(searchTerm);
+      const matchesCollection = !collectionFilter || collection === collectionFilter;
+      const matchesAuthor = !authorFilter || author === authorFilter;
+
+      row.style.display = matchesSearch && matchesCollection && matchesAuthor ? '' : 'none';
+    });
+  }
+
+  // Fonctions utilitaires
+  function editArticle(slug) {
+    openArticleEditor(slug);
+  }
+
+  function previewArticle(url) {
+    window.open(url, '_blank');
+  }
+
+  function deleteArticle(slug) {
+    if (confirm('Êtes-vous sûr de vouloir supprimer cet article ?')) {
+      console.log('Suppression article:', slug);
+      // Implémenter la suppression
+    }
+  }
+
+  function regenerateDatabase() {
+    if (confirm('Regénérer la base de données ? Cette opération peut prendre quelques minutes.')) {
+      console.log('Régénération de la base de données...');
+      // Implémenter la régénération
+    }
+  }
+
+  // Event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    // Gestion des onglets
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        switchTab(this.dataset.tab);
+      });
+    });
+
+    // Filtrage en temps réel
+    document.getElementById('article-search')?.addEventListener('input', filterArticles);
+    document.getElementById('collection-filter')?.addEventListener('change', filterArticles);
+    document.getElementById('author-filter')?.addEventListener('change', filterArticles);
+
+    // Aperçu SEO en temps réel dans l'éditeur
+    document.getElementById('article-content')?.addEventListener('input', function() {
+      updateSEOPreview();
+    });
+    
+    document.getElementById('article-title')?.addEventListener('input', function() {
+      updateSEOPreview();
+    });
+  });
+
+  function updateSEOPreview() {
+    const content = document.getElementById('article-content').value;
+    const title = document.getElementById('article-title').value;
+    
+    const wordCount = content.split(/\s+/).filter(word => word.length > 0).length;
+    document.getElementById('word-count-preview').textContent = wordCount;
+    
+    // Calculer un score SEO simplifié
+    let score = 0;
+    if (wordCount >= 500) score += 30;
+    else if (wordCount >= 300) score += 20;
+    
+    if (title.length > 30 && title.length < 70) score += 20;
+    
+    document.getElementById('seo-score-preview').textContent = `${score}/100`;
+  }
+
+  // Fonctions pour l'éditeur markdown
+  function insertMarkdown(before, after = '') {
+    const textarea = document.getElementById('article-content');
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = textarea.value.substring(start, end);
+    
+    const newText = before + selectedText + after;
+    textarea.value = textarea.value.substring(0, start) + newText + textarea.value.substring(end);
+    
+    // Repositionner le curseur
+    const newCursorPos = start + before.length + selectedText.length + after.length;
+    textarea.setSelectionRange(newCursorPos, newCursorPos);
+    textarea.focus();
+    
+    updateSEOPreview();
+  }
+}
+</script>
+
+<style>
+/* Reset et base */
+* {
+  box-sizing: border-box;
+}
+
+.admin-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: var(--color-slate-900);
+}
+
+/* Header */
+.admin-header {
+  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  color: white;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-subtitle {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Navigation */
+.admin-nav {
+  background: white;
+  border-bottom: 1px solid var(--color-slate-200);
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+.nav-tab {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-slate-600);
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-tab:hover {
+  background: var(--color-slate-50);
+  color: var(--color-blue-600);
+}
+
+.nav-tab.active {
+  color: var(--color-blue-600);
+  border-bottom-color: var(--color-blue-600);
+  background: var(--color-blue-50);
+}
+
+/* Main content */
+.admin-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Dashboard */
+.dashboard-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-slate-200);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-blue-50);
+  border-radius: 12px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--color-slate-600);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* Collections */
+.collections-overview h2,
+.recent-activity h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: var(--color-slate-900);
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.collection-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--color-slate-200);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.collection-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.collection-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.collection-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--color-slate-100);
+  border: 1px solid var(--color-slate-200);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.btn-icon:hover {
+  background: var(--color-blue-500);
+  color: white;
+  border-color: var(--color-blue-500);
+}
+
+.btn-icon.danger:hover {
+  background: var(--color-red-500);
+  border-color: var(--color-red-500);
+}
+
+.collection-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-slate-900);
+}
+
+.collection-content p {
+  margin: 0 0 1rem 0;
+  color: var(--color-slate-600);
+  line-height: 1.5;
+}
+
+.collection-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.stat {
+  color: var(--color-slate-500);
+  font-weight: 500;
+}
+
+/* Articles Table */
+.articles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.articles-filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input,
+.filter-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-slate-300);
+  border-radius: 8px;
+  background: white;
+  font-size: 0.875rem;
+  min-width: 200px;
+}
+
+.articles-table-container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--color-slate-200);
+  overflow: hidden;
+}
+
+.articles-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.articles-table th {
+  background: var(--color-slate-50);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-slate-700);
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+.articles-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-slate-100);
+  vertical-align: top;
+}
+
+.article-title-cell strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-slate-900);
+}
+
+.article-title-cell small {
+  color: var(--color-slate-600);
+  font-size: 0.875rem;
+}
+
+.collection-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+  display: inline-block;
+}
+
+.word-count {
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.word-count.low {
+  background: var(--color-red-100);
+  color: var(--color-red-700);
+}
+
+.word-count.good {
+  background: var(--color-green-100);
+  color: var(--color-green-700);
+}
+
+.word-count.high {
+  background: var(--color-blue-100);
+  color: var(--color-blue-700);
+}
+
+.seo-score {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.seo-score.score-excellent {
+  background: var(--color-green-100);
+  color: var(--color-green-700);
+}
+
+.seo-score.score-good {
+  background: var(--color-blue-100);
+  color: var(--color-blue-700);
+}
+
+.seo-score.score-average {
+  background: var(--color-yellow-100);
+  color: var(--color-yellow-700);
+}
+
+.seo-score.score-poor {
+  background: var(--color-red-100);
+  color: var(--color-red-700);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--color-blue-500);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-blue-600);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--color-slate-200);
+  color: var(--color-slate-700);
+}
+
+.btn-secondary:hover {
+  background: var(--color-slate-300);
+}
+
+.btn-accent {
+  background: var(--color-purple-500);
+  color: white;
+}
+
+.btn-accent:hover {
+  background: var(--color-purple-600);
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-slate-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-slate-500);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: var(--color-slate-100);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--color-slate-200);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Form elements */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-slate-700);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  padding: 0.75rem;
+  border: 1px solid var(--color-slate-300);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-blue-500);
+}
+
+.form-textarea.large {
+  min-height: 300px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+.collections-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+  background: var(--color-slate-50);
+  border-color: var(--color-blue-300);
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-slate-300);
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background: var(--color-blue-500);
+  border-color: var(--color-blue-500);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+/* Editor toolbar */
+.editor-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--color-slate-50);
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200);
+}
+
+.toolbar-btn {
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border: 1px solid var(--color-slate-300);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.toolbar-btn:hover {
+  background: var(--color-blue-500);
+  color: white;
+  border-color: var(--color-blue-500);
+}
+
+/* SEO Preview */
+.seo-preview {
+  background: var(--color-slate-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200);
+  margin-top: 1.5rem;
+}
+
+.seo-preview h4 {
+  margin: 0 0 1rem 0;
+  color: var(--color-slate-900);
+}
+
+.seo-metric {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.seo-label {
+  color: var(--color-slate-600);
+  font-weight: 500;
+}
+
+.seo-value {
+  font-weight: 600;
+  color: var(--color-slate-900);
+}
+
+/* SEO Analysis */
+.seo-overview {
+  margin-bottom: 3rem;
+}
+
+.seo-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.seo-stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-slate-200);
+  text-align: center;
+}
+
+.seo-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-blue-600);
+  margin-bottom: 0.5rem;
+}
+
+.seo-stat-label {
+  color: var(--color-slate-600);
+  font-weight: 500;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recommendation-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-slate-200);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.recommendation-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.recommendation-content {
+  flex: 1;
+}
+
+.recommendation-content strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-slate-900);
+}
+
+.recommendation-content p {
+  margin: 0;
+  color: var(--color-slate-600);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-header-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .header-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admin-nav {
+    padding: 0 1rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .nav-tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .admin-main {
+    padding: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .articles-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .articles-filters {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .filter-select {
+    min-width: auto;
+  }
+
+  .articles-table-container {
+    overflow-x: auto;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collections-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+}
+
+/* Variables CSS */
+:root {
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-900: #0f172a;
+  
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-300: #93c5fd;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  
+  --color-green-100: #dcfce7;
+  --color-green-700: #15803d;
+  
+  --color-red-100: #fee2e2;
+  --color-red-500: #ef4444;
+  --color-red-700: #b91c1c;
+  
+  --color-yellow-100: #fef3c7;
+  --color-yellow-700: #a16207;
+  
+  --color-purple-500: #8b5cf6;
+  --color-purple-600: #7c3aed;
+}
+</style>
+
+{
+  // Passer les données à JavaScript
+  const collectionsData = collections;
+  const articlesData = allArticlesEnriched;
+  
+  window.dashboardData = {
+    collections: collectionsData,
+    articles: articlesData
+  };
+}
+
+</BaseLayout>

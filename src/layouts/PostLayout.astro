@@ -226,31 +226,33 @@ const authorInfo = getAuthorInfo(frontmatter.author);
 
       <!-- Article Content -->
       <div class="article-content">
-        <!-- Premier encart d'affiliation après l'introduction -->
-        <div class="affiliate-box" id="affiliate-box-1">
-          <div class="affiliate-content">
-            <h3>{affiliateBoxes[0].title}</h3>
-            <p>{affiliateBoxes[0].description}</p>
-            <div class="affiliate-cta">
-              <span class="affiliate-price">{affiliateBoxes[0].price}</span>
-              <a href="#" class="btn btn-secondary">{affiliateBoxes[0].cta}</a>
+        <div class="container">
+          <!-- Premier encart d'affiliation après l'introduction -->
+          <div class="affiliate-box" id="affiliate-box-1">
+            <div class="affiliate-content">
+              <h3>{affiliateBoxes[0].title}</h3>
+              <p>{affiliateBoxes[0].description}</p>
+              <div class="affiliate-cta">
+                <span class="affiliate-price">{affiliateBoxes[0].price}</span>
+                <a href="#" class="btn btn-secondary">{affiliateBoxes[0].cta}</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Contenu principal de l'article -->
-        <div class="content-wrapper">
-          <slot />
-        </div>
+          <!-- Contenu principal de l'article -->
+          <div class="content-wrapper">
+            <slot />
+          </div>
 
-        <!-- Deuxième encart d'affiliation avant la conclusion -->
-        <div class="affiliate-box" id="affiliate-box-2">
-          <div class="affiliate-content">
-            <h3>{affiliateBoxes[1].title}</h3>
-            <p>{affiliateBoxes[1].description}</p>
-            <div class="affiliate-cta">
-              <span class="affiliate-price">{affiliateBoxes[1].price}</span>
-              <a href="#" class="btn btn-secondary">{affiliateBoxes[1].cta}</a>
+          <!-- Deuxième encart d'affiliation avant la conclusion -->
+          <div class="affiliate-box" id="affiliate-box-2">
+            <div class="affiliate-content">
+              <h3>{affiliateBoxes[1].title}</h3>
+              <p>{affiliateBoxes[1].description}</p>
+              <div class="affiliate-cta">
+                <span class="affiliate-price">{affiliateBoxes[1].price}</span>
+                <a href="#" class="btn btn-secondary">{affiliateBoxes[1].cta}</a>
+              </div>
             </div>
           </div>
         </div>
@@ -428,6 +430,13 @@ const authorInfo = getAuthorInfo(frontmatter.author);
       font-size: var(--font-size-lg);
       line-height: 1.8;
       color: var(--gray-700);
+      padding: var(--spacing-8) 0;
+    }
+
+    .article-content .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-6);
     }
 
     .content-wrapper h2 {
@@ -461,12 +470,30 @@ const authorInfo = getAuthorInfo(frontmatter.author);
     .content-wrapper ul,
     .content-wrapper ol {
       margin-bottom: var(--spacing-6);
-      padding-left: var(--spacing-6);
+      padding-left: 0; /* Supprime le padding pour éviter la double indentation */
+      list-style: none; /* Supprime les markers par défaut */
     }
 
     .content-wrapper li {
       margin-bottom: var(--spacing-2);
       line-height: 1.7;
+      padding-left: var(--spacing-6);
+      position: relative;
+    }
+
+    /* Ajoute un symbole uniquement pour les listes sans symboles dans le contenu */
+    .content-wrapper ul li::before {
+      content: "✓";
+      color: var(--accent-green);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Supprime le pseudo-élément pour les éléments contenant déjà des symboles */
+    .content-wrapper li[data-has-symbol]::before {
+      content: none;
     }
 
     .content-wrapper blockquote {
@@ -700,6 +727,16 @@ const authorInfo = getAuthorInfo(frontmatter.author);
         // Cacher la TOC s'il n'y a pas de headings
         document.getElementById('toc').style.display = 'none';
       }
+      
+      // Gestion des symboles doubles dans les listes
+      const listItems = document.querySelectorAll('.content-wrapper li');
+      listItems.forEach(li => {
+        const text = li.textContent.trim();
+        // Vérifie si l'élément contient déjà des symboles
+        if (text.includes('→') || text.includes('✓') || text.includes('•') || text.includes('▸') || text.includes('-')) {
+          li.setAttribute('data-has-symbol', 'true');
+        }
+      });
       
       // Smooth scroll pour les liens de la TOC
       document.querySelectorAll('#toc-list a').forEach(link => {
