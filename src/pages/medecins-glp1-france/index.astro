@@ -1,7 +1,73 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<html lang='fr'><head><meta charset='utf-8'/>
-      <link rel='stylesheet' href='/src/styles/global.css' />
-      <title>medecins-glp1-france</title></head><body><main class='container'><h1>medecins-glp1-france</h1><ul><li><a href='/medecins-glp1-france/clinique-pour-obesite/'>
-      clinique pour obesite</a></li><li><a href='/medecins-glp1-france/endocrinologue-pour-maigrir/'>
-      endocrinologue pour maigrir</a></li></ul></main></body></html>
+
+<BaseLayout 
+  title="Médecins GLP-1 France - Trouver un Spécialiste"
+  description="Annuaire des médecins spécialisés dans les traitements GLP-1 en France : endocrinologues, diabétologues et nutritionnistes."
+  keywords="médecins GLP-1, endocrinologue, diabétologue, spécialiste obésité, France"
+>
+
+<div class="container">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-2xl p-8 mb-8">
+      <h1 class="text-4xl font-bold mb-4">Médecins GLP-1 France</h1>
+      <p class="text-xl opacity-90">
+        Trouvez un spécialiste près de chez vous pour vos traitements GLP-1.
+      </p>
+    </div>
+
+    <!-- Articles de la catégorie -->
+    <div class="collection-grid">
+      
+      <article class="article-card">
+        <div class="article-inner">
+          <div class="article-hero doctors">
+            <div class="article-icon">👨‍⚕️</div>
+          </div>
+          <div class="article-content">
+            <h2 class="article-title">
+              <a href="/medecins-glp1-france/endocrinologue-pour-maigrir/">
+                Endocrinologue pour Maigrir
+              </a>
+            </h2>
+            <p class="article-description">
+              Comment trouver un endocrinologue spécialisé dans la perte de poids et les GLP-1.
+            </p>
+            <div class="article-meta">
+              <span class="article-author">Dr. Claire Morel</span>
+              <span class="article-badge">7 min</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-inner">
+          <div class="article-hero doctors">
+            <div class="article-icon">🏥</div>
+          </div>
+          <div class="article-content">
+            <h2 class="article-title">
+              <a href="/medecins-glp1-france/clinique-pour-obesite/">
+                Cliniques Spécialisées Obésité
+              </a>
+            </h2>
+            <p class="article-description">
+              Centres et cliniques spécialisés dans le traitement de l'obésité en France.
+            </p>
+            <div class="article-meta">
+              <span class="article-author">Dr. Marc Dubois</span>
+              <span class="article-badge">10 min</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+</BaseLayout>

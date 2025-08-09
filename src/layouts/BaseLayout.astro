@@ -48,8 +48,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <header class="header">
     <nav class="nav container">
       <div class="nav-brand">
-        <a href="/" class="brand-link">
-          <img src="/logo.svg" alt="GLP-1 France" class="brand-logo">
+        <a href="/" class="brand-link" aria-label="Accueil GLP-1 France" style="display:flex;align-items:center;gap:0.75rem;">
+          <span class="brand-logo" style="display:inline-block;vertical-align:middle;">
+            <svg viewBox="0 0 64 64" width="48" height="48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-label="Health icon: drop, leaf and sparkle">
+              <!-- Fond rond pour contraste -->
+              <circle cx="32" cy="32" r="30" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+              <!-- Goutte (bleu plus vif) -->
+              <path d="M32 10c8 12 18 18 18 28a18 18 0 1 1-36 0c0-10 10-16 18-28Z" fill="#1d4ed8" stroke="#1e40af" stroke-width="2"/>
+              <!-- Feuille (vert plus vif) -->
+              <path d="M42 28c-8 0-14 6-14 14 0 6 4 10 10 10 8 0 12-6 12-12 0-6-4-12-8-12Z" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+              <path d="M36 44c2-6 6-10 10-12" stroke="#15803d" fill="none" stroke-width="2"/>
+              <!-- Étincelle (jaune doré plus visible) -->
+              <path d="M49 16l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4Z" fill="#f59e0b" stroke="#d97706" stroke-width="1"/>
+            </svg>
+          </span>
+          <span class="brand-text" style="font-size:1.5rem;font-weight:600;color:#111;">GLP-1 France</span>
         </a>
       </div>
 

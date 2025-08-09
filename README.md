@@ -35,6 +35,18 @@ npm run generate-database
 npm run dev
 ```
 
+## ⚡️ Build et ouverture automatique du site local
+
+Le workflow de build met à jour automatiquement la base articles-database.json et ouvre le site dans le navigateur :
+
+```bash
+npm run build && npm run preview
+```
+
+Cela va :
+Lancer la prévisualisation locale sur http://localhost:4173
+
+Si tu veux désactiver l'ouverture automatique, modifie ou retire la commande `open-preview` dans le `package.json`.
 ## 📂 Structure du Projet
 
 ```

@@ -1,3 +1,9 @@
+/* Conteneur interne pour les articles */
+.article-inner {
+  padding: 1.5rem;
+  height: 100%;
+  box-sizing: border-box;
+}
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -717,6 +723,10 @@ a:hover {
   background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
 }
 
+.article-hero.medical {
+  background: linear-gradient(135deg, #2563eb, #8b5cf6);
+}
+
 .article-hero.price {
   background: linear-gradient(135deg, #f59e0b, #fbbf24);
 }
@@ -743,6 +753,10 @@ a:hover {
 
 .article-hero.diet {
   background: linear-gradient(135deg, #65a30d, #84cc16);
+}
+
+.article-hero.nutrition {
+  background: linear-gradient(135deg, #ea580c, #fbbf24);
 }
 
 .article-icon {

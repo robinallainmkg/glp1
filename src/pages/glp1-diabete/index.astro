@@ -1,6 +1,51 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<html lang='fr'><head><meta charset='utf-8'/>
-      <link rel='stylesheet' href='/src/styles/global.css' />
-      <title>glp1-diabete</title></head><body><main class='container'><h1>glp1-diabete</h1><ul><li><a href='/glp1-diabete/traitement-insulinique/'>
-      traitement insulinique</a></li></ul></main></body></html>
+
+<BaseLayout 
+  title="GLP-1 Diabète - Traitement et Gestion"
+  description="Guide complet sur l'utilisation des GLP-1 dans le traitement du diabète de type 2 : efficacité, protocoles et suivi."
+  keywords="GLP-1, diabète, traitement, glycémie, insuline, diabète type 2"
+>
+
+<div class="container">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-orange-600 to-red-500 text-white rounded-2xl p-8 mb-8">
+      <h1 class="text-4xl font-bold mb-4">GLP-1 et Diabète</h1>
+      <p class="text-xl opacity-90">
+        Tout savoir sur l'utilisation des traitements GLP-1 pour le diabète de type 2.
+      </p>
+    </div>
+
+    <!-- Articles de la catégorie -->
+    <div class="collection-grid">
+      
+      <article class="article-card">
+        <div class="article-inner">
+          <div class="article-hero diabetes">
+            <div class="article-icon">💉</div>
+          </div>
+          <div class="article-content">
+            <h2 class="article-title">
+              <a href="/glp1-diabete/traitement-insulinique/">
+                Traitement Insulinique
+              </a>
+            </h2>
+            <p class="article-description">
+              Comprendre l'interaction entre GLP-1 et traitement insulinique dans le diabète.
+            </p>
+            <div class="article-meta">
+              <span class="article-author">Dr. Claire Morel</span>
+              <span class="article-badge">10 min</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+</BaseLayout>

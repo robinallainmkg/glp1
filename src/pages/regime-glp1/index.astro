@@ -1,6 +1,51 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<html lang='fr'><head><meta charset='utf-8'/>
-      <link rel='stylesheet' href='/src/styles/global.css' />
-      <title>regime-glp1</title></head><body><main class='container'><h1>regime-glp1</h1><ul><li><a href='/regime-glp1/isglt2-liste/'>
-      isglt2 liste</a></li></ul></main></body></html>
+
+<BaseLayout 
+  title="Régime GLP-1 - Alimentation et Nutrition"
+  description="Guide alimentaire pour optimiser l'efficacité des traitements GLP-1 : régimes recommandés, aliments à privilégier et conseils nutritionnels."
+  keywords="régime GLP-1, alimentation, nutrition, conseils diététiques, perte de poids"
+>
+
+<div class="container">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-2xl p-8 mb-8">
+      <h1 class="text-4xl font-bold mb-4">Régime GLP-1</h1>
+      <p class="text-xl opacity-90">
+        Conseils nutritionnels pour optimiser vos traitements GLP-1.
+      </p>
+    </div>
+
+    <!-- Articles de la catégorie -->
+    <div class="collection-grid">
+      
+      <article class="article-card">
+        <div class="article-inner">
+          <div class="article-hero nutrition">
+            <div class="article-icon">🥗</div>
+          </div>
+          <div class="article-content">
+            <h2 class="article-title">
+              <a href="/regime-glp1/isglt2-liste/">
+                ISGLT2 : Liste et Interactions
+              </a>
+            </h2>
+            <p class="article-description">
+              Liste des inhibiteurs SGLT2 et leurs interactions avec les GLP-1 dans l'alimentation.
+            </p>
+            <div class="article-meta">
+              <span class="article-author">Dr. Claire Morel</span>
+              <span class="article-badge">8 min</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const category = 'recherche-glp1';
+  
+  // Lire le fichier JSON directement
+  const databasePath = path.join(process.cwd(), 'data', 'articles-database.json');
+  const articlesDatabase = JSON.parse(fs.readFileSync(databasePath, 'utf-8'));
+  
+  const categoryData = articlesDatabase.categories.find(cat => cat.name === category);
+  
+  if (!categoryData) {
+    return [];
+  }
+
+  return categoryData.articles.map(article => ({
+    params: { 
+      slug: article.slug 
+    },
+    props: { 
+      article,
+      category: categoryData
+    }
+  }));
+}
+
+const { article, category } = Astro.props;
+
+const getCollectionTheme = (categoryName: string) => {
+  const themeMap = {
+    'alternatives-glp1': 'alternatives',
+    'effets-secondaires-glp1': 'side-effects',
+    'glp1-cout': 'cost',
+    'glp1-diabete': 'diabetes',
+    'glp1-perte-de-poids': 'weight-loss',
+    'medecins-glp1-france': 'experts',
+    'medicaments-glp1': 'medical',
+    'recherche-glp1': 'research',
+    'regime-glp1': 'nutrition'
+  };
+  return themeMap[categoryName] || 'weight-loss';
+};
+
+const collectionTheme = getCollectionTheme(article.category);
+---
+
+<ArticleLayout
+  title={article.title}
+  description={article.description}
+  author={article.author}
+  category={article.category}
+  keywords={article.keywords}
+  readingTime={article.readingTime}
+  lastModified={article.lastModified}
+  content={article.rawContent}
+  collectionTheme={collectionTheme}
+/>
