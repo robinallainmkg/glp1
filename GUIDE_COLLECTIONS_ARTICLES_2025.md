@@ -1,29 +1,36 @@
-# 📝 GUIDE COLLECTIONS & ARTICLES - GLP1 France 2025
+# 🏗️ Guide Complet Collections & Articles - GLP-1 France 2025
 
-## 🎨 STRUCTURE OBLIGATOIRE
+## 🎨 **STRUCTURE UNIFORME DES COLLECTIONS**
 
-### Template Page Collection
+### **Template de Page Collection (OBLIGATOIRE)**
+
+Toute nouvelle collection **DOIT** suivre cette structure exacte :
+
 ```astro
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout 
-  title="Nom Collection - Guide Complet"
-  description="Description SEO complète"
-  keywords="mots, clés, collection">
+  title="Nom de la Collection - Guide Complet"
+  description="Description complète de la collection pour le SEO"
+  keywords="mots-clés, séparés, par, virgules"
+>
 
 <div class="container">
   <div class="max-w-6xl mx-auto">
     
-    <!-- Hero avec thème -->
+    <!-- Hero Section avec couleur thématique -->
     <div class="bg-gradient-to-r from-[couleur1] to-[couleur2] text-white rounded-2xl p-8 mb-8">
-      <h1 class="text-4xl font-bold mb-4">Titre Collection</h1>
-      <p class="text-xl opacity-90">Description courte et accrocheuse.</p>
+      <h1 class="text-4xl font-bold mb-4">Titre de la Collection</h1>
+      <p class="text-xl opacity-90">
+        Description courte et accrocheuse de la collection.
+      </p>
     </div>
 
-    <!-- Articles -->
+    <!-- Articles de la catégorie -->
     <div class="collection-grid">
+      
       <article class="article-card">
         <div class="article-inner">
           <div class="article-hero [CLASSE-THEME]">
@@ -31,21 +38,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
           <div class="article-content">
             <h2 class="article-title">
-              <a href="/collection/article-slug/">Titre Article</a>
+              <a href="/collection/article-slug/">
+                Titre de l'Article
+              </a>
             </h2>
-            <p class="article-description">Description 1-2 phrases.</p>
+            <p class="article-description">
+              Description courte de l'article en 1-2 phrases.
+            </p>
             <div class="article-meta">
               <span class="article-author">Nom Auteur</span>
               <span class="article-badge">X min</span>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</div>
-</BaseLayout>
-```
             </div>
           </div>
         </div>
