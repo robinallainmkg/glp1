@@ -1,5 +1,5 @@
 ---
-title: Médicament anti obésité novo nordisk
+title: "Médicament anti obésité novo nordisk"
 description: médicament anti obésité novo nordisk — Guide marché français.
 keyword: novo nordisk médicament obésité
 intent: Informational

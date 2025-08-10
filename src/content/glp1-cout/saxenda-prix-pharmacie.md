@@ -1,5 +1,5 @@
 ---
-title: "Saxenda prix pharmacie : coût réel du traitement en France 2025"
+title: "Saxenda prix pharmacie : coût réel du traitement en france 2025"
 slug: "saxenda-prix-pharmacie"
 category: "glp1-cout"
 author: "Dr. Émilie Martin"

@@ -1,5 +1,5 @@
 ---
-title: "Médicament Américain pour Maigrir : Guide Complet France 2025"
+title: "Médicament américain pour maigrir : guide complet france 2025"
 slug: "medicament-americain-pour-maigrir"
 category: "medicaments-glp1"
 author: "Julien Lefèvre"

@@ -1,5 +1,5 @@
 ---
-title: "Pilule qui Fait Maigrir : Guide Complet des Traitements Oraux 2025"
+title: "Pilule qui fait maigrir : guide complet des traitements oraux 2025"
 slug: "pilule-qui-fait-maigrir"
 category: "medicaments-glp1"
 author: "Sophie Dubois"

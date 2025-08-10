@@ -1,5 +1,5 @@
 ---
-title: Sulfamide hypoglycémiant
+title: "Sulfamide hypoglycémiant"
 description: sulfamide hypoglycémiant — Guide marché français.
 keyword: sulfamide hypoglycémiant liste
 intent: Informational

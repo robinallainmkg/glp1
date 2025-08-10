@@ -1,5 +1,5 @@
 ---
-title: Trulicity danger
+title: "Trulicity danger"
 description: trulicity danger — Guide marché français.
 keyword: dulaglutide effets secondaires
 intent: Informational

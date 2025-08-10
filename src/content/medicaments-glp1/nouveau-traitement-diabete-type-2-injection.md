@@ -1,5 +1,5 @@
 ---
-title: Nouveau traitement diabète type 2 injection
+title: "Nouveau traitement diabète type 2 injection"
 description: nouveau traitement diabète type 2 injection — Guide marché français.
 keyword: nouveaux médicaments diabète type 2
 intent: Informational

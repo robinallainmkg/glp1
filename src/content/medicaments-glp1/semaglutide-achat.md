@@ -1,5 +1,5 @@
 ---
-title: Semaglutide achat
+title: "Semaglutide achat"
 description: semaglutide achat — Guide marché français.
 keyword: ozempic generique
 intent: Informational

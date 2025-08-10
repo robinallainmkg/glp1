@@ -1,5 +1,5 @@
 ---
-title: Traitement diabète type 2
+title: "Traitement diabète type 2"
 description: traitement diabète type 2 — Guide marché français.
 keyword: comment soigner le diabète de type 2
 intent: Informational
