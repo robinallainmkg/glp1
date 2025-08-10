@@ -1,73 +1,77 @@
-# 🚀 Script de Déploiement GLP-1 France
-# Usage: .\deploy.ps1
+# 🚀 DÉPLOIEMENT GLP-1 FRANCE - WINDOWS
+# Script PowerShell avec SSH automatique
+
+# Configuration Hostinger
+$HOSTINGER_HOST = "147.79.98.140"
+$HOSTINGER_USER = "u403023291"
+$HOSTINGER_PORT = 65002
+$HOSTINGER_PATH = "/public_html"
 
 Write-Host "🚀 DÉPLOIEMENT GLP-1 FRANCE" -ForegroundColor Green
 Write-Host "================================" -ForegroundColor Green
 
-# Variables
-$SERVER_HOST = "147.79.98.140"
-$SERVER_PORT = "65002"
-$SERVER_USER = "u403023291"
-$REMOTE_PATH = "/home/u403023291/domains/glp1-france.fr/public_html"
-$LOCAL_BUILD = "dist"
-
-Write-Host "📋 Vérifications préliminaires..." -ForegroundColor Yellow
-
-# 1. Vérifier que nous sommes dans le bon dossier
-if (!(Test-Path "package.json")) {
-    Write-Host "❌ Erreur: package.json non trouvé. Êtes-vous dans le bon dossier ?" -ForegroundColor Red
+# Vérifier la branche
+$currentBranch = git branch --show-current
+if ($currentBranch -ne "production") {
+    Write-Host "❌ Erreur: Vous devez être sur la branche 'production'" -ForegroundColor Red
+    Write-Host "💡 Exécutez: git checkout production" -ForegroundColor Yellow
     exit 1
 }
+Write-Host "✅ Branche production confirmée" -ForegroundColor Green
 
-# 2. Vérifier que le dossier dist existe
-if (!(Test-Path $LOCAL_BUILD)) {
-    Write-Host "⚠️  Dossier 'dist' non trouvé. Lancement du build..." -ForegroundColor Yellow
-    npm run build
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "❌ Build échoué !" -ForegroundColor Red
-        exit 1
-    }
-}
+# Nettoyer
+Write-Host "🧹 Nettoyage..." -ForegroundColor Yellow
+if (Test-Path "dist") { Remove-Item -Recurse -Force "dist" }
+if (Test-Path ".astro") { Remove-Item -Recurse -Force ".astro" }
 
-Write-Host "✅ Build trouvé dans: $LOCAL_BUILD" -ForegroundColor Green
-
-# 3. Test de connexion SSH
-Write-Host "🔐 Test de connexion SSH..." -ForegroundColor Yellow
-ssh -p $SERVER_PORT "${SERVER_USER}@${SERVER_HOST}" "echo 'OK'" 2>$null
+# Build
+Write-Host "🏗️  Build en cours..." -ForegroundColor Yellow
+npm run build
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "❌ Connexion SSH échouée !" -ForegroundColor Red
+    Write-Host "❌ Erreur de build" -ForegroundColor Red
     exit 1
 }
-Write-Host "✅ Connexion SSH OK" -ForegroundColor Green
+Write-Host "✅ Build réussi" -ForegroundColor Green
 
-# 4. Sauvegarde du site actuel
-Write-Host "💾 Sauvegarde du site actuel..." -ForegroundColor Yellow
-$BACKUP_NAME = "backup_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
-ssh -p $SERVER_PORT "$SERVER_USER@$SERVER_HOST" "cd $REMOTE_PATH && tar -czf ../$BACKUP_NAME.tar.gz . 2>/dev/null || echo 'Pas de sauvegarde nécessaire'"
-Write-Host "✅ Sauvegarde créée: $BACKUP_NAME.tar.gz" -ForegroundColor Green
+# Vérifications
+if (!(Test-Path "dist/index.html")) {
+    Write-Host "❌ Erreur: index.html non trouvé" -ForegroundColor Red
+    exit 1
+}
 
-# 5. Déploiement via SCP (Windows-compatible)
-Write-Host "🚀 Déploiement en cours..." -ForegroundColor Yellow
-Write-Host "   Source: $LOCAL_BUILD\" -ForegroundColor Cyan
-Write-Host "   Destination: ${SERVER_USER}@${SERVER_HOST}:${REMOTE_PATH}" -ForegroundColor Cyan
+Write-Host "📦 Build prêt pour déploiement" -ForegroundColor Green
 
-# Vider le dossier distant d'abord (sauf .htaccess)
-Write-Host "🧹 Nettoyage du dossier distant..." -ForegroundColor Yellow
-ssh -p $SERVER_PORT "${SERVER_USER}@${SERVER_HOST}" "cd $REMOTE_PATH && find . -maxdepth 1 -not -name '.htaccess' -not -name '.' -delete 2>/dev/null || true"
+# Déploiement automatique via SCP
+Write-Host ""
+Write-Host "🔄 Déploiement automatique vers Hostinger..." -ForegroundColor Cyan
+Write-Host "Host: $HOSTINGER_HOST:$HOSTINGER_PORT" -ForegroundColor Gray
 
-# Copie récursive avec SCP
-Write-Host "📤 Upload des fichiers..." -ForegroundColor Yellow
-scp -P $SERVER_PORT -r "$LOCAL_BUILD/*" "${SERVER_USER}@${SERVER_HOST}:${REMOTE_PATH}/"
-
-if ($LASTEXITCODE -eq 0) {
-    Write-Host "✅ DÉPLOIEMENT RÉUSSI !" -ForegroundColor Green
-    Write-Host "🌐 Site live: https://glp1-france.fr" -ForegroundColor Green
-    Write-Host "⏰ Déployé le: $(Get-Date -Format 'dd/MM/yyyy à HH:mm:ss')" -ForegroundColor Green
+# Vérifier si pscp est disponible (PuTTY)
+if (Get-Command pscp -ErrorAction SilentlyContinue) {
+    Write-Host "📤 Upload via pscp..." -ForegroundColor Yellow
+    $scpCmd = "pscp -r -P $HOSTINGER_PORT dist/* ${HOSTINGER_USER}@${HOSTINGER_HOST}:${HOSTINGER_PATH}/"
+    Write-Host "Commande: $scpCmd" -ForegroundColor Gray
+    Invoke-Expression $scpCmd
+    
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✅ Déploiement réussi!" -ForegroundColor Green
+        Write-Host "🌐 Site mis à jour: https://glp1-france.fr" -ForegroundColor Green
+    } else {
+        Write-Host "❌ Erreur de déploiement automatique" -ForegroundColor Red
+        Write-Host "💡 Déploiement manuel nécessaire" -ForegroundColor Yellow
+    }
 } else {
-    Write-Host "❌ DÉPLOIEMENT ÉCHOUÉ !" -ForegroundColor Red
-    Write-Host "💾 Restauration possible avec: $BACKUP_NAME.tar.gz" -ForegroundColor Yellow
-    exit 1
+    Write-Host "⚠️  pscp non trouvé - Déploiement manuel" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "📋 ÉTAPES DE DÉPLOIEMENT MANUEL:" -ForegroundColor Cyan
+    Write-Host "1. Connectez-vous à votre panel Hostinger"
+    Write-Host "2. Ouvrez le File Manager"  
+    Write-Host "3. Supprimez tout le contenu de public_html/"
+    Write-Host "4. Uploadez tout le contenu du dossier dist/ vers public_html/"
+    Write-Host ""
+    Write-Host "📁 Ouverture du dossier dist..." -ForegroundColor Yellow
+    Start-Process "dist"
 }
 
-Write-Host "================================" -ForegroundColor Green
-Write-Host "🎉 DÉPLOIEMENT TERMINÉ" -ForegroundColor Green
+Write-Host ""
+Write-Host "🎉 Déploiement terminé!" -ForegroundColor Green

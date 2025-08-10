@@ -77,7 +77,7 @@ test_important_pages() {
         "/glp1-perte-de-poids/"
         "/medicaments-glp1/"
         "/effets-secondaires-glp1/"
-        "/admin-dashboard/"
+        "/admin/"
     )
     
     local failed_pages=0
