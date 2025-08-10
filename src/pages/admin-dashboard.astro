@@ -182,6 +182,21 @@ for (const name of collectionNames) {
     .hidden {
       display: none !important;
     }
+    table {
+      font-size: 14px;
+    }
+    table th {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 12px;
+    }
+    table td {
+      vertical-align: top;
+    }
+    table tr:hover {
+      background-color: #f8f9fa;
+    }
     .container { 
       max-width: 1400px; 
       margin: 0 auto; 
@@ -294,6 +309,113 @@ for (const name of collectionNames) {
         <div class="stat-card">
           <div class="stat-number green">{totalArticles - emptyArticles}</div>
           <div class="stat-label">Articles publiés</div>
+        </div>
+      </div>
+
+      <!-- TABLEAUX DÉTAILLÉS -->
+      <div class="roadmap-section">
+        <h3>📊 Analyse Détaillée par Collection</h3>
+        
+        <div style="overflow-x: auto; margin-bottom: 30px;">
+          <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <thead>
+              <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <th style="padding: 15px; text-align: left;">Collection</th>
+                <th style="padding: 15px; text-align: center;">Articles</th>
+                <th style="padding: 15px; text-align: center;">Vides</th>
+                <th style="padding: 15px; text-align: center;">Publiés</th>
+                <th style="padding: 15px; text-align: center;">% Complétude</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detailedStats.reduce((acc, article) => {
+                const collection = article.collection;
+                if (!acc.find(c => c.collection === collection)) {
+                  const collectionArticles = detailedStats.filter(a => a.collection === collection);
+                  const emptyCount = collectionArticles.filter(a => a.isEmpty).length;
+                  const publishedCount = collectionArticles.length - emptyCount;
+                  const completionRate = ((publishedCount / collectionArticles.length) * 100).toFixed(1);
+                  
+                  acc.push({
+                    collection,
+                    total: collectionArticles.length,
+                    empty: emptyCount,
+                    published: publishedCount,
+                    completion: completionRate
+                  });
+                }
+                return acc;
+              }, []).map(collection => (
+                <tr style="border-bottom: 1px solid #eee;">
+                  <td style="padding: 12px; font-weight: 500;">{collection.collection}</td>
+                  <td style="padding: 12px; text-align: center;">{collection.total}</td>
+                  <td style="padding: 12px; text-align: center; color: #dc3545;">{collection.empty}</td>
+                  <td style="padding: 12px; text-align: center; color: #28a745;">{collection.published}</td>
+                  <td style="padding: 12px; text-align: center;">
+                    <span style={`color: ${parseFloat(collection.completion) >= 70 ? '#28a745' : parseFloat(collection.completion) >= 50 ? '#ffc107' : '#dc3545'}`}>
+                      {collection.completion}%
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h3>📝 Articles à Compléter (Score SEO < 60)</h3>
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <thead>
+              <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <th style="padding: 12px; text-align: left;">Article</th>
+                <th style="padding: 12px; text-align: center;">Collection</th>
+                <th style="padding: 12px; text-align: center;">Mots</th>
+                <th style="padding: 12px; text-align: center;">H2</th>
+                <th style="padding: 12px; text-align: center;">Mot-clé</th>
+                <th style="padding: 12px; text-align: center;">Densité</th>
+                <th style="padding: 12px; text-align: center;">Score SEO</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detailedStats
+                .filter(article => article.seoScore < 60)
+                .sort((a, b) => a.seoScore - b.seoScore)
+                .slice(0, 20)
+                .map(article => (
+                <tr style="border-bottom: 1px solid #eee;">
+                  <td style="padding: 10px; font-size: 14px;">
+                    <strong>{article.title.length > 50 ? article.title.substring(0, 50) + '...' : article.title}</strong>
+                    <br />
+                    <small style="color: #666;">/{article.collection}/{article.slug}</small>
+                  </td>
+                  <td style="padding: 10px; text-align: center; font-size: 12px;">{article.collection}</td>
+                  <td style="padding: 10px; text-align: center;">
+                    <span style={`color: ${article.wordCount >= 1000 ? '#28a745' : article.wordCount >= 500 ? '#ffc107' : '#dc3545'}`}>
+                      {article.wordCount}
+                    </span>
+                  </td>
+                  <td style="padding: 10px; text-align: center;">
+                    <span style={`color: ${article.h2Count >= 3 ? '#28a745' : article.h2Count >= 1 ? '#ffc107' : '#dc3545'}`}>
+                      {article.h2Count}
+                    </span>
+                  </td>
+                  <td style="padding: 10px; text-align: center; font-size: 12px;">
+                    {article.mainKeyword.length > 15 ? article.mainKeyword.substring(0, 15) + '...' : article.mainKeyword || 'N/A'}
+                  </td>
+                  <td style="padding: 10px; text-align: center;">
+                    <span style={`color: ${article.mainKeywordDensity >= 1 && article.mainKeywordDensity <= 3 ? '#28a745' : '#dc3545'}`}>
+                      {article.mainKeywordDensity}%
+                    </span>
+                  </td>
+                  <td style="padding: 10px; text-align: center;">
+                    <span style={`font-weight: bold; color: ${article.seoScore >= 80 ? '#28a745' : article.seoScore >= 60 ? '#ffc107' : '#dc3545'}`}>
+                      {article.seoScore}/100
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
