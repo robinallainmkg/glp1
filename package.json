@@ -13,6 +13,8 @@
     "type-check": "astro check",
     "deploy": "node deploy.js",
     "deploy:auto": "node deploy-auto.js",
+    "deploy:complete": "node deploy-complete.js",
+    "deploy:full": "powershell -ExecutionPolicy Bypass -File deploy-full.ps1",
     "deploy:windows": "powershell -ExecutionPolicy Bypass -File deploy.ps1",
     "deploy:mac": "bash deploy.sh"
   },
