@@ -1,0 +1,3 @@
+@echo off
+echo 🚀 Lancement du deploiement...
+"C:\Program Files\Git\bin\bash.exe" -c "./deploy.sh %*"

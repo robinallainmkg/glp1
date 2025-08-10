@@ -317,9 +317,6 @@ for (const name of collectionNames) {
       color: white;
       border: none;
       border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -333,28 +330,6 @@ for (const name of collectionNames) {
     </form>
   </div>
   
-  <!-- Dashboard principal -->
-  <div id="dashboard-container" class="container hidden">
-    <button id="logout-btn" class="logout-btn">🚪 Déconnexion</button>
-      
-      <div class="header">
-        <h1>🏥 Dashboard Protégé - GLP-1 France</h1>
-        <p>Monitoring complet • Roadmap • Monétisation</p>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">{totalArticles}</div>
-          <div class="stat-label">Articles total</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number red">{emptyArticles}</div>
-          <div class="stat-label">Articles vides</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number green">{totalArticles - emptyArticles}</div>
-          <div class="stat-label">Articles publiés</div>
-        </div>
   <!-- Dashboard principal -->
   <div id="dashboard-container" class="container hidden">
     <button id="logout-btn" class="logout-btn">🚪 Déconnexion</button>

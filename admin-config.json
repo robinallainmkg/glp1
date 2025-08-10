@@ -1,0 +1,154 @@
+{
+  "collectionThemes": {
+    "medical": {
+      "name": "Médicaments",
+      "cssClass": "medical",
+      "heroColors": {
+        "from": "blue-600",
+        "to": "purple-600"
+      },
+      "description": "Traitements et médicaments GLP-1",
+      "defaultIcon": "💊",
+      "suggestions": ["ozempic", "wegovy", "saxenda", "mounjaro", "trulicity"]
+    },
+    "weight-loss": {
+      "name": "Perte de Poids",
+      "cssClass": "weight-loss",
+      "heroColors": {
+        "from": "green-600",
+        "to": "green-400"
+      },
+      "description": "Efficacité des GLP-1 pour perdre du poids",
+      "defaultIcon": "⚖️",
+      "suggestions": ["amaigrissement", "régime", "efficacité", "résultats"]
+    },
+    "effects": {
+      "name": "Effets Secondaires",
+      "cssClass": "effects",
+      "heroColors": {
+        "from": "red-600",
+        "to": "red-400"
+      },
+      "description": "Effets indésirables et précautions",
+      "defaultIcon": "⚠️",
+      "suggestions": ["nausées", "vomissements", "diarrhée", "fatigue"]
+    },
+    "diabetes": {
+      "name": "Diabète",
+      "cssClass": "diabetes",
+      "heroColors": {
+        "from": "orange-600",
+        "to": "red-500"
+      },
+      "description": "GLP-1 et traitement du diabète",
+      "defaultIcon": "💉",
+      "suggestions": ["glycémie", "insuline", "hba1c", "contrôle"]
+    },
+    "doctors": {
+      "name": "Médecins & Professionnels",
+      "cssClass": "doctors",
+      "heroColors": {
+        "from": "green-600",
+        "to": "teal-600"
+      },
+      "description": "Trouver un spécialiste GLP-1",
+      "defaultIcon": "👨‍⚕️",
+      "suggestions": ["endocrinologue", "diabétologue", "nutritionniste"]
+    },
+    "research": {
+      "name": "Recherche & Études",
+      "cssClass": "research",
+      "heroColors": {
+        "from": "purple-600",
+        "to": "indigo-600"
+      },
+      "description": "Dernières recherches scientifiques",
+      "defaultIcon": "🔬",
+      "suggestions": ["études", "clinique", "recherche", "innovation"]
+    },
+    "alternatives": {
+      "name": "Alternatives",
+      "cssClass": "alternatives",
+      "heroColors": {
+        "from": "blue-600",
+        "to": "cyan-400"
+      },
+      "description": "Alternatives aux traitements GLP-1",
+      "defaultIcon": "🔄",
+      "suggestions": ["alternatif", "options", "substituts", "autres"]
+    },
+    "nutrition": {
+      "name": "Nutrition & Régime",
+      "cssClass": "nutrition",
+      "heroColors": {
+        "from": "orange-500",
+        "to": "yellow-500"
+      },
+      "description": "Alimentation et conseils nutritionnels",
+      "defaultIcon": "🥗",
+      "suggestions": ["régime", "alimentation", "nutrition", "conseils"]
+    },
+    "price": {
+      "name": "Prix & Coût",
+      "cssClass": "price",
+      "heroColors": {
+        "from": "yellow-600",
+        "to": "yellow-400"
+      },
+      "description": "Tarifs et remboursements",
+      "defaultIcon": "💰",
+      "suggestions": ["prix", "coût", "remboursement", "tarif"]
+    }
+  },
+  "requiredStructure": {
+    "articleCard": {
+      "mandatory": [
+        "article-card",
+        "article-inner",
+        "article-hero",
+        "article-content",
+        "article-title",
+        "article-description",
+        "article-meta",
+        "article-author",
+        "article-badge"
+      ],
+      "template": "<article class=\"article-card\"><div class=\"article-inner\"><div class=\"article-hero {theme}\"><div class=\"article-icon\">{icon}</div></div><div class=\"article-content\"><h2 class=\"article-title\"><a href=\"/{collection}/{slug}/\">{title}</a></h2><p class=\"article-description\">{description}</p><div class=\"article-meta\"><span class=\"article-author\">{author}</span><span class=\"article-badge\">{readingTime}</span></div></div></div></article>"
+    }
+  },
+  "authorAssignment": {
+    "medical": ["Dr. Claire Morel", "Dr. Marc Dubois", "Dr. Pierre Martin"],
+    "weight-loss": ["Dr. Émilie Martin", "Marc Delattre"],
+    "effects": ["Dr. Sarah Legrand", "Élodie Carpentier"],
+    "diabetes": ["Dr. Claire Morel", "Dr. Pierre Martin"],
+    "doctors": ["Dr. Marc Dubois", "Dr. Claire Morel"],
+    "research": ["Dr. Sarah Legrand", "Dr. Pierre Martin"],
+    "alternatives": ["Julien Lefèvre", "Dr. Sarah Legrand"],
+    "nutrition": ["Marc Delattre", "Dr. Émilie Martin"],
+    "price": ["Julien Armand", "Sophie Dubois"]
+  },
+  "validation": {
+    "requiredFrontmatter": ["title", "description", "date", "author", "category", "keywords", "readingTime"],
+    "forbiddenClasses": [
+      "bg-white rounded-2xl shadow-lg",
+      "h-48 bg-gradient-to-br",
+      "p-6",
+      "bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+    ],
+    "mandatoryClasses": [
+      "article-card",
+      "article-inner",
+      "article-hero",
+      "article-content"
+    ]
+  },
+  "generationRules": {
+    "collectionPageTemplate": "src/pages/{collection}/index.astro",
+    "contentDirectory": "src/content/{collection}/",
+    "databasePath": "data/articles-database.json",
+    "regenerationCommands": [
+      "node scripts/generate-database-v2.mjs",
+      "node scripts/update-authors.mjs"
+    ]
+  }
+}
