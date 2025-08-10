@@ -10,7 +10,11 @@
     "start": "astro preview --port 4321 --open",
     "generate-database": "node scripts/generate-database-v2.mjs",
     "clean": "rm -rf dist .astro",
-    "type-check": "astro check"
+    "type-check": "astro check",
+    "deploy": "node deploy.js",
+    "deploy:auto": "node deploy-auto.js",
+    "deploy:windows": "powershell -ExecutionPolicy Bypass -File deploy.ps1",
+    "deploy:mac": "bash deploy.sh"
   },
   "dependencies": {
     "astro": "^4.10.0",
