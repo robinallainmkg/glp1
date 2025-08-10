@@ -8,15 +8,9 @@
     "build": "astro build",
     "preview": "astro preview --port 4321 --open",
     "start": "astro preview --port 4321 --open",
-    "deploy": "deploy.bat",
-    "deploy:test": "deploy.bat --dry-run",
-    "generate": "node scripts/generate-from-csv.mjs glp-1_clusters_2025-08-07.csv",
     "generate-database": "node scripts/generate-database-v2.mjs",
-    "apply:prompt": "node scripts/apply-prompt.mjs prompts/next-prompt.txt",
     "clean": "rm -rf dist .astro",
-    "type-check": "astro check",
-    "lint": "echo 'No linting configured yet'",
-    "test": "echo 'No tests configured yet'"
+    "type-check": "astro check"
   },
   "dependencies": {
     "astro": "^4.10.0",

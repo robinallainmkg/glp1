@@ -1,0 +1,183 @@
+---
+import { getCollection } from 'astro:content';
+
+function countWords(text) {
+  if (!text) return 0;
+  return text
+    .replace(/`{3}[\s\S]*?`{3}/g, ' ') // remove code blocks
+    .replace(/`[^`]*`/g, ' ') // inline code
+    .replace(/<[^>]+>/g, ' ') // any html tags
+    .split(/\s+/)
+    .filter(Boolean)
+    .length;
+}
+
+function countOccurrences(text, keyword) {
+  if (!keyword) return 0;
+  const escaped = keyword.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const regex = new RegExp(`\\b${escaped}\\b`, 'gi');
+  return (text.match(regex) || []).length;
+}
+
+function countHeadings(md, level) {
+  const hashes = '#'.repeat(level);
+  const regex = new RegExp(`^${hashes}\\s+.+`, 'gm');
+  return (md.match(regex) || []).length;
+}
+
+function hasKeywordInHeading(md, keyword, level) {
+  if (!keyword) return false;
+  const hashes = '#'.repeat(level);
+  const regex = new RegExp(`^${hashes}\\s+.*${keyword.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}.*`, 'gim');
+  return regex.test(md);
+}
+
+function imageAlts(md) {
+  const matches = md.matchAll(/!\[([^\]]*)\]\([^)]*\)/g);
+  return Array.from(matches).map(m => m[1].toLowerCase());
+}
+
+// Agrège toutes les collections existantes (sans fusion)
+const collectionNames = [
+  'alternatives-glp1',
+  'glp1-perte-de-poids',
+  'effets-secondaires-glp1',
+  'glp1-cout',
+  'glp1-diabete',
+  'medecins-glp1-france',
+  'medicaments-glp1',
+  'recherche-glp1',
+  'regime-glp1'
+];
+
+const allEntries = [];
+for (const name of collectionNames) {
+  try {
+    const entries = await getCollection(name);
+    allEntries.push(...entries.map(e => ({ ...e, _collection: name })));
+  } catch (e) {
+    // ignore missing collection
+  }
+}
+
+const stats = allEntries.map(a => {
+  // Utilise le markdown brut (a.body)
+  const md = a.body || '';
+  const text = md.replace(/![^\n]*\n?/g, ' ') // remove image refs
+                  .replace(/\[[^\]]*\]\([^)]*\)/g, ' ') // remove links
+                  .replace(/<[^>]+>/g, ' ');
+
+  const wordCount = countWords(text);
+  const h1Count = countHeadings(md, 1);
+  const h2Count = countHeadings(md, 2);
+
+  const mainKeyword = a.data.mainKeyword || '';
+  const secondaryKeywords = a.data.secondaryKeywords || [];
+
+  const mainKeywordCount = countOccurrences(text, mainKeyword);
+  const mainKeywordDensity = mainKeyword
+    ? ((mainKeywordCount / Math.max(wordCount, 1)) * 100).toFixed(2)
+    : '0.00';
+
+  const secondaryStats = secondaryKeywords.map(k => {
+    const c = countOccurrences(text, k);
+    return {
+      keyword: k,
+      count: c,
+      density: wordCount ? ((c / wordCount) * 100).toFixed(2) : '0.00'
+    };
+  });
+
+  const mkLower = mainKeyword.toLowerCase();
+  const hasMainInH1 = hasKeywordInHeading(md.toLowerCase(), mkLower, 1);
+  const hasMainInSlug = mkLower && a.slug.includes(mkLower.replace(/\s+/g, '-'));
+  const alts = imageAlts(md);
+  const hasMainInAlt = mkLower && alts.some(a => a.includes(mkLower));
+
+  // Score pondéré (max 80) -> converti en %
+  let score = 0;
+  const mkd = parseFloat(mainKeywordDensity) || 0;
+  if (h1Count === 1) score += 10;
+  if (h2Count >= 3) score += 10;
+  if (wordCount >= 1000) score += 10;
+  if (mkd >= 1 && mkd <= 1.5) score += 15;
+  if (hasMainInH1) score += 10;
+  if (hasMainInSlug) score += 10;
+  if (hasMainInAlt) score += 5;
+  if (secondaryStats.length > 0 && secondaryStats.every(s => parseFloat(s.density) >= 0.3)) score += 10;
+  const maxScore = 80;
+  const scorePercent = Math.round((score / maxScore) * 100);
+
+  return {
+    collection: a._collection,
+    slug: a.slug,
+    title: a.data.title,
+    wordCount,
+    h1Count,
+    h2Count,
+    mainKeyword,
+    mainKeywordDensity,
+    secondaryStats,
+    hasMainInH1,
+    hasMainInSlug,
+    hasMainInAlt,
+    scorePercent
+  };
+});
+---
+
+<h1>Audit SEO des articles</h1>
+<p>Total articles : {stats.length}</p>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;font-size:14px;">
+  <thead style="background:#f5f5f5;">
+    <tr>
+      <th>Collection</th>
+      <th>Slug</th>
+      <th>Titre</th>
+      <th>Mots</th>
+      <th>H1</th>
+      <th>H2</th>
+      <th>Mot-clé principal</th>
+      <th>Densité (%)</th>
+      <th>H1</th>
+      <th>Slug</th>
+      <th>Alt</th>
+      <th>Score (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {stats.map(s => (
+      <tr>
+        <td>{s.collection}</td>
+        <td>{s.slug}</td>
+        <td>{s.title}</td>
+        <td>{s.wordCount}</td>
+        <td style={{color: s.h1Count === 1 ? 'green' : 'red'}}>{s.h1Count}</td>
+        <td style={{color: s.h2Count >= 3 ? 'green' : 'red'}}>{s.h2Count}</td>
+        <td>{s.mainKeyword}</td>
+        <td style={{color: parseFloat(s.mainKeywordDensity) >= 1 && parseFloat(s.mainKeywordDensity) <= 1.5 ? 'green' : 'red'}}>{s.mainKeywordDensity}</td>
+        <td style={{color: s.hasMainInH1 ? 'green' : 'red'}}>{s.hasMainInH1 ? 'Oui' : 'Non'}</td>
+        <td style={{color: s.hasMainInSlug ? 'green' : 'red'}}>{s.hasMainInSlug ? 'Oui' : 'Non'}</td>
+        <td style={{color: s.hasMainInAlt ? 'green' : 'red'}}>{s.hasMainInAlt ? 'Oui' : 'Non'}</td>
+        <td style={{color: s.scorePercent >= 70 ? 'green' : 'red'}}>{s.scorePercent}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+<h2>Détails mots-clés secondaires</h2>
+{stats.map(s => (
+  <details style="margin-bottom:1rem;">
+    <summary><strong>{s.title}</strong> – Secondaires</summary>
+    {s.secondaryStats.length === 0 && <p>Aucun mot-clé secondaire.</p>}
+    {s.secondaryStats.length > 0 && (
+      <ul>
+        {s.secondaryStats.map(sec => (
+          <li style={{color: parseFloat(sec.density) >= 0.3 ? 'green' : 'red'}}>
+            {sec.keyword}: {sec.count} occurrences ({sec.density}%)
+          </li>
+        ))}
+      </ul>
+    )}
+  </details>
+))}
