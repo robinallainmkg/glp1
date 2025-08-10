@@ -26,9 +26,9 @@ Write-Host "3. Upload vers Hostinger..." -ForegroundColor Yellow
 # Créer fichier de commandes WinSCP sans caractères spéciaux
 $winscpScript = @"
 open sftp://u403023291@147.79.98.140:65002 -password="_@%p8R*XG.s+/5)" -hostkey="ssh-ed25519 255 ryF1Sy3SwsauJOcEYq3xYVLfjAbN3LKJX3qRxdU1AHA"
+cd domains
 ls
-mkdir public_html 2>/dev/null
-cd public_html
+cd glp1-france.fr
 lcd dist
 synchronize remote -delete
 close
