@@ -6,15 +6,15 @@ import path from 'node:path';
 // Fonction pour lire le contenu des dossiers de catégories
 async function getCategoryContent() {
   const categories = [
-    { slug: 'glp1-cout', name: 'Prix et Achat', icon: '💰', description: 'Prix, remboursements et où acheter les traitements GLP-1 en France' },
-    { slug: 'medicaments-glp1', name: 'Médicaments GLP-1', icon: '💊', description: 'Guide des médicaments GLP-1 : posologie, prescription et utilisation' },
-    { slug: 'glp1-perte-de-poids', name: 'Perte de Poids', icon: '📉', description: 'Comment les GLP-1 aident à perdre du poids : résultats et témoignages' },
-    { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: '⚠️', description: 'Comprendre et gérer les effets secondaires des traitements GLP-1' },
-    { slug: 'glp1-diabete', name: 'GLP-1 et Diabète', icon: '🩺', description: 'L\'utilisation des GLP-1 dans le traitement du diabète de type 2' },
-    { slug: 'regime-glp1', name: 'Régime et Alimentation', icon: '🥗', description: 'Conseils alimentaires et recettes adaptées aux traitements GLP-1' },
-    { slug: 'alternatives-glp1', name: 'Alternatives', icon: '🌿', description: 'Alternatives naturelles et autres traitements pour la perte de poids' },
-    { slug: 'medecins-glp1-france', name: 'Médecins en France', icon: '👨‍⚕️', description: 'Trouver des médecins spécialisés dans les traitements GLP-1 en France' },
-    { slug: 'recherche-glp1', name: 'Recherche et Innovation', icon: '🔬', description: 'Dernières études et innovations dans les traitements GLP-1' }
+    { slug: 'glp1-cout', name: 'Prix et Où Acheter', icon: '💰', description: 'Prix Ozempic/Wegovy, remboursements et pharmacies en France' },
+    { slug: 'medicaments-glp1', name: 'Ozempic vs Wegovy', icon: '💊', description: 'Différences, posologie et lequel choisir selon votre situation' },
+    { slug: 'glp1-perte-de-poids', name: 'Perdre du Poids', icon: '📉', description: 'Résultats réels, témoignages et avant/après avec Ozempic & Wegovy' },
+    { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: '⚠️', description: 'Nausées, fatigue : comment gérer les effets secondaires' },
+    { slug: 'glp1-diabete', name: 'Diabète et Ozempic', icon: '🩺', description: 'Utilisation d\'Ozempic pour le diabète : efficacité et suivi' },
+    { slug: 'regime-glp1', name: 'Que Manger', icon: '🥗', description: 'Alimentation adaptée pendant un traitement Ozempic/Wegovy' },
+    { slug: 'alternatives-glp1', name: 'Autres Solutions', icon: '🌿', description: 'Alternatives naturelles et autres médicaments pour maigrir' },
+    { slug: 'medecins-glp1-france', name: 'Trouver un Médecin', icon: '👨‍⚕️', description: 'Médecins qui prescrivent Ozempic/Wegovy près de chez vous' },
+    { slug: 'recherche-glp1', name: 'Études et Nouveautés', icon: '🔬', description: 'Dernières études scientifiques et innovations médicamenteuses' }
   ];
 
   // Ensure Astro.root is available and fallback to process.cwd()
@@ -42,24 +42,29 @@ const categories = await getCategoryContent();
 ---
 
 <BaseLayout 
-  title="GLP-1 France – Guide Complet des Traitements GLP-1 en France"
-  description="Découvrez tout sur les traitements GLP-1 en France : prix, efficacité, effets secondaires et où les acheter. Guide complet par des experts médicaux."
-  keywords="GLP-1, Wegovy, Ozempic, diabète, perte de poids, France, prix, effets secondaires"
+  title="Ozempic & Wegovy France – Guide Complet Perte de Poids 2025"
+  description="Tout sur Ozempic et Wegovy en France : prix, efficacité, où les acheter, effets secondaires. Guide complet des nouveaux médicaments pour maigrir."
+  keywords="Ozempic, Wegovy, médicament pour maigrir, perte de poids, prix France, diabète, où acheter"
 >
   <div class="container">
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
         <h1 class="hero-title">
-          Guide Complet des Traitements <span class="text-gradient">GLP-1</span> en France
+          Ozempic & Wegovy en France : <span class="text-gradient">Le Guide Complet</span>
         </h1>
         <p class="hero-description">
-          Découvrez tout ce que vous devez savoir sur les traitements GLP-1 : efficacité pour la perte de poids, 
-          gestion du diabète, prix en France, effets secondaires et conseils d'experts.
+          Découvrez tout sur ces nouveaux médicaments révolutionnaires pour perdre du poids et traiter le diabète : 
+          prix en France, où les acheter, efficacité réelle, effets secondaires et conseils d'experts.
         </p>
+        <div class="hero-pills">
+          <span class="pill">✅ Ozempic & Wegovy expliqués</span>
+          <span class="pill">💰 Prix & Remboursement</span>
+          <span class="pill">🏥 Où les acheter légalement</span>
+        </div>
         <div class="hero-actions">
-          <a href="#categories" class="btn btn-primary btn-lg">Explorer les Guides</a>
-          <a href="/guide-beaute-perte-de-poids-glp1/" class="btn btn-outline btn-lg">Guide Beauté & GLP-1</a>
+          <a href="/nouveaux-medicaments-perdre-poids/" class="btn btn-primary btn-lg">Découvrir les Nouveaux Traitements</a>
+          <a href="/glp1-perte-de-poids/ozempic-prix/" class="btn btn-outline btn-lg">Voir les Prix</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
@@ -78,12 +83,50 @@ const categories = await getCategoryContent();
       </div>
     </section>
 
+    <!-- Bridge Section - Explication GLP-1 -->
+    <section class="bridge-section">
+      <div class="bridge-content">
+        <h2 class="bridge-title">Ozempic, Wegovy... Que signifie GLP-1 ?</h2>
+        <div class="bridge-grid">
+          <div class="bridge-explanation">
+            <p class="bridge-text">
+              <strong>Ozempic et Wegovy</strong> sont les noms commerciaux de médicaments appartenant à une famille appelée <strong>"GLP-1"</strong>. 
+              Ces traitements révolutionnaires imitent une hormone naturelle pour réguler la glycémie et réduire l'appétit.
+            </p>
+            <div class="bridge-pills">
+              <span class="bridge-pill">💊 Ozempic = Pour le diabète + perte de poids</span>
+              <span class="bridge-pill">📉 Wegovy = Spécialement pour maigrir</span>
+              <span class="bridge-pill">🧬 GLP-1 = La famille de molécules</span>
+            </div>
+          </div>
+          <div class="bridge-visual">
+            <div class="med-comparison">
+              <div class="med-item">
+                <span class="med-name">Ozempic</span>
+                <span class="med-arrow">→</span>
+                <span class="med-molecule">Sémaglutide (GLP-1)</span>
+              </div>
+              <div class="med-item">
+                <span class="med-name">Wegovy</span>
+                <span class="med-arrow">→</span>
+                <span class="med-molecule">Sémaglutide (GLP-1)</span>
+              </div>
+              <div class="med-item">
+                <span class="med-name">Trulicity</span>
+                <span class="med-arrow">→</span>
+                <span class="med-molecule">Dulaglutide (GLP-1)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Categories Grid -->
     <section id="categories" class="categories-section">
       <div class="section-header">
-        <h2 class="section-title">Explorez Nos Guides Spécialisés</h2>
+        <h2 class="section-title">Tout Savoir sur Ozempic & Wegovy</h2>
         <p class="section-description">
-          Chaque catégorie contient des articles détaillés rédigés par nos experts médicaux et spécialistes.
+          Guides détaillés par nos experts médicaux pour comprendre ces nouveaux médicaments révolutionnaires.
         </p>
       </div>
       
@@ -181,10 +224,10 @@ const categories = await getCategoryContent();
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="cta-content">
-        <h2 class="cta-title">Recevez Nos Derniers Conseils GLP-1</h2>
+        <h2 class="cta-title">Restez Informé sur Ozempic & Wegovy</h2>
         <p class="cta-description">
-          Inscrivez-vous à notre newsletter pour recevoir les dernières actualités, conseils beauté 
-          et informations sur les traitements GLP-1 en France.
+          Recevez les dernières actualités, nouveaux prix, et conseils pratiques 
+          sur ces médicaments révolutionnaires directement dans votre boîte mail.
         </p>
         <form class="newsletter-form-home" action="#" method="post">
           <input type="email" placeholder="Votre adresse email" class="newsletter-input-home" required>
@@ -207,17 +250,17 @@ const categories = await getCategoryContent();
         <div class="trust-item">
           <div class="trust-icon">🇫🇷</div>
           <h4>Spécialisé France</h4>
-          <p>Prix, réglementations et prescriptions selon la législation française</p>
+          <p>Prix français, pharmacies, médecins et remboursements selon notre système de santé</p>
         </div>
         <div class="trust-item">
           <div class="trust-icon">📊</div>
-          <h4>Données Actualisées</h4>
-          <p>Informations mises à jour régulièrement selon les dernières études</p>
+          <h4>Informations Actualisées</h4>
+          <p>Prix Ozempic/Wegovy et disponibilités mises à jour chaque semaine</p>
         </div>
         <div class="trust-item">
           <div class="trust-icon">💬</div>
-          <h4>Communauté Active</h4>
-          <p>Échanges et témoignages de la communauté française GLP-1</p>
+          <h4>Témoignages Réels</h4>
+          <p>Retours d'expérience authentiques de patients français</p>
         </div>
       </div>
     </section>
@@ -251,8 +294,25 @@ const categories = await getCategoryContent();
       font-size: var(--font-size-xl);
       color: var(--gray-600);
       max-width: 800px;
-      margin: 0 auto var(--spacing-8);
+      margin: 0 auto var(--spacing-6);
       line-height: 1.6;
+    }
+
+    .hero-pills {
+      display: flex;
+      gap: var(--spacing-3);
+      justify-content: center;
+      margin-bottom: var(--spacing-8);
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      background: var(--gray-100);
+      color: var(--gray-700);
+      padding: var(--spacing-2) var(--spacing-4);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-sm);
+      font-weight: 500;
     }
 
     .hero-actions {
@@ -285,6 +345,93 @@ const categories = await getCategoryContent();
       font-size: var(--font-size-sm);
       color: var(--gray-500);
       font-weight: 500;
+    }
+
+    /* Bridge Section */
+    .bridge-section {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: var(--radius-2xl);
+      padding: var(--spacing-12) var(--spacing-8);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .bridge-title {
+      text-align: center;
+      font-size: var(--font-size-3xl);
+      font-weight: 700;
+      margin-bottom: var(--spacing-8);
+      color: var(--gray-800);
+    }
+
+    .bridge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-8);
+      align-items: center;
+    }
+
+    .bridge-text {
+      font-size: var(--font-size-lg);
+      line-height: 1.7;
+      color: var(--gray-700);
+      margin-bottom: var(--spacing-6);
+    }
+
+    .bridge-pills {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-3);
+    }
+
+    .bridge-pill {
+      background: white;
+      color: var(--gray-700);
+      padding: var(--spacing-3) var(--spacing-4);
+      border-radius: var(--radius-lg);
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .med-comparison {
+      background: white;
+      padding: var(--spacing-6);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+    }
+
+    .med-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+      padding: var(--spacing-3) 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .med-item:last-child {
+      border-bottom: none;
+    }
+
+    .med-name {
+      font-weight: 600;
+      color: var(--primary-blue);
+      min-width: 80px;
+    }
+
+    .med-arrow {
+      color: var(--gray-400);
+    }
+
+    .med-molecule {
+      font-size: var(--font-size-sm);
+      color: var(--gray-600);
+    }
+
+    @media (max-width: 768px) {
+      .bridge-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+      }
     }
 
     /* Categories Section */
