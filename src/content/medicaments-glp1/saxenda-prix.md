@@ -136,6 +136,19 @@ Saxenda représente une option thérapeutique efficace mais coûteuse pour l'ob�
 
 *Cet article est rédigé à titre informatif par des professionnels de santé. Il ne remplace en aucun cas une consultation médicale personnalisée. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.*
 
+## Articles similaires
+
+**Découvrez les alternatives et compléments au Saxenda :**
+
+- **[Ozempic injection prix](/medicaments-glp1/ozempic-injection-prix/)** - Coût et remboursement du sémaglutide hebdomadaire, alternative plus pratique au liraglutide quotidien
+- **[Victoza posologie](/medicaments-glp1/victoza-posologie/)** - Guide complet du liraglutide diabète, même molécule que Saxenda à dosage différent
+- **[Semaglutide achat](/medicaments-glp1/semaglutide-achat/)** - Guide d'accès au traitement nouvelle génération plus efficace que le liraglutide
+- **[Wegovy avis](/medicaments-glp1/wegovy-avis/)** - Retours sur le sémaglutide haute dose, concurrent direct du Saxenda pour l'obésité
+
+**Ressources complémentaires :**
+- [Nouveau médicament](/medicaments-glp1/nouveau-medicament/) - Innovations 2025 : CagriSema, Retatrutide et futures molécules
+- [Traitements médicamenteux](/medicaments-glp1/traitements-medicamenteux/) - Panorama complet des options thérapeutiques disponibles
+
 
 
 
