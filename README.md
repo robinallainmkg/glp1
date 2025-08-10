@@ -1,20 +1,21 @@
 # Site GLP-1 France
 
-Site d'information sur les traitements GLP-1 avec système d'administration intégré et déploiement automatisé.
+Site d'information sur les traitements GLP-1 avec système de gestion de contenu moderne via Decap CMS et déploiement automatisé sur GitHub Pages.
 
 ## 🚀 Technologies
 
 - **Framework**: Astro 4.x
+- **CMS**: Decap CMS (backend GitHub)
 - **Styles**: CSS personnalisé avec variables CSS
-- **Scripts**: Node.js pour la génération de contenu
-- **Déploiement**: Hostinger via SSH (automatisé), compatible Vercel/Netlify
+- **Déploiement**: GitHub Pages via GitHub Actions
+- **Authentification CMS**: GitHub OAuth
 
 ## 📋 Prérequis
 
 - Node.js 18+ 
 - npm ou yarn
 - Git
-- **Pour le déploiement**: SSH client, clé ED25519
+- **Pour le CMS**: Compte GitHub et OAuth App (voir setup ci-dessous)
 
 ## 🛠️ Installation
 
@@ -26,240 +27,172 @@ cd glp1
 # Installer les dépendances
 npm install
 
-# Configurer l'environnement
-cp .env.example .env.local
-
-# Générer la base de données des articles
+# Générer la base de données des articles (optionnel)
 npm run generate-database
 
 # Lancer le serveur de développement
 npm run dev
 ```
 
+## 🎛️ Administration - Decap CMS
+
+### Accès au CMS
+
+Une fois le site déployé, accédez au CMS via :
+- **Local**: `http://localhost:4321/admin`
+- **Production**: `https://robinallainmkg.github.io/glp1/admin`
+
+### Configuration GitHub OAuth App
+
+Pour utiliser le CMS en production, vous devez créer une GitHub OAuth App :
+
+1. **Aller sur GitHub** → Settings → Developer settings → OAuth Apps
+2. **Créer une nouvelle OAuth App** avec :
+   - Application name: `GLP-1 France CMS`
+   - Homepage URL: `https://robinallainmkg.github.io/glp1`
+   - Authorization callback URL: `https://api.netlify.com/auth/done` (ou votre proxy OAuth)
+3. **Récupérer** le Client ID et Client Secret
+4. **Configurer** selon votre méthode d'authentification (voir docs Decap CMS)
+
+### Mode Test Local
+
+Pour tester le CMS en local sans OAuth :
+
+1. Modifier `public/admin/config.yml` temporairement :
+```yaml
+backend:
+  name: test-repo
+```
+
+2. Redémarrer le serveur de développement
+3. Accéder à `/admin` - vous pourrez créer/éditer du contenu de test
+
 ## 🚀 Déploiement
 
-### Quick Start (Windows)
+### GitHub Pages (Automatique)
 
-```powershell
-# Test de déploiement
-npm run deploy:dry
+Le déploiement est entièrement automatisé :
 
-# Déploiement réel
-npm run deploy
+1. **Push sur main** → GitHub Actions se déclenche automatiquement
+2. **Build** → Le site est construit avec `npm run build`
+3. **Deploy** → Publication sur GitHub Pages
 
-# Afficher la clé SSH publique
-npm run deploy:show-key
-```
+### URL du site
 
-### Configuration SSH (première fois)
+- **Production**: https://robinallainmkg.github.io/glp1
+- **CMS Admin**: https://robinallainmkg.github.io/glp1/admin
 
-1. **Générer la clé SSH** :
-```bash
-ssh-keygen -t ed25519 -f ~/.ssh/glp1_ed25519 -C "glp1-france@hostinger"
-```
+## 📁 Structure du Contenu
 
-2. **Configurer sur Hostinger** :
-   - Panel Hostinger → SSH Access
-   - Coller la clé publique (`npm run deploy:show-key`)
-   - Sauvegarder
+Le site organise l'information autour de **9 collections** :
 
-3. **Tester la connexion** :
-```bash
-ssh -i ~/.ssh/glp1_ed25519 -p 65002 u403023291@147.79.98.140
-```
+- `alternatives-glp1` - Solutions naturelles
+- `glp1-perte-de-poids` - Efficacité et témoignages  
+- `effets-secondaires-glp1` - Gestion des risques
+- `glp1-cout` - Remboursements, tarifs
+- `medicaments-glp1` - Ozempic, Wegovy, Saxenda
+- `glp1-diabete` - Usage thérapeutique
+- `regime-glp1` - Conseils nutritionnels
+- `medecins-glp1-france` - Praticiens spécialisés
+- `recherche-glp1` - Études et innovations
 
-### Déploiement Cross-Platform
+Chaque collection peut être gérée via le CMS à `/admin`.
 
-- **Windows** : Scripts PowerShell + Git Bash
-- **macOS/Linux** : Scripts Bash natifs
-- **Tous** : SSH + SCP pour le transfert
+## 🔒 Sécurité
 
-📖 **Guide complet** : [GUIDE_DEPLOYMENT_COMPLET.md](./GUIDE_DEPLOYMENT_COMPLET.md)
+### Politique des Secrets
 
-## ⚡️ Build et ouverture automatique du site local
+- ❌ **Jamais de secrets dans le code**
+- ✅ **Variables d'environnement locales uniquement**
+- ✅ **Clés SSH et certificats exclus du repo**
+- ✅ **Headers de sécurité via middleware**
 
-Le workflow de build met à jour automatiquement la base articles-database.json et ouvre le site dans le navigateur :
+### Headers Sécurisés
 
-```bash
-npm run build && npm run preview
-```
+Le site implémente automatiquement :
+- CSP (Content Security Policy)
+- X-Frame-Options
+- X-Content-Type-Options  
+- Referrer-Policy
+- Permissions-Policy
 
-Cela va :
-Lancer la prévisualisation locale sur http://localhost:4173
-
-Si tu veux désactiver l'ouverture automatique, modifie ou retire la commande `open-preview` dans le `package.json`.
-## 📂 Structure du Projet
-
-```
-├── src/
-│   ├── layouts/          # Layouts Astro
-│   ├── pages/           # Pages du site
-│   ├── styles/          # CSS global
-│   └── content/         # Articles markdown
-├── data/                # Base de données JSON
-├── scripts/             # Scripts de génération
-├── public/              # Assets statiques
-└── dist/               # Build de production
-```
-
-## 🔧 Commandes
+## 🧰 Scripts Disponibles
 
 ```bash
 # Développement
-npm run dev
+npm run dev              # Serveur local port 4321
 
-# Build de production
-npm run build
+# Build
+npm run build           # Construction pour production
+npm run preview         # Prévisualisation du build
 
-# Preview du build
-npm run preview
-
-# Génération de la base de données
-node scripts/generate-database-v2.mjs
-
-# Application des prompts
-npm run apply:prompt
+# Maintenance
+npm run generate-database  # Mise à jour base articles
+npm run clean              # Nettoyage cache build
+npm run type-check         # Vérification TypeScript
 ```
 
-## 🎨 Fonctionnalités
+## 📝 Workflow Editorial
 
-- **Recherche avancée** avec suggestions et prévisualisation
-- **Système d'auteurs** spécialisés par domaine
-- **Témoignages** avec conseils beauté
-- **Dashboard admin** pour la gestion des articles
-- **Design responsive** et cartes d'articles interactives
-- **SEO optimisé** avec métadonnées dynamiques
+### Création d'articles via CMS
 
-## 👥 Équipe d'Experts
+1. **Accéder** à `/admin`
+2. **Sélectionner** une collection (ex: "GLP-1 Perte de Poids")
+3. **Créer** un nouvel article
+4. **Remplir** les champs (titre, meta, contenu...)
+5. **Sauvegarder** → Crée une Pull Request
+6. **Merger** la PR → Publication automatique
 
-- **Dr. Claire Morel** - Médecin nutritionniste
-- **Julien Armand** - Journaliste santé & bien-être  
-- **Élodie Carpentier** - Spécialiste cosmétique & dermo-soins
-- **Marc Delattre** - Rédacteur sport & forme
+### Workflow Git
 
-## 🔐 Administration
+- **Draft** → Editorial workflow de Decap CMS
+- **Review** → Pull Request GitHub  
+- **Publish** → Merge + déploiement automatique
 
-Accès admin via `/admin-login/` avec authentification par session.
+## 📊 Monitoring
 
-## 🚀 Déploiement
+### Build Status
 
-### 🏗️ Déploiement Automatisé Hostinger (Recommandé)
+Vérifiez le statut du déploiement :
+- **GitHub Actions** → onglet "Actions" du repo
+- **Status badge** disponible dans la documentation
 
-Le projet inclut un système de déploiement automatisé vers Hostinger avec backup et vérifications intégrées.
+### Logs de Build
 
-#### Configuration Initiale
+En cas d'erreur :
+1. Vérifier GitHub Actions logs
+2. Tester le build localement : `npm run build`
+3. Vérifier la syntaxe des fichiers Markdown
 
-1. **Configurer SSH** (voir [Guide SSH](GUIDE_CONFIGURATION_SSH.md))
-2. **Créer la configuration de production** :
-```bash
-cp .env.production.example .env.production
-# Éditer .env.production avec vos paramètres Hostinger
-```
+## 🔧 Troubleshooting
 
-#### Scripts de Déploiement
+### CMS ne charge pas
 
-```bash
-# Déploiement complet avec backup
-npm run deploy
+1. Vérifier la configuration OAuth
+2. Contrôler `public/admin/config.yml`
+3. Tester en mode `test-repo` localement
 
-# Déploiement rapide sans backup  
-npm run deploy:quick
+### Erreurs de Build
 
-# Test de déploiement (sans upload réel)
-npm run deploy:dry
+1. `npm run type-check` pour TypeScript
+2. Vérifier la structure des collections
+3. Valider le frontmatter des articles
 
-# Vérification post-déploiement
-npm run deploy:check
+### GitHub Pages non accessible
 
-# Rollback vers version précédente
-npm run deploy:rollback
-```
+1. Vérifier GitHub Pages settings
+2. Contrôler le workflow Actions
+3. Valider la configuration `astro.config.mjs`
 
-#### Fonctionnalités du Système de Déploiement
+## 🤝 Contribution
 
-- ✅ **Build automatique** avec vérification d'erreurs
-- ✅ **Backup distant** avant chaque déploiement
-- ✅ **Synchronisation rsync** optimisée avec exclusions
-- ✅ **Vérification post-déploiement** (HTTP, SSL, métriques)
-- ✅ **Rollback automatique** en cas de problème
-- ✅ **Logs détaillés** pour chaque déploiement
-- ✅ **Nettoyage automatique** des anciens backups
+1. Fork le repository
+2. Créer une branche feature
+3. Tester localement
+4. Créer une Pull Request
 
-#### Workflow de Déploiement Recommandé
+## 📚 Documentation
 
-```bash
-# 1. Tester en local
-npm run build
-npm run preview
-
-# 2. Test dry-run
-npm run deploy:dry
-
-# 3. Déploiement réel
-npm run deploy
-
-# 4. Vérification
-npm run deploy:check
-```
-
-### 🌐 Autres Plateformes
-
-#### Vercel
-
-```bash
-# Installer Vercel CLI
-npm i -g vercel
-
-# Déployer
-vercel
-```
-
-#### Netlify
-
-```bash
-# Build command: npm run build
-# Publish directory: dist
-```
-
-### Variables d'Environnement de Production
-
-```bash
-SITE_URL=https://votre-domaine.com
-NODE_ENV=production
-ADMIN_PASSWORD=votre_mot_de_passe_securise
-```
-
-## 📝 Workflow de Développement
-
-1. **Développement local** sur branche `develop`
-2. **Tests** et validation 
-3. **Merge** vers `main` pour staging
-4. **Deploy** automatique en production
-
-## 🔧 Maintenance
-
-- Régénération de la base d'articles via scripts
-- Mise à jour des témoignages dans `/data/authors-testimonials.json`
-- Ajout de nouveaux articles dans `/src/content/`
-
-## 📊 Performance
-
-- Build optimisé avec Astro
-- Images optimisées
-- CSS minifié
-- JavaScript minimal côté client
-
-## 🐛 Dépannage
-
-- **Build Error**: Vérifier la syntaxe des fichiers `.astro`
-- **Admin Error**: Vérifier les chemins vers les fichiers de données
-- **Styles manquants**: Régénérer le CSS global
-
-## 📞 Support
-
-Pour toute question technique, consulter la documentation Astro ou les issues GitHub.
-
----
-
-**Version**: 1.0.0  
-**Dernière mise à jour**: Août 2025
+- **Astro**: https://docs.astro.build
+- **Decap CMS**: https://decapcms.org/docs
+- **GitHub Pages**: https://docs.github.com/pages

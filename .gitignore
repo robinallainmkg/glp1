@@ -63,12 +63,28 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# dotenv environment variable files - ENHANCED SECURITY
 .env
+.env.*
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+
+# SSH Keys and Certificates - SECURITY CRITICAL
+*.pem
+*.key
+*.crt
+*_rsa
+*_ed25519
+id_*
+*.p12
+*.pfx
+
+# Deploy configs with secrets
+deploy/config.env
+deploy-config.json
+hostinger-config.*
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
