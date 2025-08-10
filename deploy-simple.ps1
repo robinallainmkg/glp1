@@ -46,7 +46,7 @@ Write-Host "Deploiement vers Hostinger..." -ForegroundColor Cyan
 
 # Creer script WinSCP
 $winscpScript = @"
-open sftp://u403023291:_@%p8R*XG.s+/5)@147.79.98.140:65002
+open sftp://u403023291:"_@%p8R*XG.s+/5)"@147.79.98.140:65002
 option batch abort
 option confirm off
 cd /public_html
