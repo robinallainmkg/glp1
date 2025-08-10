@@ -1,15 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
-import fs from 'fs';
-import { parseKeywordsCSV, analyzeKeywordOpportunities, generateKeywordMatrix } from '../utils/keyword-analyzer.js';
 
 // === FONCTIONS D'ANALYSE ===
 function countWords(text) {
   if (!text) return 0;
   return text
-    .replace(/`{3}[\s\S]*?`{3}/g, ' ') // remove code blocks
-    .replace(/`[^`]*`/g, ' ') // inline code
-    .replace(/<[^>]+>/g, ' ') // any html tags
+    .replace(/`{3}[\s\S]*?`{3}/g, ' ')
+    .replace(/`[^`]*`/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
     .split(/\s+/)
     .filter(Boolean)
     .length;
@@ -35,9 +33,9 @@ function hasKeywordInHeading(md, keyword, level) {
   return regex.test(md);
 }
 
-function imageAlts(md) {
-  const matches = md.matchAll(/!\[([^\]]*)\]\([^)]*\)/g);
-  return Array.from(matches).map(m => m[1].toLowerCase());
+function hasMedicalDisclaimer(md) {
+  const disclaimerKeywords = ['avis médical', 'professionnel de santé', 'médecin', 'consultation', 'prescription'];
+  return disclaimerKeywords.some(keyword => md.toLowerCase().includes(keyword));
 }
 
 function hasInternalLinks(md) {
@@ -45,197 +43,7 @@ function hasInternalLinks(md) {
   return internalLinks.length;
 }
 
-function hasMedicalDisclaimer(md) {
-  const disclaimerKeywords = ['avis médical', 'professionnel de santé', 'médecin', 'consultation', 'prescription'];
-  return disclaimerKeywords.some(keyword => md.toLowerCase().includes(keyword));
-}
-
-function hasStructuredData(md) {
-  return md.includes('FAQ') || md.includes('Q:') || md.includes('Réponse:');
-}
-
-function getReadabilityScore(text, wordCount) {
-  if (wordCount === 0) return 0;
-  
-  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
-  const avgWordsPerSentence = sentences > 0 ? wordCount / sentences : 0;
-  
-  // Score de lisibilité simplifié (inspiré de Flesch)
-  let score = 100;
-  if (avgWordsPerSentence > 20) score -= 20;
-  if (avgWordsPerSentence > 15) score -= 10;
-  
-  return Math.max(0, Math.min(100, score));
-}
-
-// === ANALYSE SEO AVANCÉE ===
-function analyzeSEOFactors(md, article) {
-  const text = md.replace(/![^\n]*\n?/g, ' ')
-                 .replace(/\[[^\]]*\]\([^)]*\)/g, ' ')
-                 .replace(/<[^>]+>/g, ' ');
-  
-  const wordCount = countWords(text);
-  const mainKeyword = article.data.mainKeyword || '';
-  const title = article.data.title || '';
-  const description = article.data.description || '';
-  
-  return {
-    // Facteurs techniques
-    wordCount,
-    h1Count: countHeadings(md, 1),
-    h2Count: countHeadings(md, 2),
-    h3Count: countHeadings(md, 3),
-    
-    // Densité mots-clés
-    mainKeywordCount: countOccurrences(text, mainKeyword),
-    mainKeywordDensity: mainKeyword ? ((countOccurrences(text, mainKeyword) / Math.max(wordCount, 1)) * 100).toFixed(2) : '0.00',
-    
-    // Optimisation structurelle
-    hasMainInTitle: mainKeyword && title.toLowerCase().includes(mainKeyword.toLowerCase()),
-    hasMainInH1: hasKeywordInHeading(md.toLowerCase(), mainKeyword.toLowerCase(), 1),
-    hasMainInSlug: mainKeyword && article.slug.includes(mainKeyword.toLowerCase().replace(/\s+/g, '-')),
-    hasMainInAlt: mainKeyword && imageAlts(md).some(alt => alt.includes(mainKeyword.toLowerCase())),
-    hasMainInDescription: mainKeyword && description.toLowerCase().includes(mainKeyword.toLowerCase()),
-    
-    // Qualité contenu
-    internalLinksCount: hasInternalLinks(md),
-    hasMedicalDisclaimer: hasMedicalDisclaimer(md),
-    hasStructuredData: hasStructuredData(md),
-    readabilityScore: getReadabilityScore(text, wordCount),
-    
-    // Mots-clés secondaires
-    secondaryKeywords: (article.data.secondaryKeywords || []).map(k => ({
-      keyword: k,
-      count: countOccurrences(text, k),
-      density: wordCount ? ((countOccurrences(text, k) / wordCount) * 100).toFixed(2) : '0.00'
-    }))
-  };
-}
-
-// === SCORING SEO SOPHISTIQUÉ ===
-function calculateAdvancedSEOScore(analysis) {
-  let score = 0;
-  let maxScore = 100;
-  
-  // 1. Structure technique (25 points)
-  if (analysis.h1Count === 1) score += 5;
-  if (analysis.h2Count >= 3) score += 5;
-  if (analysis.h3Count >= 2) score += 3;
-  if (analysis.wordCount >= 1500) score += 7;
-  else if (analysis.wordCount >= 1000) score += 5;
-  else if (analysis.wordCount >= 500) score += 3;
-  
-  // 2. Optimisation mots-clés (30 points)
-  const density = parseFloat(analysis.mainKeywordDensity);
-  if (density >= 1 && density <= 2) score += 10;
-  else if (density >= 0.5 && density <= 3) score += 7;
-  else if (density > 0) score += 3;
-  
-  if (analysis.hasMainInTitle) score += 5;
-  if (analysis.hasMainInH1) score += 5;
-  if (analysis.hasMainInSlug) score += 3;
-  if (analysis.hasMainInDescription) score += 4;
-  if (analysis.hasMainInAlt) score += 3;
-  
-  // 3. Qualité contenu médical (25 points)
-  if (analysis.hasMedicalDisclaimer) score += 8;
-  if (analysis.hasStructuredData) score += 5;
-  if (analysis.internalLinksCount >= 3) score += 7;
-  else if (analysis.internalLinksCount >= 1) score += 5;
-  if (analysis.readabilityScore >= 80) score += 5;
-  
-  // 4. Mots-clés secondaires (20 points)
-  const goodSecondaryKeywords = analysis.secondaryKeywords.filter(k => parseFloat(k.density) >= 0.3).length;
-  if (goodSecondaryKeywords >= 3) score += 10;
-  else if (goodSecondaryKeywords >= 2) score += 7;
-  else if (goodSecondaryKeywords >= 1) score += 5;
-  
-  if (analysis.secondaryKeywords.length >= 3) score += 5;
-  else if (analysis.secondaryKeywords.length >= 2) score += 3;
-  else if (analysis.secondaryKeywords.length >= 1) score += 2;
-  
-  return Math.min(100, score);
-}
-
-// === RECOMMANDATIONS D'AMÉLIORATION ===
-function getImprovementSuggestions(analysis, article) {
-  const suggestions = [];
-  
-  if (analysis.wordCount < 1000) {
-    suggestions.push({
-      priority: 'haute',
-      category: 'Contenu',
-      suggestion: `Augmenter le contenu à au moins 1000 mots (actuellement ${analysis.wordCount})`
-    });
-  }
-  
-  if (analysis.h1Count !== 1) {
-    suggestions.push({
-      priority: 'haute',
-      category: 'Structure',
-      suggestion: `Utiliser exactement 1 H1 (actuellement ${analysis.h1Count})`
-    });
-  }
-  
-  if (analysis.h2Count < 3) {
-    suggestions.push({
-      priority: 'moyenne',
-      category: 'Structure',
-      suggestion: `Ajouter plus de H2 pour structurer (actuellement ${analysis.h2Count})`
-    });
-  }
-  
-  const density = parseFloat(analysis.mainKeywordDensity);
-  if (density < 1) {
-    suggestions.push({
-      priority: 'haute',
-      category: 'SEO',
-      suggestion: `Augmenter la densité du mot-clé principal "${analysis.mainKeyword || 'non défini'}" (actuellement ${density}%)`
-    });
-  } else if (density > 2) {
-    suggestions.push({
-      priority: 'moyenne',
-      category: 'SEO',
-      suggestion: `Réduire la densité du mot-clé principal "${analysis.mainKeyword || 'non défini'}" (actuellement ${density}%)`
-    });
-  }
-  
-  if (!analysis.hasMainInH1) {
-    suggestions.push({
-      priority: 'haute',
-      category: 'SEO',
-      suggestion: 'Inclure le mot-clé principal dans le H1'
-    });
-  }
-  
-  if (!analysis.hasMedicalDisclaimer) {
-    suggestions.push({
-      priority: 'haute',
-      category: 'Médical',
-      suggestion: 'Ajouter un disclaimer médical conforme à la charte'
-    });
-  }
-  
-  if (analysis.internalLinksCount < 3) {
-    suggestions.push({
-      priority: 'moyenne',
-      category: 'SEO',
-      suggestion: `Ajouter plus de liens internes (actuellement ${analysis.internalLinksCount})`
-    });
-  }
-  
-  if (!analysis.hasStructuredData) {
-    suggestions.push({
-      priority: 'moyenne',
-      category: 'Contenu',
-      suggestion: 'Ajouter une section FAQ ou des données structurées'
-    });
-  }
-  
-  return suggestions;
-}
-
-// === COLLECTE ET TRAITEMENT DES DONNÉES ===
+// === COLLECTE DES DONNÉES ===
 const collectionNames = [
   'alternatives-glp1',
   'glp1-perte-de-poids', 
@@ -258,121 +66,69 @@ for (const name of collectionNames) {
   }
 }
 
-// Analyse complète de chaque article
+// Analyse de chaque article
 const detailedStats = allEntries.map(article => {
   const md = article.body || '';
-  const analysis = analyzeSEOFactors(md, article);
-  const score = calculateAdvancedSEOScore(analysis);
-  const suggestions = getImprovementSuggestions(analysis, article);
+  const text = md.replace(/![^\n]*\n?/g, ' ')
+                 .replace(/\[[^\]]*\]\([^)]*\)/g, ' ')
+                 .replace(/<[^>]+>/g, ' ');
+
+  const wordCount = countWords(text);
+  const mainKeyword = article.data.mainKeyword || '';
   
+  const mainKeywordCount = countOccurrences(text, mainKeyword);
+  const mainKeywordDensity = mainKeyword ? 
+    ((mainKeywordCount / Math.max(wordCount, 1)) * 100).toFixed(2) : '0.00';
+
+  // Score SEO
+  let score = 0;
+  if (countHeadings(md, 1) === 1) score += 20;
+  if (countHeadings(md, 2) >= 3) score += 15;
+  if (wordCount >= 1000) score += 20;
+  if (parseFloat(mainKeywordDensity) >= 1 && parseFloat(mainKeywordDensity) <= 2) score += 20;
+  if (hasMedicalDisclaimer(md)) score += 10;
+  if (hasInternalLinks(md) >= 3) score += 15;
+
   return {
     collection: article._collection,
     slug: article.slug,
     title: article.data.title || 'Sans titre',
-    ...analysis,
+    wordCount,
+    mainKeyword,
+    mainKeywordDensity: parseFloat(mainKeywordDensity),
+    h1Count: countHeadings(md, 1),
+    h2Count: countHeadings(md, 2),
+    hasMedicalDisclaimer: hasMedicalDisclaimer(md),
+    internalLinksCount: hasInternalLinks(md),
     seoScore: score,
-    suggestions,
-    isEmpty: analysis.wordCount < 200
+    isEmpty: wordCount < 200
   };
 });
 
-// === STATISTIQUES GLOBALES ===
-const globalStats = {
-  totalArticles: detailedStats.length,
-  emptyArticles: detailedStats.filter(s => s.isEmpty).length,
-  articlesWithGoodScore: detailedStats.filter(s => s.seoScore >= 70).length,
-  averageWordCount: Math.round(detailedStats.reduce((sum, s) => sum + s.wordCount, 0) / detailedStats.length),
-  averageSEOScore: Math.round(detailedStats.reduce((sum, s) => sum + s.seoScore, 0) / detailedStats.length),
-  articlesWithMedicalDisclaimer: detailedStats.filter(s => s.hasMedicalDisclaimer).length,
-  byCollection: collectionNames.map(name => ({
-    name,
-    count: detailedStats.filter(s => s.collection === name).length,
-    avgScore: Math.round(detailedStats.filter(s => s.collection === name).reduce((sum, s) => sum + s.seoScore, 0) / Math.max(detailedStats.filter(s => s.collection === name).length, 1)),
-    emptyCount: detailedStats.filter(s => s.collection === name && s.isEmpty).length
-  }))
-};
+// Statistiques globales
+const totalArticles = detailedStats.length;
+const emptyArticles = detailedStats.filter(s => s.isEmpty).length;
+const articlesWithGoodScore = detailedStats.filter(s => s.seoScore >= 70).length;
+const averageWordCount = Math.round(detailedStats.reduce((sum, s) => sum + s.wordCount, 0) / totalArticles);
+const averageSEOScore = Math.round(detailedStats.reduce((sum, s) => sum + s.seoScore, 0) / totalArticles);
+const articlesWithMedicalDisclaimer = detailedStats.filter(s => s.hasMedicalDisclaimer).length;
 
-// === ANALYSE DES MOTS-CLÉS ===
-const keywordAnalysis = new Map();
-detailedStats.forEach(article => {
-  if (article.mainKeyword) {
-    const key = article.mainKeyword.toLowerCase();
-    if (!keywordAnalysis.has(key)) {
-      keywordAnalysis.set(key, {
-        keyword: article.mainKeyword,
-        articles: [],
-        avgDensity: 0,
-        totalVolume: 0,
-        competition: 'moyenne', // À calculer selon notre logique
-        seoOpportunity: 0
-      });
-    }
-    
-    const data = keywordAnalysis.get(key);
-    data.articles.push({
-      title: article.title,
-      slug: article.slug,
-      collection: article.collection,
-      density: parseFloat(article.mainKeywordDensity),
-      score: article.seoScore
-    });
-  }
+// Stats par collection
+const collectionStats = collectionNames.map(name => {
+  const collectionArticles = detailedStats.filter(s => s.collection === name);
+  return {
+    name,
+    count: collectionArticles.length,
+    emptyCount: collectionArticles.filter(s => s.isEmpty).length,
+    avgScore: collectionArticles.length > 0 ? Math.round(collectionArticles.reduce((sum, s) => sum + s.seoScore, 0) / collectionArticles.length) : 0
+  };
 });
 
-// Calcul des métriques SEO pour chaque mot-clé
-const keywordStats = Array.from(keywordAnalysis.values()).map(data => {
-  data.avgDensity = data.articles.reduce((sum, a) => sum + a.density, 0) / data.articles.length;
-  data.avgScore = Math.round(data.articles.reduce((sum, a) => sum + a.score, 0) / data.articles.length);
-  
-  // Score d'opportunité SEO (notre propre algorithme)
-  let opportunity = 50; // Base
-  
-  // Bonus si peu d'articles l'utilisent (moins de concurrence interne)
-  if (data.articles.length === 1) opportunity += 20;
-  else if (data.articles.length === 2) opportunity += 10;
-  else if (data.articles.length > 5) opportunity -= 15;
-  
-  // Bonus si densité optimale
-  if (data.avgDensity >= 1 && data.avgDensity <= 2) opportunity += 15;
-  else if (data.avgDensity < 0.5) opportunity -= 20;
-  else if (data.avgDensity > 3) opportunity -= 10;
-  
-  // Bonus selon le type de mot-clé
-  const keyword = data.keyword.toLowerCase();
-  if (keyword.includes('prix') || keyword.includes('cout')) opportunity += 10; // Intent commercial
-  if (keyword.includes('avis') || keyword.includes('témoignage')) opportunity += 8; // Intent informationnel
-  if (keyword.includes('danger') || keyword.includes('effet')) opportunity += 5; // Mots-clés de niche
-  
-  // Bonus pour les mots-clés longs (moins de concurrence)
-  const wordCount = data.keyword.split(' ').length;
-  if (wordCount >= 4) opportunity += 15;
-  else if (wordCount >= 3) opportunity += 10;
-  else if (wordCount === 1) opportunity -= 10;
-  
-  data.seoOpportunity = Math.max(0, Math.min(100, opportunity));
-  
-  return data;
-}).sort((a, b) => b.seoOpportunity - a.seoOpportunity);
-
-// Articles prioritaires (faible score, beaucoup de potentiel)
+// Articles prioritaires
 const priorityArticles = detailedStats
   .filter(s => s.seoScore < 60 && s.wordCount > 0)
   .sort((a, b) => a.seoScore - b.seoScore)
   .slice(0, 10);
-
-// === ANALYSE DES MOTS-CLÉS CSV ===
-let csvKeywords = [];
-let csvKeywordAnalysis = [];
-let keywordMatrix = {};
-
-try {
-  const csvContent = fs.readFileSync('keywords-import-rank-tracker.csv', 'utf8');
-  csvKeywords = parseKeywordsCSV(csvContent);
-  csvKeywordAnalysis = analyzeKeywordOpportunities(csvKeywords, detailedStats);
-  keywordMatrix = generateKeywordMatrix(csvKeywordAnalysis);
-} catch (error) {
-  console.warn('Fichier CSV des mots-clés non trouvé ou erreur de lecture:', error.message);
-}
 ---
 
 <!DOCTYPE html>
@@ -382,58 +138,143 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard SEO - GLP-1 France</title>
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f8f9fa; }
-    .container { max-width: 1400px; margin: 0 auto; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; }
-    .header h1 { margin: 0; font-size: 2.5em; font-weight: 300; }
-    .header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 1.1em; }
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      margin: 0; 
+      padding: 20px; 
+      background: #f8f9fa; 
+    }
+    .container { 
+      max-width: 1400px; 
+      margin: 0 auto; 
+    }
+    .header { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      color: white; 
+      padding: 30px; 
+      border-radius: 12px; 
+      margin-bottom: 30px; 
+    }
+    .header h1 { 
+      margin: 0; 
+      font-size: 2.5em; 
+      font-weight: 300; 
+    }
+    .header p { 
+      margin: 10px 0 0 0; 
+      opacity: 0.9; 
+      font-size: 1.1em; 
+    }
     
-    .tabs { display: flex; background: white; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .tab { padding: 15px 25px; cursor: pointer; border: none; background: none; font-size: 16px; font-weight: 500; color: #666; transition: all 0.3s; }
-    .tab.active { background: #667eea; color: white; border-radius: 8px; }
-    .tab:hover:not(.active) { background: #f1f3f4; }
+    .tabs { 
+      display: flex; 
+      background: white; 
+      border-radius: 8px; 
+      margin-bottom: 20px; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    }
+    .tab { 
+      padding: 15px 25px; 
+      cursor: pointer; 
+      border: none; 
+      background: none; 
+      font-size: 16px; 
+      font-weight: 500; 
+      color: #666; 
+      transition: all 0.3s; 
+    }
+    .tab.active { 
+      background: #667eea; 
+      color: white; 
+      border-radius: 8px; 
+    }
+    .tab:hover:not(.active) { 
+      background: #f1f3f4; 
+    }
     
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
+    .tab-content { 
+      display: none; 
+    }
+    .tab-content.active { 
+      display: block; 
+    }
     
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
-    .stat-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
-    .stat-number { font-size: 2.5em; font-weight: bold; color: #667eea; margin-bottom: 10px; }
-    .stat-label { color: #666; font-size: 1.1em; }
+    .stats-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px; 
+      margin-bottom: 30px; 
+    }
+    .stat-card { 
+      background: white; 
+      padding: 25px; 
+      border-radius: 12px; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      text-align: center; 
+    }
+    .stat-number { 
+      font-size: 2.5em; 
+      font-weight: bold; 
+      margin-bottom: 10px; 
+    }
+    .stat-label { 
+      color: #666; 
+      font-size: 1.1em; 
+    }
     
-    .data-table { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
-    .table-header { background: #667eea; color: white; padding: 20px; }
-    .table-header h3 { margin: 0; font-size: 1.3em; }
+    .data-table { 
+      background: white; 
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      margin-bottom: 30px; 
+    }
+    .table-header { 
+      background: #667eea; 
+      color: white; 
+      padding: 20px; 
+    }
+    .table-header h3 { 
+      margin: 0; 
+      font-size: 1.3em; 
+    }
     
-    table { width: 100%; border-collapse: collapse; }
-    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-    th { background: #f8f9fa; font-weight: 600; color: #333; position: sticky; top: 0; }
-    tr:hover { background: #f8f9fa; }
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+    }
+    th, td { 
+      padding: 12px; 
+      text-align: left; 
+      border-bottom: 1px solid #eee; 
+    }
+    th { 
+      background: #f8f9fa; 
+      font-weight: 600; 
+      color: #333; 
+    }
+    tr:hover { 
+      background: #f8f9fa; 
+    }
     
-    .score-badge { padding: 4px 12px; border-radius: 20px; font-weight: bold; color: white; font-size: 0.9em; }
+    .score-badge { 
+      padding: 4px 12px; 
+      border-radius: 20px; 
+      font-weight: bold; 
+      color: white; 
+      font-size: 0.9em; 
+    }
     .score-excellent { background: #28a745; }
     .score-good { background: #17a2b8; }
     .score-average { background: #ffc107; color: #333; }
     .score-poor { background: #dc3545; }
     
-    .priority-badge { padding: 3px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; }
-    .priority-haute { background: #ff4757; color: white; }
-    .priority-moyenne { background: #ffa502; color: white; }
-    .priority-basse { background: #26de81; color: white; }
-    
-    .suggestions-list { max-height: 200px; overflow-y: auto; }
-    .suggestion-item { padding: 8px 12px; margin: 4px 0; border-left: 4px solid #667eea; background: #f8f9fa; border-radius: 4px; }
-    
-    .keyword-opportunity { display: flex; align-items: center; gap: 10px; }
-    .opportunity-bar { width: 100px; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
-    .opportunity-fill { height: 100%; background: linear-gradient(90deg, #ff4757, #ffa502, #26de81); transition: width 0.3s; }
-    
-    .filters { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
-    .filter-select { padding: 8px 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 14px; }
-    .filter-select:focus { outline: none; border-color: #667eea; }
-    
     .empty-indicator { color: #dc3545; font-weight: bold; }
     .good-indicator { color: #28a745; font-weight: bold; }
+    
+    .red { color: #dc3545; }
+    .green { color: #28a745; }
+    .blue { color: #17a2b8; }
     
     @media (max-width: 768px) {
       .stats-grid { grid-template-columns: 1fr; }
@@ -447,42 +288,41 @@ try {
   <div class="container">
     <div class="header">
       <h1>🏥 Dashboard SEO - GLP-1 France</h1>
-      <p>Monitoring complet • Analyse mots-clés • Optimisation continue</p>
+      <p>Monitoring complet • Analyse • Optimisation continue</p>
     </div>
 
     <div class="tabs">
-      <button class="tab active" onclick="showTab('overview')">Vue d'ensemble</button>
-      <button class="tab" onclick="showTab('articles')">Articles détaillés</button>
-      <button class="tab" onclick="showTab('keywords')">Mots-clés internes</button>
-      <button class="tab" onclick="showTab('rank-tracker')">Rank Tracker</button>
-      <button class="tab" onclick="showTab('priorities')">Priorités</button>
+      <button class="tab active" data-tab="overview">Vue d'ensemble</button>
+      <button class="tab" data-tab="articles">Articles</button>
+      <button class="tab" data-tab="keywords">Mots-clés</button>
+      <button class="tab" data-tab="priorities">Priorités</button>
     </div>
 
     <!-- TAB 1: Vue d'ensemble -->
     <div id="overview" class="tab-content active">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-number">{globalStats.totalArticles}</div>
+          <div class="stat-number">{totalArticles}</div>
           <div class="stat-label">Articles total</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" style="color: #dc3545;">{globalStats.emptyArticles}</div>
+          <div class="stat-number red">{emptyArticles}</div>
           <div class="stat-label">Articles vides</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" style="color: #28a745;">{globalStats.articlesWithGoodScore}</div>
+          <div class="stat-number green">{articlesWithGoodScore}</div>
           <div class="stat-label">Score SEO ≥ 70%</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">{globalStats.averageWordCount}</div>
+          <div class="stat-number">{averageWordCount}</div>
           <div class="stat-label">Mots en moyenne</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">{globalStats.averageSEOScore}%</div>
+          <div class="stat-number">{averageSEOScore}%</div>
           <div class="stat-label">Score SEO moyen</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" style="color: #17a2b8;">{globalStats.articlesWithMedicalDisclaimer}</div>
+          <div class="stat-number blue">{articlesWithMedicalDisclaimer}</div>
           <div class="stat-label">Avec disclaimer médical</div>
         </div>
       </div>
@@ -502,7 +342,7 @@ try {
             </tr>
           </thead>
           <tbody>
-            {globalStats.byCollection.map(col => (
+            {collectionStats.map(col => (
               <tr>
                 <td><strong>{col.name}</strong></td>
                 <td>{col.count}</td>
@@ -524,33 +364,14 @@ try {
         </table>
       </div>
     </div>
-    <!-- TAB 2: Articles détaillés -->
-    <div id="articles" class="tab-content">
-      <div class="filters">
-        <select class="filter-select" id="collectionFilter" onchange="filterArticles()">
-          <option value="">Toutes les collections</option>
-          {collectionNames.map(name => <option value={name}>{name}</option>)}
-        </select>
-        <select class="filter-select" id="scoreFilter" onchange="filterArticles()">
-          <option value="">Tous les scores</option>
-          <option value="excellent">Excellent (≥80%)</option>
-          <option value="good">Bon (70-79%)</option>
-          <option value="average">Moyen (50-69%)</option>
-          <option value="poor">Faible (<50%)</option>
-        </select>
-        <select class="filter-select" id="statusFilter" onchange="filterArticles()">
-          <option value="">Tous les statuts</option>
-          <option value="empty">Articles vides</option>
-          <option value="noDisclaimer">Sans disclaimer</option>
-          <option value="lowDensity">Densité faible</option>
-        </select>
-      </div>
 
+    <!-- TAB 2: Articles -->
+    <div id="articles" class="tab-content">
       <div class="data-table">
         <div class="table-header">
           <h3>📝 Analyse détaillée des articles</h3>
         </div>
-        <table id="articlesTable">
+        <table>
           <thead>
             <tr>
               <th>Titre</th>
@@ -559,20 +380,14 @@ try {
               <th>Score SEO</th>
               <th>Mot-clé principal</th>
               <th>Densité</th>
-              <th>H1/H2/H3</th>
+              <th>H1/H2</th>
               <th>Disclaimer</th>
               <th>Liens internes</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {detailedStats.map(article => (
-              <tr class="article-row" 
-                  data-collection={article.collection}
-                  data-score={article.seoScore}
-                  data-empty={article.isEmpty}
-                  data-disclaimer={article.hasMedicalDisclaimer}
-                  data-density={parseFloat(article.mainKeywordDensity)}>
+              <tr>
                 <td>
                   <strong>{article.title}</strong>
                   <br />
@@ -586,24 +401,18 @@ try {
                   </span>
                 </td>
                 <td>{article.mainKeyword || '<em>Non défini</em>'}</td>
-                <td style={{color: parseFloat(article.mainKeywordDensity) >= 1 && parseFloat(article.mainKeywordDensity) <= 2 ? 'green' : 'red'}}>
-                  {article.mainKeywordDensity}%
+                <td class={article.mainKeywordDensity >= 1 && article.mainKeywordDensity <= 2 ? 'green' : 'red'}>
+                  {article.mainKeywordDensity.toFixed(2)}%
                 </td>
                 <td>
-                  <span style={{color: article.h1Count === 1 ? 'green' : 'red'}}>{article.h1Count}</span>/
-                  <span style={{color: article.h2Count >= 3 ? 'green' : 'red'}}>{article.h2Count}</span>/
-                  {article.h3Count}
+                  <span class={article.h1Count === 1 ? 'green' : 'red'}>{article.h1Count}</span>/
+                  <span class={article.h2Count >= 3 ? 'green' : 'red'}>{article.h2Count}</span>
                 </td>
-                <td style={{color: article.hasMedicalDisclaimer ? 'green' : 'red'}}>
+                <td class={article.hasMedicalDisclaimer ? 'green' : 'red'}>
                   {article.hasMedicalDisclaimer ? '✅' : '❌'}
                 </td>
-                <td style={{color: article.internalLinksCount >= 3 ? 'green' : 'red'}}>
+                <td class={article.internalLinksCount >= 3 ? 'green' : 'red'}>
                   {article.internalLinksCount}
-                </td>
-                <td>
-                  <button onclick={`showSuggestions('${article.slug}')`} style="padding: 4px 8px; border: none; background: #667eea; color: white; border-radius: 4px; cursor: pointer;">
-                    Suggestions
-                  </button>
                 </td>
               </tr>
             ))}
@@ -612,222 +421,19 @@ try {
       </div>
     </div>
 
-    <!-- TAB 3: Mots-clés internes -->
+    <!-- TAB 3: Mots-clés -->
     <div id="keywords" class="tab-content">
       <div class="data-table">
         <div class="table-header">
-          <h3>🎯 Analyse des mots-clés par opportunité SEO</h3>
+          <h3>🎯 Analyse des mots-clés principaux</h3>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Mot-clé</th>
-              <th>Articles</th>
-              <th>Densité moyenne</th>
-              <th>Score moyen</th>
-              <th>Opportunité SEO</th>
-              <th>Stratégie recommandée</th>
-            </tr>
-          </thead>
-          <tbody>
-            {keywordStats.map(keyword => (
-              <tr>
-                <td><strong>{keyword.keyword}</strong></td>
-                <td>{keyword.articles.length}</td>
-                <td style={{color: keyword.avgDensity >= 1 && keyword.avgDensity <= 2 ? 'green' : 'red'}}>
-                  {keyword.avgDensity.toFixed(2)}%
-                </td>
-                <td>
-                  <span class={`score-badge ${keyword.avgScore >= 80 ? 'score-excellent' : keyword.avgScore >= 70 ? 'score-good' : keyword.avgScore >= 50 ? 'score-average' : 'score-poor'}`}>
-                    {keyword.avgScore}%
-                  </span>
-                </td>
-                <td>
-                  <div class="keyword-opportunity">
-                    <div class="opportunity-bar">
-                      <div class="opportunity-fill" style={`width: ${keyword.seoOpportunity}%`}></div>
-                    </div>
-                    <strong>{keyword.seoOpportunity}%</strong>
-                  </div>
-                </td>
-                <td>
-                  {keyword.seoOpportunity >= 80 ? '🚀 Priorité absolue' :
-                   keyword.seoOpportunity >= 60 ? '⭐ Forte opportunité' :
-                   keyword.seoOpportunity >= 40 ? '📈 Optimisation utile' :
-                   '🔄 Révision nécessaire'}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div class="data-table" style="margin-top: 30px;">
-        <div class="table-header">
-          <h3>📋 Détail par mot-clé</h3>
+        <div style="padding: 20px;">
+          <p>En cours de développement - Analyse des mots-clés CSV à implémenter</p>
         </div>
-        {keywordStats.slice(0, 10).map(keyword => (
-          <details style="margin: 10px 0; background: white; padding: 15px; border-radius: 8px;">
-            <summary style="cursor: pointer; font-weight: bold; padding: 5px 0;">
-              🎯 {keyword.keyword} - Opportunité: {keyword.seoOpportunity}%
-            </summary>
-            <div style="margin-top: 15px;">
-              <p><strong>Articles utilisant ce mot-clé:</strong></p>
-              <ul>
-                {keyword.articles.map(article => (
-                  <li>
-                    <strong>{article.title}</strong> ({article.collection})
-                    <br />
-                    <small>Densité: {article.density}% • Score: {article.score}%</small>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </details>
-        ))}
       </div>
     </div>
 
-    <!-- TAB 4: Rank Tracker -->
-    <div id="rank-tracker" class="tab-content">
-      {csvKeywords.length > 0 ? (
-        <>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">{keywordMatrix.totalKeywords}</div>
-              <div class="stat-label">Mots-clés suivis</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number" style="color: #28a745;">{keywordMatrix.highOpportunity}</div>
-              <div class="stat-label">Haute opportunité (≥80%)</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number" style="color: #ffc107;">{keywordMatrix.mediumOpportunity}</div>
-              <div class="stat-label">Opportunité moyenne</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number" style="color: #dc3545;">{keywordMatrix.uncoveredKeywords}</div>
-              <div class="stat-label">Non couverts</div>
-            </div>
-          </div>
-
-          <div class="data-table">
-            <div class="table-header">
-              <h3>📊 Analyse des mots-clés de rank tracking</h3>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Mot-clé</th>
-                  <th>Moteur</th>
-                  <th>Articles ciblant</th>
-                  <th>Score moyen</th>
-                  <th>Opportunité</th>
-                  <th>Recommandations</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {csvKeywordAnalysis.map(kw => (
-                  <tr>
-                    <td><strong>{kw.keyword}</strong></td>
-                    <td>{kw.searchEngine} ({kw.location})</td>
-                    <td>
-                      {kw.targetingArticles > 0 ? (
-                        <span style="color: green;">{kw.targetingArticles} articles</span>
-                      ) : (
-                        <span style="color: red;">Aucun</span>
-                      )}
-                    </td>
-                    <td>
-                      {kw.avgArticleScore > 0 ? (
-                        <span class={`score-badge ${kw.avgArticleScore >= 70 ? 'score-good' : kw.avgArticleScore >= 50 ? 'score-average' : 'score-poor'}`}>
-                          {kw.avgArticleScore}%
-                        </span>
-                      ) : (
-                        <span style="color: #999;">N/A</span>
-                      )}
-                    </td>
-                    <td>
-                      <div class="keyword-opportunity">
-                        <div class="opportunity-bar">
-                          <div class="opportunity-fill" style={`width: ${kw.opportunityScore}%`}></div>
-                        </div>
-                        <strong>{kw.opportunityScore}%</strong>
-                      </div>
-                    </td>
-                    <td>
-                      <div style="max-height: 100px; overflow-y: auto;">
-                        {kw.recommendations.map(rec => (
-                          <div class={`priority-badge priority-${rec.priority.toLowerCase()}`} style="margin: 2px 0; font-size: 0.8em;">
-                            {rec.type}: {rec.action}
-                          </div>
-                        ))}
-                      </div>
-                    </td>
-                    <td>
-                      {kw.opportunityScore >= 80 ? '🚀 Priorité max' :
-                       kw.opportunityScore >= 60 ? '⭐ Développer' :
-                       kw.targetingArticles === 0 ? '➕ Créer article' :
-                       '🔧 Optimiser'}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div class="data-table" style="margin-top: 30px;">
-            <div class="table-header">
-              <h3>🎯 Matrice d'intention de recherche</h3>
-            </div>
-            <div style="padding: 20px; background: white;">
-              <div class="stats-grid">
-                <div class="stat-card">
-                  <div class="stat-number" style="color: #28a745;">{keywordMatrix.byIntent.commercial?.length || 0}</div>
-                  <div class="stat-label">Intent Commercial</div>
-                  <small>Prix, achat, comparatif</small>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-number" style="color: #17a2b8;">{keywordMatrix.byIntent.medical?.length || 0}</div>
-                  <div class="stat-label">Intent Médical</div>
-                  <small>Effets, dangers, conseils</small>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-number" style="color: #ffc107;">{keywordMatrix.byIntent.informational?.length || 0}</div>
-                  <div class="stat-label">Intent Informationnel</div>
-                  <small>Qu'est-ce que, comment</small>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-number" style="color: #6f42c1;">{keywordMatrix.byIntent.local?.length || 0}</div>
-                  <div class="stat-label">Intent Local</div>
-                  <small>Médecins, cliniques, France</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <div class="data-table">
-          <div class="table-header">
-            <h3>📊 Configuration du Rank Tracker</h3>
-          </div>
-          <div style="padding: 30px; background: white; text-align: center;">
-            <h4>🚀 Démarrage du suivi des positions</h4>
-            <p>Le fichier <code>keywords-import-rank-tracker.csv</code> a été détecté avec {csvKeywords.length} mots-clés.</p>
-            <p>Pour activer le monitoring complet :</p>
-            <ol style="text-align: left; max-width: 600px; margin: 0 auto;">
-              <li>Vérifiez que tous vos mots-clés cibles sont dans le CSV</li>
-              <li>Configurez un outil de rank tracking (SEMrush, Ahrefs, etc.)</li>
-              <li>Importez les données de position régulièrement</li>
-              <li>Utilisez ce dashboard pour optimiser le contenu</li>
-            </ol>
-          </div>
-        </div>
-      )}
-    </div>
-
-    <!-- TAB 5: Priorités -->
+    <!-- TAB 4: Priorités -->
     <div id="priorities" class="tab-content">
       <div class="data-table">
         <div class="table-header">
@@ -837,9 +443,10 @@ try {
           <thead>
             <tr>
               <th>Article</th>
+              <th>Collection</th>
               <th>Score actuel</th>
+              <th>Mots</th>
               <th>Problèmes principaux</th>
-              <th>Suggestions d'amélioration</th>
               <th>Impact estimé</th>
             </tr>
           </thead>
@@ -849,33 +456,20 @@ try {
                 <td>
                   <strong>{article.title}</strong>
                   <br />
-                  <small style="color: #666;">{article.collection}/{article.slug}</small>
+                  <small style="color: #666;">/{article.slug}</small>
                 </td>
+                <td>{article.collection}</td>
                 <td>
                   <span class={`score-badge ${article.seoScore >= 50 ? 'score-average' : 'score-poor'}`}>
                     {article.seoScore}%
                   </span>
                 </td>
+                <td>{article.wordCount}</td>
                 <td>
-                  {article.suggestions.filter(s => s.priority === 'haute').length > 0 ? 
-                    article.suggestions.filter(s => s.priority === 'haute').slice(0, 2).map(s => (
-                      <div class="suggestion-item" style="margin: 2px 0; padding: 4px 8px; font-size: 0.9em;">
-                        <span class="priority-badge priority-haute">{s.priority}</span>
-                        {s.suggestion}
-                      </div>
-                    )) : 
-                    <em>Aucun problème critique</em>
-                  }
-                </td>
-                <td>
-                  <div class="suggestions-list" style="max-height: 150px;">
-                    {article.suggestions.slice(0, 3).map(suggestion => (
-                      <div class="suggestion-item">
-                        <span class={`priority-badge priority-${suggestion.priority}`}>{suggestion.priority}</span>
-                        <strong>{suggestion.category}:</strong> {suggestion.suggestion}
-                      </div>
-                    ))}
-                  </div>
+                  {article.h1Count !== 1 && <span style="color: red;">❌ H1 incorrect</span>}
+                  {article.h2Count < 3 && <span style="color: red;">❌ Peu de H2</span>}
+                  {!article.hasMedicalDisclaimer && <span style="color: red;">❌ Sans disclaimer</span>}
+                  {article.mainKeywordDensity < 1 && <span style="color: red;">❌ Densité faible</span>}
                 </td>
                 <td>
                   {article.seoScore < 30 ? '🚀 +40-60 points' :
@@ -890,25 +484,23 @@ try {
 
       <div class="data-table" style="margin-top: 30px;">
         <div class="table-header">
-          <h3>📊 Recommandations globales</h3>
+          <h3>📊 Plan d'action recommandé</h3>
         </div>
-        <div style="padding: 20px; background: white;">
-          <h4>🎯 Actions prioritaires pour améliorer le SEO global:</h4>
+        <div style="padding: 20px;">
+          <h4>🎯 Actions prioritaires :</h4>
           <ul style="line-height: 1.8;">
-            <li><strong>Compléter {globalStats.emptyArticles} articles vides</strong> - Impact immédiat sur le volume de contenu</li>
-            <li><strong>Ajouter des disclaimers médicaux</strong> - {globalStats.totalArticles - globalStats.articlesWithMedicalDisclaimer} articles concernés</li>
+            <li><strong>Compléter {emptyArticles} articles vides</strong> - Impact immédiat sur le contenu</li>
+            <li><strong>Ajouter disclaimers médicaux</strong> - {totalArticles - articlesWithMedicalDisclaimer} articles concernés</li>
+            <li><strong>Équilibrer les collections</strong> - Objectif 15 articles minimum par collection</li>
             <li><strong>Optimiser la densité des mots-clés</strong> - Viser 1-2% pour les mots-clés principaux</li>
             <li><strong>Structurer avec H2/H3</strong> - Améliorer la lisibilité et le SEO technique</li>
-            <li><strong>Développer le maillage interne</strong> - Minimum 3 liens internes par article</li>
-            <li><strong>Focus sur les mots-clés à forte opportunité</strong> - Priorité aux scores >60%</li>
           </ul>
           
-          <h4>📈 Métriques de suivi recommandées:</h4>
+          <h4>📈 Collections à développer :</h4>
           <ul style="line-height: 1.8;">
-            <li>Score SEO moyen > 75% (actuellement {globalStats.averageSEOScore}%)</li>
-            <li>Articles avec disclaimer médical > 90% (actuellement {Math.round((globalStats.articlesWithMedicalDisclaimer / globalStats.totalArticles) * 100)}%)</li>
-            <li>Zéro article vide (actuellement {globalStats.emptyArticles})</li>
-            <li>Moyenne de mots > 1200 (actuellement {globalStats.averageWordCount})</li>
+            {collectionStats.filter(col => col.count < 15).map(col => (
+              <li><strong>{col.name}</strong> : {col.count} articles (objectif : 15) - <em>Manque {15 - col.count} articles</em></li>
+            ))}
           </ul>
         </div>
       </div>
@@ -916,62 +508,25 @@ try {
   </div>
 
   <script>
-    function showTab(tabName) {
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      
-      // Show selected tab
-      document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Gestion des onglets
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
 
-    function filterArticles() {
-      const collectionFilter = document.getElementById('collectionFilter').value;
-      const scoreFilter = document.getElementById('scoreFilter').value;
-      const statusFilter = document.getElementById('statusFilter').value;
-      
-      document.querySelectorAll('.article-row').forEach(row => {
-        let show = true;
-        
-        if (collectionFilter && row.dataset.collection !== collectionFilter) show = false;
-        
-        if (scoreFilter) {
-          const score = parseInt(row.dataset.score);
-          switch(scoreFilter) {
-            case 'excellent': if (score < 80) show = false; break;
-            case 'good': if (score < 70 || score >= 80) show = false; break;
-            case 'average': if (score < 50 || score >= 70) show = false; break;
-            case 'poor': if (score >= 50) show = false; break;
-          }
-        }
-        
-        if (statusFilter) {
-          switch(statusFilter) {
-            case 'empty': if (row.dataset.empty !== 'true') show = false; break;
-            case 'noDisclaimer': if (row.dataset.disclaimer === 'true') show = false; break;
-            case 'lowDensity': if (parseFloat(row.dataset.density) >= 1) show = false; break;
-          }
-        }
-        
-        row.style.display = show ? '' : 'none';
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const targetTab = this.dataset.tab;
+          
+          // Désactiver tous les onglets
+          tabs.forEach(t => t.classList.remove('active'));
+          tabContents.forEach(tc => tc.classList.remove('active'));
+          
+          // Activer l'onglet cliqué
+          this.classList.add('active');
+          document.getElementById(targetTab).classList.add('active');
+        });
       });
-    }
-
-    function showSuggestions(slug) {
-      // Ici on pourrait ouvrir une modal avec les suggestions détaillées
-      alert('Suggestions détaillées pour ' + slug + ' (fonctionnalité à implémenter)');
-    }
-
-    // Auto-refresh des données toutes les 5 minutes
-    setInterval(() => {
-      console.log('Actualisation des données SEO...');
-      // location.reload();
-    }, 300000);
+    });
   </script>
 </body>
 </html>
