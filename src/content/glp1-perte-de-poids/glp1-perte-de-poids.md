@@ -1,5 +1,5 @@
 ---
-title: "Glp-1 et perte de poids : guide complet d'efficacité 2025"
+title: "Glp-1 et perte de poids : guide complet d"
 slug: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 author: "Dr. Émilie Martin"

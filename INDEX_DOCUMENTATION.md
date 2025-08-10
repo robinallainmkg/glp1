@@ -1,23 +1,29 @@
 # 📚 Index Documentation GLP-1 France
 
-## 🚀 Scripts de Déploiement
+## 🚀 DÉPLOIEMENT (Mise à Jour)
 
-### Script Principal
-- **`deploy-auto.ps1`** ⭐ - Script de déploiement automatique
+### ⚠️ Script Principal - UTILISER UNIQUEMENT
+- **`deploy-auto.ps1`** ⭐ - SEUL script de déploiement autorisé
+- **`GUIDE_DEPLOIEMENT_OFFICIEL.md`** ⭐ - Guide officiel mis à jour
+
+### ❌ Scripts supprimés
+- ~~`deploy.ps1`~~ - **SUPPRIMÉ** - Ne plus utiliser
 
 ### Utilisation
 ```powershell
-# Déploiement standard
-.\deploy-auto.ps1 "Votre message de commit"
+# SEULE commande de déploiement autorisée
+.\deploy-auto.ps1
 ```
 
 ## 📖 Guides Complets
 
-### Guides de Déploiement
-- **`GUIDE_DEPLOIEMENT_SECURISE.md`** ⭐ - Guide complet pour éviter les erreurs
-- **`GUIDE_DEPLOYMENT_COMPLET.md`** - Guide technique détaillé
-- **`GUIDE_DEPLOYMENT.md`** - Guide de base
-- **`MEMO_DEPLOIEMENT.md`** - Aide-mémoire rapide
+### Guides de Déploiement (par ordre de priorité)
+1. **`GUIDE_DEPLOIEMENT_OFFICIEL.md`** ⭐ - **GUIDE PRINCIPAL ACTUEL**
+2. **`WORKFLOW_DEPLOY.md`** - Workflow mis à jour
+3. ~~`GUIDE_DEPLOIEMENT_SECURISE.md`~~ - Obsolète
+4. ~~`GUIDE_DEPLOYMENT_COMPLET.md`~~ - Obsolète
+5. ~~`GUIDE_DEPLOYMENT.md`~~ - Obsolète
+6. ~~`MEMO_DEPLOIEMENT.md`~~ - Obsolète
 
 ### Guides de Développement
 - **`GUIDE_DEVELOPPEMENT_LOCAL.md`** - Setup environnement local

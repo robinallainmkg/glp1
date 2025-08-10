@@ -32,52 +32,53 @@ const allArticles = await Promise.all([
 
 // Configuration des couleurs par catégorie
 const categoryColors = {
-  'glp1-perte-de-poids': { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200' },
-  'glp1-diabete': { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
-  'glp1-cout': { bg: 'bg-yellow-50', text: 'text-yellow-700', border: 'border-yellow-200' },
-  'effets-secondaires-glp1': { bg: 'bg-red-50', text: 'text-red-700', border: 'border-red-200' },
-  'alternatives-glp1': { bg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200' },
-  'medicaments-glp1': { bg: 'bg-indigo-50', text: 'text-indigo-700', border: 'border-indigo-200' },
-  'regime-glp1': { bg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-200' },
-  'avant-apres-glp1': { bg: 'bg-pink-50', text: 'text-pink-700', border: 'border-pink-200' },
-  'recherche-glp1': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
-  'medecins-glp1-france': { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-200' }
+  'glp1-perte-de-poids': { bg: 'emerald', text: 'emerald-800', badge: 'emerald-100' },
+  'glp1-diabete': { bg: 'blue', text: 'blue-800', badge: 'blue-100' },
+  'glp1-cout': { bg: 'amber', text: 'amber-800', badge: 'amber-100' },
+  'effets-secondaires-glp1': { bg: 'red', text: 'red-800', badge: 'red-100' },
+  'alternatives-glp1': { bg: 'purple', text: 'purple-800', badge: 'purple-100' },
+  'medicaments-glp1': { bg: 'indigo', text: 'indigo-800', badge: 'indigo-100' },
+  'regime-glp1': { bg: 'orange', text: 'orange-800', badge: 'orange-100' },
+  'avant-apres-glp1': { bg: 'pink', text: 'pink-800', badge: 'pink-100' },
+  'recherche-glp1': { bg: 'teal', text: 'teal-800', badge: 'teal-100' },
+  'medecins-glp1-france': { bg: 'slate', text: 'slate-800', badge: 'slate-100' }
 }
 
 // Configuration des noms de catégories
 const categoryNames = {
-  'glp1-perte-de-poids': 'Perte de Poids',
+  'glp1-perte-de-poids': 'Perte de poids',
   'glp1-diabete': 'Diabète',
-  'glp1-cout': 'Prix et Coûts',
-  'effets-secondaires-glp1': 'Effets Secondaires',
+  'glp1-cout': 'Prix et coûts',
+  'effets-secondaires-glp1': 'Effets secondaires',
   'alternatives-glp1': 'Alternatives',
   'medicaments-glp1': 'Médicaments',
-  'regime-glp1': 'Régime et Nutrition',
+  'regime-glp1': 'Régime et nutrition',
   'avant-apres-glp1': 'Témoignages',
-  'recherche-glp1': 'Recherche Scientifique',
+  'recherche-glp1': 'Recherche scientifique',
   'medecins-glp1-france': 'Médecins en France'
 }
 ---
 
 <BaseLayout 
-  title="Tous les Articles sur les GLP-1 - Guide Complet" 
+  title="Tous les articles sur les GLP-1 - Guide complet" 
   description="Découvrez tous nos articles sur les médicaments GLP-1 : perte de poids, diabète, effets secondaires, prix, médecins en France et bien plus."
 >
-  <main class="bg-white">
+  <main class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
     <!-- Header Section -->
-    <section class="py-12 bg-gradient-to-br from-green-50 to-blue-50">
-      <div class="container mx-auto px-4">
+    <section class="relative py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="container mx-auto px-4 relative">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Tous les Articles sur les <span class="text-green-600">GLP-1</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Tous les articles sur les <span class="text-emerald-200">GLP-1</span>
           </h1>
-          <p class="text-xl text-gray-600 mb-8">
+          <p class="text-xl md:text-2xl text-emerald-50 mb-8 leading-relaxed">
             Découvrez notre collection complète d'articles sur les médicaments GLP-1 : 
             guides pratiques, témoignages, recherches scientifiques et conseils d'experts.
           </p>
-          <div class="bg-white rounded-lg p-6 shadow-lg inline-block">
-            <p class="text-lg font-semibold text-gray-800">
-              <span class="text-green-600 text-2xl font-bold">{allArticles.length}</span> articles disponibles
+          <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 inline-block border border-white/30">
+            <p class="text-2xl font-bold text-white">
+              <span class="text-4xl text-emerald-200">{allArticles.length}</span> articles disponibles
             </p>
           </div>
         </div>
@@ -87,35 +88,39 @@ const categoryNames = {
     <!-- Articles Grid -->
     <section class="py-16">
       <div class="container mx-auto px-4">
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
           {allArticles.map((article) => {
             const colors = categoryColors[article.collection] || categoryColors['glp1-perte-de-poids']
             const categoryName = categoryNames[article.collection] || article.collection
             
             return (
-              <article class={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border ${colors.border}`}>
-                <div class={`p-4 ${colors.bg}`}>
-                  <span class={`inline-block px-3 py-1 rounded-full text-sm font-medium ${colors.text} bg-white`}>
+              <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-emerald-200 hover:-translate-y-2">
+                <div class={`p-4 bg-gradient-to-r from-${colors.bg}-50 to-${colors.bg}-100 border-b border-${colors.bg}-200`}>
+                  <span class={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold text-${colors.text} bg-${colors.badge} border border-${colors.bg}-200`}>
+                    <div class={`w-2 h-2 rounded-full bg-${colors.bg}-400 mr-2`}></div>
                     {categoryName}
                   </span>
                 </div>
                 
                 <div class="p-6">
-                  <h2 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    <a href={article.url} class="hover:text-green-600 transition-colors">
+                  <h2 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug">
+                    <a href={article.url} class="hover:underline">
                       {article.data.title}
                     </a>
                   </h2>
                   
                   {article.data.description && (
-                    <p class="text-gray-600 mb-4 line-clamp-3">
+                    <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
                       {article.data.description}
                     </p>
                   )}
                   
-                  <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div class="flex items-center justify-between text-sm text-slate-500 mb-6 pb-4 border-b border-slate-100">
                     {article.data.publishedAt && (
-                      <time dateTime={article.data.publishedAt}>
+                      <time dateTime={article.data.publishedAt} class="flex items-center">
+                        <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
                         {new Date(article.data.publishedAt).toLocaleDateString('fr-FR', {
                           year: 'numeric',
                           month: 'long',
@@ -125,17 +130,22 @@ const categoryNames = {
                     )}
                     
                     {article.data.readingTime && (
-                      <span>{article.data.readingTime} min de lecture</span>
+                      <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        {article.data.readingTime} min de lecture
+                      </span>
                     )}
                   </div>
                   
                   <a 
                     href={article.url}
-                    class="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors"
+                    class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Lire l'article
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                   </a>
                 </div>
@@ -147,20 +157,24 @@ const categoryNames = {
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gradient-to-r from-green-600 to-blue-600">
-      <div class="container mx-auto px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+    <section class="py-16 bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="container mx-auto px-4 text-center relative">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Besoin d'informations spécifiques ?
           </h2>
-          <p class="text-xl text-green-100 mb-8">
+          <p class="text-xl md:text-2xl text-emerald-50 mb-10 leading-relaxed">
             Téléchargez notre guide complet sur la beauté et la perte de poids avec les GLP-1
           </p>
           <a 
             href="/guide-beaute-perte-de-poids-glp1/" 
-            class="inline-block bg-white text-green-600 font-bold py-4 px-8 rounded-lg hover:bg-green-50 transition-colors text-lg"
+            class="inline-flex items-center px-8 py-4 bg-white text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
           >
-            Télécharger le Guide Gratuit
+            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            Télécharger le guide gratuit
           </a>
         </div>
       </div>
