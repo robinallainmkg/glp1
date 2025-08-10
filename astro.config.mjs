@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://robinallainmkg.github.io',
-  base: process.env.NODE_ENV === 'production' ? '/glp1' : '/',
+  site: 'https://glp1-france.fr',
+  base: '/',
   output: 'static',
   server: {
     port: 4321,
