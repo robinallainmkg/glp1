@@ -6,8 +6,12 @@ const GA_MEASUREMENT_ID = 'G-SFS6MEPVPC';
 <!-- Google tag (gtag.js) -->
 <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SFS6MEPVPC');
+  try {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SFS6MEPVPC');
+  } catch (error) {
+    console.warn('Google Analytics failed to load:', error);
+  }
 </script>
