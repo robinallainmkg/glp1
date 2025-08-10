@@ -589,9 +589,9 @@ const priorityArticles = detailedStats
           
           <h4>📈 Collections à développer :</h4>
           <ul style="line-height: 1.8;">
-            {collectionStats.filter(col => col.count < 15).map(col => 
+            {collectionStats.filter(col => col.count < 15).map(col => (
               <li><strong>{col.name}</strong> : {col.count} articles (objectif : 15) - <em>Manque {15 - col.count} articles</em></li>
-            )}
+            ))}
           </ul>
         </div>
       </div>
