@@ -1,10 +1,10 @@
 ---
-title: "Ozempic Régime : Guide Complet Perte de Poids Efficace 2025"
+title: "Ozempic régime : guide complet perte de poids efficace 2025"
 slug: "ozempic-regime"
 category: "glp1-perte-de-poids"
 author: "Dr. Émilie Martin"
 readTime: "9 min"
-metaTitle: "Ozempic Régime France 2025 : Guide Perte de Poids Complet"
+metaTitle: "Ozempic régime france 2025 : guide perte de poids complet"
 metaDescription: "Régime Ozempic pour maigrir : protocole alimentaire, efficacité, témoignages. Prescription, prix, résultats. Guide médical 2025."
 heroImage: "/images/ozempic-regime.jpg"
 published: true

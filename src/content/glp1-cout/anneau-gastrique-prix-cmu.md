@@ -1,5 +1,5 @@
 ---
-title: anneau gastrique prix cmu
+title: "Anneau gastrique prix cmu"
 description: anneau gastrique prix cmu — Guide marché français.
 keyword: bypass prix cmu
 intent: Informational

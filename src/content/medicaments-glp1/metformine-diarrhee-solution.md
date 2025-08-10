@@ -1,5 +1,5 @@
 ---
-title: metformine diarrhée solution
+title: Metformine diarrhée solution
 description: metformine diarrhée solution — Guide marché français.
 keyword: médicament diabète et diarrhée
 intent: Informational

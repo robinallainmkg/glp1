@@ -1,5 +1,5 @@
 ---
-title: liraglutide perte de poids avis
+title: "Liraglutide perte de poids avis"
 description: liraglutide perte de poids avis — Guide marché français.
 keyword: liraglutide comprimé
 intent: Informational

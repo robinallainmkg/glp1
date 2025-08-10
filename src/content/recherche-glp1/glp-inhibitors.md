@@ -1,5 +1,5 @@
 ---
-title: glp inhibitors
+title: "Glp inhibitors"
 description: glp inhibitors — Guide marché français.
 keyword: glp 1 drugs
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: wegovy remboursement mutuelle
+title: "Wegovy remboursement mutuelle"
 description: wegovy remboursement mutuelle — Guide marché français.
 keyword: wegovy remboursement 2025
 intent: Informational

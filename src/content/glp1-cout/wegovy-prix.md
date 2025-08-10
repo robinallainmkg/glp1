@@ -1,5 +1,5 @@
 ---
-title: "Wegovy Prix France 2025 : Coût Complet, Remboursement et Alternatives"
+title: "Wegovy prix france 2025 : coût complet, remboursement et alternatives"
 description: "Prix Wegovy en France : 269€/mois pour la dose maximale, remboursement sécurité sociale, comparaison pharmacies et alternatives économiques."
 keyword: wegovy prix
 intent: Commercial

@@ -1,10 +1,10 @@
 ---
-title: "Opération pour Maigrir Prix : Coût Chirurgie Bariatrique en France 2025"
+title: "Opération pour maigrir prix : coût chirurgie bariatrique en france 2025"
 slug: "operation-pour-maigrir-prix"
 category: "glp1-cout"
 author: "Dr. Émilie Martin"
 readTime: "9 min"
-metaTitle: "Opération pour Maigrir Prix France 2025 : Coût Réel Chirurgie"
+metaTitle: "Opération pour maigrir prix france 2025 : coût réel chirurgie"
 metaDescription: "Prix réel d'une opération pour maigrir en France : sleeve, bypass, anneau. Remboursement, cliniques, alternatives GLP-1. Guide complet 2025."
 heroImage: "/images/operation-maigrir-prix.jpg"
 published: true

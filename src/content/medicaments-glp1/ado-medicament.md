@@ -1,5 +1,5 @@
 ---
-title: ado médicament
+title: "Ado médicament"
 description: ado médicament — Guide marché français.
 keyword: ado medicament
 intent: Informational

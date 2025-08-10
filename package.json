@@ -19,6 +19,7 @@
     "deploy:mac": "bash deploy.sh"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.4.2",
     "astro": "^4.10.0",
     "gray-matter": "^4.0.3",
     "papaparse": "^5.4.1",

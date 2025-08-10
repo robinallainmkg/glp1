@@ -1,5 +1,5 @@
 ---
-title: sulfamides medicaments
+title: Sulfamides medicaments
 description: sulfamides medicaments — Guide marché français.
 keyword: sulfamides médicaments
 intent: Informational

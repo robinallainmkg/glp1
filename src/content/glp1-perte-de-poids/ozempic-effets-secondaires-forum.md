@@ -1,5 +1,5 @@
 ---
-title: "Ozempic Effets Secondaires : Témoignages Forum et Solutions 2025"
+title: "Ozempic effets secondaires : témoignages forum et solutions 2025"
 description: "Forum Ozempic : vrais témoignages sur les effets secondaires, solutions pratiques, durée des symptômes. Nausées, fatigue, troubles digestifs."
 keyword: ozempic effets secondaires forum
 intent: Informational

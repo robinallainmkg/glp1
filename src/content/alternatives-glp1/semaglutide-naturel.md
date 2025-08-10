@@ -1,5 +1,5 @@
 ---
-title: sémaglutide naturel
+title: "Sémaglutide naturel"
 description: sémaglutide naturel — Guide marché français.
 keyword: ozempic alternative
 intent: Informational

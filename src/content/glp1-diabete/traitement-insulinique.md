@@ -1,5 +1,5 @@
 ---
-title: traitement insulinique
+title: "Traitement insulinique"
 description: traitement insulinique — Guide marché français.
 keyword: insuline retard
 intent: Informational

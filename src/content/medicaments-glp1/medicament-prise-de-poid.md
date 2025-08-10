@@ -1,5 +1,5 @@
 ---
-title: medicament prise de poid
+title: Medicament prise de poid
 description: medicament prise de poid — Guide marché français.
 keyword: médicament prise de poids rapide
 intent: Informational

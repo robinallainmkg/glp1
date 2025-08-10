@@ -1,5 +1,5 @@
 ---
-title: metformine autre nom
+title: "Metformine autre nom"
 description: metformine autre nom — Guide marché français.
 keyword: biguanide metformin
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: mounjaro prix france
+title: "Mounjaro prix france"
 description: mounjaro prix france — Guide marché français.
 keyword: tirzepatide prix france
 intent: Commercial

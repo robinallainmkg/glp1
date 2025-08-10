@@ -1,10 +1,10 @@
 ---
-title: "Avant Après GLP-1 : Témoignages et Transformations Réelles 2025"
+title: "Avant après glp-1 : témoignages et transformations réelles 2025"
 slug: "avant-apres-glp1"
 category: "glp1-perte-de-poids"
 author: "Sophie Dubois"
 readTime: "10 min"
-metaTitle: "Avant Après GLP-1 France 2025 : Transformations Réelles"
+metaTitle: "Avant après glp-1 france 2025 : transformations réelles"
 metaDescription: "Témoignages avant/après GLP-1 : transformations réelles, photos, parcours patients. Wegovy, Saxenda, Ozempic résultats authentiques 2025."
 heroImage: "/images/avant-apres-glp1.jpg"
 published: true

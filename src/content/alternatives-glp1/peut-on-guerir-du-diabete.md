@@ -1,5 +1,5 @@
 ---
-title: peut on guérir du diabète
+title: "Peut on guérir du diabète"
 description: peut on guérir du diabète — Guide marché français.
 keyword: peut on guérir du diabète type 2
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: médicament pour maigrir très puissant en pharmacie
+title: "Médicament pour maigrir très puissant en pharmacie"
 description: médicament pour maigrir très puissant en pharmacie — Guide marché français.
 keyword: qui peut prescrire wegovy en france
 intent: Informational

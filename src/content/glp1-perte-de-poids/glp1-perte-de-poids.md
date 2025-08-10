@@ -1,10 +1,10 @@
 ---
-title: "GLP-1 et Perte de Poids : Guide Complet d'Efficacité 2025"
+title: "Glp-1 et perte de poids : guide complet d'efficacité 2025"
 slug: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 author: "Dr. Émilie Martin"
 readTime: "9 min"
-metaTitle: "GLP-1 Perte de Poids France 2025 : Efficacité et Résultats"
+metaTitle: "Glp-1 perte de poids france 2025 : efficacité et résultats"
 metaDescription: "GLP-1 pour perte de poids : efficacité, mécanisme, résultats réels. Wegovy, Saxenda, Ozempic comparés. Guide médical complet 2025."
 heroImage: "/images/glp1-perte-poids.jpg"
 published: true

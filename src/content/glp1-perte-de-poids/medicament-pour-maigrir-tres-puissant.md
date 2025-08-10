@@ -1,5 +1,5 @@
 ---
-title: médicament pour maigrir très puissant
+title: "Médicament pour maigrir très puissant"
 description: médicament pour maigrir très puissant — Guide marché français.
 keyword: médicament maigrir rapidement
 intent: Informational

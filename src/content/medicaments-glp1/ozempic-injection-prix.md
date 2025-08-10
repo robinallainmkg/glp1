@@ -1,5 +1,5 @@
 ---
-title: ozempic injection prix
+title: "Ozempic injection prix"
 description: ozempic injection prix — Guide marché français.
 keyword: sémaglutide prix france
 intent: Navigational

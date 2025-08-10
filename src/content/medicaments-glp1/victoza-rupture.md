@@ -1,5 +1,5 @@
 ---
-title: victoza rupture
+title: Victoza rupture
 description: victoza rupture — Guide marché français.
 keyword: trulicity 3 mg rupture de stock
 intent: Informational

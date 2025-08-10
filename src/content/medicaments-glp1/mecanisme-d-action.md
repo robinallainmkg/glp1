@@ -1,5 +1,5 @@
 ---
-title: mécanisme d action
+title: "Mécanisme d action"
 description: mécanisme d action — Guide marché français.
 keyword: mecanisme d action
 intent: Informational

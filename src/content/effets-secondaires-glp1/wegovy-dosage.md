@@ -1,5 +1,5 @@
 ---
-title: wegovy dosage
+title: "Wegovy dosage"
 description: wegovy dosage — Guide marché français.
 keyword: wegovy molecule
 intent: Informational

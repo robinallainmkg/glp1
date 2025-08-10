@@ -1,5 +1,5 @@
 ---
-title: trulicity ou ozempic
+title: Trulicity ou ozempic
 description: trulicity ou ozempic — Guide marché français.
 keyword: delivrance ozempic fevrier 2025
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: mounjaro injection pour maigrir
+title: "Mounjaro injection pour maigrir"
 description: mounjaro injection pour maigrir — Guide marché français.
 keyword: medicament mounjaro
 intent: Informational

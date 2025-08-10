@@ -1,5 +1,5 @@
 ---
-title: stylo saxenda
+title: "Stylo saxenda"
 description: stylo saxenda — Guide marché français.
 keyword: saxenda 6mg
 intent: Informational

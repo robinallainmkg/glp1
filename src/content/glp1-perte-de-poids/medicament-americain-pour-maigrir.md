@@ -1,5 +1,5 @@
 ---
-title: medicament americain pour maigrir
+title: "Medicament americain pour maigrir"
 description: medicament americain pour maigrir — Guide marché français.
 keyword: nouveau médicament américain pour maigrir
 intent: Informational

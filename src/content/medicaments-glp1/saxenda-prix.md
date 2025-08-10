@@ -1,5 +1,5 @@
 ---
-title: saxenda prix
+title: "Saxenda prix"
 description: saxenda prix — Guide marché français.
 keyword: comment arrêter saxenda
 intent: Informational

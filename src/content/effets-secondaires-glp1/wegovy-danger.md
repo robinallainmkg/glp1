@@ -1,5 +1,5 @@
 ---
-title: wegovy danger
+title: "Wegovy danger"
 description: wegovy danger — Guide marché français.
 keyword: wegovy diabete
 intent: Informational

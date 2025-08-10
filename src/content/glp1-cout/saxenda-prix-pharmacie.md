@@ -1,10 +1,10 @@
 ---
-title: "Saxenda Prix Pharmacie : Coût Réel du Traitement en France 2025"
+title: "Saxenda prix pharmacie : coût réel du traitement en France 2025"
 slug: "saxenda-prix-pharmacie"
 category: "glp1-cout"
 author: "Dr. Émilie Martin"
 readTime: "7 min"
-metaTitle: "Saxenda Prix Pharmacie France 2025 : Coût et Remboursement"
+metaTitle: "Saxenda prix pharmacie France 2025 : coût et remboursement"
 metaDescription: "Prix Saxenda en pharmacie française : coût mensuel, remboursement Sécurité Sociale, comparaison avec Wegovy. Guide complet 2025."
 heroImage: "/images/saxenda-prix-pharmacie.jpg"
 published: true

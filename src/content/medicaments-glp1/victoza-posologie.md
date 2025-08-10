@@ -1,5 +1,5 @@
 ---
-title: victoza posologie
+title: Victoza posologie
 description: victoza posologie — Guide marché français.
 keyword: victoza perte de poids posologie
 intent: Informational

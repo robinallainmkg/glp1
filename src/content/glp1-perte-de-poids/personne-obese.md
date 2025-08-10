@@ -1,5 +1,5 @@
 ---
-title: personne obese
+title: "Personne obese"
 description: personne obese — Guide marché français.
 keyword: c est quoi l obésité
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: "Comment Acheter Wegovy en France en 2025 : Guide Complet"
+title: "Comment acheter wegovy en france en 2025 : guide complet"
 description: "Découvrez comment acheter Wegovy légalement en France en 2025 : prix, ordonnance, pharmacies, remboursement et alternatives. Guide complet par un médecin spécialisé."
 author: "Dr. Émilie Martin"
 date: "2025-01-08"

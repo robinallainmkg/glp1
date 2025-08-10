@@ -1,5 +1,5 @@
 ---
-title: dosage trulicity
+title: "Dosage trulicity"
 description: dosage trulicity — Guide marché français.
 keyword: dosing of trulicity
 intent: Informational

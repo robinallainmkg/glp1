@@ -1,5 +1,5 @@
 ---
-title: ballon gastrique remboursé
+title: "Ballon gastrique remboursé"
 description: ballon gastrique remboursé — Guide marché français.
 keyword: ballon gastrique pris en charge
 intent: Informational

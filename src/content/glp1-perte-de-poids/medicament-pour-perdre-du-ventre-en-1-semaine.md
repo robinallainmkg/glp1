@@ -1,5 +1,5 @@
 ---
-title: médicament pour perdre du ventre en 1 semaine
+title: "Médicament pour perdre du ventre en 1 semaine"
 description: médicament pour perdre du ventre en 1 semaine — Guide marché français.
 keyword: perdre du ventre medicament
 intent: Informational

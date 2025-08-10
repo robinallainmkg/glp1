@@ -1,5 +1,5 @@
 ---
-title: "Ozempic Danger : Risques, Effets Graves et Précautions Essentielles 2025"
+title: "Ozempic danger : risques, effets graves et précautions essentielles 2025"
 description: "Ozempic danger : analyse complète des risques graves, pancréatite, cancer thyroïde, effets secondaires rares. Guide sécurité et précautions médicales."
 keyword: ozempic danger
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: nouveau médicament
+title: "Nouveau médicament"
 description: nouveau médicament — Guide marché français.
 keyword: nouveau medicament
 intent: Informational

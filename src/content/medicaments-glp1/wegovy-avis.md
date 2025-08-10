@@ -1,5 +1,5 @@
 ---
-title: wegovy avis
+title: Wegovy avis
 description: wegovy avis — Guide marché français.
 keyword: wegovy resultater
 intent: Informational

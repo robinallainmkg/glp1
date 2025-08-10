@@ -1,5 +1,5 @@
 ---
-title: chirurgie bariatrique
+title: "Chirurgie bariatrique"
 description: chirurgie bariatrique — Guide marché français.
 keyword: parcours chirurgie bariatrique
 intent: Informational

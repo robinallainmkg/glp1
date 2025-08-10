@@ -1,5 +1,5 @@
 ---
-title: coupe faim puissant interdit en france
+title: "Coupe faim puissant interdit en france"
 description: coupe faim puissant interdit en france — Guide marché français.
 keyword: coupe faim interdit
 intent: Informational

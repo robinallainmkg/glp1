@@ -1,5 +1,5 @@
 ---
-title: traitements médicamenteux
+title: Traitements médicamenteux
 description: traitements médicamenteux — Guide marché français.
 keyword: traitements medicamenteux
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: isglt2 liste
+title: "Isglt2 liste"
 description: isglt2 liste — Guide marché français.
 keyword: inhibiteur sglt2 liste
 intent: Informational

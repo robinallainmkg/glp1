@@ -1,5 +1,5 @@
 ---
-title: glp-1
+title: "Glp-1"
 description: glp-1 — Guide marché français.
 keyword: glp 1 injectable
 intent: Informational

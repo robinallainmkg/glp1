@@ -1,5 +1,5 @@
 ---
-title: combien de dose dans un stylo ozempic
+title: "Combien de dose dans un stylo ozempic"
 description: combien de dose dans un stylo ozempic — Guide marché français.
 keyword: comment prendre ozempic
 intent: Informational

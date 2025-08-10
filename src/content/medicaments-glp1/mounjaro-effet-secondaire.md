@@ -1,5 +1,5 @@
 ---
-title: mounjaro effet secondaire
+title: "Mounjaro effet secondaire"
 description: mounjaro effet secondaire — Guide marché français.
 keyword: doses mounjaro
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: wegovy prix pharmacie
+title: "Wegovy prix pharmacie"
 description: wegovy prix pharmacie — Guide marché français.
 keyword: piqûre pour maigrir prix
 intent: Informational

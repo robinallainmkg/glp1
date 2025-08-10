@@ -1,5 +1,5 @@
 ---
-title: pilule qui fait maigrir
+title: "Pilule qui fait maigrir"
 description: pilule qui fait maigrir — Guide marché français.
 keyword: pillule qui fait maigrir
 intent: Informational

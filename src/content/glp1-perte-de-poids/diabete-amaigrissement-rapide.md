@@ -1,5 +1,5 @@
 ---
-title: diabète amaigrissement rapide
+title: "Diabète amaigrissement rapide"
 description: diabète amaigrissement rapide — Guide marché français.
 keyword: diabète et amaigrissement
 intent: Informational

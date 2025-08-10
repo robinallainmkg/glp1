@@ -1,5 +1,5 @@
 ---
-title: dulaglutide nom commercial
+title: "Dulaglutide nom commercial"
 description: dulaglutide nom commercial — Guide marché français.
 keyword: trulicity insuline
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: obésité sévère prise en charge
+title: "Obésité sévère prise en charge"
 description: obésité sévère prise en charge — Guide marché français.
 keyword: obésité classe 1 que faire
 intent: Informational

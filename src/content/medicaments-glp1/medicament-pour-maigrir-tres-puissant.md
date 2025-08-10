@@ -1,10 +1,10 @@
 ---
-title: "Médicament pour Maigrir Très Puissant : Guide Complet 2025"
+title: "Médicament pour maigrir très puissant : guide complet 2025"
 slug: "medicament-pour-maigrir-tres-puissant"
 category: "medicaments-glp1"
 author: "Julien Lefèvre"
 readTime: "8 min"
-metaTitle: "Médicament pour Maigrir Très Puissant France 2025 : Guide Complet"
+metaTitle: "Médicament pour maigrir très puissant france 2025 : guide complet"
 metaDescription: "Découvrez les médicaments les plus puissants pour maigrir en France : Wegovy, Saxenda, Ozempic. Efficacité, prescription, effets. Guide 2025."
 heroImage: "/images/medicament-puissant-maigrir.jpg"
 published: true

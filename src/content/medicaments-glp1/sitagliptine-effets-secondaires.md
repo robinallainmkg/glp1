@@ -1,5 +1,5 @@
 ---
-title: sitagliptine effets secondaires
+title: "Sitagliptine effets secondaires"
 description: sitagliptine effets secondaires — Guide marché français.
 keyword: sitagliptine 100 mg effets secondaires
 intent: Informational

@@ -1,5 +1,5 @@
 ---
-title: "Prix Ozempic en France 2025 : Coût, Remboursement et Alternatives"
+title: "Prix ozempic en France 2025 : coût, remboursement et alternatives"
 description: "Découvrez le prix d'Ozempic en France : 73€ par stylo, conditions de remboursement sécurité sociale, alternatives économiques et conseils d'achat."
 keyword: ozempic prix
 intent: Commercial
