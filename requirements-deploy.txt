@@ -1,0 +1,2 @@
+# Requirements pour le script Python
+paramiko==3.4.0

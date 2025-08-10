@@ -1,0 +1,12 @@
+{
+  "name": "glp1-deploy-tools",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "node deploy-node.js",
+    "deploy:test": "node deploy-node.js 'Test deployment'"
+  },
+  "dependencies": {
+    "node-ssh": "^13.2.0"
+  }
+}
