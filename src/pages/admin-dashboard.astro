@@ -1,28 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-// === AUTHENTIFICATION ===
-const password = "12031990Robin!";
-const authCookie = Astro.cookies.get('admin-auth')?.value;
-
-if (Astro.request.method === 'POST') {
-  const formData = await Astro.request.formData();
-  const inputPassword = formData.get('password');
-  
-  if (inputPassword === password) {
-    Astro.cookies.set('admin-auth', 'authenticated', {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'strict',
-      maxAge: 60 * 60 * 24 // 24 heures
-    });
-    return Astro.redirect('/admin-dashboard');
-  }
-}
-
-const isAuthenticated = authCookie === 'authenticated';
-
-// === FONCTIONS D'ANALYSE ===
+// === DONNÉES STATISTIQUES ===
 function countWords(text) {
   if (!text) return 0;
   return text
@@ -69,26 +48,26 @@ let detailedStats = [];
 let totalArticles = 0;
 let emptyArticles = 0;
 
-if (isAuthenticated) {
-  const collectionNames = [
-    'alternatives-glp1',
-    'glp1-perte-de-poids', 
-    'effets-secondaires-glp1',
-    'glp1-cout',
-    'glp1-diabete',
-    'medecins-glp1-france',
-    'medicaments-glp1',
-    'recherche-glp1',
-    'regime-glp1'
-  ];
+// Toujours collecter les données - l'auth se fait côté client
+const collectionNames = [
+  'alternatives-glp1',
+  'glp1-perte-de-poids', 
+  'effets-secondaires-glp1',
+  'glp1-cout',
+  'glp1-diabete',
+  'medecins-glp1-france',
+  'medicaments-glp1',
+  'recherche-glp1',
+  'regime-glp1'
+];
 
-  const allEntries = [];
-  for (const name of collectionNames) {
-    try {
-      const entries = await getCollection(name);
-      allEntries.push(...entries.map(e => ({ ...e, _collection: name })));
-    } catch (e) {
-      // ignore missing collection
+const allEntries = [];
+for (const name of collectionNames) {
+  try {
+    const entries = await getCollection(name);
+    allEntries.push(...entries.map(e => ({ ...e, _collection: name })));
+  } catch (e) {
+    // ignore missing collection
     }
   }
 
@@ -134,7 +113,6 @@ if (isAuthenticated) {
   // Statistiques globales
   totalArticles = detailedStats.length;
   emptyArticles = detailedStats.filter(s => s.isEmpty).length;
-}
 ---
 
 <!DOCTYPE html>
@@ -190,6 +168,19 @@ if (isAuthenticated) {
     }
     .login-form button:hover {
       background: #5a6fd8;
+    }
+    .error-message {
+      color: #dc3545;
+      background: #f8d7da;
+      border: 1px solid #f5c6cb;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: none;
+    }
+    .hidden {
+      display: none !important;
     }
     .container { 
       max-width: 1400px; 
@@ -272,19 +263,19 @@ if (isAuthenticated) {
   </style>
 </head>
 <body>
-  {!isAuthenticated && (
-    <div class="login-container">
-      <form method="POST" class="login-form">
-        <h2>🔒 Accès Dashboard</h2>
-        <input type="password" name="password" placeholder="Mot de passe" required />
-        <button type="submit">Se connecter</button>
-      </form>
-    </div>
-  )}
+  <!-- Formulaire de connexion -->
+  <div id="login-container" class="login-container">
+    <form id="login-form" class="login-form">
+      <h2>🔒 Accès Dashboard</h2>
+      <div id="error-message" class="error-message">Mot de passe incorrect. Veuillez réessayer.</div>
+      <input type="password" id="password-input" placeholder="Mot de passe" required />
+      <button type="submit">Se connecter</button>
+    </form>
+  </div>
   
-  {isAuthenticated && (
-    <div class="container">
-      <a href="?logout=1" class="logout-btn">🚪 Déconnexion</a>
+  <!-- Dashboard principal -->
+  <div id="dashboard-container" class="container hidden">
+    <button id="logout-btn" class="logout-btn">🚪 Déconnexion</button>
       
       <div class="header">
         <h1>🏥 Dashboard Protégé - GLP-1 France</h1>
@@ -439,13 +430,74 @@ if (isAuthenticated) {
         </div>
       </div>
     </div>
-  )}
+  </div>
 
   <script>
-  if (window.location.search.includes('logout=1')) {
-    document.cookie = 'admin-auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    window.location.href = '/admin-dashboard';
-  }
+    const PASSWORD = "12031990Robin!";
+    const AUTH_KEY = "admin-dashboard-auth";
+    
+    // Éléments DOM
+    const loginContainer = document.getElementById('login-container');
+    const dashboardContainer = document.getElementById('dashboard-container');
+    const loginForm = document.getElementById('login-form');
+    const passwordInput = document.getElementById('password-input');
+    const errorMessage = document.getElementById('error-message');
+    const logoutBtn = document.getElementById('logout-btn');
+    
+    // Vérifier l'authentification au chargement
+    function checkAuth() {
+      const authExpiry = localStorage.getItem(AUTH_KEY);
+      const now = Date.now();
+      
+      if (authExpiry && now < parseInt(authExpiry)) {
+        showDashboard();
+      } else {
+        localStorage.removeItem(AUTH_KEY);
+        showLogin();
+      }
+    }
+    
+    // Afficher le formulaire de connexion
+    function showLogin() {
+      loginContainer.classList.remove('hidden');
+      dashboardContainer.classList.add('hidden');
+      errorMessage.style.display = 'none';
+      passwordInput.focus();
+    }
+    
+    // Afficher le dashboard
+    function showDashboard() {
+      loginContainer.classList.add('hidden');
+      dashboardContainer.classList.remove('hidden');
+    }
+    
+    // Gérer la connexion
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const inputPassword = passwordInput.value;
+      
+      if (inputPassword === PASSWORD) {
+        // Authentification réussie - valable 24h
+        const expiry = Date.now() + (24 * 60 * 60 * 1000);
+        localStorage.setItem(AUTH_KEY, expiry.toString());
+        showDashboard();
+        passwordInput.value = '';
+      } else {
+        // Mot de passe incorrect
+        errorMessage.style.display = 'block';
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    });
+    
+    // Gérer la déconnexion
+    logoutBtn.addEventListener('click', function() {
+      localStorage.removeItem(AUTH_KEY);
+      showLogin();
+    });
+    
+    // Initialiser
+    checkAuth();
   </script>
 </body>
 </html>
