@@ -2,18 +2,13 @@
 
 ## 🚀 Scripts de Déploiement
 
-### Scripts Principaux
-- **`deploy-securise.ps1`** ⭐ - Nouveau script sécurisé avec vérifications
-- **`deploy-auto.ps1`** - Script original (garder comme backup)
-- **`verify-health.ps1`** 🔍 - Vérification santé du site
+### Script Principal
+- **`deploy-auto.ps1`** ⭐ - Script de déploiement automatique
 
-### Utilisation Recommandée
+### Utilisation
 ```powershell
-# 1. Vérifier la santé avant déploiement
-.\verify-health.ps1 -Full
-
-# 2. Déployer avec le script sécurisé
-.\deploy-securise.ps1 "Votre message de commit"
+# Déploiement standard
+.\deploy-auto.ps1 "Votre message de commit"
 ```
 
 ## 📖 Guides Complets
@@ -65,30 +60,23 @@
    - Test de connexion préalable
    - Validation post-upload
 
-### Workflow Sécurisé
+### Workflow Simple
 ```
-verify-health.ps1 → deploy-securise.ps1 → Vérification site live
+deploy-auto.ps1 → Vérification site live
 ```
 
 ## 🔧 Maintenance
 
-### Scripts de Maintenance
-- **`verify-health.ps1 -Quick`** - Vérification rapide quotidienne
-- **`verify-health.ps1 -Full`** - Vérification complète hebdomadaire
-
-### Monitoring
-- Vérification automatique des chemins de déploiement
-- Validation de la taille des fichiers
-- Test de connectivité serveur
-
----
+### Scripts Utilitaires
+- **`deploy-git.ps1`** - Déploiement Git simple
+- **`deploy-with-images.ps1`** - Déploiement avec images
+- **`deploy.ps1`** - Script de base
 
 ## 🎯 Guide de Démarrage Rapide
 
 ### Pour un Nouveau Utilisateur
 1. Lire `GUIDE_DEPLOIEMENT_SECURISE.md`
-2. Exécuter `.\verify-health.ps1 -Full`
-3. Si OK, utiliser `.\deploy-securise.ps1`
+2. Utiliser `.\deploy-auto.ps1 "Votre message"`
 
 ### Pour le Développement
 1. Suivre `GUIDE_DEVELOPPEMENT_LOCAL.md`
@@ -98,8 +86,4 @@ verify-health.ps1 → deploy-securise.ps1 → Vérification site live
 ### En Cas de Problème
 1. Consulter `GUIDE_DEPLOIEMENT_SECURISE.md`
 2. Vérifier les logs dans `upload.log`
-3. Utiliser `verify-health.ps1` pour diagnostiquer
-
----
-
-**💡 Conseil** : Toujours commencer par `verify-health.ps1` avant tout déploiement !
+3. S'assurer d'uploader dans `public_html/`
