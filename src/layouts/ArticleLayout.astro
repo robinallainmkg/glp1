@@ -171,20 +171,20 @@ const htmlContent = markdownToHtml(content);
 
     <!-- En-tête de l'article -->
     <header class={`article-header bg-gradient-to-r ${theme.gradient} text-white`}>
-      <div class="container mx-auto px-4 py-12">
+      <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="text-4xl">{theme.icon}</span>
+          <div class="flex items-center gap-4 mb-4">
+            <span class="text-3xl">{theme.icon}</span>
             <span class={`px-3 py-1 rounded-full text-sm font-medium ${theme.badge} bg-white bg-opacity-20 text-white`}>
               {category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </span>
           </div>
           
-          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
             {title}
           </h1>
           
-          <p class="text-xl opacity-90 mb-8 leading-relaxed">
+          <p class="text-lg opacity-90 mb-6 leading-relaxed">
             {description}
           </p>
           

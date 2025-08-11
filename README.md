@@ -199,119 +199,84 @@ node scripts/enrich-short-articles.mjs
 
 Accès admin via `/admin-login/` avec authentification par session.
 
-## 🚀 Déploiement
+## 🚀 DÉPLOIEMENT
 
-### Vercel (Recommandé)
+### Plateformes Supportées
 
-```bash
-# Installer Vercel CLI
-npm i -g vercel
-
-# Déployer
-vercel
-```
-
-### Netlify
+#### 🖥️ **macOS/Linux** : Déploiement Automatique SSH
 
 ```bash
-# Build command: npm run build
-# Publish directory: dist
+# Build et déploiement en une commande
+npm run build
+node deploy-auto.js
 ```
 
-### Variables d'Environnement de Production
+**Détails** :
+- Utilise `rsync` + `sshpass` pour un déploiement rapide
+- Supprime automatiquement les anciens fichiers
+- Synchronisation complète du dossier `dist/`
+- Connexion SSH directe au serveur Hostinger
+
+#### 🪟 **Windows** : Déploiement PowerShell 
+
+```powershell
+# Build et déploiement PowerShell
+npm run build
+.\deploy-auto.ps1
+```
+
+**Détails** :
+- Script PowerShell optimisé pour Windows
+- Support SFTP/SCP via WinSCP ou alternatives
+- Gestion des permissions Windows
+- Configuration automatique des credentials
+
+#### 📁 **Déploiement Manuel** (Toutes plateformes)
 
 ```bash
-SITE_URL=https://votre-domaine.com
-NODE_ENV=production
-ADMIN_PASSWORD=votre_mot_de_passe_securise
+# Générer le build
+npm run build
+
+# Ouvrir le dossier dist pour upload manuel
+node deploy-manual.js
 ```
 
-## 📝 Workflow de Développement
+**Instructions SFTP** :
+- **Host** : 147.79.98.140:65002
+- **Username** : u403023291  
+- **Répertoire cible** : `domains/glp1-france.fr/public_html/`
+- **Méthode** : FileZilla, WinSCP, ou client SFTP
 
-1. **Développement local** sur branche `develop`
-2. **Tests** et validation 
-3. **Merge** vers `main` pour staging
-4. **Deploy** automatique en production
+### Configuration Serveur
 
-## 🔧 Maintenance
-
-### Scripts d'Optimisation Régulière
+#### Hostinger SSH/SFTP
 ```bash
-# Audit complet du contenu éditorial
-node scripts/audit-pertinence-content.mjs
-
-# Nettoyage définitif (H1, sections vides, contenu générique)
-node scripts/clean-definitive.mjs
-
-# Optimisation SEO stratégique
-node scripts/seo-audit-global.mjs
-
-# Enrichissement des articles courts (< 300 mots)
-node scripts/enrich-short-articles.mjs
+Host: 147.79.98.140
+Port: 65002
+Username: u403023291
+Target: domains/glp1-france.fr/public_html/
+Protocol: SSH/SFTP
 ```
 
-### Workflow de Contenu
-1. **Création** : Ajouter nouveaux articles dans `/src/content/[collection]/`
-2. **Nettoyage** : Exécuter `clean-definitive.mjs` pour supprimer H1 et sections vides
-3. **Audit** : Lancer `audit-pertinence-content.mjs` pour l'analyse SEO
-4. **Optimisation** : Utiliser les scripts d'enrichissement si besoin
-5. **Validation** : Vérifier dans le dashboard admin `/admin-dashboard/`
+#### Commandes de Build
 
-### Données et Configuration
-- **Articles** : Régénération via `generate-database-v2.mjs`
-- **Témoignages** : Mise à jour dans `/data/authors-testimonials.json`
-- **Collections** : Configuration dans `/data/collections.json`
-- **Métadonnées** : Frontmatter automatiquement optimisé par les scripts
-
-## 📊 Performance
-
-- Build optimisé avec Astro
-- Images optimisées
-- CSS minifié
-- JavaScript minimal côté client
-
-## 🐛 Dépannage
-
-- **Build Error**: Vérifier la syntaxe des fichiers `.astro`
-- **Admin Error**: Vérifier les chemins vers les fichiers de données
-- **Styles manquants**: Régénérer le CSS global
-
-## 📞 Support
-
-Pour toute question technique, consulter la documentation Astro ou les issues GitHub.
-
----
-
-**Version**: 1.0.0  
-**Dernière mise à jour**: Août 2025
-
-### 🔄 Migration des Layouts (Août 2025)
-
-#### Problème Initial
-Les pages `[slug].astro` de chaque collection utilisaient directement `BaseLayout`, ce qui empêchait :
-- L'affichage du fil d'Ariane  
-- Les thèmes adaptatifs par collection
-- Les métadonnées riches spécifiques aux articles
-
-#### Solution Appliquée
 ```bash
-# Script de migration automatique créé
-node scripts/update-collection-layouts.mjs
+# Build optimisé pour production
+npm run build
 
-# Toutes les collections migrées vers ArticleLayout :
-✅ alternatives-glp1/[slug].astro
-✅ effets-secondaires-glp1/[slug].astro  
-✅ glp1-cout/[slug].astro
-✅ glp1-diabete/[slug].astro
-✅ medecins-glp1-france/[slug].astro
-✅ medicaments-glp1/[slug].astro
-✅ recherche-glp1/[slug].astro
-✅ regime-glp1/[slug].astro
-✅ glp1-perte-de-poids/[slug].astro
+# Preview du build en local
+npm run preview
+
+# Audit final avant déploiement
+npm run check
 ```
 
-#### Résultat
-- 🍞 **Fil d'Ariane** visible sur tous les articles
-- 🎨 **Thèmes cohérents** par collection  
-- 📊 **Métadonnées uniformes** (auteur, temps de lecture, etc.)
-- 🔗 **Navigation améliorée** entre contenus
+### ✅ Checklist Déploiement
+
+- [ ] `npm run build` réussi sans erreurs
+- [ ] Vérification du dashboard admin (`/admin-dashboard`)
+- [ ] Test des URLs critiques (collections, articles)
+- [ ] Validation du sitemap (`/sitemap.xml`)
+- [ ] Upload des fichiers via méthode appropriée à la plateforme
+- [ ] Test du site en production : https://glp1-france.fr
+````

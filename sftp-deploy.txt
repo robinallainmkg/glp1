@@ -1,0 +1,7 @@
+open sftp://u403023291@147.79.98.140:65002
+lcd dist
+cd domains/glp1-france.fr/public_html
+rm -rf *
+put -r *
+close
+quit

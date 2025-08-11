@@ -615,7 +615,7 @@ body {
 /* Main Content */
 .main {
   min-height: calc(100vh - 200px);
-  padding: var(--spacing-8) 0;
+  padding: 0;
 }
 
 /* Typography */
