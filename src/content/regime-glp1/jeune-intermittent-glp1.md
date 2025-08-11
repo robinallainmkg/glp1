@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "jeûne intermittent glp1, fasting diabète"
 ---
 
+# jeûne intermittent et GLP-1
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « jeûne intermittent et GLP-1 » pour le marché français : compatibilité 16:8, 14:10, précautions diabète, prix en €, conseils pratiques.
 
 ## À retenir

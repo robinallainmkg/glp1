@@ -8,6 +8,10 @@ author: Dr. Émilie Martin
 readingTime: 8
 ---
 
+# Comment trouver un endocrinologue pour maigrir en france
+
+*Dernière mise à jour : 11/08/2025*
+
 Vous cherchez un endocrinologue pour vous aider à perdre du poids ? Ce guide vous explique pourquoi consulter ce spécialiste, comment le trouver et à quoi vous attendre lors de vos consultations.
 
 ## Pourquoi Consulter un Endocrinologue pour Maigrir ?

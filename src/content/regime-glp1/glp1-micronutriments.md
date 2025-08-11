@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "micronutriments glp1, vitamines minéraux"
 ---
 
+# GLP-1 et micronutriments
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « GLP-1 et micronutriments » pour le marché français : prix en €, cadre ANSM, conseils pratiques.
 
 ## À retenir

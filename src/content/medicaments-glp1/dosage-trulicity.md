@@ -8,9 +8,28 @@ author: Sophie Dubois
 readingTime: 5
 ---
 
+
 # Dosage Trulicity : Guide Complet des Médicaments GLP-1
 
 **Résumé :** Guide dosage Trulicity : 0,75 mg à 4,5 mg/semaine, escalade progressive, injection hebdomadaire, adaptation selon HbA1c, surveillance efficacité/tolérance.
+
+
+## Qu'est-ce que c'est ?
+
+*[Définition et présentation à développer...]*
+
+## Comment ça fonctionne ?
+
+*[Mécanisme d'action à développer...]*
+
+## Indications et utilisation
+
+*[Qui peut l'utiliser et comment à développer...]*
+
+## Précautions importantes
+
+*[Contre-indications et conseils à développer...]*
+
 
 ## Dosage Trulicity : guide posologique complet
 
@@ -288,3 +307,29 @@ Chez les patients âgés (>75 ans), on préfère débuter à 0,75 mg et progress
 
 
 
+
+## Important
+
+**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+
+
+## Articles connexes recommandés
+
+Pour approfondir ce sujet, consultez nos guides spécialisés :
+- **Médicaments GLP-1** : Panorama complet des traitements
+- **Effets secondaires** : Surveillance et prévention  
+- **Coûts et remboursement** : Guide pratique 2025
+- **Médecins spécialisés** : Annuaire France
+
+Ces ressources complètent les informations de ce guide.
+
+## Questions fréquentes (FAQ)
+
+### Puis-je utiliser cette approche sans ordonnance ?
+La prescription médicale reste indispensable pour les sémaglutide et traitements similaires.
+
+### Quelle est l'efficacité comparée ?
+Les études cliniques montrent une efficacité variable selon les patients et le contexte médical.
+
+### Y a-t-il des contre-indications ?
+Oui, certaines pathologies nécessitent une évaluation préalable approfondie.

@@ -43,6 +43,116 @@ function hasInternalLinks(md) {
   return internalLinks.length;
 }
 
+function analyzeInterlinks(md) {
+  // Liens internes vers d'autres articles
+  const internalLinks = md.match(/\[([^\]]+)\]\(\/[^)]*\)/g) || [];
+  
+  // Liens vers articles similaires ou sections dédiées
+  const similarLinksSection = md.includes('## Articles similaires') || md.includes('## Ressources complémentaires');
+  
+  // Liens dans le contenu principal (pas en fin d'article)
+  const contentSections = md.split('## Articles similaires')[0] || md;
+  const contentLinks = contentSections.match(/\[([^\]]+)\]\(\/[^)]*\)/g) || [];
+  
+  return {
+    total: internalLinks.length,
+    inContent: contentLinks.length,
+    hasSimilarSection: similarLinksSection,
+    isOptimal: internalLinks.length >= 5 && internalLinks.length <= 15 && contentLinks.length >= 2
+  };
+}
+
+function calculateSEOScore(md, wordCount, mainKeyword, mainKeywordDensity, interlinks) {
+  let score = 0;
+  const details = [];
+  
+  // Structure (35 points max)
+  if (countHeadings(md, 1) === 1) {
+    score += 10;
+    details.push("✓ Un seul H1");
+  } else {
+    details.push("✗ Problème H1");
+  }
+  
+  if (countHeadings(md, 2) >= 3) {
+    score += 10;
+    details.push("✓ Structure H2 suffisante");
+  } else {
+    details.push("✗ Manque de H2");
+  }
+  
+  if (countHeadings(md, 2) <= 8) {
+    score += 5;
+    details.push("✓ Pas trop de H2");
+  } else {
+    details.push("⚠ Trop de H2");
+  }
+  
+  // Contenu (35 points max)
+  if (wordCount >= 1000) {
+    score += 15;
+    details.push("✓ Contenu substantiel (1000+ mots)");
+  } else if (wordCount >= 500) {
+    score += 10;
+    details.push("⚠ Contenu moyen (500+ mots)");
+  } else {
+    details.push("✗ Contenu insuffisant");
+  }
+  
+  if (parseFloat(mainKeywordDensity) >= 1 && parseFloat(mainKeywordDensity) <= 2.5) {
+    score += 15;
+    details.push("✓ Densité mots-clés optimale");
+  } else if (parseFloat(mainKeywordDensity) > 0) {
+    score += 8;
+    details.push("⚠ Densité mots-clés à ajuster");
+  } else {
+    details.push("✗ Pas de mot-clé principal");
+  }
+  
+  if (hasMedicalDisclaimer(md)) {
+    score += 5;
+    details.push("✓ Disclaimer médical");
+  } else {
+    details.push("✗ Manque disclaimer");
+  }
+  
+  // Interlinks (20 points max)
+  if (interlinks.isOptimal) {
+    score += 15;
+    details.push("✓ Interlinks optimaux");
+  } else if (interlinks.total >= 3) {
+    score += 10;
+    details.push("⚠ Interlinks corrects");
+  } else {
+    details.push("✗ Manque d'interlinks");
+  }
+  
+  if (interlinks.hasSimilarSection) {
+    score += 5;
+    details.push("✓ Section articles similaires");
+  } else {
+    details.push("✗ Pas de section similaires");
+  }
+  
+  // Bonus qualité (10 points max)
+  if (md.includes('**Important :**')) {
+    score += 3;
+    details.push("✓ Avertissement important");
+  }
+  
+  if (md.includes('## À retenir')) {
+    score += 3;
+    details.push("✓ Section récapitulative");
+  }
+  
+  if (md.includes('FAQ') || md.includes('Questions fréquentes')) {
+    score += 4;
+    details.push("✓ Section FAQ");
+  }
+  
+  return { score: Math.min(score, 100), details };
+}
+
 // === COLLECTE DES DONNÉES ===
 let detailedStats = [];
 let totalArticles = 0;
@@ -79,20 +189,17 @@ for (const name of collectionNames) {
                    .replace(/<[^>]+>/g, ' ');
 
     const wordCount = countWords(text);
-    const mainKeyword = article.data.mainKeyword || '';
+    const mainKeyword = article.data.keyword || article.data.mainKeyword || '';
     
     const mainKeywordCount = countOccurrences(text, mainKeyword);
     const mainKeywordDensity = mainKeyword ? 
       ((mainKeywordCount / Math.max(wordCount, 1)) * 100).toFixed(2) : '0.00';
 
-    // Score SEO
-    let score = 0;
-    if (countHeadings(md, 1) === 1) score += 20;
-    if (countHeadings(md, 2) >= 3) score += 15;
-    if (wordCount >= 1000) score += 20;
-    if (parseFloat(mainKeywordDensity) >= 1 && parseFloat(mainKeywordDensity) <= 2) score += 20;
-    if (hasMedicalDisclaimer(md)) score += 10;
-    if (hasInternalLinks(md) >= 3) score += 15;
+    // Analyse des interlinks
+    const interlinks = analyzeInterlinks(md);
+    
+    // Score SEO détaillé
+    const seoAnalysis = calculateSEOScore(md, wordCount, mainKeyword, mainKeywordDensity, interlinks);
 
     return {
       collection: article._collection,
@@ -104,8 +211,10 @@ for (const name of collectionNames) {
       h1Count: countHeadings(md, 1),
       h2Count: countHeadings(md, 2),
       hasMedicalDisclaimer: hasMedicalDisclaimer(md),
-      internalLinksCount: hasInternalLinks(md),
-      seoScore: score,
+      interlinks,
+      internalLinksCount: interlinks.total, // Pour compatibilité affichage
+      seoScore: seoAnalysis.score,
+      seoDetails: seoAnalysis.details,
       isEmpty: wordCount < 200
     };
   });
@@ -365,7 +474,7 @@ for (const name of collectionNames) {
 
         <!-- TAB 1: COLLECTIONS -->
         <div class="tab-content active" id="tab-collections">
-          <div class="roadmap-section">
+          <div class="collections-section">
             <h3>📊 Analyse par Collection</h3>
             
             <div style="overflow-x: auto; margin-bottom: 30px;">
@@ -426,8 +535,8 @@ for (const name of collectionNames) {
 
         <!-- TAB 2: ARTICLES -->
         <div class="tab-content" id="tab-articles">
-          <div class="roadmap-section">
-            <h3>📝 Articles à Optimiser (Score < 70)</h3>
+          <div class="articles-section">
+            <h3>📝 Tous les Articles ({totalArticles})</h3>
             <div style="overflow-x: auto;">
               <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 <thead>
@@ -438,15 +547,19 @@ for (const name of collectionNames) {
                     <th style="padding: 12px; text-align: center;">H1</th>
                     <th style="padding: 12px; text-align: center;">H2</th>
                     <th style="padding: 12px; text-align: center;">Liens Int.</th>
+                    <th style="padding: 12px; text-align: center;">Optim. Liens</th>
                     <th style="padding: 12px; text-align: center;">Score SEO</th>
                     <th style="padding: 12px; text-align: center;">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {detailedStats
-                    .filter(article => article.seoScore < 70)
-                    .sort((a, b) => a.seoScore - b.seoScore)
-                    .slice(0, 30)
+                    .sort((a, b) => {
+                      // Tri par priorité : articles vides d'abord, puis par score SEO croissant
+                      if (a.isEmpty && !b.isEmpty) return -1;
+                      if (!a.isEmpty && b.isEmpty) return 1;
+                      return a.seoScore - b.seoScore;
+                    })
                     .map(article => (
                     <tr style="border-bottom: 1px solid #eee;">
                       <td style="padding: 10px; font-size: 14px;">
@@ -471,9 +584,18 @@ for (const name of collectionNames) {
                         </span>
                       </td>
                       <td style="padding: 10px; text-align: center;">
-                        <span style={`color: ${article.internalLinksCount >= 3 ? '#28a745' : article.internalLinksCount >= 1 ? '#ffc107' : '#dc3545'}`}>
+                        <span style={`color: ${article.internalLinksCount >= 5 ? '#28a745' : article.internalLinksCount >= 2 ? '#ffc107' : '#dc3545'}`}>
                           {article.internalLinksCount}
                         </span>
+                      </td>
+                      <td style="padding: 10px; text-align: center;">
+                        <span style={`color: ${article.interlinks.isOptimal ? '#28a745' : '#dc3545'}; font-size: 16px;`}>
+                          {article.interlinks.isOptimal ? '✅' : '❌'}
+                        </span>
+                        <br />
+                        <small style="color: #666; font-size: 10px;" title="Liens dans contenu / Section similaires">
+                          {article.interlinks.inContent}c • {article.interlinks.hasSimilarSection ? '✓' : '✗'}s
+                        </small>
                       </td>
                       <td style="padding: 10px; text-align: center;">
                         <span style={`font-weight: bold; color: ${article.seoScore >= 80 ? '#28a745' : article.seoScore >= 60 ? '#ffc107' : '#dc3545'}`}>
@@ -481,7 +603,11 @@ for (const name of collectionNames) {
                         </span>
                       </td>
                       <td style="padding: 10px; text-align: center; font-size: 12px;">
-                        {article.isEmpty ? '🆕 Créer' : article.wordCount < 500 ? '📝 Étoffer' : article.h2Count < 3 ? '🏗️ Structurer' : '🔗 Liens'}
+                        {article.isEmpty ? '🆕 Créer' : 
+                         article.wordCount < 500 ? '📝 Étoffer' : 
+                         article.h2Count < 3 ? '🏗️ Structurer' : 
+                         !article.interlinks.isOptimal ? '🔗 Optimiser liens' : 
+                         '✅ Améliorer'}
                       </td>
                     </tr>
                   ))}
@@ -493,7 +619,7 @@ for (const name of collectionNames) {
 
         <!-- TAB 3: MOTS-CLÉS -->
         <div class="tab-content" id="tab-keywords">
-          <div class="roadmap-section">
+          <div class="keywords-section">
             <h3>🔍 Analyse des Mots-clés</h3>
             
             <div class="stats-grid" style="margin-bottom: 30px;">

@@ -243,3 +243,8 @@ Texte de conclusion et rappel de précautions.
 
 
 
+
+## Important
+
+**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+

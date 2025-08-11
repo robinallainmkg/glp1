@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "chrono-nutrition glp1, timing repas"
 ---
 
+# chrono-nutrition et GLP-1
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « chrono-nutrition et GLP-1 » pour le marché français : prix en €, cadre ANSM, conseils pratiques.
 
 ## À retenir

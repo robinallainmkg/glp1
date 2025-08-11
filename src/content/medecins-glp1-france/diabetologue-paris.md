@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "diabétologue paris glp1, endocrinologue ozempic"
 ---
 
+# diabétologue Paris GLP-1
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « diabétologue Paris GLP-1 » pour le marché français : spécialistes recommandés, prix consultations, remboursement, prise de rendez-vous.
 
 ## À retenir

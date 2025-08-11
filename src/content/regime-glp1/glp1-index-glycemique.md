@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "index glycémique glp1, glucides"
 ---
 
+# GLP-1 et index glycémique
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « GLP-1 et index glycémique » pour le marché français : prix en €, cadre ANSM, conseils pratiques.
 
 ## À retenir

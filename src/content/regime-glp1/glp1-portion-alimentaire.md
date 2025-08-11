@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "portions glp1, satiété"
 ---
 
+# GLP-1 et portions alimentaires
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « GLP-1 et portions alimentaires » pour le marché français : prix en €, cadre ANSM, conseils pratiques.
 
 ## À retenir

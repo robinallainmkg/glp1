@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "recherche clinique glp1, essais thérapeutiques"
 ---
 
+# recherche clinique GLP-1
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « recherche clinique GLP-1 » pour le marché français : essais en cours, participation patient, centres investigateurs, perspectives thérapeutiques.
 
 ## À retenir

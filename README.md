@@ -1,21 +1,38 @@
-# Site GLP-1 France
+# 🏥 GLP-1 France - Site d'Information Médicale
 
-Site d'information sur les traitements GLP-1 avec système de gestion de contenu moderne via Decap CMS et déploiement automatisé sur GitHub Pages.
+## 📋 APERÇU DU PROJET
+
+Site web d'information spécialisé sur les **agonistes du récepteur GLP-1** en France, développé avec **Astro.js**. 
+
+### Statistiques actuelles (Août 2025)
+- **238 articles** répartis en 9 collections thématiques
+- **137 pages** générées en statique
+- **Dashboard d'administration** avec analyse SEO en temps réel
+- **Système de maillage interne** optimisé pour le SEO
+- **Score SEO moyen** : En cours d'optimisation vers 80+/100
+
+## 🎯 OBJECTIFS
+
+### Principal
+Informer et accompagner les patients sur les traitements GLP-1 en France
+
+### Secondaires
+- **SEO** : Positionnement sur les mots-clés médicaux stratégiques
+- **Monétisation** : Préparation pour l'affiliation (pharmacies, compléments)
+- **Autorité** : Référence francophone sur les GLP-1
 
 ## 🚀 Technologies
 
 - **Framework**: Astro 4.x
-- **CMS**: Decap CMS (backend GitHub)
 - **Styles**: CSS personnalisé avec variables CSS
-- **Déploiement**: GitHub Pages via GitHub Actions
-- **Authentification CMS**: GitHub OAuth
+- **Scripts**: Node.js pour la génération de contenu
+- **Déploiement**: Compatible avec Vercel, Netlify, GitHub Pages
 
 ## 📋 Prérequis
 
 - Node.js 18+ 
 - npm ou yarn
 - Git
-- **Pour le CMS**: Compte GitHub et OAuth App (voir setup ci-dessous)
 
 ## 🛠️ Installation
 
@@ -27,172 +44,127 @@ cd glp1
 # Installer les dépendances
 npm install
 
-# Générer la base de données des articles (optionnel)
+# Configurer l'environnement
+cp .env.example .env.local
+
+# Générer la base de données des articles
 npm run generate-database
 
 # Lancer le serveur de développement
 npm run dev
 ```
 
-## 🎛️ Administration - Decap CMS
+## 📂 Structure du Projet
 
-### Accès au CMS
-
-Une fois le site déployé, accédez au CMS via :
-- **Local**: `http://localhost:4321/admin`
-- **Production**: `https://robinallainmkg.github.io/glp1/admin`
-
-### Configuration GitHub OAuth App
-
-Pour utiliser le CMS en production, vous devez créer une GitHub OAuth App :
-
-1. **Aller sur GitHub** → Settings → Developer settings → OAuth Apps
-2. **Créer une nouvelle OAuth App** avec :
-   - Application name: `GLP-1 France CMS`
-   - Homepage URL: `https://robinallainmkg.github.io/glp1`
-   - Authorization callback URL: `https://api.netlify.com/auth/done` (ou votre proxy OAuth)
-3. **Récupérer** le Client ID et Client Secret
-4. **Configurer** selon votre méthode d'authentification (voir docs Decap CMS)
-
-### Mode Test Local
-
-Pour tester le CMS en local sans OAuth :
-
-1. Modifier `public/admin/config.yml` temporairement :
-```yaml
-backend:
-  name: test-repo
+```
+├── src/
+│   ├── layouts/          # Layouts Astro
+│   ├── pages/           # Pages du site
+│   ├── styles/          # CSS global
+│   └── content/         # Articles markdown
+├── data/                # Base de données JSON
+├── scripts/             # Scripts de génération
+├── public/              # Assets statiques
+└── dist/               # Build de production
 ```
 
-2. Redémarrer le serveur de développement
-3. Accéder à `/admin` - vous pourrez créer/éditer du contenu de test
-
-## 🚀 Déploiement
-
-### GitHub Pages (Automatique)
-
-Le déploiement est entièrement automatisé :
-
-1. **Push sur main** → GitHub Actions se déclenche automatiquement
-2. **Build** → Le site est construit avec `npm run build`
-3. **Deploy** → Publication sur GitHub Pages
-
-### URL du site
-
-- **Production**: https://robinallainmkg.github.io/glp1
-- **CMS Admin**: https://robinallainmkg.github.io/glp1/admin
-
-## 📁 Structure du Contenu
-
-Le site organise l'information autour de **9 collections** :
-
-- `alternatives-glp1` - Solutions naturelles
-- `glp1-perte-de-poids` - Efficacité et témoignages  
-- `effets-secondaires-glp1` - Gestion des risques
-- `glp1-cout` - Remboursements, tarifs
-- `medicaments-glp1` - Ozempic, Wegovy, Saxenda
-- `glp1-diabete` - Usage thérapeutique
-- `regime-glp1` - Conseils nutritionnels
-- `medecins-glp1-france` - Praticiens spécialisés
-- `recherche-glp1` - Études et innovations
-
-Chaque collection peut être gérée via le CMS à `/admin`.
-
-## 🔒 Sécurité
-
-### Politique des Secrets
-
-- ❌ **Jamais de secrets dans le code**
-- ✅ **Variables d'environnement locales uniquement**
-- ✅ **Clés SSH et certificats exclus du repo**
-- ✅ **Headers de sécurité via middleware**
-
-### Headers Sécurisés
-
-Le site implémente automatiquement :
-- CSP (Content Security Policy)
-- X-Frame-Options
-- X-Content-Type-Options  
-- Referrer-Policy
-- Permissions-Policy
-
-## 🧰 Scripts Disponibles
+## 🔧 Commandes
 
 ```bash
 # Développement
-npm run dev              # Serveur local port 4321
+npm run dev
 
-# Build
-npm run build           # Construction pour production
-npm run preview         # Prévisualisation du build
+# Build de production
+npm run build
 
-# Maintenance
-npm run generate-database  # Mise à jour base articles
-npm run clean              # Nettoyage cache build
-npm run type-check         # Vérification TypeScript
+# Preview du build
+npm run preview
+
+# Génération de la base de données
+node scripts/generate-database-v2.mjs
+
+# Application des prompts
+npm run apply:prompt
 ```
 
-## 📝 Workflow Editorial
+## 🎨 Fonctionnalités
 
-### Création d'articles via CMS
+- **Recherche avancée** avec suggestions et prévisualisation
+- **Système d'auteurs** spécialisés par domaine
+- **Témoignages** avec conseils beauté
+- **Dashboard admin** pour la gestion des articles
+- **Design responsive** et cartes d'articles interactives
+- **SEO optimisé** avec métadonnées dynamiques
 
-1. **Accéder** à `/admin`
-2. **Sélectionner** une collection (ex: "GLP-1 Perte de Poids")
-3. **Créer** un nouvel article
-4. **Remplir** les champs (titre, meta, contenu...)
-5. **Sauvegarder** → Crée une Pull Request
-6. **Merger** la PR → Publication automatique
+## 👥 Équipe d'Experts
 
-### Workflow Git
+- **Dr. Claire Morel** - Médecin nutritionniste
+- **Julien Armand** - Journaliste santé & bien-être  
+- **Élodie Carpentier** - Spécialiste cosmétique & dermo-soins
+- **Marc Delattre** - Rédacteur sport & forme
 
-- **Draft** → Editorial workflow de Decap CMS
-- **Review** → Pull Request GitHub  
-- **Publish** → Merge + déploiement automatique
+## 🔐 Administration
 
-## 📊 Monitoring
+Accès admin via `/admin-login/` avec authentification par session.
 
-### Build Status
+## 🚀 Déploiement
 
-Vérifiez le statut du déploiement :
-- **GitHub Actions** → onglet "Actions" du repo
-- **Status badge** disponible dans la documentation
+### Vercel (Recommandé)
 
-### Logs de Build
+```bash
+# Installer Vercel CLI
+npm i -g vercel
 
-En cas d'erreur :
-1. Vérifier GitHub Actions logs
-2. Tester le build localement : `npm run build`
-3. Vérifier la syntaxe des fichiers Markdown
+# Déployer
+vercel
+```
 
-## 🔧 Troubleshooting
+### Netlify
 
-### CMS ne charge pas
+```bash
+# Build command: npm run build
+# Publish directory: dist
+```
 
-1. Vérifier la configuration OAuth
-2. Contrôler `public/admin/config.yml`
-3. Tester en mode `test-repo` localement
+### Variables d'Environnement de Production
 
-### Erreurs de Build
+```bash
+SITE_URL=https://votre-domaine.com
+NODE_ENV=production
+ADMIN_PASSWORD=votre_mot_de_passe_securise
+```
 
-1. `npm run type-check` pour TypeScript
-2. Vérifier la structure des collections
-3. Valider le frontmatter des articles
+## 📝 Workflow de Développement
 
-### GitHub Pages non accessible
+1. **Développement local** sur branche `develop`
+2. **Tests** et validation 
+3. **Merge** vers `main` pour staging
+4. **Deploy** automatique en production
 
-1. Vérifier GitHub Pages settings
-2. Contrôler le workflow Actions
-3. Valider la configuration `astro.config.mjs`
+## 🔧 Maintenance
 
-## 🤝 Contribution
+- Régénération de la base d'articles via scripts
+- Mise à jour des témoignages dans `/data/authors-testimonials.json`
+- Ajout de nouveaux articles dans `/src/content/`
 
-1. Fork le repository
-2. Créer une branche feature
-3. Tester localement
-4. Créer une Pull Request
+## 📊 Performance
 
-## 📚 Documentation
+- Build optimisé avec Astro
+- Images optimisées
+- CSS minifié
+- JavaScript minimal côté client
 
-- **Astro**: https://docs.astro.build
-- **Decap CMS**: https://decapcms.org/docs
-- **GitHub Pages**: https://docs.github.com/pages
+## 🐛 Dépannage
+
+- **Build Error**: Vérifier la syntaxe des fichiers `.astro`
+- **Admin Error**: Vérifier les chemins vers les fichiers de données
+- **Styles manquants**: Régénérer le CSS global
+
+## 📞 Support
+
+Pour toute question technique, consulter la documentation Astro ou les issues GitHub.
+
+---
+
+**Version**: 1.0.0  
+**Dernière mise à jour**: Août 2025

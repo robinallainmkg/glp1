@@ -449,7 +449,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       // Délai plus long pour permettre les clics sur les suggestions
       setTimeout(() => {
         hideSearchResults();
-      }, 300);
+      }, 150);
     });
 
     function performSearch(query) {
@@ -595,27 +595,27 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     // Fonction pour attacher les gestionnaires d'événements aux suggestions
     function attachSuggestionHandlers() {
-      // Supprime les anciens gestionnaires pour éviter les doublons
       const suggestionItems = document.querySelectorAll('.suggestion-item');
       
       suggestionItems.forEach(item => {
-        // Clone l'élément pour supprimer tous les event listeners existants
-        const newItem = item.cloneNode(true);
-        item.parentNode.replaceChild(newItem, item);
-        
-        // Ajoute le nouveau gestionnaire d'événement
-        newItem.addEventListener('click', (e) => {
+        item.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
           
-          const keyword = newItem.dataset.keyword || newItem.dataset.suggestion;
+          const keyword = item.dataset.keyword || item.dataset.suggestion;
           if (keyword) {
             searchInput.value = keyword;
-            searchInput.focus();
             
             // Déclenche la recherche immédiatement
-            performSearch(keyword.toLowerCase());
+            setTimeout(() => {
+              performSearch(keyword.toLowerCase());
+            }, 100);
           }
+        });
+        
+        // Empêche la fermeture lors du mousedown
+        item.addEventListener('mousedown', (e) => {
+          e.preventDefault();
         });
       });
     }

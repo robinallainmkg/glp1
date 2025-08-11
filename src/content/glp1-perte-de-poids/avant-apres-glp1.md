@@ -278,3 +278,8 @@ Généralement oui, mais certains peuvent exprimer jalousie ou inquiétude. Un a
 ---
 
 *Ces témoignages illustrent le potentiel des GLP-1 mais chaque parcours est unique. Un suivi médical personnalisé optimise vos chances de succès.*
+
+## Important
+
+**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+

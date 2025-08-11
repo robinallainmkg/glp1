@@ -6,6 +6,10 @@ date: 2025-08-10
 keywords: "régime paléolithique glp1, paleo diet"
 ---
 
+# régime paléo et GLP-1
+
+*Dernière mise à jour : 11/08/2025*
+
 **Résumé :** Cet article explique « régime paléo et GLP-1 » pour le marché français : prix en €, cadre ANSM, conseils pratiques.
 
 ## À retenir

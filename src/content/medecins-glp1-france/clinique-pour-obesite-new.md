@@ -8,6 +8,10 @@ author: Dr. Émilie Martin
 readingTime: 10
 ---
 
+# Cliniques spécialisées en obésité en france - guide complet 2025
+
+*Dernière mise à jour : 11/08/2025*
+
 Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? Ce guide détaillé vous présente les différents types de centres disponibles en France, leurs approches thérapeutiques et comment faire le bon choix selon votre situation.
 
 ## Types de Cliniques Spécialisées en Obésité
@@ -326,3 +330,8 @@ Choisir la bonne clinique pour traiter votre obésité est une décision importa
 **N'oubliez pas :** L'obésité est une maladie chronique qui nécessite une prise en charge médicale sérieuse. Investir dans un bon centre spécialisé, c'est investir dans votre santé à long terme.
 
 [affiliate-box]
+
+## Important
+
+**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+
