@@ -102,11 +102,17 @@ function getArticleMetadata(filePath) {
     
     if (!frontmatter) return null;
     
+    // Nettoyer et formater le temps de lecture
+    let readingTime = frontmatter.readingTime || frontmatter.reading_time || '5';
+    if (typeof readingTime === 'string' && !readingTime.includes('min')) {
+      readingTime = readingTime.trim() + ' min';
+    }
+    
     return {
       title: frontmatter.title || 'Sans titre',
       description: frontmatter.description || 'Description non disponible',
       author: frontmatter.author || 'Équipe éditoriale',
-      readingTime: frontmatter.readingTime || frontmatter.reading_time || '5 min'
+      readingTime: readingTime
     };
   } catch (error) {
     console.error(`Erreur lors de la lecture de ${filePath}:`, error.message);
