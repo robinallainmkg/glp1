@@ -1,16 +1,21 @@
 ---
-title: "Médicaments glp-1 : metformine diarrhée solution - guide complet france 2025"
+title: "Médicaments glp-1 : metformine diarrhée solution"
+metaTitle: "Médicaments glp-1 : metformine diarrhée solution - | France 2025"
 description: "Guide complet sur metformine diarrhée solution des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-keyword: médicament diabète et diarrhée
-intent: Informational
-category: glp-1 medications
-author: Karim Benali
+metaDescription: "médicament diabète et diarrhée France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "médicament diabète et diarrhée"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Karim Benali"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, perte de poids"
 ---
-
-# Médicaments glp-1 : metformine diarrhée solution - guide complet france 2025
-
-*Dernière mise à jour : 11/08/2025*
 
 ## À retenir
 
@@ -222,6 +227,14 @@ Noter quotidiennement pendant 2-4 semaines :
 - Mentionner tous les traitements associés
 - Évoquer l'impact sur la qualité de vie
 
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [injection pour maigrir](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant-en-pharmacie/)
+- [obésité sévère traitement](../glp1-perte-de-poids/obesite-severe-prise-en-charge/)
+- [avant après GLP-1](../glp1-perte-de-poids/avant-apres-glp1/)
+- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Où consulter pour une prescription ?
@@ -236,11 +249,9 @@ Non, le remboursement dépend de l'indication thérapeutique, des critères méd
 ### Peut-on arrêter le traitement brutalement ?
 L'arrêt doit toujours être progressif et supervisé médicalement pour éviter les effets de rebond.
 
+ Ces informations sont fournies à titre éducatif uniquement. Consultez impérativement un professionnel de santé qualifié pour obtenir des conseils médicaux personnalisés et une prise en charge adaptée à votre situation.
 
-
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez impérativement un professionnel de santé qualifié pour obtenir des conseils médicaux personnalisés et une prise en charge adaptée à votre situation.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

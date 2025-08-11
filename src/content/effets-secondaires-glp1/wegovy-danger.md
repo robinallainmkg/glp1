@@ -1,16 +1,16 @@
 ---
-title: "Wegovy danger"
-description: wegovy danger — Guide marché français.
-keyword: wegovy diabete
-intent: Informational
-category: glp-1 side effects
-author: Sophie Dubois
+title: "Wegovy Dangers et Risques : Guide Sécurité Complet France 2025"
+metaTitle: "Wegovy Dangers et Risques : Guide Sécurité Complet | France 2025"
+description: "wegovy danger — Guide marché français."
+metaDescription: "Wegovy Dangers et Risques : Guide Sécurité Complet France 2025 Dernière mise à jour : 11/08/2025 Sommaire 1 Découvrez tout sur GLP-1 en France."
+keyword: "wegovy diabete"
+intent: "Informational"
+category: "glp-1 side effects"
+author: "Sophie Dubois"
 readingTime: 5
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
+featured: true
 ---
-# Wegovy danger
-
-*Dernière mise à jour : 11/08/2025*
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
@@ -97,7 +97,7 @@ L'approche optimale associe :
 - **Activité physique adaptée** : Selon les capacités
 - **Soutien psychologique** : Si nécessaire
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

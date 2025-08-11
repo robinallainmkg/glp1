@@ -9,9 +9,9 @@ metaDescription: "Témoignages avant/après GLP-1 : transformations réelles, ph
 heroImage: "/images/avant-apres-glp1.jpg"
 published: true
 featured: true
+keyword: "avant après glp-1, france 2025"
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Avant Après GLP-1 : Transformations Réelles et Témoignages
 
 Les **transformations avant/après GLP-1** témoignent de l'efficacité révolutionnaire de ces traitements. Ces parcours authentiques de patients français montrent des changements physiques et psychologiques profonds, avec des pertes de poids spectaculaires et un retour à une qualité de vie optimale.
 
@@ -281,5 +281,12 @@ Généralement oui, mais certains peuvent exprimer jalousie ou inquiétude. Un a
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

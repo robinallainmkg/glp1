@@ -1,0 +1,634 @@
+{
+  "timestamp": "2025-08-11T08:16:28.620Z",
+  "totalArticles": 119,
+  "shortArticles": 0,
+  "averageWords": 914,
+  "minWordCount": 500,
+  "articles": [
+    {
+      "path": "alternatives-glp1/acupuncture-glp1.md",
+      "wordCount": 708,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/alternatives-bio-glp1.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/alternatives-naturelles-ozempic.md",
+      "wordCount": 752,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/berberine-glp1.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/cannelle-glp1.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/chrome-diabete.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/homeopathie-diabete.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/meditation-glp1.md",
+      "wordCount": 708,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/peut-on-guerir-du-diabete.md",
+      "wordCount": 673,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/phytotherapie-glp1.md",
+      "wordCount": 725,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/plantes-diabete.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/semaglutide-naturel.md",
+      "wordCount": 665,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/supplements-glp1.md",
+      "wordCount": 708,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/vinaigre-cidre-glp1.md",
+      "wordCount": 708,
+      "needsEnrichment": false
+    },
+    {
+      "path": "alternatives-glp1/yoga-diabete.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "effets-secondaires-glp1/insulevel-effet-indesirable.md",
+      "wordCount": 657,
+      "needsEnrichment": false
+    },
+    {
+      "path": "effets-secondaires-glp1/ozempic-danger.md",
+      "wordCount": 1298,
+      "needsEnrichment": false
+    },
+    {
+      "path": "effets-secondaires-glp1/wegovy-danger.md",
+      "wordCount": 653,
+      "needsEnrichment": false
+    },
+    {
+      "path": "effets-secondaires-glp1/wegovy-dosage.md",
+      "wordCount": 652,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/acheter-wegovy-en-france.md",
+      "wordCount": 1613,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/anneau-gastrique-prix-cmu.md",
+      "wordCount": 703,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/operation-pour-maigrir-prix.md",
+      "wordCount": 1414,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/saxenda-prix-pharmacie.md",
+      "wordCount": 1206,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/wegovy-prix-pharmacie.md",
+      "wordCount": 702,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/wegovy-prix.md",
+      "wordCount": 1876,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-cout/wegovy-remboursement-mutuelle.md",
+      "wordCount": 701,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-complications-glp1.md",
+      "wordCount": 739,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-gestationnel-glp1.md",
+      "wordCount": 763,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-pied-glp1.md",
+      "wordCount": 721,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-regime-glp1.md",
+      "wordCount": 713,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-retinopathie-glp1.md",
+      "wordCount": 713,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-sport-glp1.md",
+      "wordCount": 714,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/diabete-urgence-glp1.md",
+      "wordCount": 713,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-auto-surveillance.md",
+      "wordCount": 712,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-carnet-diabetique.md",
+      "wordCount": 713,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-diabete-type-1.md",
+      "wordCount": 751,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-hba1c-reduction.md",
+      "wordCount": 804,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-insuline-interaction.md",
+      "wordCount": 748,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-nephropathie.md",
+      "wordCount": 712,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/glp1-neuropathie-diabetique.md",
+      "wordCount": 712,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-diabete/traitement-insulinique.md",
+      "wordCount": 699,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/avant-apres-glp1.md",
+      "wordCount": 1231,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/chirurgie-bariatrique.md",
+      "wordCount": 659,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/combien-de-dose-dans-un-stylo-ozempic.md",
+      "wordCount": 598,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/diabete-amaigrissement-rapide.md",
+      "wordCount": 656,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/glp1-perte-de-poids.md",
+      "wordCount": 1131,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-americain-pour-maigrir.md",
+      "wordCount": 579,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant-en-pharmacie.md",
+      "wordCount": 605,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant.md",
+      "wordCount": 651,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-pour-perdre-du-ventre-en-1-semaine.md",
+      "wordCount": 607,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/obesite-severe-prise-en-charge.md",
+      "wordCount": 651,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/ou-trouver-ozempic.md",
+      "wordCount": 855,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/ozempic-effets-secondaires-forum.md",
+      "wordCount": 736,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/ozempic-prix.md",
+      "wordCount": 944,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/ozempic-regime.md",
+      "wordCount": 1182,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/personne-obese.md",
+      "wordCount": 659,
+      "needsEnrichment": false
+    },
+    {
+      "path": "glp1-perte-de-poids/pilule-qui-fait-maigrir.md",
+      "wordCount": 665,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medecins-glp1-france/clinique-pour-obesite-new.md",
+      "wordCount": 1380,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medecins-glp1-france/clinique-pour-obesite.md",
+      "wordCount": 1380,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medecins-glp1-france/diabetologue-paris.md",
+      "wordCount": 590,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medecins-glp1-france/endocrinologue-pour-maigrir-new.md",
+      "wordCount": 1027,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medecins-glp1-france/endocrinologue-pour-maigrir.md",
+      "wordCount": 1027,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/ado-medicament.md",
+      "wordCount": 1054,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/ballon-gastrique-rembourse.md",
+      "wordCount": 1205,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/coupe-faim-puissant-interdit-en-france.md",
+      "wordCount": 1010,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/dipeptidyl-peptidase-4.md",
+      "wordCount": 1171,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/dosage-trulicity.md",
+      "wordCount": 1266,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/dulaglutide-nom-commercial.md",
+      "wordCount": 1170,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/januvia-autre-nom.md",
+      "wordCount": 1082,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/liraglutide-perte-de-poids-avis.md",
+      "wordCount": 1041,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/mecanisme-d-action.md",
+      "wordCount": 1093,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/medicament-americain-pour-maigrir.md",
+      "wordCount": 1090,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/medicament-anti-obesite-novo-nordisk.md",
+      "wordCount": 940,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/medicament-pour-maigrir-tres-puissant.md",
+      "wordCount": 1193,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/medicament-prise-de-poid.md",
+      "wordCount": 1681,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/medicaments-qui-augmentent-la-glycemie.md",
+      "wordCount": 1389,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/metformine-autre-nom.md",
+      "wordCount": 1155,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/metformine-diarrhee-solution.md",
+      "wordCount": 1347,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/mounjaro-effet-secondaire.md",
+      "wordCount": 1438,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/mounjaro-injection-pour-maigrir.md",
+      "wordCount": 1052,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/mounjaro-prix-france.md",
+      "wordCount": 1130,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/nouveau-medicament.md",
+      "wordCount": 1538,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/nouveau-traitement-diabete-type-2-injection.md",
+      "wordCount": 1271,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/orlistat-avant-apres.md",
+      "wordCount": 1305,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/ozempic-injection-prix.md",
+      "wordCount": 828,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/pilule-qui-fait-maigrir.md",
+      "wordCount": 1252,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/saxenda-prix.md",
+      "wordCount": 1026,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/semaglutide-achat.md",
+      "wordCount": 1316,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/sitagliptine-effets-secondaires.md",
+      "wordCount": 1122,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/stylo-saxenda.md",
+      "wordCount": 1153,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/sulfamide-hypoglycemiant.md",
+      "wordCount": 1485,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/sulfamides-medicaments.md",
+      "wordCount": 1240,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/tirzepatide-avis.md",
+      "wordCount": 1510,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/traitement-diabete-type-2.md",
+      "wordCount": 1362,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/traitements-medicamenteux.md",
+      "wordCount": 1333,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/trulicity-danger.md",
+      "wordCount": 1367,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/trulicity-ou-ozempic.md",
+      "wordCount": 1261,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/victoza-posologie.md",
+      "wordCount": 1145,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/victoza-rupture.md",
+      "wordCount": 1306,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/wegovy-avis.md",
+      "wordCount": 1272,
+      "needsEnrichment": false
+    },
+    {
+      "path": "medicaments-glp1/xenical-remboursement.md",
+      "wordCount": 1178,
+      "needsEnrichment": false
+    },
+    {
+      "path": "recherche-glp1/glp-1.md",
+      "wordCount": 509,
+      "needsEnrichment": false
+    },
+    {
+      "path": "recherche-glp1/glp-inhibitors.md",
+      "wordCount": 506,
+      "needsEnrichment": false
+    },
+    {
+      "path": "recherche-glp1/recherche-clinique-glp1.md",
+      "wordCount": 576,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/glp1-calories-journalieres.md",
+      "wordCount": 584,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/glp1-hydratation.md",
+      "wordCount": 528,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/glp1-index-glycemique.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/glp1-micronutriments.md",
+      "wordCount": 528,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/glp1-portion-alimentaire.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/glp1-proteines.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/isglt2-liste.md",
+      "wordCount": 966,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/jeune-intermittent-glp1.md",
+      "wordCount": 632,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-cetogene-glp1.md",
+      "wordCount": 558,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-chrono-nutrition-glp1.md",
+      "wordCount": 528,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-dash-glp1.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-detox-glp1.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-mediterraneen-glp1.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-paleo-glp1.md",
+      "wordCount": 534,
+      "needsEnrichment": false
+    },
+    {
+      "path": "regime-glp1/regime-sans-sucre-glp1.md",
+      "wordCount": 540,
+      "needsEnrichment": false
+    }
+  ],
+  "distribution": [
+    {
+      "label": "0-100 mots",
+      "count": 0
+    },
+    {
+      "label": "101-200 mots",
+      "count": 0
+    },
+    {
+      "label": "201-300 mots",
+      "count": 0
+    },
+    {
+      "label": "301-400 mots",
+      "count": 0
+    },
+    {
+      "label": "401-500 mots",
+      "count": 0
+    },
+    {
+      "label": "501-1000 mots",
+      "count": 70
+    },
+    {
+      "label": "1000+ mots",
+      "count": 49
+    }
+  ]
+}

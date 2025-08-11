@@ -50,34 +50,87 @@ const themeConfig = {
     badge: 'bg-indigo-100 text-indigo-800',
     icon: '🔬'
   },
-  'experts': {
-    gradient: 'from-teal-600 to-cyan-600',
-    badge: 'bg-teal-100 text-teal-800',
-    icon: '👨‍⚕️'
-  },
-  'alternatives': {
-    gradient: 'from-cyan-600 to-blue-400',
-    badge: 'bg-cyan-100 text-cyan-800',
-    icon: '🌱'
-  },
-  'side-effects': {
-    gradient: 'from-red-600 to-red-400',
-    badge: 'bg-red-100 text-red-800',
-    icon: '⚠️'
-  },
   'cost': {
-    gradient: 'from-yellow-600 to-yellow-400',
-    badge: 'bg-yellow-100 text-yellow-800',
+    gradient: 'from-red-600 to-pink-600',
+    badge: 'bg-red-100 text-red-800',
     icon: '💰'
   },
+  'side-effects': {
+    gradient: 'from-yellow-600 to-orange-600',
+    badge: 'bg-yellow-100 text-yellow-800',
+    icon: '⚠️'
+  },
   'diabetes': {
-    gradient: 'from-purple-600 to-pink-600',
+    gradient: 'from-purple-600 to-blue-600',
     badge: 'bg-purple-100 text-purple-800',
     icon: '🩺'
   }
 };
 
 const theme = themeConfig[collectionTheme] || themeConfig['weight-loss'];
+
+// Mapping des catégories vers des noms lisibles et URLs
+const categoryMapping = {
+  'glp1-perte-de-poids': { name: 'GLP-1 et Perte de Poids', url: '/glp1-perte-de-poids' },
+  'medicaments-glp1': { name: 'Médicaments GLP-1', url: '/medicaments-glp1' },
+  'glp1-cout': { name: 'Prix et Coûts GLP-1', url: '/glp1-cout' },
+  'effets-secondaires-glp1': { name: 'Effets Secondaires', url: '/effets-secondaires-glp1' },
+  'glp1-diabete': { name: 'GLP-1 et Diabète', url: '/glp1-diabete' },
+  'recherche-glp1': { name: 'Recherche GLP-1', url: '/recherche-glp1' },
+  'medecins-glp1-france': { name: 'Médecins GLP-1 France', url: '/medecins-glp1-france' },
+  'alternatives-glp1': { name: 'Alternatives GLP-1', url: '/alternatives-glp1' },
+  'regime-glp1': { name: 'Régime GLP-1', url: '/regime-glp1' }
+};
+
+// Fonction pour générer le fil d'Ariane
+function generateBreadcrumb(category, title) {
+  const breadcrumb = [
+    { name: 'Accueil', url: '/', icon: '🏠' }
+  ];
+  
+  // Maintenant category contient toujours le nom exact de la collection
+  if (categoryMapping[category]) {
+    breadcrumb.push({
+      name: categoryMapping[category].name,
+      url: categoryMapping[category].url,
+      icon: theme?.icon || '📄'
+    });
+  }
+  
+  // Article actuel (sans lien)
+  breadcrumb.push({
+    name: title.length > 50 ? title.substring(0, 50) + '...' : title,
+    url: null,
+    icon: '📖'
+  });
+  
+  return breadcrumb;
+}
+
+// Fonction pour obtenir l'URL de retour correcte
+function getBackUrl(category) {
+  // Maintenant on a directement le nom de la collection
+  if (categoryMapping[category]) {
+    return categoryMapping[category].url;
+  }
+  
+  // Fallback simple
+  return `/${category}/`;
+}
+
+// Fonction pour obtenir le nom affiché de la collection  
+function getDisplayName(category) {
+  if (categoryMapping[category]) {
+    return categoryMapping[category].name;
+  }
+  
+  // Fallback: formatter la catégorie
+  return category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+}
+
+const breadcrumb = generateBreadcrumb(category, title);
+const backUrl = getBackUrl(category);
+const displayName = getDisplayName(category);
 
 // Convertir le contenu markdown en HTML (simple)
 function markdownToHtml(markdown: string): string {
@@ -103,6 +156,19 @@ const htmlContent = markdownToHtml(content);
 
 <BaseLayout title={title} description={description}>
   <article class="article-layout">
+    <!-- Fil d'Ariane -->
+    <nav class="breadcrumb" style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 14px;">
+          <a href="/" style="color: #3b82f6; text-decoration: none;">🏠 Accueil</a>
+          <span style="color: #9ca3af;">→</span>
+          <a href="/glp1-perte-de-poids" style="color: #3b82f6; text-decoration: none;">⚖️ GLP-1 et Perte de Poids</a>
+          <span style="color: #9ca3af;">→</span>
+          <span style="color: #6b7280;">📖 {title.length > 50 ? title.substring(0, 50) + '...' : title}</span>
+        </div>
+      </div>
+    </nav>
+
     <!-- En-tête de l'article -->
     <header class={`article-header bg-gradient-to-r ${theme.gradient} text-white`}>
       <div class="container mx-auto px-4 py-12">
@@ -165,10 +231,10 @@ const htmlContent = markdownToHtml(content);
           <!-- Navigation -->
           <nav class="article-navigation mt-12">
             <a 
-              href={`/${category}/`} 
+              href={backUrl} 
               class={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${theme.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-300`}
             >
-              ← Retour à {category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+              ← Retour à {displayName}
             </a>
           </nav>
         </div>
@@ -286,7 +352,58 @@ const htmlContent = markdownToHtml(content);
     padding-top: 2rem;
   }
 
+  /* Styles pour le fil d'Ariane */
+  .breadcrumb {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+
+  .breadcrumb a:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .breadcrumb svg {
+    flex-shrink: 0;
+  }
+
   @media (max-width: 768px) {
+    .breadcrumb {
+      padding: 0.5rem 0;
+    }
+
+    .breadcrumb ol {
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .breadcrumb span {
+      font-size: 0.875rem;
+    }
+
+    .breadcrumb svg {
+      width: 0.875rem;
+      height: 0.875rem;
+    }
+
     .article-header {
       padding: 2rem 0;
     }

@@ -1,16 +1,13 @@
 ---
 title: "GLP-1 et calories journalières"
+metaTitle: "GLP-1 et calories journalières | Prix Efficacité France 2025"
 description: "GLP-1 et calories journalières — Guide marché français."
+metaDescription: "glp-1 calories journalières France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
 author: "Dr. Sophie Dubois"
-date: 2025-08-10
+date: "2025-08-10"
 keywords: "glp1 calories par jour, restriction calorique"
+keyword: "glp-1 calories journalières, france 2025"
 ---
-
-# GLP-1 et calories journalières
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Cet article explique « GLP-1 et calories journalières » pour le marché français : besoins adaptés, restriction naturelle, prix en €, conseils pratiques personnalisés.
 
 ## À retenir
 
@@ -82,6 +79,14 @@ Les agonistes GLP-1 réduisent naturellement l'apport calorique de 200-500 kcal/
 - **Mètre ruban** : Mesures tour taille/hanches
 - **Photos avant/après** : Motivation visuelle
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Faut-il compter les calories avec GLP-1 ?
@@ -98,8 +103,6 @@ Varier activité physique, ajuster macronutriments, consultation nutritionnelle,
 
 ## Conclusion
 
-[affiliate-box]
-
 Les agonistes GLP-1 facilitent naturellement la restriction calorique sans effort conscient de comptage. Cette approche privilégie la qualité nutritionnelle et l'écoute des signaux de satiété. Un suivi personnalisé optimise la perte de poids durable tout en préservant l'équilibre métabolique.
 
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez un diététicien-nutritionniste ou votre médecin pour déterminer vos besoins caloriques personnalisés avec GLP-1.
+ Ces informations sont fournies à titre éducatif uniquement. Consultez un diététicien-nutritionniste ou votre médecin pour déterminer vos besoins caloriques personnalisés avec GLP-1.

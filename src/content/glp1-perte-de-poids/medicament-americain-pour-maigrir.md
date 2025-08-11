@@ -1,37 +1,15 @@
 ---
 title: "Medicament americain pour maigrir"
-description: medicament americain pour maigrir — Guide marché français.
-keyword: nouveau médicament américain pour maigrir
-intent: Informational
-category: glp-1 for weight loss
-author: Julien Lefèvre
+metaTitle: "Medicament americain pour maigrir | Perte Poids France 2025"
+description: "medicament americain pour maigrir — Guide marché français."
+metaDescription: "nouveau médicament américain pour maigrir pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
+keyword: "nouveau médicament américain pour maigrir"
+intent: "Informational"
+category: "glp-1 for weight loss"
+author: "Julien Lefèvre"
 readingTime: 5
+keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, tirzepatide"
 ---
-
-
-# Medicament americain pour maigrir
-
-*Dernière mise à jour : 11/08/2025*
-
-
-## Qu'est-ce que c'est ?
-
-*[Définition et présentation à développer...]*
-
-## Comment ça fonctionne ?
-
-*[Mécanisme d'action à développer...]*
-
-## Indications et utilisation
-
-*[Qui peut l'utiliser et comment à développer...]*
-
-## Précautions importantes
-
-*[Contre-indications et conseils à développer...]*
-
-
-**Résumé :** Guide complet sur les médicaments américains pour maigrir : efficacité, disponibilité en France, prix, réglementation FDA vs ANSM.
 
 ## Médicaments américains pour la perte de poids
 
@@ -118,6 +96,14 @@ Les États-Unis disposent d'une gamme étendue de médicaments anti-obésité ap
 - Troubles alimentaires sévères
 - Insuffisance cardiaque décompensée
 
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+- [acheter Wegovy France](../glp1-cout/acheter-wegovy-en-france/)
+- [dangers Wegovy](../effets-secondaires-glp1/wegovy-danger/)
+- [remboursement Wegovy](../glp1-cout/wegovy-remboursement-mutuelle/)
+- [prix Mounjaro France](../medicaments-glp1/mounjaro-prix-france/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ pratiques
 
 ### Quand ces médicaments seront-ils disponibles en France ?
@@ -129,6 +115,4 @@ Uniquement ceux autorisés en France, sur prescription médicale spécialisée a
 ### Les résultats sont-ils comparables aux États-Unis ?
 Oui, l'efficacité est similaire mais le suivi médical français est plus strict et sécurisé.
 
-[affiliate-box]
-
-**Important :** L'automédication avec des médicaments non autorisés en France présente des risques graves. Consultez exclusivement un médecin spécialiste pour une prise en charge légale et sécurisée de l'obésité.
+ L'automédication avec des médicaments non autorisés en France présente des risques graves. Consultez exclusivement un médecin spécialiste pour une prise en charge légale et sécurisée de l'obésité.

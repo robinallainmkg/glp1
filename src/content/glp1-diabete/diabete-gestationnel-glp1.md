@@ -1,16 +1,13 @@
 ---
-title: "diabète gestationnel et GLP-1"
+title: "Diabète Gestationnel GLP-1 : Sécurité Grossesse France 2025"
+metaTitle: "Diabète Gestationnel GLP-1 : Sécurité Grossesse Fr | France 2025"
 description: "diabète gestationnel et GLP-1 — Guide marché français."
+metaDescription: "diabète gestationnel glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
 author: "Dr. Sophie Dubois"
-date: 2025-08-10
+date: "2025-08-10"
 keywords: "diabète gestationnel glp1, grossesse diabète"
+keyword: "diabète gestationnel glp-1, france 2025"
 ---
-
-# diabète gestationnel et GLP-1
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Cet article explique « diabète gestationnel et GLP-1 » pour le marché français : contre-indications, alternatives, conseils pratiques.
 
 ## À retenir
 
@@ -95,6 +92,14 @@ Les diabète type 2, HbA1c, glycémie sont des éléments clés dans ce domaine 
 - **Aiguilles courtes** : 4mm maximum
 - **Lecteur connecté** : Suivi médical facilité
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Mounjaro France](../medicaments-glp1/mounjaro-prix-france/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Puis-je continuer GLP-1 si je découvre une grossesse ?
@@ -111,13 +116,11 @@ HGPO de contrôle à 6-12 semaines, puis dépistage diabète T2 tous les 3 ans �
 
 ## Conclusion
 
-[affiliate-box]
-
 Le diabète gestationnel requiert une prise en charge spécialisée excluant totalement les agonistes GLP-1. L'insulinothérapie, si nécessaire, reste le traitement de référence avec une sécurité prouvée pour la mère et l'enfant. Un suivi multidisciplinaire optimise les résultats périnataux.
 
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez immédiatement votre gynécologue-obstétricien et endocrinologue pour toute question concernant diabète et grossesse.
+ Ces informations sont fournies à titre éducatif uniquement. Consultez immédiatement votre gynécologue-obstétricien et endocrinologue pour toute question concernant diabète et grossesse.
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

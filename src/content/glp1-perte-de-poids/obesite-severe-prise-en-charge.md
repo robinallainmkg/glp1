@@ -1,16 +1,15 @@
 ---
 title: "Obésité sévère prise en charge"
-description: obésité sévère prise en charge — Guide marché français.
-keyword: obésité classe 1 que faire
-intent: Informational
-category: glp-1 for weight loss
-author: Karim Benali
+metaTitle: "Obésité sévère prise en charge | Perte Poids France 2025"
+description: "obésité sévère prise en charge — Guide marché français."
+metaDescription: "obésité classe 1 que faire pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
+keyword: "obésité classe 1 que faire"
+intent: "Informational"
+category: "glp-1 for weight loss"
+author: "Karim Benali"
 readingTime: 6
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 ---
-# Obésité sévère prise en charge
-
-*Dernière mise à jour : 11/08/2025*
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
@@ -97,7 +96,7 @@ L'approche optimale associe :
 - **Activité physique adaptée** : Selon les capacités
 - **Soutien psychologique** : Si nécessaire
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

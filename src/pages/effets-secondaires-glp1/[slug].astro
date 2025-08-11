@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,29 +12,21 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const content = entry.body;
+
+// Utiliser le nom de la collection au lieu de la catégorie du frontmatter
+const collectionName = "effets-secondaires-glp1";
 ---
 
-<BaseLayout 
+<ArticleLayout 
   title={entry.data.title}
-  description={entry.data.description}
-  keywords={entry.data.keywords}
->
-
-<div class="container">
-  <article class="article-content">
-    <header class="article-header">
-      <h1>{entry.data.title}</h1>
-      <div class="article-meta">
-        <span class="article-author">{entry.data.author}</span>
-        <span class="article-date">{entry.data.date}</span>
-        <span class="article-reading-time">{entry.data.readingTime} min de lecture</span>
-      </div>
-    </header>
-
-    <div class="article-body">
-      <Content />
-    </div>
-  </article>
-</div>
-
-</BaseLayout>
+  description={entry.data.description || entry.data.metaDescription || ""}
+  author={entry.data.author || "Équipe GLP-1 France"}
+  category={collectionName}
+  keywords={entry.data.keywords || ""}
+  readingTime={entry.data.readingTime || 5}
+  lastModified={entry.data.pubDate}
+  content={content}
+  collectionTheme="side-effects"
+/>
+</ArticleLayout>

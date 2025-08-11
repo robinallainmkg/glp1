@@ -1,18 +1,22 @@
 ---
-title: "Trulicity ou ozempic"
-description: trulicity ou ozempic — Guide marché français.
-keyword: delivrance ozempic fevrier 2025
-intent: Informational
-category: glp-1 medications
-author: Julien Lefèvre
+title: "Trulicity ou ozempic - Trulicity Ou Ozempic"
+metaTitle: "Trulicity vs Ozempic France 2025 | Comparatif Complet"
+description: "Trulicity ou Ozempic France 2025 : comparaison efficacité, prix, effets secondaires, remboursement. Guide choix traitement optimal."
+metaDescription: "trulicity ozempic comparaison france France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "trulicity ozempic comparaison france"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Julien Lefèvre"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+featured: true
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
 ---
-
-# Trulicity ou ozempic
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Comparaison Trulicity vs Ozempic : dulaglutide hebdomadaire contre sémaglutide, efficacité similaire sur HbA1c, sémaglutide supérieur pour perte poids, tolérance comparable, choix selon profil patient et préférences.
 
 ## À retenir
 
@@ -233,9 +237,7 @@ Pour une approche plus globale, consultez notre guide du [traitement diabète ty
 - **Alternative** : Changement classe (SGLT2)
 - **Association** : Rarement justifiée
 
-
-
-**Important :** Le choix entre Trulicity et Ozempic doit être individualisé selon les objectifs thérapeutiques prioritaires (contrôle glycémique vs perte poids), la tolérance et les préférences du patient. Les deux molécules sont efficaces avec des profils légèrement différents.
+ Le choix entre Trulicity et Ozempic doit être individualisé selon les objectifs thérapeutiques prioritaires (contrôle glycémique vs perte poids), la tolérance et les préférences du patient. Les deux molécules sont efficaces avec des profils légèrement différents.
 
 ## Articles similaires
 
@@ -250,7 +252,7 @@ Pour une approche plus globale, consultez notre guide du [traitement diabète ty
 - [Mécanisme d'action](/medicaments-glp1/mecanisme-d-action/) - Comprendre le fonctionnement des agonistes GLP-1
 - [Traitements médicamenteux](/medicaments-glp1/traitements-medicamenteux/) - Panorama complet des classes thérapeutiques disponibles
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

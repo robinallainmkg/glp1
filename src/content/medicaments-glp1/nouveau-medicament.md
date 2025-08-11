@@ -1,18 +1,21 @@
 ---
-title: "Nouveau médicament"
-description: nouveau médicament — Guide marché français.
-keyword: nouveau medicament
-intent: Informational
-category: glp-1 medications
-author: Sophie Dubois
+title: "Nouveau Médicament GLP-1 France 2025 : Innovations et Disponibilité"
+metaTitle: "Nouveau Médicament GLP-1 France 2025 | Innovations Thérapeutiques"
+description: "Découvrez les nouveaux médicaments GLP-1 disponibles en France 2025 : innovations thérapeutiques, pipelines, efficacité et accès patients."
+metaDescription: "nouveau médicament glp1 france 2025, innovation thérapeutique France 2025 : guide complet, prix, efficacité et conseils pratiques."
+keyword: "nouveau médicament glp1 france 2025, innovation thérapeutique"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Sophie Dubois"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Nouveau médicament
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Guide complet des nouveaux médicaments GLP-1 et antidiabétiques en France 2025 : innovations thérapeutiques, pipelines de développement, autorisations ANSM et perspectives d'accès pour les patients français.
 
 ## À retenir
 
@@ -270,9 +273,7 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - **Pancréatites** : Monitoring hépatique
 - **Interactions** : Base données dédiée
 
-
-
-**Important :** Ces informations sur les nouveaux médicaments sont basées sur les données cliniques et réglementaires disponibles en août 2025. Les autorisations, prix et remboursements peuvent évoluer. Consultez toujours votre médecin spécialiste pour les traitements les plus récents.
+ Ces informations sur les nouveaux médicaments sont basées sur les données cliniques et réglementaires disponibles en août 2025. Les autorisations, prix et remboursements peuvent évoluer. Consultez toujours votre médecin spécialiste pour les traitements les plus récents.
 
 ## Articles similaires
 
@@ -287,7 +288,7 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - [Semaglutide achat](/medicaments-glp1/semaglutide-achat/) - Guide d'accès aux traitements GLP-1 actuels
 - [Traitement diabète type 2](/medicaments-glp1/traitement-diabete-type-2/) - Place des innovations dans la stratégie thérapeutique globale
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

@@ -1,18 +1,21 @@
 ---
-title: "Trulicity danger"
-description: trulicity danger — Guide marché français.
-keyword: dulaglutide effets secondaires
-intent: Informational
-category: glp-1 medications
-author: Dr. Émilie Martin
+title: "Trulicity danger - Trulicity Danger"
+metaTitle: "Trulicity danger | Prix Efficacité France 2025"
+description: "trulicity danger — Guide marché français."
+metaDescription: "dulaglutide effets secondaires France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "dulaglutide effets secondaires"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Dr. Émilie Martin"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Trulicity, dulaglutide, diabète, prix"
 ---
-
-# Trulicity danger
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Analyse complète des dangers et risques du Trulicity (dulaglutide) : effets secondaires documentés, contre-indications, surveillance médicale nécessaire et mesures de sécurité selon les données ANSM et études cliniques 2025.
 
 ## À retenir
 
@@ -285,11 +288,9 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - **Dialyse** : Contre-indication relative
 - **Transplantation** : Avis spécialisé
 
+ Cette analyse des dangers ne doit pas décourager l'usage médical approprié du Trulicity. La balance bénéfice-risque reste favorable chez la plupart des patients diabétiques. Consultez toujours votre médecin pour évaluer votre situation personnelle.
 
-
-**Important :** Cette analyse des dangers ne doit pas décourager l'usage médical approprié du Trulicity. La balance bénéfice-risque reste favorable chez la plupart des patients diabétiques. Consultez toujours votre médecin pour évaluer votre situation personnelle.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
@@ -309,3 +310,9 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+- [Guide complet GLP-1](../medicaments-glp1/nouveau-medicament/)
+- [Comparaison traitements](../medicaments-glp1/medicament-americain-pour-maigrir/)
+- [Alternatives naturelles](../alternatives-glp1/semaglutide-naturel/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

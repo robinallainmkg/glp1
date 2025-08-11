@@ -1,6 +1,8 @@
 ---
 title: "Saxenda prix en France 2025 : coût, remboursement et alternatives"
+metaTitle: "Saxenda prix en France 2025 : coût, remboursement  | France 2025"
 description: "Prix Saxenda France : 169€ par stylo, conditions de remboursement obésité. Comparatif avec Ozempic et alternatives économiques."
+metaDescription: "Saxenda prix en France 2025  Saxenda (liraglutide) est le premier médicament spécifiquement approuvé pour le traitement de l'obésité en France."
 keyword: "saxenda prix"
 intent: "Informational"
 category: "glp-1 medications"
@@ -9,12 +11,14 @@ readingTime: 7
 datePublished: "2025-08-10"
 dateModified: "2025-08-10"
 canonicalUrl: "/medicaments-glp1/saxenda-prix/"
-tags: ["GLP-1", "saxenda", "liraglutide", "prix", "obésité"]
+tags:
+  - GLP-1
+  - saxenda
+  - liraglutide
+  - prix
+  - obésité
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Saxenda prix en France 2025
-
-**Résumé :** Saxenda (liraglutide) est le premier médicament spécifiquement approuvé pour le traitement de l'obésité en France. Son prix élevé nécessite une compréhension claire des modalités de prise en charge.
 
 ## À retenir sur le coût du traitement Saxenda pour l'obésité
 
@@ -161,55 +165,11 @@ Saxenda représente une option thérapeutique efficace mais coûteuse pour l'ob�
 - [Nouveau médicament](/medicaments-glp1/nouveau-medicament/) - Innovations 2025 : CagriSema, Retatrutide et futures molécules
 - [Traitements médicamenteux](/medicaments-glp1/traitements-medicamenteux/) - Panorama complet des options thérapeutiques disponibles
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

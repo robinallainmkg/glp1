@@ -1,0 +1,2415 @@
+{
+  "timestamp": "2025-08-11T08:17:49.755Z",
+  "totalArticles": 119,
+  "seoMetrics": {
+    "titlesOptimized": 23,
+    "metaDescriptionsPresent": 119,
+    "keywordsPresent": 53,
+    "internalLinksCount": 42,
+    "contentQuality": {
+      "shortArticles": 0,
+      "mediumArticles": 70,
+      "longArticles": 49
+    }
+  },
+  "technicalSEO": {
+    "structuredContent": 119,
+    "headingHierarchy": 119,
+    "imageOptimization": 0
+  },
+  "contentAnalysis": {
+    "readabilityScore": 0,
+    "keywordDensity": {},
+    "topicCoverage": {}
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "type": "optimization",
+      "title": "Articles à optimiser en priorité",
+      "description": "114 articles ont un score SEO < 50",
+      "articles": [
+        "alternatives-glp1/acupuncture-glp1.md",
+        "alternatives-glp1/alternatives-bio-glp1.md",
+        "alternatives-glp1/alternatives-naturelles-ozempic.md",
+        "alternatives-glp1/berberine-glp1.md",
+        "alternatives-glp1/cannelle-glp1.md",
+        "alternatives-glp1/chrome-diabete.md",
+        "alternatives-glp1/homeopathie-diabete.md",
+        "alternatives-glp1/meditation-glp1.md",
+        "alternatives-glp1/peut-on-guerir-du-diabete.md",
+        "alternatives-glp1/phytotherapie-glp1.md"
+      ]
+    },
+    {
+      "priority": "medium",
+      "type": "internal-linking",
+      "title": "Améliorer le maillage interne",
+      "description": "113 articles sans liens internes",
+      "articles": [
+        "alternatives-glp1/acupuncture-glp1.md",
+        "alternatives-glp1/alternatives-bio-glp1.md",
+        "alternatives-glp1/alternatives-naturelles-ozempic.md",
+        "alternatives-glp1/berberine-glp1.md",
+        "alternatives-glp1/cannelle-glp1.md"
+      ]
+    },
+    {
+      "priority": "low",
+      "type": "content-enhancement",
+      "title": "Ajouter des images",
+      "description": "119 articles sans images",
+      "articles": [
+        "alternatives-glp1/acupuncture-glp1.md",
+        "alternatives-glp1/alternatives-bio-glp1.md",
+        "alternatives-glp1/alternatives-naturelles-ozempic.md",
+        "alternatives-glp1/berberine-glp1.md",
+        "alternatives-glp1/cannelle-glp1.md"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "path": "recherche-glp1/glp-inhibitors.md",
+      "wordCount": 506,
+      "seoScore": 12,
+      "issues": [
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (122 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes"
+      ]
+    },
+    {
+      "path": "glp1-diabete/traitement-insulinique.md",
+      "wordCount": 699,
+      "seoScore": 15,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (14 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "recherche-glp1/glp-1.md",
+      "wordCount": 509,
+      "seoScore": 17,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (122 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/semaglutide-naturel.md",
+      "wordCount": 665,
+      "seoScore": 20,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/anneau-gastrique-prix-cmu.md",
+      "wordCount": 703,
+      "seoScore": 20,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (14 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/wegovy-remboursement-mutuelle.md",
+      "wordCount": 701,
+      "seoScore": 20,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (14 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "effets-secondaires-glp1/ozempic-danger.md",
+      "wordCount": 1298,
+      "seoScore": 25,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/operation-pour-maigrir-prix.md",
+      "wordCount": 1414,
+      "seoScore": 25,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/ou-trouver-ozempic.md",
+      "wordCount": 855,
+      "seoScore": 25,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/ozempic-prix.md",
+      "wordCount": 944,
+      "seoScore": 25,
+      "issues": [
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/stylo-saxenda.md",
+      "wordCount": 1153,
+      "seoScore": 25,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/glp1-proteines.md",
+      "wordCount": 534,
+      "seoScore": 25,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/isglt2-liste.md",
+      "wordCount": 966,
+      "seoScore": 25,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (128 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/wegovy-prix-pharmacie.md",
+      "wordCount": 702,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (14 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medecins-glp1-france/diabetologue-paris.md",
+      "wordCount": 590,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/glp1-hydratation.md",
+      "wordCount": 528,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/glp1-index-glycemique.md",
+      "wordCount": 534,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/glp1-micronutriments.md",
+      "wordCount": 528,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/jeune-intermittent-glp1.md",
+      "wordCount": 632,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-cetogene-glp1.md",
+      "wordCount": 558,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-chrono-nutrition-glp1.md",
+      "wordCount": 528,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-dash-glp1.md",
+      "wordCount": 534,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-detox-glp1.md",
+      "wordCount": 534,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-mediterraneen-glp1.md",
+      "wordCount": 534,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-paleo-glp1.md",
+      "wordCount": 534,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/regime-sans-sucre-glp1.md",
+      "wordCount": 540,
+      "seoScore": 28,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/acupuncture-glp1.md",
+      "wordCount": 708,
+      "seoScore": 30,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/alternatives-naturelles-ozempic.md",
+      "wordCount": 752,
+      "seoScore": 30,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/plantes-diabete.md",
+      "wordCount": 702,
+      "seoScore": 30,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/supplements-glp1.md",
+      "wordCount": 708,
+      "seoScore": 30,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/wegovy-prix.md",
+      "wordCount": 1876,
+      "seoScore": 30,
+      "issues": [
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (19 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-pied-glp1.md",
+      "wordCount": 721,
+      "seoScore": 30,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/ozempic-effets-secondaires-forum.md",
+      "wordCount": 736,
+      "seoScore": 30,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu de longueur correcte",
+        "Bonne structure (7 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/ballon-gastrique-rembourse.md",
+      "wordCount": 1205,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/dulaglutide-nom-commercial.md",
+      "wordCount": 1170,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/medicament-prise-de-poid.md",
+      "wordCount": 1681,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/metformine-diarrhee-solution.md",
+      "wordCount": 1347,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/semaglutide-achat.md",
+      "wordCount": 1316,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/trulicity-danger.md",
+      "wordCount": 1367,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/victoza-posologie.md",
+      "wordCount": 1145,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/victoza-rupture.md",
+      "wordCount": 1306,
+      "seoScore": 30,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/berberine-glp1.md",
+      "wordCount": 702,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/chrome-diabete.md",
+      "wordCount": 702,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/homeopathie-diabete.md",
+      "wordCount": 702,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/meditation-glp1.md",
+      "wordCount": 708,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/peut-on-guerir-du-diabete.md",
+      "wordCount": 673,
+      "seoScore": 33,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/phytotherapie-glp1.md",
+      "wordCount": 725,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/vinaigre-cidre-glp1.md",
+      "wordCount": 708,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/yoga-diabete.md",
+      "wordCount": 702,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "effets-secondaires-glp1/wegovy-danger.md",
+      "wordCount": 653,
+      "seoScore": 33,
+      "issues": [
+        "Meta description trop courte (< 120 caractères)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "effets-secondaires-glp1/wegovy-dosage.md",
+      "wordCount": 652,
+      "seoScore": 33,
+      "issues": [
+        "Meta description trop courte (< 120 caractères)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/chirurgie-bariatrique.md",
+      "wordCount": 659,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/combien-de-dose-dans-un-stylo-ozempic.md",
+      "wordCount": 598,
+      "seoScore": 33,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (7 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-americain-pour-maigrir.md",
+      "wordCount": 579,
+      "seoScore": 33,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (7 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant-en-pharmacie.md",
+      "wordCount": 605,
+      "seoScore": 33,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-pour-perdre-du-ventre-en-1-semaine.md",
+      "wordCount": 607,
+      "seoScore": 33,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/pilule-qui-fait-maigrir.md",
+      "wordCount": 665,
+      "seoScore": 33,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "recherche-glp1/recherche-clinique-glp1.md",
+      "wordCount": 576,
+      "seoScore": 33,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/glp1-calories-journalieres.md",
+      "wordCount": 584,
+      "seoScore": 33,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "regime-glp1/glp1-portion-alimentaire.md",
+      "wordCount": 534,
+      "seoScore": 33,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medecins-glp1-france/clinique-pour-obesite-new.md",
+      "wordCount": 1380,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medecins-glp1-france/clinique-pour-obesite.md",
+      "wordCount": 1380,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/ado-medicament.md",
+      "wordCount": 1054,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (14 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/dipeptidyl-peptidase-4.md",
+      "wordCount": 1171,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/dosage-trulicity.md",
+      "wordCount": 1266,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/januvia-autre-nom.md",
+      "wordCount": 1082,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/liraglutide-perte-de-poids-avis.md",
+      "wordCount": 1041,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/mecanisme-d-action.md",
+      "wordCount": 1093,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/medicament-americain-pour-maigrir.md",
+      "wordCount": 1090,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/metformine-autre-nom.md",
+      "wordCount": 1155,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/mounjaro-prix-france.md",
+      "wordCount": 1130,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/nouveau-traitement-diabete-type-2-injection.md",
+      "wordCount": 1271,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (15 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/pilule-qui-fait-maigrir.md",
+      "wordCount": 1252,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/sitagliptine-effets-secondaires.md",
+      "wordCount": 1122,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/traitement-diabete-type-2.md",
+      "wordCount": 1362,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/traitements-medicamenteux.md",
+      "wordCount": 1333,
+      "seoScore": 35,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/alternatives-bio-glp1.md",
+      "wordCount": 702,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "alternatives-glp1/cannelle-glp1.md",
+      "wordCount": 702,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-complications-glp1.md",
+      "wordCount": 739,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-gestationnel-glp1.md",
+      "wordCount": 763,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-regime-glp1.md",
+      "wordCount": 713,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-retinopathie-glp1.md",
+      "wordCount": 713,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-sport-glp1.md",
+      "wordCount": 714,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/diabete-urgence-glp1.md",
+      "wordCount": 713,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-auto-surveillance.md",
+      "wordCount": 712,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-carnet-diabetique.md",
+      "wordCount": 713,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-diabete-type-1.md",
+      "wordCount": 751,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-hba1c-reduction.md",
+      "wordCount": 804,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-insuline-interaction.md",
+      "wordCount": 748,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-nephropathie.md",
+      "wordCount": 712,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-diabete/glp1-neuropathie-diabetique.md",
+      "wordCount": 712,
+      "seoScore": 38,
+      "issues": [
+        "Pas assez de mots-clés (< 3)",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/personne-obese.md",
+      "wordCount": 659,
+      "seoScore": 38,
+      "issues": [
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/medicament-anti-obesite-novo-nordisk.md",
+      "wordCount": 940,
+      "seoScore": 38,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu de longueur correcte",
+        "Bonne structure (9 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/mounjaro-effet-secondaire.md",
+      "wordCount": 1438,
+      "seoScore": 38,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/orlistat-avant-apres.md",
+      "wordCount": 1305,
+      "seoScore": 38,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/sulfamide-hypoglycemiant.md",
+      "wordCount": 1485,
+      "seoScore": 38,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/sulfamides-medicaments.md",
+      "wordCount": 1240,
+      "seoScore": 38,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/wegovy-avis.md",
+      "wordCount": 1272,
+      "seoScore": 38,
+      "issues": [
+        "Titre trop long (> 70 caractères)",
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Bon maillage interne (6 liens)",
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/xenical-remboursement.md",
+      "wordCount": 1178,
+      "seoScore": 38,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/saxenda-prix-pharmacie.md",
+      "wordCount": 1206,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/avant-apres-glp1.md",
+      "wordCount": 1231,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/glp1-perte-de-poids.md",
+      "wordCount": 1131,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medecins-glp1-france/endocrinologue-pour-maigrir-new.md",
+      "wordCount": 1027,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medecins-glp1-france/endocrinologue-pour-maigrir.md",
+      "wordCount": 1027,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu long et détaillé",
+        "Bonne structure (11 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/coupe-faim-puissant-interdit-en-france.md",
+      "wordCount": 1010,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/medicament-pour-maigrir-tres-puissant.md",
+      "wordCount": 1193,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/medicaments-qui-augmentent-la-glycemie.md",
+      "wordCount": 1389,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/mounjaro-injection-pour-maigrir.md",
+      "wordCount": 1052,
+      "seoScore": 43,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta description optimisée (150-160 caractères)",
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/saxenda-prix.md",
+      "wordCount": 1026,
+      "seoScore": 43,
+      "issues": [
+        "Meta description trop courte (< 120 caractères)",
+        "Mots-clés manquants",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Bon maillage interne (6 liens)",
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "effets-secondaires-glp1/insulevel-effet-indesirable.md",
+      "wordCount": 657,
+      "seoScore": 46,
+      "issues": [
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/diabete-amaigrissement-rapide.md",
+      "wordCount": 656,
+      "seoScore": 46,
+      "issues": [
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant.md",
+      "wordCount": 651,
+      "seoScore": 46,
+      "issues": [
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/obesite-severe-prise-en-charge.md",
+      "wordCount": 651,
+      "seoScore": 46,
+      "issues": [
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Mots-clés bien définis (4)",
+        "Contenu de longueur correcte",
+        "Bonne structure (8 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/nouveau-medicament.md",
+      "wordCount": 1538,
+      "seoScore": 48,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Bon maillage interne (8 liens)",
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-perte-de-poids/ozempic-regime.md",
+      "wordCount": 1182,
+      "seoScore": 51,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Meta title optimisé",
+        "Contenu long et détaillé",
+        "Bonne structure (10 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/ozempic-injection-prix.md",
+      "wordCount": 828,
+      "seoScore": 51,
+      "issues": [
+        "Mots-clés manquants",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Bon maillage interne (8 liens)",
+        "Contenu de longueur correcte",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/trulicity-ou-ozempic.md",
+      "wordCount": 1261,
+      "seoScore": 51,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Bon maillage interne (8 liens)",
+        "Contenu long et détaillé",
+        "Bonne structure (13 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "glp1-cout/acheter-wegovy-en-france.md",
+      "wordCount": 1613,
+      "seoScore": 56,
+      "issues": [
+        "Aucun lien interne",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Titre optimisé (50-60 caractères)",
+        "Mots-clés bien définis (5)",
+        "Contenu long et détaillé",
+        "Bonne structure (15 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    },
+    {
+      "path": "medicaments-glp1/tirzepatide-avis.md",
+      "wordCount": 1510,
+      "seoScore": 59,
+      "issues": [
+        "Titre trop court (< 30 caractères)",
+        "Mots-clés manquants",
+        "Aucune image"
+      ],
+      "strengths": [
+        "Meta title optimisé",
+        "Meta description optimisée (150-160 caractères)",
+        "Bon maillage interne (6 liens)",
+        "Contenu long et détaillé",
+        "Bonne structure (12 sections H2)",
+        "Hiérarchie des titres correcte",
+        "Bon usage des listes",
+        "Bon formatage (texte en gras)"
+      ]
+    }
+  ],
+  "summary": {
+    "averageScore": 34,
+    "totalScore": 4084,
+    "topArticles": [
+      {
+        "path": "medicaments-glp1/tirzepatide-avis.md",
+        "wordCount": 1510,
+        "seoScore": 59,
+        "issues": [
+          "Titre trop court (< 30 caractères)",
+          "Mots-clés manquants",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Meta title optimisé",
+          "Meta description optimisée (150-160 caractères)",
+          "Bon maillage interne (6 liens)",
+          "Contenu long et détaillé",
+          "Bonne structure (12 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      },
+      {
+        "path": "glp1-cout/acheter-wegovy-en-france.md",
+        "wordCount": 1613,
+        "seoScore": 56,
+        "issues": [
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Titre optimisé (50-60 caractères)",
+          "Mots-clés bien définis (5)",
+          "Contenu long et détaillé",
+          "Bonne structure (15 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      },
+      {
+        "path": "glp1-perte-de-poids/ozempic-regime.md",
+        "wordCount": 1182,
+        "seoScore": 51,
+        "issues": [
+          "Mots-clés manquants",
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Titre optimisé (50-60 caractères)",
+          "Meta title optimisé",
+          "Contenu long et détaillé",
+          "Bonne structure (10 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      },
+      {
+        "path": "medicaments-glp1/ozempic-injection-prix.md",
+        "wordCount": 828,
+        "seoScore": 51,
+        "issues": [
+          "Mots-clés manquants",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Titre optimisé (50-60 caractères)",
+          "Bon maillage interne (8 liens)",
+          "Contenu de longueur correcte",
+          "Bonne structure (12 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      },
+      {
+        "path": "medicaments-glp1/trulicity-ou-ozempic.md",
+        "wordCount": 1261,
+        "seoScore": 51,
+        "issues": [
+          "Titre trop court (< 30 caractères)",
+          "Mots-clés manquants",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Meta title optimisé",
+          "Bon maillage interne (8 liens)",
+          "Contenu long et détaillé",
+          "Bonne structure (13 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      }
+    ],
+    "worstArticles": [
+      {
+        "path": "recherche-glp1/glp-inhibitors.md",
+        "wordCount": 506,
+        "seoScore": 12,
+        "issues": [
+          "Meta description trop courte (< 120 caractères)",
+          "Mots-clés manquants",
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Contenu de longueur correcte",
+          "Bonne structure (122 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes"
+        ]
+      },
+      {
+        "path": "glp1-diabete/traitement-insulinique.md",
+        "wordCount": 699,
+        "seoScore": 15,
+        "issues": [
+          "Titre trop long (> 70 caractères)",
+          "Meta description trop courte (< 120 caractères)",
+          "Mots-clés manquants",
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Contenu de longueur correcte",
+          "Bonne structure (14 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      },
+      {
+        "path": "recherche-glp1/glp-1.md",
+        "wordCount": 509,
+        "seoScore": 17,
+        "issues": [
+          "Mots-clés manquants",
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Contenu de longueur correcte",
+          "Bonne structure (122 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes"
+        ]
+      },
+      {
+        "path": "alternatives-glp1/semaglutide-naturel.md",
+        "wordCount": 665,
+        "seoScore": 20,
+        "issues": [
+          "Titre trop long (> 70 caractères)",
+          "Mots-clés manquants",
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Contenu de longueur correcte",
+          "Bonne structure (13 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      },
+      {
+        "path": "glp1-cout/anneau-gastrique-prix-cmu.md",
+        "wordCount": 703,
+        "seoScore": 20,
+        "issues": [
+          "Titre trop long (> 70 caractères)",
+          "Meta description trop courte (< 120 caractères)",
+          "Mots-clés manquants",
+          "Aucun lien interne",
+          "Aucune image"
+        ],
+        "strengths": [
+          "Contenu de longueur correcte",
+          "Bonne structure (14 sections H2)",
+          "Hiérarchie des titres correcte",
+          "Bon usage des listes",
+          "Bon formatage (texte en gras)"
+        ]
+      }
+    ]
+  }
+}

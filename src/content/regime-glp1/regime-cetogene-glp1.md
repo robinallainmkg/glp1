@@ -1,16 +1,13 @@
 ---
-title: "régime cétogène et GLP-1"
+title: "régime cétogène et GLP-1 - Regime Cetogene Glp1"
+metaTitle: "régime cétogène et GLP-1 | Prix Efficacité France 2025"
 description: "régime cétogène et GLP-1 — Guide marché français."
+metaDescription: "régime cétogène glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
 author: "Dr. Sophie Dubois"
-date: 2025-08-10
+date: "2025-08-10"
 keywords: "régime cétogène glp1, keto diabète"
+keyword: "régime cétogène glp-1, france 2025"
 ---
-
-# régime cétogène et GLP-1
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Cet article explique « régime cétogène et GLP-1 » pour le marché français : compatibilité, précautions, prix en €, cadre ANSM, conseils pratiques.
 
 ## À retenir
 
@@ -85,6 +82,14 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 - **Électrolytes poudre** : Équilibre hydrique
 - **Probiotiques** : Microbiote intestinal
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Le régime cétogène est-il compatible avec tous les GLP-1 ?
@@ -101,8 +106,6 @@ Acidocétose (diabétiques), constipation majorée, calculs rénaux, carences vi
 
 ## Conclusion
 
-[affiliate-box]
-
 L'association régime cétogène et GLP-1 peut potentialiser la perte de poids et l'amélioration métabolique. Cette stratégie ambitieuse nécessite un encadrement médical et nutritionnel expert pour éviter les complications et optimiser les bénéfices à long terme.
 
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez impérativement votre endocrinologue et un diététicien spécialisé avant d'entreprendre cette combinaison thérapeutique.
+ Ces informations sont fournies à titre éducatif uniquement. Consultez impérativement votre endocrinologue et un diététicien spécialisé avant d'entreprendre cette combinaison thérapeutique.

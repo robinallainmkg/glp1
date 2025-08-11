@@ -1,37 +1,22 @@
 ---
 title: "Mounjaro injection pour maigrir"
-description: mounjaro injection pour maigrir — Guide marché français.
-keyword: medicament mounjaro
-intent: Informational
-category: glp-1 medications
-author: Sophie Dubois
+metaTitle: "Mounjaro Injection Maigrir France 2025 | Efficacité Perte Poids"
+description: "Mounjaro injection pour maigrir en France 2025 : efficacité, posologie, prix, effets secondaires et témoignages patients réels."
+metaDescription: "mounjaro tirzepatide france, injection perte poids France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "mounjaro tirzepatide france, injection perte poids"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Sophie Dubois"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+featured: true
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-
-# Mounjaro injection pour maigrir
-
-*Dernière mise à jour : 11/08/2025*
-
-
-## Qu'est-ce que c'est ?
-
-*[Définition et présentation à développer...]*
-
-## Comment ça fonctionne ?
-
-*[Mécanisme d'action à développer...]*
-
-## Indications et utilisation
-
-*[Qui peut l'utiliser et comment à développer...]*
-
-## Précautions importantes
-
-*[Contre-indications et conseils à développer...]*
-
-
-**Résumé :** Guide complet Mounjaro injection perte de poids : tirzepatide, efficacité exceptionnelle, disponibilité France, prix, vs Wegovy/Ozempic, perspectives 2024.
 
 ## Mounjaro : l'injection révolutionnaire pour maigrir
 
@@ -158,6 +143,14 @@ Mounjaro® (tirzepatide) d'Eli Lilly représente la nouvelle génération de mé
 - **Innovation pipeline** : Accélération R&D concurrents
 - **Accès démocratisé** : Prix attendus plus abordables
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ Mounjaro injection
 
 ### Quand Mounjaro sera-t-il disponible pour l'obésité en France ?
@@ -172,16 +165,13 @@ Usage hors AMM déconseillé. Attendez l'autorisation officielle obésité pour 
 ### Quel sera le prix de Mounjaro obésité ?
 Estimation 300-350€/mois, avec programmes d'aide Eli Lilly prévus dès le lancement.
 
-
-
 **Mounjaro révolutionne le traitement de l'obésité** avec une efficacité inégalée. Cette innovation dual GLP-1/GIP marque l'entrée dans une nouvelle ère thérapeutique, promettant des résultats exceptionnels dès 2024.
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

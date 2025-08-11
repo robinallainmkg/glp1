@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import pertinenceReport from '../../pertinence-content-report.json';
 
 // === DONNÉES STATISTIQUES ===
 function countWords(text) {
@@ -181,7 +182,14 @@ for (const name of collectionNames) {
     }
   }
 
-  // Analyse de chaque article
+  // Enrichir detailedStats avec les scores et axes d'amélioration du rapport JSON
+  const reportMap = {};
+  pertinenceReport.articles.forEach(a => {
+    // On indexe par slug pour matcher facilement
+    const slug = a.filePath.replace(/^src\/content\//, '').replace(/\.md$/, '').split('/').pop();
+    reportMap[slug] = a;
+  });
+
   detailedStats = allEntries.map(article => {
     const md = article.body || '';
     const text = md.replace(/![^\n]*\n?/g, ' ')
@@ -200,7 +208,8 @@ for (const name of collectionNames) {
     
     // Score SEO détaillé
     const seoAnalysis = calculateSEOScore(md, wordCount, mainKeyword, mainKeywordDensity, interlinks);
-
+    // Récupération du rapport
+    const report = reportMap[article.slug] || {};
     return {
       collection: article._collection,
       slug: article.slug,
@@ -212,9 +221,11 @@ for (const name of collectionNames) {
       h2Count: countHeadings(md, 2),
       hasMedicalDisclaimer: hasMedicalDisclaimer(md),
       interlinks,
-      internalLinksCount: interlinks.total, // Pour compatibilité affichage
-      seoScore: seoAnalysis.score,
-      seoDetails: seoAnalysis.details,
+      internalLinksCount: interlinks.total,
+      seoScore: report.seoScore ?? seoAnalysis.score,
+      seoDetails: report.seoDetails ?? seoAnalysis.details,
+      pertinenceScore: report.pertinenceScore ?? 0,
+      pertinenceDetails: report.pertinenceDetails ?? [],
       isEmpty: wordCount < 200
     };
   });
@@ -222,6 +233,8 @@ for (const name of collectionNames) {
   // Statistiques globales
   totalArticles = detailedStats.length;
   emptyArticles = detailedStats.filter(s => s.isEmpty).length;
+  
+  const lastUpdate = new Date(pertinenceReport.timestamp).toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
 ---
 
 <!DOCTYPE html>
@@ -372,6 +385,11 @@ for (const name of collectionNames) {
       opacity: 0.9; 
       font-size: 1.1em; 
     }
+    .header p:last-child {
+      margin-top: 10px;
+      color: #ffc107;
+      font-weight: 500;
+    }
     .stats-grid { 
       display: grid; 
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -447,6 +465,7 @@ for (const name of collectionNames) {
       <div class="header">
         <h1>🏥 Dashboard Protégé - GLP-1 France</h1>
         <p>Monitoring complet • SEO • Monétisation</p>
+        <p style="margin-top:10px; color:#ffc107; font-weight:500;">Dernière mise à jour des scores : {lastUpdate}</p>
       </div>
 
       <div class="stats-grid">
@@ -467,75 +486,12 @@ for (const name of collectionNames) {
       <!-- SYSTÈME DE TABULATIONS -->
       <div class="tabs-container">
         <div class="tabs-header">
-          <button class="tab-btn active" data-tab="collections">📊 Collections</button>
-          <button class="tab-btn" data-tab="articles">📝 Articles</button>
-          <button class="tab-btn" data-tab="keywords">🔍 Mots-clés</button>
+          <button class="tab-btn active" data-tab="articles">📝 Articles</button>
           <button class="tab-btn" data-tab="roadmap">🚀 Roadmap</button>
         </div>
 
-        <!-- TAB 1: COLLECTIONS -->
-        <div class="tab-content active" id="tab-collections">
-          <div class="collections-section">
-            <h3>📊 Analyse par Collection</h3>
-            
-            <div style="overflow-x: auto; margin-bottom: 30px;">
-              <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                <thead>
-                  <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                    <th style="padding: 15px; text-align: left;">Collection</th>
-                    <th style="padding: 15px; text-align: center;">Articles</th>
-                    <th style="padding: 15px; text-align: center;">Vides</th>
-                    <th style="padding: 15px; text-align: center;">Publiés</th>
-                    <th style="padding: 15px; text-align: center;">% Complétude</th>
-                    <th style="padding: 15px; text-align: center;">Score Moyen</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {detailedStats.reduce((acc, article) => {
-                    const collection = article.collection;
-                    if (!acc.find(c => c.collection === collection)) {
-                      const collectionArticles = detailedStats.filter(a => a.collection === collection);
-                      const emptyCount = collectionArticles.filter(a => a.isEmpty).length;
-                      const publishedCount = collectionArticles.length - emptyCount;
-                      const completionRate = ((publishedCount / collectionArticles.length) * 100).toFixed(1);
-                      const avgScore = (collectionArticles.reduce((sum, a) => sum + a.seoScore, 0) / collectionArticles.length).toFixed(1);
-                      
-                      acc.push({
-                        collection,
-                        total: collectionArticles.length,
-                        empty: emptyCount,
-                        published: publishedCount,
-                        completion: completionRate,
-                        avgScore: avgScore
-                      });
-                    }
-                    return acc;
-                  }, []).map(collection => (
-                    <tr style="border-bottom: 1px solid #eee;">
-                      <td style="padding: 12px; font-weight: 500;">{collection.collection}</td>
-                      <td style="padding: 12px; text-align: center;">{collection.total}</td>
-                      <td style="padding: 12px; text-align: center; color: #dc3545;">{collection.empty}</td>
-                      <td style="padding: 12px; text-align: center; color: #28a745;">{collection.published}</td>
-                      <td style="padding: 12px; text-align: center;">
-                        <span style={`color: ${parseFloat(collection.completion) >= 70 ? '#28a745' : parseFloat(collection.completion) >= 50 ? '#ffc107' : '#dc3545'}`}>
-                          {collection.completion}%
-                        </span>
-                      </td>
-                      <td style="padding: 12px; text-align: center;">
-                        <span style={`font-weight: bold; color: ${parseFloat(collection.avgScore) >= 70 ? '#28a745' : parseFloat(collection.avgScore) >= 50 ? '#ffc107' : '#dc3545'}`}>
-                          {collection.avgScore}/100
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
         <!-- TAB 2: ARTICLES -->
-        <div class="tab-content" id="tab-articles">
+        <div class="tab-content active" id="tab-articles">
           <div class="articles-section">
             <h3>📝 Tous les Articles ({totalArticles})</h3>
             <div style="overflow-x: auto;">
@@ -550,6 +506,7 @@ for (const name of collectionNames) {
                     <th style="padding: 12px; text-align: center;">Liens Int.</th>
                     <th style="padding: 12px; text-align: center;">Optim. Liens</th>
                     <th style="padding: 12px; text-align: center;">Score SEO</th>
+                    <th style="padding: 12px; text-align: center;">Score de pertinence</th>
                     <th style="padding: 12px; text-align: center;">Action</th>
                   </tr>
                 </thead>
@@ -603,94 +560,17 @@ for (const name of collectionNames) {
                           {article.seoScore}/100
                         </span>
                       </td>
-                      <td style="padding: 10px; text-align: center; font-size: 12px;">
-                        {article.isEmpty ? '🆕 Créer' : 
-                         article.wordCount < 500 ? '📝 Étoffer' : 
-                         article.h2Count < 3 ? '🏗️ Structurer' : 
-                         !article.interlinks.isOptimal ? '🔗 Optimiser liens' : 
-                         '✅ Améliorer'}
+                      <td style="padding: 10px; text-align: center;">
+                        <span style={`font-weight: bold; color: ${article.pertinenceScore >= 80 ? '#28a745' : article.pertinenceScore >= 60 ? '#ffc107' : '#dc3545'}`}>
+                          {article.pertinenceScore}/100
+                        </span>
+                      </td>
+                      <td style="padding: 10px; text-align: center; display: flex; gap: 8px; justify-content: center; align-items: center;">
+                        <a href={`/${article.collection}/${article.slug}`} target="_blank" style="display: inline-block; padding: 6px 16px; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 500;">Voir</a>
+                        <button onclick={`showFixDetails('${article.slug}')`} style="padding: 6px 16px; background: #ffc107; color: #333; border: none; border-radius: 6px; font-weight: 500; cursor: pointer;">Fix</button>
                       </td>
                     </tr>
                   ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- TAB 3: MOTS-CLÉS -->
-        <div class="tab-content" id="tab-keywords">
-          <div class="keywords-section">
-            <h3>🔍 Analyse des Mots-clés</h3>
-            
-            <div class="stats-grid" style="margin-bottom: 30px;">
-              <div class="stat-card">
-                <div class="stat-number">{detailedStats.filter(a => a.mainKeyword && a.mainKeywordDensity >= 1 && a.mainKeywordDensity <= 3).length}</div>
-                <div class="stat-label">Densité optimale</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number red">{detailedStats.filter(a => !a.mainKeyword || a.mainKeyword === '').length}</div>
-                <div class="stat-label">Sans mot-clé</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number orange">{detailedStats.filter(a => a.mainKeywordDensity < 1 || a.mainKeywordDensity > 3).length}</div>
-                <div class="stat-label">Densité à ajuster</div>
-              </div>
-            </div>
-
-            <div style="overflow-x: auto;">
-              <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                <thead>
-                  <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                    <th style="padding: 12px; text-align: left;">Article</th>
-                    <th style="padding: 12px; text-align: center;">Mot-clé principal</th>
-                    <th style="padding: 12px; text-align: center;">Densité</th>
-                    <th style="padding: 12px; text-align: center;">Occurrences</th>
-                    <th style="padding: 12px; text-align: center;">Status</th>
-                    <th style="padding: 12px; text-align: center;">Recommandation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {detailedStats
-                    .filter(article => article.mainKeyword || article.wordCount > 200)
-                    .sort((a, b) => {
-                      if (!a.mainKeyword && b.mainKeyword) return 1;
-                      if (a.mainKeyword && !b.mainKeyword) return -1;
-                      return Math.abs(2 - a.mainKeywordDensity) - Math.abs(2 - b.mainKeywordDensity);
-                    })
-                    .slice(0, 25)
-                    .map(article => (
-                      <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 10px; font-size: 14px;">
-                          <strong>{article.title.length > 35 ? article.title.substring(0, 35) + '...' : article.title}</strong>
-                          <br />
-                          <small style="color: #666;">{article.collection}</small>
-                        </td>
-                        <td style="padding: 10px; text-align: center; font-size: 13px;">
-                          {article.mainKeyword ? (article.mainKeyword.length > 20 ? article.mainKeyword.substring(0, 20) + '...' : article.mainKeyword) : '❌ Non défini'}
-                        </td>
-                        <td style="padding: 10px; text-align: center;">
-                          <span style={`font-weight: bold; color: ${article.mainKeyword && article.mainKeywordDensity >= 1 && article.mainKeywordDensity <= 3 ? '#28a745' : article.mainKeyword ? '#dc3545' : '#6c757d'}`}>
-                            {article.mainKeyword ? article.mainKeywordDensity + '%' : 'N/A'}
-                          </span>
-                        </td>
-                        <td style="padding: 10px; text-align: center;">
-                          {article.mainKeyword ? Math.round((article.mainKeywordDensity * article.wordCount) / 100) : 'N/A'}
-                        </td>
-                        <td style="padding: 10px; text-align: center;">
-                          {!article.mainKeyword && '🔍 À définir'}
-                          {article.mainKeyword && article.mainKeywordDensity >= 1 && article.mainKeywordDensity <= 3 && '✅ Optimal'}
-                          {article.mainKeyword && article.mainKeywordDensity < 1 && '📈 Trop faible'}
-                          {article.mainKeyword && article.mainKeywordDensity > 3 && '📉 Trop élevée'}
-                        </td>
-                        <td style="padding: 10px; text-align: center; font-size: 12px;">
-                          {!article.mainKeyword && 'Choisir mot-clé'}
-                          {article.mainKeyword && article.mainKeywordDensity < 1 && 'Ajouter occurrences'}
-                          {article.mainKeyword && article.mainKeywordDensity > 3 && 'Réduire densité'}
-                          {article.mainKeyword && article.mainKeywordDensity >= 1 && article.mainKeywordDensity <= 3 && 'Maintenir'}
-                        </td>
-                      </tr>
-                    ))}
                 </tbody>
               </table>
             </div>
@@ -833,138 +713,6 @@ for (const name of collectionNames) {
           </div>
         </div>
       </div>
-        <h3>🚀 Roadmap - Affiliation et Monétisation</h3>
-        
-        <div class="roadmap-phase" style="border-left: 5px solid #667eea; background: #f8f9ff;">
-          <h4 style="color: #667eea;">📋 Phase 1 : Affiliation</h4>
-          <p><strong>Objectif :</strong> Intégrer des partenariats d'affiliation pertinents</p>
-          <ul style="line-height: 1.8;">
-            <li><strong>Prospection d'affiliations :</strong>
-              <ul>
-                <li>Plateformes d'affiliation (Amazon, CJ Affiliate, ShareASale)</li>
-                <li>Sites de cosmétiques et bien-être (Sephora, Douglas, etc.)</li>
-                <li>Compléments alimentaires (Nutrimea, Biovancia)</li>
-                <li>Pharmacies en ligne (Doctipharma, PharmashopDiscount)</li>
-              </ul>
-            </li>
-            <li><strong>Création de bannières :</strong>
-              <ul>
-                <li>Bannières contextuelles dans les articles</li>
-                <li>Sidebar avec produits recommandés</li>
-                <li>Call-to-action en fin d'articles</li>
-                <li>Intégration native dans le contenu</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="roadmap-phase" style="border-left: 5px solid #28a745; background: #f8fff8;">
-          <h4 style="color: #28a745;">📧 Phase 2 : Collecte de Données Utilisateurs</h4>
-          <p><strong>Objectif :</strong> Constituer une base de données qualifiée avec l'email comme identifiant unique</p>
-          <ul style="line-height: 1.8;">
-            <li><strong>Points de collecte :</strong>
-              <ul>
-                <li>Newsletter footer (existant - à optimiser)</li>
-                <li>Pop-up d'inscription stratégique</li>
-                <li>Formulaire de téléchargement du guide PDF</li>
-                <li>Commentaires et questions d'articles</li>
-                <li>Quiz interactifs sur les traitements</li>
-              </ul>
-            </li>
-            <li><strong>Base de données :</strong>
-              <ul>
-                <li>Email (identifiant unique)</li>
-                <li>Prénom / Nom</li>
-                <li>Âge / Tranche d'âge</li>
-                <li>Localisation (région/département)</li>
-                <li>Traitement actuel / Intérêt</li>
-                <li>Source d'acquisition</li>
-                <li>Date d'inscription</li>
-                <li>Historique d'engagement</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="roadmap-phase" style="border-left: 5px solid #ffc107; background: #fffef8;">
-          <h4 style="color: #f39c12;">📖 Phase 3 : Guide PDF Complet</h4>
-          <p><strong>Objectif :</strong> Créer un guide de référence A-Z pour traiter les effets secondaires</p>
-          <ul style="line-height: 1.8;">
-            <li><strong>Contenu du guide :</strong>
-              <ul>
-                <li>Classification des effets secondaires par gravité</li>
-                <li>Solutions naturelles et médicamenteuses</li>
-                <li>Protocoles de gestion par symptôme</li>
-                <li>Quand consulter un professionnel</li>
-                <li>Témoignages et cas pratiques</li>
-                <li>Check-lists et aide-mémoires</li>
-              </ul>
-            </li>
-            <li><strong>Monétisation :</strong>
-              <ul>
-                <li>Lead magnet pour collecte d'emails</li>
-                <li>Version premium payante</li>
-                <li>Liens d'affiliation intégrés</li>
-                <li>Mise à jour régulière</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="roadmap-phase" style="border-left: 5px solid #dc3545; background: #fff8f8;">
-          <h4 style="color: #dc3545;">🏥 Phase 4 : Annuaire de Professionnels</h4>
-          <p><strong>Objectif :</strong> Créer un annuaire complet des professionnels de santé spécialisés</p>
-          <ul style="line-height: 1.8;">
-            <li><strong>Scraping et collecte :</strong>
-              <ul>
-                <li>Endocrinologues par ville/département/région</li>
-                <li>Cliniques spécialisées en obésité</li>
-                <li>Centres de diabétologie</li>
-                <li>Nutritionnistes certifiés</li>
-                <li>Sources : Pages Jaunes, Doctolib, ordre des médecins</li>
-              </ul>
-            </li>
-            <li><strong>Données à collecter :</strong>
-              <ul>
-                <li>Nom, prénom, titre</li>
-                <li>Spécialités et certifications</li>
-                <li>Adresse complète</li>
-                <li>Téléphone, email, site web</li>
-                <li>Horaires et disponibilités</li>
-                <li>Acceptation secteur 1/2</li>
-                <li>Langues parlées</li>
-              </ul>
-            </li>
-            <li><strong>Monétisation :</strong>
-              <ul>
-                <li>Référencement payant des professionnels</li>
-                <li>Publicités géolocalisées</li>
-                <li>Partenariats avec cliniques privées</li>
-                <li>Commission sur prises de rendez-vous</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 8px; text-align: center;">
-          <h4 style="margin-top: 0;">🎯 Objectifs de Revenus</h4>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-            <div>
-              <div style="font-size: 2em; font-weight: bold;">1000€</div>
-              <div>Mois 1-3 (Affiliation)</div>
-            </div>
-            <div>
-              <div style="font-size: 2em; font-weight: bold;">3000€</div>
-              <div>Mois 4-6 (Guide + Base)</div>
-            </div>
-            <div>
-              <div style="font-size: 2em; font-weight: bold;">5000€</div>
-              <div>Mois 7-12 (Annuaire)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -1004,6 +752,7 @@ for (const name of collectionNames) {
     function showDashboard() {
       loginContainer.classList.add('hidden');
       dashboardContainer.classList.remove('hidden');
+      setTimeout(initTabs, 100); // Réinitialise les tabs après affichage du dashboard
     }
     
     // Gérer la connexion
@@ -1035,25 +784,56 @@ for (const name of collectionNames) {
     function initTabs() {
       const tabBtns = document.querySelectorAll('.tab-btn');
       const tabContents = document.querySelectorAll('.tab-content');
-      
       tabBtns.forEach(btn => {
+        btn.onclick = null;
         btn.addEventListener('click', function() {
+          console.log('Tab click:', this.getAttribute('data-tab'));
           const targetTab = this.getAttribute('data-tab');
-          
-          // Désactiver tous les boutons et contenus
           tabBtns.forEach(b => b.classList.remove('active'));
           tabContents.forEach(c => c.classList.remove('active'));
-          
-          // Activer le bouton et contenu sélectionnés
           this.classList.add('active');
           document.getElementById('tab-' + targetTab).classList.add('active');
         });
       });
+      console.log('Tabs initialized:', tabBtns.length);
     }
+    
+    // Afficher les détails des améliorations
+    function showFixDetails(slug) {
+      // Supprimer tout modal existant
+      const oldModal = document.getElementById('fix-modal');
+      if (oldModal) oldModal.remove();
+      const article = window.detailedStats.find(a => a.slug === slug);
+      if (!article) return;
+      let html = `<h3>À améliorer pour : ${article.title}</h3>`;
+      html += `<strong>SEO :</strong><ul>`;
+      article.seoDetails.forEach(d => { html += `<li>${d}</li>`; });
+      html += `</ul><strong>Pertinence :</strong><ul>`;
+      article.pertinenceDetails.forEach(d => { html += `<li>${d}</li>`; });
+      html += `</ul>`;
+      const modal = document.createElement('div');
+      modal.id = 'fix-modal';
+      modal.style.position = 'fixed';
+      modal.style.top = '0';
+      modal.style.left = '0';
+      modal.style.width = '100vw';
+      modal.style.height = '100vh';
+      modal.style.background = 'rgba(0,0,0,0.5)';
+      modal.style.zIndex = '100';
+      modal.innerHTML = `<div style='background:white;max-width:500px;margin:10vh auto;padding:30px;border-radius:12px;box-shadow:0 2px 20px #0002;position:relative;'>${html}<br><button id='close-fix-modal' style='margin-top:20px;padding:8px 20px;background:#667eea;color:white;border:none;border-radius:6px;font-weight:500;'>Fermer</button></div>`;
+      modal.onclick = function(e) { if (e.target === modal) modal.remove(); };
+      document.body.appendChild(modal);
+      document.getElementById('close-fix-modal').onclick = function() {
+        document.getElementById('fix-modal').remove();
+        setTimeout(initTabs, 100); // Réinitialise les tabs après fermeture du modal
+      };
+    }
+    window.detailedStats = JSON.parse('{detailedStatsJson}');
     
     // Initialiser
     checkAuth();
     initTabs();
+    document.addEventListener('DOMContentLoaded', initTabs);
   </script>
 </body>
 </html>

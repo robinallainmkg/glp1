@@ -1,16 +1,13 @@
 ---
 title: "complications diabète et GLP-1"
+metaTitle: "complications diabète et GLP-1 | Prix Efficacité France 2025"
 description: "complications diabète et GLP-1 — Guide marché français."
+metaDescription: "complications diabète glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
 author: "Dr. Sophie Dubois"
-date: 2025-08-10
+date: "2025-08-10"
 keywords: "complications diabétiques glp1, prévention macro micro"
+keyword: "complications diabète glp-1, france 2025"
 ---
-
-# complications diabète et GLP-1
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Cet article explique « complications diabète et GLP-1 » pour le marché français : prévention cardiovasculaire, rénale, ophtalmologique avec prix en €, cadre ANSM.
 
 ## À retenir
 
@@ -95,6 +92,14 @@ Les diabète type 2, HbA1c, glycémie sont des éléments clés dans ce domaine 
 - **Baume lèvres réparateur** : Sécheresse médicaments
 - **Gel douche surgras** : Peau fragile diabète
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Les GLP-1 protègent-ils vraiment du cœur ?
@@ -111,13 +116,11 @@ Fond d'œil annuel minimum, rapproché si rétinopathie. Attention initiation ra
 
 ## Conclusion
 
-[affiliate-box]
-
 Les agonistes GLP-1 offrent une protection cardiovasculaire et rénale démontrée chez les diabétiques. Cette cardio-néphro-protection, au-delà du bénéfice glycémique, justifie leur prescription préférentielle chez les patients à risque de complications. Un suivi multidisciplinaire optimise la prévention.
 
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez toujours votre cardiologue, endocrinologue ou néphrologue pour un suivi personnalisé de vos complications diabétiques.
+ Ces informations sont fournies à titre éducatif uniquement. Consultez toujours votre cardiologue, endocrinologue ou néphrologue pour un suivi personnalisé de vos complications diabétiques.
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

@@ -1,16 +1,15 @@
 ---
 title: "Médicament pour maigrir très puissant"
-description: médicament pour maigrir très puissant — Guide marché français.
-keyword: médicament maigrir rapidement
-intent: Informational
-category: glp-1 for weight loss
-author: Karim Benali
+metaTitle: "Médicament pour maigrir très puissant | France 2025"
+description: "médicament pour maigrir très puissant — Guide marché français."
+metaDescription: "médicament maigrir rapidement pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
+keyword: "médicament maigrir rapidement"
+intent: "Informational"
+category: "glp-1 for weight loss"
+author: "Karim Benali"
 readingTime: 6
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 ---
-# Médicament pour maigrir très puissant
-
-*Dernière mise à jour : 11/08/2025*
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
@@ -97,7 +96,7 @@ L'approche optimale associe :
 - **Activité physique adaptée** : Selon les capacités
 - **Soutien psychologique** : Si nécessaire
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

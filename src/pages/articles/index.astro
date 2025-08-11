@@ -17,17 +17,54 @@ const allArticles = await Promise.all([
 ]).then(collections => {
   return collections.flat().map(article => ({
     ...article,
-    // Détermine la catégorie depuis le slug
-    category: article.id.includes('/') ? article.collection : article.collection,
+    category: article.collection,
     url: `/${article.collection}/${article.slug}/`
   }))
 }).then(articles => {
-  // Trier par date de publication (plus récent en premier)
-  return articles.sort((a, b) => {
-    const dateA = new Date(a.data.publishedAt || a.data.publishDate || '2024-01-01')
-    const dateB = new Date(b.data.publishedAt || b.data.publishDate || '2024-01-01')
-    return dateB - dateA
-  })
+  // Algorithme de mélange avancé pour diversifier les collections
+  
+  // 1. Grouper par collection
+  const articlesByCollection = {};
+  articles.forEach(article => {
+    if (!articlesByCollection[article.collection]) {
+      articlesByCollection[article.collection] = [];
+    }
+    articlesByCollection[article.collection].push(article);
+  });
+  
+  // 2. Trier chaque collection par titre ou date
+  Object.keys(articlesByCollection).forEach(collection => {
+    articlesByCollection[collection].sort((a, b) => {
+      // Essayer par date d'abord, puis par titre
+      const dateA = new Date(a.data.publishedAt || a.data.publishDate || a.data.datePublished || '2024-01-01');
+      const dateB = new Date(b.data.publishedAt || b.data.publishDate || b.data.datePublished || '2024-01-01');
+      
+      if (dateA.getTime() !== dateB.getTime()) {
+        return dateB - dateA; // Plus récent en premier
+      }
+      
+      // Si même date, trier par titre
+      return a.data.title.localeCompare(b.data.title);
+    });
+  });
+  
+  // 3. Algorithme de distribution équitable (round-robin)
+  const mixedArticles = [];
+  const collections = Object.keys(articlesByCollection);
+  let maxLength = Math.max(...Object.values(articlesByCollection).map(arr => arr.length));
+  
+  for (let i = 0; i < maxLength; i++) {
+    // Mélanger l'ordre des collections à chaque tour
+    const shuffledCollections = [...collections].sort(() => Math.random() - 0.5);
+    
+    for (let collection of shuffledCollections) {
+      if (articlesByCollection[collection][i]) {
+        mixedArticles.push(articlesByCollection[collection][i]);
+      }
+    }
+  }
+  
+  return mixedArticles;
 })
 
 // Configuration des couleurs par catégorie

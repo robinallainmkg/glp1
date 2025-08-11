@@ -1,18 +1,21 @@
 ---
-title: "Victoza posologie"
-description: victoza posologie — Guide marché français.
-keyword: victoza perte de poids posologie
-intent: Informational
-category: glp-1 medications
-author: Julien Lefèvre
+title: "Victoza posologie - Victoza Posologie"
+metaTitle: "Victoza posologie | Prix Efficacité France 2025"
+description: "victoza posologie — Guide marché français."
+metaDescription: "victoza perte de poids posologie France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "victoza perte de poids posologie"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Julien Lefèvre"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
 ---
-
-# Victoza posologie
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Guide posologie Victoza (liraglutide) : initiation 0,6mg, titration progressive jusqu'à 1,8mg selon tolérance, injection quotidienne, ajustements selon glycémie, contre-indications et surveillance spécialisée.
 
 ## À retenir
 
@@ -222,11 +225,9 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - **Chirurgie** : Arrêt temporaire possible
 - **Médication** : Interactions vérifier
 
+ La posologie Victoza nécessite un suivi médical spécialisé avec titration progressive selon tolérance individuelle. Ne jamais modifier la dose sans avis médical. En cas d'effets secondaires persistants, consultez rapidement votre diabétologue.
 
-
-**Important :** La posologie Victoza nécessite un suivi médical spécialisé avec titration progressive selon tolérance individuelle. Ne jamais modifier la dose sans avis médical. En cas d'effets secondaires persistants, consultez rapidement votre diabétologue.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
@@ -246,3 +247,10 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
+- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
+- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

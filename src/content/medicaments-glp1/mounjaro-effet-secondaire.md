@@ -1,18 +1,22 @@
 ---
-title: "Mounjaro effet secondaire"
-description: mounjaro effet secondaire — Guide marché français.
-keyword: doses mounjaro
-intent: Informational
-category: glp-1 medications
-author: Julien Lefèvre
+title: "Mounjaro effet secondaire - Mounjaro Effet Secondaire"
+metaTitle: "Mounjaro Effets Secondaires France 2025 | Guide Sécurité"
+description: "Mounjaro effets secondaires France 2025 : fréquence, gravité, gestion et précautions. Guide complet sécurité tirzepatide."
+metaDescription: "mounjaro effets secondaires france France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "mounjaro effets secondaires france"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Julien Lefèvre"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+featured: true
+keywords: "GLP-1, glp1, agoniste GLP-1, tirzepatide, Mounjaro, dual agonist, perte de poids"
 ---
-
-# Mounjaro effet secondaire
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Guide complet sur les effets secondaires du Mounjaro (tirzepatide) en France : fréquence, gravité, gestion pratique, surveillance médicale recommandée selon les données ANSM et les études cliniques internationales.
 
 ## À retenir
 
@@ -309,11 +313,9 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - Polyéthylène glycol pour la constipation
 - Siméthinone pour les ballonnements
 
+ Cette liste d'effets secondaires n'est pas exhaustive. Tout symptôme nouveau ou préoccupant doit faire l'objet d'une consultation médicale. L'arrêt du traitement ne doit jamais être décidé sans avis médical spécialisé.
 
-
-**Important :** Cette liste d'effets secondaires n'est pas exhaustive. Tout symptôme nouveau ou préoccupant doit faire l'objet d'une consultation médicale. L'arrêt du traitement ne doit jamais être décidé sans avis médical spécialisé.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
@@ -333,3 +335,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+- [prix Mounjaro France](../medicaments-glp1/mounjaro-prix-france/)
+- [injection Mounjaro](../medicaments-glp1/mounjaro-injection-pour-maigrir/)
+- [effets secondaires Mounjaro](../medicaments-glp1/mounjaro-effet-secondaire/)
+- [avis Tirzepatide](../medicaments-glp1/tirzepatide-avis/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

@@ -1,16 +1,15 @@
 ---
 title: "Effets secondaires glp-1 : insulevel effet indesirable"
+metaTitle: "Effets secondaires glp-1 : insulevel effet indesir | France 2025"
 description: "Guide complet sur insulevel effet indesirable des médicaments GLP-1. Symptômes, prévention et solutions. Conseils médicaux France 2025. Informations vérifiées par des professionnels de santé."
-keyword: insulevel effet indésirable
-intent: Informational
-category: glp-1 side effects
-author: Julien Lefèvre
+metaDescription: "insulevel effet indésirable effets secondaires France 2025 : fréquence, gravité, solutions. Guide sécurité et précautions."
+keyword: "insulevel effet indésirable"
+intent: "Informational"
+category: "glp-1 side effects"
+author: "Julien Lefèvre"
 readingTime: 5
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 ---
-# Insulevel Effet Indésirable des Médicaments GLP-1 : Guide Complet
-
-*Dernière mise à jour : 11/08/2025*
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
@@ -97,7 +96,7 @@ L'approche optimale associe :
 - **Activité physique adaptée** : Selon les capacités
 - **Soutien psychologique** : Si nécessaire
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

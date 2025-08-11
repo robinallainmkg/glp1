@@ -1,18 +1,21 @@
 ---
-title: "Victoza rupture"
-description: victoza rupture — Guide marché français.
-keyword: trulicity 3 mg rupture de stock
-intent: Informational
-category: glp-1 medications
-author: Karim Benali
+title: "Victoza rupture - Victoza Rupture"
+metaTitle: "Victoza rupture | Prix Efficacité France 2025"
+description: "victoza rupture — Guide marché français."
+metaDescription: "trulicity 3 mg rupture de stock France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "trulicity 3 mg rupture de stock"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Karim Benali"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
 ---
-
-# Victoza rupture
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Analyse des ruptures de stock Victoza en France : causes, impact patients, alternatives disponibles, circuits d'approvisionnement et solutions pratiques selon les données ANSM et pharmacies 2025.
 
 ## À retenir
 
@@ -263,11 +266,9 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - **Import illégal** : Sites non autorisés
 - **Panique** : Stress contre-productif
 
+ En cas de rupture Victoza, ne jamais arrêter brutalement le traitement. Contactez immédiatement votre médecin pour une alternative sécurisée. Les solutions existent pour maintenir votre équilibre thérapeutique.
 
-
-**Important :** En cas de rupture Victoza, ne jamais arrêter brutalement le traitement. Contactez immédiatement votre médecin pour une alternative sécurisée. Les solutions existent pour maintenir votre équilibre thérapeutique.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
@@ -287,3 +288,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

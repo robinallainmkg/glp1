@@ -1,35 +1,21 @@
 ---
 title: "Médicaments glp-1 : dosage trulicity - guide complet france 2025"
+metaTitle: "Médicaments glp-1 : dosage trulicity - guide compl | France 2025"
 description: "Guide complet sur dosage trulicity des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-keyword: dosing of trulicity
-intent: Informational
-category: glp-1 medications
-author: Sophie Dubois
+metaDescription: "dosing of trulicity France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "dosing of trulicity"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Sophie Dubois"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Trulicity, dulaglutide, diabète, glycémie"
 ---
-
-
-# Dosage Trulicity : Guide Complet des Médicaments GLP-1
-
-**Résumé :** Guide dosage Trulicity : 0,75 mg à 4,5 mg/semaine, escalade progressive, injection hebdomadaire, adaptation selon HbA1c, surveillance efficacité/tolérance.
-
-
-## Qu'est-ce que c'est ?
-
-*[Définition et présentation à développer...]*
-
-## Comment ça fonctionne ?
-
-*[Mécanisme d'action à développer...]*
-
-## Indications et utilisation
-
-*[Qui peut l'utiliser et comment à développer...]*
-
-## Précautions importantes
-
-*[Contre-indications et conseils à développer...]*
-
 
 ## Dosage Trulicity : guide posologique complet
 
@@ -233,6 +219,14 @@ Le dosage de Trulicity (dulaglutide) suit un schéma d'escalade progressive pour
 - **Régularité** : Reprendre rythme normal
 - **Aide-mémoire** : Alarme téléphone/agenda
 
+- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
+- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
+- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ dosage Trulicity
 
 ### Comment augmenter la dose de Trulicity ?
@@ -247,73 +241,13 @@ Oui, en cas d'effets secondaires importants, on peut temporairement réduire la 
 ### Le dosage change-t-il avec l'âge ?
 Chez les patients âgés (>75 ans), on préfère débuter à 0,75 mg et progresser plus lentement pour limiter les effets secondaires.
 
-
-
 **Le dosage de Trulicity doit être personnalisé** selon l'efficacité glycémique, la tolérance digestive et les caractéristiques individuelles du patient.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

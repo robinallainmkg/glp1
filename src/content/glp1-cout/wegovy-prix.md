@@ -1,20 +1,26 @@
 ---
 title: "Wegovy prix france 2025 : coût complet, remboursement et alternatives"
+metaTitle: "Wegovy prix france 2025 : coût complet, remboursem | France 2025"
 description: "Prix Wegovy en France : 269€/mois pour la dose maximale, remboursement sécurité sociale, comparaison pharmacies et alternatives économiques."
-keyword: wegovy prix
-intent: Commercial
-category: glp1-cout
-author: Dr. Émilie Martin
+metaDescription: "Wegovy Prix France 2025 : Guide Complet des Coûts Le prix de Wegovy en France s'échelonne de 90€ à 270€ par mois selon le dosage."
+keyword: "wegovy prix"
+intent: "Commercial"
+category: "glp1-cout"
+author: "Dr. Émilie Martin"
 readingTime: 10
 datePublished: "2025-08-10"
 dateModified: "2025-08-10"
 canonicalUrl: "/glp1-cout/wegovy-prix/"
 image: "/images/articles/wegovy-prix-france.jpg"
-tags: ["wegovy", "prix", "coût", "remboursement", "france"]
+tags:
+  - wegovy
+  - prix
+  - coût
+  - remboursement
+  - france
+featured: true
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Wegovy Prix France 2025 : Guide Complet des Coûts
-
 **Le prix de Wegovy en France s'échelonne de 90€ à 270€ par mois selon le dosage.** Ce médicament révolutionnaire pour la perte de poids représente un investissement significatif, mais des solutions de remboursement existent.
 
 ## À retenir sur le prix Wegovy
@@ -189,6 +195,14 @@ Wegovy peut être remboursé à **65%** sous conditions strictes :
 - 3 premiers mois gratuits
 - Puis 50% réduction 6 mois
 - **Total patient** : 675€/an
+
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
 ## FAQ sur le prix Wegovy
 
@@ -393,10 +407,9 @@ Non, ajoutez 50-100 € tous les 3 mois pour consultations endocrinologue et ana
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

@@ -1,18 +1,21 @@
 ---
 title: "Sitagliptine effets secondaires"
-description: sitagliptine effets secondaires — Guide marché français.
-keyword: sitagliptine 100 mg effets secondaires
-intent: Informational
-category: glp-1 medications
-author: Karim Benali
+metaTitle: "Sitagliptine effets secondaires | France 2025"
+description: "sitagliptine effets secondaires — Guide marché français."
+metaDescription: "sitagliptine 100 mg effets secondaires France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "sitagliptine 100 mg effets secondaires"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Karim Benali"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, prix, coût, remboursement, effets secondaires"
 ---
-
-
-# Sitagliptine effets secondaires
-
-*Dernière mise à jour : 11/08/2025*
-
 
 ## Comprendre les effets
 
@@ -29,9 +32,6 @@ readingTime: 5
 ## Quand consulter
 
 *[Signes d'alerte à développer...]*
-
-
-**Résumé :** Guide sitagliptine effets secondaires : infections respiratoires, maux de tête, réactions cutanées, risque pancréatite rare, surveillance long terme nécessaire.
 
 ## Sitagliptine effets secondaires : profil de sécurité
 
@@ -219,6 +219,12 @@ La sitagliptine (Januvia®) présente un profil de tolérance généralement fav
 - **Laboratoire** : MSD pharmacovigilance
 - **Traçabilité** : Dossier médical patient
 
+- [Guide complet GLP-1](../medicaments-glp1/nouveau-medicament/)
+- [Comparaison traitements](../medicaments-glp1/medicament-americain-pour-maigrir/)
+- [Alternatives naturelles](../alternatives-glp1/semaglutide-naturel/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ sitagliptine effets secondaires
 
 ### Les effets secondaires de la sitagliptine sont-ils graves ?
@@ -233,16 +239,13 @@ Consultez immédiatement : cela peut signaler une pancréatite rare mais grave n
 ### La sitagliptine provoque-t-elle des hypoglycémies ?
 Non, sauf si associée à des sulfamides ou de l'insuline. C'est un avantage majeur de cette classe thérapeutique.
 
-
-
 **La sitagliptine présente un profil de sécurité** globalement favorable avec une surveillance clinique adaptée, particulièrement pour les risques pancréatiques et articulaires.
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

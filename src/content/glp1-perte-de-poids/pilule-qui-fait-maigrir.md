@@ -1,16 +1,15 @@
 ---
-title: "Perte de poids glp-1 : pilule qui fait maigrir - guide complet france 2025"
+title: "Perte de poids glp-1 : pilule qui fait maigrir"
+metaTitle: "Perte de poids glp-1 : pilule qui fait maigrir - g | France 2025"
 description: "Pilule qui fait maigrir avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
-keyword: pillule qui fait maigrir
-intent: Informational
-category: glp-1 for weight loss
-author: Sophie Dubois
+metaDescription: "pillule qui fait maigrir pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
+keyword: "pillule qui fait maigrir"
+intent: "Informational"
+category: "glp-1 for weight loss"
+author: "Sophie Dubois"
 readingTime: 5
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 ---
-# Pilule qui Fait Maigrir : Guide Complet des Médicaments GLP-1
-
-*Dernière mise à jour : 11/08/2025*
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
@@ -97,7 +96,7 @@ L'approche optimale associe :
 - **Activité physique adaptée** : Selon les capacités
 - **Soutien psychologique** : Si nécessaire
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

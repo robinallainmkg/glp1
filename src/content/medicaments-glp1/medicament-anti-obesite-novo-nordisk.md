@@ -1,37 +1,21 @@
 ---
 title: "Médicament anti obésité novo nordisk"
-description: médicament anti obésité novo nordisk — Guide marché français.
-keyword: novo nordisk médicament obésité
-intent: Informational
-category: glp-1 medications
-author: Sophie Dubois
+metaTitle: "Médicament anti obésité novo nordisk | France 2025"
+description: "médicament anti obésité novo nordisk — Guide marché français."
+metaDescription: "novo nordisk médicament obésité France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "novo nordisk médicament obésité"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Sophie Dubois"
 readingTime: 6
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-
-# Médicament anti obésité novo nordisk
-
-*Dernière mise à jour : 11/08/2025*
-
-
-## Qu'est-ce que c'est ?
-
-*[Définition et présentation à développer...]*
-
-## Comment ça fonctionne ?
-
-*[Mécanisme d'action à développer...]*
-
-## Indications et utilisation
-
-*[Qui peut l'utiliser et comment à développer...]*
-
-## Précautions importantes
-
-*[Contre-indications et conseils à développer...]*
-
-
-**Résumé :** Guide complet Novo Nordisk anti-obésité : Wegovy, Saxenda, Ozempic, prix France, programmes d'aide, efficacité clinique, accès 2024.
 
 ## Novo Nordisk : révolution des médicaments anti-obésité
 
@@ -57,7 +41,7 @@ Novo Nordisk, laboratoire pharmaceutique danois, transforme le traitement de l'o
 - **Indication officielle :** Diabète type 2 uniquement
 - **Usage hors AMM :** Perte de poids (non remboursé)
 - **Prix :** 75€/mois (remboursé diabète)
-- **Important :** Préférer Wegovy® pour l'obésité
+-  Préférer Wegovy® pour l'obésité
 
 ### Efficacité comparative prouvée
 
@@ -157,6 +141,14 @@ Novo Nordisk, laboratoire pharmaceutique danois, transforme le traitement de l'o
 - **Remboursement partiel** : Probable 2025
 - **Conditions strictes** : IMC, échecs antérieurs
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ essentielles
 
 ### Quel médicament Novo Nordisk choisir pour l'obésité ?
@@ -171,11 +163,9 @@ Négociations HAS en cours. Remboursement partiel possible fin 2024/2025 sous co
 ### Puis-je utiliser Ozempic pour maigrir ?
 Usage hors AMM déconseillé. Wegovy® est spécifiquement développé et dosé pour l'obésité.
 
-
-
 **Novo Nordisk révolutionne le traitement de l'obésité** avec des médicaments d'efficacité inégalée. L'accès s'améliore progressivement avec les programmes d'aide et les futures négociations de remboursement.
 
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

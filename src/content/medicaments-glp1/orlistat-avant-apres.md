@@ -1,18 +1,21 @@
 ---
-title: "Orlistat avant apres"
-description: orlistat avant apres — Guide marché français.
-keyword: orlistat avant après
-intent: Informational
-category: glp-1 medications
-author: Sophie Dubois
+title: "Orlistat avant apres - Orlistat Avant Apres"
+metaTitle: "Orlistat avant apres | Prix Efficacité France 2025"
+description: "orlistat avant apres — Guide marché français."
+metaDescription: "orlistat avant après France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "orlistat avant après"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Sophie Dubois"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Orlistat avant apres
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Guide complet des résultats Orlistat avant/après : témoignages authentiques, études cliniques, photos de transformations, conseils d'optimisation et comparaison avec les nouveaux traitements GLP-1 en France.
 
 ## À retenir
 
@@ -247,11 +250,9 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - **Vitamines liposolubles** : A, D, E, K
 - **Observance** : Décompte gélules
 
+ Les résultats présentés sont des moyennes issues d'études cliniques. Les réponses individuelles varient selon de nombreux facteurs. Un suivi médical régulier est indispensable pour optimiser l'efficacité et la sécurité du traitement.
 
-
-**Important :** Les résultats présentés sont des moyennes issues d'études cliniques. Les réponses individuelles varient selon de nombreux facteurs. Un suivi médical régulier est indispensable pour optimiser l'efficacité et la sécurité du traitement.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
@@ -271,3 +272,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

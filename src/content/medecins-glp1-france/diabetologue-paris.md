@@ -1,16 +1,13 @@
 ---
-title: "diabétologue Paris GLP-1"
+title: "diabétologue Paris GLP-1 - Diabetologue Paris"
+metaTitle: "diabétologue Paris GLP-1 | Prix Efficacité France 2025"
 description: "diabétologue Paris GLP-1 — Guide marché français."
+metaDescription: "diabétologue paris glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
 author: "Dr. Émilie Martin"
-date: 2025-08-10
+date: "2025-08-10"
 keywords: "diabétologue paris glp1, endocrinologue ozempic"
+keyword: "diabétologue paris glp-1, france 2025"
 ---
-
-# diabétologue Paris GLP-1
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Cet article explique « diabétologue Paris GLP-1 » pour le marché français : spécialistes recommandés, prix consultations, remboursement, prise de rendez-vous.
 
 ## À retenir
 
@@ -85,6 +82,14 @@ Paris concentre de nombreux diabétologues et endocrinologues spécialisés dans
 - **Balance connectée** : Suivi pondéral régulier
 - **Lecteur glucose** : Auto-surveillance si diabète
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Comment choisir son diabétologue parisien ?
@@ -101,8 +106,6 @@ Consultation 1 mois, puis tous les 3 mois la première année. Adaptation selon 
 
 ## Conclusion
 
-[affiliate-box]
-
 Paris offre un accès privilégié aux diabétologues spécialisés GLP-1 avec expertise hospitalière et libérale. Ces praticiens expérimentés optimisent l'initiation, le suivi et l'adaptation des traitements selon profils individuels. Une préparation rigoureuse maximise l'efficacité consultative.
 
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez votre médecin traitant pour obtenir une orientation spécialisée adaptée à votre situation médicale.
+ Ces informations sont fournies à titre éducatif uniquement. Consultez votre médecin traitant pour obtenir une orientation spécialisée adaptée à votre situation médicale.

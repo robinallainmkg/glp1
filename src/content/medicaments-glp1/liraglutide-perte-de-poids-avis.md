@@ -1,37 +1,21 @@
 ---
 title: "Liraglutide perte de poids avis"
-description: liraglutide perte de poids avis — Guide marché français.
-keyword: liraglutide comprimé
-intent: Informational
-category: glp-1 medications
-author: Dr. Émilie Martin
+metaTitle: "Liraglutide perte de poids avis | France 2025"
+description: "liraglutide perte de poids avis — Guide marché français."
+metaDescription: "liraglutide comprimé France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "liraglutide comprimé"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Dr. Émilie Martin"
 readingTime: 6
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, amaigrissement"
 ---
-
-
-# Liraglutide perte de poids avis
-
-*Dernière mise à jour : 11/08/2025*
-
-
-## Qu'est-ce que c'est ?
-
-*[Définition et présentation à développer...]*
-
-## Comment ça fonctionne ?
-
-*[Mécanisme d'action à développer...]*
-
-## Indications et utilisation
-
-*[Qui peut l'utiliser et comment à développer...]*
-
-## Précautions importantes
-
-*[Contre-indications et conseils à développer...]*
-
-
-**Résumé :** Guide complet liraglutide perte de poids : avis patients, efficacité Saxenda, témoignages réels, prix, effets secondaires, comparaison, 2024.
 
 ## Liraglutide pour la perte de poids : avis et témoignages
 
@@ -167,6 +151,14 @@ Le liraglutide (Saxenda®) génère des avis contrastés chez les patients. Anal
 - **Rapport qualité/prix** : 5,4/10
 - **Recommandation entourage** : 6,7/10
 
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+- [acheter Wegovy France](../glp1-cout/acheter-wegovy-en-france/)
+- [dangers Wegovy](../effets-secondaires-glp1/wegovy-danger/)
+- [remboursement Wegovy](../glp1-cout/wegovy-remboursement-mutuelle/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ avis patients
 
 ### Combien de temps faut-il pour voir les résultats ?
@@ -181,16 +173,13 @@ L'arrêt doit être progressif et supervisé médicalement pour éviter une repr
 ### Saxenda fonctionne-t-il pour tout le monde ?
 Non, environ 20-25% des patients ne répondent pas suffisamment au traitement et doivent envisager des alternatives.
 
-
-
 **Les avis sur le liraglutide sont majoritairement positifs** pour la perte de poids, malgré des effets secondaires initiaux. Le succès dépend fortement de l'observance et du suivi médical adapté.
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

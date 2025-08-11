@@ -1,16 +1,15 @@
 ---
 title: "Cliniques spécialisées en obésité en france - guide complet 2025"
-description: Trouvez la meilleure clinique pour traiter l'obésité en France. Types de centres, tarifs, remboursements et conseils pour bien choisir.
-keyword: clinique pour obésité
-intent: Informational
-category: glp-1 doctors france
-author: Dr. Émilie Martin
+metaTitle: "Cliniques spécialisées en obésité en france - guid | France 2025"
+description: "Trouvez la meilleure clinique pour traiter l'obésité en France. Types de centres, tarifs, remboursements et conseils pour bien choisir."
+metaDescription: "clinique pour obésité France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "clinique pour obésité"
+intent: "Informational"
+category: "glp-1 doctors france"
+author: "Dr. Émilie Martin"
 readingTime: 10
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Cliniques spécialisées en obésité en france - guide complet 2025
-
-*Dernière mise à jour : 11/08/2025*
 
 Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? Ce guide détaillé vous présente les différents types de centres disponibles en France, leurs approches thérapeutiques et comment faire le bon choix selon votre situation.
 
@@ -316,6 +315,14 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 - Maintenez le lien avec l'équipe soignante
 - Ne vous découragez pas en cas de plateau
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## Conclusion
 
 Choisir la bonne clinique pour traiter votre obésité est une décision importante qui peut changer votre vie. Privilégiez les centres avec une approche médicale rigoureuse, une équipe multidisciplinaire qualifiée et une transparence totale sur les méthodes et tarifs.
@@ -329,9 +336,6 @@ Choisir la bonne clinique pour traiter votre obésité est une décision importa
 
 **N'oubliez pas :** L'obésité est une maladie chronique qui nécessite une prise en charge médicale sérieuse. Investir dans un bon centre spécialisé, c'est investir dans votre santé à long terme.
 
-[affiliate-box]
-
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
-
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.

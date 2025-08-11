@@ -1,16 +1,13 @@
 ---
-title: "jeûne intermittent et GLP-1"
+title: "jeûne intermittent et GLP-1 - Jeune Intermittent Glp1"
+metaTitle: "jeûne intermittent et GLP-1 | Prix Efficacité France 2025"
 description: "jeûne intermittent et GLP-1 — Guide marché français."
+metaDescription: "jeûne intermittent glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
 author: "Dr. Émilie Martin"
-date: 2025-08-10
+date: "2025-08-10"
 keywords: "jeûne intermittent glp1, fasting diabète"
+keyword: "jeûne intermittent glp-1, france 2025"
 ---
-
-# jeûne intermittent et GLP-1
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Cet article explique « jeûne intermittent et GLP-1 » pour le marché français : compatibilité 16:8, 14:10, précautions diabète, prix en €, conseils pratiques.
 
 ## À retenir
 
@@ -86,6 +83,14 @@ Le jeûne intermittent (JI) et les agonistes GLP-1 sont synergiques pour la pert
 - **Crème mains** : Sécheresse liée jeûne
 - **Spray buccal** : Fraîcheur haleine
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ
 
 ### Le GLP-1 rompt-il le jeûne intermittent ?
@@ -102,8 +107,6 @@ Rompre immédiatement le jeûne avec 15g glucose. Revoir posologies avec médeci
 
 ## Conclusion
 
-[affiliate-box]
-
 L'association jeûne intermittent et GLP-1 représente une synergie thérapeutique prometteuse pour l'optimisation métabolique. Cette approche combinée maximise les bénéfices sur le poids, la glycémie et la sensibilité à l'insuline. Un accompagnement médical guide la mise en œuvre sécurisée.
 
-**Important :** Ces informations sont fournies à titre éducatif uniquement. Consultez votre médecin traitant ou endocrinologue avant d'associer jeûne intermittent et traitement GLP-1.
+ Ces informations sont fournies à titre éducatif uniquement. Consultez votre médecin traitant ou endocrinologue avant d'associer jeûne intermittent et traitement GLP-1.

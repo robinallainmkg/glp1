@@ -1,35 +1,21 @@
 ---
-title: "Médicaments glp-1 : dulaglutide nom commercial - guide complet france 2025"
+title: "Médicaments glp-1 : dulaglutide nom commercial"
+metaTitle: "Médicaments glp-1 : dulaglutide nom commercial - g | France 2025"
 description: "Guide complet sur dulaglutide nom commercial des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-keyword: trulicity insuline
-intent: Informational
-category: glp-1 medications
-author: Dr. Émilie Martin
+metaDescription: "trulicity insuline France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "trulicity insuline"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Dr. Émilie Martin"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
 ---
-
-
-# Dulaglutide Nom Commercial : Guide Complet des Médicaments GLP-1
-
-**Résumé :** Guide dulaglutide nom commercial : Trulicity Eli Lilly, dosages 0,75-4,5 mg, injection hebdomadaire, prix 142€, remboursement diabète, alternatives.
-
-
-## Qu'est-ce que c'est ?
-
-*[Définition et présentation à développer...]*
-
-## Comment ça fonctionne ?
-
-*[Mécanisme d'action à développer...]*
-
-## Indications et utilisation
-
-*[Qui peut l'utiliser et comment à développer...]*
-
-## Précautions importantes
-
-*[Contre-indications et conseils à développer...]*
-
 
 ## Dulaglutide nom commercial : Trulicity
 
@@ -217,6 +203,14 @@ Le dulaglutide est commercialisé sous le nom Trulicity par Eli Lilly. Guide com
 - **Adaptation** : Posologie selon réponse
 - **Motivation** : Accompagnement long terme
 
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+
 ## FAQ dulaglutide Trulicity
 
 ### Quelle différence entre dulaglutide et Trulicity ?
@@ -231,78 +225,15 @@ Trulicity entraîne une perte de poids modeste (1,5-3 kg) mais n'a pas l'indicat
 ### Que faire en cas d'oubli d'injection ?
 Si moins de 3 jours de retard, injectez immédiatement. Si plus de 3 jours, attendez la prochaine injection prévue.
 
-
-
 **Trulicity (dulaglutide) offre l'avantage** d'une injection hebdomadaire avec une efficacité prouvée sur le diabète et la protection cardiovasculaire.
 
-
-
-
-Texte de conclusion et rappel de précautions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ et rappel de précautions.
 
 ## Important
 
-**Important :** Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+ Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements

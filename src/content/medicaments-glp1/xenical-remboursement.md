@@ -1,18 +1,21 @@
 ---
-title: "Xenical remboursement"
-description: xenical remboursement — Guide marché français.
-keyword: orlistat remboursement
-intent: Informational
-category: glp-1 medications
-author: Dr. Émilie Martin
+title: "Xenical remboursement - Xenical Remboursement"
+metaTitle: "Xenical remboursement | Prix Efficacité France 2025"
+description: "xenical remboursement — Guide marché français."
+metaDescription: "orlistat remboursement France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+keyword: "orlistat remboursement"
+intent: "Informational"
+category: "glp-1 medications"
+author: "Dr. Émilie Martin"
 readingTime: 5
+tags:
+  - GLP-1
+  - médicaments
+  - diabète
+  - obésité
+  - France
+keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
-
-# Xenical remboursement
-
-*Dernière mise à jour : 11/08/2025*
-
-**Résumé :** Situation du remboursement Xenical (orlistat) en France : suppression 2012, raisons économiques, alternatives remboursées, démarches possibles et comparaison coût-efficacité avec nouveaux traitements GLP-1.
 
 ## À retenir
 
@@ -240,11 +243,9 @@ Les sémaglutide, liraglutide, dulaglutide sont des éléments clés dans ce dom
 - **Génétique** : Médecine personnalisée
 - **Nutraceutiques** : Compléments remboursés
 
+ L'absence de remboursement Xenical nécessite une évaluation personnalisée du rapport coût-bénéfice. Discutez avec votre médecin des alternatives possibles, notamment les GLP-1 si vous êtes diabétique.
 
-
-**Important :** L'absence de remboursement Xenical nécessite une évaluation personnalisée du rapport coût-bénéfice. Discutez avec votre médecin des alternatives possibles, notamment les GLP-1 si vous êtes diabétique.
-
-## Articles connexes recommandés
+##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
@@ -264,3 +265,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
+- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [prix Wegovy](../glp1-cout/wegovy-prix/)
+
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
