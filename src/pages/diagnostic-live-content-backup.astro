@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Backup - Contenu Page Diagnostic Live"
+  description="Sauvegarde du contenu exact de la page diagnostic du site live"
+>
+  <div class="container">
+    <div style="padding: 2rem; max-width: 1000px; margin: 0 auto;">
+      
+      <!-- Header de statut -->
+      <div style="background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h1>🎯 Diagnostic GLP-1 - Backup du Site Live</h1>
+        <p><strong>URL source :</strong> <a href="https://glp1-france.fr/quel-traitement-glp1-choisir/" target="_blank">https://glp1-france.fr/quel-traitement-glp1-choisir/</a></p>
+        <p><strong>Date de backup :</strong> {new Date().toLocaleDateString('fr-FR')}</p>
+        <p><strong>Statut :</strong> ✅ Page active et fonctionnelle</p>
+      </div>
+
+      <!-- Comparaison versions -->
+      <div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h2>📊 Comparaison Local vs Live</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+          <div>
+            <h3>🏠 Version Locale</h3>
+            <ul>
+              <li>Quiz interactif progressif</li>
+              <li>8 questions avec choix multiples</li>
+              <li>Logique JavaScript complexe</li>
+              <li>Recommandation personnalisée</li>
+              <li>Interface moderne avec animations</li>
+            </ul>
+          </div>
+          <div>
+            <h3>🌐 Version Live</h3>
+            <ul>
+              <li>Page informative + diagnostic simple</li>
+              <li>Formulaire de profil physique</li>
+              <li>Contenu éducatif complet</li>
+              <li>Sections produits recommandés</li>
+              <li>Navigation vers guides spécialisés</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenu live détaillé -->
+      <div style="background: #f8f9fa; border: 1px solid #dee2e6; padding: 1.5rem; border-radius: 8px;">
+        <h2>📄 Contenu de la Page Live</h2>
+        
+        <h3>1. Header Principal</h3>
+        <p><strong>Titre :</strong> "Quel traitement GLP-1 choisir ?"</p>
+        <p><strong>Sous-titre :</strong> "Diagnostic gratuit en 2 minutes pour découvrir le traitement le plus adapté à votre situation"</p>
+        <p><strong>Tags :</strong> Ozempic, Wegovy et autres alternatives...</p>
+
+        <h3>2. Section Diagnostic Personnalisé</h3>
+        <ul>
+          <li>Formulaire profil physique (âge, taille, poids, sexe)</li>
+          <li>Recommandation personnalisée</li>
+          <li>Calcul remboursement</li>
+          <li>Étapes à suivre</li>
+        </ul>
+
+        <h3>3. Sections Éducatives</h3>
+        <ul>
+          <li>🧬 GLP-1 : L'hormone naturelle qui change tout</li>
+          <li>Ozempic vs Wegovy : Quelle différence ?</li>
+          <li>Effets secondaires et avantages vs régime classique</li>
+          <li>Comment ça marche concrètement ?</li>
+          <li>Avantages et Inconvénients</li>
+        </ul>
+
+        <h3>4. Section Produits Recommandés</h3>
+        <ul>
+          <li>Bust Phytoserum (47€) - Raffermissant peau</li>
+          <li>Produits à venir en développement</li>
+          <li>Liens d'affiliation</li>
+        </ul>
+
+        <h3>5. Prochaines Étapes</h3>
+        <ul>
+          <li>Consulter un médecin</li>
+          <li>Vérifier les prix</li>
+          <li>Se préparer au traitement</li>
+          <li>Liens vers guides spécialisés</li>
+        </ul>
+
+        <h3>6. Navigation et Footer</h3>
+        <ul>
+          <li>Catégories : Prix & Achat, Médicaments, Perte de Poids, Effets Secondaires</li>
+          <li>Ressources : GLP-1 et Diabète, Régime Alimentaire, Alternatives, Médecins</li>
+          <li>Newsletter et mentions légales</li>
+        </ul>
+      </div>
+
+      <!-- Recommandations techniques -->
+      <div style="background: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+        <h2>🔧 Recommandations Techniques</h2>
+        <ol>
+          <li><strong>Routing :</strong> Le fichier local <code>quel-traitement-glp1-choisir.astro</code> existe et fonctionne correctement</li>
+          <li><strong>Synchronisation :</strong> Considérer la fusion des deux versions pour combiner interactivité et contenu éducatif</li>
+          <li><strong>SEO :</strong> La version live est mieux optimisée pour le référencement</li>
+          <li><strong>UX :</strong> La version locale offre une meilleure expérience utilisateur interactive</li>
+          <li><strong>Conversion :</strong> Analyser quelle version convertit mieux</li>
+        </ol>
+      </div>
+
+      <!-- Actions suggérées -->
+      <div style="margin-top: 2rem;">
+        <h2>🚀 Actions Suggérées</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+          <a href="/quel-traitement-glp1-choisir/" class="btn btn-primary" style="text-decoration: none; background: #007bff; color: white; padding: 1rem; border-radius: 5px; text-align: center; display: block;">
+            Tester Version Locale
+          </a>
+          <a href="https://glp1-france.fr/quel-traitement-glp1-choisir/" target="_blank" class="btn btn-secondary" style="text-decoration: none; background: #6c757d; color: white; padding: 1rem; border-radius: 5px; text-align: center; display: block;">
+            Voir Version Live
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>

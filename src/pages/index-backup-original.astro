@@ -47,8 +47,8 @@ const categories = await getCategoryContent();
   keywords="Ozempic, Wegovy, médicament pour maigrir, perte de poids, prix France, diabète, où acheter"
 >
   <div class="container">
-    <!-- Hero Section Amélioré -->
-    <section class="hero-enhanced">
+    <!-- Hero Section -->
+    <section class="hero">
       <div class="hero-content">
         <h1 class="hero-title">
           Ozempic & Wegovy en France :<br><span class="text-gradient">Le Guide Complet</span>
@@ -58,9 +58,9 @@ const categories = await getCategoryContent();
           prix en France, où les acheter, efficacité réelle, effets secondaires et conseils d'experts.
         </p>
         <div class="hero-pills">
-          <a href="/qu-est-ce-que-glp1/" class="pill pill-link">✅ Ozempic & Wegovy expliqués</a>
-          <a href="/glp1-cout/wegovy-prix/" class="pill pill-link">💰 Prix & Remboursement</a>
-          <a href="/glp1-cout/acheter-wegovy-en-france/" class="pill pill-link">🏥 Où les acheter légalement</a>
+          <span class="pill">✅ Ozempic & Wegovy expliqués</span>
+          <span class="pill">💰 Prix & Remboursement</span>
+          <span class="pill">🏥 Où les acheter légalement</span>
         </div>
         <div class="hero-actions">
           <a href="/quel-traitement-glp1-choisir/" class="btn btn-primary btn-lg">🎯 Faire le Diagnostic (2 min)</a>
@@ -81,84 +81,48 @@ const categories = await getCategoryContent();
           </div>
         </div>
       </div>
-      <div class="hero-visual">
-        <img src="/images/uploads/Diagnostic.png" alt="Diagnostic GLP-1 personnalisé" class="hero-image" loading="lazy">
-        <div class="hero-badge">
-          <span class="badge-text">🎯 Test Gratuit</span>
-        </div>
-      </div>
     </section>
 
-    <!-- Bridge Section avec Image -->
-    <section class="bridge-section-enhanced">
+    <!-- Bridge Section - Explication GLP-1 -->
+    <section class="bridge-section">
       <div class="bridge-content">
-        <div class="bridge-visual">
-          <img src="/images/uploads/seringue-adn.png" alt="Molécule GLP-1" class="bridge-image" loading="lazy">
-        </div>
-        <div class="bridge-text-content">
-          <h2 class="bridge-title">Ozempic, Wegovy... Que signifie GLP-1 ?</h2>
-          <p class="bridge-text">
-            <strong>Ozempic et Wegovy</strong> sont les noms commerciaux de médicaments appartenant à une famille appelée <strong>"GLP-1"</strong>. 
-            Ces traitements révolutionnaires imitent une hormone naturelle pour réguler la glycémie et réduire l'appétit.
-          </p>
-          <div class="bridge-pills">
-            <span class="bridge-pill">💊 Ozempic = Pour le diabète + perte de poids</span>
-            <span class="bridge-pill">📉 Wegovy = Spécialement pour maigrir</span>
-            <span class="bridge-pill">🧬 GLP-1 = La famille de molécules</span>
+        <h2 class="bridge-title">Ozempic, Wegovy... Que signifie GLP-1 ?</h2>
+        <div class="bridge-grid">
+          <div class="bridge-explanation">
+            <p class="bridge-text">
+              <strong>Ozempic et Wegovy</strong> sont les noms commerciaux de médicaments appartenant à une famille appelée <strong>"GLP-1"</strong>. 
+              Ces traitements révolutionnaires imitent une hormone naturelle pour réguler la glycémie et réduire l'appétit.
+            </p>
+            <div class="bridge-pills">
+              <span class="bridge-pill">💊 Ozempic = Pour le diabète + perte de poids</span>
+              <span class="bridge-pill">📉 Wegovy = Spécialement pour maigrir</span>
+              <span class="bridge-pill">🧬 GLP-1 = La famille de molécules</span>
+            </div>
           </div>
-          <a href="/qu-est-ce-que-glp1/" class="btn btn-outline">En savoir plus sur GLP-1</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section Témoignages Visuels -->
-    <section class="testimonials-visual">
-      <div class="section-header">
-        <h2 class="section-title">Des Résultats Réels Qui Parlent</h2>
-        <p class="section-description">
-          Découvrez les transformations authentiques de nos utilisateurs français
-        </p>
-      </div>
-      
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <img src="/images/uploads/marie-journey8.png" alt="Transformation avec GLP-1" class="testimonial-image" loading="lazy">
-          <div class="testimonial-content">
-            <h3 class="testimonial-name">Marie, 34 ans</h3>
-            <p class="testimonial-result">-18kg en 8 mois</p>
-            <p class="testimonial-text">"Après 3 grossesses, je n'arrivais plus à perdre du poids. Wegovy a changé ma vie."</p>
-            <div class="testimonial-location">📍 Lyon</div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card">
-          <img src="/images/uploads/Laurent-journey.png" alt="Témoignage homme GLP-1" class="testimonial-image" loading="lazy">
-          <div class="testimonial-content">
-            <h3 class="testimonial-name">Laurent, 42 ans</h3>
-            <p class="testimonial-result">-22kg en 10 mois</p>
-            <p class="testimonial-text">"Diabétique depuis 10 ans, Ozempic m'a aidé à contrôler ma glycémie ET à maigrir."</p>
-            <div class="testimonial-location">📍 Marseille</div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card">
-          <img src="/images/uploads/journey-femme-5.png" alt="Avant après Wegovy" class="testimonial-image" loading="lazy">
-          <div class="testimonial-content">
-            <h3 class="testimonial-name">Sophie, 29 ans</h3>
-            <p class="testimonial-result">-15kg en 6 mois</p>
-            <p class="testimonial-text">"J'avais tout essayé. Les GLP-1 ont été ma solution miracle sans privation."</p>
-            <div class="testimonial-location">📍 Paris</div>
+          <div class="bridge-visual">
+            <div class="med-comparison">
+              <div class="med-item">
+                <span class="med-name">Ozempic</span>
+                <span class="med-arrow">→</span>
+                <span class="med-molecule">Sémaglutide (GLP-1)</span>
+              </div>
+              <div class="med-item">
+                <span class="med-name">Wegovy</span>
+                <span class="med-arrow">→</span>
+                <span class="med-molecule">Sémaglutide (GLP-1)</span>
+              </div>
+              <div class="med-item">
+                <span class="med-name">Trulicity</span>
+                <span class="med-arrow">→</span>
+                <span class="med-molecule">Dulaglutide (GLP-1)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="testimonials-cta">
-        <a href="/glp1-perte-de-poids/avant-apres-glp1/" class="btn btn-secondary">Voir Plus de Témoignages</a>
-      </div>
-    </section>
 
     <!-- Categories Grid -->
-    <section id="categories" class="categories-section">
+    <section id="categories" class="categories-section" style="margin-top: 4rem;">
       <div class="section-header">
         <h2 class="section-title">Tout Savoir sur Ozempic & Wegovy</h2>
         <p class="section-description">
@@ -178,6 +142,82 @@ const categories = await getCategoryContent();
             </div>
           </a>
         ))}
+      </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="featured-section">
+      <div class="section-header">
+        <h2 class="section-title">Articles les Plus Consultés</h2>
+        <p class="section-description">
+          Les sujets qui intéressent le plus nos lecteurs français
+        </p>
+      </div>
+      
+      <div class="grid grid-2">
+        <article class="featured-article">
+          <div class="article-inner">
+            <div class="article-category">Prix & Achat</div>
+            <h3 class="article-title">
+              <a href="/glp1-cout/acheter-wegovy-en-france/">Comment Acheter Wegovy en France en 2025</a>
+            </h3>
+            <p class="article-excerpt">
+              Guide complet pour acheter Wegovy légalement en France : prix, ordonnance, pharmacies et remboursement.
+            </p>
+            <div class="article-meta">
+              <span class="author">Dr. Émilie Martin</span>
+              <span class="reading-time">8 min de lecture</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="featured-article">
+          <div class="article-inner">
+            <div class="article-category">Perte de Poids</div>
+            <h3 class="article-title">
+              <a href="/glp1-perte-de-poids/avant-apres-glp1/">Résultats Avant/Après : Témoignages GLP-1</a>
+            </h3>
+            <p class="article-excerpt">
+              Découvrez les témoignages réels d'utilisateurs français avec photos avant/après et conseils.
+            </p>
+            <div class="article-meta">
+              <span class="author">Julien Lefèvre</span>
+              <span class="reading-time">12 min de lecture</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="featured-article">
+          <div class="article-inner">
+            <div class="article-category">Médicaments</div>
+            <h3 class="article-title">
+              <a href="/medicaments-glp1/ozempic-posologie/">Ozempic : Posologie et Mode d'Emploi</a>
+            </h3>
+            <p class="article-excerpt">
+              Tout savoir sur la posologie d'Ozempic : doses, injection, précautions et suivi médical.
+            </p>
+            <div class="article-meta">
+              <span class="author">Dr. Émilie Martin</span>
+              <span class="reading-time">10 min de lecture</span>
+            </div>
+          </div>
+        </article>
+        
+        <article class="featured-article">
+          <div class="article-inner">
+            <div class="article-category">Effets Secondaires</div>
+            <h3 class="article-title">
+              <a href="/effets-secondaires-glp1/effets-secondaires-wegovy/">Effets Secondaires Wegovy : Guide Complet</a>
+            </h3>
+            <p class="article-excerpt">
+              Comprendre, prévenir et gérer les effets secondaires de Wegovy avec nos conseils d'experts.
+            </p>
+            <div class="article-meta">
+              <span class="author">Dr. Émilie Martin</span>
+              <span class="reading-time">15 min de lecture</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -221,6 +261,24 @@ const categories = await getCategoryContent();
       </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2 class="cta-title">Restez Informé sur Ozempic & Wegovy</h2>
+        <p class="cta-description">
+          Recevez les dernières actualités, nouveaux prix, et conseils pratiques 
+          sur ces médicaments révolutionnaires directement dans votre boîte mail.
+        </p>
+        <form class="newsletter-form-home" action="#" method="post">
+          <input type="email" placeholder="Votre adresse email" class="newsletter-input-home" required>
+          <button type="submit" class="btn btn-secondary">S'abonner Gratuitement</button>
+        </form>
+        <p class="cta-privacy">
+          🔒 Vos données sont sécurisées. Désinscription possible à tout moment.
+        </p>
+      </div>
+    </section>
+
     <!-- Trust Indicators -->
     <section class="trust-section">
       <div class="trust-grid">
@@ -249,45 +307,13 @@ const categories = await getCategoryContent();
   </div>
 
   <style>
-    /* Hero Section Amélioré */
-    .hero-enhanced {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 3rem;
-      align-items: center;
+    /* Hero Section */
+    .hero {
+      text-align: center;
       padding: var(--spacing-16) 0 var(--spacing-12);
       background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
       border-radius: var(--radius-2xl);
       margin-bottom: var(--spacing-12);
-    }
-
-    .hero-content {
-      padding-left: 2rem;
-    }
-
-    .hero-visual {
-      position: relative;
-      text-align: center;
-    }
-
-    .hero-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: var(--radius-lg);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .hero-badge {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background: var(--accent-green);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-full);
-      font-size: 0.8rem;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
     }
 
     .hero-title {
@@ -295,7 +321,6 @@ const categories = await getCategoryContent();
       font-weight: 800;
       margin-bottom: var(--spacing-6);
       line-height: 1.1;
-      text-align: left;
     }
 
     .text-gradient {
@@ -308,15 +333,15 @@ const categories = await getCategoryContent();
     .hero-description {
       font-size: var(--font-size-xl);
       color: var(--gray-600);
-      margin-bottom: var(--spacing-6);
+      max-width: 800px;
+      margin: 0 auto var(--spacing-6);
       line-height: 1.6;
-      text-align: left;
     }
 
-    /* Pills cliquables */
     .hero-pills {
       display: flex;
       gap: var(--spacing-3);
+      justify-content: center;
       margin-bottom: var(--spacing-8);
       flex-wrap: wrap;
     }
@@ -328,20 +353,12 @@ const categories = await getCategoryContent();
       border-radius: var(--radius-full);
       font-size: var(--font-size-sm);
       font-weight: 500;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .pill-link:hover {
-      background: var(--primary-blue);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     }
 
     .hero-actions {
       display: flex;
       gap: var(--spacing-4);
+      justify-content: center;
       margin-bottom: var(--spacing-12);
       flex-wrap: wrap;
     }
@@ -349,11 +366,12 @@ const categories = await getCategoryContent();
     .hero-stats {
       display: flex;
       gap: var(--spacing-8);
+      justify-content: center;
       flex-wrap: wrap;
     }
 
     .stat {
-      text-align: left;
+      text-align: center;
     }
 
     .stat-number {
@@ -369,44 +387,33 @@ const categories = await getCategoryContent();
       font-weight: 500;
     }
 
-    /* Bridge Section Améliorée */
-    .bridge-section-enhanced {
+    /* Bridge Section */
+    .bridge-section {
       background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
       border-radius: var(--radius-2xl);
       padding: var(--spacing-12) var(--spacing-8);
       margin-bottom: var(--spacing-16);
     }
 
-    .bridge-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .bridge-visual {
-      text-align: center;
-    }
-
-    .bridge-image {
-      max-width: 100%;
-      height: auto;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    }
-
     .bridge-title {
+      text-align: center;
       font-size: var(--font-size-3xl);
       font-weight: 700;
-      margin-bottom: var(--spacing-6);
-      color: var(--gray-900);
+      margin-bottom: var(--spacing-8);
+      color: var(--gray-800);
+    }
+
+    .bridge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-8);
+      align-items: center;
     }
 
     .bridge-text {
       font-size: var(--font-size-lg);
-      color: var(--gray-600);
-      line-height: 1.6;
+      line-height: 1.7;
+      color: var(--gray-700);
       margin-bottom: var(--spacing-6);
     }
 
@@ -414,7 +421,6 @@ const categories = await getCategoryContent();
       display: flex;
       flex-direction: column;
       gap: var(--spacing-3);
-      margin-bottom: var(--spacing-6);
     }
 
     .bridge-pill {
@@ -424,80 +430,53 @@ const categories = await getCategoryContent();
       border-radius: var(--radius-lg);
       font-size: var(--font-size-sm);
       font-weight: 500;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      box-shadow: var(--shadow-sm);
     }
 
-    /* Témoignages Visuels */
-    .testimonials-visual {
-      padding: var(--spacing-16) 0;
-      background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
-      border-radius: var(--radius-2xl);
-      margin-bottom: var(--spacing-12);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .testimonial-card {
+    .med-comparison {
       background: white;
+      padding: var(--spacing-6);
       border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-md);
     }
 
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    .med-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-3);
+      padding: var(--spacing-3) 0;
+      border-bottom: 1px solid var(--gray-200);
     }
 
-    .testimonial-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+    .med-item:last-child {
+      border-bottom: none;
     }
 
-    .testimonial-content {
-      padding: 1.5rem;
-    }
-
-    .testimonial-name {
-      font-size: 1.1rem;
+    .med-name {
       font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--gray-900);
+      color: var(--primary-blue);
+      min-width: 80px;
     }
 
-    .testimonial-result {
-      color: var(--accent-green);
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+    .med-arrow {
+      color: var(--gray-400);
     }
 
-    .testimonial-text {
+    .med-molecule {
+      font-size: var(--font-size-sm);
       color: var(--gray-600);
-      line-height: 1.5;
-      margin-bottom: 1rem;
-      font-style: italic;
     }
 
-    .testimonial-location {
-      color: var(--gray-500);
-      font-size: 0.9rem;
+    @media (max-width: 768px) {
+      .bridge-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+      }
     }
 
-    .testimonials-cta {
-      text-align: center;
-    }
-
-    /* Categories Grid - styles existants */
+    /* Categories Section */
     .categories-section {
-      margin: var(--spacing-16) 0;
+      margin-bottom: var(--spacing-16);
     }
 
     .section-header {
@@ -506,10 +485,8 @@ const categories = await getCategoryContent();
     }
 
     .section-title {
-      font-size: var(--font-size-3xl);
-      font-weight: 700;
+      font-size: var(--font-size-4xl);
       margin-bottom: var(--spacing-4);
-      color: var(--gray-900);
     }
 
     .section-description {
@@ -519,46 +496,42 @@ const categories = await getCategoryContent();
       margin: 0 auto;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-6);
-    }
-
     .category-card {
       background: white;
-      border: 1px solid var(--gray-200);
       border-radius: var(--radius-xl);
-      padding: var(--spacing-6);
+      padding: var(--spacing-8);
       text-decoration: none;
       color: inherit;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      border: 2px solid var(--gray-200);
+      transition: var(--transition);
+      display: block;
+      height: 100%;
     }
 
     .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
       border-color: var(--primary-blue);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+      text-decoration: none;
+      color: inherit;
     }
 
     .category-icon {
-      font-size: var(--font-size-3xl);
+      font-size: var(--font-size-4xl);
       margin-bottom: var(--spacing-4);
     }
 
     .category-title {
       font-size: var(--font-size-xl);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: var(--spacing-3);
       color: var(--gray-900);
     }
 
     .category-description {
       color: var(--gray-600);
-      line-height: 1.5;
-      margin-bottom: var(--spacing-4);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-5);
     }
 
     .category-meta {
@@ -570,31 +543,101 @@ const categories = await getCategoryContent();
 
     .article-count {
       color: var(--gray-500);
+      font-weight: 500;
     }
 
     .read-more {
       color: var(--primary-blue);
+      font-weight: 600;
+    }
+
+    /* Featured Articles */
+    .featured-section {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .featured-article {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-6);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .featured-article:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .article-category {
+      display: inline-block;
+      background: var(--accent-green);
+      color: white;
+      padding: var(--spacing-1) var(--spacing-3);
+      border-radius: var(--radius-full);
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--spacing-3);
+    }
+
+    .article-title {
+      margin-bottom: var(--spacing-3);
+    }
+
+    .article-title a {
+      color: var(--gray-900);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .article-title a:hover {
+      color: var(--primary-blue);
+    }
+
+    .article-excerpt {
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-4);
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+    }
+
+    .author {
       font-weight: 500;
     }
 
     /* FAQ Section */
     .faq-section {
-      background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
-      border-radius: var(--radius-2xl);
-      padding: var(--spacing-12);
-      margin: var(--spacing-16) 0;
+      margin-bottom: var(--spacing-16);
       text-align: center;
     }
 
     .faq-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: var(--spacing-6);
-      margin-bottom: var(--spacing-8);
+      margin: var(--spacing-8) 0;
     }
 
     .faq-item {
-      text-align: center;
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--spacing-6);
+      border: 2px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-blue);
     }
 
     .faq-icon {
@@ -604,7 +647,7 @@ const categories = await getCategoryContent();
 
     .faq-item h3 {
       font-size: var(--font-size-lg);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: var(--spacing-2);
       color: var(--gray-900);
     }
@@ -612,6 +655,7 @@ const categories = await getCategoryContent();
     .faq-item p {
       color: var(--gray-600);
       font-size: var(--font-size-sm);
+      margin: 0;
     }
 
     .diagnostic-cta {
@@ -619,32 +663,79 @@ const categories = await getCategoryContent();
     }
 
     .btn-diagnostic {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+      background: linear-gradient(135deg, var(--accent-green), var(--primary-blue));
       color: white;
       padding: var(--spacing-4) var(--spacing-8);
-      border-radius: var(--radius-full);
+      border-radius: var(--radius-xl);
       text-decoration: none;
-      font-weight: 600;
       font-size: var(--font-size-lg);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      font-weight: 700;
+      display: inline-block;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-lg);
     }
 
     .btn-diagnostic:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+      box-shadow: var(--shadow-xl);
+      text-decoration: none;
+      color: white;
     }
 
     .diagnostic-subtitle {
-      margin-top: var(--spacing-3);
       color: var(--gray-600);
       font-size: var(--font-size-sm);
+      margin: var(--spacing-2) 0 0 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+      color: white;
+      padding: var(--spacing-12);
+      border-radius: var(--radius-2xl);
+      text-align: center;
+      margin-bottom: var(--spacing-16);
+    }
+
+    .cta-title {
+      color: white;
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .cta-description {
+      font-size: var(--font-size-lg);
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto var(--spacing-8);
+    }
+
+    .newsletter-form-home {
+      display: flex;
+      gap: var(--spacing-3);
+      max-width: 500px;
+      margin: 0 auto var(--spacing-4);
+    }
+
+    .newsletter-input-home {
+      flex: 1;
+      padding: var(--spacing-4);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: var(--font-size-base);
+    }
+
+    .cta-privacy {
+      font-size: var(--font-size-sm);
+      opacity: 0.8;
     }
 
     /* Trust Section */
     .trust-section {
-      margin: var(--spacing-16) 0;
+      margin-bottom: var(--spacing-16);
     }
 
     .trust-grid {
@@ -656,14 +747,11 @@ const categories = await getCategoryContent();
     .trust-item {
       text-align: center;
       padding: var(--spacing-6);
-      background: white;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--gray-200);
     }
 
     .trust-icon {
-      font-size: var(--font-size-2xl);
-      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--spacing-4);
     }
 
     .trust-item h4 {
@@ -676,35 +764,46 @@ const categories = await getCategoryContent();
     .trust-item p {
       color: var(--gray-600);
       font-size: var(--font-size-sm);
-      line-height: 1.5;
+    }
+
+    /* Highlight for weight loss text */
+    .highlight-weight-loss {
+      background: linear-gradient(135deg, var(--accent-green), #10b981);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero-enhanced {
+      .hero-title {
+        font-size: var(--font-size-3xl);
+      }
+      
+      .hero-description {
+        font-size: var(--font-size-lg);
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero-stats {
+        gap: var(--spacing-6);
+      }
+      
+      .newsletter-form-home {
+        flex-direction: column;
+      }
+      
+      .grid-3 {
         grid-template-columns: 1fr;
-        text-align: center;
       }
-
-      .hero-content {
-        padding-left: 0;
-      }
-
-      .hero-title, .hero-description, .hero-stats {
-        text-align: center;
-      }
-
-      .bridge-content {
+      
+      .grid-2 {
         grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-pills, .hero-actions {
-        justify-content: center;
       }
     }
   </style>

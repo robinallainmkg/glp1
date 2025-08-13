@@ -1,0 +1,1165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Diagnostic GLP-1 Personnalisé : Ozempic ou Wegovy ? | Test Gratuit"
+  description="Diagnostic personnalisé en 5 minutes pour savoir si Ozempic ou Wegovy est fait pour vous. Test gratuit basé sur votre profil médical."
+  keywords="diagnostic GLP-1, test Ozempic, Wegovy, quel traitement choisir, éligibilité GLP-1"
+>
+  <div class="container">
+    <div class="diagnostic-page">
+      
+      <!-- Header -->
+      <header class="diagnostic-header">
+        <h1>🎯 Diagnostic Personnalisé GLP-1</h1>
+        <p class="subtitle">Découvrez en 5 minutes quel traitement est le plus adapté à votre situation</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-text"><span id="question-number">1</span> sur 9 questions</p>
+      </header>
+
+      <!-- Quiz Container -->
+      <div class="quiz-container" id="quiz-container">
+        
+        <!-- Question 1: Objectif principal -->
+        <div class="question active" data-question="1">
+          <h2>Quel est votre objectif principal ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q1" value="perte-poids">
+              <span class="option-content">
+                <div class="option-icon">📉</div>
+                <div class="option-text">
+                  <strong>Perdre du poids</strong>
+                  <p>Je veux principalement maigrir</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="diabete">
+              <span class="option-content">
+                <div class="option-icon">🩺</div>
+                <div class="option-text">
+                  <strong>Traiter mon diabète</strong>
+                  <p>J'ai un diabète de type 2</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="les-deux">
+              <span class="option-content">
+                <div class="option-icon">⚖️</div>
+                <div class="option-text">
+                  <strong>Les deux</strong>
+                  <p>Diabète + perte de poids</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="effets-secondaires">
+              <span class="option-content">
+                <div class="option-icon">💊</div>
+                <div class="option-text">
+                  <strong>Réduire les effets secondaires</strong>
+                  <p>Je suis déjà sous GLP-1 et j'ai des effets indésirables</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 2: IMC -->
+        <div class="question" data-question="2">
+          <h2>Quelle est votre situation pondérale ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q2" value="surpoids">
+              <span class="option-content">
+                <div class="option-icon">📊</div>
+                <div class="option-text">
+                  <strong>Surpoids (IMC 25-30)</strong>
+                  <p>Quelques kilos en trop</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="obesite-1">
+              <span class="option-content">
+                <div class="option-icon">📈</div>
+                <div class="option-text">
+                  <strong>Obésité modérée (IMC 30-35)</strong>
+                  <p>Surpoids important</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="obesite-2">
+              <span class="option-content">
+                <div class="option-icon">⚠️</div>
+                <div class="option-text">
+                  <strong>Obésité sévère (IMC >35)</strong>
+                  <p>Obésité avec complications</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 3: Expérience régimes -->
+        <!-- Question 3: Expérience régimes -->
+        <div class="question" data-question="3">
+          <h2>Avez-vous déjà essayé de perdre du poids ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q3" value="jamais">
+              <span class="option-content">
+                <div class="option-icon">🆕</div>
+                <div class="option-text">
+                  <strong>Jamais vraiment</strong>
+                  <p>C'est ma première démarche sérieuse</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="quelques-fois">
+              <span class="option-content">
+                <div class="option-icon">🔄</div>
+                <div class="option-text">
+                  <strong>Quelques tentatives</strong>
+                  <p>Régimes avec reprises de poids</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="nombreuses">
+              <span class="option-content">
+                <div class="option-icon">😔</div>
+                <div class="option-text">
+                  <strong>Nombreux échecs</strong>
+                  <p>Effet yoyo répété</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="glp1-deja">
+              <span class="option-content">
+                <div class="option-icon">💊</div>
+                <div class="option-text">
+                  <strong>J'ai déjà fait un traitement GLP-1</strong>
+                  <p>Ozempic, Wegovy ou autre, mais j'ai arrêté</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 4: Budget -->
+        <div class="question" data-question="4">
+          <h2>Quel budget mensuel envisagez-vous ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q4" value="budget-limite">
+              <span class="option-content">
+                <div class="option-icon">💰</div>
+                <div class="option-text">
+                  <strong>Budget limité</strong>
+                  <p>Moins de 150€/mois</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q4" value="budget-moyen">
+              <span class="option-content">
+                <div class="option-icon">💳</div>
+                <div class="option-text">
+                  <strong>Budget modéré</strong>
+                  <p>150-300€/mois</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q4" value="budget-eleve">
+              <span class="option-content">
+                <div class="option-icon">💎</div>
+                <div class="option-text">
+                  <strong>Budget confortable</strong>
+                  <p>Plus de 300€/mois</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 5: Urgence -->
+        <div class="question" data-question="5">
+          <h2>Dans quel délai souhaitez-vous voir des résultats ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q5" value="rapide">
+              <span class="option-content">
+                <div class="option-icon">⚡</div>
+                <div class="option-text">
+                  <strong>Rapidement</strong>
+                  <p>Dans les 3 premiers mois</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q5" value="progressif">
+              <span class="option-content">
+                <div class="option-icon">📅</div>
+                <div class="option-text">
+                  <strong>Progressivement</strong>
+                  <p>Sur 6-12 mois</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q5" value="patient">
+              <span class="option-content">
+                <div class="option-icon">🐌</div>
+                <div class="option-text">
+                  <strong>Patiemment</strong>
+                  <p>Pas pressé, sur le long terme</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 6: Effets secondaires -->
+        <div class="question" data-question="6">
+          <h2>Quelle est votre tolérance aux effets secondaires ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q6" value="sensible">
+              <span class="option-content">
+                <div class="option-icon">😰</div>
+                <div class="option-text">
+                  <strong>Très sensible</strong>
+                  <p>Je supporte mal les nausées</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q6" value="normale">
+              <span class="option-content">
+                <div class="option-icon">😐</div>
+                <div class="option-text">
+                  <strong>Tolérance normale</strong>
+                  <p>Effets temporaires acceptables</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q6" value="bonne">
+              <span class="option-content">
+                <div class="option-icon">💪</div>
+                <div class="option-text">
+                  <strong>Bonne tolérance</strong>
+                  <p>J'encaisse bien les traitements</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 7: Suivi médical -->
+        <div class="question" data-question="7">
+          <h2>Avez-vous un suivi médical régulier ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q7" value="aucun">
+              <span class="option-content">
+                <div class="option-icon">❌</div>
+                <div class="option-text">
+                  <strong>Aucun suivi</strong>
+                  <p>Je ne vois jamais de médecin</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q7" value="occasionnel">
+              <span class="option-content">
+                <div class="option-icon">🔄</div>
+                <div class="option-text">
+                  <strong>Suivi occasionnel</strong>
+                  <p>Médecin traitant de temps en temps</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q7" value="regulier">
+              <span class="option-content">
+                <div class="option-icon">✅</div>
+                <div class="option-text">
+                  <strong>Suivi régulier</strong>
+                  <p>Médecin traitant + spécialistes</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 8: Problèmes de santé -->
+        <div class="question" data-question="8">
+          <h2>Avez-vous des problèmes de santé particuliers ?</h2>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q8" value="aucun">
+              <span class="option-content">
+                <div class="option-icon">✅</div>
+                <div class="option-text">
+                  <strong>Aucun problème</strong>
+                  <p>Bonne santé générale</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q8" value="mineurs">
+              <span class="option-content">
+                <div class="option-icon">⚠️</div>
+                <div class="option-text">
+                  <strong>Problèmes mineurs</strong>
+                  <p>Hypertension, cholestérol...</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q8" value="importants">
+              <span class="option-content">
+                <div class="option-icon">🏥</div>
+                <div class="option-text">
+                  <strong>Problèmes importants</strong>
+                  <p>Maladies chroniques multiples</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Question 9: Effets secondaires (conditionnelle) -->
+        <div class="question" data-question="9" id="effets-secondaires-question" style="display: none;">
+          <h2>Quels effets secondaires ressentez-vous actuellement ?</h2>
+          <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem;">Cochez tous les effets que vous ressentez (plusieurs choix possibles)</p>
+          <div class="options effects-checklist">
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="nausees">
+              <span class="option-content">
+                <div class="option-icon">🤢</div>
+                <div class="option-text">
+                  <strong>Nausées</strong>
+                  <p>Sensation de mal de cœur, envies de vomir</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="vomissements">
+              <span class="option-content">
+                <div class="option-icon">🤮</div>
+                <div class="option-text">
+                  <strong>Vomissements</strong>
+                  <p>Épisodes de vomissements répétés</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="diarrhee">
+              <span class="option-content">
+                <div class="option-icon">💩</div>
+                <div class="option-text">
+                  <strong>Diarrhée</strong>
+                  <p>Selles liquides fréquentes</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="constipation">
+              <span class="option-content">
+                <div class="option-icon">🚫</div>
+                <div class="option-text">
+                  <strong>Constipation</strong>
+                  <p>Difficultés à aller à la selle</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="brulures-estomac">
+              <span class="option-content">
+                <div class="option-icon">🔥</div>
+                <div class="option-text">
+                  <strong>Brûlures d'estomac</strong>
+                  <p>Reflux gastrique, acidité</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="fatigue">
+              <span class="option-content">
+                <div class="option-icon">😴</div>
+                <div class="option-text">
+                  <strong>Fatigue excessive</strong>
+                  <p>Manque d'énergie, épuisement</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="chute-cheveux">
+              <span class="option-content">
+                <div class="option-icon">💇</div>
+                <div class="option-text">
+                  <strong>Chute de cheveux</strong>
+                  <p>Perte de cheveux importante</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="peau-relachee">
+              <span class="option-content">
+                <div class="option-icon">👵</div>
+                <div class="option-text">
+                  <strong>Peau relâchée</strong>
+                  <p>Visage creusé, peau fripée</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="vertige">
+              <span class="option-content">
+                <div class="option-icon">💫</div>
+                <div class="option-text">
+                  <strong>Vertiges</strong>
+                  <p>Sensations d'étourdissement</p>
+                </div>
+              </span>
+            </label>
+            <label class="option checkbox-option">
+              <input type="checkbox" name="effets" value="carences">
+              <span class="option-content">
+                <div class="option-icon">⚠️</div>
+                <div class="option-text">
+                  <strong>Carences nutritionnelles</strong>
+                  <p>Manque de vitamines, minéraux</p>
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="navigation">
+        <button id="prev-btn" class="btn btn-secondary" style="display: none;">⬅️ Précédent</button>
+        <button id="next-btn" class="btn btn-primary">Suivant ➡️</button>
+        <button id="results-btn" class="btn btn-primary" style="display: none;">Voir mes Résultats 🎯</button>
+      </div>
+
+      <!-- Results Section -->
+      <div class="results-section" id="results-section" style="display: none;">
+        <div class="results-content" id="results-content">
+          <!-- Results will be inserted here -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    .diagnostic-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .diagnostic-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .diagnostic-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+      width: 12.5%;
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .quiz-container {
+      margin-bottom: 2rem;
+    }
+
+    .question {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .question.active {
+      display: block;
+    }
+
+    .question h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--gray-900);
+    }
+
+    .options {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .option {
+      cursor: pointer;
+      border: 2px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 0;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .option:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .option input[type="radio"] {
+      display: none;
+    }
+
+    .option input[type="radio"]:checked + .option-content {
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+      color: white;
+      border-color: var(--primary-blue);
+    }
+
+    .option-content {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .option-icon {
+      font-size: 2rem;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .option-text strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .option-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .results-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--gray-50);
+      border-radius: 16px;
+    }
+
+    .recommendation {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--primary-blue);
+    }
+
+    .recommendation h3 {
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+
+    .recommendation-score {
+      display: inline-block;
+      background: var(--accent-green);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .features-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .features-list li:before {
+      content: "✅ ";
+      margin-right: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .diagnostic-header h1 {
+        font-size: 2rem;
+      }
+      
+      .option-content {
+        padding: 1rem;
+      }
+      
+      .navigation {
+        flex-direction: column;
+      }
+    }
+
+    /* Styles pour les checkboxes (question effets secondaires) */
+    .effects-checklist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .checkbox-option input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkbox-option .option-content {
+      transition: all 0.3s ease;
+      border: 2px solid var(--gray-200);
+    }
+
+    .checkbox-option input[type="checkbox"]:checked + .option-content {
+      border-color: var(--primary-blue);
+      background: rgba(59, 130, 246, 0.05);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    }
+
+    .checkbox-option input[type="checkbox"]:checked + .option-content::after {
+      content: "✓";
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: var(--primary-blue);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Styles pour les solutions d'effets secondaires */
+    .effect-solution {
+      background: #f8f9fa;
+      border-left: 4px solid var(--accent-green);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+
+    .effect-solution h4 {
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .effect-solution ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .effect-solution li {
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .general-advice {
+      background: #e3f2fd;
+      border-left: 4px solid var(--primary-blue);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .general-advice h4 {
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 9;
+    const answers = {};
+    let selectedEffets = [];
+
+    // Navigation functions
+    function showQuestion(n) {
+      document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+      
+      // Logique conditionnelle pour la question 9 (effets secondaires)
+      if (n === 9 && answers.q1 !== 'effets-secondaires') {
+        // Skip question 9 si l'objectif n'est pas "réduire les effets secondaires"
+        if (currentQuestion < n) {
+          currentQuestion = totalQuestions + 1; // Go to results
+          showResults();
+          return;
+        } else {
+          currentQuestion = 8;
+          showQuestion(8);
+          return;
+        }
+      }
+      
+      document.querySelector(`[data-question="${n}"]`).classList.add('active');
+      
+      document.getElementById('question-number').textContent = n;
+      document.getElementById('progress-fill').style.width = `${(n / totalQuestions) * 100}%`;
+      
+      document.getElementById('prev-btn').style.display = n === 1 ? 'none' : 'inline-block';
+      
+      // Pour la question 9 (effets secondaires), on affiche directement le bouton résultats
+      if (n === 9) {
+        document.getElementById('next-btn').style.display = 'none';
+        document.getElementById('results-btn').style.display = 'inline-block';
+      } else {
+        document.getElementById('next-btn').style.display = n >= totalQuestions ? 'none' : 'inline-block';
+        document.getElementById('results-btn').style.display = n >= totalQuestions ? 'inline-block' : 'none';
+      }
+    }
+
+    function nextQuestion() {
+      let currentAnswer;
+      
+      // Gestion spéciale pour la question 9 (choix multiples)
+      if (currentQuestion === 9) {
+        const checkedEffets = document.querySelectorAll('input[name="effets"]:checked');
+        if (checkedEffets.length === 0) {
+          alert('Veuillez sélectionner au moins un effet secondaire.');
+          return;
+        }
+        selectedEffets = Array.from(checkedEffets).map(input => input.value);
+        answers[`q${currentQuestion}`] = selectedEffets;
+      } else {
+        currentAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        if (!currentAnswer) {
+          alert('Veuillez sélectionner une réponse avant de continuer.');
+          return;
+        }
+        answers[`q${currentQuestion}`] = currentAnswer.value;
+      }
+      
+      if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function showResults() {
+      document.getElementById('quiz-container').style.display = 'none';
+      document.querySelector('.navigation').style.display = 'none';
+      document.getElementById('results-section').style.display = 'block';
+      calculateResults();
+    }
+
+    function prevQuestion() {
+      if (currentQuestion > 1) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function calculateResults() {
+      // Cas spécial : si l'objectif est de réduire les effets secondaires
+      if (answers.q1 === 'effets-secondaires') {
+        showEffetsSideSolutions();
+        return;
+      }
+
+      // Pour les autres cas, récupérer la dernière réponse si nécessaire
+      if (currentQuestion <= totalQuestions) {
+        const currentAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        if (!currentAnswer) {
+          alert('Veuillez sélectionner une réponse avant de voir les résultats.');
+          return;
+        }
+        answers[`q${currentQuestion}`] = currentAnswer.value;
+      }
+
+      // Logic de recommendation pour les nouveaux utilisateurs
+      let ozempicScore = 0;
+      let wegovyScore = 0;
+
+      // Q1: Objectif
+      if (answers.q1 === 'diabete') ozempicScore += 3;
+      if (answers.q1 === 'perte-poids') wegovyScore += 3;
+      if (answers.q1 === 'les-deux') { ozempicScore += 2; wegovyScore += 2; }
+
+      // Q2: IMC
+      if (answers.q2 === 'surpoids') ozempicScore += 1;
+      if (answers.q2 === 'obesite-1') { ozempicScore += 2; wegovyScore += 2; }
+      if (answers.q2 === 'obesite-2') wegovyScore += 3;
+
+      // Q3: Expérience
+      if (answers.q3 === 'nombreuses') wegovyScore += 2;
+      if (answers.q3 === 'glp1-deja') { 
+        // Si déjà eu GLP-1, favoriser une approche différente ou un suivi spécialisé
+        ozempicScore += 1; 
+        wegovyScore += 1; 
+      }
+
+      // Q4: Budget
+      if (answers.q4 === 'budget-limite') ozempicScore += 1;
+      if (answers.q4 === 'budget-eleve') wegovyScore += 1;
+
+      // Q5: Urgence
+      if (answers.q5 === 'rapide') wegovyScore += 2;
+
+      // Q6: Tolérance
+      if (answers.q6 === 'sensible') ozempicScore += 1;
+      if (answers.q6 === 'bonne') wegovyScore += 1;
+
+      // Q7: Suivi
+      if (answers.q7 === 'regulier') { ozempicScore += 2; wegovyScore += 2; }
+      if (answers.q7 === 'aucun') ozempicScore -= 1;
+
+      // Q8: Santé
+      if (answers.q8 === 'importants') ozempicScore += 1;
+
+      showTraitementResults(ozempicScore, wegovyScore);
+    }
+
+    function showEffetsSideSolutions() {
+      document.getElementById('quiz-container').style.display = 'none';
+      document.querySelector('.navigation').style.display = 'none';
+      document.getElementById('results-section').style.display = 'block';
+
+      let solutions = '';
+      const effets = selectedEffets;
+
+      solutions += `
+        <div class="recommendation">
+          <div class="recommendation-score">Solutions personnalisées</div>
+          <h3>💊 Conseils pour réduire vos effets secondaires</h3>
+          <p>Basé sur les effets que vous ressentez, voici nos recommandations :</p>
+      `;
+
+      // Solutions spécifiques par effet
+      if (effets.includes('nausees') || effets.includes('vomissements')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>🤢 Nausées et vomissements</h4>
+            <ul>
+              <li>Prenez votre injection après un repas léger</li>
+              <li>Évitez les aliments gras et épicés</li>
+              <li>Mangez de plus petites portions, plus fréquemment</li>
+              <li>Considérez du gingembre (tisane ou gélules)</li>
+              <li>Discutez d'une réduction temporaire de dose avec votre médecin</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('diarrhee')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>💩 Diarrhée</h4>
+            <ul>
+              <li>Augmentez les fibres solubles (avoine, bananes)</li>
+              <li>Évitez les édulcorants artificiels</li>
+              <li>Hydratez-vous davantage</li>
+              <li>Envisagez des probiotiques</li>
+              <li>Réduisez temporairement les graisses dans l'alimentation</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('constipation')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>🚫 Constipation</h4>
+            <ul>
+              <li>Augmentez votre consommation de fibres progressivement</li>
+              <li>Buvez plus d'eau (2L minimum par jour)</li>
+              <li>Marchez 20-30 minutes après les repas</li>
+              <li>Considérez le psyllium ou des prunes</li>
+              <li>Évitez de forcer, consultez si ça persiste</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('fatigue')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>😴 Fatigue</h4>
+            <ul>
+              <li>Assurez-vous de consommer suffisamment de calories</li>
+              <li>Complément en vitamines B et fer (après analyse)</li>
+              <li>Respectez un rythme de sommeil régulier</li>
+              <li>Exercice doux (marche, yoga)</li>
+              <li>Évitez les chutes drastiques de sucre</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('chute-cheveux')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>💇 Chute de cheveux</h4>
+            <ul>
+              <li>Complément en biotine et vitamines du groupe B</li>
+              <li>Massage du cuir chevelu quotidien</li>
+              <li>Évitez les coiffures tirées et la chaleur excessive</li>
+              <li>Assurez-vous d'un apport suffisant en protéines</li>
+              <li>Consultez un dermatologue si la chute persiste</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('peau-relachee')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>👵 Peau relâchée</h4>
+            <ul>
+              <li>Hydratation intense avec des crèmes raffermissantes</li>
+              <li>Massage quotidien avec des huiles (rose musquée)</li>
+              <li>Exercices de renforcement musculaire</li>
+              <li>Ralentir la perte de poids (1-2kg/mois max)</li>
+              <li>Considérer des soins esthétiques (radiofréquence, etc.)</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('carences')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>⚠️ Carences nutritionnelles</h4>
+            <ul>
+              <li>Bilan sanguin complet (vitamines B12, D, fer, folates)</li>
+              <li>Complément multivitaminé adapté</li>
+              <li>Privilégier les aliments denses en nutriments</li>
+              <li>Consultation avec un nutritionniste</li>
+              <li>Supplémentation ciblée selon les carences détectées</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      solutions += `
+          <div class="general-advice">
+            <h4>📋 Conseils généraux</h4>
+            <ul>
+              <li><strong>Communiquez avec votre médecin :</strong> N'hésitez pas à discuter d'un ajustement de dose</li>
+              <li><strong>Progressivité :</strong> La plupart des effets s'atténuent après 4-8 semaines</li>
+              <li><strong>Suivi régulier :</strong> Tenez un journal de vos symptômes</li>
+              <li><strong>Patience :</strong> L'adaptation peut prendre du temps</li>
+            </ul>
+          </div>
+          
+          <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+            <h4 style="color: #dc3545; margin-bottom: 1rem;">⚠️ Important</h4>
+            <p style="margin: 0; font-size: 0.9rem;">Ces conseils sont informatifs. Consultez toujours votre médecin avant de modifier votre traitement ou d'arrêter des médicaments.</p>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <a href="/effets-secondaires-glp1/" class="btn btn-primary">Guide complet des effets secondaires</a>
+            <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin spécialisé</a>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('results-content').innerHTML = solutions;
+    }
+
+    function showTraitementResults(ozempicScore, wegovyScore) {
+      document.getElementById('quiz-container').style.display = 'none';
+      document.querySelector('.navigation').style.display = 'none';
+      document.getElementById('results-section').style.display = 'block';
+
+      let recommendation = '';
+      
+      // Cas spécial : personne ayant déjà fait un traitement GLP-1
+      if (answers.q3 === 'glp1-deja') {
+        recommendation = `
+          <div class="recommendation">
+            <div class="recommendation-score">Recommandation : Nouveau Départ</div>
+            <h3>🔄 Vous avez déjà essayé un GLP-1 : Optimisons votre approche</h3>
+            <p>Ayant déjà une expérience avec les traitements GLP-1, voici nos recommandations :</p>
+            
+            <h4>🔍 Analysez votre expérience précédente :</h4>
+            <ul class="features-list">
+              <li>Quel était le traitement utilisé ? (Ozempic, Wegovy, Saxenda...)</li>
+              <li>Pourquoi avez-vous arrêté ? (Effets secondaires, coût, efficacité...)</li>
+              <li>Avez-vous eu des résultats ? Combien de poids perdu ?</li>
+              <li>Combien de temps depuis l'arrêt ?</li>
+            </ul>
+
+            <h4>💡 Nouvelles stratégies à considérer :</h4>
+            <ul class="features-list">
+              <li><strong>Changement de molécule :</strong> Essayer Mounjaro (tirzépatide) ou Rybelsus (oral)</li>
+              <li><strong>Dosage différent :</strong> Démarrage plus progressif pour réduire les effets secondaires</li>
+              <li><strong>Accompagnement renforcé :</strong> Suivi nutritionnel et psychologique</li>
+              <li><strong>Timing optimisé :</strong> Période de l'année et contexte personnel propices</li>
+            </ul>
+
+            <h4>⚠️ Points d'attention :</h4>
+            <ul class="features-list">
+              <li>Discutez avec votre médecin des raisons de l'arrêt précédent</li>
+              <li>Vérifiez votre situation médicale actuelle (bilan sanguin)</li>
+              <li>Préparez un plan pour éviter les mêmes difficultés</li>
+              <li>Considérez un centre spécialisé en obésité pour un suivi expert</li>
+            </ul>
+
+            <div style="margin-top: 2rem;">
+              <a href="/medicaments-glp1/" class="btn btn-primary">Comparer tous les traitements</a>
+              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin spécialisé</a>
+              <a href="/effets-secondaires-glp1/" class="btn btn-secondary">Gérer les effets secondaires</a>
+            </div>
+          </div>
+        `;
+      } else if (ozempicScore > wegovyScore) {
+        recommendation = `
+          <div class="recommendation">
+            <div class="recommendation-score">Recommandation : Ozempic</div>
+            <h3>💊 Ozempic semble le plus adapté à votre profil</h3>
+            <p>Basé sur vos réponses, Ozempic présente les avantages suivants pour vous :</p>
+            <ul class="features-list">
+              <li>Traitement du diabète ET perte de poids</li>
+              <li>Coût généralement plus abordable</li>
+              <li>Dosage progressif pour minimiser les effets secondaires</li>
+              <li>Prise en charge possible par l'Assurance Maladie</li>
+            </ul>
+            <p><strong>Prochaines étapes :</strong></p>
+            <p>1. Consultez votre médecin traitant ou un endocrinologue<br>
+            2. Faites un bilan sanguin complet<br>
+            3. Discutez des contre-indications éventuelles</p>
+            <div style="margin-top: 2rem;">
+              <a href="/medicaments-glp1/ozempic-posologie/" class="btn btn-primary">En savoir plus sur Ozempic</a>
+              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
+            </div>
+          </div>
+        `;
+      } else if (wegovyScore > ozempicScore) {
+        recommendation = `
+          <div class="recommendation">
+            <div class="recommendation-score">Recommandation : Wegovy</div>
+            <h3>📉 Wegovy semble le plus adapté à votre profil</h3>
+            <p>Basé sur vos réponses, Wegovy présente les avantages suivants pour vous :</p>
+            <ul class="features-list">
+              <li>Spécialement conçu pour la perte de poids</li>
+              <li>Dosage plus élevé pour des résultats plus rapides</li>
+              <li>Idéal pour l'obésité importante</li>
+              <li>Accompagnement nutritionnel recommandé</li>
+            </ul>
+            <p><strong>Prochaines étapes :</strong></p>
+            <p>1. Consultez un médecin spécialisé en obésité<br>
+            2. Vérifiez votre éligibilité (IMC > 30)<br>
+            3. Préparez un plan nutritionnel adapté</p>
+            <div style="margin-top: 2rem;">
+              <a href="/glp1-cout/acheter-wegovy-en-france/" class="btn btn-primary">En savoir plus sur Wegovy</a>
+              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
+            </div>
+          </div>
+        `;
+      } else {
+        recommendation = `
+          <div class="recommendation">
+            <div class="recommendation-score">Les deux sont adaptés</div>
+            <h3>⚖️ Ozempic et Wegovy sont tous deux adaptés</h3>
+            <p>Votre profil correspond aux deux traitements. Le choix dépendra de :</p>
+            <ul class="features-list">
+              <li>Votre budget et la prise en charge</li>
+              <li>Vos préférences en termes de dosage</li>
+              <li>L'avis de votre médecin</li>
+              <li>Votre tolérance aux effets secondaires</li>
+            </ul>
+            <p><strong>Nous recommandons de commencer par Ozempic</strong> car il est souvent mieux remboursé et permet une adaptation progressive.</p>
+            <div style="margin-top: 2rem;">
+              <a href="/medicaments-glp1/" class="btn btn-primary">Comparer Ozempic vs Wegovy</a>
+              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
+            </div>
+          </div>
+        `;
+      }
+
+      recommendation += `
+        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+          <h4 style="color: #dc3545; margin-bottom: 1rem;">⚠️ Avertissement Important</h4>
+          <p style="margin: 0; font-size: 0.9rem;">Ce diagnostic est informatif et ne remplace pas une consultation médicale. Seul un professionnel de santé peut déterminer si un traitement GLP-1 vous convient et vous le prescrire légalement.</p>
+        </div>
+      `;
+
+      document.getElementById('results-content').innerHTML = recommendation;
+    }
+
+    // Event listeners
+    document.getElementById('next-btn').addEventListener('click', nextQuestion);
+    document.getElementById('prev-btn').addEventListener('click', prevQuestion);
+    document.getElementById('results-btn').addEventListener('click', calculateResults);
+
+    // Auto-advance on selection (sauf pour la question 9 qui utilise des checkboxes)
+    document.addEventListener('change', function(e) {
+      if (e.target.type === 'radio' && currentQuestion !== 9) {
+        setTimeout(nextQuestion, 500);
+      }
+    });
+  </script>
+</BaseLayout>

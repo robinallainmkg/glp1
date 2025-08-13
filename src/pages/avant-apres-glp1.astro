@@ -4,37 +4,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const testimonials = [
   {
     id: 1,
-    name: "Sophie L.",
+    name: "Marie L.",
     age: 42,
     city: "Paris",
-    image: "/images/testimonials/sophie-before-after.jpg",
-    weightLoss: "18 kilos",
-    duration: "7 mois",
-    testimonial: "J'ai commencé un traitement GLP-1 sur recommandation de mon médecin, et en 7 mois j'ai perdu 18 kilos. Je suis ravie du résultat sur ma santé, mais j'ai vite remarqué que ma peau manquait de fermeté, surtout au niveau des bras et du ventre. J'ai intégré une crème raffermissante matin et soir, et après 3 mois, la différence est visible. Le plus dur ? Adapter ma garde-robe !",
-    skinCare: "Crème raffermissante matin et soir pendant 3 mois",
-    author: "Élodie Carpentier"
+    image: "/images/uploads/marie-journey8.png",
+    weightLoss: "22 kilos",
+    duration: "8 mois",
+    testimonial: "Mon parcours avec les traitements GLP-1 a été une révélation. En 8 mois, j'ai perdu 22 kilos et retrouvé confiance en moi. Au début, j'étais inquiète pour ma peau, surtout au niveau du visage et des bras. J'ai suivi les conseils de ma dermatologue : hydratation intense matin et soir, massages circulaires et sérum à l'acide hyaluronique. Résultat : ma peau a gardé son élasticité et mon teint est plus lumineux qu'avant !",
+    skinCare: "Routine hydratation intense + sérum acide hyaluronique + massages quotidiens",
+    author: "Dr. Sarah Dubois"
   },
   {
     id: 2,
-    name: "Karim B.",
-    age: 36,
+    name: "Laurent M.",
+    age: 38,
     city: "Lyon",
-    weightLoss: "14 kilos",
-    duration: "6 mois",
-    testimonial: "Avant de commencer, j'étais sceptique. Mais après 6 mois, j'ai perdu 14 kilos et retrouvé une énergie incroyable. Côté esthétique, j'ai eu quelques vergetures sur les cuisses, probablement à cause de la perte rapide. J'ai suivi les conseils de mon dermatologue et appliqué une huile riche en vitamine E. Aujourd'hui, elles sont beaucoup moins visibles et ma peau est plus souple.",
-    skinCare: "Huile riche en vitamine E sur recommandation dermatologique",
-    author: "Dr. Claire Morel"
+    image: "/images/uploads/Laurent-journey.png",
+    weightLoss: "28 kilos",
+    duration: "10 mois",
+    testimonial: "Après 10 mois de traitement, j'ai perdu 28 kilos. Une transformation incroyable ! En tant qu'homme, je pensais que les soins de peau n'étaient pas pour moi, mais j'ai vite réalisé l'importance de prendre soin de mon corps pendant cette transformation. Crème hydratante quotidienne, huile d'argan pour les zones tendues, et exercices de renforcement musculaire. Ma peau est restée ferme et tonique.",
+    skinCare: "Crème hydratante quotidienne + huile d'argan + renforcement musculaire",
+    author: "Dr. Antoine Moreau"
   },
   {
     id: 3,
+    name: "Hélène R.",
+    age: 45,
+    city: "Marseille",
+    image: "/images/uploads/helene5.png",
+    weightLoss: "18 kilos",
+    duration: "6 mois",
+    testimonial: "Mon traitement GLP-1 m'a permis de perdre 18 kilos en 6 mois. J'étais particulièrement préoccupée par l'aspect de mon visage et de mon cou après cette perte de poids. J'ai investi dans des soins anti-âge adaptés et un massage facial quotidien. Le résultat ? Un visage plus affiné mais toujours rayonnant, et une confiance retrouvée. C'est un investissement sur soi qui en vaut la peine.",
+    skinCare: "Soins anti-âge quotidiens + massage facial + compléments collagène",
+    author: "Élodie Carpentier"
+  },
+  {
+    id: 4,
     name: "Amélie D.",
     age: 50,
-    city: "Marseille",
+    city: "Bordeaux",
+    image: "/images/uploads/journey-femme-5.png",
     weightLoss: "20 kilos",
-    duration: "Non spécifiée",
-    testimonial: "Le GLP-1 m'a aidée à perdre 20 kilos, ce qui a changé mon quotidien. Le seul bémol, c'est que mon visage semblait plus fatigué. J'ai donc investi dans un sérum hydratant et raffermissant conseillé par une amie esthéticienne. Après 2 mois, j'ai retrouvé un teint plus lumineux et une peau repulpée.",
-    skinCare: "Sérum hydratant et raffermissant pendant 2 mois",
-    author: "Élodie Carpentier"
+    duration: "7 mois",
+    testimonial: "À 50 ans, j'ai décidé de prendre ma santé en main avec un traitement GLP-1. 20 kilos en moins en 7 mois ! J'avais peur que ma peau ne suive pas, mais grâce aux conseils de mon esthéticienne, j'ai maintenu une routine rigoureuse : gommage hebdomadaire, crème raffermissante bi-quotidienne et yoga pour la tonification. Ma peau est plus belle qu'elle ne l'a été depuis des années !",
+    skinCare: "Gommage hebdomadaire + crème raffermissante + yoga tonification",
+    author: "Dr. Claire Morel"
   }
 ];
 ---
@@ -59,11 +73,11 @@ const testimonials = [
   <section class="testimonials-stats">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-number">52</div>
+        <div class="stat-number">88</div>
         <div class="stat-label">kilos perdus au total</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">3</div>
+        <div class="stat-number">4</div>
         <div class="stat-label">témoignages authentiques</div>
       </div>
       <div class="stat-item">
@@ -90,9 +104,9 @@ const testimonials = [
           </div>
         </div>
 
-        {testimonial.image && index === 0 && (
+        {testimonial.image && (
           <div class="testimonial-image">
-            <img src={testimonial.image} alt={`Transformation avant/après de ${testimonial.name}`} />
+            <img src={testimonial.image} alt={`Transformation ${testimonial.name}`} loading="lazy" />
           </div>
         )}
 
@@ -108,6 +122,42 @@ const testimonials = [
         </div>
       </article>
     ))}
+  </section>
+
+  <!-- Section spéciale: Progression de Marie -->
+  <section class="progression-section">
+    <h2>📈 Suivi de Progression : Le Parcours de Marie</h2>
+    <div class="progression-container">
+      <div class="progression-item">
+        <div class="progression-header">
+          <h3>Marie à 4 mois</h3>
+          <span class="progression-badge">-12 kg</span>
+        </div>
+        <div class="progression-image">
+          <img src="/images/uploads/marie-journey4.png" alt="Marie après 4 mois de traitement" loading="lazy" />
+        </div>
+        <p class="progression-description">
+          Après 4 mois de traitement, Marie a déjà perdu 12 kilos. Elle commence à voir les premiers résultats et adapte sa routine de soins pour accompagner sa transformation.
+        </p>
+      </div>
+      
+      <div class="progression-arrow">
+        <span>➡️</span>
+      </div>
+      
+      <div class="progression-item">
+        <div class="progression-header">
+          <h3>Marie à 8 mois</h3>
+          <span class="progression-badge">-22 kg</span>
+        </div>
+        <div class="progression-image">
+          <img src="/images/uploads/marie-journey8.png" alt="Marie après 8 mois de traitement" loading="lazy" />
+        </div>
+        <p class="progression-description">
+          8 mois plus tard, Marie a atteint son objectif avec 22 kilos en moins. Sa routine de soins a porté ses fruits : sa peau est ferme et rayonnante.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Conseils généraux -->
@@ -257,10 +307,93 @@ const testimonials = [
   }
 
   .testimonial-image img {
-    max-width: 100%;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--primary-light);
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial-image img:hover {
+    transform: scale(1.02);
+  }
+
+  .progression-section {
+    margin-bottom: var(--spacing-12);
+    background: linear-gradient(135deg, var(--primary-light), var(--gray-50));
+    padding: var(--spacing-8);
+    border-radius: var(--radius-xl);
+  }
+
+  .progression-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+    color: var(--primary-blue);
+  }
+
+  .progression-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: var(--spacing-6);
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .progression-item {
+    background: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--primary-light);
+  }
+
+  .progression-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .progression-header h3 {
+    color: var(--gray-900);
+    margin: 0;
+  }
+
+  .progression-badge {
+    background: var(--primary-blue);
+    color: white;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+  }
+
+  .progression-image {
+    margin: var(--spacing-4) 0;
+  }
+
+  .progression-image img {
+    max-width: 250px;
+    width: 100%;
     height: auto;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+  }
+
+  .progression-description {
+    color: var(--gray-600);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+  }
+
+  .progression-arrow {
+    text-align: center;
+    font-size: var(--font-size-2xl);
+    color: var(--primary-blue);
   }
 
   .testimonial-content blockquote {
@@ -387,6 +520,20 @@ const testimonials = [
 
     .testimonial-results {
       justify-content: center;
+    }
+
+    .progression-container {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-4);
+    }
+
+    .progression-arrow {
+      transform: rotate(90deg);
+    }
+
+    .progression-header {
+      flex-direction: column;
+      gap: var(--spacing-2);
     }
 
     .cta-buttons {
