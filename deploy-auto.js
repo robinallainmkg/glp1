@@ -9,12 +9,12 @@ import { execSync, spawn } from 'child_process';
 import { existsSync, rmSync } from 'fs';
 import { createInterface } from 'readline';
 
-// Configuration Hostinger
+// Configuration Hostinger (corrigée)
 const CONFIG = {
   host: '147.79.98.140',
   username: 'u403023291',
   port: 65002,
-  remotePath: '/public_html',
+  remotePath: 'domains/glp1-france.fr/public_html',
   password: '_@%p8R*XG.s+/5)'
 };
 
@@ -40,14 +40,18 @@ console.log('🧹 Nettoyage...');
 if (existsSync('dist')) rmSync('dist', { recursive: true, force: true });
 if (existsSync('.astro')) rmSync('.astro', { recursive: true, force: true });
 
-// Build
-console.log('🏗️  Build en cours...');
-try {
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build réussi');
-} catch (error) {
-  console.error('❌ Erreur de build');
-  process.exit(1);
+// Build seulement si nécessaire
+if (!existsSync('dist/index.html')) {
+  console.log('🏗️  Build en cours...');
+  try {
+    execSync('npm run build', { stdio: 'inherit' });
+    console.log('✅ Build réussi');
+  } catch (error) {
+    console.error('❌ Erreur de build');
+    process.exit(1);
+  }
+} else {
+  console.log('✅ Build déjà présent');
 }
 
 // Vérifications
@@ -64,9 +68,19 @@ console.log(`📡 Connexion: ${CONFIG.username}@${CONFIG.host}:${CONFIG.port}`);
 
 function deployWithSshpass() {
   try {
-    // Nettoyer le serveur distant
+    // Test de connexion SSH et exploration du serveur
+    console.log('🔍 Test de connexion SSH...');
+    const testCmd = `sshpass -p '${CONFIG.password}' ssh -o StrictHostKeyChecking=no -p ${CONFIG.port} ${CONFIG.username}@${CONFIG.host} "pwd && ls -la"`;
+    execSync(testCmd, { stdio: 'inherit' });
+    
+    // Créer le chemin complet vers le site s'il n'existe pas
+    console.log('📁 Vérification/création du dossier du site...');
+    const mkdirCmd = `sshpass -p '${CONFIG.password}' ssh -o StrictHostKeyChecking=no -p ${CONFIG.port} ${CONFIG.username}@${CONFIG.host} "mkdir -p ${CONFIG.remotePath} && ls -la ${CONFIG.remotePath}"`;
+    execSync(mkdirCmd, { stdio: 'inherit' });
+    
+    // Nettoyer le contenu existant
     console.log('🗑️  Nettoyage du serveur...');
-    const cleanCmd = `sshpass -p '${CONFIG.password}' ssh -o StrictHostKeyChecking=no -p ${CONFIG.port} ${CONFIG.username}@${CONFIG.host} "rm -rf ${CONFIG.remotePath}/*"`;
+    const cleanCmd = `sshpass -p '${CONFIG.password}' ssh -o StrictHostKeyChecking=no -p ${CONFIG.port} ${CONFIG.username}@${CONFIG.host} "rm -rf ${CONFIG.remotePath}/* ${CONFIG.remotePath}/.*[^.]*"`;
     execSync(cleanCmd, { stdio: 'inherit' });
     
     // Upload des fichiers
@@ -93,7 +107,7 @@ function manualDeployInstructions() {
   console.log(`2. Connexion SSH: ${CONFIG.host}:${CONFIG.port}`);
   console.log(`3. Username: ${CONFIG.username}`);
   console.log(`4. Password: ${CONFIG.password}`);
-  console.log('5. Supprimer tout dans /public_html/');
+  console.log('5. Supprimer tout dans /domains/glp1-france.fr/public_html/');
   console.log('6. Upload contenu du dossier dist/');
   
   // Ouvrir le dossier dist
