@@ -35,6 +35,30 @@ try {
   process.exit(1);
 }
 
+// Vérifier l'état Git et synchroniser avec GitHub
+console.log('🔄 Synchronisation avec GitHub...');
+try {
+  // Vérifier s'il y a des changements non committé
+  const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }).trim();
+  
+  if (gitStatus) {
+    console.log('📝 Changements détectés, commit automatique...');
+    const timestamp = new Date().toLocaleString('fr-FR');
+    execSync('git add .', { stdio: 'inherit' });
+    execSync(`git commit -m "🚀 Déploiement automatique du ${timestamp}"`, { stdio: 'inherit' });
+    console.log('✅ Commit effectué');
+  }
+  
+  // Pousser sur GitHub
+  console.log('📤 Push vers GitHub...');
+  execSync('git push origin production', { stdio: 'inherit' });
+  console.log('✅ GitHub synchronisé');
+  
+} catch (error) {
+  console.error('⚠️  Avertissement Git:', error.message);
+  console.log('💡 Continuons quand même le déploiement...');
+}
+
 // Nettoyage
 console.log('🧹 Nettoyage...');
 if (existsSync('dist')) rmSync('dist', { recursive: true, force: true });
