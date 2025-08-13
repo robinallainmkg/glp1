@@ -1,14 +1,105 @@
 {
-  "timestamp": "2025-08-11T10:53:17.774Z",
+  "timestamp": "2025-08-13T17:15:43.226Z",
   "articles": [
     {
-      "filePath": "src/content/glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant-en-pharmacie.md",
-      "seoScore": 50,
+      "filePath": "src\\content\\recherche-glp1\\glp-1.md",
+      "seoScore": 40,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article court (<500 mots)",
-        "H1 unique",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 0,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Pertinence faible pour le lecteur",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-perte-de-poids\\medicament-pour-maigrir-tres-puissant-en-pharmacie.md",
+      "seoScore": 40,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article court (<500 mots)",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -23,173 +114,34 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-cout/anneau-gastrique-prix-cmu.md",
-      "seoScore": 50,
+      "filePath": "src\\content\\glp1-cout\\anneau-gastrique-prix-cmu.md",
+      "seoScore": 40,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article court (<500 mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
-      "pertinenceScore": 90,
+      "pertinenceScore": 80,
       "pertinenceDetails": [
         "Pertinence faible pour le lecteur",
         "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
+        "Section FAQ/résumé présente",
+        "Article trop court (<300 mots)"
       ]
     },
     {
-      "filePath": "src/content/recherche-glp1/glp-1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\recherche-glp1\\glp-inhibitors.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 0,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Pertinence faible pour le lecteur",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/recherche-glp1/glp-inhibitors.md",
-      "seoScore": 60,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -318,18 +270,17 @@
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
         "Section FAQ/résumé présente"
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/jeune-intermittent-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\jeune-intermittent-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -347,13 +298,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/acupuncture-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\acupuncture-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -371,13 +322,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/alternatives-bio-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\alternatives-bio-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -395,13 +346,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/alternatives-naturelles-ozempic.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\alternatives-naturelles-ozempic.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -419,13 +370,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/berberine-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\berberine-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -443,13 +394,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/cannelle-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\cannelle-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -467,13 +418,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/chrome-diabete.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\chrome-diabete.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -491,13 +442,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/homeopathie-diabete.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\homeopathie-diabete.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -515,13 +466,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/meditation-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\meditation-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -539,13 +490,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/phytotherapie-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\phytotherapie-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -563,13 +514,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/plantes-diabete.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\plantes-diabete.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -587,13 +538,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/supplements-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\supplements-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -611,13 +562,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/vinaigre-cidre-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\vinaigre-cidre-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -635,13 +586,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/yoga-diabete.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\yoga-diabete.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -659,13 +610,37 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-cout/wegovy-remboursement-mutuelle.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-cout\\wegovy-prix-pharmacie.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 75,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-cout\\wegovy-remboursement-mutuelle.md",
+      "seoScore": 50,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -682,13 +657,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-complications-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-complications-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -706,13 +681,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-gestationnel-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-gestationnel-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -730,13 +705,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-pied-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-pied-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -754,13 +729,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-regime-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-regime-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -778,13 +753,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-retinopathie-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-retinopathie-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -802,13 +777,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-sport-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-sport-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -826,13 +801,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/diabete-urgence-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\diabete-urgence-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -850,13 +825,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-auto-surveillance.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-auto-surveillance.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -874,13 +849,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-carnet-diabetique.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-carnet-diabetique.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -898,13 +873,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-diabete-type-1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-diabete-type-1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -922,13 +897,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-hba1c-reduction.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-hba1c-reduction.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -946,13 +921,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-insuline-interaction.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-insuline-interaction.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -970,13 +945,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-nephropathie.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-nephropathie.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -994,13 +969,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/glp1-neuropathie-diabetique.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-diabete\\glp1-neuropathie-diabetique.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1018,13 +993,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-diabete/traitement-insulinique.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\ozempic-prix.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1042,37 +1017,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/ozempic-prix.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\medecins-glp1-france\\diabetologue-paris.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 75,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/alternatives-glp1/peut-on-guerir-du-diabete.md",
-      "seoScore": 60,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1089,13 +1040,13 @@
       ]
     },
     {
-      "filePath": "src/content/alternatives-glp1/semaglutide-naturel.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\recherche-glp1\\recherche-clinique-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1112,13 +1063,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-cout/wegovy-prix-pharmacie.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\glp1-calories-journalieres.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1135,13 +1086,13 @@
       ]
     },
     {
-      "filePath": "src/content/medecins-glp1-france/diabetologue-paris.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\glp1-hydratation.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1158,13 +1109,13 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/medicament-anti-obesite-novo-nordisk.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\glp1-index-glycemique.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1181,13 +1132,13 @@
       ]
     },
     {
-      "filePath": "src/content/recherche-glp1/recherche-clinique-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\glp1-micronutriments.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1204,13 +1155,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/glp1-calories-journalieres.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\glp1-portion-alimentaire.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1227,13 +1178,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/glp1-hydratation.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\glp1-proteines.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1250,13 +1201,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/glp1-index-glycemique.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-cetogene-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1273,13 +1224,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/glp1-micronutriments.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-chrono-nutrition-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1296,13 +1247,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/glp1-portion-alimentaire.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-dash-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1319,13 +1270,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/glp1-proteines.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-detox-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1342,13 +1293,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/regime-cetogene-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-mediterraneen-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1365,13 +1316,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/regime-chrono-nutrition-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-paleo-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1388,13 +1339,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/regime-dash-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\regime-glp1\\regime-sans-sucre-glp1.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1411,105 +1362,13 @@
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/regime-detox-glp1.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\effets-secondaires-glp1\\insulevel-effet-indesirable.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/regime-glp1/regime-mediterraneen-glp1.md",
-      "seoScore": 60,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/regime-glp1/regime-paleo-glp1.md",
-      "seoScore": 60,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/regime-glp1/regime-sans-sucre-glp1.md",
-      "seoScore": 60,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/effets-secondaires-glp1/insulevel-effet-indesirable.md",
-      "seoScore": 60,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1525,13 +1384,13 @@
       ]
     },
     {
-      "filePath": "src/content/effets-secondaires-glp1/wegovy-danger.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\effets-secondaires-glp1\\wegovy-danger.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1547,13 +1406,13 @@
       ]
     },
     {
-      "filePath": "src/content/effets-secondaires-glp1/wegovy-dosage.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\effets-secondaires-glp1\\wegovy-dosage.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1569,13 +1428,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/chirurgie-bariatrique.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\chirurgie-bariatrique.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1591,13 +1450,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/combien-de-dose-dans-un-stylo-ozempic.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\diabete-amaigrissement-rapide.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1613,13 +1472,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/diabete-amaigrissement-rapide.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\medicament-pour-maigrir-tres-puissant.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1635,13 +1494,32 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/medicament-americain-pour-maigrir.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\medicament-pour-perdre-du-ventre-en-1-semaine.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-perte-de-poids\\obesite-severe-prise-en-charge.md",
+      "seoScore": 50,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1657,13 +1535,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\ozempic-effets-secondaires-forum.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1679,13 +1557,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/medicament-pour-perdre-du-ventre-en-1-semaine.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\personne-obese.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1701,13 +1579,13 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/obesite-severe-prise-en-charge.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\pilule-qui-fait-maigrir.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1723,101 +1601,169 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/ou-trouver-ozempic.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\glp1-perte-de-poids\\medicament-americain-pour-maigrir.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
-      "pertinenceScore": 85,
+      "pertinenceScore": 90,
       "pertinenceDetails": [
+        "Phrases trop longues",
         "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-diabete\\traitement-insulinique.md",
+      "seoScore": 50,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 95,
+      "pertinenceDetails": [
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section FAQ/résumé présente"
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/ozempic-effets-secondaires-forum.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\medicaments-glp1\\coupe-faim-puissant-interdit-en-france.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
-      "pertinenceScore": 85,
+      "pertinenceScore": 95,
       "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section FAQ/résumé présente"
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/personne-obese.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\medicaments-glp1\\medicament-anti-obesite-novo-nordisk.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
-      "pertinenceScore": 85,
+      "pertinenceScore": 95,
       "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section FAQ/résumé présente"
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/pilule-qui-fait-maigrir.md",
-      "seoScore": 60,
+      "filePath": "src\\content\\alternatives-glp1\\peut-on-guerir-du-diabete.md",
+      "seoScore": 50,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article moyen (500+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
-      "pertinenceScore": 85,
+      "pertinenceScore": 100,
       "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section FAQ/résumé présente"
       ]
     },
     {
-      "filePath": "src/content/regime-glp1/isglt2-liste.md",
-      "seoScore": 65,
+      "filePath": "src\\content\\alternatives-glp1\\semaglutide-naturel.md",
+      "seoScore": 50,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 100,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-perte-de-poids\\combien-de-dose-dans-un-stylo-ozempic.md",
+      "seoScore": 50,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 100,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-perte-de-poids\\ou-trouver-ozempic.md",
+      "seoScore": 50,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 100,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\regime-glp1\\isglt2-liste.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1945,18 +1891,17 @@
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
         "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
         "Section FAQ/résumé présente"
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/nouveau-traitement-diabete-type-2-injection.md",
-      "seoScore": 65,
+      "filePath": "src\\content\\medicaments-glp1\\nouveau-traitement-diabete-type-2-injection.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
@@ -1980,906 +1925,16 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/medicament-prise-de-poid.md",
-      "seoScore": 65,
+      "filePath": "src\\content\\glp1-cout\\wegovy-prix.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 50,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/traitement-diabete-type-2.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 50,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/traitements-medicamenteux.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 50,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/glp1-cout/acheter-wegovy-en-france.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medecins-glp1-france/endocrinologue-pour-maigrir-new.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medecins-glp1-france/endocrinologue-pour-maigrir.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/ado-medicament.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/medicaments-qui-augmentent-la-glycemie.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/mounjaro-effet-secondaire.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/semaglutide-achat.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/sulfamide-hypoglycemiant.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/victoza-posologie.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/xenical-remboursement.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 55,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medecins-glp1-france/clinique-pour-obesite-new.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 60,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medecins-glp1-france/clinique-pour-obesite.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 60,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/metformine-diarrhee-solution.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 60,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/orlistat-avant-apres.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 60,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/trulicity-danger.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 60,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/victoza-rupture.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 60,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/effets-secondaires-glp1/ozempic-danger.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 65,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/dipeptidyl-peptidase-4.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 65,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/dosage-trulicity.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 65,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/dulaglutide-nom-commercial.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 65,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/metformine-autre-nom.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 65,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/mounjaro-injection-pour-maigrir.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 70,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/sitagliptine-effets-secondaires.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 70,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/sulfamides-medicaments.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 70,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/januvia-autre-nom.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 75,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/mecanisme-d-action.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 75,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/coupe-faim-puissant-interdit-en-france.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/liraglutide-perte-de-poids-avis.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/stylo-saxenda.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 80,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/ballon-gastrique-rembourse.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 85,
-      "pertinenceDetails": [
-        "Phrases trop longues",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/mounjaro-prix-france.md",
-      "seoScore": 65,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes insuffisants",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 85,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/medicaments-glp1/ozempic-injection-prix.md",
-      "seoScore": 70,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article moyen (500+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes présents",
-        "Balises alt absentes"
-      ],
-      "pertinenceScore": 90,
-      "pertinenceDetails": [
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section trop courte ou non rédigée",
-        "Section FAQ/résumé présente"
-      ]
-    },
-    {
-      "filePath": "src/content/glp1-cout/wegovy-prix.md",
-      "seoScore": 75,
-      "seoDetails": [
-        "Mot-clé principal présent",
-        "Densité du mot-clé à ajuster",
-        "Article long (1000+ mots)",
-        "H1 unique",
-        "Structure H2/H3 suffisante",
-        "Métadonnées incomplètes",
-        "Liens internes/externes présents",
         "Balises alt absentes"
       ],
       "pertinenceScore": 45,
@@ -2900,16 +1955,16 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-cout/operation-pour-maigrir-prix.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\glp1-cout\\operation-pour-maigrir-prix.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 50,
@@ -2928,16 +1983,16 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-cout/saxenda-prix-pharmacie.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\glp1-cout\\saxenda-prix-pharmacie.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 50,
@@ -2956,16 +2011,16 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/medicament-pour-maigrir-tres-puissant.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\medicament-pour-maigrir-tres-puissant.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 50,
@@ -2984,16 +2039,16 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/nouveau-medicament.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\medicament-prise-de-poid.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 50,
@@ -3012,16 +2067,16 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/trulicity-ou-ozempic.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\traitement-diabete-type-2.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 50,
@@ -3040,16 +2095,72 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/avant-apres-glp1.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\traitements-medicamenteux.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 50,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-cout\\acheter-wegovy-en-france.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\glp1-perte-de-poids\\avant-apres-glp1.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 55,
@@ -3065,16 +2176,16 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/glp1-perte-de-poids.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\glp1-perte-de-poids\\glp1-perte-de-poids.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 55,
@@ -3090,16 +2201,41 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/medicament-americain-pour-maigrir.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\glp1-perte-de-poids\\ozempic-regime.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medecins-glp1-france\\endocrinologue-pour-maigrir-new.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 55,
@@ -3117,16 +2253,16 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/pilule-qui-fait-maigrir.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medecins-glp1-france\\endocrinologue-pour-maigrir.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 55,
@@ -3144,16 +2280,16 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/tirzepatide-avis.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\ado-medicament.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 55,
@@ -3171,16 +2307,232 @@
       ]
     },
     {
-      "filePath": "src/content/glp1-perte-de-poids/ozempic-regime.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\medicament-americain-pour-maigrir.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
-        "Liens internes/externes présents",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\medicaments-qui-augmentent-la-glycemie.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\mounjaro-effet-secondaire.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\pilule-qui-fait-maigrir.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\semaglutide-achat.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\sulfamide-hypoglycemiant.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\victoza-posologie.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\xenical-remboursement.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medecins-glp1-france\\clinique-pour-obesite-new.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
         "Balises alt absentes"
       ],
       "pertinenceScore": 60,
@@ -3197,13 +2549,548 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/saxenda-prix.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medecins-glp1-france\\clinique-pour-obesite.md",
+      "seoScore": 55,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 60,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\metformine-diarrhee-solution.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 60,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\orlistat-avant-apres.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 60,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\trulicity-danger.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 60,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\victoza-rupture.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 60,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\effets-secondaires-glp1\\ozempic-danger.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 65,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\sitagliptine-effets-secondaires.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 65,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\ballon-gastrique-rembourse.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\dipeptidyl-peptidase-4.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\dosage-trulicity.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\dulaglutide-nom-commercial.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\mecanisme-d-action.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\metformine-autre-nom.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\mounjaro-injection-pour-maigrir.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\mounjaro-prix-france.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\sulfamides-medicaments.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 85,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\januvia-autre-nom.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 95,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\liraglutide-perte-de-poids-avis.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 95,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\stylo-saxenda.md",
+      "seoScore": 55,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes insuffisants",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 95,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\ozempic-injection-prix.md",
+      "seoScore": 60,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article moyen (500+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes présents",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 90,
+      "pertinenceDetails": [
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\nouveau-medicament.md",
+      "seoScore": 65,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes présents",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 50,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\trulicity-ou-ozempic.md",
+      "seoScore": 65,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes présents",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 50,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\tirzepatide-avis.md",
+      "seoScore": 65,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
+        "Structure H2/H3 suffisante",
+        "Métadonnées incomplètes",
+        "Liens internes/externes présents",
+        "Balises alt absentes"
+      ],
+      "pertinenceScore": 55,
+      "pertinenceDetails": [
+        "Phrases trop longues",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section trop courte ou non rédigée",
+        "Section FAQ/résumé présente"
+      ]
+    },
+    {
+      "filePath": "src\\content\\medicaments-glp1\\saxenda-prix.md",
+      "seoScore": 65,
+      "seoDetails": [
+        "Mot-clé principal présent",
+        "Densité du mot-clé à ajuster",
+        "Article long (1000+ mots)",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes présents",
@@ -3219,13 +3106,13 @@
       ]
     },
     {
-      "filePath": "src/content/medicaments-glp1/wegovy-avis.md",
-      "seoScore": 75,
+      "filePath": "src\\content\\medicaments-glp1\\wegovy-avis.md",
+      "seoScore": 65,
       "seoDetails": [
         "Mot-clé principal présent",
         "Densité du mot-clé à ajuster",
         "Article long (1000+ mots)",
-        "H1 unique",
+        "Problème H1",
         "Structure H2/H3 suffisante",
         "Métadonnées incomplètes",
         "Liens internes/externes présents",
@@ -3241,8 +3128,8 @@
       ]
     }
   ],
-  "avgSEO": 63,
-  "avgPertinence": 70,
-  "lowPertinenceCount": 28,
-  "lowSEOCount": 2
+  "avgSEO": 52,
+  "avgPertinence": 72,
+  "lowPertinenceCount": 29,
+  "lowSEOCount": 113
 }
