@@ -1,0 +1,854 @@
+---
+import { getProductById, addUtmParameters } from '../utils/affiliate-manager.ts';
+
+export interface Props {
+  productId: string;
+  placement: 'banner' | 'sidebar' | 'inline' | 'grid' | 'footer' | 'content';
+  variant?: 'featured' | 'expanded' | 'compact' | 'card';
+  context?: {
+    category?: string;
+    keywords?: string[];
+    tags?: string[];
+  };
+  className?: string;
+  showIfRelevant?: boolean;
+}
+
+const { 
+  productId, 
+  placement, 
+  variant = 'expanded', 
+  context = {}, 
+  className = '',
+  showIfRelevant = true 
+} = Astro.props;
+
+// Récupération du produit par ID
+const product = await getProductById(productId);
+
+// Si le produit n'existe pas, ne rien afficher
+if (!product) {
+  return null;
+}
+
+// Si showIfRelevant est activé, vérifier la pertinence contextuelle
+if (showIfRelevant && context.keywords?.length) {
+  const isRelevant = product.contextualKeywords.some(keyword => 
+    context.keywords!.some(ctxKeyword => 
+      keyword.toLowerCase().includes(ctxKeyword.toLowerCase()) ||
+      ctxKeyword.toLowerCase().includes(keyword.toLowerCase())
+    )
+  );
+  
+  if (!isRelevant) {
+    return null;
+  }
+}
+
+// Configuration du placement
+const placementConfig = product.placements?.[placement];
+if (!placementConfig?.enabled) {
+  return null;
+}
+
+// Génération de l'URL avec UTM
+const utmUrl = addUtmParameters(product.affiliateUrl, {
+  source: 'glp1-france',
+  medium: 'affiliate',
+  campaign: placement,
+  content: productId
+});
+
+// Styles conditionnels selon le variant
+const variantClasses = {
+  featured: 'affiliate-product--featured',
+  expanded: 'affiliate-product--expanded', 
+  compact: 'affiliate-product--compact',
+  card: 'affiliate-product--card'
+};
+
+const placementClasses = {
+  banner: 'affiliate-product--banner',
+  sidebar: 'affiliate-product--sidebar',
+  inline: 'affiliate-product--inline',
+  grid: 'affiliate-product--grid',
+  footer: 'affiliate-product--footer',
+  content: 'affiliate-product--content'
+};
+
+const finalClasses = [
+  'affiliate-product',
+  variantClasses[variant],
+  placementClasses[placement],
+  className
+].filter(Boolean).join(' ');
+
+// Schema.org structured data pour SEO
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": product.name,
+  "brand": {
+    "@type": "Brand",
+    "name": product.brand
+  },
+  "description": product.description,
+  "image": product.image,
+  "offers": {
+    "@type": "Offer",
+    "price": product.price.replace(/[€\s]/g, ''),
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": utmUrl
+  },
+  "aggregateRating": product.rating ? {
+    "@type": "AggregateRating",
+    "ratingValue": product.rating,
+    "reviewCount": product.reviews || 1
+  } : undefined
+};
+---
+
+<article 
+  class={finalClasses}
+  data-product-id={productId}
+  data-placement={placement}
+  data-context={JSON.stringify(context)}
+  itemscope 
+  itemtype="https://schema.org/Product"
+>
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  
+  <!-- Badge d'affiliation obligatoire -->
+  <div class="affiliate-badge">
+    <span class="affiliate-text">Lien affilié</span>
+  </div>
+
+  {variant === 'featured' && (
+    <div class="affiliate-product__featured">
+      <!-- Badge de réduction en overlay sur l'image -->
+      <div class="affiliate-product__image-container">
+        <img 
+          src={product.image} 
+          alt={product.name}
+          loading="lazy"
+          width="300"
+          height="300"
+          itemprop="image"
+        />
+        {product.discount && (
+          <div class="affiliate-product__discount-overlay">-{product.discount}</div>
+        )}
+      </div>
+      
+      <div class="affiliate-product__content">
+        <div class="affiliate-product__header">
+          <h3 class="affiliate-product__title" itemprop="name">{product.name}</h3>
+          <div class="affiliate-product__brand" itemprop="brand">{product.brand}</div>
+        </div>
+        
+        <p class="affiliate-product__description" itemprop="description">
+          {product.description}
+        </p>
+        
+        {product.benefits && (
+          <ul class="affiliate-product__benefits">
+            {product.benefits.slice(0, 3).map(benefit => (
+              <li>✓ {benefit}</li>
+            ))}
+          </ul>
+        )}
+        
+        <!-- Pricing avec code promo intégré UNE SEULE FOIS -->
+        <div class="affiliate-product__pricing-featured" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <div class="price-section">
+            <div class="price-main">
+              <span class="current-price" itemprop="price">{product.price}</span>
+              {product.originalPrice && (
+                <span class="original-price">{product.originalPrice}</span>
+              )}
+            </div>
+            {product.discountCode && (
+              <div class="promo-highlight">
+                <span class="promo-text">Code promo</span>
+                <span class="promo-code-featured">{product.discountCode}</span>
+              </div>
+            )}
+          </div>
+          <meta itemprop="priceCurrency" content="EUR" />
+        </div>
+        
+        {product.rating && (
+          <div class="affiliate-product__rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+            <div class="stars">
+              {Array.from({length: 5}, (_, i) => (
+                <span class={`star ${i < Math.floor(product.rating!) ? 'filled' : ''}`}>★</span>
+              ))}
+            </div>
+            <span class="rating-text">
+              <span itemprop="ratingValue">{product.rating}</span>/5 
+              {product.reviews && <span>({product.reviews} avis)</span>}
+            </span>
+            <meta itemprop="reviewCount" content={String(product.reviews || 1)} />
+          </div>
+        )}
+        
+        <!-- Bouton CTA simplifié -->
+        <a 
+          href={utmUrl}
+          class="affiliate-product__cta-featured"
+          target="_blank"
+          rel="sponsored nofollow"
+          onclick={`gtag('event', 'click', { event_category: 'shopify_collabs', event_label: '${productId}', event_context: '${placement}', discount_code: '${product.discountCode || ''}' })`}
+        >
+          <span class="cta-text">{product.ctaText || 'Découvrir le produit'}</span>
+          <span class="cta-icon">→</span>
+        </a>
+      </div>
+    </div>
+  )}
+
+  {variant === 'expanded' && (
+    <div class="affiliate-product__expanded">
+      <div class="affiliate-product__image-container">
+        <img 
+          src={product.image} 
+          alt={product.name}
+          loading="lazy"
+          width="200"
+          height="200"
+          itemprop="image"
+        />
+      </div>
+      
+      <div class="affiliate-product__content">
+        <h4 class="affiliate-product__title" itemprop="name">{product.name}</h4>
+        <p class="affiliate-product__description" itemprop="description">
+          {product.description}
+        </p>
+        
+        <div class="affiliate-product__pricing-expanded">
+          <div class="price-info">
+            <span class="affiliate-product__price">{product.price}</span>
+            {product.originalPrice && (
+              <span class="affiliate-product__original-price">{product.originalPrice}</span>
+            )}
+            {product.discountCode && (
+              <span class="promo-inline">Code: {product.discountCode} (-{product.discount})</span>
+            )}
+          </div>
+        </div>
+        
+        <a 
+          href={utmUrl}
+          class="affiliate-product__cta-expanded"
+          target="_blank"
+          rel="sponsored nofollow"
+          onclick={`gtag('event', 'click', { event_category: 'shopify_collabs', event_label: '${productId}', event_context: '${placement}', discount_code: '${product.discountCode || ''}' })`}
+        >
+          Voir le produit →
+        </a>
+      </div>
+    </div>
+  )}
+
+  {variant === 'compact' && (
+    <div class="affiliate-product__compact">
+      <img 
+        src={product.image} 
+        alt={product.name}
+        loading="lazy"
+        width="60"
+        height="60"
+        itemprop="image"
+      />
+      
+      <div class="affiliate-product__content">
+        <h5 class="affiliate-product__title" itemprop="name">{product.name}</h5>
+        <div class="affiliate-product__pricing-compact">
+          <span class="affiliate-product__price">{product.price}</span>
+          {product.discountCode && (
+            <span class="promo-compact">-{product.discount} • {product.discountCode}</span>
+          )}
+        </div>
+        <a 
+          href={utmUrl}
+          class="affiliate-product__cta-compact"
+          target="_blank"
+          rel="sponsored nofollow"
+          onclick={`gtag('event', 'click', { event_category: 'shopify_collabs', event_label: '${productId}', event_context: '${placement}', discount_code: '${product.discountCode || ''}' })`}
+        >
+          Voir →
+        </a>
+      </div>
+    </div>
+  )}
+
+  {variant === 'card' && (
+    <div class="affiliate-product__card">
+      <div class="affiliate-product__image-container">
+        <img 
+          src={product.image} 
+          alt={product.name}
+          loading="lazy"
+          width="250"
+          height="250"
+          itemprop="image"
+        />
+      </div>
+      
+      <div class="affiliate-product__content">
+        <h4 class="affiliate-product__title" itemprop="name">{product.name}</h4>
+        <p class="affiliate-product__description">{product.description}</p>
+        
+        <div class="affiliate-product__pricing">
+          <div class="price-container">
+            <span class="affiliate-product__price">{product.price}</span>
+            {product.originalPrice && (
+              <span class="affiliate-product__original-price">{product.originalPrice}</span>
+            )}
+          </div>
+          {product.discountCode && (
+            <div class="discount-promo compact">
+              <span class="discount-badge">-{product.discount}</span>
+              <span class="promo-code-inline">Code: {product.discountCode}</span>
+            </div>
+          )}
+        </div>
+        
+        <a 
+          href={utmUrl}
+          class="affiliate-product__cta"
+          target="_blank"
+          rel="sponsored nofollow"
+          onclick={`gtag('event', 'click', { event_category: 'shopify_collabs', event_label: '${productId}', event_context: '${placement}', discount_code: '${product.discountCode || ''}' })`}
+        >
+          <span class="cta-main">Découvrir</span>
+          {product.discountCode && (
+            <span class="cta-promo-small">{product.discountCode}</span>
+          )}
+        </a>
+      </div>
+    </div>
+  )}
+</article>
+
+<style>
+.affiliate-product {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.affiliate-product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge d'affiliation */
+.affiliate-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/* Variant Featured */
+.affiliate-product--featured .affiliate-product__featured {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.affiliate-product--featured .affiliate-product__image-container {
+  position: relative;
+}
+
+.affiliate-product--featured .affiliate-product__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.affiliate-product--featured .affiliate-product__brand {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.affiliate-product--featured .affiliate-product__description {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.affiliate-product--featured .affiliate-product__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.affiliate-product--featured .affiliate-product__benefits li {
+  color: #059669;
+  margin-bottom: 0.5rem;
+}
+
+/* Variant Expanded */
+.affiliate-product--expanded .affiliate-product__expanded {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.affiliate-product--expanded .affiliate-product__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Variant Compact */
+.affiliate-product--compact .affiliate-product__compact {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.affiliate-product--compact .affiliate-product__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.affiliate-product--compact .affiliate-product__price {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.affiliate-product--compact .affiliate-product__cta-compact {
+  font-size: 0.75rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Variant Card */
+.affiliate-product--card .affiliate-product__card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.affiliate-product--card .affiliate-product__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* Styles communs */
+.affiliate-product__image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.affiliate-product__image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.affiliate-product__discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.affiliate-product__pricing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.affiliate-product__price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.affiliate-product__original-price {
+  font-size: 1rem;
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.affiliate-product__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #fbbf24;
+}
+
+.rating-text {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.affiliate-product__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2563eb;
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.affiliate-product__cta:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+  color: white;
+}
+
+.cta-icon {
+  transition: transform 0.2s ease;
+}
+
+.affiliate-product__cta:hover .cta-icon {
+  transform: translateX(4px);
+}
+
+/* Placements spécifiques */
+.affiliate-product--banner {
+  margin: 2rem 0;
+  border: 2px solid #e2e8f0;
+}
+
+.affiliate-product--sidebar {
+  margin-bottom: 1.5rem;
+}
+
+.affiliate-product--inline {
+  margin: 1.5rem 0;
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+}
+
+.affiliate-product--footer {
+  background: transparent;
+  box-shadow: none;
+}
+
+.affiliate-product--footer .affiliate-product__compact {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .affiliate-product--featured .affiliate-product__featured {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .affiliate-product--expanded .affiliate-product__expanded {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Animation d'apparition */
+.affiliate-product {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === NOUVEAUX STYLES SHOPIFY COLLABS SIMPLIFIÉS === */
+
+/* Variant Featured - Design principal */
+.affiliate-product__pricing-featured {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.current-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.original-price {
+  font-size: 1rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.promo-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.promo-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.promo-code-featured {
+  background: #1f2937;
+  color: #fbbf24;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 2px solid #fbbf24;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.affiliate-product__cta-featured {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.affiliate-product__cta-featured:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.affiliate-product__discount-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #dc2626;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Variant Expanded - Simplifié */
+.affiliate-product__pricing-expanded {
+  margin: 1rem 0;
+}
+
+.price-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.promo-inline {
+  background: #fbbf24;
+  color: #1f2937;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.affiliate-product__cta-expanded {
+  background: #059669;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.affiliate-product__cta-expanded:hover {
+  background: #047857;
+}
+
+/* Variant Compact - Ultra simplifié */
+.affiliate-product__pricing-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.promo-compact {
+  background: #f59e0b;
+  color: white;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+/* Suppression des anciens styles qui causaient les doublons */
+.discount-promo,
+.promo-code,
+.promo-badge,
+.promo-code-inline {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .price-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .promo-highlight {
+    align-items: flex-start;
+  }
+  
+  .promo-code-featured {
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+  }
+}
+</style>
+
+<script>
+// Script pour le tracking et les interactions
+document.addEventListener('DOMContentLoaded', function() {
+  // Amélioration du tracking des clics
+  document.querySelectorAll('.affiliate-product__cta, .affiliate-product__cta-compact').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const productElement = this.closest('.affiliate-product');
+      const productId = productElement.dataset.productId;
+      const placement = productElement.dataset.placement;
+      
+      // Enhanced analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'affiliate_click', {
+          event_category: 'affiliate',
+          event_label: productId,
+          placement: placement,
+          value: 1
+        });
+      }
+      
+      // Console log pour debug
+      console.log('Affiliate click tracked:', {
+        productId,
+        placement,
+        url: this.href
+      });
+    });
+  });
+  
+  // Intersection Observer pour les vues de produits
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const productElement = entry.target;
+        const productId = productElement.dataset.productId;
+        const placement = productElement.dataset.placement;
+        
+        // Track product view
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'affiliate_view', {
+            event_category: 'affiliate',
+            event_label: productId,
+            placement: placement
+          });
+        }
+        
+        // Stop observing this element
+        observer.unobserve(productElement);
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  });
+  
+  // Observe all affiliate products
+  document.querySelectorAll('.affiliate-product').forEach(product => {
+    observer.observe(product);
+  });
+});
+</script>

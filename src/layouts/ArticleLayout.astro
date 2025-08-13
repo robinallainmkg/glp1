@@ -1,5 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AffiliateProduct from '../components/AffiliateProduct.astro';
+import { getProductsForCollection, getProductsByKeywords } from '../utils/affiliate-manager.ts';
 
 interface Props {
   title: string;
@@ -28,42 +30,56 @@ const {
 // Convertir les mots-clés en chaîne si c'est un tableau
 const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
-// Définir les couleurs selon la collection
+// Définir les couleurs selon la collection - Version neutre et professionnelle
 const themeConfig = {
   'weight-loss': {
-    gradient: 'from-green-600 to-green-400',
-    badge: 'bg-green-100 text-green-800',
-    icon: '⚖️'
+    gradient: 'from-slate-50 to-gray-100',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200',
+    icon: '⚖️',
+    accentColor: 'slate-600'
   },
   'medical': {
-    gradient: 'from-blue-600 to-purple-600',
-    badge: 'bg-blue-100 text-blue-800', 
-    icon: '💊'
+    gradient: 'from-slate-50 to-blue-50',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200', 
+    icon: '💊',
+    accentColor: 'slate-600'
   },
   'nutrition': {
-    gradient: 'from-orange-600 to-yellow-500',
-    badge: 'bg-orange-100 text-orange-800',
-    icon: '🥗'
+    gradient: 'from-slate-50 to-orange-50',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200',
+    icon: '🥗',
+    accentColor: 'slate-600'
   },
   'research': {
-    gradient: 'from-indigo-600 to-purple-600',
-    badge: 'bg-indigo-100 text-indigo-800',
-    icon: '🔬'
+    gradient: 'from-slate-50 to-indigo-50',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200',
+    icon: '🔬',
+    accentColor: 'slate-600'
   },
   'cost': {
-    gradient: 'from-red-600 to-pink-600',
-    badge: 'bg-red-100 text-red-800',
-    icon: '💰'
+    gradient: 'from-slate-50 to-rose-50',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200',
+    icon: '💰',
+    accentColor: 'slate-600'
   },
   'side-effects': {
-    gradient: 'from-yellow-600 to-orange-600',
-    badge: 'bg-yellow-100 text-yellow-800',
-    icon: '⚠️'
+    gradient: 'from-slate-50 to-amber-50',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200',
+    icon: '⚠️',
+    accentColor: 'slate-600'
   },
   'diabetes': {
-    gradient: 'from-purple-600 to-blue-600',
-    badge: 'bg-purple-100 text-purple-800',
-    icon: '🩺'
+    gradient: 'from-slate-50 to-violet-50',
+    textColor: 'text-slate-700',
+    badge: 'bg-slate-100 text-slate-700 border border-slate-200',
+    icon: '🩺',
+    accentColor: 'slate-600'
   }
 };
 
@@ -132,9 +148,9 @@ const breadcrumb = generateBreadcrumb(category, title);
 const backUrl = getBackUrl(category);
 const displayName = getDisplayName(category);
 
-// Convertir le contenu markdown en HTML (simple)
-function markdownToHtml(markdown: string): string {
-  return markdown
+// Convertir le contenu markdown en HTML et insérer le produit affilié intelligemment
+function markdownToHtml(markdown: string, shouldInsertAffiliate: boolean = false): string {
+  let html = markdown
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>')
     .replace(/^## (.*$)/gm, '<h2>$1</h2>')
@@ -149,9 +165,140 @@ function markdownToHtml(markdown: string): string {
     .replace(/<p><\/p>/g, '')
     .replace(/<p>(<[h|u])/g, '$1')
     .replace(/(<\/[h|u][^>]*>)<\/p>/g, '$1');
+  
+  // Insérer le marqueur d'affiliation après le 2ème paragraphe si pertinent
+  if (shouldInsertAffiliate) {
+    const affiliateKeywords = ['peau', 'poitrine', 'raffermissement', 'fermeté', 'élasticité', 'relâchement', 'beauté', 'soin', 'corps', 'perte de poids', 'seins', 'décolleté'];
+    const firstPart = html.substring(0, 500); // Analyser les 500 premiers caractères
+    
+    const isRelevant = affiliateKeywords.some(keyword => 
+      firstPart.toLowerCase().includes(keyword.toLowerCase())
+    );
+    
+    if (isRelevant) {
+      // Chercher le 2ème </p> pour insérer après
+      let pCount = 0;
+      let insertIndex = -1;
+      
+      for (let i = 0; i < html.length - 4; i++) {
+        if (html.substring(i, i + 4) === '</p>') {
+          pCount++;
+          if (pCount === 2) {
+            insertIndex = i + 4;
+            break;
+          }
+        }
+      }
+      
+      if (insertIndex > 0) {
+        const affiliateMarker = '\n\n[AFFILIATE_INSERT_HERE]\n\n';
+        html = html.substring(0, insertIndex) + affiliateMarker + html.substring(insertIndex);
+      }
+    }
+  }
+  
+  return html;
 }
 
-const htmlContent = markdownToHtml(content);
+// === SYSTÈME DE PLACEMENT INTELLIGENT AMÉLIORÉ POUR MARKDOWN ===
+
+// Fonctions pour le découpage intelligent du contenu markdown
+function splitMarkdownIntoParagraphs(markdownContent) {
+  // Divise le contenu markdown en segments (titres et paragraphes)
+  const lines = markdownContent.split('\n');
+  const segments = [];
+  let currentSegment = '';
+  let paragraphCount = 0;
+  
+  for (const line of lines) {
+    // Si c'est un titre (## ou ###)
+    if (line.match(/^#{2,3}\s+/)) {
+      if (currentSegment.trim()) {
+        segments.push({ type: 'paragraph', content: currentSegment.trim(), count: paragraphCount });
+        paragraphCount++;
+        currentSegment = '';
+      }
+      segments.push({ type: 'heading', content: line, count: paragraphCount });
+    }
+    // Si c'est une ligne vide, on termine le paragraphe
+    else if (line.trim() === '' && currentSegment.trim()) {
+      segments.push({ type: 'paragraph', content: currentSegment.trim(), count: paragraphCount });
+      paragraphCount++;
+      currentSegment = '';
+    }
+    // Sinon on accumule le contenu
+    else if (line.trim()) {
+      currentSegment += line + '\n';
+    }
+  }
+  
+  // Ajouter le dernier segment s'il existe
+  if (currentSegment.trim()) {
+    segments.push({ type: 'paragraph', content: currentSegment.trim(), count: paragraphCount });
+  }
+  
+  return segments;
+}
+
+function findOptimalInsertionPoint(segments) {
+  let paragraphCount = 0;
+  
+  for (let i = 0; i < segments.length; i++) {
+    const segment = segments[i];
+    
+    // Compter seulement les paragraphes de contenu (pas les titres)
+    if (segment.type === 'paragraph') {
+      paragraphCount++;
+      
+      // Insérer après 2 paragraphes de contenu
+      if (paragraphCount >= 2) {
+        return i + 1;
+      }
+    }
+  }
+  
+  // Fallback : au milieu du contenu
+  return Math.floor(segments.length / 2);
+}
+
+// Récupération des produits affiliés pertinents en premier
+const context = {
+  category,
+  keywords: Array.isArray(keywords) ? keywords : keywords.split(',').map(k => k.trim()),
+  tags: [category, collectionTheme]
+};
+
+const affiliateProducts = await getProductsForCollection(category, 2);
+const keywordProducts = await getProductsByKeywords(context.keywords, category, 1);
+const topProduct = affiliateProducts[0] || keywordProducts[0];
+const bottomProduct = affiliateProducts[1] || keywordProducts[1] || affiliateProducts[0];
+
+// Application du nouveau système pour markdown
+const segments = splitMarkdownIntoParagraphs(content);
+const insertionPoint = segments.length >= 4 ? findOptimalInsertionPoint(segments) : -1;
+
+let beforeAffiliateContent = '';
+let afterAffiliateContent = '';
+let shouldInsertAffiliate = false;
+
+if (insertionPoint > 0 && topProduct) {
+  // Reconstituer le markdown avant et après l'insertion
+  const beforeSegments = segments.slice(0, insertionPoint);
+  const afterSegments = segments.slice(insertionPoint);
+  
+  beforeAffiliateContent = beforeSegments.map(s => s.content).join('\n\n');
+  afterAffiliateContent = afterSegments.map(s => s.content).join('\n\n');
+  shouldInsertAffiliate = true;
+} else {
+  // Contenu trop court ou pas de produit, utiliser tout le contenu
+  beforeAffiliateContent = content;
+  shouldInsertAffiliate = false;
+}
+
+// Conversion en HTML des parties
+const beforeHtml = markdownToHtml(beforeAffiliateContent, false);
+const afterHtml = shouldInsertAffiliate ? markdownToHtml(afterAffiliateContent, false) : '';
+const fullHtml = shouldInsertAffiliate ? '' : markdownToHtml(content, false);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -170,36 +317,36 @@ const htmlContent = markdownToHtml(content);
     </nav>
 
     <!-- En-tête de l'article -->
-    <header class={`article-header bg-gradient-to-r ${theme.gradient} text-white`}>
+    <header class={`article-header bg-gradient-to-br ${theme.gradient} border-b border-gray-200`}>
       <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
-          <div class="flex items-center gap-4 mb-4">
+          <div class="flex items-center gap-4 mb-6 pt-6">
             <span class="text-3xl">{theme.icon}</span>
-            <span class={`px-3 py-1 rounded-full text-sm font-medium ${theme.badge} bg-white bg-opacity-20 text-white`}>
+            <span class={`px-3 py-1 rounded-full text-sm font-medium ${theme.badge}`}>
               {category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </span>
           </div>
           
-          <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          <h1 class={`text-3xl md:text-4xl font-bold mb-4 leading-tight ${theme.textColor}`}>
             {title}
           </h1>
           
-          <p class="text-lg opacity-90 mb-6 leading-relaxed">
+          <p class={`text-lg ${theme.textColor} opacity-90 mb-6 leading-relaxed max-w-3xl`}>
             {description}
           </p>
           
-          <div class="flex flex-wrap items-center gap-6 text-sm">
+          <div class={`flex flex-wrap items-center gap-6 text-sm ${theme.textColor} opacity-75`}>
             <div class="flex items-center gap-2">
-              <span class="opacity-75">✍️ Par</span>
+              <span class="text-base">✍️</span>
               <span class="font-medium">{author}</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="opacity-75">⏱️</span>
+              <span class="text-base">⏱️</span>
               <span>{readingTime} min de lecture</span>
             </div>
             {lastModified && (
               <div class="flex items-center gap-2">
-                <span class="opacity-75">📅</span>
+                <span class="text-base">📅</span>
                 <span>{new Date(lastModified).toLocaleDateString('fr-FR')}</span>
               </div>
             )}
@@ -212,7 +359,57 @@ const htmlContent = markdownToHtml(content);
     <main class="article-content">
       <div class="container mx-auto px-4 py-12">
         <div class="max-w-4xl mx-auto">
-          <div class="prose prose-lg max-w-none" set:html={htmlContent}></div>
+          
+          <!-- Nouveau système de placement intelligent -->
+          {shouldInsertAffiliate ? (
+            <div class="prose prose-lg max-w-none">
+              <!-- Première partie du contenu -->
+              <div set:html={beforeHtml}></div>
+              
+              <!-- Produit affilié inséré intelligemment après 2 paragraphes -->
+              {topProduct && (
+                <div class="affiliate-smart-insertion my-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-100">
+                  <div class="text-center mb-4">
+                    <span class="text-sm text-blue-600 font-medium">⭐ Produit Recommandé</span>
+                  </div>
+                  <AffiliateProduct 
+                    productId={topProduct.id}
+                    placement="smart-content"
+                    context={context}
+                    variant="featured"
+                    className="article-affiliate-smart"
+                    showIfRelevant={false}
+                  />
+                </div>
+              )}
+              
+              <!-- Deuxième partie du contenu -->
+              <div set:html={afterHtml}></div>
+            </div>
+          ) : (
+            <!-- Contenu complet sans insertion -->
+            <div class="prose prose-lg max-w-none">
+              <div set:html={fullHtml}></div>
+              
+              <!-- Produit affilié en fin d'article seulement si contenu court -->
+              {topProduct && (
+                <div class="affiliate-fallback mt-12">
+                  <div class="text-center mb-4">
+                    <span class="text-sm text-blue-600 font-medium">💡 Produit Recommandé</span>
+                  </div>
+                  <AffiliateProduct 
+                    productId={topProduct.id}
+                    placement="content-end"
+                    context={context}
+                    variant="featured"
+                    className="article-affiliate-end"
+                    showIfRelevant={false}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+          )}
           
           <!-- Zone de mots-clés -->
           {keywordsString && (
@@ -240,6 +437,32 @@ const htmlContent = markdownToHtml(content);
         </div>
       </div>
     </main>
+
+    <!-- Produits affiliés -->
+    <section class="affiliate-products py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-8">
+            Découvrez nos produits recommandés
+          </h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {topProduct && (
+              <AffiliateProduct product={topProduct} position="top" />
+            )}
+          </div>
+          
+          <div class="mt-8">
+            <a 
+              href={backUrl} 
+              class={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${theme.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-300`}
+            >
+              Voir tous les produits de {displayName}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </article>
 </BaseLayout>
 

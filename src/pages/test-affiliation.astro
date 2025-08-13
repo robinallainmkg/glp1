@@ -1,0 +1,483 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AffiliateProduct from '../components/AffiliateProduct.astro';
+import { getTalikaProduct, getProductsByKeywords, getAllProducts } from '../utils/affiliate-manager.ts';
+
+const title = "Test d'Intégration Affiliation - GLP-1 France";
+const description = "Page de test pour vérifier l'intégration des produits affiliés dans différents contextes.";
+
+// Récupération de produits pour les tests (seulement Talika maintenant)
+const talikaProduct = await getTalikaProduct();
+const allProducts = await getAllProducts(); // Contiendra seulement Talika si actif
+const contextualProducts = await getProductsByKeywords(['glp1', 'soin'], 'perte-de-poids', 3);
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="test-page">
+    <div class="container">
+      <header class="test-header">
+        <h1>Test d'Intégration Affiliation</h1>
+        <p class="test-description">
+          Cette page permet de visualiser et tester l'intégration des produits affiliés 
+          dans différents contextes et placements stratégiques.
+        </p>
+      </header>
+
+      <!-- Test 1: Placement Banner -->
+      <section class="test-section">
+        <h2>1. Placement Banner (Featured)</h2>
+        <p>Affichage en bannière principale, format mis en vedette :</p>
+        {talikaProduct && (
+          <AffiliateProduct 
+            productId={talikaProduct.id}
+            placement="banner"
+            variant="featured"
+            context={{ category: 'test', keywords: ['raffermissant', 'glp1'], tags: ['test'] }}
+            className="test-banner"
+          />
+        )}
+      </section>
+
+      <!-- Test 2: Placement Sidebar -->
+      <section class="test-section">
+        <h2>2. Placement Sidebar (Compact)</h2>
+        <div class="test-sidebar-layout">
+          <div class="test-content">
+            <p>Contenu principal de l'article...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          </div>
+          <aside class="test-sidebar">
+            {talikaProduct && (
+              <AffiliateProduct 
+                productId={talikaProduct.id}
+                placement="sidebar"
+                variant="compact"
+                context={{ category: 'perte-de-poids', keywords: ['effets-secondaires'] }}
+              />
+            )}
+          </aside>
+        </div>
+      </section>
+
+      <!-- Test 3: Placement Inline -->
+      <section class="test-section">
+        <h2>3. Placement Inline (Expanded)</h2>
+        <p>Intégration naturelle dans le contenu :</p>
+        <div class="test-content">
+          <p>Les traitements GLP-1 peuvent parfois entraîner des effets secondaires comme un relâchement de la peau suite à une perte de poids rapide...</p>
+          
+          {talikaProduct && (
+            <AffiliateProduct 
+              productId={talikaProduct.id}
+              placement="inline"
+              variant="expanded"
+              context={{ category: 'effets-secondaires', keywords: ['raffermissant', 'peau'] }}
+              className="test-inline"
+            />
+          )}
+          
+          <p>Il est important de prendre soin de sa peau pendant et après le traitement pour maintenir sa fermeté et son élasticité.</p>
+        </div>
+      </section>
+
+      <!-- Test 4: Placement Grid -->
+      <section class="test-section">
+        <h2>4. Placement Grid (Produit unique)</h2>
+        <p>Affichage en grille (maintenant un seul produit Talika) :</p>
+        <div class="test-grid">
+          {allProducts.map(product => (
+            <AffiliateProduct 
+              productId={product.id}
+              placement="grid"
+              variant="card"
+              context={{ category: 'produits-recommandes', keywords: ['test'] }}
+              className="test-grid-item"
+            />
+          ))}
+        </div>
+      </section>
+
+      <!-- Test 5: Placement Footer -->
+      <section class="test-section">
+        <h2>5. Placement Footer (Compact)</h2>
+        <p>Format compact pour le footer :</p>
+        <div class="test-footer-simulation">
+          {talikaProduct && (
+            <AffiliateProduct 
+              productId={talikaProduct.id}
+              placement="footer"
+              variant="compact"
+              context={{ category: 'global' }}
+              showIfRelevant={false}
+            />
+          )}
+        </div>
+      </section>
+
+      <!-- Test 6: Affichage Conditionnel -->
+      <section class="test-section">
+        <h2>6. Affichage Conditionnel (Context-aware)</h2>
+        <p>Produits affichés selon le contexte de la page :</p>
+        <div class="test-context">
+          {contextualProducts.map((product, index) => (
+            <div class="test-context-item">
+              <h4>Contexte {index + 1}: {product.name || 'Talika Bust Phytoserum'}</h4>
+              <AffiliateProduct 
+                productId={product.id}
+                placement="content"
+                variant="expanded"
+                context={{ 
+                  category: 'perte-de-poids', 
+                  keywords: ['glp1', 'soin', 'raffermissant'],
+                  tags: ['test-contextuel']
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Test 7: Performance et Analytics -->
+      <section class="test-section">
+        <h2>7. Test de Tracking</h2>
+        <p>Vérification du tracking des clics et conversions :</p>
+        <div class="test-tracking">
+          {talikaProduct && (
+            <AffiliateProduct 
+              productId={talikaProduct.id}
+              placement="test"
+              variant="featured"
+              context={{ category: 'tracking-test', keywords: ['analytics'] }}
+              className="test-tracking-product"
+            />
+          )}
+          <div class="tracking-info">
+            <p><strong>Instructions de test :</strong></p>
+            <ol>
+              <li>Cliquez sur le produit ci-dessus</li>
+              <li>Vérifiez que l'événement est envoyé à Google Analytics</li>
+              <li>Confirmez que le paramètre UTM est ajouté au lien</li>
+              <li>Testez sur mobile et desktop</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Informations de Debug -->
+      <section class="test-section debug-section">
+        <h2>8. Informations de Debug</h2>
+        <div class="debug-info">
+          <h4>Produits chargés :</h4>
+          <ul>
+            {allProducts.map(product => (
+              <li>
+                <strong>{product.name}</strong> - 
+                ID: {product.id} - 
+                Categories: {product.categories?.join(', ') || 'N/A'} - 
+                Score: {product.priority || 'N/A'}
+              </li>
+            ))}
+          </ul>
+          
+          <h4>Contexte de la page :</h4>
+          <ul>
+            <li>URL: {Astro.url.pathname}</li>
+            <li>Mots-clés de test: raffermissant, perte de poids, glp1</li>
+            <li>Catégorie: test-affiliation</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.test-page {
+  min-height: 100vh;
+  background: var(--color-slate-50);
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.test-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--color-slate-200);
+}
+
+.test-header h1 {
+  color: var(--color-slate-900);
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.test-description {
+  color: var(--color-slate-600);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.test-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--color-slate-200);
+}
+
+.test-section h2 {
+  color: var(--color-blue-600);
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-blue-100);
+}
+
+.test-section p {
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Test Sidebar Layout */
+.test-sidebar-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.test-content {
+  padding: 1rem;
+  background: var(--color-slate-50);
+  border-radius: 8px;
+}
+
+.test-sidebar {
+  background: var(--color-slate-100);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Test Grid */
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Test Footer Simulation */
+.test-footer-simulation {
+  background: var(--color-slate-800);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Test Context */
+.test-context {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.test-context-item {
+  padding: 1.5rem;
+  background: var(--color-slate-50);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-blue-500);
+}
+
+.test-context-item h4 {
+  color: var(--color-slate-800);
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* Test Tracking */
+.test-tracking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tracking-info {
+  background: var(--color-yellow-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-yellow-200);
+}
+
+.tracking-info ol {
+  color: var(--color-slate-700);
+  line-height: 1.6;
+}
+
+/* Debug Section */
+.debug-section {
+  background: var(--color-slate-900);
+  color: white;
+}
+
+.debug-section h2 {
+  color: var(--color-green-400);
+  border-bottom-color: var(--color-green-400);
+}
+
+.debug-info {
+  background: var(--color-slate-800);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.debug-info h4 {
+  color: var(--color-green-300);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.debug-info h4:first-child {
+  margin-top: 0;
+}
+
+.debug-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.debug-info li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-slate-700);
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.debug-info li:last-child {
+  border-bottom: none;
+}
+
+/* Styles spécifiques aux composants de test */
+:global(.test-banner) {
+  margin: 1rem 0;
+  border: 2px dashed var(--color-blue-300);
+}
+
+:global(.test-inline) {
+  margin: 2rem 0;
+  border: 2px dashed var(--color-green-300);
+}
+
+:global(.test-grid-item) {
+  border: 2px dashed var(--color-purple-300);
+}
+
+:global(.test-tracking-product) {
+  border: 2px dashed var(--color-orange-300);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .test-sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .test-tracking {
+    grid-template-columns: 1fr;
+  }
+  
+  .test-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation pour les tests */
+.test-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Indicateurs visuels pour les tests */
+.test-section::before {
+  content: '🧪';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.test-section {
+  position: relative;
+}
+</style>
+
+<script>
+// Script de test pour vérifier les interactions
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('🧪 Page de test d\'affiliation chargée');
+  
+  // Test du tracking des clics
+  document.querySelectorAll('.affiliate-product').forEach((product, index) => {
+    product.addEventListener('click', function(e) {
+      console.log(`🔗 Clic sur produit affilié ${index + 1}:`, {
+        productId: this.dataset.productId,
+        placement: this.dataset.placement,
+        context: this.dataset.context
+      });
+    });
+  });
+  
+  // Vérification des éléments chargés
+  const affiliateProducts = document.querySelectorAll('.affiliate-product');
+  console.log(`✅ ${affiliateProducts.length} produits affiliés détectés sur la page`);
+  
+  // Test responsive
+  function checkResponsive() {
+    const viewportWidth = window.innerWidth;
+    console.log(`📱 Largeur d'écran: ${viewportWidth}px`);
+    
+    if (viewportWidth < 768) {
+      console.log('📱 Mode mobile détecté');
+    } else if (viewportWidth < 1024) {
+      console.log('💻 Mode tablette détecté');
+    } else {
+      console.log('🖥️ Mode desktop détecté');
+    }
+  }
+  
+  checkResponsive();
+  window.addEventListener('resize', checkResponsive);
+  
+  // Simulation d'événements analytics
+  if (typeof gtag !== 'undefined') {
+    console.log('📊 Google Analytics détecté');
+  } else {
+    console.log('⚠️ Google Analytics non détecté (normal en développement)');
+  }
+});
+</script>
+</BaseLayout>

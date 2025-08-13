@@ -279,4 +279,10 @@ npm run check
 - [ ] Validation du sitemap (`/sitemap.xml`)
 - [ ] Upload des fichiers via méthode appropriée à la plateforme
 - [ ] Test du site en production : https://glp1-france.fr
-````
+
+### 🛍️ Affiliation Shopify Collabs (Août 2025)
+- ✅ **Partenaire Talika** : Bust Phytoserum (raffermissant post-GLP1)
+- ✅ **Code promo** : `GLP1` (-10%)
+- ✅ **URL trackée** : talika.fr/GLP1
+- ✅ **Placement intelligent** : Après 2 paragraphes dans articles pertinents
+- ✅ **Design optimisé** : Badge, pricing et CTA sans doublons

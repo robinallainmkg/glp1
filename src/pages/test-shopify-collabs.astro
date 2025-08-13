@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AffiliateProduct from '../components/AffiliateProduct.astro';
+
+const title = "Test Shopify Collabs - Code Promo GLP1";
+const description = "Page de test pour vérifier l'affichage du code promo et de la réduction Shopify Collabs avec Talika.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="test-shopify-page">
+    <div class="container mx-auto px-4 py-12">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-6 text-gray-900">
+          🛍️ Test Shopify Collabs - Talika
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          Vérification de l'affichage du code promo <code style="background: #292524; color: #fbbf24; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: bold;">GLP1</code> 
+          et de la réduction <strong style="color: #dc2626;">-10%</strong>
+        </p>
+      </header>
+
+      <!-- Test 1: Variant Featured avec code promo -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🌟 Variant Featured (Bannière principale)</h2>
+        <div class="max-w-4xl mx-auto">
+          <AffiliateProduct 
+            productId="talika-bust-phytoserum"
+            placement="banner"
+            variant="featured"
+            className="test-featured"
+            showIfRelevant={false}
+          />
+        </div>
+      </section>
+
+      <!-- Test 2: Variant Expanded avec code promo -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">📋 Variant Expanded (Article)</h2>
+        <div class="max-w-2xl mx-auto">
+          <AffiliateProduct 
+            productId="talika-bust-phytoserum"
+            placement="inline"
+            variant="expanded"
+            className="test-expanded"
+            showIfRelevant={false}
+          />
+        </div>
+      </section>
+
+      <!-- Test 3: Variant Compact avec code promo -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">📱 Variant Compact (Sidebar)</h2>
+        <div class="flex gap-8">
+          <div class="flex-1">
+            <p class="text-gray-600 mb-4">
+              Les traitements GLP-1 peuvent parfois entraîner un relâchement de la peau suite à une perte de poids rapide. 
+              C'est pourquoi il est important de prendre soin de sa peau...
+            </p>
+            <p class="text-gray-600">
+              Les solutions raffermissantes comme les sérums aux phytonutriments peuvent aider à maintenir 
+              l'élasticité et la fermeté de la peau pendant et après le traitement.
+            </p>
+          </div>
+          <aside class="w-80">
+            <AffiliateProduct 
+              productId="talika-bust-phytoserum"
+              placement="sidebar"
+              variant="compact"
+              className="test-compact"
+              showIfRelevant={false}
+            />
+          </aside>
+        </div>
+      </section>
+
+      <!-- Test 4: Variant Card avec code promo -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">🃏 Variant Card (Grille)</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AffiliateProduct 
+            productId="talika-bust-phytoserum"
+            placement="grid"
+            variant="card"
+            className="test-card"
+            showIfRelevant={false}
+          />
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center text-gray-500">
+            Autre produit (placeholder)
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center text-gray-500">
+            Autre produit (placeholder)
+          </div>
+        </div>
+      </section>
+
+      <!-- Checklist de vérification -->
+      <section class="mb-12 bg-blue-50 p-8 rounded-xl">
+        <h2 class="text-2xl font-bold mb-6">✅ Checklist de Vérification</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-bold mb-3">Design :</h3>
+            <ul class="space-y-2">
+              <li>• Code promo <code class="bg-gray-800 text-yellow-400 px-2 py-1 rounded text-sm">GLP1</code> visible</li>
+              <li>• Badge de réduction <span class="bg-red-600 text-white px-2 py-1 rounded text-sm">-10%</span> affiché</li>
+              <li>• Prix barré pour ancien tarif</li>
+              <li>• Bouton CTA attractif avec code intégré</li>
+              <li>• Couleurs contrastées (noir/doré)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-3">Fonctionnel :</h3>
+            <ul class="space-y-2">
+              <li>• Lien vers <code class="bg-gray-200 px-2 py-1 rounded text-sm">talika.fr/GLP1</code></li>
+              <li>• Tracking Shopify Collabs actif</li>
+              <li>• Paramètres UTM automatiques</li>
+              <li>• Responsive sur mobile/desktop</li>
+              <li>• Animation hover sur code promo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instructions de test -->
+      <section class="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-xl">
+        <h2 class="text-2xl font-bold mb-6">🧪 Instructions de Test</h2>
+        <div class="prose max-w-none">
+          <ol class="list-decimal list-inside space-y-3">
+            <li><strong>Vérification visuelle :</strong> Tous les codes promo doivent être clairement visibles</li>
+            <li><strong>Test des liens :</strong> Cliquer sur les boutons doit rediriger vers <code>talika.fr/GLP1</code></li>
+            <li><strong>Console du navigateur :</strong> Vérifier les événements de tracking Shopify Collabs</li>
+            <li><strong>Mobile :</strong> Tester l'affichage responsive sur différentes tailles d'écran</li>
+            <li><strong>Analytics :</strong> Confirmer que les clics sont trackés dans Google Analytics</li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .test-shopify-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+  }
+  
+  code {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+</style>

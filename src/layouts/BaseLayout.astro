@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import AffiliateProduct from '../components/AffiliateProduct.astro';
+import { getProductsByKeywords } from '../utils/affiliate-manager.ts';
 
 export interface Props {
   title: string;
@@ -10,6 +12,9 @@ export interface Props {
 
 const { title, description, keywords = "" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Produits affiliés pour le footer (génériques)
+const footerProducts = await getProductsByKeywords(['glp1', 'perte de poids'], undefined, 1);
 ---
 
 <!DOCTYPE html>
@@ -89,6 +94,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <div class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item">
+            <a href="/quel-traitement-glp1-choisir/" class="nav-link diagnostic-highlight">🎯 Diagnostic</a>
+          </li>
+          <li class="nav-item">
             <a href="/nouveaux-medicaments-perdre-poids/" class="nav-link">Perdre du Poids</a>
           </li>
           <li class="nav-item">
@@ -158,6 +166,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             <li><a href="/alternatives-glp1/">Alternatives</a></li>
             <li><a href="/medecins-glp1-france/">Médecins</a></li>
           </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-subtitle">Produits Recommandés</h4>
+          {footerProducts[0] && (
+            <AffiliateProduct 
+              productId={footerProducts[0].id}
+              placement="footer"
+              variant="compact"
+              className="footer-affiliate"
+              showIfRelevant={false}
+            />
+          )}
         </div>
         
         <div class="footer-section">

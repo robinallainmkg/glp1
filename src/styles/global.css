@@ -408,6 +408,25 @@ body {
   background-color: rgba(37, 99, 235, 0.1);
 }
 
+/* Highlight pour le lien diagnostic */
+.nav-link.diagnostic-highlight {
+  background: linear-gradient(135deg, #2563EB, #16A34A);
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.nav-link.diagnostic-highlight:hover {
+  background: linear-gradient(135deg, #1D4ED8, #15803D);
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
 .cta-link {
   background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
   color: white !important;
@@ -605,6 +624,13 @@ body {
 @media (max-width: 640px) {
   .nav-brand .brand-text {
     display: none;
+  }
+  
+  /* Diagnostic button mobile adjustments */
+  .nav-link.diagnostic-highlight {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    margin-bottom: 8px;
   }
   
   .search-container {

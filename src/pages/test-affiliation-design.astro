@@ -1,0 +1,35 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+
+const sampleContent = `
+## Introduction au test d'affiliation
+
+Ceci est un test des corrections apportées au design et à l'affichage du système d'affiliation.
+
+### Problèmes corrigés
+
+1. **Header d'article** : Couleurs plus sobres et neutres
+2. **Bouton d'affiliation** : Meilleur contraste et visibilité
+3. **Variables CSS** : Remplacement des variables CSS non définies par des valeurs directes
+
+### Test du bouton
+
+Le bouton d'affiliation devrait maintenant être bien visible avec une couleur bleue distinctive.
+
+## Conclusion
+
+Ce test permet de valider les corrections visuelles avant déploiement.
+`;
+---
+
+<ArticleLayout
+  title="Test des Corrections Design Affiliation"
+  description="Page de test pour valider les corrections du header d'article et du bouton d'affiliation"
+  author="Équipe Technique"
+  category="glp1-perte-de-poids"
+  keywords={["test", "affiliation", "design", "corrections"]}
+  readingTime={3}
+  lastModified="2024-01-20"
+  content={sampleContent}
+  collectionTheme="weight-loss"
+/>

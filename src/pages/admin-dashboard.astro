@@ -445,6 +445,534 @@ for (const name of collectionNames) {
       border: none;
       border-radius: 6px;
     }
+
+    /* STYLES AFFILIATION */
+    .affiliation-section {
+      margin-top: 30px;
+    }
+    .affiliation-section h3 {
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .affiliation-section h3:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .stats-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .stat-item {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .stat-item:hover {
+      transform: translateY(-3px);
+    }
+    .stat-value {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .placement-stats {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .placement-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .placement-row:last-child {
+      border-bottom: none;
+    }
+    .btn-small {
+      padding: 6px 12px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .btn-small:hover {
+      background: #5a6fd8;
+    }
+    .btn-danger {
+      background: #dc3545;
+    }
+    .btn-danger:hover {
+      background: #c82333;
+    }
+    .modal-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn-primary {
+      background: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background: #218838;
+    }
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Styles pour l'onglet Affiliation */
+    .products-table-container {
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    .data-table th {
+      background: #f8f9fa;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .product-cell {
+      max-width: 200px;
+    }
+
+    .product-description {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .collections-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .collection-tag {
+      background: #e3f2fd;
+      color: #1976d2;
+      padding: 2px 6px;
+      border-radius: 12px;
+      font-size: 0.75em;
+      font-weight: 500;
+    }
+
+    .priority-badge {
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
+
+    .priority-1 {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .priority-2 {
+      background: #fff3e0;
+      color: #ef6c00;
+    }
+
+    .priority-3 {
+      background: #f3e5f5;
+      color: #7b1fa2;
+    }
+
+    .priority-4 {
+      background: #e8f5e8;
+      color: #2e7d32;
+    }
+
+    .priority-5 {
+      background: #f5f5f5;
+      color: #616161;
+    }
+
+    .status-badge {
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
+
+    .status-active {
+      background: #e8f5e8;
+      color: #2e7d32;
+    }
+
+    .status-inactive {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .actions-cell {
+      white-space: nowrap;
+    }
+
+    .btn-small {
+      padding: 4px 8px;
+      border: none;
+      border-radius: 4px;
+      background: #f0f0f0;
+      cursor: pointer;
+      margin-right: 4px;
+      font-size: 0.85em;
+    }
+
+    .btn-small:hover {
+      background: #e0e0e0;
+    }
+
+    .btn-danger {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .btn-danger:hover {
+      background: #ffcdd2;
+    }
+
+    /* Placement Stats */
+    .placement-stats {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .placement-item {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .placement-item h4 {
+      margin: 0 0 0.5rem 0;
+      color: #333;
+    }
+
+    .placement-metrics {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .metric {
+      background: #f8f9fa;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+
+    /* Rules */
+    .rules-container {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .rule-item {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 100px 80px;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .rule-condition,
+    .rule-products,
+    .rule-priority {
+      font-size: 0.9em;
+    }
+
+    /* Tests A/B */
+    .ab-tests {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .test-item {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .test-item h4 {
+      margin: 0 0 0.5rem 0;
+      color: #333;
+    }
+
+    .test-progress {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 8px;
+      background: #f0f0f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transition: width 0.3s ease;
+    }
+
+    .test-results {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.9em;
+    }
+
+    .winner {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    /* Modal styles */
+    .modal-form {
+      max-width: 500px;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+
+    /* Product Stats Modal */
+    .product-stats .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .product-stats .stat-item {
+      text-align: center;
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .product-stats .stat-value {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .product-stats .stat-label {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    .placement-row {
+      display: grid;
+      grid-template-columns: 1fr 80px 60px 60px;
+      gap: 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9em;
+    }
+
+    .placement-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Notifications */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10000;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      max-width: 300px;
+    }
+
+    .notification.show {
+      transform: translateX(0);
+    }
+
+    .notification-success {
+      border-color: #4caf50;
+      background: #e8f5e8;
+      color: #2e7d32;
+    }
+
+    .notification-error {
+      border-color: #f44336;
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .notification-info {
+      border-color: #2196f3;
+      background: #e3f2fd;
+      color: #1976d2;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .rule-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .placement-metrics {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .test-results {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .placement-row {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -488,6 +1016,7 @@ for (const name of collectionNames) {
         <div class="tabs-header">
           <button class="tab-btn active" data-tab="articles">📝 Articles</button>
           <button class="tab-btn" data-tab="roadmap">🚀 Roadmap</button>
+          <button class="tab-btn" data-tab="affiliation">💰 Affiliation</button>
         </div>
 
         <!-- TAB 2: ARTICLES -->
@@ -712,6 +1241,230 @@ for (const name of collectionNames) {
             </div>
           </div>
         </div>
+
+        <!-- TAB 3: AFFILIATION -->
+        <div class="tab-content" id="tab-affiliation">
+          <div class="affiliation-section">
+            <h3>💰 Programme d'Affiliation - État des Lieux</h3>
+            <p>Suivi complet de nos partenariats d'affiliation et performances commerciales.</p>
+            
+            <!-- Métriques principales -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+              <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: bold;">1</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Produit Actif</div>
+              </div>
+              <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: bold;">20%</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Commission</div>
+              </div>
+              <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: bold;">-10%</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Réduction Client</div>
+              </div>
+              <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: bold;">Auto</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Système</div>
+              </div>
+              <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: bold;">0</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Clics ce mois</div>
+              </div>
+              <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: bold;">0€</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Revenus générés</div>
+              </div>
+            </div>
+            
+            <!-- Tableau des affiliations -->
+            <h4 style="margin: 2rem 0 1rem 0; color: #374151;">🎯 Partenariats Actifs</h4>
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <thead>
+                  <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <th style="padding: 12px; text-align: left;">Produit</th>
+                    <th style="padding: 12px; text-align: center;">Plateforme</th>
+                    <th style="padding: 12px; text-align: center;">Code Promo</th>
+                    <th style="padding: 12px; text-align: center;">Réduction Client</th>
+                    <th style="padding: 12px; text-align: center;">Commission</th>
+                    <th style="padding: 12px; text-align: center;">Lien</th>
+                    <th style="padding: 12px; text-align: center;">Statut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 10px; font-size: 14px;">
+                      <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">T</div>
+                        <div>
+                          <strong>Talika Bust Phytoserum</strong>
+                          <div style="font-size: 0.75rem; color: #666;">Raffermissant post-GLP1</div>
+                          <div style="font-size: 0.75rem; color: #059669;">49,90€ • 4.6★ (247 avis)</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td style="padding: 10px; text-align: center; font-size: 12px;">
+                      <span style="background: #1f2937; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 600;">Shopify Collabs</span>
+                      <div style="font-size: 0.65rem; color: #666; margin-top: 0.25rem;">Système automatisé</div>
+                    </td>
+                    <td style="padding: 10px; text-align: center; font-size: 14px;">
+                      <code style="background: #292524; color: #fbbf24; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: bold;">GLP1</code>
+                    </td>
+                    <td style="padding: 10px; text-align: center; font-size: 14px;">
+                      <span style="color: #dc2626; font-weight: bold;">-10%</span>
+                      <div style="font-size: 0.65rem; color: #666;">55,45€ → 49,90€</div>
+                    </td>
+                    <td style="padding: 10px; text-align: center; font-size: 14px;">
+                      <span style="color: #059669; font-weight: bold;">20%</span>
+                      <div style="font-size: 0.65rem; color: #666;">~9,98€ par vente</div>
+                    </td>
+                    <td style="padding: 10px; text-align: center; font-size: 12px;">
+                      <a href="https://talika.fr/GLP1" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 500;">talika.fr/GLP1</a>
+                    </td>
+                    <td style="padding: 10px; text-align: center; font-size: 12px;">
+                      <span style="color: #10b981; font-weight: bold; background: #d1fae5; padding: 0.25rem 0.5rem; border-radius: 4px;">✓ Actif</span>
+                    </td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #eee; background: #f9fafb;">
+                    <td colspan="7" style="padding: 15px; text-align: center; font-style: italic; color: #6b7280;">
+                      💡 <strong>Potentiel d'expansion :</strong> Nous pouvons ajouter d'autres produits complémentaires (compléments alimentaires, dispositifs de suivi, guides nutrition) sur différentes plateformes (Amazon Partenaires, Commission Junction, autres programmes d'affiliation)
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- Informations techniques détaillées -->
+            <h4 style="margin: 2rem 0 1rem 0; color: #374151;">🔧 Configuration Technique</h4>
+            <div style="background: #f8fafc; border-radius: 8px; padding: 1.5rem;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div>
+                  <strong>🔗 URL de tracking :</strong><br>
+                  <code style="background: #e5e7eb; padding: 0.25rem; border-radius: 4px; font-size: 0.875rem;">https://talika.fr/GLP1</code>
+                  <div style="font-size: 0.75rem; color: #666; margin-top: 0.25rem;">UTM automatiques inclus</div>
+                </div>
+                <div>
+                  <strong>🎫 Code promo :</strong><br>
+                  <code style="background: #292524; color: #fbbf24; padding: 0.25rem; border-radius: 4px; font-weight: bold;">GLP1</code>
+                  <div style="font-size: 0.75rem; color: #666; margin-top: 0.25rem;">Reconnu automatiquement</div>
+                </div>
+                <div>
+                  <strong>📍 Placement :</strong><br>
+                  <span style="color: #059669; font-weight: 500;">Intelligent (contextuel)</span>
+                  <div style="font-size: 0.75rem; color: #666; margin-top: 0.25rem;">Après 2 paragraphes + mots-clés</div>
+                </div>
+                <div>
+                  <strong>📊 Tracking :</strong><br>
+                  <span style="color: #059669; font-weight: 500;">Google Analytics + UTM</span>
+                  <div style="font-size: 0.75rem; color: #666; margin-top: 0.25rem;">Suivi conversions complet</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Opportunités d'expansion -->
+            <h4 style="margin: 2rem 0 1rem 0; color: #374151;">🚀 Opportunités d'Expansion</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+              
+              <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem;">
+                <h5 style="margin: 0 0 1rem 0; color: #059669; display: flex; align-items: center; gap: 0.5rem;">
+                  💊 <span>Compléments Alimentaires</span>
+                </h5>
+                <ul style="margin: 0; padding-left: 1rem; font-size: 0.875rem; line-height: 1.6;">
+                  <li>Probiotiques pour digestion</li>
+                  <li>Multivitamines post-GLP1</li>
+                  <li>Oméga-3 premium</li>
+                  <li>Compléments anti-nausées</li>
+                </ul>
+                <div style="margin-top: 1rem; font-size: 0.75rem; color: #666;">
+                  Plateformes : Amazon Partenaires, iHerb, Nutrimea
+                </div>
+              </div>
+
+              <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem;">
+                <h5 style="margin: 0 0 1rem 0; color: #3b82f6; display: flex; align-items: center; gap: 0.5rem;">
+                  📱 <span>Dispositifs & Tech</span>
+                </h5>
+                <ul style="margin: 0; padding-left: 1rem; font-size: 0.875rem; line-height: 1.6;">
+                  <li>Balances connectées</li>
+                  <li>Glucomètres Bluetooth</li>
+                  <li>Applications de suivi</li>
+                  <li>Stylos injecteurs premium</li>
+                </ul>
+                <div style="margin-top: 1rem; font-size: 0.75rem; color: #666;">
+                  Plateformes : Amazon, Darty, Boulanger
+                </div>
+              </div>
+
+              <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem;">
+                <h5 style="margin: 0 0 1rem 0; color: #f59e0b; display: flex; align-items: center; gap: 0.5rem;">
+                  📚 <span>Guides & Formations</span>
+                </h5>
+                <ul style="margin: 0; padding-left: 1rem; font-size: 0.875rem; line-height: 1.6;">
+                  <li>Guide nutrition GLP-1</li>
+                  <li>Cours de cuisine adaptée</li>
+                  <li>Programmes d'exercices</li>
+                  <li>Suivi psychologique</li>
+                </ul>
+                <div style="margin-top: 1rem; font-size: 0.75rem; color: #666;">
+                  Plateformes : Udemy, nos propres produits
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Performance et optimisation -->
+            <h4 style="margin: 2rem 0 1rem 0; color: #374151;">📈 Optimisation & Performance</h4>
+            <div style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); border-radius: 8px; padding: 1.5rem;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                
+                <div style="background: white; border-radius: 6px; padding: 1rem;">
+                  <strong style="color: #374151;">🎯 Ciblage Contextuel</strong>
+                  <ul style="margin: 0.5rem 0 0 0; padding-left: 1rem; font-size: 0.875rem;">
+                    <li>Articles perte de poids</li>
+                    <li>Effets secondaires cutanés</li>
+                    <li>Guides beauté post-GLP1</li>
+                  </ul>
+                </div>
+
+                <div style="background: white; border-radius: 6px; padding: 1rem;">
+                  <strong style="color: #374151;">⚡ Placement Intelligent</strong>
+                  <ul style="margin: 0.5rem 0 0 0; padding-left: 1rem; font-size: 0.875rem;">
+                    <li>Après 2 paragraphes</li>
+                    <li>Détection mots-clés</li>
+                    <li>Fallback fin d'article</li>
+                  </ul>
+                </div>
+
+                <div style="background: white; border-radius: 6px; padding: 1rem;">
+                  <strong style="color: #374151;">🔄 Tests A/B Possibles</strong>
+                  <ul style="margin: 0.5rem 0 0 0; padding-left: 1rem; font-size: 0.875rem;">
+                    <li>Position du bloc</li>
+                    <li>Couleurs et design</li>
+                    <li>Texte du CTA</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Actions rapides -->
+            <h4 style="margin: 2rem 0 1rem 0; color: #374151;">⚙️ Actions Rapides</h4>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button onclick="testAffiliateBlock()" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 500; cursor: pointer;">
+                🧪 Tester l'Affichage
+              </button>
+              <button onclick="viewPerformanceReport()" style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 500; cursor: pointer;">
+                📊 Rapport de Performance
+              </button>
+              <button onclick="optimizeTargeting()" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 500; cursor: pointer;">
+                🎯 Optimiser le Ciblage
+              </button>
+              <button onclick="addNewAffiliate()" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 500; cursor: pointer;">
+                ➕ Ajouter un Partenariat
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 
@@ -830,8 +1583,495 @@ for (const name of collectionNames) {
     }
     window.detailedStats = JSON.parse('{detailedStatsJson}');
     
+    // === GESTION DE L'AFFILIATION ===
+    let affiliateData = null;
+
+    // Charger les données d'affiliation
+    async function loadAffiliateData() {
+      try {
+        const response = await fetch('/data/affiliate-products.json');
+        affiliateData = await response.json();
+        updateAffiliateStats();
+        populateProductsTable();
+      } catch (error) {
+        console.error('Erreur lors du chargement des données d\'affiliation:', error);
+      }
+    }
+
+    // Mettre à jour les statistiques d'affiliation
+    function updateAffiliateStats() {
+      if (!affiliateData) return;
+
+      const activeProducts = affiliateData.products.filter(p => p.isActive);
+      document.getElementById('total-products').textContent = activeProducts.length;
+      
+      // Simulation de données (à remplacer par de vraies analytics)
+      document.getElementById('total-clicks').textContent = '2,847';
+      document.getElementById('conversion-rate').textContent = '4.2%';
+      document.getElementById('revenue-estimate').textContent = '1,245€';
+    }
+
+    // Remplir le tableau des produits
+    function populateProductsTable() {
+      if (!affiliateData) return;
+
+      const tbody = document.getElementById('products-table-body');
+      tbody.innerHTML = '';
+
+      affiliateData.products.forEach(product => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>
+            <div class="product-cell">
+              <strong>${product.name}</strong>
+              <div class="product-description">${product.description.substring(0, 80)}...</div>
+            </div>
+          </td>
+          <td>${product.brand}</td>
+          <td><strong>${product.price}</strong></td>
+          <td>
+            <div class="collections-tags">
+              ${product.targetCollections.map(col => `<span class="collection-tag">${col}</span>`).join('')}
+            </div>
+          </td>
+          <td>
+            <span class="priority-badge priority-${product.priority}">${product.priority}</span>
+          </td>
+          <td>
+            <span class="status-badge status-${product.isActive ? 'active' : 'inactive'}">
+              ${product.isActive ? '✅ Actif' : '❌ Inactif'}
+            </span>
+          </td>
+          <td class="actions-cell">
+            <button class="btn-small" onclick="editProduct('${product.id}')">✏️</button>
+            <button class="btn-small btn-danger" onclick="toggleProductStatus('${product.id}')">
+              ${product.isActive ? '🔒' : '🔓'}
+            </button>
+            <button class="btn-small" onclick="viewProductStats('${product.id}')">📊</button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Actualiser les données d'affiliation
+    function refreshAffiliateData() {
+      loadAffiliateData();
+      showNotification('Données d\'affiliation actualisées', 'success');
+    }
+
+    // Afficher le modal d'ajout de produit
+    function showAddProductModal() {
+      const content = `
+        <form id="add-product-form" class="modal-form">
+          <div class="form-group">
+            <label>ID du produit</label>
+            <input type="text" id="product-id" required>
+          </div>
+          <div class="form-group">
+            <label>Nom du produit</label>
+            <input type="text" id="product-name" required>
+          </div>
+          <div class="form-group">
+            <label>Marque</label>
+            <input type="text" id="product-brand" required>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="product-description" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Prix</label>
+            <input type="text" id="product-price" placeholder="49,90 €" required>
+          </div>
+          <div class="form-group">
+            <label>URL d'affiliation</label>
+            <input type="url" id="product-url" required>
+          </div>
+          <div class="form-group">
+            <label>Collections cibles (séparées par des virgules)</label>
+            <input type="text" id="product-collections" placeholder="glp1-perte-de-poids, effets-secondaires-glp1">
+          </div>
+          <div class="form-group">
+            <label>Priorité (1-5)</label>
+            <select id="product-priority">
+              <option value="1">1 - Très haute</option>
+              <option value="2">2 - Haute</option>
+              <option value="3" selected>3 - Moyenne</option>
+              <option value="4">4 - Basse</option>
+              <option value="5">5 - Très basse</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">💾 Ajouter le Produit</button>
+            <button type="button" class="btn-secondary" onclick="closeModal()">❌ Annuler</button>
+          </div>
+        </form>
+      `;
+
+      showModal('Ajouter un Nouveau Produit', content);
+
+      // Gérer la soumission du formulaire
+      document.getElementById('add-product-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        addNewProduct();
+      });
+    }
+
+    // Ajouter un nouveau produit
+    function addNewProduct() {
+      const formData = {
+        id: document.getElementById('product-id').value,
+        name: document.getElementById('product-name').value,
+        brand: document.getElementById('product-brand').value,
+        description: document.getElementById('product-description').value,
+        price: document.getElementById('product-price').value,
+        affiliateUrl: document.getElementById('product-url').value,
+        targetCollections: document.getElementById('product-collections').value.split(',').map(s => s.trim()),
+        priority: parseInt(document.getElementById('product-priority').value),
+        isActive: true,
+        created: new Date().toISOString(),
+        updated: new Date().toISOString()
+      };
+
+      // Ici, vous intégreriez avec votre backend
+      console.log('Nouveau produit à ajouter:', formData);
+      showNotification('Produit ajouté avec succès (simulation)', 'success');
+      closeModal();
+      refreshAffiliateData();
+    }
+
+    // Modifier un produit
+    function editProduct(productId) {
+      const product = affiliateData.products.find(p => p.id === productId);
+      if (!product) return;
+
+      const content = `
+        <form id="edit-product-form" class="modal-form">
+          <div class="form-group">
+            <label>Nom du produit</label>
+            <input type="text" id="edit-product-name" value="${product.name}" required>
+          </div>
+          <div class="form-group">
+            <label>Prix</label>
+            <input type="text" id="edit-product-price" value="${product.price}" required>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="edit-product-description" rows="3" required>${product.description}</textarea>
+          </div>
+          <div class="form-group">
+            <label>Priorité</label>
+            <select id="edit-product-priority">
+              <option value="1" ${product.priority === 1 ? 'selected' : ''}>1 - Très haute</option>
+              <option value="2" ${product.priority === 2 ? 'selected' : ''}>2 - Haute</option>
+              <option value="3" ${product.priority === 3 ? 'selected' : ''}>3 - Moyenne</option>
+              <option value="4" ${product.priority === 4 ? 'selected' : ''}>4 - Basse</option>
+              <option value="5" ${product.priority === 5 ? 'selected' : ''}>5 - Très basse</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">💾 Sauvegarder</button>
+            <button type="button" class="btn-secondary" onclick="closeModal()">❌ Annuler</button>
+          </div>
+        </form>
+      `;
+
+      showModal(`Modifier ${product.name}`, content);
+
+      document.getElementById('edit-product-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        saveProductChanges(productId);
+      });
+    }
+
+    // Sauvegarder les modifications d'un produit
+    function saveProductChanges(productId) {
+      const updates = {
+        name: document.getElementById('edit-product-name').value,
+        price: document.getElementById('edit-product-price').value,
+        description: document.getElementById('edit-product-description').value,
+        priority: parseInt(document.getElementById('edit-product-priority').value),
+        updated: new Date().toISOString()
+      };
+
+      console.log(`Modifications pour le produit ${productId}:`, updates);
+      showNotification('Produit modifié avec succès (simulation)', 'success');
+      closeModal();
+      refreshAffiliateData();
+    }
+
+    // Basculer le statut d'un produit
+    function toggleProductStatus(productId) {
+      const product = affiliateData.products.find(p => p.id === productId);
+      if (!product) return;
+
+      const newStatus = !product.isActive;
+      const action = newStatus ? 'activé' : 'désactivé';
+      
+      if (confirm(`Êtes-vous sûr de vouloir ${newStatus ? 'activer' : 'désactiver'} ce produit ?`)) {
+        product.isActive = newStatus;
+        showNotification(`Produit ${action} avec succès`, 'success');
+        populateProductsTable();
+        updateAffiliateStats();
+      }
+    }
+
+    // Voir les statistiques d'un produit
+    function viewProductStats(productId) {
+      const product = affiliateData.products.find(p => p.id === productId);
+      if (!product) return;
+
+      const content = `
+        <div class="product-stats">
+          <h3>${product.name}</h3>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value">1,234</div>
+              <div class="stat-label">Vues totales</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">87</div>
+              <div class="stat-label">Clics</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">7.1%</div>
+              <div class="stat-label">CTR</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Conversions</div>
+            </div>
+          </div>
+
+          <h4>Performance par placement</h4>
+          <div class="placement-stats">
+            <div class="placement-row">
+              <span>Article Inline</span>
+              <span>456 vues</span>
+              <span>32 clics</span>
+              <span>7.0% CTR</span>
+            </div>
+            <div class="placement-row">
+              <span>Collection Banner</span>
+              <span>321 vues</span>
+              <span>28 clics</span>
+              <span>8.7% CTR</span>
+            </div>
+            <div class="placement-row">
+              <span>Footer Sidebar</span>
+              <span>457 vues</span>
+              <span>27 clics</span>
+              <span>5.9% CTR</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      showModal(`Statistiques - ${product.name}`, content);
+    }
+
+    // Afficher une notification
+    function showNotification(message, type = 'info') {
+      const notification = document.createElement('div');
+      notification.className = `notification notification-${type}`;
+      notification.textContent = message;
+      
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.classList.add('show');
+      }, 100);
+      
+      setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 300);
+      }, 3000);
+    }
+
     // Initialiser
     checkAuth();
+
+    // Charger les données d'affiliation si on est sur le dashboard
+    if (!loginContainer.classList.contains('hidden')) {
+      loadAffiliateData();
+    }
+
+    // ================================
+    // FONCTIONS AFFILIATION
+    // ================================
+
+    // Tester l'affichage du bloc d'affiliation
+    function testAffiliateBlock() {
+      // Ouvrir une nouvelle fenêtre avec une page de test
+      const testUrls = [
+        '/glp1-perte-de-poids/ozempic-perte-de-poids/',
+        '/effets-secondaires-glp1/ozempic-effets-secondaires/',
+        '/medicaments-glp1/ozempic-mode-emploi/'
+      ];
+      
+      const randomUrl = testUrls[Math.floor(Math.random() * testUrls.length)];
+      
+      showModal('🧪 Test d\'Affichage Affiliation', `
+        <p>Le bloc d'affiliation Talika est testé sur différents types d'articles :</p>
+        <div style="margin: 1rem 0;">
+          <strong>Pages de test disponibles :</strong>
+          <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+            <li><a href="/glp1-perte-de-poids/ozempic-perte-de-poids/" target="_blank">Article perte de poids</a></li>
+            <li><a href="/effets-secondaires-glp1/ozempic-effets-secondaires/" target="_blank">Article effets secondaires</a></li>
+            <li><a href="/medicaments-glp1/ozempic-mode-emploi/" target="_blank">Article médicament</a></li>
+          </ul>
+        </div>
+        <p style="background: #f3f4f6; padding: 1rem; border-radius: 6px; font-size: 0.875rem;">
+          <strong>💡 Ce qu'il faut vérifier :</strong><br>
+          • Le bloc apparaît après 2 paragraphes<br>
+          • L'image Talika se charge correctement<br>
+          • Le code promo GLP1 est visible<br>
+          • Le lien pointe vers talika.fr/GLP1<br>
+          • Le design est responsive sur mobile
+        </p>
+        <div style="margin-top: 1rem;">
+          <button onclick="window.open('${randomUrl}', '_blank')" style="background: #10b981; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; margin-right: 0.5rem;">
+            🎲 Ouvrir Page Aléatoire
+          </button>
+          <button onclick="closeModal()" style="background: #6b7280; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px;">
+            Fermer
+          </button>
+        </div>
+      `);
+    }
+
+    // Voir le rapport de performance
+    function viewPerformanceReport() {
+      showModal('📊 Rapport de Performance Affiliation', `
+        <div style="text-align: center; margin: 2rem 0;">
+          <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 2rem; border-radius: 12px;">
+            <h3 style="margin: 0 0 1rem 0;">🚧 Fonctionnalité en Développement</h3>
+            <p style="margin: 0; opacity: 0.9;">Le système de tracking avancé sera intégré prochainement</p>
+          </div>
+        </div>
+        
+        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+          <h4 style="margin: 0 0 1rem 0;">📈 Métriques Prévues</h4>
+          <ul style="margin: 0; padding-left: 1.5rem;">
+            <li><strong>Clics par article</strong> - Quel contenu génère le plus d'engagement</li>
+            <li><strong>Taux de conversion</strong> - Pourcentage de clics → achats</li>
+            <li><strong>Revenus générés</strong> - Commissions mensuelles détaillées</li>
+            <li><strong>Pages les plus performantes</strong> - Top des articles convertisseurs</li>
+            <li><strong>Analyse temporelle</strong> - Évolution jour/semaine/mois</li>
+          </ul>
+        </div>
+
+        <div style="background: #d1fae5; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+          <strong style="color: #059669;">🎯 Objectif :</strong> 
+          <span style="color: #374151;">Optimiser le placement et le contenu pour maximiser les conversions</span>
+        </div>
+        
+        <button onclick="closeModal()" style="background: #667eea; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; margin-top: 1rem;">
+          Compris
+        </button>
+      `);
+    }
+
+    // Optimiser le ciblage
+    function optimizeTargeting() {
+      showModal('🎯 Optimisation du Ciblage Affiliation', `
+        <p>Configuration actuelle du ciblage intelligent :</p>
+        
+        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #374151;">🔍 Mots-clés Déclencheurs</h4>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.875rem;">
+            ${['perte de poids', 'raffermissement', 'fermeté', 'peau relâchée', 'décolleté', 'élasticité', 'beauté', 'soin corps'].map(keyword => 
+              `<span style="background: #e5e7eb; padding: 0.25rem 0.5rem; border-radius: 4px;">${keyword}</span>`
+            ).join('')}
+          </div>
+        </div>
+
+        <div style="background: #ecfccb; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #374151;">✅ Collections Ciblées</h4>
+          <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem;">
+            <li>GLP-1 Perte de Poids</li>
+            <li>Effets Secondaires GLP-1</li>
+            <li>Avant/Après GLP-1</li>
+            <li>Guide Beauté Post-GLP1</li>
+          </ul>
+        </div>
+
+        <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+          <h4 style="margin: 0 0 0.5rem 0; color: #374151;">⚡ Règles de Placement</h4>
+          <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem;">
+            <li><strong>Position :</strong> Après le 2ème paragraphe</li>
+            <li><strong>Condition :</strong> Présence de mots-clés pertinents</li>
+            <li><strong>Fallback :</strong> Fin d'article si contenu trop court</li>
+            <li><strong>Fréquence :</strong> 1 bloc maximum par article</li>
+          </ul>
+        </div>
+
+        <p style="color: #059669; font-weight: 500;">
+          ✨ Le système est déjà optimisé ! Les paramètres actuels offrent un bon équilibre entre pertinence et performance.
+        </p>
+        
+        <button onclick="closeModal()" style="background: #667eea; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; margin-top: 1rem;">
+          Parfait
+        </button>
+      `);
+    }
+
+    // Ajouter un nouveau partenariat
+    function addNewAffiliate() {
+      showModal('➕ Ajouter un Nouveau Partenariat', `
+        <p>Extension du programme d'affiliation avec de nouveaux produits et plateformes :</p>
+        
+        <div style="display: grid; gap: 1rem; margin: 1rem 0;">
+          
+          <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 1rem;">
+            <h4 style="margin: 0 0 0.5rem 0; color: #059669;">💊 Compléments Alimentaires</h4>
+            <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem;">
+              <li>Amazon Partenaires (3-8% commission)</li>
+              <li>iHerb (jusqu'à 10% commission)</li>
+              <li>Nutrimea (15-20% commission)</li>
+            </ul>
+          </div>
+
+          <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 1rem;">
+            <h4 style="margin: 0 0 0.5rem 0; color: #3b82f6;">📱 Dispositifs Tech</h4>
+            <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem;">
+              <li>Amazon (balances, glucomètres)</li>
+              <li>Darty/Boulanger (électronique santé)</li>
+              <li>Applications premium (abonnements)</li>
+            </ul>
+          </div>
+
+          <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 1rem;">
+            <h4 style="margin: 0 0 0.5rem 0; color: #f59e0b;">📚 Formations & Guides</h4>
+            <ul style="margin: 0; padding-left: 1.5rem; font-size: 0.875rem;">
+              <li>Nos propres produits (guides PDF)</li>
+              <li>Udemy (cours nutrition/fitness)</li>
+              <li>Consultations en ligne</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div style="background: #eff6ff; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+          <strong style="color: #2563eb;">💡 Prochaines étapes :</strong>
+          <ol style="margin: 0.5rem 0 0 0; padding-left: 1.5rem; font-size: 0.875rem;">
+            <li>Identifier les produits complémentaires pertinents</li>
+            <li>Négocier les taux de commission</li>
+            <li>Intégrer les nouveaux liens dans le système</li>
+            <li>Adapter le ciblage contextuel</li>
+          </ol>
+        </div>
+        
+        <button onclick="closeModal()" style="background: #667eea; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; margin-top: 1rem;">
+          Compris
+        </button>
+      `);
+    }
+
     initTabs();
     document.addEventListener('DOMContentLoaded', initTabs);
   </script>

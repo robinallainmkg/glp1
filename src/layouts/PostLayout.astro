@@ -1,5 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AffiliateProduct from '../components/AffiliateProduct.astro';
+import { getProductsForCollection, getProductsByKeywords } from '../utils/affiliate-manager.ts';
 
 export interface Props {
   frontmatter: {
@@ -14,6 +16,18 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
+
+// Récupération des produits affiliés pour ce post
+const context = {
+  category: frontmatter.category,
+  keywords: frontmatter.keywords ? frontmatter.keywords.split(',').map(k => k.trim()) : [],
+  tags: [frontmatter.category]
+};
+
+const affiliateProducts = await getProductsForCollection(frontmatter.category, 2);
+const keywordProducts = await getProductsByKeywords(context.keywords, frontmatter.category, 1);
+const primaryProduct = affiliateProducts[0] || keywordProducts[0];
+const secondaryProduct = affiliateProducts[1] || keywordProducts[1] || affiliateProducts[0];
 
 // Fonction pour générer les encarts d'affiliation adaptés à la catégorie
 function getAffiliateBoxes(category: string) {
@@ -244,17 +258,26 @@ const authorInfo = getAuthorInfo(frontmatter.author);
             <slot />
           </div>
 
-          <!-- Deuxième encart d'affiliation avant la conclusion -->
-          <div class="affiliate-box" id="affiliate-box-2">
-            <div class="affiliate-content">
-              <h3>{affiliateBoxes[1].title}</h3>
-              <p>{affiliateBoxes[1].description}</p>
-              <div class="affiliate-cta">
-                <span class="affiliate-price">{affiliateBoxes[1].price}</span>
-                <a href="#" class="btn btn-secondary">{affiliateBoxes[1].cta}</a>
-              </div>
-            </div>
-          </div>
+          <!-- Produits affiliés modernes -->
+          {primaryProduct && (
+            <AffiliateProduct 
+              productId={primaryProduct.id}
+              placement="inline"
+              context={context}
+              variant="featured"
+              className="post-affiliate-primary"
+            />
+          )}
+
+          {secondaryProduct && secondaryProduct.id !== primaryProduct?.id && (
+            <AffiliateProduct 
+              productId={secondaryProduct.id}
+              placement="inline"
+              context={context}
+              variant="compact"
+              className="post-affiliate-secondary"
+            />
+          )}
         </div>
       </div>
 

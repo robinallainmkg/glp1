@@ -16,7 +16,9 @@
     "deploy:complete": "node deploy-complete.js",
     "deploy:full": "powershell -ExecutionPolicy Bypass -File deploy-full.ps1",
     "deploy:windows": "powershell -ExecutionPolicy Bypass -File deploy.ps1",
-    "deploy:mac": "bash deploy.sh"
+    "deploy:mac": "bash deploy.sh",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "optimize-images:responsive": "node scripts/optimize-images.mjs --responsive"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.2",

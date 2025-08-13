@@ -1,5 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AffiliateProduct from '../components/AffiliateProduct.astro';
+import { getProductsForCollection } from '../utils/affiliate-manager.ts';
 
 export interface Props {
   collection: {
@@ -71,6 +73,11 @@ function formatDate(dateString: string) {
     day: 'numeric'
   });
 }
+
+// Récupération des produits affiliés pour cette collection
+const collectionProducts = await getProductsForCollection(collection.slug, 3);
+const headerProduct = collectionProducts[0];
+const sidebarProducts = collectionProducts.slice(1, 3);
 ---
 
 <BaseLayout 
@@ -104,6 +111,19 @@ function formatDate(dateString: string) {
       </div>
     </header>
 
+    <!-- Produit affilié en bannière après le header -->
+    {headerProduct && (
+      <div class="collection-affiliate-banner">
+        <AffiliateProduct 
+          productId={headerProduct.id}
+          placement="banner"
+          context={{ category: collection.slug, keywords: collection.keywords, tags: [collection.slug] }}
+          variant="featured"
+          className="collection-banner-product"
+        />
+      </div>
+    )}
+
     <!-- Articles Grid -->
     <section class="articles-section">
       <div class="articles-header">
@@ -116,52 +136,80 @@ function formatDate(dateString: string) {
       </div>
 
       <div class="articles-grid">
-        {articles.map((article) => {
+        {articles.map((article, index) => {
           const authorInfo = getAuthorInfo(article.author);
+          
+          // Injecter un produit affilié tous les 4 articles
+          const shouldShowProduct = index > 0 && (index + 1) % 4 === 0 && sidebarProducts[Math.floor(index/4)];
+          const productToShow = shouldShowProduct ? sidebarProducts[Math.floor(index/4)] : null;
+          
           return (
-            <article class="article-card">
-              <div class="article-card-header">
-                <div class="collection-badge" style={`background: ${collection.color}20; color: ${collection.color}`}>
-                  {collection.icon} {collection.name}
-                </div>
-                <div class="article-meta">
-                  <span class="reading-time">{article.readingTime} min</span>
-                  <span class="word-count">{article.wordCount} mots</span>
-                </div>
-              </div>
-              
-              <div class="article-card-content">
-                <h3 class="article-title">
-                  <a href={article.url}>{article.title}</a>
-                </h3>
-                <p class="article-description">{article.description}</p>
-              </div>
-
-              <div class="article-card-footer">
-                <div class="author-info">
-                  <span class="author-avatar">{authorInfo.avatar}</span>
-                  <div class="author-details">
-                    <span class="author-name">{authorInfo.name}</span>
-                    <span class="author-role">{authorInfo.role}</span>
+            <>
+              <article class="article-card">
+                <div class="article-card-header">
+                  <div class="collection-badge" style={`background: ${collection.color}20; color: ${collection.color}`}>
+                    {collection.icon} {collection.name}
+                  </div>
+                  <div class="article-meta">
+                    <span class="reading-time">{article.readingTime} min</span>
+                    <span class="word-count">{article.wordCount} mots</span>
                   </div>
                 </div>
-                <div class="article-date">
-                  <span class="date-icon">📅</span>
-                  <span class="date-text">{formatDate(article.lastModified)}</span>
+                
+                <div class="article-card-content">
+                  <h3 class="article-title">
+                    <a href={article.url}>{article.title}</a>
+                  </h3>
+                  <p class="article-description">{article.description}</p>
                 </div>
-              </div>
 
-              <div class="article-card-action">
-                <a href={article.url} class="read-more-btn">
-                  Lire l'article
-                  <span class="btn-icon">→</span>
-                </a>
-              </div>
-            </article>
+                <div class="article-card-footer">
+                  <div class="author-info">
+                    <span class="author-avatar">{authorInfo.avatar}</span>
+                    <div class="author-details">
+                      <span class="author-name">{authorInfo.name}</span>
+                      <span class="author-role">{authorInfo.role}</span>
+                    </div>
+                  </div>
+                  <div class="article-date">
+                    <span class="date-icon">📅</span>
+                    <span class="date-text">{formatDate(article.lastModified)}</span>
+                  </div>
+                </div>
+
+                <div class="article-card-action">
+                  <a href={article.url} class="read-more-btn">
+                    Lire l'article
+                    <span class="btn-icon">→</span>
+                  </a>
+                </div>
+              </article>
+              
+              {/* Produit affilié tous les 4 articles */}
+              {productToShow && (
+                <div class="grid-affiliate-product">
+                  <AffiliateProduct 
+                    productId={productToShow.id}
+                    placement="grid"
+                    context={{ category: collection.slug, keywords: collection.keywords }}
+                    variant="expanded"
+                    className="collection-grid-product"
+                  />
+                </div>
+              )}
+            </>
           );
         })}
       </div>
     </section>
+
+    <!-- Produit d'affiliation en vedette -->
+    {headerProduct && (
+      <section class="featured-product">
+        <h2>Produit en vedette</h2>
+        <AffiliateProduct product={headerProduct} />
+      </section>
+    )}
 
     <!-- Pagination si nécessaire -->
     {totalPages > 1 && (
@@ -513,6 +561,22 @@ function formatDate(dateString: string) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+}
+
+/* Featured Product */
+.featured-product {
+  margin: 3rem 0;
+  padding: 2rem;
+  border-radius: 12px;
+  background: var(--color-slate-50);
+  text-align: center;
+}
+
+.featured-product h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin: 0 0 1.5rem 0;
 }
 
 /* Responsive */
