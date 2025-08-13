@@ -21,15 +21,15 @@ const CONFIG = {
 console.log('🚀 DÉPLOIEMENT SSH AUTOMATIQUE - GLP-1 FRANCE');
 console.log('===============================================');
 
-// Vérifier la branche production
+// Vérifier la branche main
 try {
   const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
-  if (currentBranch !== 'production') {
-    console.error('❌ Erreur: Vous devez être sur la branche "production"');
-    console.log('💡 Exécutez: git checkout production');
+  if (currentBranch !== 'main') {
+    console.error('❌ Erreur: Vous devez être sur la branche "main"');
+    console.log('💡 Exécutez: git checkout main');
     process.exit(1);
   }
-  console.log('✅ Branche production confirmée');
+  console.log('✅ Branche main confirmée');
 } catch (error) {
   console.error('❌ Erreur Git:', error.message);
   process.exit(1);

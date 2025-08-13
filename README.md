@@ -41,15 +41,26 @@ Informer et accompagner les patients sur les traitements GLP-1 en France
 - npm ou yarn
 - Git
 
+
+## 🚩 Branche de référence : main
+
+> **IMPORTANT** : Toute la maintenance, le déploiement et la récupération du code se font exclusivement sur la branche `main`.
+> - **main** = version de référence, unique, toujours à jour avec le site en ligne.
+> - **production** n'est plus utilisée.
+
 ## 🛠️ Installation
 
 ```bash
-# Cloner le projet
+
+# Cloner le projet (toujours sur main)
 git clone https://github.com/robinallainmkg/glp1.git
 cd glp1
+git checkout main
+
 
 # Installer les dépendances
 npm install
+
 
 # Nettoyer et optimiser tous les articles (IMPORTANT)
 node scripts/clean-definitive.mjs
@@ -59,6 +70,17 @@ node scripts/audit-pertinence-content.mjs
 
 # Lancer le serveur de développement
 npm run dev
+
+## 🔎 Vérifier la version (date/commit)
+
+Pour garantir que tu as la même version que le site en ligne :
+
+```bash
+git log -1 --pretty=format:"%h %cd" --date=iso
+```
+Compare le hash et la date avec la dernière version déployée (voir le commit sur GitHub ou la date du dernier déploiement Hostinger).
+
+**Astuce** : chaque déploiement doit être committé/poussé sur main AVANT d'être envoyé sur le serveur.
 ```
 
 > **⚠️ IMPORTANT - LOGIQUE DES TITRES H1** : 
@@ -199,28 +221,27 @@ node scripts/enrich-short-articles.mjs
 
 Accès admin via `/admin-login/` avec authentification par session.
 
-## 🚀 DÉPLOIEMENT
+
+## 🚀 DÉPLOIEMENT (toujours depuis main)
 
 ### Plateformes Supportées
+
 
 #### 🖥️ **macOS/Linux** : Déploiement Automatique SSH
 
 ```bash
-# Build et déploiement en une commande
+# Build et déploiement en une commande (depuis main)
+git checkout main
 npm run build
 node deploy-auto.js
 ```
 
-**Détails** :
-- Utilise `rsync` + `sshpass` pour un déploiement rapide
-- Supprime automatiquement les anciens fichiers
-- Synchronisation complète du dossier `dist/`
-- Connexion SSH directe au serveur Hostinger
-
 #### 🪟 **Windows** : Déploiement PowerShell 
 
+
 ```powershell
-# Build et déploiement PowerShell
+# Build et déploiement PowerShell (depuis main)
+git checkout main
 npm run build
 .\deploy-auto.ps1
 ```
@@ -231,10 +252,13 @@ npm run build
 - Gestion des permissions Windows
 - Configuration automatique des credentials
 
+
 #### 📁 **Déploiement Manuel** (Toutes plateformes)
 
 ```bash
-# Générer le build
+
+# Générer le build (depuis main)
+git checkout main
 npm run build
 
 # Ouvrir le dossier dist pour upload manuel
@@ -273,10 +297,21 @@ npm run check
 
 ### ✅ Checklist Déploiement
 
+- [ ] Être sur la branche `main` (git checkout main)
 - [ ] `npm run build` réussi sans erreurs
+- [ ] Commit/push sur main AVANT tout déploiement
 - [ ] Vérification du dashboard admin (`/admin-dashboard`)
 - [ ] Test des URLs critiques (collections, articles)
 - [ ] Validation du sitemap (`/sitemap.xml`)
 - [ ] Upload des fichiers via méthode appropriée à la plateforme
 - [ ] Test du site en production : https://glp1-france.fr
+
+---
+
+**Changement de poste ?**
+
+1. Cloner le repo, se placer sur main, installer les dépendances
+2. Vérifier la version (date/commit)
+3. Builder, lancer, déployer normalement
+4. Tu es certain d’avoir la même version que le site live si tu suis ce process
 ````

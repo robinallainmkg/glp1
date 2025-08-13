@@ -10,7 +10,7 @@ Write-Host "=== DEPLOIEMENT AUTOMATIQUE GLP-1 FRANCE ===" -ForegroundColor Green
 Write-Host "1. Upload vers GitHub..." -ForegroundColor Cyan
 git add .
 git commit -m $CommitMessage
-git push origin production --force --no-verify
+git push origin main --force --no-verify
 Write-Host "   GitHub: OK" -ForegroundColor Green
 
 # 2. Build du site
