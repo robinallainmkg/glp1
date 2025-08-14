@@ -1,5 +1,5 @@
 ---
-import { getProductById, addUtmParameters } from '../utils/affiliate-manager.ts';
+import { getProductById, addTrackingParams } from '../utils/affiliate-manager.ts';
 
 export interface Props {
   productId: string;
@@ -24,7 +24,7 @@ const {
 } = Astro.props;
 
 // Récupération du produit par ID
-const product = await getProductById(productId);
+const product = getProductById(productId);
 
 // Si le produit n'existe pas, ne rien afficher
 if (!product) {
@@ -52,7 +52,7 @@ if (!placementConfig?.enabled) {
 }
 
 // Génération de l'URL avec UTM
-const utmUrl = addUtmParameters(product.affiliateUrl, {
+const utmUrl = addTrackingParams(product.affiliateUrl, {
   source: 'glp1-france',
   medium: 'affiliate',
   campaign: placement,

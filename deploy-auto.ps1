@@ -6,6 +6,14 @@ $ErrorActionPreference = "Continue"
 
 Write-Host "=== DEPLOIEMENT AUTOMATIQUE GLP-1 FRANCE ===" -ForegroundColor Green
 
+# Vérifier la branche production
+$currentBranch = git branch --show-current
+if ($currentBranch -ne "production") {
+    Write-Host "❌ Erreur: Vous devez être sur la branche 'production'" -ForegroundColor Red
+    Write-Host "💡 Exécutez: git checkout production" -ForegroundColor Yellow
+    exit 1
+}
+
 # 1. Commit et Push GitHub
 Write-Host "1. Upload vers GitHub..." -ForegroundColor Cyan
 git add .

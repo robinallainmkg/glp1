@@ -85,10 +85,7 @@ const categories = await getCategoryContent();
         </div>
       </div>
       <div class="hero-visual">
-        <img src="/images/uploads/Diagnostic.png" alt="Diagnostic GLP-1 personnalisé" class="hero-image" loading="lazy">
-        <div class="hero-badge">
-          <span class="badge-text">🎯 Test Gratuit</span>
-        </div>
+        <img src="/images/uploads/image-home.png" alt="Femme souriante représentant la réussite avec les traitements GLP-1" class="hero-image" loading="lazy">
       </div>
     </section>
 
@@ -215,13 +212,6 @@ const categories = await getCategoryContent();
           <p>Prescription, médecins, démarches</p>
         </div>
       </div>
-      
-      <div class="diagnostic-cta">
-        <a href="/quel-traitement-glp1-choisir/" class="btn-diagnostic">
-          🎯 Diagnostic Personnalisé (5 min)
-        </a>
-        <p class="diagnostic-subtitle">Découvrez quel traitement est fait pour vous</p>
-      </div>
     </section>
 
     <!-- Trust Indicators -->
@@ -255,7 +245,7 @@ const categories = await getCategoryContent();
     /* Hero Section Amélioré */
     .hero-enhanced {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1.8fr 1.2fr; /* Ajusté de 2fr 1fr à 1.8fr 1.2fr pour plus d'espace image */
       gap: 3rem;
       align-items: center;
       padding: var(--spacing-16) 0 var(--spacing-12);
@@ -271,13 +261,22 @@ const categories = await getCategoryContent();
     .hero-visual {
       position: relative;
       text-align: center;
+      /* Améliorer l'affichage de l'image */
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .hero-image {
-      max-width: 100%;
+      width: 100%;
+      max-width: 550px; /* Augmenté de 450px à 550px pour desktop */
       height: auto;
       border-radius: var(--radius-lg);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      /* Optimiser la mise au point sur la personne */
+      object-fit: cover;
+      object-position: center top;
     }
 
     .hero-badge {
@@ -683,18 +682,62 @@ const categories = await getCategoryContent();
     }
 
     /* Responsive */
+    @media (min-width: 1200px) {
+      .hero-image {
+        max-width: 600px; /* Encore plus grand sur les très grands écrans */
+      }
+    }
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .hero-enhanced {
+        gap: 2rem;
+      }
+      
+      .hero-image {
+        max-width: 380px;
+      }
+      
+      .hero-title {
+        font-size: var(--font-size-4xl);
+      }
+    }
+
     @media (max-width: 768px) {
       .hero-enhanced {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
       }
 
       .hero-content {
         padding-left: 0;
+        order: 2;
+      }
+
+      .hero-visual {
+        order: 1;
+        margin-bottom: 1rem;
+      }
+
+      .hero-image {
+        max-width: 280px;
+        margin: 0 auto;
+        /* Améliorer la visibilité sur mobile */
+        border-radius: var(--radius-xl);
+        object-position: center 20%;
       }
 
       .hero-title, .hero-description, .hero-stats {
         text-align: center;
+      }
+
+      .hero-title {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-4);
+      }
+
+      .hero-description {
+        font-size: var(--font-size-lg);
       }
 
       .bridge-content {
@@ -708,6 +751,13 @@ const categories = await getCategoryContent();
 
       .hero-pills, .hero-actions {
         justify-content: center;
+      }
+
+      .hero-badge {
+        top: -5px;
+        right: -5px;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
       }
     }
   </style>

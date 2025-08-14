@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AffiliateProduct from '../components/AffiliateProduct.astro';
 ---
@@ -31,7 +31,7 @@ import AffiliateProduct from '../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q1" value="effets-secondaires">
               <span class="option-content">
-                <div class="option-icon">🩹</div>
+                <div class="option-icon">�</div>
                 <div class="option-text">
                   <strong>Réduire les effets secondaires</strong>
                   <p>Je suis déjà sous GLP-1 et j'ai des effets indésirables</p>
@@ -818,9 +818,14 @@ import AffiliateProduct from '../components/AffiliateProduct.astro';
       
       document.getElementById('prev-btn').style.display = n === 1 ? 'none' : 'inline-block';
       
-      // Pour toutes les questions, afficher le bouton Suivant sauf si on est déjà aux résultats
-      document.getElementById('next-btn').style.display = n >= totalQuestions ? 'none' : 'inline-block';
-      document.getElementById('results-btn').style.display = 'none'; // Toujours caché car les résultats s'affichent automatiquement
+      // Pour la question 9 (effets secondaires), on affiche directement le bouton résultats
+      if (n === 9) {
+        document.getElementById('next-btn').style.display = 'none';
+        document.getElementById('results-btn').style.display = 'inline-block';
+      } else {
+        document.getElementById('next-btn').style.display = n >= totalQuestions ? 'none' : 'inline-block';
+        document.getElementById('results-btn').style.display = n >= totalQuestions ? 'inline-block' : 'none';
+      }
     }
 
     function nextQuestion() {
@@ -854,9 +859,6 @@ import AffiliateProduct from '../components/AffiliateProduct.astro';
       if (currentQuestion < totalQuestions) {
         currentQuestion++;
         showQuestion(currentQuestion);
-      } else {
-        // Si on est à la dernière question, aller directement aux résultats
-        showResults();
       }
     }
 
@@ -1299,4 +1301,3 @@ import AffiliateProduct from '../components/AffiliateProduct.astro';
     });
   </script>
 </BaseLayout>
-

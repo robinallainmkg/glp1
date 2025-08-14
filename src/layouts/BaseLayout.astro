@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import AffiliateProduct from '../components/AffiliateProduct.astro';
-import { getProductsByKeywords } from '../utils/affiliate-manager.ts';
+import { getProductsByBrand } from '../utils/affiliate-manager.ts';
 
 export interface Props {
   title: string;
@@ -13,8 +13,8 @@ export interface Props {
 const { title, description, keywords = "" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-// Produits affiliés pour le footer (génériques)
-const footerProducts = await getProductsByKeywords(['glp1', 'perte de poids'], undefined, 1);
+// Produits affiliés pour le footer - approche simplifiée
+const footerProducts = getProductsByBrand('Talika', 1);
 ---
 
 <!DOCTYPE html>

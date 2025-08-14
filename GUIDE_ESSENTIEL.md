@@ -1,33 +1,43 @@
 # 🚀 GUIDE ESSENTIEL - GLP-1 France (Août 2025)
 
+> **Branche de référence : `production`**
+
 ## ⚡ L'ESSENTIEL EN 2 MINUTES
 
 ### Projet actuel
-- **119 articles** en 9 collections thématiques
-- **Dashboard admin** : `/admin-dashboard` (mot de passe : `12031990Robin!`)
-- **1 seul script** de déploiement : `.\deploy-auto.ps1`
-- **Site live** : Netlify automatique après chaque push Git
+- **238 articles** en 9 collections thématiques
+- **Dashboard admin** : `/admin-dashboard`
+- **Scripts de déploiement** : `deploy-auto.js` (Linux/Mac) et `deploy-auto.ps1` (Windows)
+- **Site live** : Hostinger via SSH/SFTP (glp1-france.fr)
 
 ### Architecture
 ```
-📁 src/content/          # 119 articles Markdown
+📁 src/content/          # 238 articles Markdown
 📁 src/pages/            # Pages Astro
 📁 scripts/              # Outils d'automatisation
-📄 admin-dashboard.astro # Interface de gestion
-📄 deploy-auto.ps1      # Déploiement unique
+� data/                 # Base de données JSON
+�📄 admin-dashboard.astro # Interface de gestion
+📄 deploy-auto.js        # Déploiement Linux/Mac
+📄 deploy-auto.ps1       # Déploiement Windows
 ```
 
 ---
 
-## 📋 ACTIONS QUOTIDIENNES
+## 📋 WORKFLOW QUOTIDIEN
 
-### 1. Modifier du contenu
+### 1. Basculer sur production
+```bash
+git checkout production
+git pull origin production
+```
+
+### 2. Modifier du contenu
 ```bash
 # Éditer les articles dans src/content/[collection]/
 # Exemple : src/content/medicaments-glp1/ozempic.md
 ```
 
-### 2. Déployer les changements
+### 3. Déployer les changements
 ```powershell
 .\deploy-auto.ps1
 ```

@@ -1,5 +1,42 @@
 # 📚 Documentation Centrale GLP-1 France
 
+> **Branche de référence : `production`**
+
+Ce fichier centralise et référence toutes les documentations essentielles du projet GLP-1 France.
+
+---
+
+## 📋 Documentation Principale
+
+- [README.md](./README.md) — Installation, déploiement et présentation générale
+- [GUIDE_ESSENTIEL.md](./GUIDE_ESSENTIEL.md) — Workflow quotidien et actions essentielles
+- [SEO_STRATEGIE.md](./SEO_STRATEGIE.md) — Stratégie SEO et mots-clés prioritaires
+- [CHECKLIST_FINALE.md](./CHECKLIST_FINALE.md) — Checklist de déploiement
+
+## 🛒 Documentation Affiliation
+
+- [GUIDE_AFFILIATION.md](./GUIDE_AFFILIATION.md) — Guide complet d'affiliation (système de liens avec codes promo)
+
+## 📁 Organisation
+
+- **[docs/](./docs/)** — Documentation structurée avec index
+- **[docs/archive/](./docs/archive/)** — Anciens guides et docs obsolètes
+
+---
+
+## ⚡ Actions Rapides
+
+```bash
+# Démarrage
+git checkout production && npm install && npm run dev
+
+# Déploiement Windows
+npm run build && .\deploy-auto.ps1
+
+# Déploiement Linux/Mac  
+npm run build && node deploy-auto.js
+```tion Centrale GLP-1 France
+
 Ce fichier centralise et référence toutes les documentations, guides, plans, checklists, stratégies et scripts importants du projet GLP-1 France.
 
 ---

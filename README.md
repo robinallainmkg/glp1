@@ -1,5 +1,9 @@
 # 🏥 GLP-1 France - Site d'Information Médicale
 
+> **Branche de référence : `production`**
+> 
+> Toutes les opérations de développement, de build et de déploiement doivent être effectuées sur la branche `production`. Cette branche correspond toujours à la version en ligne du site. Ne pas utiliser la branche `main` comme référence.
+
 ## 📋 APERÇU DU PROJET
 
 Site web d'information spécialisé sur les **agonistes du récepteur GLP-1** en France, développé avec **Astro.js**. 
@@ -47,6 +51,9 @@ Informer et accompagner les patients sur les traitements GLP-1 en France
 # Cloner le projet
 git clone https://github.com/robinallainmkg/glp1.git
 cd glp1
+
+# Basculer sur la branche de production (obligatoire)
+git checkout production
 
 # Installer les dépendances
 npm install
