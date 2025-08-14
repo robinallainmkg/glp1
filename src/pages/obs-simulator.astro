@@ -837,10 +837,6 @@
                                 <span class="metric-label">Total New Patients</span>
                                 <span class="metric-value" id="total-new-patients">110</span>
                             </div>
-                            <div class="metric-row">
-                                <span class="metric-label">Blended CAC</span>
-                                <span class="metric-value" id="cost-per-patient">$211</span>
-                            </div>
                         </div>
 
                         <div class="output-section">
@@ -1135,10 +1131,6 @@
                                 <span class="metric-label">Total New Patients</span>
                                 <span class="metric-value" id="insurance-total-new-patients">110</span>
                             </div>
-                            <div class="metric-row">
-                                <span class="metric-label">Blended CAC</span>
-                                <span class="metric-value" id="insurance-cost-per-patient">$45</span>
-                            </div>
                         </div>
 
                         <div class="output-section">
@@ -1274,9 +1266,6 @@
             
             var totalNewPatientsElem = document.getElementById('total-new-patients');
             if (totalNewPatientsElem) totalNewPatientsElem.textContent = Math.round(data.newPatients).toLocaleString();
-            
-            var cppElem = document.getElementById('cost-per-patient');
-            if (cppElem) cppElem.textContent = '$' + Math.round(data.blendedCAC).toLocaleString();
             
             // Update Operational Metrics
             var monthlyRevElem = document.getElementById('monthly-revenue');
@@ -1468,7 +1457,6 @@
             var newPatElem = document.getElementById('new-patients'); if (newPatElem) newPatElem.textContent = Math.round(totalPaidNewPatients).toLocaleString();
             var referralsElem = document.getElementById('wom-patients-display'); if (referralsElem) referralsElem.textContent = '0'; // Mois 1, pas encore de referrals
             var totalNewPatientsElem = document.getElementById('total-new-patients'); if (totalNewPatientsElem) totalNewPatientsElem.textContent = Math.round(totalNewPatients).toLocaleString();
-            var cppElem = document.getElementById('cost-per-patient'); if (cppElem) cppElem.textContent = '$' + blendedCAC.toFixed(0);
             var platRevElem = document.getElementById('platform-revenue'); if (platRevElem) platRevElem.textContent = '$' + Math.round(platformRevenue).toLocaleString();
             var docPayElem = document.getElementById('doctor-payments'); if (docPayElem) docPayElem.textContent = '-$' + Math.round(doctorPaymentsCurrent).toLocaleString();
 
