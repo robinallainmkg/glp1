@@ -43,7 +43,7 @@ option confirm off
 mkdir data
 cd data
 lcd ../data
-synchronize remote data
+synchronize remote
 close
 exit
 "@
