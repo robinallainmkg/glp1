@@ -38,13 +38,8 @@ cd domains/glp1-france.fr/public_html
 lcd dist
 synchronize remote -delete
 cd ..
-option batch abort
-option confirm off
-# Créer et synchroniser le dossier data
-mkdir data
-cd data
-lcd ../data
-put *.json
+lcd data
+synchronize remote data
 close
 exit
 "@
