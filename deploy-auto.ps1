@@ -43,7 +43,11 @@ option confirm off
 mkdir data
 cd data
 lcd ../data
-synchronize remote
+put users-unified.json
+put affiliate-products.json
+put collections.json
+put articles-database.json
+put authors-testimonials.json
 close
 exit
 "@
