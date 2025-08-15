@@ -33,7 +33,20 @@ class UserManager {
   private dataPath: string;
 
   constructor() {
-    this.dataPath = path.join(process.cwd(), 'data', 'users-unified.json');
+    // Détecter l'environnement de production Hostinger
+    const isProduction = process.env.NODE_ENV === 'production' || 
+                        process.cwd().includes('/home/u403023291/') ||
+                        process.cwd().includes('domains/glp1-france.fr');
+    
+    if (isProduction) {
+      // Sur Hostinger, le dossier data est à côté de public_html
+      this.dataPath = '/home/u403023291/domains/glp1-france.fr/data/users-unified.json';
+    } else {
+      // En développement local
+      this.dataPath = path.join(process.cwd(), 'data', 'users-unified.json');
+    }
+    
+    console.log('📁 UserManager - Chemin data:', this.dataPath);
   }
 
   static getInstance(): UserManager {
@@ -43,19 +56,56 @@ class UserManager {
     return UserManager.instance;
   }
 
+  async ensureDataFile(): Promise<void> {
+    try {
+      console.log('🔍 Vérification existence fichier:', this.dataPath);
+      await fs.access(this.dataPath);
+      console.log('✅ Fichier existe');
+    } catch (error) {
+      console.log('⚠️ Fichier inexistant, création...');
+      try {
+        // Créer le répertoire si nécessaire
+        const dir = path.dirname(this.dataPath);
+        await fs.mkdir(dir, { recursive: true });
+        console.log('📁 Répertoire créé:', dir);
+        
+        // Créer le fichier avec structure de base
+        await fs.writeFile(this.dataPath, JSON.stringify({ users: [] }, null, 2));
+        console.log('📝 Fichier users-unified.json créé');
+      } catch (createError) {
+        console.error('❌ Erreur création fichier:', createError);
+        throw createError;
+      }
+    }
+  }
+
   async loadUsers(): Promise<UnifiedUser[]> {
     try {
+      await this.ensureDataFile();
+      console.log('📖 Chargement des utilisateurs depuis:', this.dataPath);
       const data = await fs.readFile(this.dataPath, 'utf-8');
       const parsed = JSON.parse(data);
+      console.log('✅ Utilisateurs chargés:', parsed.users?.length || 0);
       return parsed.users || [];
     } catch (error) {
+      console.log('⚠️ Erreur chargement utilisateurs:', error.message);
+      console.log('🔄 Retour tableau vide');
       return [];
     }
   }
 
   async saveUsers(users: UnifiedUser[]): Promise<void> {
-    const dataToSave = { users };
-    await fs.writeFile(this.dataPath, JSON.stringify(dataToSave, null, 2));
+    try {
+      await this.ensureDataFile();
+      console.log('💾 Sauvegarde vers:', this.dataPath);
+      console.log('👥 Nombre d\'utilisateurs à sauvegarder:', users.length);
+      const dataToSave = { users };
+      await fs.writeFile(this.dataPath, JSON.stringify(dataToSave, null, 2));
+      console.log('✅ Sauvegarde réussie');
+    } catch (error) {
+      console.error('❌ Erreur sauvegarde:', error);
+      throw error;
+    }
   }
 
   generateUserId(email: string): string {
@@ -190,11 +240,17 @@ class UserManager {
 
 export const POST: APIRoute = async ({ request }) => {
   try {
+    console.log('🔧 User-management API - Requête reçue');
+    
     const formData = await request.formData();
     const action = formData.get('action')?.toString() || formData.get('type')?.toString();
     const email = formData.get('email')?.toString()?.trim()?.toLowerCase();
     
+    console.log('🎬 Action:', action);
+    console.log('📧 Email:', email);
+    
     if (!email || !action) {
+      console.log('❌ Email ou action manquant');
       return new Response(JSON.stringify({ 
         success: false, 
         error: 'Email et action requis' 
@@ -210,7 +266,9 @@ export const POST: APIRoute = async ({ request }) => {
     switch (action) {
       case 'newsletter_signup':
       case 'newsletter':
+        console.log('📨 Traitement inscription newsletter');
         const source = formData.get('source')?.toString() || 'footer-newsletter';
+        console.log('📍 Source newsletter:', source);
         user = await userManager.addEvent(email, {
           type: 'newsletter_signup',
           data: { source },
@@ -218,6 +276,7 @@ export const POST: APIRoute = async ({ request }) => {
           ip: request.headers.get('x-forwarded-for') || 'unknown',
           userAgent: request.headers.get('user-agent') || 'unknown'
         });
+        console.log('✅ Utilisateur newsletter créé/mis à jour:', user.email);
         break;
 
       case 'contact_form':

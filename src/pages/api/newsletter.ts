@@ -9,11 +9,14 @@ interface NewsletterData {
 async function saveToUserManagement(data: NewsletterData, request: Request): Promise<boolean> {
   try {
     const userManagementUrl = new URL('/api/user-management', request.url);
+    console.log('🔗 URL user-management:', userManagementUrl.toString());
     
     const formData = new FormData();
     formData.append('type', 'newsletter');
     formData.append('email', data.email);
     formData.append('source', data.source || 'footer-newsletter');
+    
+    console.log('📤 Envoi vers user-management - Email:', data.email, 'Source:', data.source);
     
     const response = await fetch(userManagementUrl.toString(), {
       method: 'POST',
@@ -24,9 +27,19 @@ async function saveToUserManagement(data: NewsletterData, request: Request): Pro
       }
     });
     
+    console.log('📥 Réponse user-management - Status:', response.status);
+    
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.log('❌ Erreur user-management:', errorText);
+    } else {
+      const responseData = await response.text();
+      console.log('✅ Succès user-management:', responseData);
+    }
+    
     return response.ok;
   } catch (error) {
-    console.error('Erreur lors de la sauvegarde vers user-management:', error);
+    console.error('❌ Erreur lors de la sauvegarde vers user-management:', error);
     return false;
   }
 }
