@@ -38,6 +38,7 @@ cd domains/glp1-france.fr/public_html
 lcd dist
 synchronize remote -delete
 cd ..
+lcd ..
 lcd data
 synchronize remote data
 close
