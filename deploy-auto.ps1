@@ -43,7 +43,7 @@ option confirm off
 mkdir data
 cd data
 lcd ../data
-put users-unified.json
+synchronize remote data
 close
 exit
 "@
