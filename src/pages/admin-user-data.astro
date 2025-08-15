@@ -106,7 +106,7 @@ const description = "Dashboard simple des données utilisateurs du site GLP-1 Fr
   // Charger les données depuis l'API
   async function loadData() {
     try {
-      const response = await fetch('/api/user-management');
+      const response = await fetch('/api/user-management?action=users');
       if (!response.ok) throw new Error('Erreur de chargement');
       
       currentData = await response.json();
@@ -123,8 +123,8 @@ const description = "Dashboard simple des données utilisateurs du site GLP-1 Fr
     if (!currentData || !currentData.users) return;
     
     const users = currentData.users;
-    const contacts = users.filter(u => u.events.some(e => e.type === 'contact'));
-    const newsletters = users.filter(u => u.events.some(e => e.type === 'newsletter'));
+    const contacts = users.filter(u => u.events.some(e => e.type === 'contact_form'));
+    const newsletters = users.filter(u => u.events.some(e => e.type === 'newsletter_signup'));
     
     document.getElementById('contact-count').textContent = contacts.length;
     document.getElementById('newsletter-count').textContent = newsletters.length;
@@ -139,7 +139,7 @@ const description = "Dashboard simple des données utilisateurs du site GLP-1 Fr
     }
 
     const contacts = currentData.users
-      .filter(u => u.events.some(e => e.type === 'contact'))
+      .filter(u => u.events.some(e => e.type === 'contact_form'))
       .slice(0, 10);
 
     if (contacts.length === 0) {
@@ -148,7 +148,7 @@ const description = "Dashboard simple des données utilisateurs du site GLP-1 Fr
     }
 
     container.innerHTML = contacts.map(user => {
-      const contactEvent = user.events.find(e => e.type === 'contact');
+      const contactEvent = user.events.find(e => e.type === 'contact_form');
       return `
         <div class="p-3 border border-gray-200 rounded-lg">
           <div class="flex justify-between items-start mb-2">
@@ -170,7 +170,7 @@ const description = "Dashboard simple des données utilisateurs du site GLP-1 Fr
     }
 
     const newsletters = currentData.users
-      .filter(u => u.events.some(e => e.type === 'newsletter'))
+      .filter(u => u.events.some(e => e.type === 'newsletter_signup'))
       .slice(0, 10);
 
     if (newsletters.length === 0) {
@@ -179,12 +179,13 @@ const description = "Dashboard simple des données utilisateurs du site GLP-1 Fr
     }
 
     container.innerHTML = newsletters.map(user => {
-      const newsletterEvent = user.events.find(e => e.type === 'newsletter');
+      const newsletterEvent = user.events.find(e => e.type === 'newsletter_signup');
       return `
         <div class="p-3 border border-gray-200 rounded-lg">
           <div class="flex justify-between items-center">
             <div>
               <p class="font-semibold text-gray-800">${user.email}</p>
+              <p class="text-xs text-gray-500">Source: ${newsletterEvent.data.source || newsletterEvent.source}</p>
             </div>
             <span class="text-xs text-gray-500">${formatDate(newsletterEvent.timestamp)}</span>
           </div>

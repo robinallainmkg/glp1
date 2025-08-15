@@ -58,76 +58,36 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
     
-    // Créer l'entrée de données
-    const submission: GuideSubmission = {
-      id: Date.now(),
-      timestamp: new Date().toISOString(),
-      source: 'guide-beauty-form',
-      data: {
-        name,
-        email,
-        treatment,
-        concerns,
-        newsletter_consent
-      },
-      ip: request.headers.get('x-forwarded-for') || 'unknown',
-      userAgent: request.headers.get('user-agent') || 'unknown'
-    };
+    console.log('📝 Guide Beauty Form - Données reçues:', {
+      name, email, treatment, concerns, newsletter_consent
+    });
     
-    // Lire le fichier existant
-    const dataPath = path.join(process.cwd(), 'data', 'guide-downloads.json');
-    let submissions: GuideSubmission[] = [];
-    
+    // Envoyer vers l'API user-management unifié
     try {
-      const data = await fs.readFile(dataPath, 'utf-8');
-      const parsed = JSON.parse(data);
-      submissions = parsed.downloads || parsed || [];
-    } catch (error) {
-      submissions = [];
-    }
-    
-    // Ajouter la nouvelle soumission
-    submissions.push(submission);
-    
-    // Sauvegarder avec la structure correcte
-    const dataToSave = {
-      downloads: submissions
-    };
-    await fs.writeFile(dataPath, JSON.stringify(dataToSave, null, 2));
-    
-    // Ajouter à la newsletter si consentement donné
-    if (newsletter_consent) {
-      try {
-        const newsletterPath = path.join(process.cwd(), 'data', 'newsletter-subscribers.json');
-        let subscribers: NewsletterSubscriber[] = [];
-        
-        try {
-          const newsletterData = await fs.readFile(newsletterPath, 'utf-8');
-          const parsed = JSON.parse(newsletterData);
-          subscribers = parsed.subscribers || parsed || [];
-        } catch (error) {
-          subscribers = [];
+      const userManagementUrl = new URL('/api/user-management', request.url);
+      
+      const formData = new FormData();
+      formData.append('action', 'guide_download');
+      formData.append('email', email);
+      formData.append('name', name);
+      formData.append('treatment', treatment);
+      concerns.forEach(concern => formData.append('concerns', concern));
+      formData.append('newsletter_consent', newsletter_consent ? 'on' : 'off');
+      
+      const response = await fetch(userManagementUrl.toString(), {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'User-Agent': request.headers.get('User-Agent') || '',
+          'X-Forwarded-For': request.headers.get('X-Forwarded-For') || '',
         }
-        
-        // Vérifier si l'email n'existe pas déjà
-        const existingSubscriber = subscribers.find(sub => sub.email.toLowerCase() === email.toLowerCase());
-        if (!existingSubscriber) {
-          subscribers.push({
-            id: Date.now(),
-            email: email.toLowerCase(),
-            timestamp: new Date().toISOString(),
-            source: 'guide-beauty-form',
-            status: 'active'
-          });
-          
-          const dataToSave = {
-            subscribers: subscribers
-          };
-          await fs.writeFile(newsletterPath, JSON.stringify(dataToSave, null, 2));
-        }
-      } catch (error) {
-        console.error('Erreur ajout newsletter:', error);
+      });
+      
+      if (!response.ok) {
+        console.error('Erreur sauvegarde user-management:', await response.text());
       }
+    } catch (error) {
+      console.error('Erreur API user-management:', error);
     }
     
     return new Response(JSON.stringify({ 
