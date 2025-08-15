@@ -184,10 +184,20 @@ const footerProducts = getProductsByBrand('Talika', 1);
         <div class="footer-section">
           <h4 class="footer-subtitle">Newsletter</h4>
           <p class="footer-text">Recevez nos derniers conseils et actualités GLP-1</p>
-          <form class="newsletter-form" action="#" method="post">
-            <input type="email" placeholder="Votre email" class="newsletter-input" required>
+          <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="newsletter">
+            <div style="display: none;">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </div>
+            <input type="email" name="email" placeholder="Votre email" class="newsletter-input" required>
             <button type="submit" class="newsletter-btn">S'abonner</button>
           </form>
+          <div class="newsletter-success hidden" id="newsletter-success">
+            <p class="success-message">✅ Inscription réussie !</p>
+          </div>
+          <div class="newsletter-error hidden" id="newsletter-error">
+            <p class="error-message">❌ Erreur d'inscription</p>
+          </div>
         </div>
       </div>
       
@@ -195,7 +205,8 @@ const footerProducts = getProductsByBrand('Talika', 1);
         <p class="footer-copyright">
           © 2025 GLP-1 France. Tous droits réservés. | 
           <a href="/mentions-legales/">Mentions légales</a> | 
-          <a href="/politique-confidentialite/">Politique de confidentialité</a>
+          <a href="/politique-confidentialite/">Politique de confidentialité</a> | 
+          <a href="/contact/">Contactez-nous</a>
         </p>
       </div>
     </div>
@@ -218,6 +229,57 @@ const footerProducts = getProductsByBrand('Talika', 1);
         navToggle?.classList.remove('active');
       });
     });
+
+    // Newsletter form handler
+    const newsletterForm = document.querySelector('.newsletter-form');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+    const newsletterError = document.getElementById('newsletter-error');
+    
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Masquer les messages précédents
+        newsletterSuccess?.classList.add('hidden');
+        newsletterError?.classList.add('hidden');
+        
+        const submitBtn = this.querySelector('.newsletter-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '⏳';
+        submitBtn.disabled = true;
+        
+        const formData = new FormData(this);
+        
+        fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+          if (response.ok) {
+            newsletterSuccess?.classList.remove('hidden');
+            this.reset();
+            
+            // Analytics
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'newsletter_signup', {
+                'event_category': 'engagement'
+              });
+            }
+          } else {
+            throw new Error('Erreur réseau');
+          }
+        })
+        .catch(error => {
+          console.error('Erreur newsletter:', error);
+          newsletterError?.classList.remove('hidden');
+        })
+        .finally(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        });
+      });
+    }
 
     // Dropdown menu functionality
     document.querySelectorAll('.dropdown').forEach(dropdown => {

@@ -1,0 +1,645 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Nous Contacter - GLP-1 France"
+  description="Contactez l'équipe de GLP-1 France pour vos questions sur Ozempic, Wegovy et les traitements GLP-1. Nous répondons rapidement à vos demandes."
+  keywords="contact, questions GLP-1, support, aide, Ozempic, Wegovy"
+>
+  <div class="container">
+    <div class="content-wrapper">
+      <article class="contact-page">
+        <header class="page-header">
+          <h1>Nous Contacter</h1>
+          <p class="page-subtitle">Une question sur les traitements GLP-1 ? Nous sommes là pour vous aider</p>
+        </header>
+
+        <div class="contact-content">
+          <div class="contact-grid">
+            <!-- Informations de contact -->
+            <div class="contact-info-section">
+              <h2>Informations de Contact</h2>
+              
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <div class="contact-icon">📧</div>
+                  <div class="contact-details">
+                    <h3>Email</h3>
+                    <p>Pour toute question concernant les traitements GLP-1, nos articles ou le site.</p>
+                    <a href="mailto:robin@glp1-france.fr" class="contact-link">robin@glp1-france.fr</a>
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">⏱️</div>
+                  <div class="contact-details">
+                    <h3>Délai de Réponse</h3>
+                    <p>Nous répondons généralement sous <strong>24-48 heures</strong> (jours ouvrés).</p>
+                  </div>
+                </div>
+
+                <div class="contact-method">
+                  <div class="contact-icon">🌍</div>
+                  <div class="contact-details">
+                    <h3>Couverture</h3>
+                    <p>Informations spécialement adaptées à la <strong>France</strong> et à la réglementation française.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="important-notice">
+                <h3>⚠️ Important</h3>
+                <p>
+                  <strong>Nous ne sommes pas des professionnels de santé.</strong> 
+                  Nos réponses sont informatives et ne remplacent pas un avis médical. 
+                  Pour toute question médicale, consultez votre médecin.
+                </p>
+              </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="contact-form-section">
+              <h2>Envoyez-nous un Message</h2>
+              
+              <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <!-- Champ caché pour la sécurité Netlify -->
+                <input type="hidden" name="form-name" value="contact">
+                <div style="display: none;">
+                  <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </div>
+                <div class="form-group">
+                  <label for="name">Nom et Prénom *</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Adresse Email *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Sujet *</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Choisissez un sujet</option>
+                    <option value="question-generale">Question générale sur GLP-1</option>
+                    <option value="ozempic-wegovy">Question sur Ozempic/Wegovy</option>
+                    <option value="prix-achat">Prix et où acheter</option>
+                    <option value="effets-secondaires">Effets secondaires</option>
+                    <option value="medecin">Trouver un médecin</option>
+                    <option value="article">Suggestion d'article</option>
+                    <option value="erreur">Signaler une erreur</option>
+                    <option value="partenariat">Proposition de partenariat</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Votre Message *</label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre question ou votre demande..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="privacy" required>
+                    <span class="checkmark"></span>
+                    J'accepte la <a href="/politique-confidentialite/" target="_blank">politique de confidentialité</a> *
+                  </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="newsletter">
+                    <span class="checkmark"></span>
+                    Je souhaite recevoir les nouveaux articles par email (optionnel)
+                  </label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <span>📤</span>
+                  Envoyer le Message
+                </button>
+                
+                <div class="form-success hidden" id="form-success">
+                  <p class="success-message">✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les 24-48h.</p>
+                </div>
+                
+                <div class="form-error hidden" id="form-error">
+                  <p class="error-message">❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h2>Questions Fréquentes</h2>
+            
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>❓ Questions sur le site</h3>
+                <ul>
+                  <li>Suggestions d'articles</li>
+                  <li>Signalement d'erreurs</li>
+                  <li>Problèmes techniques</li>
+                  <li>Propositions d'amélioration</li>
+                </ul>
+              </div>
+
+              <div class="faq-item">
+                <h3>💊 Questions sur les traitements</h3>
+                <ul>
+                  <li>Informations générales sur GLP-1</li>
+                  <li>Différences Ozempic/Wegovy</li>
+                  <li>Où acheter légalement</li>
+                  <li>Prix et remboursements</li>
+                </ul>
+              </div>
+
+              <div class="faq-item">
+                <h3>👨‍⚕️ Questions médicales</h3>
+                <p class="medical-disclaimer">
+                  <strong>Attention :</strong> Nous ne pouvons pas donner de conseils médicaux personnalisés. 
+                  Pour toute question sur votre santé, consultez un professionnel de santé.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>🤝 Partenariats</h3>
+                <ul>
+                  <li>Collaboration éditoriale</li>
+                  <li>Propositions de contenu</li>
+                  <li>Partenariats professionnels</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Ressources rapides -->
+          <section class="quick-resources">
+            <h2>Ressources Utiles</h2>
+            <div class="resources-grid">
+              <a href="/quel-traitement-glp1-choisir/" class="resource-card">
+                <div class="resource-icon">🎯</div>
+                <h3>Diagnostic Gratuit</h3>
+                <p>Outil interactif pour choisir le bon traitement</p>
+              </a>
+
+              <a href="/articles/" class="resource-card">
+                <div class="resource-icon">📚</div>
+                <h3>Tous les Articles</h3>
+                <p>Base de connaissances complète sur GLP-1</p>
+              </a>
+
+              <a href="/glp1-cout/" class="resource-card">
+                <div class="resource-icon">💰</div>
+                <h3>Prix et Coûts</h3>
+                <p>Informations sur les prix en France</p>
+              </a>
+
+              <a href="/medecins-glp1-france/" class="resource-card">
+                <div class="resource-icon">👨‍⚕️</div>
+                <h3>Trouver un Médecin</h3>
+                <p>Médecins qui prescrivent GLP-1 près de chez vous</p>
+              </a>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-page {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+  }
+
+  .page-header {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    color: white;
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  .page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+
+  .contact-content {
+    padding: 2rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-info-section h2,
+  .contact-form-section h2 {
+    color: #16a34a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .contact-methods {
+    margin-bottom: 2rem;
+  }
+
+  .contact-method {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #16a34a;
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .contact-details h3 {
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .contact-details p {
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.5;
+  }
+
+  .contact-link {
+    color: #16a34a;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  .important-notice {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .important-notice h3 {
+    color: #92400e;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .important-notice p {
+    color: #92400e;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Formulaire */
+  .contact-form {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+  }
+
+  .submit-btn {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(22, 163, 74, 0.2);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-success,
+  .form-error {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .form-success {
+    background: #f0fdf4;
+    border: 1px solid #16a34a;
+  }
+
+  .success-message {
+    color: #16a34a;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .form-error {
+    background: #fef2f2;
+    border: 1px solid #dc2626;
+  }
+
+  .error-message {
+    color: #dc2626;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 8px;
+  }
+
+  .faq-section h2 {
+    color: #16a34a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .faq-item h3 {
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+  }
+
+  .faq-item ul {
+    margin: 0;
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+
+  .faq-item li {
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .medical-disclaimer {
+    color: #dc2626;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Ressources rapides */
+  .quick-resources {
+    margin: 3rem 0 0 0;
+  }
+
+  .quick-resources h2 {
+    color: #16a34a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .resource-card {
+    display: block;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #16a34a;
+  }
+
+  .resource-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .resource-card h3 {
+    color: #374151;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .resource-card p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .content-wrapper {
+      padding: 1rem;
+    }
+
+    .page-header {
+      padding: 2rem 1.5rem 1.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .contact-content {
+      padding: 1.5rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .faq-grid,
+    .resources-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Gestion du formulaire de contact avec Netlify Forms
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form');
+    const successDiv = document.getElementById('form-success');
+    const errorDiv = document.getElementById('form-error');
+    
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Masquer les messages précédents
+        successDiv.classList.add('hidden');
+        errorDiv.classList.add('hidden');
+        
+        // Désactiver le bouton pendant l'envoi
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>⏳</span> Envoi en cours...';
+        submitBtn.disabled = true;
+        
+        // Préparer les données du formulaire
+        const formData = new FormData(form);
+        
+        // Envoyer via Netlify Forms
+        fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+          if (response.ok) {
+            // Succès
+            successDiv.classList.remove('hidden');
+            form.reset();
+            
+            // Analytics/tracking optionnel
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'contact_form_submit', {
+                'event_category': 'engagement',
+                'event_label': formData.get('subject')
+              });
+            }
+          } else {
+            throw new Error('Erreur réseau');
+          }
+        })
+        .catch(error => {
+          console.error('Erreur:', error);
+          errorDiv.classList.remove('hidden');
+        })
+        .finally(() => {
+          // Réactiver le bouton
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        });
+      });
+    }
+  });
+</script>

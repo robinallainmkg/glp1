@@ -5,6 +5,31 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Configuration des formulaires Netlify
+[forms]
+  # Configuration pour recevoir les notifications par email
+  [forms.settings]
+    # Email de notification pour tous les formulaires
+    notification_email = "robin@glp1-france.fr"
+
+# Notifications pour le formulaire de contact
+[[forms]]
+  name = "contact"
+  notification_email = "robin@glp1-france.fr"
+  subject = "🆕 Nouveau message de contact - GLP-1 France"
+
+# Notifications pour la newsletter
+[[forms]]
+  name = "newsletter" 
+  notification_email = "robin@glp1-france.fr"
+  subject = "📧 Nouvelle inscription newsletter - GLP-1 France"
+
+# Notifications pour le guide beauté
+[[forms]]
+  name = "beauty-guide"
+  notification_email = "robin@glp1-france.fr"
+  subject = "📖 Nouveau téléchargement Guide Beauté - GLP-1 France"
+
 [[headers]]
   for = "/*"
   [headers.values]

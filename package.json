@@ -18,6 +18,7 @@
     "deploy:windows": "powershell -ExecutionPolicy Bypass -File deploy.ps1",
     "deploy:mac": "bash deploy.sh",
     "optimize-images": "node scripts/optimize-images.mjs",
+    "analyze-users": "node scripts/user-data-analyzer.mjs",
     "optimize-images:responsive": "node scripts/optimize-images.mjs --responsive"
   },
   "dependencies": {

@@ -43,7 +43,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       
       <div class="form-container">
-        <form class="landing-form" id="beautyGuideForm">
+        <form class="landing-form" name="beauty-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="beautyGuideForm">
+          <!-- Champs cachés pour Netlify -->
+          <input type="hidden" name="form-name" value="beauty-guide">
+          <div style="display: none;">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </div>
+          
           <h3 class="form-title">Téléchargez Votre Guide Gratuit</h3>
           <p class="form-subtitle">
             Recevez immédiatement le guide + nos conseils exclusifs par email
@@ -100,7 +106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           
           <div class="form-group consent">
             <label class="checkbox-label">
-              <input type="checkbox" required>
+              <input type="checkbox" name="newsletter_consent" required>
               <span class="checkmark"></span>
               J'accepte de recevoir des conseils beauté et des recommandations produits par email
             </label>
@@ -109,6 +115,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <button type="submit" class="btn btn-primary btn-lg btn-full">
             📥 Télécharger le Guide Gratuit
           </button>
+          
+          <div class="form-success hidden" id="beauty-form-success">
+            <p class="success-message">✅ Guide envoyé ! Vérifiez votre boîte email (et vos spams).</p>
+          </div>
+          
+          <div class="form-error hidden" id="beauty-form-error">
+            <p class="error-message">❌ Erreur d'envoi. Veuillez réessayer ou nous contacter.</p>
+          </div>
           
           <p class="form-disclaimer">
             🔒 Vos données sont protégées. Désinscription possible à tout moment.
@@ -440,6 +454,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       margin-top: var(--spacing-3);
     }
 
+    /* Messages de succès/erreur */
+    .form-success,
+    .form-error {
+      margin-top: var(--spacing-4);
+      padding: var(--spacing-4);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+
+    .form-success {
+      background: var(--accent-green);
+      border: 1px solid #16a34a;
+    }
+
+    .success-message {
+      color: white;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .form-error {
+      background: #fef2f2;
+      border: 1px solid #dc2626;
+    }
+
+    .error-message {
+      color: #dc2626;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     /* Preview Section */
     .preview-section {
       margin-bottom: var(--spacing-16);
@@ -613,40 +662,79 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </style>
 
   <script>
-    // Form handling
+    // Beauty Guide Form handling with Netlify
     document.getElementById('beautyGuideForm')?.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Collect form data
+      const successDiv = document.getElementById('beauty-form-success');
+      const errorDiv = document.getElementById('beauty-form-error');
+      
+      // Masquer les messages précédents
+      successDiv.classList.add('hidden');
+      errorDiv.classList.add('hidden');
+      
+      // Collecter les données du formulaire
       const formData = new FormData(this);
       const data = Object.fromEntries(formData);
       
-      // Simulate form submission
       const button = this.querySelector('button[type="submit"]');
-      const originalText = button.textContent;
+      const originalText = button.innerHTML;
       
-      button.textContent = '⏳ Envoi en cours...';
+      button.innerHTML = '⏳ Envoi en cours...';
       button.disabled = true;
       
-      setTimeout(() => {
-        button.textContent = '✅ Guide envoyé !';
+      // Envoyer via Netlify Forms
+      fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (response.ok) {
+          // Succès
+          successDiv.classList.remove('hidden');
+          
+          // Personnaliser le message de succès
+          const successMessage = successDiv.querySelector('.success-message');
+          if (data.firstName) {
+            successMessage.innerHTML = `✅ Merci ${data.firstName} ! Guide envoyé à ${data.email}. Vérifiez votre boîte email (et vos spams).`;
+          }
+          
+          // Masquer le formulaire après succès
+          this.style.opacity = '0.5';
+          this.style.pointerEvents = 'none';
+          
+          // Analytics/tracking
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'beauty_guide_download', {
+              'event_category': 'lead_generation',
+              'event_label': data.treatment || 'unknown',
+              'custom_parameters': {
+                'concerns': formData.getAll('concerns').join(','),
+                'treatment_interest': data.treatment
+              }
+            });
+          }
+          
+        } else {
+          throw new Error('Erreur réseau');
+        }
+      })
+      .catch(error => {
+        console.error('Erreur envoi guide beauté:', error);
+        errorDiv.classList.remove('hidden');
         
-        // Show success message
-        const successMessage = document.createElement('div');
-        successMessage.innerHTML = `
-          <div style="background: var(--accent-green); color: white; padding: var(--spacing-4); border-radius: var(--radius-lg); margin-top: var(--spacing-4); text-align: center;">
-            <h4 style="margin: 0 0 var(--spacing-2); color: white;">🎉 Merci ${data.firstName || ''} !</h4>
-            <p style="margin: 0; opacity: 0.9;">Votre guide a été envoyé à ${data.email}. Vérifiez votre boîte mail (et vos spams).</p>
-          </div>
-        `;
-        
-        this.parentNode.insertBefore(successMessage, this.nextSibling);
-        this.style.display = 'none';
-        
-        // Here you would integrate with your email service (Klaviyo, etc.)
-        console.log('Form data:', data);
-        
-      }, 2000);
+        // Restaurer le formulaire en cas d'erreur
+        this.style.opacity = '1';
+        this.style.pointerEvents = 'auto';
+      })
+      .finally(() => {
+        // Réactiver le bouton après un délai
+        setTimeout(() => {
+          button.innerHTML = originalText;
+          button.disabled = false;
+        }, 3000);
+      });
     });
 
     // FAQ toggle
