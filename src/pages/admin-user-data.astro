@@ -53,8 +53,8 @@ const description = "Dashboard de suivi des données utilisateurs, formulaires e
               </svg>
             </div>
             <div class="ml-4">
-              <p class="text-sm font-medium text-gray-600">Guide Beauté</p>
-              <p class="text-2xl font-bold text-gray-900" id="beauty-count">--</p>
+              <p class="text-sm font-medium text-gray-600">Guide Téléchargés</p>
+              <p class="text-2xl font-bold text-gray-900" id="guide-count">--</p>
             </div>
           </div>
         </div>
@@ -81,10 +81,46 @@ const description = "Dashboard de suivi des données utilisateurs, formulaires e
               </svg>
             </div>
             <div class="ml-4">
-              <p class="text-sm font-medium text-gray-600">Taux Conversion</p>
-              <p class="text-2xl font-bold text-gray-900" id="conversion-rate">--%</p>
+              <p class="text-sm font-medium text-gray-600">Cette Semaine</p>
+              <p class="text-2xl font-bold text-gray-900" id="weekly-count">--</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Données détaillées -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Liste des contacts -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-gray-800">📧 Messages de Contact</h2>
+            <button onclick="refreshData('contacts')" class="text-blue-600 hover:text-blue-800">🔄</button>
+          </div>
+          <div id="contacts-list" class="space-y-3 max-h-96 overflow-y-auto">
+            <p class="text-gray-500">Chargement...</p>
+          </div>
+        </div>
+
+        <!-- Liste Newsletter -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-gray-800">📮 Inscriptions Newsletter</h2>
+            <button onclick="refreshData('newsletter')" class="text-blue-600 hover:text-blue-800">🔄</button>
+          </div>
+          <div id="newsletter-list" class="space-y-3 max-h-96 overflow-y-auto">
+            <p class="text-gray-500">Chargement...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guide submissions -->
+      <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold text-gray-800">📖 Téléchargements de Guide</h2>
+          <button onclick="refreshData('guides')" class="text-blue-600 hover:text-blue-800">🔄</button>
+        </div>
+        <div id="guides-list" class="space-y-3 max-h-96 overflow-y-auto">
+          <p class="text-gray-500">Chargement...</p>
         </div>
       </div>
 
@@ -231,81 +267,287 @@ const description = "Dashboard de suivi des données utilisateurs, formulaires e
 </BaseLayout>
 
 <script>
-  // Simulation de données pour la démo
-  function updateStats() {
-    // Ces données seraient récupérées via API en temps réel
-    document.getElementById('contact-count').textContent = '23';
-    document.getElementById('newsletter-count').textContent = '47';
-    document.getElementById('beauty-count').textContent = '18';
-    document.getElementById('total-emails').textContent = '79';
-    document.getElementById('conversion-rate').textContent = '73%';
+  let currentData = null;
+
+  // Charger les données depuis l'API
+  async function loadData() {
+    try {
+      const response = await fetch('/api/admin-data?type=all&auth=admin-glp1-2025');
+      if (!response.ok) throw new Error('Erreur de chargement');
+      
+      currentData = await response.json();
+      updateStats();
+      displayContacts();
+      displayNewsletter();
+      displayGuides();
+    } catch (error) {
+      console.error('Erreur:', error);
+      showError('Erreur de chargement des données');
+    }
   }
 
-  function exportEmails() {
-    // Simulation d'export - à implémenter avec vraies données
-    const csvContent = `email,source,date
-marie.dubois@email.com,contact,2025-08-15
-pierre.martin@email.com,contact,2025-08-15
-sophie.laurent@email.com,newsletter,2025-08-15
-jean.michel@email.com,newsletter,2025-08-15`;
-
-    const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `emails-${new Date().toISOString().split('T')[0]}.csv`;
-    a.click();
-    window.URL.revokeObjectURL(url);
+  function updateStats() {
+    if (!currentData || !currentData.stats) return;
     
-    alert('✅ Export CSV généré avec succès !');
+    const stats = currentData.stats;
+    document.getElementById('contact-count').textContent = stats.total_contacts || '0';
+    document.getElementById('newsletter-count').textContent = stats.total_newsletter || '0';
+    document.getElementById('guide-count').textContent = stats.total_guides || '0';
+    document.getElementById('total-emails').textContent = stats.total_emails || '0';
+    document.getElementById('weekly-count').textContent = 
+      (stats.last_7_days.contacts + stats.last_7_days.newsletter + stats.last_7_days.guides) || '0';
+  }
+
+  function displayContacts() {
+    const container = document.getElementById('contacts-list');
+    if (!currentData.recent_contacts || currentData.recent_contacts.length === 0) {
+      container.innerHTML = '<p class="text-gray-500">Aucun message de contact</p>';
+      return;
+    }
+
+    container.innerHTML = currentData.recent_contacts.map(contact => `
+      <div class="p-3 border border-gray-200 rounded-lg">
+        <div class="flex justify-between items-start mb-2">
+          <h4 class="font-semibold text-gray-800">${contact.data.name}</h4>
+          <span class="text-xs text-gray-500">${formatDate(contact.timestamp)}</span>
+        </div>
+        <p class="text-sm text-gray-600 mb-2"><strong>Email:</strong> ${contact.data.email}</p>
+        <p class="text-sm text-gray-600 mb-2"><strong>Sujet:</strong> ${contact.data.subject}</p>
+        <p class="text-sm text-gray-700">${contact.data.message.substring(0, 100)}${contact.data.message.length > 100 ? '...' : ''}</p>
+        ${contact.data.newsletter_signup ? '<span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-700 text-xs rounded">📮 Newsletter</span>' : ''}
+      </div>
+    `).join('');
+  }
+
+  function displayNewsletter() {
+    const container = document.getElementById('newsletter-list');
+    if (!currentData.recent_newsletter || currentData.recent_newsletter.length === 0) {
+      container.innerHTML = '<p class="text-gray-500">Aucune inscription newsletter</p>';
+      return;
+    }
+
+    container.innerHTML = currentData.recent_newsletter.map(subscriber => `
+      <div class="p-3 border border-gray-200 rounded-lg">
+        <div class="flex justify-between items-center">
+          <div>
+            <p class="font-semibold text-gray-800">${subscriber.email}</p>
+            <p class="text-xs text-gray-500">Source: ${getSourceLabel(subscriber.source)}</p>
+          </div>
+          <span class="text-xs text-gray-500">${formatDate(subscriber.timestamp)}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function displayGuides() {
+    const container = document.getElementById('guides-list');
+    if (!currentData.recent_guides || currentData.recent_guides.length === 0) {
+      container.innerHTML = '<p class="text-gray-500">Aucun téléchargement de guide</p>';
+      return;
+    }
+
+    container.innerHTML = currentData.recent_guides.map(guide => `
+      <div class="p-3 border border-gray-200 rounded-lg">
+        <div class="flex justify-between items-start mb-2">
+          <h4 class="font-semibold text-gray-800">${guide.data.name}</h4>
+          <span class="text-xs text-gray-500">${formatDate(guide.timestamp)}</span>
+        </div>
+        <p class="text-sm text-gray-600 mb-2"><strong>Email:</strong> ${guide.data.email}</p>
+        <p class="text-sm text-gray-600 mb-2"><strong>Traitement:</strong> ${guide.data.treatment || 'Non spécifié'}</p>
+        ${guide.data.concerns && guide.data.concerns.length > 0 ? 
+          `<p class="text-sm text-gray-600 mb-2"><strong>Préoccupations:</strong> ${guide.data.concerns.join(', ')}</p>` : ''}
+        ${guide.data.newsletter_consent ? '<span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-700 text-xs rounded">📮 Newsletter</span>' : ''}
+      </div>
+    `).join('');
+  }
+
+  function formatDate(timestamp) {
+    return new Date(timestamp).toLocaleDateString('fr-FR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
+
+  function getSourceLabel(source) {
+    const labels = {
+      'newsletter-footer': 'Newsletter Footer',
+      'contact-form': 'Formulaire Contact',
+      'guide-beauty-form': 'Guide Beauté'
+    };
+    return labels[source] || source;
+  }
+
+  function showError(message) {
+    const notification = document.createElement('div');
+    notification.className = 'fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg z-50';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.remove();
+    }, 5000);
+  }
+
+  async function refreshData(type = 'all') {
+    try {
+      const response = await fetch(`/api/admin-data?type=${type}&auth=admin-glp1-2025`);
+      if (!response.ok) throw new Error('Erreur de chargement');
+      
+      const data = await response.json();
+      
+      if (type === 'all') {
+        currentData = data;
+        updateStats();
+        displayContacts();
+        displayNewsletter();
+        displayGuides();
+      } else {
+        // Mettre à jour seulement la section demandée
+        currentData[`recent_${type}`] = data.data;
+        if (type === 'contacts') displayContacts();
+        else if (type === 'newsletter') displayNewsletter();
+        else if (type === 'guides') displayGuides();
+      }
+      
+      // Notification de succès
+      const notification = document.createElement('div');
+      notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg z-50';
+      notification.textContent = '✅ Données mises à jour';
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.remove();
+      }, 2000);
+      
+    } catch (error) {
+      console.error('Erreur refresh:', error);
+      showError('Erreur de rafraîchissement');
+    }
+  }
+
+  async function exportEmails() {
+    try {
+      const [contactsRes, newsletterRes, guidesRes] = await Promise.all([
+        fetch('/api/admin-data?type=contacts&auth=admin-glp1-2025'),
+        fetch('/api/admin-data?type=newsletter&auth=admin-glp1-2025'),
+        fetch('/api/admin-data?type=guides&auth=admin-glp1-2025')
+      ]);
+
+      const [contacts, newsletter, guides] = await Promise.all([
+        contactsRes.json(),
+        newsletterRes.json(),
+        guidesRes.json()
+      ]);
+
+      // Créer le CSV
+      let csvContent = 'Email,Nom,Source,Date,Sujet/Traitement,Préoccupations\n';
+      
+      // Ajouter les contacts
+      contacts.data.forEach(contact => {
+        csvContent += `"${contact.data.email}","${contact.data.name}","Contact","${formatDate(contact.timestamp)}","${contact.data.subject}",""\n`;
+      });
+      
+      // Ajouter la newsletter
+      newsletter.data.forEach(sub => {
+        csvContent += `"${sub.email}","","Newsletter","${formatDate(sub.timestamp)}","",""\n`;
+      });
+      
+      // Ajouter les guides
+      guides.data.forEach(guide => {
+        const concerns = guide.data.concerns ? guide.data.concerns.join(';') : '';
+        csvContent += `"${guide.data.email}","${guide.data.name}","Guide","${formatDate(guide.timestamp)}","${guide.data.treatment || ''}","${concerns}"\n`;
+      });
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `export-glp1-${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      window.URL.revokeObjectURL(url);
+      
+      // Notification
+      const notification = document.createElement('div');
+      notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg z-50';
+      notification.textContent = '✅ Export CSV téléchargé';
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.remove();
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Erreur export:', error);
+      showError('Erreur lors de l\'export');
+    }
   }
 
   function generateReport() {
+    if (!currentData) {
+      showError('Données non chargées');
+      return;
+    }
+
+    const stats = currentData.stats;
     const report = `# Rapport Analytics GLP-1 France
 Date: ${new Date().toLocaleDateString('fr-FR')}
 
-## Résumé
-- Messages contact: 23
-- Inscriptions newsletter: 47
-- Total emails uniques: 62
-- Taux de conversion: 73%
+## Résumé Général
+- Messages contact: ${stats.total_contacts}
+- Inscriptions newsletter: ${stats.total_newsletter}
+- Téléchargements guide: ${stats.total_guides}
+- Total emails uniques: ${stats.total_emails}
 
-## Sujets populaires
-1. Questions générales GLP-1 (42%)
-2. Prix et où acheter (28%)
-3. Effets secondaires (18%)
+## Cette Semaine (7 derniers jours)
+- Nouveaux contacts: ${stats.last_7_days.contacts}
+- Nouvelles inscriptions newsletter: ${stats.last_7_days.newsletter}
+- Nouveaux téléchargements guide: ${stats.last_7_days.guides}
 
 ## Recommandations
-- Créer plus de contenu sur les prix
-- Améliorer la section effets secondaires
-- Optimiser le formulaire newsletter`;
+- Améliorer le taux de conversion newsletter
+- Optimiser les formulaires pour mobile
+- Créer plus de contenu sur les sujets populaires
+
+---
+Généré automatiquement le ${new Date().toLocaleString('fr-FR')}`;
 
     const blob = new Blob([report], { type: 'text/markdown' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `rapport-analytics-${new Date().toISOString().split('T')[0]}.md`;
+    a.download = `rapport-glp1-${new Date().toISOString().split('T')[0]}.md`;
     a.click();
     window.URL.revokeObjectURL(url);
     
-    alert('📊 Rapport généré avec succès !');
+    // Notification
+    const notification = document.createElement('div');
+    notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg z-50';
+    notification.textContent = '📊 Rapport généré';
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.remove();
+    }, 3000);
   }
 
   function viewNetlifyForms() {
-    // Ouvrir Netlify Forms dans un nouvel onglet
-    window.open('https://app.netlify.com/sites/YOUR_SITE_NAME/forms', '_blank');
+    // Rediriger vers la page de données locale
+    window.open('/admin-user-data/', '_self');
   }
 
   function runAnalyzer() {
-    alert('🤖 Pour lancer le script analyzer:\n\n1. Ouvrir un terminal\n2. Naviguer vers le dossier du projet\n3. Exécuter: node scripts/user-data-analyzer.mjs\n\nLes résultats seront dans le dossier user-data/');
+    alert('🤖 Les données sont maintenant collectées automatiquement via les APIs.\n\nPour exporter:\n1. Cliquez sur "Exporter les Emails"\n2. Les fichiers sont générés en temps réel\n3. Format CSV compatible avec tous les services');
   }
 
   // Initialisation
   document.addEventListener('DOMContentLoaded', function() {
-    updateStats();
+    loadData();
     
     // Mise à jour automatique toutes les 5 minutes
-    setInterval(updateStats, 5 * 60 * 1000);
+    setInterval(loadData, 5 * 60 * 1000);
   });
 </script>
 

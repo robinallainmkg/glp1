@@ -43,8 +43,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       
       <div class="form-container">
-        <form class="landing-form" action="mailto:robin@glp1-france.fr" method="post" enctype="text/plain" id="beautyGuideForm">
-          <!-- Formulaire simple sans Netlify -->
+        <form class="landing-form" id="beautyGuideForm" novalidate>
+          <!-- Formulaire sécurisé avec API -->
           
           <h3 class="form-title">Téléchargez Votre Guide Gratuit</h3>
           <p class="form-subtitle">
@@ -53,12 +53,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           
           <div class="form-group">
             <label for="firstName">Prénom *</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="name" required autocomplete="given-name">
           </div>
           
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required autocomplete="email">
           </div>
           
           <div class="form-group">
@@ -75,7 +75,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           
           <div class="form-group">
-            <label for="concerns">Vos principales préoccupations beauté :</label>
+            <label for="concerns">Vos principales préoccupations :</label>
             <div class="checkbox-group">
               <label class="checkbox-label">
                 <input type="checkbox" name="concerns" value="peau-seche">
@@ -104,7 +104,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <label class="checkbox-label">
               <input type="checkbox" name="newsletter_consent" required>
               <span class="checkmark"></span>
-              J'accepte de recevoir des conseils beauté et des recommandations produits par email
+              J'accepte de recevoir des conseils et des recommandations produits par email
             </label>
           </div>
           
@@ -658,8 +658,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </style>
 
   <script>
-    // Beauty Guide Form handling with Netlify
-    document.getElementById('beautyGuideForm')?.addEventListener('submit', function(e) {
+    // Beauty Guide Form handling with API
+    document.getElementById('beautyGuideForm')?.addEventListener('submit', async function(e) {
       e.preventDefault();
       
       const successDiv = document.getElementById('beauty-form-success');
@@ -669,68 +669,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       successDiv.classList.add('hidden');
       errorDiv.classList.add('hidden');
       
-      // Collecter les données du formulaire
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
       const button = this.querySelector('button[type="submit"]');
       const originalText = button.innerHTML;
       
       button.innerHTML = '⏳ Envoi en cours...';
       button.disabled = true;
       
-      // Envoyer via Netlify Forms
-      fetch('/', {
-        method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(response => {
-        if (response.ok) {
+      try {
+        const formData = new FormData(this);
+        
+        const response = await fetch('/api/guide-beauty', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok && result.success) {
           // Succès
           successDiv.classList.remove('hidden');
           
           // Personnaliser le message de succès
           const successMessage = successDiv.querySelector('.success-message');
-          if (data.firstName) {
-            successMessage.innerHTML = `✅ Merci ${data.firstName} ! Guide envoyé à ${data.email}. Vérifiez votre boîte email (et vos spams).`;
+          const name = formData.get('name');
+          const email = formData.get('email');
+          
+          if (name) {
+            successMessage.innerHTML = `✅ Merci ${name} ! Guide envoyé à ${email}. Vérifiez votre boîte email (et vos spams).`;
           }
           
           // Masquer le formulaire après succès
           this.style.opacity = '0.5';
-          this.style.pointerEvents = 'none';
           
-          // Analytics/tracking
+          // Analytics
           if (typeof gtag !== 'undefined') {
-            gtag('event', 'beauty_guide_download', {
-              'event_category': 'lead_generation',
-              'event_label': data.treatment || 'unknown',
-              'custom_parameters': {
-                'concerns': formData.getAll('concerns').join(','),
-                'treatment_interest': data.treatment
-              }
+            gtag('event', 'guide_download', {
+              'event_category': 'engagement',
+              'event_label': 'beauty-guide',
+              'treatment': formData.get('treatment') || 'unspecified'
             });
           }
-          
         } else {
-          throw new Error('Erreur réseau');
+          throw new Error(result.error || 'Erreur lors de l\'envoi');
         }
-      })
-      .catch(error => {
-        console.error('Erreur envoi guide beauté:', error);
+      } catch (error) {
+        console.error('Erreur:', error);
+        const errorMessage = errorDiv.querySelector('.error-message');
+        if (errorMessage) {
+          errorMessage.textContent = error.message.includes('obligatoire') ? 
+            '⚠️ Veuillez remplir tous les champs obligatoires' : 
+            '❌ Erreur d\'envoi. Veuillez réessayer.';
+        }
         errorDiv.classList.remove('hidden');
-        
-        // Restaurer le formulaire en cas d'erreur
-        this.style.opacity = '1';
-        this.style.pointerEvents = 'auto';
-      })
-      .finally(() => {
+      } finally {
         // Réactiver le bouton après un délai
         setTimeout(() => {
           button.innerHTML = originalText;
           button.disabled = false;
         }, 3000);
-      });
+      }
     });
 
     // FAQ toggle

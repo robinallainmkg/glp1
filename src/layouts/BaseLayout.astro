@@ -184,11 +184,22 @@ const footerProducts = getProductsByBrand('Talika', 1);
         <div class="footer-section">
           <h4 class="footer-subtitle">Newsletter</h4>
           <p class="footer-text">Recevez nos derniers conseils et actualités GLP-1</p>
-          <div class="newsletter-simple">
-            <a href="mailto:robin@glp1-france.fr?subject=Inscription Newsletter&body=Bonjour,%0D%0A%0D%0AJe souhaite m'inscrire à votre newsletter.%0D%0A%0D%0AMon email : " 
-               class="newsletter-btn">
-              📧 S'inscrire par Email
-            </a>
+          <form class="newsletter-form" id="newsletterForm">
+            <input 
+              type="email" 
+              name="email" 
+              id="newsletterEmail"
+              placeholder="Votre email" 
+              class="newsletter-input" 
+              required
+            >
+            <button type="submit" class="newsletter-btn">S'abonner</button>
+          </form>
+          <div class="newsletter-success hidden" id="newsletter-success">
+            <p class="success-message">✅ Inscription réussie !</p>
+          </div>
+          <div class="newsletter-error hidden" id="newsletter-error">
+            <p class="error-message">❌ Erreur d'inscription</p>
           </div>
         </div>
       </div>
@@ -228,7 +239,7 @@ const footerProducts = getProductsByBrand('Talika', 1);
     const newsletterError = document.getElementById('newsletter-error');
     
     if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
+      newsletterForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Masquer les messages précédents
@@ -240,36 +251,42 @@ const footerProducts = getProductsByBrand('Talika', 1);
         submitBtn.innerHTML = '⏳';
         submitBtn.disabled = true;
         
-        const formData = new FormData(this);
-        
-        fetch('/', {
-          method: 'POST',
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        })
-        .then(response => {
-          if (response.ok) {
+        try {
+          const formData = new FormData(this);
+          
+          const response = await fetch('/api/newsletter', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (response.ok && result.success) {
             newsletterSuccess?.classList.remove('hidden');
             this.reset();
             
             // Analytics
             if (typeof gtag !== 'undefined') {
               gtag('event', 'newsletter_signup', {
-                'event_category': 'engagement'
+                'event_category': 'engagement',
+                'email_type': 'newsletter'
               });
             }
           } else {
-            throw new Error('Erreur réseau');
+            throw new Error(result.error || 'Erreur lors de l\'inscription');
           }
-        })
-        .catch(error => {
+        } catch (error) {
           console.error('Erreur newsletter:', error);
-          newsletterError?.classList.remove('hidden');
-        })
-        .finally(() => {
+          const errorDiv = document.getElementById('newsletter-error');
+          if (errorDiv) {
+            errorDiv.querySelector('.error-message').textContent = 
+              error.message.includes('déjà inscrit') ? '⚠️ Email déjà inscrit !' : '❌ Erreur d\'inscription';
+            errorDiv.classList.remove('hidden');
+          }
+        } finally {
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
-        });
+        }
       });
     }
 

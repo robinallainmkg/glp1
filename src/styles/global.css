@@ -1485,6 +1485,33 @@ select {
   background: var(--primary-blue-dark);
 }
 
+.newsletter-success,
+.newsletter-error {
+  margin-top: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.newsletter-success {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  color: #10b981;
+}
+
+.newsletter-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.newsletter-success.hidden,
+.newsletter-error.hidden {
+  display: none;
+}
+
 .footer-bottom {
   border-top: 1px solid var(--gray-700);
   padding-top: var(--spacing-6);
@@ -1518,4 +1545,69 @@ select {
   .newsletter-form {
     flex-direction: column;
   }
+}
+
+/* Form Messages Styles */
+.form-success,
+.form-error {
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.form-success {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid #10b981;
+  color: #065f46;
+}
+
+.form-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #7f1d1d;
+}
+
+.form-success.hidden,
+.form-error.hidden {
+  display: none;
+}
+
+.success-message,
+.error-message {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Form Security Improvements */
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.landing-form input,
+.landing-form select,
+.landing-form textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus,
+.landing-form input:focus,
+.landing-form select:focus,
+.landing-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.contact-form input:invalid,
+.landing-form input:invalid {
+  border-color: #ef4444;
+}
+
+.contact-form input:valid,
+.landing-form input:valid {
+  border-color: #10b981;
 }

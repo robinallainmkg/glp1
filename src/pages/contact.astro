@@ -62,16 +62,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="contact-form-section">
               <h2>Envoyez-nous un Message</h2>
               
-              <form class="contact-form" action="mailto:robin@glp1-france.fr" method="post" enctype="text/plain">
-                <!-- Formulaire simple sans Netlify -->
+              <form class="contact-form" id="contactForm" novalidate>
+                <!-- Formulaire sécurisé avec API -->
                 <div class="form-group">
                   <label for="name">Nom et Prénom *</label>
-                  <input type="text" id="name" name="name" required>
+                  <input type="text" id="name" name="name" required autocomplete="name">
                 </div>
 
                 <div class="form-group">
                   <label for="email">Adresse Email *</label>
-                  <input type="email" id="email" name="email" required>
+                  <input type="email" id="email" name="email" required autocomplete="email">
                 </div>
 
                 <div class="form-group">
@@ -111,10 +111,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   </label>
                 </div>
 
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" id="contact-submit-btn">
                   <span>📤</span>
                   Envoyer le Message
                 </button>
+                
+                <!-- Messages de retour -->
+                <div class="form-success hidden" id="contact-success">
+                  <p class="success-message">✅ Message envoyé avec succès ! Nous vous répondrons rapidement.</p>
+                </div>
+                
+                <div class="form-error hidden" id="contact-error">
+                  <p class="error-message">❌ Erreur d'envoi. Veuillez réessayer.</p>
+                </div>
                 
                 <!-- Alternative contact direct -->
                 <div class="contact-alternative">
@@ -588,7 +597,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const errorDiv = document.getElementById('form-error');
     
     if (form) {
-      form.addEventListener('submit', function(e) {
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Masquer les messages précédents
@@ -601,22 +610,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         submitBtn.innerHTML = '<span>⏳</span> Envoi en cours...';
         submitBtn.disabled = true;
         
-        // Préparer les données du formulaire
-        const formData = new FormData(form);
-        
-        // Envoyer via Netlify Forms
-        fetch('/', {
-          method: 'POST',
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        })
-        .then(response => {
-          if (response.ok) {
+        try {
+          const formData = new FormData(form);
+          
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData
+          });
+          
+          const result = await response.json();
+          
+          if (response.ok && result.success) {
             // Succès
             successDiv.classList.remove('hidden');
             form.reset();
             
-            // Analytics/tracking optionnel
+            // Analytics/tracking
             if (typeof gtag !== 'undefined') {
               gtag('event', 'contact_form_submit', {
                 'event_category': 'engagement',
@@ -624,18 +633,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               });
             }
           } else {
-            throw new Error('Erreur réseau');
+            throw new Error(result.error || 'Erreur lors de l\'envoi');
           }
-        })
-        .catch(error => {
+        } catch (error) {
           console.error('Erreur:', error);
+          const errorMessage = errorDiv.querySelector('.error-message');
+          if (errorMessage) {
+            errorMessage.textContent = error.message.includes('obligatoire') ? 
+              '⚠️ Veuillez remplir tous les champs obligatoires' : 
+              '❌ Erreur d\'envoi. Veuillez réessayer.';
+          }
           errorDiv.classList.remove('hidden');
-        })
-        .finally(() => {
+        } finally {
           // Réactiver le bouton
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
-        });
+        }
       });
     }
   });

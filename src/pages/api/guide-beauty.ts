@@ -2,16 +2,16 @@ import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
 
-interface ContactSubmission {
+interface GuideSubmission {
   id: number;
   timestamp: string;
   source: string;
   data: {
     name: string;
     email: string;
-    subject: string;
-    message: string;
-    newsletter_signup: boolean;
+    treatment: string;
+    concerns: string[];
+    newsletter_consent: boolean;
   };
   ip: string;
   userAgent: string;
@@ -31,15 +31,15 @@ export const POST: APIRoute = async ({ request }) => {
     
     const name = formData.get('name')?.toString() || '';
     const email = formData.get('email')?.toString() || '';
-    const subject = formData.get('subject')?.toString() || '';
-    const message = formData.get('message')?.toString() || '';
-    const newsletter = formData.get('newsletter')?.toString() === 'on';
+    const treatment = formData.get('treatment')?.toString() || '';
+    const concerns = formData.getAll('concerns').map(c => c.toString());
+    const newsletter_consent = formData.get('newsletter_consent') === 'on';
     
     // Validation basique
-    if (!name || !email || !subject || !message) {
+    if (!name || !email) {
       return new Response(JSON.stringify({ 
         success: false, 
-        error: 'Tous les champs obligatoires doivent être remplis' 
+        error: 'Le nom et l\'email sont obligatoires' 
       }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' }
@@ -59,30 +59,29 @@ export const POST: APIRoute = async ({ request }) => {
     }
     
     // Créer l'entrée de données
-    const submission: ContactSubmission = {
+    const submission: GuideSubmission = {
       id: Date.now(),
       timestamp: new Date().toISOString(),
-      source: 'contact-form',
+      source: 'guide-beauty-form',
       data: {
         name,
         email,
-        subject,
-        message,
-        newsletter_signup: newsletter
+        treatment,
+        concerns,
+        newsletter_consent
       },
       ip: request.headers.get('x-forwarded-for') || 'unknown',
       userAgent: request.headers.get('user-agent') || 'unknown'
     };
     
     // Lire le fichier existant
-    const dataPath = path.join(process.cwd(), 'data', 'contact-submissions.json');
-    let submissions: ContactSubmission[] = [];
+    const dataPath = path.join(process.cwd(), 'data', 'guide-submissions.json');
+    let submissions: GuideSubmission[] = [];
     
     try {
       const data = await fs.readFile(dataPath, 'utf-8');
       submissions = JSON.parse(data);
     } catch (error) {
-      // Fichier n'existe pas encore, on commence avec un tableau vide
       submissions = [];
     }
     
@@ -92,8 +91,8 @@ export const POST: APIRoute = async ({ request }) => {
     // Sauvegarder
     await fs.writeFile(dataPath, JSON.stringify(submissions, null, 2));
     
-    // Ajouter à la newsletter si demandé
-    if (newsletter) {
+    // Ajouter à la newsletter si consentement donné
+    if (newsletter_consent) {
       try {
         const newsletterPath = path.join(process.cwd(), 'data', 'newsletter-subscribers.json');
         let subscribers: NewsletterSubscriber[] = [];
@@ -112,7 +111,7 @@ export const POST: APIRoute = async ({ request }) => {
             id: Date.now(),
             email: email.toLowerCase(),
             timestamp: new Date().toISOString(),
-            source: 'contact-form',
+            source: 'guide-beauty-form',
             status: 'active'
           });
           
@@ -125,14 +124,14 @@ export const POST: APIRoute = async ({ request }) => {
     
     return new Response(JSON.stringify({ 
       success: true, 
-      message: 'Message envoyé avec succès' 
+      message: 'Guide envoyé avec succès ! Vérifiez votre boîte email.' 
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });
     
   } catch (error) {
-    console.error('Erreur contact form:', error);
+    console.error('Erreur guide form:', error);
     return new Response(JSON.stringify({ 
       success: false, 
       error: 'Erreur serveur' 
