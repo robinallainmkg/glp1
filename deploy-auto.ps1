@@ -40,9 +40,11 @@ synchronize remote -delete
 cd ..
 option batch abort
 option confirm off
-# Synchroniser le dossier data
-lcd data
-synchronize remote data
+# Créer et synchroniser le dossier data
+mkdir data
+cd data
+lcd ../data
+put *.json
 close
 exit
 "@
