@@ -184,19 +184,11 @@ const footerProducts = getProductsByBrand('Talika', 1);
         <div class="footer-section">
           <h4 class="footer-subtitle">Newsletter</h4>
           <p class="footer-text">Recevez nos derniers conseils et actualités GLP-1</p>
-          <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="newsletter">
-            <div style="display: none;">
-              <label>Don't fill this out if you're human: <input name="bot-field"></label>
-            </div>
-            <input type="email" name="email" placeholder="Votre email" class="newsletter-input" required>
-            <button type="submit" class="newsletter-btn">S'abonner</button>
-          </form>
-          <div class="newsletter-success hidden" id="newsletter-success">
-            <p class="success-message">✅ Inscription réussie !</p>
-          </div>
-          <div class="newsletter-error hidden" id="newsletter-error">
-            <p class="error-message">❌ Erreur d'inscription</p>
+          <div class="newsletter-simple">
+            <a href="mailto:robin@glp1-france.fr?subject=Inscription Newsletter&body=Bonjour,%0D%0A%0D%0AJe souhaite m'inscrire à votre newsletter.%0D%0A%0D%0AMon email : " 
+               class="newsletter-btn">
+              📧 S'inscrire par Email
+            </a>
           </div>
         </div>
       </div>

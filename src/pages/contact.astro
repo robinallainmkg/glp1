@@ -62,12 +62,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="contact-form-section">
               <h2>Envoyez-nous un Message</h2>
               
-              <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <!-- Champ caché pour la sécurité Netlify -->
-                <input type="hidden" name="form-name" value="contact">
-                <div style="display: none;">
-                  <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                </div>
+              <form class="contact-form" action="mailto:robin@glp1-france.fr" method="post" enctype="text/plain">
+                <!-- Formulaire simple sans Netlify -->
                 <div class="form-group">
                   <label for="name">Nom et Prénom *</label>
                   <input type="text" id="name" name="name" required>
@@ -120,12 +116,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   Envoyer le Message
                 </button>
                 
-                <div class="form-success hidden" id="form-success">
-                  <p class="success-message">✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les 24-48h.</p>
-                </div>
-                
-                <div class="form-error hidden" id="form-error">
-                  <p class="error-message">❌ Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.</p>
+                <!-- Alternative contact direct -->
+                <div class="contact-alternative">
+                  <p>💡 <strong>Contact direct :</strong> 
+                    <a href="mailto:robin@glp1-france.fr?subject=Question GLP-1&body=Bonjour,%0D%0A%0D%0AJ'ai une question concernant :%0D%0A%0D%0AMon message :%0D%0A%0D%0ACordialement">
+                      Cliquez ici pour ouvrir votre client email
+                    </a>
+                  </p>
                 </div>
               </form>
             </div>

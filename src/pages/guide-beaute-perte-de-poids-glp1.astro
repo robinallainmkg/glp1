@@ -43,12 +43,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       
       <div class="form-container">
-        <form class="landing-form" name="beauty-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="beautyGuideForm">
-          <!-- Champs cachés pour Netlify -->
-          <input type="hidden" name="form-name" value="beauty-guide">
-          <div style="display: none;">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-          </div>
+        <form class="landing-form" action="mailto:robin@glp1-france.fr" method="post" enctype="text/plain" id="beautyGuideForm">
+          <!-- Formulaire simple sans Netlify -->
           
           <h3 class="form-title">Téléchargez Votre Guide Gratuit</h3>
           <p class="form-subtitle">
