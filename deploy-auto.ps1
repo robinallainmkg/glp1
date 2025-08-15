@@ -40,14 +40,9 @@ synchronize remote -delete
 cd ..
 option batch abort
 option confirm off
-mkdir data
-cd data
-lcd ../data
-put users-unified.json
-put affiliate-products.json
-put collections.json
-put articles-database.json
-put authors-testimonials.json
+# Synchroniser le dossier data
+lcd data
+synchronize remote data
 close
 exit
 "@
