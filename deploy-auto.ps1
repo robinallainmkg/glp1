@@ -38,9 +38,10 @@ cd domains/glp1-france.fr/public_html
 lcd dist
 synchronize remote -delete
 cd ..
-lcd ..
-lcd data
-synchronize remote data
+mkdir data
+cd data
+lcd "C:\Users\robin\Documents\glp1official\glp1\data"
+synchronize remote .
 close
 exit
 "@
