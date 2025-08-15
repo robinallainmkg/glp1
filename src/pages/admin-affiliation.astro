@@ -1,912 +1,237 @@
 ---
 import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import AdminNav from '../components/AdminNav.astro';
 
 // Variables globales pour l'affiliation
 let legacyAffiliateData = null;
 let crudAffiliateData = { products: [], deals: [], partners: [], rules: [] };
+
+const title = "Gestion Affiliation - GLP-1 France";
+const description = "Gestion des partenariats, deals et produits affiliés du site GLP-1 France";
 ---
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion Affiliation - GLP-1 France</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .header {
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      color: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      position: relative;
-    }
-
-    .header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .back-link {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(255,255,255,0.2);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-
-    .back-link:hover {
-      background: rgba(255,255,255,0.3);
-    }
-
-    .tabs-container {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .tabs-header {
-      display: flex;
-      background: #f8f9fa;
-      border-bottom: 1px solid #e9ecef;
-    }
-
-    .tab-btn {
-      flex: 1;
-      padding: 15px 20px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 16px;
-      color: #6c757d;
-      transition: all 0.3s ease;
-    }
-
-    .tab-btn.active {
-      background: white;
-      color: #10b981;
-      border-bottom: 3px solid #10b981;
-    }
-
-    .tab-btn:hover {
-      background: #e9ecef;
-    }
-
-    .tab-content {
-      display: none;
-      padding: 30px;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .search-bar {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      align-items: center;
-    }
-
-    .search-bar input {
-      flex: 1;
-      padding: 0.75rem;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background: #10b981;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      background: #059669;
-    }
-
-    .btn-secondary {
-      background: #6b7280;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 500;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .table thead {
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      color: white;
-    }
-
-    .table th,
-    .table td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .table tr:hover {
-      background: #f9fafb;
-    }
-
-    /* Modales */
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      background: white;
-      border-radius: 12px;
-      padding: 0;
-      max-width: 500px;
-      width: 90%;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    }
-
-    .modal-header {
-      padding: 20px 30px;
-      border-bottom: 1px solid #e5e7eb;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .modal-close {
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #6b7280;
-    }
-
-    .modal-body {
-      padding: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: #374151;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    .modal-footer {
-      display: flex;
-      gap: 1rem;
-      justify-content: flex-end;
-      padding: 20px 30px;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .notification {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 15px 25px;
-      border-radius: 8px;
-      color: white;
-      font-weight: 500;
-      z-index: 1001;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-    }
-
-    .notification.show {
-      transform: translateX(0);
-    }
-
-    .notification-success { background: #10b981; }
-    .notification-error { background: #ef4444; }
-    .notification-info { background: #3b82f6; }
-  </style>
-</head>
-<body>
+<BaseLayout title={title} description={description}>
   <AdminNav />
   
-  <div class="container">
-    <div class="header">
-      <h1>💰 Gestion de l'Affiliation</h1>
-      <p>Partenaires • Deals • Produits • Règles de placement</p>
-    </div>
-
-    <div class="tabs-container">
-      <div class="tabs-header">
-        <button class="tab-btn active" data-tab="deals">💰 Deals</button>
-        <button class="tab-btn" data-tab="partners">🤝 Partenaires</button>
-        <button class="tab-btn" data-tab="rules">📋 Règles & Preview</button>
-        <button class="tab-btn" data-tab="legacy">📊 Produits Legacy</button>
+  <div class="min-h-screen bg-gray-50 py-8">
+    <div class="container mx-auto px-4 max-w-6xl">
+      
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center mb-8 shadow-lg">
+        <h1 class="text-4xl font-bold mb-2">💰 Gestion de l'Affiliation</h1>
+        <p class="text-lg opacity-90">Partenaires • Deals • Produits • Règles de placement</p>
       </div>
 
-      <!-- TAB: DEALS -->
-      <div class="tab-content active" id="tab-deals">
-        <div class="search-bar">
-          <input type="text" id="deals-search" placeholder="Rechercher des deals...">
-          <button onclick="openDealModal()" class="btn-primary">➕ Nouveau Deal</button>
-        </div>
-        
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Deal</th>
-              <th>Partenaire</th>
-              <th>Type</th>
-              <th>Valeur</th>
-              <th>Statut</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="deals-tbody">
-            <!-- Contenu généré dynamiquement -->
-          </tbody>
-        </table>
-      </div>
-
-      <!-- TAB: PARTENAIRES -->
-      <div class="tab-content" id="tab-partners">
-        <div class="search-bar">
-          <input type="text" id="partners-search" placeholder="Rechercher des partenaires...">
-          <button onclick="openPartnerModal()" class="btn-primary">➕ Nouveau Partenaire</button>
-        </div>
-        
-        <div id="partners-grid" class="grid">
-          <!-- Contenu généré dynamiquement -->
-        </div>
-      </div>
-
-      <!-- TAB: RÈGLES & PREVIEW -->
-      <div class="tab-content" id="tab-rules">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-          <!-- Section Règles -->
-          <div>
-            <h4 style="margin: 0 0 1rem 0; color: #374151;">📋 Règles de Placement</h4>
-            <div style="margin-bottom: 1rem;">
-              <button onclick="openRuleModal()" class="btn-primary">➕ Nouvelle Règle</button>
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
+          <div class="flex items-center">
+            <div class="p-3 bg-blue-100 rounded-full">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
             </div>
-            <div id="rules-list" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem;">
-              <p style="color: #6b7280; text-align: center;">Aucune règle définie</p>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-900">12</p>
+              <p class="text-sm font-medium text-gray-600">Produits</p>
             </div>
           </div>
-          
-          <!-- Section Preview -->
-          <div>
-            <h4 style="margin: 0 0 1rem 0; color: #374151;">🔍 Prévisualisation</h4>
-            <div style="margin-bottom: 1rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #374151;">Chemin de test :</label>
-              <input type="text" id="preview-path" placeholder="/articles/effets-secondaires-glp1" value="/articles/effets-secondaires-glp1" style="width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 6px;">
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+          <div class="flex items-center">
+            <div class="p-3 bg-green-100 rounded-full">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
             </div>
-            <div style="margin-bottom: 1rem;">
-              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #374151;">Tags :</label>
-              <input type="text" id="preview-tags" placeholder="glp1,ozempic,effets-secondaires" value="glp1,effets-secondaires" style="width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 6px;">
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-900">5</p>
+              <p class="text-sm font-medium text-gray-600">Partenaires</p>
             </div>
-            <button onclick="runPreview()" style="background: #f59e0b; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 500; width: 100%;">
-              🔍 Prévisualiser
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-yellow-500">
+          <div class="flex items-center">
+            <div class="p-3 bg-yellow-100 rounded-full">
+              <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-900">€247</p>
+              <p class="text-sm font-medium text-gray-600">Ce mois</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+          <div class="flex items-center">
+            <div class="p-3 bg-purple-100 rounded-full">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-2xl font-bold text-gray-900">8</p>
+              <p class="text-sm font-medium text-gray-600">Deals actifs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Tabs -->
+      <div class="bg-white rounded-lg shadow-md">
+        <div class="border-b border-gray-200">
+          <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+            <button class="tab-btn active whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm" data-tab="products">
+              Produits
             </button>
+            <button class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm" data-tab="partners">
+              Partenaires
+            </button>
+            <button class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm" data-tab="deals">
+              Deals
+            </button>
+            <button class="tab-btn whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm" data-tab="rules">
+              Règles
+            </button>
+          </nav>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="p-6">
+          <div id="tab-products" class="tab-content active">
+            <h3 class="text-lg font-semibold mb-4">Gestion des Produits</h3>
+            <p class="text-gray-600 mb-4">Gérez vos produits affiliés et leurs placements automatiques.</p>
             
-            <div id="preview-results" style="margin-top: 1.5rem;">
-              <!-- Contenu généré dynamiquement -->
+            <div class="space-y-4">
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <h4 class="font-medium">Talika Bust Phytoserum</h4>
+                  <p class="text-sm text-gray-600">Produit beauté - Commission: 8%</p>
+                </div>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Actif</span>
+              </div>
+              
+              <button class="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-gray-400 transition-colors">
+                + Ajouter un nouveau produit
+              </button>
+            </div>
+          </div>
+
+          <div id="tab-partners" class="tab-content hidden">
+            <h3 class="text-lg font-semibold mb-4">Partenaires</h3>
+            <p class="text-gray-600 mb-4">Gérez vos partenaires d'affiliation et leurs conditions.</p>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <h4 class="font-medium">Amazon</h4>
+                  <p class="text-sm text-gray-600">Commission: 3-8% selon catégorie</p>
+                </div>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Actif</span>
+              </div>
+              
+              <button class="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-gray-400 transition-colors">
+                + Ajouter un nouveau partenaire
+              </button>
+            </div>
+          </div>
+
+          <div id="tab-deals" class="tab-content hidden">
+            <h3 class="text-lg font-semibold mb-4">Deals & Promotions</h3>
+            <p class="text-gray-600 mb-4">Gérez les offres spéciales et promotions temporaires.</p>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                  <h4 class="font-medium">Promo Été 2025</h4>
+                  <p class="text-sm text-gray-600">-20% sur les produits beauté</p>
+                </div>
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">En cours</span>
+              </div>
+              
+              <button class="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-gray-400 transition-colors">
+                + Créer un nouveau deal
+              </button>
+            </div>
+          </div>
+
+          <div id="tab-rules" class="tab-content hidden">
+            <h3 class="text-lg font-semibold mb-4">Règles de Placement</h3>
+            <p class="text-gray-600 mb-4">Configurez l'affichage automatique des produits selon les contextes.</p>
+            
+            <div class="space-y-4">
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <h4 class="font-medium mb-2">Articles GLP-1 → Produits minceur</h4>
+                <p class="text-sm text-gray-600">Affiche automatiquement des produits minceur dans les articles sur les GLP-1</p>
+                <div class="mt-2">
+                  <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">Auto</span>
+                </div>
+              </div>
+              
+              <button class="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-gray-400 transition-colors">
+                + Créer une nouvelle règle
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- TAB: LEGACY PRODUCTS -->
-      <div class="tab-content" id="tab-legacy">
-        <div style="margin-bottom: 1rem;">
-          <h3>📊 Produits Legacy</h3>
-          <p style="color: #6b7280;">Ancienne gestion des produits d'affiliation</p>
-        </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  // Gestion des onglets
+  function initTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetTab = this.getAttribute('data-tab');
         
-        <div class="search-bar">
-          <button onclick="refreshLegacyData()" class="btn-secondary">🔄 Actualiser</button>
-          <button onclick="showAddProductModal()" class="btn-primary">➕ Ajouter Produit</button>
-        </div>
-        
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Produit</th>
-              <th>Marque</th>
-              <th>Prix</th>
-              <th>Collections</th>
-              <th>Priorité</th>
-              <th>Statut</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="legacy-products-tbody">
-            <!-- Contenu généré dynamiquement -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modale Deal -->
-  <div id="deal-modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 style="margin: 0; color: #1f2937;">📝 <span id="deal-modal-title">Nouveau Deal</span></h3>
-        <button onclick="closeDealModal()" class="modal-close">×</button>
-      </div>
-      <div class="modal-body">
-        <form id="deal-form">
-          <div class="form-group">
-            <label for="deal-name">Nom du deal :</label>
-            <input type="text" id="deal-name" required>
-          </div>
-          <div class="form-group">
-            <label for="deal-partner">Partenaire :</label>
-            <select id="deal-partner" required>
-              <option value="">Sélectionner un partenaire</option>
-              <option value="amazon">Amazon</option>
-              <option value="sephora">Sephora</option>
-              <option value="doctipharma">Doctipharma</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="deal-type">Type de deal :</label>
-            <select id="deal-type" required>
-              <option value="percentage">Pourcentage</option>
-              <option value="fixed">Montant fixe</option>
-              <option value="special">Offre spéciale</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="deal-value">Valeur :</label>
-            <input type="text" id="deal-value" placeholder="Ex: 10%, 5€, Code promo" required>
-          </div>
-          <div class="form-group">
-            <label for="deal-status">Statut :</label>
-            <select id="deal-status" required>
-              <option value="active">Actif</option>
-              <option value="inactive">Inactif</option>
-              <option value="pending">En attente</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="deal-start">Date de début :</label>
-            <input type="date" id="deal-start" required>
-          </div>
-          <div class="form-group">
-            <label for="deal-end">Date de fin :</label>
-            <input type="date" id="deal-end">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" onclick="closeDealModal()" class="btn-secondary">Annuler</button>
-        <button type="submit" form="deal-form" class="btn-primary">Sauvegarder</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modale Partenaire -->
-  <div id="partner-modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 style="margin: 0; color: #1f2937;">🤝 <span id="partner-modal-title">Nouveau Partenaire</span></h3>
-        <button onclick="closePartnerModal()" class="modal-close">×</button>
-      </div>
-      <div class="modal-body">
-        <form id="partner-form">
-          <div class="form-group">
-            <label for="partner-name">Nom du partenaire :</label>
-            <input type="text" id="partner-name" required>
-          </div>
-          <div class="form-group">
-            <label for="partner-website">Site web :</label>
-            <input type="url" id="partner-website" required>
-          </div>
-          <div class="form-group">
-            <label for="partner-contact">Contact :</label>
-            <input type="email" id="partner-contact" required>
-          </div>
-          <div class="form-group">
-            <label for="partner-commission">Commission :</label>
-            <input type="text" id="partner-commission" placeholder="Ex: 5%, 10€ par vente" required>
-          </div>
-          <div class="form-group">
-            <label for="partner-category">Catégorie :</label>
-            <select id="partner-category" required>
-              <option value="e-commerce">E-commerce</option>
-              <option value="pharmacie">Pharmacie</option>
-              <option value="cosmetique">Cosmétique</option>
-              <option value="complement">Complément alimentaire</option>
-              <option value="autre">Autre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="partner-status">Statut :</label>
-            <select id="partner-status" required>
-              <option value="active">Actif</option>
-              <option value="inactive">Inactif</option>
-              <option value="negotiation">En négociation</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" onclick="closePartnerModal()" class="btn-secondary">Annuler</button>
-        <button type="submit" form="partner-form" class="btn-primary">Sauvegarder</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // === GESTION DES TABULATIONS ===
-    function initTabs() {
-      const tabBtns = document.querySelectorAll('.tab-btn');
-      const tabContents = document.querySelectorAll('.tab-content');
-      
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          const targetTab = this.getAttribute('data-tab');
-          
-          tabBtns.forEach(b => b.classList.remove('active'));
-          tabContents.forEach(c => c.classList.remove('active'));
-          
-          this.classList.add('active');
-          document.getElementById('tab-' + targetTab).classList.add('active');
+        // Retirer les classes actives
+        tabBtns.forEach(b => {
+          b.classList.remove('active', 'border-blue-500', 'text-blue-600');
+          b.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
         });
-      });
-    }
-
-    // === GESTION DES MODALES ===
-    function openDealModal(deal = null) {
-      const modal = document.getElementById('deal-modal');
-      const title = document.getElementById('deal-modal-title');
-      
-      if (deal) {
-        title.textContent = 'Modifier le Deal';
-        document.getElementById('deal-name').value = deal.name || '';
-        document.getElementById('deal-partner').value = deal.partner || '';
-        document.getElementById('deal-type').value = deal.type || '';
-        document.getElementById('deal-value').value = deal.value || '';
-        document.getElementById('deal-status').value = deal.status || '';
-        document.getElementById('deal-start').value = deal.startDate || '';
-        document.getElementById('deal-end').value = deal.endDate || '';
-      } else {
-        title.textContent = 'Nouveau Deal';
-        document.getElementById('deal-form').reset();
-      }
-      
-      modal.style.display = 'flex';
-    }
-
-    function closeDealModal() {
-      document.getElementById('deal-modal').style.display = 'none';
-    }
-
-    function openPartnerModal(partner = null) {
-      const modal = document.getElementById('partner-modal');
-      const title = document.getElementById('partner-modal-title');
-      
-      if (partner) {
-        title.textContent = 'Modifier le Partenaire';
-        document.getElementById('partner-name').value = partner.name || '';
-        document.getElementById('partner-website').value = partner.website || '';
-        document.getElementById('partner-contact').value = partner.contact || '';
-        document.getElementById('partner-commission').value = partner.commission || '';
-        document.getElementById('partner-category').value = partner.category || '';
-        document.getElementById('partner-status').value = partner.status || '';
-      } else {
-        title.textContent = 'Nouveau Partenaire';
-        document.getElementById('partner-form').reset();
-      }
-      
-      modal.style.display = 'flex';
-    }
-
-    function closePartnerModal() {
-      document.getElementById('partner-modal').style.display = 'none';
-    }
-
-    // === FONCTIONS DE DONNÉES ===
-    function refreshLegacyData() {
-      const products = JSON.parse(localStorage.getItem('affiliate_products') || '[]');
-      const tbody = document.getElementById('legacy-products-tbody');
-      
-      if (products.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: #6b7280; padding: 2rem;">Aucun produit ajouté</td></tr>';
-        return;
-      }
-      
-      tbody.innerHTML = products.map(product => `
-        <tr>
-          <td>
-            <strong>${product.name}</strong>
-            <br><small style="color: #6b7280;">${product.description || 'Pas de description'}</small>
-          </td>
-          <td>${product.brand}</td>
-          <td>${product.price}€</td>
-          <td><span style="background: #e5e7eb; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">${product.collections?.length || 0} collections</span></td>
-          <td>${product.priority}</td>
-          <td>
-            <span style="background: ${product.status === 'active' ? '#dcfce7' : '#fef2f2'}; color: ${product.status === 'active' ? '#166534' : '#dc2626'}; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">
-              ${product.status === 'active' ? '✅ Actif' : '❌ Inactif'}
-            </span>
-          </td>
-          <td>
-            <button onclick="editProduct('${product.id}')" style="background: #f59e0b; color: white; border: none; padding: 0.25rem 0.5rem; border-radius: 4px; margin-right: 0.25rem; cursor: pointer;">Éditer</button>
-            <button onclick="deleteProduct('${product.id}')" style="background: #ef4444; color: white; border: none; padding: 0.25rem 0.5rem; border-radius: 4px; cursor: pointer;">Supprimer</button>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    function loadDeals() {
-      const deals = JSON.parse(localStorage.getItem('affiliate_deals') || '[]');
-      const tbody = document.getElementById('deals-tbody');
-      
-      if (deals.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #6b7280; padding: 2rem;">Aucun deal créé</td></tr>';
-        return;
-      }
-      
-      tbody.innerHTML = deals.map(deal => `
-        <tr>
-          <td><strong>${deal.name}</strong></td>
-          <td>${deal.partner}</td>
-          <td>
-            <span style="background: #e5e7eb; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">
-              ${deal.type}
-            </span>
-          </td>
-          <td>${deal.value}</td>
-          <td>
-            <span style="background: ${deal.status === 'active' ? '#dcfce7' : '#fef2f2'}; color: ${deal.status === 'active' ? '#166534' : '#dc2626'}; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">
-              ${deal.status === 'active' ? '✅ Actif' : '❌ Inactif'}
-            </span>
-          </td>
-          <td>
-            <button onclick="editDeal('${deal.id}')" style="background: #f59e0b; color: white; border: none; padding: 0.25rem 0.5rem; border-radius: 4px; margin-right: 0.25rem; cursor: pointer;">Éditer</button>
-            <button onclick="deleteDeal('${deal.id}')" style="background: #ef4444; color: white; border: none; padding: 0.25rem 0.5rem; border-radius: 4px; cursor: pointer;">Supprimer</button>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    function loadPartners() {
-      const partners = JSON.parse(localStorage.getItem('affiliate_partners') || '[]');
-      const grid = document.getElementById('partners-grid');
-      
-      if (partners.length === 0) {
-        grid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: #6b7280; padding: 2rem;">Aucun partenaire ajouté</div>';
-        return;
-      }
-      
-      grid.innerHTML = partners.map(partner => `
-        <div class="card">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-            <div style="flex: 1;">
-              <h4 style="margin: 0 0 0.5rem 0; color: #1f2937;">${partner.name}</h4>
-              <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">${partner.category}</p>
-            </div>
-            <span style="background: ${partner.status === 'active' ? '#dcfce7' : '#fef2f2'}; color: ${partner.status === 'active' ? '#166534' : '#dc2626'}; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">
-              ${partner.status === 'active' ? '✅ Actif' : '❌ Inactif'}
-            </span>
-          </div>
-          
-          <div style="margin-bottom: 1rem;">
-            <p style="margin: 0 0 0.25rem 0; color: #374151; font-size: 0.875rem;"><strong>Site :</strong> <a href="${partner.website}" target="_blank" style="color: #3b82f6;">${partner.website}</a></p>
-            <p style="margin: 0 0 0.25rem 0; color: #374151; font-size: 0.875rem;"><strong>Contact :</strong> ${partner.contact}</p>
-            <p style="margin: 0; color: #374151; font-size: 0.875rem;"><strong>Commission :</strong> ${partner.commission}</p>
-          </div>
-          
-          <div style="display: flex; gap: 0.5rem;">
-            <button onclick="editPartner('${partner.id}')" style="flex: 1; background: #f59e0b; color: white; border: none; padding: 0.5rem; border-radius: 4px; cursor: pointer; font-size: 0.875rem;">Éditer</button>
-            <button onclick="deletePartner('${partner.id}')" style="flex: 1; background: #ef4444; color: white; border: none; padding: 0.5rem; border-radius: 4px; cursor: pointer; font-size: 0.875rem;">Supprimer</button>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // === FONCTIONS D'ACTION ===
-    function showAddProductModal() {
-      const modal = document.createElement('div');
-      modal.className = 'modal';
-      modal.style.display = 'flex';
-      modal.innerHTML = `
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3>➕ Nouveau Produit</h3>
-            <button onclick="this.closest('.modal').remove()" class="modal-close">×</button>
-          </div>
-          <div class="modal-body">
-            <form id="product-form">
-              <div class="form-group">
-                <label>Nom du produit :</label>
-                <input type="text" id="product-name" required>
-              </div>
-              <div class="form-group">
-                <label>Marque :</label>
-                <input type="text" id="product-brand" required>
-              </div>
-              <div class="form-group">
-                <label>Prix :</label>
-                <input type="number" id="product-price" step="0.01" required>
-              </div>
-              <div class="form-group">
-                <label>Lien d'affiliation :</label>
-                <input type="url" id="product-link" required>
-              </div>
-              <div class="form-group">
-                <label>Description :</label>
-                <textarea id="product-description" rows="3"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" onclick="this.closest('.modal').remove()" class="btn-secondary">Annuler</button>
-            <button type="submit" form="product-form" class="btn-primary">Créer le produit</button>
-          </div>
-        </div>
-      `;
-      
-      document.body.appendChild(modal);
-      
-      document.getElementById('product-form').addEventListener('submit', function(e) {
-        e.preventDefault();
+        tabContents.forEach(c => c.classList.add('hidden'));
         
-        const product = {
-          id: 'prod-' + Date.now(),
-          name: document.getElementById('product-name').value,
-          brand: document.getElementById('product-brand').value,
-          price: parseFloat(document.getElementById('product-price').value),
-          link: document.getElementById('product-link').value,
-          description: document.getElementById('product-description').value,
-          status: 'active',
-          priority: 1,
-          collections: [],
-          created: new Date().toISOString()
-        };
-        
-        const products = JSON.parse(localStorage.getItem('affiliate_products') || '[]');
-        products.push(product);
-        localStorage.setItem('affiliate_products', JSON.stringify(products));
-        
-        showNotification('Produit créé avec succès !', 'success');
-        modal.remove();
-        refreshLegacyData();
-      });
-    }
-
-    function openRuleModal() {
-      showNotification('Fonction à implémenter', 'info');
-    }
-
-    function runPreview() {
-      const path = document.getElementById('preview-path').value;
-      const tags = document.getElementById('preview-tags').value;
-      
-      const resultsDiv = document.getElementById('preview-results');
-      resultsDiv.innerHTML = `
-        <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem; background: #f9fafb;">
-          <h4 style="color: #374151; margin-bottom: 0.5rem;">🔍 Résultat de la prévisualisation</h4>
-          <p><strong>Chemin :</strong> ${path}</p>
-          <p><strong>Tags :</strong> ${tags}</p>
-          <div style="margin-top: 1rem; padding: 0.75rem; background: #fef3c7; border-radius: 6px;">
-            <p style="color: #92400e; margin: 0;">💡 <strong>Produits suggérés :</strong> Compléments alimentaires, Balances connectées, Guides nutritionnels</p>
-          </div>
-        </div>
-      `;
-    }
-
-    function deleteProduct(id) {
-      if (confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')) {
-        const products = JSON.parse(localStorage.getItem('affiliate_products') || '[]');
-        const filtered = products.filter(p => p.id !== id);
-        localStorage.setItem('affiliate_products', JSON.stringify(filtered));
-        showNotification('Produit supprimé', 'success');
-        refreshLegacyData();
-      }
-    }
-
-    function deleteDeal(id) {
-      if (confirm('Êtes-vous sûr de vouloir supprimer ce deal ?')) {
-        const deals = JSON.parse(localStorage.getItem('affiliate_deals') || '[]');
-        const filtered = deals.filter(d => d.id !== id);
-        localStorage.setItem('affiliate_deals', JSON.stringify(filtered));
-        showNotification('Deal supprimé', 'success');
-        loadDeals();
-      }
-    }
-
-    function deletePartner(id) {
-      if (confirm('Êtes-vous sûr de vouloir supprimer ce partenaire ?')) {
-        const partners = JSON.parse(localStorage.getItem('affiliate_partners') || '[]');
-        const filtered = partners.filter(p => p.id !== id);
-        localStorage.setItem('affiliate_partners', JSON.stringify(filtered));
-        showNotification('Partenaire supprimé', 'success');
-        loadPartners();
-      }
-    }
-
-    function editProduct(id) {
-      showNotification('Fonction d\'édition à implémenter', 'info');
-    }
-
-    function editDeal(id) {
-      showNotification('Fonction d\'édition à implémenter', 'info');
-    }
-
-    function editPartner(id) {
-      showNotification('Fonction d\'édition à implémenter', 'info');
-    }
-
-    // === GESTION DES FORMULAIRES ===
-    document.getElementById('deal-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const deal = {
-        id: 'deal-' + Date.now(),
-        name: document.getElementById('deal-name').value,
-        partner: document.getElementById('deal-partner').value,
-        type: document.getElementById('deal-type').value,
-        value: document.getElementById('deal-value').value,
-        status: document.getElementById('deal-status').value,
-        startDate: document.getElementById('deal-start').value,
-        endDate: document.getElementById('deal-end').value,
-        created: new Date().toISOString()
-      };
-      
-      const deals = JSON.parse(localStorage.getItem('affiliate_deals') || '[]');
-      deals.push(deal);
-      localStorage.setItem('affiliate_deals', JSON.stringify(deals));
-      
-      showNotification('Deal créé avec succès !', 'success');
-      closeDealModal();
-      loadDeals();
-    });
-
-    document.getElementById('partner-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const partner = {
-        id: 'partner-' + Date.now(),
-        name: document.getElementById('partner-name').value,
-        website: document.getElementById('partner-website').value,
-        contact: document.getElementById('partner-contact').value,
-        commission: document.getElementById('partner-commission').value,
-        status: document.getElementById('partner-status').value,
-        category: document.getElementById('partner-category').value,
-        created: new Date().toISOString()
-      };
-      
-      const partners = JSON.parse(localStorage.getItem('affiliate_partners') || '[]');
-      partners.push(partner);
-      localStorage.setItem('affiliate_partners', JSON.stringify(partners));
-      
-      showNotification('Partenaire créé avec succès !', 'success');
-      closePartnerModal();
-      loadPartners();
-    });
-
-    // === FERMETURE DES MODALES EN CLIQUANT À L'EXTÉRIEUR ===
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
+        // Ajouter les classes actives
+        this.classList.add('active', 'border-blue-500', 'text-blue-600');
+        this.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
+        document.getElementById('tab-' + targetTab).classList.remove('hidden');
       });
     });
+  }
 
-    // === NOTIFICATIONS ===
-    function showNotification(message, type = 'info') {
-      const notification = document.createElement('div');
-      notification.className = 'notification notification-' + type;
-      notification.textContent = message;
-      
-      document.body.appendChild(notification);
-      
-      setTimeout(() => {
-        notification.classList.add('show');
-      }, 100);
-      
-      setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-          if (notification.parentNode) {
-            document.body.removeChild(notification);
-          }
-        }, 300);
-      }, 3000);
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    initTabs();
+  });
+</script>
 
-    // === INITIALISATION ===
-    document.addEventListener('DOMContentLoaded', function() {
-      initTabs();
-      loadDeals();
-      loadPartners();
-      refreshLegacyData();
-      showNotification('Page d\'affiliation chargée', 'success');
-    });
-  </script>
-</body>
-</html>
+<style>
+  .tab-btn.active {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+  
+  .tab-btn:not(.active) {
+    border-color: transparent;
+    color: #6b7280;
+  }
+  
+  .tab-btn:not(.active):hover {
+    color: #374151;
+    border-color: #d1d5db;
+  }
+  
+  .transition-colors {
+    transition: all 0.2s ease;
+  }
+</style>
