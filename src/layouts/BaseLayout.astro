@@ -265,11 +265,36 @@ const footerProducts = getProductsByBrand('Talika', 1);
             newsletterSuccess?.classList.remove('hidden');
             this.reset();
             
-            // Analytics
+            // Analytics enrichi pour newsletter
             if (typeof gtag !== 'undefined') {
+              const email = formData.get('email');
+              
+              // Événement principal d'inscription newsletter
               gtag('event', 'newsletter_signup', {
-                'event_category': 'engagement',
-                'email_type': 'newsletter'
+                'event_category': 'conversion',
+                'event_label': 'footer_newsletter',
+                'method': 'footer_form',
+                'custom_parameters': {
+                  'signup_location': 'footer',
+                  'email_domain': email ? email.split('@')[1] : 'unknown'
+                }
+              });
+              
+              // Événement de conversion
+              gtag('event', 'sign_up', {
+                'event_category': 'conversion',
+                'method': 'newsletter',
+                'value': 5.0 // Valeur d'un abonné newsletter
+              });
+              
+              // Événement personnalisé pour le remarketing
+              gtag('event', 'newsletter_subscriber', {
+                'event_category': 'audience',
+                'event_label': 'newsletter_list',
+                'custom_parameters': {
+                  'list_type': 'glp1_newsletter',
+                  'subscriber_source': 'footer'
+                }
               });
             }
           } else {

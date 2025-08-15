@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import fs from 'fs/promises';
 import path from 'path';
+import { UserManager } from '../../lib/userManager';
 
 interface ContactSubmission {
   id: number;
@@ -57,8 +58,20 @@ export const POST: APIRoute = async ({ request }) => {
         headers: { 'Content-Type': 'application/json' }
       });
     }
+
+    // Import dynamique du UserManager
+    const userManager = UserManager.getInstance();
     
-    // Créer l'entrée de données
+    // Ajouter à la base unifiée
+    await userManager.addEvent(email, {
+      type: 'contact_form',
+      data: { name, subject, message, newsletter },
+      source: 'contact-form',
+      ip: request.headers.get('x-forwarded-for') || 'unknown',
+      userAgent: request.headers.get('user-agent') || 'unknown'
+    }, name);
+
+    // Maintenir la compatibilité avec l'ancien système
     const submission: ContactSubmission = {
       id: Date.now(),
       timestamp: new Date().toISOString(),
@@ -73,56 +86,23 @@ export const POST: APIRoute = async ({ request }) => {
       ip: request.headers.get('x-forwarded-for') || 'unknown',
       userAgent: request.headers.get('user-agent') || 'unknown'
     };
-    
-    // Lire le fichier existant
+
+    // Sauvegarder dans l'ancien format pour compatibilité
     const dataPath = path.join(process.cwd(), 'data', 'contact-submissions.json');
     let submissions: ContactSubmission[] = [];
     
     try {
       const data = await fs.readFile(dataPath, 'utf-8');
-      submissions = JSON.parse(data);
+      const parsed = JSON.parse(data);
+      submissions = parsed.submissions || parsed || [];
     } catch (error) {
-      // Fichier n'existe pas encore, on commence avec un tableau vide
       submissions = [];
     }
     
-    // Ajouter la nouvelle soumission
     submissions.push(submission);
-    
-    // Sauvegarder
-    await fs.writeFile(dataPath, JSON.stringify(submissions, null, 2));
-    
-    // Ajouter à la newsletter si demandé
-    if (newsletter) {
-      try {
-        const newsletterPath = path.join(process.cwd(), 'data', 'newsletter-subscribers.json');
-        let subscribers: NewsletterSubscriber[] = [];
-        
-        try {
-          const newsletterData = await fs.readFile(newsletterPath, 'utf-8');
-          subscribers = JSON.parse(newsletterData);
-        } catch (error) {
-          subscribers = [];
-        }
-        
-        // Vérifier si l'email n'existe pas déjà
-        const existingSubscriber = subscribers.find(sub => sub.email.toLowerCase() === email.toLowerCase());
-        if (!existingSubscriber) {
-          subscribers.push({
-            id: Date.now(),
-            email: email.toLowerCase(),
-            timestamp: new Date().toISOString(),
-            source: 'contact-form',
-            status: 'active'
-          });
-          
-          await fs.writeFile(newsletterPath, JSON.stringify(subscribers, null, 2));
-        }
-      } catch (error) {
-        console.error('Erreur ajout newsletter:', error);
-      }
-    }
-    
+    const dataToSave = { submissions: submissions };
+    await fs.writeFile(dataPath, JSON.stringify(dataToSave, null, 2));
+
     return new Response(JSON.stringify({ 
       success: true, 
       message: 'Message envoyé avec succès' 

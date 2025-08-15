@@ -701,12 +701,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           // Masquer le formulaire après succès
           this.style.opacity = '0.5';
           
-          // Analytics
+          // Analytics enrichi
           if (typeof gtag !== 'undefined') {
+            const treatment = formData.get('treatment') || 'unspecified';
+            const concerns = formData.getAll('concerns');
+            const newsletterConsent = formData.get('newsletter_consent') ? 'yes' : 'no';
+            
+            // Événement principal de téléchargement
             gtag('event', 'guide_download', {
               'event_category': 'engagement',
               'event_label': 'beauty-guide',
-              'treatment': formData.get('treatment') || 'unspecified'
+              'custom_parameters': {
+                'treatment_interest': treatment,
+                'concerns_count': concerns.length,
+                'main_concerns': concerns.slice(0, 3).join('|'),
+                'newsletter_consent': newsletterConsent
+              }
+            });
+            
+            // Événement de conversion pour le lead qualifié
+            gtag('event', 'generate_lead', {
+              'event_category': 'conversion',
+              'currency': 'EUR',
+              'value': 15.0, // Valeur plus élevée car plus qualifié
+              'lead_type': 'guide_download'
+            });
+            
+            // Événement newsletter si consentement
+            if (newsletterConsent === 'yes') {
+              gtag('event', 'newsletter_signup', {
+                'event_category': 'conversion',
+                'event_label': 'guide_form',
+                'method': 'guide_download'
+              });
+            }
+            
+            // Tracking des intérêts par traitement
+            if (treatment !== 'unspecified') {
+              gtag('event', 'treatment_interest', {
+                'event_category': 'user_preferences',
+                'event_label': treatment,
+                'treatment_type': treatment
+              });
+            }
+            
+            // Tracking des préoccupations
+            concerns.forEach(concern => {
+              gtag('event', 'concern_selected', {
+                'event_category': 'user_preferences',
+                'event_label': concern,
+                'concern_type': concern
+              });
             });
           }
         } else {

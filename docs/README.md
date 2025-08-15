@@ -12,7 +12,11 @@
 - **[SEO_STRATEGIE.md](../SEO_STRATEGIE.md)** - Stratégie SEO et mots-clés prioritaires
 - **[CHECKLIST_FINALE.md](../CHECKLIST_FINALE.md)** - Checklist de déploiement
 
-### 🛒 Affiliation
+### � Système de Données (NOUVEAU)
+- **[SYSTEME_DONNEES_UTILISATEURS.md](./SYSTEME_DONNEES_UTILISATEURS.md)** - Documentation complète du système de données utilisateurs
+- **[CHANGELOG.md](../CHANGELOG.md)** - Historique des mises à jour et nouvelles fonctionnalités
+
+### �🛒 Affiliation
 - **[GUIDE_AFFILIATION.md](../GUIDE_AFFILIATION.md)** - Guide complet d'affiliation (système de liens avec codes promo)
 
 ### 📦 Archive

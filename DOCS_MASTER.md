@@ -1,6 +1,65 @@
 # 📚 Documentation Centrale GLP-1 France
 
-> **Branche de référence : `production`**
+> **Branche de référen## 📊 Dashboard admin et donnée---
+
+## 🔗 APIs et système de données (**NOUVEAU**)
+
+### APIs développées
+- **[src/pages/api/contact.ts](./src/pages/api/contact.ts)** — API de contact avec newsletter
+- **[src/pages/api/guide-beauty.ts](./src/pages/api/guide-beauty.ts)** — API pour téléchargement de guide
+- **[src/pages/api/admin-data.ts](./src/pages/api/admin-data.ts)** — API d'administration des données
+
+### Base de données (JSON)
+- **[data/contact-submissions.json](./data/contact-submissions.json)** — Soumissions de contact
+- **[data/newsletter-subscribers.json](./data/newsletter-subscribers.json)** — Inscrits newsletter
+- **[data/guide-downloads.json](./data/guide-downloads.json)** — Téléchargements de guide
+
+### Sécurité et validation
+- Validation des emails côté serveur
+- Protection CORS pour les APIs
+- Authentification basique pour l'admin
+- Autocomplete activé sur les formulaires sécurisés
+- Stockage sécurisé des données utilisateurs
+
+### Formulaires sécurisés (**AMÉLIORÉS**)
+- **[src/pages/contact.astro](./src/pages/contact.astro)** — Formulaire de contact sécurisé
+- **[src/pages/guide-beaute-perte-de-poids-glp1.astro](./src/pages/guide-beaute-perte-de-poids-glp1.astro)** — Formulaire guide optimisé
+
+**Améliorations apportées** :
+- Suppression du terme "beauté" dans les libellés du formulaire guide
+- Activation de l'autocomplete pour une meilleure UX
+- Validation en temps réel des données
+- Intégration newsletter automatique
+- Messages de confirmation et d'erreur améliorés
+
+---
+
+## 🧠 Logique d'audit de pertinence utilisateurs
+
+### Dashboard principal
+- Le dashboard admin est désormais unique : [src/pages/admin-dashboard.astro](./src/pages/admin-dashboard.astro)
+- Le dashboard SEO visuel a été supprimé (anciennement `seo-analysis/dashboard.html`).
+- Le score de pertinence de chaque article est affiché dans la tab Articles du dashboard admin.
+- La colonne Action affiche uniquement un bouton "voir" pour accéder à l'article.
+
+### Dashboard données utilisateurs (**NOUVEAU**)
+- **URL** : https://glp1-france.fr/admin-user-data/
+- **Page** : [src/pages/admin-user-data.astro](./src/pages/admin-user-data.astro)
+- **API** : [src/pages/api/admin-data.ts](./src/pages/api/admin-data.ts)
+
+**Fonctionnalités** :
+- Affichage des données réelles des utilisateurs inscrits
+- Liste des inscriptions newsletter avec source de provenance
+- Statistiques détaillées des soumissions (contact, guide)
+- Export CSV des données
+- Interface sécurisée avec authentification basique
+- Graphiques et métriques en temps réel
+
+**Données collectées** :
+- Inscriptions newsletter (email, nom, source, date)
+- Soumissions de contact (nom, email, message, newsletter opt-in)
+- Téléchargements de guide (préoccupations, newsletter consent)
+- Statistiques agrégées par source et par période`production`**
 
 Ce fichier centralise et référence toutes les documentations essentielles du projet GLP-1 France.
 
@@ -12,10 +71,15 @@ Ce fichier centralise et référence toutes les documentations essentielles du p
 - [GUIDE_ESSENTIEL.md](./GUIDE_ESSENTIEL.md) — Workflow quotidien et actions essentielles
 - [SEO_STRATEGIE.md](./SEO_STRATEGIE.md) — Stratégie SEO et mots-clés prioritaires
 - [CHECKLIST_FINALE.md](./CHECKLIST_FINALE.md) — Checklist de déploiement
+- [CHANGELOG.md](./CHANGELOG.md) — Historique des mises à jour (NOUVEAU)
 
 ## 🛒 Documentation Affiliation
 
 - [GUIDE_AFFILIATION.md](./GUIDE_AFFILIATION.md) — Guide complet d'affiliation (système de liens avec codes promo)
+
+## 📊 Documentation Système de Données (NOUVEAU)
+
+- [docs/SYSTEME_DONNEES_UTILISATEURS.md](./docs/SYSTEME_DONNEES_UTILISATEURS.md) — Documentation complète du système de données utilisateurs
 
 ## 📁 Organisation
 
@@ -120,7 +184,27 @@ Chaque score est calculé sur 100, et sauvegardé dans le rapport d'audit (`pert
 
 ---
 
-## 📝 Mise à jour
+## � Historique des mises à jour récentes
+
+### Août 2025 - Système de données utilisateurs
+- ✅ **Dashboard admin utilisateurs** créé avec données réelles
+- ✅ **APIs TypeScript** développées pour contact, guide et admin
+- ✅ **Base de données JSON** pour stockage des données utilisateurs
+- ✅ **Formulaires sécurisés** avec autocomplete et validation
+- ✅ **Système de tracking** des sources d'inscription newsletter
+- ✅ **Interface d'export** CSV pour les données admin
+- ✅ **Correction de contenu** : suppression "beauté" dans formulaire guide
+- ✅ **Déploiement réussi** : 152 pages générées et mises en ligne
+
+### Fonctionnalités déployées
+1. **Admin Dashboard** : https://glp1-france.fr/admin-user-data/
+2. **Contact sécurisé** : https://glp1-france.fr/contact/
+3. **Guide optimisé** : https://glp1-france.fr/guide-beaute-perte-de-poids-glp1/
+4. **APIs fonctionnelles** : `/api/contact`, `/api/guide-beauty`, `/api/admin-data`
+
+---
+
+## �📝 Mise à jour
 Ce fichier doit être mis à jour à chaque ajout ou modification d’un document important.
 
 ---

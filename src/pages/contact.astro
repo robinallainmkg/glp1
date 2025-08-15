@@ -590,11 +590,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </style>
 
 <script>
-  // Gestion du formulaire de contact avec Netlify Forms
+  // Gestion du formulaire de contact avec API
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form');
-    const successDiv = document.getElementById('form-success');
-    const errorDiv = document.getElementById('form-error');
+    const successDiv = document.getElementById('contact-success');
+    const errorDiv = document.getElementById('contact-error');
     
     if (form) {
       form.addEventListener('submit', async function(e) {
@@ -625,11 +625,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             successDiv.classList.remove('hidden');
             form.reset();
             
-            // Analytics/tracking
+            // Analytics/tracking enrichi
             if (typeof gtag !== 'undefined') {
+              const subject = formData.get('subject');
+              const newsletter = formData.get('newsletter') ? 'yes' : 'no';
+              
+              // Événement principal de contact
               gtag('event', 'contact_form_submit', {
                 'event_category': 'engagement',
-                'event_label': formData.get('subject')
+                'event_label': subject || 'unknown',
+                'custom_parameters': {
+                  'subject_category': subject,
+                  'newsletter_signup': newsletter,
+                  'form_location': 'contact_page'
+                }
+              });
+              
+              // Événement spécifique pour newsletter si cochée
+              if (newsletter === 'yes') {
+                gtag('event', 'newsletter_signup', {
+                  'event_category': 'conversion',
+                  'event_label': 'contact_form',
+                  'method': 'contact_form'
+                });
+              }
+              
+              // Événement de conversion pour le lead
+              gtag('event', 'generate_lead', {
+                'event_category': 'conversion',
+                'currency': 'EUR',
+                'value': 10.0 // Valeur estimée d'un contact
               });
             }
           } else {

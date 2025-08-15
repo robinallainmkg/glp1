@@ -6,8 +6,13 @@ const NEWSLETTER_FILE = path.join(process.cwd(), 'data', 'newsletter-subscribers
 
 // Interface pour les abonnés
 interface NewsletterSubscriber {
+  id?: number;
   email: string;
-  subscribedAt: string;
+  name?: string;
+  subscribedAt?: string;
+  timestamp?: string;
+  source?: string;
+  status?: string;
   ip?: string;
   userAgent?: string;
 }
@@ -17,7 +22,8 @@ function loadSubscribers(): NewsletterSubscriber[] {
   try {
     if (fs.existsSync(NEWSLETTER_FILE)) {
       const data = fs.readFileSync(NEWSLETTER_FILE, 'utf-8');
-      return JSON.parse(data);
+      const parsed = JSON.parse(data);
+      return parsed.subscribers || parsed || [];
     }
   } catch (error) {
     console.error('Erreur lors du chargement des abonnés:', error);
@@ -34,7 +40,11 @@ function saveSubscribers(subscribers: NewsletterSubscriber[]): boolean {
       fs.mkdirSync(dataDir, { recursive: true });
     }
     
-    fs.writeFileSync(NEWSLETTER_FILE, JSON.stringify(subscribers, null, 2));
+    const dataToSave = {
+      subscribers: subscribers
+    };
+    
+    fs.writeFileSync(NEWSLETTER_FILE, JSON.stringify(dataToSave, null, 2));
     return true;
   } catch (error) {
     console.error('Erreur lors de la sauvegarde des abonnés:', error);
@@ -71,18 +81,22 @@ export const POST: APIRoute = async ({ request }) => {
     const existingSubscriber = subscribers.find(sub => sub.email === email);
     if (existingSubscriber) {
       return new Response(JSON.stringify({ 
-        success: false, 
-        error: 'Cet email est déjà inscrit' 
+        success: true, 
+        message: 'Vous êtes déjà inscrit à notre newsletter !' 
       }), {
-        status: 409,
+        status: 200,
         headers: { 'Content-Type': 'application/json' }
       });
     }
 
     // Ajouter le nouvel abonné
     const newSubscriber: NewsletterSubscriber = {
+      id: Date.now(),
       email,
+      timestamp: new Date().toISOString(),
       subscribedAt: new Date().toISOString(),
+      source: 'footer-newsletter',
+      status: 'active',
       ip: request.headers.get('x-forwarded-for') || 'unknown',
       userAgent: request.headers.get('user-agent') || 'unknown'
     };

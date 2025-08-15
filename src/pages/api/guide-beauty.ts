@@ -75,12 +75,13 @@ export const POST: APIRoute = async ({ request }) => {
     };
     
     // Lire le fichier existant
-    const dataPath = path.join(process.cwd(), 'data', 'guide-submissions.json');
+    const dataPath = path.join(process.cwd(), 'data', 'guide-downloads.json');
     let submissions: GuideSubmission[] = [];
     
     try {
       const data = await fs.readFile(dataPath, 'utf-8');
-      submissions = JSON.parse(data);
+      const parsed = JSON.parse(data);
+      submissions = parsed.downloads || parsed || [];
     } catch (error) {
       submissions = [];
     }
@@ -88,8 +89,11 @@ export const POST: APIRoute = async ({ request }) => {
     // Ajouter la nouvelle soumission
     submissions.push(submission);
     
-    // Sauvegarder
-    await fs.writeFile(dataPath, JSON.stringify(submissions, null, 2));
+    // Sauvegarder avec la structure correcte
+    const dataToSave = {
+      downloads: submissions
+    };
+    await fs.writeFile(dataPath, JSON.stringify(dataToSave, null, 2));
     
     // Ajouter à la newsletter si consentement donné
     if (newsletter_consent) {
@@ -99,7 +103,8 @@ export const POST: APIRoute = async ({ request }) => {
         
         try {
           const newsletterData = await fs.readFile(newsletterPath, 'utf-8');
-          subscribers = JSON.parse(newsletterData);
+          const parsed = JSON.parse(newsletterData);
+          subscribers = parsed.subscribers || parsed || [];
         } catch (error) {
           subscribers = [];
         }
@@ -115,7 +120,10 @@ export const POST: APIRoute = async ({ request }) => {
             status: 'active'
           });
           
-          await fs.writeFile(newsletterPath, JSON.stringify(subscribers, null, 2));
+          const dataToSave = {
+            subscribers: subscribers
+          };
+          await fs.writeFile(newsletterPath, JSON.stringify(dataToSave, null, 2));
         }
       } catch (error) {
         console.error('Erreur ajout newsletter:', error);

@@ -10,8 +10,10 @@ Site web d'information spécialisé sur les **agonistes du récepteur GLP-1** en
 
 ### Statistiques actuelles (Août 2025)
 - **238 articles** répartis en 9 collections thématiques
-- **137 pages** générées en statique
-- **Dashboard d'administration** avec analyse SEO et pertinence éditoriale
+- **152 pages** générées en statique (build récent)
+- **Dashboard d'administration** avec analyse SEO et données utilisateurs
+- **Système de collecte de données** (contact, newsletter, guide)
+- **APIs TypeScript** sécurisées pour la gestion des données
 - **Système de maillage interne** optimisé pour le SEO
 - **Score SEO moyen** : En cours d'optimisation vers 80+/100
 
@@ -31,6 +33,14 @@ Informer et accompagner les patients sur les traitements GLP-1 en France
 - ✅ **Dashboard admin optimisé** (2 onglets : Articles + Roadmap)
 - ✅ **Architecture des layouts cohérente** (H1 auto-injecté)
 - ✅ **Scripts de maintenance documentés**
+
+### 📊 Système de Données Utilisateurs (NOUVEAU - Août 2025)
+- ✅ **Dashboard admin utilisateurs** : https://glp1-france.fr/admin-user-data/
+- ✅ **APIs TypeScript sécurisées** (contact, guide, admin)
+- ✅ **Base de données JSON** pour les interactions utilisateurs
+- ✅ **Formulaires optimisés** avec autocomplete et validation
+- ✅ **Tracking des sources** d'inscription newsletter
+- ✅ **Export CSV** des données pour analyse
 
 ## 🚀 Technologies
 
@@ -92,7 +102,10 @@ npm run dev
 ├── data/                # Base de données JSON
 │   ├── articles-database.json   # Index complet des articles
 │   ├── collections.json         # Configuration des collections
-│   └── authors-testimonials.json # Témoignages et auteurs
+│   ├── authors-testimonials.json # Témoignages et auteurs
+│   ├── contact-submissions.json  # Soumissions de contact (NOUVEAU)
+│   ├── newsletter-subscribers.json # Inscrits newsletter (NOUVEAU)
+│   └── guide-downloads.json      # Téléchargements guide (NOUVEAU)
 ├── scripts/             # Scripts d'optimisation
 │   ├── clean-definitive.mjs     # Nettoyage H1 et sections vides
 │   ├── audit-pertinence-content.mjs # Audit SEO et éditorial
@@ -150,6 +163,62 @@ Articles Markdown   →  ArticleLayout   (ex: tous les contenus des dossiers src
 
 #### ⚠️ Règle Importante
 Les fichiers markdown ne doivent **JAMAIS** contenir de `# H1` - le titre est automatiquement injecté par `ArticleLayout` depuis le frontmatter.
+
+---
+
+## 📊 Système de Données Utilisateurs
+
+### 🎯 Vue d'ensemble
+Système complet de collecte et d'analyse des interactions utilisateurs déployé en août 2025.
+
+### 🔧 Composants
+
+#### Dashboard Admin
+- **URL** : https://glp1-france.fr/admin-user-data/
+- **Fichier** : `src/pages/admin-user-data.astro`
+- **Authentification** : admin/admin123
+- **Fonctionnalités** :
+  - Statistiques en temps réel
+  - Liste des utilisateurs avec source
+  - Export CSV des données
+  - Graphiques de tendances
+
+#### APIs TypeScript
+```typescript
+// Contact avec newsletter
+POST /api/contact
+// Guide avec préférences
+POST /api/guide-beauty  
+// Données admin (auth requis)
+GET /api/admin-data
+```
+
+#### Base de données JSON
+- `data/contact-submissions.json` - Messages de contact
+- `data/newsletter-subscribers.json` - Inscrits newsletter avec source
+- `data/guide-downloads.json` - Téléchargements avec préférences
+
+#### Formulaires optimisés
+- **Contact** : https://glp1-france.fr/contact/
+- **Guide** : https://glp1-france.fr/guide-beaute-perte-de-poids-glp1/
+- Autocomplete activé, validation en temps réel
+- Intégration newsletter automatique
+
+### 📈 Données collectées
+- Inscriptions newsletter par source (contact/guide/direct)
+- Messages de contact avec opt-in newsletter
+- Préférences utilisateur (préoccupations beauté/santé)
+- Horodatage précis de toutes les interactions
+
+### 🔒 Sécurité
+- Validation email côté serveur
+- Protection CORS sur les APIs
+- Authentification basique pour l'admin
+- Sanitisation des données d'entrée
+
+> **Documentation complète** : [docs/SYSTEME_DONNEES_UTILISATEURS.md](./docs/SYSTEME_DONNEES_UTILISATEURS.md)
+
+---
 
 ## 🔧 Commandes
 
