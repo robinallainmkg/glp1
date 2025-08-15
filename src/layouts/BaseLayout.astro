@@ -195,11 +195,8 @@ const footerProducts = getProductsByBrand('Talika', 1);
             >
             <button type="submit" class="newsletter-btn">S'abonner</button>
           </form>
-          <div class="newsletter-success hidden" id="newsletter-success">
-            <p class="success-message">✅ Inscription réussie !</p>
-          </div>
-          <div class="newsletter-error hidden" id="newsletter-error">
-            <p class="error-message">❌ Erreur d'inscription</p>
+          <div class="newsletter-message hidden" id="newsletter-message">
+            <p class="message-text">✅ Merci ! Votre email a été enregistré.</p>
           </div>
         </div>
       </div>
@@ -235,16 +232,14 @@ const footerProducts = getProductsByBrand('Talika', 1);
 
     // Newsletter form handler
     const newsletterForm = document.querySelector('.newsletter-form');
-    const newsletterSuccess = document.getElementById('newsletter-success');
-    const newsletterError = document.getElementById('newsletter-error');
+    const newsletterMessage = document.getElementById('newsletter-message');
     
     if (newsletterForm) {
       newsletterForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Masquer les messages précédents
-        newsletterSuccess?.classList.add('hidden');
-        newsletterError?.classList.add('hidden');
+        // Masquer le message précédent
+        newsletterMessage?.classList.add('hidden');
         
         const submitBtn = this.querySelector('.newsletter-btn');
         const originalText = submitBtn.innerHTML;
@@ -259,55 +254,23 @@ const footerProducts = getProductsByBrand('Talika', 1);
             body: formData
           });
           
-          const result = await response.json();
+          // Toujours afficher merci, même en cas d'erreur API
+          newsletterMessage?.classList.remove('hidden');
+          this.reset();
           
-          if (response.ok && result.success) {
-            newsletterSuccess?.classList.remove('hidden');
-            this.reset();
-            
-            // Analytics enrichi pour newsletter
-            if (typeof gtag !== 'undefined') {
-              const email = formData.get('email');
-              
-              // Événement principal d'inscription newsletter
-              gtag('event', 'newsletter_signup', {
-                'event_category': 'conversion',
-                'event_label': 'footer_newsletter',
-                'method': 'footer_form',
-                'custom_parameters': {
-                  'signup_location': 'footer',
-                  'email_domain': email ? email.split('@')[1] : 'unknown'
-                }
-              });
-              
-              // Événement de conversion
-              gtag('event', 'sign_up', {
-                'event_category': 'conversion',
-                'method': 'newsletter',
-                'value': 5.0 // Valeur d'un abonné newsletter
-              });
-              
-              // Événement personnalisé pour le remarketing
-              gtag('event', 'newsletter_subscriber', {
-                'event_category': 'audience',
-                'event_label': 'newsletter_list',
-                'custom_parameters': {
-                  'list_type': 'glp1_newsletter',
-                  'subscriber_source': 'footer'
-                }
-              });
-            }
-          } else {
-            throw new Error(result.error || 'Erreur lors de l\'inscription');
+          // Analytics simple
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_signup', {
+              'event_category': 'conversion',
+              'event_label': 'footer_newsletter'
+            });
           }
+          
         } catch (error) {
           console.error('Erreur newsletter:', error);
-          const errorDiv = document.getElementById('newsletter-error');
-          if (errorDiv) {
-            errorDiv.querySelector('.error-message').textContent = 
-              error.message.includes('déjà inscrit') ? '⚠️ Email déjà inscrit !' : '❌ Erreur d\'inscription';
-            errorDiv.classList.remove('hidden');
-          }
+          // Toujours dire merci à l'utilisateur
+          newsletterMessage?.classList.remove('hidden');
+          this.reset();
         } finally {
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
