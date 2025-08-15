@@ -1,3 +1,32 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "test_user_robinallainmkg",
+      "email": "robinallainmkg@gmail.com",
+      "name": "Robin Test",
+      "firstSeen": "2025-08-15T20:00:00.000Z",
+      "lastSeen": "2025-08-15T20:00:00.000Z",
+      "totalEvents": 1,
+      "isNewsletterSubscriber": true,
+      "events": [
+        {
+          "id": "event_test_001",
+          "type": "newsletter_signup",
+          "timestamp": "2025-08-15T20:00:00.000Z",
+          "data": {
+            "source": "footer-newsletter"
+          },
+          "source": "footer-newsletter",
+          "ip": "127.0.0.1",
+          "userAgent": "test"
+        }
+      ],
+      "tags": ["newsletter"],
+      "analytics": {
+        "sources": ["footer-newsletter"],
+        "preferredTopics": [],
+        "lastActivity": "2025-08-15T20:00:00.000Z"
+      }
+    }
+  ]
 }
