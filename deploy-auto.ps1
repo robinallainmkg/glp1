@@ -37,6 +37,13 @@ open sftp://u403023291@147.79.98.140:65002 -password="_@%p8R*XG.s+/5)" -hostkey=
 cd domains/glp1-france.fr/public_html
 lcd dist
 synchronize remote -delete
+cd ..
+option batch abort
+option confirm off
+mkdir data
+cd data
+lcd ../data
+put users-unified.json
 close
 exit
 "@

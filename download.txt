@@ -1,6 +1,0 @@
-open sftp://u403023291:_%40%25p8R*XG.s%2B%2F5)@147.79.98.140:65002 -hostkey="ssh-ed25519 255 ryF1Sy3SwsauJOcEYq3xYVLfjAbN3LKJX3qRxdU1AHA"
-cd domains/glp1-france.fr/public_html
-lcd dist
-synchronize local -delete
-close
-exit
