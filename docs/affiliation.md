@@ -19,7 +19,7 @@ Le système d'affiliation utilise l'architecture Astro.js existante avec des API
 
 - `GET/POST/PUT/DELETE /api/affiliate` - CRUD des données d'affiliation
 - `POST /api/upload` - Upload d'images (produits/partenaires)
-- `GET /api/preview-resolve` - Prévisualisation des règles
+- `GET /api/content-placement-resolver` - Prévisualisation des règles
 
 ### Interface Admin
 
