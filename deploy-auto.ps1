@@ -48,6 +48,9 @@ close
 exit
 "@
 
+Write-Host "   - Synchronisation du site web..." -ForegroundColor Cyan
+Write-Host "   - Upload du dossier data (sécurisé)..." -ForegroundColor Cyan
+
 $winscpScript | Out-File -FilePath "upload.txt" -Encoding UTF8
 
 # Chercher WinSCP
