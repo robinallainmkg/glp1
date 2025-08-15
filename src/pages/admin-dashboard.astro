@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import AdminNav from '../components/AdminNav.astro';
 import pertinenceReport from '../../pertinence-content-report.json';
 
 // === DONNÉES STATISTIQUES ===
@@ -320,6 +321,8 @@ const lastUpdate = new Date(pertinenceReport.timestamp).toLocaleString('fr-FR', 
   </style>
 </head>
 <body>
+  <AdminNav />
+  
   <div class="container">
     <div class="header">
       <h1>🏥 Dashboard Protégé - GLP-1 France</h1>

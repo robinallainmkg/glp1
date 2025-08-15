@@ -1,130 +1,102 @@
 import type { APIRoute } from 'astro';
-import fs from 'fs';
-import path from 'path';
 
-const NEWSLETTER_FILE = path.join(process.cwd(), 'data', 'newsletter-subscribers.json');
-
-// Interface pour les abonnés
-interface NewsletterSubscriber {
-  id?: number;
+interface NewsletterData {
   email: string;
-  name?: string;
-  subscribedAt?: string;
-  timestamp?: string;
   source?: string;
-  status?: string;
-  ip?: string;
-  userAgent?: string;
 }
 
-// Fonction pour charger les abonnés existants
-function loadSubscribers(): NewsletterSubscriber[] {
+// Fonction pour envoyer les données vers l'API user-management
+async function saveToUserManagement(data: NewsletterData, request: Request): Promise<boolean> {
   try {
-    if (fs.existsSync(NEWSLETTER_FILE)) {
-      const data = fs.readFileSync(NEWSLETTER_FILE, 'utf-8');
-      const parsed = JSON.parse(data);
-      return parsed.subscribers || parsed || [];
-    }
-  } catch (error) {
-    console.error('Erreur lors du chargement des abonnés:', error);
-  }
-  return [];
-}
-
-// Fonction pour sauvegarder les abonnés
-function saveSubscribers(subscribers: NewsletterSubscriber[]): boolean {
-  try {
-    // Créer le dossier data s'il n'existe pas
-    const dataDir = path.dirname(NEWSLETTER_FILE);
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
+    const userManagementUrl = new URL('/api/user-management', request.url);
     
-    const dataToSave = {
-      subscribers: subscribers
-    };
+    const formData = new FormData();
+    formData.append('type', 'newsletter');
+    formData.append('email', data.email);
+    formData.append('source', data.source || 'footer-newsletter');
     
-    fs.writeFileSync(NEWSLETTER_FILE, JSON.stringify(dataToSave, null, 2));
-    return true;
+    const response = await fetch(userManagementUrl.toString(), {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'User-Agent': request.headers.get('User-Agent') || '',
+        'X-Forwarded-For': request.headers.get('X-Forwarded-For') || '',
+      }
+    });
+    
+    return response.ok;
   } catch (error) {
-    console.error('Erreur lors de la sauvegarde des abonnés:', error);
+    console.error('Erreur lors de la sauvegarde vers user-management:', error);
     return false;
   }
 }
 
-// Fonction pour valider l'email
+// Validation de l'email
 function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
 export const POST: APIRoute = async ({ request }) => {
+  console.log('🔔 Newsletter API - Requête reçue');
+
   try {
     const formData = await request.formData();
-    const email = formData.get('email')?.toString()?.trim().toLowerCase();
+    const email = formData.get('email')?.toString().trim();
+    const source = formData.get('source')?.toString() || 'footer-newsletter';
 
-    // Validation de l'email
-    if (!email || !isValidEmail(email)) {
-      return new Response(JSON.stringify({ 
-        success: false, 
-        error: 'Email invalide' 
+    console.log('📧 Email reçu:', email);
+    console.log('📍 Source:', source);
+
+    // Validation
+    if (!email) {
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'Email requis'
       }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' }
       });
     }
 
-    // Charger les abonnés existants
-    const subscribers = loadSubscribers();
-    
-    // Vérifier si l'email existe déjà
-    const existingSubscriber = subscribers.find(sub => sub.email === email);
-    if (existingSubscriber) {
-      return new Response(JSON.stringify({ 
-        success: true, 
-        message: 'Vous êtes déjà inscrit à notre newsletter !' 
+    if (!isValidEmail(email)) {
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'Format d\'email invalide'
       }), {
-        status: 200,
+        status: 400,
         headers: { 'Content-Type': 'application/json' }
       });
     }
 
-    // Ajouter le nouvel abonné
-    const newSubscriber: NewsletterSubscriber = {
-      id: Date.now(),
-      email,
-      timestamp: new Date().toISOString(),
-      subscribedAt: new Date().toISOString(),
-      source: 'footer-newsletter',
-      status: 'active',
-      ip: request.headers.get('x-forwarded-for') || 'unknown',
-      userAgent: request.headers.get('user-agent') || 'unknown'
-    };
+    // Sauvegarder via l'API user-management
+    const saved = await saveToUserManagement({ email, source }, request);
 
-    subscribers.push(newSubscriber);
-
-    // Sauvegarder
-    if (saveSubscribers(subscribers)) {
-      // Log pour suivi
-      console.log(`📧 Nouvel abonné newsletter: ${email} à ${new Date().toLocaleString('fr-FR')}`);
-      
-      return new Response(JSON.stringify({ 
-        success: true, 
-        message: 'Inscription réussie !',
-        email 
+    if (saved) {
+      console.log('✅ Email newsletter sauvegardé avec succès');
+      return new Response(JSON.stringify({
+        success: true,
+        message: 'Inscription réussie !'
       }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }
       });
     } else {
-      throw new Error('Erreur de sauvegarde');
+      console.log('❌ Erreur lors de la sauvegarde');
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'Erreur de sauvegarde'
+      }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
     }
 
   } catch (error) {
-    console.error('Erreur API newsletter:', error);
-    return new Response(JSON.stringify({ 
-      success: false, 
-      error: 'Erreur serveur' 
+    console.error('❌ Erreur Newsletter API:', error);
+    return new Response(JSON.stringify({
+      success: false,
+      error: 'Erreur serveur'
     }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
@@ -133,9 +105,10 @@ export const POST: APIRoute = async ({ request }) => {
 };
 
 export const GET: APIRoute = async () => {
-  return new Response(JSON.stringify({ 
-    message: 'Newsletter API - Utilisez POST pour vous inscrire' 
+  return new Response(JSON.stringify({
+    message: 'Newsletter API - Utilisez POST pour vous inscrire'
   }), {
+    status: 200,
     headers: { 'Content-Type': 'application/json' }
   });
 };

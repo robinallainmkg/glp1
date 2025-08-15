@@ -191,7 +191,7 @@ class UserManager {
 export const POST: APIRoute = async ({ request }) => {
   try {
     const formData = await request.formData();
-    const action = formData.get('action')?.toString();
+    const action = formData.get('action')?.toString() || formData.get('type')?.toString();
     const email = formData.get('email')?.toString()?.trim()?.toLowerCase();
     
     if (!email || !action) {
@@ -209,10 +209,12 @@ export const POST: APIRoute = async ({ request }) => {
 
     switch (action) {
       case 'newsletter_signup':
+      case 'newsletter':
+        const source = formData.get('source')?.toString() || 'footer-newsletter';
         user = await userManager.addEvent(email, {
           type: 'newsletter_signup',
-          data: { source: 'footer' },
-          source: 'footer-newsletter',
+          data: { source },
+          source: source,
           ip: request.headers.get('x-forwarded-for') || 'unknown',
           userAgent: request.headers.get('user-agent') || 'unknown'
         });

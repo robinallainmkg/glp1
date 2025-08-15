@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AdminNav from '../components/AdminNav.astro';
 
 const title = "Données Utilisateurs - Admin GLP-1";
 const description = "Dashboard simple des données utilisateurs du site GLP-1 France";
 ---
 
 <BaseLayout title={title} description={description}>
+  <AdminNav />
+  
   <div class="min-h-screen bg-gray-50 py-8">
     <div class="container mx-auto px-4 max-w-4xl">
       

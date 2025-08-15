@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import AdminNav from '../components/AdminNav.astro';
 
 // Variables globales pour l'affiliation
 let legacyAffiliateData = null;
@@ -286,9 +287,10 @@ let crudAffiliateData = { products: [], deals: [], partners: [], rules: [] };
   </style>
 </head>
 <body>
+  <AdminNav />
+  
   <div class="container">
     <div class="header">
-      <a href="/admin-dashboard" class="back-link">← Retour au Dashboard</a>
       <h1>💰 Gestion de l'Affiliation</h1>
       <p>Partenaires • Deals • Produits • Règles de placement</p>
     </div>
