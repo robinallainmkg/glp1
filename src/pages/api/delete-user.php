@@ -54,7 +54,30 @@ try {
     logMessage("📧 Email à supprimer: $emailToDelete");
     
     // Chemin du fichier de données unifié
-    $dataFile = __DIR__ . '/../../data/users-unified.json';
+    // Essayer plusieurs chemins possibles sur Hostinger
+    $possiblePaths = [
+        __DIR__ . '/../../data/users-unified.json',
+        __DIR__ . '/../../../data/users-unified.json',
+        '/home/u403023291/domains/glp1-france.fr/public_html/data/users-unified.json',
+        '/home/u403023291/domains/glp1-france.fr/data/users-unified.json'
+    ];
+    
+    $dataFile = null;
+    foreach ($possiblePaths as $path) {
+        if (file_exists($path)) {
+            $dataFile = $path;
+            logMessage("📁 Fichier trouvé: $path");
+            break;
+        } else {
+            logMessage("❌ Fichier non trouvé: $path");
+        }
+    }
+    
+    if (!$dataFile) {
+        // Utiliser le chemin par défaut si aucun n'est trouvé
+        $dataFile = __DIR__ . '/../../data/users-unified.json';
+        logMessage("⚠️ Utilisation du chemin par défaut: $dataFile");
+    }
     
     if (!file_exists($dataFile)) {
         throw new Exception('Fichier de données introuvable');
@@ -73,12 +96,27 @@ try {
         throw new Exception('Structure de données invalide - clé "users" manquante');
     }
     
+    // Debug: afficher la structure des données
+    logMessage("📊 Structure des données: " . json_encode(array_keys($allData)));
+    logMessage("👥 Nombre d'utilisateurs dans le fichier: " . count($allData['users']));
+    
+    // Debug: lister tous les emails présents
+    $emailsInFile = array_map(function($user) {
+        return $user['email'] ?? 'NO_EMAIL';
+    }, $allData['users']);
+    logMessage("📧 Emails présents: " . implode(', ', $emailsInFile));
+    
     // Chercher et supprimer l'utilisateur
     $userFound = false;
     $originalCount = count($allData['users']);
     
     foreach ($allData['users'] as $key => $userData) {
-        if (isset($userData['email']) && $userData['email'] === $emailToDelete) {
+        $userEmail = isset($userData['email']) ? trim(strtolower($userData['email'])) : '';
+        $searchEmail = trim(strtolower($emailToDelete));
+        
+        logMessage("🔍 Comparaison: '$userEmail' vs '$searchEmail'");
+        
+        if ($userEmail === $searchEmail) {
             logMessage("👤 Utilisateur trouvé: " . ($userData['name'] ?? 'Nom inconnu') . " - Index: $key");
             unset($allData['users'][$key]);
             $userFound = true;

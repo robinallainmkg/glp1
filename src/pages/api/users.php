@@ -40,17 +40,29 @@ try {
     ));
     
     // Chemin du fichier de données unifié
-    if ($isLocal) {
-        // Environnement local
-        $dataFile = __DIR__ . '/../../data/users-unified.json';
-    } else {
-        // Environnement Hostinger - chemin absolu
-        $dataFile = '/home/u574849695/domains/glp1-france.com/public_html/data/users-unified.json';
-        
-        // Fallback si le chemin absolu n'existe pas
-        if (!file_exists($dataFile)) {
-            $dataFile = __DIR__ . '/../../data/users-unified.json';
+    // Essayer plusieurs chemins possibles sur Hostinger
+    $possiblePaths = [
+        __DIR__ . '/../../data/users-unified.json',
+        __DIR__ . '/../../../data/users-unified.json',
+        '/home/u403023291/domains/glp1-france.fr/public_html/data/users-unified.json',
+        '/home/u403023291/domains/glp1-france.fr/data/users-unified.json'
+    ];
+    
+    $dataFile = null;
+    foreach ($possiblePaths as $path) {
+        if (file_exists($path)) {
+            $dataFile = $path;
+            logMessage("📁 Fichier trouvé: $path");
+            break;
+        } else {
+            logMessage("❌ Fichier non trouvé: $path");
         }
+    }
+    
+    if (!$dataFile) {
+        // Utiliser le chemin par défaut si aucun n'est trouvé
+        $dataFile = __DIR__ . '/../../data/users-unified.json';
+        logMessage("⚠️ Utilisation du chemin par défaut: $dataFile");
     }
     
     logMessage("🔍 Environnement: " . ($isLocal ? 'LOCAL' : 'PRODUCTION'));
