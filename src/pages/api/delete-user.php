@@ -129,7 +129,18 @@ try {
     }
     
     if (!$userFound) {
-        throw new Exception("Utilisateur avec l'email $emailToDelete introuvable");
+        // Debug supplémentaire : afficher tous les emails pour comparaison
+        $allEmails = [];
+        foreach ($allData['users'] as $user) {
+            $allEmails[] = [
+                'original' => $user['email'] ?? 'NO_EMAIL',
+                'normalized' => isset($user['email']) ? trim(strtolower($user['email'])) : 'NO_EMAIL'
+            ];
+        }
+        logMessage("🔍 Tous les emails dans le fichier: " . json_encode($allEmails));
+        logMessage("🎯 Email recherché (normalisé): '" . trim(strtolower($emailToDelete)) . "'");
+        
+        throw new Exception("Utilisateur avec l'email $emailToDelete introuvable. Emails disponibles: " . implode(', ', array_column($allEmails, 'original')));
     }
     
     // Réindexer le tableau des utilisateurs
