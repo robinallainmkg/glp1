@@ -54,11 +54,13 @@ export const POST: APIRoute = async ({ request }) => {
   console.log('🔔 Newsletter API - Requête POST reçue');
   console.log('🔍 Method:', request.method);
   console.log('🔍 URL:', request.url);
+  console.log('🔍 Content-Type:', request.headers.get('content-type'));
 
   try {
-    const formData = await request.formData();
-    const email = formData.get('email')?.toString().trim();
-    const source = formData.get('source')?.toString() || 'footer-newsletter';
+    // Lire le JSON au lieu de FormData
+    const data = await request.json();
+    const email = data.email?.toString().trim();
+    const source = data.source?.toString() || 'footer-newsletter';
 
     console.log('📧 Email reçu:', email);
     console.log('📍 Source:', source);

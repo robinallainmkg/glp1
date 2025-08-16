@@ -256,7 +256,13 @@ const footerProducts = getProductsByBrand('Talika', 1);
           console.log('📤 Envoi vers /api/newsletter...');
           const response = await fetch('/api/newsletter', {
             method: 'POST',
-            body: formData
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: email,
+              source: 'footer-newsletter'
+            })
           });
           
           console.log('📥 Réponse reçue - Status:', response.status);
