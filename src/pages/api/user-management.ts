@@ -394,6 +394,56 @@ export const GET: APIRoute = async ({ request }) => {
       });
     }
 
+    // Traitement newsletter en GET pour contourner le problème serveur
+    if (action === 'newsletter' || action === 'newsletter_signup') {
+      console.log('📨 Traitement inscription newsletter via GET');
+      const email = url.searchParams.get('email')?.trim()?.toLowerCase();
+      const source = url.searchParams.get('source') || 'footer-newsletter-get';
+      
+      console.log('📧 Email:', email);
+      console.log('📍 Source:', source);
+      
+      if (!email) {
+        return new Response(JSON.stringify({ 
+          success: false, 
+          error: 'Email requis' 
+        }), {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
+
+      const user = await userManager.addEvent(email, {
+        type: 'newsletter_signup',
+        data: { source },
+        source: source,
+        ip: request.headers.get('x-forwarded-for') || 'unknown',
+        userAgent: request.headers.get('user-agent') || 'unknown'
+      });
+      
+      console.log('✅ Utilisateur newsletter créé/mis à jour via GET:', user.email);
+      
+      return new Response(JSON.stringify({ 
+        success: true, 
+        message: 'Inscription newsletter réussie',
+        user: {
+          id: user.id,
+          email: user.email,
+          totalEvents: user.totalEvents,
+          isNewsletterSubscriber: user.isNewsletterSubscriber
+        },
+        debug: {
+          dataPath: userManager.dataPath,
+          cwd: process.cwd(),
+          action: action,
+          method: 'GET'
+        }
+      }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
     return new Response(JSON.stringify({ 
       success: false, 
       error: 'Action non supportée' 

@@ -252,15 +252,19 @@ const footerProducts = getProductsByBrand('Talika', 1);
         try {
           const formData = new FormData(this);
           const email = formData.get('email');
+          const source = formData.get('source') || 'footer-newsletter';
           console.log('📧 Email à envoyer:', email);
+          console.log('📍 Source:', source);
           
-          console.log('📤 Envoi vers /api/newsletter avec FormData...');
-          let response = await fetch('/api/newsletter', {
-            method: 'POST',
-            body: formData
+          // Envoyer vers user-management avec action newsletter en GET
+          const url = `/api/user-management?action=newsletter&email=${encodeURIComponent(email)}&source=${encodeURIComponent(source)}`;
+          console.log('📤 Envoi vers user-management:', url);
+          
+          let response = await fetch(url, {
+            method: 'GET'
           });
           
-          console.log('📥 Réponse reçue - Status:', response.status);
+          console.log('📥 Réponse user-management - Status:', response.status);
           
           if (response.ok) {
             const result = await response.json();
