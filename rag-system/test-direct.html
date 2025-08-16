@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 Test RAG GLP1-France (Version JavaScript)</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            max-width: 800px; 
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            color: #667eea; 
+            text-align: center; 
+            margin-bottom: 30px;
+        }
+        .test-form {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        input { 
+            flex: 1;
+            padding: 15px; 
+            font-size: 16px; 
+            border: 2px solid #ddd; 
+            border-radius: 10px;
+            outline: none;
+        }
+        input:focus {
+            border-color: #667eea;
+        }
+        button { 
+            padding: 15px 30px; 
+            font-size: 16px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            border: none; 
+            border-radius: 10px; 
+            cursor: pointer;
+            font-weight: 500;
+        }
+        button:hover { 
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+        .example:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .result { 
+            margin-top: 30px; 
+            padding: 25px; 
+            border-radius: 15px;
+            line-height: 1.6;
+        }
+        .loading { 
+            background: #e3f2fd;
+            color: #1976d2;
+            text-align: center; 
+        }
+        .error { 
+            background: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #f44336;
+        }
+        .success { 
+            background: #e8f5e8;
+            color: #2e7d32;
+            border-left: 4px solid #4caf50;
+        }
+        .answer {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .sources {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .source-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #667eea;
+        }
+        .similarity {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            float: right;
+        }
+        .status {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .status.ready {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Test RAG GLP1-France</h1>
+        
+        <div class="info">
+            <h3>ℹ️ Version JavaScript - Test Direct</h3>
+            <p>Cette version teste directement les embeddings créés et utilise l'API OpenAI depuis le navigateur.</p>
+        </div>
+        
+        <div id="status" class="status ready">✅ Chargement des embeddings...</div>
+        
+        <div class="test-form">
+            <input type="text" id="query" placeholder="Posez votre question sur GLP1..." value="Qu'est-ce que GLP1 ?">
+            <button onclick="testRAG()" id="testBtn">Tester</button>
+        </div>
+        
+        <div class="examples">
+            <div class="example" onclick="setQuery('Qu&apos;est-ce que GLP1 ?')">
+                Qu'est-ce que GLP1 ?
+            </div>
+            <div class="example" onclick="setQuery('Comment fonctionne GLP1 ?')">
+                Comment ça fonctionne ?
+            </div>
+            <div class="example" onclick="setQuery('Avantages de GLP1')">
+                Avantages de GLP1
+            </div>
+            <div class="example" onclick="setQuery('Informations médicales')">
+                Infos médicales
+            </div>
+        </div>
+        
+        <div id="result"></div>
+    </div>
+    
+    <script>
+        const API_KEY = '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';
+        
+        let embeddings = null;
+        
+        // Charger les embeddings au démarrage
+        async function loadEmbeddings() {
+            try {
+                const response = await fetch('embeddings/glp1_embeddings.json');
+                if (!response.ok) {
+                    throw new Error('Fichier embeddings non trouvé');
+                }
+                embeddings = await response.json();
+                document.getElementById('status').innerHTML = `✅ ${embeddings.chunks.length} chunks chargés et prêts`;
+                return true;
+            } catch (error) {
+                document.getElementById('status').innerHTML = '❌ Erreur: ' + error.message;
+                document.getElementById('status').className = 'status error';
+                return false;
+            }
+        }
+        
+        // Calculer la similarité cosinus
+        function cosineSimilarity(vecA, vecB) {
+            let dotProduct = 0;
+            let normA = 0;
+            let normB = 0;
+            
+            for (let i = 0; i < vecA.length; i++) {
+                dotProduct += vecA[i] * vecB[i];
+                normA += vecA[i] * vecA[i];
+                normB += vecB[i] * vecB[i];
+            }
+            
+            return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+        }
+        
+        // Créer un embedding pour la requête
+        async function createQueryEmbedding(query) {
+            try {
+                const response = await fetch('https://api.openai.com/v1/embeddings', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        model: 'text-embedding-3-small',
+                        input: query
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Erreur API OpenAI: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data.data[0].embedding;
+            } catch (error) {
+                console.error('Erreur embedding:', error);
+                throw error;
+            }
+        }
+        
+        // Générer une réponse avec GPT
+        async function generateAnswer(query, context) {
+            try {
+                const prompt = `En tant qu'expert médical spécialisé dans les traitements GLP1, répondez à la question suivante en vous basant UNIQUEMENT sur le contexte fourni.
+
+Question: ${query}
+
+Contexte:
+${context}
+
+Réponse (soyez précis, informatif et professionnel):`;
+
+                const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-4o-mini',
+                        messages: [
+                            {
+                                role: 'user',
+                                content: prompt
+                            }
+                        ],
+                        max_tokens: 500,
+                        temperature: 0.3
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Erreur API OpenAI: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data.choices[0].message.content;
+            } catch (error) {
+                console.error('Erreur génération:', error);
+                throw error;
+            }
+        }
+        
+        function setQuery(query) {
+            document.getElementById('query').value = query;
+        }
+        
+        async function testRAG() {
+            const query = document.getElementById('query').value.trim();
+            const resultDiv = document.getElementById('result');
+            const testBtn = document.getElementById('testBtn');
+            
+            if (!query) {
+                resultDiv.innerHTML = '<div class="result error">Veuillez saisir une question</div>';
+                return;
+            }
+            
+            if (!embeddings) {
+                resultDiv.innerHTML = '<div class="result error">Embeddings non chargés</div>';
+                return;
+            }
+            
+            testBtn.disabled = true;
+            testBtn.textContent = 'Test en cours...';
+            resultDiv.innerHTML = '<div class="result loading">🔍 Création de l\'embedding de requête...</div>';
+            
+            try {
+                // 1. Créer l'embedding de la requête
+                const queryEmbedding = await createQueryEmbedding(query);
+                
+                resultDiv.innerHTML = '<div class="result loading">🔍 Recherche des contenus similaires...</div>';
+                
+                // 2. Trouver les chunks les plus similaires
+                const similarities = embeddings.chunks.map(chunk => ({
+                    ...chunk,
+                    similarity: cosineSimilarity(queryEmbedding, chunk.embedding)
+                }));
+                
+                // Trier par similarité
+                similarities.sort((a, b) => b.similarity - a.similarity);
+                
+                // Prendre les 3 meilleurs résultats
+                const topResults = similarities.slice(0, 3).filter(r => r.similarity > 0.5);
+                
+                if (topResults.length === 0) {
+                    resultDiv.innerHTML = '<div class="result error">❌ Aucun contenu pertinent trouvé</div>';
+                    return;
+                }
+                
+                resultDiv.innerHTML = '<div class="result loading">🤖 Génération de la réponse...</div>';
+                
+                // 3. Créer le contexte pour GPT
+                const context = topResults.map(r => r.chunk).join('\n\n');
+                
+                // 4. Générer la réponse
+                const answer = await generateAnswer(query, context);
+                
+                // 5. Afficher les résultats
+                displayResults({
+                    success: true,
+                    answer: answer,
+                    results: topResults
+                }, query);
+                
+            } catch (error) {
+                console.error('Erreur:', error);
+                resultDiv.innerHTML = `<div class="result error">❌ Erreur: ${error.message}</div>`;
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = 'Tester';
+            }
+        }
+        
+        function displayResults(data, query) {
+            const resultDiv = document.getElementById('result');
+            let html = '<div class="result success">';
+            
+            html += '<h3>✅ Test réussi!</h3>';
+            html += `<p><strong>Question:</strong> ${query}</p>`;
+            
+            if (data.answer) {
+                html += `<div class="answer">
+                    <h4>🤖 Réponse de l'IA:</h4>
+                    <p>${data.answer.replace(/\n/g, '<br>')}</p>
+                </div>`;
+            }
+            
+            if (data.results && data.results.length > 0) {
+                html += `<div class="sources">
+                    <h4>📚 Sources trouvées (${data.results.length}):</h4>`;
+                
+                data.results.forEach((result, index) => {
+                    const similarity = Math.round(result.similarity * 100);
+                    html += `<div class="source-item">
+                        <span class="similarity">${similarity}% pertinent</span>
+                        <strong>${result.title}</strong><br>
+                        <small>${result.chunk.substring(0, 200)}...</small><br>
+                        <a href="${result.url}" target="_blank" style="color: #667eea;">🔗 Voir la source</a>
+                    </div>`;
+                });
+                
+                html += '</div>';
+            }
+            
+            html += '</div>';
+            resultDiv.innerHTML = html;
+        }
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            loadEmbeddings();
+        });
+    </script>
+</body>
+</html>

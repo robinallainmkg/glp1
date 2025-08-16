@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 Démo RAG GLP1-France</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #6c757d;
+            font-size: 18px;
+        }
+        
+        .demo-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .demo-section h2 {
+            color: #495057;
+            margin-bottom: 20px;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .search-form input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-form input:focus {
+            border-color: #667eea;
+        }
+        
+        .search-form button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .search-form button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .search-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .example {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .example:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .results {
+            margin-top: 30px;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .result-title {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .result-content {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .result-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .result-similarity {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .answer {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .answer h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        
+        .error {
+            background: #dc3545;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .config {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .config h3 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        
+        .config input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        .instructions ol {
+            color: #856404;
+            line-height: 1.6;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .status.ready {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Système RAG GLP1-France</h1>
+            <p>Assistant intelligent basé sur tout le contenu de GLP1-France.fr</p>
+            <div id="status" class="status error">⚠️ Configuration requise</div>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Instructions d'installation</h3>
+            <ol>
+                <li><strong>Installer Python :</strong> <code>pip install openai beautifulsoup4 requests</code></li>
+                <li><strong>Indexer le contenu :</strong> <code>python indexer.py</code></li>
+                <li><strong>Configurer la clé API</strong> OpenAI ci-dessous</li>
+                <li><strong>Tester</strong> le système avec les exemples</li>
+            </ol>
+        </div>
+        
+        <div class="config">
+            <h3>⚙️ Configuration</h3>
+            <input type="password" id="api-key" placeholder="Clé API OpenAI (sk-...)" />
+            <small>Cette clé n'est pas sauvegardée et sert uniquement pour les tests</small>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🔍 Test de recherche sémantique</h2>
+            
+            <div class="search-form">
+                <input type="text" id="search-query" placeholder="Posez votre question sur GLP1..." />
+                <button onclick="performSearch()">Rechercher</button>
+            </div>
+            
+            <div class="examples">
+                <div class="example" onclick="setQuery('Qu&apos;est-ce que GLP1 ?')">
+                    Qu'est-ce que GLP1 ?
+                </div>
+                <div class="example" onclick="setQuery('Prix d&apos;Ozempic en France')">
+                    Prix d'Ozempic
+                </div>
+                <div class="example" onclick="setQuery('Effets secondaires Wegovy')">
+                    Effets secondaires Wegovy
+                </div>
+                <div class="example" onclick="setQuery('Différence entre Ozempic et Saxenda')">
+                    Ozempic vs Saxenda
+                </div>
+                <div class="example" onclick="setQuery('Comment obtenir une prescription GLP1')">
+                    Obtenir une prescription
+                </div>
+                <div class="example" onclick="setQuery('Alternatives naturelles aux GLP1')">
+                    Alternatives naturelles
+                </div>
+            </div>
+            
+            <div id="search-results"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>💬 Widget de chat</h2>
+            <p>Le widget de chat apparaît en bas à droite de cette page. Cliquez dessus pour le tester !</p>
+            
+            <!-- Container pour le widget -->
+            <div id="glp1-chat-widget"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🔧 Intégration sur votre site</h2>
+            <p>Pour intégrer le widget sur votre site :</p>
+            <pre style="background: #f8f9fa; padding: 20px; border-radius: 10px; overflow-x: auto;"><code>&lt;!-- Ajouter le container --&gt;
+&lt;div id="glp1-chat-widget"&gt;&lt;/div&gt;
+
+&lt;!-- Inclure le script --&gt;
+&lt;script src="/rag-system/glp1-chat-widget.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+    </div>
+    
+    <!-- Inclure le widget -->
+    <script src="glp1-chat-widget.js"></script>
+    
+    <script>
+        let currentApiKey = '';
+        
+        // Vérifier le statut au chargement
+        document.addEventListener('DOMContentLoaded', () => {
+            checkSystemStatus();
+            
+            // Surveiller les changements de clé API
+            document.getElementById('api-key').addEventListener('input', (e) => {
+                currentApiKey = e.target.value;
+                updateStatus();
+                
+                // Mettre à jour le widget
+                if (window.glp1Chat) {
+                    window.glp1Chat.apiKey = currentApiKey;
+                }
+            });
+        });
+        
+        function checkSystemStatus() {
+            // Vérifier si les fichiers d'embeddings existent
+            fetch('embeddings/glp1_embeddings.json')
+                .then(response => {
+                    if (response.ok) {
+                        updateStatus(true);
+                    } else {
+                        updateStatus(false, 'Fichiers d\'embeddings manquants. Lancez l\'indexation.');
+                    }
+                })
+                .catch(() => {
+                    updateStatus(false, 'Système non configuré. Suivez les instructions.');
+                });
+        }
+        
+        function updateStatus(isReady = false, message = '') {
+            const status = document.getElementById('status');
+            const hasApiKey = currentApiKey.length > 0;
+            
+            if (isReady && hasApiKey) {
+                status.className = 'status ready';
+                status.textContent = '✅ Système prêt';
+            } else {
+                status.className = 'status error';
+                status.textContent = message || '⚠️ Configuration requise';
+            }
+        }
+        
+        function setQuery(query) {
+            document.getElementById('search-query').value = query;
+        }
+        
+        async function performSearch() {
+            const query = document.getElementById('search-query').value.trim();
+            if (!query) return;
+            
+            if (!currentApiKey) {
+                alert('Veuillez d\'abord saisir votre clé API OpenAI');
+                return;
+            }
+            
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '<div class="loading">🔍 Recherche en cours...</div>';
+            
+            try {
+                const response = await fetch('api/search.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        api_key: currentApiKey,
+                        generate_answer: true,
+                        limit: 5,
+                        threshold: 0.7
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    displayResults(data);
+                } else {
+                    resultsContainer.innerHTML = `<div class="error">❌ ${data.error}</div>`;
+                }
+                
+            } catch (error) {
+                console.error('Erreur:', error);
+                resultsContainer.innerHTML = '<div class="error">❌ Erreur de connexion à l\'API</div>';
+            }
+        }
+        
+        function displayResults(data) {
+            const resultsContainer = document.getElementById('search-results');
+            let html = '';
+            
+            // Afficher la réponse générée
+            if (data.answer) {
+                html += `
+                    <div class="answer">
+                        <h3>🤖 Réponse de l'assistant</h3>
+                        ${data.answer.replace(/\n/g, '<br>')}
+                    </div>
+                `;
+            }
+            
+            // Afficher les résultats de recherche
+            if (data.results && data.results.length > 0) {
+                html += '<div class="results">';
+                html += `<h3>📄 Sources trouvées (${data.results.length})</h3>`;
+                
+                data.results.forEach((result, index) => {
+                    const similarity = Math.round(result.similarity * 100);
+                    html += `
+                        <div class="result-item">
+                            <div class="result-title">${result.title}</div>
+                            <div class="result-content">${result.chunk.substring(0, 300)}...</div>
+                            <div class="result-meta">
+                                <a href="${result.url}" target="_blank">🔗 Voir la source</a>
+                                <span class="result-similarity">${similarity}% de pertinence</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+            } else {
+                html += '<div class="error">Aucun résultat trouvé</div>';
+            }
+            
+            resultsContainer.innerHTML = html;
+        }
+        
+        // Initialiser le widget avec la configuration
+        if (window.GLP1ChatWidget) {
+            window.glp1Chat = new GLP1ChatWidget({
+                apiEndpoint: 'api/search.php',
+                apiKey: currentApiKey,
+                container: '#glp1-chat-widget'
+            });
+        }
+    </script>
+</body>
+</html>
