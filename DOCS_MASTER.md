@@ -34,6 +34,21 @@
 
 ---
 
+## 🔧 Administration
+
+### Interface Admin
+- `/admin-dashboard/` - Dashboard principal
+- `/admin-user-data/` - Gestion des utilisateurs (source: users-unified.json)
+- `/admin-affiliation/` - Gestion des produits affiliés
+
+### APIs Utilisateurs
+- `/api/users.php` - Liste des utilisateurs (GET)
+- `/api/delete-user.php` - Suppression avec backup (POST)
+
+> **Note**: Configuration `output: 'static'` → APIs en PHP pour compatibilité Hostinger
+
+---
+
 ## 🧠 Logique d'audit de pertinence utilisateurs
 
 ### Dashboard principal

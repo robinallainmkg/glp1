@@ -315,13 +315,23 @@ import AdminNav from '../components/AdminNav.astro';
 </style>
 
 <script>
-  // Configuration API - utilisation des endpoints TypeScript Astro
+  // Configuration API - utilisation des endpoints PHP pour compatibilité hébergement statique
   function getApiConfig() {
-    return {
-      env: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'local' : 'production',
-      deleteApi: '/api/delete-user',
-      usersApi: '/api/users'
-    };
+    const hostname = window.location.hostname;
+    
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+      return {
+        env: 'local',
+        deleteApi: '/api/delete-user.php',
+        usersApi: '/api/users.php'
+      };
+    } else {
+      return {
+        env: 'production',
+        deleteApi: '/api/delete-user.php',
+        usersApi: '/api/users.php'
+      };
+    }
   }
 
   // Fonction pour charger les données utilisateurs
