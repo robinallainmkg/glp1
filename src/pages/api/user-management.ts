@@ -375,6 +375,10 @@ export const GET: APIRoute = async ({ request }) => {
   try {
     const url = new URL(request.url);
     const action = url.searchParams.get('action');
+    
+    console.log('📨 GET user-management - URL complète:', request.url);
+    console.log('📨 GET user-management - Action extraite:', action);
+    console.log('📨 GET user-management - Tous les paramètres:', Object.fromEntries(url.searchParams.entries()));
 
     const userManager = UserManager.getInstance();
 
