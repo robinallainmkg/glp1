@@ -1,3 +1,204 @@
 {
-  "users": []
+    "users": [
+        {
+            "id": "user_cm9iaW5AYWxsbGFpbi5Gcg==_1755325490",
+            "email": "robin@alllain.fr",
+            "firstSeen": "2025-08-16T06:24:50+00:00",
+            "lastSeen": "2025-08-16T06:24:50+00:00",
+            "totalEvents": 1,
+            "isNewsletterSubscriber": true,
+            "events": [
+                {
+                    "type": "newsletter_signup",
+                    "timestamp": "2025-08-16T06:24:50+00:00",
+                    "data": {
+                        "source": "footer-newsletter"
+                    },
+                    "source": "footer-newsletter",
+                    "ip": "2a01:e0a:183:1100:35b8:669b:56dc:71da",
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.1 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36"
+                }
+            ],
+            "tags": [
+                "newsletter"
+            ],
+            "analytics": {
+                "sources": [
+                    "footer-newsletter"
+                ]
+            }
+        },
+        {
+            "id": "user_d2VibWFzdGVyQHRhbGlrYS5jb20=_1755325524",
+            "email": "webmaster@talika.com",
+            "firstSeen": "2025-08-16T06:25:24+00:00",
+            "lastSeen": "2025-08-16T06:25:24+00:00",
+            "totalEvents": 1,
+            "isNewsletterSubscriber": true,
+            "events": [
+                {
+                    "type": "newsletter_signup",
+                    "timestamp": "2025-08-16T06:25:24+00:00",
+                    "data": {
+                        "source": "footer-newsletter"
+                    },
+                    "source": "footer-newsletter",
+                    "ip": "2a01:e0a:183:1100:35b8:669b:56dc:71da",
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+                }
+            ],
+            "tags": [
+                "newsletter"
+            ],
+            "analytics": {
+                "sources": [
+                    "footer-newsletter"
+                ]
+            }
+        },
+        {
+            "id": "user_cm9iaW5hbGxhaW5ta2dAZ21haWwuY29t_1755325777",
+            "email": "robinallainmkg@gmail.com",
+            "firstSeen": "2025-08-16T06:29:37+00:00",
+            "lastSeen": "2025-08-16T06:29:37+00:00",
+            "totalEvents": 1,
+            "isNewsletterSubscriber": true,
+            "events": [
+                {
+                    "type": "newsletter_signup",
+                    "timestamp": "2025-08-16T06:29:37+00:00",
+                    "data": {
+                        "source": "footer-newsletter"
+                    },
+                    "source": "footer-newsletter",
+                    "ip": "2a01:e0a:183:1100:35b8:669b:56dc:71da",
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+                }
+            ],
+            "tags": [
+                "newsletter"
+            ],
+            "analytics": {
+                "sources": [
+                    "footer-newsletter"
+                ]
+            }
+        },
+        {
+            "id": "user_cm9iQHRvcm8uZnI=_1755331393",
+            "email": "rob@toro.fr",
+            "name": "Robni",
+            "firstSeen": "2025-08-16T08:03:13+00:00",
+            "lastSeen": "2025-08-16T08:03:13+00:00",
+            "totalEvents": 1,
+            "isNewsletterSubscriber": true,
+            "events": [
+                {
+                    "type": "contact_form",
+                    "timestamp": "2025-08-16T08:03:13+00:00",
+                    "data": {
+                        "source": "contact-page",
+                        "subject": "Guide Beauté et Perte de Poids GLP-1",
+                        "name": "Robni"
+                    },
+                    "source": "contact-page",
+                    "ip": "2a01:e0a:183:1100:35b8:669b:56dc:71da",
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.1 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36"
+                }
+            ],
+            "tags": [
+                "contact",
+                "newsletter"
+            ],
+            "analytics": {
+                "sources": [
+                    "contact-page"
+                ]
+            }
+        },
+        {
+            "id": "user_bWVsekBndG8uY29t_1755331852",
+            "email": "melz@gto.com",
+            "name": "melz",
+            "firstSeen": "2025-08-16T08:10:52+00:00",
+            "lastSeen": "2025-08-16T08:10:52+00:00",
+            "totalEvents": 1,
+            "isNewsletterSubscriber": true,
+            "profile": {
+                "treatment": "wegovy",
+                "concerns": [
+                    "peau-seche"
+                ]
+            },
+            "events": [
+                {
+                    "type": "guide_download",
+                    "timestamp": "2025-08-16T08:10:52+00:00",
+                    "data": {
+                        "source": "guide-beaute",
+                        "subject": "Guide Beauté et Perte de Poids GLP-1",
+                        "name": "melz",
+                        "treatment": "wegovy",
+                        "concerns": [
+                            "peau-seche"
+                        ]
+                    },
+                    "source": "guide-beaute",
+                    "ip": "2a01:e0a:183:1100:35b8:669b:56dc:71da",
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.1 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36"
+                }
+            ],
+            "tags": [
+                "guide-beaute",
+                "newsletter"
+            ],
+            "analytics": {
+                "sources": [
+                    "guide-beaute"
+                ]
+            }
+        },
+        {
+            "id": "user_Y29udGFjdEB0YWxpa2EuY29t_1755332914",
+            "email": "contact@talika.com",
+            "name": "Danielle Roches",
+            "firstSeen": "2025-08-16T08:28:34+00:00",
+            "lastSeen": "2025-08-16T08:28:34+00:00",
+            "totalEvents": 1,
+            "isNewsletterSubscriber": true,
+            "profile": {
+                "treatment": "ozempic",
+                "concerns": [
+                    "effets-secondaires"
+                ]
+            },
+            "events": [
+                {
+                    "type": "guide_download",
+                    "timestamp": "2025-08-16T08:28:34+00:00",
+                    "data": {
+                        "source": "guide-beaute",
+                        "subject": "effets-secondaires",
+                        "name": "Danielle Roches",
+                        "treatment": "ozempic",
+                        "concerns": [
+                            "effets-secondaires"
+                        ]
+                    },
+                    "source": "guide-beaute",
+                    "ip": "2a01:e0a:183:1100:35b8:669b:56dc:71da",
+                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+                }
+            ],
+            "tags": [
+                "guide-beaute",
+                "newsletter"
+            ],
+            "analytics": {
+                "sources": [
+                    "guide-beaute"
+                ]
+            }
+        }
+    ]
 }
