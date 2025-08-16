@@ -1,4 +1,8 @@
 <?php
+// Activer l'affichage des erreurs pour debug
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
@@ -160,10 +164,39 @@ try {
     $errorMessage = $e->getMessage();
     logMessage("❌ Erreur: $errorMessage");
     
+    // Debug: afficher l'erreur complète
+    $debugInfo = [
+        'error' => $errorMessage,
+        'file' => $e->getFile(),
+        'line' => $e->getLine(),
+        'trace' => $e->getTraceAsString()
+    ];
+    logMessage("🔍 Debug complet: " . json_encode($debugInfo));
+    
     http_response_code(400);
     echo json_encode([
         'success' => false, 
-        'error' => $errorMessage
+        'error' => $errorMessage,
+        'debug' => $debugInfo,
+        'timestamp' => date('Y-m-d H:i:s')
+    ]);
+} catch (Error $e) {
+    // Capturer aussi les erreurs fatales PHP
+    $errorMessage = "Erreur PHP: " . $e->getMessage();
+    
+    if (function_exists('logMessage')) {
+        logMessage("❌ Erreur PHP fatale: $errorMessage");
+    }
+    
+    http_response_code(500);
+    echo json_encode([
+        'success' => false, 
+        'error' => $errorMessage,
+        'debug' => [
+            'file' => $e->getFile(),
+            'line' => $e->getLine()
+        ],
+        'timestamp' => date('Y-m-d H:i:s')
     ]);
 }
 ?>

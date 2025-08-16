@@ -1,4 +1,8 @@
 <?php
+// Activer l'affichage des erreurs pour debug
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, OPTIONS');
