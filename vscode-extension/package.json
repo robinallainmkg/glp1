@@ -1,0 +1,43 @@
+{
+  "name": "raglp-assistant",
+  "displayName": "RAGLP Assistant",
+  "description": "Assistant RAGLP sans emojis",
+  "version": "3.4.0",
+  "publisher": "raglp-publisher",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["*"],
+  "main": "./extension-clean.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "raglp.test",
+        "title": "RAGLP Test Extension",
+        "category": "RAGLP"
+      },
+      {
+        "command": "raglp.ask",
+        "title": "RAGLP Poser Question",
+        "category": "RAGLP"
+      },
+      {
+        "command": "raglp.generateCode",
+        "title": "RAGLP Generer Code",
+        "category": "RAGLP"
+      },
+      {
+        "command": "raglp.generatePrompt",
+        "title": "RAGLP Generer Prompt Dev",
+        "category": "RAGLP"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "raglp.ask",
+        "key": "ctrl+shift+q"
+      }
+    ]
+  }
+}
