@@ -423,11 +423,14 @@ export const GET: APIRoute = async ({ request }) => {
     
     console.log('📨 GET user-management - URL complète:', request.url);
     console.log('📨 GET user-management - Action extraite:', action);
+    console.log('📨 GET user-management - Action type:', typeof action);
+    console.log('📨 GET user-management - Action === "newsletter":', action === 'newsletter');
     console.log('📨 GET user-management - Tous les paramètres:', Object.fromEntries(url.searchParams.entries()));
 
     const userManager = UserManager.getInstance();
 
     if (action === 'analytics') {
+      console.log('🔍 Traitement analytics');
       const analytics = await userManager.getAnalytics();
       return new Response(JSON.stringify(analytics), {
         status: 200,
@@ -436,6 +439,7 @@ export const GET: APIRoute = async ({ request }) => {
     }
 
     if (action === 'users') {
+      console.log('🔍 Traitement users');
       const users = await userManager.loadUsers();
       return new Response(JSON.stringify({ users }), {
         status: 200,
@@ -493,9 +497,17 @@ export const GET: APIRoute = async ({ request }) => {
       });
     }
 
+    console.log('❌ Action non reconnue dans GET:', action);
+    console.log('❌ Actions supportées: analytics, users, newsletter, newsletter_signup');
+    
     return new Response(JSON.stringify({ 
       success: false, 
-      error: 'Action non supportée' 
+      error: 'Action non supportée',
+      debug: {
+        received_action: action,
+        supported_actions: ['analytics', 'users', 'newsletter', 'newsletter_signup'],
+        all_params: Object.fromEntries(url.searchParams.entries())
+      }
     }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
