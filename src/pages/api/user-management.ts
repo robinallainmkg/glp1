@@ -261,8 +261,53 @@ class UserManager {
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    console.log('🔧 User-management API - Requête reçue');
+    console.log('🔧 User-management API - Requête POST reçue');
+    console.log('🔧 URL complète:', request.url);
     
+    // Check si c'est une requête newsletter convertie GET→POST par Hostinger
+    const url = new URL(request.url);
+    const urlAction = url.searchParams.get('action');
+    const urlEmail = url.searchParams.get('email');
+    
+    console.log('🔍 Paramètres URL - action:', urlAction, 'email:', urlEmail);
+    
+    // Si on a des paramètres newsletter dans l'URL, traiter comme GET newsletter
+    if (urlAction === 'newsletter' && urlEmail) {
+      console.log('📨 Traitement newsletter via POST avec paramètres GET');
+      const source = url.searchParams.get('source') || 'footer-newsletter-post';
+      
+      const userManager = UserManager.getInstance();
+      const user = await userManager.addEvent(urlEmail.trim().toLowerCase(), {
+        type: 'newsletter_signup',
+        data: { source },
+        source: source,
+        ip: request.headers.get('x-forwarded-for') || 'unknown',
+        userAgent: request.headers.get('user-agent') || 'unknown'
+      });
+      
+      console.log('✅ Utilisateur newsletter créé/mis à jour via POST-GET:', user.email);
+      
+      return new Response(JSON.stringify({ 
+        success: true, 
+        message: 'Inscription newsletter réussie',
+        user: {
+          id: user.id,
+          email: user.email,
+          totalEvents: user.totalEvents,
+          isNewsletterSubscriber: user.isNewsletterSubscriber
+        },
+        debug: {
+          method: 'POST-with-GET-params',
+          action: urlAction,
+          source: source
+        }
+      }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+    
+    // Traitement POST normal avec FormData
     const formData = await request.formData();
     const action = formData.get('action')?.toString() || formData.get('type')?.toString();
     const email = formData.get('email')?.toString()?.trim()?.toLowerCase();
