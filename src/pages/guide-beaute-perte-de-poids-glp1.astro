@@ -680,10 +680,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         // Ajouter des informations spécifiques au guide beauté
         formData.append('subject', 'Guide Beauté et Perte de Poids GLP-1');
-        formData.append('message', `Demande de téléchargement du guide beauté avec les informations suivantes:
-- Traitement d'intérêt: ${formData.get('treatment') || 'Non spécifié'}
-- Préoccupations: ${formData.getAll('concerns').join(', ') || 'Aucune spécifiée'}`);
-        formData.append('newsletter_consent', formData.get('newsletter_consent') ? '1' : '0');
+        
+        // Construire le message avec les informations du formulaire
+        const treatment = formData.get('treatment') || 'Non spécifié';
+        const concerns = formData.getAll('concerns').join(', ') || 'Aucune spécifiée';
+        const messageContent = `Demande de téléchargement du guide beauté avec les informations suivantes:
+- Traitement d'intérêt: ${treatment}
+- Préoccupations: ${concerns}
+
+L'utilisateur souhaite recevoir le guide complet par email.`;
+        
+        formData.append('message', messageContent);
+        
+        // Gérer le consentement newsletter et privacy
+        const newsletterConsent = formData.get('newsletter_consent');
+        if (newsletterConsent) {
+            formData.append('newsletter', '1');
+            formData.append('privacy', '1'); // Consentement implicite pour le guide
+        } else {
+            formData.append('privacy', '1'); // Consentement minimal requis
+        }
         
         const response = await fetch('/api/contact.php', {
           method: 'POST',
