@@ -51,7 +51,9 @@ function isValidEmail(email: string): boolean {
 }
 
 export const POST: APIRoute = async ({ request }) => {
-  console.log('🔔 Newsletter API - Requête reçue');
+  console.log('🔔 Newsletter API - Requête POST reçue');
+  console.log('🔍 Method:', request.method);
+  console.log('🔍 URL:', request.url);
 
   try {
     const formData = await request.formData();
@@ -117,11 +119,30 @@ export const POST: APIRoute = async ({ request }) => {
   }
 };
 
-export const GET: APIRoute = async () => {
+export const GET: APIRoute = async ({ request }) => {
+  console.log('⚠️ Newsletter API - Requête GET reçue (devrait être POST)');
+  console.log('🔍 Method:', request.method);
+  console.log('🔍 URL:', request.url);
+  
   return new Response(JSON.stringify({
     message: 'Newsletter API - Utilisez POST pour vous inscrire'
   }), {
     status: 200,
+    headers: { 'Content-Type': 'application/json' }
+  });
+};
+
+// Handler par défaut pour toutes les autres méthodes
+export const ALL: APIRoute = async ({ request }) => {
+  console.log('🌐 Newsletter API - Méthode:', request.method);
+  console.log('🔍 URL:', request.url);
+  console.log('🔍 Headers:', Object.fromEntries(request.headers.entries()));
+  
+  return new Response(JSON.stringify({
+    method: request.method,
+    message: 'Newsletter API - Seul POST est supporté'
+  }), {
+    status: 405,
     headers: { 'Content-Type': 'application/json' }
   });
 };
