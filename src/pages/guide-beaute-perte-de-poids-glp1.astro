@@ -678,7 +678,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       try {
         const formData = new FormData(this);
         
-        const response = await fetch('/api/guide-beauty', {
+        // Ajouter des informations spécifiques au guide beauté
+        formData.append('subject', 'Guide Beauté et Perte de Poids GLP-1');
+        formData.append('message', `Demande de téléchargement du guide beauté avec les informations suivantes:
+- Traitement d'intérêt: ${formData.get('treatment') || 'Non spécifié'}
+- Préoccupations: ${formData.getAll('concerns').join(', ') || 'Aucune spécifiée'}`);
+        formData.append('newsletter_consent', formData.get('newsletter_consent') ? '1' : '0');
+        
+        const response = await fetch('/api/contact.php', {
           method: 'POST',
           body: formData
         });
