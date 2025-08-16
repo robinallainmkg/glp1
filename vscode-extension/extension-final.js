@@ -30,7 +30,6 @@ const GLP1_RESPONSES = {
             margin: 0; 
             padding: 20px; 
             background: #f8f9fa; 
-        }
         .container { 
             max-width: 1400px; 
             margin: 0 auto; 
@@ -1123,7 +1122,7 @@ ${response}
     });
     
     context.subscriptions.push(testCommand, askCommand, codeCommand, promptCommand);
-}
+
 
 // Fonction pour générer des prompts de développement optimisés
 function generateDevelopmentPrompt(description) {

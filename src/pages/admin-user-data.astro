@@ -315,6 +315,25 @@ import AdminNav from '../components/AdminNav.astro';
 </style>
 
 <script>
+  // Configuration API - détection automatique de l'environnement
+  function getApiConfig() {
+    const hostname = window.location.hostname;
+    
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+      return {
+        env: 'local',
+        deleteApi: '/api/delete-user.php',
+        usersApi: '/api/users.php'
+      };
+    } else {
+      return {
+        env: 'production',
+        deleteApi: '/api/delete-user-hostinger.php',
+        usersApi: '/api/users.php'
+      };
+    }
+  }
+
   // Fonction pour charger les données utilisateurs
   async function loadUsers() {
     console.log('🔄 Début chargement des utilisateurs...');
@@ -330,18 +349,28 @@ import AdminNav from '../components/AdminNav.astro';
     contentEl.style.display = 'none';
     
     try {
-      const response = await fetch('/api/users.php');
+      const config = getApiConfig();
+      console.log('🌍 Environnement détecté:', config.env);
+      
+      const response = await fetch(config.usersApi, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache'
+        }
+      });
+      
       console.log('📡 Réponse API users:', response.status);
       
       if (!response.ok) {
-        throw new Error(`Erreur HTTP: ${response.status}`);
+        throw new Error(`Erreur HTTP: ${response.status} - ${response.statusText}`);
       }
       
       const data = await response.json();
       console.log('📊 Données reçues:', data);
       
       if (!data.success) {
-        throw new Error(data.error || 'Erreur inconnue');
+        throw new Error(data.error || 'Erreur inconnue de l\'API');
       }
       
       // Mise à jour des statistiques
@@ -391,7 +420,7 @@ import AdminNav from '../components/AdminNav.astro';
       loadingEl.style.display = 'none';
       contentEl.style.display = 'block';
       
-      console.log('✅ Utilisateurs chargés avec succès');
+      console.log(`✅ ${users.length} utilisateurs chargés avec succès (${config.env})`);
       
     } catch (error) {
       console.error('❌ Erreur chargement utilisateurs:', error);
@@ -427,7 +456,10 @@ import AdminNav from '../components/AdminNav.astro';
     }
     
     try {
-      const response = await fetch('/api/delete-user.php', {
+      const config = getApiConfig();
+      console.log('🌍 Utilisation API:', config.deleteApi);
+      
+      const response = await fetch(config.deleteApi, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -439,7 +471,7 @@ import AdminNav from '../components/AdminNav.astro';
       
       if (response.ok && result.success) {
         console.log('✅ Utilisateur supprimé:', email);
-        alert(`✅ Utilisateur ${email} supprimé avec succès`);
+        alert(`✅ Utilisateur ${email} supprimé avec succès\n\n📦 Backup: ${result.data?.backupFile || 'créé'}\n🌍 Env: ${result.data?.environment || config.env}`);
         
         // Recharger la liste
         loadUsers();

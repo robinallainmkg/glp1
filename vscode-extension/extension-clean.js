@@ -532,72 +532,264 @@ try {
 </html>`;
     }
 
-    // Fonction de génération de prompts de développement
+    // Fonction de génération de RAG adaptatif intelligent
     function generateDevelopmentPrompt(description) {
-        const prompt = `# 🏥 Prompt de Développement GLP1 France
+        // Analyse intelligente de la requête utilisateur
+        const analysis = analyzeUserRequest(description);
+        
+        const basePrompt = `# 🏥 RAG Intelligent GLP1 France - Réponse Adaptative
 
-## 📋 Demande Utilisateur
-**Description**: ${description}
+## 🎯 Analyse de la Requête
+**Demande**: "${description}"
+**Type détecté**: ${analysis.type.toUpperCase()}
+**Complexité**: ${analysis.complexity}
+**Technologies impliquées**: ${analysis.technologies.join(', ')}
+**Urgence**: ${analysis.urgency}`;
 
-## 🎯 Contexte du Projet
-**Site**: GLP1 France - Site de référence sur les traitements GLP1 (Ozempic, Wegovy, Saxenda)
-**Architecture**: Astro.js + TypeScript + Tailwind CSS
-**Backend**: API TypeScript + PHP (gestion utilisateurs)
-**Base de données**: JSON files (users-unified.json, articles-database.json)
+        const contextualPrompt = generateContextualPrompt(analysis, description);
+        const technicalPrompt = generateTechnicalGuidelines(analysis);
+        const deliverablePrompt = generateDeliverableInstructions(analysis);
 
-## 🔧 Technologies Disponibles
-- **Frontend**: Astro, TypeScript, Tailwind CSS
-- **Backend**: Node.js, PHP
-- **Base de données**: JSON files, pas de SQL
-- **APIs**: Système de gestion d'utilisateurs existant (/api/user-management.ts)
-- **Sécurité**: Authentification par mot de passe, validation des données
+        return basePrompt + contextualPrompt + technicalPrompt + deliverablePrompt;
+    }
 
-## 📁 Structure du Projet
-\`\`\`
-src/
-├── pages/
-│   ├── admin-dashboard.astro    # Dashboard admin principal
-│   ├── admin-user-data.astro    # Gestion des utilisateurs
-│   └── api/
-│       ├── user-management.ts   # API principale utilisateurs
-│       └── delete-user.php      # API suppression sécurisée
-data/
-├── users-unified.json          # Base utilisateurs
-└── articles-database.json      # Base articles
-\`\`\`
+    function analyzeUserRequest(description) {
+        const query = description.toLowerCase();
+        
+        // Détection du type de demande
+        const typePatterns = {
+            dashboard: /dashboard|admin|gestion|interface|tableau|stats|données|utilisateur/i,
+            api: /api|endpoint|route|backend|serveur|php|typescript|données/i,
+            page: /page|article|contenu|seo|astro|blog|landing/i,
+            component: /composant|component|réutilisable|module|ui|widget/i,
+            form: /formulaire|form|contact|inscription|newsletter|input/i,
+            database: /base|données|json|storage|fichier|data|crud/i,
+            auth: /auth|authentification|login|session|sécurité|permission/i,
+            affiliate: /affiliation|produit|conversion|tracking|commission|vente/i,
+            seo: /seo|référencement|google|search|ranking|meta|optimisation/i,
+            medical: /médical|glp1|ozempic|wegovy|diabète|perte|poids|traitement/i,
+            performance: /performance|optimisation|vitesse|cache|bundle|lighthouse/i,
+            design: /design|style|css|couleur|responsive|mobile|ui\/ux/i
+        };
 
-## 🛡️ Exigences de Sécurité
-1. **Validation des entrées**: Toujours valider email, données utilisateur
-2. **Sauvegarde automatique**: Créer backup avant modification
-3. **Logs**: Enregistrer toutes les actions importantes
-4. **Authentification**: Vérifier les permissions admin
-5. **Gestion d'erreurs**: Try/catch, messages d'erreur explicites
+        let detectedType = 'general';
+        for (const [type, pattern] of Object.entries(typePatterns)) {
+            if (pattern.test(query)) {
+                detectedType = type;
+                break;
+            }
+        }
 
-## 🎨 Guidelines de Design
-- **Couleurs**: #667eea (bleu principal), #764ba2 (violet)
-- **Style**: Design moderne, cards avec border-radius 12px
-- **Mobile-first**: Responsive design obligatoire
-- **Icons**: Emojis pour les actions (🗑️ supprimer, ✅ succès, ❌ erreur)
+        // Détection de la complexité
+        const complexityIndicators = {
+            simple: /simple|basique|rapide|petit|léger/i,
+            medium: /moyen|standard|normal|complet/i,
+            complex: /complexe|avancé|sophistiqué|complet|intégration|système/i
+        };
 
-## 📦 Livrables Attendus
-1. **Code principal**: Fichier(s) principal(aux) avec fonctionnalité complète
-2. **Tests**: Code de test/validation
-3. **Documentation**: Commentaires explicatifs dans le code
-4. **Sécurité**: Validation et gestion d'erreurs
-5. **Design**: Interface cohérente avec l'existant
+        let complexity = 'medium';
+        for (const [level, pattern] of Object.entries(complexityIndicators)) {
+            if (pattern.test(query)) {
+                complexity = level;
+                break;
+            }
+        }
 
-## 🚀 Instructions Spécifiques
-Développe une solution complète, sécurisée et prête à l'emploi pour: **${description}**
+        // Détection des technologies
+        const techPatterns = {
+            astro: /astro|\.astro|page|frontmatter/i,
+            typescript: /typescript|\.ts|api|backend/i,
+            php: /php|\.php|serveur/i,
+            css: /css|style|design|couleur/i,
+            json: /json|données|base|storage/i,
+            javascript: /javascript|js|interactif|dynamique/i
+        };
 
-Utilise les patterns existants du projet GLP1, notamment:
-- Le style du dashboard admin-dashboard.astro
-- L'API user-management.ts pour les données
-- Le système de sécurité avec backup automatique
-- Le design cohérent avec les couleurs et styles du site
+        const technologies = [];
+        for (const [tech, pattern] of Object.entries(techPatterns)) {
+            if (pattern.test(query)) {
+                technologies.push(tech);
+            }
+        }
 
-**Important**: Assure-toi que le code soit directement utilisable en production sur le site GLP1 France.`;
+        // Détection de l'urgence
+        const urgencyPatterns = {
+            urgent: /urgent|rapide|vite|asap|immédiat/i,
+            normal: /normal|standard|quand|possible/i,
+            low: /futur|plus tard|éventuel|optionnel/i
+        };
 
-        return prompt;
+        let urgency = 'normal';
+        for (const [level, pattern] of Object.entries(urgencyPatterns)) {
+            if (pattern.test(query)) {
+                urgency = level;
+                break;
+            }
+        }
+
+        return {
+            type: detectedType,
+            complexity,
+            technologies: technologies.length > 0 ? technologies : ['astro', 'typescript'],
+            urgency,
+            keywords: extractKeywords(query)
+        };
+    }
+
+    function extractKeywords(query) {
+        const stopWords = ['le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'et', 'ou', 'pour', 'avec', 'dans', 'sur', 'à', 'il', 'elle', 'est', 'sont', 'avoir', 'être'];
+        return query.split(' ')
+            .filter(word => word.length > 3 && !stopWords.includes(word))
+            .slice(0, 5);
+    }
+
+    function generateContextualPrompt(analysis, description) {
+        const contexts = {
+            dashboard: `
+
+## 🖥️ Contexte Dashboard Admin
+**Objectif**: Interface d'administration pour GLP1 France
+**Localisation**: \`src/pages/admin-*.astro\`
+**Exemples existants**: admin-dashboard.astro, admin-user-data.astro
+**Style**: Design médical professionnel avec gradients bleu/violet
+**Fonctionnalités**: CRUD, statistiques, recherche, export, sécurité
+
+**APIs disponibles**:
+- \`/api/user-management.ts\` - Gestion utilisateurs
+- \`/api/delete-user-hostinger.php\` - Suppression sécurisée
+- \`data/users-unified.json\` - Base utilisateurs`,
+
+            api: `
+
+## � Contexte API/Backend
+**Objectif**: Endpoints pour le site GLP1 France
+**Localisation**: \`src/pages/api/\`
+**Formats**: TypeScript (.ts) préféré, PHP (.php) pour legacy
+**Environnement**: Auto-détection local/Hostinger
+**Sécurité**: Validation, logs, backups automatiques
+
+**Structure données**:
+- \`data/users-unified.json\` - Utilisateurs (email, nom, date)
+- \`data/articles-database.json\` - Articles SEO
+- \`data/affiliate-products.json\` - Produits affiliation`,
+
+            medical: `
+
+## 🏥 Contexte Médical GLP-1
+**Domaine**: Traitements GLP-1 pour diabète et perte de poids
+**Traitements**: Ozempic, Wegovy, Saxenda, Trulicity, Mounjaro
+**Public**: Patients, familles, professionnels de santé
+**Compliance**: ANSM, RGPD, éthique médicale
+
+**Vocabulaire spécialisé**:
+- GLP-1: Glucagon-like peptide-1
+- Semaglutide, Liraglutide, Tirzepatide
+- Diabète type 2, obésité, HbA1c`,
+
+            seo: `
+
+## 🔍 Contexte SEO Médical
+**Mots-clés cibles**: GLP-1, Ozempic, Wegovy, diabète, perte poids
+**Structure**: H1 unique, hiérarchie H2-H6 logique
+**Schema.org**: Medical, Article, Product (affiliation)
+**Performance**: Core Web Vitals, SSG Astro optimisé
+**Autorité**: Liens internes, sources médicales fiables`,
+
+            general: `
+
+## 🔧 Contexte Général GLP1 France
+**Framework**: Astro.js (SSG) + TypeScript
+**Design System**: Médical bleu (#667eea) / violet (#764ba2)
+**Hébergement**: Hostinger (production)
+**Architecture**: Pages statiques + APIs JSON`
+        };
+
+        return contexts[analysis.type] || contexts.general;
+    }
+
+    function generateTechnicalGuidelines(analysis) {
+        return `
+
+## �️ Guidelines Techniques Adaptées
+**Complexité**: ${analysis.complexity.toUpperCase()}
+**Technologies**: ${analysis.technologies.join(' + ')}
+
+### 📋 Checklist Technique
+${analysis.complexity === 'simple' ? 
+`- ✅ Solution directe et efficace
+- ✅ Code minimal mais fonctionnel
+- ✅ Documentation basique` :
+analysis.complexity === 'complex' ?
+`- ✅ Architecture modulaire et évolutive
+- ✅ Tests unitaires et d'intégration
+- ✅ Documentation complète
+- ✅ Gestion d'erreurs avancée
+- ✅ Optimisations performance` :
+`- ✅ Code structuré et maintenable
+- ✅ Gestion d'erreurs standard
+- ✅ Documentation des fonctions clés`}
+
+### 🛡️ Sécurité Requise
+- Validation stricte des entrées utilisateur
+- Sanitisation des données (XSS, injection)
+- Logs détaillés avec timestamp et IP
+- Backup automatique avant modifications critiques
+- Headers de sécurité appropriés
+
+### 🎨 Standards Design GLP1
+- Couleurs: Gradient bleu #667eea vers violet #764ba2
+- Typography: Segoe UI, arial fallback
+- Spacing: Padding 20px, margins cohérents
+- Border-radius: 12px pour cards, 8px pour inputs
+- Mobile-first responsive design`;
+    }
+
+    function generateDeliverableInstructions(analysis) {
+        const urgencyInstructions = {
+            urgent: `
+
+## 🚀 Livraison URGENTE
+**Délai**: Solution immédiate
+**Focus**: Fonctionnalité core, MVP rapide
+**Qualité**: Code fonctionnel, optimisation ultérieure`,
+
+            normal: `
+
+## 📦 Livraison Standard
+**Délai**: Solution complète et testée
+**Focus**: Fonctionnalité + qualité + sécurité
+**Qualité**: Code production-ready`,
+
+            low: `
+
+## 🔮 Livraison Planifiée
+**Délai**: Solution optimale et documentée
+**Focus**: Architecture évolutive + best practices
+**Qualité**: Code exemplaire et maintenable`
+        };
+
+        return urgencyInstructions[analysis.urgency] + `
+
+## 📝 Format de Réponse Attendu
+1. **Code principal**: ${analysis.technologies.includes('astro') ? 'Fichier .astro complet' : 'Code selon technologie détectée'}
+2. **Configuration**: Imports, dépendances, setup requis
+3. **Documentation**: Commentaires inline, README si complexe
+4. **Tests**: ${analysis.complexity === 'simple' ? 'Tests basiques' : 'Suite de tests complète'}
+5. **Déploiement**: Instructions Hostinger si applicable
+
+## 🎯 Instruction Finale
+**Génère une solution ${analysis.complexity} pour**: "${analysis.keywords.join(', ')}"
+**Qui s'intègre parfaitement dans l'écosystème GLP1 France existant.**
+
+---
+*RAG adaptatif - Réponse contextualisée selon l'analyse de la requête*`;
+
+        return basePrompt + contextualPrompt + technicalPrompt + deliverablePrompt;
+    }
+
+    // ========================================
+    // COMMANDES VSCODE
+    // ========================================
     }
 
     // ========== COMMANDES VSCODE ==========
@@ -790,7 +982,7 @@ Utilise les patterns existants du projet GLP1, notamment:
     context.subscriptions.push(askCommand);
     context.subscriptions.push(codeCommand);
     context.subscriptions.push(promptCommand);
-}
+
 
 function deactivate() {}
 

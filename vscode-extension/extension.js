@@ -1,8 +1,83 @@
 const vscode = require('vscode');
 const axios = require('axios');
+const fs = require('fs');
+const path = require('path');
 
 // Configuration
 const OPENAI_API_KEY = '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';
+
+// Chemin vers le vrai système RAG
+const RAG_PATH = 'C:\\Users\\robin\\Documents\\glp1official\\glp1\\rag-system\\embeddings\\glp1_embeddings.json';
+
+/**
+ * Charger le vrai système RAG depuis le fichier JSON
+ */
+function loadRealRAG() {
+    try {
+        if (!fs.existsSync(RAG_PATH)) {
+            console.log('❌ Fichier RAG non trouvé:', RAG_PATH);
+            return null;
+        }
+        
+        const rawData = fs.readFileSync(RAG_PATH, 'utf8');
+        const ragData = JSON.parse(rawData);
+        
+        if (ragData.chunks && Array.isArray(ragData.chunks)) {
+            console.log(`✅ RAG chargé: ${ragData.chunks.length} chunks trouvés`);
+            return ragData.chunks;
+        }
+        
+        console.log('❌ Structure RAG invalide');
+        return null;
+    } catch (error) {
+        console.log('❌ Erreur chargement RAG:', error.message);
+        return null;
+    }
+}
+
+/**
+ * Rechercher dans le vrai système RAG
+ */
+function searchRealRAG(query, maxResults = 5) {
+    const ragChunks = loadRealRAG();
+    
+    if (!ragChunks) {
+        console.log('🔄 Fallback vers base embarquée');
+        return searchKnowledge(query); // Fallback vers l'ancienne méthode
+    }
+    
+    const queryLower = query.toLowerCase();
+    const queryWords = queryLower.split(/\s+/).filter(word => word.length > 2);
+    
+    const results = ragChunks.map(chunk => {
+        let score = 0;
+        const content = (chunk.chunk || '').toLowerCase();
+        const title = (chunk.title || '').toLowerCase();
+        
+        // Scoring amélioré
+        queryWords.forEach(word => {
+            if (title.includes(word)) score += 5;
+            if (content.includes(word)) score += 1;
+        });
+        
+        // Bonus pour correspondance exacte
+        if (content.includes(queryLower)) score += 10;
+        if (title.includes(queryLower)) score += 15;
+        
+        return {
+            title: chunk.title,
+            content: chunk.chunk,
+            url: chunk.url,
+            score: score,
+            similarity: Math.min(score / 20, 1)
+        };
+    });
+    
+    return results
+        .filter(r => r.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, maxResults);
+}
 
 // Base de connaissances GLP1 embarquée
 const GLP1_KNOWLEDGE = [
@@ -378,11 +453,79 @@ ${analysis}
         }
     });
     
+    // Commande pour générer un prompt avec RAG
+    let generatePromptCommand = vscode.commands.registerCommand('glp1-rag.generatePrompt', async () => {
+        const description = await vscode.window.showInputBox({
+            prompt: '🎯 Décrivez votre besoin (le RAG va chercher dans la base GLP-1)',
+            placeholder: 'Ex: article ozempic france, api wegovy prix, dashboard admin...',
+            ignoreFocusOut: true
+        });
+
+        if (description && description.trim()) {
+            console.log(`🚀 Génération prompt RAG pour: "${description}"`);
+            
+            // Recherche dans le VRAI système RAG
+            const relevantContent = searchRealRAG(description);
+            const topResults = relevantContent.slice(0, 3);
+            
+            // Génération du prompt adaptatif
+            const timestamp = new Date().toLocaleString('fr-FR');
+            
+            let prompt = `# 🤖 Prompt RAG GLP-1 France
+**Timestamp**: ${timestamp}
+**Requête**: "${description}"
+
+## 📋 CONTEXTE RAG EXTRAIT
+`;
+
+            if (topResults.length > 0) {
+                topResults.forEach((result, index) => {
+                    const contentPreview = result.content.substring(0, 300) + (result.content.length > 300 ? '...' : '');
+                    prompt += `
+### ${index + 1}. ${result.title}
+**URL**: ${result.url || 'N/A'}
+**Pertinence**: ${Math.round(result.similarity * 100)}%
+**Contenu**: ${contentPreview}
+
+---
+`;
+                });
+            } else {
+                prompt += `
+❌ Aucun contenu pertinent trouvé dans la base GLP-1.
+Le système va utiliser le contexte général.
+
+`;
+            }
+
+            prompt += `
+## 🎯 INSTRUCTION FINALE
+**Générez une solution pour**: ${description}
+**En utilisant le contexte GLP-1 ci-dessus**
+**Intégrez les informations médicales précises trouvées**
+
+---
+🤖 *RAG GLP-1 v4.0.0 - ${topResults.length} sources utilisées*
+🕐 *${timestamp}*`;
+
+            // Affichage du résultat
+            const doc = await vscode.workspace.openTextDocument({
+                content: prompt,
+                language: 'markdown'
+            });
+            
+            await vscode.window.showTextDocument(doc);
+            
+            vscode.window.showInformationMessage(`✅ Prompt RAG généré avec ${topResults.length} sources GLP-1 !`);
+        }
+    });
+    
     // Enregistrer les commandes
     context.subscriptions.push(askCommand);
     context.subscriptions.push(generateCodeCommand);
     context.subscriptions.push(createContentCommand);
     context.subscriptions.push(optimizeSEOCommand);
+    context.subscriptions.push(generatePromptCommand);
     
     // Message de bienvenue
     vscode.window.showInformationMessage('🤖 GLP1 RAG Assistant activé ! Utilisez Ctrl+Shift+G pour poser une question.');

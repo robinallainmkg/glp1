@@ -2,40 +2,45 @@
   "name": "raglp-assistant",
   "displayName": "RAGLP Assistant",
   "description": "Assistant RAGLP sans emojis",
-  "version": "3.4.0",
+      "version": "4.0.0",
   "publisher": "raglp-publisher",
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": ["Other"],
   "activationEvents": ["*"],
-  "main": "./extension-clean.js",
+  "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "raglp.test",
-        "title": "RAGLP Test Extension",
-        "category": "RAGLP"
+        "command": "glp1-rag.ask",
+        "title": "GLP1: Poser Question RAG",
+        "category": "GLP1"
       },
       {
-        "command": "raglp.ask",
-        "title": "RAGLP Poser Question",
-        "category": "RAGLP"
+        "command": "glp1-rag.generateCode",
+        "title": "GLP1: Generer Code",
+        "category": "GLP1"
       },
       {
-        "command": "raglp.generateCode",
-        "title": "RAGLP Generer Code",
-        "category": "RAGLP"
+        "command": "glp1-rag.generatePrompt",
+        "title": "GLP1: Generer Prompt avec RAG",
+        "category": "GLP1"
       },
       {
-        "command": "raglp.generatePrompt",
-        "title": "RAGLP Generer Prompt Dev",
-        "category": "RAGLP"
+        "command": "glp1-rag.createContent",
+        "title": "GLP1: Creer Contenu",
+        "category": "GLP1"
+      },
+      {
+        "command": "glp1-rag.optimizeSEO",
+        "title": "GLP1: Optimiser SEO",
+        "category": "GLP1"
       }
     ],
     "keybindings": [
       {
-        "command": "raglp.ask",
+        "command": "glp1-rag.ask",
         "key": "ctrl+shift+q"
       }
     ]
