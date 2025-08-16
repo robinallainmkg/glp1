@@ -193,6 +193,7 @@ const footerProducts = getProductsByBrand('Talika', 1);
               class="newsletter-input" 
               required
             >
+            <input type="hidden" name="source" value="footer-newsletter">
             <button type="submit" class="newsletter-btn">S'abonner</button>
           </form>
           <div class="newsletter-message hidden" id="newsletter-message">
@@ -253,16 +254,10 @@ const footerProducts = getProductsByBrand('Talika', 1);
           const email = formData.get('email');
           console.log('📧 Email à envoyer:', email);
           
-          console.log('📤 Envoi vers /api/newsletter...');
-          const response = await fetch('/api/newsletter', {
+          console.log('📤 Envoi vers /api/newsletter avec FormData...');
+          let response = await fetch('/api/newsletter', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              email: email,
-              source: 'footer-newsletter'
-            })
+            body: formData
           });
           
           console.log('📥 Réponse reçue - Status:', response.status);

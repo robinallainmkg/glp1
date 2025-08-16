@@ -57,10 +57,10 @@ export const POST: APIRoute = async ({ request }) => {
   console.log('🔍 Content-Type:', request.headers.get('content-type'));
 
   try {
-    // Lire le JSON au lieu de FormData
-    const data = await request.json();
-    const email = data.email?.toString().trim();
-    const source = data.source?.toString() || 'footer-newsletter';
+    // Lire FormData directement
+    const formData = await request.formData();
+    const email = formData.get('email')?.toString().trim();
+    const source = formData.get('source')?.toString() || 'footer-newsletter';
 
     console.log('📧 Email reçu:', email);
     console.log('📍 Source:', source);
@@ -125,9 +125,38 @@ export const GET: APIRoute = async ({ request }) => {
   console.log('⚠️ Newsletter API - Requête GET reçue (devrait être POST)');
   console.log('🔍 Method:', request.method);
   console.log('🔍 URL:', request.url);
+  console.log('🔍 Headers:', Object.fromEntries(request.headers.entries()));
+  console.log('🔍 Query params:', new URL(request.url).searchParams.toString());
+  
+  // Essayons de traiter le GET si l'email est dans les query params
+  const url = new URL(request.url);
+  const email = url.searchParams.get('email');
+  
+  if (email && isValidEmail(email)) {
+    console.log('📧 Email trouvé dans query params:', email);
+    
+    // Sauvegarder via l'API user-management
+    const saved = await saveToUserManagement({ email, source: 'footer-newsletter-get' }, request);
+    
+    if (saved) {
+      console.log('✅ Email newsletter sauvegardé via GET');
+      return new Response(JSON.stringify({
+        success: true,
+        message: 'Inscription réussie (GET) !'
+      }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  }
   
   return new Response(JSON.stringify({
-    message: 'Newsletter API - Utilisez POST pour vous inscrire'
+    message: 'Newsletter API - Utilisez POST pour vous inscrire',
+    debug: {
+      method: request.method,
+      hasEmail: !!email,
+      emailValid: email ? isValidEmail(email) : false
+    }
   }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' }
