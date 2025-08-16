@@ -95,6 +95,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre question ou votre demande..."></textarea>
                 </div>
 
+                <!-- Champs optionnels enrichis -->
+                <div class="form-group">
+                  <label for="treatment">Traitement qui vous intéresse (optionnel)</label>
+                  <select id="treatment" name="treatment">
+                    <option value="">Pas de traitement spécifique</option>
+                    <option value="wegovy">Wegovy</option>
+                    <option value="ozempic">Ozempic</option>
+                    <option value="saxenda">Saxenda</option>
+                    <option value="trulicity">Trulicity</option>
+                    <option value="autre">Autre</option>
+                    <option value="pas-encore-decide">Pas encore décidé</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="concerns">Préoccupations spécifiques (optionnel) :</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="concerns" value="perte-poids">
+                      <span class="checkmark"></span>
+                      Perte de poids
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="concerns" value="diabete">
+                      <span class="checkmark"></span>
+                      Diabète
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="concerns" value="effets-secondaires">
+                      <span class="checkmark"></span>
+                      Effets secondaires
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="concerns" value="cout-prix">
+                      <span class="checkmark"></span>
+                      Coût et prix
+                    </label>
+                  </div>
+                </div>
+
                 <div class="form-group checkbox-group">
                   <label class="checkbox-label">
                     <input type="checkbox" name="privacy" required>
@@ -418,7 +458,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .success-message {
-    color: #16a34a;
+    color: #000000;
     font-weight: 600;
     margin: 0;
   }
@@ -581,7 +621,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </style>
 
 <script>
-  // Gestion du formulaire de contact avec API
+  // Gestion du formulaire de contact avec API enrichie
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form');
     const successDiv = document.getElementById('contact-success');
@@ -612,13 +652,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           const result = await response.json();
           
           if (response.ok && result.success) {
-            // Succès
+            // Succès - personnaliser le message
             successDiv.classList.remove('hidden');
+            
+            const successMessage = successDiv.querySelector('.success-message');
+            const name = formData.get('name');
+            const email = formData.get('email');
+            
+            if (name) {
+              successMessage.innerHTML = `✅ Merci ${name} ! Message envoyé. Nous vous répondrons rapidement à ${email}.`;
+            }
+            
             form.reset();
             
             // Analytics/tracking enrichi
             if (typeof gtag !== 'undefined') {
               const subject = formData.get('subject');
+              const treatment = formData.get('treatment') || 'unspecified';
+              const concerns = formData.getAll('concerns');
               const newsletter = formData.get('newsletter') ? 'yes' : 'no';
               
               // Événement principal de contact
@@ -627,27 +678,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 'event_label': subject || 'unknown',
                 'custom_parameters': {
                   'subject_category': subject,
+                  'treatment_interest': treatment,
+                  'concerns_count': concerns.length,
+                  'main_concerns': concerns.slice(0, 3).join('|'),
                   'newsletter_signup': newsletter,
                   'form_location': 'contact_page'
                 }
               });
               
-              // Événement spécifique pour newsletter si cochée
-              if (newsletter === 'yes') {
-                gtag('event', 'newsletter_signup', {
-                  'event_category': 'conversion',
-                  'event_label': 'contact_form',
-                  'method': 'contact_form'
-                });
-              }
-              
               // Événement de conversion pour le lead
               gtag('event', 'generate_lead', {
                 'event_category': 'conversion',
                 'currency': 'EUR',
-                'value': 10.0 // Valeur estimée d'un contact
+                'value': 5.0,
+                'lead_type': 'contact_form'
+              });
+              
+              // Événement newsletter si consentement
+              if (newsletter === 'yes') {
+                gtag('event', 'newsletter_signup', {
+                  'event_category': 'conversion',
+                  'event_label': 'contact_form',
+                  'method': 'contact_page'
+                });
+              }
+              
+              // Tracking des intérêts par traitement
+              if (treatment !== 'unspecified') {
+                gtag('event', 'treatment_interest', {
+                  'event_category': 'user_preferences',
+                  'event_label': treatment,
+                  'treatment_type': treatment
+                });
+              }
+              
+              // Tracking des préoccupations
+              concerns.forEach(concern => {
+                gtag('event', 'concern_selected', {
+                  'event_category': 'user_preferences',
+                  'event_label': concern,
+                  'concern_type': concern
+                });
               });
             }
+            
           } else {
             throw new Error(result.error || 'Erreur lors de l\'envoi');
           }
@@ -661,11 +735,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           }
           errorDiv.classList.remove('hidden');
         } finally {
-          // Réactiver le bouton
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
+          // Réactiver le bouton après un délai
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 3000);
         }
       });
     }
-  });
 </script>

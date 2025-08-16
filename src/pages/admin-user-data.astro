@@ -67,6 +67,7 @@ import AdminNav from '../components/AdminNav.astro';
                   <th>📈 Événements</th>
                   <th>📮 Newsletter</th>
                   <th>🏷️ Tags</th>
+                  <th>🗑️ Actions</th>
                 </tr>
               </thead>
               <tbody id="users-tbody">
@@ -265,6 +266,33 @@ import AdminNav from '../components/AdminNav.astro';
     color: #64748b;
   }
 
+  .actions-cell {
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .delete-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .delete-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.05);
+  }
+
+  .delete-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+  }
+
   @media (max-width: 768px) {
     .admin-main {
       margin-left: 0;
@@ -337,7 +365,7 @@ import AdminNav from '../components/AdminNav.astro';
         
         // Génération des lignes du tableau
         tbody.innerHTML = users.map((user, index) => `
-          <tr>
+          <tr data-user-email="${user.email}">
             <td>${index + 1}</td>
             <td class="email-cell">${user.email || '-'}</td>
             <td>${user.name || '-'}</td>
@@ -349,6 +377,11 @@ import AdminNav from '../components/AdminNav.astro';
             </td>
             <td class="tags-cell">
               ${user.tags && user.tags.length > 0 ? user.tags.join(', ') : '-'}
+            </td>
+            <td class="actions-cell">
+              <button class="delete-btn" onclick="deleteUser('${user.email}')" title="Supprimer ${user.email}">
+                🗑️
+              </button>
             </td>
           </tr>
         `).join('');
@@ -368,6 +401,65 @@ import AdminNav from '../components/AdminNav.astro';
       errorEl.style.display = 'block';
     }
   }
+  
+  // Fonction pour supprimer un utilisateur
+  async function deleteUser(email) {
+    if (!email) {
+      alert('❌ Email manquant pour la suppression');
+      return;
+    }
+    
+    // Confirmation
+    const userName = document.querySelector(`tr[data-user-email="${email}"] td:nth-child(3)`).textContent;
+    const confirmMessage = `⚠️ Confirmer la suppression ?\n\nUtilisateur: ${userName}\nEmail: ${email}\n\nCette action est irréversible.`;
+    
+    if (!confirm(confirmMessage)) {
+      return;
+    }
+    
+    console.log('🗑️ Suppression utilisateur:', email);
+    
+    // Désactiver le bouton pendant la suppression
+    const deleteBtn = document.querySelector(`button[onclick="deleteUser('${email}')"]`);
+    if (deleteBtn) {
+      deleteBtn.disabled = true;
+      deleteBtn.innerHTML = '⏳';
+    }
+    
+    try {
+      const response = await fetch('/api/delete-user.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email })
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        console.log('✅ Utilisateur supprimé:', email);
+        alert(`✅ Utilisateur ${email} supprimé avec succès`);
+        
+        // Recharger la liste
+        loadUsers();
+      } else {
+        throw new Error(result.error || 'Erreur lors de la suppression');
+      }
+    } catch (error) {
+      console.error('❌ Erreur suppression:', error);
+      alert(`❌ Erreur lors de la suppression: ${error.message}`);
+      
+      // Réactiver le bouton
+      if (deleteBtn) {
+        deleteBtn.disabled = false;
+        deleteBtn.innerHTML = '🗑️';
+      }
+    }
+  }
+  
+  // Exposer la fonction globalement pour les onclick
+  window.deleteUser = deleteUser;
   
   // Chargement initial
   document.addEventListener('DOMContentLoaded', () => {
