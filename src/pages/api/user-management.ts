@@ -30,7 +30,7 @@ interface UnifiedUser {
 
 class UserManager {
   private static instance: UserManager;
-  private dataPath: string;
+  public dataPath: string;  // Changed to public for debugging
 
   constructor() {
     // Détecter l'environnement de production Hostinger
@@ -39,14 +39,15 @@ class UserManager {
                         process.cwd().includes('domains/glp1-france.fr');
     
     if (isProduction) {
-      // Sur Hostinger, le dossier data est à côté de public_html
-      this.dataPath = '/home/u403023291/domains/glp1-france.fr/data/users-unified.json';
+      // Sur Hostinger, utiliser chemin relatif depuis public_html
+      this.dataPath = path.join(process.cwd(), '..', 'data', 'users-unified.json');
     } else {
       // En développement local
       this.dataPath = path.join(process.cwd(), 'data', 'users-unified.json');
     }
     
     console.log('📁 UserManager - Chemin data:', this.dataPath);
+    console.log('📁 Process CWD:', process.cwd());
   }
 
   static getInstance(): UserManager {
@@ -62,19 +63,39 @@ class UserManager {
       await fs.access(this.dataPath);
       console.log('✅ Fichier existe');
     } catch (error) {
-      console.log('⚠️ Fichier inexistant, création...');
-      try {
-        // Créer le répertoire si nécessaire
-        const dir = path.dirname(this.dataPath);
-        await fs.mkdir(dir, { recursive: true });
-        console.log('📁 Répertoire créé:', dir);
-        
-        // Créer le fichier avec structure de base
-        await fs.writeFile(this.dataPath, JSON.stringify({ users: [] }, null, 2));
-        console.log('📝 Fichier users-unified.json créé');
-      } catch (createError) {
-        console.error('❌ Erreur création fichier:', createError);
-        throw createError;
+      console.log('⚠️ Fichier inexistant, tentative de création...');
+      
+      // Essayer plusieurs emplacements possibles sur Hostinger
+      const possiblePaths = [
+        this.dataPath,
+        path.join(process.cwd(), '..', 'data', 'users-unified.json'),
+        '/home/u403023291/domains/glp1-france.fr/data/users-unified.json',
+        path.join(process.cwd(), 'data', 'users-unified.json'),
+        path.join(process.cwd(), '..', '..', 'data', 'users-unified.json')
+      ];
+      
+      let success = false;
+      
+      for (const testPath of possiblePaths) {
+        try {
+          console.log('� Test chemin:', testPath);
+          const dir = path.dirname(testPath);
+          await fs.mkdir(dir, { recursive: true });
+          await fs.writeFile(testPath, JSON.stringify({ users: [] }, null, 2));
+          
+          // Vérifier que le fichier a bien été créé
+          await fs.access(testPath);
+          this.dataPath = testPath;
+          console.log('✅ Fichier créé avec succès à:', testPath);
+          success = true;
+          break;
+        } catch (createError) {
+          console.log('❌ Échec pour:', testPath, createError.message);
+        }
+      }
+      
+      if (!success) {
+        throw new Error('Impossible de créer le fichier data dans tous les emplacements testés');
       }
     }
   }
@@ -327,6 +348,11 @@ export const POST: APIRoute = async ({ request }) => {
         email: user.email,
         totalEvents: user.totalEvents,
         isNewsletterSubscriber: user.isNewsletterSubscriber
+      },
+      debug: {
+        dataPath: userManager.dataPath,
+        cwd: process.cwd(),
+        action: action
       }
     }), {
       status: 200,
