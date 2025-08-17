@@ -4,13 +4,13 @@
 
 ## 🎯 Vue d'Ensemble
 
-Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliation classique avec codes promo**. Les produits sont intégrés automatiquement dans le contenu selon des règles contextuelles intelligentes. 
+Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliation classique avec codes promo**. Les produits sont intégrés automatiquement dans le contenu selon des règles contextuelles intelligentes.
 
-**Important** : Malgré les références "Shopify Collabs" dans le code (tracking), le système fonctionne avec des liens d'affiliation directs et des codes promo, pas via la plateforme Shopify Collabs.
+**Important** : Le système fonctionne avec des liens d'affiliation directs et des codes promo, pas via la plateforme Shopify Collabs (malgré les références dans le code pour le tracking).
 
 ---
 
-## 📋 SYSTÈME TECHNIQUE
+## 📋 ARCHITECTURE TECHNIQUE
 
 ### 🔧 Composants Core
 - ✅ `src/components/AffiliateProduct.astro` - Composant d'affiliation réutilisable
@@ -24,12 +24,12 @@ Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliat
 - ✅ `src/layouts/CollectionLayout.astro` - Bannières et grilles collection
 
 ### 📄 Pages Créées
-- ✅ `src/pages/produits-recommandes.astro` - Index produits affiliés
+- ✅ `src/pages/outils/produits-recommandes.astro` - Index produits affiliés
 - ✅ `src/pages/produits/talika-bust-phytoserum.astro` - Page produit Talika
 
 ---
 
-## 🛠️ UTILISATION DU DASHBOARD ADMIN
+## 🛠️ DASHBOARD ADMIN
 
 ### Accès au Dashboard
 1. Rendez-vous sur `/admin-dashboard/`
@@ -39,6 +39,74 @@ Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliat
 - **Gestion des produits** : Ajouter, modifier, supprimer des produits affiliés
 - **Suivi des performances** : Tracking des clics et conversions
 - **Configuration contextuelle** : Règles d'affichage par collection/article
+
+### Interface Admin Détaillée
+
+Accessible via `/admin-dashboard` > onglet "💰 Affiliation" :
+
+1. **Deals** - Gestion des offres promotionnelles
+2. **Partenaires** - Gestion des marques partenaires  
+3. **Règles & Preview** - Configuration des règles de placement
+
+---
+
+## 🏗️ SYSTÈME TECHNIQUE AVANCÉ
+
+### Structure des Données
+
+```json
+{
+  "products": [...], // Produits existants (Talika, Nutrimuscle)
+  "deals": [...],    // Nouveaux deals configurables
+  "partners": [...], // Partenaires
+  "rules": [...]     // Règles de placement (future)
+}
+```
+
+### API Routes
+
+- `GET/POST/PUT/DELETE /api/affiliate` - CRUD des données d'affiliation
+- `POST /api/upload` - Upload d'images (produits/partenaires)
+- `GET /api/content-placement-resolver` - Prévisualisation des règles
+
+### Fonctionnalités Implémentées
+
+#### ✅ Phase 1 - Infrastructure
+- API routes Astro pour CRUD JSON
+- Système d'upload d'images 
+- Interface admin étendue avec sous-onglets
+- Modales pour création/édition
+
+#### ✅ Composants Réutilisés
+- Styles existants du dashboard admin
+- Structure de données des produits existants
+- Système de placement de `AffiliateProduct.astro`
+- Utilitaires UTM de `affiliate-manager.ts`
+
+---
+
+## 💡 UTILISATION PRATIQUE
+
+### Ajouter un Nouveau Deal
+
+1. Aller dans Admin > Affiliation > Deals
+2. Cliquer sur "Nouveau Deal"
+3. Remplir les informations :
+   - Nom du produit
+   - Code promo
+   - Pourcentage de réduction
+   - URL d'affiliation
+   - Image du produit
+4. Configurer les règles de placement
+5. Sauvegarder et tester
+
+### Ajouter un Nouveau Partenaire
+
+1. Admin > Affiliation > Partenaires
+2. Remplir les informations de la marque
+3. Upload du logo
+4. Configuration des paramètres de tracking
+5. Activation
 
 ---
 
@@ -61,7 +129,7 @@ Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliat
 
 ### 🎯 Tests Fonctionnels
 - [ ] **Navigation et UX**
-  - [ ] Page `/produits-recommandes/` accessible et fonctionnelle
+  - [ ] Page `/outils/produits-recommandes/` accessible et fonctionnelle
   - [ ] Pages produits individuelles (ex: `/produits/talika-bust-phytoserum/`)
   - [ ] Liens d'affiliation correctement trackés
   - [ ] Disclaimers présents et conformes
@@ -92,7 +160,7 @@ Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliat
 
 ---
 
-## 🔧 MAINTENANCE
+## 🔧 MAINTENANCE ET SUPPORT
 
 ### Ajout d'un Nouveau Produit
 1. Modifier `data/affiliate-products.json`
@@ -107,8 +175,21 @@ Le système d'affiliation GLP-1 France utilise un **système de liens d'affiliat
 - Ajuster le placement selon les performances
 - Optimiser les descriptions et visuels
 
+### Troubleshooting
+- Vérifier les URLs d'affiliation
+- Contrôler les codes promo
+- Tester le tracking analytics
+- Valider l'affichage responsive
+
 ---
 
-## 📞 SUPPORT
+## 📞 Support Technique
 
-Pour toute question technique ou éditoriale concernant le système d'affiliation, consulter ce guide ou le dashboard admin.
+Pour toute question concernant le système d'affiliation :
+1. Consulter ce guide
+2. Utiliser le dashboard admin
+3. Vérifier les logs dans `/admin-dashboard`
+
+---
+
+**Note** : Ce système d'affiliation est conçu pour être évolutif et s'adapter aux besoins croissants de monétisation du site GLP-1 France.

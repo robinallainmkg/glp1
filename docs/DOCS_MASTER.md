@@ -1,6 +1,41 @@
 # 📚 Documentation Centrale GLP-1 France
 
-> **Branche de référen## 📊 Dashboard admin et donnée---
+> **Branche de référence : `production`**
+
+Ce fichier centralise et référence toutes les documentations essentielles du projet GLP-1 France.
+
+---
+
+## 📋 Documentation Principale
+
+- [README.md](./README.md) — Installation, déploiement et présentation générale
+- [GUIDE_ESSENTIEL.md](./GUIDE_ESSENTIEL.md) — Workflow quotidien et actions essentielles
+- [INSTALLATION-SUPABASE-5MIN.md](./INSTALLATION-SUPABASE-5MIN.md) — Installation rapide Supabase
+
+## 🛒 Documentation Affiliation
+
+- [GUIDE_AFFILIATION.md](./GUIDE_AFFILIATION.md) — Guide complet d'affiliation (système de liens avec codes promo)
+
+## 📊 Documentation Système de Données
+
+- [SYSTEME_DONNEES_UTILISATEURS.md](./SYSTEME_DONNEES_UTILISATEURS.md) — Documentation complète du système de données utilisateurs
+- [API_ARCHITECTURE.md](./API_ARCHITECTURE.md) — Architecture des APIs
+
+## 🔧 Documentation Administration
+
+- [admin-documentation.md](./admin-documentation.md) — Documentation admin générale
+- [admin-structure.md](./admin-structure.md) — Structure du dashboard admin
+- [suppression-utilisateurs-guide.md](./suppression-utilisateurs-guide.md) — Guide suppression utilisateurs
+
+## 📧 Documentation Communication
+
+- [GUIDE_EMAILS.md](./GUIDE_EMAILS.md) — Gestion des emails et newsletter
+
+## 📦 Archive
+
+- [archive/](./archive/) — Anciens guides et documentation obsolète
+
+---
 
 ## 🔗 APIs et système de données (**NOUVEAU**)
 
