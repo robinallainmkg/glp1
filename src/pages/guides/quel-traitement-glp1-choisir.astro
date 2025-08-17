@@ -4,17 +4,17 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 ---
 
 <BaseLayout 
-  title="Diagnostic GLP-1 Personnalis� : Ozempic ou Wegovy ? | Test Gratuit"
-  description="Diagnostic personnalis� en 5 minutes pour savoir si Ozempic ou Wegovy est fait pour vous. Test gratuit bas� sur votre profil m�dical."
-  keywords="diagnostic GLP-1, test Ozempic, Wegovy, quel traitement choisir, �ligibilit� GLP-1"
+  title="Diagnostic GLP-1 Personnalisé : Ozempic ou Wegovy ? | Test Gratuit"
+  description="Diagnostic personnalisé en 5 minutes pour savoir si Ozempic ou Wegovy est fait pour vous. Test gratuit basé sur votre profil médical."
+  keywords="diagnostic GLP-1, test Ozempic, Wegovy, quel traitement choisir, éligibilité GLP-1"
 >
   <div class="container">
     <div class="diagnostic-page">
       
       <!-- Header -->
       <header class="diagnostic-header">
-        <h1>?? Diagnostic Personnalis� GLP-1</h1>
-        <p class="subtitle">D�couvrez en 5 minutes quel traitement est le plus adapt� � votre situation</p>
+        <h1>🎯 Diagnostic Personnalisé GLP-1</h1>
+        <p class="subtitle">Découvrez en 5 minutes quel traitement est le plus adapté à votre situation</p>
         <div class="progress-bar">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
@@ -31,17 +31,17 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q1" value="effets-secondaires">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
-                  <strong>R�duire les effets secondaires</strong>
-                  <p>Je suis d�j� sous GLP-1 et j'ai des effets ind�sirables</p>
+                  <strong>Réduire les effets secondaires</strong>
+                  <p>Je suis déjà sous GLP-1 et j'ai des effets indésirables</p>
                 </div>
               </span>
             </label>
             <label class="option">
               <input type="radio" name="q1" value="perte-poids">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚖️</div>
                 <div class="option-text">
                   <strong>Perdre du poids</strong>
                   <p>Je veux principalement maigrir</p>
@@ -51,20 +51,20 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q1" value="diabete">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
-                  <strong>Traiter mon diab�te</strong>
-                  <p>J'ai un diab�te de type 2</p>
+                  <strong>Traiter mon diabète</strong>
+                  <p>J'ai un diabète de type 2</p>
                 </div>
               </span>
             </label>
             <label class="option">
               <input type="radio" name="q1" value="les-deux">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Les deux</strong>
-                  <p>Diab�te + perte de poids</p>
+                  <p>Diabète + perte de poids</p>
                 </div>
               </span>
             </label>
@@ -73,12 +73,12 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
         <!-- Question 2: IMC -->
         <div class="question" data-question="2">
-          <h2>Quelle est votre situation pond�rale ?</h2>
+          <h2>Quelle est votre situation pondérale ?</h2>
           <div class="options">
             <label class="option">
               <input type="radio" name="q2" value="surpoids">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Surpoids (IMC 25-30)</strong>
                   <p>Quelques kilos en trop</p>
@@ -88,9 +88,9 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q2" value="obesite-1">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
-                  <strong>Ob�sit� mod�r�e (IMC 30-35)</strong>
+                  <strong>Obésité modérée (IMC 30-35)</strong>
                   <p>Surpoids important</p>
                 </div>
               </span>
@@ -98,25 +98,25 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q2" value="obesite-2">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
-                  <strong>Ob�sit� s�v�re (IMC >35)</strong>
-                  <p>Ob�sit� avec complications</p>
+                  <strong>Obésité sévère (IMC >35)</strong>
+                  <p>Obésité avec complications</p>
                 </div>
               </span>
             </label>
           </div>
         </div>
 
-        <!-- Question 3: Exp�rience r�gimes -->
-        <!-- Question 3: Exp�rience r�gimes -->
+        <!-- Question 3: Expérience régimes -->
+        <!-- Question 3: Expérience régimes -->
         <div class="question" data-question="3">
-          <h2>Avez-vous d�j� essay� de perdre du poids ?</h2>
+          <h2>Avez-vous déjà essayé de perdre du poids ?</h2>
           <div class="options">
             <label class="option">
               <input type="radio" name="q3" value="jamais">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Jamais vraiment</strong>
                   <p>C'est ma premi�re d�marche s�rieuse</p>
@@ -126,7 +126,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q3" value="quelques-fois">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Quelques tentatives</strong>
                   <p>R�gimes avec reprises de poids</p>
@@ -136,7 +136,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q3" value="nombreuses">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Nombreux �checs</strong>
                   <p>Effet yoyo r�p�t�</p>
@@ -146,9 +146,9 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q3" value="glp1-deja">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
-                  <strong>J'ai d�j� fait un traitement GLP-1</strong>
+                  <strong>J'ai déjà fait un traitement GLP-1</strong>
                   <p>Ozempic, Wegovy ou autre, mais j'ai arr�t�</p>
                 </div>
               </span>
@@ -163,7 +163,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q4" value="budget-limite">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Budget limit�</strong>
                   <p>Moins de 150�/mois</p>
@@ -173,7 +173,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q4" value="budget-moyen">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Budget mod�r�</strong>
                   <p>150-300�/mois</p>
@@ -183,7 +183,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q4" value="budget-eleve">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Budget confortable</strong>
                   <p>Plus de 300�/mois</p>
@@ -195,7 +195,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
         <!-- Question 5: Urgence -->
         <div class="question" data-question="5">
-          <h2>Dans quel d�lai souhaitez-vous voir des r�sultats ?</h2>
+          <h2>Dans quel d�lai souhaitez-vous voir des résultats ?</h2>
           <div class="options">
             <label class="option">
               <input type="radio" name="q5" value="rapide">
@@ -210,7 +210,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q5" value="progressif">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Progressivement</strong>
                   <p>Sur 6-12 mois</p>
@@ -220,7 +220,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q5" value="patient">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Patiemment</strong>
                   <p>Pas press�, sur le long terme</p>
@@ -232,12 +232,12 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
         <!-- Question 6: Effets secondaires -->
         <div class="question" data-question="6">
-          <h2>Quelle est votre tol�rance aux effets secondaires ?</h2>
+          <h2>Quelle est votre tolérance aux effets secondaires ?</h2>
           <div class="options">
             <label class="option">
               <input type="radio" name="q6" value="sensible">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Tr�s sensible</strong>
                   <p>Je supporte mal les naus�es</p>
@@ -247,7 +247,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q6" value="normale">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Tol�rance normale</strong>
                   <p>Effets temporaires acceptables</p>
@@ -257,9 +257,9 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q6" value="bonne">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
-                  <strong>Bonne tol�rance</strong>
+                  <strong>Bonne tolérance</strong>
                   <p>J'encaisse bien les traitements</p>
                 </div>
               </span>
@@ -267,9 +267,9 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
           </div>
         </div>
 
-        <!-- Question 7: Suivi m�dical -->
+        <!-- Question 7: Suivi médical -->
         <div class="question" data-question="7">
-          <h2>Avez-vous un suivi m�dical r�gulier ?</h2>
+          <h2>Avez-vous un suivi médical r�gulier ?</h2>
           <div class="options">
             <label class="option">
               <input type="radio" name="q7" value="aucun">
@@ -284,7 +284,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q7" value="occasionnel">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Suivi occasionnel</strong>
                   <p>M�decin traitant de temps en temps</p>
@@ -314,14 +314,14 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
                 <div class="option-icon">?</div>
                 <div class="option-text">
                   <strong>Aucun probl�me</strong>
-                  <p>Bonne sant� g�n�rale</p>
+                  <p>Bonne sant� générale</p>
                 </div>
               </span>
             </label>
             <label class="option">
               <input type="radio" name="q8" value="mineurs">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Probl�mes mineurs</strong>
                   <p>Hypertension, cholest�rol...</p>
@@ -331,7 +331,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option">
               <input type="radio" name="q8" value="importants">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Probl�mes importants</strong>
                   <p>Maladies chroniques multiples</p>
@@ -349,7 +349,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="nausees">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Naus�es</strong>
                   <p>Sensation de mal de c�ur, envies de vomir</p>
@@ -359,7 +359,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="vomissements">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Vomissements</strong>
                   <p>�pisodes de vomissements r�p�t�s</p>
@@ -369,7 +369,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="diarrhee">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Diarrh�e</strong>
                   <p>Selles liquides fr�quentes</p>
@@ -379,7 +379,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="constipation">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Constipation</strong>
                   <p>Difficult�s � aller � la selle</p>
@@ -389,7 +389,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="brulures-estomac">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Br�lures d'estomac</strong>
                   <p>Reflux gastrique, acidit�</p>
@@ -399,7 +399,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="fatigue">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Fatigue excessive</strong>
                   <p>Manque d'�nergie, �puisement</p>
@@ -409,7 +409,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="chute-cheveux">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Chute de cheveux</strong>
                   <p>Perte de cheveux importante</p>
@@ -419,7 +419,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="peau-relachee">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Peau rel�ch�e</strong>
                   <p>Visage creus�, peau frip�e</p>
@@ -429,7 +429,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="vertige">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Vertiges</strong>
                   <p>Sensations d'�tourdissement</p>
@@ -439,7 +439,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             <label class="option checkbox-option">
               <input type="checkbox" name="effets" value="carences">
               <span class="option-content">
-                <div class="option-icon">??</div>
+                <div class="option-icon">⚠️</div>
                 <div class="option-text">
                   <strong>Carences nutritionnelles</strong>
                   <p>Manque de vitamines, min�raux</p>
@@ -453,9 +453,9 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
       <!-- Navigation Buttons -->
       <div class="navigation">
-        <button id="prev-btn" class="btn btn-secondary" style="display: none;">?? Pr�c�dent</button>
-        <button id="next-btn" class="btn btn-primary">Suivant ??</button>
-        <button id="results-btn" class="btn btn-primary" style="display: none;">Voir mes R�sultats ??</button>
+        <button id="prev-btn" class="btn btn-secondary" style="display: none;">⚠️ Pr�c�dent</button>
+        <button id="next-btn" class="btn btn-primary">Suivant ⚠️</button>
+        <button id="results-btn" class="btn btn-primary" style="display: none;">Voir mes R�sultats ⚠️</button>
       </div>
 
       <!-- Results Section -->
@@ -818,9 +818,9 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       
       document.getElementById('prev-btn').style.display = n === 1 ? 'none' : 'inline-block';
       
-      // Pour toutes les questions, afficher le bouton Suivant sauf si on est d�j� aux r�sultats
+      // Pour toutes les questions, afficher le bouton Suivant sauf si on est déjà aux résultats
       document.getElementById('next-btn').style.display = n >= totalQuestions ? 'none' : 'inline-block';
-      document.getElementById('results-btn').style.display = 'none'; // Toujours cach� car les r�sultats s'affichent automatiquement
+      document.getElementById('results-btn').style.display = 'none'; // Toujours cach� car les résultats s'affichent automatiquement
     }
 
     function nextQuestion() {
@@ -845,7 +845,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       }
       
       // Logique sp�ciale : si on est � la question 8 et qu'on n'a pas s�lectionn� "effets secondaires"
-      // on va directement aux r�sultats en sautant la question 9
+      // on va directement aux résultats en sautant la question 9
       if (currentQuestion === 8 && answers.q1 !== 'effets-secondaires') {
         showResults();
         return;
@@ -855,7 +855,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
         currentQuestion++;
         showQuestion(currentQuestion);
       } else {
-        // Si on est � la derni�re question, aller directement aux r�sultats
+        // Si on est � la derni�re question, aller directement aux résultats
         showResults();
       }
     }
@@ -885,7 +885,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (currentQuestion <= totalQuestions) {
         const currentAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
         if (!currentAnswer) {
-          alert('Veuillez s�lectionner une r�ponse avant de voir les r�sultats.');
+          alert('Veuillez s�lectionner une r�ponse avant de voir les résultats.');
           return;
         }
         answers[`q${currentQuestion}`] = currentAnswer.value;
@@ -905,10 +905,10 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (answers.q2 === 'obesite-1') { ozempicScore += 2; wegovyScore += 2; }
       if (answers.q2 === 'obesite-2') wegovyScore += 3;
 
-      // Q3: Exp�rience
+      // Q3: Expérience
       if (answers.q3 === 'nombreuses') wegovyScore += 2;
       if (answers.q3 === 'glp1-deja') { 
-        // Si d�j� eu GLP-1, favoriser une approche diff�rente ou un suivi sp�cialis�
+        // Si déjà eu GLP-1, favoriser une approche diff�rente ou un suivi sp�cialis�
         ozempicScore += 1; 
         wegovyScore += 1; 
       }
@@ -945,7 +945,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       solutions += `
         <div class="recommendation">
           <div class="recommendation-score">Solutions personnalis�es</div>
-          <h3>?? Conseils pour r�duire vos effets secondaires</h3>
+          <h3>⚠️ Conseils pour r�duire vos effets secondaires</h3>
           <p>Bas� sur les effets que vous ressentez, voici nos recommandations :</p>
       `;
 
@@ -953,7 +953,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('nausees') || effets.includes('vomissements')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Naus�es et vomissements</h4>
+            <h4>⚠️ Naus�es et vomissements</h4>
             <ul>
               <li>Prenez votre injection apr�s un repas l�ger</li>
               <li>�vitez les aliments gras et �pic�s</li>
@@ -968,7 +968,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('diarrhee')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Diarrh�e</h4>
+            <h4>⚠️ Diarrh�e</h4>
             <ul>
               <li>Augmentez les fibres solubles (avoine, bananes)</li>
               <li>�vitez les �dulcorants artificiels</li>
@@ -983,7 +983,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('constipation')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Constipation</h4>
+            <h4>⚠️ Constipation</h4>
             <ul>
               <li>Augmentez votre consommation de fibres progressivement</li>
               <li>Buvez plus d'eau (2L minimum par jour)</li>
@@ -998,7 +998,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('fatigue')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Fatigue</h4>
+            <h4>⚠️ Fatigue</h4>
             <ul>
               <li>Assurez-vous de consommer suffisamment de calories</li>
               <li>Compl�ment en vitamines B et fer (apr�s analyse)</li>
@@ -1013,7 +1013,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('chute-cheveux')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Chute de cheveux</h4>
+            <h4>⚠️ Chute de cheveux</h4>
             <ul>
               <li>Compl�ment en biotine et vitamines du groupe B</li>
               <li>Massage du cuir chevelu quotidien</li>
@@ -1028,7 +1028,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('peau-relachee')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Peau rel�ch�e</h4>
+            <h4>⚠️ Peau rel�ch�e</h4>
             <ul>
               <li>Hydratation intense avec des cr�mes raffermissantes</li>
               <li>Massage quotidien avec des huiles (rose musqu�e)</li>
@@ -1043,7 +1043,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       if (effets.includes('carences')) {
         solutions += `
           <div class="effect-solution">
-            <h4>?? Carences nutritionnelles</h4>
+            <h4>⚠️ Carences nutritionnelles</h4>
             <ul>
               <li>Bilan sanguin complet (vitamines B12, D, fer, folates)</li>
               <li>Compl�ment multivitamin� adapt�</li>
@@ -1057,7 +1057,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
       solutions += `
           <div class="general-advice">
-            <h4>?? Conseils g�n�raux</h4>
+            <h4>⚠️ Conseils g�n�raux</h4>
             <ul>
               <li><strong>Communiquez avec votre m�decin :</strong> N'h�sitez pas � discuter d'un ajustement de dose</li>
               <li><strong>Progressivit� :</strong> La plupart des effets s'att�nuent apr�s 4-8 semaines</li>
@@ -1067,11 +1067,11 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
           </div>
           
           <div style="background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid rgba(59, 130, 246, 0.2);">
-            <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center; font-size: 1.3rem;">?? Produits pour soulager les effets secondaires</h4>
+            <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center; font-size: 1.3rem;">⚠️ Produits pour soulager les effets secondaires</h4>
             <div style="display: grid; gap: 1.5rem;">
               <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                  <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">??</div>
+                  <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">⚠️</div>
                   <div>
                     <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Talika Bust Phytoserum</h5>
                     <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Raffermit la peau rel�ch�e � Id�al apr�s amaigrissement GLP-1</p>
@@ -1087,7 +1087,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
               </div>
               <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                  <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">??</div>
+                  <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">⚠️</div>
                   <div>
                     <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Nutrimuscle Whey Native</h5>
                     <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">�vite la fonte musculaire � Compense la r�duction d'app�tit</p>
@@ -1103,12 +1103,12 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
               </div>
             </div>
             <p style="margin-top: 1rem; text-align: center; font-size: 0.8rem; color: var(--gray-500);">
-              <em>?? Liens d'affiliation � Nous touchons une commission sans surco�t pour vous</em>
+              <em>⚠️ Liens d'affiliation � Nous touchons une commission sans surcoût pour vous</em>
             </p>
           </div>
           
           <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-            <h4 style="color: #dc3545; margin-bottom: 1rem;">?? Important</h4>
+            <h4 style="color: #dc3545; margin-bottom: 1rem;">⚠️ Important</h4>
             <p style="margin: 0; font-size: 0.9rem;">Ces conseils sont informatifs. Consultez toujours votre m�decin avant de modifier votre traitement ou d'arr�ter des m�dicaments.</p>
           </div>
 
@@ -1129,23 +1129,23 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
       let recommendation = '';
       
-      // Cas sp�cial : personne ayant d�j� fait un traitement GLP-1
+      // Cas sp�cial : personne ayant déjà fait un traitement GLP-1
       if (answers.q3 === 'glp1-deja') {
         recommendation = `
           <div class="recommendation">
             <div class="recommendation-score">Recommandation : Nouveau D�part</div>
-            <h3>?? Vous avez d�j� essay� un GLP-1 : Optimisons votre approche</h3>
-            <p>Ayant d�j� une exp�rience avec les traitements GLP-1, voici nos recommandations :</p>
+            <h3>⚠️ Vous avez déjà essayé un GLP-1 : Optimisons votre approche</h3>
+            <p>Ayant déjà une expérience avec les traitements GLP-1, voici nos recommandations :</p>
             
-            <h4>?? Analysez votre exp�rience pr�c�dente :</h4>
+            <h4>⚠️ Analysez votre expérience pr�c�dente :</h4>
             <ul class="features-list">
               <li>Quel �tait le traitement utilis� ? (Ozempic, Wegovy, Saxenda...)</li>
-              <li>Pourquoi avez-vous arr�t� ? (Effets secondaires, co�t, efficacit�...)</li>
-              <li>Avez-vous eu des r�sultats ? Combien de poids perdu ?</li>
+              <li>Pourquoi avez-vous arr�t� ? (Effets secondaires, coût, efficacité...)</li>
+              <li>Avez-vous eu des résultats ? Combien de poids perdu ?</li>
               <li>Combien de temps depuis l'arr�t ?</li>
             </ul>
 
-            <h4>?? Nouvelles strat�gies � consid�rer :</h4>
+            <h4>⚠️ Nouvelles strat�gies � consid�rer :</h4>
             <ul class="features-list">
               <li><strong>Changement de mol�cule :</strong> Essayer Mounjaro (tirz�patide) ou Rybelsus (oral)</li>
               <li><strong>Dosage diff�rent :</strong> D�marrage plus progressif pour r�duire les effets secondaires</li>
@@ -1153,12 +1153,12 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
               <li><strong>Timing optimis� :</strong> P�riode de l'ann�e et contexte personnel propices</li>
             </ul>
 
-            <h4>?? Points d'attention :</h4>
+            <h4>⚠️ Points d'attention :</h4>
             <ul class="features-list">
               <li>Discutez avec votre m�decin des raisons de l'arr�t pr�c�dent</li>
-              <li>V�rifiez votre situation m�dicale actuelle (bilan sanguin)</li>
+              <li>V�rifiez votre situation médicale actuelle (bilan sanguin)</li>
               <li>Pr�parez un plan pour �viter les m�mes difficult�s</li>
-              <li>Consid�rez un centre sp�cialis� en ob�sit� pour un suivi expert</li>
+              <li>Consid�rez un centre sp�cialis� en obésité pour un suivi expert</li>
             </ul>
 
             <div style="margin-top: 2rem;">
@@ -1172,11 +1172,11 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
         recommendation = `
           <div class="recommendation">
             <div class="recommendation-score">Recommandation : Ozempic</div>
-            <h3>?? Ozempic semble le plus adapt� � votre profil</h3>
-            <p>Bas� sur vos r�ponses, Ozempic pr�sente les avantages suivants pour vous :</p>
+            <h3>⚠️ Ozempic semble le plus adapt� � votre profil</h3>
+            <p>Bas� sur vos r�ponses, Ozempic présente les avantages suivants pour vous :</p>
             <ul class="features-list">
-              <li>Traitement du diab�te ET perte de poids</li>
-              <li>Co�t g�n�ralement plus abordable</li>
+              <li>Traitement du diabète ET perte de poids</li>
+              <li>Co�t généralement plus abordable</li>
               <li>Dosage progressif pour minimiser les effets secondaires</li>
               <li>Prise en charge possible par l'Assurance Maladie</li>
             </ul>
@@ -1194,16 +1194,16 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
         recommendation = `
           <div class="recommendation">
             <div class="recommendation-score">Recommandation : Wegovy</div>
-            <h3>?? Wegovy semble le plus adapt� � votre profil</h3>
-            <p>Bas� sur vos r�ponses, Wegovy pr�sente les avantages suivants pour vous :</p>
+            <h3>⚠️ Wegovy semble le plus adapt� � votre profil</h3>
+            <p>Bas� sur vos r�ponses, Wegovy présente les avantages suivants pour vous :</p>
             <ul class="features-list">
               <li>Sp�cialement con�u pour la perte de poids</li>
-              <li>Dosage plus �lev� pour des r�sultats plus rapides</li>
-              <li>Id�al pour l'ob�sit� importante</li>
+              <li>Dosage plus �lev� pour des résultats plus rapides</li>
+              <li>Id�al pour l'obésité importante</li>
               <li>Accompagnement nutritionnel recommand�</li>
             </ul>
             <p><strong>Prochaines �tapes :</strong></p>
-            <p>1. Consultez un m�decin sp�cialis� en ob�sit�<br>
+            <p>1. Consultez un m�decin sp�cialis� en obésité<br>
             2. V�rifiez votre �ligibilit� (IMC > 30)<br>
             3. Pr�parez un plan nutritionnel adapt�</p>
             <div style="margin-top: 2rem;">
@@ -1216,13 +1216,13 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
         recommendation = `
           <div class="recommendation">
             <div class="recommendation-score">Les deux sont adapt�s</div>
-            <h3>?? Ozempic et Wegovy sont tous deux adapt�s</h3>
+            <h3>⚠️ Ozempic et Wegovy sont tous deux adapt�s</h3>
             <p>Votre profil correspond aux deux traitements. Le choix d�pendra de :</p>
             <ul class="features-list">
               <li>Votre budget et la prise en charge</li>
               <li>Vos pr�f�rences en termes de dosage</li>
               <li>L'avis de votre m�decin</li>
-              <li>Votre tol�rance aux effets secondaires</li>
+              <li>Votre tolérance aux effets secondaires</li>
             </ul>
             <p><strong>Nous recommandons de commencer par Ozempic</strong> car il est souvent mieux rembours� et permet une adaptation progressive.</p>
             <div style="margin-top: 2rem;">
@@ -1235,11 +1235,11 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
       recommendation += `
         <div style="background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid rgba(59, 130, 246, 0.2);">
-          <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center; font-size: 1.3rem;">?? Optimisez votre traitement</h4>
+          <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center; font-size: 1.3rem;">⚠️ Optimisez votre traitement</h4>
           <div style="display: grid; gap: 1.5rem;">
             <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
               <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">??</div>
+                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">⚠️</div>
                 <div>
                   <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Talika Bust Phytoserum</h5>
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Raffermit la peau rel�ch�e apr�s perte de poids</p>
@@ -1255,7 +1255,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             </div>
             <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
               <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">??</div>
+                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">⚠️</div>
                 <div>
                   <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Nutrimuscle Whey Native</h5>
                   <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Maintient la masse musculaire pendant la perte de poids</p>
@@ -1271,15 +1271,15 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             </div>
           </div>
           <p style="margin-top: 1rem; text-align: center; font-size: 0.8rem; color: var(--gray-500);">
-            <em>?? Liens d'affiliation � Nous touchons une commission sans surco�t pour vous</em>
+            <em>⚠️ Liens d'affiliation � Nous touchons une commission sans surcoût pour vous</em>
           </p>
         </div>
       `;
 
       recommendation += `
         <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-          <h4 style="color: #dc3545; margin-bottom: 1rem;">?? Avertissement Important</h4>
-          <p style="margin: 0; font-size: 0.9rem;">Ce diagnostic est informatif et ne remplace pas une consultation m�dicale. Seul un professionnel de sant� peut d�terminer si un traitement GLP-1 vous convient et vous le prescrire l�galement.</p>
+          <h4 style="color: #dc3545; margin-bottom: 1rem;">⚠️ Avertissement Important</h4>
+          <p style="margin: 0; font-size: 0.9rem;">Ce diagnostic est informatif et ne remplace pas une consultation médicale. Seul un professionnel de santé peut déterminer si un traitement GLP-1 vous convient et vous le prescrire légalement.</p>
         </div>
       `;
 
@@ -1298,6 +1298,72 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       }
     });
   </script>
+
+  <!-- Section Recommandations -->
+  <section class="recommendations-section" style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">🎯 Nos Recommandations Expert</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        
+        <!-- Consultation Expert -->
+        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            👨‍⚕️ <span>Consultation Spécialisée</span>
+          </h3>
+          <p style="margin-bottom: 1rem; opacity: 0.9;">
+            Bénéficiez de l'expertise de nos endocrinologues partenaires pour une prescription personnalisée et un suivi médical optimal.
+          </p>
+          <a href="/guides/experts/" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
+            Consulter un Expert
+          </a>
+        </div>
+
+        <!-- Guide Complet -->
+        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            📚 <span>Guide Complet GLP-1</span>
+          </h3>
+          <p style="margin-bottom: 1rem; opacity: 0.9;">
+            Téléchargez notre guide complet (PDF 45 pages) avec toutes les informations essentielles sur les traitements GLP-1.
+          </p>
+          <a href="/guides/guide-beaute-perte-de-poids-glp1/" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
+            Télécharger le Guide
+          </a>
+        </div>
+
+        <!-- Comparateur Prix -->
+        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            💰 <span>Comparateur Prix</span>
+          </h3>
+          <p style="margin-bottom: 1rem; opacity: 0.9;">
+            Comparez les prix d'Ozempic, Wegovy et Saxenda. Trouvez les meilleures offres et solutions de remboursement.
+          </p>
+          <a href="/collections/glp1-cout/" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
+            Comparer les Prix
+          </a>
+        </div>
+      </div>
+
+      <!-- Call to Action Principal -->
+      <div style="text-align: center; background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 12px; backdrop-filter: blur(10px);">
+        <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">🚀 Prêt à commencer votre transformation ?</h3>
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; opacity: 0.9;">
+          Rejoignez les milliers de personnes qui ont déjà transformé leur vie avec les traitements GLP-1.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/guides/experts/" style="background: #28a745; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: transform 0.2s;">
+            🎯 Consultation Expert
+          </a>
+          <a href="/temoignages/avant-apres-glp1/" style="background: transparent; border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.2s;">
+            📈 Voir les Résultats
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
 
 
