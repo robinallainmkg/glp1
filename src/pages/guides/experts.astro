@@ -57,7 +57,15 @@ try {
             <div class="author-header">
               <div class="author-avatar">
                 <img 
-                  src={`/images/experts/${authorId}.svg`} 
+                  src={(() => {
+                    switch(authorId) {
+                      case 'dr-emilie-martin': return '/images/experts/dr-claire-morel.jpg';
+                      case 'dr-sophie-dubois': return '/images/experts/elodie-carpentier.jpg';
+                      case 'julien-lefevre': return '/images/experts/julien-armand.jpg';
+                      case 'karim-benali': return '/images/experts/marc-delattre.jpg';
+                      default: return `/images/experts/${authorId}.svg`;
+                    }
+                  })()} 
                   alt={`Portrait de ${author.name}`}
                   class="author-image"
                 />
@@ -194,6 +202,8 @@ try {
     justify-content: center;
     flex-shrink: 0;
     overflow: hidden;
+    border: 3px solid var(--primary-100);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .author-image {
@@ -201,6 +211,11 @@ try {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .author-image:hover {
+    transform: scale(1.05);
   }
 
   .author-initials {

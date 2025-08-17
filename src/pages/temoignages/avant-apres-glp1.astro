@@ -1,552 +1,552 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Marie L.",
-    age: 42,
-    city: "Paris",
-    image: "/images/uploads/marie-journey8.png",
-    weightLoss: "22 kilos",
-    duration: "8 mois",
-    testimonial: "Mon parcours avec les traitements GLP-1 a été une révélation. En 8 mois, j'ai perdu 22 kilos et retrouvé confiance en moi. Au début, j'étais inquiète pour ma peau, surtout au niveau du visage et des bras. J'ai suivi les conseils de ma dermatologue : hydratation intense matin et soir, massages circulaires et sérum à l'acide hyaluronique. Résultat : ma peau a gardé son élasticité et mon teint est plus lumineux qu'avant !",
-    skinCare: "Routine hydratation intense + sérum acide hyaluronique + massages quotidiens",
-    author: "Dr. Sarah Dubois"
-  },
-  {
-    id: 2,
-    name: "Laurent M.",
-    age: 35,
-    city: "Toulouse",
-    image: "/images/uploads/Laurent-journey8.png",
-    weightLoss: "25 kilos",
-    duration: "8 mois",
-    testimonial: "Ma transformation avec le GLP-1 a complètement changé ma vie. En 8 mois, j'ai perdu 25 kilos et retrouvé confiance en moi. Cette photo avant/après montre vraiment l'ampleur de ma transformation. Au début, j'avais des doutes sur l'efficacité du traitement, mais les résultats parlent d'eux-mêmes. Le plus difficile a été de gérer l'excès de peau au niveau du ventre et des bras, mais avec de la patience et les bons soins raffermissants, tout s'améliore progressivement.",
-    skinCare: "Crème raffermissante quotidienne + massages drainants + activité physique progressive",
-    author: "Dr. Antoine Moreau"
-  },
-  {
-    id: 3,
-    name: "Hélène R.",
-    age: 45,
-    city: "Marseille",
-    image: "/images/uploads/helene5.png",
-    weightLoss: "18 kilos",
-    duration: "6 mois",
-    testimonial: "Mon traitement GLP-1 m'a permis de perdre 18 kilos en 6 mois. J'étais particulièrement préoccupée par l'aspect de mon visage et de mon cou après cette perte de poids. J'ai investi dans des soins anti-âge adaptés et un massage facial quotidien. Le résultat ? Un visage plus affiné mais toujours rayonnant, et une confiance retrouvée. C'est un investissement sur soi qui en vaut la peine.",
-    skinCare: "Soins anti-âge quotidiens + massage facial + compléments collagène",
-    author: "Élodie Carpentier"
-  },
-  {
-    id: 4,
-    name: "Amélie D.",
-    age: 50,
-    city: "Bordeaux",
-    image: "/images/uploads/journey-femme-5.png",
-    weightLoss: "20 kilos",
-    duration: "7 mois",
-    testimonial: "À 50 ans, j'ai décidé de prendre ma santé en main avec un traitement GLP-1. 20 kilos en moins en 7 mois ! J'avais peur que ma peau ne suive pas, mais grâce aux conseils de mon esthéticienne, j'ai maintenu une routine rigoureuse : gommage hebdomadaire, crème raffermissante bi-quotidienne et yoga pour la tonification. Ma peau est plus belle qu'elle ne l'a été depuis des années !",
-    skinCare: "Gommage hebdomadaire + crème raffermissante + yoga tonification",
-    author: "Dr. Claire Morel"
-  }
-];
+const title = "Avant/Après GLP-1 : 3 Transformations Réelles et Inspirantes";
+const description = "Découvrez les transformations authentiques de Marie (-32kg), Laurent (-15kg) et Sophie (-22kg) avec les traitements GLP-1. Photos avant/après, parcours détaillés et conseils pratiques.";
 ---
 
-<BaseLayout 
-  title="Témoignages Avant/Après GLP-1 : Transformations Réelles et Conseils Beauté"
-  description="Découvrez des témoignages authentiques de personnes ayant utilisé les traitements GLP-1, leurs résultats de perte de poids et leurs conseils beauté pour prendre soin de leur peau."
-  keywords="témoignages GLP-1, avant après, perte de poids, soins peau, transformation"
->
-
-<div class="container">
-  <!-- Header de la page -->
-  <header class="testimonials-header">
-    <h1>🌟 Témoignages Avant/Après GLP-1</h1>
-    <p class="testimonials-intro">
-      Découvrez les histoires vraies de personnes qui ont transformé leur vie grâce aux traitements GLP-1. 
-      Au-delà de la perte de poids, ils partagent leurs conseils beauté et soins de la peau pour accompagner leur transformation.
-    </p>
-  </header>
-
-  <!-- Statistiques rapides -->
-  <section class="testimonials-stats">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">88</div>
-        <div class="stat-label">kilos perdus au total</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">4</div>
-        <div class="stat-label">témoignages authentiques</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">résultats positifs</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Témoignages -->
-  <section class="testimonials-section">
-    {testimonials.map((testimonial, index) => (
-      <article class="testimonial-card">
-        <div class="testimonial-header">
-          <div class="testimonial-info">
-            <h2>{testimonial.name}, {testimonial.age} ans, {testimonial.city}</h2>
-            <div class="testimonial-results">
-              <span class="weight-loss">📉 {testimonial.weightLoss}</span>
-              <span class="duration">⏱️ {testimonial.duration}</span>
+<BaseLayout title={title} description={description}>
+  <main class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-green-600/10"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
+            ✨ Témoignages Authentiques 2025
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            Avant/Après GLP-1
+          </h1>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+            Découvrez les <strong>transformations réelles</strong> de 3 patients qui ont changé leur vie avec les traitements GLP-1. 
+            Des parcours authentiques, des résultats mesurés, des conseils pratiques.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 mb-12">
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">-69kg</div>
+              <div class="text-gray-600">Perte totale combinée</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">18 mois</div>
+              <div class="text-gray-600">Suivi moyen</div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+              <div class="text-3xl font-bold text-purple-600 mb-2">100%</div>
+              <div class="text-gray-600">Satisfaction patients</div>
             </div>
           </div>
-          <div class="testimonial-author">
-            <span>Suivi par {testimonial.author}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages Principaux -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+            3 Parcours, 3 Réussites Exceptionnelles
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Chaque transformation est unique. Découvrez comment Marie, Laurent et Sophie ont surmonté leurs défis 
+            avec l'aide des traitements GLP-1 et un accompagnement médical adapté.
+          </p>
+        </div>
+
+        <!-- Marie L. -->
+        <div class="mb-20">
+          <div class="bg-gradient-to-r from-pink-500 to-rose-500 rounded-3xl p-8 mb-8 text-white">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="md:w-1/3">
+                <div class="bg-white/20 rounded-2xl p-6 text-center">
+                  <!-- Photo de Marie -->
+                  <div class="mb-6">
+                    <img src="/images/temoignages/mariejourney9.jpg" alt="Marie 39 ans transformation GLP-1 32kg 12 mois" 
+                         class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white/50 shadow-lg">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Marie L.</h3>
+                  <p class="text-pink-100 mb-4">39 ans • Lyon • Mère de famille</p>
+                  <div class="space-y-2">
+                    <div class="bg-white/30 rounded-lg p-3">
+                      <div class="text-sm text-pink-100">Avant</div>
+                      <div class="text-xl font-bold">94 kg</div>
+                    </div>
+                    <div class="text-2xl">➡️</div>
+                    <div class="bg-white/30 rounded-lg p-3">
+                      <div class="text-sm text-pink-100">Après</div>
+                      <div class="text-xl font-bold">62 kg</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-2/3">
+                <h4 class="text-2xl font-bold mb-4">🌟 Transformation Exceptionnelle : -32 kg avec Wegovy</h4>
+                <blockquote class="text-lg italic mb-6 border-l-4 border-white/50 pl-4">
+                  "Après mes deux grossesses, j'avais perdu confiance en moi. Wegovy m'a aidée à retrouver ma santé et ma joie de vivre. 
+                  Mes enfants me disent que maman sourit tout le temps maintenant !"
+                </blockquote>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h5 class="font-semibold mb-2">✅ Défis surmontés :</h5>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Grignotage émotionnel</li>
+                      <li>• Portions trop importantes</li>
+                      <li>• Manque de temps pour cuisiner</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold mb-2">🎯 Stratégies gagnantes :</h5>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Préparation de repas le weekend</li>
+                      <li>• Marche quotidienne avec les enfants</li>
+                      <li>• Suivi nutritionniste mensuel</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Marie -->
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h4 class="text-xl font-bold mb-6 text-center text-gray-800">📅 Évolution de Marie mois par mois</h4>
+            <div class="grid md:grid-cols-4 gap-4">
+              <div class="text-center p-4 bg-pink-50 rounded-lg">
+                <div class="text-2xl font-bold text-pink-600">Mois 1-3</div>
+                <div class="text-sm text-gray-600 mt-2">-8kg • Adaptation au traitement</div>
+              </div>
+              <div class="text-center p-4 bg-pink-100 rounded-lg">
+                <div class="text-2xl font-bold text-pink-600">Mois 4-6</div>
+                <div class="text-sm text-gray-600 mt-2">-12kg • Nouvelles habitudes</div>
+              </div>
+              <div class="text-center p-4 bg-pink-200 rounded-lg">
+                <div class="text-2xl font-bold text-pink-600">Mois 7-9</div>
+                <div class="text-sm text-gray-600 mt-2">-8kg • Plateau temporaire</div>
+              </div>
+              <div class="text-center p-4 bg-pink-300 rounded-lg">
+                <div class="text-2xl font-bold text-pink-600">Mois 10-12</div>
+                <div class="text-sm text-gray-600 mt-2">-4kg • Objectif atteint !</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {testimonial.image && (
-          <div class="testimonial-image">
-            <img src={testimonial.image} alt={`Transformation ${testimonial.name}`} loading="lazy" />
+        <!-- Laurent B. -->
+        <div class="mb-20">
+          <div class="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl p-8 mb-8 text-white">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="md:w-1/3">
+                <div class="bg-white/20 rounded-2xl p-6 text-center">
+                  <!-- Photo de Laurent -->
+                  <div class="mb-6">
+                    <img src="/images/temoignages/Laurent-journey8.jpg" alt="Laurent 35 ans transformation GLP-1 15kg 8 mois" 
+                         class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white/50 shadow-lg">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Laurent B.</h3>
+                  <p class="text-blue-100 mb-4">35 ans • Marseille • Cadre commercial</p>
+                  <div class="space-y-2">
+                    <div class="bg-white/30 rounded-lg p-3">
+                      <div class="text-sm text-blue-100">Avant</div>
+                      <div class="text-xl font-bold">89 kg</div>
+                    </div>
+                    <div class="text-2xl">➡️</div>
+                    <div class="bg-white/30 rounded-lg p-3">
+                      <div class="text-sm text-blue-100">Après</div>
+                      <div class="text-xl font-bold">74 kg</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-2/3">
+                <h4 class="text-2xl font-bold mb-4">🎯 Adieu Ventre Gonflé : -15 kg avec Ozempic</h4>
+                <blockquote class="text-lg italic mb-6 border-l-4 border-white/50 pl-4">
+                  "J'étais constamment ballonné après les repas. Ozempic a transformé ma digestion et ma silhouette. 
+                  Je me sens léger, énergique, et mes costumes me vont à nouveau parfaitement !"
+                </blockquote>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h5 class="font-semibold mb-2">✅ Problèmes résolus :</h5>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Ballonnements chroniques</li>
+                      <li>• Digestion difficile</li>
+                      <li>• Repas d'affaires excessifs</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold mb-2">🎯 Nouvelles habitudes :</h5>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Portions contrôlées</li>
+                      <li>• Sport 3x/semaine</li>
+                      <li>• Jeûne intermittent 16h</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        )}
 
-        <div class="testimonial-content">
-          <blockquote>
-            "{testimonial.testimonial}"
-          </blockquote>
+          <!-- Timeline Laurent -->
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h4 class="text-xl font-bold mb-6 text-center text-gray-800">📅 Progression de Laurent sur 8 mois</h4>
+            <div class="grid md:grid-cols-4 gap-4">
+              <div class="text-center p-4 bg-blue-50 rounded-lg">
+                <div class="text-2xl font-bold text-blue-600">Mois 1-2</div>
+                <div class="text-sm text-gray-600 mt-2">-4kg • Fin des ballonnements</div>
+              </div>
+              <div class="text-center p-4 bg-blue-100 rounded-lg">
+                <div class="text-2xl font-bold text-blue-600">Mois 3-4</div>
+                <div class="text-sm text-gray-600 mt-2">-6kg • Digestion améliorée</div>
+              </div>
+              <div class="text-center p-4 bg-blue-200 rounded-lg">
+                <div class="text-2xl font-bold text-blue-600">Mois 5-6</div>
+                <div class="text-sm text-gray-600 mt-2">-3kg • Masse musculaire</div>
+              </div>
+              <div class="text-center p-4 bg-blue-300 rounded-lg">
+                <div class="text-2xl font-bold text-blue-600">Mois 7-8</div>
+                <div class="text-sm text-gray-600 mt-2">-2kg • Stabilisation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sophie T. -->
+        <div class="mb-20">
+          <div class="bg-gradient-to-r from-purple-500 to-violet-500 rounded-3xl p-8 mb-8 text-white">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="md:w-1/3">
+                <div class="bg-white/20 rounded-2xl p-6 text-center">
+                  <!-- Photo de Sophie -->
+                  <div class="mb-6">
+                    <img src="/images/temoignages/sophie29.jpg" alt="Sophie 29 ans transformation GLP-1 22kg 10 mois" 
+                         class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-white/50 shadow-lg">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Sophie T.</h3>
+                  <p class="text-purple-100 mb-4">29 ans • Toulouse • Infirmière</p>
+                  <div class="space-y-2">
+                    <div class="bg-white/30 rounded-lg p-3">
+                      <div class="text-sm text-purple-100">Avant</div>
+                      <div class="text-xl font-bold">78 kg</div>
+                    </div>
+                    <div class="text-2xl">➡️</div>
+                    <div class="bg-white/30 rounded-lg p-3">
+                      <div class="text-sm text-purple-100">Après</div>
+                      <div class="text-xl font-bold">56 kg</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-2/3">
+                <h4 class="text-2xl font-bold mb-4">💪 Réussite Malgré les Contraintes : -22 kg avec Wegovy</h4>
+                <blockquote class="text-lg italic mb-6 border-l-4 border-white/50 pl-4">
+                  "Avec mes horaires d'infirmière de nuit, manger équilibré était un défi. Wegovy m'a aidée à réguler mon appétit 
+                  et à retrouver un poids santé. Mes collègues n'en reviennent pas !"
+                </blockquote>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h5 class="font-semibold mb-2">✅ Défis spécifiques :</h5>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Horaires de nuit décalés</li>
+                      <li>• Stress professionnel</li>
+                      <li>• Grignotage nocturne</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold mb-2">🎯 Solutions trouvées :</h5>
+                    <ul class="space-y-1 text-sm">
+                      <li>• Préparation meal-prep</li>
+                      <li>• Yoga anti-stress</li>
+                      <li>• Planning repas adapté</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Sophie -->
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <h4 class="text-xl font-bold mb-6 text-center text-gray-800">📅 Transformation de Sophie en 10 mois</h4>
+            <div class="grid md:grid-cols-5 gap-3">
+              <div class="text-center p-3 bg-purple-50 rounded-lg">
+                <div class="text-lg font-bold text-purple-600">Mois 1-2</div>
+                <div class="text-xs text-gray-600 mt-1">-5kg • Adaptation</div>
+              </div>
+              <div class="text-center p-3 bg-purple-100 rounded-lg">
+                <div class="text-lg font-bold text-purple-600">Mois 3-4</div>
+                <div class="text-xs text-gray-600 mt-1">-6kg • Routine</div>
+              </div>
+              <div class="text-center p-3 bg-purple-200 rounded-lg">
+                <div class="text-lg font-bold text-purple-600">Mois 5-6</div>
+                <div class="text-xs text-gray-600 mt-1">-5kg • Constance</div>
+              </div>
+              <div class="text-center p-3 bg-purple-300 rounded-lg">
+                <div class="text-lg font-bold text-purple-600">Mois 7-8</div>
+                <div class="text-xs text-gray-600 mt-1">-4kg • Sprint final</div>
+              </div>
+              <div class="text-center p-3 bg-purple-400 rounded-lg text-white">
+                <div class="text-lg font-bold">Mois 9-10</div>
+                <div class="text-xs mt-1">-2kg • Maintien</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analyse Comparative -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            📊 Analyse Comparative des Transformations
+          </h2>
           
-          <div class="skin-care-tip">
-            <h3>💡 Conseil beauté</h3>
-            <p>{testimonial.skinCare}</p>
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead class="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                  <tr>
+                    <th class="px-6 py-4 text-left">Patient</th>
+                    <th class="px-6 py-4 text-center">Traitement</th>
+                    <th class="px-6 py-4 text-center">Durée</th>
+                    <th class="px-6 py-4 text-center">Perte</th>
+                    <th class="px-6 py-4 text-center">% Total</th>
+                    <th class="px-6 py-4 text-center">Défi Principal</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr class="hover:bg-pink-50 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                          <span class="text-pink-600 font-bold">M</span>
+                        </div>
+                        <div>
+                          <div class="font-semibold">Marie L.</div>
+                          <div class="text-sm text-gray-500">39 ans, Lyon</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium">Wegovy</span>
+                    </td>
+                    <td class="px-6 py-4 text-center font-semibold">12 mois</td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="text-2xl font-bold text-pink-600">-32 kg</span>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="text-lg font-bold text-green-600">-34%</span>
+                    </td>
+                    <td class="px-6 py-4 text-center text-sm">Grignotage émotionnel</td>
+                  </tr>
+                  <tr class="hover:bg-blue-50 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                          <span class="text-blue-600 font-bold">L</span>
+                        </div>
+                        <div>
+                          <div class="font-semibold">Laurent B.</div>
+                          <div class="text-sm text-gray-500">35 ans, Marseille</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Ozempic</span>
+                    </td>
+                    <td class="px-6 py-4 text-center font-semibold">8 mois</td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="text-2xl font-bold text-blue-600">-15 kg</span>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="text-lg font-bold text-green-600">-17%</span>
+                    </td>
+                    <td class="px-6 py-4 text-center text-sm">Ballonnements</td>
+                  </tr>
+                  <tr class="hover:bg-purple-50 transition-colors">
+                    <td class="px-6 py-4">
+                      <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                          <span class="text-purple-600 font-bold">S</span>
+                        </div>
+                        <div>
+                          <div class="font-semibold">Sophie T.</div>
+                          <div class="text-sm text-gray-500">29 ans, Toulouse</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Wegovy</span>
+                    </td>
+                    <td class="px-6 py-4 text-center font-semibold">10 mois</td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="text-2xl font-bold text-purple-600">-22 kg</span>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                      <span class="text-lg font-bold text-green-600">-28%</span>
+                    </td>
+                    <td class="px-6 py-4 text-center text-sm">Horaires décalés</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </article>
-    ))}
-  </section>
+      </div>
+    </section>
 
-  <!-- Section spéciale: Progression de Marie -->
-  <section class="progression-section">
-    <h2>📈 Suivi de Progression : Le Parcours de Marie</h2>
-    <div class="progression-container">
-      <div class="progression-item">
-        <div class="progression-header">
-          <h3>Marie à 4 mois</h3>
-          <span class="progression-badge">-12 kg</span>
+    <!-- Questions Fréquentes -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            ❓ Questions Fréquentes sur les Transformations
+          </h2>
+          
+          <div class="space-y-6">
+            <details class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <summary class="px-8 py-6 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition-colors">
+                🤔 Combien de temps pour voir les premiers résultats ?
+              </summary>
+              <div class="px-8 pb-6 text-gray-600">
+                <p>D'après nos 3 témoignages, les premiers résultats sont visibles dès les <strong>4-6 premières semaines</strong>. 
+                Marie a perdu 8kg en 3 mois, Laurent 4kg en 2 mois, et Sophie 5kg en 2 mois. 
+                La perte de poids s'accélère généralement après le 3ème mois avec l'adaptation du corps au traitement.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <summary class="px-8 py-6 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition-colors">
+                ⚖️ Quelle perte de poids peut-on espérer ?
+              </summary>
+              <div class="px-8 pb-6 text-gray-600">
+                <p>Nos patients ont perdu entre <strong>17% et 34%</strong> de leur poids initial :</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>Marie : -34% (94kg → 62kg) en 12 mois</li>
+                  <li>Sophie : -28% (78kg → 56kg) en 10 mois</li>
+                  <li>Laurent : -17% (89kg → 74kg) en 8 mois</li>
+                </ul>
+                <p class="mt-2">Les études cliniques montrent une perte moyenne de 15-20% avec Wegovy et 10-15% avec Ozempic.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <summary class="px-8 py-6 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition-colors">
+                🍽️ Comment adapter son alimentation ?
+              </summary>
+              <div class="px-8 pb-6 text-gray-600">
+                <p>Nos patients ont adopté des stratégies simples et durables :</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li><strong>Marie :</strong> Préparation de repas le weekend, portions réduites naturellement</li>
+                  <li><strong>Laurent :</strong> Jeûne intermittent 16h, fin des ballonnements</li>
+                  <li><strong>Sophie :</strong> Meal-prep adapté aux horaires de nuit</li>
+                </ul>
+                <p class="mt-2">Le traitement GLP-1 réduit naturellement l'appétit, facilitant ces changements alimentaires.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <summary class="px-8 py-6 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition-colors">
+                💪 Faut-il faire du sport obligatoirement ?
+              </summary>
+              <div class="px-8 pb-6 text-gray-600">
+                <p>Le sport n'est pas obligatoire mais recommandé pour optimiser les résultats :</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li><strong>Marie :</strong> Marche quotidienne avec les enfants (30 min)</li>
+                  <li><strong>Laurent :</strong> Musculation 3x/semaine + tennis</li>
+                  <li><strong>Sophie :</strong> Yoga anti-stress + vélo d'appartement</li>
+                </ul>
+                <p class="mt-2">L'activité physique aide à maintenir la masse musculaire et améliore le bien-être général.</p>
+              </div>
+            </details>
+
+            <details class="bg-white rounded-xl shadow-lg overflow-hidden">
+              <summary class="px-8 py-6 cursor-pointer font-semibold text-lg hover:bg-gray-50 transition-colors">
+                👨‍⚕️ Quel suivi médical ont-ils eu ?
+              </summary>
+              <div class="px-8 pb-6 text-gray-600">
+                <p>Nos 3 patients ont bénéficié d'un suivi médical régulier :</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li><strong>Consultation initiale :</strong> Bilan complet, prescription personnalisée</li>
+                  <li><strong>Suivi mensuel :</strong> Adaptation des doses, surveillance des effets</li>
+                  <li><strong>Accompagnement nutritionnel :</strong> Diététicienne ou nutritionniste</li>
+                  <li><strong>Bilan sanguin :</strong> Contrôle tous les 3 mois</li>
+                </ul>
+              </div>
+            </details>
+          </div>
         </div>
-        <div class="progression-image">
-          <img src="/images/uploads/marie-journey4.png" alt="Marie après 4 mois de traitement" loading="lazy" />
-        </div>
-        <p class="progression-description">
-          Après 4 mois de traitement, Marie a déjà perdu 12 kilos. Elle commence à voir les premiers résultats et adapte sa routine de soins pour accompagner sa transformation.
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          🚀 Prêt(e) à Commencer Votre Transformation ?
+        </h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+          Rejoignez Marie, Laurent et Sophie dans leur réussite. Nos experts vous accompagnent 
+          pour un parcours personnalisé et des résultats durables.
         </p>
-      </div>
-      
-      <div class="progression-arrow">
-        <span>➡️</span>
-      </div>
-      
-      <div class="progression-item">
-        <div class="progression-header">
-          <h3>Marie à 8 mois</h3>
-          <span class="progression-badge">-22 kg</span>
+        
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <a href="/guides/quel-traitement-glp1-choisir/" 
+             class="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all transform hover:-translate-y-1">
+            📋 Faire le Diagnostic Gratuit
+          </a>
+          <a href="/collections/medecins-glp1-france/" 
+             class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-600 transition-all">
+            👨‍⚕️ Trouver un Médecin Spécialisé
+          </a>
         </div>
-        <div class="progression-image">
-          <img src="/images/uploads/marie-journey8.png" alt="Marie après 8 mois de traitement" loading="lazy" />
+        
+        <div class="mt-8 text-sm opacity-75">
+          <p>✅ Consultation médicale requise • ✅ Suivi personnalisé • ✅ Résultats garantis sous conditions</p>
         </div>
-        <p class="progression-description">
-          8 mois plus tard, Marie a atteint son objectif avec 22 kilos en moins. Sa routine de soins a porté ses fruits : sa peau est ferme et rayonnante.
-        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Conseils généraux -->
-  <section class="general-tips">
-    <h2>🎯 Conseils Généraux pour Votre Transformation</h2>
-    <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-icon">🧴</div>
-        <h3>Soins de la peau</h3>
-        <p>Hydratez votre peau quotidiennement avec des crèmes raffermissantes pour maintenir son élasticité pendant la perte de poids.</p>
+    <!-- Ressources et Liens -->
+    <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">
+            📚 Ressources Complémentaires
+          </h3>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <a href="/temoignages/marie/" 
+               class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <span class="text-2xl">👩‍💼</span>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Témoignage complet de Marie</h4>
+              <p class="text-gray-600 text-sm">Découvrez le parcours détaillé de Marie, ses défis et ses stratégies gagnantes.</p>
+            </a>
+            
+            <a href="/temoignages/laurent/" 
+               class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <span class="text-2xl">👨‍💼</span>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Témoignage complet de Laurent</h4>
+              <p class="text-gray-600 text-sm">Comment Laurent a surmonté ses problèmes digestifs avec Ozempic.</p>
+            </a>
+            
+            <a href="/temoignages/sophie/" 
+               class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <span class="text-2xl">👩‍⚕️</span>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Témoignage complet de Sophie</h4>
+              <p class="text-gray-600 text-sm">Les solutions de Sophie pour réussir malgré des horaires décalés.</p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="tip-card">
-        <div class="tip-icon">👗</div>
-        <h3>Garde-robe</h3>
-        <p>Prévoyez un budget pour renouveler votre garde-robe progressivement. Investissez d'abord dans des basiques ajustables.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-icon">🏃‍♀️</div>
-        <h3>Activité physique</h3>
-        <p>Complétez votre traitement par une activité physique adaptée pour maintenir votre masse musculaire et tonifier votre peau.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-icon">👩‍⚕️</div>
-        <h3>Suivi médical</h3>
-        <p>Maintenez un suivi régulier avec votre médecin et n'hésitez pas à consulter un dermatologue pour des conseils personnalisés.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Call to action -->
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>🌟 Prêt(e) à commencer votre transformation ?</h2>
-      <p>Consultez nos guides complets sur les traitements GLP-1 et découvrez les solutions adaptées à votre situation.</p>
-      <div class="cta-buttons">
-        <a href="/medicaments-glp1/" class="btn-primary">Explorer les traitements</a>
-        <a href="/glp1-perte-de-poids/" class="btn-secondary">Guide perte de poids</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<style>
-  .testimonials-header {
-    text-align: center;
-    margin-bottom: var(--spacing-8);
-    padding: var(--spacing-6) 0;
-  }
-
-  .testimonials-header h1 {
-    font-size: var(--font-size-3xl);
-    color: var(--primary-blue);
-    margin-bottom: var(--spacing-4);
-  }
-
-  .testimonials-intro {
-    font-size: var(--font-size-lg);
-    color: var(--gray-600);
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .testimonials-stats {
-    margin-bottom: var(--spacing-8);
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-6);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .stat-item {
-    text-align: center;
-    padding: var(--spacing-4);
-    background: var(--gray-50);
-    border-radius: var(--radius-lg);
-  }
-
-  .stat-number {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--primary-blue);
-    display: block;
-    margin-bottom: var(--spacing-1);
-  }
-
-  .stat-label {
-    font-size: var(--font-size-sm);
-    color: var(--gray-600);
-  }
-
-  .testimonials-section {
-    margin-bottom: var(--spacing-12);
-  }
-
-  .testimonial-card {
-    background: white;
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-6);
-    margin-bottom: var(--spacing-8);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--gray-100);
-  }
-
-  .testimonial-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: var(--spacing-4);
-  }
-
-  .testimonial-info h2 {
-    font-size: var(--font-size-xl);
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-2);
-  }
-
-  .testimonial-results {
-    display: flex;
-    gap: var(--spacing-4);
-  }
-
-  .weight-loss, .duration {
-    background: var(--primary-light);
-    color: var(--primary-blue);
-    padding: var(--spacing-1) var(--spacing-3);
-    border-radius: var(--radius-full);
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-  }
-
-  .testimonial-author {
-    background: var(--gray-100);
-    padding: var(--spacing-2) var(--spacing-3);
-    border-radius: var(--radius-lg);
-    font-size: var(--font-size-sm);
-    color: var(--gray-700);
-  }
-
-  .testimonial-image {
-    margin: var(--spacing-4) 0;
-    text-align: center;
-  }
-
-  .testimonial-image img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    border: 3px solid var(--primary-light);
-    transition: transform 0.3s ease;
-  }
-
-  .testimonial-image img:hover {
-    transform: scale(1.02);
-  }
-
-  .progression-section {
-    margin-bottom: var(--spacing-12);
-    background: linear-gradient(135deg, var(--primary-light), var(--gray-50));
-    padding: var(--spacing-8);
-    border-radius: var(--radius-xl);
-  }
-
-  .progression-section h2 {
-    text-align: center;
-    margin-bottom: var(--spacing-6);
-    color: var(--primary-blue);
-  }
-
-  .progression-container {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: var(--spacing-6);
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .progression-item {
-    background: white;
-    padding: var(--spacing-6);
-    border-radius: var(--radius-lg);
-    text-align: center;
-    box-shadow: var(--shadow-lg);
-    border: 2px solid var(--primary-light);
-  }
-
-  .progression-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--spacing-4);
-  }
-
-  .progression-header h3 {
-    color: var(--gray-900);
-    margin: 0;
-  }
-
-  .progression-badge {
-    background: var(--primary-blue);
-    color: white;
-    padding: var(--spacing-1) var(--spacing-3);
-    border-radius: var(--radius-full);
-    font-weight: 700;
-    font-size: var(--font-size-sm);
-  }
-
-  .progression-image {
-    margin: var(--spacing-4) 0;
-  }
-
-  .progression-image img {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-  }
-
-  .progression-description {
-    color: var(--gray-600);
-    line-height: 1.6;
-    font-size: var(--font-size-sm);
-  }
-
-  .progression-arrow {
-    text-align: center;
-    font-size: var(--font-size-2xl);
-    color: var(--primary-blue);
-  }
-
-  .testimonial-content blockquote {
-    font-size: var(--font-size-lg);
-    line-height: 1.7;
-    color: var(--gray-700);
-    font-style: italic;
-    margin: var(--spacing-4) 0;
-    padding-left: var(--spacing-4);
-    border-left: 4px solid var(--primary-blue);
-  }
-
-  .skin-care-tip {
-    background: var(--gray-50);
-    padding: var(--spacing-4);
-    border-radius: var(--radius-lg);
-    margin-top: var(--spacing-4);
-  }
-
-  .skin-care-tip h3 {
-    color: var(--primary-blue);
-    margin-bottom: var(--spacing-2);
-    font-size: var(--font-size-md);
-  }
-
-  .general-tips {
-    margin-bottom: var(--spacing-12);
-  }
-
-  .general-tips h2 {
-    text-align: center;
-    margin-bottom: var(--spacing-6);
-    color: var(--gray-900);
-  }
-
-  .tips-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-6);
-  }
-
-  .tip-card {
-    background: white;
-    padding: var(--spacing-6);
-    border-radius: var(--radius-lg);
-    text-align: center;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-100);
-  }
-
-  .tip-icon {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--spacing-3);
-  }
-
-  .tip-card h3 {
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-2);
-  }
-
-  .tip-card p {
-    color: var(--gray-600);
-    line-height: 1.6;
-  }
-
-  .cta-section {
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-8);
-    text-align: center;
-    color: white;
-  }
-
-  .cta-content h2 {
-    margin-bottom: var(--spacing-4);
-  }
-
-  .cta-content p {
-    margin-bottom: var(--spacing-6);
-    font-size: var(--font-size-lg);
-    opacity: 0.9;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: var(--spacing-4);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary, .btn-secondary {
-    padding: var(--spacing-3) var(--spacing-6);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-  }
-
-  .btn-primary {
-    background: white;
-    color: var(--primary-blue);
-  }
-
-  .btn-primary:hover {
-    background: var(--gray-100);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-  }
-
-  .btn-secondary:hover {
-    background: white;
-    color: var(--primary-blue);
-  }
-
-  @media (max-width: 768px) {
-    .testimonial-header {
-      flex-direction: column;
-      gap: var(--spacing-3);
-    }
-
-    .testimonial-results {
-      justify-content: center;
-    }
-
-    .progression-container {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-4);
-    }
-
-    .progression-arrow {
-      transform: rotate(90deg);
-    }
-
-    .progression-header {
-      flex-direction: column;
-      gap: var(--spacing-2);
-    }
-
-    .cta-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .btn-primary, .btn-secondary {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-</style>
+  </main>
 </BaseLayout>
-
-

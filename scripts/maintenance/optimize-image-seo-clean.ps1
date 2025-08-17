@@ -1,21 +1,84 @@
 # Script d'optimisation SEO des images
 param(
     [string]$ImageName = "mariejourney9.png",
+    [string]$ImagePath = "",
     [switch]$AnalyzeAll
 )
 
-$uploadsPath = "c:\Users\robin\Documents\glp1official\glp1\public\images\uploads"
-$imagePath = Join-Path $uploadsPath $ImageName
+# Chercher l'image dans différents dossiers possibles
+$possiblePaths = @(
+    "public\images\uploads",
+    "public\images\home",
+    "public\images\temoignages", 
+    "public\images\experts",
+    "public\images\produits",
+    "c:\Users\robin\Documents\glp1official\glp1\public\images\uploads"
+)
+
+$imagePath = ""
+$uploadsPath = ""
+
+if ($ImagePath -ne "") {
+    # Si un chemin spécifique est fourni
+    $imagePath = $ImagePath
+    $uploadsPath = Split-Path $ImagePath -Parent
+} else {
+    # Chercher l'image dans les dossiers possibles
+    foreach ($path in $possiblePaths) {
+        $fullPath = Join-Path (Get-Location) $path
+        $testPath = Join-Path $fullPath $ImageName
+        
+        if (Test-Path $testPath) {
+            $imagePath = $testPath
+            $uploadsPath = $fullPath
+            break
+        }
+    }
+    
+    # Si toujours pas trouvé, essayer les chemins absolus
+    if ($imagePath -eq "") {
+        foreach ($path in $possiblePaths) {
+            if (Test-Path $path) {
+                $testPath = Join-Path $path $ImageName
+                if (Test-Path $testPath) {
+                    $imagePath = $testPath
+                    $uploadsPath = $path
+                    break
+                }
+            }
+        }
+    }
+}
 
 Write-Host "=== OPTIMISATION SEO DES IMAGES ===" -ForegroundColor Cyan
 Write-Host "Image cible : $ImageName" -ForegroundColor Green
+Write-Host "Chemin recherche : $uploadsPath" -ForegroundColor Gray
 Write-Host ""
 
 # Analyser l'image
 if (-not (Test-Path $imagePath)) {
-    Write-Host "Erreur : Image $ImageName non trouvee dans $uploadsPath" -ForegroundColor Red
+    Write-Host "❌ Erreur : Image non trouvée dans les chemins suivants :" -ForegroundColor Red
+    foreach ($path in $possiblePaths) {
+        $testPath = Join-Path (Get-Location) $path
+        $fullTestPath = Join-Path $testPath $ImageName
+        Write-Host "   - $fullTestPath" -ForegroundColor Gray
+    }
+    Write-Host ""
+    Write-Host "Images disponibles dans le projet :" -ForegroundColor Yellow
+    foreach ($path in $possiblePaths) {
+        $fullPath = Join-Path (Get-Location) $path
+        if (Test-Path $fullPath) {
+            Write-Host "Dans $fullPath :" -ForegroundColor Cyan
+            Get-ChildItem $fullPath -Filter "*.png","*.jpg","*.jpeg","*.webp" -ErrorAction SilentlyContinue | ForEach-Object {
+                Write-Host "   - $($_.Name)" -ForegroundColor Gray
+            }
+        }
+    }
     exit 1
 }
+
+Write-Host "✅ Image trouvée : $imagePath" -ForegroundColor Green
+Write-Host ""
 
 $imageFile = Get-Item $imagePath
 $sizeKB = [math]::Round($imageFile.Length / 1024, 2)
