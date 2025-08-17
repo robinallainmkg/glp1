@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://glp1-france.fr',
   base: '/',
-  output: 'hybrid',
+  output: 'static',
   integrations: [sitemap(), tailwind()],
   server: {
     port: 4321,
