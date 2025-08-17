@@ -1,9 +1,0 @@
-# Exemple de prompt
-set theme.primary #1e40af
-set theme.accent #16a34a
-set theme.rounded true
-set menu.desktopVisible true
-set readingTime.wpm 200
-# add author "Camille Martin" "Rédaction santé"
-# remove author "Julien Lefèvre"
-# map category "glp-1 cost" "glp1-cout"

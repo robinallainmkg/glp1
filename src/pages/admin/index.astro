@@ -1,0 +1,106 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+
+const title = "Admin - GLP-1 France";
+const description = "Interface d'administration du site GLP-1 France";
+const lastUpdate = new Date().toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
+---
+
+<AdminLayout title={title} currentPage="dashboard">
+  <style>
+    .dashboard-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dashboard-header {
+      margin-bottom: 2rem;
+    }
+
+    .dashboard-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+
+    .dashboard-subtitle {
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+
+    .dashboard-timestamp {
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .dashboard-card {
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s;
+    }
+
+    .dashboard-card:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-icon.blue { background: #3b82f6; color: white; }
+    .card-icon.green { background: #10b981; color: white; }
+
+    .card-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+  </style>
+
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1 class="dashboard-title">Administration</h1>
+      <p class="dashboard-subtitle">Interface d'administration du site GLP-1 France</p>
+      <p class="dashboard-timestamp">Dernière mise à jour : {lastUpdate}</p>
+    </div>
+
+    <div class="dashboard-grid">
+      <a href="/admin/user-data/" class="dashboard-card">
+        <div class="card-icon blue">👥</div>
+        <h3 class="card-title">Utilisateurs</h3>
+        <p class="card-description">Gestion des comptes utilisateurs</p>
+      </a>
+
+      <a href="/admin/affiliate/" class="dashboard-card">
+        <div class="card-icon green">🏷️</div>
+        <h3 class="card-title">Affiliation</h3>
+        <p class="card-description">Gestion des partenariats</p>
+      </a>
+    </div>
+  </div>
+</AdminLayout>

@@ -16,7 +16,7 @@ export const onRequest: MiddlewareHandler = async ({ request, locals }, next) =>
     "script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
-    "connect-src 'self' https://api.github.com https://github.com",
+    "connect-src 'self' https://api.github.com https://github.com https://ywekaivgjzsmdocchvum.supabase.co",
     "frame-src 'self'",
     "object-src 'none'",
     "base-uri 'self'"

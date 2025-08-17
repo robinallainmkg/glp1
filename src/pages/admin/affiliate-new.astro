@@ -1,0 +1,1353 @@
+---
+// Configuration pour Astro hybrid
+export const prerender = false;
+
+import AdminLayout from '../../layouts/AdminLayout.astro';
+---
+
+<AdminLayout title="Gestion Affiliation - Admin GLP-1" currentPage="affiliate">
+  <div class="admin-content">
+    <div class="admin-header">
+      <div>
+        <h1>🏷️ Gestion de l'Affiliation</h1>
+        <p class="admin-subtitle">Gestion des marques, produits et deals partenaires</p>
+      </div>
+    </div>
+
+    <!-- Loading state -->
+    <div id="loading" class="loading-state">
+      <div class="loading-spinner"></div>
+      <p>Chargement des données d'affiliation...</p>
+    </div>
+
+    <!-- Error state -->
+    <div id="error" class="alert alert-error" style="display: none;">
+      <h3>❌ Erreur</h3>
+      <p id="error-message"></p>
+    </div>
+
+    <!-- Success notification -->
+    <div id="notification" class="notification" style="display: none;">
+      <span id="notification-message"></span>
+    </div>
+
+    <!-- Navigation tabs -->
+    <div id="content" style="display: none;">
+      <div class="admin-tabs">
+        <button class="tab-btn active" data-tab="brands">
+          🏢 Marques (<span id="brands-count">0</span>)
+        </button>
+        <button class="tab-btn" data-tab="products">
+          📦 Produits (<span id="products-count">0</span>)
+        </button>
+        <button class="tab-btn" data-tab="deals">
+          💰 Deals (<span id="deals-count">0</span>)
+        </button>
+      </div>
+
+      <!-- Section Marques -->
+      <div id="brands" class="tab-content active">
+        <div class="table-container">
+          <div class="table-header">
+            <h2>🏢 Marques Partenaires</h2>
+            <div class="header-actions">
+              <button id="refresh-brands-btn" class="refresh-btn">🔄 Actualiser</button>
+              <button id="add-brand-btn" class="add-btn">➕ Ajouter Marque</button>
+            </div>
+          </div>
+          
+          <div id="brands-empty" class="empty-state" style="display: none;">
+            <p>🏢 Aucune marque trouvée</p>
+            <small>Cliquez sur "Ajouter Marque" pour commencer</small>
+          </div>
+          
+          <div id="brands-table-wrapper" class="table-wrapper" style="display: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>🏢 Marque</th>
+                  <th>🌐 Site Web</th>
+                  <th>💰 Commission</th>
+                  <th>📧 Contact</th>
+                  <th>📅 Créée</th>
+                  <th>🛠️ Actions</th>
+                </tr>
+              </thead>
+              <tbody id="brands-tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Produits -->
+      <div id="products" class="tab-content">
+        <div class="table-container">
+          <div class="table-header">
+            <h2>📦 Produits Affiliés</h2>
+            <div class="header-actions">
+              <button id="refresh-products-btn" class="refresh-btn">🔄 Actualiser</button>
+              <button id="add-product-btn" class="add-btn">➕ Ajouter Produit</button>
+            </div>
+          </div>
+          
+          <div id="products-empty" class="empty-state" style="display: none;">
+            <p>📦 Aucun produit trouvé</p>
+            <small>Cliquez sur "Ajouter Produit" pour commencer</small>
+          </div>
+          
+          <div id="products-table-wrapper" class="table-wrapper" style="display: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>📦 Produit</th>
+                  <th>🏢 Marque</th>
+                  <th>💰 Prix</th>
+                  <th>🎯 GLP-1</th>
+                  <th>📊 Statut</th>
+                  <th>📅 Créé</th>
+                  <th>🛠️ Actions</th>
+                </tr>
+              </thead>
+              <tbody id="products-tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Deals -->
+      <div id="deals" class="tab-content">
+        <div class="table-container">
+          <div class="table-header">
+            <h2>💰 Deals & Promotions</h2>
+            <div class="header-actions">
+              <button id="refresh-deals-btn" class="refresh-btn">🔄 Actualiser</button>
+              <button id="add-deal-btn" class="add-btn">➕ Ajouter Deal</button>
+            </div>
+          </div>
+          
+          <div id="deals-empty" class="empty-state" style="display: none;">
+            <p>💰 Aucun deal trouvé</p>
+            <small>Cliquez sur "Ajouter Deal" pour commencer</small>
+          </div>
+          
+          <div id="deals-table-wrapper" class="table-wrapper" style="display: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>💰 Deal</th>
+                  <th>🏢 Marque</th>
+                  <th>📊 Remise</th>
+                  <th>💎 Commission</th>
+                  <th>📅 Période</th>
+                  <th>📈 Stats</th>
+                  <th>🛠️ Actions</th>
+                </tr>
+              </thead>
+              <tbody id="deals-tbody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal pour marque -->
+    <div id="brand-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="brand-modal-title">Ajouter une marque</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <form id="brand-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="brand-name">Nom de la marque *</label>
+              <input type="text" id="brand-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="brand-website">Site web</label>
+              <input type="url" id="brand-website" name="website_url" placeholder="https://...">
+            </div>
+            <div class="form-group full-width">
+              <label for="brand-description">Description *</label>
+              <textarea id="brand-description" name="description" required rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="brand-commission">Commission (%)</label>
+              <input type="number" id="brand-commission" name="default_commission" min="0" max="100" step="0.1" value="5">
+            </div>
+            <div class="form-group">
+              <label for="brand-discount">Remise par défaut (%)</label>
+              <input type="number" id="brand-discount" name="default_discount" min="0" max="100" step="0.1" value="0">
+            </div>
+            <div class="form-group">
+              <label for="brand-partner-code">Code partenaire</label>
+              <input type="text" id="brand-partner-code" name="partner_code">
+            </div>
+            <div class="form-group">
+              <label for="brand-contact">Email contact</label>
+              <input type="email" id="brand-contact" name="contact_email">
+            </div>
+            <div class="form-group">
+              <label for="brand-logo">URL Logo</label>
+              <input type="url" id="brand-logo" name="logo_url" placeholder="https://...">
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" onclick="closeBrandModal()">Annuler</button>
+            <button type="submit" class="btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal pour produit -->
+    <div id="product-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="product-modal-title">Ajouter un produit</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <form id="product-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="product-name">Nom du produit *</label>
+              <input type="text" id="product-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="product-brand">Marque *</label>
+              <select id="product-brand" name="brand_id" required>
+                <option value="">Sélectionner une marque</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="product-description">Description *</label>
+              <textarea id="product-description" name="description" required rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="product-price">Prix (€) *</label>
+              <input type="number" id="product-price" name="price" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <label for="product-affiliate-url">URL d'affiliation</label>
+              <input type="url" id="product-affiliate-url" name="affiliate_url" placeholder="https://...">
+            </div>
+            <div class="form-group">
+              <label for="product-image">URL Image</label>
+              <input type="url" id="product-image" name="image_url" placeholder="https://...">
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" id="product-glp1" name="is_glp1_recommended">
+                Recommandé pour GLP-1
+              </label>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" onclick="closeProductModal()">Annuler</button>
+            <button type="submit" class="btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal pour deal -->
+    <div id="deal-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="deal-modal-title">Ajouter un deal</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <form id="deal-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="deal-title">Titre du deal *</label>
+              <input type="text" id="deal-title" name="title" required>
+            </div>
+            <div class="form-group">
+              <label for="deal-brand">Marque *</label>
+              <select id="deal-brand" name="brand_id" required>
+                <option value="">Sélectionner une marque</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="deal-discount">Remise (%) *</label>
+              <input type="number" id="deal-discount" name="discount_percentage" min="0" max="100" step="0.1" required>
+            </div>
+            <div class="form-group">
+              <label for="deal-commission">Commission (%) *</label>
+              <input type="number" id="deal-commission" name="commission_percentage" min="0" max="100" step="0.1" required>
+            </div>
+            <div class="form-group">
+              <label for="deal-promo-code">Code promo</label>
+              <input type="text" id="deal-promo-code" name="promo_code">
+            </div>
+            <div class="form-group">
+              <label for="deal-start-date">Date de début</label>
+              <input type="datetime-local" id="deal-start-date" name="start_date">
+            </div>
+            <div class="form-group">
+              <label for="deal-end-date">Date de fin</label>
+              <input type="datetime-local" id="deal-end-date" name="end_date">
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn-secondary" onclick="closeDealModal()">Annuler</button>
+            <button type="submit" class="btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</AdminLayout>
+
+<style>
+  .admin-content {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .admin-header {
+    margin-bottom: 2rem;
+  }
+
+  .admin-header h1 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+
+  .admin-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+  }
+
+  .admin-tabs {
+    display: flex;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 2rem;
+  }
+
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+
+  .tab-btn:hover {
+    color: #059669;
+    background-color: #f0f9ff;
+  }
+
+  .tab-btn.active {
+    color: #059669;
+    border-bottom-color: #059669;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .table-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .table-header h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin: 0;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .refresh-btn, .add-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .refresh-btn {
+    background-color: #f1f5f9;
+    color: #475569;
+  }
+
+  .refresh-btn:hover {
+    background-color: #e2e8f0;
+  }
+
+  .add-btn {
+    background-color: #059669;
+    color: white;
+  }
+
+  .add-btn:hover {
+    background-color: #047857;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .data-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .data-table tr:hover {
+    background-color: #f8fafc;
+  }
+
+  .loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #059669;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+  }
+
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .notification.success {
+    background-color: #059669;
+  }
+
+  .notification.error {
+    background-color: #dc2626;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+
+  .empty-state {
+    padding: 3rem;
+    text-align: center;
+    color: #64748b;
+  }
+
+  .empty-state p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background: white;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-header h3 {
+    margin: 0;
+    color: #1e293b;
+  }
+
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #64748b;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+  }
+
+  .modal-actions {
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background-color: #059669;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #047857;
+  }
+
+  .btn-secondary {
+    background-color: #f1f5f9;
+    color: #475569;
+  }
+
+  .btn-secondary:hover {
+    background-color: #e2e8f0;
+  }
+
+  .action-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .action-btn:hover {
+    background-color: #f1f5f9;
+  }
+
+  .edit-btn {
+    color: #0369a1;
+  }
+
+  .delete-btn {
+    color: #dc2626;
+  }
+
+  .status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .status-active {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+
+  .status-inactive {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+</style>
+
+<script>
+  // Variables globales
+  let brands = [];
+  let products = [];
+  let deals = [];
+  let currentTab = 'brands';
+
+  // Initialisation
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Initialisation du dashboard affiliation');
+    
+    initializeTabs();
+    initializeModals();
+    loadInitialData();
+  });
+
+  // ========================================
+  // GESTION DES ONGLETS
+  // ========================================
+  
+  function initializeTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        switchTab(tab);
+      });
+    });
+  }
+
+  function switchTab(tab) {
+    // Mettre à jour les boutons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-tab') === tab) {
+        btn.classList.add('active');
+      }
+    });
+
+    // Mettre à jour le contenu
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+    });
+    document.getElementById(tab).classList.add('active');
+
+    currentTab = tab;
+
+    // Charger les données de l'onglet si nécessaire
+    if (tab === 'brands' && brands.length === 0) {
+      loadBrands();
+    } else if (tab === 'products' && products.length === 0) {
+      loadProducts();
+    } else if (tab === 'deals' && deals.length === 0) {
+      loadDeals();
+    }
+  }
+
+  // ========================================
+  // CHARGEMENT DES DONNÉES
+  // ========================================
+  
+  async function loadInitialData() {
+    const loadingEl = document.getElementById('loading');
+    const errorEl = document.getElementById('error');
+    const contentEl = document.getElementById('content');
+    
+    try {
+      loadingEl.style.display = 'block';
+      errorEl.style.display = 'none';
+      contentEl.style.display = 'none';
+      
+      // Charger les marques en premier
+      await loadBrands();
+      
+      loadingEl.style.display = 'none';
+      contentEl.style.display = 'block';
+      
+    } catch (error) {
+      console.error('❌ Erreur chargement initial:', error);
+      showError('Erreur lors du chargement des données');
+    }
+  }
+
+  async function loadBrands() {
+    try {
+      console.log('🔄 Chargement des marques...');
+      
+      const response = await fetch('/api/brands?page=1&limit=50');
+      const data = await response.json();
+      
+      if (data.success) {
+        brands = data.data || [];
+        document.getElementById('brands-count').textContent = brands.length;
+        renderBrands();
+        console.log(`✅ ${brands.length} marques chargées`);
+      } else {
+        throw new Error(data.error || 'Erreur chargement marques');
+      }
+    } catch (error) {
+      console.error('❌ Erreur chargement marques:', error);
+      showError('Erreur lors du chargement des marques');
+    }
+  }
+
+  async function loadProducts() {
+    try {
+      console.log('🔄 Chargement des produits...');
+      
+      const response = await fetch('/api/products?page=1&limit=50');
+      const data = await response.json();
+      
+      if (data.success) {
+        products = data.data || [];
+        document.getElementById('products-count').textContent = products.length;
+        renderProducts();
+        console.log(`✅ ${products.length} produits chargés`);
+      } else {
+        throw new Error(data.error || 'Erreur chargement produits');
+      }
+    } catch (error) {
+      console.error('❌ Erreur chargement produits:', error);
+      showError('Erreur lors du chargement des produits');
+    }
+  }
+
+  async function loadDeals() {
+    try {
+      console.log('🔄 Chargement des deals...');
+      
+      const response = await fetch('/api/deals?page=1&limit=50');
+      const data = await response.json();
+      
+      if (data.success) {
+        deals = data.data || [];
+        document.getElementById('deals-count').textContent = deals.length;
+        renderDeals();
+        console.log(`✅ ${deals.length} deals chargés`);
+      } else {
+        throw new Error(data.error || 'Erreur chargement deals');
+      }
+    } catch (error) {
+      console.error('❌ Erreur chargement deals:', error);
+      showError('Erreur lors du chargement des deals');
+    }
+  }
+
+  // ========================================
+  // RENDU DES TABLEAUX
+  // ========================================
+
+  function renderBrands() {
+    const tbody = document.getElementById('brands-tbody');
+    const emptyState = document.getElementById('brands-empty');
+    const tableWrapper = document.getElementById('brands-table-wrapper');
+    
+    if (brands.length === 0) {
+      emptyState.style.display = 'block';
+      tableWrapper.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      tableWrapper.style.display = 'block';
+      
+      tbody.innerHTML = brands.map(brand => `
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              ${brand.logo_url ? `<img src="${brand.logo_url}" alt="${brand.name}" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;">` : '<div style="width: 40px; height: 40px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #64748b;">' + brand.name.charAt(0) + '</div>'}
+              <div>
+                <div style="font-weight: 600; color: #1e293b;">${brand.name}</div>
+                <div style="font-size: 0.875rem; color: #64748b;">${brand.description?.substring(0, 50)}${brand.description?.length > 50 ? '...' : ''}</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            ${brand.website_url ? `<a href="${brand.website_url}" target="_blank" style="color: #0369a1; text-decoration: none;">${brand.website_url}</a>` : '<span style="color: #9ca3af;">Non renseigné</span>'}
+          </td>
+          <td>
+            <span style="font-weight: 600; color: #059669;">${brand.default_commission || 0}%</span>
+          </td>
+          <td>
+            ${brand.contact_email ? `<a href="mailto:${brand.contact_email}" style="color: #0369a1; text-decoration: none;">${brand.contact_email}</a>` : '<span style="color: #9ca3af;">Non renseigné</span>'}
+          </td>
+          <td>
+            ${formatDate(brand.created_at)}
+          </td>
+          <td>
+            <div style="display: flex; gap: 0.5rem;">
+              <button onclick="editBrand('${brand.id}')" class="action-btn edit-btn" title="Modifier">✏️</button>
+              <button onclick="deleteBrand('${brand.id}')" class="action-btn delete-btn" title="Supprimer">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+  }
+
+  function renderProducts() {
+    const tbody = document.getElementById('products-tbody');
+    const emptyState = document.getElementById('products-empty');
+    const tableWrapper = document.getElementById('products-table-wrapper');
+    
+    if (products.length === 0) {
+      emptyState.style.display = 'block';
+      tableWrapper.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      tableWrapper.style.display = 'block';
+      
+      tbody.innerHTML = products.map(product => `
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              ${product.image_url ? `<img src="${product.image_url}" alt="${product.name}" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;">` : '<div style="width: 40px; height: 40px; background: #e2e8f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #64748b;">📦</div>'}
+              <div>
+                <div style="font-weight: 600; color: #1e293b;">${product.name}</div>
+                <div style="font-size: 0.875rem; color: #64748b;">${product.description?.substring(0, 50)}${product.description?.length > 50 ? '...' : ''}</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span style="font-weight: 600; color: #475569;">${product.brands?.name || 'Sans marque'}</span>
+          </td>
+          <td>
+            <span style="font-weight: 600; color: #059669;">${product.price?.toFixed(2)}€</span>
+          </td>
+          <td>
+            <span class="status-badge ${product.is_glp1_recommended ? 'status-active' : 'status-inactive'}">
+              ${product.is_glp1_recommended ? '✅ Oui' : '❌ Non'}
+            </span>
+          </td>
+          <td>
+            <span class="status-badge ${product.is_active ? 'status-active' : 'status-inactive'}">
+              ${product.is_active ? 'Actif' : 'Inactif'}
+            </span>
+          </td>
+          <td>
+            ${formatDate(product.created_at)}
+          </td>
+          <td>
+            <div style="display: flex; gap: 0.5rem;">
+              <button onclick="editProduct('${product.id}')" class="action-btn edit-btn" title="Modifier">✏️</button>
+              <button onclick="deleteProduct('${product.id}')" class="action-btn delete-btn" title="Supprimer">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+  }
+
+  function renderDeals() {
+    const tbody = document.getElementById('deals-tbody');
+    const emptyState = document.getElementById('deals-empty');
+    const tableWrapper = document.getElementById('deals-table-wrapper');
+    
+    if (deals.length === 0) {
+      emptyState.style.display = 'block';
+      tableWrapper.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      tableWrapper.style.display = 'block';
+      
+      tbody.innerHTML = deals.map(deal => `
+        <tr>
+          <td>
+            <div>
+              <div style="font-weight: 600; color: #1e293b;">${deal.title}</div>
+              ${deal.promo_code ? `<div style="font-size: 0.875rem; color: #059669; font-weight: 600;">Code: ${deal.promo_code}</div>` : ''}
+            </div>
+          </td>
+          <td>
+            <span style="font-weight: 600; color: #475569;">${deal.brands?.name || 'Sans marque'}</span>
+          </td>
+          <td>
+            <span style="font-weight: 600; color: #dc2626;">-${deal.discount_percentage}%</span>
+          </td>
+          <td>
+            <span style="font-weight: 600; color: #059669;">${deal.commission_percentage}%</span>
+          </td>
+          <td>
+            <div style="font-size: 0.875rem;">
+              <div>Du: ${formatDate(deal.start_date)}</div>
+              ${deal.end_date ? `<div>Au: ${formatDate(deal.end_date)}</div>` : '<div style="color: #64748b;">Pas de fin</div>'}
+            </div>
+          </td>
+          <td>
+            <div style="font-size: 0.875rem;">
+              <div>👆 ${deal.click_count || 0} clics</div>
+              <div>💰 ${deal.conversion_count || 0} conversions</div>
+              <div>📈 ${(deal.revenue || 0).toFixed(2)}€</div>
+            </div>
+          </td>
+          <td>
+            <div style="display: flex; gap: 0.5rem;">
+              <button onclick="editDeal('${deal.id}')" class="action-btn edit-btn" title="Modifier">✏️</button>
+              <button onclick="deleteDeal('${deal.id}')" class="action-btn delete-btn" title="Supprimer">🗑️</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+  }
+
+  // ========================================
+  // GESTION DES MODALES
+  // ========================================
+
+  function initializeModals() {
+    // Event listeners pour les boutons d'ajout
+    document.getElementById('add-brand-btn').addEventListener('click', () => showBrandModal());
+    document.getElementById('add-product-btn').addEventListener('click', () => showProductModal());
+    document.getElementById('add-deal-btn').addEventListener('click', () => showDealModal());
+
+    // Event listeners pour les boutons de rafraîchissement
+    document.getElementById('refresh-brands-btn').addEventListener('click', loadBrands);
+    document.getElementById('refresh-products-btn').addEventListener('click', loadProducts);
+    document.getElementById('refresh-deals-btn').addEventListener('click', loadDeals);
+
+    // Event listeners pour les formulaires
+    document.getElementById('brand-form').addEventListener('submit', handleBrandSubmit);
+    document.getElementById('product-form').addEventListener('submit', handleProductSubmit);
+    document.getElementById('deal-form').addEventListener('submit', handleDealSubmit);
+
+    // Event listeners pour fermer les modales
+    document.querySelectorAll('.modal-close').forEach(btn => {
+      btn.addEventListener('click', closeAllModals);
+    });
+
+    // Fermer les modales en cliquant à l'extérieur
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeAllModals();
+        }
+      });
+    });
+  }
+
+  function showBrandModal(brandId = null) {
+    const modal = document.getElementById('brand-modal');
+    const title = document.getElementById('brand-modal-title');
+    const form = document.getElementById('brand-form');
+    
+    if (brandId) {
+      title.textContent = 'Modifier la marque';
+      const brand = brands.find(b => b.id === brandId);
+      if (brand) {
+        form.elements.name.value = brand.name || '';
+        form.elements.description.value = brand.description || '';
+        form.elements.website_url.value = brand.website_url || '';
+        form.elements.default_commission.value = brand.default_commission || 5;
+        form.elements.default_discount.value = brand.default_discount || 0;
+        form.elements.partner_code.value = brand.partner_code || '';
+        form.elements.contact_email.value = brand.contact_email || '';
+        form.elements.logo_url.value = brand.logo_url || '';
+        form.dataset.editingId = brandId;
+      }
+    } else {
+      title.textContent = 'Ajouter une marque';
+      form.reset();
+      delete form.dataset.editingId;
+    }
+    
+    modal.style.display = 'flex';
+  }
+
+  function showProductModal(productId = null) {
+    const modal = document.getElementById('product-modal');
+    const title = document.getElementById('product-modal-title');
+    const form = document.getElementById('product-form');
+    const brandSelect = document.getElementById('product-brand');
+    
+    // Remplir la liste des marques
+    brandSelect.innerHTML = '<option value="">Sélectionner une marque</option>' +
+      brands.map(brand => `<option value="${brand.id}">${brand.name}</option>`).join('');
+    
+    if (productId) {
+      title.textContent = 'Modifier le produit';
+      const product = products.find(p => p.id === productId);
+      if (product) {
+        form.elements.name.value = product.name || '';
+        form.elements.brand_id.value = product.brand_id || '';
+        form.elements.description.value = product.description || '';
+        form.elements.price.value = product.price || '';
+        form.elements.affiliate_url.value = product.affiliate_url || '';
+        form.elements.image_url.value = product.image_url || '';
+        form.elements.is_glp1_recommended.checked = product.is_glp1_recommended || false;
+        form.dataset.editingId = productId;
+      }
+    } else {
+      title.textContent = 'Ajouter un produit';
+      form.reset();
+      delete form.dataset.editingId;
+    }
+    
+    modal.style.display = 'flex';
+  }
+
+  function showDealModal(dealId = null) {
+    const modal = document.getElementById('deal-modal');
+    const title = document.getElementById('deal-modal-title');
+    const form = document.getElementById('deal-form');
+    const brandSelect = document.getElementById('deal-brand');
+    
+    // Remplir la liste des marques
+    brandSelect.innerHTML = '<option value="">Sélectionner une marque</option>' +
+      brands.map(brand => `<option value="${brand.id}">${brand.name}</option>`).join('');
+    
+    if (dealId) {
+      title.textContent = 'Modifier le deal';
+      const deal = deals.find(d => d.id === dealId);
+      if (deal) {
+        form.elements.title.value = deal.title || '';
+        form.elements.brand_id.value = deal.brand_id || '';
+        form.elements.discount_percentage.value = deal.discount_percentage || '';
+        form.elements.commission_percentage.value = deal.commission_percentage || '';
+        form.elements.promo_code.value = deal.promo_code || '';
+        if (deal.start_date) {
+          form.elements.start_date.value = new Date(deal.start_date).toISOString().slice(0, 16);
+        }
+        if (deal.end_date) {
+          form.elements.end_date.value = new Date(deal.end_date).toISOString().slice(0, 16);
+        }
+        form.dataset.editingId = dealId;
+      }
+    } else {
+      title.textContent = 'Ajouter un deal';
+      form.reset();
+      delete form.dataset.editingId;
+    }
+    
+    modal.style.display = 'flex';
+  }
+
+  function closeAllModals() {
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.style.display = 'none';
+    });
+  }
+
+  function closeBrandModal() {
+    document.getElementById('brand-modal').style.display = 'none';
+  }
+
+  function closeProductModal() {
+    document.getElementById('product-modal').style.display = 'none';
+  }
+
+  function closeDealModal() {
+    document.getElementById('deal-modal').style.display = 'none';
+  }
+
+  // ========================================
+  // GESTION DES FORMULAIRES
+  // ========================================
+
+  async function handleBrandSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    const isEditing = form.dataset.editingId;
+    
+    try {
+      const url = isEditing ? `/api/brands?id=${form.dataset.editingId}` : '/api/brands';
+      const method = isEditing ? 'PUT' : 'POST';
+      
+      const response = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        showNotification(result.message, 'success');
+        closeBrandModal();
+        loadBrands();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      console.error('❌ Erreur sauvegarde marque:', error);
+      showNotification('Erreur lors de la sauvegarde: ' + error.message, 'error');
+    }
+  }
+
+  async function handleProductSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    data.is_glp1_recommended = form.elements.is_glp1_recommended.checked;
+    const isEditing = form.dataset.editingId;
+    
+    try {
+      const url = isEditing ? `/api/products?id=${form.dataset.editingId}` : '/api/products';
+      const method = isEditing ? 'PUT' : 'POST';
+      
+      const response = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        showNotification(result.message, 'success');
+        closeProductModal();
+        loadProducts();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      console.error('❌ Erreur sauvegarde produit:', error);
+      showNotification('Erreur lors de la sauvegarde: ' + error.message, 'error');
+    }
+  }
+
+  async function handleDealSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    const isEditing = form.dataset.editingId;
+    
+    try {
+      const url = isEditing ? `/api/deals?id=${form.dataset.editingId}` : '/api/deals';
+      const method = isEditing ? 'PUT' : 'POST';
+      
+      const response = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        showNotification(result.message, 'success');
+        closeDealModal();
+        loadDeals();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      console.error('❌ Erreur sauvegarde deal:', error);
+      showNotification('Erreur lors de la sauvegarde: ' + error.message, 'error');
+    }
+  }
+
+  // ========================================
+  // ACTIONS CRUD
+  // ========================================
+
+  function editBrand(brandId) {
+    showBrandModal(brandId);
+  }
+
+  function editProduct(productId) {
+    showProductModal(productId);
+  }
+
+  function editDeal(dealId) {
+    showDealModal(dealId);
+  }
+
+  async function deleteBrand(brandId) {
+    const brand = brands.find(b => b.id === brandId);
+    if (!brand || !confirm(`Êtes-vous sûr de vouloir supprimer la marque "${brand.name}" ?`)) {
+      return;
+    }
+    
+    try {
+      const response = await fetch(`/api/brands?id=${brandId}`, { method: 'DELETE' });
+      const result = await response.json();
+      
+      if (result.success) {
+        showNotification(result.message, 'success');
+        loadBrands();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      console.error('❌ Erreur suppression marque:', error);
+      showNotification('Erreur lors de la suppression: ' + error.message, 'error');
+    }
+  }
+
+  async function deleteProduct(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product || !confirm(`Êtes-vous sûr de vouloir supprimer le produit "${product.name}" ?`)) {
+      return;
+    }
+    
+    try {
+      const response = await fetch(`/api/products?id=${productId}`, { method: 'DELETE' });
+      const result = await response.json();
+      
+      if (result.success) {
+        showNotification(result.message, 'success');
+        loadProducts();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      console.error('❌ Erreur suppression produit:', error);
+      showNotification('Erreur lors de la suppression: ' + error.message, 'error');
+    }
+  }
+
+  async function deleteDeal(dealId) {
+    const deal = deals.find(d => d.id === dealId);
+    if (!deal || !confirm(`Êtes-vous sûr de vouloir supprimer le deal "${deal.title}" ?`)) {
+      return;
+    }
+    
+    try {
+      const response = await fetch(`/api/deals?id=${dealId}`, { method: 'DELETE' });
+      const result = await response.json();
+      
+      if (result.success) {
+        showNotification(result.message, 'success');
+        loadDeals();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      console.error('❌ Erreur suppression deal:', error);
+      showNotification('Erreur lors de la suppression: ' + error.message, 'error');
+    }
+  }
+
+  // ========================================
+  // UTILITAIRES
+  // ========================================
+
+  function formatDate(dateString) {
+    if (!dateString) return 'Non défini';
+    const date = new Date(dateString);
+    return date.toLocaleDateString('fr-FR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    });
+  }
+
+  function showNotification(message, type = 'success') {
+    const notification = document.getElementById('notification');
+    const messageEl = document.getElementById('notification-message');
+    
+    messageEl.textContent = message;
+    notification.className = `notification ${type}`;
+    notification.style.display = 'block';
+    
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 5000);
+  }
+
+  function showError(message) {
+    const errorEl = document.getElementById('error');
+    const errorMessageEl = document.getElementById('error-message');
+    const loadingEl = document.getElementById('loading');
+    
+    errorMessageEl.textContent = message;
+    loadingEl.style.display = 'none';
+    errorEl.style.display = 'block';
+  }
+
+  // Exposer les fonctions nécessaires globalement
+  window.editBrand = editBrand;
+  window.editProduct = editProduct;
+  window.editDeal = editDeal;
+  window.deleteBrand = deleteBrand;
+  window.deleteProduct = deleteProduct;
+  window.deleteDeal = deleteDeal;
+  window.closeBrandModal = closeBrandModal;
+  window.closeProductModal = closeProductModal;
+  window.closeDealModal = closeDealModal;
+</script>
+</AdminLayout>
