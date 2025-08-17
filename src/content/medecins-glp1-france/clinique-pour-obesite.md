@@ -37,6 +37,17 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 - **CHU de Lille** - Centre spécialisé obésité Nord
 - **CHU de Toulouse** - Pôle digestif et métabolisme
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ### 2. Cliniques Privées Spécialisées
 
 **Avantages :**

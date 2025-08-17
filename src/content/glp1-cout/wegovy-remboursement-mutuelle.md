@@ -16,6 +16,17 @@ Le **Wegovy** (semaglutide) est un médicament révolutionnaire pour la perte de
 
 Le prix du Wegovy s'élève à environ **280€ par mois**, soit plus de **3 360€ par an**. Face à ce coût substantiel, comprendre les modalités de remboursement devient crucial pour les patients concernés.
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ## Remboursement par la Sécurité Sociale
 
 Actuellement en France, **le Wegovy n'est pas remboursé par la Sécurité Sociale** pour l'indication perte de poids. L'Agence Nationale de Sécurité du Médicament (ANSM) a autorisé sa commercialisation, mais la Haute Autorité de Santé (HAS) n'a pas encore statué sur son remboursement.

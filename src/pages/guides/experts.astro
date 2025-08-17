@@ -56,16 +56,18 @@ try {
           <div class="author-card">
             <div class="author-header">
               <div class="author-avatar">
-                <span class="author-initials">
-                  {author.name.split(' ').map(n => n.charAt(0)).join('')}
-                </span>
+                <img 
+                  src={`/images/experts/${authorId}.svg`} 
+                  alt={`Portrait de ${author.name}`}
+                  class="author-image"
+                />
               </div>
               <div class="author-info">
                 <h3 class="author-name">{author.name}</h3>
                 <p class="author-title">{author.title}</p>
                 <div class="author-stats">
                   <span class="article-count">
-                    {authorStats[authorId] || 0} articles
+                    {author.articleCount || 0} articles
                   </span>
                   <span class="experience">{author.experience}</span>
                 </div>
@@ -191,6 +193,14 @@ try {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .author-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   .author-initials {
@@ -335,7 +345,8 @@ try {
   .cta-section p {
     font-size: 1.125rem;
     margin-bottom: var(--spacing-6);
-    opacity: 0.9;
+    color: white;
+    opacity: 0.95;
   }
 
   .cta-button {

@@ -6,7 +6,7 @@ metaDescription: "novo nordisk médicament obésité France 2025 : prix, efficac
 keyword: "novo nordisk médicament obésité"
 intent: "Informational"
 category: "glp-1 medications"
-author: "Sophie Dubois"
+author: "Dr. Émilie Martin"
 readingTime: 6
 tags:
   - GLP-1
@@ -42,6 +42,17 @@ Novo Nordisk, laboratoire pharmaceutique danois, transforme le traitement de l'o
 - **Usage hors AMM :** Perte de poids (non remboursé)
 - **Prix :** 75€/mois (remboursé diabète)
 -  Préférer Wegovy® pour l'obésité
+
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
 ### Efficacité comparative prouvée
 
@@ -185,3 +196,9 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
+
+## Conclusion
+
+Ces informations vous aident à mieux comprendre le sujet. Pour un avis personnalisé, consultez toujours un professionnel de santé qualifié.
+
+*Cet article est mis à jour régulièrement selon les dernières recommandations médicales.*

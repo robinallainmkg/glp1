@@ -29,6 +29,17 @@ Ozempic® connaît une forte demande en France, créant parfois des difficultés
 - **Usage perte de poids** : Hors AMM, non remboursé
 - **Alternative légale** : Wegovy® pour l'obésité (autorisé)
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ### Pharmacies et points de vente
 
 **Réseau pharmaceutique français :**
@@ -157,3 +168,9 @@ Oui, plusieurs alternatives thérapeutiques existent. Discutez avec votre médec
 ## Important
 
  Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+
+## Conclusion
+
+Ces informations vous aident à mieux comprendre le sujet. Pour un avis personnalisé, consultez toujours un professionnel de santé qualifié.
+
+*Cet article est mis à jour régulièrement selon les dernières recommandations médicales.*

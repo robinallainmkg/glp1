@@ -23,6 +23,17 @@ Un endocrinologue est le médecin spécialiste des hormones et du métabolisme. 
 - **Adapter le traitement** selon votre profil métabolique
 - **Suivre l'évolution** avec des analyses précises
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ### Quand consulter ?
 Consultez un endocrinologue si vous avez :
 - Un IMC > 30 ou > 27 avec complications

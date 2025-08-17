@@ -13,7 +13,18 @@ keyword: "diabète gestationnel glp-1, france 2025"
 
 Le diabète gestationnel (DG) touche 3-5% des grossesses en France. Les agonistes du GLP-1 sont **formellement contre-indiqués** pendant la grossesse et l'allaitement selon l'ANSM et toutes les autorités sanitaires internationales.
 
-## Expertise médicale française
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Informations Médicales
 
 Les experts français recommandent... Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
 

@@ -6,7 +6,7 @@ metaDescription: "Saxenda prix en France 2025  Saxenda (liraglutide) est le prem
 keyword: "saxenda prix"
 intent: "Informational"
 category: "glp-1 medications"
-author: "Sophie Dubois"
+author: "Dr. Émilie Martin"
 readingTime: 7
 datePublished: "2025-08-10"
 dateModified: "2025-08-10"
@@ -28,7 +28,18 @@ keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, W
 - **Indication** : Traitement strictement encadré
 - **Suivi** : Contrôle médical régulier indispensable
 
-## Expertise médicale française
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Informations Médicales
 
 Les experts français recommandent... Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
 

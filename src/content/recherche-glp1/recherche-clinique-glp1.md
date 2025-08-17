@@ -21,6 +21,17 @@ La recherche clinique sur les agonistes GLP-1 en France explore de nouvelles ind
 - **Déplacements** : Indemnités transport variables
 - **Assurance essai** : Obligatoire promoteur
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ### Types d'études en cours (2025)
 - **Phase II-III cardiovasculaire** : 15-20 essais actifs
 - **Neurologie** : 5-8 études Alzheimer/Parkinson

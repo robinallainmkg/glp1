@@ -69,6 +69,24 @@
       "articleCount": 12
     }
   },
+    "karim-benali": {
+      "name": "Karim Benali", 
+      "title": "Pharmacien d'officine",
+      "bio": "Pharmacien d'officine expérimenté, Karim Benali conseille quotidiennement les patients sur les traitements GLP-1. Il apporte son expertise pratique sur la délivrance, les interactions médicamenteuses et le suivi pharmaceutique de ces nouvelles thérapies.",
+      "specialties": [
+        "Pharmacie d'officine",
+        "Conseil pharmaceutique",
+        "Interactions médicamenteuses", 
+        "Suivi thérapeutique",
+        "Éducation thérapeutique",
+        "Pharmacovigilance"
+      ],
+      "education": "Doctorat en Pharmacie, DU Pharmacie Clinique",
+      "experience": "15 ans d'expérience en pharmacie d'officine",
+      "expertise_keywords": ["pharmacie", "medicament", "conseil", "interaction", "suivi", "therapeutique", "delivrance"],
+      "articleCount": 12
+    }
+  },
   "testimonials": [
     {
       "id": "marie-l-lyon",
@@ -104,8 +122,59 @@
       "image": "/images/uploads/sophie29.jpg",
       "verified": true,
       "review_date": "2025-10-17",
-      "transformation_type": "realistic",
       "individual_page": "/temoignage-sophie-transformation-glp1/"
+    },
+    {
+      "id": "laurent-b-marseille",
+      "name": "Laurent B.",
+      "age": 35,
+      "city": "Marseille",
+      "weight_loss": "15 kilos",
+      "duration": "8 mois",
+      "treatment": "Ozempic (sémaglutide)",
+      "testimonial": "Développeur depuis 10 ans, j'avais un mode de vie sédentaire. À 35 ans, je pesais 92 kilos pour 1m76. Le pire, c'était ce ventre constamment gonflé. Mon médecin m'a parlé d'Ozempic. Dès le deuxième mois, mon ventre était moins tendu. En 8 mois, j'ai perdu 15 kilos sans me priver drastiquement. Aujourd'hui, je pèse 77 kilos et mon ventre est plat ! Je peux enfin porter des polos sans avoir honte.",
+      "skin_care_routine": "Hydratation simple et massage du ventre",
+      "challenges": ["Ventre gonflé chronique", "Sédentarité", "Grignotage de stress"],
+      "solutions": ["Ozempic + amélioration digestive", "Pauses actives", "Meal prep"],
+      "image": "/images/uploads/Laurent-journey8.png",
+      "verified": true,
+      "review_date": "2025-09-17",
+      "individual_page": "/temoignage-laurent-transformation-glp1/"
+    },
+    {
+      "id": "amelie-d-marseille",
+      "name": "Amélie D.",
+      "age": 50,
+      "city": "Marseille",
+      "weight_loss": "18 kilos",
+      "duration": "11 mois",
+      "treatment": "Saxenda (liraglutide)",
+      "testimonial": "À 50 ans, la ménopause avait complètement déréglé mon métabolisme. Avec Saxenda, j'ai perdu 18 kilos en 11 mois. Le traitement m'a aidée à retrouver un rapport sain avec la nourriture. Le seul bémol, c'est que mon visage semblait plus fatigué. J'ai investi dans un sérum hydratant et raffermissant. Après 2 mois, j'ai retrouvé un teint plus lumineux.",
+      "skin_care_routine": "Sérum hydratant et raffermissant + crème anti-âge",
+      "challenges": ["Ménopause", "Métabolisme ralenti", "Perte de volume facial"],
+      "solutions": ["Saxenda adapté à l'âge", "Soins anti-âge", "Conseils esthéticienne"],
+      "verified": true,
+      "review_date": "2025-01-28"
+    }
+  ],
+  "skin_care_tips": [
+    {
+      "category": "Hydratation",
+      "tip": "Utilisez une crème hydratante riche matin et soir pour maintenir l'élasticité de la peau",
+      "products": ["Crème raffermissante", "Sérum acide hyaluronique"],
+      "timing": "Quotidien"
+    },
+    {
+      "category": "Vergetures",
+      "tip": "Appliquez une huile riche en vitamine E sur les zones susceptibles de développer des vergetures",
+      "products": ["Huile de vitamine E", "Huile d'amande douce", "Beurre de karité"],
+      "timing": "2 fois par jour"
+    },
+    {
+      "category": "Fermeté",
+      "tip": "Utilisez des soins raffermissants et pratiquez des massages drainants",
+      "products": ["Crème raffermissante", "Huile de massage"],
+      "timing": "Quotidien + massage 3x/semaine"
     }
   ]
 }

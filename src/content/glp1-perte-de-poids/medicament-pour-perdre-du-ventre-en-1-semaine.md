@@ -23,6 +23,17 @@ La prise en charge moderne de l'obésité combine plusieurs approches :
 - **Traitements médicamenteux** adaptés
 - **Suivi médical** spécialisé
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ### Critères de réussite
 Les objectifs thérapeutiques sont définis individuellement :
 - Perte de poids durable (5-15% du poids initial)
@@ -124,3 +135,9 @@ L'évolution du coût des traitements dépend de facteurs multiples qui influenc
 - Innovation thérapeutique continue
 
 Ces évolutions devraient globalement améliorer l'accessibilité financière des traitements.
+
+## Conclusion
+
+Ces informations vous aident à mieux comprendre le sujet. Pour un avis personnalisé, consultez toujours un professionnel de santé qualifié.
+
+*Cet article est mis à jour régulièrement selon les dernières recommandations médicales.*

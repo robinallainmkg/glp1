@@ -1,7 +1,5 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import AffiliateProduct from '../components/AffiliateProduct.astro';
-import { getProductsForCollection, getProductsByKeywords } from '../utils/affiliate-manager.ts';
 
 interface Props {
   title: string;
@@ -87,15 +85,15 @@ const theme = themeConfig[collectionTheme] || themeConfig['weight-loss'];
 
 // Mapping des catégories vers des noms lisibles et URLs
 const categoryMapping = {
-  'glp1-perte-de-poids': { name: 'GLP-1 et Perte de Poids', url: '/glp1-perte-de-poids' },
-  'medicaments-glp1': { name: 'Médicaments GLP-1', url: '/medicaments-glp1' },
-  'glp1-cout': { name: 'Prix et Coûts GLP-1', url: '/glp1-cout' },
-  'effets-secondaires-glp1': { name: 'Effets Secondaires', url: '/effets-secondaires-glp1' },
-  'glp1-diabete': { name: 'GLP-1 et Diabète', url: '/glp1-diabete' },
-  'recherche-glp1': { name: 'Recherche GLP-1', url: '/recherche-glp1' },
-  'medecins-glp1-france': { name: 'Médecins GLP-1 France', url: '/medecins-glp1-france' },
-  'alternatives-glp1': { name: 'Alternatives GLP-1', url: '/alternatives-glp1' },
-  'regime-glp1': { name: 'Régime GLP-1', url: '/regime-glp1' }
+  'glp1-perte-de-poids': { name: 'GLP-1 et Perte de Poids', url: '/collections/glp1-perte-de-poids' },
+  'medicaments-glp1': { name: 'Médicaments GLP-1', url: '/collections/medicaments-glp1' },
+  'glp1-cout': { name: 'Prix et Coûts GLP-1', url: '/collections/glp1-cout' },
+  'effets-secondaires-glp1': { name: 'Effets Secondaires', url: '/collections/effets-secondaires-glp1' },
+  'glp1-diabete': { name: 'GLP-1 et Diabète', url: '/collections/glp1-diabete' },
+  'recherche-glp1': { name: 'Recherche GLP-1', url: '/collections/recherche-glp1' },
+  'medecins-glp1-france': { name: 'Médecins GLP-1 France', url: '/collections/medecins-glp1-france' },
+  'alternatives-glp1': { name: 'Alternatives GLP-1', url: '/collections/alternatives-glp1' },
+  'regime-glp1': { name: 'Régime GLP-1', url: '/collections/regime-glp1' }
 };
 
 // Fonction pour générer le fil d'Ariane
@@ -148,9 +146,9 @@ const breadcrumb = generateBreadcrumb(category, title);
 const backUrl = getBackUrl(category);
 const displayName = getDisplayName(category);
 
-// Convertir le contenu markdown en HTML et insérer le produit affilié intelligemment
-function markdownToHtml(markdown: string, shouldInsertAffiliate: boolean = false): string {
-  let html = markdown
+// Conversion simple du markdown en HTML
+function markdownToHtml(markdown: string): string {
+  return markdown
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>')
     .replace(/^## (.*$)/gm, '<h2>$1</h2>')
@@ -158,147 +156,17 @@ function markdownToHtml(markdown: string, shouldInsertAffiliate: boolean = false
     .replace(/^#### (.*$)/gm, '<h4>$1</h4>')
     .replace(/^\- (.*$)/gm, '<li>$1</li>')
     .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
-    .replace(/\[affiliate-box\]/g, '<div class="affiliate-box">Contenu partenaire</div>')
+    .replace(/\[affiliate-box\]/g, '') // Supprimer les marqueurs d'affiliation
     .replace(/\r?\n\r?\n/g, '</p><p>')
     .replace(/^(?!<[h|u|l])/gm, '<p>')
     .replace(/(?<!>)$/gm, '</p>')
     .replace(/<p><\/p>/g, '')
     .replace(/<p>(<[h|u])/g, '$1')
     .replace(/(<\/[h|u][^>]*>)<\/p>/g, '$1');
-  
-  // Insérer le marqueur d'affiliation après le 2ème paragraphe si pertinent
-  if (shouldInsertAffiliate) {
-    const affiliateKeywords = ['peau', 'poitrine', 'raffermissement', 'fermeté', 'élasticité', 'relâchement', 'beauté', 'soin', 'corps', 'perte de poids', 'seins', 'décolleté'];
-    const firstPart = html.substring(0, 500); // Analyser les 500 premiers caractères
-    
-    const isRelevant = affiliateKeywords.some(keyword => 
-      firstPart.toLowerCase().includes(keyword.toLowerCase())
-    );
-    
-    if (isRelevant) {
-      // Chercher le 2ème </p> pour insérer après
-      let pCount = 0;
-      let insertIndex = -1;
-      
-      for (let i = 0; i < html.length - 4; i++) {
-        if (html.substring(i, i + 4) === '</p>') {
-          pCount++;
-          if (pCount === 2) {
-            insertIndex = i + 4;
-            break;
-          }
-        }
-      }
-      
-      if (insertIndex > 0) {
-        const affiliateMarker = '\n\n[AFFILIATE_INSERT_HERE]\n\n';
-        html = html.substring(0, insertIndex) + affiliateMarker + html.substring(insertIndex);
-      }
-    }
-  }
-  
-  return html;
 }
 
-// === SYSTÈME DE PLACEMENT INTELLIGENT AMÉLIORÉ POUR MARKDOWN ===
-
-// Fonctions pour le découpage intelligent du contenu markdown
-function splitMarkdownIntoParagraphs(markdownContent) {
-  // Divise le contenu markdown en segments (titres et paragraphes)
-  const lines = markdownContent.split('\n');
-  const segments = [];
-  let currentSegment = '';
-  let paragraphCount = 0;
-  
-  for (const line of lines) {
-    // Si c'est un titre (## ou ###)
-    if (line.match(/^#{2,3}\s+/)) {
-      if (currentSegment.trim()) {
-        segments.push({ type: 'paragraph', content: currentSegment.trim(), count: paragraphCount });
-        paragraphCount++;
-        currentSegment = '';
-      }
-      segments.push({ type: 'heading', content: line, count: paragraphCount });
-    }
-    // Si c'est une ligne vide, on termine le paragraphe
-    else if (line.trim() === '' && currentSegment.trim()) {
-      segments.push({ type: 'paragraph', content: currentSegment.trim(), count: paragraphCount });
-      paragraphCount++;
-      currentSegment = '';
-    }
-    // Sinon on accumule le contenu
-    else if (line.trim()) {
-      currentSegment += line + '\n';
-    }
-  }
-  
-  // Ajouter le dernier segment s'il existe
-  if (currentSegment.trim()) {
-    segments.push({ type: 'paragraph', content: currentSegment.trim(), count: paragraphCount });
-  }
-  
-  return segments;
-}
-
-function findOptimalInsertionPoint(segments) {
-  let paragraphCount = 0;
-  
-  for (let i = 0; i < segments.length; i++) {
-    const segment = segments[i];
-    
-    // Compter seulement les paragraphes de contenu (pas les titres)
-    if (segment.type === 'paragraph') {
-      paragraphCount++;
-      
-      // Insérer après 2 paragraphes de contenu
-      if (paragraphCount >= 2) {
-        return i + 1;
-      }
-    }
-  }
-  
-  // Fallback : au milieu du contenu
-  return Math.floor(segments.length / 2);
-}
-
-// Récupération des produits affiliés pertinents en premier
-const context = {
-  category,
-  keywords: Array.isArray(keywords) ? keywords : keywords.split(',').map(k => k.trim()),
-  tags: [category, collectionTheme]
-};
-
-const affiliateProducts = await getProductsForCollection(category, 2);
-const keywordProducts = await getProductsByKeywords(context.keywords, category, 1);
-const topProduct = affiliateProducts[0] || keywordProducts[0];
-const bottomProduct = affiliateProducts[1] || keywordProducts[1] || affiliateProducts[0];
-
-// Application du nouveau système pour markdown
-const segments = splitMarkdownIntoParagraphs(content);
-const insertionPoint = segments.length >= 4 ? findOptimalInsertionPoint(segments) : -1;
-
-let beforeAffiliateContent = '';
-let afterAffiliateContent = '';
-let shouldInsertAffiliate = false;
-
-if (insertionPoint > 0 && topProduct) {
-  // Reconstituer le markdown avant et après l'insertion
-  const beforeSegments = segments.slice(0, insertionPoint);
-  const afterSegments = segments.slice(insertionPoint);
-  
-  beforeAffiliateContent = beforeSegments.map(s => s.content).join('\n\n');
-  afterAffiliateContent = afterSegments.map(s => s.content).join('\n\n');
-  shouldInsertAffiliate = true;
-} else {
-  // Contenu trop court ou pas de produit, utiliser tout le contenu
-  beforeAffiliateContent = content;
-  shouldInsertAffiliate = false;
-}
-
-// Conversion en HTML des parties
-const beforeHtml = markdownToHtml(beforeAffiliateContent, false);
-const afterHtml = shouldInsertAffiliate ? markdownToHtml(afterAffiliateContent, false) : '';
-const fullHtml = shouldInsertAffiliate ? '' : markdownToHtml(content, false);
+// Conversion du contenu
+const contentHtml = markdownToHtml(content);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -306,12 +174,23 @@ const fullHtml = shouldInsertAffiliate ? '' : markdownToHtml(content, false);
     <!-- Fil d'Ariane -->
     <nav class="breadcrumb" style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
-        <div style="display: flex; align-items: center; gap: 8px; font-size: 14px;">
-          <a href="/" style="color: #3b82f6; text-decoration: none;">🏠 Accueil</a>
-          <span style="color: #9ca3af;">→</span>
-          <a href="/glp1-perte-de-poids" style="color: #3b82f6; text-decoration: none;">⚖️ GLP-1 et Perte de Poids</a>
-          <span style="color: #9ca3af;">→</span>
-          <span style="color: #6b7280;">📖 {title.length > 50 ? title.substring(0, 50) + '...' : title}</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; flex-wrap: wrap;">
+          {breadcrumb.map((item, index) => (
+            <Fragment>
+              {index > 0 && <span style="color: #9ca3af;">→</span>}
+              {item.url ? (
+                <a href={item.url} style="color: #3b82f6; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                  <span>{item.icon}</span>
+                  <span>{item.name}</span>
+                </a>
+              ) : (
+                <span style="color: #6b7280; display: flex; align-items: center; gap: 4px;">
+                  <span>{item.icon}</span>
+                  <span>{item.name}</span>
+                </span>
+              )}
+            </Fragment>
+          ))}
         </div>
       </div>
     </nav>
@@ -360,56 +239,10 @@ const fullHtml = shouldInsertAffiliate ? '' : markdownToHtml(content, false);
       <div class="container mx-auto px-4 py-12">
         <div class="max-w-4xl mx-auto">
           
-          <!-- Nouveau système de placement intelligent -->
-          {shouldInsertAffiliate ? (
-            <div class="prose prose-lg max-w-none">
-              <!-- Première partie du contenu -->
-              <div set:html={beforeHtml}></div>
-              
-              <!-- Produit affilié inséré intelligemment après 2 paragraphes -->
-              {topProduct && (
-                <div class="affiliate-smart-insertion my-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-100">
-                  <div class="text-center mb-4">
-                    <span class="text-sm text-blue-600 font-medium">⭐ Produit Recommandé</span>
-                  </div>
-                  <AffiliateProduct 
-                    productId={topProduct.id}
-                    placement="smart-content"
-                    context={context}
-                    variant="featured"
-                    className="article-affiliate-smart"
-                    showIfRelevant={false}
-                  />
-                </div>
-              )}
-              
-              <!-- Deuxième partie du contenu -->
-              <div set:html={afterHtml}></div>
-            </div>
-          ) : (
-            <!-- Contenu complet sans insertion -->
-            <div class="prose prose-lg max-w-none">
-              <div set:html={fullHtml}></div>
-              
-              <!-- Produit affilié en fin d'article seulement si contenu court -->
-              {topProduct && (
-                <div class="affiliate-fallback mt-12">
-                  <div class="text-center mb-4">
-                    <span class="text-sm text-blue-600 font-medium">💡 Produit Recommandé</span>
-                  </div>
-                  <AffiliateProduct 
-                    productId={topProduct.id}
-                    placement="content-end"
-                    context={context}
-                    variant="featured"
-                    className="article-affiliate-end"
-                    showIfRelevant={false}
-                  />
-                </div>
-              )}
-            </div>
-          )}
-          )}
+          <!-- Contenu principal -->
+          <div class="prose prose-lg max-w-none">
+            <div set:html={contentHtml}></div>
+          </div>
           
           <!-- Zone de mots-clés -->
           {keywordsString && (
@@ -425,11 +258,11 @@ const fullHtml = shouldInsertAffiliate ? '' : markdownToHtml(content, false);
             </div>
           )}
           
-          <!-- Navigation -->
+          <!-- Navigation de retour -->
           <nav class="article-navigation mt-12">
             <a 
               href={backUrl} 
-              class={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${theme.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-300`}
+              class={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-slate-600 to-slate-700 text-white rounded-lg hover:shadow-lg transition-all duration-300`}
             >
               ← Retour à {displayName}
             </a>
@@ -437,32 +270,6 @@ const fullHtml = shouldInsertAffiliate ? '' : markdownToHtml(content, false);
         </div>
       </div>
     </main>
-
-    <!-- Produits affiliés -->
-    <section class="affiliate-products py-12 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-2xl md:text-3xl font-bold mb-8">
-            Découvrez nos produits recommandés
-          </h2>
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {topProduct && (
-              <AffiliateProduct product={topProduct} position="top" />
-            )}
-          </div>
-          
-          <div class="mt-8">
-            <a 
-              href={backUrl} 
-              class={`inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${theme.gradient} text-white rounded-lg hover:shadow-lg transition-all duration-300`}
-            >
-              Voir tous les produits de {displayName}
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   </article>
 </BaseLayout>
 

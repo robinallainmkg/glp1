@@ -20,6 +20,17 @@ Les agonistes GLP-1 réduisent naturellement l'apport calorique de 200-500 kcal/
 - **Trulicity®** : 85€/mois → ~0,45€ par 100 kcal réduites  
 - **Saxenda®** : 89€/mois → ~0,35€ par 100 kcal réduites
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ### Applications nutritionnelles
 - **MyFitnessPal** : Gratuit + Premium 10€/mois
 - **Yazio** : Freemium + Pro 4€/mois

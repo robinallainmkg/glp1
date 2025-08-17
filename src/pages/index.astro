@@ -61,9 +61,9 @@ const categories = await getCategoryContent();
           prix en France, où les acheter, efficacité réelle, effets secondaires et conseils d'experts.
         </p>
         <div class="hero-pills">
-          <a href="/qu-est-ce-que-glp1/" class="pill pill-link">✅ Ozempic & Wegovy expliqués</a>
-          <a href="/glp1-cout/wegovy-prix/" class="pill pill-link">💰 Prix & Remboursement</a>
-          <a href="/glp1-cout/acheter-wegovy-en-france/" class="pill pill-link">🏥 Où les acheter légalement</a>
+          <a href="/guides/qu-est-ce-que-glp1/" class="pill pill-link">✅ Ozempic & Wegovy expliqués</a>
+          <a href="/collections/glp1-cout/" class="pill pill-link">💰 Prix & Remboursement</a>
+          <a href="/collections/glp1-cout/" class="pill pill-link">🏥 Où les acheter légalement</a>
         </div>
         <div class="hero-actions">
           <a href="/guides/quel-traitement-glp1-choisir/" class="btn btn-primary btn-lg">🎯 Faire le Diagnostic (2 min)</a>
@@ -106,7 +106,7 @@ const categories = await getCategoryContent();
             <span class="bridge-pill">📉 Wegovy = Spécialement pour maigrir</span>
             <span class="bridge-pill">🧬 GLP-1 = La famille de molécules</span>
           </div>
-          <a href="/qu-est-ce-que-glp1/" class="btn btn-outline">En savoir plus sur GLP-1</a>
+          <a href="/guides/qu-est-ce-que-glp1/" class="btn btn-outline">En savoir plus sur GLP-1</a>
         </div>
       </div>
     </section>
@@ -114,7 +114,7 @@ const categories = await getCategoryContent();
     <!-- Section Témoignages Visuels -->
     <section class="testimonials-visual">
       <div class="section-header">
-        <h2 class="section-title">Des Résultats Réels Qui Parlent</h2>
+        <h2 class="section-title">Des résultats réels qui parlent</h2>
         <p class="section-description">
           Découvrez les transformations authentiques de nos utilisateurs français
         </p>
@@ -156,7 +156,7 @@ const categories = await getCategoryContent();
       </div>
       
       <div class="testimonials-cta">
-        <a href="/glp1-perte-de-poids/avant-apres-glp1/" class="btn btn-secondary">Voir Plus de Témoignages</a>
+        <a href="/collections/glp1-perte-de-poids/" class="btn btn-secondary">Voir Plus de Témoignages</a>
       </div>
     </section>
 
@@ -183,7 +183,7 @@ const categories = await getCategoryContent();
               <li><strong>Diarrhées</strong> - S'améliorent avec le temps</li>
               <li><strong>Constipation</strong> - Gestion par l'alimentation</li>
             </ul>
-            <a href="/effets-secondaires-glp1/nausees-ozempic/" class="side-effect-link">
+            <a href="/collections/effets-secondaires-glp1/" class="side-effect-link">
               Comment gérer les nausées →
             </a>
           </div>
@@ -199,7 +199,7 @@ const categories = await getCategoryContent();
               <li><strong>Ballonnements</strong> - Réduction du transit</li>
               <li><strong>Reflux gastrique</strong> - Gestion alimentaire</li>
             </ul>
-            <a href="/effets-secondaires-glp1/fatigue-ozempic/" class="side-effect-link">
+            <a href="/collections/effets-secondaires-glp1/" class="side-effect-link">
               Gérer la fatigue →
             </a>
           </div>
@@ -215,7 +215,7 @@ const categories = await getCategoryContent();
               <li><strong>Hypoglycémie</strong> - Avec antidiabétiques</li>
               <li><strong>Réactions allergiques</strong> - Arrêt immédiat</li>
             </ul>
-            <a href="/effets-secondaires-glp1/ozempic-danger/" class="side-effect-link">
+            <a href="/collections/effets-secondaires-glp1/" class="side-effect-link">
               Signes d'alerte →
             </a>
           </div>
@@ -251,10 +251,10 @@ const categories = await getCategoryContent();
             Consultez toujours votre médecin avant de commencer un traitement.
           </p>
           <div class="cta-buttons">
-            <a href="/effets-secondaires-glp1/" class="btn btn-primary">
+            <a href="/collections/effets-secondaires-glp1/" class="btn btn-primary">
               Guide Complet des Effets Secondaires
             </a>
-            <a href="/medecins-glp1-france/" class="btn btn-secondary">
+            <a href="/collections/medecins-glp1-france/" class="btn btn-secondary">
               Trouver un Médecin Spécialisé
             </a>
           </div>
@@ -265,7 +265,7 @@ const categories = await getCategoryContent();
     <!-- Categories Grid -->
     <section id="categories" class="categories-section">
       <div class="section-header">
-        <h2 class="section-title">Tout Savoir sur Ozempic & Wegovy</h2>
+        <h2 class="section-title">Tout savoir sur Ozempic & Wegovy</h2>
         <p class="section-description">
           Guides détaillés par nos experts médicaux pour comprendre ces nouveaux médicaments révolutionnaires.
         </p>
@@ -273,7 +273,7 @@ const categories = await getCategoryContent();
       
       <div class="grid grid-3">
         {categories.map((category) => (
-          <a href={`/${category.slug}/`} class="category-card">
+          <a href={`/collections/${category.slug}/`} class="category-card">
             <div class="category-icon">{category.icon}</div>
             <h3 class="category-title">{category.name}</h3>
             <p class="category-description">{category.description}</p>

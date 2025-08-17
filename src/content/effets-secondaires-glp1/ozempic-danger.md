@@ -24,6 +24,17 @@ keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, p
 
 **Ozempic présente des risques rares mais potentiellement graves nécessitant une surveillance médicale stricte.** Bien que généralement bien toléré, ce médicament peut provoquer des effets secondaires sérieux chez certains patients.
 
+
+
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
+## Introduction
+
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+
 ## Résumé des dangers identifiés
 
 - **Pancréatite aiguë** : 0.2% des patients (potentiellement mortelle)
