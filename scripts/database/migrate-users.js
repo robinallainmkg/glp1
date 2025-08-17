@@ -6,8 +6,8 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { supabaseAdmin } from '../lib/supabase.js'
-import { validateUserData } from '../lib/types/user.js'
+import { supabaseAdmin } from '../../src/lib/supabase.js'
+import { validateUserData } from '../../src/lib/types/user.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
