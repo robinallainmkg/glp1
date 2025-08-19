@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import ArticleCard from '../../components/ArticleCard.astro'
 import { getCollection } from 'astro:content'
 
 // Récupérer tous les articles de toutes les collections
@@ -131,62 +132,12 @@ const categoryNames = {
             const categoryName = categoryNames[article.collection] || article.collection
             
             return (
-              <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-emerald-200 hover:-translate-y-2">
-                <div class={`p-4 bg-gradient-to-r from-${colors.bg}-50 to-${colors.bg}-100 border-b border-${colors.bg}-200`}>
-                  <span class={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold text-${colors.text} bg-${colors.badge} border border-${colors.bg}-200`}>
-                    <div class={`w-2 h-2 rounded-full bg-${colors.bg}-400 mr-2`}></div>
-                    {categoryName}
-                  </span>
-                </div>
-                
-                <div class="p-6">
-                  <h2 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug">
-                    <a href={article.url} class="hover:underline">
-                      {article.data.title}
-                    </a>
-                  </h2>
-                  
-                  {article.data.description && (
-                    <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
-                      {article.data.description}
-                    </p>
-                  )}
-                  
-                  <div class="flex items-center justify-between text-sm text-slate-500 mb-6 pb-4 border-b border-slate-100">
-                    {article.data.publishedAt && (
-                      <time dateTime={article.data.publishedAt} class="flex items-center">
-                        <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        {new Date(article.data.publishedAt).toLocaleDateString('fr-FR', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
-                      </time>
-                    )}
-                    
-                    {article.data.readingTime && (
-                      <span class="flex items-center">
-                        <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        {article.data.readingTime} min de lecture
-                      </span>
-                    )}
-                  </div>
-                  
-                  <a 
-                    href={article.url}
-                    class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    Lire l'article
-                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                  </a>
-                </div>
-              </article>
+              <ArticleCard 
+                article={article}
+                collection={article.collection}
+                categoryName={categoryName}
+                colors={colors}
+              />
             )
           })}
         </div>

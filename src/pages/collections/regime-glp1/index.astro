@@ -1,589 +1,84 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('regime-glp1');
+
+// Configuration des couleurs
+const colors = {
+  bg: 'orange',
+  text: 'orange-800',
+  badge: 'orange-100'
+};
 ---
 
 <BaseLayout 
-  title="Régime Ozempic Alimentaire - Nutrition GLP-1 Expert 2025"
-  description="Régime Ozempic : aliments interdits, menu type, nutrition adaptée. Optimisez votre perte de poids avec le bon régime GLP-1."
-  keywords="regime ozempic, regime alimentaire ozempic, menu ozempic, aliments interdits ozempic, nutrition glp1"
+  title="Régime & Nutrition - Guide complet des GLP-1"
+  description="Régimes alimentaires adaptés aux traitements GLP-1"
+  keywords="regime glp1, glp1, régime & nutrition"
 >
 
 <div class="container">
   <div class="max-w-6xl mx-auto">
     
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-lime-500 to-green-500 text-white rounded-2xl p-8 mb-8">
+    <div class="bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-2xl p-8 mb-8">
       <div class="flex items-center gap-4 mb-4">
         <div class="text-4xl">🥗</div>
-        <h1 class="text-4xl font-bold">Régime Ozempic Alimentaire</h1>
+        <h1 class="text-4xl font-bold">Régime & Nutrition</h1>
       </div>
       <p class="text-xl opacity-90 mb-4">
-        Nutrition optimisée GLP-1 : menu type, aliments recommandés et interdits pour maximiser votre perte de poids.
+        Régimes alimentaires adaptés aux traitements GLP-1
       </p>
       <div class="bg-white/20 rounded-lg p-4 inline-block">
-        <span class="font-semibold">15 articles disponibles</span>
+        <span class="font-semibold">{articles.length} articles disponibles</span>
       </div>
     </div>
 
-    <!-- Section Contenu SEO -->
-    <section class="mb-12">
-      <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-        
-        <!-- Introduction SEO -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Régime Ozempic : Nutrition Adaptée GLP-1</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Le <strong>régime Ozempic</strong> optimise l'action du sémaglutide en privilégiant les aliments à faible index glycémique et haute densité nutritionnelle. 
-            Cette approche nutritionnelle potentialise la perte de poids de 30% supplémentaire comparé au traitement seul. 
-            Un <strong>régime alimentaire Ozempic</strong> structuré réduit les nausées et maximise la satiété naturelle. 
-            Découvrez notre <a href="/collections/regime-glp1/menu-ozempic-type/" class="text-blue-600 hover:text-blue-800 font-medium">menu type Ozempic</a> 
-            élaboré par nos nutritionnistes experts.
-          </p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            La <strong>nutrition GLP-1</strong> repose sur la compréhension des mécanismes de satiété et de régulation glycémique. 
-            Les protéines maigres, fibres solubles et graisses essentielles constituent la base de ce protocole nutritionnel. 
-            Évitez les <a href="/collections/regime-glp1/aliments-interdits-ozempic/" class="text-blue-600 hover:text-blue-800 font-medium">aliments interdits Ozempic</a> 
-            pour prévenir les effets secondaires digestifs.
-          </p>
-        </div>
-
-        <!-- Menu et Aliments -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Menu Ozempic : Planification Nutritionnelle</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Un <strong>menu Ozempic</strong> type privilégie 3 repas modérés et 2 collations protéinées pour maintenir la glycémie stable. 
-            Petit-déjeuner : œufs + légumes verts + avocat. Déjeuner : poisson + quinoa + brocolis. Dîner : volaille + légumes rôtis + salade. 
-            Cette répartition optimise l'action du GLP-1 endogène et exogène.
-          </p>
-          
-          <div class="bg-lime-50 rounded-lg p-6 mb-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">🍽️ Aliments Recommandés GLP-1</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li><strong>Protéines :</strong> Poisson, volaille, œufs, légumineuses</li>
-              <li><strong>Légumes :</strong> Crucifères, légumes verts, courges</li>
-              <li><strong>Glucides :</strong> Quinoa, sarrasin, patate douce</li>
-              <li><strong>Graisses :</strong> Avocat, noix, huile olive</li>
-              <li><strong>Fibres :</strong> Psyllium, graines de chia, légumes</li>
-            </ul>
-          </div>
-
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Aliments Interdits Ozempic : Liste Complète</h3>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Les <strong>aliments interdits Ozempic</strong> incluent tous les produits favorisant les pics glycémiques et les troubles digestifs. 
-            Évitez absolument : sucres raffinés, fritures, alcool, sodas, pâtisseries industrielles. Ces aliments antagonisent l'action 
-            d'Ozempic et augmentent les nausées. Respectez cette liste pour optimiser votre <strong>régime GLP-1</strong> et accélérer 
-            votre perte de poids. Consultez notre <a href="/collections/effets-secondaires-glp1/" class="text-blue-600 hover:text-blue-800 font-medium">guide effets secondaires</a> 
-            pour comprendre l'impact nutritionnel.
-          </p>
-        </div>
-
-        <!-- Call-to-action Expert -->
-        <div class="bg-gradient-to-r from-lime-50 to-green-50 rounded-lg p-6 border border-lime-200">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">👩‍⚕️ Coaching Nutritionnel GLP-1</h2>
-          <p class="text-gray-700 mb-4">
-            Bénéficiez de l'accompagnement de nos nutritionnistes spécialisés GLP-1 pour personnaliser votre régime alimentaire. 
-            Programmes nutritionnels adaptés, recettes optimisées et suivi personnalisé pour maximiser vos résultats. 
-            <a href="/guides/experts/" class="text-blue-600 hover:text-blue-800 font-medium">Contactez nos nutritionnistes</a> 
-            pour un accompagnement expert de votre transformation.
-          </p>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Liste des articles -->
+    <!-- Articles Section -->
     <section class="collection-articles">
       <div class="mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Régime et Nutrition GLP-1</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Régime & Nutrition</h2>
         <p class="text-lg text-gray-600">
-          Conseils nutritionnels et régimes adaptés aux traitements GLP-1 : optimiser l'efficacité thérapeutique.
+          Régimes alimentaires adaptés aux traitements GLP-1
         </p>
       </div>
       
-      <!-- Grille des articles -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/glp1-calories-journalieres/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et calories journalières
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et calories journalières — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/glp1-hydratation/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et hydratation
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et hydratation — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/glp1-index-glycemique/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et index glycémique
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et index glycémique — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/glp1-micronutriments/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et micronutriments
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et micronutriments — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/glp1-portion-alimentaire/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et portions alimentaires
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et portions alimentaires — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/glp1-proteines/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et protéines alimentaires
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et protéines alimentaires — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/isglt2-liste/" class="hover:text-blue-600 transition-colors">
-              Isglt2 liste
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            isglt2 liste — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Julien Lefèvre
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/jeune-intermittent-glp1/" class="hover:text-blue-600 transition-colors">
-              jeûne intermittent et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            jeûne intermittent et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-cetogene-glp1/" class="hover:text-blue-600 transition-colors">
-              régime cétogène et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            régime cétogène et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-chrono-nutrition-glp1/" class="hover:text-blue-600 transition-colors">
-              chrono-nutrition et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            chrono-nutrition et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-dash-glp1/" class="hover:text-blue-600 transition-colors">
-              régime DASH et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            régime DASH et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-detox-glp1/" class="hover:text-blue-600 transition-colors">
-              régime détox et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            régime détox et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-mediterraneen-glp1/" class="hover:text-blue-600 transition-colors">
-              régime méditerranéen et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            régime méditerranéen et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-paleo-glp1/" class="hover:text-blue-600 transition-colors">
-              régime paléo et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            régime paléo et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center text-white text-xl">
-              🥗
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">REGIME-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/regime-glp1/regime-sans-sucre-glp1/" class="hover:text-blue-600 transition-colors">
-              régime sans sucre et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            régime sans sucre et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-    </div>
-    
+      <!-- Grille des articles avec images -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((article) => (
+          <ArticleCard 
+            article={article}
+            collection="regime-glp1"
+            categoryName="Régime & Nutrition"
+            colors={colors}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl mt-12">
+      <div class="text-center px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Besoin d'informations personnalisées ?
+        </h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Consultez notre guide complet et téléchargez nos ressources gratuites.
+        </p>
+        <a 
+          href="/guide-beaute-perte-de-poids-glp1/" 
+          class="inline-flex items-center px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
+        >
+          <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Télécharger le guide gratuit
+        </a>
+      </div>
+    </section>
   </div>
 </div>
 

@@ -7,8 +7,8 @@ author: "Dr. Sophie Dubois"
 date: "2025-08-10"
 keywords: "acupuncture diabète, médecine chinoise"
 keyword: "acupuncture diabète obésité, france 2025"
+image: "/images/thumbnails/acupuncture-glp1-illus.jpg"
 ---
-
 ## À retenir
 
 [Contenu spécialisé sur acupuncture pour diabète obésité dans le contexte du marché français avec focus sur la réglementation ANSM, les prix en euros, et les conseils pratiques adaptés.]

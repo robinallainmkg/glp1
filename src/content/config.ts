@@ -9,13 +9,17 @@ const unifiedSchema = z.object({
   readingTime: z.number().optional(),
   pubDate: z.date().optional(),
   tags: z.array(z.string()).optional(),
-  image: z.string().optional(),
-  ogImage: z.string().optional(),
+  image: z.string().optional(), // Thumbnail généré automatiquement
+  ogImage: z.string().optional(), // meta image
   published: z.boolean().default(true).optional(),
   featured: z.boolean().default(false).optional(),
   // Champs SEO ajoutés
   mainKeyword: z.string().optional(),
   secondaryKeywords: z.array(z.string()).optional(),
+  // Nouveaux champs pour l'amélioration
+  thumbnail: z.string().optional(), // Alternative pour image
+  relatedArticles: z.array(z.string()).optional(), // Articles similaires manuels
+  imageAlt: z.string().optional(), // Texte alternatif pour l'image
 });
 
 const alternativesGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });

@@ -1,231 +1,85 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('effets-secondaires-glp1');
+
+// Configuration des couleurs
+const colors = {
+  bg: 'red',
+  text: 'red-800',
+  badge: 'red-100'
+};
 ---
 
 <BaseLayout 
-  title="Ozempic Danger et Effets Secondaires GLP-1 - Guide Sécurité 2025"
-  description="Ozempic danger, Wegovy effets secondaires, surveillance et prévention. Guide complet sécurité GLP-1 par des experts."
-  keywords="ozempic danger, wegovy effets secondaires, ozempic dangers, wegovy danger, ozempic effets secondaires combien de temps"
+  title="Effets Secondaires - Guide complet des GLP-1"
+  description="Effets secondaires et précautions des traitements GLP-1"
+  keywords="effets secondaires-glp1, glp1, effets secondaires"
 >
 
 <div class="container">
   <div class="max-w-6xl mx-auto">
     
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl p-8 mb-8">
+    <div class="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-2xl p-8 mb-8">
       <div class="flex items-center gap-4 mb-4">
         <div class="text-4xl">⚠️</div>
-        <h1 class="text-4xl font-bold">Ozempic Danger et Effets Secondaires GLP-1</h1>
+        <h1 class="text-4xl font-bold">Effets Secondaires</h1>
       </div>
       <p class="text-xl opacity-90 mb-4">
-        Guide complet sécurité : Ozempic danger, Wegovy effets secondaires, surveillance et prévention par des experts médicaux.
+        Effets secondaires et précautions des traitements GLP-1
       </p>
       <div class="bg-white/20 rounded-lg p-4 inline-block">
-        <span class="font-semibold">4 articles disponibles</span>
+        <span class="font-semibold">{articles.length} articles disponibles</span>
       </div>
     </div>
 
-    <!-- Section Contenu SEO -->
-    <section class="mb-12">
-      <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-        
-        <!-- Introduction SEO -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Ozempic Danger : Effets Secondaires et Surveillance</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Les <strong>dangers d'Ozempic</strong> sont généralement modérés mais nécessitent une surveillance médicale appropriée. 
-            Les <strong>effets secondaires Ozempic</strong> les plus fréquents incluent nausées (30% des patients), vomissements et troubles digestifs. 
-            Découvrez notre <a href="/collections/effets-secondaires-glp1/ozempic-danger/" class="text-blue-600 hover:text-blue-800 font-medium">guide complet Ozempic danger</a> 
-            pour une utilisation sécurisée.
-          </p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            <strong>Wegovy effets secondaires</strong> présentent un profil similaire mais avec une intensité légèrement supérieure 
-            en raison du dosage plus élevé. La question "<strong>Ozempic effets secondaires combien de temps</strong>" est cruciale : 
-            la plupart disparaissent en 4-8 semaines d'adaptation.
-          </p>
-        </div>
-
-        <!-- Profil de Sécurité -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Wegovy Danger et Surveillance Clinique</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            <strong>Wegovy danger</strong> nécessite une évaluation préalable des antécédents familiaux et personnels. 
-            Notre analyse des <a href="/collections/effets-secondaires-glp1/wegovy-danger/" class="text-blue-600 hover:text-blue-800 font-medium">risques Wegovy</a> 
-            détaille les contre-indications absolues et les précautions d'emploi essentielles.
-          </p>
-          
-          <div class="bg-orange-50 rounded-lg p-6 mb-6 border-l-4 border-orange-400">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">⚠️ Effets Secondaires Fréquents</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li><strong>Digestifs :</strong> Nausées (30%), vomissements (15%), diarrhées (10%)</li>
-              <li><strong>Généraux :</strong> Fatigue, maux de tête, réactions au site d'injection</li>
-              <li><strong>Rares graves :</strong> Pancréatite (moins de 0,1%), troubles biliaires</li>
-            </ul>
-          </div>
-
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Prévention et Gestion des Effets Indésirables</h3>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            La <strong>prévention des effets secondaires</strong> repose sur une titration progressive et un suivi médical régulier. 
-            Consultez nos <a href="/collections/effets-secondaires-glp1/" class="text-blue-600 hover:text-blue-800 font-medium">stratégies de prévention</a> 
-            pour optimiser la tolérance de votre traitement GLP-1.
-          </p>
-        </div>
-
-        <!-- Call-to-action Expert -->
-        <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-6 border border-red-200">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">🚨 Surveillance Médicale Spécialisée</h2>
-          <p class="text-gray-700 mb-4">
-            Notre équipe médicale assure le suivi sécuritaire de votre traitement GLP-1. En cas d'effets indésirables, 
-            consultez immédiatement votre <a href="/collections/medecins-glp1-france/" class="text-blue-600 hover:text-blue-800 font-medium">médecin spécialisé GLP-1</a> 
-            pour un ajustement personnalisé du traitement.
-          </p>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Liste des articles -->
+    <!-- Articles Section -->
     <section class="collection-articles">
       <div class="mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Articles de la Collection Effets Secondaires GLP-1</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Effets Secondaires</h2>
         <p class="text-lg text-gray-600">
-          Informations complètes sur la sécurité, les effets indésirables et la surveillance des traitements GLP-1.
+          Effets secondaires et précautions des traitements GLP-1
         </p>
       </div>
       
-      <!-- Grille des articles -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-xl">
-              ⚠️
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">EFFETS-SECONDAIRES-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/effets-secondaires-glp1/insulevel-effet-indesirable/" class="hover:text-blue-600 transition-colors">
-              Effets secondaires glp-1 : insulevel effet indesirable
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Guide complet sur insulevel effet indesirable des médicaments GLP-1. Symptômes, prévention et solutions. Conseils médicaux France 2025. Informations vérifiées par des professionnels de santé.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Julien Lefèvre
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-xl">
-              ⚠️
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">EFFETS-SECONDAIRES-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/effets-secondaires-glp1/ozempic-danger/" class="hover:text-blue-600 transition-colors">
-              Ozempic danger : risques, effets graves et précautions essentielles 2025
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Ozempic danger : analyse complète des risques graves, pancréatite, cancer thyroïde, effets secondaires rares. Guide sécurité et précautions médicales.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Karim Benali
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              12 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-xl">
-              ⚠️
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">EFFETS-SECONDAIRES-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/effets-secondaires-glp1/wegovy-danger/" class="hover:text-blue-600 transition-colors">
-              Wegovy danger
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            wegovy danger — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-xl">
-              ⚠️
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">EFFETS-SECONDAIRES-GLP1</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/effets-secondaires-glp1/wegovy-dosage/" class="hover:text-blue-600 transition-colors">
-              Wegovy dosage
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            wegovy dosage — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-    </div>
-    
-  </section>
+      <!-- Grille des articles avec images -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((article) => (
+          <ArticleCard 
+            article={article}
+            collection="effets-secondaires-glp1"
+            categoryName="Effets Secondaires"
+            colors={colors}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-gradient-to-r from-red-50 to-red-100 rounded-2xl mt-12">
+      <div class="text-center px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Besoin d'informations personnalisées ?
+        </h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Consultez notre guide complet et téléchargez nos ressources gratuites.
+        </p>
+        <a 
+          href="/guide-beaute-perte-de-poids-glp1/" 
+          class="inline-flex items-center px-8 py-4 bg-red-600 text-white font-bold rounded-xl hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
+        >
+          <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Télécharger le guide gratuit
+        </a>
+      </div>
+    </section>
+  </div>
 </div>
 
 </BaseLayout>

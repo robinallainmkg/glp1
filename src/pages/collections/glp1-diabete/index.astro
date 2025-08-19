@@ -1,588 +1,84 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('glp1-diabete');
+
+// Configuration des couleurs
+const colors = {
+  bg: 'blue',
+  text: 'blue-800',
+  badge: 'blue-100'
+};
 ---
 
 <BaseLayout 
-  title="Ozempic Diabète Type 2 - GLP-1 Traitement Expert 2025"
-  description="Ozempic diabète type 2 : efficacité, dosage, suivi médical. GLP-1 révolution traitement diabète avec perte de poids."
-  keywords="ozempic diabete type 2, glp 1 diabete, ozempic diabete, semaglutide diabete, traitement diabete glp1"
+  title="Diabète & GLP-1 - Guide complet des GLP-1"
+  description="Traitement du diabète type 2 avec les agonistes GLP-1"
+  keywords="glp1 diabete, glp1, diabète & glp-1"
 >
 
 <div class="container">
   <div class="max-w-6xl mx-auto">
     
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-2xl p-8 mb-8">
+    <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl p-8 mb-8">
       <div class="flex items-center gap-4 mb-4">
-        <div class="text-4xl">🩺</div>
-        <h1 class="text-4xl font-bold">Ozempic Diabète Type 2</h1>
+        <div class="text-4xl">🔬</div>
+        <h1 class="text-4xl font-bold">Diabète & GLP-1</h1>
       </div>
       <p class="text-xl opacity-90 mb-4">
-        GLP-1 révolutionnaire : traitement diabète type 2 avec contrôle glycémique optimal et perte de poids.
+        Traitement du diabète type 2 avec les agonistes GLP-1
       </p>
       <div class="bg-white/20 rounded-lg p-4 inline-block">
-        <span class="font-semibold">15 articles disponibles</span>
+        <span class="font-semibold">{articles.length} articles disponibles</span>
       </div>
     </div>
 
-    <!-- Section Contenu SEO -->
-    <section class="mb-12">
-      <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-        
-        <!-- Introduction SEO -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Ozempic Diabète Type 2 : Traitement Révolutionnaire</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            <strong>Ozempic diabète type 2</strong> représente une avancée majeure dans la prise en charge diabétique moderne. 
-            Le sémaglutide réduit l'HbA1c de 1,5 à 2% tout en favorisant une perte de poids de 5 à 15%. 
-            Cette double action fait d'<strong>Ozempic</strong> le traitement de référence pour les diabétiques en surpoids. 
-            Découvrez notre <a href="/collections/glp1-diabete/ozempic-diabete-type-2/" class="text-blue-600 hover:text-blue-800 font-medium">guide complet Ozempic diabète</a>.
-          </p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            Les <strong>GLP-1 diabète</strong> agonistes transforment la stratégie thérapeutique avec leur mécanisme d'action innovant. 
-            En stimulant la sécrétion d'insuline de façon glucose-dépendante, ils évitent les hypoglycémies tout en normalisant la glycémie. 
-            Notre expertise en <a href="/collections/glp1-diabete/glp1-mecanisme-diabete/" class="text-blue-600 hover:text-blue-800 font-medium">mécanismes GLP-1</a> 
-            vous aide à comprendre cette révolution thérapeutique.
-          </p>
-        </div>
-
-        <!-- Efficacité Clinique -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Sémaglutide Diabète : Résultats Cliniques</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Le <strong>sémaglutide diabète</strong> démontre une efficacité supérieure aux traitements conventionnels. 
-            Les études SUSTAIN révèlent une réduction d'HbA1c de 2,1% avec Ozempic 1mg contre 0,9% avec sitagliptine. 
-            Cette supériorité s'accompagne d'une protection cardiovasculaire documentée chez les diabétiques à haut risque.
-          </p>
-          
-          <div class="bg-red-50 rounded-lg p-6 mb-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">📊 Efficacité GLP-1 Diabète</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li><strong>HbA1c :</strong> Réduction 1,5-2,1% vs placebo</li>
-              <li><strong>Poids :</strong> Perte 5-15kg en 6 mois</li>
-              <li><strong>Cardiovasculaire :</strong> -26% événements majeurs</li>
-              <li><strong>Pression artérielle :</strong> -3 à -7 mmHg</li>
-              <li><strong>Hypoglycémies :</strong> Risque minimal (glucose-dépendant)</li>
-            </ul>
-          </div>
-
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Traitement Diabète GLP-1 : Protocole Expert</h3>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Le <strong>traitement diabète GLP-1</strong> nécessite une titration progressive pour optimiser l'efficacité et la tolérance. 
-            Démarrage à 0,25mg hebdomadaire, augmentation à 0,5mg puis 1mg selon la réponse glycémique. 
-            L'association avec metformine potentialise les bénéfices sans augmenter les effets secondaires. 
-            Consultez nos <a href="/collections/medecins-glp1-france/" class="text-blue-600 hover:text-blue-800 font-medium">spécialistes diabète GLP-1</a> 
-            pour un suivi optimal.
-          </p>
-        </div>
-
-        <!-- Call-to-action Expert -->
-        <div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-lg p-6 border border-red-200">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">🎯 Expertise Diabète GLP-1</h2>
-          <p class="text-gray-700 mb-4">
-            Bénéficiez de l'expertise de nos diabétologues spécialisés GLP-1 pour optimiser votre traitement diabétique. 
-            Suivi personnalisé, ajustement des doses et prévention des complications avec les dernières innovations thérapeutiques. 
-            <a href="/guides/experts/" class="text-blue-600 hover:text-blue-800 font-medium">Contactez nos experts diabète</a> 
-            pour révolutionner votre prise en charge.
-          </p>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Liste des articles -->
+    <!-- Articles Section -->
     <section class="collection-articles">
       <div class="mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">GLP-1 et Diabète</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Diabète & GLP-1</h2>
         <p class="text-lg text-gray-600">
-          Rôle des agonistes GLP-1 dans le traitement du diabète de type 2 : efficacité, sécurité et recommandations.
+          Traitement du diabète type 2 avec les agonistes GLP-1
         </p>
       </div>
       
-      <!-- Grille des articles -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-complications-glp1/" class="hover:text-blue-600 transition-colors">
-              complications diabète et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            complications diabète et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-gestationnel-glp1/" class="hover:text-blue-600 transition-colors">
-              diabète gestationnel et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            diabète gestationnel et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-pied-glp1/" class="hover:text-blue-600 transition-colors">
-              diabète du pied et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            diabète du pied et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-regime-glp1/" class="hover:text-blue-600 transition-colors">
-              diabète régime avec GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            diabète régime avec GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-retinopathie-glp1/" class="hover:text-blue-600 transition-colors">
-              diabète rétinopathie et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            diabète rétinopathie et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-sport-glp1/" class="hover:text-blue-600 transition-colors">
-              diabète sport et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            diabète sport et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/diabete-urgence-glp1/" class="hover:text-blue-600 transition-colors">
-              diabète urgence et GLP-1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            diabète urgence et GLP-1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-auto-surveillance/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et auto-surveillance glycémique
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et auto-surveillance glycémique — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-carnet-diabetique/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et carnet diabétique
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et carnet diabétique — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-diabete-type-1/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et diabète de type 1
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et diabète de type 1 — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-hba1c-reduction/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et réduction HbA1c
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et réduction HbA1c — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-insuline-interaction/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et interaction avec insuline
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et interaction avec insuline — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-nephropathie/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et néphropathie diabétique
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et néphropathie diabétique — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/glp1-neuropathie-diabetique/" class="hover:text-blue-600 transition-colors">
-              GLP-1 et neuropathie diabétique
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            GLP-1 et neuropathie diabétique — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center text-white text-xl">
-              🩺
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-DIABETE</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-diabete/traitement-insulinique/" class="hover:text-blue-600 transition-colors">
-              Glp-1 pour diabète : traitement insulinique - guide complet france 2025
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Traitement insulinique avec les médicaments GLP-1. Efficacité, dosage et suivi médical. Guide complet diabète type 2 France 2025. Informations vérifiées par des professionnels de santé.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Julien Lefèvre
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-    </div>
-    
+      <!-- Grille des articles avec images -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((article) => (
+          <ArticleCard 
+            article={article}
+            collection="glp1-diabete"
+            categoryName="Diabète & GLP-1"
+            colors={colors}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl mt-12">
+      <div class="text-center px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Besoin d'informations personnalisées ?
+        </h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Consultez notre guide complet et téléchargez nos ressources gratuites.
+        </p>
+        <a 
+          href="/guide-beaute-perte-de-poids-glp1/" 
+          class="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
+        >
+          <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Télécharger le guide gratuit
+        </a>
+      </div>
+    </section>
   </div>
 </div>
 

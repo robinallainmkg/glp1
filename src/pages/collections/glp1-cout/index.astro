@@ -1,326 +1,85 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('glp1-cout');
+
+// Configuration des couleurs
+const colors = {
+  bg: 'amber',
+  text: 'amber-800',
+  badge: 'amber-100'
+};
 ---
 
 <BaseLayout 
-  title="Prix Wegovy et Coût GLP-1 en France - Guide Complet 2025"
-  description="Prix Wegovy, Saxenda et Ozempic en pharmacie française. Remboursement, où acheter et comparatif coûts des traitements GLP-1."
-  keywords="wegovy prix, achat wegovy en ligne, wegovy france prix, wegovy prix pharmacie, wegovy pharmacie, glp1 cout, saxenda prix"
+  title="Prix & Coût - Guide complet des GLP-1"
+  description="Prix, remboursement et coût des médicaments GLP-1 en France"
+  keywords="glp1 cout, glp1, prix & coût"
 >
 
 <div class="container">
   <div class="max-w-6xl mx-auto">
     
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-2xl p-8 mb-8">
+    <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-2xl p-8 mb-8">
       <div class="flex items-center gap-4 mb-4">
         <div class="text-4xl">💰</div>
-        <h1 class="text-4xl font-bold">Prix Wegovy et Coût des Traitements GLP-1 en France</h1>
+        <h1 class="text-4xl font-bold">Prix & Coût</h1>
       </div>
       <p class="text-xl opacity-90 mb-4">
-        Guide complet des prix Wegovy, Saxenda et Ozempic : tarifs pharmacie, remboursement et solutions d'achat en France 2025.
+        Prix, remboursement et coût des médicaments GLP-1 en France
       </p>
       <div class="bg-white/20 rounded-lg p-4 inline-block">
-        <span class="font-semibold">7 articles disponibles</span>
+        <span class="font-semibold">{articles.length} articles disponibles</span>
       </div>
     </div>
 
-    <!-- Section Contenu SEO -->
-    <section class="mb-12">
-      <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-        
-        <!-- Introduction SEO -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Wegovy Prix et Remboursement en France</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Le <strong>prix du Wegovy</strong> en pharmacie française varie entre <strong>269€ à 350€ par mois</strong> selon le dosage et l'établissement. 
-            Découvrez les tarifs actuels du <a href="/collections/glp1-cout/wegovy-prix/" class="text-blue-600 hover:text-blue-800 font-medium">Wegovy prix en France</a> 
-            et les conditions de remboursement par la Sécurité Sociale. L'<strong>achat de Wegovy en ligne</strong> nécessite une prescription médicale valide.
-          </p>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            En 2025, le remboursement Wegovy est possible dans certains cas d'obésité sévère. Consultez notre guide détaillé sur 
-            <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle/" class="text-blue-600 hover:text-blue-800 font-medium">le remboursement Wegovy par les mutuelles</a> 
-            et découvrez comment optimiser votre prise en charge financière.
-          </p>
-        </div>
-
-        <!-- Comparatif Prix -->
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Comparatif Prix des Médicaments GLP-1</h2>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            <strong>Saxenda, Ozempic et Wegovy</strong> présentent des prix différents selon leur indication et leur dosage. 
-            Notre guide <a href="/collections/medicaments-glp1/" class="text-blue-600 hover:text-blue-800 font-medium">comparatif des prix GLP-1</a> 
-            détaille les coûts de chaque traitement et les alternatives de financement disponibles en France.
-          </p>
-          
-          <div class="bg-blue-50 rounded-lg p-6 mb-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">💡 Prix Moyens 2025</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li><strong>Wegovy :</strong> 269€-350€/mois (perte de poids)</li>
-              <li><strong>Saxenda :</strong> 180€-220€/mois (perte de poids)</li>
-              <li><strong>Ozempic :</strong> 80€-120€/mois (diabète + off-label)</li>
-            </ul>
-          </div>
-
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Où Acheter Wegovy en France</h3>
-          <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-            Les <strong>pharmacies françaises</strong> proposent Wegovy sur prescription médicale obligatoire. Consultez notre liste des 
-            <a href="/collections/glp1-cout/acheter-wegovy-en-france/" class="text-blue-600 hover:text-blue-800 font-medium">pharmacies proposant Wegovy</a> 
-            et les modalités d'achat sécurisé. Évitez absolument les sites de vente en ligne non autorisés.
-          </p>
-        </div>
-
-        <!-- Call-to-action Expert -->
-        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6 border border-green-200">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">🩺 Conseils d'Experts Financiers</h2>
-          <p class="text-gray-700 mb-4">
-            Nos spécialistes en économie de la santé vous accompagnent pour optimiser le coût de votre traitement GLP-1. 
-            Découvrez les <a href="/guides/experts/" class="text-blue-600 hover:text-blue-800 font-medium">stratégies de financement personnalisées</a> 
-            et les solutions de prise en charge adaptées à votre situation.
-          </p>
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- Liste des articles -->
+    <!-- Articles Section -->
     <section class="collection-articles">
       <div class="mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Articles de la Collection Prix GLP-1</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Prix & Coût</h2>
         <p class="text-lg text-gray-600">
-          Découvrez tous nos guides détaillés sur les coûts et le financement des traitements GLP-1 en France.
+          Prix, remboursement et coût des médicaments GLP-1 en France
         </p>
       </div>
       
-      <!-- Grille des articles -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/acheter-wegovy-en-france/" class="hover:text-blue-600 transition-colors">
-              Comment acheter wegovy en france en 2025 : guide complet
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Découvrez comment acheter Wegovy légalement en France en 2025 : prix, ordonnance, pharmacies, remboursement et alternatives. Guide complet par un médecin spécialisé.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              12 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/anneau-gastrique-prix-cmu/" class="hover:text-blue-600 transition-colors">
-              Prix et coût glp-1 : anneau gastrique prix cmu - guide complet france 2025
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Prix détaillé pour anneau gastrique prix cmu en France 2025. Remboursement sécurité sociale, mutuelles et comparatif des tarifs. Informations vérifiées par des professionnels de santé.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/operation-pour-maigrir-prix/" class="hover:text-blue-600 transition-colors">
-              Opération pour maigrir prix : coût chirurgie bariatrique en france 2025
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Description non disponible
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/saxenda-prix-pharmacie/" class="hover:text-blue-600 transition-colors">
-              Saxenda prix pharmacie : coût réel du traitement en france 2025
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Description non disponible
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/wegovy-prix-pharmacie/" class="hover:text-blue-600 transition-colors">
-              Wegovy prix pharmacie
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            wegovy prix pharmacie — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Sophie Dubois
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/wegovy-prix/" class="hover:text-blue-600 transition-colors">
-              Wegovy prix france 2025 : coût complet, remboursement et alternatives
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            Prix Wegovy en France : 269€/mois pour la dose maximale, remboursement sécurité sociale, comparaison pharmacies et alternatives économiques.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Dr. Émilie Martin
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              10 min
-            </span>
-          </div>
-        </div>
-      </article>
-      
-      <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden">
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white text-xl">
-              💰
-            </div>
-            <div class="flex-1">
-              <span class="text-sm text-gray-500 font-medium">GLP1-COUT</span>
-            </div>
-          </div>
-          
-          <h2 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle/" class="hover:text-blue-600 transition-colors">
-              Wegovy remboursement mutuelle
-            </a>
-          </h2>
-          
-          <p class="text-gray-600 mb-4 text-sm leading-relaxed">
-            wegovy remboursement mutuelle — Guide marché français.
-          </p>
-          
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-sm text-gray-500">
-              Julien Lefèvre
-            </span>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-              5 min
-            </span>
-          </div>
-        </div>
-      </article>
-    </div>
-    
-  </section>
+      <!-- Grille des articles avec images -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {articles.map((article) => (
+          <ArticleCard 
+            article={article}
+            collection="glp1-cout"
+            categoryName="Prix & Coût"
+            colors={colors}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-gradient-to-r from-amber-50 to-amber-100 rounded-2xl mt-12">
+      <div class="text-center px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Besoin d'informations personnalisées ?
+        </h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Consultez notre guide complet et téléchargez nos ressources gratuites.
+        </p>
+        <a 
+          href="/guide-beaute-perte-de-poids-glp1/" 
+          class="inline-flex items-center px-8 py-4 bg-amber-600 text-white font-bold rounded-xl hover:bg-amber-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
+        >
+          <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Télécharger le guide gratuit
+        </a>
+      </div>
+    </section>
+  </div>
 </div>
 
 </BaseLayout>

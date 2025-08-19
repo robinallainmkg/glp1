@@ -146,6 +146,19 @@ const breadcrumb = generateBreadcrumb(category, title);
 const backUrl = getBackUrl(category);
 const displayName = getDisplayName(category);
 
+// Récupérer l'image depuis le frontmatter si elle existe
+function getArticleImage(category, slug, title) {
+  // Essayer de construire l'URL de l'image thumbnail générée
+  const thumbnailUrl = `/images/thumbnails/${category}-${slug}.svg`;
+  
+  // Pour l'instant, on suppose que l'image existe
+  // Dans une version plus avancée, on pourrait vérifier l'existence du fichier
+  return thumbnailUrl;
+}
+
+// Obtenir l'image de l'article
+const articleImage = getArticleImage(category, Astro.url.pathname.split('/').pop()?.replace('.html', '') || 'default', title);
+
 // Conversion simple du markdown en HTML
 function markdownToHtml(markdown: string): string {
   return markdown
@@ -195,40 +208,59 @@ const contentHtml = markdownToHtml(content);
       </div>
     </nav>
 
-    <!-- En-tête de l'article -->
+    <!-- En-tête de l'article avec image -->
     <header class={`article-header bg-gradient-to-br ${theme.gradient} border-b border-gray-200`}>
       <div class="container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-          <div class="flex items-center gap-4 mb-6 pt-6">
-            <span class="text-3xl">{theme.icon}</span>
-            <span class={`px-3 py-1 rounded-full text-sm font-medium ${theme.badge}`}>
-              {category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-            </span>
-          </div>
-          
-          <h1 class={`text-3xl md:text-4xl font-bold mb-4 leading-tight ${theme.textColor}`}>
-            {title}
-          </h1>
-          
-          <p class={`text-lg ${theme.textColor} opacity-90 mb-6 leading-relaxed max-w-3xl`}>
-            {description}
-          </p>
-          
-          <div class={`flex flex-wrap items-center gap-6 text-sm ${theme.textColor} opacity-75`}>
-            <div class="flex items-center gap-2">
-              <span class="text-base">✍️</span>
-              <span class="font-medium">{author}</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-base">⏱️</span>
-              <span>{readingTime} min de lecture</span>
-            </div>
-            {lastModified && (
-              <div class="flex items-center gap-2">
-                <span class="text-base">📅</span>
-                <span>{new Date(lastModified).toLocaleDateString('fr-FR')}</span>
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <!-- Contenu textuel -->
+            <div>
+              <div class="flex items-center gap-4 mb-6 pt-6">
+                <span class="text-3xl">{theme.icon}</span>
+                <span class={`px-3 py-1 rounded-full text-sm font-medium ${theme.badge}`}>
+                  {category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                </span>
               </div>
-            )}
+              
+              <h1 class={`text-3xl md:text-4xl font-bold mb-4 leading-tight ${theme.textColor}`}>
+                {title}
+              </h1>
+              
+              <p class={`text-lg ${theme.textColor} opacity-90 mb-6 leading-relaxed`}>
+                {description}
+              </p>
+              
+              <div class={`flex flex-wrap items-center gap-6 text-sm ${theme.textColor} opacity-75`}>
+                <div class="flex items-center gap-2">
+                  <span class="text-base">✍️</span>
+                  <span class="font-medium">{author}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-base">⏱️</span>
+                  <span>{readingTime} min de lecture</span>
+                </div>
+                {lastModified && (
+                  <div class="flex items-center gap-2">
+                    <span class="text-base">📅</span>
+                    <span>{new Date(lastModified).toLocaleDateString('fr-FR')}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            <!-- Image de l'article -->
+            <div class="lg:order-2">
+              <div class="relative">
+                <img 
+                  src={articleImage} 
+                  alt={title}
+                  class="w-full h-64 lg:h-80 object-cover rounded-xl shadow-lg"
+                  loading="eager"
+                />
+                <!-- Overlay avec gradient pour améliorer la lisibilité -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
