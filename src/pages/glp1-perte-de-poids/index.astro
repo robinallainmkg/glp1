@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de la collection glp1-perte-de-poids
+const articles = await getCollection('glp1-perte-de-poids');
+const sortedArticles = articles.sort((a, b) => {
+  const dateA = new Date(a.data.datePublished || a.data.pubDate);
+  const dateB = new Date(b.data.datePublished || b.data.pubDate);
+  return dateB.getTime() - dateA.getTime();
+});
+
+// Articles mis en avant
+const featuredArticles = sortedArticles.filter(article => article.data.featured);
+const otherArticles = sortedArticles.filter(article => !article.data.featured);
+---
+
+<BaseLayout 
+  title="GLP-1 pour la Perte de Poids : Guide Complet et Témoignages"
+  description="Découvrez tout sur les GLP-1 pour perdre du poids : Ozempic, Wegovy, prix, efficacité, témoignages réels et conseils d'experts."
+  keywords="GLP-1, perte de poids, Ozempic, Wegovy, témoignages, prix"
+>
+  <div class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        GLP-1 pour la <span class="text-blue-600">Perte de Poids</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+        Découvrez les médicaments GLP-1 révolutionnaires pour perdre du poids : Ozempic, Wegovy, Mounjaro. 
+        Témoignages réels, prix, efficacité et conseils d'experts.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/guides/quel-traitement-glp1-choisir/" class="btn btn-primary">
+          🎯 Faire le Diagnostic
+        </a>
+        <a href="/temoignages/avant-apres-glp1/" class="btn btn-secondary">
+          Voir les Témoignages
+        </a>
+      </div>
+    </div>
+
+    <!-- Points Clés -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="bg-blue-50 p-6 rounded-lg text-center">
+        <div class="text-2xl mb-2">📉</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Perte de Poids Efficace</h3>
+        <p class="text-gray-600 text-sm">Jusqu'à 20% de perte de poids corporel</p>
+      </div>
+      <div class="bg-green-50 p-6 rounded-lg text-center">
+        <div class="text-2xl mb-2">🏥</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Suivi Médical</h3>
+        <p class="text-gray-600 text-sm">Prescription et surveillance médicale</p>
+      </div>
+      <div class="bg-purple-50 p-6 rounded-lg text-center">
+        <div class="text-2xl mb-2">💡</div>
+        <h3 class="font-semibold text-gray-900 mb-2">Témoignages Réels</h3>
+        <p class="text-gray-600 text-sm">Expériences authentiques de patients</p>
+      </div>
+    </div>
+
+    <!-- Articles mis en avant -->
+    {featuredArticles.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Articles Essentiels</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredArticles.map((article) => (
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              {article.data.image && (
+                <img 
+                  src={article.data.image} 
+                  alt={article.data.title}
+                  class="w-full h-48 object-cover"
+                />
+              )}
+              <div class="p-6">
+                <h3 class="font-semibold text-gray-900 mb-2">
+                  <a href={`/glp1-perte-de-poids/${article.slug}/`} class="hover:text-blue-600 transition-colors">
+                    {article.data.title}
+                  </a>
+                </h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  {article.data.description}
+                </p>
+                <div class="flex items-center justify-between text-xs text-gray-500">
+                  <span>{article.data.author}</span>
+                  <span>{article.data.readingTime} min</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Tous les articles -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Tous les Articles</h2>
+      <div class="grid gap-6">
+        {otherArticles.map((article) => (
+          <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              {article.data.image && (
+                <img 
+                  src={article.data.image} 
+                  alt={article.data.title}
+                  class="w-full md:w-32 h-32 object-cover rounded-lg"
+                />
+              )}
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-900 mb-2">
+                  <a href={`/glp1-perte-de-poids/${article.slug}/`} class="hover:text-blue-600 transition-colors">
+                    {article.data.title}
+                  </a>
+                </h3>
+                <p class="text-gray-600 text-sm mb-3">
+                  {article.data.description}
+                </p>
+                <div class="flex items-center gap-4 text-xs text-gray-500">
+                  <span>{article.data.author}</span>
+                  <span>{article.data.readingTime} min de lecture</span>
+                  <span>{new Date(article.data.datePublished || article.data.pubDate).toLocaleDateString('fr-FR')}</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg text-center mt-12">
+      <h2 class="text-2xl font-bold mb-4">Prêt à Commencer Votre Transformation ?</h2>
+      <p class="mb-6">Faites notre diagnostic personnalisé pour découvrir le traitement GLP-1 qui vous convient.</p>
+      <a href="/guides/quel-traitement-glp1-choisir/" class="btn btn-white">
+        🎯 Faire le Diagnostic Gratuit
+      </a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .btn {
+    @apply inline-block px-6 py-3 rounded-lg font-medium transition-colors text-center;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+  }
+  
+  .btn-white {
+    @apply bg-white text-blue-600 hover:bg-gray-100;
+  }
+</style>

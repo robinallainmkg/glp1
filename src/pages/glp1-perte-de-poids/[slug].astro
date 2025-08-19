@@ -1,0 +1,33 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('glp1-perte-de-poids');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const content = entry.body;
+
+// Utiliser le nom de la collection au lieu de la catégorie du frontmatter
+const collectionName = "glp1-perte-de-poids";
+---
+
+<ArticleLayout 
+  title={entry.data.title}
+  description={entry.data.description || entry.data.metaDescription || ""}
+  author={entry.data.author || "Équipe GLP-1 France"}
+  category={collectionName}
+  keywords={entry.data.keywords || ""}
+  readingTime={entry.data.readingTime || 5}
+  lastModified={entry.data.pubDate}
+  content={content}
+  collectionTheme="weight-loss"
+>
+  <Content />
+</ArticleLayout>
