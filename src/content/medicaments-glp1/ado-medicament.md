@@ -2,8 +2,9 @@
 title: "ADO médicament : antidiabétiques oraux et traitements combinés"
 description: "Les antidiabétiques oraux (ADO) dans le traitement du diabète de type 2 : mécanismes, efficacité et place dans la thérapeutique moderne."
 slug: ado-medicament
-pubDate: 2025-08-20T00:00:00.000Z
-author: "Julien Lefèvre"
+pubDate: 2025-08-20T00:00:00Z
+author: "Dr. Sarah Martin"
+category: "Guide médical"
 thumbnail: /images/thumbnails/ado-medicament-illus.jpg
 thumbnailAlt: "Illustration pour larticle ado-medicament"
 featured: false

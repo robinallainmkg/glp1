@@ -186,7 +186,7 @@ var standardArticleFields = [
   }
 ];
 var config_default = defineConfig({
-  branch: "production",
+  branch: process.env.TINA_BRANCH || "main",
   // Configuration avec vos clés API
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
