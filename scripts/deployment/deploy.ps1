@@ -41,7 +41,21 @@ if ($LASTEXITCODE -eq 0) {
     }
 }
 
-Write-Host "`nEtape 4: Verification build..." -ForegroundColor Yellow
+Write-Host "`nEtape 4: Copie interface TinaCMS..." -ForegroundColor Yellow
+# Copier les fichiers TinaCMS pour remplacer ceux d'Astro
+if (Test-Path "public/admin/index.html") {
+    Copy-Item "public/admin/index.html" "dist/admin/index.html" -Force
+    Write-Host "TinaCMS index.html: COPIE" -ForegroundColor Green
+}
+if (Test-Path "public/admin/assets") {
+    if (Test-Path "dist/admin/assets") {
+        Remove-Item "dist/admin/assets" -Recurse -Force
+    }
+    Copy-Item "public/admin/assets" "dist/admin/assets" -Recurse -Force
+    Write-Host "TinaCMS assets: COPIES" -ForegroundColor Green
+}
+
+Write-Host "`nEtape 5: Verification build..." -ForegroundColor Yellow
 if (Test-Path "dist") {
     $fileCount = (Get-ChildItem "dist" -Recurse -File).Count
     Write-Host "Fichiers generes: $fileCount" -ForegroundColor Green
@@ -56,7 +70,7 @@ if (Test-Path "dist") {
     exit 1
 }
 
-Write-Host "`nEtape 5: Upload vers Hostinger..." -ForegroundColor Yellow
+Write-Host "`nEtape 6: Upload vers Hostinger..." -ForegroundColor Yellow
 
 # Configuration WinSCP (méthode qui marche)
 $winscpScript = @"
