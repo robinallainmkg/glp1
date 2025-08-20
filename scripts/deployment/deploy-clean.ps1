@@ -44,7 +44,8 @@ if (Test-Path ".astro") {
 }
 
 Write-Host "   Lancement build..."
-npm run build
+# Build temporaire sans TinaCMS (probleme de branche)
+astro build
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "ERREUR: Echec du build" -ForegroundColor Red
