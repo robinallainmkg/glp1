@@ -19,13 +19,6 @@ priority: 5
 - **Suivi médical** : Contrôle régulier indispensable
 - **Effets** : Amélioration du contrôle glycémique
 
-
-
-
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Introduction
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
@@ -229,13 +222,13 @@ Les ADO restent la base du traitement du diabète de type 2, avec la metformine 
 
 ---
 
-*Article rédigé par Julien Lefèvre à des fins d'information médicale. Ces informations ne remplacent pas une consultation médicale personnalisée. Consultez votre médecin pour tout conseil médical.*
+*Article rédigé par Dr. Sarah Martin à des fins d'information médicale. Ces informations ne remplacent pas une consultation médicale personnalisée. Consultez votre médecin pour tout conseil médical.*
 
 ## Important
 
- Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-##  recommandés
+## Ressources recommandées
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
 - **Médicaments GLP-1** : Panorama complet des traitements
