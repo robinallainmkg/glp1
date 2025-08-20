@@ -1,13 +1,17 @@
 ---
-title: "alternatives naturelles Ozempic"
-metaTitle: "alternatives naturelles Ozempic | France 2025"
-description: "alternatives naturelles Ozempic — Guide marché français."
-metaDescription: "alternatives naturelles ozempic France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: alternatives-naturelles-ozempic
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "alternatives naturelles ozempic, sémaglutide naturel"
-keyword: "alternatives naturelles ozempic, france 2025"
-featured: true
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/alternatives-naturelles-ozempic-illus.jpg
+thumbnailAlt: "Illustration pour larticle alternatives-naturelles-ozempic"
+featured: false
+priority: 5
+schema: Article
+title: "alternatives naturelles Ozempic"
+description: "alternatives naturelles Ozempic — Guide marché français."
 ---
 
 ## À retenir

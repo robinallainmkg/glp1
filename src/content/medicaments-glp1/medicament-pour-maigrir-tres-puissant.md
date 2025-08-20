@@ -1,16 +1,17 @@
 ---
-title: "Médicament pour maigrir très puissant : guide complet 2025"
-slug: "medicament-pour-maigrir-tres-puissant"
-category: "medicaments-glp1"
+slug: medicament-pour-maigrir-tres-puissant
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readTime: "8 min"
-metaTitle: "Médicament pour maigrir très puissant france 2025 : guide complet"
-metaDescription: "Découvrez les médicaments les plus puissants pour maigrir en France : Wegovy, Saxenda, Ozempic. Efficacité, prescription, effets. Guide 2025."
-heroImage: "/images/medicament-puissant-maigrir.jpg"
-published: true
-featured: true
-keyword: "médicament maigrir très, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/medicament-pour-maigrir-tres-puissant-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicament-pour-maigrir-tres-puissant"
+featured: false
+priority: 5
+schema: Article
+title: "Médicament pour maigrir très puissant : guide complet 2025"
+description: "Découvrez les médicaments les plus puissants pour maigrir en France : Wegovy, Saxenda, Ozempic. Efficacité, prescription, effets. Guide 2025."
 ---
 
 Les **médicaments pour maigrir très puissants** ont révolutionné la prise en charge de l'obésité en France. En 2025, les traitements GLP-1 comme Wegovy offrent une efficacité sans précédent, avec des pertes de poids pouvant atteindre 15-20% du poids corporel.

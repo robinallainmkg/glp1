@@ -1,14 +1,17 @@
 ---
-title: "Médicament pour perdre du ventre en 1 semaine"
-metaTitle: "Médicament pour perdre du ventre en 1 semaine | France 2025"
-description: "médicament pour perdre du ventre en 1 semaine — Guide marché français."
-metaDescription: "perdre du ventre medicament pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "perdre du ventre medicament"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: medicament-pour-perdre-du-ventre-en-1-semaine
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 6
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/medicament-pour-perdre-du-ventre-en-1-semaine-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicament-pour-perdre-du-ventre-en-1-semaine"
+featured: false
+priority: 5
+schema: Article
+title: "Médicament pour perdre du ventre en 1 semaine"
+description: "médicament pour perdre du ventre en 1 semaine — Guide marché français."
 ---
 
 et rappel de précautions.

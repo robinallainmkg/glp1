@@ -1,14 +1,17 @@
 ---
-title: "Alternatives aux glp-1 : sémaglutide naturel"
-metaTitle: "Alternatives aux glp-1 : sémaglutide naturel - gui | France 2025"
-description: "Découvrez les alternatives naturelles aux médicaments GLP-1 pour sémaglutide naturel. Solutions efficaces, prix et avis médical en France 2025. Informations vérifiées par des professionnels de santé."
-metaDescription: "Alternatives naturelles ozempic alternative France 2025 : solutions efficaces, comparaisons, conseils experts. Guide complet."
-keyword: "ozempic alternative"
-intent: "Informational"
-category: "glp-1 alternatives"
+slug: semaglutide-naturel
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/semaglutide-naturel-illus.jpg
+thumbnailAlt: "Illustration pour larticle semaglutide-naturel"
+featured: false
+priority: 5
+schema: Article
+title: "Alternatives aux glp-1 : sémaglutide naturel"
+description: "Découvrez les alternatives naturelles aux médicaments GLP-1 pour sémaglutide naturel. Solutions efficaces, prix et avis médical en France 2025. Informations vérifiées par des professionnels de santé."
 ---
 
 et rappel de précautions.

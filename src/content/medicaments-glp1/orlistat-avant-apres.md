@@ -1,20 +1,17 @@
 ---
-title: "Orlistat avant apres - Orlistat Avant Apres"
-metaTitle: "Orlistat avant apres | Prix Efficacité France 2025"
-description: "orlistat avant apres — Guide marché français."
-metaDescription: "orlistat avant après France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "orlistat avant après"
-intent: "Informational"
-category: "glp-1 medications"
+slug: orlistat-avant-apres
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/orlistat-avant-apres-illus.jpg
+thumbnailAlt: "Illustration pour larticle orlistat-avant-apres"
+featured: false
+priority: 5
+schema: Article
+title: "Orlistat avant apres - Orlistat Avant Apres"
+description: "orlistat avant apres — Guide marché français."
 ---
 
 ## À retenir

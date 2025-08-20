@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : mécanisme d action - guide complet france 2025"
-metaTitle: "Médicaments glp-1 : mécanisme d action - guide com | France 2025"
-description: "Guide complet sur mécanisme d action des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "mecanisme d action France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "mecanisme d action"
-intent: "Informational"
-category: "glp-1 medications"
+slug: mecanisme-d-action
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, perte de poids"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/mecanisme-d-action-illus.jpg
+thumbnailAlt: "Illustration pour larticle mecanisme-d-action"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : mécanisme d action - guide complet france 2025"
+description: "Guide complet sur mécanisme d action des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Mécanisme d'action des agonistes GLP-1

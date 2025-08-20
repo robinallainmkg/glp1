@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Néphropathie Diabétique : Protection Rénale 2025"
-metaTitle: "GLP-1 Néphropathie Diabétique : Protection Rénale  | France 2025"
-description: "GLP-1 et néphropathie diabétique — Guide marché français."
-metaDescription: "glp-1 néphropathie diabétique France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-nephropathie
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "néphropathie glp1, reins diabète"
-keyword: "glp-1 néphropathie diabétique, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-nephropathie-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-nephropathie"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Néphropathie Diabétique : Protection Rénale 2025"
+description: "GLP-1 et néphropathie diabétique — Guide marché français."
 ---
 
 ## À retenir

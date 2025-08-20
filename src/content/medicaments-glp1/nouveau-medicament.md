@@ -1,20 +1,17 @@
 ---
-title: "Nouveau Médicament GLP-1 France 2025 : Innovations et Disponibilité"
-metaTitle: "Nouveau Médicament GLP-1 France 2025 | Innovations Thérapeutiques"
-description: "Découvrez les nouveaux médicaments GLP-1 disponibles en France 2025 : innovations thérapeutiques, pipelines, efficacité et accès patients."
-metaDescription: "nouveau médicament glp1 france 2025, innovation thérapeutique France 2025 : guide complet, prix, efficacité et conseils pratiques."
-keyword: "nouveau médicament glp1 france 2025, innovation thérapeutique"
-intent: "Informational"
-category: "glp-1 medications"
+slug: nouveau-medicament
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/nouveau-medicament-illus.jpg
+thumbnailAlt: "Illustration pour larticle nouveau-medicament"
+featured: false
+priority: 5
+schema: Article
+title: "Nouveau Médicament GLP-1 France 2025 : Innovations et Disponibilité"
+description: "Découvrez les nouveaux médicaments GLP-1 disponibles en France 2025 : innovations thérapeutiques, pipelines, efficacité et accès patients."
 ---
 
 ## À retenir

@@ -1,15 +1,17 @@
 ---
-title: "Ou trouver ozempic - Ou Trouver Ozempic"
-metaTitle: "Ou trouver ozempic | Perte Poids France 2025"
-description: "ou trouver ozempic — Guide marché français."
-metaDescription: "ou trouver ozempic 0 25 pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "ou trouver ozempic 0 25"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: ou-trouver-ozempic
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/ou-trouver-ozempic-illus.jpg
+thumbnailAlt: "Illustration pour larticle ou-trouver-ozempic"
+featured: false
+priority: 5
+schema: Article
+title: "Ou trouver ozempic - Ou Trouver Ozempic"
+description: "ou trouver ozempic — Guide marché français."
 ---
 
 ## Où trouver Ozempic en France : guide complet

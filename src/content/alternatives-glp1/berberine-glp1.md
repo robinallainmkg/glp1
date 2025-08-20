@@ -1,12 +1,17 @@
 ---
-title: "berbérine alternative GLP-1 - Berberine Glp1"
-metaTitle: "berbérine alternative GLP-1 | Prix Efficacité France 2025"
-description: "berbérine alternative GLP-1 — Guide marché français."
-metaDescription: "berbérine alternative glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: berberine-glp1
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "berbérine glp1, extrait naturel"
-keyword: "berbérine alternative glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/berberine-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle berberine-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "berbérine alternative GLP-1 - Berberine Glp1"
+description: "berbérine alternative GLP-1 — Guide marché français."
 ---
 
 ## À retenir

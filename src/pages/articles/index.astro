@@ -19,7 +19,7 @@ const allArticles = await Promise.all([
   return collections.flat().map(article => ({
     ...article,
     category: article.collection,
-    url: `/${article.collection}/${article.slug}/`
+    url: `/collections/${article.collection}/${article.slug}/`
   }))
 }).then(articles => {
   // Algorithme de mélange avancé pour diversifier les collections

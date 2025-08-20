@@ -1,20 +1,17 @@
 ---
-title: "Tirzepatide avis - Tirzepatide Avis"
-metaTitle: "Tirzepatide Avis France 2025 | Témoignages et Efficacité"
-description: "Tirzepatide avis France 2025 : témoignages patients, efficacité perte de poids, effets secondaires et comparaison Ozempic Wegovy."
-metaDescription: "tirzepatide remboursement france, mounjaro prix France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "tirzepatide remboursement france, mounjaro prix"
-intent: "Informational"
-category: "glp-1 medications"
+slug: tirzepatide-avis
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/tirzepatide-avis-illus.jpg
+thumbnailAlt: "Illustration pour larticle tirzepatide-avis"
+featured: false
+priority: 5
+schema: Article
+title: "Tirzepatide avis - Tirzepatide Avis"
+description: "Tirzepatide avis France 2025 : témoignages patients, efficacité perte de poids, effets secondaires et comparaison Ozempic Wegovy."
 ---
 
 ## À retenir

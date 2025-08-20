@@ -1,15 +1,17 @@
 ---
-title: "Ozempic Stylo Dosage : Combien d'Injections par Stylo France 2025"
-metaTitle: "Ozempic Stylo Dosage : Combien d | Perte Poids France 2025"
-description: "combien de dose dans un stylo ozempic — Guide marché français."
-metaDescription: "comment prendre ozempic pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "comment prendre ozempic"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: combien-de-dose-dans-un-stylo-ozempic
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 6
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, diabète"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/combien-de-dose-dans-un-stylo-ozempic-illus.jpg
+thumbnailAlt: "Illustration pour larticle combien-de-dose-dans-un-stylo-ozempic"
+featured: false
+priority: 5
+schema: Article
+title: "Ozempic Stylo Dosage : Combien dInjections par Stylo France 2025"
+description: "combien de dose dans un stylo ozempic — Guide marché français."
 ---
 
 ## Dosage et utilisation d'Ozempic

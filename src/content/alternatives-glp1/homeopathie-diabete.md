@@ -1,12 +1,17 @@
 ---
-title: "homéopathie et diabète - Homeopathie Diabete"
-metaTitle: "homéopathie et diabète | Prix Efficacité France 2025"
-description: "homéopathie et diabète — Guide marché français."
-metaDescription: "homéopathie diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: homeopathie-diabete
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "homéopathie diabète, médecine douce"
-keyword: "homéopathie diabète, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/homeopathie-diabete-illus.jpg
+thumbnailAlt: "Illustration pour larticle homeopathie-diabete"
+featured: false
+priority: 5
+schema: Article
+title: "homéopathie et diabète - Homeopathie Diabete"
+description: "homéopathie et diabète — Guide marché français."
 ---
 
 ## À retenir

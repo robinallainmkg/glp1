@@ -1,24 +1,17 @@
 ---
-title: "Wegovy avis médical 2025 - efficacité, effets secondaires et"
-metaTitle: "Wegovy avis médical 2025 : efficacité, effets seco | France 2025"
-description: "Avis Wegovy France : efficacité perte de poids 15%, effets secondaires, témoignages patients. Analyse médicale complète 2025."
-metaDescription: "Wegovy avis médical 2025  Wegovy (sémaglutide 2,4mg) suscite des avis partagés entre son efficacité remarquable sur la perte de poids et ses effets seco"
-keyword: "wegovy avis"
-intent: "Informational"
-category: "glp-1 medications"
+slug: wegovy-avis
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 8
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/medicaments-glp1/wegovy-avis/"
-tags:
-  - GLP-1
-  - wegovy
-  - semaglutide
-  - avis
-  - efficacité
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/wegovy-avis-illus.jpg
+thumbnailAlt: "Illustration pour larticle wegovy-avis"
+featured: false
+priority: 5
+schema: Article
+title: "Wegovy avis médical 2025 - efficacité, effets secondaires et"
+description: "Avis Wegovy France : efficacité perte de poids 15%, effets secondaires, témoignages patients. Analyse médicale complète 2025."
 ---
 
 ## À retenir sur les retours d'expérience et évaluation médicale de Wegovy

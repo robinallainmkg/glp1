@@ -1,21 +1,17 @@
 ---
-title: "Mounjaro effet secondaire - Mounjaro Effet Secondaire"
-metaTitle: "Mounjaro Effets Secondaires France 2025 | Guide Sécurité"
-description: "Mounjaro effets secondaires France 2025 : fréquence, gravité, gestion et précautions. Guide complet sécurité tirzepatide."
-metaDescription: "mounjaro effets secondaires france France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "mounjaro effets secondaires france"
-intent: "Informational"
-category: "glp-1 medications"
+slug: mounjaro-effet-secondaire
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, tirzepatide, Mounjaro, dual agonist, perte de poids"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/mounjaro-effet-secondaire-illus.jpg
+thumbnailAlt: "Illustration pour larticle mounjaro-effet-secondaire"
+featured: false
+priority: 5
+schema: Article
+title: "Mounjaro effet secondaire - Mounjaro Effet Secondaire"
+description: "Mounjaro effets secondaires France 2025 : fréquence, gravité, gestion et précautions. Guide complet sécurité tirzepatide."
 ---
 
 ## À retenir

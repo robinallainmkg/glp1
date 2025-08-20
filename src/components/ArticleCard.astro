@@ -11,19 +11,20 @@ interface Props {
 }
 
 const { article, collection, categoryName, colors } = Astro.props;
-const url = `/${collection}/${article.slug}/`;
+const url = `/collections/${collection}/${article.slug}/`;
 ---
 
 <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-emerald-200 hover:-translate-y-2">
-  {/* Image de l'article avec fallback automatique */}
+  {/* Image de l'article avec support TinaCMS */}
   <div class="relative h-48 overflow-hidden">
-    <img 
-      src={`/images/thumbnails/${article.slug}-illus.jpg`}
-      alt={article.data.title}
-      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      loading="lazy"
-      onerror={`this.onerror=null; this.src='/images/thumbnails/${article.slug}.svg'`}
-    />
+    {article.data.thumbnail && (
+      <img 
+        src={article.data.thumbnail}
+        alt={article.data.thumbnailAlt || article.data.title}
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        loading="lazy"
+      />
+    )}
     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
     <div class="absolute top-4 left-4">
       <span class={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-${colors.bg}-600/90 backdrop-blur-sm border border-white/20`}>

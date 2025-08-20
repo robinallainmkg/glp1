@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : medicament prise de poid"
-metaTitle: "Médicaments glp-1 : medicament prise de poid - gui | France 2025"
-description: "Guide complet sur medicament prise de poid des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "médicament prise de poids rapide France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "médicament prise de poids rapide"
-intent: "Informational"
-category: "glp-1 medications"
+slug: medicament-prise-de-poid
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/medicament-prise-de-poid-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicament-prise-de-poid"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : medicament prise de poid"
+description: "Guide complet sur medicament prise de poid des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## À retenir

@@ -1,14 +1,17 @@
 ---
+slug: traitement-diabete-type-2
+pubDate: 2025-08-20
+author: "Dr. Sarah Martin"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/traitement-diabete-type-2-illus.jpg
+thumbnailAlt: "Illustration pour larticle traitement-diabete-type-2"
+featured: false
+priority: 5
+schema: Article
 title: "Traitement diabète type 2 : guide complet prise en charge 2024"
-metaTitle: "Traitement diabète type 2 : guide complet prise en | France 2025"
 description: "Guide complet du traitement du diabète type 2 : diagnostic, objectifs, algorithme thérapeutique, surveillance et innovations récentes."
-metaDescription: "traitement diabète type France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-date: "2024-12-26"
-categories:
-  - Diabète
-  - Traitements
-keyword: "traitement diabète type, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, tirzepatide, Mounjaro, dual agonist, diabète"
 ---
 
 ## À retenir

@@ -1,12 +1,17 @@
 ---
-title: "chrome picolinate diabète - Chrome Diabete"
-metaTitle: "chrome picolinate diabète | Prix Efficacité France 2025"
-description: "chrome picolinate diabète — Guide marché français."
-metaDescription: "chrome picolinate diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: chrome-diabete
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "chrome diabète, oligo-élément"
-keyword: "chrome picolinate diabète, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/chrome-diabete-illus.jpg
+thumbnailAlt: "Illustration pour larticle chrome-diabete"
+featured: false
+priority: 5
+schema: Article
+title: "chrome picolinate diabète - Chrome Diabete"
+description: "chrome picolinate diabète — Guide marché français."
 ---
 
 ## À retenir

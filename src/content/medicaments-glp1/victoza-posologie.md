@@ -1,20 +1,17 @@
 ---
-title: "Victoza posologie - Victoza Posologie"
-metaTitle: "Victoza posologie | Prix Efficacité France 2025"
-description: "victoza posologie — Guide marché français."
-metaDescription: "victoza perte de poids posologie France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "victoza perte de poids posologie"
-intent: "Informational"
-category: "glp-1 medications"
+slug: victoza-posologie
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/victoza-posologie-illus.jpg
+thumbnailAlt: "Illustration pour larticle victoza-posologie"
+featured: false
+priority: 5
+schema: Article
+title: "Victoza posologie - Victoza Posologie"
+description: "victoza posologie — Guide marché français."
 ---
 
 ## À retenir

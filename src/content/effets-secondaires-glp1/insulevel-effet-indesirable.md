@@ -1,12 +1,21 @@
 ---
 title: "Effets secondaires glp-1 : insulevel effet indesirable"
-metaTitle: "Effets secondaires glp-1 : insulevel effet indesir | France 2025"
 description: "Guide complet sur insulevel effet indesirable des médicaments GLP-1. Symptômes, prévention et solutions. Conseils médicaux France 2025. Informations vérifiées par des professionnels de santé."
+slug: "insulevel-effet-indesirable"
+pubDate: 2025-01-15T00:00:00.000Z
+author: "Dr. Sarah Martin"
+category: "Guide médical"
+tags: ["GLP-1", "agonistes GLP-1", "diabète type 2", "perte de poids", "effets secondaires"]
+collection: "effets-secondaires-glp1"
+thumbnail: "/images/thumbnails/insulevel-effet-indesirable-illus.jpg"
+thumbnailAlt: "Illustration des effets secondaires potentiels des traitements GLP-1 avec représentation médicale"
+featured: false
+priority: 5
+schema: "MedicalWebPage"
+metaTitle: "Effets secondaires glp-1 : insulevel effet indesir | France 2025"
 metaDescription: "insulevel effet indésirable effets secondaires France 2025 : fréquence, gravité, solutions. Guide sécurité et précautions."
 keyword: "insulevel effet indésirable"
 intent: "Informational"
-category: "glp-1 side effects"
-author: "Julien Lefèvre"
 readingTime: 5
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 ---

@@ -1,14 +1,17 @@
 ---
-title: "Anneau Gastrique et CMU : Prix, Remboursement et Conseils France 2025"
-metaTitle: "Anneau Gastrique Prix CMU : Remboursement, Tarifs et Conseils | France 2025"
-description: "Guide complet sur le prix de l'anneau gastrique avec la CMU en France 2025. Détail des tarifs, remboursement, comparatif et conseils pour optimiser le coût."
-metaDescription: "Tout savoir sur le prix de l'anneau gastrique avec la CMU en France 2025 : tarifs officiels, remboursement, comparatif, conseils pratiques et précautions médicales."
-keyword: "anneau gastrique prix cmu, remboursement, France 2025"
-intent: "Informational"
-category: "glp-1 cost"
+slug: anneau-gastrique-prix-cmu
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/anneau-gastrique-prix-cmu-illus.jpg
+thumbnailAlt: "Illustration pour larticle anneau-gastrique-prix-cmu"
+featured: false
+priority: 5
+schema: Article
+title: "Anneau Gastrique et CMU : Prix, Remboursement et Conseils France 2025"
+description: "Guide complet sur le prix de lanneau gastrique avec la CMU en France 2025. Détail des tarifs, remboursement, comparatif et conseils pour optimiser le coût."
 ---
 
 ## Facteurs influençant le prix

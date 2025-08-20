@@ -1,12 +1,17 @@
 ---
-title: "Diabète Gestationnel GLP-1 : Sécurité Grossesse France 2025"
-metaTitle: "Diabète Gestationnel GLP-1 : Sécurité Grossesse Fr | France 2025"
-description: "diabète gestationnel et GLP-1 — Guide marché français."
-metaDescription: "diabète gestationnel glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: diabete-gestationnel-glp1
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "diabète gestationnel glp1, grossesse diabète"
-keyword: "diabète gestationnel glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/diabete-gestationnel-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle diabete-gestationnel-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "Diabète Gestationnel GLP-1 : Sécurité Grossesse France 2025"
+description: "diabète gestationnel et GLP-1 — Guide marché français."
 ---
 
 ## À retenir

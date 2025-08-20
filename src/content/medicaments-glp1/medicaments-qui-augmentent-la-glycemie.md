@@ -1,20 +1,17 @@
 ---
-title: "Medicaments qui augmentent la glycemie"
-metaTitle: "Medicaments qui augmentent la glycemie | France 2025"
-description: "medicaments qui augmentent la glycemie — Guide marché français."
-metaDescription: "médicaments qui augmentent la glycémie France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "médicaments qui augmentent la glycémie"
-intent: "Informational"
-category: "glp-1 medications"
+slug: medicaments-qui-augmentent-la-glycemie
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 6
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/medicaments-qui-augmentent-la-glycemie-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicaments-qui-augmentent-la-glycemie"
+featured: false
+priority: 5
+schema: Article
+title: "Medicaments qui augmentent la glycemie"
+description: "medicaments qui augmentent la glycemie — Guide marché français."
 ---
 
 ## À retenir

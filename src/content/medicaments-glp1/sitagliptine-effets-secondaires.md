@@ -1,20 +1,17 @@
 ---
-title: "Sitagliptine effets secondaires"
-metaTitle: "Sitagliptine effets secondaires | France 2025"
-description: "sitagliptine effets secondaires — Guide marché français."
-metaDescription: "sitagliptine 100 mg effets secondaires France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "sitagliptine 100 mg effets secondaires"
-intent: "Informational"
-category: "glp-1 medications"
+slug: sitagliptine-effets-secondaires
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, prix, coût, remboursement, effets secondaires"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/sitagliptine-effets-secondaires-illus.jpg
+thumbnailAlt: "Illustration pour larticle sitagliptine-effets-secondaires"
+featured: false
+priority: 5
+schema: Article
+title: "Sitagliptine effets secondaires"
+description: "sitagliptine effets secondaires — Guide marché français."
 ---
 
 ## Comprendre les effets

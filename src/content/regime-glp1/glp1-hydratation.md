@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 et hydratation - Glp1 Hydratation"
-metaTitle: "GLP-1 et hydratation | Prix Efficacité France 2025"
-description: "GLP-1 et hydratation — Guide marché français."
-metaDescription: "glp-1 hydratation France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-hydratation
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "hydratation glp1, eau quotidienne"
-keyword: "glp-1 hydratation, france 2025"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/glp1-hydratation-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-hydratation"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 et hydratation - Glp1 Hydratation"
+description: "GLP-1 et hydratation — Guide marché français."
 ---
 
 ## À retenir

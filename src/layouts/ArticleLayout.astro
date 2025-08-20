@@ -11,6 +11,7 @@ interface Props {
   lastModified?: string;
   content: string;
   collectionTheme?: string;
+  thumbnail?: string;
 }
 
 const { 
@@ -22,7 +23,8 @@ const {
   readingTime, 
   lastModified,
   content,
-  collectionTheme = 'weight-loss'
+  collectionTheme = 'weight-loss',
+  thumbnail
 } = Astro.props;
 
 // Convertir les mots-clés en chaîne si c'est un tableau
@@ -147,17 +149,18 @@ const backUrl = getBackUrl(category);
 const displayName = getDisplayName(category);
 
 // Récupérer l'image depuis le frontmatter si elle existe
-function getArticleImage(category, slug, title) {
-  // Essayer de construire l'URL de l'image thumbnail générée
-  const thumbnailUrl = `/images/thumbnails/${category}-${slug}.svg`;
+function getArticleImage(frontmatter, category, slug) {
+  // Utiliser le champ thumbnail du frontmatter s'il existe
+  if (frontmatter?.thumbnail) {
+    return frontmatter.thumbnail;
+  }
   
-  // Pour l'instant, on suppose que l'image existe
-  // Dans une version plus avancée, on pourrait vérifier l'existence du fichier
-  return thumbnailUrl;
+  // Ne pas générer d'URL par défaut - retourner null si pas d'image
+  return null;
 }
 
-// Obtenir l'image de l'article
-const articleImage = getArticleImage(category, Astro.url.pathname.split('/').pop()?.replace('.html', '') || 'default', title);
+// Obtenir l'image de l'article  
+const articleImage = getArticleImage({ thumbnail }, category, Astro.url.pathname.split('/').pop()?.replace('.html', '') || 'default');
 
 // Conversion simple du markdown en HTML
 function markdownToHtml(markdown: string): string {
@@ -249,18 +252,20 @@ const contentHtml = markdownToHtml(content);
             </div>
             
             <!-- Image de l'article -->
-            <div class="lg:order-2">
-              <div class="relative">
-                <img 
-                  src={articleImage} 
-                  alt={title}
-                  class="w-full h-64 lg:h-80 object-cover rounded-xl shadow-lg"
-                  loading="eager"
-                />
-                <!-- Overlay avec gradient pour améliorer la lisibilité -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+            {articleImage && (
+              <div class="lg:order-2">
+                <div class="relative">
+                  <img 
+                    src={articleImage} 
+                    alt={title}
+                    class="w-full h-64 lg:h-80 object-cover rounded-xl shadow-lg"
+                    loading="eager"
+                  />
+                  <!-- Overlay avec gradient pour améliorer la lisibilité -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

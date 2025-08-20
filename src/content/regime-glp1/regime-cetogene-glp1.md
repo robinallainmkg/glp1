@@ -1,12 +1,17 @@
 ---
-title: "régime cétogène et GLP-1 - Regime Cetogene Glp1"
-metaTitle: "régime cétogène et GLP-1 | Prix Efficacité France 2025"
-description: "régime cétogène et GLP-1 — Guide marché français."
-metaDescription: "régime cétogène glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: regime-cetogene-glp1
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "régime cétogène glp1, keto diabète"
-keyword: "régime cétogène glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/regime-cetogene-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle regime-cetogene-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "régime cétogène et GLP-1 - Regime Cetogene Glp1"
+description: "régime cétogène et GLP-1 — Guide marché français."
 ---
 
 ## À retenir

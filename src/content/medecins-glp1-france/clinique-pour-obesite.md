@@ -1,14 +1,17 @@
 ---
-title: "Cliniques spécialisées en obésité en france - guide complet 2025"
-metaTitle: "Cliniques spécialisées en obésité en france - guid | France 2025"
-description: "Trouvez la meilleure clinique pour traiter l'obésité en France. Types de centres, tarifs, remboursements et conseils pour bien choisir."
-metaDescription: "clinique pour obésité France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "clinique pour obésité"
-intent: "Informational"
-category: "glp-1 doctors france"
+slug: clinique-pour-obesite
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 10
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medecins-glp1-france
+thumbnail: /images/thumbnails/clinique-pour-obesite-illus.jpg
+thumbnailAlt: "Illustration pour larticle clinique-pour-obesite"
+featured: false
+priority: 5
+schema: Article
+title: "Cliniques spécialisées en obésité en france - guide complet 2025"
+description: "Trouvez la meilleure clinique pour traiter lobésité en France. Types de centres, tarifs, remboursements et conseils pour bien choisir."
 ---
 
 Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? Ce guide détaillé vous présente les différents types de centres disponibles en France, leurs approches thérapeutiques et comment faire le bon choix selon votre situation.

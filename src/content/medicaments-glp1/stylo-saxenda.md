@@ -1,20 +1,17 @@
 ---
-title: "Stylo Saxenda France 2025 : Guide Utilisation et Prix"
-metaTitle: "Stylo Saxenda France 2025 : Utilisation, Prix et Efficacité"
-description: "Stylo Saxenda France 2025 : guide utilisation, technique injection, prix, efficacité perte poids. Conseils pratiques et témoignages patients."
-metaDescription: "Stylo Saxenda France 2025 : utilisation correcte, technique injection, prix 269€, efficacité perte poids, effets secondaires et conseils pratiques."
-keyword: "saxenda 6mg"
-intent: "Informational"
-category: "glp-1 medications"
+slug: stylo-saxenda
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/stylo-saxenda-illus.jpg
+thumbnailAlt: "Illustration pour larticle stylo-saxenda"
+featured: false
+priority: 5
+schema: Article
+title: "Stylo Saxenda France 2025 : Guide Utilisation et Prix"
+description: "Stylo Saxenda France 2025 : guide utilisation, technique injection, prix, efficacité perte poids. Conseils pratiques et témoignages patients."
 ---
 
 ## Stylo Saxenda : mode d'emploi complet

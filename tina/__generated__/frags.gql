@@ -1,0 +1,251 @@
+fragment Medicaments_glp1Parts on Medicaments_glp1 {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Glp1_perte_de_poidsParts on Glp1_perte_de_poids {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Glp1_coutParts on Glp1_cout {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Glp1_diabeteParts on Glp1_diabete {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Effets_secondaires_glp1Parts on Effets_secondaires_glp1 {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Medecins_glp1_franceParts on Medecins_glp1_france {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Recherche_glp1Parts on Recherche_glp1 {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Regime_glp1Parts on Regime_glp1 {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}
+
+fragment Alternatives_glp1Parts on Alternatives_glp1 {
+  __typename
+  title
+  description
+  slug
+  pubDate
+  updatedDate
+  author
+  category
+  tags
+  collection
+  thumbnail
+  thumbnailAlt
+  ogImage
+  featured
+  priority
+  metaTitle
+  canonicalUrl
+  noIndex
+  schema
+  body
+  readingTime {
+    __typename
+    minutes
+    text
+  }
+}

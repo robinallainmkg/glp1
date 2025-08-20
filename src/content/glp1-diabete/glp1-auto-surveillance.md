@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Auto-surveillance Glycémique : Guide Pratique 2025"
-metaTitle: "GLP-1 Auto-surveillance Glycémique : Guide Pratiqu | France 2025"
-description: "GLP-1 et auto-surveillance glycémique — Guide marché français."
-metaDescription: "glp-1 auto-surveillance glycémique France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-auto-surveillance
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "auto-surveillance glp1, lecteur glucose"
-keyword: "glp-1 auto-surveillance glycémique, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-auto-surveillance-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-auto-surveillance"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Auto-surveillance Glycémique : Guide Pratique 2025"
+description: "GLP-1 et auto-surveillance glycémique — Guide marché français."
 ---
 
 ## À retenir

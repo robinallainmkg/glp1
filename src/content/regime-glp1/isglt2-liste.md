@@ -1,14 +1,17 @@
 ---
-title: "Isglt2 liste - Isglt2 Liste"
-metaTitle: "Isglt2 liste | Prix Efficacité France 2025"
-description: "isglt2 liste — Guide marché français."
-metaDescription: "inhibiteur sglt2 liste France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "inhibiteur sglt2 liste"
-intent: "Informational"
-category: "glp-1 diet"
+slug: isglt2-liste
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/isglt2-liste-illus.jpg
+thumbnailAlt: "Illustration pour larticle isglt2-liste"
+featured: false
+priority: 5
+schema: Article
+title: "Isglt2 liste - Isglt2 Liste"
+description: "isglt2 liste — Guide marché français."
 ---
 
 ## À retenir

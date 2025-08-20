@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 et micronutriments - Glp1 Micronutriments"
-metaTitle: "GLP-1 et micronutriments | Prix Efficacité France 2025"
-description: "GLP-1 et micronutriments — Guide marché français."
-metaDescription: "glp-1 micronutriments France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-micronutriments
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "micronutriments glp1, vitamines minéraux"
-keyword: "glp-1 micronutriments, france 2025"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/glp1-micronutriments-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-micronutriments"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 et micronutriments - Glp1 Micronutriments"
+description: "GLP-1 et micronutriments — Guide marché français."
 ---
 
 ## À retenir

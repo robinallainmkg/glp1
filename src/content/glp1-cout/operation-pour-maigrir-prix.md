@@ -1,16 +1,17 @@
 ---
-title: "Opération pour maigrir prix - coût chirurgie bariatrique en "
-slug: "operation-pour-maigrir-prix"
-category: "glp1-cout"
+slug: operation-pour-maigrir-prix
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readTime: "9 min"
-metaTitle: "Opération pour maigrir prix france 2025 : coût réel chirurgie"
-metaDescription: "Prix réel d'une opération pour maigrir en France : sleeve, bypass, anneau. Remboursement, cliniques, alternatives GLP-1. Guide complet 2025."
-heroImage: "/images/operation-maigrir-prix.jpg"
-published: true
-featured: true
-keyword: "opération maigrir prix, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, amaigrissement"
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/operation-pour-maigrir-prix-illus.jpg
+thumbnailAlt: "Illustration pour larticle operation-pour-maigrir-prix"
+featured: false
+priority: 5
+schema: Article
+title: "Opération pour maigrir prix - coût chirurgie bariatrique en "
+description: "Prix réel dune opération pour maigrir en France : sleeve, bypass, anneau. Remboursement, cliniques, alternatives GLP-1. Guide complet 2025."
 ---
 
 Le **prix d'une opération pour maigrir** en France varie considérablement selon la technique chirurgicale, l'établissement et votre situation personnelle. En 2025, comprendre les coûts réels vous permet de faire un choix éclairé entre chirurgie et alternatives comme les traitements GLP-1.

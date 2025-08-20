@@ -1,25 +1,17 @@
 ---
-title: "Ozempic effets secondaires : témoignages forum et solutions 2025"
-metaTitle: "Ozempic effets secondaires : témoignages forum et  | France 2025"
-description: "Forum Ozempic : vrais témoignages sur les effets secondaires, solutions pratiques, durée des symptômes. Nausées, fatigue, troubles digestifs."
-metaDescription: "ozempic effets secondaires forum pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "ozempic effets secondaires forum"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: ozempic-effets-secondaires-forum
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 10
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/glp1-perte-de-poids/ozempic-effets-secondaires-forum/"
-image: "/images/articles/ozempic-effets-secondaires-forum.jpg"
-tags:
-  - ozempic
-  - effets secondaires
-  - forum
-  - témoignages
-  - solutions
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, perte de poids"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/ozempic-effets-secondaires-forum-illus.jpg
+thumbnailAlt: "Illustration pour larticle ozempic-effets-secondaires-forum"
+featured: false
+priority: 5
+schema: Article
+title: "Ozempic effets secondaires : témoignages forum et solutions 2025"
+description: "Forum Ozempic : vrais témoignages sur les effets secondaires, solutions pratiques, durée des symptômes. Nausées, fatigue, troubles digestifs."
 ---
 
 **Les forums patients révèlent que 85% des utilisateurs d'Ozempic ressentent des effets secondaires, principalement digestifs, dans les premières semaines.** Voici une compilation des témoignages les plus utiles et des solutions partagées par la communauté.

@@ -1,16 +1,17 @@
 ---
-title: "Glp-1 et perte de poids : guide complet d"
-slug: "glp1-perte-de-poids"
-category: "glp1-perte-de-poids"
+slug: glp1-perte-de-poids
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readTime: "9 min"
-metaTitle: "Glp-1 perte de poids france 2025 : efficacité et résultats"
-metaDescription: "GLP-1 pour perte de poids : efficacité, mécanisme, résultats réels. Wegovy, Saxenda, Ozempic comparés. Guide médical complet 2025."
-heroImage: "/images/glp1-perte-poids.jpg"
-published: true
-featured: true
-keyword: "glp-1 perte poids, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/glp1-perte-de-poids-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-perte-de-poids"
+featured: false
+priority: 5
+schema: Article
+title: "Glp-1 et perte de poids : guide complet d"
+description: "GLP-1 pour perte de poids : efficacité, mécanisme, résultats réels. Wegovy, Saxenda, Ozempic comparés. Guide médical complet 2025."
 ---
 
 Les **agonistes du récepteur GLP-1** ont révolutionné la prise en charge de la perte de poids en France. Ces traitements innovants offrent une efficacité sans précédent, avec des pertes de poids pouvant atteindre 15-20% du poids corporel initial, transformant la vie de millions de patients.

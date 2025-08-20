@@ -1,20 +1,17 @@
 ---
-title: "Sulfamide hypoglycémiant - Sulfamide Hypoglycemiant"
-metaTitle: "Sulfamide hypoglycémiant | Prix Efficacité France 2025"
-description: "sulfamide hypoglycémiant — Guide marché français."
-metaDescription: "sulfamide hypoglycémiant liste France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "sulfamide hypoglycémiant liste"
-intent: "Informational"
-category: "glp-1 medications"
+slug: sulfamide-hypoglycemiant
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/sulfamide-hypoglycemiant-illus.jpg
+thumbnailAlt: "Illustration pour larticle sulfamide-hypoglycemiant"
+featured: false
+priority: 5
+schema: Article
+title: "Sulfamide hypoglycémiant - Sulfamide Hypoglycemiant"
+description: "sulfamide hypoglycémiant — Guide marché français."
 ---
 
 ## À retenir

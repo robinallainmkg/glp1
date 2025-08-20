@@ -1,23 +1,17 @@
 ---
-title: "ADO médicament : antidiabétiques oraux et traitements combinés"
-metaTitle: "ADO médicament : antidiabétiques oraux et traiteme | France 2025"
-description: "Les antidiabétiques oraux (ADO) dans le traitement du diabète de type 2 : mécanismes, efficacité et place dans la thérapeutique moderne."
-metaDescription: "ado medicament France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "ado medicament"
-intent: "Informational"
-category: "glp-1 medications"
+slug: ado-medicament
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 6
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/medicaments-glp1/ado-medicament/"
-tags:
-  - GLP-1
-  - ADO
-  - antidiabétiques
-  - diabète
-  - traitement
-keywords: "GLP-1, glp1, agoniste GLP-1, tirzepatide, Mounjaro, dual agonist, diabète"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/ado-medicament-illus.jpg
+thumbnailAlt: "Illustration pour larticle ado-medicament"
+featured: false
+priority: 5
+schema: Article
+title: "ADO médicament : antidiabétiques oraux et traitements combinés"
+description: "Les antidiabétiques oraux (ADO) dans le traitement du diabète de type 2 : mécanismes, efficacité et place dans la thérapeutique moderne."
 ---
 
 ## À retenir sur les antidiabétiques oraux

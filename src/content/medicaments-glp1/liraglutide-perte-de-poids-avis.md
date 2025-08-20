@@ -1,20 +1,17 @@
 ---
-title: "Liraglutide perte de poids avis"
-metaTitle: "Liraglutide perte de poids avis | France 2025"
-description: "liraglutide perte de poids avis — Guide marché français."
-metaDescription: "liraglutide comprimé France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "liraglutide comprimé"
-intent: "Informational"
-category: "glp-1 medications"
+slug: liraglutide-perte-de-poids-avis
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 6
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, amaigrissement"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/liraglutide-perte-de-poids-avis-illus.jpg
+thumbnailAlt: "Illustration pour larticle liraglutide-perte-de-poids-avis"
+featured: false
+priority: 5
+schema: Article
+title: "Liraglutide perte de poids avis"
+description: "liraglutide perte de poids avis — Guide marché français."
 ---
 
 ## Liraglutide pour la perte de poids : avis et témoignages

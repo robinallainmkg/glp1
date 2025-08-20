@@ -1,12 +1,17 @@
 ---
-title: "Diabète Régime GLP-1 : Alimentation Optimale France 2025"
-metaTitle: "Diabète Régime GLP-1 : Alimentation Optimale Franc | France 2025"
-description: "diabète régime avec GLP-1 — Guide marché français."
-metaDescription: "diabète régime glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: diabete-regime-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "régime diabétique glp1, alimentation"
-keyword: "diabète régime glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/diabete-regime-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle diabete-regime-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "Diabète Régime GLP-1 : Alimentation Optimale France 2025"
+description: "diabète régime avec GLP-1 — Guide marché français."
 ---
 
 ## À retenir

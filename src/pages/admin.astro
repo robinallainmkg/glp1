@@ -1,0 +1,174 @@
+---
+// src/pages/admin.astro
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - GLP1 France</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .admin-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .admin-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            margin: 2rem;
+        }
+        
+        .admin-title {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .admin-description {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .admin-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .admin-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .features-list {
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+        
+        .features-list li {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        
+        .setup-instructions {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+            text-align: left;
+        }
+        
+        .setup-instructions h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .code-snippet {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-card">
+            <div class="status-badge status-warning">
+                Configuration requise
+            </div>
+            
+            <h1 class="admin-title">
+                🚀 Interface d'Administration
+            </h1>
+            
+            <p class="admin-description">
+                Gérez votre contenu en temps réel avec une interface visuelle moderne. 
+                Tina CMS vous permet d'éditer vos articles, guides et témoignages directement depuis votre navigateur.
+            </p>
+            
+            <div class="features-list">
+                <h4>✨ Fonctionnalités disponibles :</h4>
+                <ul>
+                    <li>📝 Édition visuelle en temps réel</li>
+                    <li>🖼️ Gestion des images et médias</li>
+                    <li>📱 Interface responsive et moderne</li>
+                    <li>🔄 Synchronisation automatique avec Git</li>
+                    <li>👀 Prévisualisation en direct</li>
+                </ul>
+            </div>
+            
+            <div class="setup-instructions">
+                <h4>🔧 Configuration rapide :</h4>
+                <p>1. Créez un compte gratuit sur <a href="https://tina.io" target="_blank">tina.io</a></p>
+                <p>2. Ajoutez vos clés API dans le fichier .env :</p>
+                <div class="code-snippet">
+NEXT_PUBLIC_TINA_CLIENT_ID=votre_client_id<br>
+TINA_TOKEN=votre_token
+                </div>
+                <p>3. Lancez le serveur de développement :</p>
+                <div class="code-snippet">
+npm run dev:tina
+                </div>
+            </div>
+            
+            <p style="color: #666; font-size: 0.9rem; margin-top: 2rem;">
+                Une fois configuré, l'interface d'administration sera accessible ici même.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Redirection automatique vers l'interface Tina CMS
+        window.location.href = '/admin/index.html';
+    </script>
+</body>
+</html>

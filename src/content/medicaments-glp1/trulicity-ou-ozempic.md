@@ -1,21 +1,17 @@
 ---
-title: "Trulicity ou ozempic - Trulicity Ou Ozempic"
-metaTitle: "Trulicity vs Ozempic France 2025 | Comparatif Complet"
-description: "Trulicity ou Ozempic France 2025 : comparaison efficacité, prix, effets secondaires, remboursement. Guide choix traitement optimal."
-metaDescription: "trulicity ozempic comparaison france France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "trulicity ozempic comparaison france"
-intent: "Informational"
-category: "glp-1 medications"
+slug: trulicity-ou-ozempic
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/trulicity-ou-ozempic-illus.jpg
+thumbnailAlt: "Illustration pour larticle trulicity-ou-ozempic"
+featured: false
+priority: 5
+schema: Article
+title: "Trulicity ou ozempic - Trulicity Ou Ozempic"
+description: "Trulicity ou Ozempic France 2025 : comparaison efficacité, prix, effets secondaires, remboursement. Guide choix traitement optimal."
 ---
 
 ## À retenir

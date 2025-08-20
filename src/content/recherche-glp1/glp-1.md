@@ -1,14 +1,17 @@
 ---
-title: "GLP-1 France : Guide Complet Traitement Diabète et Perte Poids 2025"
-metaTitle: "GLP-1 France : Guide Complet Traitement Diabète et | France 2025"
-description: "glp-1 — Guide marché français."
-metaDescription: "glp 1 injectable France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "glp 1 injectable"
-intent: "Informational"
-category: "glp-1 research"
+slug: glp-1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: recherche-glp1
+thumbnail: /images/thumbnails/glp-1-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp-1"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 France : Guide Complet Traitement Diabète et Perte Poids 2025"
+description: "glp-1 — Guide marché français."
 ---
 
 ## À retenir

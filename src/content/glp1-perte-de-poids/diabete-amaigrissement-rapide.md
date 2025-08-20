@@ -1,14 +1,17 @@
 ---
-title: "Perte de poids glp-1 : diabète amaigrissement rapide"
-metaTitle: "Perte de poids glp-1 : diabète amaigrissement rapi | France 2025"
-description: "Diabète amaigrissement rapide avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
-metaDescription: "diabète et amaigrissement pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "diabète et amaigrissement"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: diabete-amaigrissement-rapide
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/diabete-amaigrissement-rapide-illus.jpg
+thumbnailAlt: "Illustration pour larticle diabete-amaigrissement-rapide"
+featured: false
+priority: 5
+schema: Article
+title: "Perte de poids glp-1 : diabète amaigrissement rapide"
+description: "Diabète amaigrissement rapide avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Sommaire

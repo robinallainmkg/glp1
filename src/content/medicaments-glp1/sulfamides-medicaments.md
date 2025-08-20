@@ -1,20 +1,17 @@
 ---
-title: "Sulfamides medicaments - Sulfamides Medicaments"
-metaTitle: "Sulfamides medicaments | Prix Efficacité France 2025"
-description: "sulfamides medicaments — Guide marché français."
-metaDescription: "sulfamides médicaments France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "sulfamides médicaments"
-intent: "Informational"
-category: "glp-1 medications"
+slug: sulfamides-medicaments
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/sulfamides-medicaments-illus.jpg
+thumbnailAlt: "Illustration pour larticle sulfamides-medicaments"
+featured: false
+priority: 5
+schema: Article
+title: "Sulfamides medicaments - Sulfamides Medicaments"
+description: "sulfamides medicaments — Guide marché français."
 ---
 
 ## Sulfamides médicaments : guide des antidiabétiques

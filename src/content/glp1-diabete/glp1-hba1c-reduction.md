@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Réduction HbA1c : Efficacité Contrôle Glycémique 2025"
-metaTitle: "GLP-1 Réduction HbA1c : Efficacité Contrôle Glycém | France 2025"
-description: "GLP-1 et réduction HbA1c — Guide marché français."
-metaDescription: "glp-1 réduction hba1c France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-hba1c-reduction
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "glp1 hba1c baisse, efficacité glycémique"
-keyword: "glp-1 réduction hba1c, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-hba1c-reduction-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-hba1c-reduction"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Réduction HbA1c : Efficacité Contrôle Glycémique 2025"
+description: "GLP-1 et réduction HbA1c — Guide marché français."
 ---
 
 ## À retenir

@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : metformine diarrhée solution"
-metaTitle: "Médicaments glp-1 : metformine diarrhée solution - | France 2025"
-description: "Guide complet sur metformine diarrhée solution des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "médicament diabète et diarrhée France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "médicament diabète et diarrhée"
-intent: "Informational"
-category: "glp-1 medications"
+slug: metformine-diarrhee-solution
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, perte de poids"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/metformine-diarrhee-solution-illus.jpg
+thumbnailAlt: "Illustration pour larticle metformine-diarrhee-solution"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : metformine diarrhée solution"
+description: "Guide complet sur metformine diarrhée solution des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## À retenir

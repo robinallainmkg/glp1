@@ -1,20 +1,17 @@
 ---
-title: "Coupe faim puissant interdit en france"
-metaTitle: "Coupe faim puissant interdit en france | France 2025"
-description: "coupe faim puissant interdit en france — Guide marché français."
-metaDescription: "coupe faim interdit France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "coupe faim interdit"
-intent: "Informational"
-category: "glp-1 medications"
+slug: coupe-faim-puissant-interdit-en-france
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 6
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, amaigrissement"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/coupe-faim-puissant-interdit-en-france-illus.jpg
+thumbnailAlt: "Illustration pour larticle coupe-faim-puissant-interdit-en-france"
+featured: false
+priority: 5
+schema: Article
+title: "Coupe faim puissant interdit en france"
+description: "coupe faim puissant interdit en france — Guide marché français."
 ---
 
 Ce sont des médicaments ou substances visant à réduire l'appétit, dont certains ont été interdits en France pour des raisons de sécurité (effets secondaires graves, risques d'addiction, etc.).

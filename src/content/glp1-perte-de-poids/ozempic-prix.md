@@ -1,25 +1,17 @@
 ---
-title: "Ozempic Prix France 2025 : Coût et Remboursement"
-metaTitle: "Ozempic Prix France 2025 : Coût et Remboursement Complet"
-description: "Prix Ozempic France 2025 : 73€ par stylo, remboursement sécurité sociale, alternatives économiques. Guide prix complet et conseils achat."
-metaDescription: "Prix Ozempic France 2025 : 73€/stylo, remboursement SS, mutuelle, alternatives économiques. Comparatif prix pharmacies et conseils achat légal."
-keyword: "ozempic prix"
-intent: "Commercial"
-category: "glp-1 for weight loss"
+slug: ozempic-prix
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 8
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/glp1-perte-de-poids/ozempic-prix/"
-image: "/images/articles/ozempic-prix-france.jpg"
-tags:
-  - ozempic
-  - prix
-  - remboursement
-  - diabète
-  - perte de poids
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/ozempic-prix-illus.jpg
+thumbnailAlt: "Illustration pour larticle ozempic-prix"
+featured: false
+priority: 5
+schema: Article
+title: "Ozempic Prix France 2025 : Coût et Remboursement"
+description: "Prix Ozempic France 2025 : 73€ par stylo, remboursement sécurité sociale, alternatives économiques. Guide prix complet et conseils achat."
 ---
 
 **Le prix d'Ozempic en France est de 73,04€ par stylo prérempli.** Ce médicament révolutionnaire pour le diabète de type 2 et la perte de poids suscite de nombreuses questions sur son coût et sa prise en charge.

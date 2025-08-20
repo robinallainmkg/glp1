@@ -1,14 +1,17 @@
 ---
-title: "Glp-1 pour diabète : traitement insulinique"
-metaTitle: "Glp-1 pour diabète : traitement insulinique - guid | France 2025"
-description: "Traitement insulinique avec les médicaments GLP-1. Efficacité, dosage et suivi médical. Guide complet diabète type 2 France 2025. Informations vérifiées par des professionnels de santé."
-metaDescription: "Traitement Insulinique avec les Médicaments GLP-1  Cet article explique « traitement insulinique » pour le marché français : prix en €, cadre ANSM, cons"
-keyword: "insuline retard"
-intent: "Informational"
-category: "glp-1 for diabetes"
+slug: traitement-insulinique
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/traitement-insulinique-illus.jpg
+thumbnailAlt: "Illustration pour larticle traitement-insulinique"
+featured: false
+priority: 5
+schema: Article
+title: "Glp-1 pour diabète : traitement insulinique"
+description: "Traitement insulinique avec les médicaments GLP-1. Efficacité, dosage et suivi médical. Guide complet diabète type 2 France 2025. Informations vérifiées par des professionnels de santé."
 ---
 
 et rappel de précautions.

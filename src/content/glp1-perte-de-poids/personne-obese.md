@@ -1,14 +1,17 @@
 ---
-title: "Perte de poids glp-1 : personne obese - guide complet france 2025"
-metaTitle: "Perte de poids glp-1 : personne obese - guide comp | France 2025"
-description: "Personne obese avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
-metaDescription: "c est quoi l obésité pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "c est quoi l obésité"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: personne-obese
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/personne-obese-illus.jpg
+thumbnailAlt: "Illustration pour larticle personne-obese"
+featured: false
+priority: 5
+schema: Article
+title: "Perte de poids glp-1 : personne obese - guide complet france 2025"
+description: "Personne obese avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Sommaire

@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : metformine autre nom - guide complet france 2025"
-metaTitle: "Médicaments glp-1 : metformine autre nom - guide c | France 2025"
-description: "Guide complet sur metformine autre nom des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "biguanide metformin France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "biguanide metformin"
-intent: "Informational"
-category: "glp-1 medications"
+slug: metformine-autre-nom
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/metformine-autre-nom-illus.jpg
+thumbnailAlt: "Illustration pour larticle metformine-autre-nom"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : metformine autre nom - guide complet france 2025"
+description: "Guide complet sur metformine autre nom des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Metformine autre nom : guide des équivalences

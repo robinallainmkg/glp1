@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : dipeptidyl peptidase 4 - guide complet france 2025"
-metaTitle: "Médicaments glp-1 : dipeptidyl peptidase 4 - guide | France 2025"
-description: "Guide complet sur dipeptidyl peptidase 4 des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "idpp4 nom commercial France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "idpp4 nom commercial"
-intent: "Informational"
-category: "glp-1 medications"
+slug: dipeptidyl-peptidase-4
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/dipeptidyl-peptidase-4-illus.jpg
+thumbnailAlt: "Illustration pour larticle dipeptidyl-peptidase-4"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : dipeptidyl peptidase 4 - guide complet france 2025"
+description: "Guide complet sur dipeptidyl peptidase 4 des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Dipeptidyl peptidase-4 : cible thérapeutique majeure

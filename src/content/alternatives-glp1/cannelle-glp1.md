@@ -1,12 +1,17 @@
 ---
-title: "cannelle thérapeutique diabète"
-metaTitle: "cannelle thérapeutique diabète | Prix Efficacité France 2025"
-description: "cannelle thérapeutique diabète — Guide marché français."
-metaDescription: "cannelle thérapeutique diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: cannelle-glp1
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "cannelle diabète, épice médicinale"
-keyword: "cannelle thérapeutique diabète, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/cannelle-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle cannelle-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "cannelle thérapeutique diabète"
+description: "cannelle thérapeutique diabète — Guide marché français."
 ---
 
 ## À retenir

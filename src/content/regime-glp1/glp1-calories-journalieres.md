@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 et calories journalières"
-metaTitle: "GLP-1 et calories journalières | Prix Efficacité France 2025"
-description: "GLP-1 et calories journalières — Guide marché français."
-metaDescription: "glp-1 calories journalières France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-calories-journalieres
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "glp1 calories par jour, restriction calorique"
-keyword: "glp-1 calories journalières, france 2025"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/glp1-calories-journalieres-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-calories-journalieres"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 et calories journalières"
+description: "GLP-1 et calories journalières — Guide marché français."
 ---
 
 ## À retenir

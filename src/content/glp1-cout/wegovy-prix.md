@@ -1,26 +1,19 @@
 ---
-title: "Wegovy prix france 2025 : coût complet, remboursement et alternatives"
-metaTitle: "Wegovy prix france 2025 : coût complet, remboursem | France 2025"
-description: "Prix Wegovy en France : 269€/mois pour la dose maximale, remboursement sécurité sociale, comparaison pharmacies et alternatives économiques."
-metaDescription: "Wegovy Prix France 2025 : Guide Complet des Coûts Le prix de Wegovy en France s'échelonne de 90€ à 270€ par mois selon le dosage."
-keyword: "wegovy prix"
-intent: "Commercial"
-category: "glp1-cout"
+slug: wegovy-prix
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 10
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/glp1-cout/wegovy-prix/"
-image: "/images/articles/wegovy-prix-france.jpg"
-tags:
-  - wegovy
-  - prix
-  - coût
-  - remboursement
-  - france
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/wegovy-prix-illus.jpg
+thumbnailAlt: "Illustration pour larticle wegovy-prix"
+featured: false
+priority: 5
+schema: Article
+title: "Wegovy prix france 2025 : coût complet, remboursement et alternatives"
+description: "Prix Wegovy en France : 269€/mois pour la dose maximale, remboursement sécurité sociale, comparaison pharmacies et alternatives économiques."
 ---
+
 **Le prix de Wegovy en France s'échelonne de 90€ à 270€ par mois selon le dosage.** Ce médicament révolutionnaire pour la perte de poids représente un investissement significatif, mais des solutions de remboursement existent.
 
 

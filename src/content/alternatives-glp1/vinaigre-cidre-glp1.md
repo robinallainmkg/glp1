@@ -1,12 +1,17 @@
 ---
-title: "vinaigre de cidre diabète - Vinaigre Cidre Glp1"
-metaTitle: "vinaigre de cidre diabète | Prix Efficacité France 2025"
-description: "vinaigre de cidre diabète — Guide marché français."
-metaDescription: "vinaigre cidre diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: vinaigre-cidre-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "vinaigre cidre diabète, acide acétique"
-keyword: "vinaigre cidre diabète, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/vinaigre-cidre-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle vinaigre-cidre-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "vinaigre de cidre diabète - Vinaigre Cidre Glp1"
+description: "vinaigre de cidre diabète — Guide marché français."
 ---
 
 ## À retenir

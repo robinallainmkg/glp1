@@ -1,12 +1,17 @@
 ---
-title: "Recherche Clinique GLP-1 : Dernières Études France 2025"
-metaTitle: "Recherche Clinique GLP-1 : Dernières Études France | France 2025"
-description: "recherche clinique GLP-1 — Guide marché français."
-metaDescription: "recherche clinique glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: recherche-clinique-glp1
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "recherche clinique glp1, essais thérapeutiques"
-keyword: "recherche clinique glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: recherche-glp1
+thumbnail: /images/thumbnails/recherche-clinique-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle recherche-clinique-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "Recherche Clinique GLP-1 : Dernières Études France 2025"
+description: "recherche clinique GLP-1 — Guide marché français."
 ---
 
 ## À retenir

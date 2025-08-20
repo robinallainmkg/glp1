@@ -1,24 +1,17 @@
 ---
-title: "Mounjaro prix France 2025 : coût tirzepatide, remboursement et accès"
-metaTitle: "Mounjaro prix France 2025 : coût tirzepatide, remb | France 2025"
-description: "Prix Mounjaro France : 89€ par stylo tirzepatide. Conditions de remboursement diabète type 2, disponibilité et alternatives."
-metaDescription: "mounjaro prix france France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "mounjaro prix france"
-intent: "Commercial"
-category: "glp-1 medications"
+slug: mounjaro-prix-france
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 7
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/medicaments-glp1/mounjaro-prix-france/"
-tags:
-  - GLP-1
-  - mounjaro
-  - tirzepatide
-  - prix
-  - diabète
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/mounjaro-prix-france-illus.jpg
+thumbnailAlt: "Illustration pour larticle mounjaro-prix-france"
+featured: false
+priority: 5
+schema: Article
+title: "Mounjaro prix France 2025 : coût tirzepatide, remboursement et accès"
+description: "Prix Mounjaro France : 89€ par stylo tirzepatide. Conditions de remboursement diabète type 2, disponibilité et alternatives."
 ---
 
 ## À retenir sur le coût et accessibilité de Mounjaro en France

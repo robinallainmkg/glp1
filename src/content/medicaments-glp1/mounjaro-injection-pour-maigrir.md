@@ -1,21 +1,17 @@
 ---
-title: "Mounjaro injection pour maigrir"
-metaTitle: "Mounjaro Injection Maigrir France 2025 | Efficacité Perte Poids"
-description: "Mounjaro injection pour maigrir en France 2025 : efficacité, posologie, prix, effets secondaires et témoignages patients réels."
-metaDescription: "mounjaro tirzepatide france, injection perte poids France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "mounjaro tirzepatide france, injection perte poids"
-intent: "Informational"
-category: "glp-1 medications"
+slug: mounjaro-injection-pour-maigrir
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/mounjaro-injection-pour-maigrir-illus.jpg
+thumbnailAlt: "Illustration pour larticle mounjaro-injection-pour-maigrir"
+featured: false
+priority: 5
+schema: Article
+title: "Mounjaro injection pour maigrir"
+description: "Mounjaro injection pour maigrir en France 2025 : efficacité, posologie, prix, effets secondaires et témoignages patients réels."
 ---
 
 ## Mounjaro : l'injection révolutionnaire pour maigrir

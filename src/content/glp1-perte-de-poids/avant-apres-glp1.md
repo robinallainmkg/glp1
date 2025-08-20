@@ -1,16 +1,17 @@
 ---
-title: "Avant après glp-1 : témoignages et transformations réelles 2025"
-slug: "avant-apres-glp1"
-category: "glp1-perte-de-poids"
+slug: avant-apres-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readTime: "10 min"
-metaTitle: "Avant après glp-1 france 2025 : transformations réelles"
-metaDescription: "Témoignages avant/après GLP-1 : transformations réelles, photos, parcours patients. Wegovy, Saxenda, Ozempic résultats authentiques 2025."
-heroImage: "/images/avant-apres-glp1.jpg"
-published: true
-featured: true
-keyword: "avant après glp-1, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/avant-apres-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle avant-apres-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "Avant après glp-1 : témoignages et transformations réelles 2025"
+description: "Témoignages avant/après GLP-1 : transformations réelles, photos, parcours patients. Wegovy, Saxenda, Ozempic résultats authentiques 2025."
 ---
 
 Les **transformations avant/après avec les traitements Ozempic, Wegovy et Saxenda** témoignent de l'efficacité de ces nouveaux médicaments. Ces parcours authentiques de patients français montrent des changements durables, avec des pertes de poids réalistes et un retour à une meilleure qualité de vie.

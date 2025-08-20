@@ -1,15 +1,17 @@
 ---
-title: "Wegovy prix pharmacie - Wegovy Prix Pharmacie"
-metaTitle: "Wegovy prix pharmacie | Prix Remboursement France 2025"
-description: "wegovy prix pharmacie — Guide marché français."
-metaDescription: "Wegovy prix pharmacie Dernière mise à jour : 11/08/2025 Prix et tarifs officiels [Détails des tarifs à développer Découvrez tout sur GLP-1 en France."
-keyword: "piqûre pour maigrir prix"
-intent: "Informational"
-category: "glp-1 cost"
+slug: wegovy-prix-pharmacie
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, prix"
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/wegovy-prix-pharmacie-illus.jpg
+thumbnailAlt: "Illustration pour larticle wegovy-prix-pharmacie"
+featured: false
+priority: 5
+schema: Article
+title: "Wegovy prix pharmacie - Wegovy Prix Pharmacie"
+description: "wegovy prix pharmacie — Guide marché français."
 ---
 
 ## Prix et tarifs officiels

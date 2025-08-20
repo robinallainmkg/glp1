@@ -1,12 +1,17 @@
 ---
-title: "régime détox et GLP-1 - Regime Detox Glp1"
-metaTitle: "régime détox et GLP-1 | Prix Efficacité France 2025"
-description: "régime détox et GLP-1 — Guide marché français."
-metaDescription: "régime détox glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: regime-detox-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "détox glp1, cure détoxification"
-keyword: "régime détox glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/regime-detox-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle regime-detox-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "régime détox et GLP-1 - Regime Detox Glp1"
+description: "régime détox et GLP-1 — Guide marché français."
 ---
 
 ## À retenir

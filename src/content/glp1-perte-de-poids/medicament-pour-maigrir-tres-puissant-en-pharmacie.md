@@ -1,15 +1,19 @@
 ---
-title: "Médicament Pour Maigrir Très Puissant en Pharmacie France 2025"
-metaTitle: "Médicament Pour Maigrir Très Puissant en Pharmacie France 2025"
-description: "médicament pour maigrir très puissant en pharmacie — Guide marché français."
-metaDescription: "qui peut prescrire wegovy en france pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "qui peut prescrire wegovy en france"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: medicament-pour-maigrir-tres-puissant-en-pharmacie
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 6
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: >-
+thumbnailAlt: "Illustration pour larticle medicament-pour-maigrir-tres-puissant-en-pharmacie"
+featured: false
+priority: 5
+schema: Article
+title: "Médicament Pour Maigrir Très Puissant en Pharmacie France 2025"
+description: "médicament pour maigrir très puissant en pharmacie — Guide marché français."
 ---
+
 Les **médicaments pour maigrir très puissants** disponibles en pharmacie française ont considérablement évolué en 2025. Entre les nouvelles molécules GLP-1 et les traitements traditionnels, le paysage thérapeutique offre désormais des solutions efficaces pour l'obésité sévère.
 
 Avec des taux d'obésité atteignant **17% de la population française**, la demande pour des traitements puissants et sûrs n'a jamais été aussi forte. Les pharmacies proposent aujourd'hui des options thérapeutiques révolutionnaires.

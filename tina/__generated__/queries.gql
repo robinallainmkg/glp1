@@ -1,0 +1,494 @@
+query medicaments_glp1($relativePath: String!) {
+  medicaments_glp1(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Medicaments_glp1Parts
+  }
+}
+
+query medicaments_glp1Connection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Medicaments_glp1Filter) {
+  medicaments_glp1Connection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Medicaments_glp1Parts
+      }
+    }
+  }
+}
+
+query glp1_perte_de_poids($relativePath: String!) {
+  glp1_perte_de_poids(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Glp1_perte_de_poidsParts
+  }
+}
+
+query glp1_perte_de_poidsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Glp1_perte_de_poidsFilter) {
+  glp1_perte_de_poidsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Glp1_perte_de_poidsParts
+      }
+    }
+  }
+}
+
+query glp1_cout($relativePath: String!) {
+  glp1_cout(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Glp1_coutParts
+  }
+}
+
+query glp1_coutConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Glp1_coutFilter) {
+  glp1_coutConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Glp1_coutParts
+      }
+    }
+  }
+}
+
+query glp1_diabete($relativePath: String!) {
+  glp1_diabete(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Glp1_diabeteParts
+  }
+}
+
+query glp1_diabeteConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Glp1_diabeteFilter) {
+  glp1_diabeteConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Glp1_diabeteParts
+      }
+    }
+  }
+}
+
+query effets_secondaires_glp1($relativePath: String!) {
+  effets_secondaires_glp1(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Effets_secondaires_glp1Parts
+  }
+}
+
+query effets_secondaires_glp1Connection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Effets_secondaires_glp1Filter) {
+  effets_secondaires_glp1Connection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Effets_secondaires_glp1Parts
+      }
+    }
+  }
+}
+
+query medecins_glp1_france($relativePath: String!) {
+  medecins_glp1_france(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Medecins_glp1_franceParts
+  }
+}
+
+query medecins_glp1_franceConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Medecins_glp1_franceFilter) {
+  medecins_glp1_franceConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Medecins_glp1_franceParts
+      }
+    }
+  }
+}
+
+query recherche_glp1($relativePath: String!) {
+  recherche_glp1(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Recherche_glp1Parts
+  }
+}
+
+query recherche_glp1Connection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Recherche_glp1Filter) {
+  recherche_glp1Connection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Recherche_glp1Parts
+      }
+    }
+  }
+}
+
+query regime_glp1($relativePath: String!) {
+  regime_glp1(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Regime_glp1Parts
+  }
+}
+
+query regime_glp1Connection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Regime_glp1Filter) {
+  regime_glp1Connection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Regime_glp1Parts
+      }
+    }
+  }
+}
+
+query alternatives_glp1($relativePath: String!) {
+  alternatives_glp1(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Alternatives_glp1Parts
+  }
+}
+
+query alternatives_glp1Connection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Alternatives_glp1Filter) {
+  alternatives_glp1Connection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Alternatives_glp1Parts
+      }
+    }
+  }
+}

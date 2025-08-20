@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Carnet Diabétique : Suivi Optimisé France 2025"
-metaTitle: "GLP-1 Carnet Diabétique : Suivi Optimisé France 20 | France 2025"
-description: "GLP-1 et carnet diabétique — Guide marché français."
-metaDescription: "glp-1 carnet diabétique France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-carnet-diabetique
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "carnet diabète glp1, suivi glycémique"
-keyword: "glp-1 carnet diabétique, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-carnet-diabetique-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-carnet-diabetique"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Carnet Diabétique : Suivi Optimisé France 2025"
+description: "GLP-1 et carnet diabétique — Guide marché français."
 ---
 
 ## À retenir

@@ -1,20 +1,17 @@
 ---
-title: "Victoza rupture - Victoza Rupture"
-metaTitle: "Victoza rupture | Prix Efficacité France 2025"
-description: "victoza rupture — Guide marché français."
-metaDescription: "trulicity 3 mg rupture de stock France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "trulicity 3 mg rupture de stock"
-intent: "Informational"
-category: "glp-1 medications"
+slug: victoza-rupture
+pubDate: 2025-08-20
 author: "Karim Benali"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/victoza-rupture-illus.jpg
+thumbnailAlt: "Illustration pour larticle victoza-rupture"
+featured: false
+priority: 5
+schema: Article
+title: "Victoza rupture - Victoza Rupture"
+description: "victoza rupture — Guide marché français."
 ---
 
 ## À retenir

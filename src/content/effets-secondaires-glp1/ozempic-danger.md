@@ -1,25 +1,17 @@
 ---
-title: "Ozempic danger - risques, effets graves et précautions essen"
-metaTitle: "Ozempic danger : risques, effets graves et précaut | France 2025"
+title: "Ozempic danger - risques, effets graves et précautions essentielles"
 description: "Ozempic danger : analyse complète des risques graves, pancréatite, cancer thyroïde, effets secondaires rares. Guide sécurité et précautions médicales."
-metaDescription: "Ozempic Danger : Analyse Complète des Risques et Précautions Ozempic présente des risques rares mais potentiellement graves nécessitant une surveillance médical"
-keyword: "ozempic danger"
-intent: "Informational"
-category: "glp-1 side effects"
+slug: "ozempic-danger"
+pubDate: 2025-08-10
 author: "Karim Benali"
-readingTime: 12
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/effets-secondaires-glp1/ozempic-danger/"
-image: "/images/articles/ozempic-dangers-risques.jpg"
-tags:
-  - ozempic
-  - danger
-  - effets graves
-  - sécurité
-  - précautions
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, perte de poids"
+category: "Guide médical"
+tags: ["Ozempic", "danger", "risques", "effets secondaires", "précautions", "sécurité"]
+collection: "effets-secondaires-glp1"
+thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"
+thumbnailAlt: "Illustration pour l'article ozempic-danger"
+featured: false
+priority: 5
+schema: "Article"
 ---
 
 **Ozempic présente des risques rares mais potentiellement graves nécessitant une surveillance médicale stricte.** Bien que généralement bien toléré, ce médicament peut provoquer des effets secondaires sérieux chez certains patients.

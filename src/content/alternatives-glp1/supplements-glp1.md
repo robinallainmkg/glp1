@@ -1,12 +1,17 @@
 ---
-title: "suppléments naturels type GLP-1"
-metaTitle: "suppléments naturels type GLP-1 | France 2025"
-description: "suppléments naturels type GLP-1 — Guide marché français."
-metaDescription: "suppléments naturels type France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: supplements-glp1
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "suppléments glp1, compléments naturels"
-keyword: "suppléments naturels type, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/supplements-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle supplements-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "suppléments naturels type GLP-1"
+description: "suppléments naturels type GLP-1 — Guide marché français."
 ---
 
 ## À retenir

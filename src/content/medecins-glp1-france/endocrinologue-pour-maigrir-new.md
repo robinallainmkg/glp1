@@ -1,14 +1,17 @@
 ---
-title: "Comment trouver un endocrinologue pour maigrir en france"
-metaTitle: "Comment trouver un endocrinologue pour maigrir en  | France 2025"
-description: "Guide complet pour trouver un endocrinologue spécialisé dans l'obésité et la perte de poids en France. Prix, démarches et conseils pratiques."
-metaDescription: "endocrinologue pour maigrir France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "endocrinologue pour maigrir"
-intent: "Commercial"
-category: "glp-1 doctors france"
+slug: endocrinologue-pour-maigrir-new
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 8
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medecins-glp1-france
+thumbnail: /images/thumbnails/endocrinologue-pour-maigrir-new-illus.jpg
+thumbnailAlt: "Illustration pour larticle endocrinologue-pour-maigrir-new"
+featured: false
+priority: 5
+schema: Article
+title: "Comment trouver un endocrinologue pour maigrir en france"
+description: "Guide complet pour trouver un endocrinologue spécialisé dans lobésité et la perte de poids en France. Prix, démarches et conseils pratiques."
 ---
 
 Vous cherchez un endocrinologue pour vous aider à perdre du poids ? Ce guide vous explique pourquoi consulter ce spécialiste, comment le trouver et à quoi vous attendre lors de vos consultations.

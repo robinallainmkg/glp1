@@ -1,20 +1,17 @@
 ---
-title: "Xenical remboursement - Xenical Remboursement"
-metaTitle: "Xenical remboursement | Prix Efficacité France 2025"
-description: "xenical remboursement — Guide marché français."
-metaDescription: "orlistat remboursement France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "orlistat remboursement"
-intent: "Informational"
-category: "glp-1 medications"
+slug: xenical-remboursement
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/xenical-remboursement-illus.jpg
+thumbnailAlt: "Illustration pour larticle xenical-remboursement"
+featured: false
+priority: 5
+schema: Article
+title: "Xenical remboursement - Xenical Remboursement"
+description: "xenical remboursement — Guide marché français."
 ---
 
 ## À retenir

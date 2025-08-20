@@ -1,12 +1,17 @@
 ---
-title: "diabétologue Paris GLP-1 - Diabetologue Paris"
-metaTitle: "diabétologue Paris GLP-1 | Prix Efficacité France 2025"
-description: "diabétologue Paris GLP-1 — Guide marché français."
-metaDescription: "diabétologue paris glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: diabetologue-paris
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "diabétologue paris glp1, endocrinologue ozempic"
-keyword: "diabétologue paris glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: medecins-glp1-france
+thumbnail: /images/thumbnails/diabetologue-paris-illus.jpg
+thumbnailAlt: "Illustration pour larticle diabetologue-paris"
+featured: false
+priority: 5
+schema: Article
+title: "diabétologue Paris GLP-1 - Diabetologue Paris"
+description: "diabétologue Paris GLP-1 — Guide marché français."
 ---
 
 ## À retenir

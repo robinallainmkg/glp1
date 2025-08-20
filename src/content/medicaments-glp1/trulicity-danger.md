@@ -1,20 +1,17 @@
 ---
-title: "Trulicity danger - Trulicity Danger"
-metaTitle: "Trulicity danger | Prix Efficacité France 2025"
-description: "trulicity danger — Guide marché français."
-metaDescription: "dulaglutide effets secondaires France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "dulaglutide effets secondaires"
-intent: "Informational"
-category: "glp-1 medications"
+slug: trulicity-danger
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Trulicity, dulaglutide, diabète, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/trulicity-danger-illus.jpg
+thumbnailAlt: "Illustration pour larticle trulicity-danger"
+featured: false
+priority: 5
+schema: Article
+title: "Trulicity danger - Trulicity Danger"
+description: "trulicity danger — Guide marché français."
 ---
 
 ## À retenir

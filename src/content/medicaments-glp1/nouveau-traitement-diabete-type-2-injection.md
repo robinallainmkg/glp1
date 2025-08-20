@@ -1,14 +1,17 @@
 ---
+slug: nouveau-traitement-diabete-type-2-injection
+pubDate: 2025-08-20
+author: "Dr. Sarah Martin"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/nouveau-traitement-diabete-type-2-injection-illus.jpg
+thumbnailAlt: "Illustration pour larticle nouveau-traitement-diabete-type-2-injection"
+featured: false
+priority: 5
+schema: Article
 title: "Nouveau traitement diabète type 2 injection : innovations 2024"
-metaTitle: "Nouveau traitement diabète type 2 injection : inno | France 2025"
 description: "Découvrez les dernières innovations injectables pour le diabète type 2 : tirzepatide, nouvelles insulines, biosimilaires et technologies révolutionnaires."
-metaDescription: "nouveau traitement diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-date: "2024-12-26"
-categories:
-  - Traitements
-  - Innovation
-keyword: "nouveau traitement diabète, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, tirzepatide, Mounjaro, dual agonist, diabète"
 ---
 
 ## À retenir

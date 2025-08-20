@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Diabète Type 1 : Applications Thérapeutiques 2025"
-metaTitle: "GLP-1 Diabète Type 1 : Applications Thérapeutiques | France 2025"
-description: "GLP-1 et diabète de type 1 — Guide marché français."
-metaDescription: "glp-1 diabète type France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-diabete-type-1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "glp1 diabète type 1, agonistes GLP-1 DT1"
-keyword: "glp-1 diabète type, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-diabete-type-1-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-diabete-type-1"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Diabète Type 1 : Applications Thérapeutiques 2025"
+description: "GLP-1 et diabète de type 1 — Guide marché français."
 ---
 
 ## À retenir

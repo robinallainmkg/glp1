@@ -1,13 +1,17 @@
 ---
-title: "acupuncture pour diabète obésité"
-metaTitle: "acupuncture pour diabète obésité | France 2025"
-description: "acupuncture pour diabète obésité — Guide marché français."
-metaDescription: "acupuncture diabète obésité France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+title: "Acupuncture pour diabète obésité"
+description: "acupuncture pour diabète obésité — Guide marché français. Acupuncture diabète obésité France 2025 : prix, efficacité, effets secondaires, remboursement."
+slug: "acupuncture-glp1"
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "acupuncture diabète, médecine chinoise"
-keyword: "acupuncture diabète obésité, france 2025"
-image: "/images/thumbnails/acupuncture-glp1-illus.jpg"
+category: "Guide médical"
+tags: ["acupuncture", "diabète", "obésité", "médecine chinoise", "France"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/acupuncture-glp1-illus.jpg"
+thumbnailAlt: "Illustration pour l'article acupuncture-glp1"
+featured: false
+priority: 5
+schema: "Article"
 ---
 ## À retenir
 

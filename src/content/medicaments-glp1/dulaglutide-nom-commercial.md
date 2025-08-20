@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : dulaglutide nom commercial"
-metaTitle: "Médicaments glp-1 : dulaglutide nom commercial - g | France 2025"
-description: "Guide complet sur dulaglutide nom commercial des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "trulicity insuline France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "trulicity insuline"
-intent: "Informational"
-category: "glp-1 medications"
+slug: dulaglutide-nom-commercial
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/dulaglutide-nom-commercial-illus.jpg
+thumbnailAlt: "Illustration pour larticle dulaglutide-nom-commercial"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : dulaglutide nom commercial"
+description: "Guide complet sur dulaglutide nom commercial des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Dulaglutide nom commercial : Trulicity

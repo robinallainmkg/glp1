@@ -1,14 +1,17 @@
 ---
+slug: traitements-medicamenteux
+pubDate: 2025-08-20
+author: "Dr. Sarah Martin"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/traitements-medicamenteux-illus.jpg
+thumbnailAlt: "Illustration pour larticle traitements-medicamenteux"
+featured: false
+priority: 5
+schema: Article
 title: "Traitements médicamenteux diabète obésité : guide complet 2024"
-metaTitle: "Traitements médicamenteux diabète obésité : guide  | France 2025"
 description: "Panorama complet des traitements médicamenteux pour diabète et obésité : metformine, GLP-1, SGLT2, insulines et innovations thérapeutiques."
-metaDescription: "traitements médicamenteux diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-date: "2024-12-26"
-categories:
-  - Traitements
-  - Médicaments
-keyword: "traitements médicamenteux diabète, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
 ---
 
 ## À retenir

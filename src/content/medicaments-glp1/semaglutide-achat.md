@@ -1,20 +1,17 @@
 ---
-title: "Semaglutide achat - Semaglutide Achat"
-metaTitle: "Semaglutide achat | Prix Efficacité France 2025"
-description: "semaglutide achat — Guide marché français."
-metaDescription: "ozempic generique France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "ozempic generique"
-intent: "Informational"
-category: "glp-1 medications"
+slug: semaglutide-achat
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/semaglutide-achat-illus.jpg
+thumbnailAlt: "Illustration pour larticle semaglutide-achat"
+featured: false
+priority: 5
+schema: Article
+title: "Semaglutide achat - Semaglutide Achat"
+description: "semaglutide achat — Guide marché français."
 ---
 
 ## À retenir

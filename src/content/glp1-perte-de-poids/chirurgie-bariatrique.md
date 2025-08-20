@@ -1,14 +1,17 @@
 ---
-title: "Perte de poids glp-1 : chirurgie bariatrique"
-metaTitle: "Perte de poids glp-1 : chirurgie bariatrique - gui | France 2025"
-description: "Chirurgie bariatrique avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
-metaDescription: "parcours chirurgie bariatrique pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "parcours chirurgie bariatrique"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: chirurgie-bariatrique
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/chirurgie-bariatrique-illus.jpg
+thumbnailAlt: "Illustration pour larticle chirurgie-bariatrique"
+featured: false
+priority: 5
+schema: Article
+title: "Perte de poids glp-1 : chirurgie bariatrique"
+description: "Chirurgie bariatrique avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Sommaire

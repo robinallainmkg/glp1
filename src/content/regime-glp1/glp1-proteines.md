@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 et protéines alimentaires"
-metaTitle: "GLP-1 et protéines alimentaires | France 2025"
-description: "GLP-1 et protéines alimentaires — Guide marché français."
-metaDescription: "glp-1 protéines alimentaires France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-proteines
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "protéines glp1, besoins nutritionnels"
-keyword: "glp-1 protéines alimentaires, france 2025"
+category: "Guide médical"
+tags: []
+collection: regime-glp1
+thumbnail: /images/thumbnails/glp1-proteines-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-proteines"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 et protéines alimentaires"
+description: "GLP-1 et protéines alimentaires — Guide marché français."
 ---
 
 ## À retenir

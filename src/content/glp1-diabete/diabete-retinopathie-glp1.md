@@ -1,12 +1,17 @@
 ---
-title: "Diabète Rétinopathie GLP-1 : Protection Oculaire France 2025"
-metaTitle: "Diabète Rétinopathie GLP-1 : Protection Oculaire F | France 2025"
-description: "diabète rétinopathie et GLP-1 — Guide marché français."
-metaDescription: "diabète rétinopathie glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: diabete-retinopathie-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "rétinopathie diabétique glp1, vision"
-keyword: "diabète rétinopathie glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/diabete-retinopathie-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle diabete-retinopathie-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "Diabète Rétinopathie GLP-1 : Protection Oculaire France 2025"
+description: "diabète rétinopathie et GLP-1 — Guide marché français."
 ---
 
 ## À retenir

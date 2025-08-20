@@ -1,12 +1,17 @@
 ---
-title: "yoga thérapeutique diabète - Yoga Diabete"
-metaTitle: "yoga thérapeutique diabète | Prix Efficacité France 2025"
-description: "yoga thérapeutique diabète — Guide marché français."
-metaDescription: "yoga thérapeutique diabète France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: yoga-diabete
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "yoga diabète, exercices doux"
-keyword: "yoga thérapeutique diabète, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/yoga-diabete-illus.jpg
+thumbnailAlt: "Illustration pour larticle yoga-diabete"
+featured: false
+priority: 5
+schema: Article
+title: "yoga thérapeutique diabète - Yoga Diabete"
+description: "yoga thérapeutique diabète — Guide marché français."
 ---
 
 ## À retenir

@@ -1,16 +1,17 @@
 ---
-title: "Ozempic régime : guide complet perte de poids efficace 2025"
-slug: "ozempic-regime"
-category: "glp1-perte-de-poids"
+slug: ozempic-regime
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readTime: "9 min"
-metaTitle: "Ozempic régime france 2025 : guide perte de poids complet"
-metaDescription: "Régime Ozempic pour maigrir : protocole alimentaire, efficacité, témoignages. Prescription, prix, résultats. Guide médical 2025."
-heroImage: "/images/ozempic-regime.jpg"
-published: true
-featured: true
-keyword: "ozempic régime perte, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/ozempic-regime-illus.jpg
+thumbnailAlt: "Illustration pour larticle ozempic-regime"
+featured: false
+priority: 5
+schema: Article
+title: "Ozempic régime : guide complet perte de poids efficace 2025"
+description: "Régime Ozempic pour maigrir : protocole alimentaire, efficacité, témoignages. Prescription, prix, résultats. Guide médical 2025."
 ---
 
 Le **régime Ozempic** combine l'efficacité du sémaglutide avec un protocole alimentaire optimisé pour maximiser la perte de poids. Cette approche révolutionnaire permet d'atteindre des résultats exceptionnels, avec une perte moyenne de 12-16% du poids corporel en usage off-label.

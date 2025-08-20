@@ -1,12 +1,17 @@
 ---
-title: "Diabète du Pied et GLP-1 : Prévention et Traitement France 2025"
-metaTitle: "Diabète du Pied et GLP-1 : Prévention et Traitemen | France 2025"
-description: "diabète du pied et GLP-1 — Guide marché français."
-metaDescription: "diabète pied glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: diabete-pied-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "diabète pied glp1, ulcères diabétiques"
-keyword: "diabète pied glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/diabete-pied-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle diabete-pied-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "Diabète du Pied et GLP-1 : Prévention et Traitement France 2025"
+description: "diabète du pied et GLP-1 — Guide marché français."
 ---
 
 ## À retenir

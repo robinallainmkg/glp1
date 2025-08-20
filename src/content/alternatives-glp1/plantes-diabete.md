@@ -1,12 +1,17 @@
 ---
-title: "plantes anti-diabète naturelles"
-metaTitle: "plantes anti-diabète naturelles | France 2025"
-description: "plantes anti-diabète naturelles — Guide marché français."
-metaDescription: "plantes anti-diabète naturelles France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: plantes-diabete
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "plantes diabète, phytothérapie glycémie"
-keyword: "plantes anti-diabète naturelles, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/plantes-diabete-illus.jpg
+thumbnailAlt: "Illustration pour larticle plantes-diabete"
+featured: false
+priority: 5
+schema: Article
+title: "plantes anti-diabète naturelles"
+description: "plantes anti-diabète naturelles — Guide marché français."
 ---
 
 ## À retenir

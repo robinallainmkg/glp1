@@ -1,24 +1,17 @@
 ---
-title: "Ozempic injection prix : coût, remboursement et guide d'achat 2025"
-metaTitle: "Ozempic injection prix : coût, remboursement et gu | France 2025"
-description: "Prix Ozempic injection en France : 73€ par stylo, remboursement 65%, conditions de prescription. Guide complet coût et alternatives."
-metaDescription: "ozempic injection prix France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "ozempic injection prix"
-intent: "Informational"
-category: "glp-1 medications"
+slug: ozempic-injection-prix
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 7
-datePublished: "2025-08-10"
-dateModified: "2025-08-10"
-canonicalUrl: "/medicaments-glp1/ozempic-injection-prix/"
-tags:
-  - GLP-1
-  - médicaments
-  - traitement
-  - diabète
-  - perte de poids
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Trulicity"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/ozempic-injection-prix-illus.jpg
+thumbnailAlt: "Illustration pour larticle ozempic-injection-prix"
+featured: false
+priority: 5
+schema: Article
+title: "Ozempic injection prix : coût, remboursement et guide dachat 2025"
+description: "Prix Ozempic injection en France : 73€ par stylo, remboursement 65%, conditions de prescription. Guide complet coût et alternatives."
 ---
 
 ## Points Clés et coût du traitement Ozempic

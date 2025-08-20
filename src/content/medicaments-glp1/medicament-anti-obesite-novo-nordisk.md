@@ -1,20 +1,17 @@
 ---
-title: "Médicament anti obésité novo nordisk"
-metaTitle: "Médicament anti obésité novo nordisk | France 2025"
-description: "médicament anti obésité novo nordisk — Guide marché français."
-metaDescription: "novo nordisk médicament obésité France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "novo nordisk médicament obésité"
-intent: "Informational"
-category: "glp-1 medications"
+slug: medicament-anti-obesite-novo-nordisk
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 6
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/medicament-anti-obesite-novo-nordisk-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicament-anti-obesite-novo-nordisk"
+featured: false
+priority: 5
+schema: Article
+title: "Médicament anti obésité novo nordisk"
+description: "médicament anti obésité novo nordisk — Guide marché français."
 ---
 
 ## Novo Nordisk : révolution des médicaments anti-obésité

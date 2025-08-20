@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Neuropathie Diabétique : Traitement Douleurs 2025"
-metaTitle: "GLP-1 Neuropathie Diabétique : Traitement Douleurs | France 2025"
-description: "GLP-1 et neuropathie diabétique — Guide marché français."
-metaDescription: "glp-1 neuropathie diabétique France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-neuropathie-diabetique
+pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-date: "2025-08-10"
-keywords: "glp1 neuropathie, douleurs diabète"
-keyword: "glp-1 neuropathie diabétique, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-neuropathie-diabetique-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-neuropathie-diabetique"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Neuropathie Diabétique : Traitement Douleurs 2025"
+description: "GLP-1 et neuropathie diabétique — Guide marché français."
 ---
 
 ## À retenir

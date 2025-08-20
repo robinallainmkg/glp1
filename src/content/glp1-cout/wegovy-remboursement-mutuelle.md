@@ -1,15 +1,17 @@
 ---
-title: "Wegovy Remboursement Mutuelle France 2025"
-metaTitle: "Wegovy Remboursement Mutuelle France 2025"
-description: "wegovy remboursement mutuelle — Guide marché français."
-metaDescription: "Wegovy remboursement mutuelle Dernière mise à jour : 11/08/2025 Qu'est-ce que c'est ? [Définition et présentation à développer."
-keyword: "wegovy remboursement 2025"
-intent: "Informational"
-category: "glp-1 cost"
+slug: wegovy-remboursement-mutuelle
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-featured: true
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, prix"
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/wegovy-remboursement-mutuelle-illus.jpg
+thumbnailAlt: "Illustration pour larticle wegovy-remboursement-mutuelle"
+featured: false
+priority: 5
+schema: Article
+title: "Wegovy Remboursement Mutuelle France 2025"
+description: "wegovy remboursement mutuelle — Guide marché français."
 ---
 
 Le **Wegovy** (semaglutide) est un médicament révolutionnaire pour la perte de poids, mais son coût élevé suscite de nombreuses questions sur le remboursement par les mutuelles françaises. En 2025, la situation évolue rapidement avec de nouvelles dispositions.

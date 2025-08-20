@@ -1,16 +1,17 @@
 ---
-title: "Médicament américain pour maigrir : guide complet france 2025"
-slug: "medicament-americain-pour-maigrir"
-category: "medicaments-glp1"
+slug: medicament-americain-pour-maigrir
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readTime: "7 min"
-metaTitle: "Médicament Américain pour Maigrir France 2025 : Wegovy, Ozempic"
-metaDescription: "Médicaments américains pour maigrir disponibles en France : Wegovy, Ozempic, Saxenda. Prescription, efficacité, prix. Guide complet 2025."
-heroImage: "/images/medicament-americain-maigrir.jpg"
-published: true
-featured: true
-keyword: "médicament américain maigrir, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Ozempic, semaglutide, diabète type 2, Wegovy"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/medicament-americain-pour-maigrir-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicament-americain-pour-maigrir"
+featured: false
+priority: 5
+schema: Article
+title: "Médicament américain pour maigrir : guide complet france 2025"
+description: "Médicaments américains pour maigrir disponibles en France : Wegovy, Ozempic, Saxenda. Prescription, efficacité, prix. Guide complet 2025."
 ---
 
 Les **médicaments américains pour maigrir** les plus révolutionnaires sont désormais accessibles en France. Ces traitements développés par les laboratoires pharmaceutiques américains comme Novo Nordisk et Eli Lilly transforment la prise en charge de l'obésité avec une efficacité inégalée.

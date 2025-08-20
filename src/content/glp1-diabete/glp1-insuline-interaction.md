@@ -1,12 +1,17 @@
 ---
-title: "GLP-1 Insuline Interaction : Association Thérapeutique 2025"
-metaTitle: "GLP-1 Insuline Interaction : Association Thérapeut | France 2025"
-description: "GLP-1 et interaction avec insuline — Guide marché français."
-metaDescription: "glp-1 insuline interaction France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: glp1-insuline-interaction
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "glp1 insuline interaction, association thérapeutique"
-keyword: "glp-1 insuline interaction, france 2025"
+category: "Guide médical"
+tags: []
+collection: glp1-diabete
+thumbnail: /images/thumbnails/glp1-insuline-interaction-illus.jpg
+thumbnailAlt: "Illustration pour larticle glp1-insuline-interaction"
+featured: false
+priority: 5
+schema: Article
+title: "GLP-1 Insuline Interaction : Association Thérapeutique 2025"
+description: "GLP-1 et interaction avec insuline — Guide marché français."
 ---
 
 ## À retenir

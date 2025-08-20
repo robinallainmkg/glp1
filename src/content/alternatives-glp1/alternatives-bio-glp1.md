@@ -1,12 +1,17 @@
 ---
-title: "alternatives biologiques GLP-1"
-metaTitle: "alternatives biologiques GLP-1 | Prix Efficacité France 2025"
-description: "alternatives biologiques GLP-1 — Guide marché français."
-metaDescription: "alternatives biologiques glp-1 France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: alternatives-bio-glp1
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-08-10"
-keywords: "bio glp1, naturel biologique"
-keyword: "alternatives biologiques glp-1, france 2025"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/alternatives-bio-glp1-illus.jpg
+thumbnailAlt: "Illustration pour larticle alternatives-bio-glp1"
+featured: false
+priority: 5
+schema: Article
+title: "alternatives biologiques GLP-1"
+description: "alternatives biologiques GLP-1 — Guide marché français."
 ---
 
 ## À retenir

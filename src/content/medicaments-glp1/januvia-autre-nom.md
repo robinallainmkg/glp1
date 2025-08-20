@@ -1,20 +1,17 @@
 ---
-title: "Médicaments glp-1 : januvia autre nom - guide complet france 2025"
-metaTitle: "Médicaments glp-1 : januvia autre nom - guide comp | France 2025"
-description: "Guide complet sur januvia autre nom des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
-metaDescription: "sitagliptine princeps France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
-keyword: "sitagliptine princeps"
-intent: "Informational"
-category: "glp-1 medications"
+slug: januvia-autre-nom
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 5
-tags:
-  - GLP-1
-  - médicaments
-  - diabète
-  - obésité
-  - France
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/januvia-autre-nom-illus.jpg
+thumbnailAlt: "Illustration pour larticle januvia-autre-nom"
+featured: false
+priority: 5
+schema: Article
+title: "Médicaments glp-1 : januvia autre nom - guide complet france 2025"
+description: "Guide complet sur januvia autre nom des médicaments GLP-1. Posologie, effets et prix en France 2025. Conseils médicaux certifiés. Informations vérifiées par des professionnels de santé."
 ---
 
 ## Januvia autre nom : guide des alternatives

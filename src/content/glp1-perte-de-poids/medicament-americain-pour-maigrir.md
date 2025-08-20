@@ -1,14 +1,17 @@
 ---
-title: "Medicament americain pour maigrir"
-metaTitle: "Medicament americain pour maigrir | Perte Poids France 2025"
-description: "medicament americain pour maigrir — Guide marché français."
-metaDescription: "nouveau médicament américain pour maigrir pour maigrir France 2025 : efficacité, témoignages, prescription médicale. Guide perte de poids GLP-1."
-keyword: "nouveau médicament américain pour maigrir"
-intent: "Informational"
-category: "glp-1 for weight loss"
+slug: medicament-americain-pour-maigrir
+pubDate: 2025-08-20
 author: "Julien Lefèvre"
-readingTime: 5
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, tirzepatide"
+category: "Guide médical"
+tags: []
+collection: glp1-perte-de-poids
+thumbnail: /images/thumbnails/medicament-americain-pour-maigrir-illus.jpg
+thumbnailAlt: "Illustration pour larticle medicament-americain-pour-maigrir"
+featured: false
+priority: 5
+schema: Article
+title: "Medicament americain pour maigrir"
+description: "medicament americain pour maigrir — Guide marché français."
 ---
 
 ## Médicaments américains pour la perte de poids

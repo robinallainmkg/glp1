@@ -1,14 +1,17 @@
 ---
-title: "Alternatives aux glp-1 : peut on guérir du diabète"
-metaTitle: "Alternatives aux glp-1 : peut on guérir du diabète | France 2025"
-description: "Découvrez les alternatives naturelles aux médicaments GLP-1 pour peut on guérir du diabète. Solutions efficaces, prix et avis médical en France 2025. Informations vérifiées par des professionnels de santé."
-metaDescription: "Alternatives naturelles peut on guérir du diabète type 2 France 2025 : solutions efficaces, comparaisons, conseils experts. Guide complet."
-keyword: "peut on guérir du diabète type 2"
-intent: "Informational"
-category: "glp-1 alternatives"
+slug: peut-on-guerir-du-diabete
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readingTime: 6
-keywords: "GLP-1, glp1, agoniste GLP-1, diabète, glycémie, insuline, prix"
+category: "Guide médical"
+tags: []
+collection: alternatives-glp1
+thumbnail: /images/thumbnails/peut-on-guerir-du-diabete-illus.jpg
+thumbnailAlt: "Illustration pour larticle peut-on-guerir-du-diabete"
+featured: false
+priority: 5
+schema: Article
+title: "Alternatives aux glp-1 : peut on guérir du diabète"
+description: "Découvrez les alternatives naturelles aux médicaments GLP-1 pour peut on guérir du diabète. Solutions efficaces, prix et avis médical en France 2025. Informations vérifiées par des professionnels de santé."
 ---
 
 et rappel de précautions.

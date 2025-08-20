@@ -1,15 +1,17 @@
 ---
-title: "Comment acheter wegovy en france en 2025 : guide complet"
-metaTitle: "Comment acheter wegovy en france en 2025 : guide c | France 2025"
-description: "Découvrez comment acheter Wegovy légalement en France en 2025 : prix, ordonnance, pharmacies, remboursement et alternatives. Guide complet par un médecin spécialisé."
-metaDescription: "comment acheter wegovy France 2025 : prix, efficacité, effets secondaires, remboursement. Guide médical complet et avis patients."
+slug: acheter-wegovy-en-france
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-date: "2025-01-08"
-readingTime: 12
-category: "glp1-cout"
-keywords: "acheter wegovy france, wegovy prix, wegovy pharmacie, wegovy ordonnance, wegovy remboursement"
-keyword: "comment acheter wegovy, france 2025"
-featured: true
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/acheter-wegovy-en-france-illus.jpg
+thumbnailAlt: "Illustration pour larticle acheter-wegovy-en-france"
+featured: false
+priority: 5
+schema: Article
+title: "Comment acheter wegovy en france en 2025 : guide complet"
+description: "Découvrez comment acheter Wegovy légalement en France en 2025 : prix, ordonnance, pharmacies, remboursement et alternatives. Guide complet par un médecin spécialisé."
 ---
 
 Wegovy, le traitement révolutionnaire pour la perte de poids, suscite un intérêt grandissant en France. Ce médicament à base de sémaglutide, approuvé par l'ANSM, offre une nouvelle espérance pour les personnes en surpoids ou obèses. Mais comment l'acheter légalement en France ? Quels sont les prix pratiqués ? Ce guide complet vous explique tout ce que vous devez savoir.

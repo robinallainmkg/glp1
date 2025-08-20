@@ -1,16 +1,17 @@
 ---
-title: "Saxenda prix pharmacie : coût réel du traitement en france 2025"
-slug: "saxenda-prix-pharmacie"
-category: "glp1-cout"
+slug: saxenda-prix-pharmacie
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readTime: "7 min"
-metaTitle: "Saxenda prix pharmacie France 2025 : coût et remboursement"
-metaDescription: "Prix Saxenda en pharmacie française : coût mensuel, remboursement Sécurité Sociale, comparaison avec Wegovy. Guide complet 2025."
-heroImage: "/images/saxenda-prix-pharmacie.jpg"
-published: true
-featured: true
-keyword: "saxenda prix pharmacie, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, amaigrissement"
+category: "Guide médical"
+tags: []
+collection: glp1-cout
+thumbnail: /images/thumbnails/saxenda-prix-pharmacie-illus.jpg
+thumbnailAlt: "Illustration pour larticle saxenda-prix-pharmacie"
+featured: false
+priority: 5
+schema: Article
+title: "Saxenda prix pharmacie : coût réel du traitement en france 2025"
+description: "Prix Saxenda en pharmacie française : coût mensuel, remboursement Sécurité Sociale, comparaison avec Wegovy. Guide complet 2025."
 ---
 
 Le **prix de Saxenda en pharmacie** constitue un élément crucial dans votre décision de traitement pour la perte de poids. En 2025, ce médicament à base de liraglutide reste une alternative accessible à Wegovy, avec des tarifs plus abordables.

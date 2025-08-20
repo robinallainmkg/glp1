@@ -1,16 +1,17 @@
 ---
-title: "Pilule qui fait maigrir : guide complet des traitements oraux 2025"
-slug: "pilule-qui-fait-maigrir"
-category: "medicaments-glp1"
+slug: pilule-qui-fait-maigrir
+pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-readTime: "8 min"
-metaTitle: "Pilule qui Fait Maigrir France 2025 : Guide Complet Traitements"
-metaDescription: "Pilules pour maigrir efficaces en France : Mysimba, Orlistat, futures pilules GLP-1. Prescription, efficacité, prix. Guide complet 2025."
-heroImage: "/images/pilule-maigrir.jpg"
-published: true
-featured: true
-keyword: "pilule qui fait, france 2025"
-keywords: "GLP-1, glp1, agoniste GLP-1, Wegovy, perte de poids, obésité, amaigrissement"
+category: "Guide médical"
+tags: []
+collection: medicaments-glp1
+thumbnail: /images/thumbnails/pilule-qui-fait-maigrir-illus.jpg
+thumbnailAlt: "Illustration pour larticle pilule-qui-fait-maigrir"
+featured: false
+priority: 5
+schema: Article
+title: "Pilule qui fait maigrir : guide complet des traitements oraux 2025"
+description: "Pilules pour maigrir efficaces en France : Mysimba, Orlistat, futures pilules GLP-1. Prescription, efficacité, prix. Guide complet 2025."
 ---
 
 Les **pilules qui font maigrir** offrent une alternative pratique aux injections pour perdre du poids efficacement. En France, plusieurs traitements oraux sont disponibles sur prescription, avec des innovations prometteuses comme les futurs GLP-1 oraux qui révolutionneront le marché.
