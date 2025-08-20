@@ -58,9 +58,9 @@ if (Test-Path "dist") {
 
 Write-Host "`nEtape 5: Upload vers Hostinger..." -ForegroundColor Yellow
 
-# Script WinSCP
+# Script WinSCP avec échappement correct du %
 $winscpScript = @"
-open sftp://u403023291:"_@%p8R*XG.s+/5)"@147.79.98.140:65002 -hostkey="ssh-ed25519 255 FKFw1lW9IpAUCw7H+V4LOwNRJuPDGJOuMowBxRMlWIY="
+open sftp://u403023291:"_@%%p8R*XG.s+/5)"@147.79.98.140:65002 -hostkey="ssh-ed25519 255 FKFw1lW9IpAUCw7H+V4LOwNRJuPDGJOuMowBxRMlWIY="
 cd domains/glp1-france.fr/public_html/
 lcd dist
 synchronize remote -delete
