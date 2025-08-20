@@ -68,7 +68,7 @@ Write-Host "3. Upload vers Hostinger..." -ForegroundColor Green
 
 # Configuration WinSCP
 $winscpScript = @"
-open sftp://u403023291:_@%p8R*XG.s+/5@147.79.98.140:65002 -hostkey="ssh-ed25519 255 FKFw1lW9IpAUCw7H+V4LOwNRJuPDGJOuMowBxRMlWIY="
+open sftp://u403023291@147.79.98.140:65002 -password="_@%p8R*XG.s+/5" -hostkey="ssh-ed25519 255 FKFw1lW9IpAUCw7H+V4LOwNRJuPDGJOuMowBxRMlWIY="
 cd domains/glp1-france.fr/public_html/
 synchronize remote -delete dist/
 close
