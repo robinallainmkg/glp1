@@ -195,7 +195,7 @@ const standardArticleFields = [
 ];
 
 export default defineConfig({
-  branch: "main",
+  branch: "production",
   
   // Configuration avec vos clés API
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
