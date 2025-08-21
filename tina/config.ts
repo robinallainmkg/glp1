@@ -250,6 +250,34 @@ export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
   
+  // Configuration pour ajouter des liens "Voir l'article"
+  cmsCallback: (cms) => {
+    import("tinacms").then(({ RouteMappingPlugin }) => {
+      const RouteMapping = new RouteMappingPlugin((collection, document) => {
+        // Générer l'URL basée sur le slug de l'article
+        const slug = document._sys.filename.replace(/\.md$/, '');
+        
+        // Mapping des collections vers leurs URLs
+        const collectionUrls = {
+          'medicaments_glp1': `/medicaments-glp1/${slug}`,
+          'glp1_perte_de_poids': `/glp1-perte-de-poids/${slug}`,
+          'glp1_cout': `/glp1-cout/${slug}`,
+          'glp1_diabete': `/glp1-diabete/${slug}`,
+          'effets_secondaires_glp1': `/effets-secondaires-glp1/${slug}`,
+          'medecins_glp1_france': `/medecins-glp1-france/${slug}`,
+          'recherche_glp1': `/recherche-glp1/${slug}`,
+          'regime_glp1': `/regime-glp1/${slug}`,
+          'alternatives_glp1': `/alternatives-glp1/${slug}`,
+          'pages_statiques': `/${slug}`,
+        };
+        
+        return collectionUrls[collection.name] || `/${slug}`;
+      });
+      cms.plugins.add(RouteMapping);
+    });
+    return cms;
+  },
+  
   build: {
     outputFolder: "admin",
     publicFolder: "public",
