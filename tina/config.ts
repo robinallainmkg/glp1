@@ -130,12 +130,6 @@ const standardArticleFields = [
   },
   {
     type: "string" as const,
-    name: "tags",
-    label: "Mots-clés",
-    description: "Mots-clés pour le SEO (séparés par des virgules)",
-  },
-  {
-    type: "string" as const,
     name: "collection",
     label: "Collection",
     required: true,
