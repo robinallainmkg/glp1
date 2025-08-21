@@ -1,0 +1,227 @@
+---
+// Composant pour la prévisualisation des produits d'affiliation dans TinaCMS
+export interface Props {
+  product: {
+    productName: string;
+    brand: string;
+    productImage: string;
+    discountPercent?: number;
+    externalLink: string;
+    category: string;
+    targetAudience: string;
+    priority?: number;
+    featured?: boolean;
+    benefitsText: any;
+  };
+}
+
+const { product } = Astro.props;
+---
+
+<div class="tina-product-preview">
+  <div class="preview-header">
+    <h3 class="product-title">{product.productName}</h3>
+    <span class="product-brand">par {product.brand}</span>
+    {product.featured && <span class="featured-badge">★ En vedette</span>}
+  </div>
+  
+  <div class="preview-content">
+    <div class="product-image-container">
+      <img 
+        src={product.productImage} 
+        alt={`${product.productName} - ${product.brand}`}
+        class="product-image"
+        width="100"
+        height="100"
+      />
+      {product.discountPercent && (
+        <div class="discount-indicator">-{product.discountPercent}%</div>
+      )}
+    </div>
+    
+    <div class="product-details">
+      <div class="detail-row">
+        <strong>Catégorie:</strong>
+        <span>{product.category}</span>
+      </div>
+      
+      <div class="detail-row">
+        <strong>Public cible:</strong>
+        <span>{product.targetAudience}</span>
+      </div>
+      
+      <div class="detail-row">
+        <strong>Priorité:</strong>
+        <span>{product.priority || 'Non définie'}</span>
+      </div>
+      
+      <div class="detail-row">
+        <strong>Lien externe:</strong>
+        <a href={product.externalLink} target="_blank" rel="noopener" class="external-link">
+          Voir le produit →
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  {product.benefitsText && (
+    <div class="benefits-preview">
+      <strong>Bénéfices:</strong>
+      <div class="benefits-content" set:html={product.benefitsText} />
+    </div>
+  )}
+</div>
+
+<style>
+/* Styles pour la prévisualisation dans TinaCMS */
+.tina-product-preview {
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  max-width: 400px;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.product-brand {
+  color: #718096;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.featured-badge {
+  background: #ffd700;
+  color: #1a202c;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.preview-content {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.discount-indicator {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #e53e3e;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.detail-row strong {
+  color: #4a5568;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-row span {
+  color: #2d3748;
+}
+
+.external-link {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.external-link:hover {
+  text-decoration: underline;
+}
+
+.benefits-preview {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}
+
+.benefits-preview strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.benefits-content {
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.benefits-content ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.benefits-content li {
+  margin: 0.3rem 0;
+}
+
+.benefits-content strong {
+  color: #3182ce;
+}
+
+/* Responsive pour l'interface d'admin */
+@media (max-width: 480px) {
+  .tina-product-preview {
+    max-width: 100%;
+  }
+  
+  .preview-content {
+    flex-direction: column;
+  }
+  
+  .product-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+</style>

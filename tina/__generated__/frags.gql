@@ -17,11 +17,51 @@ fragment Medicaments_glp1Parts on Medicaments_glp1 {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -45,11 +85,51 @@ fragment Glp1_perte_de_poidsParts on Glp1_perte_de_poids {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -73,11 +153,51 @@ fragment Glp1_coutParts on Glp1_cout {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -101,11 +221,51 @@ fragment Glp1_diabeteParts on Glp1_diabete {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -129,11 +289,51 @@ fragment Effets_secondaires_glp1Parts on Effets_secondaires_glp1 {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -157,11 +357,51 @@ fragment Medecins_glp1_franceParts on Medecins_glp1_france {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -185,11 +425,51 @@ fragment Recherche_glp1Parts on Recherche_glp1 {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -213,11 +493,51 @@ fragment Regime_glp1Parts on Regime_glp1 {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -241,11 +561,51 @@ fragment Alternatives_glp1Parts on Alternatives_glp1 {
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -258,4 +618,27 @@ fragment Alternatives_glp1Parts on Alternatives_glp1 {
     minutes
     text
   }
+}
+
+fragment Affiliate_productsParts on Affiliate_products {
+  __typename
+  title
+  productId
+  brand
+  category
+  productImage
+  externalLink
+  discountPercent
+  discountCode
+  benefitsText
+  description
+  featured
+  priority
+  targeting {
+    __typename
+    categories
+    keywords
+  }
+  createdAt
+  updatedAt
 }

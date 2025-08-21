@@ -74,6 +74,8 @@ type Query {
   regime_glp1Connection(before: String, after: String, first: Float, last: Float, sort: String, filter: Regime_glp1Filter): Regime_glp1Connection!
   alternatives_glp1(relativePath: String): Alternatives_glp1!
   alternatives_glp1Connection(before: String, after: String, first: Float, last: Float, sort: String, filter: Alternatives_glp1Filter): Alternatives_glp1Connection!
+  affiliate_products(relativePath: String): Affiliate_products!
+  affiliate_productsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Affiliate_productsFilter): Affiliate_productsConnection!
 }
 
 input DocumentFilter {
@@ -87,6 +89,7 @@ input DocumentFilter {
   recherche_glp1: Recherche_glp1Filter
   regime_glp1: Regime_glp1Filter
   alternatives_glp1: Alternatives_glp1Filter
+  affiliate_products: Affiliate_productsFilter
 }
 
 type DocumentConnectionEdges {
@@ -112,7 +115,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Pages_statiques | Medicaments_glp1 | Glp1_perte_de_poids | Glp1_cout | Glp1_diabete | Effets_secondaires_glp1 | Medecins_glp1_france | Recherche_glp1 | Regime_glp1 | Alternatives_glp1 | Folder
+union DocumentNode = Pages_statiques | Medicaments_glp1 | Glp1_perte_de_poids | Glp1_cout | Glp1_diabete | Effets_secondaires_glp1 | Medecins_glp1_france | Recherche_glp1 | Regime_glp1 | Alternatives_glp1 | Affiliate_products | Folder
 
 type Pages_statiques implements Node & Document {
   title: String!
@@ -164,6 +167,14 @@ type Pages_statiquesConnection implements Connection {
   edges: [Pages_statiquesConnectionEdges]
 }
 
+union Medicaments_glp1AffiliateProductsProduct = Affiliate_products
+
+type Medicaments_glp1AffiliateProducts {
+  product: Medicaments_glp1AffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Medicaments_glp1ReadingTime {
   minutes: Float
   text: String
@@ -177,11 +188,11 @@ type Medicaments_glp1 implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Medicaments_glp1AffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -210,6 +221,10 @@ input ImageFilter {
   in: [String]
 }
 
+input Medicaments_glp1AffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
 input NumberFilter {
   lt: Float
   lte: Float
@@ -218,6 +233,12 @@ input NumberFilter {
   eq: Float
   exists: Boolean
   in: [Float]
+}
+
+input Medicaments_glp1AffiliateProductsFilter {
+  product: Medicaments_glp1AffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Medicaments_glp1ReadingTimeFilter {
@@ -233,11 +254,11 @@ input Medicaments_glp1Filter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Medicaments_glp1AffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -259,6 +280,14 @@ type Medicaments_glp1Connection implements Connection {
   edges: [Medicaments_glp1ConnectionEdges]
 }
 
+union Glp1_perte_de_poidsAffiliateProductsProduct = Affiliate_products
+
+type Glp1_perte_de_poidsAffiliateProducts {
+  product: Glp1_perte_de_poidsAffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Glp1_perte_de_poidsReadingTime {
   minutes: Float
   text: String
@@ -272,11 +301,11 @@ type Glp1_perte_de_poids implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Glp1_perte_de_poidsAffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -288,6 +317,16 @@ type Glp1_perte_de_poids implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Glp1_perte_de_poidsAffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Glp1_perte_de_poidsAffiliateProductsFilter {
+  product: Glp1_perte_de_poidsAffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Glp1_perte_de_poidsReadingTimeFilter {
@@ -303,11 +342,11 @@ input Glp1_perte_de_poidsFilter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Glp1_perte_de_poidsAffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -329,6 +368,14 @@ type Glp1_perte_de_poidsConnection implements Connection {
   edges: [Glp1_perte_de_poidsConnectionEdges]
 }
 
+union Glp1_coutAffiliateProductsProduct = Affiliate_products
+
+type Glp1_coutAffiliateProducts {
+  product: Glp1_coutAffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Glp1_coutReadingTime {
   minutes: Float
   text: String
@@ -342,11 +389,11 @@ type Glp1_cout implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Glp1_coutAffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -358,6 +405,16 @@ type Glp1_cout implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Glp1_coutAffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Glp1_coutAffiliateProductsFilter {
+  product: Glp1_coutAffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Glp1_coutReadingTimeFilter {
@@ -373,11 +430,11 @@ input Glp1_coutFilter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Glp1_coutAffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -399,6 +456,14 @@ type Glp1_coutConnection implements Connection {
   edges: [Glp1_coutConnectionEdges]
 }
 
+union Glp1_diabeteAffiliateProductsProduct = Affiliate_products
+
+type Glp1_diabeteAffiliateProducts {
+  product: Glp1_diabeteAffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Glp1_diabeteReadingTime {
   minutes: Float
   text: String
@@ -412,11 +477,11 @@ type Glp1_diabete implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Glp1_diabeteAffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -428,6 +493,16 @@ type Glp1_diabete implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Glp1_diabeteAffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Glp1_diabeteAffiliateProductsFilter {
+  product: Glp1_diabeteAffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Glp1_diabeteReadingTimeFilter {
@@ -443,11 +518,11 @@ input Glp1_diabeteFilter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Glp1_diabeteAffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -469,6 +544,14 @@ type Glp1_diabeteConnection implements Connection {
   edges: [Glp1_diabeteConnectionEdges]
 }
 
+union Effets_secondaires_glp1AffiliateProductsProduct = Affiliate_products
+
+type Effets_secondaires_glp1AffiliateProducts {
+  product: Effets_secondaires_glp1AffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Effets_secondaires_glp1ReadingTime {
   minutes: Float
   text: String
@@ -482,11 +565,11 @@ type Effets_secondaires_glp1 implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Effets_secondaires_glp1AffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -498,6 +581,16 @@ type Effets_secondaires_glp1 implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Effets_secondaires_glp1AffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Effets_secondaires_glp1AffiliateProductsFilter {
+  product: Effets_secondaires_glp1AffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Effets_secondaires_glp1ReadingTimeFilter {
@@ -513,11 +606,11 @@ input Effets_secondaires_glp1Filter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Effets_secondaires_glp1AffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -539,6 +632,14 @@ type Effets_secondaires_glp1Connection implements Connection {
   edges: [Effets_secondaires_glp1ConnectionEdges]
 }
 
+union Medecins_glp1_franceAffiliateProductsProduct = Affiliate_products
+
+type Medecins_glp1_franceAffiliateProducts {
+  product: Medecins_glp1_franceAffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Medecins_glp1_franceReadingTime {
   minutes: Float
   text: String
@@ -552,11 +653,11 @@ type Medecins_glp1_france implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Medecins_glp1_franceAffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -568,6 +669,16 @@ type Medecins_glp1_france implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Medecins_glp1_franceAffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Medecins_glp1_franceAffiliateProductsFilter {
+  product: Medecins_glp1_franceAffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Medecins_glp1_franceReadingTimeFilter {
@@ -583,11 +694,11 @@ input Medecins_glp1_franceFilter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Medecins_glp1_franceAffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -609,6 +720,14 @@ type Medecins_glp1_franceConnection implements Connection {
   edges: [Medecins_glp1_franceConnectionEdges]
 }
 
+union Recherche_glp1AffiliateProductsProduct = Affiliate_products
+
+type Recherche_glp1AffiliateProducts {
+  product: Recherche_glp1AffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Recherche_glp1ReadingTime {
   minutes: Float
   text: String
@@ -622,11 +741,11 @@ type Recherche_glp1 implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Recherche_glp1AffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -638,6 +757,16 @@ type Recherche_glp1 implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Recherche_glp1AffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Recherche_glp1AffiliateProductsFilter {
+  product: Recherche_glp1AffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Recherche_glp1ReadingTimeFilter {
@@ -653,11 +782,11 @@ input Recherche_glp1Filter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Recherche_glp1AffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -679,6 +808,14 @@ type Recherche_glp1Connection implements Connection {
   edges: [Recherche_glp1ConnectionEdges]
 }
 
+union Regime_glp1AffiliateProductsProduct = Affiliate_products
+
+type Regime_glp1AffiliateProducts {
+  product: Regime_glp1AffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Regime_glp1ReadingTime {
   minutes: Float
   text: String
@@ -692,11 +829,11 @@ type Regime_glp1 implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Regime_glp1AffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -708,6 +845,16 @@ type Regime_glp1 implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Regime_glp1AffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Regime_glp1AffiliateProductsFilter {
+  product: Regime_glp1AffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Regime_glp1ReadingTimeFilter {
@@ -723,11 +870,11 @@ input Regime_glp1Filter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Regime_glp1AffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -749,6 +896,14 @@ type Regime_glp1Connection implements Connection {
   edges: [Regime_glp1ConnectionEdges]
 }
 
+union Alternatives_glp1AffiliateProductsProduct = Affiliate_products
+
+type Alternatives_glp1AffiliateProducts {
+  product: Alternatives_glp1AffiliateProductsProduct
+  displayOrder: Float
+  customNote: String
+}
+
 type Alternatives_glp1ReadingTime {
   minutes: Float
   text: String
@@ -762,11 +917,11 @@ type Alternatives_glp1 implements Node & Document {
   updatedDate: String
   author: String
   category: String!
-  tags: String
   collection: String!
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Alternatives_glp1AffiliateProducts]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -778,6 +933,16 @@ type Alternatives_glp1 implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input Alternatives_glp1AffiliateProductsProductFilter {
+  affiliate_products: Affiliate_productsFilter
+}
+
+input Alternatives_glp1AffiliateProductsFilter {
+  product: Alternatives_glp1AffiliateProductsProductFilter
+  displayOrder: NumberFilter
+  customNote: StringFilter
 }
 
 input Alternatives_glp1ReadingTimeFilter {
@@ -793,11 +958,11 @@ input Alternatives_glp1Filter {
   updatedDate: DatetimeFilter
   author: StringFilter
   category: StringFilter
-  tags: StringFilter
   collection: StringFilter
   thumbnail: ImageFilter
   thumbnailAlt: StringFilter
   ogImage: ImageFilter
+  affiliateProducts: Alternatives_glp1AffiliateProductsFilter
   featured: BooleanFilter
   priority: NumberFilter
   metaTitle: StringFilter
@@ -817,6 +982,66 @@ type Alternatives_glp1Connection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
   edges: [Alternatives_glp1ConnectionEdges]
+}
+
+type Affiliate_productsTargeting {
+  categories: [String]
+  keywords: [String]
+}
+
+type Affiliate_products implements Node & Document {
+  title: String!
+  productId: String!
+  brand: String!
+  category: String!
+  productImage: String!
+  externalLink: String!
+  discountPercent: Float
+  discountCode: String
+  benefitsText: JSON
+  description: JSON
+  featured: Boolean
+  priority: Float
+  targeting: Affiliate_productsTargeting
+  createdAt: String
+  updatedAt: String
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input Affiliate_productsTargetingFilter {
+  categories: StringFilter
+  keywords: StringFilter
+}
+
+input Affiliate_productsFilter {
+  title: StringFilter
+  productId: StringFilter
+  brand: StringFilter
+  category: StringFilter
+  productImage: ImageFilter
+  externalLink: StringFilter
+  discountPercent: NumberFilter
+  discountCode: StringFilter
+  benefitsText: RichTextFilter
+  description: RichTextFilter
+  featured: BooleanFilter
+  priority: NumberFilter
+  targeting: Affiliate_productsTargetingFilter
+  createdAt: DatetimeFilter
+  updatedAt: DatetimeFilter
+}
+
+type Affiliate_productsConnectionEdges {
+  cursor: String!
+  node: Affiliate_products
+}
+
+type Affiliate_productsConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Affiliate_productsConnectionEdges]
 }
 
 type Mutation {
@@ -845,6 +1070,8 @@ type Mutation {
   createRegime_glp1(relativePath: String!, params: Regime_glp1Mutation!): Regime_glp1!
   updateAlternatives_glp1(relativePath: String!, params: Alternatives_glp1Mutation!): Alternatives_glp1!
   createAlternatives_glp1(relativePath: String!, params: Alternatives_glp1Mutation!): Alternatives_glp1!
+  updateAffiliate_products(relativePath: String!, params: Affiliate_productsMutation!): Affiliate_products!
+  createAffiliate_products(relativePath: String!, params: Affiliate_productsMutation!): Affiliate_products!
 }
 
 input DocumentUpdateMutation {
@@ -858,6 +1085,7 @@ input DocumentUpdateMutation {
   recherche_glp1: Recherche_glp1Mutation
   regime_glp1: Regime_glp1Mutation
   alternatives_glp1: Alternatives_glp1Mutation
+  affiliate_products: Affiliate_productsMutation
   relativePath: String
 }
 
@@ -872,6 +1100,7 @@ input DocumentMutation {
   recherche_glp1: Recherche_glp1Mutation
   regime_glp1: Regime_glp1Mutation
   alternatives_glp1: Alternatives_glp1Mutation
+  affiliate_products: Affiliate_productsMutation
 }
 
 input Pages_statiquesMutation {
@@ -881,6 +1110,12 @@ input Pages_statiquesMutation {
   pageType: String
   noIndex: Boolean
   body: JSON
+}
+
+input Medicaments_glp1AffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Medicaments_glp1ReadingTimeMutation {
@@ -896,11 +1131,11 @@ input Medicaments_glp1Mutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Medicaments_glp1AffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -909,6 +1144,12 @@ input Medicaments_glp1Mutation {
   schema: String
   body: JSON
   readingTime: Medicaments_glp1ReadingTimeMutation
+}
+
+input Glp1_perte_de_poidsAffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Glp1_perte_de_poidsReadingTimeMutation {
@@ -924,11 +1165,11 @@ input Glp1_perte_de_poidsMutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Glp1_perte_de_poidsAffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -937,6 +1178,12 @@ input Glp1_perte_de_poidsMutation {
   schema: String
   body: JSON
   readingTime: Glp1_perte_de_poidsReadingTimeMutation
+}
+
+input Glp1_coutAffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Glp1_coutReadingTimeMutation {
@@ -952,11 +1199,11 @@ input Glp1_coutMutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Glp1_coutAffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -965,6 +1212,12 @@ input Glp1_coutMutation {
   schema: String
   body: JSON
   readingTime: Glp1_coutReadingTimeMutation
+}
+
+input Glp1_diabeteAffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Glp1_diabeteReadingTimeMutation {
@@ -980,11 +1233,11 @@ input Glp1_diabeteMutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Glp1_diabeteAffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -993,6 +1246,12 @@ input Glp1_diabeteMutation {
   schema: String
   body: JSON
   readingTime: Glp1_diabeteReadingTimeMutation
+}
+
+input Effets_secondaires_glp1AffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Effets_secondaires_glp1ReadingTimeMutation {
@@ -1008,11 +1267,11 @@ input Effets_secondaires_glp1Mutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Effets_secondaires_glp1AffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -1021,6 +1280,12 @@ input Effets_secondaires_glp1Mutation {
   schema: String
   body: JSON
   readingTime: Effets_secondaires_glp1ReadingTimeMutation
+}
+
+input Medecins_glp1_franceAffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Medecins_glp1_franceReadingTimeMutation {
@@ -1036,11 +1301,11 @@ input Medecins_glp1_franceMutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Medecins_glp1_franceAffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -1049,6 +1314,12 @@ input Medecins_glp1_franceMutation {
   schema: String
   body: JSON
   readingTime: Medecins_glp1_franceReadingTimeMutation
+}
+
+input Recherche_glp1AffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Recherche_glp1ReadingTimeMutation {
@@ -1064,11 +1335,11 @@ input Recherche_glp1Mutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Recherche_glp1AffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -1077,6 +1348,12 @@ input Recherche_glp1Mutation {
   schema: String
   body: JSON
   readingTime: Recherche_glp1ReadingTimeMutation
+}
+
+input Regime_glp1AffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Regime_glp1ReadingTimeMutation {
@@ -1092,11 +1369,11 @@ input Regime_glp1Mutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Regime_glp1AffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -1105,6 +1382,12 @@ input Regime_glp1Mutation {
   schema: String
   body: JSON
   readingTime: Regime_glp1ReadingTimeMutation
+}
+
+input Alternatives_glp1AffiliateProductsMutation {
+  product: String
+  displayOrder: Float
+  customNote: String
 }
 
 input Alternatives_glp1ReadingTimeMutation {
@@ -1120,11 +1403,11 @@ input Alternatives_glp1Mutation {
   updatedDate: String
   author: String
   category: String
-  tags: String
   collection: String
   thumbnail: String
   thumbnailAlt: String
   ogImage: String
+  affiliateProducts: [Alternatives_glp1AffiliateProductsMutation]
   featured: Boolean
   priority: Float
   metaTitle: String
@@ -1133,6 +1416,29 @@ input Alternatives_glp1Mutation {
   schema: String
   body: JSON
   readingTime: Alternatives_glp1ReadingTimeMutation
+}
+
+input Affiliate_productsTargetingMutation {
+  categories: [String]
+  keywords: [String]
+}
+
+input Affiliate_productsMutation {
+  title: String
+  productId: String
+  brand: String
+  category: String
+  productImage: String
+  externalLink: String
+  discountPercent: Float
+  discountCode: String
+  benefitsText: JSON
+  description: JSON
+  featured: Boolean
+  priority: Float
+  targeting: Affiliate_productsTargetingMutation
+  createdAt: String
+  updatedAt: String
 }
 
 schema {

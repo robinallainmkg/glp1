@@ -102,6 +102,8 @@ export type Query = {
   regime_glp1Connection: Regime_Glp1Connection;
   alternatives_glp1: Alternatives_Glp1;
   alternatives_glp1Connection: Alternatives_Glp1Connection;
+  affiliate_products: Affiliate_Products;
+  affiliate_productsConnection: Affiliate_ProductsConnection;
 };
 
 
@@ -275,6 +277,21 @@ export type QueryAlternatives_Glp1ConnectionArgs = {
   filter?: InputMaybe<Alternatives_Glp1Filter>;
 };
 
+
+export type QueryAffiliate_ProductsArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryAffiliate_ProductsConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
 export type DocumentFilter = {
   pages_statiques?: InputMaybe<Pages_StatiquesFilter>;
   medicaments_glp1?: InputMaybe<Medicaments_Glp1Filter>;
@@ -286,6 +303,7 @@ export type DocumentFilter = {
   recherche_glp1?: InputMaybe<Recherche_Glp1Filter>;
   regime_glp1?: InputMaybe<Regime_Glp1Filter>;
   alternatives_glp1?: InputMaybe<Alternatives_Glp1Filter>;
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -325,7 +343,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Pages_Statiques | Medicaments_Glp1 | Glp1_Perte_De_Poids | Glp1_Cout | Glp1_Diabete | Effets_Secondaires_Glp1 | Medecins_Glp1_France | Recherche_Glp1 | Regime_Glp1 | Alternatives_Glp1 | Folder;
+export type DocumentNode = Pages_Statiques | Medicaments_Glp1 | Glp1_Perte_De_Poids | Glp1_Cout | Glp1_Diabete | Effets_Secondaires_Glp1 | Medecins_Glp1_France | Recherche_Glp1 | Regime_Glp1 | Alternatives_Glp1 | Affiliate_Products | Folder;
 
 export type Pages_Statiques = Node & Document & {
   __typename?: 'Pages_statiques';
@@ -380,6 +398,15 @@ export type Pages_StatiquesConnection = Connection & {
   edges?: Maybe<Array<Maybe<Pages_StatiquesConnectionEdges>>>;
 };
 
+export type Medicaments_Glp1AffiliateProductsProduct = Affiliate_Products;
+
+export type Medicaments_Glp1AffiliateProducts = {
+  __typename?: 'Medicaments_glp1AffiliateProducts';
+  product?: Maybe<Medicaments_Glp1AffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Medicaments_Glp1ReadingTime = {
   __typename?: 'Medicaments_glp1ReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -395,11 +422,11 @@ export type Medicaments_Glp1 = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Medicaments_Glp1AffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -428,6 +455,10 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type Medicaments_Glp1AffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
 export type NumberFilter = {
   lt?: InputMaybe<Scalars['Float']['input']>;
   lte?: InputMaybe<Scalars['Float']['input']>;
@@ -436,6 +467,12 @@ export type NumberFilter = {
   eq?: InputMaybe<Scalars['Float']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
+};
+
+export type Medicaments_Glp1AffiliateProductsFilter = {
+  product?: InputMaybe<Medicaments_Glp1AffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Medicaments_Glp1ReadingTimeFilter = {
@@ -451,11 +488,11 @@ export type Medicaments_Glp1Filter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Medicaments_Glp1AffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -479,6 +516,15 @@ export type Medicaments_Glp1Connection = Connection & {
   edges?: Maybe<Array<Maybe<Medicaments_Glp1ConnectionEdges>>>;
 };
 
+export type Glp1_Perte_De_PoidsAffiliateProductsProduct = Affiliate_Products;
+
+export type Glp1_Perte_De_PoidsAffiliateProducts = {
+  __typename?: 'Glp1_perte_de_poidsAffiliateProducts';
+  product?: Maybe<Glp1_Perte_De_PoidsAffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Glp1_Perte_De_PoidsReadingTime = {
   __typename?: 'Glp1_perte_de_poidsReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -494,11 +540,11 @@ export type Glp1_Perte_De_Poids = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Glp1_Perte_De_PoidsAffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -510,6 +556,16 @@ export type Glp1_Perte_De_Poids = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Glp1_Perte_De_PoidsAffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Glp1_Perte_De_PoidsAffiliateProductsFilter = {
+  product?: InputMaybe<Glp1_Perte_De_PoidsAffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Glp1_Perte_De_PoidsReadingTimeFilter = {
@@ -525,11 +581,11 @@ export type Glp1_Perte_De_PoidsFilter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Glp1_Perte_De_PoidsAffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -553,6 +609,15 @@ export type Glp1_Perte_De_PoidsConnection = Connection & {
   edges?: Maybe<Array<Maybe<Glp1_Perte_De_PoidsConnectionEdges>>>;
 };
 
+export type Glp1_CoutAffiliateProductsProduct = Affiliate_Products;
+
+export type Glp1_CoutAffiliateProducts = {
+  __typename?: 'Glp1_coutAffiliateProducts';
+  product?: Maybe<Glp1_CoutAffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Glp1_CoutReadingTime = {
   __typename?: 'Glp1_coutReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -568,11 +633,11 @@ export type Glp1_Cout = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Glp1_CoutAffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -584,6 +649,16 @@ export type Glp1_Cout = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Glp1_CoutAffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Glp1_CoutAffiliateProductsFilter = {
+  product?: InputMaybe<Glp1_CoutAffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Glp1_CoutReadingTimeFilter = {
@@ -599,11 +674,11 @@ export type Glp1_CoutFilter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Glp1_CoutAffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -627,6 +702,15 @@ export type Glp1_CoutConnection = Connection & {
   edges?: Maybe<Array<Maybe<Glp1_CoutConnectionEdges>>>;
 };
 
+export type Glp1_DiabeteAffiliateProductsProduct = Affiliate_Products;
+
+export type Glp1_DiabeteAffiliateProducts = {
+  __typename?: 'Glp1_diabeteAffiliateProducts';
+  product?: Maybe<Glp1_DiabeteAffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Glp1_DiabeteReadingTime = {
   __typename?: 'Glp1_diabeteReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -642,11 +726,11 @@ export type Glp1_Diabete = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Glp1_DiabeteAffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -658,6 +742,16 @@ export type Glp1_Diabete = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Glp1_DiabeteAffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Glp1_DiabeteAffiliateProductsFilter = {
+  product?: InputMaybe<Glp1_DiabeteAffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Glp1_DiabeteReadingTimeFilter = {
@@ -673,11 +767,11 @@ export type Glp1_DiabeteFilter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Glp1_DiabeteAffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -701,6 +795,15 @@ export type Glp1_DiabeteConnection = Connection & {
   edges?: Maybe<Array<Maybe<Glp1_DiabeteConnectionEdges>>>;
 };
 
+export type Effets_Secondaires_Glp1AffiliateProductsProduct = Affiliate_Products;
+
+export type Effets_Secondaires_Glp1AffiliateProducts = {
+  __typename?: 'Effets_secondaires_glp1AffiliateProducts';
+  product?: Maybe<Effets_Secondaires_Glp1AffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Effets_Secondaires_Glp1ReadingTime = {
   __typename?: 'Effets_secondaires_glp1ReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -716,11 +819,11 @@ export type Effets_Secondaires_Glp1 = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Effets_Secondaires_Glp1AffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -732,6 +835,16 @@ export type Effets_Secondaires_Glp1 = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Effets_Secondaires_Glp1AffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Effets_Secondaires_Glp1AffiliateProductsFilter = {
+  product?: InputMaybe<Effets_Secondaires_Glp1AffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Effets_Secondaires_Glp1ReadingTimeFilter = {
@@ -747,11 +860,11 @@ export type Effets_Secondaires_Glp1Filter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Effets_Secondaires_Glp1AffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -775,6 +888,15 @@ export type Effets_Secondaires_Glp1Connection = Connection & {
   edges?: Maybe<Array<Maybe<Effets_Secondaires_Glp1ConnectionEdges>>>;
 };
 
+export type Medecins_Glp1_FranceAffiliateProductsProduct = Affiliate_Products;
+
+export type Medecins_Glp1_FranceAffiliateProducts = {
+  __typename?: 'Medecins_glp1_franceAffiliateProducts';
+  product?: Maybe<Medecins_Glp1_FranceAffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Medecins_Glp1_FranceReadingTime = {
   __typename?: 'Medecins_glp1_franceReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -790,11 +912,11 @@ export type Medecins_Glp1_France = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Medecins_Glp1_FranceAffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -806,6 +928,16 @@ export type Medecins_Glp1_France = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Medecins_Glp1_FranceAffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Medecins_Glp1_FranceAffiliateProductsFilter = {
+  product?: InputMaybe<Medecins_Glp1_FranceAffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Medecins_Glp1_FranceReadingTimeFilter = {
@@ -821,11 +953,11 @@ export type Medecins_Glp1_FranceFilter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Medecins_Glp1_FranceAffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -849,6 +981,15 @@ export type Medecins_Glp1_FranceConnection = Connection & {
   edges?: Maybe<Array<Maybe<Medecins_Glp1_FranceConnectionEdges>>>;
 };
 
+export type Recherche_Glp1AffiliateProductsProduct = Affiliate_Products;
+
+export type Recherche_Glp1AffiliateProducts = {
+  __typename?: 'Recherche_glp1AffiliateProducts';
+  product?: Maybe<Recherche_Glp1AffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Recherche_Glp1ReadingTime = {
   __typename?: 'Recherche_glp1ReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -864,11 +1005,11 @@ export type Recherche_Glp1 = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Recherche_Glp1AffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -880,6 +1021,16 @@ export type Recherche_Glp1 = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Recherche_Glp1AffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Recherche_Glp1AffiliateProductsFilter = {
+  product?: InputMaybe<Recherche_Glp1AffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Recherche_Glp1ReadingTimeFilter = {
@@ -895,11 +1046,11 @@ export type Recherche_Glp1Filter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Recherche_Glp1AffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -923,6 +1074,15 @@ export type Recherche_Glp1Connection = Connection & {
   edges?: Maybe<Array<Maybe<Recherche_Glp1ConnectionEdges>>>;
 };
 
+export type Regime_Glp1AffiliateProductsProduct = Affiliate_Products;
+
+export type Regime_Glp1AffiliateProducts = {
+  __typename?: 'Regime_glp1AffiliateProducts';
+  product?: Maybe<Regime_Glp1AffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Regime_Glp1ReadingTime = {
   __typename?: 'Regime_glp1ReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -938,11 +1098,11 @@ export type Regime_Glp1 = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Regime_Glp1AffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -954,6 +1114,16 @@ export type Regime_Glp1 = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Regime_Glp1AffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Regime_Glp1AffiliateProductsFilter = {
+  product?: InputMaybe<Regime_Glp1AffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Regime_Glp1ReadingTimeFilter = {
@@ -969,11 +1139,11 @@ export type Regime_Glp1Filter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Regime_Glp1AffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -997,6 +1167,15 @@ export type Regime_Glp1Connection = Connection & {
   edges?: Maybe<Array<Maybe<Regime_Glp1ConnectionEdges>>>;
 };
 
+export type Alternatives_Glp1AffiliateProductsProduct = Affiliate_Products;
+
+export type Alternatives_Glp1AffiliateProducts = {
+  __typename?: 'Alternatives_glp1AffiliateProducts';
+  product?: Maybe<Alternatives_Glp1AffiliateProductsProduct>;
+  displayOrder?: Maybe<Scalars['Float']['output']>;
+  customNote?: Maybe<Scalars['String']['output']>;
+};
+
 export type Alternatives_Glp1ReadingTime = {
   __typename?: 'Alternatives_glp1ReadingTime';
   minutes?: Maybe<Scalars['Float']['output']>;
@@ -1012,11 +1191,11 @@ export type Alternatives_Glp1 = Node & Document & {
   updatedDate?: Maybe<Scalars['String']['output']>;
   author?: Maybe<Scalars['String']['output']>;
   category: Scalars['String']['output'];
-  tags?: Maybe<Scalars['String']['output']>;
   collection: Scalars['String']['output'];
   thumbnail?: Maybe<Scalars['String']['output']>;
   thumbnailAlt?: Maybe<Scalars['String']['output']>;
   ogImage?: Maybe<Scalars['String']['output']>;
+  affiliateProducts?: Maybe<Array<Maybe<Alternatives_Glp1AffiliateProducts>>>;
   featured?: Maybe<Scalars['Boolean']['output']>;
   priority?: Maybe<Scalars['Float']['output']>;
   metaTitle?: Maybe<Scalars['String']['output']>;
@@ -1028,6 +1207,16 @@ export type Alternatives_Glp1 = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type Alternatives_Glp1AffiliateProductsProductFilter = {
+  affiliate_products?: InputMaybe<Affiliate_ProductsFilter>;
+};
+
+export type Alternatives_Glp1AffiliateProductsFilter = {
+  product?: InputMaybe<Alternatives_Glp1AffiliateProductsProductFilter>;
+  displayOrder?: InputMaybe<NumberFilter>;
+  customNote?: InputMaybe<StringFilter>;
 };
 
 export type Alternatives_Glp1ReadingTimeFilter = {
@@ -1043,11 +1232,11 @@ export type Alternatives_Glp1Filter = {
   updatedDate?: InputMaybe<DatetimeFilter>;
   author?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
-  tags?: InputMaybe<StringFilter>;
   collection?: InputMaybe<StringFilter>;
   thumbnail?: InputMaybe<ImageFilter>;
   thumbnailAlt?: InputMaybe<StringFilter>;
   ogImage?: InputMaybe<ImageFilter>;
+  affiliateProducts?: InputMaybe<Alternatives_Glp1AffiliateProductsFilter>;
   featured?: InputMaybe<BooleanFilter>;
   priority?: InputMaybe<NumberFilter>;
   metaTitle?: InputMaybe<StringFilter>;
@@ -1069,6 +1258,70 @@ export type Alternatives_Glp1Connection = Connection & {
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
   edges?: Maybe<Array<Maybe<Alternatives_Glp1ConnectionEdges>>>;
+};
+
+export type Affiliate_ProductsTargeting = {
+  __typename?: 'Affiliate_productsTargeting';
+  categories?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  keywords?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type Affiliate_Products = Node & Document & {
+  __typename?: 'Affiliate_products';
+  title: Scalars['String']['output'];
+  productId: Scalars['String']['output'];
+  brand: Scalars['String']['output'];
+  category: Scalars['String']['output'];
+  productImage: Scalars['String']['output'];
+  externalLink: Scalars['String']['output'];
+  discountPercent?: Maybe<Scalars['Float']['output']>;
+  discountCode?: Maybe<Scalars['String']['output']>;
+  benefitsText?: Maybe<Scalars['JSON']['output']>;
+  description?: Maybe<Scalars['JSON']['output']>;
+  featured?: Maybe<Scalars['Boolean']['output']>;
+  priority?: Maybe<Scalars['Float']['output']>;
+  targeting?: Maybe<Affiliate_ProductsTargeting>;
+  createdAt?: Maybe<Scalars['String']['output']>;
+  updatedAt?: Maybe<Scalars['String']['output']>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type Affiliate_ProductsTargetingFilter = {
+  categories?: InputMaybe<StringFilter>;
+  keywords?: InputMaybe<StringFilter>;
+};
+
+export type Affiliate_ProductsFilter = {
+  title?: InputMaybe<StringFilter>;
+  productId?: InputMaybe<StringFilter>;
+  brand?: InputMaybe<StringFilter>;
+  category?: InputMaybe<StringFilter>;
+  productImage?: InputMaybe<ImageFilter>;
+  externalLink?: InputMaybe<StringFilter>;
+  discountPercent?: InputMaybe<NumberFilter>;
+  discountCode?: InputMaybe<StringFilter>;
+  benefitsText?: InputMaybe<RichTextFilter>;
+  description?: InputMaybe<RichTextFilter>;
+  featured?: InputMaybe<BooleanFilter>;
+  priority?: InputMaybe<NumberFilter>;
+  targeting?: InputMaybe<Affiliate_ProductsTargetingFilter>;
+  createdAt?: InputMaybe<DatetimeFilter>;
+  updatedAt?: InputMaybe<DatetimeFilter>;
+};
+
+export type Affiliate_ProductsConnectionEdges = {
+  __typename?: 'Affiliate_productsConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Affiliate_Products>;
+};
+
+export type Affiliate_ProductsConnection = Connection & {
+  __typename?: 'Affiliate_productsConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<Affiliate_ProductsConnectionEdges>>>;
 };
 
 export type Mutation = {
@@ -1098,6 +1351,8 @@ export type Mutation = {
   createRegime_glp1: Regime_Glp1;
   updateAlternatives_glp1: Alternatives_Glp1;
   createAlternatives_glp1: Alternatives_Glp1;
+  updateAffiliate_products: Affiliate_Products;
+  createAffiliate_products: Affiliate_Products;
 };
 
 
@@ -1253,6 +1508,18 @@ export type MutationCreateAlternatives_Glp1Args = {
   params: Alternatives_Glp1Mutation;
 };
 
+
+export type MutationUpdateAffiliate_ProductsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: Affiliate_ProductsMutation;
+};
+
+
+export type MutationCreateAffiliate_ProductsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: Affiliate_ProductsMutation;
+};
+
 export type DocumentUpdateMutation = {
   pages_statiques?: InputMaybe<Pages_StatiquesMutation>;
   medicaments_glp1?: InputMaybe<Medicaments_Glp1Mutation>;
@@ -1264,6 +1531,7 @@ export type DocumentUpdateMutation = {
   recherche_glp1?: InputMaybe<Recherche_Glp1Mutation>;
   regime_glp1?: InputMaybe<Regime_Glp1Mutation>;
   alternatives_glp1?: InputMaybe<Alternatives_Glp1Mutation>;
+  affiliate_products?: InputMaybe<Affiliate_ProductsMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1278,6 +1546,7 @@ export type DocumentMutation = {
   recherche_glp1?: InputMaybe<Recherche_Glp1Mutation>;
   regime_glp1?: InputMaybe<Regime_Glp1Mutation>;
   alternatives_glp1?: InputMaybe<Alternatives_Glp1Mutation>;
+  affiliate_products?: InputMaybe<Affiliate_ProductsMutation>;
 };
 
 export type Pages_StatiquesMutation = {
@@ -1287,6 +1556,12 @@ export type Pages_StatiquesMutation = {
   pageType?: InputMaybe<Scalars['String']['input']>;
   noIndex?: InputMaybe<Scalars['Boolean']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
+};
+
+export type Medicaments_Glp1AffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Medicaments_Glp1ReadingTimeMutation = {
@@ -1302,11 +1577,11 @@ export type Medicaments_Glp1Mutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Medicaments_Glp1AffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1315,6 +1590,12 @@ export type Medicaments_Glp1Mutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Medicaments_Glp1ReadingTimeMutation>;
+};
+
+export type Glp1_Perte_De_PoidsAffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Glp1_Perte_De_PoidsReadingTimeMutation = {
@@ -1330,11 +1611,11 @@ export type Glp1_Perte_De_PoidsMutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Glp1_Perte_De_PoidsAffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1343,6 +1624,12 @@ export type Glp1_Perte_De_PoidsMutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Glp1_Perte_De_PoidsReadingTimeMutation>;
+};
+
+export type Glp1_CoutAffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Glp1_CoutReadingTimeMutation = {
@@ -1358,11 +1645,11 @@ export type Glp1_CoutMutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Glp1_CoutAffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1371,6 +1658,12 @@ export type Glp1_CoutMutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Glp1_CoutReadingTimeMutation>;
+};
+
+export type Glp1_DiabeteAffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Glp1_DiabeteReadingTimeMutation = {
@@ -1386,11 +1679,11 @@ export type Glp1_DiabeteMutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Glp1_DiabeteAffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1399,6 +1692,12 @@ export type Glp1_DiabeteMutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Glp1_DiabeteReadingTimeMutation>;
+};
+
+export type Effets_Secondaires_Glp1AffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Effets_Secondaires_Glp1ReadingTimeMutation = {
@@ -1414,11 +1713,11 @@ export type Effets_Secondaires_Glp1Mutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Effets_Secondaires_Glp1AffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1427,6 +1726,12 @@ export type Effets_Secondaires_Glp1Mutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Effets_Secondaires_Glp1ReadingTimeMutation>;
+};
+
+export type Medecins_Glp1_FranceAffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Medecins_Glp1_FranceReadingTimeMutation = {
@@ -1442,11 +1747,11 @@ export type Medecins_Glp1_FranceMutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Medecins_Glp1_FranceAffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1455,6 +1760,12 @@ export type Medecins_Glp1_FranceMutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Medecins_Glp1_FranceReadingTimeMutation>;
+};
+
+export type Recherche_Glp1AffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Recherche_Glp1ReadingTimeMutation = {
@@ -1470,11 +1781,11 @@ export type Recherche_Glp1Mutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Recherche_Glp1AffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1483,6 +1794,12 @@ export type Recherche_Glp1Mutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Recherche_Glp1ReadingTimeMutation>;
+};
+
+export type Regime_Glp1AffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Regime_Glp1ReadingTimeMutation = {
@@ -1498,11 +1815,11 @@ export type Regime_Glp1Mutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Regime_Glp1AffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1511,6 +1828,12 @@ export type Regime_Glp1Mutation = {
   schema?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['JSON']['input']>;
   readingTime?: InputMaybe<Regime_Glp1ReadingTimeMutation>;
+};
+
+export type Alternatives_Glp1AffiliateProductsMutation = {
+  product?: InputMaybe<Scalars['String']['input']>;
+  displayOrder?: InputMaybe<Scalars['Float']['input']>;
+  customNote?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Alternatives_Glp1ReadingTimeMutation = {
@@ -1526,11 +1849,11 @@ export type Alternatives_Glp1Mutation = {
   updatedDate?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
-  tags?: InputMaybe<Scalars['String']['input']>;
   collection?: InputMaybe<Scalars['String']['input']>;
   thumbnail?: InputMaybe<Scalars['String']['input']>;
   thumbnailAlt?: InputMaybe<Scalars['String']['input']>;
   ogImage?: InputMaybe<Scalars['String']['input']>;
+  affiliateProducts?: InputMaybe<Array<InputMaybe<Alternatives_Glp1AffiliateProductsMutation>>>;
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   priority?: InputMaybe<Scalars['Float']['input']>;
   metaTitle?: InputMaybe<Scalars['String']['input']>;
@@ -1541,25 +1864,50 @@ export type Alternatives_Glp1Mutation = {
   readingTime?: InputMaybe<Alternatives_Glp1ReadingTimeMutation>;
 };
 
+export type Affiliate_ProductsTargetingMutation = {
+  categories?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  keywords?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type Affiliate_ProductsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  productId?: InputMaybe<Scalars['String']['input']>;
+  brand?: InputMaybe<Scalars['String']['input']>;
+  category?: InputMaybe<Scalars['String']['input']>;
+  productImage?: InputMaybe<Scalars['String']['input']>;
+  externalLink?: InputMaybe<Scalars['String']['input']>;
+  discountPercent?: InputMaybe<Scalars['Float']['input']>;
+  discountCode?: InputMaybe<Scalars['String']['input']>;
+  benefitsText?: InputMaybe<Scalars['JSON']['input']>;
+  description?: InputMaybe<Scalars['JSON']['input']>;
+  featured?: InputMaybe<Scalars['Boolean']['input']>;
+  priority?: InputMaybe<Scalars['Float']['input']>;
+  targeting?: InputMaybe<Affiliate_ProductsTargetingMutation>;
+  createdAt?: InputMaybe<Scalars['String']['input']>;
+  updatedAt?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type Pages_StatiquesPartsFragment = { __typename: 'Pages_statiques', title: string, description: string, slug: string, pageType?: string | null, noIndex?: boolean | null, body?: any | null };
 
-export type Medicaments_Glp1PartsFragment = { __typename: 'Medicaments_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Medicaments_Glp1PartsFragment = { __typename: 'Medicaments_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Medicaments_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Glp1_Perte_De_PoidsPartsFragment = { __typename: 'Glp1_perte_de_poids', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Glp1_Perte_De_PoidsPartsFragment = { __typename: 'Glp1_perte_de_poids', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Glp1_perte_de_poidsAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Glp1_CoutPartsFragment = { __typename: 'Glp1_cout', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Glp1_coutReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Glp1_CoutPartsFragment = { __typename: 'Glp1_cout', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Glp1_coutAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_coutReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Glp1_DiabetePartsFragment = { __typename: 'Glp1_diabete', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Glp1_diabeteReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Glp1_DiabetePartsFragment = { __typename: 'Glp1_diabete', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Glp1_diabeteAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_diabeteReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Effets_Secondaires_Glp1PartsFragment = { __typename: 'Effets_secondaires_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Effets_secondaires_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Effets_Secondaires_Glp1PartsFragment = { __typename: 'Effets_secondaires_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Effets_secondaires_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Effets_secondaires_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Medecins_Glp1_FrancePartsFragment = { __typename: 'Medecins_glp1_france', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Medecins_glp1_franceReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Medecins_Glp1_FrancePartsFragment = { __typename: 'Medecins_glp1_france', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Medecins_glp1_franceAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Medecins_glp1_franceReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Recherche_Glp1PartsFragment = { __typename: 'Recherche_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Recherche_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Recherche_Glp1PartsFragment = { __typename: 'Recherche_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Recherche_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Recherche_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Regime_Glp1PartsFragment = { __typename: 'Regime_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Regime_Glp1PartsFragment = { __typename: 'Regime_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Regime_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
 
-export type Alternatives_Glp1PartsFragment = { __typename: 'Alternatives_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+export type Alternatives_Glp1PartsFragment = { __typename: 'Alternatives_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, affiliateProducts?: Array<{ __typename: 'Alternatives_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+
+export type Affiliate_ProductsPartsFragment = { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null };
 
 export type Pages_StatiquesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1585,7 +1933,7 @@ export type Medicaments_Glp1QueryVariables = Exact<{
 }>;
 
 
-export type Medicaments_Glp1Query = { __typename?: 'Query', medicaments_glp1: { __typename: 'Medicaments_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Medicaments_Glp1Query = { __typename?: 'Query', medicaments_glp1: { __typename: 'Medicaments_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Medicaments_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Medicaments_Glp1ConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1597,14 +1945,14 @@ export type Medicaments_Glp1ConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Medicaments_Glp1ConnectionQuery = { __typename?: 'Query', medicaments_glp1Connection: { __typename?: 'Medicaments_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Medicaments_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Medicaments_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Medicaments_Glp1ConnectionQuery = { __typename?: 'Query', medicaments_glp1Connection: { __typename?: 'Medicaments_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Medicaments_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Medicaments_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Medicaments_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Glp1_Perte_De_PoidsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Glp1_Perte_De_PoidsQuery = { __typename?: 'Query', glp1_perte_de_poids: { __typename: 'Glp1_perte_de_poids', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Glp1_Perte_De_PoidsQuery = { __typename?: 'Query', glp1_perte_de_poids: { __typename: 'Glp1_perte_de_poids', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Glp1_perte_de_poidsAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Glp1_Perte_De_PoidsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1616,14 +1964,14 @@ export type Glp1_Perte_De_PoidsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Glp1_Perte_De_PoidsConnectionQuery = { __typename?: 'Query', glp1_perte_de_poidsConnection: { __typename?: 'Glp1_perte_de_poidsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Glp1_perte_de_poidsConnectionEdges', cursor: string, node?: { __typename: 'Glp1_perte_de_poids', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Glp1_Perte_De_PoidsConnectionQuery = { __typename?: 'Query', glp1_perte_de_poidsConnection: { __typename?: 'Glp1_perte_de_poidsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Glp1_perte_de_poidsConnectionEdges', cursor: string, node?: { __typename: 'Glp1_perte_de_poids', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Glp1_perte_de_poidsAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Glp1_CoutQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Glp1_CoutQuery = { __typename?: 'Query', glp1_cout: { __typename: 'Glp1_cout', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Glp1_coutReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Glp1_CoutQuery = { __typename?: 'Query', glp1_cout: { __typename: 'Glp1_cout', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Glp1_coutAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_coutReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Glp1_CoutConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1635,14 +1983,14 @@ export type Glp1_CoutConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Glp1_CoutConnectionQuery = { __typename?: 'Query', glp1_coutConnection: { __typename?: 'Glp1_coutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Glp1_coutConnectionEdges', cursor: string, node?: { __typename: 'Glp1_cout', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Glp1_coutReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Glp1_CoutConnectionQuery = { __typename?: 'Query', glp1_coutConnection: { __typename?: 'Glp1_coutConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Glp1_coutConnectionEdges', cursor: string, node?: { __typename: 'Glp1_cout', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Glp1_coutAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_coutReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Glp1_DiabeteQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Glp1_DiabeteQuery = { __typename?: 'Query', glp1_diabete: { __typename: 'Glp1_diabete', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Glp1_diabeteReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Glp1_DiabeteQuery = { __typename?: 'Query', glp1_diabete: { __typename: 'Glp1_diabete', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Glp1_diabeteAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_diabeteReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Glp1_DiabeteConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1654,14 +2002,14 @@ export type Glp1_DiabeteConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Glp1_DiabeteConnectionQuery = { __typename?: 'Query', glp1_diabeteConnection: { __typename?: 'Glp1_diabeteConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Glp1_diabeteConnectionEdges', cursor: string, node?: { __typename: 'Glp1_diabete', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Glp1_diabeteReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Glp1_DiabeteConnectionQuery = { __typename?: 'Query', glp1_diabeteConnection: { __typename?: 'Glp1_diabeteConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Glp1_diabeteConnectionEdges', cursor: string, node?: { __typename: 'Glp1_diabete', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Glp1_diabeteAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Glp1_diabeteReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Effets_Secondaires_Glp1QueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Effets_Secondaires_Glp1Query = { __typename?: 'Query', effets_secondaires_glp1: { __typename: 'Effets_secondaires_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Effets_secondaires_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Effets_Secondaires_Glp1Query = { __typename?: 'Query', effets_secondaires_glp1: { __typename: 'Effets_secondaires_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Effets_secondaires_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Effets_secondaires_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Effets_Secondaires_Glp1ConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1673,14 +2021,14 @@ export type Effets_Secondaires_Glp1ConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Effets_Secondaires_Glp1ConnectionQuery = { __typename?: 'Query', effets_secondaires_glp1Connection: { __typename?: 'Effets_secondaires_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Effets_secondaires_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Effets_secondaires_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Effets_secondaires_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Effets_Secondaires_Glp1ConnectionQuery = { __typename?: 'Query', effets_secondaires_glp1Connection: { __typename?: 'Effets_secondaires_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Effets_secondaires_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Effets_secondaires_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Effets_secondaires_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Effets_secondaires_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Medecins_Glp1_FranceQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Medecins_Glp1_FranceQuery = { __typename?: 'Query', medecins_glp1_france: { __typename: 'Medecins_glp1_france', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Medecins_glp1_franceReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Medecins_Glp1_FranceQuery = { __typename?: 'Query', medecins_glp1_france: { __typename: 'Medecins_glp1_france', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Medecins_glp1_franceAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Medecins_glp1_franceReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Medecins_Glp1_FranceConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1692,14 +2040,14 @@ export type Medecins_Glp1_FranceConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Medecins_Glp1_FranceConnectionQuery = { __typename?: 'Query', medecins_glp1_franceConnection: { __typename?: 'Medecins_glp1_franceConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Medecins_glp1_franceConnectionEdges', cursor: string, node?: { __typename: 'Medecins_glp1_france', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Medecins_glp1_franceReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Medecins_Glp1_FranceConnectionQuery = { __typename?: 'Query', medecins_glp1_franceConnection: { __typename?: 'Medecins_glp1_franceConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Medecins_glp1_franceConnectionEdges', cursor: string, node?: { __typename: 'Medecins_glp1_france', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Medecins_glp1_franceAffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Medecins_glp1_franceReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Recherche_Glp1QueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Recherche_Glp1Query = { __typename?: 'Query', recherche_glp1: { __typename: 'Recherche_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Recherche_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Recherche_Glp1Query = { __typename?: 'Query', recherche_glp1: { __typename: 'Recherche_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Recherche_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Recherche_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Recherche_Glp1ConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1711,14 +2059,14 @@ export type Recherche_Glp1ConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Recherche_Glp1ConnectionQuery = { __typename?: 'Query', recherche_glp1Connection: { __typename?: 'Recherche_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Recherche_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Recherche_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Recherche_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Recherche_Glp1ConnectionQuery = { __typename?: 'Query', recherche_glp1Connection: { __typename?: 'Recherche_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Recherche_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Recherche_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Recherche_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Recherche_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Regime_Glp1QueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Regime_Glp1Query = { __typename?: 'Query', regime_glp1: { __typename: 'Regime_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Regime_Glp1Query = { __typename?: 'Query', regime_glp1: { __typename: 'Regime_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Regime_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Regime_Glp1ConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1730,14 +2078,14 @@ export type Regime_Glp1ConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Regime_Glp1ConnectionQuery = { __typename?: 'Query', regime_glp1Connection: { __typename?: 'Regime_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Regime_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Regime_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Regime_Glp1ConnectionQuery = { __typename?: 'Query', regime_glp1Connection: { __typename?: 'Regime_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Regime_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Regime_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Regime_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
 export type Alternatives_Glp1QueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type Alternatives_Glp1Query = { __typename?: 'Query', alternatives_glp1: { __typename: 'Alternatives_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
+export type Alternatives_Glp1Query = { __typename?: 'Query', alternatives_glp1: { __typename: 'Alternatives_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Alternatives_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } };
 
 export type Alternatives_Glp1ConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1749,7 +2097,26 @@ export type Alternatives_Glp1ConnectionQueryVariables = Exact<{
 }>;
 
 
-export type Alternatives_Glp1ConnectionQuery = { __typename?: 'Query', alternatives_glp1Connection: { __typename?: 'Alternatives_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Alternatives_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Alternatives_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+export type Alternatives_Glp1ConnectionQuery = { __typename?: 'Query', alternatives_glp1Connection: { __typename?: 'Alternatives_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Alternatives_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Alternatives_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, affiliateProducts?: Array<{ __typename: 'Alternatives_glp1AffiliateProducts', displayOrder?: number | null, customNote?: string | null, product?: { __typename: 'Affiliate_products', title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, id: string, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
+
+export type Affiliate_ProductsQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type Affiliate_ProductsQuery = { __typename?: 'Query', affiliate_products: { __typename: 'Affiliate_products', id: string, title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null } };
+
+export type Affiliate_ProductsConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<Affiliate_ProductsFilter>;
+}>;
+
+
+export type Affiliate_ProductsConnectionQuery = { __typename?: 'Query', affiliate_productsConnection: { __typename?: 'Affiliate_productsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Affiliate_productsConnectionEdges', cursor: string, node?: { __typename: 'Affiliate_products', id: string, title: string, productId: string, brand: string, category: string, productImage: string, externalLink: string, discountPercent?: number | null, discountCode?: string | null, benefitsText?: any | null, description?: any | null, featured?: boolean | null, priority?: number | null, createdAt?: string | null, updatedAt?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, targeting?: { __typename: 'Affiliate_productsTargeting', categories?: Array<string | null> | null, keywords?: Array<string | null> | null } | null } | null } | null> | null } };
 
 export const Pages_StatiquesPartsFragmentDoc = gql`
     fragment Pages_statiquesParts on Pages_statiques {
@@ -1772,11 +2139,51 @@ export const Medicaments_Glp1PartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1801,11 +2208,51 @@ export const Glp1_Perte_De_PoidsPartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1830,11 +2277,51 @@ export const Glp1_CoutPartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1859,11 +2346,51 @@ export const Glp1_DiabetePartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1888,11 +2415,51 @@ export const Effets_Secondaires_Glp1PartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1917,11 +2484,51 @@ export const Medecins_Glp1_FrancePartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1946,11 +2553,51 @@ export const Recherche_Glp1PartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -1975,11 +2622,51 @@ export const Regime_Glp1PartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -2004,11 +2691,51 @@ export const Alternatives_Glp1PartsFragmentDoc = gql`
   updatedDate
   author
   category
-  tags
   collection
   thumbnail
   thumbnailAlt
   ogImage
+  affiliateProducts {
+    __typename
+    product {
+      ... on Affiliate_products {
+        __typename
+        title
+        productId
+        brand
+        category
+        productImage
+        externalLink
+        discountPercent
+        discountCode
+        benefitsText
+        description
+        featured
+        priority
+        targeting {
+          __typename
+          categories
+          keywords
+        }
+        createdAt
+        updatedAt
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+    displayOrder
+    customNote
+  }
   featured
   priority
   metaTitle
@@ -2021,6 +2748,30 @@ export const Alternatives_Glp1PartsFragmentDoc = gql`
     minutes
     text
   }
+}
+    `;
+export const Affiliate_ProductsPartsFragmentDoc = gql`
+    fragment Affiliate_productsParts on Affiliate_products {
+  __typename
+  title
+  productId
+  brand
+  category
+  productImage
+  externalLink
+  discountPercent
+  discountCode
+  benefitsText
+  description
+  featured
+  priority
+  targeting {
+    __typename
+    categories
+    keywords
+  }
+  createdAt
+  updatedAt
 }
     `;
 export const Pages_StatiquesDocument = gql`
@@ -2593,6 +3344,63 @@ export const Alternatives_Glp1ConnectionDocument = gql`
   }
 }
     ${Alternatives_Glp1PartsFragmentDoc}`;
+export const Affiliate_ProductsDocument = gql`
+    query affiliate_products($relativePath: String!) {
+  affiliate_products(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Affiliate_productsParts
+  }
+}
+    ${Affiliate_ProductsPartsFragmentDoc}`;
+export const Affiliate_ProductsConnectionDocument = gql`
+    query affiliate_productsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Affiliate_productsFilter) {
+  affiliate_productsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Affiliate_productsParts
+      }
+    }
+  }
+}
+    ${Affiliate_ProductsPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -2655,6 +3463,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     alternatives_glp1Connection(variables?: Alternatives_Glp1ConnectionQueryVariables, options?: C): Promise<{data: Alternatives_Glp1ConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Alternatives_Glp1ConnectionQueryVariables, query: string}> {
         return requester<{data: Alternatives_Glp1ConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Alternatives_Glp1ConnectionQueryVariables, query: string}, Alternatives_Glp1ConnectionQueryVariables>(Alternatives_Glp1ConnectionDocument, variables, options);
+      },
+    affiliate_products(variables: Affiliate_ProductsQueryVariables, options?: C): Promise<{data: Affiliate_ProductsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Affiliate_ProductsQueryVariables, query: string}> {
+        return requester<{data: Affiliate_ProductsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Affiliate_ProductsQueryVariables, query: string}, Affiliate_ProductsQueryVariables>(Affiliate_ProductsDocument, variables, options);
+      },
+    affiliate_productsConnection(variables?: Affiliate_ProductsConnectionQueryVariables, options?: C): Promise<{data: Affiliate_ProductsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Affiliate_ProductsConnectionQueryVariables, query: string}> {
+        return requester<{data: Affiliate_ProductsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Affiliate_ProductsConnectionQueryVariables, query: string}, Affiliate_ProductsConnectionQueryVariables>(Affiliate_ProductsConnectionDocument, variables, options);
       }
     };
   }
@@ -2703,7 +3517,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/1.6/content/d2c40213-494b-4005-94ad-b601dbdf1f0e/github/production",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

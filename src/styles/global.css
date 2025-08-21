@@ -96,6 +96,19 @@ body {
   min-width: 320px; /* Largeur minimale pour très petits écrans */
 }
 
+/* Fix pour visibilité du texte */
+p, h1, h2, h3, h4, h5, h6, div, span, a {
+  color: inherit !important;
+}
+
+h1 {
+  color: var(--gray-800) !important;
+}
+
+h2, h3 {
+  color: var(--gray-700) !important;
+}
+
 /* Container */
 .container {
   max-width: 1200px;

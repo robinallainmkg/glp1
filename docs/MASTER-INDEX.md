@@ -48,6 +48,12 @@
 ## 🚀 Features - Fonctionnalités Métier
 
 ### [💰 Système d'Affiliation](features/affiliation.md)
+**Gestion produits partenaires**
+- Configuration TinaCMS pour produits d'affiliation ✅
+- Interface d'administration des produits ✅
+- Système de sidebar responsive ✅
+- **EN COURS** : Intégration dynamique TinaCMS → Affichage
+- **RAPPORT DÉTAILLÉ** : [RAPPORT_AFFILIATION_SIDEBAR.md](RAPPORT_AFFILIATION_SIDEBAR.md)
 **Monétisation et produits partenaires**
 - Gestion produits affiliés Amazon
 - Composants d'affichage intelligents

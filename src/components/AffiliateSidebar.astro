@@ -1,0 +1,404 @@
+---
+export interface AffiliateProduct {
+  productName: string;
+  brand: string;
+  productImage: string;
+  discountPercent?: number;
+  externalLink: string;
+  category: string;
+  targetAudience: string;
+  priority?: number;
+  featured?: boolean;
+  benefitsText: any; // Rich text content
+}
+
+export interface Props {
+  products?: AffiliateProduct[];
+  authorName?: string;
+  relatedArticles?: any[];
+  className?: string;
+}
+
+const { products = [], authorName, relatedArticles = [], className = '' } = Astro.props;
+---
+
+<aside class={`sidebar-affiliate ${className}`}>
+  <!-- Section Produits Recommandés -->
+  {products.length > 0 && (
+    <div class="affiliate-section">
+      <h3 class="sidebar-title">
+        Produits adaptés
+      </h3>
+      
+      <div class="products-list">
+        {products
+          .sort((a, b) => (a.priority || 999) - (b.priority || 999))
+          .map((product) => (
+            <div class="product-card" data-featured={product.featured}>
+              {product.discountPercent && (
+                <div class="discount-badge">
+                  -{product.discountPercent}%
+                </div>
+              )}
+              
+              <div class="product-image">
+                <img 
+                  src={product.productImage} 
+                  alt={`${product.productName} - ${product.brand}`}
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+              </div>
+              
+              <div class="product-info">
+                <h4 class="product-name">{product.productName}</h4>
+                <p class="product-brand">Par {product.brand}</p>
+                
+                <div class="product-benefits" set:html={product.benefitsText} />
+                
+                <a 
+                  href={product.externalLink}
+                  class="product-cta"
+                  target="_blank"
+                  rel="noopener sponsored"
+                  aria-label={`Voir la fiche produit ${product.productName}`}
+                >
+                  Voir la fiche produit →
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  )}
+
+  <!-- Section Articles Liés -->
+  {relatedArticles.length > 0 && (
+    <div class="related-articles">
+      <h3 class="sidebar-title">Articles Connexes</h3>
+      
+      <ul class="articles-list">
+        {relatedArticles.slice(0, 5).map((article) => (
+          <li class="article-item">
+            <a href={`/${article.collection}/${article.slug}`} class="article-link">
+              <span class="article-title">{article.title}</span>
+              {article.author && (
+                <span class="article-author">Par {article.author}</span>
+              )}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</aside>
+
+<style>
+/* Styles fixes pour la sidebar d'affiliation */
+.sidebar-affiliate {
+  position: sticky;
+  top: 2rem;
+  width: 320px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Titres de section */
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2563eb;
+}
+
+/* Section produits d'affiliation */
+.affiliate-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Carte produit */
+.product-card {
+  position: relative;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.product-card[data-featured="true"] {
+  border-color: #2563eb;
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+}
+
+/* Badge de réduction */
+.discount-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #dc2626;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+/* Image produit */
+.product-image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.product-image img {
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Informations produit */
+.product-info {
+  text-align: left;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.product-brand {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+.product-benefits {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #374151;
+  margin-bottom: 1.25rem;
+}
+
+.product-benefits strong {
+  color: #2563eb;
+}
+
+.product-benefits ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.product-benefits li {
+  margin: 0.25rem 0;
+}
+
+/* Bouton CTA */
+.product-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.product-cta:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  color: white;
+  text-decoration: none;
+}
+
+/* Section articles liés */
+.related-articles {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
+.articles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.article-item {
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 0.75rem;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.article-link {
+  text-decoration: none;
+  display: block;
+  color: #374151;
+  transition: color 0.2s ease;
+}
+
+.article-link:hover {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.article-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.article-author {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Responsive Design */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .sidebar-affiliate {
+    --sidebar-width: 280px;
+    --sidebar-padding: 1.25rem;
+    position: relative;
+    top: auto;
+    max-height: none;
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar-affiliate {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    position: relative;
+    top: auto;
+    max-height: none;
+  }
+  
+  .products-list {
+    gap: 1rem;
+  }
+  
+  .product-card {
+    padding: 1rem;
+  }
+  
+  .product-image img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .sidebar-title {
+    font-size: 1.1rem;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+  }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+  .sidebar-affiliate {
+    padding: 0.75rem;
+  }
+  
+  .product-card {
+    padding: 0.75rem;
+  }
+  
+  .product-image {
+    margin-bottom: 0.75rem;
+  }
+  
+  .product-image img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-cta,
+  .article-link {
+    transition: none;
+  }
+  
+  .product-card:hover {
+    transform: none;
+  }
+}
+
+
+
+/* Performance - will-change pour les animations */
+.product-card:hover,
+.product-cta:hover {
+  will-change: transform;
+}
+
+/* Impression */
+@media print {
+  .sidebar-affiliate {
+    display: none;
+  }
+}
+
+/* Responsive : sur mobile et tablette, retour au comportement normal */
+@media (max-width: 1024px) {
+  .sidebar-affiliate {
+    position: static;
+    width: 100%;
+    max-height: none;
+    margin: 2rem 0;
+  }
+}
+</style>

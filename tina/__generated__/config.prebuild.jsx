@@ -125,15 +125,6 @@ var standardArticleFields = [
   },
   {
     type: "string",
-    name: "tags",
-    label: 'Mots-cl\xE9s (format: ["mot1", "mot2", "mot3"])',
-    description: "Mots-cl\xE9s au format tableau JSON pour le SEO",
-    ui: {
-      component: "textarea"
-    }
-  },
-  {
-    type: "string",
     name: "collection",
     label: "Collection",
     required: true,
@@ -168,6 +159,34 @@ var standardArticleFields = [
     name: "ogImage",
     label: "Image Open Graph",
     description: "Image pour les r\xE9seaux sociaux (optionnel, utilise thumbnail par d\xE9faut)"
+  },
+  // Produits d'affiliation liés
+  {
+    type: "object",
+    name: "affiliateProducts",
+    label: "Produits d'affiliation recommand\xE9s",
+    list: true,
+    fields: [
+      {
+        type: "reference",
+        name: "product",
+        label: "Produit",
+        collections: ["affiliate_products"],
+        description: "S\xE9lectionner un produit d'affiliation"
+      },
+      {
+        type: "number",
+        name: "displayOrder",
+        label: "Ordre d'affichage",
+        description: "Position dans la sidebar (1 = premier)"
+      },
+      {
+        type: "string",
+        name: "customNote",
+        label: "Note personnalis\xE9e",
+        description: "Contexte sp\xE9cifique \xE0 cet article (optionnel)"
+      }
+    ]
   },
   // SEO avancé
   {
@@ -242,10 +261,33 @@ var standardArticleFields = [
   }
 ];
 var config_default = defineConfig({
-  branch: process.env.TINA_BRANCH || "main",
-  // Configuration avec vos clés API
+  branch: process.env.TINA_BRANCH || "production",
+  // Configuration avec variables d'environnement sécurisées
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
+  // Configuration pour ajouter des liens "Voir l'article"
+  cmsCallback: (cms) => {
+    import("tinacms").then(({ RouteMappingPlugin }) => {
+      const RouteMapping = new RouteMappingPlugin((collection, document) => {
+        const slug = document._sys.filename.replace(/\.md$/, "");
+        const collectionUrls = {
+          "medicaments_glp1": `/medicaments-glp1/${slug}`,
+          "glp1_perte_de_poids": `/glp1-perte-de-poids/${slug}`,
+          "glp1_cout": `/glp1-cout/${slug}`,
+          "glp1_diabete": `/glp1-diabete/${slug}`,
+          "effets_secondaires_glp1": `/effets-secondaires-glp1/${slug}`,
+          "medecins_glp1_france": `/medecins-glp1-france/${slug}`,
+          "recherche_glp1": `/recherche-glp1/${slug}`,
+          "regime_glp1": `/regime-glp1/${slug}`,
+          "alternatives_glp1": `/alternatives-glp1/${slug}`,
+          "pages_statiques": `/${slug}`
+        };
+        return collectionUrls[collection.name] || `/${slug}`;
+      });
+      cms.plugins.add(RouteMapping);
+    });
+    return cms;
+  },
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -337,6 +379,139 @@ var config_default = defineConfig({
         path: "src/content/alternatives-glp1",
         format: "md",
         fields: standardArticleFields
+      },
+      // Collection Produits d'Affiliation
+      {
+        name: "affiliate_products",
+        label: "\u{1F4B0} Produits d'Affiliation",
+        path: "src/content/affiliate-products",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Nom du produit",
+            isTitle: true,
+            required: true
+          },
+          {
+            type: "string",
+            name: "productId",
+            label: "ID unique du produit",
+            required: true,
+            description: "Identifiant unique (ex: ozempic-1mg, wegovy-semaglutide)"
+          },
+          {
+            type: "string",
+            name: "brand",
+            label: "Marque/Laboratoire",
+            required: true
+          },
+          {
+            type: "string",
+            name: "category",
+            label: "Cat\xE9gorie",
+            options: [
+              "GLP-1",
+              "GLP-1 + GIP",
+              "Diab\xE8te",
+              "Perte de poids",
+              "Compl\xE9ment",
+              "Accessoire",
+              "Livre/Guide"
+            ],
+            required: true
+          },
+          {
+            type: "image",
+            name: "productImage",
+            label: "Image du produit",
+            required: true
+          },
+          {
+            type: "string",
+            name: "externalLink",
+            label: "Lien d'affiliation",
+            required: true,
+            description: "URL compl\xE8te du lien d'affiliation"
+          },
+          {
+            type: "number",
+            name: "discountPercent",
+            label: "R\xE9duction (%)",
+            description: "Pourcentage de r\xE9duction (ex: 15 pour 15%)"
+          },
+          {
+            type: "string",
+            name: "discountCode",
+            label: "Code promo",
+            description: "Code de r\xE9duction \xE0 afficher"
+          },
+          {
+            type: "rich-text",
+            name: "benefitsText",
+            label: "Texte des b\xE9n\xE9fices",
+            description: "Description des avantages du produit"
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Description d\xE9taill\xE9e",
+            description: "Description compl\xE8te du produit"
+          },
+          {
+            type: "boolean",
+            name: "featured",
+            label: "Produit vedette",
+            description: "Mettre en avant ce produit"
+          },
+          {
+            type: "number",
+            name: "priority",
+            label: "Priorit\xE9 d'affichage",
+            description: "Ordre d'affichage (1 = premier)"
+          },
+          {
+            type: "object",
+            name: "targeting",
+            label: "Ciblage",
+            fields: [
+              {
+                type: "string",
+                name: "categories",
+                label: "Cat\xE9gories d'articles",
+                list: true,
+                options: [
+                  "GLP-1",
+                  "Diab\xE8te",
+                  "Perte de poids",
+                  "Effets secondaires",
+                  "Prix",
+                  "T\xE9moignages",
+                  "M\xE9decins",
+                  "Recherche"
+                ]
+              },
+              {
+                type: "string",
+                name: "keywords",
+                label: "Mots-cl\xE9s de ciblage",
+                list: true,
+                description: "Mots-cl\xE9s pour cibler automatiquement les articles"
+              }
+            ]
+          },
+          {
+            type: "datetime",
+            name: "createdAt",
+            label: "Date de cr\xE9ation"
+          },
+          {
+            type: "datetime",
+            name: "updatedAt",
+            label: "Derni\xE8re modification"
+          }
+        ]
       }
     ]
   }

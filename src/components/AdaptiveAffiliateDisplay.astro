@@ -1,0 +1,280 @@
+---
+// Composant intelligent pour l'affichage adaptatif des produits d'affiliation
+import { getAllAffiliateProducts, getRecommendedProducts, getArticleAffiliateProducts } from '../lib/affiliate';
+import AffiliateSidebar from './AffiliateSidebar.astro';
+import InlineAffiliateProduct from './InlineAffiliateProduct.astro';
+
+export interface Props {
+  /** Contenu HTML de l'article pour analyse */
+  articleContent?: string;
+  /** Produits spécifiquement liés à l'article */
+  affiliateProducts?: any[];
+  /** Catégorie de l'article pour recommandations */
+  category?: string;
+  /** Auteur de l'article */
+  authorName?: string;
+  /** Articles connexes */
+  relatedArticles?: any[];
+  /** Force l'affichage de la sidebar même sur mobile */
+  forceSidebar?: boolean;
+  /** Désactive l'injection inline */
+  disableInline?: boolean;
+  /** Configuration personnalisée */
+  config?: {
+    maxInlineProducts?: number;
+    startAfterParagraphs?: number;
+    sidebarPosition?: 'left' | 'right';
+    mobileStrategy?: 'inline-only' | 'sidebar-only' | 'both';
+  };
+}
+
+const { 
+  articleContent = '', 
+  affiliateProducts = [],
+  category,
+  authorName,
+  relatedArticles = [],
+  forceSidebar = false,
+  disableInline = false,
+  config = {}
+} = Astro.props;
+
+// Configuration par défaut
+const defaultConfig = {
+  maxInlineProducts: 3,
+  startAfterParagraphs: 2,
+  sidebarPosition: 'right' as const,
+  mobileStrategy: 'both' as const,
+  ...config
+};
+
+// Récupération des produits d'affiliation
+let sidebarProducts = [];
+let inlineProducts = [];
+
+try {
+  if (affiliateProducts && affiliateProducts.length > 0) {
+    // Produits spécifiquement liés à l'article
+    const linkedProducts = await getArticleAffiliateProducts(affiliateProducts);
+    sidebarProducts = linkedProducts;
+    inlineProducts = linkedProducts.slice(0, defaultConfig.maxInlineProducts);
+  } else {
+    // Produits recommandés basés sur le contenu
+    const recommendedProducts = await getRecommendedProducts(
+      articleContent, 
+      category, 
+      Math.max(3, defaultConfig.maxInlineProducts)
+    );
+    sidebarProducts = recommendedProducts;
+    inlineProducts = recommendedProducts.slice(0, defaultConfig.maxInlineProducts);
+  }
+} catch (error) {
+  console.warn('Erreur lors du chargement des produits d\'affiliation:', error);
+  sidebarProducts = [];
+  inlineProducts = [];
+}
+
+// Détection du contexte (simulée côté serveur - en production utiliser User-Agent ou CSS)
+const isMobile = false; // À adapter selon votre détection
+const isTablet = false;
+
+// Logique d'affichage adaptative
+const shouldShowSidebar = forceSidebar || (!isMobile && sidebarProducts.length > 0);
+const shouldShowInline = !disableInline && (
+  (isMobile && defaultConfig.mobileStrategy !== 'sidebar-only') || 
+  defaultConfig.mobileStrategy === 'inline-only'
+) && inlineProducts.length > 0;
+---
+
+<!-- Fragment pour éviter les wrappers inutiles -->
+<Fragment>
+  
+  <!-- Sidebar pour desktop/tablette -->
+  {shouldShowSidebar && (
+    <AffiliateSidebar 
+      products={sidebarProducts}
+      authorName={authorName}
+      relatedArticles={relatedArticles}
+      className={`adaptive-sidebar ${defaultConfig.sidebarPosition}`}
+    />
+  )}
+
+  <!-- Produits inline pour mobile ou complément -->
+  {shouldShowInline && (
+    <div class="inline-products-container" data-strategy={defaultConfig.mobileStrategy}>
+      {inlineProducts.map((product, index) => {
+        // Alternance des positions pour un affichage dynamique
+        const positions = ['right', 'left', 'center'] as const;
+        const position = positions[index % positions.length];
+        
+        // Variation des tailles
+        const size = product.featured ? 'medium' : 'small';
+        
+        return (
+          <InlineAffiliateProduct 
+            product={product}
+            position={position}
+            size={size}
+            showFullDescription={false}
+          />
+        );
+      })}
+    </div>
+  )}
+
+</Fragment>
+
+<!-- Styles adaptatifs -->
+<style>
+  /* Configuration adaptative */
+  .adaptive-sidebar {
+    display: block;
+  }
+  
+  .adaptive-sidebar.right {
+    float: right;
+    margin-left: 2rem;
+  }
+  
+  .adaptive-sidebar.left {
+    float: left;
+    margin-right: 2rem;
+  }
+  
+  /* Container pour produits inline */
+  .inline-products-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .inline-products-container[data-strategy="inline-only"] {
+    margin: 2rem 0;
+  }
+  
+  /* Responsive adaptatif */
+  @media (max-width: 1024px) {
+    .adaptive-sidebar {
+      display: none;
+    }
+    
+    .inline-products-container {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .adaptive-sidebar {
+      display: none !important;
+    }
+    
+    .inline-products-container {
+      margin: 1rem 0;
+    }
+  }
+  
+  /* Strategy-specific styles */
+  @media (max-width: 768px) {
+    .inline-products-container[data-strategy="sidebar-only"] {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .inline-products-container[data-strategy="inline-only"] {
+      display: none;
+    }
+    
+    /* Sur desktop, cache les produits inline quand strategy = 'both' */
+    .inline-products-container[data-strategy="both"] {
+      display: none;
+    }
+  }
+  
+  /* Amélioration de l'accessibilité */
+  @media (prefers-reduced-motion: reduce) {
+    .adaptive-sidebar,
+    .inline-products-container {
+      animation: none;
+      transition: none;
+    }
+  }
+  
+  /* Mode impression */
+  @media print {
+    .adaptive-sidebar {
+      position: static !important;
+      float: none !important;
+      margin: 0 !important;
+      page-break-inside: avoid;
+    }
+    
+    .inline-products-container {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+
+<!-- Script pour détection client-side et ajustements dynamiques -->
+<script>
+  // Amélioration progressive côté client
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebarElements = document.querySelectorAll('.adaptive-sidebar');
+    const inlineContainers = document.querySelectorAll('.inline-products-container');
+    
+    // Détection de la taille d'écran en temps réel
+    function adjustDisplayStrategy() {
+      const isMobile = window.innerWidth <= 768;
+      const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
+      
+      sidebarElements.forEach(sidebar => {
+        if (isMobile) {
+          sidebar.style.display = 'none';
+        } else {
+          sidebar.style.display = 'block';
+        }
+      });
+      
+      inlineContainers.forEach(container => {
+        const strategy = container.getAttribute('data-strategy');
+        
+        if (strategy === 'inline-only') {
+          container.style.display = 'block';
+        } else if (strategy === 'sidebar-only') {
+          container.style.display = isMobile ? 'none' : 'block';
+        } else { // 'both'
+          container.style.display = 'block';
+        }
+      });
+    }
+    
+    // Ajustement initial et sur redimensionnement
+    adjustDisplayStrategy();
+    window.addEventListener('resize', adjustDisplayStrategy);
+    
+    // Optimisation des performances avec debounce
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(adjustDisplayStrategy, 150);
+    });
+    
+    // Analytics des interactions (optionnel)
+    document.querySelectorAll('.cta-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const productName = this.closest('[data-product]')?.getAttribute('data-product');
+        if (productName) {
+          // Envoyer analytics
+          console.log('Interaction produit d\'affiliation:', productName);
+          
+          // Exemple intégration Google Analytics
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'affiliate_click', {
+              'product_name': productName,
+              'display_type': this.closest('.adaptive-sidebar') ? 'sidebar' : 'inline'
+            });
+          }
+        }
+      });
+    });
+  });
+</script>

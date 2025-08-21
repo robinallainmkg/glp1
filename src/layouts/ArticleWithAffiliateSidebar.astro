@@ -1,0 +1,541 @@
+---
+// Layout avancé avec système d'affiliation adaptatif et injection automatique
+import AdaptiveAffiliateDisplay from '../components/AdaptiveAffiliateDisplay.astro';
+import { 
+  injectProductsInContent, 
+  findInjectionPoints, 
+  analyzeContentContext,
+  inlineProductCSS 
+} from '../lib/content-injection';
+import { getArticleAffiliateProducts, getRecommendedProducts } from '../lib/affiliate';
+
+export interface Props {
+  title: string;
+  description?: string;
+  author?: string;
+  articleContent?: string;
+  affiliateProducts?: any[];
+  category?: string;
+  /** Configuration d'affichage */
+  affiliateConfig?: {
+    enableAutoInjection?: boolean;
+    mobileStrategy?: 'inline-only' | 'sidebar-only' | 'both';
+    maxInlineProducts?: number;
+    injectionStrategy?: 'auto' | 'manual';
+  };
+}
+
+const { 
+  title, 
+  description, 
+  author, 
+  articleContent = '', 
+  affiliateProducts = [],
+  category,
+  affiliateConfig = {}
+} = Astro.props;
+
+// Configuration par défaut
+const config = {
+  enableAutoInjection: true,
+  mobileStrategy: 'both' as const,
+  maxInlineProducts: 3,
+  injectionStrategy: 'auto' as const,
+  ...affiliateConfig
+};
+
+// Récupération des produits pour l'affiliation
+let availableProducts = [];
+
+try {
+  if (affiliateProducts && affiliateProducts.length > 0) {
+    availableProducts = await getArticleAffiliateProducts(affiliateProducts);
+  } else {
+    availableProducts = await getRecommendedProducts(articleContent, category, 5);
+  }
+} catch (error) {
+  console.warn('Erreur lors du chargement des produits d\'affiliation:', error);
+  availableProducts = [];
+}
+
+// Analyse du contenu pour optimiser les placements
+const contentAnalysis = analyzeContentContext(articleContent);
+const shouldInjectProducts = config.enableAutoInjection && 
+                            availableProducts.length > 0 && 
+                            contentAnalysis.wordCount > 300;
+
+// Articles connexes enrichis
+const relatedArticles = [
+  {
+    title: "Guide complet Ozempic 2024 : Efficacité et Effets",
+    slug: "guide-ozempic-2024",
+    collection: "guides",
+    author: "Dr. Martin Dubois"
+  },
+  {
+    title: "Wegovy vs Ozempic : Comparaison détaillée",
+    slug: "wegovy-vs-ozempic",
+    collection: "articles", 
+    author: "Dr. Sophie Laurent"
+  },
+  {
+    title: "Mounjaro (Tirzepatide) : Révolution GLP-1",
+    slug: "mounjaro-tirzepatide-guide",
+    collection: "guides",
+    author: "Dr. Martin Dubois"
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | GLP1 Official</title>
+  {description && <meta name="description" content={description} />}
+  
+  <!-- Meta tags pour le SEO et réseaux sociaux -->
+  <meta property="og:title" content={title} />
+  <meta property="og:type" content="article" />
+  {description && <meta property="og:description" content={description} />}
+  <meta property="og:site_name" content="GLP1 Official" />
+  
+  <!-- Styles CSS embarqués pour les produits d'affiliation -->
+  <Fragment set:html={inlineProductCSS} />
+  
+  <!-- Styles pour le layout adaptatif -->
+  <style>
+    /* Layout principal adaptatif */
+    .adaptive-article-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+    
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    
+    /* Layout desktop avec sidebar */
+    @media (min-width: 1025px) {
+      .article-wrapper.has-sidebar {
+        grid-template-columns: 740px 320px;
+        gap: 3rem;
+        justify-content: center;
+      }
+    }
+    
+    .article-content {
+      min-width: 0; /* Évite les débordements */
+      position: relative;
+      max-width: 740px;
+    }
+    
+    .article-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 3px solid #2563eb;
+      position: relative;
+    }
+    
+    .article-header::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(45deg, #2563eb, #1d4ed8);
+    }
+    
+    .article-title {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #1f2937 !important;
+      margin: 0 0 1.5rem 0;
+    }
+    
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .meta-item::before {
+      content: '•';
+      color: #2563eb;
+      font-weight: bold;
+    }
+    
+    .meta-item:first-child::before {
+      display: none;
+    }
+    
+    .article-description {
+      font-size: 1.2rem;
+      color: #4b5563;
+      line-height: 1.7;
+      margin: 1.5rem 0 0 0;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+      border-left: 4px solid #2563eb;
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .article-body {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #374151;
+      margin-top: 2rem;
+    }
+    
+    /* Typographie enrichie */
+    .article-body h2 {
+      font-size: clamp(1.5rem, 3vw, 1.8rem);
+      font-weight: 700;
+      margin: 3rem 0 1.5rem 0;
+      color: #1f2937;
+      position: relative;
+      padding-left: 1rem;
+    }
+    
+    .article-body h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.2em;
+      width: 4px;
+      height: 1.2em;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      border-radius: 2px;
+    }
+    
+    .article-body h3 {
+      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+      font-weight: 600;
+      margin: 2.5rem 0 1rem 0;
+      color: #374151;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+    }
+    
+    .article-body p {
+      margin: 1.5rem 0;
+    }
+    
+    .article-body ul, .article-body ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    .article-body li {
+      margin: 0.75rem 0;
+      line-height: 1.6;
+    }
+    
+    .article-body strong {
+      color: #2563eb;
+      font-weight: 600;
+    }
+    
+    .article-body blockquote {
+      border-left: 4px solid #10b981;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      font-style: italic;
+      color: #4b5563;
+      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+      border-radius: 0 12px 12px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .article-body blockquote::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      font-size: 4rem;
+      color: #10b981;
+      line-height: 1;
+      opacity: 0.3;
+    }
+    
+    /* Améliorations des tables */
+    .article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2.5rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+    
+    .article-body th {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    .article-body td {
+      padding: 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .article-body tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    
+    .article-body tr:hover {
+      background: #f1f5f9;
+    }
+    
+    /* Sidebar adaptative */
+    .sidebar-container {
+      position: relative;
+    }
+    
+    /* Responsive Design amélioré */
+    @media (max-width: 1024px) {
+      .adaptive-article-layout {
+        padding: 1.5rem 1rem;
+      }
+      
+      .article-wrapper.has-sidebar {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .article-body {
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .adaptive-article-layout {
+        padding: 1rem 0.5rem;
+      }
+      
+      .article-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+      }
+      
+      .article-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .article-description {
+        font-size: 1.1rem;
+        padding: 1rem;
+      }
+      
+      .article-body h2 {
+        margin: 2rem 0 1rem 0;
+      }
+      
+      .article-body blockquote {
+        padding: 1rem 1.5rem;
+        margin: 2rem 0;
+      }
+      
+      .article-body table {
+        font-size: 0.85rem;
+      }
+      
+      .article-body th, 
+      .article-body td {
+        padding: 0.75rem 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .article-title {
+        font-size: 1.75rem;
+      }
+      
+      .article-description {
+        font-size: 1rem;
+        padding: 0.75rem;
+      }
+      
+      .article-body {
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+      
+      .article-body h2::before {
+        width: 3px;
+      }
+    }
+    
+    /* Mode impression */
+    @media print {
+      .adaptive-article-layout {
+        max-width: none;
+        padding: 0;
+      }
+      
+      .article-wrapper.has-sidebar {
+        grid-template-columns: 1fr;
+      }
+      
+      .article-header {
+        border-bottom: 2px solid #000;
+      }
+      
+      .article-title {
+        color: #000 !important;
+        -webkit-text-fill-color: initial !important;
+      }
+      
+      .sidebar-container {
+        display: none;
+      }
+    }
+    
+    /* Accessibilité */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <main class="adaptive-article-layout">
+    <div class={`article-wrapper ${availableProducts.length > 0 ? 'has-sidebar' : ''}`}>
+      <!-- Contenu principal de l'article -->
+      <article class="article-content">
+        <header class="article-header">
+          <h1 class="article-title">{title}</h1>
+          <div class="article-meta">
+            {author && (
+              <div class="meta-item">
+                <span>👨‍⚕️ Par {author}</span>
+              </div>
+            )}
+            <div class="meta-item">
+              <span>📅 Mis à jour le {new Date().toLocaleDateString('fr-FR', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}</span>
+            </div>
+            {category && (
+              <div class="meta-item">
+                <span>🏷️ {category}</span>
+              </div>
+            )}
+            {contentAnalysis.wordCount > 0 && (
+              <div class="meta-item">
+                <span>⏱️ {Math.ceil(contentAnalysis.wordCount / 200)} min de lecture</span>
+              </div>
+            )}
+          </div>
+          {description && (
+            <div class="article-description">
+              {description}
+            </div>
+          )}
+        </header>
+        
+        <div class="article-body">
+          <slot />
+        </div>
+      </article>
+      
+      <!-- Système d'affiliation adaptatif -->
+      {availableProducts.length > 0 && (
+        <div class="sidebar-container">
+          <AdaptiveAffiliateDisplay 
+            articleContent={articleContent}
+            affiliateProducts={affiliateProducts}
+            category={category}
+            authorName={author}
+            relatedArticles={relatedArticles}
+            config={config}
+          />
+        </div>
+      )}
+    </div>
+  </main>
+
+  <!-- Analytics et tracking (optionnel) -->
+  <script>
+    // Configuration analytics pour le tracking des performances
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mesure du temps de lecture
+      let startTime = Date.now();
+      let maxScroll = 0;
+      
+      function trackReadingProgress() {
+        const scrollPercent = Math.round(
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+        );
+        maxScroll = Math.max(maxScroll, scrollPercent);
+      }
+      
+      window.addEventListener('scroll', trackReadingProgress);
+      
+      // Envoi des métriques à la fermeture
+      window.addEventListener('beforeunload', function() {
+        const readingTime = Math.round((Date.now() - startTime) / 1000);
+        
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'article_engagement', {
+            'reading_time': readingTime,
+            'scroll_depth': maxScroll,
+            'article_title': document.title
+          });
+        }
+      });
+      
+      // Tracking des interactions avec les produits d'affiliation
+      document.addEventListener('click', function(e) {
+        const affiliateLink = e.target.closest('[rel*="sponsored"]');
+        if (affiliateLink) {
+          const productElement = affiliateLink.closest('[data-product]');
+          const productName = productElement?.getAttribute('data-product');
+          const displayType = productElement?.closest('.adaptive-sidebar') ? 'sidebar' : 'inline';
+          
+          if (typeof gtag !== 'undefined' && productName) {
+            gtag('event', 'affiliate_interaction', {
+              'product_name': productName,
+              'display_type': displayType,
+              'article_title': document.title
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

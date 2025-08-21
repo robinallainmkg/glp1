@@ -1,0 +1,478 @@
+---
+// Composant pour insérer des produits d'affiliation dans le contenu d'article
+export interface Props {
+  product: {
+    productName: string;
+    brand: string;
+    productImage: string;
+    discountPercent?: number;
+    externalLink: string;
+    category: string;
+    benefitsText: any;
+    featured?: boolean;
+  };
+  position?: 'left' | 'right' | 'center';
+  size?: 'small' | 'medium' | 'large';
+  showFullDescription?: boolean;
+}
+
+const { 
+  product, 
+  position = 'right', 
+  size = 'medium',
+  showFullDescription = false 
+} = Astro.props;
+---
+
+<div class={`inline-affiliate-product ${position} ${size}`} data-product={product.productName}>
+  {product.featured && (
+    <div class="featured-label">⭐ Recommandé</div>
+  )}
+  
+  <div class="product-container">
+    <div class="product-visual">
+      <div class="image-wrapper">
+        <img 
+          src={product.productImage} 
+          alt={`${product.productName} - ${product.brand}`}
+          width="120"
+          height="120"
+          loading="lazy"
+        />
+        {product.discountPercent && (
+          <div class="discount-badge">
+            -{product.discountPercent}%
+          </div>
+        )}
+      </div>
+    </div>
+    
+    <div class="product-content">
+      <div class="product-header">
+        <h4 class="product-name">{product.productName}</h4>
+        <p class="product-brand">Par {product.brand}</p>
+      </div>
+      
+      {showFullDescription ? (
+        <div class="product-description" set:html={product.benefitsText} />
+      ) : (
+        <div class="product-summary">
+          <p>Solution recommandée pour {product.category.toLowerCase()}. 
+          Résultats cliniquement prouvés.</p>
+        </div>
+      )}
+      
+      <div class="product-actions">
+        <a 
+          href={product.externalLink}
+          class="cta-button primary"
+          target="_blank"
+          rel="noopener sponsored"
+          aria-label={`Voir les détails de ${product.productName}`}
+        >
+          <span class="cta-text">Voir les détails</span>
+          <span class="cta-icon">→</span>
+        </a>
+        
+        <span class="sponsored-label">Lien sponsorisé</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Styles fixes pour les produits inline - pas de variables CSS */
+
+/* Structure de base */
+.inline-affiliate-product {
+  margin: 2rem 0;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  max-width: 100%;
+}
+
+.inline-affiliate-product:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Label "Recommandé" */
+.featured-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 0 12px 0 12px;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Container principal */
+.product-container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Section visuelle */
+.product-visual {
+  flex-shrink: 0;
+}
+
+.image-wrapper {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper img {
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.discount-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #dc2626;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenu produit */
+.product-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-header {
+  margin: 0;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.product-brand {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Description */
+.product-summary,
+.product-description {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.product-description {
+  max-height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-description::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(transparent, #f8fafc);
+}
+
+/* Actions */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-decoration: none;
+}
+
+.cta-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover .cta-icon {
+  transform: translateX(2px);
+}
+
+.sponsored-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Positionnement */
+.inline-affiliate-product.left {
+  float: left;
+  margin: 1rem 2rem 1rem 0;
+  clear: left;
+}
+
+.inline-affiliate-product.right {
+  float: right;
+  margin: 1rem 0 1rem 2rem;
+  clear: right;
+}
+
+.inline-affiliate-product.center {
+  margin: 2rem auto;
+  clear: both;
+}
+
+/* Tailles */
+.inline-affiliate-product.small {
+  max-width: 350px;
+}
+
+.inline-affiliate-product.small .product-container {
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.inline-affiliate-product.small .image-wrapper img {
+  width: 80px;
+  height: 80px;
+}
+
+.inline-affiliate-product.small .product-name {
+  font-size: 1.1rem;
+}
+
+.inline-affiliate-product.medium {
+  max-width: 450px;
+}
+
+.inline-affiliate-product.large {
+  max-width: 600px;
+}
+
+.inline-affiliate-product.large .product-container {
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.inline-affiliate-product.large .image-wrapper img {
+  width: 140px;
+  height: 140px;
+}
+
+/* Responsive Design */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .inline-affiliate-product.left,
+  .inline-affiliate-product.right {
+    float: none;
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+  
+  .inline-affiliate-product.medium,
+  .inline-affiliate-product.large {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .inline-affiliate-product {
+    margin: 1.5rem 0;
+  }
+  
+  .product-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .image-wrapper {
+    align-self: center;
+    max-width: 120px;
+  }
+  
+  .image-wrapper img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .product-content {
+    text-align: center;
+  }
+  
+  .product-name {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .featured-label {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Petit mobile */
+@media (max-width: 480px) {
+  .inline-affiliate-product {
+    margin: 1rem 0;
+  }
+  
+  .product-container {
+    padding: 0.75rem;
+  }
+  
+  .image-wrapper img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+  }
+  
+  .product-summary,
+  .product-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .inline-affiliate-product,
+  .cta-button,
+  .cta-icon {
+    transition: none;
+  }
+  
+  .inline-affiliate-product:hover {
+    transform: none;
+  }
+  
+  .cta-button:hover {
+    transform: none;
+  }
+  
+  .cta-button:hover .cta-icon {
+    transform: none;
+  }
+}
+
+/* Focus pour navigation clavier */
+.cta-button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  .inline-affiliate-product {
+    background: #1e293b;
+    border-color: #475569;
+  }
+  
+  .product-name {
+    color: #e2e8f0;
+  }
+  
+  .product-summary,
+  .product-description {
+    color: #cbd5e1;
+  }
+  
+  .image-wrapper {
+    background: #334155;
+  }
+  
+  .sponsored-label {
+    color: #94a3b8;
+  }
+  
+  .product-description::after {
+    background: linear-gradient(transparent, #1e293b);
+  }
+}
+
+/* Performance - will-change pour les animations */
+.inline-affiliate-product:hover,
+.cta-button:hover {
+  will-change: transform;
+}
+
+/* Impression */
+@media print {
+  .inline-affiliate-product {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .cta-button {
+    background: #666 !important;
+  }
+  
+  .featured-label {
+    background: #999 !important;
+  }
+}
+</style>

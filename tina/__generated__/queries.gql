@@ -547,3 +547,58 @@ query alternatives_glp1Connection($before: String, $after: String, $first: Float
     }
   }
 }
+
+query affiliate_products($relativePath: String!) {
+  affiliate_products(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Affiliate_productsParts
+  }
+}
+
+query affiliate_productsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Affiliate_productsFilter) {
+  affiliate_productsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Affiliate_productsParts
+      }
+    }
+  }
+}

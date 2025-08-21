@@ -167,6 +167,35 @@ const standardArticleFields = [
     description: "Image pour les réseaux sociaux (optionnel, utilise thumbnail par défaut)",
   },
   
+  // Produits d'affiliation liés
+  {
+    type: "object" as const,
+    name: "affiliateProducts",
+    label: "Produits d'affiliation recommandés",
+    list: true,
+    fields: [
+      {
+        type: "reference" as const,
+        name: "product",
+        label: "Produit",
+        collections: ["affiliate_products"],
+        description: "Sélectionner un produit d'affiliation",
+      },
+      {
+        type: "number" as const,
+        name: "displayOrder",
+        label: "Ordre d'affichage",
+        description: "Position dans la sidebar (1 = premier)",
+      },
+      {
+        type: "string" as const,
+        name: "customNote",
+        label: "Note personnalisée",
+        description: "Contexte spécifique à cet article (optionnel)",
+      },
+    ],
+  },
+  
   // SEO avancé
   {
     type: "boolean" as const,
@@ -371,6 +400,139 @@ export default defineConfig({
         path: "src/content/alternatives-glp1",
         format: "md",
         fields: standardArticleFields,
+      },
+      // Collection Produits d'Affiliation
+      {
+        name: "affiliate_products",
+        label: "💰 Produits d'Affiliation",
+        path: "src/content/affiliate-products",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Nom du produit",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "productId",
+            label: "ID unique du produit",
+            required: true,
+            description: "Identifiant unique (ex: ozempic-1mg, wegovy-semaglutide)",
+          },
+          {
+            type: "string",
+            name: "brand",
+            label: "Marque/Laboratoire",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "category",
+            label: "Catégorie",
+            options: [
+              "GLP-1",
+              "GLP-1 + GIP",
+              "Diabète",
+              "Perte de poids",
+              "Complément",
+              "Accessoire",
+              "Livre/Guide"
+            ],
+            required: true,
+          },
+          {
+            type: "image",
+            name: "productImage",
+            label: "Image du produit",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "externalLink",
+            label: "Lien d'affiliation",
+            required: true,
+            description: "URL complète du lien d'affiliation",
+          },
+          {
+            type: "number",
+            name: "discountPercent",
+            label: "Réduction (%)",
+            description: "Pourcentage de réduction (ex: 15 pour 15%)",
+          },
+          {
+            type: "string",
+            name: "discountCode",
+            label: "Code promo",
+            description: "Code de réduction à afficher",
+          },
+          {
+            type: "rich-text",
+            name: "benefitsText",
+            label: "Texte des bénéfices",
+            description: "Description des avantages du produit",
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Description détaillée",
+            description: "Description complète du produit",
+          },
+          {
+            type: "boolean",
+            name: "featured",
+            label: "Produit vedette",
+            description: "Mettre en avant ce produit",
+          },
+          {
+            type: "number",
+            name: "priority",
+            label: "Priorité d'affichage",
+            description: "Ordre d'affichage (1 = premier)",
+          },
+          {
+            type: "object",
+            name: "targeting",
+            label: "Ciblage",
+            fields: [
+              {
+                type: "string",
+                name: "categories",
+                label: "Catégories d'articles",
+                list: true,
+                options: [
+                  "GLP-1",
+                  "Diabète", 
+                  "Perte de poids",
+                  "Effets secondaires",
+                  "Prix",
+                  "Témoignages",
+                  "Médecins",
+                  "Recherche"
+                ],
+              },
+              {
+                type: "string",
+                name: "keywords",
+                label: "Mots-clés de ciblage",
+                list: true,
+                description: "Mots-clés pour cibler automatiquement les articles",
+              },
+            ],
+          },
+          {
+            type: "datetime",
+            name: "createdAt",
+            label: "Date de création",
+          },
+          {
+            type: "datetime", 
+            name: "updatedAt",
+            label: "Dernière modification",
+          },
+        ],
       },
     ],
   },

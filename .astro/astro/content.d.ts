@@ -140,7 +140,58 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"alternatives-glp1": {
+		"affiliate-products": {
+"guide-glp1-expert.md": {
+	id: "guide-glp1-expert.md";
+  slug: "guide-glp1-expert";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+"mounjaro-tirzepatide-dual.md": {
+	id: "mounjaro-tirzepatide-dual.md";
+  slug: "mounjaro-tirzepatide-dual";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+"mounjaro-tirzepatide.md": {
+	id: "mounjaro-tirzepatide.md";
+  slug: "mounjaro-tirzepatide";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+"ozempic-example.md": {
+	id: "ozempic-example.md";
+  slug: "ozempic-example";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+"ozempic-semaglutide.md": {
+	id: "ozempic-semaglutide.md";
+  slug: "ozempic-semaglutide";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+"wegovy-perte-poids.md": {
+	id: "wegovy-perte-poids.md";
+  slug: "wegovy-perte-poids";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+"wegovy-semaglutide.md": {
+	id: "wegovy-semaglutide.md";
+  slug: "wegovy-semaglutide";
+  body: string;
+  collection: "affiliate-products";
+  data: any
+} & { render(): Render[".md"] };
+};
+"alternatives-glp1": {
 "acupuncture-glp1.md": {
 	id: "acupuncture-glp1.md";
   slug: "acupuncture-glp1";
