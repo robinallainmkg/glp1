@@ -34,11 +34,11 @@ jobs:
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
+        server: glp1-france.fr
+        username: u403023291
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ${{ secrets.REMOTE_PATH }}/
+        server-dir: /public_html/
         exclude: |
           **/.git*
           **/.git*/**
