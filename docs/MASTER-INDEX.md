@@ -1,13 +1,24 @@
-# 📚 Documentation Master Index - GLP-1 France
+# 🎯 MASTER INDEX - GLP1 France
 
-> **Index principal de la documentation technique consolidée**  
-> *Dernière mise à jour : Janvier 2025*
+## ✅ Statut du Projet
 
-## 🎯 Vue d'Ensemble
+**Site en Production** : https://glp1-france.fr  
+**Page Partenaires** : https://glp1-france.fr/partenaires  
+**Déploiement** : Automatisé via GitHub Actions  
 
-Cette documentation complète couvre tous les aspects techniques du projet GLP-1 France, organisée en trois sections principales : **Core** (fondamentaux), **Features** (fonctionnalités), et **Operations** (opérations).
+## �️ Architecture Technique
 
----
+### Framework & Build
+- **Astro v4.16.18** - Génération statique
+- **TinaCMS** - Gestion de contenu
+- **Tailwind CSS** - Styling
+- **Build Output** : 168+ pages statiques
+
+### Déploiement
+- **Hébergement** : Hostinger (147.79.98.140)
+- **Méthode** : FTP automatisé via GitHub Actions
+- **Déclencheur** : Push vers branche `production`
+- **Délai** : 2-5 minutes
 
 ## 🏗️ Core - Fondamentaux Techniques
 

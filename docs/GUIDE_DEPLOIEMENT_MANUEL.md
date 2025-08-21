@@ -1,65 +1,56 @@
-# Guide de Déploiement Manuel - Hostinger
+# Guide de Déploiement - Hostinger
 
-## Problème Résolu ✅
-Les connexions SSH/SFTP depuis GitHub Actions sont bloquées par Hostinger, mais le build fonctionne parfaitement.
+## ✅ Solution Finale : Déploiement FTP Automatisé
 
-## Solution : Déploiement Manuel
+### Configuration GitHub Actions
 
-### 1. Préparer les fichiers
-```bash
-# Dans le dossier du projet
-npm run astro:build
+Le déploiement est maintenant **automatisé via GitHub Actions** avec la configuration FTP suivante :
+
+```yaml
+# .github/workflows/deploy-hostinger.yml
+- name: Deploy via FTP
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+  with:
+    server: 147.79.98.140
+    username: u403023291
+    password: ${{ secrets.FTP_PASSWORD }}
+    local-dir: ./dist/
+    server-dir: /domains/glp1-france.fr/public_html/
+    port: 21
+    protocol: ftp
 ```
 
-### 2. Utiliser FileZilla (Recommandé)
+### Processus de Déploiement
 
-**Configuration FileZilla :**
-- **Hôte** : `glp1-france.fr`
-- **Nom d'utilisateur** : `u403023291`
-- **Mot de passe** : `12031990Robin!`
-- **Port** : `21` (FTP)
+1. **Push vers la branche `production`** déclenche automatiquement :
+   - Build Astro (génération des 168+ pages statiques)
+   - Déploiement FTP vers `/public_html/`
+   - Vérification du déploiement
 
-**Étapes :**
-1. Connectez-vous à FileZilla
-2. Dans le panneau distant, naviguez vers `/public_html`
-3. Dans le panneau local, naviguez vers le dossier `dist` de votre projet
-4. Sélectionnez tous les fichiers et dossiers dans `dist`
-5. Glissez-déposez vers le serveur (dans `/public_html`)
+2. **Délai de mise en ligne** : 2-5 minutes après le push
 
-### 3. Vérification
+### Configuration Secrets GitHub
 
-Après le déploiement, votre page partenaires sera accessible à :
-**https://glp1-france.fr/partenaires**
+Secrets requis dans GitHub → Settings → Secrets and variables → Actions :
+- `FTP_PASSWORD` : `12031990Robin!`
 
-### 4. Automatisation Future
+### Pages Déployées
 
-**Options pour automatiser :**
-1. **Script PowerShell** : `scripts/deploy-manual.ps1` (déjà créé)
-2. **GitHub Actions + Artifacts** : Le build est fait automatiquement, téléchargez l'artifact
-3. **Webhook Hostinger** : Si disponible dans votre panel Hostinger
+✅ **Page Partenaires** : https://glp1-france.fr/partenaires
+- 7 liens partenaires intégrés
+- Accessible via footer → Ressources → Partenaires
+- SEO optimisé et responsive
 
-### 5. Fichiers Clés Déployés
+### Troubleshooting
 
-- `/partenaires/index.html` - Page partenaires avec 7 liens
-- `/_astro/` - Assets CSS/JS
-- `/images/` - Images du site
-- `.htaccess` - Configuration Apache pour URLs propres
+**Si échec de déploiement :**
+1. Vérifier les secrets GitHub
+2. Vérifier la connectivité FTP Hostinger
+3. Utiliser le déploiement manuel via FileZilla (IP: 147.79.98.140)
 
-## Contenu de la Page Partenaires
+### Architecture Technique
 
-✅ **7 liens partenaires inclus :**
-1. Secous
-2. TopLien  
-3. Infobel
-4. FaitesVousConnaitre
-5. WebWiki
-6. Le-Bottin
-7. MeilleurDuWeb
-
-✅ **Intégration footer** : Lien "Partenaires" dans la section Ressources
-✅ **SEO optimisé** : Meta descriptions, structured data
-✅ **Design responsive** : Compatible mobile et desktop
-
-## Note Technique
-
-Le build Astro génère 168 pages statiques en 11.13s, incluant la page partenaires. Le problème est uniquement lié aux restrictions réseau de Hostinger, pas au code.
+- **Framework** : Astro v4.16.18 (génération statique)
+- **Déploiement** : FTP automatisé via GitHub Actions
+- **Hébergement** : Hostinger partagé (147.79.98.140)
+- **Build** : 168+ pages générées en ~11s

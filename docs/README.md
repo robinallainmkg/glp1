@@ -1,50 +1,61 @@
 # 📚 Documentation GLP-1 France
 
-> **Documentation technique complète** du site GLP-1 France  
-> *Architecture moderne • Workflow optimisé • Maintenance simplifiée*
+> **Site de référence GLP-1** avec déploiement automatisé  
+> *Page Partenaires • Déploiement FTP • Architecture Astro*
+
+---
+
+## 🎯 Statut Actuel
+
+✅ **Page Partenaires Live** : https://glp1-france.fr/partenaires  
+✅ **Déploiement Automatisé** : GitHub Actions → FTP Hostinger  
+✅ **7 Partenaires Intégrés** : Liens actifs dans footer  
+✅ **168+ Pages Générées** : Build Astro optimisé  
 
 ---
 
 ## 🚀 Accès Rapide
 
-### 🎯 Nouveaux Utilisateurs
-**👉 Commencez ici** : [MASTER-INDEX.md](MASTER-INDEX.md) - Index principal avec vue d'ensemble
+### 🎯 Déploiement
+```bash
+# Build et déploiement automatique
+git push origin production
+```
+**👉 Guide complet** : [GUIDE_DEPLOIEMENT_MANUEL.md](GUIDE_DEPLOIEMENT_MANUEL.md)
 
-### ⚡ Développeurs Expérimentés
+### ⚡ Développement Local
 ```bash
 git clone <repository>
 cd glp1-github
 npm install && npm run dev
 ```
-**👉 Détails** : [core/installation.md](core/installation.md)
 
-### 🔧 Administrateurs Système
-**👉 Déploiement** : [operations/deployment.md](operations/deployment.md)  
-**👉 Monitoring** : [operations/monitoring.md](operations/monitoring.md)
+### 🔧 Administration
+**👉 Documentation** : [admin-documentation.md](admin-documentation.md)  
+**👉 Résolution problèmes** : [RESOLUTION_FORMULAIRE_CONTACT.md](RESOLUTION_FORMULAIRE_CONTACT.md)
 
 ---
 
-## 📖 Structure Documentation
+## 📖 Documentation Active
 
-### 🏗️ [Core](core/) - Fondamentaux Techniques
-| Fichier | Description | Temps lecture |
-|---------|-------------|---------------|
-| [installation.md](core/installation.md) | Setup complet et configuration | 5 min |
-| [development.md](core/development.md) | Workflow quotidien et bonnes pratiques | 10 min |
-| [architecture.md](core/architecture.md) | Architecture système et décisions | 15 min |
+### 🏗️ Guides Opérationnels
+| Fichier | Description | Status |
+|---------|-------------|---------|
+| [GUIDE_DEPLOIEMENT_MANUEL.md](GUIDE_DEPLOIEMENT_MANUEL.md) | Configuration FTP et déploiement | ✅ À jour |
+| [admin-documentation.md](admin-documentation.md) | Administration système | ✅ Actif |
+| [RESOLUTION_FORMULAIRE_CONTACT.md](RESOLUTION_FORMULAIRE_CONTACT.md) | Gestion formulaires | ✅ Actif |
 
-### 🚀 [Features](features/) - Fonctionnalités Métier
-| Fichier | Description | Complexité |
-|---------|-------------|------------|
-| [affiliation.md](features/affiliation.md) | Système monétisation Amazon | 🟡 Intermédiaire |
-| [cms.md](features/cms.md) | Gestion contenu TinaCMS | 🟢 Débutant |
-| [users.md](features/users.md) | Données utilisateurs + RGPD | 🟡 Intermédiaire |
+### 🎨 Guides Techniques  
+| Fichier | Description | Status |
+|---------|-------------|---------|
+| [GUIDE_THUMBNAILS.md](GUIDE_THUMBNAILS.md) | Gestion images et thumbnails | ✅ Actif |
+| [GUIDE_TINA_IMAGES.md](GUIDE_TINA_IMAGES.md) | TinaCMS et images | ✅ Actif |
+| [MASTER-INDEX.md](MASTER-INDEX.md) | Index général du projet | ✅ Référence |
 
-### ⚙️ [Operations](operations/) - Maintenance et Déploiement
-| Fichier | Description | Audience |
-|---------|-------------|----------|
-| [deployment.md](operations/deployment.md) | CI/CD et scripts déploiement | 🔴 DevOps |
-| [monitoring.md](operations/monitoring.md) | Surveillance et maintenance | 🔴 Admin Système |
+### 📁 Archive
+| Dossier | Description | 
+|---------|-------------|
+| [archive/](archive/) | Documentation historique et références | 
 
 ---
 
