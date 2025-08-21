@@ -253,9 +253,9 @@ const standardArticleFields = [
 ];
 
 export default defineConfig({
-  branch: process.env.TINA_BRANCH || "main",
+  branch: process.env.TINA_BRANCH || "production",
   
-  // Configuration avec vos clés API
+  // Configuration avec variables d'environnement sécurisées
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
   
