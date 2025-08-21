@@ -1,11 +1,15 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
+import node from '@astrojs/node';
 
 export default defineConfig({
   site: 'https://glp1-france.fr',
   base: '/',
-  output: 'static',
+  output: 'hybrid',
+  adapter: node({
+    mode: 'standalone'
+  }),
   integrations: [sitemap(), tailwind()],
   server: {
     port: 4321,
