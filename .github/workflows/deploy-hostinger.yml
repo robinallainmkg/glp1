@@ -30,7 +30,7 @@ jobs:
         username: u403023291
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: /domains/glp1-france.fr/
+        server-dir: /domains/glp1-france.fr/public_html/
         port: 21
         protocol: ftp
         exclude: |
