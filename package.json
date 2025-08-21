@@ -7,6 +7,7 @@
     "dev": "astro dev --port 4321 --open",
     "dev:tina": "tinacms dev -c \"npm run dev\"",
     "build": "tinacms build && astro build",
+    "astro:build": "astro build",
     "preview": "astro preview --port 4321 --open",
     "start": "astro preview --port 4321 --open",
     "generate-database": "node scripts/generate-database-v2.mjs",
