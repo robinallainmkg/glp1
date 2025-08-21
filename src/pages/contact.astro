@@ -724,7 +724,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
   </style>
 
-  <script>
+  <script is:inline>
     // Load Supabase from CDN and handle contact form
     (async function() {
       try {
@@ -737,28 +737,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         const supabase = createClient(supabaseUrl, supabaseKey);
         
         console.log('🚀 Supabase client initialized');
-
-        document.addEventListener('DOMContentLoaded', function() {
+        
+        // Wait for DOM to be ready
+        function initContactForm() {
           const contactForm = document.getElementById('contactForm');
           const successMessage = document.getElementById('successMessage');
           
+          console.log('🔍 Looking for form elements:', { contactForm, successMessage });
+          
           if (contactForm) {
+            console.log('✅ Contact form found, adding event listener');
+            
             contactForm.addEventListener('submit', async function(e) {
               e.preventDefault();
               
-              console.log('📧 Contact form submitted');
+              console.log('📧 Contact form submitted - preventDefault called');
               
               // Hide previous message
-              successMessage.style.display = 'none';
+              if (successMessage) {
+                successMessage.style.display = 'none';
+              }
               
               const submitBtn = this.querySelector('.submit-button');
-              const btnText = submitBtn.querySelector('.button-text');
-              const btnLoading = submitBtn.querySelector('.button-loading');
+              const btnText = submitBtn?.querySelector('.button-text');
+              const btnLoading = submitBtn?.querySelector('.button-loading');
               
               // Show loading state
-              btnText.style.display = 'none';
-              btnLoading.style.display = 'flex';
-              submitBtn.disabled = true;
+              if (btnText && btnLoading) {
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'flex';
+              }
+              if (submitBtn) {
+                submitBtn.disabled = true;
+              }
               
               try {
                 const formData = new FormData(this);
@@ -861,19 +872,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 });
               } finally {
                 // Reset button state
-                btnText.style.display = 'inline';
-                btnLoading.style.display = 'none';
-                submitBtn.disabled = false;
+                if (btnText && btnLoading) {
+                  btnText.style.display = 'inline';
+                  btnLoading.style.display = 'none';
+                }
+                if (submitBtn) {
+                  submitBtn.disabled = false;
+                }
               }
             });
+          } else {
+            console.log('❌ Contact form not found!');
           }
-        });
+        }
+        
+        // Try to initialize immediately if DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initContactForm);
+        } else {
+          initContactForm();
+        }
         
       } catch (error) {
         console.error('❌ Failed to load Supabase:', error);
         
         // Fallback form handler without Supabase
-        document.addEventListener('DOMContentLoaded', function() {
+        function initFallbackForm() {
           const contactForm = document.getElementById('contactForm');
           const successMessage = document.getElementById('successMessage');
           
@@ -883,15 +907,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               console.log('📧 Fallback form handler');
               
               // Show success message
-              successMessage.style.display = 'block';
+              if (successMessage) {
+                successMessage.style.display = 'block';
+              }
               this.reset();
-              successMessage.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'center' 
-              });
+              if (successMessage) {
+                successMessage.scrollIntoView({ 
+                  behavior: 'smooth', 
+                  block: 'center' 
+                });
+              }
             });
           }
-        });
+        }
+        
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initFallbackForm);
+        } else {
+          initFallbackForm();
+        }
       }
     })();
   </script>
