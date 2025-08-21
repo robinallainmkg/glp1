@@ -701,7 +701,7 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
             formData.append('privacy', '1'); // Consentement minimal requis
         }
         
-        const response = await fetch('/api/contact.php', {
+        const response = await fetch('/api/guide-download', {
           method: 'POST',
           body: formData
         });

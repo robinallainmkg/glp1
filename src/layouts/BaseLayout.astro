@@ -22,7 +22,15 @@ const footerProducts = getProductsByBrand('Talika', 1);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-48.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#16a34a">
+  
   <link rel="canonical" href={canonicalURL}>
   
   <!-- SEO Meta Tags -->
@@ -55,7 +63,8 @@ const footerProducts = getProductsByBrand('Talika', 1);
 </head>
 <body>
   <header class="header">
-    <nav class="nav container">
+    <div class="header-container">
+      <!-- Logo -->
       <div class="nav-brand">
         <a href="/" class="brand-link" aria-label="Accueil GLP-1 France" style="display:flex;align-items:center;gap:0.75rem;">
           <span class="brand-logo" style="display:inline-block;vertical-align:middle;">
@@ -75,47 +84,37 @@ const footerProducts = getProductsByBrand('Talika', 1);
         </a>
       </div>
 
-      <!-- Barre de recherche -->
-      <div class="search-container">
-        <div class="search-box">
-          <input 
-            type="text" 
-            placeholder="Rechercher un article..." 
-            id="search-input"
-            class="search-input"
-            autocomplete="off"
-          >
-          <div class="search-icon">🔍</div>
-          <div id="search-results" class="search-results hidden"></div>
-          <div id="search-suggestions" class="search-suggestions hidden"></div>
-        </div>
-      </div>
-      
+      <!-- Menu de navigation -->
       <div class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item">
             <a href="/guides/quel-traitement-glp1-choisir/" class="nav-link diagnostic-highlight">🎯 Diagnostic</a>
           </li>
           <li class="nav-item">
-            <a href="/glp1-perte-de-poids/" class="nav-link">Perdre du Poids</a>
+            <a href="/collections/medicaments-glp1/" class="nav-link">Médicaments</a>
           </li>
           <li class="nav-item">
             <a href="/collections/glp1-cout/" class="nav-link">Prix</a>
           </li>
           <li class="nav-item">
-            <a href="/collections/medicaments-glp1/" class="nav-link">Médicaments</a>
+            <a href="/temoignages/avant-apres-glp1/" class="nav-link">Témoignages</a>
+          </li>
+          <li class="nav-item">
+            <a href="/glp1-perte-de-poids/" class="nav-link">Perdre du Poids</a>
           </li>
           <li class="nav-item">
             <a href="/collections/effets-secondaires-glp1/" class="nav-link">Effets</a>
           </li>
           <li class="nav-item">
-            <a href="/temoignages/avant-apres-glp1/" class="nav-link">Témoignages</a>
+            <a href="/guides/qu-est-ce-que-glp1/" class="nav-link">Qu'est-ce que GLP-1 ?</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- Menu Plus avec éléments moins prioritaires -->
+          <li class="nav-item dropdown" id="more-dropdown">
             <a href="#" class="nav-link dropdown-toggle">Plus ▼</a>
-            <ul class="dropdown-menu">
-              <li><a href="/guides/qu-est-ce-que-glp1/" class="dropdown-link">Qu'est-ce que GLP-1 ?</a></li>
+            <ul class="dropdown-menu" id="overflow-menu">
+              <li><a href="/contact/" class="dropdown-link">Contact</a></li>
               <li><a href="/guides/experts/" class="dropdown-link">Nos Experts</a></li>
+              <li><a href="/temoignages/avant-apres-glp1/" class="dropdown-link">Témoignages</a></li>
               <li><a href="/guides/guide-beaute-perte-de-poids-glp1/" class="dropdown-link">Guide Gratuit</a></li>
               <li><a href="/collections/glp1-diabete/" class="dropdown-link">Diabète</a></li>
               <li><a href="/collections/regime-glp1/" class="dropdown-link">Régime</a></li>
@@ -126,11 +125,29 @@ const footerProducts = getProductsByBrand('Talika', 1);
           </li>
         </ul>
       </div>
+
+      <!-- Barre de recherche à droite -->
+      <div class="search-container">
+        <div class="search-box">
+          <input 
+            type="text" 
+            placeholder="" 
+            id="search-input"
+            class="search-input compact"
+            autocomplete="off"
+            data-placeholder="Rechercher un article..."
+          >
+          <div class="search-icon">🔍</div>
+          <div id="search-results" class="search-results hidden"></div>
+          <div id="search-suggestions" class="search-suggestions hidden"></div>
+        </div>
+      </div>
       
+      <!-- Menu hamburger mobile -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
-    </nav>
+    </div>
   </header>
   
   <main class="main">
@@ -256,15 +273,13 @@ const footerProducts = getProductsByBrand('Talika', 1);
           console.log('📧 Email à envoyer:', email);
           console.log('📍 Source:', source);
           
-          // Envoyer vers le script PHP newsletter
-          const url = `/api/newsletter.php?action=newsletter&email=${encodeURIComponent(email)}&source=${encodeURIComponent(source)}`;
-          console.log('📤 Envoi vers newsletter PHP:', url);
-          
-          let response = await fetch(url, {
-            method: 'GET'
+          // Envoyer vers notre API Supabase
+          const response = await fetch('/api/newsletter', {
+            method: 'POST',
+            body: formData
           });
           
-          console.log('📥 Réponse newsletter PHP - Status:', response.status);
+          console.log('📥 Réponse newsletter API - Status:', response.status);
           
           if (response.ok) {
             const result = await response.json();
@@ -304,24 +319,6 @@ const footerProducts = getProductsByBrand('Talika', 1);
         }
       });
     }
-
-    // Dropdown menu functionality
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-      const toggle = dropdown.querySelector('.dropdown-toggle');
-      const menu = dropdown.querySelector('.dropdown-menu');
-      
-      toggle?.addEventListener('click', (e) => {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
-      });
-      
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target)) {
-          dropdown.classList.remove('active');
-        }
-      });
-    });
 
     // Base de données des articles pour la recherche - Étendue avec plus d'articles
     const articlesData = [
@@ -547,6 +544,11 @@ const footerProducts = getProductsByBrand('Talika', 1);
     });
 
     searchInput?.addEventListener('focus', () => {
+      // Expand search bar and show placeholder
+      searchInput.classList.add('expanded');
+      searchInput.placeholder = searchInput.dataset.placeholder || "Rechercher un article...";
+      document.querySelector('.search-container').classList.add('expanded');
+      
       if (searchInput.value.length === 0) {
         showPopularKeywords();
       }
@@ -555,6 +557,12 @@ const footerProducts = getProductsByBrand('Talika', 1);
     searchInput?.addEventListener('blur', () => {
       // Délai plus long pour permettre les clics sur les suggestions
       setTimeout(() => {
+        // Contract search bar and hide placeholder if empty
+        if (searchInput.value.length === 0) {
+          searchInput.classList.remove('expanded');
+          searchInput.placeholder = "";
+          document.querySelector('.search-container').classList.remove('expanded');
+        }
         hideSearchResults();
       }, 150);
     });
@@ -792,11 +800,45 @@ const footerProducts = getProductsByBrand('Talika', 1);
       return text.replace(regex, '<mark>$1</mark>');
     }
     
+    // Gestion simple du dropdown "Plus"
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Initializing dropdown...');
+      const moreDropdown = document.getElementById('more-dropdown');
+      console.log('More dropdown found:', !!moreDropdown);
+      
+      if (moreDropdown) {
+        const dropdownToggle = moreDropdown.querySelector('.dropdown-toggle');
+        console.log('Dropdown toggle found:', !!dropdownToggle);
+        
+        if (dropdownToggle) {
+          dropdownToggle.addEventListener('click', (e) => {
+            console.log('Dropdown clicked!');
+            e.preventDefault();
+            moreDropdown.classList.toggle('active');
+            console.log('Dropdown active:', moreDropdown.classList.contains('active'));
+          });
+          
+          // Fermer le dropdown si on clique ailleurs
+          document.addEventListener('click', (e) => {
+            if (!moreDropdown.contains(e.target)) {
+              moreDropdown.classList.remove('active');
+            }
+          });
+        }
+      }
+    });
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Skip empty or invalid href values
+        if (!href || href === '#' || href.length <= 1) {
+          return;
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',

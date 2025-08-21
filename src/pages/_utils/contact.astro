@@ -644,7 +644,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         try {
           const formData = new FormData(form);
           
-          const response = await fetch('/api/contact.php', {
+          const response = await fetch('/api/contact', {
             method: 'POST',
             body: formData
           });

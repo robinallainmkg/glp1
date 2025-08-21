@@ -8,29 +8,29 @@ const articles = await getCollection('medicaments-glp1');
 
 // Configuration des couleurs
 const colors = {
-  bg: 'indigo',
-  text: 'indigo-800',
-  badge: 'indigo-100'
+  bg: 'green',
+  text: 'green-800',
+  badge: 'green-100'
 };
 ---
 
 <BaseLayout 
-  title="Médicaments GLP-1 - Guide complet des GLP-1"
-  description="Guide complet des médicaments GLP-1 : Ozempic, Wegovy, Mounjaro"
-  keywords="medicaments glp1, glp1, médicaments glp-1"
+  title="Médicaments GLP-1 - Guide complet des traitements"
+  description="Guide complet sur les médicaments GLP-1 : Ozempic, Wegovy, Saxenda, Trulicity et autres agonistes du récepteur GLP-1"
+  keywords="médicaments glp1, ozempic, wegovy, saxenda, trulicity, agonistes glp1"
 >
 
 <div class="container">
   <div class="max-w-6xl mx-auto">
     
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-2xl p-8 mb-8">
+    <div class="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-2xl p-8 mb-8">
       <div class="flex items-center gap-4 mb-4">
         <div class="text-4xl">💊</div>
         <h1 class="text-4xl font-bold">Médicaments GLP-1</h1>
       </div>
       <p class="text-xl opacity-90 mb-4">
-        Guide complet des médicaments GLP-1 : Ozempic, Wegovy, Mounjaro
+        Guide complet sur les traitements GLP-1 disponibles en France
       </p>
       <div class="bg-white/20 rounded-lg p-4 inline-block">
         <span class="font-semibold">{articles.length} articles disponibles</span>
@@ -42,7 +42,7 @@ const colors = {
       <div class="mb-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Médicaments GLP-1</h2>
         <p class="text-lg text-gray-600">
-          Guide complet des médicaments GLP-1 : Ozempic, Wegovy, Mounjaro
+          Découvrez tous les médicaments GLP-1 : indications, posologies, effets secondaires et comparaisons
         </p>
       </div>
       
@@ -59,27 +59,31 @@ const colors = {
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-12 bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-2xl mt-12">
-      <div class="text-center px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">
-          Besoin d'informations personnalisées ?
-        </h2>
-        <p class="text-lg text-gray-700 mb-8">
-          Consultez notre guide complet et téléchargez nos ressources gratuites.
-        </p>
-        <a 
-          href="/guide-beaute-perte-de-poids-glp1/" 
-          class="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-xl"
-        >
-          <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-          </svg>
-          Télécharger le guide gratuit
-        </a>
-      </div>
-    </section>
   </div>
 </div>
 
 </BaseLayout>
+
+<style>
+  .collection-articles {
+    margin-bottom: 3rem;
+  }
+  
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .bg-gradient-to-r {
+      padding: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

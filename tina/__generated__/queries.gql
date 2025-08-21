@@ -1,3 +1,58 @@
+query pages_statiques($relativePath: String!) {
+  pages_statiques(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Pages_statiquesParts
+  }
+}
+
+query pages_statiquesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Pages_statiquesFilter) {
+  pages_statiquesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Pages_statiquesParts
+      }
+    }
+  }
+}
+
 query medicaments_glp1($relativePath: String!) {
   medicaments_glp1(relativePath: $relativePath) {
     ... on Document {

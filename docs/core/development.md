@@ -1,13 +1,310 @@
-# 👨‍💻 Workflow de Développement
+# Workflow de Développement - GLP-1 France
 
-> Guide complet pour le développement quotidien sur le projet GLP-1 France
+## Vue d'ensemble
 
-## 🚀 Démarrage Rapide
+Guide complet pour le développement quotidien, incluant les commandes essentielles, le workflow éditorial et les bonnes pratiques.
 
-### Commandes Essentielles
+## � Démarrage Quotidien
+
+### Commandes de Base
+
 ```bash
-# Démarrer le développement
+# Navigation vers le projet
 cd glp1-github
+
+# Démarrage développement standard
+npm run dev
+
+# Démarrage avec TinaCMS (pour contenu)
+npm run dev:tina
+
+# Build et test
+npm run build
+npm run preview
+```
+
+### URLs d'Accès
+
+- **Site principal** : http://localhost:4321/
+- **Admin TinaCMS** : http://localhost:4321/admin
+- **Dashboard Admin** : http://localhost:4321/admin/
+
+## � Workflow Éditorial
+
+### 1. Création d'Articles via TinaCMS
+
+```bash
+# Démarrer TinaCMS
+npm run dev:tina
+```
+
+1. Aller sur http://localhost:4321/admin
+2. Sélectionner la collection appropriée
+3. Créer un nouvel article
+4. Remplir les métadonnées SEO
+5. Ajouter l'image principale
+6. Sauvegarder (commit automatique)
+
+### 2. Structure d'un Article
+
+```markdown
+---
+title: "Titre SEO optimisé"
+description: "Description meta pour SEO"
+image: "/images/uploads/article-image.jpg"
+imageAlt: "Description alternative de l'image"
+author: "dr-claire-morel"
+date: "2025-08-20"
+categories: ["medicaments-glp1"]
+featured: false
+---
+
+# Contenu de l'article
+
+Introduction engageante...
+
+## Sections structurées
+
+Contenu détaillé avec headers H2, H3...
+```
+
+### 3. Gestion des Images
+
+#### Via TinaCMS
+- Upload direct dans l'éditeur
+- Compression automatique
+- Alt text obligatoire
+- Formats supportés : JPG, PNG, WebP
+
+#### Via Script
+```bash
+# Génération automatique de thumbnails
+node scripts/generate-thumbnails.mjs
+
+# Optimisation des images existantes
+npm run optimize:images
+```
+
+#### Structure recommandée
+```
+public/images/
+├── thumbnails/          # Auto-générées (400x200px)
+├── uploads/            # Via TinaCMS
+├── experts/            # Photos d'experts (80x80px)
+├── collections/        # Images de collections
+└── og/                # Images Open Graph (1200x630px)
+```
+
+## 🛠️ Développement Technique
+
+### Architecture du Projet
+
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── AffiliateProduct.astro
+│   ├── ArticleCard.astro
+│   └── SearchBox.astro
+├── layouts/            # Templates de page
+│   ├── BaseLayout.astro
+│   ├── ArticleLayout.astro
+│   └── CollectionLayout.astro
+├── pages/              # Pages du site
+│   ├── api/           # Endpoints API
+│   ├── admin/         # Interface admin
+│   ├── collections/   # Pages de collections
+│   └── guides/        # Pages de guides
+├── content/           # Contenu géré par TinaCMS
+│   ├── medicaments-glp1/
+│   ├── glp1-perte-de-poids/
+│   └── autres-collections/
+└── utils/             # Fonctions utilitaires
+    ├── affiliate-manager.ts
+    └── content-helpers.ts
+```
+
+### Configuration TinaCMS
+
+Le schema TinaCMS est défini dans `.tina/config.ts` :
+
+```typescript
+// Collections principales
+collections: [
+  {
+    name: "medicaments-glp1",
+    label: "Médicaments GLP-1",
+    path: "src/content/medicaments-glp1",
+    fields: [
+      { name: "title", type: "string", required: true },
+      { name: "description", type: "string" },
+      { name: "image", type: "image" },
+      { name: "body", type: "rich-text" }
+    ]
+  },
+  // ... autres collections
+]
+```
+
+### APIs et Data Management
+
+#### Structure des APIs
+```
+src/pages/api/
+├── contact.ts          # Formulaire de contact
+├── guide-beauty.ts     # Téléchargement guide
+└── admin-data.ts       # Administration données
+```
+
+#### Gestion des données
+```
+data/
+├── users-unified.json           # Base utilisateurs
+├── contact-submissions.json     # Messages contact
+├── newsletter-subscribers.json  # Newsletter
+├── affiliate-products.json     # Produits affiliés
+└── collections.json            # Métadonnées collections
+```
+
+## � Workflow Git
+
+### Branches principales
+- `production` : Code de production
+- `develop` : Développement actuel
+- `feature/*` : Nouvelles fonctionnalités
+
+### Processus de développement
+
+```bash
+# 1. Créer une branche feature
+git checkout -b feature/nouvelle-fonctionnalite
+
+# 2. Développer et tester
+npm run dev
+npm run build
+
+# 3. Commit et push
+git add .
+git commit -m "feat: ajouter nouvelle fonctionnalité"
+git push origin feature/nouvelle-fonctionnalite
+
+# 4. Merge vers develop puis production
+git checkout develop
+git merge feature/nouvelle-fonctionnalite
+git push origin develop
+```
+
+## 🧪 Tests et Validation
+
+### Tests de Build
+```bash
+# Test complet de build
+npm run build
+
+# Preview du build
+npm run preview
+
+# Vérification des types
+npm run check
+
+# Formatage du code
+npm run format
+```
+
+### Tests de Contenu
+- Vérifier les liens internes
+- Tester les formulaires
+- Valider les métadonnées SEO
+- Contrôler l'affichage des images
+
+### Tests de Performance
+```bash
+# Analyse du bundle
+npm run build:analyze
+
+# Test de performance
+npm run lighthouse
+```
+
+## 🚨 Debug et Troubleshooting
+
+### Problèmes courants
+
+#### TinaCMS ne démarre pas
+```bash
+rm -rf .tina
+npx @tinacms/cli@latest build
+npm run dev:tina
+```
+
+#### Images manquantes
+```bash
+# Vérifier la structure
+ls public/images/thumbnails/
+
+# Régénérer si besoin
+node scripts/generate-thumbnails.mjs
+```
+
+#### Erreurs de build
+```bash
+# Nettoyer le cache
+rm -rf dist .astro node_modules/.cache
+npm install
+npm run build
+```
+
+### Logs utiles
+
+```bash
+# Mode debug Astro
+DEBUG=astro:* npm run dev
+
+# Logs détaillés TinaCMS  
+TINA_DEBUG=1 npm run dev:tina
+```
+
+## 📊 Monitoring et Analytics
+
+### Dashboard Admin
+- **URL** : http://localhost:4321/admin/
+- **Données** : Utilisateurs, affiliation, analytics
+- **Export** : CSV, JSON
+
+### Métriques importantes
+- Inscriptions newsletter
+- Téléchargements guide
+- Clics affiliation
+- Pages vues par collection
+
+## ⚡ Scripts de Maintenance
+
+```bash
+# Génération d'images
+npm run generate:images
+
+# Optimisation complète
+npm run optimize:all
+
+# Nettoyage cache
+npm run clean
+
+# Backup données
+npm run backup:data
+
+# Validation liens
+npm run check:links
+```
+
+## 📚 Références Développement
+
+- [Architecture](architecture.md) - Structure technique
+- [Deployment](deployment.md) - Mise en production
+- [Features/Content Management](../features/content-management.md) - Gestion contenu
+- [Operations/Troubleshooting](../operations/troubleshooting.md) - Résolution problèmes
+
+---
+
+> **Tip** : Utilisez `npm run dev:tina` pour l'édition de contenu et `npm run dev` pour le développement technique.
 npm run dev:tina        # Site + TinaCMS (recommandé)
 # ou
 npm run dev            # Site seul (plus rapide)

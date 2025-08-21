@@ -82,6 +82,8 @@ export type Query = {
   collections: Array<Collection>;
   node: Node;
   document: DocumentNode;
+  pages_statiques: Pages_Statiques;
+  pages_statiquesConnection: Pages_StatiquesConnection;
   medicaments_glp1: Medicaments_Glp1;
   medicaments_glp1Connection: Medicaments_Glp1Connection;
   glp1_perte_de_poids: Glp1_Perte_De_Poids;
@@ -121,6 +123,21 @@ export type QueryNodeArgs = {
 export type QueryDocumentArgs = {
   collection?: InputMaybe<Scalars['String']['input']>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryPages_StatiquesArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryPages_StatiquesConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<Pages_StatiquesFilter>;
 };
 
 
@@ -259,6 +276,7 @@ export type QueryAlternatives_Glp1ConnectionArgs = {
 };
 
 export type DocumentFilter = {
+  pages_statiques?: InputMaybe<Pages_StatiquesFilter>;
   medicaments_glp1?: InputMaybe<Medicaments_Glp1Filter>;
   glp1_perte_de_poids?: InputMaybe<Glp1_Perte_De_PoidsFilter>;
   glp1_cout?: InputMaybe<Glp1_CoutFilter>;
@@ -307,7 +325,60 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Medicaments_Glp1 | Glp1_Perte_De_Poids | Glp1_Cout | Glp1_Diabete | Effets_Secondaires_Glp1 | Medecins_Glp1_France | Recherche_Glp1 | Regime_Glp1 | Alternatives_Glp1 | Folder;
+export type DocumentNode = Pages_Statiques | Medicaments_Glp1 | Glp1_Perte_De_Poids | Glp1_Cout | Glp1_Diabete | Effets_Secondaires_Glp1 | Medecins_Glp1_France | Recherche_Glp1 | Regime_Glp1 | Alternatives_Glp1 | Folder;
+
+export type Pages_Statiques = Node & Document & {
+  __typename?: 'Pages_statiques';
+  title: Scalars['String']['output'];
+  description: Scalars['String']['output'];
+  slug: Scalars['String']['output'];
+  pageType?: Maybe<Scalars['String']['output']>;
+  noIndex?: Maybe<Scalars['Boolean']['output']>;
+  body?: Maybe<Scalars['JSON']['output']>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type StringFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type BooleanFilter = {
+  eq?: InputMaybe<Scalars['Boolean']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type RichTextFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type Pages_StatiquesFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  slug?: InputMaybe<StringFilter>;
+  pageType?: InputMaybe<StringFilter>;
+  noIndex?: InputMaybe<BooleanFilter>;
+  body?: InputMaybe<RichTextFilter>;
+};
+
+export type Pages_StatiquesConnectionEdges = {
+  __typename?: 'Pages_statiquesConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Pages_Statiques>;
+};
+
+export type Pages_StatiquesConnection = Connection & {
+  __typename?: 'Pages_statiquesConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<Pages_StatiquesConnectionEdges>>>;
+};
 
 export type Medicaments_Glp1ReadingTime = {
   __typename?: 'Medicaments_glp1ReadingTime';
@@ -342,13 +413,6 @@ export type Medicaments_Glp1 = Node & Document & {
   _values: Scalars['JSON']['output'];
 };
 
-export type StringFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
 export type DatetimeFilter = {
   after?: InputMaybe<Scalars['String']['input']>;
   before?: InputMaybe<Scalars['String']['input']>;
@@ -364,11 +428,6 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type BooleanFilter = {
-  eq?: InputMaybe<Scalars['Boolean']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
 export type NumberFilter = {
   lt?: InputMaybe<Scalars['Float']['input']>;
   lte?: InputMaybe<Scalars['Float']['input']>;
@@ -377,12 +436,6 @@ export type NumberFilter = {
   eq?: InputMaybe<Scalars['Float']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
-};
-
-export type RichTextFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 export type Medicaments_Glp1ReadingTimeFilter = {
@@ -1025,6 +1078,8 @@ export type Mutation = {
   deleteDocument: DocumentNode;
   createDocument: DocumentNode;
   createFolder: DocumentNode;
+  updatePages_statiques: Pages_Statiques;
+  createPages_statiques: Pages_Statiques;
   updateMedicaments_glp1: Medicaments_Glp1;
   createMedicaments_glp1: Medicaments_Glp1;
   updateGlp1_perte_de_poids: Glp1_Perte_De_Poids;
@@ -1076,6 +1131,18 @@ export type MutationCreateDocumentArgs = {
 export type MutationCreateFolderArgs = {
   collection?: InputMaybe<Scalars['String']['input']>;
   relativePath: Scalars['String']['input'];
+};
+
+
+export type MutationUpdatePages_StatiquesArgs = {
+  relativePath: Scalars['String']['input'];
+  params: Pages_StatiquesMutation;
+};
+
+
+export type MutationCreatePages_StatiquesArgs = {
+  relativePath: Scalars['String']['input'];
+  params: Pages_StatiquesMutation;
 };
 
 
@@ -1187,6 +1254,7 @@ export type MutationCreateAlternatives_Glp1Args = {
 };
 
 export type DocumentUpdateMutation = {
+  pages_statiques?: InputMaybe<Pages_StatiquesMutation>;
   medicaments_glp1?: InputMaybe<Medicaments_Glp1Mutation>;
   glp1_perte_de_poids?: InputMaybe<Glp1_Perte_De_PoidsMutation>;
   glp1_cout?: InputMaybe<Glp1_CoutMutation>;
@@ -1200,6 +1268,7 @@ export type DocumentUpdateMutation = {
 };
 
 export type DocumentMutation = {
+  pages_statiques?: InputMaybe<Pages_StatiquesMutation>;
   medicaments_glp1?: InputMaybe<Medicaments_Glp1Mutation>;
   glp1_perte_de_poids?: InputMaybe<Glp1_Perte_De_PoidsMutation>;
   glp1_cout?: InputMaybe<Glp1_CoutMutation>;
@@ -1209,6 +1278,15 @@ export type DocumentMutation = {
   recherche_glp1?: InputMaybe<Recherche_Glp1Mutation>;
   regime_glp1?: InputMaybe<Regime_Glp1Mutation>;
   alternatives_glp1?: InputMaybe<Alternatives_Glp1Mutation>;
+};
+
+export type Pages_StatiquesMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
+  pageType?: InputMaybe<Scalars['String']['input']>;
+  noIndex?: InputMaybe<Scalars['Boolean']['input']>;
+  body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
 export type Medicaments_Glp1ReadingTimeMutation = {
@@ -1463,6 +1541,8 @@ export type Alternatives_Glp1Mutation = {
   readingTime?: InputMaybe<Alternatives_Glp1ReadingTimeMutation>;
 };
 
+export type Pages_StatiquesPartsFragment = { __typename: 'Pages_statiques', title: string, description: string, slug: string, pageType?: string | null, noIndex?: boolean | null, body?: any | null };
+
 export type Medicaments_Glp1PartsFragment = { __typename: 'Medicaments_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Medicaments_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
 
 export type Glp1_Perte_De_PoidsPartsFragment = { __typename: 'Glp1_perte_de_poids', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Glp1_perte_de_poidsReadingTime', minutes?: number | null, text?: string | null } | null };
@@ -1480,6 +1560,25 @@ export type Recherche_Glp1PartsFragment = { __typename: 'Recherche_glp1', title:
 export type Regime_Glp1PartsFragment = { __typename: 'Regime_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Regime_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
 
 export type Alternatives_Glp1PartsFragment = { __typename: 'Alternatives_glp1', title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null };
+
+export type Pages_StatiquesQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type Pages_StatiquesQuery = { __typename?: 'Query', pages_statiques: { __typename: 'Pages_statiques', id: string, title: string, description: string, slug: string, pageType?: string | null, noIndex?: boolean | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type Pages_StatiquesConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<Pages_StatiquesFilter>;
+}>;
+
+
+export type Pages_StatiquesConnectionQuery = { __typename?: 'Query', pages_statiquesConnection: { __typename?: 'Pages_statiquesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Pages_statiquesConnectionEdges', cursor: string, node?: { __typename: 'Pages_statiques', id: string, title: string, description: string, slug: string, pageType?: string | null, noIndex?: boolean | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type Medicaments_Glp1QueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1652,6 +1751,17 @@ export type Alternatives_Glp1ConnectionQueryVariables = Exact<{
 
 export type Alternatives_Glp1ConnectionQuery = { __typename?: 'Query', alternatives_glp1Connection: { __typename?: 'Alternatives_glp1Connection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'Alternatives_glp1ConnectionEdges', cursor: string, node?: { __typename: 'Alternatives_glp1', id: string, title: string, description: string, slug: string, pubDate: string, updatedDate?: string | null, author?: string | null, category: string, tags?: string | null, collection: string, thumbnail?: string | null, thumbnailAlt?: string | null, ogImage?: string | null, featured?: boolean | null, priority?: number | null, metaTitle?: string | null, canonicalUrl?: string | null, noIndex?: boolean | null, schema?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, readingTime?: { __typename: 'Alternatives_glp1ReadingTime', minutes?: number | null, text?: string | null } | null } | null } | null> | null } };
 
+export const Pages_StatiquesPartsFragmentDoc = gql`
+    fragment Pages_statiquesParts on Pages_statiques {
+  __typename
+  title
+  description
+  slug
+  pageType
+  noIndex
+  body
+}
+    `;
 export const Medicaments_Glp1PartsFragmentDoc = gql`
     fragment Medicaments_glp1Parts on Medicaments_glp1 {
   __typename
@@ -1913,6 +2023,63 @@ export const Alternatives_Glp1PartsFragmentDoc = gql`
   }
 }
     `;
+export const Pages_StatiquesDocument = gql`
+    query pages_statiques($relativePath: String!) {
+  pages_statiques(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Pages_statiquesParts
+  }
+}
+    ${Pages_StatiquesPartsFragmentDoc}`;
+export const Pages_StatiquesConnectionDocument = gql`
+    query pages_statiquesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Pages_statiquesFilter) {
+  pages_statiquesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Pages_statiquesParts
+      }
+    }
+  }
+}
+    ${Pages_StatiquesPartsFragmentDoc}`;
 export const Medicaments_Glp1Document = gql`
     query medicaments_glp1($relativePath: String!) {
   medicaments_glp1(relativePath: $relativePath) {
@@ -2429,7 +2596,13 @@ export const Alternatives_Glp1ConnectionDocument = gql`
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      medicaments_glp1(variables: Medicaments_Glp1QueryVariables, options?: C): Promise<{data: Medicaments_Glp1Query, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Medicaments_Glp1QueryVariables, query: string}> {
+      pages_statiques(variables: Pages_StatiquesQueryVariables, options?: C): Promise<{data: Pages_StatiquesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Pages_StatiquesQueryVariables, query: string}> {
+        return requester<{data: Pages_StatiquesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Pages_StatiquesQueryVariables, query: string}, Pages_StatiquesQueryVariables>(Pages_StatiquesDocument, variables, options);
+      },
+    pages_statiquesConnection(variables?: Pages_StatiquesConnectionQueryVariables, options?: C): Promise<{data: Pages_StatiquesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Pages_StatiquesConnectionQueryVariables, query: string}> {
+        return requester<{data: Pages_StatiquesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Pages_StatiquesConnectionQueryVariables, query: string}, Pages_StatiquesConnectionQueryVariables>(Pages_StatiquesConnectionDocument, variables, options);
+      },
+    medicaments_glp1(variables: Medicaments_Glp1QueryVariables, options?: C): Promise<{data: Medicaments_Glp1Query, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Medicaments_Glp1QueryVariables, query: string}> {
         return requester<{data: Medicaments_Glp1Query, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Medicaments_Glp1QueryVariables, query: string}, Medicaments_Glp1QueryVariables>(Medicaments_Glp1Document, variables, options);
       },
     medicaments_glp1Connection(variables?: Medicaments_Glp1ConnectionQueryVariables, options?: C): Promise<{data: Medicaments_Glp1ConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: Medicaments_Glp1ConnectionQueryVariables, query: string}> {

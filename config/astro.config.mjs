@@ -9,6 +9,7 @@ export default defineConfig({
   integrations: [sitemap(), tailwind()],
   server: {
     port: 4321,
+    host: '127.0.0.1',  // Force IPv4
     open: true
   },
   build: {

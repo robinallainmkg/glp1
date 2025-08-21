@@ -1,52 +1,328 @@
-# 🏗️ Architecture Technique
+# Architecture Technique - GLP-1 France
 
-> Architecture complète du site GLP-1 France avec APIs, base de données et déploiement
+## Vue d'ensemble
 
-## 📋 Vue d'Ensemble
+Architecture complète du projet GLP-1 France, incluant la structure technique, les APIs, et les décisions d'architecture.
+
+## 🏗️ Architecture Générale
 
 ### Stack Technique
-- **Frontend** : Astro.js v4.16+ avec TailwindCSS
-- **CMS** : TinaCMS pour la gestion de contenu
-- **Base de données** : Supabase (migration depuis JSON)
-- **Hébergement** : Hostinger (mode statique)
-- **Déploiement** : Scripts PowerShell automatisés
+- **Framework** : Astro.js v4.16.18 (Static Site Generator)
+- **CMS** : TinaCMS (Headless CMS)
+- **Base de données** : Supabase + JSON Files
+- **Styling** : CSS Custom Properties + Tailwind (composants)
+- **Images** : SVG auto-génération + optimisation
+- **Déploiement** : Mode statique (Hostinger)
 
-### Architecture Hybride
+### Configuration Astro
+
+```typescript
+// astro.config.mjs
+export default defineConfig({
+  output: 'static',           // Mode statique pour hébergement
+  site: 'https://glp1-france.fr',
+  integrations: [
+    tailwind(),
+    sitemap(),
+    tina(),
+  ],
+  vite: {
+    optimizeDeps: {
+      include: ['tinacms']
+    }
+  }
+});
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Astro.js      │    │    TinaCMS      │    │   Supabase      │
-│   (Static)      │◄──►│   (Content)     │◄──►│  (Database)     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Hostinger     │    │   GitHub        │    │   APIs REST     │
-│   (Production)  │◄──►│   (Source)      │◄──►│   (Backend)     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+
+## 📁 Structure du Projet
+
+```
+glp1-github/
+├── src/
+│   ├── components/          # Composants réutilisables
+│   │   ├── AffiliateProduct.astro
+│   │   ├── ArticleCard.astro
+│   │   ├── SearchBox.astro
+│   │   └── ExpertCard.astro
+│   ├── layouts/            # Templates de page
+│   │   ├── BaseLayout.astro         # Layout principal
+│   │   ├── ArticleLayout.astro      # Articles
+│   │   ├── CollectionLayout.astro   # Collections
+│   │   └── AdminLayout.astro        # Interface admin
+│   ├── pages/              # Pages du site
+│   │   ├── api/           # Endpoints API
+│   │   ├── admin/         # Interface administration
+│   │   ├── collections/   # Pages de collections
+│   │   ├── guides/        # Pages de guides
+│   │   └── index.astro    # Homepage
+│   ├── content/           # Contenu géré par TinaCMS
+│   │   ├── medicaments-glp1/
+│   │   ├── glp1-perte-de-poids/
+│   │   ├── glp1-diabete/
+│   │   └── [autres-collections]/
+│   ├── styles/            # Feuilles de style
+│   │   ├── global.css     # Styles globaux
+│   │   └── components.css # Styles composants
+│   └── utils/             # Fonctions utilitaires
+│       ├── affiliate-manager.ts
+│       ├── content-helpers.ts
+│       └── seo-helpers.ts
+├── public/
+│   ├── images/            # Assets images
+│   │   ├── thumbnails/    # Auto-générées
+│   │   ├── uploads/       # Via TinaCMS
+│   │   └── experts/       # Photos d'experts
+│   └── api/               # APIs PHP (production)
+├── data/                  # Base de données JSON
+│   ├── users-unified.json
+│   ├── affiliate-products.json
+│   └── [autres-données].json
+├── scripts/               # Scripts de maintenance
+│   ├── generate-thumbnails.mjs
+│   └── deployment/
+└── docs/                  # Documentation
+    ├── core/
+    ├── features/
+    └── operations/
 ```
 
-## 🗄️ Base de Données
+## 🔌 Architecture des APIs
 
-### Migration Supabase (Terminée)
+### Décisions Techniques
 
-**Avant** : Fichiers JSON locaux
+**Problème** : Astro en mode `output: 'static'` ne supporte pas les endpoints API TypeScript en production.
+
+**Solution** : Système hybride TypeScript (dev) + PHP (production)
+
+### Structure des APIs
+
+#### Développement Local (TypeScript)
+```
+src/pages/api/
+├── contact.ts          # Formulaire contact + newsletter
+├── guide-beauty.ts     # Téléchargement guide
+└── admin-data.ts       # Administration données
+```
+
+#### Production (PHP)
+```
+public/api/
+├── users.php           # Gestion utilisateurs
+├── delete-user.php     # Suppression utilisateur
+└── contact.php         # Formulaire contact
+```
+
+### Détection d'Environnement
+
+```typescript
+// utils/environment.ts
+export function isProduction(): boolean {
+  return typeof window !== 'undefined' && 
+         !window.location.hostname.includes('localhost');
+}
+
+export function getApiUrl(endpoint: string): string {
+  if (isProduction()) {
+    return `https://glp1-france.fr/api/${endpoint}.php`;
+  }
+  return `/api/${endpoint}`;
+}
+```
+
+## � Gestion des Données
+
+### Stratégie Hybride
+
+1. **Développement** : JSON files + Supabase (optionnel)
+2. **Production** : JSON files + backups automatiques
+
+### Structure des Données
+
+```typescript
+// Types principaux
+interface User {
+  id: string;
+  email: string;
+  name?: string;
+  source: string;
+  preferences: object;
+  created_at: string;
+}
+
+interface AffiliateProduct {
+  id: string;
+  name: string;
+  brand: string;
+  price: number;
+  discount_price?: number;
+  affiliate_url: string;
+  promo_code?: string;
+  description: string;
+  image_url: string;
+}
+```
+
+### Fichiers de Données
+
 ```
 data/
-├── contact-submissions.json
-├── newsletter-subscribers.json
-├── guide-downloads.json
-├── users-unified.json
-└── affiliate-products.json
+├── users-unified.json           # Base utilisateurs unifiée
+├── contact-submissions.json     # Messages de contact
+├── newsletter-subscribers.json  # Inscrits newsletter
+├── guide-downloads.json        # Téléchargements guide
+├── affiliate-products.json     # Produits d'affiliation
+├── authors-testimonials.json   # Auteurs et témoignages
+├── collections.json            # Métadonnées collections
+└── backups/                    # Sauvegardes automatiques
+    ├── users-2025-08-20.json
+    └── [autres-backups].json
 ```
 
-**Après** : Supabase avec RLS
-```sql
--- Tables principales
-users              -- Utilisateurs avec auth
-submissions         -- Contacts et newsletter
-deals              -- Produits affiliés
-guide_downloads    -- Téléchargements guides
+## 🎨 Architecture Frontend
+
+### Layouts Système
+
+#### BaseLayout.astro
+- Layout principal du site
+- Header avec navigation responsive
+- Footer avec liens
+- SEO metadata
+- Scripts Analytics
+
+#### ArticleLayout.astro
+- Template pour articles
+- Intégration produits affiliés
+- Breadcrumbs automatiques
+- Related articles
+- Schema.org markup
+
+#### CollectionLayout.astro
+- Pages de collections
+- Filtrage et tri
+- Pagination
+- Call-to-actions
+
+### Composants Architecture
+
+```typescript
+// Exemple : AffiliateProduct.astro
+---
+interface Props {
+  product: AffiliateProduct;
+  placement: 'sidebar' | 'inline' | 'footer';
+  showDiscount?: boolean;
+}
+
+const { product, placement, showDiscount = true } = Astro.props;
+---
+
+<div class={`affiliate-product affiliate-product--${placement}`}>
+  <!-- Contenu du produit -->
+</div>
+
+<style>
+  .affiliate-product {
+    /* Styles adaptatifs selon placement */
+  }
+</style>
 ```
+
+## 🔍 Architecture SEO
+
+### Métadonnées Automatiques
+
+```typescript
+// utils/seo-helpers.ts
+export function generateSEOData(page: any) {
+  return {
+    title: `${page.title} | GLP-1 France`,
+    description: page.description || page.excerpt,
+    image: page.image || '/images/og-default.jpg',
+    url: `https://glp1-france.fr${page.url}`,
+    type: page.type || 'article',
+    publishedTime: page.date,
+    modifiedTime: page.updated || page.date
+  };
+}
+```
+
+### Schema.org Intégration
+
+Génération automatique de structured data :
+- Article schema pour les posts
+- Organization schema pour l'entreprise
+- Product schema pour les affiliés
+- FAQ schema pour les guides
+
+## 🖼️ Architecture Images
+
+### Génération Automatique
+
+```javascript
+// scripts/generate-thumbnails.mjs
+const imageStyles = {
+  'medicaments-glp1': {
+    gradient: 'linear-gradient(135deg, #3B82F6, #1E40AF)',
+    icon: '💊',
+    textColor: '#FFFFFF'
+  },
+  'glp1-perte-de-poids': {
+    gradient: 'linear-gradient(135deg, #10B981, #059669)',
+    icon: '⚖️',
+    textColor: '#FFFFFF'
+  },
+  // ... autres styles
+};
+```
+
+### Optimisation Performance
+
+1. **SVG pour thumbnails** : Taille minimale, scalable
+2. **WebP pour photos** : Compression optimale
+3. **Lazy loading** : Chargement différé
+4. **Responsive images** : Adaptation device
+
+## 🔒 Architecture Sécurité
+
+### Authentification Admin
+
+```typescript
+// Simple auth pour dashboard admin
+const ADMIN_CREDENTIALS = {
+  username: 'admin',
+  password: 'admin123' // À changer en production
+};
+```
+
+### Validation Données
+
+```typescript
+// Validation email côté serveur
+function validateEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Sanitisation input
+function sanitizeInput(input: string): string {
+  return input.trim().replace(/[<>]/g, '');
+}
+```
+
+### Backup Automatique
+
+```typescript
+// Backup avant modification
+function createBackup(filename: string, data: any) {
+  const timestamp = new Date().toISOString().split('T')[0];
+  const backupPath = `data/backups/${filename}-${timestamp}.json`;
+  fs.writeFileSync(backupPath, JSON.stringify(data, null, 2));
+}
+```
+
+---
+
+> **Note** : Cette architecture évolue selon les besoins. Voir [Development](development.md) pour le workflow quotidien.
 
 ### Configuration Supabase
 ```typescript

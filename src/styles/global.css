@@ -81,6 +81,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Empêche le scroll horizontal global */
 }
 
 body {
@@ -91,6 +92,8 @@ body {
   background-color: var(--gray-50);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+  min-width: 320px; /* Largeur minimale pour très petits écrans */
 }
 
 /* Container */
@@ -121,14 +124,30 @@ body {
   z-index: 50;
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
 }
 
-.nav {
+/* Header container - largeur maximale limitée */
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-4) 0;
-  gap: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  gap: var(--spacing-2); /* Réduit encore plus le gap */
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 70px;
+  width: 100%;
+  overflow: hidden; /* Empêche tout dépassement */
+}
+
+/* Responsive avec largeur maximale contrôlée */
+@media (min-width: 1200px) {
+  .header-container {
+    max-width: 1280px;
+    padding: var(--spacing-3) var(--spacing-6);
+    gap: var(--spacing-4); /* Gap réduit même sur grands écrans */
+  }
 }
 
 .nav-brand {
@@ -158,12 +177,61 @@ body {
   filter: brightness(1.1);
 }
 
-/* Search Container */
-.search-container {
+/* Navigation Menu - prend l'espace central avec limite */
+.nav-menu {
   flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: var(--spacing-4); /* Réduit la marge */
+  max-width: calc(100% - 400px); /* Réserve de l'espace pour le logo et la recherche */
+  overflow: hidden;
+}
+
+/* Navigation Menu responsive */
+@media (max-width: 1024px) {
+  .nav-menu {
+    max-width: calc(100% - 350px);
+    margin-left: var(--spacing-2);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    max-width: calc(100% - 300px);
+    margin-left: var(--spacing-1);
+  }
+}
+
+/* Search Container - positionné à droite */
+.search-container {
+  flex-shrink: 0;
   max-width: 240px;
-  margin: 0 var(--spacing-3);
   position: relative;
+  margin-left: auto;
+  min-width: 50px; /* Largeur minimale */
+}
+
+/* Responsive search container */
+@media (max-width: 1024px) {
+  .search-container {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search-container {
+    max-width: 50px; /* Toujours compact sur petits écrans */
+  }
+}
+
+/* Compact search mode - smaller by default */
+.search-container:not(.expanded) {
+  max-width: 50px;
+  transition: max-width 0.3s ease;
+}
+
+.search-container.expanded {
+  max-width: 240px;
 }
 
 .search-box {
@@ -179,6 +247,22 @@ body {
   font-size: var(--font-size-sm);
   transition: var(--transition);
   background: white;
+}
+
+/* Compact mode styles */
+.search-input.compact {
+  width: 42px;
+  padding: var(--spacing-3) var(--spacing-3);
+  padding-left: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-input.compact:focus,
+.search-input.compact.expanded {
+  width: 220px;
+  padding: var(--spacing-3) var(--spacing-12) var(--spacing-3) var(--spacing-4);
+  cursor: text;
 }
 
 .search-input:focus {
@@ -379,10 +463,26 @@ body {
 .nav-list {
   display: flex;
   list-style: none;
-  gap: var(--spacing-3);
+  gap: var(--spacing-1);
   margin: 0;
   align-items: center;
   white-space: nowrap;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Responsive navigation list */
+@media (max-width: 1200px) {
+  .nav-list {
+    gap: 2px; /* Gap très réduit sur écrans moyens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: 1px; /* Gap minimal sur petits écrans desktop */
+  }
 }
 
 .nav-link {
@@ -390,11 +490,28 @@ body {
   color: var(--gray-600);
   font-weight: 500;
   font-size: var(--font-size-sm);
-  padding: var(--spacing-2) var(--spacing-3);
+  padding: var(--spacing-1) var(--spacing-2);
   border-radius: var(--radius-md);
   transition: var(--transition);
   position: relative;
   white-space: nowrap;
+  flex-shrink: 1; /* Permet la compression si nécessaire */
+  min-width: 0; /* Permet la compression */
+}
+
+/* Responsive nav links */
+@media (max-width: 1200px) {
+  .nav-link {
+    font-size: 0.8rem; /* Texte plus petit */
+    padding: var(--spacing-1) 6px; /* Padding réduit */
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-link {
+    font-size: 0.75rem; /* Texte encore plus petit */
+    padding: 4px; /* Padding minimal */
+  }
 }
 
 .nav-link:hover {
@@ -414,10 +531,45 @@ body {
   color: white !important;
   font-weight: 600;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 6px 12px;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
   transform: translateY(0);
   transition: all 0.3s ease;
+  flex-shrink: 0; /* Ne se compresse jamais */
+}
+
+/* Responsive diagnostic highlight */
+@media (max-width: 1200px) {
+  .nav-link.diagnostic-highlight {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-link.diagnostic-highlight {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Masquer certains éléments sur petits écrans desktop pour éviter le dépassement */
+@media (max-width: 1100px) {
+  .nav-item:nth-child(7) {
+    display: none; /* Cache "Qu'est-ce que GLP-1 ?" */
+  }
+}
+
+@media (max-width: 950px) {
+  .nav-item:nth-child(6) {
+    display: none; /* Cache "Effets" */
+  }
+}
+
+@media (max-width: 850px) {
+  .nav-item:nth-child(5) {
+    display: none; /* Cache "Perdre du Poids" */
+  }
 }
 
 .nav-link.diagnostic-highlight:hover {
@@ -545,8 +697,17 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .header-container {
+    gap: var(--spacing-6);
+    padding: var(--spacing-4) var(--spacing-6);
+  }
+  
+  .nav-menu {
+    margin-left: var(--spacing-4);
+  }
+  
   .search-container {
-    max-width: 250px;
+    max-width: 200px;
   }
 }
 
@@ -555,14 +716,8 @@ body {
     display: flex;
   }
   
-  .search-container {
-    order: 3;
-    flex: 1;
-    max-width: none;
-    margin: var(--spacing-4) 0 0 0;
-  }
-  
-  .nav {
+  .header-container {
+    position: relative;
     flex-wrap: wrap;
   }
   
@@ -573,12 +728,15 @@ body {
     width: 100%;
     background: white;
     border-top: 1px solid var(--gray-200);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    z-index: 40;
     order: 4;
+    margin-left: 0;
+    flex: none;
+    z-index: 40;
   }
   
   .nav-menu.active {
@@ -591,6 +749,7 @@ body {
     flex-direction: column;
     gap: 0;
     padding: var(--spacing-4);
+    align-items: stretch;
   }
   
   .nav-item {
@@ -603,6 +762,17 @@ body {
     padding: var(--spacing-4);
     border-radius: 0;
     border-bottom: 1px solid var(--gray-100);
+    white-space: normal;
+  }
+  
+  .search-container {
+    order: 3;
+    margin-left: auto;
+    max-width: 50px;
+  }
+  
+  .search-container.expanded {
+    max-width: 200px;
   }
   
   .dropdown-menu {
@@ -622,8 +792,17 @@ body {
 }
 
 @media (max-width: 640px) {
+  .header-container {
+    gap: var(--spacing-3);
+    padding: var(--spacing-3) var(--spacing-4);
+  }
+  
   .nav-brand .brand-text {
-    display: none;
+    font-size: 1.25rem !important;
+  }
+  
+  .search-container.expanded {
+    max-width: 180px;
   }
   
   /* Diagnostic button mobile adjustments */

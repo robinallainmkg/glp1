@@ -1,3 +1,13 @@
+fragment Pages_statiquesParts on Pages_statiques {
+  __typename
+  title
+  description
+  slug
+  pageType
+  noIndex
+  body
+}
+
 fragment Medicaments_glp1Parts on Medicaments_glp1 {
   __typename
   title

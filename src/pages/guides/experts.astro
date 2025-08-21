@@ -1,38 +1,61 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import fs from 'fs';
-import path from 'path';
 
-// Charger les données des auteurs
-let authorsData;
-let authors = [];
-try {
-  const authorsPath = path.join(process.cwd(), 'data/authors-testimonials.json');
-  authorsData = JSON.parse(fs.readFileSync(authorsPath, 'utf8'));
-  authors = Object.entries(authorsData.authors || {});
-} catch (error) {
-  console.log('Erreur chargement auteurs:', error.message);
-  authorsData = { authors: {} };
-}
-
-// Charger les statistiques des articles par auteur
-let articlesData;
-const authorStats = {};
-try {
-  const articlesPath = path.join(process.cwd(), 'data/articles-database.json');
-  articlesData = JSON.parse(fs.readFileSync(articlesPath, 'utf8'));
-  
-  for (const [collection, articles] of Object.entries(articlesData.collections || {})) {
-    for (const article of articles) {
-      if (!authorStats[article.author]) {
-        authorStats[article.author] = 0;
-      }
-      authorStats[article.author]++;
-    }
+// Données des experts intégrées
+const experts = [
+  {
+    id: 'dr-claire-morel',
+    name: 'Dr Claire Morel',
+    title: 'Endocrinologue spécialisée en obésité',
+    image: '/images/experts/dr-claire-morel.jpg',
+    experience: '12 ans d\'expérience',
+    bio: 'Endocrinologue diplômée de la faculté de médecine de Paris, le Dr Claire Morel s\'est spécialisée dans le traitement de l\'obésité et du diabète de type 2. Elle accompagne ses patients depuis plus de 10 ans dans leur parcours de perte de poids avec les traitements innovants.',
+    specialties: ['Endocrinologie', 'Diabétologie', 'Obésité', 'Traitements GLP-1'],
+    education: 'Doctorat en Médecine - Université Paris VII, Spécialisation en Endocrinologie - Hôpital Saint-Louis',
+    opinion: 'Les agonistes du récepteur GLP-1 représentent une révolution dans le traitement de l\'obésité. Ces médicaments offrent une efficacité remarquable avec un profil de sécurité acceptable.',
+    risks: 'Il est essentiel de surveiller les effets gastro-intestinaux, particulièrement en début de traitement. Un suivi médical régulier permet d\'ajuster les doses et de minimiser les risques.',
+    philosophy: 'Mon approche consiste à personnaliser chaque traitement en fonction du profil du patient, de ses antécédents et de ses objectifs. L\'éducation thérapeutique reste primordiale.'
+  },
+  {
+    id: 'elodie-carpentier',
+    name: 'Élodie Carpentier',
+    title: 'Journaliste santé et rédactrice médicale',
+    image: '/images/experts/elodie-carpentier.jpg',
+    experience: '8 ans d\'expérience',
+    bio: 'Journaliste spécialisée en santé depuis 8 ans, Élodie Carpentier traduit l\'information médicale complexe en contenus accessibles au grand public. Diplômée en communication scientifique, elle collabore avec de nombreux professionnels de santé.',
+    specialties: ['Journalisme médical', 'Vulgarisation scientifique', 'Communication santé', 'Traitements innovants'],
+    education: 'Master en Communication Scientifique - Université Paris-Saclay, Formation en Journalisme Médical - ESJ Paris',
+    opinion: 'Les traitements GLP-1 marquent un tournant dans la prise en charge de l\'obésité, mais l\'information objective reste cruciale pour permettre aux patients de faire des choix éclairés.',
+    risks: 'La médiatisation parfois excessive de ces traitements peut créer de fausses attentes. Il faut toujours rappeler que ce ne sont pas des solutions miracle et qu\'ils nécessitent un suivi médical strict.',
+    philosophy: 'Mon rôle est de rendre l\'information médicale accessible sans la dénaturer. Chaque article doit présenter les bénéfices autant que les risques, dans un langage compréhensible.'
+  },
+  {
+    id: 'julien-armand',
+    name: 'Julien Armand',
+    title: 'Coach sportif et nutritionniste',
+    image: '/images/experts/julien-armand.jpg',
+    experience: '10 ans d\'expérience',
+    bio: 'Coach sportif certifié et nutritionniste diplômé, Julien Armand accompagne depuis 10 ans les personnes en surpoids dans leur transformation physique. Il intègre dans ses programmes les dernières innovations thérapeutiques.',
+    specialties: ['Coaching sportif', 'Nutrition', 'Perte de poids', 'Accompagnement thérapeutique'],
+    education: 'BPJEPS Activités de la Forme, DU Nutrition et Alimentation - Université de Bordeaux',
+    opinion: 'Les GLP-1 sont des outils précieux qui facilitent grandement l\'adhésion aux changements d\'hygiène de vie. Ils permettent de briser le cercle vicieux des fringales et de l\'alimentation émotionnelle.',
+    risks: 'Le principal risque est de considérer ces traitements comme une solution unique. Sans modification durable des habitudes alimentaires et de l\'activité physique, les résultats ne seront pas pérennes.',
+    philosophy: 'Je privilégie une approche holistique combinant traitement médical, rééquilibrage alimentaire et activité physique adaptée. L\'objectif est l\'autonomie du patient à long terme.'
+  },
+  {
+    id: 'marc-delattre',
+    name: 'Marc Delattre',
+    title: 'Pharmacien spécialisé en accompagnement thérapeutique',
+    image: '/images/experts/marc-delattre.jpg',
+    experience: '15 ans d\'expérience',
+    bio: 'Pharmacien d\'officine depuis 15 ans, Marc Delattre s\'est spécialisé dans l\'accompagnement des patients sous traitements chroniques. Il forme régulièrement ses confrères sur les nouveaux traitements de l\'obésité.',
+    specialties: ['Pharmacie clinique', 'Éducation thérapeutique', 'Suivi des traitements', 'Observance médicamenteuse'],
+    education: 'Doctorat en Pharmacie - Université de Lyon, DU Éducation Thérapeutique du Patient',
+    opinion: 'En tant que pharmacien, je constate quotidiennement l\'impact positif des GLP-1 sur la qualité de vie des patients. Ces traitements redonnent espoir à ceux qui avaient tout essayé.',
+    risks: 'L\'automédication et l\'achat sur internet représentent des dangers majeurs. Ces médicaments nécessitent une prescription médicale et un suivi pharmaceutique rigoureux pour éviter les complications.',
+    philosophy: 'Mon rôle est d\'assurer le bon usage du médicament, d\'informer sur les effets secondaires possibles et de maintenir un lien thérapeutique fort avec le patient tout au long de son traitement.'
   }
-} catch (error) {
-  console.log('Erreur chargement articles:', error.message);
-}
+];
 ---
 
 <BaseLayout 
@@ -45,59 +68,64 @@ try {
       <div class="hero-section">
         <h1>Nos Experts GLP-1</h1>
         <p class="hero-description">
-          Notre équipe d'experts vous accompagne avec des contenus fiables et spécialisés. 
-          Découvrez leurs parcours, leurs spécialités et leur expertise dans le domaine des traitements GLP-1.
+          Découvrez notre équipe d'experts spécialisés dans les traitements GLP-1. 
+          Médecin endocrinologue, journaliste santé, coach sportif et pharmacien partagent leur expertise, 
+          leur vision des traitements et les risques à connaître pour un accompagnement complet et transparent.
         </p>
       </div>
 
-      <!-- Grille des auteurs -->
-      <div class="authors-grid">
-        {authors.map(([authorId, author]) => (
-          <div class="author-card">
-            <div class="author-header">
-              <div class="author-avatar">
+      <!-- Grille des experts -->
+      <div class="experts-grid">
+        {experts.map((expert) => (
+          <div class="expert-card">
+            <div class="expert-header">
+              <div class="expert-avatar">
                 <img 
-                  src={(() => {
-                    switch(authorId) {
-                      case 'dr-emilie-martin': return '/images/experts/dr-claire-morel.jpg';
-                      case 'dr-sophie-dubois': return '/images/experts/elodie-carpentier.jpg';
-                      case 'julien-lefevre': return '/images/experts/julien-armand.jpg';
-                      case 'karim-benali': return '/images/experts/marc-delattre.jpg';
-                      default: return `/images/experts/${authorId}.svg`;
-                    }
-                  })()} 
-                  alt={`Portrait de ${author.name}`}
-                  class="author-image"
+                  src={expert.image} 
+                  alt={`Portrait de ${expert.name}`}
+                  class="expert-image"
                 />
               </div>
-              <div class="author-info">
-                <h3 class="author-name">{author.name}</h3>
-                <p class="author-title">{author.title}</p>
-                <div class="author-stats">
-                  <span class="article-count">
-                    {author.articleCount || 0} articles
-                  </span>
-                  <span class="experience">{author.experience}</span>
+              <div class="expert-info">
+                <h3 class="expert-name">{expert.name}</h3>
+                <p class="expert-title">{expert.title}</p>
+                <div class="expert-stats">
+                  <span class="experience">{expert.experience}</span>
                 </div>
               </div>
             </div>
 
-            <div class="author-bio">
-              <p>{author.bio}</p>
+            <div class="expert-bio">
+              <p>{expert.bio}</p>
             </div>
 
-            <div class="author-specialties">
+            <div class="expert-specialties">
               <h4>Spécialités</h4>
               <div class="specialties-tags">
-                {author.specialties.map(specialty => (
+                {expert.specialties.map(specialty => (
                   <span class="specialty-tag">{specialty}</span>
                 ))}
               </div>
             </div>
 
-            <div class="author-education">
+            <div class="expert-education">
               <h4>Formation</h4>
-              <p class="education-text">{author.education}</p>
+              <p class="education-text">{expert.education}</p>
+            </div>
+
+            <div class="expert-opinion">
+              <h4>Vision des traitements GLP-1</h4>
+              <p class="opinion-text">{expert.opinion}</p>
+            </div>
+
+            <div class="expert-risks">
+              <h4>Risques à communiquer</h4>
+              <p class="risks-text">{expert.risks}</p>
+            </div>
+
+            <div class="expert-philosophy">
+              <h4>Philosophie d'accompagnement</h4>
+              <p class="philosophy-text">{expert.philosophy}</p>
             </div>
           </div>
         ))}
@@ -164,14 +192,14 @@ try {
     line-height: 1.7;
   }
 
-  .authors-grid {
+  .experts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: var(--spacing-8);
     margin-bottom: var(--spacing-16);
   }
 
-  .author-card {
+  .expert-card {
     background: white;
     border-radius: var(--radius-xl);
     padding: var(--spacing-8);
@@ -180,19 +208,19 @@ try {
     transition: var(--transition);
   }
 
-  .author-card:hover {
+  .expert-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
   }
 
-  .author-header {
+  .expert-header {
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-4);
     margin-bottom: var(--spacing-6);
   }
 
-  .author-avatar {
+  .expert-avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -206,7 +234,7 @@ try {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  .author-image {
+  .expert-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -214,35 +242,35 @@ try {
     transition: transform 0.3s ease;
   }
 
-  .author-image:hover {
+  .expert-image:hover {
     transform: scale(1.05);
   }
 
-  .author-initials {
+  .expert-initials {
     color: white;
     font-weight: 700;
     font-size: 1.5rem;
   }
 
-  .author-info {
+  .expert-info {
     flex: 1;
   }
 
-  .author-name {
+  .expert-name {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: var(--spacing-1);
   }
 
-  .author-title {
+  .expert-title {
     font-size: 1rem;
     color: var(--primary-600);
     font-weight: 600;
     margin-bottom: var(--spacing-3);
   }
 
-  .author-stats {
+  .expert-stats {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-1);
@@ -259,26 +287,44 @@ try {
     color: var(--gray-500);
   }
 
-  .author-bio {
+  .expert-bio {
     margin-bottom: var(--spacing-6);
   }
 
-  .author-bio p {
+  .expert-bio p {
     color: var(--gray-700);
     line-height: 1.6;
   }
 
-  .author-specialties,
-  .author-education {
+  .expert-specialties,
+  .expert-education,
+  .expert-opinion,
+  .expert-risks,
+  .expert-philosophy {
     margin-bottom: var(--spacing-6);
   }
 
-  .author-specialties h4,
-  .author-education h4 {
+  .expert-specialties h4,
+  .expert-education h4,
+  .expert-opinion h4,
+  .expert-risks h4,
+  .expert-philosophy h4 {
     font-size: 1rem;
     font-weight: 600;
     color: var(--gray-900);
     margin-bottom: var(--spacing-3);
+  }
+
+  .expert-opinion h4 {
+    color: var(--primary-700);
+  }
+
+  .expert-risks h4 {
+    color: var(--red-700);
+  }
+
+  .expert-philosophy h4 {
+    color: var(--green-700);
   }
 
   .specialties-tags {
@@ -299,6 +345,33 @@ try {
   .education-text {
     color: var(--gray-600);
     font-style: italic;
+  }
+
+  .opinion-text {
+    color: var(--gray-700);
+    line-height: 1.6;
+    background: var(--primary-25);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary-500);
+  }
+
+  .risks-text {
+    color: var(--gray-700);
+    line-height: 1.6;
+    background: var(--red-25);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--red-500);
+  }
+
+  .philosophy-text {
+    color: var(--gray-700);
+    line-height: 1.6;
+    background: var(--green-25);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--green-500);
   }
 
   .trust-section {

@@ -317,6 +317,12 @@ const categories = await getCategoryContent();
           <p>Prescription, médecins, démarches</p>
         </div>
       </div>
+      
+      <!-- Bouton vers la page Contact -->
+      <div class="faq-cta">
+        <p class="faq-cta-text">Des questions spécifiques ? Nous sommes là pour vous aider</p>
+        <a href="/contact" class="cta-button">Nous Contacter</a>
+      </div>
     </section>
 
     <!-- Trust Indicators -->
@@ -751,6 +757,17 @@ const categories = await getCategoryContent();
     .faq-item p {
       color: var(--gray-600);
       font-size: var(--font-size-sm);
+    }
+
+    .faq-cta {
+      margin-top: var(--spacing-8);
+      text-align: center;
+    }
+
+    .faq-cta-text {
+      color: var(--gray-700);
+      margin-bottom: var(--spacing-4);
+      font-size: var(--font-size-lg);
     }
 
     .diagnostic-cta {

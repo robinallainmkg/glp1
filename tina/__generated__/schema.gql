@@ -54,6 +54,8 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
+  pages_statiques(relativePath: String): Pages_statiques!
+  pages_statiquesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Pages_statiquesFilter): Pages_statiquesConnection!
   medicaments_glp1(relativePath: String): Medicaments_glp1!
   medicaments_glp1Connection(before: String, after: String, first: Float, last: Float, sort: String, filter: Medicaments_glp1Filter): Medicaments_glp1Connection!
   glp1_perte_de_poids(relativePath: String): Glp1_perte_de_poids!
@@ -75,6 +77,7 @@ type Query {
 }
 
 input DocumentFilter {
+  pages_statiques: Pages_statiquesFilter
   medicaments_glp1: Medicaments_glp1Filter
   glp1_perte_de_poids: Glp1_perte_de_poidsFilter
   glp1_cout: Glp1_coutFilter
@@ -109,7 +112,57 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Medicaments_glp1 | Glp1_perte_de_poids | Glp1_cout | Glp1_diabete | Effets_secondaires_glp1 | Medecins_glp1_france | Recherche_glp1 | Regime_glp1 | Alternatives_glp1 | Folder
+union DocumentNode = Pages_statiques | Medicaments_glp1 | Glp1_perte_de_poids | Glp1_cout | Glp1_diabete | Effets_secondaires_glp1 | Medecins_glp1_france | Recherche_glp1 | Regime_glp1 | Alternatives_glp1 | Folder
+
+type Pages_statiques implements Node & Document {
+  title: String!
+  description: String!
+  slug: String!
+  pageType: String
+  noIndex: Boolean
+  body: JSON
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input StringFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
+}
+
+input RichTextFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+}
+
+input Pages_statiquesFilter {
+  title: StringFilter
+  description: StringFilter
+  slug: StringFilter
+  pageType: StringFilter
+  noIndex: BooleanFilter
+  body: RichTextFilter
+}
+
+type Pages_statiquesConnectionEdges {
+  cursor: String!
+  node: Pages_statiques
+}
+
+type Pages_statiquesConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Pages_statiquesConnectionEdges]
+}
 
 type Medicaments_glp1ReadingTime {
   minutes: Float
@@ -142,13 +195,6 @@ type Medicaments_glp1 implements Node & Document {
   _values: JSON!
 }
 
-input StringFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
 input DatetimeFilter {
   after: String
   before: String
@@ -164,11 +210,6 @@ input ImageFilter {
   in: [String]
 }
 
-input BooleanFilter {
-  eq: Boolean
-  exists: Boolean
-}
-
 input NumberFilter {
   lt: Float
   lte: Float
@@ -177,12 +218,6 @@ input NumberFilter {
   eq: Float
   exists: Boolean
   in: [Float]
-}
-
-input RichTextFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
 }
 
 input Medicaments_glp1ReadingTimeFilter {
@@ -790,6 +825,8 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
+  updatePages_statiques(relativePath: String!, params: Pages_statiquesMutation!): Pages_statiques!
+  createPages_statiques(relativePath: String!, params: Pages_statiquesMutation!): Pages_statiques!
   updateMedicaments_glp1(relativePath: String!, params: Medicaments_glp1Mutation!): Medicaments_glp1!
   createMedicaments_glp1(relativePath: String!, params: Medicaments_glp1Mutation!): Medicaments_glp1!
   updateGlp1_perte_de_poids(relativePath: String!, params: Glp1_perte_de_poidsMutation!): Glp1_perte_de_poids!
@@ -811,6 +848,7 @@ type Mutation {
 }
 
 input DocumentUpdateMutation {
+  pages_statiques: Pages_statiquesMutation
   medicaments_glp1: Medicaments_glp1Mutation
   glp1_perte_de_poids: Glp1_perte_de_poidsMutation
   glp1_cout: Glp1_coutMutation
@@ -824,6 +862,7 @@ input DocumentUpdateMutation {
 }
 
 input DocumentMutation {
+  pages_statiques: Pages_statiquesMutation
   medicaments_glp1: Medicaments_glp1Mutation
   glp1_perte_de_poids: Glp1_perte_de_poidsMutation
   glp1_cout: Glp1_coutMutation
@@ -833,6 +872,15 @@ input DocumentMutation {
   recherche_glp1: Recherche_glp1Mutation
   regime_glp1: Regime_glp1Mutation
   alternatives_glp1: Alternatives_glp1Mutation
+}
+
+input Pages_statiquesMutation {
+  title: String
+  description: String
+  slug: String
+  pageType: String
+  noIndex: Boolean
+  body: JSON
 }
 
 input Medicaments_glp1ReadingTimeMutation {

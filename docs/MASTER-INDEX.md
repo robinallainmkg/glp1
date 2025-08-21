@@ -1,53 +1,218 @@
-# 📚 Index Central Documentation GLP-1
+# 📚 Documentation Master Index - GLP-1 France
 
-> **Navigation unifiée** de toute la documentation projet GLP-1 France
+> **Index principal de la documentation technique consolidée**  
+> *Dernière mise à jour : Janvier 2025*
 
-## 🚀 Quick Access
+## 🎯 Vue d'Ensemble
 
-| Section | Temps lecture | Lien direct |
-|---------|---------------|-------------|
-| **Installation** | 5 min | [core/installation.md](core/installation.md) |
-| **Development** | 10 min | [core/development.md](core/development.md) |
-| **Deployment** | 15 min | [core/deployment.md](core/deployment.md) |
+Cette documentation complète couvre tous les aspects techniques du projet GLP-1 France, organisée en trois sections principales : **Core** (fondamentaux), **Features** (fonctionnalités), et **Operations** (opérations).
 
-## 🏗️ Documentation Core
+---
 
-| Fichier | Description | Statut |
-|---------|-------------|--------|
-| [installation.md](core/installation.md) | Setup projet complet (Node, Astro, TinaCMS, Supabase) | ✅ |
-| [development.md](core/development.md) | Workflow quotidien, TinaCMS, debugging | ✅ |
-| [deployment.md](core/deployment.md) | Scripts déploiement, validation, production | ✅ |
-| [architecture.md](core/architecture.md) | Architecture technique, APIs, base de données | ✅ |
+## 🏗️ Core - Fondamentaux Techniques
 
-## 🎯 Documentation Features
+### [📖 Installation et Configuration](core/installation.md)
+**Setup initial et déploiement**
+- Prérequis système (Node.js, Git, éditeurs)
+- Installation des dépendances (Astro, TinaCMS, Supabase)
+- Configuration environnements (dev, staging, production)
+- Première compilation et tests
 
-| Fonctionnalité | Fichier | Contenu |
-|----------------|---------|---------|
-| **Admin Dashboard** | [admin-dashboard.md](features/admin-dashboard.md) | Interface admin, CRUD, authentification |
-| **Collections SEO** | [collections-seo.md](features/collections-seo.md) | 9 collections, 119 articles, optimisation |
-| **User Data System** | [user-data-system.md](features/user-data-system.md) | Supabase, APIs, données utilisateurs |
-| **Affiliate System** | [affiliate-system.md](features/affiliate-system.md) | Liens affiliés, codes promo, tracking |
+### [⚡ Guide de Développement](core/development.md)
+**Workflow quotidien et bonnes pratiques**
+- Commandes essentielles (`npm run dev`, build, preview)
+- Structure des dossiers et conventions
+- Workflow Git et branches
+- Debugging et troubleshooting
 
-## ⚙️ Documentation Operations
+### [🏗️ Architecture Technique](core/architecture.md)
+**Structure système et décisions techniques**
+- Stack technologique (Astro.js, TinaCMS, Supabase)
+- Architecture hybride APIs (TypeScript dev / PHP prod)
+- Gestion des données et cache
+- Performance et SEO
 
-| Opération | Fichier | Usage |
-|-----------|---------|-------|
-| **Content Management** | [content-management.md](operations/content-management.md) | TinaCMS, images, métadonnées |
-| **SEO Optimization** | [seo-optimization.md](operations/seo-optimization.md) | Optimisation contenu, performance |
-| **Troubleshooting** | [troubleshooting.md](operations/troubleshooting.md) | Résolution problèmes courants |
+---
 
-## 📊 Statistiques Documentation
+## 🚀 Features - Fonctionnalités Métier
 
-- **Total fichiers** : 12 (structure fixe)
-- **Documentation core** : 4 fichiers
-- **Features** : 4 guides fonctionnels
-- **Operations** : 3 guides opérationnels
-- **Dernière consolidation** : Août 2025
+### [💰 Système d'Affiliation](features/affiliation.md)
+**Monétisation et produits partenaires**
+- Gestion produits affiliés Amazon
+- Composants d'affichage intelligents
+- Placement contextuel automatique
+- Analytics et optimisation conversion
 
-## 🗂️ Archive
+### [📝 Système de Contenu TinaCMS](features/cms.md)
+**Gestion de contenu et éditorial**
+- Configuration collections TinaCMS
+- Templates de contenu MDX
+- Gestion médias et images
+- Workflow éditorial et validation
 
-Les anciens fichiers sont conservés dans [archive/](archive/) :
-- Historique des migrations
+### [👥 Système Utilisateurs et Données](features/users.md)
+**Collecte, stockage et conformité RGPD**
+- Modèle données unifié
+- Sources de collecte (newsletter, guides, contact)
+- Gestion préférences utilisateur
+- Conformité RGPD et export données
+
+---
+
+## ⚙️ Operations - Maintenance et Déploiement
+
+### [🚀 Déploiement et CI/CD](operations/deployment.md)
+**Automatisation et pipelines**
+- Scripts PowerShell de déploiement
+- Pipeline GitHub Actions
+- Gestion environnements multiples
+- Validation post-déploiement
+
+### [🔍 Maintenance et Monitoring](operations/monitoring.md)
+**Surveillance système et maintenance préventive**
+- Métriques de performance (Core Web Vitals, Lighthouse)
+- Alertes automatiques et seuils
+- Maintenance hebdomadaire et quotidienne
+- Dashboard de monitoring temps réel
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# 1. Clone et setup
+git clone <repository>
+cd glp1-github
+npm install
+
+# 2. Configuration
+cp .env.example .env
+# Configurer variables TinaCMS et Supabase
+
+# 3. Développement
+npm run dev          # http://localhost:4321
+npm run tina         # TinaCMS sur http://localhost:4321/admin
+
+# 4. Build et déploiement
+npm run build
+npm run preview      # Test build local
+```
+
+## 📋 Aide-Mémoire
+
+### Commandes Essentielles
+```bash
+npm run dev                    # Serveur développement
+npm run build                  # Build production
+npm run preview               # Preview build local
+npm run tina                  # TinaCMS standalone
+npm run optimize-images       # Optimisation images
+npm run health-check         # Vérification santé
+```
+
+### Structure Dossiers Clés
+```
+src/
+├── components/         # Composants réutilisables
+├── layouts/           # Templates de page  
+├── pages/             # Pages et APIs
+├── content/           # Contenu TinaCMS
+└── utils/             # Fonctions utilitaires
+
+data/                  # Base de données JSON
+docs/                  # Documentation (ce dossier)
+scripts/              # Scripts maintenance
+public/               # Assets statiques
+```
+
+### Points d'Entrée Importants
+- **Homepage** : `src/pages/index.astro`
+- **Collections** : `src/pages/collections/[collection].astro`
+- **Admin** : `http://localhost:4321/admin` (TinaCMS)
+- **APIs** : `src/pages/api/` (dev) + `public/api/` (prod)
+
+---
+
+## 🆘 Support et Troubleshooting
+
+### Problèmes Courants
+
+**Build échoue**
+```bash
+# Nettoyer cache et rebuilder
+rm -rf node_modules dist .astro
+npm install
+npm run build
+```
+
+**TinaCMS ne fonctionne pas**
+```bash
+# Vérifier variables environnement
+echo $TINA_CLIENT_ID
+echo $TINA_TOKEN
+
+# Relancer TinaCMS
+npm run tina
+```
+
+**Images non optimisées**
+```bash
+# Réoptimiser toutes les images
+npm run optimize-images
+npm run build
+```
+
+### Ressources Utiles
+- [Documentation Astro](https://docs.astro.build/)
+- [TinaCMS Docs](https://tina.io/docs/)
+- [Supabase Docs](https://supabase.com/docs)
+- [GitHub Repository Issues](../../issues)
+
+---
+
+## 📊 État du Projet
+
+### Fonctionnalités Implémentées ✅
+- [x] Site statique Astro.js avec TinaCMS
+- [x] Collections de contenu (médicaments, perte de poids, etc.)
+- [x] Système d'affiliation Amazon intégré
+- [x] Gestion utilisateurs unifiée (JSON + Supabase)
+- [x] Interface admin avec authentification
+- [x] APIs hybrides (TypeScript dev / PHP prod)
+- [x] Optimisation SEO et performance
+- [x] Scripts de déploiement automatisés
+
+### En Cours de Développement 🔄
+- [ ] Dashboard analytics avancé
+- [ ] A/B testing pour CTA
+- [ ] PWA (Progressive Web App)
+- [ ] API GraphQL complète
+
+### Roadmap Future 🎯
+- [ ] Multi-langue (anglais)
+- [ ] Chat bot IA intégré
+- [ ] Application mobile
+- [ ] Intégration e-commerce
+
+---
+
+## � Équipe et Contacts
+
+### Développement Technique
+- **Architecture** : Système modulaire Astro.js
+- **CMS** : TinaCMS avec interface intuitive
+- **Déploiement** : Automatisation PowerShell + GitHub Actions
+
+### Support
+- **Issues** : [GitHub Issues](../../issues)
+- **Documentation** : Ce dossier `docs/`
+- **Monitoring** : Dashboard temps réel
+
+---
+
+> **Note** : Cette documentation est mise à jour automatiquement. Pour contribuer, créer une pull request ou ouvrir une issue.
+
+*Dernière synchronisation : Janvier 2025*
 - Anciens guides de déploiement
 - Documentation obsolète
 

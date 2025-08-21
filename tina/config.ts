@@ -1,5 +1,63 @@
 import { defineConfig } from "tinacms";
 
+// Template de champs pour les pages statiques
+const staticPageFields = [
+  {
+    type: "string" as const,
+    name: "title",
+    label: "Titre de la page",
+    isTitle: true,
+    required: true,
+    description: "Titre principal qui apparaîtra dans le <h1> et le <title>",
+  },
+  {
+    type: "string" as const,
+    name: "description",
+    label: "Meta Description",
+    required: true,
+    description: "Description SEO (150-160 caractères recommandés)",
+    ui: {
+      component: "textarea",
+    },
+  },
+  {
+    type: "string" as const,
+    name: "slug",
+    label: "URL de la page (slug)",
+    required: true,
+    description: "URL finale de la page (sans espaces, caractères spéciaux)",
+  },
+  {
+    type: "string" as const,
+    name: "pageType",
+    label: "Type de page",
+    options: [
+      "Homepage",
+      "Guide statique", 
+      "Page collection",
+      "Page légale",
+      "Page contact",
+      "Page outils",
+      "Page témoignages",
+      "Autre"
+    ],
+    description: "Type de page statique",
+  },
+  {
+    type: "boolean" as const,
+    name: "noIndex",
+    label: "Exclure des moteurs de recherche",
+    description: "Cocher pour empêcher l'indexation (noindex)",
+  },
+  {
+    type: "rich-text" as const,
+    name: "body",
+    label: "Contenu de la page",
+    isBody: true,
+    description: "Contenu principal en Markdown",
+  },
+];
+
 // Template de champs standardisé pour toutes les collections
 const standardArticleFields = [
   // Champs de base
@@ -215,6 +273,14 @@ export default defineConfig({
   
   schema: {
     collections: [
+      // Collection Pages Statiques
+      {
+        name: "pages_statiques",
+        label: "📄 Pages Statiques",
+        path: "src/content/pages-statiques",
+        format: "md",
+        fields: staticPageFields,
+      },
       // Collection Médicaments GLP1
       {
         name: "medicaments_glp1",
