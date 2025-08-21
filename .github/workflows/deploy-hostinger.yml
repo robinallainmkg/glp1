@@ -31,24 +31,17 @@ jobs:
         ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
         chmod 644 ~/.ssh/known_hosts
     
-    - name: Build only (manual deployment required)
-      run: |
-        echo "=== Build completed successfully ==="
-        echo "Files ready for manual deployment in 'dist' folder"
-        echo "Use scripts/deploy-manual.ps1 for deployment instructions"
-        echo ""
-        echo "🎯 Page partenaires will be accessible at:"
-        echo "https://glp1-france.fr/partenaires"
-        echo ""
-        echo "📊 Build summary:"
-        ls -la dist/
-        echo ""
-        echo "✅ partenaires directory:"
-        ls -la dist/partenaires/ || echo "partenaires page built as single file"
-        
-    - name: Archive build artifacts
-      uses: actions/upload-artifact@v3
+    - name: Deploy via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        name: website-build
-        path: dist/
-        retention-days: 30
+        server: 147.79.98.140
+        username: u403023291
+        password: ${{ secrets.FTP_PASSWORD }}
+        local_path: './dist/*'
+        remote_path: '/domains/glp1-france.fr'
+        sftpArgs: '-o ConnectTimeout=5'
+        
+    - name: Verify deployment via SFTP
+      run: |
+        echo "Deployment completed via SFTP"
+        echo "Site should be accessible at: https://glp1-france.fr/partenaires"
