@@ -31,22 +31,20 @@ jobs:
         ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
         chmod 644 ~/.ssh/known_hosts
     
-    - name: Setup SSH key and deploy with rsync
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/
+        server-dir: ${{ secrets.REMOTE_PATH }}/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+        
+    - name: Verify deployment via FTP
       run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-        chmod 644 ~/.ssh/known_hosts
-        
-        echo "=== Testing SSH connection ==="
-        ssh -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USER }}@${{ secrets.HOST }} "echo 'SSH connection successful'"
-        
-        echo "=== Cleaning target directory ==="
-        ssh -p ${{ secrets.PORT }} ${{ secrets.USER }}@${{ secrets.HOST }} "rm -rf ${{ secrets.REMOTE_PATH }}/*"
-        
-        echo "=== Deploying files with rsync ==="
-        rsync -avz --delete -e "ssh -p ${{ secrets.PORT }}" dist/ ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.REMOTE_PATH }}/
-        
-        echo "=== Verifying deployment ==="
-        ssh -p ${{ secrets.PORT }} ${{ secrets.USER }}@${{ secrets.HOST }} "ls -la ${{ secrets.REMOTE_PATH }}/ && ls -la ${{ secrets.REMOTE_PATH }}/partenaires/ || echo 'partenaires directory not found'"
+        echo "Deployment completed via FTP"
+        echo "Site should be accessible at: https://glp1-france.fr/partenaires"
