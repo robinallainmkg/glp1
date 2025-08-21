@@ -1,0 +1,103 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Title Area -->
+  <rect x="50" y="50" width="700" height="80" fill="url(#accentGradient)" rx="10"/>
+  <text x="400" y="105" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Nos Partenaires de Confiance</text>
+  
+  <!-- Partner Cards Grid -->
+  <!-- Card 1: Secous -->
+  <rect x="70" y="170" width="200" height="120" fill="url(#cardGradient)" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="120" cy="210" r="15" fill="#10b981"/>
+  <text x="145" y="210" fill="#1f2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Secous.com</text>
+  <text x="80" y="235" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Annuaire professionnel</text>
+  <text x="80" y="250" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">de référence</text>
+  <rect x="210" y="260" width="50" height="20" fill="#10b981" rx="10"/>
+  <text x="235" y="273" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Visiter</text>
+  
+  <!-- Card 2: TopLien -->
+  <rect x="300" y="170" width="200" height="120" fill="url(#cardGradient)" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="350" cy="210" r="15" fill="#f59e0b"/>
+  <text x="375" y="210" fill="#1f2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">TopLien.fr</text>
+  <text x="310" y="235" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Référencement qualité</text>
+  <text x="310" y="250" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">sites français</text>
+  <rect x="440" y="260" width="50" height="20" fill="#f59e0b" rx="10"/>
+  <text x="465" y="273" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Visiter</text>
+  
+  <!-- Card 3: Infobel -->
+  <rect x="530" y="170" width="200" height="120" fill="url(#cardGradient)" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="580" cy="210" r="15" fill="#8b5cf6"/>
+  <text x="605" y="210" fill="#1f2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Infobel.com</text>
+  <text x="540" y="235" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Annuaire international</text>
+  <text x="540" y="250" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">de confiance</text>
+  <rect x="670" y="260" width="50" height="20" fill="#8b5cf6" rx="10"/>
+  <text x="695" y="273" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Visiter</text>
+  
+  <!-- Card 4: FaitesVousConnaitre -->
+  <rect x="70" y="320" width="200" height="120" fill="url(#cardGradient)" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="120" cy="360" r="15" fill="#ef4444"/>
+  <text x="145" y="360" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FaitesVous</text>
+  <text x="145" y="375" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Connaitre.com</text>
+  <text x="80" y="395" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Service référencement</text>
+  <text x="80" y="410" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">professionnel</text>
+  <rect x="210" y="410" width="50" height="20" fill="#ef4444" rx="10"/>
+  <text x="235" y="423" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Visiter</text>
+  
+  <!-- Card 5: WebWiki -->
+  <rect x="300" y="320" width="200" height="120" fill="url(#cardGradient)" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="350" cy="360" r="15" fill="#06b6d4"/>
+  <text x="375" y="360" fill="#1f2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">WebWiki.fr</text>
+  <text x="310" y="385" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Annuaire collaboratif</text>
+  <text x="310" y="400" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">meilleurs sites</text>
+  <rect x="440" y="410" width="50" height="20" fill="#06b6d4" rx="10"/>
+  <text x="465" y="423" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Visiter</text>
+  
+  <!-- Card 6: Le Bottin & Meilleur du Web -->
+  <rect x="530" y="320" width="200" height="120" fill="url(#cardGradient)" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="580" cy="350" r="12" fill="#84cc16"/>
+  <circle cx="650" cy="350" r="12" fill="#f97316"/>
+  <text x="540" y="375" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Le-Bottin.com</text>
+  <text x="540" y="390" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">MeilleurDuWeb.com</text>
+  <text x="540" y="410" fill="#6b7280" font-family="Arial, sans-serif" font-size="11">Références françaises</text>
+  <rect x="670" y="410" width="50" height="20" fill="#84cc16" rx="10"/>
+  <text x="695" y="423" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Visiter</text>
+  
+  <!-- Partnership Icons -->
+  <g transform="translate(100, 480)">
+    <!-- Handshake icon -->
+    <circle cx="30" cy="30" r="25" fill="#3b82f6" opacity="0.1"/>
+    <path d="M15 25 L25 20 L35 25 L45 20" stroke="#3b82f6" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="22" cy="22" r="3" fill="#3b82f6"/>
+    <circle cx="38" cy="22" r="3" fill="#3b82f6"/>
+    <text x="70" y="35" fill="#1f2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Partenariats de Qualité</text>
+  </g>
+  
+  <g transform="translate(400, 480)">
+    <!-- Quality icon -->
+    <circle cx="30" cy="30" r="25" fill="#10b981" opacity="0.1"/>
+    <path d="M20 30 L28 38 L42 22" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="70" y="35" fill="#1f2937" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Critères Stricts</text>
+  </g>
+  
+  <!-- Bottom decorative elements -->
+  <circle cx="150" cy="550" r="3" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="200" cy="560" r="2" fill="#10b981" opacity="0.3"/>
+  <circle cx="600" cy="550" r="4" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="650" cy="560" r="2" fill="#8b5cf6" opacity="0.3"/>
+</svg>
