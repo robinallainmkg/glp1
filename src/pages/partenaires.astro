@@ -1,22 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getEntry } from 'astro:content';
-
-// Récupérer le contenu de la page partenaires
-const partenaireEntry = await getEntry('pages-statiques', 'partenaires');
-
-if (!partenaireEntry) {
-  throw new Error('Page partenaires non trouvée');
-}
-
-const { Content } = await partenaireEntry.render();
-const { data } = partenaireEntry;
 
 // Données SEO pour la page
 const seoData = {
-  title: data.title || 'Nos Partenaires - GLP-1 France',
-  description: data.description || 'Découvrez nos partenaires de confiance qui nous accompagnent dans notre mission d\'information sur les traitements GLP-1.',
-  image: data.thumbnail || '/images/thumbnails/partenaires-glp1-illus.svg',
+  title: 'Nos Partenaires - GLP-1 France',
+  description: 'Découvrez nos partenaires de confiance qui nous accompagnent dans notre mission d\'information sur les traitements GLP-1.',
+  image: '/images/thumbnails/partenaires-glp1-illus.svg',
   url: '/partenaires',
   type: 'website'
 };
@@ -33,147 +22,145 @@ const seoData = {
     <article class="prose prose-lg max-w-none">
       <!-- Header avec image -->
       <div class="text-center mb-8">
-        {data.thumbnail && (
-          <div class="mb-6 mx-auto w-32 h-32 flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
-            <img 
-              src={data.thumbnail} 
-              alt="Partenaires GLP-1 France"
-              class="w-20 h-20 object-contain"
-              loading="eager"
-            />
-          </div>
-        )}
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">{data.title}</h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">{data.description}</p>
-      </div>
-
-      <!-- Contenu principal -->
-      <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
-        <Content />
-      </div>
-
-      <!-- Section CTA -->
-      <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">
-          Intéressé par un partenariat ?
-        </h2>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Rejoignez notre réseau de partenaires de confiance et participez à notre mission d'information sur les traitements GLP-1.
-        </p>
-        <a 
-          href="/contact" 
-          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
-        >
-          Nous contacter
-          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        <div class="mb-6 mx-auto w-32 h-32 flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-        </a>
+        </div>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Nos Partenaires de Confiance</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Chez <strong>GLP-1 France</strong>, nous collaborons avec des partenaires de qualité qui partagent notre engagement pour l'information de santé fiable et accessible.
+        </p>
       </div>
 
-      <!-- Navigation -->
-      <div class="mt-12 flex justify-center space-x-4">
-        <a 
-          href="/" 
-          class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
-        >
-          ← Retour à l'accueil
-        </a>
-        <span class="text-gray-300">•</span>
-        <a 
-          href="/a-propos" 
-          class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
-        >
-          À propos de nous
-        </a>
-        <span class="text-gray-300">•</span>
-        <a 
-          href="/contact" 
-          class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
-        >
-          Contact
-        </a>
+      <!-- Contenu partenaires -->
+      <div class="space-y-8">
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
+            🤝 <span class="ml-2">Annuaires et Références</span>
+          </h2>
+          
+          <div class="grid gap-6 md:grid-cols-2">
+            <!-- Annuaire Secous -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Annuaire Secous</h3>
+              <p class="text-gray-600 mb-3">Annuaire professionnel de référence qui valorise les sites de qualité dans le domaine de la santé et du bien-être.</p>
+              <a href="https://annuaire.secous.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter Secous.com
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- TopLien -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">TopLien</h3>
+              <p class="text-gray-600 mb-3">Plateforme de référencement qui met en avant les sites web français de qualité, garantissant une visibilité auprès d'une audience ciblée.</p>
+              <a href="https://www.toplien.fr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter TopLien.fr
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Infobel -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Infobel</h3>
+              <p class="text-gray-600 mb-3">Annuaire international reconnu pour la qualité de ses références et la fiabilité de ses informations.</p>
+              <a href="https://www.infobel.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter Infobel.com
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Faites-vous Connaître -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Faites-vous Connaître</h3>
+              <p class="text-gray-600 mb-3">Service de référencement professionnel spécialisé dans la promotion des sites d'information de qualité.</p>
+              <a href="https://www.faitesvousconnaitre.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter FaitesVousConnaitre.com
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- WebWiki -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">WebWiki</h3>
+              <p class="text-gray-600 mb-3">Annuaire collaboratif qui référence les meilleurs sites web français, avec un focus sur la qualité du contenu.</p>
+              <a href="https://www.webwiki.fr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter WebWiki.fr
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Le Bottin -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Le Bottin</h3>
+              <p class="text-gray-600 mb-3">Annuaire traditionnel français qui maintient sa réputation d'excellence dans le référencement de sites de confiance.</p>
+              <a href="https://www.le-bottin.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter Le-Bottin.com
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Meilleur du Web -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Meilleur du Web</h3>
+              <p class="text-gray-600 mb-3">Plateforme de référence qui sélectionne et promeut les meilleurs sites web français par catégorie.</p>
+              <a href="https://meilleurduweb.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Visiter MeilleurDuWeb.com
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Engagement -->
+        <section class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
+            🎯 <span class="ml-2">Notre Engagement Partenariat</span>
+          </h2>
+          
+          <div class="grid gap-6 md:grid-cols-2">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Qualité et Fiabilité</h3>
+              <p class="text-gray-600">Nous nous associons uniquement avec des plateformes qui partagent nos valeurs d'exactitude et de fiabilité de l'information santé.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Transparence</h3>
+              <p class="text-gray-600">Toutes nos collaborations sont transparentes et visent à améliorer l'accès à une information de santé de qualité.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section CTA -->
+        <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Intéressé par un partenariat ?
+          </h2>
+          <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Rejoignez notre réseau de partenaires de confiance et participez à notre mission d'information sur les traitements GLP-1.
+          </p>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            Nous contacter
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </article>
   </main>
-
-  <!-- Structured Data pour SEO -->
-  <script type="application/ld+json" is:inline>
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Nos Partenaires - GLP-1 France",
-    "description": "Découvrez nos partenaires de confiance qui nous accompagnent dans notre mission d'information sur les traitements GLP-1.",
-    "url": "https://glp1-france.fr/partenaires",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "GLP-1 France",
-      "url": "https://glp1-france.fr",
-      "logo": "https://glp1-france.fr/images/logo.png",
-      "sameAs": [
-        "https://annuaire.secous.com/",
-        "https://www.toplien.fr/",
-        "https://www.infobel.com/",
-        "https://www.faitesvousconnaitre.com/",
-        "https://www.webwiki.fr/",
-        "https://www.le-bottin.com/",
-        "https://meilleurduweb.com/"
-      ]
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://glp1-france.fr/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Partenaires",
-          "item": "https://glp1-france.fr/partenaires"
-        }
-      ]
-    }
-  }
-  </script>
 </BaseLayout>
-
-<style>
-  /* Styles spécifiques pour la page partenaires */
-  .prose h2 {
-    @apply text-2xl font-bold text-gray-900 mt-8 mb-4 border-b border-gray-200 pb-2;
-  }
-  
-  .prose h3 {
-    @apply text-xl font-semibold text-gray-800 mt-6 mb-3;
-  }
-  
-  .prose a {
-    @apply text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200;
-  }
-  
-  .prose strong {
-    @apply font-semibold text-gray-900;
-  }
-  
-  .prose ul {
-    @apply space-y-2;
-  }
-  
-  .prose li {
-    @apply text-gray-700;
-  }
-  
-  /* Style pour les liens de partenaires */
-  .prose a[href^="https://"] {
-    @apply inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200;
-  }
-  
-  .prose a[href^="https://"]:after {
-    content: "↗";
-    @apply ml-1 text-sm opacity-60;
-  }
-</style>
