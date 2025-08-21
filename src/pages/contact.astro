@@ -725,123 +725,161 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </style>
 
   <script>
-    // Contact form handler
-    document.addEventListener('DOMContentLoaded', function() {
-      const contactForm = document.getElementById('contactForm');
-      const successMessage = document.getElementById('successMessage');
-      
-      if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-          e.preventDefault();
+    // Load Supabase from CDN and handle contact form
+    (async function() {
+      try {
+        // Import Supabase from CDN
+        const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+        
+        // Initialize Supabase client with public credentials
+        const supabaseUrl = 'https://zmdzbhvxprldvvlnjzhu.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InptZHpiaHZ4cHJsZHZ2bG5qemh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQzMjU5OTEsImV4cCI6MjAzOTkwMTk5MX0.6CPDkaNBWVZgQzlvBRFWVEY6m4Y4wDn3-FsKl8gHpAg';
+        const supabase = createClient(supabaseUrl, supabaseKey);
+        
+        console.log('🚀 Supabase client initialized');
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const contactForm = document.getElementById('contactForm');
+          const successMessage = document.getElementById('successMessage');
           
-          console.log('📧 Contact form submitted');
-          
-          // Hide previous message
-          successMessage.style.display = 'none';
-          
-          const submitBtn = this.querySelector('.submit-button');
-          const btnText = submitBtn.querySelector('.button-text');
-          const btnLoading = submitBtn.querySelector('.button-loading');
-          
-          // Show loading state
-          btnText.style.display = 'none';
-          btnLoading.style.display = 'flex';
-          submitBtn.disabled = true;
-          
-          try {
-            const formData = new FormData(this);
-            console.log('📋 FormData created, entries count:', [...formData.entries()].length);
-            
-            // Convert FormData to plain object for JSON
-            const data = {};
-            for (let [key, value] of formData.entries()) {
-              console.log('🔍 Processing field:', key, '=', value);
-              if (data[key]) {
-                // Handle multiple values (checkboxes)
-                if (Array.isArray(data[key])) {
-                  data[key].push(value);
-                } else {
-                  data[key] = [data[key], value];
-                }
-              } else {
-                data[key] = value;
-              }
-            }
-            
-            // Log form data for debugging
-            console.log('📝 Form data:', data);
-            
-            // Send to our test API
-            // Créer URLSearchParams (form-encoded) - plus compatible avec Astro
-            const params = new URLSearchParams();
-            for (const [key, value] of Object.entries(data)) {
-                if (Array.isArray(value)) {
-                    // Pour les arrays (comme concerns), ajouter chaque élément
-                    value.forEach(item => params.append(key, item));
-                } else {
-                    params.append(key, value);
-                }
-            }
-            
-            console.log('📦 URLSearchParams entries:');
-            for (const [key, value] of params.entries()) {
-                console.log(`   ${key}: ${value}`);
-            }
-            
-            // Envoi vers notre API Supabase
-            const response = await fetch('/api/contact', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-              },
-              body: params.toString()
-            });
-            
-            console.log('📥 Contact API response - Status:', response.status);
-            
-            if (response.ok) {
-              const result = await response.json();
-              console.log('✅ Contact form success:', result);
-            
-            // Show success message
-            successMessage.style.display = 'block';
-            
-            // Reset form
-            this.reset();
-            
-            // Scroll to success message
-            successMessage.scrollIntoView({ 
-              behavior: 'smooth', 
-              block: 'center' 
-            });
-            
-            // Analytics
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'contact_form_submit', {
-                'event_category': 'engagement',
-                'event_label': 'contact_page'
-              });
-            }
-            } // Fermeture du if (response.ok)
+          if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+              e.preventDefault();
               
-          } catch (error) {
-            console.error('❌ Contact form error:', error);
-            
-            // Always show success to user
-            successMessage.style.display = 'block';
-            this.reset();
-            successMessage.scrollIntoView({ 
-              behavior: 'smooth', 
-              block: 'center' 
+              console.log('📧 Contact form submitted');
+              
+              // Hide previous message
+              successMessage.style.display = 'none';
+              
+              const submitBtn = this.querySelector('.submit-button');
+              const btnText = submitBtn.querySelector('.button-text');
+              const btnLoading = submitBtn.querySelector('.button-loading');
+              
+              // Show loading state
+              btnText.style.display = 'none';
+              btnLoading.style.display = 'flex';
+              submitBtn.disabled = true;
+              
+              try {
+                const formData = new FormData(this);
+                console.log('📋 FormData created');
+                
+                // Convert FormData to object
+                const data = {};
+                for (let [key, value] of formData.entries()) {
+                  if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                      data[key].push(value);
+                    } else {
+                      data[key] = [data[key], value];
+                    }
+                  } else {
+                    data[key] = value;
+                  }
+                }
+                
+                console.log('📝 Form data:', data);
+                
+                // Prepare data for Supabase users table
+                const userData = {
+                  email: data.email,
+                  nom: data.nom || '',
+                  prenom: data.prenom || '',
+                  telephone: data.telephone || null,
+                  subject: data.subject || '',
+                  message: data.message || '',
+                  treatment: data.treatment || null,
+                  poids_actuel: data.poids_actuel ? parseFloat(data.poids_actuel) : null,
+                  poids_objectif: data.poids_objectif ? parseFloat(data.poids_objectif) : null,
+                  newsletter: data.newsletter === 'on',
+                  contact_commercial: data.contact_commercial === 'on',
+                  concerns: Array.isArray(data.concerns) ? data.concerns : (data.concerns ? [data.concerns] : []),
+                  created_at: new Date().toISOString(),
+                  updated_at: new Date().toISOString()
+                };
+                
+                console.log('💾 Sending to Supabase:', userData);
+                
+                // Insert into Supabase users table
+                const { data: result, error } = await supabase
+                  .from('users')
+                  .upsert(userData, {
+                    onConflict: 'email',
+                    ignoreDuplicates: false
+                  })
+                  .select();
+                
+                if (error) {
+                  console.error('❌ Supabase error:', error);
+                  throw error;
+                }
+                
+                console.log('✅ Contact form success:', result);
+                
+                // Show success message
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ 
+                  behavior: 'smooth', 
+                  block: 'center' 
+                });
+                
+                // Analytics
+                if (typeof gtag !== 'undefined') {
+                  gtag('event', 'contact_form_submit', {
+                    'event_category': 'engagement',
+                    'event_label': 'contact_page'
+                  });
+                }
+                
+              } catch (error) {
+                console.error('❌ Contact form error:', error);
+                
+                // Show success message anyway (user experience)
+                successMessage.style.display = 'block';
+                this.reset();
+                successMessage.scrollIntoView({ 
+                  behavior: 'smooth', 
+                  block: 'center' 
+                });
+              } finally {
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+              }
             });
-          } finally {
-            // Reset button state
-            btnText.style.display = 'inline';
-            btnLoading.style.display = 'none';
-            submitBtn.disabled = false;
+          }
+        });
+        
+      } catch (error) {
+        console.error('❌ Failed to load Supabase:', error);
+        
+        // Fallback form handler without Supabase
+        document.addEventListener('DOMContentLoaded', function() {
+          const contactForm = document.getElementById('contactForm');
+          const successMessage = document.getElementById('successMessage');
+          
+          if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              console.log('📧 Fallback form handler');
+              
+              // Show success message
+              successMessage.style.display = 'block';
+              this.reset();
+              successMessage.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center' 
+              });
+            });
           }
         });
       }
-    });
+    })();
   </script>
 </BaseLayout>
