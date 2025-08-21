@@ -131,11 +131,8 @@ const standardArticleFields = [
   {
     type: "string" as const,
     name: "tags",
-    label: "Mots-clés (format: [\"mot1\", \"mot2\", \"mot3\"])",
-    description: "Mots-clés au format tableau JSON pour le SEO",
-    ui: {
-      component: "textarea",
-    },
+    label: "Mots-clés",
+    description: "Mots-clés pour le SEO (séparés par des virgules)",
   },
   {
     type: "string" as const,
