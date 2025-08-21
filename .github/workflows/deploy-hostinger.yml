@@ -23,25 +23,22 @@ jobs:
     - name: Build Astro site
       run: npm run astro:build
     
-    - name: Setup SSH key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
-        chmod 644 ~/.ssh/known_hosts
-    
-    - name: Deploy via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: 147.79.98.140
         username: u403023291
         password: ${{ secrets.FTP_PASSWORD }}
-        local_path: './dist/*'
-        remote_path: '/domains/glp1-france.fr'
-        sftpArgs: '-o ConnectTimeout=5'
+        local-dir: ./dist/
+        server-dir: /domains/glp1-france.fr/
+        port: 21
+        protocol: ftp
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
         
-    - name: Verify deployment via SFTP
+    - name: Verify deployment via FTP
       run: |
-        echo "Deployment completed via SFTP"
+        echo "Deployment completed via FTP"
         echo "Site should be accessible at: https://glp1-france.fr/partenaires"
