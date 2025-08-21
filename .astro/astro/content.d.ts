@@ -867,28 +867,28 @@ declare module 'astro:content' {
   slug: "/collections/medicaments-glp1";
   body: string;
   collection: "pages-statiques";
-  data: any
+  data: InferEntrySchema<"pages-statiques">
 } & { render(): Render[".md"] };
 "homepage.md": {
 	id: "homepage.md";
   slug: "/";
   body: string;
   collection: "pages-statiques";
-  data: any
+  data: InferEntrySchema<"pages-statiques">
 } & { render(): Render[".md"] };
 "partenaires.md": {
 	id: "partenaires.md";
   slug: "partenaires";
   body: string;
   collection: "pages-statiques";
-  data: any
+  data: InferEntrySchema<"pages-statiques">
 } & { render(): Render[".md"] };
 "quel-traitement-glp1-choisir.md": {
 	id: "quel-traitement-glp1-choisir.md";
   slug: "/quel-traitement-glp1-choisir";
   body: string;
   collection: "pages-statiques";
-  data: any
+  data: InferEntrySchema<"pages-statiques">
 } & { render(): Render[".md"] };
 };
 "recherche-glp1": {
