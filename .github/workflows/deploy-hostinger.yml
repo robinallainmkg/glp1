@@ -23,7 +23,34 @@ jobs:
     - name: Build Astro site
       run: npm run astro:build
     
-    - name: Deploy via SSH
+    - name: Deploy via SSH with debug
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        debug: true
+        script: |
+          echo "=== Cleaning target directory ==="
+          ls -la ${{ secrets.REMOTE_PATH }}
+          rm -rf ${{ secrets.REMOTE_PATH }}/*
+          echo "=== Directory cleaned ==="
+          ls -la ${{ secrets.REMOTE_PATH }}
+    
+    - name: Copy files via SCP with debug
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        debug: true
+        source: "dist/*"
+        target: ${{ secrets.REMOTE_PATH }}
+        strip_components: 1
+    
+    - name: Verify deployment
       uses: appleboy/ssh-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
@@ -31,15 +58,7 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          rm -rf ${{ secrets.REMOTE_PATH }}/*
-    
-    - name: Copy files via SCP
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.HOST }}
-        port: ${{ secrets.PORT }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        source: "dist/*"
-        target: ${{ secrets.REMOTE_PATH }}
-        strip_components: 1
+          echo "=== Final directory structure ==="
+          ls -la ${{ secrets.REMOTE_PATH }}
+          echo "=== Checking partenaires ==="
+          ls -la ${{ secrets.REMOTE_PATH }}/partenaires/ || echo "partenaires directory not found"
