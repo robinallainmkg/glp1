@@ -31,20 +31,17 @@ jobs:
         ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
         chmod 644 ~/.ssh/known_hosts
     
-    - name: Deploy via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Deploy via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: glp1-france.fr
         username: u403023291
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: /public_html/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
+        local_path: './dist/*'
+        remote_path: '/public_html'
+        sftpArgs: '-o ConnectTimeout=5'
         
-    - name: Verify deployment via FTP
+    - name: Verify deployment via SFTP
       run: |
-        echo "Deployment completed via FTP"
+        echo "Deployment completed via SFTP"
         echo "Site should be accessible at: https://glp1-france.fr/partenaires"
