@@ -31,7 +31,7 @@ jobs:
         ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
     
     - name: Deploy via SSH with debug
-      uses: appleboy/ssh-action@v1.0.3
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST }}
         port: ${{ secrets.PORT }}
@@ -46,7 +46,7 @@ jobs:
           ls -la ${{ secrets.REMOTE_PATH }}
     
     - name: Copy files via SCP with debug
-      uses: appleboy/scp-action@v1.0.3
+      uses: appleboy/scp-action@v1.0.0
       with:
         host: ${{ secrets.HOST }}
         port: ${{ secrets.PORT }}
@@ -58,7 +58,7 @@ jobs:
         strip_components: 1
     
     - name: Verify deployment
-      uses: appleboy/ssh-action@v1.0.3
+      uses: appleboy/ssh-action@v1.0.0
       with:
         host: ${{ secrets.HOST }}
         port: ${{ secrets.PORT }}
