@@ -1,5 +1,5 @@
 ---
-import { getProductById, addUtmParameters } from '../utils/affiliate-manager.ts';
+import { getProductById } from '../utils/affiliate-manager';
 
 export interface Props {
   productId: string;
@@ -21,10 +21,10 @@ const {
   context = {}, 
   className = '',
   showIfRelevant = true 
-} = Astro.props;
+} = Astro.props as Props;
 
 // Récupération du produit par ID
-const product = await getProductById(productId);
+const product = getProductById(productId);
 
 // Si le produit n'existe pas, ne rien afficher
 if (!product) {
@@ -51,13 +51,20 @@ if (!placementConfig?.enabled) {
   return null;
 }
 
-// Génération de l'URL avec UTM
-const utmUrl = addUtmParameters(product.affiliateUrl, {
-  source: 'glp1-france',
-  medium: 'affiliate',
-  campaign: placement,
-  content: productId
-});
+// Génération de l'URL avec UTM (inline)
+let utmUrl: string = product.affiliateUrl;
+try {
+  const urlObj = new URL(product.affiliateUrl);
+  urlObj.searchParams.set('utm_source', 'glp1-france');
+  urlObj.searchParams.set('utm_medium', 'affiliate');
+  urlObj.searchParams.set('utm_campaign', placement);
+  urlObj.searchParams.set('utm_content', productId);
+  utmUrl = urlObj.toString();
+} catch (e) {
+  // fallback: append params manually if URL parsing fails
+  const sep = product.affiliateUrl.includes('?') ? '&' : '?';
+  utmUrl = `${product.affiliateUrl}${sep}utm_source=glp1-france&utm_medium=affiliate&utm_campaign=${encodeURIComponent(placement)}&utm_content=${encodeURIComponent(productId)}`;
+}
 
 // Styles conditionnels selon le variant
 const variantClasses = {
@@ -118,7 +125,7 @@ const productSchema = {
   itemtype="https://schema.org/Product"
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
   
   <!-- Badge d'affiliation obligatoire -->
   <div class="affiliate-badge">
@@ -153,7 +160,7 @@ const productSchema = {
         
         {product.benefits && (
           <ul class="affiliate-product__benefits">
-            {product.benefits.slice(0, 3).map(benefit => (
+            {product.benefits.slice(0, 3).map((benefit: string) => (
               <li>✓ {benefit}</li>
             ))}
           </ul>
@@ -576,16 +583,16 @@ const productSchema = {
 }
 </style>
 
-<script>
-// Script pour le tracking et les interactions
+<script is:inline>
+// Script pour le tracking et les interactions (plain JS)
 document.addEventListener('DOMContentLoaded', function() {
   // Amélioration du tracking des clics
   document.querySelectorAll('.affiliate-product__cta, .affiliate-product__cta-compact').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function() {
       const productElement = this.closest('.affiliate-product');
-      const productId = productElement.dataset.productId;
-      const placement = productElement.dataset.placement;
-      
+      const productId = productElement?.dataset?.productId;
+      const placement = productElement?.dataset?.placement;
+
       // Enhanced analytics tracking
       if (typeof gtag !== 'undefined') {
         gtag('event', 'affiliate_click', {
@@ -595,7 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
           value: 1
         });
       }
-      
+
       // Console log pour debug
       console.log('Affiliate click tracked:', {
         productId,
@@ -604,15 +611,15 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-  
+
   // Intersection Observer pour les vues de produits
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const productElement = entry.target;
-        const productId = productElement.dataset.productId;
-        const placement = productElement.dataset.placement;
-        
+        const productId = productElement?.dataset?.productId;
+        const placement = productElement?.dataset?.placement;
+
         // Track product view
         if (typeof gtag !== 'undefined') {
           gtag('event', 'affiliate_view', {
@@ -621,7 +628,7 @@ document.addEventListener('DOMContentLoaded', function() {
             placement: placement
           });
         }
-        
+
         // Stop observing this element
         observer.unobserve(productElement);
       }
@@ -629,7 +636,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, {
     threshold: 0.5 // Trigger when 50% of the element is visible
   });
-  
+
   // Observe all affiliate products
   document.querySelectorAll('.affiliate-product').forEach(product => {
     observer.observe(product);

@@ -1,0 +1,37 @@
+# Configuration des prompts pour génération d'images
+# Format: TRAITEMENT:TYPE:PROMPT
+
+OZEMPIC:THUMBNAIL:Professional medical illustration of Ozempic semaglutide pen injector held by healthcare professional, clean white background, pharmaceutical style, high quality, LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition, medical education
+OZEMPIC:ILLUSTRATION:Detailed anatomical illustration showing GLP-1 receptor activation with Ozempic semaglutide, molecular level, scientific accuracy, professional medical style, LANDSCAPE FORMAT wide composition
+OZEMPIC:ICON:Simple, clean icon of Ozempic injection pen, minimal design, medical blue color scheme
+
+WEGOVY:THUMBNAIL:Medical illustration showing Wegovy injection pen for obesity treatment, healthcare professional demonstrating usage, professional clinic setting, clean design, LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition
+WEGOVY:ILLUSTRATION:Before and after comparison showing weight loss journey with Wegovy, healthy lifestyle elements, medical supervision concept, motivational illustration, LANDSCAPE FORMAT wide composition
+WEGOVY:ICON:Modern icon representing weight management with Wegovy, scale and medical cross, professional design
+
+SAXENDA:THUMBNAIL:Healthcare professional administering Saxenda liraglutide injection, medical clinic setting, professional illustration style, patient education focus, LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition
+SAXENDA:ILLUSTRATION:Daily routine illustration showing Saxenda injection timing, meal planning, exercise, comprehensive weight management approach, LANDSCAPE FORMAT wide composition
+SAXENDA:ICON:Clean icon of Saxenda pen injector, daily medication reminder concept, medical design
+
+TRULICITY:THUMBNAIL:Trulicity dulaglutide pen injector in medical professional hands, pharmaceutical illustration, clean background, weekly injection concept, LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition
+TRULICITY:ILLUSTRATION:Blood sugar control visualization with Trulicity, glucose monitoring, diabetes management, scientific medical illustration, LANDSCAPE FORMAT wide composition
+TRULICITY:ICON:Weekly medication icon for Trulicity, calendar with injection reminder, medical design
+
+VICTOZA:THUMBNAIL:Victoza liraglutide injection demonstration, medical education style, professional healthcare illustration, diabetes treatment focus, LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition
+VICTOZA:ILLUSTRATION:Diabetes management infographic with Victoza, blood sugar levels, lifestyle factors, comprehensive treatment approach, LANDSCAPE FORMAT wide composition
+VICTOZA:ICON:Daily injection icon for Victoza, medical pen design, healthcare color scheme
+
+RYBELSUS:THUMBNAIL:Rybelsus semaglutide oral tablets with glass of water, pharmaceutical product illustration, clean medical style, oral medication concept, LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition
+RYBELSUS:ILLUSTRATION:Pill-taking routine illustration for Rybelsus, morning medication, water intake, oral diabetes treatment, patient-friendly design, LANDSCAPE FORMAT wide composition
+RYBELSUS:ICON:Oral tablet icon for Rybelsus, pill bottle design, medication reminder concept
+
+# Styles de base
+STYLE_MEDICAL:professional medical illustration, clean white background, high quality, scientific accuracy, pharmaceutical style, LANDSCAPE FORMAT wide composition
+STYLE_THUMBNAIL:LANDSCAPE FORMAT 16:9 aspect ratio, wide horizontal composition, optimized for social media, engaging, professional, medical theme
+STYLE_ICON:minimal design, scalable vector style, medical blue (#0066CC), clean lines, professional appearance
+
+# Tailles recommandées
+SIZE_THUMBNAIL:1200x630 LANDSCAPE
+SIZE_ILLUSTRATION:1792x1024 LANDSCAPE
+SIZE_ICON:256x256
+SIZE_SOCIAL:1080x1080 SQUARE

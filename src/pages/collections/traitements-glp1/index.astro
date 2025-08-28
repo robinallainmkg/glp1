@@ -1,0 +1,58 @@
+---
+import CollectionLayout from '../../../layouts/CollectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('traitements-glp1');
+
+// Créer l'objet collection attendu par le layout
+const collection = {
+  id: 'traitements-glp1',
+  name: 'Traitements GLP-1',
+  slug: 'traitements-glp1',
+  description: 'Guides complets sur les traitements GLP-1 : Ozempic, Wegovy, Saxenda et autres médicaments pour le diabète et la perte de poids',
+  icon: '💉',
+  color: '#3b82f6',
+  seoTitle: 'Traitements GLP-1 - Guides complets des médicaments',
+  seoDescription: 'Guides complets sur les traitements GLP-1 : posologie, effets secondaires, prix, avis patients et alternatives.',
+  keywords: ["traitements glp1", "ozempic", "wegovy", "saxenda", "traitements diabète", "perte de poids"],
+  image: '/images/thumbnails/traitements-glp1.svg'
+};
+
+// Formater les articles pour le layout (wordCount sécurisé)
+const formattedArticles = articles.map((article: any) => ({
+  slug: article.slug,
+  title: article.data.title,
+  description: article.data.description || article.data.metaDescription || '',
+  author: article.data.author || 'Équipe GLP-1 France',
+  url: `/collections/traitements-glp1/${article.slug}`,
+  wordCount: (article.body || '').split(/\s+/).filter(Boolean).length,
+  readingTime: Math.ceil(((article.body || '').split(/\s+/).filter(Boolean).length) / 200) || 1,
+  lastModified: article.data.lastModified || article.data.pubDate || new Date().toISOString(),
+  thumbnail: article.data.thumbnail || article.data.image || `/images/thumbnails/${article.slug}-illus.jpg`
+}));
+
+// Déduplication : garder une seule entrée par slug, en retenant la version la plus récente
+function dedupeBySlugKeepLatest(items: any[]) {
+  const map = new Map();
+  items.forEach(item => {
+    const slug = String(item.slug || '');
+    const existing = map.get(slug);
+    const itemDate = new Date(item.lastModified || 0).getTime();
+    const existingDate = existing ? new Date(existing.lastModified || 0).getTime() : 0;
+    if (!existing || itemDate >= existingDate) {
+      map.set(slug, item);
+    }
+  });
+  return Array.from(map.values()).sort((a, b) => new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime());
+}
+
+const dedupedArticles = dedupeBySlugKeepLatest(formattedArticles);
+---
+
+<CollectionLayout
+  collection={collection}
+  articles={dedupedArticles}
+  {collection}
+/></content>
+<parameter name="filePath">/Users/mac/Projet/glp1/src/pages/collections/traitements-glp1/index.astro

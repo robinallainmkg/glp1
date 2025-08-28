@@ -1,18 +1,34 @@
 ---
-slug: regime-sans-sucre-glp1
+title: "Régime Sans Sucre GLP-1"
+slug: "regime-sans-sucre-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: regime-glp1
-thumbnail: /images/thumbnails/regime-sans-sucre-glp1-illus.jpg
-thumbnailAlt: "Illustration pour larticle regime-sans-sucre-glp1"
+category: "Nutrition"
+tags: ["glp1", "regime", "nutrition"]
+collection: "regime-glp1"
+thumbnail: "/images/thumbnails/regime-sans-sucre-glp1.svg"
+thumbnailAlt: "Illustration pour l'article Régime Sans Sucre GLP-1"
 featured: false
 priority: 5
-schema: Article
-title: "régime sans sucre et GLP-1 - Regime Sans Sucre Glp1"
-description: "régime sans sucre et GLP-1 — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "regime-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 9]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 9
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

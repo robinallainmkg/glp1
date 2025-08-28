@@ -28,7 +28,7 @@ const effetsSecondairesGlp1 = defineCollection({ type: 'content', schema: unifie
 const glp1Cout = defineCollection({ type: 'content', schema: unifiedSchema });
 const glp1Diabete = defineCollection({ type: 'content', schema: unifiedSchema });
 const medecinsGlp1France = defineCollection({ type: 'content', schema: unifiedSchema });
-const medicamentsGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
+const traitementsGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const rechercheGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const regimeGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const pagesStatiques = defineCollection({ type: 'content', schema: unifiedSchema });
@@ -40,7 +40,7 @@ export const collections = {
   'glp1-cout': glp1Cout,
   'glp1-diabete': glp1Diabete,
   'medecins-glp1-france': medecinsGlp1France,
-  'medicaments-glp1': medicamentsGlp1,
+  'traitements-glp1': traitementsGlp1,
   'recherche-glp1': rechercheGlp1,
   'regime-glp1': regimeGlp1,
   'pages-statiques': pagesStatiques,

@@ -1,18 +1,34 @@
 ---
-slug: combien-de-dose-dans-un-stylo-ozempic
+title: "Ozempic Posologie : Comment Bien l'Utiliser ?"
+slug: "combien-de-dose-dans-un-stylo-ozempic"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/combien-de-dose-dans-un-stylo-ozempic-illus.jpg
-thumbnailAlt: "Illustration pour larticle combien-de-dose-dans-un-stylo-ozempic"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/combien-de-dose-dans-un-stylo-ozempic.svg"
+thumbnailAlt: "Illustration pour l'article Combien De Dose Dans Un Stylo Ozempic"
 featured: false
 priority: 5
-schema: Article
-title: "Ozempic Stylo Dosage : Combien dInjections par Stylo France 2025"
-description: "combien de dose dans un stylo ozempic — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Dosage et utilisation d'Ozempic
 

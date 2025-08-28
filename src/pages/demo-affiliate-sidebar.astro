@@ -2,501 +2,236 @@
 import ArticleWithAffiliateSidebar from '../layouts/ArticleWithAffiliateSidebar.astro';
 import InlineAffiliateProduct from '../components/InlineAffiliateProduct.astro';
 
-// Simulation d'un article avec produits d'affiliation liés
-const articleData = {
-  title: "Guide Complet GLP-1 2025 : Ozempic, Wegovy et Mounjaro Comparés",
-  description: "Comparaison détaillée des trois principaux traitements GLP-1 pour le diabète et la perte de poids. Guide expert mis à jour pour 2025 avec retours d'expérience patients.",
-  author: "Dr. Martin Dubois",
-  category: "GLP-1",
-  
-  // Produits d'affiliation spécifiquement liés à cet article
-  affiliateProducts: [
-    {
-      product: "mounjaro-tirzepatide",
-      displayOrder: 1,
-      customNote: "Recommandation #1 pour diabète + obésité"
-    },
-    {
-      product: "wegovy-semaglutide", 
-      displayOrder: 2,
-      customNote: "Excellent pour perte de poids pure"
-    },
-    {
-      product: "ozempic-example",
-      displayOrder: 3,
-      customNote: "Standard pour diabète type 2"
-    }
-  ],
-  
-  // Configuration d'affichage adaptatif
-  affiliateConfig: {
-    enableAutoInjection: true,
-    mobileStrategy: 'both', // sidebar sur desktop, inline sur mobile
-    maxInlineProducts: 2,
-    injectionStrategy: 'auto'
+// Données d'exemple pour les produits d'affiliation avec codes promo et bienfaits détaillés
+const affiliateProducts = [
+  {
+    productName: "Ozempic (Sémaglutide)",
+    brand: "Novo Nordisk", 
+    productImage: "/images/products/ozempic.jpg",
+    discountPercent: 15,
+    promoCode: "GLP15FRANCE",
+    externalLink: "https://example.com/ozempic",
+    category: "Médicament GLP-1",
+    benefitsText: `
+      <ul>
+        <li><strong>Perte de poids moyenne :</strong> 10-15% en 6 mois</li>
+        <li><strong>Réduction de l'appétit :</strong> Jusqu'à 70% dès la 1ère semaine</li>
+        <li><strong>Contrôle glycémique :</strong> HbA1c réduite de 1,5 points</li>
+        <li><strong>Administration :</strong> 1 injection par semaine seulement</li>
+        <li><strong>Sécurité :</strong> Approuvé par l'ANSM et l'EMA</li>
+      </ul>
+    `,
+    featured: true
+  },
+  {
+    productName: "Guide Expert GLP-1 2024",
+    brand: "Dr. Martin Nutritionniste",
+    productImage: "/images/products/guide.jpg",
+    discountPercent: 25,
+    promoCode: "GUIDE25",
+    externalLink: "https://example.com/guide", 
+    category: "Guide Nutritionnel",
+    benefitsText: `
+      <ul>
+        <li><strong>150+ pages</strong> de conseils d'experts</li>
+        <li><strong>Plans alimentaires</strong> adaptés aux GLP-1</li>
+        <li><strong>Gestion des effets secondaires</strong> naturellement</li>
+        <li><strong>Recettes exclusives</strong> pour optimiser les résultats</li>
+        <li><strong>Suivi personnalisé</strong> pendant 3 mois</li>
+      </ul>
+    `,
+    featured: false
+  },
+  {
+    productName: "Mounjaro (Tirzépatide)",
+    brand: "Eli Lilly",
+    productImage: "/images/products/mounjaro.jpg",
+    discountPercent: 12,
+    promoCode: "MOUNJARO12",
+    externalLink: "https://example.com/mounjaro",
+    category: "Médicament GLP-1",
+    benefitsText: `
+      <ul>
+        <li><strong>Double mécanisme :</strong> GLP-1 + GIP pour plus d'efficacité</li>
+        <li><strong>Perte de poids supérieure :</strong> Jusqu'à 20% en 1 an</li>
+        <li><strong>Meilleur contrôle glycémique :</strong> Réduction HbA1c de 2 points</li>
+        <li><strong>Moins d'effets secondaires :</strong> Tolérance améliorée</li>
+        <li><strong>Innovation 2024 :</strong> Dernière génération GLP-1</li>
+      </ul>
+    `,
+    featured: false
   }
+];
+
+// Articles similaires
+const relatedArticles = [
+  {
+    title: "Ozempic vs Mounjaro : Comparaison complète",
+    slug: "ozempic-vs-mounjaro",
+    excerpt: "Découvrez les différences entre ces deux traitements...",
+    thumbnail: "/images/thumbnails/ozempic-mounjaro.jpg"
+  },
+  {
+    title: "Effets secondaires du Sémaglutide", 
+    slug: "effets-secondaires-semaglutide",
+    excerpt: "Tout ce qu'il faut savoir sur les effets secondaires...",
+    thumbnail: "/images/thumbnails/effets-secondaires.jpg"
+  },
+  {
+    title: "Guide d'alimentation avec les GLP-1",
+    slug: "guide-alimentation-glp1", 
+    excerpt: "Optimisez votre alimentation pendant le traitement...",
+    thumbnail: "/images/thumbnails/alimentation-glp1.jpg"
+  }
+];
+
+// Configuration adaptative pour mobile/desktop
+const affiliateConfig = {
+  enableAutoInjection: true,
+  mobileStrategy: 'both', // sidebar + inline sur mobile
+  desktopStrategy: 'sidebar', // sidebar uniquement sur desktop
+  inlinePositions: [2, 6, 10] // positions d'injection dans le contenu
 };
 
-const articleContent = `
-Dans ce guide complet mis à jour pour 2025, nous explorons les trois principales options 
-de traitement GLP-1 disponibles : Ozempic, Wegovy et Mounjaro. Ces médicaments révolutionnaires 
-transforment la prise en charge du diabète type 2 et de l'obésité avec des résultats 
-cliniques exceptionnels.
-
-Les GLP-1 (Glucagon-Like Peptide-1) agissent en mimant une hormone naturelle qui régule
-la glycémie et l'appétit. Mounjaro va plus loin avec son mécanisme dual GLP-1 + GIP,
-offrant une efficacité supérieure pour la perte de poids et le contrôle glycémique.
-
-Chaque traitement a ses spécificités : Ozempic pour le diabète, Wegovy pour l'obésité,
-et Mounjaro pour les deux indications avec une efficacité optimale. Les témoignages
-patients confirment l'impact transformateur de ces traitements.
-`;
-
-// Produits pour injection manuelle dans le contenu
-const mounjaro = {
-  productName: "Mounjaro (Tirzepatide)",
-  brand: "Eli Lilly",
-  productImage: "/images/affiliate/mounjaro-product.jpg",
-  discountPercent: 20,
-  externalLink: "https://example.com/mounjaro-prescription",
-  category: "GLP-1 + GIP",
-  featured: true,
-  benefitsText: "Double action révolutionnaire GLP-1 + GIP pour des résultats exceptionnels. Jusqu'à 22% de perte de poids et contrôle glycémique optimal."
-};
-
-const wegovy = {
-  productName: "Wegovy (Semaglutide)",
-  brand: "Novo Nordisk", 
-  productImage: "/images/affiliate/wegovy-product.jpg",
-  discountPercent: 15,
-  externalLink: "https://example.com/wegovy-prescription",
-  category: "GLP-1",
-  featured: true,
-  benefitsText: "Spécialement approuvé pour la gestion du poids. Perte de poids significative jusqu'à 15% du poids corporel."
-};
+// Métadonnées SEO
+const pageTitle = "Demo Sidebar d'Affiliation - Test Adaptatif Mobile/Desktop";
+const pageDescription = "Page de test pour la sidebar d'affiliation adaptative avec injection inline sur mobile et sidebar fixe sur desktop.";
 ---
 
 <ArticleWithAffiliateSidebar 
-  title={articleData.title}
-  description={articleData.description}
-  author={articleData.author}
-  category={articleData.category}
-  articleContent={articleContent}
-  affiliateProducts={articleData.affiliateProducts}
-  affiliateConfig={articleData.affiliateConfig}
+  title={pageTitle}
+  description={pageDescription}
+  products={affiliateProducts}
+  relatedArticles={relatedArticles}
+  config={affiliateConfig}
 >
-  <!-- Contenu principal de l'article -->
-  
-  <p class="lead-paragraph">
-    Les <strong>agonistes du récepteur GLP-1</strong> représentent une révolution thérapeutique 
-    dans la prise en charge du <strong>diabète type 2</strong> et de l'<strong>obésité</strong>. 
-    En 2025, trois traitements dominent le marché mondial : <strong>Ozempic</strong>, <strong>Wegovy</strong> 
-    et <strong>Mounjaro</strong>, chacun avec ses avantages spécifiques.
-  </p>
+  <article class="prose prose-lg max-w-none">
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg p-8 mb-8">
+      <h1 class="text-3xl font-bold mb-4">🧪 Demo Système d'Affiliation Adaptatif</h1>
+      <p class="text-lg opacity-90 mb-4">
+        Cette page teste notre solution au problème de sidebar mobile en injectant automatiquement 
+        des produits d'affiliation dans le contenu sur petits écrans.
+      </p>
+      <div class="bg-white/10 rounded-lg p-4">
+        <h3 class="font-semibold mb-2">📱 Fonctionnalités testées :</h3>
+        <ul class="text-sm space-y-1 opacity-90">
+          <li>✅ Sidebar fixe sur desktop/tablette</li>
+          <li>✅ Injection automatique sur mobile</li>
+          <li>✅ Adaptation responsive fluide</li>
+          <li>✅ Configuration personnalisable</li>
+        </ul>
+      </div>
+    </div>
 
-  <h2>🔬 Comprendre les mécanismes GLP-1</h2>
-  
-  <p>
-    Le <strong>GLP-1 (Glucagon-Like Peptide-1)</strong> est une hormone naturelle sécrétée par 
-    les cellules L de l'intestin grêle en réponse à l'ingestion d'aliments. Cette hormone joue 
-    un rôle crucial dans la régulation de la glycémie et de l'appétit, ouvrant la voie à des 
-    traitements révolutionnaires.
-  </p>
-
-  <!-- Injection manuelle du premier produit après 2 paragraphes (mobile) -->
-  <InlineAffiliateProduct 
-    product={mounjaro}
-    position="right"
-    size="medium"
-    showFullDescription={false}
-  />
-
-  <h3>Actions physiologiques du GLP-1</h3>
-  
-  <ul>
-    <li><strong>Stimulation insulinique glucose-dépendante</strong> : Augmente la sécrétion d'insuline uniquement en cas d'hyperglycémie, évitant les hypoglycémies</li>
-    <li><strong>Inhibition du glucagon</strong> : Réduit la production hépatique de glucose quand elle n'est pas nécessaire</li>
-    <li><strong>Ralentissement de la vidange gastrique</strong> : Prolonge naturellement la sensation de satiété</li>
-    <li><strong>Contrôle de l'appétit</strong> : Action directe sur les centres de la faim dans le cerveau</li>
-    <li><strong>Préservation des cellules bêta</strong> : Protection et régénération des cellules productrices d'insuline</li>
-  </ul>
-
-  <h2>💊 Ozempic (Semaglutide) - Le pionnier établi</h2>
-  
-  <p>
-    <strong>Ozempic</strong> a été le premier traitement GLP-1 à démontrer une efficacité 
-    remarquable dans le contrôle du diabète type 2. Avec des doses progressives allant jusqu'à 1 mg 
-    par semaine, il a établi les standards de cette classe thérapeutique et demeure une référence 
-    incontournable.
-  </p>
-  
-  <blockquote>
+    <h2>Introduction aux GLP-1</h2>
     <p>
-      "Ozempic reste la référence gold standard pour le traitement du diabète type 2, avec un profil 
-      de sécurité bien établi par plus de 5 années d'utilisation clinique et une efficacité prouvée 
-      sur la réduction des événements cardiovasculaires majeurs."
+      Les agonistes du récepteur GLP-1 représentent une révolution dans le traitement du diabète de type 2 
+      et de l'obésité. Ces médicaments imitent l'action d'une hormone naturelle qui régule la glycémie 
+      et l'appétit.
     </p>
-  </blockquote>
 
-  <h3>✅ Avantages cliniques d'Ozempic</h3>
-  
-  <ul>
-    <li><strong>Réduction HbA1c</strong> : -1,5 à -1,8% en moyenne</li>
-    <li><strong>Perte de poids modérée</strong> : 6-10% du poids corporel initial</li>
-    <li><strong>Injection hebdomadaire</strong> : Facilité d'observance remarquable</li>
-    <li><strong>Protection cardiovasculaire</strong> : Réduction de 26% des événements cardiovasculaires majeurs</li>
-    <li><strong>Tolérance digestive</strong> : Généralement bien tolérée après adaptation</li>
-    <li><strong>Expérience clinique</strong> : Plus de 10 millions de patients traités dans le monde</li>
-  </ul>
+    <!-- PRODUIT INLINE #1 - Après le 2ème paragraphe -->
+    <InlineAffiliateProduct 
+      product={affiliateProducts[0]}
+      position="right"
+      size="medium"
+      showFullDescription={true}
+    />
 
-  <h2>🎯 Wegovy (Semaglutide haute dose) - Spécialiste minceur</h2>
-  
-  <p>
-    <strong>Wegovy</strong> utilise la même molécule active que l'Ozempic (semaglutide) mais à dose 
-    significativement plus élevée (2,4 mg vs 1 mg). Cette formulation est spécifiquement approuvée 
-    pour la gestion du poids chez les patients obèses ou en surpoids avec comorbidités, marquant 
-    une révolution dans le traitement de l'obésité.
-  </p>
-
-  <!-- Injection du second produit au milieu de l'article -->
-  <InlineAffiliateProduct 
-    product={wegovy}
-    position="left"
-    size="medium"
-    showFullDescription={false}
-  />
-
-  <h3>📊 Résultats exceptionnels sur le poids</h3>
-  
-  <p>
-    Les études cliniques STEP (Semaglutide Treatment Effect in People with obesity) ont démontré 
-    une <strong>perte de poids moyenne de 15-17%</strong> du poids corporel initial sur 68 semaines, 
-    avec des résultats qui surpassent tous les traitements anti-obésité précédents :
-  </p>
-  
-  <ul>
-    <li><strong>68% des patients</strong> perdent plus de 10% de leur poids initial</li>
-    <li><strong>32% des patients</strong> perdent plus de 20% de leur poids initial</li>
-    <li><strong>Maintien à long terme</strong> : Stabilisation du poids perdu sur 2+ années</li>
-    <li><strong>Amélioration métabolique</strong> : Réduction du tour de taille, amélioration lipidique</li>
-    <li><strong>Qualité de vie</strong> : Amélioration significative des scores de bien-être</li>
-  </ul>
-
-  <h2>🚀 Mounjaro (Tirzepatide) - L'innovation révolutionnaire</h2>
-  
-  <p>
-    <strong>Mounjaro</strong> marque une rupture technologique majeure avec son mécanisme dual 
-    <strong>GLP-1 + GIP</strong> (Glucose-dependent Insulinotropic Polypeptide). Cette double action 
-    offre une efficacité sans précédent tant sur le contrôle glycémique que sur la perte de poids, 
-    redéfinissant les standards thérapeutiques.
-  </p>
-
-  <h3>🔄 Mécanisme dual révolutionnaire</h3>
-  
-  <p>
-    L'innovation majeure de Mounjaro réside dans l'ajout du <strong>GIP</strong> au mécanisme GLP-1 traditionnel. 
-    Cette synergie permet une approche thérapeutique complètement nouvelle :
-  </p>
-  
-  <ul>
-    <li><strong>Synergie GLP-1 + GIP</strong> : Action coordonnée sur la sécrétion d'insuline</li>
-    <li><strong>Sensibilité à l'insuline</strong> : Amélioration marquée de la réponse cellulaire</li>
-    <li><strong>Métabolisme lipidique</strong> : Contrôle optimal des graisses et cholestérol</li>
-    <li><strong>Tolérance digestive</strong> : Profil d'effets secondaires amélioré vs GLP-1 seuls</li>
-    <li><strong>Neuroprotection</strong> : Effets potentiels sur la santé cognitive</li>
-  </ul>
-
-  <h2>📈 Comparaison directe - Tableau de performance 2025</h2>
-  
-  <div style="overflow-x: auto; margin: 2.5rem 0;">
-    <table style="width: 100%; border-collapse: collapse; border: 1px solid #e5e7eb;">
-      <thead>
-        <tr style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);">
-          <th style="padding: 1.2rem; border: 1px solid #1d4ed8; text-align: left; color: white; font-weight: 700;">Critère de Performance</th>
-          <th style="padding: 1.2rem; border: 1px solid #1d4ed8; text-align: center; color: white; font-weight: 700;">Ozempic 1mg</th>
-          <th style="padding: 1.2rem; border: 1px solid #1d4ed8; text-align: center; color: white; font-weight: 700;">Wegovy 2,4mg</th>
-          <th style="padding: 1.2rem; border: 1px solid #1d4ed8; text-align: center; color: white; font-weight: 700;"><strong>Mounjaro 15mg</strong></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background: #f8fafc;">
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Mécanisme d'action</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">GLP-1 pur</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">GLP-1 pur</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #fef3c7; font-weight: 700;"><strong>GLP-1 + GIP</strong></td>
-        </tr>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Dose maximale</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">1 mg/semaine</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">2,4 mg/semaine</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #fef3c7; font-weight: 700;"><strong>15 mg/semaine</strong></td>
-        </tr>
-        <tr style="background: #f8fafc;">
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Perte de poids moyenne</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">6-10%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">15-17%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #dcfce7; font-weight: 700;"><strong>15-22%</strong></td>
-        </tr>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Réduction HbA1c moyenne</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">-1,5%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">-1,8%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #dcfce7; font-weight: 700;"><strong>-2,4%</strong></td>
-        </tr>
-        <tr style="background: #f8fafc;">
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Patients atteignant HbA1c &lt;7%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">60-65%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">70%</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #dcfce7; font-weight: 700;"><strong>80%</strong></td>
-        </tr>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Indication principale</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">Diabète type 2</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">Obésité</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #fef3c7; font-weight: 700;"><strong>Diabète + Obésité</strong></td>
-        </tr>
-        <tr style="background: #f8fafc;">
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; font-weight: 600;">Tolérance digestive</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">Bonne</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center;">Modérée</td>
-          <td style="padding: 1rem; border: 1px solid #e5e7eb; text-align: center; background: #dcfce7; font-weight: 700;"><strong>Excellente</strong></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>🎯 Guide de choix du traitement optimal</h2>
-  
-  <h3>🔵 Ozempic - Profil patient idéal</h3>
-  <ul>
-    <li><strong>Diabète type 2 récent</strong> : Diagnostic dans les 5 dernières années</li>
-    <li><strong>HbA1c modérément élevée</strong> : Entre 7-9%, sans complications sévères</li>
-    <li><strong>Surpoids léger à modéré</strong> : IMC 25-35 kg/m²</li>
-    <li><strong>Première approche GLP-1</strong> : Patients naïfs de cette classe thérapeutique</li>
-    <li><strong>Priorité glycémique</strong> : Contrôle du diabète avant perte de poids</li>
-  </ul>
-
-  <h3>🟢 Wegovy - Candidats privilégiés</h3>
-  <ul>
-    <li><strong>Obésité sans diabète</strong> : IMC ≥30 kg/m² ou ≥27 avec comorbidités</li>
-    <li><strong>Échec approches conventionnelles</strong> : Diététique et exercice insuffisants</li>
-    <li><strong>Objectif perte de poids prioritaire</strong> : Motivation forte pour changement</li>
-    <li><strong>Risque cardiovasculaire</strong> : Prévention primaire chez patients à risque</li>
-    <li><strong>Qualité de vie altérée</strong> : Impact psychosocial significatif du surpoids</li>
-  </ul>
-
-  <h3>🟡 Mounjaro - Excellence thérapeutique</h3>
-  <ul>
-    <li><strong>Diabète type 2 + obésité</strong> : Indication optimale pour double bénéfice</li>
-    <li><strong>HbA1c élevée</strong> : >8% malgré traitement antérieur</li>
-    <li><strong>Échec thérapeutiques multiples</strong> : Résistance aux traitements conventionnels</li>
-    <li><strong>Recherche d'efficacité maximale</strong> : Patients motivés pour traitement avancé</li>
-    <li><strong>Complications métaboliques</strong> : Syndrome métabolique complet</li>
-  </ul>
-
-  <h2>💰 Considérations économiques et accessibilité</h2>
-  
-  <h3>Analyse coût-bénéfice 2025</h3>
-  
-  <p>
-    Les aspects économiques constituent souvent un facteur déterminant dans le choix thérapeutique. 
-    Voici un aperçu des coûts et modalités de remboursement actualisés :
-  </p>
-  
-  <ul>
-    <li><strong>Ozempic</strong> : Remboursé à 65% par l'Assurance Maladie pour diabète type 2, reste à charge ~50-80€/mois</li>
-    <li><strong>Wegovy</strong> : Remboursement partiel selon critères stricts (IMC, échecs antérieurs), programmes d'aide industriels</li>
-    <li><strong>Mounjaro</strong> : Remboursement diabète acquis, négociations en cours pour obésité, programmes Lilly Cares disponibles</li>
-  </ul>
-
-  <h3>⚕️ Suivi médical et surveillance requis</h3>
-  
-  <p>
-    Tous ces traitements nécessitent une supervision médicale spécialisée rigoureuse :
-  </p>
-  
-  <ul>
-    <li><strong>Consultation initiale</strong> : Endocrinologue, diabétologue ou médecin formé</li>
-    <li><strong>Suivi rapproché</strong> : Mensuel les 3 premiers mois, puis trimestriel</li>
-    <li><strong>Surveillance biologique</strong> : HbA1c, fonction rénale, bilan lipidique</li>
-    <li><strong>Éducation thérapeutique</strong> : Formation à l'injection, gestion des effets secondaires</li>
-    <li><strong>Accompagnement nutritionnel</strong> : Diététicien spécialisé recommandé</li>
-  </ul>
-
-  <h2>🏆 Conclusion et recommandations expertes 2025</h2>
-  
-  <p>
-    Le choix entre <strong>Ozempic</strong>, <strong>Wegovy</strong> et <strong>Mounjaro</strong> 
-    dépend du profil individuel, des objectifs thérapeutiques prioritaires et des contraintes 
-    économiques. <strong>Mounjaro</strong> s'impose progressivement comme la solution la plus 
-    avancée pour les patients présentant diabète et obésité combinés, grâce à son mécanisme 
-    dual innovant.
-  </p>
-  
-  <blockquote>
+    <h2>Comment ça fonctionne sur cette page</h2>
     <p>
-      <strong>Recommandation experte 2025</strong> : Pour optimiser les résultats thérapeutiques, 
-      privilégier Mounjaro en première intention chez les patients diabétiques obèses 
-      (efficacité supérieure), Wegovy pour l'obésité sans diabète (spécialisation perte de poids), 
-      et Ozempic pour le diabète avec surpoids modéré (rapport efficacité/sécurité établi).
+      Le système détecte automatiquement la taille d'écran et adapte l'affichage des produits d'affiliation :
     </p>
-  </blockquote>
+    
+    <ul>
+      <li><strong>Desktop/Tablette :</strong> Sidebar fixe à droite avec tous les produits</li>
+      <li><strong>Mobile :</strong> Injection automatique de produits dans le contenu + sidebar en bas</li>
+      <li><strong>Adaptatif :</strong> Transition fluide entre les deux modes</li>
+    </ul>
 
-  <p>
-    L'avenir de ces traitements s'annonce prometteur avec de nouvelles indications à l'étude 
-    (stéatose hépatique, insuffisance cardiaque, neuroprotection) et l'arrivée prochaine de 
-    formulations orales qui révolutionneront encore l'accessibilité de ces thérapies.
-  </p>
+    <h2>Avantages des traitements GLP-1</h2>
+    <p>
+      Les médicaments comme Ozempic et Mounjaro offrent plusieurs avantages significatifs pour 
+      la gestion du poids et du diabète. Ils agissent en ralentissant la vidange gastrique, 
+      ce qui procure une sensation de satiété prolongée.
+    </p>
 
-  <p style="font-style: italic; color: #6b7280; margin-top: 3rem; padding: 1.5rem; background: #f9fafb; border-radius: 8px; border-left: 4px solid #fbbf24;">
-    <strong>⚠️ Avertissement médical</strong> : Ces informations sont fournies à titre éducatif 
-    et ne remplacent en aucun cas l'avis d'un professionnel de santé. Consultez toujours votre 
-    médecin spécialiste avant toute décision thérapeutique concernant ces traitements.
-  </p>
+    <h2>Mécanisme d'action</h2>
+    <p>
+      Les GLP-1 agissent sur plusieurs niveaux dans l'organisme. Ils stimulent la production d'insuline 
+      uniquement lorsque la glycémie est élevée, réduisent la production de glucagon et ralentissent 
+      la vidange gastrique.
+    </p>
 
+    <!-- PRODUIT INLINE #2 - Après le 6ème paragraphe -->
+    <InlineAffiliateProduct 
+      product={affiliateProducts[1]}
+      position="left"
+      size="large"
+      showFullDescription={true}
+    />
+
+    <h2>Témoignages de patients</h2>
+    <p>
+      De nombreux patients rapportent une perte de poids significative avec les traitements GLP-1. 
+      Les résultats varient selon les individus, mais les études cliniques montrent une efficacité 
+      remarquable avec une perte moyenne de 10 à 15% du poids corporel.
+    </p>
+
+    <h2>Suivi médical recommandé</h2>
+    <p>
+      Il est essentiel de maintenir un suivi médical régulier pendant le traitement. Votre médecin 
+      ajustera la posologie selon votre réponse au traitement et surveillera les éventuels effets 
+      secondaires qui peuvent apparaître en début de traitement.
+    </p>
+
+    <h2>Conseils nutritionnels</h2>
+    <p>
+      Bien que les GLP-1 réduisent considérablement l'appétit, il reste important de maintenir une alimentation 
+      équilibrée et nutritive. Privilégiez les protéines maigres, les légumes verts et les céréales complètes 
+      pour optimiser les résultats et maintenir votre santé.
+    </p>
+
+    <h2>Gestion des effets secondaires</h2>
+    <p>
+      Les effets secondaires les plus courants incluent des nausées, des vomissements et des troubles digestifs, 
+      particulièrement en début de traitement. Ces symptômes s'atténuent généralement avec le temps et 
+      peuvent être minimisés par une montée progressive des doses.
+    </p>
+
+    <h2>Résultats à long terme</h2>
+    <p>
+      Les études montrent que les bénéfices des GLP-1 se maintiennent tant que le traitement est 
+      poursuivi de manière continue. L'arrêt du traitement peut entraîner une reprise progressive du poids, 
+      d'où l'importance d'un suivi médical à long terme.
+    </p>
+
+    <h2>Comparaison des options disponibles</h2>
+    <p>
+      Chaque médicament GLP-1 a ses spécificités particulières. Ozempic (sémaglutide) est administré une fois par semaine, 
+      tandis que Mounjaro (tirzépatide) combine deux mécanismes d'action différents pour une efficacité 
+      potentiellement supérieure sur la perte de poids.
+    </p>
+
+    <h2>Conclusion et perspectives</h2>
+    <p>
+      Les traitements GLP-1 représentent un espoir considérable pour les personnes en surpoids 
+      ou souffrant de diabète de type 2. Avec un suivi médical approprié, des attentes réalistes 
+      et une approche globale incluant nutrition et activité physique, ils peuvent véritablement 
+      transformer la vie des patients.
+    </p>
+
+    <div class="mt-12 p-6 bg-blue-50 rounded-lg">
+      <h3 class="text-lg font-semibold text-blue-900 mb-3">
+        🔧 Informations techniques pour développeurs
+      </h3>
+      <ul class="text-sm text-blue-800 space-y-2">
+        <li><strong>Layout utilisé :</strong> ArticleWithAffiliateSidebar</li>
+        <li><strong>Produits d'affiliation :</strong> {affiliateProducts.length} produits configurés</li>
+        <li><strong>Articles similaires :</strong> {relatedArticles.length} articles liés</li>
+        <li><strong>Mode adaptatif :</strong> {affiliateConfig.mobileStrategy} sur mobile, {affiliateConfig.desktopStrategy} sur desktop</li>
+        <li><strong>Injection inline :</strong> Positions {affiliateConfig.inlinePositions.join(', ')}</li>
+      </ul>
+    </div>
+  </article>
 </ArticleWithAffiliateSidebar>
-
-<style>
-/* Styles spécifiques pour cet article de démonstration */
-.lead-paragraph {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #4a5568;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-  border-left: 4px solid #2563eb;
-  border-radius: 0 8px 8px 0;
-}
-
-/* Amélioration des blockquotes */
-blockquote {
-  background: #f8f9fa;
-  border-left: 4px solid #28a745;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  border-radius: 0 8px 8px 0;
-  font-style: italic;
-  color: #495057;
-}
-
-blockquote p {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #495057;
-}
-
-/* Style des tableaux amélioré */
-table {
-  margin: 2rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th {
-  background: #2563eb;
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.9rem;
-  padding: 1rem;
-}
-
-td {
-  padding: 1rem;
-  border-bottom: 1px solid #e5e7eb;
-  color: #374151;
-}
-
-td strong {
-  color: #2563eb;
-}
-
-tr:nth-child(even) {
-  background: #f8fafc;
-}
-
-tr:hover {
-  background: #f1f5f9;
-}
-
-/* Corrections pour les titres avec émojis */
-h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: clamp(1.5rem, 3vw, 1.8rem);
-  font-weight: 700;
-  margin: 3rem 0 1.5rem 0;
-  color: #1f2937;
-}
-
-h3 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-  font-weight: 600;
-  margin: 2.5rem 0 1rem 0;
-  color: #374151;
-}
-
-/* Listes améliorées */
-ul {
-  margin: 1.5rem 0;
-  padding-left: 2rem;
-}
-
-li {
-  margin: 0.75rem 0;
-  line-height: 1.6;
-  color: #374151;
-}
-
-li strong {
-  color: #2563eb;
-}
-
-/* Paragraphes */
-p {
-  margin: 1.5rem 0;
-  line-height: 1.8;
-  color: #374151;
-}
-
-p strong {
-  color: #2563eb;
-  font-weight: 600;
-}
-
-/* Responsive pour mobile */
-@media (max-width: 768px) {
-  .lead-paragraph {
-    font-size: 1.1rem;
-    padding: 1rem;
-  }
-  
-  table {
-    font-size: 0.9rem;
-  }
-  
-  th, td {
-    padding: 0.75rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  h3 {
-    font-size: 1.25rem;
-  }
-}
-
-
-</style>

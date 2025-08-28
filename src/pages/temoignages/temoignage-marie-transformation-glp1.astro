@@ -1,12 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+const affiliateProducts = [];
+const affiliateConfig = {};
+const entry = {};
+const frontmatter = null;
 ---
 
-<BaseLayout 
-  title="Témoignage Marie L. - Transformation GLP-1 : -32 kilos en 12 mois"
-  description="Découvrez la transformation exceptionnelle de Marie L. avec le traitement GLP-1 : 32 kilos perdus en 12 mois après 3 grossesses."
-  keywords="témoignage Marie, GLP-1, perte de poids après grossesse, transformation exceptionnelle"
->
+<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
 
 <div class="container">
   <article class="testimonial-detail">
@@ -449,6 +450,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 </style>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>
 
 

@@ -1,22 +1,21 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StaticLayout from '../../layouts/StaticLayout.astro';
 import { getCollection } from 'astro:content';
 
 // Récupérer tous les articles de la collection glp1-perte-de-poids
 const articles = await getCollection('glp1-perte-de-poids');
-const sortedArticles = articles.sort((a, b) => {
+const sortedArticles = articles.sort((a: any, b: any) => {
   const dateA = new Date(a.data.datePublished || a.data.pubDate);
   const dateB = new Date(b.data.datePublished || b.data.pubDate);
   return dateB.getTime() - dateA.getTime();
 });
 
 // Articles mis en avant
-const featuredArticles = sortedArticles.filter(article => article.data.featured);
-const otherArticles = sortedArticles.filter(article => !article.data.featured);
+const featuredArticles = sortedArticles.filter((article: any) => article.data.featured);
+const otherArticles = sortedArticles.filter((article: any) => !article.data.featured);
 ---
 
-<BaseLayout 
-  title="GLP-1 pour la Perte de Poids : Guide Complet et Témoignages"
+<StaticLayout title="GLP-1 pour la Perte de Poids : Guide Complet et Témoignages"
   description="Découvrez tout sur les GLP-1 pour perdre du poids : Ozempic, Wegovy, prix, efficacité, témoignages réels et conseils d'experts."
   keywords="GLP-1, perte de poids, Ozempic, Wegovy, témoignages, prix"
 >
@@ -64,7 +63,7 @@ const otherArticles = sortedArticles.filter(article => !article.data.featured);
       <section class="mb-12">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Articles Essentiels</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredArticles.map((article) => (
+          {featuredArticles.map((article: any) => (
             <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               {article.data.image && (
                 <img 
@@ -97,7 +96,7 @@ const otherArticles = sortedArticles.filter(article => !article.data.featured);
     <section>
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Tous les Articles</h2>
       <div class="grid gap-6">
-        {otherArticles.map((article) => (
+  {otherArticles.map((article: any) => (
           <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               {article.data.image && (
@@ -137,7 +136,7 @@ const otherArticles = sortedArticles.filter(article => !article.data.featured);
       </a>
     </div>
   </div>
-</BaseLayout>
+</StaticLayout>
 
 <style>
   .btn {

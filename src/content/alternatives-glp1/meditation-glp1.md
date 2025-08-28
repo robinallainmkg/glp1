@@ -1,18 +1,34 @@
 ---
-slug: meditation-glp1
+title: "Meditation GLP-1"
+slug: "meditation-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: alternatives-glp1
-thumbnail: /images/thumbnails/meditation-glp1-illus.jpg
-thumbnailAlt: "Illustration pour larticle meditation-glp1"
+category: "Alternatives thérapeutiques"
+tags: ["glp1", "alternatives", "traitements"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/meditation-glp1-illus.jpg"
+thumbnailAlt: "Illustration pour l'article Meditation GLP-1"
 featured: false
 priority: 5
-schema: Article
-title: "méditation et gestion diabète - Meditation Glp1"
-description: "méditation et gestion diabète — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "alternatives-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6, 10]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6, 10
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

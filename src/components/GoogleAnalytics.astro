@@ -4,13 +4,15 @@ const GA_MEASUREMENT_ID = 'G-SFS6MEPVPC';
 ---
 
 <!-- Google tag (gtag.js) -->
-<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-<script>
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+<script is:inline>
   try {
+    // Use plain JS to avoid TypeScript assertion errors in inline scripts
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SFS6MEPVPC');
+    function gtag(){ window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-SFS6MEPVPC');
   } catch (error) {
     console.warn('Google Analytics failed to load:', error);
   }

@@ -1,12 +1,14 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+// Safe defaults (avoid typeof checks in templates)
+const affiliateProducts = [];
+const affiliateConfig = {};
+const entry = {};
+const frontmatter = null;
 ---
 
-<BaseLayout 
-  title="Qu'est-ce que GLP-1 ? Ozempic, Wegovy et les Nouveaux Médicaments Expliqués"
-  description="GLP-1 expliqué simplement : découvrez ce que sont Ozempic, Wegovy et ces nouveaux médicaments révolutionnaires pour le diabète et la perte de poids."
-  keywords="GLP-1, qu'est-ce que GLP-1, Ozempic explication, Wegovy comment ça marche, hormone GLP-1"
->
+<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
   <div class="container">
     <article class="explanation-article">
       <header class="article-header">
@@ -106,15 +108,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 <th>Ozempic</th>
                 <th>Wegovy</th>
               </tr>
-            </thead>
             <tbody>
               <tr>
                 <td><strong>Molécule</strong></td>
                 <td>Sémaglutide</td>
-                <td>Sémaglutide</td>
-              </tr>
-              <tr>
-                <td><strong>Dosage max</strong></td>
+            // Removed unused placeholders
+            const affiliateConfig = {};
+            // Removed unused placeholders
+            // Removed unused placeholders
+            const entry = {};
+            const frontmatter = null;
                 <td>1 mg</td>
                 <td>2,4 mg</td>
               </tr>
@@ -551,6 +554,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       }
     }
   </style>
-</BaseLayout>
+</ArticleWithAffiliateSidebar>
 
 

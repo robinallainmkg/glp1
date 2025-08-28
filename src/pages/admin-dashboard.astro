@@ -1,12 +1,11 @@
 ---
-import AdminLayout from '../layouts/AdminLayout.astro';
+import StaticLayout from '../layouts/StaticLayout.astro';
 
 const title = "Dashboard Admin - GLP-1 France";
-const description = "Dashboard de suivi SEO et monétisation du site GLP-1 France";
 const lastUpdate = new Date().toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
 ---
 
-<AdminLayout title={title} currentPage="dashboard">
+<StaticLayout title={title} currentPage="dashboard">
   <div class="admin-content">
     <div class="min-h-screen bg-gray-50 py-8">
       <div class="container mx-auto px-4 max-w-7xl">
@@ -99,7 +98,7 @@ const lastUpdate = new Date().toLocaleString('fr-FR', { dateStyle: 'long', timeS
       </div>
     </div>
   </div>
-</AdminLayout>
+</StaticLayout>
 
 <style>
   .admin-content {

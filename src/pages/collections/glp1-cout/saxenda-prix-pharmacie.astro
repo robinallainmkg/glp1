@@ -1,11 +1,32 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../../layouts/ArticleWithAffiliateSidebar.astro";
+
+// Removed unused placeholders
+
+// Configuration d'affiliation pour cette page
+const affiliateConfig = {
+  enableAutoInjection: true,
+  mobileStrategy: 'both' as const,
+  maxInlineProducts: 2,
+  injectionStrategy: 'auto' as const
+};
+
+// Contenu de l'article pour l'analyse d'affiliation
+const articleContent = `
+Saxenda Prix en Pharmacie : Guide Complet 2025
+Prix Saxenda pharmacie, coût liraglutide, remboursement Saxenda
+Combien coûte Saxenda en pharmacie française ? Guide complet des prix et remboursement
+Médicament pour maigrir, injection liraglutide, prescription médicale
+`;
 ---
 
-<BaseLayout 
-  title="Saxenda Prix en Pharmacie - Tarifs et Remboursement 2025"
-  description="Prix Saxenda en pharmacie française : tarifs détaillés, remboursement et comparaison avec Wegovy."
-  keywords="saxenda prix, saxenda pharmacie, coût saxenda, liraglutide prix, remboursement saxenda"
+<ArticleWithAffiliateSidebar 
+  title="Saxenda Prix en Pharmacie : Guide Complet 2025"
+  description="Prix Saxenda en pharmacie : combien coûte le liraglutide ? Guide remboursement et tarifs 2025."
+  articleContent={articleContent} 
+  affiliateConfig={affiliateConfig ?? {}} 
+  image="/images/thumbnails/saxenda-prix-pharmacie.svg"
+  category="glp1-cout"
 >
 
 <div class="container">
@@ -85,4 +106,4 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   </article>
 </div>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>

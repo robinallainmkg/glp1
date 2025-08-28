@@ -1,18 +1,34 @@
 ---
-slug: medicament-pour-maigrir-tres-puissant
+title: "Guide Complet maigrir 2025 : Tout Savoir"
+slug: "medicament-pour-maigrir-tres-puissant"
 pubDate: 2025-08-20
 author: "Karim Benali"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/medicament-pour-maigrir-tres-puissant-illus.jpg
-thumbnailAlt: "Illustration pour larticle medicament-pour-maigrir-tres-puissant"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/medicament-pour-maigrir-tres-puissant.svg"
+thumbnailAlt: "Illustration pour l'article Médicament Pour Maigrir Tres Puissant"
 featured: false
 priority: 5
-schema: Article
-title: "Médicament pour maigrir très puissant"
-description: "médicament pour maigrir très puissant — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)

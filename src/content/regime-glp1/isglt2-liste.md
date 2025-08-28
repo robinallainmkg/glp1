@@ -1,18 +1,34 @@
 ---
-slug: isglt2-liste
+title: "Isglt2 Liste"
+slug: "isglt2-liste"
 pubDate: 2025-08-20
 author: "Julien Lefèvre"
-category: "Guide médical"
-tags: []
-collection: regime-glp1
-thumbnail: /images/thumbnails/isglt2-liste-illus.jpg
-thumbnailAlt: "Illustration pour larticle isglt2-liste"
+category: "Nutrition"
+tags: ["glp1", "regime", "nutrition"]
+collection: "regime-glp1"
+thumbnail: "/images/thumbnails/isglt2-liste.svg"
+thumbnailAlt: "Illustration pour l'article Isglt2 Liste"
 featured: false
 priority: 5
-schema: Article
-title: "Isglt2 liste - Isglt2 Liste"
-description: "isglt2 liste — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "regime-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 9]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 9
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

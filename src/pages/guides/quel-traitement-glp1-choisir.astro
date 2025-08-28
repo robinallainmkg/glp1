@@ -1,12 +1,21 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import AffiliateProduct from '../../components/AffiliateProduct.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+const affiliateProducts = [];
+const affiliateConfig = {};
+// entry placeholder removed (unused)
+const title = "Diagnostic GLP-1 : Quel Traitement Choisir ?";
+const description = "Guide complet pour choisir le bon traitement GLP-1 selon votre profil.";
+const articleContent = `<p>${description}</p><p>Découvrez en 5 minutes quel traitement est le plus adapté à votre situation avec notre diagnostic personnalisé.</p>`;
 ---
 
-<BaseLayout 
-  title="Diagnostic GLP-1 Personnalisé : Ozempic ou Wegovy ? | Test Gratuit"
-  description="Diagnostic personnalisé en 5 minutes pour savoir si Ozempic ou Wegovy est fait pour vous. Test gratuit basé sur votre profil médical."
-  keywords="diagnostic GLP-1, test Ozempic, Wegovy, quel traitement choisir, éligibilité GLP-1"
+<ArticleWithAffiliateSidebar 
+  title={title}
+  description={description}
+  articleContent={articleContent} 
+  affiliateProducts={affiliateProducts} 
+  affiliateConfig={affiliateConfig ?? {}}
+  showAffiliateSidebar={true}
 >
   <div class="container">
     <div class="diagnostic-page">
@@ -29,32 +38,22 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
           <h2>Quel est votre objectif principal ?</h2>
           <div class="options">
             <label class="option">
-              <input type="radio" name="q1" value="effets-secondaires">
-              <span class="option-content">
-                <div class="option-icon">😵</div>
-                <div class="option-text">
-                  <strong>Réduire les effets secondaires</strong>
-                  <p>Je suis déjà sous GLP-1 et j'ai des effets indésirables</p>
-                </div>
-              </span>
-            </label>
-            <label class="option">
-              <input type="radio" name="q1" value="perte-poids">
-              <span class="option-content">
-                <div class="option-icon">📉</div>
-                <div class="option-text">
-                  <strong>Perdre du poids</strong>
-                  <p>Je veux principalement maigrir</p>
-                </div>
-              </span>
-            </label>
-            <label class="option">
               <input type="radio" name="q1" value="diabete">
               <span class="option-content">
-                <div class="option-icon">🩺</div>
+                <div class="option-icon">💊</div>
                 <div class="option-text">
-                  <strong>Traiter mon diabète</strong>
-                  <p>J'ai un diabète de type 2</p>
+                  <strong>Contrôler le diabète</strong>
+                  <p>Réguler ma glycémie et mon diabète de type 2</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="poids">
+              <span class="option-content">
+                <div class="option-icon">⚖️</div>
+                <div class="option-text">
+                  <strong>Perdre du poids</strong>
+                  <p>Objectif principal : perte de poids significative</p>
                 </div>
               </span>
             </label>
@@ -65,6 +64,26 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
                 <div class="option-text">
                   <strong>Les deux</strong>
                   <p>Diabète + perte de poids</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="prevention">
+              <span class="option-content">
+                <div class="option-icon">🛡️</div>
+                <div class="option-text">
+                  <strong>Prévention</strong>
+                  <p>Prévenir l'apparition du diabète</p>
+                </div>
+              </span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="effets-secondaires">
+              <span class="option-content">
+                <div class="option-icon">😵</div>
+                <div class="option-text">
+                  <strong>Réduire les effets secondaires</strong>
+                  <p>Je suis déjà sous GLP-1 et j'ai des effets indésirables</p>
                 </div>
               </span>
             </label>
@@ -787,13 +806,14 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
   </style>
 
   <script>
-    let currentQuestion = 1;
-    const totalQuestions = 9;
-    const answers = {};
-    let selectedEffets = [];
+    // permissive types for inline client script
+    let currentQuestion: number = 1;
+    const totalQuestions: number = 9;
+    const answers: any = {};
+    let selectedEffets: any[] = [];
 
     // Navigation functions
-    function showQuestion(n) {
+  function showQuestion(n: number) {
       document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
       
       // Logique conditionnelle pour la question 9 (effets secondaires)
@@ -811,51 +831,66 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       }
       
       // Si c'est la question 9 et que l'objectif est "effets-secondaires", s'assurer qu'elle est visible
-      if (n === 9 && answers.q1 === 'effets-secondaires') {
-        document.getElementById('effets-secondaires-question').style.display = 'block';
-      }
+        if (n === 9 && answers.q1 === 'effets-secondaires') {
+          const effEl = document.getElementById('effets-secondaires-question');
+          if (effEl) (effEl as HTMLElement).style.display = 'block';
+        }
       
-      document.querySelector(`[data-question="${n}"]`).classList.add('active');
+  const qEl = document.querySelector(`[data-question="${n}"]`);
+  if (qEl) qEl.classList.add('active');
       
       // Gestion spéciale de l'affichage du numéro pour le parcours effets secondaires
       if (n === 9 && answers.q1 === 'effets-secondaires') {
-        document.getElementById('question-number').textContent = 'Question finale';
-        document.getElementById('progress-fill').style.width = '100%';
+        const qNum = document.getElementById('question-number');
+        if (qNum) qNum.textContent = 'Question finale';
+        const pFill = document.getElementById('progress-fill');
+        if (pFill) (pFill as HTMLElement).style.width = '100%';
       } else {
-        document.getElementById('question-number').textContent = n;
-        document.getElementById('progress-fill').style.width = `${(n / totalQuestions) * 100}%`;
+        const qNum = document.getElementById('question-number');
+        if (qNum) qNum.textContent = String(n);
+        const pFill = document.getElementById('progress-fill');
+        if (pFill) (pFill as HTMLElement).style.width = `${(n / totalQuestions) * 100}%`;
       }
       
-      document.getElementById('prev-btn').style.display = n === 1 ? 'none' : 'inline-block';
+  const prevBtn = document.getElementById('prev-btn');
+  if (prevBtn) (prevBtn as HTMLElement).style.display = n === 1 ? 'none' : 'inline-block';
       
       // Gestion spéciale des boutons pour la question 9 (effets secondaires)
       if (n === 9 && answers.q1 === 'effets-secondaires') {
         // Pour le parcours effets secondaires, la question 9 est la dernière - afficher le bouton "Voir les résultats"
-        document.getElementById('next-btn').style.display = 'none';
-        document.getElementById('results-btn').style.display = 'inline-block';
-        document.getElementById('results-btn').textContent = 'Voir mes Solutions 🛠️';
+        const nextBtn = document.getElementById('next-btn');
+        const resultsBtn = document.getElementById('results-btn');
+        if (nextBtn) (nextBtn as HTMLElement).style.display = 'none';
+        if (resultsBtn) {
+          (resultsBtn as HTMLElement).style.display = 'inline-block';
+          resultsBtn.textContent = 'Voir mes Solutions 🛠️';
+        }
       } else {
         // Pour toutes les autres questions, afficher le bouton Suivant sauf si on est à la dernière question du parcours normal
-        document.getElementById('next-btn').style.display = (n >= totalQuestions) ? 'none' : 'inline-block';
-        document.getElementById('results-btn').style.display = 'none';
-        document.getElementById('results-btn').textContent = 'Voir mes Résultats 🎯';
+        const nextBtn = document.getElementById('next-btn');
+        const resultsBtn = document.getElementById('results-btn');
+        if (nextBtn) (nextBtn as HTMLElement).style.display = (n >= totalQuestions) ? 'none' : 'inline-block';
+        if (resultsBtn) {
+          (resultsBtn as HTMLElement).style.display = 'none';
+          resultsBtn.textContent = 'Voir mes Résultats 🎯';
+        }
       }
     }
 
     function nextQuestion() {
-      let currentAnswer;
+      // local currentAnswer intentionally block-scoped below when used
       
       // Gestion spéciale pour la question 9 (choix multiples)
       if (currentQuestion === 9) {
-        const checkedEffets = document.querySelectorAll('input[name="effets"]:checked');
-        if (checkedEffets.length === 0) {
+        const checkedEffets = document.querySelectorAll<HTMLInputElement>('input[name="effets"]:checked');
+        if (!checkedEffets || checkedEffets.length === 0) {
           alert('Veuillez sélectionner au moins un effet secondaire.');
           return;
         }
-        selectedEffets = Array.from(checkedEffets).map(input => input.value);
+        selectedEffets = Array.from(checkedEffets).map((input) => input.value);
         answers[`q${currentQuestion}`] = selectedEffets;
       } else {
-        currentAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        const currentAnswer = document.querySelector<HTMLInputElement>(`input[name="q${currentQuestion}"]:checked`);
         if (!currentAnswer) {
           alert('Veuillez sélectionner une réponse avant de continuer.');
           return;
@@ -890,7 +925,8 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
     function showResults() {
       console.log('showResults called with answers:', answers);
       document.getElementById('quiz-container').style.display = 'none';
-      document.querySelector('.navigation').style.display = 'none';
+  const navEl = document.querySelector<HTMLElement>('.navigation');
+  if (navEl) navEl.style.display = 'none';
       document.getElementById('results-section').style.display = 'block';
       calculateResults();
     }
@@ -921,12 +957,12 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
 
       // Pour les autres cas, r�cup�rer la derni�re r�ponse si n�cessaire
       if (currentQuestion <= totalQuestions) {
-        const currentAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
-        if (!currentAnswer) {
-          alert('Veuillez s�lectionner une r�ponse avant de voir les résultats.');
-          return;
-        }
-        answers[`q${currentQuestion}`] = currentAnswer.value;
+        const currentAnswer = document.querySelector<HTMLInputElement>(`input[name="q${currentQuestion}"]:checked`);
+          if (!currentAnswer) {
+            alert('Veuillez sélectionner une réponse avant de voir les résultats.');
+            return;
+          }
+          answers[`q${currentQuestion}`] = currentAnswer.value;
       }
 
       console.log('Calculating scores with answers:', answers);
@@ -976,9 +1012,12 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
     }
 
     function showEffetsSideSolutions() {
-      document.getElementById('quiz-container').style.display = 'none';
-      document.querySelector('.navigation').style.display = 'none';
-      document.getElementById('results-section').style.display = 'block';
+  const quizEl = document.getElementById('quiz-container');
+  if (quizEl) (quizEl as HTMLElement).style.display = 'none';
+  const navEl = document.querySelector<HTMLElement>('.navigation');
+  if (navEl) navEl.style.display = 'none';
+  const resultsEl = document.getElementById('results-section');
+  if (resultsEl) (resultsEl as HTMLElement).style.display = 'block';
 
       let solutions = '';
       const effets = selectedEffets;
@@ -1163,10 +1202,11 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       document.getElementById('results-content').innerHTML = solutions;
     }
 
-    function showTraitementResults(ozempicScore, wegovyScore) {
+    function showTraitementResults(ozempicScore: number, wegovyScore: number) {
       console.log('showTraitementResults called with scores:', { ozempicScore, wegovyScore });
       document.getElementById('quiz-container').style.display = 'none';
-      document.querySelector('.navigation').style.display = 'none';
+  const navEl = document.querySelector<HTMLElement>('.navigation');
+  if (navEl) navEl.style.display = 'none';
       document.getElementById('results-section').style.display = 'block';
 
       let recommendation = '';
@@ -1205,7 +1245,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             </ul>
 
             <div style="margin-top: 2rem;">
-              <a href="/medicaments-glp1/" class="btn btn-primary">Comparer tous les traitements</a>
+              <a href="/collections/traitements-glp1/" class="btn btn-primary">Comparer tous les traitements</a>
               <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin spécialisé</a>
               <a href="/effets-secondaires-glp1/" class="btn btn-secondary">Gérer les effets secondaires</a>
             </div>
@@ -1228,7 +1268,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             2. Faites un bilan sanguin complet<br>
             3. Discutez des contre-indications éventuelles</p>
             <div style="margin-top: 2rem;">
-              <a href="/medicaments-glp1/ozempic-posologie/" class="btn btn-primary">En savoir plus sur Ozempic</a>
+              <a href="/collections/traitements-glp1/guide-complet-ozempic/" class="btn btn-primary">En savoir plus sur Ozempic</a>
               <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
             </div>
           </div>
@@ -1269,7 +1309,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
             </ul>
             <p><strong>Nous recommandons de commencer par Ozempic</strong> car il est souvent mieux remboursé et permet une adaptation progressive.</p>
             <div style="margin-top: 2rem;">
-              <a href="/medicaments-glp1/" class="btn btn-primary">Comparer Ozempic vs Wegovy</a>
+              <a href="/collections/traitements-glp1/" class="btn btn-primary">Comparer Ozempic vs Wegovy</a>
               <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
             </div>
           </div>
@@ -1338,17 +1378,22 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
       }
     }
 
-    // Event listeners
-    document.getElementById('next-btn').addEventListener('click', nextQuestion);
-    document.getElementById('prev-btn').addEventListener('click', prevQuestion);
-    document.getElementById('results-btn').addEventListener('click', calculateResults);
+    // Event listeners (guarded to avoid SSR/type-check issues)
+    const nextBtn = typeof document !== 'undefined' ? document.getElementById('next-btn') : null;
+    const prevBtn = typeof document !== 'undefined' ? document.getElementById('prev-btn') : null;
+    const resultsBtn = typeof document !== 'undefined' ? document.getElementById('results-btn') : null;
+    if (nextBtn) (nextBtn as HTMLElement).addEventListener('click', nextQuestion);
+    if (prevBtn) (prevBtn as HTMLElement).addEventListener('click', prevQuestion);
+    if (resultsBtn) (resultsBtn as HTMLElement).addEventListener('click', calculateResults);
 
     // Auto-advance on selection (sauf pour la question 9 qui utilise des checkboxes)
-    document.addEventListener('change', function(e) {
-      if (e.target.type === 'radio' && currentQuestion !== 9) {
-        setTimeout(nextQuestion, 500);
-      }
-    });
+    if (typeof document !== 'undefined') {
+      document.addEventListener('change', function(e: any) {
+        if (e && e.target && e.target.type === 'radio' && currentQuestion !== 9) {
+          setTimeout(nextQuestion, 500);
+        }
+      });
+    }
   </script>
 
   <!-- Section Recommandations -->
@@ -1416,7 +1461,7 @@ import AffiliateProduct from '../../components/AffiliateProduct.astro';
     </div>
   </section>
 
-</BaseLayout>
+</StaticLayout>
 
 
 

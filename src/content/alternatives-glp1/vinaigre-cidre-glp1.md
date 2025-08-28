@@ -1,18 +1,34 @@
 ---
-slug: vinaigre-cidre-glp1
+title: "Vinaigre Cidre GLP-1"
+slug: "vinaigre-cidre-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: alternatives-glp1
-thumbnail: /images/thumbnails/vinaigre-cidre-glp1-illus.jpg
-thumbnailAlt: "Illustration pour larticle vinaigre-cidre-glp1"
+category: "Alternatives thérapeutiques"
+tags: ["glp1", "alternatives", "traitements"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/vinaigre-cidre-glp1-illus.jpg"
+thumbnailAlt: "Illustration pour l'article Vinaigre Cidre GLP-1"
 featured: false
 priority: 5
-schema: Article
-title: "vinaigre de cidre diabète - Vinaigre Cidre Glp1"
-description: "vinaigre de cidre diabète — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "alternatives-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6, 10]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6, 10
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 
@@ -109,11 +125,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](../glp1-diabete/nouveau-traitement-diabete-type-2-injection/)
+- [traitement diabète type 2](../glp1-diabete/traitement-diabete-type-2/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [prix Saxenda](../traitements-glp1/guide-complet-saxenda/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

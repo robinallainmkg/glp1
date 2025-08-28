@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import AffiliateProduct from '../components/AffiliateProduct.astro';
-import { getProductsForCollection, getProductsByKeywords } from '../utils/affiliate-manager.ts';
+import { getProductsByCategory, getRecommendedProducts } from '../lib/affiliate';
 
 export interface Props {
   frontmatter: {
@@ -13,6 +13,8 @@ export interface Props {
     category: string;
     keywords?: string;
   };
+  articleContent?: string;
+  [key: string]: any;
 }
 
 const { frontmatter } = Astro.props;
@@ -24,10 +26,19 @@ const context = {
   tags: [frontmatter.category]
 };
 
-const affiliateProducts = await getProductsForCollection(frontmatter.category, 2);
-const keywordProducts = await getProductsByKeywords(context.keywords, frontmatter.category, 1);
-const primaryProduct = affiliateProducts[0] || keywordProducts[0];
-const secondaryProduct = affiliateProducts[1] || keywordProducts[1] || affiliateProducts[0];
+let affiliateProducts = [];
+let recommendedProducts = [];
+let primaryProduct = null;
+let secondaryProduct = null;
+
+try {
+  affiliateProducts = await getProductsByCategory(frontmatter.category);
+  recommendedProducts = await getRecommendedProducts('', frontmatter.category, 3);
+  primaryProduct = affiliateProducts[0] || recommendedProducts[0];
+  secondaryProduct = affiliateProducts[1] || recommendedProducts[1] || affiliateProducts[0];
+} catch (error) {
+  console.warn('Erreur lors du chargement des produits pour le post:', error);
+}
 
 // Fonction pour générer les encarts d'affiliation adaptés à la catégorie
 function getAffiliateBoxes(category: string) {
@@ -44,20 +55,6 @@ function getAffiliateBoxes(category: string) {
         description: 'Prévenez l\'apparition de vergetures durant votre perte de poids avec cette crème enrichie en collagène.',
         cta: 'Commander Maintenant',
         price: '49,90 €'
-      }
-    ],
-    'medicaments-glp1': [
-      {
-        title: '💊 Kit de Suivi Glycémie',
-        description: 'Surveillez facilement votre glycémie avec ce kit complet incluant lecteur connecté et bandelettes.',
-        cta: 'Voir le Kit',
-        price: '89,90 €'
-      },
-      {
-        title: '🧴 Gel Apaisant Injection',
-        description: 'Apaisez les zones d\'injection avec ce gel rafraîchissant aux extraits naturels d\'aloe vera.',
-        cta: 'Acheter le Gel',
-        price: '24,90 €'
       }
     ],
     'glp1-perte-de-poids': [

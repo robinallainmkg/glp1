@@ -1,18 +1,34 @@
 ---
-slug: glp1-portion-alimentaire
+title: "GLP-1 Portion Alimentaire"
+slug: "glp1-portion-alimentaire"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-category: "Guide médical"
-tags: []
-collection: regime-glp1
-thumbnail: /images/thumbnails/glp1-portion-alimentaire-illus.jpg
-thumbnailAlt: "Illustration pour larticle glp1-portion-alimentaire"
+category: "Nutrition"
+tags: ["glp1", "regime", "nutrition"]
+collection: "regime-glp1"
+thumbnail: "/images/thumbnails/glp1-portion-alimentaire.svg"
+thumbnailAlt: "Illustration pour l'article GLP-1 Portion Alimentaire"
 featured: false
 priority: 5
-schema: Article
-title: "GLP-1 et portions alimentaires"
-description: "GLP-1 et portions alimentaires — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "regime-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 9]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 9
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

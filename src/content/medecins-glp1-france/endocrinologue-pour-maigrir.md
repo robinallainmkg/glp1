@@ -1,18 +1,34 @@
 ---
-slug: endocrinologue-pour-maigrir
+title: "Endocrinologue Pour Maigrir"
+slug: "endocrinologue-pour-maigrir"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: medecins-glp1-france
-thumbnail: /images/thumbnails/endocrinologue-pour-maigrir-illus.jpg
-thumbnailAlt: "Illustration pour larticle endocrinologue-pour-maigrir"
+category: "Médecins spécialisés"
+tags: ["glp1", "medecins", "specialistes"]
+collection: "medecins-glp1-france"
+thumbnail: "/images/thumbnails/endocrinologue-pour-maigrir.svg"
+thumbnailAlt: "Illustration pour l'article Endocrinologue Pour Maigrir"
 featured: false
 priority: 5
-schema: Article
-title: "Comment trouver un endocrinologue pour maigrir en france"
-description: "Guide complet pour trouver un endocrinologue spécialisé dans lobésité et la perte de poids en France. Prix, démarches et conseils pratiques."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "medecins-glp1-france"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [3, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 3, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 Vous cherchez un endocrinologue pour vous aider à perdre du poids ? Ce guide vous explique pourquoi consulter ce spécialiste, comment le trouver et à quoi vous attendre lors de vos consultations.
 

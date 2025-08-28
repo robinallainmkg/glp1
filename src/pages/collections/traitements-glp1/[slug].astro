@@ -1,0 +1,82 @@
+---
+import ArticleWithAffiliateSidebar from '../../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { getAllAffiliateProducts } from '../../../lib/affiliate';
+
+// Récupérer l'article demandé
+export async function getStaticPaths() {
+  const articles = await getCollection('traitements-glp1');
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+
+// Récupérer les produits d'affiliation depuis Supabase
+let affiliateProducts = [];
+try {
+  affiliateProducts = await getAllAffiliateProducts();
+  console.log(`✅ Produits d'affiliation chargés: ${affiliateProducts.length} produits`);
+} catch (error) {
+  console.error('❌ Erreur lors du chargement des produits d\'affiliation:', error);
+  // Fallback vers des produits statiques si Supabase n'est pas disponible
+  affiliateProducts = [
+    {
+      id: 'ozempic-affiliate',
+      productName: 'Ozempic 2mg',
+      brand: 'Novo Nordisk',
+      productImage: '/images/products/ozempic.jpg',
+      externalLink: 'https://example.com/ozempic?ref=GLP1_GUIDE',
+      category: 'GLP-1',
+      featured: true,
+      discountPercent: 15,
+      promoCode: 'GLP1',
+      saleBadgeText: 'RECOMMANDÉ',
+      originalPrice: 80,
+      discountedPrice: 68,
+      isOnSale: true,
+      benefitsText: 'Traitement efficace pour le diabète et la perte de poids'
+    }
+  ];
+}
+
+// Configuration de l'affiliation
+const affiliateConfig = {
+  maxInlineProducts: 2,
+  mobileStrategy: 'both',
+  sidebarPosition: 'right'
+};
+
+// Produits pour injection inline
+const inlineProducts = affiliateProducts.slice(0, 2);
+
+// Articles liés (même collection)
+const relatedArticles = [
+  {
+    title: 'Guide complet Wegovy',
+    url: '/collections/traitements-glp1/guide-complet-wegovy',
+    description: 'Tout savoir sur Wegovy, traitement GLP-1 pour l\'obésité'
+  }
+];
+---
+
+<ArticleWithAffiliateSidebar
+  title={article.data.title}
+  description={article.data.description}
+  author={article.data.author}
+  image={article.data.image}
+  availableProducts={affiliateProducts}
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+  shouldInjectProducts={true}
+  category="traitements-glp1"
+  collection="traitements-glp1"
+  relatedArticles={relatedArticles}
+  frontmatter={article.data}
+>
+  <Content />
+</ArticleWithAffiliateSidebar></content>
+<parameter name="filePath">/Users/mac/Projet/glp1/src/pages/collections/traitements-glp1/[slug].astro

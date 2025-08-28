@@ -1,0 +1,270 @@
+---
+export interface Props {
+  product: {
+    productName: string;
+    brand: string;
+    productImage: string;
+    discountPercent?: number;
+    discountCode?: string;
+    externalLink: string;
+    category: string;
+    featured?: boolean;
+    benefitsText?: any;
+  };
+  placement: 'banner' | 'sidebar' | 'inline' | 'grid' | 'footer' | 'content';
+  variant?: 'featured' | 'expanded' | 'compact' | 'card';
+  className?: string;
+}
+
+const { 
+  product, 
+  placement, 
+  variant = 'expanded', 
+  className = ''
+} = Astro.props;
+
+// Si le produit n'existe pas, ne rien afficher
+if (!product) {
+  return null;
+}
+
+// Génération de l'URL avec UTM
+const utmUrl = new URL(product.externalLink);
+utmUrl.searchParams.set('utm_source', 'glp1-france');
+utmUrl.searchParams.set('utm_medium', 'affiliate');
+utmUrl.searchParams.set('utm_campaign', placement);
+utmUrl.searchParams.set('utm_content', product.productName);
+
+// Styles conditionnels selon le variant
+const variantClasses = {
+  featured: 'affiliate-product--featured',
+  expanded: 'affiliate-product--expanded', 
+  compact: 'affiliate-product--compact',
+  card: 'affiliate-product--card'
+}[variant];
+
+const baseClasses = `affiliate-product affiliate-product--${placement}`;
+const finalClasses = `${baseClasses} ${variantClasses} ${className}`.trim();
+---
+
+<div class={finalClasses}>
+  <div class="affiliate-product__content">
+    <div class="affiliate-product__header">
+      <div class="affiliate-product__image">
+        <img 
+          src={product.productImage} 
+          alt={product.productName}
+          loading="lazy"
+          width="120"
+          height="120"
+        />
+      </div>
+      <div class="affiliate-product__info">
+        <h3 class="affiliate-product__title">{product.productName}</h3>
+        <p class="affiliate-product__brand">by {product.brand}</p>
+        {product.discountPercent && (
+          <div class="affiliate-product__discount">
+            <span class="discount-badge">-{product.discountPercent}%</span>
+            {product.discountCode && (
+              <span class="discount-code">Code: {product.discountCode}</span>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+
+    {variant !== 'compact' && (
+      <div class="affiliate-product__description">
+        <p>{product.category}</p>
+      </div>
+    )}
+
+    <div class="affiliate-product__actions">
+      <a 
+        href={utmUrl.toString()} 
+        class="affiliate-product__cta"
+        target="_blank"
+        rel="noopener sponsored"
+        onclick={`gtag('event', 'affiliate_click', { product_name: '${product.productName}', brand: '${product.brand}', placement: '${placement}' });`}
+      >
+        {product.discountCode ? `Profiter de -${product.discountPercent}%` : 'Voir le produit'}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 17L17 7M17 7H8M17 7V16"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.affiliate-product {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.affiliate-product:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.affiliate-product__header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.affiliate-product__image img {
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.affiliate-product__info {
+  flex: 1;
+}
+
+.affiliate-product__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.affiliate-product__brand {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+  font-weight: 500;
+}
+
+.affiliate-product__discount {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.discount-badge {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.discount-code {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #fbbf24;
+}
+
+.affiliate-product__description {
+  margin-bottom: 16px;
+}
+
+.affiliate-product__description p {
+  color: #475569;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.affiliate-product__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.affiliate-product__cta:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  color: white;
+}
+
+.affiliate-product__cta svg {
+  transition: transform 0.2s ease;
+}
+
+.affiliate-product__cta:hover svg {
+  transform: translateX(2px);
+}
+
+/* Variants */
+.affiliate-product--compact {
+  padding: 16px;
+}
+
+.affiliate-product--compact .affiliate-product__header {
+  margin-bottom: 12px;
+}
+
+.affiliate-product--compact .affiliate-product__image img {
+  width: 80px;
+  height: 80px;
+}
+
+.affiliate-product--featured {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+.affiliate-product--featured:hover {
+  border-color: #059669;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+}
+
+/* Placements */
+.affiliate-product--sidebar {
+  margin: 0 0 20px 0;
+}
+
+.affiliate-product--inline {
+  margin: 24px 0;
+  max-width: 600px;
+}
+
+.affiliate-product--banner {
+  margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+  .affiliate-product__header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .affiliate-product__image {
+    align-self: center;
+  }
+  
+  .affiliate-product__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>

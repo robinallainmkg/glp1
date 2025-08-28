@@ -1,0 +1,2728 @@
+# 🎨 PROMPTS GROK POUR GÉNÉRATION D'IMAGES
+
+*Généré automatiquement le 23/08/2025*
+
+## 📊 Statistiques
+- **Total articles à traiter:** 96
+- **Collections concernées:** 7
+
+## 🎯 Instructions Générales Grok
+
+**Style uniforme requis:**
+- Design médical professionnel
+- Couleurs: #2563eb (bleu), #16a34a (vert), blanc, gris
+- Format: 1200x630px horizontal
+- Pas de personnes, focus sur concepts médicaux
+- Style épuré et rassurant
+
+---
+
+
+## 📁 Collection: glp1-diabete
+
+PROMPT GROK POUR: Diabète Complications GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Complications GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Complications GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-complications-glp1.jpg
+
+---
+PROMPT GROK POUR: Diabète Gestationnel GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Gestationnel GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Gestationnel GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-gestationnel-glp1.jpg
+
+---
+PROMPT GROK POUR: Diabète Pied GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Pied GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Pied GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-pied-glp1.jpg
+
+---
+PROMPT GROK POUR: Diabète Régime GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Régime GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Régime GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-regime-glp1.jpg
+
+---
+PROMPT GROK POUR: Diabète Retinopathie GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Retinopathie GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Retinopathie GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-retinopathie-glp1.jpg
+
+---
+PROMPT GROK POUR: Diabète Sport GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Sport GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Sport GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-sport-glp1.jpg
+
+---
+PROMPT GROK POUR: Diabète Urgence GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabète Urgence GLP-1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabète Urgence GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-urgence-glp1.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Auto Surveillance
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Auto Surveillance
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Auto Surveillance".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-auto-surveillance.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Carnet Diabetique
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Carnet Diabetique
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Carnet Diabetique".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-carnet-diabetique.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Diabète Type 1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Diabète Type 1
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Diabète Type 1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-diabete-type-1.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Hba1c Reduction
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Hba1c Reduction
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Hba1c Reduction".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-hba1c-reduction.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Insuline Interaction
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Insuline Interaction
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Insuline Interaction".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-insuline-interaction.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Nephropathie
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Nephropathie
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Nephropathie".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-nephropathie.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Neuropathie Diabetique
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Neuropathie Diabetique
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Neuropathie Diabetique".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-neuropathie-diabetique.jpg
+
+---
+PROMPT GROK POUR: Traitement Insulinique
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Traitement Insulinique
+**Description:** 
+**Catégorie:** Diabète
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Traitement Insulinique".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** traitement-insulinique.jpg
+
+---
+
+## 📁 Collection: medicaments-glp1
+
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ado-medicament.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ballon-gastrique-rembourse.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** coupe-faim-puissant-interdit-en-france.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** dipeptidyl-peptidase-4.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** dosage-trulicity.jpg
+
+---
+PROMPT GROK POUR: Guide Complet dulaglutide 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet dulaglutide 2025 : Tout Savoir
+**Description:** Guide complet sur Dulaglutide Nom Commercial : informations médicales, conseils et recommandations dexperts.
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet dulaglutide 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** dulaglutide-nom-commercial.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout SavoirGuide complet sur Médicaments Glp 1 : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** januvia-autre-nom.jpg
+
+---
+PROMPT GROK POUR: liraglutide Avis 2025 : Efficacité et Témoignages Réels
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** liraglutide Avis 2025 : Efficacité et Témoignages Réels
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "liraglutide Avis 2025 : Efficacité et Témoignages Réels".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** liraglutide-perte-de-poids-avis.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** mecanisme-d-action.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-americain-pour-maigrir.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-anti-obesite-novo-nordisk.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-pour-maigrir-tres-puissant.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-prise-de-poid.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicaments-qui-augmentent-la-glycemie.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** metformine-autre-nom.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** metformine-diarrhee-solution.jpg
+
+---
+PROMPT GROK POUR: Mounjaro Effets Secondaires : Guide Complet de Prévention
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Mounjaro Effets Secondaires : Guide Complet de Prévention
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Mounjaro Effets Secondaires : Guide Complet de Prévention".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** mounjaro-effet-secondaire.jpg
+
+---
+PROMPT GROK POUR: Guide Complet Mounjaro 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet Mounjaro 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet Mounjaro 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** mounjaro-injection-pour-maigrir.jpg
+
+---
+PROMPT GROK POUR: Mounjaro Prix 2025 : Coût et Remboursement
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Mounjaro Prix 2025 : Coût et Remboursement
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Mounjaro Prix 2025 : Coût et Remboursement".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** mounjaro-prix-france.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** nouveau-medicament.jpg
+
+---
+PROMPT GROK POUR: Guide Complet diabète 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet diabète 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet diabète 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** nouveau-traitement-diabete-type-2-injection.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** orlistat-avant-apres.jpg
+
+---
+PROMPT GROK POUR: Ozempic Prix 2025 : Coût et Remboursement
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Ozempic Prix 2025 : Coût et Remboursement
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Ozempic Prix 2025 : Coût et Remboursement".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ozempic-injection-prix.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** pilule-qui-fait-maigrir.jpg
+
+---
+PROMPT GROK POUR: Saxenda Prix 2025 : Coût et Remboursement
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Saxenda Prix 2025 : Coût et Remboursement
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Saxenda Prix 2025 : Coût et Remboursement".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** saxenda-prix.jpg
+
+---
+PROMPT GROK POUR: Guide Complet semaglutide 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet semaglutide 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet semaglutide 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** semaglutide-achat.jpg
+
+---
+PROMPT GROK POUR: Sitagliptine Effets Secondaires : Guide Complet de Prévention 2025
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Sitagliptine Effets Secondaires : Guide Complet de Prévention 2025
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Sitagliptine Effets Secondaires : Guide Complet de Prévention 2025".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** sitagliptine-effets-secondaires.jpg
+
+---
+PROMPT GROK POUR: Guide Complet Saxenda 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet Saxenda 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet Saxenda 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** stylo-saxenda.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** sulfamide-hypoglycemiant.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** sulfamides-medicaments.jpg
+
+---
+PROMPT GROK POUR: tirzepatide Avis 2025 : Efficacité et Témoignages Réels
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** tirzepatide Avis 2025 : Efficacité et Témoignages Réels
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "tirzepatide Avis 2025 : Efficacité et Témoignages Réels".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** tirzepatide-avis.jpg
+
+---
+PROMPT GROK POUR: Guide Complet diabète 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet diabète 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet diabète 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** traitement-diabete-type-2.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** traitements-medicamenteux.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** trulicity-danger.jpg
+
+---
+PROMPT GROK POUR: Guide Complet Ozempic 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet Ozempic 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet Ozempic 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** trulicity-ou-ozempic.jpg
+
+---
+PROMPT GROK POUR: Victoza Posologie 2025 : Comment Bien lUtiliser ?
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Victoza Posologie 2025 : Comment Bien lUtiliser ?
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Victoza Posologie 2025 : Comment Bien lUtiliser ?".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** victoza-posologie.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** victoza-rupture.jpg
+
+---
+PROMPT GROK POUR: Wegovy Avis 2025 : Efficacité et Témoignages Réels
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Wegovy Avis 2025 : Efficacité et Témoignages Réels
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Wegovy Avis 2025 : Efficacité et Témoignages Réels".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** wegovy-avis.jpg
+
+---
+PROMPT GROK POUR: Xenical Remboursement 2025 : Coût et Prise en Charge
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Xenical Remboursement 2025 : Coût et Prise en Charge
+**Description:** 
+**Catégorie:** Guide médical
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Xenical Remboursement 2025 : Coût et Prise en Charge".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** xenical-remboursement.jpg
+
+---
+
+## 📁 Collection: glp1-perte-de-poids
+
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** avant-apres-glp1.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** chirurgie-bariatrique.jpg
+
+---
+PROMPT GROK POUR: Ozempic Posologie : Comment Bien lUtiliser ?
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Ozempic Posologie : Comment Bien lUtiliser ?
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Ozempic Posologie : Comment Bien lUtiliser ?".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** combien-de-dose-dans-un-stylo-ozempic.jpg
+
+---
+PROMPT GROK POUR: Guide Complet diabète 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet diabète 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet diabète 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabete-amaigrissement-rapide.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Perte de Poids 2025 : Résultats et Témoignages
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Perte de Poids 2025 : Résultats et Témoignages
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Perte de Poids 2025 : Résultats et Témoignages".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-perte-de-poids.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-americain-pour-maigrir.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-pour-maigrir-tres-puissant-en-pharmacie.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-pour-maigrir-tres-puissant.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** medicament-pour-perdre-du-ventre-en-1-semaine.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** obesite-severe-prise-en-charge.jpg
+
+---
+PROMPT GROK POUR: Guide Complet Ozempic 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet Ozempic 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet Ozempic 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ou-trouver-ozempic.jpg
+
+---
+PROMPT GROK POUR: Ozempic Effets Secondaires : Guide Complet de Prévention
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Ozempic Effets Secondaires : Guide Complet de Prévention
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Ozempic Effets Secondaires : Guide Complet de Prévention".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ozempic-effets-secondaires-forum.jpg
+
+---
+PROMPT GROK POUR: Ozempic Prix 2025 : Coût et Remboursement
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Ozempic Prix 2025 : Coût et Remboursement
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Ozempic Prix 2025 : Coût et Remboursement".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ozempic-prix.jpg
+
+---
+PROMPT GROK POUR: Guide Complet Ozempic 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet Ozempic 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet Ozempic 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** ozempic-regime.jpg
+
+---
+PROMPT GROK POUR: Guide Complet GLP-1 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet GLP-1 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet GLP-1 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** personne-obese.jpg
+
+---
+PROMPT GROK POUR: Guide Complet maigrir 2025 : Tout Savoir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Guide Complet maigrir 2025 : Tout Savoir
+**Description:** 
+**Catégorie:** Perte de poids
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Guide Complet maigrir 2025 : Tout Savoir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** pilule-qui-fait-maigrir.jpg
+
+---
+
+## 📁 Collection: glp1-cout
+
+PROMPT GROK POUR: Anneau Gastrique Prix CmuGuide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Anneau Gastrique Prix CmuGuide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Économie santé
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Anneau Gastrique Prix CmuGuide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** anneau-gastrique-prix-cmu.jpg
+
+---
+PROMPT GROK POUR: Operation Pour Maigrir PrixGuide complet sur Operations Pour Maigrir : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Operation Pour Maigrir PrixGuide complet sur Operations Pour Maigrir : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Économie santé
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Operation Pour Maigrir PrixGuide complet sur Operations Pour Maigrir : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** operation-pour-maigrir-prix.jpg
+
+---
+PROMPT GROK POUR: Saxenda Prix PharmacieGuide complet sur Saxenda Prix Pharmacie : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Saxenda Prix PharmacieGuide complet sur Saxenda Prix Pharmacie : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Économie santé
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Saxenda Prix PharmacieGuide complet sur Saxenda Prix Pharmacie : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** saxenda-prix-pharmacie.jpg
+
+---
+PROMPT GROK POUR: Wegovy PrixGuide complet sur Prix De Wegovy En France 2025 : informations médicales et recommandations dexperts.
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Wegovy PrixGuide complet sur Prix De Wegovy En France 2025 : informations médicales et recommandations dexperts.
+**Description:** 
+**Catégorie:** Économie santé
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Wegovy PrixGuide complet sur Prix De Wegovy En France 2025 : informations médicales et recommandations dexperts.".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** wegovy-prix.jpg
+
+---
+PROMPT GROK POUR: Wegovy Remboursement Mutuelle
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Wegovy Remboursement Mutuelle
+**Description:** 
+**Catégorie:** Économie santé
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Wegovy Remboursement Mutuelle".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** wegovy-remboursement-mutuelle.jpg
+
+---
+
+## 📁 Collection: medecins-glp1-france
+
+PROMPT GROK POUR: Clinique Pour Obesite New
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Clinique Pour Obesite New
+**Description:** 
+**Catégorie:** Médecins spécialisés
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Clinique Pour Obesite New".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** clinique-pour-obesite-new.jpg
+
+---
+PROMPT GROK POUR: Clinique Pour Obesite
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Clinique Pour Obesite
+**Description:** 
+**Catégorie:** Médecins spécialisés
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Clinique Pour Obesite".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** clinique-pour-obesite.jpg
+
+---
+PROMPT GROK POUR: Diabetologue Paris
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Diabetologue Paris
+**Description:** 
+**Catégorie:** Médecins spécialisés
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Diabetologue Paris".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** diabetologue-paris.jpg
+
+---
+PROMPT GROK POUR: Endocrinologue Pour Maigrir New
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Endocrinologue Pour Maigrir New
+**Description:** 
+**Catégorie:** Médecins spécialisés
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Endocrinologue Pour Maigrir New".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** endocrinologue-pour-maigrir-new.jpg
+
+---
+PROMPT GROK POUR: Endocrinologue Pour Maigrir
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Endocrinologue Pour Maigrir
+**Description:** 
+**Catégorie:** Médecins spécialisés
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Endocrinologue Pour Maigrir".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** endocrinologue-pour-maigrir.jpg
+
+---
+
+## 📁 Collection: recherche-glp1
+
+PROMPT GROK POUR: Glp Inhibitors
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Glp Inhibitors
+**Description:** 
+**Catégorie:** Recherche médicale
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Glp Inhibitors".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp-inhibitors.jpg
+
+---
+PROMPT GROK POUR: Recherche Clinique GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Recherche Clinique GLP-1
+**Description:** 
+**Catégorie:** Recherche médicale
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Recherche Clinique GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** recherche-clinique-glp1.jpg
+
+---
+
+## 📁 Collection: regime-glp1
+
+PROMPT GROK POUR: GLP-1 Calories Journalieres
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Calories Journalieres
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Calories Journalieres".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-calories-journalieres.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Index Glycemique
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Index Glycemique
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Index Glycemique".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-index-glycemique.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Micronutriments
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Micronutriments
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Micronutriments".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-micronutriments.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Portion Alimentaire
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Portion Alimentaire
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Portion Alimentaire".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-portion-alimentaire.jpg
+
+---
+PROMPT GROK POUR: GLP-1 Proteines
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** GLP-1 Proteines
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "GLP-1 Proteines".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** glp1-proteines.jpg
+
+---
+PROMPT GROK POUR: Isglt2 Liste
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Isglt2 Liste
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Isglt2 Liste".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** isglt2-liste.jpg
+
+---
+PROMPT GROK POUR: Jeune Intermittent GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Jeune Intermittent GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Jeune Intermittent GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** jeune-intermittent-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Cetogene GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Cetogene GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Cetogene GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-cetogene-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Chrono Nutrition GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Chrono Nutrition GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Chrono Nutrition GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-chrono-nutrition-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Dash GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Dash GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Dash GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-dash-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Detox GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Detox GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Detox GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-detox-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Mediterraneen GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Mediterraneen GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Mediterraneen GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-mediterraneen-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Paleo GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Paleo GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Paleo GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-paleo-glp1.jpg
+
+---
+PROMPT GROK POUR: Régime Sans Sucre GLP-1
+
+**Contexte:** Site médical français sur les traitements GLP-1 (Ozempic, Wegovy, etc.)
+
+**Article:** Régime Sans Sucre GLP-1
+**Description:** 
+**Catégorie:** Nutrition
+**Contenu:** SYSTÈME D'AFFILIATION AUTOMATIQUE - Layout: ArticleWithAffiliateSidebar - Produits: Configurés par collection...
+
+**Instructions pour Grok:**
+Créer une image professionnelle et médicale représentant "Régime Sans Sucre GLP-1".
+
+**Style requis:**
+- Design médical moderne et professionnel
+- Couleurs: bleu médical (#2563eb), vert santé (#16a34a), blanc, gris clair
+- Style épuré et rassurant
+- Éviter les représentations de personnes
+- Focus sur les concepts médicaux/scientifiques
+
+**Éléments à inclure:**
+- Symboles médicaux subtils (stéthoscope, croix médicale, molécules)
+- Représentation abstraite du traitement GLP-1 si pertinent
+- Icônes liées au sujet: seringue, médicament
+
+**Format:** Image horizontale 1200x630px, optimisée web
+**Nom fichier:** regime-sans-sucre-glp1.jpg
+
+---

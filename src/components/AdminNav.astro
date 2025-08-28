@@ -14,47 +14,14 @@ const currentPath = Astro.url.pathname;
       <div class="hidden md:block">
         <div class="ml-10 flex items-baseline space-x-4">
           <a 
-            href="/admin-dashboard/" 
+            href="/admin/index.html" 
             class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-              currentPath.includes('admin-dashboard') 
+              currentPath.includes('admin') 
                 ? 'bg-blue-600 text-white' 
                 : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
             }`}
           >
-            📊 Dashboard
-          </a>
-          
-          <a 
-            href="/admin-user-data/" 
-            class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-              currentPath.includes('admin-user-data') 
-                ? 'bg-blue-600 text-white' 
-                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-            }`}
-          >
-            👥 Données Utilisateurs
-          </a>
-          
-          <a 
-            href="/admin-affiliation/" 
-            class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-              currentPath.includes('admin-affiliation') 
-                ? 'bg-blue-600 text-white' 
-                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-            }`}
-          >
-            💰 Affiliation
-          </a>
-          
-          <a 
-            href="/admin-stats/" 
-            class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-              currentPath.includes('admin-stats') 
-                ? 'bg-blue-600 text-white' 
-                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-            }`}
-          >
-            📈 Statistiques
+            🧭 Admin
           </a>
           
           <a 
@@ -84,47 +51,14 @@ const currentPath = Astro.url.pathname;
     <div class="mobile-menu hidden md:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a 
-          href="/admin-dashboard/" 
+          href="/admin/index.html" 
           class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-            currentPath.includes('admin-dashboard') 
+            currentPath.includes('admin') 
               ? 'bg-blue-600 text-white' 
               : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
           }`}
         >
-          📊 Dashboard
-        </a>
-        
-        <a 
-          href="/admin-user-data/" 
-          class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-            currentPath.includes('admin-user-data') 
-              ? 'bg-blue-600 text-white' 
-              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-          }`}
-        >
-          👥 Données Utilisateurs
-        </a>
-        
-        <a 
-          href="/admin-affiliation/" 
-          class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-            currentPath.includes('admin-affiliation') 
-              ? 'bg-blue-600 text-white' 
-              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-          }`}
-        >
-          💰 Affiliation
-        </a>
-        
-        <a 
-          href="/admin-stats/" 
-          class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-            currentPath.includes('admin-stats') 
-              ? 'bg-blue-600 text-white' 
-              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-          }`}
-        >
-          📈 Statistiques
+          🧭 Admin
         </a>
         
         <a 

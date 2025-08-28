@@ -1,12 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+const affiliateProducts = [];
+const affiliateConfig = {};
+const entry = {};
+const frontmatter = null;
 ---
 
-<BaseLayout 
-  title="Nouveaux Médicaments pour Perdre du Poids : Guide Complet 2025"
-  description="Découvrez les nouveaux médicaments révolutionnaires pour perdre du poids : efficacité, prix, où les obtenir. Guide complet des traitements innovants."
-  keywords="médicament pour perdre du poids, nouveau traitement obésité, médicament amaigrissant, perdre du poids rapidement"
->
+<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
   <div class="container">
     <article class="weight-loss-guide">
       <header class="hero-header">
@@ -107,7 +108,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2>Les Principaux Médicaments Disponibles</h2>
         
         <div class="meds-grid">
-          <a href="/medicaments-glp1/wegovy-avis/" class="med-card featured">
+          <a href="/collections/traitements-glp1/guide-complet-wegovy/" class="med-card featured">
             <div class="med-header">
               <h3>Wegovy</h3>
               <span class="med-badge">Le Plus Efficace</span>
@@ -153,7 +154,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </div>
           </a>
 
-          <a href="/medicaments-glp1/saxenda-prix/" class="med-card">
+          <a href="/collections/traitements-glp1/guide-complet-saxenda/" class="med-card">
             <div class="med-header">
               <h3>Saxenda</h3>
               <span class="med-badge">Accessible</span>
@@ -1003,8 +1004,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   <script>
     document.getElementById('calculate-imc')?.addEventListener('click', function() {
-      const weight = parseFloat(document.getElementById('weight').value);
-      const height = parseFloat(document.getElementById('height').value);
+      const weightEl = document.getElementById('weight') as HTMLInputElement | null;
+      const heightEl = document.getElementById('height') as HTMLInputElement | null;
+      const weight = weightEl ? parseFloat(weightEl.value) : 0;
+      const height = heightEl ? parseFloat(heightEl.value) : 0;
       
       if (weight && height) {
         const heightInMeters = height / 100;
@@ -1151,6 +1154,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       color: var(--primary-blue);
     }
   </style>
-</BaseLayout>
+</ArticleWithAffiliateSidebar>
 
 

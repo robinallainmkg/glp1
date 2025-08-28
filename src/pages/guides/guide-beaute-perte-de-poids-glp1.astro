@@ -1,12 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+const affiliateProducts = [];
+const affiliateConfig = {};
+const entry = {};
+const frontmatter = null;
 ---
 
-<BaseLayout 
-  title="Guide Beauté et Perte de Poids avec GLP-1 – Téléchargement Gratuit"
-  description="Téléchargez gratuitement notre guide complet : conseils beauté, routine skincare et nutrition optimisée pour les utilisateurs de traitements GLP-1 en France."
-  keywords="GLP-1, beauté, skincare, perte de poids, guide gratuit, téléchargement, cosmétiques, Wegovy, Ozempic"
->
+<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts} affiliateConfig={affiliateConfig}>
   <div class="container">
     <!-- Hero Section -->
     <section class="landing-hero">
@@ -662,21 +663,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     document.getElementById('beautyGuideForm')?.addEventListener('submit', async function(e) {
       e.preventDefault();
       
-      const successDiv = document.getElementById('beauty-form-success');
-      const errorDiv = document.getElementById('beauty-form-error');
+    const successDiv = document.getElementById('beauty-form-success') as HTMLElement | null;
+    const errorDiv = document.getElementById('beauty-form-error') as HTMLElement | null;
       
       // Masquer les messages précédents
-      successDiv.classList.add('hidden');
-      errorDiv.classList.add('hidden');
+  if (successDiv) successDiv.classList.add('hidden');
+  if (errorDiv) errorDiv.classList.add('hidden');
       
-      const button = this.querySelector('button[type="submit"]');
-      const originalText = button.innerHTML;
+      const button = this.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const originalText = button ? button.innerHTML : '';
       
-      button.innerHTML = '⏳ Envoi en cours...';
-      button.disabled = true;
+      if (button) {
+        button.innerHTML = '⏳ Envoi en cours...';
+        button.disabled = true;
+      }
       
       try {
-        const formData = new FormData(this);
+  const formData = new FormData(this as HTMLFormElement);
         
         // Ajouter des informations spécifiques au guide beauté
         formData.append('subject', 'Guide Beauté et Perte de Poids GLP-1');
@@ -708,12 +711,12 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
         
         const result = await response.json();
         
-        if (response.ok && result.success) {
+          if (response.ok && result.success) {
           // Succès
-          successDiv.classList.remove('hidden');
+          if (successDiv) successDiv.classList.remove('hidden');
           
           // Personnaliser le message de succès
-          const successMessage = successDiv.querySelector('.success-message');
+          const successMessage = successDiv ? successDiv.querySelector('.success-message') : null;
           const name = formData.get('name');
           const email = formData.get('email');
           
@@ -722,16 +725,16 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
           }
           
           // Masquer le formulaire après succès
-          this.style.opacity = '0.5';
+          (this as HTMLElement).style.opacity = '0.5';
           
           // Analytics enrichi
-          if (typeof gtag !== 'undefined') {
+          if (typeof (window as any).gtag !== 'undefined') {
             const treatment = formData.get('treatment') || 'unspecified';
             const concerns = formData.getAll('concerns');
             const newsletterConsent = formData.get('newsletter_consent') ? 'yes' : 'no';
             
             // Événement principal de téléchargement
-            gtag('event', 'guide_download', {
+            (window as any).gtag('event', 'guide_download', {
               'event_category': 'engagement',
               'event_label': 'beauty-guide',
               'custom_parameters': {
@@ -743,7 +746,7 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
             });
             
             // Événement de conversion pour le lead qualifié
-            gtag('event', 'generate_lead', {
+            (window as any).gtag('event', 'generate_lead', {
               'event_category': 'conversion',
               'currency': 'EUR',
               'value': 15.0, // Valeur plus élevée car plus qualifié
@@ -752,7 +755,7 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
             
             // Événement newsletter si consentement
             if (newsletterConsent === 'yes') {
-              gtag('event', 'newsletter_signup', {
+              (window as any).gtag('event', 'newsletter_signup', {
                 'event_category': 'conversion',
                 'event_label': 'guide_form',
                 'method': 'guide_download'
@@ -761,7 +764,7 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
             
             // Tracking des intérêts par traitement
             if (treatment !== 'unspecified') {
-              gtag('event', 'treatment_interest', {
+              (window as any).gtag('event', 'treatment_interest', {
                 'event_category': 'user_preferences',
                 'event_label': treatment,
                 'treatment_type': treatment
@@ -770,30 +773,32 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
             
             // Tracking des préoccupations
             concerns.forEach(concern => {
-              gtag('event', 'concern_selected', {
+              (window as any).gtag('event', 'concern_selected', {
                 'event_category': 'user_preferences',
                 'event_label': concern,
                 'concern_type': concern
               });
             });
           }
-        } else {
+  } else {
           throw new Error(result.error || 'Erreur lors de l\'envoi');
         }
       } catch (error) {
         console.error('Erreur:', error);
-        const errorMessage = errorDiv.querySelector('.error-message');
-        if (errorMessage) {
-          errorMessage.textContent = error.message.includes('obligatoire') ? 
+        const errorMessage = errorDiv ? errorDiv.querySelector('.error-message') : null;
+        if (errorMessage && error && error.message) {
+          (errorMessage as HTMLElement).textContent = error.message.includes('obligatoire') ? 
             '⚠️ Veuillez remplir tous les champs obligatoires' : 
             '❌ Erreur d\'envoi. Veuillez réessayer.';
         }
-        errorDiv.classList.remove('hidden');
+        if (errorDiv) errorDiv.classList.remove('hidden');
       } finally {
         // Réactiver le bouton après un délai
         setTimeout(() => {
-          button.innerHTML = originalText;
-          button.disabled = false;
+          if (button) {
+            button.innerHTML = originalText;
+            button.disabled = false;
+          }
         }, 3000);
       }
     });
@@ -816,6 +821,6 @@ L'utilisateur souhaite recevoir le guide complet par email.`;
       });
     });
   </script>
-</BaseLayout>
+</ArticleWithAffiliateSidebar>
 
 

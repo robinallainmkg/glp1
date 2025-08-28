@@ -1,0 +1,38 @@
+---
+// Page de test pour vérifier la connexion Supabase
+import { supabase } from '../../../lib/supabase';
+---
+
+<html>
+<head>
+    <title>Test Supabase</title>
+</head>
+<body>
+    <h1>Test de connexion Supabase</h1>
+    <div id="results">
+        <!-- Les résultats seront affichés ici -->
+    </div>
+
+    <script>
+        // Test côté client
+        async function testSupabase() {
+            try {
+                const response = await fetch('/api/test-supabase');
+                const data = await response.json();
+                document.getElementById('results').innerHTML = `
+                    <h2>Résultats:</h2>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                document.getElementById('results').innerHTML = `
+                    <h2>Erreur:</h2>
+                    <pre>${error.message}</pre>
+                `;
+            }
+        }
+
+        // Lancer le test au chargement
+        testSupabase();
+    </script>
+</body>
+</html>

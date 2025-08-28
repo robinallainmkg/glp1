@@ -3,8 +3,13 @@ import type { MiddlewareHandler } from 'astro';
 export const onRequest: MiddlewareHandler = async ({ request, locals }, next) => {
   const response = await next();
   
+  // En développement, on désactive les restrictions de frame pour TinaCMS
+  const isDev = process.env.NODE_ENV === 'development';
+  
   // Headers de sécurité
-  response.headers.set('X-Frame-Options', 'DENY');
+  if (!isDev) {
+    response.headers.set('X-Frame-Options', 'DENY');
+  }
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');

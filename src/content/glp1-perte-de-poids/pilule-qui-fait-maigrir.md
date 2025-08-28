@@ -1,18 +1,34 @@
 ---
-slug: pilule-qui-fait-maigrir
+title: "Guide Complet maigrir 2025 : Tout Savoir"
+slug: "pilule-qui-fait-maigrir"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/pilule-qui-fait-maigrir-illus.jpg
-thumbnailAlt: "Illustration pour larticle pilule-qui-fait-maigrir"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/pilule-qui-fait-maigrir.svg"
+thumbnailAlt: "Illustration pour l'article Pilule Qui Fait Maigrir"
 featured: false
 priority: 5
-schema: Article
-title: "Perte de poids glp-1 : pilule qui fait maigrir"
-description: "Pilule qui fait maigrir avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)

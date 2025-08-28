@@ -1,12 +1,12 @@
 ---
-import AdminLayout from '../../layouts/AdminLayout.astro';
+import StaticLayout from '../../layouts/StaticLayout.astro';
 
 const title = "Admin - GLP-1 France";
 const description = "Interface d'administration du site GLP-1 France";
 const lastUpdate = new Date().toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
 ---
 
-<AdminLayout title={title} currentPage="dashboard">
+<StaticLayout title={title} currentPage="dashboard">
   <style>
     .dashboard-container {
       max-width: 1200px;
@@ -95,12 +95,6 @@ const lastUpdate = new Date().toLocaleString('fr-FR', { dateStyle: 'long', timeS
         <h3 class="card-title">Utilisateurs</h3>
         <p class="card-description">Gestion des comptes utilisateurs</p>
       </a>
-
-      <a href="/admin/affiliate-new/" class="dashboard-card">
-        <div class="card-icon green">🏷️</div>
-        <h3 class="card-title">Affiliation</h3>
-        <p class="card-description">Gestion des partenariats</p>
-      </a>
     </div>
   </div>
-</AdminLayout>
+</StaticLayout>

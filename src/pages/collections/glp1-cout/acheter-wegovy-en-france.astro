@@ -1,11 +1,31 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../../layouts/ArticleWithAffiliateSidebar.astro";
+// affiliateProducts placeholder removed
+const affiliateConfig = {
+  enableAutoInjection: true,
+  mobileStrategy: 'both',
+  maxInlineProducts: 2,
+  injectionStrategy: 'auto'
+};
+// entry/frontmatter placeholders removed
+
+// Contenu de l'article pour l'analyse d'affiliation
+const articleContent = `
+Acheter Wegovy en France : Guide Complet 2025
+Où acheter Wegovy en France ?
+Wegovy (sémaglutide) est un médicament révolutionnaire pour la perte de poids qui nécessite une ordonnance médicale.
+Pharmacies agréées, Consultation médicale obligatoire, Prescription spécialisée requise.
+Prix et remboursement, disponibilité en pharmacie, critères d'éligibilité médicale.
+`;
 ---
 
-<BaseLayout 
-  title="Acheter Wegovy en France - Guide Complet 2025"
-  description="Guide complet pour acheter Wegovy en France : pharmacies, ordonnance, prix et démarches légales. Tout ce qu'il faut savoir."
-  keywords="acheter wegovy, wegovy france, pharmacie wegovy, ordonnance wegovy, prix wegovy"
+<ArticleWithAffiliateSidebar 
+  title="Acheter Wegovy en France : Guide Complet 2025"
+  description="Guide complet pour acheter Wegovy en France : pharmacies, ordonnance, prix et remboursement en 2025."
+  articleContent={articleContent} 
+  affiliateConfig={affiliateConfig ?? {}} 
+  image="/images/thumbnails/acheter-wegovy-en-france.svg"
+  category="glp1-cout"
 >
 
 <div class="container">
@@ -56,4 +76,4 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   </article>
 </div>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>

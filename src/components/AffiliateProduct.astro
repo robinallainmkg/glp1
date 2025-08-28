@@ -1,48 +1,36 @@
 ---
-import { getProductById, addTrackingParams } from '../utils/affiliate-manager.ts';
+import { getProductById } from '../lib/affiliate';
 
 export interface Props {
-  productId: string;
-  placement: 'banner' | 'sidebar' | 'inline' | 'grid' | 'footer' | 'content';
+  product?: any;
+  productId?: string;
+  placement?: 'banner' | 'sidebar' | 'inline' | 'grid' | 'footer' | 'content';
   variant?: 'featured' | 'expanded' | 'compact' | 'card';
-  context?: {
-    category?: string;
-    keywords?: string[];
-    tags?: string[];
-  };
   className?: string;
-  showIfRelevant?: boolean;
+  context?: Record<string, any>;
 }
 
 const { 
-  productId, 
-  placement, 
+  product: _product, 
+  productId = undefined,
+  placement = 'inline', 
   variant = 'expanded', 
-  context = {}, 
   className = '',
-  showIfRelevant = true 
-} = Astro.props;
+  context = {}
+} = Astro.props as Props;
 
-// Récupération du produit par ID
-const product = getProductById(productId);
+let product = _product;
+if (!product && productId) {
+  try {
+    product = await getProductById(productId);
+  } catch (err) {
+    product = null;
+  }
+}
 
 // Si le produit n'existe pas, ne rien afficher
 if (!product) {
   return null;
-}
-
-// Si showIfRelevant est activé, vérifier la pertinence contextuelle
-if (showIfRelevant && context.keywords?.length) {
-  const isRelevant = product.contextualKeywords.some(keyword => 
-    context.keywords!.some(ctxKeyword => 
-      keyword.toLowerCase().includes(ctxKeyword.toLowerCase()) ||
-      ctxKeyword.toLowerCase().includes(keyword.toLowerCase())
-    )
-  );
-  
-  if (!isRelevant) {
-    return null;
-  }
 }
 
 // Configuration du placement
@@ -52,12 +40,11 @@ if (!placementConfig?.enabled) {
 }
 
 // Génération de l'URL avec UTM
-const utmUrl = addTrackingParams(product.affiliateUrl, {
-  source: 'glp1-france',
-  medium: 'affiliate',
-  campaign: placement,
-  content: productId
-});
+const utmUrl = new URL(product.externalLink);
+utmUrl.searchParams.set('utm_source', 'glp1-france');
+utmUrl.searchParams.set('utm_medium', 'affiliate');
+utmUrl.searchParams.set('utm_campaign', placement);
+utmUrl.searchParams.set('utm_content', product.productName);
 
 // Styles conditionnels selon le variant
 const variantClasses = {
@@ -113,12 +100,12 @@ const productSchema = {
   class={finalClasses}
   data-product-id={productId}
   data-placement={placement}
-  data-context={JSON.stringify(context)}
+  data-context={JSON.stringify(context || {})}
   itemscope 
   itemtype="https://schema.org/Product"
 >
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
   
   <!-- Badge d'affiliation obligatoire -->
   <div class="affiliate-badge">
@@ -154,7 +141,7 @@ const productSchema = {
         
         {product.benefits && (
           <ul class="affiliate-product__benefits">
-            {product.benefits.slice(0, 3).map(benefit => (
+            {product.benefits.slice(0, 3).map((benefit: string) => (
               <li>✓ {benefit}</li>
             ))}
           </ul>
@@ -792,63 +779,77 @@ const productSchema = {
 }
 </style>
 
-<script>
-// Script pour le tracking et les interactions
+<script is:inline>
+// Script pour le tracking et les interactions (JS pur pour is:inline)
 document.addEventListener('DOMContentLoaded', function() {
   // Amélioration du tracking des clics
-  document.querySelectorAll('.affiliate-product__cta, .affiliate-product__cta-compact').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const productElement = this.closest('.affiliate-product');
-      const productId = productElement.dataset.productId;
-      const placement = productElement.dataset.placement;
-      
+  document.querySelectorAll('.affiliate-product__cta, .affiliate-product__cta-compact').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const productElement = this.closest && this.closest('.affiliate-product');
+      if (!productElement) return;
+      const productId = productElement.dataset && productElement.dataset.productId;
+      const placement = productElement.dataset && productElement.dataset.placement;
+
       // Enhanced analytics tracking
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'affiliate_click', {
-          event_category: 'affiliate',
-          event_label: productId,
-          placement: placement,
-          value: 1
-        });
-      }
-      
-      // Console log pour debug
-      console.log('Affiliate click tracked:', {
-        productId,
-        placement,
-        url: this.href
-      });
-    });
-  });
-  
-  // Intersection Observer pour les vues de produits
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const productElement = entry.target;
-        const productId = productElement.dataset.productId;
-        const placement = productElement.dataset.placement;
-        
-        // Track product view
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'affiliate_view', {
+        try {
+          gtag('event', 'affiliate_click', {
             event_category: 'affiliate',
             event_label: productId,
-            placement: placement
+            placement: placement,
+            value: 1
           });
+          } catch (err) {
+            // ignore gtag errors
+          }
+      }
+
+      // Console log pour debug
+      try {
+        console.log('Affiliate click tracked:', {
+          productId: productId,
+          placement: placement,
+          url: this.href
+        });
+      } catch (err) {
+        // defensive
+      }
+    });
+  });
+
+  // Intersection Observer pour les vues de produits
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var productElement = entry.target;
+        if (!productElement || !productElement.dataset) return;
+        var productId = productElement.dataset.productId;
+        var placement = productElement.dataset.placement;
+
+        // Track product view
+        if (typeof gtag !== 'undefined') {
+          try {
+            gtag('event', 'affiliate_view', {
+              event_category: 'affiliate',
+              event_label: productId,
+              placement: placement
+            });
+          } catch (e) {
+            // ignore
+          }
         }
-        
+
         // Stop observing this element
-        observer.unobserve(productElement);
+        try { observer.unobserve(productElement); } catch (e) {}
       }
     });
   }, {
     threshold: 0.5 // Trigger when 50% of the element is visible
   });
-  
+
   // Observe all affiliate products
-  document.querySelectorAll('.affiliate-product').forEach(product => {
-    observer.observe(product);
+  document.querySelectorAll('.affiliate-product').forEach(function(product) {
+    try { observer.observe(product); } catch (e) {}
   });
 });
 </script>

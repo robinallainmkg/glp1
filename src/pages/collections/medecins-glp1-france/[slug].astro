@@ -1,33 +1,44 @@
 ---
-import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+import ArticleWithAffiliateSidebar from '../../../layouts/ArticleWithAffiliateSidebar.astro';
 import { getCollection } from 'astro:content';
+import { getRecommendedProducts } from '../../../lib/affiliate';
 
 export async function getStaticPaths() {
   const entries = await getCollection('medecins-glp1-france');
-  return entries.map((entry) => ({
+  return entries.map((entry: any) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
-const content = entry.body;
+const entryAny: any = entry;
+const { Content } = await entryAny.render();
+const content = entryAny.body;
 
 // Utiliser le nom de la collection au lieu de la catégorie du frontmatter
 const collectionName = "medecins-glp1-france";
+
+// Récupérer les produits d'affiliation recommandés
+const affiliateProducts = await getRecommendedProducts(content, collectionName, 3);
+
+// Configuration TinaCMS pour cette page (non utilisé en production)
+// Tina props removed (not used in production)
 ---
 
-<ArticleLayout 
-  title={entry.data.title}
-  description={entry.data.description || entry.data.metaDescription || ""}
-  author={entry.data.author || "Équipe GLP-1 France"}
+<ArticleWithAffiliateSidebar title={entryAny.data.title}
+  description={entryAny.data.description || entryAny.data.metaDescription || ""}
+  image={entryAny.data.image || entryAny.data.thumbnail || `/images/thumbnails/${entryAny.collection}.svg`}
+  author={entryAny.data.author || "Équipe GLP-1 France"}
   category={collectionName}
-  keywords={entry.data.keywords || ""}
-  readingTime={entry.data.readingTime || 5}
-  lastModified={entry.data.pubDate}
-  content={content}
-  collectionTheme="experts"
-  thumbnail={entry.data.thumbnail}
-/>
-</ArticleLayout>
+  articleContent={content}
+  affiliateProducts={affiliateProducts ?? []}
+  affiliateConfig={{
+    enableAutoInjection: true,
+    mobileStrategy: 'both',
+    maxInlineProducts: 3,
+    injectionStrategy: 'auto'
+  }}
+>
+  <Content />
+</ArticleWithAffiliateSidebar>

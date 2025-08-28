@@ -1,18 +1,34 @@
 ---
-slug: glp1-calories-journalieres
+title: "GLP-1 Calories Journalieres"
+slug: "glp1-calories-journalieres"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-category: "Guide médical"
-tags: []
-collection: regime-glp1
-thumbnail: /images/thumbnails/glp1-calories-journalieres-illus.jpg
-thumbnailAlt: "Illustration pour larticle glp1-calories-journalieres"
+category: "Nutrition"
+tags: ["glp1", "regime", "nutrition"]
+collection: "regime-glp1"
+thumbnail: "/images/thumbnails/glp1-calories-journalieres.svg"
+thumbnailAlt: "Illustration pour l'article GLP-1 Calories Journalieres"
 featured: false
 priority: 5
-schema: Article
-title: "GLP-1 et calories journalières"
-description: "GLP-1 et calories journalières — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "regime-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 9]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 9
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

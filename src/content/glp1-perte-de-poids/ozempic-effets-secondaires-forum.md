@@ -1,18 +1,34 @@
 ---
-slug: ozempic-effets-secondaires-forum
+title: "Ozempic Effets Secondaires : Guide Complet de Prévention"
+slug: "ozempic-effets-secondaires-forum"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/ozempic-effets-secondaires-forum-illus.jpg
-thumbnailAlt: "Illustration pour larticle ozempic-effets-secondaires-forum"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/ozempic-effets-secondaires-forum.svg"
+thumbnailAlt: "Illustration pour l'article Ozempic Effets Secondaires Forum"
 featured: false
 priority: 5
-schema: Article
-title: "Ozempic effets secondaires : témoignages forum et solutions 2025"
-description: "Forum Ozempic : vrais témoignages sur les effets secondaires, solutions pratiques, durée des symptômes. Nausées, fatigue, troubles digestifs."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 **Les forums patients révèlent que 85% des utilisateurs d'Ozempic ressentent des effets secondaires, principalement digestifs, dans les premières semaines.** Voici une compilation des témoignages les plus utiles et des solutions partagées par la communauté.
 

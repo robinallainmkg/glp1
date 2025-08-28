@@ -1,18 +1,34 @@
 ---
-slug: glp1-perte-de-poids
+title: "GLP-1 Perte de Poids 2025 : Résultats et Témoignages"
+slug: "glp1-perte-de-poids"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/glp1-perte-de-poids-illus.jpg
-thumbnailAlt: "Illustration pour larticle glp1-perte-de-poids"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/glp1-perte-de-poids.svg"
+thumbnailAlt: "Illustration pour l'article GLP-1 Perte De Poids"
 featured: false
 priority: 5
-schema: Article
-title: "Glp-1 et perte de poids : guide complet d"
-description: "GLP-1 pour perte de poids : efficacité, mécanisme, résultats réels. Wegovy, Saxenda, Ozempic comparés. Guide médical complet 2025."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 Les **agonistes du récepteur GLP-1** ont révolutionné la prise en charge de la perte de poids en France. Ces traitements innovants offrent une efficacité sans précédent, avec des pertes de poids pouvant atteindre 15-20% du poids corporel initial, transformant la vie de millions de patients.
 

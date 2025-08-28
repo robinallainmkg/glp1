@@ -1,12 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+const affiliateProducts = [];
+const affiliateConfig = {};
+const entry = {};
+const frontmatter = null;
 ---
 
-<BaseLayout 
-  title="Témoignage Sophie T. - Transformation avec Wegovy : -22 kilos en 10 mois"
-  description="Découvrez la transformation de Sophie T. avec Wegovy : 22 kilos perdus en 10 mois à 29 ans."
-  keywords="témoignage Sophie, Wegovy, jeune femme, transformation 20 ans"
->
+<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
 
 <div class="container">
   <article class="testimonial-detail">
@@ -627,6 +628,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 </style>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>
 
 

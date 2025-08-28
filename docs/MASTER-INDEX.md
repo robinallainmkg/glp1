@@ -1,5 +1,10 @@
 # 🎯 MASTER INDEX - GLP1 France
 
+## ⚡ DÉMARRAGE RAPIDE
+
+**🚨 NOUVEAU DANS LE PROJET ?** → [📖 GUIDE DE DÉMARRAGE RAPIDE](QUICK-START-SESSION.md)
+> ⭐ **LECTURE OBLIGATOIRE** : Tout ce qu'il faut savoir pour comprendre le projet en 5 minutes
+
 ## ✅ Statut du Projet
 
 **Site en Production** : https://glp1-france.fr  
@@ -47,18 +52,21 @@
 
 ## 🚀 Features - Fonctionnalités Métier
 
-### [💰 Système d'Affiliation](features/affiliation.md)
-**Gestion produits partenaires**
-- Configuration TinaCMS pour produits d'affiliation ✅
-- Interface d'administration des produits ✅
-- Système de sidebar responsive ✅
-- **EN COURS** : Intégration dynamique TinaCMS → Affichage
-- **RAPPORT DÉTAILLÉ** : [RAPPORT_AFFILIATION_SIDEBAR.md](RAPPORT_AFFILIATION_SIDEBAR.md)
-**Monétisation et produits partenaires**
-- Gestion produits affiliés Amazon
-- Composants d'affichage intelligents
-- Placement contextuel automatique
-- Analytics et optimisation conversion
+## � Système d'Affiliation
+
+### Documentation Principale
+- [DOCUMENTATION-AFFILIATION-COMPLETE.md](./DOCUMENTATION-AFFILIATION-COMPLETE.md) - **Documentation complète et actuelle du système d'affiliation Supabase**
+  - ✅ Structure Supabase réelle
+  - ✅ Composants actuels (InlineAffiliateProduct, AffiliateSidebar)
+  - ✅ Scripts de gestion des données
+  - ✅ Intégration badges dynamiques et codes promo
+
+### Migration & Évolution
+- [MIGRATION-TINACMS-SUPABASE.md](./MIGRATION-TINACMS-SUPABASE.md) - **Migration du système TinaCMS vers Supabase**
+  - 🔄 Historique de la migration
+  - 📊 Comparaison avant/après
+  - 🧪 Validation et tests
+  - 🔮 Roadmap futures évolutions
 
 ### [📝 Système de Contenu TinaCMS](features/cms.md)
 **Gestion de contenu et éditorial**
@@ -191,13 +199,14 @@ npm run build
 
 ### Fonctionnalités Implémentées ✅
 - [x] Site statique Astro.js avec TinaCMS
-- [x] Collections de contenu (médicaments, perte de poids, etc.)
+- [x] Collections de contenu (8 collections actives après nettoyage)
 - [x] Système d'affiliation Amazon intégré
 - [x] Gestion utilisateurs unifiée (JSON + Supabase)
 - [x] Interface admin avec authentification
 - [x] APIs hybrides (TypeScript dev / PHP prod)
 - [x] Optimisation SEO et performance
 - [x] Scripts de déploiement automatisés
+- [x] **Nettoyage collection medicaments-glp1** ([SUPPRESSION-MEDICAMENTS-GLP1.md](./SUPPRESSION-MEDICAMENTS-GLP1.md))
 
 ### En Cours de Développement 🔄
 - [ ] Dashboard analytics avancé
@@ -229,7 +238,7 @@ npm run build
 
 > **Note** : Cette documentation est mise à jour automatiquement. Pour contribuer, créer une pull request ou ouvrir une issue.
 
-*Dernière synchronisation : Janvier 2025*
+*Dernière synchronisation : Août 2025*
 - Anciens guides de déploiement
 - Documentation obsolète
 

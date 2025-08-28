@@ -11,19 +11,46 @@ interface Props {
 }
 
 const { article, collection, categoryName, colors } = Astro.props;
-const url = `/collections/${collection}/${article.slug}/`;
+// Support both Astro content entry (article.data) and preformatted article objects
+const data = article?.data ?? {
+  title: article?.title,
+  description: article?.description,
+  author: article?.author,
+  publishedAt: article?.lastModified || article?.pubDate || article?.publishedAt,
+  thumbnail: article?.thumbnail,
+  thumbnailAlt: article?.title
+};
+
+const slug = article?.slug ?? data?.slug ?? (article?.url ? article.url.split('/').filter(Boolean).pop() : null);
+const url = `/collections/${collection}/${slug || ''}/`;
+
+function getArticleImage(articleData: any): string | null {
+  if (!articleData) return null;
+  if (articleData.ogImage) return encodeURI(String(articleData.ogImage));
+  if (articleData.thumbnail) return encodeURI(String(articleData.thumbnail));
+  return null;
+}
+
+const articleImage = getArticleImage(data);
+// Compute reading time: prefer explicit value, else estimate from word count or body
+const words = article?.wordCount || (article.body ? String(article.body).split(/\s+/).length : 0) || data?.wordCount || 0;
+const readingTime = article?.readingTime || Math.max(1, Math.ceil(words / 200));
 ---
 
 <article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-emerald-200 hover:-translate-y-2">
   {/* Image de l'article avec support TinaCMS */}
   <div class="relative h-48 overflow-hidden">
-    {article.data.thumbnail && (
+    {articleImage ? (
       <img 
-        src={article.data.thumbnail}
-        alt={article.data.thumbnailAlt || article.data.title}
+        src={articleImage}
+        alt={data.thumbnailAlt || data.title || 'Article'}
         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         loading="lazy"
       />
+    ) : (
+      <div class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+        <div class="text-slate-400 text-6xl">📄</div>
+      </div>
     )}
     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
     <div class="absolute top-4 left-4">
@@ -37,38 +64,46 @@ const url = `/collections/${collection}/${article.slug}/`;
   <div class="p-6">
     <h2 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug">
       <a href={url} class="hover:underline">
-        {article.data.title}
+        {data.title || article.title}
       </a>
     </h2>
     
-    {article.data.description && (
-      <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed">
-        {article.data.description}
-      </p>
+    {(data.description || article.description) && (
+                <!-- Description -->
+          <div class="description-text text-slate-700 mb-6 text-base prose prose-slate max-w-none">
+            {data.description || article.description}
+          </div>
     )}
     
     <div class="flex items-center justify-between text-sm text-slate-500 mb-6 pb-4 border-b border-slate-100">
-      {article.data.publishedAt && (
-        <time datetime={article.data.publishedAt} class="flex items-center">
-          <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-          </svg>
-          {new Date(article.data.publishedAt).toLocaleDateString('fr-FR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </time>
-      )}
-      
-      {article.data.author && (
-        <span class="flex items-center">
-          <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-          </svg>
-          {article.data.author}
-        </span>
-      )}
+      <div class="flex items-center gap-4">
+  {data.publishedAt && (
+          <time datetime={data.publishedAt} class="flex items-center text-sm text-slate-500">
+            <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            {new Date(data.publishedAt).toLocaleDateString('fr-FR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+        )}
+
+  {data.author && (
+          <span class="flex items-center text-sm text-slate-500">
+            <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            {data.author}
+          </span>
+        )}
+      </div>
+
+      <div class="text-sm text-slate-500 flex items-center gap-2">
+        <svg class="w-4 h-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12A9 9 0 1112 3v0"></path></svg>
+  <span>{readingTime} min</span>
+      </div>
     </div>
     
     <a 
@@ -91,10 +126,35 @@ const url = `/collections/${collection}/${article.slug}/`;
     overflow: hidden;
   }
   
-  .line-clamp-3 {
+  .description-text {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    line-height: 1.6;
+    word-spacing: 0.05em;
+    letter-spacing: 0.01em;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Amélioration de la lisibilité pour les textes longs */
+  .description-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 1.2em;
+    background: linear-gradient(to right, transparent, #f8fafc);
+  }
+  
+  /* Style pour les cartes avec beaucoup de texte */
+  article:hover .description-text {
+    -webkit-line-clamp: 5;
+    transition: all 0.3s ease;
   }
 </style>

@@ -1,6 +1,6 @@
 ---
 // Composant intelligent pour l'affichage adaptatif des produits d'affiliation
-import { getAllAffiliateProducts, getRecommendedProducts, getArticleAffiliateProducts } from '../lib/affiliate';
+import { getAllAffiliateProducts } from '../lib/affiliate';
 import AffiliateSidebar from './AffiliateSidebar.astro';
 import InlineAffiliateProduct from './InlineAffiliateProduct.astro';
 
@@ -29,9 +29,7 @@ export interface Props {
 }
 
 const { 
-  articleContent = '', 
   affiliateProducts = [],
-  category,
   authorName,
   relatedArticles = [],
   forceSidebar = false,
@@ -54,19 +52,35 @@ let inlineProducts = [];
 
 try {
   if (affiliateProducts && affiliateProducts.length > 0) {
-    // Produits spécifiquement liés à l'article
-    const linkedProducts = await getArticleAffiliateProducts(affiliateProducts);
-    sidebarProducts = linkedProducts;
-    inlineProducts = linkedProducts.slice(0, defaultConfig.maxInlineProducts);
+    // Utiliser directement les produits passés (déjà traités par le template)
+    sidebarProducts = affiliateProducts;
+    
+    // Pour les inline, prendre des produits différents pour éviter les doublons
+    // Mélanger et prendre max 2 produits pour l'inline
+    const shuffledProducts = [...affiliateProducts].sort(() => Math.random() - 0.5);
+    inlineProducts = shuffledProducts.slice(0, Math.min(2, defaultConfig.maxInlineProducts));
   } else {
-    // Produits recommandés basés sur le contenu
-    const recommendedProducts = await getRecommendedProducts(
-      articleContent, 
-      category, 
-      Math.max(3, defaultConfig.maxInlineProducts)
-    );
-    sidebarProducts = recommendedProducts;
-    inlineProducts = recommendedProducts.slice(0, defaultConfig.maxInlineProducts);
+    // Charger les produits depuis Supabase si aucun n'est fourni
+    console.log('🔄 Chargement des produits depuis Supabase...');
+    const allProducts = await getAllAffiliateProducts();
+    
+    if (allProducts.length > 0) {
+      // Prioriser les produits featured
+      const featuredProducts = allProducts.filter(p => p.featured);
+      const regularProducts = allProducts.filter(p => !p.featured);
+      
+      // Mélanger les produits pour la variété
+      const shuffledFeatured = [...featuredProducts].sort(() => Math.random() - 0.5);
+      const shuffledRegular = [...regularProducts].sort(() => Math.random() - 0.5);
+      
+      // Combiner : produits featured en premier, puis autres
+      const mixedProducts = [...shuffledFeatured, ...shuffledRegular];
+      
+      sidebarProducts = mixedProducts.slice(0, 3); // Max 3 pour la sidebar
+      inlineProducts = mixedProducts.slice(0, Math.min(2, defaultConfig.maxInlineProducts));
+    } else {
+      console.log(`⚠️ AdaptiveAffiliateDisplay: Aucun produit trouvé dans Supabase`);
+    }
   }
 } catch (error) {
   console.warn('Erreur lors du chargement des produits d\'affiliation:', error);
@@ -76,14 +90,15 @@ try {
 
 // Détection du contexte (simulée côté serveur - en production utiliser User-Agent ou CSS)
 const isMobile = false; // À adapter selon votre détection
-const isTablet = false;
 
 // Logique d'affichage adaptative
 const shouldShowSidebar = forceSidebar || (!isMobile && sidebarProducts.length > 0);
-const shouldShowInline = !disableInline && (
+const shouldShowInline = !disableInline && inlineProducts.length > 0 && (
+  // Sur mobile : selon la stratégie
   (isMobile && defaultConfig.mobileStrategy !== 'sidebar-only') || 
-  defaultConfig.mobileStrategy === 'inline-only'
-) && inlineProducts.length > 0;
+  // Sur desktop : toujours afficher si inline-only ou both
+  (!isMobile && ['inline-only', 'both'].includes(defaultConfig.mobileStrategy))
+);
 ---
 
 <!-- Fragment pour éviter les wrappers inutiles -->
@@ -184,8 +199,8 @@ const shouldShowInline = !disableInline && (
       display: none;
     }
     
-    /* Sur desktop, cache les produits inline quand strategy = 'both' */
-    .inline-products-container[data-strategy="both"] {
+    /* Sur desktop, cache les produits inline seulement si strategy = 'sidebar-only' */
+    .inline-products-container[data-strategy="sidebar-only"] {
       display: none;
     }
   }
@@ -215,66 +230,68 @@ const shouldShowInline = !disableInline && (
 </style>
 
 <!-- Script pour détection client-side et ajustements dynamiques -->
-<script>
-  // Amélioration progressive côté client
+<script is:inline>
+  // Amélioration progressive côté client (JS pur)
   document.addEventListener('DOMContentLoaded', function() {
-    const sidebarElements = document.querySelectorAll('.adaptive-sidebar');
-    const inlineContainers = document.querySelectorAll('.inline-products-container');
-    
-    // Détection de la taille d'écran en temps réel
+    var sidebarElements = document.querySelectorAll('.adaptive-sidebar');
+    var inlineContainers = document.querySelectorAll('.inline-products-container');
+
     function adjustDisplayStrategy() {
-      const isMobile = window.innerWidth <= 768;
-      const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
-      
-      sidebarElements.forEach(sidebar => {
-        if (isMobile) {
-          sidebar.style.display = 'none';
-        } else {
-          sidebar.style.display = 'block';
-        }
+      var isMobileLocal = window.innerWidth <= 768;
+
+      sidebarElements.forEach(function(sidebar) {
+        try {
+          if (isMobileLocal) {
+            sidebar.style.display = 'none';
+          } else {
+            sidebar.style.display = 'block';
+          }
+        } catch (e) {}
       });
-      
-      inlineContainers.forEach(container => {
-        const strategy = container.getAttribute('data-strategy');
-        
-        if (strategy === 'inline-only') {
-          container.style.display = 'block';
-        } else if (strategy === 'sidebar-only') {
-          container.style.display = isMobile ? 'none' : 'block';
-        } else { // 'both'
-          container.style.display = 'block';
-        }
+
+      inlineContainers.forEach(function(container) {
+        try {
+          var strategy = container.getAttribute('data-strategy');
+          if (strategy === 'inline-only') {
+            container.style.display = 'block';
+          } else if (strategy === 'sidebar-only') {
+            container.style.display = isMobileLocal ? 'none' : 'block';
+          } else {
+            container.style.display = 'block';
+          }
+        } catch (e) {}
       });
     }
-    
-    // Ajustement initial et sur redimensionnement
+
+    // Ajustement initial
     adjustDisplayStrategy();
-    window.addEventListener('resize', adjustDisplayStrategy);
-    
-    // Optimisation des performances avec debounce
-    let resizeTimeout;
+
+    // Redimensionnement avec debounce
+    var resizeTimeout;
     window.addEventListener('resize', function() {
-      clearTimeout(resizeTimeout);
+      if (resizeTimeout) clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(adjustDisplayStrategy, 150);
     });
-    
+
     // Analytics des interactions (optionnel)
-    document.querySelectorAll('.cta-button').forEach(button => {
-      button.addEventListener('click', function(e) {
-        const productName = this.closest('[data-product]')?.getAttribute('data-product');
-        if (productName) {
-          // Envoyer analytics
-          console.log('Interaction produit d\'affiliation:', productName);
-          
-          // Exemple intégration Google Analytics
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'affiliate_click', {
-              'product_name': productName,
-              'display_type': this.closest('.adaptive-sidebar') ? 'sidebar' : 'inline'
-            });
+    document.querySelectorAll('.cta-button').forEach(function(button) {
+      try {
+        button.addEventListener('click', function() {
+          var prodEl = button.closest('[data-product]');
+          var productName = prodEl && prodEl.getAttribute ? prodEl.getAttribute('data-product') : null;
+          if (productName) {
+            console.log('Interaction produit d\'affiliation:', productName);
+            if (typeof window.gtag !== 'undefined') {
+              try {
+                window.gtag('event', 'affiliate_click', {
+                  product_name: productName,
+                  display_type: button.closest('.adaptive-sidebar') ? 'sidebar' : 'inline'
+                });
+              } catch (e) {}
+            }
           }
-        }
-      });
+        });
+      } catch (e) {}
     });
   });
 </script>

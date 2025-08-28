@@ -1,18 +1,34 @@
 ---
-slug: ou-trouver-ozempic
+title: "Guide Complet Ozempic 2025 : Tout Savoir"
+slug: "ou-trouver-ozempic"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/ou-trouver-ozempic-illus.jpg
-thumbnailAlt: "Illustration pour larticle ou-trouver-ozempic"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/ou-trouver-ozempic.svg"
+thumbnailAlt: "Illustration pour l'article Ou Trouver Ozempic"
 featured: false
 priority: 5
-schema: Article
-title: "Ou trouver ozempic - Ou Trouver Ozempic"
-description: "ou trouver ozempic — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Où trouver Ozempic en France : guide complet
 

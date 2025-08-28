@@ -1,18 +1,34 @@
 ---
-slug: avant-apres-glp1
+title: "Guide Complet GLP-1 2025 : Tout Savoir"
+slug: "avant-apres-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/avant-apres-glp1-illus.jpg
-thumbnailAlt: "Illustration pour larticle avant-apres-glp1"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/avant-apres-glp1.svg"
+thumbnailAlt: "Illustration pour l'article Avant Apres GLP-1"
 featured: false
 priority: 5
-schema: Article
-title: "Avant après glp-1 : témoignages et transformations réelles 2025"
-description: "Témoignages avant/après GLP-1 : transformations réelles, photos, parcours patients. Wegovy, Saxenda, Ozempic résultats authentiques 2025."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 Les **transformations avant/après avec les traitements Ozempic, Wegovy et Saxenda** témoignent de l'efficacité de ces nouveaux médicaments. Ces parcours authentiques de patients français montrent des changements durables, avec des pertes de poids réalistes et un retour à une meilleure qualité de vie.
 

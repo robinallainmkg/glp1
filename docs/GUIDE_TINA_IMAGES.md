@@ -30,16 +30,38 @@ public/images/
    - Ajouter le "Texte alternatif de l'image"
 
 2. **L'image apparaîtra automatiquement** :
-   - ✅ Dans l'article lui-même
-   - ✅ Dans les listes de collections
-   - ✅ Dans les cartes d'articles
+   - ✅ Dans l'article lui-même (en-tête avec grande image)
+   - ✅ Dans les listes de collections (vignettes avec hover)
+   - ✅ Dans la page globale des articles (/articles/)
+   - ✅ Dans les cartes d'articles (ArticleCard)
    - ✅ Dans les métadonnées Open Graph
    - ✅ Dans l'interface TinaCMS
+
+3. **Support dual des champs d'image** :
+   - **`ogImage`** : Image prioritaire (nouvellement supportée)
+   - **`thumbnail`** : Image de fallback (existant)
+   - **Encodage automatique** : gestion des espaces et caractères spéciaux
+   - **Image par défaut** : icône 📄 si aucune image disponible
 
 ### Formats recommandés
 - **Taille** : 1200x630px (ratio 16:9)
 - **Format** : JPG, PNG, WebP
 - **Poids** : < 500KB (compression automatique)
+
+### Champs d'image disponibles
+```yaml
+# Dans le frontmatter d'un article
+ogImage: "/images/thumbnails/mon-image-principale.png"  # Prioritaire
+thumbnail: "/images/thumbnails/mon-image-fallback.jpg"  # Fallback
+thumbnailAlt: "Description accessible de l'image"
+```
+
+### Gestion automatique
+- ✅ **Priorité** : `ogImage` affiché en premier, puis `thumbnail`
+- ✅ **Encodage** : noms de fichiers avec espaces gérés automatiquement
+- ✅ **Fallback** : icône par défaut si aucune image
+- ✅ **Responsive** : images adaptatives selon l'écran
+- ✅ **Performance** : lazy loading automatique
 
 ## 🎯 Workflow éditorial
 
@@ -100,9 +122,11 @@ TinaCMS Admin → Collection → New Article
 ## 🛠️ Dépannage
 
 ### Images ne s'affichent pas
-1. Vérifier le chemin dans le champ "Image principale"
+1. Vérifier le chemin dans les champs "ogImage" ou "Image principale"
 2. S'assurer que l'image existe dans `/public/images/`
-3. Vérifier le texte alternatif
+3. Contrôler que le nom de fichier est correct (espaces gérés automatiquement)
+4. Vérifier le texte alternatif (thumbnailAlt)
+5. Tester avec un autre format d'image (JPG, PNG, WebP)
 
 ### TinaCMS ne démarre pas
 ```bash
@@ -135,10 +159,11 @@ Avec les nouveaux champs, chaque article bénéficie automatiquement de :
 ## 💡 Bonnes pratiques
 
 ### Images
-- Toujours ajouter un texte alternatif descriptif
-- Optimiser le poids (< 500KB)
-- Utiliser des noms de fichiers explicites
-- Préférer le format WebP quand possible
+- **Champs supportés** : utiliser `ogImage` (prioritaire) ou `thumbnail` (fallback)
+- **Noms de fichiers** : espaces et caractères spéciaux gérés automatiquement
+- **Texte alternatif** : toujours ajouter thumbnailAlt pour l'accessibilité
+- **Optimisation** : poids < 500KB, formats modernes (WebP recommandé)
+- **Affichage** : automatique dans articles, listes et cartes
 
 ### SEO
 - Description entre 150-160 caractères

@@ -1,18 +1,34 @@
 ---
-slug: obesite-severe-prise-en-charge
+title: "Guide Complet GLP-1 2025 : Tout Savoir"
+slug: "obesite-severe-prise-en-charge"
 pubDate: 2025-08-20
 author: "Karim Benali"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/obesite-severe-prise-en-charge-illus.jpg
-thumbnailAlt: "Illustration pour larticle obesite-severe-prise-en-charge"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/obesite-severe-prise-en-charge.svg"
+thumbnailAlt: "Illustration pour l'article Obesite Severe Prise En Charge"
 featured: false
 priority: 5
-schema: Article
-title: "Obésité sévère prise en charge"
-description: "obésité sévère prise en charge — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)

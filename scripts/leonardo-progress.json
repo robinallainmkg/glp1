@@ -1,0 +1,67 @@
+{
+  "startDate": "2025-08-23T20:45:54.496Z",
+  "totalArticles": 96,
+  "leonardoCreditsUsed": 0,
+  "leonardoCreditsDaily": 150,
+  "collections": [
+    {
+      "name": "medicaments-glp1",
+      "priority": 1,
+      "totalCount": 39,
+      "completed": 0,
+      "description": "MÉDICAMENTS (Priorité MAX)",
+      "status": "pending"
+    },
+    {
+      "name": "glp1-perte-de-poids",
+      "priority": 2,
+      "totalCount": 16,
+      "completed": 0,
+      "description": "PERTE DE POIDS (Très important)",
+      "status": "pending"
+    },
+    {
+      "name": "glp1-diabete",
+      "priority": 3,
+      "totalCount": 15,
+      "completed": 0,
+      "description": "DIABÈTE (Important)",
+      "status": "pending"
+    },
+    {
+      "name": "regime-glp1",
+      "priority": 4,
+      "totalCount": 14,
+      "completed": 0,
+      "description": "RÉGIMES (Moyen)",
+      "status": "pending"
+    },
+    {
+      "name": "glp1-cout",
+      "priority": 5,
+      "totalCount": 5,
+      "completed": 0,
+      "description": "COÛTS (Moyen)",
+      "status": "pending"
+    },
+    {
+      "name": "medecins-glp1-france",
+      "priority": 6,
+      "totalCount": 5,
+      "completed": 0,
+      "description": "MÉDECINS (Faible)",
+      "status": "pending"
+    },
+    {
+      "name": "recherche-glp1",
+      "priority": 7,
+      "totalCount": 2,
+      "completed": 0,
+      "description": "RECHERCHE (Faible)",
+      "status": "pending"
+    }
+  ],
+  "dailyProgress": [],
+  "completed": 0,
+  "remaining": 96
+}

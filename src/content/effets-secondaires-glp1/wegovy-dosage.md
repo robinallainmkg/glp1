@@ -1,18 +1,35 @@
 ---
-title: "Wegovy Dosage France : Posologie Optimale et Ajustements 2025"
-description: "wegovy dosage — Guide marché français. Découvrez tout sur GLP-1 en France."
+title: "Guide Complet Wegovy 2025 : Tout Savoir"
 slug: "wegovy-dosage"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: ["Wegovy", "dosage", "posologie", "ajustements", "France"]
+category: "Effets secondaires"
+tags: ["glp1", "effets-secondaires", "tolerance"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/wegovy-dosage-illus.jpg"
-thumbnailAlt: "Illustration pour l'article wegovy-dosage"
+thumbnailAlt: "Illustration pour l'article Wegovy Dosage"
 featured: false
 priority: 5
 schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "effets-secondaires-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6
+- Responsive: sidebar desktop + inline mobile
+-->
+
 readingTime: 5
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 featured: true

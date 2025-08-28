@@ -30,6 +30,12 @@ const defaultOptions: Required<ContentInjectionOptions> = {
  * Analyse le contenu HTML et trouve les points d'injection optimaux
  */
 export function findInjectionPoints(htmlContent: string, options: ContentInjectionOptions = {}): number[] {
+  // Protection contre les valeurs non-string
+  if (typeof htmlContent !== 'string') {
+    console.warn('findInjectionPoints: htmlContent is not a string, returning empty array');
+    return [];
+  }
+  
   const opts = { ...defaultOptions, ...options };
   const injectionPoints: number[] = [];
   
@@ -129,6 +135,12 @@ export function injectProductsInContent(
   products: AffiliateProduct[], 
   options: ContentInjectionOptions = {}
 ): string {
+  // Protection contre les valeurs non-string
+  if (typeof htmlContent !== 'string') {
+    console.warn('injectProductsInContent: htmlContent is not a string, returning empty string');
+    return '';
+  }
+  
   if (!products.length) return htmlContent;
   
   const opts = { ...defaultOptions, ...options };
@@ -241,7 +253,7 @@ export function getResponsiveOptions(deviceWidth: number): ContentInjectionOptio
 /**
  * Détecte le contexte de l'article pour optimiser les placements
  */
-export function analyzeContentContext(content: string): {
+export function analyzeContentContext(content: string | any): {
   wordCount: number;
   paragraphCount: number;
   hasLists: boolean;
@@ -249,6 +261,18 @@ export function analyzeContentContext(content: string): {
   hasImages: boolean;
   recommendedInjections: number;
 } {
+  // Si content n'est pas une string, utiliser une valeur par défaut
+  if (typeof content !== 'string') {
+    return {
+      wordCount: 500,
+      paragraphCount: 3,
+      hasLists: false,
+      hasTables: false,
+      hasImages: false,
+      recommendedInjections: 1
+    };
+  }
+  
   const wordCount = content.split(/\s+/).length;
   const paragraphCount = (content.match(/<p[^>]*>/g) || []).length;
   const hasLists = /<[uo]l[^>]*>/i.test(content);

@@ -1,31 +1,44 @@
 ---
-slug: anneau-gastrique-prix-cmu
-pubDate: 2025-08-20
-author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-cout
-thumbnail: /images/thumbnails/anneau-gastrique-prix-cmu-illus.jpg
-thumbnailAlt: "Illustration pour larticle anneau-gastrique-prix-cmu"
+title: "Anneau Gastrique Prix Cmu"Guide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations d'experts."
+slug: "anneau-gastrique-prix-cmu"
+pubDate: 2025-08-23
+author: "Julien Lefèvre"
+category: "Économie santé"
+tags: ["glp1", "prix", "remboursement"]
+collection: "glp1-cout"
+thumbnail: "/images/thumbnails/anneau-gastrique-prix-cmu.svg"
+thumbnailAlt: "Illustration pour l'article Anneau Gastrique Prix Cmu"
 featured: false
 priority: 5
-schema: Article
-title: "Anneau Gastrique et CMU : Prix, Remboursement et Conseils France 2025"
-description: "Guide complet sur le prix de lanneau gastrique avec la CMU en France 2025. Détail des tarifs, remboursement, comparatif et conseils pour optimiser le coût."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-cout"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [3, 7]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 3, 7
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Facteurs influençant le prix
 
 Le coût de ce traitement dépend de plusieurs facteurs :
 
-- **Innovation thérapeutique** : Les nouvelles molécules sont plus coûteuses
-- **Dosage et durée** : Variables selon la prescription médicale
-- **Négociations tarifaires** : Entre laboratoires et autorités françaises
-- **Disponibilité générique** : Réduction des coûts à terme
-- **Remboursement** : Prise en charge Sécurité Sociale et mutuelles
-
-
-
+* **Innovation thérapeutique** : Les nouvelles molécules sont plus coûteuses
+* **Dosage et durée** : Variables selon la prescription médicale
+* **Négociations tarifaires** : Entre laboratoires et autorités françaises
+* **Disponibilité générique** : Réduction des coûts à terme
+* **Remboursement** : Prise en charge Sécurité Sociale et mutuelles
 
 ## Introduction
 
@@ -41,10 +54,10 @@ L'anneau gastrique peut être pris en charge par la Sécurité Sociale et la CMU
 
 ## Stratégies d'optimisation des coûts
 
-- Programmes d'aide des laboratoires pharmaceutiques
-- Dispositifs d'aide sociale départementaux
-- Négociation avec les organismes complémentaires
-- Paiement étalé en pharmacie
+* Programmes d'aide des laboratoires pharmaceutiques
+* Dispositifs d'aide sociale départementaux
+* Négociation avec les organismes complémentaires
+* Paiement étalé en pharmacie
 
 ## Comparaison des options
 
@@ -52,26 +65,29 @@ Comparez les différentes alternatives thérapeutiques en tenant compte du rappo
 
 ## Important
 
- Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
+Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
 ## Questions fréquentes (FAQ)
 
 ### Puis-je utiliser cette approche sans ordonnance ?
+
 La prescription médicale reste indispensable pour les prix et traitements similaires.
 
 ### Quelle est l'efficacité comparée ?
+
 Les études cliniques montrent une efficacité variable selon les patients et le contexte médical.
 
 ### Y a-t-il des contre-indications ?
+
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-##  recommandés
+## recommandés
 
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
-- Médicaments GLP-1 : Panorama complet des traitements
-- Effets secondaires : Surveillance et prévention
-- Coûts et remboursement : Guide pratique 2025
-- Médecins spécialisés : Annuaire France
+* [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+* Médicaments GLP-1 : Panorama complet des traitements
+* Effets secondaires : Surveillance et prévention
+* Coûts et remboursement : Guide pratique 2025
+* Médecins spécialisés : Annuaire France
 
 ## Conclusion
 

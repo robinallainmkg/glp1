@@ -1,18 +1,34 @@
 ---
-slug: cannelle-glp1
+title: "Cannelle GLP-1"
+slug: "cannelle-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-category: "Guide médical"
-tags: []
-collection: alternatives-glp1
-thumbnail: /images/thumbnails/cannelle-glp1-illus.jpg
-thumbnailAlt: "Illustration pour larticle cannelle-glp1"
+category: "Alternatives thérapeutiques"
+tags: ["glp1", "alternatives", "traitements"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/cannelle-glp1-illus.jpg"
+thumbnailAlt: "Illustration pour l'article Cannelle GLP-1"
 featured: false
 priority: 5
-schema: Article
-title: "cannelle thérapeutique diabète"
-description: "cannelle thérapeutique diabète — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "alternatives-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6, 10]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6, 10
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

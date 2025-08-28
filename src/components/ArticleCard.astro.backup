@@ -16,7 +16,6 @@ const categoryColors = {
   'glp1-cout': 'from-purple-500 to-violet-600',
   'effets-secondaires-glp1': 'from-red-500 to-rose-600',
   'alternatives-glp1': 'from-green-500 to-emerald-600',
-  'medicaments-glp1': 'from-orange-500 to-amber-600',
   'regime-glp1': 'from-cyan-500 to-blue-600',
   'avant-apres-glp1': 'from-pink-500 to-fuchsia-600',
   'recherche-glp1': 'from-slate-500 to-gray-600',

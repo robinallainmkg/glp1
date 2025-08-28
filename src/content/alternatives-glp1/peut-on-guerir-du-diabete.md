@@ -1,18 +1,34 @@
 ---
-slug: peut-on-guerir-du-diabete
+title: "Peut On Guerir Du Diabète"
+slug: "peut-on-guerir-du-diabete"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: alternatives-glp1
-thumbnail: /images/thumbnails/peut-on-guerir-du-diabete-illus.jpg
-thumbnailAlt: "Illustration pour larticle peut-on-guerir-du-diabete"
+category: "Alternatives thérapeutiques"
+tags: ["glp1", "alternatives", "traitements"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/peut-on-guerir-du-diabete-illus.jpg"
+thumbnailAlt: "Illustration pour l'article Peut On Guerir Du Diabète"
 featured: false
 priority: 5
-schema: Article
-title: "Alternatives aux glp-1 : peut on guérir du diabète"
-description: "Découvrez les alternatives naturelles aux médicaments GLP-1 pour peut on guérir du diabète. Solutions efficaces, prix et avis médical en France 2025. Informations vérifiées par des professionnels de santé."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "alternatives-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6, 10]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6, 10
+- Responsive: sidebar desktop + inline mobile
+-->
 
 et rappel de précautions.
 

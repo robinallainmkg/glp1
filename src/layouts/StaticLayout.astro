@@ -1,0 +1,196 @@
+---
+import '../styles/global.css';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  currentPage?: string;
+  [key: string]: any;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+}
+
+const { 
+  title, 
+  description, 
+  keywords = "", 
+  image = "/og-image.jpg",
+  url,
+  type = "website",
+  author = "Équipe GLP-1 France"
+} = Astro.props;
+
+const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-48.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#16a34a">
+  
+  <link rel="canonical" href={canonicalURL}>
+  
+  <!-- SEO Meta Tags -->
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {keywords && <meta name="keywords" content={keywords}>}
+  {author && <meta name="author" content={author}>}
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content={type}>
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={image}>
+  
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={canonicalURL}>
+  <meta property="twitter:title" content={title}>
+  <meta property="twitter:description" content={description}>
+  <meta property="twitter:image" content={image}>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "{title}",
+      "description": "{description}",
+      "url": "{canonicalURL}",
+      "author": {
+        "@type": "Organization",
+        "name": "GLP-1 France"
+      }
+    }
+  </script>
+
+  <!-- Google Analytics -->
+  <GoogleAnalytics />
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Navigation Header -->
+  <SiteHeader />
+
+  <!-- Main Content -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <SiteFooter />
+
+  <!-- JavaScript pour la navigation -->
+  <script is:inline>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Search modal
+    const searchBtn = document.getElementById('search-btn');
+    const searchModal = document.getElementById('search-modal');
+    const closeSearch = document.getElementById('close-search');
+    const searchInput = document.getElementById('search-input');
+    
+    if (searchBtn && searchModal) {
+      searchBtn.addEventListener('click', () => {
+        searchModal.classList.remove('hidden');
+        if (searchInput) searchInput.focus();
+      });
+    }
+    
+    if (closeSearch && searchModal) {
+      closeSearch.addEventListener('click', () => {
+        searchModal.classList.add('hidden');
+      });
+    }
+    
+    if (searchModal) {
+      searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+          searchModal.classList.add('hidden');
+        }
+      });
+    }
+
+    // Escape key to close search
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchModal && !searchModal.classList.contains('hidden')) {
+        searchModal.classList.add('hidden');
+      }
+    });
+
+    // Simple search functionality
+    if (searchInput) {
+      let searchTimeout;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        const target = e.target || null;
+        const query = (target && target.value ? target.value : '').trim();
+        
+        if (query.length < 2) {
+          const results = document.getElementById('search-results');
+          if (results) results.classList.add('hidden');
+          return;
+        }
+        
+        searchTimeout = setTimeout(() => {
+          performSearch(query);
+        }, 300);
+      });
+    }
+
+    function performSearch(query) {
+      // Simplified search - you can enhance this with proper search functionality
+      const pages = [
+        { title: 'Prix des GLP-1', url: '/collections/glp1-cout', description: 'Prix et remboursement des traitements' },
+        { title: 'Effets secondaires', url: '/collections/effets-secondaires-glp1', description: 'Effets secondaires des GLP-1' },
+        { title: 'Trouver un médecin', url: '/collections/medecins-glp1-france', description: 'Médecins prescripteurs en France' }
+      ];
+      
+      const filteredPages = pages.filter(page => 
+        page.title.toLowerCase().includes(query.toLowerCase()) ||
+        page.description.toLowerCase().includes(query.toLowerCase())
+      );
+      
+      const results = document.getElementById('search-results');
+      if (results) {
+        if (filteredPages.length > 0) {
+          results.innerHTML = filteredPages.map(page => `
+            <a href="${page.url}" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0">
+              <div class="font-medium text-gray-900">${page.title}</div>
+              <div class="text-sm text-gray-600">${page.description}</div>
+            </a>
+          `).join('');
+          results.classList.remove('hidden');
+        } else {
+          results.innerHTML = '<div class="px-4 py-3 text-gray-500">Aucun résultat trouvé</div>';
+          results.classList.remove('hidden');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

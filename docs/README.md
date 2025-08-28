@@ -43,11 +43,13 @@ npm install && npm run dev
 |---------|-------------|---------|
 | [GUIDE_DEPLOIEMENT_MANUEL.md](GUIDE_DEPLOIEMENT_MANUEL.md) | Configuration FTP et déploiement | ✅ À jour |
 | [admin-documentation.md](admin-documentation.md) | Administration système | ✅ Actif |
+| [SUPPRESSION-MEDICAMENTS-GLP1.md](SUPPRESSION-MEDICAMENTS-GLP1.md) | Nettoyage collection medicaments-glp1 | ✅ À jour |
 | [RESOLUTION_FORMULAIRE_CONTACT.md](RESOLUTION_FORMULAIRE_CONTACT.md) | Gestion formulaires | ✅ Actif |
 
 ### 🎨 Guides Techniques  
 | Fichier | Description | Status |
 |---------|-------------|---------|
+| [GENERATION-IMAGES-GROK.md](GENERATION-IMAGES-GROK.md) | Génération automatique d'images avec IA | ✅ Nouveau |
 | [GUIDE_THUMBNAILS.md](GUIDE_THUMBNAILS.md) | Gestion images et thumbnails | ✅ Actif |
 | [GUIDE_TINA_IMAGES.md](GUIDE_TINA_IMAGES.md) | TinaCMS et images | ✅ Actif |
 | [MASTER-INDEX.md](MASTER-INDEX.md) | Index général du projet | ✅ Référence |
@@ -183,7 +185,7 @@ graph TB
 - **CMS** : TinaCMS pour la gestion de contenu
 - **Base de données** : Supabase (migration depuis JSON locaux)
 - **Déploiement** : Hostinger via script PowerShell automatisé
-- **Collections** : 9 collections d'articles (119 articles total)
+- **Collections** : 8 collections d'articles (119 articles total)
 
 ## 📚 Documentation Complète
 
@@ -203,13 +205,13 @@ Consultez notre **[Index Central](MASTER-INDEX.md)** pour accéder à toute la d
 | Feature | Status | Guide |
 |---------|--------|-------|
 | 📊 **Admin Dashboard** | ✅ Opérationnel | [→ Guide](features/admin-dashboard.md) |
-| 📄 **Collections SEO** | ✅ 9 collections | [→ Guide](features/collections-seo.md) |
+| 📄 **Collections SEO** | ✅ 8 collections | [→ Guide](features/collections-seo.md) |
 | 👥 **Données Utilisateurs** | ✅ Supabase | [→ Guide](features/user-data-system.md) |
 | 💰 **Affiliation** | ✅ Actif | [→ Guide](features/affiliate-system.md) |
 
 ## 🎯 Statut Projet
 
-- **Collections** : 9 configurées, 119 articles
+- **Collections** : 8 configurées, 119 articles
 - **Images** : 20 images AI générées
 - **CMS** : TinaCMS opérationnel
 - **Base de données** : Migration Supabase terminée

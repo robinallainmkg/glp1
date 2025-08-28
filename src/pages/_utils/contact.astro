@@ -1,9 +1,8 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StaticLayout from '../../layouts/StaticLayout.astro';
 ---
 
-<BaseLayout 
-  title="Nous Contacter - GLP-1 France"
+<StaticLayout title="Nous Contacter - GLP-1 France"
   description="Contactez l'équipe de GLP-1 France pour vos questions sur Ozempic, Wegovy et les traitements GLP-1. Nous répondons rapidement à vos demandes."
   keywords="contact, questions GLP-1, support, aide, Ozempic, Wegovy"
 >
@@ -245,7 +244,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </article>
     </div>
   </div>
-</BaseLayout>
+</StaticLayout>
 
 <style>
   .content-wrapper {
@@ -623,24 +622,26 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <script>
   // Gestion du formulaire de contact avec API enrichie
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact-form');
-    const successDiv = document.getElementById('contact-success');
-    const errorDiv = document.getElementById('contact-error');
-    
+    const form = document.querySelector('.contact-form') as HTMLFormElement | null;
+    const successDiv = document.getElementById('contact-success') as HTMLElement | null;
+    const errorDiv = document.getElementById('contact-error') as HTMLElement | null;
+
     if (form) {
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
+
         // Masquer les messages précédents
-        successDiv.classList.add('hidden');
-        errorDiv.classList.add('hidden');
-        
+        successDiv?.classList.add('hidden');
+        errorDiv?.classList.add('hidden');
+
         // Désactiver le bouton pendant l'envoi
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span>⏳</span> Envoi en cours...';
-        submitBtn.disabled = true;
-        
+        const submitBtn = form.querySelector('.submit-btn') as HTMLButtonElement | null;
+        const originalText = submitBtn?.innerHTML || '';
+        if (submitBtn) {
+          submitBtn.innerHTML = '<span>⏳</span> Envoi en cours...';
+          submitBtn.disabled = true;
+        }
+
         try {
           const formData = new FormData(form);
           
@@ -651,18 +652,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           
           const result = await response.json();
           
-          if (response.ok && result.success) {
+            if (response.ok && result.success) {
             // Succès - personnaliser le message
-            successDiv.classList.remove('hidden');
-            
-            const successMessage = successDiv.querySelector('.success-message');
+            successDiv?.classList.remove('hidden');
+
+            const successMessage = successDiv?.querySelector('.success-message') as HTMLElement | null;
             const name = formData.get('name');
             const email = formData.get('email');
-            
-            if (name) {
+
+            if (successMessage && name) {
               successMessage.innerHTML = `✅ Merci ${name} ! Message envoyé. Nous vous répondrons rapidement à ${email}.`;
             }
-            
+
             form.reset();
             
             // Analytics/tracking enrichi
@@ -727,18 +728,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           }
         } catch (error) {
           console.error('Erreur:', error);
-          const errorMessage = errorDiv.querySelector('.error-message');
+          const errorMessage = errorDiv?.querySelector('.error-message') as HTMLElement | null;
           if (errorMessage) {
-            errorMessage.textContent = error.message.includes('obligatoire') ? 
+            errorMessage.textContent = (error as Error).message?.includes('obligatoire') ? 
               '⚠️ Veuillez remplir tous les champs obligatoires' : 
               '❌ Erreur d\'envoi. Veuillez réessayer.';
           }
-          errorDiv.classList.remove('hidden');
+          errorDiv?.classList.remove('hidden');
         } finally {
           // Réactiver le bouton après un délai
           setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
+            if (submitBtn) {
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }
           }, 3000);
         }
       });

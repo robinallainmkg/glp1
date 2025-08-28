@@ -1,12 +1,14 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+
+const affiliateProducts = [];
+const affiliateConfig = {};
+const entry = {};
+const frontmatter = null;
+
 ---
 
-<BaseLayout 
-  title="Témoignage Laurent B. - Transformation avec Ozempic : -15 kilos en 8 mois"
-  description="Découvrez comment Laurent B. a perdu 15 kilos avec Ozempic et résolu ses problèmes de ventre gonflé."
-  keywords="témoignage Laurent, Ozempic, ventre gonflé, transformation homme"
->
+<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts} affiliateConfig={affiliateConfig}>
 
 <div class="container">
   <article class="testimonial-detail">
@@ -500,6 +502,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 </style>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>
 
 

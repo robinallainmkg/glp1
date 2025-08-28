@@ -1,18 +1,35 @@
 ---
-title: "Wegovy Dangers et Risques : Guide Sécurité Complet France 2025"
-description: "wegovy danger — Guide marché français. Découvrez tout sur GLP-1 en France."
+title: "Guide Complet Wegovy 2025 : Tout Savoir"
 slug: "wegovy-danger"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: ["Wegovy", "danger", "risques", "sécurité", "effets secondaires"]
+category: "Effets secondaires"
+tags: ["glp1", "effets-secondaires", "tolerance"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/wegovy-danger-illus.jpg"
-thumbnailAlt: "Illustration pour l'article wegovy-danger"
+thumbnailAlt: "Illustration pour l'article Wegovy Danger"
 featured: false
 priority: 5
 schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "effets-secondaires-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6
+- Responsive: sidebar desktop + inline mobile
+-->
+
 readingTime: 5
 keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
 featured: true

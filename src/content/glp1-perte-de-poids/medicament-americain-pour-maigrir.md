@@ -1,18 +1,34 @@
 ---
-slug: medicament-americain-pour-maigrir
+title: "Guide Complet maigrir 2025 : Tout Savoir"
+slug: "medicament-americain-pour-maigrir"
 pubDate: 2025-08-20
 author: "Julien Lefèvre"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/medicament-americain-pour-maigrir-illus.jpg
-thumbnailAlt: "Illustration pour larticle medicament-americain-pour-maigrir"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/medicament-americain-pour-maigrir.svg"
+thumbnailAlt: "Illustration pour l'article Médicament Americain Pour Maigrir"
 featured: false
 priority: 5
-schema: Article
-title: "Medicament americain pour maigrir"
-description: "medicament americain pour maigrir — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Médicaments américains pour la perte de poids
 

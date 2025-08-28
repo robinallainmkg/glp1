@@ -1,18 +1,34 @@
 ---
-slug: diabetologue-paris
+title: "Diabetologue Paris"
+slug: "diabetologue-paris"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: medecins-glp1-france
-thumbnail: /images/thumbnails/diabetologue-paris-illus.jpg
-thumbnailAlt: "Illustration pour larticle diabetologue-paris"
+category: "Médecins spécialisés"
+tags: ["glp1", "medecins", "specialistes"]
+collection: "medecins-glp1-france"
+thumbnail: "/images/thumbnails/diabetologue-paris.svg"
+thumbnailAlt: "Illustration pour l'article Diabetologue Paris"
 featured: false
 priority: 5
-schema: Article
-title: "diabétologue Paris GLP-1 - Diabetologue Paris"
-description: "diabétologue Paris GLP-1 — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "medecins-glp1-france"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [3, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 3, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

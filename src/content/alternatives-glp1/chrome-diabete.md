@@ -1,18 +1,34 @@
 ---
-slug: chrome-diabete
+title: "Chrome Diabète"
+slug: "chrome-diabete"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: alternatives-glp1
-thumbnail: /images/thumbnails/chrome-diabete-illus.jpg
-thumbnailAlt: "Illustration pour larticle chrome-diabete"
+category: "Alternatives thérapeutiques"
+tags: ["glp1", "alternatives", "traitements"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/chrome-diabete-illus.jpg"
+thumbnailAlt: "Illustration pour l'article Chrome Diabète"
 featured: false
 priority: 5
-schema: Article
-title: "chrome picolinate diabète - Chrome Diabete"
-description: "chrome picolinate diabète — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "alternatives-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6, 10]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6, 10
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

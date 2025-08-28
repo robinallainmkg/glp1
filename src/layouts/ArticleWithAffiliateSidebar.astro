@@ -1,541 +1,410 @@
 ---
-// Layout avancé avec système d'affiliation adaptatif et injection automatique
+// Layout avancé avec système d'affiliation adaptatif (version sans TinaCMS)
+import BaseLayout from './BaseLayout.astro';
 import AdaptiveAffiliateDisplay from '../components/AdaptiveAffiliateDisplay.astro';
-import { 
-  injectProductsInContent, 
-  findInjectionPoints, 
-  analyzeContentContext,
-  inlineProductCSS 
-} from '../lib/content-injection';
-import { getArticleAffiliateProducts, getRecommendedProducts } from '../lib/affiliate';
 
 export interface Props {
-  title: string;
+  title?: string;
   description?: string;
   author?: string;
+  image?: string;
   articleContent?: string;
+  availableProducts?: any[];
   affiliateProducts?: any[];
+  affiliateConfig?: any;
+  showAffiliateSidebar?: boolean;
+  article?: any;
+  detectedCategory?: string;
+  categoryIcon?: string;
+  relatedArticles?: any[];
+  config?: any;
+  shouldInjectProducts?: boolean;
   category?: string;
-  /** Configuration d'affichage */
-  affiliateConfig?: {
-    enableAutoInjection?: boolean;
-    mobileStrategy?: 'inline-only' | 'sidebar-only' | 'both';
-    maxInlineProducts?: number;
-    injectionStrategy?: 'auto' | 'manual';
-  };
+  collection?: string;
+  collectionName?: string;
+  frontmatter?: any;
+  children?: any;
+  [key: string]: any;
 }
 
-const { 
-  title, 
-  description, 
-  author, 
-  articleContent = '', 
-  affiliateProducts = [],
-  category,
-  affiliateConfig = {}
-} = Astro.props;
+// Props attendus par ce layout
+const props: Props = Astro.props || {};
+const article = props.article ?? null;
 
-// Configuration par défaut
-const config = {
-  enableAutoInjection: true,
-  mobileStrategy: 'both' as const,
-  maxInlineProducts: 3,
-  injectionStrategy: 'auto' as const,
-  ...affiliateConfig
-};
-
-// Récupération des produits pour l'affiliation
-let availableProducts = [];
-
-try {
-  if (affiliateProducts && affiliateProducts.length > 0) {
-    availableProducts = await getArticleAffiliateProducts(affiliateProducts);
-  } else {
-    availableProducts = await getRecommendedProducts(articleContent, category, 5);
-  }
-} catch (error) {
-  console.warn('Erreur lors du chargement des produits d\'affiliation:', error);
-  availableProducts = [];
-}
-
-// Analyse du contenu pour optimiser les placements
-const contentAnalysis = analyzeContentContext(articleContent);
-const shouldInjectProducts = config.enableAutoInjection && 
-                            availableProducts.length > 0 && 
-                            contentAnalysis.wordCount > 300;
-
-// Articles connexes enrichis
-const relatedArticles = [
-  {
-    title: "Guide complet Ozempic 2024 : Efficacité et Effets",
-    slug: "guide-ozempic-2024",
-    collection: "guides",
-    author: "Dr. Martin Dubois"
-  },
-  {
-    title: "Wegovy vs Ozempic : Comparaison détaillée",
-    slug: "wegovy-vs-ozempic",
-    collection: "articles", 
-    author: "Dr. Sophie Laurent"
-  },
-  {
-    title: "Mounjaro (Tirzepatide) : Révolution GLP-1",
-    slug: "mounjaro-tirzepatide-guide",
-    collection: "guides",
-    author: "Dr. Martin Dubois"
-  }
-];
+// Normalisation des champs
+const title = props.title ?? (article?.data?.title || article?.title) ?? '';
+const description = props.description ?? (article?.data?.description || article?.description) ?? '';
+const author = props.author ?? (article?.data?.author || article?.author) ?? '';
+const image = props.image ?? (article?.data?.image || article?.thumbnail || article?.image) ?? '';
+const articleContent = props.articleContent ?? article?.body ?? '';
+const availableProducts = props.availableProducts ?? props.affiliateProducts ?? [];
+const detectedCategory = props.detectedCategory ?? props.category ?? (article?.data?.collection || article?.collection) ?? null;
+const categoryIcon = props.categoryIcon ?? '💊';
+const relatedArticles = props.relatedArticles ?? [];
+const config = props.config ?? {};
+const shouldInjectProducts = props.shouldInjectProducts ?? false;
 ---
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} | GLP1 Official</title>
-  {description && <meta name="description" content={description} />}
-  
-  <!-- Meta tags pour le SEO et réseaux sociaux -->
-  <meta property="og:title" content={title} />
-  <meta property="og:type" content="article" />
-  {description && <meta property="og:description" content={description} />}
-  <meta property="og:site_name" content="GLP1 Official" />
-  
-  <!-- Styles CSS embarqués pour les produits d'affiliation -->
-  <Fragment set:html={inlineProductCSS} />
-  
-  <!-- Styles pour le layout adaptatif -->
-  <style>
-    /* Layout principal adaptatif */
-    .adaptive-article-layout {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      position: relative;
-    }
-    
-    .article-wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-    
-    /* Layout desktop avec sidebar */
-    @media (min-width: 1025px) {
-      .article-wrapper.has-sidebar {
-        grid-template-columns: 740px 320px;
-        gap: 3rem;
-        justify-content: center;
-      }
-    }
-    
-    .article-content {
-      min-width: 0; /* Évite les débordements */
-      position: relative;
-      max-width: 740px;
-    }
-    
-    .article-header {
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 3px solid #2563eb;
-      position: relative;
-    }
-    
-    .article-header::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(45deg, #2563eb, #1d4ed8);
-    }
-    
-    .article-title {
-      font-size: clamp(2rem, 4vw, 2.5rem);
-      font-weight: 800;
-      line-height: 1.2;
-      color: #1f2937 !important;
-      margin: 0 0 1.5rem 0;
-    }
-    
-    .article-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      color: #6b7280;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-    
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .meta-item::before {
-      content: '•';
-      color: #2563eb;
-      font-weight: bold;
-    }
-    
-    .meta-item:first-child::before {
-      display: none;
-    }
-    
-    .article-description {
-      font-size: 1.2rem;
-      color: #4b5563;
-      line-height: 1.7;
-      margin: 1.5rem 0 0 0;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-      border-left: 4px solid #2563eb;
-      border-radius: 0 12px 12px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    
-    .article-body {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #374151;
-      margin-top: 2rem;
-    }
-    
-    /* Typographie enrichie */
-    .article-body h2 {
-      font-size: clamp(1.5rem, 3vw, 1.8rem);
-      font-weight: 700;
-      margin: 3rem 0 1.5rem 0;
-      color: #1f2937;
-      position: relative;
-      padding-left: 1rem;
-    }
-    
-    .article-body h2::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.2em;
-      width: 4px;
-      height: 1.2em;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      border-radius: 2px;
-    }
-    
-    .article-body h3 {
-      font-size: clamp(1.2rem, 2.5vw, 1.4rem);
-      font-weight: 600;
-      margin: 2.5rem 0 1rem 0;
-      color: #374151;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
-    }
-    
-    .article-body p {
-      margin: 1.5rem 0;
-    }
-    
-    .article-body ul, .article-body ol {
-      margin: 1.5rem 0;
-      padding-left: 2rem;
-    }
-    
-    .article-body li {
-      margin: 0.75rem 0;
-      line-height: 1.6;
-    }
-    
-    .article-body strong {
-      color: #2563eb;
-      font-weight: 600;
-    }
-    
-    .article-body blockquote {
-      border-left: 4px solid #10b981;
-      padding: 1.5rem 2rem;
-      margin: 2.5rem 0;
-      font-style: italic;
-      color: #4b5563;
-      background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
-      border-radius: 0 12px 12px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: relative;
-    }
-    
-    .article-body blockquote::before {
-      content: '"';
-      position: absolute;
-      top: -10px;
-      left: 10px;
-      font-size: 4rem;
-      color: #10b981;
-      line-height: 1;
-      opacity: 0.3;
-    }
-    
-    /* Améliorations des tables */
-    .article-body table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2.5rem 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      border-radius: 12px;
-      overflow: hidden;
-      font-size: 0.95rem;
-    }
-    
-    .article-body th {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      color: white;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 1rem;
-      text-align: left;
-    }
-    
-    .article-body td {
-      padding: 1rem;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    
-    .article-body tr:nth-child(even) {
-      background: #f8fafc;
-    }
-    
-    .article-body tr:hover {
-      background: #f1f5f9;
-    }
-    
-    /* Sidebar adaptative */
-    .sidebar-container {
-      position: relative;
-    }
-    
-    /* Responsive Design amélioré */
-    @media (max-width: 1024px) {
-      .adaptive-article-layout {
-        padding: 1.5rem 1rem;
-      }
-      
-      .article-wrapper.has-sidebar {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      
-      .article-body {
-        font-size: 1rem;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .adaptive-article-layout {
-        padding: 1rem 0.5rem;
-      }
-      
-      .article-header {
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-      }
-      
-      .article-meta {
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-      
-      .article-description {
-        font-size: 1.1rem;
-        padding: 1rem;
-      }
-      
-      .article-body h2 {
-        margin: 2rem 0 1rem 0;
-      }
-      
-      .article-body blockquote {
-        padding: 1rem 1.5rem;
-        margin: 2rem 0;
-      }
-      
-      .article-body table {
-        font-size: 0.85rem;
-      }
-      
-      .article-body th, 
-      .article-body td {
-        padding: 0.75rem 0.5rem;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .article-title {
-        font-size: 1.75rem;
-      }
-      
-      .article-description {
-        font-size: 1rem;
-        padding: 0.75rem;
-      }
-      
-      .article-body {
-        font-size: 0.95rem;
-        line-height: 1.7;
-      }
-      
-      .article-body h2::before {
-        width: 3px;
-      }
-    }
-    
-    /* Mode impression */
-    @media print {
-      .adaptive-article-layout {
-        max-width: none;
-        padding: 0;
-      }
-      
-      .article-wrapper.has-sidebar {
-        grid-template-columns: 1fr;
-      }
-      
-      .article-header {
-        border-bottom: 2px solid #000;
-      }
-      
-      .article-title {
-        color: #000 !important;
-        -webkit-text-fill-color: initial !important;
-      }
-      
-      .sidebar-container {
-        display: none;
-      }
-    }
-    
-    /* Accessibilité */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-    
-    
-  </style>
-</head>
+<BaseLayout title={title} description={description}>
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb" style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; flex-wrap: wrap;">
+        <a href="/" style="color: #3b82f6; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+          <span>🏠</span>
+          <span>Accueil</span>
+        </a>
+        <span style="color: #9ca3af;">→</span>
+        {detectedCategory && (
+          <>
+            <a href={`/collections/${detectedCategory}/`} style="color: #3b82f6; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+              <span>{categoryIcon}</span>
+              <span>{detectedCategory.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}</span>
+            </a>
+            <span style="color: #9ca3af;">→</span>
+          </>
+        )}
+        <span style="color: #6b7280; display: flex; align-items: center; gap: 4px;">
+          <span>📖</span>
+          <span>{title}</span>
+        </span>
+      </div>
+    </div>
+  </nav>
 
-<body>
+  <!-- Article Header -->
+  <header class="article-header bg-gradient-to-br from-slate-50 to-violet-50 border-b border-gray-200">
+    <div class="container mx-auto px-4 py-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <!-- Contenu textuel -->
+          <div>
+            <div class="flex items-center gap-3 mb-4 pt-2">
+              <span class="text-2xl">{categoryIcon}</span>
+              {detectedCategory && (
+                <span class="px-2 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                  {detectedCategory.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
+                </span>
+              )}
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold mb-3 leading-tight text-slate-700">
+              {title}
+            </h1>
+            <p class="text-base text-slate-700 opacity-90 mb-4 leading-relaxed">
+              {description || `${title} — Guide complet marché français.`}
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-700 opacity-75">
+              {author && (
+                <div class="flex items-center gap-2">
+                  <span class="text-sm">✍️</span>
+                  <span class="font-medium">{author}</span>
+                </div>
+              )}
+              <div class="flex items-center gap-2">
+                <span class="text-sm">⏱️</span>
+                <span>5 min de lecture</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-sm">📅</span>
+                <span>{new Date().toLocaleDateString('fr-FR', { 
+                  day: '2-digit',
+                  month: '2-digit', 
+                  year: 'numeric' 
+                })}</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Image de l'article -->
+          {image && (
+            <div class="lg:order-2">
+              <div class="relative">
+                <img 
+                  src={image} 
+                  alt={title}
+                  class="w-full h-48 lg:h-64 object-cover rounded-xl shadow-lg"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </header>
+
   <main class="adaptive-article-layout">
     <div class={`article-wrapper ${availableProducts.length > 0 ? 'has-sidebar' : ''}`}>
       <!-- Contenu principal de l'article -->
       <article class="article-content">
-        <header class="article-header">
-          <h1 class="article-title">{title}</h1>
-          <div class="article-meta">
-            {author && (
-              <div class="meta-item">
-                <span>👨‍⚕️ Par {author}</span>
-              </div>
-            )}
-            <div class="meta-item">
-              <span>📅 Mis à jour le {new Date().toLocaleDateString('fr-FR', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}</span>
-            </div>
-            {category && (
-              <div class="meta-item">
-                <span>🏷️ {category}</span>
-              </div>
-            )}
-            {contentAnalysis.wordCount > 0 && (
-              <div class="meta-item">
-                <span>⏱️ {Math.ceil(contentAnalysis.wordCount / 200)} min de lecture</span>
-              </div>
-            )}
-          </div>
-          {description && (
-            <div class="article-description">
-              {description}
-            </div>
-          )}
-        </header>
-        
-        <div class="article-body">
+        <div class="article-body" id="article-content">
           <slot />
         </div>
       </article>
       
       <!-- Système d'affiliation adaptatif -->
       {availableProducts.length > 0 && (
-        <div class="sidebar-container">
-          <AdaptiveAffiliateDisplay 
-            articleContent={articleContent}
-            affiliateProducts={affiliateProducts}
-            category={category}
-            authorName={author}
-            relatedArticles={relatedArticles}
-            config={config}
-          />
-        </div>
+        <AdaptiveAffiliateDisplay 
+          affiliateProducts={availableProducts}
+          config={config}
+          shouldInject={shouldInjectProducts}
+        />
       )}
     </div>
   </main>
+</BaseLayout>
 
-  <!-- Analytics et tracking (optionnel) -->
-  <script>
-    // Configuration analytics pour le tracking des performances
-    document.addEventListener('DOMContentLoaded', function() {
-      // Mesure du temps de lecture
-      let startTime = Date.now();
-      let maxScroll = 0;
-      
-      function trackReadingProgress() {
-        const scrollPercent = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        );
-        maxScroll = Math.max(maxScroll, scrollPercent);
-      }
-      
-      window.addEventListener('scroll', trackReadingProgress);
-      
-      // Envoi des métriques à la fermeture
-      window.addEventListener('beforeunload', function() {
-        const readingTime = Math.round((Date.now() - startTime) / 1000);
+<style>
+/* Styles pour le layout avec affiliation */
+.adaptive-article-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.article-wrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.article-wrapper.has-sidebar {
+  grid-template-columns: 1fr 300px;
+}
+
+.article-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.article-body {
+  color: #374151;
+  line-height: 1.75;
+}
+
+.article-body h1, .article-body h2, .article-body h3 {
+  color: #1f2937;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.article-body h1 { font-size: 2.25rem; }
+.article-body h2 { font-size: 1.875rem; }
+.article-body h3 { font-size: 1.5rem; }
+
+.article-body p {
+  margin-bottom: 1.25rem;
+}
+
+.article-body a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.article-body a:hover {
+  color: #1d4ed8;
+}
+
+.article-body strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.article-body ul, .article-body ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+
+.article-body blockquote {
+  border-left: 4px solid #3b82f6;
+  background: #f8fafc;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.article-body code {
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.article-body pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+/* Styles pour les sections spéciales */
+.article-body .highlight-box {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 2px solid #f59e0b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.article-body .highlight-box::before {
+  content: '💡';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #f59e0b;
+}
+
+.article-body .warning-box {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  border: 2px solid #ef4444;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.article-body .warning-box::before {
+  content: '⚠️';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+}
+
+.article-body .success-box {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.article-body .success-box::before {
+  content: '✅';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #10b981;
+}
+
+/* Animation d'entrée pour les éléments */
+.article-body h2, .article-body h3, .article-body .highlight-box, .article-body .warning-box, .article-body .success-box {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles pour les boutons CTA */
+.article-body .cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.article-body .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -1px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .article-wrapper.has-sidebar {
+    grid-template-columns: 1fr;
+  }
+  
+  .adaptive-article-layout {
+    padding: 1rem;
+  }
+  
+  .article-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-content {
+    padding: 1rem;
+  }
+  
+  .article-body h1 { font-size: 1.875rem; }
+  .article-body h2 { font-size: 1.5rem; }
+  .article-body h3 { font-size: 1.25rem; }
+}
+</style>
+
+<script>
+  // Injection automatique des produits inline dans le contenu de l'article
+  document.addEventListener('DOMContentLoaded', function() {
+    const articleContent = document.getElementById('article-content');
+    const inlineContainer = document.querySelector('.inline-products-container');
+    
+    if (!articleContent || !inlineContainer) return;
+    
+    // Récupérer tous les produits inline disponibles
+    const inlineProducts = inlineContainer.querySelectorAll('.inline-affiliate-product');
+    
+    if (inlineProducts.length === 0) return;
+    
+    // Récupérer tous les paragraphes de l'article
+    const paragraphs = articleContent.querySelectorAll('p');
+    
+    if (paragraphs.length < 3) return; // Pas assez de contenu
+    
+    // Configuration d'injection : 2ème, 5ème, 7ème paragraphe
+    const injectionPoints = [2, 5, 7]; // Index basé sur 0 (donc 3ème, 6ème, 8ème paragraphe)
+    
+    let productIndex = 0;
+    
+    injectionPoints.forEach(paragraphIndex => {
+      if (paragraphIndex < paragraphs.length && productIndex < inlineProducts.length) {
+        const targetParagraph = paragraphs[paragraphIndex];
+        const productToInject = inlineProducts[productIndex].cloneNode(true);
         
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'article_engagement', {
-            'reading_time': readingTime,
-            'scroll_depth': maxScroll,
-            'article_title': document.title
-          });
-        }
-      });
-      
-      // Tracking des interactions avec les produits d'affiliation
-      document.addEventListener('click', function(e) {
-        const affiliateLink = e.target.closest('[rel*="sponsored"]');
-        if (affiliateLink) {
-          const productElement = affiliateLink.closest('[data-product]');
-          const productName = productElement?.getAttribute('data-product');
-          const displayType = productElement?.closest('.adaptive-sidebar') ? 'sidebar' : 'inline';
-          
-          if (typeof gtag !== 'undefined' && productName) {
-            gtag('event', 'affiliate_interaction', {
-              'product_name': productName,
-              'display_type': displayType,
-              'article_title': document.title
-            });
-          }
-        }
-      });
+        // Insérer le produit après le paragraphe cible
+        targetParagraph.parentNode.insertBefore(productToInject, targetParagraph.nextSibling);
+        
+        productIndex++;
+      }
     });
-  </script>
-</body>
-</html>
+    
+    // Cacher le conteneur original des produits inline (ils sont maintenant dans l'article)
+    inlineContainer.style.display = 'none';
+  });
+</script>

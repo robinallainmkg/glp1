@@ -1,18 +1,34 @@
 ---
-slug: diabete-amaigrissement-rapide
+title: "Guide Complet diabète 2025 : Tout Savoir"
+slug: "diabete-amaigrissement-rapide"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/diabete-amaigrissement-rapide-illus.jpg
-thumbnailAlt: "Illustration pour larticle diabete-amaigrissement-rapide"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/diabete-amaigrissement-rapide.svg"
+thumbnailAlt: "Illustration pour l'article Diabète Amaigrissement Rapide"
 featured: false
 priority: 5
-schema: Article
-title: "Perte de poids glp-1 : diabète amaigrissement rapide"
-description: "Diabète amaigrissement rapide avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)

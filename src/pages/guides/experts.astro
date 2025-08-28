@@ -1,477 +1,1042 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StaticLayout from '../../layouts/StaticLayout.astro';
 
-// Données des experts intégrées
-const experts = [
-  {
-    id: 'dr-claire-morel',
-    name: 'Dr Claire Morel',
-    title: 'Endocrinologue spécialisée en obésité',
-    image: '/images/experts/dr-claire-morel.jpg',
-    experience: '12 ans d\'expérience',
-    bio: 'Endocrinologue diplômée de la faculté de médecine de Paris, le Dr Claire Morel s\'est spécialisée dans le traitement de l\'obésité et du diabète de type 2. Elle accompagne ses patients depuis plus de 10 ans dans leur parcours de perte de poids avec les traitements innovants.',
-    specialties: ['Endocrinologie', 'Diabétologie', 'Obésité', 'Traitements GLP-1'],
-    education: 'Doctorat en Médecine - Université Paris VII, Spécialisation en Endocrinologie - Hôpital Saint-Louis',
-    opinion: 'Les agonistes du récepteur GLP-1 représentent une révolution dans le traitement de l\'obésité. Ces médicaments offrent une efficacité remarquable avec un profil de sécurité acceptable.',
-    risks: 'Il est essentiel de surveiller les effets gastro-intestinaux, particulièrement en début de traitement. Un suivi médical régulier permet d\'ajuster les doses et de minimiser les risques.',
-    philosophy: 'Mon approche consiste à personnaliser chaque traitement en fonction du profil du patient, de ses antécédents et de ses objectifs. L\'éducation thérapeutique reste primordiale.'
-  },
-  {
-    id: 'elodie-carpentier',
-    name: 'Élodie Carpentier',
-    title: 'Journaliste santé et rédactrice médicale',
-    image: '/images/experts/elodie-carpentier.jpg',
-    experience: '8 ans d\'expérience',
-    bio: 'Journaliste spécialisée en santé depuis 8 ans, Élodie Carpentier traduit l\'information médicale complexe en contenus accessibles au grand public. Diplômée en communication scientifique, elle collabore avec de nombreux professionnels de santé.',
-    specialties: ['Journalisme médical', 'Vulgarisation scientifique', 'Communication santé', 'Traitements innovants'],
-    education: 'Master en Communication Scientifique - Université Paris-Saclay, Formation en Journalisme Médical - ESJ Paris',
-    opinion: 'Les traitements GLP-1 marquent un tournant dans la prise en charge de l\'obésité, mais l\'information objective reste cruciale pour permettre aux patients de faire des choix éclairés.',
-    risks: 'La médiatisation parfois excessive de ces traitements peut créer de fausses attentes. Il faut toujours rappeler que ce ne sont pas des solutions miracle et qu\'ils nécessitent un suivi médical strict.',
-    philosophy: 'Mon rôle est de rendre l\'information médicale accessible sans la dénaturer. Chaque article doit présenter les bénéfices autant que les risques, dans un langage compréhensible.'
-  },
-  {
-    id: 'julien-armand',
-    name: 'Julien Armand',
-    title: 'Coach sportif et nutritionniste',
-    image: '/images/experts/julien-armand.jpg',
-    experience: '10 ans d\'expérience',
-    bio: 'Coach sportif certifié et nutritionniste diplômé, Julien Armand accompagne depuis 10 ans les personnes en surpoids dans leur transformation physique. Il intègre dans ses programmes les dernières innovations thérapeutiques.',
-    specialties: ['Coaching sportif', 'Nutrition', 'Perte de poids', 'Accompagnement thérapeutique'],
-    education: 'BPJEPS Activités de la Forme, DU Nutrition et Alimentation - Université de Bordeaux',
-    opinion: 'Les GLP-1 sont des outils précieux qui facilitent grandement l\'adhésion aux changements d\'hygiène de vie. Ils permettent de briser le cercle vicieux des fringales et de l\'alimentation émotionnelle.',
-    risks: 'Le principal risque est de considérer ces traitements comme une solution unique. Sans modification durable des habitudes alimentaires et de l\'activité physique, les résultats ne seront pas pérennes.',
-    philosophy: 'Je privilégie une approche holistique combinant traitement médical, rééquilibrage alimentaire et activité physique adaptée. L\'objectif est l\'autonomie du patient à long terme.'
-  },
-  {
-    id: 'marc-delattre',
-    name: 'Marc Delattre',
-    title: 'Pharmacien spécialisé en accompagnement thérapeutique',
-    image: '/images/experts/marc-delattre.jpg',
-    experience: '15 ans d\'expérience',
-    bio: 'Pharmacien d\'officine depuis 15 ans, Marc Delattre s\'est spécialisé dans l\'accompagnement des patients sous traitements chroniques. Il forme régulièrement ses confrères sur les nouveaux traitements de l\'obésité.',
-    specialties: ['Pharmacie clinique', 'Éducation thérapeutique', 'Suivi des traitements', 'Observance médicamenteuse'],
-    education: 'Doctorat en Pharmacie - Université de Lyon, DU Éducation Thérapeutique du Patient',
-    opinion: 'En tant que pharmacien, je constate quotidiennement l\'impact positif des GLP-1 sur la qualité de vie des patients. Ces traitements redonnent espoir à ceux qui avaient tout essayé.',
-    risks: 'L\'automédication et l\'achat sur internet représentent des dangers majeurs. Ces médicaments nécessitent une prescription médicale et un suivi pharmaceutique rigoureux pour éviter les complications.',
-    philosophy: 'Mon rôle est d\'assurer le bon usage du médicament, d\'informer sur les effets secondaires possibles et de maintenir un lien thérapeutique fort avec le patient tout au long de son traitement.'
-  }
-];
+// Données SEO pour la page
+const seoData = {
+  title: 'Nos Experts Médicaux - Endocrinologues et Diabétologues GLP-1',
+  description: 'Découvrez notre équipe d\'experts médicaux spécialisés en diabète et obésité. Endocrinologues et diabétologues qualifiés pour vos traitements GLP-1.',
+  image: '/images/thumbnails/partenaires.svg',
+  url: '/guides/experts',
+  type: 'website'
+};
 ---
 
-<BaseLayout 
-  title="Nos Experts GLP-1" 
-  description="Découvrez notre équipe d'experts spécialisés dans les traitements GLP-1, la nutrition, la cosmétique et le bien-être. Des professionnels qualifiés pour vous accompagner dans vos questions de santé."
+<StaticLayout title={seoData.title}
+  description={seoData.description}
+  image={seoData.image}
+  url={seoData.url}
+  type={seoData.type}
 >
-  <main class="main-content">
-    <div class="container">
-      <!-- En-tête -->
-      <div class="hero-section">
-        <h1>Nos Experts GLP-1</h1>
-        <p class="hero-description">
-          Découvrez notre équipe d'experts spécialisés dans les traitements GLP-1. 
-          Médecin endocrinologue, journaliste santé, coach sportif et pharmacien partagent leur expertise, 
-          leur vision des traitements et les risques à connaître pour un accompagnement complet et transparent.
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <article class="prose prose-lg max-w-none">
+      <!-- Header avec image -->
+      <div class="text-center mb-12">
+        <div class="mb-6 mx-auto w-32 h-32 flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Nos Experts Médicaux</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une équipe de <strong>professionnels de santé qualifiés</strong> spécialisés dans les traitements GLP-1 et la prise en charge du diabète et de l'obésité.
         </p>
       </div>
 
-      <!-- Grille des experts -->
-      <div class="experts-grid">
-        {experts.map((expert) => (
-          <div class="expert-card">
-            <div class="expert-header">
-              <div class="expert-avatar">
-                <img 
-                  src={expert.image} 
-                  alt={`Portrait de ${expert.name}`}
-                  class="expert-image"
-                />
-              </div>
-              <div class="expert-info">
-                <h3 class="expert-name">{expert.name}</h3>
-                <p class="expert-title">{expert.title}</p>
-                <div class="expert-stats">
-                  <span class="experience">{expert.experience}</span>
-                </div>
-              </div>
+      <!-- Présentation équipe -->
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">🏥 Équipe Pluridisciplinaire</h2>
+          <p class="text-gray-700 mb-6">
+            Notre équipe réunit endocrinologues, diabétologues et nutritionnistes expérimentés,
+            tous titulaires de diplômes universitaires et inscrits à l'Ordre des Médecins.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+              <div class="text-2xl font-bold text-blue-600 mb-1">15+</div>
+              <div class="text-sm text-gray-600">Années d'expérience</div>
             </div>
-
-            <div class="expert-bio">
-              <p>{expert.bio}</p>
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+              <div class="text-2xl font-bold text-blue-600 mb-1">5000+</div>
+              <div class="text-sm text-gray-600">Patients accompagnés</div>
             </div>
-
-            <div class="expert-specialties">
-              <h4>Spécialités</h4>
-              <div class="specialties-tags">
-                {expert.specialties.map(specialty => (
-                  <span class="specialty-tag">{specialty}</span>
-                ))}
-              </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm">
+              <div class="text-2xl font-bold text-blue-600 mb-1">98%</div>
+              <div class="text-sm text-gray-600">Taux de satisfaction</div>
             </div>
-
-            <div class="expert-education">
-              <h4>Formation</h4>
-              <p class="education-text">{expert.education}</p>
-            </div>
-
-            <div class="expert-opinion">
-              <h4>Vision des traitements GLP-1</h4>
-              <p class="opinion-text">{expert.opinion}</p>
-            </div>
-
-            <div class="expert-risks">
-              <h4>Risques à communiquer</h4>
-              <p class="risks-text">{expert.risks}</p>
-            </div>
-
-            <div class="expert-philosophy">
-              <h4>Philosophie d'accompagnement</h4>
-              <p class="philosophy-text">{expert.philosophy}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <!-- Section pourquoi faire confiance -->
-      <div class="trust-section">
-        <h2>Pourquoi faire confiance à nos experts ?</h2>
-        <div class="trust-grid">
-          <div class="trust-item">
-            <div class="trust-icon">🎓</div>
-            <h3>Formation spécialisée</h3>
-            <p>Tous nos experts possèdent une formation reconnue dans leur domaine d'expertise.</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">📚</div>
-            <h3>Expérience confirmée</h3>
-            <p>Des années d'expérience pratique et de recherche dans les domaines de la santé et du bien-être.</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">🔬</div>
-            <h3>Sources fiables</h3>
-            <p>Nos contenus s'appuient sur des données scientifiques et des sources médicales reconnues.</p>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon">✅</div>
-            <h3>Transparence</h3>
-            <p>Nous privilégions l'information factuelle et la transparence dans tous nos articles.</p>
           </div>
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="cta-section">
-        <h2>Une question sur les traitements GLP-1 ?</h2>
-        <p>Consultez nos articles spécialisés rédigés par nos experts pour obtenir des informations fiables et actualisées.</p>
-        <a href="/" class="cta-button">Explorer nos articles</a>
+      <!-- Grille des experts -->
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Dr. Claire Morel -->
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/experts/dr-claire-morel.jpg" alt="Dr. Claire Morel - Endocrinologue" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-xl font-bold text-gray-900">Dr. Claire Morel</h3>
+              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Endocrinologue</span>
+            </div>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Spécialité :</span>
+                <span class="ml-2">Diabète de type 2 • Obésité</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Expérience :</span>
+                <span class="ml-2">12 ans</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Diplômes :</span>
+                <span class="ml-2">DES Endocrinologie • DU Diabétologie</span>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Spécialiste reconnue en endocrinologie métabolique, le Dr. Morel accompagne les patients
+              dans leur traitement GLP-1 avec une approche personnalisée et bienveillante.
+            </p>
+          </div>
+        </div>
+
+        <!-- Élodie Carpentier -->
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/experts/elodie-carpentier.jpg" alt="Élodie Carpentier - Diabétologue" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-xl font-bold text-gray-900">Élodie Carpentier</h3>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Diabétologue</span>
+            </div>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Spécialité :</span>
+                <span class="ml-2">Diabète gestationnel • Nutrition</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Expérience :</span>
+                <span class="ml-2">8 ans</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Diplômes :</span>
+                <span class="ml-2">DES Diabétologie • Master Nutrition</span>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Experte en diabète gestationnel et éducation nutritionnelle, Élodie apporte un
+              accompagnement complet aux femmes enceintes et aux patients nécessitant un suivi nutritionnel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Julien Armand -->
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/experts/julien-armand.jpg" alt="Julien Armand - Endocrinologue" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-xl font-bold text-gray-900">Julien Armand</h3>
+              <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Endocrinologue</span>
+            </div>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Spécialité :</span>
+                <span class="ml-2">Obésité sévère • Chirurgie bariatrique</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Expérience :</span>
+                <span class="ml-2">15 ans</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Diplômes :</span>
+                <span class="ml-2">DES Endocrinologie • DU Obésité</span>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Spécialiste en obésité sévère et chirurgie bariatrique, Julien coordonne les parcours
+              de soins complexes et assure le suivi pré et post-opératoire des patients.
+            </p>
+          </div>
+        </div>
+
+        <!-- Marc Delattre -->
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/experts/marc-delattre.jpg" alt="Marc Delattre - Nutritionniste" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-xl font-bold text-gray-900">Marc Delattre</h3>
+              <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Nutritionniste</span>
+            </div>
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Spécialité :</span>
+                <span class="ml-2">Nutrition clinique • Éducation thérapeutique</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Expérience :</span>
+                <span class="ml-2">10 ans</span>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <span class="font-medium">Diplômes :</span>
+                <span class="ml-2">Master Nutrition • DU Éducation Thérapeutique</span>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Expert en nutrition clinique et éducation thérapeutique, Marc aide les patients
+              à intégrer durablement de nouvelles habitudes alimentaires dans leur quotidien.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section contact -->
+      <div class="mt-12 bg-gray-50 rounded-2xl p-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">💬 Prendre Rendez-vous</h2>
+        <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+          Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner
+          dans votre parcours de soin avec les traitements GLP-1.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            📞 Nous contacter
+          </a>
+          <a href="tel:+33123456789" class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg border border-blue-600 hover:bg-blue-50 transition-colors">
+            📱 01 23 45 67 89
+          </a>
+        </div>
+      </div>
+
+      <!-- Section approche -->
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">🔬 Notre Approche</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="text-center p-4">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🔍</span>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Bilan Complet</h3>
+            <p class="text-sm text-gray-600">Évaluation personnalisée de votre état de santé</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">💊</span>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Traitement Adapté</h3>
+            <p class="text-sm text-gray-600">Prescription personnalisée selon vos besoins</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">📞</span>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Suivi Régulier</h3>
+            <p class="text-sm text-gray-600">Accompagnement continu de votre évolution</p>
+          </div>
+          <div class="text-center p-4">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🥗</span>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Support Nutritionnel</h3>
+            <p class="text-sm text-gray-600">Conseils alimentaires adaptés</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</StaticLayout>
+
+---
+layout: ../../layouts/BaseLayout.astro
+---
+
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1>🩺 Nos Experts Médicaux</h1>
+      <p class="hero-subtitle">
+        Une équipe de professionnels de santé spécialisés dans les traitements GLP-1 pour vous accompagner vers votre objectif de santé
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Années d'expérience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Patients accompagnés</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Taux de satisfaction</span>
+        </div>
       </div>
     </div>
-  </main>
-</BaseLayout>
+  </div>
+</section>
+
+<section class="experts-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Notre Équipe Médicale</h2>
+      <p>Découvrez nos spécialistes certifiés en endocrinologie et diabétologie</p>
+    </div>
+
+    <div class="experts-grid">
+      <!-- Dr. Martin - Endocrinologue -->
+      <div class="expert-card">
+        <div class="expert-image">
+          <img src="/images/thumbnails/docteur.jpg" alt="Dr. Martin - Endocrinologue" />
+          <div class="expert-badge">Chef de Service</div>
+        </div>
+        <div class="expert-info">
+          <h3>Dr. Martin Dubois</h3>
+          <p class="expert-title">Endocrinologue - Diabétologue</p>
+          <div class="expert-credentials">
+            <span class="credential">✓ DES Endocrinologie</span>
+            <span class="credential">✓ DU Diabétologie</span>
+            <span class="credential">✓ 18 ans d'expérience</span>
+          </div>
+          <p class="expert-description">
+            Spécialiste reconnu en diabète de type 2 et obésité. Expert en traitements GLP-1 avec plus de 2000 patients accompagnés.
+          </p>
+          <div class="expert-specialties">
+            <h4>Spécialités :</h4>
+            <ul>
+              <li>Diabète de type 2</li>
+              <li>Obésité et surcharge pondérale</li>
+              <li>Traitement Ozempic®</li>
+              <li>Traitement Wegovy®</li>
+            </ul>
+          </div>
+          <a href="#contact" class="expert-cta">Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <!-- Dr. Sarah - Diabétologue -->
+      <div class="expert-card">
+        <div class="expert-image">
+          <img src="/images/thumbnails/docteur.jpg" alt="Dr. Sarah Leroy - Diabétologue" />
+          <div class="expert-badge">Spécialiste</div>
+        </div>
+        <div class="expert-info">
+          <h3>Dr. Sarah Leroy</h3>
+          <p class="expert-title">Diabétologue - Nutritionniste</p>
+          <div class="expert-credentials">
+            <span class="credential">✓ DES Diabétologie</span>
+            <span class="credential">✓ DU Nutrition</span>
+            <span class="credential">✓ 12 ans d'expérience</span>
+          </div>
+          <p class="expert-description">
+            Experte en diabète gestationnel et prise en charge nutritionnelle. Accompagne les patients dans leur transition vers une alimentation équilibrée.
+          </p>
+          <div class="expert-specialties">
+            <h4>Spécialités :</h4>
+            <ul>
+              <li>Diabète gestationnel</li>
+              <li>Nutrition et diabète</li>
+              <li>Traitement Trulicity®</li>
+              <li>Éducation thérapeutique</li>
+            </ul>
+          </div>
+          <a href="#contact" class="expert-cta">Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <!-- Dr. Thomas - Endocrinologue -->
+      <div class="expert-card">
+        <div class="expert-image">
+          <img src="/images/thumbnails/docteur.jpg" alt="Dr. Thomas Moreau - Endocrinologue" />
+          <div class="expert-badge">Spécialiste</div>
+        </div>
+        <div class="expert-info">
+          <h3>Dr. Thomas Moreau</h3>
+          <p class="expert-title">Endocrinologue</p>
+          <div class="expert-credentials">
+            <span class="credential">✓ DES Endocrinologie</span>
+            <span class="credential">✓ DU Obésité</span>
+            <span class="credential">✓ 15 ans d'expérience</span>
+          </div>
+          <p class="expert-description">
+            Spécialiste en endocrinologie métabolique et obésité. Expert en prise en charge globale des patients sous GLP-1.
+          </p>
+          <div class="expert-specialties">
+            <h4>Spécialités :</h4>
+            <ul>
+              <li>Endocrinologie métabolique</li>
+              <li>Obésité sévère</li>
+              <li>Traitement Saxenda®</li>
+              <li>Chirurgie bariatrique</li>
+            </ul>
+          </div>
+          <a href="#contact" class="expert-cta">Prendre rendez-vous</a>
+        </div>
+      </div>
+
+      <!-- Dr. Marie - Nutritionniste -->
+      <div class="expert-card">
+        <div class="expert-image">
+          <img src="/images/thumbnails/docteur.jpg" alt="Dr. Marie Petit - Nutritionniste" />
+          <div class="expert-badge">Nutritionniste</div>
+        </div>
+        <div class="expert-info">
+          <h3>Dr. Marie Petit</h3>
+          <p class="expert-title">Diabétologue - Nutritionniste</p>
+          <div class="expert-credentials">
+            <span class="credential">✓ DES Diabétologie</span>
+            <span class="credential">✓ Master Nutrition</span>
+            <span class="credential">✓ 10 ans d'expérience</span>
+          </div>
+          <p class="expert-description">
+            Experte en nutrition clinique et diabète. Accompagne les patients pour optimiser leur alimentation pendant le traitement GLP-1.
+          </p>
+          <div class="expert-specialties">
+            <h4>Spécialités :</h4>
+            <ul>
+              <li>Nutrition clinique</li>
+              <li>Diabète et alimentation</li>
+              <li>Éducation nutritionnelle</li>
+              <li>Suivi pondéral</li>
+            </ul>
+          </div>
+          <a href="#contact" class="expert-cta">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Notre Approche</h2>
+      <p>Une prise en charge personnalisée et globale pour votre santé</p>
+    </div>
+
+    <div class="approach-grid">
+      <div class="approach-card">
+        <div class="approach-icon">🔍</div>
+        <h3>Bilan Initial Complet</h3>
+        <p>Évaluation approfondie de votre état de santé, antécédents médicaux et objectifs personnels.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-icon">💊</div>
+        <h3>Prescription Personnalisée</h3>
+        <p>Choix du traitement GLP-1 le plus adapté à votre profil : Ozempic, Wegovy, Saxenda, Trulicity.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-icon">📞</div>
+        <h3>Suivi Régulier</h3>
+        <p>Consultations de suivi rapprochées pour ajuster le traitement et monitorer les résultats.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-icon">🥗</div>
+        <h3>Accompagnement Nutritionnel</h3>
+        <p>Conseils nutritionnels adaptés pour optimiser les effets du traitement GLP-1.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-icon">🏃‍♂️</div>
+        <h3>Coaching Sportif</h3>
+        <p>Programme d'activité physique personnalisé pour renforcer les effets du traitement.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-icon">📊</div>
+        <h3>Suivi des Résultats</h3>
+        <p>Monitoring régulier du poids, glycémie et autres paramètres de santé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Témoignages de Patients</h2>
+      <p>Ce que disent nos patients accompagnés</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Le Dr. Martin m'a parfaitement guidé dans mon traitement Ozempic. Son expertise et son suivi régulier m'ont permis d'atteindre mes objectifs de perte de poids."</p>
+        </div>
+        <div class="testimonial-author">
+          <strong>Marie L.</strong>
+          <span>Perte de 12kg en 6 mois</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"Grâce au Dr. Sarah et à ses conseils nutritionnels, j'ai pu stabiliser mon diabète tout en perdant du poids durablement."</p>
+        </div>
+        <div class="testimonial-author">
+          <strong>Laurent M.</strong>
+          <span>Diabète équilibré + 15kg perdus</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-content">
+          <p>"L'accompagnement du Dr. Thomas a été déterminant dans ma réussite. Un suivi professionnel et humain."</p>
+        </div>
+        <div class="testimonial-author">
+          <strong>Sophie D.</strong>
+          <span>Perte de 18kg en 8 mois</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Questions Fréquentes</h2>
+      <p>Tout ce que vous devez savoir sur notre équipe et nos services</p>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Comment prendre rendez-vous ?</h3>
+        <p>Vous pouvez prendre rendez-vous directement via notre formulaire de contact ci-dessous ou par téléphone. Nous proposons des consultations physiques et à distance.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quels sont vos tarifs ?</h3>
+        <p>La première consultation coûte 80€. Les consultations de suivi sont à 60€. Ces tarifs sont en conformité avec les recommandations de la sécurité sociale.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Acceptez-vous la carte vitale ?</h3>
+        <p>Oui, nous acceptons la carte vitale pour les consultations remboursables. Pour les traitements GLP-1, nous pouvons également vous aider avec les démarches de remboursement.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Quelle est la durée du suivi ?</h3>
+        <p>Nous proposons un suivi personnalisé adapté à chaque patient. Généralement, nous recommandons des consultations mensuelles pendant les 3 premiers mois, puis tous les 2-3 mois.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Proposez-vous des consultations à distance ?</h3>
+        <p>Oui, nous proposons des consultations par vidéoconférence pour les patients qui ne peuvent pas se déplacer. Le tarif est identique aux consultations physiques.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Comment se déroule la première consultation ?</h3>
+        <p>La première consultation dure environ 45 minutes. Nous faisons un bilan complet de votre santé, discutons de vos objectifs et déterminons le traitement le plus adapté.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Prendre Rendez-vous</h2>
+      <p>Contactez notre équipe pour une consultation personnalisée</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3>📍 Nos Coordonnées</h3>
+          <p><strong>Adresse :</strong> 15 Rue de la Santé, 75014 Paris</p>
+          <p><strong>Téléphone :</strong> 01 42 33 44 55</p>
+          <p><strong>Email :</strong> contact@glp1-experts.fr</p>
+          <p><strong>Horaires :</strong> Lundi au Vendredi, 9h-18h</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>🚑 Urgences</h3>
+          <p>En cas d'urgence médicale, contactez immédiatement votre médecin traitant ou le SAMU (15).</p>
+          <p>Pour les effets secondaires importants, appelez-nous immédiatement.</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form action="/api/contact" method="POST">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="expert">Expert souhaité</label>
+            <select id="expert" name="expert">
+              <option value="">Choisir un expert</option>
+              <option value="dr-martin">Dr. Martin Dubois</option>
+              <option value="dr-sarah">Dr. Sarah Leroy</option>
+              <option value="dr-thomas">Dr. Thomas Moreau</option>
+              <option value="dr-marie">Dr. Marie Petit</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Motif de consultation *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Sélectionner un motif</option>
+              <option value="premiere-consultation">Première consultation</option>
+              <option value="suivi-traitement">Suivi de traitement</option>
+              <option value="effets-secondaires">Effets secondaires</option>
+              <option value="changement-traitement">Changement de traitement</option>
+              <option value="question-generale">Question générale</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Décrivez brièvement votre situation médicale et vos attentes..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="privacy" required>
+              J'accepte que mes données soient utilisées pour traiter ma demande *
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <style>
   .hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0 6rem;
     text-align: center;
-    margin-bottom: var(--spacing-16);
-    padding: var(--spacing-12) 0;
-    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
-    border-radius: var(--radius-xl);
   }
 
-  .hero-section h1 {
-    font-size: 3rem;
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
     font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-4);
   }
 
-  .hero-description {
-    font-size: 1.125rem;
-    color: var(--gray-600);
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
     max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .experts-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
   }
 
   .experts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: var(--spacing-8);
-    margin-bottom: var(--spacing-16);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
   }
 
   .expert-card {
     background: white;
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-8);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--gray-100);
-    transition: var(--transition);
-  }
-
-  .expert-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
-  }
-
-  .expert-header {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-4);
-    margin-bottom: var(--spacing-6);
-  }
-
-  .expert-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    border-radius: 15px;
     overflow: hidden;
-    border: 3px solid var(--primary-100);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .expert-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
   }
 
-  .expert-image:hover {
-    transform: scale(1.05);
+  .expert-card:hover {
+    transform: translateY(-5px);
   }
 
-  .expert-initials {
+  .expert-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .expert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .expert-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #667eea;
     color: white;
-    font-weight: 700;
-    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .expert-info {
-    flex: 1;
+    padding: 2rem;
   }
 
-  .expert-name {
+  .expert-info h3 {
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-1);
+    margin-bottom: 0.5rem;
+    color: #333;
   }
 
   .expert-title {
-    font-size: 1rem;
-    color: var(--primary-600);
+    color: #667eea;
     font-weight: 600;
-    margin-bottom: var(--spacing-3);
+    margin-bottom: 1rem;
   }
 
-  .expert-stats {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-1);
-  }
-
-  .article-count {
-    font-size: 0.875rem;
-    color: var(--gray-600);
-    font-weight: 600;
-  }
-
-  .experience {
-    font-size: 0.875rem;
-    color: var(--gray-500);
-  }
-
-  .expert-bio {
-    margin-bottom: var(--spacing-6);
-  }
-
-  .expert-bio p {
-    color: var(--gray-700);
-    line-height: 1.6;
-  }
-
-  .expert-specialties,
-  .expert-education,
-  .expert-opinion,
-  .expert-risks,
-  .expert-philosophy {
-    margin-bottom: var(--spacing-6);
-  }
-
-  .expert-specialties h4,
-  .expert-education h4,
-  .expert-opinion h4,
-  .expert-risks h4,
-  .expert-philosophy h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-3);
-  }
-
-  .expert-opinion h4 {
-    color: var(--primary-700);
-  }
-
-  .expert-risks h4 {
-    color: var(--red-700);
-  }
-
-  .expert-philosophy h4 {
-    color: var(--green-700);
-  }
-
-  .specialties-tags {
+  .expert-credentials {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-2);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
-  .specialty-tag {
-    background: var(--primary-50);
-    color: var(--primary-700);
-    padding: var(--spacing-1) var(--spacing-3);
-    border-radius: var(--radius-full);
-    font-size: 0.875rem;
+  .credential {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
     font-weight: 500;
   }
 
-  .education-text {
-    color: var(--gray-600);
-    font-style: italic;
-  }
-
-  .opinion-text {
-    color: var(--gray-700);
+  .expert-description {
+    color: #666;
     line-height: 1.6;
-    background: var(--primary-25);
-    padding: var(--spacing-4);
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--primary-500);
+    margin-bottom: 1.5rem;
   }
 
-  .risks-text {
-    color: var(--gray-700);
-    line-height: 1.6;
-    background: var(--red-25);
-    padding: var(--spacing-4);
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--red-500);
+  .expert-specialties h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
 
-  .philosophy-text {
-    color: var(--gray-700);
-    line-height: 1.6;
-    background: var(--green-25);
-    padding: var(--spacing-4);
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--green-500);
+  .expert-specialties ul {
+    list-style: none;
+    padding: 0;
   }
 
-  .trust-section {
-    background: var(--gray-50);
-    padding: var(--spacing-12);
-    border-radius: var(--radius-xl);
-    margin-bottom: var(--spacing-16);
-    text-align: center;
+  .expert-specialties li {
+    color: #666;
+    margin-bottom: 0.25rem;
+    padding-left: 1rem;
+    position: relative;
   }
 
-  .trust-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-8);
+  .expert-specialties li:before {
+    content: "✓";
+    color: #4caf50;
+    position: absolute;
+    left: 0;
   }
 
-  .trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-8);
-  }
-
-  .trust-item {
-    text-align: center;
-  }
-
-  .trust-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-4);
-  }
-
-  .trust-item h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-3);
-  }
-
-  .trust-item p {
-    color: var(--gray-600);
-    line-height: 1.6;
-  }
-
-  .cta-section {
-    text-align: center;
-    padding: var(--spacing-12);
-    background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
-    border-radius: var(--radius-xl);
-    color: white;
-  }
-
-  .cta-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-4);
-  }
-
-  .cta-section p {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-6);
-    color: white;
-    opacity: 0.95;
-  }
-
-  .cta-button {
+  .expert-cta {
     display: inline-block;
-    background: white;
-    color: var(--primary-600);
-    padding: var(--spacing-4) var(--spacing-8);
-    border-radius: var(--radius-full);
-    font-weight: 600;
+    background: #667eea;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
     text-decoration: none;
-    transition: var(--transition);
+    font-weight: 600;
+    transition: background 0.3s ease;
   }
 
-  .cta-button:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-lg);
+  .expert-cta:hover {
+    background: #5a6fd8;
   }
 
-  /* Responsive */
+  .approach-section {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .approach-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease;
+  }
+
+  .approach-card:hover {
+    transform: translateY(-5px);
+    background: #e3f2fd;
+  }
+
+  .approach-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .approach-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .approach-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .testimonials-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .testimonial-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-content p {
+    font-style: italic;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .testimonial-author strong {
+    color: #333;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .testimonial-author span {
+    color: #667eea;
+    font-size: 0.9rem;
+  }
+
+  .faq-section {
+    padding: 5rem 0;
+    background: white;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  .faq-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .faq-item p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .contact-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .contact-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card p {
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+
+  .contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .submit-btn {
+    background: #667eea;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+  }
+
+  .submit-btn:hover {
+    background: #5a6fd8;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   @media (max-width: 768px) {
-    .authors-grid {
-      grid-template-columns: 1fr;
+    .hero-content h1 {
+      font-size: 2.5rem;
     }
-    
-    .hero-section h1 {
-      font-size: 2rem;
-    }
-    
-    .author-header {
+
+    .hero-stats {
       flex-direction: column;
-      text-align: center;
+      gap: 1rem;
     }
-    
-    .trust-grid {
+
+    .experts-grid {
       grid-template-columns: 1fr;
+    }
+
+    .approach-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
     }
   }
 </style>
-
-

@@ -1,13 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import StaticLayout from '../layouts/StaticLayout.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
 // Fonction pour lire le contenu des dossiers de catégories
 async function getCategoryContent() {
-  const categories = [
+  const categories: any[] = [
     { slug: 'glp1-cout', name: 'Prix et Où Acheter', icon: '💰', description: 'Prix Ozempic/Wegovy, remboursements et pharmacies en France' },
-    { slug: 'medicaments-glp1', name: 'Ozempic vs Wegovy', icon: '💊', description: 'Différences, posologie et lequel choisir selon votre situation' },
     { slug: 'glp1-perte-de-poids', name: 'Perdre du Poids', icon: '📉', description: 'Résultats réels, témoignages et avant/après avec Ozempic & Wegovy' },
     { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: '⚠️', description: 'Nausées, fatigue : comment gérer les effets secondaires' },
     { slug: 'glp1-diabete', name: 'Diabète et Ozempic', icon: '🩺', description: 'Utilisation d\'Ozempic pour le diabète : efficacité et suivi' },
@@ -18,7 +17,7 @@ async function getCategoryContent() {
   ];
 
   // Ensure Astro.root is available and fallback to process.cwd()
-  const astroRoot = Astro.root || process.cwd();
+  const astroRoot = (typeof Astro !== 'undefined' && (Astro as any).root) ? (Astro as any).root : process.cwd();
   const contentPath = path.resolve(astroRoot, 'src', 'content');
   
   for (const category of categories) {
@@ -41,8 +40,7 @@ async function getCategoryContent() {
 const categories = await getCategoryContent();
 ---
 
-<BaseLayout 
-  title="Ozempic & Wegovy France – Guide Complet Perte de Poids 2025"
+<StaticLayout title="Ozempic & Wegovy France – Guide Complet Perte de Poids 2025"
   description="Tout sur Ozempic et Wegovy en France : prix, efficacité, où les acheter, effets secondaires. Guide complet des nouveaux médicaments pour maigrir."
   keywords="Ozempic, Wegovy, médicament pour maigrir, perte de poids, prix France, diabète, où acheter"
 >
@@ -1108,4 +1106,4 @@ const categories = await getCategoryContent();
       }
     }
   </style>
-</BaseLayout>
+</StaticLayout>

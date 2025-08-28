@@ -2,9 +2,11 @@
 export interface Props {
   title: string;
   currentPage?: string;
+  [key: string]: any;
 }
 
 const { title, currentPage = '' } = Astro.props;
+const _currentPage = currentPage; // intentionally kept for templates/admin usage
 const currentPath = Astro.url.pathname;
 ---
 
@@ -173,21 +175,9 @@ const currentPath = Astro.url.pathname;
       <nav>
         <ul class="admin-nav">
           <li>
-            <a href="/admin/" class={`nav-link ${currentPath === '/admin/' || currentPath === '/admin' ? 'active' : ''}`}>
-              <span class="nav-icon">🏠</span>
+            <a href="/admin/index.html" class={`nav-link ${currentPath === '/admin/' || currentPath === '/admin' ? 'active' : ''}`}>
+              <span class="nav-icon">🧭</span>
               Admin
-            </a>
-          </li>
-          <li>
-            <a href="/admin/user-data/" class={`nav-link ${currentPath.includes('/admin/user-data') ? 'active' : ''}`}>
-              <span class="nav-icon">👥</span>
-              Utilisateurs
-            </a>
-          </li>
-          <li>
-            <a href="/admin/affiliate/" class={`nav-link ${currentPath.includes('/admin/affiliate') ? 'active' : ''}`}>
-              <span class="nav-icon">🏷️</span>
-              Affiliation
             </a>
           </li>
         </ul>
@@ -216,17 +206,19 @@ const currentPath = Astro.url.pathname;
   </div>
 
   <script>
-    function toggleMobileMenu() {
+    // Export to window so the inline onclick attribute is recognized
+    window['toggleMobileMenu'] = function() {
       const sidebar = document.getElementById('admin-sidebar');
-      sidebar?.classList.toggle('open');
-    }
+      if (sidebar) sidebar.classList.toggle('open');
+    };
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
       const sidebar = document.getElementById('admin-sidebar');
       const menuBtn = document.querySelector('.mobile-menu-btn');
-      
-      if (sidebar && !sidebar.contains(e.target) && !menuBtn?.contains(e.target)) {
+      const target = e.target;
+      const targetNode = (target && target instanceof Node) ? target : null;
+      if (sidebar && targetNode && !sidebar.contains(targetNode) && !(menuBtn && menuBtn.contains(targetNode))) {
         sidebar.classList.remove('open');
       }
     });

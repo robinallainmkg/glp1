@@ -1,18 +1,34 @@
 ---
-slug: ozempic-regime
+title: "Guide Complet Ozempic 2025 : Tout Savoir"
+slug: "ozempic-regime"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/ozempic-regime-illus.jpg
-thumbnailAlt: "Illustration pour larticle ozempic-regime"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/ozempic-regime.svg"
+thumbnailAlt: "Illustration pour l'article Ozempic Régime"
 featured: false
 priority: 5
-schema: Article
-title: "Ozempic régime : guide complet perte de poids efficace 2025"
-description: "Régime Ozempic pour maigrir : protocole alimentaire, efficacité, témoignages. Prescription, prix, résultats. Guide médical 2025."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 Le **régime Ozempic** combine l'efficacité du sémaglutide avec un protocole alimentaire optimisé pour maximiser la perte de poids. Cette approche révolutionnaire permet d'atteindre des résultats exceptionnels, avec une perte moyenne de 12-16% du poids corporel en usage off-label.
 

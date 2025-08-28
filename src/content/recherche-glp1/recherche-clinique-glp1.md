@@ -1,18 +1,34 @@
 ---
-slug: recherche-clinique-glp1
+title: "Recherche Clinique GLP-1"
+slug: "recherche-clinique-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-category: "Guide médical"
-tags: []
-collection: recherche-glp1
-thumbnail: /images/thumbnails/recherche-clinique-glp1-illus.jpg
-thumbnailAlt: "Illustration pour larticle recherche-clinique-glp1"
+category: "Recherche médicale"
+tags: ["glp1", "recherche", "etudes"]
+collection: "recherche-glp1"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.svg"
+thumbnailAlt: "Illustration pour l'article Recherche Clinique GLP-1"
 featured: false
 priority: 5
-schema: Article
-title: "Recherche Clinique GLP-1 : Dernières Études France 2025"
-description: "recherche clinique GLP-1 — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "recherche-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [4, 9]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 4, 9
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

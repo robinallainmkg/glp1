@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import StaticLayout from '../layouts/StaticLayout.astro';
 
 // Données SEO pour la page
 const seoData = {
@@ -11,8 +11,7 @@ const seoData = {
 };
 ---
 
-<BaseLayout 
-  title={seoData.title}
+<StaticLayout title={seoData.title}
   description={seoData.description}
   image={seoData.image}
   url={seoData.url}
@@ -163,4 +162,4 @@ const seoData = {
       </div>
     </article>
   </main>
-</BaseLayout>
+</StaticLayout>

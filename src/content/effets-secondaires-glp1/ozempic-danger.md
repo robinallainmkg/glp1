@@ -1,18 +1,34 @@
 ---
-title: "Ozempic danger - risques, effets graves et précautions essentielles"
-description: "Ozempic danger : analyse complète des risques graves, pancréatite, cancer thyroïde, effets secondaires rares. Guide sécurité et précautions médicales."
+title: "Guide Complet Ozempic 2025 : Tout Savoir"
 slug: "ozempic-danger"
 pubDate: 2025-08-10
 author: "Karim Benali"
-category: "Guide médical"
-tags: ["Ozempic", "danger", "risques", "effets secondaires", "précautions", "sécurité"]
+category: "Effets secondaires"
+tags: ["glp1", "effets-secondaires", "tolerance"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"
-thumbnailAlt: "Illustration pour l'article ozempic-danger"
+thumbnailAlt: "Illustration pour l'article Ozempic Danger"
 featured: false
 priority: 5
 schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "effets-secondaires-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6
+- Responsive: sidebar desktop + inline mobile
+-->
 
 **Ozempic présente des risques rares mais potentiellement graves nécessitant une surveillance médicale stricte.** Bien que généralement bien toléré, ce médicament peut provoquer des effets secondaires sérieux chez certains patients.
 
@@ -310,7 +326,7 @@ Dépend de la gravité : effets mineurs (adaptation possible), effets graves (ar
 - [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicaments GLP-1](../medicaments-glp1/nouveau-medicament/)
+- [médicaments GLP-1](../glp1-diabete/nouveau-traitement-diabete-type-2-injection/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

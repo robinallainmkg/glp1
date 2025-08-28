@@ -1,49 +1,106 @@
-// @ts-ignore: Astro content collections
-import { getCollection } from 'astro:content';
+// @ts-ignore: Supabase client
+import { supabase } from './supabase';
 
 export interface AffiliateProduct {
   productName: string;
   brand: string;
   productImage: string;
   discountPercent?: number;
+  discountCode?: string;
+  promoCode?: string;
   externalLink: string;
   category: string;
-  targetAudience: string;
   priority?: number;
   featured?: boolean;
-  benefitsText: any;
-  slug?: string;
-  id?: string;
-  customNote?: string;
+  benefitsText?: string;
+  description?: string;
+  slug: string;
+  id: string;
   displayOrder?: number;
+  customNote?: string;
+  saleBadgeText?: string;
+  originalPrice?: number;
+  discountedPrice?: number;
+  isOnSale?: boolean;
 }
 
 export interface ArticleAffiliateProduct {
-  product: any;
+  product: string;
   displayOrder?: number;
   customNote?: string;
 }
 
 /**
- * Récupère tous les produits d'affiliation
+ * Récupère tous les produits d'affiliation depuis Supabase
  */
 export async function getAllAffiliateProducts(): Promise<AffiliateProduct[]> {
   try {
-    const products = await getCollection('affiliate-products');
-    return products
-      .map(product => ({
-        ...product.data,
-        slug: product.slug,
-        id: product.id
-      }))
-      .sort((a, b) => (a.priority || 999) - (b.priority || 999));
-  } catch (error) {
-    console.warn('Erreur lors du chargement des produits d\'affiliation:', error);
-    return [];
+    console.log('🔍 Connexion à Supabase pour charger les produits...');
+
+    const { data: products, error } = await supabase
+      .from('products')
+      .select('*')
+      .order('priority', { ascending: true });
+
+    if (error) {
+      console.error('❌ Erreur Supabase:', error);
+      return [];
+    }
+
+    console.log(`✅ Produits Supabase chargés: ${products?.length || 0} produits trouvés`);
+    
+    // Transformer les données pour correspondre à l'interface
+    return products?.map(product => ({
+      id: product.id,
+      productName: product.title,
+      brand: product.brand,
+      externalLink: product.external_link,
+      productImage: product.product_image,
+      category: product.category,
+      featured: product.featured || false,
+      priority: product.priority || 999,
+      description: product.description,
+      benefitsText: product.benefits_text,
+      discountPercent: product.discount_percent,
+      discountCode: product.discount_code,
+      promoCode: product.discount_code,
+      saleBadgeText: generateSaleBadge(product.discount_percent, product.featured),
+      originalPrice: product.price,
+      discountedPrice: calculateDiscountedPrice(product.price, product.discount_percent),
+      isOnSale: (product.discount_percent && product.discount_percent > 0) || false,
+      slug: product.slug || generateSlug(product.title)
+    })) || [];
+
+// Fonctions utilitaires pour générer les données des produits
+function generateSaleBadge(discountPercent?: number, featured?: boolean): string | undefined {
+  if (discountPercent && discountPercent > 0) {
+    return `Promo -${discountPercent}%`;
   }
+  if (featured) {
+    return 'RECOMMANDÉ';
+  }
+  return undefined;
 }
 
-/**
+function calculateDiscountedPrice(originalPrice?: number, discountPercent?: number): number | undefined {
+  if (!originalPrice || !discountPercent) return undefined;
+  return Math.round(originalPrice * (1 - discountPercent / 100) * 100) / 100;
+}
+
+function generateSlug(name?: string): string {
+  if (!name) return '';
+  return name.toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
+}
+
+  } catch (error) {
+    console.warn("❌ Erreur lors du chargement des produits d'affiliation depuis Supabase:", error);
+    return [];
+  }
+}/**
  * Récupère les produits d'affiliation par catégorie
  */
 export async function getProductsByCategory(category: string): Promise<AffiliateProduct[]> {
@@ -54,21 +111,21 @@ export async function getProductsByCategory(category: string): Promise<Affiliate
 }
 
 /**
+ * Récupère les produits par marque
+ */
+export async function getProductsByBrand(brand: string, maxResults: number = 10): Promise<AffiliateProduct[]> {
+  const allProducts = await getAllAffiliateProducts();
+  return allProducts
+    .filter(product => product.brand.toLowerCase() === brand.toLowerCase())
+    .slice(0, maxResults);
+}
+
+/**
  * Récupère les produits mis en avant
  */
 export async function getFeaturedProducts(): Promise<AffiliateProduct[]> {
   const allProducts = await getAllAffiliateProducts();
   return allProducts.filter(product => product.featured === true);
-}
-
-/**
- * Récupère les produits pour un public cible spécifique
- */
-export async function getProductsByTargetAudience(audience: string): Promise<AffiliateProduct[]> {
-  const allProducts = await getAllAffiliateProducts();
-  return allProducts.filter(product => 
-    product.targetAudience.toLowerCase().includes(audience.toLowerCase())
-  );
 }
 
 /**
@@ -111,47 +168,48 @@ export async function getRecommendedProducts(
   articleCategory?: string,
   maxResults: number = 3
 ): Promise<AffiliateProduct[]> {
-  const allProducts = await getAllAffiliateProducts();
-  
-  // Mots-clés liés aux GLP-1 et traitements diabète/obésité
-  const keywords = [
-    'ozempic', 'semaglutide', 'wegovy', 'mounjaro', 'tirzepatide',
-    'diabète', 'diabetes', 'obésité', 'perte de poids', 'weight loss',
-    'glycémie', 'insuline', 'métabolisme'
-  ];
-
-  const contentLower = articleContent.toLowerCase();
-  const scored = allProducts.map(product => {
-    let score = 0;
+  try {
+    const allProducts = await getAllAffiliateProducts();
     
-    // Score basé sur les mots-clés dans le contenu
-    keywords.forEach(keyword => {
-      if (contentLower.includes(keyword)) {
-        score += 1;
+    // Filtrer d'abord par catégorie si fournie
+    let filteredProducts = allProducts;
+    if (articleCategory) {
+      const categoryMatches = allProducts.filter(product => 
+        product.category.toLowerCase().includes(articleCategory.toLowerCase())
+      );
+      if (categoryMatches.length > 0) {
+        filteredProducts = categoryMatches;
       }
-    });
-    
-    // Score basé sur la catégorie
-    if (articleCategory && product.category.toLowerCase() === articleCategory.toLowerCase()) {
-      score += 3;
     }
     
-    // Bonus pour les produits mis en avant
-    if (product.featured) {
-      score += 2;
+    // Prioriser les produits Talika et Nutrimuscle
+    const talikaProducts = filteredProducts.filter(p => p.brand.toLowerCase() === 'talika');
+    const nutrimuscleProducts = filteredProducts.filter(p => p.brand.toLowerCase() === 'nutrimuscle');
+    const otherProducts = filteredProducts.filter(p => 
+      p.brand.toLowerCase() !== 'talika' && p.brand.toLowerCase() !== 'nutrimuscle'
+    );
+    
+    // Mélanger intelligemment : 1-2 Talika, 1-2 Nutrimuscle, puis autres
+    const result = [
+      ...talikaProducts.slice(0, 2),
+      ...nutrimuscleProducts.slice(0, 2),
+      ...otherProducts
+    ].slice(0, maxResults);
+    
+    // Trier par priorité si pas assez de produits spécialisés
+    if (result.length < maxResults) {
+      const remainingProducts = allProducts
+        .filter(p => !result.some(r => r.slug === p.slug))
+        .sort((a, b) => (a.priority || 999) - (b.priority || 999));
+      
+      result.push(...remainingProducts.slice(0, maxResults - result.length));
     }
     
-    // Bonus pour la priorité
-    score += (10 - (product.priority || 10)) * 0.5;
-    
-    return { product, score };
-  });
-
-  return scored
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, maxResults)
-    .map(item => item.product);
+    return result;
+  } catch (error) {
+    console.warn('Erreur lors du chargement des produits recommandés:', error);
+    return [];
+  }
 }
 
 /**
@@ -163,7 +221,7 @@ export function formatBenefitsText(benefitsText: any): string {
   }
   
   if (benefitsText && typeof benefitsText === 'object') {
-    // Si c'est un objet rich text de TinaCMS, extraire le contenu
+    // Si c'est un objet structuré, extraire le contenu
     if (benefitsText.children) {
       return extractTextFromRichText(benefitsText);
     }
@@ -173,7 +231,7 @@ export function formatBenefitsText(benefitsText: any): string {
 }
 
 /**
- * Extrait le texte d'un objet rich text TinaCMS
+ * Extrait le texte d'un objet structuré
  */
 function extractTextFromRichText(richText: any): string {
   if (!richText || !richText.children) return '';
@@ -248,4 +306,14 @@ export async function getProductStats() {
     brands: [...new Set(products.map(p => p.brand))],
     withDiscount: products.filter(p => p.discountPercent && p.discountPercent > 0).length
   };
+}
+
+/**
+ * Récupère un produit par son id/slug
+ */
+export async function getProductById(id: string): Promise<AffiliateProduct | null> {
+  if (!id) return null;
+  const all = await getAllAffiliateProducts();
+  const found = all.find(p => p.id === id || p.slug === id || String(p.id) === String(id));
+  return found || null;
 }

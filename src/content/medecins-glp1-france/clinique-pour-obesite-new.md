@@ -1,18 +1,34 @@
 ---
-slug: clinique-pour-obesite-new
+title: "Clinique Pour Obesite New"
+slug: "clinique-pour-obesite-new"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: medecins-glp1-france
-thumbnail: /images/thumbnails/clinique-pour-obesite-new-illus.jpg
-thumbnailAlt: "Illustration pour larticle clinique-pour-obesite-new"
+category: "Médecins spécialisés"
+tags: ["glp1", "medecins", "specialistes"]
+collection: "medecins-glp1-france"
+thumbnail: "/images/thumbnails/clinique-pour-obesite-new.svg"
+thumbnailAlt: "Illustration pour l'article Clinique Pour Obesite New"
 featured: false
 priority: 5
-schema: Article
-title: "Cliniques spécialisées en obésité en france - guide complet 2025"
-description: "Trouvez la meilleure clinique pour traiter lobésité en France. Types de centres, tarifs, remboursements et conseils pour bien choisir."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "medecins-glp1-france"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [3, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 3, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? Ce guide détaillé vous présente les différents types de centres disponibles en France, leurs approches thérapeutiques et comment faire le bon choix selon votre situation.
 

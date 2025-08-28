@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import StaticLayout from '../../layouts/StaticLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro'
 import { getCollection } from 'astro:content'
 
@@ -10,7 +10,6 @@ const allArticles = await Promise.all([
   getCollection('glp1-cout'),
   getCollection('effets-secondaires-glp1'),
   getCollection('alternatives-glp1'),
-  getCollection('medicaments-glp1'),
   getCollection('regime-glp1'),
   getCollection('avant-apres-glp1'),
   getCollection('recherche-glp1'),
@@ -35,24 +34,25 @@ const allArticles = await Promise.all([
   
   // 2. Trier chaque collection par titre ou date
   Object.keys(articlesByCollection).forEach(collection => {
-    articlesByCollection[collection].sort((a, b) => {
+  articlesByCollection[collection].sort((a: any, b: any) => {
       // Essayer par date d'abord, puis par titre
       const dateA = new Date(a.data.publishedAt || a.data.publishDate || a.data.datePublished || '2024-01-01');
       const dateB = new Date(b.data.publishedAt || b.data.publishDate || b.data.datePublished || '2024-01-01');
       
       if (dateA.getTime() !== dateB.getTime()) {
-        return dateB - dateA; // Plus récent en premier
+        return dateB.getTime() - dateA.getTime(); // Plus récent en premier
       }
-      
+
       // Si même date, trier par titre
-      return a.data.title.localeCompare(b.data.title);
+  return String(a.data.title || '').localeCompare(String(b.data.title || ''));
     });
   });
   
   // 3. Algorithme de distribution équitable (round-robin)
   const mixedArticles = [];
   const collections = Object.keys(articlesByCollection);
-  let maxLength = Math.max(...Object.values(articlesByCollection).map(arr => arr.length));
+  const values = Object.values(articlesByCollection) as any[];
+  let maxLength = Math.max(...values.map(arr => Array.isArray(arr) ? arr.length : 0));
   
   for (let i = 0; i < maxLength; i++) {
     // Mélanger l'ordre des collections à chaque tour
@@ -75,7 +75,6 @@ const categoryColors = {
   'glp1-cout': { bg: 'amber', text: 'amber-800', badge: 'amber-100' },
   'effets-secondaires-glp1': { bg: 'red', text: 'red-800', badge: 'red-100' },
   'alternatives-glp1': { bg: 'purple', text: 'purple-800', badge: 'purple-100' },
-  'medicaments-glp1': { bg: 'indigo', text: 'indigo-800', badge: 'indigo-100' },
   'regime-glp1': { bg: 'orange', text: 'orange-800', badge: 'orange-100' },
   'avant-apres-glp1': { bg: 'pink', text: 'pink-800', badge: 'pink-100' },
   'recherche-glp1': { bg: 'teal', text: 'teal-800', badge: 'teal-100' },
@@ -89,7 +88,6 @@ const categoryNames = {
   'glp1-cout': 'Prix et coûts',
   'effets-secondaires-glp1': 'Effets secondaires',
   'alternatives-glp1': 'Alternatives',
-  'medicaments-glp1': 'Médicaments',
   'regime-glp1': 'Régime et nutrition',
   'avant-apres-glp1': 'Témoignages',
   'recherche-glp1': 'Recherche scientifique',
@@ -97,8 +95,7 @@ const categoryNames = {
 }
 ---
 
-<BaseLayout 
-  title="Tous les articles sur les GLP-1 - Guide complet" 
+<StaticLayout title="Tous les articles sur les GLP-1 - Guide complet" 
   description="Découvrez tous nos articles sur les médicaments GLP-1 : perte de poids, diabète, effets secondaires, prix, médecins en France et bien plus."
 >
   <main class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
@@ -127,7 +124,7 @@ const categoryNames = {
     <section class="py-16">
       <div class="container mx-auto px-4">
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-          {allArticles.map((article) => {
+          {allArticles.map((article: any) => {
             const colors = categoryColors[article.collection] || categoryColors['glp1-perte-de-poids']
             const categoryName = categoryNames[article.collection] || article.collection
             
@@ -168,7 +165,7 @@ const categoryNames = {
       </div>
     </section>
   </main>
-</BaseLayout>
+</StaticLayout>
 
 <style>
   .line-clamp-2 {

@@ -1,11 +1,30 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../../layouts/ArticleWithAffiliateSidebar.astro";
+// affiliateProducts placeholder removed
+const affiliateConfig = {
+  enableAutoInjection: true,
+  mobileStrategy: 'both',
+  maxInlineProducts: 2,
+  injectionStrategy: 'auto'
+};
+// entry/frontmatter placeholders removed
+
+// Contenu de l'article pour l'analyse d'affiliation
+const articleContent = `
+Opération pour Maigrir : Prix et Alternatives en 2025
+Prix chirurgie bariatrique, sleeve gastrectomie, bypass gastrique
+Combien coûte une opération pour maigrir ? Prix sleeve, bypass et alternatives
+Chirurgie obésité, intervention bariatrique, remboursement sécurité sociale
+`;
 ---
 
-<BaseLayout 
-  title="Opération pour Maigrir Prix - Chirurgie Bariatrique Coûts 2025"
-  description="Prix réel des opérations pour maigrir en France vs alternatives GLP-1. Comparaison complète des coûts."
-  keywords="opération maigrir prix, chirurgie bariatrique coût, sleeve prix, bypass prix, glp1 alternative"
+<ArticleWithAffiliateSidebar 
+  title="Opération pour Maigrir : Prix et Alternatives en 2025"
+  description="Prix opération pour maigrir : sleeve, bypass, prix et remboursement. Guide chirurgie bariatrique 2025."
+  articleContent={articleContent} 
+  affiliateConfig={affiliateConfig ?? {}} 
+  image="/images/thumbnails/operation-pour-maigrir-prix.svg"
+  category="glp1-cout"
 >
 
 <div class="container">
@@ -199,4 +218,4 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   }
 </style>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>

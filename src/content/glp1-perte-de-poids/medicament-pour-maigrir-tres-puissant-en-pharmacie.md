@@ -1,18 +1,34 @@
 ---
-slug: medicament-pour-maigrir-tres-puissant-en-pharmacie
+title: "Guide Complet maigrir 2025 : Tout Savoir"
+slug: "medicament-pour-maigrir-tres-puissant-en-pharmacie"
 pubDate: 2025-08-20
 author: "Julien Lefèvre"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: >-
-thumbnailAlt: "Illustration pour larticle medicament-pour-maigrir-tres-puissant-en-pharmacie"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/medicament-pour-maigrir-tres-puissant-en-pharmacie.svg"
+thumbnailAlt: "Illustration pour l'article Médicament Pour Maigrir Tres Puissant En Pharmacie"
 featured: false
 priority: 5
-schema: Article
-title: "Médicament Pour Maigrir Très Puissant en Pharmacie France 2025"
-description: "médicament pour maigrir très puissant en pharmacie — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 Les **médicaments pour maigrir très puissants** disponibles en pharmacie française ont considérablement évolué en 2025. Entre les nouvelles molécules GLP-1 et les traitements traditionnels, le paysage thérapeutique offre désormais des solutions efficaces pour l'obésité sévère.
 

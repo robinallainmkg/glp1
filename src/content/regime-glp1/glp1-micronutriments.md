@@ -1,18 +1,34 @@
 ---
-slug: glp1-micronutriments
+title: "GLP-1 Micronutriments"
+slug: "glp1-micronutriments"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-category: "Guide médical"
-tags: []
-collection: regime-glp1
-thumbnail: /images/thumbnails/glp1-micronutriments-illus.jpg
-thumbnailAlt: "Illustration pour larticle glp1-micronutriments"
+category: "Nutrition"
+tags: ["glp1", "regime", "nutrition"]
+collection: "regime-glp1"
+thumbnail: "/images/thumbnails/glp1-micronutriments.svg"
+thumbnailAlt: "Illustration pour l'article GLP-1 Micronutriments"
 featured: false
 priority: 5
-schema: Article
-title: "GLP-1 et micronutriments - Glp1 Micronutriments"
-description: "GLP-1 et micronutriments — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "regime-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 9]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 9
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

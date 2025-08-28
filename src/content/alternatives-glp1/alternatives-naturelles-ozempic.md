@@ -1,18 +1,34 @@
 ---
-slug: alternatives-naturelles-ozempic
+title: "Alternatives Naturelles Ozempic"
+slug: "alternatives-naturelles-ozempic"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: alternatives-glp1
-thumbnail: /images/thumbnails/alternatives-naturelles-ozempic-illus.jpg
-thumbnailAlt: "Illustration pour larticle alternatives-naturelles-ozempic"
+category: "Alternatives thérapeutiques"
+tags: ["glp1", "alternatives", "traitements"]
+collection: "alternatives-glp1"
+thumbnail: "/images/thumbnails/alternatives-naturelles-ozempic-illus.jpg"
+thumbnailAlt: "Illustration pour l'article Alternatives Naturelles Ozempic"
 featured: false
 priority: 5
-schema: Article
-title: "alternatives naturelles Ozempic"
-description: "alternatives naturelles Ozempic — Guide marché français."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "alternatives-glp1"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 6, 10]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 6, 10
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## À retenir
 

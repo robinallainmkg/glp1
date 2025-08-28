@@ -1,11 +1,32 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleWithAffiliateSidebar from "../../../layouts/ArticleWithAffiliateSidebar.astro";
+
+// Removed unused placeholders
+
+// Configuration d'affiliation pour cette page
+const affiliateConfig = {
+  enableAutoInjection: true,
+  mobileStrategy: 'both' as const,
+  maxInlineProducts: 2,
+  injectionStrategy: 'auto' as const
+};
+
+// Contenu de l'article pour l'analyse d'affiliation
+const articleContent = `
+Wegovy Prix : Tarifs Détaillés en France 2025
+Prix Wegovy pharmacie, coût sémaglutide, remboursement Wegovy
+Quel est le prix de Wegovy en France ? Analyse complète des tarifs et remboursement
+Médicament perte de poids, injection sémaglutide, prescription médicale
+`;
 ---
 
-<BaseLayout 
-  title="Wegovy Prix en France - Tarifs 2025 et Remboursement"
-  description="Prix détaillé de Wegovy en France : coût mensuel, remboursement Sécurité sociale et comparaison des pharmacies."
-  keywords="wegovy prix, coût wegovy, tarif wegovy, remboursement wegovy, prix semaglutide"
+<ArticleWithAffiliateSidebar 
+  title="Wegovy Prix : Tarifs Détaillés en France 2025"
+  description="Prix Wegovy en France : tarifs pharmacie, coût sémaglutide et remboursement. Guide complet 2025."
+  articleContent={articleContent} 
+  affiliateConfig={affiliateConfig ?? {}} 
+  image="/images/thumbnails/wegovy-prix.svg"
+  category="glp1-cout"
 >
 
 <div class="container">
@@ -114,4 +135,4 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
   }
 </style>
 
-</BaseLayout>
+</ArticleWithAffiliateSidebar>

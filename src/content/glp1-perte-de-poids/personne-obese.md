@@ -1,18 +1,34 @@
 ---
-slug: personne-obese
+title: "Guide Complet GLP-1 2025 : Tout Savoir"
+slug: "personne-obese"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/personne-obese-illus.jpg
-thumbnailAlt: "Illustration pour larticle personne-obese"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/personne-obese.svg"
+thumbnailAlt: "Illustration pour l'article Personne Obese"
 featured: false
 priority: 5
-schema: Article
-title: "Perte de poids glp-1 : personne obese - guide complet france 2025"
-description: "Personne obese avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)

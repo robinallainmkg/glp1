@@ -1,18 +1,34 @@
 ---
-slug: chirurgie-bariatrique
+title: "Guide Complet GLP-1 2025 : Tout Savoir"
+slug: "chirurgie-bariatrique"
 pubDate: 2025-08-20
 author: "Julien Lefèvre"
-category: "Guide médical"
-tags: []
-collection: glp1-perte-de-poids
-thumbnail: /images/thumbnails/chirurgie-bariatrique-illus.jpg
-thumbnailAlt: "Illustration pour larticle chirurgie-bariatrique"
+category: "Perte de poids"
+tags: ["glp1", "perte-de-poids", "minceur"]
+collection: "glp1-perte-de-poids"
+thumbnail: "/images/thumbnails/chirurgie-bariatrique.svg"
+thumbnailAlt: "Illustration pour l'article Chirurgie Bariatrique"
 featured: false
 priority: 5
-schema: Article
-title: "Perte de poids glp-1 : chirurgie bariatrique"
-description: "Chirurgie bariatrique avec les médicaments GLP-1. Efficacité, résultats et conseils médicaux. Guide complet perte de poids France 2025. Informations vérifiées par des professionnels de santé."
+schema: "Article"
+
+# Configuration Affiliation
+enableAffiliation: true
+affiliateLayout: "ArticleWithAffiliateSidebar"
+affiliateCollection: "glp1-perte-de-poids"
+affiliateConfig:
+  enableAutoInjection: true
+  mobileStrategy: "both"
+  desktopStrategy: "sidebar"
+  inlinePositions: [2, 5, 8]
 ---
+<!-- 
+SYSTÈME D'AFFILIATION AUTOMATIQUE
+- Layout: ArticleWithAffiliateSidebar
+- Produits: Configurés par collection
+- Injection inline: positions 2, 5, 8
+- Responsive: sidebar desktop + inline mobile
+-->
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
