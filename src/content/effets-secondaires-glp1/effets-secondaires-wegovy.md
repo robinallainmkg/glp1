@@ -238,6 +238,12 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
 
+thumbnail: "/images/thumbnails/wegovy-effets-secondaires.svg"
+thumbnailAlt: "Effets secondaires du traitement wegovy"
 ---
+
+## Sommaire
+
+
 
 *Informations basées sur les données de l'ANSM et études cliniques. Consultez votre médecin pour des conseils personnalisés.*

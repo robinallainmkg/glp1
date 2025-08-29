@@ -106,6 +106,10 @@ Les **transformations avant/après avec les traitements Ozempic, Wegovy et Saxen
 
 ---
 
+## Sommaire
+
+
+
 ### Sophie T., 29 ans - Transformation avec Wegovy
 
 **Sophie, infirmière de 29 ans à Toulouse, a transformé sa vie** avec Wegovy, perdant 22 kilos en 10 mois malgré des horaires de travail décalés.

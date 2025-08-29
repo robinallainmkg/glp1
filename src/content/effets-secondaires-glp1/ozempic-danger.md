@@ -22,6 +22,10 @@ affiliateConfig:
   desktopStrategy: "sidebar"
   inlinePositions: [2, 6]
 ---
+
+## Sommaire
+
+
 <!-- 
 SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Layout: ArticleWithAffiliateSidebar

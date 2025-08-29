@@ -275,6 +275,10 @@ Le paysage du remboursement du Wegovy évolue rapidement en 2025. Bien que la S�
 
 ---
 
+## Sommaire
+
+
+
 **⚠️ Avertissement médical :** Ces informations sont fournies à titre informatif et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de débuter un traitement par Wegovy.
 
 **📅 Dernière mise à jour :** Août 2025 - Sources : ANSM, HAS, Novo Nordisk, principales mutuelles françaises.

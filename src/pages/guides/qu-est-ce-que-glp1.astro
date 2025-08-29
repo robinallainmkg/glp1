@@ -1,289 +1,317 @@
 ---
-import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+title: "Qu'est-ce que le GLP-1 ? Guide complet des médicaments révolutionnaires"
+description: "Découvrez le GLP-1, hormone naturelle et médicaments innovants pour la perte de poids et le diabète. Mécanismes d'action, avantages, inconvénients et guide pratique."
+layout: "../layouts/ArticleWithAffiliateSidebar.astro"
+---
 
+<script>
 // Safe defaults (avoid typeof checks in templates)
 const affiliateProducts = [];
 const affiliateConfig = {};
 const entry = {};
 const frontmatter = null;
----
+</script>
 
-<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
-  <div class="container">
-    <article class="explanation-article">
-      <header class="article-header">
-        <h1>Qu'est-ce que GLP-1 ? Ozempic, Wegovy Expliqués Simplement</h1>
-        <p class="article-intro">
-          Vous avez entendu parler d'<strong>Ozempic</strong> ou <strong>Wegovy</strong> mais ne comprenez pas ce qu'est le "GLP-1" ? 
-          Voici tout ce que vous devez savoir sur ces médicaments révolutionnaires, expliqué en termes simples.
-        </p>
-      </header>
+<div class="explanation-article">
+  <header class="article-header">
+    <h1>Qu'est-ce que le GLP-1 ? Guide complet des médicaments révolutionnaires</h1>
+    <p class="article-intro">
+      Plongez au cœur de la révolution thérapeutique du GLP-1, une hormone naturelle désormais reproduite synthétiquement pour transformer la prise en charge du diabète et de l'obésité. Découvrez comment ces médicaments innovants agissent sur votre métabolisme pour une perte de poids durable et une meilleure santé cardiovasculaire.
+    </p>
+  </header>
 
-      <section class="definition-section">
-        <h2>🧬 GLP-1 : L'hormone naturelle qui change tout</h2>
-        
-        <div class="definition-grid">
-          <div class="definition-text">
-            <p><strong>GLP-1</strong> signifie "Glucagon-Like Peptide-1". C'est une <strong>hormone naturellement produite par votre intestin</strong> après les repas.</p>
-            
-            <h3>Son rôle dans votre corps :</h3>
-            <ul>
-              <li>🍽️ <strong>Régule l'appétit</strong> : vous dit quand vous êtes rassasié</li>
-              <li>🩸 <strong>Contrôle la glycémie</strong> : aide à stabiliser le taux de sucre</li>
-              <li>⏰ <strong>Ralentit la digestion</strong> : vous restez rassasié plus longtemps</li>
-              <li>🧠 <strong>Agit sur le cerveau</strong> : réduit les envies de grignotage</li>
-            </ul>
-          </div>
-          
-          <div class="definition-visual">
-            <div class="hormone-process">
-              <div class="process-step">
-                <span class="step-number">1</span>
-                <span class="step-text">Vous mangez</span>
-              </div>
-              <div class="process-arrow">↓</div>
-              <div class="process-step">
-                <span class="step-number">2</span>
-                <span class="step-text">Intestin produit GLP-1</span>
-              </div>
-              <div class="process-arrow">↓</div>
-              <div class="process-step">
-                <span class="step-number">3</span>
-                <span class="step-text">Signal de satiété</span>
-              </div>
-            </div>
-          </div>
+<section class="definition-section">
+  <h2>🔬 Définition et origine du GLP-1</h2>
+
+  <div class="definition-grid">
+    <div class="definition-text">
+      <p>
+        Le GLP-1, ou <strong>Glucagon-Like Peptide-1</strong>, est une hormone peptidique naturellement sécrétée par les cellules L de l'intestin grêle en réponse à l'ingestion d'aliments. Découverte dans les années 1980 lors d'études sur le diabète, cette molécule fascine les chercheurs par ses multiples effets bénéfiques sur le métabolisme glucidique et énergétique.
+      </p>
+
+      <p>
+        Naturellement présent dans l'organisme humain, le GLP-1 agit comme un messager hormonal essentiel dans la régulation de la glycémie et de l'appétit. Cependant, chez les personnes atteintes de diabète de type 2 ou d'obésité, la production endogène de cette hormone est souvent insuffisante ou dysfonctionnelle, ouvrant la voie à des thérapies substitutives innovantes.
+      </p>
+
+      <h3>Ses fonctions physiologiques principales :</h3>
+      <ul>
+        <li>🍽️ <strong>Régulation de l'appétit :</strong> Stimulation des centres de satiété hypothalamiques</li>
+        <li>🩸 <strong>Contrôle glycémique :</strong> Augmentation de la sécrétion d'insuline en réponse aux repas</li>
+        <li>⏰ <strong>Modulation digestive :</strong> Ralentissement de la vidange gastrique</li>
+        <li>🧠 <strong>Action neurologique :</strong> Réduction des comportements alimentaires compulsifs</li>
+      </ul>
+    </div>
+
+    <div class="definition-visual">
+      <div class="hormone-process">
+        <div class="process-step">
+          <span class="step-number">1</span>
+          <span class="step-text">Ingestion d'aliments</span>
         </div>
-      </section>
-
-      <section class="medications-section">
-        <h2>💊 Les Médicaments GLP-1 : Ozempic, Wegovy & Co</h2>
-        
-        <p class="section-intro">
-          Les médicaments comme Ozempic et Wegovy sont des <strong>"agonistes du GLP-1"</strong>. 
-          Ils imitent votre hormone naturelle mais durent beaucoup plus longtemps.
-        </p>
-
-        <div class="medications-grid">
-          <div class="med-card">
-            <h3>🔵 Ozempic</h3>
-            <div class="med-details">
-              <p><strong>Molécule :</strong> Sémaglutide</p>
-              <p><strong>Usage principal :</strong> Diabète type 2</p>
-              <p><strong>Bonus :</strong> Perte de poids significative</p>
-              <p><strong>Fréquence :</strong> 1 injection/semaine</p>
-            </div>
-          </div>
-
-          <div class="med-card">
-            <h3>🟢 Wegovy</h3>
-            <div class="med-details">
-              <p><strong>Molécule :</strong> Sémaglutide (dosage +)</p>
-              <p><strong>Usage principal :</strong> Perte de poids</p>
-              <p><strong>Cible :</strong> Obésité et surpoids</p>
-              <p><strong>Fréquence :</strong> 1 injection/semaine</p>
-            </div>
-          </div>
-
-          <div class="med-card">
-            <h3>🟡 Trulicity</h3>
-            <div class="med-details">
-              <p><strong>Molécule :</strong> Dulaglutide</p>
-              <p><strong>Usage principal :</strong> Diabète type 2</p>
-              <p><strong>Avantage :</strong> Bien toléré</p>
-              <p><strong>Fréquence :</strong> 1 injection/semaine</p>
-            </div>
-          </div>
+        <div class="process-arrow">↓</div>
+        <div class="process-step">
+          <span class="step-number">2</span>
+          <span class="step-text">Sécrétion intestinale de GLP-1</span>
         </div>
-      </section>
+        <div class="process-arrow">↓</div>
+        <div class="process-step">
+          <span class="step-number">3</span>
+          <span class="step-text">Action pancréatique et cérébrale</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="medications-section">
+  <h2>💊 Les médicaments à base de GLP-1 disponibles</h2>
+
+  <p class="section-intro">
+    Forts des avancées de la biotechnologie, les laboratoires pharmaceutiques ont développé des analogues du GLP-1 résistants à la dégradation enzymatique, permettant une administration hebdomadaire et une efficacité prolongée. Voici les principales molécules actuellement commercialisées :
+  </p>
+
+  <div class="medications-grid">
+    <div class="med-card">
+      <h3>Semaglutide (Ozempic® / Wegovy®)</h3>
+      <div class="med-details">
+        <p><strong>Indications :</strong> Diabète type 2 et obésité</p>
+        <p><strong>Posologie :</strong> 0.25 à 2.4 mg/semaine</p>
+        <p><strong>Administration :</strong> Injection sous-cutanée</p>
+        <p><strong>AMM :</strong> Depuis 2018 (diabète), 2021 (obésité)</p>
+      </div>
+    </div>
+
+    <div class="med-card">
+      <h3>Tirzepatide (Mounjaro® / Zepbound®)</h3>
+      <div class="med-details">
+        <p><strong>Indications :</strong> Diabète type 2 et obésité</p>
+        <p><strong>Posologie :</strong> 2.5 à 15 mg/semaine</p>
+        <p><strong>Administration :</strong> Injection sous-cutanée</p>
+        <p><strong>AMM :</strong> Depuis 2022</p>
+      </div>
+    </div>
+
+    <div class="med-card">
+      <h3>Liraglutide (Saxenda® / Victoza®)</h3>
+      <div class="med-details">
+        <p><strong>Indications :</strong> Diabète type 2 et obésité</p>
+        <p><strong>Posologie :</strong> 0.6 à 3 mg/jour</p>
+        <p><strong>Administration :</strong> Injection sous-cutanée quotidienne</p>
+        <p><strong>AMM :</strong> Depuis 2009 (diabète), 2015 (obésité)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="key-insight">
+    <h3>💡 Point essentiel</h3>
+    <p>
+      Ces médicaments ne sont pas de simples coupe-faim chimiques, mais des copies conformes de votre hormone naturelle, modifiées uniquement pour résister plus longtemps à la dégradation enzymatique. Cette approche bio-mimétique explique leur profil de tolérance favorable et leur efficacité remarquable.
+    </p>
+  </div>
+</section>
 
       <section class="comparison-section">
-        <h2>🤔 Ozempic vs Wegovy : Quelle différence ?</h2>
-        
+        <h2>📊 Comparaison détaillée des médicaments GLP-1</h2>
+
         <div class="comparison-table">
           <table>
             <thead>
               <tr>
-                <th>Critère</th>
-                <th>Ozempic</th>
-                <th>Wegovy</th>
+                <th>Médicament</th>
+                <th>Fréquence</th>
+                <th>Perte de poids moyenne</th>
+                <th>Coût mensuel*</th>
+                <th>Particularités</th>
               </tr>
+            </thead>
             <tbody>
               <tr>
-                <td><strong>Molécule</strong></td>
-                <td>Sémaglutide</td>
-            // Removed unused placeholders
-            const affiliateConfig = {};
-            // Removed unused placeholders
-            // Removed unused placeholders
-            const entry = {};
-            const frontmatter = null;
-                <td>1 mg</td>
-                <td>2,4 mg</td>
-              </tr>
-              <tr>
-                <td><strong>Indication officielle</strong></td>
-                <td>Diabète type 2</td>
-                <td>Perte de poids</td>
-              </tr>
-              <tr>
-                <td><strong>Remboursement</strong></td>
-                <td>Oui (diabète)</td>
-                <td>Partiel (conditions)</td>
-              </tr>
-              <tr>
-                <td><strong>Perte de poids</strong></td>
-                <td>8-12%</td>
+                <td><strong>Semaglutide</strong></td>
+                <td>Hebdomadaire</td>
                 <td>15-20%</td>
+                <td>90-270€</td>
+                <td>Efficacité cardiovasculaire prouvée</td>
+              </tr>
+              <tr>
+                <td><strong>Tirzepatide</strong></td>
+                <td>Hebdomadaire</td>
+                <td>20-25%</td>
+                <td>95-285€</td>
+                <td>Double action GLP-1 + GIP</td>
+              </tr>
+              <tr>
+                <td><strong>Liraglutide</strong></td>
+                <td>Quotidienne</td>
+                <td>8-12%</td>
+                <td>70-210€</td>
+                <td>Plus ancienne molécule, bonne tolérance</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="key-insight">
-          <h3>💡 Point clé</h3>
-          <p>
-            <strong>Même molécule, dosages différents :</strong> Wegovy contient plus de sémaglutide qu'Ozempic, 
-            d'où une efficacité supérieure pour la perte de poids.
-          </p>
-        </div>
-      </section>
+        <p class="table-note">
+          *Prix approximatifs hors remboursement. Les coûts réels varient selon les officines et les programmes d'aide.
+        </p>
 
       <section class="how-it-works">
-        <h2>⚙️ Comment ça marche concrètement ?</h2>
-        
+        <h2>⚙️ Mécanisme d'action détaillé</h2>
+
+        <p>
+          L'action du GLP-1 s'inscrit dans une stratégie thérapeutique sophistiquée qui dépasse la simple réduction de l'appétit. Cette hormone agit simultanément sur plusieurs niveaux physiologiques pour restaurer l'équilibre métabolique :
+        </p>
+
         <div class="mechanism-grid">
           <div class="mechanism-step">
             <div class="step-icon">🩹</div>
-            <h3>1. Injection</h3>
-            <p>Une fois par semaine, sous la peau (ventre, cuisse ou bras)</p>
+            <h3>1. Administration</h3>
+            <p>Injection sous-cutanée hebdomadaire dans les tissus adipeux du ventre, des cuisses ou des bras</p>
           </div>
 
           <div class="mechanism-step">
             <div class="step-icon">🔄</div>
-            <h3>2. Circulation</h3>
-            <p>Le médicament circule dans votre sang pendant 7 jours</p>
+            <h3>2. Biodistribution</h3>
+            <p>Diffusion progressive dans la circulation sanguine, maintenant des concentrations thérapeutiques pendant 7 jours</p>
           </div>
 
           <div class="mechanism-step">
             <div class="step-icon">🧠</div>
-            <h3>3. Action cerveau</h3>
-            <p>Réduit l'appétit et les envies de grignotage</p>
+            <h3>3. Action centrale</h3>
+            <p>Stimulation des récepteurs hypothalamiques, réduction significative de l'appétit et des pulsions alimentaires</p>
           </div>
 
           <div class="mechanism-step">
             <div class="step-icon">🍽️</div>
-            <h3>4. Effet digestif</h3>
-            <p>Ralentit la digestion, prolonge la satiété</p>
+            <h3>4. Effet gastro-intestinal</h3>
+            <p>Ralentissement de la vidange gastrique et prolongation de la sensation de satiété postprandiale</p>
           </div>
         </div>
       </section>
 
       <section class="benefits-risks">
-        <h2>⚖️ Avantages et Inconvénients</h2>
-        
+        <h2>⚖️ Avantages et contraintes thérapeutiques</h2>
+
         <div class="pros-cons-grid">
           <div class="pros-section">
-            <h3>✅ Avantages</h3>
+            <h3>✅ Avantages cliniques démontrés</h3>
             <ul>
-              <li>Perte de poids significative (10-20%)</li>
-              <li>Réduction naturelle de l'appétit</li>
-              <li>Amélioration du diabète</li>
-              <li>1 seule injection par semaine</li>
-              <li>Effets cardiovasculaires positifs</li>
+              <li><strong>Perte pondérale substantielle :</strong> 10 à 25% du poids corporel selon la molécule</li>
+              <li><strong>Régulation naturelle de l'appétit :</strong> Action physiologique sur les centres de la faim</li>
+              <li><strong>Amélioration glycémique :</strong> Réduction durable de l'HbA1c chez les diabétiques</li>
+              <li><strong>Convenance d'administration :</strong> Une seule injection hebdomadaire pour la plupart</li>
+              <li><strong>Bénéfices cardiovasculaires :</strong> Réduction des événements cardio-vasculaires majeurs</li>
+              <li><strong>Effet anti-inflammatoire :</strong> Amélioration de l'état inflammatoire général</li>
             </ul>
           </div>
 
           <div class="cons-section">
-            <h3>❌ Inconvénients</h3>
+            <h3>❌ Contraintes et effets indésirables</h3>
             <ul>
-              <li>Prix élevé (90-270€/mois)</li>
-              <li>Effets secondaires digestifs</li>
-              <li>Prescription médicale obligatoire</li>
-              <li>Ruptures de stock fréquentes</li>
-              <li>Arrêt = reprise partielle du poids</li>
+              <li><strong>Investissement financier élevé :</strong> 70 à 285€ mensuels selon la molécule</li>
+              <li><strong>Troubles gastro-intestinaux :</strong> Nausées, vomissements, diarrhées (généralement transitoires)</li>
+              <li><strong>Obligation médicale :</strong> Prescription obligatoire par un professionnel de santé</li>
+              <li><strong>Tensions d'approvisionnement :</strong> Ruptures de stock périodiques</li>
+              <li><strong>Dépendance relative :</strong> Risque de reprise pondérale à l'arrêt du traitement</li>
+              <li><strong>Surveillance spécialisée :</strong> Nécessité d'un suivi médical rapproché</li>
             </ul>
           </div>
         </div>
       </section>
 
       <section class="who-section">
-        <h2>👤 Pour qui ces médicaments ?</h2>
-        
+        <h2>👤 Critères d'éligibilité et contre-indications</h2>
+
+        <p>
+          L'accès à ces thérapies innovantes est réglementé par des critères médicaux stricts, définis par la Haute Autorité de Santé et l'Agence Européenne des Médicaments. L'objectif est d'optimiser l'efficacité tout en garantissant la sécurité des patients.
+        </p>
+
         <div class="eligibility-cards">
           <div class="eligibility-card eligible">
-            <h3>✅ Vous êtes éligible si :</h3>
+            <h3>✅ Profil favorable au traitement</h3>
             <ul>
-              <li>IMC ≥ 30 (obésité)</li>
-              <li>IMC ≥ 27 + diabète/HTA</li>
-              <li>Échec des régimes classiques</li>
-              <li>Motivation long terme</li>
-              <li>Suivi médical accepté</li>
+              <li><strong>Obésité avérée :</strong> Indice de masse corporelle ≥ 30 kg/m²</li>
+              <li><strong>Obésité avec comorbidités :</strong> IMC ≥ 27 kg/m² associé à diabète ou hypertension</li>
+              <li><strong>Échec des approches conventionnelles :</strong> Régimes et activité physique insuffisants</li>
+              <li><strong>Engagement thérapeutique :</strong> Motivation pour un suivi médical prolongé</li>
+              <li><strong>Absence de contre-indications :</strong> Évaluation médicale préalable complète</li>
             </ul>
           </div>
 
           <div class="eligibility-card not-eligible">
-            <h3>❌ Pas adapté si :</h3>
+            <h3>❌ Situations contre-indiquées</h3>
             <ul>
-              <li>Grossesse ou allaitement</li>
-              <li>Diabète type 1</li>
-              <li>Antécédents pancréatite</li>
-              <li>Cancer thyroïde familial</li>
-              <li>Troubles alimentaires sévères</li>
+              <li><strong>Période périnatale :</strong> Grossesse ou allaitement en cours</li>
+              <li><strong>Diabète de type 1 :</strong> Physiopathologie différente nécessitant d'autres traitements</li>
+              <li><strong>Antécédents pancréatiques :</strong> Pancréatite aiguë ou chronique</li>
+              <li><strong>Pathologie thyroïdienne :</strong> Cancer médullaire thyroïde familial</li>
+              <li><strong>Troubles du comportement alimentaire :</strong> Anorexie mentale ou boulimie active</li>
+              <li><strong>Allergie connue :</strong> Hypersensibilité aux composants du médicament</li>
             </ul>
           </div>
         </div>
       </section>
 
       <section class="next-steps">
-        <h2>🚀 Prochaines étapes</h2>
-        
+        <h2>🚀 Parcours thérapeutique recommandé</h2>
+
+        <p>
+          L'initiation d'un traitement par GLP-1 nécessite une approche structurée et personnalisée, associant expertise médicale, éducation thérapeutique et accompagnement nutritionnel. Voici les étapes essentielles pour une prise en charge optimale :
+        </p>
+
         <div class="steps-grid">
           <div class="next-step">
             <span class="step-number">1</span>
-            <h3>Consultez un médecin</h3>
-            <p>Endocrinologue, diabétologue ou médecin traitant formé</p>
-            <a href="/medecins-glp1-france/" class="step-link">Trouver un médecin →</a>
+            <h3>Consultation spécialisée</h3>
+            <p>Évaluation par un endocrinologue, diabétologue ou médecin formé aux thérapies innovantes</p>
+            <a href="/medecins-glp1-france/" class="step-link">Identifier un praticien →</a>
           </div>
 
           <div class="next-step">
             <span class="step-number">2</span>
-            <h3>Vérifiez les prix</h3>
-            <p>Coûts, remboursements et programmes d'aide</p>
-            <a href="/glp1-cout/wegovy-prix/" class="step-link">Voir les prix →</a>
+            <h3>Analyse économique</h3>
+            <p>Évaluation des coûts, modalités de remboursement et dispositifs d'aide financière</p>
+            <a href="/glp1-cout/wegovy-prix/" class="step-link">Consulter les tarifs →</a>
           </div>
 
           <div class="next-step">
             <span class="step-number">3</span>
-            <h3>Préparez-vous</h3>
-            <p>Effets secondaires et conseils pratiques</p>
-            <a href="/effets-secondaires-glp1/" class="step-link">Guide complet →</a>
+            <h3>Préparation au traitement</h3>
+            <p>Anticipation des effets secondaires et mise en place de mesures préventives</p>
+            <a href="/effets-secondaires-glp1/" class="step-link">Guide pratique →</a>
           </div>
         </div>
       </section>
 
       <section class="faq-section">
-        <h2>❓ Questions fréquentes</h2>
-        
+        <h2>❓ Questions fréquemment posées</h2>
+
         <div class="faq-grid">
           <div class="faq-item">
-            <h3>GLP-1 est-il un médicament chimique ?</h3>
-            <p>Non, c'est une copie synthétique d'une hormone naturellement produite par votre corps. La molécule est identique à 94% à votre hormone naturelle.</p>
+            <h3>Le GLP-1 est-il un médicament de synthèse artificiel ?</h3>
+            <p>
+              Absolument pas. Il s'agit d'une copie conforme de l'hormone naturellement produite par votre organisme, modifiée uniquement pour résister à la dégradation enzymatique rapide. La similarité moléculaire atteint 94%, ce qui explique son profil de tolérance remarquable et son action physiologique authentique.
+            </p>
           </div>
 
           <div class="faq-item">
-            <h3>Pourquoi ça coûte si cher ?</h3>
-            <p>Recherche complexe (15 ans, 3 milliards €), production sophistiquée, et position monopolistique temporaire. Les prix baisseront avec la concurrence.</p>
+            <h3>Quelles sont les raisons de ce coût thérapeutique élevé ?</h3>
+            <p>
+              Le développement de ces molécules représente un investissement colossal : quinze années de recherche fondamentale, des essais cliniques de grande envergure totalisant plusieurs milliards d'euros, et une production biotechnologique d'une complexité technologique extrême. La position monopolistique temporaire des laboratoires explique également ces tarifs, qui devraient diminuer avec l'arrivée des génériques.
+            </p>
           </div>
 
           <div class="faq-item">
-            <h3>Est-ce que ça marche pour tout le monde ?</h3>
-            <p>Environ 85% des patients perdent du poids significativement. L'efficacité varie selon l'individu, le dosage et l'accompagnement.</p>
+            <h3>L'efficacité est-elle garantie pour tous les patients ?</h3>
+            <p>
+              L'expérience clinique démontre qu'environ 85% des patients bénéficient d'une perte pondérale cliniquement significative. Cependant, l'efficacité individuelle varie considérablement selon des facteurs tels que la génétique, l'adhésion thérapeutique, les dosages administrés et la qualité de l'accompagnement médical et nutritionnel associé.
+            </p>
           </div>
 
           <div class="faq-item">
-            <h3>Peut-on l'arrêter sans risque ?</h3>
-            <p>Oui, pas de sevrage physique. Cependant, 60% des patients reprennent une partie du poids perdu dans l'année suivant l'arrêt.</p>
+            <h3>Existe-t-il un risque de dépendance physique à l'arrêt ?</h3>
+            <p>
+              Fort heureusement, non. Contrairement aux substances psychoactives, le GLP-1 n'induit aucun phénomène de sevrage physique. Cependant, il est observé que 60% des patients connaissent une reprise pondérale partielle dans les douze mois suivant l'interruption du traitement, soulignant l'importance d'une transition progressive et d'un maintien des habitudes hygiéno-diététiques.
+            </p>
           </div>
         </div>
       </section>
@@ -554,6 +582,6 @@ const frontmatter = null;
       }
     }
   </style>
-</ArticleWithAffiliateSidebar>
+</div>
 
 

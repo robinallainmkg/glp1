@@ -239,13 +239,6 @@ declare module 'astro:content' {
   collection: "alternatives-glp1";
   data: InferEntrySchema<"alternatives-glp1">
 } & { render(): Render[".md"] };
-"yoga-diabete.md": {
-	id: "yoga-diabete.md";
-  slug: "yoga-diabete";
-  body: string;
-  collection: "alternatives-glp1";
-  data: InferEntrySchema<"alternatives-glp1">
-} & { render(): Render[".md"] };
 };
 "effets-secondaires-glp1": {
 "effets-secondaires-ozempic.md": {

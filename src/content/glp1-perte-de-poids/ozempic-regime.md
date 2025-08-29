@@ -324,6 +324,10 @@ Injecter dès que possible si <5 jours. Si >5 jours, attendre la prochaine injec
 
 ---
 
+## Sommaire
+
+
+
 *Le régime Ozempic nécessite un encadrement médical strict. Ce protocole doit être adapté à votre situation personnelle par un professionnel de santé.*
 
  et rappel de précautions.

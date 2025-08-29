@@ -294,6 +294,10 @@ La chirurgie reste plus efficace (60-80% perte poids) mais les GLP-1 offrent un 
 
 ---
 
+## Sommaire
+
+
+
 *Les GLP-1 représentent une avancée majeure dans le traitement de l'obésité. Un suivi médical spécialisé optimise les résultats et la sécurité.*
 
 ## Important

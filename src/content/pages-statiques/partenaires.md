@@ -69,6 +69,10 @@ Vous souhaitez devenir partenaire de **GLP-1 France** ?
 
 ---
 
+## Sommaire
+
+
+
 *Mise à jour : Août 2025*
 
 **Note :** GLP-1 France maintient son indépendance éditoriale et ses partenariats n'influencent pas le contenu médical publié sur le site. Toutes les informations médicales restent basées sur des sources scientifiques vérifiées.

@@ -164,6 +164,12 @@ affiliateCollection: "glp1-cout"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
+thumbnail: "/images/thumbnails/ozempic-france-prix.svg"
+thumbnailAlt: "Prix et coût du traitement ozempic-france"
 ---
+
+## Sommaire
+
+
 
 *Prix mis à jour en janvier 2025. Les tarifs peuvent varier selon les pharmacies et régions.*

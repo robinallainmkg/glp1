@@ -148,4 +148,8 @@ Il est crucial de rappeler qu'Insulevel reste un complément alimentaire et ne d
 
 ---
 
+## Sommaire
+
+
+
 **Avertissement médical** : Cet article est informatif et ne remplace pas un avis médical professionnel. Consultez toujours votre médecin avant de commencer tout nouveau complément alimentaire, particulièrement si vous souffrez de diabète ou prenez des médicaments.

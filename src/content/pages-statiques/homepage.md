@@ -4,7 +4,13 @@ description: "Guide complet sur les traitements GLP-1 en France. Informations m√
 slug: "/"
 pageType: "Homepage"
 noIndex: false
+thumbnail: "/images/thumbnails/homepage.svg"
+thumbnailAlt: "Illustration pour l'article homepage"
 ---
+
+## Sommaire
+
+
 
 # Bienvenue sur GLP-1 France
 
