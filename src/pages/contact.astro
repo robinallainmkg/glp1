@@ -793,16 +793,14 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                 // Prepare data for Supabase users table
                 const userData = {
                   email: data.email,
-                  nom: data.nom || '',
-                  prenom: data.prenom || '',
-                  telephone: data.telephone || null,
+                  nom: data.name || '',
+                  prenom: '',
+                  telephone: data.phone || null,
+                  age: data.age || null,
                   subject: data.subject || '',
                   message: data.message || '',
                   treatment: data.treatment || null,
-                  poids_actuel: data.poids_actuel ? parseFloat(data.poids_actuel) : null,
-                  poids_objectif: data.poids_objectif ? parseFloat(data.poids_objectif) : null,
-                  newsletter: data.newsletter === 'on',
-                  contact_commercial: data.contact_commercial === 'on',
+                  newsletter: data.newsletter === 'yes',
                   concerns: Array.isArray(data.concerns) ? data.concerns : (data.concerns ? [data.concerns] : []),
                   created_at: new Date().toISOString(),
                   updated_at: new Date().toISOString()

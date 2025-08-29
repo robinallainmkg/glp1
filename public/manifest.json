@@ -1,0 +1,21 @@
+{
+  "name": "GLP-1 France",
+  "short_name": "GLP-1",
+  "description": "Guide complet sur les médicaments GLP-1 pour la perte de poids",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-48.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    }
+  ]
+}
