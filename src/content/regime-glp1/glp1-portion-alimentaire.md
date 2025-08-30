@@ -6,8 +6,8 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-portion-alimentaire.svg"
-thumbnailAlt: "Illustration pour l'article GLP-1 Portion Alimentaire"
+thumbnail: "/images/thumbnails/glp1-portion-alimentaire.jpg"
+thumbnailAlt: "Illustration pour l'article glp1-portion-alimentaire"
 featured: false
 priority: 5
 schema: "Article"

@@ -6,8 +6,8 @@ author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-mediterraneen-glp1.svg"
-thumbnailAlt: "Illustration pour l'article Régime Mediterraneen GLP-1"
+thumbnail: "/images/thumbnails/regime-mediterraneen-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article regime-mediterraneen-glp1"
 featured: false
 priority: 5
 schema: "Article"

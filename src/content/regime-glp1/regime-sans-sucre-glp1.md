@@ -6,8 +6,8 @@ author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-sans-sucre-glp1.svg"
-thumbnailAlt: "Illustration pour l'article Régime Sans Sucre GLP-1"
+thumbnail: "/images/thumbnails/regime-sans-sucre-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article regime-sans-sucre-glp1"
 featured: false
 priority: 5
 schema: "Article"

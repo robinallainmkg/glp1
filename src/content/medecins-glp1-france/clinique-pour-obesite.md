@@ -6,8 +6,8 @@ author: "Dr. Émilie Martin"
 category: "Médecins spécialisés"
 tags: ["glp1", "medecins", "specialistes"]
 collection: "medecins-glp1-france"
-thumbnail: "/images/thumbnails/clinique-pour-obesite.svg"
-thumbnailAlt: "Illustration pour l'article Clinique Pour Obesite"
+thumbnail: "/images/thumbnails/clinique-pour-obesite.jpg"
+thumbnailAlt: "Illustration pour l'article clinique-pour-obesite"
 featured: false
 priority: 5
 schema: "Article"

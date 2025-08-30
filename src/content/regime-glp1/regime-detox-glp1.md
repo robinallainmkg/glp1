@@ -6,8 +6,8 @@ author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-detox-glp1.svg"
-thumbnailAlt: "Illustration pour l'article Régime Detox GLP-1"
+thumbnail: "/images/thumbnails/regime-detox-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article regime-detox-glp1"
 featured: false
 priority: 5
 schema: "Article"

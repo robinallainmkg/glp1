@@ -6,8 +6,8 @@ author: "Julien Lefèvre"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/isglt2-liste.svg"
-thumbnailAlt: "Illustration pour l'article Isglt2 Liste"
+thumbnail: "/images/thumbnails/isglt2-liste.jpg"
+thumbnailAlt: "Illustration pour l'article isglt2-liste"
 featured: false
 priority: 5
 schema: "Article"

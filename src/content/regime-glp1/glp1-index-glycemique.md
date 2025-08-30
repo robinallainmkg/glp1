@@ -6,8 +6,8 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-index-glycemique.svg"
-thumbnailAlt: "Illustration pour l'article GLP-1 Index Glycemique"
+thumbnail: "/images/thumbnails/glp1-index-glycemique.jpg"
+thumbnailAlt: "Illustration pour l'article glp1-index-glycemique"
 featured: false
 priority: 5
 schema: "Article"

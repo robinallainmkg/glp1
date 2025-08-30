@@ -6,8 +6,8 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-calories-journalieres.svg"
-thumbnailAlt: "Illustration pour l'article GLP-1 Calories Journalieres"
+thumbnail: "/images/thumbnails/glp1-calories-journalieres.jpg"
+thumbnailAlt: "Illustration pour l'article glp1-calories-journalieres"
 featured: false
 priority: 5
 schema: "Article"
