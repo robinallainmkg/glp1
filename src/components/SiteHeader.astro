@@ -18,7 +18,7 @@
     </div>
 
     <nav class="new-nav-desktop" aria-label="Navigation principale">
-      <a href="/guides/quel-traitement-glp1-choisir/" class="new-nav-link new-nav-cta">🎯 Diagnostic</a>
+      <a href="/guides/quel-traitement-glp1-choisir/" class="new-nav-link new-nav-cta">Diagnostic</a>
       <div class="new-dropdown">
         <button class="new-dropdown-toggle" aria-expanded="false">Traitements ▼</button>
         <div class="new-dropdown-menu" role="menu">
@@ -164,6 +164,39 @@
         document.addEventListener('click', function(e) {
           if (!searchInput.contains(e.target as Node) && !searchResults.contains(e.target as Node)) {
             (searchResults as HTMLElement).style.display = 'none';
+          }
+        });
+
+        // Gestion des dropdowns pour mobile
+        const dropdownToggles = document.querySelectorAll('.new-dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.closest('.new-dropdown');
+            const isActive = dropdown.classList.contains('active');
+
+            // Fermer tous les dropdowns
+            document.querySelectorAll('.new-dropdown.active').forEach(activeDropdown => {
+              if (activeDropdown !== dropdown) {
+                activeDropdown.classList.remove('active');
+              }
+            });
+
+            // Basculer l'état du dropdown actuel
+            if (isActive) {
+              dropdown.classList.remove('active');
+            } else {
+              dropdown.classList.add('active');
+            }
+          });
+        });
+
+        // Fermer les dropdowns en cliquant ailleurs
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.new-dropdown')) {
+            document.querySelectorAll('.new-dropdown.active').forEach(dropdown => {
+              dropdown.classList.remove('active');
+            });
           }
         });
       }

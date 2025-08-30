@@ -3,7 +3,7 @@
 // Gestion complète des utilisateurs avec Supabase
 // ========================================
 
-import { supabase, supabaseAdmin } from '../supabase.js'
+import { supabase, supabaseAdmin } from '../supabase'
 
 // ========================================
 // FONCTIONS DE LECTURE
