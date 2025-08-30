@@ -3,6 +3,7 @@ title: "GLP-1 Portion Alimentaire"
 slug: "glp1-portion-alimentaire"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
+description: "Guide des portions alimentaires avec GLP-1 : comment adapter vos quantités, contrôler les apports caloriques et optimiser votre perte de poids."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

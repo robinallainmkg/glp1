@@ -3,6 +3,7 @@ title: "GLP-1 Micronutriments"
 slug: "glp1-micronutriments"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
+description: "Les micronutriments essentiels avec traitement GLP-1 : vitamines, minéraux et compléments alimentaires pour soutenir votre perte de poids et votre santé."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

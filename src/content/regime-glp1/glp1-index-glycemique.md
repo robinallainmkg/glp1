@@ -3,6 +3,7 @@ title: "GLP-1 Index Glycemique"
 slug: "glp1-index-glycemique"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
+description: "Comprendre l'index glycémique avec les GLP-1 : aliments à privilégier, impact sur la glycémie et stratégies nutritionnelles pour optimiser votre traitement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

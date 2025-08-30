@@ -2,7 +2,7 @@
 title: "Guide Complet Saxenda : Prix, Effets Secondaires et Posologie"
 description: "Découvrez tout sur Saxenda : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
-image: "/images/thumbnails/saxenda-medical-guide.jpg"
+image: "/images/thumbnails/guide-complet-saxenda.webp"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["saxenda", "glp-1", "obésité", "perte de poids", "traitement", "injection"]

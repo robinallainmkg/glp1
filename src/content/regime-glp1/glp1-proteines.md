@@ -3,6 +3,7 @@ title: "GLP-1 Proteines"
 slug: "glp1-proteines"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
+description: "L'importance des protéines dans un régime GLP-1 : sources alimentaires, apports quotidiens recommandés et rôle dans la préservation de la masse musculaire."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

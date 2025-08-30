@@ -3,6 +3,7 @@ title: "Régime Mediterraneen GLP-1"
 slug: "regime-mediterraneen-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
+description: "Régime méditerranéen associé aux GLP-1 : aliments sains, bienfaits cardiovasculaires et synergie parfaite pour votre santé et perte de poids."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

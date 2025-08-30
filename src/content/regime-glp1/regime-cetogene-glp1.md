@@ -3,6 +3,7 @@ title: "Régime Cetogene GLP-1"
 slug: "regime-cetogene-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
+description: "Régime cétogène et GLP-1 : comment combiner ces deux approches pour une perte de poids optimale, avantages et précautions à connaître."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

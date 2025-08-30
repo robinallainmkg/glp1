@@ -6,7 +6,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-remboursement-mutuelle.svg"
+thumbnail: "/images/thumbnails/wegovyboites.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Remboursement Mutuelle"
 featured: false
 priority: 5

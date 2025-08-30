@@ -3,6 +3,7 @@ title: "Peut On Guerir Du Diabète"
 slug: "peut-on-guerir-du-diabete"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
+description: "Peut-on guérir du diabète ? Rémission possible, facteurs de réussite, rôle des GLP-1 et stratégies pour contrôler durablement votre glycémie."
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
 collection: "alternatives-glp1"
