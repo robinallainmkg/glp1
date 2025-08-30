@@ -2,15 +2,8 @@
 // Redirection SEO pour l'ancienne URL vers la nouvelle structure
 export const prerender = true;
 
-// Redirection côté serveur si possible
-if (typeof Response !== 'undefined') {
-  return new Response(null, {
-    status: 301,
-    headers: {
-      'Location': '/collections/glp1-cout/prix-mounjaro-france/'
-    }
-  });
-}
+// Redirection côté serveur Astro
+return Astro.redirect('/collections/glp1-cout/prix-mounjaro-france/', 301);
 ---
 
 <!DOCTYPE html>
