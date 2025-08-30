@@ -53,10 +53,6 @@ Ces ressources complètent les informations de ce guide.
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Questions fréquentes (FAQ)
 
 ### Puis-je utiliser cette approche sans ordonnance ?

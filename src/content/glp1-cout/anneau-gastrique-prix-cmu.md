@@ -6,8 +6,8 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/anneau-gastrique-prix-cmu.svg"
-thumbnailAlt: "Illustration pour l'article Anneau Gastrique Prix Cmu"
+thumbnail: "/images/thumbnails/anneau-gastrique-dr-stephane-servajean-a-paris.jpg"
+thumbnailAlt: "Dr Stéphane Servajean - Anneau Gastrique à Paris"
 featured: false
 priority: 5
 schema: "Article"
@@ -43,10 +43,6 @@ Le coût de ce traitement dépend de plusieurs facteurs :
 * **Négociations tarifaires** : Entre laboratoires et autorités françaises
 * **Disponibilité générique** : Réduction des coûts à terme
 * **Remboursement** : Prise en charge Sécurité Sociale et mutuelles
-
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
 ## Introduction
 

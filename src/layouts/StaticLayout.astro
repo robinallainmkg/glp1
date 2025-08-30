@@ -163,33 +163,26 @@ const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
     }
 
     function performSearch(query) {
-      // Simplified search - you can enhance this with proper search functionality
-      const pages = [
-        { title: 'Prix des GLP-1', url: '/collections/glp1-cout', description: 'Prix et remboursement des traitements' },
-        { title: 'Effets secondaires', url: '/collections/effets-secondaires-glp1', description: 'Effets secondaires des GLP-1' },
-        { title: 'Trouver un médecin', url: '/collections/medecins-glp1-france', description: 'Médecins prescripteurs en France' }
-      ];
-      
-      const filteredPages = pages.filter(page => 
-        page.title.toLowerCase().includes(query.toLowerCase()) ||
-        page.description.toLowerCase().includes(query.toLowerCase())
-      );
-      
-      const results = document.getElementById('search-results');
-      if (results) {
-        if (filteredPages.length > 0) {
-          results.innerHTML = filteredPages.map(page => `
-            <a href="${page.url}" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0">
-              <div class="font-medium text-gray-900">${page.title}</div>
-              <div class="text-sm text-gray-600">${page.description}</div>
-            </a>
-          `).join('');
-          results.classList.remove('hidden');
-        } else {
-          results.innerHTML = '<div class="px-4 py-3 text-gray-500">Aucun résultat trouvé</div>';
-          results.classList.remove('hidden');
+      // Import du module de recherche et utilisation de la vraie index
+      import('/src/data/searchIndex.js').then(({ searchArticles }) => {
+        const results = searchArticles(query);
+
+        const resultsContainer = document.getElementById('search-results');
+        if (resultsContainer) {
+          if (results.length > 0) {
+            resultsContainer.innerHTML = results.map(article => `
+              <a href="${article.url}" class="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0">
+                <div class="font-medium text-gray-900">${article.title}</div>
+                <div class="text-sm text-gray-600">${article.description}</div>
+              </a>
+            `).join('');
+            resultsContainer.classList.remove('hidden');
+          } else {
+            resultsContainer.innerHTML = '<div class="px-4 py-3 text-gray-500">Aucun résultat trouvé pour "' + query + '"</div>';
+            resultsContainer.classList.remove('hidden');
+          }
         }
-      }
+      });
     }
   </script>
 </body>

@@ -53,16 +53,6 @@ La recherche clinique sur les agonistes GLP-1 en France explore de nouvelles ind
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### Types d'études en cours (2025)
-- **Phase II-III cardiovasculaire** : 15-20 essais actifs
-- **Neurologie** : 5-8 études Alzheimer/Parkinson
-- **Hépatologie** : 10-12 essais NASH/NAFLD
-- **Pédiatrie** : 3-5 études adolescents obèses
-
 ## Remboursement et prise en charge (France)
 
 ### Centres investigateurs majeurs

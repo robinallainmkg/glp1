@@ -6,8 +6,8 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-proteines.svg"
-thumbnailAlt: "Illustration pour l'article GLP-1 Proteines"
+thumbnail: "/images/thumbnails/glp1-proteines.jpg"
+thumbnailAlt: "Illustration pour l'article glp1-proteines"
 featured: false
 priority: 5
 schema: "Article"

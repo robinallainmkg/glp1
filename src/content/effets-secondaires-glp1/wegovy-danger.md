@@ -56,16 +56,6 @@ featured: true
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### À retenir immédiatement :
-- **Prescription médicale** obligatoire
-- **Suivi médical** régulier indispensable
-- **Évaluation individuelle** du rapport bénéfice/risque
-- **Conformité réglementaire** ANSM
-
 ## Contexte médical
 
 ### Cadre réglementaire français

@@ -6,8 +6,8 @@ author: "Dr. Émilie Martin"
 category: "Médecins spécialisés"
 tags: ["glp1", "medecins", "specialistes"]
 collection: "medecins-glp1-france"
-thumbnail: "/images/thumbnails/endocrinologue-pour-maigrir-new.svg"
-thumbnailAlt: "Illustration pour l'article Endocrinologue Pour Maigrir New"
+thumbnail: "/images/thumbnails/endocrinologue-pour-maigrir-new.jpg"
+thumbnailAlt: "Illustration pour l'article endocrinologue-pour-maigrir-new"
 featured: false
 priority: 5
 schema: "Article"

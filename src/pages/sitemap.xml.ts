@@ -30,6 +30,7 @@ export async function GET() {
 
     // Pages de traitements spécifiques
     '/collections/traitements-glp1/guide-complet-ozempic/',
+    '/collections/traitements-glp1/guide-complet-mounjaro/',
     '/collections/traitements-glp1/guide-complet-wegovy/',
     '/collections/traitements-glp1/guide-complet-saxenda/',
     '/collections/traitements-glp1/guide-complet-trulicity/',
@@ -38,6 +39,7 @@ export async function GET() {
 
     // Pages de prix importantes
     '/collections/glp1-cout/prix-ozempic-france/',
+    '/collections/glp1-cout/prix-mounjaro-france/',
     '/collections/glp1-cout/prix-wegovy-france/',
     '/collections/glp1-cout/prix-saxenda-france/',
     '/collections/glp1-cout/prix-trulicity-france/',
@@ -52,6 +54,7 @@ export async function GET() {
 
     // Pages d'effets secondaires
     '/collections/effets-secondaires-glp1/effets-secondaires-ozempic/',
+    '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/',
     '/collections/effets-secondaires-glp1/effets-secondaires-wegovy/',
     '/collections/effets-secondaires-glp1/effets-secondaires-saxenda/',
     '/collections/effets-secondaires-glp1/effets-secondaires-trulicity/',

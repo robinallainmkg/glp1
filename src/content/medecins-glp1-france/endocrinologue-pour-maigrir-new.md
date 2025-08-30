@@ -53,17 +53,6 @@ Un endocrinologue est le médecin spécialiste des hormones et du métabolisme. 
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### Quand consulter ?
-Consultez un endocrinologue si vous avez :
-- Un IMC > 30 ou > 27 avec complications
-- Des échecs de régimes répétés
-- Des symptômes hormonaux (fatigue, frilosité, troubles des règles)
-- Des antécédents familiaux de diabète ou troubles métaboliques
-
 ## Comment Trouver le Bon Endocrinologue
 
 ### 1. Demander à votre médecin traitant

@@ -39,10 +39,6 @@ Les **agonistes du récepteur GLP-1** ont révolutionné la prise en charge de l
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Mécanisme d'Action GLP-1 pour la Perte de Poids
 
 ### Comment les GLP-1 Font Maigrir

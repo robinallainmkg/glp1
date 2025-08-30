@@ -11,16 +11,23 @@ date: "2025-08-28"
 
 # Guide Complet Rybelsus : Tout Savoir sur ce Traitement Révolutionnaire
 
+<div class="guide-buttons">
+  <a href="/collections/glp1-cout/prix-rybelsus-france" class="guide-button primary">
+    💰 Coût et Remboursement Rybelsus
+  </a>
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-rybelsus" class="guide-button secondary">
+    ⚠️ Effets Secondaires Rybelsus
+  </a>
+</div>
+
 ## Sommaire
 1. [Qu'est-ce que Rybelsus ?](#quest-ce-querybelsus)
 2. [Comment fonctionne Rybelsus ?](#comment-fonctionne-rybelsus)
 3. [Rybelsus pour le diabète de type 2](#rybelsus-diabète-type-2)
 4. [Posologie et administration](#posologie-rybelsus)
 5. [Comment commencer le traitement Rybelsus ?](#comment-commencer-le-traitement-rybelsus)
-6. [Effets secondaires de Rybelsus](#effets-secondaires-rybelsus)
-7. [Prix de Rybelsus en France](#prix-rybelsus-france)
-8. [Alternatives à Rybelsus](#alternatives-rybelsus)
-9. [FAQ Rybelsus](#faq-rybelsus)
+6. [Alternatives à Rybelsus](#alternatives-rybelsus)
+7. [FAQ Rybelsus](#faq-rybelsus)
 
 ## Qu'est-ce que Rybelsus ?
 
@@ -117,32 +124,6 @@ Rybelsus doit être pris à jeun, au moins 30 minutes avant le premier repas de 
 - **Peu d'eau** : Maximum 120 ml
 - **Pas d'alimentation** : 30 minutes après la prise
 - **Rappel quotidien** : Même heure chaque jour
-
-## Effets secondaires de Rybelsus
-
-Les effets secondaires de Rybelsus sont généralement bénins et temporaires. Pour connaître en détail tous les effets secondaires possibles, leur fréquence et comment les gérer, consultez notre guide dédié :
-
-[→ **Effets Secondaires Rybelsus : Guide Complet**](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus)
-
-**Effets secondaires fréquents** : Nausées, vomissements, diarrhée
-**Effets secondaires graves** : Très rares (<0.1%)
-**Gestion** : Commencer à faible dose, augmentation progressive
-
-### Gestion des effets secondaires
-- Commencer à faible dose
-- Augmentation progressive
-- Prise à jeun avec peu d'eau
-- Hydratation suffisante
-
-## Prix de Rybelsus en France
-
-Pour connaître en détail les prix de Rybelsus, les modalités de remboursement et les aides financières disponibles, consultez notre guide dédié :
-
-[→ **Prix Rybelsus France : Tarifs et Remboursement**](/collections/glp1-cout/prix-rybelsus-france)
-
-**Prix approximatif** : 59,90 € la boîte de 30 comprimés
-**Remboursement** : 65-100% selon la situation
-**Coût mensuel réel** : 15-20 € avec mutuelle
 
 ## Alternatives à Rybelsus
 

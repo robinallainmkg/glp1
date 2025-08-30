@@ -23,6 +23,7 @@
         <button class="new-dropdown-toggle" aria-expanded="false">Traitements ▼</button>
         <div class="new-dropdown-menu" role="menu">
           <a href="/collections/traitements-glp1/guide-complet-ozempic/">Guide Complet Ozempic</a>
+          <a href="/collections/traitements-glp1/guide-complet-mounjaro/">Guide Complet Mounjaro</a>
           <a href="/collections/traitements-glp1/guide-complet-wegovy/">Guide Complet Wegovy</a>
           <a href="/collections/traitements-glp1/guide-complet-saxenda/">Guide Complet Saxenda</a>
           <a href="/collections/traitements-glp1/guide-complet-trulicity/">Guide Complet Trulicity</a>
@@ -66,8 +67,8 @@
         <div class="mobile-submenu">
           <a href="/guides/guide-complet-wegovy/">Guide Complet Wegovy</a>
           <a href="/guides/guide-complet-ozempic/">Guide Complet Ozempic</a>
-          <a href="/guides/guide-complet-trulicity/">Guide Complet Trulicity</a>
           <a href="/guides/guide-complet-mounjaro/">Guide Complet Mounjaro</a>
+          <a href="/guides/guide-complet-trulicity/">Guide Complet Trulicity</a>
           <a href="/guides/guide-complet-januvia/">Guide Complet Januvia</a>
           <a href="/collections/traitements-glp1/">Autres Traitements</a>
         </div>
@@ -134,20 +135,37 @@
       const searchInput = document.getElementById('new-search-input');
       const searchResults = document.getElementById('new-search-results');
       if (searchInput && searchResults) {
-        const articles = [
-          { title: "Wegovy Prix", url: "/collections/glp1-cout/wegovy-prix/" },
-          { title: "Ozempic Danger", url: "/collections/effets-secondaires-glp1/ozempic-danger/" },
-          { title: "Effets Secondaires", url: "/collections/effets-secondaires-glp1/" },
-          { title: "Diagnostic GLP-1", url: "/guides/quel-traitement-glp1-choisir/" }
-        ];
-        searchInput.addEventListener('input', function() {
-    const query = (this as HTMLInputElement).value.toLowerCase().trim();
-          if (query.length < 2) { searchResults.style.display = 'none'; return; }
-          const results = articles.filter(a => a.title.toLowerCase().includes(query));
-          if (results.length) { searchResults.innerHTML = results.map(a => `<a href="${a.url}" class="search-result">${a.title}</a>`).join(''); searchResults.style.display = 'block'; }
-          else { searchResults.innerHTML = '<div class="no-results">Aucun résultat</div>'; searchResults.style.display = 'block'; }
+        // Import du module de recherche
+        import('/src/data/searchIndex.js').then(({ searchIndex, searchArticles }) => {
+          searchInput.addEventListener('input', function() {
+            const query = (this as HTMLInputElement).value.toLowerCase().trim();
+            if (query.length < 2) {
+              searchResults.style.display = 'none';
+              return;
+            }
+
+            const results = searchArticles(query);
+
+            if (results.length) {
+              searchResults.innerHTML = results.map(article =>
+                `<a href="${article.url}" class="search-result">
+                  <div class="search-title">${article.title}</div>
+                  <div class="search-description">${article.description}</div>
+                </a>`
+              ).join('');
+              searchResults.style.display = 'block';
+            } else {
+              searchResults.innerHTML = '<div class="no-results">Aucun résultat trouvé pour "${query}"</div>';
+              searchResults.style.display = 'block';
+            }
+          });
         });
-  document.addEventListener('click', function(e) { if (!searchInput.contains(e.target as Node) && !searchResults.contains(e.target as Node)) (searchResults as HTMLElement).style.display = 'none'; });
+
+        document.addEventListener('click', function(e) {
+          if (!searchInput.contains(e.target as Node) && !searchResults.contains(e.target as Node)) {
+            (searchResults as HTMLElement).style.display = 'none';
+          }
+        });
       }
     });
   </script>

@@ -67,42 +67,6 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### 2. Cliniques Privées Spécialisées
-
-**Avantages :**
-- Délais de rendez-vous plus courts
-- Confort hôtelier supérieur
-- Suivi personnalisé
-- Flexibilité des programmes
-
-**Services typiques :**
-- Consultations nutritionnelles
-- Cures d'amaigrissement
-- Programmes détox
-- Suivi médical personnalisé
-- Coaching comportemental
-
-**Coût :** 150-500€/consultation selon le centre
-
-### 3. Centres de Santé Spécialisés
-
-**Approche :**
-- Prise en charge globale
-- Équipes pluridisciplinaires
-- Programmes sur mesure
-- Suivi long terme
-
-**Profils d'équipes :**
-- Endocrinologue ou médecin nutritionniste
-- Diététicien
-- Psychologue spécialisé TCA
-- Coach sportif adapté
-- Parfois : acupuncteur, sophrologue
-
 ## Comment Choisir la Bonne Clinique
 
 ### Critères Essentiels à Vérifier

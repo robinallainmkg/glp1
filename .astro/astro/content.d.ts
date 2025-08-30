@@ -241,6 +241,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "effets-secondaires-glp1": {
+"effets-secondaires-mounjaro.md": {
+	id: "effets-secondaires-mounjaro.md";
+  slug: "effets-secondaires-mounjaro";
+  body: string;
+  collection: "effets-secondaires-glp1";
+  data: InferEntrySchema<"effets-secondaires-glp1">
+} & { render(): Render[".md"] };
 "effets-secondaires-ozempic.md": {
 	id: "effets-secondaires-ozempic.md";
   slug: "effets-secondaires-ozempic";
@@ -330,6 +337,13 @@ declare module 'astro:content' {
 "operation-pour-maigrir-prix.md": {
 	id: "operation-pour-maigrir-prix.md";
   slug: "operation-pour-maigrir-prix";
+  body: string;
+  collection: "glp1-cout";
+  data: InferEntrySchema<"glp1-cout">
+} & { render(): Render[".md"] };
+"prix-mounjaro-france.md": {
+	id: "prix-mounjaro-france.md";
+  slug: "prix-mounjaro-france";
   body: string;
   collection: "glp1-cout";
   data: InferEntrySchema<"glp1-cout">
@@ -487,13 +501,6 @@ declare module 'astro:content' {
 "ozempic-effets-secondaires-forum.md": {
 	id: "ozempic-effets-secondaires-forum.md";
   slug: "ozempic-effets-secondaires-forum";
-  body: string;
-  collection: "glp1-perte-de-poids";
-  data: InferEntrySchema<"glp1-perte-de-poids">
-} & { render(): Render[".md"] };
-"ozempic-prix.md": {
-	id: "ozempic-prix.md";
-  slug: "ozempic-prix";
   body: string;
   collection: "glp1-perte-de-poids";
   data: InferEntrySchema<"glp1-perte-de-poids">
@@ -697,6 +704,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "traitements-glp1": {
+"guide-complet-mounjaro.md": {
+	id: "guide-complet-mounjaro.md";
+  slug: "guide-complet-mounjaro";
+  body: string;
+  collection: "traitements-glp1";
+  data: InferEntrySchema<"traitements-glp1">
+} & { render(): Render[".md"] };
 "guide-complet-ozempic.md": {
 	id: "guide-complet-ozempic.md";
   slug: "guide-complet-ozempic";
@@ -744,7 +758,12 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		
+		"avant-apres-glp1": Record<string, {
+  id: string;
+  collection: "avant-apres-glp1";
+  data: any;
+}>;
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

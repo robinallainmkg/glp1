@@ -39,10 +39,6 @@ Le **régime Ozempic** combine l'efficacité du sémaglutide avec un protocole a
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Qu'est-ce que le Régime Ozempic ?
 
 ### Principe Fondamental

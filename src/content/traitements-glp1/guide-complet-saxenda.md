@@ -11,16 +11,23 @@ date: "2025-08-28"
 
 # Guide Complet Saxenda : Tout Savoir sur ce Traitement Révolutionnaire
 
+<div class="guide-buttons">
+  <a href="/collections/glp1-cout/prix-saxenda-france" class="guide-button primary">
+    💰 Coût et Remboursement Saxenda
+  </a>
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-saxenda" class="guide-button secondary">
+    ⚠️ Effets Secondaires Saxenda
+  </a>
+</div>
+
 ## Sommaire
 1. [Qu'est-ce que Saxenda ?](#quest-ce-quesaxenda)
 2. [Comment fonctionne Saxenda ?](#comment-fonctionne-saxenda)
 3. [Saxenda pour l'obésité](#saxenda-obésité)
 4. [Posologie et administration](#posologie-saxenda)
 5. [Comment commencer le traitement Saxenda ?](#comment-commencer-le-traitement-saxenda)
-6. [Effets secondaires de Saxenda](#effets-secondaires-saxenda)
-7. [Prix de Saxenda en France](#prix-saxenda-france)
-8. [Alternatives à Saxenda](#alternatives-saxenda)
-9. [FAQ Saxenda](#faq-saxenda)
+6. [Alternatives à Saxenda](#alternatives-saxenda)
+7. [FAQ Saxenda](#faq-saxenda)
 
 ## Qu'est-ce que Saxenda ?
 
@@ -127,32 +134,6 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 - **Psychologue** : Support comportemental
 - **Activité physique** : Programme adapté
 - **Carnet de suivi** : Poids et symptômes quotidiens
-
-## Effets secondaires de Saxenda
-
-Les effets secondaires de Saxenda sont généralement bénins et temporaires. Pour connaître en détail tous les effets secondaires possibles, leur fréquence et comment les gérer, consultez notre guide dédié :
-
-[→ **Effets Secondaires Saxenda : Guide Complet**](/collections/effets-secondaires-glp1/effets-secondaires-saxenda)
-
-**Effets secondaires fréquents** : Nausées, vomissements, diarrhée
-**Effets secondaires graves** : Très rares (<0.1%)
-**Gestion** : Escalade de dose progressive obligatoire
-
-### Gestion des effets secondaires
-- Commencer à faible dose et augmenter progressivement
-- Prise avec repas
-- Hydratation suffisante
-- Surveillance médicale régulière
-
-## Prix de Saxenda en France
-
-Pour connaître en détail les prix de Saxenda, les modalités de remboursement et les aides financières disponibles, consultez notre guide dédié :
-
-[→ **Prix Saxenda France : Tarifs et Remboursement**](/collections/glp1-cout/prix-saxenda-france)
-
-**Prix approximatif** : 98,50 € la boîte de 5 stylos
-**Remboursement** : 100% pour l'obésité (protocole spécifique)
-**Coût mensuel réel** : 25-35 € avec mutuelle
 
 ## Alternatives à Saxenda
 

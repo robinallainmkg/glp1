@@ -43,10 +43,6 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Résumé des dangers identifiés
 
 - **Pancréatite aiguë** : 0.2% des patients (potentiellement mortelle)

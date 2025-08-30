@@ -6,8 +6,8 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-micronutriments.svg"
-thumbnailAlt: "Illustration pour l'article GLP-1 Micronutriments"
+thumbnail: "/images/thumbnails/glp1-micronutriments.jpg"
+thumbnailAlt: "Illustration pour l'article glp1-micronutriments"
 featured: false
 priority: 5
 schema: "Article"

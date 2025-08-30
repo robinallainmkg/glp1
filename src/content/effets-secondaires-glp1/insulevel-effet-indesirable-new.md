@@ -6,7 +6,7 @@ pubDate: 2025-01-15T00:00:00.000Z
 author: Dr. Sarah Martin
 category: Guide médical
 collection: effets-secondaires-glp1
-thumbnail: /images/thumbnails/Design sans titre (79).jpg
+thumbnail: "/images/thumbnails/insulevel-effet-indesirable-new.jpg"
 thumbnailAlt: "Illustration des effets secondaires d'Insulevel et précautions d'usage"
 featured: false
 priority: 5

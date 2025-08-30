@@ -53,16 +53,6 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### Remboursement spécifique
-- **GLP-1** : 65% si critères diabète respectés
-- **Consultations diététiques** : 3-4 séances/an ALD
-- **Suppléments** : Non remboursés Sécurité Sociale
-- **Matériel mesure** : Bandelettes non prises en charge
-
 ## Remboursement et prise en charge (France)
 
 ### Indications surveillées

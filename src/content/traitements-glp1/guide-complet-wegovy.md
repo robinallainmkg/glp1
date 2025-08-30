@@ -11,16 +11,23 @@ date: "2025-08-28"
 
 # Guide Complet Wegovy : Tout Savoir sur ce Traitement Révolutionnaire
 
+<div class="guide-buttons">
+  <a href="/collections/glp1-cout/prix-wegovy-france" class="guide-button primary">
+    💰 Coût et Remboursement Wegovy
+  </a>
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-wegovy" class="guide-button secondary">
+    ⚠️ Effets Secondaires Wegovy
+  </a>
+</div>
+
 ## Sommaire
 1. [Qu'est-ce que Wegovy ?](#quest-ce-quewegovy)
 2. [Comment fonctionne Wegovy ?](#comment-fonctionne-wegovy)
 3. [Wegovy pour l'obésité](#wegovy-obésité)
 4. [Posologie et administration](#posologie-wegovy)
 5. [Comment commencer le traitement Wegovy ?](#comment-commencer-le-traitement-wegovy)
-6. [Effets secondaires de Wegovy](#effets-secondaires-wegovy)
-7. [Prix de Wegovy en France](#prix-wegovy-france)
-8. [Alternatives à Wegovy](#alternatives-wegovy)
-9. [FAQ Wegovy](#faq-wegovy)
+6. [Alternatives à Wegovy](#alternatives-wegovy)
+7. [FAQ Wegovy](#faq-wegovy)
 
 ## Qu'est-ce que Wegovy ?
 
@@ -133,32 +140,6 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 - **Psychologue** : Support comportemental
 - **Activité physique** : Programme adapté
 - **Groupe de soutien** : Partage d'expérience
-
-## Effets secondaires de Wegovy
-
-Les effets secondaires de Wegovy sont généralement bénins et temporaires. Pour connaître en détail tous les effets secondaires possibles, leur fréquence et comment les gérer, consultez notre guide dédié :
-
-[→ **Effets Secondaires Wegovy : Guide Complet**](/collections/effets-secondaires-glp1/effets-secondaires-wegovy)
-
-**Effets secondaires fréquents** : Nausées, vomissements, diarrhée
-**Effets secondaires graves** : Très rares (<0.1%)
-**Gestion** : Escalade de dose progressive obligatoire
-
-### Gestion des effets secondaires
-- Commencer à faible dose et augmenter progressivement
-- Prise avec repas
-- Hydratation suffisante
-- Surveillance médicale régulière
-
-## Prix de Wegovy en France
-
-Pour connaître en détail les prix de Wegovy, les modalités de remboursement et les aides financières disponibles, consultez notre guide dédié :
-
-[→ **Prix Wegovy France : Tarifs et Remboursement**](/collections/glp1-cout/prix-wegovy-france)
-
-**Prix approximatif** : 73,90 € la boîte de 4 stylos
-**Remboursement** : 100% pour l'obésité (protocole spécifique)
-**Coût mensuel réel** : 18-25 € avec mutuelle
 
 ## Alternatives à Wegovy
 

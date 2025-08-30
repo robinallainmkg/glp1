@@ -53,24 +53,6 @@ La prise en charge moderne de l'obésité combine plusieurs approches :
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### Critères de réussite
-Les objectifs thérapeutiques sont définis individuellement :
-- Perte de poids durable (5-15% du poids initial)
-- Amélioration des comorbidités
-- Maintien des résultats à long terme
-- Amélioration de la qualité de vie
-
-### Suivi et accompagnement
-Un accompagnement médical approprié optimise les résultats :
-- Évaluation médicale initiale complète
-- Suivi régulier de l'efficacité et de la tolérance
-- Adaptation du traitement selon l'évolution
-- Éducation nutritionnelle et comportementale
-
 ## Important
 
  Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.

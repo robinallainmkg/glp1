@@ -203,6 +203,10 @@ Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabéto
 
 ---
 
+## Sommaire
+
+
+
 *Article mis à jour régulièrement selon les dernières données officielles. Ces informations sont données à titre informatif et ne remplacent pas l'avis d'un professionnel de santé.*
 
 ## Points clés à retenir

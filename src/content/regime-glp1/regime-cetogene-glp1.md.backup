@@ -6,8 +6,8 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-cetogene-glp1.svg"
-thumbnailAlt: "Illustration pour l'article Régime Cetogene GLP-1"
+thumbnail: "/images/thumbnails/regime-cetogene-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article regime-cetogene-glp1"
 featured: false
 priority: 5
 schema: "Article"

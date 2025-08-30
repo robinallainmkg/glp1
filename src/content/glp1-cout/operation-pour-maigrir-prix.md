@@ -40,10 +40,6 @@ Le **prix d'une opération pour maigrir** en France varie considérablement selo
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Prix des Opérations de Chirurgie Bariatrique
 
 ### Tarifs par Type d'Intervention

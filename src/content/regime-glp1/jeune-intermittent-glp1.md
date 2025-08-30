@@ -53,16 +53,6 @@ Le jeûne intermittent (JI) et les agonistes GLP-1 sont synergiques pour la pert
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### Méthodes JI courantes
-- **16:8** : 16h jeûne / 8h alimentaire (plus populaire)
-- **14:10** : 14h jeûne / 10h alimentaire (débutants)
-- **5:2** : 5 jours normaux / 2 jours 500 kcal
-- **OMAD** : Un repas par jour (experts)
-
 ## Remboursement et prise en charge (France)
 
 ### Prise en charge médicale

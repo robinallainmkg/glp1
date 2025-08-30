@@ -11,6 +11,15 @@ date: "2025-08-27"
 
 # Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
 
+<div class="guide-buttons">
+  <a href="/collections/glp1-cout/prix-ozempic-france" class="guide-button primary">
+    💰 Coût et Remboursement Ozempic
+  </a>
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-ozempic" class="guide-button secondary">
+    ⚠️ Effets Secondaires Ozempic
+  </a>
+</div>
+
 ## Sommaire
 1. [Qu'est-ce qu'Ozempic ?](#quest-ce-quozempic)
 2. [Comment fonctionne Ozempic ?](#comment-fonctionne-ozempic)
@@ -18,10 +27,8 @@ date: "2025-08-27"
 4. [Ozempic pour la perte de poids](#ozempic-perte-poids)
 5. [Posologie et administration](#posologie-ozempic)
 6. [Comment commencer le traitement Ozempic ?](#comment-commencer-le-traitement-ozempic)
-7. [Effets secondaires d'Ozempic](#effets-secondaires-ozempic)
-8. [Prix d'Ozempic en France](#prix-ozempic-france)
-9. [Alternatives à Ozempic](#alternatives-ozempic)
-10. [FAQ Ozempic](#faq-ozempic)
+7. [Alternatives à Ozempic](#alternatives-ozempic)
+8. [FAQ Ozempic](#faq-ozempic)
 
 ## Qu'est-ce qu'Ozempic ?
 
@@ -129,32 +136,6 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 - **Trimestriel** : Ensuite
 - **Annuel** : Bilan complet
 - **À la demande** : En cas d'effets secondaires
-
-## Effets secondaires d'Ozempic
-
-Les effets secondaires d'Ozempic sont généralement bénins et temporaires. Pour connaître en détail tous les effets secondaires possibles, leur fréquence et comment les gérer, consultez notre guide dédié :
-
-[→ **Effets Secondaires Ozempic : Guide Complet**](/collections/effets-secondaires-glp1/effets-secondaires-ozempic)
-
-**Effets secondaires fréquents** : Nausées, vomissements, diarrhée
-**Effets secondaires graves** : Très rares (<0.1%)
-**Gestion** : Commencer à faible dose, augmentation progressive
-
-### Gestion des effets secondaires
-- Commencer à faible dose
-- Augmentation progressive
-- Prise avec repas
-- Hydratation suffisante
-
-## Prix d'Ozempic en France
-
-Pour connaître en détail les prix d'Ozempic, les modalités de remboursement et les aides financières disponibles, consultez notre guide dédié :
-
-[→ **Prix Ozempic France : Tarifs et Remboursement**](/collections/glp1-cout/prix-ozempic-france)
-
-**Prix approximatif** : 73,90 € la boîte de 4 stylos
-**Remboursement** : 65-100% selon la situation
-**Coût mensuel réel** : 18-25 € avec mutuelle
 
 ## Alternatives à Ozempic
 

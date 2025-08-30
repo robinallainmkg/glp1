@@ -11,6 +11,15 @@ date: "2025-08-28"
 
 # Guide Complet Trulicity : Tout Savoir sur ce Traitement Révolutionnaire
 
+<div class="guide-buttons">
+  <a href="/collections/glp1-cout/prix-trulicity-france" class="guide-button primary">
+    💰 Coût et Remboursement Trulicity
+  </a>
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-trulicity" class="guide-button secondary">
+    ⚠️ Effets Secondaires Trulicity
+  </a>
+</div>
+
 ## Sommaire
 1. [Qu'est-ce que Trulicity ?](#quest-ce-quetrulicity)
 2. [Comment fonctionne Trulicity ?](#comment-fonctionne-trulicity)
@@ -18,10 +27,8 @@ date: "2025-08-28"
 4. [Trulicity pour la perte de poids](#trulicity-perte-poids)
 5. [Posologie et administration](#posologie-trulicity)
 6. [Comment commencer le traitement Trulicity ?](#comment-commencer-le-traitement-trulicity)
-7. [Effets secondaires de Trulicity](#effets-secondaires-trulicity)
-8. [Prix de Trulicity en France](#prix-trulicity-france)
-9. [Alternatives à Trulicity](#alternatives-trulicity)
-10. [FAQ Trulicity](#faq-trulicity)
+7. [Alternatives à Trulicity](#alternatives-trulicity)
+8. [FAQ Trulicity](#faq-trulicity)
 
 ## Qu'est-ce que Trulicity ?
 
@@ -127,32 +134,6 @@ Trulicity s'administre une fois par semaine, à la même heure chaque semaine.
 - **Trimestriel** : Ensuite
 - **Annuel** : Bilan complet avec dépistage complications
 - **À la demande** : En cas d'effets secondaires
-
-## Effets secondaires de Trulicity
-
-Les effets secondaires de Trulicity sont généralement bénins et temporaires. Pour connaître en détail tous les effets secondaires possibles, leur fréquence et comment les gérer, consultez notre guide dédié :
-
-[→ **Effets Secondaires Trulicity : Guide Complet**](/collections/effets-secondaires-glp1/effets-secondaires-trulicity)
-
-**Effets secondaires fréquents** : Nausées, vomissements, diarrhée
-**Effets secondaires graves** : Très rares (<0.1%)
-**Gestion** : Commencer à faible dose, augmentation progressive
-
-### Gestion des effets secondaires
-- Commencer à faible dose
-- Augmentation progressive si nécessaire
-- Prise avec repas
-- Hydratation suffisante
-
-## Prix de Trulicity en France
-
-Pour connaître en détail les prix de Trulicity, les modalités de remboursement et les aides financières disponibles, consultez notre guide dédié :
-
-[→ **Prix Trulicity France : Tarifs et Remboursement**](/collections/glp1-cout/prix-trulicity-france)
-
-**Prix approximatif** : 89,90 € la boîte de 4 stylos
-**Remboursement** : 65-100% selon la situation
-**Coût mensuel réel** : 20-28 € avec mutuelle
 
 ## Alternatives à Trulicity
 

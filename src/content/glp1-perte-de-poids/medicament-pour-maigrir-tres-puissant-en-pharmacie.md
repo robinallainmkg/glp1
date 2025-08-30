@@ -45,10 +45,6 @@ Avec des taux d'obésité atteignant **17% de la population française**, la dem
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Médicaments GLP-1 : les plus puissants
 
 ### Wegovy (semaglutide) - Le leader

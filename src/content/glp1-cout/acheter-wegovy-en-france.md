@@ -53,10 +53,6 @@ Le sémaglutide contenu dans Wegovy agit sur plusieurs niveaux :
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Conditions d'accès à Wegovy en France
 
 ### Critères médicaux obligatoires

@@ -57,10 +57,6 @@ Les GLP-1, agonistes GLP-1, diabète type 2 sont des éléments clés dans ce do
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Prix, disponibilité et variations en France
 
 ### Plantes complémentaires courantes

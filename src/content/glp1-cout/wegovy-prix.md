@@ -405,10 +405,6 @@ Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabéto
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Points Clés Wegovy
 
 * **Prix mensuel** : 90€ à 270€ selon le dosage

@@ -40,10 +40,6 @@ Le **prix de Saxenda en pharmacie** constitue un élément crucial dans votre d�
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Prix Saxenda en Pharmacie Française
 
 ### Tarifs Officiels 2025

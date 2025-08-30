@@ -11,16 +11,23 @@ date: "2025-08-28"
 
 # Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire
 
+<div class="guide-buttons">
+  <a href="/collections/glp1-cout/prix-victoza-france" class="guide-button primary">
+    💰 Coût et Remboursement Victoza
+  </a>
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-victoza" class="guide-button secondary">
+    ⚠️ Effets Secondaires Victoza
+  </a>
+</div>
+
 ## Sommaire
 1. [Qu'est-ce que Victoza ?](#quest-ce-quevictoza)
 2. [Comment fonctionne Victoza ?](#comment-fonctionne-victoza)
 3. [Victoza pour le diabète de type 2](#victoza-diabète-type-2)
 4. [Posologie et administration](#posologie-victoza)
 5. [Comment commencer le traitement Victoza ?](#comment-commencer-le-traitement-victoza)
-6. [Effets secondaires de Victoza](#effets-secondaires-victoza)
-7. [Prix de Victoza en France](#prix-victoza-france)
-8. [Alternatives à Victoza](#alternatives-victoza)
-9. [FAQ Victoza](#faq-victoza)
+6. [Alternatives à Victoza](#alternatives-victoza)
+7. [FAQ Victoza](#faq-victoza)
 
 ## Qu'est-ce que Victoza ?
 
@@ -111,32 +118,6 @@ Victoza s'administre une fois par jour, à la même heure chaque jour.
 - **Mensuel** : Ensuite
 - **Trimestriel** : Bilan complet
 - **À la demande** : En cas d'effets secondaires
-
-## Effets secondaires de Victoza
-
-Les effets secondaires de Victoza sont généralement bénins et temporaires. Pour connaître en détail tous les effets secondaires possibles, leur fréquence et comment les gérer, consultez notre guide dédié :
-
-[→ **Effets Secondaires Victoza : Guide Complet**](/collections/effets-secondaires-glp1/effets-secondaires-victoza)
-
-**Effets secondaires fréquents** : Nausées, vomissements, diarrhée
-**Effets secondaires graves** : Très rares (<0.1%)
-**Gestion** : Escalade de dose progressive obligatoire
-
-### Gestion des effets secondaires
-- Commencer à faible dose et augmenter progressivement
-- Prise avec repas
-- Hydratation suffisante
-- Surveillance médicale régulière
-
-## Prix de Victoza en France
-
-Pour connaître en détail les prix de Victoza, les modalités de remboursement et les aides financières disponibles, consultez notre guide dédié :
-
-[→ **Prix Victoza France : Tarifs et Remboursement**](/collections/glp1-cout/prix-victoza-france)
-
-**Prix approximatif** : 49,90-74,85 € la boîte
-**Remboursement** : 65-100% selon la situation
-**Coût mensuel réel** : 15-20 € avec mutuelle
 
 ## Alternatives à Victoza
 

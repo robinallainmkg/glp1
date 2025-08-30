@@ -53,16 +53,6 @@ Paris concentre de nombreux diabétologues et endocrinologues spécialisés dans
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
-### Délais rendez-vous moyens
-- **Diabétologue hospitalier** : 3-6 mois
-- **Endocrino libéral S1** : 2-4 mois
-- **Endocrino libéral S2** : 2-6 semaines
-- **Téléconsultation** : 1-2 semaines
-
 ## Remboursement et prise en charge (France)
 
 ### Parcours de soins optimal

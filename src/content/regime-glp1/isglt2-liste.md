@@ -307,10 +307,6 @@ Ces éléments déterminent le reste à charge pour le patient et l'accessibilit
 
 Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
-## Introduction
-
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
-
 ## Systèmes de remboursement
 Le système français de remboursement des médicaments repose sur plusieurs niveaux d'intervention qui se complètent pour optimiser l'accès aux soins.
 
