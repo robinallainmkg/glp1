@@ -1,5 +1,6 @@
 ---
 title: "Clinique Pour Obesite New"
+description: "Guide complet des nouvelles cliniques spécialisées dans l'obésité en France. Découvrez les centres médicaux modernes pour votre prise en charge GLP-1."
 slug: "clinique-pour-obesite-new"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

@@ -161,7 +161,7 @@ affiliateCollection: "glp1-cout"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/saxenda-france-prix.svg"
+thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
 thumbnailAlt: "Prix et coût du traitement saxenda-france"
 ---
 

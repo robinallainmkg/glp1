@@ -14,6 +14,7 @@ const allArticles = await Promise.all([
   getCollection('avant-apres-glp1'),
   getCollection('recherche-glp1'),
   getCollection('medecins-glp1-france'),
+  getCollection('traitements-glp1'),
 ]).then(collections => {
   return collections.flat().map(article => ({
     ...article,
@@ -78,7 +79,8 @@ const categoryColors = {
   'regime-glp1': { bg: 'orange', text: 'orange-800', badge: 'orange-100' },
   'avant-apres-glp1': { bg: 'pink', text: 'pink-800', badge: 'pink-100' },
   'recherche-glp1': { bg: 'teal', text: 'teal-800', badge: 'teal-100' },
-  'medecins-glp1-france': { bg: 'slate', text: 'slate-800', badge: 'slate-100' }
+  'medecins-glp1-france': { bg: 'slate', text: 'slate-800', badge: 'slate-100' },
+  'traitements-glp1': { bg: 'indigo', text: 'indigo-800', badge: 'indigo-100' }
 }
 
 // Configuration des noms de catégories
@@ -91,7 +93,8 @@ const categoryNames = {
   'regime-glp1': 'Régime et nutrition',
   'avant-apres-glp1': 'Témoignages',
   'recherche-glp1': 'Recherche scientifique',
-  'medecins-glp1-france': 'Médecins en France'
+  'medecins-glp1-france': 'Médecins en France',
+  'traitements-glp1': 'Traitements GLP-1'
 }
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Cannelle GLP-1"
+description: "Guide complet sur Cannelle GLP-1 : informations médicales et recommandations d'experts."
 slug: "cannelle-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"

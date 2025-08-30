@@ -1,15 +1,4 @@
 ---
-interface Props {
-  article: any;
-  collection: string;
-  categoryName: string;
-  colors: {
-    bg: string;
-    text: string;
-    badge: string;
-  };
-}
-
 const { article, collection, categoryName, colors } = Astro.props;
 // Support both Astro content entry (article.data) and preformatted article objects
 const data = article?.data ?? {
@@ -27,6 +16,7 @@ const url = `/collections/${collection}/${slug || ''}/`;
 function getArticleImage(articleData: any): string | null {
   if (!articleData) return null;
   if (articleData.ogImage) return encodeURI(String(articleData.ogImage));
+  if (articleData.image) return encodeURI(String(articleData.image));
   if (articleData.thumbnail) return encodeURI(String(articleData.thumbnail));
   return null;
 }

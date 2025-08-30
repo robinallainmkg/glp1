@@ -1,21 +1,29 @@
 ---
 import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
+import { getAllAffiliateProducts } from "../../lib/affiliate";
 
-const affiliateProducts = [];
-const affiliateConfig = {};
-// entry placeholder removed (unused)
+// Récupération des produits d'affiliation depuis Supabase
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3); // 3 premiers produits
+
 const title = "Diagnostic GLP-1 : Quel Traitement Choisir ?";
 const description = "Guide complet pour choisir le bon traitement GLP-1 selon votre profil.";
-const articleContent = `<p>${description}</p><p>Découvrez en 5 minutes quel traitement est le plus adapté à votre situation avec notre diagnostic personnalisé.</p>`;
+
+// Configuration pour sidebar uniquement (pas d'inline products)
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
 ---
 
-<ArticleWithAffiliateSidebar 
+<ArticleWithAffiliateSidebar
   title={title}
   description={description}
-  articleContent={articleContent} 
-  affiliateProducts={affiliateProducts} 
-  affiliateConfig={affiliateConfig ?? {}}
-  showAffiliateSidebar={true}
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+  hideArticleHeader={true}
+  disableInline={true}
 >
   <div class="container">
     <div class="diagnostic-page">
@@ -1402,45 +1410,43 @@ const articleContent = `<p>${description}</p><p>Découvrez en 5 minutes quel tra
       <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">🎯 Nos Recommandations Expert</h2>
       
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-        
-        <!-- Consultation Expert -->
-        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-            👨‍⚕️ <span>Consultation Spécialisée</span>
-          </h3>
-          <p style="margin-bottom: 1rem; opacity: 0.9;">
-            Bénéficiez de l'expertise de nos endocrinologues partenaires pour une prescription personnalisée et un suivi médical optimal.
-          </p>
-          <a href="/guides/experts/" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
-            Consulter un Expert
-          </a>
-        </div>
 
-        <!-- Guide Complet -->
-        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-            📚 <span>Guide Complet GLP-1</span>
-          </h3>
-          <p style="margin-bottom: 1rem; opacity: 0.9;">
-            Téléchargez notre guide complet (PDF 45 pages) avec toutes les informations essentielles sur les traitements GLP-1.
-          </p>
-          <a href="/guides/guide-beaute-perte-de-poids-glp1/" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
-            Télécharger le Guide
-          </a>
-        </div>
+        {affiliateProducts.map((product, index) => (
+          <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
+            <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              {index === 0 ? '🏆' : index === 1 ? '⭐' : '�'} <span>{product.productName}</span>
+            </h3>
+            <p style="margin-bottom: 1rem; opacity: 0.9;">
+              {product.description || product.benefitsText || `Découvrez ${product.productName} - ${product.brand}`}
+            </p>
+            {product.isOnSale && (
+              <div style="background: #ff6b6b; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; display: inline-block; font-size: 0.8rem; margin-bottom: 1rem;">
+                {product.saleBadgeText || 'PROMO'}
+              </div>
+            )}
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              {product.originalPrice && (
+                <div>
+                  <span style="text-decoration: line-through; opacity: 0.7; margin-right: 0.5rem;">
+                    {product.originalPrice}€
+                  </span>
+                  <span style="font-weight: bold; color: #4ade80;">
+                    {product.discountedPrice}€
+                  </span>
+                </div>
+              )}
+              {product.discountPercent && (
+                <div style="background: #4ade80; color: white; padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.8rem;">
+                  -{product.discountPercent}%
+                </div>
+              )}
+            </div>
+            <a href={product.externalLink} target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; width: 100%; text-align: center;">
+              Découvrir l'offre →
+            </a>
+          </div>
+        ))}
 
-        <!-- Comparateur Prix -->
-        <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-            💰 <span>Comparateur Prix</span>
-          </h3>
-          <p style="margin-bottom: 1rem; opacity: 0.9;">
-            Comparez les prix d'Ozempic, Wegovy et Saxenda. Trouvez les meilleures offres et solutions de remboursement.
-          </p>
-          <a href="/collections/glp1-cout/" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s;">
-            Comparer les Prix
-          </a>
-        </div>
       </div>
 
       <!-- Call to Action Principal -->
@@ -1461,7 +1467,7 @@ const articleContent = `<p>${description}</p><p>Découvrez en 5 minutes quel tra
     </div>
   </section>
 
-</StaticLayout>
+</ArticleWithAffiliateSidebar>
 
 
 

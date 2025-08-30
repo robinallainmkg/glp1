@@ -1,5 +1,6 @@
 ---
 title: "Plantes Diabète"
+description: "Guide complet sur Plantes Diabète : informations médicales et recommandations d'experts."
 slug: "plantes-diabete"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

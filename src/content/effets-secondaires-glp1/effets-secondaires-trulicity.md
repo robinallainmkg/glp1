@@ -233,7 +233,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
 
-thumbnail: "/images/thumbnails/trulicity-effets-secondaires.svg"
+thumbnail: "/images/thumbnails/trulicity.jpg"
 thumbnailAlt: "Effets secondaires du traitement trulicity"
 ---
 

@@ -1,0 +1,42 @@
+---
+// Redirection SEO pour l'ancienne URL vers la nouvelle structure
+export const prerender = true;
+
+// Redirection côté serveur si possible
+if (typeof Response !== 'undefined') {
+  return new Response(null, {
+    status: 301,
+    headers: {
+      'Location': '/collections/glp1-cout/prix-mounjaro-france/'
+    }
+  });
+}
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Page déplacée - Prix Mounjaro France</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="/collections/glp1-cout/prix-mounjaro-france/">
+  <meta http-equiv="refresh" content="0; url=/collections/glp1-cout/prix-mounjaro-france/">
+  <script>
+    // Redirection JavaScript immédiate
+    window.location.replace('/collections/glp1-cout/prix-mounjaro-france/');
+  </script>
+</head>
+<body>
+  <main style="text-align: center; padding: 2rem; font-family: system-ui;">
+    <h1>Page déplacée</h1>
+    <p>Cette page a été déplacée vers <a href="/collections/glp1-cout/prix-mounjaro-france/">sa nouvelle adresse</a>.</p>
+    <p>Redirection automatique en cours...</p>
+    <script>
+      // Fallback si le replace ne fonctionne pas
+      setTimeout(() => {
+        window.location.href = '/collections/glp1-cout/prix-mounjaro-france/';
+      }, 100);
+    </script>
+  </main>
+</body>
+</html>

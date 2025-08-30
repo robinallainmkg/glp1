@@ -1,12 +1,13 @@
 ---
-title: "Wegovy Prix"Guide complet sur Prix De Wegovy En France 2025 : informations médicales et recommandations d'experts."
+title: "Wegovy Prix"
+description: "Guide complet sur Prix De Wegovy En France 2025 : tarifs officiels, remboursement sécurité sociale et couverture mutuelle pour le traitement Wegovy."
 slug: "wegovy-prix"
 pubDate: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-prix.svg"
+thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Prix"
 featured: false
 priority: 5

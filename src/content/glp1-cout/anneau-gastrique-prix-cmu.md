@@ -1,5 +1,6 @@
 ---
-title: "Anneau Gastrique Prix Cmu"Guide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations d'experts."
+title: "Anneau Gastrique Prix Cmu"
+description: "Guide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations d'experts."
 slug: "anneau-gastrique-prix-cmu"
 pubDate: 2025-08-23
 author: "Julien Lefèvre"

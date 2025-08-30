@@ -24,6 +24,7 @@ export default defineConfig({
           }
         }
       }
-    }
+    },
+  // No custom optimizeDeps exclusions
   }
 });

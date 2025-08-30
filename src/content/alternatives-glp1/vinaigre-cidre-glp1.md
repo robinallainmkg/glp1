@@ -1,5 +1,6 @@
 ---
 title: "Vinaigre Cidre GLP-1"
+description: "Guide complet sur Vinaigre Cidre GLP-1 : informations médicales et recommandations d'experts."
 slug: "vinaigre-cidre-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

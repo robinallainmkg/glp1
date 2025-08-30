@@ -1,5 +1,6 @@
 ---
 title: "Acupuncture GLP-1"
+description: "Guide complet sur Acupuncture GLP-1 : informations médicales et recommandations d'experts."
 slug: "acupuncture-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"

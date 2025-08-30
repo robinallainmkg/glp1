@@ -1,5 +1,6 @@
 ---
-title: "Saxenda Prix Pharmacie"Guide complet sur Saxenda Prix Pharmacie : informations médicales et recommandations d'experts."
+title: "Saxenda Prix Pharmacie"
+description: "Guide complet sur Saxenda Prix Pharmacie : tarifs officiels, remboursement sécurité sociale et couverture mutuelle pour le traitement Saxenda."
 slug: "saxenda-prix-pharmacie"
 pubDate: 2025-08-23
 author: "Julien Lefèvre"

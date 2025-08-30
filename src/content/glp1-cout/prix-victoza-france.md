@@ -161,7 +161,7 @@ affiliateCollection: "glp1-cout"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/victoza-france-prix.svg"
+thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
 thumbnailAlt: "Prix et coût du traitement victoza-france"
 ---
 

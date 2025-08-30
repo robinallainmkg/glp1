@@ -1,12 +1,13 @@
 ---
-title: "Guide Complet Wegovy 2025 : Tout Savoir"
+title: "Wegovy Dosage : Guide Complet des Posologies 2025"
+description: "Guide complet du dosage Wegovy : posologie, augmentation progressive, adaptation individuelle et recommandations médicales pour une utilisation optimale."
 slug: "wegovy-dosage"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolerance"]
 collection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/wegovy-dosage-illus.jpg"
+thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Dosage"
 featured: false
 priority: 5
@@ -36,66 +37,107 @@ featured: true
 ---
 
 ## Sommaire
-1. [Points essentiels](#points-essentiels)
-2. [Contexte médical](#contexte-médical)
-3. [Analyse détaillée](#analyse-détaillée)
-4. [Recommandations pratiques](#recommandations-pratiques)
+1. [Dosage Wegovy : Protocole complet](#dosage-wegovy-protocole-complet)
+2. [Augmentation progressive](#augmentation-progressive)
+3. [Adaptation individuelle](#adaptation-individuelle)
+4. [Précautions et contre-indications](#précautions-et-contre-indications)
 5. [Questions fréquentes](#questions-fréquentes)
-6. [Ressources complémentaires](#ressources-complémentaires)
 
 ---
 
-## Points essentiels
+## Dosage Wegovy : Protocole complet
 
-**Résumé rapide** : Wegovy dosage nécessite une approche médicale personnalisée selon les recommandations françaises 2025. Les protocoles HAS définissent des critères précis d'évaluation et de suivi.
+### 💊 **Posologie recommandée Wegovy 2025**
 
+Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines pour minimiser les effets secondaires gastro-intestinaux.
 
+#### **Semaine 1-4 : Dose initiale**
+- **0,25 mg** par semaine (dose d'initiation)
+- Objectif : Accoutumance progressive à la semaglutide
+- Injection sous-cutanée une fois par semaine
 
+#### **Semaine 5-8 : Première augmentation**
+- **0,5 mg** par semaine
+- Maintien si tolérance satisfaisante
+- Surveillance des effets secondaires
 
-## Introduction
+#### **Semaine 9-12 : Deuxième augmentation**
+- **1 mg** par semaine
+- Dose thérapeutique intermédiaire
+- Évaluation de l'efficacité
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+#### **Semaine 13-16 : Dose de maintenance**
+- **1,7 mg** par semaine
+- Dose maximale recommandée
+- Ajustement selon réponse individuelle
 
-## Contexte médical
+### 📈 **Augmentation progressive**
 
-### Cadre réglementaire français
-En France, les agonistes GLP-1 font l'objet d'une surveillance renforcée par l'ANSM. Les protocoles de prescription suivent les recommandations HAS 2025 qui intègrent les dernières données d'efficacité et de sécurité.
+#### **Pourquoi une augmentation lente ?**
+- **Tolérance digestive** : Réduction des nausées et vomissements
+- **Adaptation métabolique** : Temps nécessaire pour l'organisme
+- **Sécurité optimale** : Minimisation des effets secondaires
 
-### Profil des patients concernés
-Les critères d'éligibilité tiennent compte de multiples facteurs :
-- **IMC** et composition corporelle
-- **Antécédents médicaux** complets
+#### **Signes de bonne tolérance**
+- Pas d'effets secondaires gastro-intestinaux
+- Perte de poids progressive
+- Amélioration des paramètres métaboliques
+- Respect du schéma posologique
+
+### 🎯 **Adaptation individuelle**
+
+#### **Facteurs influençant le dosage**
+- **Poids initial** et composition corporelle
+- **Tolérance individuelle** aux effets secondaires
+- **Réponse thérapeutique** (perte de poids)
 - **Comorbidités** associées
-- **Objectifs thérapeutiques** individualisés
 
-## Analyse détaillée
+#### **Ajustements possibles**
+- **Maintien de dose** : Si effets secondaires
+- **Réduction temporaire** : En cas d'intolérance
+- **Reprise progressive** : Après résolution des symptômes
+- **Arrêt définitif** : Selon avis médical
 
-### Mécanisme d'action
-Les GLP-1, agonistes GLP-1, diabète type 2, perte de poids sont des éléments clés dans ce domaine médical. Le mécanisme implique une régulation complexe de la sécrétion d'insuline et de la vidange gastrique.
+### ⚠️ **Précautions et contre-indications**
 
-### Efficacité clinique documentée
-Les études randomisées contrôlées démontrent :
-- **Réduction HbA1c** : 0,5 à 1,5% selon les molécules
-- **Perte de poids** : Variable selon le profil patient
-- **Amélioration facteurs cardiovasculaires** : Documentée à long terme
-- **Tolérance** : Généralement acceptable avec adaptation posologique
+#### **Contre-indications absolues**
+- Allergie à la semaglutide
+- Antécédents de médullaire thyroïdienne
+- Grossesse et allaitement
+- Insuffisance rénale sévère
 
-### Surveillance médicale requise
-Le protocole de suivi comprend :
-1. **Évaluation initiale** : Bilan complet multidisciplinaire
-2. **Contrôles réguliers** : Marqueurs biologiques et cliniques
-3. **Ajustements thérapeutiques** : Selon la réponse individuelle
-4. **Détection précoce** : Effets indésirables potentiels
+#### **Précautions d'emploi**
+- Surveillance thyroïdienne
+- Contrôle de la glycémie
+- Évaluation cardiovasculaire
+- Suivi ophtalmologique si rétinopathie
 
-## Informations Médicales
+### ❓ **Questions fréquentes**
 
-Les experts français recommandent une approche personnalisée tenant compte du contexte médical global. Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
+#### **Que faire en cas d'oubli d'injection ?**
+- Injection dès que possible dans les 5 jours
+- Reprise du schéma normal ensuite
+- Consultation médicale si doute
 
-### Points clés validés scientifiquement :
-- **Efficacité clinique** : Études randomisées contrôlées
-- **Sécurité d'emploi** : Surveillance post-marketing ANSM  
-- **Rapport bénéfice/risque** : Évaluation individuelle nécessaire
-- **Suivi long terme** : Protocoles établis
+#### **Peut-on arrêter brutalement ?**
+- Non recommandé sans avis médical
+- Risque de rebond pondéral
+- Sevrage progressif si nécessaire
+
+#### **Interaction avec d'autres médicaments ?**
+- Possible avec certains antidiabétiques
+- Consultation pharmacologique recommandée
+- Ajustement des doses si nécessaire
+
+### 📞 **Recommandations médicales**
+
+**Consultez systématiquement votre médecin** avant tout ajustement posologique. Le dosage de Wegovy doit être personnalisé selon votre profil médical et votre réponse thérapeutique.
+
+**Points essentiels à retenir :**
+- Respect strict du protocole d'augmentation
+- Surveillance régulière des effets secondaires
+- Adaptation individuelle obligatoire
+- Suivi médical rapproché indispensable
 
 ### Critères d'arrêt du traitement
 - Effets indésirables majeurs

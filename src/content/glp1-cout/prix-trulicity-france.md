@@ -164,7 +164,7 @@ affiliateCollection: "glp1-cout"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/trulicity-france-prix.svg"
+thumbnail: "/images/thumbnails/trulicity.jpg"
 thumbnailAlt: "Prix et coût du traitement trulicity-france"
 ---
 

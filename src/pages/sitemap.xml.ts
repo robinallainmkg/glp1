@@ -14,7 +14,8 @@ export async function GET() {
     '/guides/guide-complet-wegovy/',
     '/legal/mentions-legales/',
     '/legal/politique-confidentialite/',
-    '/outils/produits-recommandes/'
+    '/outils/produits-recommandes/',
+    '/articles/'
   ];
 
   const collectionPages = [
@@ -37,9 +38,9 @@ export async function GET() {
     '/collections/traitements-glp1/guide-complet-victoza/',
     '/collections/traitements-glp1/guide-complet-rybelsus/',
 
-    // Pages de prix importantes
+    // Pages de prix importantes (NOUVELLES URLS)
     '/collections/glp1-cout/prix-ozempic-france/',
-    '/collections/glp1-cout/prix-mounjaro-france/',
+    '/collections/glp1-cout/prix-mounjaro-france/', // DÉPLACÉ depuis /collections/medicaments-glp1/
     '/collections/glp1-cout/prix-wegovy-france/',
     '/collections/glp1-cout/prix-saxenda-france/',
     '/collections/glp1-cout/prix-trulicity-france/',
@@ -93,6 +94,7 @@ export async function GET() {
     '/collections/regime-glp1/regime-sans-sucre-glp1/',
 
     // Pages d'alternatives
+    '/collections/alternatives-glp1/acupuncture-glp1/',
     '/collections/alternatives-glp1/alternatives-bio-glp1/',
     '/collections/alternatives-glp1/alternatives-naturelles-ozempic/',
     '/collections/alternatives-glp1/berberine-glp1/',
@@ -101,11 +103,11 @@ export async function GET() {
     '/collections/alternatives-glp1/homeopathie-diabete/',
     '/collections/alternatives-glp1/meditation-glp1/',
     '/collections/alternatives-glp1/peut-on-guerir-du-diabete/',
+    '/collections/alternatives-glp1/phytotherapie-glp1/',
     '/collections/alternatives-glp1/plantes-diabete/',
     '/collections/alternatives-glp1/semaglutide-naturel/',
     '/collections/alternatives-glp1/supplements-glp1/',
     '/collections/alternatives-glp1/vinaigre-cidre-glp1/',
-    '/collections/alternatives-glp1/yoga-diabete/',
 
     // Pages de perte de poids
     '/collections/glp1-perte-de-poids/avant-apres-glp1/',
@@ -136,11 +138,15 @@ ${allPages.map(page => `  <url>
     <changefreq>${page === '' ? 'weekly' :
                   page.includes('prix') || page.includes('cout') ? 'weekly' :
                   page.includes('traitement') || page.includes('guide') ? 'monthly' :
+                  page.includes('quel-traitement-glp1-choisir') ? 'weekly' :
                   'monthly'}</changefreq>
     <priority>${page === '' ? '1.0' :
+                page.includes('quel-traitement-glp1-choisir') ? '0.95' :
                 page.includes('guide-complet') || page.includes('nouveaux-medicaments') ? '0.9' :
-                page.includes('collections/') ? '0.8' :
-                '0.7'}</priority>
+                page.includes('prix-ozempic') || page.includes('prix-mounjaro') || page.includes('prix-wegovy') ? '0.85' :
+                page.includes('collections/traitements-glp1/') ? '0.8' :
+                page.includes('collections/') ? '0.7' :
+                '0.6'}</priority>
   </url>`).join('\n')}
 </urlset>`;
 

@@ -13,6 +13,8 @@ export interface Props {
   affiliateProducts?: any[];
   affiliateConfig?: any;
   showAffiliateSidebar?: boolean;
+  hideArticleHeader?: boolean;
+  disableInline?: boolean;
   article?: any;
   detectedCategory?: string;
   categoryIcon?: string;
@@ -42,7 +44,9 @@ const detectedCategory = props.detectedCategory ?? props.category ?? (article?.d
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
 const config = props.config ?? {};
+const affiliateConfig = props.affiliateConfig ?? {};
 const shouldInjectProducts = props.shouldInjectProducts ?? false;
+const hideArticleHeader = props.hideArticleHeader ?? false;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -73,6 +77,7 @@ const shouldInjectProducts = props.shouldInjectProducts ?? false;
   </nav>
 
   <!-- Article Header -->
+  {!hideArticleHeader && (
   <header class="article-header bg-gradient-to-br from-slate-50 to-violet-50 border-b border-gray-200">
     <div class="container mx-auto px-4 py-6">
       <div class="max-w-6xl mx-auto">
@@ -133,6 +138,7 @@ const shouldInjectProducts = props.shouldInjectProducts ?? false;
       </div>
     </div>
   </header>
+  )}
 
   <main class="adaptive-article-layout">
     <div class={`article-wrapper ${availableProducts.length > 0 ? 'has-sidebar' : ''}`}>
@@ -147,7 +153,8 @@ const shouldInjectProducts = props.shouldInjectProducts ?? false;
       {availableProducts.length > 0 && (
         <AdaptiveAffiliateDisplay 
           affiliateProducts={availableProducts}
-          config={config}
+          config={affiliateConfig || config}
+          disableInline={props.disableInline || false}
           shouldInject={shouldInjectProducts}
         />
       )}
@@ -374,37 +381,35 @@ const shouldInjectProducts = props.shouldInjectProducts ?? false;
   document.addEventListener('DOMContentLoaded', function() {
     const articleContent = document.getElementById('article-content');
     const inlineContainer = document.querySelector('.inline-products-container');
-    
+
     if (!articleContent || !inlineContainer) return;
-    
+
     // Récupérer tous les produits inline disponibles
     const inlineProducts = inlineContainer.querySelectorAll('.inline-affiliate-product');
-    
+
     if (inlineProducts.length === 0) return;
-    
+
     // Récupérer tous les paragraphes de l'article
     const paragraphs = articleContent.querySelectorAll('p');
-    
+
     if (paragraphs.length < 3) return; // Pas assez de contenu
-    
+
     // Configuration d'injection : 2ème, 5ème, 7ème paragraphe
     const injectionPoints = [2, 5, 7]; // Index basé sur 0 (donc 3ème, 6ème, 8ème paragraphe)
-    
+
     let productIndex = 0;
-    
+
     injectionPoints.forEach(paragraphIndex => {
       if (paragraphIndex < paragraphs.length && productIndex < inlineProducts.length) {
         const targetParagraph = paragraphs[paragraphIndex];
         const productToInject = inlineProducts[productIndex].cloneNode(true);
-        
+
         // Insérer le produit après le paragraphe cible
         targetParagraph.parentNode.insertBefore(productToInject, targetParagraph.nextSibling);
-        
+
         productIndex++;
       }
-    });
-    
-    // Cacher le conteneur original des produits inline (ils sont maintenant dans l'article)
+    });    // Cacher le conteneur original des produits inline (ils sont maintenant dans l'article)
     inlineContainer.style.display = 'none';
   });
 </script>

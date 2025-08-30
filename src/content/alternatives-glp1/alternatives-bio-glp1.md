@@ -1,5 +1,6 @@
 ---
 title: "Alternatives Bio GLP-1"
+description: "Guide complet sur Alternatives Bio GLP-1 : informations médicales et recommandations d'experts."
 slug: "alternatives-bio-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

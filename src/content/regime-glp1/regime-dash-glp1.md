@@ -1,5 +1,6 @@
 ---
 title: "Régime Dash GLP-1"
+description: "Guide complet du régime DASH combiné aux traitements GLP-1. Découvrez comment optimiser votre alimentation pour potentialiser les effets des médicaments."
 slug: "regime-dash-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

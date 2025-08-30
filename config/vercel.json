@@ -37,5 +37,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/collections/medicaments-glp1/mounjaro-prix-france/:path*",
+      "destination": "/collections/glp1-cout/prix-mounjaro-france/:path*",
+      "permanent": true
+    }
   ]
 }

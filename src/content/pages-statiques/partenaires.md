@@ -3,7 +3,7 @@ title: "Nos Partenaires"
 description: "Découvrez nos partenaires de confiance qui nous accompagnent dans notre mission d'information sur les traitements GLP-1 et la santé métabolique."
 slug: "partenaires"
 pubDate: 2025-08-21
-thumbnail: "/images/thumbnails/partenaires-glp1-illus.svg"
+thumbnail: "/images/thumbnails/partenaires.svg"
 category: "Partenariat"
 featured: false
 ---

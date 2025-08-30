@@ -1,22 +1,8 @@
 ---
 // Composant pour insérer des produits d'affiliation dans le contenu d'article
-export interface Props {
-  product: {
-    productName: string;
-    brand: string;
-    productImage: string;
-    discountPercent?: number;
-    promoCode?: string;
-    externalLink: string;
-    category: string;
-    benefitsText: any;
-    featured?: boolean;
-  };
-  position?: 'left' | 'right' | 'center';
-  size?: 'small' | 'medium' | 'large';
-  showFullDescription?: boolean;
-}
-
+// export interface Props {
+//   product: any;
+// }
 const { 
   product, 
   position = 'right', 

@@ -232,7 +232,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
 
-thumbnail: "/images/thumbnails/saxenda-effets-secondaires.svg"
+thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
 thumbnailAlt: "Effets secondaires du traitement saxenda"
 ---
 

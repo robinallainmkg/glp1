@@ -19,3 +19,6 @@ deploy-production.ps1
 node_modules/
 dist/
 .vercel/
+# Ignore local tsconfig created accidentally in components folder
+src/components/tsconfig.json
+src/components/tsconfig.json

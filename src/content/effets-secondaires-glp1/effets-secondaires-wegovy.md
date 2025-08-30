@@ -9,6 +9,7 @@ updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
+image: "/images/thumbnails/wegovy.jpg"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
@@ -238,7 +239,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
 
-thumbnail: "/images/thumbnails/wegovy-effets-secondaires.svg"
+thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Effets secondaires du traitement wegovy"
 ---
 

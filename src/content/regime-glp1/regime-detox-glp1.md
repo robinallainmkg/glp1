@@ -1,5 +1,6 @@
 ---
 title: "Régime Detox GLP-1"
+description: "Guide complet du régime détox combiné aux traitements GLP-1. Découvrez comment détoxifier votre organisme tout en prenant des médicaments GLP-1."
 slug: "regime-detox-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

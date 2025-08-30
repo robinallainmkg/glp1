@@ -9,6 +9,7 @@ updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
+image: "/images/thumbnails/wegovy.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
@@ -165,7 +166,7 @@ affiliateCollection: "glp1-cout"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/wegovy-france-prix.svg"
+thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
 ---
 

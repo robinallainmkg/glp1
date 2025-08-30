@@ -2,10 +2,10 @@
 // Layout unifié pour toutes les pages du site
 import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
-import AdaptiveAffiliateDisplay from '../components/AdaptiveAffiliateDisplay.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
+import TempTest from '../components/temp-test.astro';
 
 export interface Props {
   title: string;
@@ -173,7 +173,10 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
           <slot />
         </div>
         <aside class="affiliate-sidebar">
-    <AdaptiveAffiliateDisplay affiliateProducts={availableProducts} config={affiliateConfig} />
+          {availableProducts && (
+            <AdaptiveAffiliateDisplay affiliateProducts={availableProducts} config={affiliateConfig} />
+          )}
+          <TempTest />
         </aside>
       </div>
     ) : (

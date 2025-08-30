@@ -9,6 +9,7 @@ updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
+image: "/images/thumbnails/ozempic-medical-care.jpg"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
@@ -233,7 +234,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
 
-thumbnail: "/images/thumbnails/ozempic-effets-secondaires.svg"
+thumbnail: "/images/thumbnails/ozempic-medical-care.jpg"
 thumbnailAlt: "Effets secondaires du traitement ozempic"
 ---
 

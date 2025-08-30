@@ -1,5 +1,6 @@
 ---
 title: "Isglt2 Liste"
+description: "Liste complète des médicaments iSGLT2 et leur compatibilité avec les traitements GLP-1. Guide pour combiner ces thérapies efficacement."
 slug: "isglt2-liste"
 pubDate: 2025-08-20
 author: "Julien Lefèvre"

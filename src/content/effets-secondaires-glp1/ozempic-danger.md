@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Ozempic 2025 : Tout Savoir"
+description: "Guide complet sur Ozempic 2025 : effets secondaires, dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée."
 slug: "ozempic-danger"
 pubDate: 2025-08-10
 author: "Karim Benali"

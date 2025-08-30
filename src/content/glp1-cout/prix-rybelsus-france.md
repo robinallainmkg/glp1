@@ -163,7 +163,7 @@ affiliateCollection: "glp1-cout"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/rybelsus-france-prix.svg"
+thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
 thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 ---
 
