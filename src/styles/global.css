@@ -229,6 +229,24 @@ article h3, section h3, aside h3, nav h3, header h3, footer h3, main h3 {
   z-index: 40;
 }
 
+.mobile-menu-overlay {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 35;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .new-nav-mobile.open {
   transform: translateY(0);
   opacity: 1;
