@@ -1,0 +1,818 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'Sport et GLP-1 : Optimiser votre perte de poids',
+  description: 'Guide complet pour combiner activité physique et traitement GLP-1. Programmes sportifs adaptés, précautions et maximisation des résultats.',
+  keywords: ['sport GLP-1', 'activité physique', 'exercice perte de poids', 'fitness traitement', 'entraînement diabète', 'musculation GLP-1'],
+  seoTitle: 'Sport et GLP-1 - Guide Complet d\'Activité Physique Adaptée',
+  seoDescription: 'Découvrez comment optimiser votre perte de poids en combinant sport et GLP-1. Programmes adaptés, précautions et conseils d\'experts.',
+  category: 'guides',
+  publishedAt: '2025-01-24',
+  updatedAt: '2025-01-24',
+  featured: true,
+  author: 'Dr. Sarah Martin',
+  readingTime: '12 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/sport-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="hero-section">
+      <h1>🏃‍♀️ Sport + GLP-1 = Résultats Multipliés</h1>
+      <p class="hero-subtitle">L'activité physique potentialise les effets des GLP-1 pour une perte de poids optimale et durable.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">+25%</span>
+          <span class="stat-label">Perte de poids supplémentaire</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">+40%</span>
+          <span class="stat-label">Maintien du poids</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">+30%</span>
+          <span class="stat-label">Amélioration cardio</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="benefits-section">
+      <h2>💪 Pourquoi Combiner Sport et GLP-1 ?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3>Effet Synergique</h3>
+          <p>Le sport améliore la sensibilité à l'insuline et potentialise l'action des GLP-1 sur le métabolisme.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏋️</div>
+          <h3>Préservation Musculaire</h3>
+          <p>L'exercice physique prévient la perte musculaire souvent associée à la perte de poids rapide.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">❤️</div>
+          <h3>Santé Cardiaque</h3>
+          <p>Réduction des facteurs de risque cardiovasculaire et amélioration de la condition physique.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🧠</div>
+          <h3>Bien-être Mental</h3>
+          <p>Libération d'endorphines et amélioration de l'humeur, essentiels pour maintenir la motivation.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔥</div>
+          <h3>Métabolisme Boosté</h3>
+          <p>Augmentation de la dépense calorique et amélioration du métabolisme de base.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Résultats Durables</h3>
+          <p>Meilleure consolidation des pertes de poids et prévention de la reprise pondérale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sports-section">
+      <h2>🎯 Activités Recommandées sous GLP-1</h2>
+
+      <div class="sport-card recommended">
+        <div class="sport-header">
+          <h3>🚶 Marche Rapide</h3>
+          <span class="difficulty easy">Facile</span>
+        </div>
+        <div class="sport-content">
+          <p><strong>Activité idéale pour débuter :</strong> Accessible à tous, faible risque d'hypoglycémie.</p>
+          <div class="sport-details">
+            <div class="detail">
+              <strong>Fréquence :</strong> 5-7 jours/semaine
+            </div>
+            <div class="detail">
+              <strong>Durée :</strong> 30-60 minutes
+            </div>
+            <div class="detail">
+              <strong>Intensité :</strong> Marche rapide (6-7 km/h)
+            </div>
+          </div>
+          <div class="tips">
+            <strong>Conseils :</strong>
+            <ul>
+              <li>Commencez par 20 minutes et augmentez progressivement</li>
+              <li>Marchez après les repas pour réguler la glycémie</li>
+              <li>Utilisez une application de podomètre pour suivre vos progrès</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sport-card recommended">
+        <div class="sport-header">
+          <h3>🏊 Natation</h3>
+          <span class="difficulty easy">Facile</span>
+        </div>
+        <div class="sport-content">
+          <p><strong>Sport complet sans impact :</strong> Excellent pour les articulations et la condition cardiovasculaire.</p>
+          <div class="sport-details">
+            <div class="detail">
+              <strong>Fréquence :</strong> 3-4 jours/semaine
+            </div>
+            <div class="detail">
+              <strong>Durée :</strong> 30-45 minutes
+            </div>
+            <div class="detail">
+              <strong>Intensité :</strong> Nage continue modérée
+            </div>
+          </div>
+          <div class="tips">
+            <strong>Conseils :</strong>
+            <ul>
+              <li>Alternez crawl, dos crawlé et brasse</li>
+              <li>Surveillez votre fréquence cardiaque</li>
+              <li>Parfait pour les personnes avec surcharge pondérale</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sport-card intermediate">
+        <div class="sport-header">
+          <h3>🚴 Vélo</h3>
+          <span class="difficulty medium">Intermédiaire</span>
+        </div>
+        <div class="sport-content">
+          <p><strong>Exercice cardiovasculaire efficace :</strong> Bon compromis intensité/faible impact.</p>
+          <div class="sport-details">
+            <div class="detail">
+              <strong>Fréquence :</strong> 3-5 jours/semaine
+            </div>
+            <div class="detail">
+              <strong>Durée :</strong> 30-45 minutes
+            </div>
+            <div class="detail">
+              <strong>Intensité :</strong> 60-70% FCM
+            </div>
+          </div>
+          <div class="tips">
+            <strong>Conseils :</strong>
+            <ul>
+              <li>Commencez en vélo d'appartement si besoin</li>
+              <li>Alternez séances en salle et extérieur</li>
+              <li>Attention aux hypoglycémies pendant l'effort</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sport-card intermediate">
+        <div class="sport-header">
+          <h3>💪 Musculation</h3>
+          <span class="difficulty medium">Intermédiaire</span>
+        </div>
+        <div class="sport-content">
+          <p><strong>Essentiel pour la masse musculaire :</strong> Complète parfaitement les GLP-1.</p>
+          <div class="sport-details">
+            <div class="detail">
+              <strong>Fréquence :</strong> 2-3 jours/semaine
+            </div>
+            <div class="detail">
+              <strong>Durée :</strong> 45-60 minutes
+            </div>
+            <div class="detail">
+              <strong>Intensité :</strong> 60-80% 1RM
+            </div>
+          </div>
+          <div class="tips">
+            <strong>Conseils :</strong>
+            <ul>
+              <li>Travail en circuit : 3 séries de 10-12 répétitions</li>
+              <li>Tous les groupes musculaires (jambes, bras, dos, abdos)</li>
+              <li>Échauffement obligatoire de 10 minutes</li>
+              <li>Repos de 48h entre les séances du même groupe musculaire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sport-card advanced">
+        <div class="sport-header">
+          <h3>🏃 Course à Pied</h3>
+          <span class="difficulty hard">Avancé</span>
+        </div>
+        <div class="sport-content">
+          <p><strong>Activité cardiovasculaire intense :</strong> Réservée aux personnes entraînées.</p>
+          <div class="sport-details">
+            <div class="detail">
+              <strong>Fréquence :</strong> 2-3 jours/semaine
+            </div>
+            <div class="detail">
+              <strong>Durée :</strong> 20-40 minutes
+            </div>
+            <div class="detail">
+              <strong>Intensité :</strong> Alternance footing/récupération
+            </div>
+          </div>
+          <div class="tips">
+            <strong>Précautions importantes :</strong>
+            <ul>
+              <li>Risque élevé d'hypoglycémie - surveillance glycémique</li>
+              <li>Échauffement de 15 minutes obligatoire</li>
+              <li>Collations énergétiques si nécessaire</li>
+              <li>Arrêt immédiat en cas de malaise</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="precautions-section">
+      <h2>⚠️ Précautions Importantes</h2>
+      <div class="precautions-grid">
+        <div class="precaution-card">
+          <h3>🍬 Hypoglycémie</h3>
+          <p><strong>Risque majoré pendant l'effort physique</strong></p>
+          <ul>
+            <li>Surveillez les signes : tremblements, sueurs, confusion</li>
+            <li>Emportez toujours du sucre rapide (bonbons, jus)</li>
+            <li>Pratiquez de préférence après les repas</li>
+            <li>Informez vos partenaires d'activité</li>
+          </ul>
+        </div>
+
+        <div class="precaution-card">
+          <h3>💧 Hydratation</h3>
+          <p><strong>Essentielle pour éviter la déshydratation</strong></p>
+          <ul>
+            <li>Buvez avant, pendant et après l'effort</li>
+            <li>Eau plate préférée aux boissons sucrées</li>
+            <li>Compensez les pertes en sodium si transpiration importante</li>
+          </ul>
+        </div>
+
+        <div class="precaution-card">
+          <h3>🏥 Contre-indications</h3>
+          <p><strong>Certaines conditions médicales nécessitent prudence</strong></p>
+          <ul>
+            <li>Rétinopathie diabétique évolutive</li>
+            <li>Insuffisance cardiaque décompensée</li>
+            <li>Hypertension non contrôlée</li>
+            <li>Consultation médicale préalable obligatoire</li>
+          </ul>
+        </div>
+
+        <div class="precaution-card">
+          <h3>⏰ Moment Optimal</h3>
+          <p><strong>Adaptez l'activité selon votre traitement</strong></p>
+          <ul>
+            <li>Après les repas pour éviter l'hypoglycémie</li>
+            <li>Évitez l'effort intense à jeun</li>
+            <li>Respectez les horaires d'injection</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section">
+      <h2>📅 Programme Sportif Recommandé</h2>
+      <div class="program-week">
+        <h3>Semaine Type - Niveau Débutant</h3>
+        <div class="week-grid">
+          <div class="day-card">
+            <h4>Lundi</h4>
+            <p>Marche rapide 30 min</p>
+            <span class="intensity">Modéré</span>
+          </div>
+          <div class="day-card">
+            <h4>Mardi</h4>
+            <p>Musculation légère 30 min</p>
+            <span class="intensity">Modéré</span>
+          </div>
+          <div class="day-card">
+            <h4>Mercredi</h4>
+            <p>Repos ou marche légère</p>
+            <span class="intensity">Léger</span>
+          </div>
+          <div class="day-card">
+            <h4>Jeudi</h4>
+            <p>Natation 30 min</p>
+            <span class="intensity">Modéré</span>
+          </div>
+          <div class="day-card">
+            <h4>Vendredi</h4>
+            <p>Marche rapide 30 min</p>
+            <span class="intensity">Modéré</span>
+          </div>
+          <div class="day-card">
+            <h4>Samedi</h4>
+            <p>Activité libre (randonnée, vélo)</p>
+            <span class="intensity">Variable</span>
+          </div>
+          <div class="day-card">
+            <h4>Dimanche</h4>
+            <p>Repos complet</p>
+            <span class="intensity">Repos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-tips">
+        <h3>📈 Progression Recommandée</h3>
+        <ul>
+          <li><strong>Mois 1-2 :</strong> Focus sur la régularité (3-4 séances/semaine)</li>
+          <li><strong>Mois 3-4 :</strong> Augmentation progressive de l'intensité</li>
+          <li><strong>Mois 5-6 :</strong> Introduction d'activités variées</li>
+          <li><strong>Au-delà :</strong> Maintien et adaptation selon objectifs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="nutrition-section">
+      <h2>🥗 Alimentation et Récupération</h2>
+      <div class="nutrition-grid">
+        <div class="nutrition-card">
+          <h3>🍎 Avant l'Effort</h3>
+          <ul>
+            <li>Repas complet 2-3h avant l'activité</li>
+            <li>Glucides complexes (pâtes, riz complet)</li>
+            <li>Protéines maigres (poulet, poisson)</li>
+            <li>Évitez les aliments riches en fibres juste avant</li>
+          </ul>
+        </div>
+
+        <div class="nutrition-card">
+          <h3>⚡ Pendant l'Effort</h3>
+          <ul>
+            <li>Eau régulièrement (toutes les 15-20 min)</li>
+            <li>Si effort > 60 min : boisson énergétique diluée</li>
+            <li>Surveillance des signes d'hypoglycémie</li>
+            <li>Collations d'urgence prêtes</li>
+          </ul>
+        </div>
+
+        <div class="nutrition-card">
+          <h3>🔄 Après l'Effort</h3>
+          <ul>
+            <li>Repas de récupération dans l'heure</li>
+            <li>Protéines + glucides (ratio 1:1)</li>
+            <li>Fruits et légumes pour les antioxydants</li>
+            <li>Boissons riches en électrolytes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Prêt à Booster vos Résultats ?</h3>
+        <p>Associez sport et GLP-1 pour des résultats optimaux. Nos coachs sportifs spécialisés vous accompagnent.</p>
+        <a href="/contact" class="cta-button">Consulter un Coach</a>
+      </div>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .hero-section {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffd700;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .benefits-section {
+    margin-bottom: 4rem;
+  }
+
+  .benefits-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .sports-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .sport-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid;
+  }
+
+  .sport-card.recommended {
+    border-left-color: #10b981;
+  }
+
+  .sport-card.intermediate {
+    border-left-color: #f59e0b;
+  }
+
+  .sport-card.advanced {
+    border-left-color: #ef4444;
+  }
+
+  .sport-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .sport-header h3 {
+    color: #1f2937;
+    margin: 0;
+  }
+
+  .difficulty {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .difficulty.easy {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .difficulty.medium {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .difficulty.hard {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+
+  .sport-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .detail {
+    background: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .detail strong {
+    color: #1f2937;
+  }
+
+  .tips {
+    background: #f0f9ff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .tips strong {
+    color: #0369a1;
+  }
+
+  .tips ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.5rem;
+  }
+
+  .tips li {
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+  }
+
+  .precautions-section {
+    background: #fef3c7;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .precautions-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #92400e;
+  }
+
+  .precautions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .precaution-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .precaution-card h3 {
+    color: #92400e;
+    margin-bottom: 1rem;
+  }
+
+  .precaution-card p {
+    color: #78350f;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .precaution-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .precaution-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .program-section {
+    margin-bottom: 4rem;
+  }
+
+  .program-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .program-week h3 {
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .day-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .day-card h4 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .day-card p {
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .intensity {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: #e5e7eb;
+    color: #374151;
+  }
+
+  .progress-tips {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+
+  .progress-tips h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .progress-tips ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .progress-tips li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .nutrition-section {
+    background: #f0fdf4;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .nutrition-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #166534;
+  }
+
+  .nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .nutrition-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nutrition-card h3 {
+    color: #166534;
+    margin-bottom: 1rem;
+  }
+
+  .nutrition-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .nutrition-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #10b981;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 2rem 1rem;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .hero-stats {
+      gap: 1rem;
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .week-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .precautions-grid,
+    .nutrition-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sport-details {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

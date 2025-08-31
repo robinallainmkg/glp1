@@ -1,0 +1,963 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'Psychologie et Motivation sous GLP-1 : Le Mental Gagnant',
+  description: 'Guide complet sur les aspects psychologiques du traitement GLP-1. Gestion des émotions, motivation durable et accompagnement mental.',
+  keywords: ['psychologie GLP-1', 'motivation traitement', 'aspects mentaux', 'émotions perte de poids', 'soutien psychologique', 'mental gagnant'],
+  seoTitle: 'Psychologie GLP-1 - Aspects Mentaux et Motivation Durable',
+  seoDescription: 'Découvrez l\'importance des aspects psychologiques dans le traitement GLP-1. Stratégies pour maintenir motivation et gérer émotions.',
+  category: 'guides',
+  publishedAt: '2025-01-26',
+  updatedAt: '2025-01-26',
+  featured: true,
+  author: 'Dr. Sarah Martin',
+  readingTime: '15 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/psychologie-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1>🧠 Le Mental : Clé du Succès GLP-1</h1>
+        <p class="hero-subtitle">
+          80% du succès d'un traitement GLP-1 dépend de votre état d'esprit et de votre capacité à maintenir la motivation.
+        </p>
+        <div class="hero-quote">
+          <blockquote>
+            "La perte de poids commence dans la tête avant d'arriver dans le corps"
+          </blockquote>
+          <cite>- Psychologue spécialisé en nutrition</cite>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mind-stats">
+          <div class="stat">
+            <span class="stat-number">80%</span>
+            <span class="stat-label">Mental</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">15%</span>
+            <span class="stat-label">Médicament</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5%</span>
+            <span class="stat-label">Alimentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="challenges-section">
+      <h2>💭 Défis Psychologiques du Traitement GLP-1</h2>
+      <div class="challenges-grid">
+        <div class="challenge-card">
+          <div class="challenge-icon">😰</div>
+          <h3>Attentes Irréalistes</h3>
+          <p>Beaucoup s'attendent à des résultats "magiques" sans effort personnel.</p>
+          <div class="challenge-impact">
+            <strong>Conséquence :</strong> Déception et abandon précoce
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-icon">📉</div>
+          <h3>Plateau de Stagnation</h3>
+          <p>Périodes où la perte de poids ralentit naturellement.</p>
+          <div class="challenge-impact">
+            <strong>Conséquence :</strong> Démotivation et découragement
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-icon">🤢</div>
+          <h3>Effets Secondaires</h3>
+          <p>Nausées et inconfort digestif peuvent affecter le moral.</p>
+          <div class="challenge-impact">
+            <strong>Conséquence :</strong> Tentation d'arrêter le traitement
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-icon">👥</div>
+          <h3>Pression Sociale</h3>
+          <p>Commentaires des proches ou regards extérieurs.</p>
+          <div class="challenge-impact">
+            <strong>Conséquence :</strong> Stress supplémentaire et culpabilité
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-icon">🔄</div>
+          <h3>Reprise de Poids</h3>
+          <p>Peur de reprendre du poids après l'arrêt du traitement.</p>
+          <div class="challenge-impact">
+            <strong>Conséquence :</strong> Anxiété et manque de confiance
+          </div>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-icon">⏰</div>
+          <h3>Changement d'Habitudes</h3>
+          <p>Difficulté à modifier durablement son mode de vie.</p>
+          <div class="challenge-impact">
+            <strong>Conséquence :</strong> Résistance au changement
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mindset-section">
+      <h2>🎯 Développer le Mindset Gagnant</h2>
+
+      <div class="mindset-card philosophy">
+        <h3>📚 Philosophie du Changement</h3>
+        <div class="mindset-content">
+          <p><strong>Le GLP-1 est un outil, pas une solution miracle.</strong></p>
+          <div class="philosophy-points">
+            <div class="point">
+              <h4>🔧 Outil d'Apprentissage</h4>
+              <p>Profitez de la période sous traitement pour apprendre de nouvelles habitudes alimentaires et sportives.</p>
+            </div>
+            <div class="point">
+              <h4>⏳ Temps d'Adaptation</h4>
+              <p>Accordez-vous 3-6 mois pour que votre corps et votre esprit s'adaptent aux changements.</p>
+            </div>
+            <div class="point">
+              <h4>🎯 Objectifs Progressifs</h4>
+              <p>Célébrez chaque petite victoire plutôt que de vous focaliser uniquement sur le résultat final.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mindset-card motivation">
+        <h3>⚡ Stratégies de Motivation</h3>
+        <div class="mindset-content">
+          <p><strong>Maintenir la motivation sur le long terme.</strong></p>
+          <div class="motivation-strategies">
+            <div class="strategy">
+              <h4>📝 Journal de Bord</h4>
+              <ul>
+                <li>Notez vos progrès quotidiens</li>
+                <li>Célébrez les victoires (même petites)</li>
+                <li>Identifiez les déclencheurs émotionnels</li>
+                <li>Remarquez les améliorations de santé</li>
+              </ul>
+            </div>
+            <div class="strategy">
+              <h4>🎉 Système de Récompenses</h4>
+              <ul>
+                <li>Récompenses non-alimentaires (spa, vêtement)</li>
+                <li>Objectifs intermédiaires motivants</li>
+                <li>Partage des succès avec vos proches</li>
+                <li>Traitement spécial chaque mois d'atteint</li>
+              </ul>
+            </div>
+            <div class="strategy">
+              <h4>👥 Réseau de Soutien</h4>
+              <ul>
+                <li>Partagez votre parcours avec des amis compréhensifs</li>
+                <li>Rejoignez des communautés en ligne</li>
+                <li>Consultez un psychologue nutritionnel</li>
+                <li>Échangez avec d'autres patients sous GLP-1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="emotions-section">
+      <h2>😊 Gestion Émotionnelle</h2>
+
+      <div class="emotion-card">
+        <h3>🍫 Gestion des Envies Alimentaires</h3>
+        <div class="emotion-content">
+          <p><strong>Comprendre l'origine émotionnelle des fringales.</strong></p>
+          <div class="emotion-strategies">
+            <div class="strategy">
+              <h4>🔍 Identifier les Déclencheurs</h4>
+              <p>Stress, ennui, tristesse, colère... Apprenez à reconnaître vos émotions avant qu'elles ne se transforment en compulsions alimentaires.</p>
+            </div>
+            <div class="strategy">
+              <h4>🛑 Pause de 5 Minutes</h4>
+              <p>Lors d'une envie soudaine, attendez 5 minutes avant d'agir. Souvent, l'envie passe d'elle-même.</p>
+            </div>
+            <div class="strategy">
+              <h4>🔄 Alternatives Saines</h4>
+              <p>Remplacez la nourriture par des activités : marche, méditation, appel à un ami, bain relaxant.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="emotion-card">
+        <h3>📉 Surmonter les Plateaux</h3>
+        <div class="emotion-content">
+          <p><strong>Les plateaux sont normaux et temporaires.</strong></p>
+          <div class="plateau-tips">
+            <div class="tip">
+              <h4>⏳ Patience et Persévérance</h4>
+              <p>Un plateau de 2-4 semaines est normal. Votre corps s'adapte aux changements.</p>
+            </div>
+            <div class="tip">
+              <h4>🔄 Ajustements Progressifs</h4>
+              <p>Modifiez légèrement votre alimentation ou activité physique plutôt que de tout changer radicalement.</p>
+            </div>
+            <div class="tip">
+              <h4>📊 Nouvelles Métriques</h4>
+              <p>Suivez d'autres indicateurs : tour de taille, tension, énergie, sommeil, plutôt que seulement la balance.</p>
+            </div>
+            <div class="tip">
+              <h4>🎯 Focus sur les Bénéfices</h4>
+              <p>Rappelez-vous les améliorations de santé : meilleure glycémie, moins de fatigue, meilleure humeur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="emotion-card">
+        <h3>😢 Gestion des Échecs</h3>
+        <div class="emotion-content">
+          <p><strong>Les écarts font partie du processus d'apprentissage.</strong></p>
+          <div class="failure-recovery">
+            <div class="step">
+              <h4>1️⃣ Auto-Compassion</h4>
+              <p>Traitez-vous avec la même gentillesse qu'envers un ami. Un écart ne fait pas de vous un échec.</p>
+            </div>
+            <div class="step">
+              <h4>2️⃣ Analyse sans Jugement</h4>
+              <p>Demandez-vous : "Qu'est-ce qui s'est passé ? Comment puis-je faire différemment la prochaine fois ?"</p>
+            </div>
+            <div class="step">
+              <h4>3️⃣ Reprise Immédiate</h4>
+              <p>Ne remettez pas au lendemain. Reprenez vos habitudes dès le repas suivant.</p>
+            </div>
+            <div class="step">
+              <h4>4️⃣ Apprentissage</h4>
+              <p>Chaque "erreur" est une opportunité d'apprendre et de renforcer votre résilience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-section">
+      <h2>🤝 Accompagnement Psychologique</h2>
+
+      <div class="support-types">
+        <div class="support-card">
+          <h3>🧑‍⚕️ Psychologue Nutritionnel</h3>
+          <div class="support-content">
+            <p><strong>Spécialiste des troubles du comportement alimentaire.</strong></p>
+            <ul>
+              <li>Compréhension des mécanismes psychologiques</li>
+              <li>Stratégies personnalisées de gestion du stress</li>
+              <li>Accompagnement dans les changements d'habitudes</li>
+              <li>Soutien motivationnel continu</li>
+            </ul>
+            <div class="support-cta">
+              <strong>Quand consulter :</strong> Difficultés émotionnelles, compulsions, manque de motivation
+            </div>
+          </div>
+        </div>
+
+        <div class="support-card">
+          <h3>👥 Groupes de Parole</h3>
+          <div class="support-content">
+            <p><strong>Échange d'expériences avec d'autres patients.</strong></p>
+            <ul>
+              <li>Partage d'expériences similaires</li>
+              <li>Sentiment d'appartenance à une communauté</li>
+              <li>Conseils pratiques tirés du vécu</li>
+              <li>Motivation par les succès des autres</li>
+            </ul>
+            <div class="support-cta">
+              <strong>Avantages :</strong> Gratuit, accessible, soutien émotionnel
+            </div>
+          </div>
+        </div>
+
+        <div class="support-card">
+          <h3>📱 Applications et Coachs</h3>
+          <div class="support-content">
+            <p><strong>Accompagnement digital personnalisé.</strong></p>
+            <ul>
+              <li>Rappels et suivi quotidiens</li>
+              <li>Contenu éducatif adapté</li>
+              <li>Coach virtuel disponible 24/7</li>
+              <li>Suivi des progrès en temps réel</li>
+            </ul>
+            <div class="support-cta">
+              <strong>Recommandé :</strong> MyFitnessPal, Noom, Lose It
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-stories">
+      <h2>🏆 Témoignages Inspirants</h2>
+      <div class="stories-grid">
+        <div class="story-card">
+          <div class="story-header">
+            <div class="story-avatar">M</div>
+            <div class="story-info">
+              <h4>Marie, 42 ans</h4>
+              <span class="story-result">-18 kg en 8 mois</span>
+            </div>
+          </div>
+          <blockquote>
+            "Le plus dur n'était pas le traitement physique, mais de changer ma relation avec la nourriture.
+            Mon psychologue m'a aidée à comprendre que je mangeais pour combler un vide émotionnel.
+            Aujourd'hui, je me sens enfin en paix avec mon corps."
+          </blockquote>
+        </div>
+
+        <div class="story-card">
+          <div class="story-header">
+            <div class="story-avatar">P</div>
+            <div class="story-info">
+              <h4>Philippe, 55 ans</h4>
+              <span class="story-result">-25 kg en 10 mois</span>
+            </div>
+          </div>
+          <blockquote>
+            "Les plateaux me décourageaient énormément. J'ai appris à me focaliser sur mes victoires quotidiennes
+            plutôt que sur la balance. Chaque jour où je respecte mes habitudes est une victoire.
+            Le mental a tout changé."
+          </blockquote>
+        </div>
+
+        <div class="story-card">
+          <div class="story-header">
+            <div class="story-avatar">S</div>
+            <div class="story-info">
+              <h4>Sophie, 38 ans</h4>
+              <span class="story-result">-15 kg en 6 mois</span>
+            </div>
+          </div>
+          <blockquote>
+            "J'ai rejoint un groupe de soutien et c'était salvateur. Entendre les difficultés des autres
+            m'a fait réaliser que je n'étais pas seule. Leurs encouragements m'ont portée pendant les moments difficiles."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="action-plan">
+      <h2>🚀 Plan d'Action Mental</h2>
+      <div class="plan-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Évaluation Initiale</h3>
+          <p>Identifiez vos motivations profondes et vos freins psychologiques.</p>
+          <ul>
+            <li>Pourquoi voulez-vous perdre du poids ?</li>
+            <li>Quelles sont vos peurs ?</li>
+            <li>Quels sont vos déclencheurs émotionnels ?</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Objectifs Réalistes</h3>
+          <p>Définissez des objectifs atteignables et mesurables.</p>
+          <ul>
+            <li>Objectifs de santé plutôt que d'apparence</li>
+            <li>Échéances réalistes (pas de précipitation)</li>
+            <li>Célébration des progrès intermédiaires</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Routine Quotidienne</h3>
+          <p>Créez des habitudes durables et non contraignantes.</p>
+          <ul>
+            <li>Méditation matinale de 5 minutes</li>
+            <li>Journal de gratitude quotidien</li>
+            <li>Marche de 20 minutes par jour</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Système de Soutien</h3>
+          <p>Entourez-vous de personnes positives et compréhensives.</p>
+          <ul>
+            <li>Partagez votre parcours avec 2-3 proches</li>
+            <li>Rejoignez une communauté en ligne</li>
+            <li>Consultez un professionnel si nécessaire</li>
+          </ul>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>Adaptation Continue</h3>
+          <p>Ajustez votre approche selon vos besoins changeants.</p>
+          <ul>
+            <li>Réévaluation mensuelle des objectifs</li>
+            <li>Modification des stratégies si nécessaire</li>
+            <li>Célébration des apprentissages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Prêt à Transformer votre Mental ?</h3>
+        <p>Le succès commence dans votre tête. Nos psychologues spécialisés vous accompagnent pour développer le mindset gagnant.</p>
+        <a href="/contact" class="cta-button">Commencer l'Accompagnement</a>
+      </div>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .hero-quote {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-quote blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .hero-quote cite {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mind-stats {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .stat {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffd700;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .challenges-section {
+    margin-bottom: 4rem;
+  }
+
+  .challenges-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .challenge-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .challenge-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .challenge-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .challenge-card p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .challenge-impact {
+    background: #fef3c7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .challenge-impact strong {
+    color: #92400e;
+  }
+
+  .mindset-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .mindset-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mindset-card.philosophy {
+    border-left: 4px solid #3b82f6;
+  }
+
+  .mindset-card.motivation {
+    border-left: 4px solid #10b981;
+  }
+
+  .mindset-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .mindset-content p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .philosophy-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .point h4 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .point p {
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+  .motivation-strategies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .strategy h4 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .strategy ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .strategy li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .emotions-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .emotion-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .emotion-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .emotion-content p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .emotion-strategies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .strategy h4 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .strategy p {
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+  .plateau-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tip h4 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .tip p {
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+  .failure-recovery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .step h4 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .step p {
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+  .support-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .support-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .support-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .support-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .support-content p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .support-content ul {
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .support-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .support-cta {
+    background: #f0f9ff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .support-cta strong {
+    color: #0369a1;
+  }
+
+  .success-stories h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .story-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .story-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .story-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+
+  .story-info h4 {
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+
+  .story-result {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .story-card blockquote {
+    color: #4b5563;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .action-plan h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .plan-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .step-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .step-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .step-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .step-card p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+
+  .step-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .step-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #a855f7;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .mind-stats {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .challenges-grid,
+    .support-types,
+    .stories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .philosophy-points,
+    .motivation-strategies,
+    .emotion-strategies,
+    .plateau-tips,
+    .failure-recovery,
+    .plan-steps {
+      grid-template-columns: 1fr;
+    }
+
+    .step-number {
+      position: static;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+  }
+</style>

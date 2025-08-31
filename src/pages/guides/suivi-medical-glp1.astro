@@ -1,0 +1,555 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'Suivi Médical GLP-1 : Votre Guide Complet du Monitoring',
+  description: 'Maîtrisez votre suivi médical GLP-1 avec notre guide complet. Apprenez à interpréter vos analyses, comprendre vos bilans et optimiser votre traitement avec votre médecin.',
+  keywords: ['suivi médical GLP-1', 'monitoring traitement', 'analyses sanguines', 'bilan santé', 'consultation médecin', 'effets secondaires'],
+  seoTitle: 'Suivi Médical GLP-1 - Guide Complet du Monitoring',
+  seoDescription: 'Tout savoir sur le suivi médical des traitements GLP-1. Analyses, consultations, monitoring des effets : devenez acteur de votre santé.',
+  category: 'guides',
+  publishedAt: '2025-01-28',
+  updatedAt: '2025-01-28',
+  featured: true,
+  author: 'Dr. Antoine Moreau',
+  readingTime: '15 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/suivi-medical-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🔬</span>
+          <span class="badge-text">Guide Médical</span>
+        </div>
+        <h1>Votre Santé Entre de Bonnes Mains</h1>
+        <p class="hero-subtitle">
+          Découvrez comment transformer votre suivi médical GLP-1 en véritable partenariat avec votre médecin.
+          Ensemble, maximisons l'efficacité de votre traitement.
+        </p>
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <span>Analyses complètes</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">👨‍⚕️</div>
+            <span>Consultations optimisées</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📈</div>
+            <span>Suivi personnalisé</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Suivi médical GLP-1" class="hero-image">
+          <div class="hero-overlay">
+            <div class="overlay-content">
+              <h3>Monitoring Santé</h3>
+              <p>Précision & Sécurité</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-section">
+      <h2>Pourquoi un Suivi Médical Rigoureux est Essentiel ?</h2>
+      <p>Le GLP-1 n'est pas un traitement miracle qu'on prend sans surveillance. C'est un médicament puissant qui nécessite un accompagnement médical personnalisé pour garantir votre sécurité et optimiser vos résultats.</p>
+    </div>
+
+    <section class="importance-section">
+      <h2>🎯 Les 5 Piliers du Suivi Médical GLP-1</h2>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">🩸</div>
+          <h3>Bilan Biologique</h3>
+          <p>Suivi régulier de votre glycémie, cholestérol, fonctions rénales et hépatiques.</p>
+          <div class="pillar-details">
+            <strong>Fréquence :</strong> Tous les 3 mois<br>
+            <strong>Objectif :</strong> Détecter tout déséquilibre précoce
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">⚖️</div>
+          <h3>Suivi Pondéral</h3>
+          <p>Monitoring précis de votre poids, IMC et composition corporelle.</p>
+          <div class="pillar-details">
+            <strong>Fréquence :</strong> Chaque consultation<br>
+            <strong>Objectif :</strong> Évaluer l'efficacité du traitement
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">❤️</div>
+          <h3>Évaluation Cardiovasculaire</h3>
+          <p>Contrôle de votre tension artérielle et facteurs de risque cardiaque.</p>
+          <div class="pillar-details">
+            <strong>Fréquence :</strong> Mensuelle<br>
+            <strong>Objectif :</strong> Prévention des complications
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">🧠</div>
+          <h3>Suivi Psychologique</h3>
+          <p>Évaluation de votre état émotionnel et gestion du stress.</p>
+          <div class="pillar-details">
+            <strong>Fréquence :</strong> Selon besoins<br>
+            <strong>Objectif :</strong> Accompagnement holistique
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">💊</div>
+          <h3>Ajustement Thérapeutique</h3>
+          <p>Adaptation de votre posologie selon vos progrès et tolérance.</p>
+          <div class="pillar-details">
+            <strong>Fréquence :</strong> Variable<br>
+            <strong>Objectif :</strong> Optimisation continue
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="analyses-section">
+      <h2>🧪 Les Analyses Essentielles à Connaître</h2>
+
+      <div class="analysis-category">
+        <h3>📈 Bilan Métabolique Complet</h3>
+        <div class="analysis-grid">
+          <div class="analysis-card">
+            <h4>Glycémie à Jeun</h4>
+            <p><strong>Normale :</strong> &lt; 1.10 g/L<br>
+            <strong>À surveiller :</strong> 1.10-1.26 g/L<br>
+            <strong>Diabète :</strong> &gt; 1.26 g/L</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Tous les 3 mois<br>
+              <strong>Interprétation :</strong> Évalue le contrôle glycémique
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h4>HbA1c</h4>
+            <p><strong>Excellente :</strong> &lt; 6.5%<br>
+            <strong>Bonne :</strong> 6.5-7%<br>
+            <strong>À améliorer :</strong> &gt; 7%</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Tous les 3-6 mois<br>
+              <strong>Interprétation :</strong> Moyenne glycémique sur 3 mois
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h4>Cholestérol Total</h4>
+            <p><strong>Optimal :</strong> &lt; 2 g/L<br>
+            <strong>Limite :</strong> 2-2.5 g/L<br>
+            <strong>Élevé :</strong> &gt; 2.5 g/L</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Annuelle<br>
+              <strong>Interprétation :</strong> Risque cardiovasculaire
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h4>Triglycérides</h4>
+            <p><strong>Normaux :</strong> &lt; 1.5 g/L<br>
+            <strong>Limites :</strong> 1.5-2 g/L<br>
+            <strong>Élevés :</strong> &gt; 2 g/L</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Annuelle<br>
+              <strong>Interprétation :</strong> Métabolisme lipidique
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analysis-category">
+        <h3>🫀 Bilan Rénal et Hépatique</h3>
+        <div class="analysis-grid">
+          <div class="analysis-card">
+            <h4>Créatininémie</h4>
+            <p><strong>Normale :</strong> 60-120 µmol/L<br>
+            <strong>À surveiller :</strong> &gt; 120 µmol/L</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Tous les 6 mois<br>
+              <strong>Interprétation :</strong> Fonction rénale
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h4>Clairance Créatinine</h4>
+            <p><strong>Normale :</strong> &gt; 60 mL/min<br>
+            <strong>Insuffisance :</strong> &lt; 60 mL/min</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Tous les 6 mois<br>
+              <strong>Interprétation :</strong> Débit de filtration glomérulaire
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h4>Transaminases (ALAT/ASAT)</h4>
+            <p><strong>Normales :</strong> &lt; 40 UI/L<br>
+            <strong>Élevées :</strong> &gt; 40 UI/L</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Tous les 6 mois<br>
+              <strong>Interprétation :</strong> Fonction hépatique
+            </div>
+          </div>
+
+          <div class="analysis-card">
+            <h4>Bilirubine Totale</h4>
+            <p><strong>Normale :</strong> &lt; 17 µmol/L<br>
+            <strong>Élevée :</strong> &gt; 17 µmol/L</p>
+            <div class="analysis-info">
+              <strong>Fréquence :</strong> Tous les 6 mois<br>
+              <strong>Interprétation :</strong> Fonction hépatique
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Prêt à Optimiser Votre Suivi Médical ?</h3>
+        <p>Devenez l'expert de votre propre santé avec notre guide complet du monitoring GLP-1.</p>
+        <a href="/contact" class="cta-button">Consulter un Spécialiste</a>
+      </div>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+  }
+
+  .badge-icon {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .hero-features {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    color: #3b82f6;
+  }
+
+  .feature-item span {
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem 1.5rem 1.5rem;
+    color: white;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+
+  .intro-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .intro-section h2 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .importance-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pillar-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .pillar-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .pillar-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .pillar-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .pillar-details {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #374151;
+    line-height: 1.5;
+  }
+
+  .analyses-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .analysis-category {
+    margin-bottom: 3rem;
+  }
+
+  .analysis-category h3 {
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #3b82f6;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .analysis-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .analysis-card h4 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .analysis-card p {
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .analysis-info {
+    background: #f0f9ff;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #0369a1;
+    line-height: 1.4;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+  }
+
+  .cta-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #3b82f6;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid white;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background: #f8fafc;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-highlights {
+      gap: 1rem;
+    }
+
+    .pillars-grid,
+    .analysis-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

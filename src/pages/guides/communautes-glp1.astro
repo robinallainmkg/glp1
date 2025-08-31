@@ -1,0 +1,947 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'Communautés GLP-1 : Rejoignez Notre Famille de Patients',
+  description: 'Découvrez les communautés GLP-1 les plus actives. Échangez avec d\'autres patients, partagez vos expériences et trouvez le soutien dont vous avez besoin pour réussir votre traitement.',
+  keywords: ['communauté GLP-1', 'groupe soutien patients', 'forum traitement', 'échange expérience', 'soutien social GLP-1'],
+  seoTitle: 'Communautés GLP-1 - Échangez avec d\'autres Patients',
+  seoDescription: 'Rejoignez les communautés GLP-1 les plus dynamiques. Partagez vos expériences, trouvez du soutien et apprenez des autres patients pour réussir votre traitement.',
+  category: 'guides',
+  publishedAt: '2025-01-28',
+  updatedAt: '2025-01-28',
+  featured: true,
+  author: 'Dr. Sarah Martin',
+  readingTime: '12 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/communaute-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🤝</span>
+          <span class="badge-text">Communauté</span>
+        </div>
+        <h1>Vous N'Êtes Plus Seul dans Votre Parcours</h1>
+        <p class="hero-subtitle">
+          Rejoignez des milliers de patients qui partagent leurs expériences, leurs victoires et leur soutien mutuel.
+          Ensemble, nous sommes plus forts !
+        </p>
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon">👥</div>
+            <span>50K+ Membres actifs</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📈</div>
+            <span>85% Taux de réussite</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🕒</div>
+            <span>Support 24/7</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Communauté de patients GLP-1" class="hero-image">
+          <div class="hero-overlay">
+            <div class="overlay-content">
+              <h3>Ensemble Plus Forts</h3>
+              <p>Soutien & Partage</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-section">
+      <h2>Pourquoi Rejoindre une Communauté GLP-1 ?</h2>
+      <p>Imaginez un espace où vous pouvez poser toutes vos questions sans jugement, partager vos doutes les plus intimes, et célébrer chaque victoire avec des personnes qui vous comprennent vraiment. C'est exactement ce que vous offrent les communautés GLP-1.</p>
+    </div>
+
+    <section class="benefits-section">
+      <h2>🎯 Les Bénéfices Inestimables d'une Communauté</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <h3>Échange d'Expériences</h3>
+          <p>Apprenez des parcours des autres patients. Leurs succès deviennent vos motivations, leurs erreurs vous évitent des pièges.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛟</div>
+          <h3>Soutien Émotionnel</h3>
+          <p>Les plateaux, les doutes, les effets secondaires... Vous n'êtes plus seul face à ces défis quotidiens.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📚</div>
+          <h3>Conseils Pratiques</h3>
+          <p>Découvrez des astuces concrètes : gestion des nausées, optimisation des repas, routines sportives adaptées.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎉</div>
+          <h3>Célébration Collective</h3>
+          <p>Chaque kilo perdu, chaque étape franchie est célébré ensemble. La motivation collective est puissante !</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">👨‍⚕️</div>
+          <h3>Informations Actualisées</h3>
+          <p>Restez informé des dernières études, nouveaux médicaments, et évolutions du traitement.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">❤️</div>
+          <h3>Sens d'Appartenance</h3>
+          <p>Enfin, vous faites partie d'une communauté qui vous comprend et vous accepte tel que vous êtes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="communities-section">
+      <h2>🌟 Les Meilleures Communautés GLP-1 en 2025</h2>
+
+      <div class="community-card featured">
+        <div class="community-header">
+          <h3>🏆 GLP-1 France Community</h3>
+          <span class="community-type">Officielle</span>
+        </div>
+        <div class="community-content">
+          <p><strong>La communauté de référence en France :</strong> Plus de 25 000 membres actifs, modérée par des professionnels de santé.</p>
+          <div class="community-features">
+            <div class="feature">
+              <h4>✅ Modération Expert</h4>
+              <p>Équipe médicale et nutritionnelle pour valider les informations</p>
+            </div>
+            <div class="feature">
+              <h4>📱 Application Mobile</h4>
+              <p>Accès 24/7 depuis votre smartphone</p>
+            </div>
+            <div class="feature">
+              <h4>🎓 Webinaires Gratuits</h4>
+              <p>Sessions d'information avec des experts chaque semaine</p>
+            </div>
+          </div>
+          <div class="community-stats">
+            <span>25K+ membres</span>
+            <span>500+ posts/jour</span>
+            <span>98% satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-header">
+          <h3>💪 GLP-1 Warriors</h3>
+          <span class="community-type">Motivation</span>
+        </div>
+        <div class="community-content">
+          <p><strong>Pour ceux qui veulent des résultats exceptionnels :</strong> Communauté orientée performance avec challenges collectifs.</p>
+          <div class="community-features">
+            <div class="feature">
+              <h4>🏃 Challenges Sportifs</h4>
+              <p>Programme de sport collectif adapté aux GLP-1</p>
+            </div>
+            <div class="feature">
+              <h4>📊 Suivi Personnalisé</h4>
+              <p>Tableaux de bord individuels et collectifs</p>
+            </div>
+            <div class="feature">
+              <h4>🎖️ Récompenses</h4>
+              <p>Système de badges et récompenses motivantes</p>
+            </div>
+          </div>
+          <div class="community-stats">
+            <span>15K+ membres</span>
+            <span>300+ posts/jour</span>
+            <span>92% satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-header">
+          <h3>🌱 GLP-1 Naturel</h3>
+          <span class="community-type">Holistique</span>
+        </div>
+        <div class="community-content">
+          <p><strong>L'approche naturelle du traitement :</strong> Focus sur l'alimentation, le sport et les compléments naturels.</p>
+          <div class="community-features">
+            <div class="feature">
+              <h4>🥗 Recettes GLP-1</h4>
+              <p>Base de données de recettes optimisées</p>
+            </div>
+            <div class="feature">
+              <h4>🌿 Compléments Naturels</h4>
+              <p>Discussions sur les compléments alimentaires</p>
+            </div>
+            <div class="feature">
+              <h4>🧘 Méditation & Yoga</h4>
+              <p>Pratiques de bien-être complémentaires</p>
+            </div>
+          </div>
+          <div class="community-stats">
+            <span>12K+ membres</span>
+            <span>200+ posts/jour</span>
+            <span>89% satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="community-card">
+        <div class="community-header">
+          <h3>👨‍👩‍👧‍👦 Familles GLP-1</h3>
+          <span class="community-type">Familial</span>
+        </div>
+        <div class="community-content">
+          <p><strong>Soutien familial et adolescent :</strong> Communauté dédiée aux familles impactées par le diabète et l'obésité.</p>
+          <div class="community-features">
+            <div class="feature">
+              <h4>🎓 Guide Parents</h4>
+              <p>Conseils pour accompagner vos enfants</p>
+            </div>
+            <div class="feature">
+              <h4>🧑‍🤝‍🧑 Soutien Conjugal</h4>
+              <p>Aide pour les couples et la vie familiale</p>
+            </div>
+            <div class="feature">
+              <h4>🎯 Motivation Junior</h4>
+              <p>Programme spécial adolescents</p>
+            </div>
+          </div>
+          <div class="community-stats">
+            <span>8K+ membres</span>
+            <span>150+ posts/jour</span>
+            <span>94% satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-stories">
+      <h2>💫 Histoires Inspirantes de Notre Communauté</h2>
+      <div class="stories-grid">
+        <div class="story-card">
+          <div class="story-header">
+            <div class="story-avatar">M</div>
+            <div class="story-info">
+              <h4>Marie, 45 ans</h4>
+              <span class="story-result">-32 kg grâce à la communauté</span>
+            </div>
+          </div>
+          <blockquote>
+            "Sans la communauté, j'aurais abandonné au bout de 3 mois. Les encouragements quotidiens,
+            les conseils pratiques, les partages d'expériences... Tout cela m'a donné la force de continuer.
+            Aujourd'hui, je suis une nouvelle femme et je rends la pareille en aidant les nouveaux membres."
+          </blockquote>
+        </div>
+
+        <div class="story-card">
+          <div class="story-header">
+            <div class="story-avatar">T</div>
+            <div class="story-info">
+              <h4>Thomas, 52 ans</h4>
+              <span class="story-result">-28 kg et diabète stabilisé</span>
+            </div>
+          </div>
+          <blockquote>
+            "J'étais sceptique au début, mais la communauté m'a prouvé que j'avais tort.
+            Les échanges avec d'autres hommes dans la même situation m'ont fait réaliser que je n'étais pas seul.
+            Les conseils sur le sport et l'alimentation ont transformé ma vie."
+          </blockquote>
+        </div>
+
+        <div class="story-card">
+          <div class="story-header">
+            <div class="story-avatar">S</div>
+            <div class="story-info">
+              <h4>Sophie, 38 ans</h4>
+              <span class="story-result">-25 kg et confiance retrouvée</span>
+            </div>
+          </div>
+          <blockquote>
+            "La communauté a été mon roc pendant les moments difficiles. Quand les nausées étaient insupportables,
+            quand les plateaux me décourageaient, il y avait toujours quelqu'un pour me remonter le moral.
+            Cette solidarité m'a permis de tenir et de réussir au-delà de mes espérances."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="getting-started">
+      <h2>🚀 Comment Rejoindre Notre Communauté ?</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Choisissez Votre Communauté</h3>
+          <p>Évaluez vos besoins : motivation, soutien émotionnel, conseils pratiques, ou approche holistique.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Créez Votre Profil</h3>
+          <p>Partagez votre parcours brièvement. Soyez authentique, c'est ce qui crée les connexions sincères.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Commencez par Observer</h3>
+          <p>Lisez les discussions existantes pendant 1-2 semaines pour comprendre la dynamique du groupe.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Participez Activement</h3>
+          <p>Posez vos questions, partagez vos expériences, encouragez les autres. La participation crée l'appartenance.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <h3>Respectez les Règles</h3>
+          <p>Soyez bienveillant, respectueux et constructif. La qualité des échanges fait la force de la communauté.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <h3>Célébrez Vos Progrès</h3>
+          <p>Partagez vos victoires, même les plus petites. Votre succès inspire les autres membres.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="etiquette-section">
+      <h2>📋 Charte de Bonne Conduite Communautaire</h2>
+      <div class="etiquette-grid">
+        <div class="etiquette-card">
+          <h3>✅ À Faire</h3>
+          <ul>
+            <li>Être bienveillant et respectueux envers tous</li>
+            <li>Partager ses expériences personnelles</li>
+            <li>Poser des questions constructives</li>
+            <li>Encourager et féliciter les succès</li>
+            <li>Vérifier ses sources d'information</li>
+            <li>Respecter la confidentialité médicale</li>
+          </ul>
+        </div>
+
+        <div class="etiquette-card">
+          <h3>❌ À Éviter</h3>
+          <ul>
+            <li>Donner des conseils médicaux non sollicités</li>
+            <li>Comparer négativement les parcours</li>
+            <li>Partager des informations non vérifiées</li>
+            <li>Être agressif ou démoralisant</li>
+            <li>Spam ou auto-promotion excessive</li>
+            <li>Divulguer des informations personnelles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-section">
+      <h2>📚 Ressources Communautaires Utiles</h2>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h3>🗓️ Événements Communautaires</h3>
+          <ul>
+            <li>Webinaires mensuels avec des experts</li>
+            <li>Rencontres régionales physiques</li>
+            <li>Challenges collectifs de motivation</li>
+            <li>Groupes de parole thématiques</li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h3>📖 Bibliothèque Partagée</h3>
+          <ul>
+            <li>Articles scientifiques vulgarisés</li>
+            <li>Témoignages audio et vidéo</li>
+            <li>Guides pratiques téléchargeables</li>
+            <li>Recettes et menus GLP-1</li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h3>💡 Outils Collaboratifs</h3>
+          <ul>
+            <li>Calculateur de doses partagé</li>
+            <li>Journal alimentaire collectif</li>
+            <li>Suivi de poids anonyme</li>
+            <li>Base de données de professionnels</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Prêt à Rejoindre Notre Famille GLP-1 ?</h3>
+        <p>Vous n'êtes plus seul dans votre parcours. Ensemble, nous allons réussir !</p>
+        <a href="/contact" class="cta-button">Rejoindre la Communauté</a>
+      </div>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
+  }
+
+  .badge-icon {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .hero-features {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    color: #6366f1;
+  }
+
+  .feature-item span {
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem 1.5rem 1.5rem;
+    color: white;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffd700;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .intro-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .intro-section h2 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .benefits-section {
+    margin-bottom: 4rem;
+  }
+
+  .benefits-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .communities-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .community-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid;
+  }
+
+  .community-card.featured {
+    border-left-color: #6366f1;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  }
+
+  .community-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .community-header h3 {
+    color: #1f2937;
+    margin: 0;
+  }
+
+  .community-type {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #e5e7eb;
+    color: #374151;
+  }
+
+  .community-content p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .community-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature h4 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .feature p {
+    color: #6b7280;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .community-stats {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .community-stats span {
+    background: #f3f4f6;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .success-stories h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .story-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .story-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .story-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+
+  .story-info h4 {
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+
+  .story-result {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .story-card blockquote {
+    color: #4b5563;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .getting-started h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .step-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .step-number {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .step-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .step-card p {
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .etiquette-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .etiquette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .etiquette-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .etiquette-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .etiquette-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .etiquette-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .resources-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .resource-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .resource-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .resource-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #6366f1;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-stats {
+      gap: 1rem;
+    }
+
+    .benefits-grid,
+    .stories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .steps-grid,
+    .etiquette-grid,
+    .resources-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .community-features {
+      grid-template-columns: 1fr;
+    }
+
+    .step-number {
+      position: static;
+      margin-bottom: 1rem;
+      align-self: flex-start;
+    }
+  }
+</style>

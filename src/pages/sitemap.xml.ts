@@ -12,6 +12,10 @@ export async function GET() {
     '/guides/guide-beaute-perte-de-poids-glp1/',
     '/guides/nouveaux-medicaments-perdre-poids/',
     '/guides/guide-complet-wegovy/',
+    '/guides/suivi-medical-glp1/',
+    '/guides/communautes-glp1/',
+    '/guides/alimentation-personnalisee-glp1/',
+    '/guides/guides-age-glp1/',
     '/legal/mentions-legales/',
     '/legal/politique-confidentialite/',
     '/outils/produits-recommandes/',
@@ -138,10 +142,12 @@ ${allPages.map(page => `  <url>
     <changefreq>${page === '' ? 'weekly' :
                   page.includes('prix') || page.includes('cout') ? 'weekly' :
                   page.includes('traitement') || page.includes('guide') ? 'monthly' :
+                  page.includes('suivi-medical') || page.includes('communautes') || page.includes('alimentation-personnalisee') || page.includes('guides-age') ? 'monthly' :
                   page.includes('quel-traitement-glp1-choisir') ? 'weekly' :
                   'monthly'}</changefreq>
     <priority>${page === '' ? '1.0' :
                 page.includes('quel-traitement-glp1-choisir') ? '0.95' :
+                page.includes('suivi-medical') || page.includes('communautes') || page.includes('alimentation-personnalisee') || page.includes('guides-age') ? '0.9' :
                 page.includes('guide-complet') || page.includes('nouveaux-medicaments') ? '0.9' :
                 page.includes('prix-ozempic') || page.includes('prix-mounjaro') || page.includes('prix-wegovy') ? '0.85' :
                 page.includes('collections/traitements-glp1/') ? '0.8' :

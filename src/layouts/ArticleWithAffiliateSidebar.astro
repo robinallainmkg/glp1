@@ -2,6 +2,7 @@
 // Layout avancé avec système d'affiliation adaptatif (version sans TinaCMS)
 import BaseLayout from './BaseLayout.astro';
 import AdaptiveAffiliateDisplay from '../components/AdaptiveAffiliateDisplay.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
 
 export interface Props {
   title?: string;
@@ -152,6 +153,9 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         />
       )}
     </div>
+
+    <!-- Articles connexes -->
+    <RelatedArticles currentPath={Astro.url.pathname} maxLinks={6} />
   </main>
 </BaseLayout>
 

@@ -1,0 +1,468 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'FAQ GLP-1 : Questions Fréquentes 2025',
+  description: 'Toutes vos questions sur les GLP-1 : fonctionnement, effets, prix, sécurité. Réponses claires et précises par des experts médicaux.',
+  keywords: ['FAQ GLP-1', 'questions fréquentes', 'GLP-1 réponses', 'doutes traitement', 'conseils médicaux'],
+  seoTitle: 'FAQ GLP-1 2025 - Réponses à Toutes vos Questions',
+  seoDescription: 'FAQ complète sur les GLP-1 : mécanismes, effets secondaires, prix, sécurité, associations. Réponses d\'experts pour éclaircir vos doutes.',
+  category: 'guides',
+  publishedAt: '2025-01-20',
+  updatedAt: '2025-01-20',
+  featured: true,
+  author: 'Dr. Sarah Martin',
+  readingTime: '12 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/faq-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="intro-section">
+      <p class="intro-text">
+        Vous avez des questions sur les GLP-1 ? Cette FAQ complète répond aux interrogations les plus fréquentes
+        sur ces traitements révolutionnaires. Des réponses claires, précises et actualisées 2025.
+      </p>
+    </div>
+
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">❓</span>
+          Comment fonctionnent exactement les GLP-1 ?
+        </summary>
+        <div class="faq-answer">
+          <p>Les GLP-1 sont des hormones naturelles qui régulent la glycémie et l'appétit. Les médicaments mimétiques reproduisent leur action en :</p>
+          <ul>
+            <li>Ralentissant la vidange gastrique</li>
+            <li>Diminuant l'appétit par action sur le cerveau</li>
+            <li>Améliorant la sécrétion d'insuline</li>
+            <li>Réduisant la production de glucagon</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">⚖️</span>
+          Quelle perte de poids peut-on attendre ?
+        </summary>
+        <div class="faq-answer">
+          <p>La perte de poids varie selon le médicament et l'individu :</p>
+          <ul>
+            <li><strong>Saxenda</strong> : 5-10% du poids corporel</li>
+            <li><strong>Wegovy</strong> : 10-15% du poids corporel</li>
+            <li><strong>Mounjaro</strong> : 15-20% du poids corporel</li>
+          </ul>
+          <p>Facteurs influençant : âge, sexe, activité physique, alimentation.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">💰</span>
+          Quel est le coût réel d'un traitement GLP-1 ?
+        </summary>
+        <div class="faq-answer">
+          <p>Le coût varie selon le médicament et la couverture sociale :</p>
+          <ul>
+            <li><strong>Sans remboursement</strong> : 80-150€/mois</li>
+            <li><strong>Avec ALD diabète</strong> : 15-30% du coût</li>
+            <li><strong>Obésité sévère</strong> : Remboursement possible à 100%</li>
+          </ul>
+          <p>Coût annuel : 1 000 à 2 000€ selon les cas.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🤒</span>
+          Quels sont les effets secondaires les plus courants ?
+        </summary>
+        <div class="faq-answer">
+          <p>Les effets secondaires les plus fréquents sont généralement temporaires :</p>
+          <ul>
+            <li><strong>Digestifs</strong> : Nausées, vomissements, diarrhée (30-40% des patients)</li>
+            <li><strong>Autres</strong> : Constipation, maux de tête, fatigue</li>
+            <li><strong>Graves</strong> : Pancréatite, insuffisance rénale (rares)</li>
+          </ul>
+          <p>La plupart disparaissent après 4-8 semaines d'adaptation.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🏃‍♀️</span>
+          Peut-on faire du sport sous GLP-1 ?
+        </summary>
+        <div class="faq-answer">
+          <p>Oui, l'activité physique est recommandée et potentialise les effets :</p>
+          <ul>
+            <li><strong>Recommandé</strong> : Marche, natation, vélo, musculation légère</li>
+            <li><strong>À éviter</strong> : Effort intense à jeun (risque d'hypoglycémie)</li>
+            <li><strong>Conseil</strong> : Pratiquez 30-45 min par jour, 5 jours/semaine</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🍎</span>
+          Faut-il suivre un régime spécifique ?
+        </summary>
+        <div class="faq-answer">
+          <p>Les GLP-1 fonctionnent mieux avec une alimentation équilibrée :</p>
+          <ul>
+            <li><strong>Recommandé</strong> : Régime méditerranéen, pauvre en sucres raffinés</li>
+            <li><strong>À privilégier</strong> : Protéines, légumes, graisses saines</li>
+            <li><strong>À limiter</strong> : Sucres rapides, aliments transformés</li>
+          </ul>
+          <p>Pas de régime restrictif obligatoire, mais une alimentation saine optimise les résultats.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">⏰</span>
+          Combien de temps faut-il pour voir les premiers effets ?
+        </summary>
+        <div class="faq-answer">
+          <p>Les effets sont progressifs :</p>
+          <ul>
+            <li><strong>1-2 semaines</strong> : Diminution de l'appétit</li>
+            <li><strong>4-6 semaines</strong> : Perte de poids visible</li>
+            <li><strong>3-6 mois</strong> : Résultats optimaux</li>
+          </ul>
+          <p>La perte de poids continue généralement pendant 12-18 mois.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🛑</span>
+          Peut-on arrêter brutalement un traitement GLP-1 ?
+        </summary>
+        <div class="faq-answer">
+          <p>Non, un arrêt brutal peut causer une reprise de poids rapide :</p>
+          <ul>
+            <li><strong>Recommandation</strong> : Diminution progressive sur 2-4 semaines</li>
+            <li><strong>Suivi médical</strong> : Consultation obligatoire avant arrêt</li>
+            <li><strong>Prévention</strong> : Maintien des habitudes alimentaires et sportives</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">👶</span>
+          Les GLP-1 sont-ils compatibles avec une grossesse ?
+        </summary>
+        <div class="faq-answer">
+          <p>Les GLP-1 sont contre-indiqués pendant la grossesse :</p>
+          <ul>
+            <li><strong>Grossesse</strong> : Arrêt immédiat du traitement</li>
+            <li><strong>Allaitement</strong> : Non recommandé</li>
+            <li><strong>Contraception</strong> : Méthode fiable obligatoire</li>
+          </ul>
+          <p>Consultez votre médecin en cas de projet de grossesse.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">💊</span>
+          Peut-on associer GLP-1 avec d'autres médicaments ?
+        </summary>
+        <div class="faq-answer">
+          <p>Certaines associations sont possibles sous surveillance médicale :</p>
+          <ul>
+            <li><strong>Compatibles</strong> : Antidiabétiques oraux, statines</li>
+            <li><strong>À surveiller</strong> : Médicaments diminuant la glycémie</li>
+            <li><strong>Contre-indiqués</strong> : Certains médicaments psychiatriques</li>
+          </ul>
+          <p>Toujours informer votre médecin de tous vos traitements.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🧓</span>
+          Les GLP-1 conviennent-ils aux seniors ?
+        </summary>
+        <div class="faq-answer">
+          <p>Les GLP-1 peuvent être prescrits aux seniors avec précaution :</p>
+          <ul>
+            <li><strong>Adaptation</strong> : Doses plus faibles souvent nécessaires</li>
+            <li><strong>Surveillance</strong> : Fonction rénale et cardiaque</li>
+            <li><strong>Bénéfices</strong> : Réduction du risque cardiovasculaire</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🔄</span>
+          Que se passe-t-il après l'arrêt du traitement ?
+        </summary>
+        <div class="faq-answer">
+          <p>Après l'arrêt, plusieurs scénarios possibles :</p>
+          <ul>
+            <li><strong>Reprise de poids</strong> : 30-50% du poids perdu (sans changement d'habitudes)</li>
+            <li><strong>Maintien</strong> : Si habitudes saines maintenues</li>
+            <li><strong>Suivi</strong> : Consultation régulière recommandée</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🏥</span>
+          Quelle est la durée optimale d'un traitement ?
+        </summary>
+        <div class="faq-answer">
+          <p>La durée varie selon les objectifs :</p>
+          <ul>
+            <li><strong>Diabète</strong> : Traitement au long cours</li>
+            <li><strong>Obésité</strong> : 1-2 ans généralement, puis évaluation</li>
+            <li><strong>Prévention</strong> : Selon facteurs de risque individuels</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">⚡</span>
+          Les GLP-1 boostent-ils le métabolisme ?
+        </summary>
+        <div class="faq-answer">
+          <p>Oui, les GLP-1 ont plusieurs effets métaboliques :</p>
+          <ul>
+            <li><strong>Augmentation</strong> : Dépense énergétique de base (+10-15%)</li>
+            <li><strong>Amélioration</strong> : Sensibilité à l'insuline</li>
+            <li><strong>Protection</strong> : Fonction bêta-pancréatique</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🩺</span>
+          Quels examens sont nécessaires avant de commencer ?
+        </summary>
+        <div class="faq-answer">
+          <p>Bilan complet avant initiation :</p>
+          <ul>
+            <li><strong>Sanguins</strong> : Glycémie, HbA1c, bilan hépatique/rénal</li>
+            <li><strong>Cardiaque</strong> : ECG si facteurs de risque</li>
+            <li><strong>Thyroïde</strong> : TSH si antécédents</li>
+            <li><strong>Clinique</strong> : Poids, IMC, tour de taille</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🌙</span>
+          À quel moment de la journée prendre les GLP-1 ?
+        </summary>
+        <div class="faq-answer">
+          <p>Le moment dépend du médicament :</p>
+          <ul>
+            <li><strong>Injectables quotidiens</strong> : Même heure chaque jour</li>
+            <li><strong>Hebdomadaires</strong> : Jour fixe par semaine</li>
+            <li><strong>Préférence</strong> : Matin pour éviter les nausées nocturnes</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-icon">🍷</span>
+          Peut-on boire de l'alcool sous GLP-1 ?
+        </summary>
+        <div class="faq-answer">
+          <p>L'alcool est possible avec modération :</p>
+          <ul>
+            <li><strong>Recommandation</strong> : Limiter à 1-2 verres maximum</li>
+            <li><strong>Risques</strong> : Augmentation des nausées, hypoglycémie</li>
+            <li><strong>Conseil</strong> : Préférer vin rouge ou bière légère</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Vous avez d'autres questions ?</h3>
+        <p>Nos experts médicaux sont là pour vous accompagner dans votre parcours GLP-1.</p>
+        <a href="/contact" class="cta-button">Poser une question</a>
+      </div>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .intro-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #374151;
+    margin: 0;
+  }
+
+  .faq-container {
+    margin: 3rem 0;
+  }
+
+  .faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+  }
+
+  .faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: all 0.2s ease;
+  }
+
+  .faq-question:hover {
+    color: #3b82f6;
+  }
+
+  .faq-icon {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.5rem 3.5rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .faq-answer ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .faq-answer li {
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-answer strong {
+    color: #1f2937;
+  }
+
+  .faq-item[open] {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .faq-item[open] .faq-question {
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 4rem;
+    color: white;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #3b82f6;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 1.5rem;
+    }
+
+    .faq-question {
+      font-size: 1rem;
+      padding: 1.25rem;
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem 3rem;
+    }
+
+    .cta-section {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

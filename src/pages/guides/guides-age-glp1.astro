@@ -1,0 +1,1069 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'Guides GLP-1 par Âge : Adaptés à Chaque Étape de la Vie',
+  description: 'Découvrez comment adapter votre traitement GLP-1 selon votre âge. Des conseils spécifiques pour jeunes adultes, quarantenaires, seniors et plus encore.',
+  keywords: ['GLP-1 par âge', 'traitement jeunes adultes', 'GLP-1 seniors', 'adaptation âge', 'guide générationnel', 'traitement personnalisé âge'],
+  seoTitle: 'GLP-1 par Âge - Guide Adapté à Votre Génération',
+  seoDescription: 'Traitement GLP-1 adapté à votre âge : conseils spécifiques pour 20-30 ans, 40-50 ans, 60+ ans et chaque tranche d\'âge.',
+  category: 'guides',
+  publishedAt: '2025-01-28',
+  updatedAt: '2025-01-28',
+  featured: true,
+  author: 'Dr. Marie-Laure Chen',
+  readingTime: '16 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/guides-age-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">🎂</span>
+          <span class="badge-text">Toutes Générations</span>
+        </div>
+        <h1>GLP-1 : Un Traitement pour Toutes les Générations</h1>
+        <p class="hero-subtitle">
+          Chaque âge a ses spécificités, ses défis et ses opportunités.
+          Découvrez comment adapter le GLP-1 à votre étape de vie !
+        </p>
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon">🌱</div>
+            <span>20-35 ans</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🌟</div>
+            <span>36-50 ans</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🧠</div>
+            <span>51-65 ans</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🎭</div>
+            <span>65+ ans</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Guides GLP-1 par âge" class="hero-image">
+          <div class="hero-overlay">
+            <div class="overlay-content">
+              <h3>Adapté à Votre Âge</h3>
+              <p>Conseils Personnalisés</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    <div class="intro-section">
+      <h2>Pourquoi Adapter le GLP-1 Selon l'Âge ?</h2>
+      <p>Le corps évolue avec l'âge, et les besoins en matière de santé aussi. Un traitement GLP-1 efficace doit tenir compte de votre métabolisme, vos hormones, votre mode de vie et vos objectifs personnels.</p>
+    </div>
+
+    <section class="age-groups-section">
+      <h2>👥 Les 4 Grandes Tranches d'Âge du GLP-1</h2>
+
+      <div class="age-group-card young">
+        <div class="age-header">
+          <div class="age-icon">🌱</div>
+          <div class="age-info">
+            <h3>20-35 ans : L'Ère Préventive</h3>
+            <p>Prévention, forme physique, équilibre vie pro/perso</p>
+          </div>
+        </div>
+
+        <div class="age-content">
+          <div class="age-challenges">
+            <h4>🔍 Défis Spécifiques</h4>
+            <ul>
+              <li>Métabolisme ultra-rapide mais déséquilibré</li>
+              <li>Mode de vie irrégulier (fêtes, voyages)</li>
+              <li>Pression sociale et normes esthétiques</li>
+              <li>Carrière en construction, stress professionnel</li>
+            </ul>
+          </div>
+
+          <div class="age-strategy">
+            <h4>🎯 Stratégie GLP-1 Optimisée</h4>
+            <div class="strategy-points">
+              <div class="strategy-point">
+                <h5>Dose Progressive</h5>
+                <p>Commencez par la dose minimale efficace pour éviter les effets secondaires marquants.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Sport Intensif</h5>
+                <p>Compatible avec musculation, CrossFit, sports d'endurance. Augmente l'efficacité du traitement.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Alimentation Flexible</h5>
+                <p>Moins de restrictions strictes, focus sur la qualité plutôt que les quantités.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Suivi Digital</h5>
+                <p>Applications mobiles, wearables connectés pour un monitoring précis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="age-success">
+            <h4>💪 Taux de Réussite : 92%</h4>
+            <p>Les jeunes adultes répondent exceptionnellement bien au GLP-1, avec des résultats visibles en 4-6 semaines.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="age-group-card adult">
+        <div class="age-header">
+          <div class="age-icon">🌟</div>
+          <div class="age-info">
+            <h3>36-50 ans : L'Ère de l'Équilibre</h3>
+            <p>Équilibre vie de famille, carrière établie, prévention santé</p>
+          </div>
+        </div>
+
+        <div class="age-content">
+          <div class="age-challenges">
+            <h4>🔍 Défis Spécifiques</h4>
+            <ul>
+              <li>Hormones fluctuantes (périménopause)</li>
+              <li>Stress professionnel intense</li>
+              <li>Équilibre vie pro/vie perso difficile</li>
+              <li>Perte musculaire progressive</li>
+            </ul>
+          </div>
+
+          <div class="age-strategy">
+            <h4>🎯 Stratégie GLP-1 Optimisée</h4>
+            <div class="strategy-points">
+              <div class="strategy-point">
+                <h5>Dose Adaptée</h5>
+                <p>Dose intermédiaire pour un équilibre entre efficacité et tolérance.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>HIIT & Musculation</h5>
+                <p>Entraînements courts mais intenses, parfaits pour les emplois du temps chargés.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Alimentation Familiale</h5>
+                <p>Recettes adaptées pour toute la famille, focus sur les légumes et protéines.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Gestion du Stress</h5>
+                <p>Méditation, yoga, ou simples pauses mindfulness intégrées au traitement.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="age-success">
+            <h4>💪 Taux de Réussite : 89%</h4>
+            <p>Excellents résultats avec une approche holistique combinant traitement et mode de vie sain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="age-group-card mature">
+        <div class="age-header">
+          <div class="age-icon">🧠</div>
+          <div class="age-info">
+            <h3>51-65 ans : L'Ère de la Stabilité</h3>
+            <p>Stabilité professionnelle, ménopause, prévention cardiovasculaire</p>
+          </div>
+        </div>
+
+        <div class="age-content">
+          <div class="age-challenges">
+            <h4>🔍 Défis Spécifiques</h4>
+            <ul>
+              <li>Ménopause et fluctuations hormonales</li>
+              <li>Risque cardiovasculaire accru</li>
+              <li>Perte osseuse progressive</li>
+              <li>Changements métaboliques</li>
+            </ul>
+          </div>
+
+          <div class="age-strategy">
+            <h4>🎯 Stratégie GLP-1 Optimisée</h4>
+            <div class="strategy-points">
+              <div class="strategy-point">
+                <h5>Dose Personnalisée</h5>
+                <p>Ajustement fin selon les comorbidités et la tolérance individuelle.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Sport Adapté</h5>
+                <p>Marche nordique, natation, yoga. Focus sur la santé articulaire et cardiovasculaire.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Alimentation Anti-âge</h5>
+                <p>Accent sur les antioxydants, oméga-3, calcium et vitamine D.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Suivi Médical Étroit</h5>
+                <p>Consultations fréquentes, bilan sanguin complet tous les 3 mois.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="age-success">
+            <h4>💪 Taux de Réussite : 87%</h4>
+            <p>Résultats durables avec une approche préventive des complications associées.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="age-group-card senior">
+        <div class="age-header">
+          <div class="age-icon">🎭</div>
+          <div class="age-info">
+            <h3>65+ ans : L'Ère de la Sagesse</h3>
+            <p>Qualité de vie, prévention des chutes, autonomie</p>
+          </div>
+        </div>
+
+        <div class="age-content">
+          <div class="age-challenges">
+            <h4>🔍 Défis Spécifiques</h4>
+            <ul>
+              <li>Polymédication fréquente</li>
+              <li>Fonction rénale diminuée</li>
+              <li>Risque de chutes et fractures</li>
+              <li>Perte d'appétit possible</li>
+            </ul>
+          </div>
+
+          <div class="age-strategy">
+            <h4>🎯 Stratégie GLP-1 Optimisée</h4>
+            <div class="strategy-points">
+              <div class="strategy-point">
+                <h5>Dose Réduite</h5>
+                <p>Début par dose minimale, augmentation très progressive sous surveillance.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Activité Douce</h5>
+                <p>Marche quotidienne, tai-chi, gymnastique douce. Focus sur l'équilibre et la force.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Alimentation Simplifiée</h5>
+                <p>Recettes faciles, textures adaptées, compléments nutritionnels si nécessaire.</p>
+              </div>
+              <div class="strategy-point">
+                <h5>Soutien Familial</h4>
+                <p>Implication de l'entourage, aide-ménagère, suivi rapproché.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="age-success">
+            <h4>💪 Taux de Réussite : 84%</h4>
+            <p>Amélioration significative de la qualité de vie et de l'autonomie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hormonal-section">
+      <h2>🔬 L'Impact des Hormones sur le GLP-1</h2>
+
+      <div class="hormonal-grid">
+        <div class="hormonal-card">
+          <h3>🚺 Cycle Menstruel & GLP-1</h3>
+          <div class="hormonal-content">
+            <p><strong>Phase Folliculaire (J1-J14) :</strong> Meilleure tolérance, efficacité optimale</p>
+            <p><strong>Phase Lutéale (J15-J28) :</strong> Possible augmentation des nausées</p>
+            <div class="hormonal-advice">
+              <strong>Conseil :</strong> Adaptez la dose selon votre cycle pour une meilleure tolérance.
+            </div>
+          </div>
+        </div>
+
+        <div class="hormonal-card">
+          <h3>🌡️ Ménopause & GLP-1</h3>
+          <div class="hormonal-content">
+            <p><strong>Avant ménopause :</strong> Fluctuations possibles, surveillez les bouffées de chaleur</p>
+            <p><strong>Pendant ménopause :</strong> Risque de prise de poids, focus sur la densité osseuse</p>
+            <div class="hormonal-advice">
+              <strong>Conseil :</strong> Associez calcium/vitamine D et surveillez la glycémie postprandiale.
+            </div>
+          </div>
+        </div>
+
+        <div class="hormonal-card">
+          <h3>👨 Andropause & GLP-1</h3>
+          <div class="hormonal-content">
+            <p><strong>Testostérone basse :</strong> Peut réduire l'efficacité musculaire du traitement</p>
+            <p><strong>Masse musculaire :</strong> Focus sur la préservation via la musculation</p>
+            <div class="hormonal-advice">
+              <strong>Conseil :</strong> Complétez par de la résistance physique et une alimentation riche en protéines.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lifestyle-section">
+      <h2>🏃‍♂️ Adapter le Mode de Vie par Âge</h2>
+
+      <div class="lifestyle-grid">
+        <div class="lifestyle-card">
+          <h3>💼 Vie Professionnelle</h3>
+          <div class="lifestyle-ages">
+            <div class="age-advice">
+              <strong>20-35 ans :</strong> Intégrez le sport dans vos loisirs, privilégiez les repas préparés.
+            </div>
+            <div class="age-advice">
+              <strong>36-50 ans :</strong> Optez pour des pauses actives, cuisine familiale saine.
+            </div>
+            <div class="age-advice">
+              <strong>51-65 ans :</strong> Routine matinale douce, activités en semaine régulière.
+            </div>
+            <div class="age-advice">
+              <strong>65+ ans :</strong> Marche quotidienne, aide extérieure pour les courses.
+            </div>
+          </div>
+        </div>
+
+        <div class="lifestyle-card">
+          <h3>👨‍👩‍👧‍👦 Vie Sociale & Familiale</h3>
+          <div class="lifestyle-ages">
+            <div class="age-advice">
+              <strong>20-35 ans :</strong> Partagez vos objectifs avec vos amis, créez des challenges collectifs.
+            </div>
+            <div class="age-advice">
+              <strong>36-50 ans :</strong> Impliquez votre famille, cuisine saine pour tous.
+            </div>
+            <div class="age-advice">
+              <strong>51-65 ans :</strong> Devenez le coach santé de vos proches.
+            </div>
+            <div class="age-advice">
+              <strong>65+ ans :</strong> Clubs seniors, activités intergénérationnelles.
+            </div>
+          </div>
+        </div>
+
+        <div class="lifestyle-card">
+          <h3>😴 Sommeil & Récupération</h3>
+          <div class="lifestyle-ages">
+            <div class="age-advice">
+              <strong>20-35 ans :</strong> Routine sommeil stricte, siestes récupératrices.
+            </div>
+            <div class="age-advice">
+              <strong>36-50 ans :</strong> Gestion du stress, techniques de relaxation.
+            </div>
+            <div class="age-advice">
+              <strong>51-65 ans :</strong> Sommeil réparateur, siestes courtes.
+            </div>
+            <div class="age-advice">
+              <strong>65+ ans :</strong> Horaires réguliers, environnement propice.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="monitoring-section">
+      <h2>📊 Fréquences de Suivi Recommandées</h2>
+
+      <div class="monitoring-table">
+        <div class="monitoring-header">
+          <div class="age-column">Tranche d'Âge</div>
+          <div class="frequency-column">Consultations</div>
+          <div class="analysis-column">Analyses</div>
+          <div class="adjustment-column">Ajustements</div>
+        </div>
+
+        <div class="monitoring-row">
+          <div class="age-column">20-35 ans</div>
+          <div class="frequency-column">Tous les 2 mois</div>
+          <div class="analysis-column">HbA1c + bilan lipidique</div>
+          <div class="adjustment-column">Rapide selon tolérance</div>
+        </div>
+
+        <div class="monitoring-row">
+          <div class="age-column">36-50 ans</div>
+          <div class="frequency-column">Tous les 3 mois</div>
+          <div class="analysis-column">Bilan complet + hormones</div>
+          <div class="adjustment-column">Progressif et stable</div>
+        </div>
+
+        <div class="monitoring-row">
+          <div class="age-column">51-65 ans</div>
+          <div class="frequency-column">Tous les 3 mois</div>
+          <div class="analysis-column">Bilan cardiovasculaire</div>
+          <div class="adjustment-column">Prudent et mesuré</div>
+        </div>
+
+        <div class="monitoring-row">
+          <div class="age-column">65+ ans</div>
+          <div class="frequency-column">Tous les 2 mois</div>
+          <div class="analysis-column">Bilan complet + rénal</div>
+          <div class="adjustment-column">Très progressif</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-stories">
+      <h2>🌟 Histoires Inspirantes par Génération</h2>
+
+      <div class="stories-grid">
+        <div class="story-card">
+          <div class="story-generation">🌱 28 ans - Marie</div>
+          <blockquote>
+            "À 28 ans, je jonglais entre boulot stressant et sorties entre amis. Le GLP-1 m'a aidée
+            à stabiliser mon poids sans sacrifier ma vie sociale. J'ai appris à manger équilibré
+            tout en profitant des restaurants. Aujourd'hui, je suis en forme et confiante !"
+          </blockquote>
+          <div class="story-result">-18 kg en 6 mois</div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-generation">🌟 45 ans - Thomas</div>
+          <blockquote>
+            "À 45 ans, avec deux ados et un job prenant, je pensais que c'était mission impossible.
+            Le GLP-1 adapté à mon âge m'a redonné le contrôle. J'ai repris le sport, amélioré mon
+            alimentation familiale, et retrouvé l'énergie de mes 30 ans !"
+          </blockquote>
+          <div class="story-result">-25 kg en 8 mois</div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-generation">🧠 58 ans - Jacqueline</div>
+          <blockquote>
+            "À 58 ans, en préménopause, je luttais contre une prise de poids inexorable.
+            Le GLP-1 combiné à une alimentation anti-âge a transformé ma vie. J'ai stabilisé
+            mon diabète, renforcé mes os, et retrouvé ma vitalité. C'est un nouveau départ !"
+          </blockquote>
+          <div class="story-result">-22 kg en 9 mois</div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-generation">🎭 72 ans - Robert</div>
+          <blockquote>
+            "À 72 ans, je craignais de perdre mon autonomie. Le GLP-1 adapté aux seniors
+            m'a redonné de la force et de l'énergie. Avec l'aide de ma famille et des séances
+            de marche douce, je me sens rajeuni de 10 ans. Quelle belle surprise !"
+          </blockquote>
+          <div class="story-result">-15 kg en 10 mois</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="warnings-section">
+      <h2>⚠️ Points de Vigilance par Âge</h2>
+
+      <div class="warnings-grid">
+        <div class="warning-card">
+          <h3>20-35 ans</h3>
+          <ul>
+            <li>Risque de déshydratation lors des sorties</li>
+            <li>Interactions avec contraceptifs oraux</li>
+            <li>Attention aux compléments sportifs</li>
+            <li>Surveillance de la fertilité</li>
+          </ul>
+        </div>
+
+        <div class="warning-card">
+          <h3>36-50 ans</h3>
+          <ul>
+            <li>Fluctuations hormonales (périménopause)</li>
+            <li>Risque cardiovasculaire accru</li>
+            <li>Impact sur la libido</li>
+            <li>Surveillance thyroïdienne</li>
+          </ul>
+        </div>
+
+        <div class="warning-card">
+          <h3>51-65 ans</h3>
+          <ul>
+            <li>Ostéoporose et densité osseuse</li>
+            <li>Fonction rénale diminuée</li>
+            <li>Polymédication</li>
+            <li>Risques de chutes</li>
+          </ul>
+        </div>
+
+        <div class="warning-card">
+          <h3>65+ ans</h3>
+          <ul>
+            <li>Fonction rénale très diminuée</li>
+            <li>Risques d'hypoglycémie</li>
+            <li>Interactions médicamenteuses</li>
+            <li>Perte d'appétit</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Quel que Soit Votre Âge, Votre Parcours GLP-1 Commence Ici</h3>
+      <p>Découvrez comment adapter le traitement GLP-1 à votre génération pour des résultats optimaux et durables.</p>
+      <a href="/contact" class="cta-button">Consultation Personnalisée</a>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+  }
+
+  .badge-icon {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .hero-features {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 1.5rem;
+    color: #8b5cf6;
+  }
+
+  .feature-item span {
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 2rem 1.5rem 1.5rem;
+    color: white;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .intro-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .intro-section h2 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .age-groups-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .age-group-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid;
+  }
+
+  .age-group-card.young {
+    border-left-color: #10b981;
+  }
+
+  .age-group-card.adult {
+    border-left-color: #f59e0b;
+  }
+
+  .age-group-card.mature {
+    border-left-color: #8b5cf6;
+  }
+
+  .age-group-card.senior {
+    border-left-color: #ef4444;
+  }
+
+  .age-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .age-icon {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+
+  .age-info h3 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+
+  .age-info p {
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .age-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .age-challenges,
+  .age-strategy,
+  .age-success {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .age-challenges h4,
+  .age-strategy h4,
+  .age-success h4 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .age-challenges ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .age-challenges li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .strategy-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .strategy-point {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .strategy-point h5 {
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .strategy-point p {
+    color: #6b7280;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .age-success p {
+    color: #065f46;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .hormonal-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .hormonal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .hormonal-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .hormonal-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .hormonal-content p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .hormonal-advice {
+    background: #fef3c7;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #92400e;
+  }
+
+  .lifestyle-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .lifestyle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .lifestyle-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .lifestyle-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .lifestyle-ages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .age-advice {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .age-advice strong {
+    color: #1f2937;
+  }
+
+  .monitoring-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .monitoring-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .monitoring-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    background: #f8fafc;
+    padding: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .monitoring-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .monitoring-row:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  .success-stories h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .story-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .story-generation {
+    color: #8b5cf6;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .story-card blockquote {
+    color: #4b5563;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .story-result {
+    color: #10b981;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .warnings-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .warnings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .warning-card {
+    background: #fef2f2;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #dc2626;
+  }
+
+  .warning-card h3 {
+    color: #dc2626;
+    margin-bottom: 1rem;
+  }
+
+  .warning-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .warning-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #991b1b;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #8b5cf6;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-generations {
+      gap: 1rem;
+    }
+
+    .age-content {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .strategy-points {
+      grid-template-columns: 1fr;
+    }
+
+    .hormonal-grid,
+    .lifestyle-grid,
+    .stories-grid,
+    .warnings-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .monitoring-header,
+    .monitoring-row {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .monitoring-header {
+      display: none;
+    }
+
+    .monitoring-row > div::before {
+      content: attr(class);
+      font-weight: 600;
+      color: #6b7280;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+</style>

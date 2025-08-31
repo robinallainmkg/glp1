@@ -1,0 +1,518 @@
+---
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3);
+
+const metadata = {
+  title: 'Interactions Médicamenteuses GLP-1 : Ce qu\'il faut savoir',
+  description: 'Guide complet des interactions entre GLP-1 et autres médicaments. Compatibilités, contre-indications et précautions médicales essentielles.',
+  keywords: ['interactions médicamenteuses GLP-1', 'compatibilité médicaments', 'contre-indications', 'précautions médicales', 'association thérapeutique'],
+  seoTitle: 'Interactions Médicamenteuses GLP-1 - Compatibilité et Précautions',
+  seoDescription: 'Découvrez les interactions entre GLP-1 et autres médicaments. Guide complet des compatibilités, contre-indications et précautions à prendre.',
+  category: 'guides',
+  publishedAt: '2025-01-22',
+  updatedAt: '2025-01-22',
+  featured: true,
+  author: 'Dr. Sarah Martin',
+  readingTime: '10 min'
+};
+
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/interactions-glp1.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <div class="warning-banner">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <h3>Information Importante</h3>
+        <p>Cette information est donnée à titre éducatif. Consultez toujours votre médecin ou pharmacien pour évaluer les risques d'interactions médicamenteuses spécifiques à votre situation.</p>
+      </div>
+    </div>
+
+    <div class="intro-section">
+      <h2>🔄 Comprendre les Interactions Médicamenteuses</h2>
+      <p>Les GLP-1 peuvent interagir avec de nombreux médicaments. Certaines interactions sont bénéfiques, d'autres nécessitent une surveillance particulière ou sont contre-indiquées.</p>
+    </div>
+
+    <section class="interaction-section">
+      <h2>✅ Associations Bénéfiques et Compatibles</h2>
+
+      <div class="interaction-card compatible">
+        <h3>💊 Antidiabétiques Oraux</h3>
+        <div class="interaction-content">
+          <p><strong>Compatibilité :</strong> Excellente association synergique</p>
+          <ul>
+            <li><strong>Métformine</strong> : Potentialise l'effet hypoglycémiant</li>
+            <li><strong>Sulfonylurées</strong> : Augmente le risque d'hypoglycémie (surveillance)</li>
+            <li><strong>Gliptines</strong> : Association sûre et efficace</li>
+            <li><strong>Insuline</strong> : Réduction des doses souvent nécessaire</li>
+          </ul>
+          <div class="recommendation safe">
+            <strong>Recommandation :</strong> Ajustement des doses sous surveillance glycémique
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card compatible">
+        <h3>🫀 Traitements Cardio-Vasculaires</h3>
+        <div class="interaction-content">
+          <p><strong>Compatibilité :</strong> Généralement bonne avec bénéfices additionnels</p>
+          <ul>
+            <li><strong>Statines</strong> : Association sûre, effet protecteur cardiovasculaire</li>
+            <li><strong>Anti-hypertenseurs</strong> : Compatibilité variable selon la classe</li>
+            <li><strong>Anti-agrégants</strong> : Pas d'interaction significative</li>
+            <li><strong>Bêta-bloquants</strong> : Surveillance de l'hypoglycémie</li>
+          </ul>
+          <div class="recommendation safe">
+            <strong>Recommandation :</strong> Contrôle régulier de la pression artérielle
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card compatible">
+        <h3>🧠 Psychotropes</h3>
+        <div class="interaction-content">
+          <p><strong>Compatibilité :</strong> Variable selon la molécule</p>
+          <ul>
+            <li><strong>ISRS/SNRI</strong> : Association généralement sûre</li>
+            <li><strong>Benzodiazépines</strong> : Risque de somnolence accrue</li>
+            <li><strong>Antipsychotiques</strong> : Surveillance du poids et de la glycémie</li>
+            <li><strong>Lithium</strong> : Interaction rare mais possible</li>
+          </ul>
+          <div class="recommendation caution">
+            <strong>Recommandation :</strong> Surveillance psychiatrique rapprochée
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interaction-section">
+      <h2>⚠️ Interactions Nécessitant une Surveillance</h2>
+
+      <div class="interaction-card caution">
+        <h3>💊 Médicaments Diminuant la Glycémie</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Hypoglycémie majorée</p>
+          <ul>
+            <li><strong>Sulfonylurées</strong> : Risque élevé d'hypoglycémie</li>
+            <li><strong>Insuline</strong> : Ajustement obligatoire des doses</li>
+            <li><strong>Répaglinide</strong> : Surveillance glycémique étroite</li>
+          </ul>
+          <div class="recommendation caution">
+            <strong>Recommandation :</strong> Autosurveillance glycémique fréquente
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card caution">
+        <h3>🫁 Corticostéroïdes</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Hyperglycémie de rebond</p>
+          <ul>
+            <li><strong>Corticoïdes systémiques</strong> : Antagonisent l'effet hypoglycémiant</li>
+            <li><strong>Inhalés</strong> : Impact moindre mais possible</li>
+            <li><strong>Locaux</strong> : Risque négligeable</li>
+          </ul>
+          <div class="recommendation caution">
+            <strong>Recommandation :</strong> Surveillance glycémique pendant et après traitement
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card caution">
+        <h3>⚡ Médicaments du Rythme Cardiaque</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Bradycardie ou troubles du rythme</p>
+          <ul>
+            <li><strong>Bêta-bloquants</strong> : Risque de bradycardie</li>
+            <li><strong>Anti-arythmiques</strong> : Surveillance ECG recommandée</li>
+            <li><strong>Digitaliques</strong> : Interaction rare mais possible</li>
+          </ul>
+          <div class="recommendation caution">
+            <strong>Recommandation :</strong> Contrôle cardiologique régulier
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interaction-section">
+      <h2>❌ Associations Déconseillées ou Contre-Indiquées</h2>
+
+      <div class="interaction-card contraindicated">
+        <h3>🤰 Contraceptifs Oraux</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Efficacité contraceptive diminuée</p>
+          <ul>
+            <li><strong>Estroprogestatifs</strong> : Diminution de l'efficacité</li>
+            <li><strong>Progestatifs seuls</strong> : Impact moindre</li>
+            <li><strong>Dispositifs intra-utérins</strong> : Pas d'interaction</li>
+          </ul>
+          <div class="recommendation danger">
+            <strong>Recommandation :</strong> Méthode contraceptive alternative recommandée
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card contraindicated">
+        <h3>🦠 Antibiotiques</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Modification de l'absorption ou de l'effet</p>
+          <ul>
+            <li><strong>Quinolones</strong> : Diminution de l'absorption digestive</li>
+            <li><strong>Tétracyclines</strong> : Même mécanisme</li>
+            <li><strong>Macrolides</strong> : Risque de troubles digestifs</li>
+          </ul>
+          <div class="recommendation danger">
+            <strong>Recommandation :</strong> Espacer les prises d'au moins 2 heures
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card contraindicated">
+        <h3>🌿 Phytothérapie et Compléments</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Interactions imprévisibles</p>
+          <ul>
+            <li><strong>Ginseng</strong> : Potentialise l'effet hypoglycémiant</li>
+            <li><strong>Millepertuis</strong> : Diminue l'efficacité des médicaments</li>
+            <li><strong>Chrome</strong> : Peut potentialiser l'effet</li>
+          </ul>
+          <div class="recommendation danger">
+            <strong>Recommandation :</strong> Information systématique au médecin
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interaction-section">
+      <h2>🍷 Interactions avec Substances Non Médicamenteuses</h2>
+
+      <div class="interaction-card caution">
+        <h3>🍷 Alcool</h3>
+        <div class="interaction-content">
+          <p><strong>Risque :</strong> Majoration des effets secondaires</p>
+          <ul>
+            <li><strong>À jeun</strong> : Risque d'hypoglycémie sévère</li>
+            <li><strong>En quantité</strong> : Augmentation des nausées</li>
+            <li><strong>Chroniques</strong> : Diminution de l'efficacité du traitement</li>
+          </ul>
+          <div class="recommendation caution">
+            <strong>Recommandation :</strong> Consommation modérée (max 2 verres/jour)
+          </div>
+        </div>
+      </div>
+
+      <div class="interaction-card compatible">
+        <h3>☕ Caféine</h3>
+        <div class="interaction-content">
+          <p><strong>Impact :</strong> Généralement neutre</p>
+          <ul>
+            <li><strong>Café</strong> : Pas d'interaction significative</li>
+            <li><strong>Thé</strong> : Compatible</li>
+            <li><strong>Énergie drinks</strong> : Préférer modération</li>
+          </ul>
+          <div class="recommendation safe">
+            <strong>Recommandation :</strong> Consommation normale possible
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="advice-section">
+      <h2>🩺 Conseils Pratiques</h2>
+      <div class="advice-grid">
+        <div class="advice-card">
+          <h3>📋 Avant de Commencer</h3>
+          <ul>
+            <li>Établissez la liste complète de vos médicaments</li>
+            <li>Incluez les médicaments occasionnels</li>
+            <li>N'oubliez pas les compléments alimentaires</li>
+            <li>Informez-vous sur les médicaments d'automédication</li>
+          </ul>
+        </div>
+
+        <div class="advice-card">
+          <h3>🏥 Pendant le Traitement</h3>
+          <ul>
+            <li>Signalez tout nouveau symptôme à votre médecin</li>
+            <li>Surveillez votre glycémie régulièrement</li>
+            <li>Consultez en cas de modification de traitement</li>
+            <li>Gardez une trace de vos médicaments</li>
+          </ul>
+        </div>
+
+        <div class="advice-card">
+          <h3>💬 Communication</h3>
+          <ul>
+            <li>Informez tous vos professionnels de santé</li>
+            <li>Montrez votre ordonnance lors d'achats</li>
+            <li>Signalez les allergies médicamenteuses</li>
+            <li>Partagez vos antécédents médicaux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h3>Besoin d'une évaluation personnalisée ?</h3>
+        <p>Nos pharmaciens experts analysent vos interactions médicamenteuses gratuitement.</p>
+        <a href="/contact" class="cta-button">Demander une analyse</a>
+      </div>
+    </div>
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .article-container {
+    max-width: 100%;
+  }
+
+  .warning-banner {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .warning-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .warning-content h3 {
+    color: #92400e;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .warning-content p {
+    color: #78350f;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .intro-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .intro-section h2 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .interaction-section {
+    margin-bottom: 4rem;
+  }
+
+  .interaction-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #1f2937;
+    border-bottom: 3px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+
+  .interaction-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid;
+    transition: all 0.3s ease;
+  }
+
+  .interaction-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .interaction-card.compatible {
+    border-left-color: #10b981;
+  }
+
+  .interaction-card.caution {
+    border-left-color: #f59e0b;
+  }
+
+  .interaction-card.contraindicated {
+    border-left-color: #ef4444;
+  }
+
+  .interaction-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+
+  .interaction-content p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+    font-weight: 500;
+  }
+
+  .interaction-content ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .interaction-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .recommendation {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .recommendation.safe {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+  }
+
+  .recommendation.caution {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #f59e0b;
+  }
+
+  .recommendation.danger {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+  }
+
+  .advice-section {
+    background: #f8fafc;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .advice-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1f2937;
+  }
+
+  .advice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .advice-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .advice-card h3 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .advice-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .advice-card li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: white;
+    color: #3b82f6;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .warning-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .interaction-card {
+      padding: 1.5rem;
+    }
+
+    .advice-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cta-section {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

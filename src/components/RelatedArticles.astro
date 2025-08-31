@@ -1,0 +1,324 @@
+---
+// src/components/RelatedArticles.astro
+interface Props {
+  currentPath: string;
+  maxLinks?: number;
+}
+
+// Liste complète des articles avec leurs chemins et mots clés associés
+const articles = [
+  // Guides principaux
+  {
+    path: '/guides/qu-est-ce-que-glp1/',
+    title: 'Qu\'est-ce que le GLP-1 ? Guide Complet',
+    keywords: ['glp1', 'hormone', 'diabète', 'perte de poids', 'agoniste']
+  },
+  {
+    path: '/guides/guide-complet-wegovy/',
+    title: 'Guide Complet Wegovy',
+    keywords: ['wegovy', 'sémaglutide', 'perte de poids', 'diabète', 'prix']
+  },
+  {
+    path: '/guides/guide-beaute-perte-de-poids-glp1/',
+    title: 'Guide Beauté et Perte de Poids GLP-1',
+    keywords: ['beauté', 'perte de poids', 'glp1', 'peau', 'bien-être']
+  },
+  {
+    path: '/guides/quel-traitement-glp1-choisir/',
+    title: 'Quel Traitement GLP-1 Choisir ?',
+    keywords: ['diagnostic', 'traitement', 'choisir', 'glp1', 'médicament']
+  },
+  {
+    path: '/guides/nouveaux-medicaments-perdre-poids/',
+    title: 'Nouveaux Médicaments pour Perdre du Poids',
+    keywords: ['nouveaux', 'médicaments', 'perte de poids', 'traitements']
+  },
+  {
+    path: '/guides/experts/',
+    title: 'Experts GLP-1',
+    keywords: ['experts', 'médecins', 'spécialistes', 'glp1']
+  },
+
+  // Collections principales
+  {
+    path: '/collections/traitements-glp1/',
+    title: 'Tous les Traitements GLP-1',
+    keywords: ['traitements', 'médicaments', 'glp1', 'liste', 'comparaison']
+  },
+  {
+    path: '/collections/glp1-cout/',
+    title: 'Prix et Coûts des GLP-1',
+    keywords: ['prix', 'coût', 'remboursement', 'économique', 'glp1']
+  },
+  {
+    path: '/collections/medecins-glp1-france/',
+    title: 'Trouver un Médecin GLP-1 en France',
+    keywords: ['médecins', 'prescription', 'france', 'trouver', 'consultation']
+  },
+  {
+    path: '/collections/alternatives-glp1/',
+    title: 'Alternatives aux GLP-1',
+    keywords: ['alternatives', 'naturelles', 'compléments', 'glp1']
+  },
+  {
+    path: '/collections/effets-secondaires-glp1/',
+    title: 'Effets Secondaires des GLP-1',
+    keywords: ['effets secondaires', 'risques', 'précautions', 'glp1']
+  },
+  {
+    path: '/collections/glp1-perte-de-poids/',
+    title: 'GLP-1 et Perte de Poids',
+    keywords: ['perte de poids', 'amaigrissement', 'résultats', 'glp1']
+  },
+  {
+    path: '/collections/glp1-diabete/',
+    title: 'GLP-1 pour le Diabète',
+    keywords: ['diabète', 'type 2', 'glycémie', 'traitement', 'glp1']
+  },
+  {
+    path: '/collections/regime-glp1/',
+    title: 'Régime Alimentaire avec GLP-1',
+    keywords: ['régime', 'alimentation', 'nutrition', 'glp1']
+  },
+  {
+    path: '/collections/recherche-glp1/',
+    title: 'Recherche et Études GLP-1',
+    keywords: ['recherche', 'études', 'scientifique', 'glp1']
+  },
+
+  // Pages spécifiques
+  {
+    path: '/glp1-diabete/',
+    title: 'GLP-1 et Diabète',
+    keywords: ['diabète', 'traitement', 'glp1', 'médicaments']
+  },
+  {
+    path: '/medicaments-glp1/',
+    title: 'Médicaments GLP-1',
+    keywords: ['médicaments', 'glp1', 'liste', 'disponibles']
+  },
+  {
+    path: '/guides/faq-glp1/',
+    title: 'FAQ GLP-1 : Questions Fréquentes',
+    keywords: ['FAQ GLP-1', 'questions fréquentes', 'doutes traitement', 'conseils médicaux']
+  },
+  {
+    path: '/guides/interactions-medicamenteuses-glp1/',
+    title: 'Interactions Médicamenteuses GLP-1',
+    keywords: ['interactions médicamenteuses', 'compatibilité médicaments', 'contre-indications', 'précautions médicales']
+  },
+  {
+    path: '/guides/sport-activite-physique-glp1/',
+    title: 'Sport et Activité Physique GLP-1',
+    keywords: ['sport GLP-1', 'activité physique', 'exercice perte de poids', 'fitness traitement']
+  },
+  {
+    path: '/guides/psychologie-motivation-glp1/',
+    title: 'Psychologie et Motivation GLP-1',
+    keywords: ['psychologie GLP-1', 'motivation traitement', 'aspects mentaux', 'émotions perte de poids']
+  },
+  {
+    path: '/guides/communautes-glp1/',
+    title: 'Communautés GLP-1 : Échangez avec d\'autres Patients',
+    keywords: ['communauté GLP-1', 'groupe soutien patients', 'forum traitement', 'échange expérience', 'soutien social GLP-1']
+  },
+  {
+    path: '/guides/suivi-medical-glp1/',
+    title: 'Suivi Médical GLP-1 : Guide Complet du Monitoring',
+    keywords: ['suivi médical GLP-1', 'monitoring traitement', 'analyses sanguines', 'bilan santé', 'consultation médecin', 'effets secondaires']
+  },
+  {
+    path: '/guides/alimentation-personnalisee-glp1/',
+    title: 'Alimentation Personnalisée GLP-1 : Optimisez Vos Repas',
+    keywords: ['alimentation GLP-1', 'nutrition personnalisée', 'repas optimisés', 'recettes GLP-1', 'régime adapté', 'compléments alimentaires']
+  },
+  {
+    path: '/guides/guides-age-glp1/',
+    title: 'Guides GLP-1 par Âge : Adaptés à Chaque Étape de la Vie',
+    keywords: ['GLP-1 par âge', 'traitement jeunes adultes', 'GLP-1 seniors', 'adaptation âge', 'guide générationnel', 'traitement personnalisé âge']
+  }
+];const { currentPath, maxLinks = 6 } = Astro.props;
+
+// Fonction pour calculer la pertinence basée sur les mots clés communs
+function calculateRelevance(article: typeof articles[0], currentPath: string) {
+  const currentArticle = articles.find(a => a.path === currentPath);
+  if (!currentArticle) return 0;
+
+  const currentKeywords = currentArticle.keywords;
+  const commonKeywords = article.keywords.filter(k =>
+    currentKeywords.some(ck => ck.toLowerCase().includes(k.toLowerCase()) ||
+                              k.toLowerCase().includes(ck.toLowerCase()))
+  );
+
+  return commonKeywords.length;
+}
+
+// Filtrer et trier les articles connexes
+const relatedArticles = articles
+  .filter(article => article.path !== currentPath)
+  .map(article => ({
+    ...article,
+    relevance: calculateRelevance(article, currentPath)
+  }))
+  .sort((a, b) => b.relevance - a.relevance)
+  .slice(0, maxLinks);
+
+// Si pas assez d'articles pertinents, compléter avec d'autres
+if (relatedArticles.length < maxLinks) {
+  const remainingArticles = articles
+    .filter(article => article.path !== currentPath && !relatedArticles.some(ra => ra.path === article.path))
+    .slice(0, maxLinks - relatedArticles.length);
+
+  relatedArticles.push(...remainingArticles);
+}
+---
+
+<section class="related-articles">
+  <h3>📚 Articles connexes</h3>
+  <p class="related-intro">Découvrez d'autres guides et informations utiles sur les GLP-1</p>
+
+  <div class="related-grid">
+    {relatedArticles.map(article => (
+      <article class="related-card">
+        <div class="related-content">
+          <h4>
+            <a href={article.path} title={`Lire l'article : ${article.title}`}>
+              {article.title}
+            </a>
+          </h4>
+          <p class="related-description">
+            Découvrez plus sur {article.keywords.slice(0, 2).join(', ')}
+            {article.keywords.length > 2 ? ` et ${article.keywords.length - 2} autres sujets` : ''}
+          </p>
+        </div>
+        <div class="related-arrow">
+          <span>→</span>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .related-articles {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #e5e7eb;
+    background: linear-gradient(to bottom, #f9fafb 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 3rem 2rem 2rem;
+  }
+
+  .related-articles h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    text-align: center;
+  }
+
+  .related-intro {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .related-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .related-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+  }
+
+  .related-content {
+    flex: 1;
+  }
+
+  .related-card h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .related-card h4 a {
+    color: #1f2937;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .related-card h4 a:hover {
+    color: #3b82f6;
+  }
+
+  .related-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .related-arrow {
+    margin-left: 1rem;
+    color: #3b82f6;
+    font-size: 1.25rem;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+  }
+
+  .related-card:hover .related-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .related-articles {
+      padding: 2rem 1rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .related-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .related-card {
+      padding: 1.25rem;
+    }
+
+    .related-card h4 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .related-articles h3 {
+      font-size: 1.5rem;
+    }
+
+    .related-intro {
+      font-size: 0.9rem;
+    }
+  }
+</style>
