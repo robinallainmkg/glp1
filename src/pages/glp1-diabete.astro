@@ -1,8 +1,11 @@
 ---
 // Redirection 301 pour SEO : /glp1-diabete → /collections/glp1-diabete/
+// Cette logique doit s'exécuter côté serveur avant le rendu HTML
 if (Astro.url.pathname === '/glp1-diabete' || Astro.url.pathname === '/glp1-diabete/') {
   return Astro.redirect('/collections/glp1-diabete/', 301);
 }
+
+// Si on arrive ici, c'est que la redirection n'a pas fonctionné, afficher une page temporaire
 ---
 
 <html>
@@ -10,6 +13,10 @@ if (Astro.url.pathname === '/glp1-diabete' || Astro.url.pathname === '/glp1-diab
   <title>Redirection en cours...</title>
   <meta http-equiv="refresh" content="0; url=/collections/glp1-diabete/">
   <link rel="canonical" href="/collections/glp1-diabete/">
+  <script>
+    // Redirection JavaScript comme fallback
+    window.location.href = '/collections/glp1-diabete/';
+  </script>
 </head>
 <body>
   <p>Redirection vers <a href="/collections/glp1-diabete/">la page du diabète et GLP-1</a>...</p>
