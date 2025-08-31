@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /temoignages-glp1/ → /temoignages/
+if (Astro.url.pathname === '/temoignages-glp1' || Astro.url.pathname === '/temoignages-glp1/') {
+  return Astro.redirect('/temoignages/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/temoignages/">
+  <link rel="canonical" href="/temoignages/">
+</head>
+<body>
+  <p>Redirection vers <a href="/temoignages/">la page des témoignages</a>...</p>
+</body>
+</html>

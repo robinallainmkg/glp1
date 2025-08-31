@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /mentions-legales/ → /legal/mentions-legales/
+if (Astro.url.pathname === '/mentions-legales' || Astro.url.pathname === '/mentions-legales/') {
+  return Astro.redirect('/legal/mentions-legales/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/legal/mentions-legales/">
+  <link rel="canonical" href="/legal/mentions-legales/">
+</head>
+<body>
+  <p>Redirection vers <a href="/legal/mentions-legales/">les mentions légales</a>...</p>
+</body>
+</html>

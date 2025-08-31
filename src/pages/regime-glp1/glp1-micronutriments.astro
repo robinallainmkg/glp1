@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /regime-glp1/glp1-micronutriments/ → /collections/regime-glp1/
+if (Astro.url.pathname === '/regime-glp1/glp1-micronutriments' || Astro.url.pathname === '/regime-glp1/glp1-micronutriments/') {
+  return Astro.redirect('/collections/regime-glp1/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/collections/regime-glp1/">
+  <link rel="canonical" href="/collections/regime-glp1/">
+</head>
+<body>
+  <p>Redirection vers <a href="/collections/regime-glp1/">les régimes GLP-1</a>...</p>
+</body>
+</html>

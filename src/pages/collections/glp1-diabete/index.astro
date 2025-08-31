@@ -1,0 +1,41 @@
+---
+import CollectionLayout from '../../../layouts/CollectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Récupérer tous les articles de cette collection
+const articles = await getCollection('glp1-diabete');
+
+// Créer l'objet collection attendu par le layout
+const collection = {
+  id: 'glp1-diabete',
+  name: 'GLP-1 et Diabète',
+  slug: 'glp1-diabete',
+  description: 'Comprendre le rôle des GLP-1 dans le traitement du diabète de type 2 et la gestion de la glycémie',
+  icon: '🩸',
+  color: '#ef4444',
+  seoTitle: 'GLP-1 et Diabète - Comprendre les traitements',
+  seoDescription: 'Découvrez comment les médicaments GLP-1 aident à contrôler le diabète de type 2, réguler la glycémie et prévenir les complications.',
+  keywords: ["glp1 diabète", "diabète type 2", "traitements glp1", "glycémie", "insuline", "diabète"],
+  image: '/images/thumbnails/glp1-diabete.svg'
+};
+
+// Formater les articles pour le layout (wordCount sécurisé)
+const formattedArticles = articles.map((article: any) => ({
+  slug: article.slug,
+  title: article.data.title,
+  description: article.data.description || article.data.metaDescription || '',
+  author: article.data.author || 'Équipe GLP-1 France',
+  url: `/collections/glp1-diabete/${article.slug}`,
+  wordCount: (article.body || '').split(/\s+/).filter(Boolean).length,
+  readingTime: Math.ceil(((article.body || '').split(/\s+/).filter(Boolean).length) / 200) || 1,
+  date: article.data.date || article.data.pubDate,
+  tags: article.data.tags || [],
+  image: article.data.image || article.data.heroImage
+}));
+---
+
+<CollectionLayout
+  collection={collection}
+  articles={formattedArticles}
+  {collection}
+/>

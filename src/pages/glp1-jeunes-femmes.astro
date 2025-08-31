@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /glp1-jeunes-femmes/ → /collections/glp1-perte-de-poids/
+if (Astro.url.pathname === '/glp1-jeunes-femmes' || Astro.url.pathname === '/glp1-jeunes-femmes/') {
+  return Astro.redirect('/collections/glp1-perte-de-poids/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/collections/glp1-perte-de-poids/">
+  <link rel="canonical" href="/collections/glp1-perte-de-poids/">
+</head>
+<body>
+  <p>Redirection vers <a href="/collections/glp1-perte-de-poids/">la page de perte de poids GLP-1</a>...</p>
+</body>
+</html>

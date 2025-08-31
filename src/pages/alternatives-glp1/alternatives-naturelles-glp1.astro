@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /alternatives-glp1/alternatives-naturelles-glp1/ → /collections/alternatives-glp1/
+if (Astro.url.pathname === '/alternatives-glp1/alternatives-naturelles-glp1' || Astro.url.pathname === '/alternatives-glp1/alternatives-naturelles-glp1/') {
+  return Astro.redirect('/collections/alternatives-glp1/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/collections/alternatives-glp1/">
+  <link rel="canonical" href="/collections/alternatives-glp1/">
+</head>
+<body>
+  <p>Redirection vers <a href="/collections/alternatives-glp1/">les alternatives naturelles au GLP-1</a>...</p>
+</body>
+</html>

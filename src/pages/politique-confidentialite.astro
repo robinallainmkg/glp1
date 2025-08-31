@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /politique-confidentialite/ → /legal/politique-confidentialite/
+if (Astro.url.pathname === '/politique-confidentialite' || Astro.url.pathname === '/politique-confidentialite/') {
+  return Astro.redirect('/legal/politique-confidentialite/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/legal/politique-confidentialite/">
+  <link rel="canonical" href="/legal/politique-confidentialite/">
+</head>
+<body>
+  <p>Redirection vers <a href="/legal/politique-confidentialite/">la politique de confidentialité</a>...</p>
+</body>
+</html>

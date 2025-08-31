@@ -1,0 +1,17 @@
+---
+// Redirection 301 pour SEO : /test-affiliation-multi/ → /
+if (Astro.url.pathname === '/test-affiliation-multi' || Astro.url.pathname === '/test-affiliation-multi/') {
+  return Astro.redirect('/', 301);
+}
+---
+
+<html>
+<head>
+  <title>Redirection en cours...</title>
+  <meta http-equiv="refresh" content="0; url=/">
+  <link rel="canonical" href="/">
+</head>
+<body>
+  <p>Redirection vers <a href="/">la page d'accueil</a>...</p>
+</body>
+</html>
