@@ -94,6 +94,10 @@
       const mobileNav = document.getElementById('new-nav-mobile');
       const mobileOverlay = document.getElementById('mobile-menu-overlay');
       
+      // Détection iOS
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      let scrollPosition = 0;
+      
       if (mobileToggle && mobileNav && mobileOverlay) {
         function toggleMobileMenu() {
           const isOpen = mobileNav.classList.contains('open');
@@ -103,19 +107,41 @@
             mobileNav.classList.remove('open');
             mobileToggle.classList.remove('active');
             mobileOverlay.classList.remove('active');
+            
             // Restaurer le scroll du body
-            document.body.style.overflow = '';
-            document.body.style.position = '';
-            document.body.style.width = '';
+            if (isIOS) {
+              document.body.style.position = '';
+              document.body.style.top = '';
+              document.body.style.width = '';
+              document.body.style.overflow = '';
+              window.scrollTo(0, scrollPosition);
+              document.body.classList.remove('mobile-menu-open');
+            } else {
+              document.body.style.overflow = '';
+              document.body.style.position = '';
+              document.body.style.width = '';
+              document.body.classList.remove('mobile-menu-open');
+            }
           } else {
             // Ouvrir le menu
             mobileNav.classList.add('open');
             mobileToggle.classList.add('active');
             mobileOverlay.classList.add('active');
+            
             // Bloquer le scroll du body
-            document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
+            if (isIOS) {
+              scrollPosition = window.pageYOffset;
+              document.body.style.position = 'fixed';
+              document.body.style.top = `-${scrollPosition}px`;
+              document.body.style.width = '100%';
+              document.body.style.overflow = 'hidden';
+              document.body.classList.add('mobile-menu-open');
+            } else {
+              document.body.style.overflow = 'hidden';
+              document.body.style.position = 'fixed';
+              document.body.style.width = '100%';
+              document.body.classList.add('mobile-menu-open');
+            }
           }
         }
         
@@ -126,10 +152,21 @@
           mobileNav.classList.remove('open');
           mobileToggle.classList.remove('active');
           mobileOverlay.classList.remove('active');
+          
           // Restaurer le scroll du body
-          document.body.style.overflow = '';
-          document.body.style.position = '';
-          document.body.style.width = '';
+          if (isIOS) {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            document.body.style.overflow = '';
+            window.scrollTo(0, scrollPosition);
+            document.body.classList.remove('mobile-menu-open');
+          } else {
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.classList.remove('mobile-menu-open');
+          }
         }));
       }
 

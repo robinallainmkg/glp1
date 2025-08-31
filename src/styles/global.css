@@ -227,6 +227,9 @@ article h3, section h3, aside h3, nav h3, header h3, footer h3, main h3 {
   visibility: hidden;
   transition: all 0.3s;
   z-index: 40;
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Pour iOS */
 }
 
 .mobile-menu-overlay {
@@ -245,6 +248,18 @@ article h3, section h3, aside h3, nav h3, header h3, footer h3, main h3 {
 .mobile-menu-overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* Styles pour empêcher le scroll du body quand le menu mobile est ouvert */
+body.mobile-menu-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  -webkit-overflow-scrolling: none; /* Désactive le scroll momentum sur iOS */
+}
+
+body.mobile-menu-open * {
+  -webkit-overflow-scrolling: none; /* Désactive le scroll momentum sur tous les éléments enfants */
 }
 
 .new-nav-mobile.open {
