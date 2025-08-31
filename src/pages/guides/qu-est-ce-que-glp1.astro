@@ -1,419 +1,739 @@
 ---
-title: "Qu'est-ce que le GLP-1 ? Guide complet des médicaments révolutionnaires"
-description: "Découvrez le GLP-1, hormone naturelle et médicaments innovants pour la perte de poids et le diabète. Mécanismes d'action, avantages, inconvénients et guide pratique."
-layout: "../layouts/ArticleWithAffiliateSidebar.astro"
+import ArticleWithAffiliateSidebar from '../../layouts/ArticleWithAffiliateSidebar.astro';
+import { getAllAffiliateProducts } from '../../lib/affiliate';
+
+// Récupération des produits d'affiliation depuis Supabase
+const allProducts = await getAllAffiliateProducts();
+const affiliateProducts = allProducts.slice(0, 3); // 3 premiers produits
+
+const metadata = {
+  title: 'Qu\'est-ce que le GLP-1 ? Guide Complet 2025',
+  description: 'Découvrez le GLP-1 : hormone naturelle révolutionnaire pour le diabète et la perte de poids. Mécanismes d\'action, médicaments disponibles, avantages et contre-indications.',
+  keywords: ['GLP-1', 'hormone', 'diabète', 'perte de poids', 'sémaglutide', 'tirzepatide', 'liraglutide'],
+  seoTitle: 'GLP-1 : Guide Complet 2025 - Mécanismes, Médicaments, Résultats',
+  seoDescription: 'Guide complet sur le GLP-1 : hormone naturelle, médicaments révolutionnaires (Ozempic, Wegovy, Mounjaro), mécanismes d\'action et indications médicales.',
+  category: 'guides',
+  publishedAt: '2025-01-15',
+  updatedAt: '2025-01-15',
+  featured: true,
+  author: 'Dr. Sarah Martin',
+  readingTime: '8 min'
+};
+
+// Configuration pour sidebar uniquement (pas d'inline products)
+const affiliateConfig = {
+  mobileStrategy: 'sidebar-only',
+  maxInlineProducts: 0,
+  sidebarPosition: 'right'
+};
 ---
 
-<script>
-// Safe defaults (avoid typeof checks in templates)
-const affiliateProducts = [];
-const affiliateConfig = {};
-const entry = {};
-const frontmatter = null;
-</script>
-
-<div class="explanation-article">
-  <header class="article-header">
-    <h1>Qu'est-ce que le GLP-1 ? Guide complet des médicaments révolutionnaires</h1>
-    <p class="article-intro">
-      Plongez au cœur de la révolution thérapeutique du GLP-1, une hormone naturelle désormais reproduite synthétiquement pour transformer la prise en charge du diabète et de l'obésité. Découvrez comment ces médicaments innovants agissent sur votre métabolisme pour une perte de poids durable et une meilleure santé cardiovasculaire.
-    </p>
-  </header>
-
-<section class="definition-section">
-  <h2>🔬 Définition et origine du GLP-1</h2>
-
-  <div class="definition-grid">
-    <div class="definition-text">
-      <p>
-        Le GLP-1, ou <strong>Glucagon-Like Peptide-1</strong>, est une hormone peptidique naturellement sécrétée par les cellules L de l'intestin grêle en réponse à l'ingestion d'aliments. Découverte dans les années 1980 lors d'études sur le diabète, cette molécule fascine les chercheurs par ses multiples effets bénéfiques sur le métabolisme glucidique et énergétique.
-      </p>
-
-      <p>
-        Naturellement présent dans l'organisme humain, le GLP-1 agit comme un messager hormonal essentiel dans la régulation de la glycémie et de l'appétit. Cependant, chez les personnes atteintes de diabète de type 2 ou d'obésité, la production endogène de cette hormone est souvent insuffisante ou dysfonctionnelle, ouvrant la voie à des thérapies substitutives innovantes.
-      </p>
-
-      <h3>Ses fonctions physiologiques principales :</h3>
+<ArticleWithAffiliateSidebar
+  title={metadata.title}
+  description={metadata.description}
+  author={metadata.author}
+  image="/images/thumbnails/vs.jpg"
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+>
+  <div class="article-container">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+      <h3>📋 Sommaire</h3>
       <ul>
-        <li>🍽️ <strong>Régulation de l'appétit :</strong> Stimulation des centres de satiété hypothalamiques</li>
-        <li>🩸 <strong>Contrôle glycémique :</strong> Augmentation de la sécrétion d'insuline en réponse aux repas</li>
-        <li>⏰ <strong>Modulation digestive :</strong> Ralentissement de la vidange gastrique</li>
-        <li>🧠 <strong>Action neurologique :</strong> Réduction des comportements alimentaires compulsifs</li>
+        <li><a href="#definition-glp1">Qu'est-ce que le GLP-1 ?</a></li>
+        <li><a href="#mecanisme-action">Mécanisme d'Action</a></li>
+        <li><a href="#medicaments-disponibles">Médicaments Disponibles</a></li>
+        <li><a href="#indications">Indications Médicales</a></li>
+        <li><a href="#contre-indications">Contre-indications</a></li>
+        <li><a href="#efficacite">Efficacité et Résultats</a></li>
+        <li><a href="#effets-secondaires">Effets Secondaires</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </div>
 
-    <div class="definition-visual">
-      <div class="hormone-process">
-        <div class="process-step">
-          <span class="step-number">1</span>
-          <span class="step-text">Ingestion d'aliments</span>
-        </div>
-        <div class="process-arrow">↓</div>
-        <div class="process-step">
-          <span class="step-number">2</span>
-          <span class="step-text">Sécrétion intestinale de GLP-1</span>
-        </div>
-        <div class="process-arrow">↓</div>
-        <div class="process-step">
-          <span class="step-number">3</span>
-          <span class="step-text">Action pancréatique et cérébrale</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Section 1: Définition -->
+    <section id="definition-glp1">
+      <h2>🔬 Qu'est-ce que le GLP-1 ?</h2>
 
-<section class="medications-section">
-  <h2>💊 Les médicaments à base de GLP-1 disponibles</h2>
-
-  <p class="section-intro">
-    Forts des avancées de la biotechnologie, les laboratoires pharmaceutiques ont développé des analogues du GLP-1 résistants à la dégradation enzymatique, permettant une administration hebdomadaire et une efficacité prolongée. Voici les principales molécules actuellement commercialisées :
-  </p>
-
-  <div class="medications-grid">
-    <div class="med-card">
-      <h3>Semaglutide (Ozempic® / Wegovy®)</h3>
-      <div class="med-details">
-        <p><strong>Indications :</strong> Diabète type 2 et obésité</p>
-        <p><strong>Posologie :</strong> 0.25 à 2.4 mg/semaine</p>
-        <p><strong>Administration :</strong> Injection sous-cutanée</p>
-        <p><strong>AMM :</strong> Depuis 2018 (diabète), 2021 (obésité)</p>
-      </div>
-    </div>
-
-    <div class="med-card">
-      <h3>Tirzepatide (Mounjaro® / Zepbound®)</h3>
-      <div class="med-details">
-        <p><strong>Indications :</strong> Diabète type 2 et obésité</p>
-        <p><strong>Posologie :</strong> 2.5 à 15 mg/semaine</p>
-        <p><strong>Administration :</strong> Injection sous-cutanée</p>
-        <p><strong>AMM :</strong> Depuis 2022</p>
-      </div>
-    </div>
-
-    <div class="med-card">
-      <h3>Liraglutide (Saxenda® / Victoza®)</h3>
-      <div class="med-details">
-        <p><strong>Indications :</strong> Diabète type 2 et obésité</p>
-        <p><strong>Posologie :</strong> 0.6 à 3 mg/jour</p>
-        <p><strong>Administration :</strong> Injection sous-cutanée quotidienne</p>
-        <p><strong>AMM :</strong> Depuis 2009 (diabète), 2015 (obésité)</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="key-insight">
-    <h3>💡 Point essentiel</h3>
-    <p>
-      Ces médicaments ne sont pas de simples coupe-faim chimiques, mais des copies conformes de votre hormone naturelle, modifiées uniquement pour résister plus longtemps à la dégradation enzymatique. Cette approche bio-mimétique explique leur profil de tolérance favorable et leur efficacité remarquable.
-    </p>
-  </div>
-</section>
-
-      <section class="comparison-section">
-        <h2>📊 Comparaison détaillée des médicaments GLP-1</h2>
-
-        <div class="comparison-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Médicament</th>
-                <th>Fréquence</th>
-                <th>Perte de poids moyenne</th>
-                <th>Coût mensuel*</th>
-                <th>Particularités</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Semaglutide</strong></td>
-                <td>Hebdomadaire</td>
-                <td>15-20%</td>
-                <td>90-270€</td>
-                <td>Efficacité cardiovasculaire prouvée</td>
-              </tr>
-              <tr>
-                <td><strong>Tirzepatide</strong></td>
-                <td>Hebdomadaire</td>
-                <td>20-25%</td>
-                <td>95-285€</td>
-                <td>Double action GLP-1 + GIP</td>
-              </tr>
-              <tr>
-                <td><strong>Liraglutide</strong></td>
-                <td>Quotidienne</td>
-                <td>8-12%</td>
-                <td>70-210€</td>
-                <td>Plus ancienne molécule, bonne tolérance</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="table-note">
-          *Prix approximatifs hors remboursement. Les coûts réels varient selon les officines et les programmes d'aide.
-        </p>
-
-      <section class="how-it-works">
-        <h2>⚙️ Mécanisme d'action détaillé</h2>
-
+      <div class="info-box blue">
+        <h4>📚 Définition Scientifique</h4>
         <p>
-          L'action du GLP-1 s'inscrit dans une stratégie thérapeutique sophistiquée qui dépasse la simple réduction de l'appétit. Cette hormone agit simultanément sur plusieurs niveaux physiologiques pour restaurer l'équilibre métabolique :
+          Le GLP-1 (Glucagon-Like Peptide-1) est une <strong>hormone peptidique</strong> naturellement sécrétée par les cellules L de l'intestin grêle en réponse à l'ingestion d'aliments. Découverte dans les années 1980, cette molécule fascine les chercheurs par ses multiples effets bénéfiques sur le métabolisme glucidique et énergétique.
         </p>
+      </div>
 
-        <div class="mechanism-grid">
-          <div class="mechanism-step">
-            <div class="step-icon">🩹</div>
-            <h3>1. Administration</h3>
-            <p>Injection sous-cutanée hebdomadaire dans les tissus adipeux du ventre, des cuisses ou des bras</p>
-          </div>
+      <div class="definition-grid">
+        <div class="definition-card">
+          <h3>🧬 Origine Naturelle</h3>
+          <p>
+            Le GLP-1 est produit naturellement par votre organisme. Il agit comme un messager hormonal essentiel dans la régulation de la glycémie et de l'appétit. Chez les personnes atteintes de diabète de type 2 ou d'obésité, la production endogène est souvent insuffisante.
+          </p>
+        </div>
 
-          <div class="mechanism-step">
-            <div class="step-icon">🔄</div>
-            <h3>2. Biodistribution</h3>
-            <p>Diffusion progressive dans la circulation sanguine, maintenant des concentrations thérapeutiques pendant 7 jours</p>
-          </div>
+        <div class="definition-card">
+          <h3>⚡ Action Rapide</h3>
+          <p>
+            L'hormone naturelle a une demi-vie très courte (quelques minutes seulement). Les médicaments à base de GLP-1 sont conçus pour résister à la dégradation enzymatique, permettant une action prolongée de 7 jours.
+          </p>
+        </div>
+      </div>
 
-          <div class="mechanism-step">
-            <div class="step-icon">🧠</div>
-            <h3>3. Action centrale</h3>
-            <p>Stimulation des récepteurs hypothalamiques, réduction significative de l'appétit et des pulsions alimentaires</p>
-          </div>
-
-          <div class="mechanism-step">
-            <div class="step-icon">🍽️</div>
-            <h3>4. Effet gastro-intestinal</h3>
-            <p>Ralentissement de la vidange gastrique et prolongation de la sensation de satiété postprandiale</p>
+      <h3>🎯 Fonctions Physiologiques Principales</h3>
+      <div class="functions-list">
+        <div class="function-item">
+          <span class="function-icon">🍽️</span>
+          <div>
+            <strong>Régulation de l'appétit</strong>
+            <p>Stimulation des centres de satiété hypothalamiques</p>
           </div>
         </div>
-      </section>
 
-      <section class="benefits-risks">
-        <h2>⚖️ Avantages et contraintes thérapeutiques</h2>
-
-        <div class="pros-cons-grid">
-          <div class="pros-section">
-            <h3>✅ Avantages cliniques démontrés</h3>
-            <ul>
-              <li><strong>Perte pondérale substantielle :</strong> 10 à 25% du poids corporel selon la molécule</li>
-              <li><strong>Régulation naturelle de l'appétit :</strong> Action physiologique sur les centres de la faim</li>
-              <li><strong>Amélioration glycémique :</strong> Réduction durable de l'HbA1c chez les diabétiques</li>
-              <li><strong>Convenance d'administration :</strong> Une seule injection hebdomadaire pour la plupart</li>
-              <li><strong>Bénéfices cardiovasculaires :</strong> Réduction des événements cardio-vasculaires majeurs</li>
-              <li><strong>Effet anti-inflammatoire :</strong> Amélioration de l'état inflammatoire général</li>
-            </ul>
-          </div>
-
-          <div class="cons-section">
-            <h3>❌ Contraintes et effets indésirables</h3>
-            <ul>
-              <li><strong>Investissement financier élevé :</strong> 70 à 285€ mensuels selon la molécule</li>
-              <li><strong>Troubles gastro-intestinaux :</strong> Nausées, vomissements, diarrhées (généralement transitoires)</li>
-              <li><strong>Obligation médicale :</strong> Prescription obligatoire par un professionnel de santé</li>
-              <li><strong>Tensions d'approvisionnement :</strong> Ruptures de stock périodiques</li>
-              <li><strong>Dépendance relative :</strong> Risque de reprise pondérale à l'arrêt du traitement</li>
-              <li><strong>Surveillance spécialisée :</strong> Nécessité d'un suivi médical rapproché</li>
-            </ul>
+        <div class="function-item">
+          <span class="function-icon">🩸</span>
+          <div>
+            <strong>Contrôle glycémique</strong>
+            <p>Augmentation de la sécrétion d'insuline en réponse aux repas</p>
           </div>
         </div>
-      </section>
 
-      <section class="who-section">
-        <h2>👤 Critères d'éligibilité et contre-indications</h2>
+        <div class="function-item">
+          <span class="function-icon">⏰</span>
+          <div>
+            <strong>Modulation digestive</strong>
+            <p>Ralentissement de la vidange gastrique</p>
+          </div>
+        </div>
 
+        <div class="function-item">
+          <span class="function-icon">🧠</span>
+          <div>
+            <strong>Action neurologique</strong>
+            <p>Réduction des comportements alimentaires compulsifs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Mécanisme d'Action -->
+    <section id="mecanisme-action">
+      <h2>⚙️ Mécanisme d'Action Détaillé</h2>
+
+      <p>
+        L'action du GLP-1 s'inscrit dans une stratégie thérapeutique sophistiquée qui dépasse la simple réduction de l'appétit. Cette hormone agit simultanément sur plusieurs niveaux physiologiques pour restaurer l'équilibre métabolique.
+      </p>
+
+      <div class="mechanism-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Administration</h4>
+          <p>Injection sous-cutanée hebdomadaire dans les tissus adipeux du ventre, des cuisses ou des bras</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Biodistribution</h4>
+          <p>Diffusion progressive dans la circulation sanguine, maintenant des concentrations thérapeutiques pendant 7 jours</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Action Centrale</h4>
+          <p>Stimulation des récepteurs hypothalamiques, réduction significative de l'appétit et des pulsions alimentaires</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Effet Gastro-Intestinal</h4>
+          <p>Ralentissement de la vidange gastrique et prolongation de la sensation de satiété postprandiale</p>
+        </div>
+      </div>
+
+      <div class="info-box green">
+        <h4>💡 Point Essentiel</h4>
         <p>
-          L'accès à ces thérapies innovantes est réglementé par des critères médicaux stricts, définis par la Haute Autorité de Santé et l'Agence Européenne des Médicaments. L'objectif est d'optimiser l'efficacité tout en garantissant la sécurité des patients.
+          Contrairement aux coupe-faim traditionnels, le GLP-1 n'est pas un médicament chimique artificiel mais une copie conforme de votre hormone naturelle, modifiée uniquement pour résister à la dégradation enzymatique rapide.
         </p>
+      </div>
+    </section>
 
-        <div class="eligibility-cards">
-          <div class="eligibility-card eligible">
-            <h3>✅ Profil favorable au traitement</h3>
-            <ul>
-              <li><strong>Obésité avérée :</strong> Indice de masse corporelle ≥ 30 kg/m²</li>
-              <li><strong>Obésité avec comorbidités :</strong> IMC ≥ 27 kg/m² associé à diabète ou hypertension</li>
-              <li><strong>Échec des approches conventionnelles :</strong> Régimes et activité physique insuffisants</li>
-              <li><strong>Engagement thérapeutique :</strong> Motivation pour un suivi médical prolongé</li>
-              <li><strong>Absence de contre-indications :</strong> Évaluation médicale préalable complète</li>
-            </ul>
+    <!-- Section 3: Médicaments Disponibles -->
+    <section id="medicaments-disponibles">
+      <h2>💊 Médicaments à Base de GLP-1 Disponibles</h2>
+
+      <p class="section-intro">
+        Forts des avancées de la biotechnologie, les laboratoires pharmaceutiques ont développé des analogues résistants à la dégradation enzymatique, permettant une administration hebdomadaire et une efficacité prolongée.
+      </p>
+
+      <div class="medications-grid">
+        <div class="medication-card">
+          <div class="medication-header">
+            <h3>Semaglutide</h3>
+            <div class="medication-brands">
+              <span class="brand-tag">Ozempic®</span>
+              <span class="brand-tag">Wegovy®</span>
+            </div>
           </div>
-
-          <div class="eligibility-card not-eligible">
-            <h3>❌ Situations contre-indiquées</h3>
-            <ul>
-              <li><strong>Période périnatale :</strong> Grossesse ou allaitement en cours</li>
-              <li><strong>Diabète de type 1 :</strong> Physiopathologie différente nécessitant d'autres traitements</li>
-              <li><strong>Antécédents pancréatiques :</strong> Pancréatite aiguë ou chronique</li>
-              <li><strong>Pathologie thyroïdienne :</strong> Cancer médullaire thyroïde familial</li>
-              <li><strong>Troubles du comportement alimentaire :</strong> Anorexie mentale ou boulimie active</li>
-              <li><strong>Allergie connue :</strong> Hypersensibilité aux composants du médicament</li>
-            </ul>
+          <div class="medication-details">
+            <div class="detail-item">
+              <span class="detail-label">Indications :</span>
+              <span class="detail-value">Diabète type 2 + Obésité</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Posologie :</span>
+              <span class="detail-value">0.25 à 2.4 mg/semaine</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">AMM :</span>
+              <span class="detail-value">Depuis 2018 (diabète), 2021 (obésité)</span>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="next-steps">
-        <h2>🚀 Parcours thérapeutique recommandé</h2>
+        <div class="medication-card">
+          <div class="medication-header">
+            <h3>Tirzepatide</h3>
+            <div class="medication-brands">
+              <span class="brand-tag">Mounjaro®</span>
+              <span class="brand-tag">Zepbound®</span>
+            </div>
+          </div>
+          <div class="medication-details">
+            <div class="detail-item">
+              <span class="detail-label">Indications :</span>
+              <span class="detail-value">Diabète type 2 + Obésité</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Posologie :</span>
+              <span class="detail-value">2.5 à 15 mg/semaine</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">AMM :</span>
+              <span class="detail-value">Depuis 2022</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="medication-card">
+          <div class="medication-header">
+            <h3>Liraglutide</h3>
+            <div class="medication-brands">
+              <span class="brand-tag">Saxenda®</span>
+              <span class="brand-tag">Victoza®</span>
+            </div>
+          </div>
+          <div class="medication-details">
+            <div class="detail-item">
+              <span class="detail-label">Indications :</span>
+              <span class="detail-value">Diabète type 2 + Obésité</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Posologie :</span>
+              <span class="detail-value">0.6 à 3 mg/jour</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">AMM :</span>
+              <span class="detail-value">Depuis 2009 (diabète), 2015 (obésité)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Indications -->
+    <section id="indications">
+      <h2>👤 Indications Médicales</h2>
+
+      <div class="indications-container">
+        <div class="indication-group">
+          <h3>✅ Profil Favorable</h3>
+          <ul class="indication-list">
+            <li><strong>Obésité avérée</strong> : IMC ≥ 30 kg/m²</li>
+            <li><strong>Obésité avec comorbidités</strong> : IMC ≥ 27 kg/m² avec diabète ou hypertension</li>
+            <li><strong>Échec des approches conventionnelles</strong> : Régimes et activité physique insuffisants</li>
+            <li><strong>Motivation thérapeutique</strong> : Engagement pour un suivi médical prolongé</li>
+          </ul>
+        </div>
+
+        <div class="indication-group">
+          <h3>❌ Contre-indications</h3>
+          <ul class="indication-list">
+            <li><strong>Période périnatale</strong> : Grossesse ou allaitement</li>
+            <li><strong>Diabète de type 1</strong> : Physiopathologie différente</li>
+            <li><strong>Pancréatite</strong> : Antécédents de pancréatite aiguë ou chronique</li>
+            <li><strong>Cancer thyroïdien</strong> : Cancer médullaire thyroïde familial</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Efficacité -->
+    <section id="efficacite">
+      <h2>📊 Efficacité et Résultats</h2>
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number">15-20%</div>
+          <div class="stat-label">Perte de poids moyenne</div>
+          <div class="stat-detail">avec semaglutide</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">20-25%</div>
+          <div class="stat-label">Perte de poids moyenne</div>
+          <div class="stat-detail">avec tirzepatide</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number">85%</div>
+          <div class="stat-label">des patients</div>
+          <div class="stat-detail">obtiennent une perte significative</div>
+        </div>
+      </div>
+
+      <div class="comparison-table">
+        <h3>📋 Comparaison Détaillée</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Médicament</th>
+              <th>Fréquence</th>
+              <th>Perte de poids</th>
+              <th>Particularités</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Semaglutide</strong></td>
+              <td>Hebdomadaire</td>
+              <td>15-20%</td>
+              <td>Efficacité cardiovasculaire prouvée</td>
+            </tr>
+            <tr>
+              <td><strong>Tirzepatide</strong></td>
+              <td>Hebdomadaire</td>
+              <td>20-25%</td>
+              <td>Double action GLP-1 + GIP</td>
+            </tr>
+            <tr>
+              <td><strong>Liraglutide</strong></td>
+              <td>Quotidienne</td>
+              <td>8-12%</td>
+              <td>Plus ancienne molécule</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 6: Effets Secondaires -->
+    <section id="effets-secondaires">
+      <h2>⚠️ Effets Secondaires</h2>
+
+      <div class="side-effects-container">
+        <div class="side-effects-common">
+          <h3>Fréquents (10-30% des patients)</h3>
+          <ul>
+            <li><strong>Nausées</strong> : Généralement transitoires, diminuent avec le temps</li>
+            <li><strong>Vomissements</strong> : Plus rare, souvent associé aux nausées</li>
+            <li><strong>Diarrhées</strong> : Fréquentes en début de traitement</li>
+            <li><strong>Constipation</strong> : Moins fréquente que la diarrhée</li>
+          </ul>
+        </div>
+
+        <div class="side-effects-rare">
+          <h3>Rares (< 5% des patients)</h3>
+          <ul>
+            <li><strong>Pancréatite</strong> : Inflammation du pancréas</li>
+            <li><strong>Insuffisance rénale</strong> : Chez les patients à risque</li>
+            <li><strong>Réactions allergiques</strong> : Urticaire, œdème</li>
+            <li><strong>Calculs biliaires</strong> : Favorisés par la perte de poids rapide</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-box yellow">
+        <h4>💡 Gestion des Effets Secondaires</h4>
         <p>
-          L'initiation d'un traitement par GLP-1 nécessite une approche structurée et personnalisée, associant expertise médicale, éducation thérapeutique et accompagnement nutritionnel. Voici les étapes essentielles pour une prise en charge optimale :
+          La plupart des effets secondaires gastro-intestinaux sont transitoires et diminuent spontanément après 4-8 semaines de traitement. Une titration progressive des doses permet de les minimiser.
         </p>
+      </div>
+    </section>
 
-        <div class="steps-grid">
-          <div class="next-step">
-            <span class="step-number">1</span>
-            <h3>Consultation spécialisée</h3>
-            <p>Évaluation par un endocrinologue, diabétologue ou médecin formé aux thérapies innovantes</p>
-            <a href="/medecins-glp1-france/" class="step-link">Identifier un praticien →</a>
-          </div>
+    <!-- Section 7: Conclusion -->
+    <section id="conclusion">
+      <h2>🎯 Conclusion</h2>
 
-          <div class="next-step">
-            <span class="step-number">2</span>
-            <h3>Analyse économique</h3>
-            <p>Évaluation des coûts, modalités de remboursement et dispositifs d'aide financière</p>
-            <a href="/glp1-cout/wegovy-prix/" class="step-link">Consulter les tarifs →</a>
-          </div>
+      <p>
+        Le GLP-1 représente une avancée majeure dans la prise en charge du diabète et de l'obésité. Ces médicaments, inspirés de l'hormone naturelle, offrent une approche thérapeutique efficace et bien tolérée pour les patients éligibles.
+      </p>
 
-          <div class="next-step">
-            <span class="step-number">3</span>
-            <h3>Préparation au traitement</h3>
-            <p>Anticipation des effets secondaires et mise en place de mesures préventives</p>
-            <a href="/effets-secondaires-glp1/" class="step-link">Guide pratique →</a>
+      <div class="conclusion-points">
+        <div class="conclusion-point">
+          <span class="point-icon">✅</span>
+          <div>
+            <strong>Efficacité prouvée</strong>
+            <p>Perte de poids significative et durable</p>
           </div>
         </div>
-      </section>
 
-      <section class="faq-section">
-        <h2>❓ Questions fréquemment posées</h2>
-
-        <div class="faq-grid">
-          <div class="faq-item">
-            <h3>Le GLP-1 est-il un médicament de synthèse artificiel ?</h3>
-            <p>
-              Absolument pas. Il s'agit d'une copie conforme de l'hormone naturellement produite par votre organisme, modifiée uniquement pour résister à la dégradation enzymatique rapide. La similarité moléculaire atteint 94%, ce qui explique son profil de tolérance remarquable et son action physiologique authentique.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Quelles sont les raisons de ce coût thérapeutique élevé ?</h3>
-            <p>
-              Le développement de ces molécules représente un investissement colossal : quinze années de recherche fondamentale, des essais cliniques de grande envergure totalisant plusieurs milliards d'euros, et une production biotechnologique d'une complexité technologique extrême. La position monopolistique temporaire des laboratoires explique également ces tarifs, qui devraient diminuer avec l'arrivée des génériques.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>L'efficacité est-elle garantie pour tous les patients ?</h3>
-            <p>
-              L'expérience clinique démontre qu'environ 85% des patients bénéficient d'une perte pondérale cliniquement significative. Cependant, l'efficacité individuelle varie considérablement selon des facteurs tels que la génétique, l'adhésion thérapeutique, les dosages administrés et la qualité de l'accompagnement médical et nutritionnel associé.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Existe-t-il un risque de dépendance physique à l'arrêt ?</h3>
-            <p>
-              Fort heureusement, non. Contrairement aux substances psychoactives, le GLP-1 n'induit aucun phénomène de sevrage physique. Cependant, il est observé que 60% des patients connaissent une reprise pondérale partielle dans les douze mois suivant l'interruption du traitement, soulignant l'importance d'une transition progressive et d'un maintien des habitudes hygiéno-diététiques.
-            </p>
+        <div class="conclusion-point">
+          <span class="point-icon">✅</span>
+          <div>
+            <strong>Approche physiologique</strong>
+            <p>Imitation de l'hormone naturelle</p>
           </div>
         </div>
-      </section>
-    </article>
+
+        <div class="conclusion-point">
+          <span class="point-icon">✅</span>
+          <div>
+            <strong>Suivi médical</strong>
+            <p>Accompagnement spécialisé requis</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h3>Prêt à commencer votre parcours ?</h3>
+        <p>Consultez un professionnel de santé pour évaluer votre éligibilité aux traitements GLP-1.</p>
+        <div class="cta-buttons">
+          <a href="/collections/medecins-glp1-france/" class="cta-button primary">Trouver un médecin</a>
+          <a href="/collections/glp1-cout/" class="cta-button secondary">Voir les prix</a>
+        </div>
+      </div>
+    </section>
   </div>
+</ArticleWithAffiliateSidebar>
 
   <style>
-    .explanation-article {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: var(--spacing-8) 0;
+    /* Global Text Alignment - Force left alignment */
+    .article-container,
+    .article-container p,
+    .article-container li,
+    .article-container div,
+    .article-container span,
+    .article-container td,
+    .article-container th {
+      text-align: left !important;
     }
 
-    .article-header {
-      text-align: center;
+    /* Article Container */
+    .article-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-8) var(--spacing-4);
+    }
+
+    /* Table of Contents */
+    .table-of-contents {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-6);
       margin-bottom: var(--spacing-12);
     }
 
-    .article-header h1 {
-      font-size: var(--font-size-4xl);
-      font-weight: 800;
-      margin-bottom: var(--spacing-6);
-      line-height: 1.2;
+    .table-of-contents h3 {
+      margin-bottom: var(--spacing-4);
+      color: var(--gray-900);
+      font-size: var(--font-size-lg);
     }
 
-    .article-intro {
-      font-size: var(--font-size-xl);
-      color: var(--gray-600);
-      line-height: 1.6;
+    .table-of-contents ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    /* Definition Section */
+    .table-of-contents li {
+      margin-bottom: var(--spacing-2);
+    }
+
+    .table-of-contents a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-size: var(--font-size-sm);
+      transition: color var(--transition);
+    }
+
+    .table-of-contents a:hover {
+      color: var(--primary-blue-light);
+      text-decoration: underline;
+    }
+
+    /* Info Boxes */
+    .info-box {
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-6);
+      margin: var(--spacing-6) 0;
+      border-left: 4px solid;
+    }
+
+    .info-box.blue {
+      background: var(--blue-50);
+      border-left-color: var(--primary-blue);
+    }
+
+    .info-box.green {
+      background: var(--green-50);
+      border-left-color: var(--green-500);
+    }
+
+    .info-box.yellow {
+      background: #fef3c7;
+      border-left-color: #f59e0b;
+    }
+
+    .info-box h4 {
+      margin-bottom: var(--spacing-3);
+      color: var(--gray-900);
+      font-size: var(--font-size-lg);
+    }
+
+    /* Definition Cards */
     .definition-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: var(--spacing-8);
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-6);
       margin: var(--spacing-8) 0;
     }
 
-    .hormone-process {
-      background: var(--gray-50);
+    .definition-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
       padding: var(--spacing-6);
-      border-radius: var(--radius-xl);
-      text-align: center;
+      box-shadow: var(--shadow-sm);
     }
 
-    .process-step {
+    .definition-card h3 {
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-lg);
+    }
+
+    /* Functions List */
+    .functions-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-4);
+      margin: var(--spacing-8) 0;
+    }
+
+    .function-item {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--spacing-3);
-      padding: var(--spacing-3);
+      align-items: flex-start;
+      gap: var(--spacing-4);
+      padding: var(--spacing-4);
+      background: var(--gray-50);
+      border-radius: var(--radius-lg);
     }
 
-    .step-number {
-      background: var(--primary-blue);
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: var(--font-size-sm);
-      font-weight: 600;
+    .function-icon {
+      font-size: var(--font-size-2xl);
+      flex-shrink: 0;
     }
 
-    .process-arrow {
-      color: var(--primary-blue);
-      font-size: var(--font-size-xl);
-      margin: var(--spacing-2) 0;
+    .function-item h4 {
+      margin-bottom: var(--spacing-2);
+      color: var(--gray-900);
     }
 
-    /* Medications Grid */
-    .medications-grid {
+    /* Mechanism Steps */
+    .mechanism-steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: var(--spacing-6);
       margin: var(--spacing-8) 0;
     }
 
-    .med-card {
+    .step-card {
       background: white;
-      border: 2px solid var(--gray-200);
-      border-radius: var(--radius-xl);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
       padding: var(--spacing-6);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      position: relative;
     }
 
-    .med-card h3 {
+    .step-number {
+      background: var(--primary-blue);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin: 0 auto var(--spacing-4);
+    }
+
+    .step-card h4 {
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-3);
+    }
+
+    /* Medications Grid */
+    .medications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-6);
+      margin: var(--spacing-8) 0;
+    }
+
+    .medication-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-6);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .medication-header {
       margin-bottom: var(--spacing-4);
+    }
+
+    .medication-header h3 {
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-3);
       font-size: var(--font-size-xl);
     }
 
-    .med-details p {
-      margin-bottom: var(--spacing-2);
+    .medication-brands {
+      display: flex;
+      gap: var(--spacing-2);
+      flex-wrap: wrap;
+    }
+
+    .brand-tag {
+      background: var(--primary-blue);
+      color: white;
+      padding: var(--spacing-1) var(--spacing-3);
+      border-radius: var(--radius-md);
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+    }
+
+    .medication-details {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-2);
+    }
+
+    .detail-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-2) 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .detail-item:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: var(--gray-700);
       font-size: var(--font-size-sm);
+    }
+
+    .detail-value {
+      color: var(--gray-600);
+      font-size: var(--font-size-sm);
+      text-align: right;
+    }
+
+    /* Indications */
+    .indications-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-8);
+      margin: var(--spacing-8) 0;
+    }
+
+    .indication-group {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-6);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .indication-group h3 {
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-4);
+      font-size: var(--font-size-lg);
+    }
+
+    .indication-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .indication-list li {
+      margin-bottom: var(--spacing-3);
+      padding-left: var(--spacing-2);
+      position: relative;
+    }
+
+    .indication-list li::before {
+      content: "•";
+      color: var(--primary-blue);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Stats Container */
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-6);
+      margin: var(--spacing-8) 0;
+    }
+
+    .stat-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-6);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-number {
+      font-size: var(--font-size-4xl);
+      font-weight: 800;
+      color: var(--primary-blue);
+      margin-bottom: var(--spacing-2);
+    }
+
+    .stat-label {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-1);
+    }
+
+    .stat-detail {
+      font-size: var(--font-size-sm);
+      color: var(--gray-600);
     }
 
     /* Comparison Table */
     .comparison-table {
       margin: var(--spacing-8) 0;
       overflow-x: auto;
+    }
+
+    .comparison-table h3 {
+      margin-bottom: var(--spacing-4);
+      color: var(--gray-900);
     }
 
     .comparison-table table {
@@ -423,6 +743,7 @@ const frontmatter = null;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-md);
+      min-width: 600px;
     }
 
     .comparison-table th {
@@ -430,155 +751,228 @@ const frontmatter = null;
       padding: var(--spacing-4);
       font-weight: 600;
       text-align: left;
+      color: var(--gray-900);
     }
 
     .comparison-table td {
       padding: var(--spacing-3) var(--spacing-4);
       border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-700);
     }
 
-    .key-insight {
-      background: var(--blue-50);
-      border-left: 4px solid var(--primary-blue);
-      padding: var(--spacing-6);
-      border-radius: var(--radius-lg);
-      margin: var(--spacing-6) 0;
-    }
-
-    /* Mechanism Steps */
-    .mechanism-grid {
+    /* Side Effects */
+    .side-effects-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--spacing-6);
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-8);
       margin: var(--spacing-8) 0;
     }
 
-    .mechanism-step {
-      text-align: center;
+    .side-effects-common,
+    .side-effects-rare {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
       padding: var(--spacing-6);
-      background: var(--gray-50);
-      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
     }
 
-    .step-icon {
-      font-size: var(--font-size-4xl);
+    .side-effects-common h3 {
+      color: var(--green-600);
       margin-bottom: var(--spacing-4);
     }
 
-    /* Pros and Cons */
-    .pros-cons-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-8);
-      margin: var(--spacing-8) 0;
+    .side-effects-rare h3 {
+      color: var(--red-600);
+      margin-bottom: var(--spacing-4);
     }
 
-    .pros-section {
-      background: var(--green-50);
-      padding: var(--spacing-6);
-      border-radius: var(--radius-xl);
-      border-left: 4px solid var(--green-500);
+    .side-effects-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .cons-section {
-      background: var(--red-50);
-      padding: var(--spacing-6);
-      border-radius: var(--radius-xl);
-      border-left: 4px solid var(--red-500);
+    .side-effects-container li {
+      margin-bottom: var(--spacing-3);
+      padding-left: var(--spacing-2);
+      position: relative;
     }
 
-    /* Eligibility Cards */
-    .eligibility-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-8);
-      margin: var(--spacing-8) 0;
+    .side-effects-container li::before {
+      content: "•";
+      color: var(--gray-400);
+      position: absolute;
+      left: 0;
     }
 
-    .eligibility-card {
-      padding: var(--spacing-6);
-      border-radius: var(--radius-xl);
-    }
-
-    .eligible {
-      background: var(--green-50);
-      border-left: 4px solid var(--green-500);
-    }
-
-    .not-eligible {
-      background: var(--red-50);
-      border-left: 4px solid var(--red-500);
-    }
-
-    /* Next Steps */
-    .steps-grid {
+    /* Conclusion */
+    .conclusion-points {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: var(--spacing-6);
       margin: var(--spacing-8) 0;
     }
 
-    .next-step {
-      background: white;
-      border: 2px solid var(--gray-200);
+    .conclusion-point {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-4);
+      padding: var(--spacing-4);
+      background: var(--green-50);
+      border-radius: var(--radius-lg);
+      border-left: 4px solid var(--green-500);
+    }
+
+    .point-icon {
+      font-size: var(--font-size-xl);
+      flex-shrink: 0;
+      margin-top: var(--spacing-1);
+    }
+
+    .conclusion-point h4 {
+      margin-bottom: var(--spacing-2);
+      color: var(--gray-900);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+      color: white;
       border-radius: var(--radius-xl);
-      padding: var(--spacing-6);
+      padding: var(--spacing-8);
       text-align: center;
+      margin: var(--spacing-12) 0;
+    }
+
+    .cta-section h3 {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--spacing-4);
+    }
+
+    .cta-section p {
+      margin-bottom: var(--spacing-6);
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-4);
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: var(--spacing-3) var(--spacing-6);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .cta-button.primary {
+      background: white;
+      color: var(--primary-blue);
+    }
+
+    .cta-button.primary:hover {
+      background: var(--gray-50);
+      transform: translateY(-2px);
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .cta-button.secondary:hover {
+      background: white;
+      color: var(--primary-blue);
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: var(--spacing-12);
+    }
+
+    section h2 {
+      font-size: var(--font-size-3xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--spacing-6);
       position: relative;
     }
 
-    .next-step .step-number {
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
       background: var(--primary-blue);
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      margin: 0 auto var(--spacing-4);
+      border-radius: 2px;
     }
 
-    .step-link {
-      color: var(--primary-blue);
-      text-decoration: none;
-      font-weight: 500;
+    section p {
+      line-height: 1.7;
+      color: var(--gray-700);
+      margin-bottom: var(--spacing-4);
     }
 
-    .step-link:hover {
-      text-decoration: underline;
+    .section-intro {
+      font-size: var(--font-size-lg);
+      color: var(--gray-600);
+      font-style: italic;
+      margin-bottom: var(--spacing-6);
     }
 
-    /* FAQ */
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-6);
-      margin: var(--spacing-8) 0;
-    }
-
-    .faq-item {
-      background: var(--gray-50);
-      padding: var(--spacing-6);
-      border-radius: var(--radius-xl);
-    }
-
-    .faq-item h3 {
-      margin-bottom: var(--spacing-3);
-      color: var(--gray-800);
-    }
-
-    /* Responsive */
+    /* Responsive Design */
     @media (max-width: 768px) {
+      .article-container {
+        padding: var(--spacing-4) var(--spacing-2);
+      }
+
       .definition-grid,
-      .pros-cons-grid,
-      .eligibility-cards {
+      .indications-container,
+      .side-effects-container {
         grid-template-columns: 1fr;
       }
-      
-      .article-header h1 {
-        font-size: var(--font-size-3xl);
+
+      .functions-list,
+      .mechanism-steps,
+      .medications-grid,
+      .stats-container,
+      .conclusion-points {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .medication-brands {
+        justify-content: center;
+      }
+
+      .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-1);
+      }
+
+      .detail-value {
+        text-align: left;
       }
     }
   </style>
