@@ -10,14 +10,22 @@
 **Site en Production** : https://glp1-france.fr  
 **Page Partenaires** : https://glp1-france.fr/partenaires  
 **Déploiement** : Automatisé via GitHub Actions  
+**Dernière Mise à Jour** : 31 août 2025 - Corrections SEO et système d'affiliation
+
+### 🔧 Dernières Corrections (31/08/2025)
+- ✅ **Redirection SEO** : `/collections/medicaments-glp1/mounjaro-prix-france/` → `/collections/glp1-cout/prix-mounjaro-france/` (301)
+- ✅ **Sidebar Affilié** : Page diagnostic (`/guides/quel-traitement-glp1-choisir/`) avec sidebar uniquement
+- ✅ **Build Vite** : Correction bug null bytes dans génération modules virtuels
+- ✅ **Sitemap** : Mise à jour structure URLs et priorités SEO
 
 ## �️ Architecture Technique
 
 ### Framework & Build
-- **Astro v4.16.18** - Génération statique
+- **Astro v4.16.19** - Génération statique (dernière version)
 - **TinaCMS** - Gestion de contenu
 - **Tailwind CSS** - Styling
-- **Build Output** : 168+ pages statiques
+- **Supabase** - Base de données affiliation
+- **Build Output** : 107+ pages statiques optimisées
 
 ### Déploiement
 - **Hébergement** : Hostinger (147.79.98.140)
@@ -54,10 +62,16 @@
 
 ## � Système d'Affiliation
 
+### 🎯 Statut Actuel (31/08/2025)
+- ✅ **Composant Principal** : `AdaptiveAffiliateDisplay.astro` - Logique sidebar + inline configurable
+- ✅ **Layout Diagnostic** : `ArticleWithAffiliateSidebar.astro` - Page diagnostic avec sidebar uniquement
+- ✅ **Base Supabase** : 4 produits actifs avec codes promo et liens affiliés
+- ✅ **Intégration SEO** : Redirections 301 pour anciennes URLs collections
+
 ### Documentation Principale
 - [DOCUMENTATION-AFFILIATION-COMPLETE.md](./DOCUMENTATION-AFFILIATION-COMPLETE.md) - **Documentation complète et actuelle du système d'affiliation Supabase**
   - ✅ Structure Supabase réelle
-  - ✅ Composants actuels (InlineAffiliateProduct, AffiliateSidebar)
+  - ✅ Composants actuels (AdaptiveAffiliateDisplay, InlineAffiliateProduct, AffiliateSidebar)
   - ✅ Scripts de gestion des données
   - ✅ Intégration badges dynamiques et codes promo
 
@@ -200,13 +214,15 @@ npm run build
 ### Fonctionnalités Implémentées ✅
 - [x] Site statique Astro.js avec TinaCMS
 - [x] Collections de contenu (8 collections actives après nettoyage)
-- [x] Système d'affiliation Amazon intégré
+- [x] Système d'affiliation Supabase intégré avec sidebar adaptatif
 - [x] Gestion utilisateurs unifiée (JSON + Supabase)
 - [x] Interface admin avec authentification
 - [x] APIs hybrides (TypeScript dev / PHP prod)
-- [x] Optimisation SEO et performance
+- [x] Optimisation SEO et performance (sitemap, redirections 301)
 - [x] Scripts de déploiement automatisés
 - [x] **Nettoyage collection medicaments-glp1** ([SUPPRESSION-MEDICAMENTS-GLP1.md](./SUPPRESSION-MEDICAMENTS-GLP1.md))
+- [x] **Corrections build Vite** - Résolution bugs null bytes et modules virtuels
+- [x] **Page diagnostic optimisée** - Sidebar affilié sans produits inline
 
 ### En Cours de Développement 🔄
 - [ ] Dashboard analytics avancé
@@ -238,7 +254,7 @@ npm run build
 
 > **Note** : Cette documentation est mise à jour automatiquement. Pour contribuer, créer une pull request ou ouvrir une issue.
 
-*Dernière synchronisation : Août 2025*
+*Dernière synchronisation : 31 août 2025 - Corrections SEO, redirections et système d'affiliation optimisé*
 - Anciens guides de déploiement
 - Documentation obsolète
 
