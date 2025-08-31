@@ -1,8 +1,5 @@
 ---
-// Redirection côté serveur pour SEO
-if (import.meta.env.SSR) {
-  return Astro.redirect('/collections/traitements-glp1/', 301);
-}
+// Redirection purement côté client pour compatibilité maximale
 ---
 
 <html>
@@ -14,9 +11,23 @@ if (import.meta.env.SSR) {
     // Redirection JavaScript immédiate
     window.location.replace('/collections/traitements-glp1/');
   </script>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    .redirect-message { color: #666; }
+    .redirect-link { color: #007bff; text-decoration: none; }
+    .redirect-link:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <p>Redirection vers <a href="/collections/traitements-glp1/">la page des traitements GLP-1</a>...</p>
+  <h1>Redirection en cours...</h1>
+  <p class="redirect-message">
+    Vous allez être redirigé vers la page des traitements GLP-1.
+  </p>
+  <p>
+    <a href="/collections/traitements-glp1/" class="redirect-link">
+      Cliquez ici si la redirection ne fonctionne pas
+    </a>
+  </p>
 </body>
 </html>
 <body>
