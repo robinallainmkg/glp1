@@ -14,8 +14,6 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
 
-# Prix Mounjaro 2025 : Coût et Remboursement en France
-
 ## 💰 Prix Mounjaro en Pharmacie
 
 ### Tarifs selon le dosage

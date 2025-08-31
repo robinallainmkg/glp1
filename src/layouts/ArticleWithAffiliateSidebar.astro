@@ -84,14 +84,6 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         <div class="grid lg:grid-cols-2 gap-6 items-center">
           <!-- Contenu textuel -->
           <div>
-            <div class="flex items-center gap-3 mb-4 pt-2">
-              <span class="text-2xl">{categoryIcon}</span>
-              {detectedCategory && (
-                <span class="px-2 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
-                  {detectedCategory.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
-                </span>
-              )}
-            </div>
             <h1 class="text-2xl md:text-3xl font-bold mb-3 leading-tight text-slate-700">
               {title}
             </h1>
@@ -194,6 +186,13 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   line-height: 1.75;
 }
 
+/* Masquer le premier H1 du contenu car il est déjà dans le header */
+.article-body h1:first-of-type,
+.article-body h1:first-child,
+.article-content h1:first-of-type {
+  display: none !important;
+}
+
 .article-body h1, .article-body h2, .article-body h3 {
   color: #1f2937;
   font-weight: 700;
@@ -255,6 +254,67 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   border-radius: 8px;
   overflow-x: auto;
   margin: 1.5rem 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Styles pour les tableaux - responsive */
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+.article-body thead,
+.article-body tbody,
+.article-body th,
+.article-body td {
+  display: block;
+  width: 100%;
+}
+
+.article-body thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.article-body tr {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  background: white;
+}
+
+.article-body td {
+  border: none;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  padding: 0.75rem;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.article-body td:before {
+  content: attr(data-label) ": ";
+  font-weight: bold;
+  display: inline-block;
+  width: 6rem;
+  flex-shrink: 0;
+}
+
+/* Styles pour les images */
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
 }
 
 /* Styles pour les sections spéciales */
@@ -265,6 +325,9 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   padding: 1.5rem;
   margin: 2rem 0;
   position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .article-body .highlight-box::before {
@@ -374,6 +437,73 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   .article-body h1 { font-size: 1.875rem; }
   .article-body h2 { font-size: 1.5rem; }
   .article-body h3 { font-size: 1.25rem; }
+  
+  /* Prévention des débordements horizontaux */
+  .article-body {
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .article-body p,
+  .article-body li,
+  .article-body div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .article-body code {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+    display: inline-block;
+  }
+  
+  .article-body pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Tableaux responsives sur mobile */
+  .article-body table {
+    font-size: 0.8rem;
+  }
+  
+  .article-body td:before {
+    width: 5rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Images responsives */
+  .article-body img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Listes améliorées */
+  .article-body ul,
+  .article-body ol {
+    padding-left: 1rem;
+  }
+  
+  .article-body li {
+    margin-bottom: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  /* Citations responsives */
+  .article-body blockquote {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
 }
 </style>
 

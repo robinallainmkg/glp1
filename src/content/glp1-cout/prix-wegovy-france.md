@@ -14,8 +14,6 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
 
-# Prix Wegovy 2025 : Coût et Remboursement en France
-
 ## 💰 Prix Wegovy en Pharmacie
 
 ### Tarifs selon le dosage

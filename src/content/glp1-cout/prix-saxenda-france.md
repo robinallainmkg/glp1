@@ -13,8 +13,6 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
 
-# Prix Saxenda 2025 : Coût et Remboursement en France
-
 ## 💰 Prix Saxenda en Pharmacie
 
 ### Tarifs selon le dosage

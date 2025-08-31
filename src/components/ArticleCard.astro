@@ -52,7 +52,7 @@ const readingTime = article?.readingTime || Math.max(1, Math.ceil(words / 200));
   </div>
   
   <div class="p-6">
-    <h2 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug">
+    <h2 class="text-xl md:text-xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug !text-xl !md:text-xl !font-bold !text-slate-900 !mb-4 !line-clamp-2 !group-hover:text-emerald-700 !transition-colors !leading-snug custom-title-size">
       <a href={url} class="hover:underline">
         {data.title || article.title}
       </a>
@@ -146,5 +146,10 @@ const readingTime = article?.readingTime || Math.max(1, Math.ceil(words / 200));
   article:hover .description-text {
     -webkit-line-clamp: 5;
     transition: all 0.3s ease;
+  }
+  
+  /* Titre personnalisé à 22px */
+  .custom-title-size {
+    font-size: 22px !important;
   }
 </style>
