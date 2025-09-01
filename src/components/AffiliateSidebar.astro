@@ -34,6 +34,7 @@ const { products = [], relatedArticles = [], className = '' } = Astro.props;
       <div class="products-list">
         {products
           .sort((a, b) => (a.priority || 999) - (b.priority || 999))
+          .slice(0, 6)
           .map((product) => (
             <div class="product-card" data-featured={product.featured}>
               {product.discountPercent && (

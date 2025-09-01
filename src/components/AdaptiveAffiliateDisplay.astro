@@ -39,7 +39,7 @@ const {
 
 // Configuration par défaut
 const defaultConfig = {
-  maxInlineProducts: 3,
+  maxInlineProducts: 4,
   startAfterParagraphs: 2,
   sidebarPosition: 'right' as const,
   mobileStrategy: 'both' as const,
@@ -56,9 +56,9 @@ try {
     sidebarProducts = affiliateProducts;
     
     // Pour les inline, prendre des produits différents pour éviter les doublons
-    // Mélanger et prendre max 2 produits pour l'inline
+    // Mélanger et prendre max 4 produits pour l'inline
     const shuffledProducts = [...affiliateProducts].sort(() => Math.random() - 0.5);
-    inlineProducts = shuffledProducts.slice(0, Math.min(2, defaultConfig.maxInlineProducts));
+    inlineProducts = shuffledProducts.slice(0, Math.min(4, defaultConfig.maxInlineProducts));
   } else {
     // Charger les produits depuis Supabase si aucun n'est fourni
     console.log('🔄 Chargement des produits depuis Supabase...');
@@ -76,8 +76,8 @@ try {
       // Combiner : produits featured en premier, puis autres
       const mixedProducts = [...shuffledFeatured, ...shuffledRegular];
       
-      sidebarProducts = mixedProducts.slice(0, 3); // Max 3 pour la sidebar
-      inlineProducts = mixedProducts.slice(0, Math.min(2, defaultConfig.maxInlineProducts));
+      sidebarProducts = mixedProducts.slice(0, 6); // Max 6 pour la sidebar
+      inlineProducts = mixedProducts.slice(0, Math.min(4, defaultConfig.maxInlineProducts));
     } else {
       console.log(`⚠️ AdaptiveAffiliateDisplay: Aucun produit trouvé dans Supabase`);
     }
