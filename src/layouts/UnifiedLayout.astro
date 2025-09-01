@@ -2,6 +2,7 @@
 // Layout unifié pour toutes les pages du site
 import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import Hotjar from '../components/Hotjar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
@@ -132,6 +133,9 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
   
   <!-- Google Analytics -->
   <GoogleAnalytics />
+  
+  <!-- Hotjar Tracking -->
+  <Hotjar />
   
 </head>
 
