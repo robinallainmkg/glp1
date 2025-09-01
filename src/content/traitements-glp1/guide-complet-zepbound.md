@@ -2,7 +2,7 @@
 title: "Guide Complet Zepbound : Prix, Effets et Résultats pour la Perte de Poids"
 description: "Découvrez tout sur Zepbound : le traitement GLP-1 d'Eli Lilly pour la perte de poids. Prix, effets secondaires, posologie et résultats."
 author: "Dr. Martin"
-image: "/images/thumbnails/zepbound-treatment.jpg"
+image: "/images/thumbnails/zepbound.webp"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["zepbound", "glp-1", "perte de poids", "traitement", "injection", "eli lilly", "tirzepatide"]

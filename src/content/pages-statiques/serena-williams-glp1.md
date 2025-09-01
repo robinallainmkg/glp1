@@ -2,7 +2,7 @@
 title: "Serena Williams et les Traitements GLP-1 : Son Expérience et les Leçons à Retenir"
 description: "Découvrez l'expérience de Serena Williams avec les traitements GLP-1. Comment la championne a utilisé ces médicaments pour sa santé et sa forme physique."
 author: "Dr. Martin"
-image: "/images/thumbnails/serena-williams-glp1.jpg"
+image: "/images/temoignages/Serena.jpg"
 collection: "pages-statiques"
 category: "celebrites"
 tags: ["serena williams", "glp-1", "celebrites", "perte de poids", "sante", "sport"]

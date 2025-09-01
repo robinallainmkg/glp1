@@ -7,7 +7,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/operation-pour-maigrir-prix.svg"
+thumbnail: "/images/thumbnails/operation-pour-maigrir-prix.jpg"
 thumbnailAlt: "Illustration pour l'article Operation Pour Maigrir Prix"
 featured: false
 priority: 5

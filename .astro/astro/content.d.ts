@@ -495,6 +495,13 @@ declare module 'astro:content' {
   collection: "pages-statiques";
   data: InferEntrySchema<"pages-statiques">
 } & { render(): Render[".md"] };
+"serena-williams-glp1.md": {
+	id: "serena-williams-glp1.md";
+  slug: "serena-williams-glp1";
+  body: string;
+  collection: "pages-statiques";
+  data: InferEntrySchema<"pages-statiques">
+} & { render(): Render[".md"] };
 };
 "recherche-glp1": {
 "recherche-clinique-glp1.md": {
@@ -651,6 +658,13 @@ declare module 'astro:content' {
 "guide-complet-wegovy.md": {
 	id: "guide-complet-wegovy.md";
   slug: "guide-complet-wegovy";
+  body: string;
+  collection: "traitements-glp1";
+  data: InferEntrySchema<"traitements-glp1">
+} & { render(): Render[".md"] };
+"guide-complet-zepbound.md": {
+	id: "guide-complet-zepbound.md";
+  slug: "guide-complet-zepbound";
   body: string;
   collection: "traitements-glp1";
   data: InferEntrySchema<"traitements-glp1">
