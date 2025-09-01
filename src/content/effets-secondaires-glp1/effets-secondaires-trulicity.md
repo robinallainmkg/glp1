@@ -11,6 +11,7 @@ author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 ---
 
 # Effets Secondaires Trulicity : Guide Complet

@@ -7,7 +7,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/saxenda-prix-pharmacie.svg"
+thumbnail: "/images/thumbnails/saxenda-prix-pharmacie-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Saxenda Prix Pharmacie"
 featured: false
 priority: 5

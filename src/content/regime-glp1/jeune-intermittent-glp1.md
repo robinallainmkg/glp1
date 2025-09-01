@@ -7,7 +7,7 @@ description: "Le jeûne intermittent combiné aux GLP-1 : protocoles adaptés, b
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/jeune-intermittent-glp1.svg"
+thumbnail: "/images/thumbnails/jeune-intermittent-glp1-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Jeune Intermittent GLP-1"
 featured: false
 priority: 5

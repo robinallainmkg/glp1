@@ -11,6 +11,7 @@ author: 'Dr. Marie Dubois'
 readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 ---
 
 ## 💰 Prix Saxenda en Pharmacie
