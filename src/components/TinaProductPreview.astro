@@ -1,5 +1,7 @@
 ---
 // Composant pour la prévisualisation des produits d'affiliation dans TinaCMS
+import { generateAffiliateLink } from '../utils/affiliateLinks';
+
 // export interface Props {
 //   product: any;
 // }
@@ -45,7 +47,7 @@ const { product } = Astro.props;
       
       <div class="detail-row">
         <strong>Lien externe:</strong>
-        <a href={product.externalLink} target="_blank" rel="noopener" class="external-link">
+        <a href={generateAffiliateLink(product)} target="_blank" rel="noopener" class="external-link">
           Voir le produit →
         </a>
       </div>

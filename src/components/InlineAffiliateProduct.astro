@@ -1,5 +1,7 @@
 ---
 // Composant pour insérer des produits d'affiliation dans le contenu d'article
+import { generateAffiliateLink } from '../utils/affiliateLinks';
+
 // export interface Props {
 //   product: any;
 // }
@@ -10,39 +12,7 @@ const {
   showFullDescription = false 
 } = Astro.props;
 
-// Fonction pour générer le lien avec code promo automatique
-function generatePromoLink(product: any): string {
-  const baseLink = product.externalLink;
-  const brand = product.brand;
-  
-  // Configuration des codes promo par marque
-  if (brand === 'Talika' && product.discountPercent) {
-    // Format Talika: https://talika.fr/discount/GLP1?redirect=/products/time-control-7
-    try {
-      const url = new URL(baseLink);
-      const productPath = url.pathname;
-      return `https://talika.fr/discount/GLP1?redirect=${productPath}`;
-    } catch {
-      return baseLink;
-    }
-  }
-  
-  if (brand === 'Nutrimuscle' && product.discountPercent) {
-    // Format Nutrimuscle: https://www.nutrimuscle.com/NMA_GLP1?redirect=/whey-native
-    try {
-      const url = new URL(baseLink);
-      const productPath = url.pathname;
-      return `https://www.nutrimuscle.com/NMA_GLP1?redirect=${productPath}`;
-    } catch {
-      return baseLink;
-    }
-  }
-  
-  // Pour les autres marques, utiliser le lien direct
-  return baseLink;
-}
-
-const promoLink = generatePromoLink(product);
+const promoLink = generateAffiliateLink(product);
 ---
 
 <div class={`inline-affiliate-product ${position} ${size}`} data-product={product.productName}>

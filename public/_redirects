@@ -1,0 +1,36 @@
+# Redirections 301 pour pages supprimées/déplacées
+
+# Pages statiques supprimées
+/pages-statiques/ / 301
+/pages-statiques /  301
+/pages-statiques/* / 301
+
+# Collections déplacées
+/medicaments-glp1/ /collections/traitements-glp1/ 301
+/glp1-cout/ /collections/glp1-cout/ 301
+/effets-secondaires-glp1/ /collections/effets-secondaires-glp1/ 301
+/medecins-glp1-france/ /collections/medecins-glp1-france/ 301
+/regime-glp1/ /collections/regime-glp1/ 301
+/alternatives-glp1/ /collections/alternatives-glp1/ 301
+/glp1-perte-de-poids/ /collections/glp1-perte-de-poids/ 301
+
+# Pages de prix déplacées
+/ozempic-prix/ /collections/glp1-cout/prix-ozempic-france/ 301
+/wegovy-prix/ /collections/glp1-cout/prix-wegovy-france/ 301
+/saxenda-prix/ /collections/glp1-cout/prix-saxenda-france/ 301
+/mounjaro-prix/ /collections/glp1-cout/prix-mounjaro-france/ 301
+
+# Guides déplacés
+/qu-est-ce-que-glp1/ /guides/qu-est-ce-que-glp1/ 301
+/quel-traitement-glp1-choisir/ /guides/quel-traitement-glp1-choisir/ 301
+/guide-beaute-perte-de-poids-glp1/ /guides/guide-beaute-perte-de-poids-glp1/ 301
+
+# Pages légales déplacées
+/mentions-legales/ /legal/mentions-legales/ 301
+/politique-confidentialite/ /legal/politique-confidentialite/ 301
+
+# Outils déplacés
+/produits-recommandes/ /outils/produits-recommandes/ 301
+
+# Page 404 pour toutes les autres pages
+/* /404.html 404

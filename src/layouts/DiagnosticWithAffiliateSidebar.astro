@@ -43,7 +43,9 @@ const affiliateProducts = await getAllAffiliateProducts();
     </div>
   </nav>
 
-  <!-- Layout principal avec sidebar uniquement -->
+  ---
+// Layout qui combine un contenu principal avec une barre latérale d'affiliation
+import { generateAffiliateLink } from '../utils/affiliateLinks';
   <div class="container mx-auto px-4 py-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid lg:grid-cols-3 gap-6">
@@ -67,7 +69,7 @@ const affiliateProducts = await getAllAffiliateProducts();
                   <h4 class="font-medium text-gray-800">{product.productName}</h4>
                   <p class="text-sm text-gray-600 mb-2">{product.brand}</p>
                   <a 
-                    href={product.externalLink} 
+                    href={generateAffiliateLink(product)} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 transition-colors"

@@ -1,4 +1,6 @@
 ---
+import { generateAffiliateLink } from '../utils/affiliateLinks';
+
 export interface AffiliateProduct {
   productName: string;
   brand: string;
@@ -6,6 +8,7 @@ export interface AffiliateProduct {
   discountPercent?: number;
   promoCode?: string;
   externalLink: string;
+  external_link: string;
   category: string;
   targetAudience: string;
   priority?: number;
@@ -67,7 +70,7 @@ const { products = [], relatedArticles = [], className = '' } = Astro.props;
                 )}
                 
                 <a 
-                  href={product.externalLink}
+                  href={generateAffiliateLink(product)}
                   class="product-cta"
                   target="_blank"
                   rel="noopener sponsored"

@@ -1,5 +1,6 @@
 ---
 import { getProductById } from '../lib/affiliate';
+import { generateAffiliateLink, addUTMParams } from '../utils/affiliateLinks';
 
 /*
 export interface Props {
@@ -47,12 +48,9 @@ if (!placementConfig?.enabled) {
   return null;
 }
 
-// Génération de l'URL avec UTM
-const utmUrl = new URL(product.externalLink);
-utmUrl.searchParams.set('utm_source', 'glp1-france');
-utmUrl.searchParams.set('utm_medium', 'affiliate');
-utmUrl.searchParams.set('utm_campaign', placement);
-utmUrl.searchParams.set('utm_content', product.productName);
+// Génération de l'URL avec code promo automatique et UTM
+const affiliateUrl = generateAffiliateLink(product);
+const finalUrl = addUTMParams(affiliateUrl, 'glp1-france', placement);
 
 // Styles conditionnels selon le variant
 const variantClasses = {
@@ -94,7 +92,7 @@ const productSchema = {
     "price": product.price.replace(/[€\s]/g, ''),
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
-    "url": utmUrl
+    "url": finalUrl
   },
   "aggregateRating": product.rating ? {
     "@type": "AggregateRating",
@@ -191,7 +189,7 @@ const productSchema = {
         
         <!-- Bouton CTA simplifié -->
         <a 
-          href={utmUrl}
+          href={finalUrl}
           class="affiliate-product__cta-featured"
           target="_blank"
           rel="sponsored nofollow"
@@ -236,7 +234,7 @@ const productSchema = {
         </div>
         
         <a 
-          href={utmUrl}
+          href={finalUrl}
           class="affiliate-product__cta-expanded"
           target="_blank"
           rel="sponsored nofollow"
@@ -268,7 +266,7 @@ const productSchema = {
           )}
         </div>
         <a 
-          href={utmUrl}
+          href={finalUrl}
           class="affiliate-product__cta-compact"
           target="_blank"
           rel="sponsored nofollow"
@@ -313,7 +311,7 @@ const productSchema = {
         </div>
         
         <a 
-          href={utmUrl}
+          href={finalUrl}
           class="affiliate-product__cta"
           target="_blank"
           rel="sponsored nofollow"

@@ -23,17 +23,16 @@ const {
   className = ''
 } = Astro.props;
 
-// Si le produit n'existe pas, ne rien afficher
+---
+// Configuration des produits d'affiliation avec intégration Tina
+import { generateAffiliateLink, addUTMParams } from '../utils/affiliateLinks';
 if (!product) {
   return null;
 }
 
-// Génération de l'URL avec UTM
-const utmUrl = new URL(product.externalLink);
-utmUrl.searchParams.set('utm_source', 'glp1-france');
-utmUrl.searchParams.set('utm_medium', 'affiliate');
-utmUrl.searchParams.set('utm_campaign', placement);
-utmUrl.searchParams.set('utm_content', product.productName);
+// Génération de l'URL avec code promo automatique et UTM
+const affiliateUrl = generateAffiliateLink(product);
+const finalUrl = addUTMParams(affiliateUrl, 'glp1-france', placement);
 
 // Styles conditionnels selon le variant
 const variantClasses = {
@@ -81,7 +80,7 @@ const finalClasses = `${baseClasses} ${variantClasses} ${className}`.trim();
 
     <div class="affiliate-product__actions">
       <a 
-        href={utmUrl.toString()} 
+        href={finalUrl.toString()} 
         class="affiliate-product__cta"
         target="_blank"
         rel="noopener sponsored"

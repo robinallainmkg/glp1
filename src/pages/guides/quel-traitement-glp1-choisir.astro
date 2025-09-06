@@ -1,6 +1,7 @@
 ---
 import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
 import { getAllAffiliateProducts } from "../../lib/affiliate";
+import { generateAffiliateLink } from '../../utils/affiliateLinks';
 
 // Récupération des produits d'affiliation depuis Supabase
 const allProducts = await getAllAffiliateProducts();
@@ -1441,7 +1442,7 @@ const affiliateConfig = {
                 </div>
               )}
             </div>
-            <a href={product.externalLink} target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; width: 100%; text-align: center;">
+            <a href={generateAffiliateLink(product)} target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; width: 100%; text-align: center;">
               Découvrir l'offre →
             </a>
           </div>

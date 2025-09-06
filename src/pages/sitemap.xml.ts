@@ -1,158 +1,110 @@
 export async function GET() {
   const baseUrl = 'https://glp1-france.fr';
 
-  const staticPages = [
-    '',
-    '/contact/',
-    '/partenaires/',
-    '/temoignages/',
-    '/guides/experts/',
-    '/guides/qu-est-ce-que-glp1/',
-    '/guides/quel-traitement-glp1-choisir/',
-    '/guides/guide-beaute-perte-de-poids-glp1/',
-    '/guides/nouveaux-medicaments-perdre-poids/',
-    '/guides/guide-complet-wegovy/',
-    '/guides/suivi-medical-glp1/',
-    '/guides/communautes-glp1/',
-    '/guides/alimentation-personnalisee-glp1/',
-    '/guides/guides-age-glp1/',
-    '/legal/mentions-legales/',
-    '/legal/politique-confidentialite/',
-    '/outils/produits-recommandes/',
-    '/articles/'
-  ];
+  // Toutes les pages avec leurs métadonnées SEO
+  const allPages = [
+    // Page d'accueil
+    { url: '', priority: '1.0', changefreq: 'daily' },
+    
+    // Pages statiques importantes
+    { url: '/contact/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/partenaires/', priority: '0.6', changefreq: 'monthly' },
+    { url: '/temoignages/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/guides/experts/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/guides/qu-est-ce-que-glp1/', priority: '0.9', changefreq: 'monthly' },
+    { url: '/guides/quel-traitement-glp1-choisir/', priority: '1.0', changefreq: 'weekly' },
+    { url: '/guides/guide-beaute-perte-de-poids-glp1/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/nouveaux-medicaments-perdre-poids/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/guides/guide-complet-wegovy/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/guides/suivi-medical-glp1/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/communautes-glp1/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/alimentation-personnalisee-glp1/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/guides-age-glp1/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/legal/mentions-legales/', priority: '0.3', changefreq: 'yearly' },
+    { url: '/legal/confidentialite/', priority: '0.3', changefreq: 'yearly' },
+    { url: '/legal/cgu/', priority: '0.3', changefreq: 'yearly' },
 
-  const collectionPages = [
     // Collections principales
-    '/collections/traitements-glp1/',
-    '/collections/glp1-cout/',
-    '/collections/effets-secondaires-glp1/',
-    '/collections/medecins-glp1-france/',
-    '/collections/recherche-glp1/',
-    '/collections/regime-glp1/',
-    '/collections/alternatives-glp1/',
-    '/collections/glp1-perte-de-poids/',
+    { url: '/collections/traitements-glp1/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/glp1-cout/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/effets-secondaires-glp1/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/medecins-glp1-france/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/recherche-glp1/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/regime-glp1/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/alternatives-glp1/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/glp1-perte-de-poids/', priority: '0.8', changefreq: 'weekly' },
 
-    // Pages de traitements spécifiques
-    '/collections/traitements-glp1/guide-complet-ozempic/',
-    '/collections/traitements-glp1/guide-complet-mounjaro/',
-    '/collections/traitements-glp1/guide-complet-wegovy/',
-    '/collections/traitements-glp1/guide-complet-saxenda/',
-    '/collections/traitements-glp1/guide-complet-trulicity/',
-    '/collections/traitements-glp1/guide-complet-victoza/',
-    '/collections/traitements-glp1/guide-complet-rybelsus/',
+    // Pages de traitements spécifiques (priorité élevée)
+    { url: '/collections/traitements-glp1/guide-complet-ozempic/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/traitements-glp1/guide-complet-mounjaro/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/traitements-glp1/guide-complet-wegovy/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/traitements-glp1/guide-complet-saxenda/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/traitements-glp1/guide-complet-trulicity/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/traitements-glp1/guide-complet-victoza/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/traitements-glp1/guide-complet-rybelsus/', priority: '0.8', changefreq: 'monthly' },
 
-    // Pages de prix importantes (NOUVELLES URLS)
-    '/collections/glp1-cout/prix-ozempic-france/',
-    '/collections/glp1-cout/prix-mounjaro-france/', // DÉPLACÉ depuis /collections/medicaments-glp1/
-    '/collections/glp1-cout/prix-wegovy-france/',
-    '/collections/glp1-cout/prix-saxenda-france/',
-    '/collections/glp1-cout/prix-trulicity-france/',
-    '/collections/glp1-cout/prix-victoza-france/',
-    '/collections/glp1-cout/prix-rybelsus-france/',
-    '/collections/glp1-cout/wegovy-remboursement-mutuelle/',
-    '/collections/glp1-cout/acheter-wegovy-en-france/',
-    '/collections/glp1-cout/saxenda-prix-pharmacie/',
-    '/collections/glp1-cout/wegovy-prix/',
-    '/collections/glp1-cout/anneau-gastrique-prix-cmu/',
-    '/collections/glp1-cout/operation-pour-maigrir-prix/',
+    // Pages de prix importantes (fréquence élevée pour SEO)
+    { url: '/collections/glp1-cout/prix-ozempic-france/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/glp1-cout/prix-mounjaro-france/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/glp1-cout/prix-wegovy-france/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/collections/glp1-cout/prix-saxenda-france/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/glp1-cout/prix-trulicity-france/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/glp1-cout/prix-victoza-france/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/glp1-cout/prix-rybelsus-france/', priority: '0.8', changefreq: 'monthly' },
 
     // Pages d'effets secondaires
-    '/collections/effets-secondaires-glp1/effets-secondaires-ozempic/',
-    '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/',
-    '/collections/effets-secondaires-glp1/effets-secondaires-wegovy/',
-    '/collections/effets-secondaires-glp1/effets-secondaires-saxenda/',
-    '/collections/effets-secondaires-glp1/effets-secondaires-trulicity/',
-    '/collections/effets-secondaires-glp1/effets-secondaires-victoza/',
-    '/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/',
-    '/collections/effets-secondaires-glp1/ozempic-danger/',
-    '/collections/effets-secondaires-glp1/wegovy-danger/',
-    '/collections/effets-secondaires-glp1/wegovy-dosage/',
-    '/collections/effets-secondaires-glp1/insulevel-effet-indesirable/',
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-ozempic/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-wegovy/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-saxenda/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-trulicity/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-victoza/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/ozempic-danger/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/wegovy-danger/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/wegovy-dosage/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/effets-secondaires-glp1/insulevel-effet-indesirable/', priority: '0.6', changefreq: 'monthly' },
 
     // Pages de médecins et cliniques
-    '/collections/medecins-glp1-france/clinique-pour-obesite/',
-    '/collections/medecins-glp1-france/clinique-pour-obesite-new/',
-    '/collections/medecins-glp1-france/diabetologue-paris/',
-    '/collections/medecins-glp1-france/endocrinologue-pour-maigrir/',
-    '/collections/medecins-glp1-france/endocrinologue-pour-maigrir-new/',
+    { url: '/collections/medecins-glp1-france/clinique-pour-obesite/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/medecins-glp1-france/clinique-pour-obesite-new/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/medecins-glp1-france/diabetologue-paris/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/medecins-glp1-france/endocrinologue-pour-maigrir/', priority: '0.8', changefreq: 'monthly' },
+    { url: '/collections/medecins-glp1-france/endocrinologue-pour-maigrir-new/', priority: '0.8', changefreq: 'monthly' },
 
     // Pages de recherche
-    '/collections/recherche-glp1/glp-inhibitors/',
-    '/collections/recherche-glp1/recherche-clinique-glp1/',
+    { url: '/collections/recherche-glp1/recherche-medicament-glp1/', priority: '0.6', changefreq: 'monthly' },
+    { url: '/collections/recherche-glp1/etude-glp1/', priority: '0.6', changefreq: 'monthly' },
+    { url: '/collections/recherche-glp1/nouveau-medicament-amaigrissant/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/recherche-glp1/nouveau-medicament-obesite/', priority: '0.7', changefreq: 'monthly' },
 
-    // Pages de régime et nutrition
-    '/collections/regime-glp1/glp1-calories-journalieres/',
-    '/collections/regime-glp1/glp1-index-glycemique/',
-    '/collections/regime-glp1/glp1-micronutriments/',
-    '/collections/regime-glp1/glp1-portion-alimentaire/',
-    '/collections/regime-glp1/glp1-proteines/',
-    '/collections/regime-glp1/isglt2-liste/',
-    '/collections/regime-glp1/jeune-intermittent-glp1/',
-    '/collections/regime-glp1/regime-cetogene-glp1/',
-    '/collections/regime-glp1/regime-chrono-nutrition-glp1/',
-    '/collections/regime-glp1/regime-dash-glp1/',
-    '/collections/regime-glp1/regime-detox-glp1/',
-    '/collections/regime-glp1/regime-mediterraneen-glp1/',
-    '/collections/regime-glp1/regime-paleo-glp1/',
-    '/collections/regime-glp1/regime-sans-sucre-glp1/',
+    // Pages de régime
+    { url: '/collections/regime-glp1/regime-pour-glp1/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/regime-glp1/regime-glp1-aliments-a-eviter/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/regime-glp1/regime-glp1-petit-dejeuner/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/regime-glp1/regime-glp1-repas/', priority: '0.7', changefreq: 'monthly' },
 
     // Pages d'alternatives
-    '/collections/alternatives-glp1/acupuncture-glp1/',
-    '/collections/alternatives-glp1/alternatives-bio-glp1/',
-    '/collections/alternatives-glp1/alternatives-naturelles-ozempic/',
-    '/collections/alternatives-glp1/berberine-glp1/',
-    '/collections/alternatives-glp1/cannelle-glp1/',
-    '/collections/alternatives-glp1/chrome-diabete/',
-    '/collections/alternatives-glp1/homeopathie-diabete/',
-    '/collections/alternatives-glp1/meditation-glp1/',
-    '/collections/alternatives-glp1/peut-on-guerir-du-diabete/',
-    '/collections/alternatives-glp1/phytotherapie-glp1/',
-    '/collections/alternatives-glp1/plantes-diabete/',
-    '/collections/alternatives-glp1/semaglutide-naturel/',
-    '/collections/alternatives-glp1/supplements-glp1/',
-    '/collections/alternatives-glp1/vinaigre-cidre-glp1/',
+    { url: '/collections/alternatives-glp1/alternative-naturelle-ozempic/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/alternatives-glp1/alternative-naturelle-wegovy/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/alternatives-glp1/medicament-naturel-glp1/', priority: '0.7', changefreq: 'monthly' },
 
     // Pages de perte de poids
-    '/collections/glp1-perte-de-poids/avant-apres-glp1/',
-    '/collections/glp1-perte-de-poids/chirurgie-bariatrique/',
-    '/collections/glp1-perte-de-poids/combien-de-dose-dans-un-stylo-ozempic/',
-    '/collections/glp1-perte-de-poids/diabete-amaigrissement-rapide/',
-    '/collections/glp1-perte-de-poids/glp1-perte-de-poids/',
-    '/collections/glp1-perte-de-poids/medicament-americain-pour-maigrir/',
-    '/collections/glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/',
-    '/collections/glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant-en-pharmacie/',
-    '/collections/glp1-perte-de-poids/medicament-pour-perdre-du-ventre-en-1-semaine/',
-    '/collections/glp1-perte-de-poids/obesite-severe-prise-en-charge/',
-    '/collections/glp1-perte-de-poids/ou-trouver-ozempic/',
-    '/collections/glp1-perte-de-poids/ozempic-effets-secondaires-forum/',
-    '/collections/glp1-perte-de-poids/ozempic-prix/',
-    '/collections/glp1-perte-de-poids/ozempic-regime/',
-    '/collections/glp1-perte-de-poids/personne-obese/',
-    '/collections/glp1-perte-de-poids/pilule-qui-fait-maigrir/'
+    { url: '/collections/glp1-perte-de-poids/pilule-miracle-perdre-poids/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/collections/glp1-perte-de-poids/injection-pour-perdre-du-poids/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/collections/glp1-perte-de-poids/nouveau-medicament-pour-perdre-du-poids/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/collections/glp1-perte-de-poids/ozempic-regime/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/collections/glp1-perte-de-poids/personne-obese/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/collections/glp1-perte-de-poids/pilule-qui-fait-maigrir/', priority: '0.8', changefreq: 'weekly' }
   ];
-
-  const allPages = [...staticPages, ...collectionPages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages.map(page => `  <url>
-    <loc>${baseUrl}${page}</loc>
+    <loc>${baseUrl}${page.url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>${page === '' ? 'weekly' :
-                  page.includes('prix') || page.includes('cout') ? 'weekly' :
-                  page.includes('traitement') || page.includes('guide') ? 'monthly' :
-                  page.includes('suivi-medical') || page.includes('communautes') || page.includes('alimentation-personnalisee') || page.includes('guides-age') ? 'monthly' :
-                  page.includes('quel-traitement-glp1-choisir') ? 'weekly' :
-                  'monthly'}</changefreq>
-    <priority>${page === '' ? '1.0' :
-                page.includes('quel-traitement-glp1-choisir') ? '0.95' :
-                page.includes('suivi-medical') || page.includes('communautes') || page.includes('alimentation-personnalisee') || page.includes('guides-age') ? '0.9' :
-                page.includes('guide-complet') || page.includes('nouveaux-medicaments') ? '0.9' :
-                page.includes('prix-ozempic') || page.includes('prix-mounjaro') || page.includes('prix-wegovy') ? '0.85' :
-                page.includes('collections/traitements-glp1/') ? '0.8' :
-                page.includes('collections/') ? '0.7' :
-                '0.6'}</priority>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
 

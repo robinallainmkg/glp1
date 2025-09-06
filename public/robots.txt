@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Priorité aux pages importantes
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://glp1-france.fr/sitemap.xml
+
+# Bloquer les pages d'administration
+Disallow: /admin/
+Disallow: /admin-*
+Disallow: /test-*
+Disallow: /demo-*
+Disallow: /_*
+Disallow: /api/
+
+# Bloquer les fichiers techniques
+Disallow: /*.json
+Disallow: /*.log
+Disallow: /*.backup
+Disallow: /*.bak
+
+# Bloquer les paramètres de session
+Disallow: /*?*session*
+Disallow: /*?*debug*
+Disallow: /*?*test*
+
+# Encourager l'indexation des pages importantes
+Allow: /guides/
+Allow: /collections/
+Allow: /temoignages/
+Allow: /contact/
+Allow: /legal/
+Allow: /outils/
