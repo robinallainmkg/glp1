@@ -26,7 +26,9 @@
 }
 
 /* ===== IMPORTS COMPOSANTS SPÉCIALISÉS ===== */
-@import './mounjaro-enhancement.css';ray-400: #9CA3AF;
+
+  /* Couleurs grises */
+  --gray-400: #9CA3AF;
   --gray-500: #6B7280;
   --gray-600: #4B5563;
   --gray-700: #374151;

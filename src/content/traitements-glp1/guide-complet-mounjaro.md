@@ -13,34 +13,34 @@ priority: 1
 
 # 🔥 Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
 
-<div class="hero-stats">
-  <div class="stat-box highlight">
-    <span class="stat-number">-20%</span>
-    <span class="stat-label">Perte de poids moyenne</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8 p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-500">
+  <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div class="text-4xl font-black text-blue-600 mb-2">-20%</div>
+    <div class="text-sm text-gray-600 font-semibold">Perte de poids moyenne</div>
   </div>
-  <div class="stat-box">
-    <span class="stat-number">89%</span>
-    <span class="stat-label">Patients satisfaits</span>
+  <div class="text-center p-4 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-pulse">
+    <div class="text-4xl font-black mb-2">89%</div>
+    <div class="text-sm opacity-90 font-semibold">Patients satisfaits</div>
   </div>
-  <div class="stat-box">
-    <span class="stat-number">1x/sem</span>
-    <span class="stat-label">Une seule injection</span>
+  <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div class="text-4xl font-black text-blue-600 mb-2">1x/sem</div>
+    <div class="text-sm text-gray-600 font-semibold">Une seule injection</div>
   </div>
 </div>
 
-<div class="alert-success">
+<div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-xl mb-6 shadow-lg">
   🎯 <strong>Boom 2025</strong> : Mounjaro devient LE traitement de référence en France ! 
   Découvrez pourquoi 89% des patients choisissent Mounjaro plutôt qu'Ozempic.
 </div>
 
-<div class="guide-buttons">
-  <a href="/collections/glp1-cout/prix-mounjaro-france" class="guide-button primary pulse">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+  <a href="/collections/glp1-cout/prix-mounjaro-france" class="block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse">
     💰 Prix Mounjaro France 2025
   </a>
-  <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="guide-button secondary">
+  <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="block bg-gray-600 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
     ⚠️ Effets Secondaires (TOUT Savoir)
   </a>
-  <a href="#resultats-avant-apres" class="guide-button highlight">
+  <a href="#resultats-avant-apres" class="block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
     📸 Voir les Résultats Avant/Après
   </a>
 </div>
