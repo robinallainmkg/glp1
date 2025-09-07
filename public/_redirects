@@ -5,6 +5,21 @@
 /pages-statiques /  301
 /pages-statiques/* / 301
 
+# Témoignages déplacés vers collection
+/pages-statiques/serena-williams-glp1/ /collections/temoignages/serena-williams-glp1/ 301
+/temoignage-marie-transformation-glp1/ /collections/temoignages/marie-transformation-glp1/ 301
+/temoignage-laurent-transformation-glp1/ /collections/temoignages/laurent-transformation-glp1/ 301
+/temoignage-sophie-transformation-glp1/ /collections/temoignages/sophie-transformation-glp1/ 301
+/temoignages/ /collections/temoignages/ 301
+/temoignages/avant-apres-glp1/ /collections/temoignages/ 301
+
+# Guides déplacés vers collections
+/guides/guide-complet-ozempic/ /collections/traitements-glp1/guide-complet-ozempic/ 301
+/guides/guide-complet-mounjaro/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
+/guides/guide-complet-wegovy/ /collections/traitements-glp1/guide-complet-wegovy/ 301
+/guides/guide-complet-trulicity/ /collections/traitements-glp1/guide-complet-trulicity/ 301
+/guides/guide-complet-saxenda/ /collections/traitements-glp1/guide-complet-saxenda/ 301
+
 # Collections déplacées
 /medicaments-glp1/ /collections/traitements-glp1/ 301
 /glp1-cout/ /collections/glp1-cout/ 301

@@ -1,0 +1,315 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AffiliateSidebar from "../../../components/AffiliateSidebar.astro";
+import { getAllAffiliateProducts } from "../../../lib/affiliate.ts";
+
+const temoignages = await getCollection("temoignages");
+const sortedTemoignages = temoignages.sort((a, b) => 
+  (b.data.priority || 0) - (a.data.priority || 0)
+);
+
+// Récupération des produits d'affiliation
+const affiliateProducts = await getAllAffiliateProducts();
+---
+
+<BaseLayout 
+  title="Témoignages GLP-1 : Transformations Réelles et Inspirantes"
+  description="Découvrez les témoignages authentiques de personnes qui ont transformé leur vie avec les traitements GLP-1. Histoires vraies, résultats réels, conseils pratiques."
+>
+  <div class="container">
+    <div class="content-with-sidebar">
+      <!-- Contenu principal -->
+      <main class="main-content">
+        <header class="page-header">
+          <h1>Témoignages GLP-1 : Transformations Inspirantes</h1>
+          <p class="page-description">
+            Découvrez les histoires vraies de personnes qui ont transformé leur vie 
+            grâce aux traitements GLP-1. Des témoignages authentiques pour vous inspirer.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+          {sortedTemoignages.map((testimonial) => (
+            <article class="testimonial-card">
+              <div class="testimonial-image">
+                {testimonial.data.image && (
+                  <img 
+                    src={testimonial.data.image} 
+                    alt={testimonial.data.title}
+                    loading="lazy"
+                  />
+                )}
+              </div>
+              
+              <div class="testimonial-content">
+                <h2 class="testimonial-title">
+                  <a href={`/collections/temoignages/${testimonial.slug}`}>
+                    {testimonial.data.title}
+                  </a>
+                </h2>
+                
+                <p class="testimonial-description">
+                  {testimonial.data.description}
+                </p>
+                
+                <div class="testimonial-meta">
+                  <span class="author">Par {testimonial.data.author}</span>
+                  <div class="tags">
+                    {testimonial.data.tags?.slice(0, 3).map((tag) => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                
+                <a 
+                  href={`/collections/temoignages/${testimonial.slug}`}
+                  class="read-more-button"
+                >
+                  Lire le témoignage →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <section class="cta-section">
+          <h2>Votre Transformation Vous Attend</h2>
+          <p>
+            Comme Marie, Laurent et Sophie, vous pouvez vous aussi transformer votre vie. 
+            Découvrez les traitements GLP-1 qui ont changé leur quotidien.
+          </p>
+          <div class="cta-buttons">
+            <a href="/collections/traitements-glp1" class="cta-button primary">
+              Découvrir les Traitements
+            </a>
+            <a href="/guides/quel-traitement-glp1-choisir" class="cta-button secondary">
+              Quel Traitement Choisir ?
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- Sidebar d'affiliation -->
+      <aside class="sidebar">
+        <AffiliateSidebar 
+          products={affiliateProducts}
+          title="Produits Recommandés"
+          className="testimonials-sidebar"
+        />
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .content-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .page-description {
+    font-size: 1.1rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .testimonial-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f3f4f6;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #3b82f6;
+  }
+
+  .testimonial-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .testimonial-title {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-title a {
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .testimonial-title a:hover {
+    color: #3b82f6;
+  }
+
+  .testimonial-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .author {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    background: #eff6ff;
+    color: #3b82f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .read-more-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .read-more-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  }
+
+  .cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f4fd 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    border: 2px solid #3b82f6;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button.primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+  }
+
+  .cta-button.secondary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .content-with-sidebar {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>

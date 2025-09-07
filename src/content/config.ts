@@ -32,6 +32,7 @@ const traitementsGlp1 = defineCollection({ type: 'content', schema: unifiedSchem
 const rechercheGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const regimeGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const pagesStatiques = defineCollection({ type: 'content', schema: unifiedSchema });
+const temoignages = defineCollection({ type: 'content', schema: unifiedSchema });
 
 export const collections = {
   'alternatives-glp1': alternativesGlp1,
@@ -44,4 +45,5 @@ export const collections = {
   'recherche-glp1': rechercheGlp1,
   'regime-glp1': regimeGlp1,
   'pages-statiques': pagesStatiques,
+  'temoignages': temoignages,
 };

@@ -1,0 +1,569 @@
+{
+  "scannedFiles": 199,
+  "totalLinks": 537,
+  "brokenLinks": [
+    {
+      "link": "/collections/regime-glp1/regime-mounjaro-optimal",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-zepbound-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-zepbound.md",
+      "type": "internal"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-zepbound",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-zepbound.md",
+      "type": "internal"
+    },
+    {
+      "link": "/quel-traitement-glp1-choisir",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/produits-recommandes",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/admin/user-data/",
+      "sourceFile": "pages\\admin\\index.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/admin-user-data",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/admin/affiliate-new/",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/admin-brands",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/admin-products",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/guide-beaute-perte-de-poids-glp1/",
+      "sourceFile": "pages\\articles\\index.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/glp1-perte-de-poids/chirurgie-bariatrique/",
+      "sourceFile": "pages\\collections\\glp1-cout\\operation-pour-maigrir-prix.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/alternatives-glp1/",
+      "sourceFile": "pages\\collections\\glp1-cout\\saxenda-prix-pharmacie.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/glp1-perte-de-poids/ozempic-prix/",
+      "sourceFile": "pages\\guides\\nouveaux-medicaments-perdre-poids.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/medecins-glp1-france/",
+      "sourceFile": "pages\\guides\\nouveaux-medicaments-perdre-poids.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/qu-est-ce-que-glp1/",
+      "sourceFile": "pages\\guides\\nouveaux-medicaments-perdre-poids.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/produits/talika-bust-phytoserum/",
+      "sourceFile": "pages\\guides\\quel-traitement-glp1-choisir.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/medecins-glp1-france/",
+      "sourceFile": "pages\\guides\\quel-traitement-glp1-choisir.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/images/thumbnails/default-thumbnail.svg",
+      "sourceFile": "pages\\images\\thumbnails\\[...slug].astro",
+      "type": "internal"
+    },
+    {
+      "link": "/temoignage-marie-transformation-glp1/",
+      "sourceFile": "pages\\index.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/temoignage-laurent-transformation-glp1/",
+      "sourceFile": "pages\\index.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/temoignage-sophie-transformation-glp1/",
+      "sourceFile": "pages\\index.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/guide-glp1-perte-de-poids/",
+      "sourceFile": "pages\\temoignages\\temoignage-laurent-transformation-glp1.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/avant-apres-glp1/",
+      "sourceFile": "pages\\temoignages\\temoignage-laurent-transformation-glp1.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/guide-glp1-perte-de-poids/",
+      "sourceFile": "pages\\temoignages\\temoignage-marie-transformation-glp1.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/avant-apres-glp1/",
+      "sourceFile": "pages\\temoignages\\temoignage-marie-transformation-glp1.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/temoignages/",
+      "sourceFile": "pages\\temoignages-glp1.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/glp1-cout/",
+      "sourceFile": "pages\\_utils\\contact.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/medecins-glp1-france/",
+      "sourceFile": "pages\\_utils\\contact.astro",
+      "type": "internal"
+    },
+    {
+      "link": "/quel-traitement-glp1-choisir/",
+      "sourceFile": "pages\\_utils\\diagnostic-live-content-backup.astro",
+      "type": "internal"
+    }
+  ],
+  "suspiciousLinks": [
+    {
+      "link": "/collections/medecins-glp1-france",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-mounjaro",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/regime-glp1/glp1-proteines",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/quel-traitement-glp1-choisir",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/regime-glp1",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-ozempic-france",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-wegovy-france",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-saxenda-france",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/wegovy-remboursement-mutuelle",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/medecins-glp1-france/endocrinologue-pour-maigrir",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/suivi-medical-glp1",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/temoignages/marie",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/sport-activite-physique-glp1",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/psychologie-motivation-glp1",
+      "sourceFile": "content\\glp1-cout\\prix-mounjaro-france.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/traitements-glp1",
+      "sourceFile": "content\\temoignages\\serena-williams-glp1.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-perte-de-poids",
+      "sourceFile": "content\\temoignages\\serena-williams-glp1.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-mounjaro-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-mounjaro",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/regime-glp1/glp1-proteines",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/quel-traitement-glp1-choisir",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/regime-glp1/regime-mounjaro-optimal",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/traitements-glp1/guide-complet-ozempic",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/traitements-glp1/guide-complet-wegovy",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/traitements-glp1/guide-complet-zepbound",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/regime-glp1/jeune-intermittent-glp1",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/sport-activite-physique-glp1",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/temoignages/avant-apres-glp1",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/temoignages/marie",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/temoignages/laurent",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-mounjaro.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-ozempic-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-ozempic.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-ozempic.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-rybelsus-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-rybelsus.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-rybelsus",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-rybelsus.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-saxenda-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-saxenda.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-saxenda",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-saxenda.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-trulicity-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-trulicity.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-trulicity",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-trulicity.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-victoza-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-victoza.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-victoza",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-victoza.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-wegovy-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-wegovy.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-wegovy",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-wegovy.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/prix-zepbound-france",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-zepbound.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-zepbound",
+      "sourceFile": "content\\traitements-glp1\\guide-complet-zepbound.md",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/quel-traitement-glp1-choisir",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/produits-recommandes",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/mentions-legales",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/politique-confidentialite",
+      "sourceFile": "pages\\404.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/admin-user-data",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/admin-brands",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/admin-products",
+      "sourceFile": "pages\\admin-dashboard.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/traitements-glp1",
+      "sourceFile": "pages\\collections\\temoignages\\index.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/guides/quel-traitement-glp1-choisir",
+      "sourceFile": "pages\\collections\\temoignages\\index.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/effets-secondaires-glp1",
+      "sourceFile": "pages\\effets-secondaires-glp1\\index.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\alimentation-personnalisee-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\communautes-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\faq-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\guides-age-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\interactions-medicamenteuses-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\psychologie-motivation-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\sport-activite-physique-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\guides\\suivi-medical-glp1.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/contact",
+      "sourceFile": "pages\\partenaires.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/temoignages/temoignage-marie-transformation-glp1",
+      "sourceFile": "pages\\temoignages\\marie.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/temoignages/temoignage-sophie-transformation-glp1",
+      "sourceFile": "pages\\temoignages\\sophie.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    },
+    {
+      "link": "/collections/glp1-cout/wegovy-prix",
+      "sourceFile": "pages\\wegovy-prix.astro",
+      "type": "internal",
+      "issue": "Missing trailing slash or extension"
+    }
+  ],
+  "redirectsNeeded": [],
+  "summary": {
+    "totalScannedFiles": 199,
+    "totalLinks": 537,
+    "brokenLinksCount": 30,
+    "suspiciousLinksCount": 67,
+    "redirectsNeededCount": 0,
+    "healthScore": 94
+  }
+}

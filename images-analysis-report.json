@@ -1,0 +1,1627 @@
+{
+  "timestamp": "2025-09-07T12:11:34.409Z",
+  "summary": {
+    "totalPhysicalImages": 234,
+    "totalReferences": 28,
+    "validImages": 28,
+    "missingImages": 0,
+    "emptyImages": 0,
+    "unusedImages": 234
+  },
+  "missingImages": [],
+  "emptyImages": [],
+  "unusedImages": [
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\experts\\dr-claire-morel.jpg",
+      "webPath": "/images/experts\\dr-claire-morel.jpg",
+      "size": 32231,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\experts\\elodie-carpentier.jpg",
+      "webPath": "/images/experts\\elodie-carpentier.jpg",
+      "size": 17981,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\experts\\julien-armand.jpg",
+      "webPath": "/images/experts\\julien-armand.jpg",
+      "size": 17647,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\experts\\marc-delattre.jpg",
+      "webPath": "/images/experts\\marc-delattre.jpg",
+      "size": 23083,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\home\\image-home2.jpg",
+      "webPath": "/images/home\\image-home2.jpg",
+      "size": 534696,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\home\\seringue-adn.jpg",
+      "webPath": "/images/home\\seringue-adn.jpg",
+      "size": 318063,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\products\\glutamine.webp",
+      "webPath": "/images/products\\glutamine.webp",
+      "size": 62034,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\products\\talika-bio-enzymes-mask.jpg",
+      "webPath": "/images/products\\talika-bio-enzymes-mask.jpg",
+      "size": 66136,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\products\\talika-bust-phytoserum.jpg",
+      "webPath": "/images/products\\talika-bust-phytoserum.jpg",
+      "size": 168464,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\products\\talika-eye-therapy-patches.jpg",
+      "webPath": "/images/products\\talika-eye-therapy-patches.jpg",
+      "size": 839733,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\products\\talika-time-control-7.jpg",
+      "webPath": "/images/products\\talika-time-control-7.jpg",
+      "size": 24748,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\products\\whey-native.webp",
+      "webPath": "/images/products\\whey-native.webp",
+      "size": 61204,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\produits\\collagen-peptides.webp",
+      "webPath": "/images/produits\\collagen-peptides.webp",
+      "size": 68018,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\temoignages\\chelsea.jpeg",
+      "webPath": "/images/temoignages\\chelsea.jpeg",
+      "size": 1871634,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\temoignages\\elton.webp",
+      "webPath": "/images/temoignages\\elton.webp",
+      "size": 237000,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\temoignages\\Laurent-journey8.jpg",
+      "webPath": "/images/temoignages\\Laurent-journey8.jpg",
+      "size": 158322,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\temoignages\\mariejourney9.jpg",
+      "webPath": "/images/temoignages\\mariejourney9.jpg",
+      "size": 49835,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\temoignages\\serena.webp",
+      "webPath": "/images/temoignages\\serena.webp",
+      "size": 81378,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\temoignages\\sophie29.jpg",
+      "webPath": "/images/temoignages\\sophie29.jpg",
+      "size": 43499,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\acheter-wegovy-en-france-illus.jpg",
+      "webPath": "/images/thumbnails\\acheter-wegovy-en-france-illus.jpg",
+      "size": 68067,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\acupuncture-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\acupuncture-glp1-illus.jpg",
+      "size": 79193,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\acupuncture-glp1.svg",
+      "webPath": "/images/thumbnails\\acupuncture-glp1.svg",
+      "size": 51,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\alimentation-glp1.jpg",
+      "webPath": "/images/thumbnails\\alimentation-glp1.jpg",
+      "size": 151095,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\alternatives-bio-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\alternatives-bio-glp1-illus.jpg",
+      "size": 1915488,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\alternatives-naturelles-ozempic-illus.jpg",
+      "webPath": "/images/thumbnails\\alternatives-naturelles-ozempic-illus.jpg",
+      "size": 2145429,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\analyse.jpg",
+      "webPath": "/images/thumbnails\\analyse.jpg",
+      "size": 79555,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\anneau-gastrique-dr-stephane-servajean-a-paris.jpg",
+      "webPath": "/images/thumbnails\\anneau-gastrique-dr-stephane-servajean-a-paris.jpg",
+      "size": 19969,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\anneau-gastrique-prix-cmu-illus.jpg",
+      "webPath": "/images/thumbnails\\anneau-gastrique-prix-cmu-illus.jpg",
+      "size": 81514,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\anneau-gastrique-prix-cmu.svg",
+      "webPath": "/images/thumbnails\\anneau-gastrique-prix-cmu.svg",
+      "size": 35,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\avant-apres-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\avant-apres-glp1-illus.jpg",
+      "size": 78678,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\avant-apres-glp1.jpg",
+      "webPath": "/images/thumbnails\\avant-apres-glp1.jpg",
+      "size": 58582,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\avant-apres-glp1.svg",
+      "webPath": "/images/thumbnails\\avant-apres-glp1.svg",
+      "size": 51,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ballon-gastrique.jpg",
+      "webPath": "/images/thumbnails\\ballon-gastrique.jpg",
+      "size": 713729,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ballongastrique.jpg",
+      "webPath": "/images/thumbnails\\ballongastrique.jpg",
+      "size": 61907,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\berberine-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\berberine-glp1-illus.jpg",
+      "size": 2035170,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\berberine-glp1.svg",
+      "webPath": "/images/thumbnails\\berberine-glp1.svg",
+      "size": 24,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\cannelle-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\cannelle-glp1-illus.jpg",
+      "size": 2570860,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\cannelle-glp1.svg",
+      "webPath": "/images/thumbnails\\cannelle-glp1.svg",
+      "size": 23,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\chirurgie-bariatrique-illus.jpg",
+      "webPath": "/images/thumbnails\\chirurgie-bariatrique-illus.jpg",
+      "size": 86856,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\chirurgie-bariatrique.jpg",
+      "webPath": "/images/thumbnails\\chirurgie-bariatrique.jpg",
+      "size": 54987,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\chirurgie-bariatrique.svg",
+      "webPath": "/images/thumbnails\\chirurgie-bariatrique.svg",
+      "size": 56,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\chrome-diabete-illus.jpg",
+      "webPath": "/images/thumbnails\\chrome-diabete-illus.jpg",
+      "size": 74254,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\chrome-diabete.svg",
+      "webPath": "/images/thumbnails\\chrome-diabete.svg",
+      "size": 49,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\clinique-pour-obesite-illus.jpg",
+      "webPath": "/images/thumbnails\\clinique-pour-obesite-illus.jpg",
+      "size": 79671,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\clinique-pour-obesite-new-illus.jpg",
+      "webPath": "/images/thumbnails\\clinique-pour-obesite-new-illus.jpg",
+      "size": 84721,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\clinique-pour-obesite-new.jpg",
+      "webPath": "/images/thumbnails\\clinique-pour-obesite-new.jpg",
+      "size": 78946,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\clinique-pour-obesite-new.svg",
+      "webPath": "/images/thumbnails\\clinique-pour-obesite-new.svg",
+      "size": 60,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\clinique-pour-obesite.jpg",
+      "webPath": "/images/thumbnails\\clinique-pour-obesite.jpg",
+      "size": 48040,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\clinique-pour-obesite.svg",
+      "webPath": "/images/thumbnails\\clinique-pour-obesite.svg",
+      "size": 31,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\combien-de-dose-dans-un-stylo-ozempic-illus.jpg",
+      "webPath": "/images/thumbnails\\combien-de-dose-dans-un-stylo-ozempic-illus.jpg",
+      "size": 73134,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\combien-de-dose-dans-un-stylo-ozempic.svg",
+      "webPath": "/images/thumbnails\\combien-de-dose-dans-un-stylo-ozempic.svg",
+      "size": 47,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\communaute-glp1.jpg",
+      "webPath": "/images/thumbnails\\communaute-glp1.jpg",
+      "size": 63126,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\diabete-amaigrissement-rapide-illus.jpg",
+      "webPath": "/images/thumbnails\\diabete-amaigrissement-rapide-illus.jpg",
+      "size": 70241,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\diabete-amaigrissement-rapide.svg",
+      "webPath": "/images/thumbnails\\diabete-amaigrissement-rapide.svg",
+      "size": 64,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\diabetologue-paris-illus.jpg",
+      "webPath": "/images/thumbnails\\diabetologue-paris-illus.jpg",
+      "size": 92499,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\diabetologue-paris.jpg",
+      "webPath": "/images/thumbnails\\diabetologue-paris.jpg",
+      "size": 101703,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\diabetologue-paris.svg",
+      "webPath": "/images/thumbnails\\diabetologue-paris.svg",
+      "size": 53,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\docteur.jpg",
+      "webPath": "/images/thumbnails\\docteur.jpg",
+      "size": 61025,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\effets-secondaires-ozempic-illus.jpg",
+      "webPath": "/images/thumbnails\\effets-secondaires-ozempic-illus.jpg",
+      "size": 58270,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\effets-secondaires-rybelsus-illus.jpg",
+      "webPath": "/images/thumbnails\\effets-secondaires-rybelsus-illus.jpg",
+      "size": 79665,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\effets-secondaires-saxenda-illus.jpg",
+      "webPath": "/images/thumbnails\\effets-secondaires-saxenda-illus.jpg",
+      "size": 65908,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\effets-secondaires-trulicity-illus.jpg",
+      "webPath": "/images/thumbnails\\effets-secondaires-trulicity-illus.jpg",
+      "size": 76678,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\effets-secondaires-victoza-illus.jpg",
+      "webPath": "/images/thumbnails\\effets-secondaires-victoza-illus.jpg",
+      "size": 62415,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\effets-secondaires-wegovy-illus.jpg",
+      "webPath": "/images/thumbnails\\effets-secondaires-wegovy-illus.jpg",
+      "size": 61410,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\endocrinologue-pour-maigrir-illus.jpg",
+      "webPath": "/images/thumbnails\\endocrinologue-pour-maigrir-illus.jpg",
+      "size": 69329,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\endocrinologue-pour-maigrir-new-illus.jpg",
+      "webPath": "/images/thumbnails\\endocrinologue-pour-maigrir-new-illus.jpg",
+      "size": 67337,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\endocrinologue-pour-maigrir-new.jpg",
+      "webPath": "/images/thumbnails\\endocrinologue-pour-maigrir-new.jpg",
+      "size": 42679,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\endocrinologue-pour-maigrir-new.svg",
+      "webPath": "/images/thumbnails\\endocrinologue-pour-maigrir-new.svg",
+      "size": 41,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\endocrinologue-pour-maigrir.jpg",
+      "webPath": "/images/thumbnails\\endocrinologue-pour-maigrir.jpg",
+      "size": 43070,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\endocrinologue-pour-maigrir.svg",
+      "webPath": "/images/thumbnails\\endocrinologue-pour-maigrir.svg",
+      "size": 37,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\faq-glp1.jpg",
+      "webPath": "/images/thumbnails\\faq-glp1.jpg",
+      "size": 71435,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\gellules.jpg",
+      "webPath": "/images/thumbnails\\gellules.jpg",
+      "size": 192950,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\gellulesbleues.jpg",
+      "webPath": "/images/thumbnails\\gellulesbleues.jpg",
+      "size": 63610,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp-inhibitors-illus.jpg",
+      "webPath": "/images/thumbnails\\glp-inhibitors-illus.jpg",
+      "size": 74113,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp-inhibitors.svg",
+      "webPath": "/images/thumbnails\\glp-inhibitors.svg",
+      "size": 49,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-calories-journalieres-illus.jpg",
+      "webPath": "/images/thumbnails\\glp1-calories-journalieres-illus.jpg",
+      "size": 75868,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-calories-journalieres.jpg",
+      "webPath": "/images/thumbnails\\glp1-calories-journalieres.jpg",
+      "size": 52096,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-calories-journalieres.svg",
+      "webPath": "/images/thumbnails\\glp1-calories-journalieres.svg",
+      "size": 61,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-diabete.jpg",
+      "webPath": "/images/thumbnails\\glp1-diabete.jpg",
+      "size": 101703,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-index-glycemique-illus.jpg",
+      "webPath": "/images/thumbnails\\glp1-index-glycemique-illus.jpg",
+      "size": 70904,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-index-glycemique.jpg",
+      "webPath": "/images/thumbnails\\glp1-index-glycemique.jpg",
+      "size": 48588,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-index-glycemique.svg",
+      "webPath": "/images/thumbnails\\glp1-index-glycemique.svg",
+      "size": 56,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-micronutriments-illus.jpg",
+      "webPath": "/images/thumbnails\\glp1-micronutriments-illus.jpg",
+      "size": 76436,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-micronutriments.jpg",
+      "webPath": "/images/thumbnails\\glp1-micronutriments.jpg",
+      "size": 55033,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-micronutriments.svg",
+      "webPath": "/images/thumbnails\\glp1-micronutriments.svg",
+      "size": 55,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-perte-de-poids-illus.jpg",
+      "webPath": "/images/thumbnails\\glp1-perte-de-poids-illus.jpg",
+      "size": 74181,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-perte-de-poids.jpg",
+      "webPath": "/images/thumbnails\\glp1-perte-de-poids.jpg",
+      "size": 64965,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-perte-de-poids.svg",
+      "webPath": "/images/thumbnails\\glp1-perte-de-poids.svg",
+      "size": 29,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-portion-alimentaire-illus.jpg",
+      "webPath": "/images/thumbnails\\glp1-portion-alimentaire-illus.jpg",
+      "size": 69683,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-portion-alimentaire.jpg",
+      "webPath": "/images/thumbnails\\glp1-portion-alimentaire.jpg",
+      "size": 59225,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-portion-alimentaire.svg",
+      "webPath": "/images/thumbnails\\glp1-portion-alimentaire.svg",
+      "size": 59,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-proteines-illus.jpg",
+      "webPath": "/images/thumbnails\\glp1-proteines-illus.jpg",
+      "size": 81559,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-proteines.jpg",
+      "webPath": "/images/thumbnails\\glp1-proteines.jpg",
+      "size": 56091,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\glp1-proteines.svg",
+      "webPath": "/images/thumbnails\\glp1-proteines.svg",
+      "size": 49,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\graph.png",
+      "webPath": "/images/thumbnails\\graph.png",
+      "size": 2858948,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\graphnscreen.jpg",
+      "webPath": "/images/thumbnails\\graphnscreen.jpg",
+      "size": 629625,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-GLP1.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-GLP1.jpg",
+      "size": 92991,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-ozempic-illus.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-ozempic-illus.jpg",
+      "size": 81198,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-ozempic.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-ozempic.jpg",
+      "size": 71435,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-ozempic.svg",
+      "webPath": "/images/thumbnails\\guide-complet-ozempic.svg",
+      "size": 6273,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-rybelsus-illus.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-rybelsus-illus.jpg",
+      "size": 70863,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-saxenda-illus.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-saxenda-illus.jpg",
+      "size": 93775,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-saxenda.webp",
+      "webPath": "/images/thumbnails\\guide-complet-saxenda.webp",
+      "size": 42700,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-trulicity-illus.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-trulicity-illus.jpg",
+      "size": 78167,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-victoza-illus.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-victoza-illus.jpg",
+      "size": 74328,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guide-complet-wegovy-illus.jpg",
+      "webPath": "/images/thumbnails\\guide-complet-wegovy-illus.jpg",
+      "size": 77207,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\guides-age-glp1.jpg",
+      "webPath": "/images/thumbnails\\guides-age-glp1.jpg",
+      "size": 33464,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\homeopathie-diabete-illus.jpg",
+      "webPath": "/images/thumbnails\\homeopathie-diabete-illus.jpg",
+      "size": 67328,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\homeopathie-diabete.svg",
+      "webPath": "/images/thumbnails\\homeopathie-diabete.svg",
+      "size": 29,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\homepage-illus.jpg",
+      "webPath": "/images/thumbnails\\homepage-illus.jpg",
+      "size": 84161,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\homepage.svg",
+      "webPath": "/images/thumbnails\\homepage.svg",
+      "size": 18,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\InsuLevel-1024x765.png",
+      "webPath": "/images/thumbnails\\InsuLevel-1024x765.png",
+      "size": 547708,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\insulevel-effet-indesirable-new-illus.jpg",
+      "webPath": "/images/thumbnails\\insulevel-effet-indesirable-new-illus.jpg",
+      "size": 82976,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\insulevel-effet-indesirable-new.jpg",
+      "webPath": "/images/thumbnails\\insulevel-effet-indesirable-new.jpg",
+      "size": 60158,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\interactions-glp1.jpg",
+      "webPath": "/images/thumbnails\\interactions-glp1.jpg",
+      "size": 37248,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\isglt2-liste-illus.jpg",
+      "webPath": "/images/thumbnails\\isglt2-liste-illus.jpg",
+      "size": 91195,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\isglt2-liste.jpg",
+      "webPath": "/images/thumbnails\\isglt2-liste.jpg",
+      "size": 53686,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\isglt2-liste.svg",
+      "webPath": "/images/thumbnails\\isglt2-liste.svg",
+      "size": 47,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\jeune-intermittent-glp.jpg",
+      "webPath": "/images/thumbnails\\jeune-intermittent-glp.jpg",
+      "size": 51949,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\jeune-intermittent-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\jeune-intermittent-glp1-illus.jpg",
+      "size": 69497,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\jeune-intermittent-glp1.svg",
+      "webPath": "/images/thumbnails\\jeune-intermittent-glp1.svg",
+      "size": 58,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-americain-pour-maigrir-illus.jpg",
+      "webPath": "/images/thumbnails\\medicament-americain-pour-maigrir-illus.jpg",
+      "size": 79199,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-americain-pour-maigrir.jpg",
+      "webPath": "/images/thumbnails\\medicament-americain-pour-maigrir.jpg",
+      "size": 63979,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-americain-pour-maigrir.svg",
+      "webPath": "/images/thumbnails\\medicament-americain-pour-maigrir.svg",
+      "size": 68,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-maigrir-tres-puissant-en-pharmacie-illus.jpg",
+      "webPath": "/images/thumbnails\\medicament-pour-maigrir-tres-puissant-en-pharmacie-illus.jpg",
+      "size": 71958,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-maigrir-tres-puissant-en-pharmacie.jpg",
+      "webPath": "/images/thumbnails\\medicament-pour-maigrir-tres-puissant-en-pharmacie.jpg",
+      "size": 71271,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-maigrir-tres-puissant-en-pharmacie.svg",
+      "webPath": "/images/thumbnails\\medicament-pour-maigrir-tres-puissant-en-pharmacie.svg",
+      "size": 85,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-maigrir-tres-puissant-illus.jpg",
+      "webPath": "/images/thumbnails\\medicament-pour-maigrir-tres-puissant-illus.jpg",
+      "size": 69679,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-maigrir-tres-puissant.jpg",
+      "webPath": "/images/thumbnails\\medicament-pour-maigrir-tres-puissant.jpg",
+      "size": 49328,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-maigrir-tres-puissant.svg",
+      "webPath": "/images/thumbnails\\medicament-pour-maigrir-tres-puissant.svg",
+      "size": 72,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-perdre-du-ventre-en-1-semaine-illus.jpg",
+      "webPath": "/images/thumbnails\\medicament-pour-perdre-du-ventre-en-1-semaine-illus.jpg",
+      "size": 72904,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-perdre-du-ventre-en-1-semaine.jpg",
+      "webPath": "/images/thumbnails\\medicament-pour-perdre-du-ventre-en-1-semaine.jpg",
+      "size": 56149,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\medicament-pour-perdre-du-ventre-en-1-semaine.svg",
+      "webPath": "/images/thumbnails\\medicament-pour-perdre-du-ventre-en-1-semaine.svg",
+      "size": 55,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\meditation-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\meditation-glp1-illus.jpg",
+      "size": 86497,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\meditation-glp1.svg",
+      "webPath": "/images/thumbnails\\meditation-glp1.svg",
+      "size": 50,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\mounjaro-blue.webp",
+      "webPath": "/images/thumbnails\\mounjaro-blue.webp",
+      "size": 73658,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\obesite-severe-prise-en-charge-illus.jpg",
+      "webPath": "/images/thumbnails\\obesite-severe-prise-en-charge-illus.jpg",
+      "size": 84638,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\obesite-severe-prise-en-charge.jpg",
+      "webPath": "/images/thumbnails\\obesite-severe-prise-en-charge.jpg",
+      "size": 66650,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\obesite-severe-prise-en-charge.svg",
+      "webPath": "/images/thumbnails\\obesite-severe-prise-en-charge.svg",
+      "size": 40,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\operation-pour-maigrir-prix-illus.jpg",
+      "webPath": "/images/thumbnails\\operation-pour-maigrir-prix-illus.jpg",
+      "size": 72276,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\operation-pour-maigrir-prix.jpg",
+      "webPath": "/images/thumbnails\\operation-pour-maigrir-prix.jpg",
+      "size": 61635,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\operation-pour-maigrir-prix.svg",
+      "webPath": "/images/thumbnails\\operation-pour-maigrir-prix.svg",
+      "size": 62,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ou-trouver-ozempic-illus.jpg",
+      "webPath": "/images/thumbnails\\ou-trouver-ozempic-illus.jpg",
+      "size": 71451,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ou-trouver-ozempic.svg",
+      "webPath": "/images/thumbnails\\ou-trouver-ozempic.svg",
+      "size": 28,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-danger-illus.jpg",
+      "webPath": "/images/thumbnails\\ozempic-danger-illus.jpg",
+      "size": 62808,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-danger.svg",
+      "webPath": "/images/thumbnails\\ozempic-danger.svg",
+      "size": 24,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-effets-secondaires-forum-illus.jpg",
+      "webPath": "/images/thumbnails\\ozempic-effets-secondaires-forum-illus.jpg",
+      "size": 85025,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-effets-secondaires-forum.svg",
+      "webPath": "/images/thumbnails\\ozempic-effets-secondaires-forum.svg",
+      "size": 67,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-medical-care.jpg",
+      "webPath": "/images/thumbnails\\ozempic-medical-care.jpg",
+      "size": 56,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-medical-guide.jpg",
+      "webPath": "/images/thumbnails\\ozempic-medical-guide.jpg",
+      "size": 5839,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-prix-illus.jpg",
+      "webPath": "/images/thumbnails\\ozempic-prix-illus.jpg",
+      "size": 82803,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-prix.jpg",
+      "webPath": "/images/thumbnails\\ozempic-prix.jpg",
+      "size": 59193,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-prix.svg",
+      "webPath": "/images/thumbnails\\ozempic-prix.svg",
+      "size": 47,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-regime-illus.jpg",
+      "webPath": "/images/thumbnails\\ozempic-regime-illus.jpg",
+      "size": 77198,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\ozempic-regime.svg",
+      "webPath": "/images/thumbnails\\ozempic-regime.svg",
+      "size": 24,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\partenaires-illus.jpg",
+      "webPath": "/images/thumbnails\\partenaires-illus.jpg",
+      "size": 72336,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\partenaires.svg",
+      "webPath": "/images/thumbnails\\partenaires.svg",
+      "size": 46,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\personne-obese-illus.jpg",
+      "webPath": "/images/thumbnails\\personne-obese-illus.jpg",
+      "size": 85427,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\personne-obese.svg",
+      "webPath": "/images/thumbnails\\personne-obese.svg",
+      "size": 49,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\peut-on-guerir-du-diabete-illus.jpg",
+      "webPath": "/images/thumbnails\\peut-on-guerir-du-diabete-illus.jpg",
+      "size": 90322,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\peut-on-guerir-du-diabete.svg",
+      "webPath": "/images/thumbnails\\peut-on-guerir-du-diabete.svg",
+      "size": 60,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\phytotherapie-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\phytotherapie-glp1-illus.jpg",
+      "size": 1755701,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\pilule-qui-fait-maigrir-illus.jpg",
+      "webPath": "/images/thumbnails\\pilule-qui-fait-maigrir-illus.jpg",
+      "size": 67648,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\pilule-qui-fait-maigrir.svg",
+      "webPath": "/images/thumbnails\\pilule-qui-fait-maigrir.svg",
+      "size": 33,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\plantes-diabete-illus.jpg",
+      "webPath": "/images/thumbnails\\plantes-diabete-illus.jpg",
+      "size": 80617,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\plantes-diabete.svg",
+      "webPath": "/images/thumbnails\\plantes-diabete.svg",
+      "size": 25,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\prix-ozempic-france-illus.jpg",
+      "webPath": "/images/thumbnails\\prix-ozempic-france-illus.jpg",
+      "size": 69277,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\prix-rybelsus-france-illus.jpg",
+      "webPath": "/images/thumbnails\\prix-rybelsus-france-illus.jpg",
+      "size": 61553,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\prix-saxenda-france-illus.jpg",
+      "webPath": "/images/thumbnails\\prix-saxenda-france-illus.jpg",
+      "size": 56644,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\prix-trulicity-france-illus.jpg",
+      "webPath": "/images/thumbnails\\prix-trulicity-france-illus.jpg",
+      "size": 61852,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\prix-victoza-france-illus.jpg",
+      "webPath": "/images/thumbnails\\prix-victoza-france-illus.jpg",
+      "size": 67842,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\prix-wegovy-france-illus.jpg",
+      "webPath": "/images/thumbnails\\prix-wegovy-france-illus.jpg",
+      "size": 67912,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\psychologie-glp1.jpg",
+      "webPath": "/images/thumbnails\\psychologie-glp1.jpg",
+      "size": 37248,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\psychologie-glp1.jpg.jpg",
+      "webPath": "/images/thumbnails\\psychologie-glp1.jpg.jpg",
+      "size": 69670,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\quel-traitement-glp1-choisir-illus.jpg",
+      "webPath": "/images/thumbnails\\quel-traitement-glp1-choisir-illus.jpg",
+      "size": 81253,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\quel-traitement-glp1-choisir.svg",
+      "webPath": "/images/thumbnails\\quel-traitement-glp1-choisir.svg",
+      "size": 63,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\recherche-clinique-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\recherche-clinique-glp1-illus.jpg",
+      "size": 80143,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\recherche-clinique-glp1.jpg",
+      "webPath": "/images/thumbnails\\recherche-clinique-glp1.jpg",
+      "size": 73392,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\recherche-clinique-glp1.svg",
+      "webPath": "/images/thumbnails\\recherche-clinique-glp1.svg",
+      "size": 58,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-cetogene-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-cetogene-glp1-illus.jpg",
+      "size": 69926,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-cetogene-glp1.jpg",
+      "webPath": "/images/thumbnails\\regime-cetogene-glp1.jpg",
+      "size": 66421,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-cetogene-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-cetogene-glp1.svg",
+      "size": 55,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-chrono-nutrition-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-chrono-nutrition-glp1-illus.jpg",
+      "size": 72362,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-chrono-nutrition-glp1.jpg",
+      "webPath": "/images/thumbnails\\regime-chrono-nutrition-glp1.jpg",
+      "size": 55306,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-chrono-nutrition-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-chrono-nutrition-glp1.svg",
+      "size": 63,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-dash-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-dash-glp1-illus.jpg",
+      "size": 95226,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-dash-glp1..jpg",
+      "webPath": "/images/thumbnails\\regime-dash-glp1..jpg",
+      "size": 48395,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-dash-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-dash-glp1.svg",
+      "size": 51,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-detox-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-detox-glp1-illus.jpg",
+      "size": 75863,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-detox-glp1.jpg",
+      "webPath": "/images/thumbnails\\regime-detox-glp1.jpg",
+      "size": 48668,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-detox-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-detox-glp1.svg",
+      "size": 27,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-mediterraneen-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-mediterraneen-glp1-illus.jpg",
+      "size": 83523,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-mediterraneen-glp1.jpg",
+      "webPath": "/images/thumbnails\\regime-mediterraneen-glp1.jpg",
+      "size": 75442,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-mediterraneen-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-mediterraneen-glp1.svg",
+      "size": 35,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-paleo-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-paleo-glp1-illus.jpg",
+      "size": 71856,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-paleo-glp1.jpg",
+      "webPath": "/images/thumbnails\\regime-paleo-glp1.jpg",
+      "size": 57880,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-paleo-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-paleo-glp1.svg",
+      "size": 52,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-sans-sucre-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\regime-sans-sucre-glp1-illus.jpg",
+      "size": 80249,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-sans-sucre-glp1.jpg",
+      "webPath": "/images/thumbnails\\regime-sans-sucre-glp1.jpg",
+      "size": 50014,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\regime-sans-sucre-glp1.svg",
+      "webPath": "/images/thumbnails\\regime-sans-sucre-glp1.svg",
+      "size": 57,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\rybelsus-medical-guide.jpg",
+      "webPath": "/images/thumbnails\\rybelsus-medical-guide.jpg",
+      "size": 57,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\sante.jpg",
+      "webPath": "/images/thumbnails\\sante.jpg",
+      "size": 70296,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\saxenda-medical-guide.jpg",
+      "webPath": "/images/thumbnails\\saxenda-medical-guide.jpg",
+      "size": 31,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\saxenda-prix-pharmacie-illus.jpg",
+      "webPath": "/images/thumbnails\\saxenda-prix-pharmacie-illus.jpg",
+      "size": 67756,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\saxenda-prix-pharmacie.jpg",
+      "webPath": "/images/thumbnails\\saxenda-prix-pharmacie.jpg",
+      "size": 229896,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\saxenda-prix-pharmacie.svg",
+      "webPath": "/images/thumbnails\\saxenda-prix-pharmacie.svg",
+      "size": 32,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\saxenda.jpg",
+      "webPath": "/images/thumbnails\\saxenda.jpg",
+      "size": 114733,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\semaglutide-naturel-illus.jpg",
+      "webPath": "/images/thumbnails\\semaglutide-naturel-illus.jpg",
+      "size": 1991920,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\semaglutide-naturel.svg",
+      "webPath": "/images/thumbnails\\semaglutide-naturel.svg",
+      "size": 29,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\serena-williams-tennis.jpg",
+      "webPath": "/images/thumbnails\\serena-williams-tennis.jpg",
+      "size": 0,
+      "isEmpty": true
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\serena.webp",
+      "webPath": "/images/thumbnails\\serena.webp",
+      "size": 81378,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\sport-glp1.jpg",
+      "webPath": "/images/thumbnails\\sport-glp1.jpg",
+      "size": 84757,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\suivi-medical-glp1.jpg",
+      "webPath": "/images/thumbnails\\suivi-medical-glp1.jpg",
+      "size": 48290,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\supplements-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\supplements-glp1-illus.jpg",
+      "size": 2292935,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\supplements-glp1.svg",
+      "webPath": "/images/thumbnails\\supplements-glp1.svg",
+      "size": 26,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\trulicity-medical-guide.jpg",
+      "webPath": "/images/thumbnails\\trulicity-medical-guide.jpg",
+      "size": 58,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\trulicity.jpg",
+      "webPath": "/images/thumbnails\\trulicity.jpg",
+      "size": 52077,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\victoza-medical-guide.jpg",
+      "webPath": "/images/thumbnails\\victoza-medical-guide.jpg",
+      "size": 56,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\vinaigre-cidre-glp1-illus.jpg",
+      "webPath": "/images/thumbnails\\vinaigre-cidre-glp1-illus.jpg",
+      "size": 1608542,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\vinaigre-cidre-glp1.svg",
+      "webPath": "/images/thumbnails\\vinaigre-cidre-glp1.svg",
+      "size": 29,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\vs.jpg",
+      "webPath": "/images/thumbnails\\vs.jpg",
+      "size": 92618,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovy-danger-illus.jpg",
+      "webPath": "/images/thumbnails\\wegovy-danger-illus.jpg",
+      "size": 1308125,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovy-prix.jpg",
+      "webPath": "/images/thumbnails\\wegovy-prix.jpg",
+      "size": 345378,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovy-prix.svg",
+      "webPath": "/images/thumbnails\\wegovy-prix.svg",
+      "size": 345378,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovy-remboursement-mutuelle-illus.jpg",
+      "webPath": "/images/thumbnails\\wegovy-remboursement-mutuelle-illus.jpg",
+      "size": 89343,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovy-remboursement-mutuelle.svg",
+      "webPath": "/images/thumbnails\\wegovy-remboursement-mutuelle.svg",
+      "size": 64,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovy.jpg",
+      "webPath": "/images/thumbnails\\wegovy.jpg",
+      "size": 283274,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovyboite.jpg",
+      "webPath": "/images/thumbnails\\wegovyboite.jpg",
+      "size": 283274,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\wegovyboites.jpg",
+      "webPath": "/images/thumbnails\\wegovyboites.jpg",
+      "size": 208461,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\yoga-diabete-illus.jpg",
+      "webPath": "/images/thumbnails\\yoga-diabete-illus.jpg",
+      "size": 77298,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\yoga-diabete.svg",
+      "webPath": "/images/thumbnails\\yoga-diabete.svg",
+      "size": 47,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\yoga.jpg",
+      "webPath": "/images/thumbnails\\yoga.jpg",
+      "size": 670575,
+      "isEmpty": false
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\zepbound-treatment.jpg",
+      "webPath": "/images/thumbnails\\zepbound-treatment.jpg",
+      "size": 0,
+      "isEmpty": true
+    },
+    {
+      "physicalPath": "C:\\Users\\robin\\glp1\\glp1-github\\public\\images\\thumbnails\\zepbound.webp",
+      "webPath": "/images/thumbnails\\zepbound.webp",
+      "size": 156930,
+      "isEmpty": false
+    }
+  ],
+  "validImages": [
+    {
+      "path": "/images/thumbnails/guide-complet-GLP1.jpg",
+      "sources": [
+        "src\\content\\glp1-perte-de-poids\\guide-complet-glp1-2025-france.md"
+      ],
+      "size": 92991
+    },
+    {
+      "path": "/images/temoignages/mariejourney9.jpg",
+      "sources": [
+        "src\\content\\temoignages\\marie-transformation-glp1.md",
+        "src\\pages\\index.astro",
+        "src\\pages\\temoignages\\avant-apres-glp1.astro",
+        "src\\pages\\temoignages\\temoignage-marie-transformation-glp1.astro"
+      ],
+      "size": 49835
+    },
+    {
+      "path": "/images/thumbnails/operation-pour-maigrir-prix.svg",
+      "sources": [
+        "src\\pages\\collections\\glp1-cout\\operation-pour-maigrir-prix.astro"
+      ],
+      "size": 62
+    },
+    {
+      "path": "/images/thumbnails/saxenda-prix-pharmacie.svg",
+      "sources": [
+        "src\\pages\\collections\\glp1-cout\\saxenda-prix-pharmacie.astro"
+      ],
+      "size": 32
+    },
+    {
+      "path": "/images/thumbnails/wegovy-prix.svg",
+      "sources": [
+        "src\\pages\\collections\\glp1-cout\\wegovy-prix.astro"
+      ],
+      "size": 345378
+    },
+    {
+      "path": "/images/thumbnails/glp1-perte-de-poids.svg",
+      "sources": [
+        "src\\pages\\collections\\glp1-perte-de-poids\\[slug].astro"
+      ],
+      "size": 29
+    },
+    {
+      "path": "/images/thumbnails/alimentation-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\alimentation-personnalisee-glp1.astro"
+      ],
+      "size": 151095
+    },
+    {
+      "path": "/images/thumbnails/communaute-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\communautes-glp1.astro"
+      ],
+      "size": 63126
+    },
+    {
+      "path": "/images/experts/dr-claire-morel.jpg",
+      "sources": [
+        "src\\pages\\guides\\experts.astro"
+      ],
+      "size": 32231
+    },
+    {
+      "path": "/images/experts/elodie-carpentier.jpg",
+      "sources": [
+        "src\\pages\\guides\\experts.astro"
+      ],
+      "size": 17981
+    },
+    {
+      "path": "/images/experts/julien-armand.jpg",
+      "sources": [
+        "src\\pages\\guides\\experts.astro"
+      ],
+      "size": 17647
+    },
+    {
+      "path": "/images/experts/marc-delattre.jpg",
+      "sources": [
+        "src\\pages\\guides\\experts.astro"
+      ],
+      "size": 23083
+    },
+    {
+      "path": "/images/thumbnails/docteur.jpg",
+      "sources": [
+        "src\\pages\\guides\\experts.astro",
+        "src\\pages\\guides\\experts.astro",
+        "src\\pages\\guides\\experts.astro",
+        "src\\pages\\guides\\experts.astro"
+      ],
+      "size": 61025
+    },
+    {
+      "path": "/images/thumbnails/faq-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\faq-glp1.astro"
+      ],
+      "size": 71435
+    },
+    {
+      "path": "/images/thumbnails/guides-age-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\guides-age-glp1.astro"
+      ],
+      "size": 33464
+    },
+    {
+      "path": "/images/thumbnails/interactions-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\interactions-medicamenteuses-glp1.astro"
+      ],
+      "size": 37248
+    },
+    {
+      "path": "/images/thumbnails/psychologie-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\psychologie-motivation-glp1.astro"
+      ],
+      "size": 37248
+    },
+    {
+      "path": "/images/thumbnails/vs.jpg",
+      "sources": [
+        "src\\pages\\guides\\qu-est-ce-que-glp1.astro"
+      ],
+      "size": 92618
+    },
+    {
+      "path": "/images/thumbnails/sport-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\sport-activite-physique-glp1.astro"
+      ],
+      "size": 84757
+    },
+    {
+      "path": "/images/thumbnails/suivi-medical-glp1.jpg",
+      "sources": [
+        "src\\pages\\guides\\suivi-medical-glp1.astro"
+      ],
+      "size": 48290
+    },
+    {
+      "path": "/images/home/image-home2.jpg",
+      "sources": [
+        "src\\pages\\index.astro"
+      ],
+      "size": 534696
+    },
+    {
+      "path": "/images/temoignages/Laurent-journey8.jpg",
+      "sources": [
+        "src\\pages\\index.astro",
+        "src\\pages\\temoignages\\avant-apres-glp1.astro",
+        "src\\pages\\temoignages\\temoignage-laurent-transformation-glp1.astro"
+      ],
+      "size": 158322
+    },
+    {
+      "path": "/images/temoignages/sophie29.jpg",
+      "sources": [
+        "src\\pages\\index.astro",
+        "src\\pages\\temoignages\\avant-apres-glp1.astro",
+        "src\\pages\\temoignages\\temoignage-sophie-transformation-glp1.astro"
+      ],
+      "size": 43499
+    },
+    {
+      "path": "/images/temoignages/serena.webp",
+      "sources": [
+        "src\\pages\\index.astro"
+      ],
+      "size": 81378
+    },
+    {
+      "path": "/images/temoignages/chelsea.jpeg",
+      "sources": [
+        "src\\pages\\index.astro"
+      ],
+      "size": 1871634
+    },
+    {
+      "path": "/images/temoignages/elton.webp",
+      "sources": [
+        "src\\pages\\index.astro"
+      ],
+      "size": 237000
+    },
+    {
+      "path": "/images/home/seringue-adn.jpg",
+      "sources": [
+        "src\\pages\\index.astro"
+      ],
+      "size": 318063
+    },
+    {
+      "path": "/images/thumbnails/avant-apres-glp1.svg",
+      "sources": [
+        "src\\pages\\temoignages\\avant-apres-glp1.astro"
+      ],
+      "size": 51
+    }
+  ]
+}

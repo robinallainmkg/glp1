@@ -495,13 +495,6 @@ declare module 'astro:content' {
   collection: "pages-statiques";
   data: InferEntrySchema<"pages-statiques">
 } & { render(): Render[".md"] };
-"serena-williams-glp1.md": {
-	id: "serena-williams-glp1.md";
-  slug: "serena-williams-glp1";
-  body: string;
-  collection: "pages-statiques";
-  data: InferEntrySchema<"pages-statiques">
-} & { render(): Render[".md"] };
 };
 "recherche-glp1": {
 "recherche-clinique-glp1.md": {
@@ -610,6 +603,36 @@ declare module 'astro:content' {
   body: string;
   collection: "regime-glp1";
   data: InferEntrySchema<"regime-glp1">
+} & { render(): Render[".md"] };
+};
+"temoignages": {
+"laurent-transformation-glp1.md": {
+	id: "laurent-transformation-glp1.md";
+  slug: "laurent-transformation-glp1";
+  body: string;
+  collection: "temoignages";
+  data: InferEntrySchema<"temoignages">
+} & { render(): Render[".md"] };
+"marie-transformation-glp1.md": {
+	id: "marie-transformation-glp1.md";
+  slug: "marie-transformation-glp1";
+  body: string;
+  collection: "temoignages";
+  data: InferEntrySchema<"temoignages">
+} & { render(): Render[".md"] };
+"serena-williams-glp1.md": {
+	id: "serena-williams-glp1.md";
+  slug: "serena-williams-glp1";
+  body: string;
+  collection: "temoignages";
+  data: InferEntrySchema<"temoignages">
+} & { render(): Render[".md"] };
+"sophie-transformation-glp1.md": {
+	id: "sophie-transformation-glp1.md";
+  slug: "sophie-transformation-glp1";
+  body: string;
+  collection: "temoignages";
+  data: InferEntrySchema<"temoignages">
 } & { render(): Render[".md"] };
 };
 "traitements-glp1": {
