@@ -1,5 +1,5 @@
 ---
-title: "Meditation GLP-1"
+title: "Meditation GLP-1 : Guide Complet et Conseils Pratiques 2025"
 description: "Guide complet sur la méditation comme alternative aux traitements GLP-1 : techniques de relaxation, gestion du stress et impact sur la glycémie."
 slug: "meditation-glp1"
 pubDate: 2025-08-20

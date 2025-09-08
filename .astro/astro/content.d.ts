@@ -290,6 +290,13 @@ declare module 'astro:content' {
   collection: "effets-secondaires-glp1";
   data: InferEntrySchema<"effets-secondaires-glp1">
 } & { render(): Render[".md"] };
+"effets-secondaires-zepbound.md": {
+	id: "effets-secondaires-zepbound.md";
+  slug: "effets-secondaires-zepbound";
+  body: string;
+  collection: "effets-secondaires-glp1";
+  data: InferEntrySchema<"effets-secondaires-glp1">
+} & { render(): Render[".md"] };
 "insulevel-effet-indesirable-new.md": {
 	id: "insulevel-effet-indesirable-new.md";
   slug: "insulevel-effet-indesirable";
@@ -386,6 +393,13 @@ declare module 'astro:content' {
 "prix-wegovy-france.md": {
 	id: "prix-wegovy-france.md";
   slug: "prix-wegovy-france";
+  body: string;
+  collection: "glp1-cout";
+  data: InferEntrySchema<"glp1-cout">
+} & { render(): Render[".md"] };
+"prix-zepbound-france.md": {
+	id: "prix-zepbound-france.md";
+  slug: "prix-zepbound-france";
   body: string;
   collection: "glp1-cout";
   data: InferEntrySchema<"glp1-cout">
@@ -590,6 +604,13 @@ declare module 'astro:content' {
   collection: "regime-glp1";
   data: InferEntrySchema<"regime-glp1">
 } & { render(): Render[".md"] };
+"regime-mounjaro-optimal.md": {
+	id: "regime-mounjaro-optimal.md";
+  slug: "regime-mounjaro-optimal";
+  body: string;
+  collection: "regime-glp1";
+  data: InferEntrySchema<"regime-glp1">
+} & { render(): Render[".md"] };
 "regime-paleo-glp1.md": {
 	id: "regime-paleo-glp1.md";
   slug: "regime-paleo-glp1";
@@ -611,28 +632,28 @@ declare module 'astro:content' {
   slug: "laurent-transformation-glp1";
   body: string;
   collection: "temoignages";
-  data: InferEntrySchema<"temoignages">
+  data: any
 } & { render(): Render[".md"] };
 "marie-transformation-glp1.md": {
 	id: "marie-transformation-glp1.md";
   slug: "marie-transformation-glp1";
   body: string;
   collection: "temoignages";
-  data: InferEntrySchema<"temoignages">
+  data: any
 } & { render(): Render[".md"] };
 "serena-williams-glp1.md": {
 	id: "serena-williams-glp1.md";
   slug: "serena-williams-glp1";
   body: string;
   collection: "temoignages";
-  data: InferEntrySchema<"temoignages">
+  data: any
 } & { render(): Render[".md"] };
 "sophie-transformation-glp1.md": {
 	id: "sophie-transformation-glp1.md";
   slug: "sophie-transformation-glp1";
   body: string;
   collection: "temoignages";
-  data: InferEntrySchema<"temoignages">
+  data: any
 } & { render(): Render[".md"] };
 };
 "traitements-glp1": {

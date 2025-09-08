@@ -9,7 +9,7 @@ updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
-image: "/images/thumbnails/rybelsus-medical-guide.jpg"
+image: "/images/thumbnails/effets-secondaires-rybelsus-illus.jpg"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---

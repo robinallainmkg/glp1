@@ -1,5 +1,5 @@
 ---
-title: "Chrome Diabète"
+title: "Chrome Diabète : Guide Complet et Conseils Pratiques 2025"
 description: "Guide complet sur le chrome et le diabète : rôle du chrome dans la régulation de la glycémie, compléments alimentaires et recommandations médicales."
 slug: "chrome-diabete"
 pubDate: 2025-08-20

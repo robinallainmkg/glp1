@@ -1,6 +1,6 @@
 ---
-title: "Régime Paleo GLP-1"
-description: "Guide complet du régime paléo combiné aux traitements GLP-1. Découvrez comment adapter l'alimentation paléo pour optimiser les effets des médicaments."
+title: "Régime Paleo GLP-1 : Guide Complet et Conseils Pratiques 2025"
+description: "Régime paléolithique et GLP-1 : retour à une alimentation ancestrale pour perdre du poids. Guide pratique, aliments autorisés et adaptation du paléo aux contraintes des traitements modernes."
 slug: "regime-paleo-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"

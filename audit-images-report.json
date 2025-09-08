@@ -1,0 +1,12 @@
+{
+  "missingThumbnails": [],
+  "brokenImageLinks": [],
+  "missingImageFiles": [],
+  "emptyImages": [],
+  "totalFiles": 80,
+  "totalImages": 2,
+  "errors": [
+    "avant-apres-glp1\\_category_.md: Pas de frontmatter trouvé",
+    "glp1-diabete\\_category_.md: Pas de frontmatter trouvé"
+  ]
+}

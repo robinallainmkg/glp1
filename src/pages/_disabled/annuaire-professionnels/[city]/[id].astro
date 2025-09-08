@@ -1,0 +1,453 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ReviewSystem from '../../../components/ReviewSystem.astro';
+import { getProfessionalById, getCityBySlug } from '../../../lib/professionals';
+
+export async function getStaticPaths() {
+  // Pour le développement, on retourne une liste vide
+  // En production, il faudrait générer toutes les combinaisons city/professional
+  return [];
+}
+
+const { city, id } = Astro.params;
+
+// Récupération des données du professionnel
+let professional = null;
+let cityData = null;
+let error = null;
+
+try {
+  if (id) {
+    professional = await getProfessionalById(id);
+  }
+  
+  if (city) {
+    cityData = await getCityBySlug(city);
+  }
+  
+  if (!professional) {
+    return Astro.redirect('/404');
+  }
+} catch (e) {
+  error = e.message;
+  console.error('Erreur chargement professionnel:', e);
+}
+
+const pageTitle = professional 
+  ? `${professional.title} ${professional.firstName} ${professional.lastName} - ${professional.specialty} à ${professional.city}`
+  : 'Professionnel non trouvé';
+
+const pageDescription = professional
+  ? `Consultez le profil de ${professional.title} ${professional.firstName} ${professional.lastName}, ${professional.specialty} à ${professional.city}. ${professional.acceptsGlp1 ? 'Prescrit les traitements GLP-1.' : ''} Contact, avis patients et informations pratiques.`
+  : '';
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  canonical={`https://votre-site.com/annuaire-professionnels/${city}/${id}`}
+>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    {error ? (
+      <div class="text-center py-12">
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded max-w-md mx-auto">
+          <h2 class="text-lg font-semibold mb-2">Erreur de chargement</h2>
+          <p>{error}</p>
+        </div>
+      </div>
+    ) : !professional ? (
+      <div class="text-center py-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Professionnel non trouvé</h2>
+        <p class="text-gray-600 mb-6">Le professionnel que vous recherchez n'existe pas ou a été supprimé.</p>
+        <a 
+          href="/annuaire-professionnels" 
+          class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+        >
+          Retour à l'annuaire
+        </a>
+      </div>
+    ) : (
+      <>
+        <!-- Breadcrumb -->
+        <nav class="flex mb-8" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                Accueil
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <a href="/annuaire-professionnels" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">
+                  Annuaire
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <a href={`/annuaire-professionnels/${city}`} class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">
+                  {professional.city}
+                </a>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">
+                  {professional.title} {professional.lastName}
+                </span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Contenu principal -->
+          <div class="lg:col-span-2">
+            
+            <!-- En-tête du profil -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+              <div class="flex items-start justify-between mb-4">
+                <div class="flex-1">
+                  <div class="flex items-center mb-2">
+                    <h1 class="text-3xl font-bold text-gray-900 mr-3">
+                      {professional.title} {professional.firstName} {professional.lastName}
+                    </h1>
+                    
+                    {professional.verified && (
+                      <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Profil vérifié
+                      </span>
+                    )}
+                    
+                    {professional.featured && (
+                      <span class="ml-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        Recommandé
+                      </span>
+                    )}
+                  </div>
+                  
+                  <p class="text-xl text-blue-600 font-medium mb-2">{professional.specialty}</p>
+                  
+                  {professional.subSpecialties && professional.subSpecialties.length > 0 && (
+                    <div class="flex flex-wrap gap-2 mb-3">
+                      {professional.subSpecialties.map(specialty => (
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                          {specialty}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {professional.hospitalClinic && (
+                    <p class="text-lg text-gray-700 mb-3">{professional.hospitalClinic}</p>
+                  )}
+                  
+                  <!-- Rating et avis -->
+                  <div class="flex items-center space-x-4 mb-4">
+                    <div class="flex items-center">
+                      <div class="flex text-yellow-400 mr-2">
+                        {Array.from({length: 5}, (_, i) => (
+                          <span class={i < Math.floor(professional.rating) ? 'text-yellow-400' : 'text-gray-300'}>
+                            ★
+                          </span>
+                        ))}
+                      </div>
+                      <span class="text-lg font-semibold text-gray-900">{professional.rating.toFixed(1)}</span>
+                      <span class="ml-2 text-gray-600">({professional.reviewCount} avis)</span>
+                    </div>
+                  </div>
+                  
+                  <!-- Indicateurs spéciaux -->
+                  <div class="flex flex-wrap gap-3">
+                    {professional.acceptsGlp1 && (
+                      <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Prescrit GLP-1
+                      </span>
+                    )}
+                    
+                    {professional.acceptsNewPatients && (
+                      <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                        </svg>
+                        Accepte nouveaux patients
+                      </span>
+                    )}
+                    
+                    {professional.languages && professional.languages.length > 1 && (
+                      <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                        </svg>
+                        Multilingue
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Bio si disponible -->
+              {professional.bio && (
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3">Présentation</h3>
+                  <p class="text-gray-700 leading-relaxed">{professional.bio}</p>
+                </div>
+              )}
+            </div>
+            
+            <!-- Formation et certifications -->
+            {(professional.education?.length > 0 || professional.certifications?.length > 0) && (
+              <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h2 class="text-xl font-bold text-gray-900 mb-6">Formation et certifications</h2>
+                
+                {professional.education?.length > 0 && (
+                  <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Formation</h3>
+                    <ul class="space-y-2">
+                      {professional.education.map(edu => (
+                        <li class="flex items-start">
+                          <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z" clip-rule="evenodd"></path>
+                          </svg>
+                          <span class="text-gray-700">{edu}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {professional.certifications?.length > 0 && (
+                  <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Certifications</h3>
+                    <ul class="space-y-2">
+                      {professional.certifications.map(cert => (
+                        <li class="flex items-start">
+                          <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                          </svg>
+                          <span class="text-gray-700">{cert}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+            
+            <!-- Système d'avis -->
+            <ReviewSystem 
+              professionalId={professional.id} 
+              professionalName={`${professional.title} ${professional.firstName} ${professional.lastName}`}
+            />
+          </div>
+          
+          <!-- Sidebar -->
+          <div class="lg:col-span-1">
+            
+            <!-- Informations de contact -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6 sticky top-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-4">Informations de contact</h3>
+              
+              <div class="space-y-4">
+                <!-- Adresse -->
+                <div class="flex items-start">
+                  <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <div>
+                    <p class="text-gray-900 font-medium">Adresse</p>
+                    <p class="text-gray-600">{professional.address}</p>
+                    <p class="text-gray-600">{professional.postalCode} {professional.city}</p>
+                    <p class="text-gray-600">{professional.department}, {professional.region}</p>
+                  </div>
+                </div>
+                
+                <!-- Téléphone -->
+                {professional.phone && (
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <div>
+                      <p class="text-gray-900 font-medium">Téléphone</p>
+                      <a href={`tel:${professional.phone}`} class="text-blue-600 hover:text-blue-800">
+                        {professional.phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
+                
+                <!-- Email -->
+                {professional.email && (
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <div>
+                      <p class="text-gray-900 font-medium">Email</p>
+                      <a href={`mailto:${professional.email}`} class="text-blue-600 hover:text-blue-800">
+                        {professional.email}
+                      </a>
+                    </div>
+                  </div>
+                )}
+                
+                <!-- Site web -->
+                {professional.website && (
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                    </svg>
+                    <div>
+                      <p class="text-gray-900 font-medium">Site web</p>
+                      <a 
+                        href={professional.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="text-blue-600 hover:text-blue-800"
+                      >
+                        Visiter le site
+                      </a>
+                    </div>
+                  </div>
+                )}
+                
+                <!-- Tarif consultation -->
+                {professional.consultationFee && (
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    <div>
+                      <p class="text-gray-900 font-medium">Tarif consultation</p>
+                      <p class="text-gray-600">{professional.consultationFee}€</p>
+                    </div>
+                  </div>
+                )}
+                
+                <!-- Langues parlées -->
+                {professional.languages && professional.languages.length > 0 && (
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-gray-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                    </svg>
+                    <div>
+                      <p class="text-gray-900 font-medium">Langues</p>
+                      <p class="text-gray-600">{professional.languages.join(', ')}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              <!-- Boutons d'action -->
+              <div class="mt-6 space-y-3">
+                {professional.phone && (
+                  <a 
+                    href={`tel:${professional.phone}`} 
+                    class="w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    Appeler
+                  </a>
+                )}
+                
+                <button 
+                  type="button"
+                  onclick="document.getElementById('review-form-container').scrollIntoView({ behavior: 'smooth' })"
+                  class="w-full inline-flex justify-center items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                  </svg>
+                  Laisser un avis
+                </button>
+              </div>
+            </div>
+            
+            <!-- Liens vers d'autres professionnels -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-4">Autres professionnels</h3>
+              <div class="space-y-3">
+                <a 
+                  href={`/annuaire-professionnels/${city}`}
+                  class="block text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  Tous les professionnels à {professional.city}
+                </a>
+                <a 
+                  href="/annuaire-professionnels"
+                  class="block text-blue-600 hover:text-blue-800 hover:underline"
+                >
+                  Rechercher un autre professionnel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    )}
+  </main>
+</Layout>
+
+<script>
+// Schema.org structured data pour le SEO
+if (typeof window !== 'undefined') {
+  const professionalSchema = professional && JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": `${professional.title} ${professional.firstName} ${professional.lastName}`,
+    "description": professional.bio || `${professional.specialty} à ${professional.city}`,
+    "image": "/images/default-doctor.jpg",
+    "telephone": professional.phone,
+    "email": professional.email,
+    "url": professional.website,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": professional.address,
+      "addressLocality": professional.city,
+      "postalCode": professional.postalCode,
+      "addressRegion": professional.department,
+      "addressCountry": "FR"
+    },
+    "medicalSpecialty": professional.specialty,
+    "priceRange": professional.consultationFee ? `${professional.consultationFee}€` : undefined,
+    "aggregateRating": professional.reviewCount > 0 ? {
+      "@type": "AggregateRating",
+      "ratingValue": professional.rating,
+      "reviewCount": professional.reviewCount,
+      "bestRating": 5,
+      "worstRating": 1
+    } : undefined
+  });
+  
+  if (professionalSchema) {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = professionalSchema;
+    document.head.appendChild(script);
+  }
+}
+</script>

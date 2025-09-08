@@ -1,9 +1,9 @@
 ---
-title: "GLP-1 Calories Journalieres"
+title: "GLP-1 Calories Journalieres : Guide Complet et Conseils Pratiques 2025"
 slug: "glp1-calories-journalieres"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Guide complet des calories journalières avec traitement GLP-1 : calcul de vos besoins caloriques, adaptation du régime alimentaire et optimisation de la perte de poids."
+description: "Calculez vos besoins caloriques journaliers avec les GLP-1. Méthodes de calcul, adaptation selon le traitement et conseils pour un déficit calorique sain et durable pour perdre du poids efficacement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

@@ -1,5 +1,5 @@
 ---
-title: "Jeune Intermittent GLP-1"
+title: "Jeune Intermittent GLP-1 : Guide Complet et Conseils Pratiques 2025"
 slug: "jeune-intermittent-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
@@ -7,7 +7,7 @@ description: "Le jeûne intermittent combiné aux GLP-1 : protocoles adaptés, b
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/jeune-intermittent-glp1-illus.jpg"
+thumbnail: "/images/thumbnails/jeune-intermittent-glp.jpg"
 thumbnailAlt: "Illustration pour l'article Jeune Intermittent GLP-1"
 featured: false
 priority: 5

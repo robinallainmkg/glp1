@@ -2,7 +2,7 @@
 title: "Guide Complet Trulicity : Prix, Effets Secondaires et Posologie"
 description: "Découvrez tout sur Trulicity : traitement GLP-1 pour le diabète et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
-image: "/images/thumbnails/trulicity-medical-guide.jpg"
+image: "/images/thumbnails/trulicity.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["trulicity", "glp-1", "diabète", "perte de poids", "traitement", "injection"]

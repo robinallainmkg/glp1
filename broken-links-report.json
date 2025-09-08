@@ -1,5 +1,5 @@
 {
-  "scannedFiles": 199,
+  "scannedFiles": 198,
   "totalLinks": 537,
   "brokenLinks": [
     {
@@ -559,7 +559,7 @@
   ],
   "redirectsNeeded": [],
   "summary": {
-    "totalScannedFiles": 199,
+    "totalScannedFiles": 198,
     "totalLinks": 537,
     "brokenLinksCount": 30,
     "suspiciousLinksCount": 67,

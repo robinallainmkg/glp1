@@ -2,7 +2,7 @@
 title: "Sophie D. : -28 Kilos avec Ozempic - Transformation à 52 Ans"
 description: "Le témoignage inspirant de Sophie D., 52 ans, qui a perdu 28 kilos en 14 mois avec Ozempic. Comment elle a retrouvé confiance et énergie après la ménopause."
 author: "Sophie D."
-image: "/images/uploads/sophie-transformation.jpg" 
+image: "/images/temoignages/sophie29.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["ozempic", "sémaglutide", "perte de poids", "28 kilos", "ménopause", "52 ans", "femme"]

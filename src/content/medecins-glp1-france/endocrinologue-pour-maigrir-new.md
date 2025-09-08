@@ -1,6 +1,6 @@
 ---
 title: "Endocrinologue Pour Maigrir New"
-description: "Guide complet pour trouver un endocrinologue spécialisé dans la perte de poids et les traitements GLP-1 en France."
+description: "Guide détaillé sur Endocrinologue Pour Maigrir New. Informations complètes, conseils pratiques et recommandations d'experts pour optimiser votre prise en charge."
 slug: "endocrinologue-pour-maigrir-new"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

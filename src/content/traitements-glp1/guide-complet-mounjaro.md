@@ -119,7 +119,6 @@ Cette double action permet un contrôle glycémique exceptionnel et une perte de
       </blockquote>
       <div class="timeline">⏱️ Résultats en 6 mois</div>
     </div>
-    
     <div class="testimonial-card">
       <div class="before-after">
         <strong>Thomas, 38 ans - Lyon</strong><br>
@@ -131,7 +130,6 @@ Cette double action permet un contrôle glycémique exceptionnel et une perte de
       </blockquote>
       <div class="timeline">⏱️ Résultats en 8 mois</div>
     </div>
-    
     <div class="testimonial-card">
       <div class="before-after">
         <strong>Sophie, 29 ans - Marseille</strong><br>
@@ -230,7 +228,6 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
         Voir les Prix 2025
       </a>
     </div>
-    
     <div class="action-card">
       <h4>⚠️ 2. Connaissez les Effets</h4>
       <p>Tous les effets secondaires et comment les gérer</p>
@@ -238,7 +235,6 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
         Guide des Effets
       </a>
     </div>
-    
     <div class="action-card">
       <h4>🥗 3. Optimisez Votre Régime</h4>
       <p>Alimentation spéciale Mounjaro pour maximiser les résultats</p>

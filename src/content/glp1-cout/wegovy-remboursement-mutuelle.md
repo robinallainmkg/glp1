@@ -1,5 +1,5 @@
 ---
-title: "Wegovy Remboursement Mutuelle"
+title: "Wegovy Remboursement Mutuelle : Guide Complet et Conseils Pratiques 2025"
 description: "Guide complet sur le remboursement Wegovy par la mutuelle santé en France. Conditions, démarches et couverture pour le traitement Wegovy."
 slug: "wegovy-remboursement-mutuelle"
 pubDate: 2025-08-23
@@ -7,7 +7,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovyboites.jpg"
+thumbnail: "/images/thumbnails/wegovy-remboursement-mutuelle-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Remboursement Mutuelle"
 featured: false
 priority: 5

@@ -1,0 +1,379 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { ProfessionalsService } from '../../../lib/professionals';
+import type { FrenchCity, HealthcareProfessional } from '../../../lib/professionals';
+
+export async function getStaticPaths() {
+  // Récupérer toutes les villes avec des professionnels
+  const cities = await ProfessionalsService.getCitiesWithProfessionals(1);
+  
+  return cities.map((city: FrenchCity) => ({
+    params: { 
+      city: city.slug 
+    },
+    props: { 
+      city,
+      cityName: city.name
+    }
+  }));
+}
+
+const { city, cityName } = Astro.props;
+
+// Récupérer les professionnels de cette ville
+const professionals = await ProfessionalsService.getProfessionalsByCity(cityName);
+const glp1Specialists = await ProfessionalsService.getGLP1SpecialistsByCity(cityName);
+const specialties = await ProfessionalsService.getSpecialtiesByCity(city.id);
+
+// Données SEO dynamiques
+const seoTitle = `Médecins spécialisés GLP-1 à ${cityName} | Endocrinologues et Diabétologues`;
+const seoDescription = `Trouvez les meilleurs spécialistes GLP-1 à ${cityName}. ${professionals.length} médecins endocrinologues et diabétologues pour vos traitements Ozempic, Wegovy, Mounjaro.`;
+
+// Villes similaires pour les liens internes
+const relatedCities = await ProfessionalsService.getCitiesWithProfessionals(1);
+const nearbyRegionCities = relatedCities.filter(c => 
+  c.region === city.region && c.id !== city.id
+).slice(0, 6);
+---
+
+<Layout 
+  title={seoTitle}
+  description={seoDescription}
+  canonical={`/medecins-glp1/${city.slug}/`}
+>
+  <main class="min-h-screen bg-gray-50">
+    <!-- Breadcrumb -->
+    <nav class="bg-white shadow-sm border-b">
+      <div class="max-w-7xl mx-auto px-4 py-3">
+        <ol class="flex items-center space-x-2 text-sm text-gray-600">
+          <li><a href="/" class="hover:text-blue-600">Accueil</a></li>
+          <li class="text-gray-400">/</li>
+          <li><a href="/medecins-glp1/" class="hover:text-blue-600">Médecins GLP-1</a></li>
+          <li class="text-gray-400">/</li>
+          <li class="text-gray-900 font-medium">{cityName}</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Médecins GLP-1 à <span class="text-yellow-300">{cityName}</span>
+          </h1>
+          <p class="text-xl mb-8 max-w-3xl mx-auto">
+            Découvrez {professionals.length} médecins spécialisés dans les traitements GLP-1 
+            à {cityName} ({city.postal_code}). Endocrinologues, diabétologues et nutritionnistes 
+            qualifiés pour votre prise en charge.
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div class="text-3xl font-bold text-yellow-300">{professionals.length}</div>
+              <div class="text-white/80">Médecins répertoriés</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div class="text-3xl font-bold text-yellow-300">{glp1Specialists.length}</div>
+              <div class="text-white/80">Spécialistes GLP-1</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div class="text-3xl font-bold text-yellow-300">{specialties.length}</div>
+              <div class="text-white/80">Spécialités disponibles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtres et Recherche -->
+    <section class="py-8 bg-white border-b">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div class="flex flex-wrap gap-3">
+            <span class="text-gray-700 font-medium">Filtrer par :</span>
+            <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-200">
+              Tous les médecins
+            </button>
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200">
+              Spécialistes GLP-1
+            </button>
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200">
+              Disponibles
+            </button>
+          </div>
+          
+          <div class="flex items-center gap-2">
+            <span class="text-gray-600 text-sm">Trier par :</span>
+            <select class="border border-gray-300 rounded-lg px-3 py-1 text-sm">
+              <option>Pertinence</option>
+              <option>Expérience</option>
+              <option>Note</option>
+              <option>Tarifs</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liste des Professionnels -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid gap-6">
+          {professionals.map((professional: HealthcareProfessional) => (
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <div class="p-6">
+                <div class="flex flex-col lg:flex-row gap-6">
+                  <!-- Info principale -->
+                  <div class="flex-1">
+                    <div class="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                          {professional.title} {professional.first_name} {professional.last_name}
+                        </h3>
+                        <p class="text-lg text-blue-600 font-semibold mb-2">
+                          {professional.specialty}
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-gray-600">
+                          <span class="flex items-center gap-1">
+                            📍 {professional.street_address}, {cityName}
+                          </span>
+                          {professional.years_experience && (
+                            <span class="flex items-center gap-1">
+                              🎓 {professional.years_experience} ans d'expérience
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      
+                      <div class="flex flex-col items-end gap-2">
+                        {professional.featured && (
+                          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold">
+                            ⭐ Recommandé
+                          </span>
+                        )}
+                        {professional.glp1_specialist && (
+                          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">
+                            🔬 Spécialiste GLP-1
+                          </span>
+                        )}
+                        {professional.accepts_new_patients && (
+                          <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
+                            ✅ Nouveaux patients
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <!-- Spécialités -->
+                    <div class="mb-4">
+                      <h4 class="font-semibold text-gray-900 mb-2">Spécialités :</h4>
+                      <div class="flex flex-wrap gap-2">
+                        {professional.consultation_types.map((type: string) => (
+                          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">
+                            {type}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <!-- Établissement -->
+                    {professional.establishment_name && (
+                      <div class="mb-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Établissement :</h4>
+                        <p class="text-gray-700">
+                          {professional.establishment_name} 
+                          {professional.establishment_type && ` (${professional.establishment_type})`}
+                        </p>
+                      </div>
+                    )}
+
+                    <!-- Tarifs -->
+                    {professional.consultation_fee_range && (
+                      <div class="mb-4">
+                        <h4 class="font-semibold text-gray-900 mb-1">Tarifs consultation :</h4>
+                        <p class="text-gray-700 font-medium">{professional.consultation_fee_range}</p>
+                      </div>
+                    )}
+                  </div>
+
+                  <!-- Actions -->
+                  <div class="lg:w-64 flex flex-col gap-3">
+                    {professional.phone && (
+                      <a 
+                        href={`tel:${professional.phone}`}
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
+                      >
+                        📞 Appeler
+                      </a>
+                    )}
+                    
+                    {professional.website && (
+                      <a 
+                        href={professional.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-blue-50 transition-colors"
+                      >
+                        🌐 Site web
+                      </a>
+                    )}
+                    
+                    <button class="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+                      📋 Voir le profil
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {professionals.length === 0 && (
+          <div class="text-center py-12">
+            <div class="text-6xl mb-4">🔍</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Aucun médecin trouvé à {cityName}
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Nous n'avons pas encore de médecins spécialisés GLP-1 répertoriés dans cette ville.
+            </p>
+            <a 
+              href="/medecins-glp1/"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Voir toutes les villes
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Villes similaires -->
+    {nearbyRegionCities.length > 0 && (
+      <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Autres villes en {city.region}
+          </h2>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {nearbyRegionCities.map((relatedCity: FrenchCity) => (
+              <a 
+                href={`/medecins-glp1/${relatedCity.slug}/`}
+                class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow group"
+              >
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">
+                  {relatedCity.name}
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  {relatedCity.department} ({relatedCity.postal_code})
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">
+                    {relatedCity.professionals_count} médecin{relatedCity.professionals_count > 1 ? 's' : ''}
+                  </span>
+                  <span class="text-blue-600 group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- FAQ locale -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Questions fréquentes sur les médecins GLP-1 à {cityName}
+        </h2>
+        
+        <div class="space-y-6">
+          <div class="border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Comment choisir un médecin spécialisé GLP-1 à {cityName} ?
+            </h3>
+            <p class="text-gray-700">
+              Privilégiez les endocrinologues ou diabétologues avec une certification spécifique aux traitements GLP-1. 
+              Vérifiez leur expérience, leur établissement d'exercice et consultez les avis patients si disponibles.
+            </p>
+          </div>
+          
+          <div class="border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Quels sont les tarifs de consultation pour les traitements GLP-1 à {cityName} ?
+            </h3>
+            <p class="text-gray-700">
+              Les tarifs varient généralement entre 70€ et 130€ selon le praticien et l'établissement. 
+              Les consultations en secteur 1 sont remboursées par l'Assurance Maladie.
+            </p>
+          </div>
+          
+          <div class="border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Comment obtenir une prescription de GLP-1 à {cityName} ?
+            </h3>
+            <p class="text-gray-700">
+              Une prescription de GLP-1 nécessite une consultation avec un endocrinologue ou un médecin formé. 
+              Le traitement est indiqué pour le diabète de type 2 ou l'obésité selon des critères médicaux précis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Besoin d'aide pour choisir votre médecin ?
+        </h2>
+        <p class="text-xl mb-8">
+          Consultez nos guides complets sur les traitements GLP-1 ou contactez directement les professionnels.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/guides/" 
+            class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+          >
+            📚 Nos Guides
+          </a>
+          <a 
+            href="/contact/" 
+            class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            💬 Nous Contacter
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Comptage des vues de profil
+  document.addEventListener('DOMContentLoaded', () => {
+    const profileButtons = document.querySelectorAll('[data-professional-id]');
+    
+    profileButtons.forEach(button => {
+      button.addEventListener('click', async () => {
+        const professionalId = button.getAttribute('data-professional-id');
+        if (professionalId) {
+          // Increment views via API
+          try {
+            await fetch('/api/professionals/increment-views', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ professionalId })
+            });
+          } catch (error) {
+            console.error('Erreur lors du comptage des vues:', error);
+          }
+        }
+      });
+    });
+  });
+</script>

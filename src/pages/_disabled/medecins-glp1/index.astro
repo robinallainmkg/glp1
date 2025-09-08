@@ -1,0 +1,370 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ProfessionalsService } from '../../lib/professionals';
+
+// Récupérer toutes les villes avec des professionnels
+const cities = await ProfessionalsService.getCitiesWithProfessionals(1);
+
+// Grouper par région
+const citiesByRegion = cities.reduce((acc, city) => {
+  if (!acc[city.region]) {
+    acc[city.region] = [];
+  }
+  acc[city.region].push(city);
+  return acc;
+}, {} as Record<string, typeof cities>);
+
+// Statistiques générales
+const totalProfessionals = cities.reduce((sum, city) => sum + city.professionals_count, 0);
+const totalCities = cities.length;
+const regions = Object.keys(citiesByRegion);
+---
+
+<Layout 
+  title="Médecins spécialisés GLP-1 en France | Annuaire des Endocrinologues"
+  description={`Trouvez un médecin spécialisé GLP-1 près de chez vous. ${totalProfessionals} professionnels dans ${totalCities} villes françaises. Endocrinologues, diabétologues et nutritionnistes qualifiés.`}
+  canonical="/medecins-glp1/"
+>
+  <main class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-5xl font-bold mb-6">
+          Annuaire des Médecins <span class="text-yellow-300">GLP-1</span>
+        </h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">
+          Trouvez facilement un médecin spécialisé dans les traitements GLP-1 près de chez vous. 
+          Notre annuaire répertorie les meilleurs endocrinologues et diabétologues de France.
+        </p>
+        
+        <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="text-3xl font-bold text-yellow-300">{totalProfessionals}</div>
+            <div class="text-white/80">Médecins répertoriés</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="text-3xl font-bold text-yellow-300">{totalCities}</div>
+            <div class="text-white/80">Villes couvertes</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="text-3xl font-bold text-yellow-300">{regions.length}</div>
+            <div class="text-white/80">Régions</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div class="text-3xl font-bold text-yellow-300">100%</div>
+            <div class="text-white/80">Vérifiés</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recherche rapide -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Recherche rapide par ville
+          </h2>
+          <p class="text-gray-600">
+            Tapez le nom de votre ville pour trouver rapidement des médecins spécialisés GLP-1
+          </p>
+        </div>
+        
+        <div class="relative max-w-2xl mx-auto">
+          <input 
+            type="text" 
+            id="citySearch"
+            placeholder="Ex: Paris, Lyon, Marseille..."
+            class="w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
+          />
+          <button class="absolute right-2 top-2 bottom-2 px-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            🔍 Rechercher
+          </button>
+        </div>
+        
+        <div id="searchResults" class="mt-6 hidden">
+          <div class="bg-gray-50 rounded-lg p-4">
+            <h3 class="font-semibold text-gray-900 mb-3">Résultats de recherche :</h3>
+            <div id="resultsList" class="space-y-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Villes principales -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Principales villes avec médecins GLP-1
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {cities
+            .filter(city => city.seo_priority === 1)
+            .sort((a, b) => b.professionals_count - a.professionals_count)
+            .map(city => (
+              <a 
+                href={`/medecins-glp1/${city.slug}/`}
+                class="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600">
+                    {city.name}
+                  </h3>
+                  <span class="text-2xl">{city.name === 'Paris' ? '🗼' : city.name === 'Lyon' ? '🦁' : city.name === 'Marseille' ? '⛵' : city.name === 'Toulouse' ? '🌸' : city.name === 'Nice' ? '🌴' : '🏛️'}</span>
+                </div>
+                
+                <div class="space-y-2 text-sm text-gray-600 mb-4">
+                  <div class="flex items-center gap-2">
+                    <span>📍</span>
+                    <span>{city.department} ({city.postal_code})</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span>👨‍⚕️</span>
+                    <span>{city.professionals_count} médecin{city.professionals_count > 1 ? 's' : ''}</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                  <span class="text-blue-600 font-semibold group-hover:text-blue-700">
+                    Voir les médecins
+                  </span>
+                  <span class="text-blue-600 group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Villes par région -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+          Toutes les villes par région
+        </h2>
+        
+        <div class="space-y-12">
+          {Object.entries(citiesByRegion)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([region, regionCities]) => (
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+                  {region}
+                  <span class="text-lg font-normal text-gray-600 ml-2">
+                    ({regionCities.length} ville{regionCities.length > 1 ? 's' : ''})
+                  </span>
+                </h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {regionCities
+                    .sort((a, b) => b.professionals_count - a.professionals_count)
+                    .map(city => (
+                      <a 
+                        href={`/medecins-glp1/${city.slug}/`}
+                        class="bg-gray-50 rounded-lg p-4 hover:bg-blue-50 transition-colors group"
+                      >
+                        <div class="flex items-center justify-between">
+                          <div>
+                            <h4 class="font-semibold text-gray-900 group-hover:text-blue-600 mb-1">
+                              {city.name}
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                              {city.department} • {city.professionals_count} médecin{city.professionals_count > 1 ? 's' : ''}
+                            </p>
+                          </div>
+                          <span class="text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all">
+                            →
+                          </span>
+                        </div>
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Types de spécialistes -->
+    <section class="py-12 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          Types de spécialistes GLP-1
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
+              🩺
+            </div>
+            <h3 class="text-xl font-bold mb-3">Endocrinologues</h3>
+            <p class="text-gray-300">
+              Spécialisés dans les hormones et le métabolisme, experts des traitements GLP-1.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
+              💉
+            </div>
+            <h3 class="text-xl font-bold mb-3">Diabétologues</h3>
+            <p class="text-gray-300">
+              Experts du diabète de type 2 et des traitements innovants comme Ozempic.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
+              🥗
+            </div>
+            <h3 class="text-xl font-bold mb-3">Nutritionnistes</h3>
+            <p class="text-gray-300">
+              Accompagnement nutritionnel pour optimiser les effets des GLP-1.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
+              🏥
+            </div>
+            <h3 class="text-xl font-bold mb-3">Centres spécialisés</h3>
+            <p class="text-gray-300">
+              Cliniques et centres dédiés au traitement de l'obésité et du diabète.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Questions fréquentes
+        </h2>
+        
+        <div class="space-y-6">
+          <div class="border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Comment choisir un médecin spécialisé GLP-1 ?
+            </h3>
+            <p class="text-gray-700">
+              Privilégiez un endocrinologue ou diabétologue avec une formation spécifique aux GLP-1. 
+              Vérifiez ses certifications, son expérience et consultez les avis si disponibles.
+            </p>
+          </div>
+          
+          <div class="border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Les consultations GLP-1 sont-elles remboursées ?
+            </h3>
+            <p class="text-gray-700">
+              Oui, les consultations d'endocrinologie et diabétologie sont remboursées par l'Assurance Maladie. 
+              Le taux de remboursement dépend du secteur du médecin.
+            </p>
+          </div>
+          
+          <div class="border border-gray-200 rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              Faut-il une ordonnance pour consulter un spécialiste ?
+            </h3>
+            <p class="text-gray-700">
+              Une lettre de votre médecin traitant est recommandée pour un meilleur remboursement, 
+              mais vous pouvez consulter directement un endocrinologue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Vous êtes un professionnel de santé ?
+        </h2>
+        <p class="text-xl mb-8">
+          Rejoignez notre annuaire pour être visible auprès des patients recherchant un spécialiste GLP-1.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact/" 
+            class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+          >
+            📝 Ajouter mon cabinet
+          </a>
+          <a 
+            href="/guides/" 
+            class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            📚 Guides médicaux
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Recherche en temps réel
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('citySearch') as HTMLInputElement;
+    const searchResults = document.getElementById('searchResults');
+    const resultsList = document.getElementById('resultsList');
+    
+    // Données des villes pour la recherche
+    const cities = JSON.parse(`[${cities.map(city => `{ "name": "${city.name}", "slug": "${city.slug}", "department": "${city.department}", "professionals": ${city.professionals_count} }`).join(',')}]`);
+    
+    let searchTimeout: NodeJS.Timeout;
+    
+    searchInput?.addEventListener('input', (e) => {
+      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      
+      clearTimeout(searchTimeout);
+      
+      if (query.length < 2) {
+        searchResults?.classList.add('hidden');
+        return;
+      }
+      
+      searchTimeout = setTimeout(() => {
+        const filteredCities = cities.filter(city => 
+          city.name.toLowerCase().includes(query) ||
+          city.department.toLowerCase().includes(query)
+        ).slice(0, 8);
+        
+        if (filteredCities.length > 0) {
+          resultsList!.innerHTML = filteredCities.map(city => `
+            <a href="/medecins-glp1/${city.slug}/" class="block p-3 hover:bg-blue-50 rounded-lg transition-colors">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="font-semibold text-gray-900">${city.name}</span>
+                  <span class="text-gray-600 text-sm ml-2">${city.department}</span>
+                </div>
+                <span class="text-blue-600 text-sm">${city.professionals} médecin${city.professionals > 1 ? 's' : ''}</span>
+              </div>
+            </a>
+          `).join('');
+          
+          searchResults?.classList.remove('hidden');
+        } else {
+          resultsList!.innerHTML = '<p class="text-gray-600 p-3">Aucune ville trouvée</p>';
+          searchResults?.classList.remove('hidden');
+        }
+      }, 300);
+    });
+    
+    // Cacher les résultats quand on clique ailleurs
+    document.addEventListener('click', (e) => {
+      if (!searchInput?.contains(e.target as Node) && !searchResults?.contains(e.target as Node)) {
+        searchResults?.classList.add('hidden');
+      }
+    });
+  });
+</script>

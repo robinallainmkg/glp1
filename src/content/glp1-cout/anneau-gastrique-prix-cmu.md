@@ -1,13 +1,13 @@
 ---
-title: "Anneau Gastrique Prix Cmu"
-description: "Guide complet sur Anneau Gastrique Et Cmu : informations médicales et recommandations d'experts."
+title: "Anneau Gastrique Prix CMU : Remboursement, Conditions et Alternatives GLP-1 2025"
+description: "Guide complet sur l'anneau gastrique et la CMU. Prix, conditions de remboursement, alternatives GLP-1, et parcours de soins détaillé pour patients éligibles."
 slug: "anneau-gastrique-prix-cmu"
 pubDate: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/anneau-gastrique-dr-stephane-servajean-a-paris.jpg"
+thumbnail: "/images/thumbnails/anneau-gastrique-prix-cmu-illus.jpg"
 thumbnailAlt: "Dr Stéphane Servajean - Anneau Gastrique à Paris"
 featured: false
 priority: 5

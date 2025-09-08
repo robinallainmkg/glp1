@@ -1,9 +1,9 @@
 ---
-title: "Régime Mediterraneen GLP-1"
+title: "Régime Mediterraneen GLP-1 : Guide Complet et Conseils Pratiques 2025"
 slug: "regime-mediterraneen-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Régime méditerranéen associé aux GLP-1 : aliments sains, bienfaits cardiovasculaires et synergie parfaite pour votre santé et perte de poids."
+description: "Adoptez le régime méditerranéen avec les GLP-1 pour une santé optimale. Menu type, aliments clés et conseils pour combiner tradition culinaire saine et traitement moderne du diabète."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

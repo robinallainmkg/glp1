@@ -1,0 +1,303 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAllCities, getCityStats } from '../../lib/professionals';
+
+const cities = await getAllCities();
+const cityStats = await getCityStats();
+
+// Grouper les villes par région
+const citiesByRegion = cities.reduce((acc, city) => {
+  if (!acc[city.region]) {
+    acc[city.region] = [];
+  }
+  acc[city.region].push(city);
+  return acc;
+}, {} as Record<string, typeof cities>);
+
+const regions = Object.keys(citiesByRegion).sort();
+---
+
+<Layout 
+  title="Annuaire des Médecins GLP-1 en France | Spécialistes par Ville"
+  description="Trouvez les meilleurs endocrinologues, diabétologues et nutritionnistes spécialisés GLP-1 près de chez vous. Annuaire complet des professionnels par ville en France."
+>
+  <main class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Annuaire des <span class="text-yellow-300">Médecins GLP-1</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          Trouvez les meilleurs spécialistes en traitements GLP-1, endocrinologues et diabétologues 
+          dans toute la France. Plus de {cityStats.reduce((total, city) => total + city.professional_count, 0)} professionnels référencés.
+        </p>
+        
+        <!-- Barre de recherche -->
+        <div class="max-w-2xl mx-auto">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input 
+              type="text" 
+              placeholder="Rechercher une ville..." 
+              class="flex-1 px-6 py-4 text-gray-900 rounded-lg text-lg focus:ring-4 focus:ring-white/50 focus:outline-none"
+              id="citySearch"
+            />
+            <button class="px-8 py-4 bg-yellow-500 text-gray-900 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors">
+              🔍 Rechercher
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistiques générales -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Notre réseau national de spécialistes
+        </h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 mb-2">
+              {cityStats.reduce((total, city) => total + city.professional_count, 0)}
+            </div>
+            <div class="text-gray-600">Professionnels référencés</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-green-600 mb-2">
+              {cityStats.filter(city => city.professional_count > 0).length}
+            </div>
+            <div class="text-gray-600">Villes couvertes</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-purple-600 mb-2">
+              {cityStats.reduce((total, city) => total + city.glp1_specialists_count, 0)}
+            </div>
+            <div class="text-gray-600">Spécialistes GLP-1</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-orange-600 mb-2">
+              {regions.length}
+            </div>
+            <div class="text-gray-600">Régions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Villes principales avec statistiques -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Principales villes avec spécialistes GLP-1
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cityStats
+            .filter(city => city.professional_count > 0)
+            .slice(0, 12)
+            .map((city) => (
+              <a 
+                href={`/annuaire-professionnels/${city.slug}`}
+                class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              >
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">{city.name}</h3>
+                    <span class="text-sm text-gray-500">{city.department}</span>
+                  </div>
+                  
+                  <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-blue-600">{city.professional_count}</div>
+                      <div class="text-xs text-gray-600">Professionnels</div>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-green-600">{city.glp1_specialists_count}</div>
+                      <div class="text-xs text-gray-600">Spéc. GLP-1</div>
+                    </div>
+                  </div>
+                  
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-600">{city.region}</span>
+                    {city.avg_rating > 0 && (
+                      <span class="text-yellow-500">
+                        ⭐ {city.avg_rating.toFixed(1)}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <div class="mt-4 pt-4 border-t border-gray-200">
+                    <div class="flex justify-between text-xs text-gray-500">
+                      <span>🏥 {city.endocrinologist_count} Endocrinologues</span>
+                      <span>🥗 {city.nutritionist_count} Nutritionnistes</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+        
+        <div class="text-center mt-12">
+          <button 
+            onclick="showAllCities()"
+            class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+          >
+            Voir toutes les villes
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liste complète par région (masquée par défaut) -->
+    <section class="py-16 bg-gray-100" id="allCitiesSection" style="display: none;">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Toutes les villes par région
+        </h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          {regions.map((region) => (
+            <div class="bg-white rounded-xl shadow-lg p-6">
+              <h3 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+                🗺️ {region}
+                <span class="ml-auto text-sm text-gray-500 font-normal">
+                  {citiesByRegion[region].length} villes
+                </span>
+              </h3>
+              
+              <div class="grid grid-cols-1 gap-3">
+                {citiesByRegion[region]
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map((city) => {
+                    const stats = cityStats.find(s => s.slug === city.slug);
+                    return (
+                      <a 
+                        href={`/annuaire-professionnels/${city.slug}`}
+                        class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                      >
+                        <div class="flex items-center gap-3">
+                          <span class="text-lg">{city.name}</span>
+                          <span class="text-sm text-gray-500">({city.postal_code})</span>
+                        </div>
+                        {stats && stats.professional_count > 0 ? (
+                          <div class="flex items-center gap-2 text-sm">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
+                              {stats.professional_count} prof.
+                            </span>
+                            {stats.glp1_specialists_count > 0 && (
+                              <span class="px-2 py-1 bg-green-100 text-green-600 rounded-full">
+                                {stats.glp1_specialists_count} GLP-1
+                              </span>
+                            )}
+                          </div>
+                        ) : (
+                          <span class="text-xs text-gray-400">Bientôt disponible</span>
+                        )}
+                      </a>
+                    );
+                  })
+                }
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Vous êtes un professionnel de santé ?
+        </h2>
+        <p class="text-xl mb-8">
+          Rejoignez notre annuaire et développez votre patientèle spécialisée en traitements GLP-1.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="/contact" 
+            class="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            🏥 Rejoindre l'annuaire
+          </a>
+          <a 
+            href="/guides/experts" 
+            class="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            👨‍⚕️ Nos experts
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Recherche de villes
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('citySearch') as HTMLInputElement;
+    const searchButton = searchInput?.nextElementSibling as HTMLButtonElement;
+    
+    function searchCity() {
+      const query = searchInput?.value.toLowerCase().trim();
+      if (!query) return;
+      
+      // Rechercher dans les villes disponibles
+      const cityLinks = document.querySelectorAll('a[href*="/annuaire-professionnels/"]');
+      let found = false;
+      
+      cityLinks.forEach(link => {
+        const cityName = link.textContent?.toLowerCase();
+        if (cityName?.includes(query)) {
+          link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          link.classList.add('ring-4', 'ring-yellow-300');
+          setTimeout(() => {
+            link.classList.remove('ring-4', 'ring-yellow-300');
+          }, 3000);
+          found = true;
+          return;
+        }
+      });
+      
+      if (!found) {
+        alert(`Aucune ville trouvée pour "${query}". Consultez la liste complète ci-dessous.`);
+        showAllCities();
+      }
+    }
+    
+    searchButton?.addEventListener('click', searchCity);
+    searchInput?.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchCity();
+      }
+    });
+  });
+  
+  function showAllCities() {
+    const section = document.getElementById('allCitiesSection');
+    if (section) {
+      section.style.display = 'block';
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+<style>
+  /* Animation pour les cartes */
+  .hover\:-translate-y-1:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Effet de mise en évidence pour la recherche */
+  .ring-4 {
+    animation: highlight 2s ease-in-out;
+  }
+  
+  @keyframes highlight {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+</style>

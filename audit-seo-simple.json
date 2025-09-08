@@ -1,0 +1,293 @@
+{
+  "timestamp": "2025-09-07T13:49:42.596Z",
+  "globalScore": 5,
+  "stats": {
+    "avgWordCount": 643,
+    "totalWords": 50176,
+    "shortPages": 12,
+    "longPages": 1,
+    "missingMeta": 150,
+    "goodMeta": 2
+  },
+  "summary": {
+    "total": 80,
+    "analyzed": 78,
+    "excellent": 0,
+    "critical": 74,
+    "minor": 4
+  },
+  "criticalPages": [
+    {
+      "file": "glp1-cout\\anneau-gastrique-prix-cmu.md",
+      "title": "Sans titre",
+      "wordCount": 273,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (273 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\glp1-index-glycemique.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\glp1-micronutriments.md",
+      "title": "Sans titre",
+      "wordCount": 386,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (386 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\glp1-portion-alimentaire.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\glp1-proteines.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\regime-chrono-nutrition-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 386,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (386 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\regime-dash-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\regime-detox-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\regime-mediterraneen-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\regime-paleo-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 390,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (390 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "regime-glp1\\regime-sans-sucre-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 394,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Contenu trop court (394 mots)",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 40
+    },
+    {
+      "file": "alternatives-glp1\\acupuncture-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 552,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\alternatives-bio-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 548,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\alternatives-naturelles-ozempic.md",
+      "title": "Sans titre",
+      "wordCount": 594,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\berberine-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 548,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\cannelle-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 548,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\chrome-diabete.md",
+      "title": "Sans titre",
+      "wordCount": 548,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\homeopathie-diabete.md",
+      "title": "Sans titre",
+      "wordCount": 544,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\meditation-glp1.md",
+      "title": "Sans titre",
+      "wordCount": 548,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    },
+    {
+      "file": "alternatives-glp1\\peut-on-guerir-du-diabete.md",
+      "title": "Sans titre",
+      "wordCount": 528,
+      "issues": [
+        "🔴 Titre trop court ou manquant",
+        "🔴 Description trop courte ou manquante",
+        "🔴 Pas de H1 principal",
+        "🟡 Aucune image",
+        "🟡 Peu de liens internes"
+      ],
+      "score": 50
+    }
+  ],
+  "excellentPages": []
+}

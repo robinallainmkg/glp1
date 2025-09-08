@@ -1,5 +1,5 @@
 ---
-title: "Diabetologue Paris"
+title: "Diabetologue Paris : Guide Complet et Conseils Pratiques 2025"
 slug: "diabetologue-paris"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

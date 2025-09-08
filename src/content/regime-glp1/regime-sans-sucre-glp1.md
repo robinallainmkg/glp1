@@ -1,5 +1,5 @@
 ---
-title: "Régime Sans Sucre GLP-1"
+title: "Régime Sans Sucre GLP-1 : Guide Complet et Conseils Pratiques 2025"
 slug: "regime-sans-sucre-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

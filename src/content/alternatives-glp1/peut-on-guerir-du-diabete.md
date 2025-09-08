@@ -1,5 +1,5 @@
 ---
-title: "Peut On Guerir Du Diabète"
+title: "Peut On Guerir Du Diabète : Guide Complet et Conseils Pratiques 2025"
 slug: "peut-on-guerir-du-diabete"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

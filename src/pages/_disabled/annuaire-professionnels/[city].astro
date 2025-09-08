@@ -1,0 +1,296 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { 
+  getAllCities, 
+  getCityBySlug, 
+  getProfessionalsByCity, 
+  getCityStatsBySlug,
+  formatProfessionalName,
+  formatAddress,
+  getSpecialtyIcon,
+  formatConsultationFee,
+  getRatingStars 
+} from '../../../lib/professionals';
+
+export async function getStaticPaths() {
+  const cities = await getAllCities();
+  
+  return cities.map(city => ({
+    params: { city: city.slug },
+    props: { city }
+  }));
+}
+
+const { city } = Astro.props;
+const professionals = await getProfessionalsByCity(city.slug);
+const cityStats = await getCityStatsBySlug(city.slug);
+
+const title = `Médecins GLP-1 et Spécialistes Perte de Poids à ${city.name}`;
+const description = `Trouvez les meilleurs endocrinologues, diabétologues et nutritionnistes spécialisés GLP-1 à ${city.name} (${city.postal_code}). ${professionals.length} professionnels vérifiés.`;
+---
+
+<Layout title={title} description={description}>
+  <main class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Médecins GLP-1 à <span class="text-yellow-300">{city.name}</span>
+          </h1>
+          <p class="text-xl mb-8 max-w-3xl mx-auto">
+            Trouvez les meilleurs spécialistes en traitements GLP-1, endocrinologues et diabétologues 
+            dans le {city.department} ({city.region}).
+          </p>
+          
+          {cityStats && (
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div class="bg-white/20 rounded-lg p-4">
+                <div class="text-3xl font-bold">{cityStats.professional_count}</div>
+                <div class="text-sm">Professionnels</div>
+              </div>
+              <div class="bg-white/20 rounded-lg p-4">
+                <div class="text-3xl font-bold">{cityStats.glp1_specialists_count}</div>
+                <div class="text-sm">Spécialistes GLP-1</div>
+              </div>
+              <div class="bg-white/20 rounded-lg p-4">
+                <div class="text-3xl font-bold">{cityStats.endocrinologist_count}</div>
+                <div class="text-sm">Endocrinologues</div>
+              </div>
+              <div class="bg-white/20 rounded-lg p-4">
+                <div class="text-3xl font-bold">{cityStats.avg_rating?.toFixed(1) || 'N/A'}</div>
+                <div class="text-sm">Note moyenne</div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtres et Recherche -->
+    <section class="py-8 bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div class="flex flex-wrap gap-3">
+            <button class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors">
+              🏥 Tous les spécialistes
+            </button>
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+              💉 Endocrinologues
+            </button>
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+              🥗 Nutritionnistes
+            </button>
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+              ⚕️ Diabétologues
+            </button>
+          </div>
+          
+          <div class="flex gap-2">
+            <input 
+              type="text" 
+              placeholder="Rechercher un médecin..." 
+              class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+              🔍
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liste des Professionnels -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        {professionals.length > 0 ? (
+          <div class="grid gap-6">
+            {professionals.map((professional) => (
+              <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <!-- Photo et infos principales -->
+                    <div class="flex-shrink-0">
+                      <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                        {professional.first_name.charAt(0)}{professional.last_name.charAt(0)}
+                      </div>
+                    </div>
+                    
+                    <!-- Informations détaillées -->
+                    <div class="flex-1">
+                      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                        <div>
+                          <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                            {getSpecialtyIcon(professional.specialty)} {formatProfessionalName(professional)}
+                          </h3>
+                          <p class="text-lg text-blue-600 font-semibold mb-2">{professional.specialty}</p>
+                          
+                          {professional.sub_specialties.length > 0 && (
+                            <div class="flex flex-wrap gap-2 mb-3">
+                              {professional.sub_specialties.map((subspecialty) => (
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                                  {subspecialty}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        
+                        <div class="flex flex-col items-start lg:items-end gap-2">
+                          {professional.featured && (
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+                              ⭐ Recommandé
+                            </span>
+                          )}
+                          {professional.verified && (
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                              ✓ Vérifié
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      
+                      <!-- Détails pratiques -->
+                      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                        <div>
+                          <h4 class="font-semibold text-gray-900 mb-2">📍 Adresse</h4>
+                          <p class="text-gray-600 text-sm">{formatAddress(professional)}</p>
+                          {professional.hospital_clinic && (
+                            <p class="text-gray-500 text-sm mt-1">{professional.hospital_clinic}</p>
+                          )}
+                        </div>
+                        
+                        <div>
+                          <h4 class="font-semibold text-gray-900 mb-2">💰 Consultation</h4>
+                          <p class="text-gray-600">{formatConsultationFee(professional.consultation_fee)}</p>
+                          <p class="text-sm text-gray-500">
+                            {professional.accepts_new_patients ? '✅ Accepte nouveaux patients' : '❌ Liste d\'attente'}
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h4 class="font-semibold text-gray-900 mb-2">⭐ Évaluation</h4>
+                          <div class="flex items-center gap-2">
+                            <span class="text-yellow-500">{getRatingStars(professional.rating)}</span>
+                            <span class="text-gray-600">({professional.review_count} avis)</span>
+                          </div>
+                          {professional.experience_years && (
+                            <p class="text-sm text-gray-500">{professional.experience_years} ans d'expérience</p>
+                          )}
+                        </div>
+                      </div>
+                      
+                      <!-- Langues et certifications -->
+                      <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <h4 class="font-semibold text-gray-900 mb-2">🗣️ Langues</h4>
+                          <div class="flex flex-wrap gap-1">
+                            {professional.languages.map((language) => (
+                              <span class="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs">
+                                {language}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {professional.certifications.length > 0 && (
+                          <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">🏆 Certifications</h4>
+                            <div class="text-sm text-gray-600">
+                              {professional.certifications.slice(0, 2).map((cert) => (
+                                <div class="mb-1">• {cert}</div>
+                              ))}
+                              {professional.certifications.length > 2 && (
+                                <div class="text-blue-600">+ {professional.certifications.length - 2} autres</div>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <!-- Bio -->
+                      {professional.bio && (
+                        <div class="mb-4">
+                          <h4 class="font-semibold text-gray-900 mb-2">📝 Présentation</h4>
+                          <p class="text-gray-600 text-sm leading-relaxed">{professional.bio}</p>
+                        </div>
+                      )}
+                      
+                      <!-- Actions -->
+                      <div class="flex flex-wrap gap-3 pt-4 border-t border-gray-200">
+                        {professional.phone && (
+                          <a 
+                            href={`tel:${professional.phone}`}
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                          >
+                            📞 {professional.phone}
+                          </a>
+                        )}
+                        {professional.website && (
+                          <a 
+                            href={professional.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium"
+                          >
+                            🌐 Site web
+                          </a>
+                        )}
+                        {professional.accepts_glp1 && (
+                          <span class="px-4 py-2 bg-green-100 text-green-800 rounded-lg text-sm font-medium">
+                            💉 Spécialiste GLP-1
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-12">
+            <div class="text-6xl mb-4">🔍</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Aucun professionnel trouvé</h3>
+            <p class="text-gray-600 mb-6">
+              Nous n'avons pas encore de professionnels référencés à {city.name}.
+            </p>
+            <a 
+              href="/contact" 
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Nous signaler un professionnel
+            </a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Navigation vers autres villes -->
+    <section class="py-12 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Autres villes dans la région {city.region}</h2>
+        
+        <div class="text-center">
+          <a 
+            href="/annuaire-professionnels" 
+            class="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+          >
+            🗺️ Voir toutes les villes
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Filtrage des professionnels côté client
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('button[class*="bg-gray-100"], button[class*="bg-blue-100"]');
+    const searchInput = document.querySelector('input[placeholder="Rechercher un médecin..."]');
+    
+    // TODO: Implémenter le filtrage dynamique
+    console.log('Système de filtrage prêt');
+  });
+</script>

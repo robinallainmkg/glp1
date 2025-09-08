@@ -1,13 +1,13 @@
 ---
-title: "Régime Dash GLP-1"
-description: "Guide complet du régime DASH combiné aux traitements GLP-1. Découvrez comment optimiser votre alimentation pour potentialiser les effets des médicaments."
+title: "Régime DASH et GLP-1 : Combiner Hypertension et Diabète pour une Santé Optimale"
+description: "Régime DASH et traitements GLP-1 : la combinaison idéale pour diabétiques hypertendus. Plan alimentaire détaillé, bénéfices santé et conseils pratiques pour une approche nutritionnelle complète."
 slug: "regime-dash-glp1"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-dash-glp1-illus.jpg"
+thumbnail: "/images/thumbnails/regime-dash-glp1..jpg"
 thumbnailAlt: "Illustration pour l'article Régime Dash GLP-1"
 featured: false
 priority: 5

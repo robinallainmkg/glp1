@@ -9,7 +9,7 @@ updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
-image: "/images/thumbnails/wegovy.jpg"
+image: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---

@@ -1,9 +1,9 @@
 ---
-title: "💰 Prix Mounjaro France 2025 : Combien Ça Coûte VRAIMENT ?"
-description: "🔥 Prix RÉEL Mounjaro en pharmacie, remboursement, mutuelle. Découvrez le coût total et toutes les aides pour économiser jusqu'à 80% !"
+title: "Prix Mounjaro France 2025 : Combien Ça Coûte VRAIMENT ?"
+description: "Prix RÉEL Mounjaro en pharmacie, remboursement, mutuelle. Découvrez le coût total et toutes les aides pour économiser jusqu'à 80% !"
 keywords: ['prix mounjaro 2025', 'mounjaro pharmacie prix', 'mounjaro pas cher', 'remboursement mounjaro', 'économiser mounjaro']
 seoTitle: "Prix Mounjaro 2025 : Le Coût RÉEL + Toutes les Aides"
-seoDescription: "💰 Prix Mounjaro en France : 90€/mois après remboursement ! Découvrez toutes les aides pour réduire le coût jusqu'à 80%. Guide 2025 complet."
+seoDescription: "Prix Mounjaro en France : 90€/mois après remboursement ! Découvrez toutes les aides pour réduire le coût jusqu'à 80%. Guide 2025 complet."
 publishedAt: '2025-09-06'
 updatedAt: '2025-09-06'
 featured: true
@@ -15,7 +15,7 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
 
-# 💰 Prix Mounjaro France 2025 : Le Guide COMPLET des Coûts
+# Prix Mounjaro France 2025 : Le Guide COMPLET des Coûts
 
 <div class="price-hero">
   <div class="price-highlight">
@@ -50,19 +50,17 @@ affiliateCollection: "glp1-cout"
       <span>Après Remboursement</span>
       <span>Coût Mensuel*</span>
     </div>
-    
     <div class="price-row">
       <span>2,5 mg <small>(début)</small></span>
       <span class="original-price">89,90€</span>
       <span class="final-price">31,50€</span>
-      <span class="monthly-cost">📅 31€/mois</span>
+      <span class="monthly-cost">31€/mois</span>
     </div>
-    
     <div class="price-row popular">
-      <span>5-15 mg <small>🔥 PLUS POPULAIRE</small></span>
+      <span>5-15 mg <small>PLUS POPULAIRE</small></span>
       <span class="original-price">179,80€</span>
       <span class="final-price">89,90€</span>
-      <span class="monthly-cost">📅 90€/mois</span>
+      <span class="monthly-cost">90€/mois</span>
     </div>
   </div>
   

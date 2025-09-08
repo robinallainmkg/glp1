@@ -1,5 +1,5 @@
 ---
-title: "Recherche Clinique GLP-1"
+title: "Recherche Clinique GLP-1 : Guide Complet et Conseils Pratiques 2025"
 slug: "recherche-clinique-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"

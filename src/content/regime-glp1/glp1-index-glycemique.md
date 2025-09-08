@@ -1,9 +1,9 @@
 ---
-title: "GLP-1 Index Glycemique"
+title: "GLP-1 Index Glycemique : Guide Complet et Conseils Pratiques 2025"
+description: "Maîtrisez l'index glycémique des aliments avec les GLP-1. Guide pratique pour choisir les bons glucides, stabiliser la glycémie et maximiser l'efficacité de votre traitement anti-diabète."
 slug: "glp1-index-glycemique"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Comprendre l'index glycémique avec les GLP-1 : aliments à privilégier, impact sur la glycémie et stratégies nutritionnelles pour optimiser votre traitement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

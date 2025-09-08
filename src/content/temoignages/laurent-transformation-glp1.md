@@ -2,7 +2,7 @@
 title: "Laurent M. : -35 Kilos avec Mounjaro - De 120kg à 85kg en 10 Mois"
 description: "Témoignage inspirant de Laurent M., 45 ans, qui a perdu 35 kilos en 10 mois grâce au traitement Mounjaro (tirzepatide). Son parcours de transformation remarquable."
 author: "Laurent M."
-image: "/images/uploads/laurent-transformation.jpg"
+image: "/images/temoignages/Laurent-journey8.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "35 kilos", "homme", "45 ans", "transformation"]

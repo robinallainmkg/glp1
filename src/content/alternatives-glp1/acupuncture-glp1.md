@@ -1,5 +1,5 @@
 ---
-title: "Acupuncture GLP-1"
+title: "Acupuncture GLP-1 : Guide Complet et Conseils Pratiques 2025"
 description: "Guide complet sur Acupuncture GLP-1 : informations médicales et recommandations d'experts."
 slug: "acupuncture-glp1"
 pubDate: 2025-08-20

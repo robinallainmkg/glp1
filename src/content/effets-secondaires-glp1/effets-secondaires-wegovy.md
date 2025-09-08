@@ -9,7 +9,7 @@ updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
-image: "/images/thumbnails/wegovy.jpg"
+image: "/images/thumbnails/effets-secondaires-wegovy-illus.jpg"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Endocrinologue Pour Maigrir"
+title: "Endocrinologue Pour Maigrir : Guide Complet et Conseils Pratiques 2025"
 slug: "endocrinologue-pour-maigrir"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

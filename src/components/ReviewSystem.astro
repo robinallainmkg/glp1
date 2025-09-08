@@ -1,0 +1,415 @@
+---
+interface Props {
+  professionalId: string;
+  professionalName: string;
+}
+
+const { professionalId, professionalName } = Astro.props;
+---
+
+<div id="review-form-container" class="bg-gray-50 rounded-lg p-6 mt-8">
+  <h3 class="text-lg font-semibold text-gray-900 mb-4">Laisser un avis</h3>
+  
+  <form id="review-form" class="space-y-4">
+    <div>
+      <label for="patient-name" class="block text-sm font-medium text-gray-700 mb-1">
+        Votre nom (obligatoire)
+      </label>
+      <input 
+        type="text" 
+        id="patient-name" 
+        name="patient_name"
+        required
+        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+        placeholder="Votre prénom ou initiales"
+      />
+    </div>
+    
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">
+        Note (obligatoire)
+      </label>
+      <div class="flex items-center space-x-1">
+        {[1, 2, 3, 4, 5].map(star => (
+          <button 
+            type="button"
+            class="star-button text-2xl text-gray-300 hover:text-yellow-400 focus:outline-none transition-colors"
+            data-rating={star}
+          >
+            ★
+          </button>
+        ))}
+      </div>
+      <input type="hidden" id="rating-input" name="rating" value="" />
+      <p class="text-sm text-gray-500 mt-1">Cliquez sur les étoiles pour noter</p>
+    </div>
+    
+    <div>
+      <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">
+        Votre avis (obligatoire)
+      </label>
+      <textarea 
+        id="comment" 
+        name="comment"
+        rows="4"
+        required
+        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+        placeholder="Partagez votre expérience avec ce professionnel..."
+      ></textarea>
+      <p class="text-sm text-gray-500 mt-1">Minimum 20 caractères</p>
+    </div>
+    
+    <div class="flex items-start">
+      <input 
+        type="checkbox" 
+        id="terms-accept" 
+        required
+        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded mt-1"
+      />
+      <label for="terms-accept" class="ml-2 text-sm text-gray-700">
+        J'accepte que mon avis soit publié après modération et je certifie avoir été patient(e) de ce professionnel.
+      </label>
+    </div>
+    
+    <div class="flex justify-end space-x-3">
+      <button 
+        type="button" 
+        id="cancel-review"
+        class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+      >
+        Annuler
+      </button>
+      <button 
+        type="submit"
+        class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Publier l'avis
+      </button>
+    </div>
+  </form>
+  
+  <!-- Messages de succès/erreur -->
+  <div id="review-success" class="hidden mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+    <div class="flex">
+      <svg class="h-5 w-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+      </svg>
+      <div>
+        <h4 class="font-medium">Avis envoyé avec succès !</h4>
+        <p class="text-sm mt-1">Votre avis sera publié après vérification par notre équipe.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="review-error" class="hidden mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+    <div class="flex">
+      <svg class="h-5 w-5 text-red-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+      </svg>
+      <div>
+        <h4 class="font-medium">Erreur lors de l'envoi</h4>
+        <p class="text-sm mt-1" id="error-message">Une erreur est survenue. Veuillez réessayer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section d'affichage des avis -->
+<div id="reviews-section" class="mt-8">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="text-lg font-semibold text-gray-900">Avis patients</h3>
+    <button 
+      id="load-more-reviews"
+      class="hidden px-4 py-2 text-sm font-medium text-blue-600 bg-white border border-blue-600 rounded-md hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+    >
+      Voir plus d'avis
+    </button>
+  </div>
+  
+  <div id="reviews-container" class="space-y-4">
+    <!-- Les avis seront chargés ici -->
+  </div>
+  
+  <div id="reviews-loading" class="hidden text-center py-4">
+    <div class="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+    <p class="mt-2 text-sm text-gray-600">Chargement des avis...</p>
+  </div>
+  
+  <div id="no-reviews" class="text-center py-8 text-gray-500">
+    <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a9.863 9.863 0 01-4.906-1.295L3 21l1.295-5.094A9.863 9.863 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
+    </svg>
+    <p class="mt-2">Aucun avis pour le moment.</p>
+    <p class="text-sm">Soyez le premier à laisser un avis !</p>
+  </div>
+</div>
+
+<!-- Template pour les avis -->
+<template id="review-template">
+  <div class="bg-white border border-gray-200 rounded-lg p-4">
+    <div class="flex items-start justify-between mb-3">
+      <div>
+        <div class="flex items-center mb-1">
+          <span class="review-patient-name font-medium text-gray-900"></span>
+          <div class="ml-3 flex items-center">
+            <div class="review-stars text-yellow-400"></div>
+          </div>
+        </div>
+        <span class="review-date text-sm text-gray-500"></span>
+      </div>
+      <div class="flex items-center text-sm text-gray-500">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+        </svg>
+        <span class="review-helpful">0</span>
+      </div>
+    </div>
+    <p class="review-comment text-gray-700 leading-relaxed"></p>
+  </div>
+</template>
+
+<script define:vars={{ professionalId, professionalName }}>
+class ReviewSystem {
+  constructor(professionalId, professionalName) {
+    this.professionalId = professionalId;
+    this.professionalName = professionalName;
+    this.currentRating = 0;
+    this.reviewsOffset = 0;
+    this.reviewsLimit = 5;
+    this.hasMoreReviews = true;
+    
+    this.initializeElements();
+    this.bindEvents();
+    this.loadReviews();
+  }
+  
+  initializeElements() {
+    this.form = document.getElementById('review-form');
+    this.starButtons = document.querySelectorAll('.star-button');
+    this.ratingInput = document.getElementById('rating-input');
+    this.successMessage = document.getElementById('review-success');
+    this.errorMessage = document.getElementById('review-error');
+    this.reviewsContainer = document.getElementById('reviews-container');
+    this.reviewsLoading = document.getElementById('reviews-loading');
+    this.noReviewsMessage = document.getElementById('no-reviews');
+    this.loadMoreButton = document.getElementById('load-more-reviews');
+    this.reviewTemplate = document.getElementById('review-template');
+  }
+  
+  bindEvents() {
+    // Système d'étoiles
+    this.starButtons.forEach((button, index) => {
+      button.addEventListener('click', () => this.setRating(index + 1));
+      button.addEventListener('mouseover', () => this.highlightStars(index + 1));
+    });
+    
+    // Reset des étoiles au survol
+    document.querySelector('.star-button').parentElement.addEventListener('mouseleave', () => {
+      this.highlightStars(this.currentRating);
+    });
+    
+    // Soumission du formulaire
+    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    
+    // Bouton annuler
+    document.getElementById('cancel-review').addEventListener('click', () => this.resetForm());
+    
+    // Charger plus d'avis
+    this.loadMoreButton.addEventListener('click', () => this.loadMoreReviews());
+  }
+  
+  setRating(rating) {
+    this.currentRating = rating;
+    this.ratingInput.value = rating;
+    this.highlightStars(rating);
+  }
+  
+  highlightStars(rating) {
+    this.starButtons.forEach((button, index) => {
+      if (index < rating) {
+        button.classList.remove('text-gray-300');
+        button.classList.add('text-yellow-400');
+      } else {
+        button.classList.remove('text-yellow-400');
+        button.classList.add('text-gray-300');
+      }
+    });
+  }
+  
+  async handleSubmit(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this.form);
+    const comment = formData.get('comment');
+    
+    // Validation
+    if (!this.currentRating) {
+      this.showError('Veuillez sélectionner une note.');
+      return;
+    }
+    
+    if (comment.length < 20) {
+      this.showError('Votre avis doit contenir au moins 20 caractères.');
+      return;
+    }
+    
+    // Désactiver le bouton de soumission
+    const submitButton = this.form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Envoi en cours...';
+    
+    try {
+      const response = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          professional_id: this.professionalId,
+          rating: this.currentRating,
+          comment: comment,
+          patient_name: formData.get('patient_name')
+        })
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        this.showSuccess();
+        this.resetForm();
+      } else {
+        this.showError(data.error || 'Erreur lors de l\'envoi de l\'avis.');
+      }
+      
+    } catch (error) {
+      console.error('Erreur envoi avis:', error);
+      this.showError('Erreur de connexion. Veuillez réessayer.');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
+  }
+  
+  async loadReviews() {
+    this.showReviewsLoading();
+    
+    try {
+      const params = new URLSearchParams({
+        professional_id: this.professionalId,
+        limit: this.reviewsLimit.toString(),
+        offset: this.reviewsOffset.toString()
+      });
+      
+      const response = await fetch(`/api/reviews?${params}`);
+      const data = await response.json();
+      
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      
+      if (data.reviews.length === 0 && this.reviewsOffset === 0) {
+        this.showNoReviews();
+      } else {
+        this.hideNoReviews();
+        this.displayReviews(data.reviews);
+        this.hasMoreReviews = data.hasMore;
+        this.updateLoadMoreButton();
+      }
+      
+    } catch (error) {
+      console.error('Erreur chargement avis:', error);
+    } finally {
+      this.hideReviewsLoading();
+    }
+  }
+  
+  async loadMoreReviews() {
+    this.reviewsOffset += this.reviewsLimit;
+    await this.loadReviews();
+  }
+  
+  displayReviews(reviews) {
+    reviews.forEach(review => {
+      const reviewElement = this.createReviewElement(review);
+      this.reviewsContainer.appendChild(reviewElement);
+    });
+  }
+  
+  createReviewElement(review) {
+    const template = this.reviewTemplate.content.cloneNode(true);
+    
+    template.querySelector('.review-patient-name').textContent = review.patientName;
+    template.querySelector('.review-comment').textContent = review.comment;
+    template.querySelector('.review-helpful').textContent = review.helpful;
+    
+    // Date formatée
+    const date = new Date(review.date);
+    template.querySelector('.review-date').textContent = date.toLocaleDateString('fr-FR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    
+    // Étoiles
+    const starsContainer = template.querySelector('.review-stars');
+    starsContainer.innerHTML = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+    
+    return template;
+  }
+  
+  updateLoadMoreButton() {
+    if (this.hasMoreReviews) {
+      this.loadMoreButton.classList.remove('hidden');
+    } else {
+      this.loadMoreButton.classList.add('hidden');
+    }
+  }
+  
+  showSuccess() {
+    this.successMessage.classList.remove('hidden');
+    this.errorMessage.classList.add('hidden');
+    
+    // Masquer après 5 secondes
+    setTimeout(() => {
+      this.successMessage.classList.add('hidden');
+    }, 5000);
+  }
+  
+  showError(message) {
+    document.getElementById('error-message').textContent = message;
+    this.errorMessage.classList.remove('hidden');
+    this.successMessage.classList.add('hidden');
+  }
+  
+  showReviewsLoading() {
+    this.reviewsLoading.classList.remove('hidden');
+  }
+  
+  hideReviewsLoading() {
+    this.reviewsLoading.classList.add('hidden');
+  }
+  
+  showNoReviews() {
+    this.noReviewsMessage.classList.remove('hidden');
+  }
+  
+  hideNoReviews() {
+    this.noReviewsMessage.classList.add('hidden');
+  }
+  
+  resetForm() {
+    this.form.reset();
+    this.currentRating = 0;
+    this.ratingInput.value = '';
+    this.highlightStars(0);
+    this.successMessage.classList.add('hidden');
+    this.errorMessage.classList.add('hidden');
+  }
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', () => {
+  new ReviewSystem(professionalId, professionalName);
+});
+</script>

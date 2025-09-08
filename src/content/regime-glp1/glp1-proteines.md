@@ -1,9 +1,9 @@
 ---
-title: "GLP-1 Proteines"
+title: "GLP-1 et Protéines : Optimiser l'Apport Protéique avec les Traitements Anti-Diabète"
+description: "Apprenez à optimiser votre apport en protéines avec les traitements GLP-1. Conseils pratiques, sources de qualité et quantités recommandées pour préserver la masse musculaire tout en perdant du poids."
 slug: "glp1-proteines"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "L'importance des protéines dans un régime GLP-1 : sources alimentaires, apports quotidiens recommandés et rôle dans la préservation de la masse musculaire."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
