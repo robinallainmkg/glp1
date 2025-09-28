@@ -1,9 +1,9 @@
 ---
-title: "Prix Mounjaro France 2025 : Combien Ça Coûte VRAIMENT ?"
-description: "Prix RÉEL Mounjaro en pharmacie, remboursement, mutuelle. Découvrez le coût total et toutes les aides pour économiser jusqu'à 80% !"
-keywords: ['prix mounjaro 2025', 'mounjaro pharmacie prix', 'mounjaro pas cher', 'remboursement mounjaro', 'économiser mounjaro']
-seoTitle: "Prix Mounjaro 2025 : Le Coût RÉEL + Toutes les Aides"
-seoDescription: "Prix Mounjaro en France : 90€/mois après remboursement ! Découvrez toutes les aides pour réduire le coût jusqu'à 80%. Guide 2025 complet."
+title: "Prix Mounjaro France 2025 : Tarifs et Remboursements"
+description: "Prix Mounjaro en pharmacie, conditions de remboursement et coût réel après prise en charge par l'Assurance Maladie et les mutuelles en France."
+keywords: ['prix mounjaro 2025', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france']
+seoTitle: "Prix Mounjaro 2025 : Coût Réel et Remboursements en France"
+seoDescription: "Prix officiel Mounjaro en France : 179,80€ par boîte. Coût réel de 90€/mois après remboursement Sécurité Sociale et mutuelle. Guide complet des tarifs 2025."
 publishedAt: '2025-09-06'
 updatedAt: '2025-09-06'
 featured: true
@@ -15,49 +15,49 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
 
-# Prix Mounjaro France 2025 : Le Guide COMPLET des Coûts
+# Prix Mounjaro France 2025 : Guide Complet des Tarifs
+
+Le tirzépatide commercialisé sous le nom de Mounjaro constitue un traitement innovant pour la gestion du diabète de type 2 et de l'obésité. Ce guide présente une analyse détaillée des coûts associés à ce médicament en France, incluant les modalités de remboursement par l'Assurance Maladie et les complémentaires santé.
 
 <div class="price-hero">
   <div class="price-highlight">
-    <span class="old-price">279€/mois</span>
-    <span class="new-price">90€/mois*</span>
-    <span class="savings">Économisez 68% !</span>
+    <span class="original-price">179,80€ par boîte</span>
+    <span class="final-price">90€/mois après remboursement</span>
   </div>
-  <p class="price-subtitle">*Après remboursement Sécu + Mutuelle</p>
+  <p class="price-subtitle">Coût patient après prise en charge Sécurité Sociale et mutuelle complémentaire</p>
 </div>
 
-<div class="alert-success">
-  🎯 <strong>BONNE NOUVELLE 2025</strong> : Nouvelles aides disponibles ! 
-  Découvrez comment payer Mounjaro jusqu'à 80% moins cher.
+<div class="info-notice">
+  <strong>Information tarifaire</strong> : Les prix indiqués correspondent aux tarifs officiels en vigueur dans les pharmacies françaises au 1er janvier 2025, selon les données de l'Assurance Maladie.
 </div>
 
 <div class="quick-nav">
-  <a href="#prix-reel" class="nav-button">💰 Prix Réel</a>
-  <a href="#remboursement" class="nav-button">🏥 Remboursement</a>
-  <a href="#aides-financieres" class="nav-button">💸 Aides & Réductions</a>
-  <a href="#comparaison" class="nav-button">🆚 vs Ozempic</a>
+  <a href="#prix-officiel" class="nav-button">Prix Officiel</a>
+  <a href="#remboursement" class="nav-button">Remboursement</a>
+  <a href="#cout-reel" class="nav-button">Coût Réel</a>
+  <a href="#comparaison" class="nav-button">Comparaison</a>
 </div>
 
-## 💰 Prix RÉEL Mounjaro en Pharmacie {#prix-reel}
+## Prix Officiel Mounjaro en Pharmacie {#prix-officiel}
 
 <div class="price-breakdown">
-  <h3>🔥 TARIFS OFFICIELS 2025</h3>
+  <h3>Tarifs Officiels 2025</h3>
   
   <div class="price-table-modern">
     <div class="price-row header">
       <span>Dosage</span>
       <span>Prix Pharmacie</span>
       <span>Après Remboursement</span>
-      <span>Coût Mensuel*</span>
+      <span>Coût Mensuel</span>
     </div>
     <div class="price-row">
-      <span>2,5 mg <small>(début)</small></span>
+      <span>2,5 mg (initiation)</span>
       <span class="original-price">89,90€</span>
       <span class="final-price">31,50€</span>
       <span class="monthly-cost">31€/mois</span>
     </div>
-    <div class="price-row popular">
-      <span>5-15 mg <small>PLUS POPULAIRE</small></span>
+    <div class="price-row">
+      <span>5-15 mg (maintenance)</span>
       <span class="original-price">179,80€</span>
       <span class="final-price">89,90€</span>
       <span class="monthly-cost">90€/mois</span>
@@ -65,307 +65,166 @@ affiliateCollection: "glp1-cout"
   </div>
   
   <div class="price-note">
-    *Coût réel après Sécurité Sociale (65%) + Mutuelle moyenne (25%)
+    Coût calculé après remboursement Sécurité Sociale (65%) et mutuelle complémentaire (estimation 25%)
   </div>
 </div>
 
-### 🆚 Mounjaro vs Concurrence : Le VRAI Comparatif Prix
+### Comparaison Tarifaire avec les Autres Traitements GLP-1 {#comparaison}
+
+Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France se situe dans une fourchette intermédiaire. Cette comparaison présente les coûts mensuels moyens pour le patient après remboursement.
 
 <div class="comparison-table-enhanced">
   <div class="comparison-header">
     <span>Traitement</span>
-    <span>Efficacité</span>
-    <span>Prix/mois</span>
-    <span>Verdict</span>
+    <span>Mécanisme d'action</span>
+    <span>Coût mensuel patient</span>
+    <span>Statut remboursement</span>
   </div>
   
-  <div class="comparison-row winner">
-    <span>🏆 <strong>MOUNJARO</strong></span>
-    <span>⭐⭐⭐⭐⭐ (-20% poids)</span>
+  <div class="comparison-row">
+    <span><strong>Mounjaro (tirzépatide)</strong></span>
+    <span>Dual GLP-1/GIP</span>
     <span><strong>90€</strong></span>
-    <span class="best">🥇 MEILLEUR RAPPORT</span>
+    <span>Remboursé sous conditions</span>
   </div>
   
   <div class="comparison-row">
-    <span>Ozempic</span>
-    <span>⭐⭐⭐⭐ (-15% poids)</span>
+    <span>Ozempic (sémaglutide)</span>
+    <span>GLP-1 agoniste</span>
     <span>73€</span>
-    <span>✅ Moins cher</span>
+    <span>Remboursé pour diabète</span>
   </div>
   
   <div class="comparison-row">
-    <span>Wegovy</span>
-    <span>⭐⭐⭐⭐ (-15% poids)</span>
+    <span>Wegovy (sémaglutide)</span>
+    <span>GLP-1 agoniste</span>
     <span>120€</span>
-    <span>❌ Plus cher</span>
+    <span>Remboursement partiel</span>
   </div>
 </div>
 
-<div class="insight-box">
-  💡 <strong>INSIGHT 2025</strong> : Mounjaro coûte 23% de plus qu'Ozempic mais offre 33% d'efficacité en plus !
-  <br>🎯 <strong>ROI exceptionnel</strong> : 17€ de plus pour 5% de perte de poids supplémentaire.
-</div>
+L'analyse comparative des coûts révèle que Mounjaro présente un coût mensuel supérieur de 17 euros par rapport à Ozempic. Cette différence tarifaire correspond à l'innovation thérapeutique du double mécanisme d'action GLP-1/GIP, qui peut justifier une efficacité clinique potentiellement supérieure selon les données d'études cliniques disponibles.
 
-## 💊 Remboursement Sécurité Sociale
+## Modalités de Remboursement par l'Assurance Maladie {#remboursement}
 
-### Conditions de remboursement
+### Critères d'Éligibilité pour la Prise en Charge
 
-**Mounjaro est remboursé à 65%** par l'Assurance Maladie sous conditions :
+L'Assurance Maladie française rembourse Mounjaro à hauteur de 65% du tarif conventionnel lorsque les conditions médicales définies par la Haute Autorité de Santé sont réunies.
 
-✅ **Prescription médicale obligatoire**
-✅ **Diabète de type 2 confirmé**
-✅ **Échec des antidiabétiques oraux**
-✅ **IMC ≥ 30 kg/m²** ou **≥ 27 kg/m²** avec comorbidité
+Pour le traitement du diabète de type 2, les critères incluent une prescription médicale établie par un médecin généraliste ou spécialiste, un diagnostic de diabète de type 2 documenté et confirmé par examens biologiques, ainsi qu'un échec thérapeutique avéré des antidiabétiques oraux de première intention. Un indice de masse corporelle supérieur ou égal à 30 kg/m² constitue également un critère, ou supérieur ou égal à 27 kg/m² en présence de comorbidités cardiovasculaires ou métaboliques.
 
-### Protocole de remboursement pour l'obésité
+### Prise en Charge dans l'Indication Obésité
 
-Depuis 2023, Mounjaro bénéficie d'un remboursement spécifique pour l'obésité :
+Depuis l'extension des indications en 2023, Mounjaro peut bénéficier d'un remboursement dans le cadre du traitement de l'obésité. Le dispositif d'Affection de Longue Durée permet une prise en charge à 100% lorsque les conditions d'éligibilité sont remplies selon l'évaluation médicale spécialisée.
 
-- **ALD 23** : Affection de longue durée
-- **Remboursement à 100%** pour les patients éligibles
-- **Prescription initiale** : 6 mois renouvelable
-- **Suivi obligatoire** : consultation diététicienne
+La prescription initiale s'établit sur une durée de six mois, renouvelable après évaluation clinique de l'efficacité et de la tolérance. Un suivi médical régulier incluant des consultations diététiques et un accompagnement nutritionnel constitue une obligation réglementaire pour maintenir la prise en charge.
 
-## 💳 Couverture Mutuelle Santé
+## Couverture par les Mutuelles Complémentaires {#cout-reel}
 
-### Remboursement par la mutuelle
+### Niveau de Remboursement selon les Mutuelles
 
-| Niveau de mutuelle | Reste à charge | Taux de couverture |
+| Type de contrat | Reste à charge mensuel | Taux de couverture complémentaire |
 |-------------------|----------------|-------------------|
-| Basique | 30-60 €/mois | 35% |
-| Confort | 15-30 €/mois | 70% |
-| Premium | 5-15 €/mois | 90% |
+| Contrat de base | 30-60 €/mois | 20-35% |
+| Contrat intermédiaire | 15-30 €/mois | 50-70% |
+| Contrat renforcé | 5-15 €/mois | 80-90% |
 
-**Coût mensuel réel** : 5-60 € selon votre mutuelle
+Le coût mensuel réel varie de 5€ à 60€ selon le niveau de couverture de votre mutuelle complémentaire.
 
-### Conseils pour optimiser le remboursement
-- **Comparez les mutuelles** : certaines proposent des forfaits GLP-1
-- **Demandez un devis** : avant de changer de mutuelle
-- **Vérifiez les plafonds** : annuels pour les médicaments
+### Optimisation de la Prise en Charge
+- Vérifiez les garanties médicaments de votre contrat actuel
+- Comparez les offres incluant des forfaits spécifiques aux traitements GLP-1
+- Contrôlez les plafonds annuels de remboursement pour les médicaments coûteux
 
-## 🏦 Aides Financières Disponibles
+## Aides Financières Complémentaires
 
-### Aide à l'acquisition de médicaments (AMT)
+### Aide à l'Acquisition de Médicaments (AAM)
 
-## 🎯 Économisez ENCORE PLUS sur Mounjaro
+L'Aide à l'Acquisition de Médicaments peut être accordée aux patients dont le reste à charge dépasse 50€ par mois :
+- **Conditions** : Situation financière précaire documentée
+- **Montant** : Jusqu'à 50€ par mois selon les revenus
+- **Procédure** : Demande via ameli.fr ou auprès de votre caisse d'Assurance Maladie
 
-<div class="savings-hub">
-  <h3>💡 Astuces EXCLUSIVES pour Réduire le Coût</h3>
-  
-  <div class="tip-card">
-    <h4>🔥 ASTUCE #1 : Programme Patient</h4>
-    <p>Eli Lilly propose un programme d'aide aux patients. <strong>Jusqu'à -200€/an !</strong></p>
-    <div class="savings-amount">Économie : 200€/an</div>
-  </div>
-  
-  <div class="tip-card">
-    <h4>💊 ASTUCE #2 : Pharmacie en Ligne</h4>
-    <p>Certaines pharmacies agréées offrent des remises supplémentaires.</p>
-    <div class="savings-amount">Économie : 15-30€/mois</div>
-  </div>
-  
-  <div class="tip-card highlight">
-    <h4>🏆 ASTUCE #3 : Mutuelle Spécialisée</h4>
-    <p>Certaines mutuelles remboursent jusqu'à 100% les GLP-1 !</p>
-    <div class="savings-amount">Économie : 90€/mois</div>
-  </div>
-</div>
+### Programmes d'Aide du Laboratoire Eli Lilly
 
-## 🚀 Passez à l'Action : Votre Roadmap Mounjaro
+Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
+- **Programme patient** : Réduction tarifaire pour les premiers mois de traitement
+- **Assistance financière** : Support pour les patients éligibles selon critères socio-économiques
+- **Contact** : Service patients au 0 800 10 12 13 (numéro gratuit)
 
-<div class="action-roadmap">
-  <div class="step">
-    <span class="step-number">1</span>
-    <div class="step-content">
-      <h4>📋 Consultez Votre Médecin</h4>
-      <p>Demandez une prescription Mounjaro</p>
-      <a href="/collections/medecins-glp1-france" class="step-link">Trouver un médecin</a>
-    </div>
-  </div>
-  
-  <div class="step">
-    <span class="step-number">2</span>
-    <div class="step-content">
-      <h4>📖 Préparez-vous aux Effets</h4>
-      <p>Connaissez tous les effets secondaires</p>
-      <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="step-link">Guide des effets</a>
-    </div>
-  </div>
-  
-  <div class="step">
-    <span class="step-number">3</span>
-    <div class="step-content">
-      <h4>🥗 Optimisez Votre Alimentation</h4>
-      <p>Régime spécial pour maximiser les résultats</p>
-      <a href="/collections/regime-glp1/glp1-proteines" class="step-link">Régime Mounjaro</a>
-    </div>
-  </div>
-</div>
+### Dispositifs Sociaux Complémentaires
 
-## 🔥 Ressources Mounjaro INDISPENSABLES
+- **Couverture Maladie Universelle Complémentaire (CMU-C)** : Prise en charge complète
+- **Aide au paiement d'une Complémentaire Santé (ACS)** : Réduction sur les contrats mutuelles
+- **Fonds d'action sociale** : Aides exceptionnelles selon les caisses d'Assurance Maladie
 
-<div class="resource-grid">
-  <div class="resource-card featured">
-    <h4>📘 Guide Complet Mounjaro</h4>
-    <p>Tout savoir sur ce traitement révolutionnaire</p>
-    <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="resource-link">→ Lire le guide</a>
-  </div>
-  
-  <div class="resource-card">
-    <h4>⚠️ Effets Secondaires</h4>
-    <p>Comment les éviter et les gérer</p>
-    <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="resource-link">→ Tout savoir</a>
-  </div>
-  
-  <div class="resource-card">
-    <h4>🆚 Mounjaro vs Ozempic</h4>
-    <p>Comparaison complète pour choisir</p>
-    <a href="/guides/quel-traitement-glp1-choisir" class="resource-link">→ Comparer</a>
-  </div>
-</div>
+## Démarches pour Accéder au Traitement
 
----
+### Étapes pour Obtenir Mounjaro
 
-<div class="final-cta">
-  <h3>💰 Le Prix Ne Doit PAS Vous Arrêter</h3>
-  <p>Avec toutes les aides disponibles, Mounjaro peut coûter <strong>moins de 30€/mois</strong>. 
-  Pour transformer votre vie, c'est un investissement qui en vaut la peine !</p>
-  
-  <div class="cta-buttons">
-    <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="cta-primary">
-      🚀 Commencer Votre Transformation
-    </a>
-    <a href="/collections/medecins-glp1-france" class="cta-secondary">
-      👨‍⚕️ Trouver un Médecin
-    </a>
-  </div>
-</div>
+1. **Consultation médicale initiale**
+   - Évaluation de l'indication thérapeutique (diabète type 2 ou obésité)
+   - Vérification des critères de remboursement
+   - [Consulter notre annuaire de médecins spécialisés](/collections/medecins-glp1-france)
 
-- **Condition** : Reste à charge > 30 €/mois
-- **Montant** : Jusqu'à 50 €/mois
-- **Demande** : Via ameli.fr ou pharmacie
+2. **Prescription et délivrance**
+   - Ordonnance sécurisée requise
+   - Délivrance en pharmacie de ville ou hospitalière
+   - [Information sur les effets secondaires à connaître](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)
 
-### Fonds d'aide des laboratoires
+3. **Suivi thérapeutique**
+   - Consultations de suivi régulières
+   - Adaptation posologique selon tolérance et efficacité
+   - [Recommandations alimentaires pendant le traitement](/collections/regime-glp1/glp1-proteines)
 
-Eli Lilly propose plusieurs programmes d'aide :
+## Ressources Complémentaires
 
-- **Programme patient** : Réduction sur les premiers mois
-- **Aide financière** : Pour les patients à faible revenu
-- **Contact** : 0 800 10 12 13 (gratuit)
+### Documentation Mounjaro
+- [Guide complet du traitement Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro) : Posologie, mécanisme d'action et efficacité clinique
+- [Profil de tolérance et effets indésirables](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro) : Information médicale complète
+- [Comparaison thérapeutique](/guides/quel-traitement-glp1-choisir) : Mounjaro face aux autres options GLP-1
 
-### Aides sociales complémentaires
+### Information Pratique
 
-- **CMU-C** : Couverture maladie universelle complémentaire
-- **ACS** : Aide au paiement d'une complémentaire santé
-- **Fonds de solidarité** : Pour les personnes en difficulté
+Le coût mensuel pour le patient varie entre 30 et 90 euros selon le niveau de couverture sociale et complémentaire dont il bénéficie.
 
-## 📊 Évolution des Prix Mounjaro
+L'accès au traitement Mounjaro dépend de l'éligibilité aux critères de remboursement définis par l'Assurance Maladie. Une consultation médicale spécialisée permet d'évaluer cette éligibilité et d'estimer précisément le coût résiduel selon la situation administrative et sociale du patient.
 
-### Historique des prix
-- **2022** : Lancement à 89,90 €/stylo
-- **2023** : Maintien du prix avec remboursement obésité
-- **2024** : Prix stable malgré l'inflation
-- **2025** : Prix inchangé, focus sur l'accessibilité
+### Contacts Utiles
+- **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france)
+- **Information médicale Eli Lilly** : 0 800 10 12 13
+- **Assurance Maladie** : 3646 ou ameli.fr
 
-### Comparaison internationale
+## Évolution des Prix et Contexte International
 
-| Pays | Prix mensuel | Parité pouvoir d'achat |
-|------|--------------|----------------------|
-| France | 120-180 € | Référence |
-| Allemagne | 110-160 € | Comparable |
-| Italie | 95-140 € | Moins cher |
-| Espagne | 85-130 € | Plus accessible |
-| Royaume-Uni | 100-150 € | Comparable |
+### Historique Tarifaire
+- **2022** : Introduction sur le marché français à 89,90€ par stylo
+- **2023** : Maintien des tarifs avec extension du remboursement pour l'obésité
+- **2024-2025** : Stabilité des prix malgré le contexte inflationniste
 
-## 💡 Conseils pour Réduire le Coût
+### Comparaison Européenne
 
-### Optimisations possibles
-- **Génériques** : Pas encore disponibles
-- **Dosage optimal** : Atteindre l'efficacité à dose minimale
-- **Alternance** : Avec d'autres GLP-1 moins coûteux
-- **Suivi médical** : Pour ajuster la posologie
+| Pays | Coût mensuel moyen | Accessibilité |
+|------|-------------------|---------------|
+| France | 90-120€ | Remboursement partiel |
+| Allemagne | 110-150€ | Système comparable |
+| Italie | 95-130€ | Accès facilité |
+| Espagne | 85-125€ | Prise en charge variable |
+| Royaume-Uni | 100-140€ | NHS selon critères |
 
-### Programmes d'accompagnement
-- **Éducation thérapeutique** : Améliore l'observance
-- **Suivi diététique** : Optimise les résultats
-- **Activité physique** : Complète le traitement
+## Recommandations Pratiques
 
-## 📞 Contacts Utiles
+### Optimisation du Coût de Traitement
+- **Suivi posologique** : Ajustement au dosage minimal efficace
+- **Observance thérapeutique** : Respect strict du protocole pour éviter les échecs
+- **Coordination avec les professionnels de santé** : Suivi régulier pour optimiser le rapport bénéfice/coût
 
-### Sécurité Sociale
-- **Ameli.fr** : Suivi des remboursements
-- **Téléphone** : 3646 (prix d'un appel local)
-
-### Mutuelle
-- **Votre contrat** : Vérifiez les garanties médicaments
-- **Service client** : Pour une simulation personnalisée
-
-### Pharmacie
-- **Prix pratiqués** : Peuvent varier légèrement
-- **Conseils** : Sur les alternatives moins coûteuses
+### Contacts et Démarches
+- **Assurance Maladie** : 3646 ou consultation sur ameli.fr
+- **Information mutuelle** : Vérification des garanties médicaments spécialisés
+- **Service médical Eli Lilly** : 0 800 10 12 13 pour questions spécifiques
 
 ---
 
-## 🎯 Étapes Suivantes : Optimiser Votre Traitement Mounjaro
-
-<div class="next-steps-money">
-  <div class="step-card urgent">
-    <h3>🚨 URGENT : Commencer Mounjaro</h3>
-    <p>Découvrez TOUT sur Mounjaro : efficacité, posologie, résultats réels</p>
-    <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="cta-button primary">
-      Guide Complet Mounjaro →
-    </a>
-  </div>
-  
-  <div class="step-card">
-    <h3>⚠️ Effets Secondaires</h3>
-    <p>Anticipez et gérez les effets secondaires pour maximiser votre réussite</p>
-    <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="cta-button secondary">
-      Tout Savoir sur les Effets →
-    </a>
-  </div>
-  
-  <div class="step-card">
-    <h3>🥗 Régime Optimal</h3>
-    <p>Le régime alimentaire qui multiplie vos résultats avec Mounjaro</p>
-    <a href="/collections/regime-glp1" class="cta-button">
-      Découvrir le Régime →
-    </a>
-  </div>
-</div>
-
-### 💰 Comparaison Prix Détaillée
-
-<div class="cost-comparison-links">
-  <div class="comparison-category">
-    <h4>🆚 Prix vs Autres Traitements</h4>
-    <ul>
-      <li><a href="/collections/glp1-cout/prix-ozempic-france">Prix Ozempic vs Mounjaro : Quel est le Plus Économique ?</a></li>
-      <li><a href="/collections/glp1-cout/prix-wegovy-france">Wegovy vs Mounjaro : Rapport Qualité-Prix</a></li>
-      <li><a href="/collections/glp1-cout/prix-saxenda-france">Saxenda vs Mounjaro : Différence de Coût</a></li>
-    </ul>
-  </div>
-  
-  <div class="comparison-category">
-    <h4>🏥 Remboursement et Aides</h4>
-    <ul>
-      <li><a href="/collections/glp1-cout/wegovy-remboursement-mutuelle">Remboursement Mutuelle : Optimiser sa Prise en Charge</a></li>
-      <li><a href="/collections/medecins-glp1-france/endocrinologue-pour-maigrir">Trouver un Endocrinologue pour Prescription Mounjaro</a></li>
-      <li><a href="/guides/suivi-medical-glp1">Suivi Médical GLP-1 : Optimiser les Coûts</a></li>
-    </ul>
-  </div>
-  
-  <div class="comparison-category">
-    <h4>🎯 Maximiser Votre Investissement</h4>
-    <ul>
-      <li><a href="/temoignages/marie">Marie : ROI de son Traitement Mounjaro (-18kg)</a></li>
-      <li><a href="/guides/sport-activite-physique-glp1">Sport + Mounjaro : Maximiser les Résultats</a></li>
-      <li><a href="/guides/psychologie-motivation-glp1">Psychologie de la Réussite avec Mounjaro</a></li>
-    </ul>
-  </div>
-</div>
-
----
-
-*Les prix indiqués sont donnés à titre indicatif et peuvent varier selon les pharmacies et les régions. Pour une information précise, consultez votre pharmacie ou votre médecin.*</content>
+*Les tarifs mentionnés correspondent aux prix publics pratiqués en France et sont susceptibles de variations selon les établissements pharmaceutiques. Pour une estimation personnalisée, consultez votre médecin traitant ou spécialiste.*</content>
 <parameter name="filePath">/Users/mac/Projet/glp1/src/content/glp1-cout/prix-mounjaro-france.md
