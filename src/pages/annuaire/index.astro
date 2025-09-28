@@ -1,0 +1,301 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { createClient } from '@supabase/supabase-js';
+
+// Configuration Supabase
+const supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Spécialités en dur (temporaire, en attendant table specialties)
+let specialties = [
+  {
+    slug: 'endocrinologue-glp1',
+    name: 'Endocrinologue spécialisé GLP-1',
+    description: 'Endocrinologue expert dans la prescription de médicaments GLP-1 (Ozempic, Wegovy, Mounjaro)',
+    category: 'medical',
+    priority: 10
+  },
+  {
+    slug: 'diabetologue',
+    name: 'Diabétologue expert Ozempic/Wegovy',
+    description: 'Diabétologue spécialisé dans le traitement du diabète avec les nouveaux médicaments GLP-1',
+    category: 'medical',
+    priority: 9
+  },
+  {
+    slug: 'nutritionniste-obesite',
+    name: 'Nutritionniste spécialisé perte de poids',
+    description: 'Nutritionniste expert en accompagnement de la perte de poids avec les traitements GLP-1',
+    category: 'nutrition',
+    priority: 8
+  }
+];
+
+// Récupération des villes et stats
+let topCities = [];
+let stats = { totalProfessionals: 0, totalCities: 0, totalSpecialties: 3 };
+
+try {
+  // Récupération des spécialités actives
+  const { data: specialtiesData } = await supabase
+    .from('specialties')
+    .select('slug, name, description, category, priority')
+    .eq('is_active', true)
+    .order('priority', { ascending: false });
+  
+  specialties = specialtiesData || [];
+
+  // Récupération des villes principales
+  const { data: citiesData } = await supabase
+    .from('french_cities')
+    .select('slug, name, population, is_major_city')
+    .eq('is_major_city', true)
+    .order('population', { ascending: false })
+    .limit(20);
+  
+  topCities = citiesData || [];
+
+  // Statistiques générales
+  const { count: profCount } = await supabase
+    .from('health_professionals')
+    .select('*', { count: 'exact', head: true })
+    .eq('is_active', true);
+
+  const { count: cityCount } = await supabase
+    .from('french_cities')
+    .select('*', { count: 'exact', head: true });
+
+  stats = {
+    totalProfessionals: profCount || 0,
+    totalCities: cityCount || 0,
+    totalSpecialties: specialties.length
+  };
+
+} catch (error) {
+  console.error('Erreur lors du chargement des données:', error);
+}
+
+const pageTitle = "Annuaire des Professionnels GLP-1 en France";
+const pageDescription = "Trouvez un professionnel de santé spécialisé dans les traitements GLP-1 (Ozempic, Wegovy, Mounjaro) près de chez vous. Endocrinologues, diabétologues, nutritionnistes experts.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="container mx-auto px-4 py-8">
+    
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Annuaire des Professionnels <span class="text-blue-600">GLP-1</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+        Trouvez un professionnel de santé spécialisé dans les traitements GLP-1 
+        (Ozempic, Wegovy, Mounjaro) près de chez vous.
+      </p>
+      
+      <!-- Statistiques -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+        <div class="bg-blue-50 rounded-lg p-4">
+          <div class="text-2xl font-bold text-blue-600">{stats.totalProfessionals}</div>
+          <div class="text-sm text-gray-600">Professionnels</div>
+        </div>
+        <div class="bg-green-50 rounded-lg p-4">
+          <div class="text-2xl font-bold text-green-600">{stats.totalCities}</div>
+          <div class="text-sm text-gray-600">Villes</div>
+        </div>
+        <div class="bg-purple-50 rounded-lg p-4">
+          <div class="text-2xl font-bold text-purple-600">{stats.totalSpecialties}</div>
+          <div class="text-sm text-gray-600">Spécialités</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recherche rapide -->
+    <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+      <h2 class="text-2xl font-bold text-center mb-6">Recherche Rapide</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Recherche par spécialité -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Par Spécialité</h3>
+          <div class="space-y-2">
+            {specialties.map(specialty => (
+              <a 
+                href={`/annuaire/${specialty.slug}`}
+                class="block p-3 bg-gray-50 hover:bg-blue-50 rounded-lg transition-colors"
+              >
+                <div class="font-medium text-gray-900">{specialty.name}</div>
+                <div class="text-sm text-gray-600">{specialty.description}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Recherche par ville -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Villes Principales</h3>
+          <div class="grid grid-cols-2 gap-2">
+            {topCities.map(city => (
+              <a 
+                href={`/annuaire/ville/${city.slug}`}
+                class="block p-3 bg-gray-50 hover:bg-green-50 rounded-lg transition-colors text-center"
+              >
+                <div class="font-medium text-gray-900">{city.name}</div>
+                <div class="text-sm text-gray-600">{city.population?.toLocaleString()} hab.</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spécialités détaillées -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8">Nos Spécialistes GLP-1</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {specialties.map(specialty => (
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <!-- Icône selon la catégorie -->
+                {specialty.category === 'medical' && (
+                  <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                  </div>
+                )}
+                {specialty.category === 'nutrition' && (
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                  </div>
+                )}
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900">{specialty.name}</h3>
+                  <div class="text-sm text-gray-500">Priorité {specialty.priority}/10</div>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">{specialty.description}</p>
+              <a 
+                href={`/annuaire/${specialty.slug}`}
+                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Voir les professionnels
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Informations sur les traitements GLP-1 -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8 mb-12">
+      <h2 class="text-3xl font-bold text-center mb-6">Traitements GLP-1 disponibles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="text-center">
+          <h3 class="font-bold text-lg mb-2">Ozempic</h3>
+          <p class="text-sm text-gray-600">Sémaglutide injectable pour diabète type 2</p>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="font-bold text-lg mb-2">Wegovy</h3>
+          <p class="text-sm text-gray-600">Sémaglutide pour perte de poids</p>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="font-bold text-lg mb-2">Mounjaro</h3>
+          <p class="text-sm text-gray-600">Tirzépatide nouvelle génération</p>
+        </div>
+        
+        <div class="text-center">
+          <h3 class="font-bold text-lg mb-2">Rybelsus</h3>
+          <p class="text-sm text-gray-600">Sémaglutide oral</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ générale -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-center mb-8">Questions Fréquentes</h2>
+      <div class="max-w-4xl mx-auto space-y-6">
+        
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Comment choisir un professionnel GLP-1 ?</h3>
+          <p class="text-gray-600">
+            Vérifiez ses qualifications, son expérience avec les traitements GLP-1, 
+            les avis patients et la proximité géographique. Privilégiez un praticien 
+            formé aux nouvelles thérapies et qui suit régulièrement ses patients.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Quels professionnels peuvent prescrire des GLP-1 ?</h3>
+          <p class="text-gray-600">
+            Les endocrinologues, diabétologues, médecins généralistes formés, 
+            et certains spécialistes en médecine interne peuvent prescrire 
+            ces traitements selon les indications médicales.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-lg font-bold mb-3">Les traitements GLP-1 sont-ils remboursés ?</h3>
+          <p class="text-gray-600">
+            Le remboursement dépend de l'indication (diabète type 2 ou obésité), 
+            de votre situation médicale et de votre mutuelle. Consultez votre 
+            professionnel de santé pour connaître vos conditions de prise en charge.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <div class="text-center bg-blue-600 text-white rounded-lg p-8">
+      <h2 class="text-2xl font-bold mb-4">Prêt à commencer votre parcours GLP-1 ?</h2>
+      <p class="text-lg mb-6">
+        Trouvez le professionnel de santé le plus proche de chez vous
+      </p>
+      <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+        <a 
+          href="/annuaire/endocrinologue-glp1" 
+          class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+        >
+          Trouver un Endocrinologue
+        </a>
+        <a 
+          href="/annuaire/diabetologue" 
+          class="inline-block bg-blue-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors"
+        >
+          Trouver un Diabétologue
+        </a>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>
+
+<style>
+  /* Styles spécifiques à l'annuaire */
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* Animation hover pour les cartes */
+  .bg-white:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Responsive grid */
+  @media (max-width: 768px) {
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

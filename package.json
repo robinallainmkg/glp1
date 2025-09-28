@@ -23,7 +23,13 @@
     "db:test": "node scripts/test-supabase-config.js",
     "db:stats": "node -e \"import('./lib/services/userService.js').then(s => s.getUserStats().then(r => console.log(r.data)))\"",
     "analyze-users": "node scripts/user-data-analyzer.mjs",
-    "optimize-images:responsive": "node scripts/optimize-images.mjs --responsive"
+    "optimize-images:responsive": "node scripts/optimize-images.mjs --responsive",
+    "annuaire:import-cities": "node scripts/annuaire/import-french-cities.mjs",
+    "annuaire:import-specialties": "node scripts/annuaire/import-medical-specialties.mjs",
+    "annuaire:scrape-doctolib": "node scripts/annuaire/scrape-doctolib.mjs",
+    "annuaire:clean-data": "node scripts/annuaire/clean-professionals.mjs",
+    "annuaire:generate-pages": "node scripts/annuaire/generate-landing-pages.mjs",
+    "annuaire:setup": "npm run annuaire:import-cities && npm run annuaire:import-specialties"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -42,7 +48,8 @@
     "slugify": "^1.6.6",
     "tailwindcss": "^3.4.17",
     "tslib": "2.8.1",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "prettier": "^3.6.2"
