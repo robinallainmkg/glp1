@@ -337,160 +337,294 @@ const categories = await getCategoryContent();
       </div>
     </section>
 
-    <!-- Articles Récents par Thématique -->
+    <!-- Articles Récents avec Thumbnails -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            📚 Derniers Articles et Guides
+            Derniers Articles et Guides
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Restez informé avec nos derniers articles d'experts sur les traitements GLP-1 en France
+            Découvrez nos derniers articles d'experts sur les traitements GLP-1 en France
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          <!-- Prix et Coûts -->
-          <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
-            <div class="relative h-48 bg-gradient-to-r from-green-500 to-emerald-600">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <div class="text-4xl mb-2">💰</div>
-                  <h3 class="text-xl font-bold">Prix & Remboursements</h3>
+        <!-- Slider d'articles avec thumbnails -->
+        <div class="relative">
+          <div class="article-slider overflow-hidden">
+            <div class="flex gap-6 pb-4" id="articles-container">
+              
+              <!-- Article Wegovy Prix -->
+              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/thumbnails/prix-wegovy-france-illus.jpg" 
+                    alt="Prix Wegovy France 2025"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    Prix & Coûts
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    Prix Wegovy 2025 en France : Coûts et Remboursements
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                    Guide complet des tarifs Wegovy en pharmacie, conditions de remboursement par l'Assurance Maladie et coût réel pour le patient.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Mis à jour récemment</span>
+                    <a href="/collections/glp1-cout/prix-wegovy-france" class="text-green-600 hover:text-green-700 font-medium text-sm transition-colors">
+                      Lire l'article →
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
-                Mis à jour
+
+              <!-- Article Mounjaro -->
+              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/thumbnails/mounjaro-blue.webp" 
+                    alt="Guide Complet Mounjaro"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    Traitements
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    Guide Complet Mounjaro : Efficacité et Posologie
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                    Tout savoir sur le tirzépatide (Mounjaro) : mécanisme d'action, résultats cliniques, dosage et suivi médical recommandé.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Guide expert</span>
+                    <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
+                      Lire l'article →
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="p-6">
-              <div class="space-y-4">
-                <a href="/collections/glp1-cout/prix-wegovy-france" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-green-600 transition-colors">Prix Wegovy 2025 en France</h4>
-                  <p class="text-sm text-gray-600 mt-1">Coûts actuels, pharmacies et remboursements</p>
-                </a>
-                <a href="/collections/glp1-cout/prix-mounjaro-france" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-green-600 transition-colors">Prix Mounjaro : Guide Complet</h4>
-                  <p class="text-sm text-gray-600 mt-1">Nouveau traitement, tarifs et disponibilité</p>
-                </a>
-                <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-green-600 transition-colors">Remboursement Mutuelle</h4>
-                  <p class="text-sm text-gray-600 mt-1">Comment obtenir une prise en charge</p>
-                </a>
+
+              <!-- Article Effets Secondaires -->
+              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/thumbnails/effets-secondaires-wegovy-illus.jpg" 
+                    alt="Effets Secondaires Wegovy"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    Sécurité
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    Effets Secondaires Wegovy : Guide Pratique
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                    Information complète sur les effets indésirables de Wegovy, leur fréquence et les solutions pour mieux les gérer au quotidien.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Information médicale</span>
+                    <a href="/collections/effets-secondaires-glp1/effets-secondaires-wegovy" class="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors">
+                      Lire l'article →
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="mt-6">
-                <a href="/collections/glp1-cout/" class="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium transition-colors">
-                  Voir tous les prix →
-                </a>
+
+              <!-- Article Ozempic -->
+              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/thumbnails/ozempic-medical-guide.jpg" 
+                    alt="Guide Complet Ozempic"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3 bg-indigo-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    Diabète
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    Guide Complet Ozempic : Diabète et Perte de Poids
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                    Analyse complète d'Ozempic pour le diabète de type 2 et la gestion du poids : efficacité, posologie et recommandations médicales.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Référence médicale</span>
+                    <a href="/collections/traitements-glp1/guide-complet-ozempic" class="text-indigo-600 hover:text-indigo-700 font-medium text-sm transition-colors">
+                      Lire l'article →
+                    </a>
+                  </div>
+                </div>
               </div>
+
+              <!-- Article Témoignage Marie -->
+              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/temoignages/mariejourney9.jpg" 
+                    alt="Témoignage Marie transformation GLP-1"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3 bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    Témoignage
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    Marie, 39 ans : "J'ai perdu 32kg avec Wegovy"
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                    Découvrez le parcours authentique de Marie, mère de trois enfants qui a transformé sa vie grâce aux traitements GLP-1.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Témoignage vérifié</span>
+                    <a href="/collections/temoignages/marie-transformation-glp1" class="text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors">
+                      Lire le témoignage →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Article Qu'est-ce que GLP-1 -->
+              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div class="relative h-48 overflow-hidden">
+                  <img 
+                    src="/images/home/seringue-adn.jpg" 
+                    alt="Qu'est-ce que GLP-1 explication scientifique"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div class="absolute top-3 left-3 bg-teal-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    Science
+                  </div>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                    Qu'est-ce que GLP-1 ? Explication Scientifique Simple
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
+                    Comprenez le mécanisme d'action des hormones GLP-1, leur rôle dans la régulation du glucose et leur utilisation thérapeutique.
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Article scientifique</span>
+                    <a href="/guides/qu-est-ce-que-glp1/" class="text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors">
+                      Lire l'article →
+                    </a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- Traitements et Guides -->
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
-            <div class="relative h-48 bg-gradient-to-r from-blue-500 to-indigo-600">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <div class="text-4xl mb-2">💊</div>
-                  <h3 class="text-xl font-bold">Traitements</h3>
-                </div>
-              </div>
-              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
-                Guides Experts
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="space-y-4">
-                <a href="/collections/traitements-glp1/guide-complet-wegovy" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Guide Complet Wegovy</h4>
-                  <p class="text-sm text-gray-600 mt-1">Efficacité, posologie et suivi médical</p>
-                </a>
-                <a href="/collections/traitements-glp1/guide-complet-ozempic" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Guide Complet Ozempic</h4>
-                  <p class="text-sm text-gray-600 mt-1">Diabète et perte de poids expliqués</p>
-                </a>
-                <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Guide Complet Mounjaro</h4>
-                  <p class="text-sm text-gray-600 mt-1">Le nouveau traitement révolutionnaire</p>
-                </a>
-              </div>
-              <div class="mt-6">
-                <a href="/collections/traitements-glp1/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                  Tous les traitements →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Effets Secondaires et Sécurité -->
-          <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
-            <div class="relative h-48 bg-gradient-to-r from-orange-500 to-red-500">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <div class="text-4xl mb-2">⚠️</div>
-                  <h3 class="text-xl font-bold">Effets & Sécurité</h3>
-                </div>
-              </div>
-              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold">
-                Transparent
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="space-y-4">
-                <a href="/collections/effets-secondaires-glp1/effets-secondaires-wegovy" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">Effets Secondaires Wegovy</h4>
-                  <p class="text-sm text-gray-600 mt-1">Comment gérer nausées et fatigue</p>
-                </a>
-                <a href="/collections/effets-secondaires-glp1/effets-secondaires-ozempic" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">Effets Secondaires Ozempic</h4>
-                  <p class="text-sm text-gray-600 mt-1">Suivi médical et précautions</p>
-                </a>
-                <a href="/collections/effets-secondaires-glp1/ozempic-danger" class="block group">
-                  <h4 class="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">Ozempic est-il Dangereux ?</h4>
-                  <p class="text-sm text-gray-600 mt-1">Analyse scientifique objective</p>
-                </a>
-              </div>
-              <div class="mt-6">
-                <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium transition-colors">
-                  Tous les effets →
-                </a>
-              </div>
-            </div>
-          </div>
+          <!-- Contrôles du slider -->
+          <button 
+            id="prev-btn" 
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-200 z-10 border border-gray-200"
+            aria-label="Article précédent"
+          >
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          
+          <button 
+            id="next-btn" 
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-200 z-10 border border-gray-200"
+            aria-label="Article suivant"
+          >
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
         </div>
 
-        <!-- Section Articles Complémentaires -->
-        <div class="mt-12">
-          <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">
-            🔍 Articles Populaires
-          </h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/guides/qu-est-ce-que-glp1/" class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
-              <div class="text-3xl mb-3">🧬</div>
-              <h4 class="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">Qu'est-ce que GLP-1 ?</h4>
-              <p class="text-sm text-gray-600">Science simple et compréhensible</p>
+        <!-- Liens vers toutes les collections -->
+        <div class="mt-12 text-center">
+          <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <a href="/collections/glp1-cout/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-200">
+              Tous les Prix et Coûts
             </a>
-
-            <a href="/collections/regime-glp1/" class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-green-300 hover:shadow-lg transition-all duration-300">
-              <div class="text-3xl mb-3">🥗</div>
-              <h4 class="font-semibold text-gray-900 group-hover:text-green-600 mb-2">Régime GLP-1</h4>
-              <p class="text-sm text-gray-600">Alimentation adaptée aux traitements</p>
+            <a href="/collections/traitements-glp1/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200">
+              Guides des Traitements
             </a>
-
-            <a href="/collections/medecins-glp1-france/" class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
-              <div class="text-3xl mb-3">👨‍⚕️</div>
-              <h4 class="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">Trouver un Médecin</h4>
-              <p class="text-sm text-gray-600">Spécialistes près de chez vous</p>
-            </a>
-
-            <a href="/collections/alternatives-glp1/" class="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-lg transition-all duration-300">
-              <div class="text-3xl mb-3">🌿</div>
-              <h4 class="font-semibold text-gray-900 group-hover:text-indigo-600 mb-2">Alternatives Naturelles</h4>
-              <p class="text-sm text-gray-600">Solutions complémentaires</p>
+            <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-medium rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200">
+              Effets et Sécurité
             </a>
           </div>
         </div>
       </div>
+
+      <!-- JavaScript pour le slider -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const container = document.getElementById('articles-container');
+          const prevBtn = document.getElementById('prev-btn');
+          const nextBtn = document.getElementById('next-btn');
+          
+          if (container && prevBtn && nextBtn) {
+            let scrollAmount = 0;
+            const cardWidth = 350 + 24; // width + gap
+            
+            nextBtn.addEventListener('click', () => {
+              scrollAmount += cardWidth;
+              const maxScroll = container.scrollWidth - container.clientWidth;
+              if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+              container.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+            
+            prevBtn.addEventListener('click', () => {
+              scrollAmount -= cardWidth;
+              if (scrollAmount < 0) scrollAmount = 0;
+              container.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+            
+            // Auto-scroll toutes les 5 secondes
+            setInterval(() => {
+              if (scrollAmount < container.scrollWidth - container.clientWidth) {
+                nextBtn.click();
+              } else {
+                scrollAmount = 0;
+                container.style.transform = `translateX(0px)`;
+              }
+            }, 5000);
+          }
+        });
+      </script>
+
+      <style>
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        #articles-container {
+          transition: transform 0.3s ease;
+        }
+      </style>
     </section>
 
     <!-- Célébrités et GLP-1 -->
