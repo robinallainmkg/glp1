@@ -66,7 +66,7 @@ priority: 1
         Consultez notre liste complète des <strong>20+ centres spécialisés</strong> qui proposent Mounjaro : 
         CHU, hôpitaux, cabinets privés, avec adresses, téléphones et délais de rendez-vous.
       </p>
-      <a href="/collections/actualites-glp1/centres-mounjaro-france/" 
+      <a href="/collections/traitements-glp1/centres-mounjaro-france/" 
          class="inline-flex items-center gap-2 bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-50 transition-all duration-200 shadow-md hover:shadow-lg">
         <span>🏥 Trouver un centre près de chez vous</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
