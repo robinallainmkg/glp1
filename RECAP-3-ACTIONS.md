@@ -7,10 +7,10 @@
 ## 1️⃣ **Création Article : Centres Mounjaro France** ✅
 
 ### 📄 Fichier créé
-`/src/content/actualites-glp1/centres-mounjaro-france.md`
+`/src/content/traitements-glp1/centres-mounjaro-france.md`
 
 ### 🎯 URL finale
-`https://glp1-france.fr/collections/actualites-glp1/centres-mounjaro-france/`
+**`https://glp1-france.fr/collections/traitements-glp1/centres-mounjaro-france/`**
 
 ### 📊 Contenu
 - **20+ centres hospitaliers** répertoriés (Paris, Lyon, Marseille, Toulouse, Bordeaux, etc.)
