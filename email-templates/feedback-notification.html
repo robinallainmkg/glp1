@@ -1,0 +1,130 @@
+<!-- Template d'email pour notification de nouveau feedback -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouveau Feedback - GLP-1 France</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f3f4f6;">
+  
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f3f4f6; padding: 20px;">
+    <tr>
+      <td align="center">
+        
+        <!-- Container principal -->
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); padding: 30px 40px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">
+                💬 Nouveau Feedback Reçu !
+              </h1>
+              <p style="margin: 10px 0 0 0; color: #bfdbfe; font-size: 16px;">
+                GLP-1 France
+              </p>
+            </td>
+          </tr>
+          
+          <!-- Contenu -->
+          <tr>
+            <td style="padding: 40px;">
+              
+              <!-- Type de feedback -->
+              <div style="background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 15px 20px; margin-bottom: 30px; border-radius: 8px;">
+                <p style="margin: 0; color: #1e40af; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">
+                  Type : ${FEEDBACK_TYPE}
+                </p>
+              </div>
+              
+              <!-- Informations utilisateur -->
+              <h2 style="color: #111827; font-size: 20px; margin: 0 0 20px 0; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;">
+                📋 Informations
+              </h2>
+              
+              <table width="100%" cellpadding="8" cellspacing="0" style="margin-bottom: 30px;">
+                <tr>
+                  <td style="color: #6b7280; font-size: 14px; width: 120px; vertical-align: top;">
+                    <strong>Nom :</strong>
+                  </td>
+                  <td style="color: #111827; font-size: 14px;">
+                    ${USER_NAME}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #6b7280; font-size: 14px; width: 120px; vertical-align: top;">
+                    <strong>Email :</strong>
+                  </td>
+                  <td style="color: #111827; font-size: 14px;">
+                    <a href="mailto:${USER_EMAIL}" style="color: #2563eb; text-decoration: none;">
+                      ${USER_EMAIL}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #6b7280; font-size: 14px; width: 120px; vertical-align: top;">
+                    <strong>Date :</strong>
+                  </td>
+                  <td style="color: #111827; font-size: 14px;">
+                    ${SUBMISSION_DATE}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #6b7280; font-size: 14px; width: 120px; vertical-align: top;">
+                    <strong>Page :</strong>
+                  </td>
+                  <td style="color: #111827; font-size: 14px;">
+                    <a href="${PAGE_URL}" style="color: #2563eb; text-decoration: none;">
+                      ${PAGE_URL}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              
+              <!-- Message -->
+              <h2 style="color: #111827; font-size: 20px; margin: 0 0 20px 0; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px;">
+                💬 Message / Réponses
+              </h2>
+              
+              <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+                <p style="margin: 0; color: #374151; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">
+${FEEDBACK_CONTENT}
+                </p>
+              </div>
+              
+              <!-- Actions -->
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="mailto:${USER_EMAIL}" style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: bold; font-size: 16px;">
+                      ✉️ Répondre par Email
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f9fafb; padding: 30px 40px; border-top: 1px solid #e5e7eb; text-align: center;">
+              <p style="margin: 0 0 10px 0; color: #6b7280; font-size: 14px;">
+                GLP-1 France - Plateforme d'information sur les traitements GLP-1
+              </p>
+              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                Dashboard admin : <a href="https://glp1-france.fr/admin" style="color: #2563eb; text-decoration: none;">glp1-france.fr/admin</a>
+              </p>
+            </td>
+          </tr>
+          
+        </table>
+        
+      </td>
+    </tr>
+  </table>
+  
+</body>
+</html>

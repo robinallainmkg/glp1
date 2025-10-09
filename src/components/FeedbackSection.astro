@@ -1,0 +1,263 @@
+---
+// Composant de feedback pour capturer l'engagement utilisateur
+---
+
+<section class="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          💬 Votre Avis Nous Intéresse !
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Aidez-nous à améliorer GLP-1 France en partageant votre expérience ou vos questions
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <!-- Chat en direct -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Chat en Direct</h3>
+          <p class="text-gray-600 mb-4">
+            Posez vos questions en temps réel à notre équipe d'experts
+          </p>
+          <button 
+            onclick="if(typeof Tawk_API !== 'undefined') { Tawk_API.toggle(); }"
+            class="w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors"
+          >
+            💬 Discuter Maintenant
+          </button>
+        </div>
+
+        <!-- Sondage rapide -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Sondage Rapide</h3>
+          <p class="text-gray-600 mb-4">
+            2 minutes pour nous aider à mieux vous servir
+          </p>
+          <a 
+            href="#" 
+            onclick="openFeedbackModal('survey')"
+            class="block w-full bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition-colors"
+          >
+            📝 Répondre au Sondage
+          </a>
+        </div>
+
+        <!-- Partager votre histoire -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+          <div class="text-4xl mb-4">⭐</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Témoignage</h3>
+          <p class="text-gray-600 mb-4">
+            Partagez votre parcours GLP-1 pour aider d'autres personnes
+          </p>
+          <a 
+            href="#" 
+            onclick="openFeedbackModal('testimonial')"
+            class="block w-full bg-purple-600 text-white font-semibold py-3 rounded-xl hover:bg-purple-700 transition-colors"
+          >
+            ✨ Partager mon Histoire
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats d'engagement -->
+      <div class="bg-white rounded-2xl shadow-lg p-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <div class="text-2xl font-bold text-green-600 mb-1">500+</div>
+            <div class="text-sm text-gray-600">Questions Répondues</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-blue-600 mb-1">24h</div>
+            <div class="text-sm text-gray-600">Temps de Réponse</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-purple-600 mb-1">95%</div>
+            <div class="text-sm text-gray-600">Satisfaction</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-orange-600 mb-1">100%</div>
+            <div class="text-sm text-gray-600">Gratuit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal de feedback -->
+<div id="feedbackModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-6">
+        <h3 id="modalTitle" class="text-2xl font-bold text-gray-900"></h3>
+        <button onclick="closeFeedbackModal()" class="text-gray-400 hover:text-gray-600 text-2xl">×</button>
+      </div>
+      
+      <div id="modalContent">
+        <!-- Contenu dynamique selon le type de feedback -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Fonctions de gestion des modals de feedback
+  function openFeedbackModal(type) {
+    const modal = document.getElementById('feedbackModal');
+    const title = document.getElementById('modalTitle');
+    const content = document.getElementById('modalContent');
+    
+    switch(type) {
+      case 'survey':
+        title.textContent = '📊 Sondage Rapide';
+        content.innerHTML = `
+          <form onsubmit="submitFeedback(event, 'survey')">
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Comment avez-vous découvert notre site ?
+                </label>
+                <select class="w-full p-3 border border-gray-300 rounded-lg" name="discovery" required>
+                  <option value="">Choisir...</option>
+                  <option value="google">Google</option>
+                  <option value="social">Réseaux sociaux</option>
+                  <option value="recommendation">Recommandation</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Que recherchez-vous principalement ?
+                </label>
+                <select class="w-full p-3 border border-gray-300 rounded-lg" name="interest" required>
+                  <option value="">Choisir...</option>
+                  <option value="price">Prix des traitements</option>
+                  <option value="effects">Effets secondaires</option>
+                  <option value="doctor">Trouver un médecin</option>
+                  <option value="experience">Témoignages</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Notez la qualité de notre contenu (1-5)
+                </label>
+                <div class="flex gap-2">
+                  ${[1,2,3,4,5].map(n => `
+                    <button type="button" onclick="selectRating(${n})" 
+                            class="rating-btn w-12 h-12 border-2 border-gray-300 rounded-lg hover:bg-yellow-100">
+                      ${n}⭐
+                    </button>
+                  `).join('')}
+                </div>
+                <input type="hidden" name="rating" id="rating" required>
+              </div>
+              
+              <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Envoyer le Sondage
+              </button>
+            </div>
+          </form>
+        `;
+        break;
+        
+      case 'testimonial':
+        title.textContent = '⭐ Partagez votre Témoignage';
+        content.innerHTML = `
+          <form onsubmit="submitFeedback(event, 'testimonial')">
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Prénom (public)
+                </label>
+                <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded-lg" 
+                       placeholder="Ex: Marie" required>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Email (privé - pour vous recontacter)
+                </label>
+                <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" 
+                       placeholder="votre@email.com" required>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  Votre parcours GLP-1
+                </label>
+                <textarea name="story" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" 
+                          placeholder="Partagez votre expérience : traitement suivi, résultats, conseils..."
+                          required></textarea>
+              </div>
+              
+              <div class="text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
+                💡 <strong>Votre témoignage pourra être publié</strong> (avec votre accord) pour aider d'autres personnes dans leur parcours.
+              </div>
+              
+              <button type="submit" class="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                Partager mon Témoignage
+              </button>
+            </div>
+          </form>
+        `;
+        break;
+    }
+    
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeFeedbackModal() {
+    document.getElementById('feedbackModal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+  
+  function selectRating(rating) {
+    document.getElementById('rating').value = rating;
+    document.querySelectorAll('.rating-btn').forEach((btn, i) => {
+      if(i < rating) {
+        btn.classList.add('bg-yellow-100', 'border-yellow-400');
+      } else {
+        btn.classList.remove('bg-yellow-100', 'border-yellow-400');
+      }
+    });
+  }
+  
+  function submitFeedback(event, type) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    
+    // Ici tu peux ajouter l'envoi vers ta base de données
+    // Pour l'instant, on simule un succès
+    
+    const content = document.getElementById('modalContent');
+    content.innerHTML = `
+      <div class="text-center py-8">
+        <div class="text-6xl mb-4">🎉</div>
+        <h3 class="text-2xl font-bold text-green-600 mb-4">Merci !</h3>
+        <p class="text-gray-600 mb-6">
+          ${type === 'survey' ? 'Votre avis nous aide à améliorer le site.' : 'Nous reviendrons vers vous rapidement.'}
+        </p>
+        <button onclick="closeFeedbackModal()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+          Fermer
+        </button>
+      </div>
+    `;
+    
+    // Fermer automatiquement après 3 secondes
+    setTimeout(closeFeedbackModal, 3000);
+  }
+  
+  // Fermer le modal en cliquant à l'extérieur
+  document.getElementById('feedbackModal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      closeFeedbackModal();
+    }
+  });
+</script>

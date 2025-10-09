@@ -13,6 +13,30 @@ priority: 1
 
 # 🔥 Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
 
+<div class="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white p-6 rounded-2xl mb-8 shadow-2xl border-2 border-orange-400">
+  <div class="flex items-start gap-4">
+    <div class="text-4xl">🚨</div>
+    <div>
+      <h3 class="text-xl font-bold mb-2">📅 Disponibilité en France : Mise à Jour 2025</h3>
+      <p class="text-white/90 leading-relaxed mb-3">
+        <strong>Mounjaro (tirzepatide)</strong> possède l'<strong>autorisation européenne (AMM)</strong> depuis 2022, 
+        mais sa <strong>commercialisation en France</strong> est en cours de déploiement progressif.
+      </p>
+      <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+        <p class="text-sm font-semibold mb-1">✅ Situation actuelle :</p>
+        <ul class="text-sm space-y-1 text-white/90">
+          <li>• <strong>Prescription possible</strong> dans certains centres spécialisés</li>
+          <li>• <strong>Importation nominative</strong> autorisée par certains médecins</li>
+          <li>• <strong>Disponibilité complète</strong> attendue courant 2025</li>
+        </ul>
+      </div>
+      <p class="text-xs mt-3 text-white/70">
+        💡 <strong>Conseil</strong> : Consultez un endocrinologue ou diabétologue pour connaître les modalités d'accès actuelles dans votre région.
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8 p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-500">
   <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
     <div class="text-4xl font-black text-blue-600 mb-2">-20%</div>
@@ -28,9 +52,29 @@ priority: 1
   </div>
 </div>
 
-<div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-xl mb-6 shadow-lg">
-  🎯 <strong>Boom 2025</strong> : Mounjaro devient LE traitement de référence en France ! 
-  Découvrez pourquoi 89% des patients choisissent Mounjaro plutôt qu'Ozempic.
+<div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-xl mb-6 shadow-lg">
+  🎯 <strong>Traitement révolutionnaire</strong> : Découvrez pourquoi Mounjaro obtient des résultats supérieurs à Ozempic (-20% vs -15% de perte de poids) ! 
+  Guide complet sur l'efficacité, la posologie et les modalités d'accès.
+</div>
+
+<div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-5 rounded-xl mb-6 shadow-lg border-2 border-green-400">
+  <div class="flex items-start gap-3">
+    <div class="text-3xl">📍</div>
+    <div>
+      <div class="font-bold text-lg mb-2">Où trouver Mounjaro en France ?</div>
+      <p class="text-green-50 mb-3">
+        Consultez notre liste complète des <strong>20+ centres spécialisés</strong> qui proposent Mounjaro : 
+        CHU, hôpitaux, cabinets privés, avec adresses, téléphones et délais de rendez-vous.
+      </p>
+      <a href="/collections/actualites-glp1/centres-mounjaro-france/" 
+         class="inline-flex items-center gap-2 bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-50 transition-all duration-200 shadow-md hover:shadow-lg">
+        <span>🏥 Trouver un centre près de chez vous</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
