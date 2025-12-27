@@ -22,6 +22,57 @@ affiliateConfig:
   title: "Produits Recommandés"
   position: "sidebar"
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Prix Zepbound 2025 : Coût par Dosage et Remboursement Mutuelle",
+  "description": "Prix Zepbound en pharmacie : 312€ par mois. Coût réel après remboursement En cours.",
+  "url": "https://glp1-france.fr/collections/glp1-cout/prix-zepbound-france",
+  "datePublished": "2025-12-27",
+  "dateModified": "2025-12-27",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Marie Dubois"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr"
+  },
+  "specialty": "Endocrinology",
+  "about": {
+    "@type": "Drug",
+    "name": "Zepbound",
+    "activeIngredient": "Tirzepatide",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Novo Nordisk"
+    }
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le prix de Zepbound en pharmacie en France ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le prix officiel de Zepbound en pharmacie est de 312€ par mois. Après remboursement (En cours Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Zepbound est-il remboursé en 2025 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zepbound est remboursé à En cours par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+        }
+      }
+    ]
+  }
+}
+</script>
 
 # Prix Zepbound France : Guide Complet 2025
 

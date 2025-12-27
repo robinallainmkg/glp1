@@ -13,6 +13,57 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Prix Trulicity 2025 : Coût par Dosage et Remboursement Mutuelle",
+  "description": "Prix Trulicity en pharmacie : 85€ par mois. Coût réel après remboursement 65%.",
+  "url": "https://glp1-france.fr/collections/glp1-cout/prix-trulicity-france",
+  "datePublished": "2025-12-27",
+  "dateModified": "2025-12-27",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Marie Dubois"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr"
+  },
+  "specialty": "Endocrinology",
+  "about": {
+    "@type": "Drug",
+    "name": "Trulicity",
+    "activeIngredient": "Dulaglutide",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Novo Nordisk"
+    }
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le prix de Trulicity en pharmacie en France ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le prix officiel de Trulicity en pharmacie est de 85€ par mois. Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trulicity est-il remboursé en 2025 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trulicity est remboursé à 65% par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+        }
+      }
+    ]
+  }
+}
+</script>
 
 # Prix Trulicity 2025 : Coût et Remboursement en France
 

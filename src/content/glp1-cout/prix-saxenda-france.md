@@ -13,6 +13,57 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Prix Saxenda 2025 : Coût par Dosage et Remboursement Mutuelle",
+  "description": "Prix Saxenda en pharmacie : 70-80€ par mois. Coût réel après remboursement 65%.",
+  "url": "https://glp1-france.fr/collections/glp1-cout/prix-saxenda-france",
+  "datePublished": "2025-12-27",
+  "dateModified": "2025-12-27",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Marie Dubois"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr"
+  },
+  "specialty": "Endocrinology",
+  "about": {
+    "@type": "Drug",
+    "name": "Saxenda",
+    "activeIngredient": "Liraglutide",
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Novo Nordisk"
+    }
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le prix de Saxenda en pharmacie en France ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le prix officiel de Saxenda en pharmacie est de 70-80€ par mois. Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Saxenda est-il remboursé en 2025 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Saxenda est remboursé à 65% par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+        }
+      }
+    ]
+  }
+}
+</script>
 
 ## 💰 Prix Saxenda en Pharmacie
 
