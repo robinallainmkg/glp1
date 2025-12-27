@@ -24,10 +24,6 @@ CREATE INDEX IF NOT EXISTS idx_contacts_status ON contacts(status);
 -- RLS (Row Level Security) - Permettre les inserts anonymes
 ALTER TABLE contacts ENABLE ROW LEVEL SECURITY;
 
--- Supprimer les policies existantes si elles existent
-DROP POLICY IF EXISTS "Allow anonymous contact inserts" ON contacts;
-DROP POLICY IF EXISTS "Allow read for service role" ON contacts;
-
 -- Policy pour permettre les inserts sans authentification
 CREATE POLICY "Allow anonymous contact inserts" ON contacts
   FOR INSERT
