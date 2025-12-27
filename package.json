@@ -52,6 +52,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@astrojs/vercel": "^7.8.2",
     "prettier": "^3.6.2"
   },
   "overrides": {
