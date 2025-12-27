@@ -1,76 +1,100 @@
-# Redirections 301 pour pages supprimées/déplacées
+# Redirections 301 pour corriger les 404 de Google Search Console
+# DIRECTION CORRECTE: /collections/* → catégories directes
 
-# Pages statiques supprimées
-/pages-statiques/ / 301
-/pages-statiques /  301
-/pages-statiques/* / 301
+# ============================================================
+# RÈGLE 1: Médicaments spécifiques → Guides correspondants
+# ============================================================
+/collections/medicaments-glp1/wegovy-avis /traitements-glp1/guide-complet-wegovy/ 301
+/collections/medicaments-glp1/saxenda-prix /glp1-cout/prix-saxenda-france/ 301
+/collections/medicaments-glp1/ozempic-injection-prix /glp1-cout/prix-ozempic-france/ 301
+/collections/medicaments-glp1/mounjaro-effet-secondaire /traitements-glp1/guide-complet-mounjaro/ 301
+/collections/medicaments-glp1/mounjaro-injection-pour-maigrir /traitements-glp1/guide-complet-mounjaro/ 301
+/collections/medicaments-glp1/victoza-posologie /traitements-glp1/guide-complet-victoza/ 301
+/collections/medicaments-glp1/victoza-rupture /traitements-glp1/guide-complet-victoza/ 301
+/collections/medicaments-glp1/trulicity-ou-ozempic /traitements-glp1/guide-complet-trulicity/ 301
+/collections/medicaments-glp1/trulicity-danger /traitements-glp1/guide-complet-trulicity/ 301
 
-# Témoignages déplacés vers collection
-/pages-statiques/serena-williams-glp1/ /collections/temoignages/serena-williams-glp1/ 301
-/temoignage-marie-transformation-glp1/ /collections/temoignages/marie-transformation-glp1/ 301
-/temoignage-laurent-transformation-glp1/ /collections/temoignages/laurent-transformation-glp1/ 301
-/temoignage-sophie-transformation-glp1/ /collections/temoignages/sophie-transformation-glp1/ 301
-/temoignages/ /collections/temoignages/ 301
-/temoignages/avant-apres-glp1/ /collections/temoignages/ 301
+# ============================================================
+# RÈGLE 2: Suppression /collections/ pour toutes catégories
+# ============================================================
+/collections/glp1-cout/* /glp1-cout/:splat 301
+/collections/glp1-perte-de-poids/* /glp1-perte-de-poids/:splat 301
+/collections/glp1-diabete/* /glp1-diabete/:splat 301
+/collections/alternatives-glp1/* /alternatives-glp1/:splat 301
+/collections/regime-glp1/* /regime-glp1/:splat 301
+/collections/effets-secondaires-glp1/* /effets-secondaires-glp1/:splat 301
+/collections/recherche-glp1/* /recherche-glp1/:splat 301
+/collections/avant-apres-glp1/* /avant-apres-glp1/:splat 301
+/collections/temoignages/* /temoignages/:splat 301
+/collections/medecins-glp1-france/* /medecins-glp1-france/:splat 301
+/collections/medicaments-glp1/* /traitements-glp1/:splat 301
+/collections/traitements-glp1/* /traitements-glp1/:splat 301
 
-# Guides déplacés vers collections
-/guides/guide-complet-ozempic/ /collections/traitements-glp1/guide-complet-ozempic/ 301
-/guides/guide-complet-mounjaro/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
-/guides/guide-complet-wegovy/ /collections/traitements-glp1/guide-complet-wegovy/ 301
-/guides/guide-complet-trulicity/ /collections/traitements-glp1/guide-complet-trulicity/ 301
-/guides/guide-complet-saxenda/ /collections/traitements-glp1/guide-complet-saxenda/ 301
+# ============================================================
+# RÈGLE 3: Annuaire → medecins-glp1-france
+# ============================================================
+/annuaire/* /medecins-glp1-france/:splat 301
 
-# Collections déplacées
-/medicaments-glp1/ /collections/traitements-glp1/ 301
-/glp1-cout/ /collections/glp1-cout/ 301
-/effets-secondaires-glp1/ /collections/effets-secondaires-glp1/ 301
-/medecins-glp1-france/ /collections/medecins-glp1-france/ 301
-/regime-glp1/ /collections/regime-glp1/ 301
-/alternatives-glp1/ /collections/alternatives-glp1/ 301
-/glp1-perte-de-poids/ /collections/glp1-perte-de-poids/ 301
+# ============================================================
+# RÈGLE 4: Guides déplacés
+# ============================================================
+/guides/guide-complet-trulicity/ /traitements-glp1/guide-complet-trulicity/ 301
+/guides/guide-complet-januvia/ /traitements-glp1/guide-complet-januvia/ 301
+/guides/guide-complet-mounjaro/ /traitements-glp1/guide-complet-mounjaro/ 301
+/guides/guide-complet-ozempic/ /traitements-glp1/guide-complet-ozempic/ 301
+/guides/guide-complet-wegovy/ /traitements-glp1/guide-complet-wegovy/ 301
+/guides/guide-complet-saxenda/ /traitements-glp1/guide-complet-saxenda/ 301
 
-# Pages de prix déplacées
-/ozempic-prix/ /collections/glp1-cout/prix-ozempic-france/ 301
-/wegovy-prix/ /collections/glp1-cout/prix-wegovy-france/ 301
-/saxenda-prix/ /collections/glp1-cout/prix-saxenda-france/ 301
-/mounjaro-prix/ /collections/glp1-cout/prix-mounjaro-france/ 301
+# ============================================================
+# RÈGLE 5: Pages backup/test → homepage
+# ============================================================
+/index-backup-original/ / 301
+/diagnostic-live-content-backup/ / 301
+/quel-traitement-glp1-choisir-backup/ / 301
+/quel-traitement-glp1-choisir-fixed/ / 301
+/test-affiliation/ / 301
+/admin-stats-new/ / 301
 
-# Pages Mounjaro anciennes URLs 
-/medicaments-glp1/mounjaro-prix-france/ /collections/glp1-cout/prix-mounjaro-france/ 301
-# Redirections pour les pages déplacées
-/about /
-/blog /articles/
-/articles/*/comments /articles/*
-/collections/guide-complet-ozempic/* /collections/traitements-glp1/guide-complet-ozempic/ 301
-/collections/guide-complet-wegovy/* /collections/traitements-glp1/guide-complet-wegovy/ 301
-/collections/guide-complet-saxenda/* /collections/traitements-glp1/guide-complet-saxenda/ 301
-/collections/guide-complet-mounjaro/* /collections/traitements-glp1/guide-complet-mounjaro/ 301
-/collections/guide-complet-rybelsus/* /collections/traitements-glp1/guide-complet-rybelsus/ 301
-/collections/guide-complet-trulicity/* /collections/traitements-glp1/guide-complet-trulicity/ 301
-/collections/guide-complet-victoza/* /collections/traitements-glp1/guide-complet-victoza/ 301
-/collections/guide-complet-zepbound/* /collections/traitements-glp1/guide-complet-zepbound/ 301
+# ============================================================
+# RÈGLE 6: Pages qui n'existent plus → pages appropriées
+# ============================================================
+/medicaments-glp1/* /traitements-glp1/:splat 301
+/experts/ / 301
+/produits-recommandes/ / 301
+/guide-debutant/ / 301
+/guide-glp1-perte-de-poids/ / 301
+/guide-beaute-perte-de-poids-glp1/ / 301
+/qu-est-ce-que-glp1/ / 301
 
-# Redirections Mounjaro spécifiques (pour le trafic spike)
-/medicaments-glp1/mounjaro-prix-france/ /collections/glp1-cout/prix-mounjaro-france/ 301
-/medicaments-glp1/mounjaro-prix/ /collections/glp1-cout/prix-mounjaro-france/ 301
-/prix-mounjaro/ /collections/glp1-cout/prix-mounjaro-france/ 301
-/mounjaro-prix/ /collections/glp1-cout/prix-mounjaro-france/ 301
-/guide-mounjaro/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
-/mounjaro-guide/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
-/traitement-mounjaro/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
-/guides/mounjaro/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
-/mounjaro/ /collections/traitements-glp1/guide-complet-mounjaro/ 301
+# ============================================================
+# RÈGLE 7: URLs sans trailing slash
+# ============================================================
+/glp1-diabete /glp1-diabete/ 301
+/medecins-glp1-france /medecins-glp1-france/ 301
+/avant-apres-glp1 /avant-apres-glp1/ 301
+/recherche-glp1 /recherche-glp1/ 301
+/glp1-cout /glp1-cout/ 301
 
-# Guides déplacés
-/qu-est-ce-que-glp1/ /guides/qu-est-ce-que-glp1/ 301
-/quel-traitement-glp1-choisir/ /guides/quel-traitement-glp1-choisir/ 301
-/guide-beaute-perte-de-poids-glp1/ /guides/guide-beaute-perte-de-poids-glp1/ 301
+# ============================================================
+# RÈGLE 8: Témoignages  manquants
+# ============================================================
+/temoignage-marie-transformation-glp1/ /temoignages/ 301
+/temoignage-sophie-transformation-glp1/ /temoignages/ 301
+/temoignage-laurent-transformation-glp1/ /temoignages/ 301
+/pages-statiques/serena-williams-glp1/ /temoignages/ 301
 
-# Pages légales déplacées
-/mentions-legales/ /legal/mentions-legales/ 301
-/politique-confidentialite/ /legal/politique-confidentialite/ 301
+# ============================================================
+# RÈGLE 9: Pages légales
+# ============================================================
+/legal/confidentialite/ /politique-confidentialite/ 301
+/legal/cgu/ /mentions-legales/ 301
 
-# Outils déplacés
+# ============================================================
+# RÈGLE 10: Mounjaro spécifiques (ancien trafic)
+# ============================================================
+/medicaments-glp1/mounjaro-prix-france/ /glp1-cout/prix-mounjaro-france/ 301
+/mounjaro-prix/ /glp1-cout/prix-mounjaro-france/ 301
+/mounjaro/ /traitements-glp1/guide-complet-mounjaro/ 301
 /produits-recommandes/ /outils/produits-recommandes/ 301
 
 # Page 404 pour toutes les autres pages
