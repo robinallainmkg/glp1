@@ -14,20 +14,8 @@ CREATE TABLE IF NOT EXISTS diagnostics (
 CREATE INDEX IF NOT EXISTS idx_diagnostics_completed_at ON diagnostics(completed_at DESC);
 CREATE INDEX IF NOT EXISTS idx_diagnostics_recommendation ON diagnostics(recommendation);
 
--- RLS (Row Level Security) - Permettre les inserts anonymes
-ALTER TABLE diagnostics ENABLE ROW LEVEL SECURITY;
-
--- Policy pour permettre les inserts sans authentification
-CREATE POLICY "Allow anonymous inserts" ON diagnostics
-  FOR INSERT
-  TO anon
-  WITH CHECK (true);
-
--- Policy pour permettre la lecture (pour les stats futures)
-CREATE POLICY "Allow read for service role" ON diagnostics
-  FOR SELECT
-  TO service_role
-  USING (true);
+-- RLS désactivé pour permettre les inserts anonymes
+ALTER TABLE diagnostics DISABLE ROW LEVEL SECURITY;
 
 -- Commentaires pour documentation
 COMMENT ON TABLE diagnostics IS 'Stocke les résultats des diagnostics personnalisés GLP-1';
