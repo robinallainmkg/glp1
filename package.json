@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --port 4321 --open",
-    "build": "astro build",
+    "build": "astro build && node scripts/inject-vercel-redirects.mjs",
     "astro:build": "astro build",
     "preview": "astro preview --port 4321 --open",
     "start": "astro preview --port 4321 --open",
@@ -52,7 +52,6 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^7.8.2",
     "prettier": "^3.6.2"
   },
   "overrides": {
