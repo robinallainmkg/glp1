@@ -2,6 +2,7 @@
 import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
 import { getAllAffiliateProducts } from "../../lib/affiliate";
 import { generateAffiliateLink } from '../../utils/affiliateLinks';
+import { supabase } from '../../lib/supabase';
 
 // Récupération des produits d'affiliation depuis Supabase
 const allProducts = await getAllAffiliateProducts();
@@ -815,11 +816,39 @@ const affiliateConfig = {
   </style>
 
   <script>
+    import { supabase } from '../../lib/supabase';
+
     // permissive types for inline client script
     let currentQuestion: number = 1;
     const totalQuestions: number = 9;
     const answers: any = {};
     let selectedEffets: any[] = [];
+
+    // Fonction pour enregistrer le diagnostic dans Supabase
+    async function saveDiagnosticToSupabase(answers: any, recommendation: string, scores?: { ozempic: number, wegovy: number }) {
+      try {
+        const diagnosticData = {
+          answers: answers,
+          recommendation: recommendation,
+          scores: scores || null,
+          completed_at: new Date().toISOString(),
+          user_agent: navigator.userAgent,
+          page_url: window.location.href
+        };
+
+        const { data, error } = await supabase
+          .from('diagnostics')
+          .insert([diagnosticData]);
+
+        if (error) {
+          console.error('❌ Erreur Supabase lors de l\'enregistrement du diagnostic:', error);
+        } else {
+          console.log('✅ Diagnostic enregistré dans Supabase:', data);
+        }
+      } catch (err) {
+        console.error('❌ Erreur lors de l\'enregistrement:', err);
+      }
+    }
 
     // Navigation functions
   function showQuestion(n: number) {
@@ -1209,6 +1238,9 @@ const affiliateConfig = {
       `;
 
       document.getElementById('results-content').innerHTML = solutions;
+      
+      // Enregistrer le diagnostic dans Supabase
+      saveDiagnosticToSupabase(answers, 'effets-secondaires', { ozempic: 0, wegovy: 0 });
     }
 
     function showTraitementResults(ozempicScore: number, wegovyScore: number) {
@@ -1385,6 +1417,10 @@ const affiliateConfig = {
       } else {
         console.error('Results element not found!');
       }
+      
+      // Enregistrer le diagnostic dans Supabase
+      const recommendationType = ozempicScore > wegovyScore ? 'ozempic' : (wegovyScore > ozempicScore ? 'wegovy' : 'both');
+      saveDiagnosticToSupabase(answers, recommendationType, { ozempic: ozempicScore, wegovy: wegovyScore });
     }
 
     // Event listeners (guarded to avoid SSR/type-check issues)

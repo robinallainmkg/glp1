@@ -790,11 +790,10 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                 
                 console.log('📝 Form data:', data);
                 
-                // Prepare data for Supabase users table
-                const userData = {
+                // Prepare data for Supabase contacts table
+                const contactData = {
                   email: data.email,
                   nom: data.name || '',
-                  prenom: '',
                   telephone: data.phone || null,
                   age: data.age || null,
                   subject: data.subject || '',
@@ -802,15 +801,14 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                   treatment: data.treatment || null,
                   newsletter: data.newsletter === 'yes',
                   concerns: Array.isArray(data.concerns) ? data.concerns : (data.concerns ? [data.concerns] : []),
-                  created_at: new Date().toISOString(),
-                  updated_at: new Date().toISOString()
+                  created_at: new Date().toISOString()
                 };
                 
-                console.log('💾 Sending to Supabase:', userData);
+                console.log('💾 Sending to Supabase contacts table:', contactData);
                 
                 // Test Supabase connection first
                 const { error: connectionError } = await supabase
-                  .from('users')
+                  .from('contacts')
                   .select('*')
                   .limit(1);
                 
@@ -820,13 +818,10 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                   console.log('✅ Supabase connection OK');
                 }
                 
-                // Insert into Supabase users table
+                // Insert into Supabase contacts table
                 const { data: result, error } = await supabase
-                  .from('users')
-                  .upsert(userData, {
-                    onConflict: 'email',
-                    ignoreDuplicates: false
-                  })
+                  .from('contacts')
+                  .insert(contactData)
                   .select();
                 
                 if (error) {
