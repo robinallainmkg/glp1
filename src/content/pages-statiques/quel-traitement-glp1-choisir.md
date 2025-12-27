@@ -153,8 +153,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - Saxenda (~100-140€)
 
 #### Budget élevé :
-- Wegovy (~130-270€)
-- Mounjaro (~150-300€)
+- Wegovy (~120-140€)
+- Mounjaro (~150-180€)
 
 ## Effets secondaires et tolérance
 
@@ -208,8 +208,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 | Victoza | 90-110€ | ~60-70€ | 30-40€ |
 | Ozempic | 90-130€ | ~60-85€ | 30-45€ |
 | Saxenda | 100-140€ | ~65-90€ | 35-50€ |
-| Wegovy | 130-270€ | ~85-175€ | 45-95€ |
-| Mounjaro | 150-300€ | ~100-195€ | 50-105€ |
+| Wegovy | 120-140€ | ~42-49€ | 12-14€ |
+| Mounjaro | 150-180€ | ~53-63€ | 15-18€ |
 
 ### Aides financières disponibles
 

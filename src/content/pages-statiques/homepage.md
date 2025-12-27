@@ -33,7 +33,7 @@ Les **agonistes du récepteur GLP-1** (Glucagon-Like Peptide-1) représentent un
 | Traitement | Indication | Efficacité Poids | Prix/Mois |
 |------------|------------|------------------|-----------|
 | **Ozempic** | Diabète T2 | -12% à -15% | 78€ |
-| **Wegovy** | Obésité | -15% à -17% | 280€ |
+| **Wegovy** | Obésité | -15% à -17% | 120-140€ |
 | **Saxenda** | Obésité | -8% à -12% | 165€ |
 | **Mounjaro** | Diabète T2 | -17% à -21% | 312€ |
 | **Trulicity** | Diabète T2 | -3% à -5% | 89€ |

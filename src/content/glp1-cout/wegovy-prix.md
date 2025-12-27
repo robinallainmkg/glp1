@@ -31,13 +31,13 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le prix de Wegovy en France varie entre 90€ et 270€ par mois selon le dosage prescrit. Ce médicament révolutionnaire pour la perte de poids représente un investissement important, mais plusieurs solutions de financement et de remboursement permettent de réduire considérablement ce coût.
+Le prix de Wegovy en France varie entre 73€ et 146€ par mois selon le dosage prescrit. Ce médicament révolutionnaire pour la perte de poids représente un investissement important, mais plusieurs solutions de financement et de remboursement permettent de réduire considérablement ce coût.
 
 ## Points clés à retenir
 
-- **Prix mensuel** : de 90€ à 270€ selon le dosage
+- **Prix mensuel** : de 73€ à 146€ selon le dosage
 - **Remboursement possible** : jusqu'à 65% par la Sécurité Sociale sous conditions
-- **Coût annuel** : entre 1 080€ et 3 240€ avant remboursement
+- **Coût annuel** : entre 876€ et 1 752€ avant remboursement
 - **Alternatives disponibles** : programmes d'aide et génériques en développement
 - **Disponibilité** : ruptures de stock fréquentes en 2024-2025
 
@@ -120,7 +120,7 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 
 | Traitement | Prix mensuel | Total 6 mois | Efficacité | Remboursement |
 |------------|-------------|-------------|------------|---------------|
-| **Wegovy** | 270€ | 1 620€ | -15% du poids | Possible |
+| **Wegovy** | 120-140€ | 720-840€ | -15% du poids | 65% |
 | Saxenda | 190€ | 1 140€ | -8% du poids | Non |
 | Ozempic (hors indication) | 73€ | 438€ | -12% du poids | Oui (si diabète) |
 | Mysimba | 70€ | 420€ | -5% du poids | Non |

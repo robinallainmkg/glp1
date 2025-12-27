@@ -130,19 +130,19 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 **Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Découvrez comment bénéficier du meilleur tarif pour votre traitement contre l'obésité ou le diabète.
 
 - **Diabète type 2 :** 65% remboursé par la Sécurité Sociale (sous conditions d'ALD)
-- **Obésité seule :** Non remboursé (sauf cas exceptionnels avec ALD)
-- **ALD (Affection Longue Durée) :** 100% remboursé pour diabète + obésité
+- **Obésité (IMC ≥30) :** Remboursé à 65% pour Wegovy, Mounjaro, Saxenda depuis 2023
+- **ALD (Affection Longue Durée) :** 100% remboursé pour diabète + obésité sévère
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat
 
-**Pour bénéficier du remboursement GLP-1, vous devez avoir un diabète de type 2 reconnu comme ALD.** L'obésité seule n'est pas remboursée par la Sécurité Sociale en France.
+**Pour bénéficier du remboursement GLP-1 :** Diabète type 2 en ALD OU obésité (IMC ≥30) avec échec mesures hygiéno-diététiques. Wegovy, Mounjaro et Saxenda sont remboursés à 65% pour l'obésité depuis 2023.
 
 ### Prix Réels des Médicaments GLP-1 en Pharmacie 2025
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | 85-110€ | 65% diabète | 30-38€ (remboursé) |
-| **Wegovy** | 85-110€ | Non remboursé | 85-110€ |
-| **Saxenda** | 65-85€ | Non remboursé | 65-85€ |
+| **Ozempic** | 90-120€ | 65% diabète | 30-42€ (remboursé) |
+| **Wegovy** | 120-140€ | 65% obésité | 36-51€ (remboursé) |
+| **Saxenda** | 70-80€ | 65% obésité | 24-28€ (remboursé) |
 | **Trulicity** | 55-75€ | 65% diabète | 19-26€ (remboursé) |
 | **Victoza** | 45-65€ | 65% diabète | 16-23€ (remboursé) |
 | **Rybelsus** | 55-75€ | 65% diabète | 19-26€ (remboursé) |

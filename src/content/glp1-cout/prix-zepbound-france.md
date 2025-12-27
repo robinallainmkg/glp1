@@ -83,7 +83,7 @@ affiliateConfig:
 | Traitement | Prix/mois | Efficacité Poids | Rapport Qualité/Prix |
 |------------|-----------|------------------|---------------------|
 | **Zepbound** | 312€ | 🔥🔥🔥🔥🔥 | ⭐⭐⭐⭐ |
-| **Wegovy** | 280€ | 🔥🔥🔥🔥 | ⭐⭐⭐⭐ |
+| **Wegovy** | 120-140€ | 🔥🔥🔥🔥 | ⭐⭐⭐⭐ |
 | **Saxenda** | 165€ | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ |
 | **Ozempic** | 78€ | 🔥🔥🔥🔥 | ⭐⭐⭐⭐⭐ |
 
