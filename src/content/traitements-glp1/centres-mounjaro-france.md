@@ -487,10 +487,10 @@ Cette page est mise à jour régulièrement avec :
 ## 📚 Ressources Complémentaires
 
 **Articles liés** :
-- [Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro/)
+- [Guide Complet Mounjaro 2025](/traitements-glp1/guide-complet-mounjaro/)
 - [Comparatif GLP-1 : Quel traitement choisir ?](/guides/quel-traitement-glp1-choisir/)
-- [Prix Mounjaro France 2025](/collections/glp1-cout/prix-mounjaro-france/)
-- [Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)
+- [Prix Mounjaro France 2025](/glp1-cout/prix-mounjaro-france/)
+- [Effets Secondaires Mounjaro](/effets-secondaires-glp1/effets-secondaires-mounjaro/)
 
 ---
 

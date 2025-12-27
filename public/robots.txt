@@ -7,13 +7,23 @@ Crawl-delay: 1
 # Sitemap
 Sitemap: https://glp1-france.fr/sitemap.xml
 
-# Bloquer les pages d'administration
+# Bloquer les pages d'administration et test
 Disallow: /admin/
 Disallow: /admin-*
 Disallow: /test-*
 Disallow: /demo-*
 Disallow: /_*
 Disallow: /api/
+Disallow: /*-backup
+Disallow: /diagnostic-*
+Disallow: /index-backup*
+Disallow: /quel-traitement-glp1-choisir-backup
+Disallow: /quel-traitement-glp1-choisir-fixed
+Disallow: /guide-beaute-perte-de-poids-glp1
+Disallow: /produits-recommandes
+Disallow: /experts
+Disallow: /temoignages-glp1
+Disallow: /temoignage-*
 
 # Bloquer les fichiers techniques
 Disallow: /*.json

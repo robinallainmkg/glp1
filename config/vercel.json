@@ -4,7 +4,9 @@
   "installCommand": "npm install",
   "devCommand": "npm run dev",
   "framework": "astro",
-  "regions": ["fra1"],
+  "regions": [
+    "fra1"
+  ],
   "functions": {
     "src/pages/api/**/*.{js,ts}": {
       "runtime": "nodejs18.x"
@@ -42,6 +44,506 @@
     {
       "source": "/collections/medicaments-glp1/mounjaro-prix-france/:path*",
       "destination": "/collections/glp1-cout/prix-mounjaro-france/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/stylo-saxenda",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/alternatives-glp1/alternatives-glp1/peut-on-guerir-du-diabete",
+      "destination": "/alternatives-glp1/alternatives-glp1/peut-on-guerir-du-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/alternatives-glp1/alternatives-glp1/plantes-diabete",
+      "destination": "/alternatives-glp1/alternatives-glp1/plantes-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/ou-trouver-ozempic",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/sitagliptine-effets-secondaires",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/medicament-anti-obesite-novo-nordisk",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/glp1-insuline-interaction",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-cout/wegovy-prix-pharmacie",
+      "destination": "/collections/glp1-cout/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/glp1-hydratation",
+      "destination": "/collections/regime-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/medicament-americain-pour-maigrir",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/nouveau-medicament",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/medicament-americain-pour-maigrir",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/coupe-faim-puissant-interdit-en-france",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/pilule-qui-fait-maigrir",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/orlistat-avant-apres",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/glp1-cout/wegovy-prix",
+      "destination": "/glp1-perte-de-poids/glp1-cout/wegovy-prix/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/dulaglutide-nom-commercial",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/glp1-perte-de-poids/ou-trouver-ozempic",
+      "destination": "/glp1-perte-de-poids/glp1-perte-de-poids/ou-trouver-ozempic/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/glp1-perte-de-poids/ozempic-prix",
+      "destination": "/glp1-perte-de-poids/glp1-perte-de-poids/ozempic-prix/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/saxenda-prix",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/glp1-perte-de-poids/ozempic-regime",
+      "destination": "/glp1-perte-de-poids/glp1-perte-de-poids/ozempic-regime/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/effets-secondaires-glp1/ozempic-danger",
+      "destination": "/glp1-perte-de-poids/effets-secondaires-glp1/ozempic-danger/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/wegovy-avis",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-cout/medicaments-glp1/saxenda-prix",
+      "destination": "/glp1-cout/medicaments-glp1/saxenda-prix/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/liraglutide-perte-de-poids-avis",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/annuaire/endocrinologue-glp1",
+      "destination": "/annuaire/endocrinologue-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/glp1-perte-de-poids/ou-trouver-ozempic",
+      "destination": "/regime-glp1/glp1-perte-de-poids/ou-trouver-ozempic/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/ozempic-effets-secondaires-forum",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/semaglutide-achat",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/diabete-regime-glp1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/nouveau-traitement-diabete-type-2-injection",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/traitement-insulinique",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/combien-de-dose-dans-un-stylo-ozempic",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/mecanisme-d-action",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/ozempic-injection-prix",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/januvia-autre-nom",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/glp1-diabete-type-1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/diabete-sport-glp1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/annuaire/diabetologue",
+      "destination": "/annuaire/diabetologue/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/victoza-posologie",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/ozempic-prix",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/index-backup-original",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/diagnostic-live-content-backup",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/avant-apres-glp1",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-perte-de-poids/effets-secondaires-glp1/ozempic-danger",
+      "destination": "/glp1-perte-de-poids/effets-secondaires-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/diabete-gestationnel-glp1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/trulicity-ou-ozempic",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/diabete-complications-glp1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/ballon-gastrique-rembourse",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/tirzepatide-avis",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/medicament-prise-de-poid",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/trulicity-danger",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/victoza-rupture",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/xenical-remboursement",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/sulfamides-medicaments",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/medicament-pour-perdre-du-ventre-en-1-semaine",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/glp1-hba1c-reduction",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/traitements-medicamenteux",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-perte-de-poids/medicaments-glp1/nouveau-medicament",
+      "destination": "/glp1-perte-de-poids/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/metformine-autre-nom",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/quel-traitement-glp1-choisir-backup",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/ozempic-regime",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/metformine-diarrhee-solution",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/mounjaro-effet-secondaire",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/medicament-pour-maigrir-tres-puissant",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/sulfamide-hypoglycemiant",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/diabete-pied-glp1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/dosage-trulicity",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-cout/operation-pour-maigrir-prix",
+      "destination": "/glp1-cout/operation-pour-maigrir-prix/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/alternatives-glp1/medicaments-glp1/traitement-diabete-type-2",
+      "destination": "/alternatives-glp1/medicaments-glp1/traitement-diabete-type-2/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/dipeptidyl-peptidase-4",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/nouveau-medicament-pour-perdre-du-poids",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/regime-glp1-repas",
+      "destination": "/collections/regime-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/injection-pour-perdre-du-poids",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/recherche-glp1/nouveau-medicament-amaigrissant",
+      "destination": "/collections/recherche-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/alternatives-glp1/medicament-naturel-glp1",
+      "destination": "/collections/alternatives-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/regime-glp1-petit-dejeuner",
+      "destination": "/collections/regime-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/alternatives-glp1/alternative-naturelle-ozempic",
+      "destination": "/collections/alternatives-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/recherche-glp1/etude-glp1",
+      "destination": "/collections/recherche-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/recherche-glp1/recherche-medicament-glp1",
+      "destination": "/collections/recherche-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/regime-glp1-aliments-a-eviter",
+      "destination": "/collections/regime-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-perte-de-poids/pilule-miracle-perdre-poids",
+      "destination": "/collections/glp1-perte-de-poids/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/regime-pour-glp1",
+      "destination": "/collections/regime-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/alternatives-glp1/alternative-naturelle-wegovy",
+      "destination": "/collections/alternatives-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-cout/saxenda-prix-pharmacie",
+      "destination": "/glp1-cout/saxenda-prix-pharmacie/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-cout/wegovy-prix",
+      "destination": "/glp1-cout/wegovy-prix/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-cout/acheter-wegovy-en-france",
+      "destination": "/glp1-cout/acheter-wegovy-en-france/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/medicaments-glp1/mounjaro-injection-pour-maigrir",
+      "destination": "/collections/medicaments-glp1/",
+      "permanent": true
+    },
+    {
+      "source": "/regime-glp1/glp1-index-glycemique",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/glp1-diabete/diabete-urgence-glp1",
+      "destination": "/collections/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/guide-complet-trulicity",
+      "destination": "/traitements-glp1/guide-complet-trulicity/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/guide-complet-januvia",
+      "destination": "/traitements-glp1/guide-complet-januvia/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/guide-complet-mounjaro",
+      "destination": "/traitements-glp1/guide-complet-mounjaro/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/guide-complet-ozempic",
+      "destination": "/traitements-glp1/guide-complet-ozempic/",
+      "permanent": true
+    },
+    {
+      "source": "/test-affiliation",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/medicaments-glp1/traitement-diabete-type-2",
+      "destination": "/regime-glp1/medicaments-glp1/traitement-diabete-type-2/",
+      "permanent": true
+    },
+    {
+      "source": "/collections/regime-glp1/medicaments-glp1/saxenda-prix",
+      "destination": "/regime-glp1/medicaments-glp1/saxenda-prix/",
+      "permanent": true
+    },
+    {
+      "source": "/glp1-diabete",
+      "destination": "/glp1-diabete/",
+      "permanent": true
+    },
+    {
+      "source": "/test-affiliation-multi",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/test-admin",
+      "destination": "/",
       "permanent": true
     }
   ]
