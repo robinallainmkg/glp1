@@ -404,6 +404,13 @@ declare module 'astro:content' {
   collection: "glp1-cout";
   data: InferEntrySchema<"glp1-cout">
 } & { render(): Render[".md"] };
+"remboursement-glp1-2026.md": {
+	id: "remboursement-glp1-2026.md";
+  slug: "remboursement-glp1-2026";
+  body: string;
+  collection: "glp1-cout";
+  data: InferEntrySchema<"glp1-cout">
+} & { render(): Render[".md"] };
 "saxenda-prix-pharmacie.md": {
 	id: "saxenda-prix-pharmacie.md";
   slug: "saxenda-prix-pharmacie";
@@ -657,6 +664,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "traitements-glp1": {
+"centres-mounjaro-france.md": {
+	id: "centres-mounjaro-france.md";
+  slug: "centres-mounjaro-france";
+  body: string;
+  collection: "traitements-glp1";
+  data: InferEntrySchema<"traitements-glp1">
+} & { render(): Render[".md"] };
 "guide-complet-mounjaro.md": {
 	id: "guide-complet-mounjaro.md";
   slug: "guide-complet-mounjaro";
@@ -728,5 +742,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }

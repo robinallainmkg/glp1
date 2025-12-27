@@ -1,14 +1,14 @@
 ---
 title: "Effets Secondaires Mounjaro : Que savoir avant de commencer ?"
 description: "Effets secondaires Mounjaro : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître."
-keywords: ['effets secondaires mounjaro', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'tolérance mounjaro']
+keywords: ['effets secondaires mounjaro', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'tolérance mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'comment gérer effets mounjaro']
 seoTitle: "Effets Secondaires Mounjaro : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Mounjaro : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
 publishedAt: '2025-08-30'
-updatedAt: '2025-08-30'
+updatedAt: '2025-12-27'
 featured: true
 author: 'Dr. Marie Dubois'
-readingTime: 10
+readingTime: 12
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
@@ -198,6 +198,8 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Annuel** : Bilan complet
 - **À la demande** : En cas de problème
 
+Consultez notre [guide complet sur Mounjaro](/guides/mounjaro/guide-complet-mounjaro) pour planifier votre suivi.
+
 ## 💊 Interactions Médicamenteuses
 
 ### Médicaments à surveiller
@@ -223,8 +225,99 @@ affiliateCollection: "effets-secondaires-glp1"
 ### Réussite du traitement
 - **Observance** : Prises régulières
 - **Suivi médical** : Consultations respectées
-- **Alimentation équilibrée** : Complète le traitement
+- **Alimentation équilibrée** : Complète le traitement (voir [régime Mounjaro optimal](/guides/mounjaro/regime-mounjaro-optimal))
 - **Activité physique** : Recommandée
+
+## ❓ FAQ - Questions Fréquentes
+
+### Combien de temps durent les nausées avec Mounjaro ?
+
+Les **nausées durent généralement 2-4 semaines** puis diminuent progressivement. Elles sont plus fréquentes lors de l'augmentation des doses. Si elles persistent au-delà de 4 semaines, consultez votre médecin pour ajuster la posologie.
+
+### Mounjaro provoque-t-il plus d'effets secondaires qu'Ozempic ?
+
+**Mounjaro peut entraîner légèrement plus de nausées** (15-20% vs 10-15% pour Ozempic) en raison de sa double action GLP-1/GIP. Cependant, la plupart des patients tolèrent bien les deux traitements. Comparez les [effets secondaires d'Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic).
+
+### Que faire si je vomis après l'injection de Mounjaro ?
+
+Si vous vomissez **dans les 30 minutes** après l'injection, contactez votre médecin pour savoir s'il faut refaire l'injection. Si c'est **après 30 minutes**, l'absorption est généralement complète, ne refaites pas l'injection. Hydratez-vous et consultez si les vomissements persistent.
+
+### Les effets secondaires de Mounjaro sont-ils dangereux ?
+
+La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves (pancréatite, insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
+
+### Comment éviter les nausées avec Mounjaro ?
+
+**Stratégies efficaces** :
+- Faire l'injection le soir avant le coucher
+- Manger des petits repas fréquents
+- Éviter les aliments gras et épicés
+- Boire du gingembre ou infusion menthe
+- Prendre des anti-nauséeux si prescrit
+
+Voir notre [guide régime Mounjaro optimal](/guides/mounjaro/regime-mounjaro-optimal).
+
+### Mounjaro cause-t-il la perte de cheveux ?
+
+**Non**, la perte de cheveux n'est pas un effet secondaire direct de Mounjaro. Si elle survient, c'est généralement lié à la perte de poids rapide (stress métabolique) ou carences nutritionnelles. Complétez votre alimentation en protéines, fer et vitamines B.
+
+### Puis-je arrêter Mounjaro si j'ai trop d'effets secondaires ?
+
+**Oui**, mais ne l'arrêtez pas brutalement sans avis médical. Votre médecin peut :
+- Réduire temporairement la dose
+- Espacer les injections
+- Proposer un autre GLP-1 mieux toléré
+- Ajuster le traitement anti-nausées
+
+Voir notre [comparatif des GLP-1](/quel-traitement-glp1-choisir).
+
+### Mounjaro provoque-t-il la constipation ou la diarrhée ?
+
+**Les deux sont possibles** :
+- **Diarrhée** : Plus fréquente (8-12% patients) en début de traitement
+- **Constipation** : Moins fréquente (3-5%) due au ralentissement digestif
+
+Hydratation et alimentation équilibrée permettent de gérer les deux.
+
+### Les effets secondaires s'aggravent-ils avec le temps ?
+
+**Non, c'est l'inverse** : les effets secondaires sont **plus fréquents au début** et lors des augmentations de dose. Le corps s'adapte généralement après 2-4 semaines. Si les symptômes s'aggravent, consultez rapidement.
+
+### Faut-il un bilan sanguin avant de commencer Mounjaro ?
+
+**Oui, fortement recommandé** :
+- **Fonction rénale** : Créatinine, DFG
+- **Fonction hépatique** : Transaminases
+- **Pancréas** : Lipase, amylase (si antécédents)
+- **Thyroïde** : TSH (si facteurs de risque)
+- **Glycémie** : HbA1c, glycémie à jeun
+
+Consultez nos pages sur le [prix Mounjaro](/glp1-cout/prix-mounjaro-france) et le [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026).
+
+### Mounjaro est-il compatible avec l'alcool ?
+
+**Consommation modérée possible** mais l'alcool peut :
+- Augmenter les nausées et vomissements
+- Affecter la glycémie (risque hypo/hyperglycémie)
+- Diminuer l'efficacité du traitement
+
+Limitez à 1-2 verres occasionnels.
+
+## 📋 Ressources Complémentaires
+
+### Guides pratiques
+- [Guide complet Mounjaro](/guides/mounjaro/guide-complet-mounjaro) - Tout savoir sur le traitement
+- [Régime optimal avec Mounjaro](/guides/mounjaro/regime-mounjaro-optimal) - Alimentation adaptée
+- [Prix Mounjaro France 2025](/glp1-cout/prix-mounjaro-france) - Coûts et remboursement
+
+### Comparaisons
+- [Quel traitement GLP-1 choisir ?](/quel-traitement-glp1-choisir) - Comparatif détaillé
+- [Effets secondaires Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic)
+- [Effets secondaires Wegovy](/effets-secondaires-glp1/effets-secondaires-wegovy)
+
+### Remboursement et accès
+- [Remboursement GLP-1 2026](/glp1-cout/remboursement-glp1-2026) - Toutes les options
+- [Médecins GLP-1 en France](/medecins-glp1-france) - Trouver un prescripteur
 
 ---
 
