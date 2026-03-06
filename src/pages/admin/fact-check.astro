@@ -1,0 +1,349 @@
+---
+// src/pages/admin/fact-check.astro
+// Dashboard Fact-Check — Phase 1 Agent GLP1
+import { supabase } from '../../lib/supabase';
+
+// Récupérer les derniers résultats de fact-check avec les infos articles
+const { data: results, error } = await supabase
+  .from('fact_check_results')
+  .select(`
+    id,
+    score_fiabilite,
+    statut,
+    points,
+    sources,
+    checked_at,
+    model_used,
+    tokens_used,
+    articles (
+      id,
+      slug,
+      title,
+      collection,
+      last_fact_checked
+    )
+  `)
+  .order('checked_at', { ascending: false })
+  .limit(200);
+
+// Grouper par statut
+const urgent = (results || []).filter(r => r.statut === 'Urgent');
+const aVerifier = (results || []).filter(r => r.statut === 'À vérifier');
+const ok = (results || []).filter(r => r.statut === 'OK');
+
+// Stats
+const totalChecked = (results || []).length;
+const avgScore = totalChecked > 0
+  ? Math.round((results || []).reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / totalChecked)
+  : 0;
+
+function formatDate(dateStr: string | null) {
+  if (!dateStr) return 'N/A';
+  return new Date(dateStr).toLocaleDateString('fr-FR', {
+    day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+  });
+}
+
+function urgenceColor(urgence: string) {
+  switch (urgence) {
+    case 'urgent': return '#dc2626';
+    case 'moyen': return '#f59e0b';
+    case 'faible': return '#22c55e';
+    default: return '#6b7280';
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fact-Check Dashboard - GLP1 France</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 { font-size: 1.5rem; font-weight: 600; }
+    .header a { color: white; text-decoration: none; opacity: 0.8; }
+    .header a:hover { opacity: 1; }
+    .stats-bar {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .stat-card {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stat-card .stat-value { font-size: 2rem; font-weight: 700; }
+    .stat-card .stat-label { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
+    .stat-urgent { background: #fef2f2; color: #dc2626; }
+    .stat-warning { background: #fffbeb; color: #f59e0b; }
+    .stat-ok { background: #f0fdf4; color: #22c55e; }
+    .stat-info { background: #eff6ff; color: #3b82f6; }
+    .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+    .section { margin-bottom: 2rem; }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-urgent { background: #fecaca; color: #991b1b; }
+    .badge-warning { background: #fde68a; color: #92400e; }
+    .badge-ok { background: #bbf7d0; color: #166534; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .card-header:hover { background: #f8fafc; }
+    .card-title { font-weight: 500; font-size: 0.95rem; }
+    .card-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 1rem; align-items: center; }
+    .card-body {
+      padding: 0 1.25rem 1.25rem;
+      border-top: 1px solid #f1f5f9;
+      display: none;
+    }
+    .card.open .card-body { display: block; }
+    .point {
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border-radius: 6px;
+      background: #f8fafc;
+      border-left: 3px solid;
+    }
+    .point-claim { font-weight: 500; margin-bottom: 0.35rem; font-size: 0.9rem; }
+    .point-reality { font-size: 0.85rem; color: #475569; margin-bottom: 0.25rem; }
+    .point-source { font-size: 0.8rem; color: #3b82f6; }
+    .point-source a { color: #3b82f6; }
+    .score-pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    .collection-tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Fact-Check Dashboard</h1>
+  <div>
+    <a href="/admin">Admin</a>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-card stat-urgent">
+    <div class="stat-value">{urgent.length}</div>
+    <div class="stat-label">Urgents</div>
+  </div>
+  <div class="stat-card stat-warning">
+    <div class="stat-value">{aVerifier.length}</div>
+    <div class="stat-label">A verifier</div>
+  </div>
+  <div class="stat-card stat-ok">
+    <div class="stat-value">{ok.length}</div>
+    <div class="stat-label">OK</div>
+  </div>
+  <div class="stat-card stat-info">
+    <div class="stat-value">{avgScore}/100</div>
+    <div class="stat-label">Score moyen</div>
+  </div>
+</div>
+
+<div class="main">
+
+  {error && (
+    <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #991b1b;">
+      Erreur de connexion Supabase : {error.message}. Assurez-vous que la migration 003 a ete executee et que des resultats existent.
+    </div>
+  )}
+
+  {totalChecked === 0 && !error && (
+    <div class="empty-state">
+      <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucun resultat de fact-check</p>
+      <p>Lancez le workflow n8n ou executez le script de synchronisation pour commencer.</p>
+      <p style="margin-top: 0.5rem;"><code>node scripts/sync-articles-to-supabase.mjs</code></p>
+    </div>
+  )}
+
+  <!-- Section Urgents -->
+  {urgent.length > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #dc2626;">Urgents</span>
+        <span class="badge badge-urgent">{urgent.length}</span>
+      </div>
+      {urgent.map((r: any) => (
+        <div class="card" data-card>
+          <div class="card-header" data-toggle>
+            <div>
+              <span class="card-title">{r.articles?.title || 'Article inconnu'}</span>
+              <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
+            </div>
+            <div class="card-meta">
+              <span class="score-pill" style="background: #fecaca; color: #991b1b;">{r.score_fiabilite}/100</span>
+              <span>{formatDate(r.checked_at)}</span>
+            </div>
+          </div>
+          <div class="card-body">
+            {(r.points || []).map((p: any) => (
+              <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
+                <div class="point-claim">{p.claim_original}</div>
+                <div class="point-reality">{p.realite_actuelle}</div>
+                {p.source && (
+                  <div class="point-source">
+                    <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- Section A verifier -->
+  {aVerifier.length > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #f59e0b;">A verifier</span>
+        <span class="badge badge-warning">{aVerifier.length}</span>
+      </div>
+      {aVerifier.map((r: any) => (
+        <div class="card" data-card>
+          <div class="card-header" data-toggle>
+            <div>
+              <span class="card-title">{r.articles?.title || 'Article inconnu'}</span>
+              <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
+            </div>
+            <div class="card-meta">
+              <span class="score-pill" style="background: #fde68a; color: #92400e;">{r.score_fiabilite}/100</span>
+              <span>{formatDate(r.checked_at)}</span>
+            </div>
+          </div>
+          <div class="card-body">
+            {(r.points || []).map((p: any) => (
+              <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
+                <div class="point-claim">{p.claim_original}</div>
+                <div class="point-reality">{p.realite_actuelle}</div>
+                {p.source && (
+                  <div class="point-source">
+                    <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- Section OK -->
+  {ok.length > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #22c55e;">OK</span>
+        <span class="badge badge-ok">{ok.length}</span>
+      </div>
+      {ok.map((r: any) => (
+        <div class="card" data-card>
+          <div class="card-header" data-toggle>
+            <div>
+              <span class="card-title">{r.articles?.title || 'Article inconnu'}</span>
+              <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
+            </div>
+            <div class="card-meta">
+              <span class="score-pill" style="background: #bbf7d0; color: #166534;">{r.score_fiabilite}/100</span>
+              <span>{formatDate(r.checked_at)}</span>
+            </div>
+          </div>
+          <div class="card-body">
+            {(r.points || []).length === 0 ? (
+              <p style="padding: 0.75rem; color: #22c55e;">Aucun probleme detecte.</p>
+            ) : (
+              (r.points || []).map((p: any) => (
+                <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
+                  <div class="point-claim">{p.claim_original}</div>
+                  <div class="point-reality">{p.realite_actuelle}</div>
+                  {p.source && (
+                    <div class="point-source">
+                      <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
+                    </div>
+                  )}
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</div>
+
+<script>
+  // Toggle cards
+  document.querySelectorAll('[data-toggle]').forEach(header => {
+    header.addEventListener('click', () => {
+      const card = header.closest('[data-card]');
+      if (card) card.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -29,13 +29,16 @@
     "annuaire:scrape-doctolib": "node scripts/annuaire/scrape-doctolib.mjs",
     "annuaire:clean-data": "node scripts/annuaire/clean-professionals.mjs",
     "annuaire:generate-pages": "node scripts/annuaire/generate-landing-pages.mjs",
-    "annuaire:setup": "npm run annuaire:import-cities && npm run annuaire:import-specialties"
+    "annuaire:setup": "npm run annuaire:import-cities && npm run annuaire:import-specialties",
+    "sync:articles": "node scripts/sync-articles-to-supabase.mjs",
+    "sync:articles:dry": "node scripts/sync-articles-to-supabase.mjs --dry-run"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/node": "^8.3.4",
     "@astrojs/sitemap": "3.5.1",
     "@astrojs/tailwind": "6.0.2",
+    "@anthropic-ai/sdk": "^0.39.0",
     "@supabase/supabase-js": "^2.57.2",
     "astro": "4.16.19",
     "dotenv": "^17.2.1",
