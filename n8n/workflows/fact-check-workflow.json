@@ -1,0 +1,333 @@
+{
+  "name": "GLP1 Fact-Check Hebdomadaire",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1"
+            }
+          ]
+        }
+      },
+      "id": "cron-trigger",
+      "name": "Cron Hebdo (Lundi 8h)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {},
+      "id": "manual-trigger",
+      "name": "Trigger Manuel",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [220, 500]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/articles",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "is_active", "value": "eq.true" },
+            { "name": "order", "value": "last_fact_checked.asc.nullsfirst" },
+            { "name": "select", "value": "id,slug,title,content,collection" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Authorization", "value": "Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "fetch-articles",
+      "name": "Fetch Articles Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 400]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {
+          "reset": false
+        }
+      },
+      "id": "split-batches",
+      "name": "Traitement Séquentiel",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [700, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.ANTHROPIC_API_KEY }}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-20250514\",\n  \"max_tokens\": 4096,\n  \"tools\": [\n    {\n      \"type\": \"web_search_20250305\",\n      \"name\": \"web_search\",\n      \"max_uses\": 10\n    }\n  ],\n  \"system\": \"Tu es un fact-checker médical spécialisé dans les traitements à base d'agonistes du récepteur GLP-1 en France. Tu travailles pour le site glp1-france.fr.\\n\\nTa mission : analyser un article médical en français et identifier toutes les informations qui pourraient être obsolètes, inexactes ou incomplètes.\\n\\nConcentre-toi sur :\\n- Prix des traitements (Ozempic, Wegovy, Mounjaro, Saxenda)\\n- Conditions de remboursement par l'Assurance Maladie (critères HAS)\\n- Disponibilité en pharmacie et statut de rupture de stock\\n- Indications thérapeutiques officielles (AMM)\\n- Posologies recommandées\\n\\nPour chaque claim identifié, recherche sur le web la version actuelle. Privilégie les sources : ameli.fr, has-sante.fr, base-donnees-publique.medicaments.gouv.fr, ansm.sante.fr, vidal.fr\\n\\nRéponds UNIQUEMENT avec un objet JSON valide :\\n{\\n  \\\"score_fiabilite\\\": 85,\\n  \\\"statut\\\": \\\"À vérifier\\\",\\n  \\\"points\\\": [\\n    {\\n      \\\"claim_original\\\": \\\"...\\\",\\n      \\\"realite_actuelle\\\": \\\"...\\\",\\n      \\\"source\\\": \\\"...\\\",\\n      \\\"urgence\\\": \\\"faible|moyen|urgent\\\"\\n    }\\n  ]\\n}\\n\\nScoring : 90-100 = OK, 60-89 = À vérifier, 0-59 = Urgent\",\n  \"messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyse cet article pour identifier les informations potentiellement obsolètes ou inexactes :\\n\\nTitre : {{ $json.title }}\\nCollection : {{ $json.collection }}\\nSlug : {{ $json.slug }}\\n\\n--- CONTENU DE L'ARTICLE ---\\n{{ $json.content }}\"\n    }\n  ]\n}",
+        "options": {
+          "timeout": 120000,
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "claude-api",
+      "name": "Claude API Fact-Check",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [920, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extraire le JSON de la réponse Claude\nconst response = $input.first().json;\nconst articleData = $('Traitement Séquentiel').first().json;\n\n// Chercher le content block de type text dans la réponse\nlet factCheckResult = null;\nlet tokensUsed = 0;\n\nif (response.usage) {\n  tokensUsed = (response.usage.input_tokens || 0) + (response.usage.output_tokens || 0);\n}\n\n// Parcourir les content blocks pour trouver le JSON\nif (response.content && Array.isArray(response.content)) {\n  for (const block of response.content) {\n    if (block.type === 'text' && block.text) {\n      try {\n        // Essayer de parser directement\n        factCheckResult = JSON.parse(block.text);\n      } catch (e) {\n        // Extraire le JSON d'un bloc de texte\n        const jsonMatch = block.text.match(/\\{[\\s\\S]*\\}/);\n        if (jsonMatch) {\n          try {\n            factCheckResult = JSON.parse(jsonMatch[0]);\n          } catch (e2) {\n            // Impossible de parser\n          }\n        }\n      }\n    }\n  }\n}\n\nif (!factCheckResult) {\n  return [{\n    json: {\n      article_id: articleData.id,\n      slug: articleData.slug,\n      title: articleData.title,\n      error: 'Impossible de parser la réponse Claude',\n      raw_response: JSON.stringify(response.content).substring(0, 500),\n      status: 'error'\n    }\n  }];\n}\n\nreturn [{\n  json: {\n    article_id: articleData.id,\n    slug: articleData.slug,\n    title: articleData.title,\n    score_fiabilite: factCheckResult.score_fiabilite,\n    statut: factCheckResult.statut,\n    points: factCheckResult.points || [],\n    sources: (factCheckResult.points || []).map(p => p.source).filter(Boolean),\n    tokens_used: tokensUsed,\n    status: 'success'\n  }\n}];"
+      },
+      "id": "parse-response",
+      "name": "Parser Réponse Claude",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1140, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/fact_check_results",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Authorization", "value": "Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"article_id\": \"{{ $json.article_id }}\",\n  \"score_fiabilite\": {{ $json.score_fiabilite }},\n  \"statut\": \"{{ $json.statut }}\",\n  \"points\": {{ JSON.stringify($json.points) }},\n  \"sources\": {{ JSON.stringify($json.sources) }},\n  \"tokens_used\": {{ $json.tokens_used }},\n  \"model_used\": \"claude-sonnet-4-20250514\"\n}",
+        "options": {}
+      },
+      "id": "save-results",
+      "name": "Sauver Résultats Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1360, 300]
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/articles?id=eq.{{ $json.article_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Authorization", "value": "Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={ \"last_fact_checked\": \"{{ new Date().toISOString() }}\" }",
+        "options": {}
+      },
+      "id": "update-article-date",
+      "name": "MAJ Date Vérification",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1360, 500]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL }}/rest/v1/agent_logs",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Authorization", "value": "Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=minimal" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"agent_type\": \"fact-check\",\n  \"article_id\": \"{{ $json.article_id }}\",\n  \"status\": \"{{ $json.status || 'success' }}\",\n  \"tokens_used\": {{ $json.tokens_used || 0 }},\n  \"metadata\": { \"slug\": \"{{ $json.slug }}\", \"statut\": \"{{ $json.statut }}\" }\n}",
+        "options": {}
+      },
+      "id": "log-execution",
+      "name": "Logger Exécution",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1580, 400]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "urgent-check",
+              "leftValue": "={{ $json.statut }}",
+              "rightValue": "Urgent",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-urgent",
+      "name": "Si Urgent ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1800, 400]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.SMTP_FROM }}",
+        "toEmail": "={{ $env.NOTIFICATION_EMAIL }}",
+        "subject": "=🚨 URGENT Fact-Check : {{ $json.title }}",
+        "emailType": "html",
+        "html": "=<h2>🚨 Alerte Fact-Check Urgente</h2>\n<p><strong>Article :</strong> {{ $json.title }}</p>\n<p><strong>Slug :</strong> {{ $json.slug }}</p>\n<p><strong>Score :</strong> {{ $json.score_fiabilite }}/100</p>\n<h3>Points à corriger en urgence :</h3>\n<ul>\n{{ $json.points.filter(p => p.urgence === 'urgent').map(p => '<li><strong>' + p.claim_original + '</strong><br/>Réalité : ' + p.realite_actuelle + '<br/>Source : ' + p.source + '</li>').join('') }}\n</ul>\n<p><a href=\"https://glp1-france.fr/admin/fact-check\">Voir le dashboard</a></p>",
+        "options": {}
+      },
+      "id": "send-email",
+      "name": "Email Alerte Urgente",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [2040, 300],
+      "credentials": {
+        "smtp": {
+          "id": "SMTP_CREDENTIAL_ID",
+          "name": "SMTP GLP1"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "no-op-ok",
+      "name": "Pas Urgent → OK",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [2040, 500]
+    }
+  ],
+  "connections": {
+    "Cron Hebdo (Lundi 8h)": {
+      "main": [
+        [{ "node": "Fetch Articles Supabase", "type": "main", "index": 0 }]
+      ]
+    },
+    "Trigger Manuel": {
+      "main": [
+        [{ "node": "Fetch Articles Supabase", "type": "main", "index": 0 }]
+      ]
+    },
+    "Fetch Articles Supabase": {
+      "main": [
+        [{ "node": "Traitement Séquentiel", "type": "main", "index": 0 }]
+      ]
+    },
+    "Traitement Séquentiel": {
+      "main": [
+        [{ "node": "Claude API Fact-Check", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Claude API Fact-Check": {
+      "main": [
+        [{ "node": "Parser Réponse Claude", "type": "main", "index": 0 }]
+      ]
+    },
+    "Parser Réponse Claude": {
+      "main": [
+        [
+          { "node": "Sauver Résultats Supabase", "type": "main", "index": 0 },
+          { "node": "MAJ Date Vérification", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Sauver Résultats Supabase": {
+      "main": [
+        [{ "node": "Logger Exécution", "type": "main", "index": 0 }]
+      ]
+    },
+    "Logger Exécution": {
+      "main": [
+        [{ "node": "Si Urgent ?", "type": "main", "index": 0 }]
+      ]
+    },
+    "Si Urgent ?": {
+      "main": [
+        [{ "node": "Email Alerte Urgente", "type": "main", "index": 0 }],
+        [{ "node": "Pas Urgent → OK", "type": "main", "index": 0 }]
+      ]
+    },
+    "Email Alerte Urgente": {
+      "main": [
+        [{ "node": "Traitement Séquentiel", "type": "main", "index": 0 }]
+      ]
+    },
+    "Pas Urgent → OK": {
+      "main": [
+        [{ "node": "Traitement Séquentiel", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "staticData": null,
+  "tags": [
+    { "name": "fact-check" },
+    { "name": "glp1" },
+    { "name": "automatisation" }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2026-03-06T00:00:00.000Z",
+  "versionId": "1"
+}
