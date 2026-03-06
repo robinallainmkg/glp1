@@ -1,56 +1,47 @@
-# Déploiement n8n en local (Docker)
+# Déploiement n8n en local (npm)
 
-Guide pas-à-pas pour lancer l'agent fact-check GLP1 en local avec Docker.
+Guide pas-à-pas pour lancer l'agent fact-check GLP1 en local via n8n installé avec npm.
 
 ## Prérequis
 
-- Docker Desktop installé ([docker.com/get-started](https://www.docker.com/get-started/))
+- Node.js 18+ installé
 - Les clés API : Supabase + Anthropic
 - (Optionnel) Un serveur SMTP pour les alertes email
 
-## 1. Configuration
+## 1. Installer n8n
 
 ```bash
-# Depuis la racine du projet
-cd n8n
-
-# Créer le fichier .env à partir du template
-cp .env.example .env
+npm install -g n8n
 ```
 
-Éditer `n8n/.env` avec vos valeurs :
+Vérifier :
 
-```env
-# Accès n8n (interface web locale)
-N8N_USER=admin
-N8N_PASSWORD=admin123
-
-# Clé de chiffrement (générer avec : openssl rand -hex 16)
-N8N_ENCRYPTION_KEY=votre-cle-aleatoire-ici
+```bash
+n8n --version
 ```
 
 ## 2. Lancer n8n
 
 ```bash
-cd n8n
-docker compose up -d
-```
-
-Vérifier que ça tourne :
-
-```bash
-docker compose ps
-docker compose logs -f n8n
+n8n start
 ```
 
 Ouvrir **http://localhost:5678** dans votre navigateur.
 
+Au premier lancement, n8n vous demandera de créer un compte admin.
+
+> **Astuce** : pour lancer en arrière-plan, utilisez `n8n start &` ou un outil comme `pm2` :
+> ```bash
+> npm install -g pm2
+> pm2 start n8n -- start
+> pm2 save
+> ```
+
 ## 3. Importer le workflow
 
 1. Ouvrir http://localhost:5678
-2. Se connecter avec les identifiants configurés dans `.env`
-3. Aller dans **Workflows** → **Import from File**
-4. Sélectionner `n8n/workflows/fact-check-workflow.json`
+2. Aller dans **Workflows** → **Import from File**
+3. Sélectionner `n8n/workflows/fact-check-workflow.json`
 
 ## 4. Configurer les variables n8n
 
@@ -85,7 +76,6 @@ Dans n8n → **Credentials** → **New** → **SMTP** :
 
 ```bash
 # D'abord, synchroniser les articles vers Supabase
-cd ..
 node scripts/sync-articles-to-supabase.mjs
 ```
 
@@ -97,27 +87,30 @@ Puis dans n8n :
 ## 7. Commandes utiles
 
 ```bash
-# Voir les logs en temps réel
-docker compose logs -f n8n
+# Lancer n8n
+n8n start
 
-# Arrêter n8n
-docker compose down
+# Lancer en arrière-plan avec pm2
+pm2 start n8n -- start
 
-# Redémarrer
-docker compose restart
+# Voir les logs pm2
+pm2 logs n8n
+
+# Arrêter
+pm2 stop n8n
+
+# Exporter un workflow (backup)
+n8n export:workflow --id=1 --output=backup.json
 
 # Mettre à jour n8n
-docker compose pull && docker compose up -d
-
-# Supprimer tout (données incluses)
-docker compose down -v
+npm update -g n8n
 ```
 
 ## Budget
 
 | Service | Coût |
 |---------|------|
-| n8n local (Docker) | **0€** |
+| n8n local (npm) | **0€** |
 | API Anthropic (~80 articles/mois) | ~5-10€/mois |
 | Supabase (free tier) | 0€ |
 | **Total** | **~5-10€/mois** |
