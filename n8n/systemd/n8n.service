@@ -1,0 +1,30 @@
+[Unit]
+Description=n8n - Workflow Automation (GLP1 Fact-Check)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Environment=N8N_PORT=5678
+Environment=N8N_PROTOCOL=https
+Environment=GENERIC_TIMEZONE=Europe/Paris
+Environment=TZ=Europe/Paris
+Environment=EXECUTIONS_DATA_PRUNE=true
+Environment=EXECUTIONS_DATA_MAX_AGE=168
+Environment=N8N_DIAGNOSTICS_ENABLED=false
+EnvironmentFile=/opt/glp1-n8n/.env
+ExecStart=/usr/bin/n8n start
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=n8n
+
+# Sécurité renforcée
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/root/.n8n /opt/glp1-n8n
+
+[Install]
+WantedBy=multi-user.target

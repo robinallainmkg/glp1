@@ -1,173 +1,198 @@
-# Déploiement n8n sur VPS Hetzner
+# Déploiement n8n sur VPS Hostinger
 
-Guide pas-à-pas pour déployer l'agent fact-check GLP1 sur un VPS Hetzner.
+Guide pas-à-pas pour déployer l'agent fact-check GLP1 sur le VPS Hostinger Cloud Startup.
 
 ## Prérequis
 
-- VPS Hetzner (CX22 minimum — 2 vCPU, 4 Go RAM, ~4€/mois)
-- Nom de domaine configuré (ex: `n8n.glp1-france.fr`)
-- Accès SSH root
+- VPS Hostinger Cloud Startup (accès SSH root)
+- Nom de domaine `n8n.glp1-france.fr` avec DNS pointant vers le VPS
+- Clés API : Supabase (service_role), Anthropic, SMTP
 
-## 1. Installation Docker
+## Étape 1 — Migration Supabase
+
+Avant d'installer n8n, appliquer la migration pour créer les tables.
+
+### Option A : Via le SQL Editor Supabase (recommandé)
+
+1. Ouvrir le **SQL Editor** dans le dashboard Supabase
+2. Copier-coller le contenu de `supabase/migrations/003_factcheck_system.sql`
+3. Cliquer sur **Run**
+
+### Option B : Script de vérification
 
 ```bash
-# Connexion au VPS
-ssh root@VOTRE_IP_HETZNER
+# Vérifier si les tables existent déjà
+node scripts/deployment/apply-supabase-migration.mjs
 
-# Installer Docker
-curl -fsSL https://get.docker.com | sh
+# Mode dry-run (affiche le SQL sans l'appliquer)
+node scripts/deployment/apply-supabase-migration.mjs --dry-run
+```
 
-# Installer Docker Compose
-apt install -y docker-compose-plugin
+### Vérification
+
+Tables attendues :
+- `articles` — copie indexable des articles markdown
+- `fact_check_results` — résultats des vérifications
+- `agent_logs` — journal d'exécution des agents
+- Vue `latest_fact_checks` — derniers résultats par article
+
+## Étape 2 — Installer n8n sur le VPS Hostinger
+
+### Installation automatique (recommandé)
+
+```bash
+# Depuis votre machine locale, envoyer et exécuter le script
+scp scripts/deployment/setup-vps-hostinger.sh root@VOTRE_IP:/tmp/
+ssh root@VOTRE_IP "chmod +x /tmp/setup-vps-hostinger.sh && /tmp/setup-vps-hostinger.sh"
+```
+
+Le script installe automatiquement :
+- Node.js 20 LTS
+- n8n via npm (sans Docker)
+- Service systemd (redémarrage automatique)
+- Nginx reverse proxy
+- SSL Let's Encrypt
+
+### Installation manuelle
+
+```bash
+ssh root@VOTRE_IP
+
+# Node.js 20
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+apt install -y nodejs
+
+# n8n
+npm install -g n8n
 
 # Vérifier
-docker --version
-docker compose version
+n8n --version
 ```
 
-## 2. Préparation du serveur
+## Étape 3 — Configurer les variables d'environnement
+
+Le script d'installation crée `/opt/glp1-n8n/.env`. Éditez-le :
 
 ```bash
-# Créer le répertoire de travail
-mkdir -p /opt/glp1-n8n
-cd /opt/glp1-n8n
-
-# Copier les fichiers depuis le dépôt
-# Option A : git clone
-git clone https://github.com/VOTRE_REPO/glp1.git --sparse --filter=blob:none
-cd glp1 && git sparse-checkout set n8n && cd ..
-cp -r glp1/n8n/* .
-
-# Option B : copier manuellement
-scp -r n8n/* root@VOTRE_IP:/opt/glp1-n8n/
+ssh root@VOTRE_IP
+nano /opt/glp1-n8n/.env
 ```
 
-## 3. Configuration
+Variables à renseigner :
+
+| Variable | Description |
+|----------|-------------|
+| `N8N_BASIC_AUTH_PASSWORD` | Mot de passe fort pour l'UI n8n |
+| `SUPABASE_URL` | URL de votre projet Supabase |
+| `SUPABASE_SERVICE_ROLE_KEY` | Clé service_role Supabase |
+| `ANTHROPIC_API_KEY` | Clé API Anthropic (`sk-ant-...`) |
+| `SMTP_HOST` | Serveur SMTP pour les alertes |
+| `SMTP_PORT` | Port SMTP (587 pour STARTTLS) |
+| `SMTP_USER` | Utilisateur SMTP |
+| `SMTP_PASSWORD` | Mot de passe SMTP |
+
+Puis redémarrer n8n :
 
 ```bash
-# Créer le fichier .env
-cat > .env << 'EOF'
-N8N_USER=admin
-N8N_PASSWORD=VotreMotDePasseFort123!
-N8N_ENCRYPTION_KEY=$(openssl rand -hex 16)
-N8N_HOST=n8n.glp1-france.fr
-EOF
-
-# Générer la clé de chiffrement
-sed -i "s/\$(openssl rand -hex 16)/$(openssl rand -hex 16)/" .env
+systemctl restart n8n
 ```
 
-## 4. Reverse Proxy Nginx + SSL
+## Étape 4 — Synchroniser les articles
+
+Depuis le répertoire du projet (sur le VPS ou en local avec .env configuré) :
 
 ```bash
-# Installer Nginx et Certbot
-apt install -y nginx certbot python3-certbot-nginx
+# Dry-run d'abord pour vérifier
+npm run sync:articles:dry
 
-# Créer la config Nginx
-cat > /etc/nginx/sites-available/n8n << 'EOF'
-server {
-    listen 80;
-    server_name n8n.glp1-france.fr;
-
-    location / {
-        proxy_pass http://localhost:5678;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_buffering off;
-        proxy_cache off;
-        chunked_transfer_encoding off;
-    }
-}
-EOF
-
-# Activer le site
-ln -sf /etc/nginx/sites-available/n8n /etc/nginx/sites-enabled/
-nginx -t && systemctl reload nginx
-
-# Obtenir le certificat SSL
-certbot --nginx -d n8n.glp1-france.fr --non-interactive --agree-tos -m admin@glp1-france.fr
+# Synchronisation réelle
+npm run sync:articles
 ```
 
-## 5. Lancer n8n
+Résultat attendu : ~82 articles synchronisés dans la table `articles`.
 
-```bash
-cd /opt/glp1-n8n
-docker compose up -d
+Vérifier dans Supabase → Table Editor → `articles`.
 
-# Vérifier que ça tourne
-docker compose ps
-docker compose logs -f n8n
-```
+## Étape 5 — Importer et tester le workflow n8n
 
-Accéder à `https://n8n.glp1-france.fr` avec les identifiants configurés.
+1. Ouvrir `https://n8n.glp1-france.fr`
+2. Se connecter avec les identifiants configurés
+3. **Workflows** → **Import from File** → sélectionner `n8n/workflows/fact-check-workflow.json`
 
-## 6. Importer le workflow
-
-1. Ouvrir n8n dans le navigateur
-2. Aller dans **Workflows** → **Import from File**
-3. Sélectionner `workflows/fact-check-workflow.json`
-4. Configurer les **Credentials** :
-
-### Variables d'environnement n8n à configurer
+### Configurer les credentials dans n8n
 
 Dans n8n → **Settings** → **Variables** :
 
 | Variable | Valeur |
 |----------|--------|
-| `SUPABASE_URL` | `https://ywekaivgjzsmdocchvum.supabase.co` |
-| `SUPABASE_SERVICE_ROLE_KEY` | Votre clé service_role Supabase |
-| `ANTHROPIC_API_KEY` | Votre clé API Anthropic (`sk-ant-...`) |
+| `SUPABASE_URL` | Votre URL Supabase |
+| `SUPABASE_SERVICE_ROLE_KEY` | Votre clé service_role |
+| `ANTHROPIC_API_KEY` | Votre clé API Anthropic |
 | `SMTP_FROM` | `noreply@glp1-france.fr` |
 | `NOTIFICATION_EMAIL` | `admin@glp1-france.fr` |
-
-### Credential SMTP
 
 Dans n8n → **Credentials** → **New** → **SMTP** :
 - Host : votre serveur SMTP
 - Port : 587
-- User : votre email
-- Password : votre mot de passe
+- User / Password : vos identifiants SMTP
 - SSL/TLS : STARTTLS
 
-5. **Activer** le workflow (toggle en haut à droite)
+### Test manuel
 
-## 7. Test initial
-
-1. Synchroniser d'abord les articles : `node scripts/sync-articles-to-supabase.mjs`
-2. Dans n8n, cliquer sur **Execute Workflow** (trigger manuel)
-3. Vérifier les résultats dans Supabase → table `fact_check_results`
+1. **Activer** le workflow (toggle en haut à droite)
+2. Cliquer sur **Execute Workflow** (trigger manuel)
+3. Vérifier qu'un résultat apparaît dans Supabase → `fact_check_results`
 4. Vérifier le dashboard : `https://glp1-france.fr/admin/fact-check`
 
-## 8. Maintenance
+## Étape 6 — Validation finale
+
+Checklist de validation :
+
+- [ ] Tables Supabase créées (`articles`, `fact_check_results`, `agent_logs`)
+- [ ] Vue `latest_fact_checks` fonctionnelle
+- [ ] n8n tourne sur le VPS (`systemctl status n8n`)
+- [ ] `https://n8n.glp1-france.fr` accessible avec SSL
+- [ ] Articles synchronisés (~82 dans la table `articles`)
+- [ ] Workflow importé et activé dans n8n
+- [ ] Test manuel : 1 article vérifié avec succès
+- [ ] Dashboard `/admin/fact-check` affiche les résultats
+- [ ] Alertes email fonctionnelles (statut Urgent)
+- [ ] Cron hebdomadaire configuré (lundi 8h UTC)
+
+## Gestion du service n8n
 
 ```bash
-# Voir les logs
-docker compose logs -f n8n
+# Statut
+systemctl status n8n
 
-# Mettre à jour n8n
-docker compose pull
-docker compose up -d
-
-# Backup des données
-docker compose exec n8n tar czf /tmp/n8n-backup.tar.gz /home/node/.n8n
-docker cp glp1-n8n:/tmp/n8n-backup.tar.gz ./backups/
+# Logs en temps réel
+journalctl -u n8n -f
 
 # Redémarrer
-docker compose restart
+systemctl restart n8n
+
+# Arrêter
+systemctl stop n8n
+
+# Mettre à jour n8n
+npm update -g n8n
+systemctl restart n8n
+```
+
+## Backup
+
+```bash
+# Sauvegarder les données n8n
+tar czf /opt/glp1-n8n/backup-$(date +%Y%m%d).tar.gz /root/.n8n
+
+# Restaurer
+tar xzf /opt/glp1-n8n/backup-YYYYMMDD.tar.gz -C /
 ```
 
 ## Budget estimé
 
 | Service | Coût mensuel |
 |---------|-------------|
-| VPS Hetzner CX22 | ~4€ |
+| VPS Hostinger Cloud Startup | Inclus dans l'hébergement |
 | API Anthropic (~80 articles/mois, ~2K tokens/article) | ~5-10€ |
-| Domaine (annuel proratisé) | ~1€ |
-| **Total** | **~10-15€/mois** |
-
-Bien dans le budget cible de < 50€/mois.
+| **Total additionnel** | **~5-10€/mois** |

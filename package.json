@@ -31,7 +31,9 @@
     "annuaire:generate-pages": "node scripts/annuaire/generate-landing-pages.mjs",
     "annuaire:setup": "npm run annuaire:import-cities && npm run annuaire:import-specialties",
     "sync:articles": "node scripts/sync-articles-to-supabase.mjs",
-    "sync:articles:dry": "node scripts/sync-articles-to-supabase.mjs --dry-run"
+    "sync:articles:dry": "node scripts/sync-articles-to-supabase.mjs --dry-run",
+    "db:check-migration": "node scripts/deployment/apply-supabase-migration.mjs",
+    "db:check-migration:dry": "node scripts/deployment/apply-supabase-migration.mjs --dry-run"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
