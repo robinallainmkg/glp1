@@ -33,22 +33,7 @@ export default defineConfig({
     '/collections/medicaments-glp1/trulicity-ou-ozempic': '/traitements-glp1/guide-complet-trulicity/',
     '/collections/medicaments-glp1/trulicity-danger': '/traitements-glp1/guide-complet-trulicity/',
     
-    // Suppression /collections/ - Wildcards marchent en Astro
-    '/collections/glp1-cout/[...slug]': '/glp1-cout/[...slug]',
-    '/collections/glp1-perte-de-poids/[...slug]': '/glp1-perte-de-poids/[...slug]',
-    '/collections/glp1-diabete/[...slug]': '/glp1-diabete/[...slug]',
-    '/collections/alternatives-glp1/[...slug]': '/alternatives-glp1/[...slug]',
-    '/collections/regime-glp1/[...slug]': '/regime-glp1/[...slug]',
-    '/collections/effets-secondaires-glp1/[...slug]': '/effets-secondaires-glp1/[...slug]',
-    '/collections/recherche-glp1/[...slug]': '/recherche-glp1/[...slug]',
-    '/collections/avant-apres-glp1/[...slug]': '/avant-apres-glp1/[...slug]',
-    '/collections/temoignages/[...slug]': '/temoignages/[...slug]',
-    '/collections/medecins-glp1-france/[...slug]': '/medecins-glp1-france/[...slug]',
-    '/collections/medicaments-glp1/[...slug]': '/traitements-glp1/[...slug]',
-    '/collections/traitements-glp1/[...slug]': '/traitements-glp1/[...slug]',
-    
-    // Annuaire → medecins-glp1-france
-    '/annuaire/[...slug]': '/medecins-glp1-france/[...slug]',
+    // Redirections dynamiques [...slug] gérées par scripts/inject-vercel-redirects.mjs (post-build)
     
     // Guides déplacés
     '/guides/guide-complet-trulicity/': '/traitements-glp1/guide-complet-trulicity/',
@@ -66,8 +51,7 @@ export default defineConfig({
     '/test-affiliation/': '/',
     '/admin-stats-new/': '/',
     
-    // Anciennes pages
-    '/medicaments-glp1/[...slug]': '/traitements-glp1/[...slug]',
+    // Anciennes pages (wildcard /medicaments-glp1/[...slug] géré par inject-vercel-redirects.mjs)
     '/experts/': '/',
     '/produits-recommandes/': '/',
     '/guide-debutant/': '/',
