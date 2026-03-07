@@ -1,0 +1,550 @@
+---
+// src/pages/admin/editorial.astro
+// Dashboard Éditorial — Corrections rédigées par l'Agent Éditorial (Phase 2)
+import { supabase } from '../../lib/supabase';
+import { supabaseConfig } from '../../lib/supabase';
+
+// Récupérer les corrections avec infos articles
+const { data: corrections, error } = await supabase
+  .from('editorial_queue')
+  .select(`
+    id,
+    fact_check_id,
+    article_id,
+    claim_original,
+    realite_actuelle,
+    source_reference,
+    urgence,
+    section_originale,
+    section_corrigee,
+    explication_correction,
+    model_used,
+    tokens_used,
+    statut,
+    requested_at,
+    processed_at,
+    reviewed_at,
+    reviewed_by,
+    articles (
+      id,
+      slug,
+      title,
+      collection
+    )
+  `)
+  .order('requested_at', { ascending: false })
+  .limit(200);
+
+// Grouper par statut
+const pendingReview = (corrections || []).filter(c => c.statut === 'pending_review');
+const requested = (corrections || []).filter(c => c.statut === 'requested' || c.statut === 'processing');
+const approved = (corrections || []).filter(c => c.statut === 'approved');
+const rejected = (corrections || []).filter(c => c.statut === 'rejected');
+const applied = (corrections || []).filter(c => c.statut === 'applied');
+
+function formatDate(dateStr: string | null) {
+  if (!dateStr) return 'N/A';
+  return new Date(dateStr).toLocaleDateString('fr-FR', {
+    day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+  });
+}
+
+function urgenceBadge(urgence: string) {
+  switch (urgence) {
+    case 'urgent': return { bg: '#fecaca', color: '#991b1b', label: 'Urgent' };
+    case 'moyen': return { bg: '#fde68a', color: '#92400e', label: 'Moyen' };
+    case 'faible': return { bg: '#bbf7d0', color: '#166534', label: 'Faible' };
+    default: return { bg: '#e2e8f0', color: '#475569', label: urgence };
+  }
+}
+
+function statutBadge(statut: string) {
+  switch (statut) {
+    case 'requested': return { bg: '#e0e7ff', color: '#4338ca', label: 'En attente' };
+    case 'processing': return { bg: '#fef3c7', color: '#92400e', label: 'En cours' };
+    case 'pending_review': return { bg: '#dbeafe', color: '#1e40af', label: 'A relire' };
+    case 'approved': return { bg: '#d1fae5', color: '#065f46', label: 'Approuve' };
+    case 'rejected': return { bg: '#fee2e2', color: '#991b1b', label: 'Rejete' };
+    case 'applied': return { bg: '#d1fae5', color: '#065f46', label: 'Applique' };
+    default: return { bg: '#e2e8f0', color: '#475569', label: statut };
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Dashboard - GLP1 France</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+    .header {
+      background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 { font-size: 1.5rem; font-weight: 600; }
+    .header-nav { display: flex; gap: 1.5rem; }
+    .header a { color: white; text-decoration: none; opacity: 0.8; }
+    .header a:hover { opacity: 1; }
+    .stats-bar {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .stat-card {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stat-card .stat-value { font-size: 2rem; font-weight: 700; }
+    .stat-card .stat-label { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
+    .stat-review { background: #eff6ff; color: #3b82f6; }
+    .stat-waiting { background: #f5f3ff; color: #7c3aed; }
+    .stat-approved { background: #f0fdf4; color: #22c55e; }
+    .stat-rejected { background: #fef2f2; color: #dc2626; }
+    .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+    .section { margin-bottom: 2rem; }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .card-header:hover { background: #f8fafc; }
+    .card-title { font-weight: 500; font-size: 0.95rem; }
+    .card-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 0.75rem; align-items: center; }
+    .card-body {
+      padding: 0 1.25rem 1.25rem;
+      border-top: 1px solid #f1f5f9;
+      display: none;
+    }
+    .card.open .card-body { display: block; }
+    .collection-tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+    .diff-block {
+      margin-top: 0.75rem;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .diff-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .diff-content {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .diff-original .diff-label { background: #fef2f2; color: #991b1b; }
+    .diff-original .diff-content { background: #fff5f5; color: #1e293b; border: 1px solid #fecaca; border-top: none; }
+    .diff-corrected .diff-label { background: #f0fdf4; color: #166534; }
+    .diff-corrected .diff-content { background: #f0fdf9; color: #1e293b; border: 1px solid #bbf7d0; border-top: none; }
+    .explanation {
+      margin-top: 0.75rem;
+      padding: 0.75rem;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: #92400e;
+    }
+    .explanation-label { font-weight: 600; margin-bottom: 0.25rem; }
+    .claim-block {
+      margin-top: 0.75rem;
+      padding: 0.75rem;
+      background: #f8fafc;
+      border-left: 3px solid #94a3b8;
+      border-radius: 0 6px 6px 0;
+    }
+    .claim-label { font-size: 0.75rem; font-weight: 600; color: #64748b; margin-bottom: 0.25rem; }
+    .claim-text { font-size: 0.9rem; font-weight: 500; }
+    .realite-text { font-size: 0.85rem; color: #475569; margin-top: 0.25rem; }
+    .source-link { font-size: 0.8rem; color: #3b82f6; margin-top: 0.25rem; }
+    .source-link a { color: #3b82f6; }
+    .card-actions {
+      padding: 0.75rem 1.25rem;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-end;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-approve { background: #22c55e; color: white; }
+    .btn-approve:hover:not(:disabled) { background: #16a34a; }
+    .btn-reject { background: #ef4444; color: white; }
+    .btn-reject:hover:not(:disabled) { background: #dc2626; }
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      z-index: 1000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.success { background: #22c55e; }
+    .toast.error { background: #dc2626; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Editorial Dashboard</h1>
+  <div class="header-nav">
+    <a href="/admin/fact-check">Fact-Check</a>
+    <a href="/admin">Admin</a>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-card stat-review">
+    <div class="stat-value">{pendingReview.length}</div>
+    <div class="stat-label">A relire</div>
+  </div>
+  <div class="stat-card stat-waiting">
+    <div class="stat-value">{requested.length}</div>
+    <div class="stat-label">En attente</div>
+  </div>
+  <div class="stat-card stat-approved">
+    <div class="stat-value">{approved.length + applied.length}</div>
+    <div class="stat-label">Approuves</div>
+  </div>
+  <div class="stat-card stat-rejected">
+    <div class="stat-value">{rejected.length}</div>
+    <div class="stat-label">Rejetes</div>
+  </div>
+</div>
+
+<div class="main">
+
+  {error && (
+    <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #991b1b;">
+      Erreur de connexion Supabase : {error.message}. Assurez-vous que la migration 004 a ete executee.
+    </div>
+  )}
+
+  {(corrections || []).length === 0 && !error && (
+    <div class="empty-state">
+      <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucune correction editoriale</p>
+      <p>Envoyez des points depuis le <a href="/admin/fact-check" style="color: #3b82f6;">dashboard fact-check</a>, puis lancez l'agent editorial.</p>
+      <p style="margin-top: 0.5rem;"><code>node scripts/editorial-agent.mjs</code></p>
+    </div>
+  )}
+
+  <!-- Section: A relire (pending_review) -->
+  {pendingReview.length > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #3b82f6;">A relire</span>
+        <span class="badge" style="background: #dbeafe; color: #1e40af;">{pendingReview.length}</span>
+      </div>
+      {pendingReview.map((c: any) => {
+        const ub = urgenceBadge(c.urgence);
+        return (
+          <div class="card" data-card>
+            <div class="card-header" data-toggle>
+              <div>
+                <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
+                <span class="collection-tag" style="margin-left: 0.5rem;">{c.articles?.collection}</span>
+                <span class="badge" style={`margin-left: 0.5rem; background: ${ub.bg}; color: ${ub.color};`}>{ub.label}</span>
+              </div>
+              <div class="card-meta">
+                <span>{formatDate(c.processed_at)}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="claim-block">
+                <div class="claim-label">Claim problematique</div>
+                <div class="claim-text">{c.claim_original}</div>
+                <div class="realite-text">{c.realite_actuelle}</div>
+                {c.source_reference && (
+                  <div class="source-link">
+                    <a href={c.source_reference} target="_blank" rel="noopener">{c.source_reference}</a>
+                  </div>
+                )}
+              </div>
+
+              {c.section_originale && (
+                <div class="diff-block diff-original">
+                  <div class="diff-label"><span>Section originale</span></div>
+                  <div class="diff-content">{c.section_originale}</div>
+                </div>
+              )}
+
+              {c.section_corrigee && (
+                <div class="diff-block diff-corrected">
+                  <div class="diff-label"><span>Section corrigee</span></div>
+                  <div class="diff-content">{c.section_corrigee}</div>
+                </div>
+              )}
+
+              {c.explication_correction && (
+                <div class="explanation">
+                  <div class="explanation-label">Explication de la correction</div>
+                  <div>{c.explication_correction}</div>
+                </div>
+              )}
+
+              <div class="card-actions">
+                <button class="btn btn-reject" data-review-action="rejected" data-correction-id={c.id}>
+                  Rejeter
+                </button>
+                <button class="btn btn-approve" data-review-action="approved" data-correction-id={c.id}>
+                  Approuver
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  )}
+
+  <!-- Section: En attente de traitement -->
+  {requested.length > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #7c3aed;">En attente de traitement</span>
+        <span class="badge" style="background: #f5f3ff; color: #7c3aed;">{requested.length}</span>
+      </div>
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">
+        Ces points attendent que l'agent editorial les traite. Lancez : <code>node scripts/editorial-agent.mjs</code>
+      </p>
+      {requested.map((c: any) => {
+        const ub = urgenceBadge(c.urgence);
+        const sb = statutBadge(c.statut);
+        return (
+          <div class="card" data-card>
+            <div class="card-header" data-toggle>
+              <div>
+                <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
+                <span class="badge" style={`margin-left: 0.5rem; background: ${ub.bg}; color: ${ub.color};`}>{ub.label}</span>
+                <span class="badge" style={`margin-left: 0.5rem; background: ${sb.bg}; color: ${sb.color};`}>{sb.label}</span>
+              </div>
+              <div class="card-meta">
+                <span>{formatDate(c.requested_at)}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="claim-block">
+                <div class="claim-label">Claim problematique</div>
+                <div class="claim-text">{c.claim_original}</div>
+                <div class="realite-text">{c.realite_actuelle}</div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  )}
+
+  <!-- Section: Approuves / Appliques -->
+  {(approved.length + applied.length) > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #22c55e;">Approuves</span>
+        <span class="badge" style="background: #d1fae5; color: #065f46;">{approved.length + applied.length}</span>
+      </div>
+      {[...approved, ...applied].map((c: any) => {
+        const sb = statutBadge(c.statut);
+        return (
+          <div class="card" data-card>
+            <div class="card-header" data-toggle>
+              <div>
+                <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
+                <span class="badge" style={`margin-left: 0.5rem; background: ${sb.bg}; color: ${sb.color};`}>{sb.label}</span>
+              </div>
+              <div class="card-meta">
+                <span>Relu {formatDate(c.reviewed_at)}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="claim-block">
+                <div class="claim-label">Correction appliquee</div>
+                <div class="claim-text">{c.claim_original}</div>
+              </div>
+              {c.section_corrigee && (
+                <div class="diff-block diff-corrected">
+                  <div class="diff-label"><span>Section corrigee</span></div>
+                  <div class="diff-content">{c.section_corrigee}</div>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  )}
+
+  <!-- Section: Rejetes -->
+  {rejected.length > 0 && (
+    <div class="section">
+      <div class="section-title">
+        <span style="color: #ef4444;">Rejetes</span>
+        <span class="badge" style="background: #fee2e2; color: #991b1b;">{rejected.length}</span>
+      </div>
+      {rejected.map((c: any) => (
+        <div class="card" data-card>
+          <div class="card-header" data-toggle>
+            <div>
+              <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
+            </div>
+            <div class="card-meta">
+              <span>Rejete {formatDate(c.reviewed_at)}</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="claim-block">
+              <div class="claim-text">{c.claim_original}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  function showToast(message, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = `toast ${type} show`;
+    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+  }
+
+  // Toggle cards
+  document.querySelectorAll('[data-toggle]').forEach(header => {
+    header.addEventListener('click', () => {
+      const card = header.closest('[data-card]');
+      if (card) card.classList.toggle('open');
+    });
+  });
+
+  // Approve / Reject actions
+  document.querySelectorAll('[data-review-action]').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const button = e.currentTarget;
+      const action = button.dataset.reviewAction;
+      const correctionId = button.dataset.correctionId;
+
+      button.disabled = true;
+      const originalText = button.textContent;
+      button.textContent = '...';
+
+      try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/editorial_queue?id=eq.${correctionId}`, {
+          method: 'PATCH',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({
+            statut: action,
+            reviewed_at: new Date().toISOString(),
+            reviewed_by: 'admin'
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(await response.text());
+        }
+
+        const card = button.closest('[data-card]');
+        if (card) {
+          card.style.opacity = '0.5';
+          card.style.pointerEvents = 'none';
+        }
+
+        showToast(action === 'approved' ? 'Correction approuvee' : 'Correction rejetee');
+
+        // Reload after a short delay
+        setTimeout(() => { window.location.reload(); }, 1500);
+      } catch (err) {
+        button.disabled = false;
+        button.textContent = originalText;
+        showToast('Erreur: ' + err.message, 'error');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
