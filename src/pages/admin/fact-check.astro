@@ -42,7 +42,7 @@ for (const t of (tickets || [])) {
 
 // Grouper resultats par statut
 const urgent = (results || []).filter(r => r.statut === 'Urgent');
-const aVerifier = (results || []).filter(r => r.statut === 'A verifier');
+const aVerifier = (results || []).filter(r => r.statut === 'A verifier' || r.statut === 'À vérifier');
 const ok = (results || []).filter(r => r.statut === 'OK');
 
 // Stats
