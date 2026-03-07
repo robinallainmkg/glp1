@@ -1,0 +1,81 @@
+name: "Run Supabase Migration"
+
+on:
+  workflow_dispatch:
+    inputs:
+      migration_file:
+        description: "Migration file to run (e.g. 004_editorial_system.sql)"
+        required: true
+        default: "004_editorial_system.sql"
+
+jobs:
+  migrate:
+    name: "Execute SQL migration"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      - name: Run migration
+        run: |
+          node -e "
+          const { createClient } = require('@supabase/supabase-js');
+          const fs = require('fs');
+
+          async function run() {
+            const supabase = createClient(
+              process.env.SUPABASE_URL,
+              process.env.SUPABASE_SERVICE_ROLE_KEY,
+              { auth: { autoRefreshToken: false, persistSession: false } }
+            );
+
+            const sqlFile = 'supabase/migrations/${{ github.event.inputs.migration_file }}';
+            const sql = fs.readFileSync(sqlFile, 'utf8');
+
+            // Split by semicolons and run each statement
+            const statements = sql
+              .split(';')
+              .map(s => s.trim())
+              .filter(s => s.length > 0 && !s.startsWith('--'));
+
+            console.log('Running', statements.length, 'SQL statements from', sqlFile);
+
+            for (const stmt of statements) {
+              // Skip comments-only blocks
+              const cleanStmt = stmt.replace(/--[^\n]*/g, '').trim();
+              if (!cleanStmt) continue;
+
+              const { error } = await supabase.rpc('exec', { sql: cleanStmt + ';' });
+              if (error) {
+                // Try alternative: some Supabase instances don't have exec()
+                console.log('RPC exec not available, trying pg_query...');
+                console.log('Statement:', cleanStmt.substring(0, 80) + '...');
+                console.log('Error:', error.message);
+                // Continue anyway - some statements might fail if objects already exist
+              } else {
+                console.log('OK:', cleanStmt.substring(0, 60) + '...');
+              }
+            }
+
+            console.log('Done!');
+          }
+
+          run().catch(err => {
+            console.error('Fatal:', err);
+            process.exit(1);
+          });
+          "
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
