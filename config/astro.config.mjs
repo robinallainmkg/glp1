@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   site: 'https://glp1-france.fr',
   base: '/',
-  output: 'static',
+  output: 'hybrid',
+  adapter: vercel(),
   integrations: [
     sitemap({
       changefreq: 'weekly',
