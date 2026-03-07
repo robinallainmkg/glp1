@@ -10,7 +10,7 @@ import { supabaseConfig } from '../../lib/supabase';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fact-Check Dashboard - GLP1 France</title>
+  <title>Fact-Check - GLP1 Admin</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -18,25 +18,47 @@ import { supabaseConfig } from '../../lib/supabase';
       background: #f1f5f9;
       color: #1e293b;
     }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; }
+    .btn-refresh {
+      padding: 0.5rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: white;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: #475569;
+      transition: all 0.15s;
+    }
+    .btn-refresh:hover { background: #f8fafc; border-color: #cbd5e1; }
 
     /* Stats bar */
     .stats-bar {
       display: flex;
       gap: 1rem;
-      padding: 1.5rem 2rem;
+      padding: 1.25rem 2rem;
       background: white;
       border-bottom: 1px solid #e2e8f0;
-      max-width: 1400px;
-      margin: 0 auto;
     }
     .stat-card {
       flex: 1;
-      padding: 1rem 1.25rem;
+      padding: 0.85rem 1rem;
       border-radius: 10px;
       text-align: center;
     }
-    .stat-card .stat-value { font-size: 1.75rem; font-weight: 700; }
-    .stat-card .stat-label { font-size: 0.8rem; color: #64748b; margin-top: 0.25rem; font-weight: 500; }
+    .stat-card .stat-value { font-size: 1.5rem; font-weight: 700; }
+    .stat-card .stat-label { font-size: 0.75rem; color: #64748b; margin-top: 0.15rem; font-weight: 500; }
     .stat-urgent { background: #fef2f2; color: #dc2626; }
     .stat-warning { background: #fffbeb; color: #f59e0b; }
     .stat-ok { background: #f0fdf4; color: #22c55e; }
@@ -44,23 +66,23 @@ import { supabaseConfig } from '../../lib/supabase';
     .stat-tickets { background: #f5f3ff; color: #7c3aed; }
 
     /* Main */
-    .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+    .main { padding: 2rem; }
 
     /* Section */
-    .section { margin-bottom: 2.5rem; }
+    .section { margin-bottom: 2rem; }
     .section-title {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
     .badge {
       display: inline-block;
-      padding: 0.2rem 0.65rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 12px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
     }
 
@@ -69,13 +91,13 @@ import { supabaseConfig } from '../../lib/supabase';
       background: white;
       border-radius: 12px;
       border: 1px solid #e2e8f0;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       overflow: hidden;
       transition: box-shadow 0.2s;
     }
     .article-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
     .article-header {
-      padding: 1rem 1.5rem;
+      padding: 0.85rem 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -83,56 +105,36 @@ import { supabaseConfig } from '../../lib/supabase';
       gap: 1rem;
     }
     .article-header:hover { background: #f8fafc; }
-    .article-title { font-weight: 600; font-size: 0.95rem; }
-    .article-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 1rem; align-items: center; flex-shrink: 0; }
-    .article-body { display: none; padding: 0 1.5rem 1.5rem; }
+    .article-title { font-weight: 600; font-size: 0.92rem; }
+    .article-meta { font-size: 0.78rem; color: #94a3b8; display: flex; gap: 0.75rem; align-items: center; flex-shrink: 0; }
+    .article-body { display: none; padding: 0 1.25rem 1.25rem; }
     .article-card.open .article-body { display: block; }
     .collection-tag {
       display: inline-block;
-      padding: 0.15rem 0.5rem;
+      padding: 0.12rem 0.45rem;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 500;
       background: #e0e7ff;
       color: #4338ca;
     }
 
     /* Score bar */
-    .score-bar-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      min-width: 140px;
-    }
-    .score-bar {
-      flex: 1;
-      height: 8px;
-      background: #e2e8f0;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .score-bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      transition: width 0.3s;
-    }
-    .score-label {
-      font-size: 0.85rem;
-      font-weight: 700;
-      min-width: 48px;
-      text-align: right;
-    }
+    .score-bar-container { display: flex; align-items: center; gap: 0.5rem; min-width: 130px; }
+    .score-bar { flex: 1; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
+    .score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+    .score-label { font-size: 0.82rem; font-weight: 700; min-width: 44px; text-align: right; }
 
     /* Ticket */
     .ticket {
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       border: 1px solid #e2e8f0;
       border-radius: 10px;
       overflow: hidden;
       background: #fafbfc;
     }
     .ticket-header {
-      padding: 0.75rem 1rem;
+      padding: 0.65rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -141,36 +143,36 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .ticket-type {
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
     .ticket-statut {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.6rem;
+      font-size: 0.72rem;
+      padding: 0.18rem 0.55rem;
       border-radius: 6px;
       font-weight: 600;
     }
-    .ticket-body { padding: 1.25rem; }
+    .ticket-body { padding: 1rem; }
 
     /* Diff blocks */
     .diff-before, .diff-after {
       border-radius: 8px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
       overflow: hidden;
     }
     .diff-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 0.4rem 0.85rem;
+      padding: 0.35rem 0.75rem;
       letter-spacing: 0.03em;
       text-transform: uppercase;
     }
     .diff-content {
-      padding: 0.85rem;
-      font-size: 0.88rem;
-      line-height: 1.7;
+      padding: 0.75rem;
+      font-size: 0.85rem;
+      line-height: 1.65;
       white-space: pre-wrap;
       word-break: break-word;
       font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
@@ -180,13 +182,13 @@ import { supabaseConfig } from '../../lib/supabase';
     .diff-after .diff-label { background: #bbf7d0; color: #166534; }
     .diff-after .diff-content { background: #f0fdf4; border: 1px solid #bbf7d0; border-top: none; color: #166534; }
 
-    .ticket-source { font-size: 0.8rem; color: #3b82f6; margin-bottom: 0.75rem; }
+    .ticket-source { font-size: 0.78rem; color: #3b82f6; margin-bottom: 0.65rem; }
     .ticket-source a { color: #3b82f6; }
     .ticket-realite {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #475569;
-      margin-bottom: 0.75rem;
-      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.65rem;
+      padding: 0.55rem 0.75rem;
       background: #fffbeb;
       border: 1px solid #fde68a;
       border-radius: 8px;
@@ -196,42 +198,42 @@ import { supabaseConfig } from '../../lib/supabase';
     /* Action buttons */
     .ticket-actions {
       display: flex;
-      gap: 0.75rem;
-      padding-top: 1rem;
-      margin-top: 0.75rem;
+      gap: 0.6rem;
+      padding-top: 0.85rem;
+      margin-top: 0.65rem;
       border-top: 1px solid #e2e8f0;
     }
     .btn {
-      padding: 0.6rem 1.25rem;
+      padding: 0.5rem 1rem;
       border: none;
       border-radius: 8px;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.15s;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .btn:active:not(:disabled) { transform: scale(0.97); }
     .btn-approve { background: #22c55e; color: white; box-shadow: 0 2px 4px rgba(34,197,94,0.3); }
-    .btn-approve:hover:not(:disabled) { background: #16a34a; box-shadow: 0 3px 8px rgba(34,197,94,0.4); }
+    .btn-approve:hover:not(:disabled) { background: #16a34a; }
     .btn-reject { background: #ef4444; color: white; box-shadow: 0 2px 4px rgba(239,68,68,0.3); }
-    .btn-reject:hover:not(:disabled) { background: #dc2626; box-shadow: 0 3px 8px rgba(239,68,68,0.4); }
+    .btn-reject:hover:not(:disabled) { background: #dc2626; }
     .btn-note { background: #f59e0b; color: white; box-shadow: 0 2px 4px rgba(245,158,11,0.3); }
-    .btn-note:hover:not(:disabled) { background: #d97706; box-shadow: 0 3px 8px rgba(245,158,11,0.4); }
+    .btn-note:hover:not(:disabled) { background: #d97706; }
 
     /* Toast */
     .toast {
       position: fixed;
       bottom: 2rem;
       right: 2rem;
-      padding: 1rem 1.5rem;
+      padding: 0.85rem 1.25rem;
       border-radius: 10px;
       color: white;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       z-index: 1000;
       transform: translateY(100px);
       opacity: 0;
@@ -257,20 +259,20 @@ import { supabaseConfig } from '../../lib/supabase';
     .modal {
       background: white;
       border-radius: 14px;
-      padding: 2rem;
+      padding: 1.75rem;
       width: 90%;
-      max-width: 500px;
+      max-width: 480px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     }
-    .modal h3 { margin-bottom: 0.5rem; font-size: 1.15rem; }
-    .modal p { margin-bottom: 1rem; }
+    .modal h3 { margin-bottom: 0.35rem; font-size: 1.1rem; }
+    .modal p { margin-bottom: 0.85rem; font-size: 0.85rem; color: #64748b; }
     .modal textarea {
       width: 100%;
-      min-height: 120px;
-      padding: 0.85rem;
+      min-height: 100px;
+      padding: 0.75rem;
       border: 2px solid #e2e8f0;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-family: inherit;
       resize: vertical;
       transition: border-color 0.2s;
@@ -278,9 +280,9 @@ import { supabaseConfig } from '../../lib/supabase';
     .modal textarea:focus { outline: none; border-color: #f59e0b; }
     .modal-actions {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.6rem;
       justify-content: flex-end;
-      margin-top: 1.25rem;
+      margin-top: 1rem;
     }
     .btn-cancel { background: #e2e8f0; color: #475569; }
     .btn-cancel:hover { background: #cbd5e1; }
@@ -292,40 +294,40 @@ import { supabaseConfig } from '../../lib/supabase';
       text-align: center;
       padding: 3rem;
       color: #94a3b8;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
     .loading {
       text-align: center;
       padding: 3rem;
       color: #64748b;
-      font-size: 1rem;
     }
     .human-note {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #92400e;
       background: #fffbeb;
-      padding: 0.65rem 0.85rem;
+      padding: 0.55rem 0.75rem;
       border-radius: 8px;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
       border: 1px solid #fde68a;
     }
-
-    /* No tickets warning */
     .no-tickets-warning {
-      padding: 1rem;
+      padding: 0.85rem;
       background: #fffbeb;
       border: 1px solid #fde68a;
       border-radius: 8px;
       color: #92400e;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       line-height: 1.5;
     }
 
-    /* Responsive */
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+    }
     @media (max-width: 768px) {
       .stats-bar { flex-wrap: wrap; padding: 1rem; gap: 0.5rem; }
       .stat-card { min-width: calc(50% - 0.5rem); }
       .main { padding: 1rem; }
+      .page-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1rem; }
       .article-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
       .ticket-actions { flex-wrap: wrap; }
     }
@@ -335,40 +337,50 @@ import { supabaseConfig } from '../../lib/supabase';
 
 <AdminNav />
 
-<div class="stats-bar">
-  <div class="stat-card stat-urgent">
-    <div class="stat-value" id="stat-urgent">-</div>
-    <div class="stat-label">Urgents</div>
+<div class="admin-layout">
+  <div class="page-header">
+    <div>
+      <h1>Fact-Check</h1>
+      <p>Verification de fiabilite des articles GLP-1</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn-refresh" onclick="loadDashboard()">Rafraichir</button>
+    </div>
   </div>
-  <div class="stat-card stat-warning">
-    <div class="stat-value" id="stat-warning">-</div>
-    <div class="stat-label">A verifier</div>
-  </div>
-  <div class="stat-card stat-ok">
-    <div class="stat-value" id="stat-ok">-</div>
-    <div class="stat-label">OK</div>
-  </div>
-  <div class="stat-card stat-info">
-    <div class="stat-value" id="stat-score">-</div>
-    <div class="stat-label">Score moyen</div>
-  </div>
-  <div class="stat-card stat-tickets">
-    <div class="stat-value" id="stat-tickets">-</div>
-    <div class="stat-label">Tickets en attente</div>
-  </div>
-</div>
 
-<div class="main" id="content">
-  <div class="loading">Chargement des donnees...</div>
+  <div class="stats-bar">
+    <div class="stat-card stat-urgent">
+      <div class="stat-value" id="stat-urgent">-</div>
+      <div class="stat-label">Urgents</div>
+    </div>
+    <div class="stat-card stat-warning">
+      <div class="stat-value" id="stat-warning">-</div>
+      <div class="stat-label">A verifier</div>
+    </div>
+    <div class="stat-card stat-ok">
+      <div class="stat-value" id="stat-ok">-</div>
+      <div class="stat-label">OK</div>
+    </div>
+    <div class="stat-card stat-info">
+      <div class="stat-value" id="stat-score">-</div>
+      <div class="stat-label">Score moyen</div>
+    </div>
+    <div class="stat-card stat-tickets">
+      <div class="stat-value" id="stat-tickets">-</div>
+      <div class="stat-label">Tickets en attente</div>
+    </div>
+  </div>
+
+  <div class="main" id="content">
+    <div class="loading">Chargement des donnees...</div>
+  </div>
 </div>
 
 <!-- Modal note -->
 <div class="modal-overlay" id="noteModal">
   <div class="modal">
     <h3>Ajouter une note</h3>
-    <p style="font-size: 0.88rem; color: #64748b;">
-      Cette note sera transmise a l'Agent Editorial pour revision.
-    </p>
+    <p>Cette note sera transmise a l'Agent Editorial pour revision.</p>
     <textarea id="noteText" placeholder="Instructions pour la revision..."></textarea>
     <div class="modal-actions">
       <button class="btn btn-cancel" id="noteCancel">Annuler</button>
@@ -384,8 +396,6 @@ import { supabaseConfig } from '../../lib/supabase';
   const SUPABASE_URL = supabaseUrl;
   const SUPABASE_ANON_KEY = supabaseAnonKey;
   let pendingNoteTicketId = null;
-
-  // --- Helpers ---
 
   function formatDate(dateStr) {
     if (!dateStr) return 'N/A';
@@ -427,8 +437,6 @@ import { supabaseConfig } from '../../lib/supabase';
     return '#22c55e';
   }
 
-  // --- Supabase helpers ---
-
   async function supabaseFetch(table, query) {
     const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
       headers: {
@@ -464,8 +472,6 @@ import { supabaseConfig } from '../../lib/supabase';
     setTimeout(() => { toast.classList.remove('show'); }, 3000);
   }
 
-  // --- Render ---
-
   function renderScoreBar(score) {
     const color = scoreColor(score);
     return `
@@ -484,7 +490,7 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="ticket-header">
           <div class="ticket-type">
             <span>${urgenceIcon(t.urgence)}</span>
-            <span style="text-transform:uppercase;font-size:0.78rem">${escapeHtml(t.urgence)}</span>
+            <span style="text-transform:uppercase;font-size:0.72rem">${escapeHtml(t.urgence)}</span>
             <span style="color:#cbd5e1">&bull;</span>
             <span>${escapeHtml(typeLabel(t.ticket_type))}</span>
           </div>
@@ -528,7 +534,7 @@ import { supabaseConfig } from '../../lib/supabase';
           return `
             <div class="article-card" data-card>
               <div class="article-header" onclick="this.closest('[data-card]').classList.toggle('open')">
-                <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+                <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap">
                   <span class="article-title">${escapeHtml(r.articles?.title || 'Article inconnu')}</span>
                   <span class="collection-tag">${escapeHtml(r.articles?.collection || '')}</span>
                   ${articleTickets.length > 0 ? `<span class="badge" style="background:#f5f3ff;color:#7c3aed">${articleTickets.length} ticket(s)</span>` : ''}
@@ -542,7 +548,7 @@ import { supabaseConfig } from '../../lib/supabase';
                 ${articleTickets.length === 0
                   ? `<div class="no-tickets-warning">
                       <strong>Aucun ticket genere pour cet article</strong> (score : ${score}/100).
-                      ${score < 70 ? '<br>Le fact-checker a identifie des problemes mais n\'a pas genere de tickets individuels. Relancez le fact-check sur cet article : <code>node scripts/fact-check-runner.mjs --article-id ' + (r.article_id || r.articles?.id || '') + '</code>' : ''}
+                      ${score < 70 ? '<br>Relancez le fact-check : <code>node scripts/fact-check-runner.mjs --article-id ' + (r.article_id || r.articles?.id || '') + '</code>' : ''}
                     </div>`
                   : articleTickets.map(t => renderTicket(t)).join('')}
               </div>
@@ -553,8 +559,7 @@ import { supabaseConfig } from '../../lib/supabase';
     `;
   }
 
-  // --- Action handler (global for onclick) ---
-
+  // Action handler
   window.handleAction = async function(action, ticketId, button) {
     if (action === 'note') {
       pendingNoteTicketId = ticketId;
@@ -568,16 +573,13 @@ import { supabaseConfig } from '../../lib/supabase';
     const originalText = button.textContent;
     button.textContent = '...';
 
-    // Disable sibling buttons
     const actionRow = button.closest('.ticket-actions');
-    if (actionRow) {
-      actionRow.querySelectorAll('.btn').forEach(b => b.disabled = true);
-    }
+    if (actionRow) actionRow.querySelectorAll('.btn').forEach(b => b.disabled = true);
 
     try {
       if (action === 'approve') {
         await updateTicket(ticketId, { statut: 'approved', reviewed_at: new Date().toISOString() });
-        showToast('Ticket approuve — pret pour l\'agent editorial');
+        showToast('Ticket approuve');
       } else if (action === 'reject') {
         await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
         showToast('Ticket rejete');
@@ -591,25 +593,20 @@ import { supabaseConfig } from '../../lib/supabase';
       }
       setTimeout(() => { loadDashboard(); }, 1500);
     } catch (err) {
-      if (actionRow) {
-        actionRow.querySelectorAll('.btn').forEach(b => b.disabled = false);
-      }
+      if (actionRow) actionRow.querySelectorAll('.btn').forEach(b => b.disabled = false);
       button.textContent = originalText;
       showToast('Erreur: ' + err.message, 'error');
-      console.error('Action error:', err);
     }
   };
 
-  // --- Load data ---
-
-  async function loadDashboard() {
+  // Load data
+  window.loadDashboard = async function() {
     try {
       const [results, tickets] = await Promise.all([
         supabaseFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,model_used,articles(id,slug,title,collection)&order=checked_at.desc&limit=100'),
         supabaseFetch('correction_tickets', 'select=*&order=created_at.desc&limit=500')
       ]);
 
-      // Group tickets by fact_check_result_id
       const ticketsByResult = new Map();
       for (const t of tickets) {
         const key = t.fact_check_result_id;
@@ -617,12 +614,10 @@ import { supabaseConfig } from '../../lib/supabase';
         ticketsByResult.get(key).push(t);
       }
 
-      // Group results by status
       const urgent = results.filter(r => r.statut === 'Urgent');
       const aVerifier = results.filter(r => r.statut === 'A verifier' || r.statut === 'À vérifier');
       const ok = results.filter(r => r.statut === 'OK');
 
-      // Stats
       const avgScore = results.length > 0
         ? Math.round(results.reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / results.length)
         : 0;
@@ -639,7 +634,7 @@ import { supabaseConfig } from '../../lib/supabase';
       if (results.length === 0) {
         contentEl.innerHTML = `
           <div class="empty-state">
-            <p style="font-size:1.2rem;margin-bottom:0.5rem">Aucun resultat de fact-check</p>
+            <p style="font-size:1.15rem;margin-bottom:0.5rem">Aucun resultat de fact-check</p>
             <p>Lancez le fact-checker : <code>node scripts/fact-check-runner.mjs --limit 5</code></p>
           </div>
         `;
@@ -647,30 +642,28 @@ import { supabaseConfig } from '../../lib/supabase';
       }
 
       const groups = [
-        { items: urgent, label: 'Urgents', color: '#dc2626', badgeBg: '#fecaca', badgeColor: '#991b1b', scoreBg: '#fecaca', scoreColor: '#991b1b' },
-        { items: aVerifier, label: 'A verifier', color: '#f59e0b', badgeBg: '#fde68a', badgeColor: '#92400e', scoreBg: '#fde68a', scoreColor: '#92400e' },
-        { items: ok, label: 'OK', color: '#22c55e', badgeBg: '#bbf7d0', badgeColor: '#166534', scoreBg: '#bbf7d0', scoreColor: '#166534' },
+        { items: urgent, label: 'Urgents', color: '#dc2626', badgeBg: '#fecaca', badgeColor: '#991b1b' },
+        { items: aVerifier, label: 'A verifier', color: '#f59e0b', badgeBg: '#fde68a', badgeColor: '#92400e' },
+        { items: ok, label: 'OK', color: '#22c55e', badgeBg: '#bbf7d0', badgeColor: '#166534' },
       ];
 
       contentEl.innerHTML = groups.map(g => renderGroup(g, results, ticketsByResult)).join('');
 
     } catch (err) {
       document.getElementById('content').innerHTML = `
-        <div style="background:#fef2f2;border:1px solid #fecaca;padding:1.25rem;border-radius:10px;color:#991b1b">
+        <div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:10px;color:#991b1b">
           <strong>Erreur Supabase</strong> : ${escapeHtml(err.message)}
         </div>
       `;
-      console.error('Dashboard load error:', err);
     }
-  }
+  };
 
-  // Modal: cancel
+  // Modal handlers
   document.getElementById('noteCancel').addEventListener('click', () => {
     document.getElementById('noteModal').classList.remove('active');
     pendingNoteTicketId = null;
   });
 
-  // Modal: send note
   document.getElementById('noteSend').addEventListener('click', async () => {
     const note = document.getElementById('noteText').value.trim();
     if (!note) { showToast('Veuillez saisir une note', 'error'); return; }
@@ -685,10 +678,8 @@ import { supabaseConfig } from '../../lib/supabase';
         human_note: note,
         reviewed_at: new Date().toISOString()
       });
-
       document.getElementById('noteModal').classList.remove('active');
       showToast('Ticket renvoye en revision avec note');
-
       const ticket = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"]`);
       if (ticket) {
         ticket.style.transition = 'opacity 0.3s';
@@ -700,13 +691,10 @@ import { supabaseConfig } from '../../lib/supabase';
       sendBtn.disabled = false;
       sendBtn.textContent = 'Envoyer la note';
       showToast('Erreur: ' + err.message, 'error');
-      console.error('Note error:', err);
     }
-
     pendingNoteTicketId = null;
   });
 
-  // Close modal on overlay click
   document.getElementById('noteModal').addEventListener('click', (e) => {
     if (e.target === e.currentTarget) {
       document.getElementById('noteModal').classList.remove('active');
@@ -714,7 +702,6 @@ import { supabaseConfig } from '../../lib/supabase';
     }
   });
 
-  // Initial load
   loadDashboard();
 </script>
 
