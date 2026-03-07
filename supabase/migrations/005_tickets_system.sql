@@ -60,17 +60,17 @@ CREATE TABLE IF NOT EXISTS correction_tickets (
 );
 
 -- =============================================================================
--- Index
+-- Index (idempotent)
 -- =============================================================================
-CREATE INDEX idx_tickets_statut ON correction_tickets(statut);
-CREATE INDEX idx_tickets_article_id ON correction_tickets(article_id);
-CREATE INDEX idx_tickets_fact_check_id ON correction_tickets(fact_check_result_id);
-CREATE INDEX idx_tickets_urgence ON correction_tickets(urgence);
-CREATE INDEX idx_tickets_type ON correction_tickets(ticket_type);
-CREATE INDEX idx_tickets_created_at ON correction_tickets(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_tickets_statut ON correction_tickets(statut);
+CREATE INDEX IF NOT EXISTS idx_tickets_article_id ON correction_tickets(article_id);
+CREATE INDEX IF NOT EXISTS idx_tickets_fact_check_id ON correction_tickets(fact_check_result_id);
+CREATE INDEX IF NOT EXISTS idx_tickets_urgence ON correction_tickets(urgence);
+CREATE INDEX IF NOT EXISTS idx_tickets_type ON correction_tickets(ticket_type);
+CREATE INDEX IF NOT EXISTS idx_tickets_created_at ON correction_tickets(created_at DESC);
 
 -- =============================================================================
--- Trigger updated_at
+-- Trigger updated_at (idempotent)
 -- =============================================================================
 CREATE OR REPLACE FUNCTION update_ticket_updated_at()
 RETURNS TRIGGER AS $$
@@ -80,23 +80,24 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+DROP TRIGGER IF EXISTS trigger_ticket_updated_at ON correction_tickets;
 CREATE TRIGGER trigger_ticket_updated_at
   BEFORE UPDATE ON correction_tickets
   FOR EACH ROW
   EXECUTE FUNCTION update_ticket_updated_at();
 
 -- =============================================================================
--- Row Level Security
+-- Row Level Security (idempotent)
 -- =============================================================================
 ALTER TABLE correction_tickets ENABLE ROW LEVEL SECURITY;
 
--- Lecture publique (dashboard admin)
+DROP POLICY IF EXISTS "tickets_read_all" ON correction_tickets;
 CREATE POLICY "tickets_read_all" ON correction_tickets FOR SELECT USING (true);
 
--- Ecriture service_role (agents)
+DROP POLICY IF EXISTS "tickets_write_service" ON correction_tickets;
 CREATE POLICY "tickets_write_service" ON correction_tickets FOR ALL USING (auth.role() = 'service_role');
 
--- Update anon (actions dashboard : approve/reject/note)
+DROP POLICY IF EXISTS "tickets_update_anon" ON correction_tickets;
 CREATE POLICY "tickets_update_anon" ON correction_tickets
   FOR UPDATE
   USING (true)
