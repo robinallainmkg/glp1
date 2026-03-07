@@ -1,96 +1,7 @@
 ---
 // src/pages/admin/fact-check.astro
-// Dashboard Fact-Check — Tickets Before/After (Phase 3)
-import { supabase } from '../../lib/supabase';
+// Dashboard Fact-Check — Client-side rendering (Hostinger static)
 import { supabaseConfig } from '../../lib/supabase';
-
-// Recuperer les resultats fact-check avec articles
-const { data: results, error: resultsError } = await supabase
-  .from('fact_check_results')
-  .select(`
-    id,
-    score_fiabilite,
-    statut,
-    checked_at,
-    model_used,
-    articles (
-      id,
-      slug,
-      title,
-      collection
-    )
-  `)
-  .order('checked_at', { ascending: false })
-  .limit(100);
-
-// Recuperer les tickets
-const { data: tickets, error: ticketsError } = await supabase
-  .from('correction_tickets')
-  .select('*')
-  .order('created_at', { ascending: false })
-  .limit(500);
-
-const error = resultsError || ticketsError;
-
-// Grouper tickets par article (fact_check_result_id)
-const ticketsByResult = new Map();
-for (const t of (tickets || [])) {
-  const key = t.fact_check_result_id;
-  if (!ticketsByResult.has(key)) ticketsByResult.set(key, []);
-  ticketsByResult.get(key).push(t);
-}
-
-// Grouper resultats par statut
-const urgent = (results || []).filter(r => r.statut === 'Urgent');
-const aVerifier = (results || []).filter(r => r.statut === 'A verifier' || r.statut === 'À vérifier');
-const ok = (results || []).filter(r => r.statut === 'OK');
-
-// Stats
-const totalChecked = (results || []).length;
-const avgScore = totalChecked > 0
-  ? Math.round((results || []).reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / totalChecked)
-  : 0;
-const totalTickets = (tickets || []).length;
-const pendingTickets = (tickets || []).filter(t => t.statut === 'pending_review').length;
-
-function formatDate(dateStr: string | null) {
-  if (!dateStr) return 'N/A';
-  return new Date(dateStr).toLocaleDateString('fr-FR', {
-    day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
-  });
-}
-
-function urgenceIcon(urgence: string) {
-  switch (urgence) {
-    case 'urgent': return '🔴';
-    case 'warning': return '🟡';
-    case 'ok': return '🟢';
-    default: return '⚪';
-  }
-}
-
-function typeLabel(type: string) {
-  switch (type) {
-    case 'price_update': return 'Prix';
-    case 'info_outdated': return 'Info obsolete';
-    case 'false_claim': return 'Claim faux';
-    case 'missing_info': return 'Info manquante';
-    default: return type;
-  }
-}
-
-function statutLabel(statut: string) {
-  switch (statut) {
-    case 'pending_review': return 'En attente';
-    case 'approved': return 'Approuve';
-    case 'rejected': return 'Rejete';
-    case 'in_progress': return 'En cours';
-    case 'ready_to_deploy': return 'Pret';
-    case 'deployed': return 'Deploye';
-    case 'revision_needed': return 'Revision';
-    default: return statut;
-  }
-}
 ---
 
 <!DOCTYPE html>
@@ -189,8 +100,6 @@ function statutLabel(statut: string) {
       font-size: 0.8rem;
       font-weight: 600;
     }
-
-    /* Ticket card */
     .ticket {
       margin-top: 0.75rem;
       border: 1px solid #e2e8f0;
@@ -219,8 +128,6 @@ function statutLabel(statut: string) {
       font-weight: 500;
     }
     .ticket-body { padding: 1rem; }
-
-    /* Diff blocks */
     .diff-before, .diff-after {
       border-radius: 6px;
       margin-bottom: 0.75rem;
@@ -243,12 +150,7 @@ function statutLabel(statut: string) {
     .diff-before .diff-content { background: #fff5f5; border: 1px solid #fecaca; border-top: none; text-decoration: line-through; color: #991b1b; }
     .diff-after .diff-label { background: #f0fdf4; color: #166534; }
     .diff-after .diff-content { background: #f0fdf9; border: 1px solid #bbf7d0; border-top: none; color: #166534; }
-
-    .ticket-source {
-      font-size: 0.8rem;
-      color: #3b82f6;
-      margin-bottom: 0.75rem;
-    }
+    .ticket-source { font-size: 0.8rem; color: #3b82f6; margin-bottom: 0.75rem; }
     .ticket-source a { color: #3b82f6; }
     .ticket-realite {
       font-size: 0.85rem;
@@ -259,8 +161,6 @@ function statutLabel(statut: string) {
       border: 1px solid #fde68a;
       border-radius: 6px;
     }
-
-    /* Action buttons */
     .ticket-actions {
       display: flex;
       gap: 0.5rem;
@@ -286,8 +186,6 @@ function statutLabel(statut: string) {
     .btn-reject:hover:not(:disabled) { background: #dc2626; }
     .btn-note { background: #f59e0b; color: white; }
     .btn-note:hover:not(:disabled) { background: #d97706; }
-    .btn.done { background: #94a3b8; color: white; cursor: default; }
-
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -305,8 +203,6 @@ function statutLabel(statut: string) {
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.success { background: #22c55e; }
     .toast.error { background: #dc2626; }
-
-    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -351,6 +247,21 @@ function statutLabel(statut: string) {
       color: #94a3b8;
       font-size: 0.9rem;
     }
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: #64748b;
+      font-size: 1rem;
+    }
+    .human-note {
+      font-size: 0.85rem;
+      color: #92400e;
+      background: #fffbeb;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      border: 1px solid #fde68a;
+    }
   </style>
 </head>
 <body>
@@ -365,139 +276,29 @@ function statutLabel(statut: string) {
 
 <div class="stats-bar">
   <div class="stat-card stat-urgent">
-    <div class="stat-value">{urgent.length}</div>
+    <div class="stat-value" id="stat-urgent">-</div>
     <div class="stat-label">Urgents</div>
   </div>
   <div class="stat-card stat-warning">
-    <div class="stat-value">{aVerifier.length}</div>
+    <div class="stat-value" id="stat-warning">-</div>
     <div class="stat-label">A verifier</div>
   </div>
   <div class="stat-card stat-ok">
-    <div class="stat-value">{ok.length}</div>
+    <div class="stat-value" id="stat-ok">-</div>
     <div class="stat-label">OK</div>
   </div>
   <div class="stat-card stat-info">
-    <div class="stat-value">{avgScore}/100</div>
+    <div class="stat-value" id="stat-score">-</div>
     <div class="stat-label">Score moyen</div>
   </div>
   <div class="stat-card stat-tickets">
-    <div class="stat-value">{pendingTickets}/{totalTickets}</div>
+    <div class="stat-value" id="stat-tickets">-</div>
     <div class="stat-label">Tickets en attente</div>
   </div>
 </div>
 
-<div class="main">
-
-  {error && (
-    <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #991b1b;">
-      Erreur Supabase : {error.message}
-    </div>
-  )}
-
-  {totalChecked === 0 && !error && (
-    <div class="empty-state">
-      <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucun resultat de fact-check</p>
-      <p><code>node scripts/fact-check-runner.mjs --limit 5</code></p>
-    </div>
-  )}
-
-  {/* Render each status group */}
-  {[
-    { items: urgent, label: 'Urgents', color: '#dc2626', badgeBg: '#fecaca', badgeColor: '#991b1b', scoreBg: '#fecaca', scoreColor: '#991b1b' },
-    { items: aVerifier, label: 'A verifier', color: '#f59e0b', badgeBg: '#fde68a', badgeColor: '#92400e', scoreBg: '#fde68a', scoreColor: '#92400e' },
-    { items: ok, label: 'OK', color: '#22c55e', badgeBg: '#bbf7d0', badgeColor: '#166534', scoreBg: '#bbf7d0', scoreColor: '#166534' },
-  ].map(group => group.items.length > 0 && (
-    <div class="section">
-      <div class="section-title">
-        <span style={`color: ${group.color};`}>{group.label}</span>
-        <span class="badge" style={`background: ${group.badgeBg}; color: ${group.badgeColor};`}>{group.items.length}</span>
-      </div>
-      {group.items.map((r: any) => {
-        const articleTickets = ticketsByResult.get(r.id) || [];
-        return (
-          <div class="article-card" data-card>
-            <div class="article-header" data-toggle>
-              <div>
-                <span class="article-title">{r.articles?.title || 'Article inconnu'}</span>
-                <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
-                {articleTickets.length > 0 && (
-                  <span class="badge" style="margin-left: 0.5rem; background: #f5f3ff; color: #7c3aed;">
-                    {articleTickets.length} ticket(s)
-                  </span>
-                )}
-              </div>
-              <div class="article-meta">
-                <span class="score-pill" style={`background: ${group.scoreBg}; color: ${group.scoreColor};`}>{r.score_fiabilite}/100</span>
-                <span>{formatDate(r.checked_at)}</span>
-              </div>
-            </div>
-            <div class="article-body">
-              {articleTickets.length === 0 ? (
-                <p style="padding: 0.5rem; color: #94a3b8;">Aucun ticket pour cet article.</p>
-              ) : (
-                articleTickets.map((t: any) => (
-                  <div class="ticket" data-ticket-id={t.id}>
-                    <div class="ticket-header">
-                      <div class="ticket-type">
-                        <span>{urgenceIcon(t.urgence)}</span>
-                        <span style={`text-transform: uppercase;`}>{t.urgence}</span>
-                        <span style="color: #64748b; font-weight: 400;">·</span>
-                        <span>{typeLabel(t.ticket_type)}</span>
-                      </div>
-                      <span class="ticket-statut" style={`background: ${
-                        t.statut === 'pending_review' ? '#dbeafe' :
-                        t.statut === 'approved' ? '#d1fae5' :
-                        t.statut === 'rejected' ? '#fee2e2' :
-                        t.statut === 'ready_to_deploy' ? '#d1fae5' :
-                        t.statut === 'deployed' ? '#bbf7d0' :
-                        t.statut === 'revision_needed' ? '#fef3c7' : '#e2e8f0'
-                      }; color: ${
-                        t.statut === 'pending_review' ? '#1e40af' :
-                        t.statut === 'approved' ? '#065f46' :
-                        t.statut === 'rejected' ? '#991b1b' :
-                        t.statut === 'ready_to_deploy' ? '#065f46' :
-                        t.statut === 'deployed' ? '#166534' :
-                        t.statut === 'revision_needed' ? '#92400e' : '#475569'
-                      };`}>{statutLabel(t.statut)}</span>
-                    </div>
-                    <div class="ticket-body">
-                      <div class="diff-before">
-                        <div class="diff-label">AVANT</div>
-                        <div class="diff-content">{t.before_exact}</div>
-                      </div>
-                      <div class="diff-after">
-                        <div class="diff-label">APRES</div>
-                        <div class="diff-content">{t.after_suggested}</div>
-                      </div>
-                      <div class="ticket-realite">{t.realite_actuelle}</div>
-                      {t.source_reference && (
-                        <div class="ticket-source">
-                          Source : <a href={t.source_reference} target="_blank" rel="noopener">{t.source_reference}</a>
-                        </div>
-                      )}
-                      {t.human_note && (
-                        <div style="font-size: 0.85rem; color: #92400e; background: #fffbeb; padding: 0.5rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem; border: 1px solid #fde68a;">
-                          <strong>Note :</strong> {t.human_note}
-                        </div>
-                      )}
-                      {t.statut === 'pending_review' && (
-                        <div class="ticket-actions">
-                          <button class="btn btn-approve" data-action="approve" data-ticket-id={t.id}>Approuver</button>
-                          <button class="btn btn-reject" data-action="reject" data-ticket-id={t.id}>Rejeter</button>
-                          <button class="btn btn-note" data-action="note" data-ticket-id={t.id}>+ Note</button>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  ))}
-
+<div class="main" id="content">
+  <div class="loading">Chargement des donnees...</div>
 </div>
 
 <!-- Modal note de rejet -->
@@ -523,11 +324,53 @@ function statutLabel(statut: string) {
   const SUPABASE_ANON_KEY = supabaseAnonKey;
   let pendingNoteTicketId = null;
 
-  function showToast(message, type = 'success') {
-    const toast = document.getElementById('toast');
-    toast.textContent = message;
-    toast.className = `toast ${type} show`;
-    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+  // --- Helpers ---
+
+  function formatDate(dateStr) {
+    if (!dateStr) return 'N/A';
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  function urgenceIcon(urgence) {
+    return { urgent: '\u{1F534}', warning: '\u{1F7E1}', ok: '\u{1F7E2}' }[urgence] || '\u26AA';
+  }
+
+  function typeLabel(type) {
+    return { price_update: 'Prix', info_outdated: 'Info obsolete', false_claim: 'Claim faux', missing_info: 'Info manquante' }[type] || type;
+  }
+
+  function statutLabel(statut) {
+    return { pending_review: 'En attente', approved: 'Approuve', rejected: 'Rejete', in_progress: 'En cours', ready_to_deploy: 'Pret', deployed: 'Deploye', revision_needed: 'Revision' }[statut] || statut;
+  }
+
+  function statutBg(statut) {
+    return { pending_review: '#dbeafe', approved: '#d1fae5', rejected: '#fee2e2', ready_to_deploy: '#d1fae5', deployed: '#bbf7d0', revision_needed: '#fef3c7' }[statut] || '#e2e8f0';
+  }
+
+  function statutColor(statut) {
+    return { pending_review: '#1e40af', approved: '#065f46', rejected: '#991b1b', ready_to_deploy: '#065f46', deployed: '#166534', revision_needed: '#92400e' }[statut] || '#475569';
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // --- Supabase fetch helpers ---
+
+  async function supabaseFetch(table, query) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      }
+    });
+    if (!response.ok) throw new Error(await response.text());
+    return response.json();
   }
 
   async function updateTicket(ticketId, updates) {
@@ -541,71 +384,205 @@ function statutLabel(statut: string) {
       },
       body: JSON.stringify(updates)
     });
-
-    if (!response.ok) {
-      throw new Error(await response.text());
-    }
+    if (!response.ok) throw new Error(await response.text());
   }
 
-  // Toggle article cards
-  document.querySelectorAll('[data-toggle]').forEach(header => {
-    header.addEventListener('click', () => {
-      const card = header.closest('[data-card]');
-      if (card) card.classList.toggle('open');
-    });
-  });
+  function showToast(message, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = `toast ${type} show`;
+    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+  }
 
-  // Approve / Reject actions
-  document.querySelectorAll('[data-action]').forEach(btn => {
-    btn.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      const button = e.currentTarget;
-      const action = button.dataset.action;
-      const ticketId = button.dataset.ticketId;
+  // --- Render ---
 
-      if (action === 'note') {
-        // Open modal
-        pendingNoteTicketId = ticketId;
-        document.getElementById('noteModal').classList.add('active');
-        document.getElementById('noteText').value = '';
-        document.getElementById('noteText').focus();
+  function renderTicket(t) {
+    return `
+      <div class="ticket" data-ticket-id="${t.id}">
+        <div class="ticket-header">
+          <div class="ticket-type">
+            <span>${urgenceIcon(t.urgence)}</span>
+            <span style="text-transform:uppercase">${escapeHtml(t.urgence)}</span>
+            <span style="color:#64748b;font-weight:400">&middot;</span>
+            <span>${escapeHtml(typeLabel(t.ticket_type))}</span>
+          </div>
+          <span class="ticket-statut" style="background:${statutBg(t.statut)};color:${statutColor(t.statut)}">${escapeHtml(statutLabel(t.statut))}</span>
+        </div>
+        <div class="ticket-body">
+          <div class="diff-before">
+            <div class="diff-label">AVANT</div>
+            <div class="diff-content">${escapeHtml(t.before_exact)}</div>
+          </div>
+          <div class="diff-after">
+            <div class="diff-label">APRES</div>
+            <div class="diff-content">${escapeHtml(t.after_suggested)}</div>
+          </div>
+          <div class="ticket-realite">${escapeHtml(t.realite_actuelle)}</div>
+          ${t.source_reference ? `<div class="ticket-source">Source : <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
+          ${t.human_note ? `<div class="human-note"><strong>Note :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
+          ${t.statut === 'pending_review' ? `
+            <div class="ticket-actions">
+              <button class="btn btn-approve" data-action="approve" data-ticket-id="${t.id}">Approuver</button>
+              <button class="btn btn-reject" data-action="reject" data-ticket-id="${t.id}">Rejeter</button>
+              <button class="btn btn-note" data-action="note" data-ticket-id="${t.id}">+ Note</button>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderGroup(group, results, ticketsByResult) {
+    if (group.items.length === 0) return '';
+    return `
+      <div class="section">
+        <div class="section-title">
+          <span style="color:${group.color}">${group.label}</span>
+          <span class="badge" style="background:${group.badgeBg};color:${group.badgeColor}">${group.items.length}</span>
+        </div>
+        ${group.items.map(r => {
+          const articleTickets = ticketsByResult.get(r.id) || [];
+          return `
+            <div class="article-card" data-card>
+              <div class="article-header" data-toggle>
+                <div>
+                  <span class="article-title">${escapeHtml(r.articles?.title || 'Article inconnu')}</span>
+                  <span class="collection-tag" style="margin-left:0.5rem">${escapeHtml(r.articles?.collection || '')}</span>
+                  ${articleTickets.length > 0 ? `<span class="badge" style="margin-left:0.5rem;background:#f5f3ff;color:#7c3aed">${articleTickets.length} ticket(s)</span>` : ''}
+                </div>
+                <div class="article-meta">
+                  <span class="score-pill" style="background:${group.scoreBg};color:${group.scoreColor}">${r.score_fiabilite}/100</span>
+                  <span>${formatDate(r.checked_at)}</span>
+                </div>
+              </div>
+              <div class="article-body">
+                ${articleTickets.length === 0
+                  ? '<p style="padding:0.5rem;color:#94a3b8">Aucun ticket pour cet article.</p>'
+                  : articleTickets.map(t => renderTicket(t)).join('')}
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
+  // --- Load data & render ---
+
+  async function loadDashboard() {
+    try {
+      const [results, tickets] = await Promise.all([
+        supabaseFetch('fact_check_results', 'select=id,score_fiabilite,statut,checked_at,model_used,articles(id,slug,title,collection)&order=checked_at.desc&limit=100'),
+        supabaseFetch('correction_tickets', 'select=*&order=created_at.desc&limit=500')
+      ]);
+
+      // Group tickets by fact_check_result_id
+      const ticketsByResult = new Map();
+      for (const t of tickets) {
+        const key = t.fact_check_result_id;
+        if (!ticketsByResult.has(key)) ticketsByResult.set(key, []);
+        ticketsByResult.get(key).push(t);
+      }
+
+      // Group results by status
+      const urgent = results.filter(r => r.statut === 'Urgent');
+      const aVerifier = results.filter(r => r.statut === 'A verifier' || r.statut === 'À vérifier');
+      const ok = results.filter(r => r.statut === 'OK');
+
+      // Stats
+      const avgScore = results.length > 0
+        ? Math.round(results.reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / results.length)
+        : 0;
+      const pendingTickets = tickets.filter(t => t.statut === 'pending_review').length;
+
+      document.getElementById('stat-urgent').textContent = urgent.length;
+      document.getElementById('stat-warning').textContent = aVerifier.length;
+      document.getElementById('stat-ok').textContent = ok.length;
+      document.getElementById('stat-score').textContent = avgScore + '/100';
+      document.getElementById('stat-tickets').textContent = pendingTickets + '/' + tickets.length;
+
+      // Render content
+      const contentEl = document.getElementById('content');
+
+      if (results.length === 0) {
+        contentEl.innerHTML = `
+          <div class="empty-state">
+            <p style="font-size:1.2rem;margin-bottom:0.5rem">Aucun resultat de fact-check</p>
+            <p><code>node scripts/fact-check-runner.mjs --limit 5</code></p>
+          </div>
+        `;
         return;
       }
 
-      button.disabled = true;
-      const originalText = button.textContent;
-      button.textContent = '...';
+      const groups = [
+        { items: urgent, label: 'Urgents', color: '#dc2626', badgeBg: '#fecaca', badgeColor: '#991b1b', scoreBg: '#fecaca', scoreColor: '#991b1b' },
+        { items: aVerifier, label: 'A verifier', color: '#f59e0b', badgeBg: '#fde68a', badgeColor: '#92400e', scoreBg: '#fde68a', scoreColor: '#92400e' },
+        { items: ok, label: 'OK', color: '#22c55e', badgeBg: '#bbf7d0', badgeColor: '#166534', scoreBg: '#bbf7d0', scoreColor: '#166534' },
+      ];
 
-      try {
-        if (action === 'approve') {
-          await updateTicket(ticketId, {
-            statut: 'approved',
-            reviewed_at: new Date().toISOString()
-          });
-          showToast('Ticket approuve — pret pour l\'editorial');
-        } else if (action === 'reject') {
-          await updateTicket(ticketId, {
-            statut: 'rejected',
-            reviewed_at: new Date().toISOString()
-          });
-          showToast('Ticket rejete');
-        }
+      contentEl.innerHTML = groups.map(g => renderGroup(g, results, ticketsByResult)).join('');
 
-        // Fade out ticket
-        const ticket = button.closest('[data-ticket-id]');
-        if (ticket) {
-          ticket.style.opacity = '0.4';
-          ticket.style.pointerEvents = 'none';
-        }
+      // Attach event listeners
+      attachListeners();
 
-        setTimeout(() => { window.location.reload(); }, 1500);
-      } catch (err) {
-        button.disabled = false;
-        button.textContent = originalText;
-        showToast('Erreur: ' + err.message, 'error');
-      }
+    } catch (err) {
+      document.getElementById('content').innerHTML = `
+        <div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:8px;color:#991b1b">
+          Erreur Supabase : ${escapeHtml(err.message)}
+        </div>
+      `;
+    }
+  }
+
+  function attachListeners() {
+    // Toggle article cards
+    document.querySelectorAll('[data-toggle]').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.closest('[data-card]');
+        if (card) card.classList.toggle('open');
+      });
     });
-  });
+
+    // Action buttons (approve / reject / note)
+    document.querySelectorAll('[data-action]').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const button = e.currentTarget;
+        const action = button.dataset.action;
+        const ticketId = button.dataset.ticketId;
+
+        if (action === 'note') {
+          pendingNoteTicketId = ticketId;
+          document.getElementById('noteModal').classList.add('active');
+          document.getElementById('noteText').value = '';
+          document.getElementById('noteText').focus();
+          return;
+        }
+
+        button.disabled = true;
+        const originalText = button.textContent;
+        button.textContent = '...';
+
+        try {
+          if (action === 'approve') {
+            await updateTicket(ticketId, { statut: 'approved', reviewed_at: new Date().toISOString() });
+            showToast('Ticket approuve — pret pour l\'editorial');
+          } else if (action === 'reject') {
+            await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
+            showToast('Ticket rejete');
+          }
+
+          const ticket = button.closest('[data-ticket-id]');
+          if (ticket) { ticket.style.opacity = '0.4'; ticket.style.pointerEvents = 'none'; }
+          setTimeout(() => { loadDashboard(); }, 1500);
+        } catch (err) {
+          button.disabled = false;
+          button.textContent = originalText;
+          showToast('Erreur: ' + err.message, 'error');
+        }
+      });
+    });
+  }
 
   // Modal: cancel
   document.getElementById('noteCancel').addEventListener('click', () => {
@@ -616,10 +593,7 @@ function statutLabel(statut: string) {
   // Modal: send note
   document.getElementById('noteSend').addEventListener('click', async () => {
     const note = document.getElementById('noteText').value.trim();
-    if (!note) {
-      showToast('Veuillez saisir une note', 'error');
-      return;
-    }
+    if (!note) { showToast('Veuillez saisir une note', 'error'); return; }
 
     const sendBtn = document.getElementById('noteSend');
     sendBtn.disabled = true;
@@ -635,14 +609,9 @@ function statutLabel(statut: string) {
       document.getElementById('noteModal').classList.remove('active');
       showToast('Ticket renvoye en revision avec note');
 
-      // Fade out ticket
       const ticket = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"]`);
-      if (ticket) {
-        ticket.style.opacity = '0.4';
-        ticket.style.pointerEvents = 'none';
-      }
-
-      setTimeout(() => { window.location.reload(); }, 1500);
+      if (ticket) { ticket.style.opacity = '0.4'; ticket.style.pointerEvents = 'none'; }
+      setTimeout(() => { loadDashboard(); }, 1500);
     } catch (err) {
       sendBtn.disabled = false;
       sendBtn.textContent = 'Envoyer';
@@ -651,6 +620,9 @@ function statutLabel(statut: string) {
 
     pendingNoteTicketId = null;
   });
+
+  // Initial load
+  loadDashboard();
 </script>
 
 </body>
