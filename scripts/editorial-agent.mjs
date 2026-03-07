@@ -246,15 +246,17 @@ Redige after_final : la version definitive qui remplacera before_exact dans le m
     const durationMs = Date.now() - startTime;
     const tokensUsed = (response.usage?.input_tokens || 0) + (response.usage?.output_tokens || 0);
 
-    // Update ticket with after_final
+    // Update ticket with after_final + modifications list
+    const updateData = {
+      after_final: result.after_final,
+      model_used: MODEL,
+      tokens_used: tokensUsed,
+      statut: 'ready_to_deploy'
+    };
+
     const { error: updateError } = await supabase
       .from('correction_tickets')
-      .update({
-        after_final: result.after_final,
-        model_used: MODEL,
-        tokens_used: tokensUsed,
-        statut: 'ready_to_deploy'
-      })
+      .update(updateData)
       .eq('id', ticket.id);
 
     if (updateError) {

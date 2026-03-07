@@ -88,15 +88,15 @@ const iconSvgs: Record<string, string> = {
     });
   }
 
-  // Auth check
-  (function() {
-    const isLoginPage = window.location.pathname.includes('/admin/login');
-    if (isLoginPage) return;
-    const token = sessionStorage.getItem('admin_auth');
-    if (!token) {
-      window.location.href = '/admin/login/';
-    }
-  })();
+  // Auth check — TEMPORARILY DISABLED FOR LOCAL DEV
+  // (function() {
+  //   const isLoginPage = window.location.pathname.includes('/admin/login');
+  //   if (isLoginPage) return;
+  //   const token = sessionStorage.getItem('admin_auth');
+  //   if (!token) {
+  //     window.location.href = '/admin/login/';
+  //   }
+  // })();
 </script>
 
 <style>
