@@ -8,7 +8,7 @@ import { supabaseConfig } from '../../lib/supabase';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Overview - GLP1 France</title>
+  <title>Admin - GLP1 France</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -16,13 +16,68 @@ import { supabaseConfig } from '../../lib/supabase';
       background: #f1f5f9;
       color: #1e293b;
     }
-    .main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
-    .page-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .page-subtitle { color: #64748b; margin-bottom: 2rem; }
+    .admin-layout {
+      margin-left: 260px;
+      min-height: 100vh;
+    }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+    }
+    .page-header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .page-header p {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+    .main { padding: 2rem; max-width: 1200px; }
+
+    /* Stats grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid #e2e8f0;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-top: 0.35rem;
+    }
+    .stat-hint {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      margin-top: 0.25rem;
+    }
+    .stat-red .stat-value { color: #dc2626; }
+    .stat-amber .stat-value { color: #f59e0b; }
+    .stat-green .stat-value { color: #22c55e; }
+    .stat-blue .stat-value { color: #3b82f6; }
+
+    /* Cards grid */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2rem;
     }
     .overview-card {
       background: white;
@@ -31,38 +86,105 @@ import { supabaseConfig } from '../../lib/supabase';
       border: 1px solid #e2e8f0;
       text-decoration: none;
       color: inherit;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: box-shadow 0.2s, transform 0.15s;
       display: block;
     }
     .overview-card:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       transform: translateY(-2px);
     }
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
     .card-icon {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      flex-shrink: 0;
     }
     .card-icon.blue { background: #dbeafe; color: #2563eb; }
     .card-icon.purple { background: #f3e8ff; color: #7c3aed; }
     .card-icon.green { background: #dcfce7; color: #16a34a; }
-    .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .card-desc { font-size: 0.9rem; color: #64748b; line-height: 1.5; }
-    .stats-row {
+    .card-icon.indigo { background: #e0e7ff; color: #4338ca; }
+    .card-icon.amber { background: #fef3c7; color: #d97706; }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: #64748b;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .card-stats {
       display: flex;
-      gap: 0.75rem;
-      margin-top: 1rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
     .mini-stat {
-      padding: 0.35rem 0.75rem;
+      padding: 0.3rem 0.65rem;
       border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
+    }
+
+    /* Recent activity */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .activity-list {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+    .activity-item {
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.88rem;
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .activity-time {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: #64748b;
+    }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .main { padding: 1rem; }
+      .page-header { padding: 1rem; }
     }
   </style>
 </head>
@@ -70,69 +192,227 @@ import { supabaseConfig } from '../../lib/supabase';
 
 <AdminNav />
 
-<div class="main">
-  <h1 class="page-title">Admin Overview</h1>
-  <p class="page-subtitle">Interface d'administration du site GLP-1 France</p>
+<div class="admin-layout">
+  <div class="page-header">
+    <h1>Vue d'ensemble</h1>
+    <p>Tableau de bord de l'administration GLP-1 France</p>
+  </div>
 
-  <div class="cards-grid">
-    <a href="/admin/fact-check/" class="overview-card">
-      <div class="card-icon blue">&#128269;</div>
-      <h3 class="card-title">Fact-Check Dashboard</h3>
-      <p class="card-desc">Resultats de verification des articles. Approuvez, rejetez ou annotez les tickets de correction.</p>
-      <div class="stats-row" id="fc-stats"></div>
-    </a>
+  <div class="main">
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card stat-red">
+        <div class="stat-label">Tickets urgents</div>
+        <div class="stat-value" id="stat-urgent">-</div>
+        <div class="stat-hint">Corrections prioritaires</div>
+      </div>
+      <div class="stat-card stat-amber">
+        <div class="stat-label">En attente de revue</div>
+        <div class="stat-value" id="stat-pending">-</div>
+        <div class="stat-hint">Tickets a examiner</div>
+      </div>
+      <div class="stat-card stat-green">
+        <div class="stat-label">Prets a deployer</div>
+        <div class="stat-value" id="stat-ready">-</div>
+        <div class="stat-hint">Corrections validees</div>
+      </div>
+      <div class="stat-card stat-blue">
+        <div class="stat-label">Score moyen</div>
+        <div class="stat-value" id="stat-score">-</div>
+        <div class="stat-hint">Fiabilite des articles</div>
+      </div>
+    </div>
 
-    <a href="/admin/editorial/" class="overview-card">
-      <div class="card-icon purple">&#9998;</div>
-      <h3 class="card-title">Editorial Dashboard</h3>
-      <p class="card-desc">Suivi des corrections editoriales. Visualisez les tickets prets a deployer et l'historique.</p>
-      <div class="stats-row" id="ed-stats"></div>
-    </a>
+    <!-- Module cards -->
+    <div class="cards-grid">
+      <a href="/admin/fact-check/" class="overview-card">
+        <div class="card-top">
+          <div class="card-icon blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <div class="card-title">Fact-Check</div>
+        </div>
+        <div class="card-desc">Resultats de verification. Approuvez, rejetez ou annotez les tickets de correction.</div>
+        <div class="card-stats" id="fc-stats"></div>
+      </a>
 
-    <a href="/admin/user-data/" class="overview-card">
-      <div class="card-icon green">&#128101;</div>
-      <h3 class="card-title">Utilisateurs</h3>
-      <p class="card-desc">Gestion des comptes utilisateurs et donnees.</p>
-    </a>
+      <a href="/admin/editorial/" class="overview-card">
+        <div class="card-top">
+          <div class="card-icon purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+          </div>
+          <div class="card-title">Editorial</div>
+        </div>
+        <div class="card-desc">Suivi des corrections editoriales. Deploiement des tickets valides.</div>
+        <div class="card-stats" id="ed-stats"></div>
+      </a>
+
+      <a href="/admin/integration/" class="overview-card">
+        <div class="card-top">
+          <div class="card-icon green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          </div>
+          <div class="card-title">Integration</div>
+        </div>
+        <div class="card-desc">Historique des corrections deployees sur le site.</div>
+        <div class="card-stats" id="int-stats"></div>
+      </a>
+
+      <a href="/admin/pipelines/" class="overview-card">
+        <div class="card-top">
+          <div class="card-icon indigo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3h7zM7 9H4V5h3v4zm10 6h3v4h-3v-4zm0-10h3v4h-3V5z"/></svg>
+          </div>
+          <div class="card-title">Pipelines</div>
+        </div>
+        <div class="card-desc">Vue en temps reel des pipelines de traitement des corrections.</div>
+        <div class="card-stats" id="pip-stats"></div>
+      </a>
+
+      <a href="/admin/seo/" class="overview-card">
+        <div class="card-top">
+          <div class="card-icon amber">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+          <div class="card-title">SEO</div>
+        </div>
+        <div class="card-desc">Agent Opportunite SEO — Phase 2. Analyse et recommandations.</div>
+        <div class="card-stats">
+          <span class="mini-stat" style="background:#fef3c7;color:#92400e">Bientot</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Recent activity -->
+    <div class="section-title">Activite recente</div>
+    <div class="activity-list" id="activity">
+      <div class="loading">Chargement...</div>
+    </div>
   </div>
 </div>
 
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
-  async function loadOverviewStats() {
-    try {
-      const headers = {
-        'apikey': supabaseAnonKey,
-        'Authorization': `Bearer ${supabaseAnonKey}`,
-      };
-      const [resultsRes, ticketsRes] = await Promise.all([
-        fetch(`${supabaseUrl}/rest/v1/fact_check_results?select=id,statut&limit=500`, { headers }),
-        fetch(`${supabaseUrl}/rest/v1/correction_tickets?select=id,statut&limit=500`, { headers })
-      ]);
-      const results = await resultsRes.json();
-      const tickets = await ticketsRes.json();
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
 
-      const urgent = results.filter(r => r.statut === 'Urgent').length;
+  async function supabaseFetch(table, query) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      }
+    });
+    if (!response.ok) throw new Error(await response.text());
+    return response.json();
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  function statutLabel(statut) {
+    return {
+      pending_review: 'En attente',
+      approved: 'Approuve',
+      rejected: 'Rejete',
+      in_progress: 'En cours',
+      ready_to_deploy: 'Pret',
+      deployed: 'Deploye',
+      revision_needed: 'Revision'
+    }[statut] || statut;
+  }
+
+  function statutDotColor(statut) {
+    return {
+      pending_review: '#f59e0b',
+      approved: '#3b82f6',
+      rejected: '#ef4444',
+      in_progress: '#8b5cf6',
+      ready_to_deploy: '#22c55e',
+      deployed: '#16a34a',
+      revision_needed: '#f59e0b'
+    }[statut] || '#94a3b8';
+  }
+
+  async function loadOverview() {
+    try {
+      const [results, tickets] = await Promise.all([
+        supabaseFetch('fact_check_results', 'select=id,score_fiabilite,statut&limit=500'),
+        supabaseFetch('correction_tickets', 'select=id,statut,urgence,ticket_type,updated_at,title&order=updated_at.desc&limit=500')
+      ]);
+
+      // Stats
+      const urgent = tickets.filter(t => t.urgence === 'urgent' && t.statut === 'pending_review').length;
       const pending = tickets.filter(t => t.statut === 'pending_review').length;
       const ready = tickets.filter(t => t.statut === 'ready_to_deploy').length;
+      const avgScore = results.length > 0
+        ? Math.round(results.reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / results.length)
+        : 0;
+      const deployed = tickets.filter(t => t.statut === 'deployed').length;
 
+      document.getElementById('stat-urgent').textContent = urgent;
+      document.getElementById('stat-pending').textContent = pending;
+      document.getElementById('stat-ready').textContent = ready;
+      document.getElementById('stat-score').textContent = avgScore + '/100';
+
+      // Module cards stats
       const fcEl = document.getElementById('fc-stats');
       if (fcEl) {
+        const urgentResults = results.filter(r => r.statut === 'Urgent').length;
         fcEl.innerHTML = `
-          <span class="mini-stat" style="background:#fef2f2;color:#dc2626">${urgent} urgent(s)</span>
+          <span class="mini-stat" style="background:#fef2f2;color:#dc2626">${urgentResults} urgent(s)</span>
           <span class="mini-stat" style="background:#f5f3ff;color:#7c3aed">${pending} en attente</span>
         `;
       }
       const edEl = document.getElementById('ed-stats');
       if (edEl) {
+        const inProg = tickets.filter(t => t.statut === 'approved' || t.statut === 'in_progress').length;
         edEl.innerHTML = `
           <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${ready} pret(s)</span>
+          <span class="mini-stat" style="background:#f3e8ff;color:#7c3aed">${inProg} en cours</span>
         `;
       }
-    } catch (e) {
-      // Stats are non-critical
+      const intEl = document.getElementById('int-stats');
+      if (intEl) {
+        intEl.innerHTML = `
+          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${deployed} deploye(s)</span>
+        `;
+      }
+      const pipEl = document.getElementById('pip-stats');
+      if (pipEl) {
+        const active = tickets.filter(t => ['pending_review','approved','in_progress','ready_to_deploy','revision_needed'].includes(t.statut)).length;
+        pipEl.innerHTML = `
+          <span class="mini-stat" style="background:#e0e7ff;color:#4338ca">${active} actif(s)</span>
+        `;
+      }
+
+      // Recent activity (last 10 tickets)
+      const recent = tickets.slice(0, 10);
+      const actEl = document.getElementById('activity');
+      if (recent.length === 0) {
+        actEl.innerHTML = '<div class="loading" style="color:#94a3b8">Aucune activite recente</div>';
+        return;
+      }
+      actEl.innerHTML = recent.map(t => `
+        <div class="activity-item">
+          <div class="activity-dot" style="background:${statutDotColor(t.statut)}"></div>
+          <span>${t.title || t.ticket_type || 'Ticket'} — <strong>${statutLabel(t.statut)}</strong></span>
+          <span class="activity-time">${formatDate(t.updated_at)}</span>
+        </div>
+      `).join('');
+
+    } catch (err) {
+      console.error('Overview load error:', err);
+      document.getElementById('activity').innerHTML = `
+        <div style="padding:1rem;color:#991b1b;font-size:0.88rem">Erreur: ${err.message}</div>
+      `;
     }
   }
-  loadOverviewStats();
+
+  loadOverview();
 </script>
 
 </body>
