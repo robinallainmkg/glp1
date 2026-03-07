@@ -28,4 +28,10 @@ export async function testConnection() {
   }
 }
 
+export const supabaseConfig = {
+  url: supabaseUrl,
+  anonKey: supabaseKey,
+  isConfigured: !!(supabaseUrl && supabaseKey)
+};
+
 export default supabase;
