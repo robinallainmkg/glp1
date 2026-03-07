@@ -1,46 +1,22 @@
 ---
 // src/pages/admin/editorial.astro
-// Dashboard Éditorial — Corrections rédigées par l'Agent Éditorial (Phase 2)
+// Dashboard Editorial — Tickets Before/After avec Deploy (Phase 3)
 import { supabase } from '../../lib/supabase';
 import { supabaseConfig } from '../../lib/supabase';
 
-// Récupérer les corrections avec infos articles
-const { data: corrections, error } = await supabase
-  .from('editorial_queue')
-  .select(`
-    id,
-    fact_check_id,
-    article_id,
-    claim_original,
-    realite_actuelle,
-    source_reference,
-    urgence,
-    section_originale,
-    section_corrigee,
-    explication_correction,
-    model_used,
-    tokens_used,
-    statut,
-    requested_at,
-    processed_at,
-    reviewed_at,
-    reviewed_by,
-    articles (
-      id,
-      slug,
-      title,
-      collection
-    )
-  `)
-  .order('requested_at', { ascending: false })
+// Recuperer tous les tickets avec after_final ou en attente de traitement editorial
+const { data: tickets, error } = await supabase
+  .from('correction_tickets')
+  .select('*')
+  .in('statut', ['approved', 'in_progress', 'ready_to_deploy', 'deployed', 'revision_needed'])
+  .order('updated_at', { ascending: false })
   .limit(200);
 
 // Grouper par statut
-const pendingReview = (corrections || []).filter(c => c.statut === 'pending_review');
-const requested = (corrections || []).filter(c => c.statut === 'requested' || c.statut === 'processing');
-const approved = (corrections || []).filter(c => c.statut === 'approved');
-const rejected = (corrections || []).filter(c => c.statut === 'rejected');
-const applied = (corrections || []).filter(c => c.statut === 'applied');
+const readyToDeploy = (tickets || []).filter(t => t.statut === 'ready_to_deploy');
+const inProgress = (tickets || []).filter(t => t.statut === 'approved' || t.statut === 'in_progress');
+const revisionNeeded = (tickets || []).filter(t => t.statut === 'revision_needed');
+const deployed = (tickets || []).filter(t => t.statut === 'deployed');
 
 function formatDate(dateStr: string | null) {
   if (!dateStr) return 'N/A';
@@ -49,24 +25,22 @@ function formatDate(dateStr: string | null) {
   });
 }
 
-function urgenceBadge(urgence: string) {
+function urgenceIcon(urgence: string) {
   switch (urgence) {
-    case 'urgent': return { bg: '#fecaca', color: '#991b1b', label: 'Urgent' };
-    case 'moyen': return { bg: '#fde68a', color: '#92400e', label: 'Moyen' };
-    case 'faible': return { bg: '#bbf7d0', color: '#166534', label: 'Faible' };
-    default: return { bg: '#e2e8f0', color: '#475569', label: urgence };
+    case 'urgent': return '🔴';
+    case 'warning': return '🟡';
+    case 'ok': return '🟢';
+    default: return '⚪';
   }
 }
 
-function statutBadge(statut: string) {
-  switch (statut) {
-    case 'requested': return { bg: '#e0e7ff', color: '#4338ca', label: 'En attente' };
-    case 'processing': return { bg: '#fef3c7', color: '#92400e', label: 'En cours' };
-    case 'pending_review': return { bg: '#dbeafe', color: '#1e40af', label: 'A relire' };
-    case 'approved': return { bg: '#d1fae5', color: '#065f46', label: 'Approuve' };
-    case 'rejected': return { bg: '#fee2e2', color: '#991b1b', label: 'Rejete' };
-    case 'applied': return { bg: '#d1fae5', color: '#065f46', label: 'Applique' };
-    default: return { bg: '#e2e8f0', color: '#475569', label: statut };
+function typeLabel(type: string) {
+  switch (type) {
+    case 'price_update': return 'Prix';
+    case 'info_outdated': return 'Info obsolete';
+    case 'false_claim': return 'Claim faux';
+    case 'missing_info': return 'Info manquante';
+    default: return type;
   }
 }
 ---
@@ -111,10 +85,10 @@ function statutBadge(statut: string) {
     }
     .stat-card .stat-value { font-size: 2rem; font-weight: 700; }
     .stat-card .stat-label { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
-    .stat-review { background: #eff6ff; color: #3b82f6; }
-    .stat-waiting { background: #f5f3ff; color: #7c3aed; }
-    .stat-approved { background: #f0fdf4; color: #22c55e; }
-    .stat-rejected { background: #fef2f2; color: #dc2626; }
+    .stat-deploy { background: #d1fae5; color: #065f46; }
+    .stat-progress { background: #f5f3ff; color: #7c3aed; }
+    .stat-revision { background: #fffbeb; color: #f59e0b; }
+    .stat-done { background: #f0fdf4; color: #22c55e; }
     .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
     .section { margin-bottom: 2rem; }
     .section-title {
@@ -132,29 +106,33 @@ function statutBadge(statut: string) {
       font-size: 0.75rem;
       font-weight: 600;
     }
-    .card {
+
+    /* Ticket card */
+    .ticket {
       background: white;
-      border-radius: 8px;
       border: 1px solid #e2e8f0;
+      border-radius: 8px;
       margin-bottom: 1rem;
       overflow: hidden;
     }
-    .card-header {
+    .ticket-header {
       padding: 1rem 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
     }
-    .card-header:hover { background: #f8fafc; }
-    .card-title { font-weight: 500; font-size: 0.95rem; }
-    .card-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 0.75rem; align-items: center; }
-    .card-body {
-      padding: 0 1.25rem 1.25rem;
-      border-top: 1px solid #f1f5f9;
-      display: none;
+    .ticket-header:hover { background: #f8fafc; }
+    .ticket-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
-    .card.open .card-body { display: block; }
+    .ticket-title { font-weight: 500; font-size: 0.95rem; }
+    .ticket-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 0.75rem; align-items: center; }
+    .ticket-body { display: none; padding: 0 1.25rem 1.25rem; border-top: 1px solid #f1f5f9; }
+    .ticket.open .ticket-body { display: block; }
+
     .collection-tag {
       display: inline-block;
       padding: 0.15rem 0.5rem;
@@ -163,29 +141,31 @@ function statutBadge(statut: string) {
       background: #e0e7ff;
       color: #4338ca;
     }
-    .diff-block {
-      margin-top: 0.75rem;
+
+    /* Diff blocks */
+    .diff-before, .diff-after {
       border-radius: 6px;
+      margin-top: 0.75rem;
       overflow: hidden;
     }
     .diff-label {
       font-size: 0.8rem;
       font-weight: 600;
-      padding: 0.5rem 0.75rem;
-      display: flex;
-      justify-content: space-between;
+      padding: 0.4rem 0.75rem;
     }
     .diff-content {
       padding: 0.75rem;
       font-size: 0.85rem;
       line-height: 1.6;
       white-space: pre-wrap;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      word-break: break-word;
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
     }
-    .diff-original .diff-label { background: #fef2f2; color: #991b1b; }
-    .diff-original .diff-content { background: #fff5f5; color: #1e293b; border: 1px solid #fecaca; border-top: none; }
-    .diff-corrected .diff-label { background: #f0fdf4; color: #166534; }
-    .diff-corrected .diff-content { background: #f0fdf9; color: #1e293b; border: 1px solid #bbf7d0; border-top: none; }
+    .diff-before .diff-label { background: #fef2f2; color: #991b1b; }
+    .diff-before .diff-content { background: #fff5f5; border: 1px solid #fecaca; border-top: none; text-decoration: line-through; color: #991b1b; }
+    .diff-after .diff-label { background: #f0fdf4; color: #166534; }
+    .diff-after .diff-content { background: #f0fdf9; border: 1px solid #bbf7d0; border-top: none; color: #166534; }
+
     .explanation {
       margin-top: 0.75rem;
       padding: 0.75rem;
@@ -195,25 +175,27 @@ function statutBadge(statut: string) {
       font-size: 0.85rem;
       color: #92400e;
     }
-    .explanation-label { font-weight: 600; margin-bottom: 0.25rem; }
-    .claim-block {
+    .ticket-source {
+      font-size: 0.8rem;
+      color: #3b82f6;
+      margin-top: 0.5rem;
+    }
+    .ticket-source a { color: #3b82f6; }
+    .human-note {
       margin-top: 0.75rem;
       padding: 0.75rem;
-      background: #f8fafc;
-      border-left: 3px solid #94a3b8;
-      border-radius: 0 6px 6px 0;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+      font-size: 0.85rem;
     }
-    .claim-label { font-size: 0.75rem; font-weight: 600; color: #64748b; margin-bottom: 0.25rem; }
-    .claim-text { font-size: 0.9rem; font-weight: 500; }
-    .realite-text { font-size: 0.85rem; color: #475569; margin-top: 0.25rem; }
-    .source-link { font-size: 0.8rem; color: #3b82f6; margin-top: 0.25rem; }
-    .source-link a { color: #3b82f6; }
-    .card-actions {
-      padding: 0.75rem 1.25rem;
-      border-top: 1px solid #f1f5f9;
+
+    .ticket-actions {
       display: flex;
       gap: 0.5rem;
-      justify-content: flex-end;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #f1f5f9;
     }
     .btn {
       padding: 0.5rem 1rem;
@@ -223,18 +205,15 @@ function statutBadge(statut: string) {
       font-weight: 500;
       cursor: pointer;
       transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .btn-approve { background: #22c55e; color: white; }
-    .btn-approve:hover:not(:disabled) { background: #16a34a; }
-    .btn-reject { background: #ef4444; color: white; }
-    .btn-reject:hover:not(:disabled) { background: #dc2626; }
-    .empty-state {
-      text-align: center;
-      padding: 2rem;
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
+    .btn-deploy { background: #7c3aed; color: white; }
+    .btn-deploy:hover:not(:disabled) { background: #6d28d9; }
+    .btn-deploy.done { background: #22c55e; }
+
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -252,6 +231,12 @@ function statutBadge(statut: string) {
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.success { background: #22c55e; }
     .toast.error { background: #dc2626; }
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -265,21 +250,21 @@ function statutBadge(statut: string) {
 </div>
 
 <div class="stats-bar">
-  <div class="stat-card stat-review">
-    <div class="stat-value">{pendingReview.length}</div>
-    <div class="stat-label">A relire</div>
+  <div class="stat-card stat-deploy">
+    <div class="stat-value">{readyToDeploy.length}</div>
+    <div class="stat-label">Prets a deployer</div>
   </div>
-  <div class="stat-card stat-waiting">
-    <div class="stat-value">{requested.length}</div>
-    <div class="stat-label">En attente</div>
+  <div class="stat-card stat-progress">
+    <div class="stat-value">{inProgress.length}</div>
+    <div class="stat-label">En cours</div>
   </div>
-  <div class="stat-card stat-approved">
-    <div class="stat-value">{approved.length + applied.length}</div>
-    <div class="stat-label">Approuves</div>
+  <div class="stat-card stat-revision">
+    <div class="stat-value">{revisionNeeded.length}</div>
+    <div class="stat-label">En revision</div>
   </div>
-  <div class="stat-card stat-rejected">
-    <div class="stat-value">{rejected.length}</div>
-    <div class="stat-label">Rejetes</div>
+  <div class="stat-card stat-done">
+    <div class="stat-value">{deployed.length}</div>
+    <div class="stat-label">Deployes</div>
   </div>
 </div>
 
@@ -287,183 +272,171 @@ function statutBadge(statut: string) {
 
   {error && (
     <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #991b1b;">
-      Erreur de connexion Supabase : {error.message}. Assurez-vous que la migration 004 a ete executee.
+      Erreur Supabase : {error.message}
     </div>
   )}
 
-  {(corrections || []).length === 0 && !error && (
+  {(tickets || []).length === 0 && !error && (
     <div class="empty-state">
-      <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucune correction editoriale</p>
-      <p>Envoyez des points depuis le <a href="/admin/fact-check" style="color: #3b82f6;">dashboard fact-check</a>, puis lancez l'agent editorial.</p>
+      <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucun ticket editorial</p>
+      <p>Approuvez des tickets depuis le <a href="/admin/fact-check" style="color: #3b82f6;">dashboard fact-check</a>, puis lancez l'agent editorial.</p>
       <p style="margin-top: 0.5rem;"><code>node scripts/editorial-agent.mjs</code></p>
     </div>
   )}
 
-  <!-- Section: A relire (pending_review) -->
-  {pendingReview.length > 0 && (
+  {/* Ready to deploy */}
+  {readyToDeploy.length > 0 && (
     <div class="section">
       <div class="section-title">
-        <span style="color: #3b82f6;">A relire</span>
-        <span class="badge" style="background: #dbeafe; color: #1e40af;">{pendingReview.length}</span>
+        <span style="color: #065f46;">Prets a deployer</span>
+        <span class="badge" style="background: #d1fae5; color: #065f46;">{readyToDeploy.length}</span>
       </div>
-      {pendingReview.map((c: any) => {
-        const ub = urgenceBadge(c.urgence);
-        return (
-          <div class="card" data-card>
-            <div class="card-header" data-toggle>
-              <div>
-                <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
-                <span class="collection-tag" style="margin-left: 0.5rem;">{c.articles?.collection}</span>
-                <span class="badge" style={`margin-left: 0.5rem; background: ${ub.bg}; color: ${ub.color};`}>{ub.label}</span>
-              </div>
-              <div class="card-meta">
-                <span>{formatDate(c.processed_at)}</span>
-              </div>
+      {readyToDeploy.map((t: any) => (
+        <div class="ticket" data-card>
+          <div class="ticket-header" data-toggle>
+            <div class="ticket-info">
+              <span>{urgenceIcon(t.urgence)}</span>
+              <span class="ticket-title">{t.title}</span>
+              <span class="badge" style="background: #f5f3ff; color: #7c3aed;">{typeLabel(t.ticket_type)}</span>
             </div>
-            <div class="card-body">
-              <div class="claim-block">
-                <div class="claim-label">Claim problematique</div>
-                <div class="claim-text">{c.claim_original}</div>
-                <div class="realite-text">{c.realite_actuelle}</div>
-                {c.source_reference && (
-                  <div class="source-link">
-                    <a href={c.source_reference} target="_blank" rel="noopener">{c.source_reference}</a>
-                  </div>
-                )}
-              </div>
-
-              {c.section_originale && (
-                <div class="diff-block diff-original">
-                  <div class="diff-label"><span>Section originale</span></div>
-                  <div class="diff-content">{c.section_originale}</div>
-                </div>
-              )}
-
-              {c.section_corrigee && (
-                <div class="diff-block diff-corrected">
-                  <div class="diff-label"><span>Section corrigee</span></div>
-                  <div class="diff-content">{c.section_corrigee}</div>
-                </div>
-              )}
-
-              {c.explication_correction && (
-                <div class="explanation">
-                  <div class="explanation-label">Explication de la correction</div>
-                  <div>{c.explication_correction}</div>
-                </div>
-              )}
-
-              <div class="card-actions">
-                <button class="btn btn-reject" data-review-action="rejected" data-correction-id={c.id}>
-                  Rejeter
-                </button>
-                <button class="btn btn-approve" data-review-action="approved" data-correction-id={c.id}>
-                  Approuver
-                </button>
-              </div>
+            <div class="ticket-meta">
+              <span>{formatDate(t.updated_at)}</span>
             </div>
           </div>
-        );
-      })}
+          <div class="ticket-body">
+            <div class="diff-before">
+              <div class="diff-label">AVANT (before_exact)</div>
+              <div class="diff-content">{t.before_exact}</div>
+            </div>
+            <div class="diff-after">
+              <div class="diff-label">APRES (after_final)</div>
+              <div class="diff-content">{t.after_final}</div>
+            </div>
+            <div class="explanation">
+              <strong>Claim :</strong> {t.claim_original}<br/>
+              <strong>Realite :</strong> {t.realite_actuelle}
+            </div>
+            {t.source_reference && (
+              <div class="ticket-source">
+                Source : <a href={t.source_reference} target="_blank" rel="noopener">{t.source_reference}</a>
+              </div>
+            )}
+            <div class="ticket-actions">
+              <button class="btn btn-deploy" data-deploy data-ticket-id={t.id} data-slug={t.slug}>
+                Deployer
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   )}
 
-  <!-- Section: En attente de traitement -->
-  {requested.length > 0 && (
+  {/* In progress / approved — waiting for editorial agent */}
+  {inProgress.length > 0 && (
     <div class="section">
       <div class="section-title">
-        <span style="color: #7c3aed;">En attente de traitement</span>
-        <span class="badge" style="background: #f5f3ff; color: #7c3aed;">{requested.length}</span>
+        <span style="color: #7c3aed;">En attente de l'agent editorial</span>
+        <span class="badge" style="background: #f5f3ff; color: #7c3aed;">{inProgress.length}</span>
       </div>
       <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">
-        Ces points attendent que l'agent editorial les traite. Lancez : <code>node scripts/editorial-agent.mjs</code>
+        Lancez : <code>node scripts/editorial-agent.mjs</code>
       </p>
-      {requested.map((c: any) => {
-        const ub = urgenceBadge(c.urgence);
-        const sb = statutBadge(c.statut);
-        return (
-          <div class="card" data-card>
-            <div class="card-header" data-toggle>
-              <div>
-                <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
-                <span class="badge" style={`margin-left: 0.5rem; background: ${ub.bg}; color: ${ub.color};`}>{ub.label}</span>
-                <span class="badge" style={`margin-left: 0.5rem; background: ${sb.bg}; color: ${sb.color};`}>{sb.label}</span>
-              </div>
-              <div class="card-meta">
-                <span>{formatDate(c.requested_at)}</span>
-              </div>
+      {inProgress.map((t: any) => (
+        <div class="ticket" data-card>
+          <div class="ticket-header" data-toggle>
+            <div class="ticket-info">
+              <span>{urgenceIcon(t.urgence)}</span>
+              <span class="ticket-title">{t.title}</span>
+              <span class="badge" style="background: #e0e7ff; color: #4338ca;">{t.statut === 'in_progress' ? 'En cours' : 'Approuve'}</span>
             </div>
-            <div class="card-body">
-              <div class="claim-block">
-                <div class="claim-label">Claim problematique</div>
-                <div class="claim-text">{c.claim_original}</div>
-                <div class="realite-text">{c.realite_actuelle}</div>
-              </div>
+            <div class="ticket-meta">
+              <span>{formatDate(t.updated_at)}</span>
             </div>
           </div>
-        );
-      })}
+          <div class="ticket-body">
+            <div class="diff-before">
+              <div class="diff-label">AVANT</div>
+              <div class="diff-content">{t.before_exact}</div>
+            </div>
+            <div class="diff-after">
+              <div class="diff-label">CORRECTION PROPOSEE</div>
+              <div class="diff-content">{t.after_suggested}</div>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   )}
 
-  <!-- Section: Approuves / Appliques -->
-  {(approved.length + applied.length) > 0 && (
+  {/* Revision needed */}
+  {revisionNeeded.length > 0 && (
     <div class="section">
       <div class="section-title">
-        <span style="color: #22c55e;">Approuves</span>
-        <span class="badge" style="background: #d1fae5; color: #065f46;">{approved.length + applied.length}</span>
+        <span style="color: #f59e0b;">En revision</span>
+        <span class="badge" style="background: #fef3c7; color: #92400e;">{revisionNeeded.length}</span>
       </div>
-      {[...approved, ...applied].map((c: any) => {
-        const sb = statutBadge(c.statut);
-        return (
-          <div class="card" data-card>
-            <div class="card-header" data-toggle>
-              <div>
-                <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
-                <span class="badge" style={`margin-left: 0.5rem; background: ${sb.bg}; color: ${sb.color};`}>{sb.label}</span>
-              </div>
-              <div class="card-meta">
-                <span>Relu {formatDate(c.reviewed_at)}</span>
-              </div>
+      <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">
+        Ces tickets ont ete rejetes avec note. Lancez l'agent editorial pour les reviser.
+      </p>
+      {revisionNeeded.map((t: any) => (
+        <div class="ticket" data-card>
+          <div class="ticket-header" data-toggle>
+            <div class="ticket-info">
+              <span>{urgenceIcon(t.urgence)}</span>
+              <span class="ticket-title">{t.title}</span>
             </div>
-            <div class="card-body">
-              <div class="claim-block">
-                <div class="claim-label">Correction appliquee</div>
-                <div class="claim-text">{c.claim_original}</div>
-              </div>
-              {c.section_corrigee && (
-                <div class="diff-block diff-corrected">
-                  <div class="diff-label"><span>Section corrigee</span></div>
-                  <div class="diff-content">{c.section_corrigee}</div>
-                </div>
-              )}
+            <div class="ticket-meta">
+              <span>{formatDate(t.updated_at)}</span>
             </div>
           </div>
-        );
-      })}
+          <div class="ticket-body">
+            {t.human_note && (
+              <div class="human-note">
+                <strong>Note humaine :</strong> {t.human_note}
+              </div>
+            )}
+            <div class="diff-before">
+              <div class="diff-label">AVANT</div>
+              <div class="diff-content">{t.before_exact}</div>
+            </div>
+            <div class="diff-after">
+              <div class="diff-label">CORRECTION PROPOSEE</div>
+              <div class="diff-content">{t.after_suggested}</div>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   )}
 
-  <!-- Section: Rejetes -->
-  {rejected.length > 0 && (
+  {/* Deployed */}
+  {deployed.length > 0 && (
     <div class="section">
       <div class="section-title">
-        <span style="color: #ef4444;">Rejetes</span>
-        <span class="badge" style="background: #fee2e2; color: #991b1b;">{rejected.length}</span>
+        <span style="color: #22c55e;">Deployes</span>
+        <span class="badge" style="background: #bbf7d0; color: #166534;">{deployed.length}</span>
       </div>
-      {rejected.map((c: any) => (
-        <div class="card" data-card>
-          <div class="card-header" data-toggle>
-            <div>
-              <span class="card-title">{c.articles?.title || 'Article inconnu'}</span>
+      {deployed.map((t: any) => (
+        <div class="ticket" data-card>
+          <div class="ticket-header" data-toggle>
+            <div class="ticket-info">
+              <span>{urgenceIcon(t.urgence)}</span>
+              <span class="ticket-title">{t.title}</span>
+              <span class="badge" style="background: #bbf7d0; color: #166534;">Deploye</span>
             </div>
-            <div class="card-meta">
-              <span>Rejete {formatDate(c.reviewed_at)}</span>
+            <div class="ticket-meta">
+              <span>Deploye {formatDate(t.deployed_at)}</span>
             </div>
           </div>
-          <div class="card-body">
-            <div class="claim-block">
-              <div class="claim-text">{c.claim_original}</div>
+          <div class="ticket-body">
+            <div class="diff-before">
+              <div class="diff-label">AVANT</div>
+              <div class="diff-content">{t.before_exact}</div>
+            </div>
+            <div class="diff-after">
+              <div class="diff-label">APRES (final)</div>
+              <div class="diff-content">{t.after_final}</div>
             </div>
           </div>
         </div>
@@ -495,20 +468,20 @@ function statutBadge(statut: string) {
     });
   });
 
-  // Approve / Reject actions
-  document.querySelectorAll('[data-review-action]').forEach(btn => {
+  // Deploy action — marks ticket as deployed
+  // In production, this would trigger the integration agent (commit + PR)
+  document.querySelectorAll('[data-deploy]').forEach(btn => {
     btn.addEventListener('click', async (e) => {
       e.stopPropagation();
       const button = e.currentTarget;
-      const action = button.dataset.reviewAction;
-      const correctionId = button.dataset.correctionId;
+      const ticketId = button.dataset.ticketId;
+      const slug = button.dataset.slug;
 
       button.disabled = true;
-      const originalText = button.textContent;
-      button.textContent = '...';
+      button.textContent = 'Deploiement...';
 
       try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/editorial_queue?id=eq.${correctionId}`, {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?id=eq.${ticketId}`, {
           method: 'PATCH',
           headers: {
             'apikey': SUPABASE_ANON_KEY,
@@ -517,9 +490,8 @@ function statutBadge(statut: string) {
             'Prefer': 'return=minimal'
           },
           body: JSON.stringify({
-            statut: action,
-            reviewed_at: new Date().toISOString(),
-            reviewed_by: 'admin'
+            statut: 'deployed',
+            deployed_at: new Date().toISOString()
           })
         });
 
@@ -527,19 +499,14 @@ function statutBadge(statut: string) {
           throw new Error(await response.text());
         }
 
-        const card = button.closest('[data-card]');
-        if (card) {
-          card.style.opacity = '0.5';
-          card.style.pointerEvents = 'none';
-        }
+        button.textContent = 'Deploye';
+        button.classList.add('done');
+        showToast(`Ticket deploye pour ${slug}`);
 
-        showToast(action === 'approved' ? 'Correction approuvee' : 'Correction rejetee');
-
-        // Reload after a short delay
         setTimeout(() => { window.location.reload(); }, 1500);
       } catch (err) {
         button.disabled = false;
-        button.textContent = originalText;
+        button.textContent = 'Deployer';
         showToast('Erreur: ' + err.message, 'error');
       }
     });
