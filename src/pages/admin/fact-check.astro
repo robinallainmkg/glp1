@@ -213,8 +213,8 @@ function urgenceColor(urgence: string) {
   {totalChecked === 0 && !error && (
     <div class="empty-state">
       <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucun resultat de fact-check</p>
-      <p>Lancez le workflow n8n ou executez le script de synchronisation pour commencer.</p>
-      <p style="margin-top: 0.5rem;"><code>node scripts/sync-articles-to-supabase.mjs</code></p>
+      <p>Lancez le workflow GitHub Actions ou executez le script manuellement pour commencer.</p>
+      <p style="margin-top: 0.5rem;"><code>node scripts/fact-check-runner.mjs --limit 5</code></p>
     </div>
   )}
 

@@ -1,6 +1,6 @@
 # System Prompt — Agent Fact-check GLP1
 
-> Ce prompt est utilisé par le workflow n8n dans le nœud "Claude API".
+> Ce prompt est utilisé par le workflow GitHub Actions (fact-check.yml) via `scripts/fact-check-runner.mjs`.
 > Il est injecté comme `system` message lors de l'appel à l'API Anthropic.
 
 ---
