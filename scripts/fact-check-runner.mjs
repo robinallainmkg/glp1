@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Agent Fact-Check — Vérifie les articles GLP1 via Claude API avec web search.
+ * Agent Fact-Check — Verifie les articles GLP1 via Claude API avec web search.
+ * Cree des tickets individuels dans correction_tickets pour chaque probleme detecte.
  *
  * Usage :
  *   node scripts/fact-check-runner.mjs                    # tous les articles
@@ -25,7 +26,7 @@ import Anthropic from '@anthropic-ai/sdk';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const MODEL = 'claude-sonnet-4-20250514';
-const MAX_TOKENS = 4096;
+const MAX_TOKENS = 8192;
 const SYSTEM_PROMPT_PATH = path.resolve(__dirname, '../n8n/prompts/fact-check-system-prompt.md');
 
 // Parse CLI arguments
@@ -42,11 +43,11 @@ const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  console.error('❌ SUPABASE_URL et SUPABASE_SERVICE_ROLE_KEY requis');
+  console.error('SUPABASE_URL et SUPABASE_SERVICE_ROLE_KEY requis');
   process.exit(1);
 }
 if (!ANTHROPIC_API_KEY) {
-  console.error('❌ ANTHROPIC_API_KEY requis');
+  console.error('ANTHROPIC_API_KEY requis');
   process.exit(1);
 }
 
@@ -81,7 +82,7 @@ async function fetchArticles() {
 
   const { data, error } = await query;
   if (error) {
-    console.error('❌ Erreur récupération articles:', error.message);
+    console.error('Erreur recuperation articles:', error.message);
     process.exit(1);
   }
   return data || [];
@@ -99,7 +100,7 @@ async function factCheckArticle(article) {
   });
 
   try {
-    const userMessage = `# Article à vérifier
+    const userMessage = `# Article a verifier
 
 **Titre** : ${article.title}
 **Collection** : ${article.collection}
@@ -113,7 +114,7 @@ ${article.content}`;
       model: MODEL,
       max_tokens: MAX_TOKENS,
       system: systemPrompt,
-      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 10 }],
+      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 15 }],
       messages: [{ role: 'user', content: userMessage }]
     });
 
@@ -124,7 +125,7 @@ ${article.content}`;
     // Parse JSON from response
     const jsonMatch = rawText.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
-      throw new Error(`Pas de JSON valide dans la réponse Claude pour ${article.slug}`);
+      throw new Error(`Pas de JSON valide dans la reponse Claude pour ${article.slug}`);
     }
 
     const result = JSON.parse(jsonMatch[0]);
@@ -132,20 +133,53 @@ ${article.content}`;
     const tokensUsed = (response.usage?.input_tokens || 0) + (response.usage?.output_tokens || 0);
 
     // Write result to fact_check_results
-    const { error: insertError } = await supabase
+    const { data: factCheckRow, error: insertError } = await supabase
       .from('fact_check_results')
       .insert({
         article_id: article.id,
         score_fiabilite: result.score_fiabilite,
         statut: result.statut,
-        points: result.points || [],
-        sources: (result.points || []).map(p => p.source).filter(Boolean),
+        points: result.tickets || [],
+        sources: (result.tickets || []).map(t => t.source).filter(Boolean),
         model_used: MODEL,
         tokens_used: tokensUsed
-      });
+      })
+      .select('id')
+      .single();
 
     if (insertError) {
-      throw new Error(`Erreur écriture Supabase: ${insertError.message}`);
+      throw new Error(`Erreur ecriture fact_check_results: ${insertError.message}`);
+    }
+
+    const factCheckResultId = factCheckRow.id;
+
+    // Create individual tickets in correction_tickets
+    const tickets = result.tickets || [];
+    let ticketsCreated = 0;
+
+    for (const ticket of tickets) {
+      const { error: ticketError } = await supabase
+        .from('correction_tickets')
+        .insert({
+          article_id: article.id,
+          slug: article.slug,
+          title: article.title,
+          fact_check_result_id: factCheckResultId,
+          ticket_type: ticket.ticket_type || 'info_outdated',
+          urgence: ticket.urgence || 'warning',
+          before_exact: ticket.before_exact,
+          after_suggested: ticket.after_suggested,
+          claim_original: ticket.claim_original,
+          realite_actuelle: ticket.realite_actuelle,
+          source_reference: ticket.source || null,
+          statut: 'pending_review'
+        });
+
+      if (ticketError) {
+        console.error(`  Erreur creation ticket: ${ticketError.message}`);
+      } else {
+        ticketsCreated++;
+      }
     }
 
     // Update last_fact_checked on article
@@ -166,11 +200,20 @@ ${article.content}`;
         model: MODEL,
         score: result.score_fiabilite,
         statut: result.statut,
-        points_count: (result.points || []).length
+        tickets_count: tickets.length,
+        tickets_created: ticketsCreated
       }
     });
 
-    return { slug: article.slug, ...result, tokens_used: tokensUsed, duration_ms: durationMs };
+    return {
+      slug: article.slug,
+      score_fiabilite: result.score_fiabilite,
+      statut: result.statut,
+      tickets_count: tickets.length,
+      tickets_created: ticketsCreated,
+      tokens_used: tokensUsed,
+      duration_ms: durationMs
+    };
   } catch (err) {
     const durationMs = Date.now() - startTime;
 
@@ -184,7 +227,7 @@ ${article.content}`;
       metadata: { slug: article.slug, model: MODEL }
     });
 
-    console.error(`  ❌ ${article.slug}: ${err.message}`);
+    console.error(`  ${article.slug}: ${err.message}`);
     return { slug: article.slug, error: err.message };
   }
 }
@@ -193,37 +236,27 @@ function buildAlertSummary(results) {
   const urgent = results.filter(r => r.statut === 'Urgent');
   if (urgent.length === 0) return null;
 
-  let body = `⚠️ ALERTE FACT-CHECK GLP1\n\n`;
-  body += `${urgent.length} article(s) nécessitent une correction urgente :\n\n`;
+  let body = `ALERTE FACT-CHECK GLP1\n\n`;
+  body += `${urgent.length} article(s) necessitent une correction urgente :\n\n`;
 
   for (const r of urgent) {
-    body += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-    body += `📄 ${r.slug}\n`;
-    body += `   Score : ${r.score_fiabilite}/100\n`;
-    for (const p of (r.points || [])) {
-      if (p.urgence === 'urgent') {
-        body += `   🔴 ${p.claim_original}\n`;
-        body += `      → ${p.realite_actuelle}\n`;
-      }
-    }
-    body += '\n';
+    body += `---\n`;
+    body += `${r.slug} — Score: ${r.score_fiabilite}/100 — ${r.tickets_count} ticket(s)\n`;
   }
 
-  body += `\n🔗 Dashboard : https://glp1-france.fr/admin/fact-check\n`;
-  return { subject: `[GLP1] ⚠️ ${urgent.length} article(s) urgents — Fact-Check`, body };
+  body += `\nDashboard : https://glp1-france.fr/admin/fact-check\n`;
+  return { subject: `[GLP1] ${urgent.length} article(s) urgents — Fact-Check`, body };
 }
 
 async function sendAlertEmail(alert) {
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, ALERT_EMAIL_TO } = process.env;
 
   if (!SMTP_HOST || !ALERT_EMAIL_TO) {
-    console.log('📧 Alerte email non envoyée (SMTP non configuré)');
-    console.log('   Résumé alerte :', alert.subject);
+    console.log('Alerte email non envoyee (SMTP non configure)');
+    console.log('   Resume alerte :', alert.subject);
     return;
   }
 
-  // Dynamic import to avoid requiring nodemailer when not needed
-  // nodemailer is only needed for email alerts
   try {
     const nodemailer = await import('nodemailer');
     const transporter = nodemailer.default.createTransport({
@@ -240,29 +273,28 @@ async function sendAlertEmail(alert) {
       text: alert.body
     });
 
-    console.log(`📧 Alerte envoyée à ${ALERT_EMAIL_TO}`);
+    console.log(`Alerte envoyee a ${ALERT_EMAIL_TO}`);
   } catch (err) {
-    console.error(`📧 Erreur envoi email: ${err.message}`);
-    // Don't fail the whole run for email errors
+    console.error(`Erreur envoi email: ${err.message}`);
   }
 }
 
 // --- Main ---
 
 async function main() {
-  console.log('🔍 Agent Fact-Check GLP1');
-  console.log(`   Modèle : ${MODEL}`);
-  console.log(`   Web search : activé`);
-  if (SINGLE_ARTICLE_ID) console.log(`   Article ciblé : ${SINGLE_ARTICLE_ID}`);
+  console.log('Agent Fact-Check GLP1 (Marche FR)');
+  console.log(`   Modele : ${MODEL}`);
+  console.log(`   Web search : active (15 max/article)`);
+  if (SINGLE_ARTICLE_ID) console.log(`   Article cible : ${SINGLE_ARTICLE_ID}`);
   if (LIMIT > 0) console.log(`   Limite : ${LIMIT} articles`);
   console.log('');
 
   // 1. Fetch articles
   const articles = await fetchArticles();
-  console.log(`📂 ${articles.length} article(s) à vérifier\n`);
+  console.log(`${articles.length} article(s) a verifier\n`);
 
   if (articles.length === 0) {
-    console.log('✅ Aucun article à traiter');
+    console.log('Aucun article a traiter');
     return;
   }
 
@@ -276,8 +308,8 @@ async function main() {
     results.push(result);
 
     if (!result.error) {
-      const icon = result.statut === 'Urgent' ? '🔴' : result.statut === 'À vérifier' ? '🟡' : '🟢';
-      console.log(`  ${icon} Score: ${result.score_fiabilite}/100 — ${result.statut} (${result.points?.length || 0} points)`);
+      const icon = result.statut === 'Urgent' ? '[URGENT]' : result.statut === 'A verifier' ? '[WARN]' : '[OK]';
+      console.log(`  ${icon} Score: ${result.score_fiabilite}/100 — ${result.statut} — ${result.tickets_created} ticket(s) crees`);
     }
 
     // Small delay between API calls to respect rate limits
@@ -289,15 +321,16 @@ async function main() {
   // 3. Summary
   const successful = results.filter(r => !r.error);
   const errors = results.filter(r => r.error);
-  const urgentCount = results.filter(r => r.statut === 'Urgent').length;
+  const totalTickets = successful.reduce((sum, r) => sum + (r.tickets_created || 0), 0);
 
-  console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  console.log(`✅ Vérifiés  : ${successful.length}`);
-  console.log(`❌ Erreurs   : ${errors.length}`);
-  console.log(`🔴 Urgents   : ${urgentCount}`);
-  console.log(`🟡 À vérifier: ${results.filter(r => r.statut === 'À vérifier').length}`);
-  console.log(`🟢 OK        : ${results.filter(r => r.statut === 'OK').length}`);
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  console.log('\n---');
+  console.log(`Verifies    : ${successful.length}`);
+  console.log(`Erreurs     : ${errors.length}`);
+  console.log(`Tickets crees: ${totalTickets}`);
+  console.log(`Urgents     : ${results.filter(r => r.statut === 'Urgent').length}`);
+  console.log(`A verifier  : ${results.filter(r => r.statut === 'A verifier').length}`);
+  console.log(`OK          : ${results.filter(r => r.statut === 'OK').length}`);
+  console.log('---');
 
   // 4. Send alert if urgent articles found
   const alert = buildAlertSummary(results);
@@ -311,7 +344,8 @@ async function main() {
       `total=${articles.length}`,
       `checked=${successful.length}`,
       `errors=${errors.length}`,
-      `urgent=${urgentCount}`
+      `urgent=${results.filter(r => r.statut === 'Urgent').length}`,
+      `tickets=${totalTickets}`
     ].join('\n');
     fs.appendFileSync(process.env.GITHUB_OUTPUT, output + '\n');
   }
@@ -323,6 +357,6 @@ async function main() {
 }
 
 main().catch(err => {
-  console.error('💥 Erreur fatale:', err);
+  console.error('Erreur fatale:', err);
   process.exit(1);
 });

@@ -1,35 +1,48 @@
 ---
 // src/pages/admin/fact-check.astro
-// Dashboard Fact-Check — Phase 1 & 2 Agent GLP1
+// Dashboard Fact-Check — Tickets Before/After (Phase 3)
 import { supabase } from '../../lib/supabase';
 import { supabaseConfig } from '../../lib/supabase';
 
-// Récupérer les derniers résultats de fact-check avec les infos articles
-const { data: results, error } = await supabase
+// Recuperer les resultats fact-check avec articles
+const { data: results, error: resultsError } = await supabase
   .from('fact_check_results')
   .select(`
     id,
     score_fiabilite,
     statut,
-    points,
-    sources,
     checked_at,
     model_used,
-    tokens_used,
     articles (
       id,
       slug,
       title,
-      collection,
-      last_fact_checked
+      collection
     )
   `)
   .order('checked_at', { ascending: false })
-  .limit(200);
+  .limit(100);
 
-// Grouper par statut
+// Recuperer les tickets
+const { data: tickets, error: ticketsError } = await supabase
+  .from('correction_tickets')
+  .select('*')
+  .order('created_at', { ascending: false })
+  .limit(500);
+
+const error = resultsError || ticketsError;
+
+// Grouper tickets par article (fact_check_result_id)
+const ticketsByResult = new Map();
+for (const t of (tickets || [])) {
+  const key = t.fact_check_result_id;
+  if (!ticketsByResult.has(key)) ticketsByResult.set(key, []);
+  ticketsByResult.get(key).push(t);
+}
+
+// Grouper resultats par statut
 const urgent = (results || []).filter(r => r.statut === 'Urgent');
-const aVerifier = (results || []).filter(r => r.statut === 'À vérifier');
+const aVerifier = (results || []).filter(r => r.statut === 'A verifier');
 const ok = (results || []).filter(r => r.statut === 'OK');
 
 // Stats
@@ -37,6 +50,8 @@ const totalChecked = (results || []).length;
 const avgScore = totalChecked > 0
   ? Math.round((results || []).reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / totalChecked)
   : 0;
+const totalTickets = (tickets || []).length;
+const pendingTickets = (tickets || []).filter(t => t.statut === 'pending_review').length;
 
 function formatDate(dateStr: string | null) {
   if (!dateStr) return 'N/A';
@@ -45,12 +60,35 @@ function formatDate(dateStr: string | null) {
   });
 }
 
-function urgenceColor(urgence: string) {
+function urgenceIcon(urgence: string) {
   switch (urgence) {
-    case 'urgent': return '#dc2626';
-    case 'moyen': return '#f59e0b';
-    case 'faible': return '#22c55e';
-    default: return '#6b7280';
+    case 'urgent': return '🔴';
+    case 'warning': return '🟡';
+    case 'ok': return '🟢';
+    default: return '⚪';
+  }
+}
+
+function typeLabel(type: string) {
+  switch (type) {
+    case 'price_update': return 'Prix';
+    case 'info_outdated': return 'Info obsolete';
+    case 'false_claim': return 'Claim faux';
+    case 'missing_info': return 'Info manquante';
+    default: return type;
+  }
+}
+
+function statutLabel(statut: string) {
+  switch (statut) {
+    case 'pending_review': return 'En attente';
+    case 'approved': return 'Approuve';
+    case 'rejected': return 'Rejete';
+    case 'in_progress': return 'En cours';
+    case 'ready_to_deploy': return 'Pret';
+    case 'deployed': return 'Deploye';
+    case 'revision_needed': return 'Revision';
+    default: return statut;
   }
 }
 ---
@@ -99,6 +137,7 @@ function urgenceColor(urgence: string) {
     .stat-warning { background: #fffbeb; color: #f59e0b; }
     .stat-ok { background: #f0fdf4; color: #22c55e; }
     .stat-info { background: #eff6ff; color: #3b82f6; }
+    .stat-tickets { background: #f5f3ff; color: #7c3aed; }
     .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
     .section { margin-bottom: 2rem; }
     .section-title {
@@ -116,57 +155,25 @@ function urgenceColor(urgence: string) {
       font-size: 0.75rem;
       font-weight: 600;
     }
-    .badge-urgent { background: #fecaca; color: #991b1b; }
-    .badge-warning { background: #fde68a; color: #92400e; }
-    .badge-ok { background: #bbf7d0; color: #166534; }
-    .card {
+    .article-card {
       background: white;
       border-radius: 8px;
       border: 1px solid #e2e8f0;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
       overflow: hidden;
     }
-    .card-header {
+    .article-header {
       padding: 1rem 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
     }
-    .card-header:hover { background: #f8fafc; }
-    .card-title { font-weight: 500; font-size: 0.95rem; }
-    .card-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 1rem; align-items: center; }
-    .card-body {
-      padding: 0 1.25rem 1.25rem;
-      border-top: 1px solid #f1f5f9;
-      display: none;
-    }
-    .card.open .card-body { display: block; }
-    .point {
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      border-radius: 6px;
-      background: #f8fafc;
-      border-left: 3px solid;
-      position: relative;
-    }
-    .point-claim { font-weight: 500; margin-bottom: 0.35rem; font-size: 0.9rem; }
-    .point-reality { font-size: 0.85rem; color: #475569; margin-bottom: 0.25rem; }
-    .point-source { font-size: 0.8rem; color: #3b82f6; }
-    .point-source a { color: #3b82f6; }
-    .score-pill {
-      display: inline-block;
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    .empty-state {
-      text-align: center;
-      padding: 2rem;
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
+    .article-header:hover { background: #f8fafc; }
+    .article-title { font-weight: 500; font-size: 0.95rem; }
+    .article-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 1rem; align-items: center; }
+    .article-body { display: none; padding: 0 1.25rem 1.25rem; }
+    .article-card.open .article-body { display: block; }
     .collection-tag {
       display: inline-block;
       padding: 0.15rem 0.5rem;
@@ -175,24 +182,112 @@ function urgenceColor(urgence: string) {
       background: #e0e7ff;
       color: #4338ca;
     }
-    .btn-editorial {
+    .score-pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* Ticket card */
+    .ticket {
+      margin-top: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .ticket-header {
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .ticket-type {
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .ticket-statut {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .ticket-body { padding: 1rem; }
+
+    /* Diff blocks */
+    .diff-before, .diff-after {
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .diff-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+    }
+    .diff-content {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    }
+    .diff-before .diff-label { background: #fef2f2; color: #991b1b; }
+    .diff-before .diff-content { background: #fff5f5; border: 1px solid #fecaca; border-top: none; text-decoration: line-through; color: #991b1b; }
+    .diff-after .diff-label { background: #f0fdf4; color: #166534; }
+    .diff-after .diff-content { background: #f0fdf9; border: 1px solid #bbf7d0; border-top: none; color: #166534; }
+
+    .ticket-source {
+      font-size: 0.8rem;
+      color: #3b82f6;
+      margin-bottom: 0.75rem;
+    }
+    .ticket-source a { color: #3b82f6; }
+    .ticket-realite {
+      font-size: 0.85rem;
+      color: #475569;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 6px;
+    }
+
+    /* Action buttons */
+    .ticket-actions {
+      display: flex;
+      gap: 0.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #f1f5f9;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      margin-top: 0.5rem;
-      padding: 0.4rem 0.75rem;
-      background: #7c3aed;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
     }
-    .btn-editorial:hover { background: #6d28d9; }
-    .btn-editorial:disabled { background: #a78bfa; cursor: not-allowed; }
-    .btn-editorial.sent { background: #22c55e; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-approve { background: #22c55e; color: white; }
+    .btn-approve:hover:not(:disabled) { background: #16a34a; }
+    .btn-reject { background: #ef4444; color: white; }
+    .btn-reject:hover:not(:disabled) { background: #dc2626; }
+    .btn-note { background: #f59e0b; color: white; }
+    .btn-note:hover:not(:disabled) { background: #d97706; }
+    .btn.done { background: #94a3b8; color: white; cursor: default; }
+
     .toast {
       position: fixed;
       bottom: 2rem;
@@ -210,29 +305,52 @@ function urgenceColor(urgence: string) {
     .toast.show { transform: translateY(0); opacity: 1; }
     .toast.success { background: #22c55e; }
     .toast.error { background: #dc2626; }
-    .card-actions {
-      padding: 0.75rem 1.25rem;
-      border-top: 1px solid #f1f5f9;
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 900;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 90%;
+      max-width: 500px;
+    }
+    .modal h3 { margin-bottom: 1rem; }
+    .modal textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .modal-actions {
       display: flex;
       gap: 0.5rem;
       justify-content: flex-end;
+      margin-top: 1rem;
     }
-    .btn-send-all {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.5rem 1rem;
-      background: #7c3aed;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
+    .btn-cancel { background: #e2e8f0; color: #475569; }
+    .btn-cancel:hover { background: #cbd5e1; }
+    .btn-send-note { background: #f59e0b; color: white; }
+    .btn-send-note:hover { background: #d97706; }
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
     }
-    .btn-send-all:hover { background: #6d28d9; }
-    .btn-send-all:disabled { background: #a78bfa; cursor: not-allowed; }
   </style>
 </head>
 <body>
@@ -262,183 +380,148 @@ function urgenceColor(urgence: string) {
     <div class="stat-value">{avgScore}/100</div>
     <div class="stat-label">Score moyen</div>
   </div>
+  <div class="stat-card stat-tickets">
+    <div class="stat-value">{pendingTickets}/{totalTickets}</div>
+    <div class="stat-label">Tickets en attente</div>
+  </div>
 </div>
 
 <div class="main">
 
   {error && (
     <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #991b1b;">
-      Erreur de connexion Supabase : {error.message}. Assurez-vous que la migration 003 a ete executee et que des resultats existent.
+      Erreur Supabase : {error.message}
     </div>
   )}
 
   {totalChecked === 0 && !error && (
     <div class="empty-state">
       <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Aucun resultat de fact-check</p>
-      <p>Lancez le workflow GitHub Actions ou executez le script manuellement pour commencer.</p>
-      <p style="margin-top: 0.5rem;"><code>node scripts/fact-check-runner.mjs --limit 5</code></p>
+      <p><code>node scripts/fact-check-runner.mjs --limit 5</code></p>
     </div>
   )}
 
-  <!-- Section Urgents -->
-  {urgent.length > 0 && (
+  {/* Render each status group */}
+  {[
+    { items: urgent, label: 'Urgents', color: '#dc2626', badgeBg: '#fecaca', badgeColor: '#991b1b', scoreBg: '#fecaca', scoreColor: '#991b1b' },
+    { items: aVerifier, label: 'A verifier', color: '#f59e0b', badgeBg: '#fde68a', badgeColor: '#92400e', scoreBg: '#fde68a', scoreColor: '#92400e' },
+    { items: ok, label: 'OK', color: '#22c55e', badgeBg: '#bbf7d0', badgeColor: '#166534', scoreBg: '#bbf7d0', scoreColor: '#166534' },
+  ].map(group => group.items.length > 0 && (
     <div class="section">
       <div class="section-title">
-        <span style="color: #dc2626;">Urgents</span>
-        <span class="badge badge-urgent">{urgent.length}</span>
+        <span style={`color: ${group.color};`}>{group.label}</span>
+        <span class="badge" style={`background: ${group.badgeBg}; color: ${group.badgeColor};`}>{group.items.length}</span>
       </div>
-      {urgent.map((r: any) => (
-        <div class="card" data-card>
-          <div class="card-header" data-toggle>
-            <div>
-              <span class="card-title">{r.articles?.title || 'Article inconnu'}</span>
-              <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
-            </div>
-            <div class="card-meta">
-              <span class="score-pill" style="background: #fecaca; color: #991b1b;">{r.score_fiabilite}/100</span>
-              <span>{formatDate(r.checked_at)}</span>
-            </div>
-          </div>
-          <div class="card-body">
-            {(r.points || []).map((p: any, idx: number) => (
-              <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
-                <div class="point-claim">{p.claim_original}</div>
-                <div class="point-reality">{p.realite_actuelle}</div>
-                {p.source && (
-                  <div class="point-source">
-                    <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
-                  </div>
+      {group.items.map((r: any) => {
+        const articleTickets = ticketsByResult.get(r.id) || [];
+        return (
+          <div class="article-card" data-card>
+            <div class="article-header" data-toggle>
+              <div>
+                <span class="article-title">{r.articles?.title || 'Article inconnu'}</span>
+                <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
+                {articleTickets.length > 0 && (
+                  <span class="badge" style="margin-left: 0.5rem; background: #f5f3ff; color: #7c3aed;">
+                    {articleTickets.length} ticket(s)
+                  </span>
                 )}
-                <button
-                  class="btn-editorial"
-                  data-send-editorial
-                  data-fact-check-id={r.id}
-                  data-article-id={r.articles?.id}
-                  data-claim={p.claim_original}
-                  data-realite={p.realite_actuelle}
-                  data-source={p.source || ''}
-                  data-urgence={p.urgence || 'moyen'}
-                >
-                  Envoyer a l'Editorial
-                </button>
               </div>
-            ))}
-            <div class="card-actions">
-              <button
-                class="btn-send-all"
-                data-send-all-editorial
-                data-fact-check-id={r.id}
-                data-article-id={r.articles?.id}
-                data-points={JSON.stringify(r.points || [])}
-              >
-                Envoyer tous les points
-              </button>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  )}
-
-  <!-- Section A verifier -->
-  {aVerifier.length > 0 && (
-    <div class="section">
-      <div class="section-title">
-        <span style="color: #f59e0b;">A verifier</span>
-        <span class="badge badge-warning">{aVerifier.length}</span>
-      </div>
-      {aVerifier.map((r: any) => (
-        <div class="card" data-card>
-          <div class="card-header" data-toggle>
-            <div>
-              <span class="card-title">{r.articles?.title || 'Article inconnu'}</span>
-              <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
-            </div>
-            <div class="card-meta">
-              <span class="score-pill" style="background: #fde68a; color: #92400e;">{r.score_fiabilite}/100</span>
-              <span>{formatDate(r.checked_at)}</span>
-            </div>
-          </div>
-          <div class="card-body">
-            {(r.points || []).map((p: any) => (
-              <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
-                <div class="point-claim">{p.claim_original}</div>
-                <div class="point-reality">{p.realite_actuelle}</div>
-                {p.source && (
-                  <div class="point-source">
-                    <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
-                  </div>
-                )}
-                <button
-                  class="btn-editorial"
-                  data-send-editorial
-                  data-fact-check-id={r.id}
-                  data-article-id={r.articles?.id}
-                  data-claim={p.claim_original}
-                  data-realite={p.realite_actuelle}
-                  data-source={p.source || ''}
-                  data-urgence={p.urgence || 'moyen'}
-                >
-                  Envoyer a l'Editorial
-                </button>
+              <div class="article-meta">
+                <span class="score-pill" style={`background: ${group.scoreBg}; color: ${group.scoreColor};`}>{r.score_fiabilite}/100</span>
+                <span>{formatDate(r.checked_at)}</span>
               </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  )}
-
-  <!-- Section OK -->
-  {ok.length > 0 && (
-    <div class="section">
-      <div class="section-title">
-        <span style="color: #22c55e;">OK</span>
-        <span class="badge badge-ok">{ok.length}</span>
-      </div>
-      {ok.map((r: any) => (
-        <div class="card" data-card>
-          <div class="card-header" data-toggle>
-            <div>
-              <span class="card-title">{r.articles?.title || 'Article inconnu'}</span>
-              <span class="collection-tag" style="margin-left: 0.5rem;">{r.articles?.collection}</span>
             </div>
-            <div class="card-meta">
-              <span class="score-pill" style="background: #bbf7d0; color: #166534;">{r.score_fiabilite}/100</span>
-              <span>{formatDate(r.checked_at)}</span>
-            </div>
-          </div>
-          <div class="card-body">
-            {(r.points || []).length === 0 ? (
-              <p style="padding: 0.75rem; color: #22c55e;">Aucun probleme detecte.</p>
-            ) : (
-              (r.points || []).map((p: any) => (
-                <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
-                  <div class="point-claim">{p.claim_original}</div>
-                  <div class="point-reality">{p.realite_actuelle}</div>
-                  {p.source && (
-                    <div class="point-source">
-                      <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
+            <div class="article-body">
+              {articleTickets.length === 0 ? (
+                <p style="padding: 0.5rem; color: #94a3b8;">Aucun ticket pour cet article.</p>
+              ) : (
+                articleTickets.map((t: any) => (
+                  <div class="ticket" data-ticket-id={t.id}>
+                    <div class="ticket-header">
+                      <div class="ticket-type">
+                        <span>{urgenceIcon(t.urgence)}</span>
+                        <span style={`text-transform: uppercase;`}>{t.urgence}</span>
+                        <span style="color: #64748b; font-weight: 400;">·</span>
+                        <span>{typeLabel(t.ticket_type)}</span>
+                      </div>
+                      <span class="ticket-statut" style={`background: ${
+                        t.statut === 'pending_review' ? '#dbeafe' :
+                        t.statut === 'approved' ? '#d1fae5' :
+                        t.statut === 'rejected' ? '#fee2e2' :
+                        t.statut === 'ready_to_deploy' ? '#d1fae5' :
+                        t.statut === 'deployed' ? '#bbf7d0' :
+                        t.statut === 'revision_needed' ? '#fef3c7' : '#e2e8f0'
+                      }; color: ${
+                        t.statut === 'pending_review' ? '#1e40af' :
+                        t.statut === 'approved' ? '#065f46' :
+                        t.statut === 'rejected' ? '#991b1b' :
+                        t.statut === 'ready_to_deploy' ? '#065f46' :
+                        t.statut === 'deployed' ? '#166534' :
+                        t.statut === 'revision_needed' ? '#92400e' : '#475569'
+                      };`}>{statutLabel(t.statut)}</span>
                     </div>
-                  )}
-                </div>
-              ))
-            )}
+                    <div class="ticket-body">
+                      <div class="diff-before">
+                        <div class="diff-label">AVANT</div>
+                        <div class="diff-content">{t.before_exact}</div>
+                      </div>
+                      <div class="diff-after">
+                        <div class="diff-label">APRES</div>
+                        <div class="diff-content">{t.after_suggested}</div>
+                      </div>
+                      <div class="ticket-realite">{t.realite_actuelle}</div>
+                      {t.source_reference && (
+                        <div class="ticket-source">
+                          Source : <a href={t.source_reference} target="_blank" rel="noopener">{t.source_reference}</a>
+                        </div>
+                      )}
+                      {t.human_note && (
+                        <div style="font-size: 0.85rem; color: #92400e; background: #fffbeb; padding: 0.5rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem; border: 1px solid #fde68a;">
+                          <strong>Note :</strong> {t.human_note}
+                        </div>
+                      )}
+                      {t.statut === 'pending_review' && (
+                        <div class="ticket-actions">
+                          <button class="btn btn-approve" data-action="approve" data-ticket-id={t.id}>Approuver</button>
+                          <button class="btn btn-reject" data-action="reject" data-ticket-id={t.id}>Rejeter</button>
+                          <button class="btn btn-note" data-action="note" data-ticket-id={t.id}>+ Note</button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
-  )}
+  ))}
 
 </div>
 
-<!-- Toast notifications -->
+<!-- Modal note de rejet -->
+<div class="modal-overlay" id="noteModal">
+  <div class="modal">
+    <h3>Rejeter avec note</h3>
+    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.75rem;">
+      Cette note sera transmise a l'Agent Editorial pour revision.
+    </p>
+    <textarea id="noteText" placeholder="Instructions pour la revision..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-cancel" id="noteCancel">Annuler</button>
+      <button class="btn btn-send-note" id="noteSend">Envoyer</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
 <div id="toast" class="toast"></div>
 
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
-  // --- Supabase client-side (inline, no import needed for static build) ---
   const SUPABASE_URL = supabaseUrl;
   const SUPABASE_ANON_KEY = supabaseAnonKey;
+  let pendingNoteTicketId = null;
 
   function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
@@ -447,33 +530,24 @@ function urgenceColor(urgence: string) {
     setTimeout(() => { toast.classList.remove('show'); }, 3000);
   }
 
-  async function insertEditorialRequest(data) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/editorial_queue`, {
-      method: 'POST',
+  async function updateTicket(ticketId, updates) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?id=eq.${ticketId}`, {
+      method: 'PATCH',
       headers: {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
         'Content-Type': 'application/json',
         'Prefer': 'return=minimal'
       },
-      body: JSON.stringify({
-        fact_check_id: data.factCheckId,
-        article_id: data.articleId,
-        claim_original: data.claim,
-        realite_actuelle: data.realite,
-        source_reference: data.source || null,
-        urgence: data.urgence || 'moyen',
-        statut: 'requested'
-      })
+      body: JSON.stringify(updates)
     });
 
     if (!response.ok) {
-      const err = await response.text();
-      throw new Error(err);
+      throw new Error(await response.text());
     }
   }
 
-  // Toggle cards
+  // Toggle article cards
   document.querySelectorAll('[data-toggle]').forEach(header => {
     header.addEventListener('click', () => {
       const card = header.closest('[data-card]');
@@ -481,79 +555,101 @@ function urgenceColor(urgence: string) {
     });
   });
 
-  // Single point → editorial
-  document.querySelectorAll('[data-send-editorial]').forEach(btn => {
+  // Approve / Reject actions
+  document.querySelectorAll('[data-action]').forEach(btn => {
     btn.addEventListener('click', async (e) => {
       e.stopPropagation();
       const button = e.currentTarget;
+      const action = button.dataset.action;
+      const ticketId = button.dataset.ticketId;
+
+      if (action === 'note') {
+        // Open modal
+        pendingNoteTicketId = ticketId;
+        document.getElementById('noteModal').classList.add('active');
+        document.getElementById('noteText').value = '';
+        document.getElementById('noteText').focus();
+        return;
+      }
+
       button.disabled = true;
-      button.textContent = 'Envoi...';
+      const originalText = button.textContent;
+      button.textContent = '...';
 
       try {
-        await insertEditorialRequest({
-          factCheckId: button.dataset.factCheckId,
-          articleId: button.dataset.articleId,
-          claim: button.dataset.claim,
-          realite: button.dataset.realite,
-          source: button.dataset.source,
-          urgence: button.dataset.urgence
-        });
+        if (action === 'approve') {
+          await updateTicket(ticketId, {
+            statut: 'approved',
+            reviewed_at: new Date().toISOString()
+          });
+          showToast('Ticket approuve — pret pour l\'editorial');
+        } else if (action === 'reject') {
+          await updateTicket(ticketId, {
+            statut: 'rejected',
+            reviewed_at: new Date().toISOString()
+          });
+          showToast('Ticket rejete');
+        }
 
-        button.textContent = 'Envoye';
-        button.classList.add('sent');
-        showToast('Point envoye a l\'editorial');
+        // Fade out ticket
+        const ticket = button.closest('[data-ticket-id]');
+        if (ticket) {
+          ticket.style.opacity = '0.4';
+          ticket.style.pointerEvents = 'none';
+        }
+
+        setTimeout(() => { window.location.reload(); }, 1500);
       } catch (err) {
         button.disabled = false;
-        button.textContent = 'Envoyer a l\'Editorial';
+        button.textContent = originalText;
         showToast('Erreur: ' + err.message, 'error');
       }
     });
   });
 
-  // All points → editorial
-  document.querySelectorAll('[data-send-all-editorial]').forEach(btn => {
-    btn.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      const button = e.currentTarget;
-      button.disabled = true;
-      button.textContent = 'Envoi...';
+  // Modal: cancel
+  document.getElementById('noteCancel').addEventListener('click', () => {
+    document.getElementById('noteModal').classList.remove('active');
+    pendingNoteTicketId = null;
+  });
 
-      try {
-        const points = JSON.parse(button.dataset.points);
-        const factCheckId = button.dataset.factCheckId;
-        const articleId = button.dataset.articleId;
+  // Modal: send note
+  document.getElementById('noteSend').addEventListener('click', async () => {
+    const note = document.getElementById('noteText').value.trim();
+    if (!note) {
+      showToast('Veuillez saisir une note', 'error');
+      return;
+    }
 
-        for (const p of points) {
-          await insertEditorialRequest({
-            factCheckId,
-            articleId,
-            claim: p.claim_original,
-            realite: p.realite_actuelle,
-            source: p.source || '',
-            urgence: p.urgence || 'moyen'
-          });
-        }
+    const sendBtn = document.getElementById('noteSend');
+    sendBtn.disabled = true;
+    sendBtn.textContent = '...';
 
-        button.textContent = `${points.length} point(s) envoye(s)`;
-        button.classList.add('sent');
+    try {
+      await updateTicket(pendingNoteTicketId, {
+        statut: 'revision_needed',
+        human_note: note,
+        reviewed_at: new Date().toISOString()
+      });
 
-        // Disable individual buttons for this card
-        const card = button.closest('[data-card]');
-        if (card) {
-          card.querySelectorAll('[data-send-editorial]').forEach(b => {
-            b.disabled = true;
-            b.textContent = 'Envoye';
-            b.classList.add('sent');
-          });
-        }
+      document.getElementById('noteModal').classList.remove('active');
+      showToast('Ticket renvoye en revision avec note');
 
-        showToast(`${points.length} point(s) envoye(s) a l'editorial`);
-      } catch (err) {
-        button.disabled = false;
-        button.textContent = 'Envoyer tous les points';
-        showToast('Erreur: ' + err.message, 'error');
+      // Fade out ticket
+      const ticket = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"]`);
+      if (ticket) {
+        ticket.style.opacity = '0.4';
+        ticket.style.pointerEvents = 'none';
       }
-    });
+
+      setTimeout(() => { window.location.reload(); }, 1500);
+    } catch (err) {
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Envoyer';
+      showToast('Erreur: ' + err.message, 'error');
+    }
+
+    pendingNoteTicketId = null;
   });
 </script>
 
