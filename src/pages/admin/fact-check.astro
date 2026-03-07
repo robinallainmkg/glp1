@@ -1,7 +1,8 @@
 ---
 // src/pages/admin/fact-check.astro
-// Dashboard Fact-Check — Phase 1 Agent GLP1
+// Dashboard Fact-Check — Phase 1 & 2 Agent GLP1
 import { supabase } from '../../lib/supabase';
+import { supabaseConfig } from '../../lib/supabase';
 
 // Récupérer les derniers résultats de fact-check avec les infos articles
 const { data: results, error } = await supabase
@@ -76,6 +77,7 @@ function urgenceColor(urgence: string) {
       align-items: center;
     }
     .header h1 { font-size: 1.5rem; font-weight: 600; }
+    .header-nav { display: flex; gap: 1.5rem; }
     .header a { color: white; text-decoration: none; opacity: 0.8; }
     .header a:hover { opacity: 1; }
     .stats-bar {
@@ -146,6 +148,7 @@ function urgenceColor(urgence: string) {
       border-radius: 6px;
       background: #f8fafc;
       border-left: 3px solid;
+      position: relative;
     }
     .point-claim { font-weight: 500; margin-bottom: 0.35rem; font-size: 0.9rem; }
     .point-reality { font-size: 0.85rem; color: #475569; margin-bottom: 0.25rem; }
@@ -172,13 +175,72 @@ function urgenceColor(urgence: string) {
       background: #e0e7ff;
       color: #4338ca;
     }
+    .btn-editorial {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      background: #7c3aed;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-editorial:hover { background: #6d28d9; }
+    .btn-editorial:disabled { background: #a78bfa; cursor: not-allowed; }
+    .btn-editorial.sent { background: #22c55e; }
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: 500;
+      font-size: 0.9rem;
+      z-index: 1000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.success { background: #22c55e; }
+    .toast.error { background: #dc2626; }
+    .card-actions {
+      padding: 0.75rem 1.25rem;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-end;
+    }
+    .btn-send-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 1rem;
+      background: #7c3aed;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-send-all:hover { background: #6d28d9; }
+    .btn-send-all:disabled { background: #a78bfa; cursor: not-allowed; }
   </style>
 </head>
 <body>
 
 <div class="header">
   <h1>Fact-Check Dashboard</h1>
-  <div>
+  <div class="header-nav">
+    <a href="/admin/editorial">Editorial</a>
     <a href="/admin">Admin</a>
   </div>
 </div>
@@ -238,7 +300,7 @@ function urgenceColor(urgence: string) {
             </div>
           </div>
           <div class="card-body">
-            {(r.points || []).map((p: any) => (
+            {(r.points || []).map((p: any, idx: number) => (
               <div class="point" style={`border-color: ${urgenceColor(p.urgence)}`}>
                 <div class="point-claim">{p.claim_original}</div>
                 <div class="point-reality">{p.realite_actuelle}</div>
@@ -247,8 +309,31 @@ function urgenceColor(urgence: string) {
                     <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
                   </div>
                 )}
+                <button
+                  class="btn-editorial"
+                  data-send-editorial
+                  data-fact-check-id={r.id}
+                  data-article-id={r.articles?.id}
+                  data-claim={p.claim_original}
+                  data-realite={p.realite_actuelle}
+                  data-source={p.source || ''}
+                  data-urgence={p.urgence || 'moyen'}
+                >
+                  Envoyer a l'Editorial
+                </button>
               </div>
             ))}
+            <div class="card-actions">
+              <button
+                class="btn-send-all"
+                data-send-all-editorial
+                data-fact-check-id={r.id}
+                data-article-id={r.articles?.id}
+                data-points={JSON.stringify(r.points || [])}
+              >
+                Envoyer tous les points
+              </button>
+            </div>
           </div>
         </div>
       ))}
@@ -284,6 +369,18 @@ function urgenceColor(urgence: string) {
                     <a href={p.source} target="_blank" rel="noopener">{p.source}</a>
                   </div>
                 )}
+                <button
+                  class="btn-editorial"
+                  data-send-editorial
+                  data-fact-check-id={r.id}
+                  data-article-id={r.articles?.id}
+                  data-claim={p.claim_original}
+                  data-realite={p.realite_actuelle}
+                  data-source={p.source || ''}
+                  data-urgence={p.urgence || 'moyen'}
+                >
+                  Envoyer a l'Editorial
+                </button>
               </div>
             ))}
           </div>
@@ -335,12 +432,127 @@ function urgenceColor(urgence: string) {
 
 </div>
 
-<script>
+<!-- Toast notifications -->
+<div id="toast" class="toast"></div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  // --- Supabase client-side (inline, no import needed for static build) ---
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  function showToast(message, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = `toast ${type} show`;
+    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+  }
+
+  async function insertEditorialRequest(data) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/editorial_queue`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        fact_check_id: data.factCheckId,
+        article_id: data.articleId,
+        claim_original: data.claim,
+        realite_actuelle: data.realite,
+        source_reference: data.source || null,
+        urgence: data.urgence || 'moyen',
+        statut: 'requested'
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(err);
+    }
+  }
+
   // Toggle cards
   document.querySelectorAll('[data-toggle]').forEach(header => {
     header.addEventListener('click', () => {
       const card = header.closest('[data-card]');
       if (card) card.classList.toggle('open');
+    });
+  });
+
+  // Single point → editorial
+  document.querySelectorAll('[data-send-editorial]').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const button = e.currentTarget;
+      button.disabled = true;
+      button.textContent = 'Envoi...';
+
+      try {
+        await insertEditorialRequest({
+          factCheckId: button.dataset.factCheckId,
+          articleId: button.dataset.articleId,
+          claim: button.dataset.claim,
+          realite: button.dataset.realite,
+          source: button.dataset.source,
+          urgence: button.dataset.urgence
+        });
+
+        button.textContent = 'Envoye';
+        button.classList.add('sent');
+        showToast('Point envoye a l\'editorial');
+      } catch (err) {
+        button.disabled = false;
+        button.textContent = 'Envoyer a l\'Editorial';
+        showToast('Erreur: ' + err.message, 'error');
+      }
+    });
+  });
+
+  // All points → editorial
+  document.querySelectorAll('[data-send-all-editorial]').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const button = e.currentTarget;
+      button.disabled = true;
+      button.textContent = 'Envoi...';
+
+      try {
+        const points = JSON.parse(button.dataset.points);
+        const factCheckId = button.dataset.factCheckId;
+        const articleId = button.dataset.articleId;
+
+        for (const p of points) {
+          await insertEditorialRequest({
+            factCheckId,
+            articleId,
+            claim: p.claim_original,
+            realite: p.realite_actuelle,
+            source: p.source || '',
+            urgence: p.urgence || 'moyen'
+          });
+        }
+
+        button.textContent = `${points.length} point(s) envoye(s)`;
+        button.classList.add('sent');
+
+        // Disable individual buttons for this card
+        const card = button.closest('[data-card]');
+        if (card) {
+          card.querySelectorAll('[data-send-editorial]').forEach(b => {
+            b.disabled = true;
+            b.textContent = 'Envoye';
+            b.classList.add('sent');
+          });
+        }
+
+        showToast(`${points.length} point(s) envoye(s) a l'editorial`);
+      } catch (err) {
+        button.disabled = false;
+        button.textContent = 'Envoyer tous les points';
+        showToast('Erreur: ' + err.message, 'error');
+      }
     });
   });
 </script>
