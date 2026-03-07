@@ -1,100 +1,139 @@
 ---
-import StaticLayout from '../../layouts/StaticLayout.astro';
-
-const title = "Admin - GLP-1 France";
-const description = "Interface d'administration du site GLP-1 France";
-const lastUpdate = new Date().toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' });
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
 ---
 
-<StaticLayout title={title} currentPage="dashboard">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Overview - GLP1 France</title>
   <style>
-    .dashboard-container {
-      max-width: 1200px;
-      margin: 0 auto;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
     }
-
-    .dashboard-header {
-      margin-bottom: 2rem;
-    }
-
-    .dashboard-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a202c;
-      margin-bottom: 0.5rem;
-    }
-
-    .dashboard-subtitle {
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-
-    .dashboard-timestamp {
-      font-size: 0.875rem;
-      color: #9ca3af;
-    }
-
-    .dashboard-grid {
+    .main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+    .page-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .page-subtitle { color: #64748b; margin-bottom: 2rem; }
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 2rem;
     }
-
-    .dashboard-card {
+    .overview-card {
       background: white;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
       padding: 1.5rem;
+      border: 1px solid #e2e8f0;
       text-decoration: none;
       color: inherit;
-      transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: block;
     }
-
-    .dashboard-card:hover {
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .overview-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
     }
-
     .card-icon {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 0.5rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-
-    .card-icon.blue { background: #3b82f6; color: white; }
-    .card-icon.green { background: #10b981; color: white; }
-
-    .card-title {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #1a202c;
-      margin-bottom: 0.5rem;
+    .card-icon.blue { background: #dbeafe; color: #2563eb; }
+    .card-icon.purple { background: #f3e8ff; color: #7c3aed; }
+    .card-icon.green { background: #dcfce7; color: #16a34a; }
+    .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .card-desc { font-size: 0.9rem; color: #64748b; line-height: 1.5; }
+    .stats-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
     }
-
-    .card-description {
-      color: #6b7280;
-      font-size: 0.875rem;
+    .mini-stat {
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
   </style>
+</head>
+<body>
 
-  <div class="dashboard-container">
-    <div class="dashboard-header">
-      <h1 class="dashboard-title">Administration</h1>
-      <p class="dashboard-subtitle">Interface d'administration du site GLP-1 France</p>
-      <p class="dashboard-timestamp">Dernière mise à jour : {lastUpdate}</p>
-    </div>
+<AdminNav />
 
-    <div class="dashboard-grid">
-      <a href="/admin/user-data/" class="dashboard-card">
-        <div class="card-icon blue">👥</div>
-        <h3 class="card-title">Utilisateurs</h3>
-        <p class="card-description">Gestion des comptes utilisateurs</p>
-      </a>
-    </div>
+<div class="main">
+  <h1 class="page-title">Admin Overview</h1>
+  <p class="page-subtitle">Interface d'administration du site GLP-1 France</p>
+
+  <div class="cards-grid">
+    <a href="/admin/fact-check/" class="overview-card">
+      <div class="card-icon blue">&#128269;</div>
+      <h3 class="card-title">Fact-Check Dashboard</h3>
+      <p class="card-desc">Resultats de verification des articles. Approuvez, rejetez ou annotez les tickets de correction.</p>
+      <div class="stats-row" id="fc-stats"></div>
+    </a>
+
+    <a href="/admin/editorial/" class="overview-card">
+      <div class="card-icon purple">&#9998;</div>
+      <h3 class="card-title">Editorial Dashboard</h3>
+      <p class="card-desc">Suivi des corrections editoriales. Visualisez les tickets prets a deployer et l'historique.</p>
+      <div class="stats-row" id="ed-stats"></div>
+    </a>
+
+    <a href="/admin/user-data/" class="overview-card">
+      <div class="card-icon green">&#128101;</div>
+      <h3 class="card-title">Utilisateurs</h3>
+      <p class="card-desc">Gestion des comptes utilisateurs et donnees.</p>
+    </a>
   </div>
-</StaticLayout>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  async function loadOverviewStats() {
+    try {
+      const headers = {
+        'apikey': supabaseAnonKey,
+        'Authorization': `Bearer ${supabaseAnonKey}`,
+      };
+      const [resultsRes, ticketsRes] = await Promise.all([
+        fetch(`${supabaseUrl}/rest/v1/fact_check_results?select=id,statut&limit=500`, { headers }),
+        fetch(`${supabaseUrl}/rest/v1/correction_tickets?select=id,statut&limit=500`, { headers })
+      ]);
+      const results = await resultsRes.json();
+      const tickets = await ticketsRes.json();
+
+      const urgent = results.filter(r => r.statut === 'Urgent').length;
+      const pending = tickets.filter(t => t.statut === 'pending_review').length;
+      const ready = tickets.filter(t => t.statut === 'ready_to_deploy').length;
+
+      const fcEl = document.getElementById('fc-stats');
+      if (fcEl) {
+        fcEl.innerHTML = `
+          <span class="mini-stat" style="background:#fef2f2;color:#dc2626">${urgent} urgent(s)</span>
+          <span class="mini-stat" style="background:#f5f3ff;color:#7c3aed">${pending} en attente</span>
+        `;
+      }
+      const edEl = document.getElementById('ed-stats');
+      if (edEl) {
+        edEl.innerHTML = `
+          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${ready} pret(s)</span>
+        `;
+      }
+    } catch (e) {
+      // Stats are non-critical
+    }
+  }
+  loadOverviewStats();
+</script>
+
+</body>
+</html>
