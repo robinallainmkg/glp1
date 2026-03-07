@@ -63,6 +63,33 @@ const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 
 const systemPrompt = fs.readFileSync(SYSTEM_PROMPT_PATH, 'utf8');
 
+// --- Retry helper for rate limits ---
+
+async function callWithRetry(fn, { maxRetries = 4, baseDelay = 60000 } = {}) {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const isRateLimit = err?.status === 429 ||
+        err?.error?.error?.type === 'rate_limit_error' ||
+        (err.message && err.message.includes('rate_limit'));
+
+      if (!isRateLimit || attempt === maxRetries) {
+        throw err;
+      }
+
+      // Parse retry-after header if available, otherwise use exponential backoff
+      const retryAfter = err?.headers?.['retry-after'];
+      const delay = retryAfter
+        ? parseInt(retryAfter, 10) * 1000
+        : baseDelay * Math.pow(2, attempt); // 60s, 120s, 240s, 480s
+
+      console.log(`  Rate limit atteint, nouvelle tentative dans ${Math.round(delay / 1000)}s (essai ${attempt + 1}/${maxRetries})...`);
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
+  }
+}
+
 // --- Functions ---
 
 async function fetchArticles() {
@@ -110,13 +137,15 @@ async function factCheckArticle(article) {
 
 ${article.content}`;
 
-    const response = await anthropic.messages.create({
-      model: MODEL,
-      max_tokens: MAX_TOKENS,
-      system: systemPrompt,
-      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 15 }],
-      messages: [{ role: 'user', content: userMessage }]
-    });
+    const response = await callWithRetry(() =>
+      anthropic.messages.create({
+        model: MODEL,
+        max_tokens: MAX_TOKENS,
+        system: systemPrompt,
+        tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 15 }],
+        messages: [{ role: 'user', content: userMessage }]
+      })
+    );
 
     // Extract text from response (may contain tool_use blocks for web search)
     const textBlocks = response.content.filter(b => b.type === 'text');
@@ -312,9 +341,10 @@ async function main() {
       console.log(`  ${icon} Score: ${result.score_fiabilite}/100 — ${result.statut} — ${result.tickets_created} ticket(s) crees`);
     }
 
-    // Small delay between API calls to respect rate limits
+    // Delay between API calls to respect rate limits (30k input tokens/min)
     if (i < articles.length - 1) {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log('  Pause 30s avant le prochain article...');
+      await new Promise(resolve => setTimeout(resolve, 30000));
     }
   }
 
