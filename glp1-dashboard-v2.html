@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLP1 — Agent OS</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --surface2: #f0ede8;
+  --surface3: #e8e4dd;
+  --border: #e2ddd6;
+  --border2: #d0c9be;
+  --text: #18150f;
+  --text2: #3d3830;
+  --muted: #7a7268;
+  --urgent: #b83030;
+  --urgent-light: #fdf2f2;
+  --urgent-border: #edc0c0;
+  --warning: #9a6200;
+  --warning-light: #fdf8ee;
+  --warning-border: #e8d090;
+  --ok: #1e6e3a;
+  --ok-light: #f0faf4;
+  --ok-border: #a8dab8;
+  --blue: #1a3f7a;
+  --blue-light: #eef3fc;
+  --blue-border: #a8c0e8;
+  --purple: #5a3a8a;
+  --purple-light: #f5f0fc;
+  --purple-border: #c8a8e8;
+  --sidebar-bg: #18150f;
+  --sidebar-text: #c8c0b0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.shell { display: flex; min-height: 100vh; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: 236px;
+  background: var(--sidebar-bg);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.brand-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 5px;
+}
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.brand-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  margin-top: 3px;
+}
+
+.nav-group { padding: 16px 12px 8px; }
+
+.nav-group-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2);
+  padding: 0 8px;
+  margin-bottom: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+  margin-bottom: 1px;
+}
+
+.nav-item:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.8); }
+.nav-item.active { background: rgba(255,255,255,0.1); color: #fff; }
+
+.nav-icon { font-size: 14px; width: 18px; text-align: center; }
+
+.nav-badge {
+  margin-left: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: var(--urgent);
+  color: white;
+}
+
+.nav-badge.warn { background: var(--warning); }
+.nav-badge.info { background: var(--blue); }
+.nav-badge.dim { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.3); }
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.cost-pill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.cost-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.cost-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.cost-budget {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.25);
+  margin-top: 2px;
+}
+
+/* ── MAIN ── */
+.main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.topbar-left { display: flex; align-items: center; gap: 16px; }
+
+.page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+
+.topbar-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  padding: 3px 8px;
+  background: var(--surface2);
+  border-radius: 4px;
+}
+
+.topbar-actions { display: flex; gap: 8px; }
+
+.btn {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
+.btn-ghost:hover { border-color: var(--text); color: var(--text); }
+.btn-primary { background: var(--text); color: #fff; }
+.btn-primary:hover { opacity: 0.85; }
+.btn-ok { background: var(--ok-light); border: 1px solid var(--ok-border); color: var(--ok); }
+.btn-ok:hover { background: var(--ok); color: white; }
+.btn-danger { background: var(--urgent-light); border: 1px solid var(--urgent-border); color: var(--urgent); }
+.btn-danger:hover { background: var(--urgent); color: white; }
+.btn-purple { background: var(--purple-light); border: 1px solid var(--purple-border); color: var(--purple); }
+.btn-purple:hover { background: var(--purple); color: white; }
+.btn-blue { background: var(--blue-light); border: 1px solid var(--blue-border); color: var(--blue); }
+.btn-blue:hover { background: var(--blue); color: white; }
+
+/* ── CONTENT ── */
+.content { padding: 28px 32px; overflow-y: auto; flex: 1; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.tab {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  transition: all 0.15s;
+  margin-bottom: -1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--text); border-bottom-color: var(--text); }
+.tab-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--surface2);
+}
+.tab.active .tab-count { background: var(--text); color: white; }
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.stat-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
+.stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.stat-urgent { border-color: var(--urgent-border); }
+.stat-urgent .stat-value { color: var(--urgent); }
+
+/* Section header */
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-title { font-size: 13px; font-weight: 700; }
+.section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+
+/* ── TICKET CARD ── */
+.article-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.article-group-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.article-group-header:hover { background: var(--surface2); }
+
+.article-info { flex: 1; }
+.article-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.article-slug {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.score-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.score-bar-wrap { display: flex; align-items: center; gap: 10px; }
+.score-bar {
+  width: 80px;
+  height: 5px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.score-fill { height: 100%; border-radius: 3px; }
+
+.article-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.chevron {
+  font-size: 11px;
+  color: var(--muted);
+  transition: transform 0.2s;
+}
+
+.article-group.open .chevron { transform: rotate(180deg); }
+
+.tickets-list { display: none; padding: 0 18px 18px; }
+.article-group.open .tickets-list { display: flex; flex-direction: column; gap: 10px; }
+
+.ticket {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+
+.urgence-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.urgence-dot.urgent { background: var(--urgent); }
+.urgence-dot.warning { background: var(--warning); }
+.urgence-dot.ok { background: var(--ok); }
+
+.ticket-type {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.type-urgent { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+.type-warning { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+.type-ok { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+
+.ticket-status {
+  margin-left: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.status-pending { background: var(--surface3); color: var(--muted); border: 1px solid var(--border2); }
+.status-approved { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+.status-ready { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
+.status-deployed { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+.status-error { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+
+.ticket-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+
+.diff-block { border-radius: 8px; padding: 12px 14px; }
+
+.diff-before {
+  background: #fdf5f5;
+  border: 1px solid var(--urgent-border);
+  border-left: 3px solid var(--urgent);
+}
+
+.diff-after {
+  background: #f3faf6;
+  border: 1px solid var(--ok-border);
+  border-left: 3px solid var(--ok);
+}
+
+.diff-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.diff-before .diff-label { color: var(--urgent); }
+.diff-after .diff-label { color: var(--ok); }
+
+.diff-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text2);
+}
+
+.diff-before .diff-text { text-decoration: line-through; opacity: 0.7; color: var(--urgent); }
+
+.ticket-source {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--blue);
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.ticket-explication {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+  padding: 8px 10px;
+  background: var(--surface2);
+  border-radius: 6px;
+}
+
+.ticket-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.human-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--purple);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+/* ── PIPELINE ── */
+.pipeline-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.pipeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+}
+
+.pipeline-title { font-size: 13px; font-weight: 700; flex: 1; }
+.pipeline-status-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.steps { padding: 14px 18px; display: flex; flex-direction: column; gap: 0; }
+
+.step {
+  display: flex;
+  gap: 14px;
+  padding: 10px 0;
+  position: relative;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 30px;
+  bottom: -10px;
+  width: 1px;
+  background: var(--border);
+}
+
+.step-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.dot-done { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+.dot-active { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+.dot-wait { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+.dot-human { background: var(--purple-light); color: var(--purple); border: 2px dashed var(--purple-border); }
+.dot-error { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+
+.step-body { flex: 1; }
+.step-title { font-size: 12px; font-weight: 600; margin-bottom: 2px; }
+.step-desc { font-size: 11px; color: var(--muted); line-height: 1.4; }
+.step-time { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); margin-top: 3px; }
+
+.pipeline-footer {
+  padding: 12px 18px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ── EDITORIAL ── */
+.editorial-ticket {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.editorial-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.editorial-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+
+.final-diff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.deploy-confirm {
+  background: var(--blue-light);
+  border: 1px solid var(--blue-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── AGENT STATUS ── */
+.agents-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.agent-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.agent-card.disabled { opacity: 0.45; }
+
+.agent-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.agent-name { font-size: 13px; font-weight: 700; }
+
+.indicator {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.ind-ok { background: var(--ok); box-shadow: 0 0 5px var(--ok); }
+.ind-active { background: var(--warning); box-shadow: 0 0 5px var(--warning); animation: pulse 1.5s infinite; }
+.ind-idle { background: var(--muted); }
+.ind-error { background: var(--urgent); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.agent-last {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.agent-bar { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; margin-bottom: 6px; }
+.agent-fill { height: 100%; border-radius: 2px; background: var(--ok); }
+
+.agent-nums {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.phase-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--surface2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 28px;
+  width: 460px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.modal-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.modal-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+
+.modal textarea {
+  width: 100%;
+  height: 100px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13px;
+  color: var(--text);
+  resize: none;
+  margin-bottom: 14px;
+}
+
+.modal textarea:focus { outline: none; border-color: var(--purple); }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--text);
+  color: white;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.25s;
+  z-index: 300;
+  max-width: 320px;
+  pointer-events: none;
+}
+
+.toast.show { opacity: 1; transform: translateY(0); }
+.toast-sub { font-size: 11px; font-weight: 400; opacity: 0.65; margin-top: 2px; }
+
+/* Flow diagram */
+.flow-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.flow-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-width: 860px;
+}
+
+.fnode { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+
+.fbox {
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.fbox-name { font-size: 11px; font-weight: 700; line-height: 1.2; }
+.fbox-sub { font-family: 'IBM Plex Mono', monospace; font-size: 9px; margin-top: 3px; opacity: 0.65; }
+
+.fbox-agent { background: var(--surface2); border: 1px solid var(--border2); }
+.fbox-db { background: var(--ok-light); border: 1px solid var(--ok-border); }
+.fbox-human { background: var(--purple-light); border: 2px dashed var(--purple-border); }
+.fbox-live { background: var(--blue-light); border: 1px solid var(--blue-border); }
+
+.human-label-flow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  background: var(--purple);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+.farrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6px;
+  gap: 3px;
+}
+
+.farrow-line {
+  width: 28px;
+  height: 1px;
+  background: var(--border2);
+  position: relative;
+}
+
+.farrow-line::after {
+  content: '▶';
+  position: absolute;
+  right: -9px;
+  top: -7px;
+  font-size: 9px;
+  color: var(--border2);
+}
+
+.farrow-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  color: var(--muted);
+  text-align: center;
+  max-width: 55px;
+  line-height: 1.2;
+}
+
+/* Misc */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.empty-state-icon { font-size: 28px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+<!-- ── SIDEBAR ── -->
+<div class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-eyebrow">GLP1 France</div>
+    <div class="brand-name">Agent OS</div>
+    <div class="brand-sub">robinallainmkg/glp1</div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Vue globale</div>
+    <div class="nav-item" onclick="showPage('overview')">
+      <span class="nav-icon">◎</span> Vue d'ensemble
+    </div>
+    <div class="nav-item" onclick="showPage('pipelines')">
+      <span class="nav-icon">⟳</span> Pipelines actifs
+      <span class="nav-badge warn">2</span>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Phase 1 — Actifs</div>
+    <div class="nav-item active" onclick="showPage('factcheck')" id="nav-factcheck">
+      <span class="nav-icon">🔍</span> Fact-Check
+      <span class="nav-badge">3</span>
+    </div>
+    <div class="nav-item" onclick="showPage('editorial')" id="nav-editorial">
+      <span class="nav-icon">✍️</span> Éditorial
+      <span class="nav-badge warn">1</span>
+    </div>
+    <div class="nav-item" onclick="showPage('integration')" id="nav-integration">
+      <span class="nav-icon">🔧</span> Intégration
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Phase 2</div>
+    <div class="nav-item" onclick="showPage('seo')" id="nav-seo">
+      <span class="nav-icon">📡</span> Opportunité SEO
+      <span class="nav-badge info">12</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">📊</span> Analytics Traffic
+      <span class="nav-badge dim">bientôt</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">⭐</span> EEAT
+      <span class="nav-badge dim">bientôt</span>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-label">Phase 3-4</div>
+    <div class="nav-item">
+      <span class="nav-icon">💡</span> CRO / Conversion
+      <span class="nav-badge dim">P3</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">🤝</span> Partenariats
+      <span class="nav-badge dim">P3</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">📧</span> Prospection
+      <span class="nav-badge dim">P4</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">💬</span> Community
+      <span class="nav-badge dim">P4</span>
+    </div>
+  </div>
+
+  <div class="sidebar-footer">
+    <div class="cost-pill">
+      <div class="cost-label">API Anthropic · Mars</div>
+      <div class="cost-value">$1.82</div>
+      <div class="cost-budget">budget $10 · $8.18 restant</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<div class="main">
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="page-title" id="page-title">Fact-Check Dashboard</div>
+      <div class="topbar-meta" id="topbar-meta">82 articles · dernier run lun. 07/03 08h00</div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-ghost">⟳ Forcer sync</button>
+      <button class="btn btn-primary" onclick="toast('🚀 Fact-check lancé', '82 articles · durée estimée ~8 min')">▶ Lancer Fact-Check</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ══ PAGE: FACT-CHECK ══ -->
+    <div id="page-factcheck" class="tab-pane active">
+
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Articles indexés</div><div class="stat-value">82</div><div class="stat-sub">Sync il y a 4 min</div></div>
+        <div class="stat stat-urgent"><div class="stat-label">🔴 Urgents</div><div class="stat-value">3</div><div class="stat-sub">Action requise</div></div>
+        <div class="stat" style="border-color:var(--warning-border)"><div class="stat-label" style="color:var(--warning)">🟡 À vérifier</div><div class="stat-value" style="color:var(--warning)">12</div><div class="stat-sub">Corrections mineures</div></div>
+        <div class="stat" style="border-color:var(--ok-border)"><div class="stat-label" style="color:var(--ok)">🟢 OK</div><div class="stat-value" style="color:var(--ok)">67</div><div class="stat-sub">Aucune action</div></div>
+      </div>
+
+      <!-- Article 1 — Wegovy -->
+      <div class="article-group open" id="group-wegovy">
+        <div class="article-group-header" onclick="toggleGroup('group-wegovy')">
+          <div class="article-info">
+            <div class="article-title">Guide Complet Wegovy : Prix, Effets Secondaires et Posologie</div>
+            <div class="article-slug">traitements-glp1/guide-complet-wegovy · 5 tickets</div>
+          </div>
+          <div class="score-bar-wrap">
+            <div class="score-bar"><div class="score-fill" style="width:45%;background:var(--urgent)"></div></div>
+            <div class="score-badge type-urgent">45/100</div>
+          </div>
+          <div class="article-meta">07/03/2026 19:20</div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="tickets-list">
+
+          <!-- Ticket 1 -->
+          <div class="ticket">
+            <div class="ticket-header">
+              <div class="urgence-dot urgent"></div>
+              <div class="ticket-type type-urgent">🔴 claim faux</div>
+              <span style="font-size:12px;font-weight:600;color:var(--text2)">Wegovy remboursé à 100%</span>
+              <div class="ticket-status status-pending">En attente</div>
+            </div>
+            <div class="ticket-body">
+              <div class="final-diff">
+                <div class="diff-block diff-before">
+                  <div class="diff-label">Avant</div>
+                  <div class="diff-text">Wegovy est remboursé à 100% pour l'obésité dans le cadre d'un protocole spécifique incluant un suivi médical régulier.</div>
+                </div>
+                <div class="diff-block diff-after">
+                  <div class="diff-label">Après</div>
+                  <div class="diff-text">Wegovy n'est actuellement pas remboursé par l'Assurance Maladie en France. Disponible à prix libre entre 200€ et 300€/mois entièrement à la charge du patient.</div>
+                </div>
+              </div>
+              <div class="ticket-explication">Wegovy n'est pas remboursé en France en 2025 malgré un avis favorable HAS. Des négociations de remboursement sont en cours mais aucune prise en charge n'est effective.</div>
+              <div class="ticket-source">📎 <span>ANSM + ameli.fr — analogues GLP-1, mis à jour fév. 2025</span></div>
+              <div class="ticket-actions">
+                <span class="human-label">👤 Décision :</span>
+                <button class="btn btn-ok" onclick="approveTicket(this)">✓ Approuver</button>
+                <button class="btn btn-danger" onclick="rejectTicket(this)">✗ Rejeter</button>
+                <button class="btn btn-purple" onclick="openModal()">📝 + Note</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ticket 2 -->
+          <div class="ticket">
+            <div class="ticket-header">
+              <div class="urgence-dot urgent"></div>
+              <div class="ticket-type type-urgent">🔴 info obsolète</div>
+              <span style="font-size:12px;font-weight:600;color:var(--text2)">Trulicity remboursement</span>
+              <div class="ticket-status status-pending">En attente</div>
+            </div>
+            <div class="ticket-body">
+              <div class="final-diff">
+                <div class="diff-block diff-before">
+                  <div class="diff-label">Avant</div>
+                  <div class="diff-text">Trulicity : Dulaglutide (une injection hebdomadaire)</div>
+                </div>
+                <div class="diff-block diff-after">
+                  <div class="diff-label">Après</div>
+                  <div class="diff-text">Trulicity : Dulaglutide (une injection hebdomadaire) — remboursé à 65% pour le diabète de type 2 sous conditions strictes (81,14€/mois)</div>
+                </div>
+              </div>
+              <div class="ticket-explication">Trulicity est remboursé à 65% par l'AM pour le DT2. Depuis fév. 2025, prescription encadrée par formulaire obligatoire.</div>
+              <div class="ticket-source">📎 <span>base-donnees-publique.medicaments.gouv.fr</span></div>
+              <div class="ticket-actions">
+                <span class="human-label">👤 Décision :</span>
+                <button class="btn btn-ok" onclick="approveTicket(this)">✓ Approuver</button>
+                <button class="btn btn-danger" onclick="rejectTicket(this)">✗ Rejeter</button>
+                <button class="btn btn-purple" onclick="openModal()">📝 + Note</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ticket 3 -->
+          <div class="ticket">
+            <div class="ticket-header">
+              <div class="urgence-dot warning"></div>
+              <div class="ticket-type type-warning">🟡 info obsolète</div>
+              <span style="font-size:12px;font-weight:600;color:var(--text2)">Ozempic indication</span>
+              <div class="ticket-status status-approved">✓ Approuvé</div>
+            </div>
+            <div class="ticket-body">
+              <div class="final-diff">
+                <div class="diff-block diff-before">
+                  <div class="diff-label">Avant</div>
+                  <div class="diff-text">Ozempic qui est d'abord indiqué pour le diabète.</div>
+                </div>
+                <div class="diff-block diff-after">
+                  <div class="diff-label">Après</div>
+                  <div class="diff-text">Ozempic qui est uniquement indiqué pour le diabète de type 2 en France — contrôles ANSM renforcés depuis fév. 2025.</div>
+                </div>
+              </div>
+              <div class="ticket-source">📎 <span>ordre.pharmacien.fr · ANSM fév. 2025</span></div>
+              <div class="ticket-actions">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ok)">✓ Envoyé à l'Agent Éditorial</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ticket 4 -->
+          <div class="ticket">
+            <div class="ticket-header">
+              <div class="urgence-dot warning"></div>
+              <div class="ticket-type type-warning">🟡 info manquante</div>
+              <span style="font-size:12px;font-weight:600;color:var(--text2)">Saxenda dosage max</span>
+              <div class="ticket-status status-pending">En attente</div>
+            </div>
+            <div class="ticket-body">
+              <div class="final-diff">
+                <div class="diff-block diff-before">
+                  <div class="diff-label">Avant</div>
+                  <div class="diff-text">Saxenda : Liraglutide (1,8 mg/jour - injections quotidiennes)</div>
+                </div>
+                <div class="diff-block diff-after">
+                  <div class="diff-label">Après</div>
+                  <div class="diff-text">Saxenda : Liraglutide (injections quotidiennes jusqu'à 3 mg/jour max) — non remboursé, 200€ à 450€/mois</div>
+                </div>
+              </div>
+              <div class="ticket-source">📎 <span>EMA — Saxenda product information + mia.co</span></div>
+              <div class="ticket-actions">
+                <span class="human-label">👤 Décision :</span>
+                <button class="btn btn-ok" onclick="approveTicket(this)">✓ Approuver</button>
+                <button class="btn btn-danger" onclick="rejectTicket(this)">✗ Rejeter</button>
+                <button class="btn btn-purple" onclick="openModal()">📝 + Note</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Article 2 — Zepbound -->
+      <div class="article-group" id="group-zepbound">
+        <div class="article-group-header" onclick="toggleGroup('group-zepbound')">
+          <div class="article-info">
+            <div class="article-title">Guide Complet Zepbound : Prix, Effets et Résultats pour la Perte de Poids</div>
+            <div class="article-slug">traitements-glp1/guide-complet-zepbound · 4 tickets</div>
+          </div>
+          <div class="score-bar-wrap">
+            <div class="score-bar"><div class="score-fill" style="width:62%;background:var(--warning)"></div></div>
+            <div class="score-badge type-warning">62/100</div>
+          </div>
+          <div class="article-meta">07/03/2026 15:18</div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="tickets-list">
+          <div class="ticket">
+            <div class="ticket-header">
+              <div class="urgence-dot warning"></div>
+              <div class="ticket-type type-warning">🟡 contexte FR</div>
+              <span style="font-size:12px;font-weight:600;color:var(--text2)">Zepbound = Mounjaro en Europe</span>
+              <div class="ticket-status status-pending">En attente</div>
+            </div>
+            <div class="ticket-body">
+              <div class="final-diff">
+                <div class="diff-block diff-before">
+                  <div class="diff-label">Avant</div>
+                  <div class="diff-text">Zepbound devrait être commercialisé en France fin 2025/début 2026 avec remboursement probable pour IMC ≥35</div>
+                </div>
+                <div class="diff-block diff-after">
+                  <div class="diff-label">Après</div>
+                  <div class="diff-text">Le tirzépatide est commercialisé en France sous le nom Mounjaro depuis novembre 2024. Zepbound est la marque américaine — en Europe, c'est Mounjaro (même molécule). Non remboursé malgré avis HAS favorable déc. 2024.</div>
+                </div>
+              </div>
+              <div class="ticket-source">📎 <span>lepharmacien.fr · ANSM · HAS déc. 2024</span></div>
+              <div class="ticket-actions">
+                <span class="human-label">👤 Décision :</span>
+                <button class="btn btn-ok" onclick="approveTicket(this)">✓ Approuver</button>
+                <button class="btn btn-danger" onclick="rejectTicket(this)">✗ Rejeter</button>
+                <button class="btn btn-purple" onclick="openModal()">📝 + Note</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--ok-light);border:1px solid var(--ok-border);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--ok);font-weight:600;margin-top:8px;">
+        🟢 67 articles vérifiés et conformes — aucune action requise
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:400;color:var(--muted);margin-left:12px;">Prochain run automatique : lun. 14/03 · 08h00</span>
+      </div>
+
+    </div>
+
+    <!-- ══ PAGE: PIPELINES ══ -->
+    <div id="page-pipelines" class="tab-pane">
+
+      <div class="flow-wrap">
+        <div class="flow-label">— Flux correction : Fact-Check → Publication —</div>
+        <div class="flow">
+          <div class="fnode"><div class="fbox fbox-agent"><div style="font-size:16px;margin-bottom:3px">🔍</div><div class="fbox-name">Fact-Check</div><div class="fbox-sub">détecte</div></div></div>
+          <div class="farrow"><div class="farrow-line"></div><div class="farrow-label">N tickets</div></div>
+          <div class="fnode"><div class="fbox fbox-db"><div style="font-size:16px;margin-bottom:3px">🗄️</div><div class="fbox-name">Supabase</div><div class="fbox-sub">correction_tickets</div></div></div>
+          <div class="farrow"><div class="farrow-line"></div><div class="farrow-label">alerte</div></div>
+          <div class="fnode"><div class="fbox fbox-human"><div style="font-size:16px;margin-bottom:3px">👤</div><div class="fbox-name">Validation #1</div><div class="fbox-sub">Approuver ticket</div></div><div class="human-label-flow">REQUIS</div></div>
+          <div class="farrow"><div class="farrow-line"></div><div class="farrow-label">brief</div></div>
+          <div class="fnode"><div class="fbox fbox-agent"><div style="font-size:16px;margin-bottom:3px">✍️</div><div class="fbox-name">Éditorial</div><div class="fbox-sub">rédige after_final</div></div></div>
+          <div class="farrow"><div class="farrow-line"></div><div class="farrow-label">after_final</div></div>
+          <div class="fnode"><div class="fbox fbox-human"><div style="font-size:16px;margin-bottom:3px">👤</div><div class="fbox-name">Validation #2</div><div class="fbox-sub">Valider rédaction</div></div><div class="human-label-flow">REQUIS</div></div>
+          <div class="farrow"><div class="farrow-line"></div><div class="farrow-label">déployer</div></div>
+          <div class="fnode"><div class="fbox fbox-agent"><div style="font-size:16px;margin-bottom:3px">🔧</div><div class="fbox-name">Intégration</div><div class="fbox-sub">str_replace + PR</div></div></div>
+          <div class="farrow"><div class="farrow-line"></div><div class="farrow-label">merge</div></div>
+          <div class="fnode"><div class="fbox fbox-live"><div style="font-size:16px;margin-bottom:3px">🌐</div><div class="fbox-name">Hostinger</div><div class="fbox-sub">Production</div></div></div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:20px">
+        <div class="section-title">Pipelines en cours</div>
+        <div class="section-sub">2 actifs · 3 terminés aujourd'hui</div>
+      </div>
+
+      <div class="pipeline-card">
+        <div class="pipeline-header">
+          <div class="ticket-type type-urgent">🔴 URGENT</div>
+          <div class="pipeline-title">Correction "Wegovy remboursé 100%" — guide-complet-wegovy.md</div>
+          <div class="pipeline-status-text">⏳ Attend validation #2</div>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">Fact-Check détecte le claim faux</div><div class="step-desc">Wegovy présenté comme remboursé à 100% — faux selon ANSM et ameli.fr</div><div class="step-time">Lun. 07/03 · 08h14</div></div></div>
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">Ticket créé + alerte email envoyée</div><div class="step-desc">correction_tickets · statut: pending_review</div><div class="step-time">Lun. 07/03 · 08h14</div></div></div>
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">Validation #1 — Approuvée</div><div class="step-desc">Agent Éditorial déclenché sur ce ticket</div><div class="step-time">Lun. 07/03 · 09h22</div></div></div>
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">Agent Éditorial — after_final rédigé</div><div class="step-desc">Texte corrigé, ton préservé, source ANSM intégrée · statut: ready_to_deploy</div><div class="step-time">Lun. 07/03 · 09h28</div></div></div>
+          <div class="step"><div class="step-dot dot-human">👤</div><div class="step-body"><div class="step-title" style="color:var(--purple)">Validation #2 — En attente</div><div class="step-desc">Relire after_final avant déploiement GitHub</div><div class="step-time" style="color:var(--warning)">En attente depuis 2h · Action requise</div></div></div>
+          <div class="step"><div class="step-dot dot-wait">6</div><div class="step-body"><div class="step-title" style="color:var(--muted)">Agent Intégration — str_replace + PR GitHub</div><div class="step-desc">Déclenché après validation #2</div></div></div>
+          <div class="step"><div class="step-dot dot-wait">7</div><div class="step-body"><div class="step-title" style="color:var(--muted)">Déploiement Hostinger</div><div class="step-desc">Auto après merge PR</div></div></div>
+        </div>
+        <div class="pipeline-footer">
+          <button class="btn btn-ok" onclick="toast('✅ Déployé', 'Agent Intégration déclenché · PR GitHub en cours de création')">✓ Approuver et déployer</button>
+          <button class="btn btn-danger" onclick="toast('❌ Rejeté', 'Renvoyé à l\'Agent Éditorial')">✗ Rejeter</button>
+          <button class="btn btn-ghost">👁 Voir diff</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ PAGE: ÉDITORIAL ══ -->
+    <div id="page-editorial" class="tab-pane">
+
+      <div class="stats">
+        <div class="stat"><div class="stat-label">À relire</div><div class="stat-value">1</div></div>
+        <div class="stat"><div class="stat-label">En rédaction</div><div class="stat-value" style="color:var(--warning)">1</div></div>
+        <div class="stat" style="border-color:var(--ok-border)"><div class="stat-label" style="color:var(--ok)">Approuvés</div><div class="stat-value" style="color:var(--ok)">3</div></div>
+        <div class="stat stat-urgent"><div class="stat-label">Rejetés</div><div class="stat-value">0</div></div>
+      </div>
+
+      <div class="section-head">
+        <div class="section-title">Prêts à déployer</div>
+        <div class="section-sub">after_final rédigé · validation humaine requise</div>
+      </div>
+
+      <div class="editorial-ticket">
+        <div class="editorial-header">
+          <div class="ticket-type type-urgent">🔴 claim faux</div>
+          <div style="font-size:13px;font-weight:700;flex:1">Wegovy remboursé 100% → guide-complet-wegovy.md</div>
+          <div class="ticket-status status-ready">Prêt à déployer</div>
+        </div>
+        <div class="editorial-body">
+          <div class="final-diff">
+            <div class="diff-block diff-before">
+              <div class="diff-label">Avant (fichier actuel)</div>
+              <div class="diff-text">Wegovy est remboursé à 100% pour l'obésité dans le cadre d'un protocole spécifique incluant un suivi médical régulier.</div>
+            </div>
+            <div class="diff-block diff-after">
+              <div class="diff-label">After Final — rédigé par Agent Éditorial</div>
+              <div class="diff-text">Wegovy n'est actuellement pas remboursé par l'Assurance Maladie en France (2025). Il est disponible en pharmacie à prix libre, avec un coût compris entre 200€ et 300€ par mois entièrement à la charge du patient. Des négociations avec le Comité Économique des Produits de Santé (CEPS) sont en cours, mais aucune prise en charge n'est effective à ce jour.</div>
+            </div>
+          </div>
+          <div class="deploy-confirm">
+            ℹ️ L'Agent Intégration va faire un <code style="background:rgba(255,255,255,0.5);padding:1px 5px;border-radius:3px">str_replace</code> chirurgical dans le fichier markdown, créer une branche <code style="background:rgba(255,255,255,0.5);padding:1px 5px;border-radius:3px">claude/fix-[ticket_id]</code> et ouvrir une PR GitHub.
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;padding-top:4px;border-top:1px solid var(--border)">
+            <span class="human-label">👤 Décision finale :</span>
+            <button class="btn btn-blue" onclick="toast('🔧 Agent Intégration déclenché', 'str_replace en cours · PR GitHub créée dans quelques secondes')">🚀 Déployer</button>
+            <button class="btn btn-danger" onclick="toast('❌ Rejeté', 'Ticket renvoyé à l\'Agent Éditorial')">✗ Rejeter</button>
+            <button class="btn btn-purple" onclick="openModal()">📝 Révision avec note</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ PAGE: INTÉGRATION ══ -->
+    <div id="page-integration" class="tab-pane">
+
+      <div class="stats">
+        <div class="stat" style="border-color:var(--ok-border)"><div class="stat-label" style="color:var(--ok)">Déployés ce mois</div><div class="stat-value" style="color:var(--ok)">7</div></div>
+        <div class="stat"><div class="stat-label">En attente</div><div class="stat-value">1</div></div>
+        <div class="stat stat-urgent"><div class="stat-label">Erreurs</div><div class="stat-value">0</div></div>
+        <div class="stat"><div class="stat-label">PRs créées</div><div class="stat-value">7</div></div>
+      </div>
+
+      <div class="section-head">
+        <div class="section-title">Historique des déploiements</div>
+      </div>
+
+      <div class="pipeline-card">
+        <div class="pipeline-header">
+          <div class="ticket-type type-ok" style="background:var(--ok-light);color:var(--ok);border:1px solid var(--ok-border)">✓ DÉPLOYÉ</div>
+          <div class="pipeline-title">Fix "Ozempic indication DT2" — guide-complet-ozempic.md</div>
+          <div class="pipeline-status-text">Mer. 05/03 · 14h22</div>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">str_replace exécuté</div><div class="step-desc">before_exact trouvé, remplacement chirurgical effectué</div><div class="step-time">05/03 · 14h20</div></div></div>
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">PR #8 créée → claude/fix-a4f2b1</div><div class="step-desc">github.com/robinallainmkg/glp1/pull/8</div><div class="step-time">05/03 · 14h20</div></div></div>
+          <div class="step"><div class="step-dot dot-done">✓</div><div class="step-body"><div class="step-title">PR mergée → production · Hostinger déployé</div><div class="step-desc">Article mis à jour en production</div><div class="step-time">05/03 · 14h22</div></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ PAGE: SEO ══ -->
+    <div id="page-seo" class="tab-pane">
+
+      <div class="section-head">
+        <div class="section-title">Opportunités SEO — 12 briefs</div>
+        <div class="section-sub">Agent Opportunité · dernier run auj. 06h00 · GSC API</div>
+      </div>
+
+      <div class="article-group open" id="group-seo1">
+        <div class="article-group-header" onclick="toggleGroup('group-seo1')" style="cursor:pointer">
+          <div class="article-info">
+            <div class="article-title">différence ozempic mounjaro 2025</div>
+            <div class="article-slug">1 900 req/mois · Difficulté 38 · Intent comparatif · Contenu existant : NON</div>
+          </div>
+          <div class="score-badge type-urgent">Score 9.2</div>
+          <div class="article-meta">CPC 2,40€</div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="tickets-list">
+          <div style="padding:4px 0;font-size:12px;color:var(--muted);line-height:1.6">Aucun contenu sur le site — SERP occupée par des articles de 2022. Fort potentiel de ranking rapide.</div>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn btn-purple" onclick="toast('✍️ Brief envoyé à l\'Agent Éditorial', 'Article en file d\'attente')">→ Lancer rédaction</button>
+            <button class="btn btn-ghost">👁 Voir brief complet</button>
+            <button class="btn btn-danger" style="font-size:11px" onclick="toast('🗑 Ignoré', '')">Ignorer</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ══ PAGE: OVERVIEW ══ -->
+    <div id="page-overview" class="tab-pane">
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Articles indexés</div><div class="stat-value">82</div></div>
+        <div class="stat stat-urgent"><div class="stat-label">Actions requises</div><div class="stat-value">3</div></div>
+        <div class="stat" style="border-color:var(--warning-border)"><div class="stat-label" style="color:var(--warning)">En attente</div><div class="stat-value" style="color:var(--warning)">8</div></div>
+        <div class="stat" style="border-color:var(--ok-border)"><div class="stat-label" style="color:var(--ok)">Agents actifs</div><div class="stat-value" style="color:var(--ok)">3</div></div>
+      </div>
+      <div class="agents-grid">
+        <div class="agent-card"><div class="agent-top"><div class="agent-name">🔍 Fact-Check</div><div class="indicator ind-ok"></div></div><div class="agent-last">Lun. 07/03 · 08h00 · 82 articles</div><div class="agent-bar"><div class="agent-fill" style="width:100%"></div></div><div class="agent-nums"><span style="color:var(--ok)">67 OK</span><span style="color:var(--warning)">12 ⚠</span><span style="color:var(--urgent)">3 🔴</span></div></div>
+        <div class="agent-card"><div class="agent-top"><div class="agent-name">✍️ Éditorial</div><div class="indicator ind-active"></div></div><div class="agent-last">En cours : "Ozempic vs Mounjaro"</div><div class="agent-bar"><div class="agent-fill" style="width:45%;background:var(--warning)"></div></div><div class="agent-nums"><span>45% rédigé</span><span>~8 min</span></div></div>
+        <div class="agent-card"><div class="agent-top"><div class="agent-name">🔧 Intégration</div><div class="indicator ind-idle"></div></div><div class="agent-last">Attend validation #2</div><div class="agent-bar"><div class="agent-fill" style="width:0%"></div></div><div class="agent-nums"><span>7 déployés ce mois</span></div></div>
+        <div class="agent-card"><div class="agent-top"><div class="agent-name">📡 Opportunité SEO</div><div class="indicator ind-ok"></div></div><div class="agent-last">Auj. 06h00 · 50 requêtes GSC</div><div class="agent-bar"><div class="agent-fill" style="width:100%"></div></div><div class="agent-nums"><span>12 briefs</span><span>dem. 06h00</span></div></div>
+        <div class="agent-card disabled"><div class="agent-top"><div class="agent-name">📊 Analytics Traffic</div><div class="indicator ind-idle"></div></div><div class="agent-last">Non configuré</div><div class="phase-tag">Phase 2</div></div>
+        <div class="agent-card disabled"><div class="agent-top"><div class="agent-name">💰 Monétisation</div><div class="indicator ind-idle"></div></div><div class="agent-last">Non configuré</div><div class="phase-tag">Phase 4</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- Modal Note -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-title">📝 Note au rédacteur</div>
+    <div class="modal-sub">Cette note sera transmise à l'Agent Éditorial pour guider la révision.</div>
+    <textarea placeholder="Ex: Le prix doit être exprimé en mensuel, pas à l'unité. Ajouter la mention que les prix varient selon la pharmacie..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal()">Annuler</button>
+      <button class="btn btn-purple" onclick="submitNote()">Envoyer à l'Éditorial</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <div id="toastMsg"></div>
+  <div class="toast-sub" id="toastSub"></div>
+</div>
+
+<script>
+// Navigation
+function showPage(name) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+
+  const page = document.getElementById('page-' + name);
+  if (page) page.classList.add('active');
+
+  const nav = document.getElementById('nav-' + name);
+  if (nav) nav.classList.add('active');
+
+  const titles = {
+    overview: ['Vue d\'ensemble', '82 articles · 3 agents actifs'],
+    pipelines: ['Pipelines actifs', '2 en cours · 3 terminés aujourd\'hui'],
+    factcheck: ['Fact-Check Dashboard', '82 articles · dernier run lun. 07/03 08h00'],
+    editorial: ['Éditorial Dashboard', '1 prêt à déployer · 1 en rédaction'],
+    integration: ['Intégration Dashboard', '7 déployés ce mois · 0 erreur'],
+    seo: ['Opportunités SEO', '12 briefs générés · dernier run 06h00'],
+  };
+
+  if (titles[name]) {
+    document.getElementById('page-title').textContent = titles[name][0];
+    document.getElementById('topbar-meta').textContent = titles[name][1];
+  }
+}
+
+// Toggle article group
+function toggleGroup(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// Ticket actions
+function approveTicket(btn) {
+  const actions = btn.closest('.ticket-actions');
+  const status = btn.closest('.ticket').querySelector('.ticket-status');
+  actions.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">✓ Envoyé à l\'Agent Éditorial</span>';
+  status.className = 'ticket-status status-approved';
+  status.textContent = '✓ Approuvé';
+  toast('✍️ Agent Éditorial déclenché', 'Rédaction de after_final en cours');
+}
+
+function rejectTicket(btn) {
+  const actions = btn.closest('.ticket-actions');
+  const status = btn.closest('.ticket').querySelector('.ticket-status');
+  actions.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--urgent)">✗ Rejeté · archivé</span>';
+  status.className = 'ticket-status status-error';
+  status.textContent = '✗ Rejeté';
+  toast('🗑 Ticket rejeté', 'Archivé sans modification');
+}
+
+// Modal
+function openModal() { document.getElementById('modal').classList.add('open'); }
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+function submitNote() {
+  closeModal();
+  toast('📝 Note transmise', 'Agent Éditorial va réviser avec votre instruction');
+}
+
+// Toast
+let toastTimer;
+function toast(msg, sub) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  document.getElementById('toastSub').textContent = sub || '';
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// Close modal on overlay click
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// Open first group by default
+document.getElementById('group-wegovy').classList.add('open');
+</script>
+</body>
+</html>
