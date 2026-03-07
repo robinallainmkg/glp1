@@ -1,95 +1,146 @@
 ---
 const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/admin/', label: 'Overview', icon: 'home' },
+  { href: '/admin/fact-check/', label: 'Fact-Check', icon: 'check' },
+  { href: '/admin/editorial/', label: 'Editorial', icon: 'edit' },
+];
+
+function isActive(href: string) {
+  if (href === '/admin/') {
+    return currentPath === '/admin/' || currentPath === '/admin' || currentPath === '/admin/index.html';
+  }
+  return currentPath.startsWith(href) || currentPath.startsWith(href.slice(0, -1));
+}
 ---
 
-<nav class="admin-nav bg-white shadow-md mb-8">
-  <div class="container mx-auto px-4">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo Admin -->
-      <div class="flex items-center">
-        <h1 class="text-xl font-bold text-gray-800">🛠️ Admin GLP-1</h1>
-      </div>
-      
-      <!-- Navigation Links -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-4">
-          <a 
-            href="/admin/index.html" 
-            class={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-              currentPath.includes('admin') 
-                ? 'bg-blue-600 text-white' 
-                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-            }`}
-          >
-            🧭 Admin
-          </a>
-          
-          <a 
-            href="/" 
-            class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-          >
-            🏠 Site
-          </a>
-        </div>
-      </div>
-      
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button 
-          type="button" 
-          class="mobile-menu-button p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-          aria-expanded="false"
+<nav class="admin-nav">
+  <div class="admin-nav-inner">
+    <a href="/admin/" class="admin-nav-brand">Admin GLP-1</a>
+    <div class="admin-nav-links">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={['admin-nav-link', { active: isActive(link.href) }]}
         >
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div class="mobile-menu hidden md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a 
-          href="/admin/index.html" 
-          class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-            currentPath.includes('admin') 
-              ? 'bg-blue-600 text-white' 
-              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
-          }`}
-        >
-          🧭 Admin
+          {link.label}
         </a>
-        
-        <a 
-          href="/" 
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-        >
-          🏠 Site
-        </a>
-      </div>
+      ))}
     </div>
+    <a href="/" class="admin-nav-link admin-nav-site">Retour au site</a>
+    <button type="button" class="admin-nav-mobile" aria-label="Menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div class="admin-nav-mobile-menu hidden">
+    {navLinks.map(link => (
+      <a
+        href={link.href}
+        class:list={['admin-nav-mobile-link', { active: isActive(link.href) }]}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a href="/" class="admin-nav-mobile-link">Retour au site</a>
   </div>
 </nav>
 
 <script>
-  // Mobile menu toggle
-  const mobileMenuButton = document.querySelector('.mobile-menu-button');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+  const btn = document.querySelector('.admin-nav-mobile');
+  const menu = document.querySelector('.admin-nav-mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   }
 </script>
 
 <style>
   .admin-nav {
-    border-bottom: 1px solid #e5e7eb;
+    background: #1e293b;
+    border-bottom: 2px solid #334155;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
-  
-  .transition-colors {
-    transition: all 0.2s ease;
+  .admin-nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    gap: 2rem;
+  }
+  .admin-nav-brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .admin-nav-links {
+    display: flex;
+    gap: 0.25rem;
+    flex: 1;
+  }
+  .admin-nav-link {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .admin-nav-link:hover {
+    color: #f1f5f9;
+    background: #334155;
+  }
+  .admin-nav-link.active {
+    color: #ffffff;
+    background: #3b82f6;
+  }
+  .admin-nav-site {
+    margin-left: auto;
+    font-size: 0.85rem;
+  }
+  .admin-nav-mobile {
+    display: none;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-left: auto;
+  }
+  .admin-nav-mobile-menu {
+    padding: 0.5rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .admin-nav-mobile-menu.hidden { display: none; }
+  .admin-nav-mobile-link {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: none;
+  }
+  .admin-nav-mobile-link:hover,
+  .admin-nav-mobile-link.active {
+    color: #f1f5f9;
+    background: #334155;
+  }
+  .admin-nav-mobile-link.active {
+    color: #ffffff;
+    background: #3b82f6;
+  }
+  @media (max-width: 768px) {
+    .admin-nav-links, .admin-nav-site { display: none; }
+    .admin-nav-mobile { display: block; }
   }
 </style>
