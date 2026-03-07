@@ -32,7 +32,7 @@ jobs:
         local-dir: ./dist/
         server-dir: /domains/glp1-france.fr/public_html/
         port: 21
-        protocol: ftp
+        protocol: ftps
         exclude: |
           **/.git*
           **/.git*/**
