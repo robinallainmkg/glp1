@@ -1,11 +1,11 @@
 ---
-title: "Prix Saxenda 2025 : Coût, Remboursement et Mutuelle en France"
-description: "Prix Saxenda en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Saxenda."
+title: "Prix Saxenda 2026 : Coût, Remboursement et Mutuelle en France"
+description: "Prix Saxenda en pharmacie (240-300€/mois, non remboursé). Comparatif des coûts GLP-1, couverture mutuelle et aides financières."
 keywords: ['prix saxenda', 'saxenda pharmacie', 'remboursement saxenda', 'mutuelle saxenda', 'coût traitement saxenda']
-seoTitle: "Prix Saxenda 2025 : Combien coûte Saxenda en France ?"
-seoDescription: "Prix Saxenda en pharmacie française, remboursement sécurité sociale, couverture mutuelle. Tout savoir sur le coût du traitement Saxenda."
+seoTitle: "Prix Saxenda 2026 : Combien coûte Saxenda en France ?"
+seoDescription: "Prix Saxenda en pharmacie française : 240-300€/mois, non remboursé. Couverture mutuelle, comparatif GLP-1 et aides disponibles."
 publishedAt: '2025-01-28'
-updatedAt: '2025-01-28'
+updatedAt: '2026-03-08'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
@@ -17,8 +17,8 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Prix Saxenda 2025 : Coût par Dosage et Remboursement Mutuelle",
-  "description": "Prix Saxenda en pharmacie : 70-80€ par mois. Coût réel après remboursement 65%.",
+  "name": "Prix Saxenda 2026 : Coût par Dosage et Couverture Mutuelle",
+  "description": "Prix Saxenda en pharmacie : 240-300€ par mois. Prix libre, non remboursé par la Sécurité sociale.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-saxenda-france",
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
@@ -49,15 +49,15 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
         "name": "Quel est le prix de Saxenda en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel de Saxenda en pharmacie est de 70-80€ par mois. Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+          "text": "Le prix de Saxenda en pharmacie est de 240 à 300€ par mois (prix libre). Saxenda n'est pas remboursé par la Sécurité sociale. Certaines mutuelles proposent un forfait annuel pour les traitements non remboursés."
         }
       },
       {
         "@type": "Question",
-        "name": "Saxenda est-il remboursé en 2025 ?",
+        "name": "Saxenda est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Saxenda est remboursé à 65% par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+          "text": "Non, Saxenda n'est pas remboursé par l'Assurance Maladie en France. Son prix est libre. Disponible en pharmacie sur ordonnance, certaines mutuelles proposent un forfait annuel."
         }
       }
     ]
@@ -71,56 +71,55 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 
 | Dosage | Prix par stylo | Prix mensuel estimé |
 |--------|----------------|-------------------|
-| 6 mg/ml | 70-80 € | 70-80 € |
+| 6 mg/ml (dose max 3 mg/jour) | 240-300 € | 240-300 € |
 
-**Prix moyen mensuel** : 70-80 € (traitement complet)
+**Prix moyen mensuel** : 240-300 € (prix libre, non remboursé)
 
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Saxenda | 70-80 € | 65% |
-| Ozempic | 90-120 € | 65% |
-| Wegovy | 120-140 € | 65% |
-| Trulicity | 85 € | 65% |
+| Saxenda | 240-300 € | Non remboursé |
+| Ozempic | ~59,90 €/stylo | 65% (DT2 uniquement) |
+| Wegovy | 169-360 € | Non remboursé |
+| Trulicity | 85 € | 65% (DT2 uniquement) |
 
 ## 💊 Remboursement Sécurité Sociale
 
-### Conditions de remboursement
+### Saxenda n'est PAS remboursé
 
-**Saxenda est remboursé à 65%** par l'Assurance Maladie sous conditions :
+**Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Son prix est libre et fixé par chaque pharmacie.
 
-✅ **Prescription médicale obligatoire**
-✅ **Obésité (IMC ≥ 30)** ou **surpoids (IMC ≥ 27)** avec comorbidité
-✅ **Échec des mesures hygiéno-diététiques**
-✅ **Traitement ≥ 3 mois** avec suivi médical
+❌ **Pas de remboursement Sécurité sociale**
+❌ **Pas de prise en charge au titre de l'ALD**
+✅ **Disponible en pharmacie sur ordonnance**
+✅ **Certaines mutuelles proposent un forfait annuel** pour les traitements non remboursés
 
-### Démarches pour le remboursement
+### Comment obtenir Saxenda
 
 1. **Ordonnance médicale** : Prescription par endocrinologue, nutritionniste ou médecin traitant
-2. **Carte Vitale** : Présentation en pharmacie
-3. **Remboursement automatique** : 65% du prix réglementé
-4. **Tiers payant** : Possible selon votre mutuelle
+2. **Achat en pharmacie** : Prix libre (240-300 €/mois), non remboursé
+3. **Mutuelle** : Vérifiez si votre contrat prévoit un forfait pour médicaments non remboursés
+4. **Dose maximale** : 3 mg/jour (augmentation progressive)
 
 ## 🏥 Couverture Mutuelle Santé
 
 ### Participation mutuelle
 
-**Mutuelle obligatoire** pour compléter le remboursement :
+**Saxenda n'étant pas remboursé par la Sécurité sociale**, la mutuelle reste le principal levier de réduction du coût :
 
-- **Remboursement Sécu** : 65% du tarif de base
-- **Ticket modérateur** : 35% restant
-- **Mutuelle** : Prend en charge 15-30% supplémentaire
-- **Reste à charge** : 5-20% selon votre contrat
+- **Remboursement Sécu** : Aucun (0%)
+- **Mutuelle** : Certaines mutuelles proposent un **forfait annuel** pour les médicaments non remboursés
+- **Forfait typique** : 100 à 300 €/an selon le contrat
+- **Reste à charge** : La majeure partie du coût reste à la charge du patient
 
-### Exemples de remboursement
+### Exemples de prise en charge mutuelle
 
-| Mutuelle | Remboursement total | Reste à charge |
+| Type de contrat | Forfait annuel estimé | Reste à charge mensuel |
 |----------|-------------------|----------------|
-| Mutuelle bronze | 80% | 20% |
-| Mutuelle argent | 85% | 15% |
-| Mutuelle or | 90% | 10% |
-| Mutuelle platine | 95% | 5% |
+| Contrat de base | 0 € | 240-300 € |
+| Contrat intermédiaire | 100-150 €/an | ~230-290 €/mois |
+| Contrat premium | 200-300 €/an | ~220-280 €/mois |
 
 ## 💳 Aides Financières Disponibles
 
@@ -194,20 +193,21 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 
 | Critère | Saxenda | Ozempic | Wegovy |
 |---------|---------|--------|---------|
-| Prix mensuel | 70-80 € | 90-120 € | 120-140 € |
+| Prix mensuel | 240-300 € | ~59,90 €/stylo | 169-360 € |
 | Perte poids moyenne | -8% | -15% | -20% |
-| Remboursement | 65% | 65% | 65% |
-| Rapport qualité/prix | Moyen | Bon | Excellent |
+| Remboursement | Non remboursé | 65% (DT2 uniquement) | Non remboursé |
+| Rapport qualité/prix | Élevé (non remboursé) | Bon (si DT2) | Élevé (non remboursé) |
 
 ## 📝 Conclusion
 
-**Saxenda offre un bon compromis prix/tolérance** pour la perte de poids, avec un remboursement identique aux autres GLP-1.
+**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à Ozempic (remboursé pour le DT2), Saxenda et Wegovy sont entièrement à la charge du patient.
 
 ### Points clés à retenir :
-- **Prix moyen** : 70-80 €/mois
-- **Remboursement Sécu** : 65%
-- **Mutuelle** : 15-30% supplémentaire
-- **Aides disponibles** : Pour revenus modestes
+- **Prix moyen** : 240-300 €/mois (prix libre)
+- **Remboursement Sécu** : Non remboursé
+- **Mutuelle** : Forfait annuel possible selon contrat
+- **Dose maximale** : 3 mg/jour
+- **Disponible** : En pharmacie sur ordonnance
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
@@ -219,4 +219,4 @@ thumbnailAlt: "Prix et coût du traitement saxenda-france"
 
 
 
-*Prix mis à jour en janvier 2025. Les tarifs peuvent varier selon les pharmacies et régions.*
+*Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions. Saxenda n'est pas remboursé par la Sécurité sociale.*

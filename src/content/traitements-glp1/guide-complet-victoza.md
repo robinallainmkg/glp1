@@ -151,8 +151,8 @@ Non, Victoza est spécifiquement indiqué pour le diabète de type 2.
 ### Puis-je boire de l'alcool avec Victoza ?
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
-### Victoza est-il remboursé pour l'obésité ?
-Non, Victoza n'est remboursé que pour le diabète de type 2.
+### Victoza est-il remboursé ?
+Victoza est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Son prix a baissé à **60,26 € par mois** depuis février 2025. Depuis le 1er février 2025, un formulaire de prescription obligatoire doit accompagner l'ordonnance pour que le remboursement soit effectif.
 
 ### Puis-je arrêter Victoza brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale.

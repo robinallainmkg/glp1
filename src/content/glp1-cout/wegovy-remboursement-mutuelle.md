@@ -218,9 +218,9 @@ La première étape consiste à consulter un professionnel habilité :
 
 ### Innovations thérapeutiques
 
-**Pipeline 2025-2026 :**
-- Arrivée du Mounjaro® (tirzepatide) en France
-- Nouvelles formes galéniques (patch, comprimés)
+**Concurrence 2025-2026 :**
+- Mounjaro® (tirzepatide) commercialisé en France depuis novembre 2024 (230-440€/mois, non remboursé)
+- Nouvelles formes galéniques en développement (patch, comprimés)
 - Combinaisons thérapeutiques innovantes
 - Programmes d'accompagnement digital
 

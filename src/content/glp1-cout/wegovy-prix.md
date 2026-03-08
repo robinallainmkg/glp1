@@ -31,29 +31,29 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le prix de Wegovy en France varie entre 73€ et 146€ par mois selon le dosage prescrit. Ce médicament révolutionnaire pour la perte de poids représente un investissement important, mais plusieurs solutions de financement et de remboursement permettent de réduire considérablement ce coût.
+Le prix de Wegovy en France varie entre 169€ et 360€ par mois selon le dosage prescrit. Ce médicament révolutionnaire pour la perte de poids représente un investissement important. Wegovy n'est actuellement pas remboursé par la Sécurité Sociale en France, mais certaines mutuelles peuvent proposer une prise en charge partielle.
 
 ## Points clés à retenir
 
-- **Prix mensuel** : de 73€ à 146€ selon le dosage
-- **Remboursement possible** : jusqu'à 65% par la Sécurité Sociale sous conditions
-- **Coût annuel** : entre 876€ et 1 752€ avant remboursement
-- **Alternatives disponibles** : programmes d'aide et génériques en développement
-- **Disponibilité** : ruptures de stock fréquentes en 2024-2025
+- **Prix mensuel** : de 169€ à 360€ selon le dosage
+- **Remboursement** : non remboursé par la Sécurité Sociale
+- **Coût annuel** : entre 2 028€ et 4 320€
+- **Alternatives disponibles** : programmes d'aide mutuelle
+- **Disponibilité** : commercialisé depuis octobre 2024
 
 ## Grille tarifaire détaillée de Wegovy
 
 ### Prix officiels par dosage
 
-| Dosage | Prix par stylo | Durée d'utilisation | Coût mensuel |
-|--------|----------------|-------------------|--------------|
-| 0,25 mg | 89,90€ | 4 semaines | ~90€ |
-| 0,5 mg | 129,90€ | 4 semaines | ~130€ |
-| 1 mg | 179,90€ | 4 semaines | ~180€ |
-| 1,7 mg | 229,90€ | 4 semaines | ~230€ |
-| 2,4 mg | 269,90€ | 4 semaines | ~270€ |
+| Dosage | Coût mensuel estimé |
+|--------|-------------------|
+| 0,25 mg (initiation) | ~169€ |
+| 0,5 mg | ~210€ |
+| 1 mg | ~250€ |
+| 1,7 mg | ~310€ |
+| 2,4 mg (dose cible) | ~360€ |
 
-Chaque stylo contient 4 doses hebdomadaires, soit un mois de traitement complet.
+Le prix de Wegovy varie entre 169€ et 360€ par mois selon le dosage. Wegovy n'est pas remboursé par la Sécurité Sociale.
 
 ### Évolution des prix 2023-2025
 
@@ -65,33 +65,27 @@ Les tarifs de Wegovy ont évolué depuis son lancement :
 
 Cette évolution s'explique par l'augmentation de la demande, les coûts de production et les négociations avec l'ANSM.
 
-## Remboursement par l'Assurance Maladie
+## Remboursement : situation actuelle
 
-### Conditions d'éligibilité
+### Wegovy n'est pas remboursé par la Sécurité Sociale
 
-Wegovy peut être remboursé à 65% par la Sécurité Sociale si vous remplissez toutes ces conditions :
+Contrairement à Ozempic (remboursé à 65% pour le diabète de type 2 uniquement), **Wegovy n'est pas remboursé par l'Assurance Maladie** en France pour l'indication perte de poids. Le coût est donc entièrement à la charge du patient.
 
-**Critères médicaux :**
-- IMC ≥ 30 kg/m² avec complications (diabète, hypertension, troubles lipidiques)
-- OU IMC ≥ 35 kg/m² sans complications
-- Échec documenté d'une prise en charge diététique pendant au moins 6 mois
-- Prescription par un spécialiste (endocrinologue, diabétologue ou médecin formé)
+### Prise en charge par les mutuelles
 
-**Démarches administratives :**
-- Demande d'entente préalable via formulaire CERFA
-- Constitution d'un dossier médical complet avec justificatifs
-- Validation par le médecin-conseil de l'Assurance Maladie
-- Renouvellement nécessaire tous les 6 mois
+Certaines mutuelles complémentaires proposent une prise en charge partielle :
+- Forfait médicaments non remboursés : 50 à 200€ par an
+- Garantie innovation médicale : jusqu'à 500€ par an
+- Contrats spécialisés : remboursement partiel variable
 
-### Calcul du coût réel après remboursement
+### Coût réel pour le patient
 
-**Exemple concret pour la dose maximale (2,4 mg) :**
-- Prix en pharmacie : 269,90€
-- Remboursement Sécurité Sociale (65%) : -175,44€
-- Reste à votre charge : 94,46€/mois
-- Prise en charge mutuelle (selon contrat) : -30€ à -94€
+**Pour la dose cible (2,4 mg) :**
+- Prix mensuel : environ 360€
+- Remboursement Sécurité Sociale : 0€ (non remboursé)
+- Prise en charge mutuelle éventuelle : variable selon contrat
 
-**Coût final pour le patient : 0€ à 64€ par mois**
+**Le coût reste intégralement à la charge du patient hors aide mutuelle.**
 
 ## Programmes d'aide financière
 
@@ -120,9 +114,9 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 
 | Traitement | Prix mensuel | Total 6 mois | Efficacité | Remboursement |
 |------------|-------------|-------------|------------|---------------|
-| **Wegovy** | 120-140€ | 720-840€ | -15% du poids | 65% |
-| Saxenda | 190€ | 1 140€ | -8% du poids | Non |
-| Ozempic (hors indication) | 73€ | 438€ | -12% du poids | Oui (si diabète) |
+| **Wegovy** | 169-360€ | 1 014-2 160€ | -15% du poids | Non |
+| Saxenda | 240-300€ | 1 440-1 800€ | -8% du poids | Non |
+| Ozempic (hors indication) | ~59,90€/stylo | ~360€ | -12% du poids | Oui (DT2 uniquement) |
 | Mysimba | 70€ | 420€ | -5% du poids | Non |
 
 ### Analyse coût-efficacité
@@ -134,20 +128,18 @@ Wegovy offre le meilleur rapport efficacité/prix pour la perte de poids :
 
 ## Budget prévisionnel sur 12 mois
 
-### Scénario 1 : Sans remboursement
-- Initiation (3 mois) : 90€ + 130€ + 180€ = 400€
-- Montée en puissance (3 mois) : 230€ × 3 = 690€
-- Maintenance (6 mois) : 270€ × 6 = 1 620€
-- **Total annuel : 2 710€**
+### Scénario 1 : Budget annuel estimé (non remboursé)
+- Titration mois 1-4 (0,25 à 1,7 mg) : ~169€ + ~199€ + ~249€ + ~310€ = ~927€
+- Dose d'entretien 2,4 mg (8 mois) : ~360€ × 8 = ~2 880€
+- **Total annuel estimé : ~3 807€**
 
-### Scénario 2 : Avec remboursement optimal
-- Coût patient après toutes les aides : 800€/an
-- **Économie réalisée : 1 910€/an**
+### Scénario 2 : Avec aide mutuelle partielle
+- Aide mutuelle estimée : 200-500€/an
+- **Coût patient après aide mutuelle : 2 210-2 510€/an**
 
-### Scénario 3 : Programme d'aide
-- 3 premiers mois gratuits
-- Puis 50% de réduction pendant 6 mois
-- **Total patient : 675€/an**
+### Scénario 3 : Programme d'aide laboratoire
+- Réductions éventuelles via programme Novo Nordisk
+- **Coût patient estimé : variable selon éligibilité**
 
 ## Perspectives d'évolution des prix
 
@@ -168,7 +160,7 @@ La demande explosive (plus de 500 000 patients potentiels) provoque :
 ## Questions fréquentes
 
 ### Wegovy peut-il être entièrement gratuit ?
-Oui, avec le remboursement Sécurité Sociale (65%) et une bonne mutuelle complémentaire, Wegovy peut être entièrement pris en charge pour les patients éligibles.
+Non, Wegovy n'est pas remboursé par la Sécurité Sociale. Certaines mutuelles peuvent proposer une prise en charge partielle, mais le coût reste majoritairement à la charge du patient.
 
 ### Pourquoi ce prix si élevé ?
 Le prix reflète 15 ans de recherche et 3 milliards d'euros investis, la complexité de production et la position monopolistique temporaire de Novo Nordisk.
@@ -212,25 +204,25 @@ Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabéto
 
 ## Points clés à retenir
 
-* **Prix mensuel** : de 90€ à 270€ selon le dosage
-* **Remboursement possible** : jusqu'à 65% par la Sécurité Sociale sous conditions
-* **Coût annuel** : entre 1 080€ et 3 240€ avant remboursement
-* **Alternatives disponibles** : programmes d'aide et génériques en développement
-* **Disponibilité** : ruptures de stock fréquentes en 2024-2025
+* **Prix mensuel** : de 169€ à 360€ selon le dosage
+* **Remboursement** : non remboursé par la Sécurité Sociale
+* **Coût annuel** : entre 2 028€ et 4 320€
+* **Alternatives disponibles** : programmes d'aide mutuelle
+* **Disponibilité** : commercialisé depuis octobre 2024
 
 ## Grille tarifaire détaillée de Wegovy
 
 ### Prix officiels par dosage
 
-| Dosage  | Prix par stylo | Durée d'utilisation | Coût mensuel |
-| ------- | -------------- | ------------------- | ------------ |
-| 0,25 mg | 89,90€         | 4 semaines          | \~90€        |
-| 0,5 mg  | 129,90€        | 4 semaines          | \~130€       |
-| 1 mg    | 179,90€        | 4 semaines          | \~180€       |
-| 1,7 mg  | 229,90€        | 4 semaines          | \~230€       |
-| 2,4 mg  | 269,90€        | 4 semaines          | \~270€       |
+| Dosage  | Coût mensuel estimé |
+| ------- | ------------------- |
+| 0,25 mg (initiation) | \~169€ |
+| 0,5 mg  | \~210€ |
+| 1 mg    | \~250€ |
+| 1,7 mg  | \~310€ |
+| 2,4 mg (dose cible) | \~360€ |
 
-Chaque stylo contient 4 doses hebdomadaires, soit un mois de traitement complet.
+Le prix de Wegovy varie entre 169€ et 360€ par mois selon le dosage. Wegovy n'est pas remboursé par la Sécurité Sociale.
 
 ### Évolution des prix 2023-2025
 
@@ -242,36 +234,27 @@ Les tarifs de Wegovy ont évolué depuis son lancement :
 
 Cette évolution s'explique par l'augmentation de la demande, les coûts de production et les négociations avec l'ANSM.
 
-## Remboursement par l'Assurance Maladie
+## Remboursement : situation actuelle (rappel)
 
-### Conditions d'éligibilité
+### Wegovy n'est pas remboursé par la Sécurité Sociale
 
-Wegovy peut être remboursé à 65% par la Sécurité Sociale si vous remplissez toutes ces conditions :
+**Wegovy n'est pas remboursé** par l'Assurance Maladie en France. Seul Ozempic est remboursé à 65% pour le diabète de type 2 uniquement.
 
-**Critères médicaux :**
+**Critères pour prescription :**
 
 * IMC ≥ 30 kg/m² avec complications (diabète, hypertension, troubles lipidiques)
-* OU IMC ≥ 35 kg/m² sans complications
-* Échec documenté d'une prise en charge diététique pendant au moins 6 mois
-* Prescription par un spécialiste (endocrinologue, diabétologue ou médecin formé)
+* OU IMC ≥ 27 kg/m² avec comorbidités
+* Prescription par un spécialiste (endocrinologue, diabétologue ou médecin nutritionniste)
 
-**Démarches administratives :**
+### Coût réel pour le patient
 
-* Demande d'entente préalable via formulaire CERFA
-* Constitution d'un dossier médical complet avec justificatifs
-* Validation par le médecin-conseil de l'Assurance Maladie
-* Renouvellement nécessaire tous les 6 mois
+**Pour la dose cible (2,4 mg) :**
 
-### Calcul du coût réel après remboursement
+* Prix mensuel : environ 360€/mois
+* Remboursement Sécurité Sociale : 0€ (non remboursé)
+* Aide mutuelle éventuelle : variable selon contrat
 
-**Exemple concret pour la dose maximale (2,4 mg) :**
-
-* Prix en pharmacie : 269,90€
-* Remboursement Sécurité Sociale (65%) : -175,44€
-* Reste à votre charge : 94,46€/mois
-* Prise en charge mutuelle (selon contrat) : -30€ à -94€
-
-**Coût final pour le patient : 0€ à 64€ par mois**
+**Le coût est intégralement à la charge du patient hors aide mutuelle.**
 
 ## Programmes d'aide financière
 
@@ -303,9 +286,9 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 
 | Traitement                | Prix mensuel | Total 6 mois | Efficacité    | Remboursement    |
 | ------------------------- | ------------ | ------------ | ------------- | ---------------- |
-| **Wegovy**                | 270€         | 1 620€       | -15% du poids | Possible         |
-| Saxenda                   | 190€         | 1 140€       | -8% du poids  | Non              |
-| Ozempic (hors indication) | 73€          | 438€         | -12% du poids | Oui (si diabète) |
+| **Wegovy**                | 169-360€     | 1 014-2 160€ | -15% du poids | Non              |
+| Saxenda                   | 240-300€     | 1 440-1 800€ | -8% du poids  | Non              |
+| Ozempic (hors indication) | ~59,90€/stylo | ~360€       | -12% du poids | Oui (DT2 uniquement) |
 | Mysimba                   | 70€          | 420€         | -5% du poids  | Non              |
 
 ### Analyse coût-efficacité
@@ -313,26 +296,25 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 Wegovy offre le meilleur rapport efficacité/prix pour la perte de poids :
 
 * 5,4€ par kilo perdu (pour un patient de 100 kg perdant 15% de son poids)
-* Possibilité de remboursement
+* Non remboursé par la Sécurité Sociale (aide mutuelle possible)
 * Suivi médical structuré inclus
 
 ## Budget prévisionnel sur 12 mois
 
-### Scénario 1 : Sans remboursement
+### Scénario 1 : Budget annuel (non remboursé)
 
-* Initiation (3 mois) : 90€ + 130€ + 180€ = 400€
-* Montée en puissance (3 mois) : 230€ × 3 = 690€
-* Maintenance (6 mois) : 270€ × 6 = 1 620€
-* **Total annuel : 2 710€**
+* Titration mois 1-4 (0,25 à 1,7 mg) : ~169€ + ~199€ + ~249€ + ~310€ = ~927€
+* Dose d'entretien 2,4 mg (8 mois) : ~360€ × 8 = ~2 880€
+* **Total annuel estimé : ~3 807€**
 
-### Scénario 2 : Avec remboursement optimal
+### Scénario 2 : Avec aide mutuelle partielle
 
-* Coût patient après toutes les aides : 800€/an
-* **Économie réalisée : 1 910€/an**
+* Aide mutuelle estimée : 200-500€/an
+* **Coût patient après aide mutuelle : ~3 307-3 607€/an**
 
-### Scénario 3 : Programme d'aide
+### Scénario 3 : Remboursement futur éventuel
 
-* 3 premiers mois gratuits
+* Négociations CEPS en cours — aucune date confirmée
 * Puis 50% de réduction pendant 6 mois
 * **Total patient : 675€/an**
 
@@ -358,7 +340,7 @@ La demande explosive (plus de 500 000 patients potentiels) provoque :
 
 ### Wegovy peut-il être entièrement gratuit ?
 
-Oui, avec le remboursement Sécurité Sociale (65%) et une bonne mutuelle complémentaire, Wegovy peut être entièrement pris en charge pour les patients éligibles.
+Non, Wegovy n'est pas remboursé par la Sécurité Sociale. Certaines mutuelles peuvent proposer une prise en charge partielle, mais le coût reste majoritairement à la charge du patient.
 
 ### Pourquoi ce prix si élevé ?
 
@@ -408,11 +390,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ## Points Clés Wegovy
 
-* **Prix mensuel** : 90€ à 270€ selon le dosage
-* **Remboursement** : Possible sous conditions strictes
-* **Coût annuel** : 1,080€ à 3,240€ avant aide
-* **Alternatives** : Programmes d'aide et génériques en développement
-* **Disponibilité** : Ruptures fréquentes en 2024-2025
+* **Prix mensuel** : 169€ à 360€ selon le dosage
+* **Remboursement** : Non remboursé par la Sécurité Sociale
+* **Coût annuel** : 2 028€ à 4 320€
+* **Alternatives** : Programmes d'aide mutuelle
+* **Disponibilité** : Commercialisé depuis octobre 2024
 
 ## Informations Médicales
 
@@ -431,15 +413,15 @@ Les prix, remboursement, Sécurité Sociale sont des éléments clés dans ce do
 
 ### Tarifs officiels en pharmacie
 
-| Dosage      | Prix par stylo | Durée      | Coût mensuel |
-| ----------- | -------------- | ---------- | ------------ |
-| **0,25 mg** | 89,90€         | 4 semaines | \~90€        |
-| **0,5 mg**  | 129,90€        | 4 semaines | \~130€       |
-| **1 mg**    | 179,90€        | 4 semaines | \~180€       |
-| **1,7 mg**  | 229,90€        | 4 semaines | \~230€       |
-| **2,4 mg**  | 269,90€        | 4 semaines | \~270€       |
+| Dosage      | Coût mensuel estimé |
+| ----------- | ------------------- |
+| **0,25 mg** (initiation) | \~169€ |
+| **0,5 mg**  | \~210€ |
+| **1 mg**    | \~250€ |
+| **1,7 mg**  | \~310€ |
+| **2,4 mg** (dose cible)  | \~360€ |
 
-**Note** : Chaque stylo contient 4 doses hebdomadaires (1 mois de traitement)
+**Note** : Wegovy n'est pas remboursé par la Sécurité Sociale. Le prix varie de 169€ à 360€/mois.
 
 ### Évolution des prix 2023-2025
 
@@ -456,33 +438,24 @@ Les prix, remboursement, Sécurité Sociale sont des éléments clés dans ce do
 
 ## Remboursement et prise en charge
 
-### Conditions de remboursement Sécurité Sociale
+### Wegovy n'est pas remboursé par la Sécurité Sociale
 
-Wegovy peut être remboursé à **65%** sous conditions strictes :
+**Wegovy n'est pas remboursé** par l'Assurance Maladie en France. Le coût est entièrement à la charge du patient.
 
-**Critères d'éligibilité** :
-✅ IMC ≥ 30 kg/m² avec comorbidités (diabète, HTA, dyslipidémie)
-✅ IMC ≥ 35 kg/m² sans comorbidités
-✅ Échec de prise en charge diététique documentée (6 mois minimum)
-✅ Prescription par endocrinologue, diabétologue ou médecin formé
+**Critères de prescription** :
+- IMC ≥ 30 kg/m² avec comorbidités (diabète, HTA, dyslipidémie)
+- IMC ≥ 27 kg/m² avec comorbidités
+- Prescription par endocrinologue, diabétologue ou médecin nutritionniste
 
-**Démarches administratives** :
+### Coût réel pour le patient
 
-1. **Demande d'entente préalable** via CERFA
-2. **Dossier médical complet** avec justificatifs
-3. **Validation par médecin-conseil** de l'Assurance Maladie
-4. **Renouvellement** tous les 6 mois
+**Dose cible (2,4 mg) :**
 
-### Coût réel après remboursement
+* Prix mensuel : environ 360€
+* Remboursement Sécurité Sociale : 0€ (non remboursé)
+* Aide mutuelle éventuelle : variable selon contrat
 
-**Exemple concret dose maximale (2,4 mg)** :
-
-* Prix pharmacie : 269,90€
-* Remboursement SS (65%) : -175,44€
-* **Reste à charge** : 94,46€/mois
-* Mutuelle (selon contrat) : -30 à -94€
-
-**Coût final patient** : 0€ à 64€/mois
+**Le coût est intégralement à la charge du patient hors aide mutuelle.**
 
 ### Programmes d'aide Novo Nordisk
 
@@ -503,12 +476,12 @@ Wegovy peut être remboursé à **65%** sous conditions strictes :
 
 ### Coût comparatif sur 6 mois
 
-| Traitement          | Prix mensuel | Total 6 mois | Efficacité | Remboursement |
-| ------------------- | ------------ | ------------ | ---------- | ------------- |
-| **Wegovy**          | 270€         | 1,620€       | -15% poids | Possible      |
-| Saxenda             | 190€         | 1,140€       | -8% poids  | Non           |
-| Ozempic (off-label) | 73€          | 438€         | -12% poids | Oui (diabète) |
-| Trulicity           | 78€          | 468€         | -10% poids | Oui (diabète) |
+| Traitement          | Prix mensuel   | Total 6 mois   | Efficacité | Remboursement        |
+| ------------------- | -------------- | -------------- | ---------- | -------------------- |
+| **Wegovy**          | 169-360€       | 1 014-2 160€   | -15% poids | Non                  |
+| Saxenda             | 240-300€       | 1 440-1 800€   | -8% poids  | Non                  |
+| Ozempic (off-label) | ~59,90€/stylo  | ~360€          | -12% poids | Oui (DT2 uniquement) |
+| Mounjaro            | 230-440€       | 1 380-2 640€   | -20% poids | Non                  |
 
 ### Analyse coût-efficacité
 
@@ -552,23 +525,21 @@ Wegovy peut être remboursé à **65%** sous conditions strictes :
 
 ### Coût total sur 12 mois
 
-**Scenario 1 : Sans remboursement**
+**Scenario 1 : Budget annuel (non remboursé)**
 
-* Initiation (3 mois) : 90€ + 130€ + 180€ = 400€
-* Montée (3 mois) : 230€ × 3 = 690€
-* Maintenance (6 mois) : 270€ × 6 = 1,620€
-* **Total** : 2,710€/an
+* Titration mois 1-4 (0,25 à 1,7 mg) : ~169€ + ~199€ + ~249€ + ~310€ = ~927€
+* Dose d'entretien 2,4 mg (8 mois) : ~360€ × 8 = ~2 880€
+* **Total estimé** : ~3 807€/an
 
-**Scenario 2 : Avec remboursement optimal**
+**Scenario 2 : Avec aide mutuelle partielle**
 
-* Coût patient après aides : 800€/an
-* **Économie** : 1,910€/an
+* Aide mutuelle estimée : 200-500€/an
+* **Coût patient après aide mutuelle** : ~3 307-3 607€/an
 
-**Scenario 3 : Programme d'aide**
+**Scenario 3 : Remboursement futur éventuel**
 
-* 3 premiers mois gratuits
-* Puis 50% réduction 6 mois
-* **Total patient** : 675€/an
+* Négociations CEPS en cours — aucune date confirmée
+* **Coût patient estimé** : variable selon éligibilité
 * [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
 * [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
 * [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
@@ -581,7 +552,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 
 ### Wegovy est-il gratuit avec une mutuelle ?
 
-Avec remboursement Sécurité Sociale (65%) + mutuelle complémentaire, Wegovy peut être entièrement pris en charge pour les patients éligibles.
+Non, Wegovy n'est pas remboursé par la Sécurité Sociale. Certaines mutuelles complémentaires peuvent proposer une prise en charge partielle via des forfaits dédiés.
 
 ### Pourquoi Wegovy coûte-t-il si cher ?
 
@@ -670,17 +641,17 @@ Contactez votre médecin prescripteur ou directement Novo Nordisk France via leu
 
 **Phase d'initiation (4 semaines) :**
 
-* Semaines 1-4 : 0,25 mg = 89,90 €
+* Semaines 1-4 : 0,25 mg = ~169€/mois
 
 **Phase d'escalade (16 semaines) :**
 
-* Semaines 5-8 : 0,5 mg = 129,90 €
-* Semaines 9-12 : 1 mg = 179,90 €
-* Semaines 13-16 : 1,7 mg = 229,90 €
+* Semaines 5-8 : 0,5 mg = ~210€/mois
+* Semaines 9-12 : 1 mg = ~250€/mois
+* Semaines 13-16 : 1,7 mg = ~310€/mois
 
 **Phase d'entretien :**
 
-* À partir de la semaine 17 : 2,4 mg = 269,90 €/mois
+* À partir de la semaine 17 : 2,4 mg = ~360€/mois
 
 ### Suppléments Recommandés
 
@@ -734,8 +705,8 @@ Si le coût initial est prohibitif :
 
 **Coût total sur 1 an :**
 
-* Sans remboursement : 3 238,80 €
-* Avec remboursement optimal : 757,52 €
+* Sans aide mutuelle : 2 028€ à 4 320€
+* Avec aide mutuelle partielle : variable selon contrat
 
 **Bénéfices économiques :**
 
@@ -762,7 +733,7 @@ Avec l'arrivée de génériques potentiels et la négociation des prix par l'Ét
 L'achat dans l'UE est légal mais nécessite une prescription française. Attention aux contrefaçons hors UE.
 
 **Ma mutuelle peut-elle refuser le remboursement ?**
-Avec une prescription médicale justifiée et les critères d'IMC, le remboursement est généralement accordé.
+Wegovy n'est pas remboursé par la Sécurité Sociale. Les mutuelles peuvent refuser selon les termes de votre contrat. Vérifiez si votre contrat inclut un forfait pour les médicaments non remboursés.
 
 **Combien coûte l'arrêt du traitement ?**
 Aucun coût direct, mais 70% des patients reprennent du poids sans suivi nutritionnel (coût : 100-200 €/mois).

@@ -158,7 +158,7 @@ Non, Rybelsus doit être pris à jeun, 30 minutes avant le premier repas, et il 
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Rybelsus est-il remboursé ?
-Oui, Rybelsus est remboursé à 100% pour le diabète de type 2 dans le cadre d'une ALD.
+Rybelsus est remboursé à **65 %** par l'Assurance Maladie pour le diabète de type 2 (100 % en ALD). Son prix se situe entre 80 € et 110 € par mois selon le dosage. Il n'est pas remboursé pour la perte de poids seule.
 
 ### Puis-je arrêter Rybelsus brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale.

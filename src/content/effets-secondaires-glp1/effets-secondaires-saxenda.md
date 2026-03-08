@@ -128,7 +128,7 @@ image: "/images/thumbnails/effets-secondaires-saxenda-illus.jpg"
 
 ## 🩺 Quand Consulter ?
 
-### Consultation urgente (911 ou urgences)
+### Consultation urgente (15/SAMU ou 112)
 
 - Douleurs abdominales violentes
 - Vomissements sanglants

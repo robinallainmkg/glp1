@@ -25,12 +25,12 @@
 ```
 config/astro.config.mjs    — Configuration Astro (redirige depuis astro.config.mjs racine)
 src/pages/                 — Pages Astro (statiques)
-src/pages/admin/           — Dashboards admin (fact-check, editorial)
-src/lib/supabase.js        — Client Supabase
-scripts/                   — Scripts agents (fact-check, editorial)
+src/pages/admin/           — Dashboards admin (fact-check, editorial, integration)
+src/lib/supabase.js        — Client Supabase (anon key uniquement)
+scripts/                   — Scripts agents (fact-check, editorial, integration)
 n8n/prompts/               — System prompts des agents
 supabase/migrations/       — Migrations SQL
-.github/workflows/         — CI/CD (deploy, fact-check, editorial, migrations)
+.github/workflows/         — CI/CD (deploy, fact-check, editorial, integration, migrations)
 ```
 
 ## Agents IA — État d'avancement
@@ -46,16 +46,19 @@ supabase/migrations/       — Migrations SQL
 
 ### Agent Editorial (`scripts/editorial-agent.mjs`)
 - **Statut** : Opérationnel
-- **Fonction** : Applique les corrections approuvées aux articles
+- **Fonction** : Rédige `after_final` pour les tickets approuvés/en révision
 - **Workflow** : `.github/workflows/editorial-agent.yml`
 
-### Dashboard Fact-Check (`src/pages/admin/fact-check.astro`)
-- **Statut** : À corriger — doit passer en client-side fetching
-- **Problème** : Données figées au build (static), ne montre pas les nouveaux résultats
-- **Solution** : Fetch Supabase côté client au chargement de la page
+### Agent Integration (`scripts/integration-agent.mjs`)
+- **Statut** : Opérationnel
+- **Fonction** : Applique les corrections au markdown, commit, push, crée une PR
+- **Workflow** : `.github/workflows/integration-agent.yml` (manuel uniquement)
+- **Secret GitHub** : `PRIVATEHERE` (token GitHub pour push + PR)
 
-### Dashboard Editorial (`src/pages/admin/editorial.astro`)
-- **Statut** : À corriger — même problème que fact-check
+### Dashboards Admin
+- **Fact-Check** (`src/pages/admin/fact-check.astro`) — Client-side fetching, opérationnel
+- **Editorial** (`src/pages/admin/editorial.astro`) — Client-side fetching, opérationnel
+- **Integration** (`src/pages/admin/integration.astro`) — Client-side fetching, opérationnel
 
 ## Base de données Supabase
 
@@ -74,5 +77,11 @@ supabase/migrations/       — Migrations SQL
 
 - Commit messages en anglais
 - Code et commentaires en français ou anglais (pas de mix dans un même fichier)
-- Les secrets sont dans GitHub Secrets (SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_API_KEY, FTP_PASSWORD)
+- Les secrets sont dans GitHub Secrets :
+  - `SUPABASE_URL` — URL Supabase
+  - `SUPABASE_SERVICE_ROLE_KEY` — Clé service role Supabase
+  - `ANTHROPIC_API_KEY` — Clé API Anthropic (agents fact-check + editorial)
+  - `FTP_PASSWORD` — Mot de passe FTP Hostinger (deploy)
+  - `PRIVATEHERE` — Token GitHub (agent integration : push + PR)
+  - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `ALERT_EMAIL_TO` — Alertes email (optionnel)
 - Ne jamais commit de secrets ou .env

@@ -1,0 +1,73 @@
+name: "Agent Integration GLP1"
+
+on:
+  # Execution automatique toutes les heures (9h-20h UTC, lun-ven)
+  schedule:
+    - cron: "0 9-20 * * 1-5"
+
+  # Declenchement manuel depuis l'onglet Actions
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Nombre max de tickets a deployer (0 = tous)"
+        required: false
+        default: "0"
+      ticket_id:
+        description: "UUID d'un ticket specifique (optionnel)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Mode dry-run (pas de modification)"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  integration:
+    name: "Deploiement des corrections"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Installation des dependances
+        run: npm ci
+
+      - name: Configuration git
+        run: |
+          git config user.name "integration-agent[bot]"
+          git config user.email "integration-agent[bot]@users.noreply.github.com"
+
+      - name: Execution de l'agent integration
+        id: integration
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.limit }}" != "" ] && [ "${{ github.event.inputs.limit }}" != "0" ]; then
+            ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          if [ "${{ github.event.inputs.ticket_id }}" != "" ]; then
+            ARGS="$ARGS --ticket-id ${{ github.event.inputs.ticket_id }}"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          node scripts/integration-agent.mjs $ARGS
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PRIVATEHERE }}

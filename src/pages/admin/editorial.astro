@@ -507,7 +507,10 @@ import { supabaseConfig } from '../../lib/supabase';
 
   function buildArticleUrl(slug) {
     if (!slug) return '';
-    return '/' + slug + '/';
+    // Slugs in DB: "collection/article-name" → URL: "/collections/collection/article-name/"
+    // Astro pages: "astro-pages/path" → URL: "/path/"
+    if (slug.startsWith('astro-pages/')) return '/' + slug.replace('astro-pages/', '') + '/';
+    return '/collections/' + slug + '/';
   }
 
   async function supabaseFetch(table, query) {
@@ -692,7 +695,16 @@ import { supabaseConfig } from '../../lib/supabase';
     if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = true);
 
     try {
-      await updateTicket(ticketId, { statut: 'ready_to_deploy', reviewed_at: new Date().toISOString() });
+      // Tickets in "ready_to_deploy" stay as-is (already correct status for Integration dashboard)
+      // Tickets in "approved" or "in_progress" need to be moved to ready_to_deploy
+      const ticket = document.querySelector(`[data-ticket-id="${ticketId}"]`);
+      const currentStatus = ticket ? ticket.querySelector('.ticket-status')?.textContent?.trim() : '';
+      const isAlreadyReady = currentStatus === 'Pret a deployer';
+
+      if (!isAlreadyReady) {
+        await updateTicket(ticketId, { statut: 'ready_to_deploy', reviewed_at: new Date().toISOString() });
+      }
+
       if (row) row.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye en integration</span>';
       const statusEl = document.querySelector(`[data-ticket-id="${ticketId}"] .ticket-status`);
       if (statusEl) { statusEl.className = 'ticket-status status-ready'; statusEl.textContent = '\u2713 En integration'; }

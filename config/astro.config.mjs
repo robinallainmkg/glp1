@@ -1,6 +1,75 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
+import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import fs from 'node:fs';
+
+// Integration Astro : endpoint /__deploy pour le dashboard integration (dev only)
+function integrationApi() {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const PROJECT_ROOT = path.resolve(__dirname, '..');
+  const AGENT_SCRIPT = path.join(PROJECT_ROOT, 'scripts', 'integration-agent.mjs');
+
+  // Charge .env si present (pour SUPABASE_SERVICE_ROLE_KEY)
+  const dotenvPath = path.join(PROJECT_ROOT, '.env');
+  const envFromFile = {};
+  if (fs.existsSync(dotenvPath)) {
+    fs.readFileSync(dotenvPath, 'utf8').split('\n').forEach(line => {
+      const m = line.match(/^\s*([^#=]+?)\s*=\s*(.*?)\s*$/);
+      if (m) envFromFile[m[1]] = m[2];
+    });
+  }
+  const agentEnv = { ...process.env, ...envFromFile };
+
+  return {
+    name: 'integration-api',
+    hooks: {
+      'astro:server:setup': ({ server }) => {
+        server.middlewares.use((req, res, next) => {
+          if (!req.url.startsWith('/__deploy')) return next();
+
+          res.setHeader('Access-Control-Allow-Origin', '*');
+          res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+          res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+          if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+          if (req.method !== 'POST') { res.writeHead(405); res.end(JSON.stringify({ error: 'POST only' })); return; }
+
+          let body = '';
+          req.on('data', c => body += c);
+          req.on('end', () => {
+            try {
+              const { ticket_id } = JSON.parse(body);
+              if (!ticket_id) { res.writeHead(400); res.end(JSON.stringify({ error: 'ticket_id requis' })); return; }
+
+              console.log(`\n🚀 [integration] Deploiement ticket ${ticket_id.substring(0, 8)}...`);
+              const child = spawn('node', [AGENT_SCRIPT, '--local', '--ticket-id', ticket_id], {
+                cwd: PROJECT_ROOT,
+                env: agentEnv,
+                stdio: ['ignore', 'pipe', 'pipe']
+              });
+              child.stdout.on('data', d => process.stdout.write(d));
+              child.stderr.on('data', d => process.stderr.write(d));
+              child.on('close', code => {
+                console.log(code === 0
+                  ? `✅ [integration] Ticket ${ticket_id.substring(0, 8)} deploye`
+                  : `❌ [integration] Ticket ${ticket_id.substring(0, 8)} erreur (code ${code})`);
+              });
+
+              res.writeHead(202, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ ok: true, ticket_id }));
+            } catch (err) {
+              res.writeHead(400, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify({ error: err.message }));
+            }
+          });
+        });
+      }
+    }
+  };
+}
 
 export default defineConfig({
   site: 'https://glp1-france.fr',
@@ -11,7 +80,6 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      // Inclure explicitement les nouveaux guides avec haute priorité
       customPages: [
         'https://glp1-france.fr/guides/suivi-medical-glp1/',
         'https://glp1-france.fr/guides/communautes-glp1/',
@@ -19,10 +87,10 @@ export default defineConfig({
         'https://glp1-france.fr/guides/guides-age-glp1/'
       ]
     }),
-    tailwind()
+    tailwind(),
+    integrationApi()
   ],
   redirects: {
-    // Médicaments spécifiques → Guides
     '/collections/medicaments-glp1/wegovy-avis': '/traitements-glp1/guide-complet-wegovy/',
     '/collections/medicaments-glp1/saxenda-prix': '/glp1-cout/prix-saxenda-france/',
     '/collections/medicaments-glp1/ozempic-injection-prix': '/glp1-cout/prix-ozempic-france/',
@@ -32,56 +100,40 @@ export default defineConfig({
     '/collections/medicaments-glp1/victoza-rupture': '/traitements-glp1/guide-complet-victoza/',
     '/collections/medicaments-glp1/trulicity-ou-ozempic': '/traitements-glp1/guide-complet-trulicity/',
     '/collections/medicaments-glp1/trulicity-danger': '/traitements-glp1/guide-complet-trulicity/',
-    
-    // Redirections dynamiques [...slug] gérées par scripts/inject-vercel-redirects.mjs (post-build)
-    
-    // Guides déplacés
     '/guides/guide-complet-trulicity/': '/traitements-glp1/guide-complet-trulicity/',
     '/guides/guide-complet-januvia/': '/traitements-glp1/guide-complet-januvia/',
     '/guides/guide-complet-mounjaro/': '/traitements-glp1/guide-complet-mounjaro/',
     '/guides/guide-complet-ozempic/': '/traitements-glp1/guide-complet-ozempic/',
     '/guides/guide-complet-wegovy/': '/traitements-glp1/guide-complet-wegovy/',
     '/guides/guide-complet-saxenda/': '/traitements-glp1/guide-complet-saxenda/',
-    
-    // Pages backup → homepage
     '/index-backup-original/': '/',
     '/diagnostic-live-content-backup/': '/',
     '/quel-traitement-glp1-choisir-backup/': '/',
     '/quel-traitement-glp1-choisir-fixed/': '/',
     '/test-affiliation/': '/',
     '/admin-stats-new/': '/',
-    
-    // Anciennes pages (wildcard /medicaments-glp1/[...slug] géré par inject-vercel-redirects.mjs)
     '/experts/': '/',
     '/produits-recommandes/': '/',
     '/guide-debutant/': '/',
     '/guide-glp1-perte-de-poids/': '/',
     '/guide-beaute-perte-de-poids-glp1/': '/',
     '/qu-est-ce-que-glp1/': '/',
-    
-    // Témoignages
     '/temoignage-marie-transformation-glp1/': '/temoignages/',
     '/temoignage-sophie-transformation-glp1/': '/temoignages/',
     '/temoignage-laurent-transformation-glp1/': '/temoignages/',
     '/pages-statiques/serena-williams-glp1/': '/temoignages/',
-    
-    // Légal
     '/legal/confidentialite/': '/politique-confidentialite/',
     '/legal/cgu/': '/mentions-legales/',
-    
-    // Mounjaro spécifiques
     '/medicaments-glp1/mounjaro-prix-france/': '/glp1-cout/prix-mounjaro-france/',
     '/mounjaro-prix/': '/glp1-cout/prix-mounjaro-france/',
     '/mounjaro/': '/traitements-glp1/guide-complet-mounjaro/',
-    
-    // Anciennes redirections (conservées pour compatibilité)
     '/nouveaux-medicaments-perdre-poids/': '/guides/qu-est-ce-que-glp1/',
-   '/medicaments-glp1': '/collections/glp1-cout/',
+    '/medicaments-glp1': '/collections/glp1-cout/',
     '/temoignages-glp1/': '/temoignages/'
   },
   server: {
     port: 4321,
-    host: '127.0.0.1',  // Force IPv4
+    host: '127.0.0.1',
     open: true
   },
   build: {
@@ -97,6 +149,5 @@ export default defineConfig({
         }
       }
     },
-  // No custom optimizeDeps exclusions
   }
 });
