@@ -1,0 +1,616 @@
+---
+// src/pages/admin/budget.astro
+// Dashboard Budget — Suivi des depenses (abonnements, API, budget)
+// Client-side rendering (Hostinger static)
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget - GLP1 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style is:inline>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --surface2: #f0ede8;
+      --surface3: #e8e4dd;
+      --border: #e2ddd6;
+      --border2: #d0c9be;
+      --text: #18150f;
+      --text2: #3d3830;
+      --muted: #7a7268;
+      --urgent: #b83030;
+      --urgent-light: #fdf2f2;
+      --urgent-border: #edc0c0;
+      --warning: #9a6200;
+      --warning-light: #fdf8ee;
+      --warning-border: #e8d090;
+      --ok: #1e6e3a;
+      --ok-light: #f0faf4;
+      --ok-border: #a8dab8;
+      --blue: #1a3f7a;
+      --blue-light: #eef3fc;
+      --blue-border: #a8c0e8;
+      --purple: #5a3a8a;
+      --purple-light: #f5f0fc;
+      --purple-border: #c8a8e8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Bricolage Grotesque', sans-serif; min-height: 100vh; font-size: 14px; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .topbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; position: sticky; top: 0; z-index: 40; }
+    .topbar-left { display: flex; align-items: center; gap: 16px; }
+    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+    .topbar-meta { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); padding: 3px 8px; background: var(--surface2); border-radius: 4px; }
+    .topbar-actions { display: flex; gap: 8px; }
+
+    .btn { font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 600; padding: 7px 14px; border-radius: 7px; cursor: pointer; border: none; transition: all 0.15s; display: inline-flex; align-items: center; gap: 5px; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn:active:not(:disabled) { transform: scale(0.97); }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-primary:hover:not(:disabled) { background: #15346a; }
+    .btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
+    .btn-ghost:hover:not(:disabled) { background: var(--surface2); color: var(--text2); }
+    .btn-ok { background: var(--ok); color: white; }
+    .btn-ok:hover:not(:disabled) { background: #165c2e; }
+    .btn-sm { padding: 5px 10px; font-size: 11px; }
+
+    .main-content { flex: 1; padding: 24px 32px; }
+
+    /* Budget hero */
+    .budget-hero { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px 32px; margin-bottom: 24px; }
+    .budget-hero-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .budget-hero-title { font-size: 16px; font-weight: 700; }
+    .budget-hero-amount { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; }
+    .budget-hero-limit { font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: var(--muted); }
+    .budget-bar-container { background: var(--surface2); border-radius: 8px; height: 16px; overflow: hidden; margin-bottom: 12px; }
+    .budget-bar-fill { height: 100%; border-radius: 8px; transition: width 0.5s ease, background 0.3s; }
+    .budget-bar-fill.green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+    .budget-bar-fill.orange { background: linear-gradient(90deg, #f59e0b, #d97706); }
+    .budget-bar-fill.red { background: linear-gradient(90deg, #ef4444, #dc2626); }
+    .budget-breakdown { display: flex; gap: 24px; font-size: 12px; color: var(--muted); }
+    .budget-breakdown span { display: flex; align-items: center; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-subs { background: #8b5cf6; }
+    .dot-api { background: #3b82f6; }
+    .dot-remaining { background: #e2ddd6; }
+
+    /* Alert */
+    .alert-banner { background: var(--urgent-light); border: 1px solid var(--urgent-border); border-radius: 10px; padding: 14px 20px; margin-bottom: 20px; display: none; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--urgent); }
+    .alert-banner.show { display: flex; }
+
+    /* Grid */
+    .sections-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .section-full { grid-column: 1 / -1; }
+    .section-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .section-title { font-size: 14px; font-weight: 700; }
+    .section-note { font-size: 11px; color: var(--muted); margin-top: 10px; font-style: italic; }
+
+    /* Subs */
+    .subs-table { width: 100%; border-collapse: collapse; }
+    .subs-table th, .subs-table td { padding: 8px 12px; text-align: left; font-size: 13px; border-bottom: 1px solid var(--border); }
+    .subs-table th { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .subs-total { font-weight: 700; border-top: 2px solid var(--border2); }
+    .subs-amount { font-family: 'IBM Plex Mono', monospace; font-weight: 600; }
+    .subs-inactive { opacity: 0.4; text-decoration: line-through; }
+
+    /* API */
+    .api-stat { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .api-stat:last-child { border-bottom: none; }
+    .api-model { font-size: 13px; font-weight: 600; }
+    .api-tokens { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+    .api-cost { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; }
+
+    /* Chart */
+    .chart-container { height: 180px; display: flex; align-items: flex-end; gap: 8px; padding: 16px 0 0; }
+    .chart-bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .chart-bar { width: 100%; max-width: 40px; border-radius: 4px 4px 0 0; transition: height 0.4s ease; }
+    .chart-bar-api { background: #3b82f6; }
+    .chart-bar-subs { background: #8b5cf6; }
+    .chart-label { font-size: 10px; font-family: 'IBM Plex Mono', monospace; color: var(--muted); }
+
+    /* Config */
+    .config-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .config-label { font-size: 13px; font-weight: 600; min-width: 140px; }
+    .config-input { font-family: 'IBM Plex Mono', monospace; font-size: 14px; padding: 8px 12px; border: 1px solid var(--border2); border-radius: 7px; background: var(--surface); width: 140px; outline: none; }
+    .config-input:focus { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(26,63,122,0.1); }
+    .config-unit { font-size: 12px; color: var(--muted); }
+
+    /* Add form */
+    .add-form { display: none; gap: 8px; align-items: center; padding: 12px; background: var(--surface2); border-radius: 8px; margin-top: 12px; }
+    .add-form.show { display: flex; }
+    .add-input { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; padding: 7px 10px; border: 1px solid var(--border2); border-radius: 6px; background: white; outline: none; }
+    .add-input:focus { border-color: var(--blue); }
+    .add-input-name { flex: 1; }
+    .add-input-amount { width: 100px; }
+
+    .toast { position: fixed; bottom: 24px; right: 24px; background: #18150f; color: #e2e8f0; padding: 12px 20px; border-radius: 10px; font-size: 13px; font-weight: 600; z-index: 999; opacity: 0; transform: translateY(20px); transition: all 0.25s; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast-sub { font-size: 11px; color: #94a3b8; margin-top: 2px; font-weight: 400; }
+
+    .loading-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .main-content { padding: 16px; }
+      .sections-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="page-title">💰 Budget</span>
+      <span class="topbar-meta" id="topbarMeta">Chargement...</span>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-ghost" onclick="loadAll()">🔄 Actualiser</button>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="alert-banner" id="alertBanner">
+      <span>⚠️</span>
+      <span id="alertText"></span>
+    </div>
+
+    <!-- Hero -->
+    <div class="budget-hero">
+      <div class="budget-hero-header">
+        <span class="budget-hero-title">Depenses du mois</span>
+        <div>
+          <span class="budget-hero-amount" id="heroAmount">--</span>
+          <span class="budget-hero-limit"> / <span id="heroLimit">--</span></span>
+        </div>
+      </div>
+      <div class="budget-bar-container">
+        <div class="budget-bar-fill green" id="budgetBar" style="width: 0%"></div>
+      </div>
+      <div class="budget-breakdown">
+        <span><span class="dot dot-subs"></span> Abonnements : <strong id="breakdownSubs">--</strong></span>
+        <span><span class="dot dot-api"></span> API Anthropic : <strong id="breakdownApi">--</strong></span>
+        <span><span class="dot dot-remaining"></span> Restant : <strong id="breakdownRemaining">--</strong></span>
+      </div>
+    </div>
+
+    <div class="sections-grid">
+      <!-- Subscriptions -->
+      <div class="section-card">
+        <div class="section-header">
+          <span class="section-title">📋 Abonnements fixes</span>
+          <button class="btn btn-ghost btn-sm" onclick="toggleAddForm()">+ Ajouter</button>
+        </div>
+        <div id="subsContent"><div class="loading-state">Chargement...</div></div>
+        <div class="add-form" id="addForm">
+          <input class="add-input add-input-name" id="addName" placeholder="Nom (ex: Hostinger)" />
+          <input class="add-input add-input-amount" id="addAmount" type="number" step="0.01" placeholder="$/mois" />
+          <button class="btn btn-ok btn-sm" onclick="addSubscription()">✓</button>
+          <button class="btn btn-ghost btn-sm" onclick="toggleAddForm()">✕</button>
+        </div>
+      </div>
+
+      <!-- API Usage -->
+      <div class="section-card">
+        <div class="section-header">
+          <span class="section-title">🤖 API Anthropic</span>
+          <button class="btn btn-primary btn-sm" id="syncBtn" onclick="syncApiUsage()">⟳ Sync</button>
+        </div>
+        <div id="apiContent"><div class="loading-state">Chargement...</div></div>
+        <div class="section-note">Source : agent_logs Supabase (fact-check + editorial). L'API Anthropic n'expose pas d'endpoint billing.</div>
+      </div>
+
+      <!-- Chart -->
+      <div class="section-card section-full">
+        <div class="section-header">
+          <span class="section-title">📊 Historique 6 derniers mois</span>
+        </div>
+        <div class="chart-container" id="chartContainer"><div class="loading-state">Chargement...</div></div>
+      </div>
+
+      <!-- Config -->
+      <div class="section-card section-full">
+        <div class="section-header">
+          <span class="section-title">⚙️ Configuration</span>
+        </div>
+        <div class="config-row">
+          <span class="config-label">Budget mensuel</span>
+          <input class="config-input" id="configLimit" type="number" step="1" />
+          <span class="config-unit">$ / mois</span>
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 8px;">
+          <button class="btn btn-ok" onclick="saveConfig()">💾 Sauvegarder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <div id="toastMsg"></div>
+  <div class="toast-sub" id="toastSub"></div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  // Tout en USD — pas de conversion
+  let config = { monthly_limit: 200 };
+  let subscriptions = [];
+  let apiUsage = [];
+  let currentMonth = new Date().toISOString().slice(0, 7);
+
+  function fmt(n, d = 2) { return Number(n || 0).toFixed(d); }
+  function fmtUsd(n) { return '$' + fmt(n); }
+
+  // ── Supabase helpers ──
+
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  async function sbInsert(table, data) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
+      body: JSON.stringify(data)
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  async function sbPatch(table, id, data) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?id=eq.${id}`, {
+      method: 'PATCH',
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify(data)
+    });
+    if (!r.ok) throw new Error(await r.text());
+  }
+
+  async function sbDelete(table, id) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?id=eq.${id}`, {
+      method: 'DELETE',
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+  }
+
+  // ── Toast ──
+
+  let toastTimer;
+  function showToast(msg, sub) {
+    document.getElementById('toastMsg').textContent = msg;
+    document.getElementById('toastSub').textContent = sub || '';
+    document.getElementById('toast').classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => document.getElementById('toast').classList.remove('show'), 3500);
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  // ── Config ──
+
+  async function loadConfig() {
+    try {
+      const data = await sbFetch('budget_config', 'select=*&limit=1');
+      if (data.length > 0) {
+        config = data[0];
+        document.getElementById('configLimit').value = config.monthly_limit;
+      }
+    } catch (e) { console.error('Config:', e); }
+  }
+
+  async function saveConfig() {
+    const limit = parseFloat(document.getElementById('configLimit').value);
+    if (isNaN(limit) || limit <= 0) { showToast('Valeur invalide'); return; }
+    try {
+      await sbPatch('budget_config', config.id, { monthly_limit: limit, updated_at: new Date().toISOString() });
+      config.monthly_limit = limit;
+      updateHero();
+      showToast('Budget mis a jour', fmtUsd(limit) + '/mois');
+    } catch (e) { showToast('Erreur', e.message); }
+  }
+
+  // ── Subscriptions ──
+
+  async function loadSubscriptions() {
+    try {
+      subscriptions = await sbFetch('budget_subscriptions', 'select=*&order=created_at.asc');
+      renderSubs();
+    } catch (e) {
+      document.getElementById('subsContent').innerHTML = `<div class="loading-state" style="color:var(--urgent)">Erreur: ${e.message}</div>`;
+    }
+  }
+
+  function renderSubs() {
+    const el = document.getElementById('subsContent');
+    const active = subscriptions.filter(s => s.active);
+    const inactive = subscriptions.filter(s => !s.active);
+    const total = active.reduce((s, x) => s + parseFloat(x.amount), 0);
+
+    if (subscriptions.length === 0) {
+      el.innerHTML = '<div class="loading-state">Aucun abonnement.<br>Cliquez "+ Ajouter".</div>';
+      return;
+    }
+
+    let h = '<table class="subs-table"><thead><tr><th>Nom</th><th>Montant</th><th></th></tr></thead><tbody>';
+    for (const s of active) {
+      h += `<tr><td>${escapeHtml(s.name)}</td><td class="subs-amount">${fmtUsd(s.amount)}</td>
+        <td style="text-align:right"><button class="btn btn-ghost btn-sm" onclick="toggleSub('${s.id}',false)">⏸</button>
+        <button class="btn btn-ghost btn-sm" onclick="deleteSub('${s.id}')">🗑</button></td></tr>`;
+    }
+    for (const s of inactive) {
+      h += `<tr class="subs-inactive"><td>${escapeHtml(s.name)}</td><td class="subs-amount">${fmtUsd(s.amount)}</td>
+        <td style="text-align:right"><button class="btn btn-ghost btn-sm" onclick="toggleSub('${s.id}',true)">▶</button></td></tr>`;
+    }
+    h += `<tr class="subs-total"><td>Total mensuel</td><td class="subs-amount">${fmtUsd(total)}</td><td></td></tr></tbody></table>`;
+    el.innerHTML = h;
+  }
+
+  function toggleAddForm() {
+    const f = document.getElementById('addForm');
+    f.classList.toggle('show');
+    if (f.classList.contains('show')) document.getElementById('addName').focus();
+  }
+
+  async function addSubscription() {
+    const name = document.getElementById('addName').value.trim();
+    const amount = parseFloat(document.getElementById('addAmount').value);
+    if (!name || isNaN(amount) || amount <= 0) { showToast('Nom et montant requis'); return; }
+    try {
+      await sbInsert('budget_subscriptions', { name, amount, currency: 'USD', active: true });
+      document.getElementById('addName').value = '';
+      document.getElementById('addAmount').value = '';
+      document.getElementById('addForm').classList.remove('show');
+      await loadSubscriptions();
+      updateHero();
+      showToast('Ajoute', `${name} — ${fmtUsd(amount)}`);
+    } catch (e) { showToast('Erreur', e.message); }
+  }
+
+  window.toggleSub = async function(id, active) {
+    try { await sbPatch('budget_subscriptions', id, { active }); await loadSubscriptions(); updateHero(); }
+    catch (e) { showToast('Erreur', e.message); }
+  };
+
+  window.deleteSub = async function(id) {
+    if (!confirm('Supprimer ?')) return;
+    try { await sbDelete('budget_subscriptions', id); await loadSubscriptions(); updateHero(); showToast('Supprime'); }
+    catch (e) { showToast('Erreur', e.message); }
+  };
+
+  // ── API Usage ──
+
+  async function loadApiUsage() {
+    try {
+      apiUsage = await sbFetch('budget_api_usage', `select=*&month=eq.${currentMonth}&order=model.asc`);
+      renderApi();
+    } catch (e) {
+      document.getElementById('apiContent').innerHTML = `<div class="loading-state" style="color:var(--urgent)">Erreur: ${e.message}</div>`;
+    }
+  }
+
+  function renderApi() {
+    const el = document.getElementById('apiContent');
+    if (apiUsage.length === 0) {
+      el.innerHTML = '<div class="loading-state">Aucune donnee pour ce mois.<br>Cliquez "Sync" pour calculer.</div>';
+      return;
+    }
+
+    let totalUsd = 0;
+    let h = '';
+    for (const row of apiUsage) {
+      const cost = parseFloat(row.cost_usd) || 0;
+      totalUsd += cost;
+      const inK = Math.round((row.input_tokens || 0) / 1000);
+      const outK = Math.round((row.output_tokens || 0) / 1000);
+      h += `<div class="api-stat"><div><div class="api-model">${escapeHtml(row.model || 'Inconnu')}</div>
+        <div class="api-tokens">${inK}K in / ${outK}K out</div></div>
+        <div class="api-cost">${fmtUsd(cost)}</div></div>`;
+    }
+    h += `<div class="api-stat" style="border-top:2px solid var(--border2);margin-top:4px;padding-top:12px">
+      <div><div class="api-model">Total API ce mois</div></div>
+      <div class="api-cost" style="font-size:16px">${fmtUsd(totalUsd)}</div></div>`;
+
+    if (apiUsage[0]?.synced_at) {
+      h += `<div style="font-size:11px;color:var(--muted);margin-top:8px;text-align:right">Sync : ${new Date(apiUsage[0].synced_at).toLocaleString('fr-FR')}</div>`;
+    }
+    el.innerHTML = h;
+  }
+
+  // ── Sync from agent_logs ──
+
+  async function syncApiUsage() {
+    const btn = document.getElementById('syncBtn');
+    btn.disabled = true;
+    btn.textContent = '⟳ Sync...';
+    try {
+      await doSync();
+      showToast('Sync OK', 'Depuis agent_logs Supabase');
+    } catch (e) {
+      showToast('Erreur sync', e.message);
+      console.error(e);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '⟳ Sync';
+    }
+  }
+
+  async function doSync() {
+    const monthStart = currentMonth + '-01T00:00:00';
+    const nextMonth = getNextMonth(currentMonth) + '-01T00:00:00';
+
+    // All success logs with tokens this month
+    const logs = await sbFetch('agent_logs',
+      `select=agent_type,tokens_used,metadata,created_at&created_at=gte.${monthStart}&created_at=lt.${nextMonth}&status=eq.success&order=created_at.asc`
+    );
+
+    // Aggregate by model
+    const byModel = {};
+    for (const log of logs) {
+      const tokens = log.tokens_used || 0;
+      if (tokens === 0) continue; // skip logs without token data
+
+      const model = log.metadata?.model || 'claude-sonnet-4-20250514';
+      if (!byModel[model]) byModel[model] = { input: 0, output: 0, cost: 0 };
+
+      // Estimation split: 60% input, 40% output
+      const inp = Math.round(tokens * 0.6);
+      const out = Math.round(tokens * 0.4);
+      byModel[model].input += inp;
+      byModel[model].output += out;
+
+      // Pricing (USD)
+      // Sonnet: $3/Minput, $15/Moutput
+      // Haiku: $0.25/Minput, $1.25/Moutput
+      if (model.includes('haiku')) {
+        byModel[model].cost += (inp * 0.25 + out * 1.25) / 1_000_000;
+      } else {
+        byModel[model].cost += (inp * 3 + out * 15) / 1_000_000;
+      }
+    }
+
+    // Upsert
+    for (const [model, data] of Object.entries(byModel)) {
+      const existing = await sbFetch('budget_api_usage',
+        `select=id&month=eq.${currentMonth}&model=eq.${encodeURIComponent(model)}&limit=1`
+      );
+      const row = {
+        input_tokens: data.input,
+        output_tokens: data.output,
+        cost_usd: parseFloat(data.cost.toFixed(4)),
+        synced_at: new Date().toISOString()
+      };
+      if (existing.length > 0) {
+        await sbPatch('budget_api_usage', existing[0].id, row);
+      } else {
+        await sbInsert('budget_api_usage', { month: currentMonth, model, ...row });
+      }
+    }
+
+    await loadApiUsage();
+    updateHero();
+  }
+
+  function getNextMonth(ym) {
+    const [y, m] = ym.split('-').map(Number);
+    return m === 12 ? `${y+1}-01` : `${y}-${String(m+1).padStart(2,'0')}`;
+  }
+
+  function getPrevMonths(ym, n) {
+    const ms = [];
+    let [y, m] = ym.split('-').map(Number);
+    for (let i = 0; i < n; i++) {
+      ms.unshift(`${y}-${String(m).padStart(2,'0')}`);
+      if (--m === 0) { m = 12; y--; }
+    }
+    return ms;
+  }
+
+  // ── Chart ──
+
+  async function loadChart() {
+    try {
+      const months = getPrevMonths(currentMonth, 6);
+      const all = await sbFetch('budget_api_usage',
+        `select=month,cost_usd&month=gte.${months[0]}&month=lte.${months[5]}&order=month.asc`
+      );
+      const apiByMonth = {};
+      for (const r of all) apiByMonth[r.month] = (apiByMonth[r.month] || 0) + parseFloat(r.cost_usd || 0);
+
+      const subsTotal = subscriptions.filter(s => s.active).reduce((s, x) => s + parseFloat(x.amount), 0);
+      let max = 0;
+      for (const m of months) { const t = subsTotal + (apiByMonth[m] || 0); if (t > max) max = t; }
+      if (max === 0) max = 100;
+
+      let h = '';
+      for (const m of months) {
+        const api = apiByMonth[m] || 0;
+        const sH = Math.max(2, (subsTotal / max) * 140);
+        const aH = Math.max(api > 0 ? 2 : 0, (api / max) * 140);
+        const label = m.split('-')[1] + '/' + m.split('-')[0].slice(2);
+        h += `<div class="chart-bar-group">
+          <div style="display:flex;flex-direction:column-reverse;align-items:center;height:160px;justify-content:flex-start">
+            <div class="chart-bar chart-bar-subs" style="height:${sH}px" title="Subs: ${fmtUsd(subsTotal)}"></div>
+            <div class="chart-bar chart-bar-api" style="height:${aH}px" title="API: ${fmtUsd(api)}"></div>
+          </div>
+          <div class="chart-label">${label}</div>
+        </div>`;
+      }
+      document.getElementById('chartContainer').innerHTML = h;
+    } catch (e) {
+      document.getElementById('chartContainer').innerHTML = '<div class="loading-state">Erreur graphique</div>';
+    }
+  }
+
+  // ── Hero ──
+
+  function updateHero() {
+    const subsTotal = subscriptions.filter(s => s.active).reduce((s, x) => s + parseFloat(x.amount), 0);
+    const apiTotal = apiUsage.reduce((s, r) => s + parseFloat(r.cost_usd || 0), 0);
+    const total = subsTotal + apiTotal;
+    const limit = parseFloat(config.monthly_limit) || 200;
+    const pct = Math.min((total / limit) * 100, 100);
+    const remaining = Math.max(limit - total, 0);
+
+    document.getElementById('heroAmount').textContent = fmtUsd(total);
+    document.getElementById('heroLimit').textContent = fmtUsd(limit);
+    document.getElementById('breakdownSubs').textContent = fmtUsd(subsTotal);
+    document.getElementById('breakdownApi').textContent = fmtUsd(apiTotal);
+    document.getElementById('breakdownRemaining').textContent = fmtUsd(remaining);
+
+    const bar = document.getElementById('budgetBar');
+    bar.style.width = pct + '%';
+    bar.className = 'budget-bar-fill ' + (pct < 50 ? 'green' : pct < 80 ? 'orange' : 'red');
+
+    const alert = document.getElementById('alertBanner');
+    if (pct >= 90) {
+      document.getElementById('alertText').textContent = `${fmt(pct,0)}% du budget consomme (${fmtUsd(total)} / ${fmtUsd(limit)})`;
+      alert.classList.add('show');
+    } else {
+      alert.classList.remove('show');
+    }
+
+    document.getElementById('topbarMeta').textContent = `${currentMonth} — ${fmt(pct,0)}%`;
+  }
+
+  // ── Init ──
+
+  async function loadAll() {
+    await loadConfig();
+    await loadSubscriptions();
+    // Auto-sync API data from agent_logs
+    await doSync().catch(e => console.warn('Auto-sync:', e));
+    await loadApiUsage();
+    updateHero();
+    await loadChart();
+  }
+
+  loadAll();
+</script>
+
+</body>
+</html>

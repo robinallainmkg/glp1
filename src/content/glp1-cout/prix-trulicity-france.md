@@ -18,7 +18,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Prix Trulicity 2025 : Coût par Dosage et Remboursement Mutuelle",
-  "description": "Prix Trulicity en pharmacie : 85€ par mois. Coût réel après remboursement 65%.",
+  "description": "Prix Trulicity en pharmacie : ~81€ par mois. Coût réel après remboursement 65% (DT2 uniquement).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-trulicity-france",
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
@@ -38,7 +38,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
     "activeIngredient": "Dulaglutide",
     "manufacturer": {
       "@type": "Organization",
-      "name": "Novo Nordisk"
+      "name": "Eli Lilly"
     }
   },
   "mainEntity": {
@@ -49,7 +49,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
         "name": "Quel est le prix de Trulicity en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel de Trulicity en pharmacie est de 85€ par mois. Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+          "text": "Le prix officiel de Trulicity en pharmacie est d'environ 81€ par mois. Après remboursement (65% Sécurité Sociale pour le diabète de type 2 + mutuelle), le coût réel patient varie selon votre couverture. Un formulaire obligatoire est requis depuis février 2025."
         }
       },
       {
@@ -73,21 +73,22 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 | Dosage | Prix par stylo | Prix mensuel estimé |
 |--------|----------------|-------------------|
-| 0.75 mg | 85 € | 85 € |
-| 1.5 mg | 85 € | 85 € |
-| 3 mg | 85 € | 85 € |
-| 4.5 mg | 85 € | 85 € |
+| 0.75 mg | ~81 € | ~81 € |
+| 1.5 mg | ~81 € | ~81 € |
+| 3 mg | ~81 € | ~81 € |
+| 4.5 mg | ~81 € | ~81 € |
 
-**Prix moyen mensuel** : 85 € (prix fixe quelle que soit la dose)
+**Prix moyen mensuel** : ~81 € (prix fixe quelle que soit la dose)
 
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Trulicity | 85 € | 65% |
-| Ozempic | 90-120 € | 65% |
-| Wegovy | 120-140 € | 65% |
-| Saxenda | 70-80 € | 65% |
+| Trulicity | ~81 € | 65% (DT2 uniquement) |
+| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Wegovy | 169-360 € | Non remboursé |
+| Saxenda | 240-300 € | Non remboursé |
+| Mounjaro | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -96,16 +97,18 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 **Trulicity est remboursé à 65%** par l'Assurance Maladie sous conditions :
 
 ✅ **Prescription médicale obligatoire**
-✅ **Diabète de type 2 confirmé**
+✅ **Diabète de type 2 confirmé** (remboursement DT2 uniquement)
 ✅ **Échec des antidiabétiques oraux**
+✅ **Formulaire de demande obligatoire** (depuis février 2025)
 ✅ **Traitement ≥ 3 mois** avec suivi médical
 
 ### Démarches pour le remboursement
 
 1. **Ordonnance médicale** : Prescription par endocrinologue ou diabétologue
-2. **Carte Vitale** : Présentation en pharmacie
-3. **Remboursement automatique** : 65% du prix réglementé
-4. **Tiers payant** : Possible selon votre mutuelle
+2. **Formulaire obligatoire** : Remplir le formulaire de demande (obligatoire depuis février 2025)
+3. **Carte Vitale** : Présentation en pharmacie
+4. **Remboursement automatique** : 65% du prix réglementé
+5. **Tiers payant** : Possible selon votre mutuelle
 
 ## 🏥 Couverture Mutuelle Santé
 
@@ -199,17 +202,17 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 | Critère | Trulicity | Ozempic | Wegovy |
 |---------|---------|--------|---------|
-| Prix mensuel | 85 € | 90-120 € | 120-140 € |
+| Prix mensuel | ~81 € | 90-120 € | 169-360 € |
 | Perte poids moyenne | -10% | -15% | -20% |
-| Remboursement | 65% | 65% | 65% |
-| Rapport qualité/prix | Bon | Bon | Excellent |
+| Remboursement | 65% (DT2) | 65% (DT2) | Non remboursé |
+| Rapport qualité/prix | Bon | Bon | Coûteux |
 
 ## 📝 Conclusion
 
 **Trulicity offre un prix fixe avantageux** pour le diabète de type 2, avec un remboursement identique aux autres GLP-1.
 
 ### Points clés à retenir :
-- **Prix fixe** : 85 €/mois quelle que soit la dose
+- **Prix fixe** : ~81 €/mois quelle que soit la dose
 - **Remboursement Sécu** : 65%
 - **Mutuelle** : 15-30% supplémentaire
 - **Aides disponibles** : Pour revenus modestes

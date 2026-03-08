@@ -42,9 +42,9 @@ Les agonistes GLP-1 réduisent naturellement l'apport calorique de 200-500 kcal/
 ## Prix, disponibilité et variations en France
 
 ### Coût par calorie économisée
-- **Ozempic®** : 73€/mois → ~0,40€ par 100 kcal réduites
-- **Trulicity®** : 85€/mois → ~0,45€ par 100 kcal réduites  
-- **Saxenda®** : 89€/mois → ~0,35€ par 100 kcal réduites
+- **Ozempic®** : ~59,90€/stylo (remboursé 65 % DT2) → ~0,33€ par 100 kcal réduites
+- **Trulicity®** : ~81€/mois (remboursé 65 % DT2) → ~0,43€ par 100 kcal réduites
+- **Saxenda®** : 240-300€/mois (non remboursé) → ~1,30€ par 100 kcal réduites
 
 
 

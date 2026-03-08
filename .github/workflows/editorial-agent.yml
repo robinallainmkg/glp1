@@ -44,7 +44,7 @@ jobs:
             ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
           fi
           if [ "${{ github.event.inputs.id }}" != "" ]; then
-            ARGS="$ARGS --id ${{ github.event.inputs.id }}"
+            ARGS="$ARGS --ticket-id ${{ github.event.inputs.id }}"
           fi
           node scripts/editorial-agent.mjs $ARGS
         env:

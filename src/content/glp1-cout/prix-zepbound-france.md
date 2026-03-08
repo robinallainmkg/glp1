@@ -47,7 +47,7 @@ affiliateConfig:
     "activeIngredient": "Tirzepatide",
     "manufacturer": {
       "@type": "Organization",
-      "name": "Novo Nordisk"
+      "name": "Eli Lilly"
     }
   },
   "mainEntity": {
@@ -76,27 +76,28 @@ affiliateConfig:
 
 # Prix Zepbound France : Guide Complet 2025
 
-**Zepbound** (tirzepatide) est le dernier traitement révolutionnaire pour la perte de poids, désormais disponible en France. Découvrez tous les détails sur son prix, son remboursement et son accessibilité.
+> **ATTENTION : Zepbound n'existe pas en France.** Le tirzépatide est commercialisé en Europe sous le nom **Mounjaro** (par Eli Lilly), pas sous le nom Zepbound (nom utilisé aux États-Unis uniquement). En France, le traitement équivalent est **Mounjaro**, commercialisé depuis novembre 2024 au prix de **230-440 EUR/mois** (prix libre, non remboursé par la Sécurité Sociale).
 
-## Prix de Zepbound en France
+**Zepbound** est le nom commercial américain du tirzépatide (Eli Lilly). **En France et en Europe, ce même principe actif est commercialisé sous le nom Mounjaro.** Les informations ci-dessous concernent donc le Mounjaro (tirzépatide) tel qu'il est disponible en France.
 
-### Tarifs Officiels 2025
+## Prix du Mounjaro (tirzépatide) en France
 
-| Dosage | Prix Pharmacie | Prix Public | Différence |
-|--------|----------------|-------------|------------|
-| **2.5 mg** | 289€ | 312€ | +8% |
-| **5 mg** | 289€ | 312€ | +8% |
-| **7.5 mg** | 289€ | 312€ | +8% |
-| **10 mg** | 289€ | 312€ | +8% |
-| **12.5 mg** | 289€ | 312€ | +8% |
-| **15 mg** | 289€ | 312€ | +8% |
+> **Rappel** : Zepbound n'existe pas en France. Le tirzépatide est vendu sous le nom **Mounjaro** (Eli Lilly).
 
-*Prix pour 4 stylos préremplis (traitement 1 mois)*
+### Tarifs Mounjaro 2025 (prix libre, non réglementé)
 
-### Évolution Tarifaire
-- **Lancement** : 312€/mois (janvier 2025)
-- **Objectif fin 2025** : Stabilisation autour de 280-300€
-- **Prévision 2026** : Possible baisse avec la concurrence
+| Dosage | Prix mensuel estimé |
+|--------|-------------------|
+| **2.5 mg** | 230-290 € |
+| **5 mg** | 250-330 € |
+| **7.5 mg** | 280-370 € |
+| **10 mg** | 300-400 € |
+| **12.5 mg** | 330-420 € |
+| **15 mg** | 350-440 € |
+
+**Prix moyen mensuel** : 230-440 €/mois selon le dosage (prix libre, variable selon les pharmacies)
+
+*Mounjaro est commercialisé en France depuis novembre 2024. Les prix ne sont pas réglementés par les autorités de santé.*
 
 ## Remboursement Sécurité Sociale
 
@@ -118,25 +119,20 @@ affiliateConfig:
 ### Taux de Remboursement
 
 **Situation Actuelle (2025) :**
-- **Sécurité Sociale** : Non remboursé
-- **ALD Diabète** : Remboursement possible à 100%
-- **Statut** : En cours d'évaluation HAS
-
-**Prévisions Remboursement :**
-- **Q3 2025** : Décision HAS attendue
-- **Taux probable** : 65% (médicament innovation)
-- **Reste à charge** : ~110€/mois
+- **Sécurité Sociale** : **NON remboursé**
+- **Mounjaro** (équivalent de Zepbound en France) : **NON remboursé** par la Sécurité Sociale
+- **Coût intégralement à la charge du patient** : 230-440€/mois
 
 ## Comparaison avec Autres Traitements
 
 ### Prix Relatif des GLP-1
 
-| Traitement | Prix/mois | Efficacité Poids | Rapport Qualité/Prix |
-|------------|-----------|------------------|---------------------|
-| **Zepbound** | 312€ | 🔥🔥🔥🔥🔥 | ⭐⭐⭐⭐ |
-| **Wegovy** | 120-140€ | 🔥🔥🔥🔥 | ⭐⭐⭐⭐ |
-| **Saxenda** | 165€ | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ |
-| **Ozempic** | 78€ | 🔥🔥🔥🔥 | ⭐⭐⭐⭐⭐ |
+| Traitement | Prix/mois | Remboursement | Efficacité Poids |
+|------------|-----------|---------------|------------------|
+| **Mounjaro** (tirzépatide) | 230-440€ | Non remboursé | Très élevée (-21%) |
+| **Wegovy** | 169-360€ | Non remboursé | Élevée (-15 à -20%) |
+| **Saxenda** | 240-300€ | Non remboursé | Modérée (-8%) |
+| **Ozempic** | 90-120€ | 65% (DT2 uniquement) | Élevée (-15%) |
 
 ### Analyse Coût-Efficacité
 - **Zepbound** : Plus cher mais plus efficace (-21% poids)
@@ -148,10 +144,11 @@ affiliateConfig:
 ### Réseau de Distribution
 
 **Pharmacies Autorisées :**
-- **Grandes surfaces** : Leclerc, Carrefour, Auchan
-- **Chaînes spécialisées** : Giphar, Pharmavie
+- **Pharmacies de ville** : Sur ordonnance uniquement
 - **Pharmacies hospitalières** : CHU, centres diabète
-- **En ligne** : Pharmacies agréées uniquement
+- **En ligne** : Pharmacies agréées uniquement (avec ordonnance)
+
+⚠️ **Attention** : Mounjaro (tirzépatide) est un médicament de prescription obligatoire. Il n'est **PAS vendu en grandes surfaces** (Leclerc, Carrefour, etc.). Seules les pharmacies agréées peuvent délivrer ce traitement.
 
 ### Stock et Approvisionnement
 - **Disponibilité** : Limitée en lancement
@@ -178,14 +175,9 @@ affiliateConfig:
 - **Durée traitement** : 12 mois optimum
 - **Pause thérapeutique** : Évaluation 6 mois
 
-### Comparaison Pharmacies
+### Pharmacies
 
-| Enseigne | Prix Zepbound | Services + | Délai |
-|----------|---------------|------------|-------|
-| **Leclerc** | 312€ | Livraison gratuite | 24h |
-| **Carrefour** | 312€ | Click & collect | 48h |
-| **Giphar** | 315€ | Conseil pharmacien | 24h |
-| **Pharmavie** | 318€ | Programme fidélité | 48h |
+Mounjaro est disponible **uniquement en pharmacie** sur ordonnance. Les prix peuvent varier d'une pharmacie à l'autre car il s'agit d'un prix libre (non réglementé). N'hésitez pas à comparer les tarifs entre plusieurs pharmacies de votre secteur.
 
 ## Aide Financière Disponible
 
@@ -222,11 +214,11 @@ affiliateConfig:
 
 ### Projections 2025-2027
 
-| Année | Prix Prévu | Remboursement | Reste à Charge |
+| Année | Prix Mounjaro | Remboursement | Reste à Charge |
 |-------|------------|---------------|----------------|
-| **2025** | 312€ | 0% | 312€ |
-| **2026** | 295€ | 65% | 103€ |
-| **2027** | 280€ | 65% | 98€ |
+| **2025** | 230-440€ | Non remboursé | 230-440€ |
+| **2026** | À confirmer | Non remboursé | Intégralité |
+| **2027** | À confirmer | Évaluation HAS possible | À déterminer |
 
 ## Conseils Pratiques
 
@@ -265,9 +257,9 @@ R: Variable selon contrat, vérifier avec sa mutuelle.
 
 ## Conclusion
 
-**Zepbound** représente un investissement santé significatif avec un coût de **312€/mois**. Bien que non remboursé actuellement, plusieurs dispositifs d'aide existent et le remboursement partiel est attendu fin 2025.
+**Rappel important** : Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom **Mounjaro** (Eli Lilly) depuis novembre 2024, au prix libre de **230-440€/mois**. Ce traitement n'est **pas remboursé** par la Sécurité Sociale.
 
-**L'efficacité supérieure** (-21% de perte de poids) peut justifier ce surcoût par rapport aux alternatives. Une évaluation médico-économique personnalisée est recommandée pour chaque patient.
+**L'efficacité supérieure** (-21% de perte de poids) peut justifier ce coût pour certains patients. Une évaluation médico-économique personnalisée est recommandée avec votre médecin.
 
 ---
 

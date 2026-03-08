@@ -371,6 +371,54 @@ import { supabaseConfig } from '../../lib/supabase';
     .empty-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
     .loading-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
 
+    /* Agent execution phases */
+    .agent-phase {
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .agent-phase-working {
+      background: var(--blue-light);
+      border: 1px solid var(--blue-border);
+    }
+    .agent-phase-success {
+      background: var(--ok-light);
+      border: 1px solid var(--ok-border);
+    }
+    .agent-phase-error {
+      background: var(--urgent-light);
+      border: 1px solid var(--urgent-border);
+    }
+    .agent-phase-title {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .agent-phase-working .agent-phase-title { color: var(--blue); }
+    .agent-phase-success .agent-phase-title { color: var(--ok); }
+    .agent-phase-error .agent-phase-title { color: var(--urgent); }
+    .agent-phase-detail {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .agent-phase-detail a { color: var(--blue); text-decoration: none; }
+    .agent-phase-detail a:hover { text-decoration: underline; }
+    .agent-phase-detail strong { color: var(--text2); }
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--blue-border);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
     @media (max-width: 1024px) {
       .admin-layout { margin-left: 0; padding-top: 56px; }
     }
@@ -529,16 +577,28 @@ import { supabaseConfig } from '../../lib/supabase';
     toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
   }
 
+  // ── Helpers URL ──
+  function buildArticleUrl(slug) {
+    if (!slug) return '';
+    // Slugs in DB: "collection/article-name" → URL: "/collections/collection/article-name/"
+    // Astro pages: "astro-pages/path" → URL: "/path/"
+    if (slug.startsWith('astro-pages/')) return '/' + slug.replace('astro-pages/', '') + '/';
+    return '/collections/' + slug + '/';
+  }
+
   // ── Render ticket a deployer ──
-  function renderPendingCard(t) {
-    const articleUrl = t.slug ? '/' + t.slug + '/' : '';
+  function renderPendingCard(t, agentLog) {
+    const articleUrl = buildArticleUrl(t.slug);
+    const hasError = agentLog && agentLog.status === 'error';
+    const isRunning = agentLog && agentLog.status === 'started';
+
     return `
       <div class="ticket-card" data-ticket-id="${t.id}">
         <div class="ticket-card-header">
           <div class="urgence-dot ${urgenceClass(t.urgence)}"></div>
           <div class="ticket-type-badge ${typeClass(t.urgence)}">${urgIcon(t.urgence)} ${escapeHtml(typeLabel(t.ticket_type))}</div>
           <div class="ticket-card-title">${escapeHtml(t.title || t.claim_original || 'Correction')}</div>
-          <div class="ticket-status status-ready">A deployer</div>
+          <div class="ticket-status status-ready">${isRunning ? 'Agent en cours...' : 'A deployer'}</div>
         </div>
         <div class="ticket-card-body">
           ${articleUrl ? `<a class="article-link" href="${articleUrl}" target="_blank" rel="noopener">\u{1F517} Voir l'article : ${escapeHtml(t.slug)}</a>` : ''}
@@ -558,9 +618,16 @@ import { supabaseConfig } from '../../lib/supabase';
           ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
           ${t.human_note ? `<div class="human-note-block"><strong>Note :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
 
+          ${hasError ? `<div style="background:var(--urgent-light);border:1px solid var(--urgent-border);border-radius:6px;padding:8px 10px;font-size:11px;color:var(--urgent);line-height:1.4">
+            <strong>Derniere erreur agent :</strong> ${escapeHtml(agentLog.error || 'Erreur inconnue')}
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;margin-top:4px;opacity:0.7">${formatDate(agentLog.created_at)}</div>
+          </div>` : ''}
+
+          <div id="agent-phase-${t.id}"></div>
+
           <div class="ticket-actions">
             <span class="human-label">\u{1F527} Action :</span>
-            <button class="btn btn-ok" onclick="handleDeploy('${t.id}', this)">\u2713 Deployer en production</button>
+            <button class="btn btn-ok" onclick="handleRunAgent('${t.id}', this)">\u{1F680} Lancer l'agent integration</button>
             <button class="btn btn-purple" onclick="openNote('${t.id}')">\u21A9 Renvoyer a l'editorial</button>
           </div>
         </div>
@@ -569,8 +636,13 @@ import { supabaseConfig } from '../../lib/supabase';
   }
 
   // ── Render ticket deploye (historique, collapsed) ──
-  function renderDeployedCard(t, index) {
-    const articleUrl = t.slug ? '/' + t.slug + '/' : '';
+  function renderDeployedCard(t, index, agentLog) {
+    const articleUrl = buildArticleUrl(t.slug);
+    const prUrl = agentLog?.metadata?.pr_url || null;
+    const branch = agentLog?.metadata?.branch || null;
+    const file = agentLog?.metadata?.file || null;
+    const durationSec = agentLog?.duration_ms ? Math.round(agentLog.duration_ms / 1000) : null;
+
     return `
       <div class="ticket-card ${index === 0 ? 'open' : ''}" id="deploy-${t.id}">
         <div class="ticket-card-header clickable" onclick="document.getElementById('deploy-${t.id}').classList.toggle('open')">
@@ -604,10 +676,14 @@ import { supabaseConfig } from '../../lib/supabase';
               <div class="step-dot dot-done">\u2713</div>
               <div class="step-body">
                 <div class="step-title">Integration : deploye en production</div>
-                <div class="step-time">${formatDate(t.deployed_at || t.updated_at)}</div>
+                ${file ? `<div class="step-desc">Fichier : ${escapeHtml(file)}</div>` : ''}
+                ${branch ? `<div class="step-desc">Branche : ${escapeHtml(branch)}</div>` : ''}
+                <div class="step-time">${formatDate(t.deployed_at || t.updated_at)}${durationSec !== null ? ' \u00b7 ' + durationSec + 's' : ''}</div>
               </div>
             </div>
           </div>
+
+          ${prUrl ? `<a class="article-link" href="${escapeHtml(prUrl)}" target="_blank" rel="noopener" style="background:var(--ok-light);border-color:var(--ok-border);color:var(--ok)">\u{1F517} Voir la Pull Request sur GitHub</a>` : ''}
 
           <div class="final-diff">
             <div class="diff-block diff-before">
@@ -621,28 +697,216 @@ import { supabaseConfig } from '../../lib/supabase';
           </div>
 
           ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
+
+          <div class="ticket-actions" style="margin-top:10px">
+            <button class="btn" style="background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-border);font-size:10px;padding:4px 10px" onclick="handleRedeploy('${t.id}', this)">🔄 Redéployer</button>
+          </div>
+          <div id="agent-phase-${t.id}"></div>
         </div>
       </div>
     `;
   }
 
-  // ── Actions ──
-  window.handleDeploy = async function(ticketId, button) {
-    button.disabled = true;
-    button.textContent = '...';
-    const row = button.closest('.ticket-actions');
-    if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = true);
+  // ── Actions : Agent Integration (mode local via Astro dev server) ──
+  const DEPLOY_URL = '/__deploy';
+  const POLL_INTERVAL = 3000;       // 3 secondes
+  const POLL_MAX_DURATION = 120000; // 2 minutes
+
+  function renderAgentPhase(containerId, phase, data) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+
+    if (phase === 'working') {
+      el.innerHTML = `
+        <div class="agent-phase agent-phase-working">
+          <div class="agent-phase-title"><span class="spinner"></span> Deploiement en cours...</div>
+          <div class="agent-phase-detail">
+            L'agent modifie le fichier localement.
+            ${data?.elapsed ? `<br>Temps ecoule : ${Math.round(data.elapsed / 1000)}s` : ''}
+          </div>
+        </div>
+      `;
+    } else if (phase === 'success') {
+      const m = data?.metadata || {};
+      el.innerHTML = `
+        <div class="agent-phase agent-phase-success">
+          <div class="agent-phase-title">\u2705 Fichier modifie avec succes</div>
+          <div class="agent-phase-detail">
+            ${m.file ? `Fichier : <strong>${escapeHtml(m.file)}</strong><br>` : ''}
+            ${data?.duration_ms ? `Duree : ${Math.round(data.duration_ms / 1000)}s<br>` : ''}
+            ${m.local ? 'Mode local \u2014 pensez a <strong>git add + commit + push</strong> pour deployer.' : ''}
+            ${m.pr_url ? `Pull Request : <a href="${escapeHtml(m.pr_url)}" target="_blank" rel="noopener">${escapeHtml(m.pr_url)}</a>` : ''}
+          </div>
+        </div>
+      `;
+    } else if (phase === 'error') {
+      el.innerHTML = `
+        <div class="agent-phase agent-phase-error">
+          <div class="agent-phase-title">\u274C Erreur agent</div>
+          <div class="agent-phase-detail">
+            ${escapeHtml(data?.error || 'Erreur inconnue')}
+          </div>
+        </div>
+      `;
+    } else if (phase === 'timeout') {
+      el.innerHTML = `
+        <div class="agent-phase agent-phase-working">
+          <div class="agent-phase-title">\u23F3 Pas de resultat detecte</div>
+          <div class="agent-phase-detail">
+            L'agent n'a pas encore termine. Verifiez le terminal du serveur local.<br>
+            Rafraichissez la page pour voir le resultat.
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  async function pollAgentResult(ticketId, startTime) {
+    const containerId = `agent-phase-${ticketId}`;
+    const elapsed = Date.now() - startTime;
+
+    if (elapsed > POLL_MAX_DURATION) {
+      renderAgentPhase(containerId, 'timeout');
+      return;
+    }
+
+    renderAgentPhase(containerId, 'working', { elapsed });
 
     try {
-      await updateTicket(ticketId, { statut: 'deployed', deployed_at: new Date().toISOString() });
-      if (row) row.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Deploye en production</span>';
-      const statusEl = document.querySelector(`[data-ticket-id="${ticketId}"] .ticket-status`);
-      if (statusEl) { statusEl.className = 'ticket-status status-deployed'; statusEl.textContent = '\u2713 Deploye'; }
-      showToast('\u2713 Deploye en production', 'Le remplacement sera effectue au prochain build');
+      const logs = await supabaseFetch(
+        'agent_logs',
+        'select=*&agent_type=eq.integration&order=created_at.desc&limit=20'
+      );
+
+      const recentLog = logs.find(l => {
+        const tid = l.metadata?.ticket_id;
+        const logTime = new Date(l.created_at).getTime();
+        return tid === ticketId && logTime > startTime - 10000;
+      });
+
+      if (recentLog) {
+        if (recentLog.status === 'success') {
+          renderAgentPhase(containerId, 'success', recentLog);
+          const card = document.querySelector(`[data-ticket-id="${ticketId}"]`);
+          if (card) {
+            const statusEl = card.querySelector('.ticket-status');
+            if (statusEl) {
+              statusEl.className = 'ticket-status status-deployed';
+              statusEl.textContent = '\u2713 Deploye';
+            }
+            const actionsEl = card.querySelector('.ticket-actions');
+            if (actionsEl) {
+              actionsEl.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Fichier modifie \u2014 voir le rapport ci-dessus</span>';
+            }
+          }
+          showToast('\u2705 Fichier modifie', recentLog.metadata?.file || '');
+          return;
+        } else if (recentLog.status === 'error') {
+          renderAgentPhase(containerId, 'error', recentLog);
+          const btn = document.querySelector(`[data-ticket-id="${ticketId}"] .btn-ok`);
+          if (btn) { btn.disabled = false; btn.innerHTML = '\u{1F680} Relancer'; }
+          showToast('\u274C Erreur agent', recentLog.error || '');
+          return;
+        }
+      }
     } catch (err) {
-      if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = false);
-      button.textContent = '\u2713 Deployer en production';
-      showToast('Erreur: ' + err.message, '');
+      console.error('Erreur polling:', err);
+    }
+
+    setTimeout(() => pollAgentResult(ticketId, startTime), POLL_INTERVAL);
+  }
+
+  window.handleRunAgent = async function(ticketId, button) {
+    button.disabled = true;
+    button.innerHTML = '<span class="spinner" style="width:12px;height:12px;border-width:1.5px"></span> Deploiement...';
+
+    const card = document.querySelector(`[data-ticket-id="${ticketId}"]`);
+    if (card) {
+      const statusEl = card.querySelector('.ticket-status');
+      if (statusEl) {
+        statusEl.className = 'ticket-status status-ready';
+        statusEl.textContent = 'Deploiement...';
+      }
+    }
+
+    const startTime = Date.now();
+    renderAgentPhase(`agent-phase-${ticketId}`, 'working', { elapsed: 0 });
+
+    // Call local integration server
+    try {
+      const resp = await fetch(`${DEPLOY_URL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ticket_id: ticketId })
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({ error: `HTTP ${resp.status}` }));
+        throw new Error(err.error || `Erreur serveur (${resp.status})`);
+      }
+
+      showToast('🚀 Agent lance', 'Deploiement en cours...');
+      // Poll for result
+      setTimeout(() => pollAgentResult(ticketId, startTime), POLL_INTERVAL);
+
+    } catch (err) {
+      if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
+        renderAgentPhase(`agent-phase-${ticketId}`, 'error', {
+          error: 'Connexion echouee. Verifiez que npm run dev est bien lance.'
+        });
+        showToast('❌ Erreur deploiement', 'Verifiez la console du dev server');
+      } else {
+        renderAgentPhase(`agent-phase-${ticketId}`, 'error', { error: err.message });
+        showToast('❌ Erreur', err.message);
+      }
+      button.disabled = false;
+      button.innerHTML = '🚀 Relancer';
+    }
+  };
+
+  window.handleRedeploy = async function(ticketId, button) {
+    button.disabled = true;
+    button.textContent = '⏳ Preparation...';
+
+    try {
+      // Reset ticket to ready_to_deploy so the agent can pick it up
+      await updateTicket(ticketId, {
+        statut: 'ready_to_deploy',
+        deployed_at: null
+      });
+
+      // Then launch the agent
+      const fakeBtn = { disabled: false, innerHTML: '' };
+      Object.defineProperty(fakeBtn, 'disabled', { set: () => {}, get: () => false });
+      Object.defineProperty(fakeBtn, 'innerHTML', { set: () => {}, get: () => '' });
+
+      const startTime = Date.now();
+      renderAgentPhase(`agent-phase-${ticketId}`, 'working', { elapsed: 0 });
+
+      const resp = await fetch(`${DEPLOY_URL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ticket_id: ticketId })
+      });
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({ error: `HTTP ${resp.status}` }));
+        throw new Error(err.error || `Erreur serveur (${resp.status})`);
+      }
+
+      showToast('🚀 Redeploiement lance', '');
+      setTimeout(() => pollAgentResult(ticketId, startTime), POLL_INTERVAL);
+
+    } catch (err) {
+      if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
+        renderAgentPhase(`agent-phase-${ticketId}`, 'error', {
+          error: 'Connexion echouee. Verifiez que npm run dev est bien lance.'
+        });
+      } else {
+        renderAgentPhase(`agent-phase-${ticketId}`, 'error', { error: err.message });
+      }
+      button.disabled = false;
+      button.textContent = '🔄 Redéployer';
     }
   };
 
@@ -656,10 +920,25 @@ import { supabaseConfig } from '../../lib/supabase';
   // ── Load ──
   window.loadDashboard = async function() {
     try {
-      const tickets = await supabaseFetch(
-        'correction_tickets',
-        'select=*&statut=in.(ready_to_deploy,deployed)&order=updated_at.desc&limit=200'
-      );
+      const [tickets, logs] = await Promise.all([
+        supabaseFetch(
+          'correction_tickets',
+          'select=*&statut=in.(ready_to_deploy,deployed)&order=updated_at.desc&limit=200'
+        ),
+        supabaseFetch(
+          'agent_logs',
+          'select=*&agent_type=eq.integration&order=created_at.desc&limit=200'
+        )
+      ]);
+
+      // Index logs by ticket_id (most recent per ticket)
+      const logsByTicket = new Map();
+      for (const log of logs) {
+        const tid = log.metadata?.ticket_id;
+        if (tid && !logsByTicket.has(tid)) {
+          logsByTicket.set(tid, log);
+        }
+      }
 
       const pending = tickets.filter(t => t.statut === 'ready_to_deploy');
       const deployed = tickets.filter(t => t.statut === 'deployed');
@@ -675,7 +954,12 @@ import { supabaseConfig } from '../../lib/supabase';
       const types = new Set(deployed.map(t => t.ticket_type));
       document.getElementById('stat-types').textContent = types.size;
 
-      document.getElementById('topbar-meta').textContent = `${pending.length} a deployer \u00b7 ${deployed.length} deploye(s)`;
+      // Last agent run
+      const lastLog = logs.length > 0 ? logs[0] : null;
+      const lastRunInfo = lastLog
+        ? `Dernier run : ${formatDate(lastLog.created_at)} (${lastLog.status})`
+        : 'Agent jamais lance';
+      document.getElementById('topbar-meta').textContent = `${pending.length} a deployer \u00b7 ${deployed.length} deploye(s) \u00b7 ${lastRunInfo}`;
 
       const mainEl = document.getElementById('main-content');
 
@@ -695,13 +979,17 @@ import { supabaseConfig } from '../../lib/supabase';
       // Pending deployment
       if (pending.length > 0) {
         html += `<div class="section-head"><div class="section-title" style="color:var(--blue)">\u{1F527} A deployer</div><div class="section-sub">${pending.length} correction(s) en attente</div></div>`;
-        html += pending.map(t => renderPendingCard(t)).join('');
+        html += `<div style="background:var(--blue-light);border:1px solid var(--blue-border);border-radius:8px;padding:10px 14px;font-size:11px;color:var(--blue);margin-bottom:14px;line-height:1.5">
+          Cliquez sur <strong>🚀 Lancer l'agent integration</strong> pour appliquer le correctif au fichier localement.
+          <br><span style="opacity:0.7">Pensez ensuite a <code>git add</code> + <code>commit</code> + <code>push production</code> pour deployer sur Hostinger.</span>
+        </div>`;
+        html += pending.map(t => renderPendingCard(t, logsByTicket.get(t.id))).join('');
       }
 
       // Deployed history
       if (deployed.length > 0) {
         html += `<div class="section-head" style="margin-top:20px"><div class="section-title" style="color:var(--ok)">\u2713 Historique des deploiements</div><div class="section-sub">${deployed.length} correction(s)</div></div>`;
-        html += deployed.map((t, i) => renderDeployedCard(t, i)).join('');
+        html += deployed.map((t, i) => renderDeployedCard(t, i, logsByTicket.get(t.id))).join('');
       }
 
       mainEl.innerHTML = html;

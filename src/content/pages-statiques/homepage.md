@@ -30,17 +30,17 @@ Les **agonistes du récepteur GLP-1** (Glucagon-Like Peptide-1) représentent un
 
 ### Médicaments Approuvés 2025
 
-| Traitement | Indication | Efficacité Poids | Prix/Mois |
-|------------|------------|------------------|-----------|
-| **Ozempic** | Diabète T2 | -12% à -15% | 78€ |
-| **Wegovy** | Obésité | -15% à -17% | 120-140€ |
-| **Saxenda** | Obésité | -8% à -12% | 165€ |
-| **Mounjaro** | Diabète T2 | -17% à -21% | 312€ |
-| **Trulicity** | Diabète T2 | -3% à -5% | 89€ |
-| **Victoza** | Diabète T2 | -3% à -6% | 95€ |
-| **Rybelsus** | Diabète T2 | -4% à -7% | 125€ |
+| Traitement | Indication | Efficacité Poids | Prix/Mois | Remboursement |
+|------------|------------|------------------|-----------|---------------|
+| **Ozempic** | Diabète T2 | -12% à -15% | ~59,90€/stylo | Remboursé 65% (DT2) |
+| **Wegovy** | Obésité | -15% à -17% | 169-360€ | NON remboursé |
+| **Saxenda** | Obésité | -8% à -12% | 240-300€ | NON remboursé |
+| **Mounjaro** | DT2 / Obésité | -17% à -21% | 230-440€ | NON remboursé |
+| **Trulicity** | Diabète T2 | -3% à -5% | ~81€ | Remboursé 65% (DT2) |
+| **Victoza** | Diabète T2 | -3% à -6% | ~60,26€ | Remboursé 65% (DT2) |
+| **Rybelsus** | Diabète T2 | -4% à -7% | 80-110€ | Remboursé 65% (DT2) |
 
-*Prix indicatifs, consultation médicale requise*
+*Prix indicatifs mars 2026. Le remboursement à 65% concerne uniquement l'indication diabète de type 2 (DT2) sur prescription. Les traitements indiqués pour l'obésité (Wegovy, Saxenda, Mounjaro) restent à la charge du patient. Mounjaro (tirzépatide) et Trulicity (dulaglutide) sont fabriqués par Eli Lilly. Consultation médicale requise.*
 
 ## 🏥 Nos Services Experts
 
@@ -218,4 +218,4 @@ Les informations de ce site sont à **titre informatif uniquement** et ne rempla
 
 **Consultez toujours** votre médecin avant de débuter, modifier ou arrêter un traitement. Respectez les **posologies prescrites** et signalez immédiatement tout effet indésirable grave.
 
-*Dernière mise à jour : Septembre 2025*
+*Dernière mise à jour : Mars 2026*

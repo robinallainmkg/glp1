@@ -33,6 +33,15 @@ const MODEL = 'claude-sonnet-4-20250514';
 const MAX_TOKENS = 4096;
 const SYSTEM_PROMPT_PATH = path.resolve(__dirname, '../n8n/prompts/editorial-system-prompt.md');
 
+// --- Charge .env si present (pour execution locale) ---
+const dotenvPath = path.join(PROJECT_ROOT, '.env');
+if (fs.existsSync(dotenvPath)) {
+  fs.readFileSync(dotenvPath, 'utf8').split('\n').forEach(line => {
+    const m = line.match(/^\s*([^#=]+?)\s*=\s*(.*?)\s*$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2];
+  });
+}
+
 // Parse CLI arguments
 const args = process.argv.slice(2);
 const limitIndex = args.indexOf('--limit');
@@ -100,7 +109,7 @@ async function findArticleFile(slug) {
 /**
  * Extrait le contexte autour de before_exact dans le fichier.
  */
-function extractContext(fileContent, beforeExact, contextLines = 10) {
+function extractContext(fileContent, beforeExact, contextLines = 15) {
   const idx = fileContent.indexOf(beforeExact);
   if (idx === -1) return null;
 
@@ -111,6 +120,35 @@ function extractContext(fileContent, beforeExact, contextLines = 10) {
   const linesAfter = afterText.split('\n').slice(0, contextLines).join('\n');
 
   return `${linesBefore}\n${beforeExact}\n${linesAfter}`;
+}
+
+/**
+ * Detecte le format du passage (liste, tableau, titre, paragraphe).
+ */
+function detectFormat(beforeExact) {
+  const trimmed = beforeExact.trimStart();
+  if (/^[-*]\s/.test(trimmed)) return 'un element de liste a puces';
+  if (/^\|/.test(trimmed)) return 'un element de tableau';
+  if (/^#{1,6}\s/.test(trimmed)) return 'un titre ou sous-titre';
+  return 'un paragraphe';
+}
+
+/**
+ * Extrait 2-3 phrases voisines pour donner un exemple du style de l'article.
+ */
+function extractStyleSample(fileContent, beforeExact) {
+  const idx = fileContent.indexOf(beforeExact);
+  if (idx === -1) return '';
+
+  const beforeText = fileContent.substring(0, idx);
+  const afterText = fileContent.substring(idx + beforeExact.length);
+
+  // Prendre quelques lignes non-vides avant et apres comme echantillon de style
+  const linesBefore = beforeText.split('\n').filter(l => l.trim().length > 20).slice(-2);
+  const linesAfter = afterText.split('\n').filter(l => l.trim().length > 20).slice(0, 2);
+
+  const samples = [...linesBefore, ...linesAfter].slice(0, 3);
+  return samples.length > 0 ? samples.join('\n') : '';
 }
 
 /**
@@ -178,6 +216,8 @@ async function processTicket(ticket) {
       }
     }
 
+    const styleSample = fileContent ? extractStyleSample(fileContent, ticket.before_exact) : '';
+
     const userMessage = `# Ticket de correction #${ticket.id.substring(0, 8)}
 
 **Article** : ${ticket.title}
@@ -220,6 +260,19 @@ ${context ? `## Contexte dans l'article (extrait autour du passage)
 \`\`\`markdown
 ${context}
 \`\`\`` : ''}
+
+## Format du passage
+
+Le passage a corriger est **${detectFormat(ticket.before_exact)}**.
+Adapte after_final au meme format tout en respectant les regles de redaction.
+
+${styleSample ? `## Style de l'article (exemples de phrases voisines)
+
+\`\`\`
+${styleSample}
+\`\`\`
+
+Aligne le ton et le niveau de detail de ta correction sur ce style.` : ''}
 
 ---
 

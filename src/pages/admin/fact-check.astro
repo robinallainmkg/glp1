@@ -707,6 +707,22 @@ import { supabaseConfig } from '../../lib/supabase';
     try {
       if (action === 'approve') {
         await updateTicket(ticketId, { statut: 'approved', reviewed_at: new Date().toISOString() });
+
+        // Declencher l'agent editorial immediatement via Edge Function
+        try {
+          await fetch(`${SUPABASE_URL}/functions/v1/trigger-agent`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ agent: 'editorial', ticket_id: ticketId })
+          });
+        } catch (triggerErr) {
+          // Pas bloquant : le cron editorial rattrapera au prochain passage
+          console.warn('Edge Function trigger-agent erreur (non bloquant):', triggerErr);
+        }
+
         if (actionRow) {
           actionRow.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye a l\'Agent Editorial</span>';
         }
@@ -715,7 +731,7 @@ import { supabaseConfig } from '../../lib/supabase';
           statusEl.className = 'ticket-status status-approved';
           statusEl.textContent = '\u2713 Approuve';
         }
-        showToast('\u270D\uFE0F Agent Editorial declenche', 'Redaction de after_final en cours');
+        showToast('\u270D\uFE0F Agent Editorial lance', 'Redaction de after_final en cours');
       } else if (action === 'reject') {
         await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
         if (actionRow) {

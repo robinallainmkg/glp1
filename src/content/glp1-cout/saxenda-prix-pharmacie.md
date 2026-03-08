@@ -47,84 +47,65 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Saxenda 6 mg/ml (stylo de 3 ml) :**
 
-* Prix public moyen : **189,90 €**
-* Prix pharmacie en ligne : **179,90 € à 189,90 €**
-* Durée du stylo : environ 6 jours
-* **Coût mensuel estimé : 949,50 €** (5 stylos/mois)
+* **Coût mensuel estimé : 240 à 300 €/mois** selon la pharmacie et le dosage
+* Saxenda n'est **pas remboursé** par la Sécurité Sociale
+* Le coût est entièrement à la charge du patient
 
 ### Comparaison de Prix par Pharmacie
 
-| Type de pharmacie            | Prix unitaire | Prix mensuel |
-| ---------------------------- | ------------- | ------------ |
-| **Pharmacie traditionnelle** | 189,90 €      | 949,50 €     |
-| **Pharmacie en ligne**       | 179,90 €      | 899,50 €     |
-| **Grande surface**           | 185,90 €      | 929,50 €     |
-| **Pharmacie hospitalière**   | 175,90 €      | 879,50 €     |
+| Type de pharmacie            | Coût mensuel estimé |
+| ---------------------------- | ------------------- |
+| **Pharmacie traditionnelle** | 260-300 €           |
+| **Pharmacie en ligne**       | 240-280 €           |
+| **Pharmacie hospitalière**   | 240-270 €           |
 
-*Économie potentielle : jusqu'à 70 €/mois en choisissant la bonne pharmacie*
+*Les prix varient selon les pharmacies. Saxenda n'est pas remboursé par la Sécurité Sociale.*
 
-## Remboursement Saxenda par la Sécurité Sociale
+## Remboursement Saxenda : situation actuelle
 
-### Conditions de Prise en Charge
+### Saxenda n'est pas remboursé par la Sécurité Sociale
 
-**Critères d'éligibilité 2025 :**
+**Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Le coût mensuel de 240 à 300€ est entièrement à la charge du patient.
+
+**Critères de prescription :**
 
 * IMC ≥ 30 kg/m² avec comorbidités (diabète, hypertension)
-* IMC ≥ 35 kg/m² sans comorbidités
-* Échec documenté de prise en charge diététique (6 mois minimum)
-* Prescription initiale par endocrinologue ou diabétologue
+* IMC ≥ 27 kg/m² avec comorbidités
+* Prescription par endocrinologue, diabétologue ou médecin nutritionniste
 
-### Taux de Remboursement
+### Prise en charge par les mutuelles
 
-**Remboursement Sécurité Sociale :**
+Certaines mutuelles complémentaires proposent une prise en charge partielle :
 
-* **Taux standard : 65%** du prix de base
-* Prix de base retenu : 175,90 €
-* Remboursement SS : 114,34 €
-* **Reste à charge : 75,56 € par stylo**
+* Forfait médicaments non remboursés : 50 à 200€ par an
+* Garantie innovation médicale : jusqu'à 500€ par an
+* Contrats spécialisés : remboursement partiel variable
 
-**Coût mensuel après remboursement SS :**
-
-* 5 stylos × 75,56 € = **377,80 €/mois**
-
-### Remboursement Mutuelle
-
-**Complémentaires santé :**
-
-* Niveau 1 : +15% = 26,39 €/stylo
-* Niveau 2 : +35% = 61,57 €/stylo
-* Niveau 3 : +100% = 75,56 €/stylo (remboursement total)
-
-**Coût final selon mutuelle :**
-
-* Sans mutuelle : 377,80 €/mois
-* Mutuelle niveau 1 : 245,85 €/mois
-* Mutuelle niveau 2 : 70,15 €/mois
-* Mutuelle niveau 3 : **0 €/mois**
+**Le coût reste majoritairement à la charge du patient.**
 
 ## Saxenda vs Wegovy : Comparaison des Coûts
 
 ### Analyse Coût-Efficacité
 
-| Critère                 | Saxenda       | Wegovy     |
-| ----------------------- | ------------- | ---------- |
-| **Prix mensuel**        | 189,90 €      | 269,90 €   |
-| **Après remboursement** | 75,56 €       | 94,46 €    |
-| **Injections/semaine**  | 7 (quotidien) | 1          |
-| **Perte de poids**      | -8 à 10%      | -15%       |
-| **Durée traitement**    | 6-12 mois     | 12-24 mois |
+| Critère                 | Saxenda         | Wegovy       |
+| ----------------------- | --------------- | ------------ |
+| **Prix mensuel**        | 240-300 €       | 169-360 €    |
+| **Remboursement SS**    | Non             | Non          |
+| **Injections/semaine**  | 7 (quotidien)   | 1            |
+| **Perte de poids**      | -8 à 10%        | -15%         |
+| **Durée traitement**    | 6-12 mois       | 12-24 mois   |
 
 ### Coût Total sur 6 Mois
 
-**Saxenda (avec remboursement optimal) :**
+**Saxenda (non remboursé) :**
 
-* 6 mois × 0 € = **0 €**
+* 6 mois × 240-300 € = **1 440-1 800 €**
 
-**Wegovy (avec remboursement optimal) :**
+**Wegovy (non remboursé) :**
 
-* 6 mois × 94,46 € = **566,76 €**
+* 6 mois × 169-360 € = **1 014-2 160 €**
 
-*Économie Saxenda : 566,76 € sur 6 mois*
+*Ni Saxenda ni Wegovy ne sont remboursés par la Sécurité Sociale.*
 
 ## Facteurs Influençant le Prix Saxenda
 
@@ -216,8 +197,8 @@ Pour optimiser votre traitement Saxenda :
 
 **Investissement Saxenda (6 mois) :**
 
-* Coût optimal : 0 € (avec mutuelle niveau 3)
-* Coût moyen : 1 473 € (sans remboursement)
+* Coût estimé sur 6 mois : 1 440 à 1 800 € (non remboursé)
+* Aide mutuelle éventuelle : variable selon contrat
 
 **Bénéfices économiques :**
 
