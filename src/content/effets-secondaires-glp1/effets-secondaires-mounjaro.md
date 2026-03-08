@@ -198,7 +198,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Annuel** : Bilan complet
 - **À la demande** : En cas de problème
 
-Consultez notre [guide complet sur Mounjaro](/guides/mounjaro/guide-complet-mounjaro) pour planifier votre suivi.
+Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour planifier votre suivi.
 
 ## 💊 Interactions Médicamenteuses
 
@@ -225,7 +225,7 @@ Consultez notre [guide complet sur Mounjaro](/guides/mounjaro/guide-complet-moun
 ### Réussite du traitement
 - **Observance** : Prises régulières
 - **Suivi médical** : Consultations respectées
-- **Alimentation équilibrée** : Complète le traitement (voir [régime Mounjaro optimal](/guides/mounjaro/regime-mounjaro-optimal))
+- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/regime-glp1/))
 - **Activité physique** : Recommandée
 
 ## ❓ FAQ - Questions Fréquentes
@@ -236,7 +236,7 @@ Les **nausées durent généralement 2-4 semaines** puis diminuent progressiveme
 
 ### Mounjaro provoque-t-il plus d'effets secondaires qu'Ozempic ?
 
-**Mounjaro peut entraîner légèrement plus de nausées** (15-20% vs 10-15% pour Ozempic) en raison de sa double action GLP-1/GIP. Cependant, la plupart des patients tolèrent bien les deux traitements. Comparez les [effets secondaires d'Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic).
+**Mounjaro peut entraîner légèrement plus de nausées** (15-20% vs 10-15% pour Ozempic) en raison de sa double action GLP-1/GIP. Cependant, la plupart des patients tolèrent bien les deux traitements. Comparez les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/).
 
 ### Que faire si je vomis après l'injection de Mounjaro ?
 
@@ -255,7 +255,7 @@ La plupart des effets secondaires sont **bénins et temporaires** (nausées, dia
 - Boire du gingembre ou infusion menthe
 - Prendre des anti-nauséeux si prescrit
 
-Voir notre [guide régime Mounjaro optimal](/guides/mounjaro/regime-mounjaro-optimal).
+Voir notre [guide alimentation sous GLP-1](/collections/regime-glp1/).
 
 ### Mounjaro cause-t-il la perte de cheveux ?
 
@@ -292,7 +292,7 @@ Hydratation et alimentation équilibrée permettent de gérer les deux.
 - **Thyroïde** : TSH (si facteurs de risque)
 - **Glycémie** : HbA1c, glycémie à jeun
 
-Consultez nos pages sur le [prix Mounjaro](/glp1-cout/prix-mounjaro-france) et le [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026).
+Consultez nos pages sur le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) et le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Mounjaro est-il compatible avec l'alcool ?
 
@@ -306,18 +306,18 @@ Limitez à 1-2 verres occasionnels.
 ## 📋 Ressources Complémentaires
 
 ### Guides pratiques
-- [Guide complet Mounjaro](/guides/mounjaro/guide-complet-mounjaro) - Tout savoir sur le traitement
-- [Régime optimal avec Mounjaro](/guides/mounjaro/regime-mounjaro-optimal) - Alimentation adaptée
-- [Prix Mounjaro France 2025](/glp1-cout/prix-mounjaro-france) - Coûts et remboursement
+- [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) - Tout savoir sur le traitement
+- [Régime alimentaire sous GLP-1](/collections/regime-glp1/) - Alimentation adaptée
+- [Prix Mounjaro France 2026](/collections/glp1-cout/prix-mounjaro-france/) - Coûts et remboursement
 
 ### Comparaisons
-- [Quel traitement GLP-1 choisir ?](/quel-traitement-glp1-choisir) - Comparatif détaillé
-- [Effets secondaires Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic)
-- [Effets secondaires Wegovy](/effets-secondaires-glp1/effets-secondaires-wegovy)
+- [Quel traitement GLP-1 choisir ?](/guides/quel-traitement-glp1-choisir/) - Comparatif détaillé
+- [Effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
+- [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 ### Remboursement et accès
-- [Remboursement GLP-1 2026](/glp1-cout/remboursement-glp1-2026) - Toutes les options
-- [Médecins GLP-1 en France](/medecins-glp1-france) - Trouver un prescripteur
+- [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) - Toutes les options
+- [Médecins GLP-1 en France](/collections/medecins-glp1-france/) - Trouver un prescripteur
 
 ---
 
