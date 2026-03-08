@@ -340,15 +340,15 @@ Oui, ils peuvent être associés à la metformine, aux statines, aux antihyperte
 - **Sur l'appétit** : 1-2 semaines
 - **Sur le poids** : 4-8 semaines
 
-En savoir plus sur les [résultats attendus avec Mounjaro](/guides/mounjaro/guide-complet-mounjaro) et [Wegovy](/guides/wegovy/guide-complet-wegovy).
+En savoir plus sur les [résultats attendus avec Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et [Wegovy](/guides/guide-complet-wegovy/).
 
 ### Puis-je boire de l'alcool avec les GLP-1 ?
 
-Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide sur le régime optimal avec Mounjaro](/guides/mounjaro/regime-mounjaro-optimal) pour plus de conseils nutritionnels.
+Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/regime-glp1/) pour plus de conseils nutritionnels.
 
 ### Les GLP-1 sont-ils remboursés pour tous ?
 
-Non, le remboursement dépend de votre situation médicale (diabète ou obésité) et de votre couverture sociale. Consultez notre **[guide complet sur le remboursement GLP-1 en 2026](/glp1-cout/remboursement-glp1-2026)** pour connaître toutes les options de prise en charge.
+Non, le remboursement dépend de votre situation médicale (diabète ou obésité) et de votre couverture sociale. Consultez notre **[guide complet sur le remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/)** pour connaître toutes les options de prise en charge.
 
 ### Quelle est la durée optimale d'un traitement GLP-1 ?
 
@@ -358,11 +358,11 @@ Il n'y a pas de durée fixe. Le traitement peut être :
 
 ### Mounjaro est-il plus efficace qu'Ozempic et Wegovy ?
 
-Oui, selon les études SURPASS, **Mounjaro (tirzépatide) entraîne une perte de poids supérieure** : 15-20% contre 10-15% pour Wegovy et 5-10% pour Ozempic. Ceci s'explique par sa double action (GLP-1 + GIP). Voir notre [comparaison détaillée des prix Mounjaro](/glp1-cout/prix-mounjaro-france).
+Oui, selon les études SURPASS, **Mounjaro (tirzépatide) entraîne une perte de poids supérieure** : 15-20% contre 10-15% pour Wegovy et 5-10% pour Ozempic. Ceci s'explique par sa double action (GLP-1 + GIP). Voir notre [comparaison détaillée des prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/).
 
 ### Peut-on passer d'Ozempic à Wegovy pour perdre plus de poids ?
 
-Oui, c'est possible puisque les deux contiennent du sémaglutide. **Wegovy est dosé plus haut (jusqu'à 2,4 mg)** contre 1 mg pour Ozempic. La transition se fait progressivement sous supervision médicale. Comparez les [prix Ozempic](/glp1-cout/prix-ozempic-france) et [prix Wegovy](/glp1-cout/prix-wegovy-france).
+Oui, c'est possible puisque les deux contiennent du sémaglutide. **Wegovy est dosé plus haut (jusqu'à 2,4 mg)** contre 1 mg pour Ozempic. La transition se fait progressivement sous supervision médicale. Comparez les [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) et [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
 
 ### Quel GLP-1 pour diabète type 2 avec obésité ?
 
@@ -382,28 +382,28 @@ Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de r
 
 ### Où trouver un médecin prescripteur de GLP-1 ?
 
-Utilisez notre **[annuaire des médecins GLP-1 en France](/medecins-glp1-france)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
+Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
 
 ## 📋 Ressources Complémentaires
 
 ### Guides par médicament
-- [Guide complet Mounjaro](/guides/mounjaro/guide-complet-mounjaro) - Tout savoir sur le tirzépatide
-- [Guide complet Ozempic](/guides/ozempic/guide-complet-ozempic) - Sémaglutide pour diabète
-- [Guide complet Wegovy](/guides/wegovy/guide-complet-wegovy) - Sémaglutide haute dose pour obésité
+- [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) - Tout savoir sur le tirzépatide
+- [Guide complet Ozempic](/guides/guide-complet-ozempic/) - Sémaglutide pour diabète
+- [Guide complet Wegovy](/guides/guide-complet-wegovy/) - Sémaglutide haute dose pour obésité
 
 ### Prix et remboursement
-- [Prix Mounjaro France 2025](/glp1-cout/prix-mounjaro-france) - Tarifs et comparaisons
-- [Prix Ozempic France 2025](/glp1-cout/prix-ozempic-france) - Coûts détaillés
-- [Prix Wegovy France 2025](/glp1-cout/prix-wegovy-france) - Budget et aides
-- [Remboursement GLP-1 2026](/glp1-cout/remboursement-glp1-2026) - Toutes les options de prise en charge
+- [Prix Mounjaro France 2026](/collections/glp1-cout/prix-mounjaro-france/) - Tarifs et comparaisons
+- [Prix Ozempic France 2026](/collections/glp1-cout/prix-ozempic-france/) - Coûts détaillés
+- [Prix Wegovy France 2026](/collections/glp1-cout/prix-wegovy-france/) - Budget et aides
+- [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) - Toutes les options de prise en charge
 
 ### Sécurité et effets secondaires
-- [Effets secondaires Mounjaro](/effets-secondaires-glp1/effets-secondaires-mounjaro) - Prévention et gestion
-- [Effets secondaires Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic)
-- [Effets secondaires Wegovy](/effets-secondaires-glp1/effets-secondaires-wegovy)
+- [Effets secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) - Prévention et gestion
+- [Effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
+- [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 ### Trouver un médecin
-- [Médecins GLP-1 en France](/medecins-glp1-france) - Annuaire par région et ville
+- [Médecins GLP-1 en France](/collections/medecins-glp1-france/) - Annuaire par région et ville
 
 ---
 
