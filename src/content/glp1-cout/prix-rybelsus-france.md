@@ -12,6 +12,8 @@ readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
+thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
+thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 ---
 <script type="application/ld+json">
 {
@@ -214,10 +216,6 @@ image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
 - **Aides disponibles** : Pour revenus modestes
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
-
-thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
-thumbnailAlt: "Prix et coût du traitement rybelsus-france"
----
 
 ## Sommaire
 

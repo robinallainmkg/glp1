@@ -182,6 +182,8 @@ import AdminNav from '../../components/AdminNav.astro';
     .task-urgent { border-color: var(--urgent-border); background: var(--urgent-light); }
     .task-warning { border-color: var(--warning-border); background: var(--warning-light); }
     .task-info { border-color: var(--blue-border); background: var(--blue-light); }
+    .task-done { border-color: var(--ok-border); background: var(--ok-light); opacity: 0.7; }
+    .task-done .task-title { text-decoration: line-through; color: var(--ok); }
 
     /* Alerts section */
     .alerts {
@@ -346,7 +348,7 @@ import AdminNav from '../../components/AdminNav.astro';
   <div class="topbar">
     <div class="topbar-left">
       <span class="page-title">Audit Contenu</span>
-      <span class="topbar-meta">83 fichiers &middot; 12 collections &middot; 09/03/2026</span>
+      <span class="topbar-meta">80 fichiers &middot; 12 collections &middot; P1+P2 corriges &middot; 09/03/2026</span>
     </div>
   </div>
 
@@ -356,23 +358,23 @@ import AdminNav from '../../components/AdminNav.astro';
     <div class="stats">
       <div class="stat">
         <div class="stat-label">Total fichiers</div>
-        <div class="stat-value">83</div>
-        <div class="stat-sub">12 collections (2 non enregistrees)</div>
+        <div class="stat-value">80</div>
+        <div class="stat-sub">12 collections (toutes enregistrees)</div>
       </div>
       <div class="stat">
-        <div class="stat-label">Contenu reel</div>
-        <div class="stat-value" style="color: var(--ok);">~45</div>
-        <div class="stat-sub">54% des fichiers</div>
+        <div class="stat-label">Problemes corriges</div>
+        <div class="stat-value" style="color: var(--ok);">8/9</div>
+        <div class="stat-sub">P1 + P2 termines</div>
       </div>
       <div class="stat">
-        <div class="stat-label">Squelettes / placeholder</div>
-        <div class="stat-value" style="color: var(--warning);">~28</div>
-        <div class="stat-sub">34% — prix XX, [Contenu specialise...]</div>
+        <div class="stat-label">Squelettes restants</div>
+        <div class="stat-value" style="color: var(--warning);">~25</div>
+        <div class="stat-sub">Phase 3 — a rediger ou desindexer</div>
       </div>
       <div class="stat">
-        <div class="stat-label">Problemes detectes</div>
-        <div class="stat-value" style="color: var(--urgent);">9</div>
-        <div class="stat-sub">types de problemes distincts</div>
+        <div class="stat-label">Reste a faire</div>
+        <div class="stat-value" style="color: var(--purple);">P3+P4</div>
+        <div class="stat-sub">Squelettes + ameliorations SEO</div>
       </div>
     </div>
 
@@ -383,78 +385,54 @@ import AdminNav from '../../components/AdminNav.astro';
     </div>
 
     <!-- PHASE 1 -->
-    <div class="phase open" id="phase1">
+    <div class="phase" id="phase1">
       <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
-        <span class="phase-number phase-p1">P1 URGENT</span>
+        <span class="phase-number" style="background:var(--ok-light);color:var(--ok);border:1px solid var(--ok-border)">P1 CORRIGE</span>
         <span class="phase-title">Corrections critiques (technique + SEO)</span>
-        <span class="phase-badge">~30 min</span>
+        <span class="phase-badge" style="background:var(--ok-light);color:var(--ok)">5/5 fait</span>
         <svg class="phase-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
       </div>
       <div class="phase-body">
         <div class="phase-content">
 
-          <div class="task task-urgent">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#b83030"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
               <span class="task-title">Supprimer les 2 doublons exacts (cannibalisation SEO)</span>
             </div>
-            <div class="task-detail">Corps 100% identique. Seul le titre differe ("-new" ajoute). Verifier les liens internes avant suppression.</div>
-            <div class="task-files">
-              <span class="task-file">medecins-glp1-france/clinique-pour-obesite-new.md (doublon de clinique-pour-obesite.md)</span>
-              <span class="task-file">medecins-glp1-france/endocrinologue-pour-maigrir-new.md (doublon de endocrinologue-pour-maigrir.md)</span>
-            </div>
+            <div class="task-detail">Fait. Fichiers <code>clinique-pour-obesite-new.md</code> et <code>endocrinologue-pour-maigrir-new.md</code> supprimes.</div>
           </div>
 
-          <div class="task task-urgent">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#b83030"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-              <span class="task-title">Nettoyer les fichiers corrompus (balises XML en fin de fichier)</span>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Nettoyer les 9 fichiers corrompus (balises XML)</span>
             </div>
-            <div class="task-detail">9 fichiers contiennent des balises <code>&lt;/content&gt;</code> et <code>&lt;parameter&gt;</code> en fin de fichier (erreur de copier-coller). A supprimer.</div>
-            <div class="task-files">
-              <span class="task-file">traitements-glp1/guide-complet-mounjaro.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-ozempic.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-wegovy.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-rybelsus.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-saxenda.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-trulicity.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-victoza.md</span>
-              <span class="task-file">traitements-glp1/guide-complet-zepbound.md</span>
-              <span class="task-file">temoignages/serena-williams-glp1.md</span>
-            </div>
+            <div class="task-detail">Fait. Balises <code>&lt;/content&gt;</code> et <code>&lt;parameter&gt;</code> supprimees des 8 guides traitements-glp1 + serena-williams-glp1.</div>
           </div>
 
-          <div class="task task-urgent">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#b83030"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-              <span class="task-title">Corriger le double frontmatter (thumbnail apres le ---)</span>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Corriger le double frontmatter (7 fichiers)</span>
             </div>
-            <div class="task-detail">7 fichiers ont les champs <code>thumbnail</code>/<code>thumbnailAlt</code> APRES la fermeture <code>---</code> du frontmatter. Astro ne les parse pas.</div>
-            <div class="task-files">
-              <span class="task-file">effets-secondaires-glp1/effets-secondaires-victoza.md</span>
-              <span class="task-file">effets-secondaires-glp1/effets-secondaires-ozempic.md</span>
-              <span class="task-file">effets-secondaires-glp1/effets-secondaires-rybelsus.md</span>
-              <span class="task-file">effets-secondaires-glp1/effets-secondaires-wegovy.md</span>
-              <span class="task-file">effets-secondaires-glp1/effets-secondaires-saxenda.md</span>
-              <span class="task-file">effets-secondaires-glp1/effets-secondaires-trulicity.md</span>
-              <span class="task-file">glp1-cout/prix-rybelsus-france.md</span>
-            </div>
+            <div class="task-detail">Fait. Champs <code>thumbnail</code>/<code>thumbnailAlt</code> deplaces a l'interieur du frontmatter pour les 6 fichiers effets-secondaires + prix-rybelsus-france.</div>
           </div>
 
-          <div class="task task-urgent">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#b83030"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/></svg>
-              <span class="task-title">Enregistrer les collections manquantes dans config.ts</span>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Enregistrer collections manquantes dans config.ts</span>
             </div>
-            <div class="task-detail">Les collections <code>temoignages</code> (4 articles + route active) et <code>avant-apres-glp1</code> n'existent pas dans <code>src/content/config.ts</code>. Astro ne valide pas leur schema.</div>
+            <div class="task-detail">Fait. Collections <code>temoignages</code> et <code>avant-apres-glp1</code> ajoutees. Champs <code>thumbnailAlt</code>, <code>date</code>, <code>collection</code>, <code>slug</code> ajoutes au schema.</div>
           </div>
 
-          <div class="task task-urgent">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#b83030"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
               <span class="task-title">Deduplication interne de wegovy-prix.md</span>
             </div>
-            <div class="task-detail"><code>glp1-cout/wegovy-prix.md</code> fait 776 lignes avec le meme contenu repete 2-3 fois dans le meme fichier. Nettoyer les blocs dupliques.</div>
+            <div class="task-detail">Fait. Fichier passe de 776 a 209 lignes. Contenu repete 2-3x supprime, meilleurs passages fusionnes.</div>
           </div>
 
         </div>
@@ -464,47 +442,44 @@ import AdminNav from '../../components/AdminNav.astro';
     <!-- PHASE 2 -->
     <div class="phase" id="phase2">
       <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
-        <span class="phase-number phase-p2">P2 HAUTE</span>
+        <span class="phase-number" style="background:var(--ok-light);color:var(--ok);border:1px solid var(--ok-border)">P2 CORRIGE</span>
         <span class="phase-title">Classifications et frontmatter</span>
-        <span class="phase-badge">~45 min</span>
+        <span class="phase-badge" style="background:var(--ok-light);color:var(--ok)">3/3 fait</span>
         <svg class="phase-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
       </div>
       <div class="phase-body">
         <div class="phase-content">
 
-          <div class="task task-warning">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#9a6200"><path d="M21 3H3v18h18V3zm-6 6h-2V7h2v2zm-2 8h-2v-6h2v6z"/></svg>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
               <span class="task-title">Corriger les 4 fichiers mal classes</span>
             </div>
             <div class="task-detail">
-              <strong>1.</strong> <code>temoignages/serena-williams-glp1.md</code> — frontmatter dit <code>collection: "pages-statiques"</code>, doit etre <code>"temoignages"</code>.<br>
-              <strong>2.</strong> <code>effets-secondaires-glp1/wegovy-dosage.md</code> — article sur la posologie, deplacer vers <code>traitements-glp1/</code>.<br>
-              <strong>3.</strong> <code>effets-secondaires-glp1/insulevel-effet-indesirable-new.md</code> — Insulevel est un complement alimentaire, pas un GLP-1. Renommer (supprimer "-new") et revoir la collection.<br>
-              <strong>4.</strong> <code>regime-glp1/isglt2-liste.md</code> — iSGLT2 est une classe de medicaments differente, pas un regime. Fichier aussi massivement corrompu (memes titres repetes 15x). A revoir entierement.
+              Fait.<br>
+              <strong>1.</strong> <code>serena-williams-glp1.md</code> — collection corrigee en <code>"temoignages"</code>.<br>
+              <strong>2.</strong> <code>wegovy-dosage.md</code> — deplace de effets-secondaires vers <code>traitements-glp1/</code>.<br>
+              <strong>3.</strong> <code>insulevel-effet-indesirable-new.md</code> — renomme sans "-new".<br>
+              <strong>4.</strong> <code>isglt2-liste.md</code> — mis en <code>published: false</code> (contenu corrompu).
             </div>
           </div>
 
-          <div class="task task-warning">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#9a6200"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-              <span class="task-title">Uniformiser les frontmatters</span>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Uniformiser les frontmatters (9 fichiers)</span>
             </div>
             <div class="task-detail">
-              <strong>Problemes :</strong><br>
-              — 8 guides <code>traitements-glp1/</code> utilisent <code>date</code> au lieu de <code>pubDate</code><br>
-              — 8 guides + <code>centres-mounjaro-france.md</code> n'ont pas de champ <code>slug</code><br>
-              — <code>serena-williams-glp1.md</code> utilise <code>image</code> au lieu de <code>thumbnail</code><br>
-              <strong>Action :</strong> Aligner tous les fichiers sur le schema unifie (<code>pubDate</code>, <code>slug</code>, <code>thumbnail</code>).
+              Fait. Champ <code>pubDate</code> ajoute a 8 guides traitements-glp1. Champ <code>slug</code> ajoute aux 9 fichiers (8 guides + centres-mounjaro-france).
             </div>
           </div>
 
-          <div class="task task-warning">
+          <div class="task task-done">
             <div class="task-head">
-              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#9a6200"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-              <span class="task-title">Corriger les liens internes casses</span>
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Corriger les liens internes casses (25 fichiers)</span>
             </div>
-            <div class="task-detail">Plusieurs fichiers contiennent des liens vers <code>../medicaments-glp1/</code> qui n'existe pas comme route. Rechercher et corriger dans tous les templates.</div>
+            <div class="task-detail">Fait. 25 fichiers de contenu mis a jour : <code>../medicaments-glp1/</code> remplace par <code>../traitements-glp1/</code>.</div>
           </div>
 
         </div>
@@ -622,28 +597,28 @@ import AdminNav from '../../components/AdminNav.astro';
       <div class="collection-card active" data-collection="all">
         <div class="collection-name">Toutes</div>
         <div class="collection-meta">
-          <span class="tag tag-count">83 fichiers</span>
+          <span class="tag tag-count">80 fichiers</span>
         </div>
       </div>
       <div class="collection-card" data-collection="alternatives-glp1">
         <div class="collection-name">Alternatives GLP-1</div>
         <div class="collection-meta">
           <span class="tag tag-count">14</span>
-          <span class="tag tag-urgent">12 squelettes</span>
+          <span class="tag tag-warn">12 squelettes</span>
         </div>
       </div>
       <div class="collection-card" data-collection="effets-secondaires-glp1">
         <div class="collection-name">Effets secondaires</div>
         <div class="collection-meta">
-          <span class="tag tag-count">12</span>
-          <span class="tag tag-warn">7 frontmatter</span>
+          <span class="tag tag-count">9</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="glp1-cout">
         <div class="collection-name">GLP-1 Cout</div>
         <div class="collection-meta">
           <span class="tag tag-count">15</span>
-          <span class="tag tag-nav">bon contenu</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="glp1-perte-de-poids">
@@ -656,15 +631,15 @@ import AdminNav from '../../components/AdminNav.astro';
       <div class="collection-card" data-collection="medecins-glp1-france">
         <div class="collection-name">Medecins France</div>
         <div class="collection-meta">
-          <span class="tag tag-count">5</span>
-          <span class="tag tag-urgent">2 doublons</span>
+          <span class="tag tag-count">3</span>
+          <span class="tag tag-nav">doublons supprimes</span>
         </div>
       </div>
       <div class="collection-card" data-collection="regime-glp1">
         <div class="collection-name">Regime GLP-1</div>
         <div class="collection-meta">
           <span class="tag tag-count">15</span>
-          <span class="tag tag-urgent">13 squelettes</span>
+          <span class="tag tag-warn">13 squelettes</span>
         </div>
       </div>
       <div class="collection-card" data-collection="recherche-glp1">
@@ -678,14 +653,14 @@ import AdminNav from '../../components/AdminNav.astro';
         <div class="collection-name">Temoignages</div>
         <div class="collection-meta">
           <span class="tag tag-count">4</span>
-          <span class="tag tag-warn">1 classification</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="traitements-glp1">
         <div class="collection-name">Traitements GLP-1</div>
         <div class="collection-meta">
-          <span class="tag tag-count">9</span>
-          <span class="tag tag-warn">8 corrompus</span>
+          <span class="tag tag-count">11</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="pages-statiques">
@@ -700,12 +675,13 @@ import AdminNav from '../../components/AdminNav.astro';
     <!-- Articles table -->
     <div class="section-head">
       <span class="section-title">Inventaire detaille</span>
-      <span class="section-sub" id="tableCount">83 fichiers</span>
+      <span class="section-sub" id="tableCount">80 fichiers</span>
     </div>
     <div class="table-wrap">
       <div class="table-toolbar">
         <input type="text" class="search-input" id="searchInput" placeholder="Rechercher par slug, collection ou probleme...">
         <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="corrige">Corriges</button>
         <button class="filter-btn" data-filter="issues">Avec problemes</button>
         <button class="filter-btn" data-filter="ok">OK</button>
         <button class="filter-btn" data-filter="squelette">Squelettes</button>
@@ -725,7 +701,7 @@ import AdminNav from '../../components/AdminNav.astro';
         </table>
       </div>
       <div class="table-footer">
-        <span id="footerCount">83 fichiers affiches</span>
+        <span id="footerCount">80 fichiers affiches</span>
         <span>Audit approfondi du 09/03/2026</span>
       </div>
     </div>
@@ -750,118 +726,104 @@ import AdminNav from '../../components/AdminNav.astro';
     { n:12, col:"alternatives-glp1", slug:"supplements-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
     { n:13, col:"alternatives-glp1", slug:"alternatives-bio-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
     { n:14, col:"alternatives-glp1", slug:"alternatives-naturelles-ozempic", status:"partiel", issues:["template-residuel"] },
-    // effets-secondaires-glp1 (12)
+    // effets-secondaires-glp1 (9 — 2 deplaces, 1 renomme)
     { n:15, col:"effets-secondaires-glp1", slug:"effets-secondaires-mounjaro", status:"ok", issues:[] },
-    { n:16, col:"effets-secondaires-glp1", slug:"ozempic-danger", status:"ok", issues:["template-tail"] },
+    { n:16, col:"effets-secondaires-glp1", slug:"ozempic-danger", status:"ok", issues:[] },
     { n:17, col:"effets-secondaires-glp1", slug:"effets-secondaires-zepbound", status:"ok", issues:[] },
-    { n:18, col:"effets-secondaires-glp1", slug:"effets-secondaires-victoza", status:"ok", issues:["double-frontmatter"] },
-    { n:19, col:"effets-secondaires-glp1", slug:"effets-secondaires-ozempic", status:"ok", issues:["double-frontmatter"] },
-    { n:20, col:"effets-secondaires-glp1", slug:"wegovy-dosage", status:"partiel", issues:["mauvaise-collection"] },
-    { n:21, col:"effets-secondaires-glp1", slug:"effets-secondaires-rybelsus", status:"ok", issues:["double-frontmatter"] },
-    { n:22, col:"effets-secondaires-glp1", slug:"insulevel-effet-indesirable-new", status:"ok", issues:["mauvaise-collection","nom-fichier-new"] },
-    { n:23, col:"effets-secondaires-glp1", slug:"wegovy-danger", status:"partiel", issues:["template-residuel"] },
-    { n:24, col:"effets-secondaires-glp1", slug:"effets-secondaires-wegovy", status:"ok", issues:["double-frontmatter"] },
-    { n:25, col:"effets-secondaires-glp1", slug:"effets-secondaires-saxenda", status:"ok", issues:["double-frontmatter"] },
-    { n:26, col:"effets-secondaires-glp1", slug:"effets-secondaires-trulicity", status:"ok", issues:["double-frontmatter"] },
+    { n:18, col:"effets-secondaires-glp1", slug:"effets-secondaires-victoza", status:"corrige", issues:[] },
+    { n:19, col:"effets-secondaires-glp1", slug:"effets-secondaires-ozempic", status:"corrige", issues:[] },
+    { n:20, col:"effets-secondaires-glp1", slug:"effets-secondaires-rybelsus", status:"corrige", issues:[] },
+    { n:21, col:"effets-secondaires-glp1", slug:"insulevel-effet-indesirable", status:"ok", issues:[] },
+    { n:22, col:"effets-secondaires-glp1", slug:"wegovy-danger", status:"partiel", issues:["template-residuel"] },
+    { n:23, col:"effets-secondaires-glp1", slug:"effets-secondaires-wegovy", status:"corrige", issues:[] },
+    { n:24, col:"effets-secondaires-glp1", slug:"effets-secondaires-saxenda", status:"corrige", issues:[] },
+    { n:25, col:"effets-secondaires-glp1", slug:"effets-secondaires-trulicity", status:"corrige", issues:[] },
     // glp1-cout (15)
-    { n:27, col:"glp1-cout", slug:"acheter-wegovy-en-france", status:"ok", issues:["template-tail"] },
-    { n:28, col:"glp1-cout", slug:"anneau-gastrique-prix-cmu", status:"partiel", issues:["contenu-mince"] },
-    { n:29, col:"glp1-cout", slug:"operation-pour-maigrir-prix", status:"ok", issues:[] },
-    { n:30, col:"glp1-cout", slug:"prix-mounjaro-france", status:"ok", issues:[] },
-    { n:31, col:"glp1-cout", slug:"prix-ozempic-france", status:"ok", issues:[] },
-    { n:32, col:"glp1-cout", slug:"prix-rybelsus-france", status:"ok", issues:["double-frontmatter"] },
-    { n:33, col:"glp1-cout", slug:"prix-saxenda-france", status:"ok", issues:[] },
-    { n:34, col:"glp1-cout", slug:"prix-trulicity-france", status:"ok", issues:[] },
-    { n:35, col:"glp1-cout", slug:"prix-victoza-france", status:"ok", issues:[] },
-    { n:36, col:"glp1-cout", slug:"prix-wegovy-france", status:"ok", issues:[] },
-    { n:37, col:"glp1-cout", slug:"prix-zepbound-france", status:"ok", issues:[] },
-    { n:38, col:"glp1-cout", slug:"remboursement-glp1-2026", status:"ok", issues:[] },
-    { n:39, col:"glp1-cout", slug:"saxenda-prix-pharmacie", status:"ok", issues:[] },
-    { n:40, col:"glp1-cout", slug:"wegovy-prix", status:"ok", issues:["duplication-interne"] },
-    { n:41, col:"glp1-cout", slug:"wegovy-remboursement-mutuelle", status:"ok", issues:[] },
+    { n:26, col:"glp1-cout", slug:"acheter-wegovy-en-france", status:"ok", issues:[] },
+    { n:27, col:"glp1-cout", slug:"anneau-gastrique-prix-cmu", status:"partiel", issues:["contenu-mince"] },
+    { n:28, col:"glp1-cout", slug:"operation-pour-maigrir-prix", status:"ok", issues:[] },
+    { n:29, col:"glp1-cout", slug:"prix-mounjaro-france", status:"ok", issues:[] },
+    { n:30, col:"glp1-cout", slug:"prix-ozempic-france", status:"ok", issues:[] },
+    { n:31, col:"glp1-cout", slug:"prix-rybelsus-france", status:"corrige", issues:[] },
+    { n:32, col:"glp1-cout", slug:"prix-saxenda-france", status:"ok", issues:[] },
+    { n:33, col:"glp1-cout", slug:"prix-trulicity-france", status:"ok", issues:[] },
+    { n:34, col:"glp1-cout", slug:"prix-victoza-france", status:"ok", issues:[] },
+    { n:35, col:"glp1-cout", slug:"prix-wegovy-france", status:"ok", issues:[] },
+    { n:36, col:"glp1-cout", slug:"prix-zepbound-france", status:"ok", issues:[] },
+    { n:37, col:"glp1-cout", slug:"remboursement-glp1-2026", status:"ok", issues:[] },
+    { n:38, col:"glp1-cout", slug:"saxenda-prix-pharmacie", status:"ok", issues:[] },
+    { n:39, col:"glp1-cout", slug:"wegovy-prix", status:"corrige", issues:[] },
+    { n:40, col:"glp1-cout", slug:"wegovy-remboursement-mutuelle", status:"ok", issues:[] },
     // glp1-perte-de-poids (2)
-    { n:42, col:"glp1-perte-de-poids", slug:"glp1-perte-de-poids", status:"ok", issues:[] },
-    { n:43, col:"glp1-perte-de-poids", slug:"guide-complet-glp1-2025-france", status:"ok", issues:[] },
-    // medecins-glp1-france (5)
-    { n:44, col:"medecins-glp1-france", slug:"clinique-pour-obesite", status:"ok", issues:[] },
-    { n:45, col:"medecins-glp1-france", slug:"clinique-pour-obesite-new", status:"doublon", issues:["doublon-exact"] },
-    { n:46, col:"medecins-glp1-france", slug:"diabetologue-paris", status:"partiel", issues:["template-residuel","h2-cosmetiques"] },
-    { n:47, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir", status:"ok", issues:[] },
-    { n:48, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir-new", status:"doublon", issues:["doublon-exact"] },
+    { n:41, col:"glp1-perte-de-poids", slug:"glp1-perte-de-poids", status:"ok", issues:[] },
+    { n:42, col:"glp1-perte-de-poids", slug:"guide-complet-glp1-2025-france", status:"ok", issues:[] },
+    // medecins-glp1-france (3 — 2 doublons supprimes)
+    { n:43, col:"medecins-glp1-france", slug:"clinique-pour-obesite", status:"ok", issues:[] },
+    { n:44, col:"medecins-glp1-france", slug:"diabetologue-paris", status:"partiel", issues:["template-residuel","h2-cosmetiques"] },
+    { n:45, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir", status:"ok", issues:[] },
     // regime-glp1 (15)
-    { n:49, col:"regime-glp1", slug:"glp1-calories-journalieres", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
-    { n:50, col:"regime-glp1", slug:"glp1-index-glycemique", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
-    { n:51, col:"regime-glp1", slug:"glp1-micronutriments", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
-    { n:52, col:"regime-glp1", slug:"glp1-portion-alimentaire", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
-    { n:53, col:"regime-glp1", slug:"glp1-proteines", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
-    { n:54, col:"regime-glp1", slug:"isglt2-liste", status:"squelette", issues:["squelette","mauvaise-collection","duplication-interne"] },
-    { n:55, col:"regime-glp1", slug:"jeune-intermittent-glp1", status:"squelette", issues:["squelette","h2-generique","h2-cosmetiques"] },
-    { n:56, col:"regime-glp1", slug:"regime-cetogene-glp1", status:"squelette", issues:["squelette","h2-generique","h2-cosmetiques"] },
-    { n:57, col:"regime-glp1", slug:"regime-chrono-nutrition-glp1", status:"squelette", issues:["squelette","h2-generique"] },
-    { n:58, col:"regime-glp1", slug:"regime-dash-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
-    { n:59, col:"regime-glp1", slug:"regime-detox-glp1", status:"squelette", issues:["squelette","h2-generique"] },
-    { n:60, col:"regime-glp1", slug:"regime-mediterraneen-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
-    { n:61, col:"regime-glp1", slug:"regime-mounjaro-optimal", status:"ok", issues:[] },
-    { n:62, col:"regime-glp1", slug:"regime-paleo-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
-    { n:63, col:"regime-glp1", slug:"regime-sans-sucre-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:46, col:"regime-glp1", slug:"glp1-calories-journalieres", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:47, col:"regime-glp1", slug:"glp1-index-glycemique", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:48, col:"regime-glp1", slug:"glp1-micronutriments", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:49, col:"regime-glp1", slug:"glp1-portion-alimentaire", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:50, col:"regime-glp1", slug:"glp1-proteines", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:51, col:"regime-glp1", slug:"isglt2-liste", status:"depublie", issues:["published-false"] },
+    { n:52, col:"regime-glp1", slug:"jeune-intermittent-glp1", status:"squelette", issues:["squelette","h2-generique","h2-cosmetiques"] },
+    { n:53, col:"regime-glp1", slug:"regime-cetogene-glp1", status:"squelette", issues:["squelette","h2-generique","h2-cosmetiques"] },
+    { n:54, col:"regime-glp1", slug:"regime-chrono-nutrition-glp1", status:"squelette", issues:["squelette","h2-generique"] },
+    { n:55, col:"regime-glp1", slug:"regime-dash-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:56, col:"regime-glp1", slug:"regime-detox-glp1", status:"squelette", issues:["squelette","h2-generique"] },
+    { n:57, col:"regime-glp1", slug:"regime-mediterraneen-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:58, col:"regime-glp1", slug:"regime-mounjaro-optimal", status:"ok", issues:[] },
+    { n:59, col:"regime-glp1", slug:"regime-paleo-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:60, col:"regime-glp1", slug:"regime-sans-sucre-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
     // recherche-glp1 (1)
-    { n:64, col:"recherche-glp1", slug:"recherche-clinique-glp1", status:"partiel", issues:["template-residuel","liens-casses","h2-cosmetiques"] },
+    { n:61, col:"recherche-glp1", slug:"recherche-clinique-glp1", status:"partiel", issues:["template-residuel","h2-cosmetiques"] },
     // temoignages (4)
-    { n:65, col:"temoignages", slug:"laurent-transformation-glp1", status:"ok", issues:[] },
-    { n:66, col:"temoignages", slug:"marie-transformation-glp1", status:"ok", issues:[] },
-    { n:67, col:"temoignages", slug:"serena-williams-glp1", status:"ok", issues:["mauvaise-collection","fichier-corrompu","frontmatter-date"] },
-    { n:68, col:"temoignages", slug:"sophie-transformation-glp1", status:"ok", issues:[] },
-    // traitements-glp1 (9)
-    { n:69, col:"traitements-glp1", slug:"centres-mounjaro-france", status:"ok", issues:["frontmatter-incomplet"] },
-    { n:70, col:"traitements-glp1", slug:"guide-complet-mounjaro", status:"ok", issues:["fichier-corrompu","frontmatter-date","ton-promotionnel"] },
-    { n:71, col:"traitements-glp1", slug:"guide-complet-ozempic", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
-    { n:72, col:"traitements-glp1", slug:"guide-complet-rybelsus", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
-    { n:73, col:"traitements-glp1", slug:"guide-complet-saxenda", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
-    { n:74, col:"traitements-glp1", slug:"guide-complet-trulicity", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
-    { n:75, col:"traitements-glp1", slug:"guide-complet-victoza", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
-    { n:76, col:"traitements-glp1", slug:"guide-complet-wegovy", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
-    { n:77, col:"traitements-glp1", slug:"guide-complet-zepbound", status:"ok", issues:["fichier-corrompu","frontmatter-date"] },
+    { n:62, col:"temoignages", slug:"laurent-transformation-glp1", status:"ok", issues:[] },
+    { n:63, col:"temoignages", slug:"marie-transformation-glp1", status:"ok", issues:[] },
+    { n:64, col:"temoignages", slug:"serena-williams-glp1", status:"corrige", issues:[] },
+    { n:65, col:"temoignages", slug:"sophie-transformation-glp1", status:"ok", issues:[] },
+    // traitements-glp1 (11 — +2 deplaces depuis effets-secondaires)
+    { n:66, col:"traitements-glp1", slug:"centres-mounjaro-france", status:"corrige", issues:[] },
+    { n:67, col:"traitements-glp1", slug:"guide-complet-mounjaro", status:"corrige", issues:["ton-promotionnel"] },
+    { n:68, col:"traitements-glp1", slug:"guide-complet-ozempic", status:"corrige", issues:[] },
+    { n:69, col:"traitements-glp1", slug:"guide-complet-rybelsus", status:"corrige", issues:[] },
+    { n:70, col:"traitements-glp1", slug:"guide-complet-saxenda", status:"corrige", issues:[] },
+    { n:71, col:"traitements-glp1", slug:"guide-complet-trulicity", status:"corrige", issues:[] },
+    { n:72, col:"traitements-glp1", slug:"guide-complet-victoza", status:"corrige", issues:[] },
+    { n:73, col:"traitements-glp1", slug:"guide-complet-wegovy", status:"corrige", issues:[] },
+    { n:74, col:"traitements-glp1", slug:"guide-complet-zepbound", status:"corrige", issues:[] },
+    { n:75, col:"traitements-glp1", slug:"wegovy-dosage", status:"corrige", issues:[] },
     // pages-statiques (3)
-    { n:78, col:"pages-statiques", slug:"homepage", status:"ok", issues:[] },
-    { n:79, col:"pages-statiques", slug:"partenaires", status:"ok", issues:[] },
-    { n:80, col:"pages-statiques", slug:"quel-traitement-glp1-choisir", status:"ok", issues:[] },
-    // collections vides (2 — _category_.md seulement)
-    { n:81, col:"avant-apres-glp1", slug:"_category_ (vide)", status:"vide", issues:["collection-vide","non-enregistree"] },
-    { n:82, col:"glp1-diabete", slug:"_category_ (vide)", status:"vide", issues:["collection-vide","non-enregistree"] },
-    // temoignages non-enregistre dans config.ts
-    { n:83, col:"temoignages", slug:"(collection non enregistree dans config.ts)", status:"config", issues:["non-enregistree"] },
+    { n:76, col:"pages-statiques", slug:"homepage", status:"ok", issues:[] },
+    { n:77, col:"pages-statiques", slug:"partenaires", status:"ok", issues:[] },
+    { n:78, col:"pages-statiques", slug:"quel-traitement-glp1-choisir", status:"ok", issues:[] },
+    // collections avec _category_ seulement
+    { n:79, col:"avant-apres-glp1", slug:"_category_ (vide)", status:"vide", issues:["collection-vide"] },
+    { n:80, col:"glp1-diabete", slug:"_category_ (vide)", status:"vide", issues:["collection-vide"] },
   ];
 
   const issueLabels = {
-    'doublon-exact': { label: 'Doublon exact', cls: 'tag-urgent' },
     'squelette': { label: 'Squelette', cls: 'tag-urgent' },
     'prix-xx': { label: 'Prix XX', cls: 'tag-warn' },
     'h2-generique': { label: 'H2 generique', cls: 'tag-warn' },
     'faq-generique': { label: 'FAQ generique', cls: 'tag-warn' },
     'template-residuel': { label: 'Template residuel', cls: 'tag-warn' },
-    'template-tail': { label: 'Template en fin', cls: 'tag-warn' },
-    'double-frontmatter': { label: 'Double frontmatter', cls: 'tag-urgent' },
-    'fichier-corrompu': { label: 'Balises XML', cls: 'tag-urgent' },
-    'mauvaise-collection': { label: 'Mauvaise collection', cls: 'tag-warn' },
-    'nom-fichier-new': { label: 'Suffixe -new', cls: 'tag-info' },
-    'duplication-interne': { label: 'Duplication interne', cls: 'tag-urgent' },
-    'frontmatter-date': { label: 'date→pubDate', cls: 'tag-info' },
-    'frontmatter-incomplet': { label: 'Frontmatter incomplet', cls: 'tag-info' },
-    'liens-casses': { label: 'Liens casses', cls: 'tag-warn' },
     'h2-cosmetiques': { label: 'H2 cosmetiques', cls: 'tag-warn' },
     'contenu-mince': { label: 'Contenu mince', cls: 'tag-warn' },
     'ton-promotionnel': { label: 'Ton promotionnel', cls: 'tag-warn' },
     'collection-vide': { label: 'Collection vide', cls: 'tag-info' },
-    'non-enregistree': { label: 'Non dans config.ts', cls: 'tag-urgent' },
+    'published-false': { label: 'Depublie', cls: 'tag-info' },
   };
 
   const statusLabels = {
     'ok': { label: 'OK', cls: 'tag-nav' },
+    'corrige': { label: 'Corrige', cls: 'tag-nav' },
     'squelette': { label: 'Squelette', cls: 'tag-urgent' },
     'partiel': { label: 'Partiel', cls: 'tag-warn' },
-    'doublon': { label: 'Doublon', cls: 'tag-urgent' },
+    'depublie': { label: 'Depublie', cls: 'tag-info' },
     'vide': { label: 'Vide', cls: 'tag-info' },
-    'config': { label: 'Config', cls: 'tag-info' },
   };
 
   let activeCollection = 'all';
@@ -877,7 +839,9 @@ import AdminNav from '../../components/AdminNav.astro';
     if (activeFilter === 'issues') {
       filtered = filtered.filter(a => a.issues.length > 0);
     } else if (activeFilter === 'ok') {
-      filtered = filtered.filter(a => a.issues.length === 0);
+      filtered = filtered.filter(a => a.status === 'ok' && a.issues.length === 0);
+    } else if (activeFilter === 'corrige') {
+      filtered = filtered.filter(a => a.status === 'corrige');
     } else if (activeFilter === 'squelette') {
       filtered = filtered.filter(a => a.status === 'squelette');
     }

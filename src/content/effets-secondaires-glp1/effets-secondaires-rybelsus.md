@@ -10,6 +10,8 @@ featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
 image: "/images/thumbnails/effets-secondaires-rybelsus-illus.jpg"
+thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
+thumbnailAlt: "Effets secondaires du traitement rybelsus"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
@@ -233,10 +235,6 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Suivi médical** : Essentiel pour sécurité
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
-thumbnailAlt: "Effets secondaires du traitement rybelsus"
----
 
 ## Sommaire
 

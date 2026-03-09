@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Rybelsus : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-rybelsus"
 description: "Découvrez tout sur Rybelsus : traitement GLP-1 oral pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/rybelsus-medical-guide.jpg"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["rybelsus", "glp-1", "diabète", "traitement", "oral"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
 ---
 
 # Guide Complet Rybelsus : Tout Savoir sur ce Traitement Révolutionnaire
@@ -165,5 +167,4 @@ Non, l'arrêt doit être progressif sous surveillance médicale.
 
 ---
 
-*Ce guide complet sur Rybelsus est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-rybelsus.md
+*Ce guide complet sur Rybelsus est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*
