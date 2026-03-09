@@ -819,10 +819,9 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                 }
                 
                 // Insert into Supabase contacts table
-                const { data: result, error } = await supabase
+                const { error } = await supabase
                   .from('contacts')
-                  .insert(contactData)
-                  .select();
+                  .insert(contactData);
                 
                 if (error) {
                   console.error('❌ Supabase error:', error);
@@ -830,7 +829,7 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                   throw error;
                 }
                 
-                console.log('✅ Contact form success:', result);
+                console.log('✅ Contact form success');
                 
                 // Show success message
                 successMessage.style.display = 'block';

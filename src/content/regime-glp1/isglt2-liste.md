@@ -9,6 +9,7 @@ collection: "regime-glp1"
 thumbnail: "/images/thumbnails/isglt2-liste.jpg"
 thumbnailAlt: "Illustration pour l'article isglt2-liste"
 featured: false
+published: false
 priority: 5
 schema: "Article"
 
@@ -46,9 +47,9 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Produits cosmétiques recommandés
 
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [prix Saxenda](../traitements-glp1/saxenda-prix/)
 - [opération pour maigrir prix](../glp1-cout/operation-pour-maigrir-prix/)
-- [injection Ozempic prix](../medicaments-glp1/ozempic-injection-prix/)
+- [injection Ozempic prix](../traitements-glp1/ozempic-injection-prix/)
 - [comparatif prix GLP-1](../glp1-cout/wegovy-prix-pharmacie/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

@@ -12,6 +12,8 @@ readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
+thumbnail: "/images/thumbnails/trulicity.jpg"
+thumbnailAlt: "Effets secondaires du traitement trulicity"
 ---
 
 # Effets Secondaires Trulicity : Guide Complet
@@ -233,10 +235,6 @@ image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 - **Suivi médical** : Essentiel pour sécurité
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/trulicity.jpg"
-thumbnailAlt: "Effets secondaires du traitement trulicity"
----
 
 ## Sommaire
 

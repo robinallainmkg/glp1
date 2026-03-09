@@ -57,35 +57,50 @@
 </div>
 
 <script>
-document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+document.getElementById('newsletter-form')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  
-  const email = document.getElementById('email').value;
-  const button = e.target.querySelector('button');
+
+  const email = (document.getElementById('email') as HTMLInputElement).value;
+  const button = (e.target as HTMLFormElement).querySelector('button');
+  if (!button) return;
   const originalText = button.textContent;
-  
+
   button.textContent = 'Inscription...';
   button.disabled = true;
-  
+
   try {
-    // Intégration avec votre service d'email (Mailchimp, ConvertKit, etc.)
-    const response = await fetch('/api/newsletter', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, source: 'guide-prix-glp1' })
-    });
-    
-    if (response.ok) {
-      button.textContent = '✅ Inscrit !';
-      button.className = button.className.replace('from-yellow-400 to-orange-500', 'from-green-400 to-green-500');
-      
-      // Redirect vers page de téléchargement
-      setTimeout(() => {
-        window.location.href = '/guide-prix-glp1-2026.pdf';
-      }, 1000);
+    const { error } = await supabase
+      .from('contacts')
+      .insert({
+        email,
+        subject: 'Newsletter - Guide Prix GLP-1',
+        message: 'Inscription newsletter via homepage',
+        newsletter: true,
+        status: 'new'
+      });
+
+    if (error) {
+      console.error('Erreur Supabase:', error);
+      button.textContent = originalText;
+      button.disabled = false;
+      alert('Erreur lors de l\'inscription. Veuillez réessayer.');
+      return;
     }
+
+    button.textContent = '✅ Inscrit !';
+    button.className = button.className.replace('from-yellow-400 to-orange-500', 'from-green-400 to-green-500');
+    (document.getElementById('email') as HTMLInputElement).disabled = true;
   } catch (error) {
-    button.textContent = 'Erreur - Réessayer';
+    console.error('Erreur:', error);
+    button.textContent = originalText;
+    button.disabled = false;
+    alert('Erreur de connexion. Veuillez réessayer.');
   }
 });
 </script>

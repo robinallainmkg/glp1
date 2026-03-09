@@ -7,7 +7,7 @@ const unifiedSchema = z.object({
   category: z.string().optional(),
   author: z.string().optional(),
   readingTime: z.number().optional(),
-  pubDate: z.date().optional(),
+  pubDate: z.coerce.date().optional(),
   tags: z.array(z.string()).optional(),
   image: z.string().optional(), // Thumbnail généré automatiquement
   ogImage: z.string().optional(), // meta image
@@ -20,6 +20,11 @@ const unifiedSchema = z.object({
   thumbnail: z.string().optional(), // Alternative pour image
   relatedArticles: z.array(z.string()).optional(), // Articles similaires manuels
   imageAlt: z.string().optional(), // Texte alternatif pour l'image
+  thumbnailAlt: z.string().optional(), // Texte alternatif pour thumbnail
+  // Champs legacy (transition)
+  date: z.coerce.date().optional(), // Alias pour pubDate (migration en cours)
+  collection: z.string().optional(), // Collection explicite dans le frontmatter
+  // slug est réservé par Astro — ne pas le déclarer dans le schéma
 });
 
 const alternativesGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
@@ -32,6 +37,8 @@ const traitementsGlp1 = defineCollection({ type: 'content', schema: unifiedSchem
 const rechercheGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const regimeGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 const pagesStatiques = defineCollection({ type: 'content', schema: unifiedSchema });
+const temoignages = defineCollection({ type: 'content', schema: unifiedSchema });
+const avantApresGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
 
 export const collections = {
   'alternatives-glp1': alternativesGlp1,
@@ -44,4 +51,6 @@ export const collections = {
   'recherche-glp1': rechercheGlp1,
   'regime-glp1': regimeGlp1,
   'pages-statiques': pagesStatiques,
+  'temoignages': temoignages,
+  'avant-apres-glp1': avantApresGlp1,
 };

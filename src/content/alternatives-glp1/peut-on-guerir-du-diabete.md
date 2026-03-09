@@ -64,11 +64,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](../traitements-glp1/nouveau-traitement-diabete-type-2-injection/)
+- [traitement diabète type 2](../traitements-glp1/traitement-diabete-type-2/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [prix Saxenda](../traitements-glp1/saxenda-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
