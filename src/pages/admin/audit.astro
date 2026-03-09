@@ -1,0 +1,670 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit SEO - GLP1 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style is:inline>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --surface2: #f0ede8;
+      --surface3: #e8e4dd;
+      --border: #e2ddd6;
+      --border2: #d0c9be;
+      --text: #18150f;
+      --text2: #3d3830;
+      --muted: #7a7268;
+      --urgent: #b83030;
+      --urgent-light: #fdf2f2;
+      --urgent-border: #edc0c0;
+      --warning: #9a6200;
+      --warning-light: #fdf8ee;
+      --warning-border: #e8d090;
+      --ok: #1e6e3a;
+      --ok-light: #f0faf4;
+      --ok-border: #a8dab8;
+      --blue: #1a3f7a;
+      --blue-light: #eef3fc;
+      --blue-border: #a8c0e8;
+      --purple: #5a3a8a;
+      --purple-light: #f5f0fc;
+      --purple-border: #c8a8e8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      min-height: 100vh;
+      font-size: 14px;
+    }
+
+    .admin-layout { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 16px; }
+    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+    .topbar-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      padding: 3px 8px;
+      background: var(--surface2);
+      border-radius: 4px;
+    }
+
+    .content { padding: 28px 32px; overflow-y: auto; flex: 1; }
+
+    /* Stats grid */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .stat-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
+    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+    /* Alerts section */
+    .alerts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .alert {
+      padding: 14px 18px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .alert-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .alert-urgent {
+      background: var(--urgent-light);
+      border: 1px solid var(--urgent-border);
+      color: var(--urgent);
+    }
+    .alert-warning {
+      background: var(--warning-light);
+      border: 1px solid var(--warning-border);
+      color: var(--warning);
+    }
+    .alert-info {
+      background: var(--blue-light);
+      border: 1px solid var(--blue-border);
+      color: var(--blue);
+    }
+    .alert strong { font-weight: 700; }
+
+    /* Section heads */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      margin-top: 28px;
+    }
+    .section-title { font-size: 15px; font-weight: 700; }
+    .section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+
+    /* Collections grid */
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .collection-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .collection-card:hover {
+      border-color: var(--border2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .collection-card.active {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 1px var(--blue);
+    }
+    .collection-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .collection-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+    .tag-count { background: var(--surface2); color: var(--text2); }
+    .tag-info { background: var(--blue-light); color: var(--blue); }
+    .tag-transac { background: var(--purple-light); color: var(--purple); }
+    .tag-nav { background: var(--ok-light); color: var(--ok); }
+    .tag-warn { background: var(--warning-light); color: var(--warning); }
+    .tag-urgent { background: var(--urgent-light); color: var(--urgent); }
+
+    /* Articles table */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .table-toolbar {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--surface2);
+      color: var(--text);
+      width: 260px;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--blue); }
+    .filter-btn {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    thead th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface2);
+      position: sticky;
+      top: 0;
+    }
+    tbody tr { border-bottom: 1px solid var(--surface2); transition: background 0.1s; }
+    tbody tr:hover { background: var(--surface2); }
+    tbody tr:last-child { border-bottom: none; }
+    td { padding: 10px 14px; vertical-align: top; }
+    td.slug {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--blue);
+      max-width: 220px;
+      word-break: break-all;
+    }
+    td.keyword {
+      font-weight: 600;
+      max-width: 200px;
+    }
+    td.issues { max-width: 280px; }
+    .issue-tag {
+      display: inline-block;
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin: 1px 2px;
+      font-weight: 500;
+    }
+
+    .table-footer {
+      padding: 10px 18px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .stats { grid-template-columns: 1fr; }
+      .collections-grid { grid-template-columns: 1fr; }
+      .content { padding: 16px; }
+      .topbar { padding: 0 16px; }
+      .search-input { width: 100%; }
+      .table-toolbar { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="page-title">Audit SEO</span>
+      <span class="topbar-meta">80 articles &middot; 10 collections &middot; Mars 2026</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">Total articles</div>
+        <div class="stat-value">80</div>
+        <div class="stat-sub">10 collections</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Intent informationnel</div>
+        <div class="stat-value" style="color: var(--blue);">54</div>
+        <div class="stat-sub">67.5% des articles</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Intent transactionnel</div>
+        <div class="stat-value" style="color: var(--purple);">15</div>
+        <div class="stat-sub">18.8% des articles</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Intent navigationnel</div>
+        <div class="stat-value" style="color: var(--ok);">8</div>
+        <div class="stat-sub">10% des articles</div>
+      </div>
+    </div>
+
+    <!-- Alertes -->
+    <div class="section-head" style="margin-top:0">
+      <span class="section-title">Problemes detectes</span>
+      <span class="section-sub">5 alertes</span>
+    </div>
+    <div class="alerts">
+      <div class="alert alert-urgent">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+        <div><strong>Doublons detectes :</strong> <code>clinique-pour-obesite</code> / <code>clinique-pour-obesite-new</code> et <code>endocrinologue-pour-maigrir</code> / <code>endocrinologue-pour-maigrir-new</code> — contenu quasi-identique, risque de cannibalisation SEO.</div>
+      </div>
+      <div class="alert alert-warning">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+        <div><strong>Contenus placeholder :</strong> De nombreux articles <code>alternatives-glp1</code> et <code>regime-glp1</code> contiennent des prix "XX" et des sections incompletes (squelettes).</div>
+      </div>
+      <div class="alert alert-warning">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+        <div><strong>Classification incorrecte :</strong> <code>serena-williams-glp1</code> a <code>collection: "pages-statiques"</code> dans le frontmatter mais est dans le dossier <code>temoignages/</code>.</div>
+      </div>
+      <div class="alert alert-info">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <div><strong>Mauvaise categorisation :</strong> <code>wegovy-dosage</code> est dans <code>effets-secondaires-glp1</code> alors qu'il traite de posologie, pas d'effets secondaires.</div>
+      </div>
+      <div class="alert alert-info">
+        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <div><strong>H2 generiques :</strong> ~30 articles partagent les memes H2 ("Prix/disponibilite France", "Remboursement", "Comparaison internationale") — faible differentiation SEO.</div>
+      </div>
+    </div>
+
+    <!-- Collections -->
+    <div class="section-head">
+      <span class="section-title">Collections</span>
+      <span class="section-sub">Cliquez pour filtrer le tableau</span>
+    </div>
+    <div class="collections-grid" id="collectionsGrid">
+      <div class="collection-card active" data-collection="all">
+        <div class="collection-name">Toutes les collections</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">80 articles</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="alternatives-glp1">
+        <div class="collection-name">Alternatives GLP-1</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">14 articles</span>
+          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-warn">squelettes</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="effets-secondaires-glp1">
+        <div class="collection-name">Effets secondaires GLP-1</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">12 articles</span>
+          <span class="tag tag-info">informationnel</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="glp1-cout">
+        <div class="collection-name">GLP-1 Cout</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">15 articles</span>
+          <span class="tag tag-transac">transactionnel</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="glp1-perte-de-poids">
+        <div class="collection-name">Perte de poids</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">2 articles</span>
+          <span class="tag tag-info">informationnel</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="medecins-glp1-france">
+        <div class="collection-name">Medecins GLP-1 France</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">5 articles</span>
+          <span class="tag tag-nav">navigationnel</span>
+          <span class="tag tag-urgent">doublons</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="regime-glp1">
+        <div class="collection-name">Regime GLP-1</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">15 articles</span>
+          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-warn">squelettes</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="recherche-glp1">
+        <div class="collection-name">Recherche GLP-1</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">1 article</span>
+          <span class="tag tag-info">informationnel</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="temoignages">
+        <div class="collection-name">Temoignages</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">4 articles</span>
+          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-warn">classification</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="traitements-glp1">
+        <div class="collection-name">Traitements GLP-1</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">9 articles</span>
+          <span class="tag tag-info">informationnel</span>
+        </div>
+      </div>
+      <div class="collection-card" data-collection="pages-statiques">
+        <div class="collection-name">Pages statiques</div>
+        <div class="collection-meta">
+          <span class="tag tag-count">3 articles</span>
+          <span class="tag tag-nav">mixte</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Articles table -->
+    <div class="section-head">
+      <span class="section-title">Inventaire complet des articles</span>
+      <span class="section-sub" id="tableCount">80 articles</span>
+    </div>
+    <div class="table-wrap">
+      <div class="table-toolbar">
+        <input type="text" class="search-input" id="searchInput" placeholder="Rechercher par slug ou mot-cle...">
+        <button class="filter-btn" data-intent="all">Tous</button>
+        <button class="filter-btn" data-intent="informationnel">Informationnel</button>
+        <button class="filter-btn" data-intent="transactionnel">Transactionnel</button>
+        <button class="filter-btn" data-intent="navigationnel">Navigationnel</button>
+      </div>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Collection</th>
+              <th>Slug</th>
+              <th>Mot-cle principal</th>
+              <th>Intent</th>
+              <th>Problemes</th>
+            </tr>
+          </thead>
+          <tbody id="articlesBody"></tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <span id="footerCount">80 articles affiches</span>
+        <span>Audit du 09/03/2026</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const articles = [
+    { n:1, col:"alternatives-glp1", slug:"acupuncture-glp1", kw:"acupuncture diabete obesite", intent:"informationnel", issues:["squelette"] },
+    { n:2, col:"alternatives-glp1", slug:"chrome-diabete", kw:"chrome picolinate diabete", intent:"informationnel", issues:["squelette"] },
+    { n:3, col:"alternatives-glp1", slug:"vinaigre-cidre-glp1", kw:"vinaigre de cidre diabete", intent:"informationnel", issues:["squelette"] },
+    { n:4, col:"alternatives-glp1", slug:"semaglutide-naturel", kw:"semaglutide naturel alternatives", intent:"informationnel", issues:[] },
+    { n:5, col:"alternatives-glp1", slug:"meditation-glp1", kw:"meditation gestion diabete", intent:"informationnel", issues:["squelette"] },
+    { n:6, col:"alternatives-glp1", slug:"berberine-glp1", kw:"berberine alternative GLP-1", intent:"informationnel", issues:["squelette"] },
+    { n:7, col:"alternatives-glp1", slug:"cannelle-glp1", kw:"cannelle therapeutique diabete", intent:"informationnel", issues:["squelette"] },
+    { n:8, col:"alternatives-glp1", slug:"peut-on-guerir-du-diabete", kw:"guerir du diabete", intent:"informationnel", issues:[] },
+    { n:9, col:"alternatives-glp1", slug:"plantes-diabete", kw:"plantes anti-diabete naturelles", intent:"informationnel", issues:["squelette"] },
+    { n:10, col:"alternatives-glp1", slug:"phytotherapie-glp1", kw:"phytotherapie GLP-1", intent:"informationnel", issues:[] },
+    { n:11, col:"alternatives-glp1", slug:"homeopathie-diabete", kw:"homeopathie diabete", intent:"informationnel", issues:["squelette"] },
+    { n:12, col:"alternatives-glp1", slug:"supplements-glp1", kw:"supplements naturels GLP-1", intent:"informationnel", issues:["squelette"] },
+    { n:13, col:"alternatives-glp1", slug:"alternatives-bio-glp1", kw:"alternatives biologiques GLP-1", intent:"informationnel", issues:["squelette"] },
+    { n:14, col:"alternatives-glp1", slug:"alternatives-naturelles-ozempic", kw:"alternatives naturelles Ozempic", intent:"informationnel", issues:[] },
+    { n:15, col:"effets-secondaires-glp1", slug:"effets-secondaires-mounjaro", kw:"effets secondaires Mounjaro", intent:"informationnel", issues:[] },
+    { n:16, col:"effets-secondaires-glp1", slug:"ozempic-danger", kw:"Ozempic danger", intent:"informationnel", issues:[] },
+    { n:17, col:"effets-secondaires-glp1", slug:"effets-secondaires-zepbound", kw:"effets secondaires Zepbound", intent:"informationnel", issues:[] },
+    { n:18, col:"effets-secondaires-glp1", slug:"effets-secondaires-victoza", kw:"effets secondaires Victoza", intent:"informationnel", issues:[] },
+    { n:19, col:"effets-secondaires-glp1", slug:"effets-secondaires-ozempic", kw:"effets secondaires Ozempic", intent:"informationnel", issues:[] },
+    { n:20, col:"effets-secondaires-glp1", slug:"wegovy-dosage", kw:"Wegovy dosage posologie", intent:"informationnel", issues:["mauvaise-categorie"] },
+    { n:21, col:"effets-secondaires-glp1", slug:"effets-secondaires-rybelsus", kw:"effets secondaires Rybelsus", intent:"informationnel", issues:[] },
+    { n:22, col:"effets-secondaires-glp1", slug:"insulevel-effet-indesirable", kw:"Insulevel effets indesirables", intent:"informationnel", issues:[] },
+    { n:23, col:"effets-secondaires-glp1", slug:"wegovy-danger", kw:"Wegovy danger", intent:"informationnel", issues:[] },
+    { n:24, col:"effets-secondaires-glp1", slug:"effets-secondaires-wegovy", kw:"effets secondaires Wegovy", intent:"informationnel", issues:[] },
+    { n:25, col:"effets-secondaires-glp1", slug:"effets-secondaires-saxenda", kw:"effets secondaires Saxenda", intent:"informationnel", issues:[] },
+    { n:26, col:"effets-secondaires-glp1", slug:"effets-secondaires-trulicity", kw:"effets secondaires Trulicity", intent:"informationnel", issues:[] },
+    { n:27, col:"glp1-cout", slug:"acheter-wegovy-en-france", kw:"acheter Wegovy France", intent:"transactionnel", issues:[] },
+    { n:28, col:"glp1-cout", slug:"anneau-gastrique-prix-cmu", kw:"anneau gastrique prix CMU", intent:"transactionnel", issues:[] },
+    { n:29, col:"glp1-cout", slug:"operation-pour-maigrir-prix", kw:"operation pour maigrir prix", intent:"transactionnel", issues:[] },
+    { n:30, col:"glp1-cout", slug:"prix-mounjaro-france", kw:"prix Mounjaro France", intent:"transactionnel", issues:[] },
+    { n:31, col:"glp1-cout", slug:"prix-ozempic-france", kw:"prix Ozempic France", intent:"transactionnel", issues:[] },
+    { n:32, col:"glp1-cout", slug:"prix-rybelsus-france", kw:"prix Rybelsus France", intent:"transactionnel", issues:[] },
+    { n:33, col:"glp1-cout", slug:"prix-saxenda-france", kw:"prix Saxenda France", intent:"transactionnel", issues:[] },
+    { n:34, col:"glp1-cout", slug:"prix-trulicity-france", kw:"prix Trulicity France", intent:"transactionnel", issues:[] },
+    { n:35, col:"glp1-cout", slug:"prix-victoza-france", kw:"prix Victoza France", intent:"transactionnel", issues:[] },
+    { n:36, col:"glp1-cout", slug:"prix-wegovy-france", kw:"prix Wegovy France", intent:"transactionnel", issues:[] },
+    { n:37, col:"glp1-cout", slug:"prix-zepbound-france", kw:"prix Zepbound France", intent:"transactionnel", issues:[] },
+    { n:38, col:"glp1-cout", slug:"remboursement-glp1-2026", kw:"remboursement GLP-1 2026", intent:"transactionnel", issues:[] },
+    { n:39, col:"glp1-cout", slug:"saxenda-prix-pharmacie", kw:"Saxenda prix pharmacie", intent:"transactionnel", issues:[] },
+    { n:40, col:"glp1-cout", slug:"wegovy-prix", kw:"Wegovy prix France", intent:"transactionnel", issues:[] },
+    { n:41, col:"glp1-cout", slug:"wegovy-remboursement-mutuelle", kw:"Wegovy remboursement mutuelle", intent:"transactionnel", issues:[] },
+    { n:42, col:"glp1-perte-de-poids", slug:"glp1-perte-de-poids", kw:"GLP-1 perte de poids", intent:"informationnel", issues:[] },
+    { n:43, col:"glp1-perte-de-poids", slug:"guide-complet-glp1-2025-france", kw:"guide complet GLP-1 2025 France", intent:"informationnel", issues:[] },
+    { n:44, col:"medecins-glp1-france", slug:"clinique-pour-obesite-new", kw:"clinique obesite", intent:"navigationnel", issues:["doublon"] },
+    { n:45, col:"medecins-glp1-france", slug:"clinique-pour-obesite", kw:"clinique obesite", intent:"navigationnel", issues:["doublon"] },
+    { n:46, col:"medecins-glp1-france", slug:"diabetologue-paris", kw:"diabetologue Paris", intent:"navigationnel", issues:[] },
+    { n:47, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir-new", kw:"endocrinologue pour maigrir", intent:"navigationnel", issues:["doublon"] },
+    { n:48, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir", kw:"endocrinologue pour maigrir", intent:"navigationnel", issues:["doublon"] },
+    { n:49, col:"regime-glp1", slug:"glp1-calories-journalieres", kw:"GLP-1 calories journalieres", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:50, col:"regime-glp1", slug:"glp1-index-glycemique", kw:"GLP-1 index glycemique", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:51, col:"regime-glp1", slug:"glp1-micronutriments", kw:"GLP-1 micronutriments vitamines", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:52, col:"regime-glp1", slug:"glp1-portion-alimentaire", kw:"GLP-1 portions alimentaires", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:53, col:"regime-glp1", slug:"glp1-proteines", kw:"GLP-1 proteines apport", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:54, col:"regime-glp1", slug:"isglt2-liste", kw:"iSGLT2 liste medicaments", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:55, col:"regime-glp1", slug:"jeune-intermittent-glp1", kw:"jeune intermittent GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:56, col:"regime-glp1", slug:"regime-cetogene-glp1", kw:"regime cetogene GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:57, col:"regime-glp1", slug:"regime-chrono-nutrition-glp1", kw:"chrono-nutrition GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:58, col:"regime-glp1", slug:"regime-dash-glp1", kw:"regime DASH GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:59, col:"regime-glp1", slug:"regime-detox-glp1", kw:"regime detox GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:60, col:"regime-glp1", slug:"regime-mediterraneen-glp1", kw:"regime mediterraneen GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:61, col:"regime-glp1", slug:"regime-mounjaro-optimal", kw:"regime Mounjaro optimal", intent:"informationnel", issues:[] },
+    { n:62, col:"regime-glp1", slug:"regime-paleo-glp1", kw:"regime paleo GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:63, col:"regime-glp1", slug:"regime-sans-sucre-glp1", kw:"regime sans sucre GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
+    { n:64, col:"recherche-glp1", slug:"recherche-clinique-glp1", kw:"recherche clinique GLP-1", intent:"informationnel", issues:[] },
+    { n:65, col:"temoignages", slug:"laurent-transformation-glp1", kw:"temoignage Mounjaro perte poids", intent:"informationnel", issues:[] },
+    { n:66, col:"temoignages", slug:"marie-transformation-glp1", kw:"temoignage Wegovy perte poids", intent:"informationnel", issues:[] },
+    { n:67, col:"temoignages", slug:"serena-williams-glp1", kw:"Serena Williams GLP-1", intent:"informationnel", issues:["mauvaise-classification"] },
+    { n:68, col:"temoignages", slug:"sophie-transformation-glp1", kw:"temoignage Ozempic menopause", intent:"informationnel", issues:[] },
+    { n:69, col:"traitements-glp1", slug:"centres-mounjaro-france", kw:"centres Mounjaro France", intent:"navigationnel", issues:[] },
+    { n:70, col:"traitements-glp1", slug:"guide-complet-mounjaro", kw:"guide Mounjaro", intent:"informationnel", issues:[] },
+    { n:71, col:"traitements-glp1", slug:"guide-complet-ozempic", kw:"guide Ozempic", intent:"informationnel", issues:[] },
+    { n:72, col:"traitements-glp1", slug:"guide-complet-rybelsus", kw:"guide Rybelsus", intent:"informationnel", issues:[] },
+    { n:73, col:"traitements-glp1", slug:"guide-complet-saxenda", kw:"guide Saxenda", intent:"informationnel", issues:[] },
+    { n:74, col:"traitements-glp1", slug:"guide-complet-trulicity", kw:"guide Trulicity", intent:"informationnel", issues:[] },
+    { n:75, col:"traitements-glp1", slug:"guide-complet-victoza", kw:"guide Victoza", intent:"informationnel", issues:[] },
+    { n:76, col:"traitements-glp1", slug:"guide-complet-wegovy", kw:"guide Wegovy", intent:"informationnel", issues:[] },
+    { n:77, col:"traitements-glp1", slug:"guide-complet-zepbound", kw:"guide Zepbound", intent:"informationnel", issues:[] },
+    { n:78, col:"pages-statiques", slug:"/ (homepage)", kw:"GLP-1 France traitements", intent:"navigationnel", issues:[] },
+    { n:79, col:"pages-statiques", slug:"partenaires", kw:"partenaires GLP-1 France", intent:"navigationnel", issues:[] },
+    { n:80, col:"pages-statiques", slug:"/quel-traitement-glp1-choisir", kw:"quel traitement GLP-1 choisir", intent:"informationnel", issues:[] },
+  ];
+
+  const issueLabels = {
+    'doublon': { label: 'Doublon', cls: 'tag-urgent' },
+    'squelette': { label: 'Squelette', cls: 'tag-warn' },
+    'h2-generique': { label: 'H2 generique', cls: 'tag-warn' },
+    'mauvaise-categorie': { label: 'Mauvaise categorie', cls: 'tag-info' },
+    'mauvaise-classification': { label: 'Classification incorrecte', cls: 'tag-warn' },
+  };
+
+  let activeCollection = 'all';
+  let activeIntent = 'all';
+  let searchQuery = '';
+
+  function renderTable() {
+    let filtered = articles;
+
+    if (activeCollection !== 'all') {
+      filtered = filtered.filter(a => a.col === activeCollection);
+    }
+    if (activeIntent !== 'all') {
+      filtered = filtered.filter(a => a.intent === activeIntent);
+    }
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      filtered = filtered.filter(a =>
+        a.slug.toLowerCase().includes(q) ||
+        a.kw.toLowerCase().includes(q) ||
+        a.col.toLowerCase().includes(q)
+      );
+    }
+
+    const tbody = document.getElementById('articlesBody');
+    tbody.innerHTML = filtered.map(a => {
+      const issuesHtml = a.issues.map(i => {
+        const info = issueLabels[i] || { label: i, cls: 'tag-count' };
+        return `<span class="issue-tag tag ${info.cls}">${info.label}</span>`;
+      }).join('');
+
+      const intentCls = a.intent === 'transactionnel' ? 'tag-transac' :
+                        a.intent === 'navigationnel' ? 'tag-nav' : 'tag-info';
+
+      return `<tr>
+        <td style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:10px">${a.n}</td>
+        <td><span class="tag tag-count">${a.col}</span></td>
+        <td class="slug">${a.slug}</td>
+        <td class="keyword">${a.kw}</td>
+        <td><span class="tag ${intentCls}">${a.intent}</span></td>
+        <td class="issues">${issuesHtml || '<span style="color:var(--muted)">—</span>'}</td>
+      </tr>`;
+    }).join('');
+
+    document.getElementById('tableCount').textContent = filtered.length + ' article' + (filtered.length > 1 ? 's' : '');
+    document.getElementById('footerCount').textContent = filtered.length + ' article' + (filtered.length > 1 ? 's' : '') + ' affiche' + (filtered.length > 1 ? 's' : '');
+  }
+
+  // Collection cards
+  document.getElementById('collectionsGrid').addEventListener('click', (e) => {
+    const card = e.target.closest('.collection-card');
+    if (!card) return;
+    document.querySelectorAll('.collection-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    activeCollection = card.dataset.collection;
+    renderTable();
+  });
+
+  // Intent filter buttons
+  document.querySelectorAll('.filter-btn[data-intent]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn[data-intent]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeIntent = btn.dataset.intent;
+      renderTable();
+    });
+  });
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    searchQuery = e.target.value;
+    renderTable();
+  });
+
+  // Initial render
+  renderTable();
+</script>
+
+</body>
+</html>
