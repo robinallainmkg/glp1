@@ -1,11 +1,7 @@
 name: "Agent Integration GLP1"
 
 on:
-  # Execution automatique toutes les heures (9h-20h UTC, lun-ven)
-  schedule:
-    - cron: "0 9-20 * * 1-5"
-
-  # Declenchement manuel depuis l'onglet Actions
+  # Declenchement manuel uniquement depuis l'onglet Actions
   workflow_dispatch:
     inputs:
       limit:
