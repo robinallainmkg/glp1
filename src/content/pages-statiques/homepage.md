@@ -1,7 +1,6 @@
 ---
 title: "GLP-1 France : Guide Complet des Traitements pour le Diabète et la Perte de Poids 2025"
 description: "Site de référence sur les traitements GLP-1 en France. Guides experts, comparatifs médicaments (Ozempic, Wegovy, Mounjaro), témoignages patients et conseils pratiques pour votre parcours santé."
-slug: "/"
 pageType: "Homepage"
 noIndex: false
 thumbnail: "/images/thumbnails/homepage-illus.jpg"

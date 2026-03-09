@@ -1,6 +1,5 @@
 ---
 title: "Mounjaro Guide 2025 : Le Traitement #1 pour Perdre du Poids (Résultats -20kg)"
-slug: "guide-complet-mounjaro"
 description: "🔥 Mounjaro : LE traitement révolutionnaire qui fait perdre 15-20% du poids ! Prix France, témoignages, effets secondaires. Guide complet 2025."
 author: "Dr. Martin"
 image: "/images/thumbnails/mounjaro-blue.webp"

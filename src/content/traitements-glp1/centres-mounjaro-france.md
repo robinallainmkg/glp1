@@ -1,6 +1,5 @@
 ---
 title: "Centres Spécialisés Mounjaro en France 2025 🏥"
-slug: "centres-mounjaro-france"
 description: "Liste des centres hospitaliers et spécialistes qui proposent Mounjaro en France. Carte interactive, démarches, et conseils pour accéder au traitement."
 author: "Dr. Sophie Martin"
 pubDate: 2025-10-09T10:00:00Z

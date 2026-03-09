@@ -24,7 +24,6 @@ const unifiedSchema = z.object({
   // Champs legacy (transition)
   date: z.coerce.date().optional(), // Alias pour pubDate (migration en cours)
   collection: z.string().optional(), // Collection explicite dans le frontmatter
-  slug: z.string().optional(), // Slug explicite
 });
 
 const alternativesGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });

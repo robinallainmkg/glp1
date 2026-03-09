@@ -1,6 +1,5 @@
 ---
 title: "Diabetologue Paris : Guide Complet et Conseils Pratiques 2025"
-slug: "diabetologue-paris"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Trouver un diabétologue à Paris spécialisé en GLP-1 : adresses, spécialités, prise de rendez-vous et conseils pour votre traitement diabète/obésité."
