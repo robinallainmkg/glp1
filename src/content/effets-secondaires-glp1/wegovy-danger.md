@@ -1,7 +1,6 @@
 ---
 title: "Guide Complet Wegovy 2025 : Tout Savoir"
 description: "Guide complet sur Wegovy 2025 : effets secondaires, dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée."
-slug: "wegovy-danger"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Effets secondaires"

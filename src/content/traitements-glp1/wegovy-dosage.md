@@ -1,7 +1,6 @@
 ---
 title: "Wegovy Dosage : Guide Complet des Posologies 2025"
 description: "Guide complet du dosage Wegovy : posologie, augmentation progressive, adaptation individuelle et recommandations médicales pour une utilisation optimale."
-slug: "wegovy-dosage"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Traitements"

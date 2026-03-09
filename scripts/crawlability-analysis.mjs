@@ -26,6 +26,10 @@ const DIST_DIR = distIndex !== -1 ? path.resolve(args[distIndex + 1]) : path.joi
 const JSON_OUTPUT = args.includes('--json');
 const SITE_URL = 'https://glp1-france.fr';
 
+// Supabase (optionnel — stocke le rapport si les variables sont presentes)
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
 // --- Helpers ---
 
 function getAllHtmlFiles(dir, base = dir) {
@@ -157,9 +161,74 @@ function isExcludedPage(url) {
   return false;
 }
 
+// --- Supabase storage ---
+
+async function storeInSupabase(report) {
+  try {
+    const payload = {
+      summary: report.summary,
+      orphan_pages: report.orphanPages,
+      unreachable_pages: report.unreachablePages,
+      deep_pages: report.deepPages,
+      noindex_pages: report.noindexPages,
+      missing_from_sitemap: report.missingFromSitemap,
+      sitemap_ghosts: report.sitemapGhosts,
+      priority_issues: report.priorityIssues,
+      article_scores: report.articleScores
+    };
+
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/crawlability_reports`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_SERVICE_ROLE_KEY,
+        'Authorization': `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      console.error(`Erreur Supabase (${response.status}) : ${text}`);
+      return;
+    }
+
+    console.log('Rapport stocke dans Supabase (crawlability_reports)');
+
+    // Keep only the 10 most recent reports
+    const listRes = await fetch(
+      `${SUPABASE_URL}/rest/v1/crawlability_reports?select=id&order=created_at.desc&offset=10`,
+      {
+        headers: {
+          'apikey': SUPABASE_SERVICE_ROLE_KEY,
+          'Authorization': `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+        }
+      }
+    );
+    if (listRes.ok) {
+      const old = await listRes.json();
+      for (const row of old) {
+        await fetch(`${SUPABASE_URL}/rest/v1/crawlability_reports?id=eq.${row.id}`, {
+          method: 'DELETE',
+          headers: {
+            'apikey': SUPABASE_SERVICE_ROLE_KEY,
+            'Authorization': `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+          }
+        });
+      }
+      if (old.length > 0) {
+        console.log(`${old.length} ancien(s) rapport(s) supprime(s)`);
+      }
+    }
+  } catch (err) {
+    console.error('Erreur stockage Supabase :', err.message);
+  }
+}
+
 // --- Main analysis ---
 
-function analyze() {
+async function analyze() {
   console.log(`\n=== Analyse de crawlabilite — ${DIST_DIR} ===\n`);
 
   if (!fs.existsSync(DIST_DIR)) {
@@ -351,6 +420,13 @@ function analyze() {
     const jsonPath = path.join(PROJECT_ROOT, 'crawlability-report.json');
     fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
     console.log(`\nRapport JSON : ${jsonPath}`);
+  }
+
+  // Store in Supabase if credentials available
+  if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
+    await storeInSupabase(report);
+  } else {
+    console.log('\nSupabase non configure — rapport non stocke en base.');
   }
 
   // Exit code non-zero if critical issues
@@ -733,4 +809,7 @@ function generateAuditFile(report) {
 }
 
 // Run
-analyze();
+analyze().catch(err => {
+  console.error('Erreur fatale :', err);
+  process.exit(1);
+});

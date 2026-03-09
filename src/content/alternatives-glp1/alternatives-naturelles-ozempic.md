@@ -1,6 +1,5 @@
 ---
 title: "Alternatives Naturelles Ozempic"
-slug: "alternatives-naturelles-ozempic"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Alternatives naturelles à l'Ozempic : plantes, compléments alimentaires et méthodes naturelles pour réguler la glycémie et favoriser la perte de poids."

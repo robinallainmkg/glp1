@@ -30,27 +30,32 @@ export interface ArticleAffiliateProduct {
   customNote?: string;
 }
 
+// Cache module-level : une seule requête Supabase pour tout le build
+let _cachedProducts: AffiliateProduct[] | null = null;
+
 /**
- * Récupère tous les produits d'affiliation depuis Supabase
+ * Récupère tous les produits d'affiliation depuis Supabase (avec cache build-time)
  */
 export async function getAllAffiliateProducts(): Promise<AffiliateProduct[]> {
-  try {
-    console.log('🔍 Connexion à Supabase pour charger les produits...');
+  if (_cachedProducts !== null) {
+    return _cachedProducts;
+  }
 
+  try {
     const { data: products, error } = await supabase
       .from('products')
       .select('*')
       .order('priority', { ascending: true });
 
     if (error) {
-      console.error('❌ Erreur Supabase:', error);
+      console.error('❌ Erreur Supabase produits:', error);
       return [];
     }
 
-    console.log(`✅ Produits Supabase chargés: ${products?.length || 0} produits trouvés`);
+    console.log(`✅ Produits Supabase chargés: ${products?.length || 0} produits`);
     
     // Transformer les données pour correspondre à l'interface
-    return products?.map(product => ({
+    _cachedProducts = products?.map(product => ({
       id: product.id,
       productName: product.title,
       brand: product.brand,
@@ -70,6 +75,8 @@ export async function getAllAffiliateProducts(): Promise<AffiliateProduct[]> {
       isOnSale: (product.discount_percent && product.discount_percent > 0) || false,
       slug: product.slug || generateSlug(product.title)
     })) || [];
+
+    return _cachedProducts;
 
 // Fonctions utilitaires pour générer les données des produits
 function generateSaleBadge(discountPercent?: number, featured?: boolean): string | undefined {

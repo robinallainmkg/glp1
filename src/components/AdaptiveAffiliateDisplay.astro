@@ -61,7 +61,6 @@ try {
     inlineProducts = shuffledProducts.slice(0, Math.min(4, defaultConfig.maxInlineProducts));
   } else {
     // Charger les produits depuis Supabase si aucun n'est fourni
-    console.log('🔄 Chargement des produits depuis Supabase...');
     const allProducts = await getAllAffiliateProducts();
     
     if (allProducts.length > 0) {
@@ -79,7 +78,7 @@ try {
       sidebarProducts = mixedProducts.slice(0, 6); // Max 6 pour la sidebar
       inlineProducts = mixedProducts.slice(0, Math.min(4, defaultConfig.maxInlineProducts));
     } else {
-      console.log(`⚠️ AdaptiveAffiliateDisplay: Aucun produit trouvé dans Supabase`);
+      console.warn('⚠️ AdaptiveAffiliateDisplay: aucun produit trouvé');
     }
   }
 } catch (error) {

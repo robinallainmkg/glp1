@@ -1,7 +1,6 @@
 ---
 title: "Quel traitement GLP-1 choisir ? Guide complet 2025"
 description: "Découvrez comment choisir le bon traitement GLP-1. Comparaison Ozempic, Wegovy, Mounjaro et autres. Guide d'expert pour faire le bon choix."
-slug: "/quel-traitement-glp1-choisir"
 pageType: "Guide statique"
 noIndex: false
 thumbnail: "/images/thumbnails/quel-traitement-glp1-choisir.svg"
