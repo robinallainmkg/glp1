@@ -1,6 +1,5 @@
 ---
 title: "Recherche Clinique GLP-1 : Guide Complet et Conseils Pratiques 2025"
-slug: "recherche-clinique-glp1"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
 description: "État de la recherche clinique sur les GLP-1 : études en cours, nouveaux médicaments, avancées thérapeutiques et perspectives médicales 2025."

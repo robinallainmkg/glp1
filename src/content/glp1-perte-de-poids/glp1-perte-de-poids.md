@@ -1,6 +1,5 @@
 ---
 title: "GLP-1 Perte de Poids 2025 : Résultats et Témoignages"
-slug: "glp1-perte-de-poids"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Découvrez comment les GLP-1 révolutionnent la perte de poids en 2025 : mécanisme d'action, résultats cliniques prouvés, témoignages patients et guide complet pour réussir votre amaigrissement."

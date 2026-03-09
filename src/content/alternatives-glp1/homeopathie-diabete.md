@@ -1,7 +1,6 @@
 ---
 title: "Homeopathie Diabète : Guide Complet et Conseils Pratiques 2025"
 description: "Guide complet sur Homeopathie Diabète : informations médicales et recommandations d'experts."
-slug: "homeopathie-diabete"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
