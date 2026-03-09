@@ -7,7 +7,7 @@ const unifiedSchema = z.object({
   category: z.string().optional(),
   author: z.string().optional(),
   readingTime: z.number().optional(),
-  pubDate: z.date().optional(),
+  pubDate: z.coerce.date().optional(),
   tags: z.array(z.string()).optional(),
   image: z.string().optional(), // Thumbnail généré automatiquement
   ogImage: z.string().optional(), // meta image
@@ -24,7 +24,7 @@ const unifiedSchema = z.object({
   // Champs legacy (transition)
   date: z.coerce.date().optional(), // Alias pour pubDate (migration en cours)
   collection: z.string().optional(), // Collection explicite dans le frontmatter
-  slug: z.string().optional(), // Slug explicite
+  // slug est réservé par Astro — ne pas le déclarer dans le schéma
 });
 
 const alternativesGlp1 = defineCollection({ type: 'content', schema: unifiedSchema });
