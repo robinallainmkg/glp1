@@ -37,7 +37,7 @@ const affiliateConfig = {
         <div class="progress-bar">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
-        <p class="progress-text"><span id="question-number">1</span> sur 9 questions</p>
+        <p class="progress-text"><span id="question-number">1</span> sur 8 questions</p>
       </header>
 
       <!-- Quiz Container -->
@@ -486,6 +486,32 @@ const affiliateConfig = {
         <button id="results-btn" class="btn btn-primary" style="display: none;">Voir mes Résultats 🎯</button>
       </div>
 
+      <!-- Email Gate Section -->
+      <div class="email-gate" id="email-gate" style="display: none;">
+        <div class="email-gate-card">
+          <div class="email-gate-icon">🔓</div>
+          <h2>Votre diagnostic est prêt !</h2>
+          <p>Entrez votre email pour recevoir votre recommandation personnalisée et notre guide comparatif des prix GLP-1 actualisés.</p>
+          <form id="diagnostic-email-form" class="email-gate-form">
+            <input
+              type="email"
+              id="diagnostic-email"
+              placeholder="Votre adresse email"
+              required
+              class="email-gate-input"
+            />
+            <button type="submit" class="email-gate-btn">
+              Voir mon résultat
+            </button>
+          </form>
+          <div class="email-gate-trust">
+            <span>🔒 Données sécurisées</span>
+            <span>📧 Pas de spam</span>
+            <span>🚫 Désabonnement facile</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Results Section -->
       <div class="results-section" id="results-section" style="display: none;">
         <div class="results-header">
@@ -722,6 +748,100 @@ const affiliateConfig = {
       font-size: 1.1rem;
     }
 
+    /* Email Gate */
+    .email-gate {
+      animation: fadeIn 0.4s ease;
+    }
+
+    .email-gate-card {
+      max-width: 500px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #2563EB 0%, #7c3aed 100%);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+    }
+
+    .email-gate-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .email-gate-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      color: white;
+    }
+
+    .email-gate-card p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .email-gate-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .email-gate-input {
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.95);
+      color: #1e293b;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .email-gate-input:focus {
+      border-color: #facc15;
+    }
+
+    .email-gate-input::placeholder {
+      color: #94a3b8;
+    }
+
+    .email-gate-btn {
+      padding: 1rem;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, #facc15, #f97316);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .email-gate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+    }
+
+    .email-gate-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .email-gate-trust {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      opacity: 0.85;
+      flex-wrap: wrap;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -824,13 +944,17 @@ const affiliateConfig = {
     const answers: any = {};
     let selectedEffets: any[] = [];
 
+    let diagnosticEmail = '';
+
     // Fonction pour enregistrer le diagnostic dans Supabase
-    async function saveDiagnosticToSupabase(answers: any, recommendation: string, scores?: { ozempic: number, wegovy: number }) {
+    async function saveDiagnosticToSupabase(answers: any, recommendation: string, scores?: { ozempic: number, wegovy: number, mounjaro: number }) {
       try {
+        // Save diagnostic data
         const diagnosticData = {
           answers: answers,
           recommendation: recommendation,
           scores: scores || null,
+          email: diagnosticEmail || null,
           completed_at: new Date().toISOString(),
           user_agent: navigator.userAgent,
           page_url: window.location.href
@@ -841,9 +965,29 @@ const affiliateConfig = {
           .insert([diagnosticData]);
 
         if (error) {
-          console.error('❌ Erreur Supabase lors de l\'enregistrement du diagnostic:', error);
+          console.error('❌ Erreur Supabase diagnostic:', error);
         } else {
-          console.log('✅ Diagnostic enregistré dans Supabase:', data);
+          console.log('✅ Diagnostic enregistré:', data);
+        }
+
+        // Save email to contacts table for lead collection
+        if (diagnosticEmail) {
+          const { error: contactError } = await supabase
+            .from('contacts')
+            .insert({
+              email: diagnosticEmail,
+              subject: 'Diagnostic GLP-1',
+              message: `Diagnostic complété - Recommandation: ${recommendation}. Réponses: ${JSON.stringify(answers)}`,
+              newsletter: true,
+              status: 'new',
+              created_at: new Date().toISOString()
+            });
+
+          if (contactError) {
+            console.error('❌ Erreur Supabase contact:', contactError);
+          } else {
+            console.log('✅ Contact diagnostic enregistré');
+          }
         }
       } catch (err) {
         console.error('❌ Erreur lors de l\'enregistrement:', err);
@@ -963,10 +1107,18 @@ const affiliateConfig = {
     function showResults() {
       console.log('showResults called with answers:', answers);
       document.getElementById('quiz-container').style.display = 'none';
-  const navEl = document.querySelector<HTMLElement>('.navigation');
-  if (navEl) navEl.style.display = 'none';
+      const navEl = document.querySelector<HTMLElement>('.navigation');
+      if (navEl) navEl.style.display = 'none';
+      // Show email gate instead of results directly
+      document.getElementById('email-gate').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function revealResults() {
+      document.getElementById('email-gate').style.display = 'none';
       document.getElementById('results-section').style.display = 'block';
       calculateResults();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function prevQuestion() {
@@ -1005,55 +1157,52 @@ const affiliateConfig = {
 
       console.log('Calculating scores with answers:', answers);
 
-      // Logic de recommendation pour les nouveaux utilisateurs
+      // Scoring pour 3 traitements principaux
       let ozempicScore = 0;
       let wegovyScore = 0;
+      let mounjaroScore = 0;
 
       // Q1: Objectif
-      if (answers.q1 === 'diabete') ozempicScore += 3;
-      if (answers.q1 === 'perte-poids') wegovyScore += 3;
-      if (answers.q1 === 'les-deux') { ozempicScore += 2; wegovyScore += 2; }
+      if (answers.q1 === 'diabete') { ozempicScore += 3; mounjaroScore += 3; }
+      if (answers.q1 === 'poids') { wegovyScore += 3; mounjaroScore += 3; }
+      if (answers.q1 === 'les-deux') { ozempicScore += 2; wegovyScore += 2; mounjaroScore += 4; }
+      if (answers.q1 === 'prevention') { ozempicScore += 2; mounjaroScore += 1; }
 
       // Q2: IMC
-      if (answers.q2 === 'surpoids') ozempicScore += 1;
-      if (answers.q2 === 'obesite-1') { ozempicScore += 2; wegovyScore += 2; }
-      if (answers.q2 === 'obesite-2') wegovyScore += 3;
+      if (answers.q2 === 'surpoids') { ozempicScore += 2; mounjaroScore += 1; }
+      if (answers.q2 === 'obesite-1') { ozempicScore += 1; wegovyScore += 2; mounjaroScore += 3; }
+      if (answers.q2 === 'obesite-2') { wegovyScore += 3; mounjaroScore += 3; }
 
       // Q3: Expérience
-      if (answers.q3 === 'nombreuses') wegovyScore += 2;
-      if (answers.q3 === 'glp1-deja') { 
-        // Si déjà eu GLP-1, favoriser une approche diff�rente ou un suivi sp�cialis�
-        ozempicScore += 1; 
-        wegovyScore += 1; 
-      }
+      if (answers.q3 === 'nombreuses') { wegovyScore += 2; mounjaroScore += 2; }
+      if (answers.q3 === 'glp1-deja') { mounjaroScore += 3; }
 
       // Q4: Budget
-      if (answers.q4 === 'budget-limite') ozempicScore += 1;
-      if (answers.q4 === 'budget-eleve') wegovyScore += 1;
+      if (answers.q4 === 'budget-limite') ozempicScore += 3;
+      if (answers.q4 === 'budget-moyen') { ozempicScore += 1; wegovyScore += 1; mounjaroScore += 1; }
+      if (answers.q4 === 'budget-eleve') { wegovyScore += 2; mounjaroScore += 2; }
 
       // Q5: Urgence
-      if (answers.q5 === 'rapide') wegovyScore += 2;
+      if (answers.q5 === 'rapide') { wegovyScore += 1; mounjaroScore += 3; }
+      if (answers.q5 === 'progressif') { ozempicScore += 1; wegovyScore += 1; }
 
-      // Q6: Tol�rance
-      if (answers.q6 === 'sensible') ozempicScore += 1;
-      if (answers.q6 === 'bonne') wegovyScore += 1;
+      // Q6: Tolérance
+      if (answers.q6 === 'sensible') { ozempicScore += 2; }
+      if (answers.q6 === 'bonne') { wegovyScore += 1; mounjaroScore += 2; }
 
       // Q7: Suivi
-      if (answers.q7 === 'regulier') { ozempicScore += 2; wegovyScore += 2; }
-      if (answers.q7 === 'aucun') ozempicScore -= 1;
+      if (answers.q7 === 'regulier') { ozempicScore += 1; wegovyScore += 1; mounjaroScore += 1; }
+      if (answers.q7 === 'aucun') { ozempicScore -= 1; wegovyScore -= 1; mounjaroScore -= 1; }
 
-      // Q8: Sant�
-      if (answers.q8 === 'importants') ozempicScore += 1;
+      // Q8: Santé
+      if (answers.q8 === 'importants') { ozempicScore += 1; mounjaroScore += 1; }
+      if (answers.q8 === 'aucun') { wegovyScore += 1; mounjaroScore += 1; }
 
-      console.log('Scores calculated - Ozempic:', ozempicScore, 'Wegovy:', wegovyScore);
-      showTraitementResults(ozempicScore, wegovyScore);
+      console.log('Scores - Ozempic:', ozempicScore, 'Wegovy:', wegovyScore, 'Mounjaro:', mounjaroScore);
+      showTraitementResults(ozempicScore, wegovyScore, mounjaroScore);
     }
 
     function showEffetsSideSolutions() {
-  const quizEl = document.getElementById('quiz-container');
-  if (quizEl) (quizEl as HTMLElement).style.display = 'none';
-  const navEl = document.querySelector<HTMLElement>('.navigation');
-  if (navEl) navEl.style.display = 'none';
   const resultsEl = document.getElementById('results-section');
   if (resultsEl) (resultsEl as HTMLElement).style.display = 'block';
 
@@ -1240,122 +1389,120 @@ const affiliateConfig = {
       document.getElementById('results-content').innerHTML = solutions;
       
       // Enregistrer le diagnostic dans Supabase
-      saveDiagnosticToSupabase(answers, 'effets-secondaires', { ozempic: 0, wegovy: 0 });
+      saveDiagnosticToSupabase(answers, 'effets-secondaires', { ozempic: 0, wegovy: 0, mounjaro: 0 });
     }
 
-    function showTraitementResults(ozempicScore: number, wegovyScore: number) {
-      console.log('showTraitementResults called with scores:', { ozempicScore, wegovyScore });
-      document.getElementById('quiz-container').style.display = 'none';
-  const navEl = document.querySelector<HTMLElement>('.navigation');
-  if (navEl) navEl.style.display = 'none';
+    function showTraitementResults(ozempicScore: number, wegovyScore: number, mounjaroScore: number) {
+      console.log('showTraitementResults called with scores:', { ozempicScore, wegovyScore, mounjaroScore });
       document.getElementById('results-section').style.display = 'block';
 
+      // Classement des traitements
+      const treatments = [
+        { name: 'Mounjaro', score: mounjaroScore, key: 'mounjaro' },
+        { name: 'Wegovy', score: wegovyScore, key: 'wegovy' },
+        { name: 'Ozempic', score: ozempicScore, key: 'ozempic' }
+      ].sort((a, b) => b.score - a.score);
+
+      const top = treatments[0];
+      const second = treatments[1];
       let recommendation = '';
-      
-      // Cas sp�cial : personne ayant déjà fait un traitement GLP-1
+
+      // Cas spécial : personne ayant déjà fait un traitement GLP-1
       if (answers.q3 === 'glp1-deja') {
-        console.log('Showing recommendation for experienced user');
         recommendation = `
           <div class="recommendation">
-            <div class="recommendation-score">Recommandation : Nouveau Départ</div>
-            <h3>🔄 Vous avez déjà essayé un GLP-1 : Optimisons votre approche</h3>
-            <p>Ayant déjà une expérience avec les traitements GLP-1, voici nos recommandations :</p>
-            
-            <h4>🔍 Analysez votre expérience précédente :</h4>
+            <div class="recommendation-score">Profil : Utilisateur expérimenté GLP-1</div>
+            <h3>🔄 Vous avez déjà essayé un GLP-1 — voici comment optimiser</h3>
+            <p>Votre expérience passée est un atout. D'après votre profil, <strong>${top.name}</strong> pourrait être la meilleure option pour un nouveau départ.</p>
+
+            <h4>🎯 Pourquoi changer de molécule peut aider :</h4>
             <ul class="features-list">
-              <li>Quel était le traitement utilisé ? (Ozempic, Wegovy, Saxenda...)</li>
-              <li>Pourquoi avez-vous arrêté ? (Effets secondaires, coût, efficacité...)</li>
-              <li>Avez-vous eu des résultats ? Combien de poids perdu ?</li>
-              <li>Combien de temps depuis l'arrêt ?</li>
+              <li><strong>Mounjaro (tirzépatide) :</strong> Double action GIP + GLP-1, souvent mieux toléré et plus efficace sur la perte de poids</li>
+              <li><strong>Wegovy (sémaglutide 2.4mg) :</strong> Dose optimisée spécifiquement pour l'obésité</li>
+              <li><strong>Rybelsus (sémaglutide oral) :</strong> Alternative en comprimé si les injections posent problème</li>
             </ul>
 
-            <h4>🎯 Nouvelles stratégies à considérer :</h4>
+            <h4>📋 Prochaines étapes recommandées :</h4>
             <ul class="features-list">
-              <li><strong>Changement de molécule :</strong> Essayer Mounjaro (tirzépatide) ou Rybelsus (oral)</li>
-              <li><strong>Dosage différent :</strong> Démarrage plus progressif pour réduire les effets secondaires</li>
-              <li><strong>Accompagnement renforcé :</strong> Suivi nutritionnel et psychologique</li>
-              <li><strong>Timing optimisé :</strong> Période de l'année et contexte personnel propices</li>
+              <li>Consultez un endocrinologue ou un médecin spécialisé en obésité</li>
+              <li>Faites un bilan sanguin complet avant de reprendre</li>
+              <li>Discutez d'un dosage de départ plus progressif</li>
+              <li>Envisagez un suivi nutritionnel en parallèle</li>
             </ul>
 
-            <h4>⚠️ Points d'attention :</h4>
-            <ul class="features-list">
-              <li>Discutez avec votre médecin des raisons de l'arrêt précédent</li>
-              <li>Vérifiez votre situation médicale actuelle (bilan sanguin)</li>
-              <li>Préparez un plan pour éviter les mêmes difficultés</li>
-              <li>Considérez un centre spécialisé en obésité pour un suivi expert</li>
-            </ul>
-
-            <div style="margin-top: 2rem;">
-              <a href="/collections/traitements-glp1/" class="btn btn-primary">Comparer tous les traitements</a>
-              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin spécialisé</a>
-              <a href="/effets-secondaires-glp1/" class="btn btn-secondary">Gérer les effets secondaires</a>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="/collections/traitements-glp1/guide-complet-mounjaro/" class="btn btn-primary">Découvrir Mounjaro</a>
+              <a href="/collections/traitements-glp1/" class="btn btn-outline">Comparer tous les traitements</a>
             </div>
           </div>
         `;
-      } else if (ozempicScore > wegovyScore) {
+      } else if (top.key === 'mounjaro') {
         recommendation = `
           <div class="recommendation">
-            <div class="recommendation-score">Recommandation : Ozempic</div>
-            <h3>💉 Ozempic semble le plus adapté à votre profil</h3>
-            <p>Basé sur vos réponses, Ozempic présente les avantages suivants pour vous :</p>
+            <div class="recommendation-score">Recommandation n°1 : Mounjaro (tirzépatide)</div>
+            <h3>💉 Mounjaro est le traitement le plus adapté à votre profil</h3>
+            <p>Le tirzépatide (Mounjaro) combine deux mécanismes d'action (GIP + GLP-1) pour une efficacité renforcée.</p>
             <ul class="features-list">
-              <li>Traitement du diabète ET perte de poids</li>
-              <li>Coût généralement plus abordable</li>
-              <li>Dosage progressif pour minimiser les effets secondaires</li>
-              <li>Prise en charge possible par l'Assurance Maladie</li>
+              <li><strong>Perte de poids supérieure</strong> — jusqu'à 20-25% du poids corporel dans les études cliniques</li>
+              <li><strong>Double action</strong> — agit sur le diabète ET le poids simultanément</li>
+              <li><strong>Injection hebdomadaire</strong> — une seule injection par semaine</li>
+              <li><strong>Disponible en France</strong> — prescrit par endocrinologue ou médecin spécialisé</li>
             </ul>
-            <p><strong>Prochaines étapes :</strong></p>
-            <p>1. Consultez votre médecin traitant ou un endocrinologue<br>
-            2. Faites un bilan sanguin complet<br>
-            3. Discutez des contre-indications éventuelles</p>
-            <div style="margin-top: 2rem;">
-              <a href="/collections/traitements-glp1/guide-complet-ozempic/" class="btn btn-primary">En savoir plus sur Ozempic</a>
-              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
+            <p><strong>À savoir :</strong> Mounjaro n'est pas encore remboursé pour l'obésité en France (mars 2026). Son coût est d'environ 250-350€/mois. Il est remboursé pour le diabète de type 2.</p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="/collections/traitements-glp1/guide-complet-mounjaro/" class="btn btn-primary">Guide complet Mounjaro</a>
+              <a href="/collections/glp1-cout/prix-mounjaro-france/" class="btn btn-outline">Prix et remboursement</a>
             </div>
           </div>
         `;
-      } else if (wegovyScore > ozempicScore) {
+      } else if (top.key === 'wegovy') {
         recommendation = `
           <div class="recommendation">
-            <div class="recommendation-score">Recommandation : Wegovy</div>
-            <h3>💉 Wegovy semble le plus adapté à votre profil</h3>
-            <p>Basé sur vos réponses, Wegovy présente les avantages suivants pour vous :</p>
+            <div class="recommendation-score">Recommandation n°1 : Wegovy (sémaglutide 2.4mg)</div>
+            <h3>💉 Wegovy est le traitement le plus adapté à votre profil</h3>
+            <p>Wegovy est la référence pour la perte de poids médicale, avec un dosage optimisé de sémaglutide.</p>
             <ul class="features-list">
-              <li>Spécialement conçu pour la perte de poids</li>
-              <li>Dosage plus élevé pour des résultats plus rapides</li>
-              <li>Idéal pour l'obésité importante</li>
-              <li>Accompagnement nutritionnel recommandé</li>
+              <li><strong>Conçu pour la perte de poids</strong> — indication officielle pour l'obésité (IMC ≥ 30)</li>
+              <li><strong>Résultats prouvés</strong> — perte moyenne de 15-17% du poids dans les études</li>
+              <li><strong>Dosage progressif</strong> — montée en dose sur 16 semaines pour limiter les effets secondaires</li>
+              <li><strong>Injection hebdomadaire</strong> — stylo prérempli simple d'utilisation</li>
             </ul>
-            <p><strong>Prochaines étapes :</strong></p>
-            <p>1. Consultez un médecin spécialisé en obésité<br>
-            2. Vérifiez votre éligibilité (IMC > 30)<br>
-            3. Préparez un plan nutritionnel adapté</p>
-            <div style="margin-top: 2rem;">
-              <a href="/collections/glp1-cout/acheter-wegovy-en-france/" class="btn btn-primary">En savoir plus sur Wegovy</a>
-              <a href="/collections/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
+            <p><strong>À savoir :</strong> Wegovy n'est pas remboursé en France pour l'obésité (mars 2026). Coût : environ 200-300€/mois. Disponible sur ordonnance.</p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="/collections/traitements-glp1/guide-complet-wegovy/" class="btn btn-primary">Guide complet Wegovy</a>
+              <a href="/collections/glp1-cout/prix-wegovy-france/" class="btn btn-outline">Prix et pharmacies</a>
             </div>
           </div>
         `;
       } else {
         recommendation = `
           <div class="recommendation">
-            <div class="recommendation-score">Les deux sont adaptés</div>
-            <h3>💉 Ozempic et Wegovy sont tous deux adaptés</h3>
-            <p>Votre profil correspond aux deux traitements. Le choix dépendra de :</p>
+            <div class="recommendation-score">Recommandation n°1 : Ozempic (sémaglutide 1mg)</div>
+            <h3>💉 Ozempic est le traitement le plus adapté à votre profil</h3>
+            <p>Ozempic est le traitement GLP-1 le plus prescrit en France, avec un excellent rapport efficacité/coût.</p>
             <ul class="features-list">
-              <li>Votre budget et la prise en charge</li>
-              <li>Vos préférences en termes de dosage</li>
-              <li>L'avis de votre médecin</li>
-              <li>Votre tolérance aux effets secondaires</li>
+              <li><strong>Remboursé par l'Assurance Maladie</strong> — pris en charge à 65% (100% en ALD) pour le diabète de type 2</li>
+              <li><strong>Efficacité prouvée</strong> — perte de poids de 10-15% + contrôle glycémique</li>
+              <li><strong>Dosage progressif</strong> — 0.25mg → 0.5mg → 1mg pour minimiser les effets secondaires</li>
+              <li><strong>Large expérience clinique</strong> — le GLP-1 le plus utilisé au monde</li>
             </ul>
-            <p><strong>Important</strong> : Ozempic est remboursé uniquement pour le diabète de type 2 (65 %, 100 % en ALD). Wegovy est indiqué pour l'obésité mais n'est pas remboursé en France (mars 2026). Votre médecin choisira le traitement adapté à votre indication médicale.</p>
-            <div style="margin-top: 2rem;">
-              <a href="/collections/traitements-glp1/" class="btn btn-primary">Comparer Ozempic vs Wegovy</a>
-              <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin</a>
+            <p><strong>À savoir :</strong> Ozempic est remboursé uniquement pour le diabète de type 2. Si votre objectif est seulement la perte de poids, demandez à votre médecin les alternatives adaptées.</p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="/collections/traitements-glp1/guide-complet-ozempic/" class="btn btn-primary">Guide complet Ozempic</a>
+              <a href="/collections/glp1-cout/prix-ozempic-france/" class="btn btn-outline">Prix et remboursement</a>
             </div>
           </div>
         `;
       }
+
+      // Add second recommendation
+      recommendation += `
+        <div class="recommendation" style="opacity: 0.9; border-color: rgba(59,130,246,0.1);">
+          <div class="recommendation-score" style="background: linear-gradient(135deg, #64748b, #475569);">Alternative à considérer : ${second.name}</div>
+          <p>Si ${top.name} ne vous convient pas, <strong>${second.name}</strong> est également adapté à votre profil. Discutez-en avec votre médecin.</p>
+          <a href="/collections/traitements-glp1/guide-complet-${second.key}/" style="color: var(--primary-blue); font-weight: 600;">En savoir plus sur ${second.name} →</a>
+        </div>
+      `;
 
       recommendation += `
         <div style="background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid rgba(59, 130, 246, 0.2);">
@@ -1407,29 +1554,40 @@ const affiliateConfig = {
         </div>
       `;
 
-      console.log('Setting innerHTML for results-content with recommendation length:', recommendation.length);
       const resultsElement = document.getElementById('results-content');
-      console.log('Results element found:', resultsElement);
-      
       if (resultsElement) {
         resultsElement.innerHTML = recommendation;
-        console.log('Results content set successfully');
-      } else {
-        console.error('Results element not found!');
       }
-      
+
       // Enregistrer le diagnostic dans Supabase
-      const recommendationType = ozempicScore > wegovyScore ? 'ozempic' : (wegovyScore > ozempicScore ? 'wegovy' : 'both');
-      saveDiagnosticToSupabase(answers, recommendationType, { ozempic: ozempicScore, wegovy: wegovyScore });
+      saveDiagnosticToSupabase(answers, top.key, { ozempic: ozempicScore, wegovy: wegovyScore, mounjaro: mounjaroScore });
     }
 
-    // Event listeners (guarded to avoid SSR/type-check issues)
+    // Event listeners
     const nextBtn = typeof document !== 'undefined' ? document.getElementById('next-btn') : null;
     const prevBtn = typeof document !== 'undefined' ? document.getElementById('prev-btn') : null;
     const resultsBtn = typeof document !== 'undefined' ? document.getElementById('results-btn') : null;
     if (nextBtn) (nextBtn as HTMLElement).addEventListener('click', nextQuestion);
     if (prevBtn) (prevBtn as HTMLElement).addEventListener('click', prevQuestion);
     if (resultsBtn) (resultsBtn as HTMLElement).addEventListener('click', calculateResults);
+
+    // Email gate form handler
+    const emailForm = typeof document !== 'undefined' ? document.getElementById('diagnostic-email-form') : null;
+    if (emailForm) {
+      emailForm.addEventListener('submit', async (e: Event) => {
+        e.preventDefault();
+        const emailInput = document.getElementById('diagnostic-email') as HTMLInputElement;
+        const submitBtn = emailForm.querySelector('button') as HTMLButtonElement;
+        diagnosticEmail = emailInput.value;
+
+        submitBtn.textContent = 'Chargement...';
+        submitBtn.disabled = true;
+
+        // Small delay for perceived loading
+        await new Promise(r => setTimeout(r, 600));
+        revealResults();
+      });
+    }
 
     // Auto-advance on selection (sauf pour la question 9 qui utilise des checkboxes)
     if (typeof document !== 'undefined') {

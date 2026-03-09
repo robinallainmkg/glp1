@@ -27,10 +27,15 @@ const affiliateConfig = {
 };
 ---
 
-<ArticleWithAffiliateSidebar 
-  articleContent={entry} 
-  affiliateProducts={affiliateProducts} 
+<ArticleWithAffiliateSidebar
+  title={entry.data.title}
+  description={entry.data.description}
+  author={entry.data.author}
+  image={entry.data.image}
+  article={entry}
+  affiliateProducts={affiliateProducts}
   affiliateConfig={affiliateConfig}
+  detectedCategory="temoignages"
 >
   <div class="testimonial-container">
     <Content />
