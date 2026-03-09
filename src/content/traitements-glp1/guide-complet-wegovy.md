@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Wegovy : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-wegovy"
 description: "Découvrez tout sur Wegovy : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/wegovy.jpg"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
 ---
 
 # Guide Complet Wegovy : Tout Savoir sur ce Traitement Révolutionnaire
@@ -164,5 +166,4 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
-*Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-wegovy.md
+*Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

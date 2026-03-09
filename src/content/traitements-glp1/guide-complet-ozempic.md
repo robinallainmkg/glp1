@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Ozempic : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-ozempic"
 description: "Découvrez tout sur Ozempic : traitement GLP-1 pour le diabète et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/ozempic-medical-guide.jpg"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["ozempic", "glp-1", "diabète", "perte de poids", "traitement", "injection"]
 date: "2025-08-27"
+pubDate: "2025-08-27"
 ---
 
 # Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
@@ -172,5 +174,4 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
-*Ce guide complet sur Ozempic est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-ozempic.md
+*Ce guide complet sur Ozempic est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

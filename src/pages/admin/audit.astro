@@ -7,7 +7,7 @@ import AdminNav from '../../components/AdminNav.astro';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audit SEO - GLP1 Admin</title>
+  <title>Audit Contenu - GLP1 Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -96,6 +96,95 @@ import AdminNav from '../../components/AdminNav.astro';
     .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
     .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
 
+    /* Phase blocks */
+    .phase {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .phase-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .phase-header:hover { background: var(--surface2); }
+    .phase-number {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+    .phase-p1 { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+    .phase-p2 { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+    .phase-p3 { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
+    .phase-p4 { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
+    .phase-title { font-size: 14px; font-weight: 700; flex: 1; }
+    .phase-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: var(--surface2);
+      color: var(--muted);
+    }
+    .phase-chevron {
+      width: 16px; height: 16px; color: var(--muted); transition: transform 0.2s;
+    }
+    .phase.open .phase-chevron { transform: rotate(90deg); }
+    .phase-body { padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .phase.open .phase-body { max-height: 5000px; }
+    .phase-content { padding: 20px; }
+
+    /* Task items */
+    .task {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .task-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .task-icon { flex-shrink: 0; margin-top: 2px; }
+    .task-title { font-weight: 700; }
+    .task-detail { color: var(--text2); padding-left: 26px; }
+    .task-detail code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      background: var(--surface2);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+    .task-files {
+      margin-top: 8px;
+      padding-left: 26px;
+    }
+    .task-file {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--blue);
+      display: block;
+      padding: 2px 0;
+    }
+    .task-urgent { border-color: var(--urgent-border); background: var(--urgent-light); }
+    .task-warning { border-color: var(--warning-border); background: var(--warning-light); }
+    .task-info { border-color: var(--blue-border); background: var(--blue-light); }
+    .task-done { border-color: var(--ok-border); background: var(--ok-light); opacity: 0.7; }
+    .task-done .task-title { text-decoration: line-through; color: var(--ok); }
+
     /* Alerts section */
     .alerts {
       display: grid;
@@ -112,27 +201,10 @@ import AdminNav from '../../components/AdminNav.astro';
       font-size: 13px;
       line-height: 1.5;
     }
-    .alert-icon {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .alert-urgent {
-      background: var(--urgent-light);
-      border: 1px solid var(--urgent-border);
-      color: var(--urgent);
-    }
-    .alert-warning {
-      background: var(--warning-light);
-      border: 1px solid var(--warning-border);
-      color: var(--warning);
-    }
-    .alert-info {
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
-      color: var(--blue);
-    }
+    .alert-icon { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; }
+    .alert-urgent { background: var(--urgent-light); border: 1px solid var(--urgent-border); color: var(--urgent); }
+    .alert-warning { background: var(--warning-light); border: 1px solid var(--warning-border); color: var(--warning); }
+    .alert-info { background: var(--blue-light); border: 1px solid var(--blue-border); color: var(--blue); }
     .alert strong { font-weight: 700; }
 
     /* Section heads */
@@ -145,6 +217,21 @@ import AdminNav from '../../components/AdminNav.astro';
     }
     .section-title { font-size: 15px; font-weight: 700; }
     .section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+
+    /* Tags */
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+    .tag-count { background: var(--surface2); color: var(--text2); }
+    .tag-info { background: var(--blue-light); color: var(--blue); }
+    .tag-transac { background: var(--purple-light); color: var(--purple); }
+    .tag-nav { background: var(--ok-light); color: var(--ok); }
+    .tag-warn { background: var(--warning-light); color: var(--warning); }
+    .tag-urgent { background: var(--urgent-light); color: var(--urgent); }
 
     /* Collections grid */
     .collections-grid {
@@ -161,37 +248,10 @@ import AdminNav from '../../components/AdminNav.astro';
       cursor: pointer;
       transition: all 0.15s;
     }
-    .collection-card:hover {
-      border-color: var(--border2);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .collection-card.active {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 1px var(--blue);
-    }
-    .collection-name {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .collection-meta {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .tag {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      padding: 3px 8px;
-      border-radius: 5px;
-      font-weight: 500;
-    }
-    .tag-count { background: var(--surface2); color: var(--text2); }
-    .tag-info { background: var(--blue-light); color: var(--blue); }
-    .tag-transac { background: var(--purple-light); color: var(--purple); }
-    .tag-nav { background: var(--ok-light); color: var(--ok); }
-    .tag-warn { background: var(--warning-light); color: var(--warning); }
-    .tag-urgent { background: var(--urgent-light); color: var(--urgent); }
+    .collection-card:hover { border-color: var(--border2); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .collection-card.active { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
+    .collection-name { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+    .collection-meta { display: flex; gap: 6px; flex-wrap: wrap; }
 
     /* Articles table */
     .table-wrap {
@@ -233,17 +293,9 @@ import AdminNav from '../../components/AdminNav.astro';
       cursor: pointer;
       transition: all 0.15s;
     }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--text);
-      color: #fff;
-      border-color: var(--text);
-    }
+    .filter-btn:hover, .filter-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
     thead th {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 9px;
@@ -254,34 +306,15 @@ import AdminNav from '../../components/AdminNav.astro';
       padding: 10px 14px;
       border-bottom: 1px solid var(--border);
       background: var(--surface2);
-      position: sticky;
-      top: 0;
     }
     tbody tr { border-bottom: 1px solid var(--surface2); transition: background 0.1s; }
     tbody tr:hover { background: var(--surface2); }
     tbody tr:last-child { border-bottom: none; }
     td { padding: 10px 14px; vertical-align: top; }
-    td.slug {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 11px;
-      color: var(--blue);
-      max-width: 220px;
-      word-break: break-all;
-    }
-    td.keyword {
-      font-weight: 600;
-      max-width: 200px;
-    }
+    td.slug { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--blue); max-width: 240px; word-break: break-all; }
+    td.status-cell { max-width: 100px; }
     td.issues { max-width: 280px; }
-    .issue-tag {
-      display: inline-block;
-      font-size: 10px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      margin: 1px 2px;
-      font-weight: 500;
-    }
-
+    .issue-tag { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 4px; margin: 1px 2px; font-weight: 500; }
     .table-footer {
       padding: 10px 18px;
       border-top: 1px solid var(--border);
@@ -314,8 +347,8 @@ import AdminNav from '../../components/AdminNav.astro';
 <div class="admin-layout">
   <div class="topbar">
     <div class="topbar-left">
-      <span class="page-title">Audit SEO</span>
-      <span class="topbar-meta">80 articles &middot; 10 collections &middot; Mars 2026</span>
+      <span class="page-title">Audit Contenu</span>
+      <span class="topbar-meta">80 fichiers &middot; 12 collections &middot; P1+P2 corriges &middot; 09/03/2026</span>
     </div>
   </div>
 
@@ -324,155 +357,334 @@ import AdminNav from '../../components/AdminNav.astro';
     <!-- Stats -->
     <div class="stats">
       <div class="stat">
-        <div class="stat-label">Total articles</div>
+        <div class="stat-label">Total fichiers</div>
         <div class="stat-value">80</div>
-        <div class="stat-sub">10 collections</div>
+        <div class="stat-sub">12 collections (toutes enregistrees)</div>
       </div>
       <div class="stat">
-        <div class="stat-label">Intent informationnel</div>
-        <div class="stat-value" style="color: var(--blue);">54</div>
-        <div class="stat-sub">67.5% des articles</div>
+        <div class="stat-label">Problemes corriges</div>
+        <div class="stat-value" style="color: var(--ok);">8/9</div>
+        <div class="stat-sub">P1 + P2 termines</div>
       </div>
       <div class="stat">
-        <div class="stat-label">Intent transactionnel</div>
-        <div class="stat-value" style="color: var(--purple);">15</div>
-        <div class="stat-sub">18.8% des articles</div>
+        <div class="stat-label">Squelettes restants</div>
+        <div class="stat-value" style="color: var(--warning);">~25</div>
+        <div class="stat-sub">Phase 3 — a rediger ou desindexer</div>
       </div>
       <div class="stat">
-        <div class="stat-label">Intent navigationnel</div>
-        <div class="stat-value" style="color: var(--ok);">8</div>
-        <div class="stat-sub">10% des articles</div>
+        <div class="stat-label">Reste a faire</div>
+        <div class="stat-value" style="color: var(--purple);">P3+P4</div>
+        <div class="stat-sub">Squelettes + ameliorations SEO</div>
       </div>
     </div>
 
-    <!-- Alertes -->
+    <!-- ====================== PLAN D'ACTION ====================== -->
     <div class="section-head" style="margin-top:0">
-      <span class="section-title">Problemes detectes</span>
-      <span class="section-sub">5 alertes</span>
+      <span class="section-title">Plan d'action par priorite</span>
+      <span class="section-sub">4 phases &middot; cliquez pour deployer</span>
     </div>
-    <div class="alerts">
-      <div class="alert alert-urgent">
-        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-        <div><strong>Doublons detectes :</strong> <code>clinique-pour-obesite</code> / <code>clinique-pour-obesite-new</code> et <code>endocrinologue-pour-maigrir</code> / <code>endocrinologue-pour-maigrir-new</code> — contenu quasi-identique, risque de cannibalisation SEO.</div>
+
+    <!-- PHASE 1 -->
+    <div class="phase" id="phase1">
+      <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="phase-number" style="background:var(--ok-light);color:var(--ok);border:1px solid var(--ok-border)">P1 CORRIGE</span>
+        <span class="phase-title">Corrections critiques (technique + SEO)</span>
+        <span class="phase-badge" style="background:var(--ok-light);color:var(--ok)">5/5 fait</span>
+        <svg class="phase-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
       </div>
-      <div class="alert alert-warning">
-        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-        <div><strong>Contenus placeholder :</strong> De nombreux articles <code>alternatives-glp1</code> et <code>regime-glp1</code> contiennent des prix "XX" et des sections incompletes (squelettes).</div>
-      </div>
-      <div class="alert alert-warning">
-        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-        <div><strong>Classification incorrecte :</strong> <code>serena-williams-glp1</code> a <code>collection: "pages-statiques"</code> dans le frontmatter mais est dans le dossier <code>temoignages/</code>.</div>
-      </div>
-      <div class="alert alert-info">
-        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-        <div><strong>Mauvaise categorisation :</strong> <code>wegovy-dosage</code> est dans <code>effets-secondaires-glp1</code> alors qu'il traite de posologie, pas d'effets secondaires.</div>
-      </div>
-      <div class="alert alert-info">
-        <svg class="alert-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-        <div><strong>H2 generiques :</strong> ~30 articles partagent les memes H2 ("Prix/disponibilite France", "Remboursement", "Comparaison internationale") — faible differentiation SEO.</div>
+      <div class="phase-body">
+        <div class="phase-content">
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Supprimer les 2 doublons exacts (cannibalisation SEO)</span>
+            </div>
+            <div class="task-detail">Fait. Fichiers <code>clinique-pour-obesite-new.md</code> et <code>endocrinologue-pour-maigrir-new.md</code> supprimes.</div>
+          </div>
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Nettoyer les 9 fichiers corrompus (balises XML)</span>
+            </div>
+            <div class="task-detail">Fait. Balises <code>&lt;/content&gt;</code> et <code>&lt;parameter&gt;</code> supprimees des 8 guides traitements-glp1 + serena-williams-glp1.</div>
+          </div>
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Corriger le double frontmatter (7 fichiers)</span>
+            </div>
+            <div class="task-detail">Fait. Champs <code>thumbnail</code>/<code>thumbnailAlt</code> deplaces a l'interieur du frontmatter pour les 6 fichiers effets-secondaires + prix-rybelsus-france.</div>
+          </div>
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Enregistrer collections manquantes dans config.ts</span>
+            </div>
+            <div class="task-detail">Fait. Collections <code>temoignages</code> et <code>avant-apres-glp1</code> ajoutees. Champs <code>thumbnailAlt</code>, <code>date</code>, <code>collection</code>, <code>slug</code> ajoutes au schema.</div>
+          </div>
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Deduplication interne de wegovy-prix.md</span>
+            </div>
+            <div class="task-detail">Fait. Fichier passe de 776 a 209 lignes. Contenu repete 2-3x supprime, meilleurs passages fusionnes.</div>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <!-- Collections -->
+    <!-- PHASE 2 -->
+    <div class="phase" id="phase2">
+      <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="phase-number" style="background:var(--ok-light);color:var(--ok);border:1px solid var(--ok-border)">P2 CORRIGE</span>
+        <span class="phase-title">Classifications et frontmatter</span>
+        <span class="phase-badge" style="background:var(--ok-light);color:var(--ok)">3/3 fait</span>
+        <svg class="phase-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+      </div>
+      <div class="phase-body">
+        <div class="phase-content">
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Corriger les 4 fichiers mal classes</span>
+            </div>
+            <div class="task-detail">
+              Fait.<br>
+              <strong>1.</strong> <code>serena-williams-glp1.md</code> — collection corrigee en <code>"temoignages"</code>.<br>
+              <strong>2.</strong> <code>wegovy-dosage.md</code> — deplace de effets-secondaires vers <code>traitements-glp1/</code>.<br>
+              <strong>3.</strong> <code>insulevel-effet-indesirable-new.md</code> — renomme sans "-new".<br>
+              <strong>4.</strong> <code>isglt2-liste.md</code> — mis en <code>published: false</code> (contenu corrompu).
+            </div>
+          </div>
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Uniformiser les frontmatters (9 fichiers)</span>
+            </div>
+            <div class="task-detail">
+              Fait. Champ <code>pubDate</code> ajoute a 8 guides traitements-glp1. Champ <code>slug</code> ajoute aux 9 fichiers (8 guides + centres-mounjaro-france).
+            </div>
+          </div>
+
+          <div class="task task-done">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1e6e3a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span class="task-title">Corriger les liens internes casses (25 fichiers)</span>
+            </div>
+            <div class="task-detail">Fait. 25 fichiers de contenu mis a jour : <code>../medicaments-glp1/</code> remplace par <code>../traitements-glp1/</code>.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="phase" id="phase3">
+      <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="phase-number phase-p3">P3 MOYENNE</span>
+        <span class="phase-title">Squelettes et contenus placeholder (~28 fichiers)</span>
+        <span class="phase-badge">Option A: published false / Option B: rediger</span>
+        <svg class="phase-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+      </div>
+      <div class="phase-body">
+        <div class="phase-content">
+
+          <div class="task task-info">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1a3f7a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              <span class="task-title">alternatives-glp1 : 12 squelettes sur 14</span>
+            </div>
+            <div class="task-detail">Template "Type A" identique avec prix <code>XX-XX EUR/mois</code>, FAQ generiques ("Question frequente 1 sur..."), section "Produits cosmetiques recommandes" hors-sujet. Seuls <code>phytotherapie-glp1</code> et <code>alternatives-naturelles-ozempic</code> ont du contenu partiellement reel.</div>
+            <div class="task-files">
+              <span class="task-file">acupuncture-glp1 | chrome-diabete | vinaigre-cidre-glp1 | semaglutide-naturel</span>
+              <span class="task-file">meditation-glp1 | berberine-glp1 | cannelle-glp1 | peut-on-guerir-du-diabete</span>
+              <span class="task-file">plantes-diabete | homeopathie-diabete | supplements-glp1 | alternatives-bio-glp1</span>
+            </div>
+          </div>
+
+          <div class="task task-info">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="#1a3f7a"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              <span class="task-title">regime-glp1 : 13 squelettes sur 15</span>
+            </div>
+            <div class="task-detail">Template identique avec <code>[Contenu specialise...]</code>, prix placeholder <code>XX-XX EUR</code>, H2 generiques partages. Seul <code>regime-mounjaro-optimal</code> a du vrai contenu.</div>
+            <div class="task-files">
+              <span class="task-file">glp1-calories-journalieres | glp1-index-glycemique | glp1-micronutriments</span>
+              <span class="task-file">glp1-portion-alimentaire | glp1-proteines | isglt2-liste</span>
+              <span class="task-file">jeune-intermittent-glp1 | regime-cetogene-glp1 | regime-chrono-nutrition-glp1</span>
+              <span class="task-file">regime-dash-glp1 | regime-detox-glp1 | regime-mediterraneen-glp1</span>
+              <span class="task-file">regime-paleo-glp1 | regime-sans-sucre-glp1</span>
+            </div>
+          </div>
+
+          <div class="task">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="var(--muted)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              <span class="task-title">Action recommandee</span>
+            </div>
+            <div class="task-detail">
+              <strong>Option A (rapide) :</strong> Ajouter <code>published: false</code> dans le frontmatter des ~28 squelettes pour les desindexer immediatement. ~15 min.<br><br>
+              <strong>Option B (qualite) :</strong> Rediger du vrai contenu (800-1500 mots, sources medicales FR : ameli.fr, HAS, ANSM, VIDAL) pour chaque article. Plusieurs heures/jours.<br><br>
+              <strong>Recommandation :</strong> Faire A puis B progressivement.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="phase" id="phase4">
+      <div class="phase-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="phase-number phase-p4">P4 AMELIORATION</span>
+        <span class="phase-title">Qualite SEO et structure</span>
+        <span class="phase-badge">progressif</span>
+        <svg class="phase-chevron" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+      </div>
+      <div class="phase-body">
+        <div class="phase-content">
+
+          <div class="task">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="var(--purple)"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+              <span class="task-title">Differencier les H2 generiques (~30 articles)</span>
+            </div>
+            <div class="task-detail">Remplacer les H2 identiques ("Prix et disponibilite en France", "Remboursement Securite sociale", "Comparaison internationale") par des titres specifiques au produit.<br>Ex: "Prix Wegovy en pharmacie francaise" au lieu de "Prix et disponibilite en France".</div>
+          </div>
+
+          <div class="task">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="var(--purple)"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+              <span class="task-title">Renommer "Produits cosmetiques recommandes"</span>
+            </div>
+            <div class="task-detail">~25 articles ont cette section dont le contenu n'a rien a voir avec des cosmetiques (outils de suivi, supplements...). Renommer en "Produits et outils recommandes" ou supprimer.</div>
+          </div>
+
+          <div class="task">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="var(--purple)"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+              <span class="task-title">Ajouter du maillage interne (relatedArticles)</span>
+            </div>
+            <div class="task-detail">Renseigner le champ <code>relatedArticles</code> dans les frontmatters pour creer des liens entre collections (ex: guide-complet-wegovy → prix-wegovy-france → effets-secondaires-wegovy).</div>
+          </div>
+
+          <div class="task">
+            <div class="task-head">
+              <svg class="task-icon" width="16" height="16" viewBox="0 0 24 24" fill="var(--purple)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              <span class="task-title">Revoir le ton promotionnel de guide-complet-mounjaro.md</span>
+            </div>
+            <div class="task-detail">Ton clickbait ("SURPASSE", "CHAMPION", "ECRASE la concurrence"), temoignages non-verifies integres, statistiques non-sourcees ("89% patients satisfaits"). A moderer pour la credibilite medicale.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================== INVENTAIRE ====================== -->
     <div class="section-head">
       <span class="section-title">Collections</span>
-      <span class="section-sub">Cliquez pour filtrer le tableau</span>
+      <span class="section-sub">Cliquez pour filtrer</span>
     </div>
     <div class="collections-grid" id="collectionsGrid">
       <div class="collection-card active" data-collection="all">
-        <div class="collection-name">Toutes les collections</div>
+        <div class="collection-name">Toutes</div>
         <div class="collection-meta">
-          <span class="tag tag-count">80 articles</span>
+          <span class="tag tag-count">80 fichiers</span>
         </div>
       </div>
       <div class="collection-card" data-collection="alternatives-glp1">
         <div class="collection-name">Alternatives GLP-1</div>
         <div class="collection-meta">
-          <span class="tag tag-count">14 articles</span>
-          <span class="tag tag-info">informationnel</span>
-          <span class="tag tag-warn">squelettes</span>
+          <span class="tag tag-count">14</span>
+          <span class="tag tag-warn">12 squelettes</span>
         </div>
       </div>
       <div class="collection-card" data-collection="effets-secondaires-glp1">
-        <div class="collection-name">Effets secondaires GLP-1</div>
+        <div class="collection-name">Effets secondaires</div>
         <div class="collection-meta">
-          <span class="tag tag-count">12 articles</span>
-          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-count">9</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="glp1-cout">
         <div class="collection-name">GLP-1 Cout</div>
         <div class="collection-meta">
-          <span class="tag tag-count">15 articles</span>
-          <span class="tag tag-transac">transactionnel</span>
+          <span class="tag tag-count">15</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="glp1-perte-de-poids">
         <div class="collection-name">Perte de poids</div>
         <div class="collection-meta">
-          <span class="tag tag-count">2 articles</span>
-          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-count">2</span>
+          <span class="tag tag-nav">OK</span>
         </div>
       </div>
       <div class="collection-card" data-collection="medecins-glp1-france">
-        <div class="collection-name">Medecins GLP-1 France</div>
+        <div class="collection-name">Medecins France</div>
         <div class="collection-meta">
-          <span class="tag tag-count">5 articles</span>
-          <span class="tag tag-nav">navigationnel</span>
-          <span class="tag tag-urgent">doublons</span>
+          <span class="tag tag-count">3</span>
+          <span class="tag tag-nav">doublons supprimes</span>
         </div>
       </div>
       <div class="collection-card" data-collection="regime-glp1">
         <div class="collection-name">Regime GLP-1</div>
         <div class="collection-meta">
-          <span class="tag tag-count">15 articles</span>
-          <span class="tag tag-info">informationnel</span>
-          <span class="tag tag-warn">squelettes</span>
+          <span class="tag tag-count">15</span>
+          <span class="tag tag-warn">13 squelettes</span>
         </div>
       </div>
       <div class="collection-card" data-collection="recherche-glp1">
-        <div class="collection-name">Recherche GLP-1</div>
+        <div class="collection-name">Recherche</div>
         <div class="collection-meta">
-          <span class="tag tag-count">1 article</span>
-          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-count">1</span>
+          <span class="tag tag-warn">partiel</span>
         </div>
       </div>
       <div class="collection-card" data-collection="temoignages">
         <div class="collection-name">Temoignages</div>
         <div class="collection-meta">
-          <span class="tag tag-count">4 articles</span>
-          <span class="tag tag-info">informationnel</span>
-          <span class="tag tag-warn">classification</span>
+          <span class="tag tag-count">4</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="traitements-glp1">
         <div class="collection-name">Traitements GLP-1</div>
         <div class="collection-meta">
-          <span class="tag tag-count">9 articles</span>
-          <span class="tag tag-info">informationnel</span>
+          <span class="tag tag-count">11</span>
+          <span class="tag tag-nav">corrige</span>
         </div>
       </div>
       <div class="collection-card" data-collection="pages-statiques">
         <div class="collection-name">Pages statiques</div>
         <div class="collection-meta">
-          <span class="tag tag-count">3 articles</span>
-          <span class="tag tag-nav">mixte</span>
+          <span class="tag tag-count">3</span>
+          <span class="tag tag-nav">OK</span>
         </div>
       </div>
     </div>
 
     <!-- Articles table -->
     <div class="section-head">
-      <span class="section-title">Inventaire complet des articles</span>
-      <span class="section-sub" id="tableCount">80 articles</span>
+      <span class="section-title">Inventaire detaille</span>
+      <span class="section-sub" id="tableCount">80 fichiers</span>
     </div>
     <div class="table-wrap">
       <div class="table-toolbar">
-        <input type="text" class="search-input" id="searchInput" placeholder="Rechercher par slug ou mot-cle...">
-        <button class="filter-btn" data-intent="all">Tous</button>
-        <button class="filter-btn" data-intent="informationnel">Informationnel</button>
-        <button class="filter-btn" data-intent="transactionnel">Transactionnel</button>
-        <button class="filter-btn" data-intent="navigationnel">Navigationnel</button>
+        <input type="text" class="search-input" id="searchInput" placeholder="Rechercher par slug, collection ou probleme...">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="corrige">Corriges</button>
+        <button class="filter-btn" data-filter="issues">Avec problemes</button>
+        <button class="filter-btn" data-filter="ok">OK</button>
+        <button class="filter-btn" data-filter="squelette">Squelettes</button>
       </div>
       <div style="overflow-x:auto;">
         <table>
@@ -481,8 +693,7 @@ import AdminNav from '../../components/AdminNav.astro';
               <th>#</th>
               <th>Collection</th>
               <th>Slug</th>
-              <th>Mot-cle principal</th>
-              <th>Intent</th>
+              <th>Statut</th>
               <th>Problemes</th>
             </tr>
           </thead>
@@ -490,8 +701,8 @@ import AdminNav from '../../components/AdminNav.astro';
         </table>
       </div>
       <div class="table-footer">
-        <span id="footerCount">80 articles affiches</span>
-        <span>Audit du 09/03/2026</span>
+        <span id="footerCount">80 fichiers affiches</span>
+        <span>Audit approfondi du 09/03/2026</span>
       </div>
     </div>
 
@@ -500,98 +711,123 @@ import AdminNav from '../../components/AdminNav.astro';
 
 <script>
   const articles = [
-    { n:1, col:"alternatives-glp1", slug:"acupuncture-glp1", kw:"acupuncture diabete obesite", intent:"informationnel", issues:["squelette"] },
-    { n:2, col:"alternatives-glp1", slug:"chrome-diabete", kw:"chrome picolinate diabete", intent:"informationnel", issues:["squelette"] },
-    { n:3, col:"alternatives-glp1", slug:"vinaigre-cidre-glp1", kw:"vinaigre de cidre diabete", intent:"informationnel", issues:["squelette"] },
-    { n:4, col:"alternatives-glp1", slug:"semaglutide-naturel", kw:"semaglutide naturel alternatives", intent:"informationnel", issues:[] },
-    { n:5, col:"alternatives-glp1", slug:"meditation-glp1", kw:"meditation gestion diabete", intent:"informationnel", issues:["squelette"] },
-    { n:6, col:"alternatives-glp1", slug:"berberine-glp1", kw:"berberine alternative GLP-1", intent:"informationnel", issues:["squelette"] },
-    { n:7, col:"alternatives-glp1", slug:"cannelle-glp1", kw:"cannelle therapeutique diabete", intent:"informationnel", issues:["squelette"] },
-    { n:8, col:"alternatives-glp1", slug:"peut-on-guerir-du-diabete", kw:"guerir du diabete", intent:"informationnel", issues:[] },
-    { n:9, col:"alternatives-glp1", slug:"plantes-diabete", kw:"plantes anti-diabete naturelles", intent:"informationnel", issues:["squelette"] },
-    { n:10, col:"alternatives-glp1", slug:"phytotherapie-glp1", kw:"phytotherapie GLP-1", intent:"informationnel", issues:[] },
-    { n:11, col:"alternatives-glp1", slug:"homeopathie-diabete", kw:"homeopathie diabete", intent:"informationnel", issues:["squelette"] },
-    { n:12, col:"alternatives-glp1", slug:"supplements-glp1", kw:"supplements naturels GLP-1", intent:"informationnel", issues:["squelette"] },
-    { n:13, col:"alternatives-glp1", slug:"alternatives-bio-glp1", kw:"alternatives biologiques GLP-1", intent:"informationnel", issues:["squelette"] },
-    { n:14, col:"alternatives-glp1", slug:"alternatives-naturelles-ozempic", kw:"alternatives naturelles Ozempic", intent:"informationnel", issues:[] },
-    { n:15, col:"effets-secondaires-glp1", slug:"effets-secondaires-mounjaro", kw:"effets secondaires Mounjaro", intent:"informationnel", issues:[] },
-    { n:16, col:"effets-secondaires-glp1", slug:"ozempic-danger", kw:"Ozempic danger", intent:"informationnel", issues:[] },
-    { n:17, col:"effets-secondaires-glp1", slug:"effets-secondaires-zepbound", kw:"effets secondaires Zepbound", intent:"informationnel", issues:[] },
-    { n:18, col:"effets-secondaires-glp1", slug:"effets-secondaires-victoza", kw:"effets secondaires Victoza", intent:"informationnel", issues:[] },
-    { n:19, col:"effets-secondaires-glp1", slug:"effets-secondaires-ozempic", kw:"effets secondaires Ozempic", intent:"informationnel", issues:[] },
-    { n:20, col:"effets-secondaires-glp1", slug:"wegovy-dosage", kw:"Wegovy dosage posologie", intent:"informationnel", issues:["mauvaise-categorie"] },
-    { n:21, col:"effets-secondaires-glp1", slug:"effets-secondaires-rybelsus", kw:"effets secondaires Rybelsus", intent:"informationnel", issues:[] },
-    { n:22, col:"effets-secondaires-glp1", slug:"insulevel-effet-indesirable", kw:"Insulevel effets indesirables", intent:"informationnel", issues:[] },
-    { n:23, col:"effets-secondaires-glp1", slug:"wegovy-danger", kw:"Wegovy danger", intent:"informationnel", issues:[] },
-    { n:24, col:"effets-secondaires-glp1", slug:"effets-secondaires-wegovy", kw:"effets secondaires Wegovy", intent:"informationnel", issues:[] },
-    { n:25, col:"effets-secondaires-glp1", slug:"effets-secondaires-saxenda", kw:"effets secondaires Saxenda", intent:"informationnel", issues:[] },
-    { n:26, col:"effets-secondaires-glp1", slug:"effets-secondaires-trulicity", kw:"effets secondaires Trulicity", intent:"informationnel", issues:[] },
-    { n:27, col:"glp1-cout", slug:"acheter-wegovy-en-france", kw:"acheter Wegovy France", intent:"transactionnel", issues:[] },
-    { n:28, col:"glp1-cout", slug:"anneau-gastrique-prix-cmu", kw:"anneau gastrique prix CMU", intent:"transactionnel", issues:[] },
-    { n:29, col:"glp1-cout", slug:"operation-pour-maigrir-prix", kw:"operation pour maigrir prix", intent:"transactionnel", issues:[] },
-    { n:30, col:"glp1-cout", slug:"prix-mounjaro-france", kw:"prix Mounjaro France", intent:"transactionnel", issues:[] },
-    { n:31, col:"glp1-cout", slug:"prix-ozempic-france", kw:"prix Ozempic France", intent:"transactionnel", issues:[] },
-    { n:32, col:"glp1-cout", slug:"prix-rybelsus-france", kw:"prix Rybelsus France", intent:"transactionnel", issues:[] },
-    { n:33, col:"glp1-cout", slug:"prix-saxenda-france", kw:"prix Saxenda France", intent:"transactionnel", issues:[] },
-    { n:34, col:"glp1-cout", slug:"prix-trulicity-france", kw:"prix Trulicity France", intent:"transactionnel", issues:[] },
-    { n:35, col:"glp1-cout", slug:"prix-victoza-france", kw:"prix Victoza France", intent:"transactionnel", issues:[] },
-    { n:36, col:"glp1-cout", slug:"prix-wegovy-france", kw:"prix Wegovy France", intent:"transactionnel", issues:[] },
-    { n:37, col:"glp1-cout", slug:"prix-zepbound-france", kw:"prix Zepbound France", intent:"transactionnel", issues:[] },
-    { n:38, col:"glp1-cout", slug:"remboursement-glp1-2026", kw:"remboursement GLP-1 2026", intent:"transactionnel", issues:[] },
-    { n:39, col:"glp1-cout", slug:"saxenda-prix-pharmacie", kw:"Saxenda prix pharmacie", intent:"transactionnel", issues:[] },
-    { n:40, col:"glp1-cout", slug:"wegovy-prix", kw:"Wegovy prix France", intent:"transactionnel", issues:[] },
-    { n:41, col:"glp1-cout", slug:"wegovy-remboursement-mutuelle", kw:"Wegovy remboursement mutuelle", intent:"transactionnel", issues:[] },
-    { n:42, col:"glp1-perte-de-poids", slug:"glp1-perte-de-poids", kw:"GLP-1 perte de poids", intent:"informationnel", issues:[] },
-    { n:43, col:"glp1-perte-de-poids", slug:"guide-complet-glp1-2025-france", kw:"guide complet GLP-1 2025 France", intent:"informationnel", issues:[] },
-    { n:44, col:"medecins-glp1-france", slug:"clinique-pour-obesite-new", kw:"clinique obesite", intent:"navigationnel", issues:["doublon"] },
-    { n:45, col:"medecins-glp1-france", slug:"clinique-pour-obesite", kw:"clinique obesite", intent:"navigationnel", issues:["doublon"] },
-    { n:46, col:"medecins-glp1-france", slug:"diabetologue-paris", kw:"diabetologue Paris", intent:"navigationnel", issues:[] },
-    { n:47, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir-new", kw:"endocrinologue pour maigrir", intent:"navigationnel", issues:["doublon"] },
-    { n:48, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir", kw:"endocrinologue pour maigrir", intent:"navigationnel", issues:["doublon"] },
-    { n:49, col:"regime-glp1", slug:"glp1-calories-journalieres", kw:"GLP-1 calories journalieres", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:50, col:"regime-glp1", slug:"glp1-index-glycemique", kw:"GLP-1 index glycemique", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:51, col:"regime-glp1", slug:"glp1-micronutriments", kw:"GLP-1 micronutriments vitamines", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:52, col:"regime-glp1", slug:"glp1-portion-alimentaire", kw:"GLP-1 portions alimentaires", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:53, col:"regime-glp1", slug:"glp1-proteines", kw:"GLP-1 proteines apport", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:54, col:"regime-glp1", slug:"isglt2-liste", kw:"iSGLT2 liste medicaments", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:55, col:"regime-glp1", slug:"jeune-intermittent-glp1", kw:"jeune intermittent GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:56, col:"regime-glp1", slug:"regime-cetogene-glp1", kw:"regime cetogene GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:57, col:"regime-glp1", slug:"regime-chrono-nutrition-glp1", kw:"chrono-nutrition GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:58, col:"regime-glp1", slug:"regime-dash-glp1", kw:"regime DASH GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:59, col:"regime-glp1", slug:"regime-detox-glp1", kw:"regime detox GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:60, col:"regime-glp1", slug:"regime-mediterraneen-glp1", kw:"regime mediterraneen GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:61, col:"regime-glp1", slug:"regime-mounjaro-optimal", kw:"regime Mounjaro optimal", intent:"informationnel", issues:[] },
-    { n:62, col:"regime-glp1", slug:"regime-paleo-glp1", kw:"regime paleo GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:63, col:"regime-glp1", slug:"regime-sans-sucre-glp1", kw:"regime sans sucre GLP-1", intent:"informationnel", issues:["squelette","h2-generique"] },
-    { n:64, col:"recherche-glp1", slug:"recherche-clinique-glp1", kw:"recherche clinique GLP-1", intent:"informationnel", issues:[] },
-    { n:65, col:"temoignages", slug:"laurent-transformation-glp1", kw:"temoignage Mounjaro perte poids", intent:"informationnel", issues:[] },
-    { n:66, col:"temoignages", slug:"marie-transformation-glp1", kw:"temoignage Wegovy perte poids", intent:"informationnel", issues:[] },
-    { n:67, col:"temoignages", slug:"serena-williams-glp1", kw:"Serena Williams GLP-1", intent:"informationnel", issues:["mauvaise-classification"] },
-    { n:68, col:"temoignages", slug:"sophie-transformation-glp1", kw:"temoignage Ozempic menopause", intent:"informationnel", issues:[] },
-    { n:69, col:"traitements-glp1", slug:"centres-mounjaro-france", kw:"centres Mounjaro France", intent:"navigationnel", issues:[] },
-    { n:70, col:"traitements-glp1", slug:"guide-complet-mounjaro", kw:"guide Mounjaro", intent:"informationnel", issues:[] },
-    { n:71, col:"traitements-glp1", slug:"guide-complet-ozempic", kw:"guide Ozempic", intent:"informationnel", issues:[] },
-    { n:72, col:"traitements-glp1", slug:"guide-complet-rybelsus", kw:"guide Rybelsus", intent:"informationnel", issues:[] },
-    { n:73, col:"traitements-glp1", slug:"guide-complet-saxenda", kw:"guide Saxenda", intent:"informationnel", issues:[] },
-    { n:74, col:"traitements-glp1", slug:"guide-complet-trulicity", kw:"guide Trulicity", intent:"informationnel", issues:[] },
-    { n:75, col:"traitements-glp1", slug:"guide-complet-victoza", kw:"guide Victoza", intent:"informationnel", issues:[] },
-    { n:76, col:"traitements-glp1", slug:"guide-complet-wegovy", kw:"guide Wegovy", intent:"informationnel", issues:[] },
-    { n:77, col:"traitements-glp1", slug:"guide-complet-zepbound", kw:"guide Zepbound", intent:"informationnel", issues:[] },
-    { n:78, col:"pages-statiques", slug:"/ (homepage)", kw:"GLP-1 France traitements", intent:"navigationnel", issues:[] },
-    { n:79, col:"pages-statiques", slug:"partenaires", kw:"partenaires GLP-1 France", intent:"navigationnel", issues:[] },
-    { n:80, col:"pages-statiques", slug:"/quel-traitement-glp1-choisir", kw:"quel traitement GLP-1 choisir", intent:"informationnel", issues:[] },
+    // alternatives-glp1 (14)
+    { n:1, col:"alternatives-glp1", slug:"acupuncture-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique","faq-generique"] },
+    { n:2, col:"alternatives-glp1", slug:"chrome-diabete", status:"squelette", issues:["squelette","prix-xx","h2-generique","faq-generique"] },
+    { n:3, col:"alternatives-glp1", slug:"vinaigre-cidre-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:4, col:"alternatives-glp1", slug:"semaglutide-naturel", status:"squelette", issues:["squelette","prix-xx"] },
+    { n:5, col:"alternatives-glp1", slug:"meditation-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:6, col:"alternatives-glp1", slug:"berberine-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:7, col:"alternatives-glp1", slug:"cannelle-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:8, col:"alternatives-glp1", slug:"peut-on-guerir-du-diabete", status:"squelette", issues:["squelette","prix-xx"] },
+    { n:9, col:"alternatives-glp1", slug:"plantes-diabete", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:10, col:"alternatives-glp1", slug:"phytotherapie-glp1", status:"partiel", issues:["template-residuel"] },
+    { n:11, col:"alternatives-glp1", slug:"homeopathie-diabete", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:12, col:"alternatives-glp1", slug:"supplements-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:13, col:"alternatives-glp1", slug:"alternatives-bio-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:14, col:"alternatives-glp1", slug:"alternatives-naturelles-ozempic", status:"partiel", issues:["template-residuel"] },
+    // effets-secondaires-glp1 (9 — 2 deplaces, 1 renomme)
+    { n:15, col:"effets-secondaires-glp1", slug:"effets-secondaires-mounjaro", status:"ok", issues:[] },
+    { n:16, col:"effets-secondaires-glp1", slug:"ozempic-danger", status:"ok", issues:[] },
+    { n:17, col:"effets-secondaires-glp1", slug:"effets-secondaires-zepbound", status:"ok", issues:[] },
+    { n:18, col:"effets-secondaires-glp1", slug:"effets-secondaires-victoza", status:"corrige", issues:[] },
+    { n:19, col:"effets-secondaires-glp1", slug:"effets-secondaires-ozempic", status:"corrige", issues:[] },
+    { n:20, col:"effets-secondaires-glp1", slug:"effets-secondaires-rybelsus", status:"corrige", issues:[] },
+    { n:21, col:"effets-secondaires-glp1", slug:"insulevel-effet-indesirable", status:"ok", issues:[] },
+    { n:22, col:"effets-secondaires-glp1", slug:"wegovy-danger", status:"partiel", issues:["template-residuel"] },
+    { n:23, col:"effets-secondaires-glp1", slug:"effets-secondaires-wegovy", status:"corrige", issues:[] },
+    { n:24, col:"effets-secondaires-glp1", slug:"effets-secondaires-saxenda", status:"corrige", issues:[] },
+    { n:25, col:"effets-secondaires-glp1", slug:"effets-secondaires-trulicity", status:"corrige", issues:[] },
+    // glp1-cout (15)
+    { n:26, col:"glp1-cout", slug:"acheter-wegovy-en-france", status:"ok", issues:[] },
+    { n:27, col:"glp1-cout", slug:"anneau-gastrique-prix-cmu", status:"partiel", issues:["contenu-mince"] },
+    { n:28, col:"glp1-cout", slug:"operation-pour-maigrir-prix", status:"ok", issues:[] },
+    { n:29, col:"glp1-cout", slug:"prix-mounjaro-france", status:"ok", issues:[] },
+    { n:30, col:"glp1-cout", slug:"prix-ozempic-france", status:"ok", issues:[] },
+    { n:31, col:"glp1-cout", slug:"prix-rybelsus-france", status:"corrige", issues:[] },
+    { n:32, col:"glp1-cout", slug:"prix-saxenda-france", status:"ok", issues:[] },
+    { n:33, col:"glp1-cout", slug:"prix-trulicity-france", status:"ok", issues:[] },
+    { n:34, col:"glp1-cout", slug:"prix-victoza-france", status:"ok", issues:[] },
+    { n:35, col:"glp1-cout", slug:"prix-wegovy-france", status:"ok", issues:[] },
+    { n:36, col:"glp1-cout", slug:"prix-zepbound-france", status:"ok", issues:[] },
+    { n:37, col:"glp1-cout", slug:"remboursement-glp1-2026", status:"ok", issues:[] },
+    { n:38, col:"glp1-cout", slug:"saxenda-prix-pharmacie", status:"ok", issues:[] },
+    { n:39, col:"glp1-cout", slug:"wegovy-prix", status:"corrige", issues:[] },
+    { n:40, col:"glp1-cout", slug:"wegovy-remboursement-mutuelle", status:"ok", issues:[] },
+    // glp1-perte-de-poids (2)
+    { n:41, col:"glp1-perte-de-poids", slug:"glp1-perte-de-poids", status:"ok", issues:[] },
+    { n:42, col:"glp1-perte-de-poids", slug:"guide-complet-glp1-2025-france", status:"ok", issues:[] },
+    // medecins-glp1-france (3 — 2 doublons supprimes)
+    { n:43, col:"medecins-glp1-france", slug:"clinique-pour-obesite", status:"ok", issues:[] },
+    { n:44, col:"medecins-glp1-france", slug:"diabetologue-paris", status:"partiel", issues:["template-residuel","h2-cosmetiques"] },
+    { n:45, col:"medecins-glp1-france", slug:"endocrinologue-pour-maigrir", status:"ok", issues:[] },
+    // regime-glp1 (15)
+    { n:46, col:"regime-glp1", slug:"glp1-calories-journalieres", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:47, col:"regime-glp1", slug:"glp1-index-glycemique", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:48, col:"regime-glp1", slug:"glp1-micronutriments", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:49, col:"regime-glp1", slug:"glp1-portion-alimentaire", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:50, col:"regime-glp1", slug:"glp1-proteines", status:"squelette", issues:["squelette","h2-generique","prix-xx"] },
+    { n:51, col:"regime-glp1", slug:"isglt2-liste", status:"depublie", issues:["published-false"] },
+    { n:52, col:"regime-glp1", slug:"jeune-intermittent-glp1", status:"squelette", issues:["squelette","h2-generique","h2-cosmetiques"] },
+    { n:53, col:"regime-glp1", slug:"regime-cetogene-glp1", status:"squelette", issues:["squelette","h2-generique","h2-cosmetiques"] },
+    { n:54, col:"regime-glp1", slug:"regime-chrono-nutrition-glp1", status:"squelette", issues:["squelette","h2-generique"] },
+    { n:55, col:"regime-glp1", slug:"regime-dash-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:56, col:"regime-glp1", slug:"regime-detox-glp1", status:"squelette", issues:["squelette","h2-generique"] },
+    { n:57, col:"regime-glp1", slug:"regime-mediterraneen-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:58, col:"regime-glp1", slug:"regime-mounjaro-optimal", status:"ok", issues:[] },
+    { n:59, col:"regime-glp1", slug:"regime-paleo-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    { n:60, col:"regime-glp1", slug:"regime-sans-sucre-glp1", status:"squelette", issues:["squelette","prix-xx","h2-generique"] },
+    // recherche-glp1 (1)
+    { n:61, col:"recherche-glp1", slug:"recherche-clinique-glp1", status:"partiel", issues:["template-residuel","h2-cosmetiques"] },
+    // temoignages (4)
+    { n:62, col:"temoignages", slug:"laurent-transformation-glp1", status:"ok", issues:[] },
+    { n:63, col:"temoignages", slug:"marie-transformation-glp1", status:"ok", issues:[] },
+    { n:64, col:"temoignages", slug:"serena-williams-glp1", status:"corrige", issues:[] },
+    { n:65, col:"temoignages", slug:"sophie-transformation-glp1", status:"ok", issues:[] },
+    // traitements-glp1 (11 — +2 deplaces depuis effets-secondaires)
+    { n:66, col:"traitements-glp1", slug:"centres-mounjaro-france", status:"corrige", issues:[] },
+    { n:67, col:"traitements-glp1", slug:"guide-complet-mounjaro", status:"corrige", issues:["ton-promotionnel"] },
+    { n:68, col:"traitements-glp1", slug:"guide-complet-ozempic", status:"corrige", issues:[] },
+    { n:69, col:"traitements-glp1", slug:"guide-complet-rybelsus", status:"corrige", issues:[] },
+    { n:70, col:"traitements-glp1", slug:"guide-complet-saxenda", status:"corrige", issues:[] },
+    { n:71, col:"traitements-glp1", slug:"guide-complet-trulicity", status:"corrige", issues:[] },
+    { n:72, col:"traitements-glp1", slug:"guide-complet-victoza", status:"corrige", issues:[] },
+    { n:73, col:"traitements-glp1", slug:"guide-complet-wegovy", status:"corrige", issues:[] },
+    { n:74, col:"traitements-glp1", slug:"guide-complet-zepbound", status:"corrige", issues:[] },
+    { n:75, col:"traitements-glp1", slug:"wegovy-dosage", status:"corrige", issues:[] },
+    // pages-statiques (3)
+    { n:76, col:"pages-statiques", slug:"homepage", status:"ok", issues:[] },
+    { n:77, col:"pages-statiques", slug:"partenaires", status:"ok", issues:[] },
+    { n:78, col:"pages-statiques", slug:"quel-traitement-glp1-choisir", status:"ok", issues:[] },
+    // collections avec _category_ seulement
+    { n:79, col:"avant-apres-glp1", slug:"_category_ (vide)", status:"vide", issues:["collection-vide"] },
+    { n:80, col:"glp1-diabete", slug:"_category_ (vide)", status:"vide", issues:["collection-vide"] },
   ];
 
   const issueLabels = {
-    'doublon': { label: 'Doublon', cls: 'tag-urgent' },
-    'squelette': { label: 'Squelette', cls: 'tag-warn' },
+    'squelette': { label: 'Squelette', cls: 'tag-urgent' },
+    'prix-xx': { label: 'Prix XX', cls: 'tag-warn' },
     'h2-generique': { label: 'H2 generique', cls: 'tag-warn' },
-    'mauvaise-categorie': { label: 'Mauvaise categorie', cls: 'tag-info' },
-    'mauvaise-classification': { label: 'Classification incorrecte', cls: 'tag-warn' },
+    'faq-generique': { label: 'FAQ generique', cls: 'tag-warn' },
+    'template-residuel': { label: 'Template residuel', cls: 'tag-warn' },
+    'h2-cosmetiques': { label: 'H2 cosmetiques', cls: 'tag-warn' },
+    'contenu-mince': { label: 'Contenu mince', cls: 'tag-warn' },
+    'ton-promotionnel': { label: 'Ton promotionnel', cls: 'tag-warn' },
+    'collection-vide': { label: 'Collection vide', cls: 'tag-info' },
+    'published-false': { label: 'Depublie', cls: 'tag-info' },
+  };
+
+  const statusLabels = {
+    'ok': { label: 'OK', cls: 'tag-nav' },
+    'corrige': { label: 'Corrige', cls: 'tag-nav' },
+    'squelette': { label: 'Squelette', cls: 'tag-urgent' },
+    'partiel': { label: 'Partiel', cls: 'tag-warn' },
+    'depublie': { label: 'Depublie', cls: 'tag-info' },
+    'vide': { label: 'Vide', cls: 'tag-info' },
   };
 
   let activeCollection = 'all';
-  let activeIntent = 'all';
+  let activeFilter = 'all';
   let searchQuery = '';
 
   function renderTable() {
@@ -600,15 +836,21 @@ import AdminNav from '../../components/AdminNav.astro';
     if (activeCollection !== 'all') {
       filtered = filtered.filter(a => a.col === activeCollection);
     }
-    if (activeIntent !== 'all') {
-      filtered = filtered.filter(a => a.intent === activeIntent);
+    if (activeFilter === 'issues') {
+      filtered = filtered.filter(a => a.issues.length > 0);
+    } else if (activeFilter === 'ok') {
+      filtered = filtered.filter(a => a.status === 'ok' && a.issues.length === 0);
+    } else if (activeFilter === 'corrige') {
+      filtered = filtered.filter(a => a.status === 'corrige');
+    } else if (activeFilter === 'squelette') {
+      filtered = filtered.filter(a => a.status === 'squelette');
     }
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       filtered = filtered.filter(a =>
         a.slug.toLowerCase().includes(q) ||
-        a.kw.toLowerCase().includes(q) ||
-        a.col.toLowerCase().includes(q)
+        a.col.toLowerCase().includes(q) ||
+        a.issues.some(i => i.toLowerCase().includes(q) || (issueLabels[i] && issueLabels[i].label.toLowerCase().includes(q)))
       );
     }
 
@@ -619,21 +861,19 @@ import AdminNav from '../../components/AdminNav.astro';
         return `<span class="issue-tag tag ${info.cls}">${info.label}</span>`;
       }).join('');
 
-      const intentCls = a.intent === 'transactionnel' ? 'tag-transac' :
-                        a.intent === 'navigationnel' ? 'tag-nav' : 'tag-info';
+      const st = statusLabels[a.status] || { label: a.status, cls: 'tag-count' };
 
       return `<tr>
         <td style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:10px">${a.n}</td>
         <td><span class="tag tag-count">${a.col}</span></td>
         <td class="slug">${a.slug}</td>
-        <td class="keyword">${a.kw}</td>
-        <td><span class="tag ${intentCls}">${a.intent}</span></td>
+        <td class="status-cell"><span class="tag ${st.cls}">${st.label}</span></td>
         <td class="issues">${issuesHtml || '<span style="color:var(--muted)">—</span>'}</td>
       </tr>`;
     }).join('');
 
-    document.getElementById('tableCount').textContent = filtered.length + ' article' + (filtered.length > 1 ? 's' : '');
-    document.getElementById('footerCount').textContent = filtered.length + ' article' + (filtered.length > 1 ? 's' : '') + ' affiche' + (filtered.length > 1 ? 's' : '');
+    document.getElementById('tableCount').textContent = filtered.length + ' fichier' + (filtered.length > 1 ? 's' : '');
+    document.getElementById('footerCount').textContent = filtered.length + ' fichier' + (filtered.length > 1 ? 's' : '') + ' affiche' + (filtered.length > 1 ? 's' : '');
   }
 
   // Collection cards
@@ -646,12 +886,12 @@ import AdminNav from '../../components/AdminNav.astro';
     renderTable();
   });
 
-  // Intent filter buttons
-  document.querySelectorAll('.filter-btn[data-intent]').forEach(btn => {
+  // Filter buttons
+  document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn[data-intent]').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      activeIntent = btn.dataset.intent;
+      activeFilter = btn.dataset.filter;
       renderTable();
     });
   });
@@ -662,7 +902,6 @@ import AdminNav from '../../components/AdminNav.astro';
     renderTable();
   });
 
-  // Initial render
   renderTable();
 </script>
 

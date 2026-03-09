@@ -1,5 +1,6 @@
 ---
 title: "Mounjaro Guide 2025 : Le Traitement #1 pour Perdre du Poids (Résultats -20kg)"
+slug: "guide-complet-mounjaro"
 description: "🔥 Mounjaro : LE traitement révolutionnaire qui fait perdre 15-20% du poids ! Prix France, témoignages, effets secondaires. Guide complet 2025."
 author: "Dr. Martin"
 image: "/images/thumbnails/mounjaro-blue.webp"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "résultats", "avant après", "prix france", "traitement efficace"]
 date: "2025-09-06"
+pubDate: "2025-09-06"
 featured: true
 priority: 1
 ---
@@ -430,5 +432,4 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
-*Ce guide complet sur Mounjaro est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-mounjaro.md
+*Ce guide complet sur Mounjaro est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

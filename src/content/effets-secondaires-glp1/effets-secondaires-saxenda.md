@@ -12,6 +12,8 @@ readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 image: "/images/thumbnails/effets-secondaires-saxenda-illus.jpg"
+thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
+thumbnailAlt: "Effets secondaires du traitement saxenda"
 ---
 
 # Effets Secondaires Saxenda : Guide Complet
@@ -232,10 +234,6 @@ image: "/images/thumbnails/effets-secondaires-saxenda-illus.jpg"
 - **Suivi médical** : Essentiel pour sécurité
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
-thumbnailAlt: "Effets secondaires du traitement saxenda"
----
 
 ## Sommaire
 
