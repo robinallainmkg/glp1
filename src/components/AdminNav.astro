@@ -62,6 +62,12 @@ const iconSvgs: Record<string, string> = {
       </svg>
       <span>Retour au site</span>
     </a>
+    <a href="#" class="sidebar-link sidebar-back" id="logoutBtn">
+      <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+      </svg>
+      <span>Deconnexion</span>
+    </a>
   </div>
 </aside>
 
@@ -94,15 +100,25 @@ const iconSvgs: Record<string, string> = {
     });
   }
 
-  // Auth check — TEMPORARILY DISABLED FOR LOCAL DEV
-  // (function() {
-  //   const isLoginPage = window.location.pathname.includes('/admin/login');
-  //   if (isLoginPage) return;
-  //   const token = sessionStorage.getItem('admin_auth');
-  //   if (!token) {
-  //     window.location.href = '/admin/login/';
-  //   }
-  // })();
+  // Logout
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      sessionStorage.removeItem('admin_auth');
+      window.location.href = '/admin/login/';
+    });
+  }
+
+  // Auth check
+  (function() {
+    const isLoginPage = window.location.pathname.includes('/admin/login');
+    if (isLoginPage) return;
+    const token = sessionStorage.getItem('admin_auth');
+    if (!token) {
+      window.location.href = '/admin/login/';
+    }
+  })();
 </script>
 
 <style>
