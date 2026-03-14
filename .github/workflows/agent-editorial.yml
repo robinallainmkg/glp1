@@ -1,0 +1,48 @@
+name: "Agent Editorial"
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Quotidien 9h UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+  SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS: "1"
+
+jobs:
+  editorial:
+    name: "Run Editorial Agent"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Git config
+        run: |
+          git config user.name "editorial-agent"
+          git config user.email "editorial-agent@glp1-france.fr"
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run Editorial Agent
+        run: claude --agent editorial --print --model sonnet
