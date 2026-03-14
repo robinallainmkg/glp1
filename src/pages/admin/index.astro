@@ -9,183 +9,306 @@ import { supabaseConfig } from '../../lib/supabase';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin - GLP1 France</title>
-  <style>
+  <style is:inline>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
-    }
-    .admin-layout {
-      margin-left: 260px;
+      font-family: 'JetBrains Mono', monospace;
+      background: #0a0e17;
+      color: #c8d6e5;
       min-height: 100vh;
     }
-    .page-header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 1.5rem 2rem;
+
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+
+    /* Header */
+    .mc-header {
+      background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%);
+      border-bottom: 1px solid #1a2332;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .page-header h1 {
-      font-size: 1.5rem;
+    .mc-title {
+      font-size: 1.2rem;
       font-weight: 700;
-      color: #0f172a;
-    }
-    .page-header p {
-      font-size: 0.88rem;
-      color: #64748b;
-      margin-top: 0.25rem;
-    }
-    .main { padding: 2rem; max-width: 1200px; }
-
-    /* Stats grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .stat-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.25rem;
-      border: 1px solid #e2e8f0;
-    }
-    .stat-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-top: 0.35rem;
-    }
-    .stat-hint {
-      font-size: 0.78rem;
-      color: #94a3b8;
-      margin-top: 0.25rem;
-    }
-    .stat-red .stat-value { color: #dc2626; }
-    .stat-amber .stat-value { color: #f59e0b; }
-    .stat-green .stat-value { color: #22c55e; }
-    .stat-blue .stat-value { color: #3b82f6; }
-
-    /* Cards grid */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .overview-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      border: 1px solid #e2e8f0;
-      text-decoration: none;
-      color: inherit;
-      transition: box-shadow 0.2s, transform 0.15s;
-      display: block;
-    }
-    .overview-card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      transform: translateY(-2px);
-    }
-    .card-top {
+      color: #e2e8f0;
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 1rem;
     }
-    .card-icon {
-      width: 44px;
-      height: 44px;
+    .mc-title .pulse-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e88;
+      animation: pulse-glow 2s infinite;
+    }
+    .mc-status {
+      font-size: 0.72rem;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .mc-clock {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px #22c55e88; }
+      50% { opacity: 0.5; box-shadow: 0 0 4px #22c55e44; }
+    }
+
+    .mc-main { padding: 1.5rem 2rem; }
+
+    /* Agent grid */
+    .agents-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .agent-card {
+      background: #111827;
+      border: 1px solid #1e293b;
       border-radius: 10px;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .agent-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #1e293b;
+      transition: background 0.3s;
+    }
+    .agent-card.running { border-color: #22c55e44; box-shadow: 0 0 20px #22c55e11; }
+    .agent-card.running::before { background: #22c55e; animation: scan-line 2s linear infinite; }
+    .agent-card.completed::before { background: #3b82f6; }
+    .agent-card.error { border-color: #ef444444; }
+    .agent-card.error::before { background: #ef4444; }
+
+    @keyframes scan-line {
+      0% { background: linear-gradient(90deg, transparent, #22c55e, transparent); background-size: 200%; background-position: -100%; }
+      100% { background: linear-gradient(90deg, transparent, #22c55e, transparent); background-size: 200%; background-position: 200%; }
+    }
+
+    .agent-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      flex-shrink: 0;
-    }
-    .card-icon.blue { background: #dbeafe; color: #2563eb; }
-    .card-icon.purple { background: #f3e8ff; color: #7c3aed; }
-    .card-icon.green { background: #dcfce7; color: #16a34a; }
-    .card-icon.indigo { background: #e0e7ff; color: #4338ca; }
-    .card-icon.amber { background: #fef3c7; color: #d97706; }
-    .card-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-    }
-    .card-desc {
       font-size: 0.85rem;
-      color: #64748b;
-      line-height: 1.5;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
-    .card-stats {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .mini-stat {
-      padding: 0.3rem 0.65rem;
-      border-radius: 6px;
-      font-size: 0.78rem;
-      font-weight: 600;
+    .icon-seo { background: #1e3a5f; color: #38bdf8; }
+    .icon-analytics { background: #1e3a1e; color: #4ade80; }
+    .icon-factcheck { background: #3a2e1e; color: #fbbf24; }
+    .icon-opportunities { background: #2e1e3a; color: #c084fc; }
+    .icon-editorial { background: #1e2e3a; color: #67e8f9; }
+
+    .agent-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 0.5rem;
     }
 
-    /* Recent activity */
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .activity-list {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-    }
-    .activity-item {
-      padding: 0.85rem 1.25rem;
+    .agent-status-line {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      border-bottom: 1px solid #f1f5f9;
-      font-size: 0.88rem;
+      gap: 0.4rem;
+      margin-bottom: 0.6rem;
     }
-    .activity-item:last-child { border-bottom: none; }
-    .activity-dot {
+    .status-indicator {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .activity-time {
-      font-size: 0.78rem;
+    .si-idle { background: #475569; }
+    .si-running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
+    .si-completed { background: #3b82f6; }
+    .si-error { background: #ef4444; }
+    .si-started { background: #eab308; animation: pulse-glow 1.5s infinite; }
+
+    .status-text {
+      font-size: 0.68rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .agent-card.running .status-text { color: #4ade80; }
+    .agent-card.error .status-text { color: #f87171; }
+
+    .agent-counters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem;
+      margin-bottom: 0.6rem;
+    }
+    .counter {
+      font-size: 0.68rem;
+      color: #475569;
+    }
+    .counter strong {
       color: #94a3b8;
-      margin-left: auto;
-      white-space: nowrap;
+      font-size: 0.85rem;
+      display: block;
     }
 
-    .loading {
+    .agent-last-action {
+      font-size: 0.65rem;
+      color: #374151;
+      border-top: 1px solid #1e293b;
+      padding-top: 0.5rem;
+      min-height: 2.5em;
+      line-height: 1.3;
+    }
+
+    /* Dep graph */
+    .dep-section {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .dep-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .dep-section svg { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
+
+    /* Log feed */
+    .log-section {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .log-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .log-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .log-live {
+      font-size: 0.65rem;
+      color: #22c55e;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .log-live .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse-glow 1.5s infinite;
+    }
+
+    .log-feed {
+      max-height: 320px;
+      overflow-y: auto;
+      padding: 0.25rem 0;
+      scrollbar-width: thin;
+      scrollbar-color: #1e293b transparent;
+    }
+    .log-feed::-webkit-scrollbar { width: 6px; }
+    .log-feed::-webkit-scrollbar-track { background: transparent; }
+    .log-feed::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+
+    .log-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.35rem 1.25rem;
+      font-size: 0.72rem;
+      transition: background 0.1s;
+      animation: log-appear 0.3s ease-out;
+    }
+    .log-entry:hover { background: #1a2332; }
+
+    @keyframes log-appear {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .log-time {
+      color: #374151;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+      min-width: 62px;
+    }
+    .log-agent-tag {
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      min-width: 68px;
+      text-align: center;
+    }
+    .tag-seo-audit { background: #1e3a5f; color: #38bdf8; }
+    .tag-analytics { background: #1e3a1e; color: #4ade80; }
+    .tag-fact-check { background: #3a2e1e; color: #fbbf24; }
+    .tag-opportunities { background: #2e1e3a; color: #c084fc; }
+    .tag-editorial { background: #1e2e3a; color: #67e8f9; }
+
+    .log-message { color: #94a3b8; flex: 1; }
+    .log-status {
+      font-size: 0.62rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .ls-success { background: #052e16; color: #4ade80; }
+    .ls-error { background: #450a0a; color: #f87171; }
+
+    .log-empty {
       text-align: center;
       padding: 2rem;
-      color: #64748b;
+      color: #374151;
+      font-size: 0.78rem;
     }
 
-    @media (max-width: 1024px) {
-      .admin-layout { margin-left: 0; padding-top: 56px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 1200px) { .agents-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px) {
+      .mc-main { padding: 1rem; }
+      .mc-header { padding: 1rem; flex-direction: column; gap: 0.5rem; }
+      .agents-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 640px) {
-      .stats-grid { grid-template-columns: 1fr; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .main { padding: 1rem; }
-      .page-header { padding: 1rem; }
-    }
+    @media (max-width: 480px) { .agents-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -193,114 +316,72 @@ import { supabaseConfig } from '../../lib/supabase';
 <AdminNav />
 
 <div class="admin-layout">
-  <div class="page-header">
-    <h1>Vue d'ensemble</h1>
-    <p>Tableau de bord de l'administration GLP-1 France</p>
+  <div class="mc-header">
+    <div class="mc-title">
+      <span class="pulse-dot"></span>
+      MISSION CONTROL
+    </div>
+    <div class="mc-status">GLP-1 France &mdash; Agent Supervision</div>
+    <div class="mc-clock" id="clock"></div>
   </div>
 
-  <div class="main">
-    <!-- Stats -->
-    <div class="stats-grid">
-      <div class="stat-card stat-red">
-        <div class="stat-label">Tickets urgents</div>
-        <div class="stat-value" id="stat-urgent">-</div>
-        <div class="stat-hint">Corrections prioritaires</div>
-      </div>
-      <div class="stat-card stat-amber">
-        <div class="stat-label">En attente de revue</div>
-        <div class="stat-value" id="stat-pending">-</div>
-        <div class="stat-hint">Tickets a examiner</div>
-      </div>
-      <div class="stat-card stat-green">
-        <div class="stat-label">Prets a deployer</div>
-        <div class="stat-value" id="stat-ready">-</div>
-        <div class="stat-hint">Corrections validees</div>
-      </div>
-      <div class="stat-card stat-blue">
-        <div class="stat-label">Score moyen</div>
-        <div class="stat-value" id="stat-score">-</div>
-        <div class="stat-hint">Fiabilite des articles</div>
-      </div>
+  <div class="mc-main">
+    <!-- Agent cards -->
+    <div class="agents-grid" id="agentsGrid"></div>
+
+    <!-- Dependency graph -->
+    <div class="dep-section">
+      <div class="dep-title">Dependances</div>
+      <svg viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- SEO Audit → Dashboard -->
+        <rect x="10" y="15" width="120" height="36" rx="6" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
+        <text x="70" y="38" text-anchor="middle" font-size="10" font-weight="600" fill="#38bdf8" font-family="JetBrains Mono, monospace">SEO Audit</text>
+        <line x1="130" y1="33" x2="680" y2="50" stroke="#1e293b" stroke-width="1" stroke-dasharray="4"/>
+        <!-- Analytics → Dashboard -->
+        <rect x="10" y="60" width="120" height="36" rx="6" fill="#111827" stroke="#1e3a1e" stroke-width="1"/>
+        <text x="70" y="83" text-anchor="middle" font-size="10" font-weight="600" fill="#4ade80" font-family="JetBrains Mono, monospace">Analytics</text>
+        <line x1="130" y1="78" x2="680" y2="60" stroke="#1e293b" stroke-width="1" stroke-dasharray="4"/>
+        <!-- Dashboard -->
+        <rect x="680" y="35" width="110" height="50" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
+        <text x="735" y="65" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Dashboard</text>
+        <!-- Fact-Check → Editorial -->
+        <rect x="10" y="110" width="120" height="36" rx="6" fill="#111827" stroke="#3a2e1e" stroke-width="1"/>
+        <text x="70" y="133" text-anchor="middle" font-size="10" font-weight="600" fill="#fbbf24" font-family="JetBrains Mono, monospace">Fact-Check</text>
+        <line x1="130" y1="128" x2="280" y2="128" stroke="#fbbf2466" stroke-width="1.5" marker-end="url(#arrowGold)"/>
+        <!-- Tickets auto-approved -->
+        <text x="205" y="120" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">tickets</text>
+        <!-- Opportunities → Editorial -->
+        <rect x="10" y="155" width="120" height="36" rx="6" fill="#111827" stroke="#2e1e3a" stroke-width="1"/>
+        <text x="70" y="178" text-anchor="middle" font-size="10" font-weight="600" fill="#c084fc" font-family="JetBrains Mono, monospace">Opportunities</text>
+        <line x1="130" y1="173" x2="280" y2="148" stroke="#c084fc66" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+        <text x="205" y="168" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">sujets</text>
+        <!-- Editorial -->
+        <rect x="280" y="118" width="120" height="36" rx="6" fill="#111827" stroke="#1e2e3a" stroke-width="1"/>
+        <text x="340" y="141" text-anchor="middle" font-size="10" font-weight="600" fill="#67e8f9" font-family="JetBrains Mono, monospace">Editorial</text>
+        <line x1="400" y1="136" x2="490" y2="136" stroke="#67e8f966" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
+        <!-- Git + Deploy -->
+        <rect x="490" y="118" width="100" height="36" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
+        <text x="540" y="135" text-anchor="middle" font-size="9" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Git Push</text>
+        <text x="540" y="147" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">→ Deploy</text>
+        <line x1="590" y1="136" x2="680" y2="80" stroke="#22c55e44" stroke-width="1" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
+        <defs>
+          <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+          <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c084fc"/></marker>
+          <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#67e8f9"/></marker>
+          <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
+        </defs>
+      </svg>
     </div>
 
-    <!-- Module cards -->
-    <div class="cards-grid">
-      <a href="/admin/fact-check/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          </div>
-          <div class="card-title">Fact-Check</div>
-        </div>
-        <div class="card-desc">Resultats de verification. Approuvez, rejetez ou annotez les tickets de correction.</div>
-        <div class="card-stats" id="fc-stats"></div>
-      </a>
-
-      <a href="/admin/editorial/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon purple">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-          </div>
-          <div class="card-title">Editorial</div>
-        </div>
-        <div class="card-desc">Suivi des corrections editoriales. Deploiement des tickets valides.</div>
-        <div class="card-stats" id="ed-stats"></div>
-      </a>
-
-      <a href="/admin/integration/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon green">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
-          </div>
-          <div class="card-title">Integration</div>
-        </div>
-        <div class="card-desc">Historique des corrections deployees sur le site.</div>
-        <div class="card-stats" id="int-stats"></div>
-      </a>
-
-      <a href="/admin/pipelines/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon indigo">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3h7zM7 9H4V5h3v4zm10 6h3v4h-3v-4zm0-10h3v4h-3V5z"/></svg>
-          </div>
-          <div class="card-title">Pipelines</div>
-        </div>
-        <div class="card-desc">Vue en temps reel des pipelines de traitement des corrections.</div>
-        <div class="card-stats" id="pip-stats"></div>
-      </a>
-
-      <a href="/admin/seo/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon amber">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-          <div class="card-title">SEO</div>
-        </div>
-        <div class="card-desc">Agent Opportunite SEO — Phase 2. Analyse et recommandations.</div>
-        <div class="card-stats">
-          <span class="mini-stat" style="background:#fef3c7;color:#92400e">Bientot</span>
-        </div>
-      </a>
-
-      <a href="/admin/audit/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon" style="background:#fef3c7;color:#d97706;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 2h5v7h-5V5zm-4 0h2v3H8V5zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 8H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V9h2v2zm6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg>
-          </div>
-          <div class="card-title">Audit</div>
-        </div>
-        <div class="card-desc">Inventaire complet des 80 articles. Doublons, squelettes, classification et intent SEO.</div>
-        <div class="card-stats">
-          <span class="mini-stat" style="background:#fef2f2;color:#dc2626">5 alertes</span>
-          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">80 articles</span>
-        </div>
-      </a>
-    </div>
-
-    <!-- Recent activity -->
-    <div class="section-title">Activite recente</div>
-    <div class="activity-list" id="activity">
-      <div class="loading">Chargement...</div>
+    <!-- Live log feed -->
+    <div class="log-section">
+      <div class="log-header">
+        <span class="log-title">Live Feed</span>
+        <span class="log-live"><span class="live-dot"></span> Realtime</span>
+      </div>
+      <div class="log-feed" id="logFeed">
+        <div class="log-empty">En attente de logs...</div>
+      </div>
     </div>
   </div>
 </div>
@@ -309,124 +390,234 @@ import { supabaseConfig } from '../../lib/supabase';
   const SUPABASE_URL = supabaseUrl;
   const SUPABASE_ANON_KEY = supabaseAnonKey;
 
+  const AGENTS = [
+    { name: 'seo-audit', label: 'SEO Audit', icon: 'seo', desc: 'Crawl, meta, liens' },
+    { name: 'analytics', label: 'Analytics', icon: 'analytics', desc: 'Keywords ranking' },
+    { name: 'fact-check', label: 'Fact-Check', icon: 'factcheck', desc: 'Verification medicale' },
+    { name: 'opportunities', label: 'Opportunities', icon: 'opportunities', desc: 'Tendances, gaps' },
+    { name: 'editorial', label: 'Editorial', icon: 'editorial', desc: 'Redaction, corrections' },
+  ];
+
+  const TAG_CLASSES = {
+    'seo-audit': 'tag-seo-audit',
+    'analytics': 'tag-analytics',
+    'fact-check': 'tag-fact-check',
+    'opportunities': 'tag-opportunities',
+    'editorial': 'tag-editorial',
+  };
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  function timeAgo(dateStr) {
+    if (!dateStr) return 'jamais';
+    const diff = Date.now() - new Date(dateStr).getTime();
+    if (diff < 60000) return 'il y a < 1min';
+    if (diff < 3600000) return 'il y a ' + Math.floor(diff / 60000) + 'min';
+    if (diff < 86400000) return 'il y a ' + Math.floor(diff / 3600000) + 'h';
+    return 'il y a ' + Math.floor(diff / 86400000) + 'j';
+  }
+
+  function formatDuration(ms) {
+    if (!ms) return '';
+    if (ms < 60000) return Math.round(ms / 1000) + 's';
+    return Math.floor(ms / 60000) + 'min ' + Math.round((ms % 60000) / 1000) + 's';
+  }
+
+  function formatTime(dateStr) {
+    if (!dateStr) return '--:--';
+    return new Date(dateStr).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
   async function supabaseFetch(table, query) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      }
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
     });
-    if (!response.ok) throw new Error(await response.text());
-    return response.json();
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
   }
 
-  function formatDate(dateStr) {
-    if (!dateStr) return '';
-    return new Date(dateStr).toLocaleDateString('fr-FR', {
-      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+  // Clock
+  function updateClock() {
+    document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
     });
   }
+  updateClock();
+  setInterval(updateClock, 1000);
 
-  function statutLabel(statut) {
-    return {
-      pending_review: 'En attente',
-      approved: 'Approuve',
-      rejected: 'Rejete',
-      in_progress: 'En cours',
-      ready_to_deploy: 'Pret',
-      deployed: 'Deploye',
-      revision_needed: 'Revision'
-    }[statut] || statut;
-  }
-
-  function statutDotColor(statut) {
-    return {
-      pending_review: '#f59e0b',
-      approved: '#3b82f6',
-      rejected: '#ef4444',
-      in_progress: '#8b5cf6',
-      ready_to_deploy: '#22c55e',
-      deployed: '#16a34a',
-      revision_needed: '#f59e0b'
-    }[statut] || '#94a3b8';
-  }
-
-  async function loadOverview() {
+  // Agent cards
+  async function loadAgents() {
     try {
-      const [results, tickets] = await Promise.all([
-        supabaseFetch('fact_check_results', 'select=id,score_fiabilite,statut&limit=500'),
-        supabaseFetch('correction_tickets', 'select=id,statut,urgence,ticket_type,updated_at,title&order=updated_at.desc&limit=500')
-      ]);
-
-      // Stats
-      const urgent = tickets.filter(t => t.urgence === 'urgent' && t.statut === 'pending_review').length;
-      const pending = tickets.filter(t => t.statut === 'pending_review').length;
-      const ready = tickets.filter(t => t.statut === 'ready_to_deploy').length;
-      const avgScore = results.length > 0
-        ? Math.round(results.reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / results.length)
-        : 0;
-      const deployed = tickets.filter(t => t.statut === 'deployed').length;
-
-      document.getElementById('stat-urgent').textContent = urgent;
-      document.getElementById('stat-pending').textContent = pending;
-      document.getElementById('stat-ready').textContent = ready;
-      document.getElementById('stat-score').textContent = avgScore + '/100';
-
-      // Module cards stats
-      const fcEl = document.getElementById('fc-stats');
-      if (fcEl) {
-        const urgentResults = results.filter(r => r.statut === 'Urgent').length;
-        fcEl.innerHTML = `
-          <span class="mini-stat" style="background:#fef2f2;color:#dc2626">${urgentResults} urgent(s)</span>
-          <span class="mini-stat" style="background:#f5f3ff;color:#7c3aed">${pending} en attente</span>
-        `;
-      }
-      const edEl = document.getElementById('ed-stats');
-      if (edEl) {
-        const inProg = tickets.filter(t => t.statut === 'approved' || t.statut === 'in_progress').length;
-        edEl.innerHTML = `
-          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${ready} pret(s)</span>
-          <span class="mini-stat" style="background:#f3e8ff;color:#7c3aed">${inProg} en cours</span>
-        `;
-      }
-      const intEl = document.getElementById('int-stats');
-      if (intEl) {
-        intEl.innerHTML = `
-          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${deployed} deploye(s)</span>
-        `;
-      }
-      const pipEl = document.getElementById('pip-stats');
-      if (pipEl) {
-        const active = tickets.filter(t => ['pending_review','approved','in_progress','ready_to_deploy','revision_needed'].includes(t.statut)).length;
-        pipEl.innerHTML = `
-          <span class="mini-stat" style="background:#e0e7ff;color:#4338ca">${active} actif(s)</span>
-        `;
+      const runs = await supabaseFetch('agent_runs', 'select=*&order=started_at.desc&limit=50');
+      const latest = {};
+      for (const r of runs) {
+        if (!latest[r.agent_name]) latest[r.agent_name] = r;
       }
 
-      // Recent activity (last 10 tickets)
-      const recent = tickets.slice(0, 10);
-      const actEl = document.getElementById('activity');
-      if (recent.length === 0) {
-        actEl.innerHTML = '<div class="loading" style="color:#94a3b8">Aucune activite recente</div>';
-        return;
-      }
-      actEl.innerHTML = recent.map(t => `
-        <div class="activity-item">
-          <div class="activity-dot" style="background:${statutDotColor(t.statut)}"></div>
-          <span>${t.title || t.ticket_type || 'Ticket'} — <strong>${statutLabel(t.statut)}</strong></span>
-          <span class="activity-time">${formatDate(t.updated_at)}</span>
-        </div>
-      `).join('');
+      const grid = document.getElementById('agentsGrid');
+      grid.innerHTML = AGENTS.map(a => {
+        const run = latest[a.name];
+        const status = run ? run.status : 'idle';
+        const statusLabel = { completed: 'termine', running: 'en cours', started: 'demarre', error: 'erreur', idle: 'inactif' }[status] || status;
+        const meta = run?.metadata || {};
+        const items = run?.items_processed ?? '-';
 
-    } catch (err) {
-      console.error('Overview load error:', err);
-      document.getElementById('activity').innerHTML = `
-        <div style="padding:1rem;color:#991b1b;font-size:0.88rem">Erreur: ${err.message}</div>
-      `;
+        // Smart counters per agent using metadata
+        let counter2Label = 'erreurs';
+        let counter2Value = run?.items_errors ?? '-';
+        if (a.name === 'seo-audit' && meta.critical !== undefined) {
+          counter2Value = meta.critical || 0;
+          counter2Label = 'critiques';
+        } else if (a.name === 'fact-check' && meta.tickets_created !== undefined) {
+          counter2Value = meta.tickets_created;
+          counter2Label = 'tickets';
+        } else if (a.name === 'analytics' && meta.positioned_keywords !== undefined) {
+          counter2Value = meta.positioned_keywords;
+          counter2Label = 'positionnes';
+        } else if (a.name === 'opportunities' && meta.high_priority !== undefined) {
+          counter2Value = meta.high_priority;
+          counter2Label = 'prioritaires';
+        } else if (a.name === 'editorial' && meta.tickets_corrected !== undefined) {
+          counter2Value = meta.articles_created || 0;
+          counter2Label = 'crees';
+        }
+
+        const duration = run?.duration_ms ? formatDuration(run.duration_ms)
+          : (run?.started_at && run?.completed_at)
+            ? formatDuration(new Date(run.completed_at) - new Date(run.started_at))
+            : '';
+        const lastTime = run?.completed_at
+          ? timeAgo(run.completed_at)
+          : run?.started_at
+            ? timeAgo(run.started_at)
+            : 'jamais lance';
+
+        return `<div class="agent-card ${status}">
+          <div class="agent-icon icon-${a.icon}">${a.label[0]}</div>
+          <div class="agent-name">${a.label}</div>
+          <div class="agent-status-line">
+            <span class="status-indicator si-${status}"></span>
+            <span class="status-text">${statusLabel.toUpperCase()}</span>
+          </div>
+          <div class="agent-counters">
+            <div class="counter"><strong>${items}</strong>traites</div>
+            <div class="counter"><strong>${counter2Value}</strong>${counter2Label}</div>
+          </div>
+          <div class="agent-last-action">${lastTime}${duration ? ' · ' + duration : ''}</div>
+        </div>`;
+      }).join('');
+    } catch (e) {
+      document.getElementById('agentsGrid').innerHTML = `<div style="grid-column:1/-1;color:#f87171;padding:1rem;font-size:0.8rem">Erreur: ${escapeHtml(e.message)}</div>`;
     }
   }
 
-  loadOverview();
+  // Log feed
+  let lastLogId = null;
+
+  async function loadLogs(append) {
+    try {
+      let query = 'select=*&order=created_at.desc&limit=50';
+      const logs = await supabaseFetch('agent_logs', query);
+
+      const feed = document.getElementById('logFeed');
+      if (logs.length === 0) {
+        if (!append) feed.innerHTML = '<div class="log-empty">En attente de logs...</div>';
+        return;
+      }
+
+      if (append && lastLogId === logs[0].id) return; // no new logs
+      lastLogId = logs[0].id;
+
+      feed.innerHTML = logs.map(log => {
+        const meta = log.metadata || {};
+        const details = meta.action || meta.tickets_created !== undefined
+          ? `${meta.action || ''} ${meta.tickets_created ? meta.tickets_created + ' tickets' : ''} ${meta.score ? 'score:' + meta.score : ''}`.trim()
+          : '';
+        const tagClass = TAG_CLASSES[log.agent_type] || 'tag-seo-audit';
+        const statusClass = log.status === 'success' ? 'ls-success' : 'ls-error';
+
+        return `<div class="log-entry">
+          <span class="log-time">${formatTime(log.created_at)}</span>
+          <span class="log-agent-tag ${tagClass}">${escapeHtml(log.agent_type)}</span>
+          <span class="log-message">${escapeHtml(details || '-')}</span>
+          <span class="log-status ${statusClass}">${escapeHtml(log.status)}</span>
+        </div>`;
+      }).join('');
+    } catch (e) {
+      // silent fail on polling
+    }
+  }
+
+  // Realtime via Supabase
+  function setupRealtime() {
+    // Use Supabase Realtime WebSocket for live updates
+    const wsUrl = SUPABASE_URL.replace('https://', 'wss://') + '/realtime/v1/websocket?apikey=' + SUPABASE_ANON_KEY + '&vsn=1.0.0';
+    let ws;
+
+    function connect() {
+      ws = new WebSocket(wsUrl);
+
+      ws.onopen = () => {
+        // Join agent_runs channel
+        ws.send(JSON.stringify({
+          topic: 'realtime:public:agent_runs',
+          event: 'phx_join',
+          payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_runs' }] } },
+          ref: '1'
+        }));
+        // Join agent_logs channel
+        ws.send(JSON.stringify({
+          topic: 'realtime:public:agent_logs',
+          event: 'phx_join',
+          payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_logs' }] } },
+          ref: '2'
+        }));
+        // Heartbeat
+        setInterval(() => {
+          if (ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({ topic: 'phoenix', event: 'heartbeat', payload: {}, ref: 'hb' }));
+          }
+        }, 30000);
+      };
+
+      ws.onmessage = (event) => {
+        try {
+          const msg = JSON.parse(event.data);
+          if (msg.event === 'postgres_changes') {
+            // Reload on any change
+            loadAgents();
+            loadLogs(true);
+          }
+        } catch(e) {}
+      };
+
+      ws.onclose = () => {
+        // Reconnect after 3s
+        setTimeout(connect, 3000);
+      };
+
+      ws.onerror = () => ws.close();
+    }
+
+    connect();
+  }
+
+  // Polling every 5s for reliable updates
+  setInterval(() => {
+    loadAgents();
+    loadLogs(true);
+  }, 5000);
+
+  // Init
+  loadAgents();
+  loadLogs(false);
+  setupRealtime();
 </script>
 
 </body>
