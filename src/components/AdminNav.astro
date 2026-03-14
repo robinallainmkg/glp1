@@ -2,17 +2,12 @@
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
-  { href: '/admin/', label: 'Vue d\'ensemble', icon: 'dashboard' },
+  { href: '/admin/mission-control/', label: 'Vue d\'ensemble', icon: 'mission' },
+  { href: '/admin/audit/', label: 'SEO Audit', icon: 'audit' },
+  { href: '/admin/analytics/', label: 'Analytics', icon: 'pipeline' },
   { href: '/admin/fact-check/', label: 'Fact-Check', icon: 'check' },
-  { href: '/admin/editorial/', label: 'Editorial', icon: 'edit' },
-  { href: '/admin/integration/', label: 'Integration', icon: 'integration' },
-  { href: '/admin/pipelines/', label: 'Pipelines', icon: 'pipeline' },
   { href: '/admin/opportunites/', label: 'Opportunités', icon: 'seo' },
-  { href: '/admin/analytics/', label: 'Analytics', icon: 'budget' },
-  { href: '/admin/budget/', label: 'Budget', icon: 'budget' },
-  { href: '/admin/audit/', label: 'Audit', icon: 'audit' },
-  { href: '/admin/mission-control/', label: 'Mission Control', icon: 'mission' },
-  { href: '/admin/agents/', label: 'Agent Teams', icon: 'agents' },
+  { href: '/admin/editorial/', label: 'Editorial', icon: 'edit' },
 ];
 
 function isActive(href: string) {
