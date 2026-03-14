@@ -157,7 +157,7 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 ## Suivi et Ajustements
 
 ### Indicateurs de Réussite
-- **Perte de poids** : 5-10% sur 6 mois
+- **Perte de poids** : 15-22% sur 72 semaines (étude SURMOUNT-1)
 - **HbA1c** : Amélioration significative
 - **Tour de taille** : Réduction mesurable
 - **Bien-être général** : Énergie, sommeil
