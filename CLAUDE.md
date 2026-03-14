@@ -50,6 +50,8 @@ claude -p "Analyse les keywords" --agent analytics
 claude -p "Vérifie les articles" --agent fact-check
 claude -p "Cherche les opportunités" --agent opportunities
 claude -p "Traite les corrections" --agent editorial
+claude -p "Valide le site" --agent validator
+claude -p "Analyse le maillage interne" --agent internal-links
 ```
 
 ### Agent SEO Audit (`.claude/agents/seo-audit.md`)
@@ -73,19 +75,33 @@ claude -p "Traite les corrections" --agent editorial
 - **Output** : Fichiers modifies dans `src/content/`, branche + push
 - Seul agent autorise a modifier des fichiers source
 
+### Agent Validator (`.claude/agents/validator.md`)
+- **Fonction** : Validation technique (build Astro, frontmatter, liens internes, images, SEO meta)
+- **Output** : `validation_results` dans Supabase
+- Filet de securite apres l'agent editorial
+
+### Agent Internal Links (`.claude/agents/internal-links.md`)
+- **Fonction** : Analyse du maillage interne, suggestions de liens entre articles
+- **Output** : `internal_link_suggestions` dans Supabase
+- Les suggestions sont consommees par l'agent editorial
+
 ### Dependances entre agents
 - `seo-audit` et `analytics` : independants
 - `fact-check` → cree des `correction_tickets` → `editorial` les consomme
 - `opportunities` → cree des `content_opportunities` → `editorial` les consomme
+- `internal-links` → cree des `internal_link_suggestions` → `editorial` les consomme
+- `editorial` → modifie les fichiers → `validator` verifie le resultat
+- Workflow recommande : fact-check → editorial → validator
 
 ### Dashboards Admin
-- **Mission Control** (`src/pages/admin/mission-control.astro`) — War room temps reel, statut des 5 agents, live feed
-- **Audit SEO** (`src/pages/admin/audit.astro`) — Resultats d'audit SEO avec historique
-- **Fact-Check** (`src/pages/admin/fact-check.astro`) — Client-side fetching
-- **Editorial** (`src/pages/admin/editorial.astro`) — Client-side fetching
-- **Integration** (`src/pages/admin/integration.astro`) — Client-side fetching
-- **Opportunites** (`src/pages/admin/opportunites.astro`) — Opportunites de contenu detectees
-- **Agent Teams** (`src/pages/admin/agents.astro`) — Supervision des 5 agents (statut, logs, dependances)
+- **Vue d'ensemble** (`src/pages/admin/index.astro`) — War room temps reel, statut des 7 agents, graphe dependances, live feed
+- **Audit SEO** (`src/pages/admin/audit.astro`) — Resultats d'audit SEO
+- **Analytics** (`src/pages/admin/analytics.astro`) — Suivi keywords, positions
+- **Fact-Check** (`src/pages/admin/fact-check.astro`) — Resultats verifications medicales
+- **Opportunites** (`src/pages/admin/opportunites.astro`) — Gaps de contenu, tendances
+- **Editorial** (`src/pages/admin/editorial.astro`) — Tickets de correction, articles crees
+- **Validator** (`src/pages/admin/validator.astro`) — Build status, erreurs frontmatter, liens casses
+- **Maillage** (`src/pages/admin/links.astro`) — Suggestions de liens internes
 
 ## Base de données Supabase
 
@@ -98,15 +114,12 @@ claude -p "Traite les corrections" --agent editorial
 - `seo_audit_results` — Resultats d'audit SEO (type, severite, page, recommandation)
 - `keyword_rankings` — Historique de positionnement mots-cles (position, semaine, mois)
 - `content_opportunities` — Opportunites de contenu (sujet, priorite, statut)
+- `validation_results` — Resultats de validation technique (check_type, severity, message)
+- `internal_link_suggestions` — Suggestions de liens internes (source, target, ancre, priorite)
 
 ### Statuts des tickets
 Les tickets sont **auto-approuves** (pas de validation humaine) :
 `approved` → `in_progress` → `ready_to_deploy` → `deployed`
-`approved` → `rejected` (si necessaire manuellement)
-
-### Statuts des opportunites
-Les opportunites sont **auto-approuvees** :
-`approved` → `in_progress` → `published`
 `approved` → `rejected` (si necessaire manuellement)
 
 ## Conventions
