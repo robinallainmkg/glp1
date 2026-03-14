@@ -29,63 +29,54 @@ src/pages/admin/           — Dashboards admin (fact-check, editorial, integrat
 src/lib/supabase.js        — Client Supabase (anon key uniquement)
 .claude/agents/            — Definitions des Agent Teams Claude Code
 scripts/                   — Scripts utilitaires (sync, etc.)
-scripts/legacy/            — Anciens scripts agents (archives)
-n8n/prompts/               — System prompts historiques (portes dans .claude/agents/)
+n8n/prompts/               — System prompts historiques (sources des agents)
 supabase/migrations/       — Migrations SQL
-.github/workflows/         — CI/CD (deploy, agent-*, migrations)
+.github/workflows/         — CI/CD (deploy FTP, migrations)
 ```
 
 ## Agent Teams — Architecture
 
-Les agents utilisent **Claude Code Agent Teams** (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`).
-Chaque agent est defini dans `.claude/agents/*.md` et declenche via GitHub Actions.
+Les agents utilisent **Claude Code Agent Teams** lances **en local** depuis le terminal avec l'abonnement **Claude Max**.
+Chaque agent est defini dans `.claude/agents/*.md`.
 La coordination se fait via Supabase (bus de donnees partage).
 
-**PAS d'appels API Anthropic dans le code** — les agents sont natifs Claude Code.
+**Zéro clé API Anthropic** — **Zéro GitHub Actions** — **Zéro cron** — tout est local et manuel.
+
+### Lancement des agents
+
+```bash
+claude -p "Lance l'audit SEO" --agent seo-audit
+claude -p "Analyse les keywords" --agent analytics
+claude -p "Vérifie les articles" --agent fact-check
+claude -p "Cherche les opportunités" --agent opportunities
+claude -p "Traite les corrections" --agent editorial
+```
 
 ### Agent SEO Audit (`.claude/agents/seo-audit.md`)
 - **Fonction** : Audit crawlabilite, meta tags, maillage interne, accessibilite, performance
 - **Output** : `seo_audit_results` dans Supabase
-- **Workflow** : `.github/workflows/agent-seo-audit.yml` (dimanche 6h UTC)
 
 ### Agent Analytics (`.claude/agents/analytics.md`)
 - **Fonction** : Suivi positionnement mots-cles prioritaires/secondaires
 - **Output** : `keyword_rankings` dans Supabase
-- **Workflow** : `.github/workflows/agent-analytics.yml` (lundi 5h UTC)
 
 ### Agent Fact-Check (`.claude/agents/fact-check.md`)
 - **Fonction** : Verifie les articles GLP-1 contre les sources officielles FR
 - **Output** : `fact_check_results` + `correction_tickets` dans Supabase
-- **Workflow** : `.github/workflows/agent-fact-check.yml` (lundi 7h UTC)
 
 ### Agent Opportunites (`.claude/agents/opportunities.md`)
 - **Fonction** : Detection tendances GLP-1, gaps de contenu vs concurrents
 - **Output** : `content_opportunities` dans Supabase
-- **Workflow** : `.github/workflows/agent-opportunities.yml` (1er et 15 du mois)
 
 ### Agent Editorial (`.claude/agents/editorial.md`)
 - **Fonction** : Redaction/correction articles + integration dans les .md + git workflow
 - **Output** : Fichiers modifies dans `src/content/`, branche + push
-- **Workflow** : `.github/workflows/agent-editorial.yml` (quotidien 9h UTC)
 - Seul agent autorise a modifier des fichiers source
 
-### Agent SEO Opportunity Finder (`scripts/seo-opportunity-agent.mjs`)
-- **Statut** : Opérationnel
-- **Modèle** : claude-sonnet-4-20250514 + web search (25 max)
-- **Fonction** : Analyse le marché GLP-1 FR, détecte les lacunes de contenu, propose des opportunités
-- **Output** : `seo_opportunities` dans Supabase (pending_review → approved → content_created)
-- **Déclencheur** : GitHub Actions (cron mercredi 6h UTC) ou manuel
-- **Workflow** : `.github/workflows/seo-opportunity.yml`
-- **Options** : `--focus all|new|enrich`
-
-### Agent Content Creator (`scripts/content-creator-agent.mjs`)
-- **Statut** : Opérationnel
-- **Modèle** : claude-sonnet-4-20250514 + web search (20 max/article)
-- **Fonction** : Génère des articles complets à partir des opportunités SEO approuvées
-- **Output** : Fichiers markdown dans `src/content/[collection]/`, commit + push automatique
-- **Déclencheur** : GitHub Actions (cron quotidien 10h UTC) ou manuel
-- **Workflow** : `.github/workflows/content-creator.yml`
-- **Options** : `--limit N`, `--opportunity-id UUID`
+### Dependances entre agents
+- `seo-audit` et `analytics` : independants
+- `fact-check` → cree des `correction_tickets` → `editorial` les consomme
+- `opportunities` → cree des `content_opportunities` → `editorial` les consomme
 
 ### Dashboards Admin
 - **Fact-Check** (`src/pages/admin/fact-check.astro`) — Client-side fetching
@@ -132,8 +123,8 @@ La coordination se fait via Supabase (bus de donnees partage).
 - Les secrets sont dans GitHub Secrets :
   - `SUPABASE_URL` — URL Supabase
   - `SUPABASE_SERVICE_ROLE_KEY` — Clé service role Supabase
-  - `ANTHROPIC_API_KEY` — Cle API Anthropic (Claude Code CLI pour Agent Teams)
   - `FTP_PASSWORD` — Mot de passe FTP Hostinger (deploy)
-  - `PRIVATEHERE` — Token GitHub (agent integration : push + PR)
+  - `PRIVATEHERE` — Token GitHub (push + PR)
   - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `ALERT_EMAIL_TO` — Alertes email (optionnel)
+- Les agents tournent en local avec Claude Max — pas de clé API Anthropic nécessaire
 - Ne jamais commit de secrets ou .env
