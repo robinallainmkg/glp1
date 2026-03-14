@@ -79,7 +79,7 @@ VALUES ('<article_id>', <score>, '<statut>', '<points_jsonb>', '<sources_jsonb>'
 Pour chaque probleme detecte, cree un ticket :
 ```sql
 INSERT INTO correction_tickets (article_id, slug, title, fact_check_result_id, ticket_type, urgence, before_exact, after_suggested, claim_original, realite_actuelle, source_reference, statut, model_used)
-VALUES ('<article_id>', '<slug>', '<title>', '<fc_result_id>', '<type>', '<urgence>', '<before_exact>', '<after_suggested>', '<claim>', '<realite>', '<source>', 'pending_review', 'claude-code-agent');
+VALUES ('<article_id>', '<slug>', '<title>', '<fc_result_id>', '<type>', '<urgence>', '<before_exact>', '<after_suggested>', '<claim>', '<realite>', '<source>', 'approved', 'claude-code-agent');
 ```
 
 **Types de tickets** : `price_update`, `info_outdated`, `false_claim`, `missing_info`

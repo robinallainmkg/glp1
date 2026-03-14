@@ -79,11 +79,12 @@ claude -p "Traite les corrections" --agent editorial
 - `opportunities` → cree des `content_opportunities` → `editorial` les consomme
 
 ### Dashboards Admin
+- **Mission Control** (`src/pages/admin/mission-control.astro`) — War room temps reel, statut des 5 agents, live feed
+- **Audit SEO** (`src/pages/admin/audit.astro`) — Resultats d'audit SEO avec historique
 - **Fact-Check** (`src/pages/admin/fact-check.astro`) — Client-side fetching
 - **Editorial** (`src/pages/admin/editorial.astro`) — Client-side fetching
 - **Integration** (`src/pages/admin/integration.astro`) — Client-side fetching
-- **SEO Opportunites** (`src/pages/admin/seo.astro`) — Gestion des opportunites, approbation/rejet
-- **Content Creator** (`src/pages/admin/content-creator.astro`) — Pipeline de creation d'articles
+- **Opportunites** (`src/pages/admin/opportunites.astro`) — Opportunites de contenu detectees
 - **Agent Teams** (`src/pages/admin/agents.astro`) — Supervision des 5 agents (statut, logs, dependances)
 
 ## Base de données Supabase
@@ -92,29 +93,21 @@ claude -p "Traite les corrections" --agent editorial
 - `articles` — Articles du site (content, slug, collection, is_active, last_fact_checked)
 - `fact_check_results` — Resultats des verifications (score, statut, points)
 - `correction_tickets` — Tickets individuels (before/after, urgence, type, statut)
-- `seo_opportunities` — Opportunites de contenu detectees par l'agent SEO
 - `agent_logs` — Logs d'execution des agents
 - `agent_runs` — Suivi haut niveau des executions d'agents (statut, duree, metadata)
 - `seo_audit_results` — Resultats d'audit SEO (type, severite, page, recommandation)
 - `keyword_rankings` — Historique de positionnement mots-cles (position, semaine, mois)
 - `content_opportunities` — Opportunites de contenu (sujet, priorite, statut)
 
-### Statuts des tickets de correction
-`pending_review` → `approved` → `in_progress` → `ready_to_deploy` → `deployed`
-`pending_review` → `rejected`
-`pending_review` → `revision_needed` (avec note humaine)
+### Statuts des tickets
+Les tickets sont **auto-approuves** (pas de validation humaine) :
+`approved` → `in_progress` → `ready_to_deploy` → `deployed`
+`approved` → `rejected` (si necessaire manuellement)
 
-### Statuts des opportunités SEO
-`pending_review` → `approved` → `in_progress` → `content_created` → `published`
-`pending_review` → `rejected`
-
-### Pipeline automatisé complet
-1. **SEO Opportunity Finder** (mercredi) → détecte des opportunités → `seo_opportunities`
-2. **Humain** → approuve/rejette les opportunités dans le dashboard admin
-3. **Content Creator** (quotidien) → génère les articles approuvés → `src/content/`
-4. **Fact-Check** (lundi) → vérifie les articles → `correction_tickets`
-5. **Editorial** (quotidien) → rédige les corrections finales
-6. **Integration** (manuel) → applique les corrections → crée des PR
+### Statuts des opportunites
+Les opportunites sont **auto-approuvees** :
+`approved` → `in_progress` → `published`
+`approved` → `rejected` (si necessaire manuellement)
 
 ## Conventions
 

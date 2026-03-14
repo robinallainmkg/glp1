@@ -69,7 +69,7 @@ SELECT id FROM content_opportunities WHERE target_keyword = '<keyword>' AND stat
 Si nouveau, insere :
 ```sql
 INSERT INTO content_opportunities (agent_run_id, topic, description, target_keyword, estimated_volume, competition, priority, suggested_collection, suggested_slug, source_urls, competitor_urls, status)
-VALUES ('<run_id>', '<topic>', '<description>', '<keyword>', '<volume>', '<competition>', <priority>, '<collection>', '<slug>', '<sources>'::jsonb, '<competitors>'::jsonb, 'identified');
+VALUES ('<run_id>', '<topic>', '<description>', '<keyword>', '<volume>', '<competition>', <priority>, '<collection>', '<slug>', '<sources>'::jsonb, '<competitors>'::jsonb, 'approved');
 ```
 
 ### 7. Finalisation
