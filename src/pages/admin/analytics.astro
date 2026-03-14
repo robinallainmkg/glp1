@@ -1,0 +1,483 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      background: white;
+      color: #475569;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .refresh-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+    .last-update { font-size: 0.72rem; color: #94a3b8; }
+
+    .main { padding: 2rem; }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-label { font-size: 0.75rem; color: #64748b; }
+    .sv-green { color: #22c55e; }
+    .sv-blue { color: #3b82f6; }
+    .sv-amber { color: #f59e0b; }
+    .sv-purple { color: #8b5cf6; }
+    .sv-slate { color: #64748b; }
+
+    /* Command box */
+    .cmd-box {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .cmd-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #94a3b8;
+    }
+    .cmd-text strong { color: #4ade80; }
+    .cmd-copy {
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #475569;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 0.72rem;
+      cursor: pointer;
+    }
+    .cmd-copy:hover { border-color: #4ade80; color: #4ade80; }
+
+    /* Two columns */
+    .two-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Positioned keywords */
+    .section-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+    .section-header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .section-header .badge-count {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      background: #f1f5f9;
+      color: #64748b;
+    }
+
+    .kw-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .kw-table th {
+      padding: 0.6rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: #475569;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .kw-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+    .kw-table tr:last-child td { border-bottom: none; }
+    .kw-table tr:hover { background: #f8fafc; }
+
+    .kw-text {
+      font-weight: 500;
+      color: #1e293b;
+    }
+    .kw-article {
+      font-size: 0.72rem;
+      color: #64748b;
+      font-family: monospace;
+    }
+    .kw-type {
+      display: inline-block;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .kt-primary { background: #dbeafe; color: #2563eb; }
+    .kt-secondary { background: #f1f5f9; color: #64748b; }
+
+    .position-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      height: 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 0 0.4rem;
+    }
+    .pos-top3 { background: #dcfce7; color: #166534; }
+    .pos-top10 { background: #dbeafe; color: #1e40af; }
+    .pos-top20 { background: #fef3c7; color: #92400e; }
+    .pos-none { background: #f1f5f9; color: #94a3b8; font-size: 0.72rem; }
+
+    /* Not visible section */
+    .not-visible-list {
+      padding: 0.75rem 1.25rem;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .nv-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.78rem;
+    }
+    .nv-item:last-child { border-bottom: none; }
+    .nv-keyword { color: #475569; }
+    .nv-article { font-size: 0.68rem; color: #94a3b8; font-family: monospace; }
+
+    .empty-state {
+      text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    /* Diagnostic card */
+    .diagnostic-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem;
+    }
+    .diagnostic-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+    .diagnostic-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.5rem 0;
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.4;
+    }
+    .diagnostic-num {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #ede9fe;
+      color: #7c3aed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      .main { padding: 1rem; }
+      .page-header { padding: 1rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <div class="page-header-left">
+      <h1>Analytics — Positionnement</h1>
+      <p>Suivi des mots-cles et positions Google — alimente par l'agent Analytics</p>
+    </div>
+    <div class="header-actions">
+      <span class="last-update" id="lastUpdate"></span>
+      <button class="refresh-btn" onclick="loadAll()" title="Rafraichir">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 4v6h-6M1 20v-6h6"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+        Rafraichir
+      </button>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Command box -->
+    <div class="cmd-box">
+      <div class="cmd-text">
+        <strong>$</strong> claude -p "Analyse les keywords" --agent analytics
+      </div>
+      <button class="cmd-copy" onclick="navigator.clipboard.writeText('claude -p \"Analyse les keywords\" --agent analytics');this.textContent='Copie!'">Copier</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-card"><div class="stat-value sv-purple">-</div><div class="stat-label">Mots-cles suivis</div></div>
+      <div class="stat-card"><div class="stat-value sv-green">-</div><div class="stat-label">Positionnes</div></div>
+      <div class="stat-card"><div class="stat-value sv-blue">-</div><div class="stat-label">Top 3</div></div>
+      <div class="stat-card"><div class="stat-value sv-amber">-</div><div class="stat-label">Top 10</div></div>
+      <div class="stat-card"><div class="stat-value sv-slate">-</div><div class="stat-label">Non visibles</div></div>
+    </div>
+
+    <!-- Two columns: positioned + not visible -->
+    <div class="two-cols">
+      <!-- Positioned keywords -->
+      <div class="section-card">
+        <div class="section-header">
+          Mots-cles positionnes
+          <span class="badge-count" id="posCount">0</span>
+        </div>
+        <table class="kw-table">
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>Mot-cle</th>
+              <th>Article</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody id="posBody">
+            <tr><td colspan="4" class="empty-state">Chargement...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Not visible keywords -->
+      <div class="section-card">
+        <div class="section-header">
+          Non visibles (hors top 20)
+          <span class="badge-count" id="nvCount">0</span>
+        </div>
+        <div class="not-visible-list" id="nvList">
+          <div class="empty-state">Chargement...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diagnostic -->
+    <div class="diagnostic-card" id="diagnosticCard" style="display:none">
+      <div class="diagnostic-title">Diagnostic et recommandations</div>
+      <div id="diagnosticBody"></div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  async function supabaseFetch(table, query) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  function positionBadge(pos) {
+    if (!pos) return '<span class="position-badge pos-none">—</span>';
+    if (pos <= 3) return `<span class="position-badge pos-top3">#${pos}</span>`;
+    if (pos <= 10) return `<span class="position-badge pos-top10">#${pos}</span>`;
+    return `<span class="position-badge pos-top20">#${pos}</span>`;
+  }
+
+  function typeBadge(t) {
+    if (t === 'primary') return '<span class="kw-type kt-primary">Principal</span>';
+    return '<span class="kw-type kt-secondary">Secondaire</span>';
+  }
+
+  async function loadAll() {
+    try {
+      // Get latest rankings (most recent check per keyword)
+      const allRankings = await supabaseFetch('keyword_rankings',
+        'select=*&order=checked_at.desc');
+
+      // Deduplicate: keep latest per keyword+article
+      const latest = {};
+      for (const r of allRankings) {
+        const key = `${r.keyword}__${r.article_id}`;
+        if (!latest[key]) latest[key] = r;
+      }
+      const rankings = Object.values(latest);
+
+      // Get articles for slug mapping
+      const articles = await supabaseFetch('articles', 'select=id,slug&is_active=eq.true');
+      const articleMap = {};
+      articles.forEach(a => { articleMap[a.id] = a.slug; });
+
+      // Stats
+      const total = rankings.length;
+      const positioned = rankings.filter(r => r.position !== null);
+      const top3 = positioned.filter(r => r.position <= 3);
+      const top10 = positioned.filter(r => r.position <= 10);
+      const notVisible = rankings.filter(r => r.position === null);
+
+      document.getElementById('statsGrid').innerHTML = `
+        <div class="stat-card"><div class="stat-value sv-purple">${total}</div><div class="stat-label">Mots-cles suivis</div></div>
+        <div class="stat-card"><div class="stat-value sv-green">${positioned.length}</div><div class="stat-label">Positionnes</div></div>
+        <div class="stat-card"><div class="stat-value sv-blue">${top3.length}</div><div class="stat-label">Top 3</div></div>
+        <div class="stat-card"><div class="stat-value sv-amber">${top10.length}</div><div class="stat-label">Top 10</div></div>
+        <div class="stat-card"><div class="stat-value sv-slate">${notVisible.length}</div><div class="stat-label">Non visibles</div></div>
+      `;
+
+      // Positioned table
+      document.getElementById('posCount').textContent = positioned.length;
+      const posBody = document.getElementById('posBody');
+      if (positioned.length === 0) {
+        posBody.innerHTML = '<tr><td colspan="4" class="empty-state">Aucun mot-cle positionne</td></tr>';
+      } else {
+        positioned.sort((a, b) => (a.position || 999) - (b.position || 999));
+        posBody.innerHTML = positioned.map(r => `
+          <tr>
+            <td>${positionBadge(r.position)}</td>
+            <td><span class="kw-text">${escapeHtml(r.keyword)}</span></td>
+            <td><span class="kw-article">${escapeHtml(articleMap[r.article_id] || '-')}</span></td>
+            <td>${typeBadge(r.keyword_type)}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Not visible list
+      document.getElementById('nvCount').textContent = notVisible.length;
+      const nvList = document.getElementById('nvList');
+      if (notVisible.length === 0) {
+        nvList.innerHTML = '<div class="empty-state">Tous les mots-cles sont visibles !</div>';
+      } else {
+        nvList.innerHTML = notVisible.map(r => `
+          <div class="nv-item">
+            <span class="nv-keyword">${escapeHtml(r.keyword)}</span>
+            <span class="nv-article">${escapeHtml(articleMap[r.article_id] || '-')}</span>
+          </div>
+        `).join('');
+      }
+
+      // Diagnostic
+      if (total > 0) {
+        const coverage = Math.round((positioned.length / total) * 100);
+        const card = document.getElementById('diagnosticCard');
+        card.style.display = 'block';
+
+        const tips = [];
+        if (notVisible.length > total * 0.7) {
+          tips.push('Le site est invisible sur ' + Math.round(notVisible.length / total * 100) + '% des mots-cles. Prioriser le contenu et les backlinks sur les requetes a fort volume.');
+        }
+        if (top3.length > 0) {
+          tips.push('Excellent : ' + top3.length + ' mot(s)-cle(s) en top 3. Consolider ces positions avec du contenu enrichi et du maillage interne.');
+        }
+        if (positioned.length > 0 && positioned.length < 10) {
+          tips.push('Cibler les requetes longue traine avec "2026" pour augmenter rapidement le nombre de mots-cles positionnes.');
+        }
+        tips.push('Relancer l\'agent analytics regulierement pour suivre l\'evolution des positions dans le temps.');
+
+        document.getElementById('diagnosticBody').innerHTML = tips.map((t, i) => `
+          <div class="diagnostic-item">
+            <span class="diagnostic-num">${i + 1}</span>
+            <span>${escapeHtml(t)}</span>
+          </div>
+        `).join('');
+      }
+
+      document.getElementById('lastUpdate').textContent = 'Maj: ' + new Date().toLocaleTimeString('fr-FR');
+    } catch (e) {
+      document.getElementById('posBody').innerHTML = `<tr><td colspan="4" class="empty-state" style="color:#ef4444">Erreur: ${escapeHtml(e.message)}</td></tr>`;
+    }
+  }
+
+  loadAll();
+  setInterval(loadAll, 30000);
+</script>
+
+</body>
+</html>
