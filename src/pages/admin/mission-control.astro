@@ -467,7 +467,26 @@ import { supabaseConfig } from '../../lib/supabase';
         const statusLabel = { completed: 'termine', running: 'en cours', started: 'demarre', error: 'erreur', idle: 'inactif' }[status] || status;
         const meta = run?.metadata || {};
         const items = run?.items_processed ?? '-';
-        const errors = run?.items_errors ?? '-';
+
+        // Smart counters per agent using metadata
+        let counter2Label = 'erreurs';
+        let counter2Value = run?.items_errors ?? '-';
+        if (a.name === 'seo-audit' && meta.critical !== undefined) {
+          counter2Value = meta.critical || 0;
+          counter2Label = 'critiques';
+        } else if (a.name === 'fact-check' && meta.tickets_created !== undefined) {
+          counter2Value = meta.tickets_created;
+          counter2Label = 'tickets';
+        } else if (a.name === 'analytics' && meta.positioned_keywords !== undefined) {
+          counter2Value = meta.positioned_keywords;
+          counter2Label = 'positionnes';
+        } else if (a.name === 'opportunities' && meta.high_priority !== undefined) {
+          counter2Value = meta.high_priority;
+          counter2Label = 'prioritaires';
+        } else if (a.name === 'editorial' && meta.tickets_corrected !== undefined) {
+          counter2Value = meta.articles_created || 0;
+          counter2Label = 'crees';
+        }
 
         const duration = run?.duration_ms ? formatDuration(run.duration_ms)
           : (run?.started_at && run?.completed_at)
@@ -488,7 +507,7 @@ import { supabaseConfig } from '../../lib/supabase';
           </div>
           <div class="agent-counters">
             <div class="counter"><strong>${items}</strong>traites</div>
-            <div class="counter"><strong>${errors}</strong>erreurs</div>
+            <div class="counter"><strong>${counter2Value}</strong>${counter2Label}</div>
           </div>
           <div class="agent-last-action">${lastTime}${duration ? ' · ' + duration : ''}</div>
         </div>`;
