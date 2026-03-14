@@ -45,4 +45,4 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Run Editorial Agent
-        run: claude --agent editorial --print --model sonnet
+        run: claude -p "Run the editorial agent" --agent editorial --print --model sonnet

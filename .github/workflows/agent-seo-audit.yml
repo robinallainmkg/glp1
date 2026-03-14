@@ -34,4 +34,4 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Run SEO Audit Agent
-        run: claude --agent seo-audit --print --model sonnet
+        run: claude -p "Run the SEO audit agent" --agent seo-audit --print --model sonnet

@@ -34,4 +34,4 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Run Analytics Agent
-        run: claude --agent analytics --print --model sonnet
+        run: claude -p "Run the analytics agent" --agent analytics --print --model sonnet

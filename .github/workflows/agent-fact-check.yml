@@ -34,4 +34,4 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Run Fact-Check Agent
-        run: claude --agent fact-check --print --model sonnet
+        run: claude -p "Run the fact-check agent" --agent fact-check --print --model sonnet
