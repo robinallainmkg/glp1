@@ -1,11 +1,11 @@
 ---
-title: "Prix Mounjaro France 2025 : Tarifs et Remboursements Complets"
-description: "Prix Mounjaro en pharmacie : 179,80€ par boîte. Coût réel après remboursement, mutuelles, aides financières. Guide complet des tarifs par dosage (2.5mg, 5mg, 10mg, 15mg)."
-keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2025', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france', 'mounjaro remboursement 2025', 'prix mounjaro allemagne', 'mounjaro prix italie']
-seoTitle: "Prix Mounjaro France 2025 : Coût, Remboursement et Tarifs par Dosage"
-seoDescription: "Prix Mounjaro officiel : 179,80€/boîte. Coût réel 90€/mois après remboursement (65% Sécu). Tous les prix par dosage (2.5, 5, 7.5, 10, 12.5, 15mg), mutuelles et comparatifs internationaux."
+title: "Prix Mounjaro France 2026 : Tarifs et Conditions d'Accès"
+description: "Prix Mounjaro en pharmacie : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Guide complet des tarifs par dosage (2.5mg, 5mg, 10mg, 15mg)."
+keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france', 'mounjaro remboursement 2026', 'prix mounjaro allemagne', 'mounjaro prix italie']
+seoTitle: "Prix Mounjaro France 2026 : Coût, Accès et Tarifs par Dosage"
+seoDescription: "Prix Mounjaro en France : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Tous les prix par dosage (2.5, 5, 7.5, 10, 12.5, 15mg) et comparatifs."
 publishedAt: '2025-09-06'
-updatedAt: '2025-12-27'
+updatedAt: '2026-03-08'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -19,11 +19,11 @@ affiliateCollection: "glp1-cout"
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Prix Mounjaro France 2025 : Tarifs et Remboursements Complets",
-  "description": "Prix Mounjaro en pharmacie : 179,80€ par boîte. Coût réel après remboursement, mutuelles, aides financières.",
+  "name": "Prix Mounjaro France 2026 : Tarifs et Conditions d'Accès",
+  "description": "Prix Mounjaro en pharmacie : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-mounjaro-france",
   "datePublished": "2025-09-06",
-  "dateModified": "2025-12-27",
+  "dateModified": "2026-03-08",
   "author": {
     "@type": "Person",
     "name": "Dr. Marie Dubois"
@@ -48,26 +48,26 @@ affiliateCollection: "glp1-cout"
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Quel est le prix d'une boîte de Mounjaro en France ?",
+        "name": "Quel est le prix de Mounjaro en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel d'une boîte de Mounjaro en pharmacie est de 179,80€ pour les dosages de maintenance (5 mg à 15 mg) et 89,90€ pour le dosage d'initiation (2,5 mg). Après remboursement de l'Assurance Maladie (65%) et de votre mutuelle, le coût mensuel est généralement compris entre 30€ et 90€."
+          "text": "Le prix de Mounjaro en pharmacie est un prix libre, variant de 230€ à 440€ par mois selon le dosage (2,5 mg ~230€, 5 mg ~275€, 7,5-10 mg ~395€, 12,5-15 mg ~440€). Mounjaro n'est pas remboursé par la Sécurité Sociale en mars 2026. Un avis favorable de la HAS a été rendu en décembre 2025, et un remboursement est envisagé au 2e semestre 2026."
         }
       },
       {
         "@type": "Question",
-        "name": "Mounjaro est-il remboursé en France en 2025 ?",
+        "name": "Mounjaro est-il remboursé en France en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui, Mounjaro est remboursé à 65% par l'Assurance Maladie depuis son autorisation en 2022. Le remboursement est conditionné à une prescription médicale valide, un diagnostic de diabète de type 2 confirmé OU une obésité (IMC ≥ 30), l'échec des traitements de première intention et un suivi médical régulier."
+          "text": "Non, Mounjaro n'est pas remboursé par la Sécurité Sociale en mars 2026. Commercialisé en France depuis novembre 2024, le tirzépatide (Mounjaro) est vendu en prix libre. La HAS a émis un avis favorable en décembre 2025, et un remboursement est envisagé pour le 2e semestre 2026."
         }
       },
       {
         "@type": "Question",
-        "name": "Quelle mutuelle rembourse le mieux Mounjaro ?",
+        "name": "Quelle mutuelle rembourse Mounjaro ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Les mutuelles offrant le meilleur remboursement pour Mounjaro sont les mutuelles surcomplémentaires avec remboursement jusqu'à 90-95% (reste à charge 5-10€/mois), les mutuelles Or/Platine avec remboursement 85-90% (reste à charge 10-20€/mois), et les mutuelles Argent avec remboursement 80-85% (reste à charge 20-30€/mois)."
+          "text": "Mounjaro n'étant pas remboursé par la Sécurité Sociale (mars 2026), la plupart des mutuelles ne le prennent pas en charge. Certaines mutuelles haut de gamme proposent des forfaits 'médecines complémentaires' ou 'traitements non remboursés' pouvant couvrir une partie du coût. Vérifiez les conditions spécifiques de votre contrat."
         }
       }
     ]
@@ -75,20 +75,20 @@ affiliateCollection: "glp1-cout"
 }
 </script>
 
-# Prix Mounjaro France 2025 : Guide Complet des Tarifs
+# Prix Mounjaro France 2026 : Guide Complet des Tarifs
 
-Le tirzépatide commercialisé sous le nom de Mounjaro constitue un traitement innovant pour la gestion du diabète de type 2 et de l'obésité. Ce guide présente une analyse détaillée des coûts associés à ce médicament en France, incluant les modalités de remboursement par l'Assurance Maladie et les complémentaires santé.
+Le tirzépatide, commercialisé sous le nom de Mounjaro par le laboratoire **Eli Lilly**, est disponible en France depuis **novembre 2024**. Ce traitement innovant pour la gestion du diabète de type 2 et de l'obésité est actuellement vendu en **prix libre** et **non remboursé** par la Sécurité Sociale (mars 2026). La HAS a émis un avis favorable en décembre 2025, laissant entrevoir un remboursement possible au 2e semestre 2026.
 
 <div class="price-hero">
   <div class="price-highlight">
-    <span class="original-price">179,80€ par boîte</span>
-    <span class="final-price">90€/mois après remboursement</span>
+    <span class="original-price">230 à 440€/mois selon dosage</span>
+    <span class="final-price">Non remboursé (mars 2026)</span>
   </div>
-  <p class="price-subtitle">Coût patient après prise en charge Sécurité Sociale et mutuelle complémentaire</p>
+  <p class="price-subtitle">Prix libre en pharmacie — Remboursement envisagé au 2e semestre 2026 (avis favorable HAS décembre 2025)</p>
 </div>
 
 <div class="info-notice">
-  <strong>Information tarifaire</strong> : Les prix indiqués correspondent aux tarifs officiels en vigueur dans les pharmacies françaises au 1er janvier 2025, selon les données de l'Assurance Maladie.
+  <strong>Information tarifaire</strong> : Mounjaro est vendu en prix libre depuis sa commercialisation en France en novembre 2024. Les prix peuvent varier selon les pharmacies. Le médicament n'est pas remboursé par la Sécurité Sociale en mars 2026.
 </div>
 
 <div class="quick-nav">
@@ -101,37 +101,49 @@ Le tirzépatide commercialisé sous le nom de Mounjaro constitue un traitement i
 ## Prix Officiel Mounjaro en Pharmacie {#prix-officiel}
 
 <div class="price-breakdown">
-  <h3>Tarifs Officiels 2025</h3>
-  
+  <h3>Tarifs en Pharmacie (Prix Libre — Mars 2026)</h3>
+
   <div class="price-table-modern">
     <div class="price-row header">
       <span>Dosage</span>
-      <span>Prix Pharmacie</span>
-      <span>Après Remboursement</span>
-      <span>Coût Mensuel</span>
+      <span>Prix Pharmacie (estimé)</span>
+      <span>Remboursement</span>
+      <span>Coût Mensuel Patient</span>
     </div>
     <div class="price-row">
       <span>2,5 mg (initiation)</span>
-      <span class="original-price">89,90€</span>
-      <span class="final-price">31,50€</span>
-      <span class="monthly-cost">31€/mois</span>
+      <span class="original-price">~230€</span>
+      <span class="final-price">Non remboursé</span>
+      <span class="monthly-cost">~230€/mois</span>
     </div>
     <div class="price-row">
-      <span>5-15 mg (maintenance)</span>
-      <span class="original-price">179,80€</span>
-      <span class="final-price">89,90€</span>
-      <span class="monthly-cost">90€/mois</span>
+      <span>5 mg (escalade)</span>
+      <span class="original-price">~275€</span>
+      <span class="final-price">Non remboursé</span>
+      <span class="monthly-cost">~275€/mois</span>
+    </div>
+    <div class="price-row">
+      <span>7,5-10 mg (maintenance)</span>
+      <span class="original-price">~395€</span>
+      <span class="final-price">Non remboursé</span>
+      <span class="monthly-cost">~395€/mois</span>
+    </div>
+    <div class="price-row">
+      <span>12,5-15 mg (maintenance)</span>
+      <span class="original-price">~440€</span>
+      <span class="final-price">Non remboursé</span>
+      <span class="monthly-cost">~440€/mois</span>
     </div>
   </div>
-  
+
   <div class="price-note">
-    Coût calculé après remboursement Sécurité Sociale (65%) et mutuelle complémentaire (estimation 25%)
+    Prix libre : les tarifs varient selon les pharmacies. Mounjaro n'est pas remboursé par la Sécurité Sociale (mars 2026). Avis favorable HAS décembre 2025, remboursement envisagé 2e semestre 2026.
   </div>
 </div>
 
 ### Comparaison Tarifaire avec les Autres Traitements GLP-1 {#comparaison}
 
-Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France se situe dans une fourchette intermédiaire. Cette comparaison présente les coûts mensuels moyens pour le patient après remboursement.
+Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GLP-1 disponibles en France est le plus élevé, reflétant son statut de traitement de dernière génération à double mécanisme d'action. Aucun de ces traitements anti-obésité n'est remboursé par la Sécurité Sociale en mars 2026, à l'exception d'Ozempic dans l'indication diabète de type 2.
 
 <div class="comparison-table-enhanced">
   <div class="comparison-header">
@@ -140,61 +152,72 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
     <span>Coût mensuel patient</span>
     <span>Statut remboursement</span>
   </div>
-  
+
   <div class="comparison-row">
     <span><strong>Mounjaro (tirzépatide)</strong></span>
     <span>Dual GLP-1/GIP</span>
-    <span><strong>90€</strong></span>
-    <span>Remboursé sous conditions</span>
+    <span><strong>230-440€</strong></span>
+    <span>Non remboursé (mars 2026)</span>
   </div>
-  
+
   <div class="comparison-row">
     <span>Ozempic (sémaglutide)</span>
     <span>GLP-1 agoniste</span>
-    <span>73€</span>
-    <span>Remboursé pour diabète</span>
+    <span>~59,90€</span>
+    <span>Remboursé 65% (DT2 uniquement)</span>
   </div>
-  
+
   <div class="comparison-row">
     <span>Wegovy (sémaglutide)</span>
     <span>GLP-1 agoniste</span>
-    <span>120€</span>
-    <span>Remboursement partiel</span>
+    <span>169-360€</span>
+    <span>Non remboursé (mars 2026)</span>
+  </div>
+
+  <div class="comparison-row">
+    <span>Saxenda (liraglutide)</span>
+    <span>GLP-1 agoniste</span>
+    <span>240-300€</span>
+    <span>Non remboursé (mars 2026)</span>
   </div>
 </div>
 
-L'analyse comparative des coûts révèle que Mounjaro présente un coût mensuel supérieur de 17 euros par rapport à Ozempic. Cette différence tarifaire correspond à l'innovation thérapeutique du double mécanisme d'action GLP-1/GIP, qui peut justifier une efficacité clinique potentiellement supérieure selon les données d'études cliniques disponibles.
+Seul Ozempic bénéficie d'un remboursement à 65% par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
 
-## Modalités de Remboursement par l'Assurance Maladie {#remboursement}
+## Statut de Remboursement (Mars 2026) {#remboursement}
 
-### Critères d'Éligibilité pour la Prise en Charge
+### Mounjaro : Non Remboursé par la Sécurité Sociale
 
-L'Assurance Maladie française rembourse Mounjaro à hauteur de 65% du tarif conventionnel lorsque les conditions médicales définies par la Haute Autorité de Santé sont réunies.
+**En mars 2026, Mounjaro n'est pas remboursé par l'Assurance Maladie.** Le tirzépatide (Mounjaro), fabriqué par Eli Lilly, est commercialisé en France depuis novembre 2024 en prix libre. Le coût est intégralement à la charge du patient.
 
-Pour le traitement du diabète de type 2, les critères incluent une prescription médicale établie par un médecin généraliste ou spécialiste, un diagnostic de diabète de type 2 documenté et confirmé par examens biologiques, ainsi qu'un échec thérapeutique avéré des antidiabétiques oraux de première intention. Un indice de masse corporelle supérieur ou égal à 30 kg/m² constitue également un critère, ou supérieur ou égal à 27 kg/m² en présence de comorbidités cardiovasculaires ou métaboliques.
+La Haute Autorité de Santé (HAS) a rendu un **avis favorable en décembre 2025**, ouvrant la voie à un remboursement potentiel au **2e semestre 2026**. Les négociations de prix entre Eli Lilly et le Comité Économique des Produits de Santé (CEPS) sont en cours.
 
-### Prise en Charge dans l'Indication Obésité
+### Conditions d'Accès au Traitement
 
-Depuis l'extension des indications en 2023, Mounjaro peut bénéficier d'un remboursement dans le cadre du traitement de l'obésité. Le dispositif d'Affection de Longue Durée permet une prise en charge à 100% lorsque les conditions d'éligibilité sont remplies selon l'évaluation médicale spécialisée.
+Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier.
 
-La prescription initiale s'établit sur une durée de six mois, renouvelable après évaluation clinique de l'efficacité et de la tolérance. Un suivi médical régulier incluant des consultations diététiques et un accompagnement nutritionnel constitue une obligation réglementaire pour maintenir la prise en charge.
+### Perspectives de Remboursement
+
+L'avis favorable de la HAS de décembre 2025 constitue une étape importante. Le processus de fixation du prix et des conditions de remboursement est en cours. Les patients sont invités à se renseigner régulièrement auprès de leur médecin ou pharmacien sur l'évolution de la prise en charge.
 
 ## Couverture par les Mutuelles Complémentaires {#cout-reel}
 
-### Niveau de Remboursement selon les Mutuelles
+### Prise en Charge par les Mutuelles
 
-| Type de contrat | Reste à charge mensuel | Taux de couverture complémentaire |
+Mounjaro n'étant pas remboursé par la Sécurité Sociale en mars 2026, la majorité des mutuelles ne le prennent pas en charge. Le coût mensuel (230 à 440€ selon le dosage) est intégralement à la charge du patient.
+
+Certaines mutuelles haut de gamme peuvent proposer une prise en charge partielle via des forfaits spécifiques :
+
+| Type de contrat | Prise en charge possible | Commentaire |
 |-------------------|----------------|-------------------|
-| Contrat de base | 30-60 €/mois | 20-35% |
-| Contrat intermédiaire | 15-30 €/mois | 50-70% |
-| Contrat renforcé | 5-15 €/mois | 80-90% |
+| Contrat de base | Aucune | Médicament non remboursé Sécu |
+| Contrat intermédiaire | Rare | Vérifier forfait "traitements non remboursés" |
+| Contrat renforcé / haut de gamme | Partielle possible | Forfait annuel plafonné (500-2000€/an) |
 
-Le coût mensuel réel varie de 5€ à 60€ selon le niveau de couverture de votre mutuelle complémentaire.
-
-### Optimisation de la Prise en Charge
-- Vérifiez les garanties médicaments de votre contrat actuel
-- Comparez les offres incluant des forfaits spécifiques aux traitements GLP-1
-- Contrôlez les plafonds annuels de remboursement pour les médicaments coûteux
+### Conseils pour Réduire le Coût
+- Vérifiez si votre mutuelle dispose d'un forfait "médicaments non remboursés" ou "traitements innovants"
+- Comparez les offres mutuelles incluant des forfaits spécifiques aux traitements GLP-1
+- Renseignez-vous auprès de votre pharmacien sur les prix pratiqués (prix libre, donc variable)
 
 ## Aides Financières Complémentaires
 
@@ -246,9 +269,9 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 
 ### Information Pratique
 
-Le coût mensuel pour le patient varie entre 30 et 90 euros selon le niveau de couverture sociale et complémentaire dont il bénéficie.
+Le coût mensuel pour le patient varie entre 230 et 440 euros selon le dosage, Mounjaro étant vendu en prix libre et non remboursé par la Sécurité Sociale en mars 2026.
 
-L'accès au traitement Mounjaro dépend de l'éligibilité aux critères de remboursement définis par l'Assurance Maladie. Une consultation médicale spécialisée permet d'évaluer cette éligibilité et d'estimer précisément le coût résiduel selon la situation administrative et sociale du patient.
+L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel remboursement au 2e semestre 2026.
 
 ### Contacts Utiles
 - **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france)
@@ -258,15 +281,15 @@ L'accès au traitement Mounjaro dépend de l'éligibilité aux critères de remb
 ## Évolution des Prix et Contexte International
 
 ### Historique Tarifaire
-- **2022** : Introduction sur le marché français à 89,90€ par stylo
-- **2023** : Maintien des tarifs avec extension du remboursement pour l'obésité
-- **2024-2025** : Stabilité des prix malgré le contexte inflationniste
+- **Novembre 2024** : Commercialisation de Mounjaro en France par Eli Lilly (prix libre)
+- **Décembre 2025** : Avis favorable de la HAS pour le remboursement
+- **Mars 2026** : Toujours non remboursé, négociations CEPS en cours, remboursement envisagé 2e semestre 2026
 
 ### Comparaison Européenne
 
 | Pays | Coût mensuel moyen | Accessibilité |
 |------|-------------------|---------------|
-| France | 90-120€ | Remboursement partiel |
+| France | 230-440€ | Non remboursé (mars 2026) |
 | Allemagne | 110-150€ | Système comparable |
 | Italie | 95-130€ | Accès facilité |
 | Espagne | 85-125€ | Prise en charge variable |
@@ -286,53 +309,52 @@ L'accès au traitement Mounjaro dépend de l'éligibilité aux critères de remb
 
 ---
 
-*Les tarifs mentionnés correspondent aux prix publics pratiqués en France et sont susceptibles de variations selon les établissements pharmaceutiques. Pour une estimation personnalisée, consultez votre médecin traitant ou spécialiste.*
+*Les tarifs mentionnés sont des estimations basées sur les prix libres pratiqués en pharmacie (mars 2026). Mounjaro n'est pas remboursé par la Sécurité Sociale. Les prix peuvent varier selon les pharmacies. Pour une estimation personnalisée, consultez votre médecin traitant ou pharmacien.*
 
 ## ❓ Questions Fréquentes (FAQ)
 
-### Quel est le prix d'une boîte de Mounjaro en France ?
+### Quel est le prix de Mounjaro en France ?
 
-Le prix officiel d'une boîte de Mounjaro en pharmacie est de **179,80€** pour les dosages de maintenance (5 mg à 15 mg) et **89,90€** pour le dosage d'initiation (2,5 mg). Après remboursement de l'Assurance Maladie (65%) et de votre mutuelle, le coût mensuel est généralement compris entre **30€ et 90€** selon votre couverture santé.
+Le prix de Mounjaro en pharmacie est un **prix libre** qui varie selon le dosage : **~230€** pour le 2,5 mg (initiation), **~275€** pour le 5 mg, **~395€** pour le 7,5-10 mg, et **~440€** pour le 12,5-15 mg. Mounjaro **n'est pas remboursé** par la Sécurité Sociale en mars 2026. Le coût est intégralement à la charge du patient.
 
-### Combien coûte Mounjaro par mois après remboursement ?
+### Combien coûte Mounjaro par mois ?
 
-Le coût mensuel moyen pour le patient est d'environ **90€** après les remboursements de la Sécurité Sociale et de la mutuelle complémentaire. Ce montant peut varier entre 30€ et 120€ selon :
-- Votre niveau de couverture mutuelle (bronze, argent, or, platine)
-- Votre éligibilité à des aides complémentaires (CMU-C, ACS)
-- Le dosage prescrit par votre médecin
+Le coût mensuel de Mounjaro est de **230 à 440€** selon le dosage prescrit. Ce prix est intégralement à la charge du patient car Mounjaro **n'est pas remboursé** par la Sécurité Sociale (mars 2026). Le coût varie selon :
+- Le dosage prescrit par votre médecin (2,5 mg à 15 mg)
+- La pharmacie choisie (prix libre, donc variable)
+- D'éventuels forfaits mutuelles pour traitements non remboursés
 
-### Mounjaro est-il remboursé en France en 2025 ?
+### Mounjaro est-il remboursé en France en 2026 ?
 
-Oui, Mounjaro est **remboursé à 65%** par l'Assurance Maladie depuis son autorisation en 2022. Le remboursement est conditionné à :
-- Une prescription médicale valide
-- Un diagnostic de diabète de type 2 confirmé OU une obésité (IMC ≥ 30)
-- L'échec des traitements de première intention
-- Un suivi médical régulier
+**Non, Mounjaro n'est pas remboursé** par la Sécurité Sociale en mars 2026. Commercialisé en France depuis novembre 2024 par Eli Lilly, il est vendu en prix libre. La HAS a émis un **avis favorable en décembre 2025**, ce qui ouvre la voie à un remboursement potentiel :
+- Négociations de prix en cours entre Eli Lilly et le CEPS
+- Remboursement envisagé au **2e semestre 2026**
+- En attendant, le coût (230-440€/mois) est intégralement à la charge du patient
 
-En 2025, les conditions de remboursement restent identiques. La prise en charge pour l'indication obésité est maintenue sous conditions médicales strictes.
+Une prescription médicale reste obligatoire pour obtenir le traitement.
 
-### Quelle mutuelle rembourse le mieux Mounjaro ?
+### Quelle mutuelle rembourse Mounjaro ?
 
-Les mutuelles offrant le meilleur remboursement pour Mounjaro sont celles avec des **forfaits médicaments renforcés** :
+Mounjaro n'étant **pas remboursé par la Sécurité Sociale** (mars 2026), la plupart des mutuelles ne le prennent pas en charge. Certaines mutuelles haut de gamme peuvent proposer une prise en charge partielle :
 
-**Top 3 des meilleures prises en charge :**
-1. **Mutuelles "Surcomplémentaires"** : Remboursement jusqu'à 90-95% (reste à charge 5-10€/mois)
-2. **Mutuelles "Or/Platine"** : Remboursement 85-90% (reste à charge 10-20€/mois)
-3. **Mutuelles "Argent"** : Remboursement 80-85% (reste à charge 20-30€/mois)
+**Options possibles :**
+1. **Mutuelles haut de gamme** : Forfait "médicaments non remboursés" (500-2000€/an plafonné)
+2. **Surcomplémentaires** : Couverture partielle possible selon les contrats
+3. **Contrats collectifs d'entreprise** : Certains incluent des garanties pour traitements innovants
 
 Vérifiez spécifiquement :
-- Le plafond annuel pour les médicaments coûteux
-- La présence d'un forfait "traitement chronique"
-- Les conditions de tiers payant
+- L'existence d'un forfait "traitements non remboursés" ou "médicaments innovants"
+- Le plafond annuel de ce forfait
+- Les conditions d'application (prescription médicale requise)
 
 ### Combien coûte Mounjaro 15 mg ?
 
-Le prix d'une boîte de **Mounjaro 15 mg** (dosage maximal) est de **179,80€** en pharmacie. C'est le même prix que tous les dosages de maintenance (5 mg, 7.5 mg, 10 mg, 12.5 mg, 15 mg).
+Le prix de **Mounjaro 15 mg** (dosage maximal) est d'environ **440€/mois** en pharmacie (prix libre). Les dosages les plus élevés (12,5 mg et 15 mg) sont les plus coûteux.
 
-Après remboursement :
-- **Sécurité Sociale (65%)** : -116,87€
-- **Reste à charge initial** : 62,93€
-- **Avec mutuelle (25-30%)** : Reste à charge final de 30-40€
+Coût à la charge du patient :
+- **Sécurité Sociale** : Aucun remboursement (mars 2026)
+- **Coût mensuel** : ~440€ intégralement à la charge du patient
+- **Mutuelle** : Prise en charge rare, vérifier forfait "médicaments non remboursés"
 
 ### Quel est le prix de Mounjaro en Allemagne et en Italie ?
 
@@ -393,37 +415,37 @@ Plusieurs dispositifs d'aide existent pour réduire le coût de Mounjaro :
 
 ### Mounjaro ou Wegovy : quel est le moins cher ?
 
-**Comparatif de coût mensuel après remboursement :**
+**Comparatif de coût mensuel (mars 2026) — Aucun des deux n'est remboursé :**
 
-**Mounjaro :**
-- Coût mensuel patient : **90€**
-- Prix pharmacie : 179,80€
+**Mounjaro (Eli Lilly) :**
+- Coût mensuel patient : **230-440€** selon dosage
 - Mécanisme : Dual GLP-1/GIP (plus récent)
-- Efficacité : Perte de poids supérieure dans les études
+- Efficacité : Perte de poids supérieure dans les études (SURMOUNT)
+- Remboursement : Non remboursé (mars 2026)
 
-**Wegovy :**
-- Coût mensuel patient : **73€**
-- Prix pharmacie : 120-140€
-- Mécanisme : GLP-1 simple
-- Efficacité : Perte de poids prouvée
+**Wegovy (Novo Nordisk) :**
+- Coût mensuel patient : **169-360€** selon dosage
+- Mécanisme : GLP-1 agoniste
+- Efficacité : Perte de poids prouvée (STEP)
+- Remboursement : Non remboursé (mars 2026)
 
-**Verdict :** Wegovy est **17€ moins cher par mois** (environ 200€/an d'économie). Cependant, Mounjaro montre une efficacité supérieure dans les études cliniques (SURMOUNT). Le choix dépend de votre situation médicale et budgétaire.
+**Verdict :** Wegovy est généralement **moins cher** que Mounjaro, mais les deux restent des traitements coûteux non remboursés. Mounjaro montre une efficacité supérieure dans les études cliniques (SURMOUNT). Le choix dépend de votre situation médicale et budgétaire.
 
 [Comparer tous les traitements GLP-1](/guides/quel-traitement-glp1-choisir)
 
-### À partir de quel dosage Mounjaro est-il remboursé ?
+### Quels sont les prix par dosage de Mounjaro ?
 
-**Tous les dosages de Mounjaro sont remboursés** si les conditions médicales sont remplies :
+**Aucun dosage de Mounjaro n'est remboursé** par la Sécurité Sociale en mars 2026. Voici les prix libres estimés :
 
-**Dosages remboursés :**
-- ✅ 2,5 mg (initiation) - 89,90€
-- ✅ 5 mg (escalade) - 179,80€
-- ✅ 7,5 mg (escalade) - 179,80€
-- ✅ 10 mg (maintenance) - 179,80€
-- ✅ 12,5 mg (maintenance) - 179,80€
-- ✅ 15 mg (maintenance maximale) - 179,80€
+**Prix par dosage (estimations mars 2026) :**
+- 2,5 mg (initiation) - ~230€/mois
+- 5 mg (escalade) - ~275€/mois
+- 7,5 mg (escalade) - ~395€/mois
+- 10 mg (maintenance) - ~395€/mois
+- 12,5 mg (maintenance) - ~440€/mois
+- 15 mg (maintenance maximale) - ~440€/mois
 
-Le remboursement à 65% s'applique dès le dosage d'initiation (2,5 mg) et se maintient pendant toute la durée du traitement, à condition de respecter le protocole d'escalade progressive et le suivi médical régulier.
+Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement est envisagé au 2e semestre 2026 suite à l'avis favorable de la HAS de décembre 2025.
 
 ---
 
@@ -445,5 +467,5 @@ Le remboursement à 65% s'applique dès le dosage d'initiation (2,5 mg) et se ma
 
 ---
 
-*Dernière mise à jour : 27 décembre 2025. Les prix et conditions de remboursement sont susceptibles d'évoluer. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées.*</content>
+*Dernière mise à jour : 8 mars 2026. Les prix (libres) et conditions de remboursement sont susceptibles d'évoluer. Un remboursement est envisagé au 2e semestre 2026. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et les prix actualisés.*</content>
 <parameter name="filePath">/Users/mac/Projet/glp1/src/content/glp1-cout/prix-mounjaro-france.md

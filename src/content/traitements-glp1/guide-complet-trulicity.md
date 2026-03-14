@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Trulicity : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-trulicity"
 description: "Découvrez tout sur Trulicity : traitement GLP-1 pour le diabète et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/trulicity.jpg"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["trulicity", "glp-1", "diabète", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
 ---
 
 # Guide Complet Trulicity : Tout Savoir sur ce Traitement Révolutionnaire
@@ -165,13 +167,12 @@ Non, Trulicity est spécifiquement indiqué pour le diabète de type 2, contrair
 ### Puis-je boire de l'alcool avec Trulicity ?
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
-### Trulicity est-il remboursé pour l'obésité ?
-Non, Trulicity n'est remboursé que pour le diabète de type 2, pas pour l'obésité seule.
+### Trulicity est-il remboursé ?
+Trulicity est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids seule. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix est d'environ 81 € par mois.
 
 ### Puis-je arrêter Trulicity brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
 
 ---
 
-*Ce guide complet sur Trulicity est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-trulicity.md
+*Ce guide complet sur Trulicity est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

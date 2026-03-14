@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Rybelsus : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-rybelsus"
 description: "Découvrez tout sur Rybelsus : traitement GLP-1 oral pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/rybelsus-medical-guide.jpg"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["rybelsus", "glp-1", "diabète", "traitement", "oral"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
 ---
 
 # Guide Complet Rybelsus : Tout Savoir sur ce Traitement Révolutionnaire
@@ -158,12 +160,11 @@ Non, Rybelsus doit être pris à jeun, 30 minutes avant le premier repas, et il 
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Rybelsus est-il remboursé ?
-Oui, Rybelsus est remboursé à 100% pour le diabète de type 2 dans le cadre d'une ALD.
+Rybelsus est remboursé à **65 %** par l'Assurance Maladie pour le diabète de type 2 (100 % en ALD). Son prix se situe entre 80 € et 110 € par mois selon le dosage. Il n'est pas remboursé pour la perte de poids seule.
 
 ### Puis-je arrêter Rybelsus brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale.
 
 ---
 
-*Ce guide complet sur Rybelsus est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-rybelsus.md
+*Ce guide complet sur Rybelsus est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

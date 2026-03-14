@@ -34,12 +34,12 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
-| **Ozempic** | Novo Nordisk | Diabète type 2 + Obésité | 0.25mg à 2mg/semaine | 70-100€ | 65% diabète |
-| **Wegovy** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 70-100€ | Non remboursé |
-| **Saxenda** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 60-80€ | Non remboursé |
-| **Trulicity** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | 50-70€ | 65% diabète |
-| **Victoza** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | 40-60€ | 65% diabète |
-| **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 50-70€ | 65% diabète |
+| **Ozempic** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~59,90€/stylo | 65% DT2 uniquement |
+| **Wegovy** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 169-360€ | Non remboursé |
+| **Saxenda** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
+| **Trulicity** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 65% DT2 |
+| **Victoza** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 65% DT2 |
+| **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | 65% DT2 |
 
 **💡 Conseil d'expert :** Pour optimiser votre perte de poids avec les GLP-1, combinez votre traitement avec une alimentation équilibrée et de l'activité physique régulière.
 
@@ -59,13 +59,13 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 - **Laboratoire :** Novo Nordisk
 - **Indications :** Diabète type 2
 - **Posologie :** 0.6mg à 1.8mg/jour
-- **Prix :** ~40-60€/mois (remboursé)
+- **Prix :** ~60,26€/mois (remboursé 65% DT2)
 
 ### 6. **Rybelsus (Sémaglutide oral)**
 - **Laboratoire :** Novo Nordisk
 - **Indications :** Diabète type 2
 - **Posologie :** 3mg à 14mg/jour
-- **Prix :** ~50-70€/mois (remboursé)
+- **Prix :** 80-110€/mois (remboursé 65% DT2)
 
 ## Efficacité des GLP-1 pour la Perte de Poids
 
@@ -130,22 +130,22 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 **Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Découvrez comment bénéficier du meilleur tarif pour votre traitement contre l'obésité ou le diabète.
 
 - **Diabète type 2 :** 65% remboursé par la Sécurité Sociale (sous conditions d'ALD)
-- **Obésité (IMC ≥30) :** Remboursé à 65% pour Wegovy, Mounjaro, Saxenda depuis 2023
+- **Obésité (IMC ≥30) :** Wegovy, Mounjaro et Saxenda ne sont **pas remboursés** en France (mars 2026)
 - **ALD (Affection Longue Durée) :** 100% remboursé pour diabète + obésité sévère
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat
 
-**Pour bénéficier du remboursement GLP-1 :** Diabète type 2 en ALD OU obésité (IMC ≥30) avec échec mesures hygiéno-diététiques. Wegovy, Mounjaro et Saxenda sont remboursés à 65% pour l'obésité depuis 2023.
+**Pour bénéficier du remboursement GLP-1 :** Seuls les traitements indiqués pour le diabète de type 2 (Ozempic, Trulicity, Victoza, Rybelsus) sont remboursés à 65% par la Sécurité Sociale. Wegovy, Mounjaro et Saxenda (indiqués pour l'obésité) ne sont **pas remboursés** en France (mars 2026) et restent entièrement à la charge du patient.
 
 ### Prix Réels des Médicaments GLP-1 en Pharmacie 2025
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | 90-120€ | 65% diabète | 30-42€ (remboursé) |
-| **Wegovy** | 120-140€ | 65% obésité | 36-51€ (remboursé) |
-| **Saxenda** | 70-80€ | 65% obésité | 24-28€ (remboursé) |
-| **Trulicity** | 55-75€ | 65% diabète | 19-26€ (remboursé) |
-| **Victoza** | 45-65€ | 65% diabète | 16-23€ (remboursé) |
-| **Rybelsus** | 55-75€ | 65% diabète | 19-26€ (remboursé) |
+| **Ozempic** | ~59,90€/stylo | 65% DT2 | ~21€ (DT2 65%) |
+| **Wegovy** | 169-360€ | Non remboursé | 169-360€ (à charge) |
+| **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
+| **Trulicity** | ~81€ | 65% DT2 | ~28€ (DT2 65%) |
+| **Victoza** | ~60,26€ | 65% DT2 | ~21€ (DT2 65%) |
+| **Rybelsus** | 80-110€ | 65% DT2 | 28-39€ (DT2 65%) |
 
 **💰 Conseil économique :** Pour réduire le coût de votre traitement GLP-1, vérifiez d'abord votre éligibilité au remboursement diabète. Les médicaments comme Ozempic et Trulicity peuvent être très abordables une fois remboursés.
 

@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Zepbound : Prix, Effets et Résultats pour la Perte de Poids"
+slug: "guide-complet-zepbound"
 description: "Découvrez tout sur Zepbound : le traitement GLP-1 d'Eli Lilly pour la perte de poids. Prix, effets secondaires, posologie et résultats."
 author: "Dr. Martin"
 image: "/images/thumbnails/zepbound.webp"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["zepbound", "glp-1", "perte de poids", "traitement", "injection", "eli lilly", "tirzepatide"]
 date: "2025-09-01"
+pubDate: "2025-09-01"
 ---
 
 # Guide Complet Zepbound : Le Nouveau Traitement GLP-1 pour la Perte de Poids
@@ -32,13 +34,16 @@ date: "2025-09-01"
 
 ## Qu'est-ce que Zepbound ?
 
-Zepbound est un médicament injectable révolutionnaire développé par Eli Lilly, spécifiquement conçu pour le traitement de l'obésité et la perte de poids. Approuvé par la FDA en novembre 2023, Zepbound représente une avancée majeure dans la prise en charge médicale de l'obésité.
+> **⚠️ Important pour les lecteurs français** : Zepbound est le **nom commercial américain** du tirzepatide pour l'indication obésité. **En Europe et en France, ce même médicament est commercialisé sous le nom Mounjaro.** Zepbound n'a pas d'AMM européenne et n'est pas disponible en France. Consultez notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour les informations actualisées sur la disponibilité et les prix en France.
 
-**Principe actif** : Tirzepatide  
-**Laboratoire** : Eli Lilly  
-**Indication principale** : Obésité (IMC ≥30) ou surpoids (IMC ≥27) avec comorbidité  
-**Forme** : Solution injectable en stylo prérempli  
+Zepbound (tirzepatide) est un médicament injectable développé par Eli Lilly, indiqué pour le traitement de l'obésité et la perte de poids. Il a été approuvé par la FDA aux États-Unis en novembre 2023. **En France, le tirzepatide est disponible sous le nom Mounjaro** depuis novembre 2024.
+
+**Principe actif** : Tirzepatide (identique à Mounjaro)
+**Laboratoire** : Eli Lilly
+**Indication** : Obésité (IMC ≥30) ou surpoids (IMC ≥27) avec comorbidité
+**Forme** : Solution injectable en stylo prérempli
 **Fréquence** : Injection hebdomadaire
+**Disponibilité France** : Sous le nom **Mounjaro** uniquement
 
 ## Comment fonctionne Zepbound ?
 
@@ -117,21 +122,19 @@ Dans les études cliniques SURMOUNT, Zepbound a permis :
 ### Maintien du poids
 Après 2 ans de traitement, les patients maintiennent en moyenne 80% de leur perte de poids initiale.
 
-## Prix et remboursement
+## Prix et remboursement en France
 
-### Prix approximatif en France
-- **2,5 mg** : 80-90€
-- **5 mg** : 85-95€
-- **7,5 mg** : 90-100€
-- **10 mg** : 95-105€
-- **12,5 mg** : 100-110€
-- **15 mg** : 105-115€
+> **Rappel** : Zepbound n'existe pas en France. Le tirzepatide est commercialisé sous le nom **Mounjaro**.
+
+### Prix Mounjaro en France (mars 2026)
+Le prix est libre et varie selon les pharmacies et le dosage :
+- **2,5 mg (initiation)** : environ 230 €/mois
+- **5 mg (dose courante)** : environ 275 €/mois
+- **7,5-10 mg** : environ 395 €/mois
+- **12,5-15 mg** : environ 400-440 €/mois
 
 ### Remboursement
-Zepbound n'est pas encore commercialisé en France. Il devrait être disponible fin 2025/début 2026 avec :
-- Remboursement probable pour IMC ≥35 ou IMC ≥30 avec comorbidités
-- Prise en charge à 65% par l'Assurance Maladie
-- Reste à charge : 35% (mutuelle conseillée)
+Mounjaro **n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). La HAS a émis un avis favorable en décembre 2025 ; un remboursement est envisagé au second semestre 2026 pour les patients avec un IMC ≥ 35, après échec d'une prise en charge nutritionnelle.
 
 ## Effets secondaires
 
@@ -155,8 +158,8 @@ Zepbound n'est pas encore commercialisé en France. Il devrait être disponible 
 
 ## FAQ Zepbound
 
-### Quand Zepbound sera-t-il disponible en France ?
-Zepbound devrait être commercialisé en France fin 2025. Eli Lilly a déposé une demande d'AMM européenne.
+### Zepbound est-il disponible en France ?
+Non, Zepbound n'a pas d'AMM européenne. Le même principe actif (tirzepatide) est commercialisé en France sous le nom **Mounjaro** depuis novembre 2024. Eli Lilly prévoit de produire Mounjaro en France (usine de Fegersheim, Alsace) à partir de 2026.
 
 ### Puis-je prendre Zepbound si je n'ai pas de diabète ?
 Oui, Zepbound est indiqué pour la perte de poids chez les patients obèses ou en surpoids avec comorbidités, indépendamment du diabète.
@@ -179,5 +182,4 @@ Zepbound représente une avancée majeure dans le traitement de l'obésité grâ
 
 Bien que son prix soit élevé, son efficacité et son profil de sécurité en font un traitement prometteur pour la prise en charge médicale de l'obésité.
 
-**Rendez-vous chez votre médecin** pour discuter de l'éligibilité à Zepbound et bénéficier d'un suivi médical adapté.</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-zepbound.md
+**Rendez-vous chez votre médecin** pour discuter de l'éligibilité à Zepbound et bénéficier d'un suivi médical adapté.

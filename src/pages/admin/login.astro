@@ -1,0 +1,153 @@
+---
+import { supabaseConfig } from '../../lib/supabase';
+
+// Build-time: read ADMIN_PASSWORD and create a simple hash
+const adminPassword = import.meta.env.ADMIN_PASSWORD || 'glp1admin2024';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion Admin - GLP1 France</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+    }
+    .login-logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .login-logo-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .login-logo h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .login-logo p {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+    .login-card {
+      background: #1e293b;
+      border-radius: 14px;
+      padding: 2rem;
+      border: 1px solid #334155;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #334155;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .login-btn:hover { opacity: 0.9; }
+    .login-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .login-error {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      background: #450a0a;
+      border: 1px solid #991b1b;
+      border-radius: 8px;
+      color: #fca5a5;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+    .login-error.show { display: block; }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-logo">
+      <div class="login-logo-icon">G</div>
+      <h1>GLP-1 France</h1>
+      <p>Espace administration</p>
+    </div>
+    <div class="login-card">
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="password">Mot de passe</label>
+          <input class="form-input" type="password" id="password" placeholder="Mot de passe admin" autocomplete="current-password" required />
+        </div>
+        <button class="login-btn" type="submit">Se connecter</button>
+      </form>
+      <div class="login-error" id="loginError">Mot de passe incorrect</div>
+    </div>
+  </div>
+
+  <script define:vars={{ adminPassword }}>
+    // Check if already authenticated
+    if (sessionStorage.getItem('admin_auth')) {
+      window.location.href = '/admin/';
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const pwd = document.getElementById('password').value;
+      if (pwd === adminPassword) {
+        sessionStorage.setItem('admin_auth', 'true');
+        window.location.href = '/admin/';
+      } else {
+        document.getElementById('loginError').classList.add('show');
+        document.getElementById('password').value = '';
+        document.getElementById('password').focus();
+      }
+    });
+  </script>
+</body>
+</html>

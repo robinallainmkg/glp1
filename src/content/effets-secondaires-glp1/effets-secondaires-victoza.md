@@ -12,6 +12,8 @@ readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
+thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
+thumbnailAlt: "Effets secondaires du traitement victoza"
 ---
 
 # Effets Secondaires Victoza : Guide Complet
@@ -129,7 +131,7 @@ image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
 
 ## 🩺 Quand Consulter ?
 
-### Consultation urgente (911 ou urgences)
+### Consultation urgente (15/SAMU ou 112)
 
 - Douleurs abdominales violentes
 - Vomissements sanglants
@@ -233,10 +235,6 @@ image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
 - **Suivi médical** : Essentiel pour sécurité
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
-thumbnailAlt: "Effets secondaires du traitement victoza"
----
 
 ## Sommaire
 

@@ -1,9 +1,10 @@
 import type { APIRoute } from 'astro';
+import { supabase } from '../../lib/supabase';
 
 export const POST: APIRoute = async ({ request }) => {
   try {
     const { email, source } = await request.json();
-    
+
     if (!email || !email.includes('@')) {
       return new Response(JSON.stringify({ error: 'Email invalide' }), {
         status: 400,
@@ -11,55 +12,34 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
-    // Log pour analytics
-    console.log(`📧 Nouvelle inscription: ${email} via ${source}`);
+    console.log(`📧 Nouvelle inscription newsletter: ${email} via ${source}`);
 
-    // Ici, intégration avec votre service d'email marketing
-    // Exemples d'intégrations populaires :
-    
-    // MAILCHIMP
-    /*
-    const mailchimpResponse = await fetch(`https://us1.api.mailchimp.com/3.0/lists/YOUR_LIST_ID/members`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.MAILCHIMP_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email_address: email,
-        status: 'subscribed',
-        tags: [source],
-        merge_fields: {
-          SOURCE: source,
-          SIGNUP_DATE: new Date().toISOString()
-        }
-      })
-    });
-    */
+    // Sauvegarde dans Supabase (table contacts avec flag newsletter)
+    const { error } = await supabase
+      .from('contacts')
+      .insert({
+        email,
+        subject: 'Newsletter - Guide Prix GLP-1',
+        message: `Inscription newsletter via ${source || 'homepage'}`,
+        newsletter: true,
+        status: 'new'
+      });
 
-    // CONVERTKIT
-    /*
-    const convertkitResponse = await fetch('https://api.convertkit.com/v3/forms/YOUR_FORM_ID/subscribe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        api_key: process.env.CONVERTKIT_API_KEY,
-        email: email,
-        tags: [source]
-      })
-    });
-    */
+    if (error) {
+      console.error('❌ Erreur Supabase newsletter:', error);
+      return new Response(JSON.stringify({
+        error: 'Erreur lors de l\'inscription'
+      }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
 
-    // SUPABASE (Stockage local)
-    // Vous pouvez stocker les emails dans votre base Supabase existante
-    
-    // Pour l'instant, simulation d'un succès
-    await new Promise(resolve => setTimeout(resolve, 500)); // Simule API call
-    
-    return new Response(JSON.stringify({ 
-      success: true, 
-      message: 'Inscription réussie',
-      downloadUrl: '/guide-prix-glp1-2025.pdf'
+    console.log('✅ Email newsletter sauvegardé:', email);
+
+    return new Response(JSON.stringify({
+      success: true,
+      message: 'Inscription réussie'
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
@@ -67,9 +47,9 @@ export const POST: APIRoute = async ({ request }) => {
 
   } catch (error) {
     console.error('Erreur inscription newsletter:', error);
-    
-    return new Response(JSON.stringify({ 
-      error: 'Erreur serveur' 
+
+    return new Response(JSON.stringify({
+      error: 'Erreur serveur'
     }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }

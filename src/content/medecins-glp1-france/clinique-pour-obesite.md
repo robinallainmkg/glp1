@@ -235,14 +235,14 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ### Médicaments GLP-1
 
 **Ozempic :**
-- **Prix :** 73€/mois
-- **Remboursement :** 65% si diabète
-- **Reste à charge :** 25€/mois environ
+- **Prix :** ~59,90€/stylo
+- **Remboursement :** 65 % si diabète de type 2 (100 % en ALD), formulaire obligatoire depuis fév. 2025
+- **Reste à charge :** ~21€/mois environ (DT2)
 
 **Wegovy :**
-- **Prix :** 270€/mois
-- **Remboursement :** En cours d'évaluation
-- **Reste à charge :** Variable selon mutuelle
+- **Prix :** 169-360€/mois (selon dose)
+- **Remboursement :** Non remboursé (mars 2026). Négociations CEPS en cours.
+- **Reste à charge :** Intégralité du coût. Certaines mutuelles proposent une prise en charge partielle.
 
 ## Critères d'Éligibilité et Contre-indications
 

@@ -1,6 +1,8 @@
 ---
 // src/pages/admin/fact-check.astro
 // Dashboard Fact-Check — Client-side rendering (Hostinger static)
+// Design: glp1-dashboard-v2.html reference
+import AdminNav from '../../components/AdminNav.astro';
 import { supabaseConfig } from '../../lib/supabase';
 ---
 
@@ -9,350 +11,483 @@ import { supabaseConfig } from '../../lib/supabase';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fact-Check Dashboard - GLP1 France</title>
-  <style>
+  <title>Fact-Check - GLP1 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style is:inline>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --surface2: #f0ede8;
+      --surface3: #e8e4dd;
+      --border: #e2ddd6;
+      --border2: #d0c9be;
+      --text: #18150f;
+      --text2: #3d3830;
+      --muted: #7a7268;
+      --urgent: #b83030;
+      --urgent-light: #fdf2f2;
+      --urgent-border: #edc0c0;
+      --warning: #9a6200;
+      --warning-light: #fdf8ee;
+      --warning-border: #e8d090;
+      --ok: #1e6e3a;
+      --ok-light: #f0faf4;
+      --ok-border: #a8dab8;
+      --blue: #1a3f7a;
+      --blue-light: #eef3fc;
+      --blue-border: #a8c0e8;
+      --purple: #5a3a8a;
+      --purple-light: #f5f0fc;
+      --purple-border: #c8a8e8;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      min-height: 100vh;
+      font-size: 14px;
     }
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 1.5rem 2rem;
+
+    .admin-layout { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Topbar */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      height: 56px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      z-index: 40;
     }
-    .header h1 { font-size: 1.5rem; font-weight: 600; }
-    .header-nav { display: flex; gap: 1.5rem; }
-    .header a { color: white; text-decoration: none; opacity: 0.8; }
-    .header a:hover { opacity: 1; }
-    .stats-bar {
-      display: flex;
-      gap: 1rem;
-      padding: 1.5rem 2rem;
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .stat-card {
-      flex: 1;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .stat-card .stat-value { font-size: 2rem; font-weight: 700; }
-    .stat-card .stat-label { font-size: 0.85rem; color: #64748b; margin-top: 0.25rem; }
-    .stat-urgent { background: #fef2f2; color: #dc2626; }
-    .stat-warning { background: #fffbeb; color: #f59e0b; }
-    .stat-ok { background: #f0fdf4; color: #22c55e; }
-    .stat-info { background: #eff6ff; color: #3b82f6; }
-    .stat-tickets { background: #f5f3ff; color: #7c3aed; }
-    .main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
-    .section { margin-bottom: 2rem; }
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .badge {
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-    .article-card {
-      background: white;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      margin-bottom: 1rem;
-      overflow: hidden;
-    }
-    .article-header {
-      padding: 1rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-    }
-    .article-header:hover { background: #f8fafc; }
-    .article-title { font-weight: 500; font-size: 0.95rem; }
-    .article-meta { font-size: 0.8rem; color: #94a3b8; display: flex; gap: 1rem; align-items: center; }
-    .article-body { display: none; padding: 0 1.25rem 1.25rem; }
-    .article-card.open .article-body { display: block; }
-    .collection-tag {
-      display: inline-block;
-      padding: 0.15rem 0.5rem;
+    .topbar-left { display: flex; align-items: center; gap: 16px; }
+    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+    .topbar-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      padding: 3px 8px;
+      background: var(--surface2);
       border-radius: 4px;
-      font-size: 0.75rem;
-      background: #e0e7ff;
-      color: #4338ca;
     }
-    .score-pill {
-      display: inline-block;
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
+    .topbar-actions { display: flex; gap: 8px; }
+
+    /* Buttons */
+    .btn {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 12px;
       font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 7px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
-    .ticket {
-      margin-top: 0.75rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn:active:not(:disabled) { transform: scale(0.97); }
+    .btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
+    .btn-ghost:hover:not(:disabled) { border-color: var(--text); color: var(--text); }
+    .btn-primary { background: var(--text); color: #fff; }
+    .btn-primary:hover:not(:disabled) { opacity: 0.85; }
+    .btn-ok { background: var(--ok-light); border: 1px solid var(--ok-border); color: var(--ok); }
+    .btn-ok:hover:not(:disabled) { background: var(--ok); color: white; }
+    .btn-danger { background: var(--urgent-light); border: 1px solid var(--urgent-border); color: var(--urgent); }
+    .btn-danger:hover:not(:disabled) { background: var(--urgent); color: white; }
+    .btn-purple { background: var(--purple-light); border: 1px solid var(--purple-border); color: var(--purple); }
+    .btn-purple:hover:not(:disabled) { background: var(--purple); color: white; }
+
+    /* Content */
+    .content { padding: 28px 32px; overflow-y: auto; flex: 1; }
+
+    /* Stats grid */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .stat-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
+    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .stat-urgent { border-color: var(--urgent-border); }
+    .stat-urgent .stat-value { color: var(--urgent); }
+
+    /* Section */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      margin-top: 8px;
+    }
+    .section-title { font-size: 13px; font-weight: 700; }
+    .section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+
+    /* Article group */
+    .article-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 16px;
       overflow: hidden;
+    }
+    .article-group-header {
+      display: flex;
+      align-items: center;
+      padding: 14px 18px;
+      gap: 12px;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .article-group-header:hover { background: var(--surface2); }
+    .article-info { flex: 1; }
+    .article-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .article-slug {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .score-bar-wrap { display: flex; align-items: center; gap: 10px; }
+    .score-bar { width: 80px; height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+    .score-fill { height: 100%; border-radius: 3px; }
+    .score-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .article-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .chevron { font-size: 11px; color: var(--muted); transition: transform 0.2s; }
+    .article-group.open .chevron { transform: rotate(180deg); }
+    .tickets-list { display: none; padding: 0 18px 18px; }
+    .article-group.open .tickets-list { display: flex; flex-direction: column; gap: 10px; }
+
+    /* Ticket */
+    .ticket {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
     }
     .ticket-header {
-      padding: 0.75rem 1rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background: #f8fafc;
-      border-bottom: 1px solid #e2e8f0;
+      gap: 10px;
+      padding: 11px 14px;
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
     }
-    .ticket-type {
+    .urgence-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .urgence-dot.urgent { background: var(--urgent); }
+    .urgence-dot.warning { background: var(--warning); }
+    .urgence-dot.ok { background: var(--ok); }
+    .ticket-type-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
       font-weight: 600;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .ticket-statut {
-      font-size: 0.75rem;
-      padding: 0.15rem 0.5rem;
+      padding: 2px 7px;
       border-radius: 4px;
-      font-weight: 500;
     }
-    .ticket-body { padding: 1rem; }
-    .diff-before, .diff-after {
-      border-radius: 6px;
-      margin-bottom: 0.75rem;
-      overflow: hidden;
+    .type-urgent { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+    .type-warning { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+    .type-ok { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+    .ticket-desc { font-size: 12px; font-weight: 600; color: var(--text2); flex: 1; }
+    .ticket-status {
+      margin-left: auto;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .status-pending { background: var(--surface3); color: var(--muted); border: 1px solid var(--border2); }
+    .status-approved { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+    .status-rejected { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+    .status-ready { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
+    .status-deployed { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+    .status-revision { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
+
+    .ticket-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+
+    /* Diff blocks — side by side */
+    .final-diff { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .diff-block { border-radius: 8px; padding: 12px 14px; }
+    .diff-before {
+      background: #fdf5f5;
+      border: 1px solid var(--urgent-border);
+      border-left: 3px solid var(--urgent);
+    }
+    .diff-after {
+      background: #f3faf6;
+      border: 1px solid var(--ok-border);
+      border-left: 3px solid var(--ok);
     }
     .diff-label {
-      font-size: 0.8rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
       font-weight: 600;
-      padding: 0.4rem 0.75rem;
     }
-    .diff-content {
-      padding: 0.75rem;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
-    }
-    .diff-before .diff-label { background: #fef2f2; color: #991b1b; }
-    .diff-before .diff-content { background: #fff5f5; border: 1px solid #fecaca; border-top: none; text-decoration: line-through; color: #991b1b; }
-    .diff-after .diff-label { background: #f0fdf4; color: #166534; }
-    .diff-after .diff-content { background: #f0fdf9; border: 1px solid #bbf7d0; border-top: none; color: #166534; }
-    .ticket-source { font-size: 0.8rem; color: #3b82f6; margin-bottom: 0.75rem; }
-    .ticket-source a { color: #3b82f6; }
-    .ticket-realite {
-      font-size: 0.85rem;
-      color: #475569;
-      margin-bottom: 0.75rem;
-      padding: 0.5rem 0.75rem;
-      background: #fffbeb;
-      border: 1px solid #fde68a;
+    .diff-before .diff-label { color: var(--urgent); }
+    .diff-after .diff-label { color: var(--ok); }
+    .diff-text { font-size: 12px; line-height: 1.5; color: var(--text2); }
+    .diff-before .diff-text { text-decoration: line-through; opacity: 0.7; color: var(--urgent); }
+
+    .ticket-explication {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+      padding: 8px 10px;
+      background: var(--surface2);
       border-radius: 6px;
+    }
+    .ticket-source {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--blue);
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    .ticket-source a { color: var(--blue); text-decoration: none; }
+    .ticket-source a:hover { text-decoration: underline; }
+    .human-note-block {
+      font-size: 11px;
+      color: var(--purple);
+      padding: 8px 10px;
+      background: var(--purple-light);
+      border: 1px solid var(--purple-border);
+      border-radius: 6px;
+      line-height: 1.5;
     }
     .ticket-actions {
       display: flex;
-      gap: 0.5rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid #f1f5f9;
-    }
-    .btn {
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 8px;
+      padding-top: 4px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
     }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .btn-approve { background: #22c55e; color: white; }
-    .btn-approve:hover:not(:disabled) { background: #16a34a; }
-    .btn-reject { background: #ef4444; color: white; }
-    .btn-reject:hover:not(:disabled) { background: #dc2626; }
-    .btn-note { background: #f59e0b; color: white; }
-    .btn-note:hover:not(:disabled) { background: #d97706; }
-    .toast {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      padding: 1rem 1.5rem;
+    .human-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      color: var(--purple);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 2px;
+    }
+
+    /* No tickets warning */
+    .no-tickets-msg {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 12px 14px;
+      background: var(--surface2);
       border-radius: 8px;
-      color: white;
-      font-weight: 500;
-      font-size: 0.9rem;
-      z-index: 1000;
-      transform: translateY(100px);
-      opacity: 0;
-      transition: all 0.3s ease;
+      line-height: 1.5;
     }
-    .toast.show { transform: translateY(0); opacity: 1; }
-    .toast.success { background: #22c55e; }
-    .toast.error { background: #dc2626; }
+    .no-tickets-msg code {
+      background: rgba(0,0,0,0.06);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+    }
+
+    /* OK summary */
+    .ok-summary {
+      background: var(--ok-light);
+      border: 1px solid var(--ok-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 12px;
+      color: var(--ok);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .ok-summary .detail {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-left: 12px;
+    }
+
+    /* Modal */
     .modal-overlay {
-      display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 900;
+      background: rgba(0,0,0,0.4);
+      z-index: 200;
+      display: none;
       align-items: center;
       justify-content: center;
     }
-    .modal-overlay.active { display: flex; }
+    .modal-overlay.open { display: flex; }
     .modal {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      width: 90%;
-      max-width: 500px;
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 28px;
+      width: 460px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     }
-    .modal h3 { margin-bottom: 1rem; }
+    .modal-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .modal-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
     .modal textarea {
       width: 100%;
-      min-height: 100px;
-      padding: 0.75rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-family: inherit;
-      resize: vertical;
+      height: 100px;
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 13px;
+      color: var(--text);
+      resize: none;
+      margin-bottom: 14px;
     }
-    .modal-actions {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: flex-end;
-      margin-top: 1rem;
+    .modal textarea:focus { outline: none; border-color: var(--purple); }
+    .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--text);
+      color: white;
+      padding: 13px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.25s;
+      z-index: 300;
+      max-width: 320px;
+      pointer-events: none;
     }
-    .btn-cancel { background: #e2e8f0; color: #475569; }
-    .btn-cancel:hover { background: #cbd5e1; }
-    .btn-send-note { background: #f59e0b; color: white; }
-    .btn-send-note:hover { background: #d97706; }
-    .empty-state {
-      text-align: center;
-      padding: 2rem;
-      color: #94a3b8;
-      font-size: 0.9rem;
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast-sub { font-size: 11px; font-weight: 400; opacity: 0.65; margin-top: 2px; }
+
+    /* Loading / Empty */
+    .empty-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
+    .loading-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
     }
-    .loading {
-      text-align: center;
-      padding: 3rem;
-      color: #64748b;
-      font-size: 1rem;
-    }
-    .human-note {
-      font-size: 0.85rem;
-      color: #92400e;
-      background: #fffbeb;
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
-      margin-bottom: 0.75rem;
-      border: 1px solid #fde68a;
+    @media (max-width: 768px) {
+      .topbar { padding: 0 16px; }
+      .content { padding: 16px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .final-diff { grid-template-columns: 1fr; }
+      .article-group-header { flex-wrap: wrap; }
+      .ticket-actions { flex-wrap: wrap; }
+      .topbar-left { flex-wrap: wrap; gap: 8px; }
     }
   </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>Fact-Check Dashboard</h1>
-  <div class="header-nav">
-    <a href="/admin/editorial">Editorial</a>
-    <a href="/admin">Admin</a>
+<AdminNav />
+
+<div class="admin-layout">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="page-title">Fact-Check Dashboard</div>
+      <div class="topbar-meta" id="topbar-meta">Chargement...</div>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn btn-ghost" onclick="loadDashboard()">&#x27F3; Rafraichir</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="content">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">Articles verifies</div>
+        <div class="stat-value" id="stat-total">-</div>
+        <div class="stat-sub" id="stat-total-sub">&nbsp;</div>
+      </div>
+      <div class="stat stat-urgent">
+        <div class="stat-label">Urgents</div>
+        <div class="stat-value" id="stat-urgent">-</div>
+        <div class="stat-sub">Action requise</div>
+      </div>
+      <div class="stat" style="border-color:var(--warning-border)">
+        <div class="stat-label" style="color:var(--warning)">A verifier</div>
+        <div class="stat-value" id="stat-warning" style="color:var(--warning)">-</div>
+        <div class="stat-sub">Corrections mineures</div>
+      </div>
+      <div class="stat" style="border-color:var(--ok-border)">
+        <div class="stat-label" style="color:var(--ok)">OK</div>
+        <div class="stat-value" id="stat-ok" style="color:var(--ok)">-</div>
+        <div class="stat-sub">Aucune action</div>
+      </div>
+    </div>
+
+    <div id="main-content">
+      <div class="loading-state">Chargement des donnees...</div>
+    </div>
   </div>
 </div>
 
-<div class="stats-bar">
-  <div class="stat-card stat-urgent">
-    <div class="stat-value" id="stat-urgent">-</div>
-    <div class="stat-label">Urgents</div>
-  </div>
-  <div class="stat-card stat-warning">
-    <div class="stat-value" id="stat-warning">-</div>
-    <div class="stat-label">A verifier</div>
-  </div>
-  <div class="stat-card stat-ok">
-    <div class="stat-value" id="stat-ok">-</div>
-    <div class="stat-label">OK</div>
-  </div>
-  <div class="stat-card stat-info">
-    <div class="stat-value" id="stat-score">-</div>
-    <div class="stat-label">Score moyen</div>
-  </div>
-  <div class="stat-card stat-tickets">
-    <div class="stat-value" id="stat-tickets">-</div>
-    <div class="stat-label">Tickets en attente</div>
-  </div>
-</div>
-
-<div class="main" id="content">
-  <div class="loading">Chargement des donnees...</div>
-</div>
-
-<!-- Modal note de rejet -->
-<div class="modal-overlay" id="noteModal">
+<!-- Modal Note -->
+<div class="modal-overlay" id="modal">
   <div class="modal">
-    <h3>Rejeter avec note</h3>
-    <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.75rem;">
-      Cette note sera transmise a l'Agent Editorial pour revision.
-    </p>
-    <textarea id="noteText" placeholder="Instructions pour la revision..."></textarea>
+    <div class="modal-title">Note au redacteur</div>
+    <div class="modal-sub">Cette note sera transmise a l'Agent Editorial pour guider la revision.</div>
+    <textarea id="noteText" placeholder="Ex: Le prix doit etre exprime en mensuel, pas a l'unite. Ajouter la mention que les prix varient selon la pharmacie..."></textarea>
     <div class="modal-actions">
-      <button class="btn btn-cancel" id="noteCancel">Annuler</button>
-      <button class="btn btn-send-note" id="noteSend">Envoyer</button>
+      <button class="btn btn-ghost" id="noteCancel">Annuler</button>
+      <button class="btn btn-purple" id="noteSend">Envoyer a l'Editorial</button>
     </div>
   </div>
 </div>
 
 <!-- Toast -->
-<div id="toast" class="toast"></div>
+<div class="toast" id="toast">
+  <div id="toastMsg"></div>
+  <div class="toast-sub" id="toastSub"></div>
+</div>
 
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
   const SUPABASE_URL = supabaseUrl;
   const SUPABASE_ANON_KEY = supabaseAnonKey;
   let pendingNoteTicketId = null;
 
-  // --- Helpers ---
-
-  function formatDate(dateStr) {
-    if (!dateStr) return 'N/A';
-    return new Date(dateStr).toLocaleDateString('fr-FR', {
-      day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
-    });
-  }
-
-  function urgenceIcon(urgence) {
-    return { urgent: '\u{1F534}', warning: '\u{1F7E1}', ok: '\u{1F7E2}' }[urgence] || '\u26AA';
-  }
-
-  function typeLabel(type) {
-    return { price_update: 'Prix', info_outdated: 'Info obsolete', false_claim: 'Claim faux', missing_info: 'Info manquante' }[type] || type;
-  }
-
-  function statutLabel(statut) {
-    return { pending_review: 'En attente', approved: 'Approuve', rejected: 'Rejete', in_progress: 'En cours', ready_to_deploy: 'Pret', deployed: 'Deploye', revision_needed: 'Revision' }[statut] || statut;
-  }
-
-  function statutBg(statut) {
-    return { pending_review: '#dbeafe', approved: '#d1fae5', rejected: '#fee2e2', ready_to_deploy: '#d1fae5', deployed: '#bbf7d0', revision_needed: '#fef3c7' }[statut] || '#e2e8f0';
-  }
-
-  function statutColor(statut) {
-    return { pending_review: '#1e40af', approved: '#065f46', rejected: '#991b1b', ready_to_deploy: '#065f46', deployed: '#166534', revision_needed: '#92400e' }[statut] || '#475569';
-  }
-
+  // ── Helpers ──
   function escapeHtml(str) {
     if (!str) return '';
     const div = document.createElement('div');
@@ -360,8 +495,75 @@ import { supabaseConfig } from '../../lib/supabase';
     return div.innerHTML;
   }
 
-  // --- Supabase fetch helpers ---
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+  }
 
+  function scoreColor(score) {
+    if (score < 50) return 'var(--urgent)';
+    if (score < 75) return 'var(--warning)';
+    return 'var(--ok)';
+  }
+
+  function scoreClass(score) {
+    if (score < 50) return 'type-urgent';
+    if (score < 75) return 'type-warning';
+    return 'type-ok';
+  }
+
+  function urgenceClass(urgence) {
+    if (urgence === 'urgent') return 'urgent';
+    if (urgence === 'warning') return 'warning';
+    return 'ok';
+  }
+
+  function typeClass(urgence) {
+    if (urgence === 'urgent') return 'type-urgent';
+    if (urgence === 'warning') return 'type-warning';
+    return 'type-ok';
+  }
+
+  function typeLabel(type) {
+    const labels = {
+      price_update: 'prix',
+      info_outdated: 'info obsolete',
+      false_claim: 'claim faux',
+      missing_info: 'info manquante',
+      context_fr: 'contexte FR',
+    };
+    return labels[type] || type || '?';
+  }
+
+  function statutLabel(statut) {
+    const labels = {
+      pending_review: 'En attente',
+      approved: 'Approuve',
+      rejected: 'Rejete',
+      in_progress: 'En cours',
+      ready_to_deploy: 'Pret a deployer',
+      deployed: 'Deploye',
+      revision_needed: 'Revision',
+    };
+    return labels[statut] || statut;
+  }
+
+  function statutClass(statut) {
+    const map = {
+      pending_review: 'status-pending',
+      approved: 'status-approved',
+      rejected: 'status-rejected',
+      in_progress: 'status-approved',
+      ready_to_deploy: 'status-ready',
+      deployed: 'status-deployed',
+      revision_needed: 'status-revision',
+    };
+    return map[statut] || 'status-pending';
+  }
+
+  // ── Supabase API ──
   async function supabaseFetch(table, query) {
     const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
       headers: {
@@ -384,95 +586,176 @@ import { supabaseConfig } from '../../lib/supabase';
       },
       body: JSON.stringify(updates)
     });
-    if (!response.ok) throw new Error(await response.text());
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error(`Erreur ${response.status}: ${errText}`);
+    }
   }
 
-  function showToast(message, type = 'success') {
-    const toast = document.getElementById('toast');
-    toast.textContent = message;
-    toast.className = `toast ${type} show`;
-    setTimeout(() => { toast.classList.remove('show'); }, 3000);
+  // ── Toast ──
+  let toastTimer;
+  function showToast(msg, sub) {
+    const t = document.getElementById('toast');
+    document.getElementById('toastMsg').textContent = msg;
+    document.getElementById('toastSub').textContent = sub || '';
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
   }
 
-  // --- Render ---
-
+  // ── Render functions ──
   function renderTicket(t) {
+    const urg = urgenceClass(t.urgence);
+    const tClass = typeClass(t.urgence);
+    const sClass = statutClass(t.statut);
+    const isPending = t.statut === 'pending_review';
+
+    const urgIcon = t.urgence === 'urgent' ? '\u{1F534}' : (t.urgence === 'warning' ? '\u{1F7E1}' : '\u{1F7E2}');
+
+    // Build short description from before_exact (first 50 chars)
+    const shortDesc = t.before_exact ? t.before_exact.substring(0, 60) + (t.before_exact.length > 60 ? '...' : '') : '';
+
     return `
       <div class="ticket" data-ticket-id="${t.id}">
         <div class="ticket-header">
-          <div class="ticket-type">
-            <span>${urgenceIcon(t.urgence)}</span>
-            <span style="text-transform:uppercase">${escapeHtml(t.urgence)}</span>
-            <span style="color:#64748b;font-weight:400">&middot;</span>
-            <span>${escapeHtml(typeLabel(t.ticket_type))}</span>
-          </div>
-          <span class="ticket-statut" style="background:${statutBg(t.statut)};color:${statutColor(t.statut)}">${escapeHtml(statutLabel(t.statut))}</span>
+          <div class="urgence-dot ${urg}"></div>
+          <div class="ticket-type-badge ${tClass}">${urgIcon} ${escapeHtml(typeLabel(t.ticket_type))}</div>
+          <span class="ticket-desc">${escapeHtml(shortDesc)}</span>
+          <div class="ticket-status ${sClass}">${isPending ? '' : (t.statut === 'approved' ? '\u2713 ' : '')}${escapeHtml(statutLabel(t.statut))}</div>
         </div>
         <div class="ticket-body">
-          <div class="diff-before">
-            <div class="diff-label">AVANT</div>
-            <div class="diff-content">${escapeHtml(t.before_exact)}</div>
+          <div class="final-diff">
+            <div class="diff-block diff-before">
+              <div class="diff-label">Erreur detectee</div>
+              <div class="diff-text">${escapeHtml(t.before_exact)}</div>
+            </div>
+            <div class="diff-block diff-after">
+              <div class="diff-label">Correction suggeree</div>
+              <div class="diff-text">${escapeHtml(t.after_suggested)}</div>
+            </div>
           </div>
-          <div class="diff-after">
-            <div class="diff-label">APRES</div>
-            <div class="diff-content">${escapeHtml(t.after_suggested)}</div>
-          </div>
-          <div class="ticket-realite">${escapeHtml(t.realite_actuelle)}</div>
-          ${t.source_reference ? `<div class="ticket-source">Source : <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
-          ${t.human_note ? `<div class="human-note"><strong>Note :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
-          ${t.statut === 'pending_review' ? `
+          ${t.realite_actuelle ? `<div class="ticket-explication">${escapeHtml(t.realite_actuelle)}</div>` : ''}
+          ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
+          ${t.human_note ? `<div class="human-note-block"><strong>Note :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
+          ${isPending ? `
             <div class="ticket-actions">
-              <button class="btn btn-approve" data-action="approve" data-ticket-id="${t.id}">Approuver</button>
-              <button class="btn btn-reject" data-action="reject" data-ticket-id="${t.id}">Rejeter</button>
-              <button class="btn btn-note" data-action="note" data-ticket-id="${t.id}">+ Note</button>
+              <span class="human-label">\u{1F464} Decision :</span>
+              <button class="btn btn-ok" onclick="handleAction('approve', '${t.id}', this)">\u2713 Approuver</button>
+              <button class="btn btn-danger" onclick="handleAction('reject', '${t.id}', this)">\u2717 Rejeter</button>
+              <button class="btn btn-purple" onclick="handleAction('note', '${t.id}', this)">\u{1F4DD} + Note</button>
             </div>
-          ` : ''}
+          ` : (t.statut === 'approved' ? `
+            <div class="ticket-actions">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye a l'Agent Editorial</span>
+            </div>
+          ` : '')}
         </div>
       </div>
     `;
   }
 
-  function renderGroup(group, results, ticketsByResult) {
-    if (group.items.length === 0) return '';
+  function renderArticleGroup(article, factResult, tickets, index) {
+    const score = factResult.score_fiabilite || 0;
+    const color = scoreColor(score);
+    const badgeClass = scoreClass(score);
+    const pendingCount = tickets.filter(t => t.statut === 'pending_review').length;
+    const ticketCountLabel = tickets.length + ' ticket' + (tickets.length > 1 ? 's' : '') + (pendingCount > 0 ? ` \u00b7 ${pendingCount} en attente` : '');
+    const slug = article.collection ? article.collection + '/' + article.slug : article.slug || '';
+
     return `
-      <div class="section">
-        <div class="section-title">
-          <span style="color:${group.color}">${group.label}</span>
-          <span class="badge" style="background:${group.badgeBg};color:${group.badgeColor}">${group.items.length}</span>
+      <div class="article-group ${index === 0 ? 'open' : ''}" id="group-${factResult.id}">
+        <div class="article-group-header" onclick="document.getElementById('group-${factResult.id}').classList.toggle('open')">
+          <div class="article-info">
+            <div class="article-title">${escapeHtml(article.title || 'Article inconnu')}</div>
+            <div class="article-slug">${escapeHtml(slug)} \u00b7 ${ticketCountLabel}</div>
+          </div>
+          <div class="score-bar-wrap">
+            <div class="score-bar"><div class="score-fill" style="width:${score}%;background:${color}"></div></div>
+            <div class="score-badge ${badgeClass}">${score}/100</div>
+          </div>
+          <div class="article-meta">${formatDate(factResult.checked_at)}</div>
+          <div class="chevron">\u25BC</div>
         </div>
-        ${group.items.map(r => {
-          const articleTickets = ticketsByResult.get(r.id) || [];
-          return `
-            <div class="article-card" data-card>
-              <div class="article-header" data-toggle>
-                <div>
-                  <span class="article-title">${escapeHtml(r.articles?.title || 'Article inconnu')}</span>
-                  <span class="collection-tag" style="margin-left:0.5rem">${escapeHtml(r.articles?.collection || '')}</span>
-                  ${articleTickets.length > 0 ? `<span class="badge" style="margin-left:0.5rem;background:#f5f3ff;color:#7c3aed">${articleTickets.length} ticket(s)</span>` : ''}
-                </div>
-                <div class="article-meta">
-                  <span class="score-pill" style="background:${group.scoreBg};color:${group.scoreColor}">${r.score_fiabilite}/100</span>
-                  <span>${formatDate(r.checked_at)}</span>
-                </div>
-              </div>
-              <div class="article-body">
-                ${articleTickets.length === 0
-                  ? '<p style="padding:0.5rem;color:#94a3b8">Aucun ticket pour cet article.</p>'
-                  : articleTickets.map(t => renderTicket(t)).join('')}
-              </div>
-            </div>
-          `;
-        }).join('')}
+        <div class="tickets-list">
+          ${tickets.length === 0
+            ? `<div class="no-tickets-msg">
+                <strong>Aucun ticket genere</strong> (score : ${score}/100).
+                ${score < 70 ? '<br>Relancez : <code>node scripts/fact-check-runner.mjs --article-id ' + (factResult.article_id || '') + '</code>' : ''}
+              </div>`
+            : tickets.map(t => renderTicket(t)).join('')}
+        </div>
       </div>
     `;
   }
 
-  // --- Load data & render ---
+  // ── Action handler ──
+  window.handleAction = async function(action, ticketId, button) {
+    if (action === 'note') {
+      pendingNoteTicketId = ticketId;
+      document.getElementById('modal').classList.add('open');
+      document.getElementById('noteText').value = '';
+      document.getElementById('noteText').focus();
+      return;
+    }
 
-  async function loadDashboard() {
+    button.disabled = true;
+    const originalText = button.textContent;
+    button.textContent = '...';
+    const actionRow = button.closest('.ticket-actions');
+    if (actionRow) actionRow.querySelectorAll('.btn').forEach(b => b.disabled = true);
+
+    try {
+      if (action === 'approve') {
+        await updateTicket(ticketId, { statut: 'approved', reviewed_at: new Date().toISOString() });
+
+        // Declencher l'agent editorial immediatement via Edge Function
+        try {
+          await fetch(`${SUPABASE_URL}/functions/v1/trigger-agent`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ agent: 'editorial', ticket_id: ticketId })
+          });
+        } catch (triggerErr) {
+          // Pas bloquant : le cron editorial rattrapera au prochain passage
+          console.warn('Edge Function trigger-agent erreur (non bloquant):', triggerErr);
+        }
+
+        if (actionRow) {
+          actionRow.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye a l\'Agent Editorial</span>';
+        }
+        const statusEl = button.closest('[data-ticket-id]').querySelector('.ticket-status');
+        if (statusEl) {
+          statusEl.className = 'ticket-status status-approved';
+          statusEl.textContent = '\u2713 Approuve';
+        }
+        showToast('\u270D\uFE0F Agent Editorial lance', 'Redaction de after_final en cours');
+      } else if (action === 'reject') {
+        await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
+        if (actionRow) {
+          actionRow.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--urgent)">\u2717 Rejete \u00b7 archive</span>';
+        }
+        const statusEl = button.closest('[data-ticket-id]').querySelector('.ticket-status');
+        if (statusEl) {
+          statusEl.className = 'ticket-status status-rejected';
+          statusEl.textContent = '\u2717 Rejete';
+        }
+        showToast('\u{1F5D1} Ticket rejete', 'Archive sans modification');
+      }
+    } catch (err) {
+      if (actionRow) actionRow.querySelectorAll('.btn').forEach(b => b.disabled = false);
+      button.textContent = originalText;
+      showToast('Erreur: ' + err.message, '');
+    }
+  };
+
+  // ── Load dashboard ──
+  window.loadDashboard = async function() {
     try {
       const [results, tickets] = await Promise.all([
-        supabaseFetch('fact_check_results', 'select=id,score_fiabilite,statut,checked_at,model_used,articles(id,slug,title,collection)&order=checked_at.desc&limit=100'),
+        supabaseFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,model_used,articles(id,slug,title,collection)&order=checked_at.desc&limit=100'),
         supabaseFetch('correction_tickets', 'select=*&order=created_at.desc&limit=500')
       ]);
 
@@ -484,116 +767,86 @@ import { supabaseConfig } from '../../lib/supabase';
         ticketsByResult.get(key).push(t);
       }
 
-      // Group results by status
+      // Categorize results
       const urgent = results.filter(r => r.statut === 'Urgent');
       const aVerifier = results.filter(r => r.statut === 'A verifier' || r.statut === 'À vérifier');
       const ok = results.filter(r => r.statut === 'OK');
-
-      // Stats
-      const avgScore = results.length > 0
-        ? Math.round(results.reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / results.length)
-        : 0;
       const pendingTickets = tickets.filter(t => t.statut === 'pending_review').length;
 
+      // Update stats
+      document.getElementById('stat-total').textContent = results.length;
+      document.getElementById('stat-total-sub').textContent = pendingTickets > 0 ? pendingTickets + ' tickets en attente' : 'Tous les tickets traites';
       document.getElementById('stat-urgent').textContent = urgent.length;
       document.getElementById('stat-warning').textContent = aVerifier.length;
       document.getElementById('stat-ok').textContent = ok.length;
-      document.getElementById('stat-score').textContent = avgScore + '/100';
-      document.getElementById('stat-tickets').textContent = pendingTickets + '/' + tickets.length;
 
-      // Render content
-      const contentEl = document.getElementById('content');
+      // Update topbar meta
+      const lastRun = results.length > 0 ? formatDate(results[0].checked_at) : '?';
+      document.getElementById('topbar-meta').textContent = results.length + ' articles \u00b7 dernier run ' + lastRun;
+
+      const mainEl = document.getElementById('main-content');
 
       if (results.length === 0) {
-        contentEl.innerHTML = `
+        mainEl.innerHTML = `
           <div class="empty-state">
-            <p style="font-size:1.2rem;margin-bottom:0.5rem">Aucun resultat de fact-check</p>
-            <p><code>node scripts/fact-check-runner.mjs --limit 5</code></p>
+            <div style="font-size:28px;margin-bottom:8px">\u{1F50D}</div>
+            <p>Aucun resultat de fact-check</p>
+            <p style="margin-top:4px;font-size:11px">Lancez : <code>node scripts/fact-check-runner.mjs --limit 5</code></p>
           </div>
         `;
         return;
       }
 
-      const groups = [
-        { items: urgent, label: 'Urgents', color: '#dc2626', badgeBg: '#fecaca', badgeColor: '#991b1b', scoreBg: '#fecaca', scoreColor: '#991b1b' },
-        { items: aVerifier, label: 'A verifier', color: '#f59e0b', badgeBg: '#fde68a', badgeColor: '#92400e', scoreBg: '#fde68a', scoreColor: '#92400e' },
-        { items: ok, label: 'OK', color: '#22c55e', badgeBg: '#bbf7d0', badgeColor: '#166534', scoreBg: '#bbf7d0', scoreColor: '#166534' },
-      ];
+      let html = '';
 
-      contentEl.innerHTML = groups.map(g => renderGroup(g, results, ticketsByResult)).join('');
+      // Urgent section
+      if (urgent.length > 0) {
+        html += `<div class="section-head"><div class="section-title" style="color:var(--urgent)">\u{1F534} Urgents</div><div class="section-sub">${urgent.length} article(s)</div></div>`;
+        urgent.forEach((r, i) => {
+          const articleTickets = ticketsByResult.get(r.id) || [];
+          html += renderArticleGroup(r.articles || {}, r, articleTickets, i);
+        });
+      }
 
-      // Attach event listeners
-      attachListeners();
+      // A verifier section
+      if (aVerifier.length > 0) {
+        html += `<div class="section-head"><div class="section-title" style="color:var(--warning)">\u{1F7E1} A verifier</div><div class="section-sub">${aVerifier.length} article(s)</div></div>`;
+        aVerifier.forEach((r, i) => {
+          const articleTickets = ticketsByResult.get(r.id) || [];
+          html += renderArticleGroup(r.articles || {}, r, articleTickets, urgent.length === 0 && i === 0 ? 0 : -1);
+        });
+      }
+
+      // OK summary
+      if (ok.length > 0) {
+        html += `
+          <div class="ok-summary">
+            \u{1F7E2} ${ok.length} article(s) verifie(s) et conforme(s) — aucune action requise
+            <span class="detail">Score moyen : ${Math.round(ok.reduce((s,r) => s + (r.score_fiabilite || 0), 0) / ok.length)}/100</span>
+          </div>
+        `;
+      }
+
+      mainEl.innerHTML = html;
 
     } catch (err) {
-      document.getElementById('content').innerHTML = `
-        <div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:8px;color:#991b1b">
-          Erreur Supabase : ${escapeHtml(err.message)}
+      document.getElementById('main-content').innerHTML = `
+        <div style="background:var(--urgent-light);border:1px solid var(--urgent-border);padding:14px 18px;border-radius:10px;color:var(--urgent);font-size:12px">
+          <strong>Erreur Supabase</strong> : ${escapeHtml(err.message)}
         </div>
       `;
     }
-  }
+  };
 
-  function attachListeners() {
-    // Toggle article cards
-    document.querySelectorAll('[data-toggle]').forEach(header => {
-      header.addEventListener('click', () => {
-        const card = header.closest('[data-card]');
-        if (card) card.classList.toggle('open');
-      });
-    });
-
-    // Action buttons (approve / reject / note)
-    document.querySelectorAll('[data-action]').forEach(btn => {
-      btn.addEventListener('click', async (e) => {
-        e.stopPropagation();
-        const button = e.currentTarget;
-        const action = button.dataset.action;
-        const ticketId = button.dataset.ticketId;
-
-        if (action === 'note') {
-          pendingNoteTicketId = ticketId;
-          document.getElementById('noteModal').classList.add('active');
-          document.getElementById('noteText').value = '';
-          document.getElementById('noteText').focus();
-          return;
-        }
-
-        button.disabled = true;
-        const originalText = button.textContent;
-        button.textContent = '...';
-
-        try {
-          if (action === 'approve') {
-            await updateTicket(ticketId, { statut: 'approved', reviewed_at: new Date().toISOString() });
-            showToast('Ticket approuve — pret pour l\'editorial');
-          } else if (action === 'reject') {
-            await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
-            showToast('Ticket rejete');
-          }
-
-          const ticket = button.closest('[data-ticket-id]');
-          if (ticket) { ticket.style.opacity = '0.4'; ticket.style.pointerEvents = 'none'; }
-          setTimeout(() => { loadDashboard(); }, 1500);
-        } catch (err) {
-          button.disabled = false;
-          button.textContent = originalText;
-          showToast('Erreur: ' + err.message, 'error');
-        }
-      });
-    });
-  }
-
-  // Modal: cancel
+  // ── Modal handlers ──
   document.getElementById('noteCancel').addEventListener('click', () => {
-    document.getElementById('noteModal').classList.remove('active');
+    document.getElementById('modal').classList.remove('open');
     pendingNoteTicketId = null;
   });
 
-  // Modal: send note
   document.getElementById('noteSend').addEventListener('click', async () => {
     const note = document.getElementById('noteText').value.trim();
-    if (!note) { showToast('Veuillez saisir une note', 'error'); return; }
+    if (!note) { showToast('Veuillez saisir une note', ''); return; }
 
     const sendBtn = document.getElementById('noteSend');
     sendBtn.disabled = true;
@@ -605,23 +858,35 @@ import { supabaseConfig } from '../../lib/supabase';
         human_note: note,
         reviewed_at: new Date().toISOString()
       });
+      document.getElementById('modal').classList.remove('open');
 
-      document.getElementById('noteModal').classList.remove('active');
-      showToast('Ticket renvoye en revision avec note');
+      const statusEl = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"] .ticket-status`);
+      if (statusEl) {
+        statusEl.className = 'ticket-status status-revision';
+        statusEl.textContent = 'Revision';
+      }
+      const actionsEl = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"] .ticket-actions`);
+      if (actionsEl) {
+        actionsEl.innerHTML = `<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--purple)">\u{1F4DD} Note transmise \u00b7 revision en cours</span>`;
+      }
 
-      const ticket = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"]`);
-      if (ticket) { ticket.style.opacity = '0.4'; ticket.style.pointerEvents = 'none'; }
-      setTimeout(() => { loadDashboard(); }, 1500);
+      showToast('\u{1F4DD} Note transmise', 'Agent Editorial va reviser avec votre instruction');
     } catch (err) {
-      sendBtn.disabled = false;
-      sendBtn.textContent = 'Envoyer';
-      showToast('Erreur: ' + err.message, 'error');
+      showToast('Erreur: ' + err.message, '');
     }
-
+    sendBtn.disabled = false;
+    sendBtn.textContent = 'Envoyer a l\'Editorial';
     pendingNoteTicketId = null;
   });
 
-  // Initial load
+  document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+      document.getElementById('modal').classList.remove('open');
+      pendingNoteTicketId = null;
+    }
+  });
+
+  // ── Init ──
   loadDashboard();
 </script>
 

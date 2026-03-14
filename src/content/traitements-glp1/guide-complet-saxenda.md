@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Saxenda : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-saxenda"
 description: "Découvrez tout sur Saxenda : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/guide-complet-saxenda.webp"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["saxenda", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
 ---
 
 # Guide Complet Saxenda : Tout Savoir sur ce Traitement Révolutionnaire
@@ -126,7 +128,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 **Protocole Saxenda** :
 - **Hebdomadaire** : Premier mois
 - **Mensuel** : Ensuite
-- **Cours de suivi** : Obligatoire pour remboursement
+- **Évaluation régulière** : Suivi du poids et de la tolérance
 - **Évaluation trimestrielle** : Bilan complet
 
 ### Accompagnement recommandé
@@ -139,8 +141,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Autres GLP-1 pour l'obésité
 - **Wegovy** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
-- **Ozempic** : Semaglutide à 2 mg/semaine (aussi efficace)
-- **Trulicity** : Dulaglutide (une injection hebdomadaire)
+- **Mounjaro** : Tirzepatide (injection hebdomadaire, double action GLP-1 + GIP, non remboursé)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
@@ -161,12 +162,11 @@ Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète
 - **Effets maximum** : 6-12 mois
 
 ### Saxenda est-il remboursé pour l'obésité ?
-Oui, Saxenda est remboursé à 100% pour l'obésité dans le cadre d'un protocole spécifique incluant un suivi médical régulier.
+**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
 
 ### Puis-je arrêter Saxenda brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
 
 ---
 
-*Ce guide complet sur Saxenda est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-saxenda.md
+*Ce guide complet sur Saxenda est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

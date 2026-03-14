@@ -1,0 +1,370 @@
+---
+// src/pages/admin/pipelines.astro
+// Pipeline visualization — correction tickets flow
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipelines - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+    }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+
+    .main { padding: 2rem; }
+
+    /* Pipeline visualization */
+    .pipeline-overview {
+      display: flex;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+    .pipeline-step {
+      flex: 1;
+      padding: 1.25rem;
+      text-align: center;
+      position: relative;
+      border-right: 1px solid #e2e8f0;
+    }
+    .pipeline-step:last-child { border-right: none; }
+    .pipeline-step.active { background: #f8fafc; }
+    .step-count {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+    .step-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .step-arrow {
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-left: none;
+      border-bottom: none;
+      transform: translateY(-50%) rotate(45deg);
+      z-index: 2;
+    }
+    .step-pending .step-count { color: #f59e0b; }
+    .step-approved .step-count { color: #3b82f6; }
+    .step-progress .step-count { color: #8b5cf6; }
+    .step-ready .step-count { color: #22c55e; }
+    .step-deployed .step-count { color: #16a34a; }
+    .step-revision .step-count { color: #ef4444; }
+
+    /* Active tickets by pipeline stage */
+    .stage-section { margin-bottom: 2rem; }
+    .stage-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .stage-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .stage-title {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .stage-count {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .pipeline-ticket {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: box-shadow 0.2s;
+    }
+    .pipeline-ticket:hover { box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .ticket-info { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .ticket-name { font-weight: 600; font-size: 0.88rem; }
+    .ticket-type-badge {
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+    .ticket-urgence {
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .urgence-urgent { background: #fef2f2; color: #dc2626; }
+    .urgence-warning { background: #fffbeb; color: #d97706; }
+    .urgence-ok { background: #f0fdf4; color: #22c55e; }
+    .ticket-date { font-size: 0.75rem; color: #94a3b8; }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: #94a3b8;
+      font-size: 0.92rem;
+    }
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: #64748b;
+    }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .pipeline-overview { flex-direction: column; }
+      .pipeline-step { border-right: none; border-bottom: 1px solid #e2e8f0; }
+      .pipeline-step:last-child { border-bottom: none; }
+      .step-arrow { display: none; }
+    }
+    @media (max-width: 768px) {
+      .main { padding: 1rem; }
+      .page-header { padding: 1rem; }
+      .pipeline-ticket { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <h1>Pipelines</h1>
+    <p>Vue en temps reel du flux de traitement des corrections</p>
+  </div>
+
+  <div class="main">
+    <!-- Pipeline overview bar -->
+    <div class="pipeline-overview" id="pipelineOverview">
+      <div class="pipeline-step step-pending">
+        <div class="step-count" id="count-pending">-</div>
+        <div class="step-label">En attente</div>
+        <div class="step-arrow"></div>
+      </div>
+      <div class="pipeline-step step-approved">
+        <div class="step-count" id="count-approved">-</div>
+        <div class="step-label">Approuve</div>
+        <div class="step-arrow"></div>
+      </div>
+      <div class="pipeline-step step-progress">
+        <div class="step-count" id="count-progress">-</div>
+        <div class="step-label">En cours</div>
+        <div class="step-arrow"></div>
+      </div>
+      <div class="pipeline-step step-ready">
+        <div class="step-count" id="count-ready">-</div>
+        <div class="step-label">Pret</div>
+        <div class="step-arrow"></div>
+      </div>
+      <div class="pipeline-step step-deployed">
+        <div class="step-count" id="count-deployed">-</div>
+        <div class="step-label">Deploye</div>
+      </div>
+    </div>
+
+    <!-- Revision loop -->
+    <div class="pipeline-overview" style="margin-bottom:2.5rem;border-color:#fde68a">
+      <div class="pipeline-step step-revision" style="flex:none;width:100%">
+        <div class="step-count" id="count-revision">-</div>
+        <div class="step-label">En revision (boucle de retour)</div>
+      </div>
+    </div>
+
+    <!-- Detailed ticket lists by stage -->
+    <div id="content">
+      <div class="loading">Chargement des pipelines...</div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  function formatDate(dateStr) {
+    if (!dateStr) return 'N/A';
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function typeLabel(type) {
+    return { price_update: 'Prix', info_outdated: 'Info obsolete', false_claim: 'Claim faux', missing_info: 'Info manquante' }[type] || type;
+  }
+
+  async function supabaseFetch(table, query) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      }
+    });
+    if (!response.ok) throw new Error(await response.text());
+    return response.json();
+  }
+
+  const stages = [
+    { key: 'pending_review', label: 'En attente de revue', color: '#f59e0b', countId: 'count-pending' },
+    { key: 'approved', label: 'Approuves', color: '#3b82f6', countId: 'count-approved' },
+    { key: 'in_progress', label: 'En cours de traitement', color: '#8b5cf6', countId: 'count-progress' },
+    { key: 'ready_to_deploy', label: 'Prets a deployer', color: '#22c55e', countId: 'count-ready' },
+    { key: 'deployed', label: 'Deployes (recent)', color: '#16a34a', countId: 'count-deployed' },
+    { key: 'revision_needed', label: 'En revision', color: '#ef4444', countId: 'count-revision' },
+  ];
+
+  function renderTicketRow(t) {
+    const urgClass = { urgent: 'urgence-urgent', warning: 'urgence-warning', ok: 'urgence-ok' }[t.urgence] || '';
+    return `
+      <div class="pipeline-ticket">
+        <div class="ticket-info">
+          ${t.urgence ? `<span class="ticket-urgence ${urgClass}">${escapeHtml(t.urgence)}</span>` : ''}
+          <span class="ticket-name">${escapeHtml(t.title || 'Ticket')}</span>
+          <span class="ticket-type-badge">${escapeHtml(typeLabel(t.ticket_type))}</span>
+        </div>
+        <span class="ticket-date">${formatDate(t.updated_at)}</span>
+      </div>
+    `;
+  }
+
+  async function loadPipelines() {
+    try {
+      const tickets = await supabaseFetch(
+        'correction_tickets',
+        'select=id,title,ticket_type,statut,urgence,updated_at,created_at&order=updated_at.desc&limit=500'
+      );
+
+      const grouped = {};
+      for (const s of stages) grouped[s.key] = [];
+      for (const t of tickets) {
+        if (grouped[t.statut]) grouped[t.statut].push(t);
+      }
+
+      // Update counts
+      for (const s of stages) {
+        document.getElementById(s.countId).textContent = grouped[s.key].length;
+      }
+
+      // Highlight active steps
+      for (const s of stages) {
+        if (grouped[s.key].length > 0 && s.countId !== 'count-revision') {
+          const step = document.getElementById(s.countId)?.closest('.pipeline-step');
+          if (step) step.classList.add('active');
+        }
+      }
+
+      const contentEl = document.getElementById('content');
+
+      // Only show non-deployed, non-rejected stages with tickets
+      const activeStages = stages.filter(s =>
+        s.key !== 'deployed' && grouped[s.key].length > 0
+      );
+
+      if (activeStages.length === 0 && grouped.deployed.length === 0) {
+        contentEl.innerHTML = `
+          <div class="empty-state">
+            <p style="font-size:1.15rem;margin-bottom:0.5rem">Aucun ticket dans le pipeline</p>
+            <p>Lancez le fact-checker pour generer des tickets : <code>node scripts/fact-check-runner.mjs --limit 5</code></p>
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+      for (const s of activeStages) {
+        const items = grouped[s.key];
+        html += `
+          <div class="stage-section">
+            <div class="stage-header">
+              <div class="stage-dot" style="background:${s.color}"></div>
+              <span class="stage-title">${s.label}</span>
+              <span class="stage-count">${items.length}</span>
+            </div>
+            ${items.map(t => renderTicketRow(t)).join('')}
+          </div>
+        `;
+      }
+
+      // Show last 10 deployed
+      if (grouped.deployed.length > 0) {
+        const recentDeployed = grouped.deployed.slice(0, 10);
+        html += `
+          <div class="stage-section">
+            <div class="stage-header">
+              <div class="stage-dot" style="background:#16a34a"></div>
+              <span class="stage-title">Deployes recemment</span>
+              <span class="stage-count">${grouped.deployed.length}</span>
+            </div>
+            ${recentDeployed.map(t => renderTicketRow(t)).join('')}
+            ${grouped.deployed.length > 10 ? `<div style="padding:0.5rem 1rem;font-size:0.82rem;color:#94a3b8">+ ${grouped.deployed.length - 10} autres</div>` : ''}
+          </div>
+        `;
+      }
+
+      contentEl.innerHTML = html;
+
+    } catch (err) {
+      document.getElementById('content').innerHTML = `
+        <div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:10px;color:#991b1b">
+          <strong>Erreur Supabase</strong> : ${escapeHtml(err.message)}
+        </div>
+      `;
+    }
+  }
+
+  loadPipelines();
+</script>
+
+</body>
+</html>

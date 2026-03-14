@@ -1,5 +1,6 @@
 ---
 title: "Mounjaro Guide 2025 : Le Traitement #1 pour Perdre du Poids (Résultats -20kg)"
+slug: "guide-complet-mounjaro"
 description: "🔥 Mounjaro : LE traitement révolutionnaire qui fait perdre 15-20% du poids ! Prix France, témoignages, effets secondaires. Guide complet 2025."
 author: "Dr. Martin"
 image: "/images/thumbnails/mounjaro-blue.webp"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "résultats", "avant après", "prix france", "traitement efficace"]
 date: "2025-09-06"
+pubDate: "2025-09-06"
 featured: true
 priority: 1
 ---
@@ -25,9 +27,9 @@ priority: 1
       <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
         <p class="text-sm font-semibold mb-1">✅ Situation actuelle :</p>
         <ul class="text-sm space-y-1 text-white/90">
-          <li>• <strong>Prescription possible</strong> dans certains centres spécialisés</li>
-          <li>• <strong>Importation nominative</strong> autorisée par certains médecins</li>
-          <li>• <strong>Disponibilité complète</strong> attendue courant 2025</li>
+          <li>• <strong>Commercialisé en France</strong> depuis novembre 2024</li>
+          <li>• <strong>Disponible en pharmacie</strong> sur ordonnance, à prix libre</li>
+          <li>• <strong>Non remboursé</strong> — remboursement envisagé au 2e semestre 2026</li>
         </ul>
       </div>
       <p class="text-xs mt-3 text-white/70">
@@ -340,9 +342,6 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 
 ## Alternatives à Mounjaro
 
-### Autres GLP-1/GIP
-- **Zepbound** : Tirzepatide à plus forte dose (jusqu'à 15 mg)
-
 ### Autres GLP-1 injectables
 - **Ozempic** : Semaglutide (jusqu'à 2 mg/semaine)
 - **Wegovy** : Semaglutide à 2,4 mg (spécifiquement pour l'obésité)
@@ -365,7 +364,7 @@ Oui, Mounjaro peut être prescrit pour la perte de poids chez les personnes obè
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Mounjaro est-il remboursé pour l'obésité ?
-Oui, depuis 2023, Mounjaro est remboursé pour l'obésité dans le cadre d'un protocole spécifique.
+**Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au remboursement en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Mounjaro brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
@@ -433,5 +432,4 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
-*Ce guide complet sur Mounjaro est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-mounjaro.md
+*Ce guide complet sur Mounjaro est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

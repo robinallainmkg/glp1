@@ -1,6 +1,7 @@
 ---
 import StaticLayout from '../layouts/StaticLayout.astro';
 import FeedbackSection from '../components/FeedbackSection.astro';
+import NewsletterCapture from '../components/NewsletterCapture.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -10,14 +11,13 @@ async function getCategoryContent() {
     { slug: 'glp1-cout', name: 'Prix et Où Acheter', icon: '💰', description: 'Prix Ozempic/Wegovy, remboursements et pharmacies en France' },
     { slug: 'glp1-perte-de-poids', name: 'Perdre du Poids', icon: '📉', description: 'Résultats réels, témoignages et avant/après avec Ozempic & Wegovy' },
     { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: '⚠️', description: 'Nausées, fatigue : comment gérer les effets secondaires' },
-    { slug: 'glp1-diabete', name: 'Diabète et Ozempic', icon: '🩺', description: 'Utilisation d\'Ozempic pour le diabète : efficacité et suivi' },
     { slug: 'regime-glp1', name: 'Que Manger', icon: '🥗', description: 'Alimentation adaptée pendant un traitement Ozempic/Wegovy' },
     { slug: 'alternatives-glp1', name: 'Autres Solutions', icon: '🌿', description: 'Alternatives naturelles et autres médicaments pour maigrir' },
     { slug: 'medecins-glp1-france', name: 'Trouver un Médecin', icon: '👨‍⚕️', description: 'Médecins qui prescrivent Ozempic/Wegovy près de chez vous' },
-    { slug: 'recherche-glp1', name: 'Études et Nouveautés', icon: '🔬', description: 'Dernières études scientifiques et innovations médicamenteuses' }
+    { slug: 'recherche-glp1', name: 'Études et Nouveautés', icon: '🔬', description: 'Dernières études scientifiques et innovations médicamenteuses' },
+    { slug: 'traitements-glp1', name: 'Guides Traitements', icon: '💊', description: 'Guides complets Ozempic, Wegovy, Mounjaro et Saxenda' }
   ];
 
-  // Ensure Astro.root is available and fallback to process.cwd()
   const astroRoot = (typeof Astro !== 'undefined' && (Astro as any).root) ? (Astro as any).root : process.cwd();
   const contentPath = path.resolve(astroRoot, 'src', 'content');
 
@@ -41,57 +41,78 @@ async function getCategoryContent() {
 const categories = await getCategoryContent();
 ---
 
-<StaticLayout title="Ozempic & Wegovy France – Guide Complet Perte de Poids 2025"
-  description="Tout sur Ozempic et Wegovy en France : prix, efficacité, où les acheter, effets secondaires. Guide complet des nouveaux médicaments pour maigrir."
-  keywords="Ozempic, Wegovy, médicament pour maigrir, perte de poids, prix France, diabète, où acheter"
+<StaticLayout title="Traitements GLP-1 en France : Guide Complet Ozempic, Wegovy, Mounjaro (2026)"
+  description="Guide expert des traitements GLP-1 en France : prix actuels, remboursement, effets secondaires d'Ozempic, Wegovy et Mounjaro. Informations médicales vérifiées, mars 2026."
+  keywords="traitement GLP-1 France, Ozempic prix, Wegovy prix, Mounjaro prix, médicament perte de poids, remboursement GLP-1"
 >
+  <!-- JSON-LD MedicalWebPage -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Traitements GLP-1 en France : Guide Complet (2026)",
+    "description": "Guide expert des traitements GLP-1 en France : prix actuels, remboursement, effets secondaires d'Ozempic, Wegovy et Mounjaro.",
+    "url": "https://glp1-france.fr/",
+    "lastReviewed": "2026-03-08",
+    "medicalAudience": { "@type": "Patient" },
+    "specialty": { "@type": "MedicalSpecialty", "name": "Endocrinology" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GLP-1 France",
+      "url": "https://glp1-france.fr/"
+    }
+  }
+  </script>
+
   <div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-    <!-- Hero Section -->
+
+    <!-- ============================================ -->
+    <!-- SECTION 1 : HERO                             -->
+    <!-- ============================================ -->
     <section class="py-12 md:py-20 lg:py-24">
       <div class="container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <!-- Contenu texte -->
           <div class="space-y-8">
             <div class="space-y-4">
               <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Ozempic & Wegovy en France :<br>
+                Traitements GLP-1 en France :<br>
                 <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                  Le Guide Complet
+                  Le Guide Complet 2026
                 </span>
               </h1>
               <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Découvrez tout sur ces nouveaux médicaments révolutionnaires pour
-                <strong class="text-green-600 font-semibold">perdre du poids</strong> et traiter le diabète :
-                prix en France, où les acheter, efficacité réelle, effets secondaires et conseils d'experts.
+                Tout sur Ozempic, Wegovy et Mounjaro :
+                <strong class="text-green-600 font-semibold">prix réels</strong>, remboursement, effets secondaires
+                et conseils d'experts médicaux français. Informations vérifiées et mises à jour.
               </p>
             </div>
 
-            <!-- Pills - Optimisées selon Analytics -->
+            <!-- Pills -->
             <div class="flex flex-wrap gap-3">
               <a href="/collections/glp1-cout/prix-wegovy-france" class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white border border-green-500 rounded-full text-sm font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 shadow-sm">
-                💰 Prix Wegovy France
+                💰 Prix Wegovy
               </a>
               <a href="/collections/glp1-cout/prix-mounjaro-france" class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white border border-blue-500 rounded-full text-sm font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-sm">
-                💰 Prix Mounjaro France  
+                💰 Prix Mounjaro
               </a>
               <a href="/guides/qu-est-ce-que-glp1/" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 shadow-sm">
-                ✅ Ozempic & Wegovy expliqués
+                ✅ Comprendre les GLP-1
               </a>
               <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-orange-300 hover:bg-orange-50 transition-all duration-200 shadow-sm">
                 🏥 Remboursement Mutuelle
               </a>
             </div>
 
-            <!-- Boutons CTA - Optimisés selon Analytics -->
+            <!-- CTAs -->
             <div class="flex flex-col sm:flex-row gap-4">
-              <a href="/collections/glp1-cout/prix-wegovy-france" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl hover:from-green-700 hover:to-green-800 transform hover:scale-105 transition-all duration-200 shadow-lg">
+              <a href="/collections/glp1-cout/prix-wegovy-france" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold rounded-xl hover:from-green-700 hover:to-green-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg">
                 💰 Prix Wegovy Détaillés
               </a>
-              <a href="/collections/glp1-cout/prix-mounjaro-france" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg">
+              <a href="/collections/glp1-cout/prix-mounjaro-france" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg">
                 💰 Prix Mounjaro Détaillés
               </a>
-              <a href="/guides/quel-traitement-glp1-choisir/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 font-semibold rounded-xl hover:bg-purple-50 transform hover:scale-105 transition-all duration-200 shadow-md">
-                🎯 Faire le Diagnostic (2 min)
+              <a href="/guides/quel-traitement-glp1-choisir/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 font-semibold rounded-xl hover:bg-purple-50 transform hover:scale-[1.02] transition-all duration-200 shadow-md">
+                🎯 Quel traitement choisir ?
               </a>
             </div>
 
@@ -102,24 +123,26 @@ const categories = await getCategoryContent();
                 <div class="text-sm text-gray-600 font-medium">Articles Experts</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">4</div>
-                <div class="text-sm text-gray-600 font-medium">Auteurs Spécialisés</div>
+                <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">7</div>
+                <div class="text-sm text-gray-600 font-medium">Traitements Comparés</div>
               </div>
               <div class="text-center">
-                <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">100%</div>
-                <div class="text-sm text-gray-600 font-medium">Contenu Français</div>
+                <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">2026</div>
+                <div class="text-sm text-gray-600 font-medium">Données à Jour</div>
               </div>
             </div>
           </div>
 
-          <!-- Image -->
+          <!-- Image Hero -->
           <div class="relative">
             <div class="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="/images/home/image-home2.jpg"
-                alt="Transformation réussie avec les traitements GLP-1 - Nouveau mode de vie sain"
+                alt="Traitements GLP-1 en France - Guide complet Ozempic Wegovy Mounjaro"
                 class="w-full h-auto object-cover object-center"
-                loading="lazy"
+                width="600"
+                height="400"
+                loading="eager"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
@@ -128,8 +151,10 @@ const categories = await getCategoryContent();
       </div>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="py-8 bg-white">
+    <!-- ============================================ -->
+    <!-- SECTION 2 : TRUST INDICATORS                 -->
+    <!-- ============================================ -->
+    <section class="py-8 bg-white border-y border-gray-100">
       <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="text-center p-4">
@@ -137,254 +162,605 @@ const categories = await getCategoryContent();
             <h4 class="text-lg font-bold text-gray-900 mb-2">Informations Vérifiées</h4>
             <p class="text-gray-600 text-sm">Contenu validé par des professionnels de santé français</p>
           </div>
-
           <div class="text-center p-4">
             <div class="text-3xl mb-3">🇫🇷</div>
             <h4 class="text-lg font-bold text-gray-900 mb-2">Spécialisé France</h4>
-            <p class="text-gray-600 text-sm">Prix français, pharmacies, médecins et remboursements selon notre système de santé</p>
+            <p class="text-gray-600 text-sm">Prix, pharmacies, médecins et remboursements selon notre système de santé</p>
           </div>
-
           <div class="text-center p-4">
             <div class="text-3xl mb-3">📊</div>
-            <h4 class="text-lg font-bold text-gray-900 mb-2">Informations Actualisées</h4>
-            <p class="text-gray-600 text-sm">Prix Ozempic/Wegovy et disponibilités mises à jour chaque semaine</p>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Mis à Jour Mars 2026</h4>
+            <p class="text-gray-600 text-sm">Prix et disponibilités vérifiés et actualisés régulièrement</p>
           </div>
-
           <div class="text-center p-4">
-            <div class="text-3xl mb-3">💬</div>
-            <h4 class="text-lg font-bold text-gray-900 mb-2">Témoignages Réels</h4>
-            <p class="text-gray-600 text-sm">Retours d'expérience authentiques de patients français</p>
+            <div class="text-3xl mb-3">🔬</div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Sources Officielles</h4>
+            <p class="text-gray-600 text-sm">ANSM, HAS, VIDAL, ameli.fr — données de référence</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section Prix - Basée sur Analytics Performance -->
-    <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- ============================================ -->
+    <!-- SECTION 3 : PRIX (données corrigées)         -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             💰 Prix des Traitements GLP-1 en France
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Information mise à jour - Comparaison complète des coûts et remboursements
+            Prix réels en pharmacie, mis à jour en mars 2026. Attention : seuls les traitements pour le diabète de type 2 sont remboursés.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          <!-- Prix Wegovy - Page la plus consultée -->
+          <!-- Ozempic -->
+          <div class="relative bg-white rounded-2xl shadow-xl p-8 border-2 border-green-200 transform hover:scale-[1.02] transition-all duration-300">
+            <div class="absolute top-4 right-4">
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
+                ✅ Remboursé 65%
+              </span>
+            </div>
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Ozempic</h3>
+              <p class="text-sm text-gray-500 mb-4">Semaglutide — Novo Nordisk</p>
+              <div class="text-4xl font-bold text-green-600 mb-2">~59,90 €</div>
+              <div class="text-gray-500 mb-4">par stylo injecteur</div>
+              <div class="space-y-2 text-sm text-gray-600 mb-6">
+                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Remboursé 65% (diabète type 2 uniquement)</div>
+                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
+                <div class="flex items-center gap-2"><span class="text-blue-500">ℹ</span> Formulaire obligatoire depuis fév. 2025</div>
+              </div>
+              <a href="/collections/glp1-cout/prix-ozempic-france" class="block w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors">
+                Voir Détails Prix Ozempic
+              </a>
+            </div>
+          </div>
+
+          <!-- Wegovy -->
           <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
-            <div class="relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
-              <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                🔥 TRÈS CONSULTÉ
+            <div class="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+            <div class="relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-[1.02] transition-all duration-300">
+              <div class="absolute top-4 right-4">
+                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold">
+                  ❌ NON remboursé
+                </span>
               </div>
               <div class="text-center">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Wegovy</h3>
-                <div class="text-4xl font-bold text-green-600 mb-2">51€</div>
-                <div class="text-gray-500 mb-4">par mois après remboursement</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Wegovy</h3>
+                <p class="text-sm text-gray-500 mb-4">Semaglutide 2,4 mg — Novo Nordisk</p>
+                <div class="text-4xl font-bold text-orange-600 mb-2">169-360 €</div>
+                <div class="text-gray-500 mb-4">par mois — à votre charge</div>
                 <div class="space-y-2 text-sm text-gray-600 mb-6">
-                  <div>✅ Injection hebdomadaire</div>
-                  <div>✅ Remboursement possible</div>
-                  <div>✅ Disponible en pharmacie</div>
+                  <div class="flex items-center gap-2"><span class="text-orange-500">!</span> Indiqué pour l'obésité (IMC ≥ 30)</div>
+                  <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
+                  <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Disponible en pharmacie</div>
                 </div>
-                <a href="/collections/glp1-cout/prix-wegovy-france" class="block w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors">
-                  Voir Détails Prix
+                <a href="/collections/glp1-cout/prix-wegovy-france" class="block w-full bg-orange-600 text-white font-semibold py-3 rounded-xl hover:bg-orange-700 transition-colors">
+                  Voir Détails Prix Wegovy
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Prix Mounjaro - Deuxième plus consultée -->
-          <div class="relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
-            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-              📈 POPULAIRE
+          <!-- Mounjaro -->
+          <div class="relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-[1.02] transition-all duration-300">
+            <div class="absolute top-4 right-4">
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold">
+                ❌ NON remboursé
+              </span>
             </div>
             <div class="text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Mounjaro</h3>
-              <div class="text-4xl font-bold text-blue-600 mb-2">90€</div>
-              <div class="text-gray-500 mb-4">par mois après remboursement</div>
-              <div class="space-y-2 text-sm text-gray-600 mb-4">
-                <div>✅ Efficacité supérieure</div>
-                <div>✅ Injection hebdomadaire</div>
-                <div>✅ Remboursé 65%</div>
-              </div>
-              <div class="bg-blue-50 border border-blue-200 rounded-lg p-2 mb-4">
-                <p class="text-xs text-blue-700">
-                  <strong>💰 Prix pharmacie:</strong> 179,80€ • <strong>Coût patient:</strong> 30-90€
-                </p>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Mounjaro</h3>
+              <p class="text-sm text-gray-500 mb-4">Tirzépatide — Eli Lilly</p>
+              <div class="text-4xl font-bold text-blue-600 mb-2">230-440 €</div>
+              <div class="text-gray-500 mb-4">par mois — à votre charge</div>
+              <div class="space-y-2 text-sm text-gray-600 mb-6">
+                <div class="flex items-center gap-2"><span class="text-blue-500">★</span> Double agoniste GLP-1/GIP</div>
+                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Disponible depuis novembre 2024</div>
+                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
               </div>
               <a href="/collections/glp1-cout/prix-mounjaro-france" class="block w-full bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition-colors">
-                Voir Détails Prix
-              </a>
-            </div>
-          </div>
-
-          <!-- Remboursement - Troisième plus consultée -->
-          <div class="relative bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-all duration-300">
-            <div class="text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Remboursement</h3>
-              <div class="text-4xl font-bold text-orange-600 mb-2">65%</div>
-              <div class="text-gray-500 mb-4">pris en charge</div>
-              <div class="space-y-2 text-sm text-gray-600 mb-6">
-                <div>✅ Conditions IMC > 30</div>
-                <div>✅ Prescription médicale</div>
-                <div>✅ Suivi médical requis</div>
-              </div>
-              <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle" class="block w-full bg-orange-600 text-white font-semibold py-3 rounded-xl hover:bg-orange-700 transition-colors">
-                Guide Remboursement
+                Voir Détails Prix Mounjaro
               </a>
             </div>
           </div>
         </div>
 
+        <!-- Disclaimer prix -->
+        <div class="bg-white/80 rounded-xl p-4 text-center text-sm text-gray-500 mb-8">
+          <p>💡 <strong>Important :</strong> Prix indicatifs mars 2026. Wegovy, Mounjaro et Saxenda ne sont <strong>pas remboursés</strong> par l'Assurance Maladie. Le remboursement à 65% s'applique uniquement aux traitements prescrits pour le diabète de type 2 (Ozempic, Trulicity, Victoza).</p>
+        </div>
+
         <div class="text-center">
-          <a href="/collections/glp1-cout/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-purple-800 transform hover:scale-105 transition-all duration-200 shadow-lg">
+          <a href="/collections/glp1-cout/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-purple-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg">
             💰 Voir Tous les Prix et Remboursements
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Témoignages -->
-    <section class="py-16 md:py-20">
+    <!-- ============================================ -->
+    <!-- SECTION 4 : EQUIPE D'EXPERTS (E-E-A-T)      -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Des résultats réels qui parlent
+            👨‍⚕️ Notre Équipe d'Experts Médicaux
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Découvrez les transformations authentiques de nos utilisateurs français
+            Nos contenus sont rédigés et relus par des professionnels de santé spécialisés en endocrinologie et nutrition.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <!-- Témoignage 1 (Featured) -->
-          <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
-              <div class="absolute top-4 left-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
-                ⭐ Transformation Exceptionnelle
-              </div>
-              <img
-                src="/images/temoignages/mariejourney9.jpg"
-                alt="Marie 39 ans transformation GLP-1 32kg 12 mois"
-                class="w-full h-64 object-cover"
-                loading="lazy"
-              />
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Marie, 39 ans</h3>
-                <p class="text-green-600 font-bold text-lg mb-4">-32kg en 12 mois</p>
-                <p class="text-gray-600 italic mb-4">
-                  "Après 3 grossesses, je n'arrivais plus à perdre du poids. Wegovy a changé ma vie complètement."
-                </p>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-500 text-sm">📍 Lyon</span>
-                  <a href="/temoignage-marie-transformation-glp1/" class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                    Voir son témoignage →
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <img src="/images/experts/dr-claire-morel.jpg" alt="Dr Claire Morel, endocrinologue" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover shadow-md" loading="lazy" width="80" height="80" />
+            <h3 class="text-lg font-bold text-gray-900 mb-1">Dr Claire Morel</h3>
+            <p class="text-sm text-blue-600 font-medium mb-2">Endocrinologue</p>
+            <p class="text-xs text-gray-500">Spécialiste des traitements GLP-1 et du suivi métabolique</p>
           </div>
-
-          <!-- Témoignage 2 -->
-          <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
-            <img
-              src="/images/temoignages/Laurent-journey8.jpg"
-              alt="Laurent 35 ans transformation GLP-1 15kg 8 mois"
-              class="w-full h-64 object-cover"
-              loading="lazy"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Laurent, 35 ans</h3>
-              <p class="text-green-600 font-bold text-lg mb-4">-15kg en 8 mois</p>
-              <p class="text-gray-600 italic mb-4">
-                "Mon ventre était constamment gonflé. Avec le GLP-1, j'ai retrouvé un confort digestif."
-              </p>
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500 text-sm">📍 Toulouse</span>
-                <a href="/temoignage-laurent-transformation-glp1/" class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                  Voir son témoignage →
-                </a>
-              </div>
-            </div>
+          <div class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <img src="/images/experts/elodie-carpentier.jpg" alt="Élodie Carpentier, nutritionniste" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover shadow-md" loading="lazy" width="80" height="80" />
+            <h3 class="text-lg font-bold text-gray-900 mb-1">Élodie Carpentier</h3>
+            <p class="text-sm text-blue-600 font-medium mb-2">Nutritionniste-Diététicienne</p>
+            <p class="text-xs text-gray-500">Accompagnement alimentaire sous traitements GLP-1</p>
           </div>
-
-          <!-- Témoignage 3 -->
-          <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
-            <img
-              src="/images/temoignages/sophie29.jpg"
-              alt="Sophie 29 ans transformation GLP-1 22kg 10 mois"
-              class="w-full h-64 object-cover"
-              loading="lazy"
-            />
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Sophie, 29 ans</h3>
-              <p class="text-green-600 font-bold text-lg mb-4">-22kg en 10 mois</p>
-              <p class="text-gray-600 italic mb-4">
-                "J'avais tout essayé. Les GLP-1 m'ont permis une perte de poids durable et progressive."
-              </p>
-              <div class="flex items-center justify-between">
-                <span class="text-gray-500 text-sm">📍 Paris</span>
-                <a href="/temoignage-sophie-transformation-glp1/" class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                  Voir son témoignage →
-                </a>
-              </div>
-            </div>
+          <div class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <img src="/images/experts/julien-armand.jpg" alt="Julien Armand, pharmacien" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover shadow-md" loading="lazy" width="80" height="80" />
+            <h3 class="text-lg font-bold text-gray-900 mb-1">Julien Armand</h3>
+            <p class="text-sm text-blue-600 font-medium mb-2">Pharmacien</p>
+            <p class="text-xs text-gray-500">Expert en prix, remboursements et disponibilités en pharmacie</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <img src="/images/experts/marc-delattre.jpg" alt="Marc Delattre, journaliste santé" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover shadow-md" loading="lazy" width="80" height="80" />
+            <h3 class="text-lg font-bold text-gray-900 mb-1">Marc Delattre</h3>
+            <p class="text-sm text-blue-600 font-medium mb-2">Journaliste Santé</p>
+            <p class="text-xs text-gray-500">Veille scientifique et vulgarisation médicale</p>
           </div>
         </div>
 
-        <div class="text-center">
-          <a href="/collections/glp1-perte-de-poids/" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-600 to-gray-700 text-white font-semibold rounded-xl hover:from-gray-700 hover:to-gray-800 transform hover:scale-105 transition-all duration-200 shadow-lg">
-            Voir Plus de Témoignages
+        <div class="text-center text-sm text-gray-500">
+          <p>📋 Sources de référence : <strong>ANSM</strong> • <strong>HAS</strong> • <strong>VIDAL</strong> • <strong>ameli.fr</strong> • <strong>EMA</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5 : BRIDGE "Que signifie GLP-1?"     -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+              Ozempic, Wegovy, Mounjaro... Que signifie GLP-1 ?
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              <strong class="text-blue-600">Ozempic, Wegovy et Mounjaro</strong> sont des noms commerciaux de médicaments appartenant à la famille des
+              <strong class="text-blue-600">"agonistes GLP-1"</strong>.
+              Ces traitements imitent une hormone naturelle pour réguler la glycémie et réduire l'appétit.
+            </p>
+
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                <span class="text-lg">💊</span>
+                <span class="text-gray-700 font-medium">Ozempic = Diabète type 2 + perte de poids (remboursé)</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                <span class="text-lg">📉</span>
+                <span class="text-gray-700 font-medium">Wegovy = Spécialement pour l'obésité (non remboursé)</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                <span class="text-lg">🔬</span>
+                <span class="text-gray-700 font-medium">Mounjaro = Double agoniste GLP-1/GIP (non remboursé)</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                <span class="text-lg">🧬</span>
+                <span class="text-gray-700 font-medium">GLP-1 = La famille de molécules qui régulent l'appétit</span>
+              </div>
+            </div>
+
+            <a href="/guides/qu-est-ce-que-glp1/" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200">
+              En savoir plus sur les GLP-1 →
+            </a>
+          </div>
+
+          <div class="relative">
+            <img
+              src="/images/home/seringue-adn.jpg"
+              alt="Molécule GLP-1 et recherche scientifique"
+              class="w-full h-auto rounded-xl shadow-lg"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 6 : TABLEAU COMPARATIF (corrigé)     -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            ⚖️ Comparatif Complet des Traitements GLP-1
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Tous les médicaments GLP-1 disponibles en France : prix, remboursement et indications — données vérifiées mars 2026
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl shadow-lg">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Traitement</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Molécule</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Indication</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Prix/Mois</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Remboursement</th>
+                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Disponibilité</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <!-- Ozempic -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <span class="text-blue-600 font-bold">O</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Ozempic</div>
+                      <div class="text-xs text-gray-500">Novo Nordisk</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Semaglutide 1 mg</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Diabète type 2</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">~59,90 €/stylo</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    ✅ Oui 65% (DT2)
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Disponible
+                  </span>
+                </td>
+              </tr>
+              <!-- Wegovy -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                      <span class="text-green-600 font-bold">W</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Wegovy</div>
+                      <div class="text-xs text-gray-500">Novo Nordisk</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Semaglutide 2,4 mg</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Obésité</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">169-360 €</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                    ❌ NON
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Disponible
+                  </span>
+                </td>
+              </tr>
+              <!-- Mounjaro -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <span class="text-orange-600 font-bold">M</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Mounjaro</div>
+                      <div class="text-xs text-gray-500">Eli Lilly</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Tirzépatide</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Obésité + DT2</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">230-440 €</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                    ❌ NON
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Dispo. (nov. 2024)
+                  </span>
+                </td>
+              </tr>
+              <!-- Saxenda -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                      <span class="text-purple-600 font-bold">S</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Saxenda</div>
+                      <div class="text-xs text-gray-500">Novo Nordisk</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Liraglutide 3 mg</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Obésité</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">240-300 €</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                    ❌ NON
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Disponible
+                  </span>
+                </td>
+              </tr>
+              <!-- Trulicity -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                      <span class="text-teal-600 font-bold">T</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Trulicity</div>
+                      <div class="text-xs text-gray-500">Eli Lilly</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Dulaglutide</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Diabète type 2</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">~81 €</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    ✅ Oui 65% (DT2)
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Disponible
+                  </span>
+                </td>
+              </tr>
+              <!-- Victoza -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                      <span class="text-indigo-600 font-bold">V</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Victoza</div>
+                      <div class="text-xs text-gray-500">Novo Nordisk</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Liraglutide 1,8 mg</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Diabète type 2</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">~60,26 €</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    ✅ Oui 65% (DT2)
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Disponible
+                  </span>
+                </td>
+              </tr>
+              <!-- Rybelsus -->
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                      <span class="text-cyan-600 font-bold">R</span>
+                    </div>
+                    <div>
+                      <div class="font-semibold text-gray-900">Rybelsus</div>
+                      <div class="text-xs text-gray-500">Novo Nordisk</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Semaglutide oral</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-700">Diabète type 2</td>
+                <td class="px-6 py-4 text-center text-sm font-medium text-gray-900">80-110 €</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    ✅ Oui 65% (DT2)
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    Disponible
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Notes du tableau -->
+        <div class="mt-6 space-y-2 text-sm text-gray-500">
+          <p>⚠️ <strong>Zepbound</strong> (nom commercial aux États-Unis) <strong>n'existe pas en France</strong>. Le tirzépatide est commercialisé sous le nom <strong>Mounjaro</strong> en Europe.</p>
+          <p>💊 Le remboursement à 65% s'applique <strong>uniquement</strong> pour l'indication diabète de type 2 (DT2). Les traitements pour l'obésité restent à la charge du patient.</p>
+          <p>📋 Depuis février 2025, un <strong>formulaire de prescription spécifique</strong> est obligatoire pour Ozempic, Trulicity et Victoza.</p>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="/guides/quel-traitement-glp1-choisir/" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+            📊 Voir le Comparatif Détaillé →
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Articles Récents avec Thumbnails -->
-    <section class="py-16 bg-white">
+    <!-- ============================================ -->
+    <!-- SECTION 7 : EFFETS SECONDAIRES               -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-gradient-to-r from-red-50 to-orange-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-4">
+              ⚠️ Effets Secondaires : Ce qu'il Faut Savoir
+            </h2>
+            <p class="text-lg text-gray-600">
+              Comme tout médicament, les GLP-1 peuvent provoquer des effets secondaires.
+              <strong class="text-gray-900">La transparence avant tout</strong> : voici les informations essentielles.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- Fréquents -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-400 transform hover:scale-[1.02] transition-all duration-300">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">😵</span>
+                <h3 class="text-xl font-bold text-gray-900">Fréquents (20-40%)</h3>
+              </div>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-red-500 mt-1">•</span><span><strong>Nausées</strong> — surtout les premières semaines</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-500 mt-1">•</span><span><strong>Vomissements</strong> — généralement transitoires</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-500 mt-1">•</span><span><strong>Diarrhées</strong> — s'améliorent avec le temps</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-500 mt-1">•</span><span><strong>Constipation</strong> — gestion par l'alimentation</span></li>
+              </ul>
+              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm">
+                Comment gérer les nausées →
+              </a>
+            </div>
+
+            <!-- Modérés -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-400 transform hover:scale-[1.02] transition-all duration-300">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">😴</span>
+                <h3 class="text-xl font-bold text-gray-900">Modérés (5-15%)</h3>
+              </div>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">•</span><span><strong>Fatigue</strong> — adaptation progressive</span></li>
+                <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">•</span><span><strong>Maux de tête</strong> — souvent passagers</span></li>
+                <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">•</span><span><strong>Ballonnements</strong> — réduction du transit</span></li>
+                <li class="flex items-start gap-2"><span class="text-orange-500 mt-1">•</span><span><strong>Reflux gastrique</strong> — gestion alimentaire</span></li>
+              </ul>
+              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm">
+                Gérer la fatigue →
+              </a>
+            </div>
+
+            <!-- Rares -->
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-600 transform hover:scale-[1.02] transition-all duration-300">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">🚨</span>
+                <h3 class="text-xl font-bold text-gray-900">Rares mais Sérieux (&lt;1%)</h3>
+              </div>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-red-600 mt-1">•</span><span><strong>Pancréatite</strong> — surveillance médicale</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-600 mt-1">•</span><span><strong>Problèmes thyroïdiens</strong> — suivi régulier</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-600 mt-1">•</span><span><strong>Hypoglycémie</strong> — avec antidiabétiques</span></li>
+                <li class="flex items-start gap-2"><span class="text-red-600 mt-1">•</span><span><strong>Réactions allergiques</strong> — arrêt immédiat</span></li>
+              </ul>
+              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors text-sm">
+                Signes d'alerte →
+              </a>
+            </div>
+          </div>
+
+          <!-- Conseils -->
+          <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+              💡 Conseils pour Minimiser les Effets Secondaires
+            </h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="text-3xl mb-3">🐌</div>
+                <p class="text-gray-700"><strong class="text-gray-900">Commencer doucement :</strong><br>Respecter la montée progressive des doses</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-3">🍽️</div>
+                <p class="text-gray-700"><strong class="text-gray-900">Manger léger :</strong><br>Éviter les repas gras et copieux</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-3">💧</div>
+                <p class="text-gray-700"><strong class="text-gray-900">S'hydrater :</strong><br>Boire suffisamment d'eau tout au long de la journée</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl mb-3">👨‍⚕️</div>
+                <p class="text-gray-700"><strong class="text-gray-900">Suivi médical :</strong><br>Consultations régulières pour adapter le traitement</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+            <p class="text-gray-700 mb-6 text-lg">
+              <strong class="text-gray-900">Important :</strong> Ces informations ne remplacent pas l'avis médical.
+              Consultez toujours votre médecin avant de commencer un traitement.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg">
+                Guide Complet des Effets Secondaires
+              </a>
+              <a href="/collections/medecins-glp1-france/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transform hover:scale-[1.02] transition-all duration-200 shadow-md">
+                Trouver un Médecin Spécialisé
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8 : ARTICLES SLIDER                  -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Derniers Articles et Guides
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Découvrez nos derniers articles d'experts sur les traitements GLP-1 en France
+            Nos derniers articles d'experts sur les traitements GLP-1 en France
           </p>
         </div>
 
-        <!-- Slider d'articles avec thumbnails -->
         <div class="relative">
           <div class="article-slider overflow-hidden">
             <div class="flex gap-6 pb-4" id="articles-container">
-              
+
               <!-- Article Wegovy Prix -->
               <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div class="relative h-48 overflow-hidden">
-                  <img 
-                    src="/images/thumbnails/prix-wegovy-france-illus.jpg" 
-                    alt="Prix Wegovy France 2025"
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    Prix & Coûts
-                  </div>
+                  <img src="/images/thumbnails/prix-wegovy-france-illus.jpg" alt="Prix Wegovy France 2026" class="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                  <div class="absolute top-3 left-3 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-medium">Prix & Coûts</div>
                 </div>
                 <div class="p-6">
-                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                    Prix Wegovy 2025 en France : Coûts et Remboursements
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
-                    Guide complet des tarifs Wegovy en pharmacie, conditions de remboursement par l'Assurance Maladie et coût réel pour le patient.
-                  </p>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">Prix Wegovy 2026 en France : Coûts et Remboursements</h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">Guide complet des tarifs Wegovy en pharmacie : 169 à 360 € par mois, non remboursé. Options de mutuelles et alternatives.</p>
                   <div class="flex items-center justify-between">
-                    <span class="text-xs text-gray-500">Mis à jour récemment</span>
-                    <a href="/collections/glp1-cout/prix-wegovy-france" class="text-green-600 hover:text-green-700 font-medium text-sm transition-colors">
-                      Lire l'article →
-                    </a>
+                    <span class="text-xs text-gray-500">Mis à jour mars 2026</span>
+                    <a href="/collections/glp1-cout/prix-wegovy-france" class="text-green-600 hover:text-green-700 font-medium text-sm transition-colors">Lire →</a>
                   </div>
                 </div>
               </div>
@@ -392,28 +768,15 @@ const categories = await getCategoryContent();
               <!-- Article Mounjaro -->
               <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div class="relative h-48 overflow-hidden">
-                  <img 
-                    src="/images/thumbnails/mounjaro-blue.webp" 
-                    alt="Guide Complet Mounjaro"
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    Traitements
-                  </div>
+                  <img src="/images/thumbnails/mounjaro-blue.webp" alt="Guide Complet Mounjaro" class="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                  <div class="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">Traitements</div>
                 </div>
                 <div class="p-6">
-                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                    Guide Complet Mounjaro : Efficacité et Posologie
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
-                    Tout savoir sur le tirzépatide (Mounjaro) : mécanisme d'action, résultats cliniques, dosage et suivi médical recommandé.
-                  </p>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">Guide Complet Mounjaro : Efficacité et Posologie</h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">Tout savoir sur le tirzépatide (Mounjaro) : double agoniste GLP-1/GIP, résultats cliniques, dosage et suivi médical.</p>
                   <div class="flex items-center justify-between">
                     <span class="text-xs text-gray-500">Guide expert</span>
-                    <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                      Lire l'article →
-                    </a>
+                    <a href="/collections/traitements-glp1/guide-complet-mounjaro" class="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">Lire →</a>
                   </div>
                 </div>
               </div>
@@ -421,28 +784,15 @@ const categories = await getCategoryContent();
               <!-- Article Effets Secondaires -->
               <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div class="relative h-48 overflow-hidden">
-                  <img 
-                    src="/images/thumbnails/effets-secondaires-wegovy-illus.jpg" 
-                    alt="Effets Secondaires Wegovy"
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    Sécurité
-                  </div>
+                  <img src="/images/thumbnails/effets-secondaires-wegovy-illus.jpg" alt="Effets Secondaires Wegovy" class="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                  <div class="absolute top-3 left-3 bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">Sécurité</div>
                 </div>
                 <div class="p-6">
-                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                    Effets Secondaires Wegovy : Guide Pratique
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
-                    Information complète sur les effets indésirables de Wegovy, leur fréquence et les solutions pour mieux les gérer au quotidien.
-                  </p>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">Effets Secondaires Wegovy : Guide Pratique</h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">Information complète sur les effets indésirables de Wegovy, leur fréquence et les solutions pour mieux les gérer.</p>
                   <div class="flex items-center justify-between">
                     <span class="text-xs text-gray-500">Information médicale</span>
-                    <a href="/collections/effets-secondaires-glp1/effets-secondaires-wegovy" class="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors">
-                      Lire l'article →
-                    </a>
+                    <a href="/collections/effets-secondaires-glp1/effets-secondaires-wegovy" class="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors">Lire →</a>
                   </div>
                 </div>
               </div>
@@ -450,86 +800,31 @@ const categories = await getCategoryContent();
               <!-- Article Ozempic -->
               <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div class="relative h-48 overflow-hidden">
-                  <img 
-                    src="/images/thumbnails/ozempic-medical-guide.jpg" 
-                    alt="Guide Complet Ozempic"
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 bg-indigo-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    Diabète
-                  </div>
+                  <img src="/images/thumbnails/ozempic-medical-guide.jpg" alt="Guide Complet Ozempic" class="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                  <div class="absolute top-3 left-3 bg-indigo-500 text-white px-2 py-1 rounded-full text-xs font-medium">Diabète</div>
                 </div>
                 <div class="p-6">
-                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                    Guide Complet Ozempic : Diabète et Perte de Poids
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
-                    Analyse complète d'Ozempic pour le diabète de type 2 et la gestion du poids : efficacité, posologie et recommandations médicales.
-                  </p>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">Guide Complet Ozempic : Diabète et Perte de Poids</h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">Analyse complète d'Ozempic pour le diabète de type 2 et la gestion du poids : efficacité, posologie et remboursement.</p>
                   <div class="flex items-center justify-between">
                     <span class="text-xs text-gray-500">Référence médicale</span>
-                    <a href="/collections/traitements-glp1/guide-complet-ozempic" class="text-indigo-600 hover:text-indigo-700 font-medium text-sm transition-colors">
-                      Lire l'article →
-                    </a>
+                    <a href="/collections/traitements-glp1/guide-complet-ozempic" class="text-indigo-600 hover:text-indigo-700 font-medium text-sm transition-colors">Lire →</a>
                   </div>
                 </div>
               </div>
 
-              <!-- Article Témoignage Marie -->
+              <!-- Article GLP-1 Expliqué -->
               <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div class="relative h-48 overflow-hidden">
-                  <img 
-                    src="/images/temoignages/mariejourney9.jpg" 
-                    alt="Témoignage Marie transformation GLP-1"
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    Témoignage
-                  </div>
+                  <img src="/images/home/seringue-adn.jpg" alt="Qu'est-ce que GLP-1 explication scientifique" class="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-300" loading="lazy" />
+                  <div class="absolute top-3 left-3 bg-teal-500 text-white px-2 py-1 rounded-full text-xs font-medium">Science</div>
                 </div>
                 <div class="p-6">
-                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                    Marie, 39 ans : "J'ai perdu 32kg avec Wegovy"
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
-                    Découvrez le parcours authentique de Marie, mère de trois enfants qui a transformé sa vie grâce aux traitements GLP-1.
-                  </p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs text-gray-500">Témoignage vérifié</span>
-                    <a href="/collections/temoignages/marie-transformation-glp1" class="text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors">
-                      Lire le témoignage →
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Article Qu'est-ce que GLP-1 -->
-              <div class="min-w-[300px] md:min-w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div class="relative h-48 overflow-hidden">
-                  <img 
-                    src="/images/home/seringue-adn.jpg" 
-                    alt="Qu'est-ce que GLP-1 explication scientifique"
-                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                  <div class="absolute top-3 left-3 bg-teal-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    Science
-                  </div>
-                </div>
-                <div class="p-6">
-                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
-                    Qu'est-ce que GLP-1 ? Explication Scientifique Simple
-                  </h3>
-                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">
-                    Comprenez le mécanisme d'action des hormones GLP-1, leur rôle dans la régulation du glucose et leur utilisation thérapeutique.
-                  </p>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">Qu'est-ce que GLP-1 ? Explication Simple</h3>
+                  <p class="text-sm text-gray-600 mb-4 line-clamp-3">Comprenez le mécanisme des hormones GLP-1, leur rôle dans la régulation du glucose et leur utilisation thérapeutique.</p>
                   <div class="flex items-center justify-between">
                     <span class="text-xs text-gray-500">Article scientifique</span>
-                    <a href="/guides/qu-est-ce-que-glp1/" class="text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors">
-                      Lire l'article →
-                    </a>
+                    <a href="/guides/qu-est-ce-que-glp1/" class="text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors">Lire →</a>
                   </div>
                 </div>
               </div>
@@ -537,29 +832,16 @@ const categories = await getCategoryContent();
             </div>
           </div>
 
-          <!-- Contrôles du slider -->
-          <button 
-            id="prev-btn" 
-            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-200 z-10 border border-gray-200"
-            aria-label="Article précédent"
-          >
-            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
+          <!-- Slider Controls -->
+          <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-200 z-10 border border-gray-200" aria-label="Article précédent">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
           </button>
-          
-          <button 
-            id="next-btn" 
-            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-200 z-10 border border-gray-200"
-            aria-label="Article suivant"
-          >
-            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
+          <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:shadow-xl transition-all duration-200 z-10 border border-gray-200" aria-label="Article suivant">
+            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
           </button>
         </div>
 
-        <!-- Liens vers toutes les collections -->
+        <!-- Collection links -->
         <div class="mt-12 text-center">
           <div class="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <a href="/collections/glp1-cout/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-200">
@@ -575,31 +857,30 @@ const categories = await getCategoryContent();
         </div>
       </div>
 
-      <!-- JavaScript pour le slider -->
+      <!-- Slider JS -->
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           const container = document.getElementById('articles-container');
           const prevBtn = document.getElementById('prev-btn');
           const nextBtn = document.getElementById('next-btn');
-          
+
           if (container && prevBtn && nextBtn) {
             let scrollAmount = 0;
-            const cardWidth = 350 + 24; // width + gap
-            
+            const cardWidth = 350 + 24;
+
             nextBtn.addEventListener('click', () => {
               scrollAmount += cardWidth;
               const maxScroll = container.scrollWidth - container.clientWidth;
               if (scrollAmount > maxScroll) scrollAmount = maxScroll;
               container.style.transform = `translateX(-${scrollAmount}px)`;
             });
-            
+
             prevBtn.addEventListener('click', () => {
               scrollAmount -= cardWidth;
               if (scrollAmount < 0) scrollAmount = 0;
               container.style.transform = `translateX(-${scrollAmount}px)`;
             });
-            
-            // Auto-scroll toutes les 5 secondes
+
             setInterval(() => {
               if (scrollAmount < container.scrollWidth - container.clientWidth) {
                 nextBtn.click();
@@ -611,37 +892,19 @@ const categories = await getCategoryContent();
           }
         });
       </script>
-
-      <style>
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-        
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-        
-        #articles-container {
-          transition: transform 0.3s ease;
-        }
-      </style>
     </section>
 
-    <!-- Célébrités et GLP-1 -->
-    <section class="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+    <!-- ============================================ -->
+    <!-- SECTION 8b : CELEBRITES & GLP-1 (Actualité)  -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            ⭐ Célébrités et Traitements GLP-1
+            ⭐ Les GLP-1 dans l'Actualité
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            Quand les stars brisent le tabou : leur expérience avec les médicaments GLP-1 pour la santé et la forme
+            De nombreuses personnalités ont brisé le tabou en parlant ouvertement de leur utilisation des traitements GLP-1
           </p>
         </div>
 
@@ -650,323 +913,90 @@ const categories = await getCategoryContent();
           <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
             <div class="md:flex">
               <div class="md:w-1/3">
-                <img
-                  src="/images/temoignages/serena.webp"
-                  alt="Serena Williams championne de tennis"
-                  class="w-full h-64 md:h-full object-cover"
-                  loading="lazy"
-                />
+                <img src="/images/temoignages/serena.webp" alt="Serena Williams, championne de tennis ayant parlé des GLP-1" class="w-full h-64 md:h-full object-cover" loading="lazy" />
               </div>
               <div class="md:w-2/3 p-8">
                 <div class="flex items-center gap-3 mb-4">
                   <h3 class="text-2xl font-bold text-gray-900">Serena Williams</h3>
-                  <span class="bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">
-                    Championne 23× Grand Chelem
-                  </span>
+                  <span class="bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">Tennis</span>
                 </div>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                  La légende du tennis, 23 fois championne de Grand Chelem, a révélé en 2024 utiliser des traitements GLP-1 pour optimiser sa santé métabolique.
-                  À 42 ans, elle a partagé son expérience pour normaliser ces médicaments et réduire la stigmatisation.
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  La légende du tennis a évoqué publiquement son utilisation de traitements GLP-1, contribuant à normaliser le sujet et réduire la stigmatisation autour de ces médicaments.
                 </p>
-                <div class="flex items-center justify-between">
-                  <div class="text-sm text-gray-500">
-                    <strong>Leçons clés :</strong> Transparence, suivi médical, approche holistique
-                  </div>
-                  <a href="/collections/temoignages/serena-williams-glp1/" class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium transition-colors">
-                    Lire son histoire →
-                  </a>
-                </div>
+                <p class="text-sm text-gray-500 italic mb-4">
+                  Le témoignage de personnalités publiques a contribué à une meilleure compréhension de ces traitements par le grand public.
+                </p>
+                <a href="/collections/temoignages/serena-williams-glp1/" class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium transition-colors">
+                  Lire l'article complet →
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Autres célébrités -->
+          <!-- Chelsea + Elton -->
           <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
               <div class="h-48">
-                <img
-                  src="/images/temoignages/chelsea.jpeg"
-                  alt="Chelsea Handler comédienne et animatrice"
-                  class="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <img src="/images/temoignages/chelsea.jpeg" alt="Chelsea Handler, personnalité ayant parlé des GLP-1" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6">
-                <div class="flex items-center gap-3 mb-4">
+                <div class="flex items-center gap-3 mb-3">
                   <h4 class="font-semibold text-gray-900">Chelsea Handler</h4>
                   <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Comédienne</span>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">
-                  A ouvertement parlé de son utilisation d'Ozempic pour gérer son poids et améliorer sa santé mentale.
+                <p class="text-gray-600 text-sm mb-3">
+                  A parlé ouvertement de son expérience avec les GLP-1, ouvrant le débat sur l'utilisation de ces traitements pour la gestion du poids.
                 </p>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                  Transparente sur son expérience
-                </span>
               </div>
             </div>
 
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
               <div class="h-48">
-                <img
-                  src="/images/temoignages/elton.webp"
-                  alt="Elton John chanteur et artiste"
-                  class="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <img src="/images/temoignages/elton.webp" alt="Elton John, artiste ayant mentionné les traitements GLP-1" class="w-full h-full object-cover" loading="lazy" />
               </div>
               <div class="p-6">
-                <div class="flex items-center gap-3 mb-4">
+                <div class="flex items-center gap-3 mb-3">
                   <h4 class="font-semibold text-gray-900">Elton John</h4>
                   <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Artiste</span>
                 </div>
-                <p class="text-gray-600 text-sm mb-4">
-                  A mentionné utiliser des médicaments pour la perte de poids dans le cadre de sa transformation personnelle.
+                <p class="text-gray-600 text-sm mb-3">
+                  A mentionné utiliser des traitements pour la perte de poids dans le cadre de sa transformation personnelle et de sa santé.
                 </p>
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                  Approche holistique
-                </span>
               </div>
             </div>
           </div>
 
           <div class="text-center mt-8">
-            <p class="text-gray-600 mb-4">
-              <strong class="text-gray-900">Le message des célébrités :</strong> Les GLP-1 ne remplacent pas un mode de vie sain,
-              mais peuvent être un outil précieux dans une approche médicale globale.
+            <p class="text-gray-500 text-sm italic">
+              Ces témoignages publics illustrent la démocratisation des traitements GLP-1. Chaque parcours est unique — consultez toujours un médecin avant tout traitement.
             </p>
-            <a href="/collections/temoignages/serena-williams-glp1/" class="inline-flex items-center gap-2 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
-              📖 Découvrir leurs témoignages →
-            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Bridge Section -->
-    <section class="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
-      <div class="container mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <div class="space-y-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-              Ozempic, Wegovy... Que signifie GLP-1 ?
-            </h2>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              <strong class="text-blue-600">Ozempic et Wegovy</strong> sont les noms commerciaux de médicaments appartenant à une famille appelée
-              <strong class="text-blue-600">"GLP-1"</strong>.
-              Ces traitements révolutionnaires imitent une hormone naturelle pour réguler la glycémie et réduire l'appétit.
-            </p>
-
-            <div class="space-y-3">
-              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                <span class="text-lg">💊</span>
-                <span class="text-gray-700 font-medium">Ozempic = Pour le diabète + perte de poids</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                <span class="text-lg">📉</span>
-                <span class="text-gray-700 font-medium">Wegovy = Spécialement pour maigrir</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                <span class="text-lg">🧬</span>
-                <span class="text-gray-700 font-medium">GLP-1 = La famille de molécules</span>
-              </div>
-            </div>
-
-            <a href="/guides/qu-est-ce-que-glp1/" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200">
-              En savoir plus sur GLP-1
-            </a>
-          </div>
-
-          <div class="relative">
-            <img
-              src="/images/home/seringue-adn.jpg"
-              alt="Molécule GLP-1 et recherche scientifique"
-              class="w-full h-auto rounded-xl shadow-lg"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Effets Secondaires -->
-    <section class="py-16 bg-gradient-to-r from-red-50 to-orange-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-              ⚠️ Effets Secondaires : Ce qu'il Faut Savoir
-            </h2>
-            <p class="text-lg text-gray-600">
-              Comme tout médicament, Ozempic et Wegovy peuvent provoquer des effets secondaires.
-              <strong class="text-gray-900">La transparence avant tout</strong> : voici les informations essentielles.
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <!-- Fréquents -->
-            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-400 transform hover:scale-105 transition-all duration-300">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl">😵</span>
-                <h3 class="text-xl font-bold text-gray-900">Effets Fréquents (20-40%)</h3>
-              </div>
-              <ul class="space-y-2 text-gray-700">
-                <li class="flex items-start gap-2">
-                  <span class="text-red-500 mt-1">•</span>
-                  <span><strong>Nausées</strong> - Surtout les premières semaines</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-red-500 mt-1">•</span>
-                  <span><strong>Vomissements</strong> - Généralement transitoires</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-red-500 mt-1">•</span>
-                  <span><strong>Diarrhées</strong> - S'améliorent avec le temps</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-red-500 mt-1">•</span>
-                  <span><strong>Constipation</strong> - Gestion par l'alimentation</span>
-                </li>
-              </ul>
-              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                Comment gérer les nausées →
-              </a>
-            </div>
-
-            <!-- Modérés -->
-            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-400 transform hover:scale-105 transition-all duration-300">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl">😴</span>
-                <h3 class="text-xl font-bold text-gray-900">Effets Modérés (5-15%)</h3>
-              </div>
-              <ul class="space-y-2 text-gray-700">
-                <li class="flex items-start gap-2">
-                  <span class="text-orange-500 mt-1">•</span>
-                  <span><strong>Fatigue</strong> - Adaptation progressive</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-orange-500 mt-1">•</span>
-                  <span><strong>Maux de tête</strong> - Souvent passagers</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-orange-500 mt-1">•</span>
-                  <span><strong>Ballonnements</strong> - Réduction du transit</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-orange-500 mt-1">•</span>
-                  <span><strong>Reflux gastrique</strong> - Gestion alimentaire</span>
-                </li>
-              </ul>
-              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                Gérer la fatigue →
-              </a>
-            </div>
-
-            <!-- Rares -->
-            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-600 transform hover:scale-105 transition-all duration-300">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl">🚨</span>
-                <h3 class="text-xl font-bold text-gray-900">Effets Rares mais Sérieux (&lt;1%)</h3>
-              </div>
-              <ul class="space-y-2 text-gray-700">
-                <li class="flex items-start gap-2">
-                  <span class="text-red-600 mt-1">•</span>
-                  <span><strong>Pancréatite</strong> - Surveillance médicale</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-red-600 mt-1">•</span>
-                  <span><strong>Problèmes thyroïdiens</strong> - Suivi régulier</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-red-600 mt-1">•</span>
-                  <span><strong>Hypoglycémie</strong> - Avec antidiabétiques</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-red-600 mt-1">•</span>
-                  <span><strong>Réactions allergiques</strong> - Arrêt immédiat</span>
-                </li>
-              </ul>
-              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center gap-2 mt-4 text-blue-600 hover:text-blue-700 font-medium transition-colors">
-                Signes d'alerte →
-              </a>
-            </div>
-          </div>
-
-          <!-- Conseils -->
-          <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
-              💡 Conseils pour Minimiser les Effets Secondaires
-            </h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div class="text-center">
-                <div class="text-3xl mb-3">🐌</div>
-                <p class="text-gray-700">
-                  <strong class="text-gray-900">Commencer doucement :</strong><br>
-                  Respecter la montée progressive des doses
-                </p>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl mb-3">🍽️</div>
-                <p class="text-gray-700">
-                  <strong class="text-gray-900">Manger léger :</strong><br>
-                  Éviter les repas gras et copieux
-                </p>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl mb-3">💧</div>
-                <p class="text-gray-700">
-                  <strong class="text-gray-900">S'hydrater :</strong><br>
-                  Boire suffisamment d'eau tout au long de la journée
-                </p>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl mb-3">👨‍⚕️</div>
-                <p class="text-gray-700">
-                  <strong class="text-gray-900">Suivi médical :</strong><br>
-                  Consultations régulières pour adapter le traitement
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- CTA -->
-          <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-            <p class="text-gray-700 mb-6 text-lg">
-              <strong class="text-gray-900">Important :</strong> Ces informations ne remplacent pas l'avis médical.
-              Consultez toujours votre médecin avant de commencer un traitement.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg">
-                Guide Complet des Effets Secondaires
-              </a>
-              <a href="/collections/medecins-glp1-france/" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transform hover:scale-105 transition-all duration-200 shadow-md">
-                Trouver un Médecin Spécialisé
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Categories -->
-    <section class="py-16 md:py-20">
+    <!-- ============================================ -->
+    <!-- SECTION 9 : CATEGORIES GRID                  -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-gray-50">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Tout savoir sur Ozempic & Wegovy
+            Tout Savoir sur les Traitements GLP-1
           </h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Guides détaillés par nos experts médicaux pour comprendre ces nouveaux médicaments révolutionnaires.
+            Guides détaillés par nos experts médicaux pour comprendre ces nouveaux traitements.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category) => (
-            <a href={`/collections/${category.slug}/`} class="group bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:border-blue-200">
+            <a href={`/collections/${category.slug}/`} class="group bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 hover:border-blue-200">
               <div class="text-4xl mb-4">{category.icon}</div>
               <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                 {category.name}
               </h3>
-              <p class="text-gray-600 mb-4 leading-relaxed">
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
                 {category.description}
               </p>
               <div class="flex items-center justify-between pt-4 border-t border-gray-100">
@@ -983,1372 +1013,168 @@ const categories = await getCategoryContent();
       </div>
     </section>
 
-    <!-- Carousel d'Articles -->
-    <section class="py-16 bg-white">
+    <!-- ============================================ -->
+    <!-- SECTION 10 : FAQ (Featured Snippets)         -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-white">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            📚 Articles Populaires
-          </h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            Découvrez nos derniers articles sur les traitements GLP-1, leurs effets et les dernières avancées médicales
-          </p>
-        </div>
-
-        <div class="relative overflow-hidden">
-          <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide" style="scroll-snap-type: x mandatory;">
-            <!-- Article 1: Zepbound -->
-            <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="scroll-snap-align: start;">
-              <div class="p-6">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Nouveau</span>
-                  <span class="text-sm text-gray-500">Septembre 2025</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  Guide Complet Zepbound : Le Nouveau Traitement GLP-1
-                </h3>
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                  Découvrez Zepbound, le traitement révolutionnaire d'Eli Lilly pour la perte de poids. Prix, effets et résultats complets.
-                </p>
-                <a href="/collections/traitements-glp1/guide-complet-zepbound/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                  Lire l'article →
-                </a>
-              </div>
-            </div>
-
-            <!-- Article 2: Serena Williams -->
-            <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="scroll-snap-align: start;">
-              <div class="p-6">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Célébrités</span>
-                  <span class="text-sm text-gray-500">Septembre 2025</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  Serena Williams et les Traitements GLP-1
-                </h3>
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                  L'expérience de la championne de tennis avec les GLP-1 : transparence, résultats et leçons à retenir.
-                </p>
-                <a href="/collections/temoignages/serena-williams-glp1/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                  Lire l'article →
-                </a>
-              </div>
-            </div>
-
-            <!-- Article 3: Comparatif -->
-            <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="scroll-snap-align: start;">
-              <div class="p-6">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Comparatif</span>
-                  <span class="text-sm text-gray-500">Guide</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  Quel Traitement GLP-1 Choisir ?
-                </h3>
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                  Comparez Ozempic, Wegovy, Zepbound et les autres traitements : efficacité, prix, effets secondaires.
-                </p>
-                <a href="/guides/quel-traitement-glp1-choisir/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                  Voir le comparatif →
-                </a>
-              </div>
-            </div>
-
-            <!-- Article 4: Recherche -->
-            <div class="flex-shrink-0 w-80 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="scroll-snap-align: start;">
-              <div class="p-6">
-                <div class="flex items-center gap-2 mb-3">
-                  <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Innovation</span>
-                  <span class="text-sm text-gray-500">Recherche</span>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                  L'Avenir des Traitements GLP-1
-                </h3>
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                  Découvrez les dernières avancées médicales : nouveaux médicaments, combinaisons et perspectives d'avenir.
-                </p>
-                <a href="/collections/recherche-glp1/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
-                  En savoir plus →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Navigation arrows -->
-          <button class="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors" onclick="scrollCarousel(-1)">
-            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-          <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors" onclick="scrollCarousel(1)">
-            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comparatif des Traitements -->
-    <section class="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            ⚖️ Comparatif des Traitements GLP-1
-          </h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            Comparez les différents médicaments GLP-1 disponibles : efficacité, prix, indications et particularités
-          </p>
-        </div>
-
-        <div class="overflow-x-auto">
-          <table class="w-full bg-white rounded-xl shadow-lg">
-            <thead class="bg-gray-50">
-              <tr>
-                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Traitement</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Molécule</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Perte Poids Moyenne</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Prix/Mois</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Disponibilité France</th>
-                <th class="px-6 py-4 text-center text-sm font-semibold text-gray-900">Remboursement</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <span class="text-blue-600 font-bold">O</span>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-900">Ozempic</div>
-                      <div class="text-sm text-gray-500">Novo Nordisk</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">Semaglutide</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    12-15%
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">80-120€</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    ✅ Disponible
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">65%</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                      <span class="text-green-600 font-bold">W</span>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-900">Wegovy</div>
-                      <div class="text-sm text-gray-500">Novo Nordisk</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">Semaglutide</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    15-18%
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">85-130€</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    ✅ Disponible
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">65%</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <span class="text-purple-600 font-bold">Z</span>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-900">Zepbound</div>
-                      <div class="text-sm text-gray-500">Eli Lilly</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">Tirzepatide</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                    15-20%
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">95-140€</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                    🚧 2025-2026
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">65%</td>
-              </tr>
-              <tr class="hover:bg-gray-50">
-                <td class="px-6 py-4">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                      <span class="text-orange-600 font-bold">M</span>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-gray-900">Mounjaro</div>
-                      <div class="text-sm text-gray-500">Eli Lilly</div>
-                    </div>
-                  </div>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">Tirzepatide</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                    15-20%
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">90-135€</td>
-                <td class="px-6 py-4 text-center">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                    ❌ Non disponible
-                  </span>
-                </td>
-                <td class="px-6 py-4 text-center text-sm text-gray-700">-</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="text-center mt-8">
-          <a href="/guides/quel-traitement-glp1-choisir/" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-            📊 Voir le Comparatif Détaillé →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Évolution de la Recherche -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            🔬 L'Évolution des Traitements GLP-1
-          </h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            De la découverte des GLP-1 aux innovations de demain : l'histoire fascinante d'une révolution médicale
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- 1990s : Découverte -->
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
-            <div class="text-center mb-4">
-              <div class="text-4xl mb-2">🧬</div>
-              <h3 class="text-xl font-bold text-gray-900">1990s</h3>
-              <p class="text-sm text-blue-600 font-medium">Découverte</p>
-            </div>
-            <p class="text-gray-700 text-sm">
-              Découverte de l'hormone GLP-1 et de son rôle dans la régulation de la glycémie et de l'appétit.
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              ❓ Questions Fréquentes sur les GLP-1
+            </h2>
+            <p class="text-lg text-gray-600">
+              Réponses claires aux questions les plus posées par les patients français
             </p>
           </div>
 
-          <!-- 2000s : Premiers Traitements -->
-          <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
-            <div class="text-center mb-4">
-              <div class="text-4xl mb-2">💊</div>
-              <h3 class="text-xl font-bold text-gray-900">2000s</h3>
-              <p class="text-sm text-green-600 font-medium">Premiers Traitements</p>
-            </div>
-            <p class="text-gray-700 text-sm">
-              Développement des premiers agonistes GLP-1 injectables pour le traitement du diabète de type 2.
-            </p>
-          </div>
+          <div class="space-y-4">
+            <details class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+              <summary class="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-100 transition-colors flex items-center justify-between">
+                <span>Quel est le prix d'Ozempic en France ?</span>
+                <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                Ozempic coûte environ <strong>59,90 € par stylo injecteur</strong> en pharmacie. Il est <strong>remboursé à 65%</strong> par l'Assurance Maladie, uniquement lorsqu'il est prescrit pour le <strong>diabète de type 2</strong>. En cas d'ALD (affection longue durée), la prise en charge peut atteindre 100%. Depuis février 2025, un formulaire de prescription spécifique est obligatoire.
+              </div>
+            </details>
 
-          <!-- 2010s : Révolution -->
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl">
-            <div class="text-center mb-4">
-              <div class="text-4xl mb-2">🚀</div>
-              <h3 class="text-xl font-bold text-gray-900">2010s</h3>
-              <p class="text-sm text-purple-600 font-medium">Révolution</p>
-            </div>
-            <p class="text-gray-700 text-sm">
-              Ozempic et Wegovy transforment la prise en charge de l'obésité avec des pertes de poids significatives.
-            </p>
-          </div>
+            <details class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+              <summary class="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-100 transition-colors flex items-center justify-between">
+                <span>Wegovy est-il remboursé par la Sécurité sociale ?</span>
+                <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                <strong>Non, Wegovy n'est pas remboursé</strong> par l'Assurance Maladie en France (mars 2026). Le coût mensuel est de <strong>169 à 360 €</strong>, entièrement à la charge du patient. Certaines mutuelles peuvent proposer une prise en charge partielle — renseignez-vous auprès de la vôtre.
+              </div>
+            </details>
 
-          <!-- 2020s : Innovation -->
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl">
-            <div class="text-center mb-4">
-              <div class="text-4xl mb-2">🔮</div>
-              <h3 class="text-xl font-bold text-gray-900">2020s</h3>
-              <p class="text-sm text-orange-600 font-medium">Innovation</p>
-            </div>
-            <p class="text-gray-700 text-sm">
-              Nouveaux mécanismes (GLP-1/GIP), formes orales, et combinaisons thérapeutiques émergentes.
-            </p>
-          </div>
-        </div>
+            <details class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+              <summary class="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-100 transition-colors flex items-center justify-between">
+                <span>Quelle est la différence entre Ozempic et Wegovy ?</span>
+                <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                Ozempic et Wegovy contiennent la <strong>même molécule (semaglutide)</strong> mais à des dosages différents. <strong>Ozempic</strong> (jusqu'à 1 mg) est indiqué pour le <strong>diabète de type 2</strong> et est remboursé. <strong>Wegovy</strong> (jusqu'à 2,4 mg) est spécifiquement autorisé pour le traitement de l'<strong>obésité</strong> (IMC ≥ 30) et n'est pas remboursé.
+              </div>
+            </details>
 
-        <div class="mt-12 bg-gradient-to-r from-gray-50 to-blue-50 p-8 rounded-2xl">
-          <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
-            🌟 L'Avenir des GLP-1
-          </h3>
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <div class="text-3xl mb-3">🧠</div>
-              <h4 class="font-semibold text-gray-900 mb-2">Combinaisons Innovantes</h4>
-              <p class="text-gray-600 text-sm">GLP-1 + autres hormones pour une efficacité maximale</p>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl mb-3">💊</div>
-              <h4 class="font-semibold text-gray-900 mb-2">Formes Orales</h4>
-              <p class="text-gray-600 text-sm">Comprimés plus pratiques que les injections</p>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl mb-3">🎯</div>
-              <h4 class="font-semibold text-gray-900 mb-2">Personnalisation</h4>
-              <p class="text-gray-600 text-sm">Traitements adaptés au profil génétique</p>
-            </div>
+            <details class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+              <summary class="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-100 transition-colors flex items-center justify-between">
+                <span>Quels sont les effets secondaires les plus fréquents des GLP-1 ?</span>
+                <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                Les effets secondaires les plus fréquents (<strong>20 à 40% des patients</strong>) sont les <strong>nausées, vomissements, diarrhées et constipation</strong>. Ils surviennent principalement en début de traitement et lors des augmentations de dose. Ils <strong>s'atténuent généralement</strong> après quelques semaines. Commencer à dose faible et augmenter progressivement aide à les minimiser.
+              </div>
+            </details>
+
+            <details class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden group">
+              <summary class="px-6 py-5 cursor-pointer font-semibold text-gray-900 hover:bg-gray-100 transition-colors flex items-center justify-between">
+                <span>Faut-il une ordonnance pour acheter Ozempic ?</span>
+                <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </summary>
+              <div class="px-6 pb-5 text-gray-600 leading-relaxed">
+                <strong>Oui, Ozempic est un médicament sur ordonnance uniquement.</strong> Depuis février 2025, un <strong>formulaire de prescription spécifique</strong> est obligatoire. La prescription initiale doit être faite par un endocrinologue ou un diabétologue. Le renouvellement peut ensuite être assuré par votre médecin traitant.
+              </div>
+            </details>
           </div>
         </div>
       </div>
+
+      <!-- JSON-LD FAQPage -->
+      <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quel est le prix d'Ozempic en France ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ozempic coûte environ 59,90 € par stylo injecteur en pharmacie. Il est remboursé à 65% par l'Assurance Maladie, uniquement pour le diabète de type 2. Depuis février 2025, un formulaire de prescription spécifique est obligatoire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wegovy est-il remboursé par la Sécurité sociale ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non, Wegovy n'est pas remboursé par l'Assurance Maladie en France (mars 2026). Le coût mensuel est de 169 à 360 €, entièrement à la charge du patient."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre Ozempic et Wegovy ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ozempic et Wegovy contiennent la même molécule (semaglutide) mais à des dosages différents. Ozempic (1 mg) est pour le diabète de type 2 et est remboursé. Wegovy (2,4 mg) est pour l'obésité et n'est pas remboursé."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quels sont les effets secondaires les plus fréquents des GLP-1 ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les effets secondaires les plus fréquents (20-40% des patients) sont les nausées, vomissements, diarrhées et constipation. Ils surviennent surtout en début de traitement et s'atténuent généralement avec le temps."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il une ordonnance pour acheter Ozempic ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, Ozempic est un médicament sur ordonnance. Depuis février 2025, un formulaire de prescription spécifique est obligatoire. La prescription initiale doit être faite par un endocrinologue ou un diabétologue."
+            }
+          }
+        ]
+      }
+      </script>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">✅</div>
-            <h4 class="text-xl font-bold text-gray-900 mb-2">Informations Vérifiées</h4>
-            <p class="text-gray-600">Contenu validé par des professionnels de santé français</p>
-          </div>
-
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">🇫🇷</div>
-            <h4 class="text-xl font-bold text-gray-900 mb-2">Spécialisé France</h4>
-            <p class="text-gray-600">Prix français, pharmacies, médecins et remboursements selon notre système de santé</p>
-          </div>
-
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">📊</div>
-            <h4 class="text-xl font-bold text-gray-900 mb-2">Informations Actualisées</h4>
-            <p class="text-gray-600">Prix Ozempic/Wegovy et disponibilités mises à jour chaque semaine</p>
-          </div>
-
-          <div class="text-center p-6">
-            <div class="text-4xl mb-4">💬</div>
-            <h4 class="text-xl font-bold text-gray-900 mb-2">Témoignages Réels</h4>
-            <p class="text-gray-600">Retours d'expérience authentiques de patients français</p>
-          </div>
-        </div>
+    <!-- ============================================ -->
+    <!-- SECTION 11 : NEWSLETTER                      -->
+    <!-- ============================================ -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <NewsletterCapture />
       </div>
     </section>
 
-    <!-- Section Feedback et Communication -->
+    <!-- ============================================ -->
+    <!-- SECTION 12 : FEEDBACK                        -->
+    <!-- ============================================ -->
     <FeedbackSection />
 
   </div>
 </StaticLayout>
 
-  <style>
-    /* Hero Section Amélioré */
-    .hero-enhanced {
-      display: grid;
-      grid-template-columns: 1.8fr 1.2fr;
-      gap: 4rem;
-      align-items: center;
-      padding: 6rem 0 5rem;
-      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-      border-radius: 2rem;
-      margin-bottom: 5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-enhanced::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      padding-left: 3rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-visual {
-      position: relative;
-      text-align: center;
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-image {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 1.5rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      object-fit: cover;
-      object-position: center top;
-      transition: transform 0.3s ease;
-    }
-
-    .hero-image:hover {
-      transform: scale(1.02);
-    }
-
-    .hero-badge {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background: var(--accent-green);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius-full);
-      font-size: 0.8rem;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-    }
-
-    .hero-title {
-      font-size: var(--font-size-5xl);
-      font-weight: 800;
-      margin-bottom: var(--spacing-6);
-      line-height: 1.1;
-      text-align: left;
-    }
-
-    .text-gradient {
-      color: #2563EB !important;
-      font-weight: 700;
-    }
-
-    .hero-description {
-      font-size: var(--font-size-xl);
-      color: var(--gray-600);
-      margin-bottom: var(--spacing-6);
-      line-height: 1.6;
-      text-align: left;
-    }
-
-    /* Pills cliquables */
-    .hero-pills {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .pill {
-      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-      color: #475569;
-      padding: 0.75rem 1.5rem;
-      border-radius: 2rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .pill-link:hover {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-      border-color: #2563eb;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1.5rem;
-      margin-bottom: 4rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1.25rem 2.5rem;
-      border-radius: 1rem;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      color: white;
-      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
-    }
-
-    .btn-outline {
-      background: white;
-      color: #2563eb;
-      border: 2px solid #2563eb;
-      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
-    }
-
-    .btn-outline:hover {
-      background: #2563eb;
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-lg {
-      padding: 1.5rem 3rem;
-      font-size: 1.2rem;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      text-align: left;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 1rem;
-      border: 1px solid rgba(37, 99, 235, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
-    .stat-number {
-      display: block;
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #2563eb;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      color: #64748b;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* Bridge Section Améliorée */
-    .bridge-section-enhanced {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      border-radius: var(--radius-2xl);
-      padding: var(--spacing-12) var(--spacing-8);
-      margin-bottom: var(--spacing-16);
-    }
-
-    .bridge-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .bridge-visual {
-      text-align: center;
-    }
-
-    .bridge-image {
-      max-width: 100%;
-      height: auto;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    }
-
-    .bridge-title {
-      font-size: var(--font-size-3xl);
-      font-weight: 700;
-      margin-bottom: var(--spacing-6);
-      color: var(--gray-900);
-    }
-
-    .bridge-text {
-      font-size: var(--font-size-lg);
-      color: var(--gray-600);
-      line-height: 1.6;
-      margin-bottom: var(--spacing-6);
-    }
-
-    .bridge-pills {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-3);
-      margin-bottom: var(--spacing-6);
-    }
-
-    .bridge-pill {
-      background: white;
-      color: var(--gray-700);
-      padding: var(--spacing-3) var(--spacing-4);
-      border-radius: var(--radius-lg);
-      font-size: var(--font-size-sm);
-      font-weight: 500;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    }
-
-    /* Témoignages Visuels */
-    .testimonials-visual {
-      padding: 6rem 0;
-      background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
-      border-radius: 2rem;
-      margin-bottom: 5rem;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-      margin-bottom: 4rem;
-    }
-
-    .testimonial-card {
-      background: white;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      border: 1px solid #e2e8f0;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .testimonial-image {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .testimonial-card:hover .testimonial-image {
-      transform: scale(1.05);
-    }
-
-    .testimonial-content {
-      padding: 2rem;
-    }
-
-    .testimonial-name {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #1e293b;
-    }
-
-    .testimonial-result {
-      color: #16a34a;
-      font-weight: 800;
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .testimonial-text {
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    .testimonial-location {
-      color: #94a3b8;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-link {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .testimonial-link:hover {
-      color: #1d4ed8;
-      transform: translateX(5px);
-    }
-
-    .featured-testimonial {
-      border: 3px solid #16a34a;
-      position: relative;
-      transform: scale(1.02);
-    }
-
-    .featured-testimonial::before {
-      content: "⭐ Transformation Exceptionnelle";
-      position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-      background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 2rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      z-index: 2;
-      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
-    }
-
-    .testimonials-cta {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .btn-secondary {
-      background: linear-gradient(135deg, #64748b 0%, #475569 100%);
-      color: white;
-      padding: 1.25rem 3rem;
-      border-radius: 1rem;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(100, 116, 139, 0.3);
-    }
-
-    .btn-secondary:hover {
-      background: linear-gradient(135deg, #475569 0%, #334155 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(100, 116, 139, 0.4);
-    }
-
-    /* Categories Grid - styles existants */
-    .categories-section {
-      margin: 6rem 0;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      color: #1e293b;
-      line-height: 1.2;
-    }
-
-    .section-description {
-      font-size: 1.1rem;
-      color: #64748b;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-
-    .category-card {
-      background: white;
-      border: 2px solid #e2e8f0;
-      border-radius: 1.5rem;
-      padding: 2.5rem;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .category-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, transparent 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .category-card:hover {
-      border-color: #2563eb;
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
-    }
-
-    .category-card:hover::before {
-      opacity: 1;
-    }
-
-    .category-icon {
-      font-size: 3rem;
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-
-    .category-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #1e293b;
-    }
-
-    .category-description {
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .category-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.9rem;
-      padding-top: 1rem;
-      border-top: 1px solid #e2e8f0;
-    }
-
-    .article-count {
-      color: #94a3b8;
-      font-weight: 600;
-    }
-
-    .read-more {
-      color: #2563eb;
-      font-weight: 700;
-      transition: color 0.3s ease;
-    }
-
-    .category-card:hover .read-more {
-      color: #1d4ed8;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
-      border-radius: var(--radius-2xl);
-      padding: var(--spacing-12);
-      margin: var(--spacing-16) 0;
-      text-align: center;
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--spacing-6);
-      margin-bottom: var(--spacing-8);
-    }
-
-    .faq-item {
-      text-align: center;
-    }
-
-    .faq-icon {
-      font-size: var(--font-size-3xl);
-      margin-bottom: var(--spacing-3);
-    }
-
-    .faq-item h3 {
-      font-size: var(--font-size-lg);
-      font-weight: 600;
-      margin-bottom: var(--spacing-2);
-      color: var(--gray-900);
-    }
-
-    .faq-item p {
-      color: var(--gray-600);
-      font-size: var(--font-size-sm);
-    }
-
-    .faq-cta {
-      margin-top: var(--spacing-8);
-      text-align: center;
-    }
-
-    .faq-cta-text {
-      color: var(--gray-700);
-      margin-bottom: var(--spacing-4);
-      font-size: var(--font-size-lg);
-    }
-
-    .diagnostic-cta {
-      margin-top: var(--spacing-8);
-    }
-
-    .btn-diagnostic {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
-      color: white;
-      padding: var(--spacing-4) var(--spacing-8);
-      border-radius: var(--radius-full);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: var(--font-size-lg);
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-    }
-
-    .btn-diagnostic:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-    }
-
-    .diagnostic-subtitle {
-      margin-top: var(--spacing-3);
-      color: var(--gray-600);
-      font-size: var(--font-size-sm);
-    }
-
-    /* Trust Section */
-    .trust-section {
-      margin: var(--spacing-16) 0;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-6);
-    }
-
-    .trust-item {
-      text-align: center;
-      padding: var(--spacing-6);
-      background: white;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--gray-200);
-    }
-
-    .trust-icon {
-      font-size: var(--font-size-2xl);
-      margin-bottom: var(--spacing-3);
-    }
-
-    .trust-item h4 {
-      font-size: var(--font-size-lg);
-      font-weight: 600;
-      margin-bottom: var(--spacing-2);
-      color: var(--gray-900);
-    }
-
-    .trust-item p {
-      color: var(--gray-600);
-      font-size: var(--font-size-sm);
-      line-height: 1.5;
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .hero-enhanced {
-        gap: 3rem;
-        padding: 4rem 0 3rem;
-      }
-
-      .hero-image {
-        max-width: 450px;
-      }
-
-      .hero-title {
-        font-size: 3rem;
-      }
-
-      .hero-actions {
-        gap: 1rem;
-      }
-
-      .btn {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 1rem;
-      }
-
-      .hero-enhanced {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
-        padding: 3rem 0 2rem;
-        margin-bottom: 3rem;
-      }
-
-      .hero-content {
-        padding-left: 0;
-        order: 2;
-      }
-
-      .hero-visual {
-        order: 1;
-        margin-bottom: 2rem;
-      }
-
-      .hero-image {
-        max-width: 300px;
-        margin: 0 auto;
-        border-radius: 1rem;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .hero-description {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-      }
-
-      .hero-pills {
-        justify-content: center;
-        gap: 0.75rem;
-        margin-bottom: 2.5rem;
-      }
-
-      .pill {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 3rem;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 320px;
-        padding: 1.25rem 2rem;
-      }
-
-      .hero-stats {
-        justify-content: center;
-        gap: 2rem;
-      }
-
-      .stat {
-        padding: 1.25rem;
-      }
-
-      .stat-number {
-        font-size: 2rem;
-      }
-
-      .bridge-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
-        padding: 0 1rem;
-      }
-
-      .bridge-title {
-        font-size: 2rem;
-      }
-
-      .bridge-text {
-        font-size: 1rem;
-      }
-
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .grid-3 {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .category-card {
-        padding: 2rem;
-      }
-
-      .faq-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .trust-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .trust-item {
-        padding: 2rem 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .hero-description {
-        font-size: 1rem;
-      }
-
-      .btn {
-        padding: 1rem 1.5rem;
-        font-size: 0.95rem;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .bridge-title {
-        font-size: 1.75rem;
-      }
-    }
-
-    /* Side Effects Section */
-    .side-effects-section {
-      margin: var(--spacing-16) 0;
-      background: linear-gradient(135deg, #fff5f5 0%, #fef2f2 100%);
-      border-radius: var(--radius-xl);
-      border: 2px solid #fecaca;
-    }
-
-    .side-effects-container {
-      padding: var(--spacing-12) var(--spacing-8);
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .side-effects-header {
-      text-align: center;
-      margin-bottom: var(--spacing-10);
-    }
-
-    .side-effects-header h2 {
-      color: #dc2626;
-      font-size: var(--font-size-3xl);
-      font-weight: 700;
-      margin-bottom: var(--spacing-4);
-    }
-
-    .side-effects-intro {
-      font-size: var(--font-size-lg);
-      color: var(--gray-700);
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .side-effects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-6);
-      margin-bottom: var(--spacing-10);
-    }
-
-    .side-effect-card {
-      background: white;
-      border-radius: var(--radius-lg);
-      padding: var(--spacing-6);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      border-left: 4px solid;
-      transition: transform 0.3s ease;
-    }
-
-    .side-effect-card:hover {
-      transform: translateY(-2px);
-    }
-
-    .side-effect-card.frequent {
-      border-left-color: #ef4444;
-    }
-
-    .side-effect-card.moderate {
-      border-left-color: #f59e0b;
-    }
-
-    .side-effect-card.rare {
-      border-left-color: #dc2626;
-    }
-
-    .side-effect-header {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-3);
-      margin-bottom: var(--spacing-4);
-    }
-
-    .side-effect-icon {
-      font-size: 1.5rem;
-    }
-
-    .side-effect-header h3 {
-      color: var(--gray-800);
-      font-size: var(--font-size-lg);
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .side-effect-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 var(--spacing-4) 0;
-    }
-
-    .side-effect-list li {
-      padding: var(--spacing-2) 0;
-      border-bottom: 1px solid var(--gray-100);
-      color: var(--gray-700);
-    }
-
-    .side-effect-list li:last-child {
-      border-bottom: none;
-    }
-
-    .side-effect-link {
-      color: var(--primary-blue);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: var(--font-size-sm);
-      transition: color 0.3s ease;
-    }
-
-    .side-effect-link:hover {
-      color: var(--accent-green);
-    }
-
-    .side-effects-tips {
-      background: white;
-      border-radius: var(--radius-lg);
-      padding: var(--spacing-8);
-      margin-bottom: var(--spacing-8);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .tips-header h3 {
-      color: var(--gray-800);
-      font-size: var(--font-size-xl);
-      font-weight: 600;
-      margin-bottom: var(--spacing-6);
-      text-align: center;
-    }
-
-    .tips-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-4);
-    }
-
-    .tip-item {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--spacing-3);
-    }
-
-    .tip-emoji {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .tip-item p {
-      margin: 0;
-      color: var(--gray-700);
-      line-height: 1.5;
-    }
-
-    .side-effects-cta {
-      text-align: center;
-      background: rgba(255,255,255,0.7);
-      border-radius: var(--radius-lg);
-      padding: var(--spacing-6);
-    }
-
-    .cta-text {
-      color: var(--gray-700);
-      margin-bottom: var(--spacing-6);
-      font-size: var(--font-size-base);
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: var(--spacing-4);
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 768px) {
-      .side-effects-container {
-        padding: var(--spacing-8) var(--spacing-4);
-      }
-
-      .side-effects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .tips-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 300px;
-      }
-    }
-  </style>
-
-
-</StaticLayout>
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #articles-container {
+    transition: transform 0.3s ease;
+  }
+
+  /* FAQ accordion styling */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] summary {
+    border-bottom: 1px solid #e5e7eb;
+  }
+</style>

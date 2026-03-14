@@ -84,23 +84,23 @@ Seuls certains spécialistes peuvent prescrire Wegovy :
 
 Le prix de Wegovy varie selon la posologie et la pharmacie :
 
-| Dosage  | Prix moyen | Durée      |
-| ------- | ---------- | ---------- |
-| 0,25 mg | 289,90 €   | 4 semaines |
-| 0,5 mg  | 289,90 €   | 4 semaines |
-| 1 mg    | 289,90 €   | 4 semaines |
-| 1,7 mg  | 289,90 €   | 4 semaines |
-| 2,4 mg  | 289,90 €   | 4 semaines |
+| Dosage  | Coût mensuel estimé | Durée      |
+| ------- | ------------------- | ---------- |
+| 0,25 mg | ~169 €              | 4 semaines |
+| 0,5 mg  | ~210 €              | 4 semaines |
+| 1 mg    | ~250 €              | 4 semaines |
+| 1,7 mg  | ~310 €              | 4 semaines |
+| 2,4 mg  | ~360 €              | 4 semaines |
 
-*Coût mensuel estimé* : **289,90 €**
-*Coût annuel estimé* : **3 479 €**
+*Coût mensuel estimé* : **169 à 360 € selon le dosage**
+*Coût annuel estimé* : **2 028 à 4 320 €**
 
 ### Variations de prix selon les régions
 
 Les prix peuvent légèrement varier selon les pharmacies et les régions :
 
-* **Île-de-France** : 285-295 €
-* **Province** : 280-290 €
+* **Île-de-France** : prix généralement dans la fourchette haute (jusqu'à 360 €/mois)
+* **Province** : prix variables selon les pharmacies (à partir de 169 €/mois)
 * Statut actuel du remboursement
 
 **Wegovy n'est actuellement pas remboursé** par l'Assurance Maladie en France. Cependant, certaines situations particulières peuvent bénéficier d'une prise en charge :
@@ -224,13 +224,13 @@ Si Wegovy n'est pas disponible ou accessible :
 
 * **Indication première** : diabète de type 2
 * **Effet secondaire** : perte de poids
-* **Prix** : 89,90 €/mois
-* **Remboursement** : oui (si diabète)
+* **Prix** : ~59,90 €/stylo
+* **Remboursement** : oui, 65% (diabète de type 2 uniquement)
 
 **Saxenda** (liraglutide)
 
 * **Indication** : gestion du poids
-* **Prix** : 195 €/mois
+* **Prix** : 240-300 €/mois (non remboursé)
 * **Efficacité** : légèrement inférieure à Wegovy
 
 ### Solutions naturelles
@@ -340,7 +340,7 @@ Non, Wegovy est un médicament soumis à prescription médicale obligatoire en F
 Comptez 2 à 6 mois pour obtenir un rendez-vous chez un spécialiste habilité, selon votre région et le praticien choisi.
 
 **Le prix peut-il baisser en 2025 ?**
-Une baisse des prix est possible avec l'arrivée de médicaments génériques vers fin 2025, mais elle devrait rester modérée (10-15%).
+Le brevet de Wegovy expire en 2031. Des biosimilaires sont en développement mais pas encore disponibles. La concurrence accrue (Mounjaro commercialisé depuis novembre 2024) pourrait influencer les prix à terme.
 
 **Que faire en cas de rupture de stock ?**
 Contactez immédiatement votre médecin pour envisager une alternative temporaire (Ozempic ou Saxenda) ou un espacement des doses.

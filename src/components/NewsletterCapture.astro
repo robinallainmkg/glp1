@@ -6,7 +6,7 @@
   <div class="max-w-2xl mx-auto text-center">
     <div class="mb-6">
       <h3 class="text-2xl md:text-3xl font-bold mb-4">
-        📋 Guide Gratuit : Prix GLP-1 Actualisés 2025
+        📋 Guide Gratuit : Prix GLP-1 Actualisés 2026
       </h3>
       <p class="text-blue-100 text-lg">
         Recevez le comparateur complet des prix Ozempic, Wegovy, Mounjaro + liste des médecins qui prescrivent
@@ -41,51 +41,66 @@
     <!-- Social Proof -->
     <div class="mt-6 flex justify-center items-center gap-8 text-blue-100">
       <div class="text-center">
-        <div class="text-2xl font-bold text-yellow-400">1,247</div>
-        <div class="text-sm">Personnes informées</div>
+        <div class="text-2xl font-bold text-yellow-400">7</div>
+        <div class="text-sm">Traitements comparés</div>
       </div>
       <div class="text-center">
         <div class="text-2xl font-bold text-yellow-400">★★★★★</div>
         <div class="text-sm">Guide noté 4.8/5</div>
       </div>
       <div class="text-center">
-        <div class="text-2xl font-bold text-yellow-400">€672</div>
-        <div class="text-sm">Économies moyennes</div>
+        <div class="text-2xl font-bold text-yellow-400">100%</div>
+        <div class="text-sm">Gratuit et sans engagement</div>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+document.getElementById('newsletter-form')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  
-  const email = document.getElementById('email').value;
-  const button = e.target.querySelector('button');
+
+  const email = (document.getElementById('email') as HTMLInputElement).value;
+  const button = (e.target as HTMLFormElement).querySelector('button');
+  if (!button) return;
   const originalText = button.textContent;
-  
+
   button.textContent = 'Inscription...';
   button.disabled = true;
-  
+
   try {
-    // Intégration avec votre service d'email (Mailchimp, ConvertKit, etc.)
-    const response = await fetch('/api/newsletter', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, source: 'guide-prix-glp1' })
-    });
-    
-    if (response.ok) {
-      button.textContent = '✅ Inscrit !';
-      button.className = button.className.replace('from-yellow-400 to-orange-500', 'from-green-400 to-green-500');
-      
-      // Redirect vers page de téléchargement
-      setTimeout(() => {
-        window.location.href = '/guide-prix-glp1-2025.pdf';
-      }, 1000);
+    const { error } = await supabase
+      .from('contacts')
+      .insert({
+        email,
+        subject: 'Newsletter - Guide Prix GLP-1',
+        message: 'Inscription newsletter via homepage',
+        newsletter: true,
+        status: 'new'
+      });
+
+    if (error) {
+      console.error('Erreur Supabase:', error);
+      button.textContent = originalText;
+      button.disabled = false;
+      alert('Erreur lors de l\'inscription. Veuillez réessayer.');
+      return;
     }
+
+    button.textContent = '✅ Inscrit !';
+    button.className = button.className.replace('from-yellow-400 to-orange-500', 'from-green-400 to-green-500');
+    (document.getElementById('email') as HTMLInputElement).disabled = true;
   } catch (error) {
-    button.textContent = 'Erreur - Réessayer';
+    console.error('Erreur:', error);
+    button.textContent = originalText;
+    button.disabled = false;
+    alert('Erreur de connexion. Veuillez réessayer.');
   }
 });
 </script>

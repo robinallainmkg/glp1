@@ -84,7 +84,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
 ## recommandés
 
-* [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+* [prix Saxenda](../traitements-glp1/saxenda-prix/)
 * Médicaments GLP-1 : Panorama complet des traitements
 * Effets secondaires : Surveillance et prévention
 * Coûts et remboursement : Guide pratique 2025

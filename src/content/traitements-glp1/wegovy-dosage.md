@@ -4,9 +4,9 @@ description: "Guide complet du dosage Wegovy : posologie, augmentation progressi
 slug: "wegovy-dosage"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
-category: "Effets secondaires"
-tags: ["glp1", "effets-secondaires", "tolerance"]
-collection: "effets-secondaires-glp1"
+category: "Traitements"
+tags: ["glp1", "traitements", "dosage"]
+collection: "traitements-glp1"
 thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Dosage"
 featured: false
@@ -16,7 +16,7 @@ schema: "Article"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "effets-secondaires-glp1"
+affiliateCollection: "traitements-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -66,8 +66,13 @@ Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines
 - Dose thérapeutique intermédiaire
 - Évaluation de l'efficacité
 
-#### **Semaine 13-16 : Dose de maintenance**
+#### **Semaine 13-16 : Quatrième palier**
 - **1,7 mg** par semaine
+- Avant-dernière étape de titration
+- Évaluation de la tolérance
+
+#### **Semaine 17+ : Dose d'entretien**
+- **2,4 mg** par semaine
 - Dose maximale recommandée
 - Ajustement selon réponse individuelle
 

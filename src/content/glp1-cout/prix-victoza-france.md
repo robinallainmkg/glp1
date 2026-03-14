@@ -18,7 +18,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Prix Victoza 2025 : Coût par Dosage et Remboursement Mutuelle",
-  "description": "Prix Victoza en pharmacie : 75-85€ par mois. Coût réel après remboursement 65%.",
+  "description": "Prix Victoza en pharmacie : 60,26€ par mois (baisse février 2025). Coût réel après remboursement 65% (DT2 uniquement).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-victoza-france",
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
@@ -49,7 +49,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
         "name": "Quel est le prix de Victoza en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel de Victoza en pharmacie est de 75-85€ par mois. Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+          "text": "Le prix officiel de Victoza en pharmacie est de 60,26€ par mois (prix en baisse depuis février 2025). Après remboursement (65% Sécurité Sociale pour le diabète de type 2 + mutuelle), le coût réel patient varie selon votre couverture. Un formulaire obligatoire est requis depuis février 2025."
         }
       },
       {
@@ -73,18 +73,18 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 | Dosage | Prix par stylo | Prix mensuel estimé |
 |--------|----------------|-------------------|
-| 6 mg/ml | 75-85 € | 75-85 € |
+| 6 mg/ml | 60,26 € | 60,26 € |
 
-**Prix moyen mensuel** : 75-85 € (traitement complet)
+**Prix moyen mensuel** : 60,26 € (traitement complet, baisse de prix depuis février 2025)
 
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Victoza | 75-85 € | 65% |
-| Ozempic | 90-120 € | 65% |
-| Wegovy | 120-140 € | 65% |
-| Saxenda | 70-80 € | 65% |
+| Victoza | 60,26 € | 65% (DT2 uniquement) |
+| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Wegovy | 169-360 € | Non remboursé |
+| Saxenda | 240-300 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -93,16 +93,20 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 **Victoza est remboursé à 65%** par l'Assurance Maladie sous conditions :
 
 ✅ **Prescription médicale obligatoire**
-✅ **Diabète de type 2 confirmé**
+✅ **Diabète de type 2 confirmé** (remboursement DT2 uniquement)
 ✅ **Échec des antidiabétiques oraux**
+✅ **Formulaire de demande obligatoire** (depuis février 2025)
 ✅ **Traitement ≥ 3 mois** avec suivi médical
+
+**Note** : Le prix de Victoza a été revu à la baisse en **février 2025** (de 75-85€ à 60,26€/mois).
 
 ### Démarches pour le remboursement
 
 1. **Ordonnance médicale** : Prescription par endocrinologue ou diabétologue
-2. **Carte Vitale** : Présentation en pharmacie
-3. **Remboursement automatique** : 65% du prix réglementé
-4. **Tiers payant** : Possible selon votre mutuelle
+2. **Formulaire obligatoire** : Remplir le formulaire de demande (obligatoire depuis février 2025)
+3. **Carte Vitale** : Présentation en pharmacie
+4. **Remboursement automatique** : 65% du prix réglementé
+5. **Tiers payant** : Possible selon votre mutuelle
 
 ## 🏥 Couverture Mutuelle Santé
 
@@ -196,17 +200,17 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 | Critère | Victoza | Ozempic | Trulicity |
 |---------|---------|--------|-----------|
-| Prix mensuel | 75-85 € | 90-120 € | 85 € |
+| Prix mensuel | 60,26 € | 90-120 € | ~81 € |
 | Perte poids moyenne | -6% | -15% | -10% |
-| Remboursement | 65% | 65% | 65% |
-| Rapport qualité/prix | Moyen | Bon | Bon |
+| Remboursement | 65% (DT2) | 65% (DT2) | 65% (DT2) |
+| Rapport qualité/prix | Bon (prix bas) | Bon | Bon |
 
 ## 📝 Conclusion
 
 **Victoza offre un bon compromis prix/tolérance** pour le diabète de type 2, avec un remboursement identique aux autres GLP-1.
 
 ### Points clés à retenir :
-- **Prix moyen** : 75-85 €/mois
+- **Prix moyen** : 60,26 €/mois (baisse février 2025)
 - **Remboursement Sécu** : 65%
 - **Mutuelle** : 15-30% supplémentaire
 - **Aides disponibles** : Pour revenus modestes

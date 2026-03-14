@@ -12,13 +12,15 @@ readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
+thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
+thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 ---
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Prix Rybelsus 2025 : Coût par Dosage et Remboursement Mutuelle",
-  "description": "Prix Rybelsus en pharmacie : 80-100€ par mois. Coût réel après remboursement 65%.",
+  "description": "Prix Rybelsus en pharmacie : 80-110€ par mois. Coût réel après remboursement 65% (DT2 uniquement).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-rybelsus-france",
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
@@ -49,7 +51,7 @@ image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
         "name": "Quel est le prix de Rybelsus en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel de Rybelsus en pharmacie est de 80-100€ par mois. Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+          "text": "Le prix officiel de Rybelsus en pharmacie est de 80-110€ par mois. Après remboursement (65% Sécurité Sociale pour le diabète de type 2 + mutuelle), le coût réel patient varie selon votre couverture."
         }
       },
       {
@@ -73,20 +75,20 @@ image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
 
 | Dosage | Prix par boîte | Prix mensuel estimé |
 |--------|----------------|-------------------|
-| 3 mg | 85-95 € | 85-95 € |
-| 7 mg | 85-95 € | 85-95 € |
-| 14 mg | 85-95 € | 85-95 € |
+| 3 mg | 80-110 € | 80-110 € |
+| 7 mg | 80-110 € | 80-110 € |
+| 14 mg | 80-110 € | 80-110 € |
 
-**Prix moyen mensuel** : 85-95 € (traitement complet)
+**Prix moyen mensuel** : 80-110 € (traitement complet)
 
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Rybelsus | 85-95 € | 65% |
-| Ozempic | 90-120 € | 65% |
-| Wegovy | 120-140 € | 65% |
-| Saxenda | 70-80 € | 65% |
+| Rybelsus | 80-110 € | 65% (DT2 uniquement) |
+| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Wegovy | 169-360 € | Non remboursé |
+| Saxenda | 240-300 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -198,9 +200,9 @@ image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
 
 | Critère | Rybelsus | Ozempic | Trulicity |
 |---------|---------|--------|-----------|
-| Prix mensuel | 85-95 € | 90-120 € | 85 € |
+| Prix mensuel | 80-110 € | 90-120 € | ~81 € |
 | Perte poids moyenne | -12% | -15% | -10% |
-| Remboursement | 65% | 65% | 65% |
+| Remboursement | 65% (DT2) | 65% (DT2) | 65% (DT2) |
 | Rapport qualité/prix | Bon | Bon | Bon |
 
 ## 📝 Conclusion
@@ -208,16 +210,12 @@ image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
 **Rybelsus offre un prix compétitif** pour le diabète de type 2 sous forme orale, avec un remboursement identique aux autres GLP-1.
 
 ### Points clés à retenir :
-- **Prix moyen** : 85-95 €/mois
+- **Prix moyen** : 80-110 €/mois
 - **Remboursement Sécu** : 65%
 - **Mutuelle** : 15-30% supplémentaire
 - **Aides disponibles** : Pour revenus modestes
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
-
-thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
-thumbnailAlt: "Prix et coût du traitement rybelsus-france"
----
 
 ## Sommaire
 

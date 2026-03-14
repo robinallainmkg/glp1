@@ -1,5 +1,6 @@
 ---
 title: "Guide Complet Victoza : Prix, Effets Secondaires et Posologie"
+slug: "guide-complet-victoza"
 description: "Découvrez tout sur Victoza : traitement GLP-1 pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/victoza-medical-guide.jpg"
@@ -7,6 +8,7 @@ collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["victoza", "glp-1", "diabète", "traitement", "injection"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
 ---
 
 # Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire
@@ -151,13 +153,12 @@ Non, Victoza est spécifiquement indiqué pour le diabète de type 2.
 ### Puis-je boire de l'alcool avec Victoza ?
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
-### Victoza est-il remboursé pour l'obésité ?
-Non, Victoza n'est remboursé que pour le diabète de type 2.
+### Victoza est-il remboursé ?
+Victoza est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Son prix a baissé à **60,26 € par mois** depuis février 2025. Depuis le 1er février 2025, un formulaire de prescription obligatoire doit accompagner l'ordonnance pour que le remboursement soit effectif.
 
 ### Puis-je arrêter Victoza brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale.
 
 ---
 
-*Ce guide complet sur Victoza est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-victoza.md
+*Ce guide complet sur Victoza est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*
