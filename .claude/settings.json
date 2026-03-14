@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(npm run dev)",
+      "Bash(git *)",
+      "Read(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "Write(src/content/**)",
+      "Edit(src/content/**)",
+      "mcp__supabase__execute_sql"
+    ]
+  }
+}
