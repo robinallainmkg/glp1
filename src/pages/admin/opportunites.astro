@@ -1,0 +1,492 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunites - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      background: white;
+      color: #475569;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .refresh-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+    .last-update { font-size: 0.72rem; color: #94a3b8; }
+
+    .main { padding: 2rem; }
+
+    /* Stats cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-label { font-size: 0.78rem; color: #64748b; }
+    .sv-purple { color: #8b5cf6; }
+    .sv-blue { color: #3b82f6; }
+    .sv-green { color: #22c55e; }
+    .sv-amber { color: #f59e0b; }
+
+    /* Filters */
+    .filters-bar {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-btn {
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      background: white;
+      color: #475569;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: #8b5cf6; color: #8b5cf6; }
+    .filter-btn.active { background: #8b5cf6; color: white; border-color: #8b5cf6; }
+    .filter-count {
+      font-size: 0.68rem;
+      background: #f1f5f9;
+      padding: 0.1rem 0.4rem;
+      border-radius: 10px;
+      margin-left: 0.3rem;
+    }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); color: white; }
+    .search-input {
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      font-size: 0.78rem;
+      color: #1e293b;
+      width: 220px;
+      margin-left: auto;
+    }
+    .search-input:focus { outline: none; border-color: #8b5cf6; }
+
+    /* Opportunities table */
+    .opp-table-wrap {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+    .opp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .opp-table thead {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .opp-table th {
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: #475569;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .opp-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+    .opp-table tr:last-child td { border-bottom: none; }
+    .opp-table tr:hover { background: #faf5ff; }
+
+    .opp-topic {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.2rem;
+    }
+    .opp-desc {
+      font-size: 0.75rem;
+      color: #64748b;
+      line-height: 1.4;
+      max-width: 300px;
+    }
+    .opp-keyword {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.72rem;
+      font-family: monospace;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 12px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .badge-high { background: #fef2f2; color: #dc2626; }
+    .badge-medium { background: #fffbeb; color: #d97706; }
+    .badge-low { background: #f0fdf4; color: #16a34a; }
+
+    .priority-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+    .prio-1, .prio-2 { background: #fef2f2; color: #dc2626; }
+    .prio-3, .prio-4 { background: #fffbeb; color: #d97706; }
+    .prio-5, .prio-6, .prio-7, .prio-8, .prio-9, .prio-10 { background: #f0fdf4; color: #16a34a; }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 12px;
+      font-size: 0.68rem;
+      font-weight: 600;
+    }
+    .sb-approved { background: #dbeafe; color: #2563eb; }
+    .sb-identified { background: #f1f5f9; color: #64748b; }
+    .sb-in_progress { background: #fef3c7; color: #92400e; }
+    .sb-published { background: #dcfce7; color: #166534; }
+    .sb-rejected { background: #fef2f2; color: #991b1b; }
+
+    .collection-tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      background: #ede9fe;
+      color: #7c3aed;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: #94a3b8;
+      font-size: 0.88rem;
+    }
+
+    /* Command box */
+    .cmd-box {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .cmd-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #94a3b8;
+    }
+    .cmd-text strong { color: #c084fc; }
+    .cmd-copy {
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #475569;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 0.72rem;
+      cursor: pointer;
+    }
+    .cmd-copy:hover { border-color: #c084fc; color: #c084fc; }
+
+    .sources-list {
+      max-width: 200px;
+    }
+    .source-link {
+      display: block;
+      font-size: 0.68rem;
+      color: #8b5cf6;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.15rem;
+    }
+    .source-link:hover { text-decoration: underline; }
+
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .main { padding: 1rem; }
+      .page-header { padding: 1rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+      .opp-table-wrap { overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <div class="page-header-left">
+      <h1>Opportunites de Contenu</h1>
+      <p>Sujets identifies par l'agent Opportunities — prets pour l'agent Editorial</p>
+    </div>
+    <div class="header-actions">
+      <span class="last-update" id="lastUpdate"></span>
+      <button class="refresh-btn" onclick="loadAll()" title="Rafraichir">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 4v6h-6M1 20v-6h6"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+        Rafraichir
+      </button>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Command box -->
+    <div class="cmd-box">
+      <div class="cmd-text">
+        <strong>$</strong> claude -p "Cherche les opportunites de contenu" --agent opportunities
+      </div>
+      <button class="cmd-copy" onclick="navigator.clipboard.writeText('claude -p \"Cherche les opportunites de contenu\" --agent opportunities');this.textContent='Copie!'">Copier</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-card"><div class="stat-value sv-purple">-</div><div class="stat-label">Total opportunites</div></div>
+      <div class="stat-card"><div class="stat-value sv-blue">-</div><div class="stat-label">En attente</div></div>
+      <div class="stat-card"><div class="stat-value sv-green">-</div><div class="stat-label">Publiees</div></div>
+      <div class="stat-card"><div class="stat-value sv-amber">-</div><div class="stat-label">Priorite haute (1-2)</div></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters-bar" id="filtersBar"></div>
+
+    <!-- Table -->
+    <div class="opp-table-wrap">
+      <table class="opp-table">
+        <thead>
+          <tr>
+            <th>Prio</th>
+            <th>Sujet</th>
+            <th>Mot-cle</th>
+            <th>Volume</th>
+            <th>Competition</th>
+            <th>Collection</th>
+            <th>Statut</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="oppBody">
+          <tr><td colspan="8" class="empty-state">Chargement...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+  let allOpps = [];
+  let activeFilter = 'all';
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  async function supabaseFetch(table, query) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  function formatDate(d) {
+    if (!d) return '-';
+    return new Date(d).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
+  }
+
+  function volumeBadge(v) {
+    if (!v) return '-';
+    const lv = v.toLowerCase();
+    if (lv.includes('high')) return '<span class="badge badge-high">High</span>';
+    if (lv.includes('medium')) return '<span class="badge badge-medium">Medium</span>';
+    return '<span class="badge badge-low">Low</span>';
+  }
+
+  function competitionBadge(c) {
+    if (!c) return '-';
+    const lc = c.toLowerCase();
+    if (lc.includes('high')) return '<span class="badge badge-high">High</span>';
+    if (lc.includes('medium')) return '<span class="badge badge-medium">Medium</span>';
+    return '<span class="badge badge-low">Low</span>';
+  }
+
+  function statusBadge(s) {
+    const labels = {
+      'approved': 'Approuvee',
+      'identified': 'Identifiee',
+      'in_progress': 'En cours',
+      'published': 'Publiee',
+      'rejected': 'Rejetee'
+    };
+    return `<span class="status-badge sb-${s || 'identified'}">${labels[s] || s || '-'}</span>`;
+  }
+
+  function renderStats(opps) {
+    const total = opps.length;
+    const pending = opps.filter(o => o.status === 'approved' || o.status === 'identified').length;
+    const published = opps.filter(o => o.status === 'published').length;
+    const highPrio = opps.filter(o => o.priority && o.priority <= 2).length;
+
+    document.getElementById('statsGrid').innerHTML = `
+      <div class="stat-card"><div class="stat-value sv-purple">${total}</div><div class="stat-label">Total opportunites</div></div>
+      <div class="stat-card"><div class="stat-value sv-blue">${pending}</div><div class="stat-label">En attente</div></div>
+      <div class="stat-card"><div class="stat-value sv-green">${published}</div><div class="stat-label">Publiees</div></div>
+      <div class="stat-card"><div class="stat-value sv-amber">${highPrio}</div><div class="stat-label">Priorite haute (1-2)</div></div>
+    `;
+  }
+
+  function renderFilters(opps) {
+    const statuses = {};
+    opps.forEach(o => { statuses[o.status] = (statuses[o.status] || 0) + 1; });
+
+    const labels = { approved: 'Approuvees', identified: 'Identifiees', in_progress: 'En cours', published: 'Publiees', rejected: 'Rejetees' };
+    let html = `<button class="filter-btn ${activeFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">Tout<span class="filter-count">${opps.length}</span></button>`;
+
+    for (const [s, count] of Object.entries(statuses).sort()) {
+      html += `<button class="filter-btn ${activeFilter === s ? 'active' : ''}" onclick="setFilter('${s}')">${labels[s] || s}<span class="filter-count">${count}</span></button>`;
+    }
+
+    html += `<input type="text" class="search-input" placeholder="Rechercher un sujet..." oninput="searchOpps(this.value)" id="searchInput">`;
+    document.getElementById('filtersBar').innerHTML = html;
+  }
+
+  function renderTable(opps) {
+    const body = document.getElementById('oppBody');
+    if (opps.length === 0) {
+      body.innerHTML = '<tr><td colspan="8" class="empty-state">Aucune opportunite trouvee. Lance l\'agent opportunities pour en detecter.</td></tr>';
+      return;
+    }
+
+    body.innerHTML = opps.sort((a, b) => (a.priority || 10) - (b.priority || 10)).map(o => `
+      <tr>
+        <td><span class="priority-num prio-${o.priority || 10}">${o.priority || '-'}</span></td>
+        <td>
+          <div class="opp-topic">${escapeHtml(o.topic)}</div>
+          <div class="opp-desc">${escapeHtml(o.description || '')}</div>
+        </td>
+        <td><span class="opp-keyword">${escapeHtml(o.target_keyword || '-')}</span></td>
+        <td>${volumeBadge(o.estimated_volume)}</td>
+        <td>${competitionBadge(o.competition)}</td>
+        <td>${o.suggested_collection ? `<span class="collection-tag">${escapeHtml(o.suggested_collection)}</span>` : '-'}</td>
+        <td>${statusBadge(o.status)}</td>
+        <td style="font-size:0.72rem;color:#64748b;white-space:nowrap">${formatDate(o.created_at)}</td>
+      </tr>
+    `).join('');
+  }
+
+  window.setFilter = function(f) {
+    activeFilter = f;
+    applyFilters();
+  };
+
+  window.searchOpps = function(q) {
+    applyFilters(q);
+  };
+
+  function applyFilters(searchQuery) {
+    const q = (searchQuery || document.getElementById('searchInput')?.value || '').toLowerCase();
+    let filtered = allOpps;
+    if (activeFilter !== 'all') {
+      filtered = filtered.filter(o => o.status === activeFilter);
+    }
+    if (q) {
+      filtered = filtered.filter(o =>
+        (o.topic || '').toLowerCase().includes(q) ||
+        (o.target_keyword || '').toLowerCase().includes(q) ||
+        (o.description || '').toLowerCase().includes(q)
+      );
+    }
+    renderFilters(allOpps);
+    renderTable(filtered);
+  }
+
+  async function loadAll() {
+    try {
+      allOpps = await supabaseFetch('content_opportunities', 'select=*&order=priority.asc,created_at.desc');
+      renderStats(allOpps);
+      renderFilters(allOpps);
+      renderTable(allOpps);
+      document.getElementById('lastUpdate').textContent = 'Maj: ' + new Date().toLocaleTimeString('fr-FR');
+    } catch (e) {
+      document.getElementById('oppBody').innerHTML = `<tr><td colspan="8" class="empty-state" style="color:#ef4444">Erreur: ${escapeHtml(e.message)}</td></tr>`;
+    }
+  }
+
+  // Init + auto-refresh 30s
+  loadAll();
+  setInterval(loadAll, 30000);
+</script>
+
+</body>
+</html>

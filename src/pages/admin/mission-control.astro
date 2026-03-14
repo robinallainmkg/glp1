@@ -332,38 +332,38 @@ import { supabaseConfig } from '../../lib/supabase';
     <!-- Dependency graph -->
     <div class="dep-section">
       <div class="dep-title">Dependances</div>
-      <svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
-        <!-- SEO Audit -->
+      <svg viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- SEO Audit → Dashboard -->
         <rect x="10" y="15" width="120" height="36" rx="6" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
         <text x="70" y="38" text-anchor="middle" font-size="10" font-weight="600" fill="#38bdf8" font-family="JetBrains Mono, monospace">SEO Audit</text>
-        <line x1="130" y1="33" x2="680" y2="33" stroke="#1e293b" stroke-width="1" stroke-dasharray="4"/>
-        <!-- Analytics -->
-        <rect x="10" y="65" width="120" height="36" rx="6" fill="#111827" stroke="#1e3a1e" stroke-width="1"/>
-        <text x="70" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#4ade80" font-family="JetBrains Mono, monospace">Analytics</text>
-        <line x1="130" y1="83" x2="680" y2="83" stroke="#1e293b" stroke-width="1" stroke-dasharray="4"/>
+        <line x1="130" y1="33" x2="680" y2="50" stroke="#1e293b" stroke-width="1" stroke-dasharray="4"/>
+        <!-- Analytics → Dashboard -->
+        <rect x="10" y="60" width="120" height="36" rx="6" fill="#111827" stroke="#1e3a1e" stroke-width="1"/>
+        <text x="70" y="83" text-anchor="middle" font-size="10" font-weight="600" fill="#4ade80" font-family="JetBrains Mono, monospace">Analytics</text>
+        <line x1="130" y1="78" x2="680" y2="60" stroke="#1e293b" stroke-width="1" stroke-dasharray="4"/>
         <!-- Dashboard -->
-        <rect x="680" y="30" width="110" height="70" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
-        <text x="735" y="70" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Dashboard</text>
-        <!-- Fact-Check -->
-        <rect x="10" y="120" width="120" height="36" rx="6" fill="#111827" stroke="#3a2e1e" stroke-width="1"/>
-        <text x="70" y="143" text-anchor="middle" font-size="10" font-weight="600" fill="#fbbf24" font-family="JetBrains Mono, monospace">Fact-Check</text>
-        <line x1="130" y1="138" x2="280" y2="138" stroke="#fbbf2466" stroke-width="1" marker-end="url(#arrowGold)"/>
-        <!-- Opportunities -->
-        <rect x="10" y="165" width="120" height="36" rx="6" fill="none" stroke="#2e1e3a" stroke-width="1"/>
-        <text x="70" y="188" text-anchor="middle" font-size="10" font-weight="600" fill="#c084fc" font-family="JetBrains Mono, monospace">Opportunities</text>
-        <line x1="130" y1="183" x2="280" y2="158" stroke="#c084fc66" stroke-width="1" marker-end="url(#arrowPurple)"/>
-        <!-- Human review -->
-        <rect x="280" y="125" width="130" height="44" rx="6" fill="#111827" stroke="#ef444444" stroke-width="1"/>
-        <text x="345" y="147" text-anchor="middle" font-size="9" font-weight="600" fill="#f87171" font-family="JetBrains Mono, monospace">Revue humaine</text>
-        <text x="345" y="160" text-anchor="middle" font-size="8" fill="#475569" font-family="JetBrains Mono, monospace">(approbation)</text>
-        <line x1="410" y1="147" x2="490" y2="147" stroke="#67e8f966" stroke-width="1" marker-end="url(#arrowCyan)"/>
+        <rect x="680" y="35" width="110" height="50" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
+        <text x="735" y="65" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Dashboard</text>
+        <!-- Fact-Check → Editorial -->
+        <rect x="10" y="110" width="120" height="36" rx="6" fill="#111827" stroke="#3a2e1e" stroke-width="1"/>
+        <text x="70" y="133" text-anchor="middle" font-size="10" font-weight="600" fill="#fbbf24" font-family="JetBrains Mono, monospace">Fact-Check</text>
+        <line x1="130" y1="128" x2="280" y2="128" stroke="#fbbf2466" stroke-width="1.5" marker-end="url(#arrowGold)"/>
+        <!-- Tickets auto-approved -->
+        <text x="205" y="120" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">tickets</text>
+        <!-- Opportunities → Editorial -->
+        <rect x="10" y="155" width="120" height="36" rx="6" fill="#111827" stroke="#2e1e3a" stroke-width="1"/>
+        <text x="70" y="178" text-anchor="middle" font-size="10" font-weight="600" fill="#c084fc" font-family="JetBrains Mono, monospace">Opportunities</text>
+        <line x1="130" y1="173" x2="280" y2="148" stroke="#c084fc66" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+        <text x="205" y="168" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">sujets</text>
         <!-- Editorial -->
-        <rect x="490" y="130" width="120" height="36" rx="6" fill="#111827" stroke="#1e2e3a" stroke-width="1"/>
-        <text x="550" y="153" text-anchor="middle" font-size="10" font-weight="600" fill="#67e8f9" font-family="JetBrains Mono, monospace">Editorial</text>
-        <line x1="610" y1="148" x2="680" y2="148" stroke="#22c55e66" stroke-width="1" marker-end="url(#arrowGreen)"/>
-        <!-- Deploy -->
-        <rect x="680" y="130" width="110" height="36" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
-        <text x="735" y="153" text-anchor="middle" font-size="10" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Deploy</text>
+        <rect x="280" y="118" width="120" height="36" rx="6" fill="#111827" stroke="#1e2e3a" stroke-width="1"/>
+        <text x="340" y="141" text-anchor="middle" font-size="10" font-weight="600" fill="#67e8f9" font-family="JetBrains Mono, monospace">Editorial</text>
+        <line x1="400" y1="136" x2="490" y2="136" stroke="#67e8f966" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
+        <!-- Git + Deploy -->
+        <rect x="490" y="118" width="100" height="36" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
+        <text x="540" y="135" text-anchor="middle" font-size="9" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Git Push</text>
+        <text x="540" y="147" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">→ Deploy</text>
+        <line x1="590" y1="136" x2="680" y2="80" stroke="#22c55e44" stroke-width="1" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
         <defs>
           <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
           <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c084fc"/></marker>
@@ -416,10 +416,16 @@ import { supabaseConfig } from '../../lib/supabase';
   function timeAgo(dateStr) {
     if (!dateStr) return 'jamais';
     const diff = Date.now() - new Date(dateStr).getTime();
-    if (diff < 60000) return 'a l\'instant';
-    if (diff < 3600000) return Math.floor(diff / 60000) + 'min';
-    if (diff < 86400000) return Math.floor(diff / 3600000) + 'h';
-    return Math.floor(diff / 86400000) + 'j';
+    if (diff < 60000) return 'il y a < 1min';
+    if (diff < 3600000) return 'il y a ' + Math.floor(diff / 60000) + 'min';
+    if (diff < 86400000) return 'il y a ' + Math.floor(diff / 3600000) + 'h';
+    return 'il y a ' + Math.floor(diff / 86400000) + 'j';
+  }
+
+  function formatDuration(ms) {
+    if (!ms) return '';
+    if (ms < 60000) return Math.round(ms / 1000) + 's';
+    return Math.floor(ms / 60000) + 'min ' + Math.round((ms % 60000) / 1000) + 's';
   }
 
   function formatTime(dateStr) {
@@ -463,18 +469,28 @@ import { supabaseConfig } from '../../lib/supabase';
         const items = run?.items_processed ?? '-';
         const errors = run?.items_errors ?? '-';
 
+        const duration = run?.duration_ms ? formatDuration(run.duration_ms)
+          : (run?.started_at && run?.completed_at)
+            ? formatDuration(new Date(run.completed_at) - new Date(run.started_at))
+            : '';
+        const lastTime = run?.completed_at
+          ? timeAgo(run.completed_at)
+          : run?.started_at
+            ? timeAgo(run.started_at)
+            : 'jamais lance';
+
         return `<div class="agent-card ${status}">
           <div class="agent-icon icon-${a.icon}">${a.label[0]}</div>
           <div class="agent-name">${a.label}</div>
           <div class="agent-status-line">
             <span class="status-indicator si-${status}"></span>
-            <span class="status-text">${statusLabel}</span>
+            <span class="status-text">${statusLabel.toUpperCase()}</span>
           </div>
           <div class="agent-counters">
             <div class="counter"><strong>${items}</strong>traites</div>
             <div class="counter"><strong>${errors}</strong>erreurs</div>
           </div>
-          <div class="agent-last-action">${run ? timeAgo(run.started_at) : 'jamais lance'}</div>
+          <div class="agent-last-action">${lastTime}${duration ? ' · ' + duration : ''}</div>
         </div>`;
       }).join('');
     } catch (e) {
@@ -573,11 +589,11 @@ import { supabaseConfig } from '../../lib/supabase';
     connect();
   }
 
-  // Fallback polling (if Realtime fails)
+  // Polling every 5s for reliable updates
   setInterval(() => {
     loadAgents();
     loadLogs(true);
-  }, 10000);
+  }, 5000);
 
   // Init
   loadAgents();

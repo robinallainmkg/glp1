@@ -79,6 +79,8 @@ claude -p "Traite les corrections" --agent editorial
 - `opportunities` → cree des `content_opportunities` → `editorial` les consomme
 
 ### Dashboards Admin
+- **Mission Control** (`src/pages/admin/mission-control.astro`) — War room temps reel, statut des 5 agents, live feed
+- **Audit SEO** (`src/pages/admin/audit.astro`) — Resultats d'audit SEO avec historique
 - **Fact-Check** (`src/pages/admin/fact-check.astro`) — Client-side fetching
 - **Editorial** (`src/pages/admin/editorial.astro`) — Client-side fetching
 - **Integration** (`src/pages/admin/integration.astro`) — Client-side fetching
@@ -97,9 +99,9 @@ claude -p "Traite les corrections" --agent editorial
 - `content_opportunities` — Opportunites de contenu (sujet, priorite, statut)
 
 ### Statuts des tickets
-`pending_review` → `approved` → `in_progress` → `ready_to_deploy` → `deployed`
-`pending_review` → `rejected`
-`pending_review` → `revision_needed` (avec note humaine)
+Les tickets sont **auto-approuves** (pas de validation humaine) :
+`approved` → `in_progress` → `ready_to_deploy` → `deployed`
+`approved` → `rejected` (si necessaire manuellement)
 
 ## Conventions
 
