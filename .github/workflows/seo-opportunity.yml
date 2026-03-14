@@ -44,3 +44,46 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Rapport de run
+        if: always()
+        run: |
+          echo "## Agent SEO Opportunity Finder" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metrique | Valeur |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Opportunites trouvees | ${{ steps.seo.outputs.opportunities || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Nouvelles inserees | ${{ steps.seo.outputs.inserted || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Tendances | ${{ steps.seo.outputs.trends || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Enrichissements | ${{ steps.seo.outputs.enrichments || 'N/A' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Dashboard: https://glp1-france.fr/admin/seo/" >> $GITHUB_STEP_SUMMARY
+
+      - name: Notification email
+        if: always()
+        run: |
+          node -e "
+          const nodemailer = require('nodemailer');
+          if (!process.env.SMTP_HOST || !process.env.ALERT_EMAIL_TO) {
+            console.log('SMTP non configure - skip email');
+            process.exit(0);
+          }
+          const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: parseInt(process.env.SMTP_PORT || '587'),
+            secure: process.env.SMTP_PORT === '465',
+            auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
+          });
+          transporter.sendMail({
+            from: process.env.SMTP_USER,
+            to: process.env.ALERT_EMAIL_TO,
+            subject: '[GLP1] SEO Opportunity Finder — Run termine',
+            text: 'L agent SEO a termine son analyse.\n\nDashboard: https://glp1-france.fr/admin/seo/\nActions: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
+          }).then(() => console.log('Email envoye')).catch(e => console.log('Email skip:', e.message));
+          " 2>/dev/null || echo "Email notification skipped"
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
