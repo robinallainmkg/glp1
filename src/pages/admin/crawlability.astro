@@ -310,6 +310,12 @@ import { supabaseConfig } from '../../lib/supabase';
   </style>
 </head>
 <body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  if (!sessionStorage.getItem('admin_auth')) {
+    window.location.href = '/admin/login/';
+  }
+</script>
   <AdminNav />
 
   <div class="admin-layout">

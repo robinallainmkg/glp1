@@ -189,6 +189,12 @@ import { supabaseConfig } from '../../lib/supabase';
   </style>
 </head>
 <body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  if (!sessionStorage.getItem('admin_auth')) {
+    window.location.href = '/admin/login/';
+  }
+</script>
 
 <AdminNav />
 
@@ -274,12 +280,21 @@ import { supabaseConfig } from '../../lib/supabase';
           <div class="card-icon amber">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
           </div>
-          <div class="card-title">SEO</div>
+          <div class="card-title">SEO Opportunites</div>
         </div>
-        <div class="card-desc">Agent Opportunite SEO — Phase 2. Analyse et recommandations.</div>
-        <div class="card-stats">
-          <span class="mini-stat" style="background:#fef3c7;color:#92400e">Bientot</span>
+        <div class="card-desc">Detection automatique d'opportunites de contenu. Analyse hebdomadaire du marche.</div>
+        <div class="card-stats" id="seo-stats"></div>
+      </a>
+
+      <a href="/admin/content-creator/" class="overview-card">
+        <div class="card-top">
+          <div class="card-icon" style="background:#f3e8ff;color:#7c3aed;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          </div>
+          <div class="card-title">Content Creator</div>
         </div>
+        <div class="card-desc">Creation automatique d'articles depuis les opportunites SEO approuvees.</div>
+        <div class="card-stats" id="cc-stats"></div>
       </a>
 
       <a href="/admin/audit/" class="overview-card">

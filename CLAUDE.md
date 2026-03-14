@@ -55,10 +55,30 @@ supabase/migrations/       — Migrations SQL
 - **Workflow** : `.github/workflows/integration-agent.yml` (manuel uniquement)
 - **Secret GitHub** : `PRIVATEHERE` (token GitHub pour push + PR)
 
+### Agent SEO Opportunity Finder (`scripts/seo-opportunity-agent.mjs`)
+- **Statut** : Opérationnel
+- **Modèle** : claude-sonnet-4-20250514 + web search (25 max)
+- **Fonction** : Analyse le marché GLP-1 FR, détecte les lacunes de contenu, propose des opportunités
+- **Output** : `seo_opportunities` dans Supabase (pending_review → approved → content_created)
+- **Déclencheur** : GitHub Actions (cron mercredi 6h UTC) ou manuel
+- **Workflow** : `.github/workflows/seo-opportunity.yml`
+- **Options** : `--focus all|new|enrich`
+
+### Agent Content Creator (`scripts/content-creator-agent.mjs`)
+- **Statut** : Opérationnel
+- **Modèle** : claude-sonnet-4-20250514 + web search (20 max/article)
+- **Fonction** : Génère des articles complets à partir des opportunités SEO approuvées
+- **Output** : Fichiers markdown dans `src/content/[collection]/`, commit + push automatique
+- **Déclencheur** : GitHub Actions (cron quotidien 10h UTC) ou manuel
+- **Workflow** : `.github/workflows/content-creator.yml`
+- **Options** : `--limit N`, `--opportunity-id UUID`
+
 ### Dashboards Admin
 - **Fact-Check** (`src/pages/admin/fact-check.astro`) — Client-side fetching, opérationnel
 - **Editorial** (`src/pages/admin/editorial.astro`) — Client-side fetching, opérationnel
 - **Integration** (`src/pages/admin/integration.astro`) — Client-side fetching, opérationnel
+- **SEO Opportunités** (`src/pages/admin/seo.astro`) — Gestion des opportunités, approbation/rejet
+- **Content Creator** (`src/pages/admin/content-creator.astro`) — Pipeline de création d'articles
 
 ## Base de données Supabase
 
@@ -66,12 +86,25 @@ supabase/migrations/       — Migrations SQL
 - `articles` — Articles du site (content, slug, collection, is_active, last_fact_checked)
 - `fact_check_results` — Résultats des vérifications (score, statut, points)
 - `correction_tickets` — Tickets individuels (before/after, urgence, type, statut)
+- `seo_opportunities` — Opportunités de contenu détectées par l'agent SEO
 - `agent_logs` — Logs d'exécution des agents
 
-### Statuts des tickets
+### Statuts des tickets de correction
 `pending_review` → `approved` → `in_progress` → `ready_to_deploy` → `deployed`
 `pending_review` → `rejected`
 `pending_review` → `revision_needed` (avec note humaine)
+
+### Statuts des opportunités SEO
+`pending_review` → `approved` → `in_progress` → `content_created` → `published`
+`pending_review` → `rejected`
+
+### Pipeline automatisé complet
+1. **SEO Opportunity Finder** (mercredi) → détecte des opportunités → `seo_opportunities`
+2. **Humain** → approuve/rejette les opportunités dans le dashboard admin
+3. **Content Creator** (quotidien) → génère les articles approuvés → `src/content/`
+4. **Fact-Check** (lundi) → vérifie les articles → `correction_tickets`
+5. **Editorial** (quotidien) → rédige les corrections finales
+6. **Integration** (manuel) → applique les corrections → crée des PR
 
 ## Conventions
 

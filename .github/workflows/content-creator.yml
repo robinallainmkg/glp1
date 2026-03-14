@@ -1,0 +1,68 @@
+name: "Agent Content Creator GLP1"
+
+on:
+  # Execution quotidienne a 10h UTC (12h Paris) — apres l'editorial (9h)
+  schedule:
+    - cron: "0 10 * * *"
+
+  # Declenchement manuel
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Nombre max d'articles a creer (0 = tous approuves)"
+        required: false
+        default: "0"
+      id:
+        description: "UUID d'une opportunite specifique (optionnel)"
+        required: false
+        default: ""
+
+jobs:
+  content-creation:
+    name: "Creation de contenu"
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Installation des dependances
+        run: npm ci
+
+      - name: Execution de l'agent content creator
+        id: creator
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.limit }}" != "" ] && [ "${{ github.event.inputs.limit }}" != "0" ]; then
+            ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          if [ "${{ github.event.inputs.id }}" != "" ]; then
+            ARGS="$ARGS --opportunity-id ${{ github.event.inputs.id }}"
+          fi
+          node scripts/content-creator-agent.mjs $ARGS
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit et push des nouveaux articles
+        if: success()
+        run: |
+          git config user.name "content-creator-bot"
+          git config user.email "bot@glp1-france.fr"
+          git add src/content/
+          if git diff --staged --quiet; then
+            echo "Aucun nouveau fichier a commiter"
+          else
+            git commit -m "feat: auto-generated articles by content-creator agent"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.PRIVATEHERE }}
