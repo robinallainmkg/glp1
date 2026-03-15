@@ -1,0 +1,418 @@
+// supabase/functions/ai-coach/index.ts
+// Edge Function : Coach IA GLP-1 v2 — RAG + LLM
+//
+// POST /functions/v1/ai-coach
+// Body : { session_id, message, conversation_id?, page_url? }
+// Returns : { response, conversation_id, sources[] }
+
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+// --- Configuration ---
+const MAX_HISTORY = 6;
+const MAX_RAG_CHUNKS = 5;
+const RAG_THRESHOLD = 0.65;
+const MAX_INPUT_LENGTH = 500;
+const MAX_RESPONSE_TOKENS = 800;
+const RATE_LIMIT_WINDOW_MIN = 10;
+const RATE_LIMIT_WINDOW_MAX = 20;
+const RATE_LIMIT_HOURLY_MAX = 60;
+
+const SYSTEM_PROMPT = `Tu es le Coach GLP-1 France, un assistant d'information specialise dans les traitements agonistes du recepteur GLP-1 (semaglutide, tirzepatide, liraglutide, dulaglutide) en France.
+
+REGLES ABSOLUES :
+1. Tu ne poses JAMAIS de diagnostic medical. Tu ne recommandes JAMAIS un traitement specifique a quelqu'un.
+2. Tu renvoies TOUJOURS vers un medecin (medecin traitant, endocrinologue, centre specialise obesite) pour toute decision medicale.
+3. Tu ne prescris RIEN. Tu informes uniquement.
+4. Si quelqu'un decrit des symptomes graves (douleur abdominale severe, vomissements persistants, pensees suicidaires, reaction allergique, pancreatite), tu dis d'appeler le 15 (SAMU) ou le 112 immediatement. Ne temporise pas.
+5. Tu ne vends RIEN. GLP-1 France est un site d'information independant, PAS une pharmacie, PAS un vendeur.
+6. Si quelqu'un mentionne un achat en ligne sans ordonnance, tu alertes SYSTEMATIQUEMENT sur le risque d'arnaque et de contrefacon. Oriente vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr si victime.
+7. Tu reponds UNIQUEMENT en francais.
+8. Tu utilises un ton chaleureux, accessible, bienveillant mais professionnel. Tutoiement si l'utilisateur tutoie, vouvoiement sinon.
+9. Tu cites les articles du site quand c'est pertinent.
+10. Tu gardes tes reponses concises (max 150 mots sauf si la question necessite plus de detail).
+11. Si la question est medicale, ajoute en fin de reponse : "⚕️ Ces informations sont donnees a titre indicatif et ne remplacent pas l'avis d'un professionnel de sante."
+
+CONTEXTE IMPORTANT :
+- Les vrais GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
+- Beaucoup d'utilisateurs ont ete victimes d'arnaques (faux GLP-1 en gelules, flacons, achetes en ligne)
+- Prix approximatifs : Ozempic ~77 EUR/mois (rembourse 65% pour diabete T2), Wegovy ~300 EUR/mois (non rembourse), Mounjaro ~350 EUR/mois (non rembourse)
+- Wegovy est en attente de negociation de prix avec le CEPS pour un eventuel remboursement`;
+
+// --- Fallback v1 (rules engine) ---
+const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
+  {
+    intent: 'scam',
+    pattern: /arnaque|faux|fraud|escroqu|command.*re[cç]u|gel[ue]le|contref|fak/i,
+    response: "⚠️ ATTENTION : de nombreux sites frauduleux vendent de faux GLP-1 (gelules, flacons). Ces produits sont illegaux et potentiellement dangereux.\n\nSi vous avez ete victime :\n1. Faites opposition sur votre carte bancaire\n2. Signalez sur signal.conso.gouv.fr\n3. Portez plainte sur pre-plainte-en-ligne.gouv.fr\n\nLes vrais traitements GLP-1 ne se vendent QU'en pharmacie, sur ordonnance."
+  },
+  {
+    intent: 'selling',
+    pattern: /vend|achet|command|produit|stock|livr/i,
+    response: "GLP-1 France est un site d'information independant. Nous ne vendons aucun produit.\n\nLes traitements GLP-1 sont des medicaments sur ordonnance. Le parcours legal :\n1. Consultation medecin traitant ou endocrinologue\n2. Ordonnance si indique medicalement\n3. Achat en pharmacie uniquement\n\n⚠️ Mefiez-vous des sites qui vendent du GLP-1 en ligne sans ordonnance."
+  },
+  {
+    intent: 'price',
+    pattern: /prix|co[uû]t|rembours|tarif|cher|combien/i,
+    response: "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse, negociation CEPS en cours)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.\n\n⚕️ Ces informations sont donnees a titre indicatif."
+  },
+  {
+    intent: 'device',
+    pattern: /stylo|inject|piqu|marche pas|kwikpen|flextouch|bloqu/i,
+    response: "Si votre stylo injecteur ne fonctionne pas, verifiez :\n\n1. ✅ L'aiguille est bien vissee\n2. ✅ La dose est selectionnee (pas a 0)\n3. ✅ La cartouche n'est pas vide\n4. ✅ Conservation au frigo (2-8°C avant ouverture)\n5. ✅ Pas expire\n\nSi le probleme persiste, contactez votre pharmacien ou le laboratoire fabricant. Ne forcez jamais le mecanisme."
+  },
+  {
+    intent: 'diabetes',
+    pattern: /diab[eè]t|glyc[eé]mi|insuline|type 2|hba1c/i,
+    response: "Plusieurs GLP-1 sont specifiquement indiques pour le diabete de type 2 :\n\n• Ozempic (semaglutide) — le plus prescrit\n• Trulicity (dulaglutide)\n• Victoza (liraglutide)\n\nLa decision depend de votre traitement actuel et de votre HbA1c. Consultez votre endocrinologue pour adapter votre traitement.\n\n⚕️ Ces informations sont donnees a titre indicatif et ne remplacent pas l'avis d'un professionnel de sante."
+  },
+  {
+    intent: 'diet',
+    pattern: /r[eé]gime|nutrition|aliment|manger|repas|prot[eé]ine/i,
+    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nL'accompagnement par un dieteticien est recommande.\n\n⚕️ Ces informations sont donnees a titre indicatif."
+  },
+  {
+    intent: 'weight',
+    pattern: /perte.*poids|maigri|kilos?|pas.*perdu|combien.*perd/i,
+    response: "Les resultats varient selon les personnes :\n\n📅 Semaines 1-4 : premiers effets (reduction appetit)\n📅 Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n📅 Mois 3-6 : resultats les plus significatifs\n\nEn moyenne, les etudes montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi apres 3 mois sans resultat, parlez-en a votre medecin (dose a ajuster ?).\n\n⚕️ Ces informations sont donnees a titre indicatif."
+  },
+  {
+    intent: 'prescription',
+    pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir/i,
+    response: "Comment obtenir un traitement GLP-1 en France :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou centre specialise obesite (CSO)\n2. 🔬 Bilan — Poids, IMC, comorbidites, analyses sanguines\n3. ⚖️ Decision — Le medecin evalue si un GLP-1 est indique pour vous\n4. 📋 Ordonnance — Si oui, prescription medicale\n5. 💊 Pharmacie — Retrait du medicament en pharmacie\n\nIMC minimum generalement requis : 30 kg/m² (ou 27 avec comorbidites)."
+  }
+];
+
+function classifyAndRespond(message: string): { intent: string; response: string } {
+  const lower = message.toLowerCase();
+  for (const { intent, pattern, response } of INTENT_PATTERNS) {
+    if (pattern.test(lower)) {
+      return { intent, response };
+    }
+  }
+  return {
+    intent: 'general',
+    response: "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !"
+  };
+}
+
+// --- CORS headers ---
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Authorization, Content-Type, apikey, x-client-info",
+};
+
+function jsonResponse(body: object, status = 200) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "Content-Type": "application/json", ...CORS_HEADERS },
+  });
+}
+
+// --- Main handler ---
+serve(async (req) => {
+  // CORS preflight
+  if (req.method === "OPTIONS") {
+    return new Response("ok", { headers: CORS_HEADERS });
+  }
+
+  if (req.method !== "POST") {
+    return jsonResponse({ error: "POST uniquement" }, 405);
+  }
+
+  try {
+    const { session_id, message, conversation_id, page_url } = await req.json();
+
+    // --- Input validation ---
+    if (!session_id || typeof session_id !== "string") {
+      return jsonResponse({ error: "session_id requis" }, 400);
+    }
+    if (!message || typeof message !== "string") {
+      return jsonResponse({ error: "message requis" }, 400);
+    }
+    const cleanMessage = message.trim().slice(0, MAX_INPUT_LENGTH);
+    if (cleanMessage.length === 0) {
+      return jsonResponse({ error: "message vide" }, 400);
+    }
+
+    // --- Supabase client (service role) ---
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // --- Rate limiting ---
+    const now = new Date();
+    const { data: rateData } = await supabase
+      .from("coach_rate_limits")
+      .select("*")
+      .eq("session_id", session_id)
+      .single();
+
+    if (rateData) {
+      const windowStart = new Date(rateData.window_start);
+      const hourlyStart = new Date(rateData.hourly_start);
+      const windowElapsed = (now.getTime() - windowStart.getTime()) / 60000;
+      const hourlyElapsed = (now.getTime() - hourlyStart.getTime()) / 60000;
+
+      let newCount = rateData.message_count;
+      let newWindowStart = rateData.window_start;
+      let newHourlyCount = rateData.hourly_count;
+      let newHourlyStart = rateData.hourly_start;
+
+      if (windowElapsed > RATE_LIMIT_WINDOW_MIN) {
+        newCount = 0;
+        newWindowStart = now.toISOString();
+      }
+      if (hourlyElapsed > 60) {
+        newHourlyCount = 0;
+        newHourlyStart = now.toISOString();
+      }
+
+      if (newCount >= RATE_LIMIT_WINDOW_MAX) {
+        return jsonResponse({ error: "rate_limit", message: "Trop de messages. Reessayez dans quelques minutes." }, 429);
+      }
+      if (newHourlyCount >= RATE_LIMIT_HOURLY_MAX) {
+        return jsonResponse({ error: "rate_limit", message: "Limite horaire atteinte. Reessayez plus tard." }, 429);
+      }
+
+      await supabase
+        .from("coach_rate_limits")
+        .update({
+          message_count: newCount + 1,
+          window_start: newWindowStart,
+          hourly_count: newHourlyCount + 1,
+          hourly_start: newHourlyStart,
+        })
+        .eq("session_id", session_id);
+    } else {
+      await supabase.from("coach_rate_limits").insert({
+        session_id,
+        message_count: 1,
+        window_start: now.toISOString(),
+        hourly_count: 1,
+        hourly_start: now.toISOString(),
+      });
+    }
+
+    // --- Conversation management ---
+    let convId = conversation_id;
+    if (!convId) {
+      const { data: existingConv } = await supabase
+        .from("coach_conversations")
+        .select("id")
+        .eq("session_id", session_id)
+        .order("last_message_at", { ascending: false })
+        .limit(1)
+        .single();
+
+      if (existingConv) {
+        convId = existingConv.id;
+      } else {
+        const { data: newConv } = await supabase
+          .from("coach_conversations")
+          .insert({
+            session_id,
+            page_url: page_url || null,
+            user_agent: req.headers.get("user-agent") || null,
+          })
+          .select("id")
+          .single();
+        convId = newConv?.id;
+      }
+    }
+
+    // Update last_message_at
+    await supabase
+      .from("coach_conversations")
+      .update({ last_message_at: now.toISOString() })
+      .eq("id", convId);
+
+    // --- Try LLM path (Groq + RAG) ---
+    const groqKey = Deno.env.get("GROQ_API_KEY");
+    const mistralKey = Deno.env.get("MISTRAL_API_KEY");
+
+    if (!groqKey || !mistralKey) {
+      // No API keys configured — use fallback
+      console.warn("API keys not configured, using fallback v1");
+      const fallback = classifyAndRespond(cleanMessage);
+      await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null);
+      return jsonResponse({ response: fallback.response, conversation_id: convId, sources: [], model: "fallback-v1" });
+    }
+
+    try {
+      // --- 1. Embed user message via Mistral ---
+      const embedResponse = await fetch("https://api.mistral.ai/v1/embeddings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${mistralKey}`,
+        },
+        body: JSON.stringify({
+          model: "mistral-embed",
+          input: [cleanMessage],
+        }),
+      });
+
+      if (!embedResponse.ok) {
+        throw new Error(`Mistral embed error: ${embedResponse.status}`);
+      }
+
+      const embedData = await embedResponse.json();
+      const queryEmbedding = embedData.data[0].embedding;
+
+      // --- 2. Search pgvector for relevant chunks ---
+      const { data: chunks, error: chunksError } = await supabase
+        .rpc("match_article_chunks", {
+          query_embedding: queryEmbedding,
+          match_threshold: RAG_THRESHOLD,
+          match_count: MAX_RAG_CHUNKS,
+        });
+
+      if (chunksError) {
+        console.error("pgvector search error:", chunksError);
+      }
+
+      const ragContext = (chunks || [])
+        .map((c: any) => `---\nArticle: ${c.title} (/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${c.content}\n---`)
+        .join("\n\n");
+
+      const sources = (chunks || []).map((c: any) => ({
+        slug: c.article_slug,
+        collection: c.collection,
+        title: c.title,
+        similarity: c.similarity,
+      }));
+
+      // --- 3. Load conversation history ---
+      const { data: history } = await supabase
+        .from("coach_messages")
+        .select("role, content")
+        .eq("conversation_id", convId)
+        .order("created_at", { ascending: false })
+        .limit(MAX_HISTORY);
+
+      const historyMessages = (history || [])
+        .reverse()
+        .map((m: any) => ({ role: m.role, content: m.content }));
+
+      // --- 4. Build messages for LLM ---
+      const userMessageWithContext = ragContext
+        ? `Contexte pertinent de nos articles (utilise ces informations pour repondre) :\n\n${ragContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
+        : cleanMessage;
+
+      const messages = [
+        { role: "system", content: SYSTEM_PROMPT },
+        ...historyMessages,
+        { role: "user", content: userMessageWithContext },
+      ];
+
+      // --- 5. Call Groq LLM ---
+      const llmResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${groqKey}`,
+        },
+        body: JSON.stringify({
+          model: "llama-3.1-8b-instant",
+          messages,
+          temperature: 0.3,
+          max_tokens: MAX_RESPONSE_TOKENS,
+          top_p: 0.9,
+        }),
+      });
+
+      if (!llmResponse.ok) {
+        const errText = await llmResponse.text();
+        throw new Error(`Groq error (${llmResponse.status}): ${errText}`);
+      }
+
+      const llmData = await llmResponse.json();
+      const assistantResponse = llmData.choices[0]?.message?.content || "Desole, je n'ai pas pu generer une reponse.";
+      const tokensUsed = llmData.usage?.total_tokens || null;
+
+      // --- 6. Save messages ---
+      await saveMessages(
+        supabase, convId, session_id, cleanMessage, assistantResponse,
+        null, "llama-3.1-8b-instant",
+        sources.length > 0 ? sources : null,
+        tokensUsed
+      );
+
+      return jsonResponse({
+        response: assistantResponse,
+        conversation_id: convId,
+        sources: sources.slice(0, 3), // max 3 sources to display
+        model: "llama-3.1-8b-instant",
+      });
+
+    } catch (llmError) {
+      // --- Fallback v1 si LLM echoue ---
+      console.error("LLM error, falling back to v1:", llmError);
+      const fallback = classifyAndRespond(cleanMessage);
+      await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null);
+      return jsonResponse({
+        response: fallback.response,
+        conversation_id: convId,
+        sources: [],
+        model: "fallback-v1",
+      });
+    }
+
+  } catch (err) {
+    console.error("Erreur ai-coach:", err);
+    return jsonResponse({ error: (err as Error).message }, 500);
+  }
+});
+
+// --- Helper: save user + assistant messages ---
+async function saveMessages(
+  supabase: any,
+  conversationId: string,
+  sessionId: string,
+  userMessage: string,
+  assistantMessage: string,
+  intent: string | null,
+  model: string,
+  ragSources: any | null,
+  tokensUsed?: number | null,
+) {
+  // Save user message
+  await supabase.from("coach_messages").insert({
+    conversation_id: conversationId,
+    session_id: sessionId,
+    role: "user",
+    content: userMessage,
+    intent,
+    model: null,
+    rag_sources: null,
+    tokens_used: null,
+  });
+
+  // Save assistant response
+  await supabase.from("coach_messages").insert({
+    conversation_id: conversationId,
+    session_id: sessionId,
+    role: "assistant",
+    content: assistantMessage,
+    intent,
+    model,
+    rag_sources: ragSources,
+    tokens_used: tokensUsed || null,
+  });
+
+  // Update conversation message count
+  const { data: conv } = await supabase
+    .from("coach_conversations")
+    .select("message_count")
+    .eq("id", conversationId)
+    .single();
+
+  if (conv) {
+    await supabase
+      .from("coach_conversations")
+      .update({ message_count: (conv.message_count || 0) + 2 })
+      .eq("id", conversationId);
+  }
+}
