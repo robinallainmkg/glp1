@@ -35,7 +35,7 @@ Pour choisir les articles a verifier, consulte Supabase :
 SELECT id, slug, collection, last_fact_checked FROM articles
 WHERE is_active = true
 ORDER BY last_fact_checked ASC NULLS FIRST
-LIMIT 10;
+LIMIT 20;
 ```
 
 Priorise les articles jamais verifies (`last_fact_checked IS NULL`) ou les plus anciennement verifies.
@@ -119,7 +119,7 @@ WHERE id = '<run_id>';
 
 ## Limites
 
-- Maximum 10 articles par run
-- Maximum 15 WebSearch par article
+- Maximum 20 articles par run
+- Maximum 10 WebSearch par article
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql

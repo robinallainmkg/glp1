@@ -11,257 +11,115 @@ import { supabaseConfig } from '../../lib/supabase';
   <title>Analytics - GLP1 Admin</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
-    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f1f5f9; color: #1e293b; }
     .admin-layout { margin-left: 260px; min-height: 100vh; }
-    .page-header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    .page-header { background: white; border-bottom: 1px solid #e2e8f0; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
     .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
     .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
     .header-actions { display: flex; gap: 0.75rem; align-items: center; }
-    .refresh-btn {
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      background: white;
-      color: #475569;
-      font-size: 0.82rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; background: white; color: #475569; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; }
     .refresh-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
     .last-update { font-size: 0.72rem; color: #94a3b8; }
-
     .main { padding: 2rem; }
 
-    /* Stats */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .stat-card {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      padding: 1.25rem;
-      text-align: center;
-    }
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 0.35rem;
-    }
-    .stat-label { font-size: 0.75rem; color: #64748b; }
-    .sv-green { color: #22c55e; }
-    .sv-blue { color: #3b82f6; }
-    .sv-amber { color: #f59e0b; }
-    .sv-purple { color: #8b5cf6; }
-    .sv-slate { color: #64748b; }
-
     /* Command box */
-    .cmd-box {
-      background: #1e293b;
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .cmd-text {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      color: #94a3b8;
-    }
-    .cmd-text strong { color: #4ade80; }
-    .cmd-copy {
-      padding: 0.35rem 0.7rem;
-      border-radius: 6px;
-      border: 1px solid #475569;
-      background: transparent;
-      color: #94a3b8;
-      font-size: 0.72rem;
-      cursor: pointer;
-    }
-    .cmd-copy:hover { border-color: #4ade80; color: #4ade80; }
+    .cmd-box { background: #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #475569; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
-    /* Two columns */
-    .two-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+    /* Stats grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: white; border-radius: 12px; padding: 1.25rem; border: 1px solid #e2e8f0; position: relative; overflow: hidden; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #94a3b8; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.3rem; }
+    .stat-card .icon-bg { position: absolute; top: -6px; right: -6px; width: 52px; height: 52px; border-radius: 50%; opacity: 0.1; }
 
-    /* Positioned keywords */
-    .section-card {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-    }
-    .section-header {
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid #e2e8f0;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .section-header .badge-count {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 0.15rem 0.5rem;
-      border-radius: 10px;
-      background: #f1f5f9;
-      color: #64748b;
-    }
+    /* Position distribution bar */
+    .distrib-bar-container { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .distrib-title { font-size: 0.82rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
+    .distrib-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #f1f5f9; }
+    .distrib-segment { display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 700; color: white; min-width: 0; transition: width 0.5s ease; }
+    .seg-top3 { background: #22c55e; }
+    .seg-top10 { background: #3b82f6; }
+    .seg-top20 { background: #f59e0b; }
+    .seg-none { background: #cbd5e1; color: #475569; }
+    .distrib-legend { display: flex; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #475569; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
 
-    .kw-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.82rem;
-    }
-    .kw-table th {
-      padding: 0.6rem 1rem;
-      text-align: left;
-      font-weight: 600;
-      color: #475569;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      background: #f8fafc;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .kw-table td {
-      padding: 0.7rem 1rem;
-      border-bottom: 1px solid #f1f5f9;
-      vertical-align: middle;
-    }
+    /* Filters */
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #64748b; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #cbd5e1; color: #334155; }
+    .filter-btn.active { background: #1e293b; color: white; border-color: #1e293b; }
+    .filter-count { font-size: 0.68rem; background: rgba(0,0,0,0.08); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.2); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
+
+    /* Keywords table */
+    .kw-table-wrap { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; margin-bottom: 1.5rem; }
+    .kw-table { width: 100%; border-collapse: collapse; }
+    .kw-table th { text-align: left; padding: 0.75rem 1rem; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
+    .kw-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
     .kw-table tr:last-child td { border-bottom: none; }
-    .kw-table tr:hover { background: #f8fafc; }
+    .kw-table tr:hover td { background: #f8fafc; }
 
-    .kw-text {
-      font-weight: 500;
-      color: #1e293b;
-    }
-    .kw-article {
-      font-size: 0.72rem;
-      color: #64748b;
-      font-family: monospace;
-    }
-    .kw-type {
-      display: inline-block;
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
+    .kw-name { font-weight: 600; color: #1e293b; }
+    .kw-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #7c3aed; display: block; margin-top: 2px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    .kw-type { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; }
     .kt-primary { background: #dbeafe; color: #2563eb; }
     .kt-secondary { background: #f1f5f9; color: #64748b; }
 
-    .position-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 32px;
-      height: 28px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 0 0.4rem;
-    }
+    /* Position badge */
+    .pos-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 30px; border-radius: 8px; font-weight: 800; font-size: 0.85rem; padding: 0 0.5rem; }
     .pos-top3 { background: #dcfce7; color: #166534; }
     .pos-top10 { background: #dbeafe; color: #1e40af; }
     .pos-top20 { background: #fef3c7; color: #92400e; }
-    .pos-none { background: #f1f5f9; color: #94a3b8; font-size: 0.72rem; }
+    .pos-none { background: #f1f5f9; color: #94a3b8; font-size: 0.75rem; font-weight: 600; }
 
-    /* Not visible section */
-    .not-visible-list {
-      padding: 0.75rem 1.25rem;
-      max-height: 400px;
-      overflow-y: auto;
-    }
-    .nv-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #f1f5f9;
-      font-size: 0.78rem;
-    }
-    .nv-item:last-child { border-bottom: none; }
-    .nv-keyword { color: #475569; }
-    .nv-article { font-size: 0.68rem; color: #94a3b8; font-family: monospace; }
+    /* Trend indicator */
+    .trend { display: inline-flex; align-items: center; gap: 0.2rem; font-size: 0.75rem; font-weight: 600; margin-left: 0.4rem; }
+    .trend-up { color: #16a34a; }
+    .trend-down { color: #dc2626; }
+    .trend-stable { color: #94a3b8; }
+    .trend-new { color: #8b5cf6; font-size: 0.68rem; font-weight: 500; }
 
-    .empty-state {
-      text-align: center;
-      padding: 2rem;
-      color: #94a3b8;
-      font-size: 0.85rem;
-    }
+    /* Two cols for bottom section */
+    .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .section-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; font-size: 0.82rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #f1f5f9; color: #64748b; }
 
-    /* Diagnostic card */
-    .diagnostic-card {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      padding: 1.25rem;
-    }
-    .diagnostic-title {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 0.75rem;
-    }
-    .diagnostic-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      padding: 0.5rem 0;
-      font-size: 0.82rem;
-      color: #475569;
-      line-height: 1.4;
-    }
-    .diagnostic-num {
-      flex-shrink: 0;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #ede9fe;
-      color: #7c3aed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.68rem;
-      font-weight: 700;
-    }
+    /* Run history */
+    .run-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #f1f5f9; font-size: 0.82rem; }
+    .run-item:last-child { border-bottom: none; }
+    .run-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .run-dot-ok { background: #22c55e; }
+    .run-dot-fail { background: #ef4444; }
+    .run-dot-run { background: #f59e0b; }
+    .run-info { flex: 1; min-width: 0; }
+    .run-date { font-weight: 500; color: #1e293b; }
+    .run-meta { font-size: 0.72rem; color: #94a3b8; }
+    .run-stats { display: flex; gap: 0.5rem; }
+    .run-stat-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600; }
+
+    /* Diagnostic */
+    .diag-item { display: flex; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #f1f5f9; font-size: 0.82rem; color: #475569; line-height: 1.5; }
+    .diag-item:last-child { border-bottom: none; }
+    .diag-icon { flex-shrink: 0; width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; }
+    .diag-tip { background: #ede9fe; color: #7c3aed; }
+    .diag-warn { background: #fef3c7; color: #d97706; }
+    .diag-ok { background: #dcfce7; color: #16a34a; }
+
+    .empty-state { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.85rem; }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
     @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } }
-    @media (max-width: 768px) {
-      .main { padding: 1rem; }
-      .page-header { padding: 1rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 768px) { .main { padding: 1rem; } .page-header { padding: 1rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
@@ -272,105 +130,156 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="page-header">
     <div class="page-header-left">
       <h1>Analytics — Positionnement</h1>
-      <p>Suivi des mots-cles et positions Google — alimente par l'agent Analytics</p>
+      <p>Suivi des mots-cles et positions Google — Agent Analytics</p>
     </div>
     <div class="header-actions">
       <span class="last-update" id="lastUpdate"></span>
-      <button class="refresh-btn" onclick="loadAll()" title="Rafraichir">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M23 4v6h-6M1 20v-6h6"/>
-          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-        </svg>
-        Rafraichir
-      </button>
+      <button class="refresh-btn" onclick="loadAll()">&#x27F3; Rafraichir</button>
     </div>
   </div>
 
   <div class="main">
     <!-- Command box -->
     <div class="cmd-box">
-      <div class="cmd-text">
-        <strong>$</strong> claude -p "Analyse les keywords" --agent analytics
-      </div>
-      <button class="cmd-copy" onclick="navigator.clipboard.writeText('claude -p \"Analyse les keywords\" --agent analytics');this.textContent='Copie!'">Copier</button>
+      <code>claude -p "Analyse les keywords" --agent analytics</code>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Analyse les keywords&quot; --agent analytics');this.textContent='Copie !'">Copier</button>
     </div>
 
     <!-- Stats -->
     <div class="stats-grid" id="statsGrid">
-      <div class="stat-card"><div class="stat-value sv-purple">-</div><div class="stat-label">Mots-cles suivis</div></div>
-      <div class="stat-card"><div class="stat-value sv-green">-</div><div class="stat-label">Positionnes</div></div>
-      <div class="stat-card"><div class="stat-value sv-blue">-</div><div class="stat-label">Top 3</div></div>
-      <div class="stat-card"><div class="stat-value sv-amber">-</div><div class="stat-label">Top 10</div></div>
-      <div class="stat-card"><div class="stat-value sv-slate">-</div><div class="stat-label">Non visibles</div></div>
+      <div class="stat-card">
+        <div class="label">Mots-cles suivis</div>
+        <div class="value" style="color:#8b5cf6">-</div>
+        <div class="sub">Total unique</div>
+        <div class="icon-bg" style="background:#8b5cf6"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Positionnes</div>
+        <div class="value" style="color:#22c55e">-</div>
+        <div class="sub">Visibles sur Google</div>
+        <div class="icon-bg" style="background:#22c55e"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Top 3</div>
+        <div class="value" style="color:#3b82f6">-</div>
+        <div class="sub">Podium Google</div>
+        <div class="icon-bg" style="background:#3b82f6"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Top 10</div>
+        <div class="value" style="color:#f59e0b">-</div>
+        <div class="sub">Page 1</div>
+        <div class="icon-bg" style="background:#f59e0b"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Progression</div>
+        <div class="value" style="color:#059669">-</div>
+        <div class="sub">Mots-cles en hausse</div>
+        <div class="icon-bg" style="background:#059669"></div>
+      </div>
     </div>
 
-    <!-- Two columns: positioned + not visible -->
-    <div class="two-cols">
-      <!-- Positioned keywords -->
-      <div class="section-card">
-        <div class="section-header">
-          Mots-cles positionnes
-          <span class="badge-count" id="posCount">0</span>
-        </div>
-        <table class="kw-table">
-          <thead>
-            <tr>
-              <th>Position</th>
-              <th>Mot-cle</th>
-              <th>Article</th>
-              <th>Type</th>
-            </tr>
-          </thead>
-          <tbody id="posBody">
-            <tr><td colspan="4" class="empty-state">Chargement...</td></tr>
-          </tbody>
-        </table>
+    <!-- Distribution bar -->
+    <div class="distrib-bar-container" id="distribContainer" style="display:none">
+      <div class="distrib-title">Repartition des positions</div>
+      <div class="distrib-bar" id="distribBar"></div>
+      <div class="distrib-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> Top 3</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div> Top 4-10</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> Top 11-20</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#cbd5e1"></div> Non visible</div>
       </div>
+    </div>
 
-      <!-- Not visible keywords -->
+    <!-- Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
+      <button class="filter-btn" data-filter="top3" onclick="setFilter('top3')">Top 3</button>
+      <button class="filter-btn" data-filter="top10" onclick="setFilter('top10')">Top 4-10</button>
+      <button class="filter-btn" data-filter="top20" onclick="setFilter('top20')">Top 11-20</button>
+      <button class="filter-btn" data-filter="none" onclick="setFilter('none')">Non visibles</button>
+      <button class="filter-btn" data-filter="primary" onclick="setFilter('primary')">Principaux</button>
+      <button class="filter-btn" data-filter="secondary" onclick="setFilter('secondary')">Secondaires</button>
+      <input type="text" class="search-input" placeholder="Rechercher un mot-cle..." oninput="setSearch(this.value)" />
+    </div>
+
+    <!-- Keywords table -->
+    <div class="kw-table-wrap">
+      <table class="kw-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Mot-cle</th>
+            <th>Article</th>
+            <th>Type</th>
+            <th>Tendance</th>
+            <th>Derniere verif.</th>
+          </tr>
+        </thead>
+        <tbody id="kwBody">
+          <tr><td colspan="6" class="empty-state">Chargement...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bottom: Run history + Diagnostic -->
+    <div class="two-cols">
       <div class="section-card">
         <div class="section-header">
-          Non visibles (hors top 20)
-          <span class="badge-count" id="nvCount">0</span>
+          Historique des runs
+          <span class="badge-count" id="runCount">0</span>
         </div>
-        <div class="not-visible-list" id="nvList">
+        <div id="runsList">
           <div class="empty-state">Chargement...</div>
         </div>
       </div>
-    </div>
 
-    <!-- Diagnostic -->
-    <div class="diagnostic-card" id="diagnosticCard" style="display:none">
-      <div class="diagnostic-title">Diagnostic et recommandations</div>
-      <div id="diagnosticBody"></div>
+      <div class="section-card" id="diagCard">
+        <div class="section-header">
+          Diagnostic et recommandations
+        </div>
+        <div id="diagBody">
+          <div class="empty-state">Chargement...</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
-  const SUPABASE_URL = supabaseUrl;
-  const SUPABASE_ANON_KEY = supabaseAnonKey;
+  const SB_URL = supabaseUrl;
+  const SB_KEY = supabaseAnonKey;
+  let allRankings = [];
+  let articleMap = {};
+  let currentFilter = 'all';
+  let currentSearch = '';
 
-  function escapeHtml(str) {
-    if (!str) return '';
-    const d = document.createElement('div');
-    d.textContent = str;
-    return d.innerHTML;
-  }
+  function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
-  async function supabaseFetch(table, query) {
-    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
-      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
     });
     if (!r.ok) throw new Error(await r.text());
     return r.json();
   }
 
-  function positionBadge(pos) {
-    if (!pos) return '<span class="position-badge pos-none">—</span>';
-    if (pos <= 3) return `<span class="position-badge pos-top3">#${pos}</span>`;
-    if (pos <= 10) return `<span class="position-badge pos-top10">#${pos}</span>`;
-    return `<span class="position-badge pos-top20">#${pos}</span>`;
+  function posBadge(pos) {
+    if (!pos) return '<span class="pos-badge pos-none">---</span>';
+    if (pos <= 3) return `<span class="pos-badge pos-top3">#${pos}</span>`;
+    if (pos <= 10) return `<span class="pos-badge pos-top10">#${pos}</span>`;
+    return `<span class="pos-badge pos-top20">#${pos}</span>`;
+  }
+
+  function trendHtml(pos, prev) {
+    if (prev === null || prev === undefined) return '<span class="trend trend-new">NEW</span>';
+    if (pos === null && prev === null) return '';
+    if (pos === null) return '<span class="trend trend-down">&#x2193; sorti</span>';
+    if (prev === null) return '<span class="trend trend-up">&#x2191; entre</span>';
+    const diff = prev - pos; // positive = improved
+    if (diff > 0) return `<span class="trend trend-up">&#x2191; +${diff}</span>`;
+    if (diff < 0) return `<span class="trend trend-down">&#x2193; ${diff}</span>`;
+    return '<span class="trend trend-stable">= stable</span>';
   }
 
   function typeBadge(t) {
@@ -378,100 +287,266 @@ import { supabaseConfig } from '../../lib/supabase';
     return '<span class="kw-type kt-secondary">Secondaire</span>';
   }
 
+  function timeAgo(dateStr) {
+    if (!dateStr) return '-';
+    const d = new Date(dateStr);
+    const now = new Date();
+    const diffH = Math.round((now - d) / 3600000);
+    if (diffH < 1) return "A l'instant";
+    if (diffH < 24) return `Il y a ${diffH}h`;
+    const diffD = Math.round(diffH / 24);
+    if (diffD === 1) return 'Hier';
+    if (diffD < 7) return `Il y a ${diffD}j`;
+    return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  }
+
+  window.setFilter = function(f) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    renderTable();
+  };
+
+  window.setSearch = function(q) {
+    currentSearch = q.toLowerCase();
+    renderTable();
+  };
+
+  function filterRankings() {
+    let list = allRankings;
+    switch (currentFilter) {
+      case 'top3': list = list.filter(r => r.position && r.position <= 3); break;
+      case 'top10': list = list.filter(r => r.position && r.position > 3 && r.position <= 10); break;
+      case 'top20': list = list.filter(r => r.position && r.position > 10 && r.position <= 20); break;
+      case 'none': list = list.filter(r => !r.position); break;
+      case 'primary': list = list.filter(r => r.keyword_type === 'primary'); break;
+      case 'secondary': list = list.filter(r => r.keyword_type === 'secondary'); break;
+    }
+    if (currentSearch) {
+      list = list.filter(r =>
+        (r.keyword || '').toLowerCase().includes(currentSearch) ||
+        (articleMap[r.article_id] || '').toLowerCase().includes(currentSearch)
+      );
+    }
+    return list;
+  }
+
+  function renderTable() {
+    const filtered = filterRankings();
+    const body = document.getElementById('kwBody');
+
+    if (filtered.length === 0) {
+      body.innerHTML = `<tr><td colspan="6" class="empty-state">${allRankings.length > 0 ? 'Aucun resultat pour ce filtre' : 'Aucune donnee — lancez l\'agent analytics'}</td></tr>`;
+      return;
+    }
+
+    body.innerHTML = filtered.map(r => `
+      <tr>
+        <td>${posBadge(r.position)}</td>
+        <td>
+          <span class="kw-name">${esc(r.keyword)}</span>
+          <span class="kw-slug">${esc(articleMap[r.article_id] || '-')}</span>
+        </td>
+        <td><span class="kw-slug" style="display:inline">${esc(articleMap[r.article_id] || '-')}</span></td>
+        <td>${typeBadge(r.keyword_type)}</td>
+        <td>${trendHtml(r.position, r.previous_position)}</td>
+        <td style="font-size:0.75rem;color:#64748b">${timeAgo(r.checked_at)}</td>
+      </tr>
+    `).join('');
+  }
+
+  function renderDistribution(rankings) {
+    const total = rankings.length;
+    if (total === 0) return;
+
+    const top3 = rankings.filter(r => r.position && r.position <= 3).length;
+    const top10 = rankings.filter(r => r.position && r.position > 3 && r.position <= 10).length;
+    const top20 = rankings.filter(r => r.position && r.position > 10).length;
+    const none = rankings.filter(r => !r.position).length;
+
+    const pct = v => Math.max(0, (v / total * 100)).toFixed(1);
+
+    document.getElementById('distribContainer').style.display = 'block';
+    document.getElementById('distribBar').innerHTML = [
+      top3 > 0 ? `<div class="distrib-segment seg-top3" style="width:${pct(top3)}%">${top3}</div>` : '',
+      top10 > 0 ? `<div class="distrib-segment seg-top10" style="width:${pct(top10)}%">${top10}</div>` : '',
+      top20 > 0 ? `<div class="distrib-segment seg-top20" style="width:${pct(top20)}%">${top20}</div>` : '',
+      none > 0 ? `<div class="distrib-segment seg-none" style="width:${pct(none)}%">${none}</div>` : '',
+    ].join('');
+  }
+
+  function renderStats(rankings) {
+    const total = rankings.length;
+    const positioned = rankings.filter(r => r.position !== null && r.position !== undefined);
+    const top3 = positioned.filter(r => r.position <= 3).length;
+    const top10 = positioned.filter(r => r.position <= 10).length;
+    const improving = rankings.filter(r => r.previous_position !== null && r.previous_position !== undefined && r.position !== null && r.position < r.previous_position).length;
+
+    document.getElementById('statsGrid').innerHTML = `
+      <div class="stat-card">
+        <div class="label">Mots-cles suivis</div>
+        <div class="value" style="color:#8b5cf6">${total}</div>
+        <div class="sub">${rankings.filter(r => r.keyword_type === 'primary').length} principaux</div>
+        <div class="icon-bg" style="background:#8b5cf6"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Positionnes</div>
+        <div class="value" style="color:#22c55e">${positioned.length}</div>
+        <div class="sub">${total > 0 ? Math.round(positioned.length / total * 100) : 0}% de visibilite</div>
+        <div class="icon-bg" style="background:#22c55e"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Top 3</div>
+        <div class="value" style="color:#3b82f6">${top3}</div>
+        <div class="sub">Podium Google</div>
+        <div class="icon-bg" style="background:#3b82f6"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Top 10</div>
+        <div class="value" style="color:#f59e0b">${top10}</div>
+        <div class="sub">Page 1</div>
+        <div class="icon-bg" style="background:#f59e0b"></div>
+      </div>
+      <div class="stat-card">
+        <div class="label">En progression</div>
+        <div class="value" style="color:#059669">${improving}</div>
+        <div class="sub">&#x2191; vs dernier check</div>
+        <div class="icon-bg" style="background:#059669"></div>
+      </div>
+    `;
+
+    // Update filter counts
+    const counts = {
+      all: total,
+      top3: top3,
+      top10: positioned.filter(r => r.position > 3 && r.position <= 10).length,
+      top20: positioned.filter(r => r.position > 10).length,
+      none: rankings.filter(r => !r.position).length,
+      primary: rankings.filter(r => r.keyword_type === 'primary').length,
+      secondary: rankings.filter(r => r.keyword_type === 'secondary').length,
+    };
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      const f = btn.dataset.filter;
+      const existing = btn.querySelector('.filter-count');
+      if (existing) existing.remove();
+      if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
+    });
+  }
+
+  async function loadRuns() {
+    try {
+      const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.analytics&order=started_at.desc&limit=10');
+      document.getElementById('runCount').textContent = runs.length;
+
+      if (runs.length === 0) {
+        document.getElementById('runsList').innerHTML = '<div class="empty-state">Aucun run enregistre</div>';
+        return;
+      }
+
+      document.getElementById('runsList').innerHTML = runs.map(r => {
+        const meta = r.metadata || {};
+        const dotClass = r.status === 'completed' ? 'run-dot-ok' : r.status === 'failed' ? 'run-dot-fail' : 'run-dot-run';
+        const date = new Date(r.started_at);
+        const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+
+        return `<div class="run-item">
+          <div class="run-dot ${dotClass}"></div>
+          <div class="run-info">
+            <div class="run-date">${esc(dateStr)}</div>
+            <div class="run-meta">${r.items_processed || 0} mots-cles verifies${meta.articles_checked ? ` sur ${meta.articles_checked} articles` : ''}</div>
+          </div>
+          <div class="run-stats">
+            ${meta.improvements ? `<span class="run-stat-badge" style="background:#dcfce7;color:#166534">&#x2191;${meta.improvements}</span>` : ''}
+            ${meta.declines ? `<span class="run-stat-badge" style="background:#fee2e2;color:#991b1b">&#x2193;${meta.declines}</span>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+    } catch (e) {
+      document.getElementById('runsList').innerHTML = `<div class="empty-state" style="color:#ef4444">Erreur: ${esc(e.message)}</div>`;
+    }
+  }
+
+  function renderDiagnostic(rankings) {
+    const total = rankings.length;
+    if (total === 0) {
+      document.getElementById('diagBody').innerHTML = '<div class="empty-state">Lancez l\'agent analytics pour obtenir un diagnostic</div>';
+      return;
+    }
+
+    const positioned = rankings.filter(r => r.position);
+    const top3 = positioned.filter(r => r.position <= 3);
+    const none = rankings.filter(r => !r.position);
+    const improving = rankings.filter(r => r.previous_position && r.position && r.position < r.previous_position);
+    const declining = rankings.filter(r => r.previous_position && r.position && r.position > r.previous_position);
+
+    const tips = [];
+
+    if (top3.length > 0) {
+      tips.push({ type: 'ok', text: `${top3.length} mot(s)-cle(s) en top 3 ! Consolidez ces positions avec du contenu enrichi et du maillage interne cible.` });
+    }
+
+    if (improving.length > 0) {
+      tips.push({ type: 'ok', text: `${improving.length} mot(s)-cle(s) en progression. Le travail SEO porte ses fruits.` });
+    }
+
+    if (declining.length > 0) {
+      tips.push({ type: 'warn', text: `${declining.length} mot(s)-cle(s) en recul. Verifiez le contenu et les backlinks de ces pages.` });
+    }
+
+    if (none.length > total * 0.5) {
+      tips.push({ type: 'warn', text: `${Math.round(none.length / total * 100)}% des mots-cles sont non visibles. Priorisez le contenu et les backlinks sur les requetes a fort volume.` });
+    }
+
+    if (positioned.length > 0 && positioned.length < 10) {
+      tips.push({ type: 'tip', text: 'Ciblez les requetes longue traine pour augmenter rapidement le nombre de mots-cles positionnes.' });
+    }
+
+    tips.push({ type: 'tip', text: 'Relancez l\'agent analytics regulierement pour suivre l\'evolution dans le temps.' });
+
+    document.getElementById('diagBody').innerHTML = tips.map(t => `
+      <div class="diag-item">
+        <div class="diag-icon diag-${t.type}">${t.type === 'ok' ? '&#x2713;' : t.type === 'warn' ? '!' : '&#x2192;'}</div>
+        <span>${esc(t.text)}</span>
+      </div>
+    `).join('');
+  }
+
   async function loadAll() {
     try {
-      // Get latest rankings (most recent check per keyword)
-      const allRankings = await supabaseFetch('keyword_rankings',
-        'select=*&order=checked_at.desc');
+      // Fetch rankings and articles in parallel
+      const [rawRankings, articles] = await Promise.all([
+        sbFetch('keyword_rankings', 'select=*&order=checked_at.desc'),
+        sbFetch('articles', 'select=id,slug&is_active=eq.true')
+      ]);
+
+      // Build article map
+      articleMap = {};
+      articles.forEach(a => { articleMap[a.id] = a.slug; });
 
       // Deduplicate: keep latest per keyword+article
       const latest = {};
-      for (const r of allRankings) {
+      for (const r of rawRankings) {
         const key = `${r.keyword}__${r.article_id}`;
         if (!latest[key]) latest[key] = r;
       }
-      const rankings = Object.values(latest);
+      allRankings = Object.values(latest);
 
-      // Get articles for slug mapping
-      const articles = await supabaseFetch('articles', 'select=id,slug&is_active=eq.true');
-      const articleMap = {};
-      articles.forEach(a => { articleMap[a.id] = a.slug; });
+      // Sort: positioned first (by position asc), then non-positioned
+      allRankings.sort((a, b) => {
+        if (a.position && b.position) return a.position - b.position;
+        if (a.position) return -1;
+        if (b.position) return 1;
+        return 0;
+      });
 
-      // Stats
-      const total = rankings.length;
-      const positioned = rankings.filter(r => r.position !== null);
-      const top3 = positioned.filter(r => r.position <= 3);
-      const top10 = positioned.filter(r => r.position <= 10);
-      const notVisible = rankings.filter(r => r.position === null);
-
-      document.getElementById('statsGrid').innerHTML = `
-        <div class="stat-card"><div class="stat-value sv-purple">${total}</div><div class="stat-label">Mots-cles suivis</div></div>
-        <div class="stat-card"><div class="stat-value sv-green">${positioned.length}</div><div class="stat-label">Positionnes</div></div>
-        <div class="stat-card"><div class="stat-value sv-blue">${top3.length}</div><div class="stat-label">Top 3</div></div>
-        <div class="stat-card"><div class="stat-value sv-amber">${top10.length}</div><div class="stat-label">Top 10</div></div>
-        <div class="stat-card"><div class="stat-value sv-slate">${notVisible.length}</div><div class="stat-label">Non visibles</div></div>
-      `;
-
-      // Positioned table
-      document.getElementById('posCount').textContent = positioned.length;
-      const posBody = document.getElementById('posBody');
-      if (positioned.length === 0) {
-        posBody.innerHTML = '<tr><td colspan="4" class="empty-state">Aucun mot-cle positionne</td></tr>';
-      } else {
-        positioned.sort((a, b) => (a.position || 999) - (b.position || 999));
-        posBody.innerHTML = positioned.map(r => `
-          <tr>
-            <td>${positionBadge(r.position)}</td>
-            <td><span class="kw-text">${escapeHtml(r.keyword)}</span></td>
-            <td><span class="kw-article">${escapeHtml(articleMap[r.article_id] || '-')}</span></td>
-            <td>${typeBadge(r.keyword_type)}</td>
-          </tr>
-        `).join('');
-      }
-
-      // Not visible list
-      document.getElementById('nvCount').textContent = notVisible.length;
-      const nvList = document.getElementById('nvList');
-      if (notVisible.length === 0) {
-        nvList.innerHTML = '<div class="empty-state">Tous les mots-cles sont visibles !</div>';
-      } else {
-        nvList.innerHTML = notVisible.map(r => `
-          <div class="nv-item">
-            <span class="nv-keyword">${escapeHtml(r.keyword)}</span>
-            <span class="nv-article">${escapeHtml(articleMap[r.article_id] || '-')}</span>
-          </div>
-        `).join('');
-      }
-
-      // Diagnostic
-      if (total > 0) {
-        const coverage = Math.round((positioned.length / total) * 100);
-        const card = document.getElementById('diagnosticCard');
-        card.style.display = 'block';
-
-        const tips = [];
-        if (notVisible.length > total * 0.7) {
-          tips.push('Le site est invisible sur ' + Math.round(notVisible.length / total * 100) + '% des mots-cles. Prioriser le contenu et les backlinks sur les requetes a fort volume.');
-        }
-        if (top3.length > 0) {
-          tips.push('Excellent : ' + top3.length + ' mot(s)-cle(s) en top 3. Consolider ces positions avec du contenu enrichi et du maillage interne.');
-        }
-        if (positioned.length > 0 && positioned.length < 10) {
-          tips.push('Cibler les requetes longue traine avec "2026" pour augmenter rapidement le nombre de mots-cles positionnes.');
-        }
-        tips.push('Relancer l\'agent analytics regulierement pour suivre l\'evolution des positions dans le temps.');
-
-        document.getElementById('diagnosticBody').innerHTML = tips.map((t, i) => `
-          <div class="diagnostic-item">
-            <span class="diagnostic-num">${i + 1}</span>
-            <span>${escapeHtml(t)}</span>
-          </div>
-        `).join('');
-      }
+      renderStats(allRankings);
+      renderDistribution(allRankings);
+      renderTable();
+      renderDiagnostic(allRankings);
+      loadRuns();
 
       document.getElementById('lastUpdate').textContent = 'Maj: ' + new Date().toLocaleTimeString('fr-FR');
     } catch (e) {
-      document.getElementById('posBody').innerHTML = `<tr><td colspan="4" class="empty-state" style="color:#ef4444">Erreur: ${escapeHtml(e.message)}</td></tr>`;
+      document.getElementById('kwBody').innerHTML = `<tr><td colspan="6" class="empty-state" style="color:#ef4444">Erreur: ${esc(e.message)}</td></tr>`;
     }
   }
 

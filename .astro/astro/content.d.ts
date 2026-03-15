@@ -240,6 +240,14 @@ declare module 'astro:content' {
   data: InferEntrySchema<"alternatives-glp1">
 } & { render(): Render[".md"] };
 };
+"avant-apres-glp1": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "avant-apres-glp1";
+  data: InferEntrySchema<"avant-apres-glp1">;
+  render(): Render[".md"];
+}>;
 "effets-secondaires-glp1": {
 "effets-secondaires-mounjaro.md": {
 	id: "effets-secondaires-mounjaro.md";
@@ -297,8 +305,8 @@ declare module 'astro:content' {
   collection: "effets-secondaires-glp1";
   data: InferEntrySchema<"effets-secondaires-glp1">
 } & { render(): Render[".md"] };
-"insulevel-effet-indesirable-new.md": {
-	id: "insulevel-effet-indesirable-new.md";
+"insulevel-effet-indesirable.md": {
+	id: "insulevel-effet-indesirable.md";
   slug: "insulevel-effet-indesirable";
   body: string;
   collection: "effets-secondaires-glp1";
@@ -314,13 +322,6 @@ declare module 'astro:content' {
 "wegovy-danger.md": {
 	id: "wegovy-danger.md";
   slug: "wegovy-danger";
-  body: string;
-  collection: "effets-secondaires-glp1";
-  data: InferEntrySchema<"effets-secondaires-glp1">
-} & { render(): Render[".md"] };
-"wegovy-dosage.md": {
-	id: "wegovy-dosage.md";
-  slug: "wegovy-dosage";
   body: string;
   collection: "effets-secondaires-glp1";
   data: InferEntrySchema<"effets-secondaires-glp1">
@@ -458,13 +459,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "medecins-glp1-france": {
-"clinique-pour-obesite-new.md": {
-	id: "clinique-pour-obesite-new.md";
-  slug: "clinique-pour-obesite-new";
-  body: string;
-  collection: "medecins-glp1-france";
-  data: InferEntrySchema<"medecins-glp1-france">
-} & { render(): Render[".md"] };
 "clinique-pour-obesite.md": {
 	id: "clinique-pour-obesite.md";
   slug: "clinique-pour-obesite";
@@ -475,13 +469,6 @@ declare module 'astro:content' {
 "diabetologue-paris.md": {
 	id: "diabetologue-paris.md";
   slug: "diabetologue-paris";
-  body: string;
-  collection: "medecins-glp1-france";
-  data: InferEntrySchema<"medecins-glp1-france">
-} & { render(): Render[".md"] };
-"endocrinologue-pour-maigrir-new.md": {
-	id: "endocrinologue-pour-maigrir-new.md";
-  slug: "endocrinologue-pour-maigrir-new";
   body: string;
   collection: "medecins-glp1-france";
   data: InferEntrySchema<"medecins-glp1-france">
@@ -639,28 +626,28 @@ declare module 'astro:content' {
   slug: "laurent-transformation-glp1";
   body: string;
   collection: "temoignages";
-  data: any
+  data: InferEntrySchema<"temoignages">
 } & { render(): Render[".md"] };
 "marie-transformation-glp1.md": {
 	id: "marie-transformation-glp1.md";
   slug: "marie-transformation-glp1";
   body: string;
   collection: "temoignages";
-  data: any
+  data: InferEntrySchema<"temoignages">
 } & { render(): Render[".md"] };
 "serena-williams-glp1.md": {
 	id: "serena-williams-glp1.md";
   slug: "serena-williams-glp1";
   body: string;
   collection: "temoignages";
-  data: any
+  data: InferEntrySchema<"temoignages">
 } & { render(): Render[".md"] };
 "sophie-transformation-glp1.md": {
 	id: "sophie-transformation-glp1.md";
   slug: "sophie-transformation-glp1";
   body: string;
   collection: "temoignages";
-  data: any
+  data: InferEntrySchema<"temoignages">
 } & { render(): Render[".md"] };
 };
 "traitements-glp1": {
@@ -727,20 +714,29 @@ declare module 'astro:content' {
   collection: "traitements-glp1";
   data: InferEntrySchema<"traitements-glp1">
 } & { render(): Render[".md"] };
+"ozempic-sans-ordonnance.md": {
+	id: "ozempic-sans-ordonnance.md";
+  slug: "ozempic-sans-ordonnance";
+  body: string;
+  collection: "traitements-glp1";
+  data: InferEntrySchema<"traitements-glp1">
+} & { render(): Render[".md"] };
+"wegovy-dosage.md": {
+	id: "wegovy-dosage.md";
+  slug: "wegovy-dosage";
+  body: string;
+  collection: "traitements-glp1";
+  data: InferEntrySchema<"traitements-glp1">
+} & { render(): Render[".md"] };
 };
 
 	};
 
 	type DataEntryMap = {
-		"avant-apres-glp1": Record<string, {
-  id: string;
-  collection: "avant-apres-glp1";
-  data: any;
-}>;
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../../src/content/config.js");
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }

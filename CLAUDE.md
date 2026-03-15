@@ -56,11 +56,12 @@ claude -p "Analyse le maillage interne" --agent internal-links
 
 ### Agent SEO Audit (`.claude/agents/seo-audit.md`)
 - **Fonction** : Audit crawlabilite, meta tags, maillage interne, accessibilite, performance
-- **Output** : `seo_audit_results` dans Supabase
+- **Output** : `seo_audit_results` + `correction_tickets` dans Supabase
 
 ### Agent Analytics (`.claude/agents/analytics.md`)
-- **Fonction** : Suivi positionnement mots-cles prioritaires/secondaires
-- **Output** : `keyword_rankings` dans Supabase
+- **Fonction** : Suivi positionnement mots-cles prioritaires/secondaires + detection chutes/quick-wins
+- **Output** : `keyword_rankings` + `correction_tickets` dans Supabase
+- **Tickets** : `content_refresh` (chute position), `seo_optimization` (quick-win position 11-20)
 
 ### Agent Fact-Check (`.claude/agents/fact-check.md`)
 - **Fonction** : Verifie les articles GLP-1 contre les sources officielles FR
@@ -71,13 +72,16 @@ claude -p "Analyse le maillage interne" --agent internal-links
 - **Output** : `content_opportunities` dans Supabase
 
 ### Agent Editorial (`.claude/agents/editorial.md`)
-- **Fonction** : Redaction/correction articles + integration dans les .md + git workflow
+- **Fonction** : 4 modes — corrections (tickets), maillage interne (liens), creation (opportunites), deploiement
+- **Input** : `correction_tickets` (fact-check + validator + seo-audit) + `internal_link_suggestions` + `content_opportunities`
 - **Output** : Fichiers modifies dans `src/content/`, branche + push
+- **Limites** : 20 tickets + 15 liens + 3 articles par run
 - Seul agent autorise a modifier des fichiers source
 
 ### Agent Validator (`.claude/agents/validator.md`)
-- **Fonction** : Validation technique (build Astro, frontmatter, liens internes, images, SEO meta)
-- **Output** : `validation_results` dans Supabase
+- **Fonction** : Validation technique (build, frontmatter, liens, images, SEO, doublons, sync DB, sitemap, HTML)
+- **Output** : `validation_results` + `correction_tickets` (source_agent='validator') dans Supabase
+- **11 types de checks**, cree des tickets pour l'editorial
 - Filet de securite apres l'agent editorial
 
 ### Agent Internal Links (`.claude/agents/internal-links.md`)
@@ -86,12 +90,17 @@ claude -p "Analyse le maillage interne" --agent internal-links
 - Les suggestions sont consommees par l'agent editorial
 
 ### Dependances entre agents
-- `seo-audit` et `analytics` : independants
-- `fact-check` → cree des `correction_tickets` → `editorial` les consomme
+- `seo-audit` → cree des `correction_tickets` (source_agent='seo-audit') → `editorial` les consomme
+- `fact-check` → cree des `correction_tickets` (source_agent='fact-check') → `editorial` les consomme
+- `validator` → cree des `correction_tickets` (source_agent='validator') → `editorial` les consomme
 - `opportunities` → cree des `content_opportunities` → `editorial` les consomme
 - `internal-links` → cree des `internal_link_suggestions` → `editorial` les consomme
+- `analytics` → cree des `correction_tickets` (source_agent='analytics', types: content_refresh, seo_optimization) → `editorial` les consomme
 - `editorial` → modifie les fichiers → `validator` verifie le resultat
-- Workflow recommande : fact-check → editorial → validator
+- **Pipeline complet** (3 vagues) :
+  - Vague 1 (parallele) : seo-audit + analytics + fact-check + opportunities + internal-links
+  - Vague 2 : editorial (consomme tous les tickets/suggestions/opportunites)
+  - Vague 3 : validator (verifie le travail editorial)
 
 ### Dashboards Admin
 - **Vue d'ensemble** (`src/pages/admin/index.astro`) — War room temps reel, statut des 7 agents, graphe dependances, live feed
