@@ -93,7 +93,7 @@ affiliateCollection: "glp1-cout"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Wegovy (sémaglutide) | 169-360 € | Non remboursé |
-| Ozempic (sémaglutide) | ~59,90 €/stylo | 65% (DT2 uniquement) |
+| Ozempic (sémaglutide) | ~76,58 €/stylo | 30% (DT2 uniquement) |
 | Saxenda (liraglutide) | 240-300 € | Non remboursé |
 | Mounjaro (tirzépatide) | 230-440 € | Non remboursé |
 
@@ -238,9 +238,9 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 
 | Critère | Wegovy | Ozempic | Saxenda |
 |---------|---------|--------|---------|
-| Prix mensuel | 169-360 € | ~59,90 €/stylo | 240-300 € |
-| Perte poids moyenne | -15 à -20% | -12 à -15% | -5 à -8% |
-| Remboursement | Non remboursé | 65% (DT2 uniquement) | Non remboursé |
+| Prix mensuel | 169-360 € | ~76,58 €/stylo | 240-300 € |
+| Perte poids moyenne | -15 à -20% | -5 à 15% selon dosage | -5 à -8% |
+| Remboursement | Non remboursé | 30% (DT2 uniquement) | Non remboursé |
 | Rapport qualité/prix | Efficace mais coûteux | Bon (si DT2) | Coûteux, efficacité moindre |
 
 ## 📝 Conclusion
@@ -309,7 +309,7 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **Différence avec Ozempic :**
 - Wegovy = Indication **perte de poids**/obésité — **non remboursé**
-- Ozempic = Indication **diabète de type 2** — **remboursé à 65%** (DT2 uniquement)
+- Ozempic = Indication **diabète de type 2** — **remboursé à 30%** (DT2 uniquement)
 - Même principe actif (sémaglutide) mais dosages différents
 
 ### Ma mutuelle peut-elle prendre en charge Wegovy ?
@@ -341,12 +341,12 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 - Perte de poids moyenne : **-15 à -20%**
 
 **Ozempic (sémaglutide 2 mg - diabète) :**
-- Prix pharmacie : **~59,90 €/stylo**
-- Remboursement : **65%** (diabète de type 2 uniquement)
+- Prix pharmacie : **~76,58 €/stylo**
+- Remboursement : **30%** (diabète de type 2 uniquement)
 - Dosage maximal : 2 mg/semaine
 - Perte de poids moyenne : **-12 à -15%**
 
-**Verdict : Ozempic est beaucoup moins cher** car remboursé à 65% pour le diabète de type 2, contre aucun remboursement pour Wegovy.
+**Verdict : Ozempic est beaucoup moins cher** car remboursé à 30% pour le diabète de type 2, contre aucun remboursement pour Wegovy.
 
 Mais :
 - **Ozempic** est remboursé **uniquement** pour le diabète de type 2 (pas pour la perte de poids seule)
@@ -437,7 +437,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 **1. Ozempic (sémaglutide 2 mg max)**
 - Indication : Diabète type 2 uniquement
-- Prix : **~59,90 €/stylo**, remboursé à 65% (DT2)
+- Prix : **~76,58 €/stylo**, remboursé à 30% (DT2)
 - Moins cher si diabétique, mais dosage inférieur
 
 **2. Rybelsus (sémaglutide oral)**
@@ -501,7 +501,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 ### Remboursement et Mutuelles
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide exhaustif 2026
 - **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france)** - Alternative plus efficace (230-440 €/mois)
-- **[Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france)** - Remboursé si diabétique (~59,90 €/stylo)
+- **[Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france)** - Remboursé si diabétique (~76,58 €/stylo)
 - **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france)** - Injection quotidienne
 
 ### Comparatifs et Choix
