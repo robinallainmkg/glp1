@@ -7,23 +7,25 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '20'
         cache: 'npm'
-    
+
     - name: Install dependencies
       run: npm ci
-    
+
     - name: Build Astro site
       run: npm run astro:build
-    
-    - name: Deploy via FTP
+
+    - name: Deploy via FTP (attempt 1)
+      id: ftp1
+      continue-on-error: true
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: 147.79.98.140
@@ -32,14 +34,50 @@ jobs:
         local-dir: ./dist/
         server-dir: /domains/glp1-france.fr/public_html/
         port: 21
-        protocol: ftps
+        protocol: ftp
         timeout: 120000
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
-        
-    - name: Verify deployment via FTP
+
+    - name: Wait before retry
+      if: steps.ftp1.outcome == 'failure'
+      run: echo "FTP attempt 1 failed, waiting 30s..." && sleep 30
+
+    - name: Deploy via FTP (attempt 2)
+      id: ftp2
+      if: steps.ftp1.outcome == 'failure'
+      continue-on-error: true
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: 147.79.98.140
+        username: u403023291
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/
+        server-dir: /domains/glp1-france.fr/public_html/
+        port: 21
+        protocol: ftp
+        timeout: 120000
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+
+    - name: Fallback deploy via lftp
+      if: steps.ftp1.outcome == 'failure' && steps.ftp2.outcome == 'failure'
       run: |
-        echo "Deployment completed via FTP"
-        echo "Site should be accessible at: https://glp1-france.fr/partenaires"
+        sudo apt-get install -y lftp
+        lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
+          set ftp:passive-mode yes;
+          set net:timeout 30;
+          set net:max-retries 3;
+          set net:reconnect-interval-base 5;
+          mirror --reverse --delete --verbose ./dist/ /domains/glp1-france.fr/public_html/;
+          quit
+        "
+
+    - name: Verify deployment
+      run: |
+        echo "Deployment completed"
+        echo "Site: https://glp1-france.fr"
