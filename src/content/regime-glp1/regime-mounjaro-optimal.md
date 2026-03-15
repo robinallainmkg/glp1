@@ -24,7 +24,7 @@ affiliateConfig:
 
 # Régime Mounjaro Optimal : Guide Nutritionnel Complet
 
-Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alimentation adaptée pour maximiser la perte de poids et améliorer le contrôle glycémique.
+Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alimentation adaptée pour maximiser la perte de poids et améliorer le contrôle glycémique. Pour comprendre en détail le fonctionnement du médicament, consultez le [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/). À noter : Mounjaro (tirzepatide) n'est pas remboursé en mars 2026, avec un coût de 230 à 440 €/mois selon le dosage. La HAS a rendu un avis favorable en décembre 2025, et un remboursement est possible au second semestre 2026 sous conditions (IMC ≥ 35 notamment).
 
 ## Principes Fondamentaux du Régime Mounjaro
 
@@ -105,6 +105,8 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 
 ## Gestion des Effets Secondaires par l'Alimentation
 
+Pour une vue complète, consultez notre guide sur les [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/).
+
 ### Nausées et Vomissements
 - **Repas fractionnés** : 5-6 petits repas
 - **Aliments fades** : Riz, bananes, biscottes
@@ -135,7 +137,7 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 ## Supplémentation Recommandée
 
 ### Vitamines et Minéraux
-- **Vitamine B12** : 2.4 μg/jour
+- **Vitamine B12** : 4 μg/jour (référence nutritionnelle ANSES pour les adultes)
 - **Vitamine D** : 1000-2000 UI/jour
 - **Magnésium** : 300-400 mg/jour
 - **Oméga-3** : 1-2g/jour

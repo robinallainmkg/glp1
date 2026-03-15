@@ -41,7 +41,7 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 ## Prix, disponibilité et variations en France
 
 ### Coûts régime cétogène + GLP-1
-- **Ozempic® + suppléments** : ~59,90€/stylo (remboursé 65 % DT2) + 30-50€/mois
+- **Ozempic® + suppléments** : ~76,58€/stylo (remboursé 30 % DT2) + 30-50€/mois
 - **Trulicity® + MCT oil** : ~81€/mois (remboursé 65 % DT2) + 25-40€/mois
 - **Suivi nutritionnel** : 60-80€/consultation
 - **Bandelettes cétones** : 40-60€/mois
@@ -51,7 +51,7 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+Le régime cétogène (ou "keto") réduit drastiquement les glucides au profit des lipides, forçant l'organisme à produire des corps cétoniques comme carburant. Associé à un traitement GLP-1 (Ozempic, Wegovy, Mounjaro), il peut potentialiser la perte de poids et améliorer le contrôle glycémique — mais cette combinaison exige une surveillance médicale renforcée. Les deux approches agissent sur des mécanismes complémentaires : le GLP-1 réduit l'appétit et stimule l'insuline, tandis que la cétose réduit les pics glycémiques en éliminant les glucides.
 
 ## Remboursement et prise en charge (France)
 
@@ -79,7 +79,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Conseils pratiques
 
 ### Phase d'adaptation (2-4 semaines)
-- **Réduction GLP-1** : Diminution temporaire 25-50%
+- **Ajustement GLP-1** : Réévaluation de la posologie par le médecin prescripteur selon la tolérance et la glycémie
 - **Surveillance cétose** : Bandelettes urinaires quotidiennes
 - **Hydratation** : 2,5-3L/jour minimum
 - **Électrolytes** : Supplémentation magnésium, potassium

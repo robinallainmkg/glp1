@@ -67,147 +67,48 @@ import { supabaseConfig } from '../../lib/supabase';
 
     .mc-main { padding: 1.5rem 2rem; }
 
-    /* Agent grid */
-    .agents-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .agent-card {
-      background: #111827;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      padding: 1rem;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    .agent-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #1e293b;
-      transition: background 0.3s;
-    }
-    .agent-card.running { border-color: #22c55e44; box-shadow: 0 0 20px #22c55e11; }
-    .agent-card.running::before { background: #22c55e; animation: scan-line 2s linear infinite; }
-    .agent-card.completed::before { background: #3b82f6; }
-    .agent-card.error { border-color: #ef444444; }
-    .agent-card.error::before { background: #ef4444; }
-
-    @keyframes scan-line {
-      0% { background: linear-gradient(90deg, transparent, #22c55e, transparent); background-size: 200%; background-position: -100%; }
-      100% { background: linear-gradient(90deg, transparent, #22c55e, transparent); background-size: 200%; background-position: 200%; }
-    }
-
-    .agent-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      margin-bottom: 0.75rem;
-    }
-    .icon-seo { background: #1e3a5f; color: #38bdf8; }
-    .icon-analytics { background: #1e3a1e; color: #4ade80; }
-    .icon-factcheck { background: #3a2e1e; color: #fbbf24; }
-    .icon-opportunities { background: #2e1e3a; color: #c084fc; }
-    .icon-editorial { background: #1e2e3a; color: #67e8f9; }
-    .icon-validator { background: #1e3a2e; color: #86efac; }
-    .icon-links { background: #3a1e2e; color: #f9a8d4; }
-
-    .agent-name {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #e2e8f0;
-      margin-bottom: 0.5rem;
-    }
-
-    .agent-status-line {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 0.6rem;
-    }
-    .status-indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .si-idle { background: #475569; }
-    .si-running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
-    .si-completed { background: #3b82f6; }
-    .si-error { background: #ef4444; }
-    .si-started { background: #eab308; animation: pulse-glow 1.5s infinite; }
-
-    .status-text {
-      font-size: 0.68rem;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-    .agent-card.running .status-text { color: #4ade80; }
-    .agent-card.error .status-text { color: #f87171; }
-
-    .agent-counters {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.35rem;
-      margin-bottom: 0.6rem;
-    }
-    .counter {
-      font-size: 0.68rem;
-      color: #475569;
-    }
-    .counter strong {
-      color: #94a3b8;
-      font-size: 0.85rem;
-      display: block;
-    }
-
-    .agent-last-action {
-      font-size: 0.65rem;
-      color: #374151;
-      border-top: 1px solid #1e293b;
-      padding-top: 0.5rem;
-      min-height: 2.5em;
-      line-height: 1.3;
-    }
-
-    /* Backlog bar for editorial */
-    .agent-backlog {
-      display: flex;
-      gap: 0.35rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.5rem;
-    }
-    .backlog-chip {
-      font-size: 0.6rem;
-      padding: 0.15rem 0.4rem;
+    /* Launch button (small, inline) */
+    .agent-launch-btn {
+      padding: 0.2rem 0.5rem;
+      border: 1px solid #22c55e44;
       border-radius: 4px;
+      background: #0a1a0f;
+      color: #4ade80;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
       font-weight: 600;
-      display: flex;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      transition: all 0.2s;
+      display: inline-flex;
       align-items: center;
       gap: 0.25rem;
+      white-space: nowrap;
     }
-    .bc-tickets { background: #3a2e1e; color: #fbbf24; }
-    .bc-links { background: #3a1e2e; color: #f9a8d4; }
-    .bc-opps { background: #2e1e3a; color: #c084fc; }
-    .bc-zero { opacity: 0.4; }
-
-    /* Launch button */
-    .agent-launch-btn {
-      width: 100%;
-      padding: 0.4rem 0;
-      margin-top: 0.5rem;
+    .agent-launch-btn:hover {
+      background: #0f2a17;
+      border-color: #22c55e88;
+      box-shadow: 0 0 8px #22c55e22;
+    }
+    .agent-launch-btn:active { transform: scale(0.97); }
+    .agent-launch-btn.is-running {
+      border-color: #22c55e44;
+      background: #071a0d;
+      color: #22c55e;
+      cursor: default;
+      animation: pulse-btn 2s infinite;
+    }
+    .agent-launch-btn.server-off {
+      border-color: #eab30844;
+      background: #1a1508;
+      color: #fbbf24;
+      font-size: 0.5rem;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .pipeline-launch-btn {
+      padding: 0.35rem 1rem;
       border: 1px solid #22c55e44;
       border-radius: 6px;
       background: #0a1a0f;
@@ -219,43 +120,14 @@ import { supabaseConfig } from '../../lib/supabase';
       text-transform: uppercase;
       letter-spacing: 0.06em;
       transition: all 0.2s;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 0.4rem;
     }
-    .agent-launch-btn:hover {
+    .pipeline-launch-btn:hover {
       background: #0f2a17;
       border-color: #22c55e88;
       box-shadow: 0 0 12px #22c55e22;
-    }
-    .agent-launch-btn:active { transform: scale(0.97); }
-    .agent-launch-btn:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-      border-color: #1e293b;
-      background: #111827;
-      color: #475569;
-    }
-    .agent-launch-btn.is-running {
-      border-color: #22c55e44;
-      background: #071a0d;
-      color: #22c55e;
-      cursor: default;
-      animation: pulse-btn 2s infinite;
-    }
-    .agent-launch-btn.is-error {
-      border-color: #ef444444;
-      background: #1a0a0a;
-      color: #f87171;
-    }
-    .agent-launch-btn.server-off {
-      border-color: #eab30844;
-      background: #1a1508;
-      color: #fbbf24;
-      font-size: 0.58rem;
-      text-transform: none;
-      letter-spacing: 0;
     }
     @keyframes pulse-btn {
       0%, 100% { opacity: 1; }
@@ -287,8 +159,19 @@ import { supabaseConfig } from '../../lib/supabase';
     .pipeline-total { font-size: 0.68rem; color: #94a3b8; }
 
     .pipeline-body {
+      display: flex;
+      flex-direction: column;
+    }
+    .pipeline-factories {
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .pipeline-processors {
       display: grid;
-      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
       align-items: stretch;
       min-height: 140px;
     }
@@ -316,26 +199,78 @@ import { supabaseConfig } from '../../lib/supabase';
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.25rem 0.4rem;
-      border-radius: 5px;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
       font-size: 0.62rem;
       transition: background 0.2s;
+      position: relative;
+      border: 1px solid transparent;
     }
     .factory-item:hover { background: #1a2332; }
+    .factory-item.fi-running { border-color: #22c55e33; background: #0a1a0f; }
     .factory-dot {
       width: 8px;
       height: 8px;
       border-radius: 2px;
       flex-shrink: 0;
     }
-    .factory-name { color: #94a3b8; flex: 1; }
-    .factory-count {
+    .factory-dot.running { animation: pulse-glow 1.5s infinite; border-radius: 50%; }
+    .factory-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .factory-name { color: #94a3b8; font-weight: 600; }
+    .factory-meta { font-size: 0.5rem; color: #374151; }
+    .factory-right {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .factory-count-pending {
       font-weight: 700;
       font-size: 0.72rem;
-      min-width: 20px;
-      text-align: right;
+      min-width: 16px;
+      text-align: center;
+      padding: 0.05rem 0.3rem;
+      border-radius: 3px;
     }
-    .factory-item.fc-zero { opacity: 0.3; }
+    .factory-item.fc-zero { opacity: 0.35; }
+
+    /* Processor flow (editorial/validator) */
+    .processor-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      width: 100%;
+    }
+    .processor-flow-row {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.58rem;
+      color: #64748b;
+    }
+    .processor-flow-label {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #374151;
+    }
+    .processor-flow-num {
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+    }
+    .processor-flow-sep {
+      width: 16px;
+      height: 1px;
+      background: #1e293b;
+      margin: 0.15rem 0;
+    }
 
     /* Arrow separator */
     .pipe-arrow {
@@ -393,23 +328,17 @@ import { supabaseConfig } from '../../lib/supabase';
       transition: width 0.5s;
     }
 
-    /* Dep graph */
-    .dep-section {
-      background: #111827;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1.5rem;
+    /* Status indicators */
+    .si-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
-    .dep-title {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: #475569;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.75rem;
-    }
-    .dep-section svg { width: 100%; max-width: 800px; margin: 0 auto; display: block; }
+    .si-dot.running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
+    .si-dot.completed { background: #3b82f6; }
+    .si-dot.error { background: #ef4444; }
+    .si-dot.idle { background: #475569; }
 
     /* Log feed */
     .log-section {
@@ -514,14 +443,139 @@ import { supabaseConfig } from '../../lib/supabase';
       font-size: 0.78rem;
     }
 
+    /* Agent Console */
+    .console-section {
+      background: #0c1018;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      max-height: 500px;
+    }
+    .console-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      background: #111827;
+      flex-shrink: 0;
+    }
+    .console-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+    }
+    .console-tabs {
+      display: flex;
+      gap: 0.25rem;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .console-tabs::-webkit-scrollbar { display: none; }
+    .console-tab {
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.58rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #475569;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .console-tab:hover { background: #1a2332; color: #94a3b8; }
+    .console-tab.active { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+    .console-tab .tab-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .console-tab .tab-dot.running {
+      background: #22c55e;
+      animation: pulse-glow 1.5s infinite;
+    }
+    .console-tab .tab-dot.stopped {
+      background: #475569;
+    }
+    .console-tab .tab-lines {
+      font-size: 0.48rem;
+      color: #374151;
+      font-weight: 400;
+    }
+    .console-status {
+      font-size: 0.58rem;
+      color: #374151;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+    .console-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem 0;
+      font-size: 0.65rem;
+      line-height: 1.5;
+      min-height: 200px;
+      max-height: 420px;
+      scrollbar-width: thin;
+      scrollbar-color: #1e293b transparent;
+    }
+    .console-body::-webkit-scrollbar { width: 6px; }
+    .console-body::-webkit-scrollbar-track { background: transparent; }
+    .console-body::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    .console-empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #374151;
+      font-size: 0.72rem;
+    }
+    .console-line {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.08rem 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      transition: background 0.1s;
+    }
+    .console-line:hover { background: #111827; }
+    .console-line-ts {
+      color: #1e293b;
+      font-size: 0.55rem;
+      flex-shrink: 0;
+      min-width: 58px;
+      font-variant-numeric: tabular-nums;
+      padding-top: 0.05rem;
+    }
+    .console-line-text {
+      color: #94a3b8;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    /* Tool calls / thinking highlights */
+    .console-line-text.cl-tool { color: #38bdf8; }
+    .console-line-text.cl-result { color: #4ade80; }
+    .console-line-text.cl-error { color: #f87171; }
+    .console-line-text.cl-thinking { color: #8b5cf6; font-style: italic; }
+    .console-line-text.cl-system { color: #fbbf24; }
+
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
-    @media (max-width: 1200px) { .agents-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 768px) {
       .mc-main { padding: 1rem; }
       .mc-header { padding: 1rem; flex-direction: column; gap: 0.5rem; }
-      .agents-grid { grid-template-columns: 1fr 1fr; }
+      .pipeline-body { grid-template-columns: 1fr; }
+      .pipe-arrow { display: none; }
     }
-    @media (max-width: 480px) { .agents-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -539,96 +593,32 @@ import { supabaseConfig } from '../../lib/supabase';
   </div>
 
   <div class="mc-main">
-    <!-- Agent cards -->
-    <div class="agents-grid" id="agentsGrid"></div>
-
-    <!-- Pipeline -->
+    <!-- Pipeline (main view) -->
     <div class="pipeline-section" id="pipelineSection">
       <div class="pipeline-header">
         <span class="pipeline-title">Flux de production</span>
         <span class="pipeline-total" id="pipelineTotal"></span>
+        <button class="pipeline-launch-btn" onclick="launchPipeline()">&#9654; Pipeline complet</button>
       </div>
       <div class="pipeline-body" id="pipelineBody"></div>
       <div class="pipe-status-bar" id="pipelineBar"></div>
     </div>
 
-    <!-- Dependency graph -->
-    <div class="dep-section">
-      <div class="dep-title" style="display:flex;align-items:center;justify-content:space-between">
-        <span>Dependances &amp; Pipeline</span>
-        <button class="agent-launch-btn" id="pipelineBtn" style="width:auto;padding:0.35rem 1rem;margin:0" onclick="launchPipeline()">&#9654; Lancer Pipeline</button>
+    <!-- Agent server warning (shown if server offline) -->
+    <div id="serverWarning" style="display:none;background:#1a1508;border:1px solid #eab30844;border-radius:8px;padding:0.6rem 1rem;margin-bottom:1rem;font-size:0.68rem;color:#fbbf24;text-align:center">
+      &#9888; Agent Server hors ligne &mdash; lance <code style="background:#111827;padding:0.1rem 0.3rem;border-radius:3px">node scripts/agent-server.mjs</code> dans un terminal
+    </div>
+
+    <!-- Agent Console -->
+    <div class="console-section" id="consoleSection">
+      <div class="console-header">
+        <span class="console-title">&#128187; Console Agent</span>
+        <div class="console-tabs" id="consoleTabs"></div>
+        <span class="console-status" id="consoleStatus"></span>
       </div>
-      <svg viewBox="0 0 820 240" xmlns="http://www.w3.org/2000/svg">
-        <!-- Vague 1 label -->
-        <text x="70" y="12" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace" text-transform="uppercase">VAGUE 1 — ANALYSE</text>
-
-        <!-- SEO Audit -->
-        <rect x="10" y="22" width="120" height="32" rx="6" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
-        <text x="70" y="43" text-anchor="middle" font-size="9" font-weight="600" fill="#38bdf8" font-family="JetBrains Mono, monospace">SEO Audit</text>
-        <line x1="130" y1="38" x2="310" y2="115" stroke="#38bdf866" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
-        <text x="205" y="70" text-anchor="middle" font-size="7" fill="#38bdf8" font-family="JetBrains Mono, monospace">tickets</text>
-
-        <!-- Analytics -->
-        <rect x="10" y="62" width="120" height="32" rx="6" fill="#111827" stroke="#1e3a1e" stroke-width="1"/>
-        <text x="70" y="83" text-anchor="middle" font-size="9" font-weight="600" fill="#4ade80" font-family="JetBrains Mono, monospace">Analytics</text>
-        <line x1="130" y1="78" x2="310" y2="118" stroke="#4ade8066" stroke-width="1.5" marker-end="url(#arrowGreen2)"/>
-        <text x="205" y="93" text-anchor="middle" font-size="7" fill="#4ade80" font-family="JetBrains Mono, monospace">tickets</text>
-
-        <!-- Fact-Check -->
-        <rect x="10" y="102" width="120" height="32" rx="6" fill="#111827" stroke="#3a2e1e" stroke-width="1"/>
-        <text x="70" y="123" text-anchor="middle" font-size="9" font-weight="600" fill="#fbbf24" font-family="JetBrains Mono, monospace">Fact-Check</text>
-        <line x1="130" y1="118" x2="310" y2="122" stroke="#fbbf2466" stroke-width="1.5" marker-end="url(#arrowGold)"/>
-        <text x="220" y="113" text-anchor="middle" font-size="7" fill="#fbbf24" font-family="JetBrains Mono, monospace">tickets</text>
-
-        <!-- Opportunities -->
-        <rect x="10" y="142" width="120" height="32" rx="6" fill="#111827" stroke="#2e1e3a" stroke-width="1"/>
-        <text x="70" y="163" text-anchor="middle" font-size="9" font-weight="600" fill="#c084fc" font-family="JetBrains Mono, monospace">Opportunities</text>
-        <line x1="130" y1="158" x2="310" y2="128" stroke="#c084fc66" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
-        <text x="205" y="150" text-anchor="middle" font-size="7" fill="#c084fc" font-family="JetBrains Mono, monospace">sujets</text>
-
-        <!-- Int. Links -->
-        <rect x="10" y="182" width="120" height="32" rx="6" fill="#111827" stroke="#3a1e2e" stroke-width="1"/>
-        <text x="70" y="203" text-anchor="middle" font-size="9" font-weight="600" fill="#f9a8d4" font-family="JetBrains Mono, monospace">Int. Links</text>
-        <line x1="130" y1="198" x2="310" y2="132" stroke="#f9a8d466" stroke-width="1.5" marker-end="url(#arrowPink)"/>
-        <text x="205" y="175" text-anchor="middle" font-size="7" fill="#f9a8d4" font-family="JetBrains Mono, monospace">maillage</text>
-
-        <!-- Vague 2 label -->
-        <text x="370" y="100" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">VAGUE 2</text>
-
-        <!-- Editorial -->
-        <rect x="315" y="108" width="110" height="36" rx="6" fill="#111827" stroke="#1e2e3a" stroke-width="1.5"/>
-        <text x="370" y="131" text-anchor="middle" font-size="9" font-weight="600" fill="#67e8f9" font-family="JetBrains Mono, monospace">Editorial</text>
-        <line x1="425" y1="126" x2="500" y2="126" stroke="#67e8f966" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
-
-        <!-- Vague 3 label -->
-        <text x="555" y="100" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">VAGUE 3</text>
-
-        <!-- Validator -->
-        <rect x="505" y="108" width="100" height="36" rx="6" fill="#111827" stroke="#1e3a2e" stroke-width="1"/>
-        <text x="555" y="131" text-anchor="middle" font-size="9" font-weight="600" fill="#86efac" font-family="JetBrains Mono, monospace">Validator</text>
-        <line x1="605" y1="126" x2="660" y2="126" stroke="#86efac66" stroke-width="1.5" marker-end="url(#arrowMint)"/>
-
-        <!-- Git + Deploy -->
-        <rect x="665" y="108" width="90" height="36" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
-        <text x="710" y="124" text-anchor="middle" font-size="8" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Git Push</text>
-        <text x="710" y="137" text-anchor="middle" font-size="7" fill="#475569" font-family="JetBrains Mono, monospace">Deploy</text>
-
-        <!-- Dashboard -->
-        <rect x="700" y="22" width="110" height="36" rx="6" fill="#111827" stroke="#22c55e44" stroke-width="1"/>
-        <text x="755" y="45" text-anchor="middle" font-size="9" font-weight="600" fill="#22c55e" font-family="JetBrains Mono, monospace">Dashboard</text>
-        <line x1="755" y1="108" x2="755" y2="58" stroke="#22c55e44" stroke-width="1" stroke-dasharray="4" marker-end="url(#arrowGreen)"/>
-
-        <defs>
-          <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#38bdf8"/></marker>
-          <marker id="arrowGreen2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4ade80"/></marker>
-          <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
-          <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c084fc"/></marker>
-          <marker id="arrowPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f9a8d4"/></marker>
-          <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#67e8f9"/></marker>
-          <marker id="arrowMint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#86efac"/></marker>
-          <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
-        </defs>
-      </svg>
+      <div class="console-body" id="consoleBody">
+        <div class="console-empty">Clique sur un agent en cours pour voir sa sortie en temps reel...</div>
+      </div>
     </div>
 
     <!-- Live log feed -->
@@ -649,6 +639,7 @@ import { supabaseConfig } from '../../lib/supabase';
   const SUPABASE_ANON_KEY = supabaseAnonKey;
 
   const AGENTS = [
+    { name: 'strategist', label: 'Strategist', icon: 'strategist', desc: 'GA/GSC, priorites, orchestration' },
     { name: 'seo-audit', label: 'SEO Audit', icon: 'seo', desc: 'Crawl, meta, liens' },
     { name: 'analytics', label: 'Analytics', icon: 'analytics', desc: 'Keywords ranking' },
     { name: 'fact-check', label: 'Fact-Check', icon: 'factcheck', desc: 'Verification medicale' },
@@ -777,7 +768,7 @@ import { supabaseConfig } from '../../lib/supabase';
       }
       // Refresh immediately
       await checkServer();
-      await loadAgents();
+      await loadAgentRuns();
     } catch(e) {
       alert('Erreur: ' + e.message);
     }
@@ -791,7 +782,7 @@ import { supabaseConfig } from '../../lib/supabase';
         body: JSON.stringify({ agent: name })
       });
       await checkServer();
-      await loadAgents();
+      await loadAgentRuns();
     } catch(e) {}
   }
 
@@ -814,7 +805,7 @@ import { supabaseConfig } from '../../lib/supabase';
         return;
       }
       await checkServer();
-      await loadAgents();
+      await loadAgentRuns();
     } catch(e) {
       alert('Erreur: ' + e.message);
     }
@@ -869,16 +860,17 @@ import { supabaseConfig } from '../../lib/supabase';
   }
 
   // Pipeline data
-  let pipelineData = { tickets: [], links: [], opps: [] };
+  let pipelineData = { tickets: [], links: [], opps: [], decisions: [] };
 
   async function loadPipelineData() {
     try {
-      const [tickets, links, opps] = await Promise.all([
+      const [tickets, links, opps, decisions] = await Promise.all([
         supabaseFetch('correction_tickets', 'select=source_agent,statut,ticket_type,created_at&order=created_at.desc'),
         supabaseFetch('internal_link_suggestions', 'select=status,priority,created_at&order=created_at.desc'),
         supabaseFetch('content_opportunities', 'select=status,priority,created_at&order=created_at.desc'),
+        supabaseFetch('strategist_decisions', 'select=decision_type,reason,applied,created_at&order=created_at.desc&limit=10').catch(() => []),
       ]);
-      pipelineData = { tickets, links, opps };
+      pipelineData = { tickets, links, opps, decisions };
       renderPipeline();
     } catch(e) {}
   }
@@ -886,253 +878,248 @@ import { supabaseConfig } from '../../lib/supabase';
   function renderPipeline() {
     const { tickets, links, opps } = pipelineData;
 
-    // Stats
+    // Count tickets by status
     const tByStatus = { approved: 0, in_progress: 0, ready_to_deploy: 0, deployed: 0 };
     const tBySource = {};
     for (const t of tickets) {
       const s = t.statut || 'approved';
       if (tByStatus[s] !== undefined) tByStatus[s]++;
       const src = t.source_agent || 'fact-check';
-      if (!tBySource[src]) tBySource[src] = { total: 0, approved: 0 };
+      if (!tBySource[src]) tBySource[src] = { total: 0, approved: 0, in_progress: 0, done: 0 };
       tBySource[src].total++;
       if (s === 'approved') tBySource[src].approved++;
+      else if (s === 'in_progress') tBySource[src].in_progress++;
+      else tBySource[src].done++;
     }
 
+    const lAll = links.length;
     const lApproved = links.filter(l => l.status === 'approved').length;
+    const oAll = opps.length;
     const oApproved = opps.filter(o => o.status === 'approved').length;
-    const totalPending = tByStatus.approved + lApproved + oApproved;
-    const totalAll = tickets.length + links.length + opps.length;
 
-    document.getElementById('pipelineTotal').textContent = totalPending > 0
-      ? totalPending + ' en attente editorial'
-      : 'Rien a traiter';
+    // Totals
+    const editorialStock = tByStatus.approved + lApproved + oApproved;
+    const editorialInProgress = tByStatus.in_progress;
+    const editorialOutput = tByStatus.ready_to_deploy;
+    const validatorOutput = tByStatus.deployed;
+    const totalAll = tickets.length + lAll + oAll;
 
-    // Factory configs
+    document.getElementById('pipelineTotal').textContent = editorialStock > 0
+      ? editorialStock + ' tickets en stock'
+      : totalAll > 0 ? totalAll + ' traites' : 'Pipeline vide';
+
+    // Server warning
+    const warn = document.getElementById('serverWarning');
+    if (warn) warn.style.display = serverOnline ? 'none' : 'block';
+
+    // Strategist decisions
+    const decisions = pipelineData.decisions || [];
+    const recentDecisions = decisions.filter(d => {
+      const age = Date.now() - new Date(d.created_at).getTime();
+      return age < 24 * 3600 * 1000; // last 24h
+    });
+
+    // Factory configs — source agents
     const factories = [
-      { key: 'fact-check', label: 'Fact-Check', color: '#fbbf24', icon: '&#9888;' },
-      { key: 'seo-audit', label: 'SEO Audit', color: '#38bdf8', icon: '&#128269;' },
-      { key: 'validator', label: 'Validator', color: '#86efac', icon: '&#9989;' },
-      { key: 'analytics', label: 'Analytics', color: '#4ade80', icon: '&#128200;' },
-      { key: 'internal-links', label: 'Maillage', color: '#f9a8d4', icon: '&#128279;', count: lApproved, total: links.length },
-      { key: 'opportunities', label: 'Nouveaux articles', color: '#c084fc', icon: '&#128161;', count: oApproved, total: opps.length },
+      { key: 'fact-check', label: 'Fact-Check', color: '#fbbf24' },
+      { key: 'seo-audit', label: 'SEO Audit', color: '#38bdf8' },
+      { key: 'analytics', label: 'Analytics', color: '#4ade80' },
+      { key: 'internal-links', label: 'Maillage', color: '#f9a8d4', pending: lApproved, total: lAll },
+      { key: 'opportunities', label: 'Nouveaux articles', color: '#c084fc', pending: oApproved, total: oAll },
     ];
 
     const arrowSvg = `<div class="pipe-arrow"><svg viewBox="0 0 20 60"><path d="M2 30 L14 30 M10 24 L16 30 L10 36" stroke="#2a3444" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>`;
 
-    // Build factory items
+    // Build factory items with launch buttons and status
     const factoryHtml = factories.map(f => {
       const src = tBySource[f.key];
-      const approved = f.count !== undefined ? f.count : (src ? src.approved : 0);
+      const pending = f.pending !== undefined ? f.pending : (src ? src.approved : 0);
       const total = f.total !== undefined ? f.total : (src ? src.total : 0);
-      const isEmpty = total === 0;
-      return `<div class="factory-item ${isEmpty ? 'fc-zero' : ''}">
-        <span class="factory-dot" style="background:${f.color}"></span>
-        <span class="factory-name">${f.label}</span>
-        <span class="factory-count" style="color:${approved > 0 ? f.color : '#374151'}">${approved}</span>
+      const isEmpty = total === 0 && !runningAgents[f.key];
+      const hasPending = pending > 0;
+      const isRunning = !!runningAgents[f.key];
+      const run = agentRuns[f.key];
+      const lastTime = run ? timeAgo(run.completed_at || run.started_at) : '';
+
+      // Launch button
+      let btn = '';
+      if (!serverOnline) {
+        btn = '';
+      } else if (isRunning) {
+        const uptime = runningAgents[f.key]?.uptime || '';
+        btn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('${f.key}')">&#9881; ${uptime} &#9724;</button>`;
+      } else {
+        btn = `<button class="agent-launch-btn" onclick="launchAgent('${f.key}')">&#9654;</button>`;
+      }
+
+      return `<div class="factory-item ${isEmpty ? 'fc-zero' : ''} ${isRunning ? 'fi-running' : ''}" onclick="selectConsoleAgent('${f.key}')" style="cursor:pointer">
+        <span class="factory-dot ${isRunning ? 'running' : ''}" style="background:${f.color}"></span>
+        <span class="factory-info">
+          <span class="factory-name">${f.label}</span>
+          <span class="factory-meta">${total > 0 ? total + ' crees' : ''}${lastTime ? (total > 0 ? ' · ' : '') + lastTime : ''}</span>
+        </span>
+        <span class="factory-count-pending" style="background:${hasPending ? f.color + '22' : 'transparent'};color:${hasPending ? f.color : '#374151'}">${pending}</span>
+        ${btn}
       </div>`;
     }).join('');
 
-    // Editorial intake
-    const editorialTotal = totalPending;
+    // Editorial variants
+    const editVariants = [
+      { key: 'editorial-medical', label: 'Medical', icon: '&#128138;', color: '#f87171', bg: '#3a1e1e' },
+      { key: 'editorial-seo', label: 'SEO', icon: '&#128269;', color: '#67e8f9', bg: '#1e2e3a' },
+      { key: 'editorial-content', label: 'Content', icon: '&#9997;', color: '#a78bfa', bg: '#2e1e3a' },
+    ];
+    const editorialHtml = editVariants.map(v => {
+      const isRunning = !!runningAgents[v.key];
+      const run = agentRuns[v.key];
+      const meta = run ? timeAgo(run.completed_at || run.started_at) : '';
+      let btn = '';
+      if (serverOnline) {
+        if (isRunning) {
+          const uptime = runningAgents[v.key]?.uptime || '';
+          btn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('${v.key}')" style="margin-top:0.2rem;font-size:0.5rem">&#9881; ${uptime} &#9724;</button>`;
+        } else {
+          btn = `<button class="agent-launch-btn" onclick="event.stopPropagation();launchAgent('${v.key}')" style="margin-top:0.2rem;font-size:0.5rem">&#9654;</button>`;
+        }
+      }
+      return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:0.3rem;cursor:pointer;border-radius:6px;background:${isRunning ? v.color + '0a' : 'transparent'}" onclick="selectConsoleAgent('${v.key}')">
+        <span style="font-size:0.8rem">${v.icon}</span>
+        <span style="font-size:0.55rem;color:${v.color};font-weight:600">${v.label}</span>
+        ${meta ? `<span style="font-size:0.42rem;color:#374151">${meta}</span>` : ''}
+        ${btn}
+      </div>`;
+    }).join('');
+    // Also keep generic editorial for backward compat
+    const editRunning = editVariants.some(v => !!runningAgents[v.key]) || !!runningAgents['editorial'];
+    const editRun = agentRuns['editorial-medical'] || agentRuns['editorial-seo'] || agentRuns['editorial'];
+    const editMeta = editRun ? `${timeAgo(editRun.completed_at || editRun.started_at)}` : '';
 
-    // Validator & Deploy
-    const readyCount = tByStatus.ready_to_deploy;
-    const deployedCount = tByStatus.deployed;
+    // Validator button
+    const valRunning = !!runningAgents['validator'];
+    let valBtn = '';
+    if (serverOnline) {
+      if (valRunning) {
+        const uptime = runningAgents['validator']?.uptime || '';
+        valBtn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('validator')" style="margin-top:0.3rem">&#9881; ${uptime} &#9724;</button>`;
+      } else {
+        valBtn = `<button class="agent-launch-btn" onclick="launchAgent('validator')" style="margin-top:0.3rem">&#9654; Lancer</button>`;
+      }
+    }
+    const valRun = agentRuns['validator'];
+    const valMeta = valRun ? `${timeAgo(valRun.completed_at || valRun.started_at)}` : '';
+
+    // Strategist block
+    const stratRunning = !!runningAgents['strategist'];
+    const stratRun = agentRuns['strategist'];
+    const stratSrc = tBySource['strategist'];
+    const stratPending = stratSrc ? stratSrc.approved : 0;
+    const stratTotal = stratSrc ? stratSrc.total : 0;
+    const stratMeta = stratRun ? timeAgo(stratRun.completed_at || stratRun.started_at) : '';
+    let stratBtn = '';
+    if (serverOnline) {
+      if (stratRunning) {
+        const uptime = runningAgents['strategist']?.uptime || '';
+        stratBtn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('strategist')">&#9881; ${uptime} &#9724;</button>`;
+      } else {
+        stratBtn = `<button class="agent-launch-btn" onclick="launchAgent('strategist')">&#9654;</button>`;
+      }
+    }
 
     const body = document.getElementById('pipelineBody');
     body.innerHTML = `
-      <div class="pipe-phase">
-        <div class="pipe-phase-label">&#127981; Production</div>
+      <div class="pipeline-factories" style="border-bottom:1px solid #8b5cf622">
+        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.25rem;cursor:pointer" onclick="selectConsoleAgent('strategist')">
+          <span style="font-size:0.9rem">&#129504;</span>
+          <span style="flex:1">
+            <span style="color:#a78bfa;font-weight:700;font-size:0.68rem">STRATEGIST</span>
+            <span style="font-size:0.5rem;color:#475569;margin-left:0.3rem">Vague 0 — GA/GSC + decisions</span>
+          </span>
+          ${recentDecisions.length > 0 ? `<span style="font-size:0.55rem;color:#8b5cf6;background:#8b5cf622;padding:0.1rem 0.4rem;border-radius:3px">${recentDecisions.length} decisions</span>` : ''}
+          ${stratPending > 0 ? `<span class="factory-count-pending" style="background:#a78bfa22;color:#a78bfa">${stratPending}</span>` : ''}
+          ${stratMeta ? `<span style="font-size:0.48rem;color:#374151">${stratMeta}</span>` : ''}
+          ${stratBtn}
+        </div>
+      </div>
+
+      <div class="pipeline-factories">
+        <div class="pipe-phase-label">&#127981; Usines <span style="font-weight:400;color:#475569">(Vague 1 — analyse)</span></div>
         ${factoryHtml}
       </div>
 
-      ${arrowSvg}
-
-      <div class="pipe-phase" style="justify-content:center;align-items:center;background:#67e8f908;border-left:2px solid #67e8f922;border-right:2px solid #67e8f922">
-        <div class="pipe-phase-label" style="text-align:center;border-color:#67e8f933;color:#67e8f9">&#9998; Traitement</div>
-        <div class="processor-icon" style="background:#1e2e3a;color:#67e8f9">E</div>
-        <div class="processor-label" style="color:#67e8f9">Editorial</div>
-        <div class="processor-total" style="color:${editorialTotal > 0 ? '#fbbf24' : '#22c55e'}">${editorialTotal}</div>
-        <div class="processor-sub">${editorialTotal > 0 ? 'a traiter' : 'tout traite'}</div>
+      <div class="pipeline-processors">
+      <div class="pipe-phase" style="justify-content:center;align-items:center;background:${editRunning ? '#67e8f90a' : '#67e8f905'};border-right:1px solid #1e293b">
+        <div class="pipe-phase-label" style="text-align:center;border-color:#67e8f933;color:#67e8f9">&#9998; Editorial <span style="font-weight:400;color:#475569">(Vague 2)</span></div>
+        <div style="display:flex;gap:0.3rem;width:100%;padding:0 0.2rem">
+          ${editorialHtml}
+        </div>
+        <div class="processor-flow" style="margin-top:0.3rem">
+          <div class="processor-flow-label">&#9660; stock</div>
+          <div class="processor-flow-num" style="background:${editorialStock > 0 ? '#fbbf2422' : '#22c55e22'};color:${editorialStock > 0 ? '#fbbf24' : '#22c55e'}">${editorialStock}</div>
+          ${editorialInProgress > 0 ? `<div class="processor-flow-row"><span style="color:#3b82f6">&#8635;</span> ${editorialInProgress} en cours</div>` : ''}
+          <div class="processor-flow-sep"></div>
+          <div class="processor-flow-label">&#9650; output</div>
+          <div class="processor-flow-num" style="background:#67e8f922;color:#67e8f9">${editorialOutput}</div>
+        </div>
       </div>
 
-      ${arrowSvg}
+      <div class="pipe-arrow"><svg viewBox="0 0 20 60"><path d="M2 30 L14 30 M10 24 L16 30 L10 36" stroke="#2a3444" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
 
-      <div class="pipe-phase" style="justify-content:center;align-items:center;background:#86efac08;border-left:2px solid #86efac22;border-right:2px solid #86efac22">
-        <div class="pipe-phase-label" style="text-align:center;border-color:#86efac33;color:#86efac">&#128270; Verification</div>
-        <div class="processor-icon" style="background:#1e3a2e;color:#86efac">V</div>
-        <div class="processor-label" style="color:#86efac">Validator</div>
-        <div class="processor-total" style="color:#3b82f6">${readyCount}</div>
-        <div class="processor-sub">prets a deployer</div>
+      <div class="pipe-phase" style="justify-content:center;align-items:center;background:${valRunning ? '#86efac0a' : '#86efac05'};border-right:1px solid #1e293b;cursor:pointer" onclick="selectConsoleAgent('validator')">
+        <div class="pipe-phase-label" style="text-align:center;border-color:#86efac33;color:#86efac">&#128270; Validator <span style="font-weight:400;color:#475569">(Vague 3)</span></div>
+        <div class="processor-icon" style="background:#1e3a2e;color:#86efac${valRunning ? ';box-shadow:0 0 12px #86efac33' : ''}">V</div>
+        <div class="processor-flow">
+          <div class="processor-flow-label">&#9660; a verifier</div>
+          <div class="processor-flow-num" style="background:${editorialOutput > 0 ? '#86efac22' : '#11182722'};color:${editorialOutput > 0 ? '#86efac' : '#374151'}">${editorialOutput}</div>
+          <div class="processor-flow-sep"></div>
+          <div class="processor-flow-label">&#9650; valides</div>
+          <div class="processor-flow-num" style="background:#22c55e22;color:#22c55e">${validatorOutput}</div>
+        </div>
+        ${valMeta ? `<div style="font-size:0.48rem;color:#374151;margin-top:0.2rem">${valMeta}</div>` : ''}
+        ${valBtn}
       </div>
 
-      ${arrowSvg}
+      <div class="pipe-arrow"><svg viewBox="0 0 20 60"><path d="M2 30 L14 30 M10 24 L16 30 L10 36" stroke="#2a3444" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
 
       <div class="pipe-phase" style="justify-content:center;align-items:center;background:#22c55e08">
         <div class="pipe-phase-label" style="text-align:center;border-color:#22c55e33;color:#22c55e">&#128640; Deploy</div>
         <div class="processor-icon" style="background:#052e16;color:#22c55e">&#10003;</div>
-        <div class="processor-total" style="color:#22c55e">${deployedCount}</div>
-        <div class="processor-sub">deployes</div>
+        <div class="processor-total" style="color:#22c55e;font-size:1.5rem;font-weight:700">${validatorOutput}</div>
+        <div class="processor-sub" style="font-size:0.58rem;color:#475569">deployes</div>
+      </div>
       </div>
     `;
 
     // Status bar
     const bar = document.getElementById('pipelineBar');
     if (totalAll > 0) {
-      const pctPending = (totalPending / totalAll * 100).toFixed(1);
-      const pctReady = (readyCount / totalAll * 100).toFixed(1);
-      const pctDeployed = (deployedCount / totalAll * 100).toFixed(1);
-      const pctOther = (100 - parseFloat(pctPending) - parseFloat(pctReady) - parseFloat(pctDeployed)).toFixed(1);
+      const pctStock = (editorialStock / totalAll * 100).toFixed(1);
+      const pctInProgress = (editorialInProgress / totalAll * 100).toFixed(1);
+      const pctReady = (editorialOutput / totalAll * 100).toFixed(1);
+      const pctDeployed = (validatorOutput / totalAll * 100).toFixed(1);
+      const pctDone = Math.max(0, 100 - parseFloat(pctStock) - parseFloat(pctInProgress) - parseFloat(pctReady) - parseFloat(pctDeployed)).toFixed(1);
       bar.innerHTML = `
-        <div class="pipe-status-seg" style="width:${pctPending}%;background:#fbbf24" title="En attente"></div>
-        <div class="pipe-status-seg" style="width:${pctOther}%;background:#3b82f6" title="En cours"></div>
-        <div class="pipe-status-seg" style="width:${pctReady}%;background:#67e8f9" title="Prets"></div>
-        <div class="pipe-status-seg" style="width:${pctDeployed}%;background:#22c55e" title="Deployes"></div>
+        <div class="pipe-status-seg" style="width:${pctStock}%;background:#fbbf24" title="Stock editorial (${editorialStock})"></div>
+        <div class="pipe-status-seg" style="width:${pctInProgress}%;background:#3b82f6" title="En cours (${editorialInProgress})"></div>
+        <div class="pipe-status-seg" style="width:${pctDone}%;background:#1e293b" title="Traites"></div>
+        <div class="pipe-status-seg" style="width:${pctReady}%;background:#67e8f9" title="Prets (${editorialOutput})"></div>
+        <div class="pipe-status-seg" style="width:${pctDeployed}%;background:#22c55e" title="Deployes (${validatorOutput})"></div>
       `;
     }
   }
 
-  // Agent cards
-  async function loadAgents() {
+  // Load agent run data (latest run per agent)
+  let agentRuns = {};
+
+  async function loadAgentRuns() {
     try {
       const runs = await supabaseFetch('agent_runs', 'select=*&order=started_at.desc&limit=50');
       const latest = {};
       for (const r of runs) {
         if (!latest[r.agent_name]) latest[r.agent_name] = r;
       }
-
-      const grid = document.getElementById('agentsGrid');
-      grid.innerHTML = AGENTS.map(a => {
-        const run = latest[a.name];
-        const status = run ? run.status : 'idle';
-        const statusLabel = { completed: 'termine', running: 'en cours', started: 'demarre', error: 'erreur', idle: 'inactif' }[status] || status;
-        const meta = run?.metadata || {};
-        const items = run?.items_processed ?? '-';
-
-        // Smart counters per agent using metadata
-        let counter2Label = 'erreurs';
-        let counter2Value = run?.items_errors ?? '-';
-        if (a.name === 'seo-audit' && meta.critical !== undefined) {
-          counter2Value = meta.critical || 0;
-          counter2Label = 'critiques';
-        } else if (a.name === 'fact-check' && meta.tickets_created !== undefined) {
-          counter2Value = meta.tickets_created;
-          counter2Label = 'tickets';
-        } else if (a.name === 'analytics' && meta.positioned_keywords !== undefined) {
-          counter2Value = meta.positioned_keywords;
-          counter2Label = 'positionnes';
-        } else if (a.name === 'opportunities' && meta.high_priority !== undefined) {
-          counter2Value = meta.high_priority;
-          counter2Label = 'prioritaires';
-        } else if (a.name === 'editorial') {
-          counter2Value = (meta.tickets_corrected || 0) + (meta.links_inserted || 0);
-          counter2Label = 'corriges';
-        } else if (a.name === 'validator' && meta.errors !== undefined) {
-          counter2Value = meta.errors;
-          counter2Label = 'erreurs';
-        } else if (a.name === 'internal-links' && meta.suggestions_new !== undefined) {
-          counter2Value = meta.suggestions_new;
-          counter2Label = 'suggestions';
-        }
-
-        const duration = run?.duration_ms ? formatDuration(run.duration_ms)
-          : (run?.started_at && run?.completed_at)
-            ? formatDuration(new Date(run.completed_at) - new Date(run.started_at))
-            : '';
-        const lastTime = run?.completed_at
-          ? timeAgo(run.completed_at)
-          : run?.started_at
-            ? timeAgo(run.started_at)
-            : 'jamais lance';
-
-        // Launch button state
-        const isRunningOnServer = !!runningAgents[a.name];
-        let btnClass = 'agent-launch-btn';
-        let btnLabel = '&#9654; Lancer';
-        let btnAction = `launchAgent('${a.name}')`;
-        let btnDisabled = '';
-        if (!serverOnline) {
-          btnClass += ' server-off';
-          btnLabel = '&#9888; node scripts/agent-server.mjs';
-          btnAction = `alert('Lance d\\'abord le serveur :\\nnode scripts/agent-server.mjs')`;
-        } else if (isRunningOnServer) {
-          btnClass += ' is-running';
-          const uptime = runningAgents[a.name]?.uptime || '';
-          btnLabel = '&#9881; En cours... ' + uptime + ' <span style="margin-left:auto;font-size:0.55rem;opacity:0.7;cursor:pointer" onclick="event.stopPropagation();stopAgent(\''+a.name+'\')">&#9724; Stop</span>';
-        }
-
-        // Backlog chips — editorial gets full breakdown, others show their output
-        let backlogHtml = '';
-        const pt = pipelineData.tickets || [];
-
-        // Source agents show how many tickets they've created
-        if (['seo-audit', 'fact-check', 'validator', 'analytics'].includes(a.name)) {
-          const myTickets = pt.filter(t => (t.source_agent || 'fact-check') === a.name);
-          const myApproved = myTickets.filter(t => t.statut === 'approved').length;
-          const myDone = myTickets.length - myApproved;
-          if (myTickets.length > 0) {
-            backlogHtml = `<div class="agent-backlog">
-              <span class="backlog-chip bc-tickets">${myApproved} en attente</span>
-              <span class="backlog-chip bc-links ${myDone === 0 ? 'bc-zero' : ''}">${myDone} traites</span>
-            </div>`;
-          }
-        }
-
-        // Internal-links shows its suggestions
-        if (a.name === 'internal-links') {
-          const pl = pipelineData.links || [];
-          const lAppr = pl.filter(l => l.status === 'approved').length;
-          const lDone = pl.length - lAppr;
-          if (pl.length > 0) {
-            backlogHtml = `<div class="agent-backlog">
-              <span class="backlog-chip bc-links">${lAppr} en attente</span>
-              <span class="backlog-chip bc-opps ${lDone === 0 ? 'bc-zero' : ''}">${lDone} inseres</span>
-            </div>`;
-          }
-        }
-
-        // Opportunities shows its opportunities
-        if (a.name === 'opportunities') {
-          const po = pipelineData.opps || [];
-          const oAppr = po.filter(o => o.status === 'approved').length;
-          const oDone = po.length - oAppr;
-          if (po.length > 0) {
-            backlogHtml = `<div class="agent-backlog">
-              <span class="backlog-chip bc-opps">${oAppr} a creer</span>
-              <span class="backlog-chip bc-links ${oDone === 0 ? 'bc-zero' : ''}">${oDone} publies</span>
-            </div>`;
-          }
-        }
-
-        if (a.name === 'editorial') {
-          const bl = editorialBacklog;
-          const total = bl.tickets + bl.links + bl.opps;
-          backlogHtml = `<div class="agent-backlog">
-            <span class="backlog-chip bc-tickets ${bl.tickets === 0 ? 'bc-zero' : ''}">${bl.tickets} tickets</span>
-            <span class="backlog-chip bc-links ${bl.links === 0 ? 'bc-zero' : ''}">${bl.links} liens</span>
-            <span class="backlog-chip bc-opps ${bl.opps === 0 ? 'bc-zero' : ''}">${bl.opps} sujets</span>
-          </div>`;
-        }
-
-        return `<div class="agent-card ${status}">
-          <div class="agent-icon icon-${a.icon}">${a.label[0]}</div>
-          <div class="agent-name">${a.label}</div>
-          <div class="agent-status-line">
-            <span class="status-indicator si-${status}"></span>
-            <span class="status-text">${statusLabel.toUpperCase()}</span>
-          </div>
-          <div class="agent-counters">
-            <div class="counter"><strong>${items}</strong>traites</div>
-            <div class="counter"><strong>${counter2Value}</strong>${counter2Label}</div>
-          </div>
-          ${backlogHtml}
-          <div class="agent-last-action">${lastTime}${duration ? ' · ' + duration : ''}</div>
-          <button class="${btnClass}" onclick="${btnAction}" ${btnDisabled}>${btnLabel}</button>
-        </div>`;
-      }).join('');
-    } catch (e) {
-      document.getElementById('agentsGrid').innerHTML = `<div style="grid-column:1/-1;color:#f87171;padding:1rem;font-size:0.8rem">Erreur: ${escapeHtml(e.message)}</div>`;
-    }
+      agentRuns = latest;
+      renderPipeline();
+    } catch (e) {}
   }
 
   // Log feed
@@ -1172,6 +1159,172 @@ import { supabaseConfig } from '../../lib/supabase';
     }
   }
 
+  // ========== AGENT CONSOLE ==========
+  let consoleAgent = null;  // currently selected agent tab
+  let consoleSince = 0;     // incremental fetch offset
+  let consoleAutoScroll = true;
+  let consoleTimer = null;
+
+  function classifyLine(text) {
+    if (!text) return '';
+    if (/^(Tool|Using|Calling|Running|Execute|Read|Write|Edit|Glob|Grep|Bash|WebSearch|WebFetch)/i.test(text)) return 'cl-tool';
+    if (/^(Result|Output|Found|Created|Updated|Inserted|Deleted|Success|Done|Completed|✅)/i.test(text)) return 'cl-result';
+    if (/^(Error|Failed|Exception|❌|⚠|WARN|WARNING)/i.test(text)) return 'cl-error';
+    if (/^(Thinking|Analyzing|Considering|Planning|Let me|I'll|I need|Looking)/i.test(text)) return 'cl-thinking';
+    if (/^(🚀|📡|🤖|📋|🔐|⏳|Agent .* lance|Agent .* complete|Pipeline)/i.test(text)) return 'cl-system';
+    return '';
+  }
+
+  function formatConsoleTs(isoStr) {
+    if (!isoStr) return '';
+    const d = new Date(isoStr);
+    return d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
+  function renderConsoleTabs() {
+    const tabsEl = document.getElementById('consoleTabs');
+    if (!tabsEl) return;
+
+    // Gather agents with buffers (from server status) or running
+    const agentNames = new Set();
+    for (const name of Object.keys(runningAgents)) agentNames.add(name);
+    // Also check serverBuffers from last status check
+    if (window._serverBuffers) {
+      for (const name of Object.keys(window._serverBuffers)) agentNames.add(name);
+    }
+
+    if (agentNames.size === 0) {
+      tabsEl.innerHTML = '';
+      return;
+    }
+
+    const sorted = [...agentNames].sort();
+    tabsEl.innerHTML = sorted.map(name => {
+      const isRunning = !!runningAgents[name];
+      const isActive = consoleAgent === name;
+      const bufInfo = window._serverBuffers?.[name];
+      const lineCount = bufInfo?.lines || 0;
+      return `<button class="console-tab ${isActive ? 'active' : ''}" onclick="selectConsoleAgent('${name}')">
+        <span class="tab-dot ${isRunning ? 'running' : 'stopped'}"></span>
+        ${name}
+        ${lineCount > 0 ? `<span class="tab-lines">(${lineCount})</span>` : ''}
+      </button>`;
+    }).join('');
+  }
+
+  function selectConsoleAgent(name) {
+    consoleAgent = name;
+    consoleSince = 0;
+    consoleAutoScroll = true;
+
+    // Clear body
+    const body = document.getElementById('consoleBody');
+    body.innerHTML = '<div class="console-empty">Chargement...</div>';
+
+    // Update tab active state
+    renderConsoleTabs();
+
+    // Fetch immediately
+    fetchConsoleOutput();
+
+    // Start polling
+    if (consoleTimer) clearInterval(consoleTimer);
+    consoleTimer = setInterval(fetchConsoleOutput, 1500);
+  }
+
+  async function fetchConsoleOutput() {
+    if (!consoleAgent || !serverOnline) return;
+
+    try {
+      const r = await fetch(`${AGENT_SERVER}/output/${consoleAgent}?since=${consoleSince}`);
+      const data = await r.json();
+
+      const body = document.getElementById('consoleBody');
+      const statusEl = document.getElementById('consoleStatus');
+
+      // Update status
+      if (statusEl) {
+        statusEl.textContent = data.running
+          ? `● RUNNING — ${data.total} lines`
+          : `○ STOPPED — ${data.total} lines`;
+        statusEl.style.color = data.running ? '#22c55e' : '#475569';
+      }
+
+      if (data.lines.length === 0 && consoleSince === 0) {
+        body.innerHTML = '<div class="console-empty">Aucune sortie pour cet agent</div>';
+        return;
+      }
+
+      if (data.lines.length === 0) return; // No new lines
+
+      // If first load, replace content
+      if (consoleSince === 0) {
+        body.innerHTML = '';
+      }
+
+      // Append new lines
+      const fragment = document.createDocumentFragment();
+      for (const line of data.lines) {
+        const div = document.createElement('div');
+        div.className = 'console-line';
+        const cls = classifyLine(line.text);
+        div.innerHTML = `<span class="console-line-ts">${formatConsoleTs(line.ts)}</span><span class="console-line-text ${cls}">${escapeHtml(line.text)}</span>`;
+        fragment.appendChild(div);
+      }
+      body.appendChild(fragment);
+
+      // Update offset
+      consoleSince = data.total;
+
+      // Auto-scroll to bottom
+      if (consoleAutoScroll) {
+        body.scrollTop = body.scrollHeight;
+      }
+    } catch(e) {
+      // silent fail
+    }
+  }
+
+  // Detect manual scroll (user scrolled up = disable auto-scroll)
+  document.getElementById('consoleBody')?.addEventListener('scroll', function() {
+    const el = this;
+    const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 30;
+    consoleAutoScroll = atBottom;
+  });
+
+  // Expose to onclick
+  window.selectConsoleAgent = selectConsoleAgent;
+
+  // Enhanced checkServer to save buffer info
+  const _origCheckServer = checkServer;
+  checkServer = async function() {
+    try {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 2000);
+      const r = await fetch(`${AGENT_SERVER}/status`, { signal: ctrl.signal });
+      clearTimeout(timer);
+      const data = await r.json();
+      serverOnline = true;
+      runningAgents = data.running || {};
+      window._serverBuffers = data.buffers || {};
+      renderConsoleTabs();
+    } catch(e) {
+      serverOnline = false;
+      runningAgents = {};
+    }
+  };
+
+  // Auto-open console when an agent starts running
+  function autoOpenConsole() {
+    if (consoleAgent && runningAgents[consoleAgent]) return; // Already watching a running agent
+    const runningNames = Object.keys(runningAgents);
+    if (runningNames.length > 0 && !consoleAgent) {
+      selectConsoleAgent(runningNames[0]);
+    }
+  }
+
+  // ========== END AGENT CONSOLE ==========
+
   // Realtime via Supabase
   function setupRealtime() {
     // Use Supabase Realtime WebSocket for live updates
@@ -1208,7 +1361,7 @@ import { supabaseConfig } from '../../lib/supabase';
         try {
           const msg = JSON.parse(event.data);
           if (msg.event === 'postgres_changes') {
-            loadAgents();
+            loadAgentRuns();
             loadLogs(true);
             loadQueue();
           }
@@ -1228,18 +1381,21 @@ import { supabaseConfig } from '../../lib/supabase';
 
   // Polling every 5s for reliable updates
   setInterval(() => {
-    checkServer().then(() => loadAgents());
+    checkServer().then(() => {
+      renderPipeline();
+      autoOpenConsole();
+    });
     loadLogs(true);
   }, 5000);
 
   // Refresh editorial backlog + pipeline every 30s
   setInterval(() => {
-    Promise.all([loadEditorialBacklogCounts(), loadPipelineData()]).then(() => loadAgents());
+    Promise.all([loadEditorialBacklogCounts(), loadPipelineData()]).then(() => loadAgentRuns());
   }, 30000);
 
   // Init
   Promise.all([checkServer(), loadEditorialBacklogCounts(), loadPipelineData()]).then(() => {
-    loadAgents();
+    loadAgentRuns();
     loadLogs(false);
   });
   setupRealtime();

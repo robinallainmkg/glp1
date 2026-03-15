@@ -81,7 +81,7 @@ Seuls certains spécialistes peuvent prescrire Wegovy :
 
 ### Tarifs officiels
 
-Le prix de Wegovy varie selon la posologie et la pharmacie :
+Le prix de Wegovy varie selon la posologie et la pharmacie. Consultez notre guide complet sur les [tarifs Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) pour une comparaison détaillée :
 
 | Dosage  | Coût mensuel estimé | Durée      |
 | ------- | ------------------- | ---------- |
@@ -102,7 +102,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 * **Province** : prix variables selon les pharmacies (à partir de 169 €/mois)
 * Statut actuel du remboursement
 
-**Wegovy n'est actuellement pas remboursé** par l'Assurance Maladie en France. Cependant, certaines situations particulières peuvent bénéficier d'une prise en charge :
+**Wegovy n'est actuellement pas remboursé** par l'Assurance Maladie en France. Pour les conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. Cependant, certaines situations particulières peuvent bénéficier d'une prise en charge :
 
 #### Prise en charge hospitalière
 

@@ -455,6 +455,9 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 - **[Effets Secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic)** - Comment gérer nausées, vomissements et autres effets
 - **[Régime Alimentaire sous Ozempic](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition optimale pour maximiser la perte de poids
 
+### Remboursement
+- **[Guide complet remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)** - Conditions détaillées pour 2026, CSS, ALD et mutuelles
+
 ### Comparatifs et Alternatives
 - **[Ozempic vs Wegovy : Quel est le meilleur ?](/guides/quel-traitement-glp1-choisir)** - Comparaison complète pour choisir
 - **[Prix Wegovy France](/collections/glp1-cout/prix-wegovy-france)** - Alternative pour la perte de poids
