@@ -1,7 +1,6 @@
 ---
 title: "Anneau Gastrique Prix CMU : Remboursement, Conditions et Alternatives GLP-1 2025"
 description: "Guide complet sur l'anneau gastrique et la CMU. Prix, conditions de remboursement, alternatives GLP-1, et parcours de soins détaillé pour patients éligibles."
-slug: "anneau-gastrique-prix-cmu"
 pubDate: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"

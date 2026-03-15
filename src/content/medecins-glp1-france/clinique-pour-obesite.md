@@ -1,7 +1,6 @@
 ---
 title: "Clinique Pour Obesite : Guide Complet et Conseils Pratiques 2025"
 description: "Guide complet des cliniques spécialisées dans l'obésité en France. Trouvez les meilleurs centres médicaux pour votre prise en charge GLP-1."
-slug: "clinique-pour-obesite"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Médecins spécialisés"

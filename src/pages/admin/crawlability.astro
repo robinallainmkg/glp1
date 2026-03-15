@@ -1,0 +1,813 @@
+---
+// src/pages/admin/crawlability.astro
+// Dashboard Crawlabilite — Client-side rendering (Hostinger static)
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Crawlabilite - GLP1 Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style is:inline>
+    :root {
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --surface2: #f0ede8;
+      --surface3: #e8e4dd;
+      --border: #e2ddd6;
+      --border2: #d0c9be;
+      --text: #18150f;
+      --text2: #3d3830;
+      --muted: #7a7268;
+      --urgent: #b83030;
+      --urgent-light: #fdf2f2;
+      --urgent-border: #edc0c0;
+      --warning: #9a6200;
+      --warning-light: #fdf8ee;
+      --warning-border: #e8d090;
+      --ok: #1e6e3a;
+      --ok-light: #f0faf4;
+      --ok-border: #a8dab8;
+      --blue: #1a3f7a;
+      --blue-light: #eef3fc;
+      --blue-border: #a8c0e8;
+      --purple: #5a3a8a;
+      --purple-light: #f5f0fc;
+      --purple-border: #c8a8e8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      min-height: 100vh;
+      font-size: 14px;
+    }
+
+    .admin-layout { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Topbar */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 16px; }
+    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
+    .topbar-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      padding: 3px 8px;
+      background: var(--surface2);
+      border-radius: 4px;
+    }
+    .topbar-actions { display: flex; gap: 8px; }
+
+    /* Buttons */
+    .btn {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 7px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
+    .btn-ghost:hover:not(:disabled) { border-color: var(--text); color: var(--text); }
+    .btn-primary { background: var(--text); color: #fff; }
+    .btn-primary:hover:not(:disabled) { opacity: 0.85; }
+
+    /* Content */
+    .content { padding: 28px 32px; overflow-y: auto; flex: 1; }
+
+    /* Stats grid */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .stat-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
+    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .stat-urgent { border-color: var(--urgent-border); }
+    .stat-urgent .stat-value { color: var(--urgent); }
+    .stat-warning { border-color: var(--warning-border); }
+    .stat-warning .stat-value { color: var(--warning); }
+    .stat-ok { border-color: var(--ok-border); }
+    .stat-ok .stat-value { color: var(--ok); }
+
+    /* Sections */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      margin-top: 24px;
+    }
+    .section-title { font-size: 13px; font-weight: 700; }
+    .section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .data-table th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+    }
+    .data-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--surface2);
+      color: var(--text2);
+    }
+    .data-table tr:hover td { background: var(--surface2); }
+    .data-table .url-cell {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      word-break: break-all;
+    }
+    .data-table .num-cell {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Badges */
+    .badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .badge-critical { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
+    .badge-high { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+    .badge-medium { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
+    .badge-low { background: var(--surface2); color: var(--muted); border: 1px solid var(--border); }
+    .badge-ok { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
+
+    /* Depth bar */
+    .depth-bar {
+      display: flex;
+      gap: 4px;
+      align-items: flex-end;
+      height: 60px;
+      margin-top: 12px;
+    }
+    .depth-col {
+      flex: 1;
+      min-width: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .depth-fill {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      min-height: 4px;
+      transition: height 0.3s;
+    }
+    .depth-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      color: var(--muted);
+    }
+    .depth-count {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Action list */
+    .action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--surface2);
+    }
+    .action-item:last-child { border-bottom: none; }
+    .action-text { font-size: 12px; line-height: 1.5; }
+    .action-detail {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .empty-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: var(--surface2);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .empty-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .empty-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 2px;
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 3px;
+      margin-bottom: 16px;
+    }
+    .tab {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      transition: all 0.15s;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* Loading */
+    .loading { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .content { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  if (!sessionStorage.getItem('admin_auth')) {
+    window.location.href = '/admin/login/';
+  }
+</script>
+  <AdminNav />
+
+  <div class="admin-layout">
+    <div class="topbar">
+      <div class="topbar-left">
+        <span class="page-title">Crawlabilite</span>
+        <span class="topbar-meta" id="lastUpdate">--</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-ghost" onclick="loadData()">Actualiser</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="loading" class="loading">Chargement des donnees...</div>
+      <div id="emptyState" class="empty-state" style="display:none;">
+        <div class="empty-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+        <div class="empty-title">Aucun rapport disponible</div>
+        <div class="empty-desc">
+          Lancez l'analyse de crawlabilite depuis GitHub Actions<br>
+          ou en local : <code>npm run crawlability</code>
+        </div>
+      </div>
+
+      <div id="dashboard" style="display:none;">
+        <!-- Stats -->
+        <div class="stats" id="statsGrid"></div>
+
+        <!-- Tabs -->
+        <div class="tabs" id="tabsBar">
+          <button class="tab active" data-tab="actions">Actions prioritaires</button>
+          <button class="tab" data-tab="orphans">Pages orphelines</button>
+          <button class="tab" data-tab="depth">Profondeur</button>
+          <button class="tab" data-tab="sitemap">Sitemap</button>
+          <button class="tab" data-tab="linking">Maillage interne</button>
+        </div>
+
+        <!-- Tab: Actions -->
+        <div class="tab-content active" id="tab-actions"></div>
+
+        <!-- Tab: Orphan pages -->
+        <div class="tab-content" id="tab-orphans"></div>
+
+        <!-- Tab: Depth -->
+        <div class="tab-content" id="tab-depth"></div>
+
+        <!-- Tab: Sitemap -->
+        <div class="tab-content" id="tab-sitemap"></div>
+
+        <!-- Tab: Linking -->
+        <div class="tab-content" id="tab-linking"></div>
+      </div>
+    </div>
+  </div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  async function supabaseFetch(table, query) {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      }
+    });
+    if (!response.ok) throw new Error(await response.text());
+    return response.json();
+  }
+
+  // --- Tabs ---
+  document.getElementById('tabsBar').addEventListener('click', (e) => {
+    const tab = e.target.closest('.tab');
+    if (!tab) return;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+
+  // --- Rendering ---
+
+  function renderStats(summary) {
+    const orphanClass = summary.orphanCount > 5 ? 'stat-urgent' : summary.orphanCount > 0 ? 'stat-warning' : 'stat-ok';
+    const unreachableClass = summary.unreachableCount > 0 ? 'stat-urgent' : 'stat-ok';
+    const deepClass = summary.deepPagesCount > 5 ? 'stat-warning' : 'stat-ok';
+    const sitemapClass = (summary.missingFromSitemapCount + summary.sitemapGhostsCount) > 0 ? 'stat-warning' : 'stat-ok';
+
+    document.getElementById('statsGrid').innerHTML = `
+      <div class="stat">
+        <div class="stat-label">Pages totales</div>
+        <div class="stat-value">${summary.totalPages}</div>
+        <div class="stat-sub">${summary.sitemapUrlCount} dans le sitemap</div>
+      </div>
+      <div class="stat ${orphanClass}">
+        <div class="stat-label">Pages orphelines</div>
+        <div class="stat-value">${summary.orphanCount}</div>
+        <div class="stat-sub">0 liens entrants</div>
+      </div>
+      <div class="stat ${unreachableClass}">
+        <div class="stat-label">Non atteignables</div>
+        <div class="stat-value">${summary.unreachableCount}</div>
+        <div class="stat-sub">depuis la homepage</div>
+      </div>
+      <div class="stat ${deepClass}">
+        <div class="stat-label">Pages profondes</div>
+        <div class="stat-value">${summary.deepPagesCount}</div>
+        <div class="stat-sub">niveau &gt; 3</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Pages noindex</div>
+        <div class="stat-value">${summary.noindexCount}</div>
+      </div>
+      <div class="stat ${sitemapClass}">
+        <div class="stat-label">Absentes sitemap</div>
+        <div class="stat-value">${summary.missingFromSitemapCount}</div>
+        <div class="stat-sub">pages importantes</div>
+      </div>
+      <div class="stat ${sitemapClass}">
+        <div class="stat-label">Fantomes sitemap</div>
+        <div class="stat-value">${summary.sitemapGhostsCount}</div>
+        <div class="stat-sub">erreurs 404</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Priorites sitemap</div>
+        <div class="stat-value">${summary.priorityIssuesCount}</div>
+        <div class="stat-sub">a corriger</div>
+      </div>
+    `;
+  }
+
+  function renderActions(report) {
+    const actions = [];
+
+    const importantPrefixes = ['/traitements-glp1/', '/articles/', '/guides/', '/collections/', '/glp1-cout/', '/glp1-perte-de-poids/', '/effets-secondaires-glp1/', '/alternatives-glp1/', '/glp1-diabete/'];
+    function isImportant(url) {
+      if (url === '/') return true;
+      return importantPrefixes.some(p => url.startsWith(p));
+    }
+
+    const importantOrphans = (report.orphan_pages || []).filter(u => isImportant(u));
+    if (importantOrphans.length > 0) {
+      actions.push({ priority: 1, impact: 'CRITIQUE', badge: 'badge-critical',
+        text: `Linker ${importantOrphans.length} page(s) importante(s) orpheline(s)`,
+        detail: importantOrphans.slice(0, 5).join(', ')
+      });
+    }
+
+    const importantUnreachable = (report.unreachable_pages || []).filter(u => isImportant(u));
+    if (importantUnreachable.length > 0) {
+      actions.push({ priority: 1, impact: 'CRITIQUE', badge: 'badge-critical',
+        text: `Rendre ${importantUnreachable.length} page(s) accessibles depuis la homepage`,
+        detail: importantUnreachable.slice(0, 5).join(', ')
+      });
+    }
+
+    const noindexImportant = (report.noindex_pages || []).filter(p => p.important);
+    if (noindexImportant.length > 0) {
+      actions.push({ priority: 1, impact: 'CRITIQUE', badge: 'badge-critical',
+        text: `Retirer le noindex de ${noindexImportant.length} page(s) importante(s)`,
+        detail: noindexImportant.slice(0, 5).map(p => p.url).join(', ')
+      });
+    }
+
+    if (report.missing_from_sitemap?.length > 0) {
+      actions.push({ priority: 2, impact: 'ELEVE', badge: 'badge-high',
+        text: `Ajouter ${report.missing_from_sitemap.length} page(s) au sitemap`,
+        detail: report.missing_from_sitemap.slice(0, 5).join(', ')
+      });
+    }
+
+    if (report.sitemap_ghosts?.length > 0) {
+      actions.push({ priority: 2, impact: 'ELEVE', badge: 'badge-high',
+        text: `Corriger ${report.sitemap_ghosts.length} URL(s) fantome(s) dans le sitemap`,
+        detail: report.sitemap_ghosts.slice(0, 5).join(', ')
+      });
+    }
+
+    const zeroIncoming = (report.article_scores || []).filter(a => isImportant(a.url) && a.incomingCount === 0);
+    if (zeroIncoming.length > 0) {
+      actions.push({ priority: 2, impact: 'ELEVE', badge: 'badge-high',
+        text: `Creer des liens internes vers ${zeroIncoming.length} article(s) sans liens entrants`,
+        detail: zeroIncoming.slice(0, 5).map(a => a.url).join(', ')
+      });
+    }
+
+    if (report.deep_pages?.length > 0) {
+      actions.push({ priority: 3, impact: 'MOYEN', badge: 'badge-medium',
+        text: `Reduire la profondeur de ${report.deep_pages.length} page(s) (niveau > 3)`,
+        detail: report.deep_pages.slice(0, 5).map(p => `${p.url} (niv. ${p.depth})`).join(', ')
+      });
+    }
+
+    if (report.priority_issues?.length > 0) {
+      actions.push({ priority: 4, impact: 'FAIBLE', badge: 'badge-low',
+        text: `Corriger les priorites sitemap de ${report.priority_issues.length} page(s)`,
+        detail: report.priority_issues.slice(0, 3).map(p => p.url).join(', ')
+      });
+    }
+
+    actions.sort((a, b) => a.priority - b.priority);
+
+    if (actions.length === 0) {
+      document.getElementById('tab-actions').innerHTML = `
+        <div class="card">
+          <div style="text-align:center;padding:20px;color:var(--ok);">
+            Aucun probleme de crawlabilite detecte
+          </div>
+        </div>`;
+      return;
+    }
+
+    document.getElementById('tab-actions').innerHTML = `
+      <div class="card">
+        <div class="card-title">Actions classees par impact SEO</div>
+        ${actions.map(a => `
+          <div class="action-item">
+            <span class="badge ${a.badge}">${escapeHtml(a.impact)}</span>
+            <div>
+              <div class="action-text">${escapeHtml(a.text)}</div>
+              <div class="action-detail">${escapeHtml(a.detail)}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderOrphans(report) {
+    const orphans = report.orphan_pages || [];
+    if (orphans.length === 0) {
+      document.getElementById('tab-orphans').innerHTML = `
+        <div class="card" style="text-align:center;padding:20px;color:var(--ok);">
+          Aucune page orpheline
+        </div>`;
+      return;
+    }
+
+    document.getElementById('tab-orphans').innerHTML = `
+      <div class="card">
+        <div class="card-title">Pages avec 0 liens entrants (${orphans.length})</div>
+        <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">
+          Ces pages ne sont linkees depuis aucune autre page. Google ne les trouvera pas via le crawl.
+        </p>
+        <table class="data-table">
+          <thead><tr><th>URL</th><th>Type</th></tr></thead>
+          <tbody>
+            ${orphans.map(url => {
+              const important = url === '/' || ['/traitements-glp1/', '/articles/', '/guides/', '/collections/'].some(p => url.startsWith(p));
+              return `<tr>
+                <td class="url-cell">${escapeHtml(url)}</td>
+                <td>${important ? '<span class="badge badge-critical">important</span>' : '<span class="badge badge-low">secondaire</span>'}</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderDepth(report) {
+    const scores = report.article_scores || [];
+    // Group by depth
+    const depthMap = {};
+    scores.forEach(a => {
+      const d = a.depth === 'non atteignable' ? 99 : a.depth;
+      if (!depthMap[d]) depthMap[d] = [];
+      depthMap[d].push(a.url);
+    });
+
+    const depths = Object.keys(depthMap).map(Number).sort((a, b) => a - b);
+    const maxCount = Math.max(...depths.map(d => depthMap[d].length), 1);
+
+    const depthColors = { 1: 'var(--ok)', 2: '#4a90d9', 3: 'var(--warning)', 99: 'var(--urgent)' };
+    function getColor(d) { return depthColors[d] || (d > 3 ? 'var(--urgent)' : 'var(--blue)'); }
+
+    let barHtml = '<div class="depth-bar">';
+    for (const d of depths) {
+      const count = depthMap[d].length;
+      const pct = Math.max((count / maxCount) * 100, 8);
+      const label = d === 99 ? 'N/A' : `Niv. ${d}`;
+      barHtml += `
+        <div class="depth-col">
+          <div class="depth-count">${count}</div>
+          <div class="depth-fill" style="height:${pct}%;background:${getColor(d)};"></div>
+          <div class="depth-label">${label}</div>
+        </div>`;
+    }
+    barHtml += '</div>';
+
+    // Deep pages table
+    const deepPages = report.deep_pages || [];
+    const unreachable = report.unreachable_pages || [];
+
+    let tableHtml = '';
+    if (deepPages.length > 0 || unreachable.length > 0) {
+      tableHtml = `
+        <table class="data-table" style="margin-top:16px;">
+          <thead><tr><th>URL</th><th>Profondeur</th><th>Statut</th></tr></thead>
+          <tbody>
+            ${deepPages.map(p => `<tr>
+              <td class="url-cell">${escapeHtml(p.url)}</td>
+              <td class="num-cell">${p.depth}</td>
+              <td><span class="badge badge-high">trop profonde</span></td>
+            </tr>`).join('')}
+            ${unreachable.map(url => `<tr>
+              <td class="url-cell">${escapeHtml(url)}</td>
+              <td class="num-cell">-</td>
+              <td><span class="badge badge-critical">non atteignable</span></td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    document.getElementById('tab-depth').innerHTML = `
+      <div class="card">
+        <div class="card-title">Carte de profondeur</div>
+        <p style="font-size:11px;color:var(--muted);margin-bottom:8px;">
+          Objectif : aucune page importante au-dela du niveau 3
+        </p>
+        ${barHtml}
+      </div>
+      ${tableHtml ? `<div class="card"><div class="card-title">Pages a corriger</div>${tableHtml}</div>` : ''}
+    `;
+  }
+
+  function renderSitemap(report) {
+    const missing = report.missing_from_sitemap || [];
+    const ghosts = report.sitemap_ghosts || [];
+    const priorities = report.priority_issues || [];
+    const noindex = report.noindex_pages || [];
+
+    let html = '';
+
+    // Missing from sitemap
+    html += `<div class="card">
+      <div class="card-title">Pages absentes du sitemap (${missing.length})</div>
+      ${missing.length === 0
+        ? '<p style="color:var(--ok);font-size:12px;">Toutes les pages importantes sont dans le sitemap</p>'
+        : `<table class="data-table"><thead><tr><th>URL</th></tr></thead><tbody>
+            ${missing.map(url => `<tr><td class="url-cell">${escapeHtml(url)}</td></tr>`).join('')}
+          </tbody></table>`
+      }
+    </div>`;
+
+    // Ghost URLs
+    html += `<div class="card">
+      <div class="card-title">Fantomes sitemap — erreurs 404 (${ghosts.length})</div>
+      ${ghosts.length === 0
+        ? '<p style="color:var(--ok);font-size:12px;">Aucun fantome dans le sitemap</p>'
+        : `<table class="data-table"><thead><tr><th>URL dans le sitemap</th></tr></thead><tbody>
+            ${ghosts.map(url => `<tr><td class="url-cell">${escapeHtml(url)}</td></tr>`).join('')}
+          </tbody></table>`
+      }
+    </div>`;
+
+    // Priority issues
+    if (priorities.length > 0) {
+      html += `<div class="card">
+        <div class="card-title">Priorites sitemap a corriger (${priorities.length})</div>
+        <table class="data-table">
+          <thead><tr><th>URL</th><th>Actuelle</th><th>Attendue</th><th>Type</th></tr></thead>
+          <tbody>
+            ${priorities.map(p => `<tr>
+              <td class="url-cell">${escapeHtml(p.url)}</td>
+              <td class="num-cell">${p.current}</td>
+              <td class="num-cell">${p.expected}</td>
+              <td>${escapeHtml(p.reason)}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>`;
+    }
+
+    // Noindex
+    if (noindex.length > 0) {
+      html += `<div class="card">
+        <div class="card-title">Pages noindex (${noindex.length})</div>
+        <table class="data-table">
+          <thead><tr><th>URL</th><th>Type</th></tr></thead>
+          <tbody>
+            ${noindex.map(p => `<tr>
+              <td class="url-cell">${escapeHtml(p.url)}</td>
+              <td>${p.important ? '<span class="badge badge-critical">IMPORTANT</span>' : '<span class="badge badge-low">normal</span>'}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>`;
+    }
+
+    document.getElementById('tab-sitemap').innerHTML = html;
+  }
+
+  function renderLinking(report) {
+    const scores = report.article_scores || [];
+    const importantPrefixes = ['/traitements-glp1/', '/articles/', '/guides/', '/collections/', '/glp1-cout/', '/glp1-perte-de-poids/', '/effets-secondaires-glp1/', '/alternatives-glp1/', '/glp1-diabete/'];
+    function isImportant(url) {
+      if (url === '/') return true;
+      return importantPrefixes.some(p => url.startsWith(p));
+    }
+
+    const important = scores.filter(a => isImportant(a.url)).sort((a, b) => a.incomingCount - b.incomingCount);
+
+    document.getElementById('tab-linking').innerHTML = `
+      <div class="card">
+        <div class="card-title">Score de maillage — pages importantes (${important.length})</div>
+        <p style="font-size:11px;color:var(--muted);margin-bottom:12px;">
+          Trie par nombre de liens entrants (du plus faible au plus eleve)
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>URL</th>
+              <th style="text-align:center">Liens entrants</th>
+              <th style="text-align:center">Liens sortants</th>
+              <th style="text-align:center">Profondeur</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${important.slice(0, 60).map(a => {
+              const inBadge = a.incomingCount === 0 ? 'badge-critical' : a.incomingCount <= 2 ? 'badge-high' : 'badge-ok';
+              return `<tr>
+                <td class="url-cell">${escapeHtml(a.url)}</td>
+                <td class="num-cell"><span class="badge ${inBadge}">${a.incomingCount}</span></td>
+                <td class="num-cell">${a.outgoingCount}</td>
+                <td class="num-cell">${a.depth}</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  // --- Load data ---
+  async function loadData() {
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('dashboard').style.display = 'none';
+    document.getElementById('emptyState').style.display = 'none';
+
+    try {
+      const reports = await supabaseFetch(
+        'crawlability_reports',
+        'select=*&order=created_at.desc&limit=1'
+      );
+
+      if (!reports || reports.length === 0) {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('emptyState').style.display = 'block';
+        return;
+      }
+
+      const report = reports[0];
+      document.getElementById('lastUpdate').textContent = formatDate(report.created_at);
+
+      renderStats(report.summary);
+      renderActions(report);
+      renderOrphans(report);
+      renderDepth(report);
+      renderSitemap(report);
+      renderLinking(report);
+
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+    } catch (err) {
+      console.error('Erreur chargement:', err);
+      document.getElementById('loading').innerHTML =
+        `<span style="color:var(--urgent)">Erreur : ${escapeHtml(err.message)}</span>`;
+    }
+  }
+
+  // Init
+  loadData();
+</script>
+</body>
+</html>

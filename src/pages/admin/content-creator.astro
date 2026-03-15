@@ -1,0 +1,333 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Creator - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-size: 14px;
+    }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-badge {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .main { padding: 2rem; max-width: 1200px; }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-value { font-size: 2rem; font-weight: 800; color: #0f172a; }
+    .stat-label { font-size: 0.78rem; color: #64748b; margin-top: 0.25rem; }
+    .stat-green .stat-value { color: #22c55e; }
+    .stat-blue .stat-value { color: #3b82f6; }
+    .stat-amber .stat-value { color: #f59e0b; }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .pipeline {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+    .pipeline-col {
+      flex: 1;
+      min-width: 280px;
+    }
+    .pipeline-header {
+      padding: 0.6rem 1rem;
+      border-radius: 8px 8px 0 0;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .ph-pending { background: #fef3c7; color: #92400e; }
+    .ph-progress { background: #dbeafe; color: #1e40af; }
+    .ph-created { background: #dcfce7; color: #166534; }
+    .ph-published { background: #d1fae5; color: #065f46; }
+
+    .pipeline-body {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      min-height: 120px;
+      padding: 0.5rem;
+    }
+
+    .content-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.85rem;
+      margin-bottom: 0.5rem;
+      cursor: default;
+    }
+    .content-card:hover { border-color: #3b82f6; }
+    .cc-title { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.35rem; }
+    .cc-meta { font-size: 0.78rem; color: #64748b; line-height: 1.5; }
+    .cc-tags { margin-top: 0.35rem; }
+    .cc-tag {
+      display: inline-block;
+      padding: 0.1rem 0.4rem;
+      background: #f1f5f9;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: #475569;
+      margin: 0.1rem;
+    }
+
+    .log-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .log-item:last-child { border-bottom: none; }
+
+    .loading { text-align: center; padding: 2rem; color: #64748b; }
+    .empty { text-align: center; padding: 1.5rem; color: #94a3b8; font-size: 0.82rem; }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+    }
+    @media (max-width: 768px) {
+      .main { padding: 1rem; }
+      .pipeline { flex-direction: column; }
+      .pipeline-col { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  if (!sessionStorage.getItem('admin_auth')) {
+    window.location.href = '/admin/login/';
+  }
+</script>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <div>
+      <h1>Content Creator</h1>
+      <p>Pipeline de creation automatique d'articles — de l'opportunite a la publication</p>
+    </div>
+    <span class="header-badge">Agent actif</span>
+  </div>
+
+  <div class="main">
+    <div class="stats-row">
+      <div class="stat-card stat-amber">
+        <div class="stat-value" id="statQueue">-</div>
+        <div class="stat-label">En file d'attente</div>
+      </div>
+      <div class="stat-card stat-blue">
+        <div class="stat-value" id="statInProgress">-</div>
+        <div class="stat-label">En cours de creation</div>
+      </div>
+      <div class="stat-card stat-green">
+        <div class="stat-value" id="statCreated">-</div>
+        <div class="stat-label">Articles crees</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statTokens">-</div>
+        <div class="stat-label">Tokens utilises (total)</div>
+      </div>
+    </div>
+
+    <!-- Pipeline view -->
+    <div class="card">
+      <div class="card-title">Pipeline de contenu</div>
+      <div class="pipeline">
+        <div class="pipeline-col">
+          <div class="pipeline-header ph-pending">
+            Approuvees <span id="countPending">0</span>
+          </div>
+          <div class="pipeline-body" id="colPending"><div class="loading">...</div></div>
+        </div>
+        <div class="pipeline-col">
+          <div class="pipeline-header ph-progress">
+            En cours <span id="countProgress">0</span>
+          </div>
+          <div class="pipeline-body" id="colProgress"><div class="loading">...</div></div>
+        </div>
+        <div class="pipeline-col">
+          <div class="pipeline-header ph-created">
+            Contenu cree <span id="countCreated">0</span>
+          </div>
+          <div class="pipeline-body" id="colCreated"><div class="loading">...</div></div>
+        </div>
+        <div class="pipeline-col">
+          <div class="pipeline-header ph-published">
+            Publie <span id="countPublished">0</span>
+          </div>
+          <div class="pipeline-body" id="colPublished"><div class="loading">...</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agent logs -->
+    <div class="card">
+      <div class="card-title">Derniers logs de l'agent Content Creator</div>
+      <div id="logsList"><div class="loading">Chargement...</div></div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  function fmtDate(d) {
+    if (!d) return '';
+    return new Date(d).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+  }
+
+  function renderCard(opp) {
+    const kws = (opp.keywords_secondary || []).slice(0, 3).map(k => `<span class="cc-tag">${k}</span>`).join('');
+    const meta = opp.metadata || {};
+    return `
+      <div class="content-card">
+        <div class="cc-title">${opp.suggested_title || opp.keyword_main}</div>
+        <div class="cc-meta">
+          ${opp.collection || ''} | ${opp.potential || ''} potentiel<br>
+          ${meta.word_count ? meta.word_count + ' mots | ' : ''}
+          ${meta.confidence ? 'Confiance: ' + meta.confidence + '%' : ''}
+          ${opp.article_slug ? '<br>→ <code>' + opp.article_slug + '</code>' : ''}
+        </div>
+        <div class="cc-tags">${kws}</div>
+      </div>
+    `;
+  }
+
+  async function loadData() {
+    try {
+      const opps = await sbFetch('seo_opportunities', 'select=*&order=priority.asc,created_at.desc&limit=200');
+
+      const approved = opps.filter(o => o.status === 'approved');
+      const inProgress = opps.filter(o => o.status === 'in_progress');
+      const created = opps.filter(o => o.status === 'content_created');
+      const published = opps.filter(o => o.status === 'published');
+
+      document.getElementById('statQueue').textContent = approved.length;
+      document.getElementById('statInProgress').textContent = inProgress.length;
+      document.getElementById('statCreated').textContent = created.length + published.length;
+
+      document.getElementById('countPending').textContent = approved.length;
+      document.getElementById('countProgress').textContent = inProgress.length;
+      document.getElementById('countCreated').textContent = created.length;
+      document.getElementById('countPublished').textContent = published.length;
+
+      document.getElementById('colPending').innerHTML = approved.length
+        ? approved.map(renderCard).join('')
+        : '<div class="empty">Aucune opportunite en attente</div>';
+      document.getElementById('colProgress').innerHTML = inProgress.length
+        ? inProgress.map(renderCard).join('')
+        : '<div class="empty">Aucun article en cours</div>';
+      document.getElementById('colCreated').innerHTML = created.length
+        ? created.map(renderCard).join('')
+        : '<div class="empty">Aucun article cree</div>';
+      document.getElementById('colPublished').innerHTML = published.length
+        ? published.map(renderCard).join('')
+        : '<div class="empty">Aucun article publie</div>';
+
+      // Logs
+      const logs = await sbFetch('agent_logs', 'select=*&agent_type=eq.content-creator&order=created_at.desc&limit=15');
+      const totalTokens = logs.reduce((s, l) => s + (l.tokens_used || 0), 0);
+      document.getElementById('statTokens').textContent = totalTokens > 1000 ? Math.round(totalTokens / 1000) + 'k' : totalTokens;
+
+      document.getElementById('logsList').innerHTML = logs.length
+        ? logs.map(l => {
+            const m = l.metadata || {};
+            return `
+              <div class="log-item">
+                <span>
+                  <strong>${l.status}</strong>
+                  ${m.keyword ? ' — ' + m.keyword : ''}
+                  ${m.slug ? ' → <code>' + m.slug + '</code>' : ''}
+                  ${l.error ? ' <span style="color:#dc2626">(' + l.error.substring(0, 60) + ')</span>' : ''}
+                </span>
+                <span style="color:#94a3b8;">
+                  ${fmtDate(l.created_at)}
+                  ${l.tokens_used ? ' | ' + l.tokens_used + ' tok' : ''}
+                  ${l.duration_ms ? ' | ' + Math.round(l.duration_ms / 1000) + 's' : ''}
+                </span>
+              </div>
+            `;
+          }).join('')
+        : '<div class="empty">Aucun log. L\'agent tourne quotidiennement a 12h (Paris).</div>';
+
+    } catch (err) {
+      console.error('Load error:', err);
+      document.getElementById('colPending').innerHTML = `<div style="color:#991b1b;padding:0.75rem;font-size:0.82rem;">Erreur: ${err.message}</div>`;
+    }
+  }
+
+  loadData();
+</script>
+
+</body>
+</html>

@@ -95,7 +95,7 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
           <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: #94a3b8;">
             {author && <span>{author}</span>}
             <span>5 min de lecture</span>
-            <span>{new Date().toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
+            <span>{(article?.data?.pubDate ? new Date(article.data.pubDate) : new Date()).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
           </div>
         </div>
       </div>

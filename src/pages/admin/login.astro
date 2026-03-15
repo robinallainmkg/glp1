@@ -1,8 +1,15 @@
 ---
 import { supabaseConfig } from '../../lib/supabase';
 
-// Build-time: read ADMIN_PASSWORD and create a simple hash
-const adminPassword = import.meta.env.ADMIN_PASSWORD || 'glp1admin2024';
+// Build-time: hash the password so it's never exposed in client HTML
+const adminPassword = import.meta.env.ADMIN_PASSWORD || '12031990Robin!';
+
+// Create SHA-256 hash at build time
+const encoder = new TextEncoder();
+const data = encoder.encode(adminPassword);
+const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+const hashArray = Array.from(new Uint8Array(hashBuffer));
+const passwordHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 ---
 
 <!DOCTYPE html>
@@ -130,17 +137,26 @@ const adminPassword = import.meta.env.ADMIN_PASSWORD || 'glp1admin2024';
     </div>
   </div>
 
-  <script define:vars={{ adminPassword }}>
+  <script define:vars={{ passwordHash }}>
     // Check if already authenticated
     if (sessionStorage.getItem('admin_auth')) {
       window.location.href = '/admin/';
     }
 
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    async function hashPassword(pwd) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(pwd);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
       e.preventDefault();
       const pwd = document.getElementById('password').value;
-      if (pwd === adminPassword) {
-        sessionStorage.setItem('admin_auth', 'true');
+      const inputHash = await hashPassword(pwd);
+      if (inputHash === passwordHash) {
+        sessionStorage.setItem('admin_auth', Date.now().toString());
         window.location.href = '/admin/';
       } else {
         document.getElementById('loginError').classList.add('show');
