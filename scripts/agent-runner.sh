@@ -5,7 +5,8 @@
 # Stop: Ctrl+C
 # =============================================================================
 
-set -euo pipefail
+set -uo pipefail
+# Note: pas de -e pour eviter que le script meure si un agent echoue
 
 # Load env
 if [ -f .env ]; then
@@ -81,13 +82,20 @@ while true; do
     # Mark as running
     sb_patch "agent_queue?id=eq.${TASK_ID}" '{"status":"running","started_at":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}'
 
-    # Run the agent
-    if claude -p "$PROMPT" --agent "$AGENT_NAME" 2>&1; then
+    # Run the agent from project root
+    SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+    LOG_FILE="/tmp/agent-${AGENT_NAME}-$(date +%Y%m%d-%H%M%S).log"
+    echo "   Log: $LOG_FILE"
+
+    if (cd "$SCRIPT_DIR" && claude -p "$PROMPT" --agent "$AGENT_NAME") > "$LOG_FILE" 2>&1; then
       echo "✅ [$(date +%H:%M:%S)] $AGENT_NAME termine avec succes"
       sb_patch "agent_queue?id=eq.${TASK_ID}" '{"status":"completed","completed_at":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}'
     else
-      echo "❌ [$(date +%H:%M:%S)] $AGENT_NAME echoue"
-      sb_patch "agent_queue?id=eq.${TASK_ID}" '{"status":"failed","completed_at":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'","error_message":"Agent exit non-zero"}'
+      EXIT_CODE=$?
+      ERROR_MSG=$(tail -5 "$LOG_FILE" | tr '\n' ' ' | cut -c1-200)
+      echo "❌ [$(date +%H:%M:%S)] $AGENT_NAME echoue (exit $EXIT_CODE)"
+      echo "   Dernières lignes: $ERROR_MSG"
+      sb_patch "agent_queue?id=eq.${TASK_ID}" '{"status":"failed","completed_at":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'","error_message":"'"$(echo "$ERROR_MSG" | sed 's/"/\\"/g')"'"}'
     fi
 
     echo ""

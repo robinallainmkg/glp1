@@ -149,5 +149,14 @@ export default defineConfig({
         }
       }
     },
+    server: {
+      proxy: {
+        '/__agent': {
+          target: 'http://127.0.0.1:7854',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/__agent/, ''),
+        }
+      }
+    }
   }
 });
