@@ -5,6 +5,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Hotjar from '../components/Hotjar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import AiCoach from '../components/AiCoach.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
 import TempTest from '../components/temp-test.astro';
 
@@ -190,6 +191,7 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
   </main>
 
   <SiteFooter />
+  <AiCoach />
 
   <!-- SiteHeader gère son propre JS/CSS -->
 
