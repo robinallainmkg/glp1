@@ -152,6 +152,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 - Metformine
 - Sulfamides hypoglycémiants
 - Inhibiteurs DPP-4
+- [Inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/) — souvent associés aux GLP-1 pour une protection cardiovasculaire renforcée
 
 ## FAQ Ozempic
 

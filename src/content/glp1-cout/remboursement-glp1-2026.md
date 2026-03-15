@@ -3,9 +3,9 @@ title: "Remboursement GLP-1 2026 : Guide Complet par Médicament et Mutuelle"
 description: "Remboursement GLP-1 en 2026 : Mounjaro, Wegovy, Ozempic. Conditions Sécurité Sociale, mutuelles qui remboursent, démarches et aides financières. Guide officiel 2026."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Mounjaro, Wegovy, Ozempic - Guide Complet"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza, Rybelsus remboursés 65% (DT2). Wegovy, Mounjaro, Saxenda NON remboursés. Guide complet."
+seoDescription: "Remboursement GLP-1 2026 : Ozempic, Mounjaro, Trulicity, Victoza, Rybelsus remboursés 65% (DT2). Wegovy et Saxenda non remboursés. Guide complet mis à jour mars 2026."
 publishedAt: '2025-12-27'
-updatedAt: '2025-12-27'
+updatedAt: '2026-03-15'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -28,10 +28,10 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 | **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~21€ | ✅ Maintenu |
 | **Rybelsus** | Diabète T2 (oral) | **65%** (DT2 uniquement) | 28-38€ | ✅ Maintenu |
 | **Wegovy** | Obésité (IMC ≥30) | **Non remboursé** | 169-360€ | ❌ Non remboursé |
-| **Mounjaro** | Obésité / DT2 | **Non remboursé** | 230-440€ | ❌ Non remboursé |
+| **Mounjaro** | DT2 (avis HAS déc. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
 | **Saxenda** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
 
-> **Important** : Seuls les GLP-1 indiqués pour le **diabète de type 2** (Ozempic, Trulicity, Victoza, Rybelsus) sont remboursés à 65%. Les traitements indiqués pour l'**obésité** (Wegovy, Mounjaro, Saxenda) ne sont **PAS remboursés** par la Sécurité Sociale. De plus, depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription des GLP-1 remboursés.
+> **Mise à jour mars 2026** : La HAS a rendu un avis **favorable** au remboursement de **Mounjaro** en décembre 2025 pour le diabète de type 2. Les négociations de prix avec le CEPS sont en cours — le remboursement est **prévu pour le 2e semestre 2026**. En attendant, Mounjaro reste à la charge du patient. Les traitements indiqués pour l'**obésité seule** (Wegovy, Saxenda) restent non remboursés. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
 
 ---
 
@@ -55,6 +55,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ✅ **Échec des traitements de première intention**
 - Essai d'antidiabétiques oraux (metformine, sulfamides)
+- Note : les [inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/) sont souvent associés aux GLP-1 et remboursés séparément pour le diabète de type 2
 
 ✅ **Absence de contre-indications**
 - Pas d'antécédent de cancer médullaire de la thyroïde
@@ -67,15 +68,19 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** n'est **PAS remboursé** par la Sécurité Sociale en 2026. Commercialisé en France depuis novembre 2024, il reste entièrement à la charge du patient.
+**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS en décembre 2025** pour le diabète de type 2 insuffisamment contrôlé. Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
 
-### Coût Patient 2026
+### Ce qu'il faut savoir sur le remboursement Mounjaro
 
-**Prix pharmacie :** 230-440€/mois (prix libre, non réglementé, variable selon dosage et pharmacie)
+**Situation actuelle (mars 2026)** :
+- Prix libre en pharmacie : 230 à 440€/mois selon le dosage
+- Aucun remboursement Sécurité Sociale pour le moment
+- Certaines mutuelles proposent une prise en charge partielle
 
-**Aucun remboursement Sécurité Sociale** :
-- Le coût est intégralement à la charge du patient
-- Certaines mutuelles peuvent proposer une participation partielle (vérifier votre contrat)
+**Remboursement attendu (2e semestre 2026)** :
+- Taux prévu : 65% (Sécurité Sociale)
+- Indication : Diabète de type 2 insuffisamment contrôlé
+- Critères prévisionnels : HbA1c > 7% malgré metformine + autre antidiabétique oral, IMC ≥ 30 kg/m²
 
 [Voir le détail complet des prix Mounjaro -->](/collections/glp1-cout/prix-mounjaro-france)
 
