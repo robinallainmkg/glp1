@@ -137,7 +137,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 - **Saxenda** (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
 
 ### GLP-1 remboursés pour le diabète de type 2 uniquement
-- **Ozempic** (semaglutide 2 mg) : injection hebdomadaire, remboursé à 65 % pour le DT2
+- **Ozempic** (semaglutide 2 mg) : injection hebdomadaire, remboursé à 30 % pour le DT2 (~76,58 €/stylo)
 - **Trulicity** (dulaglutide) : injection hebdomadaire, remboursé à 65 % pour le DT2 (~81 €/mois)
 
 ### Traitements alternatifs

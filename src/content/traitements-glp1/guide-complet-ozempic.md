@@ -140,6 +140,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 
 ### Autres GLP-1 injectables
 - **Wegovy** : Semaglutide à 2,4 mg (spécifiquement pour l'obésité)
+- [**Mounjaro (tirzepatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : Double action GLP-1/GIP, perte de poids supérieure (jusqu'à -22%) pour les patients souhaitant une alternative plus efficace
 - **Saxenda** : Liraglutide (jusqu'à 3 mg/jour, injection quotidienne)
 - **Trulicity** : Dulaglutide (une injection hebdomadaire)
 - **Victoza** : Liraglutide (1,2 mg/jour)
@@ -168,7 +169,7 @@ Non, en France, Ozempic est **exclusivement indiqué pour le diabète de type 2*
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Ozempic est-il remboursé ?
-Ozempic est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix en pharmacie est d'environ 59,90 € par stylo.
+Ozempic est remboursé à **30 %** par l'Assurance Maladie (100 % en ALD 30 pour le diabète de type 2) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix en pharmacie est d'environ 76,58 € par stylo.
 
 ### Puis-je arrêter Ozempic brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids après arrêt du traitement](/collections/effets-secondaires-glp1/arret-glp1-reprise-poids-effet-rebond/).
