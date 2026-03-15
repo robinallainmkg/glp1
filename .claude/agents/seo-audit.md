@@ -66,12 +66,51 @@ VALUES ('<run_id>', '<type>', '<severity>', '<url>', '<title>', '<detail>', '<re
 - `info` : ameliorations possibles, optimisations mineures
 - `ok` : element conforme (ne pas inserer, sauf pour le resume)
 
-### 5. Finalisation
+### 5. Creation de correction_tickets
+
+Pour chaque issue de severite `critical` ou `warning` qui concerne un article identifiable :
+
+1. **Identifie le slug** a partir de `page_url` (ex: `/traitements-glp1/guide-complet-ozempic/` → `guide-complet-ozempic`)
+2. **Recupere l'article_id** :
+```sql
+SELECT id, title FROM articles WHERE slug = '<slug>' AND is_active = true LIMIT 1;
+```
+3. **Cree le ticket** :
+```sql
+INSERT INTO correction_tickets (
+  article_id, slug, title, source_agent, ticket_type, urgence,
+  before_exact, after_suggested, claim_original, realite_actuelle, statut
+) VALUES (
+  '<article_id>', '<slug>', '<title>',
+  'seo-audit',
+  '<ticket_type>',
+  '<urgence>',
+  '<issue_detail>',
+  '<recommendation>',
+  '<issue_title>',
+  '<issue_detail>',
+  'approved'
+);
+```
+
+**Mapping audit_type → ticket_type** :
+| audit_type | ticket_type | urgence |
+|---|---|---|
+| `meta_tags` (title manquant) | `seo_issue` | `urgent` |
+| `meta_tags` (description) | `missing_description` | `warning` |
+| `headings` (pas de h1) | `heading_issue` | `urgent` |
+| `headings` (hierarchie) | `heading_issue` | `warning` |
+| `images` (alt manquant) | `missing_image` | `warning` |
+| `internal_links` (lien casse) | `broken_link` | `urgent` |
+
+Ne cree PAS de ticket pour les issues `info` ou les issues globales (robots.txt, performance).
+
+### 6. Finalisation
 
 Met a jour le run :
 ```sql
 UPDATE agent_runs SET status = 'completed', completed_at = NOW(), items_processed = <nb_pages>, items_errors = <nb_issues>,
-  metadata = '{"pages_audited": <n>, "critical": <n>, "warning": <n>, "info": <n>}'::jsonb
+  metadata = '{"pages_audited": <n>, "critical": <n>, "warning": <n>, "info": <n>, "tickets_created": <n>}'::jsonb
 WHERE id = '<run_id>';
 ```
 
@@ -80,3 +119,4 @@ WHERE id = '<run_id>';
 - Maximum 50 pages par run
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql
+- Reponds uniquement en francais
