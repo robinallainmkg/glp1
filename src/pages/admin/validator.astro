@@ -27,29 +27,53 @@ import { supabaseConfig } from '../../lib/supabase';
     .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #475569; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
     .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
-    .stat-card { background: white; border-radius: 12px; padding: 1.25rem; border: 1px solid #e2e8f0; }
-    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
-    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .stat-card .sub { font-size: 0.75rem; color: #94a3b8; margin-top: 0.35rem; }
-
-    /* Build status banner */
+    /* Build banner */
     .build-banner { border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 0.88rem; }
     .build-ok { background: #dcfce7; border: 1px solid #86efac; color: #166534; }
     .build-fail { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
     .build-unknown { background: #f8fafc; border: 1px solid #e2e8f0; color: #64748b; }
 
-    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
-    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #64748b; font-size: 0.78rem; cursor: pointer; font-weight: 500; }
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: white; border-radius: 12px; padding: 1.25rem; border: 1px solid #e2e8f0; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #94a3b8; margin-top: 0.35rem; }
+
+    /* Check type breakdown */
+    .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 1.5rem; }
+    .breakdown-item { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.75rem; text-align: center; cursor: pointer; transition: all 0.15s; }
+    .breakdown-item:hover { border-color: #7c3aed; box-shadow: 0 2px 6px rgba(124,58,237,0.1); }
+    .breakdown-item.active { border-color: #7c3aed; background: #f5f3ff; }
+    .breakdown-count { font-size: 1.25rem; font-weight: 800; line-height: 1; }
+    .breakdown-label { font-size: 0.68rem; color: #64748b; margin-top: 0.3rem; font-weight: 500; }
+    .ct-build { color: #6b21a8; }
+    .ct-frontmatter { color: #1e40af; }
+    .ct-internal_link { color: #9d174d; }
+    .ct-image { color: #92400e; }
+    .ct-seo_meta { color: #3730a3; }
+    .ct-duplicate { color: #b45309; }
+    .ct-content_quality { color: #0369a1; }
+    .ct-heading_hierarchy { color: #047857; }
+    .ct-sync { color: #dc2626; }
+    .ct-sitemap { color: #7c3aed; }
+    .ct-html_output { color: #0891b2; }
+
+    /* Filters */
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #64748b; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
     .filter-btn:hover { border-color: #cbd5e1; color: #334155; }
     .filter-btn.active { background: #1e293b; color: white; border-color: #1e293b; }
     .filter-count { font-size: 0.68rem; background: rgba(0,0,0,0.08); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
     .filter-btn.active .filter-count { background: rgba(255,255,255,0.2); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; font-size: 0.78rem; width: 200px; margin-left: auto; }
+    .search-input:focus { outline: none; border-color: #7c3aed; }
 
-    .results-table { width: 100%; background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+    /* Results table */
+    .results-table { width: 100%; background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; margin-bottom: 1.5rem; }
     .results-table table { width: 100%; border-collapse: collapse; }
     .results-table th { text-align: left; padding: 0.75rem 1rem; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #e2e8f0; background: #f8fafc; }
-    .results-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #f1f5f9; }
+    .results-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
     .results-table tr:last-child td { border-bottom: none; }
     .results-table tr:hover td { background: #f8fafc; }
 
@@ -59,19 +83,53 @@ import { supabaseConfig } from '../../lib/supabase';
     .badge-info { background: #dbeafe; color: #1e40af; }
     .badge-pass { background: #d1fae5; color: #065f46; }
 
-    .badge-build { background: #f3e8ff; color: #6b21a8; }
-    .badge-frontmatter { background: #dbeafe; color: #1e40af; }
-    .badge-links { background: #fce7f3; color: #9d174d; }
-    .badge-images { background: #fef3c7; color: #92400e; }
-    .badge-seo_meta { background: #e0e7ff; color: #3730a3; }
-    .badge-schema { background: #d1fae5; color: #065f46; }
+    .type-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; }
+    .tb-build { background: #f3e8ff; color: #6b21a8; }
+    .tb-frontmatter { background: #dbeafe; color: #1e40af; }
+    .tb-internal_link { background: #fce7f3; color: #9d174d; }
+    .tb-image { background: #fef3c7; color: #92400e; }
+    .tb-seo_meta { background: #e0e7ff; color: #3730a3; }
+    .tb-duplicate { background: #ffedd5; color: #9a3412; }
+    .tb-content_quality { background: #e0f2fe; color: #0c4a6e; }
+    .tb-heading_hierarchy { background: #d1fae5; color: #065f46; }
+    .tb-sync { background: #fee2e2; color: #991b1b; }
+    .tb-sitemap { background: #f5f3ff; color: #5b21b6; }
+    .tb-html_output { background: #cffafe; color: #155e75; }
 
-    .slug-cell { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #7c3aed; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .slug-cell { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #7c3aed; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .msg-cell { max-width: 350px; line-height: 1.4; }
-    .empty-state { text-align: center; padding: 3rem; color: #94a3b8; }
 
-    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .admin-layout { margin-left: 0; } .main { padding: 1rem; } }
+    /* Run history */
+    .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .section-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; font-size: 0.82rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #f1f5f9; color: #64748b; }
+    .run-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #f1f5f9; font-size: 0.82rem; }
+    .run-item:last-child { border-bottom: none; }
+    .run-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .run-dot-ok { background: #22c55e; }
+    .run-dot-fail { background: #ef4444; }
+    .run-dot-run { background: #f59e0b; }
+    .run-info { flex: 1; }
+    .run-date { font-weight: 500; color: #1e293b; }
+    .run-meta { font-size: 0.72rem; color: #94a3b8; }
+    .run-badges { display: flex; gap: 0.35rem; }
+    .run-badge { padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 700; }
+
+    /* Articles summary */
+    .article-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 1.25rem; border-bottom: 1px solid #f1f5f9; font-size: 0.82rem; }
+    .article-row:last-child { border-bottom: none; }
+    .article-status { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .as-ok { background: #22c55e; }
+    .as-warn { background: #f59e0b; }
+    .as-err { background: #ef4444; }
+    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #7c3aed; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .article-counts { display: flex; gap: 0.35rem; }
+
+    .empty-state { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.85rem; }
+
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .admin-layout { margin-left: 0; } .main { padding: 1rem; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
@@ -82,7 +140,7 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="page-header">
     <div class="page-header-left">
       <h1>Validator</h1>
-      <p>Verification technique — Build, frontmatter, liens, images</p>
+      <p>Verification technique complete — Build, frontmatter, liens, images, SEO, doublons, coherence</p>
     </div>
     <div class="header-actions">
       <span class="last-update" id="lastUpdate">-</span>
@@ -93,11 +151,12 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="main">
     <div class="cmd-box">
       <code>claude -p "Valide le site" --agent validator</code>
-      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p \"Valide le site\" --agent validator');this.textContent='Copie !'">Copier</button>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Valide le site&quot; --agent validator');this.textContent='Copie !'">Copier</button>
     </div>
 
     <div id="buildBanner" class="build-banner build-unknown">En attente du premier run...</div>
 
+    <!-- Stats -->
     <div class="stats-grid">
       <div class="stat-card">
         <div class="label">Articles verifies</div>
@@ -115,20 +174,49 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="sub">A corriger</div>
       </div>
       <div class="stat-card">
+        <div class="label">Infos</div>
+        <div class="value" id="statInfos" style="color:#3b82f6">-</div>
+        <div class="sub">Suggestions</div>
+      </div>
+      <div class="stat-card">
         <div class="label">Score</div>
         <div class="value" id="statScore" style="color:#059669">-</div>
         <div class="sub">Taux de conformite</div>
       </div>
     </div>
 
+    <!-- Check type breakdown -->
+    <div class="breakdown-grid" id="breakdownGrid"></div>
+
+    <!-- Severity filters + search -->
     <div class="filters">
       <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
       <button class="filter-btn" data-filter="error" onclick="setFilter('error')">Erreurs</button>
       <button class="filter-btn" data-filter="warning" onclick="setFilter('warning')">Warnings</button>
-      <button class="filter-btn" data-filter="info" onclick="setFilter('info')">Info</button>
+      <button class="filter-btn" data-filter="info" onclick="setFilter('info')">Infos</button>
+      <input type="text" class="search-input" placeholder="Rechercher un article..." oninput="setSearch(this.value)" />
     </div>
 
+    <!-- Results table -->
     <div id="resultsContainer"><div class="empty-state">Aucun resultat — lancez l'agent validator</div></div>
+
+    <!-- Bottom: Run history + Articles summary -->
+    <div class="two-cols" style="margin-top:1.5rem">
+      <div class="section-card">
+        <div class="section-header">
+          Historique des runs
+          <span class="badge-count" id="runCount">0</span>
+        </div>
+        <div id="runsList"><div class="empty-state">Chargement...</div></div>
+      </div>
+      <div class="section-card">
+        <div class="section-header">
+          Resume par article
+          <span class="badge-count" id="articleCount">0</span>
+        </div>
+        <div id="articlesList" style="max-height:400px;overflow-y:auto"><div class="empty-state">Chargement...</div></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -137,6 +225,8 @@ import { supabaseConfig } from '../../lib/supabase';
   const SB_KEY = supabaseAnonKey;
   let allResults = [];
   let currentFilter = 'all';
+  let currentTypeFilter = null;
+  let currentSearch = '';
 
   function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
@@ -148,13 +238,27 @@ import { supabaseConfig } from '../../lib/supabase';
     return r.json();
   }
 
+  const CHECK_TYPE_LABELS = {
+    build: 'Build',
+    frontmatter: 'Frontmatter',
+    internal_link: 'Liens internes',
+    image: 'Images',
+    seo_meta: 'SEO Meta',
+    duplicate: 'Doublons',
+    content_quality: 'Contenu',
+    heading_hierarchy: 'Headings',
+    sync: 'Sync DB',
+    sitemap: 'Sitemap',
+    html_output: 'HTML Output'
+  };
+
   function sevBadge(sev) {
     const cls = { error: 'badge-error', warning: 'badge-warning', info: 'badge-info', pass: 'badge-pass' };
     return `<span class="badge ${cls[sev] || ''}">${esc(sev)}</span>`;
   }
 
   function typeBadge(type) {
-    return `<span class="badge badge-${type}">${esc(type)}</span>`;
+    return `<span class="type-badge tb-${type}">${esc(CHECK_TYPE_LABELS[type] || type)}</span>`;
   }
 
   window.setFilter = function(f) {
@@ -163,14 +267,66 @@ import { supabaseConfig } from '../../lib/supabase';
     renderResults();
   };
 
+  window.setTypeFilter = function(type) {
+    if (currentTypeFilter === type) {
+      currentTypeFilter = null;
+    } else {
+      currentTypeFilter = type;
+    }
+    document.querySelectorAll('.breakdown-item').forEach(b => b.classList.toggle('active', b.dataset.type === currentTypeFilter));
+    renderResults();
+  };
+
+  window.setSearch = function(q) {
+    currentSearch = q.toLowerCase();
+    renderResults();
+  };
+
+  function renderBreakdown(results) {
+    const nonPass = results.filter(r => r.severity !== 'pass');
+    const typeCounts = {};
+    for (const r of nonPass) {
+      typeCounts[r.check_type] = (typeCounts[r.check_type] || 0) + 1;
+    }
+
+    const grid = document.getElementById('breakdownGrid');
+    if (Object.keys(typeCounts).length === 0) {
+      grid.innerHTML = '';
+      return;
+    }
+
+    // Sort by count descending
+    const sorted = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
+    grid.innerHTML = sorted.map(([type, count]) => `
+      <div class="breakdown-item${currentTypeFilter === type ? ' active' : ''}" data-type="${type}" onclick="setTypeFilter('${type}')">
+        <div class="breakdown-count ct-${type}">${count}</div>
+        <div class="breakdown-label">${esc(CHECK_TYPE_LABELS[type] || type)}</div>
+      </div>
+    `).join('');
+  }
+
   function renderResults() {
-    const filtered = currentFilter === 'all' ? allResults.filter(r => r.severity !== 'pass') : allResults.filter(r => r.severity === currentFilter);
+    let filtered = allResults.filter(r => r.severity !== 'pass');
+
+    if (currentFilter !== 'all') {
+      filtered = filtered.filter(r => r.severity === currentFilter);
+    }
+    if (currentTypeFilter) {
+      filtered = filtered.filter(r => r.check_type === currentTypeFilter);
+    }
+    if (currentSearch) {
+      filtered = filtered.filter(r =>
+        (r.article_slug || '').toLowerCase().includes(currentSearch) ||
+        (r.message || '').toLowerCase().includes(currentSearch)
+      );
+    }
+
     const container = document.getElementById('resultsContainer');
 
     if (filtered.length === 0) {
-      container.innerHTML = currentFilter === 'all' && allResults.length > 0
-        ? '<div class="empty-state" style="color:#059669">&#x2705; Aucun probleme detecte !</div>'
-        : '<div class="empty-state">Aucun resultat pour ce filtre</div>';
+      container.innerHTML = allResults.length > 0
+        ? '<div class="empty-state" style="color:#059669">&#x2705; Aucun probleme pour ces filtres</div>'
+        : '<div class="empty-state">Aucun resultat — lancez l\'agent validator</div>';
       return;
     }
 
@@ -187,45 +343,135 @@ import { supabaseConfig } from '../../lib/supabase';
     container.innerHTML = html;
   }
 
+  function renderArticlesSummary(results) {
+    const nonPass = results.filter(r => r.severity !== 'pass');
+    const bySlug = {};
+    for (const r of nonPass) {
+      if (!r.article_slug || r.article_slug === '_global') continue;
+      if (!bySlug[r.article_slug]) bySlug[r.article_slug] = { errors: 0, warnings: 0, infos: 0 };
+      if (r.severity === 'error') bySlug[r.article_slug].errors++;
+      if (r.severity === 'warning') bySlug[r.article_slug].warnings++;
+      if (r.severity === 'info') bySlug[r.article_slug].infos++;
+    }
+
+    const slugs = Object.keys(bySlug).sort((a, b) => {
+      const ae = bySlug[a].errors, be = bySlug[b].errors;
+      if (ae !== be) return be - ae;
+      return bySlug[b].warnings - bySlug[a].warnings;
+    });
+
+    document.getElementById('articleCount').textContent = slugs.length;
+    const container = document.getElementById('articlesList');
+
+    if (slugs.length === 0) {
+      container.innerHTML = '<div class="empty-state" style="color:#059669">Aucun probleme detecte</div>';
+      return;
+    }
+
+    container.innerHTML = slugs.map(slug => {
+      const s = bySlug[slug];
+      const statusClass = s.errors > 0 ? 'as-err' : s.warnings > 0 ? 'as-warn' : 'as-ok';
+      return `<div class="article-row">
+        <div class="article-status ${statusClass}"></div>
+        <div class="article-slug" title="${esc(slug)}">${esc(slug)}</div>
+        <div class="article-counts">
+          ${s.errors > 0 ? `<span class="run-badge" style="background:#fee2e2;color:#991b1b">${s.errors}E</span>` : ''}
+          ${s.warnings > 0 ? `<span class="run-badge" style="background:#fef3c7;color:#92400e">${s.warnings}W</span>` : ''}
+          ${s.infos > 0 ? `<span class="run-badge" style="background:#dbeafe;color:#1e40af">${s.infos}I</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  async function loadRuns() {
+    try {
+      const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.validator&order=started_at.desc&limit=10');
+      document.getElementById('runCount').textContent = runs.length;
+
+      if (runs.length === 0) {
+        document.getElementById('runsList').innerHTML = '<div class="empty-state">Aucun run</div>';
+        return;
+      }
+
+      document.getElementById('runsList').innerHTML = runs.map(r => {
+        const meta = r.metadata || {};
+        const dotClass = r.status === 'completed' ? 'run-dot-ok' : r.status === 'failed' ? 'run-dot-fail' : 'run-dot-run';
+        const date = new Date(r.started_at);
+        const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+
+        return `<div class="run-item">
+          <div class="run-dot ${dotClass}"></div>
+          <div class="run-info">
+            <div class="run-date">${esc(dateStr)}</div>
+            <div class="run-meta">${meta.articles_checked || r.items_processed || '?'} articles${meta.build_ok === true ? ' · build OK' : meta.build_ok === false ? ' · build FAIL' : ''}</div>
+          </div>
+          <div class="run-badges">
+            ${meta.errors ? `<span class="run-badge" style="background:#fee2e2;color:#991b1b">${meta.errors}E</span>` : ''}
+            ${meta.warnings ? `<span class="run-badge" style="background:#fef3c7;color:#92400e">${meta.warnings}W</span>` : ''}
+            ${!meta.errors && !meta.warnings && r.status === 'completed' ? `<span class="run-badge" style="background:#d1fae5;color:#065f46">OK</span>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+    } catch(e) {
+      document.getElementById('runsList').innerHTML = `<div class="empty-state" style="color:#ef4444">${esc(e.message)}</div>`;
+    }
+  }
+
   async function loadAll() {
     try {
       // Get latest run
       const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.validator&order=started_at.desc&limit=1');
       const run = runs[0];
 
-      if (run) {
-        const meta = run.metadata || {};
-        const buildOk = meta.build_ok;
-        const banner = document.getElementById('buildBanner');
-        if (buildOk === true) { banner.className = 'build-banner build-ok'; banner.textContent = '✅ Build OK — le site compile sans erreur'; }
-        else if (buildOk === false) { banner.className = 'build-banner build-fail'; banner.textContent = '❌ Build ECHOUE — des erreurs bloquent la compilation'; }
-
-        document.getElementById('statTotal').textContent = meta.articles_checked || run.items_processed || '-';
-
-        // Get results for this run
-        const results = await sbFetch('validation_results', `select=*&agent_run_id=eq.${run.id}&order=severity.asc,article_slug.asc`);
-        allResults = results;
-
-        const errors = results.filter(r => r.severity === 'error').length;
-        const warnings = results.filter(r => r.severity === 'warning').length;
-        const total = meta.articles_checked || run.items_processed || 0;
-        const score = total > 0 ? Math.round(((total - errors) / total) * 100) : '-';
-
-        document.getElementById('statErrors').textContent = errors;
-        document.getElementById('statWarnings').textContent = warnings;
-        document.getElementById('statScore').textContent = score !== '-' ? score + '%' : '-';
-
-        // Update filter counts
-        const counts = { all: results.filter(r => r.severity !== 'pass').length, error: errors, warning: warnings, info: results.filter(r => r.severity === 'info').length };
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-          const f = btn.dataset.filter;
-          const existing = btn.querySelector('.filter-count');
-          if (existing) existing.remove();
-          if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
-        });
-
-        renderResults();
+      if (!run) {
+        document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
+        loadRuns();
+        return;
       }
+
+      const meta = run.metadata || {};
+
+      // Build banner
+      const banner = document.getElementById('buildBanner');
+      if (meta.build_ok === true) {
+        banner.className = 'build-banner build-ok';
+        banner.innerHTML = '&#x2705; Build OK — le site compile sans erreur';
+      } else if (meta.build_ok === false) {
+        banner.className = 'build-banner build-fail';
+        banner.innerHTML = '&#x274C; Build ECHOUE — des erreurs bloquent la compilation';
+      }
+
+      // Get results for this run
+      const results = await sbFetch('validation_results', `select=*&agent_run_id=eq.${run.id}&order=severity.asc,check_type.asc,article_slug.asc`);
+      allResults = results;
+
+      const errors = results.filter(r => r.severity === 'error').length;
+      const warnings = results.filter(r => r.severity === 'warning').length;
+      const infos = results.filter(r => r.severity === 'info').length;
+      const total = meta.articles_checked || run.items_processed || 0;
+      const totalChecks = results.length;
+      const passCount = results.filter(r => r.severity === 'pass').length;
+      const score = totalChecks > 0 ? Math.round((passCount / totalChecks) * 100) : (errors === 0 && total > 0 ? 100 : '-');
+
+      document.getElementById('statTotal').textContent = total;
+      document.getElementById('statErrors').textContent = errors;
+      document.getElementById('statWarnings').textContent = warnings;
+      document.getElementById('statInfos').textContent = infos;
+      document.getElementById('statScore').textContent = score !== '-' ? score + '%' : '-';
+
+      // Update filter counts
+      const counts = { all: results.filter(r => r.severity !== 'pass').length, error: errors, warning: warnings, info: infos };
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const f = btn.dataset.filter;
+        const existing = btn.querySelector('.filter-count');
+        if (existing) existing.remove();
+        if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
+      });
+
+      renderBreakdown(results);
+      renderResults();
+      renderArticlesSummary(results);
+      loadRuns();
 
       document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
     } catch (err) {
