@@ -158,7 +158,7 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 ## Suivi et Ajustements
 
 ### Indicateurs de Réussite
-- **Perte de poids** : 5-10% sur 6 mois
+- **Perte de poids** : 15-22% sur 72 semaines (étude SURMOUNT-1)
 - **HbA1c** : Amélioration significative
 - **Tour de taille** : Réduction mesurable
 - **Bien-être général** : Énergie, sommeil
@@ -185,7 +185,7 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 
 Le **régime Mounjaro optimal** n'est pas restrictif mais **adaptatif**. Il s'appuie sur la régulation naturelle de l'appétit induite par le traitement tout en fournissant les nutriments essentiels.
 
-La **réussite dépend** de la régularité, de l'écoute des signaux de satiété et d'un suivi médical approprié. Chaque patient étant unique, ces recommandations doivent être personnalisées selon les besoins individuels.
+La **réussite dépend** de la régularité, de l'écoute des signaux de satiété et d'un suivi médical approprié. Chaque patient étant unique, ces recommandations doivent être personnalisées selon les besoins individuels. Pour trouver un spécialiste qui prescrit Mounjaro près de chez vous, consultez notre liste des [centres spécialisés Mounjaro en France](/traitements-glp1/centres-mounjaro-france/).
 
 ---
 

@@ -239,7 +239,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. Si vous envisagez d'arrêter Wegovy, renseignez-vous sur [l'effet rebond et la reprise de poids après arrêt des GLP-1](/effets-secondaires-glp1/arret-glp1-reprise-poids-effet-rebond/) pour anticiper et préparer cette étape avec votre médecin.
 
 ## Sommaire
 
