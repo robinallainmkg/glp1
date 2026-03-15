@@ -179,10 +179,12 @@ jobs:
             // STEP 4: Create correction_tickets for the 14 articles with missing mainKeyword
             // ================================================================
             console.log('\n=== STEP 4: Creating correction_tickets ===');
+            // Articles table uses full slugs with collection prefix (e.g. alternatives-glp1/acupuncture-glp1)
+            const fullSlugs = missingKeywordSlugs.map(s => `alternatives-glp1/${s}`);
             const { data: articles, error: articlesErr } = await supabase
               .from('articles')
               .select('id, slug')
-              .in('slug', missingKeywordSlugs)
+              .in('slug', fullSlugs)
               .eq('is_active', true);
 
             if (articlesErr) {
