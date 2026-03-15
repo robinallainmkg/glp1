@@ -112,15 +112,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 Pour maximiser votre perte de poids avec les GLP-1 :
 
-**[Accélérateur Métabolique GLP-1](https://bit.ly/metabolisme-glp1)** - *42,90 €*
-- L-carnitine + thé vert + chrome
-- Potentialise la lipolyse
-- Augmente dépense énergétique
-
-**[Soutien Digestif GLP-1](https://bit.ly/digestif-glp1)** - *24,90 €*
-- Probiotiques + enzymes digestives
-- Réduit effets secondaires
-- Améliore absorption nutriments
+Pour optimiser les résultats, certains compléments alimentaires peuvent être envisagés en complément du traitement : probiotiques pour la santé digestive, magnésium pour réduire les crampes, et vitamines du groupe B pour soutenir le métabolisme. Consultez votre médecin ou pharmacien avant tout ajout.
 
 ## Facteurs Influençant l'Efficacité
 
@@ -300,11 +292,10 @@ La chirurgie reste plus efficace (60-80% perte poids) mais les GLP-1 offrent un 
 
  Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [prix Wegovy](../glp1-cout/wegovy-prix/)
+- [Prix Ozempic en France](../glp1-cout/prix-ozempic-france/)
+- [Effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [Prix Wegovy en France](../glp1-cout/prix-wegovy-france/)
+- [Remboursement GLP-1 2026](../glp1-cout/remboursement-glp1-2026/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
