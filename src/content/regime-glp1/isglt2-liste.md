@@ -230,7 +230,7 @@ R : Oui, les iSGLT2 doivent être arrêtés 3 à 4 jours avant toute interventio
 
 ## Conclusion
 
-Les iSGLT2 constituent une classe thérapeutique majeure dans l'arsenal des traitements du diabète de type 2 et des maladies cardiovasculaires en France. Pour les patients sous traitement GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda), l'association avec un iSGLT2 peut offrir des bénéfices complémentaires importants, notamment sur le plan cardiovasculaire et rénal.
+Les iSGLT2 constituent une classe thérapeutique majeure dans l'arsenal des traitements du diabète de type 2 et des maladies cardiovasculaires en France. Pour les patients sous traitement GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy, [Mounjaro (tirzepatide)](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda), l'association avec un iSGLT2 peut offrir des bénéfices complémentaires importants, notamment sur le plan cardiovasculaire et rénal.
 
 Jardiance (empagliflozine) et Forxiga (dapagliflozine) sont les deux molécules les plus prescrites, remboursées à 65% pour le diabète de type 2 et l'insuffisance cardiaque. Leur coût mensuel après remboursement reste accessible (15€ environ).
 

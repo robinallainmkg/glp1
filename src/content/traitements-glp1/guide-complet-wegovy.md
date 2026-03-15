@@ -166,4 +166,6 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 
 ---
 
+Pour obtenir une prescription de Wegovy, consultez notre annuaire d'[endocrinologues spécialisés en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/).
+
 *Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

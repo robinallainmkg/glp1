@@ -127,25 +127,25 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 ### Comprendre le Remboursement Sécurité Sociale
 
-**Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Découvrez comment bénéficier du meilleur tarif pour votre traitement contre l'obésité ou le diabète.
+**Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Pour toutes les conditions détaillées, consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
-- **Diabète type 2 :** 65% remboursé par la Sécurité Sociale (sous conditions d'ALD)
+- **Diabète type 2 :** 30% remboursé par la Sécurité Sociale (100% en ALD 30)
 - **Obésité (IMC ≥30) :** Wegovy, Mounjaro et Saxenda ne sont **pas remboursés** en France (mars 2026)
-- **ALD (Affection Longue Durée) :** 100% remboursé pour diabète + obésité sévère
+- **ALD 30 (diabète de type 2) :** 100% du ticket modérateur pour Ozempic
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat
 
-**Pour bénéficier du remboursement GLP-1 :** Seuls les traitements indiqués pour le diabète de type 2 (Ozempic, Trulicity, Victoza, Rybelsus) sont remboursés à 65% par la Sécurité Sociale. Wegovy, Mounjaro et Saxenda (indiqués pour l'obésité) ne sont **pas remboursés** en France (mars 2026) et restent entièrement à la charge du patient.
+**Pour bénéficier du remboursement GLP-1 :** Seuls les traitements indiqués pour le diabète de type 2 (Ozempic, Trulicity, Victoza, Rybelsus) sont remboursés à 30% par la Sécurité Sociale. Wegovy, Mounjaro et Saxenda (indiqués pour l'obésité) ne sont **pas remboursés** en France (mars 2026) et restent entièrement à la charge du patient.
 
-### Prix Réels des Médicaments GLP-1 en Pharmacie 2025
+### Prix Réels des Médicaments GLP-1 en Pharmacie (mars 2026)
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | ~59,90€/stylo | 65% DT2 | ~21€ (DT2 65%) |
+| **Ozempic** | ~76,58€/stylo | 30% DT2 | ~54€ (DT2) |
 | **Wegovy** | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
-| **Trulicity** | ~81€ | 65% DT2 | ~28€ (DT2 65%) |
-| **Victoza** | ~60,26€ | 65% DT2 | ~21€ (DT2 65%) |
-| **Rybelsus** | 80-110€ | 65% DT2 | 28-39€ (DT2 65%) |
+| **Trulicity** | ~81€ | 65% DT2 | ~28€ (DT2) |
+| **Victoza** | ~60,26€ | 65% DT2 | ~21€ (DT2) |
+| **Rybelsus** | 80-110€ | 65% DT2 | 28-39€ (DT2) |
 
 **💰 Conseil économique :** Pour réduire le coût de votre traitement GLP-1, vérifiez d'abord votre éligibilité au remboursement diabète. Les médicaments comme Ozempic et Trulicity peuvent être très abordables une fois remboursés.
 
