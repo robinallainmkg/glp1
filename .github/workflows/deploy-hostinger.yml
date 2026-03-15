@@ -32,8 +32,8 @@ jobs:
         local-dir: ./dist/
         server-dir: /domains/glp1-france.fr/public_html/
         port: 21
-        protocol: ftp
-        timeout: 60000
+        protocol: ftps
+        timeout: 120000
         exclude: |
           **/.git*
           **/.git*/**
