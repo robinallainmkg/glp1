@@ -162,6 +162,62 @@ WHERE id = '<run_id>';
 - **info** : suggestion d'amelioration (liens externes sans noopener, heading order)
 - **pass** : verification OK (pour le comptage)
 
+## Creation de correction_tickets
+
+Apres avoir enregistre les validation_results, **cree des correction_tickets** pour chaque erreur et warning actionnable. Ces tickets seront consommes par l'agent editorial au prochain run.
+
+Pour chaque issue de severity `error` ou `warning` :
+
+1. **Recupere l'article_id** depuis Supabase :
+```sql
+SELECT id FROM articles WHERE slug = '<slug>' AND is_active = true LIMIT 1;
+```
+
+2. **Cree le ticket** :
+```sql
+INSERT INTO correction_tickets (
+  article_id, slug, title, source_agent, ticket_type, urgence,
+  before_exact, after_suggested, claim_original, realite_actuelle, statut
+) VALUES (
+  '<article_id>', '<slug>', '<title>',
+  'validator',
+  '<ticket_type>',
+  '<urgence>',
+  '<description_du_probleme>',
+  '<correction_suggeree_ou_null>',
+  '<resume_du_probleme>',
+  '<explication_detaillee>',
+  'approved'
+);
+```
+
+### Mapping check_type → ticket_type
+
+| check_type | ticket_type | urgence |
+|---|---|---|
+| `frontmatter` (description manquante) | `missing_description` | `urgent` |
+| `frontmatter` (autres) | `info_outdated` | `warning` |
+| `internal_link` | `broken_link` | `urgent` |
+| `image` | `missing_image` | `urgent` |
+| `seo_meta` | `seo_issue` | `warning` |
+| `duplicate` | `duplicate_content` | `warning` |
+| `content_quality` | `content_quality` | `warning` |
+| `heading_hierarchy` | `heading_issue` | `ok` |
+| `sync` | `sync_issue` | `urgent` |
+| `html_output` | `html_issue` | `warning` |
+| `build` | `build_error` | `urgent` |
+
+### Champs du ticket
+- `before_exact` : description du probleme (ex: "Description manquante dans le frontmatter")
+- `after_suggested` : correction suggeree si possible (ex: "Ajouter une description de 120-160 caracteres incluant le mot-cle principal")
+- `claim_original` : resume court du probleme
+- `realite_actuelle` : explication detaillee de pourquoi c'est un probleme
+- `statut` : toujours `'approved'` (auto-approuve, pas de review humaine)
+- `source_agent` : toujours `'validator'`
+- `fact_check_result_id` : NULL (pas de fact-check associe)
+
+**Ne cree PAS de ticket pour les `severity: 'info'`** — ce sont des suggestions, pas des corrections.
+
 ## Regles
 
 - Maximum 50 articles par run
@@ -169,4 +225,4 @@ WHERE id = '<run_id>';
 - Ecris uniquement dans Supabase via MCP execute_sql
 - Si le build echoue, continue quand meme les autres verifications
 - Reponds uniquement en francais
-- Resume en fin de run : total checks, errors, warnings, infos
+- Resume en fin de run : total checks, errors, warnings, infos, tickets crees
