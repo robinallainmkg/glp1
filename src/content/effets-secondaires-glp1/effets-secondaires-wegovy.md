@@ -239,7 +239,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. Si vous vous interrogez sur les conséquences d'un arrêt du traitement, consultez notre guide sur la [reprise de poids après arrêt du traitement GLP-1](/collections/effets-secondaires-glp1/arret-glp1-reprise-poids-effet-rebond/).
 
 ## Sommaire
 

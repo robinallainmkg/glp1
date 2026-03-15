@@ -162,6 +162,8 @@ affiliateCollection: "effets-secondaires-glp1"
 | Saxenda | 15-25% | 8-12% | 5-8% | Très bonne |
 | Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
 
+Si vous souhaitez comparer avec un autre traitement de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
+
 ## 💡 Conseils pour une Bonne Tolérance
 
 ### Préparation mentale
