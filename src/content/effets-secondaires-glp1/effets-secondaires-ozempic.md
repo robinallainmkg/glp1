@@ -234,7 +234,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner des modifications esthétiques du visage — un phénomène connu sous le nom d'[Ozempic face (vieillissement du visage)](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage/) à connaître avant de commencer le traitement.
 
 ## Sommaire
 

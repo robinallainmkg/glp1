@@ -304,7 +304,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 #### A) Pharmacie de ville (si disponible)
 - Ordonnance sécurisée du spécialiste
 - Vérifiez la disponibilité avant (stock limité en 2025)
-- Prix : ~285€/mois (non remboursé actuellement)
+- Prix : 230€ à 440€/mois selon dosage (non remboursé actuellement)
 
 #### B) Importation nominative
 - Demande spéciale via le pharmacien hospitalier
@@ -319,7 +319,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 | Aspect | Détail |
 |--------|--------|
-| **Prix Mounjaro** | ~285€/mois |
+| **Prix Mounjaro** | 230€ à 440€/mois selon dosage (prix libre en pharmacie) |
 | **Remboursement Sécu** | ⏳ Avis favorable HAS (déc. 2025) — Remboursement prévu 2e semestre 2026 |
 | **Remboursement Mutuelle** | Selon contrat (variable) |
 | **Prescription** | Sur ordonnance uniquement |
@@ -383,7 +383,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 1. **Ozempic** (sémaglutide)
    - ✅ Disponible en France
    - ✅ Remboursé si diabète type 2
-   - Efficacité : -15% de poids (vs -20% pour Mounjaro)
+   - Efficacité : -5 à 7% de poids avec Ozempic (dose diabète) ; -15% avec Wegovy (dose obésité) (vs -20% pour Mounjaro)
 
 2. **Wegovy** (sémaglutide haute dose)
    - ✅ Disponible en France

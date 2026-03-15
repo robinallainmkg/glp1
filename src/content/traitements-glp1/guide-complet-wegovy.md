@@ -151,7 +151,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 Oui, Wegovy contient la même molécule (semaglutide) mais à une dose maximale plus élevée (2,4 mg vs 2 mg) et est spécifiquement indiqué pour l'obésité.
 
 ### Puis-je prendre Wegovy si je n'ai pas de diabète ?
-Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète, contrairement à Ozempic qui est **exclusivement indiqué pour le diabète de type 2** en France et ne doit pas être utilisé pour la perte de poids (contrôles ANSM renforcés depuis février 2025).
+Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète, contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) qui est **exclusivement indiqué pour le diabète de type 2** en France et ne doit pas être utilisé pour la perte de poids (contrôles ANSM renforcés depuis février 2025).
 
 ### Combien de temps faut-il pour voir les effets ?
 - **Perte d'appétit** : Quelques jours
@@ -162,7 +162,7 @@ Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète,
 **Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Son coût se situe entre 169 € et 360 € par mois selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un remboursement (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Wegovy brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
+Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids rapide](/collections/effets-secondaires-glp1/arret-glp1-reprise-poids-effet-rebond/).
 
 ---
 

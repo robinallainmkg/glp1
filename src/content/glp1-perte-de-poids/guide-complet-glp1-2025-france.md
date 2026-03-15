@@ -35,7 +35,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
 | **Ozempic** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~59,90€/stylo | 65% DT2 uniquement |
-| **Wegovy** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 169-360€ | Non remboursé |
+| **[Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 169-360€ | Non remboursé |
 | **Saxenda** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
 | **Trulicity** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 65% DT2 |
 | **Victoza** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 65% DT2 |
@@ -226,7 +226,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 **2025 s'annonce comme une année riche en innovations** pour les traitements GLP-1 et apparentés.
 
-- **GLP-1/GIP combinés :** Tirzepatide (Mounjaro) - déjà disponible, très efficace
+- **GLP-1/GIP combinés :** [Mounjaro (tirzepatide)](/collections/traitements-glp1/guide-complet-mounjaro/) - déjà disponible, très efficace
 - **GLP-1/GLP-2 combinés :** Pour améliorer la tolérance digestive
 - **Formes orales améliorées :** Meilleure biodisponibilité et tolérance
 - **Durée d'action prolongée :** Injections mensuelles à l'étude

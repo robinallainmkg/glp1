@@ -1,7 +1,8 @@
 ---
-title: "Wegovy Remboursement Mutuelle : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur le remboursement Wegovy par la mutuelle santé en France. Conditions, démarches et couverture pour le traitement Wegovy."
+title: "Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?"
+description: "Wegovy remboursement mutuelle 2026 : liste des mutuelles qui remboursent Wegovy, montants de remboursement, démarches et conseils pour réduire votre reste à charge. Guide complet mis à jour."
 pubDate: 2025-08-23
+updatedAt: '2026-03-15'
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -30,7 +31,9 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le Wegovy révolutionne la prise en charge de l'obésité, mais son prix élevé interroge sur les possibilités de remboursement. Découvrez tout ce qu'il faut savoir sur la prise en charge par les mutuelles françaises en 2025.
+# Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
+
+Le **remboursement de Wegovy par les mutuelles** est une question centrale pour les patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) n'est pas remboursé par la Sécurité Sociale — mais certaines mutuelles complémentaires proposent une prise en charge partielle. Découvrez la liste des mutuelles favorables et les montants de remboursement en 2026.
 
 ## Wegovy : Un traitement révolutionnaire mais coûteux
 

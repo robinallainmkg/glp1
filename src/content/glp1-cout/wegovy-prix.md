@@ -1,13 +1,14 @@
 ---
-title: "Prix et Coût Détaillé de Wegovy en France 2025"
-description: "Guide complet sur Prix De Wegovy En France 2025 : tarifs officiels, remboursement sécurité sociale et couverture mutuelle pour le traitement Wegovy."
+title: "Prix Wegovy Pharmacie 2026 : Combien Coûte Wegovy en France ?"
+description: "Wegovy prix pharmacie en France 2026 : de 169€ à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale. Comparez les prix entre pharmacies et découvrez comment réduire votre reste à charge."
 pubDate: 2025-08-23
+updatedAt: '2026-03-15'
 author: "Julien Lefèvre"
 category: "Économie santé"
-tags: ["glp1", "prix", "remboursement"]
+tags: ["glp1", "prix", "remboursement", "wegovy prix pharmacie"]
 collection: "glp1-cout"
 thumbnail: "/images/thumbnails/wegovy.jpg"
-thumbnailAlt: "Illustration pour l'article Wegovy Prix"
+thumbnailAlt: "Prix Wegovy en pharmacie France 2026"
 featured: false
 priority: 5
 schema: "Article"
@@ -30,7 +31,42 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le prix de Wegovy en France varie entre 169€ et 360€ par mois selon le dosage prescrit. Ce médicament révolutionnaire pour la perte de poids représente un investissement important. Wegovy n'est actuellement pas remboursé par la Sécurité Sociale en France, mais certaines mutuelles peuvent proposer une prise en charge partielle.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le prix de Wegovy en pharmacie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le prix de Wegovy en pharmacie varie de 169€ à 360€ par mois selon le dosage (0,25 mg à 2,4 mg). Wegovy n'est pas remboursé par la Sécurité Sociale en 2026. Le coût est intégralement à la charge du patient."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wegovy est-il remboursé par la Sécurité Sociale en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Les négociations CEPS sont en cours et un remboursement est possible au 2e semestre 2026 pour les patients avec un IMC ≥ 35 après échec des mesures nutritionnelles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment trouver Wegovy moins cher en pharmacie ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wegovy étant non remboursé, les pharmacies fixent librement leur prix. Demandez un devis à plusieurs officines, comparez les pharmacies de grande surface (type CityPharma, Pharmacie Lafayette) et vérifiez si votre mutuelle propose un forfait médicaments non remboursés."
+      }
+    }
+  ]
+}
+</script>
+
+# Wegovy Prix Pharmacie 2026 : Combien Coûte Wegovy en France ?
+
+Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par mois** selon le dosage prescrit. Ce médicament (sémaglutide) est indiqué dans le traitement de l'obésité. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026, mais un remboursement est attendu au 2e semestre 2026. Certaines mutuelles peuvent proposer une prise en charge partielle.
 
 ## Points clés à retenir
 
@@ -52,17 +88,30 @@ Le prix de Wegovy en France varie entre 169€ et 360€ par mois selon le dosag
 | 1,7 mg | ~310€ |
 | 2,4 mg (dose cible) | ~360€ |
 
-Le prix de Wegovy varie entre 169€ et 360€ par mois selon le dosage. Wegovy n'est pas remboursé par la Sécurité Sociale.
+Le prix de Wegovy varie entre 169€ et 360€ par mois selon le dosage. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026.
 
-### Évolution des prix 2023-2025
+### Comparer le prix de Wegovy entre pharmacies (mars 2026)
 
-Les tarifs de Wegovy ont évolué depuis son lancement :
+Le prix de Wegovy n'étant pas réglementé (médicament non remboursé), chaque pharmacie fixe librement son tarif. En pratique, les écarts restent modestes (5 à 10 %), mais il vaut la peine de comparer.
 
-- **2023** : lancement à 249€ pour la dose maximale
-- **2024** : augmentation à 269€ (+8%)
-- **2025** : stabilisation attendue
+| Type de pharmacie | Prix moyen Wegovy 2,4 mg | Remarque |
+|-------------------|--------------------------|----------|
+| Pharmacie indépendante de quartier | ~360€/mois | Prix de référence |
+| Pharmacie de grande surface (ex. CityPharma Paris) | ~340-350€/mois | Volume d'achat élevé |
+| Pharmacie hospitalière | ~340-355€/mois | Accessible si suivi en hôpital |
+| Pharmacie en ligne agréée (avec ordonnance) | ~345-360€/mois | Commande possible avec Rx valide |
 
-Cette évolution s'explique par l'augmentation de la demande, les coûts de production et les négociations avec l'ANSM.
+**Conseil pratique** : Demandez un devis à 2 ou 3 pharmacies de votre secteur avant de déposer votre ordonnance. Les écarts peuvent représenter 20 à 40€ d'économies par mois.
+
+### Évolution des prix 2024-2026
+
+Les tarifs de Wegovy depuis son lancement en France (octobre 2024) :
+
+- **Octobre 2024** : Lancement en France — prix constatés : 169€ (0,25 mg) à 360€ (2,4 mg)
+- **Début 2025** : Stabilisation des tarifs malgré la demande soutenue
+- **Mars 2026** : Prix stables — aucune baisse avant l'arrivée des biosimilaires (attendus 2027)
+
+Cette stabilité s'explique par la position monopolistique de Novo Nordisk et la forte demande, malgré les pressions sur les tarifs pharmaceutiques.
 
 ## Remboursement : situation actuelle
 
@@ -199,7 +248,7 @@ Pour maîtriser le coût de Wegovy :
 
 ## Conclusion
 
-Le prix de Wegovy reste élevé en 2025, mais de nombreuses solutions permettent de le rendre accessible aux patients qui en ont besoin. L'arrivée prochaine des biosimilaires devrait transformer ce marché d'ici 2026-2027, rendant ces traitements beaucoup plus abordables pour tous.
+Le **prix de Wegovy en pharmacie** reste élevé en 2026 (169 à 360€/mois), mais plusieurs solutions permettent de réduire le reste à charge : vérifier votre mutuelle, comparer les pharmacies, et attendre le remboursement Sécurité Sociale possible au 2e semestre 2026. L'arrivée des biosimilaires (attendus 2027) devrait réduire les prix de 30 à 50%.
 
 Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabétologue qui pourra évaluer votre situation et vous orienter vers les meilleures solutions de financement.
 

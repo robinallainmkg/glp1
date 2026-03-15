@@ -1,11 +1,11 @@
 ---
 title: "Prix Wegovy 2026 : Coût par Dosage et Remboursement en France"
-description: "Prix Wegovy en pharmacie : 169 à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale (mars 2026). Guide complet des tarifs par dosage (0.25mg, 0.5mg, 1mg, 1.7mg, 2.4mg)."
+description: "Wegovy prix pharmacie en France : 169 à 360 €/mois selon dosage. Non remboursé en 2026. Comparez les prix, trouvez Wegovy moins cher en pharmacie et découvrez les tarifs en Espagne et Belgique."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg', 'wegovy prix pharmacie']
 seoTitle: "Prix Wegovy 2026 : Tarifs par Dosage et Remboursement en France"
 seoDescription: "Prix Wegovy : 169 à 360€/mois selon dosage. Non remboursé par la Sécurité Sociale (mars 2026), remboursement possible au 2e semestre 2026. Tous les prix par dosage."
 publishedAt: '2025-01-28'
-updatedAt: '2026-03-08'
+updatedAt: '2026-03-15'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -190,6 +190,33 @@ Les négociations entre Novo Nordisk et le **CEPS** (Comité économique des pro
 ### Professionnels de santé
 - **Médecin traitant** : Pour renouvellement d'ordonnance
 - **Endocrinologue** : Pour suivi spécialisé
+
+## Où trouver Wegovy moins cher en pharmacie ?
+
+### Comparer les prix entre pharmacies en France
+
+En France, le prix de Wegovy n'est pas réglementé (médicament non remboursé) : chaque officine fixe librement son prix. En pratique, les écarts entre pharmacies restent limités (rarement plus de 5 à 10 %) car les grossistes appliquent des tarifs proches. Cependant, quelques pistes permettent de réduire le coût :
+
+- **Demandez un devis à plusieurs pharmacies** de votre secteur avant de déposer votre ordonnance
+- **Pharmacies indépendantes vs enseignes** : les pharmacies appartenant à un groupe (Pharmacie Lafayette, CityPharma à Paris) peuvent parfois proposer de légères remises sur les médicaments non remboursés en raison de leur volume d'achat
+- **Pharmacies hospitalières** : si vous suivez votre traitement en centre hospitalier, la pharmacie de l'hôpital peut parfois délivrer Wegovy à un tarif légèrement inférieur
+
+### Prix Wegovy en Espagne et en Belgique (mars 2026)
+
+Certains patients envisagent de s'approvisionner à l'étranger pour réduire le coût. Voici les réalités du marché européen :
+
+**Espagne :**
+- Prix constaté : environ **220 à 280 € par stylo** selon les dosages, prix libre (non remboursé en indication obésité)
+- Disponibilité variable selon les communautés autonomes
+- **Important** : l'importation personnelle de médicaments depuis l'Espagne avec une ordonnance française n'est pas reconnue en pharmacie française. Il s'agit d'un usage à titre personnel soumis à déclaration douanière.
+
+**Belgique :**
+- Prix constaté : **160 à 340 €/mois** selon dosage (remboursement partiel possible pour les patients belges avec certaines conditions)
+- Les ressortissants français ne peuvent pas bénéficier du remboursement belge
+- L'achat en Belgique avec une ordonnance belge est légal, mais nécessite une consultation avec un médecin belge
+
+**Conclusion sur l'achat à l'étranger :**
+Les différences de prix entre la France et les pays voisins sont souvent minimes (5 à 15 %). Le coût et les démarches administratives (consultation médicale étrangère, transport, risques de rupture de stock) dépassent généralement les économies potentielles. La meilleure option reste de vérifier votre contrat mutuelle et d'attendre le remboursement Sécu attendu au second semestre 2026.
 
 ## 💡 Conseils pour Réduire les Coûts
 
