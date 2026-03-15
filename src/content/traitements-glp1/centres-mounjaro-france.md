@@ -20,7 +20,7 @@ secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu"
 
 <div style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); border-left: 5px solid #FF9800; padding: 1.5rem; margin: 2rem 0; border-radius: 12px;">
   
-📢 **Important** : Mounjaro (tirzepatide) est en déploiement progressif en France depuis son autorisation européenne (AMM) en 2022. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
+📢 **Important** : Mounjaro (tirzepatide) a obtenu son autorisation de mise sur le marché (AMM) européenne en septembre 2022 et est commercialisé en France depuis novembre 2024. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
 
 </div>
 
@@ -320,15 +320,16 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 | Aspect | Détail |
 |--------|--------|
 | **Prix Mounjaro** | ~285€/mois |
-| **Remboursement Sécu** | ⏳ En attente évaluation HAS |
-| **Remboursement Mutuelle** | Selon contrat (rare) |
+| **Remboursement Sécu** | ✅ Remboursé à 65% (avis favorable HAS, décembre 2025) |
+| **Remboursement Mutuelle** | Complément selon contrat |
 | **Prescription** | Sur ordonnance uniquement |
 
-### Évolution attendue
+### Conditions de remboursement
 
-📅 **2025** : Dossier HAS en cours d'évaluation
-- Si avis favorable : remboursement 65% (Sécu) + mutuelle
-- Critères : Diabète type 2 + échec metformine
+✅ **Depuis décembre 2025** : La HAS a rendu un avis favorable au remboursement de Mounjaro.
+- Remboursement à 65% par la Sécurité Sociale
+- Indication : Diabète de type 2 insuffisamment contrôlé
+- Complément possible par la mutuelle
 
 ---
 
