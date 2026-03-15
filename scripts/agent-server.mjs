@@ -202,6 +202,38 @@ async function executeStrategistDecisions() {
   }
 }
 
+// After editorial finishes, check if remaining tickets need processing
+async function checkAndRelaunchIfNeeded(finishedAgent) {
+  if (!SUPABASE_URL) return;
+
+  // Don't relaunch if other editorials are still running
+  const editorialsRunning = [...running.keys()].filter(k => k.startsWith('editorial'));
+  if (editorialsRunning.length > 0) {
+    console.log(`⏳ ${editorialsRunning.length} editorial(s) encore en cours, on attend...`);
+    return;
+  }
+
+  try {
+    // Count remaining approved tickets
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?statut=eq.approved&select=id`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    const tickets = await r.json();
+    const remaining = Array.isArray(tickets) ? tickets.length : 0;
+
+    if (remaining > 0) {
+      appendOutput(finishedAgent, `\n🔄 ${remaining} tickets restants — relance du strategist pour redistribuer...`);
+      console.log(`🔄 [${new Date().toLocaleTimeString()}] ${remaining} tickets restants — relance strategist`);
+      launchAgent('strategist');
+    } else {
+      appendOutput(finishedAgent, `\n✅ Tous les tickets traites ! Pipeline termine.`);
+      console.log(`✅ [${new Date().toLocaleTimeString()}] Pipeline termine — 0 tickets restants`);
+    }
+  } catch(e) {
+    console.log(`⚠️ Erreur check tickets: ${e.message}`);
+  }
+}
+
 // Supabase helper
 async function sbPatch(path, data) {
   if (!SUPABASE_URL) return;
@@ -304,6 +336,12 @@ function launchAgent(name) {
     if (name === 'strategist' && code === 0) {
       console.log('🤖 Strategist termine — execution des decisions...');
       await executeStrategistDecisions();
+    }
+
+    // If an editorial agent finished, check if there are remaining tickets
+    if (name.startsWith('editorial') && code === 0) {
+      // Wait 10s for Supabase to settle, then check remaining tickets
+      setTimeout(() => checkAndRelaunchIfNeeded(name), 10000);
     }
   });
 
