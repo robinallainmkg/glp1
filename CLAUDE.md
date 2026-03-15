@@ -56,11 +56,12 @@ claude -p "Analyse le maillage interne" --agent internal-links
 
 ### Agent SEO Audit (`.claude/agents/seo-audit.md`)
 - **Fonction** : Audit crawlabilite, meta tags, maillage interne, accessibilite, performance
-- **Output** : `seo_audit_results` dans Supabase
+- **Output** : `seo_audit_results` + `correction_tickets` dans Supabase
 
 ### Agent Analytics (`.claude/agents/analytics.md`)
-- **Fonction** : Suivi positionnement mots-cles prioritaires/secondaires
-- **Output** : `keyword_rankings` dans Supabase
+- **Fonction** : Suivi positionnement mots-cles prioritaires/secondaires + detection chutes/quick-wins
+- **Output** : `keyword_rankings` + `correction_tickets` dans Supabase
+- **Tickets** : `content_refresh` (chute position), `seo_optimization` (quick-win position 11-20)
 
 ### Agent Fact-Check (`.claude/agents/fact-check.md`)
 - **Fonction** : Verifie les articles GLP-1 contre les sources officielles FR
@@ -94,9 +95,12 @@ claude -p "Analyse le maillage interne" --agent internal-links
 - `validator` → cree des `correction_tickets` (source_agent='validator') → `editorial` les consomme
 - `opportunities` → cree des `content_opportunities` → `editorial` les consomme
 - `internal-links` → cree des `internal_link_suggestions` → `editorial` les consomme
-- `analytics` : independant (monitoring)
+- `analytics` → cree des `correction_tickets` (source_agent='analytics', types: content_refresh, seo_optimization) → `editorial` les consomme
 - `editorial` → modifie les fichiers → `validator` verifie le resultat
-- Workflow recommande : (seo-audit + fact-check + validator) → editorial → validator
+- **Pipeline complet** (3 vagues) :
+  - Vague 1 (parallele) : seo-audit + analytics + fact-check + opportunities + internal-links
+  - Vague 2 : editorial (consomme tous les tickets/suggestions/opportunites)
+  - Vague 3 : validator (verifie le travail editorial)
 
 ### Dashboards Admin
 - **Vue d'ensemble** (`src/pages/admin/index.astro`) — War room temps reel, statut des 7 agents, graphe dependances, live feed

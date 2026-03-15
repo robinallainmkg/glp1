@@ -61,6 +61,10 @@ UPDATE correction_tickets SET statut = 'in_progress' WHERE id = '<ticket_id>';
    - `content_quality` : enrichis le contenu pour atteindre 300+ mots
    - `heading_issue` : corrige la hierarchie des headings
 
+   **Tickets analytics** (`source_agent = 'analytics'`) :
+   - `content_refresh` : l'article perd en positionnement — met a jour les infos, enrichis le contenu, ameliore la pertinence
+   - `seo_optimization` : l'article est proche de la page 1 (position 11-20) — optimise title, description, mots-cles, structure
+
 5. **Met a jour le ticket** :
 ```sql
 UPDATE correction_tickets SET statut = 'ready_to_deploy', after_final = '<after_final>', updated_at = NOW()

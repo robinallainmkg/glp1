@@ -64,12 +64,66 @@ VALUES (
 );
 ```
 
-### 6. Finalisation
+### 6. Detection des alertes et creation de tickets
+
+Apres l'enregistrement, analyse les variations de positionnement pour creer des **correction_tickets** actionnables par l'agent editorial.
+
+#### Cas declencheurs
+
+| Situation | ticket_type | urgence | Action attendue |
+|---|---|---|---|
+| **Chute forte** : position passe de 1-10 a 20+ (ou disparait) | `content_refresh` | `urgent` | L'article perd en pertinence, editorial doit le mettre a jour |
+| **Chute moderee** : position passe de 1-10 a 11-20 | `content_refresh` | `warning` | L'article glisse, editorial doit optimiser |
+| **Quick-win** : position 11-20 stable sur mot-cle principal | `seo_optimization` | `warning` | L'article est proche de la page 1, editorial doit optimiser title/description/contenu |
+| **Invisible** : mot-cle principal non positionne (NULL) et article actif | `seo_optimization` | `ok` | L'article n'est pas indexe sur son mot-cle, editorial doit revoir le ciblage |
+
+#### Procedure
+
+1. **Verifie qu'un ticket similaire n'existe pas deja** :
+```sql
+SELECT id FROM correction_tickets
+WHERE article_id = '<article_id>' AND ticket_type IN ('content_refresh', 'seo_optimization')
+AND statut IN ('approved', 'in_progress')
+LIMIT 1;
+```
+
+2. **Si pas de doublon, cree le ticket** :
+```sql
+INSERT INTO correction_tickets (
+  article_id, slug, title, source_agent, ticket_type, urgence,
+  before_exact, after_suggested, claim_original, realite_actuelle, statut
+) VALUES (
+  '<article_id>', '<slug>', '<article_title>',
+  'analytics',
+  '<ticket_type>',
+  '<urgence>',
+  '<description_de_la_situation>',
+  '<suggestion_d_action>',
+  '<resume_du_probleme>',
+  '<details_positionnement>',
+  'approved'
+);
+```
+
+**Exemples de contenu** :
+- `before_exact` : "Position 3 → 25 sur 'ozempic prix france' en 2 semaines"
+- `after_suggested` : "Mettre a jour les prix, enrichir le contenu, verifier les mots-cles secondaires"
+- `claim_original` : "Chute de positionnement detectee"
+- `realite_actuelle` : "L'article est passe de la position 3 a 25 sur le mot-cle principal. Risque de perte de trafic significative."
+
+### 7. Log
+
+```sql
+INSERT INTO agent_logs (agent_type, status, metadata)
+VALUES ('analytics', 'success', '{"articles_checked": <n>, "keywords_tracked": <n>, "tickets_created": <n>}'::jsonb);
+```
+
+### 8. Finalisation
 
 ```sql
 UPDATE agent_runs SET status = 'completed', completed_at = NOW(),
   items_processed = <nb_keywords_checked>, items_errors = 0,
-  metadata = '{"articles_checked": <n>, "keywords_tracked": <n>, "improvements": <n>, "declines": <n>}'::jsonb
+  metadata = '{"articles_checked": <n>, "keywords_tracked": <n>, "improvements": <n>, "declines": <n>, "tickets_created": <n>, "quick_wins": <n>}'::jsonb
 WHERE id = '<run_id>';
 ```
 
@@ -79,3 +133,4 @@ WHERE id = '<run_id>';
 - Maximum 3 mots-cles par article (1 principal + 2 secondaires)
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql
+- Reponds uniquement en francais
