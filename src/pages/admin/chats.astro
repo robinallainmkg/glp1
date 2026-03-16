@@ -344,12 +344,16 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
   </div>
 
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
     // Supabase client
     let sb;
-    async function initSupabase() {
-      const mod = await import('https://esm.sh/@supabase/supabase-js@2');
-      sb = mod.createClient(supabaseUrl, supabaseKey);
+    function initSupabase() {
+      if (sb) return;
+      if (!window.supabase || !window.supabase.createClient) {
+        throw new Error('Supabase JS not loaded');
+      }
+      sb = window.supabase.createClient(supabaseUrl, supabaseKey);
     }
 
     let allConversations = [];
@@ -357,68 +361,74 @@ import { supabaseConfig } from '../../lib/supabase';
     let currentFilter = 'all';
 
     async function loadData() {
-      if (!sb) await initSupabase();
+      try {
+        if (!sb) initSupabase();
 
-      // Load conversations
-      const { data: convs } = await sb
-        .from('coach_conversations')
-        .select('*')
-        .order('last_message_at', { ascending: false })
-        .limit(200);
+        // Load conversations
+        const { data: convs, error: convErr } = await sb
+          .from('coach_conversations')
+          .select('*')
+          .order('last_message_at', { ascending: false })
+          .limit(200);
 
-      allConversations = convs || [];
+        if (convErr) { console.error('convs error:', convErr); }
+        allConversations = convs || [];
 
-      // Load stats
-      const { count: totalMsgs } = await sb
-        .from('coach_messages')
-        .select('*', { count: 'exact', head: true });
+        // Load stats
+        const { count: totalMsgs } = await sb
+          .from('coach_messages')
+          .select('*', { count: 'exact', head: true });
 
-      const today = new Date().toISOString().split('T')[0];
-      const { count: todayMsgs } = await sb
-        .from('coach_messages')
-        .select('*', { count: 'exact', head: true })
-        .gte('created_at', today);
+        const today = new Date().toISOString().split('T')[0];
+        const { count: todayMsgs } = await sb
+          .from('coach_messages')
+          .select('*', { count: 'exact', head: true })
+          .gte('created_at', today);
 
-      const todayConvs = allConversations.filter(c =>
-        c.last_message_at && c.last_message_at.startsWith(today)
-      ).length;
+        const todayConvs = allConversations.filter(c =>
+          c.last_message_at && c.last_message_at.startsWith(today)
+        ).length;
 
-      // Unique sessions
-      const uniqueSessions = new Set(allConversations.map(c => c.session_id)).size;
+        // Unique sessions
+        const uniqueSessions = new Set(allConversations.map(c => c.session_id)).size;
 
-      // LLM vs fallback
-      const { count: llmCount } = await sb
-        .from('coach_messages')
-        .select('*', { count: 'exact', head: true })
-        .eq('role', 'assistant')
-        .eq('model', 'llama-3.1-8b-instant');
+        // LLM vs fallback
+        const { count: llmCount } = await sb
+          .from('coach_messages')
+          .select('*', { count: 'exact', head: true })
+          .eq('role', 'assistant')
+          .eq('model', 'llama-3.1-8b-instant');
 
-      const { count: fallbackCount } = await sb
-        .from('coach_messages')
-        .select('*', { count: 'exact', head: true })
-        .eq('role', 'assistant')
-        .eq('model', 'fallback-v1');
+        const { count: fallbackCount } = await sb
+          .from('coach_messages')
+          .select('*', { count: 'exact', head: true })
+          .eq('role', 'assistant')
+          .eq('model', 'fallback-v1');
 
-      const totalAssistant = (llmCount || 0) + (fallbackCount || 0);
-      const llmPct = totalAssistant > 0 ? Math.round((llmCount / totalAssistant) * 100) : 0;
+        const totalAssistant = (llmCount || 0) + (fallbackCount || 0);
+        const llmPct = totalAssistant > 0 ? Math.round((llmCount / totalAssistant) * 100) : 0;
 
-      // Avg msgs per conv
-      const avgMsgs = allConversations.length > 0
-        ? Math.round((totalMsgs || 0) / allConversations.length)
-        : 0;
+        // Avg msgs per conv
+        const avgMsgs = allConversations.length > 0
+          ? Math.round((totalMsgs || 0) / allConversations.length)
+          : 0;
 
-      // Update stats
-      document.getElementById('statConvs').textContent = allConversations.length;
-      document.getElementById('statConvsToday').textContent = "aujourd'hui: " + todayConvs;
-      document.getElementById('statMsgs').textContent = totalMsgs || 0;
-      document.getElementById('statMsgsToday').textContent = "aujourd'hui: " + (todayMsgs || 0);
-      document.getElementById('statVisitors').textContent = uniqueSessions;
-      document.getElementById('statLlmPct').textContent = llmPct + '%';
-      document.getElementById('statFallback').textContent = 'fallback: ' + (fallbackCount || 0);
-      document.getElementById('statAvgMsgs').textContent = avgMsgs;
-      document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
+        // Update stats
+        document.getElementById('statConvs').textContent = allConversations.length;
+        document.getElementById('statConvsToday').textContent = "aujourd'hui: " + todayConvs;
+        document.getElementById('statMsgs').textContent = totalMsgs || 0;
+        document.getElementById('statMsgsToday').textContent = "aujourd'hui: " + (todayMsgs || 0);
+        document.getElementById('statVisitors').textContent = uniqueSessions;
+        document.getElementById('statLlmPct').textContent = llmPct + '%';
+        document.getElementById('statFallback').textContent = 'fallback: ' + (fallbackCount || 0);
+        document.getElementById('statAvgMsgs').textContent = avgMsgs;
+        document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
 
-      renderConvList();
+        renderConvList();
+      } catch(e) {
+        console.error('loadData error:', e);
+        document.getElementById('convListContent').innerHTML = '<div class="conv-empty">Erreur de chargement — voir console</div>';
+      }
     }
 
     function filterConvs(filter, btn) {
@@ -467,7 +477,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     async function loadConversation(convId, el) {
-      if (!sb) await initSupabase();
+      if (!sb) initSupabase();
 
       // Active state
       document.querySelectorAll('.conv-item').forEach(i => i.classList.remove('active'));
@@ -521,6 +531,11 @@ import { supabaseConfig } from '../../lib/supabase';
       if (!str) return '';
       return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+
+    // Expose functions to global scope for onclick handlers
+    window.loadData = loadData;
+    window.loadConversation = loadConversation;
+    window.filterConvs = filterConvs;
 
     // Auto-load
     loadData();

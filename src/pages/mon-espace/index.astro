@@ -9,7 +9,7 @@ import { supabaseConfig } from '../../lib/supabase';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Espace - Coach GLP-1</title>
   <meta name="robots" content="noindex, nofollow">
-  <style>
+  <style is:inline>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -858,7 +858,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="coach-cta">
         <h3>Une question ?</h3>
         <p>Votre coach IA connait votre profil et peut vous aider en temps reel</p>
-        <a href="/" class="btn-coach">💬 Parler au Coach</a>
+        <a href="/#coach" class="btn-coach" onclick="localStorage.setItem('glp1_open_coach','1')">💬 Parler au Coach</a>
       </div>
     </div>
   </div>
@@ -881,13 +881,16 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
   </div>
 
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
     let sb, currentUser, profile;
 
-    async function initSb() {
+    function initSb() {
       if (sb) return sb;
-      const mod = await import('https://esm.sh/@supabase/supabase-js@2');
-      sb = mod.createClient(supabaseUrl, supabaseKey);
+      if (!window.supabase || !window.supabase.createClient) {
+        throw new Error('Supabase JS not loaded');
+      }
+      sb = window.supabase.createClient(supabaseUrl, supabaseKey);
       return sb;
     }
 
@@ -918,42 +921,48 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     async function signInGoogle() {
-      var s = await initSb();
-      var { error } = await s.auth.signInWithOAuth({
-        provider: 'google',
-        options: { redirectTo: window.location.origin + '/mon-espace/' }
-      });
-      if (error) showAuthError(error.message);
+      try {
+        var s = initSb();
+        var { error } = await s.auth.signInWithOAuth({
+          provider: 'google',
+          options: { redirectTo: window.location.origin + '/mon-espace/' }
+        });
+        if (error) showAuthError(error.message);
+      } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
     }
 
     async function signUpEmail() {
-      var s = await initSb();
-      var email = document.getElementById('signupEmail').value.trim();
-      var pw = document.getElementById('signupPassword').value;
-      var name = document.getElementById('signupName').value.trim();
-      if (!email || !pw) return showAuthError('Email et mot de passe requis');
-      if (pw.length < 6) return showAuthError('Mot de passe : 6 caracteres minimum');
+      try {
+        var s = initSb();
+        var email = document.getElementById('signupEmail').value.trim();
+        var pw = document.getElementById('signupPassword').value;
+        var name = document.getElementById('signupName').value.trim();
+        if (!email || !pw) return showAuthError('Email et mot de passe requis');
+        if (pw.length < 6) return showAuthError('Mot de passe : 6 caracteres minimum');
 
-      var { data, error } = await s.auth.signUp({
-        email: email,
-        password: pw,
-        options: { data: { prenom: name } }
-      });
-      if (error) return showAuthError(error.message);
-      currentUser = data.user;
-      if (currentUser) onUserReady(name);
+        var { data, error } = await s.auth.signUp({
+          email: email,
+          password: pw,
+          options: { data: { prenom: name } }
+        });
+        if (error) return showAuthError(error.message);
+        currentUser = data.user;
+        if (currentUser) onUserReady(name);
+      } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
     }
 
     async function signInEmail() {
-      var s = await initSb();
-      var email = document.getElementById('loginEmail').value.trim();
-      var pw = document.getElementById('loginPassword').value;
-      if (!email || !pw) return showAuthError('Email et mot de passe requis');
+      try {
+        var s = initSb();
+        var email = document.getElementById('loginEmail').value.trim();
+        var pw = document.getElementById('loginPassword').value;
+        if (!email || !pw) return showAuthError('Email et mot de passe requis');
 
-      var { data, error } = await s.auth.signInWithPassword({ email: email, password: pw });
-      if (error) return showAuthError(error.message);
-      currentUser = data.user;
-      if (currentUser) onUserReady();
+        var { data, error } = await s.auth.signInWithPassword({ email: email, password: pw });
+        if (error) return showAuthError(error.message);
+        currentUser = data.user;
+        if (currentUser) onUserReady();
+      } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
     }
 
     async function doLogout() {
@@ -966,6 +975,10 @@ import { supabaseConfig } from '../../lib/supabase';
 
     async function onUserReady(prenomHint) {
       var s = await initSb();
+
+      // Link chat session to this user (unified funnel)
+      linkChatSession(currentUser.id);
+
       // Check if profile exists
       var { data } = await s.from('user_profiles').select('*').eq('user_id', currentUser.id).single();
       if (data) {
@@ -976,6 +989,17 @@ import { supabaseConfig } from '../../lib/supabase';
         showScreen('Onboarding');
         renderObStep();
       }
+    }
+
+    async function linkChatSession(userId) {
+      // Link any anonymous chat conversations from the widget to this user
+      var sessionId = localStorage.getItem('glp1_coach_session');
+      if (!sessionId) return;
+      var s = await initSb();
+      try {
+        await s.from('coach_conversations').update({ user_id: userId }).eq('session_id', sessionId).is('user_id', null);
+        await s.from('coach_messages').update({ user_id: userId }).eq('session_id', sessionId).is('user_id', null);
+      } catch(e) { /* ignore */ }
     }
 
     // ===== ONBOARDING =====
@@ -1501,23 +1525,51 @@ import { supabaseConfig } from '../../lib/supabase';
 
     // ===== INIT =====
     async function init() {
-      var s = await initSb();
-      var { data: { session } } = await s.auth.getSession();
-      if (session && session.user) {
-        currentUser = session.user;
-        onUserReady();
-      } else {
+      try {
+        var s = initSb();
+        var { data: { session } } = await s.auth.getSession();
+        if (session && session.user) {
+          currentUser = session.user;
+          onUserReady();
+        } else {
+          showScreen('Auth');
+          // Handle ?tab=login from chat widget redirect
+          var params = new URLSearchParams(window.location.search);
+          if (params.get('tab') === 'login') {
+            switchAuthTab('login');
+          }
+        }
+
+        // Listen for auth changes (OAuth redirect)
+        s.auth.onAuthStateChange(function(event, session) {
+          if (event === 'SIGNED_IN' && session && session.user) {
+            currentUser = session.user;
+            onUserReady(session.user.user_metadata?.prenom);
+          }
+        });
+      } catch(e) {
+        console.error('Init error:', e);
+        // Show auth screen even if Supabase fails to load
         showScreen('Auth');
       }
-
-      // Listen for auth changes (OAuth redirect)
-      s.auth.onAuthStateChange(function(event, session) {
-        if (event === 'SIGNED_IN' && session && session.user) {
-          currentUser = session.user;
-          onUserReady(session.user.user_metadata?.prenom);
-        }
-      });
     }
+
+    // Expose functions to global scope for onclick handlers
+    window.switchAuthTab = switchAuthTab;
+    window.signInGoogle = signInGoogle;
+    window.signUpEmail = signUpEmail;
+    window.signInEmail = signInEmail;
+    window.doLogout = doLogout;
+    window.editProfile = editProfile;
+    window.saveCheckin = saveCheckin;
+    window.exportAllCalendar = exportAllCalendar;
+    window.exportICS = exportICS;
+    window.subscribe = subscribe;
+    window.closePaywall = closePaywall;
+    window.obSelect = obSelect;
+    window.obPrev = obPrev;
+    window.obNext = obNext;
+    window.obFinish = obFinish;
 
     init();
   </script>
