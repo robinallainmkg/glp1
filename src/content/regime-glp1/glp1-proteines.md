@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article glp1-proteines"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "protéines GLP-1 apport masse musculaire"
 
 # Configuration Affiliation
 enableAffiliation: true

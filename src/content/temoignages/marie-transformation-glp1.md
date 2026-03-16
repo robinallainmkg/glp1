@@ -11,7 +11,7 @@ featured: true
 priority: 1
 ---
 
-# La Transformation Exceptionnelle de Marie L.
+## La Transformation Exceptionnelle de Marie L.
 
 **32 kilos perdus en 12 mois** avec le traitement GLP-1
 
@@ -89,7 +89,7 @@ priority: 1
 
 ### Avant de Commencer
 - "Choisissez bien votre médecin, il sera votre allié"
-- "Préparez-vous aux effets secondaires"
+- "Préparez-vous aux [effets secondaires du Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)"
 - "Fixez-vous des objectifs réalistes"
 
 ### Pendant le Traitement
@@ -117,5 +117,7 @@ priority: 1
 > "Si vous hésitez encore, je vous dirais : osez franchir le pas. Ce traitement peut vraiment changer votre vie, comme il a changé la mienne. Mais n'oubliez pas que c'est un outil, pas une baguette magique. Il faut s'investir, être patient et faire confiance au processus."
 
 ---
+
+Découvrez d'autres témoignages et les données cliniques dans notre guide sur les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

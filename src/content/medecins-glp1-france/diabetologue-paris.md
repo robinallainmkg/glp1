@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article diabetologue-paris"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "diabétologue Paris spécialisé GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true

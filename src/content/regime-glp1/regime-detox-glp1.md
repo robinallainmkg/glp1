@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article regime-detox-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime détox GLP-1 purification traitement"
 
 # Configuration Affiliation
 enableAffiliation: true

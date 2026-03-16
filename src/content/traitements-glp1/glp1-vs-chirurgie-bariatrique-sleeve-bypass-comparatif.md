@@ -16,11 +16,8 @@ priority: 2
 schema: "Article"
 mainKeyword: "GLP-1 vs chirurgie bariatrique sleeve bypass comparaison"
 secondaryKeywords: ["sleeve ou glp1", "bypass ou ozempic", "chirurgie ou medicament minceur", "glp1 vs sleeve gastrectomie", "mounjaro ou chirurgie obésité"]
-
-# Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "traitements-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"

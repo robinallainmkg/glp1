@@ -207,4 +207,6 @@ Les GLP-1 ne sont pas encore indiqués chez les moins de 12 ans en France (Wegov
 
 ---
 
+Au-delà des effets psychologiques, d'[autres effets secondaires émergents des GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) comme le risque osseux ont été identifiés en 2026.
+
 *Ces informations sont fournies à titre éducatif et ne remplacent pas l'avis d'un professionnel de santé. Si vous souffrez d'effets psychologiques liés à votre traitement, consultez votre médecin. En cas d'urgence psychiatrique, appelez le 15 (SAMU) ou le 3114 (numéro national de prévention du suicide).*

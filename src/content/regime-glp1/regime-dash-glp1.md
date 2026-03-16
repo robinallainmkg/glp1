@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Régime Dash GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime DASH GLP-1 hypertension diabète"
 
 # Configuration Affiliation
 enableAffiliation: true

@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article glp1-micronutriments"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "micronutriments vitamines GLP-1 carences supplémentation"
 
 # Configuration Affiliation
 enableAffiliation: true

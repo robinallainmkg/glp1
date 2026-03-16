@@ -14,6 +14,7 @@ featured: false
 published: true
 priority: 5
 schema: "Article"
+mainKeyword: "iSGLT2 liste médicaments prix France GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true

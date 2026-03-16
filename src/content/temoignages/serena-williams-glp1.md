@@ -153,6 +153,6 @@ Le témoignage de Serena Williams représente un tournant dans la perception des
 - **Encourager** le dialogue ouvert avec les professionnels de santé
 - **Promouvoir** une approche holistique de la santé
 
-Que vous soyez sportif de haut niveau ou simplement soucieux de votre santé, les GLP-1 peuvent être une option à envisager dans le cadre d'une prise en charge médicale globale.
+Que vous soyez sportif de haut niveau ou simplement soucieux de votre santé, les GLP-1 peuvent être une option à envisager dans le cadre d'une prise en charge médicale globale. Au-delà des célébrités, découvrez les [résultats réels des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans les études cliniques et témoignages de patients ordinaires.
 
 **Consultez votre médecin** pour déterminer si un traitement GLP-1 est adapté à votre situation personnelle.

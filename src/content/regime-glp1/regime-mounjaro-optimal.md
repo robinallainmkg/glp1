@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article regime-mounjaro-optimal"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime Mounjaro alimentation optimale tirzepatide"
 
 # Configuration Affiliation
 enableAffiliation: true

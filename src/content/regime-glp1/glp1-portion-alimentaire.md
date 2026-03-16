@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article glp1-portion-alimentaire"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "portions alimentaires GLP-1 quantités repas"
 
 # Configuration Affiliation
 enableAffiliation: true

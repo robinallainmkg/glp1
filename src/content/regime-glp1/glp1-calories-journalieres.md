@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article glp1-calories-journalieres"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "calories journalières GLP-1 régime perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true

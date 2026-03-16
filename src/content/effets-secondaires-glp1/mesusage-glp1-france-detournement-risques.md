@@ -1,5 +1,5 @@
 ---
-title: "Mésusage des GLP-1 en France : Détournement, Risques et Ce que Dit l'ANSM"
+title: "Mésusage des GLP-1 en France : Risques et Avis ANSM"
 description: "2,2% de mésusage identifié parmi les utilisateurs de GLP-1 en France. Détournement pour la perte de poids, risques sanitaires et mesures de l'ANSM pour sécuriser l'accès."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
@@ -27,7 +27,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis que les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ont fait la une des médias pour leur efficacité spectaculaire sur la perte de poids, un phénomène préoccupant s'est développé en France : le mésusage. Des personnes sans diabète ni obésité diagnostiquée se procurent ces médicaments dans l'espoir de perdre quelques kilos, parfois au détriment de leur santé et de l'approvisionnement des patients qui en ont véritablement besoin. Voici ce que les études récentes et l'ANSM nous apprennent sur cette réalité.
+Depuis que les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ont fait la une des médias pour leur efficacité spectaculaire sur la [perte de poids avec les GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), un phénomène préoccupant s'est développé en France : le mésusage. Des personnes sans diabète ni obésité diagnostiquée se procurent ces médicaments dans l'espoir de perdre quelques kilos, parfois au détriment de leur santé et de l'approvisionnement des patients qui en ont véritablement besoin. Voici ce que les études récentes et l'ANSM nous apprennent sur cette réalité.
 
 ## L'ampleur du mésusage en France : les chiffres
 

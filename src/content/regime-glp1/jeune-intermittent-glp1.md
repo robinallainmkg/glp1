@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Jeune Intermittent GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "jeûne intermittent GLP-1 protocoles perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -96,6 +97,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Légumes** : 500g minimum dans fenêtre
 - **Éviter** : Sucres rapides en rupture jeûne
 - **Qualité** : Aliments entiers, peu transformés
+
+Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour préserver la masse musculaire.
 
 ## Produits cosmétiques recommandés
 

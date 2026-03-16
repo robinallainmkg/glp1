@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article regime-mediterraneen-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime méditerranéen GLP-1 alimentation santé"
 
 # Configuration Affiliation
 enableAffiliation: true

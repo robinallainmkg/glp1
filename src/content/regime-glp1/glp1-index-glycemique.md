@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article glp1-index-glycemique"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "index glycémique GLP-1 aliments glycémie"
 
 # Configuration Affiliation
 enableAffiliation: true

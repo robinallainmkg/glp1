@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article clinique-pour-obesite"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "clinique pour obésité France GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -49,7 +50,7 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 **Services proposés :**
 - Consultations endocrinologie-nutrition
 - Bilans métaboliques complets
-- Prescription de GLP-1 (Ozempic, Wegovy)
+- Prescription de GLP-1 (Ozempic, Wegovy) selon les [règles de prescription des GLP-1 selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
 - Chirurgie bariatrique
 - Suivi psychologique
 - Programmes d'éducation thérapeutique

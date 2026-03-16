@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article regime-sans-sucre-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime sans sucre GLP-1 glycémie perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true

@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article regime-paleo-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime paléo GLP-1 alimentation ancestrale perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true

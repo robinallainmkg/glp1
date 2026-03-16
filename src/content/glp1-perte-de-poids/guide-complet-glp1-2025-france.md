@@ -7,6 +7,7 @@ collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 tags: ["glp-1", "perte de poids", "france", "2025", "guide complet", "traitements", "efficacité", "prix"]
 date: "2025-08-30"
+mainKeyword: "guide complet GLP-1 2025 France tout savoir"
 ---
 
 ## Guide Complet GLP-1 2025 en France : Tout Savoir

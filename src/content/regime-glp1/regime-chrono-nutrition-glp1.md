@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article regime-chrono-nutrition-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "chrono-nutrition GLP-1 horaires repas métabolisme"
 
 # Configuration Affiliation
 enableAffiliation: true

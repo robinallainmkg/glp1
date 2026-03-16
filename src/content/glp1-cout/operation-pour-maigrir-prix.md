@@ -191,7 +191,7 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Vie professionnelle intense
 * Désir de solution réversible
 
-Pour en savoir plus sur les conditions de prise en charge, consultez notre guide sur le [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
+Pour en savoir plus sur les conditions de prise en charge, consultez notre guide sur le [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Avant d'envisager la chirurgie, explorez les alternatives médicamenteuses comme décrit dans notre [comparatif Wegovy ou Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 ## Financement et Aides
 

@@ -1,5 +1,5 @@
 ---
-title: "Prix Wegovy 2026 : Coût par Dosage et Remboursement en France"
+title: "Prix Wegovy 2026 : Coût par Dosage et Remboursement"
 description: "Prix Wegovy en France : 169 a 360 euros/mois selon dosage. Non rembourse en 2026. Comparatif des prix par dosage et alternatives."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg', 'wegovy prix pharmacie']
 seoTitle: "Prix Wegovy 2026 : Tarifs par Dosage et Remboursement en France"
@@ -253,7 +253,7 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 - **Remboursement possible** : 2e semestre 2026 (négociations CEPS en cours)
 - **Taux probable** : 65% si et quand remboursé (HAS recommande pour IMC ≥ 35)
 
-**Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
+**Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire. Avant d'acheter, vérifiez les [conditions de prescription du Wegovy en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) fixées par l'ANSM en 2025.
 
 thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"

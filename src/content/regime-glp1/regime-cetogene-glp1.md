@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article regime-cetogene-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime cétogène GLP-1 perte de poids keto"
 
 # Configuration Affiliation
 enableAffiliation: true
