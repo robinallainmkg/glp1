@@ -123,7 +123,7 @@ serve(async (req) => {
   }
 
   try {
-    const { session_id, message, conversation_id, page_url } = await req.json();
+    const { session_id, message, conversation_id, page_url, user_id } = await req.json();
 
     // --- Input validation ---
     if (!session_id || typeof session_id !== "string") {
@@ -216,6 +216,7 @@ serve(async (req) => {
             session_id,
             page_url: page_url || null,
             user_agent: req.headers.get("user-agent") || null,
+            user_id: user_id || null,
           })
           .select("id")
           .single();
@@ -237,7 +238,7 @@ serve(async (req) => {
       // No API keys configured — use fallback
       console.warn("API keys not configured, using fallback v1");
       const fallback = classifyAndRespond(cleanMessage);
-      await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null);
+      await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null, null, user_id);
       return jsonResponse({ response: fallback.response, conversation_id: convId, sources: [], model: "fallback-v1" });
     }
 
@@ -338,7 +339,8 @@ serve(async (req) => {
         supabase, convId, session_id, cleanMessage, assistantResponse,
         null, "llama-3.1-8b-instant",
         sources.length > 0 ? sources : null,
-        tokensUsed
+        tokensUsed,
+        user_id
       );
 
       return jsonResponse({
@@ -352,7 +354,7 @@ serve(async (req) => {
       // --- Fallback v1 si LLM echoue ---
       console.error("LLM error, falling back to v1:", llmError);
       const fallback = classifyAndRespond(cleanMessage);
-      await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null);
+      await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null, null, user_id);
       return jsonResponse({
         response: fallback.response,
         conversation_id: convId,
@@ -378,6 +380,7 @@ async function saveMessages(
   model: string,
   ragSources: any | null,
   tokensUsed?: number | null,
+  userId?: string | null,
 ) {
   // Save user message
   await supabase.from("coach_messages").insert({
@@ -389,6 +392,7 @@ async function saveMessages(
     model: null,
     rag_sources: null,
     tokens_used: null,
+    user_id: userId || null,
   });
 
   // Save assistant response
@@ -401,6 +405,7 @@ async function saveMessages(
     model,
     rag_sources: ragSources,
     tokens_used: tokensUsed || null,
+    user_id: userId || null,
   });
 
   // Update conversation message count

@@ -229,6 +229,97 @@ import { supabaseConfig } from '../lib/supabase.js';
     color: var(--accent-green, #16A34A);
   }
 
+  /* ===== SIGNUP PROMPT ===== */
+  .coach-signup-bubble {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%) !important;
+    border: 1px solid #bbf7d0 !important;
+  }
+  .signup-text {
+    font-size: 0.82rem;
+    color: #166534;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  .signup-google-btn {
+    width: 100%;
+    padding: 0.55rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #1e293b;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .signup-google-btn:hover { background: #f8fafc; }
+  .signup-divider {
+    text-align: center;
+    margin: 0.6rem 0;
+    font-size: 0.68rem;
+    color: #94a3b8;
+  }
+  .signup-divider span {
+    background: #f0fdf4;
+    padding: 0 0.5rem;
+  }
+  .signup-input {
+    width: 100%;
+    padding: 0.45rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 0.78rem;
+    margin-bottom: 0.4rem;
+    outline: none;
+  }
+  .signup-input:focus { border-color: #16a34a; box-shadow: 0 0 0 2px rgba(22,163,74,0.15); }
+  .signup-form-btns {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.3rem;
+  }
+  .signup-submit {
+    flex: 1;
+    padding: 0.45rem;
+    border-radius: 6px;
+    border: none;
+    background: #16a34a;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .signup-submit:hover { background: #15803d; }
+  .signup-submit:disabled { opacity: 0.5; }
+  .signup-login-toggle {
+    background: none;
+    border: none;
+    color: #16a34a;
+    font-size: 0.72rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .signup-login-toggle:hover { text-decoration: underline; }
+  .signup-error {
+    font-size: 0.72rem;
+    color: #dc2626;
+    margin-top: 0.3rem;
+  }
+  .signup-dismiss {
+    display: block;
+    margin: 0.5rem auto 0;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 0.72rem;
+    cursor: pointer;
+  }
+  .signup-dismiss:hover { color: #64748b; }
+
   /* ===== QUICK ACTIONS ===== */
   #coach-quick-actions {
     display: flex;
@@ -380,6 +471,9 @@ import { supabaseConfig } from '../lib/supabase.js';
   let conversationId = localStorage.getItem('glp1_coach_conv') || null;
   let messageCount = 0;
   let lastMsgTime = 0;
+  let signupPromptShown = false;
+  let currentUser = null;
+  let sbClient = null;
 
   // ===== SESSION =====
   function getSessionId() {
@@ -391,6 +485,148 @@ import { supabaseConfig } from '../lib/supabase.js';
     return sid;
   }
   const sessionId = getSessionId();
+
+  // ===== SUPABASE AUTH =====
+  async function initAuth() {
+    if (sbClient) return sbClient;
+    const mod = await import('https://esm.sh/@supabase/supabase-js@2');
+    sbClient = mod.createClient(SB_URL, SB_KEY);
+    // Check existing session
+    const { data: { session } } = await sbClient.auth.getSession();
+    if (session) {
+      currentUser = session.user;
+      signupPromptShown = true; // no need to show prompt
+    }
+    // Listen for auth changes (Google redirect callback)
+    sbClient.auth.onAuthStateChange(function(event, session) {
+      if (session) {
+        currentUser = session.user;
+        signupPromptShown = true;
+        // Link session conversations to user
+        linkSessionToUser(session.user.id);
+        hideSignupPrompt();
+        addAssistantMessage('Connecte ! Votre historique de conversation est sauvegarde. 👋');
+      }
+    });
+    return sbClient;
+  }
+
+  async function linkSessionToUser(userId) {
+    if (!sbClient) return;
+    // Update all conversations from this session to be owned by the user
+    await sbClient.from('coach_conversations').update({ user_id: userId }).eq('session_id', sessionId);
+    await sbClient.from('coach_messages').update({ user_id: userId }).eq('session_id', sessionId);
+  }
+
+  async function signUpWithEmail(email, password) {
+    const sb = await initAuth();
+    const { data, error } = await sb.auth.signUp({
+      email: email,
+      password: password,
+      options: { data: { source: 'coach_widget' } }
+    });
+    if (error) return { error: error.message };
+    return { data };
+  }
+
+  async function signInWithEmail(email, password) {
+    const sb = await initAuth();
+    const { data, error } = await sb.auth.signInWithPassword({ email, password });
+    if (error) return { error: error.message };
+    return { data };
+  }
+
+  async function signInWithGoogle() {
+    const sb = await initAuth();
+    const { data, error } = await sb.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.origin + window.location.pathname }
+    });
+    if (error) {
+      addAssistantMessage("Erreur de connexion Google. Essayez par email.");
+    }
+  }
+
+  function showSignupPrompt() {
+    if (signupPromptShown || currentUser) return;
+    signupPromptShown = true;
+    localStorage.setItem('glp1_coach_signup_shown', '1');
+
+    var div = document.createElement('div');
+    div.className = 'coach-msg coach-msg-assistant';
+    div.id = 'coach-signup-prompt';
+    div.innerHTML = `
+      <div class="coach-bubble coach-bubble-assistant coach-signup-bubble">
+        <div class="signup-text">Creez un compte pour <strong>retrouver votre historique</strong> de conversation a tout moment.</div>
+        <div class="signup-actions">
+          <button class="signup-google-btn" onclick="window._coachGoogleSignIn()">
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Continuer avec Google
+          </button>
+          <div class="signup-divider"><span>ou par email</span></div>
+          <form class="signup-form" onsubmit="return window._coachEmailAuth(event)">
+            <input type="email" placeholder="votre@email.com" required class="signup-input" id="coach-signup-email">
+            <input type="password" placeholder="mot de passe (6+ car.)" required minlength="6" class="signup-input" id="coach-signup-password">
+            <div class="signup-form-btns">
+              <button type="submit" class="signup-submit" data-mode="signup">Creer un compte</button>
+              <button type="button" class="signup-login-toggle" onclick="window._coachToggleLogin()">Deja inscrit ?</button>
+            </div>
+            <div class="signup-error" id="coach-signup-error"></div>
+          </form>
+        </div>
+        <button class="signup-dismiss" onclick="window._coachDismissSignup()">Plus tard</button>
+      </div>
+    `;
+    messagesEl.appendChild(div);
+    scrollToBottom();
+  }
+
+  function hideSignupPrompt() {
+    var el = document.getElementById('coach-signup-prompt');
+    if (el) el.remove();
+  }
+
+  // Global handlers for onclick in HTML
+  window._coachGoogleSignIn = signInWithGoogle;
+  window._coachDismissSignup = function() { hideSignupPrompt(); };
+  window._coachToggleLogin = function() {
+    var btn = document.querySelector('.signup-submit');
+    if (btn.dataset.mode === 'signup') {
+      btn.dataset.mode = 'login';
+      btn.textContent = 'Se connecter';
+    } else {
+      btn.dataset.mode = 'signup';
+      btn.textContent = 'Creer un compte';
+    }
+  };
+  window._coachEmailAuth = async function(e) {
+    e.preventDefault();
+    var email = document.getElementById('coach-signup-email').value;
+    var password = document.getElementById('coach-signup-password').value;
+    var btn = document.querySelector('.signup-submit');
+    var errorEl = document.getElementById('coach-signup-error');
+    btn.disabled = true;
+    btn.textContent = '...';
+
+    var result;
+    if (btn.dataset.mode === 'login') {
+      result = await signInWithEmail(email, password);
+    } else {
+      result = await signUpWithEmail(email, password);
+    }
+
+    if (result.error) {
+      errorEl.textContent = result.error;
+      btn.disabled = false;
+      btn.textContent = btn.dataset.mode === 'login' ? 'Se connecter' : 'Creer un compte';
+    } else if (btn.dataset.mode === 'signup') {
+      hideSignupPrompt();
+      addAssistantMessage('Un email de confirmation a ete envoye. Verifiez votre boite mail pour activer votre compte.');
+    }
+  };
+
+  // Init auth on load (check for existing session or Google redirect)
+  initAuth();
 
   // ===== DOM REFS =====
   const toggleBtn = document.getElementById('coach-toggle');
@@ -485,7 +721,8 @@ import { supabaseConfig } from '../lib/supabase.js';
           session_id: sessionId,
           message: text,
           conversation_id: conversationId,
-          page_url: window.location.pathname
+          page_url: window.location.pathname,
+          user_id: currentUser ? currentUser.id : null
         })
       });
 
@@ -514,6 +751,11 @@ import { supabaseConfig } from '../lib/supabase.js';
 
       // Display response with typewriter effect
       typewriterDisplay(data.response || "Desole, je n'ai pas pu generer une reponse.", data.sources || []);
+
+      // After 2nd message, show signup prompt
+      if (messageCount === 2 && !currentUser && !localStorage.getItem('glp1_coach_signup_shown')) {
+        setTimeout(showSignupPrompt, 1500);
+      }
 
     } catch (err) {
       hideTyping();
