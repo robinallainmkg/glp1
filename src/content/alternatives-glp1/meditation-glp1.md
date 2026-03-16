@@ -1,7 +1,8 @@
 ---
-title: "Meditation GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur la méditation comme alternative aux traitements GLP-1 : techniques de relaxation, gestion du stress et impact sur la glycémie."
+title: "Méditation GLP-1 gestion poids : Guide Complet 2025"
+description: "Méditation et GLP-1 pour la gestion du poids : techniques de relaxation, réduction du stress alimentaire et impact sur la glycémie pour les patients."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

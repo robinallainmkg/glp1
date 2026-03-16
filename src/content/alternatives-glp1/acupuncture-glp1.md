@@ -1,7 +1,8 @@
 ---
-title: "Acupuncture GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Guide complet sur les bénéfices, preuves scientifiques et conseils pratiques pour les patients."
+title: "Acupuncture GLP-1 diabète : Guide Complet et Conseils 2025"
+description: "L'acupuncture peut-elle compléter un traitement GLP-1 contre le diabète ? Bénéfices, preuves scientifiques et conseils pratiques pour les patients."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

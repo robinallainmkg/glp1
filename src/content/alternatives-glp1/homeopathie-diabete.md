@@ -1,7 +1,8 @@
 ---
-title: "Homeopathie Diabète : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Homeopathie Diabète : informations médicales et recommandations d'experts."
+title: "Homéopathie diabète : que dit la science ? Guide 2025"
+description: "Homéopathie et diabète : ce que la science dit réellement, ses limites, les risques à éviter et les alternatives sérieuses reconnues médicalement."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

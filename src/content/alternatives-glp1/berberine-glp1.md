@@ -1,8 +1,9 @@
 ---
-title: "Berberine GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Berbérine GLP-1 glycémie perte de poids : Guide 2025"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "La berbérine comme alternative naturelle aux GLP-1 : propriétés hypoglycémiantes, posologie, effets sur le poids et association possible avec les médicaments."
+description: "Berbérine et GLP-1 : comment ce complément naturel agit sur la glycémie et la perte de poids, sa posologie et son association avec les médicaments GLP-1."
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
 collection: "alternatives-glp1"

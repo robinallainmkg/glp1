@@ -1,7 +1,8 @@
 ---
-title: "Cannelle GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "La cannelle peut-elle réguler la glycémie sous GLP-1 ? Données scientifiques, dosage, précautions et recommandations médicales pour les patients diabétiques."
+title: "Cannelle GLP-1 diabète glycémie : Guide Complet 2025"
+description: "La cannelle GLP-1 peut-elle réguler la glycémie chez les patients diabétiques ? Données scientifiques, dosage, précautions et recommandations médicales."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

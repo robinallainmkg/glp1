@@ -1,7 +1,8 @@
 ---
-title: "Chrome Diabète : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur le chrome et le diabète : rôle du chrome dans la régulation de la glycémie, compléments alimentaires et recommandations médicales."
+title: "Chrome diabète complément alimentaire : Guide 2025"
+description: "Chrome diabète complément alimentaire : rôle dans la régulation de la glycémie, dosages recommandés et précautions médicales essentielles à connaître."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
