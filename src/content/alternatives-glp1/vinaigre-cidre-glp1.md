@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Vinaigre Cidre GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "vinaigre de cidre GLP-1 glycémie"
 
 # Configuration Affiliation
 enableAffiliation: true

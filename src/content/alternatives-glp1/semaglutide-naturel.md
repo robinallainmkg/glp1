@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Sémaglutide Naturel"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "sémaglutide naturel alternative"
 
 # Configuration Affiliation
 enableAffiliation: true

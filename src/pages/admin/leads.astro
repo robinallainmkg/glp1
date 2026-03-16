@@ -358,21 +358,24 @@ import { supabaseConfig } from '../../lib/supabase';
     let currentSource = 'all';
 
     async function loadAllData() {
+      try {
       const s = await initSb();
 
       // 1. Contacts (newsletter + contact form)
-      const { data: contacts } = await s
+      const { data: contacts, error: errContacts } = await s
         .from('contacts')
         .select('*')
         .order('created_at', { ascending: false })
         .limit(200);
+      if (errContacts) console.error('contacts error:', errContacts);
 
       // 2. Chat conversations with first messages
-      const { data: convs } = await s
+      const { data: convs, error: errConvs } = await s
         .from('coach_conversations')
         .select('*')
         .order('last_message_at', { ascending: false })
         .limit(100);
+      if (errConvs) console.error('convs error:', errConvs);
 
       // Get first user message per conversation for preview
       let chatPreviews = {};
@@ -395,11 +398,14 @@ import { supabaseConfig } from '../../lib/supabase';
       }
 
       // 3. Feedback
-      const { data: feedback } = await s
+      const { data: feedback, error: errFeedback } = await s
         .from('user_feedback')
         .select('*')
         .order('created_at', { ascending: false })
         .limit(100);
+      if (errFeedback) console.error('feedback error:', errFeedback);
+
+      console.log('Leads data loaded:', { contacts: contacts?.length, convs: convs?.length, feedback: feedback?.length });
 
       // Build unified feed
       allEntries = [];
@@ -482,6 +488,10 @@ import { supabaseConfig } from '../../lib/supabase';
       document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
 
       renderFeed();
+      } catch (err) {
+        console.error('loadAllData crash:', err);
+        document.getElementById('feedBody').innerHTML = '<tr><td colspan="5" class="empty-state">Erreur: ' + err.message + '</td></tr>';
+      }
     }
 
     function filterSource(source, btn) {

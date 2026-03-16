@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Peut On Guerir Du Diabète"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "peut-on guérir du diabète"
 
 # Configuration Affiliation
 enableAffiliation: true

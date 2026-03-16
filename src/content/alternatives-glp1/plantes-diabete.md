@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Plantes Diabète"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "plantes diabète remèdes naturels"
 
 # Configuration Affiliation
 enableAffiliation: true

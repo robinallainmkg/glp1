@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Cannelle GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "cannelle GLP-1 diabète glycémie"
 
 # Configuration Affiliation
 enableAffiliation: true

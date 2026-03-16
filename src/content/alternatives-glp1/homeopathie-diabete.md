@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Homeopathie Diabète"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "homéopathie diabète"
 
 # Configuration Affiliation
 enableAffiliation: true

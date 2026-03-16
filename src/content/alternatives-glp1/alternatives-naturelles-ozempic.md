@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Alternatives Naturelles Ozempic"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "alternatives naturelles Ozempic"
 
 # Configuration Affiliation
 enableAffiliation: true

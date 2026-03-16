@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Berberine GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "berbérine GLP-1 glycémie perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true

@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Chrome Diabète"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "chrome diabète complément alimentaire"
 
 # Configuration Affiliation
 enableAffiliation: true

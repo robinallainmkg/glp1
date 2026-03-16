@@ -4,10 +4,15 @@ import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSideb
 const affiliateProducts = [];
 const affiliateConfig = {};
 const entry = {};
-const frontmatter = null;
 ---
 
-<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
+<ArticleWithAffiliateSidebar
+  title="Témoignage Marie L. : 32 kilos perdus avec le traitement GLP-1 en 12 mois"
+  description="Découvrez la transformation exceptionnelle de Marie L. qui a perdu 32 kilos en 12 mois grâce au traitement GLP-1. Avant/après, parcours complet et conseils."
+  articleContent={entry}
+  affiliateProducts={affiliateProducts ?? []}
+  affiliateConfig={affiliateConfig ?? {}}
+>
 
 <div class="container">
   <article class="testimonial-detail">

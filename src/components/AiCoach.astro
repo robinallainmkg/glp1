@@ -233,29 +233,36 @@ import { supabaseConfig } from '../lib/supabase.js';
   .coach-signup-bubble {
     background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%) !important;
     border: 1px solid #bbf7d0 !important;
+    animation: signupSlideIn 0.5s ease-out;
+  }
+  @keyframes signupSlideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   .signup-text {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     color: #166534;
     margin-bottom: 0.75rem;
-    line-height: 1.4;
+    line-height: 1.5;
+    font-weight: 500;
   }
   .signup-google-btn {
     width: 100%;
-    padding: 0.55rem;
+    padding: 0.65rem;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     background: white;
     color: #1e293b;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    transition: all 0.2s;
   }
-  .signup-google-btn:hover { background: #f8fafc; }
+  .signup-google-btn:hover { background: #f8fafc; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
   .signup-divider {
     text-align: center;
     margin: 0.6rem 0;
@@ -268,7 +275,7 @@ import { supabaseConfig } from '../lib/supabase.js';
   }
   .signup-input {
     width: 100%;
-    padding: 0.45rem 0.6rem;
+    padding: 0.5rem 0.6rem;
     border-radius: 6px;
     border: 1px solid #d1d5db;
     font-size: 0.78rem;
@@ -284,7 +291,7 @@ import { supabaseConfig } from '../lib/supabase.js';
   }
   .signup-submit {
     flex: 1;
-    padding: 0.45rem;
+    padding: 0.5rem;
     border-radius: 6px;
     border: none;
     background: #16a34a;
@@ -292,6 +299,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     font-size: 0.78rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
   }
   .signup-submit:hover { background: #15803d; }
   .signup-submit:disabled { opacity: 0.5; }
@@ -309,6 +317,26 @@ import { supabaseConfig } from '../lib/supabase.js';
     color: #dc2626;
     margin-top: 0.3rem;
   }
+  /* ===== INPUT BLOCKED OVERLAY ===== */
+  .coach-input-blocked {
+    position: relative;
+  }
+  .coach-input-blocked::after {
+    content: 'Inscrivez-vous pour continuer ↑';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    color: #16a34a;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: default;
+    z-index: 5;
+  }
+
   /* ===== QUICK ACTIONS ===== */
   #coach-quick-actions {
     display: flex;
@@ -494,7 +522,13 @@ import { supabaseConfig } from '../lib/supabase.js';
         // Link session conversations to user
         linkSessionToUser(session.user.id);
         hideSignupPrompt();
-        addAssistantMessage('Connecte ! Votre historique de conversation est sauvegarde. 👋');
+        // Unblock input
+        var inputArea = document.getElementById('coach-input-area');
+        if (inputArea) inputArea.classList.remove('coach-input-blocked');
+        inputEl.disabled = false;
+        sendBtn.disabled = false;
+        addAssistantMessage('Connecte ! Vous pouvez continuer a poser vos questions. 👋');
+        inputEl.focus();
       }
     });
     return sbClient;
@@ -736,12 +770,19 @@ import { supabaseConfig } from '../lib/supabase.js';
         localStorage.setItem('glp1_coach_conv', conversationId);
       }
 
-      // Display response with typewriter effect
-      typewriterDisplay(data.response || "Desole, je n'ai pas pu generer une reponse.", data.sources || []);
+      // Display response with typewriter effect, then show signup if needed
+      await typewriterDisplay(data.response || "Desole, je n'ai pas pu generer une reponse.", data.sources || []);
 
-      // After 2nd message, show signup prompt
+      // After 2nd message, show signup prompt (typewriter is done)
       if (messageCount === 2 && !currentUser && !localStorage.getItem('glp1_coach_signup_shown')) {
-        setTimeout(showSignupPrompt, 1500);
+        setTimeout(function() {
+          showSignupPrompt();
+          // Block input until signup
+          var inputArea = document.getElementById('coach-input-area');
+          if (inputArea) inputArea.classList.add('coach-input-blocked');
+          inputEl.disabled = true;
+          sendBtn.disabled = true;
+        }, 600);
       }
 
     } catch (err) {
@@ -753,57 +794,58 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   // ===== TYPEWRITER DISPLAY =====
   function typewriterDisplay(text, sources) {
-    var div = document.createElement('div');
-    div.className = 'coach-msg coach-msg-assistant';
-    var bubble = document.createElement('div');
-    bubble.className = 'coach-bubble coach-bubble-assistant';
-    div.appendChild(bubble);
-    messagesEl.appendChild(div);
+    return new Promise(function(resolve) {
+      var div = document.createElement('div');
+      div.className = 'coach-msg coach-msg-assistant';
+      var bubble = document.createElement('div');
+      bubble.className = 'coach-bubble coach-bubble-assistant';
+      div.appendChild(bubble);
+      messagesEl.appendChild(div);
 
-    // Format: convert markdown-ish to HTML
-    var formattedText = formatResponse(text);
-    var chars = formattedText;
-    var i = 0;
-    var speed = 2; // ms per character
-    var inTag = false;
+      // Format: convert markdown-ish to HTML
+      var formattedText = formatResponse(text);
+      var chars = formattedText;
+      var i = 0;
+      var speed = 2; // ms per character
+      var inTag = false;
 
-    function type() {
-      if (i < chars.length) {
-        // Skip HTML tags instantly
-        if (chars[i] === '<') inTag = true;
-        if (inTag) {
-          var tagEnd = chars.indexOf('>', i);
-          if (tagEnd !== -1) {
-            bubble.innerHTML = chars.substring(0, tagEnd + 1);
-            i = tagEnd + 1;
-            inTag = false;
+      function finish() {
+        bubble.innerHTML = formattedText;
+        if (sources && sources.length > 0) addSources(sources);
+        scrollToBottom();
+        resolve();
+      }
+
+      function type() {
+        if (i < chars.length) {
+          if (chars[i] === '<') inTag = true;
+          if (inTag) {
+            var tagEnd = chars.indexOf('>', i);
+            if (tagEnd !== -1) {
+              bubble.innerHTML = chars.substring(0, tagEnd + 1);
+              i = tagEnd + 1;
+              inTag = false;
+            } else {
+              i++;
+            }
           } else {
+            bubble.innerHTML = chars.substring(0, i + 1);
             i++;
           }
+          scrollToBottom();
+          requestAnimationFrame(function() { setTimeout(type, speed); });
         } else {
-          bubble.innerHTML = chars.substring(0, i + 1);
-          i++;
+          finish();
         }
-        scrollToBottom();
-        requestAnimationFrame(function() { setTimeout(type, speed); });
-      } else {
-        bubble.innerHTML = formattedText;
-        // Add sources if any
-        if (sources && sources.length > 0) {
-          addSources(sources);
-        }
-        scrollToBottom();
       }
-    }
 
-    // If text is short, display instantly
-    if (formattedText.length < 50) {
-      bubble.innerHTML = formattedText;
-      if (sources && sources.length > 0) addSources(sources);
-      scrollToBottom();
-    } else {
-      type();
-    }
+      // If text is short, display instantly
+      if (formattedText.length < 50) {
+        finish();
+      } else {
+        type();
+      }
+    });
   }
 
   // ===== FORMAT RESPONSE =====
