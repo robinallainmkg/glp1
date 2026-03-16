@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Protection Cardiovasculaire : Ce que la Science Dit en 2026"
+title: "GLP-1 et Cardioprotection : Ce que la Science Dit en 2026"
 description: "GLP-1 (Ozempic, Wegovy, Mounjaro) réduisent le risque cardiovasculaire de 20%. Mécanismes, études clés et bénéfices cardiaques en 2026."
 pubDate: 2026-03-15
 updatedAt: 2026-03-15

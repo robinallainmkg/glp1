@@ -1,5 +1,5 @@
 ---
-title: "Ozempic Face : Vieillissement du Visage sous GLP-1 et Solutions en France"
+title: "Ozempic Face : Vieillissement du Visage et Solutions"
 description: "L'Ozempic Face : joues creuses et rides sous GLP-1. Causes, mécanismes et solutions esthétiques disponibles en France."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16

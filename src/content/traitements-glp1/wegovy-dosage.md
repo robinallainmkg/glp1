@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Wegovy Dosage"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "dosage wegovy posologie"
 
 # Configuration Affiliation
 enableAffiliation: true

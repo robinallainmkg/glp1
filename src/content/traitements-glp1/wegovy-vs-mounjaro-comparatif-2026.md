@@ -1,6 +1,7 @@
 ---
-title: "Wegovy vs Mounjaro 2026 : Comparatif Complet pour Choisir le Bon Traitement"
-description: "Wegovy ou Mounjaro en 2026 ? Comparatif detaille : efficacite, prix, effets secondaires, remboursement. Tout pour choisir le meilleur traitement GLP-1 selon votre profil."
+title: "Wegovy vs Mounjaro 2026 : Comparatif pour Choisir"
+description: "Wegovy ou Mounjaro en 2026 ? Comparatif efficacité, prix, effets secondaires et remboursement pour choisir le bon traitement GLP-1."
+mainKeyword: "wegovy vs mounjaro"
 author: "Dr. Marie Dubois"
 collection: "traitements-glp1"
 category: "traitements-glp1"
@@ -200,7 +201,7 @@ L'escalade de dose se fait sur **16 semaines** avant d'atteindre la dose cible :
 
 ### Protocole Mounjaro
 
-L'escalade de dose est plus progressive, sur **20 semaines ou plus** :
+Pour le tirzepatide, notre [guide du dosage Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) explique la titration de 2,5 mg à 15 mg. L'escalade de dose est plus progressive, sur **20 semaines ou plus** :
 
 1. **Semaines 1-4** : 2,5 mg/semaine
 2. **Semaines 5-8** : 5 mg/semaine
