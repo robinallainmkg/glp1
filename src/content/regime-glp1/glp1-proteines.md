@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Proteines : Apport Optimal sous Traitement"
-description: "Optimisez votre apport en proteines sous traitement GLP-1. Sources de qualite, quantites recommandees et conseils pour preserver la masse musculaire."
+title: "Protéines et GLP-1 : Apport et Masse Musculaire"
+description: "Protéines GLP-1 : apport optimal pour préserver la masse musculaire sous traitement. Sources de qualité, quantités recommandées et conseils pratiques."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]

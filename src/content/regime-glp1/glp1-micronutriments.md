@@ -1,8 +1,9 @@
 ---
-title: "Micronutriments et GLP-1 : Vitamines Essentielles"
+title: "Micronutriments Vitamines GLP-1 : Carences et Supplémentation"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Guide expert des micronutriments sous GLP-1. Supplémentation personnalisée, bilans biologiques et prévention des carences nutritionnelles."
+description: "Micronutriments et vitamines sous GLP-1 : prévenir les carences et adapter votre supplémentation. Guide expert avec bilans biologiques recommandés."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

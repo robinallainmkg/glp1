@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Fonte Musculaire : Préserver ses Muscles"
-description: "40% de la perte de poids sous GLP-1 peut être musculaire. Stratégies éprouvées pour protéger votre masse : protéines, musculation et suivi médical."
+title: "GLP-1 Fonte Musculaire : Préserver la Masse Musculaire"
+description: "GLP-1 et fonte musculaire : jusqu'à 40% de perte masse muscle sous traitement. Stratégies éprouvées pour préserver vos muscles (protéines, musculation)."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Sophie Dubois"
 category: "Nutrition et exercice"

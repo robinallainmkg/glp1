@@ -1,7 +1,8 @@
 ---
-title: "OMS et GLP-1 contre l'Obésité : Ce que Cela Change en 2026"
-description: "L'OMS publie ses premières recommandations mondiales sur les GLP-1 contre l'obésité. Conditions d'usage et impact concret pour les patients français."
+title: "OMS Recommandations GLP-1 Obésité 2025 : Ce qui Change"
+description: "OMS recommandations GLP-1 obésité 2025 : premières lignes directrices mondiales sur les traitements anti-obésité. Impact concret pour les patients français."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
