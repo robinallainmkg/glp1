@@ -11,125 +11,151 @@ import { supabaseConfig } from '../../lib/supabase';
   <title>Fact-Check - GLP1 Admin</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f1f5f9; color: #1e293b; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
     .admin-layout { margin-left: 260px; min-height: 100vh; }
-    .page-header { background: white; border-bottom: 1px solid #e2e8f0; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
     .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
     .header-actions { display: flex; gap: 0.75rem; align-items: center; }
-    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; background: white; color: #475569; font-size: 0.82rem; cursor: pointer; }
-    .refresh-btn:hover { background: #f8fafc; }
-    .last-update { font-size: 0.72rem; color: #94a3b8; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
     .main { padding: 2rem; }
 
     /* Command box */
-    .cmd-box { background: #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
     .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
-    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #475569; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
     .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
     /* Stats */
     .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
-    .stat-card { background: white; border-radius: 12px; padding: 1.25rem; border: 1px solid #e2e8f0; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
     .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
     .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .stat-card .sub { font-size: 0.75rem; color: #94a3b8; margin-top: 0.35rem; }
+    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
 
     /* Score distribution */
-    .score-distrib { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 1.25rem; margin-bottom: 1.5rem; }
-    .score-distrib-title { font-size: 0.82rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
-    .score-bar { display: flex; height: 28px; border-radius: 8px; overflow: hidden; background: #f1f5f9; }
-    .score-seg { display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 700; color: white; transition: width 0.5s; }
+    .score-distrib { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .score-distrib-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; }
+    .score-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; }
+    .score-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
     .seg-urgent { background: #ef4444; }
     .seg-warn { background: #f59e0b; }
     .seg-ok { background: #22c55e; }
     .score-legend { display: flex; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
-    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #475569; }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
     .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+    /* Coverage section */
+    .coverage-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .coverage-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; }
+    .coverage-stats { display: flex; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .coverage-stat { display: flex; flex-direction: column; }
+    .coverage-stat .cv-value { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+    .coverage-stat .cv-label { font-size: 0.72rem; color: #64748b; margin-top: 0.25rem; }
+    .freshness-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; margin-bottom: 0.5rem; }
+    .fresh-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
+    .fseg-fresh { background: #22c55e; }
+    .fseg-aging { background: #f59e0b; }
+    .fseg-stale { background: #ef4444; }
+    .fseg-never { background: #64748b; }
+    .freshness-legend { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .freshness-legend .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
+    .stale-list { margin-top: 1rem; }
+    .stale-list-title { font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
+    .stale-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; }
+    .stale-item:last-child { border-bottom: none; }
+    .stale-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .stale-days { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .sd-stale { background: #450a0a; color: #fca5a5; }
+    .sd-aging { background: #451a03; color: #fcd34d; }
+    .sd-never { background: #1e293b; color: #94a3b8; }
 
     /* Filters */
     .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
-    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #64748b; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
-    .filter-btn:hover { border-color: #cbd5e1; color: #334155; }
-    .filter-btn.active { background: #1e293b; color: white; border-color: #1e293b; }
-    .filter-count { font-size: 0.68rem; background: rgba(0,0,0,0.08); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
-    .filter-btn.active .filter-count { background: rgba(255,255,255,0.2); }
-    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
-    .search-input:focus { outline: none; border-color: #ef4444; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
 
     /* Article cards */
     .article-cards { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
-    .article-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+    .article-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; }
     .article-card-header { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; cursor: pointer; transition: background 0.1s; }
-    .article-card-header:hover { background: #f8fafc; }
-    .article-card.open .article-card-header { border-bottom: 1px solid #f1f5f9; }
+    .article-card-header:hover { background: #1a2332; }
+    .article-card.open .article-card-header { border-bottom: 1px solid #1e293b; }
 
     .score-circle { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.82rem; flex-shrink: 0; }
-    .sc-urgent { background: #fef2f2; color: #dc2626; border: 2px solid #fecaca; }
-    .sc-warn { background: #fffbeb; color: #d97706; border: 2px solid #fde68a; }
-    .sc-ok { background: #f0fdf4; color: #16a34a; border: 2px solid #bbf7d0; }
+    .sc-urgent { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .sc-warn { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .sc-ok { background: #052e16; color: #4ade80; border: 2px solid #166534; }
 
     .article-info { flex: 1; min-width: 0; }
-    .article-title { font-size: 0.88rem; font-weight: 600; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #7c3aed; }
+    .article-title { font-size: 0.88rem; font-weight: 600; color: #e2e8f0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; }
     .article-meta { display: flex; gap: 0.5rem; align-items: center; }
     .ticket-count-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600; }
-    .tcb-urgent { background: #fee2e2; color: #991b1b; }
-    .tcb-warn { background: #fef3c7; color: #92400e; }
-    .tcb-ok { background: #d1fae5; color: #065f46; }
-    .chevron { font-size: 0.72rem; color: #94a3b8; transition: transform 0.2s; }
+    .tcb-urgent { background: #450a0a; color: #fca5a5; }
+    .tcb-warn { background: #451a03; color: #fcd34d; }
+    .tcb-ok { background: #052e16; color: #86efac; }
+    .chevron { font-size: 0.72rem; color: #64748b; transition: transform 0.2s; }
     .article-card.open .chevron { transform: rotate(180deg); }
 
     .article-card-body { display: none; padding: 0 1.25rem 1.25rem; }
     .article-card.open .article-card-body { display: block; }
 
     /* Tickets within article */
-    .ticket { border: 1px solid #e2e8f0; border-radius: 10px; margin-top: 0.75rem; overflow: hidden; }
-    .ticket-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; background: #f8fafc; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap; }
+    .ticket { border: 1px solid #1e293b; border-radius: 10px; margin-top: 0.75rem; overflow: hidden; }
+    .ticket-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; background: #0f1520; border-bottom: 1px solid #1e293b; flex-wrap: wrap; }
     .urgence-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
     .ud-urgent { background: #ef4444; }
     .ud-warning { background: #f59e0b; }
     .ud-ok { background: #22c55e; }
     .ticket-type { font-size: 0.68rem; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
-    .tt-urgent { background: #fee2e2; color: #991b1b; }
-    .tt-warning { background: #fef3c7; color: #92400e; }
-    .tt-ok { background: #d1fae5; color: #065f46; }
-    .ticket-desc { font-size: 0.78rem; color: #475569; flex: 1; }
+    .tt-urgent { background: #450a0a; color: #fca5a5; }
+    .tt-warning { background: #451a03; color: #fcd34d; }
+    .tt-ok { background: #052e16; color: #86efac; }
+    .ticket-desc { font-size: 0.78rem; color: #94a3b8; flex: 1; }
     .ticket-status { font-size: 0.65rem; font-weight: 600; padding: 2px 6px; border-radius: 4px; margin-left: auto; }
-    .ts-approved { background: #dbeafe; color: #1e40af; }
-    .ts-deployed { background: #d1fae5; color: #065f46; }
-    .ts-in_progress { background: #fef3c7; color: #92400e; }
-    .ts-ready_to_deploy { background: #e0e7ff; color: #3730a3; }
-    .ts-rejected { background: #fee2e2; color: #991b1b; }
+    .ts-approved { background: #1e3a5f; color: #93c5fd; }
+    .ts-deployed { background: #052e16; color: #86efac; }
+    .ts-in_progress { background: #451a03; color: #fcd34d; }
+    .ts-ready_to_deploy { background: #312e81; color: #a5b4fc; }
+    .ts-rejected { background: #450a0a; color: #fca5a5; }
 
     .ticket-body { padding: 0.75rem; }
     .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
     .diff-block { border-radius: 8px; padding: 0.75rem; font-size: 0.78rem; line-height: 1.5; }
-    .diff-before { background: #fef2f2; border-left: 3px solid #ef4444; color: #991b1b; }
-    .diff-after { background: #f0fdf4; border-left: 3px solid #22c55e; color: #166534; }
-    .diff-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
-    .ticket-context { font-size: 0.75rem; color: #64748b; line-height: 1.5; padding: 0.5rem 0.65rem; background: #f8fafc; border-radius: 6px; margin-top: 0.5rem; }
+    .diff-before { background: #1c0a0a; border-left: 3px solid #ef4444; color: #fca5a5; }
+    .diff-after { background: #051c0b; border-left: 3px solid #22c55e; color: #86efac; }
+    .diff-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; color: inherit; opacity: 0.7; }
+    .ticket-context { font-size: 0.75rem; color: #94a3b8; line-height: 1.5; padding: 0.5rem 0.65rem; background: #0f1520; border-radius: 6px; margin-top: 0.5rem; }
     .ticket-source { font-size: 0.72rem; margin-top: 0.35rem; }
-    .ticket-source a { color: #3b82f6; text-decoration: none; }
+    .ticket-source a { color: #60a5fa; text-decoration: none; }
     .ticket-source a:hover { text-decoration: underline; }
 
     /* Bottom panels */
     .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .section-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
-    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; font-size: 0.82rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; justify-content: space-between; }
-    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #f1f5f9; color: #64748b; }
-    .run-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #f1f5f9; font-size: 0.82rem; }
+    .section-card { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #1e293b; color: #94a3b8; }
+    .run-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; }
     .run-item:last-child { border-bottom: none; }
     .run-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .run-dot-ok { background: #22c55e; }
     .run-dot-fail { background: #ef4444; }
     .run-info { flex: 1; }
-    .run-date { font-weight: 500; color: #1e293b; }
-    .run-meta { font-size: 0.72rem; color: #94a3b8; }
+    .run-date { font-weight: 500; color: #e2e8f0; }
+    .run-meta { font-size: 0.72rem; color: #64748b; }
     .run-badges { display: flex; gap: 0.35rem; }
     .run-badge { padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 700; }
 
-    .empty-state { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.85rem; }
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
     @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } .diff-grid { grid-template-columns: 1fr; } }
@@ -202,6 +228,20 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> A verifier (50-74)</div>
         <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> Conforme (75+)</div>
       </div>
+    </div>
+
+    <!-- Coverage & freshness -->
+    <div class="coverage-section" id="coverageSection" style="display:none">
+      <div class="coverage-title">Couverture fact-check</div>
+      <div class="coverage-stats" id="coverageStats"></div>
+      <div class="freshness-bar" id="freshnessBar"></div>
+      <div class="freshness-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> &lt; 14 jours</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> 14-30 jours</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> &gt; 30 jours</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#94a3b8"></div> Jamais verifie</div>
+      </div>
+      <div class="stale-list" id="staleList"></div>
     </div>
 
     <!-- Filters -->
@@ -442,11 +482,89 @@ import { supabaseConfig } from '../../lib/supabase';
     `).join('');
   }
 
+  function renderCoverage(articles) {
+    if (!articles || articles.length === 0) return;
+    const now = new Date();
+    const DAY = 86400000;
+
+    const total = articles.length;
+    const verified = articles.filter(a => a.last_fact_checked).length;
+    const fresh = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked)) < 14 * DAY).length;
+    const aging = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked)) >= 14 * DAY && (now - new Date(a.last_fact_checked)) < 30 * DAY).length;
+    const stale = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked)) >= 30 * DAY).length;
+    const never = articles.filter(a => !a.last_fact_checked).length;
+
+    document.getElementById('coverageSection').style.display = 'block';
+
+    // Coverage stats
+    const pctVerified = total > 0 ? Math.round(verified / total * 100) : 0;
+    const pctFresh = total > 0 ? Math.round(fresh / total * 100) : 0;
+    document.getElementById('coverageStats').innerHTML = `
+      <div class="coverage-stat">
+        <div class="cv-value" style="color:#1e293b">${verified}/${total}</div>
+        <div class="cv-label">Articles verifies (${pctVerified}%)</div>
+      </div>
+      <div class="coverage-stat">
+        <div class="cv-value" style="color:#22c55e">${fresh}</div>
+        <div class="cv-label">Verifies &lt; 14 jours (${pctFresh}%)</div>
+      </div>
+      <div class="coverage-stat">
+        <div class="cv-value" style="color:#f59e0b">${aging}</div>
+        <div class="cv-label">14-30 jours</div>
+      </div>
+      <div class="coverage-stat">
+        <div class="cv-value" style="color:#ef4444">${stale + never}</div>
+        <div class="cv-label">&gt; 30 jours ou jamais</div>
+      </div>
+    `;
+
+    // Freshness bar
+    const pct = v => (v / total * 100).toFixed(1);
+    document.getElementById('freshnessBar').innerHTML = [
+      fresh > 0 ? `<div class="fresh-seg fseg-fresh" style="width:${pct(fresh)}%">${fresh}</div>` : '',
+      aging > 0 ? `<div class="fresh-seg fseg-aging" style="width:${pct(aging)}%">${aging}</div>` : '',
+      stale > 0 ? `<div class="fresh-seg fseg-stale" style="width:${pct(stale)}%">${stale}</div>` : '',
+      never > 0 ? `<div class="fresh-seg fseg-never" style="width:${pct(never)}%">${never}</div>` : '',
+    ].join('');
+
+    // Stale articles list (top 10 most outdated)
+    const staleArticles = articles
+      .filter(a => !a.last_fact_checked || (now - new Date(a.last_fact_checked)) >= 14 * DAY)
+      .slice(0, 10); // Already sorted by last_fact_checked ASC NULLS FIRST
+
+    if (staleArticles.length > 0) {
+      document.getElementById('staleList').innerHTML = `
+        <div class="stale-list-title">&#x26A0; Articles a re-verifier en priorite</div>
+        ${staleArticles.map(a => {
+          let daysText, daysClass;
+          if (!a.last_fact_checked) {
+            daysText = 'Jamais verifie';
+            daysClass = 'sd-never';
+          } else {
+            const days = Math.round((now - new Date(a.last_fact_checked)) / DAY);
+            if (days > 30) {
+              daysText = days + 'j';
+              daysClass = 'sd-stale';
+            } else {
+              daysText = days + 'j';
+              daysClass = 'sd-aging';
+            }
+          }
+          return `<div class="stale-item">
+            <span class="stale-slug" title="${esc(a.title)}">${esc(a.slug)}</span>
+            <span class="stale-days ${daysClass}">${daysText}</span>
+          </div>`;
+        }).join('')}
+      `;
+    }
+  }
+
   async function loadAll() {
     try {
-      const [results, tickets] = await Promise.all([
+      const [results, tickets, allArticlesData] = await Promise.all([
         sbFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,articles(id,slug,title,collection)&order=score_fiabilite.asc,checked_at.desc&limit=100'),
-        sbFetch('correction_tickets', 'select=*&source_agent=eq.fact-check&order=created_at.desc&limit=500')
+        sbFetch('correction_tickets', 'select=*&source_agent=eq.fact-check&order=created_at.desc&limit=500'),
+        sbFetch('articles', 'select=id,slug,title,collection,is_active,last_fact_checked&is_active=eq.true&order=last_fact_checked.asc.nullsfirst')
       ]);
 
       // Group tickets by fact_check_result_id
@@ -506,6 +624,7 @@ import { supabaseConfig } from '../../lib/supabase';
       });
 
       renderDistrib();
+      renderCoverage(allArticlesData);
       renderArticles();
       renderPipeline(tickets);
       loadRuns();

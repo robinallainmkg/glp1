@@ -123,7 +123,19 @@ Apres le build, pour un echantillon de pages dans `dist/` (max 10) :
 3. **Pages vides** : si le `<main>` ou le `<body>` fait moins de 100 caracteres → `severity: 'error'`
 4. Enregistre avec `check_type: 'html_output'`
 
-### 12. Log par article
+### 12. Verification encodage UTF-8 (pages Astro)
+
+Scan les fichiers `.astro` dans `src/pages/` pour detecter des caracteres casses (encodage corrompu) :
+
+1. **Utilise Grep** pour chercher le caractere de remplacement Unicode `�` (U+FFFD) dans tous les fichiers `src/pages/**/*.astro`
+2. **Pour chaque fichier avec des caracteres casses** :
+   - Identifie les lignes concernees
+   - Enregistre avec `check_type: 'encoding'`, `severity: 'error'`
+   - Cree un `correction_ticket` de type `encoding_issue` avec `urgence: 'urgent'`
+   - Dans `after_suggested`, indique les caracteres corrects probables (ex: `é` au lieu de `�`)
+3. **Fichiers a verifier en priorite** : pages legales, CGU, CGV, politique de confidentialite (contiennent souvent des accents francais)
+
+### 13. Log par article
 
 ```sql
 INSERT INTO agent_logs (agent_type, article_id, status, metadata)
@@ -154,6 +166,7 @@ WHERE id = '<run_id>';
 | `sync` | Coherence Supabase / fichiers |
 | `sitemap` | Pages manquantes du sitemap |
 | `html_output` | Verification du HTML genere |
+| `encoding` | Caracteres casses (encodage UTF-8 corrompu) |
 
 ## Severites
 
@@ -206,6 +219,7 @@ INSERT INTO correction_tickets (
 | `sync` | `sync_issue` | `urgent` |
 | `html_output` | `html_issue` | `warning` |
 | `build` | `build_error` | `urgent` |
+| `encoding` | `encoding_issue` | `urgent` |
 
 ### Champs du ticket
 - `before_exact` : description du probleme (ex: "Description manquante dans le frontmatter")

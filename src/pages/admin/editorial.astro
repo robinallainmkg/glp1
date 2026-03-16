@@ -11,306 +11,124 @@ import { supabaseConfig } from '../../lib/supabase';
   <title>Editorial - GLP1 Admin</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
-    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
     .admin-layout { margin-left: 260px; min-height: 100vh; }
-    .page-header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 1.5rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
     .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
     .header-actions { display: flex; gap: 0.75rem; align-items: center; }
-    .refresh-btn {
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      background: white;
-      color: #475569;
-      font-size: 0.82rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .refresh-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
-    .last-update { font-size: 0.72rem; color: #94a3b8; }
-
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: all 0.15s; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
     .main { padding: 2rem; }
 
     /* Stats cards */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .stat-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.25rem;
-      border: 1px solid #e2e8f0;
-    }
-    .stat-card .label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #64748b;
-      margin-bottom: 0.5rem;
-    }
-    .stat-card .value {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1;
-    }
-    .stat-card .sub {
-      font-size: 0.75rem;
-      color: #94a3b8;
-      margin-top: 0.35rem;
-    }
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
 
     /* Command box */
-    .cmd-box {
-      background: #1e293b;
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .cmd-box code {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.82rem;
-      color: #a5f3fc;
-    }
-    .cmd-box .copy-btn {
-      padding: 0.35rem 0.75rem;
-      border-radius: 6px;
-      border: 1px solid #475569;
-      background: transparent;
-      color: #94a3b8;
-      font-size: 0.72rem;
-      cursor: pointer;
-    }
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
     .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
     /* Filters */
-    .filters {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .filter-btn {
-      padding: 0.4rem 0.85rem;
-      border-radius: 20px;
-      border: 1px solid #e2e8f0;
-      background: white;
-      color: #64748b;
-      font-size: 0.78rem;
-      cursor: pointer;
-      font-weight: 500;
-      transition: all 0.15s;
-    }
-    .filter-btn:hover { border-color: #cbd5e1; color: #334155; }
-    .filter-btn.active { background: #1e293b; color: white; border-color: #1e293b; }
-    .filter-count {
-      font-size: 0.68rem;
-      background: rgba(0,0,0,0.08);
-      padding: 1px 6px;
-      border-radius: 10px;
-      margin-left: 4px;
-    }
-    .filter-btn.active .filter-count { background: rgba(255,255,255,0.2); }
-    .search-input {
-      padding: 0.4rem 0.85rem;
-      border-radius: 20px;
-      border: 1px solid #e2e8f0;
-      font-size: 0.78rem;
-      color: #334155;
-      width: 200px;
-      margin-left: auto;
-    }
-    .search-input:focus { outline: none; border-color: #7c3aed; }
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 200px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
 
     /* Sections */
-    .section-title {
-      font-size: 0.92rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+    .section-title { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0; }
 
     /* Ticket table */
-    .ticket-table {
-      width: 100%;
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
+    .ticket-table { width: 100%; background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; margin-bottom: 1.5rem; }
     .ticket-table table { width: 100%; border-collapse: collapse; }
-    .ticket-table th {
-      text-align: left;
-      padding: 0.75rem 1rem;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #64748b;
-      border-bottom: 1px solid #e2e8f0;
-      background: #f8fafc;
-    }
-    .ticket-table td {
-      padding: 0.75rem 1rem;
-      font-size: 0.82rem;
-      border-bottom: 1px solid #f1f5f9;
-      vertical-align: top;
-    }
+    .ticket-table th { text-align: left; padding: 0.75rem 1rem; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #1e293b; background: #0f1520; }
+    .ticket-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #1a2332; vertical-align: top; color: #c8d6e5; }
     .ticket-table tr:last-child td { border-bottom: none; }
-    .ticket-table tr:hover td { background: #f8fafc; }
+    .ticket-table tr:hover td { background: #1a2332; }
 
     /* Badges */
-    .badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 0.68rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    .badge-approved { background: #fef3c7; color: #92400e; }
-    .badge-in_progress { background: #dbeafe; color: #1e40af; }
-    .badge-ready { background: #e0e7ff; color: #3730a3; }
-    .badge-deployed { background: #d1fae5; color: #065f46; }
-    .badge-rejected { background: #fee2e2; color: #991b1b; }
-
-    .badge-urgent { background: #fee2e2; color: #991b1b; }
-    .badge-warning { background: #fef3c7; color: #92400e; }
-    .badge-ok { background: #d1fae5; color: #065f46; }
-
-    .badge-price { background: #fce7f3; color: #9d174d; }
-    .badge-info { background: #e0e7ff; color: #3730a3; }
-    .badge-claim { background: #fee2e2; color: #991b1b; }
-    .badge-missing { background: #f3e8ff; color: #6b21a8; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+    .badge-approved { background: #451a03; color: #fcd34d; }
+    .badge-in_progress { background: #1e3a5f; color: #93c5fd; }
+    .badge-ready { background: #312e81; color: #a5b4fc; }
+    .badge-deployed { background: #052e16; color: #86efac; }
+    .badge-rejected { background: #450a0a; color: #fca5a5; }
+    .badge-urgent { background: #450a0a; color: #fca5a5; }
+    .badge-warning { background: #451a03; color: #fcd34d; }
+    .badge-ok { background: #052e16; color: #86efac; }
+    .badge-price { background: #4a1942; color: #f9a8d4; }
+    .badge-info { background: #312e81; color: #a5b4fc; }
+    .badge-claim { background: #450a0a; color: #fca5a5; }
+    .badge-missing { background: #3b1764; color: #d8b4fe; }
 
     /* Diff preview */
-    .diff-toggle {
-      color: #7c3aed;
-      font-size: 0.75rem;
-      cursor: pointer;
-      text-decoration: underline;
-      background: none;
-      border: none;
-      font-family: inherit;
-    }
-    .diff-toggle:hover { color: #5b21b6; }
-    .diff-panel {
-      display: none;
-      margin-top: 0.5rem;
-      padding: 0.75rem;
-      background: #f8fafc;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-    }
+    .diff-toggle { color: #a78bfa; font-size: 0.75rem; cursor: pointer; text-decoration: underline; background: none; border: none; font-family: inherit; }
+    .diff-toggle:hover { color: #c4b5fd; }
+    .diff-panel { display: none; margin-top: 0.5rem; padding: 0.75rem; background: #0f1520; border-radius: 8px; border: 1px solid #1e293b; }
     .diff-panel.open { display: block; }
-    .diff-before {
-      background: #fef2f2;
-      border-left: 3px solid #ef4444;
-      padding: 0.5rem 0.75rem;
-      border-radius: 4px;
-      margin-bottom: 0.5rem;
-      font-size: 0.78rem;
-      color: #991b1b;
-      text-decoration: line-through;
-      line-height: 1.5;
-    }
-    .diff-after {
-      background: #f0fdf4;
-      border-left: 3px solid #22c55e;
-      padding: 0.5rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.78rem;
-      color: #166534;
-      line-height: 1.5;
-    }
-    .diff-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
-      opacity: 0.7;
-    }
+    .diff-before { background: #1c0a0a; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 0.5rem; font-size: 0.78rem; color: #fca5a5; text-decoration: line-through; line-height: 1.5; }
+    .diff-after { background: #051c0b; border-left: 3px solid #22c55e; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.78rem; color: #86efac; line-height: 1.5; }
+    .diff-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; opacity: 0.7; }
 
     /* Slug cell */
-    .slug-cell {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.75rem;
-      color: #7c3aed;
-      max-width: 200px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+    .slug-cell { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #a78bfa; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     /* Empty/loading */
-    .empty-state {
-      text-align: center;
-      padding: 3rem;
-      color: #94a3b8;
-    }
-    .loading { text-align: center; padding: 3rem; color: #94a3b8; }
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; }
+    .loading { text-align: center; padding: 3rem; color: #64748b; }
 
     /* Opportunities section */
-    .opp-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .opp-card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 1.25rem;
-    }
-    .opp-card .opp-topic { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.35rem; }
-    .opp-card .opp-keyword {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.72rem;
-      color: #7c3aed;
-      margin-bottom: 0.5rem;
-    }
-    .opp-card .opp-meta {
-      font-size: 0.72rem;
-      color: #94a3b8;
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
+    .opp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .opp-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; }
+    .opp-card .opp-topic { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.35rem; color: #e2e8f0; }
+    .opp-card .opp-keyword { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; margin-bottom: 0.5rem; }
+    .opp-card .opp-meta { font-size: 0.72rem; color: #64748b; display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
-    @media (max-width: 1100px) {
-      .stats-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .admin-layout { margin-left: 0; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .main { padding: 1rem; }
-    }
+    /* Deployed recently */
+    .deployed-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .deployed-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .deployed-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .deployed-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.75rem; border: 1px solid #1e293b; border-radius: 8px; font-size: 0.82rem; transition: background 0.1s; }
+    .deployed-item:hover { background: #1a2332; }
+    .deployed-item .di-icon { width: 28px; height: 28px; border-radius: 50%; background: #052e16; color: #4ade80; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800; flex-shrink: 0; }
+    .deployed-item .di-info { flex: 1; min-width: 0; }
+    .deployed-item .di-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; }
+    .deployed-item .di-type { font-size: 0.68rem; }
+    .deployed-item .di-date { font-size: 0.72rem; color: #64748b; white-space: nowrap; }
+    .deployed-item .di-link { color: #60a5fa; text-decoration: none; font-size: 0.75rem; font-weight: 500; white-space: nowrap; }
+    .deployed-item .di-link:hover { text-decoration: underline; }
+
+    /* Source agent badge */
+    .badge-source { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+    .bs-fact-check { background: #1e3a5f; color: #93c5fd; }
+    .bs-validator { background: #451a03; color: #fcd34d; }
+    .bs-seo-audit { background: #312e81; color: #a5b4fc; }
+    .bs-analytics { background: #3b1764; color: #d8b4fe; }
+    .bs-unknown { background: #1e293b; color: #94a3b8; }
+
+    /* Article link */
+    .article-link { color: #a78bfa; text-decoration: none; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; }
+    .article-link:hover { text-decoration: underline; color: #c4b5fd; }
+
+    /* Source filter */
+    .source-filters { display: flex; gap: 0.35rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+    .source-filter-btn { padding: 0.3rem 0.6rem; border-radius: 14px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.72rem; cursor: pointer; font-weight: 500; }
+    .source-filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .source-filter-btn.active { background: #475569; color: white; border-color: #475569; }
+
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px) { .admin-layout { margin-left: 0; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .main { padding: 1rem; } }
   </style>
 </head>
 <body>
@@ -371,6 +189,12 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
     </div>
 
+    <!-- Deployed recently -->
+    <div class="deployed-section" id="deployedSection" style="display:none">
+      <div class="deployed-title">Deployes recemment</div>
+      <div class="deployed-list" id="deployedList"></div>
+    </div>
+
     <!-- Opportunities in progress -->
     <div id="oppSection" style="display:none">
       <div class="section-title">&#x1F4DD; Articles en cours de redaction (opportunites)</div>
@@ -388,6 +212,15 @@ import { supabaseConfig } from '../../lib/supabase';
       <input type="text" class="search-input" placeholder="Rechercher un article..." oninput="setSearch(this.value)" />
     </div>
 
+    <!-- Source filter -->
+    <div class="source-filters" id="sourceFilters">
+      <button class="source-filter-btn active" data-source="all" onclick="setSourceFilter('all')">Toutes sources</button>
+      <button class="source-filter-btn" data-source="fact-check" onclick="setSourceFilter('fact-check')">Fact-check</button>
+      <button class="source-filter-btn" data-source="validator" onclick="setSourceFilter('validator')">Validator</button>
+      <button class="source-filter-btn" data-source="seo-audit" onclick="setSourceFilter('seo-audit')">SEO Audit</button>
+      <button class="source-filter-btn" data-source="analytics" onclick="setSourceFilter('analytics')">Analytics</button>
+    </div>
+
     <!-- Tickets table -->
     <div id="ticketsContainer">
       <div class="loading">Chargement...</div>
@@ -401,6 +234,8 @@ import { supabaseConfig } from '../../lib/supabase';
   let allTickets = [];
   let currentFilter = 'all';
   let currentSearch = '';
+  let currentSourceFilter = 'all';
+  let articleSlugMap = {}; // slug -> { collection, title }
 
   function esc(str) {
     if (!str) return '';
@@ -460,6 +295,18 @@ import { supabaseConfig } from '../../lib/supabase';
       false_claim: 'Faux',
       missing_info: 'Manquant',
       context_fr: 'Contexte FR',
+      missing_description: 'Description',
+      broken_link: 'Lien casse',
+      missing_image: 'Image',
+      seo_issue: 'SEO',
+      duplicate_content: 'Doublon',
+      sync_issue: 'Sync',
+      content_quality: 'Qualite',
+      heading_issue: 'Titres',
+      html_issue: 'HTML',
+      build_error: 'Build',
+      content_refresh: 'Refresh',
+      seo_optimization: 'Opti SEO',
     };
     const classes = {
       price_update: 'badge-price',
@@ -468,6 +315,13 @@ import { supabaseConfig } from '../../lib/supabase';
       missing_info: 'badge-missing',
     };
     return `<span class="badge ${classes[type] || 'badge-info'}">${esc(labels[type] || type || '-')}</span>`;
+  }
+
+  function sourceBadge(source) {
+    const s = source || 'fact-check';
+    const labels = { 'fact-check': 'Fact-check', 'validator': 'Validator', 'seo-audit': 'SEO Audit', 'analytics': 'Analytics' };
+    const cls = { 'fact-check': 'bs-fact-check', 'validator': 'bs-validator', 'seo-audit': 'bs-seo-audit', 'analytics': 'bs-analytics' };
+    return `<span class="badge-source ${cls[s] || 'bs-unknown'}">${esc(labels[s] || s)}</span>`;
   }
 
   function toggleDiff(id) {
@@ -486,6 +340,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <thead><tr>
         <th>Urgence</th>
         <th>Type</th>
+        <th>Source</th>
         <th>Article</th>
         <th>Titre</th>
         <th>Statut</th>
@@ -496,24 +351,31 @@ import { supabaseConfig } from '../../lib/supabase';
     for (const t of tickets) {
       const shortId = t.id.substring(0, 8);
       const afterText = t.after_final || t.after_suggested || '';
+      const artInfo = articleSlugMap[t.slug];
+      const artUrl = artInfo ? `/${artInfo.collection}/${t.slug}` : null;
+      const slugCell = artUrl
+        ? `<a class="article-link" href="${esc(artUrl)}" target="_blank" title="${esc(artInfo?.title || t.slug)}">${esc(t.slug)}</a>`
+        : `<span class="slug-cell" title="${esc(t.slug)}">${esc(t.slug)}</span>`;
+
       html += `<tr>
         <td>${urgBadge(t.urgence)}</td>
         <td>${typeBadge(t.ticket_type)}</td>
-        <td class="slug-cell" title="${esc(t.slug)}">${esc(t.slug)}</td>
+        <td>${sourceBadge(t.source_agent)}</td>
+        <td>${slugCell}</td>
         <td>${esc(t.title || t.claim_original || '-')}</td>
         <td>${statusBadge(t.statut)}</td>
         <td style="white-space:nowrap;font-size:0.75rem;color:#64748b" title="${formatDate(t.updated_at)}">${timeAgo(t.updated_at)}</td>
         <td>
           <button class="diff-toggle" onclick="toggleDiff('${shortId}')">Voir</button>
           <div class="diff-panel" id="diff-${shortId}">
-            <div class="diff-before">
+            ${t.before_exact ? `<div class="diff-before">
               <div class="diff-label">Avant</div>
               ${esc(t.before_exact)}
-            </div>
-            <div class="diff-after">
+            </div>` : ''}
+            ${afterText ? `<div class="diff-after">
               <div class="diff-label">${t.after_final ? 'Apres (editorial)' : 'Apres (suggestion)'}</div>
               ${esc(afterText)}
-            </div>
+            </div>` : ''}
             ${t.realite_actuelle ? `<div style="margin-top:0.5rem;font-size:0.75rem;color:#64748b;line-height:1.4"><strong>Contexte:</strong> ${esc(t.realite_actuelle)}</div>` : ''}
             ${t.source_reference ? `<div style="margin-top:0.35rem;font-size:0.72rem"><a href="${esc(t.source_reference)}" target="_blank" rel="noopener" style="color:#7c3aed">${esc(t.source_reference)}</a></div>` : ''}
           </div>
@@ -529,6 +391,9 @@ import { supabaseConfig } from '../../lib/supabase';
     let filtered = allTickets;
     if (currentFilter !== 'all') {
       filtered = filtered.filter(t => t.statut === currentFilter);
+    }
+    if (currentSourceFilter !== 'all') {
+      filtered = filtered.filter(t => (t.source_agent || 'fact-check') === currentSourceFilter);
     }
     if (currentSearch) {
       const q = currentSearch.toLowerCase();
@@ -554,6 +419,12 @@ import { supabaseConfig } from '../../lib/supabase';
     applyFilters();
   };
 
+  window.setSourceFilter = function(s) {
+    currentSourceFilter = s;
+    document.querySelectorAll('.source-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.source === s));
+    applyFilters();
+  };
+
   function updateFilterCounts() {
     const counts = { all: allTickets.length };
     for (const t of allTickets) {
@@ -570,13 +441,44 @@ import { supabaseConfig } from '../../lib/supabase';
     });
   }
 
+  function renderDeployed() {
+    const deployed = allTickets
+      .filter(t => t.statut === 'deployed')
+      .sort((a, b) => new Date(b.deployed_at || b.updated_at || 0) - new Date(a.deployed_at || a.updated_at || 0))
+      .slice(0, 8);
+
+    if (deployed.length === 0) {
+      document.getElementById('deployedSection').style.display = 'none';
+      return;
+    }
+
+    document.getElementById('deployedSection').style.display = 'block';
+    document.getElementById('deployedList').innerHTML = deployed.map(t => {
+      const artInfo = articleSlugMap[t.slug];
+      const artUrl = artInfo ? `/${artInfo.collection}/${t.slug}` : null;
+      return `<div class="deployed-item">
+        <div class="di-icon">&#x2713;</div>
+        <div class="di-info">
+          <div class="di-slug">${esc(t.slug)}</div>
+          <div class="di-type">${typeBadge(t.ticket_type)} ${sourceBadge(t.source_agent)}</div>
+        </div>
+        <div class="di-date">${timeAgo(t.deployed_at || t.updated_at)}</div>
+        ${artUrl ? `<a class="di-link" href="${esc(artUrl)}" target="_blank">Voir &#x2192;</a>` : ''}
+      </div>`;
+    }).join('');
+  }
+
   async function loadAll() {
     try {
-      // Load tickets
-      const tickets = await sbFetch(
-        'correction_tickets',
-        'select=*&order=updated_at.desc&limit=200'
-      );
+      const [tickets, articles] = await Promise.all([
+        sbFetch('correction_tickets', 'select=*&order=updated_at.desc&limit=200'),
+        sbFetch('articles', 'select=slug,title,collection&is_active=eq.true')
+      ]);
+
+      // Build slug map
+      articleSlugMap = {};
+      articles.forEach(a => { articleSlugMap[a.slug] = { collection: a.collection, title: a.title }; });
+
       allTickets = tickets;
 
       // Stats
@@ -592,6 +494,7 @@ import { supabaseConfig } from '../../lib/supabase';
       document.getElementById('statDeployed').textContent = deployed;
 
       updateFilterCounts();
+      renderDeployed();
       applyFilters();
 
       // Load opportunities in_progress or published

@@ -959,6 +959,24 @@ a:hover {
   .score-display { font-size: 2rem; }
 }
 
+/* ===== HOMEPAGE SECTION RHYTHM ===== */
+/* Slightly softer section backgrounds for better visual flow */
+section + section {
+  position: relative;
+}
+
+/* Better focus-visible for interactive elements */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--primary-blue-light);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
 /* ===== UTILITAIRES ===== */
 .hidden { display: none; }
 .sr-only {
