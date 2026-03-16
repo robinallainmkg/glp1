@@ -117,7 +117,7 @@ Cette stabilité s'explique par la position monopolistique de Novo Nordisk et la
 
 ### Wegovy n'est pas remboursé par la Sécurité Sociale
 
-Contrairement à Ozempic (remboursé à 65% pour le diabète de type 2 uniquement), **Wegovy n'est pas remboursé par l'Assurance Maladie** en France pour l'indication perte de poids. Le coût est donc entièrement à la charge du patient.
+Contrairement à Ozempic (remboursé à 30% pour le diabète de type 2 uniquement), **Wegovy n'est pas remboursé par l'Assurance Maladie** en France pour l'indication perte de poids. Le coût est donc entièrement à la charge du patient.
 
 **Critères de prescription :**
 
@@ -170,7 +170,7 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 |------------|-------------|-------------|------------|---------------|
 | **Wegovy** | 169-360€ | 1 014-2 160€ | -15% du poids | Non |
 | Saxenda | 240-300€ | 1 440-1 800€ | -8% du poids | Non |
-| Ozempic (hors indication) | ~59,90€/stylo | ~360€ | -12% du poids | Oui (DT2 uniquement) |
+| Ozempic (hors indication) | ~76,58€/stylo | ~460€ | -12% du poids | 30% (DT2 uniquement) |
 | Mounjaro | 230-440€ | 1 380-2 640€ | -20% du poids | Non |
 | Mysimba | 70€ | 420€ | -5% du poids | Non |
 

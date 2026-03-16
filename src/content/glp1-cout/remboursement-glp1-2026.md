@@ -3,7 +3,7 @@ title: "Remboursement GLP-1 2026 : Guide Complet par Médicament et Mutuelle"
 description: "Remboursement GLP-1 en 2026 : Mounjaro, Wegovy, Ozempic. Conditions Sécurité Sociale, mutuelles qui remboursent, démarches et aides financières. Guide officiel 2026."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Mounjaro, Wegovy, Ozempic - Guide Complet"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic, Mounjaro, Trulicity, Victoza, Rybelsus remboursés 65% (DT2). Wegovy et Saxenda non remboursés. Guide complet mis à jour mars 2026."
+seoDescription: "Remboursement GLP-1 2026 : Ozempic, Mounjaro, Trulicity, Victoza, Rybelsus remboursés 30% (DT2). Wegovy et Saxenda non remboursés. Guide complet mis à jour mars 2026."
 publishedAt: '2025-12-27'
 updatedAt: '2026-03-15'
 featured: true
@@ -23,15 +23,15 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
 |------------|------------|-------------------|------------------|-----------------|
-| **Ozempic** | Diabète T2 | **65%** (DT2 uniquement) | 21-42€ | ✅ Maintenu |
-| **Trulicity** | Diabète T2 | **65%** (DT2 uniquement) | ~28€ | ✅ Maintenu |
-| **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~21€ | ✅ Maintenu |
-| **Rybelsus** | Diabète T2 (oral) | **65%** (DT2 uniquement) | 28-38€ | ✅ Maintenu |
+| **Ozempic** | Diabète T2 | **30%** (DT2 uniquement) | ~53-54€ | ✅ Maintenu |
+| **Trulicity** | Diabète T2 | **30%** (DT2 uniquement) | ~57€ | ✅ Maintenu |
+| **Victoza** | Diabète T2 | **30%** (DT2 uniquement) | ~42€ | ✅ Maintenu |
+| **Rybelsus** | Diabète T2 (oral) | **30%** (DT2 uniquement) | 56-77€ | ✅ Maintenu |
 | **Wegovy** | Obésité (IMC ≥30) | **Non remboursé** | 169-360€ | ❌ Non remboursé |
-| **Mounjaro** | DT2 (avis HAS déc. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
+| **Mounjaro** | DT2 (avis HAS nov. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
 | **Saxenda** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
 
-> **Mise à jour mars 2026** : La HAS a rendu un avis **favorable** au remboursement de **Mounjaro** en décembre 2025 pour le diabète de type 2. Les négociations de prix avec le CEPS sont en cours — le remboursement est **prévu pour le 2e semestre 2026**. En attendant, Mounjaro reste à la charge du patient. Les traitements indiqués pour l'**obésité seule** (Wegovy, Saxenda) restent non remboursés. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
+> **Mise à jour mars 2026** : La HAS a rendu un avis **favorable** au remboursement de **Mounjaro** le 19 novembre 2025 (avis CT21349) pour le diabète de type 2 et l'obésité (IMC >= 35). Les négociations de prix avec le CEPS sont en cours — le remboursement est **prévu pour le 2e semestre 2026**. En attendant, Mounjaro reste à la charge du patient. Les traitements indiqués pour l'**obésité seule** (Wegovy, Saxenda) restent non remboursés. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
 
 ---
 
@@ -39,7 +39,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 
 ### Critères Communs à Tous les GLP-1
 
-Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez remplir ces conditions de base :
+Pour bénéficier du remboursement à 30% par l'Assurance Maladie (taux applicable aux GLP-1 injectables pour le diabète de type 2), vous devez remplir ces conditions de base :
 
 ✅ **Prescription médicale obligatoire**
 - Ordonnance d'un médecin généraliste, endocrinologue ou diabétologue
@@ -68,7 +68,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS en décembre 2025** pour le diabète de type 2 insuffisamment contrôlé. Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
+**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349) pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC >= 35). Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
 
 ### Ce qu'il faut savoir sur le remboursement Mounjaro
 
@@ -78,7 +78,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 - Certaines mutuelles proposent une prise en charge partielle
 
 **Remboursement attendu (2e semestre 2026)** :
-- Taux prévu : 65% (Sécurité Sociale)
+- Taux prévu : 30% (Sécurité Sociale, SMR modéré)
 - Indication : Diabète de type 2 insuffisamment contrôlé
 - Critères prévisionnels : HbA1c > 7% malgré metformine + autre antidiabétique oral, IMC ≥ 30 kg/m²
 
@@ -108,7 +108,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Statut Officiel
 
-**Ozempic (sémaglutide 0.5-2 mg)** maintient son remboursement à **65%** en 2026 pour le **diabète de type 2** uniquement.
+**Ozempic (sémaglutide 0.5-2 mg)** maintient son remboursement à **30%** en 2026 pour le **diabète de type 2** uniquement.
 
 ⚠️ **Important** : Ozempic n'est PAS remboursé pour la perte de poids seule (sans diabète). Pour cette indication, utilisez **Wegovy** (même principe actif, dosage supérieur).
 
@@ -120,11 +120,11 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Coût Réel Patient 2026
 
-**Prix pharmacie :** 59,90€/stylo
+**Prix pharmacie :** ~76,58€/stylo
 
 **Selon dosage :**
-- 0.25-0.5 mg : 1 stylo/mois = **21€/mois** après remboursement
-- 1-2 mg : 2 stylos/mois = **42€/mois** après remboursement
+- 0.25-0.5 mg : 1 stylo/mois = **~54€/mois** après remboursement à 30%
+- 1-2 mg : 2 stylos/mois = **~107€/mois** après remboursement à 30%
 
 **Le moins cher des GLP-1 injectables !**
 
@@ -350,13 +350,13 @@ Pour continuer à être remboursé, vous devez démontrer :
 
 ### Le remboursement GLP-1 sera-t-il maintenu en 2026 ?
 
-Le remboursement à 65% est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** uniquement. Les traitements pour l'obésité restent non remboursés.
+Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** uniquement (taux applicable aux médicaments à SMR modéré). Les traitements pour l'obésité restent non remboursés.
 
 **Statut par traitement :**
-- ✅ Ozempic : Maintenu 65% (DT2 uniquement)
-- ✅ Trulicity : Maintenu 65% (DT2 uniquement)
-- ✅ Victoza : Maintenu 65% (DT2 uniquement)
-- ✅ Rybelsus : Maintenu 65% (DT2 uniquement)
+- ✅ Ozempic : Maintenu 30% (DT2 uniquement)
+- ✅ Trulicity : Maintenu 30% (DT2 uniquement)
+- ✅ Victoza : Maintenu 30% (DT2 uniquement)
+- ✅ Rybelsus : Maintenu 30% (DT2 uniquement)
 - ❌ Wegovy : NON remboursé
 - ❌ Mounjaro : NON remboursé
 - ❌ Saxenda : NON remboursé
@@ -431,7 +431,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 **Choix recommandé :**
 - **Budget limité** --> Wegovy (moins cher)
 - **Efficacité maximale** --> Mounjaro
-- **Remboursement souhaité** --> Ozempic (65% DT2 uniquement, principe actif identique à Wegovy)
+- **Remboursement souhaité** --> Ozempic (30% DT2 uniquement, principe actif identique à Wegovy)
 
 [Comparaison détaillée Wegovy vs Mounjaro →](/guides/quel-traitement-glp1-choisir)
 
