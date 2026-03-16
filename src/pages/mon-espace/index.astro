@@ -7,7 +7,7 @@ import { supabaseConfig } from '../../lib/supabase';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Espace - Coach GLP-1</title>
+  <title>Mon Espace &mdash; Coach GLP-1 France</title>
   <meta name="robots" content="noindex, nofollow">
   <style is:inline>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -631,12 +631,12 @@ import { supabaseConfig } from '../../lib/supabase';
   <!-- ===== SCREEN 1: AUTH ===== -->
   <div class="screen active" id="screenAuth">
     <div class="auth-screen">
-      <h1>Votre Coach GLP-1</h1>
-      <p>Suivi personnalise, rappels d'injection, programme nutrition et sport adapte a votre traitement.</p>
+      <h1>Votre espace personnel GLP-1</h1>
+      <p>Suivi personnalis&eacute;, rappels d'injection, programme nutrition et sport adapt&eacute; &agrave; votre traitement.</p>
 
       <div class="auth-box">
         <div class="auth-tabs">
-          <button class="auth-tab active" onclick="switchAuthTab('signup')">Creer un compte</button>
+          <button class="auth-tab active" onclick="switchAuthTab('signup')">Cr&eacute;er un compte</button>
           <button class="auth-tab" onclick="switchAuthTab('login')">Se connecter</button>
         </div>
 
@@ -649,8 +649,8 @@ import { supabaseConfig } from '../../lib/supabase';
 
         <div id="authFormSignup">
           <div class="form-group">
-            <label>Prenom</label>
-            <input type="text" id="signupName" placeholder="Votre prenom">
+            <label>Pr&eacute;nom</label>
+            <input type="text" id="signupName" placeholder="Votre pr&eacute;nom">
           </div>
           <div class="form-group">
             <label>Email</label>
@@ -658,9 +658,9 @@ import { supabaseConfig } from '../../lib/supabase';
           </div>
           <div class="form-group">
             <label>Mot de passe</label>
-            <input type="password" id="signupPassword" placeholder="6 caracteres minimum">
+            <input type="password" id="signupPassword" placeholder="6 caract&egrave;res minimum">
           </div>
-          <button class="btn-primary" onclick="signUpEmail()">Creer mon compte gratuit</button>
+          <button class="btn-primary" onclick="signUpEmail()">Cr&eacute;er mon compte gratuit</button>
         </div>
 
         <div id="authFormLogin" style="display:none;">
@@ -681,7 +681,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="auth-features">
         <div class="auth-feature">
           <div class="icon">💉</div>
-          Rappels d'injection
+          Rappels d&rsquo;injection
         </div>
         <div class="auth-feature">
           <div class="icon">📊</div>
@@ -689,7 +689,7 @@ import { supabaseConfig } from '../../lib/supabase';
         </div>
         <div class="auth-feature">
           <div class="icon">🥗</div>
-          Plan nutrition
+          Programme nutrition
         </div>
       </div>
     </div>
@@ -821,7 +821,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="reminder-icon stock">📦</div>
             <div class="reminder-info">
               <div class="title">Commander stock</div>
-              <div class="when" id="reminderStock">Pensez a renouveler votre ordonnance</div>
+              <div class="when" id="reminderStock">Pensez &agrave; renouveler votre ordonnance</div>
             </div>
             <button class="btn-cal" onclick="exportICS('stock')">+ Calendrier</button>
           </li>
@@ -829,7 +829,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="reminder-icon rdv">🩺</div>
             <div class="reminder-info">
               <div class="title">RDV medecin de suivi</div>
-              <div class="when" id="reminderRdv">Bilan sanguin recommande a 3 mois</div>
+              <div class="when" id="reminderRdv">Bilan sanguin recommand&eacute; &agrave; 3 mois</div>
             </div>
             <button class="btn-cal" onclick="exportICS('rdv')">+ Calendrier</button>
           </li>
@@ -837,7 +837,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="reminder-icon checkin">⚖️</div>
             <div class="reminder-info">
               <div class="title">Pesee hebdomadaire</div>
-              <div class="when">Chaque lundi matin a jeun</div>
+              <div class="when">Chaque lundi matin &agrave; jeun</div>
             </div>
             <button class="btn-cal" onclick="exportICS('checkin')">+ Calendrier</button>
           </li>
@@ -857,7 +857,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <!-- Coach CTA -->
       <div class="coach-cta">
         <h3>Une question ?</h3>
-        <p>Votre coach IA connait votre profil et peut vous aider en temps reel</p>
+        <p>Votre coach IA conna&icirc;t votre profil et peut vous aider en temps r&eacute;el</p>
         <a href="/#coach" class="btn-coach" onclick="localStorage.setItem('glp1_open_coach','1')">💬 Parler au Coach</a>
       </div>
     </div>
@@ -866,18 +866,18 @@ import { supabaseConfig } from '../../lib/supabase';
   <!-- Paywall -->
   <div class="paywall-overlay" id="paywallOverlay">
     <div class="paywall-box">
-      <h2>Votre essai gratuit est termine</h2>
-      <p>Continuez a beneficier de votre suivi personnalise</p>
+      <h2>Votre essai gratuit est termin&eacute;</h2>
+      <p>Continuez &agrave; b&eacute;n&eacute;ficier de votre suivi personnalis&eacute;</p>
       <div class="paywall-price">9,90€ <span>/mois</span></div>
       <ul class="paywall-features">
-        <li>Coach IA illimite avec votre profil</li>
-        <li>Suivi poids et courbe de progression</li>
-        <li>Programme nutrition et sport personnalise</li>
-        <li>Rappels injection et RDV</li>
-        <li>Recommandations adaptees a votre traitement</li>
+        <li>Coach IA illimit&eacute; avec votre profil</li>
+        <li>Suivi du poids et courbe de progression</li>
+        <li>Programme nutrition et sport personnalis&eacute;</li>
+        <li>Rappels d&rsquo;injection et de rendez-vous</li>
+        <li>Recommandations adapt&eacute;es &agrave; votre traitement</li>
       </ul>
-      <button class="btn-subscribe" onclick="subscribe()">S'abonner — 9,90€/mois</button>
-      <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir a l'accueil</button>
+      <button class="btn-subscribe" onclick="subscribe()">S&rsquo;abonner &mdash; 9,90&euro;/mois</button>
+      <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir &agrave; l&rsquo;accueil</button>
     </div>
   </div>
 
@@ -1022,34 +1022,34 @@ import { supabaseConfig } from '../../lib/supabase';
 
     var obSteps = [
       {
-        title: 'Ou en etes-vous ?',
-        subtitle: 'Cela nous permet d\'adapter votre experience',
+        title: 'Quel est votre parcours avec les traitements GLP-1 ?',
+        subtitle: 'Votre coach s\u2019adapte selon que vous d\u00e9butez ou que vous \u00eates d\u00e9j\u00e0 suivi(e).',
         field: 'status',
         type: 'select',
         options: [
-          { val: 'exploring', emoji: '🔍', label: 'Je me renseigne' },
-          { val: 'starting', emoji: '🚀', label: 'Je vais commencer' },
-          { val: 'ongoing', emoji: '💉', label: 'Deja en traitement' },
-          { val: 'paused', emoji: '⏸️', label: 'J\'ai arrete' },
+          { val: 'exploring', emoji: '\uD83D\uDD0D', label: 'Je me renseigne' },
+          { val: 'starting', emoji: '\uD83D\uDE80', label: 'Je vais bient\u00f4t commencer' },
+          { val: 'ongoing', emoji: '\uD83D\uDC89', label: 'Je suis d\u00e9j\u00e0 sous traitement' },
+          { val: 'paused', emoji: '\u23F8\uFE0F', label: 'J\u2019ai arr\u00eat\u00e9 mon traitement' },
         ]
       },
       {
-        title: 'Votre traitement',
-        subtitle: 'Quel traitement prenez-vous ou envisagez-vous ?',
+        title: 'Quel traitement GLP-1 prenez-vous ou envisagez-vous ?',
+        subtitle: 'Chaque mol\u00e9cule a ses sp\u00e9cificit\u00e9s \u2014 votre suivi sera adapt\u00e9 en cons\u00e9quence.',
         field: 'treatment',
         type: 'select',
         options: [
-          { val: 'ozempic', emoji: '💊', label: 'Ozempic' },
-          { val: 'wegovy', emoji: '💊', label: 'Wegovy' },
-          { val: 'mounjaro', emoji: '💊', label: 'Mounjaro' },
-          { val: 'saxenda', emoji: '💊', label: 'Saxenda' },
-          { val: 'other', emoji: '💊', label: 'Autre' },
-          { val: 'none', emoji: '❌', label: 'Aucun / Je ne sais pas' },
+          { val: 'ozempic', emoji: '\uD83D\uDC8A', label: 'Ozempic (s\u00e9maglutide)' },
+          { val: 'wegovy', emoji: '\uD83D\uDC8A', label: 'Wegovy (s\u00e9maglutide HD)' },
+          { val: 'mounjaro', emoji: '\uD83D\uDC8A', label: 'Mounjaro (tirzépatide)' },
+          { val: 'saxenda', emoji: '\uD83D\uDC8A', label: 'Saxenda (liraglutide)' },
+          { val: 'other', emoji: '\uD83D\uDC8A', label: 'Autre traitement' },
+          { val: 'none', emoji: '\u2753', label: 'Pas encore d\u00e9cid\u00e9(e)' },
         ]
       },
       {
-        title: 'Vos mensurations',
-        subtitle: 'Pour calculer vos besoins nutritionnels',
+        title: 'Vos donn\u00e9es corporelles',
+        subtitle: 'Ces informations permettent de calculer vos besoins \u00e9nerg\u00e9tiques et prot\u00e9iques adapt\u00e9s au traitement GLP-1.',
         type: 'inputs',
         inputs: [
           { row: [
@@ -1058,7 +1058,7 @@ import { supabaseConfig } from '../../lib/supabase';
           ]},
           { row: [
             { field: 'height_cm', label: 'Taille (cm)', type: 'number', placeholder: '170' },
-            { field: 'age', label: 'Age', type: 'number', placeholder: '45' },
+            { field: 'age', label: '\u00C2ge', type: 'number', placeholder: '45' },
           ]},
           { field: 'gender', label: 'Genre', type: 'select-inline',
             options: [
@@ -1070,30 +1070,30 @@ import { supabaseConfig } from '../../lib/supabase';
         ]
       },
       {
-        title: 'Votre activite physique',
-        subtitle: 'Pour adapter votre programme',
+        title: 'Quel est votre niveau d\u2019activit\u00e9 physique ?',
+        subtitle: 'L\u2019exercice joue un r\u00f4le cl\u00e9 pour pr\u00e9server la masse musculaire sous GLP-1.',
         field: 'sport_level',
         type: 'select',
         options: [
-          { val: 'sedentaire', emoji: '🛋️', label: 'Sedentaire' },
-          { val: 'leger', emoji: '🚶', label: 'Leger (marche)' },
-          { val: 'modere', emoji: '🏃', label: 'Modere' },
-          { val: 'actif', emoji: '💪', label: 'Actif' },
-          { val: 'sportif', emoji: '🏋️', label: 'Sportif' },
+          { val: 'sedentaire', emoji: '\uD83D\uDECB\uFE0F', label: 'S\u00e9dentaire' },
+          { val: 'leger', emoji: '\uD83D\uDEB6', label: 'L\u00e9ger (marche r\u00e9guli\u00e8re)' },
+          { val: 'modere', emoji: '\uD83C\uDFC3', label: 'Mod\u00e9r\u00e9 (2-3 s\u00e9ances/sem.)' },
+          { val: 'actif', emoji: '\uD83D\uDCAA', label: 'Actif (4-5 s\u00e9ances/sem.)' },
+          { val: 'sportif', emoji: '\uD83C\uDFCB\uFE0F', label: 'Sportif confirm\u00e9' },
         ]
       },
       {
-        title: 'Votre alimentation',
-        subtitle: 'Pour personnaliser vos recommandations',
+        title: 'Comment d\u00e9cririez-vous votre alimentation ?',
+        subtitle: 'Vos recommandations nutritionnelles seront personnalis\u00e9es en fonction de votre r\u00e9gime.',
         field: 'diet_type',
         type: 'select',
         options: [
-          { val: 'standard', emoji: '🍽️', label: 'Standard' },
-          { val: 'vegetarien', emoji: '🥬', label: 'Vegetarien' },
-          { val: 'vegan', emoji: '🌱', label: 'Vegan' },
-          { val: 'sans-gluten', emoji: '🌾', label: 'Sans gluten' },
-          { val: 'keto', emoji: '🥑', label: 'Keto / Low-carb' },
-          { val: 'halal', emoji: '🍖', label: 'Halal' },
+          { val: 'standard', emoji: '\uD83C\uDF7D\uFE0F', label: '\u00C9quilibr\u00e9e / Standard' },
+          { val: 'vegetarien', emoji: '\uD83E\uDD6C', label: 'V\u00e9g\u00e9tarienne' },
+          { val: 'vegan', emoji: '\uD83C\uDF31', label: 'V\u00e9gane' },
+          { val: 'sans-gluten', emoji: '\uD83C\uDF3E', label: 'Sans gluten' },
+          { val: 'keto', emoji: '\uD83E\uDD51', label: 'C\u00e9tog\u00e8ne / Low-carb' },
+          { val: 'halal', emoji: '\uD83C\uDF56', label: 'Halal' },
         ]
       },
     ];
