@@ -71,7 +71,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ## Efficacité des Différents GLP-1
 
-### Wegovy (Sémaglutide 2,4 mg) - Le Plus Efficace
+### [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (Sémaglutide 2,4 mg) - Le Plus Efficace
 
 **Résultats études cliniques :**
 - **Perte moyenne : 15,3%** en 68 semaines
@@ -100,7 +100,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Expérience clinique 10+ ans
 - Profil cardiovasculaire excellent
 
-### Ozempic (Sémaglutide 1-2 mg) - Usage Off-Label
+### [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (Sémaglutide 1-2 mg) - Usage Off-Label
 
 **Efficacité démontrée :**
 - **Perte moyenne : 12,4%** (dose 2 mg)

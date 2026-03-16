@@ -2,7 +2,7 @@
 title: "Prix Trulicity 2026 : Coût, Remboursement et Mutuelle en France"
 description: "Prix Trulicity en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Trulicity."
 keywords: ['prix trulicity', 'trulicity pharmacie', 'remboursement trulicity', 'mutuelle trulicity', 'coût traitement trulicity']
-seoTitle: "Prix Trulicity 2025 : Combien coûte Trulicity en France ?"
+seoTitle: "Prix Trulicity 2026 : Combien coûte Trulicity en France ?"
 seoDescription: "Prix Trulicity en pharmacie française, remboursement sécurité sociale, couverture mutuelle. Tout savoir sur le coût du traitement Trulicity."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
@@ -17,7 +17,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Prix Trulicity 2025 : Coût par Dosage et Remboursement Mutuelle",
+  "name": "Prix Trulicity 2026 : Coût par Dosage et Remboursement Mutuelle",
   "description": "Prix Trulicity en pharmacie : ~81€ par mois. Coût réel après remboursement 65% (DT2 uniquement).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-trulicity-france",
   "datePublished": "2025-12-27",
@@ -65,7 +65,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 }
 </script>
 
-# Prix Trulicity 2025 : Coût et Remboursement en France
+# Prix Trulicity 2026 : Coût et Remboursement en France
 
 ## 💰 Prix Trulicity en Pharmacie
 
@@ -85,7 +85,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
-| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Ozempic | ~77,60 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | Mounjaro | 230-440 € | Non remboursé |
@@ -202,7 +202,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 | Critère | Trulicity | Ozempic | Wegovy |
 |---------|---------|--------|---------|
-| Prix mensuel | ~81 € | 90-120 € | 169-360 € |
+| Prix mensuel | ~81 € | ~77,60 € | 169-360 € |
 | Perte poids moyenne | -10% | -15% | -20% |
 | Remboursement | 65% (DT2) | 65% (DT2) | Non remboursé |
 | Rapport qualité/prix | Bon | Bon | Coûteux |

@@ -16,7 +16,7 @@ secondaryKeywords: ["mounjaro posologie", "tirzepatide dosage", "mounjaro titrat
 
 # Mounjaro Dosage : Tout Savoir sur la Posologie du Tirzépatide
 
-Mounjaro (tirzépatide) est un traitement injectable commercialisé en France depuis novembre 2024. Son protocole de dosage suit une escalade progressive sur plusieurs mois, conçue pour maximiser l'efficacité tout en minimisant les effets secondaires digestifs. Ce guide vous présente en détail les posologies officielles, les règles de titration et les ajustements possibles selon votre situation.
+Mounjaro (tirzépatide) est un traitement injectable commercialisé en France depuis novembre 2024. Son protocole de dosage suit une escalade progressive sur plusieurs mois, conçue pour maximiser l'efficacité tout en minimisant les [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/). Ce guide vous présente en détail les posologies officielles, les règles de titration et les ajustements possibles selon votre situation.
 
 ## Sommaire
 

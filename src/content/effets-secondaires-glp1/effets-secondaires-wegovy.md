@@ -16,7 +16,7 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
 
-# Effets Secondaires Wegovy : Guide Complet
+## Effets Secondaires Wegovy : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 

@@ -16,26 +16,28 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
 
-# Effets Secondaires Rybelsus : Guide Complet
+## Effets Secondaires Rybelsus : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (70-80% des patients)
+### Troubles digestifs
+
+> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 30% pour le diabète de type 2), Rybelsus reste intégralement à la charge du patient.
 
 **Nausées et vomissements**
-- **Fréquence** : Fréquent (1-10%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP)
 - **Apparition** : Généralement les premiers jours
-- **Gestion** : Prendre le médicament le matin à jeun, boire beaucoup d'eau
+- **Gestion** : Prendre le comprimé le matin à jeun avec maximum 120 ml d'eau
 - **Évolution** : Diminue généralement après 1-2 semaines
 
 **Diarrhée**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP)
 - **Causes** : Accélération du transit intestinal
 - **Gestion** : Hydratation, alimentation pauvre en fibres
 - **Durée** : Généralement temporaire
 
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Fréquent (1-10%)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -86,14 +88,14 @@ affiliateCollection: "effets-secondaires-glp1"
 
 ## 📊 Fréquence des Effets Secondaires
 
-### Fréquents (1-10%)
+### Très fréquents (>=10%)
 - Nausées : 15-25%
-- Vomissements : 5-10%
-- Maux de tête : 5-8%
+- Diarrhée : 10-15%
 
-### Peu fréquents (<1%)
-- Diarrhée : 3-5%
-- Constipation : 2-4%
+### Fréquents (1-10%)
+- Vomissements : 5-10%
+- Constipation : 3-5%
+- Maux de tête : 5-8%
 - Fatigue : 3-5%
 - Étourdissements : 1-3%
 
@@ -120,7 +122,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Pour les nausées** :
 - Prendre le médicament le matin à jeun
-- Boire beaucoup d'eau (au moins 120ml)
+- Avaler le comprimé avec un petit verre d'eau (maximum 120 ml, car trop d'eau réduit l'absorption)
 - Attendre 30 minutes avant de manger
 - Éviter les odeurs fortes
 
@@ -229,7 +231,7 @@ affiliateCollection: "effets-secondaires-glp1"
 **Rybelsus présente une très bonne tolérance** avec des effets secondaires bien maîtrisés, similaire à la forme injectable. Pour une vue d'ensemble du traitement, consultez notre [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/).
 
 ### Points clés :
-- **Effets fréquents** : Nausées (70-80% des patients)
+- **Effets fréquents** : Nausées, diarrhée (très fréquents >=10%)
 - **Effets graves** : Très rares (<0.1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité

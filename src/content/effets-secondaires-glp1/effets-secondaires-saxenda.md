@@ -20,22 +20,22 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (70-80% des patients)
+### Troubles digestifs
 
 **Nausées et vomissements**
-- **Fréquence** : Fréquent (1-10%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP Saxenda)
 - **Apparition** : Généralement les premiers jours
 - **Gestion** : Prendre le médicament le soir, manger léger
 - **Évolution** : Diminue généralement après 1-2 semaines
 
 **Diarrhée**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP)
 - **Causes** : Accélération du transit intestinal
 - **Gestion** : Hydratation, alimentation pauvre en fibres
 - **Durée** : Généralement temporaire
 
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -85,20 +85,20 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 
 ## 📊 Fréquence des Effets Secondaires
 
-### Fréquents (1-10%)
-- Nausées : 15-25%
-- Vomissements : 5-10%
-- Maux de tête : 5-8%
+### Très fréquents (>=10%)
+- Nausées : 39%
+- Diarrhée : 20%
+- Constipation : 19%
+- Vomissements : 16%
+- Maux de tête : 14%
 
-### Peu fréquents (<1%)
-- Diarrhée : 3-5%
-- Constipation : 2-4%
+### Fréquents (1-10%)
+- Calculs biliaires : 1-10% (risque accru avec la perte de poids rapide)
 - Fatigue : 3-5%
 - Étourdissements : 1-3%
 
-### Très peu fréquents (<0.1%)
+### Peu fréquents (<1%)
 - Pancréatite : <0.5%
-- Calculs biliaires : <0.3%
 - Réactions allergiques : <0.2%
 
 ## 💊 Gestion des Effets Secondaires
@@ -228,7 +228,7 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 **Saxenda présente une excellente tolérance** avec des effets secondaires moins fréquents que la moyenne des GLP-1. Pour en savoir plus, consultez notre [guide complet Saxenda](/collections/traitements-glp1/guide-complet-saxenda/).
 
 ### Points clés :
-- **Effets fréquents** : Nausées (70-80% des patients)
+- **Effets fréquents** : Nausées, diarrhée, constipation (très fréquents >=10%)
 - **Effets graves** : Très rares (<0.1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité

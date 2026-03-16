@@ -90,7 +90,7 @@ C'est LEADER qui a pour la première fois démontré qu'un GLP-1 pouvait réduir
 
 L'étude SUSTAIN-6 a été déterminante pour l'obtention de l'indication cardiovasculaire du [sémaglutide (Ozempic)](/collections/traitements-glp1/guide-complet-ozempic/) en Europe.
 
-### Étude SELECT (Sémaglutide 2,4 mg — Wegovy — 2023)
+### Étude SELECT (Sémaglutide 2,4 mg — [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) — 2023)
 
 **Population** : 17 604 patients **obèses sans diabète** avec antécédent cardiovasculaire
 **Durée** : 3,3 ans
@@ -102,7 +102,7 @@ L'étude SUSTAIN-6 a été déterminante pour l'obtention de l'indication cardio
 
 SELECT est l'étude la plus importante pour les patients obèses non diabétiques. Elle démontre que le sémaglutide protège le coeur même en l'absence de diabète, consolidant le bénéfice cardiovasculaire comme un effet de classe des GLP-1.
 
-### Étude SURPASS-CVOT (Tirzepatide — Mounjaro — 2025)
+### Étude SURPASS-CVOT (Tirzepatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) — 2025)
 
 **Population** : Patients avec DT2 à haut risque cardiovasculaire
 **Résultats préliminaires 2025** :

@@ -29,7 +29,7 @@ Les médicaments GLP-1 comme le sémaglutide semblent réduire les comportements
 
 ---
 
-Des milliers de patients sous Ozempic ou Wegovy l'ont spontanément rapporté : depuis le début du traitement, ils boivent moins d'alcool, fument moins de cigarettes, ou éprouvent moins le besoin de consommer des substances auxquelles ils étaient accros. Ce n'est pas le hasard. La recherche scientifique explore depuis plusieurs années ce phénomène inattendu, avec des résultats qui pourraient transformer la prise en charge des addictions.
+Des milliers de patients sous Ozempic ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) l'ont spontanément rapporté : depuis le début du traitement, ils boivent moins d'alcool, fument moins de cigarettes, ou éprouvent moins le besoin de consommer des substances auxquelles ils étaient accros. Ce n'est pas le hasard. La recherche scientifique explore depuis plusieurs années ce phénomène inattendu, avec des résultats qui pourraient transformer la prise en charge des addictions.
 
 ## Le mécanisme : les GLP-1 agissent sur le circuit de la récompense
 

@@ -48,7 +48,7 @@ Les risques concrets identifiés incluent :
 
 En 2023 et 2024, plusieurs patients européens ont été hospitalisés après avoir injecté des préparations achetées en ligne. Des cas d'hypoglycémies sévères ont été documentés en Allemagne, au Royaume-Uni et en France chez des personnes non diabétiques qui avaient acheté du « sémaglutide » sur des sites non autorisés.
 
-Au Royaume-Uni, le NHS (service de santé national) a publié un avertissement explicite après avoir reçu des signalements d'effets indésirables graves liés à des produits contrefaits. Dans plusieurs cas, le produit acheté en ligne contenait une concentration dix fois supérieure au dosage habituel.
+Au Royaume-Uni, le NHS (service de santé national) a publié un avertissement explicite après avoir reçu des signalements d'effets indésirables graves liés à des produits contrefaits — à distinguer des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) normalement attendus avec le produit authentique. Dans plusieurs cas, le produit acheté en ligne contenait une concentration dix fois supérieure au dosage habituel.
 
 L'ANSM française suit également des signalements de patients ayant reçu des produits suspects. Elle rappelle que **seule la filière légale — ordonnance et pharmacie agréée — garantit la sécurité du médicament**.
 
@@ -60,7 +60,7 @@ Ce marché n'existe pas en France sous la même forme. En France, une préparati
 
 ## Comment reconnaître un produit authentique
 
-### Les signes d'un Ozempic ou Wegovy authentique
+### Les signes d'un [Ozempic authentique](/collections/traitements-glp1/guide-complet-ozempic/) ou Wegovy authentique
 
 Un stylo injectable Ozempic ou Wegovy légal présente plusieurs caractéristiques vérifiables :
 

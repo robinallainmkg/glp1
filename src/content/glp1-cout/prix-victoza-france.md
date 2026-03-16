@@ -73,16 +73,16 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 | Dosage | Prix par stylo | Prix mensuel estimé |
 |--------|----------------|-------------------|
-| 6 mg/ml | 60,26 € | 60,26 € |
+| 6 mg/ml (2 stylos) | ~48,42 € | ~48,42-72,63 € selon posologie |
 
-**Prix moyen mensuel** : 60,26 € (traitement complet, baisse de prix depuis février 2025)
+**Prix moyen mensuel** : ~48,42 € pour 2 stylos préremplis (prix Vidal). Le coût mensuel dépend de la posologie quotidienne prescrite (1,2 mg ou 1,8 mg/jour)
 
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Victoza | 60,26 € | 65% (DT2 uniquement) |
-| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Victoza | ~48,42 € | 65% (DT2 uniquement) |
+| Ozempic | ~77,60 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 
@@ -200,7 +200,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 | Critère | Victoza | Ozempic | Trulicity |
 |---------|---------|--------|-----------|
-| Prix mensuel | 60,26 € | 90-120 € | ~81 € |
+| Prix mensuel | ~48,42 € | ~77,60 € | ~81 € |
 | Perte poids moyenne | -6% | -15% | -10% |
 | Remboursement | 65% (DT2) | 65% (DT2) | 65% (DT2) |
 | Rapport qualité/prix | Bon (prix bas) | Bon | Bon |
@@ -212,7 +212,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 Victoza reste pour l'instant un traitement au bon rapport prix/tolérance pour le diabète de type 2.
 
 ### Points clés à retenir :
-- **Prix moyen** : 60,26 €/mois (baisse février 2025)
+- **Prix moyen** : ~48,42 €/mois (prix Vidal pour 2 stylos)
 - **Remboursement Sécu** : 65%
 - **Mutuelle** : 15-30% supplémentaire
 - **Aides disponibles** : Pour revenus modestes

@@ -15,7 +15,7 @@ priority: 3
 
 # Sémaglutide Oral en Comprimé : Ce qui Arrive en France en 2026
 
-Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement GLP-1 chaque semaine, une alternative de plus en plus attendue se profile à l'horizon : le sémaglutide en comprimé. Cette forme orale du principe actif d'Ozempic et de Wegovy représente une avancée technologique majeure — et son arrivée en France est désormais une question de mois.
+Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement GLP-1 chaque semaine, une alternative de plus en plus attendue se profile à l'horizon : le sémaglutide en comprimé. Cette forme orale du principe actif d'[Ozempic (sémaglutide injectable)](/collections/traitements-glp1/guide-complet-ozempic/) et de Wegovy représente une avancée technologique majeure — et son arrivée en France est désormais une question de mois.
 
 ## Le sémaglutide oral existe déjà : Rybelsus, le précurseur
 

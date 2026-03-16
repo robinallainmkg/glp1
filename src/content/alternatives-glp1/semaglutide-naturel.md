@@ -56,7 +56,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Questions fréquentes (FAQ)
 
 ### Puis-je utiliser cette approche sans ordonnance ?
-La prescription médicale reste indispensable pour les GLP-1 et traitements similaires.
+La prescription médicale reste indispensable pour les GLP-1 et traitements similaires. Consultez notre [guide complet sur le sémaglutide (Ozempic)](/collections/traitements-glp1/guide-complet-ozempic/) pour comprendre le traitement médical de référence.
 
 ### Quelle est l'efficacité comparée ?
 Les études cliniques montrent une efficacité variable selon les patients et le contexte médical.
