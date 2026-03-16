@@ -790,7 +790,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="pipeline-header">
         <span class="pipeline-title">Flux de production</span>
         <span class="pipeline-total" id="pipelineTotal"></span>
-        <button class="pipeline-launch-btn" onclick="launchPipeline()">&#9654; Pipeline complet</button>
+        <button class="pipeline-launch-btn" id="pipelineAutopilotBtn" onclick="launchAutopilot()">&#9889; Autopilot</button>
       </div>
       <div class="pipeline-body" id="pipelineBody"></div>
       <div class="pipe-status-bar" id="pipelineBar"></div>
@@ -820,12 +820,12 @@ import { supabaseConfig } from '../../lib/supabase';
               Boucle infinie : audit &rarr; fact-check &rarr; opportunites &rarr; editorial &rarr; validator. Tourne jusqu'a epuisement des tokens.
             </div>
           </div>
-          <button onclick="copyCmd('claude -p \\'Lance l\\'autopilot. Boucle infinie, traite tout, ne t\\'arrete jamais.\\' --agent autopilot')" style="padding:0.5rem 1.25rem;border:1px solid #22c55e55;border-radius:8px;background:#0a1a0f;color:#4ade80;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;transition:all 0.2s;display:flex;align-items:center;gap:0.5rem;white-space:nowrap">
-            <span>&#128203;</span> Copier la commande
+          <button id="autopilotLaunchBtn" onclick="launchAutopilot()" style="padding:0.5rem 1.25rem;border:1px solid #22c55e55;border-radius:8px;background:#0a1a0f;color:#4ade80;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;transition:all 0.2s;display:flex;align-items:center;gap:0.5rem;white-space:nowrap">
+            <span>&#9654;</span> Lancer Autopilot
           </button>
-        </div>
-        <div style="margin-top:0.5rem;background:#0c1018;border:1px solid #1e293b;border-radius:6px;padding:0.4rem 0.75rem;font-size:0.6rem;color:#64748b;font-family:'JetBrains Mono',monospace;overflow-x:auto;white-space:nowrap" id="autopilotCmd">
-          claude -p "Lance l'autopilot. Boucle infinie, traite tout." --agent autopilot
+          <button id="autopilotStopBtn" onclick="stopAutopilot()" style="padding:0.5rem 1.25rem;border:1px solid #ef444455;border-radius:8px;background:#1a0a0a;color:#ef4444;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;transition:all 0.2s;display:none;align-items:center;gap:0.5rem;white-space:nowrap">
+            <span>&#9632;</span> Stopper Autopilot
+          </button>
         </div>
       </div>
 
@@ -974,19 +974,21 @@ import { supabaseConfig } from '../../lib/supabase';
     // Update autopilot status
     const apStatus = document.getElementById('autopilotStatus');
     const apRun = latest['autopilot'];
-    if (apStatus && apRun) {
-      if (apRun.status === 'started' || apRun.status === 'running') {
+    const apRunning = runningAgents['autopilot'] || (apRun && (apRun.status === 'started' || apRun.status === 'running'));
+    if (apStatus) {
+      if (apRunning) {
         apStatus.textContent = 'RUNNING';
         apStatus.style.background = '#0a1a0f';
         apStatus.style.color = '#22c55e';
         apStatus.style.animation = 'pulse-btn 2s infinite';
-      } else {
+      } else if (apRun) {
         apStatus.textContent = 'LAST: ' + timeAgo(apRun.completed_at || apRun.started_at);
         apStatus.style.background = '#052e16';
         apStatus.style.color = '#4ade80';
         apStatus.style.animation = 'none';
       }
     }
+    updateAutopilotButtons(!!apRunning);
     // Update individual agent statuses
     document.querySelectorAll('.launcher-agent-status').forEach(el => {
       const name = el.dataset.agent;
@@ -1116,24 +1118,29 @@ import { supabaseConfig } from '../../lib/supabase';
     } catch(e) {}
   }
 
-  async function launchPipeline() {
+  async function launchAutopilot() {
     if (!serverOnline) {
       alert('Agent Server non connecte !\n\nLance dans un terminal :\nnode scripts/agent-server.mjs');
       return;
     }
-    if (Object.keys(runningAgents).length > 0) {
-      alert('Des agents sont deja en cours: ' + Object.keys(runningAgents).join(', '));
+    if (runningAgents['autopilot']) {
+      alert('Autopilot est deja en cours.');
       return;
     }
-    if (!confirm('Lancer le pipeline complet ?\n\nVague 1 : seo-audit, analytics, fact-check, opportunities, internal-links\n\nLes 5 agents se lancent en parallele.\nEditorial et Validator a lancer ensuite.')) return;
+    if (!confirm('Lancer l\'Autopilot ?\n\nBoucle infinie : audit → fact-check → opportunites → editorial → validator.\nTourne jusqu\'a epuisement des tokens.\n\nContinuer ?')) return;
 
     try {
-      const r = await fetch(`${AGENT_SERVER}/pipeline`, { method: 'POST' });
+      const r = await fetch(`${AGENT_SERVER}/launch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: 'autopilot' })
+      });
       const data = await r.json();
       if (!data.ok) {
         alert('Erreur: ' + data.error);
         return;
       }
+      updateAutopilotButtons(true);
       await checkServer();
       await loadAgentRuns();
     } catch(e) {
@@ -1141,10 +1148,32 @@ import { supabaseConfig } from '../../lib/supabase';
     }
   }
 
+  async function stopAutopilot() {
+    if (!confirm('Stopper l\'Autopilot ?\n\nL\'agent sera arrete.')) return;
+    try {
+      await fetch(`${AGENT_SERVER}/stop`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: 'autopilot' })
+      });
+      updateAutopilotButtons(false);
+      await checkServer();
+      await loadAgentRuns();
+    } catch(e) {}
+  }
+
+  function updateAutopilotButtons(isRunning) {
+    const launchBtn = document.getElementById('autopilotLaunchBtn');
+    const stopBtn = document.getElementById('autopilotStopBtn');
+    if (launchBtn) launchBtn.style.display = isRunning ? 'none' : 'flex';
+    if (stopBtn) stopBtn.style.display = isRunning ? 'flex' : 'none';
+  }
+
   // Expose to onclick
   window.launchAgent = launchAgent;
   window.stopAgent = stopAgent;
-  window.launchPipeline = launchPipeline;
+  window.launchAutopilot = launchAutopilot;
+  window.stopAutopilot = stopAutopilot;
 
   // Clock
   function updateClock() {
