@@ -1,12 +1,13 @@
 ---
-title: "Prix Ozempic 2026 : Tarifs par Dosage et Remboursement"
-description: "Prix Ozempic 2026 : 77,60€/stylo, coût réel 40-55€/mois après remboursement 30%. Tarifs par dosage, mutuelles et aides."
+title: "Prix Ozempic France 2026 : Tarifs par Dosage et Remboursement"
+description: "Prix Ozempic France 2026 : 77,60€/stylo, coût réel 40-55€/mois après remboursement 30% en pharmacie. Tarifs par dosage, mutuelles et aides disponibles."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
-seoTitle: "Prix Ozempic 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
-seoDescription: "Prix Ozempic : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
+seoTitle: "Prix Ozempic France 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
+seoDescription: "Prix Ozempic France : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
 updatedAt: '2025-12-27'
+date: 2025-12-27
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12

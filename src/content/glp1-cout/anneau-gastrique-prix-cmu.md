@@ -1,7 +1,8 @@
 ---
-title: "Anneau Gastrique Prix CMU : Remboursement 2025"
-description: "Guide complet sur l'anneau gastrique et la CMU. Prix, conditions de remboursement, alternatives GLP-1, et parcours de soins détaillé pour patients éligibles."
+title: "Anneau Gastrique Prix et Remboursement CMU 2025"
+description: "Anneau gastrique prix remboursement CMU : coût de 3 000 à 6 000€, pris en charge sous conditions. Guide détaillé et alternatives GLP-1 pour patients éligibles."
 pubDate: 2025-08-23
+date: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]

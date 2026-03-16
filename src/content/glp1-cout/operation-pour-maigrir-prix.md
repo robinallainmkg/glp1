@@ -1,7 +1,8 @@
 ---
-title: "Prix et Coût Détaillé de ce traitement GLP-1 en France 2025"
-description: "Prix opération bariatrique en France : sleeve, bypass, anneau gastrique. Coût, remboursement Sécurité Sociale et comparatif avec les traitements GLP-1."
+title: "Opération Bariatrique : Prix, Remboursement et Coûts 2025"
+description: "Opération bariatrique prix remboursement : sleeve à 8 000€, bypass à 12 000€, pris en charge par la Sécu sous conditions. Comparatif avec les traitements GLP-1."
 pubDate: 2025-08-23
+date: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]

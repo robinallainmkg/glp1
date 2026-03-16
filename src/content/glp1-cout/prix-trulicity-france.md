@@ -1,11 +1,12 @@
 ---
-title: "Prix Trulicity 2026 : Remboursement et Mutuelle en France"
-description: "Prix Trulicity en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Trulicity."
+title: "Prix Trulicity France 2026 : Remboursement et Mutuelle"
+description: "Prix Trulicity France en pharmacie : remboursé à 65% pour le diabète de type 2. Coût réel, couverture mutuelle et aides financières pour votre traitement."
 keywords: ['prix trulicity', 'trulicity pharmacie', 'remboursement trulicity', 'mutuelle trulicity', 'coût traitement trulicity']
-seoTitle: "Prix Trulicity 2026 : Combien coûte Trulicity en France ?"
-seoDescription: "Prix Trulicity en pharmacie française, remboursement sécurité sociale, couverture mutuelle. Tout savoir sur le coût du traitement Trulicity."
+seoTitle: "Prix Trulicity France 2026 : Combien coûte Trulicity en pharmacie ?"
+seoDescription: "Prix Trulicity France en pharmacie : remboursé à 65% pour le DT2. Coût réel après remboursement sécurité sociale, couverture mutuelle et aides disponibles."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8

@@ -1,7 +1,8 @@
 ---
-title: "Guide Complet Wegovy 2025 : Tout Savoir"
-description: "Guide complet sur Wegovy 2025 : effets secondaires, dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée."
+title: "Wegovy : Effets Secondaires, Dangers et Précautions 2025"
+description: "Wegovy effets secondaires danger : nausées, pancréatite, risques cardiaques. Guide complet sur les dangers de Wegovy et recommandations médicales."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolerance"]

@@ -1,7 +1,8 @@
 ---
-title: "Acheter Wegovy en France : Guide Complet 2026"
-description: "Guide complet sur Comment Acheter Wegovy En France En 2025 : informations médicales et recommandations d'experts."
+title: "Acheter Wegovy en France en Pharmacie : Guide 2026"
+description: "Comment acheter Wegovy France pharmacie en 2026 : ordonnance obligatoire, prix, disponibilité et démarches pratiques pour obtenir votre traitement."
 pubDate: 2025-08-23
+date: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
