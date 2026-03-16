@@ -1,6 +1,6 @@
 ---
-title: "Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?"
-description: "Wegovy remboursement mutuelle 2026 : liste des mutuelles qui remboursent Wegovy, montants de remboursement, démarches et conseils pour réduire votre reste à charge. Guide complet mis à jour."
+title: "Wegovy Remboursement Mutuelle 2026 : Le Guide"
+description: "Wegovy remboursement mutuelle 2026 : mutuelles qui remboursent, montants, demarches et conseils pour reduire votre reste a charge."
 pubDate: 2025-08-23
 updatedAt: '2026-03-15'
 author: "Julien Lefèvre"
