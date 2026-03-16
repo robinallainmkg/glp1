@@ -1,0 +1,1525 @@
+---
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Espace - Coach GLP-1</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      min-height: 100vh;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .topbar-logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #16a34a;
+      text-decoration: none;
+    }
+    .topbar-logo span { color: #1e293b; }
+    .topbar-right { display: flex; align-items: center; gap: 0.75rem; }
+    .topbar-user {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+    .btn-logout {
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      background: white;
+      font-size: 0.75rem;
+      cursor: pointer;
+      color: #64748b;
+    }
+
+    /* Trial banner */
+    .trial-banner {
+      background: linear-gradient(135deg, #16a34a, #059669);
+      color: white;
+      padding: 0.6rem 1.25rem;
+      font-size: 0.82rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    .trial-banner strong { font-weight: 700; }
+
+    /* Main container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+
+    /* ===== AUTH SCREEN ===== */
+    .auth-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .auth-screen h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+    .auth-screen p {
+      color: #64748b;
+      margin-bottom: 2rem;
+      max-width: 400px;
+      line-height: 1.5;
+    }
+    .auth-box {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .auth-box h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+    .auth-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+    .auth-tab {
+      flex: 1;
+      padding: 0.6rem;
+      border: none;
+      background: #f8fafc;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #64748b;
+    }
+    .auth-tab.active { background: #16a34a; color: white; }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 0.3rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      outline: none;
+    }
+    .form-group input:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
+    .btn-primary {
+      width: 100%;
+      padding: 0.75rem;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    .btn-primary:hover { background: #15803d; }
+    .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn-google {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .btn-google:hover { background: #f8fafc; }
+    .auth-divider {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      margin: 1rem 0;
+      position: relative;
+    }
+    .auth-divider::before, .auth-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #e2e8f0;
+    }
+    .auth-divider::before { left: 0; }
+    .auth-divider::after { right: 0; }
+    .auth-error {
+      color: #dc2626;
+      font-size: 0.78rem;
+      margin-top: 0.5rem;
+      text-align: center;
+      display: none;
+    }
+    .auth-features {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 500px;
+    }
+    .auth-feature {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+    .auth-feature .icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+
+    /* ===== ONBOARDING ===== */
+    .onboarding {
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .onboarding-progress {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 2rem;
+    }
+    .onboarding-progress .step {
+      flex: 1;
+      height: 4px;
+      border-radius: 2px;
+      background: #e2e8f0;
+    }
+    .onboarding-progress .step.active { background: #16a34a; }
+    .onboarding-progress .step.done { background: #16a34a; }
+    .ob-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .ob-card h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+    .ob-card .subtitle {
+      color: #64748b;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .ob-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .ob-options.single { grid-template-columns: 1fr; }
+    .ob-option {
+      padding: 0.75rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .ob-option:hover { border-color: #16a34a; background: #f0fdf4; }
+    .ob-option.selected { border-color: #16a34a; background: #f0fdf4; color: #16a34a; font-weight: 700; }
+    .ob-option .emoji { font-size: 1.3rem; display: block; margin-bottom: 0.25rem; }
+    .ob-multi .ob-option.selected { border-color: #16a34a; background: #dcfce7; }
+    .ob-nav {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .ob-nav .btn-back {
+      padding: 0.7rem 1.25rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: white;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: #64748b;
+    }
+    .ob-nav .btn-next {
+      flex: 1;
+      padding: 0.7rem;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .ob-nav .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
+    .ob-input-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .ob-input-row .form-group { flex: 1; }
+
+    /* ===== DASHBOARD ===== */
+    .dash-greeting {
+      margin-bottom: 1.25rem;
+    }
+    .dash-greeting h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+    .dash-greeting p {
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      border: 1px solid #f1f5f9;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .card-header h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card-action {
+      font-size: 0.75rem;
+      color: #16a34a;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: none;
+      text-decoration: none;
+    }
+
+    /* Profile summary */
+    .profile-summary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+    .ps-item {
+      text-align: center;
+      padding: 0.6rem 0.25rem;
+      background: #f8fafc;
+      border-radius: 10px;
+    }
+    .ps-item .val {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .ps-item .lbl {
+      font-size: 0.65rem;
+      color: #64748b;
+      margin-top: 0.15rem;
+    }
+
+    /* Weight chart area */
+    .weight-chart {
+      height: 140px;
+      background: #f8fafc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .weight-chart canvas { width: 100%; height: 100%; }
+    .weight-chart .empty {
+      color: #94a3b8;
+      font-size: 0.82rem;
+    }
+    .checkin-form {
+      display: flex;
+      gap: 0.5rem;
+      align-items: end;
+    }
+    .checkin-form .form-group { flex: 1; margin-bottom: 0; }
+    .checkin-form .form-group input {
+      padding: 0.5rem 0.65rem;
+      font-size: 0.82rem;
+    }
+    .checkin-form .form-group select {
+      width: 100%;
+      padding: 0.5rem 0.65rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      outline: none;
+    }
+    .btn-checkin {
+      padding: 0.5rem 1rem;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* Programme */
+    .programme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .prog-item {
+      text-align: center;
+      padding: 1rem 0.5rem;
+      background: #f8fafc;
+      border-radius: 12px;
+    }
+    .prog-item .icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .prog-item .val {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .prog-item .unit {
+      font-size: 0.7rem;
+      color: #64748b;
+    }
+    .prog-item .lbl {
+      font-size: 0.72rem;
+      color: #64748b;
+      margin-top: 0.2rem;
+    }
+
+    /* Reminders */
+    .reminder-list { list-style: none; }
+    .reminder-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .reminder-item:last-child { border-bottom: none; }
+    .reminder-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .reminder-icon.injection { background: #dcfce7; }
+    .reminder-icon.rdv { background: #dbeafe; }
+    .reminder-icon.stock { background: #fef3c7; }
+    .reminder-icon.checkin { background: #f3e8ff; }
+    .reminder-info { flex: 1; }
+    .reminder-info .title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .reminder-info .when {
+      font-size: 0.72rem;
+      color: #64748b;
+    }
+    .btn-cal {
+      padding: 0.3rem 0.6rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      background: white;
+      font-size: 0.7rem;
+      cursor: pointer;
+      color: #16a34a;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Recommendations */
+    .reco-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .reco-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.85rem;
+      background: #f0fdf4;
+      border-radius: 10px;
+      border-left: 3px solid #16a34a;
+    }
+    .reco-item .reco-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .reco-item .reco-text {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: #1e293b;
+    }
+    .reco-item .reco-text strong { color: #16a34a; }
+
+    /* Coach CTA */
+    .coach-cta {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      border-radius: 14px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .coach-cta h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .coach-cta p {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+    .btn-coach {
+      display: inline-block;
+      padding: 0.65rem 1.5rem;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* Sections hidden by default */
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    /* Paywall */
+    .paywall-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(3px);
+    }
+    .paywall-overlay.open { display: flex; }
+    .paywall-box {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+    .paywall-box h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .paywall-box p {
+      color: #64748b;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .paywall-price {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #16a34a;
+    }
+    .paywall-price span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+    .paywall-features {
+      text-align: left;
+      margin: 1.25rem 0;
+      list-style: none;
+    }
+    .paywall-features li {
+      padding: 0.3rem 0;
+      font-size: 0.82rem;
+      color: #475569;
+    }
+    .paywall-features li::before {
+      content: '✓ ';
+      color: #16a34a;
+      font-weight: 700;
+    }
+    .btn-subscribe {
+      width: 100%;
+      padding: 0.85rem;
+      background: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+    }
+    .btn-dismiss-paywall {
+      border: none;
+      background: none;
+      color: #94a3b8;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .profile-summary { grid-template-columns: repeat(2, 1fr); }
+      .programme-grid { grid-template-columns: repeat(3, 1fr); }
+      .auth-features { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SCREEN 1: AUTH ===== -->
+  <div class="screen active" id="screenAuth">
+    <div class="auth-screen">
+      <h1>Votre Coach GLP-1</h1>
+      <p>Suivi personnalise, rappels d'injection, programme nutrition et sport adapte a votre traitement.</p>
+
+      <div class="auth-box">
+        <div class="auth-tabs">
+          <button class="auth-tab active" onclick="switchAuthTab('signup')">Creer un compte</button>
+          <button class="auth-tab" onclick="switchAuthTab('login')">Se connecter</button>
+        </div>
+
+        <button class="btn-google" onclick="signInGoogle()">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Continuer avec Google
+        </button>
+
+        <div class="auth-divider">ou par email</div>
+
+        <div id="authFormSignup">
+          <div class="form-group">
+            <label>Prenom</label>
+            <input type="text" id="signupName" placeholder="Votre prenom">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="signupEmail" placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label>Mot de passe</label>
+            <input type="password" id="signupPassword" placeholder="6 caracteres minimum">
+          </div>
+          <button class="btn-primary" onclick="signUpEmail()">Creer mon compte gratuit</button>
+        </div>
+
+        <div id="authFormLogin" style="display:none;">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label>Mot de passe</label>
+            <input type="password" id="loginPassword" placeholder="Mot de passe">
+          </div>
+          <button class="btn-primary" onclick="signInEmail()">Se connecter</button>
+        </div>
+
+        <div class="auth-error" id="authError"></div>
+      </div>
+
+      <div class="auth-features">
+        <div class="auth-feature">
+          <div class="icon">💉</div>
+          Rappels d'injection
+        </div>
+        <div class="auth-feature">
+          <div class="icon">📊</div>
+          Suivi du poids
+        </div>
+        <div class="auth-feature">
+          <div class="icon">🥗</div>
+          Plan nutrition
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCREEN 2: ONBOARDING ===== -->
+  <div class="screen" id="screenOnboarding">
+    <div class="topbar">
+      <a href="/" class="topbar-logo">GLP-1 <span>Coach</span></a>
+      <span style="font-size:0.82rem;color:#64748b;" id="obStepLabel">Etape 1/5</span>
+    </div>
+    <div class="onboarding">
+      <div class="onboarding-progress" id="obProgress">
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+      </div>
+      <div class="ob-card" id="obContent">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCREEN 3: DASHBOARD ===== -->
+  <div class="screen" id="screenDashboard">
+    <div class="topbar">
+      <a href="/" class="topbar-logo">GLP-1 <span>Coach</span></a>
+      <div class="topbar-right">
+        <span class="topbar-user" id="dashUserName"></span>
+        <button class="btn-logout" onclick="doLogout()">Deconnexion</button>
+      </div>
+    </div>
+    <div class="trial-banner" id="trialBanner" style="display:none;">
+      Essai gratuit — <strong id="trialDays">7 jours restants</strong>
+    </div>
+
+    <div class="container">
+      <div class="dash-greeting">
+        <h1 id="greetingText">Bonjour !</h1>
+        <p id="greetingSub">Voici votre suivi du jour</p>
+      </div>
+
+      <!-- Profile summary -->
+      <div class="card">
+        <div class="card-header">
+          <h3>👤 Mon profil</h3>
+          <button class="card-action" onclick="editProfile()">Modifier</button>
+        </div>
+        <div class="profile-summary" id="profileSummary">
+          <div class="ps-item"><div class="val" id="psWeight">-</div><div class="lbl">Poids actuel</div></div>
+          <div class="ps-item"><div class="val" id="psGoal">-</div><div class="lbl">Objectif</div></div>
+          <div class="ps-item"><div class="val" id="psTreatment">-</div><div class="lbl">Traitement</div></div>
+          <div class="ps-item"><div class="val" id="psDose">-</div><div class="lbl">Dose</div></div>
+        </div>
+      </div>
+
+      <!-- Weight tracking -->
+      <div class="card">
+        <div class="card-header">
+          <h3>📉 Mon suivi poids</h3>
+          <span class="card-action" id="weightDelta"></span>
+        </div>
+        <div class="weight-chart" id="weightChart">
+          <span class="empty">Enregistrez votre premier poids ci-dessous</span>
+        </div>
+        <div class="checkin-form">
+          <div class="form-group">
+            <label>Poids (kg)</label>
+            <input type="number" step="0.1" id="checkinWeight" placeholder="72.5">
+          </div>
+          <div class="form-group">
+            <label>Humeur</label>
+            <select id="checkinMood">
+              <option value="top">😄 Top</option>
+              <option value="bien" selected>🙂 Bien</option>
+              <option value="moyen">😐 Moyen</option>
+              <option value="difficile">😔 Difficile</option>
+            </select>
+          </div>
+          <button class="btn-checkin" onclick="saveCheckin()">Enregistrer</button>
+        </div>
+      </div>
+
+      <!-- Programme -->
+      <div class="card">
+        <div class="card-header">
+          <h3>🎯 Mon programme du jour</h3>
+        </div>
+        <div class="programme-grid">
+          <div class="prog-item">
+            <div class="icon">🥩</div>
+            <div class="val" id="progCalories">-</div>
+            <div class="unit">kcal</div>
+            <div class="lbl">Calories</div>
+          </div>
+          <div class="prog-item">
+            <div class="icon">💪</div>
+            <div class="val" id="progProtein">-</div>
+            <div class="unit">g</div>
+            <div class="lbl">Proteines</div>
+          </div>
+          <div class="prog-item">
+            <div class="icon">💧</div>
+            <div class="val" id="progWater">-</div>
+            <div class="unit">L</div>
+            <div class="lbl">Eau</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reminders -->
+      <div class="card">
+        <div class="card-header">
+          <h3>🔔 Mes rappels</h3>
+          <button class="card-action" onclick="exportAllCalendar()">📅 Exporter calendrier</button>
+        </div>
+        <ul class="reminder-list" id="reminderList">
+          <li class="reminder-item">
+            <div class="reminder-icon injection">💉</div>
+            <div class="reminder-info">
+              <div class="title">Prochaine injection</div>
+              <div class="when" id="reminderInjection">-</div>
+            </div>
+            <button class="btn-cal" onclick="exportICS('injection')">+ Calendrier</button>
+          </li>
+          <li class="reminder-item">
+            <div class="reminder-icon stock">📦</div>
+            <div class="reminder-info">
+              <div class="title">Commander stock</div>
+              <div class="when" id="reminderStock">Pensez a renouveler votre ordonnance</div>
+            </div>
+            <button class="btn-cal" onclick="exportICS('stock')">+ Calendrier</button>
+          </li>
+          <li class="reminder-item">
+            <div class="reminder-icon rdv">🩺</div>
+            <div class="reminder-info">
+              <div class="title">RDV medecin de suivi</div>
+              <div class="when" id="reminderRdv">Bilan sanguin recommande a 3 mois</div>
+            </div>
+            <button class="btn-cal" onclick="exportICS('rdv')">+ Calendrier</button>
+          </li>
+          <li class="reminder-item">
+            <div class="reminder-icon checkin">⚖️</div>
+            <div class="reminder-info">
+              <div class="title">Pesee hebdomadaire</div>
+              <div class="when">Chaque lundi matin a jeun</div>
+            </div>
+            <button class="btn-cal" onclick="exportICS('checkin')">+ Calendrier</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Recommendations -->
+      <div class="card">
+        <div class="card-header">
+          <h3>💡 Recommandations</h3>
+        </div>
+        <div class="reco-list" id="recoList">
+          <!-- Filled by JS based on profile -->
+        </div>
+      </div>
+
+      <!-- Coach CTA -->
+      <div class="coach-cta">
+        <h3>Une question ?</h3>
+        <p>Votre coach IA connait votre profil et peut vous aider en temps reel</p>
+        <a href="/" class="btn-coach">💬 Parler au Coach</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paywall -->
+  <div class="paywall-overlay" id="paywallOverlay">
+    <div class="paywall-box">
+      <h2>Votre essai gratuit est termine</h2>
+      <p>Continuez a beneficier de votre suivi personnalise</p>
+      <div class="paywall-price">9,90€ <span>/mois</span></div>
+      <ul class="paywall-features">
+        <li>Coach IA illimite avec votre profil</li>
+        <li>Suivi poids et courbe de progression</li>
+        <li>Programme nutrition et sport personnalise</li>
+        <li>Rappels injection et RDV</li>
+        <li>Recommandations adaptees a votre traitement</li>
+      </ul>
+      <button class="btn-subscribe" onclick="subscribe()">S'abonner — 9,90€/mois</button>
+      <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir a l'accueil</button>
+    </div>
+  </div>
+
+  <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
+    let sb, currentUser, profile;
+
+    async function initSb() {
+      if (sb) return sb;
+      const mod = await import('https://esm.sh/@supabase/supabase-js@2');
+      sb = mod.createClient(supabaseUrl, supabaseKey);
+      return sb;
+    }
+
+    // ===== AUTH =====
+    function showScreen(name) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('screen' + name).classList.add('active');
+    }
+
+    function switchAuthTab(tab) {
+      document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+      if (tab === 'signup') {
+        document.querySelectorAll('.auth-tab')[0].classList.add('active');
+        document.getElementById('authFormSignup').style.display = 'block';
+        document.getElementById('authFormLogin').style.display = 'none';
+      } else {
+        document.querySelectorAll('.auth-tab')[1].classList.add('active');
+        document.getElementById('authFormSignup').style.display = 'none';
+        document.getElementById('authFormLogin').style.display = 'block';
+      }
+    }
+
+    function showAuthError(msg) {
+      var el = document.getElementById('authError');
+      el.textContent = msg;
+      el.style.display = 'block';
+      setTimeout(function() { el.style.display = 'none'; }, 5000);
+    }
+
+    async function signInGoogle() {
+      var s = await initSb();
+      var { error } = await s.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: window.location.origin + '/mon-espace/' }
+      });
+      if (error) showAuthError(error.message);
+    }
+
+    async function signUpEmail() {
+      var s = await initSb();
+      var email = document.getElementById('signupEmail').value.trim();
+      var pw = document.getElementById('signupPassword').value;
+      var name = document.getElementById('signupName').value.trim();
+      if (!email || !pw) return showAuthError('Email et mot de passe requis');
+      if (pw.length < 6) return showAuthError('Mot de passe : 6 caracteres minimum');
+
+      var { data, error } = await s.auth.signUp({
+        email: email,
+        password: pw,
+        options: { data: { prenom: name } }
+      });
+      if (error) return showAuthError(error.message);
+      currentUser = data.user;
+      if (currentUser) onUserReady(name);
+    }
+
+    async function signInEmail() {
+      var s = await initSb();
+      var email = document.getElementById('loginEmail').value.trim();
+      var pw = document.getElementById('loginPassword').value;
+      if (!email || !pw) return showAuthError('Email et mot de passe requis');
+
+      var { data, error } = await s.auth.signInWithPassword({ email: email, password: pw });
+      if (error) return showAuthError(error.message);
+      currentUser = data.user;
+      if (currentUser) onUserReady();
+    }
+
+    async function doLogout() {
+      var s = await initSb();
+      await s.auth.signOut();
+      currentUser = null;
+      profile = null;
+      showScreen('Auth');
+    }
+
+    async function onUserReady(prenomHint) {
+      var s = await initSb();
+      // Check if profile exists
+      var { data } = await s.from('user_profiles').select('*').eq('user_id', currentUser.id).single();
+      if (data) {
+        profile = data;
+        showDashboard();
+      } else {
+        obData.prenom = prenomHint || currentUser.user_metadata?.prenom || '';
+        showScreen('Onboarding');
+        renderObStep();
+      }
+    }
+
+    // ===== ONBOARDING =====
+    var obStep = 0;
+    var obData = {
+      prenom: '',
+      status: '',
+      treatment: '',
+      current_dose: '',
+      injection_day: '',
+      weight_current: '',
+      weight_goal: '',
+      height_cm: '',
+      age: '',
+      gender: '',
+      sport_level: '',
+      sport_types: [],
+      diet_type: 'standard',
+    };
+
+    var obSteps = [
+      {
+        title: 'Ou en etes-vous ?',
+        subtitle: 'Cela nous permet d\'adapter votre experience',
+        field: 'status',
+        type: 'select',
+        options: [
+          { val: 'exploring', emoji: '🔍', label: 'Je me renseigne' },
+          { val: 'starting', emoji: '🚀', label: 'Je vais commencer' },
+          { val: 'ongoing', emoji: '💉', label: 'Deja en traitement' },
+          { val: 'paused', emoji: '⏸️', label: 'J\'ai arrete' },
+        ]
+      },
+      {
+        title: 'Votre traitement',
+        subtitle: 'Quel traitement prenez-vous ou envisagez-vous ?',
+        field: 'treatment',
+        type: 'select',
+        options: [
+          { val: 'ozempic', emoji: '💊', label: 'Ozempic' },
+          { val: 'wegovy', emoji: '💊', label: 'Wegovy' },
+          { val: 'mounjaro', emoji: '💊', label: 'Mounjaro' },
+          { val: 'saxenda', emoji: '💊', label: 'Saxenda' },
+          { val: 'other', emoji: '💊', label: 'Autre' },
+          { val: 'none', emoji: '❌', label: 'Aucun / Je ne sais pas' },
+        ]
+      },
+      {
+        title: 'Vos mensurations',
+        subtitle: 'Pour calculer vos besoins nutritionnels',
+        type: 'inputs',
+        inputs: [
+          { row: [
+            { field: 'weight_current', label: 'Poids actuel (kg)', type: 'number', placeholder: '82' },
+            { field: 'weight_goal', label: 'Poids objectif (kg)', type: 'number', placeholder: '68' },
+          ]},
+          { row: [
+            { field: 'height_cm', label: 'Taille (cm)', type: 'number', placeholder: '170' },
+            { field: 'age', label: 'Age', type: 'number', placeholder: '45' },
+          ]},
+          { field: 'gender', label: 'Genre', type: 'select-inline',
+            options: [
+              { val: 'femme', label: 'Femme' },
+              { val: 'homme', label: 'Homme' },
+              { val: 'autre', label: 'Autre' },
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Votre activite physique',
+        subtitle: 'Pour adapter votre programme',
+        field: 'sport_level',
+        type: 'select',
+        options: [
+          { val: 'sedentaire', emoji: '🛋️', label: 'Sedentaire' },
+          { val: 'leger', emoji: '🚶', label: 'Leger (marche)' },
+          { val: 'modere', emoji: '🏃', label: 'Modere' },
+          { val: 'actif', emoji: '💪', label: 'Actif' },
+          { val: 'sportif', emoji: '🏋️', label: 'Sportif' },
+        ]
+      },
+      {
+        title: 'Votre alimentation',
+        subtitle: 'Pour personnaliser vos recommandations',
+        field: 'diet_type',
+        type: 'select',
+        options: [
+          { val: 'standard', emoji: '🍽️', label: 'Standard' },
+          { val: 'vegetarien', emoji: '🥬', label: 'Vegetarien' },
+          { val: 'vegan', emoji: '🌱', label: 'Vegan' },
+          { val: 'sans-gluten', emoji: '🌾', label: 'Sans gluten' },
+          { val: 'keto', emoji: '🥑', label: 'Keto / Low-carb' },
+          { val: 'halal', emoji: '🍖', label: 'Halal' },
+        ]
+      },
+    ];
+
+    function renderObStep() {
+      var step = obSteps[obStep];
+      document.getElementById('obStepLabel').textContent = 'Etape ' + (obStep + 1) + '/' + obSteps.length;
+
+      // Progress
+      var steps = document.querySelectorAll('.onboarding-progress .step');
+      steps.forEach(function(s, i) {
+        s.className = 'step' + (i < obStep ? ' done' : '') + (i === obStep ? ' active' : '');
+      });
+
+      var html = '<h2>' + step.title + '</h2><p class="subtitle">' + step.subtitle + '</p>';
+
+      if (step.type === 'select') {
+        html += '<div class="ob-options">';
+        step.options.forEach(function(o) {
+          var sel = obData[step.field] === o.val ? ' selected' : '';
+          html += '<div class="ob-option' + sel + '" onclick="obSelect(\'' + step.field + '\',\'' + o.val + '\')">';
+          html += '<span class="emoji">' + o.emoji + '</span>' + o.label + '</div>';
+        });
+        html += '</div>';
+      } else if (step.type === 'inputs') {
+        step.inputs.forEach(function(inp) {
+          if (inp.row) {
+            html += '<div class="ob-input-row">';
+            inp.row.forEach(function(r) {
+              html += '<div class="form-group"><label>' + r.label + '</label>';
+              html += '<input type="' + r.type + '" value="' + (obData[r.field] || '') + '" placeholder="' + r.placeholder + '" onchange="obData[\'' + r.field + '\']=this.value"></div>';
+            });
+            html += '</div>';
+          } else if (inp.type === 'select-inline') {
+            html += '<div class="form-group"><label>' + inp.label + '</label></div>';
+            html += '<div class="ob-options" style="margin-bottom:1rem;">';
+            inp.options.forEach(function(o) {
+              var sel = obData[inp.field] === o.val ? ' selected' : '';
+              html += '<div class="ob-option' + sel + '" onclick="obSelect(\'' + inp.field + '\',\'' + o.val + '\')">' + o.label + '</div>';
+            });
+            html += '</div>';
+          }
+        });
+      }
+
+      // Nav
+      html += '<div class="ob-nav">';
+      if (obStep > 0) html += '<button class="btn-back" onclick="obPrev()">Retour</button>';
+      var isLast = obStep === obSteps.length - 1;
+      html += '<button class="btn-next" onclick="' + (isLast ? 'obFinish()' : 'obNext()') + '">' + (isLast ? 'Terminer ✓' : 'Suivant →') + '</button>';
+      html += '</div>';
+
+      document.getElementById('obContent').innerHTML = html;
+    }
+
+    function obSelect(field, val) {
+      obData[field] = val;
+      renderObStep();
+    }
+
+    function obNext() {
+      if (obStep < obSteps.length - 1) { obStep++; renderObStep(); }
+    }
+    function obPrev() {
+      if (obStep > 0) { obStep--; renderObStep(); }
+    }
+
+    async function obFinish() {
+      var s = await initSb();
+
+      // Calculate nutrition targets
+      var w = parseFloat(obData.weight_current) || 80;
+      var h = parseInt(obData.height_cm) || 170;
+      var a = parseInt(obData.age) || 40;
+      var g = obData.gender;
+
+      // Mifflin-St Jeor BMR
+      var bmr = g === 'homme'
+        ? (10 * w + 6.25 * h - 5 * a + 5)
+        : (10 * w + 6.25 * h - 5 * a - 161);
+
+      var activityMulti = { sedentaire: 1.2, leger: 1.375, modere: 1.55, actif: 1.725, sportif: 1.9 };
+      var tdee = bmr * (activityMulti[obData.sport_level] || 1.3);
+      var dailyCal = Math.round(tdee - 500); // Deficit for weight loss
+      if (dailyCal < 1200) dailyCal = 1200;
+
+      var proteinGoal = Math.round(w * 1.5); // 1.5g/kg under GLP-1
+      var waterGoal = Math.round((w * 0.035) * 10) / 10; // 35ml/kg
+
+      var profileData = {
+        user_id: currentUser.id,
+        prenom: obData.prenom,
+        email: currentUser.email,
+        status: obData.status,
+        treatment: obData.treatment,
+        current_dose: obData.current_dose || null,
+        injection_day: obData.injection_day || 'vendredi',
+        weight_current: parseFloat(obData.weight_current) || null,
+        weight_goal: parseFloat(obData.weight_goal) || null,
+        height_cm: parseInt(obData.height_cm) || null,
+        age: parseInt(obData.age) || null,
+        gender: obData.gender,
+        sport_level: obData.sport_level,
+        diet_type: obData.diet_type,
+        daily_calories: dailyCal,
+        protein_goal: proteinGoal,
+        water_goal: waterGoal,
+        subscription_plan: 'free',
+      };
+
+      var { data, error } = await s.from('user_profiles').upsert(profileData, { onConflict: 'user_id' }).select().single();
+      if (error) { console.error('Profile save error:', error); alert('Erreur: ' + error.message); return; }
+
+      profile = data;
+
+      // Save first weight checkin
+      if (obData.weight_current) {
+        await s.from('user_checkins').insert({
+          user_id: currentUser.id,
+          weight: parseFloat(obData.weight_current),
+          mood: 'bien',
+        });
+      }
+
+      showDashboard();
+    }
+
+    // ===== DASHBOARD =====
+    async function showDashboard() {
+      showScreen('Dashboard');
+
+      // Greeting
+      var hour = new Date().getHours();
+      var greet = hour < 12 ? 'Bonjour' : hour < 18 ? 'Bon apres-midi' : 'Bonsoir';
+      var name = profile.prenom || currentUser.email?.split('@')[0] || '';
+      document.getElementById('greetingText').textContent = greet + (name ? ', ' + name : '') + ' !';
+      document.getElementById('dashUserName').textContent = name || currentUser.email;
+
+      // Trial banner
+      if (!profile.is_subscribed) {
+        var trialEnd = new Date(profile.trial_end);
+        var now = new Date();
+        var daysLeft = Math.max(0, Math.ceil((trialEnd - now) / 86400000));
+        if (daysLeft > 0) {
+          document.getElementById('trialBanner').style.display = 'block';
+          document.getElementById('trialDays').textContent = daysLeft + ' jour' + (daysLeft > 1 ? 's' : '') + ' restant' + (daysLeft > 1 ? 's' : '');
+        } else {
+          document.getElementById('paywallOverlay').classList.add('open');
+        }
+      }
+
+      // Profile summary
+      var treatNames = { ozempic: 'Ozempic', wegovy: 'Wegovy', mounjaro: 'Mounjaro', saxenda: 'Saxenda', other: 'Autre', none: '-' };
+      document.getElementById('psWeight').textContent = profile.weight_current ? profile.weight_current + ' kg' : '-';
+      document.getElementById('psGoal').textContent = profile.weight_goal ? profile.weight_goal + ' kg' : '-';
+      document.getElementById('psTreatment').textContent = treatNames[profile.treatment] || profile.treatment || '-';
+      document.getElementById('psDose').textContent = profile.current_dose || '-';
+
+      // Programme
+      document.getElementById('progCalories').textContent = profile.daily_calories || '-';
+      document.getElementById('progProtein').textContent = profile.protein_goal || '-';
+      document.getElementById('progWater').textContent = profile.water_goal || '-';
+
+      // Injection reminder
+      if (profile.injection_day) {
+        var days = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+        var targetDay = days.indexOf(profile.injection_day);
+        var today = new Date();
+        var todayDay = today.getDay();
+        var diff = targetDay - todayDay;
+        if (diff <= 0) diff += 7;
+        if (diff === 7) {
+          document.getElementById('reminderInjection').textContent = 'Aujourd\'hui !';
+        } else if (diff === 1) {
+          document.getElementById('reminderInjection').textContent = 'Demain — ' + profile.injection_day;
+        } else {
+          document.getElementById('reminderInjection').textContent = 'Dans ' + diff + ' jours — ' + profile.injection_day;
+        }
+      }
+
+      // Load weight history
+      loadWeightHistory();
+
+      // Generate recommendations
+      generateRecommendations();
+    }
+
+    async function loadWeightHistory() {
+      var s = await initSb();
+      var { data: checkins } = await s.from('user_checkins')
+        .select('weight, checked_at, mood')
+        .eq('user_id', currentUser.id)
+        .order('checked_at', { ascending: true })
+        .limit(30);
+
+      if (!checkins || checkins.length === 0) return;
+
+      // Update current weight from latest
+      var latest = checkins[checkins.length - 1];
+      document.getElementById('psWeight').textContent = latest.weight + ' kg';
+
+      // Show delta
+      if (checkins.length >= 2) {
+        var first = checkins[0].weight;
+        var last = latest.weight;
+        var delta = (last - first).toFixed(1);
+        var prefix = delta > 0 ? '+' : '';
+        var color = delta <= 0 ? '#16a34a' : '#dc2626';
+        document.getElementById('weightDelta').innerHTML = '<span style="color:' + color + ';font-weight:700;">' + prefix + delta + ' kg</span>';
+      }
+
+      // Simple text chart (no canvas dependency)
+      var chartEl = document.getElementById('weightChart');
+      var weights = checkins.map(function(c) { return c.weight; });
+      var min = Math.min.apply(null, weights);
+      var max = Math.max.apply(null, weights);
+      var range = max - min || 1;
+
+      var bars = '';
+      checkins.forEach(function(c, i) {
+        var pct = ((c.weight - min) / range * 60) + 20;
+        var date = new Date(c.checked_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
+        var moodEmoji = { top: '😄', bien: '🙂', moyen: '😐', difficile: '😔' };
+        bars += '<div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">';
+        bars += '<div style="font-size:0.6rem;color:#64748b;margin-bottom:2px;">' + c.weight + '</div>';
+        bars += '<div style="width:100%;max-width:24px;background:#16a34a;border-radius:4px 4px 0 0;height:' + pct + '%;opacity:' + (0.4 + (i / checkins.length) * 0.6) + ';"></div>';
+        bars += '<div style="font-size:0.55rem;color:#94a3b8;margin-top:2px;">' + date + '</div>';
+        bars += '</div>';
+      });
+
+      chartEl.innerHTML = '<div style="display:flex;align-items:end;gap:2px;height:100%;width:100%;padding:8px;">' + bars + '</div>';
+    }
+
+    function generateRecommendations() {
+      var recos = [];
+      var p = profile;
+
+      // Treatment-specific
+      if (p.treatment === 'ozempic' || p.treatment === 'wegovy') {
+        recos.push({ icon: '💉', text: '<strong>Semaglutide</strong> — Augmentez progressivement la dose toutes les 4 semaines. Ne sautez jamais une injection.' });
+      } else if (p.treatment === 'mounjaro') {
+        recos.push({ icon: '💉', text: '<strong>Tirzepatide</strong> — Double action GIP/GLP-1. Injectez toujours dans l\'abdomen, la cuisse ou le bras.' });
+      }
+
+      // Protein
+      if (p.protein_goal) {
+        recos.push({ icon: '🥩', text: '<strong>' + p.protein_goal + 'g de proteines/jour</strong> — Essentiel sous GLP-1 pour preserver la masse musculaire. Repartissez sur 3 repas.' });
+      }
+
+      // Hydration
+      recos.push({ icon: '💧', text: '<strong>Hydratation</strong> — Buvez au moins ' + (p.water_goal || 2) + 'L d\'eau par jour. Les GLP-1 augmentent le risque de deshydratation.' });
+
+      // Sport-specific
+      if (p.sport_level === 'sedentaire') {
+        recos.push({ icon: '🚶', text: '<strong>Commencez doucement</strong> — 20 min de marche par jour suffisent pour commencer. Augmentez progressivement chaque semaine.' });
+      } else if (p.sport_level === 'leger' || p.sport_level === 'modere') {
+        recos.push({ icon: '🏃', text: '<strong>Ajoutez de la resistance</strong> — 2-3 seances de musculation legere par semaine pour maintenir la masse musculaire.' });
+      } else {
+        recos.push({ icon: '💪', text: '<strong>Maintenez l\'intensite</strong> — Votre niveau d\'activite est excellent. Privilegiez les proteines apres l\'effort.' });
+      }
+
+      // Nausea tip (common side effect)
+      recos.push({ icon: '🍽️', text: '<strong>Nausees</strong> — Mangez lentement, en petites portions. Evitez les aliments gras et epices les jours suivant l\'injection.' });
+
+      // Weight delta motivation
+      if (p.weight_current && p.weight_goal) {
+        var toGo = (p.weight_current - p.weight_goal).toFixed(1);
+        if (toGo > 0) {
+          recos.push({ icon: '🎯', text: '<strong>' + toGo + ' kg de votre objectif</strong> — A raison de 0.5-1kg/semaine avec un GLP-1, vous pouvez y etre dans ' + Math.round(toGo / 0.75) + ' semaines.' });
+        }
+      }
+
+      var html = '';
+      recos.forEach(function(r) {
+        html += '<div class="reco-item"><div class="reco-icon">' + r.icon + '</div><div class="reco-text">' + r.text + '</div></div>';
+      });
+      document.getElementById('recoList').innerHTML = html;
+    }
+
+    // ===== CHECKIN =====
+    async function saveCheckin() {
+      var w = parseFloat(document.getElementById('checkinWeight').value);
+      if (!w || w < 30 || w > 300) return alert('Entrez un poids valide');
+      var mood = document.getElementById('checkinMood').value;
+
+      var s = await initSb();
+      var { error } = await s.from('user_checkins').insert({
+        user_id: currentUser.id,
+        weight: w,
+        mood: mood,
+      });
+      if (error) return alert('Erreur: ' + error.message);
+
+      // Update profile weight
+      await s.from('user_profiles').update({ weight_current: w, updated_at: new Date().toISOString() }).eq('user_id', currentUser.id);
+      profile.weight_current = w;
+
+      document.getElementById('checkinWeight').value = '';
+      document.getElementById('psWeight').textContent = w + ' kg';
+      loadWeightHistory();
+      generateRecommendations();
+    }
+
+    // ===== CALENDAR EXPORT (.ics) =====
+    function exportICS(type) {
+      var now = new Date();
+      var event = {};
+
+      if (type === 'injection') {
+        var day = profile.injection_day || 'vendredi';
+        event = {
+          title: 'Injection ' + (profile.treatment || 'GLP-1'),
+          desc: 'Rappel injection hebdomadaire — ' + (profile.current_dose || '') + '\\nConseil: alternez les sites d\'injection',
+          freq: 'WEEKLY',
+          duration: '0030',
+        };
+      } else if (type === 'stock') {
+        event = {
+          title: 'Verifier stock ' + (profile.treatment || 'GLP-1'),
+          desc: 'Verifiez votre stock de stylos/seringues.\\nSi < 2 semaines de stock, renouvelez votre ordonnance.',
+          freq: 'MONTHLY',
+          duration: '0015',
+        };
+      } else if (type === 'rdv') {
+        event = {
+          title: 'RDV medecin — Bilan suivi GLP-1',
+          desc: 'Bilan sanguin recommande :\\n- Glycemie\\n- HbA1c\\n- Bilan lipidique\\n- Fonction renale',
+          freq: 'MONTHLY;INTERVAL=3',
+          duration: '0100',
+        };
+      } else if (type === 'checkin') {
+        event = {
+          title: 'Pesee hebdomadaire',
+          desc: 'Pesez-vous a jeun, le matin.\\nNotez votre poids sur glp1-france.fr/mon-espace/',
+          freq: 'WEEKLY',
+          duration: '0005',
+        };
+      }
+
+      // Generate .ics
+      var dtstart = formatICSDate(nextOccurrence(type));
+      var uid = type + '-' + Date.now() + '@glp1-france.fr';
+
+      var ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//GLP1 France//Coach//FR',
+        'BEGIN:VEVENT',
+        'UID:' + uid,
+        'DTSTART:' + dtstart,
+        'DURATION:PT' + (event.duration || '0030').replace(/^00/, '') + 'M',
+        'SUMMARY:' + event.title,
+        'DESCRIPTION:' + (event.desc || ''),
+        'RRULE:FREQ=' + (event.freq || 'WEEKLY'),
+        'BEGIN:VALARM',
+        'TRIGGER:-PT30M',
+        'ACTION:DISPLAY',
+        'DESCRIPTION:Rappel',
+        'END:VALARM',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+
+      var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'glp1-' + type + '.ics';
+      a.click();
+    }
+
+    function exportAllCalendar() {
+      ['injection', 'stock', 'rdv', 'checkin'].forEach(function(t) { exportICS(t); });
+    }
+
+    function nextOccurrence(type) {
+      var d = new Date();
+      if (type === 'injection') {
+        var days = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+        var target = days.indexOf(profile.injection_day || 'vendredi');
+        var diff = target - d.getDay();
+        if (diff <= 0) diff += 7;
+        d.setDate(d.getDate() + diff);
+        d.setHours(9, 0, 0);
+      } else if (type === 'checkin') {
+        var diff2 = 1 - d.getDay(); // Monday
+        if (diff2 <= 0) diff2 += 7;
+        d.setDate(d.getDate() + diff2);
+        d.setHours(7, 0, 0);
+      } else {
+        d.setDate(d.getDate() + 7);
+        d.setHours(10, 0, 0);
+      }
+      return d;
+    }
+
+    function formatICSDate(d) {
+      return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    }
+
+    function editProfile() {
+      obStep = 0;
+      obData = {
+        prenom: profile.prenom || '',
+        status: profile.status || '',
+        treatment: profile.treatment || '',
+        current_dose: profile.current_dose || '',
+        injection_day: profile.injection_day || '',
+        weight_current: profile.weight_current || '',
+        weight_goal: profile.weight_goal || '',
+        height_cm: profile.height_cm || '',
+        age: profile.age || '',
+        gender: profile.gender || '',
+        sport_level: profile.sport_level || '',
+        diet_type: profile.diet_type || '',
+      };
+      showScreen('Onboarding');
+      renderObStep();
+    }
+
+    function closePaywall() {
+      document.getElementById('paywallOverlay').classList.remove('open');
+      window.location.href = '/';
+    }
+
+    function subscribe() {
+      // TODO: Stripe integration
+      alert('Paiement Stripe bientot disponible ! Contactez-nous a robin@glp1-france.fr');
+    }
+
+    // ===== INIT =====
+    async function init() {
+      var s = await initSb();
+      var { data: { session } } = await s.auth.getSession();
+      if (session && session.user) {
+        currentUser = session.user;
+        onUserReady();
+      } else {
+        showScreen('Auth');
+      }
+
+      // Listen for auth changes (OAuth redirect)
+      s.auth.onAuthStateChange(function(event, session) {
+        if (event === 'SIGNED_IN' && session && session.user) {
+          currentUser = session.user;
+          onUserReady(session.user.user_metadata?.prenom);
+        }
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>
