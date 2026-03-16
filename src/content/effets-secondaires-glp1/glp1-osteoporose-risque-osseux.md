@@ -1,8 +1,8 @@
 ---
-title: "GLP-1 et Ostéoporose : Un Nouveau Risque Osseux Identifié en 2026"
-description: "Une étude portant sur 150 000 patients révèle un lien entre GLP-1 (Ozempic, Wegovy) et risque accru d'ostéoporose et de goutte. Que faut-il savoir pour protéger vos os ?"
+title: "GLP-1 et Ostéoporose : Risque Osseux Identifié 2026"
+description: "GLP-1 (Ozempic, Wegovy) et risque osseux : une étude sur 150 000 patients révèle un lien avec l'ostéoporose et la goutte."
 keywords: ['glp1 ostéoporose', 'ozempic os fracture', 'glp1 risque osseux', 'wegovy ostéoporose', 'perte osseuse glp1', 'glp1 goutte']
-seoTitle: "GLP-1 et Ostéoporose : Risque Osseux et Goutte — Ce que Révèle l'Étude 2026"
+seoTitle: "GLP-1 et Ostéoporose : Risque Osseux et Goutte en 2026"
 seoDescription: "Étude AAOS 2026 sur 150 000 patients : les GLP-1 augmentent le risque d'ostéoporose et de goutte. Prévention, surveillance et recommandations pour protéger vos os."
 publishedAt: '2026-03-16'
 updatedAt: '2026-03-16'
@@ -114,7 +114,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liee a l'amaigrissement. Il est recommande de pratiquer au moins 30 minutes d'exercice avec mise en charge par jour.
 
-**Apport proteique suffisant** : Les proteines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommande de consommer 1,2 a 1,5 g de proteines par kg de poids ideal par jour pour preserver la masse maigre.
+**[Apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/)** : Les proteines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommande de consommer 1,2 a 1,5 g de proteines par kg de poids ideal par jour pour preserver la masse maigre.
 
 **Hydratation** : Une bonne hydratation aide a eliminer l'acide urique et reduit le risque de goutte. Il est conseille de boire au moins 1,5 a 2 litres d'eau par jour.
 
@@ -124,7 +124,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 A la date de mars 2026, ni l'Agence Europeenne des Medicaments (EMA) ni l'ANSM francaise n'ont emis d'alerte specifique sur le risque osseux des GLP-1. Les resultats de l'etude AAOS sont recents et necessitent une confirmation par d'autres etudes independantes avant d'entrainer une modification des recommandations officielles.
 
-Cependant, les RCP (Resumes des Caracteristiques du Produit) d'Ozempic et de Wegovy mentionnent deja la perte de masse maigre comme un effet possible, et les medecins prescripteurs sont invites a surveiller l'etat nutritionnel de leurs patients.
+Cependant, les RCP (Resumes des Caracteristiques du Produit) d'Ozempic et de Wegovy mentionnent deja la [fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) comme un effet possible, et les medecins prescripteurs sont invites a surveiller l'etat nutritionnel de leurs patients.
 
 ### Position des societes savantes
 

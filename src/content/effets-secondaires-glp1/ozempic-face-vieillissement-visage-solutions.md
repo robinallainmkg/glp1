@@ -1,6 +1,6 @@
 ---
 title: "Ozempic Face : Vieillissement du Visage sous GLP-1 et Solutions en France"
-description: "L'Ozempic Face désigne le vieillissement facial accéléré observé sous GLP-1 : joues creuses, perte de volume, rides marquées. Causes, mécanismes et solutions esthétiques disponibles en France."
+description: "L'Ozempic Face : joues creuses et rides sous GLP-1. Causes, mécanismes et solutions esthétiques disponibles en France."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Sophie Dubois"

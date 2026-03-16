@@ -1,6 +1,6 @@
 ---
 title: "Effets Secondaires Zepbound : Guide Complet et Gestion 2025"
-description: "Découvrez les effets secondaires de Zepbound (tirzepatide). Guide complet des symptômes, fréquence, gestion pratique et conseils pour minimiser les risques de ce traitement GLP-1."
+description: "Effets secondaires de Zepbound (tirzepatide) : symptômes, fréquence et conseils pratiques pour minimiser les risques du traitement."
 pubDate: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Effets Secondaires"

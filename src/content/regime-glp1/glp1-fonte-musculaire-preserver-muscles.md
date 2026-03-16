@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Fonte Musculaire : Comment Préserver vos Muscles sous Traitement"
+title: "GLP-1 et Fonte Musculaire : Préserver ses Muscles"
 description: "Jusqu'à 40% de la perte de poids sous GLP-1 peut être de la masse musculaire. Découvrez les stratégies éprouvées pour préserver vos muscles : apport protéique, musculation et suivi adapté."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
@@ -53,7 +53,7 @@ Dans les essais cliniques des GLP-1, les données de composition corporelle mont
 
 ### Pourquoi c'est important
 
-La masse musculaire n'est pas seulement une question d'apparence. Elle joue un rôle fondamental dans le métabolisme de base (un kilogramme de muscle brûle environ 13 calories par jour au repos, contre 4,5 pour un kilogramme de graisse), la régulation de la glycémie (le muscle est le principal consommateur de glucose), la prévention des chutes et fractures (surtout après 60 ans), la santé osseuse et l'autonomie au quotidien.
+La masse musculaire n'est pas seulement une question d'apparence. Elle joue un rôle fondamental dans le métabolisme de base (un kilogramme de muscle brûle environ 13 calories par jour au repos, contre 4,5 pour un kilogramme de graisse), la régulation de la glycémie (le muscle est le principal consommateur de glucose), la prévention des chutes et fractures (surtout après 60 ans), la [santé osseuse et le risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) et l'autonomie au quotidien.
 
 ### Le risque de sarcopénie
 

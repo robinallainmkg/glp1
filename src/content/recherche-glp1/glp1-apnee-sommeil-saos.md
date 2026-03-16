@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Apnée du Sommeil : Le Tirzépatide Réduit le SAOS de 60%"
-description: "Les études SURMOUNT-OSA montrent que le tirzépatide réduit l'apnée du sommeil de 55 à 63%. Le sémaglutide montre aussi des bénéfices. Guide complet sur GLP-1 et SAOS."
+description: "SURMOUNT-OSA : le tirzépatide réduit l'apnée du sommeil de 55 à 63%. Sémaglutide aussi efficace. Guide complet GLP-1 et SAOS."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Julien Lefèvre"

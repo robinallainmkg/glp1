@@ -1,6 +1,6 @@
 ---
 title: "Effets Secondaires Insulevel : Guide Complet"
-description: "Guide complet sur les effets secondaires d'Insulevel. Troubles digestifs, réactions allergiques, contre-indications et précautions d'usage. Informations médicales vérifiées 2025."
+description: "Effets secondaires d'Insulevel : troubles digestifs, allergies, contre-indications et précautions d'usage. Guide médical vérifié 2025."
 pubDate: 2025-01-15T00:00:00.000Z
 author: Dr. Sarah Martin
 category: Guide médical

@@ -1,6 +1,6 @@
 ---
 title: "Mésusage des GLP-1 en France : Risques et Avis ANSM"
-description: "2,2% de mésusage identifié parmi les utilisateurs de GLP-1 en France. Détournement pour la perte de poids, risques sanitaires et mesures de l'ANSM pour sécuriser l'accès."
+description: "2,2% de mésusage des GLP-1 en France : détournement pour la perte de poids, risques sanitaires et mesures de l'ANSM."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"

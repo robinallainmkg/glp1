@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Stéatose Hépatique (MASH/NASH) : Vers une Nouvelle Indication en 2026"
-description: "Le sémaglutide montre une résolution de la NASH chez 56% des patients. Le survodutide est très prometteur. Découvrez comment les GLP-1 pourraient transformer le traitement du foie gras."
+description: "Sémaglutide : résolution de la NASH chez 56% des patients. GLP-1 et stéatose hépatique, la nouvelle indication prometteuse en 2026."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Julien Lefèvre"
