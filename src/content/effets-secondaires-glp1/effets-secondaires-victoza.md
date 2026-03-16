@@ -4,6 +4,7 @@ description: "Effets secondaires Victoza : nausées, vomissements, diarrhée. Co
 keywords: ['effets secondaires victoza', 'victoza nausées', 'victoza effets indésirables', 'risques victoza', 'tolérance victoza']
 seoTitle: "Effets Secondaires Victoza : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Victoza : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+date: '2025-01-28'
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
 featured: true

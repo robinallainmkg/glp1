@@ -4,6 +4,7 @@ description: "Effets secondaires Wegovy : nausées, vomissements, diarrhée. Com
 keywords: ['effets secondaires wegovy', 'wegovy nausées', 'wegovy effets indésirables', 'risques wegovy', 'tolérance wegovy']
 seoTitle: "Effets Secondaires Wegovy : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Wegovy : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+date: '2025-01-28'
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
 featured: true

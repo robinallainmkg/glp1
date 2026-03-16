@@ -1,7 +1,8 @@
 ---
-title: "Mésusage des GLP-1 en France : Risques et Avis ANSM"
-description: "2,2% de mésusage des GLP-1 en France : détournement pour la perte de poids, risques sanitaires et mesures de l'ANSM."
+title: "Mésusage GLP-1 France : Détournement Ozempic et Risques ANSM"
+description: "Mésusage GLP-1 France détournement Ozempic : 2,2% des patients sans indication médicale. Risques sanitaires, tensions d'approvisionnement et réponse de l'ANSM."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"

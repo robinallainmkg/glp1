@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Santé Mentale : Dépression, Apathie et Solutions"
-description: "Ozempic, Wegovy, Mounjaro peuvent causer apathie ou changements d'humeur. Effets psychologiques des GLP-1 : ce que dit la science et que faire."
+title: "Ozempic Dépression et Apathie : Effets Psychologiques des GLP-1"
+description: "Ozempic dépression apathie effets psychologiques : Wegovy, Mounjaro peuvent provoquer des changements d'humeur. Ce que dit la science et que faire en 2026."
 pubDate: 2026-03-15
+date: 2026-03-15
 updatedAt: 2026-03-15
 author: "Dr. Émilie Martin"
 category: "Effets secondaires GLP-1"

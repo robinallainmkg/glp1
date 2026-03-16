@@ -1,7 +1,8 @@
 ---
-title: "Guide Complet Ozempic 2025 : Tout Savoir"
-description: "Guide complet sur Ozempic 2025 : effets secondaires, dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée."
+title: "Ozempic Effets Secondaires et Risques : Guide Complet 2025"
+description: "Ozempic effets secondaires risques : dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée du sémaglutide en France."
 pubDate: 2025-08-10
+date: 2025-08-10
 author: "Karim Benali"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolerance"]

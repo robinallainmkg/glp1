@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Gastroparésie : Risque de Paralysie Gastrique"
-description: "GLP-1 et gastroparésie : mécanisme du ralentissement gastrique, symptômes, fréquence, et que faire. Risque anesthésique documenté par l'ANSM. Guide 2026."
+title: "GLP-1 et Gastroparésie : Ralentissement de la Vidange Gastrique"
+description: "GLP-1 gastroparésie vidange gastrique ralentissement : mécanisme, symptômes, fréquence et risque anesthésique documenté par l'ANSM. Guide complet 2026."
 pubDate: 2026-03-17
+date: 2026-03-17
 updatedAt: 2026-03-17
 author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"
