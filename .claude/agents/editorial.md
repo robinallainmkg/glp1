@@ -153,18 +153,27 @@ ON CONFLICT (slug) DO NOTHING;
 UPDATE content_opportunities SET status = 'published', updated_at = NOW() WHERE id = '<opp_id>';
 ```
 
-### 5. Git workflow
+### 5. Git workflow — Commit, merge et deploy
 
 Apres toutes les modifications :
 
-1. Cree une branche : `git checkout -b editorial/<date>-corrections`
-2. Stage les fichiers modifies : `git add src/content/...`
-3. Commit : `git commit -m "editorial: apply <n> corrections, <n> links, <n> new articles"`
-4. Push : `git push origin editorial/<date>-corrections`
+1. Stage les fichiers modifies directement sur `main` : `git add src/content/...`
+2. Commit sur `main` : `git commit -m "editorial: apply <n> corrections, <n> links, <n> new articles"`
+3. Push main : `git push origin main`
+4. **Merge sur production et deploy** :
+```bash
+git checkout production
+git pull origin production --rebase
+git merge main --no-edit
+git push origin production
+git checkout main
+```
 
-### 6. Post-push : marquer les tickets deployed
+**IMPORTANT** : Ne PAS creer de branche separee. Committer directement sur `main` puis merger sur `production`. Le push sur `production` declenche le deploy FTP automatique via GitHub Actions.
 
-Apres le push reussi, marque tous les tickets traites :
+### 6. Post-deploy : marquer les tickets deployed
+
+Apres le push sur `production` reussi, marque tous les tickets traites :
 ```sql
 UPDATE correction_tickets SET statut = 'deployed', deployed_at = NOW()
 WHERE statut = 'ready_to_deploy'
