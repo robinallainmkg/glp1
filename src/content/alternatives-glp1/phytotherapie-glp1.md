@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Phytotherapie GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "phytothérapie GLP-1 plantes médicinales"
 
 # Configuration Affiliation
 enableAffiliation: true

@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Acupuncture GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "acupuncture GLP-1 diabète"
 
 # Configuration Affiliation
 enableAffiliation: true

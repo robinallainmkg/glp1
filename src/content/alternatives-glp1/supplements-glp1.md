@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Supplements GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "suppléments naturels GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true

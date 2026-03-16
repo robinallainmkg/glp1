@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Alternatives Bio GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "alternatives bio GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true

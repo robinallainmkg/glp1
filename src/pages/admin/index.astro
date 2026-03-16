@@ -801,6 +801,40 @@ import { supabaseConfig } from '../../lib/supabase';
       &#9888; Agent Server hors ligne &mdash; lance <code style="background:#111827;padding:0.1rem 0.3rem;border-radius:3px">node scripts/agent-server.mjs</code> dans un terminal
     </div>
 
+    <!-- Agent Launcher -->
+    <div class="launcher-section" style="background:#111827;border:1px solid #1e293b;border-radius:10px;overflow:hidden;margin-bottom:1.5rem">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.25rem;border-bottom:1px solid #1e293b">
+        <span style="font-size:0.72rem;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:0.08em">&#127919; Agent Launcher</span>
+        <span style="font-size:0.55rem;color:#374151">Copie la commande, colle dans un terminal</span>
+      </div>
+
+      <!-- Autopilot — Hero button -->
+      <div style="padding:1rem 1.25rem;border-bottom:1px solid #1e293b;background:linear-gradient(135deg,#0a1a0f 0%,#111827 100%)">
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+          <div style="flex:1;min-width:200px">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
+              <span style="font-size:0.85rem;font-weight:700;color:#4ade80">&#9889; Autopilot</span>
+              <span id="autopilotStatus" style="font-size:0.5rem;padding:0.1rem 0.4rem;border-radius:3px;font-weight:600;background:#052e16;color:#4ade80">IDLE</span>
+            </div>
+            <div style="font-size:0.58rem;color:#64748b;line-height:1.5">
+              Boucle infinie : audit &rarr; fact-check &rarr; opportunites &rarr; editorial &rarr; validator. Tourne jusqu'a epuisement des tokens.
+            </div>
+          </div>
+          <button onclick="copyCmd('claude -p \\'Lance l\\'autopilot. Boucle infinie, traite tout, ne t\\'arrete jamais.\\' --agent autopilot')" style="padding:0.5rem 1.25rem;border:1px solid #22c55e55;border-radius:8px;background:#0a1a0f;color:#4ade80;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;transition:all 0.2s;display:flex;align-items:center;gap:0.5rem;white-space:nowrap">
+            <span>&#128203;</span> Copier la commande
+          </button>
+        </div>
+        <div style="margin-top:0.5rem;background:#0c1018;border:1px solid #1e293b;border-radius:6px;padding:0.4rem 0.75rem;font-size:0.6rem;color:#64748b;font-family:'JetBrains Mono',monospace;overflow-x:auto;white-space:nowrap" id="autopilotCmd">
+          claude -p "Lance l'autopilot. Boucle infinie, traite tout." --agent autopilot
+        </div>
+      </div>
+
+      <!-- Individual agents grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;padding:0" id="launcherGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
     <!-- Agent Console -->
     <div class="console-section" id="consoleSection">
       <div class="console-header">
@@ -871,6 +905,110 @@ import { supabaseConfig } from '../../lib/supabase';
     if (!ms) return '';
     if (ms < 60000) return Math.round(ms / 1000) + 's';
     return Math.floor(ms / 60000) + 'min ' + Math.round((ms % 60000) / 1000) + 's';
+  }
+
+  // --- Agent Launcher ---
+  const AGENT_COMMANDS = {
+    'autopilot': { cmd: "claude -p \"Lance l'autopilot. Boucle infinie, traite tout.\" --agent autopilot", color: '#4ade80', icon: '⚡' },
+    'strategist': { cmd: "claude -p \"Analyse le pipeline et decide des actions\" --agent strategist", color: '#f59e0b', icon: '🧠' },
+    'seo-audit': { cmd: "claude -p \"Lance un audit SEO complet\" --agent seo-audit", color: '#38bdf8', icon: '🔍' },
+    'analytics': { cmd: "claude -p \"Analyse les keywords et positions\" --agent analytics", color: '#4ade80', icon: '📊' },
+    'fact-check': { cmd: "claude -p \"Verifie les articles medicaux\" --agent fact-check", color: '#fbbf24', icon: '✓' },
+    'opportunities': { cmd: "claude -p \"Detecte les gaps de contenu\" --agent opportunities", color: '#c084fc', icon: '💡' },
+    'editorial': { cmd: "claude -p \"Traite les tickets et corrections\" --agent editorial", color: '#67e8f9', icon: '✏️' },
+    'validator': { cmd: "claude -p \"Valide le site complet\" --agent validator", color: '#38bdf8', icon: '🛡' },
+    'internal-links': { cmd: "claude -p \"Analyse le maillage interne\" --agent internal-links", color: '#4ade80', icon: '🔗' },
+    'ui-designer': { cmd: "claude -p \"Ameliore le design du site\" --agent ui-designer", color: '#ec4899', icon: '🎨' },
+  };
+
+  function copyCmd(cmd) {
+    navigator.clipboard.writeText(cmd).then(() => {
+      const btn = event.currentTarget;
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<span>✓</span> Copié !';
+      btn.style.borderColor = '#22c55e';
+      btn.style.color = '#22c55e';
+      setTimeout(() => { btn.innerHTML = orig; btn.style.borderColor = ''; btn.style.color = ''; }, 1500);
+    }).catch(() => {
+      // Fallback: select text
+      const ta = document.createElement('textarea');
+      ta.value = cmd;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    });
+  }
+
+  function buildLauncherGrid() {
+    const grid = document.getElementById('launcherGrid');
+    if (!grid) return;
+    const agentList = ['strategist','seo-audit','analytics','fact-check','opportunities','editorial','validator','internal-links','ui-designer'];
+    grid.innerHTML = agentList.map(name => {
+      const a = AGENT_COMMANDS[name];
+      const agent = AGENTS.find(x => x.name === name);
+      const desc = agent ? agent.desc : '';
+      return `
+        <div style="padding:0.6rem 1rem;border-right:1px solid #1e293b;border-bottom:1px solid #1e293b;display:flex;align-items:center;gap:0.6rem;transition:background 0.2s;cursor:pointer" onclick="copyCmd('${a.cmd.replace(/'/g, "\\'")}')" title="Cliquer pour copier la commande">
+          <span style="font-size:1rem;flex-shrink:0">${a.icon}</span>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:0.65rem;font-weight:700;color:${a.color}">${name}</div>
+            <div style="font-size:0.5rem;color:#475569;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${desc}</div>
+          </div>
+          <span class="launcher-agent-status" data-agent="${name}" style="font-size:0.48rem;padding:0.08rem 0.3rem;border-radius:3px;font-weight:600;background:#111827;color:#374151;flex-shrink:0">IDLE</span>
+          <span style="font-size:0.6rem;color:#374151;flex-shrink:0" title="Copier">📋</span>
+        </div>`;
+    }).join('');
+  }
+  buildLauncherGrid();
+
+  // Update launcher statuses from agent_runs
+  function updateLauncherStatuses(runs) {
+    if (!runs) return;
+    const latest = {};
+    runs.forEach(r => {
+      if (!latest[r.agent_name] || new Date(r.started_at) > new Date(latest[r.agent_name].started_at)) {
+        latest[r.agent_name] = r;
+      }
+    });
+    // Update autopilot status
+    const apStatus = document.getElementById('autopilotStatus');
+    const apRun = latest['autopilot'];
+    if (apStatus && apRun) {
+      if (apRun.status === 'started' || apRun.status === 'running') {
+        apStatus.textContent = 'RUNNING';
+        apStatus.style.background = '#0a1a0f';
+        apStatus.style.color = '#22c55e';
+        apStatus.style.animation = 'pulse-btn 2s infinite';
+      } else {
+        apStatus.textContent = 'LAST: ' + timeAgo(apRun.completed_at || apRun.started_at);
+        apStatus.style.background = '#052e16';
+        apStatus.style.color = '#4ade80';
+        apStatus.style.animation = 'none';
+      }
+    }
+    // Update individual agent statuses
+    document.querySelectorAll('.launcher-agent-status').forEach(el => {
+      const name = el.dataset.agent;
+      const run = latest[name];
+      if (!run) return;
+      if (run.status === 'started' || run.status === 'running') {
+        el.textContent = 'RUNNING';
+        el.style.background = '#0a1a0f';
+        el.style.color = '#22c55e';
+        el.style.animation = 'pulse-btn 2s infinite';
+      } else if (run.status === 'completed') {
+        el.textContent = timeAgo(run.completed_at || run.started_at);
+        el.style.background = '#052e16';
+        el.style.color = '#4ade80';
+        el.style.animation = 'none';
+      } else if (run.status === 'error') {
+        el.textContent = 'ERROR';
+        el.style.background = '#450a0a';
+        el.style.color = '#f87171';
+        el.style.animation = 'none';
+      }
+    });
   }
 
   function formatTime(dateStr) {
@@ -1312,6 +1450,7 @@ import { supabaseConfig } from '../../lib/supabase';
       agentRuns = latest;
       renderPipeline();
       renderTimeline();
+      updateLauncherStatuses(runs);
     } catch (e) {}
   }
 
