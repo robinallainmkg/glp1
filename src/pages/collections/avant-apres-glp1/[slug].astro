@@ -1,0 +1,138 @@
+---
+import { getCollection } from "astro:content";
+import ArticleWithAffiliateSidebar from "../../../layouts/ArticleWithAffiliateSidebar.astro";
+import { getAllAffiliateProducts } from "../../../lib/affiliate.ts";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("avant-apres-glp1");
+  return articles.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Récupération des produits d'affiliation
+const affiliateProducts = await getAllAffiliateProducts();
+
+// Configuration d'affiliation pour les avant-après
+const affiliateConfig = {
+  enableAutoInjection: true,
+  mobileStrategy: "both",
+  maxInlineProducts: 2,
+  injectionStrategy: "auto",
+  priorityBrands: ["Talika", "Nutrimuscle"],
+};
+---
+
+<ArticleWithAffiliateSidebar
+  title={entry.data.title}
+  description={entry.data.description}
+  author={entry.data.author}
+  image={entry.data.image}
+  article={entry}
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+  detectedCategory="avant-apres-glp1"
+>
+  <div class="testimonial-container">
+    <Content />
+  </div>
+</ArticleWithAffiliateSidebar>
+
+<style>
+  .testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .transformation-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e8f4fd 100%);
+    border-radius: 16px;
+    border: 2px solid #3b82f6;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #3b82f6;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 600;
+  }
+
+  :global(.testimonial-container blockquote) {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #374151;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  :global(.testimonial-container h2) {
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  :global(.testimonial-container h3) {
+    color: #374151;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  :global(.testimonial-container ul) {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  :global(.testimonial-container li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-container {
+      padding: 1rem;
+    }
+
+    .transformation-stats {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>

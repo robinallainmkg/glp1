@@ -90,7 +90,7 @@ mainKeyword: "temoignage ozempic perte de poids"
 
 ### Activité Physique
 - **Avant :** Marche occasionnelle
-- **Après :** Aquagym 2x/semaine + marche nordique
+- **Après :** Aquagym 2x/semaine + marche nordique pour [préserver la masse musculaire sous Ozempic](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 
 ### Énergie
 - **Avant :** Fatigue constante, essoufflement

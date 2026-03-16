@@ -1,5 +1,5 @@
 ---
-title: "iSGLT2 : Liste des Médicaments, Prix et Combinaison avec les GLP-1"
+title: "iSGLT2 : Liste des Médicaments et Combinaison avec GLP-1"
 draft: true
 description: "Liste complète des médicaments iSGLT2 en France (Jardiance, Forxiga, Invokana). Prix, remboursement et combinaison avec les GLP-1."
 pubDate: 2025-08-20

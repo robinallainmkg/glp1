@@ -480,7 +480,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 
 **Aide et Questions :**
 - 💊 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
-- 🤝 [Témoignages de patients GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)
+- 🤝 [Témoignages de patients GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels)
 
 ---
 

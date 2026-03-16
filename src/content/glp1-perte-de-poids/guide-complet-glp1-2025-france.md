@@ -72,7 +72,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 ### Résultats Cliniques Prouvés
 
-**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France.
+**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France. Pour aller plus loin, consultez les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de vrais patients.
 
 - **Perte de poids moyenne :** 8-15% du poids corporel en 6-12 mois
 - **Ozempic/Wegovy :** Jusqu'à 15-20% de perte de poids (jusqu'à 15kg)

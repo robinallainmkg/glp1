@@ -1,5 +1,5 @@
 ---
-title: "Peut On Guerir Du Diabète : Guide Complet et Conseils Pratiques 2025"
+title: "Peut-on Guérir du Diabète de Type 2 ? Guide Complet 2025"
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Peut-on guérir du diabète ? Rémission possible, facteurs de réussite, rôle des GLP-1 et stratégies pour contrôler durablement votre glycémie."

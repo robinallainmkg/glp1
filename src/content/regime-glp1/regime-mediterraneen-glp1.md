@@ -1,5 +1,5 @@
 ---
-title: "Régime Mediterraneen GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Régime Méditerranéen et GLP-1 : Guide Complet et Conseils"
 draft: true
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"

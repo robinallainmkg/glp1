@@ -158,7 +158,7 @@ Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'ef
 Victoza est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Consultez notre guide sur les [prix Victoza en France](/collections/glp1-cout/prix-victoza-france/) pour le détail des tarifs depuis février 2025. Depuis le 1er février 2025, un formulaire de prescription obligatoire doit accompagner l'ordonnance pour que le remboursement soit effectif.
 
 ### Puis-je arrêter Victoza brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale.
+Non, l'arrêt doit être progressif sous surveillance médicale. Pour comprendre ce qui se passe après l'[arrêt du traitement Victoza et la reprise de poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/), consultez notre guide dédié.
 
 ---
 

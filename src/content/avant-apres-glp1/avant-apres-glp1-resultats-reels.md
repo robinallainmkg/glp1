@@ -147,7 +147,7 @@ Pour des conseils détaillés selon votre traitement, consultez notre [guide du 
 Contrairement à une idée reçue, les GLP-1 ne font pas "fondre" les muscles. Mais la perte de poids rapide peut entraîner une perte de masse maigre si elle n'est pas accompagnée d'exercice. Les recommandations :
 
 - **30 minutes de marche rapide** par jour minimum
-- **Musculation légère** 2 à 3 fois par semaine pour préserver la masse musculaire
+- **Musculation légère** 2 à 3 fois par semaine pour préserver la masse musculaire — consultez notre guide [sport et exercice pour maximiser la transformation](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)
 - **Activités plaisantes** : on s'y tient mieux dans la durée
 
 ## Questions Fréquentes sur les Résultats Avant/Après

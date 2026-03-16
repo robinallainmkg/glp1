@@ -69,7 +69,7 @@ mainKeyword: "temoignage wegovy perte de poids"
 ### Phase 3 : La Finalisation (Mois 7-10)
 - **Perte :** 8 kilos supplémentaires
 - **Dosage :** 10 mg
-- **Défis :** Maintenir la motivation
+- **Défis :** [Maintenir les résultats après l'arrêt de Mounjaro](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) et garder la motivation
 - **Victoires :** Objectif atteint, nouvelle garde-robe
 
 ## Les Changements Concrets

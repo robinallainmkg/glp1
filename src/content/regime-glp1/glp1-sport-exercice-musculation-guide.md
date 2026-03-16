@@ -1,5 +1,5 @@
 ---
-title: "Sport et GLP-1 : Guide Complet Exercice et Musculation sous Traitement"
+title: "Sport et GLP-1 : Exercice et Musculation sous Traitement"
 description: "Pratiquer le sport et la musculation sous GLP-1 (Ozempic, Wegovy, Mounjaro). Exercices recommandés, timing et préservation musculaire."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
@@ -152,7 +152,7 @@ L'injection hebdomadaire de GLP-1 peut provoquer des nausées ou de la fatigue l
 
 ### Alimentation autour des séances
 
-Sous GLP-1, l'appétit est réduit, ce qui peut rendre la nutrition sportive plus difficile. Quelques principes essentiels :
+Sous GLP-1, l'appétit est réduit, ce qui peut rendre la nutrition sportive plus difficile. Pour éviter les carences, consultez notre guide sur les [micronutriments essentiels pour les sportifs sous GLP-1](/collections/regime-glp1/glp1-micronutriments/). Quelques principes essentiels :
 
 - **Avant la séance (1-2h)** : une collation légère riche en protéines et glucides complexes (yaourt grec + fruit, ou fromage blanc + céréales). Ne vous forcez pas si vous n'avez pas faim, mais assurez-vous d'être correctement hydraté.
 - **Après la séance (dans les 30-60 min)** : c'est la fenêtre anabolique. Consommez 20-30g de protéines (shake de protéines, blanc de poulet, œufs, fromage blanc). Cette étape est cruciale pour stimuler la récupération musculaire.

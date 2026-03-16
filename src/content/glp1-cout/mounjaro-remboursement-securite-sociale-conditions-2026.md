@@ -54,7 +54,7 @@ L'avis HAS et les pratiques habituelles de l'Assurance Maladie permettent d'anti
 
 ### Un IMC ≥ 35 comme seuil d'entrée
 
-La HAS a indiqué dans son avis que Mounjaro s'adresse en priorité aux patients présentant une **obésité sévère**, avec un **IMC supérieur ou égal à 35 kg/m²** associé à au moins une comorbidité (diabète de type 2, hypertension, dyslipidémie, apnée du sommeil, etc.).
+La HAS a indiqué dans son avis que Mounjaro s'adresse en priorité aux patients présentant une **obésité sévère**, avec un **IMC supérieur ou égal à 35 kg/m²** associé à au moins une comorbidité (diabète de type 2, hypertension, dyslipidémie, apnée du sommeil, etc.). Avant de commencer un traitement, lisez notre guide sur les [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) pour vous y préparer.
 
 Ce seuil est plus restrictif que l'AMM européenne de Mounjaro (indiqué pour les IMC ≥ 30), mais il est cohérent avec la politique habituelle de l'Assurance Maladie, qui concentre les remboursements sur les cas les plus sévères pour maîtriser les dépenses.
 
@@ -78,7 +78,7 @@ Depuis février 2025, un **formulaire de demande spécifique** est requis pour t
 
 ## Mounjaro vs Wegovy : pourquoi l'un sera remboursé et pas l'autre ?
 
-Une question revient souvent : pourquoi Mounjaro pourrait être remboursé alors que Wegovy (sémaglutide, Novo Nordisk) ne l'est pas ?
+Une question revient souvent : pourquoi Mounjaro pourrait être remboursé alors que Wegovy (sémaglutide, Novo Nordisk) ne l'est pas ? Pour choisir entre ces deux traitements, consultez notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 La différence tient à la stratégie de remboursement choisie par les laboratoires, mais aussi à l'indication prioritaire retenue par la HAS :
 

@@ -155,7 +155,7 @@ L'echec des essais EVOKE ne signifie pas la fin de la recherche sur les GLP-1 et
 L'interet pour les effets cerebraux des GLP-1 depasse largement Alzheimer. Des recherches sont en cours dans plusieurs domaines neurologiques, avec des resultats plus encourageants :
 
 - **Maladie de Parkinson** : Un essai de phase II avec l'exenatide (Byetta) a montre un ralentissement de la progression motrice chez les patients parkinsoniens. Des essais de phase III sont en cours.
-- **Addictions** : Les GLP-1 reduisent les comportements addictifs (alcool, tabac, opioides) en agissant sur le circuit de la recompense. Consultez notre article detaille sur les [GLP-1 et les addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/).
+- **Addictions** : Les GLP-1 reduisent les comportements addictifs (alcool, tabac, opioides) en agissant sur le circuit de la recompense. Consultez notre article detaille sur les [GLP-1 et les addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/). L'[essai ALBATROS sur les GLP-1 et l'alcool](/collections/recherche-glp1/glp1-alcool-reduction-consommation-essai-albatros-2025/) confirme ce mecanisme neurologique pour la reduction de la consommation d'alcool.
 - **Depression** : Des donnees observationnelles suggerent un effet positif des GLP-1 sur l'humeur, bien que le mecanisme soit complexe. Pour en savoir plus, consultez notre article sur les [GLP-1 et la sante mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
 
 ## L'importance de la rigueur scientifique

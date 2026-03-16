@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Stéatose Hépatique (MASH/NASH) : Vers une Nouvelle Indication en 2026"
+title: "GLP-1 et Stéatose Hépatique (MASH/NASH) : Nouvelle Indication 2026"
 description: "Sémaglutide : résolution de la NASH chez 56% des patients. GLP-1 et stéatose hépatique, la nouvelle indication prometteuse en 2026."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
@@ -124,7 +124,7 @@ Si le sémaglutide obtient l'indication MASH, cela représenterait un changement
 
 ### Qui est concerné ?
 
-En France, la MASH touche principalement les personnes présentant un syndrome métabolique : obésité abdominale, diabète de type 2, hypertension artérielle et/ou dyslipidémie. Si vous êtes traité par un GLP-1 pour votre diabète ou votre poids et que vous présentez également une stéatose hépatique, votre traitement actuel agit déjà de manière bénéfique sur votre foie. Les patients traités pour une stéatose hépatique bénéficient également de la [protection cardiovasculaire des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) démontrée dans plusieurs grandes études. L'obésité viscérale est aussi associée à d'autres comorbidités. Consultez notre article sur les [GLP-1 et apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) qui touchent fréquemment les mêmes patients.
+En France, la MASH touche principalement les personnes présentant un syndrome métabolique : obésité abdominale, diabète de type 2, hypertension artérielle et/ou dyslipidémie. Si vous êtes traité par un GLP-1 pour votre diabète ou votre poids et que vous présentez également une stéatose hépatique, votre traitement actuel agit déjà de manière bénéfique sur votre foie. Les patients traités pour une stéatose hépatique bénéficient également de la [protection cardiovasculaire des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) démontrée dans plusieurs grandes études. L'obésité viscérale est aussi associée à d'autres comorbidités. Consultez notre article sur les [GLP-1 et apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) qui touchent fréquemment les mêmes patients. Les GLP-1 agissent également sur la [réduction de la consommation d'alcool](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/), facteur aggravant de la stéatose.
 
 ### Le dépistage
 

@@ -109,7 +109,7 @@ La meilleure solution est de prévenir l'Ozempic Face plutôt que de le corriger
 
 ### Adopter une perte de poids progressive
 
-Les traitements GLP-1 permettent parfois des pertes de poids très rapides, mais une escalade posologique prudente peut permettre de ralentir la cinétique de perte. Discutez avec votre médecin de la possibilité de maintenir un dosage intermédiaire plus longtemps.
+Les traitements GLP-1 permettent parfois des pertes de poids très rapides, mais une escalade posologique prudente peut permettre de [stabiliser la perte de poids pour protéger le visage](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) et de ralentir la cinétique de perte. Discutez avec votre médecin de la possibilité de maintenir un dosage intermédiaire plus longtemps.
 
 ### Augmenter les apports protéinés
 

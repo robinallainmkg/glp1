@@ -1,5 +1,5 @@
 ---
-title: "Recommandations OMS sur les GLP-1 pour l'Obésité : Ce que Cela Change en 2026"
+title: "OMS et GLP-1 contre l'Obésité : Ce que Cela Change en 2026"
 description: "L'OMS publie ses premières recommandations mondiales sur les GLP-1 contre l'obésité. Conditions d'usage et impact concret pour les patients français."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
@@ -89,7 +89,7 @@ L'OMS a fondé ses recommandations sur une revue systématique des essais cliniq
 
 L'OMS reconnaît que les effets secondaires digestifs (nausées, vomissements, diarrhée) sont fréquents mais généralement temporaires et gérables. Consultez nos guides détaillés sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) pour plus d'informations.
 
-Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais considérés comme acceptables au regard des bénéfices démontrés sur la santé globale des patients obèses.
+Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais considérés comme acceptables au regard des bénéfices démontrés sur la santé globale des patients obèses. L'OMS souligne également les bénéfices inattendus des GLP-1 sur la [réduction des addictions — alcool, tabac et opioïdes](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) — qui s'ajoutent aux effets sur le poids.
 
 ## Ce que cela change pour les patients français
 

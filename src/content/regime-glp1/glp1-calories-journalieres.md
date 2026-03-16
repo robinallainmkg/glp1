@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Calories Journalieres : Guide Complet et Conseils Pratiques 2025"
+title: "GLP-1 et Calories Journalières : Guide et Conseils Pratiques"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
 description: "Calculez vos besoins caloriques journaliers avec les GLP-1. Méthodes de calcul, adaptation selon le traitement et déficit calorique sain."
