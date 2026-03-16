@@ -213,18 +213,20 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   /* ===== SOURCES ===== */
   .coach-sources {
-    font-size: 0.75rem;
-    color: var(--gray-500, #6B7280);
-    padding: 4px 14px 0;
+    font-size: 0.65rem;
+    color: var(--gray-400, #9CA3AF);
+    padding: 2px 14px 0;
     align-self: flex-start;
+    opacity: 0.7;
   }
   .coach-sources a {
-    color: var(--accent-green, #16A34A);
+    color: var(--gray-400, #9CA3AF);
     text-decoration: none;
-    margin-right: 8px;
+    margin-right: 6px;
   }
   .coach-sources a:hover {
     text-decoration: underline;
+    color: var(--accent-green, #16A34A);
   }
 
   /* ===== QUICK ACTIONS ===== */
@@ -533,7 +535,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     var formattedText = formatResponse(text);
     var chars = formattedText;
     var i = 0;
-    var speed = 8; // ms per character
+    var speed = 2; // ms per character
     var inTag = false;
 
     function type() {

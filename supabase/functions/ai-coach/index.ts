@@ -29,9 +29,10 @@ REGLES ABSOLUES :
 6. Si quelqu'un mentionne un achat en ligne sans ordonnance, tu alertes SYSTEMATIQUEMENT sur le risque d'arnaque et de contrefacon. Oriente vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr si victime.
 7. Tu reponds UNIQUEMENT en francais.
 8. Tu utilises un ton chaleureux, accessible, bienveillant mais professionnel. Tutoiement si l'utilisateur tutoie, vouvoiement sinon.
-9. Tu cites les articles du site quand c'est pertinent.
-10. Tu gardes tes reponses concises (max 150 mots sauf si la question necessite plus de detail).
-11. Si la question est medicale, ajoute en fin de reponse : "⚕️ Ces informations sont donnees a titre indicatif et ne remplacent pas l'avis d'un professionnel de sante."
+9. Tu gardes tes reponses concises (max 120 mots). Va droit au but, pas de formules creuses.
+10. N'ajoute JAMAIS de disclaimer medical en fin de reponse (il y en a deja un affiche sous le chat).
+11. Ne dis JAMAIS "d'apres nos articles", "selon nos guides", "consultez nos guides specialises" ou toute formulation qui s'appuie sur "nos" contenus. Enonce simplement les faits.
+12. Ne termine JAMAIS par une phrase promotionnelle du style "Pour approfondir, consultez nos guides sur..." — si la reponse est complete, arrete-toi.
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
@@ -54,7 +55,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'price',
     pattern: /prix|co[uû]t|rembours|tarif|cher|combien/i,
-    response: "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse, negociation CEPS en cours)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.\n\n⚕️ Ces informations sont donnees a titre indicatif."
+    response: "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse, negociation CEPS en cours)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2."
   },
   {
     intent: 'device',
@@ -64,17 +65,17 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'diabetes',
     pattern: /diab[eè]t|glyc[eé]mi|insuline|type 2|hba1c/i,
-    response: "Plusieurs GLP-1 sont specifiquement indiques pour le diabete de type 2 :\n\n• Ozempic (semaglutide) — le plus prescrit\n• Trulicity (dulaglutide)\n• Victoza (liraglutide)\n\nLa decision depend de votre traitement actuel et de votre HbA1c. Consultez votre endocrinologue pour adapter votre traitement.\n\n⚕️ Ces informations sont donnees a titre indicatif et ne remplacent pas l'avis d'un professionnel de sante."
+    response: "Plusieurs GLP-1 sont specifiquement indiques pour le diabete de type 2 :\n\n• Ozempic (semaglutide) — le plus prescrit\n• Trulicity (dulaglutide)\n• Victoza (liraglutide)\n\nLa decision depend de votre traitement actuel et de votre HbA1c. Consultez votre endocrinologue pour adapter votre traitement."
   },
   {
     intent: 'diet',
     pattern: /r[eé]gime|nutrition|aliment|manger|repas|prot[eé]ine/i,
-    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nL'accompagnement par un dieteticien est recommande.\n\n⚕️ Ces informations sont donnees a titre indicatif."
+    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nL'accompagnement par un dieteticien est recommande."
   },
   {
     intent: 'weight',
     pattern: /perte.*poids|maigri|kilos?|pas.*perdu|combien.*perd/i,
-    response: "Les resultats varient selon les personnes :\n\n📅 Semaines 1-4 : premiers effets (reduction appetit)\n📅 Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n📅 Mois 3-6 : resultats les plus significatifs\n\nEn moyenne, les etudes montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi apres 3 mois sans resultat, parlez-en a votre medecin (dose a ajuster ?).\n\n⚕️ Ces informations sont donnees a titre indicatif."
+    response: "Les resultats varient selon les personnes :\n\n📅 Semaines 1-4 : premiers effets (reduction appetit)\n📅 Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n📅 Mois 3-6 : resultats les plus significatifs\n\nEn moyenne, les etudes montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi apres 3 mois sans resultat, parlez-en a votre medecin (dose a ajuster ?)."
   },
   {
     intent: 'prescription',
@@ -298,7 +299,7 @@ serve(async (req) => {
 
       // --- 4. Build messages for LLM ---
       const userMessageWithContext = ragContext
-        ? `Contexte pertinent de nos articles (utilise ces informations pour repondre) :\n\n${ragContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
+        ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
         : cleanMessage;
 
       const messages = [
