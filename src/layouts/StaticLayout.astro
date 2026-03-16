@@ -4,6 +4,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Hotjar from '../components/Hotjar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import AiCoach from '../components/AiCoach.astro';
 
 export interface Props {
   title: string;
@@ -136,6 +137,9 @@ const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
 
   <!-- Footer -->
   <SiteFooter />
+
+  <!-- Coach IA GLP-1 -->
+  <AiCoach />
 
   <!-- JavaScript pour la navigation -->
   <script is:inline>
