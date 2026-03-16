@@ -9,7 +9,7 @@ tags: ["glp-1", "perte de poids", "france", "2025", "guide complet", "traitement
 date: "2025-08-30"
 ---
 
-# Guide Complet GLP-1 2025 en France : Tout Savoir
+## Guide Complet GLP-1 2025 en France : Tout Savoir
 
 <div class="guide-buttons">
   <a href="/collections/traitements-glp1/" class="guide-button primary">

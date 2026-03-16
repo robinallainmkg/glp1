@@ -1,5 +1,5 @@
 ---
-title: "Prix Ozempic 2026 : Coût Complet par Dosage et Remboursement"
+title: "Prix Ozempic 2026 : Tarifs par Dosage et Remboursement"
 description: "Prix Ozempic en pharmacie : 77,60€ par stylo. Coût réel de 40-55€ après remboursement 30%. Guide complet des tarifs par dosage (0.25mg, 0.5mg, 1mg), mutuelles et aides."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2025', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
 seoTitle: "Prix Ozempic 2026 : Tarifs par Dosage, Remboursement et Coût Réel"

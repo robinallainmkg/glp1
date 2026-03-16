@@ -11,7 +11,7 @@ featured: true
 priority: 2
 ---
 
-# Laurent M. : De 120kg à 85kg grâce à Mounjaro
+## Laurent M. : De 120kg à 85kg grâce à Mounjaro
 
 **35 kilos perdus en 10 mois** - Un parcours inspirant
 
