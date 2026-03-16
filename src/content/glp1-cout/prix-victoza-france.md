@@ -1,5 +1,5 @@
 ---
-title: "Prix Victoza 2025 : Coût, Remboursement et Mutuelle en France"
+title: "Prix Victoza 2026 : Coût, Remboursement et Arrêt de Commercialisation"
 description: "Prix Victoza en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Victoza."
 keywords: ['prix victoza', 'victoza pharmacie', 'remboursement victoza', 'mutuelle victoza', 'coût traitement victoza']
 seoTitle: "Prix Victoza 2025 : Combien coûte Victoza en France ?"
@@ -207,7 +207,9 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 ## 📝 Conclusion
 
-**Victoza offre un bon compromis prix/tolérance** pour le diabète de type 2, avec un remboursement identique aux autres GLP-1.
+**Attention : Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026**, pour des raisons commerciales (non liées à la sécurité du médicament). Les patients actuellement sous Victoza doivent consulter leur médecin pour envisager une alternative comme Ozempic ou Trulicity. Des pénuries intermittentes sont possibles avant l'arrêt définitif.
+
+Victoza reste pour l'instant un traitement au bon rapport prix/tolérance pour le diabète de type 2.
 
 ### Points clés à retenir :
 - **Prix moyen** : 60,26 €/mois (baisse février 2025)

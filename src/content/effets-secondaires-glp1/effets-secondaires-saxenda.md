@@ -225,7 +225,7 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 
 ## 📝 Conclusion
 
-**Saxenda présente une excellente tolérance** avec des effets secondaires moins fréquents que la moyenne des GLP-1.
+**Saxenda présente une excellente tolérance** avec des effets secondaires moins fréquents que la moyenne des GLP-1. Pour en savoir plus, consultez notre [guide complet Saxenda](/collections/traitements-glp1/guide-complet-saxenda/).
 
 ### Points clés :
 - **Effets fréquents** : Nausées (70-80% des patients)

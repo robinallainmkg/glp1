@@ -88,7 +88,7 @@ C'est LEADER qui a pour la première fois démontré qu'un GLP-1 pouvait réduir
 - Réduction significative des AVC non fatals (–39%)
 - Tendance à la réduction des infarctus non fataux
 
-L'étude SUSTAIN-6 a été déterminante pour l'obtention de l'indication cardiovasculaire du sémaglutide (Ozempic) en Europe.
+L'étude SUSTAIN-6 a été déterminante pour l'obtention de l'indication cardiovasculaire du [sémaglutide (Ozempic)](/collections/traitements-glp1/guide-complet-ozempic/) en Europe.
 
 ### Étude SELECT (Sémaglutide 2,4 mg — Wegovy — 2023)
 

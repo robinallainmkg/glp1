@@ -226,7 +226,7 @@ thumbnailAlt: "Effets secondaires du traitement victoza"
 
 ## 📝 Conclusion
 
-**Victoza présente une très bonne tolérance** avec des effets secondaires bien maîtrisés.
+**Victoza présente une très bonne tolérance** avec des effets secondaires bien maîtrisés. Pour en savoir plus, consultez notre [guide complet Victoza](/collections/traitements-glp1/guide-complet-victoza/).
 
 ### Points clés :
 - **Effets fréquents** : Nausées (65-75% des patients)

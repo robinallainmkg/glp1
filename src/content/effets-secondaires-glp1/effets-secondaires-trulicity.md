@@ -226,7 +226,7 @@ thumbnailAlt: "Effets secondaires du traitement trulicity"
 
 ## 📝 Conclusion
 
-**Trulicity présente une tolérance exceptionnelle** avec des effets secondaires parmi les moins fréquents des GLP-1.
+**Trulicity présente une tolérance exceptionnelle** avec des effets secondaires parmi les moins fréquents des GLP-1. Pour en savoir plus, consultez notre [guide complet Trulicity](/collections/traitements-glp1/guide-complet-trulicity/).
 
 ### Points clés :
 - **Effets fréquents** : Nausées (60-70% des patients)

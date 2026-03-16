@@ -38,7 +38,7 @@ priority: 2
 - **Âge :** 45 ans
 - **Ville :** Marseille
 - **Profession :** Cadre commercial
-- **Traitement :** Mounjaro (tirzepatide)
+- **Traitement :** [Mounjaro (tirzepatide)](/collections/traitements-glp1/guide-complet-mounjaro/)
 - **Perte de poids :** 35 kilos
 - **Durée :** 10 mois
 - **IMC initial :** 37.8 (obésité sévère)

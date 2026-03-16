@@ -163,8 +163,8 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   <div class="comparison-row">
     <span>Ozempic (sémaglutide)</span>
     <span>GLP-1 agoniste</span>
-    <span>~59,90€</span>
-    <span>Remboursé 65% (DT2 uniquement)</span>
+    <span>~77,60€ (TTC)</span>
+    <span>Remboursé 30% (DT2 uniquement)</span>
   </div>
 
   <div class="comparison-row">
@@ -182,7 +182,7 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   </div>
 </div>
 
-Seul Ozempic bénéficie d'un remboursement à 65% par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
+Seul Ozempic bénéficie d'un remboursement à 30% par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
 
 ## Statut de Remboursement (Mars 2026) {#remboursement}
 
@@ -237,7 +237,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 
 ### Dispositifs Sociaux Complémentaires
 
-- **Couverture Maladie Universelle Complémentaire (CMU-C)** : Prise en charge complète
+- **Complémentaire Santé Solidaire (CSS, ex-CMU-C)** : Ne couvre pas Mounjaro car le médicament n'est pas remboursé par la Sécurité Sociale. La CSS ne prend en charge que les médicaments inscrits sur la liste des médicaments remboursables
 - **Aide au paiement d'une Complémentaire Santé (ACS)** : Réduction sur les contrats mutuelles
 - **Fonds d'action sociale** : Aides exceptionnelles selon les caisses d'Assurance Maladie
 

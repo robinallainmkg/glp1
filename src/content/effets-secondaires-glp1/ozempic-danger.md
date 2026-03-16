@@ -185,19 +185,18 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Méta-analyse 2024 - Sécurité cardiovasculaire
 
-**Résultats positifs** :
-- Réduction mortalité cardiovasculaire : -26%
-- Réduction AVC : -39%
-- Réduction infarctus : -26%
+**Résultats de l'étude SELECT (NEJM 2023, 17 500 patients)** :
+- Réduction du critère composite (décès cardiovasculaire, infarctus, AVC) : **-20%**
+- Bénéfice démontré chez les patients en surpoids ou obèses avec maladie cardiovasculaire établie
 
-**Bénéfice/risque** : Largement favorable
+**Bénéfice/risque** : Largement favorable chez les patients éligibles
 
-### Étude cohorte française (ANSM 2023)
+### Surveillance ANSM des agonistes GLP-1
 
-**48,000 patients suivis 18 mois** :
-- Pancréatite : 0.18% (conforme données internationales)
-- Arrêts pour effets indésirables : 12%
-- Aucun décès directement lié à Ozempic
+L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre août 2023 et janvier 2025 :
+- **376 cas graves** rapportés au total
+- **1 décès** par pancréatite dans un contexte de mésusage
+- Le profil de sécurité global reste favorable dans le cadre des indications autorisées
 
 ### Surveillance post-marketing
 
@@ -338,10 +337,10 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 - **Sélection rigoureuse** des patients (respect contre-indications)
 - **Surveillance médicale** régulière et structurée
 - **Éducation thérapeutique** complète du patient
-- **Reconnaissance précoce** des signaux d'alerte
+- **Reconnaissance précoce** des signaux d'alerte (voir tous les [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/))
 - **Accès facilité** aux soins d'urgence si nécessaire
 
-**Recommandation finale** : Ozempic peut être utilisé en sécurité chez les patients bien sélectionnés, avec un encadrement médical approprié et une information complète sur les risques potentiels.
+**Recommandation finale** : Ozempic peut être utilisé en sécurité chez les patients bien sélectionnés, avec un encadrement médical approprié et une information complète sur les risques potentiels. Pour en savoir plus, consultez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/).
 
 **⚠️ Rappel crucial** : Cet article ne remplace pas l'avis médical personnalisé. Toute question sur la sécurité d'Ozempic doit être discutée avec votre médecin prescripteur.
 

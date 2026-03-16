@@ -223,8 +223,8 @@ Si Wegovy n'est pas disponible ou accessible :
 
 * **Indication première** : diabète de type 2
 * **Effet secondaire** : perte de poids
-* **Prix** : ~59,90 €/stylo
-* **Remboursement** : oui, 65% (diabète de type 2 uniquement)
+* **Prix** : ~77,60 €/stylo (TTC)
+* **Remboursement** : oui, 30% (diabète de type 2 uniquement)
 
 **Saxenda** (liraglutide)
 

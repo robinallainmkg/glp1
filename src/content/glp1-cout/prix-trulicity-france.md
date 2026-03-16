@@ -1,5 +1,5 @@
 ---
-title: "Prix Trulicity 2025 : Coût, Remboursement et Mutuelle en France"
+title: "Prix Trulicity 2026 : Coût, Remboursement et Mutuelle en France"
 description: "Prix Trulicity en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Trulicity."
 keywords: ['prix trulicity', 'trulicity pharmacie', 'remboursement trulicity', 'mutuelle trulicity', 'coût traitement trulicity']
 seoTitle: "Prix Trulicity 2025 : Combien coûte Trulicity en France ?"

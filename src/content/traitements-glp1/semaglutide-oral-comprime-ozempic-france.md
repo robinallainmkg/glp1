@@ -19,7 +19,7 @@ Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement
 
 ## Le sémaglutide oral existe déjà : Rybelsus, le précurseur
 
-La plupart des patients l'ignorent, mais une forme orale de sémaglutide est déjà commercialisée en France depuis 2020 : **Rybelsus** (Novo Nordisk), un comprimé de sémaglutide dosé à 3 mg, 7 mg ou 14 mg, indiqué dans le traitement du diabète de type 2.
+La plupart des patients l'ignorent, mais une forme orale de sémaglutide est déjà commercialisée en France depuis 2020 : **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** (Novo Nordisk), un comprimé de sémaglutide dosé à 3 mg, 7 mg ou 14 mg, indiqué dans le traitement du diabète de type 2.
 
 ### Les limites de Rybelsus
 

@@ -34,34 +34,61 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-## Facteurs influençant le prix
+## Prix de l'anneau gastrique en France
 
-Le coût de ce traitement dépend de plusieurs facteurs :
+Le coût d'un anneau gastrique varie selon le type d'établissement :
 
-* **Innovation thérapeutique** : Les nouvelles molécules sont plus coûteuses
-* **Dosage et durée** : Variables selon la prescription médicale
-* **Négociations tarifaires** : Entre laboratoires et autorités françaises
-* **Disponibilité générique** : Réduction des coûts à terme
-* **Remboursement** : Prise en charge Sécurité Sociale et mutuelles
+* **En hôpital public** : prise en charge quasi-intégrale par la Sécurité Sociale (reste à charge limité aux dépassements d'honoraires éventuels)
+* **En clinique privée conventionnée** : **6 000 à 10 000 €** avant remboursement, avec un reste à charge variable selon les dépassements
+* **En clinique privée non conventionnée** : **8 000 à 15 000 €**, faible remboursement
 
-## Introduction
+### Détail des frais
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+| Poste de dépense | Coût estimé |
+|-------------------|-------------|
+| Honoraires chirurgien | 1 500 à 4 000 € |
+| Frais d'hospitalisation (2-3 jours) | 2 000 à 4 000 € |
+| Anesthésie | 500 à 1 000 € |
+| Dispositif médical (anneau) | 800 à 1 500 € |
+| Suivi post-opératoire (1 an) | 500 à 1 000 € |
 
-## Remboursement et prise en charge
+## Conditions de prise en charge par la Sécurité Sociale
 
-L'anneau gastrique peut être pris en charge par la Sécurité Sociale et la CMU sous certaines conditions médicales et administratives. Il est essentiel de constituer un dossier complet et de consulter un spécialiste pour maximiser les chances de remboursement.
+L'anneau gastrique est remboursé à **100%** par la Sécurité Sociale (au titre de l'ALD obésité) lorsque les conditions suivantes sont réunies :
 
-## Stratégies d'optimisation des coûts
+* **IMC supérieur ou égal à 40 kg/m²**, ou **IMC supérieur ou égal à 35 kg/m²** avec au moins une comorbidité (diabète, hypertension, apnée du sommeil)
+* **Échec documenté d'un suivi médical d'au moins 6 à 12 mois** incluant un accompagnement diététique et psychologique
+* **Évaluation multidisciplinaire** : consultation avec chirurgien, endocrinologue, psychologue et diététicien
+* **Âge entre 18 et 60 ans** (au-delà, évaluation au cas par cas)
 
-* Programmes d'aide des laboratoires pharmaceutiques
-* Dispositifs d'aide sociale départementaux
-* Négociation avec les organismes complémentaires
-* Paiement étalé en pharmacie
+## Prise en charge CMU-C / Complémentaire Santé Solidaire (CSS)
 
-## Comparaison des options
+Les bénéficiaires de la **Complémentaire Santé Solidaire (CSS, ex-CMU-C)** peuvent bénéficier d'une prise en charge complète de l'anneau gastrique :
 
-Comparez les différentes alternatives thérapeutiques en tenant compte du rapport coût/efficacité et discutez avec votre médecin des options les plus adaptées à votre situation.
+* **Aucun reste à charge** si l'intervention est réalisée dans un établissement public ou conventionné secteur 1
+* **Pas de dépassements d'honoraires** pris en charge en secteur 2 sauf accord préalable
+* **Demande** : via votre CPAM ou sur ameli.fr
+
+## Parcours de soins obligatoire
+
+La HAS recommande un parcours structuré avant toute chirurgie bariatrique :
+
+1. **Consultation initiale** avec le médecin traitant
+2. **Bilan multidisciplinaire** (6 à 12 mois de suivi minimum)
+3. **Réunion de concertation pluridisciplinaire (RCP)** validant l'indication
+4. **Délai de réflexion** avant l'intervention
+5. **Suivi post-opératoire** à vie (consultations annuelles)
+
+## Alternatives GLP-1 à l'anneau gastrique
+
+Les traitements GLP-1 représentent une alternative moins invasive à la chirurgie bariatrique pour certains patients :
+
+| Option | Coût mensuel | Remboursement | Perte de poids moyenne |
+|--------|-------------|---------------|----------------------|
+| Anneau gastrique | 6 000-10 000 € (ponctuel) | 100% (ALD) | -20 à -25% |
+| Wegovy (sémaglutide) | 169-360 €/mois | Non remboursé (mars 2026) | -15 à -20% |
+| Mounjaro (tirzépatide) | 230-440 €/mois | Non remboursé (mars 2026) | -20 à -25% |
+| Ozempic (sémaglutide) | ~77,60 €/stylo | 30% (DT2 uniquement) | -12 à -15% |
 
 ## Important
 
