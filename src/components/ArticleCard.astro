@@ -25,83 +25,131 @@ const articleImage = getArticleImage(data);
 // Compute reading time: prefer explicit value, else estimate from word count or body
 const words = article?.wordCount || (article.body ? String(article.body).split(/\s+/).length : 0) || data?.wordCount || 0;
 const readingTime = article?.readingTime || Math.max(1, Math.ceil(words / 200));
+
+// Resolve collection color for inline styles (colors.bg may be hex without # or a Tailwind name)
+const rawBg = colors?.bg || 'emerald';
+const collectionHex = rawBg.match(/^[0-9a-fA-F]{6}$/) ? `#${rawBg}` : null;
+
+// Gradient pairs for fallback thumbnails based on collection
+const gradientMap: Record<string, string> = {
+  red: 'linear-gradient(135deg, #dc2626 0%, #f97316 100%)',
+  blue: 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)',
+  green: 'linear-gradient(135deg, #16a34a 0%, #06b6d4 100%)',
+  amber: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+  purple: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
+  cyan: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
+  pink: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+  orange: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
+  emerald: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
+};
+const fallbackGradient = collectionHex
+  ? `linear-gradient(135deg, ${collectionHex} 0%, ${collectionHex}99 50%, ${collectionHex}55 100%)`
+  : (gradientMap[rawBg] || gradientMap.emerald);
+
+const badgeColor = collectionHex || '#10b981';
 ---
 
-<article class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-emerald-200 hover:-translate-y-2">
-  {/* Image de l'article avec support TinaCMS */}
-  <div class="relative h-48 overflow-hidden">
+<article class="card-article group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100 hover:border-slate-200 hover:-translate-y-1">
+  <!-- Thumbnail -->
+  <a href={url} class="block relative h-48 overflow-hidden" tabindex="-1" aria-hidden="true">
     {articleImage ? (
-      <img 
+      <img
         src={articleImage}
         alt={data.thumbnailAlt || data.title || 'Article'}
-        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
       />
+      <div class="card-fallback w-full h-full items-center justify-center" style={`display:none;background:${fallbackGradient}`}>
+        <svg class="w-14 h-14 text-white/70" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+          <path d="M24 14v8m0 0v8m0-8h8m-8 0h-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M16 34c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <circle cx="24" cy="18" r="4" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+        </svg>
+        <div class="absolute bottom-3 left-0 right-0 text-center">
+          <span class="text-white/50 text-xs font-medium tracking-wider uppercase">{categoryName}</span>
+        </div>
+      </div>
     ) : (
-      <div class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-        <div class="text-slate-400 text-6xl">📄</div>
+      <div class="card-fallback w-full h-full flex items-center justify-center relative" style={`background:${fallbackGradient}`}>
+        <!-- Decorative pattern -->
+        <div class="absolute inset-0 opacity-10">
+          <svg class="w-full h-full" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="20" r="40" fill="white"/>
+            <circle cx="40" cy="100" r="30" fill="white"/>
+            <circle cx="100" cy="60" r="20" fill="white"/>
+          </svg>
+        </div>
+        <!-- Medical/science icon -->
+        <svg class="w-16 h-16 text-white/60 relative z-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="8" width="12" height="32" rx="3" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="8" y="18" width="32" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <div class="absolute bottom-3 left-0 right-0 text-center relative z-10">
+          <span class="text-white/60 text-xs font-medium tracking-wider uppercase">{categoryName}</span>
+        </div>
       </div>
     )}
-    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-    <div class="absolute top-4 left-4">
-      <span class={`inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-${colors.bg}-600/90 backdrop-blur-sm border border-white/20`}>
-        <div class="w-2 h-2 rounded-full bg-white mr-2"></div>
-        {categoryName}
-      </span>
-    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+  </a>
+
+  <!-- Badge -->
+  <div class="absolute top-3 left-3 z-10">
+    <span
+      class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold text-white backdrop-blur-sm shadow-sm"
+      style={`background:${badgeColor}dd`}
+    >
+      <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+      {categoryName}
+    </span>
   </div>
-  
-  <div class="p-6">
-    <h2 class="text-xl md:text-xl font-bold text-slate-900 mb-4 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug !text-xl !md:text-xl !font-bold !text-slate-900 !mb-4 !line-clamp-2 !group-hover:text-emerald-700 !transition-colors !leading-snug custom-title-size">
-      <a href={url} class="hover:underline">
+
+  <div class="p-5">
+    <h2 class="text-lg font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug">
+      <a href={url} class="hover:underline decoration-emerald-300 underline-offset-2">
         {data.title || article.title}
       </a>
     </h2>
-    
+
     {(data.description || article.description) && (
-                <!-- Description -->
-          <div class="description-text text-slate-700 mb-6 text-base prose prose-slate max-w-none">
-            {data.description || article.description}
-          </div>
+      <p class="card-description text-slate-600 text-sm leading-relaxed mb-4">
+        {data.description || article.description}
+      </p>
     )}
-    
-    <div class="flex items-center justify-between text-sm text-slate-500 mb-6 pb-4 border-b border-slate-100">
-      <div class="flex items-center gap-4">
-  {data.publishedAt && (
-          <time datetime={data.publishedAt} class="flex items-center text-sm text-slate-500">
-            <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+    <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+      <div class="flex items-center gap-3">
+        {data.publishedAt && (
+          <time datetime={data.publishedAt} class="flex items-center">
+            <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
             {new Date(data.publishedAt).toLocaleDateString('fr-FR', {
               year: 'numeric',
-              month: 'long',
+              month: 'short',
               day: 'numeric'
             })}
           </time>
         )}
-
-  {data.author && (
-          <span class="flex items-center text-sm text-slate-500">
-            <svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-            </svg>
-            {data.author}
-          </span>
-        )}
       </div>
 
-      <div class="text-sm text-slate-500 flex items-center gap-2">
-        <svg class="w-4 h-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12A9 9 0 1112 3v0"></path></svg>
-  <span>{readingTime} min</span>
-      </div>
+      <span class="flex items-center gap-1 font-medium text-slate-500">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12A9 9 0 1112 3v0"></path>
+        </svg>
+        {readingTime} min
+      </span>
     </div>
-    
-    <a 
+
+    <a
       href={url}
-      class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+      class="card-cta inline-flex items-center text-sm font-semibold transition-all duration-200 group/cta"
+      style={`color:${badgeColor}`}
     >
       Lire l'article
-      <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="ml-1.5 w-4 h-4 transition-transform duration-200 group-hover/cta:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
       </svg>
     </a>
@@ -109,47 +157,40 @@ const readingTime = article?.readingTime || Math.max(1, Math.ceil(words / 200));
 </article>
 
 <style>
+  .card-article {
+    position: relative;
+  }
+
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
-  .description-text {
+
+  .card-description {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    line-height: 1.6;
-    word-spacing: 0.05em;
-    letter-spacing: 0.01em;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    word-break: break-word;
-    overflow-wrap: break-word;
   }
-  
-  /* Amélioration de la lisibilité pour les textes longs */
-  .description-text::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 1.2em;
-    background: linear-gradient(to right, transparent, #f8fafc);
+
+  .card-cta:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
-  
-  /* Style pour les cartes avec beaucoup de texte */
-  article:hover .description-text {
-    -webkit-line-clamp: 5;
-    transition: all 0.3s ease;
+
+  .card-fallback {
+    position: relative;
   }
-  
-  /* Titre personnalisé à 22px */
-  .custom-title-size {
-    font-size: 22px !important;
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .card-article {
+      transition: none;
+    }
+    .card-article img {
+      transition: none;
+    }
   }
 </style>
