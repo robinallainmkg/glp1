@@ -354,12 +354,15 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
   </div>
 
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
     let sb;
-    async function initSb() {
+    function initSb() {
       if (sb) return sb;
-      const mod = await import('https://esm.sh/@supabase/supabase-js@2');
-      sb = mod.createClient(supabaseUrl, supabaseKey);
+      if (!window.supabase || !window.supabase.createClient) {
+        throw new Error('Supabase JS not loaded');
+      }
+      sb = window.supabase.createClient(supabaseUrl, supabaseKey);
       return sb;
     }
 
@@ -643,6 +646,12 @@ import { supabaseConfig } from '../../lib/supabase';
       d.textContent = str;
       return d.innerHTML;
     }
+
+    // Expose functions to global scope for onclick handlers
+    window.loadAllData = loadAllData;
+    window.filterSource = filterSource;
+    window.showDetail = showDetail;
+    window.closeModal = closeModal;
 
     // Auto-load + refresh
     loadAllData();
