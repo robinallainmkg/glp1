@@ -11,7 +11,7 @@ date: "2025-08-28"
 pubDate: "2025-08-28"
 ---
 
-# Guide Complet Saxenda : Tout Savoir sur ce Traitement Révolutionnaire
+## Guide Complet Saxenda : Tout Savoir sur ce Traitement Révolutionnaire
 
 <div class="guide-buttons">
   <a href="/collections/glp1-cout/prix-saxenda-france" class="guide-button primary">

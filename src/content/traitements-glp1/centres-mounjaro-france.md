@@ -14,7 +14,7 @@ mainKeyword: "centres mounjaro france"
 secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu", "accès mounjaro france"]
 ---
 
-# 🏥 Centres Spécialisés Mounjaro en France 2025
+## Centres Specialises Mounjaro en France 2025
 
 **Mise à jour : 9 octobre 2025**
 

@@ -73,7 +73,7 @@ affiliateConfig:
 }
 </script>
 
-# Prix Zepbound France : Guide Complet 2025
+## Prix Zepbound France : Guide Complet 2025
 
 > **ATTENTION : Zepbound n'existe pas en France.** Le tirzépatide est commercialisé en Europe sous le nom **Mounjaro** (par Eli Lilly), pas sous le nom Zepbound (nom utilisé aux États-Unis uniquement). En France, le traitement équivalent est **Mounjaro**, commercialisé depuis novembre 2024 au prix de **230-440 EUR/mois** (prix libre, non remboursé par la Sécurité Sociale).
 

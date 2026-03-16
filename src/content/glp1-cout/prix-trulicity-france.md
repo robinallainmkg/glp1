@@ -65,7 +65,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 }
 </script>
 
-# Prix Trulicity 2026 : Coût et Remboursement en France
+## Prix Trulicity 2026 : Coût et Remboursement en France
 
 ## 💰 Prix Trulicity en Pharmacie
 

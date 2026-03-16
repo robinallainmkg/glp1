@@ -14,7 +14,7 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
 
-# Effets Secondaires Mounjaro : Guide Complet
+## Effets Secondaires Mounjaro : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 

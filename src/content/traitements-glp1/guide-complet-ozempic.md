@@ -11,7 +11,7 @@ date: "2025-08-27"
 pubDate: "2025-08-27"
 ---
 
-# Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
+## Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
 
 <div class="guide-buttons">
   <a href="/collections/glp1-cout/prix-ozempic-france" class="guide-button primary">
