@@ -1,8 +1,9 @@
 ---
-title: "Régime Cetogene GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Régime cétogène GLP-1 perte de poids keto : Guide"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Associer régime cétogène et GLP-1 pour une perte de poids accélérée. Avantages, précautions et protocole pour combiner ces deux approches."
+description: "Régime cétogène GLP-1 perte de poids keto : combiner ces deux approches pour des résultats accélérés. Avantages, précautions et protocole."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

@@ -1,8 +1,9 @@
 ---
-title: "Jeûne Intermittent et GLP-1 : Guide Complet et Conseils Pratiques"
+title: "Jeûne intermittent GLP-1 : protocoles perte de poids"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Le jeûne intermittent combiné aux GLP-1 : protocoles adaptés, bénéfices pour la perte de poids et conseils pour une pratique sécurisée."
+description: "Jeûne intermittent GLP-1 protocoles perte de poids : bénéfices, risques et conseils pratiques pour une pratique sécurisée sous traitement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

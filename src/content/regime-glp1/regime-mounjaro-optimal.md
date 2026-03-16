@@ -1,7 +1,8 @@
 ---
-title: "Régime Mounjaro Optimal : Guide Nutritionnel Complet 2025"
-description: "Le régime alimentaire optimal avec Mounjaro. Aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets du traitement."
+title: "Régime Mounjaro alimentation optimale tirzepatide"
+description: "Régime Mounjaro alimentation optimale tirzepatide : aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets du traitement."
 pubDate: 2025-09-07
+date: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "traitements", "nutrition"]

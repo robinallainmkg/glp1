@@ -1,7 +1,8 @@
 ---
-title: "Sport et GLP-1 : Exercice et Musculation sous Traitement"
-description: "Pratiquer le sport et la musculation sous GLP-1 (Ozempic, Wegovy, Mounjaro). Exercices recommandés, timing et préservation musculaire."
+title: "Sport GLP-1 : Guide Exercice et Musculation"
+description: "Sport GLP-1 exercice musculation : guide complet pour pratiquer sous Ozempic, Wegovy, Mounjaro. Préservation musculaire, timing et conseils."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Sophie Dubois"
 category: "Nutrition et exercice"

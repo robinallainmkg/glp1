@@ -1,8 +1,9 @@
 ---
-title: "Régime Paleo GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Régime paléo GLP-1 alimentation ancestrale perte de poids"
 draft: true
-description: "Régime paléolithique et GLP-1 : alimentation ancestrale pour perdre du poids. Aliments autorisés et adaptation du paléo aux traitements modernes."
+description: "Régime paléo GLP-1 alimentation ancestrale perte de poids : aliments autorisés, recettes et adaptation du paléolithique aux traitements modernes."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]

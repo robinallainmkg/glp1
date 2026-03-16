@@ -1,9 +1,10 @@
 ---
-title: "Régime Méditerranéen et GLP-1 : Guide Complet et Conseils"
+title: "Régime méditerranéen GLP-1 alimentation santé"
 draft: true
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Adoptez le régime méditerranéen avec les GLP-1 pour une santé optimale. Menu type, aliments clés et conseils pour allier cuisine saine et traitement."
+description: "Régime méditerranéen GLP-1 alimentation santé : menu type, aliments clés et conseils pratiques pour allier cuisine méditerranéenne et traitement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
