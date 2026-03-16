@@ -1,8 +1,9 @@
 ---
-title: "Arrêt GLP-1 et Reprise de Poids : Comment Éviter l'Effet Yoyo"
-description: "Arrêt GLP-1 : données chiffrées sur la reprise de poids, stratégies pour limiter l'effet yoyo et alternatives pour maintenir vos résultats."
+title: "Arrêt GLP-1 Reprise Poids Effet Yoyo : Comment Éviter le Rebond"
+description: "Arrêt GLP-1 reprise poids effet yoyo : comment eviter le rebond. Données chiffrées, stratégies pour limiter l'effet yoyo et alternatives pour maintenir vos résultats."
 pubDate: 2026-03-16
-updatedAt: 2026-03-16
+date: '2026-03-17'
+updatedAt: '2026-03-17'
 author: "Dr. Marie Dubois"
 category: "Perte de poids"
 tags: ["glp1", "arrêt traitement", "reprise de poids", "effet yoyo", "wegovy", "mounjaro", "sevrage"]

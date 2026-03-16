@@ -5,7 +5,8 @@ keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy rem
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
 seoDescription: "Remboursement GLP-1 2026 : Ozempic remboursé 30% (DT2), Wegovy et Saxenda non remboursés. Mounjaro en cours de négociation. Guide remboursement GLP-1 2026."
 publishedAt: '2025-12-27'
-updatedAt: '2026-03-15'
+updatedAt: '2026-03-17'
+date: '2026-03-17'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'

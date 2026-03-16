@@ -1,11 +1,12 @@
 ---
-title: "Prix Victoza 2026 : Coût et Arrêt de Commercialisation"
-description: "Prix Victoza en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Victoza."
+title: "Prix Victoza France 2026 : Coût et Arrêt de Commercialisation"
+description: "Prix Victoza France en pharmacie : coût, remboursement sécurité sociale et mutuelle santé. Guide complet du prix Victoza France en 2026."
 keywords: ['prix victoza', 'victoza pharmacie', 'remboursement victoza', 'mutuelle victoza', 'coût traitement victoza']
-seoTitle: "Prix Victoza 2025 : Combien coûte Victoza en France ?"
-seoDescription: "Prix Victoza en pharmacie française, remboursement sécurité sociale, couverture mutuelle. Tout savoir sur le coût du traitement Victoza."
+seoTitle: "Prix Victoza France 2026 : Combien coûte Victoza en pharmacie ?"
+seoDescription: "Prix Victoza France en pharmacie : 60€/mois. Remboursement sécurité sociale 65% (DT2), couverture mutuelle. Tout savoir sur le prix Victoza France."
 publishedAt: '2025-01-28'
-updatedAt: '2025-01-28'
+updatedAt: '2026-03-17'
+date: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
