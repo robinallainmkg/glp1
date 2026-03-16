@@ -116,7 +116,7 @@ priority: 1
 | **Rapidité** | **Résultats dès 4 semaines** | 8-12 semaines |
 | **Efficacité diabète** | **HbA1c -2.4%** | HbA1c -1.8% |
 | **Mécanisme** | **DOUBLE GLP-1 + GIP** | Simple GLP-1 |
-| **Satisfaction patients** | **89%** | 74% |
+| **Satisfaction patients** | **Données insuffisantes** | Données insuffisantes |
 
 <div class="testimonial-highlight">
   💬 <strong>"J'ai testé Ozempic pendant 6 mois : -8kg. Avec Mounjaro : -15kg en 4 mois !"</strong>

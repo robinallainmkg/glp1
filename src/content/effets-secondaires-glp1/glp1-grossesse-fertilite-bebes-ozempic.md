@@ -128,7 +128,7 @@ Si vous souhaitez allaiter, vous devrez attendre la fin de la période d'allaite
 
 ## Ce qu'il faut retenir
 
-Les médicaments GLP-1 comme [Ozempic, Wegovy](/collections/glp1-cout/prix-ozempic-france/) et [Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) sont contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et sous traitement GLP-1 :
+Les médicaments GLP-1 comme [Ozempic, Wegovy](/collections/glp1-cout/prix-ozempic-france/) et [Mounjaro (tirzepatide)](/collections/traitements-glp1/guide-complet-mounjaro/) sont formellement contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et sous traitement GLP-1 :
 
 - Assurez-vous d'utiliser une contraception efficace pendant le traitement
 - Planifiez l'arrêt du médicament au moins 2 mois avant une tentative de grossesse (pour le sémaglutide)

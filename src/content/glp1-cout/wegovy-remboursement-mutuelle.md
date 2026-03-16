@@ -274,7 +274,7 @@ Le paysage du remboursement du Wegovy évolue rapidement en 2025. Bien que la S�
 - Les programmes d'aide laboratoire constituent une alternative crédible
 - L'évolution réglementaire pourrait changer la donne en 2026
 
-**Notre recommandation :** N'attendez pas pour vous informer et préparer votre dossier. La prise en charge de l'obésité représente un enjeu de santé publique majeur, et les solutions de financement continueront de se développer.
+**Notre recommandation :** N'attendez pas pour vous informer et préparer votre dossier. La prise en charge de l'obésité représente un enjeu de santé publique majeur, et les solutions de financement continueront de se développer. En complément des mutuelles, consultez notre guide sur le [remboursement GLP-1 par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour comprendre l'ensemble du dispositif.
 
 ---
 

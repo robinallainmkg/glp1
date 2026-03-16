@@ -20,7 +20,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (85-95% des patients)
+### Troubles digestifs
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>10%)
@@ -234,7 +234,7 @@ affiliateCollection: "effets-secondaires-glp1"
 **Wegovy présente des effets secondaires fréquents** mais généralement gérables, avec un profil de tolérance favorable malgré une fréquence légèrement plus élevée que certains concurrents.
 
 ### Points clés :
-- **Effets fréquents** : Nausées, diarrhée (85-95% des patients)
+- **Effets fréquents** : Nausées (25-35%), diarrhée (12-18%) — voir tableau détaillé ci-dessus
 - **Effets graves** : Rares (<1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité

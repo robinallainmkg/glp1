@@ -510,7 +510,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 4. ✅ **Assurer le suivi médical** pour maintenir la prise en charge
 5. ✅ **Se renseigner sur les programmes laboratoires**
 
-**Économies possibles :** Jusqu'à **1 200€/an** avec la bonne stratégie !
+**Économies possibles :** Jusqu'à **1 200€/an** avec la bonne stratégie ! Le remboursement est conditionné au respect des [nouvelles règles de prescription ANSM 2025-2026](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) pour limiter le mésusage.
 
 ---
 

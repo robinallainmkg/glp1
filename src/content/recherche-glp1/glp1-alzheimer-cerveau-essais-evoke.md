@@ -82,7 +82,7 @@ Un detail technique important : les essais ont utilise le semaglutide **oral** (
 
 ### Ce que les donnees montrent
 
-Les resultats, publies dans *Nature Medicine* et presentes en 2025, sont sans ambiguite sur le critere principal :
+Les résultats, présentés au congrès CTAD (Clinical Trials on Alzheimer's Disease) en décembre 2025 à San Diego, sont sans ambiguite sur le critere principal :
 
 **Aucune difference significative** n'a ete observee entre le groupe semaglutide et le groupe placebo sur le score CDR-SB (Clinical Dementia Rating - Sum of Boxes), qui mesure la progression du declin cognitif.
 
@@ -190,4 +190,4 @@ Non. Chaque indication est differente. Les mecanismes impliques dans Alzheimer (
 
 ---
 
-*Sources : Essais EVOKE et EVOKE+ (Nature Medicine 2025, 3 808 participants), Imperial College London communique mars 2026, Science mars 2026, Novo Nordisk resultats phase III.*
+*Sources : Essais EVOKE et EVOKE+ (présentés au congrès CTAD décembre 2025, 3 808 participants), protocole publié dans Alzheimer's Research & Therapy (janvier 2025), Imperial College London communiqué mars 2026, Science mars 2026, Novo Nordisk résultats phase III.*

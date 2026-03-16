@@ -197,7 +197,7 @@ Oui. Des essais cliniques de phase 3 sont encore en cours pour certaines molécu
 Trop tôt pour le dire. L'amycrétine est encore en phase 3. Si les résultats sont confirmés, elle sera soumise à l'EMA, puis évaluée par la HAS pour le remboursement. Ce processus prend généralement 3 à 5 ans après le début de la phase 3.
 
 **Ces nouveaux médicaments remplacent-ils les GLP-1 actuels ?**
-Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure.
+Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure. Parmi les innovations proches, le [sémaglutide oral (comprimé) en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/) représente une évolution majeure vers des traitements sans injection.
 
 ---
 

@@ -199,7 +199,7 @@ Oui, un bilan biologique préalable est fortement recommandé. Il comprend au mi
 
 ## Conclusion
 
-Les évolutions réglementaires de 2025 marquent un tournant dans l'accès aux traitements GLP-1 en France. L'ouverture de la prescription aux médecins généralistes facilite considérablement le parcours de soins des patients obèses, tandis que le formulaire obligatoire sécurise l'utilisation des antidiabétiques GLP-1 contre le mésusage.
+Les évolutions réglementaires de 2025 marquent un tournant dans l'accès aux traitements GLP-1 en France. L'ouverture de la prescription aux médecins généralistes facilite considérablement le parcours de soins des patients obèses, tandis que le formulaire obligatoire sécurise l'utilisation des antidiabétiques GLP-1 contre le mésusage. Ces nouvelles règles répondent directement au [phénomène de mésusage des GLP-1](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté par les autorités sanitaires françaises.
 
 Pour les patients, le message de l'ANSM est clair : ces traitements sont efficaces et sûrs dans le cadre d'une utilisation médicalement encadrée. Le meilleur point de départ reste une consultation avec votre médecin traitant.
 

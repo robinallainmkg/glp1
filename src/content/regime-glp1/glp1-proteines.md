@@ -131,6 +131,6 @@ Protocoles de suivi selon recommandations sociétés savantes françaises (SFD, 
 
 ## Conclusion
 
-GLP-1 et protéines alimentaires représente une approche thérapeutique importante dans le contexte français. Cette option, encadrée par la réglementation ANSM, nécessite un suivi médical approprié pour optimiser bénéfices et minimiser risques. L'accompagnement professionnel guide la mise en œuvre sécurisée.
+GLP-1 et protéines alimentaires représente une approche thérapeutique importante dans le contexte français. Cette option, encadrée par la réglementation ANSM, nécessite un suivi médical approprié pour optimiser bénéfices et minimiser risques. Un apport protéique suffisant est la première ligne de défense pour [prévenir la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). L'accompagnement professionnel guide la mise en œuvre sécurisée.
 
  Ces informations sont fournies à titre éducatif uniquement. Consultez toujours un professionnel de santé qualifié pour un avis médical personnalisé concernant GLP-1 et protéines alimentaires.

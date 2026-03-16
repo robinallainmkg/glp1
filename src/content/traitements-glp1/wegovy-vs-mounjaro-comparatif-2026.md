@@ -244,6 +244,8 @@ Pour approfondir votre reflexion, consultez nos guides dedies :
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)
 - [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/)
 
+Pour comparer les profils de tolérance, consultez notre guide complet sur les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) avant de faire votre choix. Côté tirzepatide, notre guide des [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) détaille les symptômes les plus fréquents et comment les gérer.
+
 ---
 
 *Cet article est fourni a titre informatif et ne remplace pas l'avis d'un professionnel de sante. Consultez toujours votre medecin avant de commencer ou de modifier un traitement medical. Derniere mise a jour : mars 2026.*

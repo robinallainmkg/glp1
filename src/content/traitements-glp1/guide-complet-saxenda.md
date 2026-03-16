@@ -109,6 +109,8 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 - Apprentissage de l'injection quotidienne
 - Plan alimentaire personnalisé
 
+> **Important (juin 2025)** : Depuis le 23 juin 2025, la prescription initiale et le renouvellement de Saxenda sont autorisés pour **tout médecin**, sans réservation à un spécialiste. Consultez votre médecin traitant.
+
 ### Étape 3 : Période d'adaptation (1-4 semaines)
 **Augmentation progressive** :
 - Semaine 1 : 0,6 mg/jour

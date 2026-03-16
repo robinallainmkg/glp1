@@ -174,7 +174,7 @@ Les risques sont multiples : produit contrefait, dosage incorrect, absence de su
 
 ### Le formulaire obligatoire va-t-il rendre l'accès plus difficile pour les vrais patients ?
 
-Le formulaire vise spécifiquement les prescriptions d'antidiabétiques GLP-1 pour s'assurer que l'indication de diabète de type 2 est bien confirmée. Il ne concerne pas les prescriptions de Wegovy ou Mounjaro pour l'obésité, qui suivent leur propre circuit de prescription.
+Le formulaire vise spécifiquement les prescriptions d'antidiabétiques GLP-1 pour s'assurer que l'indication de diabète de type 2 est bien confirmée. Il ne concerne pas les prescriptions de Wegovy ou Mounjaro pour l'obésité, qui suivent leur propre circuit de prescription. Pour lutter contre le mésusage, l'ANSM a mis en place les [nouvelles règles de prescription ANSM pour les GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) applicables depuis 2025.
 
 ---
 

@@ -124,7 +124,7 @@ L'enthousiasme autour de cette piste de recherche doit être tempéré par quelq
 
 Si les essais en cours confirment l'efficacité des GLP-1 dans les addictions, les premières autorisations de mise sur le marché pour ces nouvelles indications pourraient arriver d'ici 2028-2030. Le chemin réglementaire est long : essais de phase III, soumission aux agences (EMA, FDA), évaluation du rapport bénéfice/risque.
 
-En attendant, la recherche sur ce sujet est l'une des plus actives en médecine des addictions. Les GLP-1, pensés initialement comme des antidiabétiques, pourraient bien s'imposer comme des médicaments clés de plusieurs pathologies neuropsychiatriques — ce qui représenterait une révolution thérapeutique comparable à leur impact déjà transformateur en [cardiologie et en obésité](/collections/traitements-glp1/guide-complet-ozempic/).
+En attendant, la recherche sur ce sujet est l'une des plus actives en médecine des addictions. Les GLP-1, pensés initialement comme des antidiabétiques, pourraient bien s'imposer comme des médicaments clés de plusieurs pathologies neuropsychiatriques — ce qui représenterait une révolution thérapeutique comparable à leur impact déjà transformateur en [cardiologie et en obésité](/collections/traitements-glp1/guide-complet-ozempic/). Ces effets sur la récompense soulèvent des questions sur les [effets psychologiques et santé mentale sous GLP-1](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/) dont l'apathie et la dépression.
 
 ---
 

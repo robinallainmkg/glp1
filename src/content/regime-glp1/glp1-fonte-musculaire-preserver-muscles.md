@@ -224,7 +224,7 @@ Oui. Une analyse de composition corporelle par impédancemétrie (disponible che
 
 ### Les personnes âgées doivent-elles être plus prudentes ?
 
-Oui. Après 60 ans, la résistance anabolique (le muscle répond moins bien aux stimuli de croissance) rend la préservation musculaire plus difficile. L'apport protéique doit être d'au moins 1,5 g/kg/jour, et l'exercice de résistance est encore plus important. Un suivi médical rapproché est recommandé.
+Oui. Après 60 ans, la résistance anabolique (le muscle répond moins bien aux stimuli de croissance) rend la préservation musculaire plus difficile. L'apport protéique doit être d'au moins 1,5 g/kg/jour, et l'exercice de résistance est encore plus important. En complément des protéines, les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) — calcium, vitamine D, magnésium — sont cruciaux pour la santé osseuse. Un suivi médical rapproché est recommandé.
 
 ---
 

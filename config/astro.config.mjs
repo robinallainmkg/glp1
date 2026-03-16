@@ -80,6 +80,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
+      filter: (page) => !page.includes('/admin/'),
       customPages: [
         'https://glp1-france.fr/guides/suivi-medical-glp1/',
         'https://glp1-france.fr/guides/communautes-glp1/',
