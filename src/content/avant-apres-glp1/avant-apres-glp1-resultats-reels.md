@@ -21,7 +21,7 @@ Ce guide compile les données des études cliniques, les témoignages de patient
 
 ## Les Chiffres Officiels : Ce que Montrent les Études Cliniques
 
-### Wegovy (sémaglutide 2,4 mg) — L'étude STEP
+### [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) — L'étude STEP
 
 L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste la référence pour évaluer Wegovy. Elle a suivi 1 961 patients non diabétiques en situation d'obésité pendant 68 semaines (environ 16 mois) :
 
@@ -35,7 +35,7 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 
 Ce qui signifie concrètement : pour une personne pesant 100 kg au départ, la perte de poids moyenne sous Wegovy est d'environ 15 kg sur 16 mois. Un tiers des patients en perdent 20 kg ou plus.
 
-### Mounjaro / Zepbound (tirzépatide) — L'étude SURMOUNT-1
+### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) / Zepbound (tirzépatide) — L'étude SURMOUNT-1
 
 Mounjaro (tirzépatide) a produit des résultats encore plus impressionnants dans l'étude SURMOUNT-1, qui a suivi 2 539 patients pendant 72 semaines (18 mois) :
 

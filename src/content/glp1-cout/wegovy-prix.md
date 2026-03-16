@@ -250,7 +250,7 @@ Pour maîtriser le coût de Wegovy :
 
 Le **prix de Wegovy en pharmacie** reste élevé en 2026 (169 à 360€/mois), mais plusieurs solutions permettent de réduire le reste à charge : vérifier votre mutuelle, comparer les pharmacies, et attendre le remboursement Sécurité Sociale possible au 2e semestre 2026. L'arrivée des biosimilaires (attendus 2027) devrait réduire les prix de 30 à 50%.
 
-Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabétologue qui pourra évaluer votre situation et vous orienter vers les meilleures solutions de financement.
+Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabétologue qui pourra évaluer votre situation et vous orienter vers les meilleures solutions de financement. Retrouvez également le [détail complet des prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/) avec les tarifs par dosage et les perspectives de remboursement.
 
 ---
 

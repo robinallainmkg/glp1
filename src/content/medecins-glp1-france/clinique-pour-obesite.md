@@ -83,6 +83,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **3. Services disponibles :**
 - Prescription de médicaments (GLP-1, etc.)
+- Orientation vers un [endocrinologue spécialisé en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)
 - Bilans biologiques complets
 - Soutien psychologique
 - Programmes d'exercices adaptés

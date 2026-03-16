@@ -122,7 +122,7 @@ Si vous avez déjà injecté un produit douteux et ressentez des symptômes inha
 
 Le marché des contrefaçons GLP-1 est une réalité dangereuse, alimentée par la pénurie et le coût élevé des traitements. Les risques vont bien au-delà d'un simple manque d'efficacité : des hospitalisations et des complications graves ont été documentées.
 
-La règle est simple : un médicament [GLP-1 comme Ozempic](/glp1-cout/ozempic-prix/) ou [Wegovy](/glp1-cout/wegovy-prix/) ne doit jamais être acheté sans ordonnance, ni sur un site internet dont l'agrément n'est pas vérifiable. Si votre traitement vous pose des problèmes d'accès ou de coût, parlez-en à votre médecin — il existe des solutions légales, notamment les [dispositifs de remboursement](/glp1-cout/wegovy-remboursement-mutuelle/) et les médicaments alternatifs disponibles sur le marché.
+La règle est simple : un médicament [GLP-1 comme Ozempic](/collections/glp1-cout/prix-ozempic-france/) ou [Wegovy](/collections/glp1-cout/wegovy-prix/) ne doit jamais être acheté sans ordonnance, ni sur un site internet dont l'agrément n'est pas vérifiable. Si votre traitement vous pose des problèmes d'accès ou de coût, parlez-en à votre médecin — il existe des solutions légales, notamment les [dispositifs de remboursement](/collections/glp1-cout/wegovy-remboursement-mutuelle/) et les médicaments alternatifs disponibles sur le marché.
 
 ---
 

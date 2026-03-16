@@ -495,7 +495,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 ### Guides Wegovy Essentiels
 - **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy)** - Posologie complète de 0.25mg à 2.4mg
 - **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy)** - Comment gérer nausées et vomissements
-- **[Dosage Wegovy Optimal](/collections/effets-secondaires-glp1/wegovy-dosage)** - Guide d'escalade progressive
+- **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage)** - Guide d'escalade progressive
 - **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition optimale
 
 ### Remboursement et Mutuelles

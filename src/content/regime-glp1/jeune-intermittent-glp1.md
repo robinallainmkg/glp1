@@ -41,7 +41,7 @@ Le jeûne intermittent (JI) et les agonistes GLP-1 sont synergiques pour la pert
 ## Prix, disponibilité et variations en France
 
 ### Coûts JI + GLP-1
-- **Ozempic® + suivi** : ~59,90€/stylo (remboursé 65 % DT2) + consultation nutritionnelle
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suivi** : ~59,90€/stylo (remboursé 65 % DT2) + consultation nutritionnelle
 - **Trulicity® + apps** : ~81€/mois (remboursé 65 % DT2) + applications JI (0-10€/mois)
 - **Lecteur glucose continu** : 60€/mois (optionnel surveillance)
 - **Suppléments** : Multivitamines 15-25€/mois

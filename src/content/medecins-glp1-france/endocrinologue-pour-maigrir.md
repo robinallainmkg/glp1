@@ -220,6 +220,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Médecin nutritionniste** (formation spécialisée)
 - **Consultation obésité** en CHU
 - **Médecin généraliste formé** (certains sont très compétents)
+- **[Diabétologue à Paris](/collections/medecins-glp1-france/diabetologue-paris/)** si vous êtes en Île-de-France
 
 ### Approche multidisciplinaire
 Idéalement, associez :
