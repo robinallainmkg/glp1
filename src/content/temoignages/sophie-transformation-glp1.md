@@ -9,6 +9,7 @@ tags: ["ozempic", "sémaglutide", "perte de poids", "28 kilos", "ménopause", "5
 pubDate: 2025-08-25T00:00:00.000Z
 featured: true
 priority: 3
+mainKeyword: "temoignage ozempic perte de poids"
 ---
 
 ## Sophie D. : Renaissance à 52 Ans avec Ozempic

@@ -103,7 +103,7 @@ Le temps sous GLP-1 doit être utilisé comme une "fenêtre de changement". Le m
 - Apprendre à manger plus lentement et en pleine conscience
 - Réduire les portions sans frustration (l'appétit diminué facilite cela)
 - Augmenter la consommation de protéines et de légumes
-- Instaurer une activité physique régulière
+- Instaurer un [programme d'exercice pour maintenir les résultats](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
 - Travailler sur les comportements alimentaires émotionnels avec un professionnel si nécessaire
 
 Ces changements, s'ils sont consolidés pendant 12 à 18 mois de traitement, ont plus de chances de se maintenir après l'arrêt.
@@ -134,7 +134,7 @@ En pratique, une réduction progressive de la dose sur 2 à 3 mois avant l'arrê
 
 ## Alternatives en cas d'arrêt forcé {#alternatives}
 
-Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis.
+Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis. La [préservation de la masse musculaire lors du sevrage](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un point crucial souvent négligé lors de l'arrêt.
 
 ### Orlistat (Xenical)
 

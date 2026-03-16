@@ -1,6 +1,6 @@
 ---
 title: "Prix Zepbound France : Coût et Remboursement 2025"
-description: "Découvrez le prix de Zepbound en France. Coût détaillé, conditions de remboursement, comparaison des pharmacies et conseils pour accéder à ce traitement GLP-1 innovant."
+description: "Prix Zepbound France 2025 : coût détaillé, remboursement et conseils pour accéder à ce traitement GLP-1. Guide complet mis à jour."
 pubDate: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Coût et Accessibilité"

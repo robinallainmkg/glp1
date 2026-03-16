@@ -9,6 +9,7 @@ tags: ["mounjaro", "tirzepatide", "perte de poids", "35 kilos", "homme", "45 ans
 pubDate: 2025-08-20T00:00:00.000Z
 featured: true
 priority: 2
+mainKeyword: "temoignage wegovy perte de poids"
 ---
 
 ## Laurent M. : De 120kg à 85kg grâce à Mounjaro

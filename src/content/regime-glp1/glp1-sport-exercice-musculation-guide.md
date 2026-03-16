@@ -41,6 +41,7 @@ Cette perte musculaire a des conséquences concrètes :
 - **Risque de "yo-yo" à l'arrêt du traitement** : sans masse musculaire, la reprise de poids est plus rapide et la composition corporelle est moins favorable
 - **Réduction de la force et de l'endurance** : impact sur la qualité de vie et l'autonomie, surtout chez les patients âgés
 - **Risque de sarcopénie** : problème particulièrement préoccupant pour les patients de plus de 60 ans
+- **[Risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/)** : la perte de poids rapide peut réduire la densité osseuse, notamment sans exercices avec mise en charge
 
 ### L'activité physique double les bénéfices du traitement
 

@@ -124,7 +124,7 @@ Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par ki
 
 ### Pratiquer une activité physique incluant du renforcement musculaire
 
-L'exercice physique, et particulièrement la musculation ou le renforcement musculaire, contribue à préserver la masse musculaire et à maintenir un tonus cutané global. Une pratique régulière de 2 à 3 séances par semaine est recommandée pendant toute la durée du traitement.
+L'exercice physique, et particulièrement la musculation ou le [renforcement musculaire pour prévenir l'Ozempic Face](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/), contribue à préserver la masse musculaire et à maintenir un tonus cutané global. Une pratique régulière de 2 à 3 séances par semaine est recommandée pendant toute la durée du traitement.
 
 ## FAQ {#faq}
 

@@ -110,7 +110,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 - Apprentissage de l'injection quotidienne
 - Plan alimentaire personnalisé
 
-> **Important (juin 2025)** : Depuis le 23 juin 2025, la prescription initiale et le renouvellement de Saxenda sont autorisés pour **tout médecin**, sans réservation à un spécialiste. Consultez votre médecin traitant.
+> **Important (juin 2025)** : Depuis le 23 juin 2025, la prescription initiale et le renouvellement de Saxenda sont autorisés pour **tout médecin**, sans réservation à un spécialiste. Consultez notre article sur les [règles de prescription ANSM depuis juin 2025](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) pour les détails. Consultez votre médecin traitant.
 
 ### Étape 3 : Période d'adaptation (1-4 semaines)
 **Augmentation progressive** :
@@ -167,7 +167,7 @@ Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète
 **Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Pour les [prix Saxenda 2026](/collections/glp1-cout/prix-saxenda-france/) en détail, son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
 
 ### Puis-je arrêter Saxenda brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
+Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids après l'arrêt de Saxenda](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) (effet yoyo). Notre guide dédié vous explique les stratégies pour limiter ce risque.
 
 ---
 

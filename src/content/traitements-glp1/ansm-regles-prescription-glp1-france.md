@@ -1,5 +1,5 @@
 ---
-title: "ANSM : Nouvelles Règles de Prescription des GLP-1 en France (2025-2026)"
+title: "ANSM : Règles de Prescription des GLP-1 en France 2025"
 description: "Depuis 2025, tout médecin peut prescrire les GLP-1 en France. Formulaire obligatoire, conditions de prescription et recommandations de l'ANSM."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
@@ -53,7 +53,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 ### Février 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
 
-Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un mésusage documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
+Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
 
 Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabète de type 2. Il vise à s'assurer que :
 
@@ -175,7 +175,7 @@ Pour comparer ces traitements en détail, consultez notre [comparatif des GLP-1]
 
 ### Mon médecin généraliste peut-il me prescrire Ozempic pour maigrir ?
 
-Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte de poids, les traitements approuvés sont Wegovy, Mounjaro et Saxenda. Depuis juin 2025, votre médecin généraliste peut vous prescrire ces traitements anti-obésité si vous remplissez les critères d'éligibilité.
+Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte de poids, les traitements approuvés sont Wegovy, Mounjaro et Saxenda. Depuis juin 2025, votre généraliste peut vous prescrire ces traitements anti-obésité si vous remplissez les critères d'éligibilité — consultez notre guide sur le [médecin généraliste et conditions de prescription](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) pour connaître les démarches.
 
 ### Le formulaire obligatoire va-t-il ralentir ma prise en charge ?
 

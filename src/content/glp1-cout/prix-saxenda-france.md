@@ -1,5 +1,5 @@
 ---
-title: "Prix Saxenda 2026 : Coût, Remboursement et Mutuelle en France"
+title: "Prix Saxenda 2026 : Coût, Remboursement et Mutuelle"
 description: "Prix Saxenda en pharmacie (240-300€/mois, non remboursé). Comparatif des coûts GLP-1, couverture mutuelle et aides financières."
 keywords: ['prix saxenda', 'saxenda pharmacie', 'remboursement saxenda', 'mutuelle saxenda', 'coût traitement saxenda']
 seoTitle: "Prix Saxenda 2026 : Combien coûte Saxenda en France ?"
@@ -12,6 +12,7 @@ readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
+mainKeyword: "prix Saxenda France"
 ---
 <script type="application/ld+json">
 {

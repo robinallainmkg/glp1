@@ -13,6 +13,7 @@ readingTime: 12
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Mounjaro France"
 ---
 
 <script type="application/ld+json">

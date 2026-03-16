@@ -1,6 +1,6 @@
 ---
 title: "Prix et Coût Détaillé de ce traitement GLP-1 en France 2025"
-description: "Guide complet sur Operations Pour Maigrir : informations médicales et recommandations d'experts."
+description: "Prix opération bariatrique en France : sleeve, bypass, anneau gastrique. Coût, remboursement Sécurité Sociale et comparatif avec les traitements GLP-1."
 pubDate: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"

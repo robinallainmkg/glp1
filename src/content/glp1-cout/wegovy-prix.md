@@ -67,7 +67,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Wegovy Prix Pharmacie 2026 : Combien Coûte Wegovy en France ?
 
-Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par mois** selon le dosage prescrit. Ce médicament (sémaglutide) est indiqué dans le traitement de l'obésité. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026, mais un remboursement est attendu au 2e semestre 2026. Certaines mutuelles peuvent proposer une prise en charge partielle.
+Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par mois** selon le dosage prescrit. Ce médicament (sémaglutide) est indiqué dans le traitement de l'obésité. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026, mais un [remboursement Wegovy par la Sécurité Sociale prévu en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) est en cours de négociation avec le CEPS. Certaines mutuelles peuvent proposer une prise en charge partielle.
 
 ## Points clés à retenir
 

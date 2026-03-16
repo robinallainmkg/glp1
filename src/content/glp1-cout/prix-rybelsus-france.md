@@ -12,6 +12,7 @@ readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
+mainKeyword: "prix Rybelsus France"
 thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
 thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 ---

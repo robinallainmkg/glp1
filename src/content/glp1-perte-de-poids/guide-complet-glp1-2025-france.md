@@ -179,7 +179,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 **La chirurgie bariatrique représente une solution efficace** pour les personnes souffrant d'obésité sévère (IMC > 40) ou d'obésité avec complications (IMC > 35).
 
 - **Indications :** IMC > 40 ou IMC > 35 avec complications associées
-- **Types d'intervention :** Anneau gastrique, sleeve gastrectomie, bypass gastrique
+- **Types d'intervention :** Anneau gastrique, [sleeve gastrectomie, bypass gastrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) — comparés aux GLP-1 dans notre dossier dédié
 - **Efficacité :** Perte de 60-80% de l'excès de poids en 1-2 ans
 - **Suivi :** Accompagnement nutritionnel et psychologique obligatoire
 
