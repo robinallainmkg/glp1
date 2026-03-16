@@ -18,7 +18,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Prix Ozempic 2025 : Coût Complet par Dosage et Remboursement",
+  "name": "Prix Ozempic 2026 : Coût Complet par Dosage et Remboursement",
   "description": "Prix Ozempic en pharmacie : 77,60€ par stylo. Coût réel de 40-55€ après remboursement 30%.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-ozempic-france",
   "datePublished": "2025-01-28",
@@ -55,7 +55,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
       },
       {
         "@type": "Question",
-        "name": "Ozempic est-il remboursé en 2025 ?",
+        "name": "Ozempic est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Oui, Ozempic est remboursé à 30% par l'Assurance Maladie en 2026 sous certaines conditions : prescription médicale obligatoire, diagnostic de diabète de type 2 confirmé, échec des antidiabétiques oraux, et IMC ≥ 30 kg/m² ou IMC ≥ 27 kg/m² avec comorbidité."
@@ -235,7 +235,7 @@ thumbnailAlt: "Prix et coût du traitement ozempic-france"
 
 
 
-*Prix mis à jour en janvier 2025. Les tarifs peuvent varier selon les pharmacies et régions.*
+*Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions.*
 
 ## ❓ Questions Fréquentes sur le Prix d'Ozempic
 
@@ -265,7 +265,7 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 **Avec CMU-C ou Complémentaire Santé Solidaire :**
 - **Gratuit** ou reste à charge minimal (< 5€/mois)
 
-### Ozempic est-il remboursé en 2025 ?
+### Ozempic est-il remboursé en 2026 ?
 
 **Oui, Ozempic est remboursé à 30%** par l'Assurance Maladie en 2026, sous certaines conditions :
 
@@ -282,7 +282,7 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 
 **Ozempic (sémaglutide - diabète) :**
 - Prix pharmacie : 77,60€-119,80€/mois
-- Après remboursement : **21-42€/mois**
+- Après remboursement : **40-55€/mois**
 - Dosage max : 2 mg/semaine
 
 **Wegovy (sémaglutide - obésité) :**
@@ -420,7 +420,7 @@ Mais en pratique, avec le dosage progressif :
 
 **Ozempic (sémaglutide - GLP-1 simple) :**
 - Prix pharmacie : 77,60€-119,80€/mois
-- Après remboursement : **21-42€/mois**
+- Après remboursement : **40-55€/mois**
 - Perte de poids moyenne : -15%
 - Disponible depuis : 2019
 
@@ -486,4 +486,4 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 ---
 
-*Dernière mise à jour : 27 décembre 2025. Prix et conditions de remboursement susceptibles d'évoluer. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées.*
+*Dernière mise à jour : mars 2026. Prix et conditions de remboursement susceptibles d'évoluer. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées.*

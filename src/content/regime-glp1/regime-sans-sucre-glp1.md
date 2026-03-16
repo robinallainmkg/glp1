@@ -1,5 +1,6 @@
 ---
 title: "Régime Sans Sucre GLP-1 : Guide Complet et Conseils Pratiques 2025"
+draft: true
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Éliminer le sucre avec les GLP-1 : guide complet pour réduire les sucres, contrôler la glycémie et amplifier les effets de votre traitement."
@@ -33,7 +34,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Réduire les sucres ajoutés est l'un des premiers gestes recommandés lorsqu'on commence un traitement GLP-1. L'Ozempic (sémaglutide), le Wegovy ou le Mounjaro (tirzepatide) agissent sur l'insuline et la glycémie, mais leur efficacité est maximisée quand l'alimentation vient elle aussi limiter les pics glycémiques. Un régime pauvre en sucres ajoutés complète donc naturellement et efficacement l'action médicamenteuse.
+Réduire les sucres ajoutés est l'un des premiers gestes recommandés lorsqu'on commence un traitement GLP-1. L'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), le Wegovy ou le Mounjaro (tirzepatide) agissent sur l'insuline et la glycémie, mais leur efficacité est maximisée quand l'alimentation vient elle aussi limiter les pics glycémiques. Un régime pauvre en sucres ajoutés complète donc naturellement et efficacement l'action médicamenteuse.
 
 ## Comprendre les sucres : lesquels éliminer ?
 

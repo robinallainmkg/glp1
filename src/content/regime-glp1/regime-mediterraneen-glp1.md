@@ -1,5 +1,6 @@
 ---
 title: "Régime Mediterraneen GLP-1 : Guide Complet et Conseils Pratiques 2025"
+draft: true
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Adoptez le régime méditerranéen avec les GLP-1 pour une santé optimale. Menu type, aliments clés et conseils pour combiner tradition culinaire saine et traitement moderne du diabète."
@@ -33,7 +34,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le régime méditerranéen est aujourd'hui reconnu comme l'un des modes d'alimentation les mieux documentés pour la santé cardiovasculaire et métabolique. Associé à un traitement GLP-1 comme l'Ozempic (sémaglutide), le Wegovy ou le Mounjaro (tirzepatide), il constitue un soutien naturel et complémentaire pour amplifier les bénéfices du traitement. Cette combinaison est d'ailleurs celle recommandée en première intention par la plupart des endocrinologues et diabétologues français.
+Le régime méditerranéen est aujourd'hui reconnu comme l'un des modes d'alimentation les mieux documentés pour la santé cardiovasculaire et métabolique. Associé à un traitement GLP-1 comme l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), le Wegovy ou le Mounjaro (tirzepatide), il constitue un soutien naturel et complémentaire pour amplifier les bénéfices du traitement. Cette combinaison est d'ailleurs celle recommandée en première intention par la plupart des endocrinologues et diabétologues français.
 
 ## Qu'est-ce que le régime méditerranéen ?
 

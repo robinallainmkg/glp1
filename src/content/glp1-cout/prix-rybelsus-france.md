@@ -20,7 +20,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Prix Rybelsus 2026 : Coût par Dosage et Remboursement Mutuelle",
-  "description": "Prix Rybelsus en pharmacie : 80-110€ par mois. Coût réel après remboursement 65% (DT2 uniquement).",
+  "description": "Rybelsus n'est pas remboursé (avis défavorable HAS).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-rybelsus-france",
   "datePublished": "2025-12-27",
   "dateModified": "2025-12-27",
@@ -56,10 +56,10 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
       },
       {
         "@type": "Question",
-        "name": "Rybelsus est-il remboursé en 2025 ?",
+        "name": "Rybelsus est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rybelsus est remboursé à 65% par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+          "text": "Non, Rybelsus n'est pas remboursé par l'Assurance Maladie en France. La HAS a rendu un avis défavorable au remboursement du sémaglutide oral."
         }
       }
     ]
@@ -101,12 +101,9 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 ✅ **Échec des antidiabétiques oraux**
 ✅ **Traitement ≥ 3 mois** avec suivi médical
 
-### Démarches pour le remboursement
+### Pas de remboursement Sécurité Sociale
 
-1. **Ordonnance médicale** : Prescription par endocrinologue ou diabétologue
-2. **Carte Vitale** : Présentation en pharmacie
-3. **Remboursement automatique** : 65% du prix réglementé
-4. **Tiers payant** : Possible selon votre mutuelle
+Rybelsus n'étant pas remboursé par l'Assurance Maladie (avis défavorable de la HAS), il n'y a pas de démarches de remboursement à effectuer auprès de la Sécurité Sociale. Le coût total reste à la charge du patient. Certaines mutuelles peuvent proposer une prise en charge partielle : vérifiez votre contrat.
 
 ## 🏥 Couverture Mutuelle Santé
 
@@ -221,4 +218,4 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 
 
-*Prix mis à jour en janvier 2025. Les tarifs peuvent varier selon les pharmacies et régions.*
+*Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions.*
