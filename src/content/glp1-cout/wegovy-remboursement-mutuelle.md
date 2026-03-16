@@ -31,7 +31,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-# Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
+## Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
 
 Le **remboursement de Wegovy par les mutuelles** est une question centrale pour les patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) n'est pas remboursé par la Sécurité Sociale — mais certaines mutuelles complémentaires proposent une prise en charge partielle. Découvrez la liste des mutuelles favorables et les montants de remboursement en 2026.
 

@@ -11,7 +11,7 @@ date: "2025-08-28"
 pubDate: "2025-08-28"
 ---
 
-# Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire
+## Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire
 
 <div class="guide-buttons">
   <a href="/collections/glp1-cout/prix-victoza-france" class="guide-button primary">

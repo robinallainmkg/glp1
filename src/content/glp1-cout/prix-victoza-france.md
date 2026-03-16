@@ -65,7 +65,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 }
 </script>
 
-# Prix Victoza 2025 : Coût et Remboursement en France
+## Prix Victoza 2025 : Coût et Remboursement en France
 
 ## 💰 Prix Victoza en Pharmacie
 

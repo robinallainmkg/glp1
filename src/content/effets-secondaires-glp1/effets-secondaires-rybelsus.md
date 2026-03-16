@@ -228,7 +228,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 ## 📝 Conclusion
 
-**Rybelsus présente une très bonne tolérance** avec des effets secondaires bien maîtrisés, similaire à la forme injectable. Pour une vue d'ensemble du traitement, consultez notre [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/).
+**Rybelsus présente une très bonne tolérance** avec des effets secondaires bien maîtrisés, similaire à la forme injectable. Pour une vue d'ensemble du traitement, consultez notre [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/). Pour les informations tarifaires, consultez notre page sur le [prix de Rybelsus en France](/collections/glp1-cout/prix-rybelsus-france/).
 
 ### Points clés :
 - **Effets fréquents** : Nausées, diarrhée (très fréquents >=10%)

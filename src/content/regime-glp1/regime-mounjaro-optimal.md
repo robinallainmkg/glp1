@@ -22,9 +22,9 @@ affiliateConfig:
   position: "sidebar"
 ---
 
-# Régime Mounjaro Optimal : Guide Nutritionnel Complet
+## Régime Mounjaro Optimal : Guide Nutritionnel Complet
 
-Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alimentation adaptée pour maximiser la perte de poids et améliorer le contrôle glycémique. Pour comprendre en détail le fonctionnement du médicament, consultez le [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/). À noter : Mounjaro (tirzepatide) n'est pas remboursé en mars 2026, avec un coût de 230 à 440 €/mois selon le dosage. La HAS a rendu un avis favorable en décembre 2025, et un remboursement est possible au second semestre 2026 sous conditions (IMC ≥ 35 notamment).
+Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alimentation adaptée pour maximiser la perte de poids et améliorer le contrôle glycémique. Pour comprendre en détail le fonctionnement du médicament, consultez le [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/). À noter : Mounjaro (tirzepatide) n'est pas remboursé en mars 2026, avec un [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) de 230 à 440 €/mois selon le dosage. La HAS a rendu un avis favorable en décembre 2025, et un remboursement est possible au second semestre 2026 sous conditions (IMC ≥ 35 notamment).
 
 ## Principes Fondamentaux du Régime Mounjaro
 

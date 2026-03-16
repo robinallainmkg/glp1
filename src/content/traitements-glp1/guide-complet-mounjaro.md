@@ -13,7 +13,7 @@ featured: true
 priority: 1
 ---
 
-# 🔥 Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
+## Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
 
 <div class="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white p-6 rounded-2xl mb-8 shadow-2xl border-2 border-orange-400">
   <div class="flex items-start gap-4">

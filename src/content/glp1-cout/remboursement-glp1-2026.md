@@ -15,7 +15,7 @@ collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 ---
 
-# Remboursement GLP-1 2026 : Guide Officiel Complet
+## Remboursement GLP-1 2026 : Guide Officiel Complet
 
 Les traitements GLP-1 représentent une avancée majeure pour le diabète de type 2 et l'obésité. En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
 

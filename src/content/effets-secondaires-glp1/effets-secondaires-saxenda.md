@@ -16,7 +16,7 @@ thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
 thumbnailAlt: "Effets secondaires du traitement saxenda"
 ---
 
-# Effets Secondaires Saxenda : Guide Complet
+## Effets Secondaires Saxenda : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 
