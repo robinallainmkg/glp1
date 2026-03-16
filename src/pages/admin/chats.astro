@@ -13,34 +13,34 @@ import { supabaseConfig } from '../../lib/supabase';
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
+      background: #0a0e17;
+      color: #e2e8f0;
     }
     .admin-layout { margin-left: 260px; min-height: 100vh; }
     .page-header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
+      background: #111827;
+      border-bottom: 1px solid #1e293b;
       padding: 1.5rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
-    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #94a3b8; margin-top: 0.25rem; }
     .header-actions { display: flex; gap: 0.75rem; align-items: center; }
     .refresh-btn {
       padding: 0.5rem 1rem;
       border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      background: white;
-      color: #475569;
+      border: 1px solid #2d3748;
+      background: #1e293b;
+      color: #c8d6e5;
       font-size: 0.82rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 0.4rem;
     }
-    .refresh-btn:hover { background: #f8fafc; border-color: #cbd5e1; }
+    .refresh-btn:hover { background: #2d3748; }
     .last-update { font-size: 0.72rem; color: #94a3b8; }
 
     .main { padding: 2rem; }
@@ -53,17 +53,17 @@ import { supabaseConfig } from '../../lib/supabase';
       margin-bottom: 1.5rem;
     }
     .stat-card {
-      background: white;
+      background: #111827;
       border-radius: 12px;
       padding: 1.25rem;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
     }
     .stat-card .label {
       font-size: 0.72rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: #64748b;
+      color: #94a3b8;
       margin-bottom: 0.5rem;
     }
     .stat-card .value {
@@ -87,20 +87,20 @@ import { supabaseConfig } from '../../lib/supabase';
 
     /* Liste conversations */
     .conv-list {
-      background: white;
+      background: #111827;
       border-radius: 12px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
       overflow-y: auto;
     }
     .conv-list-header {
       padding: 1rem 1.25rem;
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 1px solid #1e293b;
       font-weight: 700;
       font-size: 0.85rem;
-      color: #0f172a;
+      color: #e2e8f0;
       position: sticky;
       top: 0;
-      background: white;
+      background: #111827;
       z-index: 2;
       display: flex;
       justify-content: space-between;
@@ -113,11 +113,11 @@ import { supabaseConfig } from '../../lib/supabase';
     .conv-filter button {
       padding: 0.25rem 0.6rem;
       border-radius: 6px;
-      border: 1px solid #e2e8f0;
-      background: white;
+      border: 1px solid #2d3748;
+      background: #1e293b;
       font-size: 0.72rem;
       cursor: pointer;
-      color: #64748b;
+      color: #c8d6e5;
     }
     .conv-filter button.active {
       background: #3b82f6;
@@ -126,12 +126,12 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .conv-item {
       padding: 0.85rem 1.25rem;
-      border-bottom: 1px solid #f1f5f9;
+      border-bottom: 1px solid #1e293b;
       cursor: pointer;
       transition: background 0.15s;
     }
-    .conv-item:hover { background: #f8fafc; }
-    .conv-item.active { background: #eff6ff; border-left: 3px solid #3b82f6; }
+    .conv-item:hover { background: #1a2332; }
+    .conv-item.active { background: rgba(59,130,246,0.15); border-left: 3px solid #3b82f6; }
     .conv-item-top {
       display: flex;
       justify-content: space-between;
@@ -141,7 +141,7 @@ import { supabaseConfig } from '../../lib/supabase';
     .conv-visitor {
       font-size: 0.82rem;
       font-weight: 600;
-      color: #0f172a;
+      color: #e2e8f0;
       display: flex;
       align-items: center;
       gap: 0.4rem;
@@ -153,7 +153,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .conv-preview {
       font-size: 0.78rem;
-      color: #64748b;
+      color: #94a3b8;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -169,8 +169,8 @@ import { supabaseConfig } from '../../lib/supabase';
       border-radius: 4px;
       font-weight: 600;
     }
-    .conv-badge.llm { background: #dcfce7; color: #166534; }
-    .conv-badge.fallback { background: #fef3c7; color: #92400e; }
+    .conv-badge.llm { background: rgba(34,197,94,0.2); color: #4ade80; }
+    .conv-badge.fallback { background: rgba(245,158,11,0.2); color: #fbbf24; }
     .conv-badge-msgs {
       font-size: 0.65rem;
       color: #94a3b8;
@@ -184,16 +184,16 @@ import { supabaseConfig } from '../../lib/supabase';
 
     /* Detail conversation */
     .conv-detail {
-      background: white;
+      background: #111827;
       border-radius: 12px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1e293b;
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
     .conv-detail-header {
       padding: 1rem 1.25rem;
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 1px solid #1e293b;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -201,7 +201,7 @@ import { supabaseConfig } from '../../lib/supabase';
     .conv-detail-header h3 {
       font-size: 0.9rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #e2e8f0;
     }
     .conv-detail-meta {
       font-size: 0.72rem;
@@ -231,8 +231,8 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .msg.assistant {
       align-self: flex-start;
-      background: #f1f5f9;
-      color: #1e293b;
+      background: #1e293b;
+      color: #e2e8f0;
       border-bottom-left-radius: 4px;
     }
     .msg-time {
