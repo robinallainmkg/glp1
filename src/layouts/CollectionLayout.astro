@@ -69,11 +69,8 @@ function dedupeBySlugKeepLatest(items: any[]) {
 
 const items = dedupeBySlugKeepLatest(normalizedArticles);
 
-// Fonction pour obtenir les informations de l'auteur
-// Author helper removed (unused)
-
-// Fonction pour formater la date
-// Date formatter removed (unused)
+// Calcul du temps de lecture total
+const totalReadingTime = items.reduce((sum, article) => sum + (article.readingTime || 0), 0);
 
 // Récupération des produits affiliés pour cette collection
 let collectionProducts = [];
@@ -90,547 +87,381 @@ try {
 } catch (error) {
   console.warn('Erreur lors du chargement des produits de collection:', error);
 }
+
+// Couleurs dérivées pour le thème de la collection
+const colorMap: Record<string, { bg: string; light: string; border: string; text: string; badge: string }> = {
+  '#dc2626': { bg: 'red', light: 'from-red-50 to-orange-50/50', border: 'border-red-200', text: 'text-red-700', badge: 'bg-red-100 text-red-800' },
+  '#3b82f6': { bg: 'blue', light: 'from-blue-50 to-indigo-50/50', border: 'border-blue-200', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-800' },
+  '#16a34a': { bg: 'green', light: 'from-green-50 to-emerald-50/50', border: 'border-green-200', text: 'text-green-700', badge: 'bg-green-100 text-green-800' },
+  '#f59e0b': { bg: 'amber', light: 'from-amber-50 to-yellow-50/50', border: 'border-amber-200', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-800' },
+  '#8b5cf6': { bg: 'purple', light: 'from-purple-50 to-violet-50/50', border: 'border-purple-200', text: 'text-purple-700', badge: 'bg-purple-100 text-purple-800' },
+  '#06b6d4': { bg: 'cyan', light: 'from-cyan-50 to-sky-50/50', border: 'border-cyan-200', text: 'text-cyan-700', badge: 'bg-cyan-100 text-cyan-800' },
+  '#ec4899': { bg: 'pink', light: 'from-pink-50 to-rose-50/50', border: 'border-pink-200', text: 'text-pink-700', badge: 'bg-pink-100 text-pink-800' },
+  '#f97316': { bg: 'orange', light: 'from-orange-50 to-amber-50/50', border: 'border-orange-200', text: 'text-orange-700', badge: 'bg-orange-100 text-orange-800' },
+};
+
+const defaultTheme = { bg: 'blue', light: 'from-blue-50 to-indigo-50/50', border: 'border-blue-200', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-800' };
+const theme = colorMap[collection.color] || defaultTheme;
 ---
 
-<BaseLayout 
+<BaseLayout
   title={collection.seoTitle}
   description={collection.seoDescription}
   keywords={collection.keywords.join(', ')}
 >
-  <div class="collection-container">
-    <!-- Collection Header -->
-    <header class="collection-header">
-      <div class="collection-hero" style={`background: linear-gradient(135deg, ${collection.color}15 0%, ${collection.color}05 100%)`}>
-        <div class="collection-hero-content">
-          <div class="collection-icon" style={`background: ${collection.color}20`}>
-            <span class="icon-emoji">{collection.icon}</span>
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+
+    <!-- ============================================ -->
+    <!-- BREADCRUMBS                                   -->
+    <!-- ============================================ -->
+    <nav class="container mx-auto px-4 pt-6 pb-2" aria-label="Fil d'Ariane">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-gray-900 transition-colors duration-200 flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            Accueil
+          </a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg class="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <span class="font-medium text-gray-900">{collection.name}</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                  -->
+    <!-- ============================================ -->
+    <section class={`relative py-12 md:py-16 lg:py-20 overflow-hidden bg-gradient-to-br ${theme.light}`}>
+      <!-- Background decoration -->
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div class="absolute top-0 right-0 w-80 h-80 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" style={`background: ${collection.color}15`}></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" style={`background: ${collection.color}10`}></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center cl-fade-in">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-6 border" style={`background: ${collection.color}10; border-color: ${collection.color}30; color: ${collection.color}`}>
+            <span class="text-xl">{collection.icon}</span>
+            <span>{items.length} article{items.length > 1 ? 's' : ''} disponibles</span>
           </div>
-          <div class="collection-info">
-            <h1 class="collection-title">{collection.name}</h1>
-            <p class="collection-description">{collection.description}</p>
-            <div class="collection-stats">
-              <span class="stat-item">
-                <span class="stat-icon">📄</span>
-                <span class="stat-text">{articles.length} article{articles.length > 1 ? 's' : ''}</span>
-              </span>
-              <span class="stat-item">
-                <span class="stat-icon">⏱️</span>
-                <span class="stat-text">{Math.ceil(articles.reduce((sum, article) => sum + article.readingTime, 0))} min de lecture</span>
-              </span>
+
+          <!-- Title -->
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-gray-900 mb-6">
+            {collection.name}
+          </h1>
+
+          <!-- Description -->
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+            {collection.description}
+          </p>
+
+          <!-- Stats -->
+          <div class="flex items-center justify-center gap-6 md:gap-10">
+            <div class="flex items-center gap-2 text-gray-700">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center" style={`background: ${collection.color}15`}>
+                <svg class="w-5 h-5" style={`color: ${collection.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <div class="text-left">
+                <div class="text-lg font-bold text-gray-900">{items.length}</div>
+                <div class="text-xs text-gray-500">Articles</div>
+              </div>
+            </div>
+            <div class="w-px h-10 bg-gray-200"></div>
+            <div class="flex items-center gap-2 text-gray-700">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center" style={`background: ${collection.color}15`}>
+                <svg class="w-5 h-5" style={`color: ${collection.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="text-left">
+                <div class="text-lg font-bold text-gray-900">{totalReadingTime} min</div>
+                <div class="text-xs text-gray-500">Lecture totale</div>
+              </div>
+            </div>
+            <div class="w-px h-10 bg-gray-200"></div>
+            <div class="flex items-center gap-2 text-gray-700">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center" style={`background: ${collection.color}15`}>
+                <svg class="w-5 h-5" style={`color: ${collection.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="text-left">
+                <div class="text-lg font-bold text-gray-900">2026</div>
+                <div class="text-xs text-gray-500">A jour</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- Produit affilié en bannière après le header -->
+    <!-- Produit affilie en banniere apres le header -->
     {_headerProduct && (
-      <div class="collection-affiliate-banner">
-        <AffiliateProduct 
-          productId={_headerProduct.id}
-          placement="banner"
-          context={{ category: collection.slug, keywords: collection.keywords, tags: [collection.slug] }}
-          variant="featured"
-          className="collection-banner-product"
-        />
+      <div class="container mx-auto px-4 -mt-6 mb-8 relative z-10">
+        <div class="max-w-4xl mx-auto">
+          <AffiliateProduct
+            productId={_headerProduct.id}
+            placement="banner"
+            context={{ category: collection.slug, keywords: collection.keywords, tags: [collection.slug] }}
+            variant="featured"
+            className="collection-banner-product"
+          />
+        </div>
       </div>
     )}
 
-    <!-- Articles Grid -->
-    <section class="articles-section">
-      <div class="articles-header">
-        <h2>Articles de la collection</h2>
-        <div class="articles-filters">
-          <button class="filter-btn active" data-filter="all">Tous</button>
-          <button class="filter-btn" data-filter="recent">Récents</button>
-          <button class="filter-btn" data-filter="popular">Populaires</button>
+    <!-- ============================================ -->
+    <!-- ARTICLES GRID                                 -->
+    <!-- ============================================ -->
+    <section class="py-12 md:py-16">
+      <div class="container mx-auto px-4">
+        <!-- Section header -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10 cl-fade-in">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+              Tous les articles
+            </h2>
+            <p class="text-gray-500 mt-1">
+              {items.length} article{items.length > 1 ? 's' : ''} dans cette collection
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <button class="cl-filter-btn active px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 border" data-filter="all">
+              Tous
+            </button>
+            <button class="cl-filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 border" data-filter="recent">
+              Recents
+            </button>
+          </div>
         </div>
-      </div>
 
-  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-        {items.map((article, index) => {
-          const shouldShowProduct = index > 0 && (index + 1) % 4 === 0 && _sidebarProducts[Math.floor(index/4)];
-          const productToShow = shouldShowProduct ? _sidebarProducts[Math.floor(index/4)] : null;
+        <!-- Articles grid -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {items.map((article, index) => {
+            const shouldShowProduct = index > 0 && (index + 1) % 4 === 0 && _sidebarProducts[Math.floor(index/4)];
+            const productToShow = shouldShowProduct ? _sidebarProducts[Math.floor(index/4)] : null;
 
-          // Préparer l'objet article pour ArticleCard : préférer l'original si disponible
-          const articleForCard = article.__original || article;
+            // Preparer l'objet article pour ArticleCard : preferer l'original si disponible
+            const articleForCard = article.__original || article;
 
-          return (
-            <>
-              <ArticleCard
-                article={articleForCard}
-                collection={collection.slug}
-                categoryName={collection.name}
-                colors={{ bg: collection.color.replace('#',''), text: 'slate-900', badge: 'white' }}
-              />
-
-              {productToShow && (
-                <div class="grid-affiliate-product">
-                  <AffiliateProduct 
-                    productId={productToShow.id}
-                    placement="grid"
-                    context={{ category: collection.slug, keywords: collection.keywords }}
-                    variant="expanded"
-                    className="collection-grid-product"
+            return (
+              <>
+                <div class={`cl-fade-in ${index < 3 ? '' : `cl-delay-${(index % 3) + 1}`}`}>
+                  <ArticleCard
+                    article={articleForCard}
+                    collection={collection.slug}
+                    categoryName={collection.name}
+                    colors={{ bg: collection.color.replace('#',''), text: 'slate-900', badge: 'white' }}
                   />
                 </div>
-              )}
-            </>
-          );
-        })}
+
+                {productToShow && (
+                  <div class="cl-fade-in">
+                    <AffiliateProduct
+                      productId={productToShow.id}
+                      placement="grid"
+                      context={{ category: collection.slug, keywords: collection.keywords }}
+                      variant="expanded"
+                      className="collection-grid-product"
+                    />
+                  </div>
+                )}
+              </>
+            );
+          })}
+        </div>
+
+        <!-- Empty state -->
+        {items.length === 0 && (
+          <div class="text-center py-20">
+            <div class="text-6xl mb-4">{collection.icon}</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Aucun article pour le moment</h3>
+            <p class="text-gray-500 mb-6">Les articles de cette collection seront bientot disponibles.</p>
+            <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-all duration-200">
+              Retour a l'accueil
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+          </div>
+        )}
       </div>
     </section>
 
     <!-- Produit d'affiliation en vedette -->
     {_headerProduct && (
-      <section class="featured-product">
-        <h2>Produit en vedette</h2>
-        <AffiliateProduct product={_headerProduct} />
+      <section class="py-12 bg-gray-50/80">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center cl-fade-in">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-6">Produit en vedette</h2>
+            <AffiliateProduct product={_headerProduct} />
+          </div>
+        </div>
       </section>
     )}
 
-    <!-- Pagination si nécessaire -->
+    <!-- ============================================ -->
+    <!-- PAGINATION                                    -->
+    <!-- ============================================ -->
     {totalPages > 1 && (
-      <nav class="pagination">
-        <div class="pagination-info">
-          Page {currentPage} sur {totalPages}
-        </div>
-        <div class="pagination-controls">
-          {currentPage > 1 && (
-            <a href={`/${collection.slug}/?page=${currentPage - 1}`} class="pagination-btn">
-              ← Précédent
-            </a>
-          )}
-          {currentPage < totalPages && (
-            <a href={`/${collection.slug}/?page=${currentPage + 1}`} class="pagination-btn">
-              Suivant →
-            </a>
-          )}
+      <nav class="container mx-auto px-4 py-8" aria-label="Pagination">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-7xl mx-auto border-t border-gray-200 pt-8">
+          <p class="text-sm text-gray-500 font-medium">
+            Page <span class="text-gray-900 font-bold">{currentPage}</span> sur <span class="text-gray-900 font-bold">{totalPages}</span>
+          </p>
+          <div class="flex gap-3">
+            {currentPage > 1 && (
+              <a href={`/collections/${collection.slug}/?page=${currentPage - 1}`} class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 shadow-sm hover:shadow-md">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                Precedent
+              </a>
+            )}
+            {currentPage < totalPages && (
+              <a href={`/collections/${collection.slug}/?page=${currentPage + 1}`} class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md">
+                Suivant
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            )}
+          </div>
         </div>
       </nav>
     )}
+
+    <!-- ============================================ -->
+    <!-- BACK TO HOME CTA                              -->
+    <!-- ============================================ -->
+    <section class="py-12 md:py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center cl-fade-in">
+          <div class="bg-white rounded-2xl border border-gray-100 shadow-lg p-8 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-4">
+              Explorez nos autres collections
+            </h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              Decouvrez l'ensemble de nos guides sur les traitements GLP-1 : prix, effets secondaires, temoignages et conseils d'experts.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-0.5">
+                Voir toutes les collections
+                <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+              </a>
+              <a href="/guides/quel-traitement-glp1-choisir/" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-gray-200 text-gray-800 font-semibold rounded-2xl hover:border-blue-300 hover:bg-blue-50/50 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5">
+                Quel traitement choisir ?
+                <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
 </BaseLayout>
 
 <style>
-.collection-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Collection Header */
-.collection-header {
-  margin-bottom: 3rem;
-}
-
-.collection-hero {
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  margin-bottom: 2rem;
-}
-
-.collection-hero-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.collection-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  flex-shrink: 0;
-}
-
-.icon-emoji {
-  font-size: 2.5rem;
-}
-
-.collection-info {
-  flex: 1;
-}
-
-.collection-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  color: var(--color-slate-900);
-  line-height: 1.2;
-}
-
-.collection-description {
-  font-size: 1.25rem;
-  color: var(--color-slate-600);
-  margin: 0 0 1.5rem 0;
-  line-height: 1.6;
-}
-
-.collection-stats {
-  display: flex;
-  gap: 2rem;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--color-slate-700);
-  font-weight: 500;
-}
-
-.stat-icon {
-  font-size: 1.1rem;
-}
-
-/* Articles Section */
-.articles-section {
-  margin-bottom: 3rem;
-}
-
-.articles-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.articles-header h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--color-slate-900);
-  margin: 0;
-}
-
-.articles-filters {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.filter-btn {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-slate-300);
-  background: white;
-  color: var(--color-slate-600);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-weight: 500;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--color-blue-500);
-  color: white;
-  border-color: var(--color-blue-500);
-}
-
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-/* Article Cards */
-.article-card {
-  background: white;
-  border: 1px solid var(--color-slate-200);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.article-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border-color: var(--color-blue-300);
-}
-
-/* Article Image */
-.article-image {
-  position: relative;
-  aspect-ratio: 16/10;
-  overflow: hidden;
-}
-
-.article-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.article-card:hover .article-thumbnail {
-  transform: scale(1.05);
-}
-
-.collection-badge {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Article Content */
-.article-card-content {
-  padding: 1.5rem;
-}
-
-
-/* meta-top removed: keep selectors but hide gracefully in case present */
-.article-meta-top { display: none !important; }
-.reading-time, .word-count { display: none !important; }
-
-.article-title {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* limit title to 2 lines */
-  -webkit-box-orient: vertical;
-}
-
-.article-title a {
-  color: var(--color-slate-900);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.article-title a:hover {
-  color: var(--color-blue-600);
-}
-
-.article-description {
-  color: var(--color-slate-600);
-  line-height: 1.5;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* limit description to 3 lines */
-  -webkit-box-orient: vertical;
-  word-break: break-word;
-}
-
-.article-card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-slate-100);
-}
-
-.author-info {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.author-avatar {
-  font-size: 1.5rem;
-}
-
-.author-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.author-name {
-  font-weight: 600;
-  color: var(--color-slate-900);
-  font-size: 0.875rem;
-}
-
-.author-role {
-  font-size: 0.75rem;
-  color: var(--color-slate-500);
-}
-
-.article-date { display: none !important; }
-
-.article-card-action {
-  margin-top: 1rem;
-}
-
-.read-more-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--color-blue-500);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  width: 100%;
-  justify-content: center;
-}
-
-.read-more-btn:hover {
-  background: var(--color-blue-600);
-  transform: translateY(-1px);
-}
-
-.btn-icon {
-  transition: transform 0.2s ease;
-}
-
-.read-more-btn:hover .btn-icon {
-  transform: translateX(2px);
-}
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3rem 0;
-  padding: 1rem 0;
-  border-top: 1px solid var(--color-slate-200);
-}
-
-.pagination-info {
-  color: var(--color-slate-600);
-  font-weight: 500;
-}
-
-.pagination-controls {
-  display: flex;
-  gap: 1rem;
-}
-
-.pagination-btn {
-  padding: 0.75rem 1.5rem;
-  background: var(--color-slate-100);
-  color: var(--color-slate-700);
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.pagination-btn:hover {
-  background: var(--color-blue-500);
-  color: white;
-}
-
-/* Related Collections */
-.related-collections {
-  margin-top: 3rem;
-  padding-top: 3rem;
-  border-top: 1px solid var(--color-slate-200);
-}
-
-.related-collections h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--color-slate-900);
-  margin: 0 0 2rem 0;
-}
-
-.collections-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-/* Featured Product */
-.featured-product {
-  margin: 3rem 0;
-  padding: 2rem;
-  border-radius: 12px;
-  background: var(--color-slate-50);
-  text-align: center;
-}
-
-.featured-product h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--color-slate-900);
-  margin: 0 0 1.5rem 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .collection-hero-content {
-    flex-direction: column;
-    text-align: center;
+  /* Scroll-triggered fade-in animations (same pattern as homepage) */
+  .cl-fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .collection-title {
-    font-size: 2rem;
+
+  .cl-fade-in.cl-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .collection-stats {
-    justify-content: center;
+
+  .cl-delay-1 { transition-delay: 0.1s; }
+  .cl-delay-2 { transition-delay: 0.2s; }
+  .cl-delay-3 { transition-delay: 0.3s; }
+
+  /* Filter buttons */
+  .cl-filter-btn {
+    background: white;
+    color: #64748b;
+    border-color: #e2e8f0;
+    cursor: pointer;
   }
-  
-  .articles-header {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: stretch;
+
+  .cl-filter-btn:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #334155;
   }
-  
-  .articles-grid {
-    grid-template-columns: 1fr;
+
+  .cl-filter-btn.active {
+    background: #1e293b;
+    color: white;
+    border-color: #1e293b;
   }
-  
-  .pagination {
-    flex-direction: column;
-    gap: 1rem;
+
+  /* Smooth container */
+  .container {
+    max-width: 1200px;
   }
-}
+
+  /* Responsive adjustments for stats */
+  @media (max-width: 640px) {
+    .cl-stats-row {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .cl-fade-in {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 </style>
 
 <script>
-// Gestion des filtres d'articles
-document.addEventListener('DOMContentLoaded', function() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const articleCards = document.querySelectorAll('.article-card') as NodeListOf<HTMLElement>;
+  // Intersection Observer for scroll-triggered animations (same as homepage)
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.cl-fade-in');
+    if (!fadeElements.length) return;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      // Retirer la classe active de tous les boutons
-      filterBtns.forEach(b => b.classList.remove('active'));
-      // Ajouter la classe active au bouton cliqué
-      (this as HTMLElement).classList.add('active');
-
-      const filter = (this as HTMLElement).dataset.filter;
-
-      articleCards.forEach(card => {
-        if (filter === 'all') {
-          card.style.display = 'block';
-        } else if (filter === 'recent') {
-          // Logique pour filtrer les articles récents
-          // Pour l'instant, on affiche tous
-          card.style.display = 'block';
-        } else if (filter === 'popular') {
-          // Logique pour filtrer les articles populaires
-          // Pour l'instant, on affiche tous
-          card.style.display = 'block';
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cl-visible');
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    fadeElements.forEach(function(el) { observer.observe(el); });
+  });
+
+  // Filter buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.cl-filter-btn');
+    const articleCards = document.querySelectorAll('.cl-fade-in .group') as NodeListOf<HTMLElement>;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        (this as HTMLElement).classList.add('active');
+
+        const filter = (this as HTMLElement).dataset.filter;
+
+        // For now, all filters show all articles (same behavior as before)
+        articleCards.forEach(card => {
+          const parent = card.closest('.cl-fade-in') as HTMLElement;
+          if (parent) {
+            parent.style.display = filter === 'all' || filter === 'recent' ? '' : '';
+          }
+        });
       });
     });
   });
-});
 </script>

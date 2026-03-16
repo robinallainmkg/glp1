@@ -563,11 +563,153 @@ import { supabaseConfig } from '../../lib/supabase';
       white-space: pre-wrap;
     }
     /* Tool calls / thinking highlights */
-    .console-line-text.cl-tool { color: #38bdf8; }
-    .console-line-text.cl-result { color: #4ade80; }
-    .console-line-text.cl-error { color: #f87171; }
-    .console-line-text.cl-thinking { color: #8b5cf6; font-style: italic; }
-    .console-line-text.cl-system { color: #fbbf24; }
+    .console-line-text.cl-tool { color: #64748b; font-size: 0.58rem; }
+    .console-line-text.cl-result { color: #4ade80; font-weight: 600; }
+    .console-line-text.cl-error { color: #f87171; font-weight: 700; background: #450a0a66; padding: 0.15rem 0.4rem; border-radius: 3px; border-left: 3px solid #f87171; }
+    .console-line-text.cl-thinking { color: #475569; font-style: italic; font-size: 0.58rem; }
+    .console-line-text.cl-system { color: #fbbf24; font-weight: 700; font-size: 0.72rem; }
+    .console-line-text.cl-important { color: #f59e0b; font-weight: 700; background: #78350f55; padding: 0.15rem 0.5rem; border-radius: 4px; border-left: 3px solid #f59e0b; font-size: 0.72rem; }
+    .console-line-text.cl-metric { color: #22d3ee; font-weight: 700; background: #0e749022; padding: 0.1rem 0.4rem; border-radius: 3px; border-left: 3px solid #22d3ee; }
+    .console-line-text.cl-file { color: #a78bfa; font-size: 0.6rem; }
+    .console-line.has-important { background: #1a1a0a; }
+    .console-line.has-error { background: #1a0a0a; }
+    .console-line.has-metric { background: #0a1a1a; }
+
+    /* KPI Row */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .kpi-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      transition: border-color 0.2s, background 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .kpi-card:hover { border-color: #334155; background: #1a2332; }
+    .kpi-label {
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #475569;
+      font-weight: 600;
+    }
+    .kpi-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1;
+    }
+    .kpi-sub {
+      font-size: 0.58rem;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .kpi-bar {
+      height: 3px;
+      border-radius: 2px;
+      background: #1e293b;
+      margin-top: 0.3rem;
+      overflow: hidden;
+    }
+    .kpi-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.5s;
+    }
+    .kpi-trend-up { color: #4ade80; }
+    .kpi-trend-down { color: #f87171; }
+    .kpi-trend-neutral { color: #64748b; }
+
+    /* Agent timeline */
+    .agent-timeline {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .timeline-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .timeline-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .timeline-body {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+    }
+    .timeline-agent {
+      padding: 0.6rem 1rem;
+      border-right: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      transition: background 0.2s;
+    }
+    .timeline-agent:hover { background: #1a2332; }
+    .timeline-agent-header {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .timeline-agent-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .timeline-agent-name { font-size: 0.62rem; font-weight: 700; }
+    .timeline-agent-time { font-size: 0.5rem; color: #475569; margin-left: auto; }
+    .timeline-agent-result {
+      font-size: 0.55rem;
+      color: #64748b;
+      padding-left: 1.1rem;
+    }
+    .timeline-agent-status {
+      font-size: 0.48rem;
+      padding: 0.08rem 0.3rem;
+      border-radius: 3px;
+      font-weight: 600;
+      margin-left: auto;
+    }
+    .tas-completed { background: #052e16; color: #4ade80; }
+    .tas-running { background: #0a1a0f; color: #22c55e; animation: pulse-btn 2s infinite; }
+    .tas-error { background: #450a0a; color: #f87171; }
+    .tas-idle { background: #111827; color: #374151; }
+
+    /* Section titles */
+    .section-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
     @media (max-width: 768px) {
@@ -575,6 +717,8 @@ import { supabaseConfig } from '../../lib/supabase';
       .mc-header { padding: 1rem; flex-direction: column; gap: 0.5rem; }
       .pipeline-body { grid-template-columns: 1fr; }
       .pipe-arrow { display: none; }
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .timeline-body { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -593,6 +737,54 @@ import { supabaseConfig } from '../../lib/supabase';
   </div>
 
   <div class="mc-main">
+    <!-- Project Health KPIs -->
+    <div class="kpi-row" id="kpiRow">
+      <a class="kpi-card" href="/admin/editorial">
+        <span class="kpi-label">Articles actifs</span>
+        <span class="kpi-value" id="kpiArticles">--</span>
+        <span class="kpi-sub" id="kpiArticlesSub">chargement...</span>
+      </a>
+      <a class="kpi-card" href="/admin/fact-check">
+        <span class="kpi-label">Couverture Fact-Check</span>
+        <span class="kpi-value" id="kpiFactCheck">--</span>
+        <span class="kpi-sub" id="kpiFactCheckSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiFactCheckBar" style="width:0%;background:#22c55e"></div></div>
+      </a>
+      <a class="kpi-card" href="/admin/audit">
+        <span class="kpi-label">Tickets SEO a traiter</span>
+        <span class="kpi-value" id="kpiSeoIssues">--</span>
+        <span class="kpi-sub" id="kpiSeoSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiSeoBar" style="width:0%;background:#f87171"></div></div>
+      </a>
+      <a class="kpi-card" href="/admin/analytics">
+        <span class="kpi-label">Keywords Top 10</span>
+        <span class="kpi-value" id="kpiKeywords">--</span>
+        <span class="kpi-sub" id="kpiKeywordsSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiKeywordsBar" style="width:0%;background:#3b82f6"></div></div>
+      </a>
+      <a class="kpi-card" href="/admin/opportunites">
+        <span class="kpi-label">Opportunites</span>
+        <span class="kpi-value" id="kpiOpps">--</span>
+        <span class="kpi-sub" id="kpiOppsSub">chargement...</span>
+      </a>
+      <div class="kpi-card" style="cursor:default">
+        <span class="kpi-label">Pipeline Throughput</span>
+        <span class="kpi-value" id="kpiThroughput">--</span>
+        <span class="kpi-sub" id="kpiThroughputSub">chargement...</span>
+      </div>
+    </div>
+
+    <!-- Agent Timeline -->
+    <div class="agent-timeline" id="agentTimeline">
+      <div class="timeline-header">
+        <span class="timeline-title">Derniere activite des agents</span>
+        <span id="timelineLastUpdate" style="font-size:0.55rem;color:#374151"></span>
+      </div>
+      <div class="timeline-body" id="timelineBody">
+        <div style="padding:1.5rem;color:#374151;font-size:0.72rem;text-align:center">Chargement...</div>
+      </div>
+    </div>
+
     <!-- Pipeline (main view) -->
     <div class="pipeline-section" id="pipelineSection">
       <div class="pipeline-header">
@@ -1119,6 +1311,7 @@ import { supabaseConfig } from '../../lib/supabase';
       }
       agentRuns = latest;
       renderPipeline();
+      renderTimeline();
     } catch (e) {}
   }
 
@@ -1167,11 +1360,22 @@ import { supabaseConfig } from '../../lib/supabase';
 
   function classifyLine(text) {
     if (!text) return '';
-    if (/^(Tool|Using|Calling|Running|Execute|Read|Write|Edit|Glob|Grep|Bash|WebSearch|WebFetch)/i.test(text)) return 'cl-tool';
-    if (/^(Result|Output|Found|Created|Updated|Inserted|Deleted|Success|Done|Completed|✅)/i.test(text)) return 'cl-result';
-    if (/^(Error|Failed|Exception|❌|⚠|WARN|WARNING)/i.test(text)) return 'cl-error';
-    if (/^(Thinking|Analyzing|Considering|Planning|Let me|I'll|I need|Looking)/i.test(text)) return 'cl-thinking';
-    if (/^(🚀|📡|🤖|📋|🔐|⏳|Agent .* lance|Agent .* complete|Pipeline)/i.test(text)) return 'cl-system';
+    // Errors first (highest priority)
+    if (/^(Error|Failed|Exception|❌|⚠|WARN|WARNING|CRITICAL|FATAL)/i.test(text)) return 'cl-error';
+    if (/error|failed|exception|broken|missing/i.test(text) && text.length < 200) return 'cl-error';
+    // Important results (tickets, scores, counts)
+    if (/(\d+)\s*(tickets?|issues?|articles?|corrections?|opportunit|created|deploye|fixed|resolved)/i.test(text)) return 'cl-important';
+    if (/(score|position|rank|coverage|average).*\d/i.test(text)) return 'cl-metric';
+    // File operations
+    if (/\.(astro|md|mdx|json|js|ts|mjs)\b/i.test(text) && /(modif|edit|writ|creat|updat|src\/)/i.test(text)) return 'cl-file';
+    // Tool calls
+    if (/^(Tool|Using|Calling|Running|Execute|Read|Write|Edit|Glob|Grep|Bash|WebSearch|WebFetch|supabase)/i.test(text)) return 'cl-tool';
+    // Success results
+    if (/^(Result|Output|Found|Created|Updated|Inserted|Deleted|Success|Done|Completed|✅|✓)/i.test(text)) return 'cl-result';
+    // System messages
+    if (/^(🚀|📡|🤖|📋|🔐|⏳|Agent .* lance|Agent .* complete|Pipeline|Vague|Phase)/i.test(text)) return 'cl-system';
+    // Thinking (lowest priority, dimmed)
+    if (/^(Thinking|Analyzing|Considering|Planning|Let me|I'll|I need|Looking|Checking|Reviewing)/i.test(text)) return 'cl-thinking';
     return '';
   }
 
@@ -1266,8 +1470,9 @@ import { supabaseConfig } from '../../lib/supabase';
       const fragment = document.createDocumentFragment();
       for (const line of data.lines) {
         const div = document.createElement('div');
-        div.className = 'console-line';
         const cls = classifyLine(line.text);
+        const lineCls = cls === 'cl-important' ? 'has-important' : cls === 'cl-error' ? 'has-error' : cls === 'cl-metric' ? 'has-metric' : '';
+        div.className = 'console-line' + (lineCls ? ' ' + lineCls : '');
         div.innerHTML = `<span class="console-line-ts">${formatConsoleTs(line.ts)}</span><span class="console-line-text ${cls}">${escapeHtml(line.text)}</span>`;
         fragment.appendChild(div);
       }
@@ -1379,10 +1584,172 @@ import { supabaseConfig } from '../../lib/supabase';
     connect();
   }
 
+  // ========== PROJECT HEALTH KPIs ==========
+  let healthData = {};
+
+  async function loadHealthKPIs() {
+    try {
+      const [articles, factChecks, seoTickets, keywords, opps, ticketsAll, linksAll] = await Promise.all([
+        supabaseFetch('articles', 'select=id,is_active,last_fact_checked,slug&is_active=eq.true'),
+        supabaseFetch('fact_check_results', 'select=id,created_at&order=created_at.desc&limit=1'),
+        supabaseFetch('correction_tickets', 'select=id,statut,created_at,source_agent&source_agent=eq.seo-audit'),
+        supabaseFetch('keyword_rankings', 'select=keyword,position,checked_at&order=checked_at.desc&limit=500'),
+        supabaseFetch('content_opportunities', 'select=id,status,priority,created_at'),
+        supabaseFetch('correction_tickets', 'select=id,statut,created_at'),
+        supabaseFetch('internal_link_suggestions', 'select=id,status,created_at'),
+      ]);
+
+      healthData = { articles, factChecks, seoTickets, keywords, opps, ticketsAll, linksAll };
+      renderKPIs();
+    } catch(e) {
+      console.error('KPI load error:', e);
+    }
+  }
+
+  function renderKPIs() {
+    const { articles, seoTickets, keywords, opps, ticketsAll, linksAll } = healthData;
+    if (!articles) return;
+
+    // Articles
+    const totalArticles = articles.length;
+    document.getElementById('kpiArticles').textContent = totalArticles;
+    const recentArticles = articles.filter(a => {
+      const age = Date.now() - new Date(a.last_fact_checked || '2000-01-01').getTime();
+      return age < 14 * 86400000;
+    }).length;
+    document.getElementById('kpiArticlesSub').innerHTML = `<span class="kpi-trend-up">${recentArticles}</span> verifies recemment`;
+
+    // Fact-check coverage
+    const now = Date.now();
+    const verified14d = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * 86400000).length;
+    const coveragePct = totalArticles > 0 ? Math.round(verified14d / totalArticles * 100) : 0;
+    document.getElementById('kpiFactCheck').textContent = coveragePct + '%';
+    document.getElementById('kpiFactCheckSub').innerHTML = `${verified14d}/${totalArticles} < 14 jours`;
+    document.getElementById('kpiFactCheckBar').style.width = coveragePct + '%';
+    document.getElementById('kpiFactCheckBar').style.background = coveragePct > 70 ? '#22c55e' : coveragePct > 40 ? '#fbbf24' : '#f87171';
+
+    // SEO Tickets (actionable — from correction_tickets with source seo-audit)
+    const seoTicketsApproved = seoTickets.filter(t => t.statut === 'approved').length;
+    const seoTicketsTotal = seoTickets.length;
+    const seoTicketsDone = seoTickets.filter(t => t.statut === 'deployed' || t.statut === 'ready_to_deploy').length;
+    document.getElementById('kpiSeoIssues').textContent = seoTicketsApproved;
+    document.getElementById('kpiSeoIssues').style.color = seoTicketsApproved > 0 ? '#f87171' : '#22c55e';
+    document.getElementById('kpiSeoSub').innerHTML = seoTicketsApproved > 0
+      ? `a corriger &middot; <span style="color:#64748b">${seoTicketsDone}/${seoTicketsTotal} resolus</span>`
+      : `<span class="kpi-trend-up">tout corrige</span> (${seoTicketsTotal} total)`;
+    const seoPct = seoTicketsTotal > 0 ? Math.round(seoTicketsDone / seoTicketsTotal * 100) : 100;
+    document.getElementById('kpiSeoBar').style.width = seoPct + '%';
+    document.getElementById('kpiSeoBar').style.background = seoPct === 100 ? '#22c55e' : seoPct > 50 ? '#fbbf24' : '#f87171';
+
+    // Keywords
+    const latestKeywords = {};
+    for (const k of keywords) {
+      if (!latestKeywords[k.keyword]) latestKeywords[k.keyword] = k;
+    }
+    const uniqueKw = Object.values(latestKeywords);
+    const top10 = uniqueKw.filter(k => k.position && k.position <= 10).length;
+    const avgPos = uniqueKw.length > 0 ? (uniqueKw.reduce((s, k) => s + (k.position || 100), 0) / uniqueKw.length).toFixed(1) : '--';
+    document.getElementById('kpiKeywords').textContent = top10;
+    document.getElementById('kpiKeywordsSub').innerHTML = `/${uniqueKw.length} suivis &middot; pos. moy <strong>${avgPos}</strong>`;
+    const kwPct = uniqueKw.length > 0 ? Math.round(top10 / uniqueKw.length * 100) : 0;
+    document.getElementById('kpiKeywordsBar').style.width = kwPct + '%';
+
+    // Opportunities
+    const oppApproved = opps.filter(o => o.status === 'approved').length;
+    const oppPublished = opps.filter(o => o.status === 'published').length;
+    document.getElementById('kpiOpps').textContent = oppApproved;
+    document.getElementById('kpiOppsSub').innerHTML = `en attente &middot; <span class="kpi-trend-up">${oppPublished} publiees</span>`;
+
+    // Pipeline throughput
+    const last7d = now - 7 * 86400000;
+    const deployedRecent = ticketsAll.filter(t => t.statut === 'deployed' && new Date(t.created_at).getTime() > last7d).length;
+    const pendingTickets = ticketsAll.filter(t => t.statut === 'approved').length;
+    document.getElementById('kpiThroughput').textContent = deployedRecent;
+    document.getElementById('kpiThroughputSub').innerHTML = `deployes / 7j &middot; <span style="color:#fbbf24">${pendingTickets} en stock</span>`;
+  }
+
+  // ========== AGENT TIMELINE ==========
+  function renderTimeline() {
+    const body = document.getElementById('timelineBody');
+    if (!body) return;
+
+    const agentConfigs = [
+      { name: 'strategist', label: 'Strategist', color: '#a78bfa' },
+      { name: 'seo-audit', label: 'SEO Audit', color: '#38bdf8' },
+      { name: 'analytics', label: 'Analytics', color: '#4ade80' },
+      { name: 'fact-check', label: 'Fact-Check', color: '#fbbf24' },
+      { name: 'opportunities', label: 'Opportunities', color: '#c084fc' },
+      { name: 'internal-links', label: 'Maillage', color: '#f9a8d4' },
+      { name: 'editorial', label: 'Editorial', color: '#67e8f9' },
+      { name: 'validator', label: 'Validator', color: '#86efac' },
+    ];
+
+    body.innerHTML = agentConfigs.map(cfg => {
+      const run = agentRuns[cfg.name];
+      const isRunning = !!runningAgents[cfg.name];
+      let statusCls = 'tas-idle';
+      let statusText = 'Jamais execute';
+      let resultText = '';
+      let timeText = '';
+
+      if (isRunning) {
+        statusCls = 'tas-running';
+        statusText = 'En cours';
+        timeText = run ? timeAgo(run.started_at) : '';
+      } else if (run) {
+        const status = run.status || run.result_status;
+        if (status === 'completed' || status === 'success') {
+          statusCls = 'tas-completed';
+          statusText = 'OK';
+        } else if (status === 'error' || status === 'failed') {
+          statusCls = 'tas-error';
+          statusText = 'Erreur';
+        } else {
+          statusCls = 'tas-completed';
+          statusText = status || 'Termine';
+        }
+        timeText = timeAgo(run.completed_at || run.started_at);
+
+        // Build result summary from metadata
+        const meta = run.metadata || run.result_metadata || {};
+        const parts = [];
+        if (meta.tickets_created) parts.push(meta.tickets_created + ' tickets');
+        if (meta.articles_checked) parts.push(meta.articles_checked + ' articles');
+        if (meta.issues_found) parts.push(meta.issues_found + ' issues');
+        if (meta.keywords_tracked) parts.push(meta.keywords_tracked + ' keywords');
+        if (meta.links_suggested) parts.push(meta.links_suggested + ' liens');
+        if (meta.opportunities_found) parts.push(meta.opportunities_found + ' opps');
+        if (meta.files_modified) parts.push(meta.files_modified + ' fichiers');
+        // Duration
+        if (run.started_at && run.completed_at) {
+          const dur = new Date(run.completed_at).getTime() - new Date(run.started_at).getTime();
+          if (dur > 0) parts.push(formatDuration(dur));
+        }
+        resultText = parts.join(' · ');
+      }
+
+      return `<div class="timeline-agent" onclick="selectConsoleAgent('${cfg.name}')" style="cursor:pointer">
+        <div class="timeline-agent-header">
+          <span class="timeline-agent-dot" style="background:${cfg.color}${isRunning ? ';animation:pulse-glow 1.5s infinite' : ''}"></span>
+          <span class="timeline-agent-name" style="color:${cfg.color}">${cfg.label}</span>
+          <span class="timeline-agent-status ${statusCls}">${statusText}</span>
+        </div>
+        ${resultText ? `<div class="timeline-agent-result">${escapeHtml(resultText)}</div>` : ''}
+        ${timeText ? `<div class="timeline-agent-result" style="color:#374151">${timeText}</div>` : ''}
+      </div>`;
+    }).join('');
+
+    const updateEl = document.getElementById('timelineLastUpdate');
+    if (updateEl) updateEl.textContent = 'Maj ' + new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  // ========== ENHANCED REFRESH CYCLE ==========
+
   // Polling every 5s for reliable updates
   setInterval(() => {
     checkServer().then(() => {
       renderPipeline();
+      renderTimeline();
       autoOpenConsole();
     });
     loadLogs(true);
@@ -1390,13 +1757,16 @@ import { supabaseConfig } from '../../lib/supabase';
 
   // Refresh editorial backlog + pipeline every 30s
   setInterval(() => {
-    Promise.all([loadEditorialBacklogCounts(), loadPipelineData()]).then(() => loadAgentRuns());
+    Promise.all([loadEditorialBacklogCounts(), loadPipelineData(), loadHealthKPIs()]).then(() => {
+      loadAgentRuns();
+    });
   }, 30000);
 
   // Init
-  Promise.all([checkServer(), loadEditorialBacklogCounts(), loadPipelineData()]).then(() => {
+  Promise.all([checkServer(), loadEditorialBacklogCounts(), loadPipelineData(), loadHealthKPIs()]).then(() => {
     loadAgentRuns();
     loadLogs(false);
+    renderTimeline();
   });
   setupRealtime();
 </script>

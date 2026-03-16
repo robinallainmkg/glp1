@@ -52,6 +52,7 @@ claude -p "Cherche les opportunités" --agent opportunities
 claude -p "Traite les corrections" --agent editorial
 claude -p "Valide le site" --agent validator
 claude -p "Analyse le maillage interne" --agent internal-links
+claude -p "Ameliore le design du site" --agent ui-designer
 ```
 
 ### Agent SEO Audit (`.claude/agents/seo-audit.md`)
@@ -88,6 +89,12 @@ claude -p "Analyse le maillage interne" --agent internal-links
 - **Fonction** : Analyse du maillage interne, suggestions de liens entre articles
 - **Output** : `internal_link_suggestions` dans Supabase
 - Les suggestions sont consommees par l'agent editorial
+
+### Agent UI Designer (`.claude/agents/ui-designer.md`)
+- **Fonction** : Audit visuel et amelioration UX/UI (typographie, couleurs, composants, navigation, animations)
+- **Output** : Fichiers modifies + `correction_tickets` (source_agent='ui-designer', type='ui_improvement')
+- Agent autonome, ne depend pas des autres agents
+- Ne touche PAS aux pages admin, ni au contenu editorial, ni a la logique affiliate
 
 ### Dependances entre agents
 - `seo-audit` → cree des `correction_tickets` (source_agent='seo-audit') → `editorial` les consomme

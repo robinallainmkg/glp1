@@ -1000,7 +1000,7 @@ const affiliateConfig = {
       
       // Logique conditionnelle pour la question 9 (effets secondaires)
       if (n === 9 && answers.q1 !== 'effets-secondaires') {
-        // Skip question 9 si l'objectif n'est pas "r�duire les effets secondaires"
+        // Skip question 9 si l'objectif n'est pas "réduire les effets secondaires"
         if (currentQuestion < n) {
           currentQuestion = totalQuestions + 1; // Go to results
           showResults();
@@ -1138,14 +1138,14 @@ const affiliateConfig = {
 
     function calculateResults() {
       console.log('calculateResults called');
-      // Cas sp�cial : si l'objectif est de r�duire les effets secondaires
+      // Cas spécial : si l'objectif est de réduire les effets secondaires
       if (answers.q1 === 'effets-secondaires') {
         console.log('Showing effects side solutions');
         showEffetsSideSolutions();
         return;
       }
 
-      // Pour les autres cas, r�cup�rer la derni�re r�ponse si n�cessaire
+      // Pour les autres cas, récupérer la dernière réponse si nécessaire
       if (currentQuestion <= totalQuestions) {
         const currentAnswer = document.querySelector<HTMLInputElement>(`input[name="q${currentQuestion}"]:checked`);
           if (!currentAnswer) {
@@ -1609,7 +1609,7 @@ const affiliateConfig = {
         {affiliateProducts.map((product, index) => (
           <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
             <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              {index === 0 ? '🏆' : index === 1 ? '⭐' : '�'} <span>{product.productName}</span>
+              {index === 0 ? '🏆' : index === 1 ? '⭐' : '✅'} <span>{product.productName}</span>
             </h3>
             <p style="margin-bottom: 1rem; opacity: 0.9;">
               {product.description || product.benefitsText || `Découvrez ${product.productName} - ${product.brand}`}

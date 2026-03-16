@@ -11,99 +11,143 @@ import { supabaseConfig } from '../../lib/supabase';
   <title>Opportunites - GLP1 Admin</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f1f5f9; color: #1e293b; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
     .admin-layout { margin-left: 260px; min-height: 100vh; }
-    .page-header { background: white; border-bottom: 1px solid #e2e8f0; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
     .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
     .header-actions { display: flex; gap: 0.75rem; align-items: center; }
-    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #e2e8f0; background: white; color: #475569; font-size: 0.82rem; cursor: pointer; }
-    .refresh-btn:hover { background: #f8fafc; }
-    .last-update { font-size: 0.72rem; color: #94a3b8; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
     .main { padding: 2rem; }
 
     /* Command box */
-    .cmd-box { background: #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
     .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
-    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #475569; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
     .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
     /* Stats */
     .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
-    .stat-card { background: white; border-radius: 12px; padding: 1.25rem; border: 1px solid #e2e8f0; position: relative; overflow: hidden; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; position: relative; overflow: hidden; }
     .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
     .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .stat-card .sub { font-size: 0.75rem; color: #94a3b8; margin-top: 0.35rem; }
-    .stat-card .icon-bg { position: absolute; top: -6px; right: -6px; width: 52px; height: 52px; border-radius: 50%; opacity: 0.1; }
+    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
+    .stat-card .icon-bg { position: absolute; top: -6px; right: -6px; width: 52px; height: 52px; border-radius: 50%; opacity: 0.15; }
 
     /* Priority distribution */
-    .prio-distrib { background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 1.25rem; margin-bottom: 1.5rem; }
-    .prio-distrib-title { font-size: 0.82rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem; }
-    .prio-bar { display: flex; height: 28px; border-radius: 8px; overflow: hidden; background: #f1f5f9; }
-    .prio-seg { display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 700; color: white; transition: width 0.5s; }
+    .prio-distrib { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .prio-distrib-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; }
+    .prio-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; }
+    .prio-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
     .pseg-high { background: #ef4444; }
     .pseg-mid { background: #f59e0b; }
     .pseg-low { background: #22c55e; }
     .prio-legend { display: flex; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
-    .prio-legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #475569; }
+    .prio-legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
     .prio-legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
 
     /* Filters */
     .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
-    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; background: white; color: #64748b; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
-    .filter-btn:hover { border-color: #8b5cf6; color: #8b5cf6; }
-    .filter-btn.active { background: #1e293b; color: white; border-color: #1e293b; }
-    .filter-count { font-size: 0.68rem; background: rgba(0,0,0,0.08); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
-    .filter-btn.active .filter-count { background: rgba(255,255,255,0.2); }
-    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
-    .search-input:focus { outline: none; border-color: #8b5cf6; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
 
     /* Opportunity cards */
     .opp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
-    .opp-card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; transition: box-shadow 0.15s; }
-    .opp-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .opp-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; transition: box-shadow 0.15s; }
+    .opp-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.3); border-color: #334155; }
     .opp-card-top { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem; }
     .prio-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; flex-shrink: 0; }
-    .pc-high { background: #fef2f2; color: #dc2626; border: 2px solid #fecaca; }
-    .pc-mid { background: #fffbeb; color: #d97706; border: 2px solid #fde68a; }
-    .pc-low { background: #f0fdf4; color: #16a34a; border: 2px solid #bbf7d0; }
-    .opp-title { font-size: 0.88rem; font-weight: 700; color: #1e293b; line-height: 1.3; margin-bottom: 0.25rem; }
-    .opp-desc { font-size: 0.78rem; color: #64748b; line-height: 1.5; }
+    .pc-high { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .pc-mid { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .pc-low { background: #052e16; color: #4ade80; border: 2px solid #166534; }
+    .opp-title { font-size: 0.88rem; font-weight: 700; color: #e2e8f0; line-height: 1.3; margin-bottom: 0.25rem; }
+    .opp-desc { font-size: 0.78rem; color: #94a3b8; line-height: 1.5; }
     .opp-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; align-items: center; }
 
     .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; }
-    .badge-keyword { background: #f5f3ff; color: #7c3aed; font-family: 'SF Mono', 'Fira Code', monospace; }
-    .badge-volume-high { background: #fee2e2; color: #991b1b; }
-    .badge-volume-medium { background: #fef3c7; color: #92400e; }
-    .badge-volume-low { background: #d1fae5; color: #065f46; }
-    .badge-comp-high { background: #fee2e2; color: #991b1b; }
-    .badge-comp-medium { background: #fef3c7; color: #92400e; }
-    .badge-comp-low { background: #d1fae5; color: #065f46; }
-    .badge-collection { background: #ede9fe; color: #6b21a8; }
+    .badge-keyword { background: #3b1764; color: #c4b5fd; font-family: 'SF Mono', 'Fira Code', monospace; }
+    .badge-volume-high { background: #450a0a; color: #fca5a5; }
+    .badge-volume-medium { background: #451a03; color: #fcd34d; }
+    .badge-volume-low { background: #052e16; color: #86efac; }
+    .badge-comp-high { background: #450a0a; color: #fca5a5; }
+    .badge-comp-medium { background: #451a03; color: #fcd34d; }
+    .badge-comp-low { background: #052e16; color: #86efac; }
+    .badge-collection { background: #3b1764; color: #d8b4fe; }
 
     .status-pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; margin-left: auto; }
-    .sp-identified { background: #f1f5f9; color: #64748b; }
-    .sp-approved { background: #dbeafe; color: #1e40af; }
-    .sp-in_progress { background: #fef3c7; color: #92400e; }
-    .sp-published { background: #dcfce7; color: #166534; }
-    .sp-rejected { background: #fee2e2; color: #991b1b; }
+    .sp-identified { background: #1e293b; color: #94a3b8; }
+    .sp-approved { background: #1e3a5f; color: #93c5fd; }
+    .sp-in_progress { background: #451a03; color: #fcd34d; }
+    .sp-published { background: #052e16; color: #86efac; }
+    .sp-rejected { background: #450a0a; color: #fca5a5; }
 
-    .opp-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #f1f5f9; font-size: 0.72rem; color: #94a3b8; }
+    .opp-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #1e293b; font-size: 0.72rem; color: #64748b; }
 
     /* Bottom: runs + collections breakdown */
     .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .section-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; }
-    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; font-size: 0.82rem; font-weight: 700; color: #0f172a; display: flex; align-items: center; justify-content: space-between; }
-    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #f1f5f9; color: #64748b; }
-    .list-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #f1f5f9; font-size: 0.82rem; }
+    .section-card { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #1e293b; color: #94a3b8; }
+    .list-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #1a2332; font-size: 0.82rem; }
     .list-item:last-child { border-bottom: none; }
     .list-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .list-info { flex: 1; }
-    .list-title { font-weight: 500; color: #1e293b; }
-    .list-sub { font-size: 0.72rem; color: #94a3b8; }
-    .list-count { font-size: 1.1rem; font-weight: 800; color: #8b5cf6; }
+    .list-title { font-weight: 500; color: #e2e8f0; }
+    .list-sub { font-size: 0.72rem; color: #64748b; }
+    .list-count { font-size: 1.1rem; font-weight: 800; color: #a78bfa; }
 
-    .empty-state { text-align: center; padding: 3rem; color: #94a3b8; font-size: 0.85rem; }
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
+
+    /* View toggle */
+    .view-toggle { display: flex; gap: 0.25rem; margin-bottom: 1rem; }
+    .view-btn { padding: 0.35rem 0.75rem; border: 1px solid #1e293b; border-radius: 6px; background: #111827; font-size: 0.75rem; cursor: pointer; color: #94a3b8; font-weight: 500; }
+    .view-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+
+    /* Kanban */
+    .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .kanban-col { background: #0f1520; border-radius: 12px; padding: 0.75rem; min-height: 200px; border: 1px solid #1e293b; }
+    .kanban-col-header { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #94a3b8; padding: 0.5rem 0.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .kanban-col-header .kc-count { background: #1e293b; color: #94a3b8; padding: 1px 6px; border-radius: 8px; font-size: 0.65rem; }
+    .kanban-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem; font-size: 0.78rem; }
+    .kanban-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: #334155; }
+    .kanban-card .kc-title { font-weight: 600; color: #e2e8f0; margin-bottom: 0.25rem; line-height: 1.3; }
+    .kanban-card .kc-keyword { font-family: monospace; font-size: 0.68rem; color: #a78bfa; margin-bottom: 0.35rem; }
+    .kanban-card .kc-prio { display: inline-block; width: 20px; height: 20px; border-radius: 50%; font-size: 0.65rem; font-weight: 800; text-align: center; line-height: 20px; margin-right: 0.35rem; }
+
+    /* URLs section in cards */
+    .opp-urls { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #1e293b; }
+    .opp-urls-title { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: #64748b; margin-bottom: 0.25rem; }
+    .opp-url-item { font-size: 0.68rem; color: #60a5fa; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; margin-bottom: 0.1rem; }
+    .opp-url-item:hover { text-decoration: underline; }
+
+    /* Score badge */
+    .opp-score { display: inline-flex; align-items: center; gap: 0.2rem; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 700; }
+    .os-high { background: #450a0a; color: #fca5a5; }
+    .os-mid { background: #451a03; color: #fcd34d; }
+    .os-low { background: #052e16; color: #86efac; }
+
+    /* Published articles */
+    .published-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .published-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .published-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .published-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border: 1px solid #1e293b; border-radius: 8px; font-size: 0.82rem; }
+    .published-item:hover { background: #1a2332; }
+    .published-slug { font-family: monospace; font-size: 0.72rem; color: #a78bfa; }
+    .published-link { color: #60a5fa; text-decoration: none; font-size: 0.75rem; font-weight: 500; margin-left: auto; }
+    .published-link:hover { text-decoration: underline; }
+
+    /* Sort controls */
+    .sort-controls { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center; }
+    .sort-label { font-size: 0.72rem; color: #64748b; }
+    .sort-select { padding: 0.3rem 0.5rem; border: 1px solid #1e293b; border-radius: 6px; font-size: 0.75rem; background: #111827; color: #e2e8f0; }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
     @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } }
@@ -177,6 +221,12 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
     </div>
 
+    <!-- Published articles -->
+    <div class="published-section" id="publishedSection" style="display:none">
+      <div class="published-title">Articles publies depuis les opportunites</div>
+      <div class="published-list" id="publishedList"></div>
+    </div>
+
     <!-- Filters -->
     <div class="filters">
       <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
@@ -186,6 +236,23 @@ import { supabaseConfig } from '../../lib/supabase';
       <button class="filter-btn" data-filter="rejected" onclick="setFilter('rejected')">Rejetees</button>
       <button class="filter-btn" data-filter="high" onclick="setFilter('high')">Haute prio</button>
       <input type="text" class="search-input" placeholder="Rechercher un sujet..." oninput="setSearch(this.value)" />
+    </div>
+
+    <!-- View toggle + sort -->
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem">
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="grid" onclick="setView('grid')">Grille</button>
+        <button class="view-btn" data-view="kanban" onclick="setView('kanban')">Kanban</button>
+      </div>
+      <div class="sort-controls">
+        <span class="sort-label">Trier par:</span>
+        <select class="sort-select" id="sortSelect" onchange="setSort(this.value)">
+          <option value="priority">Priorite</option>
+          <option value="date">Date</option>
+          <option value="volume">Volume</option>
+          <option value="score">Score</option>
+        </select>
+      </div>
     </div>
 
     <!-- Opportunity cards -->
@@ -217,6 +284,8 @@ import { supabaseConfig } from '../../lib/supabase';
   let allOpps = [];
   let currentFilter = 'all';
   let currentSearch = '';
+  let currentView = 'grid';
+  let currentSort = 'priority';
 
   function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
@@ -293,8 +362,61 @@ import { supabaseConfig } from '../../lib/supabase';
     return list;
   }
 
+  function oppScore(o) {
+    let score = 0;
+    const p = o.priority || 5;
+    score += (10 - p) * 3; // priority weight
+    const vol = (o.estimated_volume || '').toLowerCase();
+    if (vol.includes('high') || vol.includes('eleve')) score += 20;
+    else if (vol.includes('medium') || vol.includes('moyen')) score += 10;
+    const comp = (o.competition || '').toLowerCase();
+    if (comp.includes('low') || comp.includes('faible')) score += 15;
+    else if (comp.includes('medium') || comp.includes('moyen')) score += 8;
+    return score;
+  }
+
+  function scoreBadge(score) {
+    if (score >= 35) return `<span class="opp-score os-high">${score}pts</span>`;
+    if (score >= 20) return `<span class="opp-score os-mid">${score}pts</span>`;
+    return `<span class="opp-score os-low">${score}pts</span>`;
+  }
+
+  function urlsHtml(urls, title) {
+    if (!urls || !Array.isArray(urls) || urls.length === 0) return '';
+    return `<div class="opp-urls">
+      <div class="opp-urls-title">${esc(title)}</div>
+      ${urls.slice(0, 3).map(u => `<a class="opp-url-item" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(u)}">${esc(u)}</a>`).join('')}
+      ${urls.length > 3 ? `<span style="font-size:0.65rem;color:#94a3b8">+${urls.length - 3} autres</span>` : ''}
+    </div>`;
+  }
+
+  function sortOpps(list) {
+    const sorted = [...list];
+    switch (currentSort) {
+      case 'priority': sorted.sort((a, b) => (a.priority || 10) - (b.priority || 10)); break;
+      case 'date': sorted.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0)); break;
+      case 'volume':
+        const volOrder = v => { const lv = (v||'').toLowerCase(); if (lv.includes('high')||lv.includes('eleve')) return 0; if (lv.includes('medium')||lv.includes('moyen')) return 1; return 2; };
+        sorted.sort((a, b) => volOrder(a.estimated_volume) - volOrder(b.estimated_volume));
+        break;
+      case 'score': sorted.sort((a, b) => oppScore(b) - oppScore(a)); break;
+    }
+    return sorted;
+  }
+
+  window.setView = function(v) {
+    currentView = v;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+    renderOpps();
+  };
+
+  window.setSort = function(s) {
+    currentSort = s;
+    renderOpps();
+  };
+
   function renderOpps() {
-    const filtered = filterOpps();
+    const filtered = sortOpps(filterOpps());
     const container = document.getElementById('oppsContainer');
 
     if (filtered.length === 0) {
@@ -304,12 +426,19 @@ import { supabaseConfig } from '../../lib/supabase';
       return;
     }
 
+    if (currentView === 'kanban') {
+      renderKanban(filtered, container);
+      return;
+    }
+
+    // Grid view (enhanced with URLs and score)
+    const statusLabels = { approved: 'A traiter', identified: 'Identifiee', in_progress: 'En cours', published: 'Publiee', rejected: 'Rejetee' };
     container.innerHTML = '<div class="opp-cards">' + filtered.map(o => {
-      const statusLabels = { approved: 'A traiter', identified: 'Identifiee', in_progress: 'En cours', published: 'Publiee', rejected: 'Rejetee' };
+      const score = oppScore(o);
       return `<div class="opp-card">
         <div class="opp-card-top">
           ${prioCircle(o.priority)}
-          <div>
+          <div style="flex:1;min-width:0">
             <div class="opp-title">${esc(o.topic)}</div>
             <div class="opp-desc">${esc(o.description || '')}</div>
           </div>
@@ -318,12 +447,51 @@ import { supabaseConfig } from '../../lib/supabase';
           ${o.target_keyword ? `<span class="badge badge-keyword">${esc(o.target_keyword)}</span>` : ''}
           ${volumeBadge(o.estimated_volume)}
           ${compBadge(o.competition)}
+          ${scoreBadge(score)}
           ${o.suggested_collection ? `<span class="badge badge-collection">${esc(o.suggested_collection)}</span>` : ''}
           <span class="status-pill sp-${o.status || 'identified'}">${statusLabels[o.status] || o.status || '-'}</span>
         </div>
-        ${o.suggested_slug ? `<div class="opp-footer"><span>Slug suggere: <code style="font-size:0.72rem;color:#7c3aed">${esc(o.suggested_slug)}</code></span><span>${timeAgo(o.created_at)}</span></div>` : `<div class="opp-footer"><span></span><span>${timeAgo(o.created_at)}</span></div>`}
+        ${urlsHtml(o.source_urls, 'Sources')}
+        ${urlsHtml(o.competitor_urls, 'Concurrents')}
+        ${o.suggested_slug ? `<div class="opp-footer"><span>Slug: <code style="font-size:0.72rem;color:#7c3aed">${esc(o.suggested_slug)}</code></span><span>${timeAgo(o.created_at)}</span></div>` : `<div class="opp-footer"><span></span><span>${timeAgo(o.created_at)}</span></div>`}
       </div>`;
     }).join('') + '</div>';
+  }
+
+  function renderKanban(filtered, container) {
+    const columns = [
+      { key: 'identified', label: 'Identifiees', color: '#64748b', items: [] },
+      { key: 'approved', label: 'Approuvees', color: '#3b82f6', items: [] },
+      { key: 'in_progress', label: 'En cours', color: '#f59e0b', items: [] },
+      { key: 'published', label: 'Publiees', color: '#22c55e', items: [] },
+    ];
+    const colMap = {};
+    columns.forEach(c => colMap[c.key] = c);
+
+    for (const o of filtered) {
+      const col = colMap[o.status] || colMap['identified'];
+      col.items.push(o);
+    }
+
+    container.innerHTML = `<div class="kanban">${columns.map(col => `
+      <div class="kanban-col">
+        <div class="kanban-col-header" style="border-bottom:2px solid ${col.color}">
+          ${col.label}
+          <span class="kc-count">${col.items.length}</span>
+        </div>
+        ${col.items.length === 0 ? '<div style="text-align:center;color:#94a3b8;font-size:0.75rem;padding:1rem">Aucune</div>' : col.items.map(o => {
+          const pcClass = o.priority && o.priority <= 3 ? 'pc-high' : o.priority && o.priority <= 6 ? 'pc-mid' : 'pc-low';
+          return `<div class="kanban-card">
+            <div style="display:flex;align-items:center;margin-bottom:0.25rem">
+              <span class="kc-prio ${pcClass}">${o.priority || '?'}</span>
+              <span class="kc-title">${esc(o.topic)}</span>
+            </div>
+            ${o.target_keyword ? `<div class="kc-keyword">${esc(o.target_keyword)}</div>` : ''}
+            ${o.suggested_collection ? `<span class="badge badge-collection" style="font-size:0.62rem">${esc(o.suggested_collection)}</span>` : ''}
+          </div>`;
+        }).join('')}
+      </div>
+    `).join('')}</div>`;
   }
 
   function renderPrioDistrib() {
@@ -392,6 +560,28 @@ import { supabaseConfig } from '../../lib/supabase';
     } catch(e) {}
   }
 
+  function renderPublished() {
+    const published = allOpps.filter(o => o.status === 'published');
+    if (published.length === 0) {
+      document.getElementById('publishedSection').style.display = 'none';
+      return;
+    }
+    document.getElementById('publishedSection').style.display = 'block';
+    document.getElementById('publishedList').innerHTML = published.map(o => {
+      const slug = o.suggested_slug || '?';
+      const col = o.suggested_collection || '';
+      const url = col ? `/${col}/${slug}` : `/${slug}`;
+      return `<div class="published-item">
+        <div class="prio-circle pc-low" style="width:28px;height:28px;font-size:0.72rem">&#x2713;</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:600;font-size:0.85rem">${esc(o.topic)}</div>
+          <div class="published-slug">${esc(slug)}</div>
+        </div>
+        <a class="published-link" href="${esc(url)}" target="_blank">Voir l'article &#x2192;</a>
+      </div>`;
+    }).join('');
+  }
+
   async function loadAll() {
     try {
       allOpps = await sbFetch('content_opportunities', 'select=*&order=priority.asc,created_at.desc');
@@ -425,6 +615,7 @@ import { supabaseConfig } from '../../lib/supabase';
       });
 
       renderPrioDistrib();
+      renderPublished();
       renderOpps();
       renderCollections();
       loadRuns();
