@@ -87,43 +87,7 @@ const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
   <!-- Hotjar Tracking -->
   <Hotjar />
   
-  <!-- Tawk.to Chat Widget -->
-  <script type="text/javascript" is:inline>
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68e7acb49820fe194b817deb/1j74fl8ck';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-  
-  <!-- Configuration Tawk.to en français -->
-  <script type="text/javascript" is:inline>
-    // Attendre que Tawk.to soit chargé
-    var Tawk_API = Tawk_API || {};
-    Tawk_API.onLoad = function(){
-      console.log('✅ Tawk.to chat chargé avec succès !');
-      
-      // Personnalisation
-      Tawk_API.setAttributes({
-        'name': 'Visiteur GLP-1 France',
-        'email': ''
-      }, function(error){
-        if(error) {
-          console.error('Erreur configuration Tawk.to:', error);
-        }
-      });
-    };
-    
-    // Message de bienvenue personnalisé (optionnel)
-    Tawk_API.onChatStarted = function(){
-      console.log('💬 Conversation démarrée');
-    };
-  </script>
-  
+
 </head>
 
 <body class="bg-white text-gray-900 font-sans">
