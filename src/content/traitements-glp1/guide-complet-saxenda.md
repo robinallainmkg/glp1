@@ -79,7 +79,7 @@ Dans les études cliniques SCALE, Saxenda a démontré des résultats significat
 ## Posologie et administration
 
 ### Schéma posologique
-Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalade de dose est essentielle pour minimiser les effets secondaires.
+Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalade de dose est essentielle pour minimiser les [effets secondaires de Saxenda](/collections/effets-secondaires-glp1/effets-secondaires-saxenda/).
 
 **Semaine 1** : 0,6 mg/jour  
 **Semaine 2** : 1,2 mg/jour  
@@ -164,7 +164,7 @@ Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète
 - **Effets maximum** : 6-12 mois
 
 ### Saxenda est-il remboursé pour l'obésité ?
-**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
+**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Pour les [prix Saxenda 2026](/collections/glp1-cout/prix-saxenda-france/) en détail, son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
 
 ### Puis-je arrêter Saxenda brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.

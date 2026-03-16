@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions à Connaître"
+title: "GLP-1 et Grossesse : Fertilité et Précautions"
 description: "GLP-1 et grossesse : que sait-on sur la fertilité, les risques pour le bébé, et les recommandations médicales pour les femmes sous Ozempic, Wegovy ou Mounjaro ?"
 keywords: ['ozempic grossesse', 'glp1 grossesse', 'glp1 fertilité', 'bébés ozempic', 'wegovy grossesse', 'mounjaro grossesse', 'glp1 enceinte']
 seoTitle: "GLP-1 et Grossesse : Ce que Toute Femme Sous Ozempic Doit Savoir"
@@ -16,8 +16,6 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "GLP-1 grossesse fertilité bébés Ozempic"
 ---
-
-# GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions
 
 La question revient de plus en plus dans les consultations médicales : peut-on tomber enceinte sous Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro ? Et si c'est le cas, que faire ? Depuis que ces médicaments GLP-1 sont prescrits à grande échelle pour la perte de poids, des milliers de femmes en âge de procréer se trouvent face à ces questions — sans toujours obtenir de réponses claires. Voici ce que la science sait aujourd'hui.
 

@@ -1,5 +1,5 @@
 ---
-title: "Mounjaro Remboursement Sécurité Sociale 2026 : Conditions et Calendrier"
+title: "Mounjaro Remboursé 2026 : Conditions et Calendrier"
 description: "Mounjaro remboursement Sécurité Sociale 2026 : avis HAS, conditions IMC, calendrier des négociations CEPS et date prévisionnelle de remboursement."
 keywords: ['mounjaro remboursement securite sociale', 'mounjaro remboursement 2026', 'mounjaro conditions remboursement', 'mounjaro has avis', 'mounjaro ceps negociations', 'remboursement tirzepatide france', 'mounjaro imc 35 remboursement']
 seoTitle: "Mounjaro Remboursement Sécurité Sociale 2026 : Conditions et Calendrier"

@@ -121,7 +121,7 @@ La leucine est l'acide aminé qui déclenche la synthèse protéique musculaire.
 
 ### Pourquoi la musculation est non négociable
 
-L'exercice de résistance (musculation, bandes élastiques, poids de corps) est le stimulus le plus puissant pour signaler au corps qu'il doit conserver sa masse musculaire. Sans ce stimulus, même un apport protéique adéquat ne suffit pas à prévenir complètement la perte de muscle.
+L'exercice de résistance (musculation, bandes élastiques, poids de corps) est le stimulus le plus puissant pour signaler au corps qu'il doit conserver sa masse musculaire. Sans ce stimulus, même un apport protéique adéquat ne suffit pas à prévenir complètement la perte de muscle. Pour aller plus loin, consultez notre [guide complet sport et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/).
 
 Une étude publiée dans *Obesity* en 2024 a montré que les patients sous sémaglutide qui pratiquaient un exercice de résistance 2 à 3 fois par semaine perdaient significativement moins de masse maigre que ceux qui ne faisaient que du cardio ou pas d'exercice du tout.
 

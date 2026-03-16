@@ -516,7 +516,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ### Témoignages et Communauté
 - **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles
-- **[Témoignages Avant/Après GLP-1](/collections/temoignages/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
+- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**
 - 📞 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)

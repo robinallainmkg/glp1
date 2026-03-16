@@ -27,13 +27,13 @@ La question est sur toutes les lèvres des patients souffrant d'obésité : quan
 
 ### Wegovy (semaglutide 2,4 mg)
 
-Wegovy est disponible en France depuis 2023. En mars 2026, il n'est **pas remboursé** par la Sécurité Sociale dans l'indication obésité. Son prix varie entre 169 € (dosage 0,25 mg, phase d'initiation) et 360 € par mois (dosage 2,4 mg, dose d'entretien).
+Wegovy est disponible en France depuis 2023. En mars 2026, il n'est **pas remboursé** par la Sécurité Sociale dans l'indication obésité. Pour le détail des tarifs par dosage, consultez notre guide sur les [prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/).
 
 La HAS a rendu un **avis favorable au remboursement** de Wegovy, reconnaissant son service médical rendu (SMR) comme important dans les formes sévères d'obésité. Cet avis est une étape nécessaire mais pas suffisante : il doit être suivi de négociations avec le CEPS (Comité Économique des Produits de Santé) sur le prix remboursable.
 
 ### Mounjaro (tirzepatide)
 
-Mounjaro a obtenu son autorisation européenne pour l'obésité (AMM European Medicines Agency) en 2023 et est commercialisé en France depuis novembre 2024. En mars 2026, il n'est **pas non plus remboursé** pour l'obésité. Son prix libre se situe entre 230 € et 440 € par mois selon le dosage.
+Mounjaro a obtenu son autorisation européenne pour l'obésité (AMM European Medicines Agency) en 2023 et est commercialisé en France depuis novembre 2024. En mars 2026, il n'est **pas non plus remboursé** pour l'obésité. Retrouvez le détail des tarifs dans notre guide sur les [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/).
 
 La HAS a publié en décembre 2025 un **avis favorable au remboursement** de Mounjaro dans l'obésité, avec un SMR qualifié d'important. Cet avis est désormais entre les mains du CEPS pour la négociation du prix.
 

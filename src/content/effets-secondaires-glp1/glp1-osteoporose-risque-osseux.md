@@ -112,7 +112,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Supplementation en vitamine D et calcium** : La majorite des Francais sont carences en vitamine D, et la carence est encore plus frequente chez les personnes en situation d'obesite. Une supplementation quotidienne en vitamine D (1 000 a 2 000 UI/jour) et un apport calcique adequat (1 000 a 1 200 mg/jour, alimentation comprise) sont recommandes.
 
-**Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liee a l'amaigrissement. Il est recommande de pratiquer au moins 30 minutes d'exercice avec mise en charge par jour.
+**Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liee a l'amaigrissement. Découvrez notre guide sur l'[activité physique avec mise en charge sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) pour des conseils pratiques.
 
 **[Apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/)** : Les proteines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommande de consommer 1,2 a 1,5 g de proteines par kg de poids ideal par jour pour preserver la masse maigre.
 

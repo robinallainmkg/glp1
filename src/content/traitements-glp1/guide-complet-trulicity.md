@@ -113,7 +113,7 @@ Trulicity s'administre une fois par semaine, à la même heure chaque semaine.
 
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Évaluation initiale** :
-- Surveillance des effets secondaires
+- Surveillance des [effets secondaires de Trulicity](/collections/effets-secondaires-glp1/effets-secondaires-trulicity/)
 - Contrôle glycémique régulier
 - Ajustement de dose si nécessaire
 - Premiers signes d'efficacité
@@ -169,7 +169,7 @@ Non, Trulicity est spécifiquement indiqué pour le diabète de type 2, contrair
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Trulicity est-il remboursé ?
-Trulicity est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids seule. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix est d'environ 81 € par mois.
+Trulicity est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids seule. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Pour le détail, consultez notre guide sur les [prix Trulicity en France](/collections/glp1-cout/prix-trulicity-france/).
 
 ### Puis-je arrêter Trulicity brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.

@@ -472,7 +472,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 ### Aide et Soutien
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide complet des mutuelles
 - **[Témoignages Avant/Après GLP-1](/temoignages/avant-apres-glp1)** - Résultats réels de patients
-- **[Témoignages Avant/Après GLP-1](/collections/temoignages/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
+- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour obtenir Ozempic ?**
 - 📞 **Service patient Novo Nordisk** : 0 800 80 16 05 (gratuit)
