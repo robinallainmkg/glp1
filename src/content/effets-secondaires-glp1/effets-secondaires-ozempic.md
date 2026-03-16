@@ -14,6 +14,7 @@ thumbnail: "/images/thumbnails/ozempic-medical-care.jpg"
 thumbnailAlt: "Effets secondaires du traitement ozempic"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires ozempic semaglutide"
 ---
 
 ## Effets Secondaires Ozempic : Guide Complet

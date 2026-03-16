@@ -1,6 +1,6 @@
 ---
 title: "Recommandations OMS sur les GLP-1 pour l'Obésité : Ce que Cela Change en 2026"
-description: "L'OMS a publié ses premières lignes directrices mondiales sur l'utilisation des GLP-1 dans le traitement de l'obésité. Recommandations, conditions d'usage et impact pour les patients français."
+description: "L'OMS publie ses premières recommandations mondiales sur les GLP-1 contre l'obésité. Conditions d'usage et impact concret pour les patients français."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Julien Lefèvre"

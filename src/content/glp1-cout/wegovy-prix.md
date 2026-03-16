@@ -12,6 +12,7 @@ thumbnailAlt: "Prix Wegovy en pharmacie France 2026"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "prix wegovy france pharmacie"
 
 # Configuration Affiliation
 enableAffiliation: true

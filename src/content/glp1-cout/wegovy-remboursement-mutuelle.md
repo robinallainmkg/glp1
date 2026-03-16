@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Wegovy Remboursement Mutuelle"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "wegovy remboursement mutuelle"
 
 # Configuration Affiliation
 enableAffiliation: true

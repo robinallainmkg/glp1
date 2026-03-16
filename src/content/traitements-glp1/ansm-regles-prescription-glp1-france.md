@@ -1,6 +1,6 @@
 ---
 title: "ANSM : Nouvelles Règles de Prescription des GLP-1 en France (2025-2026)"
-description: "Depuis juin 2025, tout médecin peut prescrire les GLP-1 pour l'obésité en France. Formulaire obligatoire, conditions de prescription, rapport bénéfice/risque confirmé par l'ANSM."
+description: "Depuis 2025, tout médecin peut prescrire les GLP-1 en France. Formulaire obligatoire, conditions de prescription et recommandations de l'ANSM."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"
@@ -183,7 +183,7 @@ Non. Le formulaire est rapide à remplir pour le médecin et s'intègre dans la 
 
 ### Les GLP-1 seront-ils bientôt remboursés pour l'obésité ?
 
-La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Un remboursement est envisageable au second semestre 2026. Mounjaro pourrait suivre un processus similaire.
+La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Un [remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) est envisageable au second semestre 2026 pour Wegovy. Mounjaro pourrait suivre un processus similaire.
 
 ### L'ANSM a-t-elle identifié de nouveaux risques pour les GLP-1 ?
 

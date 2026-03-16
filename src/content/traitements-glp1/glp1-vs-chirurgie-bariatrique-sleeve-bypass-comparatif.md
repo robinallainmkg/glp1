@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 vs Chirurgie Bariatrique : Comparatif Complet pour Choisir"
-description: "Faut-il choisir un traitement GLP-1 (Wegovy, Mounjaro) ou la chirurgie bariatrique (sleeve, bypass) pour perdre du poids ? Comparatif détaillé : efficacité, coût, risques, remboursement et critères de choix pour les patients français."
+description: "GLP-1 (Wegovy, Mounjaro) ou chirurgie bariatrique (sleeve, bypass) ? Comparatif efficacité, coût, risques et remboursement pour choisir le bon traitement."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"

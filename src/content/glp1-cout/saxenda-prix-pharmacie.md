@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Saxenda Prix Pharmacie"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "prix saxenda pharmacie france"
 
 # Configuration Affiliation
 enableAffiliation: true

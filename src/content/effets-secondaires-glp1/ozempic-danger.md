@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Ozempic Danger"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "ozempic effets secondaires risques"
 
 # Configuration Affiliation
 enableAffiliation: true

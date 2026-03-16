@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Wegovy Danger"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "wegovy effets secondaires danger"
 
 # Configuration Affiliation
 enableAffiliation: true

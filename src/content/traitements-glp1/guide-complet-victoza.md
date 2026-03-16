@@ -1,5 +1,5 @@
 ---
-title: "Guide Complet Victoza : Prix, Effets Secondaires et Posologie"
+title: "Guide Complet Victoza : Prix et Effets Secondaires"
 slug: "guide-complet-victoza"
 description: "Découvrez tout sur Victoza : traitement GLP-1 pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["victoza", "glp-1", "diabète", "traitement", "injection"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "victoza guide complet france liraglutide"
 ---
 
 ## Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire

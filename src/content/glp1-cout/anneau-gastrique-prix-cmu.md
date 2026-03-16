@@ -11,6 +11,7 @@ thumbnailAlt: "Dr Stéphane Servajean - Anneau Gastrique à Paris"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "anneau gastrique prix remboursement CMU"
 
 # Configuration Affiliation
 enableAffiliation: true

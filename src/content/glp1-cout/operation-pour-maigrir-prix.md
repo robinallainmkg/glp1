@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article Operation Pour Maigrir Prix"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "operation bariatrique prix remboursement"
 
 # Configuration Affiliation
 enableAffiliation: true

@@ -12,6 +12,7 @@ readingTime: 12
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires mounjaro tirzepatide"
 ---
 
 ## Effets Secondaires Mounjaro : Guide Complet
