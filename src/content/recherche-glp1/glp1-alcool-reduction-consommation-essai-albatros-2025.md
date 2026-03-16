@@ -17,10 +17,8 @@ schema: "Article"
 mainKeyword: "GLP-1 alcool reduction consommation essai clinique 2025"
 secondaryKeywords: ["sémaglutide alcool alcoolo-dépendance", "ozempic alcool consommation", "essai ALBATROS GLP-1", "glp1 addiction alcool", "wegovy alcool"]
 
-# Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "recherche-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"

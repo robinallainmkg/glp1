@@ -17,10 +17,8 @@ schema: "Article"
 mainKeyword: "arrêt GLP-1 reprise poids effet yoyo eviter"
 secondaryKeywords: ["reprendre poids après ozempic", "arrêt wegovy poids", "effet yoyo GLP-1", "maintenir poids après GLP-1", "glp1 traitement à vie"]
 
-# Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "glp1-perte-de-poids"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
