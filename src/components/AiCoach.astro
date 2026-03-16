@@ -593,7 +593,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     var sourcesDiv = document.createElement('div');
     sourcesDiv.className = 'coach-sources';
     sourcesDiv.innerHTML = '📚 Sources : ' + sources.map(function(s) {
-      var url = '/' + s.collection + '/' + s.slug + '/';
+      var url = '/collections/' + s.collection + '/' + s.slug + '/';
       return '<a href="' + url + '" target="_blank">' + escapeHtml(s.title) + '</a>';
     }).join(' ');
     messagesEl.appendChild(sourcesDiv);
