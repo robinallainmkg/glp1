@@ -51,7 +51,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Perte de poids** : 5-10% du poids corporel
 - **Posologie** : 1 injection par semaine
 - **Avantages** : Efficace sur le diabète, protection cardiovasculaire
-- **Prix** : ~59,90€/stylo
+- **Prix** : ~76,58€/stylo (prix public 2026)
 
 #### Wegovy (sémaglutide 0,25-2,4 mg)
 - **Indications** : Obésité (IMC ≥30) ou surpoids (IMC ≥27 avec comorbidité)
@@ -80,6 +80,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Posologie** : 1 injection par jour
 - **Avantages** : Expérience clinique longue, injection quotidienne
 - **Prix** : ~60€/mois
+- ⚠️ **Arrêt de commercialisation prévu fin 2026** : Novo Nordisk a annoncé la fin de la commercialisation de Victoza en France et en Europe. Consultez votre médecin pour anticiper un changement de traitement (Ozempic ou Trulicity en alternative).
 
 #### Saxenda (liraglutide 3 mg)
 - **Indications** : Obésité
@@ -101,13 +102,13 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
-| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~59,90€/stylo | 65% DT2 |
+| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~76,58€/stylo | 30% DT2 |
 | **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | 169-360€ | Non remboursé |
 | **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | 230-440€ | Non remboursé |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
 | **Victoza** | Liraglutide | Diabète | 5-8% | Quotidienne | ~60€ | 65% DT2 |
 | **Saxenda** | Liraglutide HD | Obésité | 8-12% | Quotidienne | 240-300€ | Non remboursé |
-| **Rybelsus** | Sémaglutide oral | Diabète | 3-7% | Quotidienne | 80-110€ | 65% DT2 |
+| **Rybelsus** | Sémaglutide oral | Diabète | 3-7% | Quotidienne | 80-110€ | Non remboursé |
 
 ## Critères pour choisir son traitement
 
@@ -142,11 +143,11 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 ### 4. Votre tolérance budgétaire
 
-#### Budget limité (remboursés 65% DT2) :
-- Ozempic (~59,90€/stylo)
-- Victoza (~60€/mois)
-- Trulicity (~81€/mois)
-- Rybelsus (80-110€/mois)
+#### Budget limité (remboursés SS pour DT2) :
+- Ozempic (~76,58€/stylo, remboursé 30% DT2)
+- Victoza (~60€/mois, remboursé 65% DT2)
+- Trulicity (~81€/mois, remboursé 65% DT2)
+- Rybelsus (80-110€/mois, non remboursé)
 
 #### Budget moyen (non remboursés) :
 - Wegovy (169-360€/mois)
@@ -195,17 +196,19 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Formulaire spécifique** obligatoire depuis février 2025 pour Ozempic
 
 #### Taux de remboursement :
-- **65%** pour les GLP-1 indiqués dans le diabète de type 2 uniquement (Ozempic, Trulicity, Victoza, Rybelsus). Les traitements anti-obésité (Wegovy, Mounjaro, Saxenda) ne sont **PAS remboursés**.
+- **65%** pour Trulicity (dulaglutide) et Victoza (liraglutide) en diabète de type 2.
+- **30%** pour Ozempic (sémaglutide) en diabète de type 2 (SMR modéré).
+- **Non remboursé** : Rybelsus (avis HAS défavorable), Wegovy, Mounjaro, Saxenda.
 - **Supplément** possible selon mutuelle pour les médicaments remboursés (30-35% restants)
 
 ### Coûts réels après remboursement
 
 | Médicament | Prix brut/mois | Remboursement SS | Coût net estimé |
 |------------|----------------|------------------|-----------------|
-| Ozempic | ~59,90€/stylo | 65% (DT2) | ~21€/stylo |
+| Ozempic | ~76,58€/stylo | 30% (DT2) | ~53,61€/stylo |
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
-| Rybelsus | 80-110€ | 65% (DT2) | 28-39€ |
+| Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |
 | Wegovy | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | Mounjaro | 230-440€ | Non remboursé | 230-440€ (à charge) |
 | Saxenda | 240-300€ | Non remboursé | 240-300€ (à charge) |
@@ -323,7 +326,7 @@ Oui, il est possible de changer de médicament selon votre tolérance et vos ré
 
 ### Les GLP-1 sont-ils dangereux pour le pancréas ?
 
-Non, contrairement aux anciennes craintes, les études montrent que les GLP-1 sont sûrs et n'augmentent pas le risque de pancréatite.
+Le risque de pancréatite sous GLP-1 est rare (< 1%) mais identifié par l'ANSM. Un suivi médical régulier permet de le surveiller. En cas de douleurs abdominales sévères, consultez immédiatement votre médecin.
 
 ### Puis-je arrêter le traitement une fois mon objectif atteint ?
 

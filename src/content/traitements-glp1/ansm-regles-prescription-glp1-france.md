@@ -51,9 +51,9 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 - Le suivi régulier du patient est requis (consultations de contrôle, surveillance des effets secondaires)
 - Les contre-indications restent les mêmes
 
-### Septembre 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
+### Février 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
 
-Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un mésusage documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter de septembre 2025.
+Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un mésusage documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
 
 Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabète de type 2. Il vise à s'assurer que :
 
@@ -155,7 +155,7 @@ Si votre IMC est compris entre 25 et 30 sans comorbidité liée au poids :
 | Médicament | Molécule | Voie | Fréquence | Remboursement |
 |-----------|----------|------|-----------|---------------|
 | Ozempic | Sémaglutide | Injection | Hebdomadaire | Oui (30%) |
-| Trulicity | Dulaglutide | Injection | Hebdomadaire | Oui (30%) |
+| Trulicity | Dulaglutide | Injection | Hebdomadaire | Oui (65%) |
 | Victoza* | Liraglutide | Injection | Quotidienne | Oui (65%) |
 | Rybelsus | Sémaglutide oral | Comprimé | Quotidienne | Non |
 
