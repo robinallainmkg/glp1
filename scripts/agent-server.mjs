@@ -41,6 +41,7 @@ const AGENTS = {
   'editorial-content': 'Cree de nouveaux articles + corrections techniques (broken_link, missing_image)',
   'validator':         'Valide le site - build, frontmatter, liens, images',
   'internal-links':    'Analyse le maillage interne et suggere des liens',
+  'autopilot':         'Lance l\'autopilot. Boucle infinie, traite tout, ne t\'arrete jamais.',
 };
 
 // Track running agents
