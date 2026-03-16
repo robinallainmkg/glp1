@@ -98,7 +98,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Éviter** : Sucres rapides en rupture jeûne
 - **Qualité** : Aliments entiers, peu transformés
 
-Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour préserver la masse musculaire.
+Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour préserver la masse musculaire. Le jeûne intermittent modifie les apports alimentaires. Consultez notre guide sur l'[apport calorique journalier optimal sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) pour équilibrer votre alimentation.
 
 ## Produits cosmétiques recommandés
 

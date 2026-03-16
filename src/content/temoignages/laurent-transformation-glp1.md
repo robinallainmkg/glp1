@@ -133,4 +133,6 @@ priority: 2
 
 ---
 
+Pour comparer avec les données cliniques, consultez notre guide sur les [résultats réels avant/après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
+
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

@@ -1,6 +1,6 @@
 ---
 title: "Médecin Généraliste et Prescription GLP-1 : Conditions pour Wegovy et Mounjaro"
-description: "Depuis juin 2025, votre médecin généraliste peut prescrire Wegovy et Mounjaro. Conditions IMC, formulaire Ameli, critères d'éligibilité et démarches pour obtenir votre ordonnance."
+description: "Depuis juin 2025, votre médecin généraliste peut prescrire Wegovy et Mounjaro. Conditions IMC, formulaire Ameli et critères d'éligibilité."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"

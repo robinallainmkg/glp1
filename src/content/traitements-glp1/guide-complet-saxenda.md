@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["saxenda", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "saxenda guide complet france liraglutide"
 ---
 
 ## Guide Complet Saxenda : Tout Savoir sur ce Traitement Révolutionnaire

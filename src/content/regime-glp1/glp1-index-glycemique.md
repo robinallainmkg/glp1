@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 Index Glycemique : Guide Complet et Conseils Pratiques 2025"
-description: "Maîtrisez l'index glycémique des aliments avec les GLP-1. Guide pratique pour choisir les bons glucides, stabiliser la glycémie et maximiser l'efficacité de votre traitement anti-diabète."
+description: "Maîtrisez l'index glycémique des aliments avec les GLP-1. Choisir les bons glucides, stabiliser la glycémie et optimiser votre traitement."
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Nutrition"

@@ -11,7 +11,7 @@ featured: true
 priority: 3
 ---
 
-# Sophie D. : Renaissance à 52 Ans avec Ozempic
+## Sophie D. : Renaissance à 52 Ans avec Ozempic
 
 **28 kilos perdus en 14 mois** - Retrouver sa vie après la ménopause
 
@@ -159,5 +159,7 @@ priority: 3
 > "N'hésitez pas à franchir le pas. Vous méritez de vous sentir bien dans votre peau, à tout âge."
 
 ---
+
+Pour les chiffres des études cliniques et d'autres témoignages, consultez notre dossier sur les [résultats avant/après documentés des GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

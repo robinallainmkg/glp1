@@ -1,8 +1,8 @@
 ---
-title: "Prix Mounjaro France 2026 : Tarifs et Conditions d'Accès"
+title: "Prix Mounjaro France 2026 : Tarifs et Accès"
 description: "Prix Mounjaro en France : 230 a 440 euros/mois selon dosage. Non rembourse en 2026. Tarifs par dosage et conditions d'acces."
 keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france', 'mounjaro remboursement 2026', 'prix mounjaro allemagne', 'mounjaro prix italie']
-seoTitle: "Prix Mounjaro France 2026 : Coût, Accès et Tarifs par Dosage"
+seoTitle: "Prix Mounjaro France 2026 : Coût et Tarifs par Dosage"
 seoDescription: "Prix Mounjaro en France : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Tous les prix par dosage (2.5, 5, 7.5, 10, 12.5, 15mg) et comparatifs."
 publishedAt: '2025-09-06'
 updatedAt: '2026-03-08'
@@ -194,7 +194,7 @@ La Haute Autorité de Santé (HAS) a rendu un **avis favorable en décembre 2025
 
 ### Conditions d'Accès au Traitement
 
-Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier.
+Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier. Pour connaître en détail les [règles de prescription Mounjaro selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), consultez notre guide dédié.
 
 ### Perspectives de Remboursement
 

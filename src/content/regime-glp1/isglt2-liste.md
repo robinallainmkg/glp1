@@ -1,7 +1,7 @@
 ---
 title: "iSGLT2 : Liste des Médicaments, Prix et Combinaison avec les GLP-1"
 draft: true
-description: "Liste complète des médicaments iSGLT2 disponibles en France (Jardiance, Forxiga, Invokana). Prix, remboursement, et guide pour combiner avec les traitements GLP-1."
+description: "Liste complète des médicaments iSGLT2 en France (Jardiance, Forxiga, Invokana). Prix, remboursement et combinaison avec les GLP-1."
 pubDate: 2025-08-20
 updatedAt: 2026-03-15
 author: "Dr. Julien Lefèvre"
@@ -234,7 +234,7 @@ R : Oui, les iSGLT2 doivent être arrêtés 3 à 4 jours avant toute interventio
 
 Les iSGLT2 constituent une classe thérapeutique majeure dans l'arsenal des traitements du diabète de type 2 et des maladies cardiovasculaires en France. Pour les patients sous traitement GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy, [Mounjaro (tirzepatide)](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda), l'association avec un iSGLT2 peut offrir des bénéfices complémentaires importants, notamment sur le plan cardiovasculaire et rénal.
 
-Jardiance (empagliflozine) et Forxiga (dapagliflozine) sont les deux molécules les plus prescrites, remboursées à 65% pour le diabète de type 2 et l'insuffisance cardiaque. Leur coût mensuel après remboursement reste accessible (15€ environ).
+Jardiance (empagliflozine) et Forxiga (dapagliflozine) sont les deux molécules les plus prescrites, remboursées à 65% pour le diabète de type 2 et l'insuffisance cardiaque. Leur coût mensuel après remboursement reste accessible (15€ environ). Les iSGLT2, souvent associés aux GLP-1, ont leurs propres conditions de prise en charge. Consultez aussi le guide du [remboursement des GLP-1 en France](/collections/glp1-cout/remboursement-glp1-2026/) pour votre traitement principal.
 
 N'engagez jamais une telle association de façon autonome : discutez-en avec votre médecin ou diabétologue, qui évaluera la pertinence selon votre profil de santé, vos antécédents et vos autres traitements.
 

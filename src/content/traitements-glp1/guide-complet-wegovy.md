@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["wegovy", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "wegovy guide complet france semaglutide"
 ---
 
 ## Guide Complet Wegovy : Tout Savoir sur ce Traitement Révolutionnaire

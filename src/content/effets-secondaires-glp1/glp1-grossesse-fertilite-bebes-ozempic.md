@@ -80,7 +80,7 @@ Pour le sémaglutide, le délai de deux mois correspond à environ cinq demi-vie
 
 ### La gestion du poids pendant la grossesse
 
-L'arrêt du traitement GLP-1 soulève une question légitime : comment gérer son poids pendant la grossesse, surtout si le médicament avait permis une perte de poids significative ?
+L'arrêt du traitement GLP-1 soulève une question légitime : comment gérer son poids pendant la grossesse, surtout si le médicament avait permis une perte de poids significative ? L'arrêt brutal peut aussi entraîner des changements d'humeur. Consultez notre guide sur les [effets psychologiques du traitement GLP-1](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
 
 Il est normal de reprendre du poids à l'arrêt d'un GLP-1. Pendant la grossesse, la prise de poids est non seulement normale mais nécessaire. Les recommandations actuelles de prise de poids pendant la grossesse sont basées sur l'IMC de départ :
 

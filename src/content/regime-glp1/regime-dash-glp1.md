@@ -1,7 +1,7 @@
 ---
 title: "Regime DASH et GLP-1 : Le Guide Complet"
 draft: true
-description: "Régime DASH et traitements GLP-1 : la combinaison idéale pour diabétiques hypertendus. Plan alimentaire détaillé, bénéfices santé et conseils pratiques pour une approche nutritionnelle complète."
+description: "Régime DASH et traitements GLP-1 : la combinaison idéale pour diabétiques hypertendus. Plan alimentaire détaillé et bénéfices santé."
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"

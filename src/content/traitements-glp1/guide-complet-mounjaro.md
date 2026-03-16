@@ -11,6 +11,7 @@ date: "2025-09-06"
 pubDate: "2025-09-06"
 featured: true
 priority: 1
+mainKeyword: "mounjaro guide complet france tirzepatide"
 ---
 
 ## Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids

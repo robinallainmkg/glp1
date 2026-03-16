@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["zepbound", "glp-1", "perte de poids", "traitement", "injection", "eli lilly", "tirzepatide"]
 date: "2025-09-01"
 pubDate: "2025-09-01"
+mainKeyword: "zepbound guide complet france"
 ---
 
 ## Guide Complet Zepbound : Le Nouveau Traitement GLP-1 pour la Perte de Poids

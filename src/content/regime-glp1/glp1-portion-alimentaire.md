@@ -2,7 +2,7 @@
 title: "GLP-1 et Portions : Guide des Quantites Optimales"
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Guide des portions alimentaires optimales sous traitement GLP-1. Apprenez à adapter les quantités, gérer la satiété et maximiser la perte de poids avec des portions équilibrées et adaptées."
+description: "Guide des portions alimentaires optimales sous traitement GLP-1. Adapter les quantités, gérer la satiété et maximiser la perte de poids."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"

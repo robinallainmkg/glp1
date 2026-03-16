@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["rybelsus", "glp-1", "diabète", "traitement", "oral"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "rybelsus guide complet france oral"
 ---
 
 ## Guide Complet Rybelsus : Tout Savoir sur ce Traitement Révolutionnaire

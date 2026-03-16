@@ -1,6 +1,6 @@
 ---
 title: "Régime Mounjaro Optimal : Guide Nutritionnel Complet 2025"
-description: "Découvrez le régime alimentaire optimal avec Mounjaro. Guide complet des aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets de votre traitement."
+description: "Le régime alimentaire optimal avec Mounjaro. Aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets du traitement."
 pubDate: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Nutrition"

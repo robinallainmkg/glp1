@@ -1,5 +1,5 @@
 ---
-title: "Guide Complet Ozempic : Prix, Effets Secondaires et Posologie"
+title: "Guide Complet Ozempic : Prix et Effets Secondaires"
 slug: "guide-complet-ozempic"
 description: "Découvrez tout sur Ozempic : traitement GLP-1 pour le diabète et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["ozempic", "glp-1", "diabète", "perte de poids", "traitement", "injection"]
 date: "2025-08-27"
 pubDate: "2025-08-27"
+mainKeyword: "ozempic guide complet france posologie prix"
 ---
 
 ## Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
