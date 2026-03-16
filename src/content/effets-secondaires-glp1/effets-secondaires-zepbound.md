@@ -11,6 +11,7 @@ thumbnailAlt: "Illustration pour l'article effets-secondaires-zepbound"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "effets secondaires Zepbound tirzepatide"
 
 # Configuration Affiliation
 enableAffiliation: true

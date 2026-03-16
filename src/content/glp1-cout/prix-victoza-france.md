@@ -1,5 +1,5 @@
 ---
-title: "Prix Victoza 2026 : Coût, Remboursement et Arrêt de Commercialisation"
+title: "Prix Victoza 2026 : Coût et Arrêt de Commercialisation"
 description: "Prix Victoza en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Victoza."
 keywords: ['prix victoza', 'victoza pharmacie', 'remboursement victoza', 'mutuelle victoza', 'coût traitement victoza']
 seoTitle: "Prix Victoza 2025 : Combien coûte Victoza en France ?"
@@ -11,6 +11,7 @@ author: 'Dr. Marie Dubois'
 readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Victoza France"
 image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 ---
 <script type="application/ld+json">

@@ -14,6 +14,7 @@ thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Effets secondaires du traitement wegovy"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Wegovy"
 ---
 
 ## Effets Secondaires Wegovy : Guide Complet

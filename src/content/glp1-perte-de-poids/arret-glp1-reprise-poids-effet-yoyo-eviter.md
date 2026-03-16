@@ -1,6 +1,6 @@
 ---
 title: "Arrêt GLP-1 et Reprise de Poids : Comment Éviter l'Effet Yoyo"
-description: "Que se passe-t-il quand on arrête un traitement GLP-1 ? Données chiffrées sur la reprise de poids, stratégies pour limiter l'effet yoyo et alternatives pour maintenir les résultats obtenus."
+description: "Arrêt GLP-1 : données chiffrées sur la reprise de poids, stratégies pour limiter l'effet yoyo et alternatives pour maintenir vos résultats."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"

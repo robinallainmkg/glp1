@@ -11,6 +11,7 @@ author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Trulicity"
 image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 thumbnail: "/images/thumbnails/trulicity.jpg"
 thumbnailAlt: "Effets secondaires du traitement trulicity"

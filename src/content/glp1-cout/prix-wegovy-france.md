@@ -12,6 +12,7 @@ readingTime: 12
 image: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Wegovy France"
 ---
 
 <script type="application/ld+json">

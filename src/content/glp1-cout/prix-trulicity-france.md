@@ -11,6 +11,7 @@ author: 'Dr. Marie Dubois'
 readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Trulicity France"
 image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 ---
 <script type="application/ld+json">

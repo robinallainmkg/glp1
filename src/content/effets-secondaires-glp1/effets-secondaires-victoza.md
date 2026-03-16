@@ -11,6 +11,7 @@ author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Victoza"
 image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
 thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
 thumbnailAlt: "Effets secondaires du traitement victoza"

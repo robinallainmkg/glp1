@@ -14,6 +14,7 @@ thumbnail: "/images/thumbnails/glp1-grossesse-fertilite.jpg"
 thumbnailAlt: "Femme enceinte et traitement GLP-1 Ozempic grossesse"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "GLP-1 grossesse fertilité bébés Ozempic"
 ---
 
 # GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions

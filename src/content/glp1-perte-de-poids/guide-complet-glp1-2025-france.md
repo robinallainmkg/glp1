@@ -1,6 +1,6 @@
 ---
 title: "Guide Complet GLP-1 2025 en France : Tout Savoir"
-description: "Guide ultime 2025 sur les GLP-1 en France : médicaments, efficacité, prix, effets secondaires et alternatives. Tout ce qu'il faut savoir pour une perte de poids réussie."
+description: "Guide complet GLP-1 en France : médicaments, efficacité, prix, effets secondaires et alternatives pour une perte de poids réussie."
 author: "Dr. Martin"
 thumbnail: "/images/thumbnails/guide-complet-GLP1.jpg"
 collection: "glp1-perte-de-poids"

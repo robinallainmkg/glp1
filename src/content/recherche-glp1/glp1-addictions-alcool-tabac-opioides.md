@@ -2,7 +2,7 @@
 title: "GLP-1 et Addictions : Alcool, Tabac, Opioïdes — Ce que la Recherche Révèle"
 pubDate: 2026-03-15
 author: "Dr. Sophie Dubois"
-description: "Les médicaments GLP-1 (Ozempic, Wegovy) pourraient réduire les comportements addictifs. Que disent les études sur l'alcool, le tabac, les opioïdes et les mécanismes en jeu ?"
+description: "GLP-1 (Ozempic, Wegovy) pourraient réduire les comportements addictifs. Études sur l'alcool, le tabac, les opioïdes et les mécanismes en jeu."
 category: "Recherche médicale"
 tags: ["glp1", "addiction", "alcool", "tabac", "recherche"]
 collection: "recherche-glp1"
@@ -11,6 +11,7 @@ thumbnailAlt: "Recherche GLP-1 addictions alcool tabac opioïdes"
 featured: true
 priority: 2
 schema: "Article"
+mainKeyword: "GLP-1 addictions alcool tabac opioïdes"
 
 # Configuration Affiliation
 enableAffiliation: true
