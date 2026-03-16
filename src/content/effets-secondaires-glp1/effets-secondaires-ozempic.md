@@ -16,11 +16,11 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 ---
 
-# Effets Secondaires Ozempic : Guide Complet
+## Effets Secondaires Ozempic : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (80-90% des patients)
+### Troubles digestifs
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>10%)
@@ -29,13 +29,13 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Évolution** : Diminue généralement après 1-2 semaines
 
 **Diarrhée**
-- **Fréquence** : Fréquent (1-10%)
+- **Fréquence** : Très fréquent (>10% selon le RCP ANSM)
 - **Causes** : Accélération du transit intestinal
 - **Gestion** : Hydratation, alimentation pauvre en fibres
 - **Durée** : Généralement temporaire
 
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (environ 24% des patients sous sémaglutide vs 11% sous placebo, selon le RCP ANSM)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -88,12 +88,12 @@ affiliateCollection: "effets-secondaires-glp1"
 
 ### Très fréquents (>10%)
 - Nausées : 20-30%
+- Constipation : ~24%
 - Diarrhée : 10-15%
 - Maux de tête : 10-12%
 
 ### Fréquents (1-10%)
 - Vomissements : 5-8%
-- Constipation : 3-5%
 - Fatigue : 4-6%
 - Étourdissements : 2-4%
 
@@ -193,8 +193,8 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 
 ### Associations de patients
 
-**Association Française des Diabétiques (AFD)**
-- **Site** : afdiabete.fr
+**Fédération Française des Diabétiques (FFD)**
+- **Site** : federationdesdiabetiques.org
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
 
@@ -236,7 +236,7 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner des modifications esthétiques du visage — un phénomène connu sous le nom d'[Ozempic face (vieillissement du visage)](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage/) à connaître avant de commencer le traitement.
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner des modifications esthétiques du visage, un phénomène souvent appelé "Ozempic face" (fonte du visage), à connaître avant de commencer le traitement. Consultez votre médecin si vous constatez des changements importants.
 
 ## Sommaire
 

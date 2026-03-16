@@ -38,7 +38,7 @@ priority: 3
 - **Âge :** 52 ans
 - **Ville :** Nantes
 - **Profession :** Enseignante
-- **Traitement :** Ozempic (sémaglutide)
+- **Traitement :** [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/)
 - **Perte de poids :** 28 kilos
 - **Durée :** 14 mois
 - **IMC initial :** 33.1 (obésité modérée)

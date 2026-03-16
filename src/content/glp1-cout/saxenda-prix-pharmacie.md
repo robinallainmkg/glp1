@@ -34,7 +34,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le **prix de Saxenda en pharmacie** constitue un élément crucial dans votre décision de traitement pour la perte de poids. En 2025, ce médicament à base de liraglutide reste une alternative accessible à Wegovy, avec des tarifs plus abordables.
+Le **prix de Saxenda en pharmacie** constitue un élément crucial dans votre décision de traitement pour la perte de poids. En 2025, ce médicament à base de liraglutide reste une alternative accessible à Wegovy, avec des tarifs plus abordables. Consultez notre page dédiée au [prix détaillé de Saxenda en France](/collections/glp1-cout/prix-saxenda-france/) pour des informations complémentaires.
 
 ## Introduction
 

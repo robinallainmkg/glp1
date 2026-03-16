@@ -36,7 +36,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## À retenir
 
-Bien qu'aucune alternative naturelle ne reproduise exactement l'efficacité d'Ozempic®, certaines plantes et suppléments peuvent soutenir la perte de poids et le contrôle glycémique. Ces approches complémentaires nécessitent une supervision médicale et des attentes réalistes.
+Bien qu'aucune alternative naturelle ne reproduise exactement l'efficacité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)®, certaines plantes et suppléments peuvent soutenir la perte de poids et le contrôle glycémique. Ces approches complémentaires nécessitent une supervision médicale et des attentes réalistes.
 
 ## Informations Médicales
 

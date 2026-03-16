@@ -46,9 +46,11 @@ featured: true
 
 ## Dosage Wegovy : Protocole complet
 
+Pour une vue d'ensemble du traitement avant d'aborder la posologie, consultez notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
+
 ### 💊 **Posologie recommandée Wegovy 2025**
 
-Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines pour minimiser les effets secondaires gastro-intestinaux.
+Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines pour minimiser les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
 
 #### **Semaine 1-4 : Dose initiale**
 - **0,25 mg** par semaine (dose d'initiation)

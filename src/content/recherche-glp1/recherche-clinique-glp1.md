@@ -161,6 +161,6 @@ Les données sont obligatoirement anonymisées, utilisées uniquement à des fin
 
 ## Conclusion
 
-La recherche clinique GLP-1 française contribue activement aux innovations thérapeutiques mondiales. La participation aux essais offre un accès privilégié aux traitements d'avenir tout en bénéficiant d'un suivi médical optimal. Cette démarche altruiste fait progresser la médecine de demain.
+La recherche clinique GLP-1 française contribue activement aux innovations thérapeutiques mondiales. Pour en savoir plus sur les molécules en cours de développement, consultez notre article sur les [nouveaux GLP-1 attendus en France](/collections/recherche-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/). La participation aux essais offre un accès privilégié aux traitements d'avenir tout en bénéficiant d'un suivi médical optimal. Cette démarche altruiste fait progresser la médecine de demain.
 
 Ces informations sont fournies à titre éducatif uniquement. Consultez les équipes de recherche clinique pour obtenir des informations détaillées sur les essais disponibles.

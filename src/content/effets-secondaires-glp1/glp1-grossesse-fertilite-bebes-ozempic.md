@@ -18,7 +18,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 # GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions
 
-La question revient de plus en plus dans les consultations médicales : peut-on tomber enceinte sous Ozempic, Wegovy ou Mounjaro ? Et si c'est le cas, que faire ? Depuis que ces médicaments GLP-1 sont prescrits à grande échelle pour la perte de poids, des milliers de femmes en âge de procréer se trouvent face à ces questions — sans toujours obtenir de réponses claires. Voici ce que la science sait aujourd'hui.
+La question revient de plus en plus dans les consultations médicales : peut-on tomber enceinte sous Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro ? Et si c'est le cas, que faire ? Depuis que ces médicaments GLP-1 sont prescrits à grande échelle pour la perte de poids, des milliers de femmes en âge de procréer se trouvent face à ces questions — sans toujours obtenir de réponses claires. Voici ce que la science sait aujourd'hui.
 
 ## Les GLP-1 et la fertilité : une relation inattendue
 
@@ -45,7 +45,7 @@ Il est donc recommandé de discuter de votre contraception avec votre médecin d
 
 Les données humaines disponibles sur les GLP-1 pendant la grossesse sont encore limitées, et c'est précisément pourquoi les autorités sanitaires sont prudentes. Voici ce que l'on sait :
 
-**Études animales** : Des études sur les rongeurs et les primates ont montré que le sémaglutide (principe actif d'Ozempic et Wegovy) administré à fortes doses peut provoquer des malformations fœtales et des pertes de grossesse. Ces résultats ont été observés avec des doses proportionnellement bien supérieures à celles utilisées chez l'humain, mais ils restent préoccupants.
+**Études animales** : Des études sur les rongeurs et les primates ont montré que le sémaglutide (principe actif d'Ozempic et Wegovy) administré à fortes doses peut provoquer des malformations fœtales et des pertes de grossesse. Ces résultats ont été observés avec des doses proportionnellement bien supérieures à celles utilisées chez l'humain, mais ils restent préoccupants. Consultez la liste complète des [effets secondaires du sémaglutide](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) pour plus d'informations.
 
 **Données humaines** : Un registre de grossesses mondial collecte depuis plusieurs années les données des femmes exposées au sémaglutide en début de grossesse (souvent sans le savoir). Les résultats publiés jusqu'à présent ne montrent pas de signal alarmant, mais le nombre de cas documentés reste insuffisant pour conclure à une innocuité complète.
 
@@ -128,7 +128,7 @@ Si vous souhaitez allaiter, vous devrez attendre la fin de la période d'allaite
 
 ## Ce qu'il faut retenir
 
-Les médicaments GLP-1 comme [Ozempic, Wegovy](/glp1-cout/ozempic-prix/) et [Mounjaro](/glp1-cout/prix-mounjaro-france/) sont contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et sous traitement GLP-1 :
+Les médicaments GLP-1 comme [Ozempic, Wegovy](/collections/glp1-cout/prix-ozempic-france/) et [Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) sont contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et sous traitement GLP-1 :
 
 - Assurez-vous d'utiliser une contraception efficace pendant le traitement
 - Planifiez l'arrêt du médicament au moins 2 mois avant une tentative de grossesse (pour le sémaglutide)

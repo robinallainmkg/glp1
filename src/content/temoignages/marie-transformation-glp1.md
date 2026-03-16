@@ -40,7 +40,7 @@ priority: 1
 - **Âge :** 39 ans
 - **Ville :** Lyon
 - **Situation :** Mère de 3 enfants
-- **Traitement :** Wegovy (sémaglutide)
+- **Traitement :** [Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)
 - **Perte de poids :** 32 kilos
 - **Durée :** 12 mois
 - **IMC initial :** 34.2 (obésité modérée)

@@ -365,7 +365,7 @@ Oui, c'est possible puisque les deux contiennent du sémaglutide. **Wegovy est d
 
 ### Quel GLP-1 pour diabète type 2 avec obésité ?
 
-Pour cette double indication, **Mounjaro est optimal** car il traite efficacement les deux conditions. Alternative : Ozempic si budget limité. Consultez notre [guide diabète et GLP-1](/conditions/diabete-et-glp1).
+Pour cette double indication, **Mounjaro est optimal** car il traite efficacement les deux conditions. Alternative : Ozempic si budget limité. Consultez votre endocrinologue pour un traitement adapté à cette double indication.
 
 ### Existe-t-il des GLP-1 en comprimés ?
 
@@ -373,11 +373,11 @@ Oui, **Rybelsus (sémaglutide oral)** est le seul GLP-1 en comprimé actuellemen
 
 ### Les GLP-1 sont-ils dangereux à long terme ?
 
-Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de recul). Effets secondaires diminuent généralement après les premiers mois. Surveillance médicale régulière recommandée. Consultez les [effets secondaires de Mounjaro](/effets-secondaires-glp1/effets-secondaires-mounjaro).
+Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de recul). Effets secondaires diminuent généralement après les premiers mois. Surveillance médicale régulière recommandée. Consultez les [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro).
 
 ### Comment choisir entre Saxenda et Wegovy ?
 
-**Wegovy est généralement préféré** : injection hebdomadaire vs quotidienne pour Saxenda, efficacité supérieure (15% vs 10% de perte de poids). Saxenda peut convenir si vous préférez la routine quotidienne. Voir le [remboursement Wegovy par les mutuelles](/glp1-cout/wegovy-remboursement-mutuelle).
+**Wegovy est généralement préféré** : injection hebdomadaire vs quotidienne pour Saxenda, efficacité supérieure (15% vs 10% de perte de poids). Saxenda peut convenir si vous préférez la routine quotidienne. Voir le [remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle).
 
 ### Où trouver un médecin prescripteur de GLP-1 ?
 

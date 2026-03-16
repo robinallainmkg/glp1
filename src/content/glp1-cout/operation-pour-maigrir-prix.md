@@ -191,6 +191,8 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Vie professionnelle intense
 * Désir de solution réversible
 
+Pour en savoir plus sur les conditions de prise en charge, consultez notre guide sur le [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
+
 ## Financement et Aides
 
 ### Options de Financement

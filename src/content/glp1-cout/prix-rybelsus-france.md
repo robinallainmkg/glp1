@@ -1,8 +1,8 @@
 ---
-title: "Prix Rybelsus 2025 : Coût, Remboursement et Mutuelle en France"
+title: "Prix Rybelsus 2026 : Coût et Accessibilité en France"
 description: "Prix Rybelsus en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Rybelsus."
 keywords: ['prix rybelsus', 'rybelsus pharmacie', 'remboursement rybelsus', 'mutuelle rybelsus', 'coût traitement rybelsus']
-seoTitle: "Prix Rybelsus 2025 : Combien coûte Rybelsus en France ?"
+seoTitle: "Prix Rybelsus 2026 : Combien coûte Rybelsus en France ?"
 seoDescription: "Prix Rybelsus en pharmacie française, remboursement sécurité sociale, couverture mutuelle. Tout savoir sur le coût du traitement Rybelsus."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
@@ -19,7 +19,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Prix Rybelsus 2025 : Coût par Dosage et Remboursement Mutuelle",
+  "name": "Prix Rybelsus 2026 : Coût par Dosage et Remboursement Mutuelle",
   "description": "Prix Rybelsus en pharmacie : 80-110€ par mois. Coût réel après remboursement 65% (DT2 uniquement).",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-rybelsus-france",
   "datePublished": "2025-12-27",
@@ -67,7 +67,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 }
 </script>
 
-# Prix Rybelsus 2025 : Coût et Remboursement en France
+## Prix Rybelsus 2026 : Coût et Remboursement en France
 
 ## 💰 Prix Rybelsus en Pharmacie
 
@@ -85,8 +85,8 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Rybelsus | 80-110 € | 65% (DT2 uniquement) |
-| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Rybelsus | 80-110 € | Non remboursé |
+| Ozempic | ~77,60 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 
@@ -94,7 +94,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 ### Conditions de remboursement
 
-**Rybelsus est remboursé à 65%** par l'Assurance Maladie sous conditions :
+**Rybelsus n'est PAS remboursé** par l'Assurance Maladie. La HAS a rendu un avis defavorable au remboursement du semaglutide oral. Contrairement a Ozempic (semaglutide injectable, rembourse 30% pour le DT2), Rybelsus reste integralement a la charge du patient :
 
 ✅ **Prescription médicale obligatoire**
 ✅ **Diabète de type 2 confirmé**
@@ -114,7 +114,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 **Mutuelle obligatoire** pour compléter le remboursement :
 
-- **Remboursement Sécu** : 65% du tarif de base
+- **Remboursement Sécu** : Non remboursé du tarif de base
 - **Ticket modérateur** : 35% restant
 - **Mutuelle** : Prend en charge 15-30% supplémentaire
 - **Reste à charge** : 5-20% selon votre contrat
@@ -202,16 +202,16 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 |---------|---------|--------|-----------|
 | Prix mensuel | 80-110 € | 90-120 € | ~81 € |
 | Perte poids moyenne | -12% | -15% | -10% |
-| Remboursement | 65% (DT2) | 65% (DT2) | 65% (DT2) |
+| Remboursement | Non remboursé | 30% (DT2) | 30% (DT2) |
 | Rapport qualité/prix | Bon | Bon | Bon |
 
 ## 📝 Conclusion
 
-**Rybelsus offre un prix compétitif** pour le diabète de type 2 sous forme orale, avec un remboursement identique aux autres GLP-1.
+**Rybelsus est une alternative orale** pour le diabète de type 2, mais il n'est pas remboursé par la Sécurité Sociale en France (avis défavorable de la HAS). Le coût reste intégralement à la charge du patient.
 
 ### Points clés à retenir :
 - **Prix moyen** : 80-110 €/mois
-- **Remboursement Sécu** : 65%
+- **Remboursement Sécu** : Non remboursé
 - **Mutuelle** : 15-30% supplémentaire
 - **Aides disponibles** : Pour revenus modestes
 
