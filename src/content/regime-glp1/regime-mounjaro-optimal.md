@@ -152,7 +152,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 
 ### Programme Adapté
 - **Marche active** : 30 min/jour minimum
-- **Renforcement** : 2-3 séances/semaine
+- **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Souplesse** : Yoga, étirements
 - **Cardio modéré** : Selon tolérance
 

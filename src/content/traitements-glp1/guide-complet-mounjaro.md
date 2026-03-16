@@ -195,8 +195,8 @@ Cette double action permet un contrôle glycémique exceptionnel et une perte de
 <div class="clinical-stats">
   <div class="stat-row">
     <span class="stat-label">Patients perdant +15% de leur poids</span>
-    <span class="stat-bar"><span class="fill" style="width: 89%"></span></span>
-    <span class="stat-value">89%</span>
+    <span class="stat-bar"><span class="fill" style="width: 50%"></span></span>
+    <span class="stat-value">~50%</span>
   </div>
   
   <div class="stat-row">

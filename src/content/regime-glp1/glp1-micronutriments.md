@@ -95,6 +95,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 
+En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour maintenir votre masse musculaire pendant le traitement.
+
 ## Produits cosmétiques recommandés
 
 ### Soins complémentaires

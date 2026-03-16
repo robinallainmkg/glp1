@@ -83,7 +83,7 @@ L'OMS a fondé ses recommandations sur une revue systématique des essais cliniq
 
 **Études SURMOUNT (tirzépatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/))** : Le tirzépatide, qui agit à la fois sur les récepteurs GLP-1 et GIP, a montré des pertes de poids encore plus importantes, jusqu'à 20-25% du poids initial dans certains essais.
 
-**Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat a particulièrement pesé dans la décision de l'OMS.
+**Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat, qui confirme les [bénéfices cardiovasculaires documentés des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/), a particulièrement pesé dans la décision de l'OMS.
 
 ### Le rapport bénéfice/risque évalué par l'OMS
 
@@ -97,7 +97,7 @@ Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais c
 
 En France, les décisions de remboursement ne dépendent pas directement de l'OMS mais de la Haute Autorité de Santé (HAS) et du Comité Économique des Produits de Santé (CEPS). Cependant, les recommandations de l'OMS constituent un argument de poids dans les négociations en cours.
 
-La HAS a déjà rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours, avec un remboursement possible au second semestre 2026. Les lignes directrices de l'OMS renforcent considérablement le dossier médico-économique en faveur de ce remboursement.
+La HAS a déjà rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Le [remboursement GLP-1 en France en 2026](/collections/glp1-cout/remboursement-glp1-2026/) est possible au second semestre 2026. Les lignes directrices de l'OMS renforcent considérablement le dossier médico-économique en faveur de ce remboursement.
 
 Pour connaître les prix actuels des traitements GLP-1 en France, consultez nos guides sur le [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) et le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
 

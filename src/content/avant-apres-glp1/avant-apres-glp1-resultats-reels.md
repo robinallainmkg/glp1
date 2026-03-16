@@ -1,6 +1,6 @@
 ---
-title: "Avant Après GLP-1 : Résultats Réels, Photos et Témoignages de Patients Français"
-description: "Découvrez les véritables résultats avant/après des traitements GLP-1 en France : Ozempic, Wegovy, Mounjaro. Photos, témoignages, durée, efficacité et conseils pour des attentes réalistes."
+title: "Avant Après GLP-1 : Résultats Réels et Témoignages"
+description: "Résultats avant/après des traitements GLP-1 en France : Ozempic, Wegovy, Mounjaro. Témoignages, durée, efficacité et conseils pour des attentes réalistes."
 author: "Dr. Émilie Dupont"
 pubDate: 2026-03-15
 category: "avant-apres"
@@ -123,7 +123,7 @@ Ce phénomène s'explique par la physiologie : le GLP-1 traite une cause biologi
 Cela ne veut pas dire que l'arrêt est condamné à l'échec. Des stratégies permettent de maintenir une partie des bénéfices :
 
 - **L'éducation thérapeutique** : les patients qui ont travaillé avec un diététicien ou un coach pendant le traitement maintiennent mieux leurs résultats
-- **La dose de maintenance** : certains médecins proposent une dose réduite (par exemple Wegovy 0,5 mg au lieu de 2,4 mg) pour maintenir les effets avec moins d'effets secondaires et un coût moindre
+- **La dose de maintenance** : certains médecins proposent une dose réduite (par exemple Wegovy 0,5 mg au lieu de 2,4 mg) pour maintenir les effets avec moins d'[effets secondaires de Wegovy à connaître](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) et un coût moindre
 - **Le passage à Saxenda** : moins efficace mais moins cher, parfois utilisé comme "relais"
 - **Le suivi comportemental** : une psychologue spécialisée en comportement alimentaire peut aider à consolider les nouvelles habitudes acquises pendant le traitement
 
@@ -135,7 +135,7 @@ Les meilleurs résultats sont obtenus lorsque le traitement GLP-1 est associé �
 
 Le GLP-1 réduit l'appétit, mais ne choisit pas ce que vous mangez. Il est essentiel de privilégier :
 
-- **Les protéines** (viandes maigres, poissons, légumineuses, oeufs) pour préserver la masse musculaire
+- **Les protéines** (viandes maigres, poissons, légumineuses, oeufs) pour [préserver la masse musculaire pendant la perte de poids](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Les légumes et fibres** pour la satiété et le microbiome
 - **L'hydratation** (au moins 1,5L d'eau par jour) car la diurèse augmente
 - **La réduction des aliments ultra-transformés** qui contournent les signaux de satiété

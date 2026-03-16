@@ -1,6 +1,6 @@
 ---
 title: "Acupuncture GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Acupuncture GLP-1 : informations médicales et recommandations d'experts."
+description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Guide complet sur les bénéfices, preuves scientifiques et conseils pratiques pour les patients."
 pubDate: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"

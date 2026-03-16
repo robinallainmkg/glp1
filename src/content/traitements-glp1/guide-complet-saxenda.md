@@ -1,5 +1,5 @@
 ---
-title: "Guide Complet Saxenda : Prix, Effets Secondaires et Posologie"
+title: "Guide Complet Saxenda : Prix et Effets Secondaires"
 slug: "guide-complet-saxenda"
 description: "Découvrez tout sur Saxenda : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
@@ -147,8 +147,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
-- **Phentermine/Topiramate (Qsymia)** : Association anorexigène
-- **Bupropion/Naltrexone (Mysimba)** : Action centrale sur l'appétit
+- **Mysimba** (bupropion/naltrexone) : Action centrale sur l'appétit — disponible en France
 
 ## FAQ Saxenda
 

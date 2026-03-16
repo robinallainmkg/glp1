@@ -1,6 +1,6 @@
 ---
 title: "Prix Wegovy Pharmacie 2026 : Combien Coûte Wegovy en France ?"
-description: "Wegovy prix pharmacie en France 2026 : de 169€ à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale. Comparez les prix entre pharmacies et découvrez comment réduire votre reste à charge."
+description: "Wegovy prix pharmacie en France 2026 : de 169€ à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale. Comment réduire votre reste à charge."
 pubDate: 2025-08-23
 updatedAt: '2026-03-15'
 author: "Julien Lefèvre"
