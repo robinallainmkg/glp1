@@ -1,6 +1,6 @@
 ---
 title: "Victoza Arrêt de Commercialisation 2026 : Quelles Alternatives ?"
-description: "Victoza (liraglutide) arrête sa commercialisation fin 2026. Guide pratique pour les patients : alternatives disponibles (Saxenda, Ozempic, Wegovy), démarches de transition et conseils médicaux."
+description: "Victoza (liraglutide) arrête sa commercialisation fin 2026. Alternatives disponibles, démarches de transition et conseils pour les patients."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"

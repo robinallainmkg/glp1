@@ -467,18 +467,18 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 ### Médecins et Suivi
 - **[Trouver un Endocrinologue](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire des médecins prescripteurs
 - **[Trouver un Diabétologue à Paris](/collections/medecins-glp1-france/diabetologue-paris)** - Spécialistes région parisienne
-- **[Suivi Médical sous GLP-1](/guides/suivi-medical-glp1)** - Examens et consultations nécessaires
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-ozempic)** - Examens et consultations nécessaires
 
 ### Aide et Soutien
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide complet des mutuelles
 - **[Témoignages Avant/Après GLP-1](/temoignages/avant-apres-glp1)** - Résultats réels de patients
-- **[Communautés GLP-1](/guides/communautes-glp1)** - Forums et groupes d'entraide
+- **[Témoignages Avant/Après GLP-1](/collections/temoignages/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour obtenir Ozempic ?**
 - 📞 **Service patient Novo Nordisk** : 0 800 80 16 05 (gratuit)
 - 🏥 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
 - 💊 **Association Française des Diabétiques** : 01 40 09 24 25
-- 💬 **[Contactez-nous](/contact)** pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

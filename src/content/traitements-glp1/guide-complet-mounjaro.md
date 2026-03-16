@@ -417,7 +417,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
     <ul>
       <li><a href="/collections/regime-glp1/glp1-proteines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
       <li><a href="/collections/regime-glp1/jeune-intermittent-glp1">Jeûne Intermittent + Mounjaro</a></li>
-      <li><a href="/guides/sport-activite-physique-glp1">Sport et Mounjaro : Maximiser les Résultats</a></li>
+      <li><a href="/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/">Sport et Mounjaro : Maximiser les Résultats</a></li>
     </ul>
   </div>
   
@@ -425,8 +425,8 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
     <h4>🎯 Témoignages et Résultats</h4>
     <ul>
       <li><a href="/temoignages/avant-apres-glp1">Transformations Mounjaro : Avant/Après</a></li>
-      <li><a href="/collections/temoignages/marie-transformation-glp1/">Marie : -18kg avec Mounjaro en 6 mois</a></li>
-      <li><a href="/collections/temoignages/laurent-transformation-glp1/">Laurent : De 120kg à 85kg grâce à Mounjaro</a></li>
+      <li><a href="/collections/temoignages/marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
+      <li><a href="/collections/temoignages/sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
     </ul>
   </div>
 </div>

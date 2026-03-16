@@ -1,5 +1,5 @@
 ---
-title: "Acheter Wegovy En France : Guide Complet et Conseils Pratiques 2026"
+title: "Acheter Wegovy en France : Guide Complet 2026"
 description: "Guide complet sur Comment Acheter Wegovy En France En 2025 : informations médicales et recommandations d'experts."
 pubDate: 2025-08-23
 author: "Julien Lefèvre"
@@ -10,6 +10,7 @@ thumbnail: "/images/thumbnails/acheter-wegovy-en-france-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Acheter Wegovy En France"
 featured: false
 priority: 5
+mainKeyword: "acheter wegovy france pharmacie"
 schema: "Article"
 
 # Configuration Affiliation

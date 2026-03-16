@@ -479,8 +479,8 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 - **Fédération Française d'Obésité** : 01 56 81 10 10
 
 **Aide et Questions :**
-- 💬 [Contactez notre équipe](/contact)
-- 🤝 [Rejoindre les communautés GLP-1](/guides/communautes-glp1)
+- 💊 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
+- 🤝 [Témoignages de patients GLP-1](/collections/temoignages/avant-apres-glp1-resultats-reels/)
 
 ---
 
@@ -517,4 +517,4 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 
 *Dernière mise à jour : 27 décembre 2025. Les informations de remboursement sont basées sur les directives officielles de l'Assurance Maladie et de la Haute Autorité de Santé. Pour une situation personnalisée, consultez votre CPAM et votre médecin.*
 
-**📱 Restez informé des évolutions 2026** : [Inscrivez-vous à notre newsletter](/contact) pour recevoir les mises à jour sur les remboursements GLP-1.
+**📱 Restez informé des évolutions 2026** : Consultez régulièrement [ameli.fr](https://www.ameli.fr) pour les dernières mises à jour sur les remboursements GLP-1.

@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Alzheimer : Essais EVOKE Décevants (Analyse 2026)"
-description: "Les essais EVOKE sur le sémaglutide oral n'ont pas montré d'effet sur le déclin cognitif dans l'Alzheimer précoce. Analyse des résultats, mécanismes et perspectives de recherche."
+description: "Essais EVOKE : le sémaglutide oral n'a pas ralenti le déclin cognitif dans l'Alzheimer précoce. Analyse des résultats, limites et perspectives GLP-1."
 keywords: ['glp1 alzheimer', 'glp1 cerveau', 'semaglutide alzheimer', 'ozempic maladie neurodégénérative', 'evoke essai clinique', 'glp1 neuroprotection']
 seoTitle: "GLP-1 et Alzheimer : Pourquoi les Essais EVOKE Ont Déçu (Analyse 2026)"
 seoDescription: "Essais EVOKE et EVOKE+ : le sémaglutide n'a pas ralenti le déclin cognitif dans l'Alzheimer. Résultats, limites et espoirs pour la recherche GLP-1."

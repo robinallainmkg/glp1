@@ -10,6 +10,7 @@ thumbnailAlt: "Illustration des effets secondaires d'Insulevel et précautions d
 featured: false
 priority: 5
 metaTitle: "Effets Secondaires Insulevel : Guide 2025"
+mainKeyword: "effets secondaires insulevel"
 schema: Article
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Orforglipron : La Pilule GLP-1 d'Eli Lilly Bientôt en France ?"
-description: "Orforglipron, le comprimé GLP-1 oral d'Eli Lilly : efficacité (-15% de poids), date d'approbation EMA, comparaison avec Wegovy et Mounjaro. Tout sur ce médicament attendu en France."
+description: "Orforglipron, comprimé GLP-1 oral d'Eli Lilly : efficacité (-15% du poids), date d'approbation EMA et comparaison avec Wegovy et Mounjaro."
 pubDate: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Sophie Dubois"
@@ -115,7 +115,7 @@ Eli Lilly a déposé une **demande d'Autorisation de Mise sur le Marché (AMM)**
 5. **Décision nationale** : chaque pays adapte l'AMM à ses règles nationales
 
 **Calendrier estimé** :
-- Décision EMA : 2e semestre 2026 au plus tôt
+- Décision EMA : 2e semestre 2026 au plus tôt. Note : la FDA américaine doit se prononcer autour du 10 avril 2026 (date PDUFA), une approbation rapide outre-Atlantique pourrait soutenir le calendrier européen
 - Commercialisation en France : 2027 (sous réserve des négociations de prix avec le CEPS)
 
 La France ajoute systématiquement un délai de négociation tarifaire avec le Comité Économique des Produits de Santé (CEPS) après l'AMM européenne, ce qui explique ce délai supplémentaire de 6 à 18 mois.

@@ -463,7 +463,7 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 **Besoin d'aide ?**
 - 📞 Service patient Eli Lilly : **0 800 10 12 13** (gratuit)
 - 🏥 Assurance Maladie : **36 46** ou [ameli.fr](https://www.ameli.fr)
-- 💬 [Contactez-nous](/contact) pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

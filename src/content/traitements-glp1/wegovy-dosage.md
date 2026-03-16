@@ -1,5 +1,5 @@
 ---
-title: "Wegovy Dosage : Guide Complet des Posologies 2025"
+title: "Wegovy Dosage : Guide Complet des Posologies 2026"
 description: "Guide complet du dosage Wegovy : posologie, augmentation progressive, adaptation individuelle et recommandations médicales pour une utilisation optimale."
 pubDate: 2025-08-20
 author: "Dr. Émilie Martin"
@@ -23,18 +23,13 @@ affiliateConfig:
   desktopStrategy: "sidebar"
   inlinePositions: [2, 6]
 ---
-<!-- 
+<!--
 SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Layout: ArticleWithAffiliateSidebar
 - Produits: Configurés par collection
 - Injection inline: positions 2, 6
 - Responsive: sidebar desktop + inline mobile
 -->
-
-readingTime: 5
-keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
-featured: true
----
 
 ## Sommaire
 1. [Dosage Wegovy : Protocole complet](#dosage-wegovy-protocole-complet)

@@ -511,18 +511,18 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ### Médecins et Suivi
 - **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire complet
-- **[Suivi Médical sous GLP-1](/guides/suivi-medical-glp1)** - Examens et consultations
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-wegovy)** - Examens et consultations
 - **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite)** - Prise en charge globale
 
 ### Témoignages et Communauté
 - **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles
-- **[Communautés GLP-1](/guides/communautes-glp1)** - Forums et groupes d'entraide
+- **[Témoignages Avant/Après GLP-1](/collections/temoignages/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**
 - 📞 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 - 🏥 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
 - 💊 **Fédération Française d'Obésité** : 01 56 81 10 10
-- 💬 **[Contactez-nous](/contact)** pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

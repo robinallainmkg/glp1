@@ -1,6 +1,6 @@
 ---
-title: "Orforglipron, CagriSema, Amycrétine : Les Nouveaux GLP-1 Attendus en France"
-description: "Orforglipron (comprimé oral), CagriSema (-22,7% de poids) et amycrétine : découvrez les nouveaux traitements GLP-1 en cours d'approbation en France et en Europe pour 2026-2027."
+title: "Orforglipron, CagriSema, Amycrétine : Nouveaux GLP-1 en France"
+description: "Orforglipron oral, CagriSema (-22,7% de poids) et amycrétine : les nouveaux GLP-1 attendus en France et en Europe pour 2026-2027."
 pubDate: 2026-03-15
 updatedAt: 2026-03-15
 author: "Dr. Sophie Dubois"
@@ -197,7 +197,7 @@ Oui. Des essais cliniques de phase 3 sont encore en cours pour certaines molécu
 Trop tôt pour le dire. L'amycrétine est encore en phase 3. Si les résultats sont confirmés, elle sera soumise à l'EMA, puis évaluée par la HAS pour le remboursement. Ce processus prend généralement 3 à 5 ans après le début de la phase 3.
 
 **Ces nouveaux médicaments remplacent-ils les GLP-1 actuels ?**
-Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure. Parmi les innovations proches, le [sémaglutide oral (comprimé) en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/) représente une évolution majeure vers des traitements sans injection.
+Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) vous aide à choisir parmi ces traitements actuellement accessibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure. Parmi les innovations proches, le [sémaglutide oral (comprimé) en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/) représente une évolution majeure vers des traitements sans injection.
 
 ---
 

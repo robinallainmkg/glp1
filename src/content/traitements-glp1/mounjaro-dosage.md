@@ -1,6 +1,6 @@
 ---
 title: "Mounjaro Dosage : Guide Complet des Posologies et Titration 2026"
-description: "Guide complet du dosage Mounjaro (tirzépatide) : posologie officielle, protocole de titration, adaptation individuelle, oubli d'injection et conseils pratiques pour 2026."
+description: "Dosage Mounjaro (tirzépatide) : posologie officielle, protocole de titration, adaptation individuelle et conseils pratiques 2026."
 pubDate: 2026-03-15
 author: "Dr. Émilie Martin"
 category: "Traitements"
