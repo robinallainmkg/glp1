@@ -48,7 +48,7 @@ import { supabaseConfig } from '../../lib/supabase';
     /* Stats grid */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1rem;
       margin-bottom: 1.5rem;
     }
@@ -151,6 +151,7 @@ import { supabaseConfig } from '../../lib/supabase';
     .badge-contact { background: rgba(236,72,153,0.2); color: #f472b6; }
     .badge-chat { background: rgba(34,197,94,0.2); color: #4ade80; }
     .badge-feedback { background: rgba(245,158,11,0.2); color: #fbbf24; }
+    .badge-email { background: rgba(139,92,246,0.2); color: #a78bfa; }
     .badge-review { background: rgba(99,102,241,0.2); color: #818cf8; }
     .badge-testimonial { background: rgba(168,85,247,0.2); color: #c084fc; }
 
@@ -257,7 +258,7 @@ import { supabaseConfig } from '../../lib/supabase';
     <div class="page-header">
       <div class="page-header-left">
         <h1>📊 Leads & Data</h1>
-        <p>Toutes les donnees entrantes — newsletter, contact, chat, feedback</p>
+        <p>Toutes les donnees entrantes — emails, newsletter, contact, chat, feedback</p>
       </div>
       <div class="header-actions">
         <span class="last-update" id="lastUpdate"></span>
@@ -272,6 +273,11 @@ import { supabaseConfig } from '../../lib/supabase';
           <div class="label">Total leads</div>
           <div class="value" id="statTotal">-</div>
           <div class="sub" id="statTotalSub">toutes sources</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Emails</div>
+          <div class="value" style="color: #8b5cf6;" id="statEmails">-</div>
+          <div class="sub" id="statEmailsSub">robin@glp1-france.fr</div>
         </div>
         <div class="stat-card">
           <div class="label">Newsletter</div>
@@ -299,6 +305,9 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="source-tabs" id="sourceTabs">
         <button class="source-tab active" data-source="all" onclick="filterSource('all', this)">
           🔥 Tout <span class="count" id="countAll">-</span>
+        </button>
+        <button class="source-tab" data-source="email" onclick="filterSource('email', this)">
+          📩 Emails <span class="count" id="countEmails">-</span>
         </button>
         <button class="source-tab" data-source="newsletter" onclick="filterSource('newsletter', this)">
           📧 Newsletter <span class="count" id="countNewsletter">-</span>
@@ -405,7 +414,15 @@ import { supabaseConfig } from '../../lib/supabase';
         .limit(100);
       if (errFeedback) console.error('feedback error:', errFeedback);
 
-      console.log('Leads data loaded:', { contacts: contacts?.length, convs: convs?.length, feedback: feedback?.length });
+      // 4. Incoming emails (robin@glp1-france.fr)
+      const { data: emails, error: errEmails } = await s
+        .from('incoming_emails')
+        .select('*')
+        .order('received_at', { ascending: false })
+        .limit(200);
+      if (errEmails) console.error('emails error:', errEmails);
+
+      console.log('Leads data loaded:', { contacts: contacts?.length, convs: convs?.length, feedback: feedback?.length, emails: emails?.length });
 
       // Build unified feed
       allEntries = [];
@@ -439,6 +456,19 @@ import { supabaseConfig } from '../../lib/supabase';
         });
       });
 
+      // Email entries
+      (emails || []).forEach(em => {
+        allEntries.push({
+          source: 'email',
+          id: em.id,
+          identifier: em.from_email || '-',
+          preview: em.subject || '(sans objet)',
+          intent: em.category || 'inbox',
+          date: em.received_at || em.created_at,
+          raw: em,
+        });
+      });
+
       // Feedback entries
       (feedback || []).forEach(f => {
         const isTesti = f.type === 'testimonial';
@@ -458,12 +488,14 @@ import { supabaseConfig } from '../../lib/supabase';
       allEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
 
       // Update stats
+      const emailsF = allEntries.filter(e => e.source === 'email');
       const newsletters = allEntries.filter(e => e.source === 'newsletter');
       const contactsF = allEntries.filter(e => e.source === 'contact');
       const chats = allEntries.filter(e => e.source === 'chat');
       const feedbacks = allEntries.filter(e => e.source === 'feedback');
 
       document.getElementById('statTotal').textContent = allEntries.length;
+      document.getElementById('statEmails').textContent = emailsF.length;
       document.getElementById('statNewsletter').textContent = newsletters.length;
       document.getElementById('statContact').textContent = contactsF.length;
       document.getElementById('statChat').textContent = chats.length;
@@ -473,6 +505,7 @@ import { supabaseConfig } from '../../lib/supabase';
       const today = new Date().toISOString().split('T')[0];
       const todayTotal = allEntries.filter(e => e.date && e.date.startsWith(today)).length;
       document.getElementById('statTotalSub').textContent = "aujourd'hui: " + todayTotal;
+      document.getElementById('statEmailsSub').textContent = "aujourd'hui: " + emailsF.filter(e => e.date && e.date.startsWith(today)).length;
       document.getElementById('statNewsletterSub').textContent = "aujourd'hui: " + newsletters.filter(e => e.date && e.date.startsWith(today)).length;
       document.getElementById('statContactSub').textContent = "aujourd'hui: " + contactsF.filter(e => e.date && e.date.startsWith(today)).length;
       document.getElementById('statChatSub').textContent = "aujourd'hui: " + chats.filter(e => e.date && e.date.startsWith(today)).length;
@@ -480,6 +513,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
       // Tab counts
       document.getElementById('countAll').textContent = allEntries.length;
+      document.getElementById('countEmails').textContent = emailsF.length;
       document.getElementById('countNewsletter').textContent = newsletters.length;
       document.getElementById('countContact').textContent = contactsF.length;
       document.getElementById('countChat').textContent = chats.length;
@@ -515,6 +549,7 @@ import { supabaseConfig } from '../../lib/supabase';
       body.innerHTML = entries.slice(0, 100).map((e, i) => {
         const badgeClass = e.subtype === 'testimonial' ? 'badge-testimonial' : 'badge-' + e.source;
         const badgeLabel = e.subtype === 'testimonial' ? 'Temoignage' :
+          e.source === 'email' ? 'Email' :
           e.source === 'newsletter' ? 'Newsletter' :
           e.source === 'contact' ? 'Contact' :
           e.source === 'chat' ? 'Chat IA' : 'Feedback';
@@ -540,7 +575,8 @@ import { supabaseConfig } from '../../lib/supabase';
       const e = entries[index];
       if (!e) return;
 
-      const badgeLabel = e.source === 'newsletter' ? '📧 Newsletter' :
+      const badgeLabel = e.source === 'email' ? '📩 Email' :
+        e.source === 'newsletter' ? '📧 Newsletter' :
         e.source === 'contact' ? '✉️ Contact' :
         e.source === 'chat' ? '💬 Chat IA' : '⭐ Feedback';
 
@@ -549,7 +585,16 @@ import { supabaseConfig } from '../../lib/supabase';
       let html = '';
       const raw = e.raw;
 
-      if (e.source === 'newsletter') {
+      if (e.source === 'email') {
+        html = field('De', (raw.from_name ? raw.from_name + ' ' : '') + '<' + raw.from_email + '>')
+          + field('Sujet', raw.subject)
+          + field('Categorie', raw.category)
+          + field('Date', fmtDate(raw.received_at))
+          + '<div class="modal-field"><label>Contenu</label><div class="val" style="background:#0d1321;padding:12px;border-radius:8px;margin-top:4px;max-height:400px;overflow-y:auto;">'
+          + escapeHtml(raw.body_text || '(pas de texte)')
+          + '</div></div>'
+          + field('Notes', raw.notes);
+      } else if (e.source === 'newsletter') {
         html = field('Email', raw.email) + field('Date', fmtDate(raw.created_at)) + field('Status', raw.status);
       } else if (e.source === 'contact') {
         html = field('Nom', raw.nom) + field('Email', raw.email) + field('Telephone', raw.telephone)
