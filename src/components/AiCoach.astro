@@ -309,17 +309,6 @@ import { supabaseConfig } from '../lib/supabase.js';
     color: #dc2626;
     margin-top: 0.3rem;
   }
-  .signup-dismiss {
-    display: block;
-    margin: 0.5rem auto 0;
-    background: none;
-    border: none;
-    color: #94a3b8;
-    font-size: 0.72rem;
-    cursor: pointer;
-  }
-  .signup-dismiss:hover { color: #64748b; }
-
   /* ===== QUICK ACTIONS ===== */
   #coach-quick-actions {
     display: flex;
@@ -574,7 +563,6 @@ import { supabaseConfig } from '../lib/supabase.js';
             <div class="signup-error" id="coach-signup-error"></div>
           </form>
         </div>
-        <button class="signup-dismiss" onclick="window._coachDismissSignup()">Plus tard</button>
       </div>
     `;
     messagesEl.appendChild(div);
@@ -588,7 +576,6 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   // Global handlers for onclick in HTML
   window._coachGoogleSignIn = signInWithGoogle;
-  window._coachDismissSignup = function() { hideSignupPrompt(); };
   window._coachToggleLogin = function() {
     var btn = document.querySelector('.signup-submit');
     if (btn.dataset.mode === 'signup') {
