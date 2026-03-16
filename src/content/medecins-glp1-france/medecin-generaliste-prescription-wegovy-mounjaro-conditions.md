@@ -1,7 +1,8 @@
 ---
-title: "Médecin Généraliste : Prescrire Wegovy et Mounjaro (2025)"
-description: "Depuis juin 2025, votre médecin généraliste peut prescrire Wegovy et Mounjaro. Conditions IMC, formulaire Ameli et critères d'éligibilité."
+title: "Médecin Généraliste Prescrire Wegovy Mounjaro : Conditions"
+description: "Médecin généraliste prescrire Wegovy Mounjaro : depuis juin 2025, conditions IMC, formulaire Ameli et critères d'éligibilité en France."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"
 category: "Médecins spécialisés"

@@ -1,8 +1,9 @@
 ---
-title: "Endocrinologue Pour Maigrir : Guide 2025"
+title: "Endocrinologue Pour Maigrir avec GLP-1 : Guide 2025"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Consulter un endocrinologue pour maigrir : spécialisation en obésité, traitements GLP-1, suivi personnalisé et prise en charge médicale complète."
+description: "Consulter un endocrinologue pour maigrir avec GLP-1 : spécialisation en obésité, traitements, suivi personnalisé et prise en charge médicale complète."
 category: "Médecins spécialisés"
 tags: ["glp1", "medecins", "specialistes"]
 collection: "medecins-glp1-france"

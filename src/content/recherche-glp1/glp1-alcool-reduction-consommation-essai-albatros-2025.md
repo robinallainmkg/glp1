@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Alcool : Réduction de Consommation, Essai ALBATROS"
-description: "Les GLP-1 (sémaglutide) réduisent la consommation d'alcool selon les études 2025-2026. Essai ALBATROS, mécanismes et perspectives pour l'alcoolo-dépendance."
+title: "GLP-1 Alcool : Réduction Consommation, Essai ALBATROS 2025"
+description: "GLP-1 alcool reduction consommation essai clinique 2025 : sémaglutide réduit la dépendance. Essai ALBATROS, mécanismes et perspectives thérapeutiques."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
