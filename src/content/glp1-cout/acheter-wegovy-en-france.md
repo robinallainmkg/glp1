@@ -119,7 +119,7 @@ Certaines mutuelles commencent à proposer une prise en charge partielle :
 
 ### Évolution du remboursement
 
-L'ANSM étudie actuellement l'inscription de Wegovy au remboursement. Les critères envisagés :
+La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours, avec un remboursement possible au 2e semestre 2026. Les critères envisagés :
 
 * **Efficacité démontrée** : perte de poids > 10%
 * **Suivi médical strict** : consultation mensuelle
@@ -223,8 +223,8 @@ Si Wegovy n'est pas disponible ou accessible :
 
 * **Indication première** : diabète de type 2
 * **Effet secondaire** : perte de poids
-* **Prix** : ~59,90 €/stylo
-* **Remboursement** : oui, 65% (diabète de type 2 uniquement)
+* **Prix** : ~77,60 €/stylo (prix public TTC)
+* **Remboursement** : oui, 30% (diabète de type 2 uniquement)
 
 **Saxenda** (liraglutide)
 

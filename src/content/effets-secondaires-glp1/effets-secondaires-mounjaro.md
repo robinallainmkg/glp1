@@ -33,7 +33,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Durée** : Généralement temporaire
 
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP VIDAL)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -103,7 +103,7 @@ affiliateCollection: "effets-secondaires-glp1"
 | Nausées | 15-20% | 5% |
 | Vomissements | 5-10% | 2% |
 | Diarrhée | 8-12% | 4% |
-| Constipation | 3-5% | 2% |
+| Constipation | 10-12% | 2% |
 | Maux de tête | 6-8% | 4% |
 | Fatigue | 4-6% | 3% |
 
@@ -179,10 +179,12 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Polymédication** : Interactions possibles
 
 ### Précautions particulières
-- **Grossesse** : Contre-indiqué (catégorie C)
+- **Grossesse** : Contre-indiqué (arrêter le traitement au moins 2 mois avant une grossesse planifiée)
 - **Allaitement** : Déconseillé
 - **Enfants** : Non étudié chez <18 ans
 - **Chirurgie** : Arrêt temporaire si nécessaire
+
+> **Remboursement** : Mounjaro n'est pas remboursé par l'Assurance Maladie en France (mars 2026). Le coût reste intégralement à la charge du patient.
 
 ## 📈 Tolérance à Long Terme
 
@@ -275,7 +277,7 @@ Voir notre [comparatif des GLP-1](/quel-traitement-glp1-choisir).
 
 **Les deux sont possibles** :
 - **Diarrhée** : Plus fréquente (8-12% patients) en début de traitement
-- **Constipation** : Moins fréquente (3-5%) due au ralentissement digestif
+- **Constipation** : Très fréquente (10-12%) due au ralentissement digestif
 
 Hydratation et alimentation équilibrée permettent de gérer les deux.
 

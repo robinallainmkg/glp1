@@ -63,7 +63,6 @@ Vous souhaitez devenir partenaire de **GLP-1 France** ?
 ## 🔗 Liens Utiles
 
 - [Accueil GLP-1 France](/)
-- [À propos de nous](/a-propos)
 - [Contact](/contact)
 - [Mentions légales](/mentions-legales)
 

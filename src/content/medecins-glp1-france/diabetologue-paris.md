@@ -132,6 +132,6 @@ Consultation 1 mois, puis tous les 3 mois la première année. Adaptation selon 
 
 ## Conclusion
 
-Paris offre un accès privilégié aux diabétologues spécialisés GLP-1 avec expertise hospitalière et libérale. Ces praticiens expérimentés optimisent l'initiation, le suivi et l'adaptation des traitements selon profils individuels. Une préparation rigoureuse maximise l'efficacité consultative.
+Paris offre un accès privilégié aux diabétologues spécialisés GLP-1 avec expertise hospitalière et libérale. Renseignez-vous sur le [remboursement des traitements GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour connaître vos options de prise en charge. Ces praticiens expérimentés optimisent l'initiation, le suivi et l'adaptation des traitements selon profils individuels. Une préparation rigoureuse maximise l'efficacité consultative.
 
  Ces informations sont fournies à titre éducatif uniquement. Consultez votre médecin traitant pour obtenir une orientation spécialisée adaptée à votre situation médicale.

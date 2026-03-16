@@ -29,7 +29,7 @@ Les médicaments GLP-1 comme le sémaglutide semblent réduire les comportements
 
 ---
 
-Des milliers de patients sous Ozempic ou Wegovy l'ont spontanément rapporté : depuis le début du traitement, ils boivent moins d'alcool, fument moins de cigarettes, ou éprouvent moins le besoin de consommer des substances auxquelles ils étaient accros. Ce n'est pas le hasard. La recherche scientifique explore depuis plusieurs années ce phénomène inattendu, avec des résultats qui pourraient transformer la prise en charge des addictions.
+Des milliers de patients sous Ozempic ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) l'ont spontanément rapporté : depuis le début du traitement, ils boivent moins d'alcool, fument moins de cigarettes, ou éprouvent moins le besoin de consommer des substances auxquelles ils étaient accros. Ce n'est pas le hasard. La recherche scientifique explore depuis plusieurs années ce phénomène inattendu, avec des résultats qui pourraient transformer la prise en charge des addictions.
 
 ## Le mécanisme : les GLP-1 agissent sur le circuit de la récompense
 
@@ -118,13 +118,13 @@ L'enthousiasme autour de cette piste de recherche doit être tempéré par quelq
 - **Les études observationnelles ne prouvent pas la causalité** : il est possible que les patients sous GLP-1 aient d'autres caractéristiques (suivi médical plus attentif, motivation accrue) qui expliquent une partie des différences observées
 - **Les essais randomisés sont en cours** : les résultats définitifs ne sont pas encore disponibles
 - **L'effet varie selon les individus** : certains patients ne rapportent aucun effet sur leurs comportements addictifs
-- **Ce ne sont pas des médicaments sans effets secondaires** : les [effets secondaires des GLP-1](/effets-secondaires-glp1/effets-secondaires-ozempic/) doivent être pris en compte dans toute prescription
+- **Ce ne sont pas des médicaments sans effets secondaires** : les [effets secondaires des GLP-1](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) doivent être pris en compte dans toute prescription
 
 ## Perspectives : quand pourrait-on avoir de nouvelles indications ?
 
 Si les essais en cours confirment l'efficacité des GLP-1 dans les addictions, les premières autorisations de mise sur le marché pour ces nouvelles indications pourraient arriver d'ici 2028-2030. Le chemin réglementaire est long : essais de phase III, soumission aux agences (EMA, FDA), évaluation du rapport bénéfice/risque.
 
-En attendant, la recherche sur ce sujet est l'une des plus actives en médecine des addictions. Les GLP-1, pensés initialement comme des antidiabétiques, pourraient bien s'imposer comme des médicaments clés de plusieurs pathologies neuropsychiatriques — ce qui représenterait une révolution thérapeutique comparable à leur impact déjà transformateur en [cardiologie et en obésité](/traitements-glp1/ozempic/).
+En attendant, la recherche sur ce sujet est l'une des plus actives en médecine des addictions. Les GLP-1, pensés initialement comme des antidiabétiques, pourraient bien s'imposer comme des médicaments clés de plusieurs pathologies neuropsychiatriques — ce qui représenterait une révolution thérapeutique comparable à leur impact déjà transformateur en [cardiologie et en obésité](/collections/traitements-glp1/guide-complet-ozempic/).
 
 ---
 

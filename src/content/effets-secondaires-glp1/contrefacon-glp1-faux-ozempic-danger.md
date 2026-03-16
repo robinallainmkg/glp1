@@ -48,7 +48,7 @@ Les risques concrets identifiés incluent :
 
 En 2023 et 2024, plusieurs patients européens ont été hospitalisés après avoir injecté des préparations achetées en ligne. Des cas d'hypoglycémies sévères ont été documentés en Allemagne, au Royaume-Uni et en France chez des personnes non diabétiques qui avaient acheté du « sémaglutide » sur des sites non autorisés.
 
-Au Royaume-Uni, le NHS (service de santé national) a publié un avertissement explicite après avoir reçu des signalements d'effets indésirables graves liés à des produits contrefaits. Dans plusieurs cas, le produit acheté en ligne contenait une concentration dix fois supérieure au dosage habituel.
+Au Royaume-Uni, le NHS (service de santé national) a publié un avertissement explicite après avoir reçu des signalements d'effets indésirables graves liés à des produits contrefaits — à distinguer des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) normalement attendus avec le produit authentique. Dans plusieurs cas, le produit acheté en ligne contenait une concentration dix fois supérieure au dosage habituel.
 
 L'ANSM française suit également des signalements de patients ayant reçu des produits suspects. Elle rappelle que **seule la filière légale — ordonnance et pharmacie agréée — garantit la sécurité du médicament**.
 
@@ -60,7 +60,7 @@ Ce marché n'existe pas en France sous la même forme. En France, une préparati
 
 ## Comment reconnaître un produit authentique
 
-### Les signes d'un Ozempic ou Wegovy authentique
+### Les signes d'un [Ozempic authentique](/collections/traitements-glp1/guide-complet-ozempic/) ou Wegovy authentique
 
 Un stylo injectable Ozempic ou Wegovy légal présente plusieurs caractéristiques vérifiables :
 
@@ -122,7 +122,7 @@ Si vous avez déjà injecté un produit douteux et ressentez des symptômes inha
 
 Le marché des contrefaçons GLP-1 est une réalité dangereuse, alimentée par la pénurie et le coût élevé des traitements. Les risques vont bien au-delà d'un simple manque d'efficacité : des hospitalisations et des complications graves ont été documentées.
 
-La règle est simple : un médicament [GLP-1 comme Ozempic](/glp1-cout/ozempic-prix/) ou [Wegovy](/glp1-cout/wegovy-prix/) ne doit jamais être acheté sans ordonnance, ni sur un site internet dont l'agrément n'est pas vérifiable. Si votre traitement vous pose des problèmes d'accès ou de coût, parlez-en à votre médecin — il existe des solutions légales, notamment les [dispositifs de remboursement](/glp1-cout/wegovy-remboursement-mutuelle/) et les médicaments alternatifs disponibles sur le marché.
+La règle est simple : un médicament [GLP-1 comme Ozempic](/collections/glp1-cout/prix-ozempic-france/) ou [Wegovy](/collections/glp1-cout/wegovy-prix/) ne doit jamais être acheté sans ordonnance, ni sur un site internet dont l'agrément n'est pas vérifiable. Si votre traitement vous pose des problèmes d'accès ou de coût, parlez-en à votre médecin — il existe des solutions légales, notamment les [dispositifs de remboursement](/collections/glp1-cout/wegovy-remboursement-mutuelle/) et les médicaments alternatifs disponibles sur le marché.
 
 ---
 

@@ -57,7 +57,7 @@ affiliateConfig:
         "name": "Quel est le prix de Zepbound en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel de Zepbound en pharmacie est de 312€ par mois. Après remboursement (En cours Sécurité Sociale + mutuelle), le coût réel patient varie selon votre couverture."
+          "text": "Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom Mounjaro, au prix libre de 230-440€ par mois selon le dosage. Mounjaro n'est pas remboursé par la Sécurité Sociale (mars 2026)."
         }
       },
       {
@@ -131,7 +131,7 @@ affiliateConfig:
 | **Mounjaro** (tirzépatide) | 230-440€ | Non remboursé | Très élevée (-21%) |
 | **Wegovy** | 169-360€ | Non remboursé | Élevée (-15 à -20%) |
 | **Saxenda** | 240-300€ | Non remboursé | Modérée (-8%) |
-| **Ozempic** | 90-120€ | 65% (DT2 uniquement) | Élevée (-15%) |
+| **Ozempic** | ~76,58€/stylo | 30% (DT2 uniquement) | Élevée (-15%) |
 
 ### Analyse Coût-Efficacité
 - **Zepbound** : Plus cher mais plus efficace (-21% poids)

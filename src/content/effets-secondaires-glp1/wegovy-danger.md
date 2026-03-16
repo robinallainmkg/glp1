@@ -54,7 +54,40 @@ featured: true
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+Wegovy (sémaglutide 2,4 mg) est un traitement injectable prescrit pour la perte de poids chez les adultes obèses ou en surpoids avec comorbidités. Comme tout médicament, il comporte des risques qu'il est essentiel de connaître avant de commencer le traitement. Les données ci-dessous sont issues du RCP (Résumé des Caractéristiques du Produit) approuvé par l'EMA et l'ANSM.
+
+### Effets secondaires très fréquents (plus de 10% des patients)
+
+Les troubles digestifs sont de loin les effets indésirables les plus courants sous Wegovy :
+
+- **Nausées** : touchent environ 25 à 44% des patients selon les études STEP. Elles apparaissent surtout en début de traitement et lors des augmentations de dose, puis s'atténuent progressivement
+- **Diarrhée** : concerne 15 à 30% des patients, généralement transitoire
+- **Vomissements** : rapportés chez 10 à 25% des patients, surtout pendant les premières semaines
+- **Constipation** : touche environ 10 à 15% des patients
+
+### Effets secondaires fréquents (1 à 10% des patients)
+
+- **Maux de tête** et fatigue
+- **Étourdissements**
+- **Douleurs abdominales** et ballonnements
+- **Reflux gastro-oesophagien**
+- **Réactions au site d'injection** (rougeur, démangeaisons)
+
+### Effets graves rares mais documentés
+
+**Pancréatite aiguë** : des cas de pancréatite ont été rapportés sous sémaglutide. Toute douleur abdominale intense et persistante doit conduire à l'arrêt immédiat du traitement et à une consultation en urgence.
+
+**Risque thyroïdien** : des tumeurs thyroïdiennes (carcinome médullaire) ont été observées chez l'animal. Par précaution, Wegovy est contre-indiqué chez les patients ayant des antécédents personnels ou familiaux de carcinome médullaire de la thyroïde ou de néoplasie endocrinienne multiple de type 2 (NEM 2).
+
+**Calculs biliaires (cholélithiase)** : le risque est augmenté en cas de perte de poids rapide. Une surveillance est recommandée.
+
+**Neuropathie optique ischémique antérieure non artéritique (NOIAN)** : un signal de sécurité a été ajouté au RCP en 2025 suite à des cas rapportés, bien que le lien de causalité ne soit pas confirmé. Les patients doivent signaler tout trouble visuel soudain.
+
+**Idées suicidaires** : l'EMA surveille un signal potentiel concernant les pensées suicidaires sous agonistes GLP-1. En cas de changement d'humeur, il est important d'en parler à son médecin.
+
+### Données de pharmacovigilance ANSM
+
+L'ANSM rapporte le suivi de plus de 870 000 patients sous agonistes GLP-1 en France. Entre août 2023 et janvier 2025, 376 cas graves ont été rapportés, dont 1 décès par pancréatite dans un contexte de mésusage. Le profil de sécurité global reste favorable lorsque Wegovy est prescrit dans le cadre de son indication autorisée.
 
 ## Contexte médical
 
@@ -93,7 +126,7 @@ Les experts français recommandent une approche personnalisée tenant compte du 
 
 ### Points clés validés scientifiquement :
 - **Efficacité clinique** : Études randomisées contrôlées
-- **Sécurité d'emploi** : Surveillance post-marketing ANSM  
+- **Sécurité d'emploi** : Surveillance post-marketing ANSM (voir la liste complète des [effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/))
 - **Rapport bénéfice/risque** : Évaluation individuelle nécessaire
 - **Suivi long terme** : Protocoles établis
 
@@ -112,7 +145,7 @@ Les experts français recommandent une approche personnalisée tenant compte du 
 4. **Protocole de suivi** : Structuré et personnalisé
 
 ### Alternatives en cas d'intolérance
-En cas d'effets indésirables ou d'inefficacité, plusieurs options thérapeutiques restent disponibles selon l'évaluation médicale individuelle.
+En cas d'effets indésirables ou d'inefficacité, plusieurs options thérapeutiques restent disponibles selon l'évaluation médicale individuelle. Consultez notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) pour une vue d'ensemble du traitement.
 
 ### Prise en charge multidisciplinaire
 L'approche optimale associe :

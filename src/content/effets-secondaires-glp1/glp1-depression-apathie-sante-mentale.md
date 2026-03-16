@@ -27,7 +27,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis l'essor des traitements GLP-1, des patients traitées par Ozempic, Wegovy ou Mounjaro rapportent un effet inattendu : une apathie profonde, une perte d'intérêt pour les activités autrefois plaisantes, ou un "aplatissement" émotionnel difficile à décrire. Ces témoignages ont attiré l'attention des autorités sanitaires européennes et alimenté des débats scientifiques intenses. Que sait-on réellement en mars 2026 sur les effets psychologiques des GLP-1 ?
+Depuis l'essor des traitements GLP-1, des patients traitées par [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro rapportent un effet inattendu : une apathie profonde, une perte d'intérêt pour les activités autrefois plaisantes, ou un "aplatissement" émotionnel difficile à décrire. Ces témoignages ont attiré l'attention des autorités sanitaires européennes et alimenté des débats scientifiques intenses. Que sait-on réellement en mars 2026 sur les effets psychologiques des GLP-1 ?
 
 ## Sommaire
 

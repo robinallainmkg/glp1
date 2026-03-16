@@ -80,7 +80,7 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Saxenda | 240-300 € | Non remboursé |
-| Ozempic | ~59,90 €/stylo | 65% (DT2 uniquement) |
+| Ozempic | ~77,60 €/stylo | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Trulicity | 85 € | 65% (DT2 uniquement) |
 
@@ -193,9 +193,9 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 
 | Critère | Saxenda | Ozempic | Wegovy |
 |---------|---------|--------|---------|
-| Prix mensuel | 240-300 € | ~59,90 €/stylo | 169-360 € |
+| Prix mensuel | 240-300 € | ~77,60 €/stylo | 169-360 € |
 | Perte poids moyenne | -8% | -15% | -20% |
-| Remboursement | Non remboursé | 65% (DT2 uniquement) | Non remboursé |
+| Remboursement | Non remboursé | 30% (DT2 uniquement) | Non remboursé |
 | Rapport qualité/prix | Élevé (non remboursé) | Bon (si DT2) | Élevé (non remboursé) |
 
 ## 📝 Conclusion

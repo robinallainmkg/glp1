@@ -117,7 +117,7 @@ Cette stabilité s'explique par la position monopolistique de Novo Nordisk et la
 
 ### Wegovy n'est pas remboursé par la Sécurité Sociale
 
-Contrairement à Ozempic (remboursé à 65% pour le diabète de type 2 uniquement), **Wegovy n'est pas remboursé par l'Assurance Maladie** en France pour l'indication perte de poids. Le coût est donc entièrement à la charge du patient.
+Contrairement à Ozempic (remboursé à 30% pour le diabète de type 2 uniquement), **Wegovy n'est pas remboursé par l'Assurance Maladie** en France pour l'indication perte de poids. Le coût est donc entièrement à la charge du patient.
 
 **Critères de prescription :**
 
@@ -170,7 +170,7 @@ Le laboratoire Novo Nordisk propose plusieurs aides :
 |------------|-------------|-------------|------------|---------------|
 | **Wegovy** | 169-360€ | 1 014-2 160€ | -15% du poids | Non |
 | Saxenda | 240-300€ | 1 440-1 800€ | -8% du poids | Non |
-| Ozempic (hors indication) | ~59,90€/stylo | ~360€ | -12% du poids | Oui (DT2 uniquement) |
+| Ozempic (hors indication) | ~76,58€/stylo | ~460€ | -12% du poids | 30% (DT2 uniquement) |
 | Mounjaro | 230-440€ | 1 380-2 640€ | -20% du poids | Non |
 | Mysimba | 70€ | 420€ | -5% du poids | Non |
 
@@ -250,7 +250,7 @@ Pour maîtriser le coût de Wegovy :
 
 Le **prix de Wegovy en pharmacie** reste élevé en 2026 (169 à 360€/mois), mais plusieurs solutions permettent de réduire le reste à charge : vérifier votre mutuelle, comparer les pharmacies, et attendre le remboursement Sécurité Sociale possible au 2e semestre 2026. L'arrivée des biosimilaires (attendus 2027) devrait réduire les prix de 30 à 50%.
 
-Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabétologue qui pourra évaluer votre situation et vous orienter vers les meilleures solutions de financement.
+Pour un accompagnement personnalisé, consultez un endocrinologue ou un diabétologue qui pourra évaluer votre situation et vous orienter vers les meilleures solutions de financement. Retrouvez également le [détail complet des prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/) avec les tarifs par dosage et les perspectives de remboursement.
 
 ---
 

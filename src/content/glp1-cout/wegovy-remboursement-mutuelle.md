@@ -50,7 +50,7 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 ### Position officielle en 2025
 
-Le Wegovy n'est actuellement **pas remboursé par l'Assurance Maladie** pour l'indication perte de poids. Bien que l'ANSM (Agence Nationale de Sécurité du Médicament) ait autorisé sa commercialisation, la HAS (Haute Autorité de Santé) n'a pas encore rendu sa décision concernant le remboursement.
+Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours.
 
 ### Critères potentiels pour un futur remboursement
 

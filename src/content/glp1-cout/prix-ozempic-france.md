@@ -1,9 +1,9 @@
 ---
-title: "Prix Ozempic 2025 : Coût Complet par Dosage et Remboursement"
-description: "Prix Ozempic en pharmacie : 59,90€ par stylo. Coût réel de 21-42€ après remboursement 65%. Guide complet des tarifs par dosage (0.25mg, 0.5mg, 1mg, 2mg), mutuelles et aides."
+title: "Prix Ozempic 2026 : Coût Complet par Dosage et Remboursement"
+description: "Prix Ozempic en pharmacie : 77,60€ par stylo. Coût réel de 40-55€ après remboursement 30%. Guide complet des tarifs par dosage (0.25mg, 0.5mg, 1mg), mutuelles et aides."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2025', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
-seoTitle: "Prix Ozempic 2025 : Tarifs par Dosage, Remboursement et Coût Réel"
-seoDescription: "Prix Ozempic : 59,90€/stylo. Après remboursement 65%, payez seulement 21-42€/mois. Tous les prix par dosage (0.25, 0.5, 1, 2mg), mutuelles et aides financières 2025."
+seoTitle: "Prix Ozempic 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
+seoDescription: "Prix Ozempic : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
 publishedAt: '2025-01-28'
 updatedAt: '2025-12-27'
 featured: true
@@ -19,7 +19,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Prix Ozempic 2025 : Coût Complet par Dosage et Remboursement",
-  "description": "Prix Ozempic en pharmacie : 59,90€ par stylo. Coût réel de 21-42€ après remboursement 65%.",
+  "description": "Prix Ozempic en pharmacie : 77,60€ par stylo. Coût réel de 40-55€ après remboursement 30%.",
   "url": "https://glp1-france.fr/collections/glp1-cout/prix-ozempic-france",
   "datePublished": "2025-01-28",
   "dateModified": "2025-12-27",
@@ -50,7 +50,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
         "name": "Quel est le prix d'Ozempic en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel d'Ozempic en pharmacie est de 59,90€ par stylo, quel que soit le dosage (0.25 mg, 0.5 mg, 1 mg ou 2 mg). Après remboursement (65% Sécurité Sociale + mutuelle), le coût réel patient est de 21-42€/mois selon votre couverture."
+          "text": "Le prix officiel d'Ozempic en pharmacie est de 77,60€ TTC par stylo, quel que soit le dosage (0.25 mg, 0.5 mg ou 1 mg). Après remboursement (30% Sécurité Sociale + mutuelle), le coût réel patient est de 40-55€/mois selon votre couverture."
         }
       },
       {
@@ -58,7 +58,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
         "name": "Ozempic est-il remboursé en 2025 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui, Ozempic est remboursé à 65% par l'Assurance Maladie en 2025 sous certaines conditions : prescription médicale obligatoire, diagnostic de diabète de type 2 confirmé, échec des antidiabétiques oraux, et IMC ≥ 30 kg/m² ou IMC ≥ 27 kg/m² avec comorbidité."
+          "text": "Oui, Ozempic est remboursé à 30% par l'Assurance Maladie en 2026 sous certaines conditions : prescription médicale obligatoire, diagnostic de diabète de type 2 confirmé, échec des antidiabétiques oraux, et IMC ≥ 30 kg/m² ou IMC ≥ 27 kg/m² avec comorbidité."
         }
       },
       {
@@ -80,10 +80,10 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 
 | Dosage | Prix par stylo | Prix mensuel estimé |
 |--------|----------------|-------------------|
-| 0.25 mg | 59,90 € | 60 € |
-| 0.5 mg | 59,90 € | 60 € |
-| 1 mg | 59,90 € | 120 € |
-| 2 mg | 59,90 € | 120 € |
+| 0.25 mg | 77,60 € | 60 € |
+| 0.5 mg | 77,60 € | 60 € |
+| 1 mg | 77,60 € | 120 € |
+| 2 mg | 77,60 € | 120 € |
 
 **Prix moyen mensuel** : 90-120 € selon la posologie
 
@@ -91,17 +91,17 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Ozempic | 90-120 € | 65% (DT2 uniquement) |
+| Ozempic | 90-120 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
-| Trulicity | ~81 € | 65% (DT2 uniquement) |
+| Trulicity | ~81 € | 30% (DT2 uniquement) |
 | Mounjaro | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
 
 ### Conditions de remboursement
 
-**Ozempic est remboursé à 65%** par l'Assurance Maladie sous conditions :
+**Ozempic est remboursé à 30%** par l'Assurance Maladie sous conditions :
 
 ✅ **Prescription médicale obligatoire**
 ✅ **Diabète de type 2 confirmé** (le remboursement ne couvre PAS la perte de poids seule)
@@ -115,7 +115,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 1. **Ordonnance médicale** : Prescription par endocrinologue ou diabétologue
 2. **Formulaire obligatoire** : Remplir le formulaire de demande (obligatoire depuis février 2025)
 3. **Carte Vitale** : Présentation en pharmacie
-4. **Remboursement automatique** : 65% du prix réglementé
+4. **Remboursement automatique** : 30% du prix réglementé
 5. **Tiers payant** : Possible selon votre mutuelle
 
 ## 🏥 Couverture Mutuelle Santé
@@ -124,9 +124,9 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 
 **Mutuelle obligatoire** pour compléter le remboursement :
 
-- **Remboursement Sécu** : 65% du tarif de base
-- **Ticket modérateur** : 35% restant
-- **Mutuelle** : Prend en charge 15-30% supplémentaire
+- **Remboursement Sécu** : 30% du tarif de base
+- **Ticket modérateur** : 70% restant
+- **Mutuelle** : Prend en charge 50-65% supplémentaire
 - **Reste à charge** : 5-20% selon votre contrat
 
 ### Exemples de remboursement
@@ -212,16 +212,16 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 |---------|---------|--------|---------|
 | Prix mensuel | 90-120 € | 169-360 € | 240-300 € |
 | Perte poids moyenne | -15% | -20% | -8% |
-| Remboursement | 65% (DT2) | Non remboursé | Non remboursé |
+| Remboursement | 30% (DT2) | Non remboursé | Non remboursé |
 | Rapport qualité/prix | Bon (si DT2) | Coûteux | Coûteux |
 
 ## 📝 Conclusion
 
-**Ozempic représente un investissement raisonnable** pour la gestion du diabète de type 2, avec un bon niveau de remboursement en France (65% Sécurité Sociale, DT2 uniquement).
+**Ozempic représente un investissement raisonnable** pour la gestion du diabète de type 2, avec un remboursement en France (30% Sécurité Sociale, DT2 uniquement).
 
 ### Points clés à retenir :
 - **Prix moyen** : 90-120 €/mois
-- **Remboursement Sécu** : 65%
+- **Remboursement Sécu** : 30%
 - **Mutuelle** : 15-30% supplémentaire
 - **Aides disponibles** : Pour revenus modestes
 
@@ -241,33 +241,33 @@ thumbnailAlt: "Prix et coût du traitement ozempic-france"
 
 ### Quel est le prix d'Ozempic en pharmacie en France ?
 
-Le prix officiel d'**Ozempic en pharmacie** est de **59,90€ par stylo**, quel que soit le dosage (0.25 mg, 0.5 mg, 1 mg ou 2 mg). Ce prix est identique dans toutes les pharmacies françaises car il est fixé par les autorités de santé.
+Le prix officiel d'**Ozempic en pharmacie** est de **76,58€ PFHT (soit 77,60€ TTC avec honoraires de dispensation)** par stylo, quel que soit le dosage (0.25 mg, 0.5 mg ou 1 mg). Ce prix est identique dans toutes les pharmacies françaises car il est fixé par les autorités de santé.
 
 **Coût mensuel selon votre dosage :**
-- Dosage 0.25-0.5 mg : **1 stylo/mois = 59,90€**
+- Dosage 0.25-0.5 mg : **1 stylo/mois = 77,60€**
 - Dosage 1-2 mg : **2 stylos/mois = 119,80€**
 
-Après remboursement (65% Sécurité Sociale + mutuelle) :
-- **Coût réel patient : 21-42€/mois** selon votre couverture
+Après remboursement (30% Sécurité Sociale + mutuelle) :
+- **Coût réel patient : 40-55€/mois** selon votre couverture
 
 ### Combien coûte Ozempic par mois après remboursement ?
 
 Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de votre mutuelle :
 
-**Avec remboursement standard (65% Sécu + 25% mutuelle) :**
-- **Dosage 0.25-0.5 mg** : environ **21€/mois**
-- **Dosage 1-2 mg** : environ **42€/mois**
+**Avec remboursement standard (30% Sécu + 50% mutuelle) :**
+- **Dosage 0.25-0.5 mg** : environ **15-20€/mois**
+- **Dosage 1 mg** : environ **30-40€/mois**
 
-**Avec mutuelle renforcée (65% Sécu + 30% mutuelle) :**
-- **Dosage 0.25-0.5 mg** : environ **15€/mois**
-- **Dosage 1-2 mg** : environ **30€/mois**
+**Avec mutuelle renforcée (30% Sécu + 65% mutuelle) :**
+- **Dosage 0.25-0.5 mg** : environ **4-8€/mois**
+- **Dosage 1 mg** : environ **8-15€/mois**
 
 **Avec CMU-C ou Complémentaire Santé Solidaire :**
 - **Gratuit** ou reste à charge minimal (< 5€/mois)
 
 ### Ozempic est-il remboursé en 2025 ?
 
-**Oui, Ozempic est remboursé à 65%** par l'Assurance Maladie en 2025, sous certaines conditions :
+**Oui, Ozempic est remboursé à 30%** par l'Assurance Maladie en 2026, sous certaines conditions :
 
 ✅ **Prescription médicale obligatoire** (endocrinologue, diabétologue ou médecin traitant)
 ✅ **Diagnostic de diabète de type 2** confirmé par analyses
@@ -281,7 +281,7 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 **Comparatif de coût mensuel :**
 
 **Ozempic (sémaglutide - diabète) :**
-- Prix pharmacie : 59,90€-119,80€/mois
+- Prix pharmacie : 77,60€-119,80€/mois
 - Après remboursement : **21-42€/mois**
 - Dosage max : 2 mg/semaine
 
@@ -380,17 +380,17 @@ Les mutuelles offrant les meilleurs remboursements pour Ozempic :
 Le coût d'**Ozempic 1 mg** dépend de votre protocole d'utilisation :
 
 **Prix pharmacie :**
-- 1 stylo Ozempic 1 mg = **59,90€**
+- 1 stylo Ozempic 1 mg = **77,60€**
 - Durée : 4 semaines (1 injection/semaine)
-- **Coût mensuel brut : 59,90€**
+- **Coût mensuel brut : 77,60€**
 
 Mais en pratique, avec le dosage progressif :
-- **Mois 1-2** (0.25 mg) : 1 stylo = 59,90€
-- **Mois 3-4** (0.5 mg) : 1 stylo = 59,90€
+- **Mois 1-2** (0.25 mg) : 1 stylo = 77,60€
+- **Mois 3-4** (0.5 mg) : 1 stylo = 77,60€
 - **Mois 5+** (1 mg) : 2 stylos = **119,80€/mois**
 
-**Après remboursement (65% + 25% mutuelle) :**
-- Coût réel patient : **42€/mois** en phase de maintenance
+**Après remboursement (30% + mutuelle) :**
+- Coût réel patient : **30-55€/mois** en phase de maintenance selon votre mutuelle
 
 **Astuce :** Certains patients restent à 0.5 mg si efficace, divisant le coût par 2 !
 
@@ -401,8 +401,8 @@ Mais en pratique, avec le dosage progressif :
 **Alternatives économiques :**
 
 **1. Autres GLP-1 remboursés (coûts similaires) :**
-- **Trulicity** (dulaglutide) : ~81€/mois, remboursé 65% (DT2 uniquement)
-- **Victoza** (liraglutide) : 60,26€/mois, remboursé 65% (DT2 uniquement)
+- **Trulicity** (dulaglutide) : ~81€/mois, remboursé 30% (DT2 uniquement)
+- **Victoza** (liraglutide) : 60,26€/mois, remboursé 30% (DT2 uniquement)
 - **Saxenda** : 240-300€/mois, NON remboursé
 
 **2. Attendre le générique (2027) :**
@@ -419,7 +419,7 @@ Mais en pratique, avec le dosage progressif :
 **Comparatif de coût mensuel :**
 
 **Ozempic (sémaglutide - GLP-1 simple) :**
-- Prix pharmacie : 59,90€-119,80€/mois
+- Prix pharmacie : 77,60€-119,80€/mois
 - Après remboursement : **21-42€/mois**
 - Perte de poids moyenne : -15%
 - Disponible depuis : 2019
@@ -438,7 +438,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 - Action plus longue
 
 **Choix selon situation :**
-- **Budget serré / Diabète T2** : Ozempic (remboursé 65%)
+- **Budget serré / Diabète T2** : Ozempic (remboursé 30%)
 - **Efficacité maximale (budget disponible)** : Mounjaro (non remboursé)
 - **Compromis** : Ozempic puis Mounjaro si insuffisant
 
