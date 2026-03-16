@@ -158,7 +158,7 @@ Ces effets font partie du mécanisme attendu du traitement. Ils sont généralem
 
 ### Ne pas arrêter le traitement seul
 
-Si vous ressentez des changements d'humeur préoccupants, n'arrêtez pas votre traitement sans en parler à votre médecin. Un arrêt brutal peut entraîner une reprise de poids rapide. Votre médecin évaluera avec vous la balance bénéfice/risque et pourra proposer des adaptations.
+Si vous ressentez des changements d'humeur préoccupants, n'arrêtez pas votre traitement sans en parler à votre médecin. Un arrêt brutal peut entraîner une [reprise de poids rapide](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/). Votre médecin évaluera avec vous la balance bénéfice/risque et pourra proposer des adaptations.
 
 ### Informer votre médecin prescripteur
 

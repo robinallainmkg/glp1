@@ -6,6 +6,7 @@ seoTitle: "Effets Secondaires Trulicity : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Trulicity : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10

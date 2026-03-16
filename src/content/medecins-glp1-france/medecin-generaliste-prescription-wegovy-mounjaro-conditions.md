@@ -144,7 +144,7 @@ Même si votre généraliste peut prescrire ces traitements, il pourra vous orie
 
 - IMC très élevé (> 50) avec comorbidités multiples
 - Diabète de type 2 mal équilibré nécessitant une prise en charge complexe
-- Antécédents de chirurgie bariatrique
+- Antécédents de [chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) (sleeve, bypass)
 - Troubles des comportements alimentaires associés (anorexie, boulimie)
 - Insuffisance rénale ou hépatique modérée
 - Doute sur la pertinence du traitement médicamenteux

@@ -103,7 +103,7 @@ L'alcool libère des opioïdes endogènes (bêta-endorphines) dans le noyau accu
 
 ### Réduction de l'inflammation neurologique
 
-L'alcoolisme chronique est associé à une neuroinflammation qui renforce les comportements addictifs. Les propriétés anti-inflammatoires des GLP-1, bien documentées dans le contexte cardiovasculaire et hépatique, pourraient contribuer à la réduction de cette neuroinflammation et ainsi à l'atténuation du craving.
+L'alcoolisme chronique est associé à une neuroinflammation qui renforce les comportements addictifs. Les propriétés anti-inflammatoires des GLP-1, bien documentées dans le contexte cardiovasculaire et [hépatique](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), pourraient contribuer à la réduction de cette neuroinflammation et ainsi à l'atténuation du craving.
 
 ### Action sur l'axe intestin-cerveau
 

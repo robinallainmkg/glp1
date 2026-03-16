@@ -1,7 +1,8 @@
 ---
-title: "Plantes Diabète : Guide Complet et Conseils Pratiques 2025"
-description: "Quelles plantes médicinales peuvent aider à contrôler la glycémie en complément d'un traitement ? Guide des plantes pour le diabète validées par la science."
+title: "Plantes Diabète : Remèdes Naturels pour la Glycémie — Guide Complet 2025"
+description: "Quelles plantes diabète et remèdes naturels peuvent aider à contrôler la glycémie ? Guide complet des plantes médicinales pour le diabète validées par la science, en complément d'un traitement médical."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]

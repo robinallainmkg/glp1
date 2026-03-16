@@ -166,7 +166,7 @@ Les GLP-1 modifient la digestion et peuvent affecter votre tolérance à l'effor
 
 - **Nausées à l'effort** : fréquentes en début de traitement. Réduisez l'intensité, respirez calmement, restez bien hydraté. Si elles persistent, consultez votre médecin.
 - **Hypoglycémie** : rare avec les GLP-1 seuls (ils n'abaissent la glycémie qu'en présence de glucose), mais possible si vous combinez GLP-1 avec d'autres antidiabétiques (sulfamides, insuline). Ayez du sucre à disposition.
-- **Fatigue inhabituelle** : souvent liée à une restriction calorique trop sévère. Vérifiez votre apport alimentaire.
+- **Fatigue inhabituelle** : souvent liée à une restriction calorique trop sévère. Vérifiez vos [besoins caloriques journaliers sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/).
 - **Douleurs articulaires** : la perte de poids rapide peut modifier la biomécanique. Consultez un kinésithérapeute si des douleurs apparaissent.
 
 ### Patients avec comorbidités

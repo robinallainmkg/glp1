@@ -1,7 +1,8 @@
 ---
-title: "Supplements GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet des compléments alimentaires GLP-1 : suppléments naturels, vitamines et minéraux pour soutenir la régulation de la glycémie."
+title: "Suppléments Naturels GLP-1 : Compléments Alimentaires pour la Glycémie 2025"
+description: "Guide complet des suppléments naturels GLP-1 : quels compléments alimentaires stimulent réellement la sécrétion de GLP-1 ? Vitamines, minéraux et plantes pour soutenir votre glycémie naturellement."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
