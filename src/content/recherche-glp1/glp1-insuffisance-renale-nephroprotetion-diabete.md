@@ -2,6 +2,7 @@
 title: "GLP-1 et Reins : Néphroprotection et Précautions en IRC"
 description: "Les GLP-1 protègent les reins : -27% de risque de dialyse. Mais sont-ils sûrs en insuffisance rénale ? Guide complet des recommandations 2026."
 pubDate: 2026-03-17
+date: 2026-03-17
 updatedAt: 2026-03-17
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
