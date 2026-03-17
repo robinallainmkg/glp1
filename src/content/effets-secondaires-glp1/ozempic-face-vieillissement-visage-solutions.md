@@ -9,7 +9,7 @@ category: "Effets secondaires GLP-1"
 tags: ["glp1", "ozempic face", "vieillissement visage", "effets secondaires", "esthétique", "wegovy", "mounjaro"]
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/effets-secondaires-ozempic.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 thumbnailAlt: "Ozempic Face vieillissement du visage sous GLP-1 solutions"
 featured: true
 published: true
@@ -45,7 +45,7 @@ Perdre du poids rapidement grâce à un traitement GLP-1 comme [Wegovy](/collect
 
 L'expression "Ozempic Face" a émergé aux États-Unis vers 2023, d'abord sur les réseaux sociaux, puis dans la presse médicale. Elle décrit l'aspect vieilli que peut prendre le visage lors d'une perte de poids rapide sous GLP-1 : le visage semble avoir "dégonflé", avec des joues creuses, des pommettes moins marquées, des rides plus visibles autour de la bouche et du menton, et un aspect général de vieillissement de 5 à 10 ans.
 
-Il ne s'agit pas, à proprement parler, d'un effet secondaire direct des médicaments GLP-1 sur la peau ou les tissus faciaux. C'est une conséquence indirecte de la **perte de poids rapide**, quelle qu'en soit la cause. La même observation a été faite lors de régimes très restrictifs ou après une chirurgie bariatrique. Les GLP-1 sont simplement devenus suffisamment populaires pour que ce phénomène soit massivement documenté.
+Il ne s'agit pas, à proprement parler, d'un effet secondaire direct des médicaments GLP-1 sur la peau ou les tissus faciaux. C'est une conséquence indirecte de la **perte de poids rapide**, quelle qu'en soit la cause. La même observation a été faite lors de régimes très restrictifs ou après une [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/). Les GLP-1 sont simplement devenus suffisamment populaires pour que ce phénomène soit massivement documenté.
 
 ## Pourquoi le visage vieillit-il sous GLP-1 ? {#mecanismes}
 
@@ -87,7 +87,7 @@ L'injection d'acide hyaluronique (AH) est la solution la plus couramment propos�
 
 - **Durée d'action** : 12 à 18 mois selon la zone et le produit utilisé
 - **Coût en France** : 400 à 800 € par séance selon la quantité injectée et le praticien
-- **Non remboursé** par la Sécurité Sociale (acte esthétique)
+- **[Non remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par la Sécurité Sociale (acte esthétique)
 - **Résultats immédiats**, visibles dès la séance
 
 ### Sculptra (acide poly-L-lactique) : le traitement volumateur durable

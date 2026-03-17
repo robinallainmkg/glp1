@@ -6,7 +6,7 @@ date: 2025-01-15
 author: Dr. Sarah Martin
 category: Guide médical
 collection: complements-alimentaires
-thumbnail: "/images/thumbnails/insulevel-effet-indesirable.jpg"
+thumbnail: "/images/thumbnails/insulevel-effet-indesirable-new.jpg"
 thumbnailAlt: "Illustration des effets secondaires d'Insulevel et précautions d'usage"
 featured: false
 priority: 5

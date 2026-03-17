@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "mésusage", "détournement", "ozempic", "ANSM", "santé publique", "effets secondaires"]
 collection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/mesusage-glp1-france.jpg"
+thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"
 thumbnailAlt: "Mésusage des GLP-1 en France détournement Ozempic risques"
 featured: true
 published: true

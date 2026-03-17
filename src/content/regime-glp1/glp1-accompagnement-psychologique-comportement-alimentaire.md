@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition et comportement alimentaire"
 tags: ["glp1", "accompagnement", "psychologie", "comportement alimentaire", "nutrition", "diététicien", "regime-glp1"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-accompagnement-psychologique.jpg"
+thumbnail: "/images/thumbnails/psychologie-glp1.jpg"
 thumbnailAlt: "Accompagnement psychologique et comportement alimentaire sous traitement GLP-1"
 featured: true
 published: true

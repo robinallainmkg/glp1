@@ -7,7 +7,7 @@ description: "GLP-1 addictions alcool tabac opioïdes : Ozempic et Wegovy rédui
 category: "Recherche médicale"
 tags: ["glp1", "addiction", "alcool", "tabac", "recherche"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/glp1-addictions-alcool-tabac.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "Recherche GLP-1 addictions alcool tabac opioïdes"
 featured: true
 priority: 2

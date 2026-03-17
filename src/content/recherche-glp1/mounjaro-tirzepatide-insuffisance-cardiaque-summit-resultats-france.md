@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "mounjaro", "tirzepatide", "insuffisance cardiaque", "SUMMIT", "cardiovasculaire", "obésité", "france", "2026"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/mounjaro-insuffisance-cardiaque.jpg"
+thumbnail: "/images/thumbnails/mounjaro-blue.webp"
 thumbnailAlt: "Mounjaro tirzepatide insuffisance cardiaque résultats SUMMIT France"
 featured: true
 published: true

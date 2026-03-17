@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "cardiovasculaire", "coeur", "ozempic", "recherche", "protection cardiaque"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/glp1-cardiovasculaire.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et bénéfices cardiovasculaires - protection du coeur"
 featured: true
 published: true

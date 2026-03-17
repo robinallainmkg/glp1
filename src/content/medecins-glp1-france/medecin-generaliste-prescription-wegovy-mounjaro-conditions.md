@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Médecins spécialisés"
 tags: ["médecin généraliste", "prescription", "wegovy", "mounjaro", "glp1", "conditions", "imc", "france", "2025"]
 collection: "medecins-glp1-france"
-thumbnail: "/images/thumbnails/ansm-prescription-glp1.jpg"
+thumbnail: "/images/thumbnails/docteur.jpg"
 thumbnailAlt: "Médecin généraliste prescrivant un traitement GLP-1 Wegovy Mounjaro"
 featured: true
 published: true

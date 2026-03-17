@@ -1,5 +1,5 @@
 ---
-title: "Arrêt GLP-1 Reprise Poids Effet Yoyo : Comment Éviter le Rebond"
+title: "Arrêt GLP-1 et Reprise de Poids : Éviter l'Effet Yoyo"
 description: "Arrêt GLP-1 reprise de poids et effet yoyo : données chiffrées, stratégies pour limiter le rebond et alternatives pour maintenir vos résultats."
 pubDate: 2026-03-16
 date: '2026-03-17'

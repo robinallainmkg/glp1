@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis l'essor des traitements GLP-1, des patients traitées par [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro rapportent un effet inattendu : une apathie profonde, une perte d'intérêt pour les activités autrefois plaisantes, ou un "aplatissement" émotionnel difficile à décrire. Ces témoignages ont attiré l'attention des autorités sanitaires européennes et alimenté des débats scientifiques intenses. Que sait-on réellement en mars 2026 sur les effets psychologiques des GLP-1 ?
+Depuis l'essor des traitements GLP-1, des patients traitées par [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) rapportent un effet inattendu : une apathie profonde, une perte d'intérêt pour les activités autrefois plaisantes, ou un "aplatissement" émotionnel difficile à décrire. Ces témoignages ont attiré l'attention des autorités sanitaires européennes et alimenté des débats scientifiques intenses. Que sait-on réellement en mars 2026 sur les effets psychologiques des GLP-1 ?
 
 ## Sommaire
 
@@ -127,7 +127,7 @@ Sur les réseaux sociaux (Reddit, TikTok, forums spécialisés), des patients t�
 
 ### Données de pharmacovigilance en France
 
-En France, l'ANSM (Agence Nationale de Sécurité du Médicament) a publié en 2025 un bilan de pharmacovigilance sur les GLP-1 montrant que les signalements d'effets psychiatriques représentent **0,3% des signalements totaux** pour l'Ozempic — soit une proportion comparable à celle des autres classes de médicaments largement utilisés, sans signal d'alarme identifié.
+En France, [l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) (Agence Nationale de Sécurité du Médicament) a publié en 2025 un bilan de pharmacovigilance sur les GLP-1 montrant que les signalements d'effets psychiatriques représentent **0,3% des signalements totaux** pour l'Ozempic — soit une proportion comparable à celle des autres classes de médicaments largement utilisés, sans signal d'alarme identifié.
 
 ---
 
@@ -185,7 +185,7 @@ L'obésité est une maladie chronique dont la prise en charge optimale inclut so
 
 ## Remboursement des consultations psychologiques
 
-En France, le dispositif **MonPsy** permet d'accéder à 8 séances de psychologue remboursées par an sur prescription médicale, pour les patients de plus de 3 ans présentant une souffrance psychique d'intensité légère à modérée. Ce dispositif peut être mobilisé si vous traversez des difficultés psychologiques liées à votre traitement.
+En France, le dispositif **MonPsy** permet d'accéder à 8 séances de psychologue [remboursées](/collections/glp1-cout/remboursement-glp1-2026/) par an sur prescription médicale, pour les patients de plus de 3 ans présentant une souffrance psychique d'intensité légère à modérée. Ce dispositif peut être mobilisé si vous traversez des difficultés psychologiques liées à votre traitement.
 
 ---
 

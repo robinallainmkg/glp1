@@ -11,7 +11,7 @@ featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
 readingTime: 12
-image: "/images/thumbnails/remboursement-ozempic-diabete.jpg"
+image: "/images/thumbnails/remboursement-glp1-2026.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 mainKeyword: "remboursement Ozempic diabète justificatif prescription 2026"

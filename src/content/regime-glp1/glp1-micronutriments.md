@@ -1,5 +1,5 @@
 ---
-title: "Micronutriments Vitamines GLP-1 : Carences et Supplémentation"
+title: "Vitamines et GLP-1 : Carences et Supplémentation"
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Sophie Dubois"
@@ -25,10 +25,12 @@ affiliateConfig:
   inlinePositions: [2, 5, 9]
 ---
 
+# Vitamines et GLP-1 : Prévenir les Carences sous Traitement
+
 ## Sommaire
 
 
-<!-- 
+<!--
 SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Layout: ArticleWithAffiliateSidebar
 - Produits: Configurés par collection

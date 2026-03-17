@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Nutrition et exercice"
 tags: ["glp1", "fonte musculaire", "masse musculaire", "protéines", "musculation", "sarcopénie", "nutrition", "exercice"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/glp1-cardiovasculaire.jpg"
+thumbnail: "/images/thumbnails/sport-glp1.jpg"
 thumbnailAlt: "GLP-1 et préservation de la masse musculaire"
 featured: true
 published: true
