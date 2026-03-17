@@ -378,8 +378,19 @@ import { supabaseConfig } from '../../lib/supabase';
   }
 
   function articleUrl(collection, slug) {
-    if (!collection || !slug) return null;
-    return `/collections/${collection}/${slug}`;
+    if (!slug) return null;
+    // Slug already includes collection prefix (e.g. "regime-glp1/isglt2-liste")
+    if (slug.includes('/')) return `/collections/${slug}`;
+    // Fallback: slug without collection prefix
+    if (collection) return `/collections/${collection}/${slug}`;
+    return null;
+  }
+
+  function displaySlug(slug) {
+    // Show just the article part without collection prefix
+    if (!slug) return '-';
+    const parts = slug.split('/');
+    return parts.length > 1 ? parts[parts.length - 1] : slug;
   }
 
   function scoreCircle(score) {
@@ -511,7 +522,7 @@ import { supabaseConfig } from '../../lib/supabase';
               ${url ? `<a href="${url}" class="article-link" target="_blank" onclick="event.stopPropagation()">Voir l'article &#x2197;</a>` : ''}
             </div>
             <div class="article-slug-row">
-              <span class="article-slug">${url ? `<a href="${url}" target="_blank" onclick="event.stopPropagation()">${esc(a.collection)}/${esc(a.slug)}</a>` : esc(a.slug)}</span>
+              <span class="article-slug">${url ? `<a href="${url}" target="_blank" onclick="event.stopPropagation()">${esc(displaySlug(a.slug))}</a>` : esc(displaySlug(a.slug))}</span>
               <span class="article-collection-badge">${esc(a.collection)}</span>
               <span class="article-date">${a.tickets.length} ticket${a.tickets.length > 1 ? 's' : ''} · ${timeAgo(a.checkedAt)}</span>
             </div>
@@ -777,7 +788,7 @@ import { supabaseConfig } from '../../lib/supabase';
             }
           }
           return `<div class="stale-item">
-            <span class="stale-slug">${url ? `<a href="${url}" target="_blank" title="${esc(a.title)}">${esc(a.collection)}/${esc(a.slug)}</a>` : `<span title="${esc(a.title)}">${esc(a.slug)}</span>`}</span>
+            <span class="stale-slug">${url ? `<a href="${url}" target="_blank" title="${esc(a.title)}">${esc(displaySlug(a.slug))}</a>` : `<span title="${esc(a.title)}">${esc(displaySlug(a.slug))}</span>`}</span>
             <span class="stale-collection">${esc(a.collection || '-')}</span>
             <span class="stale-days ${daysClass}">${daysText}</span>
             ${url ? `<a href="${url}" target="_blank" class="stale-link">Voir &#x2197;</a>` : ''}

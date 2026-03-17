@@ -465,6 +465,55 @@ import { supabaseConfig } from '../../lib/supabase';
       50% { transform: translateY(-4px); opacity: 1; }
     }
 
+    /* Arena cell action buttons */
+    .arena-cell-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-bottom: 0.4rem;
+      min-height: 22px;
+    }
+    .arena-btn {
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    .arena-btn:hover { transform: scale(1.05); }
+    .arena-btn-go {
+      border-color: #22c55e44;
+      background: #0a1a0f;
+      color: #4ade80;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.6rem;
+    }
+    .arena-btn-go:hover { border-color: #22c55e; box-shadow: 0 0 8px #22c55e22; }
+    .arena-btn-console {
+      border-color: #3b82f644;
+      background: #0a0f1a;
+      color: #60a5fa;
+    }
+    .arena-btn-spawn {
+      border-color: #22c55e44;
+      background: #0a1a0f;
+      color: #4ade80;
+    }
+    .arena-btn-spawn:hover { border-color: #22c55e; }
+    .arena-btn-stop {
+      border-color: #ef444444;
+      background: #1a0a0a;
+      color: #f87171;
+      font-size: 0.55rem;
+    }
+    .arena-btn-stop:hover { border-color: #ef4444; }
+
     /* Arena cell info bar */
     .arena-cell-meta {
       font-size: 0.52rem;
@@ -640,17 +689,42 @@ import { supabaseConfig } from '../../lib/supabase';
       padding-top: 0.05rem;
     }
     .console-line-text { color: #94a3b8; word-break: break-word; white-space: pre-wrap; }
-    .console-line-text.cl-tool { color: #64748b; font-size: 0.55rem; }
-    .console-line-text.cl-result { color: #4ade80; font-weight: 600; }
+    /* Level-based styling (from server) */
+    .console-line-text.cl-tool { color: #64748b; font-size: 0.55rem; padding-left: 0.5rem; }
+    .console-line-text.cl-result { color: #4ade80; font-weight: 600; background: #052e1633; padding: 0.12rem 0.4rem; border-radius: 3px; border-left: 3px solid #4ade80; }
     .console-line-text.cl-error { color: #f87171; font-weight: 700; background: #450a0a66; padding: 0.15rem 0.4rem; border-radius: 3px; border-left: 3px solid #f87171; }
-    .console-line-text.cl-thinking { color: #475569; font-style: italic; font-size: 0.55rem; }
-    .console-line-text.cl-system { color: #fbbf24; font-weight: 700; font-size: 0.68rem; }
-    .console-line-text.cl-important { color: #f59e0b; font-weight: 700; background: #78350f55; padding: 0.15rem 0.5rem; border-radius: 4px; border-left: 3px solid #f59e0b; font-size: 0.68rem; }
-    .console-line-text.cl-metric { color: #22d3ee; font-weight: 700; background: #0e749022; padding: 0.1rem 0.4rem; border-radius: 3px; border-left: 3px solid #22d3ee; }
-    .console-line-text.cl-file { color: #a78bfa; font-size: 0.58rem; }
-    .console-line.has-important { background: #1a1a0a; }
+    .console-line-text.cl-progress { color: #fbbf24; font-weight: 700; font-size: 0.68rem; margin-top: 0.3rem; }
+    .console-line-text.cl-action { color: #e2e8f0; }
+    .console-line-text.cl-cost { color: #a78bfa; font-weight: 600; font-size: 0.6rem; }
+    .console-line-text.cl-info { color: #94a3b8; }
+    .console-line.has-result { background: #0a1a0a; }
     .console-line.has-error { background: #1a0a0a; }
-    .console-line.has-metric { background: #0a1a1a; }
+    .console-line.has-progress { background: #1a1a0a; }
+    /* Filter: hide tool lines in essential mode */
+    .console-body.filter-essential .console-line.level-tool { display: none; }
+    .console-body.filter-essential .console-line.level-info { display: none; }
+    /* Filter: show all in detail mode (default) */
+    /* Filter: hide nothing in raw mode */
+    /* Console filter bar */
+    .console-filters {
+      display: flex;
+      gap: 0.2rem;
+      flex-shrink: 0;
+    }
+    .console-filter-btn {
+      padding: 0.12rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #1e293b;
+      background: transparent;
+      color: #475569;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.15s;
+    }
+    .console-filter-btn:hover { border-color: #334155; color: #94a3b8; }
+    .console-filter-btn.active { background: #1e293b; color: #e2e8f0; border-color: #334155; }
 
     /* ==================== LOG FEED ==================== */
     .log-section {
@@ -887,6 +961,10 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="console-header">
         <span class="console-title">Console</span>
         <div class="console-tabs" id="consoleTabs"></div>
+        <div class="console-filters">
+          <button class="console-filter-btn active" data-filter="detail" onclick="setConsoleFilter('detail')">Detail</button>
+          <button class="console-filter-btn" data-filter="essential" onclick="setConsoleFilter('essential')">Essentiel</button>
+        </div>
         <span class="console-status" id="consoleStatus"></span>
       </div>
       <div class="console-body" id="consoleBody">
@@ -1003,6 +1081,8 @@ import { supabaseConfig } from '../../lib/supabase';
       serverOnline = true;
       runningAgents = data.running || {};
       window._serverBuffers = data.buffers || {};
+      window._serverCosts = data.costs || {};
+      window._serverTotalCost = data.totalCost || 0;
       renderConsoleTabs();
     } catch(e) {
       serverOnline = false;
@@ -1096,17 +1176,26 @@ import { supabaseConfig } from '../../lib/supabase';
     const activeCount = Object.keys(runningAgents).filter(k => k !== 'autopilot').length;
     document.getElementById('apAgentsActive').textContent = activeCount;
 
-    // Budget estimation (rough: ~5% per cycle, based on agent_runs count last 24h)
+    // Budget: use real cost data from server, fallback to run count estimate
+    const totalCost = window._serverTotalCost || 0;
     const runs24h = Object.values(agentRuns).filter(r => {
       const age = Date.now() - new Date(r.started_at).getTime();
       return age < 86400000;
     });
-    const budgetPct = Math.min(100, runs24h.length * 5);
     const budgetFill = document.getElementById('apBudgetFill');
     const budgetVal = document.getElementById('apBudgetVal');
-    budgetFill.style.width = budgetPct + '%';
-    budgetFill.style.background = budgetPct > 80 ? '#f87171' : budgetPct > 50 ? '#fbbf24' : '#22c55e';
-    budgetVal.textContent = `~${runs24h.length} runs / 24h (${budgetPct}%)`;
+    if (totalCost > 0) {
+      // Real cost tracking from stream-json
+      const budgetPct = Math.min(100, Math.round(totalCost / 5 * 100)); // $5 = 100%
+      budgetFill.style.width = budgetPct + '%';
+      budgetFill.style.background = budgetPct > 80 ? '#f87171' : budgetPct > 50 ? '#fbbf24' : '#22c55e';
+      budgetVal.textContent = `$${totalCost.toFixed(2)} / session`;
+    } else {
+      const budgetPct = Math.min(100, runs24h.length * 5);
+      budgetFill.style.width = budgetPct + '%';
+      budgetFill.style.background = budgetPct > 80 ? '#f87171' : budgetPct > 50 ? '#fbbf24' : '#22c55e';
+      budgetVal.textContent = `~${runs24h.length} runs / 24h`;
+    }
   }
 
   // ========== CHARACTER HTML BUILDER ==========
@@ -1171,47 +1260,39 @@ import { supabaseConfig } from '../../lib/supabase';
     if (!grid) return;
 
     grid.innerHTML = ARENA_AGENTS.map(agent => {
-      const isRunning = !!runningAgents[agent.key];
       const run = agentRuns[agent.key];
       const hasRun = !!run;
       const pending = arenaPendingCounts[agent.key] || 0;
 
-      // Count running instances (for now, 1 per agent — but could be multiple)
-      // Check for variant instances too (editorial-medical, editorial-seo, etc.)
+      // Count running instances
       let activeInstances = 0;
+      const instanceNames = [];
       for (const k of Object.keys(runningAgents)) {
-        if (k === agent.key || k.startsWith(agent.key + '-')) activeInstances++;
+        if (k === agent.key || k.startsWith(agent.key + '-')) {
+          activeInstances++;
+          instanceNames.push(k);
+        }
       }
 
       // Determine character states
       let characters = '';
       if (activeInstances > 0) {
-        // Show dancing characters for each active instance
         for (let i = 0; i < activeInstances; i++) {
           characters += buildCharacter('dancing', agent.color, i);
         }
-        // If there's pending work, hint we could spawn more
+        // Hint: sleeping bonhomme if lots of pending work
         if (pending > 10 && activeInstances < 3) {
           characters += buildCharacter('sleeping', agent.color, activeInstances);
         }
       } else if (hasRun) {
-        // Agent finished — show idle
         characters += buildCharacter('idle', agent.color, 0);
       } else {
-        // Never run — sleeping
         characters += buildCharacter('sleeping', agent.color, 0);
       }
 
-      // Meta info
-      let metaLeft = '';
-      if (isRunning) {
-        const uptime = runningAgents[agent.key]?.uptime || '';
-        metaLeft = uptime ? uptime : 'en cours...';
-      } else if (hasRun) {
-        metaLeft = timeAgo(run.completed_at || run.started_at);
-      } else {
-        metaLeft = 'jamais lance';
-      }
+      // Cost from server
+      const cost = window._serverCosts?.[agent.key] || 0;
+      const costHtml = cost > 0 ? `<span style="font-size:0.45rem;color:#475569">$${cost.toFixed(2)}</span>` : '';
 
       // Pending badge
       let pendingHtml = '';
@@ -1219,54 +1300,48 @@ import { supabaseConfig } from '../../lib/supabase';
         pendingHtml = `<span class="pending-badge" style="background:${agent.color}22;color:${agent.color}">${pending} en attente</span>`;
       }
 
+      // Meta left
+      let metaLeft = '';
+      if (activeInstances > 0) {
+        const uptime = runningAgents[agent.key]?.uptime || '';
+        metaLeft = uptime || 'en cours...';
+      } else if (hasRun) {
+        metaLeft = timeAgo(run.completed_at || run.started_at);
+      } else {
+        metaLeft = 'jamais lance';
+      }
+
       const countBadge = activeInstances > 0
         ? `<span class="arena-cell-count active" style="--agent-color:${agent.color}">x${activeInstances}</span>`
         : `<span class="arena-cell-count zero">x0</span>`;
 
-      return `<div class="arena-cell ${activeInstances > 0 ? 'has-active' : ''}" style="--agent-color:${agent.color}" onclick="onArenaCellClick('${agent.key}')">
+      // Action buttons — inline, no more prompt()
+      let btns = '';
+      if (serverOnline) {
+        if (activeInstances === 0) {
+          btns = `<button class="arena-btn arena-btn-go" onclick="event.stopPropagation();launchAgent('${agent.key}')" title="Lancer">+</button>`;
+        } else {
+          // Show console button + spawn more button
+          btns = `<button class="arena-btn arena-btn-console" onclick="event.stopPropagation();selectConsoleAgent('${instanceNames[0]}')" title="Console">&#128187;</button>`
+            + `<button class="arena-btn arena-btn-spawn" onclick="event.stopPropagation();launchAgentMulti('${agent.key}')" title="Spawner +1">+1</button>`
+            + `<button class="arena-btn arena-btn-stop" onclick="event.stopPropagation();stopAllInstances('${agent.key}')" title="Stopper tout">&#9632;</button>`;
+        }
+      }
+
+      return `<div class="arena-cell ${activeInstances > 0 ? 'has-active' : ''}" style="--agent-color:${agent.color}" onclick="selectConsoleAgent('${instanceNames[0] || agent.key}')">
         <div class="arena-cell-header">
           <span class="arena-cell-name">${agent.label}</span>
+          ${costHtml}
           ${countBadge}
         </div>
         <div class="arena-stage">${characters}</div>
+        <div class="arena-cell-actions">${btns}</div>
         <div class="arena-cell-meta">
           <span>${metaLeft}</span>
           ${pendingHtml}
         </div>
       </div>`;
     }).join('');
-  }
-
-  function onArenaCellClick(agentKey) {
-    // Count active instances
-    let activeInstances = 0;
-    let firstInstance = null;
-    for (const k of Object.keys(runningAgents)) {
-      if (k === agentKey || k.startsWith(agentKey + '-')) {
-        activeInstances++;
-        if (!firstInstance) firstInstance = k;
-      }
-    }
-
-    if (activeInstances > 0) {
-      // Show options: view console or spawn another
-      const action = prompt(
-        `${agentKey} — ${activeInstances} instance(s) active(s)\n\n` +
-        `1 = Voir la console\n` +
-        `2 = Spawner une instance supplementaire\n` +
-        `3 = Annuler`,
-        '1'
-      );
-      if (action === '1') {
-        selectConsoleAgent(firstInstance);
-      } else if (action === '2') {
-        launchAgentMulti(agentKey);
-      }
-    } else if (serverOnline) {
-      if (confirm(`Lancer l'agent ${agentKey} ?`)) {
-        launchAgent(agentKey);
-      }
-    }
   }
 
   async function launchAgentMulti(name) {
@@ -1284,7 +1359,20 @@ import { supabaseConfig } from '../../lib/supabase';
       renderArena();
     } catch(e) { alert('Erreur: ' + e.message); }
   }
-  window.onArenaCellClick = onArenaCellClick;
+
+  async function stopAllInstances(baseKey) {
+    for (const k of Object.keys(runningAgents)) {
+      if (k === baseKey || k.startsWith(baseKey + '-')) {
+        await stopAgent(k);
+      }
+    }
+    renderArena();
+  }
+
+  window.launchAgent = launchAgent;
+  window.stopAgent = stopAgent;
+  window.launchAgentMulti = launchAgentMulti;
+  window.stopAllInstances = stopAllInstances;
 
   // ========== LOAD DATA ==========
   let agentRuns = {};
@@ -1445,19 +1533,39 @@ import { supabaseConfig } from '../../lib/supabase';
   let consoleAutoScroll = true;
   let consoleTimer = null;
 
-  function classifyLine(text) {
-    if (!text) return '';
-    if (/^(Error|Failed|Exception)/i.test(text)) return 'cl-error';
-    if (/error|failed|exception/i.test(text) && text.length < 200) return 'cl-error';
-    if (/(\d+)\s*(tickets?|issues?|articles?|corrections?|opportunit|created|deploye|fixed)/i.test(text)) return 'cl-important';
-    if (/(score|position|rank|coverage|average).*\d/i.test(text)) return 'cl-metric';
-    if (/\.(astro|md|mdx|json|js|ts|mjs)\b/i.test(text) && /(modif|edit|writ|creat|updat|src\/)/i.test(text)) return 'cl-file';
-    if (/^(Tool|Using|Calling|Running|Execute|Read|Write|Edit|Glob|Grep|Bash|supabase)/i.test(text)) return 'cl-tool';
-    if (/^(Result|Output|Found|Created|Updated|Success|Done|Completed)/i.test(text)) return 'cl-result';
-    if (/^(Agent|Pipeline|Vague|Phase)/i.test(text)) return 'cl-system';
-    if (/^(Thinking|Analyzing|Considering|Planning|Let me|I'll|Looking|Checking)/i.test(text)) return 'cl-thinking';
+  // Map server-side level to CSS class
+  function levelToClass(level) {
+    const map = {
+      'tool': 'cl-tool',
+      'result': 'cl-result',
+      'error': 'cl-error',
+      'progress': 'cl-progress',
+      'action': 'cl-action',
+      'cost': 'cl-cost',
+      'info': 'cl-info',
+    };
+    return map[level] || 'cl-info';
+  }
+
+  function levelToLineCls(level) {
+    if (level === 'result') return 'has-result';
+    if (level === 'error') return 'has-error';
+    if (level === 'progress') return 'has-progress';
     return '';
   }
+
+  // Console filter
+  let consoleFilterMode = 'detail';
+  function setConsoleFilter(mode) {
+    consoleFilterMode = mode;
+    const body = document.getElementById('consoleBody');
+    body.className = 'console-body' + (mode === 'essential' ? ' filter-essential' : '');
+    // Update filter button active state
+    document.querySelectorAll('.console-filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === mode);
+    });
+  }
+  window.setConsoleFilter = setConsoleFilter;
 
   function formatConsoleTs(isoStr) {
     if (!isoStr) return '';
@@ -1520,9 +1628,10 @@ import { supabaseConfig } from '../../lib/supabase';
       const fragment = document.createDocumentFragment();
       for (const line of data.lines) {
         const div = document.createElement('div');
-        const cls = classifyLine(line.text);
-        const lineCls = cls === 'cl-important' ? 'has-important' : cls === 'cl-error' ? 'has-error' : cls === 'cl-metric' ? 'has-metric' : '';
-        div.className = 'console-line' + (lineCls ? ' ' + lineCls : '');
+        const level = line.level || 'info';
+        const cls = levelToClass(level);
+        const lineCls = levelToLineCls(level);
+        div.className = 'console-line level-' + level + (lineCls ? ' ' + lineCls : '');
         div.innerHTML = `<span class="console-line-ts">${formatConsoleTs(line.ts)}</span><span class="console-line-text ${cls}">${escapeHtml(line.text)}</span>`;
         fragment.appendChild(div);
       }

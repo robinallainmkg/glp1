@@ -28,28 +28,42 @@ import { supabaseConfig } from '../../lib/supabase';
     .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
     .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
-    /* Stats */
-    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
-    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; position: relative; overflow: hidden; }
-    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
-    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
-    .stat-card .icon-bg { position: absolute; top: -6px; right: -6px; width: 52px; height: 52px; border-radius: 50%; opacity: 0.15; }
+    /* Pipeline funnel */
+    .pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 1.5rem; }
+    .pipe-step { padding: 1rem 1.25rem; text-align: center; position: relative; border: 1px solid #1e293b; }
+    .pipe-step:first-child { border-radius: 12px 0 0 12px; }
+    .pipe-step:last-child { border-radius: 0 12px 12px 0; }
+    .pipe-step .pipe-count { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+    .pipe-step .pipe-label { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.35rem; }
+    .pipe-step .pipe-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+    .pipe-step::after { content: ''; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 8px solid #1e293b; z-index: 1; }
+    .pipe-step:last-child::after { display: none; }
+    .ps-pending { background: #0f172a; }
+    .ps-pending .pipe-count { color: #60a5fa; }
+    .ps-pending .pipe-label { color: #64748b; }
+    .ps-pending .pipe-bar { background: #3b82f6; }
+    .ps-progress { background: #1a1508; }
+    .ps-progress .pipe-count { color: #fbbf24; }
+    .ps-progress .pipe-label { color: #64748b; }
+    .ps-progress .pipe-bar { background: #f59e0b; }
+    .ps-published { background: #071a0e; }
+    .ps-published .pipe-count { color: #4ade80; }
+    .ps-published .pipe-label { color: #64748b; }
+    .ps-published .pipe-bar { background: #22c55e; }
+    .ps-rejected { background: #1a0808; }
+    .ps-rejected .pipe-count { color: #f87171; }
+    .ps-rejected .pipe-label { color: #64748b; }
+    .ps-rejected .pipe-bar { background: #ef4444; }
 
-    /* Priority distribution */
-    .prio-distrib { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
-    .prio-distrib-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; }
-    .prio-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; }
-    .prio-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
-    .pseg-high { background: #ef4444; }
-    .pseg-mid { background: #f59e0b; }
-    .pseg-low { background: #22c55e; }
-    .prio-legend { display: flex; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
-    .prio-legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
-    .prio-legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+    /* Stats row */
+    .stats-row { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .mini-stat { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.6rem; flex: 1; min-width: 140px; }
+    .mini-stat-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+    .mini-stat-value { font-size: 1.25rem; font-weight: 800; color: #e2e8f0; line-height: 1; }
+    .mini-stat-label { font-size: 0.68rem; color: #64748b; }
 
     /* Filters */
-    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .toolbar { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
     .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
     .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
     .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
@@ -59,39 +73,103 @@ import { supabaseConfig } from '../../lib/supabase';
     .search-input::placeholder { color: #475569; }
     .search-input:focus { outline: none; border-color: #3b82f6; }
 
-    /* Opportunity cards */
-    .opp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
-    .opp-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; transition: box-shadow 0.15s; }
-    .opp-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.3); border-color: #334155; }
-    .opp-card-top { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem; }
-    .prio-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; flex-shrink: 0; }
-    .pc-high { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
-    .pc-mid { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
-    .pc-low { background: #052e16; color: #4ade80; border: 2px solid #166534; }
-    .opp-title { font-size: 0.88rem; font-weight: 700; color: #e2e8f0; line-height: 1.3; margin-bottom: 0.25rem; }
-    .opp-desc { font-size: 0.78rem; color: #94a3b8; line-height: 1.5; }
-    .opp-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; align-items: center; }
+    /* View toggle + sort */
+    .controls-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .view-toggle { display: flex; gap: 0.25rem; }
+    .view-btn { padding: 0.35rem 0.75rem; border: 1px solid #1e293b; border-radius: 6px; background: #111827; font-size: 0.75rem; cursor: pointer; color: #94a3b8; font-weight: 500; }
+    .view-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .sort-controls { display: flex; gap: 0.5rem; align-items: center; }
+    .sort-label { font-size: 0.72rem; color: #64748b; }
+    .sort-select { padding: 0.3rem 0.5rem; border: 1px solid #1e293b; border-radius: 6px; font-size: 0.75rem; background: #111827; color: #e2e8f0; }
 
-    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; }
-    .badge-keyword { background: #3b1764; color: #c4b5fd; font-family: 'SF Mono', 'Fira Code', monospace; }
-    .badge-volume-high { background: #450a0a; color: #fca5a5; }
-    .badge-volume-medium { background: #451a03; color: #fcd34d; }
-    .badge-volume-low { background: #052e16; color: #86efac; }
-    .badge-comp-high { background: #450a0a; color: #fca5a5; }
-    .badge-comp-medium { background: #451a03; color: #fcd34d; }
-    .badge-comp-low { background: #052e16; color: #86efac; }
-    .badge-collection { background: #3b1764; color: #d8b4fe; }
+    /* ===== TABLE VIEW ===== */
+    .opp-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 1.5rem; }
+    .opp-table thead th { position: sticky; top: 0; background: #0f1520; padding: 0.6rem 0.75rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; text-align: left; border-bottom: 2px solid #1e293b; white-space: nowrap; }
+    .opp-table thead th.th-center { text-align: center; }
+    .opp-table tbody tr { transition: background 0.1s; }
+    .opp-table tbody tr:hover { background: #1a2332; }
+    .opp-table td { padding: 0.65rem 0.75rem; border-bottom: 1px solid #141c2b; font-size: 0.82rem; vertical-align: middle; }
+    .td-prio { width: 40px; text-align: center; }
+    .td-topic { max-width: 320px; }
+    .td-topic-title { font-weight: 600; color: #e2e8f0; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+    .td-topic-kw { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.7rem; color: #a78bfa; margin-top: 0.15rem; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+    .td-center { text-align: center; }
 
-    .status-pill { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; margin-left: auto; }
+    /* Metric bars */
+    .metric-bar { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .metric-dots { display: flex; gap: 2px; }
+    .metric-dot { width: 6px; height: 14px; border-radius: 2px; background: #1e293b; }
+    .metric-dot.filled { background: currentColor; }
+    .metric-label { font-size: 0.68rem; color: #94a3b8; min-width: 42px; }
+
+    .vol-high { color: #f87171; }
+    .vol-medium { color: #fbbf24; }
+    .vol-low { color: #4ade80; }
+    .comp-high { color: #f87171; }
+    .comp-medium { color: #fbbf24; }
+    .comp-low { color: #4ade80; }
+
+    /* Score circle */
+    .score-circle { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; font-size: 0.75rem; font-weight: 800; }
+    .sc-high { background: #1a0505; color: #f87171; border: 2px solid #7f1d1d; }
+    .sc-mid { background: #1a1505; color: #fbbf24; border: 2px solid #78350f; }
+    .sc-low { background: #051a0e; color: #4ade80; border: 2px solid #166534; }
+
+    /* Priority mini */
+    .prio-mini { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-weight: 800; font-size: 0.75rem; }
+    .pm-high { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .pm-mid { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .pm-low { background: #052e16; color: #4ade80; border: 2px solid #166534; }
+
+    /* Status pill */
+    .status-pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
     .sp-identified { background: #1e293b; color: #94a3b8; }
     .sp-approved { background: #1e3a5f; color: #93c5fd; }
     .sp-in_progress { background: #451a03; color: #fcd34d; }
     .sp-published { background: #052e16; color: #86efac; }
     .sp-rejected { background: #450a0a; color: #fca5a5; }
 
-    .opp-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #1e293b; font-size: 0.72rem; color: #64748b; }
+    /* Collection badge */
+    .badge-collection { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: 600; background: #1e1b4b; color: #c4b5fd; white-space: nowrap; }
 
-    /* Bottom: runs + collections breakdown */
+    /* ===== CARD VIEW ===== */
+    .opp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
+    .opp-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; transition: all 0.15s; display: flex; flex-direction: column; }
+    .opp-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.3); border-color: #334155; }
+
+    .opp-card-header { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .prio-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; flex-shrink: 0; }
+    .pc-high { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .pc-mid { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .pc-low { background: #052e16; color: #4ade80; border: 2px solid #166534; }
+
+    .opp-card-title { font-size: 0.88rem; font-weight: 700; color: #e2e8f0; line-height: 1.3; }
+    .opp-card-kw { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; margin-top: 0.15rem; }
+
+    .opp-card-desc { font-size: 0.78rem; color: #94a3b8; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 0.75rem; cursor: pointer; }
+    .opp-card-desc.expanded { -webkit-line-clamp: unset; }
+
+    .opp-card-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; padding: 0.75rem 0; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; margin-bottom: 0.5rem; }
+    .card-metric { text-align: center; }
+    .card-metric-label { font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #475569; margin-bottom: 0.2rem; }
+    .card-metric-value { font-size: 0.78rem; font-weight: 700; }
+
+    .opp-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.5rem; font-size: 0.72rem; color: #64748b; }
+    .opp-card-footer code { font-size: 0.68rem; color: #7c3aed; }
+
+    /* ===== KANBAN ===== */
+    .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .kanban-col { background: #0f1520; border-radius: 12px; padding: 0.75rem; min-height: 200px; border: 1px solid #1e293b; }
+    .kanban-col-header { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #94a3b8; padding: 0.5rem 0.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .kanban-col-header .kc-count { background: #1e293b; color: #94a3b8; padding: 1px 6px; border-radius: 8px; font-size: 0.65rem; }
+    .kanban-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem; font-size: 0.78rem; }
+    .kanban-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: #334155; }
+    .kanban-card .kc-title { font-weight: 600; color: #e2e8f0; margin-bottom: 0.25rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .kanban-card .kc-keyword { font-family: monospace; font-size: 0.68rem; color: #a78bfa; margin-bottom: 0.35rem; }
+    .kanban-card .kc-prio { display: inline-block; width: 20px; height: 20px; border-radius: 50%; font-size: 0.65rem; font-weight: 800; text-align: center; line-height: 20px; margin-right: 0.35rem; }
+    .kanban-card .kc-meta { display: flex; gap: 0.35rem; margin-top: 0.35rem; flex-wrap: wrap; }
+
+    /* Bottom sections */
     .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .section-card { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
     .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
@@ -106,52 +184,12 @@ import { supabaseConfig } from '../../lib/supabase';
 
     .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
 
-    /* View toggle */
-    .view-toggle { display: flex; gap: 0.25rem; margin-bottom: 1rem; }
-    .view-btn { padding: 0.35rem 0.75rem; border: 1px solid #1e293b; border-radius: 6px; background: #111827; font-size: 0.75rem; cursor: pointer; color: #94a3b8; font-weight: 500; }
-    .view-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
-
-    /* Kanban */
-    .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
-    .kanban-col { background: #0f1520; border-radius: 12px; padding: 0.75rem; min-height: 200px; border: 1px solid #1e293b; }
-    .kanban-col-header { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #94a3b8; padding: 0.5rem 0.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; }
-    .kanban-col-header .kc-count { background: #1e293b; color: #94a3b8; padding: 1px 6px; border-radius: 8px; font-size: 0.65rem; }
-    .kanban-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem; font-size: 0.78rem; }
-    .kanban-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: #334155; }
-    .kanban-card .kc-title { font-weight: 600; color: #e2e8f0; margin-bottom: 0.25rem; line-height: 1.3; }
-    .kanban-card .kc-keyword { font-family: monospace; font-size: 0.68rem; color: #a78bfa; margin-bottom: 0.35rem; }
-    .kanban-card .kc-prio { display: inline-block; width: 20px; height: 20px; border-radius: 50%; font-size: 0.65rem; font-weight: 800; text-align: center; line-height: 20px; margin-right: 0.35rem; }
-
-    /* URLs section in cards */
-    .opp-urls { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #1e293b; }
-    .opp-urls-title { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: #64748b; margin-bottom: 0.25rem; }
-    .opp-url-item { font-size: 0.68rem; color: #60a5fa; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; margin-bottom: 0.1rem; }
-    .opp-url-item:hover { text-decoration: underline; }
-
-    /* Score badge */
-    .opp-score { display: inline-flex; align-items: center; gap: 0.2rem; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 700; }
-    .os-high { background: #450a0a; color: #fca5a5; }
-    .os-mid { background: #451a03; color: #fcd34d; }
-    .os-low { background: #052e16; color: #86efac; }
-
-    /* Published articles */
-    .published-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
-    .published-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
-    .published-list { display: flex; flex-direction: column; gap: 0.5rem; }
-    .published-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border: 1px solid #1e293b; border-radius: 8px; font-size: 0.82rem; }
-    .published-item:hover { background: #1a2332; }
-    .published-slug { font-family: monospace; font-size: 0.72rem; color: #a78bfa; }
-    .published-link { color: #60a5fa; text-decoration: none; font-size: 0.75rem; font-weight: 500; margin-left: auto; }
-    .published-link:hover { text-decoration: underline; }
-
-    /* Sort controls */
-    .sort-controls { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center; }
-    .sort-label { font-size: 0.72rem; color: #64748b; }
-    .sort-select { padding: 0.3rem 0.5rem; border: 1px solid #1e293b; border-radius: 6px; font-size: 0.75rem; background: #111827; color: #e2e8f0; }
+    /* Table wrapper for scroll */
+    .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid #1e293b; background: #111827; margin-bottom: 1.5rem; }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
-    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } }
-    @media (max-width: 768px) { .main { padding: 1rem; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .opp-cards { grid-template-columns: 1fr; } }
+    @media (max-width: 1100px) { .pipeline { grid-template-columns: repeat(2, 1fr); } .pipe-step::after { display: none; } .pipe-step { border-radius: 8px !important; } .two-cols { grid-template-columns: 1fr; } .kanban { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .main { padding: 1rem; } .pipeline { grid-template-columns: 1fr; } .opp-cards { grid-template-columns: 1fr; } .stats-row { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -162,7 +200,7 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="page-header">
     <div class="page-header-left">
       <h1>Opportunites de Contenu</h1>
-      <p>Sujets et gaps identifies par l'agent Opportunities — alimentent l'agent Editorial</p>
+      <p>Sujets et gaps identifies par l'agent Opportunities</p>
     </div>
     <div class="header-actions">
       <span class="last-update" id="lastUpdate">-</span>
@@ -176,59 +214,71 @@ import { supabaseConfig } from '../../lib/supabase';
       <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Cherche les opportunites&quot; --agent opportunities');this.textContent='Copie !'">Copier</button>
     </div>
 
-    <!-- Stats -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="label">Total opportunites</div>
-        <div class="value" id="statTotal" style="color:#8b5cf6">-</div>
-        <div class="sub">Sujets detectes</div>
-        <div class="icon-bg" style="background:#8b5cf6"></div>
+    <!-- Pipeline funnel -->
+    <div class="pipeline">
+      <div class="pipe-step ps-pending">
+        <div class="pipe-count" id="pipePending">-</div>
+        <div class="pipe-label">A traiter</div>
+        <div class="pipe-bar"></div>
       </div>
-      <div class="stat-card">
-        <div class="label">A traiter</div>
-        <div class="value" id="statPending" style="color:#3b82f6">-</div>
-        <div class="sub">Approuvees / identifiees</div>
-        <div class="icon-bg" style="background:#3b82f6"></div>
+      <div class="pipe-step ps-progress">
+        <div class="pipe-count" id="pipeProgress">-</div>
+        <div class="pipe-label">En cours</div>
+        <div class="pipe-bar"></div>
       </div>
-      <div class="stat-card">
-        <div class="label">En cours</div>
-        <div class="value" id="statProgress" style="color:#d97706">-</div>
-        <div class="sub">Redaction editorial</div>
-        <div class="icon-bg" style="background:#d97706"></div>
+      <div class="pipe-step ps-published">
+        <div class="pipe-count" id="pipePublished">-</div>
+        <div class="pipe-label">Publiees</div>
+        <div class="pipe-bar"></div>
       </div>
-      <div class="stat-card">
-        <div class="label">Publiees</div>
-        <div class="value" id="statPublished" style="color:#22c55e">-</div>
-        <div class="sub">Articles crees</div>
-        <div class="icon-bg" style="background:#22c55e"></div>
-      </div>
-      <div class="stat-card">
-        <div class="label">Haute priorite</div>
-        <div class="value" id="statHigh" style="color:#dc2626">-</div>
-        <div class="sub">Priorite 1-3</div>
-        <div class="icon-bg" style="background:#dc2626"></div>
+      <div class="pipe-step ps-rejected">
+        <div class="pipe-count" id="pipeRejected">-</div>
+        <div class="pipe-label">Rejetees</div>
+        <div class="pipe-bar"></div>
       </div>
     </div>
 
-    <!-- Priority distribution -->
-    <div class="prio-distrib" id="prioContainer" style="display:none">
-      <div class="prio-distrib-title">Repartition par priorite</div>
-      <div class="prio-bar" id="prioBar"></div>
-      <div class="prio-legend">
-        <div class="prio-legend-item"><div class="prio-legend-dot" style="background:#ef4444"></div> Haute (1-3)</div>
-        <div class="prio-legend-item"><div class="prio-legend-dot" style="background:#f59e0b"></div> Moyenne (4-6)</div>
-        <div class="prio-legend-item"><div class="prio-legend-dot" style="background:#22c55e"></div> Basse (7-10)</div>
+    <!-- Mini stats -->
+    <div class="stats-row">
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#1e1b4b;color:#a78bfa">&#x2211;</div>
+        <div>
+          <div class="mini-stat-value" id="statTotal">-</div>
+          <div class="mini-stat-label">Total</div>
+        </div>
       </div>
-    </div>
-
-    <!-- Published articles -->
-    <div class="published-section" id="publishedSection" style="display:none">
-      <div class="published-title">Articles publies depuis les opportunites</div>
-      <div class="published-list" id="publishedList"></div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#450a0a;color:#f87171">!</div>
+        <div>
+          <div class="mini-stat-value" id="statHigh">-</div>
+          <div class="mini-stat-label">Haute priorite</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#052e16;color:#4ade80">&#x2191;</div>
+        <div>
+          <div class="mini-stat-value" id="statHighVol">-</div>
+          <div class="mini-stat-label">Fort volume</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#0c1a33;color:#60a5fa">&#x25CB;</div>
+        <div>
+          <div class="mini-stat-value" id="statLowComp">-</div>
+          <div class="mini-stat-label">Faible competition</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#1a1508;color:#fbbf24">&#x2605;</div>
+        <div>
+          <div class="mini-stat-value" id="statAvgScore">-</div>
+          <div class="mini-stat-label">Score moyen</div>
+        </div>
+      </div>
     </div>
 
     <!-- Filters -->
-    <div class="filters">
+    <div class="toolbar">
       <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
       <button class="filter-btn" data-filter="approved" onclick="setFilter('approved')">A traiter</button>
       <button class="filter-btn" data-filter="in_progress" onclick="setFilter('in_progress')">En cours</button>
@@ -239,23 +289,24 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
 
     <!-- View toggle + sort -->
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem">
+    <div class="controls-row">
       <div class="view-toggle">
-        <button class="view-btn active" data-view="grid" onclick="setView('grid')">Grille</button>
+        <button class="view-btn active" data-view="table" onclick="setView('table')">Tableau</button>
+        <button class="view-btn" data-view="grid" onclick="setView('grid')">Cartes</button>
         <button class="view-btn" data-view="kanban" onclick="setView('kanban')">Kanban</button>
       </div>
       <div class="sort-controls">
         <span class="sort-label">Trier par:</span>
         <select class="sort-select" id="sortSelect" onchange="setSort(this.value)">
+          <option value="score">Score</option>
           <option value="priority">Priorite</option>
           <option value="date">Date</option>
           <option value="volume">Volume</option>
-          <option value="score">Score</option>
         </select>
       </div>
     </div>
 
-    <!-- Opportunity cards -->
+    <!-- Content -->
     <div id="oppsContainer"><div class="empty-state">Chargement...</div></div>
 
     <!-- Bottom: runs + collections -->
@@ -284,8 +335,8 @@ import { supabaseConfig } from '../../lib/supabase';
   let allOpps = [];
   let currentFilter = 'all';
   let currentSearch = '';
-  let currentView = 'grid';
-  let currentSort = 'priority';
+  let currentView = 'table';
+  let currentSort = 'score';
 
   function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
@@ -297,27 +348,59 @@ import { supabaseConfig } from '../../lib/supabase';
     return r.json();
   }
 
-  function prioCircle(p) {
-    if (!p) return '<div class="prio-circle pc-low">?</div>';
-    if (p <= 3) return `<div class="prio-circle pc-high">${p}</div>`;
-    if (p <= 6) return `<div class="prio-circle pc-mid">${p}</div>`;
-    return `<div class="prio-circle pc-low">${p}</div>`;
+  function oppScore(o) {
+    let score = 0;
+    const p = o.priority || 5;
+    score += (10 - p) * 3;
+    const vol = (o.estimated_volume || '').toLowerCase();
+    if (vol.includes('high') || vol.includes('eleve')) score += 20;
+    else if (vol.includes('medium') || vol.includes('moyen')) score += 10;
+    const comp = (o.competition || '').toLowerCase();
+    if (comp.includes('low') || comp.includes('faible')) score += 15;
+    else if (comp.includes('medium') || comp.includes('moyen')) score += 8;
+    return score;
   }
 
-  function volumeBadge(v) {
-    if (!v) return '';
+  function volLevel(v) {
+    if (!v) return 'low';
     const lv = v.toLowerCase();
-    if (lv.includes('high') || lv.includes('eleve')) return `<span class="badge badge-volume-high">Vol: ${esc(v)}</span>`;
-    if (lv.includes('medium') || lv.includes('moyen')) return `<span class="badge badge-volume-medium">Vol: ${esc(v)}</span>`;
-    return `<span class="badge badge-volume-low">Vol: ${esc(v)}</span>`;
+    if (lv.includes('high') || lv.includes('eleve')) return 'high';
+    if (lv.includes('medium') || lv.includes('moyen')) return 'medium';
+    return 'low';
   }
 
-  function compBadge(c) {
-    if (!c) return '';
+  function compLevel(c) {
+    if (!c) return 'low';
     const lc = c.toLowerCase();
-    if (lc.includes('high') || lc.includes('forte')) return `<span class="badge badge-comp-high">Comp: ${esc(c)}</span>`;
-    if (lc.includes('medium') || lc.includes('moyen')) return `<span class="badge badge-comp-medium">Comp: ${esc(c)}</span>`;
-    return `<span class="badge badge-comp-low">Comp: ${esc(c)}</span>`;
+    if (lc.includes('high') || lc.includes('forte')) return 'high';
+    if (lc.includes('medium') || lc.includes('moyen')) return 'medium';
+    return 'low';
+  }
+
+  function metricDotsHtml(level, type) {
+    const levels = { high: 3, medium: 2, low: 1 };
+    const n = levels[level] || 1;
+    const labels = { high: 'Fort', medium: 'Moyen', low: 'Faible' };
+    return `<div class="metric-bar ${type}-${level}">
+      <div class="metric-dots">${[1,2,3].map(i => `<div class="metric-dot${i <= n ? ' filled' : ''}"></div>`).join('')}</div>
+      <span class="metric-label">${labels[level]}</span>
+    </div>`;
+  }
+
+  function prioMini(p) {
+    if (!p) return '<span class="prio-mini pm-low">?</span>';
+    const cls = p <= 3 ? 'pm-high' : p <= 6 ? 'pm-mid' : 'pm-low';
+    return `<span class="prio-mini ${cls}">${p}</span>`;
+  }
+
+  function scoreCircle(score) {
+    const cls = score >= 35 ? 'sc-high' : score >= 20 ? 'sc-mid' : 'sc-low';
+    return `<span class="score-circle ${cls}">${score}</span>`;
+  }
+
+  function statusPill(status) {
+    const labels = { approved: 'A traiter', identified: 'Identifiee', in_progress: 'En cours', published: 'Publiee', rejected: 'Rejetee' };
+    return `<span class="status-pill sp-${status || 'identified'}">${labels[status] || status || '-'}</span>`;
   }
 
   function timeAgo(d) {
@@ -343,6 +426,17 @@ import { supabaseConfig } from '../../lib/supabase';
     renderOpps();
   };
 
+  window.setView = function(v) {
+    currentView = v;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+    renderOpps();
+  };
+
+  window.setSort = function(s) {
+    currentSort = s;
+    renderOpps();
+  };
+
   function filterOpps() {
     let list = allOpps;
     switch (currentFilter) {
@@ -362,34 +456,6 @@ import { supabaseConfig } from '../../lib/supabase';
     return list;
   }
 
-  function oppScore(o) {
-    let score = 0;
-    const p = o.priority || 5;
-    score += (10 - p) * 3; // priority weight
-    const vol = (o.estimated_volume || '').toLowerCase();
-    if (vol.includes('high') || vol.includes('eleve')) score += 20;
-    else if (vol.includes('medium') || vol.includes('moyen')) score += 10;
-    const comp = (o.competition || '').toLowerCase();
-    if (comp.includes('low') || comp.includes('faible')) score += 15;
-    else if (comp.includes('medium') || comp.includes('moyen')) score += 8;
-    return score;
-  }
-
-  function scoreBadge(score) {
-    if (score >= 35) return `<span class="opp-score os-high">${score}pts</span>`;
-    if (score >= 20) return `<span class="opp-score os-mid">${score}pts</span>`;
-    return `<span class="opp-score os-low">${score}pts</span>`;
-  }
-
-  function urlsHtml(urls, title) {
-    if (!urls || !Array.isArray(urls) || urls.length === 0) return '';
-    return `<div class="opp-urls">
-      <div class="opp-urls-title">${esc(title)}</div>
-      ${urls.slice(0, 3).map(u => `<a class="opp-url-item" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(u)}">${esc(u)}</a>`).join('')}
-      ${urls.length > 3 ? `<span style="font-size:0.65rem;color:#94a3b8">+${urls.length - 3} autres</span>` : ''}
-    </div>`;
-  }
-
   function sortOpps(list) {
     const sorted = [...list];
     switch (currentSort) {
@@ -404,17 +470,6 @@ import { supabaseConfig } from '../../lib/supabase';
     return sorted;
   }
 
-  window.setView = function(v) {
-    currentView = v;
-    document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
-    renderOpps();
-  };
-
-  window.setSort = function(s) {
-    currentSort = s;
-    renderOpps();
-  };
-
   function renderOpps() {
     const filtered = sortOpps(filterOpps());
     const container = document.getElementById('oppsContainer');
@@ -426,42 +481,99 @@ import { supabaseConfig } from '../../lib/supabase';
       return;
     }
 
-    if (currentView === 'kanban') {
-      renderKanban(filtered, container);
-      return;
-    }
+    if (currentView === 'kanban') { renderKanban(filtered, container); return; }
+    if (currentView === 'grid') { renderGrid(filtered, container); return; }
+    renderTable(filtered, container);
+  }
 
-    // Grid view (enhanced with URLs and score)
-    const statusLabels = { approved: 'A traiter', identified: 'Identifiee', in_progress: 'En cours', published: 'Publiee', rejected: 'Rejetee' };
+  // ===== TABLE VIEW =====
+  function renderTable(filtered, container) {
+    container.innerHTML = `<div class="table-wrap"><table class="opp-table">
+      <thead><tr>
+        <th class="th-center">Prio</th>
+        <th>Sujet</th>
+        <th>Collection</th>
+        <th>Volume</th>
+        <th>Competition</th>
+        <th class="th-center">Score</th>
+        <th>Statut</th>
+        <th>Date</th>
+      </tr></thead>
+      <tbody>${filtered.map(o => {
+        const score = oppScore(o);
+        const vl = volLevel(o.estimated_volume);
+        const cl = compLevel(o.competition);
+        return `<tr>
+          <td class="td-prio">${prioMini(o.priority)}</td>
+          <td class="td-topic">
+            <div class="td-topic-title" title="${esc(o.topic)}">${esc(o.topic)}</div>
+            ${o.target_keyword ? `<div class="td-topic-kw">${esc(o.target_keyword)}</div>` : ''}
+          </td>
+          <td>${o.suggested_collection ? `<span class="badge-collection">${esc(o.suggested_collection)}</span>` : '<span style="color:#475569">-</span>'}</td>
+          <td>${metricDotsHtml(vl, 'vol')}</td>
+          <td>${metricDotsHtml(cl, 'comp')}</td>
+          <td class="td-center">${scoreCircle(score)}</td>
+          <td>${statusPill(o.status)}</td>
+          <td style="font-size:0.75rem;color:#64748b;white-space:nowrap">${timeAgo(o.created_at)}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table></div>`;
+  }
+
+  // ===== GRID VIEW =====
+  function renderGrid(filtered, container) {
     container.innerHTML = '<div class="opp-cards">' + filtered.map(o => {
       const score = oppScore(o);
+      const vl = volLevel(o.estimated_volume);
+      const cl = compLevel(o.competition);
+      const volLabels = { high: 'Fort', medium: 'Moyen', low: 'Faible' };
+      const compLabels = { high: 'Forte', medium: 'Moyenne', low: 'Faible' };
+      const volColors = { high: '#f87171', medium: '#fbbf24', low: '#4ade80' };
+      const compColors = { high: '#f87171', medium: '#fbbf24', low: '#4ade80' };
+      const scoreColor = score >= 35 ? '#f87171' : score >= 20 ? '#fbbf24' : '#4ade80';
+
+      const pc = o.priority && o.priority <= 3 ? 'pc-high' : o.priority && o.priority <= 6 ? 'pc-mid' : 'pc-low';
+
       return `<div class="opp-card">
-        <div class="opp-card-top">
-          ${prioCircle(o.priority)}
+        <div class="opp-card-header">
+          <div class="prio-circle ${pc}">${o.priority || '?'}</div>
           <div style="flex:1;min-width:0">
-            <div class="opp-title">${esc(o.topic)}</div>
-            <div class="opp-desc">${esc(o.description || '')}</div>
+            <div class="opp-card-title">${esc(o.topic)}</div>
+            ${o.target_keyword ? `<div class="opp-card-kw">${esc(o.target_keyword)}</div>` : ''}
+          </div>
+          ${statusPill(o.status)}
+        </div>
+        <div class="opp-card-desc" onclick="this.classList.toggle('expanded')">${esc(o.description || '')}</div>
+        <div class="opp-card-metrics">
+          <div class="card-metric">
+            <div class="card-metric-label">Volume</div>
+            <div class="card-metric-value" style="color:${volColors[vl]}">${volLabels[vl]}</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-label">Competition</div>
+            <div class="card-metric-value" style="color:${compColors[cl]}">${compLabels[cl]}</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-label">Score</div>
+            <div class="card-metric-value" style="color:${scoreColor}">${score} pts</div>
           </div>
         </div>
-        <div class="opp-meta">
-          ${o.target_keyword ? `<span class="badge badge-keyword">${esc(o.target_keyword)}</span>` : ''}
-          ${volumeBadge(o.estimated_volume)}
-          ${compBadge(o.competition)}
-          ${scoreBadge(score)}
-          ${o.suggested_collection ? `<span class="badge badge-collection">${esc(o.suggested_collection)}</span>` : ''}
-          <span class="status-pill sp-${o.status || 'identified'}">${statusLabels[o.status] || o.status || '-'}</span>
+        <div class="opp-card-footer">
+          <div>
+            ${o.suggested_collection ? `<span class="badge-collection">${esc(o.suggested_collection)}</span>` : ''}
+            ${o.suggested_slug ? ` <code>${esc(o.suggested_slug)}</code>` : ''}
+          </div>
+          <span>${timeAgo(o.created_at)}</span>
         </div>
-        ${urlsHtml(o.source_urls, 'Sources')}
-        ${urlsHtml(o.competitor_urls, 'Concurrents')}
-        ${o.suggested_slug ? `<div class="opp-footer"><span>Slug: <code style="font-size:0.72rem;color:#7c3aed">${esc(o.suggested_slug)}</code></span><span>${timeAgo(o.created_at)}</span></div>` : `<div class="opp-footer"><span></span><span>${timeAgo(o.created_at)}</span></div>`}
       </div>`;
     }).join('') + '</div>';
   }
 
+  // ===== KANBAN VIEW =====
   function renderKanban(filtered, container) {
     const columns = [
       { key: 'identified', label: 'Identifiees', color: '#64748b', items: [] },
-      { key: 'approved', label: 'Approuvees', color: '#3b82f6', items: [] },
+      { key: 'approved', label: 'A traiter', color: '#3b82f6', items: [] },
       { key: 'in_progress', label: 'En cours', color: '#f59e0b', items: [] },
       { key: 'published', label: 'Publiees', color: '#22c55e', items: [] },
     ];
@@ -479,35 +591,23 @@ import { supabaseConfig } from '../../lib/supabase';
           ${col.label}
           <span class="kc-count">${col.items.length}</span>
         </div>
-        ${col.items.length === 0 ? '<div style="text-align:center;color:#94a3b8;font-size:0.75rem;padding:1rem">Aucune</div>' : col.items.map(o => {
+        ${col.items.length === 0 ? '<div style="text-align:center;color:#475569;font-size:0.75rem;padding:1rem">Aucune</div>' : col.items.map(o => {
           const pcClass = o.priority && o.priority <= 3 ? 'pc-high' : o.priority && o.priority <= 6 ? 'pc-mid' : 'pc-low';
+          const score = oppScore(o);
           return `<div class="kanban-card">
             <div style="display:flex;align-items:center;margin-bottom:0.25rem">
               <span class="kc-prio ${pcClass}">${o.priority || '?'}</span>
               <span class="kc-title">${esc(o.topic)}</span>
             </div>
             ${o.target_keyword ? `<div class="kc-keyword">${esc(o.target_keyword)}</div>` : ''}
-            ${o.suggested_collection ? `<span class="badge badge-collection" style="font-size:0.62rem">${esc(o.suggested_collection)}</span>` : ''}
+            <div class="kc-meta">
+              ${o.suggested_collection ? `<span class="badge-collection">${esc(o.suggested_collection)}</span>` : ''}
+              ${scoreCircle(score)}
+            </div>
           </div>`;
         }).join('')}
       </div>
     `).join('')}</div>`;
-  }
-
-  function renderPrioDistrib() {
-    if (allOpps.length === 0) return;
-    const total = allOpps.length;
-    const high = allOpps.filter(o => o.priority && o.priority <= 3).length;
-    const mid = allOpps.filter(o => o.priority && o.priority > 3 && o.priority <= 6).length;
-    const low = allOpps.filter(o => !o.priority || o.priority > 6).length;
-    const pct = v => (v / total * 100).toFixed(1);
-
-    document.getElementById('prioContainer').style.display = 'block';
-    document.getElementById('prioBar').innerHTML = [
-      high > 0 ? `<div class="prio-seg pseg-high" style="width:${pct(high)}%">${high}</div>` : '',
-      mid > 0 ? `<div class="prio-seg pseg-mid" style="width:${pct(mid)}%">${mid}</div>` : '',
-      low > 0 ? `<div class="prio-seg pseg-low" style="width:${pct(low)}%">${low}</div>` : '',
-    ].join('');
   }
 
   function renderCollections() {
@@ -546,7 +646,6 @@ import { supabaseConfig } from '../../lib/supabase';
         return;
       }
       document.getElementById('runsList').innerHTML = runs.map(r => {
-        const dotClass = r.status === 'completed' ? 'run-dot-ok' : 'run-dot-fail';
         const date = new Date(r.started_at);
         const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
         return `<div class="list-item">
@@ -560,43 +659,41 @@ import { supabaseConfig } from '../../lib/supabase';
     } catch(e) {}
   }
 
-  function renderPublished() {
-    const published = allOpps.filter(o => o.status === 'published');
-    if (published.length === 0) {
-      document.getElementById('publishedSection').style.display = 'none';
-      return;
-    }
-    document.getElementById('publishedSection').style.display = 'block';
-    document.getElementById('publishedList').innerHTML = published.map(o => {
-      const slug = o.suggested_slug || '?';
-      const col = o.suggested_collection || '';
-      const url = col ? `/${col}/${slug}` : `/${slug}`;
-      return `<div class="published-item">
-        <div class="prio-circle pc-low" style="width:28px;height:28px;font-size:0.72rem">&#x2713;</div>
-        <div style="flex:1;min-width:0">
-          <div style="font-weight:600;font-size:0.85rem">${esc(o.topic)}</div>
-          <div class="published-slug">${esc(slug)}</div>
-        </div>
-        <a class="published-link" href="${esc(url)}" target="_blank">Voir l'article &#x2192;</a>
-      </div>`;
-    }).join('');
-  }
-
   async function loadAll() {
     try {
       allOpps = await sbFetch('content_opportunities', 'select=*&order=priority.asc,created_at.desc');
 
-      // Stats
+      // Pipeline counts
       const pending = allOpps.filter(o => o.status === 'approved' || o.status === 'identified').length;
       const progress = allOpps.filter(o => o.status === 'in_progress').length;
       const published = allOpps.filter(o => o.status === 'published').length;
+      const rejected = allOpps.filter(o => o.status === 'rejected').length;
       const high = allOpps.filter(o => o.priority && o.priority <= 3).length;
 
+      document.getElementById('pipePending').textContent = pending;
+      document.getElementById('pipeProgress').textContent = progress;
+      document.getElementById('pipePublished').textContent = published;
+      document.getElementById('pipeRejected').textContent = rejected;
+
+      // Mini stats
       document.getElementById('statTotal').textContent = allOpps.length;
-      document.getElementById('statPending').textContent = pending;
-      document.getElementById('statProgress').textContent = progress;
-      document.getElementById('statPublished').textContent = published;
       document.getElementById('statHigh').textContent = high;
+
+      const highVol = allOpps.filter(o => {
+        const v = (o.estimated_volume || '').toLowerCase();
+        return v.includes('high') || v.includes('eleve');
+      }).length;
+      document.getElementById('statHighVol').textContent = highVol;
+
+      const lowComp = allOpps.filter(o => {
+        const c = (o.competition || '').toLowerCase();
+        return c.includes('low') || c.includes('faible');
+      }).length;
+      document.getElementById('statLowComp').textContent = lowComp;
+
+      const scores = allOpps.map(oppScore);
+      const avgScore = scores.length ? Math.round(scores.reduce((a,b) => a+b, 0) / scores.length) : 0;
+      document.getElementById('statAvgScore').textContent = avgScore;
 
       // Filter counts
       const counts = {
@@ -604,7 +701,7 @@ import { supabaseConfig } from '../../lib/supabase';
         approved: pending,
         in_progress: progress,
         published: published,
-        rejected: allOpps.filter(o => o.status === 'rejected').length,
+        rejected: rejected,
         high: high,
       };
       document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -614,8 +711,6 @@ import { supabaseConfig } from '../../lib/supabase';
         if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
       });
 
-      renderPrioDistrib();
-      renderPublished();
       renderOpps();
       renderCollections();
       loadRuns();
