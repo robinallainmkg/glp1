@@ -1,6 +1,6 @@
 ---
 title: "Effets Secondaires Mounjaro (Tirzepatide) : Guide Complet pour les Gérer"
-description: "Effets secondaires Mounjaro tirzepatide : nausées, vomissements, diarrhée et effets indésirables graves. Comment les gérer au quotidien, quand consulter votre médecin, et ce que disent les études cliniques."
+description: "Effets secondaires Mounjaro (tirzepatide) : nausées, vomissements, diarrhée et effets indésirables. Comment les gérer et quand consulter votre médecin."
 keywords: ['effets secondaires mounjaro', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'tolérance mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'comment gérer effets mounjaro']
 seoTitle: "Effets Secondaires Mounjaro Tirzepatide : Guide Complet"
 seoDescription: "Guide complet des effets secondaires de Mounjaro tirzepatide : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."

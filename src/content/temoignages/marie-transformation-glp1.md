@@ -10,7 +10,7 @@ pubDate: 2025-08-15T00:00:00.000Z
 date: "2025-08-15"
 featured: true
 priority: 1
-mainKeyword: "temoignage wegovy femme"
+mainKeyword: "temoignage Marie Wegovy avant apres"
 ---
 
 ## La Transformation Exceptionnelle de Marie L.

@@ -1,6 +1,6 @@
 ---
 title: "Effets Secondaires Rybelsus (Sémaglutide Oral) : Guide Complet"
-description: "Effets secondaires Rybelsus sémaglutide oral : nausées, troubles digestifs et effets indésirables du comprimé GLP-1. Comment les gérer, quand consulter, et ce que les études montrent sur sa tolérance."
+description: "Effets secondaires Rybelsus (sémaglutide oral) : nausées, troubles digestifs et effets indésirables. Comment les gérer et ce que les études montrent."
 keywords: ['effets secondaires rybelsus', 'rybelsus nausées', 'rybelsus effets indésirables', 'risques rybelsus', 'tolérance rybelsus']
 seoTitle: "Effets Secondaires Rybelsus Sémaglutide Oral : Guide Complet"
 seoDescription: "Guide complet des effets secondaires de Rybelsus sémaglutide oral : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."

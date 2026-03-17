@@ -1,6 +1,6 @@
 ---
 title: "Vinaigre de Cidre et GLP-1 : Effets sur la Glycémie — Guide Complet 2025"
-description: "Le vinaigre de cidre peut-il améliorer la glycémie et soutenir les traitements GLP-1 ? Découvrez ce que la science dit sur les effets du vinaigre de cidre GLP-1 et son rôle dans la régulation de la glycémie."
+description: "Vinaigre de cidre et GLP-1 : la science peut-il améliorer la glycémie et soutenir les traitements GLP-1 ? Effets et rôle dans la régulation de la glycémie."
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"

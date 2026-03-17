@@ -1,6 +1,6 @@
 ---
 title: "Contrefaçon GLP-1 : Faux Ozempic, Danger et Achat en Ligne — Comment s'en Protéger"
-description: "Contrefaçon GLP-1, faux Ozempic, danger achat en ligne : risques sanitaires graves des médicaments contrefaits et comment s'approvisionner en sécurité en France."
+description: "Contrefaçon GLP-1 et faux Ozempic : risques sanitaires graves des médicaments contrefaits achetés en ligne. Comment s'approvisionner en sécurité."
 keywords: ['faux ozempic', 'contrefaçon glp1', 'ozempic danger achat en ligne', 'faux wegovy', 'médicament contrefait glp1', 'ozempic pharmacie en ligne']
 seoTitle: "Contrefaçon GLP-1 : Faux Ozempic Danger Achat Ligne"
 seoDescription: "Faux Ozempic, Wegovy contrefaits : risques sanitaires graves, cas documentés et conseils pour identifier et éviter les contrefaçons GLP-1 en France."
