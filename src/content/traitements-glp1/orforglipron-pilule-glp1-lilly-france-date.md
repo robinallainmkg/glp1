@@ -49,7 +49,7 @@ Eli Lilly, déjà fabricant de [Mounjaro](/collections/traitements-glp1/guide-co
 
 ### Résultats des phases 3 publiés en 2025
 
-Eli Lilly a publié en 2025 les résultats des principales études de phase 3 de l'orforglipron :
+Eli Lilly a publié en 2025 les résultats des principales études de phase 3 de l'orforglipron. Les chiffres de perte de poids varient légèrement selon les études et les dosages évalués (entre 10 et 16% selon les sources publiées). Les données présentées ci-dessous correspondent aux résultats les plus récents des études pivots :
 
 **Pour l'obésité (indication principale)** :
 

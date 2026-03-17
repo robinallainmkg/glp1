@@ -40,10 +40,10 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 **Ce qui change concrètement** :
 
-- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité
+- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité, sous réserve d'un IMC initial >= 35 kg/m² et d'un échec préalable d'une prise en charge nutritionnelle (deuxième intention uniquement)
 - Il n'est plus nécessaire de consulter un spécialiste pour la première prescription
 - Le renouvellement peut également être assuré par le médecin traitant
-- Les conditions médicales d'éligibilité restent inchangées (IMC >= 30, ou IMC >= 27 avec comorbidités)
+- Les conditions médicales d'éligibilité selon l'ANSM : IMC initial >= 35 kg/m², en deuxième intention après échec d'une prise en charge nutritionnelle
 
 **Ce qui ne change pas** :
 

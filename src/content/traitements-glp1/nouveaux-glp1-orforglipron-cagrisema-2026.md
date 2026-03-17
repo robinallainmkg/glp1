@@ -175,7 +175,7 @@ Pour les traitements actuellement disponibles, consultez notre [guide complet re
 
 | Traitement | Prix mensuel | Remboursement |
 |-----------|-------------|---------------|
-| Ozempic (DT2) | ~77 €/stylo | 30% (DT2 uniquement) |
+| Ozempic (DT2) | ~59,90 €/stylo | 30% (DT2 uniquement, sous conditions de prescription depuis février 2025) |
 | Wegovy (obésité) | 169-360 € | Non remboursé (attendu 2e sem. 2026) |
 | Mounjaro | 230-440 € | Non remboursé (attendu 2e sem. 2026) |
 | Orforglipron | Non commercialisé | — |
