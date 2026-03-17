@@ -147,7 +147,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 - **Victoza** : Liraglutide (1,2 mg/jour)
 
 ### Alternatives orales
-- **Rybelsus** : Semaglutide oral (jusqu'à 14 mg/jour)
+- [**Rybelsus**](/collections/traitements-glp1/guide-complet-rybelsus/) : Semaglutide oral (jusqu'à 14 mg/jour)
 - **Adlyxin** : Lixisénatide (20 µg/jour)
 
 ### Traitements conventionnels

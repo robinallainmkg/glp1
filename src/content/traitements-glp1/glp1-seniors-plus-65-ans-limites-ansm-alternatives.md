@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Traitements"
 tags: ["glp1", "seniors", "65 ans", "ANSM", "obésité", "sarcopénie", "alternatives", "personnes âgées"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/glp1-seniors.jpg"
+thumbnail: "/images/thumbnails/personne-obese-illus.jpg"
 thumbnailAlt: "GLP-1 chez les personnes âgées : limites ANSM et alternatives pour les seniors"
 featured: true
 published: true

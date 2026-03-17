@@ -134,8 +134,8 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 ## Alternatives à Wegovy
 
 ### Autres GLP-1 indiqués pour l'obésité
-- **Mounjaro** (tirzepatide) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé (230-440 €/mois)
-- **Saxenda** (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
+- [**Mounjaro**](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzepatide) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé (230-440 €/mois)
+- [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
 
 ### GLP-1 remboursés pour le diabète de type 2 uniquement
 - **Ozempic** (semaglutide 2 mg) : injection hebdomadaire, remboursé à 30 % pour le DT2 (~76,58 €/stylo)

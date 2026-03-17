@@ -97,7 +97,7 @@ Les GLP-1 ont un profil de sécurité bien documenté grâce aux grandes études
 - Calculs biliaires : risque légèrement augmenté avec la perte de poids rapide
 - Cancer médullaire thyroïdien : contre-indication si antécédents familiaux (NEM2)
 
-**Avantage majeur** : contrairement à la chirurgie, les effets secondaires des GLP-1 sont généralement réversibles à l'arrêt du traitement. Il n'y a pas de modification anatomique permanente.
+**Avantage majeur** : contrairement à la chirurgie, les effets secondaires des GLP-1 sont généralement réversibles à [l'arrêt du traitement](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/). Il n'y a pas de modification anatomique permanente.
 
 ## Coût et remboursement en France
 

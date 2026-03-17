@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Vous avez commencé un traitement par Ozempic, Wegovy ou Mounjaro, et pendant les premiers mois, la perte de poids était régulière et encourageante. Puis, sans raison apparente, la balance s'est bloquée. Vous ne mangez pas plus, vous ne bougez pas moins — et pourtant, le poids stagne depuis plusieurs semaines, voire plusieurs mois. Ce phénomène, connu sous le nom de **plateau pondéral**, est l'une des expériences les plus frustrantes vécues par les patients sous GLP-1. Il est aussi l'une des plus courantes.
+Vous avez commencé un traitement par [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy ou Mounjaro, et pendant les premiers mois, la perte de poids était régulière et encourageante. Puis, sans raison apparente, la balance s'est bloquée. Vous ne mangez pas plus, vous ne bougez pas moins — et pourtant, le poids stagne depuis plusieurs semaines, voire plusieurs mois. Ce phénomène, connu sous le nom de **plateau pondéral**, est l'une des expériences les plus frustrantes vécues par les patients sous GLP-1. Il est aussi l'une des plus courantes.
 
 Ce guide explique pourquoi ce plateau survient, à quel moment il est normal, et quelles stratégies permettent de le surmonter ou de l'accepter dans les cas où il reflète un poids d'équilibre durable.
 
@@ -145,7 +145,7 @@ Pas forcément, mais c'est une option que votre médecin peut envisager. Passer 
 C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise rapide du poids. Les données des études STEP ne suggèrent pas que les "pauses" améliorent les résultats à long terme.
 
 **Le plateau est-il causé par le stress ou le manque de sommeil ?**
-Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la prise en charge de l'obésité.
+Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité.
 
 ## Résumé : que faire face à un plateau ?
 

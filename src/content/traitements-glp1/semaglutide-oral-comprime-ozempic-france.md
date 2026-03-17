@@ -4,7 +4,7 @@ slug: "semaglutide-oral-comprime-ozempic-france"
 description: "Semaglutide oral comprime France 2026 : technologie SNAC, contraintes de prise, prix estimé 300-350€/mois et comparatif avec l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprime France 2026"
 author: "Dr. Marie Dubois"
-image: "/images/thumbnails/semaglutide-oral-ozempic.webp"
+image: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["semaglutide oral", "comprimé ozempic", "rybelsus", "traitement oral glp1", "ozempic comprimé france", "glp1 sans injection"]

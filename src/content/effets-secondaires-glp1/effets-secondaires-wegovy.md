@@ -165,7 +165,7 @@ mainKeyword: "effets secondaires Wegovy"
 | Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
 |------------|---------|----------|-----------|-------------------|
 | Wegovy | 25-35% | 12-18% | 8-10% | Moyenne |
-| Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | 20-30% | 10-15% | 10-12% | Bonne |
 | Saxenda | 15-25% | 8-12% | 5-8% | Très bonne |
 | Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
 

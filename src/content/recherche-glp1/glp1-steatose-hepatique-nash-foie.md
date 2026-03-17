@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "stéatose hépatique", "NASH", "MASH", "foie gras", "sémaglutide", "survodutide", "recherche"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/glp1-cardiovasculaire.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et stéatose hépatique - traitement du foie gras"
 featured: true
 published: true

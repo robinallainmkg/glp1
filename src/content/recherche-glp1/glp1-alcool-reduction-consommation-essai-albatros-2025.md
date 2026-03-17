@@ -9,7 +9,7 @@ category: "Recherche médicale"
 tags: ["glp1", "alcool", "addiction", "alcoolo-dépendance", "sémaglutide", "ALBATROS", "recherche", "neurologie"]
 collection: "recherche-glp1"
 affiliateCollection: "recherche-glp1"
-thumbnail: "/images/thumbnails/glp1-cardiovasculaire.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et réduction de la consommation d'alcool essai clinique"
 featured: true
 published: true

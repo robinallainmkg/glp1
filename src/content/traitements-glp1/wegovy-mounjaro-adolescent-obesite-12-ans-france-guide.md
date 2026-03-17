@@ -11,7 +11,7 @@ featured: true
 priority: 2
 author: 'Dr. Marie Dubois'
 readingTime: 12
-thumbnail: "/images/thumbnails/wegovy-adolescent.jpg"
+thumbnail: "/images/thumbnails/personne-obese-illus.jpg"
 thumbnailAlt: "Wegovy et Mounjaro pour les adolescents obèses de 12 ans et plus en France"
 collection: "traitements-glp1"
 affiliateCollection: "traitements-glp1"

@@ -160,7 +160,7 @@ mainKeyword: "effets secondaires ozempic semaglutide"
 | Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
 |------------|---------|----------|-----------|-------------------|
 | Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
-| Wegovy | 25-35% | 12-18% | 8-10% | Moyenne |
+| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 25-35% | 12-18% | 8-10% | Moyenne |
 | Saxenda | 15-25% | 8-12% | 5-8% | Très bonne |
 | Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
 
@@ -230,7 +230,7 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 
 ## 📝 Conclusion
 
-**Ozempic présente un profil de tolérance favorable** malgré des effets secondaires fréquents mais généralement temporaires.
+**[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) présente un profil de tolérance favorable** malgré des effets secondaires fréquents mais généralement temporaires.
 
 ### Points clés :
 - **Effets fréquents** : Nausées, diarrhée (80-90% des patients)

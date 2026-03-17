@@ -113,7 +113,7 @@ L'étude SELECT, qui a démontré une réduction de 20% des événements cardiov
 
 ### Les données SURMOUNT : une réduction viscérale supérieure
 
-Les essais SURMOUNT ont évalué le tirzépatide (Mounjaro) dans l'obésité. Les données d'imagerie sur la composition corporelle sont particulièrement convaincantes :
+Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) dans l'obésité. Les données d'imagerie sur la composition corporelle sont particulièrement convaincantes :
 
 **SURMOUNT-1 (86 semaines, dose maximale 15 mg)** :
 
@@ -174,7 +174,7 @@ Les études de composition corporelle utilisent des méthodes d'imagerie (IRM, D
 La plupart des patients rapportent une réduction perceptible du tour de taille dans les 8 à 12 premières semaines de traitement, même si la perte de poids globale n'est pas encore très importante. La réduction se poursuit au fil des mois pour atteindre son maximum vers 72-80 semaines.
 
 **Mounjaro est-il remboursé pour l'obésité abdominale en France ?**
-Pas encore en mars 2026. Les négociations avec le CEPS sont en cours et un remboursement est attendu pour le 2e semestre 2026. En attendant, les patients prennent Mounjaro à leurs frais pour l'obésité. Pour le point complet sur le remboursement, consultez notre article sur le [remboursement Mounjaro obésité 2026](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/).
+Pas encore en mars 2026. Les négociations avec le CEPS sont en cours et un [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) est attendu pour le 2e semestre 2026. En attendant, les patients prennent Mounjaro à leurs frais pour l'obésité. Pour le point complet sur le remboursement, consultez notre article sur le [remboursement Mounjaro obésité 2026](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/).
 
 **La graisse abdominale revient-elle à l'arrêt du traitement ?**
 Oui, comme pour la perte de poids globale, la graisse viscérale tend à revenir progressivement à l'arrêt des GLP-1. Les données de SURMOUNT-4 montrent que l'arrêt du traitement est suivi d'une reprise partielle de la graisse viscérale dans les 12 mois suivants. Consultez notre article sur l'[arrêt GLP-1 et la reprise de poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) pour des stratégies préventives.

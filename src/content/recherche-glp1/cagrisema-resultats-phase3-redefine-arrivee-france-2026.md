@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "cagrisema", "cagrilintide", "novo nordisk", "essais cliniques", "REDEFINE", "obésité", "recherche", "2026"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/cagrisema-essais-cliniques.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "CagriSema résultats essais cliniques REDEFINE phase 3 Novo Nordisk"
 featured: true
 published: true

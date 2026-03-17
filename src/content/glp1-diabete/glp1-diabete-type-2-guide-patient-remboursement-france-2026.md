@@ -107,9 +107,9 @@ Mounjaro (tirzepatide) dispose de son côté d'une AMM à la fois pour le diabè
 - Depuis février 2025 : formulaire obligatoire de prescription
 
 **Prix remboursé** :
-- Prix de vente officiel : environ 59,90 €/stylo (1 stylo = 4 injections hebdomadaires, soit 1 mois de traitement à dose stabilisée)
-- Remboursement Sécurité Sociale : 30% = environ 17,97 €
-- Reste à charge sans complémentaire : environ 41,93 €/mois
+- Prix de vente officiel : 77,60 € TTC/stylo (1 stylo = 4 injections hebdomadaires, soit 1 mois de traitement à dose stabilisée)
+- Remboursement Sécurité Sociale : 30% = environ 23,28 €
+- Reste à charge sans complémentaire : environ 54,32 €/mois
 - Avec une mutuelle couvrant le ticket modérateur : faible reste à charge
 
 **Pour plus de détails sur le remboursement**, consultez notre [guide complet remboursement Ozempic](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/).

@@ -35,7 +35,7 @@ La situation s'est globalement améliorée mais reste fragile :
 
 - [**Ozempic**](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide pour le diabète) : approvisionnement redevenu globalement stable, avec des tensions ponctuelles selon les dosages et les régions
 - [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg pour l'obésité) : disponible mais les stocks peuvent être tendus dans certaines pharmacies, surtout aux doses intermédiaires
-- **Mounjaro** (tirzépatide) : approvisionnement en cours de montée en charge, tensions possibles aux doses élevées (10 mg, 15 mg)
+- [**Mounjaro**](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) : approvisionnement en cours de montée en charge, tensions possibles aux doses élevées (10 mg, 15 mg)
 - **Saxenda** (liraglutide) : disponibilité stable
 
 Novo Nordisk a investi dans l'extension de ses capacités de production, notamment sur son site de Chartres (France), pour sécuriser les approvisionnements européens à long terme.

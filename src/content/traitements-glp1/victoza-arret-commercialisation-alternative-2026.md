@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Traitements GLP-1"
 tags: ["victoza", "liraglutide", "arrêt", "alternative", "glp1", "2026", "ozempic", "saxenda"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/victoza.jpg"
+thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
 thumbnailAlt: "Victoza arrêt commercialisation 2026 - alternatives pour les patients"
 featured: true
 published: true

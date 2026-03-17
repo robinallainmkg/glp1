@@ -34,7 +34,7 @@ mainKeyword: "rybelsus guide complet france oral"
 
 ## Qu'est-ce que Rybelsus ?
 
-Rybelsus est le premier médicament GLP-1 administrable par voie orale, développé par Novo Nordisk. Rybelsus contient du semaglutide, le même principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et Wegovy, mais formulé pour une absorption digestive.
+Rybelsus est le premier médicament GLP-1 administrable par voie orale, développé par Novo Nordisk. Rybelsus contient du semaglutide, le même principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), mais formulé pour une absorption digestive.
 
 **Nom générique** : Semaglutide  
 **Laboratoire** : Novo Nordisk  

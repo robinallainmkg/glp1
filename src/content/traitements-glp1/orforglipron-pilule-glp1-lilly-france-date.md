@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Traitements GLP-1"
 tags: ["orforglipron", "glp1 oral", "eli lilly", "comprimé", "obésité", "france", "2026", "2027"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/nouveaux-glp1-2026.jpg"
+thumbnail: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 thumbnailAlt: "Orforglipron pilule GLP-1 Eli Lilly - médicament oral perte de poids"
 featured: true
 published: true

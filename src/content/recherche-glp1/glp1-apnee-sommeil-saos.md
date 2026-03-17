@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "apnée du sommeil", "SAOS", "tirzépatide", "mounjaro", "sémaglutide", "recherche", "sommeil"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/glp1-cardiovasculaire.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et apnée du sommeil - traitement du SAOS"
 featured: true
 published: true
