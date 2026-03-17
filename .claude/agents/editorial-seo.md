@@ -83,8 +83,14 @@ LIMIT 15;
 git checkout -b editorial-seo/<date>
 git add src/content/
 git commit -m "editorial-seo: fix <n> SEO tickets + <n> internal links"
-git push origin editorial-seo/<date>
 ```
+
+**BUILD CHECK OBLIGATOIRE** avant push :
+```bash
+npm run build 2>&1
+```
+- **Build OK** → `git push origin editorial-seo/<date>`
+- **Build ECHOUE** → analyse l'erreur, corrige si possible, sinon `git revert HEAD --no-edit` et cree un ticket `build_error` urgent. Ne JAMAIS push un build casse.
 
 ### 6. Finalisation
 

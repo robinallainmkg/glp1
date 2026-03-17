@@ -78,8 +78,14 @@ UPDATE content_opportunities SET status = 'published', updated_at = NOW() WHERE 
 git checkout -b editorial-content/<date>
 git add src/content/
 git commit -m "editorial-content: <n> new articles + <n> tech fixes"
-git push origin editorial-content/<date>
 ```
+
+**BUILD CHECK OBLIGATOIRE** avant push :
+```bash
+npm run build 2>&1
+```
+- **Build OK** → `git push origin editorial-content/<date>`
+- **Build ECHOUE** → analyse l'erreur, corrige si possible, sinon `git revert HEAD --no-edit` et cree un ticket `build_error` urgent. Ne JAMAIS push un build casse.
 
 ### 5. Finalisation
 
