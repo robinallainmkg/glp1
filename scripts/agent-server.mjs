@@ -38,7 +38,7 @@ const AGENTS = {
   'editorial':         'Traite les tickets, liens internes et opportunites (commit+push main)',
   'validator':         'Valide le site (build + deploy production si OK)',
   'internal-links':    'Analyse le maillage interne et suggere des liens',
-  'autopilot':         'Lance l\'autopilot. Boucle infinie, traite tout, ne t\'arrete jamais.',
+  'autopilot':         'Execute UN cycle du pipeline. Ne cherche pas a comprendre le contexte, lis ta definition dans .claude/agents/autopilot.md et execute immediatement les 4 phases: CHECK (SQL Supabase) → GENERATE (agents paralleles) → EDIT (editorial) → VALIDATE (validator+deploy). Pas d\'exploration, pas de recherche, juste execute.',
 };
 
 // Track running agents

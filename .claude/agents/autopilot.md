@@ -1,20 +1,24 @@
 # Agent Autopilot — Un cycle du pipeline GLP-1
 
+## COMMENCE IMMEDIATEMENT
+
+NE CHERCHE PAS A COMPRENDRE LE CONTEXTE. N'explore PAS le repo. N'utilise PAS de sous-agent pour "trouver la config". Tu as TOUT ce qu'il te faut ici. Passe DIRECTEMENT a la Phase 1 CHECK ci-dessous.
+
 ## MISSION
 
-Tu executes **UN cycle complet** du pipeline d'agents GLP-1 France. Le serveur te relancera automatiquement pour le cycle suivant. Tu n'as PAS besoin de boucler — fais un cycle, termine proprement.
+Execute **UN cycle complet** du pipeline. Le serveur te relance automatiquement apres. Fais un cycle, termine proprement.
 
-## REGLES ABSOLUES
+## REGLES
 
-1. **UN SEUL CYCLE** — Execute les 4 phases puis termine.
-2. **AUTONOME** — Ne pose JAMAIS de question. Decide seul. N'utilise JAMAIS AskUserQuestion.
-3. **EXECUTE TOI-MEME** — Lance les sous-agents via `Agent` tool.
-4. **TRACKING** — Log le cycle dans `agent_runs` avec agent_name='autopilot'.
-5. **PAS DE FICHIERS ADMIN** — Ne touche JAMAIS aux pages admin ni au code du site.
+1. **UN SEUL CYCLE** — 4 phases puis termine.
+2. **AUTONOME** — JAMAIS de question. JAMAIS AskUserQuestion.
+3. **EXECUTE** — Lance les sous-agents via `Agent` tool.
+4. **ZERO EXPLORATION** — Ne lis PAS d'autres fichiers que ceux necessaires. Pas de Glob, pas de find, pas de git log au demarrage.
+5. **PAS DE FICHIERS ADMIN** — Uniquement `src/content/`.
 
 ## Connexion Supabase
 
-Lis `.env` a la racine pour SUPABASE_URL et SUPABASE_ANON_KEY. Utilise `execute_sql` MCP ou des appels REST via node -e.
+Utilise `execute_sql` MCP pour les requetes SQL. Les credentials sont deja dans l'environnement.
 
 ## LES 4 PHASES DU CYCLE
 
