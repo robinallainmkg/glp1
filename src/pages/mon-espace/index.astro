@@ -790,6 +790,139 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .btn-coach:hover { background: #15803d; }
 
+    /* ===== CHAT MODAL ===== */
+    .chat-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .chat-overlay.open { display: flex; }
+    .chat-box {
+      background: white;
+      border-radius: 16px 16px 0 0;
+      width: 100%;
+      max-width: 500px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      animation: slideUp 0.3s ease-out;
+      overflow: hidden;
+    }
+    .chat-header {
+      padding: 0.75rem 1rem;
+      background: linear-gradient(135deg, #16a34a, #059669);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 16px 16px 0 0;
+    }
+    .chat-header-info { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; }
+    .chat-header-dot { width: 8px; height: 8px; background: #bbf7d0; border-radius: 50%; }
+    .chat-close {
+      background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;
+      width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    }
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 300px;
+      max-height: 50vh;
+    }
+    .chat-msg {
+      max-width: 85%;
+      padding: 0.65rem 0.9rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .chat-msg-user {
+      align-self: flex-end;
+      background: #16a34a;
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-msg-assistant {
+      align-self: flex-start;
+      background: #f1f5f9;
+      color: #1e293b;
+      border-bottom-left-radius: 4px;
+    }
+    .chat-quick-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 0 1rem 0.5rem;
+    }
+    .chat-quick-btn {
+      padding: 0.35rem 0.75rem;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      color: #166534;
+      transition: all 0.2s;
+    }
+    .chat-quick-btn:hover { background: #dcfce7; }
+    .chat-input-area {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border-top: 1px solid #e2e8f0;
+      align-items: center;
+    }
+    .chat-input {
+      flex: 1;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      resize: none;
+      outline: none;
+      font-family: inherit;
+    }
+    .chat-input:focus { border-color: #16a34a; }
+    .chat-send {
+      width: 36px; height: 36px;
+      background: #16a34a;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .chat-send:hover { background: #15803d; }
+    .chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
+    .chat-typing {
+      align-self: flex-start;
+      padding: 0.65rem 0.9rem;
+      background: #f1f5f9;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      display: none;
+    }
+    .chat-typing.visible { display: block; }
+    .chat-disclaimer {
+      text-align: center;
+      font-size: 0.65rem;
+      color: #94a3b8;
+      padding: 0.25rem 1rem 0.5rem;
+    }
+
     /* Screens */
     .screen { display: none; }
     .screen.active { display: block; }
@@ -1070,6 +1203,9 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="card-header">
           <h3>&#127919; Mon programme du jour</h3>
         </div>
+        <div id="progBanner" style="display:none;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:10px;padding:0.75rem 1rem;margin-bottom:0.75rem;font-size:0.8rem;color:#166534;line-height:1.5;">
+          <strong>Programme sur mesure</strong> — calcule a partir de votre profil (<span id="progBannerDetails"></span>)
+        </div>
         <div class="programme-grid">
           <div class="prog-item">
             <div class="icon">&#127830;</div>
@@ -1154,8 +1290,40 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="coach-cta animate-in animate-delay-4">
         <h3>Une question ?</h3>
         <p>Votre coach IA connait votre profil et peut vous aider en temps reel</p>
-        <a href="/#coach" class="btn-coach" onclick="localStorage.setItem('glp1_open_coach','1')">&#128172; Parler au Coach</a>
+        <button class="btn-coach" onclick="openChat()">&#128172; Parler au Coach</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Chat Modal -->
+  <div class="chat-overlay" id="chatOverlay" onclick="if(event.target===this)closeChat()">
+    <div class="chat-box">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-header-dot"></div>
+          Coach GLP-1
+        </div>
+        <button class="chat-close" onclick="closeChat()">&times;</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg chat-msg-assistant" id="chatWelcome">
+          Bonjour ! Je suis votre Coach GLP-1 personnel. Je connais votre profil et peux vous aider.<br><br>Que puis-je faire pour vous ?
+        </div>
+        <div class="chat-typing" id="chatTyping">Le coach ecrit...</div>
+      </div>
+      <div class="chat-quick-btns" id="chatQuickBtns">
+        <button class="chat-quick-btn" onclick="chatQuick('Quels aliments privilegier avec mon traitement ?')">Alimentation</button>
+        <button class="chat-quick-btn" onclick="chatQuick('Comment gerer les effets secondaires ?')">Effets secondaires</button>
+        <button class="chat-quick-btn" onclick="chatQuick('Quand sera ma prochaine escalation de dose ?')">Dose suivante</button>
+        <button class="chat-quick-btn" onclick="chatQuick('Donne-moi un programme sport adapte')">Sport</button>
+      </div>
+      <div class="chat-input-area">
+        <textarea class="chat-input" id="chatInput" placeholder="Posez votre question..." rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}"></textarea>
+        <button class="chat-send" id="chatSendBtn" onclick="sendChat()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <div class="chat-disclaimer">Information uniquement — ne remplace pas un avis medical</div>
     </div>
   </div>
 
@@ -1516,7 +1684,7 @@ import { supabaseConfig } from '../../lib/supabase';
             html += '<div class="ob-input-row">';
             inp.row.forEach(function(r) {
               html += '<div class="form-group"><label>' + r.label + '</label>';
-              html += '<input type="' + r.type + '" value="' + (obData[r.field] || '') + '" placeholder="' + r.placeholder + '" onchange="obData[\'' + r.field + '\']=this.value" id="ob_' + r.field + '"></div>';
+              html += '<input type="' + r.type + '" value="' + (obData[r.field] || '') + '" placeholder="' + r.placeholder + '" oninput="obData[\'' + r.field + '\']=this.value" id="ob_' + r.field + '"></div>';
             });
             html += '</div>';
           } else if (inp.type === 'select-inline') {
@@ -1578,16 +1746,26 @@ import { supabaseConfig } from '../../lib/supabase';
       return true;
     }
 
+    function syncObInputs() {
+      ['weight_current','weight_goal','height_cm','age'].forEach(function(f) {
+        var el = document.getElementById('ob_' + f);
+        if (el && el.value) obData[f] = el.value;
+      });
+    }
+
     function obNext() {
+      syncObInputs();
       if (!validateObStep()) return;
       if (obStep < obSteps.length - 1) { obStep++; renderObStep(); }
     }
 
     function obPrev() {
+      syncObInputs();
       if (obStep > 0) { obStep--; renderObStep(); }
     }
 
     async function obFinish() {
+      syncObInputs();
       if (!validateObStep()) return;
 
       var btn = document.getElementById('obNextBtn');
@@ -1712,6 +1890,23 @@ import { supabaseConfig } from '../../lib/supabase';
       document.getElementById('progCalories').textContent = profile.daily_calories || '-';
       document.getElementById('progProtein').textContent = profile.protein_goal || '-';
       document.getElementById('progWater').textContent = profile.water_goal || '-';
+
+      // Programme banner
+      if (profile.daily_calories && profile.weight_current) {
+        var details = [];
+        if (profile.weight_current) details.push(profile.weight_current + ' kg');
+        if (profile.height_cm) details.push(profile.height_cm + ' cm');
+        if (profile.sport_level) {
+          var sportLabels = { sedentaire: 'sedentaire', leger: 'activite legere', modere: 'activite moderee', actif: 'actif', sportif: 'sportif' };
+          details.push(sportLabels[profile.sport_level] || profile.sport_level);
+        }
+        if (profile.diet_type && profile.diet_type !== 'standard') {
+          var dietLabels = { vegetarien: 'vegetarien', vegan: 'vegan', 'sans-gluten': 'sans gluten', keto: 'keto', halal: 'halal' };
+          details.push('regime ' + (dietLabels[profile.diet_type] || profile.diet_type));
+        }
+        document.getElementById('progBannerDetails').textContent = details.join(', ');
+        document.getElementById('progBanner').style.display = 'block';
+      }
 
       // Injection reminder
       if (profile.injection_day) {
@@ -2155,6 +2350,117 @@ import { supabaseConfig } from '../../lib/supabase';
       hideLoading();
     }
 
+    // ===== CHAT =====
+    var chatConvId = localStorage.getItem('glp1_coach_conv') || null;
+    var chatSessionId = localStorage.getItem('glp1_coach_session') || crypto.randomUUID();
+    localStorage.setItem('glp1_coach_session', chatSessionId);
+
+    function openChat() {
+      document.getElementById('chatOverlay').classList.add('open');
+      document.getElementById('chatInput').focus();
+      // Update welcome with profile
+      if (profile && profile.prenom) {
+        document.getElementById('chatWelcome').innerHTML =
+          'Bonjour ' + profile.prenom + ' ! Je suis votre Coach GLP-1 personnel. Je connais votre profil et peux vous aider.<br><br>Que puis-je faire pour vous ?';
+      }
+    }
+
+    function closeChat() {
+      document.getElementById('chatOverlay').classList.remove('open');
+    }
+
+    function chatQuick(q) {
+      document.getElementById('chatInput').value = q;
+      sendChat();
+    }
+
+    async function sendChat() {
+      var input = document.getElementById('chatInput');
+      var text = input.value.trim();
+      if (!text) return;
+
+      var sendBtn = document.getElementById('chatSendBtn');
+      var messagesEl = document.getElementById('chatMessages');
+      var quickBtns = document.getElementById('chatQuickBtns');
+
+      // Hide quick buttons
+      if (quickBtns) quickBtns.style.display = 'none';
+
+      // Show user message
+      var userDiv = document.createElement('div');
+      userDiv.className = 'chat-msg chat-msg-user';
+      userDiv.textContent = text;
+      messagesEl.insertBefore(userDiv, document.getElementById('chatTyping'));
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+
+      input.value = '';
+      sendBtn.disabled = true;
+
+      // Show typing
+      document.getElementById('chatTyping').classList.add('visible');
+
+      try {
+        var edgeUrl = supabaseUrl + '/functions/v1/ai-coach';
+
+        var response = await fetch(edgeUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + supabaseKey,
+            'apikey': supabaseKey
+          },
+          body: JSON.stringify({
+            session_id: chatSessionId,
+            message: text,
+            conversation_id: chatConvId,
+            page_url: '/mon-espace/',
+            user_id: currentUser ? currentUser.id : null,
+            user_context: profile ? {
+              prenom: profile.prenom,
+              treatment: profile.treatment,
+              status: profile.status,
+              weight_current: profile.weight_current,
+              weight_goal: profile.weight_goal,
+              current_dose: profile.current_dose,
+              sport_level: profile.sport_level,
+              diet_type: profile.diet_type
+            } : null
+          })
+        });
+
+        document.getElementById('chatTyping').classList.remove('visible');
+
+        if (!response.ok) {
+          var errDiv = document.createElement('div');
+          errDiv.className = 'chat-msg chat-msg-assistant';
+          errDiv.textContent = 'Desole, une erreur est survenue. Reessayez dans quelques instants.';
+          messagesEl.insertBefore(errDiv, document.getElementById('chatTyping'));
+          sendBtn.disabled = false;
+          return;
+        }
+
+        var data = await response.json();
+        if (data.conversation_id) {
+          chatConvId = data.conversation_id;
+          localStorage.setItem('glp1_coach_conv', chatConvId);
+        }
+
+        var assistDiv = document.createElement('div');
+        assistDiv.className = 'chat-msg chat-msg-assistant';
+        assistDiv.innerHTML = (data.response || 'Desole, je n\'ai pas pu repondre.').replace(/\n/g, '<br>');
+        messagesEl.insertBefore(assistDiv, document.getElementById('chatTyping'));
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+
+      } catch (err) {
+        document.getElementById('chatTyping').classList.remove('visible');
+        var errDiv2 = document.createElement('div');
+        errDiv2.className = 'chat-msg chat-msg-assistant';
+        errDiv2.textContent = 'Le service est temporairement indisponible. Reessayez dans quelques instants.';
+        messagesEl.insertBefore(errDiv2, document.getElementById('chatTyping'));
+      }
+      sendBtn.disabled = false;
+    }
+
     // Expose to global scope
     window.switchAuthTab = switchAuthTab;
     window.signInGoogle = signInGoogle;
@@ -2176,6 +2482,10 @@ import { supabaseConfig } from '../../lib/supabase';
     window.toggleSe = toggleSe;
     window.saveSideEffects = saveSideEffects;
     window.viewSeHistory = viewSeHistory;
+    window.openChat = openChat;
+    window.closeChat = closeChat;
+    window.sendChat = sendChat;
+    window.chatQuick = chatQuick;
 
     init();
   </script>
