@@ -1,7 +1,8 @@
 ---
-title: "Wegovy Dosage : Guide Complet des Posologies 2026"
-description: "Guide complet du dosage Wegovy : posologie, augmentation progressive, adaptation individuelle et recommandations médicales pour une utilisation optimale."
+title: "Wegovy Dosage Posologie : Guide Complet 2026"
+description: "Dosage Wegovy posologie : guide complet sur l'augmentation progressive, les doses 0,25 mg à 2,4 mg et les recommandations médicales officielles."
 pubDate: 2025-08-20
+date: "2025-08-20"
 author: "Dr. Émilie Martin"
 category: "Traitements"
 tags: ["glp1", "traitements", "dosage"]

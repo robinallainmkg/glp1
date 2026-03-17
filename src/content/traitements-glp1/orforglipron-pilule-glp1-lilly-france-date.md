@@ -1,7 +1,8 @@
 ---
-title: "Orforglipron : La Pilule GLP-1 d'Eli Lilly Bientôt en France ?"
-description: "Orforglipron, comprimé GLP-1 oral d'Eli Lilly : efficacité (-15% du poids), date d'approbation EMA et comparaison avec Wegovy et Mounjaro."
+title: "Orforglipron Comprimé France : Approbation EMA et Date d'Arrivée"
+description: "Orforglipron comprimé France : approbation EMA attendue, efficacité (-15% du poids) et comparaison avec Wegovy et Mounjaro. Tout sur la pilule GLP-1 d'Eli Lilly."
 pubDate: 2026-03-16
+date: "2026-03-16"
 updatedAt: 2026-03-16
 author: "Dr. Sophie Dubois"
 category: "Traitements GLP-1"

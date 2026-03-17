@@ -5,6 +5,7 @@ keywords: ['glp1 chirurgie', 'ozempic avant opération', 'glp1 anesthésie', 'ar
 seoTitle: "GLP-1 et Chirurgie : Quand Arrêter Avant l'Anesthésie"
 seoDescription: "Sous Ozempic, Wegovy ou Mounjaro avant une opération ? La SFAR recommande un arrêt préalable pour éviter le risque d'aspiration. Guide complet et conseils pratiques."
 publishedAt: '2026-03-17'
+date: "2026-03-17"
 updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'

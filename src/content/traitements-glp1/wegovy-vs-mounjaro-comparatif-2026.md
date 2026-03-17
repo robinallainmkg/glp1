@@ -1,12 +1,13 @@
 ---
 title: "Wegovy vs Mounjaro 2026 : Comparatif pour Choisir"
-description: "Wegovy ou Mounjaro en 2026 ? Comparatif efficacité, prix, effets secondaires et remboursement pour choisir le bon traitement GLP-1."
+description: "Wegovy vs Mounjaro en 2026 : comparatif complet — efficacité, prix, effets secondaires et remboursement pour choisir le meilleur traitement GLP-1."
 mainKeyword: "wegovy vs mounjaro"
 author: "Dr. Marie Dubois"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy", "mounjaro", "comparatif", "glp-1", "tirzepatide", "semaglutide", "perte de poids", "2026"]
 pubDate: "2026-03-16"
+date: "2026-03-16"
 thumbnail: "/images/thumbnails/wegovy-vs-mounjaro.jpg"
 thumbnailAlt: "Comparatif Wegovy vs Mounjaro 2026"
 featured: true

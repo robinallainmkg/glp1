@@ -1,7 +1,7 @@
 ---
-title: "Guide Complet Saxenda : Prix et Effets Secondaires"
+title: "Saxenda Guide Complet France : Liraglutide, Prix et Effets"
 slug: "guide-complet-saxenda"
-description: "Découvrez tout sur Saxenda : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
+description: "Saxenda guide complet France liraglutide : traitement GLP-1 pour l'obésité. Prix, effets secondaires, posologie et alternatives en 2026."
 author: "Dr. Martin"
 image: "/images/thumbnails/guide-complet-saxenda.webp"
 collection: "traitements-glp1"
