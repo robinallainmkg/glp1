@@ -150,8 +150,42 @@ serve(async (req) => {
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // --- Rate limiting ---
+    // --- Rate limiting (session + IP) ---
     const now = new Date();
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || req.headers.get("x-real-ip")
+      || "unknown";
+
+    // Check IP-level rate limit (stricter, prevents localStorage bypass)
+    if (clientIp !== "unknown") {
+      const ipKey = `ip:${clientIp}`;
+      const { data: ipRate } = await supabase
+        .from("coach_rate_limits")
+        .select("*")
+        .eq("session_id", ipKey)
+        .single();
+
+      if (ipRate) {
+        const ipHourlyElapsed = (now.getTime() - new Date(ipRate.hourly_start).getTime()) / 60000;
+        let ipHourlyCount = ipRate.hourly_count;
+        let ipHourlyStart = ipRate.hourly_start;
+        if (ipHourlyElapsed > 60) { ipHourlyCount = 0; ipHourlyStart = now.toISOString(); }
+        if (ipHourlyCount >= RATE_LIMIT_HOURLY_MAX) {
+          return jsonResponse({ error: "rate_limit", message: "Limite horaire atteinte. Reessayez plus tard." }, 429);
+        }
+        await supabase.from("coach_rate_limits").update({
+          hourly_count: ipHourlyCount + 1, hourly_start: ipHourlyStart,
+          message_count: (ipRate.message_count || 0) + 1,
+        }).eq("session_id", ipKey);
+      } else {
+        await supabase.from("coach_rate_limits").insert({
+          session_id: ipKey, message_count: 1, window_start: now.toISOString(),
+          hourly_count: 1, hourly_start: now.toISOString(),
+        });
+      }
+    }
+
+    // Session-level rate limit
     const { data: rateData } = await supabase
       .from("coach_rate_limits")
       .select("*")
@@ -251,18 +285,26 @@ serve(async (req) => {
     }
 
     try {
-      // --- 1. Embed user message via Mistral ---
-      const embedResponse = await fetch("https://api.mistral.ai/v1/embeddings", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${mistralKey}`,
-        },
-        body: JSON.stringify({
-          model: "mistral-embed",
-          input: [cleanMessage],
+      // --- 1. Embed + load history in parallel ---
+      const [embedResponse, { data: history }] = await Promise.all([
+        fetch("https://api.mistral.ai/v1/embeddings", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${mistralKey}`,
+          },
+          body: JSON.stringify({
+            model: "mistral-embed",
+            input: [cleanMessage],
+          }),
         }),
-      });
+        supabase
+          .from("coach_messages")
+          .select("role, content")
+          .eq("conversation_id", convId)
+          .order("created_at", { ascending: false })
+          .limit(MAX_HISTORY),
+      ]);
 
       if (!embedResponse.ok) {
         throw new Error(`Mistral embed error: ${embedResponse.status}`);
@@ -270,6 +312,10 @@ serve(async (req) => {
 
       const embedData = await embedResponse.json();
       const queryEmbedding = embedData.data[0].embedding;
+
+      const historyMessages = (history || [])
+        .reverse()
+        .map((m: any) => ({ role: m.role, content: m.content }));
 
       // --- 2. Search pgvector for relevant chunks ---
       const { data: chunks, error: chunksError } = await supabase
@@ -283,28 +329,25 @@ serve(async (req) => {
         console.error("pgvector search error:", chunksError);
       }
 
-      const ragContext = (chunks || [])
+      // Boost chunks from the current page
+      const pageSlug = page_url ? page_url.replace(/^\/|\/$/g, '').split('/').pop() : null;
+      const rankedChunks = (chunks || []).map((c: any) => ({
+        ...c,
+        similarity: pageSlug && c.article_slug === pageSlug
+          ? Math.min(c.similarity + 0.1, 1.0)
+          : c.similarity,
+      })).sort((a: any, b: any) => b.similarity - a.similarity);
+
+      const ragContext = rankedChunks
         .map((c: any) => `---\nArticle: ${c.title} (/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${c.content}\n---`)
         .join("\n\n");
 
-      const sources = (chunks || []).map((c: any) => ({
+      const sources = rankedChunks.map((c: any) => ({
         slug: c.article_slug,
         collection: c.collection,
         title: c.title,
         similarity: c.similarity,
       }));
-
-      // --- 3. Load conversation history ---
-      const { data: history } = await supabase
-        .from("coach_messages")
-        .select("role, content")
-        .eq("conversation_id", convId)
-        .order("created_at", { ascending: false })
-        .limit(MAX_HISTORY);
-
-      const historyMessages = (history || [])
-        .reverse()
-        .map((m: any) => ({ role: m.role, content: m.content }));
 
       // --- 4. Build messages for LLM ---
       const userMessageWithContext = ragContext
@@ -325,7 +368,7 @@ serve(async (req) => {
           "Authorization": `Bearer ${groqKey}`,
         },
         body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
+          model: "llama-3.3-70b-versatile",
           messages,
           temperature: 0.3,
           max_tokens: MAX_RESPONSE_TOKENS,
@@ -345,7 +388,7 @@ serve(async (req) => {
       // --- 6. Save messages ---
       await saveMessages(
         supabase, convId, session_id, cleanMessage, assistantResponse,
-        null, "llama-3.1-8b-instant",
+        null, "llama-3.3-70b-versatile",
         sources.length > 0 ? sources : null,
         tokensUsed,
         user_id
@@ -355,7 +398,7 @@ serve(async (req) => {
         response: assistantResponse,
         conversation_id: convId,
         sources: sources.slice(0, 3), // max 3 sources to display
-        model: "llama-3.1-8b-instant",
+        model: "llama-3.3-70b-versatile",
       });
 
     } catch (llmError) {
@@ -390,43 +433,44 @@ async function saveMessages(
   tokensUsed?: number | null,
   userId?: string | null,
 ) {
-  // Save user message
-  await supabase.from("coach_messages").insert({
-    conversation_id: conversationId,
-    session_id: sessionId,
-    role: "user",
-    content: userMessage,
-    intent,
-    model: null,
-    rag_sources: null,
-    tokens_used: null,
-    user_id: userId || null,
-  });
-
-  // Save assistant response
-  await supabase.from("coach_messages").insert({
-    conversation_id: conversationId,
-    session_id: sessionId,
-    role: "assistant",
-    content: assistantMessage,
-    intent,
-    model,
-    rag_sources: ragSources,
-    tokens_used: tokensUsed || null,
-    user_id: userId || null,
-  });
-
-  // Update conversation message count
-  const { data: conv } = await supabase
-    .from("coach_conversations")
-    .select("message_count")
-    .eq("id", conversationId)
-    .single();
-
-  if (conv) {
-    await supabase
+  // Batch insert both messages + update conversation in parallel
+  await Promise.all([
+    supabase.from("coach_messages").insert([
+      {
+        conversation_id: conversationId,
+        session_id: sessionId,
+        role: "user",
+        content: userMessage,
+        intent,
+        model: null,
+        rag_sources: null,
+        tokens_used: null,
+        user_id: userId || null,
+      },
+      {
+        conversation_id: conversationId,
+        session_id: sessionId,
+        role: "assistant",
+        content: assistantMessage,
+        intent,
+        model,
+        rag_sources: ragSources,
+        tokens_used: tokensUsed || null,
+        user_id: userId || null,
+      },
+    ]),
+    supabase
       .from("coach_conversations")
-      .update({ message_count: (conv.message_count || 0) + 2 })
-      .eq("id", conversationId);
-  }
+      .select("message_count")
+      .eq("id", conversationId)
+      .single()
+      .then(({ data: conv }: any) => {
+        if (conv) {
+          return supabase
+            .from("coach_conversations")
+            .update({ message_count: (conv.message_count || 0) + 2 })
+            .eq("id", conversationId);
+        }
+      }),
+  ]);
 }

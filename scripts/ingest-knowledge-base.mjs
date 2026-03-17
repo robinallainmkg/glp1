@@ -298,7 +298,34 @@ async function main() {
 
   console.log(`\n🎉 Ingestion terminee : ${totalEmbedded}/${newChunks.length} chunks ingeres`);
 
-  // 5. Stats finales
+  // 5. Cleanup obsolete chunks (articles modified or deleted)
+  const currentHashes = new Set(allChunks.map(c => c.content_hash));
+  const { data: allDbChunks } = await supabase
+    .from('article_chunks')
+    .select('id, content_hash, article_slug');
+
+  if (allDbChunks) {
+    const toDelete = allDbChunks.filter(c => !currentHashes.has(c.content_hash));
+    if (toDelete.length > 0) {
+      const deleteIds = toDelete.map(c => c.id);
+      // Delete in batches of 100
+      for (let i = 0; i < deleteIds.length; i += 100) {
+        const batch = deleteIds.slice(i, i + 100);
+        const { error } = await supabase
+          .from('article_chunks')
+          .delete()
+          .in('id', batch);
+        if (error) {
+          console.error(`  ❌ Erreur suppression chunks obsoletes:`, error.message);
+        }
+      }
+      console.log(`🧹 ${toDelete.length} chunks obsoletes supprimes`);
+    } else {
+      console.log('🧹 Aucun chunk obsolete a supprimer');
+    }
+  }
+
+  // 6. Stats finales
   const { count } = await supabase
     .from('article_chunks')
     .select('*', { count: 'exact', head: true });

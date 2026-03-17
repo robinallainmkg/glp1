@@ -41,13 +41,8 @@ import { supabaseConfig } from '../lib/supabase.js';
           Comment puis-je vous aider ?
         </div>
       </div>
-      <!-- Quick actions -->
-      <div id="coach-quick-actions">
-        <button class="coach-quick-btn" data-question="Est-ce que vous vendez du GLP-1 ?">Vous vendez du GLP-1 ?</button>
-        <button class="coach-quick-btn" data-question="Combien coute un traitement GLP-1 ?">Prix des traitements</button>
-        <button class="coach-quick-btn" data-question="Comment obtenir une ordonnance pour un GLP-1 ?">Obtenir une ordonnance</button>
-        <button class="coach-quick-btn" data-question="J'ai un probleme avec mon stylo injecteur">Probleme de stylo</button>
-      </div>
+      <!-- Quick actions (populated dynamically based on page context) -->
+      <div id="coach-quick-actions"></div>
     </div>
 
     <div id="coach-input-area">
@@ -252,6 +247,35 @@ import { supabaseConfig } from '../lib/supabase.js';
     color: white;
   }
 
+  /* ===== FEEDBACK BUTTONS ===== */
+  .coach-feedback {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+    align-self: flex-start;
+  }
+  .coach-feedback-btn {
+    background: none;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: var(--gray-400, #9CA3AF);
+    transition: all 0.15s;
+    line-height: 1.4;
+  }
+  .coach-feedback-btn:hover {
+    border-color: var(--gray-400, #9CA3AF);
+    color: var(--gray-600, #4B5563);
+  }
+  .coach-feedback-btn.selected {
+    border-color: var(--accent-green, #16A34A);
+    color: var(--accent-green, #16A34A);
+    background: rgba(22, 163, 74, 0.08);
+    cursor: default;
+  }
+
   /* ===== TYPING INDICATOR ===== */
   .coach-typing {
     display: flex;
@@ -417,6 +441,101 @@ import { supabaseConfig } from '../lib/supabase.js';
   toggleBtn.addEventListener('click', togglePanel);
   closeBtn.addEventListener('click', togglePanel);
 
+  // ===== CONTEXTUAL QUICK ACTIONS =====
+  function buildQuickActions() {
+    var path = window.location.pathname.toLowerCase();
+    var actions = [];
+
+    if (path.includes('ozempic')) {
+      actions = [
+        { q: "Quel est le prix d'Ozempic en pharmacie ?", label: "Prix Ozempic" },
+        { q: "Ozempic est-il rembourse ?", label: "Remboursement" },
+        { q: "Quels sont les effets secondaires d'Ozempic ?", label: "Effets secondaires" },
+        { q: "Comment obtenir Ozempic ?", label: "Obtenir Ozempic" }
+      ];
+    } else if (path.includes('wegovy')) {
+      actions = [
+        { q: "Quel est le prix de Wegovy ?", label: "Prix Wegovy" },
+        { q: "Wegovy est-il disponible en France ?", label: "Disponibilite" },
+        { q: "Quelle est la difference entre Wegovy et Ozempic ?", label: "Wegovy vs Ozempic" },
+        { q: "Wegovy est-il rembourse ?", label: "Remboursement" }
+      ];
+    } else if (path.includes('mounjaro')) {
+      actions = [
+        { q: "Quel est le prix de Mounjaro ?", label: "Prix Mounjaro" },
+        { q: "Mounjaro est-il disponible en pharmacie ?", label: "Disponibilite" },
+        { q: "Quelle difference entre Mounjaro et Ozempic ?", label: "Mounjaro vs Ozempic" },
+        { q: "Quels sont les effets secondaires de Mounjaro ?", label: "Effets secondaires" }
+      ];
+    } else if (path.includes('prix') || path.includes('remboursement')) {
+      actions = [
+        { q: "Quel GLP-1 est le moins cher ?", label: "Le moins cher" },
+        { q: "Quels traitements sont rembourses ?", label: "Remboursements" },
+        { q: "Comment se faire rembourser Ozempic ?", label: "Remboursement Ozempic" },
+        { q: "Combien coute Wegovy par mois ?", label: "Prix Wegovy" }
+      ];
+    } else if (path.includes('effet') || path.includes('secondaire')) {
+      actions = [
+        { q: "Quels sont les effets secondaires les plus courants ?", label: "Effets courants" },
+        { q: "Les nausees disparaissent-elles avec le temps ?", label: "Nausees" },
+        { q: "Que faire en cas d'effets secondaires graves ?", label: "Effets graves" },
+        { q: "Comment reduire les nausees sous GLP-1 ?", label: "Reduire nausees" }
+      ];
+    } else if (path.includes('poids') || path.includes('maigrir') || path.includes('regime')) {
+      actions = [
+        { q: "Combien de poids peut-on perdre avec un GLP-1 ?", label: "Perte de poids" },
+        { q: "Quel regime alimentaire suivre sous GLP-1 ?", label: "Alimentation" },
+        { q: "Faut-il faire du sport avec un GLP-1 ?", label: "Sport" },
+        { q: "Reprend-on du poids a l'arret du traitement ?", label: "Reprise de poids" }
+      ];
+    } else {
+      actions = [
+        { q: "Est-ce que vous vendez du GLP-1 ?", label: "Vous vendez du GLP-1 ?" },
+        { q: "Combien coute un traitement GLP-1 ?", label: "Prix des traitements" },
+        { q: "Comment obtenir une ordonnance pour un GLP-1 ?", label: "Obtenir une ordonnance" },
+        { q: "J'ai un probleme avec mon stylo injecteur", label: "Probleme de stylo" }
+      ];
+    }
+
+    quickActions.innerHTML = actions.map(function(a) {
+      return '<button class="coach-quick-btn" data-question="' + a.q.replace(/"/g, '&quot;') + '">' + a.label + '</button>';
+    }).join('');
+  }
+  buildQuickActions();
+
+  // ===== RESTORE HISTORY =====
+  async function restoreHistory() {
+    if (!conversationId) return;
+    try {
+      var resp = await fetch(
+        supabaseUrl + '/rest/v1/coach_messages?conversation_id=eq.' + conversationId + '&order=created_at.asc&limit=30',
+        { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+      );
+      if (!resp.ok) return;
+      var msgs = await resp.json();
+      if (!msgs || msgs.length === 0) return;
+      // Hide quick actions if there's history
+      if (quickActions) quickActions.style.display = 'none';
+      // Remove the default welcome message
+      var defaultWelcome = messagesEl.querySelector('.coach-msg-assistant');
+      if (defaultWelcome) defaultWelcome.remove();
+      // Re-add welcome then history
+      addAssistantMessage("Bonjour ! Je suis le Coach GLP-1, votre assistant d'information sur les traitements GLP-1 en France.\n\nComment puis-je vous aider ?");
+      for (var i = 0; i < msgs.length; i++) {
+        var m = msgs[i];
+        messageCount++;
+        if (m.role === 'user') {
+          addUserMessage(m.content);
+        } else {
+          addAssistantMessage(m.content);
+        }
+      }
+    } catch (e) {
+      // Silently fail — fresh session is fine
+    }
+  }
+  restoreHistory();
+
   // ===== QUICK ACTIONS =====
   quickActions.addEventListener('click', function(e) {
     var btn = e.target.closest('.coach-quick-btn');
@@ -566,6 +685,8 @@ import { supabaseConfig } from '../lib/supabase.js';
         if (sources && sources.length > 0) {
           addSources(div, sources);
         }
+        // Add feedback buttons
+        addFeedback(div, text);
         scrollToBottom();
         return;
       }
@@ -590,6 +711,43 @@ import { supabaseConfig } from '../lib/supabase.js';
     requestAnimationFrame(tick);
   }
 
+  function addFeedback(parentDiv, msgContent) {
+    var feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'coach-feedback';
+    feedbackDiv.innerHTML =
+      '<button class="coach-feedback-btn" data-vote="up" aria-label="Bonne reponse">&#128077;</button>' +
+      '<button class="coach-feedback-btn" data-vote="down" aria-label="Mauvaise reponse">&#128078;</button>';
+    parentDiv.appendChild(feedbackDiv);
+
+    feedbackDiv.addEventListener('click', function(e) {
+      var btn = e.target.closest('.coach-feedback-btn');
+      if (!btn || btn.classList.contains('selected')) return;
+      var vote = btn.getAttribute('data-vote');
+      // Visual feedback
+      feedbackDiv.querySelectorAll('.coach-feedback-btn').forEach(function(b) {
+        b.disabled = true;
+      });
+      btn.classList.add('selected');
+      // Send to Supabase
+      fetch(supabaseUrl + '/rest/v1/coach_feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SB_KEY,
+          'Authorization': 'Bearer ' + SB_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          session_id: sessionId,
+          conversation_id: conversationId,
+          vote: vote,
+          assistant_message: msgContent.substring(0, 500),
+          page_url: window.location.pathname
+        })
+      }).catch(function() { /* silent */ });
+    });
+  }
+
   function addSources(parentDiv, sources) {
     // Deduplicate by slug
     var seen = {};
@@ -612,8 +770,9 @@ import { supabaseConfig } from '../lib/supabase.js';
   }
 
   function formatResponse(text) {
-    // Convert markdown-like formatting to HTML
-    return text
+    // Sanitize first, then convert markdown-like formatting to HTML
+    var safe = escapeHtml(text);
+    return safe
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\n/g, '<br>');
   }
