@@ -166,7 +166,7 @@ En mars 2026, Wegovy et Mounjaro ne sont **pas remboursés par la Sécurité Soc
 
 ### Ce qui pourrait changer en 2026
 
-La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en décembre 2024. Les négociations de prix avec le CEPS sont en cours. Un remboursement est possible au **2e semestre 2026**, sous conditions :
+La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en décembre 2024. Les négociations de prix avec le CEPS sont en cours. Un [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) est possible au **2e semestre 2026**, sous conditions :
 
 - IMC ≥ 35 kg/m²
 - Échec d'une prise en charge nutritionnelle bien conduite

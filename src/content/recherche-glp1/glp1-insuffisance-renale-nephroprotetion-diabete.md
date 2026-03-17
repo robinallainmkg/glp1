@@ -133,7 +133,7 @@ Pour les patients sous GLP-1 avec IRC :
 
 ### Ozempic est-il dangereux pour les reins ?
 
-Non, au contraire. Ozempic (sémaglutide) a démontré des effets néphroprotecteurs dans l'essai FLOW et plusieurs autres études. Il réduit le risque de progression vers la dialyse. Des précautions s'imposent uniquement en insuffisance rénale sévère (DFGe < 30).
+Non, au contraire. [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/) a démontré des effets néphroprotecteurs dans l'essai FLOW et plusieurs autres études. Il réduit le risque de progression vers la dialyse. Des précautions s'imposent uniquement en insuffisance rénale sévère (DFGe < 30).
 
 ### Peut-on prendre des GLP-1 si on est dialysé ?
 

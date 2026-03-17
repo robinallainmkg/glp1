@@ -149,4 +149,4 @@ Oui, bien que l'Ozempic Face soit plus souvent décrit chez les femmes (qui cons
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. Toute intervention esthétique doit être précédée d'une consultation médicale. Pour en savoir plus sur les [effets secondaires des traitements GLP-1](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), consultez nos guides complets. Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. Toute intervention esthétique doit être précédée d'une consultation médicale. Pour en savoir plus sur les [effets secondaires des traitements GLP-1](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) ou sur la [chute de cheveux sous GLP-1](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/), consultez nos guides complets. Dernière mise à jour : mars 2026.*

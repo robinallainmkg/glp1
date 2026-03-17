@@ -36,7 +36,7 @@ En décembre 2025, l'Organisation mondiale de la santé (OMS) a franchi un pas h
 
 L'OMS estime que plus d'un milliard de personnes dans le monde vivent avec l'obésité en 2025, un chiffre qui a quasiment triplé depuis 1975. En France, selon les données de l'étude ObEpi-Roche 2024, environ 17% de la population adulte est obèse (IMC supérieur ou égal à 30), et près de la moitié est en surpoids.
 
-Face à cette épidémie mondiale, les approches traditionnelles — régime alimentaire, exercice physique, thérapies comportementales — montrent des résultats limités sur le long terme pour de nombreux patients. La chirurgie bariatrique reste efficace mais invasive et réservée aux cas les plus sévères. Les GLP-1 comblent un vide thérapeutique entre ces deux extrêmes.
+Face à cette épidémie mondiale, les approches traditionnelles — régime alimentaire, exercice physique, thérapies comportementales — montrent des résultats limités sur le long terme pour de nombreux patients. La [chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) reste efficace mais invasive et réservée aux cas les plus sévères. Les GLP-1 comblent un vide thérapeutique entre ces deux extrêmes.
 
 ### Le contexte de la décision
 

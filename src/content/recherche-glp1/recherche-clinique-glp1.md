@@ -136,6 +136,7 @@ Les examens sanguins fréquents nécessitent des soins particuliers pour la peau
 Découvrez d'autres ressources sur les traitements GLP-1 pour compléter vos connaissances :
 
 - [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [CagriSema résultats phase 3 REDEFINE](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/)
 - [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
