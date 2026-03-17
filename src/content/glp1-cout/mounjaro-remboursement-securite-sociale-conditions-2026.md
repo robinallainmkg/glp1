@@ -2,7 +2,7 @@
 title: "Mounjaro Remboursement Sécurité Sociale 2026 : Conditions et Calendrier"
 description: "Mounjaro remboursement Sécurité Sociale 2026 : conditions IMC ≥35, avis HAS ASMR 4, négociations CEPS en cours. Date prévisionnelle 2e semestre 2026."
 keywords: ['mounjaro remboursement securite sociale', 'mounjaro remboursement 2026', 'mounjaro conditions remboursement', 'mounjaro has avis', 'mounjaro ceps negociations', 'remboursement tirzepatide france', 'mounjaro imc 35 remboursement']
-seoTitle: "Mounjaro Remboursement Sécurité Sociale 2026 : Conditions et Calendrier"
+seoTitle: "Mounjaro Remboursement Sécurité Sociale 2026 : Guide"
 seoDescription: "Mounjaro remboursement Sécurité Sociale 2026 : conditions IMC ≥35, avis HAS ASMR 4, négociations CEPS en cours. Date prévisionnelle 2e semestre 2026."
 publishedAt: '2026-03-17'
 updatedAt: '2026-03-17'
@@ -18,15 +18,15 @@ mainKeyword: "Mounjaro remboursement securite sociale conditions 2026"
 secondaryKeywords: ["mounjaro remboursement 2026", "tirzepatide remboursement france", "mounjaro HAS avis ASMR", "mounjaro CEPS négociations", "mounjaro obesite remboursement conditions"]
 ---
 
-Le remboursement de Mounjaro (tirzépatide, Eli Lilly) par l'Assurance Maladie française est l'un des sujets les plus attendus de 2026 dans le domaine de la prise en charge de l'obésité. La Haute Autorité de Santé a rendu un **avis favorable en novembre 2025**, ouvrant la voie aux négociations de prix. Ce guide détaille les conditions qui seront exigées, le calendrier prévisible et ce que cela signifie concrètement pour les patients concernés.
+Le remboursement de Mounjaro (tirzépatide, Eli Lilly) par l'Assurance Maladie française est l'un des sujets les plus attendus de 2026 dans le domaine de la prise en charge de l'obésité. La Haute Autorité de Santé a rendu un **avis favorable le 9 décembre 2025**, ouvrant la voie aux négociations de prix. Ce guide détaille les conditions qui seront exigées, le calendrier prévisible et ce que cela signifie concrètement pour les patients concernés.
 
 ## Où en est Mounjaro dans le processus de remboursement ?
 
-### L'avis HAS du 19 novembre 2025
+### L'avis HAS du 9 décembre 2025
 
-Le 19 novembre 2025, la Commission de la Transparence de la HAS a publié son avis sur Mounjaro (dossier CT21349). C'est une étape clé : sans avis favorable de la HAS, aucun médicament ne peut être remboursé par l'Assurance Maladie.
+Le 9 décembre 2025, la Commission de la Transparence de la HAS a confirmé son avis favorable sur Mounjaro (dossier CT21349). C'est une étape clé : sans avis favorable de la HAS, aucun médicament ne peut être remboursé par l'Assurance Maladie.
 
-La HAS a attribué à Mounjaro une **Amélioration du Service Médical Rendu (ASMR) de niveau 4** (mineure) par rapport aux traitements existants pour l'obésité. Concrètement, cela signifie :
+La HAS a attribué à Mounjaro une **Amélioration du Service Médical Rendu (ASMR) de niveau 4** (relevée à ce niveau dans cet avis définitif) par rapport aux traitements existants pour l'obésité. Concrètement, cela signifie :
 
 - Mounjaro est reconnu comme un traitement efficace
 - Son apport par rapport aux autres GLP-1 disponibles est qualifié de modéré
@@ -45,7 +45,7 @@ Ces discussions portent sur :
 - Les éventuelles **clauses de performance** liées aux résultats cliniques
 - Le **périmètre exact** des patients éligibles (indication, critères d'entrée dans le dispositif)
 
-Les négociations CEPS prennent en général **6 à 12 mois** après l'avis HAS. L'avis ayant été rendu en novembre 2025, le remboursement effectif est **attendu pour le 2e semestre 2026** au plus tôt — soit entre juillet et décembre 2026.
+Les négociations CEPS prennent en général **6 à 12 mois** après l'avis HAS. L'avis ayant été rendu le 9 décembre 2025, le remboursement effectif est **attendu pour le 2e semestre 2026** au plus tôt — soit entre juillet et décembre 2026.
 
 ---
 
