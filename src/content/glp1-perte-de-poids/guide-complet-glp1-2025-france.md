@@ -13,10 +13,10 @@ mainKeyword: "guide complet GLP-1 2025 France tout savoir"
 ## Guide Complet GLP-1 2025 en France : Tout Savoir
 
 <div class="guide-buttons">
-  <a href="/traitements-glp1/" class="guide-button primary">
+  <a href="/collections/traitements-glp1/" class="guide-button primary">
     💉 Traitements GLP-1 Disponibles
   </a>
-  <a href="/glp1-cout/" class="guide-button secondary">
+  <a href="/collections/glp1-cout/" class="guide-button secondary">
     💰 Prix et Remboursement
   </a>
 </div>

@@ -173,7 +173,7 @@ Ce n'est pas la premiere fois que des resultats observationnels prometteurs ne s
 
 L'echec d'un essai n'est pas l'echec d'un axe de recherche. L'histoire du lecanemab (Leqembi) — premier traitement anti-amyloide approuve dans Alzheimer — illustre que des decennies de recherche et d'echecs successifs peuvent finalement aboutir a un resultat positif.
 
-La recherche sur les GLP-1 et le cerveau est encore jeune. Les prochaines annees apporteront des donnees avec de nouvelles formulations, de nouvelles doses et de nouvelles cibles.
+La recherche sur les GLP-1 et le cerveau est encore jeune. Les prochaines annees apporteront des donnees avec de nouvelles formulations, de nouvelles doses et de nouvelles cibles. Les essais EVOKE s'inscrivent dans un vaste programme de [recherche clinique sur les GLP-1](/collections/recherche-glp1/recherche-clinique-glp1/) qui explore de nombreuses nouvelles applications de ces molecules.
 
 ## Questions frequentes
 

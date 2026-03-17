@@ -1,6 +1,6 @@
 ---
 title: "Wegovy et Mounjaro Adolescent (12 ans+) : Guide Complet France 2026"
-description: "Wegovy Mounjaro adolescent 12 ans obésité France : conditions, résultats cliniques, suivi et questions des parents. Tout ce que les familles doivent savoir en 2026."
+description: "Wegovy et Mounjaro pour adolescents obèses (12 ans+) en France : conditions, résultats cliniques et suivi médical. Guide complet pour les familles 2026."
 keywords: ['wegovy adolescent', 'mounjaro adolescent', 'obesite pediatrique glp1', 'wegovy 12 ans france', 'traitement obesite adolescent', 'glp1 enfant', 'semaglutide adolescent']
 seoTitle: "Wegovy et Mounjaro Adolescent 12 ans+ : Guide Complet France 2026"
 seoDescription: "Wegovy adolescent 12 ans en France : conditions de prescription, résultats STEP TEENS, suivi spécifique et conseils pour les parents. Guide complet 2026."

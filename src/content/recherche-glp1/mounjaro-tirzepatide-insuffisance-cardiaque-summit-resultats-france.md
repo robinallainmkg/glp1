@@ -1,6 +1,6 @@
 ---
 title: "Mounjaro et Insuffisance Cardiaque : Résultats SUMMIT et Impact en France"
-description: "Mounjaro (tirzepatide) réduit le risque d'aggravation de l'insuffisance cardiaque de 38% (étude SUMMIT). Ce que cela change pour les patients cardiaques obèses en France."
+description: "Mounjaro (tirzepatide) réduit le risque d'insuffisance cardiaque de 38% (étude SUMMIT). Ce que cela change pour les patients cardiaques obèses en France."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
@@ -123,12 +123,12 @@ La double action GLP-1 + GIP du tirzepatide (vs GLP-1 seul pour le sémaglutide)
 
 ### Intégration dans le RCP européen de Mounjaro
 
-En 2026, l'Agence Européenne des Médicaments (EMA) a intégré les données SUMMIT dans le RCP (Résumé des Caractéristiques du Produit) de Mounjaro. Concrètement, cela signifie que la prise en charge de l'insuffisance cardiaque à fraction d'éjection préservée chez les patients obèses est désormais une **indication officielle reconnue** au niveau européen.
+En janvier 2026, le CHMP (Comité des Médicaments à Usage Humain) de l'EMA a examiné les données SUMMIT et décidé d'intégrer les résultats de l'étude dans le RCP (Résumé des Caractéristiques du Produit) de Mounjaro. Il est important de préciser : le CHMP n'a **pas recommandé** l'attribution d'une indication officielle séparée pour le traitement de l'insuffisance cardiaque à fraction d'éjection préservée. Les données SUMMIT sont mentionnées à titre informatif dans le RCP, mais l'ICFEp ne constitue pas une indication officiellement approuvée de Mounjaro au niveau européen.
 
-Cette intégration a plusieurs conséquences pratiques pour les médecins français :
-- Ils peuvent prescrire Mounjaro en mentionnant cette indication dans le dossier médical
-- La prescription est juridiquement sécurisée pour cette population de patients
-- Les sociétés savantes (SFC, SFD) ont été invitées à actualiser leurs recommandations
+Cette clarification a des conséquences pratiques importantes pour les médecins français :
+- Mounjaro peut être prescrit chez des patients obèses avec ICFEp, mais dans le cadre de son indication obésité, pas d'une indication cardiaque spécifique
+- La prescription reste possible mais sans le cadre réglementaire renforcé d'une indication officielle
+- Les sociétés savantes (SFC, SFD) ont été invitées à intégrer ces données dans leurs recommandations tout en nuançant le statut réglementaire
 
 ### Les guidelines de cardiologie en France
 
@@ -154,10 +154,12 @@ En attendant une décision de remboursement, le coût de Mounjaro reste entière
 
 | Dosage | Prix mensuel estimé |
 |--------|---------------------|
-| 2,5 mg (initiation) | ~110-130 €/mois |
-| 5 mg | ~180-200 €/mois |
-| 10 mg | ~260-300 €/mois |
-| 15 mg (dose cible SUMMIT) | ~350-440 €/mois |
+| 2,5 mg (initiation) | ~230 €/mois |
+| 5 mg | ~275 €/mois |
+| 7,5 mg | ~395 €/mois |
+| 10 mg | ~395 €/mois |
+| 12,5 mg | ~440 €/mois |
+| 15 mg (dose cible SUMMIT) | ~440 €/mois |
 
 Pour une grande partie des patients cardiaques obèses, qui sont souvent âgés et aux revenus modestes, ce coût représente une barrière d'accès significative. C'est pourquoi les décisions de remboursement dans cette indication revêtent une importance particulière.
 

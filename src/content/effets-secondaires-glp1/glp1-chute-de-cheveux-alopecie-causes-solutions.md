@@ -134,7 +134,7 @@ Sans prétendre traiter l'effluvium télogène, certains soins capillaires peuve
 
 ## Ce que disent les autorités de santé
 
-L'ANSM et l'EMA ont inclus l'alopécie dans la liste des effets indésirables connus du sémaglutide et du tirzépatide depuis 2023. Ces mentions figurent désormais dans les notices de médicament.
+L'ANSM et l'EMA ont inclus l'alopécie dans la liste des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et du tirzépatide depuis 2023. Ces mentions figurent désormais dans les notices de médicament.
 
 Le PRAC de l'EMA a confirmé en 2024 que ce phénomène est lié à la perte de poids elle-même plutôt qu'à une toxicité directe de la molécule, et qu'il est généralement résolutif. Il n'y a pas de recommandation d'arrêt du traitement uniquement pour ce motif.
 

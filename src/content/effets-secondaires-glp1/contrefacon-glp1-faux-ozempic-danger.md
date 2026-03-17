@@ -10,8 +10,8 @@ date: 2026-03-15
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
-image: "/images/thumbnails/contrefacon-glp1-faux-ozempic.jpg"
-thumbnail: "/images/thumbnails/contrefacon-glp1-faux-ozempic.jpg"
+image: "/images/thumbnails/ozempic-danger-illus.jpg"
+thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"
 thumbnailAlt: "Contrefaçons GLP-1 faux Ozempic danger achat internet"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"

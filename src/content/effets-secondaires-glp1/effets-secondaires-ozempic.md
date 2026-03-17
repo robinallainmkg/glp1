@@ -11,7 +11,7 @@ featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
 image: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
-thumbnail: "/images/thumbnails/ozempic-medical-care.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 thumbnailAlt: "Effets secondaires du traitement ozempic"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"

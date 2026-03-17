@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Diabète Type 2 : Guide Complet Patient France 2026"
-description: "Guide complet GLP-1 diabète type 2 en France 2026 : quels médicaments sont remboursés, conditions de prescription, auto-injection et suivi médical. Tout ce que les patients doivent savoir."
+description: "GLP-1 et diabète type 2 en France 2026 : médicaments remboursés, conditions de prescription, technique d'injection et suivi médical. Guide complet patient."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17

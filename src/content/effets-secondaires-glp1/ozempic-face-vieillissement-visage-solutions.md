@@ -116,7 +116,7 @@ Les traitements GLP-1 permettent parfois des pertes de poids très rapides, mais
 
 ### Augmenter les apports protéinés
 
-Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par kilo de poids corporel par jour — permet de préserver la masse musculaire et de soutenir la synthèse de collagène. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour des conseils pratiques.
+Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par kilo de poids corporel par jour — permet de préserver la masse musculaire et de soutenir la synthèse de collagène. Les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) (zinc, vitamine C, sélénium) jouent également un rôle clé dans la santé cutanée. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour des conseils pratiques.
 
 ### Prendre soin de sa peau
 

@@ -251,7 +251,7 @@ Certains départements proposent des aides exceptionnelles pour traitements coû
 - ✅ Historique des traitements essayés
 - ✅ Carnet de mesures (poids, glycémie si diabète)
 
-[Trouver un médecin prescripteur GLP-1 →](/medecins-glp1-france/)
+[Trouver un médecin prescripteur GLP-1 →](/collections/medecins-glp1-france/)
 
 ### Étape 2 : Bilan Médical Complet
 
@@ -456,13 +456,13 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 
 **Comparatifs :**
 - [Quel Traitement GLP-1 Choisir ?](/guides/quel-traitement-glp1-choisir)
-- [Vue d'Ensemble Prix GLP-1](/glp1-cout/)
+- [Vue d'Ensemble Prix GLP-1](/collections/glp1-cout/)
 
 ### Trouver un Médecin Prescripteur
 
 - [Annuaire Endocrinologues GLP-1](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)
 - [Diabétologues Paris](/collections/medecins-glp1-france/diabetologue-paris)
-- [Tous les Médecins GLP-1](/medecins-glp1-france/)
+- [Tous les Médecins GLP-1](/collections/medecins-glp1-france/)
 
 ### Contacts Officiels
 

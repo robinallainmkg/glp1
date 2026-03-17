@@ -1,6 +1,6 @@
 ---
 title: "Remboursement Mounjaro Obésité 2026 : HAS, CEPS et Calendrier Précis"
-description: "Remboursement Mounjaro obésité HAS CEPS calendrier 2026 : avis HAS du 9 décembre 2025, conditions IMC, négociations CEPS en cours. Date prévisionnelle et conditions détaillées."
+description: "Remboursement Mounjaro obésité 2026 : avis HAS décembre 2025, négociations CEPS en cours, date prévisionnelle et conditions IMC détaillées."
 keywords: ['remboursement mounjaro obesite', 'mounjaro remboursement has', 'mounjaro ceps 2026', 'tirzepatide remboursement france', 'mounjaro quand rembourse', 'mounjaro securite sociale obesite', 'mounjaro conditions remboursement imc']
 seoTitle: "Remboursement Mounjaro Obésité 2026 : HAS, CEPS, Date et Conditions"
 seoDescription: "Remboursement Mounjaro obésité 2026 : avis HAS ASMR favorable décembre 2025, négociations CEPS en cours, date prévisionnelle 2e semestre 2026 et conditions précises (IMC ≥35)."

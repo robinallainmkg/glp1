@@ -63,7 +63,9 @@ Ces effets complètent efficacement l'action des traitements GLP-1 comme l'Ozemp
 
 ## Liste des iSGLT2 disponibles en France
 
-En mars 2026, cinq molécules iSGLT2 sont disponibles en France, commercialisées sous différentes marques. Voici la liste exhaustive avec leurs principales caractéristiques.
+En mars 2026, quatre molécules iSGLT2 sont disponibles en France, commercialisées sous différentes marques. Voici la liste avec leurs principales caractéristiques.
+
+> **Note :** La sotagliflozine (Zynquista, Sanofi) a eu son autorisation de mise sur le marché européenne retirée en août 2022 à la demande du titulaire. Elle n'est donc plus disponible en France ni dans l'Union européenne.
 
 ### Empagliflozine — Jardiance (Boehringer Ingelheim / Eli Lilly)
 
@@ -117,19 +119,11 @@ Ertugliflozine est l'iSGLT2 le plus récent, avec un profil glycémique similair
 | Dosages | 5 mg et 15 mg |
 | Prise | 1 comprimé par jour le matin |
 | Indications | Diabète type 2 uniquement |
-| Remboursement | 65% (DT2) |
+| Remboursement | **Non remboursé** (SMR insuffisant HAS) |
 
-### Sotagliflozine — Zynquista (Sanofi)
+### Sotagliflozine — Zynquista (Sanofi) — **Non disponible en France**
 
-Sotagliflozine est un double inhibiteur SGLT1/SGLT2 avec une indication particulière dans l'insuffisance cardiaque, mais une utilisation en diabétologie encore limitée.
-
-| Caractéristique | Détail |
-|-----------------|--------|
-| Molécule | Sotagliflozine |
-| Dosages | 200 mg et 400 mg |
-| Prise | 1 comprimé avant le premier repas |
-| Indications | Insuffisance cardiaque, diabète type 1 (hors AMM DT2) |
-| Remboursement | 65% (insuffisance cardiaque) |
+> **Note importante :** La sotagliflozine (Zynquista, Sanofi) n'est **plus disponible en France** depuis août 2022. Son autorisation de mise sur le marché européenne a été retirée à la demande du titulaire. Elle ne fait donc plus partie des iSGLT2 disponibles sur le marché français.
 
 ## Prix et remboursement des iSGLT2 en France
 
@@ -142,11 +136,11 @@ Sotagliflozine est un double inhibiteur SGLT1/SGLT2 avec une indication particul
 | Forxiga 10 mg | ~41€ | 65% | ~14€ |
 | Invokana 100 mg | ~40€ | 65% | ~14€ |
 | Invokana 300 mg | ~42€ | 65% | ~15€ |
-| Steglatro 5 mg | ~38€ | 65% | ~13€ |
+| Steglatro 5 mg | ~38€ | **Non remboursé** (SMR insuffisant HAS) | ~38€ |
 
 ### Conditions de remboursement
 
-Tous les iSGLT2 sont remboursés à **65%** par l'Assurance Maladie pour les patients atteints de **diabète de type 2**, sous réserve :
+La plupart des iSGLT2 sont remboursés à **65%** par l'Assurance Maladie pour les patients atteints de **diabète de type 2**. Notez que l'ertugliflozine (Steglatro) n'est **pas remboursée** en raison d'un avis SMR insuffisant de la HAS. Les conditions de remboursement sont :
 
 - D'une prescription médicale (médecin généraliste, diabétologue ou cardiologue)
 - D'un diagnostic de diabète de type 2 documenté (HbA1c insuffisamment contrôlée sous metformine ou autre traitement de première ligne)
