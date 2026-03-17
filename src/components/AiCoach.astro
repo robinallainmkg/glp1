@@ -774,6 +774,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     var safe = escapeHtml(text);
     return safe
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\[(.*?)\]\((\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
       .replace(/\n/g, '<br>');
   }
 

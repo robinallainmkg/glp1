@@ -40,13 +40,20 @@ REGLES ABSOLUES :
 10. N'ajoute JAMAIS de disclaimer medical en fin de reponse (il y en a deja un affiche sous le chat).
 11. Ne dis JAMAIS "d'apres nos articles", "selon nos guides" ou toute formulation qui s'appuie sur "nos" contenus.
 12. Ne termine JAMAIS par une phrase promotionnelle.
+13. Quand tu mentionnes un sujet couvert par le site, propose un lien utile au format : [Titre](URL). Utilise UNIQUEMENT les URLs fournies dans le contexte RAG. Ne fabrique JAMAIS d'URL.
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
 - Il existe des arnaques (faux GLP-1 en gelules vendus en ligne) mais il existe aussi des complements alimentaires legaux (berbérine, etc.) — ne pas tout melanger
 - Si quelqu'un a achete un produit douteux et s'inquiete : le rassurer d'abord, poser des questions, puis informer factuellement
 - Prix approximatifs : Ozempic ~77 EUR/mois (rembourse 65% pour diabete T2), Wegovy ~300 EUR/mois (non rembourse), Mounjaro ~350 EUR/mois (non rembourse)
-- Si la personne est victime d'arnaque averee : orienter calmement vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr`;
+- Si la personne est victime d'arnaque averee : orienter calmement vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr
+
+SEGMENTS DE VISITEURS (adapter la reponse) :
+- ~28% sont des victimes d'arnaques (ont achete de faux GLP-1 en ligne, souvent 29-80 EUR). Etre empathique, ne pas juger, proposer les recours.
+- ~16% ont une intention d'achat directe. Expliquer le parcours legal (medecin → ordonnance → pharmacie).
+- ~10% ont des questions medicales (diabete, compatibilite). Orienter vers le medecin apres information factuelle.
+- Le reste sont des curieux qui cherchent a comprendre les GLP-1.`;
 
 // --- Fallback v1 (rules engine) ---
 const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
@@ -91,6 +98,28 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
     response: "Comment obtenir un traitement GLP-1 en France :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou centre specialise obesite (CSO)\n2. 🔬 Bilan — Poids, IMC, comorbidites, analyses sanguines\n3. ⚖️ Decision — Le medecin evalue si un GLP-1 est indique pour vous\n4. 📋 Ordonnance — Si oui, prescription medicale\n5. 💊 Pharmacie — Retrait du medicament en pharmacie\n\nIMC minimum generalement requis : 30 kg/m² (ou 27 avec comorbidites)."
   }
 ];
+
+// --- Scam signal detection ---
+const SCAM_PATTERNS = [
+  { pattern: /\b(gelule|comprime|capsule|pilule)s?\b.*\b(glp|ozempic|wegovy|semaglutide|mounjaro)\b/i, signal: 'fake_form' },
+  { pattern: /\b(ozempic|wegovy|semaglutide|mounjaro|saxenda).*\b(gelule|comprime|capsule|pilule)s?\b/i, signal: 'fake_form' },
+  { pattern: /\b(achete?r?|command[eé]|pay[eé]|re[cç]u)\b.*\b(en ligne|sur internet|sur (un )?site|par courrier)\b/i, signal: 'online_purchase' },
+  { pattern: /\b(site|lien|url)\b.*\b(ozempic|wegovy|mounjaro|glp|semaglutide)\b/i, signal: 'suspicious_url' },
+  { pattern: /\b(arnaque|escroqu|fraud|contrefaçon|faux|fake|douteux|louche|suspect)\b/i, signal: 'explicit_scam' },
+  { pattern: /\b(pas re[cç]u|jamais livr[eé]|rembourse|litige|plainte)\b/i, signal: 'post_scam' },
+  { pattern: /\b\d{2,3}\s*€?\s*(euros?|eur)\b.*\b(achete|paye|coute)\b/i, signal: 'suspicious_price' },
+  { pattern: /\bsans ordonnance\b/i, signal: 'no_prescription' },
+];
+
+function detectScamSignals(message: string): { isScamRelated: boolean; signals: string[]; severity: 'none' | 'low' | 'high' } {
+  const signals: string[] = [];
+  for (const { pattern, signal } of SCAM_PATTERNS) {
+    if (pattern.test(message)) signals.push(signal);
+  }
+  if (signals.length === 0) return { isScamRelated: false, signals: [], severity: 'none' };
+  const highSeverity = signals.some(s => ['fake_form', 'post_scam', 'explicit_scam'].includes(s));
+  return { isScamRelated: true, signals, severity: highSeverity ? 'high' : 'low' };
+}
 
 function classifyAndRespond(message: string): { intent: string; response: string } {
   const lower = message.toLowerCase();
@@ -284,6 +313,9 @@ serve(async (req) => {
       return jsonResponse({ response: fallback.response, conversation_id: convId, sources: [], model: "fallback-v1" });
     }
 
+    // --- Scam detection layer ---
+    const scamSignals = detectScamSignals(cleanMessage);
+
     try {
       // --- 1. Embed + load history in parallel ---
       const [embedResponse, { data: history }] = await Promise.all([
@@ -350,9 +382,23 @@ serve(async (req) => {
       }));
 
       // --- 4. Build messages for LLM ---
+      // Inject scam alert if detected
+      let scamContext = '';
+      if (scamSignals.isScamRelated) {
+        scamContext = `\n\n⚠️ ALERTE INTERNE (ne pas montrer au user) : Signaux d'arnaque detectes (${scamSignals.signals.join(', ')}). Severite: ${scamSignals.severity}. Applique le protocole anti-arnaque : empathie d'abord, questions pour comprendre, puis information factuelle sur les recours si confirme.`;
+      }
+
+      // Build article links hint from RAG sources
+      const articleLinks = rankedChunks
+        .filter((c: any, i: number, arr: any[]) => arr.findIndex((x: any) => x.article_slug === c.article_slug) === i)
+        .slice(0, 3)
+        .map((c: any) => `- [${c.title}](/${c.collection}/${c.article_slug}/)`)
+        .join('\n');
+      const linksHint = articleLinks ? `\n\nLiens d'articles disponibles (utilise-les si pertinent dans ta reponse) :\n${articleLinks}` : '';
+
       const userMessageWithContext = ragContext
-        ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
-        : cleanMessage;
+        ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
+        : `${cleanMessage}${scamContext}`;
 
       const messages = [
         { role: "system", content: SYSTEM_PROMPT },
@@ -386,9 +432,10 @@ serve(async (req) => {
       const tokensUsed = llmData.usage?.total_tokens || null;
 
       // --- 6. Save messages ---
+      const detectedIntent = scamSignals.isScamRelated ? `scam:${scamSignals.severity}` : null;
       await saveMessages(
         supabase, convId, session_id, cleanMessage, assistantResponse,
-        null, "llama-3.3-70b-versatile",
+        detectedIntent, "llama-3.3-70b-versatile",
         sources.length > 0 ? sources : null,
         tokensUsed,
         user_id

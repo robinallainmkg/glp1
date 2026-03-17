@@ -335,10 +335,98 @@ import { supabaseConfig } from '../../lib/supabase';
       color: #94a3b8;
     }
 
+    /* Feedback analytics */
+    .feedback-section {
+      margin-top: 1.5rem;
+    }
+    .feedback-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 1rem;
+    }
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .feedback-panel {
+      background: #111827;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      padding: 1.25rem;
+    }
+    .feedback-panel h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .feedback-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #1e293b;
+      font-size: 0.82rem;
+    }
+    .feedback-item:last-child { border-bottom: none; }
+    .feedback-item .fb-msg {
+      color: #cbd5e1;
+      margin-bottom: 0.25rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .feedback-item .fb-meta {
+      font-size: 0.72rem;
+      color: #64748b;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .fb-vote-up { color: #16a34a; }
+    .fb-vote-down { color: #dc2626; }
+    .feedback-empty {
+      color: #64748b;
+      font-size: 0.82rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .intent-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.82rem;
+    }
+    .intent-bar .intent-label {
+      min-width: 100px;
+      color: #94a3b8;
+    }
+    .intent-bar .intent-fill {
+      flex: 1;
+      height: 8px;
+      border-radius: 4px;
+      background: #1e293b;
+      overflow: hidden;
+    }
+    .intent-bar .intent-fill-inner {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+    .intent-bar .intent-count {
+      min-width: 32px;
+      text-align: right;
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+
     @media (max-width: 1024px) {
       .admin-layout { margin-left: 0; padding-top: 56px; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .chat-layout { grid-template-columns: 1fr; height: auto; }
+      .feedback-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -417,6 +505,25 @@ import { supabaseConfig } from '../../lib/supabase';
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
             <span>Selectionnez une conversation pour voir les messages</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback analytics -->
+      <div class="feedback-section">
+        <h2>📊 Analyse des feedbacks</h2>
+        <div class="feedback-grid">
+          <div class="feedback-panel">
+            <h3>👎 Reponses mal notees (a ameliorer)</h3>
+            <div id="feedbackDown">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel">
+            <h3>📈 Intents detectes</h3>
+            <div id="intentStats">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
           </div>
         </div>
       </div>
@@ -522,6 +629,7 @@ import { supabaseConfig } from '../../lib/supabase';
         document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
 
         renderConvList();
+        loadFeedbackAnalytics();
       } catch(e) {
         console.error('loadData error:', e);
         document.getElementById('convListContent').innerHTML = '<div class="conv-empty">Erreur de chargement — voir console</div>';
@@ -629,6 +737,78 @@ import { supabaseConfig } from '../../lib/supabase';
       // Scroll to bottom
       const msgsEl = detail.querySelector('.conv-messages');
       if (msgsEl) msgsEl.scrollTop = msgsEl.scrollHeight;
+    }
+
+    async function loadFeedbackAnalytics() {
+      try {
+        // Load recent negative feedback
+        const { data: downFeedback } = await sb
+          .from('coach_feedback')
+          .select('*')
+          .eq('vote', 'down')
+          .order('created_at', { ascending: false })
+          .limit(10);
+
+        const downEl = document.getElementById('feedbackDown');
+        if (downFeedback && downFeedback.length > 0) {
+          downEl.innerHTML = downFeedback.map(f => {
+            const time = new Date(f.created_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+            const page = f.page_url || '-';
+            const msg = (f.assistant_message || '').substring(0, 200);
+            return `<div class="feedback-item">
+              <div class="fb-msg">${escapeHtml(msg)}</div>
+              <div class="fb-meta">
+                <span class="fb-vote-down">👎</span>
+                <span>${time}</span>
+                <span>page: ${escapeHtml(page)}</span>
+              </div>
+            </div>`;
+          }).join('');
+        } else {
+          downEl.innerHTML = '<div class="feedback-empty">Aucun feedback negatif — bravo !</div>';
+        }
+
+        // Load intent distribution from messages
+        const { data: intentMsgs } = await sb
+          .from('coach_messages')
+          .select('intent')
+          .eq('role', 'user')
+          .not('intent', 'is', null)
+          .limit(500);
+
+        const intentEl = document.getElementById('intentStats');
+        if (intentMsgs && intentMsgs.length > 0) {
+          const counts = {};
+          intentMsgs.forEach(m => {
+            const key = m.intent || 'unknown';
+            counts[key] = (counts[key] || 0) + 1;
+          });
+          const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+          const maxCount = sorted[0][1];
+
+          const colors = {
+            'scam': '#dc2626', 'scam:high': '#dc2626', 'scam:low': '#f59e0b',
+            'selling': '#3b82f6', 'price': '#8b5cf6', 'prescription': '#06b6d4',
+            'weight': '#16a34a', 'diet': '#84cc16', 'diabetes': '#f97316',
+            'device': '#64748b', 'general': '#94a3b8'
+          };
+
+          intentEl.innerHTML = sorted.map(([intent, count]) => {
+            const pct = Math.round((count / maxCount) * 100);
+            const color = colors[intent] || '#3b82f6';
+            const label = intent.replace('scam:high', 'Arnaque (grave)').replace('scam:low', 'Arnaque (faible)').replace('scam', 'Arnaque');
+            return `<div class="intent-bar">
+              <span class="intent-label">${escapeHtml(label)}</span>
+              <div class="intent-fill"><div class="intent-fill-inner" style="width:${pct}%; background:${color};"></div></div>
+              <span class="intent-count">${count}</span>
+            </div>`;
+          }).join('');
+        } else {
+          intentEl.innerHTML = '<div class="feedback-empty">Pas encore de donnees d\'intent</div>';
+        }
+      } catch (e) {
+        console.error('loadFeedbackAnalytics error:', e);
+      }
     }
 
     function escapeHtml(str) {
