@@ -76,7 +76,7 @@ Cependant, une perte de poids est souvent observée comme effet bénéfique chez
 - **Perte de poids moyenne** : 5 à 10 kg chez les patients DT2
 - **Amélioration des comorbidités** : Réduction de l'hypertension, amélioration du sommeil
 
-Pour les patients souhaitant un traitement spécifiquement indiqué pour l'obésité, il existe **Wegovy** (semaglutide 2,4 mg), qui contient la même molécule à une dose plus élevée et dispose d'une AMM pour la gestion du poids.
+Pour les patients souhaitant un traitement spécifiquement indiqué pour l'obésité, il existe [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) (semaglutide 2,4 mg), qui contient la même molécule à une dose plus élevée et dispose d'une AMM pour la gestion du poids.
 
 ## Posologie et administration
 
@@ -142,7 +142,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 ### Autres GLP-1 injectables
 - **Wegovy** : Semaglutide à 2,4 mg (spécifiquement pour l'obésité)
 - [**Mounjaro (tirzepatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : Double action GLP-1/GIP, perte de poids supérieure (jusqu'à -22%) pour les patients souhaitant une alternative plus efficace
-- **Saxenda** : Liraglutide (jusqu'à 3 mg/jour, injection quotidienne)
+- [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) : Liraglutide (jusqu'à 3 mg/jour, injection quotidienne)
 - **Trulicity** : Dulaglutide (une injection hebdomadaire)
 - **Victoza** : Liraglutide (1,2 mg/jour)
 

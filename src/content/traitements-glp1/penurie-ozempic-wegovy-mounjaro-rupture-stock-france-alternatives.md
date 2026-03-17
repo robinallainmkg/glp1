@@ -33,8 +33,8 @@ En France, l'ANSM a été contrainte d'émettre plusieurs alertes de tension d'a
 
 La situation s'est globalement améliorée mais reste fragile :
 
-- **Ozempic** (sémaglutide pour le diabète) : approvisionnement redevenu globalement stable, avec des tensions ponctuelles selon les dosages et les régions
-- **Wegovy** (sémaglutide 2,4 mg pour l'obésité) : disponible mais les stocks peuvent être tendus dans certaines pharmacies, surtout aux doses intermédiaires
+- [**Ozempic**](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide pour le diabète) : approvisionnement redevenu globalement stable, avec des tensions ponctuelles selon les dosages et les régions
+- [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg pour l'obésité) : disponible mais les stocks peuvent être tendus dans certaines pharmacies, surtout aux doses intermédiaires
 - **Mounjaro** (tirzépatide) : approvisionnement en cours de montée en charge, tensions possibles aux doses élevées (10 mg, 15 mg)
 - **Saxenda** (liraglutide) : disponibilité stable
 

@@ -97,7 +97,7 @@ Pour le **remboursement**, les mêmes incertitudes que Wegovy et Mounjaro s'appl
 | Dosage | 3, 7, 14 mg | 40, 50 mg (estimé) |
 | Perte de poids | 2 à 4% | 12 à 15% |
 | Contrainte prise | À jeun 30 min | À jeun 30 min |
-| Remboursement FR | 65% (DT2) | Non encore défini |
+| Remboursement FR | Non remboursé (avis HAS défavorable) | Non encore défini |
 | Disponibilité FR | Disponible | Attendu 2027-2028 |
 
 ## Qui sera concerné par le sémaglutide oral ?
@@ -118,7 +118,7 @@ Certains médecins rapportent que des patients refusent de commencer un traiteme
 
 En attendant l'arrivée du comprimé oral pour l'obésité en France, plusieurs options existent :
 
-1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : remboursé à 65%, déjà disponible
+1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : non remboursé par la Sécurité Sociale en France (la HAS a rendu un avis défavorable au remboursement), mais déjà disponible en pharmacie
 2. **Wegovy** (sémaglutide injectable 2,4 mg) pour l'obésité : non remboursé, 169-360 €/mois, disponible dès maintenant
 3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 30%, disponible
 4. **Mounjaro** (tirzepatide injectable, double action GLP-1/GIP) : non remboursé, 230-440 €/mois

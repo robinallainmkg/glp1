@@ -62,8 +62,8 @@ Cette double action explique l'efficacité supérieure de Zepbound par rapport a
 | Traitement | Molécule | Mécanisme | Perte de poids moyenne |
 |------------|----------|-----------|----------------------|
 | Zepbound | Tirzepatide | GLP-1 + GIP | 15-20% |
-| Wegovy | Semaglutide | GLP-1 uniquement | 12-15% |
-| Saxenda | Liraglutide | GLP-1 uniquement | 5-10% |
+| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | Semaglutide | GLP-1 uniquement | 12-15% |
+| [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) | Liraglutide | GLP-1 uniquement | 5-10% |
 | Mounjaro | Tirzepatide | GLP-1 + GIP | 15-20% |
 
 **Zepbound = Mounjaro** : Même molécule (tirzepatide), même efficacité, mais indications différentes.

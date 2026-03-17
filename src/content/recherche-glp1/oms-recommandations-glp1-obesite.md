@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "OMS", "obésité", "recommandations", "recherche", "santé publique"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/oms-recommandations-glp1.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "Recommandations OMS sur les GLP-1 pour le traitement de l'obésité"
 featured: true
 published: true
