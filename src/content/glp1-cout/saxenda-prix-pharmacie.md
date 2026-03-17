@@ -297,7 +297,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 * [acheter Wegovy France](../glp1-cout/acheter-wegovy-en-france/)
 * [dangers Wegovy](../effets-secondaires-glp1/wegovy-danger/)
 * [remboursement Wegovy](../glp1-cout/wegovy-remboursement-mutuelle/)
-* [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+* [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

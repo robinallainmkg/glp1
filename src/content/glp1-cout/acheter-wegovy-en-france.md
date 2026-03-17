@@ -382,10 +382,10 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-* [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-* [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+* [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+* [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 * [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-* [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+* [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 * [prix Wegovy](../glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

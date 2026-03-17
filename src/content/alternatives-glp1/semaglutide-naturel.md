@@ -66,10 +66,10 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 - [opération pour maigrir prix](../glp1-cout/operation-pour-maigrir-prix/)
-- [injection Ozempic prix](../traitements-glp1/ozempic-injection-prix/)
-- [comparatif prix GLP-1](../glp1-cout/wegovy-prix-pharmacie/)
+- [injection Ozempic prix](/collections/glp1-cout/prix-ozempic-france/)
+- [comparatif prix GLP-1](/collections/glp1-cout/prix-wegovy-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

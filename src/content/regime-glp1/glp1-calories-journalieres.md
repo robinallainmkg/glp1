@@ -108,11 +108,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Mètre ruban** : Mesures tour taille/hanches
 - **Photos avant/après** : Motivation visuelle
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

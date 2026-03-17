@@ -127,8 +127,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../glp1-diabete/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../glp1-diabete/traitement-diabete-type-2/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
 - [prix Saxenda](../traitements-glp1/guide-complet-saxenda/)
