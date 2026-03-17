@@ -66,55 +66,94 @@ function appendOutput(name, text, level) {
 
 // ========== HUMAN-READABLE CONSOLE OUTPUT ==========
 
-// Summarize tool calls into clear French
-function summarizeTool(toolName, input) {
+// Track consecutive similar tool calls for grouping
+const toolCounters = new Map(); // name -> { lastTool, count }
+
+// Summarize tool calls into clear French — focuses on ACTIONS, hides noise
+function summarizeTool(agentName, toolName, input) {
   const inp = input || {};
+  const counter = toolCounters.get(agentName) || { lastTool: '', count: 0 };
+
+  // Helper: detect repeated tool type and group them
+  function checkRepeat(toolType, label) {
+    if (counter.lastTool === toolType) {
+      counter.count++;
+      toolCounters.set(agentName, counter);
+      return null; // suppress — will show count when type changes
+    }
+    // Emit grouped count from previous repeated tool
+    let prefix = '';
+    if (counter.count > 1) {
+      prefix = `(${counter.count}x) `;
+    }
+    counter.lastTool = toolType;
+    counter.count = 1;
+    toolCounters.set(agentName, counter);
+    return prefix ? [prefix, label] : label;
+  }
+
   switch (toolName) {
     case 'Read': {
       const f = (inp.file_path || '').split('/').slice(-2).join('/');
-      return f ? `Lecture ${f}` : null;
+      return checkRepeat('read', f ? `📖 ${f}` : null);
     }
     case 'Edit': {
       const f = (inp.file_path || '').split('/').slice(-2).join('/');
-      return `Modification ${f}`;
+      // Always show edits — they're the real work
+      counter.lastTool = 'edit';
+      counter.count = 1;
+      toolCounters.set(agentName, counter);
+      return `✏️ ${f}`;
     }
     case 'Write': {
       const f = (inp.file_path || '').split('/').slice(-2).join('/');
-      return `Ecriture ${f}`;
+      counter.lastTool = 'write';
+      counter.count = 1;
+      toolCounters.set(agentName, counter);
+      return `📝 Nouveau: ${f}`;
     }
     case 'Bash': {
       const cmd = (inp.command || '').trim();
       if (!cmd) return null;
-      if (cmd.includes('git add') || cmd.includes('git commit')) return `Git: ${cmd.slice(0, 80)}`;
-      if (cmd.includes('git push')) return `Git push`;
-      if (cmd.includes('git diff')) return `Git diff`;
-      if (cmd.includes('astro build') || cmd.includes('npm run build')) return `Build du site`;
-      if (cmd.includes('curl') && cmd.includes('supabase')) return `Requete Supabase`;
-      if (cmd.includes('node ')) return `Execution script`;
-      return `Commande: ${cmd.slice(0, 70)}`;
+      if (cmd.includes('git commit')) return `🔀 Git commit`;
+      if (cmd.includes('git push')) return `🚀 Git push`;
+      if (cmd.includes('git add')) return null; // noise before commit
+      if (cmd.includes('git diff') || cmd.includes('git status')) return null; // noise
+      if (cmd.includes('git checkout') && cmd.includes('production')) return `🔀 Checkout production`;
+      if (cmd.includes('git merge')) return `🔀 Merge → production`;
+      if (cmd.includes('astro build') || cmd.includes('npm run build')) return `🏗️ Build du site`;
+      if (cmd.includes('npm run')) return `🏗️ ${cmd.slice(0, 50)}`;
+      // Hide all ls, find, cat, grep, curl noise
+      if (/^(ls|find|cat|head|tail|grep|curl|echo|cd|for |wc )/.test(cmd)) return null;
+      if (cmd.includes('node -e')) return null; // inline scripts = noise
+      if (cmd.includes('node ')) return `⚙️ Script: ${cmd.split('/').pop().slice(0, 40)}`;
+      return null; // hide unknown commands — too noisy
     }
-    case 'Grep': return `Recherche "${inp.pattern || ''}" dans ${inp.path || 'le projet'}`;
-    case 'Glob': return `Scan fichiers ${inp.pattern || ''}`;
-    case 'Agent': return `Sous-agent: ${inp.description || ''}`;
-    case 'WebSearch': return `Recherche web: ${inp.query || ''}`;
-    case 'WebFetch': return `Fetch web`;
-    case 'TodoWrite': return null; // noise
+    case 'Grep': return null; // hide — too noisy, dozens per run
+    case 'Glob': return null; // hide — too noisy
+    case 'Agent': return `🤖 ${inp.description || 'Sous-agent'}`;
+    case 'WebSearch': return `🔍 ${(inp.query || '').slice(0, 50)}`;
+    case 'WebFetch': return null; // noise
+    case 'TodoWrite': return null;
     default: {
       // MCP tools
       if (toolName.includes('execute_sql')) {
-        const sql = (inp.sql || inp.query || '').replace(/\s+/g, ' ').slice(0, 100);
-        return `SQL: ${sql}`;
+        const sql = (inp.sql || inp.query || '').replace(/\s+/g, ' ').trim();
+        // Classify SQL
+        if (/^SELECT/i.test(sql)) return `📊 SQL query`;
+        if (/^INSERT.*agent_runs/i.test(sql)) return `📊 Log agent run`;
+        if (/^UPDATE.*correction_tickets/i.test(sql)) return `📊 Update tickets`;
+        if (/^UPDATE.*agent_runs/i.test(sql)) return `📊 Update agent run`;
+        if (/^INSERT.*correction_tickets/i.test(sql)) return `📊 Nouveau ticket`;
+        if (/^INSERT.*validation_results/i.test(sql)) return `📊 Resultat validation`;
+        return `📊 SQL`;
       }
       if (toolName.includes('supabase') || toolName.includes('mcp__100191b9')) {
         const action = toolName.split('__').pop();
-        return `Supabase: ${action}`;
+        return `📊 ${action}`;
       }
-      // Generic MCP
-      if (toolName.startsWith('mcp__')) {
-        const parts = toolName.split('__');
-        return `Outil: ${parts[parts.length - 1]}`;
-      }
-      return `Outil: ${toolName}`;
+      if (toolName.startsWith('mcp__')) return null; // hide unknown MCP
+      return null;
     }
   }
 }
@@ -125,9 +164,14 @@ function isUsefulText(line) {
   // Skip markdown formatting noise
   if (/^[#\-\*]{1,3}\s*$/.test(line)) return false;
   if (/^```/.test(line)) return false;
-  // Skip thinking/planning filler
+  if (/^\|[\s\-\|:]+\|$/.test(line)) return false; // table separators
+  // Skip thinking/planning filler (EN + FR)
   if (/^(Let me|I'll|I need to|I should|Now I|First,|Next,|OK |Alright|Looking at|Let's|Checking|Hmm|Ok,)/i.test(line)) return false;
   if (/^(Thinking|Analyzing|Considering|Planning|Reviewing|Understanding)/i.test(line)) return false;
+  if (/^(Voyons|Laisse-moi|Je vais|Bien,|Maintenant|D'accord|Commençons|Parfait)/i.test(line)) return false;
+  if (/^(Je dois|Il faut|On va|Ensuite)/i.test(line)) return false;
+  // Skip repetitive status lines
+  if (/^(L'autopilot|Le serveur|C'est\.\.\.)/i.test(line)) return false;
   // Keep everything else (results, actions, summaries)
   return true;
 }
@@ -167,7 +211,7 @@ function parseStreamJson(name, rawLine) {
                 appendOutput(name, `${prefix}${trimmed}`, cls);
               }
             } else if (block.type === 'tool_use') {
-              const summary = summarizeTool(block.name, block.input);
+              const summary = summarizeTool(name, block.name, block.input);
               if (summary) appendOutput(name, `   ↳ ${summary}`, 'tool');
             }
           }
@@ -218,7 +262,7 @@ function parseStreamJson(name, rawLine) {
         break;
 
       case 'tool_use': {
-        const summary = summarizeTool(event.name, event.input);
+        const summary = summarizeTool(name, event.name, event.input);
         if (summary) appendOutput(name, `   ↳ ${summary}`, 'tool');
         break;
       }
