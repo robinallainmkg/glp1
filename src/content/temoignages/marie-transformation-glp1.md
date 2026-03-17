@@ -1,12 +1,13 @@
 ---
-title: "Marie L. : -32 kg en 12 Mois avec Wegovy"
-description: "Marie L., 39 ans, a perdu 32 kilos en 12 mois avec Wegovy. Découvrez son parcours, ses défis et ses résultats avec le sémaglutide."
+title: "Témoignage Wegovy Perte de Poids : Marie, -32 kg en 12 Mois"
+description: "Témoignage wegovy perte de poids : Marie L., 39 ans, raconte comment elle a perdu 32 kilos en 12 mois avec le sémaglutide. Parcours complet."
 author: "Marie L."
 image: "/images/temoignages/mariejourney9.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["wegovy", "sémaglutide", "perte de poids", "transformation", "32 kilos", "mère de famille", "lyon"]
 pubDate: 2025-08-15T00:00:00.000Z
+date: "2025-08-15"
 featured: true
 priority: 1
 mainKeyword: "temoignage wegovy perte de poids"

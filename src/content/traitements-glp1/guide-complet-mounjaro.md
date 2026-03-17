@@ -1,7 +1,7 @@
 ---
-title: "Mounjaro 2025 : Guide Complet Perte de Poids"
+title: "Mounjaro Guide Complet France 2025 : Tirzepatide Résultats"
 slug: "guide-complet-mounjaro"
-description: "🔥 Mounjaro : LE traitement révolutionnaire qui fait perdre 15-20% du poids ! Prix France, témoignages, effets secondaires. Guide complet 2025."
+description: "Mounjaro guide complet France tirzepatide : perdez 15-20% de votre poids. Prix, posologie, effets secondaires et témoignages. Tout savoir en 2025."
 author: "Dr. Martin"
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "traitements-glp1"

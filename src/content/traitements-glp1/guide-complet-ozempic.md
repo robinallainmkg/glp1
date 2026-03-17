@@ -1,7 +1,7 @@
 ---
-title: "Guide Complet Ozempic : Prix et Effets Secondaires"
+title: "Ozempic Guide Complet France : Posologie, Prix et Effets"
 slug: "guide-complet-ozempic"
-description: "Découvrez tout sur Ozempic : traitement GLP-1 pour le diabète et la perte de poids. Prix, effets secondaires, posologie et alternatives."
+description: "Ozempic guide complet France : posologie, prix et effets secondaires du traitement GLP-1. Tout savoir sur le sémaglutide pour diabète et perte de poids."
 author: "Dr. Martin"
 image: "/images/thumbnails/ozempic-medical-guide.jpg"
 collection: "traitements-glp1"

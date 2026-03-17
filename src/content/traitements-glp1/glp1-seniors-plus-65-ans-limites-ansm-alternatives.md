@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 après 65 ans : Limites ANSM, Risques et Alternatives"
-description: "L'ANSM limite les GLP-1 anti-obésité aux moins de 65 ans. Pourquoi cette limite ? Risques chez les seniors et alternatives disponibles. Guide complet 2026."
+title: "GLP-1 Personne Âgée Senior Plus 65 Ans : Limites et Alternatives"
+description: "GLP-1 personne âgée senior plus 65 ans : l'ANSM limite ces traitements aux moins de 65 ans. Risques, raisons médicales et alternatives disponibles."
 pubDate: 2026-03-17
+date: "2026-03-17"
 updatedAt: 2026-03-17
 author: "Dr. Marie Dubois"
 category: "Traitements"

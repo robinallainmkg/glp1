@@ -1,6 +1,6 @@
 ---
-title: "Serena Williams et le GLP-1 : Expérience et Leçons à Retenir"
-description: "Découvrez l'expérience de Serena Williams avec les traitements GLP-1. Comment la championne a utilisé ces médicaments pour sa santé et sa forme physique."
+title: "Serena Williams et le GLP-1 (glp1) : Son Expérience Complète"
+description: "Serena Williams et le glp1 : découvrez comment la championne a utilisé ces médicaments pour sa santé et sa forme physique. Leçons à retenir."
 author: "Dr. Martin"
 image: "/images/thumbnails/serena.webp"
 collection: "temoignages"
