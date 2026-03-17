@@ -1,5 +1,5 @@
 ---
-title: "Mounjaro Remboursement Sécurité Sociale 2026 : Conditions et Calendrier"
+title: "Mounjaro Remboursement Sécurité Sociale 2026 : Guide"
 description: "Mounjaro remboursement Sécurité Sociale 2026 : conditions IMC ≥35, avis HAS ASMR 4, négociations CEPS en cours. Date prévisionnelle 2e semestre 2026."
 keywords: ['mounjaro remboursement securite sociale', 'mounjaro remboursement 2026', 'mounjaro conditions remboursement', 'mounjaro has avis', 'mounjaro ceps negociations', 'remboursement tirzepatide france', 'mounjaro imc 35 remboursement']
 seoTitle: "Mounjaro Remboursement Sécurité Sociale 2026 : Guide"
@@ -119,8 +119,8 @@ Pour ces patients, le traitement restera à leur charge, au prix libre pratiqué
 En attendant la finalisation du dossier Mounjaro, voici le statut des autres GLP-1 sur le marché français :
 
 - **Ozempic** (sémaglutide) : remboursé à 30% pour le **diabète de type 2 uniquement**
-- **Victoza** (liraglutide) : remboursé à 30% pour le **diabète de type 2**
-- **Trulicity** (dulaglutide) : remboursé à 30% pour le **diabète de type 2**
+- **Victoza** (liraglutide) : remboursé à **65%** pour le **diabète de type 2**
+- **Trulicity** (dulaglutide) : remboursé à **65%** pour le **diabète de type 2**
 - **Rybelsus** (sémaglutide oral) : remboursé à 30% pour le **diabète de type 2**
 - **Saxenda** (liraglutide obésité) : **non remboursé**
 - **Wegovy** (sémaglutide obésité) : **non remboursé**

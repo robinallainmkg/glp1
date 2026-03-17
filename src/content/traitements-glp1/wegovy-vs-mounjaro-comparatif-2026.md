@@ -149,7 +149,7 @@ Les deux traitements ne sont **pas rembourses par la Securite Sociale** en mars 
 
 La situation evolue rapidement pour les deux traitements :
 
-**Wegovy** : La HAS a rendu un **avis favorable au remboursement le 20 fevrier 2026** pour les adultes avec un IMC >= 35 kg/m2 apres echec de la prise en charge nutritionnelle bien conduite. Les negociations de prix entre Novo Nordisk et le CEPS sont en cours. Un remboursement pourrait intervenir au **2e semestre 2026**.
+**Wegovy** : La HAS a rendu un **avis favorable au remboursement le 4 décembre 2024** pour les adultes avec un IMC >= 35 kg/m2 apres echec de la prise en charge nutritionnelle bien conduite. Les negociations de prix entre Novo Nordisk et le CEPS sont en cours. Un remboursement pourrait intervenir au **2e semestre 2026**.
 
 **Mounjaro** : La HAS a rendu un **avis favorable le 19 novembre 2025** (avis CT21349) pour le diabete de type 2 et l'obesite (IMC >= 35). Les negociations tarifaires avec le CEPS sont egalement en cours. Le remboursement est attendu au **2e semestre 2026**.
 

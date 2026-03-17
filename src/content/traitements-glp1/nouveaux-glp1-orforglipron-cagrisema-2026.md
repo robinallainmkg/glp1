@@ -89,7 +89,7 @@ L'étude REDEFINE 1, publiée en 2025 dans le *New England Journal of Medicine*,
 
 | Critère | CagriSema | Sémaglutide seul | Différence |
 |---------|-----------|------------------|------------|
-| Perte de poids à 68 semaines | **22,7%** | 15,2% | +7,5% |
+| Perte de poids à 68 semaines | **22,7%** | 16,1% | +6,6% |
 | Patients avec ≥20% de perte | 41% | 22% | +19 points |
 | Réduction tour de taille | -20,4 cm | -13,9 cm | -6,5 cm |
 | Réduction HbA1c (DT2) | -2,2% | -1,7% | -0,5% |
