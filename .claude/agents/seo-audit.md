@@ -42,6 +42,9 @@ Pour chaque page HTML :
 #### 3.4 Images et accessibilite
 - Verifie que toutes les `<img>` ont un attribut `alt`
 - Verifie que les images ne sont pas trop volumineuses (> 500KB)
+- Verifie que chaque article dans `src/content/` a une image/thumbnail dans son frontmatter (`image`, `thumbnail`, ou `heroImage`). Si absente : severity `warning`, audit_type `images`
+- Verifie que les images referencees dans le frontmatter existent reellement dans `public/` ou `src/assets/`
+- Dans les pages de collections (`dist/collections/*/index.html`, `dist/*/index.html` qui listent des articles), verifie que chaque article liste a bien une image visible (`<img>` dans le card/lien). Si une image est absente ou cassee : severity `warning`, audit_type `images`
 
 #### 3.5 Maillage interne
 - Identifie les liens internes casses (href vers des pages qui n'existent pas dans `dist/`)
@@ -62,7 +65,7 @@ VALUES ('<run_id>', '<type>', '<severity>', '<url>', '<title>', '<detail>', '<re
 
 **Severites** :
 - `critical` : pas de title, pas de h1, lien casse, pas de robots.txt
-- `warning` : title trop long, pas de meta description, image sans alt, fichier lourd
+- `warning` : title trop long, pas de meta description, image sans alt, thumbnail manquante, image cassee, fichier lourd
 - `info` : ameliorations possibles, optimisations mineures
 - `ok` : element conforme (ne pas inserer, sauf pour le resume)
 
@@ -101,6 +104,8 @@ INSERT INTO correction_tickets (
 | `headings` (pas de h1) | `heading_issue` | `urgent` |
 | `headings` (hierarchie) | `heading_issue` | `warning` |
 | `images` (alt manquant) | `missing_image` | `warning` |
+| `images` (thumbnail manquante) | `missing_image` | `warning` |
+| `images` (image cassee/introuvable) | `missing_image` | `warning` |
 | `internal_links` (lien casse) | `broken_link` | `urgent` |
 
 Ne cree PAS de ticket pour les issues `info` ou les issues globales (robots.txt, performance).

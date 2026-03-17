@@ -67,6 +67,8 @@ import { supabaseConfig } from '../../lib/supabase';
     .badge-type { background: #1e293b; color: #94a3b8; }
 
     .page-url { font-family: monospace; font-size: 0.75rem; color: #94a3b8; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .page-url a { color: #60a5fa; text-decoration: none; transition: color 0.15s; }
+    .page-url a:hover { color: #93c5fd; text-decoration: underline; }
     .issue-title { font-weight: 600; color: #e2e8f0; }
     .issue-detail { font-size: 0.78rem; color: #94a3b8; margin-top: 0.2rem; max-width: 400px; }
     .recommendation { font-size: 0.78rem; color: #4ade80; font-style: italic; }
@@ -112,6 +114,25 @@ import { supabaseConfig } from '../../lib/supabase';
     .comp-stat .comp-value { font-size: 1.25rem; font-weight: 800; }
     .comp-stat .comp-label { font-size: 0.68rem; color: #64748b; }
     .badge-recurring { background: #451a03; color: #fcd34d; font-size: 0.65rem; padding: 1px 5px; border-radius: 4px; margin-left: 0.3rem; font-weight: 600; }
+
+    /* Score bar */
+    .score-bar { display: flex; align-items: center; gap: 0.5rem; }
+    .score-bar-bg { flex: 1; height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; min-width: 60px; }
+    .score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+    .score-value { font-size: 0.72rem; font-weight: 700; min-width: 32px; text-align: right; }
+
+    /* Export button */
+    .export-btn { padding: 0.4rem 0.8rem; border: 1px solid #1e293b; border-radius: 8px; background: #111827; color: #94a3b8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; gap: 0.4rem; }
+    .export-btn:hover { border-color: #334155; color: #e2e8f0; background: #1a2332; }
+
+    /* Sortable headers */
+    .issues-table th.sortable { cursor: pointer; user-select: none; }
+    .issues-table th.sortable:hover { color: #e2e8f0; }
+    .sort-arrow { margin-left: 0.25rem; font-size: 0.65rem; }
+
+    /* Top pages score column */
+    .top-pages-list li { gap: 0.5rem; }
+    .top-page-score { min-width: 60px; }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
     @media (max-width: 768px) {
@@ -195,7 +216,10 @@ import { supabaseConfig } from '../../lib/supabase';
     <div class="issues-section">
       <div class="issues-header">
         <h2>Issues detectees</h2>
-        <span class="issues-count" id="issuesCount"></span>
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <span class="issues-count" id="issuesCount"></span>
+          <button class="export-btn" id="exportBtn" title="Exporter en CSV">&#x2913; CSV</button>
+        </div>
       </div>
       <div id="issuesContent">
         <div class="loading">Chargement des resultats...</div>
@@ -222,6 +246,10 @@ import { supabaseConfig } from '../../lib/supabase';
   let allRuns = [];
   let currentFilter = 'all';
   let searchQuery = '';
+  let sortColumn = 'severity';
+  let sortAsc = true;
+
+  const severityOrder = { critical: 0, warning: 1, info: 2 };
 
   function escapeHtml(str) {
     if (!str) return '';
@@ -266,7 +294,7 @@ import { supabaseConfig } from '../../lib/supabase';
       const meta = r.metadata || {};
       const critical = meta.critical ?? '?';
       const warning = meta.warning ?? '?';
-      return `<option value="${r.id}"${i === 0 ? ' selected' : ''}>${date} — ${r.items_processed || '?'} pages, ${critical}C / ${warning}W — ${r.status}</option>`;
+      return `<option value="${r.id}"${i === 0 ? ' selected' : ''}>${date} — ${r.items_processed || '?'} pages, ${critical} critical / ${warning} warning — ${r.status}</option>`;
     }).join('');
     renderHistory();
     return allRuns[0].id;
@@ -360,16 +388,35 @@ import { supabaseConfig } from '../../lib/supabase';
       .sort((a, b) => b[1].total - a[1].total)
       .slice(0, 5);
 
-    document.getElementById('topPagesList').innerHTML = topPages.map(([url, counts]) => `
+    // Calculate SEO score per page: 100 - (critical*15 + warning*5 + info*1), min 0
+    function calcScore(counts) {
+      return Math.max(0, 100 - (counts.critical * 15 + counts.warning * 5 + counts.info * 1));
+    }
+    function scoreColor(score) {
+      if (score >= 80) return '#4ade80';
+      if (score >= 50) return '#fbbf24';
+      return '#f87171';
+    }
+
+    document.getElementById('topPagesList').innerHTML = topPages.map(([url, counts]) => {
+      const pageLink = url.startsWith('/') ? `https://glp1-france.fr${url}` : url;
+      const score = calcScore(counts);
+      return `
       <li>
-        <span class="top-page-url" title="${escapeHtml(url)}">${escapeHtml(url)}</span>
-        <span class="top-page-counts">
-          ${counts.critical > 0 ? `<span class="mini-badge" style="background:#fef2f2;color:#dc2626">${counts.critical}C</span>` : ''}
-          ${counts.warning > 0 ? `<span class="mini-badge" style="background:#fffbeb;color:#d97706">${counts.warning}W</span>` : ''}
-          ${counts.info > 0 ? `<span class="mini-badge" style="background:#eff6ff;color:#2563eb">${counts.info}I</span>` : ''}
+        <span class="top-page-url" title="${escapeHtml(url)}"><a href="${escapeHtml(pageLink)}" target="_blank" rel="noopener">${escapeHtml(url)}</a></span>
+        <span class="top-page-score">
+          <div class="score-bar">
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:${score}%;background:${scoreColor(score)}"></div></div>
+            <span class="score-value" style="color:${scoreColor(score)}">${score}</span>
+          </div>
         </span>
-      </li>
-    `).join('');
+        <span class="top-page-counts">
+          ${counts.critical > 0 ? `<span class="mini-badge" style="background:#fef2f2;color:#dc2626">${counts.critical} critical</span>` : ''}
+          ${counts.warning > 0 ? `<span class="mini-badge" style="background:#fffbeb;color:#d97706">${counts.warning} warning</span>` : ''}
+          ${counts.info > 0 ? `<span class="mini-badge" style="background:#eff6ff;color:#2563eb">${counts.info} info</span>` : ''}
+        </span>
+      </li>`;
+    }).join('');
 
     // Type distribution
     const typeCounts = {};
@@ -452,16 +499,37 @@ import { supabaseConfig } from '../../lib/supabase';
 
     const recurringSet = window._recurringSet || new Set();
 
+    // Sort
+    filtered.sort((a, b) => {
+      let cmp = 0;
+      if (sortColumn === 'severity') cmp = (severityOrder[a.severity] || 9) - (severityOrder[b.severity] || 9);
+      else if (sortColumn === 'type') cmp = (a.audit_type || '').localeCompare(b.audit_type || '');
+      else if (sortColumn === 'page') cmp = (a.page_url || '').localeCompare(b.page_url || '');
+      else if (sortColumn === 'title') cmp = (a.issue_title || '').localeCompare(b.issue_title || '');
+      return sortAsc ? cmp : -cmp;
+    });
+
+    function sortArrow(col) {
+      if (sortColumn !== col) return '';
+      return `<span class="sort-arrow">${sortAsc ? '&#9650;' : '&#9660;'}</span>`;
+    }
+
     let html = `<table class="issues-table"><thead><tr>
-      <th>Severite</th><th>Type</th><th>Page</th><th>Probleme</th><th>Recommandation</th>
+      <th class="sortable" data-sort="severity">Severite${sortArrow('severity')}</th>
+      <th class="sortable" data-sort="type">Type${sortArrow('type')}</th>
+      <th class="sortable" data-sort="page">Page${sortArrow('page')}</th>
+      <th class="sortable" data-sort="title">Probleme${sortArrow('title')}</th>
+      <th>Recommandation</th>
     </tr></thead><tbody>`;
 
     for (const issue of filtered) {
       const isRecurring = recurringSet.has(`${issue.page_url}||${issue.audit_type}||${issue.issue_title}`);
+      const pageUrl = issue.page_url || '';
+      const fullUrl = pageUrl.startsWith('/') ? `https://glp1-france.fr${pageUrl}` : pageUrl;
       html += `<tr>
         <td><span class="badge badge-${issue.severity}">${issue.severity}</span></td>
         <td><span class="badge badge-type">${escapeHtml(issue.audit_type)}</span></td>
-        <td><div class="page-url" title="${escapeHtml(issue.page_url)}">${escapeHtml(issue.page_url || '-')}</div></td>
+        <td><div class="page-url" title="${escapeHtml(pageUrl)}">${pageUrl ? `<a href="${escapeHtml(fullUrl)}" target="_blank" rel="noopener">${escapeHtml(pageUrl)}</a>` : '-'}</div></td>
         <td>
           <div class="issue-title">${escapeHtml(issue.issue_title)}${isRecurring ? '<span class="badge-recurring">Recurrent</span>' : ''}</div>
           ${issue.issue_detail ? `<div class="issue-detail">${escapeHtml(issue.issue_detail)}</div>` : ''}
@@ -494,6 +562,34 @@ import { supabaseConfig } from '../../lib/supabase';
   document.getElementById('runSelect').addEventListener('change', (e) => {
     loadIssues(e.target.value);
     renderHistory();
+  });
+
+  // Sort columns
+  document.getElementById('issuesContent').addEventListener('click', (e) => {
+    const th = e.target.closest('th.sortable');
+    if (!th) return;
+    const col = th.dataset.sort;
+    if (sortColumn === col) { sortAsc = !sortAsc; }
+    else { sortColumn = col; sortAsc = true; }
+    renderIssues();
+  });
+
+  // Export CSV
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    if (allIssues.length === 0) return;
+    const headers = ['Severite', 'Type', 'Page', 'Probleme', 'Detail', 'Recommandation'];
+    const rows = allIssues.map(i => [
+      i.severity, i.audit_type, i.page_url || '', i.issue_title || '', i.issue_detail || '', i.recommendation || ''
+    ].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','));
+    const csv = [headers.join(','), ...rows].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    const run = allRuns.find(r => r.id === document.getElementById('runSelect').value);
+    a.download = `audit-seo-${run ? formatDate(run.started_at).replace(/[/:]/g, '-') : 'export'}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
   });
 
   // Copy command

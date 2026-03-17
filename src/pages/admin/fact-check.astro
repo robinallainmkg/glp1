@@ -28,6 +28,23 @@ import { supabaseConfig } from '../../lib/supabase';
     .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
     .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
+    /* Goal tracker */
+    .goal-tracker { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .goal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .goal-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+    .goal-subtitle { font-size: 0.78rem; color: #64748b; }
+    .goal-pct { font-size: 2.5rem; font-weight: 900; line-height: 1; }
+    .goal-pct-label { font-size: 0.72rem; color: #64748b; margin-top: 0.25rem; }
+    .goal-bar-wrap { background: #1e293b; border-radius: 10px; height: 24px; overflow: hidden; margin-bottom: 0.75rem; position: relative; }
+    .goal-bar-fill { height: 100%; border-radius: 10px; transition: width 0.6s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; font-size: 0.68rem; font-weight: 700; color: white; }
+    .goal-bar-target { position: absolute; top: 0; bottom: 0; width: 2px; background: white; opacity: 0.5; }
+    .goal-bar-target::after { content: attr(data-label); position: absolute; top: -16px; left: 50%; transform: translateX(-50%); font-size: 0.6rem; color: #94a3b8; white-space: nowrap; }
+    .goal-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .goal-detail { text-align: center; padding: 0.75rem; background: #0f1520; border-radius: 8px; }
+    .goal-detail .gd-value { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+    .goal-detail .gd-label { font-size: 0.68rem; color: #64748b; margin-top: 0.35rem; }
+    .goal-detail .gd-pct { font-size: 0.72rem; font-weight: 600; margin-top: 0.15rem; }
+
     /* Stats */
     .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
     .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
@@ -49,11 +66,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
     /* Coverage section */
     .coverage-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
-    .coverage-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; }
-    .coverage-stats { display: flex; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
-    .coverage-stat { display: flex; flex-direction: column; }
-    .coverage-stat .cv-value { font-size: 1.5rem; font-weight: 800; line-height: 1; }
-    .coverage-stat .cv-label { font-size: 0.72rem; color: #64748b; margin-top: 0.25rem; }
+    .coverage-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; }
     .freshness-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; margin-bottom: 0.5rem; }
     .fresh-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
     .fseg-fresh { background: #22c55e; }
@@ -64,13 +77,19 @@ import { supabaseConfig } from '../../lib/supabase';
     .freshness-legend .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
     .stale-list { margin-top: 1rem; }
     .stale-list-title { font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
-    .stale-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; }
+    .stale-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; transition: background 0.1s; }
+    .stale-item:hover { background: #1a2332; }
     .stale-item:last-child { border-bottom: none; }
     .stale-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .stale-days { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+    .stale-slug a { color: #a78bfa; text-decoration: none; }
+    .stale-slug a:hover { color: #c4b5fd; text-decoration: underline; }
+    .stale-collection { font-size: 0.65rem; padding: 1px 6px; border-radius: 8px; background: #1e293b; color: #94a3b8; flex-shrink: 0; }
+    .stale-days { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; flex-shrink: 0; }
     .sd-stale { background: #450a0a; color: #fca5a5; }
     .sd-aging { background: #451a03; color: #fcd34d; }
     .sd-never { background: #1e293b; color: #94a3b8; }
+    .stale-link { font-size: 0.68rem; color: #3b82f6; text-decoration: none; flex-shrink: 0; }
+    .stale-link:hover { text-decoration: underline; }
 
     /* Filters */
     .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
@@ -79,6 +98,9 @@ import { supabaseConfig } from '../../lib/supabase';
     .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
     .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
     .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .filter-sep { width: 1px; height: 20px; background: #1e293b; margin: 0 0.25rem; }
+    .filter-select { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; appearance: none; padding-right: 1.5rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
+    .filter-select:focus { outline: none; border-color: #3b82f6; }
     .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
     .search-input::placeholder { color: #475569; }
     .search-input:focus { outline: none; border-color: #3b82f6; }
@@ -96,18 +118,37 @@ import { supabaseConfig } from '../../lib/supabase';
     .sc-ok { background: #052e16; color: #4ade80; border: 2px solid #166534; }
 
     .article-info { flex: 1; min-width: 0; }
+    .article-title-row { display: flex; align-items: center; gap: 0.5rem; }
     .article-title { font-size: 0.88rem; font-weight: 600; color: #e2e8f0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; }
-    .article-meta { display: flex; gap: 0.5rem; align-items: center; }
+    .article-link { font-size: 0.68rem; color: #3b82f6; text-decoration: none; flex-shrink: 0; opacity: 0; transition: opacity 0.15s; }
+    .article-card-header:hover .article-link { opacity: 1; }
+    .article-link:hover { text-decoration: underline; }
+    .article-slug-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; }
+    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; color: #a78bfa; }
+    .article-slug a { color: #a78bfa; text-decoration: none; }
+    .article-slug a:hover { color: #c4b5fd; text-decoration: underline; }
+    .article-collection-badge { font-size: 0.62rem; padding: 1px 6px; border-radius: 8px; background: #1e293b; color: #94a3b8; }
+    .article-date { color: #475569; }
+    .article-meta { display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0; }
     .ticket-count-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600; }
     .tcb-urgent { background: #450a0a; color: #fca5a5; }
     .tcb-warn { background: #451a03; color: #fcd34d; }
     .tcb-ok { background: #052e16; color: #86efac; }
-    .chevron { font-size: 0.72rem; color: #64748b; transition: transform 0.2s; }
+    .freshness-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.65rem; font-weight: 600; }
+    .fb-fresh { background: #052e16; color: #86efac; }
+    .fb-aging { background: #451a03; color: #fcd34d; }
+    .fb-stale { background: #450a0a; color: #fca5a5; }
+    .chevron { font-size: 0.72rem; color: #64748b; transition: transform 0.2s; flex-shrink: 0; }
     .article-card.open .chevron { transform: rotate(180deg); }
 
     .article-card-body { display: none; padding: 0 1.25rem 1.25rem; }
     .article-card.open .article-card-body { display: block; }
+
+    .article-summary { display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid #1e293b; margin-bottom: 0.5rem; flex-wrap: wrap; }
+    .article-summary-item { font-size: 0.75rem; color: #94a3b8; }
+    .article-summary-item strong { color: #e2e8f0; }
+    .article-summary-link { font-size: 0.75rem; color: #3b82f6; text-decoration: none; margin-left: auto; }
+    .article-summary-link:hover { text-decoration: underline; }
 
     /* Tickets within article */
     .ticket { border: 1px solid #1e293b; border-radius: 10px; margin-top: 0.75rem; overflow: hidden; }
@@ -127,6 +168,7 @@ import { supabaseConfig } from '../../lib/supabase';
     .ts-in_progress { background: #451a03; color: #fcd34d; }
     .ts-ready_to_deploy { background: #312e81; color: #a5b4fc; }
     .ts-rejected { background: #450a0a; color: #fca5a5; }
+    .ts-pending_review { background: #1e293b; color: #94a3b8; }
 
     .ticket-body { padding: 0.75rem; }
     .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
@@ -157,9 +199,17 @@ import { supabaseConfig } from '../../lib/supabase';
 
     .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
 
+    /* Collection coverage grid */
+    .collection-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+    .coll-card { background: #0f1520; border-radius: 8px; padding: 0.75rem; }
+    .coll-name { font-size: 0.75rem; font-weight: 600; color: #e2e8f0; margin-bottom: 0.35rem; }
+    .coll-bar { height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; margin-bottom: 0.25rem; }
+    .coll-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
+    .coll-stats { font-size: 0.68rem; color: #64748b; }
+
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
-    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } .diff-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 768px) { .main { padding: 1rem; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } .diff-grid { grid-template-columns: 1fr; } .goal-details { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .main { padding: 1rem; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .collection-grid { grid-template-columns: 1fr 1fr; } }
   </style>
 </head>
 <body>
@@ -176,7 +226,7 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="page-header">
     <div class="page-header-left">
       <h1>Fact-Check</h1>
-      <p>Verification medicale des articles — Agent Fact-Check</p>
+      <p>Verification medicale des articles — Objectif : 100% verifies tous les 14 jours</p>
     </div>
     <div class="header-actions">
       <span class="last-update" id="lastUpdate">-</span>
@@ -190,31 +240,49 @@ import { supabaseConfig } from '../../lib/supabase';
       <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Verifie les articles&quot; --agent fact-check');this.textContent='Copie !'">Copier</button>
     </div>
 
+    <!-- Goal tracker: 14-day coverage -->
+    <div class="goal-tracker" id="goalTracker" style="display:none">
+      <div class="goal-header">
+        <div>
+          <div class="goal-title">Objectif : 100% des articles verifies sous 14 jours</div>
+          <div class="goal-subtitle" id="goalSubtitle">-</div>
+        </div>
+        <div style="text-align:right">
+          <div class="goal-pct" id="goalPct" style="color:#64748b">-</div>
+          <div class="goal-pct-label">couverture 14j</div>
+        </div>
+      </div>
+      <div class="goal-bar-wrap">
+        <div class="goal-bar-fill" id="goalBar" style="width:0%;background:#64748b"></div>
+      </div>
+      <div class="goal-details" id="goalDetails"></div>
+    </div>
+
     <!-- Stats -->
     <div class="stats-grid">
       <div class="stat-card">
         <div class="label">Articles verifies</div>
-        <div class="value" id="statTotal" style="color:#1e293b">-</div>
+        <div class="value" id="statTotal" style="color:#e2e8f0">-</div>
         <div class="sub">Total unique</div>
       </div>
       <div class="stat-card">
         <div class="label">Urgents</div>
-        <div class="value" id="statUrgent" style="color:#dc2626">-</div>
+        <div class="value" id="statUrgent" style="color:#f87171">-</div>
         <div class="sub">Action requise</div>
       </div>
       <div class="stat-card">
         <div class="label">A verifier</div>
-        <div class="value" id="statWarn" style="color:#d97706">-</div>
+        <div class="value" id="statWarn" style="color:#fbbf24">-</div>
         <div class="sub">Corrections mineures</div>
       </div>
       <div class="stat-card">
         <div class="label">Conformes</div>
-        <div class="value" id="statOk" style="color:#22c55e">-</div>
+        <div class="value" id="statOk" style="color:#4ade80">-</div>
         <div class="sub">Aucune action</div>
       </div>
       <div class="stat-card">
         <div class="label">Tickets crees</div>
-        <div class="value" id="statTickets" style="color:#8b5cf6">-</div>
+        <div class="value" id="statTickets" style="color:#a78bfa">-</div>
         <div class="sub">Corrections pour l'editorial</div>
       </div>
     </div>
@@ -232,8 +300,10 @@ import { supabaseConfig } from '../../lib/supabase';
 
     <!-- Coverage & freshness -->
     <div class="coverage-section" id="coverageSection" style="display:none">
-      <div class="coverage-title">Couverture fact-check</div>
-      <div class="coverage-stats" id="coverageStats"></div>
+      <div class="coverage-title">
+        <span>Fraicheur par collection</span>
+        <span id="coverageSummary" style="font-size:0.72rem;font-weight:400;color:#64748b"></span>
+      </div>
       <div class="freshness-bar" id="freshnessBar"></div>
       <div class="freshness-legend">
         <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> &lt; 14 jours</div>
@@ -241,6 +311,7 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> &gt; 30 jours</div>
         <div class="legend-item"><div class="legend-dot" style="background:#94a3b8"></div> Jamais verifie</div>
       </div>
+      <div class="collection-grid" id="collectionGrid"></div>
       <div class="stale-list" id="staleList"></div>
     </div>
 
@@ -250,6 +321,16 @@ import { supabaseConfig } from '../../lib/supabase';
       <button class="filter-btn" data-filter="urgent" onclick="setFilter('urgent')">Urgents</button>
       <button class="filter-btn" data-filter="warning" onclick="setFilter('warning')">A verifier</button>
       <button class="filter-btn" data-filter="ok" onclick="setFilter('ok')">Conformes</button>
+      <div class="filter-sep"></div>
+      <select class="filter-select" id="collectionFilter" onchange="setCollectionFilter(this.value)">
+        <option value="all">Toutes les collections</option>
+      </select>
+      <select class="filter-select" id="freshnessFilter" onchange="setFreshnessFilter(this.value)">
+        <option value="all">Toute fraicheur</option>
+        <option value="fresh">&lt; 14 jours</option>
+        <option value="aging">14-30 jours</option>
+        <option value="stale">&gt; 30 jours</option>
+      </select>
       <input type="text" class="search-input" placeholder="Rechercher un article..." oninput="setSearch(this.value)" />
     </div>
 
@@ -280,7 +361,10 @@ import { supabaseConfig } from '../../lib/supabase';
   const SB_URL = supabaseUrl;
   const SB_KEY = supabaseAnonKey;
   let allArticles = [];
+  let allArticlesData = [];
   let currentFilter = 'all';
+  let currentCollectionFilter = 'all';
+  let currentFreshnessFilter = 'all';
   let currentSearch = '';
 
   function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
@@ -291,6 +375,11 @@ import { supabaseConfig } from '../../lib/supabase';
     });
     if (!r.ok) throw new Error(await r.text());
     return r.json();
+  }
+
+  function articleUrl(collection, slug) {
+    if (!collection || !slug) return null;
+    return `/collections/${collection}/${slug}`;
   }
 
   function scoreCircle(score) {
@@ -305,18 +394,26 @@ import { supabaseConfig } from '../../lib/supabase';
     return 'ok';
   }
 
+  function freshnessCategory(checkedAt) {
+    if (!checkedAt) return 'never';
+    const days = Math.round((Date.now() - new Date(checkedAt).getTime()) / 86400000);
+    if (days < 14) return 'fresh';
+    if (days < 30) return 'aging';
+    return 'stale';
+  }
+
   function typeLabel(t) {
-    const m = { price_update: 'Prix', info_outdated: 'Info obsolete', false_claim: 'Claim faux', missing_info: 'Info manquante', context_fr: 'Contexte FR' };
+    const m = { price_update: 'Prix', info_outdated: 'Info obsolete', false_claim: 'Claim faux', missing_info: 'Info manquante', context_fr: 'Contexte FR', seo_optimization: 'SEO', content_refresh: 'Refresh' };
     return m[t] || t || '?';
   }
 
   function statusLabel(s) {
-    const m = { approved: 'Approuve', in_progress: 'En cours', ready_to_deploy: 'Pret', deployed: 'Deploye', rejected: 'Rejete' };
+    const m = { approved: 'Approuve', in_progress: 'En cours', ready_to_deploy: 'Pret', deployed: 'Deploye', rejected: 'Rejete', pending_review: 'En attente' };
     return m[s] || s;
   }
 
   function timeAgo(d) {
-    if (!d) return '-';
+    if (!d) return 'Jamais';
     const now = new Date(), then = new Date(d);
     const h = Math.round((now - then) / 3600000);
     if (h < 1) return "A l'instant";
@@ -327,9 +424,24 @@ import { supabaseConfig } from '../../lib/supabase';
     return then.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
   }
 
+  function daysAgo(d) {
+    if (!d) return Infinity;
+    return Math.round((Date.now() - new Date(d).getTime()) / 86400000);
+  }
+
   window.setFilter = function(f) {
     currentFilter = f;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    renderArticles();
+  };
+
+  window.setCollectionFilter = function(c) {
+    currentCollectionFilter = c;
+    renderArticles();
+  };
+
+  window.setFreshnessFilter = function(f) {
+    currentFreshnessFilter = f;
     renderArticles();
   };
 
@@ -347,10 +459,17 @@ import { supabaseConfig } from '../../lib/supabase';
     if (currentFilter !== 'all') {
       filtered = filtered.filter(a => scoreCategory(a.score) === currentFilter);
     }
+    if (currentCollectionFilter !== 'all') {
+      filtered = filtered.filter(a => a.collection === currentCollectionFilter);
+    }
+    if (currentFreshnessFilter !== 'all') {
+      filtered = filtered.filter(a => freshnessCategory(a.checkedAt) === currentFreshnessFilter);
+    }
     if (currentSearch) {
       filtered = filtered.filter(a =>
         (a.title || '').toLowerCase().includes(currentSearch) ||
-        (a.slug || '').toLowerCase().includes(currentSearch)
+        (a.slug || '').toLowerCase().includes(currentSearch) ||
+        (a.collection || '').toLowerCase().includes(currentSearch)
       );
     }
 
@@ -366,25 +485,49 @@ import { supabaseConfig } from '../../lib/supabase';
       const cat = scoreCategory(a.score);
       const urgentTickets = a.tickets.filter(t => t.urgence === 'urgent').length;
       const warnTickets = a.tickets.filter(t => t.urgence === 'warning').length;
+      const url = articleUrl(a.collection, a.slug);
+      const fresh = freshnessCategory(a.checkedAt);
+      const days = daysAgo(a.checkedAt);
 
       let ticketBadges = '';
       if (urgentTickets > 0) ticketBadges += `<span class="ticket-count-badge tcb-urgent">${urgentTickets} urgent${urgentTickets > 1 ? 's' : ''}</span>`;
       if (warnTickets > 0) ticketBadges += `<span class="ticket-count-badge tcb-warn">${warnTickets} warning${warnTickets > 1 ? 's' : ''}</span>`;
       if (a.tickets.length === 0) ticketBadges = `<span class="ticket-count-badge tcb-ok">OK</span>`;
 
+      let freshBadge = '';
+      if (fresh === 'fresh') freshBadge = `<span class="freshness-badge fb-fresh">${days}j</span>`;
+      else if (fresh === 'aging') freshBadge = `<span class="freshness-badge fb-aging">${days}j</span>`;
+      else if (fresh === 'stale') freshBadge = `<span class="freshness-badge fb-stale">${days}j</span>`;
+      else freshBadge = `<span class="freshness-badge fb-stale">Jamais</span>`;
+
+      const checkedDate = a.checkedAt ? new Date(a.checkedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Jamais verifie';
+
       return `<div class="article-card${i === 0 ? ' open' : ''}" id="article-${a.resultId}">
         <div class="article-card-header" onclick="toggleArticle('${a.resultId}')">
           ${scoreCircle(a.score)}
           <div class="article-info">
-            <div class="article-title">${esc(a.title)}</div>
-            <div class="article-slug">${esc(a.slug)} · ${a.tickets.length} ticket${a.tickets.length > 1 ? 's' : ''} · ${timeAgo(a.checkedAt)}</div>
+            <div class="article-title-row">
+              <span class="article-title">${esc(a.title)}</span>
+              ${url ? `<a href="${url}" class="article-link" target="_blank" onclick="event.stopPropagation()">Voir l'article &#x2197;</a>` : ''}
+            </div>
+            <div class="article-slug-row">
+              <span class="article-slug">${url ? `<a href="${url}" target="_blank" onclick="event.stopPropagation()">${esc(a.collection)}/${esc(a.slug)}</a>` : esc(a.slug)}</span>
+              <span class="article-collection-badge">${esc(a.collection)}</span>
+              <span class="article-date">${a.tickets.length} ticket${a.tickets.length > 1 ? 's' : ''} · ${timeAgo(a.checkedAt)}</span>
+            </div>
           </div>
-          <div class="article-meta">${ticketBadges}</div>
+          <div class="article-meta">${freshBadge}${ticketBadges}</div>
           <div class="chevron">&#x25BC;</div>
         </div>
         <div class="article-card-body">
+          <div class="article-summary">
+            <span class="article-summary-item">Score: <strong>${a.score}/100</strong></span>
+            <span class="article-summary-item">Verifie le: <strong>${checkedDate}</strong></span>
+            <span class="article-summary-item">Tickets: <strong>${a.tickets.length}</strong></span>
+            ${url ? `<a href="${url}" class="article-summary-link" target="_blank">Ouvrir l'article &#x2197;</a>` : ''}
+          </div>
           ${a.tickets.length === 0
-            ? `<div style="padding:0.75rem;color:#94a3b8;font-size:0.82rem">Aucun probleme detecte — score ${a.score}/100</div>`
+            ? `<div style="padding:0.75rem;color:#4ade80;font-size:0.82rem">Aucun probleme detecte — article conforme</div>`
             : a.tickets.map(t => {
               const urgClass = t.urgence === 'urgent' ? 'ud-urgent' : t.urgence === 'warning' ? 'ud-warning' : 'ud-ok';
               const ttClass = t.urgence === 'urgent' ? 'tt-urgent' : t.urgence === 'warning' ? 'tt-warning' : 'tt-ok';
@@ -393,16 +536,16 @@ import { supabaseConfig } from '../../lib/supabase';
                 <div class="ticket-header">
                   <div class="urgence-dot ${urgClass}"></div>
                   <span class="ticket-type ${ttClass}">${esc(typeLabel(t.ticket_type))}</span>
-                  <span class="ticket-desc">${esc((t.claim_original || t.before_exact || '').substring(0, 80))}</span>
+                  <span class="ticket-desc">${esc(t.claim_original || (t.before_exact || '').substring(0, 100))}</span>
                   <span class="ticket-status ${tsClass}">${esc(statusLabel(t.statut))}</span>
                 </div>
                 <div class="ticket-body">
                   ${t.before_exact || t.after_suggested ? `<div class="diff-grid">
-                    ${t.before_exact ? `<div class="diff-block diff-before"><div class="diff-label">Erreur detectee</div>${esc(t.before_exact)}</div>` : ''}
-                    ${t.after_suggested ? `<div class="diff-block diff-after"><div class="diff-label">Correction suggeree</div>${esc(t.after_suggested)}</div>` : ''}
+                    ${t.before_exact ? `<div class="diff-block diff-before"><div class="diff-label">Texte actuel</div>${esc(t.before_exact)}</div>` : ''}
+                    ${t.after_suggested ? `<div class="diff-block diff-after"><div class="diff-label">Correction proposee</div>${esc(t.after_suggested)}</div>` : ''}
                   </div>` : ''}
-                  ${t.realite_actuelle ? `<div class="ticket-context">${esc(t.realite_actuelle)}</div>` : ''}
-                  ${t.source_reference ? `<div class="ticket-source">&#x1F4CE; <a href="${esc(t.source_reference)}" target="_blank" rel="noopener">${esc(t.source_reference)}</a></div>` : ''}
+                  ${t.realite_actuelle ? `<div class="ticket-context"><strong>Contexte :</strong> ${esc(t.realite_actuelle)}</div>` : ''}
+                  ${t.source_reference ? `<div class="ticket-source">Source : <a href="${esc(t.source_reference)}" target="_blank" rel="noopener">${esc(t.source_reference)}</a></div>` : ''}
                 </div>
               </div>`;
             }).join('')
@@ -441,11 +584,13 @@ import { supabaseConfig } from '../../lib/supabase';
         const dotClass = r.status === 'completed' ? 'run-dot-ok' : 'run-dot-fail';
         const date = new Date(r.started_at);
         const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+        const avgScore = meta.avg_score ? ` · Score moy. ${Math.round(meta.avg_score)}` : '';
+        const ticketsCreated = meta.tickets_created ? ` · ${meta.tickets_created} tickets` : '';
         return `<div class="run-item">
           <div class="run-dot ${dotClass}"></div>
           <div class="run-info">
             <div class="run-date">${esc(dateStr)}</div>
-            <div class="run-meta">${r.items_processed || '?'} articles verifies</div>
+            <div class="run-meta">${r.items_processed || '?'} articles${avgScore}${ticketsCreated}</div>
           </div>
           <div class="run-badges">
             ${r.items_errors ? `<span class="run-badge" style="background:#fee2e2;color:#991b1b">${r.items_errors} issues</span>` : `<span class="run-badge" style="background:#d1fae5;color:#065f46">OK</span>`}
@@ -482,41 +627,75 @@ import { supabaseConfig } from '../../lib/supabase';
     `).join('');
   }
 
+  function renderGoalTracker(articles) {
+    if (!articles || articles.length === 0) return;
+    const now = Date.now();
+    const DAY = 86400000;
+    const total = articles.length;
+    const fresh = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * DAY).length;
+    const aging = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY && (now - new Date(a.last_fact_checked).getTime()) < 30 * DAY).length;
+    const stale = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 30 * DAY).length;
+    const never = articles.filter(a => !a.last_fact_checked).length;
+    const pctFresh = total > 0 ? Math.round(fresh / total * 100) : 0;
+    const remaining = total - fresh;
+
+    document.getElementById('goalTracker').style.display = 'block';
+
+    // Goal percentage color
+    let goalColor = '#ef4444';
+    if (pctFresh >= 90) goalColor = '#4ade80';
+    else if (pctFresh >= 70) goalColor = '#22c55e';
+    else if (pctFresh >= 50) goalColor = '#fbbf24';
+    else if (pctFresh >= 25) goalColor = '#f59e0b';
+
+    document.getElementById('goalPct').textContent = pctFresh + '%';
+    document.getElementById('goalPct').style.color = goalColor;
+    document.getElementById('goalSubtitle').textContent = remaining > 0
+      ? `${remaining} article${remaining > 1 ? 's' : ''} a (re)verifier pour atteindre 100%`
+      : 'Tous les articles sont a jour !';
+
+    const bar = document.getElementById('goalBar');
+    bar.style.width = pctFresh + '%';
+    bar.style.background = `linear-gradient(90deg, ${goalColor}, ${goalColor}dd)`;
+    bar.textContent = pctFresh > 5 ? pctFresh + '%' : '';
+
+    document.getElementById('goalDetails').innerHTML = `
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#4ade80">${fresh}</div>
+        <div class="gd-label">&lt; 14 jours</div>
+        <div class="gd-pct" style="color:#4ade80">${total > 0 ? Math.round(fresh/total*100) : 0}%</div>
+      </div>
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#fbbf24">${aging}</div>
+        <div class="gd-label">14-30 jours</div>
+        <div class="gd-pct" style="color:#fbbf24">${total > 0 ? Math.round(aging/total*100) : 0}%</div>
+      </div>
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#f87171">${stale}</div>
+        <div class="gd-label">&gt; 30 jours</div>
+        <div class="gd-pct" style="color:#f87171">${total > 0 ? Math.round(stale/total*100) : 0}%</div>
+      </div>
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#94a3b8">${never}</div>
+        <div class="gd-label">Jamais verifie</div>
+        <div class="gd-pct" style="color:#94a3b8">${total > 0 ? Math.round(never/total*100) : 0}%</div>
+      </div>
+    `;
+  }
+
   function renderCoverage(articles) {
     if (!articles || articles.length === 0) return;
-    const now = new Date();
+    const now = Date.now();
     const DAY = 86400000;
 
     const total = articles.length;
-    const verified = articles.filter(a => a.last_fact_checked).length;
-    const fresh = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked)) < 14 * DAY).length;
-    const aging = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked)) >= 14 * DAY && (now - new Date(a.last_fact_checked)) < 30 * DAY).length;
-    const stale = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked)) >= 30 * DAY).length;
+    const fresh = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * DAY).length;
+    const aging = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY && (now - new Date(a.last_fact_checked).getTime()) < 30 * DAY).length;
+    const stale = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 30 * DAY).length;
     const never = articles.filter(a => !a.last_fact_checked).length;
 
     document.getElementById('coverageSection').style.display = 'block';
-
-    // Coverage stats
-    const pctVerified = total > 0 ? Math.round(verified / total * 100) : 0;
-    const pctFresh = total > 0 ? Math.round(fresh / total * 100) : 0;
-    document.getElementById('coverageStats').innerHTML = `
-      <div class="coverage-stat">
-        <div class="cv-value" style="color:#1e293b">${verified}/${total}</div>
-        <div class="cv-label">Articles verifies (${pctVerified}%)</div>
-      </div>
-      <div class="coverage-stat">
-        <div class="cv-value" style="color:#22c55e">${fresh}</div>
-        <div class="cv-label">Verifies &lt; 14 jours (${pctFresh}%)</div>
-      </div>
-      <div class="coverage-stat">
-        <div class="cv-value" style="color:#f59e0b">${aging}</div>
-        <div class="cv-label">14-30 jours</div>
-      </div>
-      <div class="coverage-stat">
-        <div class="cv-value" style="color:#ef4444">${stale + never}</div>
-        <div class="cv-label">&gt; 30 jours ou jamais</div>
-      </div>
-    `;
+    document.getElementById('coverageSummary').textContent = `${fresh}/${total} a jour · ${aging + stale + never} a reverifier`;
 
     // Freshness bar
     const pct = v => (v / total * 100).toFixed(1);
@@ -527,21 +706,68 @@ import { supabaseConfig } from '../../lib/supabase';
       never > 0 ? `<div class="fresh-seg fseg-never" style="width:${pct(never)}%">${never}</div>` : '',
     ].join('');
 
-    // Stale articles list (top 10 most outdated)
+    // Collection breakdown
+    const collections = {};
+    for (const a of articles) {
+      const c = a.collection || 'sans-collection';
+      if (!collections[c]) collections[c] = { total: 0, fresh: 0, aging: 0, stale: 0, never: 0 };
+      collections[c].total++;
+      if (!a.last_fact_checked) collections[c].never++;
+      else {
+        const d = (now - new Date(a.last_fact_checked).getTime()) / DAY;
+        if (d < 14) collections[c].fresh++;
+        else if (d < 30) collections[c].aging++;
+        else collections[c].stale++;
+      }
+    }
+
+    // Populate collection filter
+    const select = document.getElementById('collectionFilter');
+    const existingOptions = select.querySelectorAll('option:not(:first-child)');
+    existingOptions.forEach(o => o.remove());
+    Object.keys(collections).sort().forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = `${c} (${collections[c].total})`;
+      select.appendChild(opt);
+    });
+
+    // Collection grid
+    const sortedColls = Object.entries(collections).sort((a, b) => {
+      const pctA = a[1].fresh / a[1].total;
+      const pctB = b[1].fresh / b[1].total;
+      return pctA - pctB;
+    });
+
+    document.getElementById('collectionGrid').innerHTML = sortedColls.map(([name, c]) => {
+      const pctFresh = Math.round(c.fresh / c.total * 100);
+      let barColor = '#ef4444';
+      if (pctFresh >= 80) barColor = '#22c55e';
+      else if (pctFresh >= 50) barColor = '#f59e0b';
+      return `<div class="coll-card">
+        <div class="coll-name">${esc(name)}</div>
+        <div class="coll-bar"><div class="coll-bar-fill" style="width:${pctFresh}%;background:${barColor}"></div></div>
+        <div class="coll-stats">${c.fresh}/${c.total} a jour (${pctFresh}%)${c.never > 0 ? ` · ${c.never} jamais` : ''}</div>
+      </div>`;
+    }).join('');
+
+    // Stale articles list
     const staleArticles = articles
-      .filter(a => !a.last_fact_checked || (now - new Date(a.last_fact_checked)) >= 14 * DAY)
-      .slice(0, 10); // Already sorted by last_fact_checked ASC NULLS FIRST
+      .filter(a => !a.last_fact_checked || (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY)
+      .slice(0, 15);
 
     if (staleArticles.length > 0) {
+      const totalStale = articles.filter(a => !a.last_fact_checked || (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY).length;
       document.getElementById('staleList').innerHTML = `
-        <div class="stale-list-title">&#x26A0; Articles a re-verifier en priorite</div>
+        <div class="stale-list-title">&#x26A0; Articles a re-verifier en priorite (${totalStale} au total)</div>
         ${staleArticles.map(a => {
           let daysText, daysClass;
+          const url = articleUrl(a.collection, a.slug);
           if (!a.last_fact_checked) {
-            daysText = 'Jamais verifie';
+            daysText = 'Jamais';
             daysClass = 'sd-never';
           } else {
-            const days = Math.round((now - new Date(a.last_fact_checked)) / DAY);
+            const days = Math.round((now - new Date(a.last_fact_checked).getTime()) / DAY);
             if (days > 30) {
               daysText = days + 'j';
               daysClass = 'sd-stale';
@@ -551,8 +777,10 @@ import { supabaseConfig } from '../../lib/supabase';
             }
           }
           return `<div class="stale-item">
-            <span class="stale-slug" title="${esc(a.title)}">${esc(a.slug)}</span>
+            <span class="stale-slug">${url ? `<a href="${url}" target="_blank" title="${esc(a.title)}">${esc(a.collection)}/${esc(a.slug)}</a>` : `<span title="${esc(a.title)}">${esc(a.slug)}</span>`}</span>
+            <span class="stale-collection">${esc(a.collection || '-')}</span>
             <span class="stale-days ${daysClass}">${daysText}</span>
+            ${url ? `<a href="${url}" target="_blank" class="stale-link">Voir &#x2197;</a>` : ''}
           </div>`;
         }).join('')}
       `;
@@ -561,11 +789,13 @@ import { supabaseConfig } from '../../lib/supabase';
 
   async function loadAll() {
     try {
-      const [results, tickets, allArticlesData] = await Promise.all([
-        sbFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,articles(id,slug,title,collection)&order=score_fiabilite.asc,checked_at.desc&limit=100'),
+      const [results, tickets, articlesRaw] = await Promise.all([
+        sbFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,articles(id,slug,title,collection)&order=score_fiabilite.asc,checked_at.desc&limit=500'),
         sbFetch('correction_tickets', 'select=*&source_agent=eq.fact-check&order=created_at.desc&limit=500'),
         sbFetch('articles', 'select=id,slug,title,collection,is_active,last_fact_checked&is_active=eq.true&order=last_fact_checked.asc.nullsfirst')
       ]);
+
+      allArticlesData = articlesRaw;
 
       // Group tickets by fact_check_result_id
       const ticketsByResult = {};
@@ -616,15 +846,16 @@ import { supabaseConfig } from '../../lib/supabase';
 
       // Filter counts
       const counts = { all: allArticles.length, urgent, warning: warn, ok };
-      document.querySelectorAll('.filter-btn').forEach(btn => {
+      document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
         const f = btn.dataset.filter;
         const existing = btn.querySelector('.filter-count');
         if (existing) existing.remove();
-        if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
+        if (counts[f] !== undefined) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
       });
 
+      renderGoalTracker(articlesRaw);
       renderDistrib();
-      renderCoverage(allArticlesData);
+      renderCoverage(articlesRaw);
       renderArticles();
       renderPipeline(tickets);
       loadRuns();

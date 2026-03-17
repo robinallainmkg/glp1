@@ -45,11 +45,21 @@ SELECT 'agent_runs', agent_name || ':' || status, COUNT(*) FROM agent_runs WHERE
 ORDER BY type, status;
 ```
 
+Ajoute aussi le ratio de fact-check coverage :
+```sql
+SELECT
+  COUNT(*) FILTER (WHERE last_fact_checked IS NULL) as never_checked,
+  COUNT(*) as total_active,
+  ROUND(100.0 * COUNT(*) FILTER (WHERE last_fact_checked IS NULL) / NULLIF(COUNT(*), 0)) as pct_unchecked
+FROM articles WHERE is_active = true;
+```
+
 Analyse rapide :
 - `tickets approved` = stock a traiter
 - `opportunities approved` = articles a creer
 - `links approved` = maillage a inserer
 - Agent runs des dernieres 24h = qui a deja tourne
+- `pct_unchecked` = pourcentage d'articles jamais fact-checkes
 
 ### Phase 2 — GENERATE (creer du travail)
 
@@ -123,26 +133,67 @@ Puis **RECOMMENCE AU PHASE 1**. Ne t'arrete pas.
 
 ## REGLES DE PRIORISATION
 
-### Quand il y a beaucoup de tickets (>= 20)
+### Regle 0 — Fact-check coverage (PRIORITAIRE)
+
+**Si pct_unchecked >= 30%** (plus de 30% des articles actifs n'ont jamais ete fact-checkes) :
+- Lance fact-check EN PRIORITE, SEUL (pas les autres generateurs)
+- Prompt special : "Verifie les articles jamais fact-checkes en priorite (last_fact_checked IS NULL). Traite-en un maximum."
+- Ensuite editorial pour traiter les tickets generes
+- Puis validator
+- **Repete cette regle** jusqu'a pct_unchecked < 30%
+- Les autres generateurs (seo-audit, opportunities, internal-links) attendent que la couverture fact-check soit suffisante
+
+Raison : la credibilite medicale du site est la priorite #1. Pas de SEO ni de maillage tant que le contenu n'est pas fiable.
+
+### Regle 1 — Tickets urgents
+
+**Si tickets avec urgence = 'urgent' > 0** :
+- Lance editorial immediatement (skip Generate)
+- L'editorial traite les urgents en premier (son ORDER BY le fait deja)
+- Puis validator
+- Puis retour au CHECK
+
+### Regle 2 — Beaucoup de tickets (>= 20)
 - Skip Generate
 - Lance editorial directement (il prend 20 tickets max par run)
 - Lance validator
 - Recommence (le stock diminue a chaque cycle)
 
-### Quand il y a peu de tickets (< 10)
+### Regle 3 — Peu de tickets (< 10) et coverage fact-check OK
 - Lance Generate (les 4 agents en parallele)
 - Attend qu'ils finissent
 - Lance editorial avec le nouveau stock
 - Lance validator
 - Recommence
 
-### Quand il y a 0 ticket
+### Regle 4 — 0 ticket
 - Lance Generate obligatoirement
 - Si apres Generate il y a toujours 0 ticket → lance un deuxieme round de Generate avec des prompts plus agressifs :
   - seo-audit avec focus sur les problemes mineurs
   - fact-check sur TOUS les articles (pas juste les anciens)
   - opportunities avec recherche elargie
 - Si toujours 0 → log "pipeline sain, rien a faire" et relance quand meme un cycle (les fact-check peuvent toujours trouver qqch)
+
+### Resume de la logique de decision
+
+```
+CHECK → pct_unchecked, nb_tickets, nb_urgents
+
+SI pct_unchecked >= 30%:
+  → fact-check seul → editorial → validator → LOOP
+
+SINON SI nb_urgents > 0:
+  → editorial direct → validator → LOOP
+
+SINON SI nb_tickets >= 20:
+  → editorial direct → validator → LOOP
+
+SINON SI nb_tickets < 10:
+  → Generate (4 agents parallele) → editorial → validator → LOOP
+
+SINON (10-19 tickets, pas d'urgents):
+  → editorial → validator → LOOP
+```
 
 ## GESTION DES ERREURS
 
@@ -173,23 +224,33 @@ Puis **RECOMMENCE AU PHASE 1**. Ne t'arrete pas.
 
 ```
 === CYCLE 1 ===
-CHECK: 3 tickets approved, 0 opportunities, 2 links
-→ Stock faible, lance Generate
-GENERATE: [seo-audit, fact-check, opportunities, internal-links] en parallele
-  → seo-audit: +8 tickets
-  → fact-check: +5 tickets
-  → opportunities: +2 opportunites
-  → internal-links: +6 liens
-CHECK: 16 tickets, 2 opportunities, 8 links
-PROCESS: editorial traite 16 tickets + 8 liens + 2 opportunites
-VALIDATE: validator trouve 3 problemes → 3 nouveaux tickets
+CHECK: 11 tickets approved (3 urgents), 0 opps, 0 links, pct_unchecked=39%
+→ Regle 0 : coverage < 30% → fact-check prioritaire
+GENERATE: fact-check SEUL (articles jamais verifies)
+  → fact-check: +14 tickets sur 15 articles verifies
+CHECK: 25 tickets approved, pct_unchecked=25% (< 30%, OK)
+→ Regle 2 : >= 20 tickets → editorial direct
+PROCESS: editorial traite 20 tickets (urgents d'abord)
+VALIDATE: validator trouve 2 problemes → +2 tickets
 DEPLOY: commit + push
-LOG: cycle 1 complete, 16 corrections, 8 liens, 2 articles, 3 nouveaux tickets
+LOG: cycle 1 complete, 20 corrections, pct_unchecked 39%→25%
 
 === CYCLE 2 ===
-CHECK: 3 tickets approved (crees par validator)
-→ Stock faible, lance Generate
-GENERATE: [...]
+CHECK: 7 tickets approved, 0 urgents, pct_unchecked=25%
+→ Regle 3 : < 10 tickets, coverage OK → Generate complet
+GENERATE: [seo-audit, fact-check, opportunities, internal-links] en parallele
+  → seo-audit: +6 tickets
+  → fact-check: +4 tickets (articles restants)
+  → opportunities: +2 opportunites
+  → internal-links: +5 liens
+PROCESS: editorial traite 17 tickets + 5 liens + 2 opps
+VALIDATE: validator OK
+DEPLOY: commit + push
+LOG: cycle 2 complete
+
+=== CYCLE 3 ===
+CHECK: 0 tickets, pct_unchecked=12%
+→ Regle 4 : 0 ticket → Generate obligatoire
 ...
 ```
 

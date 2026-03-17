@@ -51,38 +51,123 @@ const running = new Map();
 const MAX_LINES = 500;
 const outputBuffers = new Map(); // name -> { lines: [], offset: 0 }
 
-function appendOutput(name, text) {
+function appendOutput(name, text, level) {
   if (!outputBuffers.has(name)) outputBuffers.set(name, { lines: [], startedAt: new Date().toISOString() });
   const buf = outputBuffers.get(name);
   const newLines = text.split('\n');
   for (const line of newLines) {
     if (line.trim()) {
-      buf.lines.push({ ts: new Date().toISOString(), text: line });
+      buf.lines.push({ ts: new Date().toISOString(), text: line, level: level || 'info' });
       if (buf.lines.length > MAX_LINES) buf.lines.shift();
     }
   }
 }
 
-// Parse stream-json output from claude CLI
+// ========== HUMAN-READABLE CONSOLE OUTPUT ==========
+
+// Summarize tool calls into clear French
+function summarizeTool(toolName, input) {
+  const inp = input || {};
+  switch (toolName) {
+    case 'Read': {
+      const f = (inp.file_path || '').split('/').slice(-2).join('/');
+      return f ? `Lecture ${f}` : null;
+    }
+    case 'Edit': {
+      const f = (inp.file_path || '').split('/').slice(-2).join('/');
+      return `Modification ${f}`;
+    }
+    case 'Write': {
+      const f = (inp.file_path || '').split('/').slice(-2).join('/');
+      return `Ecriture ${f}`;
+    }
+    case 'Bash': {
+      const cmd = (inp.command || '').trim();
+      if (!cmd) return null;
+      if (cmd.includes('git add') || cmd.includes('git commit')) return `Git: ${cmd.slice(0, 80)}`;
+      if (cmd.includes('git push')) return `Git push`;
+      if (cmd.includes('git diff')) return `Git diff`;
+      if (cmd.includes('astro build') || cmd.includes('npm run build')) return `Build du site`;
+      if (cmd.includes('curl') && cmd.includes('supabase')) return `Requete Supabase`;
+      if (cmd.includes('node ')) return `Execution script`;
+      return `Commande: ${cmd.slice(0, 70)}`;
+    }
+    case 'Grep': return `Recherche "${inp.pattern || ''}" dans ${inp.path || 'le projet'}`;
+    case 'Glob': return `Scan fichiers ${inp.pattern || ''}`;
+    case 'Agent': return `Sous-agent: ${inp.description || ''}`;
+    case 'WebSearch': return `Recherche web: ${inp.query || ''}`;
+    case 'WebFetch': return `Fetch web`;
+    case 'TodoWrite': return null; // noise
+    default: {
+      // MCP tools
+      if (toolName.includes('execute_sql')) {
+        const sql = (inp.sql || inp.query || '').replace(/\s+/g, ' ').slice(0, 100);
+        return `SQL: ${sql}`;
+      }
+      if (toolName.includes('supabase') || toolName.includes('mcp__100191b9')) {
+        const action = toolName.split('__').pop();
+        return `Supabase: ${action}`;
+      }
+      // Generic MCP
+      if (toolName.startsWith('mcp__')) {
+        const parts = toolName.split('__');
+        return `Outil: ${parts[parts.length - 1]}`;
+      }
+      return `Outil: ${toolName}`;
+    }
+  }
+}
+
+// Filter assistant text: keep meaningful lines, skip thinking/filler
+function isUsefulText(line) {
+  if (!line || line.length < 3) return false;
+  // Skip markdown formatting noise
+  if (/^[#\-\*]{1,3}\s*$/.test(line)) return false;
+  if (/^```/.test(line)) return false;
+  // Skip thinking/planning filler
+  if (/^(Let me|I'll|I need to|I should|Now I|First,|Next,|OK |Alright|Looking at|Let's|Checking|Hmm|Ok,)/i.test(line)) return false;
+  if (/^(Thinking|Analyzing|Considering|Planning|Reviewing|Understanding)/i.test(line)) return false;
+  // Keep everything else (results, actions, summaries)
+  return true;
+}
+
+// Classify text importance: 'action' | 'result' | 'progress' | 'info' | null
+function classifyText(line) {
+  if (/(\d+)\s*(tickets?|corrections?|articles?|problemes?|erreurs?|liens?|issues?)\s*(crees?|trouves?|traites?|inseres?|verifies?|corriges?|generes?)/i.test(line)) return 'result';
+  if (/(termine|complete|fini|done|succes|success|deploye)/i.test(line)) return 'result';
+  if (/^(CYCLE|PHASE|VAGUE|ETAPE|MODE|=+)/i.test(line)) return 'progress';
+  if (/(score|position|coverage|pourcentage|moyenne|rank).*\d/i.test(line)) return 'result';
+  if (/(article|page|fichier).*:/i.test(line) && line.length < 150) return 'action';
+  if (/^(Correction|Insertion|Creation|Verification|Modification|Mise a jour|Traitement)/i.test(line)) return 'action';
+  if (/(erreur|error|failed|echoue|broken|manquant|missing)/i.test(line)) return 'error';
+  return 'info';
+}
+
+// Track per-agent cost
+const agentCosts = new Map(); // name -> total USD
+
+// Parse stream-json output from claude CLI — human-readable version
 function parseStreamJson(name, rawLine) {
   if (!rawLine.trim()) return;
   try {
     const event = JSON.parse(rawLine);
-    // Types: system, assistant, result, tool_use, tool_result, etc.
-    const ts = new Date().toISOString();
 
     switch (event.type) {
       case 'assistant':
-        // Assistant text message
         if (event.message?.content) {
           for (const block of event.message.content) {
             if (block.type === 'text' && block.text) {
-              // Split long text into lines
               for (const line of block.text.split('\n')) {
-                if (line.trim()) appendOutput(name, `💬 ${line}`);
+                const trimmed = line.trim();
+                if (!trimmed) continue;
+                if (!isUsefulText(trimmed)) continue;
+                const cls = classifyText(trimmed);
+                const prefix = cls === 'result' ? '✅ ' : cls === 'progress' ? '📍 ' : cls === 'action' ? '▸ ' : cls === 'error' ? '❌ ' : '';
+                appendOutput(name, `${prefix}${trimmed}`, cls);
               }
             } else if (block.type === 'tool_use') {
-              appendOutput(name, `🔧 Tool: ${block.name}${block.input ? ' — ' + JSON.stringify(block.input).slice(0, 150) : ''}`);
+              const summary = summarizeTool(block.name, block.input);
+              if (summary) appendOutput(name, `   ↳ ${summary}`, 'tool');
             }
           }
         }
@@ -90,21 +175,25 @@ function parseStreamJson(name, rawLine) {
 
       case 'content_block_delta':
         if (event.delta?.type === 'text_delta' && event.delta.text) {
-          // Streaming text deltas — accumulate
           const text = event.delta.text;
+          const buf = outputBuffers.get(name);
+          // Accumulate text deltas into complete lines
           if (text.includes('\n')) {
             for (const line of text.split('\n')) {
-              if (line.trim()) appendOutput(name, `💬 ${line}`);
+              const trimmed = line.trim();
+              if (!trimmed) continue;
+              if (!isUsefulText(trimmed)) continue;
+              const cls = classifyText(trimmed);
+              const prefix = cls === 'result' ? '✅ ' : cls === 'progress' ? '📍 ' : cls === 'action' ? '▸ ' : cls === 'error' ? '❌ ' : '';
+              appendOutput(name, `${prefix}${trimmed}`, cls);
             }
           } else if (text.trim()) {
-            // Append to last line if it's a partial
-            const buf = outputBuffers.get(name);
             const last = buf?.lines[buf.lines.length - 1];
-            if (last && last.text.startsWith('💬 ') && (Date.now() - new Date(last.ts).getTime()) < 2000) {
+            if (last && !last.text.startsWith('   ↳') && (Date.now() - new Date(last.ts).getTime()) < 3000) {
               last.text += text;
-              last.ts = ts;
-            } else {
-              appendOutput(name, `💬 ${text}`);
+              last.ts = new Date().toISOString();
+            } else if (isUsefulText(text.trim())) {
+              appendOutput(name, text.trim(), 'info');
             }
           }
         }
@@ -112,41 +201,60 @@ function parseStreamJson(name, rawLine) {
 
       case 'result':
         if (event.result) {
-          appendOutput(name, `✅ Resultat final recu`);
+          appendOutput(name, `━━━ TERMINE ━━━`, 'result');
           if (typeof event.result === 'string') {
-            for (const line of event.result.split('\n').slice(0, 10)) {
-              if (line.trim()) appendOutput(name, `📋 ${line}`);
+            for (const line of event.result.split('\n').slice(0, 5)) {
+              if (line.trim()) appendOutput(name, `  ${line.trim()}`, 'result');
             }
           }
         }
         if (event.cost_usd !== undefined) {
-          appendOutput(name, `💰 Cout: $${event.cost_usd.toFixed(4)}`);
+          const cost = event.cost_usd;
+          const prev = agentCosts.get(name) || 0;
+          agentCosts.set(name, prev + cost);
+          appendOutput(name, `💰 Cout de ce run: $${cost.toFixed(3)} (total: $${(prev + cost).toFixed(3)})`, 'cost');
         }
         break;
 
-      case 'tool_use':
-        appendOutput(name, `🔧 ${event.name || 'tool'}(${JSON.stringify(event.input || {}).slice(0, 120)})`);
+      case 'tool_use': {
+        const summary = summarizeTool(event.name, event.input);
+        if (summary) appendOutput(name, `   ↳ ${summary}`, 'tool');
         break;
+      }
 
-      case 'tool_result':
-        const preview = typeof event.content === 'string' ? event.content.slice(0, 100) : JSON.stringify(event.content || '').slice(0, 100);
-        appendOutput(name, `📎 Resultat: ${preview}${preview.length >= 100 ? '...' : ''}`);
+      case 'tool_result': {
+        // Only show tool results that contain useful info (errors, counts, etc.)
+        const content = typeof event.content === 'string' ? event.content : JSON.stringify(event.content || '');
+        // Show errors
+        if (/error|fail|exception/i.test(content) && content.length < 300) {
+          appendOutput(name, `   ⚠ ${content.slice(0, 150)}`, 'error');
+        }
+        // Show results with numbers (likely counts, scores)
+        else if (/\d+\s*(rows?|articles?|tickets?|created|inserted|updated|deleted)/i.test(content)) {
+          const match = content.match(/(\d+\s*(rows?|articles?|tickets?|created|inserted|updated|deleted)[^.]*)/i);
+          if (match) appendOutput(name, `   → ${match[1]}`, 'result');
+        }
+        // Skip everything else (file contents, large JSON, etc.)
         break;
+      }
 
       case 'system':
-        appendOutput(name, `⚙️ ${event.message || event.subtype || 'system'}`);
+        if (event.subtype === 'init') {
+          appendOutput(name, `🚀 Agent initialise`, 'progress');
+        } else if (event.message) {
+          appendOutput(name, `⚙ ${event.message}`, 'info');
+        }
         break;
 
       default:
-        // Log unknown events for debugging
-        if (event.type) {
-          appendOutput(name, `⚡ [${event.type}] ${JSON.stringify(event).slice(0, 120)}`);
-        }
+        // Skip ALL noise: rate_limit_event, content_block_start/stop, message_start/stop, etc.
+        break;
     }
   } catch(e) {
-    // Not valid JSON — log as raw text
-    if (rawLine.trim()) {
-      appendOutput(name, rawLine.trim());
+    // Not valid JSON — only show non-empty, non-debug lines
+    const trimmed = rawLine.trim();
+    if (trimmed && !trimmed.startsWith('{') && trimmed.length > 5) {
+      appendOutput(name, trimmed, 'info');
     }
   }
 }
@@ -270,21 +378,76 @@ async function sbInsert(table, data) {
   } catch(e) { return null; }
 }
 
-function launchAgent(name) {
-  if (running.has(name)) {
-    return { ok: false, error: `${name} est deja en cours` };
+// Resolve instance name: fact-check -> fact-check, fact-check (if running) -> fact-check-2, etc.
+function resolveInstanceName(baseName) {
+  if (!running.has(baseName)) return baseName;
+  for (let i = 2; i <= 10; i++) {
+    const instanceName = `${baseName}-${i}`;
+    if (!running.has(instanceName)) return instanceName;
   }
+  return null; // max 10 instances
+}
 
-  const prompt = AGENTS[name];
+// Get the base agent name (strip instance suffix)
+function getBaseAgent(instanceName) {
+  // Check direct match first
+  if (AGENTS[instanceName]) return instanceName;
+  // Try stripping -N suffix
+  const match = instanceName.match(/^(.+)-(\d+)$/);
+  if (match && AGENTS[match[1]]) return match[1];
+  return null;
+}
+
+function launchAgent(name, { allowMultiple = false } = {}) {
+  const baseAgent = getBaseAgent(name) || name;
+  const prompt = AGENTS[baseAgent];
   if (!prompt) {
     return { ok: false, error: `Agent inconnu: ${name}` };
   }
 
-  console.log(`🚀 [${new Date().toLocaleTimeString()}] Lancement: ${name}`);
+  let instanceName = name;
+  if (running.has(name)) {
+    if (!allowMultiple) {
+      return { ok: false, error: `${name} est deja en cours` };
+    }
+    // Find next available instance name
+    instanceName = resolveInstanceName(baseAgent);
+    if (!instanceName) {
+      return { ok: false, error: `Max instances atteint pour ${baseAgent}` };
+    }
+  }
+
+  // Count how many instances of this base agent are running (for partitioning)
+  let runningInstanceCount = 0;
+  for (const [k, info] of running) {
+    if (info.baseAgent === baseAgent || k === baseAgent) runningInstanceCount++;
+  }
+  const totalInstances = runningInstanceCount + 1; // including this new one
+  const instanceIndex = runningInstanceCount; // 0-based
+
+  // Build partitioned prompt to avoid cannibalization
+  let finalPrompt = prompt;
+  if (totalInstances > 1) {
+    const partitions = [
+      { range: 'a-g', desc: 'slugs commencant par a a g' },
+      { range: 'h-n', desc: 'slugs commencant par h a n' },
+      { range: 'o-z', desc: 'slugs commencant par o a z' },
+    ];
+    // For > 3 instances, use modulo
+    if (totalInstances <= 3) {
+      const p = partitions[instanceIndex] || partitions[2];
+      finalPrompt += `\n\nPARTITION: Tu es l'instance ${instanceIndex + 1}/${totalInstances}. Traite UNIQUEMENT les articles/pages dont le slug commence par ${p.range}. Ignore les autres pour eviter les doublons avec les autres instances.`;
+    } else {
+      finalPrompt += `\n\nPARTITION: Tu es l'instance ${instanceIndex + 1}/${totalInstances}. Traite UNIQUEMENT les articles dont (id modulo ${totalInstances}) = ${instanceIndex}. Ignore les autres.`;
+    }
+    appendOutput(instanceName, `📍 Instance ${instanceIndex + 1}/${totalInstances} — partition assignee`, 'progress');
+  }
+
+  console.log(`🚀 [${new Date().toLocaleTimeString()}] Lancement: ${instanceName}${instanceName !== baseAgent ? ` (instance ${instanceIndex + 1}/${totalInstances} de ${baseAgent})` : ''}`);
 
   const child = spawn('claude', [
-    '-p', prompt,
-    '--agent', name,
+    '-p', finalPrompt,
+    '--agent', baseAgent,
     '--output-format', 'stream-json',
     '--verbose',
     '--dangerously-skip-permissions'
@@ -294,35 +457,34 @@ function launchAgent(name) {
     env: { ...process.env, PATH: process.env.PATH }
   });
 
-  // Reset output buffer for this agent
-  outputBuffers.set(name, { lines: [{ ts: new Date().toISOString(), text: `🚀 Agent ${name} lance (PID ${child.pid})` }], startedAt: new Date().toISOString() });
+  // Reset output buffer for this instance
+  outputBuffers.set(instanceName, { lines: [{ ts: new Date().toISOString(), text: `🚀 Agent ${instanceName} lance (PID ${child.pid})` }], startedAt: new Date().toISOString() });
 
   let output = '';
   let stdoutBuffer = '';
   child.stdout.on('data', d => {
     const text = d.toString();
     output += text;
-    // stream-json emits one JSON object per line
     stdoutBuffer += text;
     const lines = stdoutBuffer.split('\n');
-    stdoutBuffer = lines.pop(); // keep incomplete last line
+    stdoutBuffer = lines.pop();
     for (const line of lines) {
-      parseStreamJson(name, line);
+      parseStreamJson(instanceName, line);
     }
   });
   child.stderr.on('data', d => {
     const text = d.toString();
     output += text;
-    appendOutput(name, `⚠️ ${text.trim()}`);
+    appendOutput(instanceName, `⚠️ ${text.trim()}`);
   });
 
-  running.set(name, { pid: child.pid, started: new Date() });
+  running.set(instanceName, { pid: child.pid, started: new Date(), baseAgent });
 
   child.on('close', async (code) => {
-    running.delete(name);
+    running.delete(instanceName);
     const status = code === 0 ? 'completed' : 'failed';
-    appendOutput(name, `\n${code === 0 ? '✅' : '❌'} Agent ${name} ${status} (exit code ${code})`);
-    console.log(`${code === 0 ? '✅' : '❌'} [${new Date().toLocaleTimeString()}] ${name} ${status} (exit ${code})`);
+    appendOutput(instanceName, `\n${code === 0 ? '✅' : '❌'} Agent ${instanceName} ${status} (exit code ${code})`);
+    console.log(`${code === 0 ? '✅' : '❌'} [${new Date().toLocaleTimeString()}] ${instanceName} ${status} (exit ${code})`);
 
     // Update queue if we have a task ID
     if (child._queueId) {
@@ -334,28 +496,27 @@ function launchAgent(name) {
     }
 
     // If strategist just completed successfully, execute its decisions
-    if (name === 'strategist' && code === 0) {
+    if (baseAgent === 'strategist' && code === 0) {
       console.log('🤖 Strategist termine — execution des decisions...');
       await executeStrategistDecisions();
     }
 
     // If an editorial agent finished, check if there are remaining tickets
-    if (name.startsWith('editorial') && code === 0) {
-      // Wait 10s for Supabase to settle, then check remaining tickets
-      setTimeout(() => checkAndRelaunchIfNeeded(name), 10000);
+    if (baseAgent.startsWith('editorial') && code === 0) {
+      setTimeout(() => checkAndRelaunchIfNeeded(instanceName), 10000);
     }
   });
 
   // Create queue entry for dashboard tracking
   sbInsert('agent_queue', {
-    agent_name: name,
+    agent_name: instanceName,
     status: 'running',
     started_at: new Date().toISOString()
   }).then(entry => {
     if (entry?.id) child._queueId = entry.id;
   });
 
-  return { ok: true, pid: child.pid };
+  return { ok: true, pid: child.pid, instance: instanceName };
 }
 
 function stopAgent(name) {
@@ -402,8 +563,13 @@ const server = createServer(async (req, res) => {
     for (const [name, buf] of outputBuffers) {
       buffers[name] = { lines: buf.lines.length, startedAt: buf.startedAt, running: running.has(name) };
     }
+    // Aggregate costs
+    const costs = {};
+    for (const [n, c] of agentCosts) costs[n] = c;
+    const totalCost = [...agentCosts.values()].reduce((s, c) => s + c, 0);
+
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers }));
+    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost }));
     return;
   }
 
@@ -432,14 +598,14 @@ const server = createServer(async (req, res) => {
     return;
   }
 
-  // POST /launch — launch an agent
+  // POST /launch — launch an agent (supports { allowMultiple: true } for multi-instance)
   if (req.method === 'POST' && url.pathname === '/launch') {
     let body = '';
     req.on('data', d => body += d);
     req.on('end', () => {
       try {
-        const { agent } = JSON.parse(body);
-        const result = launchAgent(agent);
+        const { agent, allowMultiple } = JSON.parse(body);
+        const result = launchAgent(agent, { allowMultiple: !!allowMultiple });
         res.writeHead(result.ok ? 200 : 409, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(result));
       } catch(e) {
