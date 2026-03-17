@@ -153,50 +153,15 @@ ON CONFLICT (slug) DO NOTHING;
 UPDATE content_opportunities SET status = 'published', updated_at = NOW() WHERE id = '<opp_id>';
 ```
 
-### 5. Git workflow — Commit, build check, merge et deploy
+### 5. Git workflow — Commit et push sur main UNIQUEMENT
 
 Apres toutes les modifications :
 
-1. Stage les fichiers modifies directement sur `main` : `git add src/content/...`
+1. Stage les fichiers modifies : `git add src/content/...`
 2. Commit sur `main` : `git commit -m "editorial: apply <n> corrections, <n> links, <n> new articles (cycle <N>)"`
-3. **BUILD CHECK OBLIGATOIRE** — Lance le build AVANT de push :
-```bash
-npm run build 2>&1
-```
-   - **Si le build PASSE** → continue au step 4
-   - **Si le build ECHOUE** → applique la procedure de rollback ci-dessous
+3. Push sur main : `git push origin main`
 
-4. Push main : `git push origin main`
-5. **Merge sur production et deploy** :
-```bash
-git checkout production
-git pull origin production --rebase
-git merge main --no-edit
-git push origin production
-git checkout main
-```
-
-#### Procedure de rollback si build echoue
-
-Si `npm run build` echoue apres le commit :
-
-1. **Analyse l'erreur** pour identifier le fichier fautif (souvent frontmatter YAML)
-2. **Tente de corriger** le probleme (cle dupliquee, syntaxe YAML, etc.)
-3. **Relance le build** pour verifier la correction
-4. **Si corrige** → commit la correction et continue le deploy
-5. **Si impossible a corriger** → revert le commit et cree un ticket :
-```bash
-git revert HEAD --no-edit
-```
-```sql
-INSERT INTO correction_tickets (slug, title, source_agent, ticket_type, urgence, before_exact, after_suggested, statut)
-VALUES ('<slug_fautif>', 'Build error: <message>', 'editorial', 'build_error', 'urgent',
-  '<erreur_complete>', '<suggestion_correction>', 'approved');
-```
-6. **Continue avec les fichiers restants** si possible
-
-**IMPORTANT** : Ne JAMAIS push sur `main` ou merger sur `production` si le build echoue. Un build casse = deploy casse = site down.
-**IMPORTANT** : Ne PAS creer de branche separee. Committer directement sur `main` puis merger sur `production`. Le push sur `production` declenche le deploy FTP automatique via GitHub Actions.
+**IMPORTANT** : Ne PAS merger sur `production`. Ne PAS lancer `npm run build`. C'est le **validator** qui fait le build check et le merge sur production. L'editorial ne fait QUE modifier les fichiers, commit et push sur `main`.
 
 ### 6. Post-deploy : marquer les tickets deployed
 

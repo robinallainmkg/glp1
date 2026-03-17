@@ -73,17 +73,20 @@ claude -p "Ameliore le design du site" --agent ui-designer
 - **Output** : `content_opportunities` dans Supabase
 
 ### Agent Editorial (`.claude/agents/editorial.md`)
-- **Fonction** : 4 modes — corrections (tickets), maillage interne (liens), creation (opportunites), deploiement
+- **Fonction** : 3 modes — corrections (tickets), maillage interne (liens), creation (opportunites)
 - **Input** : `correction_tickets` (fact-check + validator + seo-audit) + `internal_link_suggestions` + `content_opportunities`
-- **Output** : Fichiers modifies dans `src/content/`, branche + push
+- **Output** : Fichiers modifies dans `src/content/`, commit + push sur `main`
 - **Limites** : 20 tickets + 15 liens + 3 articles par run
 - Seul agent autorise a modifier des fichiers source
+- **Ne deploie PAS** — commit sur `main` uniquement, le validator fait le deploy
 
 ### Agent Validator (`.claude/agents/validator.md`)
-- **Fonction** : Validation technique (build, frontmatter, liens, images, SEO, doublons, sync DB, sitemap, HTML)
+- **Fonction** : Build check + validation technique + **deploy sur production**
 - **Output** : `validation_results` + `correction_tickets` (source_agent='validator') dans Supabase
-- **11 types de checks**, cree des tickets pour l'editorial
-- Filet de securite apres l'agent editorial
+- **12 types de checks** + detection cles YAML dupliquees
+- **Si build OK** → merge `main` sur `production` → push → deploy FTP auto
+- **Si build echoue** → revert + ticket urgent, pas de deploy
+- Dernier rempart avant mise en ligne
 
 ### Agent Internal Links (`.claude/agents/internal-links.md`)
 - **Fonction** : Analyse du maillage interne, suggestions de liens entre articles
@@ -103,11 +106,12 @@ claude -p "Ameliore le design du site" --agent ui-designer
 - `opportunities` → cree des `content_opportunities` → `editorial` les consomme
 - `internal-links` → cree des `internal_link_suggestions` → `editorial` les consomme
 - `analytics` → cree des `correction_tickets` (source_agent='analytics', types: content_refresh, seo_optimization) → `editorial` les consomme
-- `editorial` → modifie les fichiers → `validator` verifie le resultat
-- **Pipeline complet** (3 vagues) :
-  - Vague 1 (parallele) : seo-audit + analytics + fact-check + opportunities + internal-links
-  - Vague 2 : editorial (consomme tous les tickets/suggestions/opportunites)
-  - Vague 3 : validator (verifie le travail editorial)
+- `editorial` → modifie les fichiers, commit+push `main` → `validator` verifie + deploie
+- `validator` → build check → si OK merge `main`→`production` + push (deploy FTP auto)
+- **Pipeline complet** (3 phases sequentielles) :
+  - Phase 1 GENERATE (parallele) : seo-audit + analytics + fact-check + opportunities + internal-links
+  - Phase 2 EDIT : editorial (consomme tous les tickets/suggestions/opportunites, push main)
+  - Phase 3 VALIDATE+DEPLOY : validator (build check, si OK → merge production → deploy)
 
 ### Dashboards Admin
 - **Vue d'ensemble** (`src/pages/admin/index.astro`) — War room temps reel, statut des 7 agents, graphe dependances, live feed

@@ -35,11 +35,8 @@ const AGENTS = {
   'analytics':         'Analyse les keywords et le positionnement',
   'fact-check':        'Verifie les articles contre les sources officielles',
   'opportunities':     'Cherche les opportunites de contenu',
-  'editorial':         'Traite les tickets, liens internes et opportunites',
-  'editorial-medical': 'Corrige les tickets medicaux urgents (false_claim, missing_info, outdated_info, price_update)',
-  'editorial-seo':     'Corrige les tickets SEO et technique + maillage interne',
-  'editorial-content': 'Cree de nouveaux articles + corrections techniques (broken_link, missing_image)',
-  'validator':         'Valide le site - build, frontmatter, liens, images',
+  'editorial':         'Traite les tickets, liens internes et opportunites (commit+push main)',
+  'validator':         'Valide le site (build + deploy production si OK)',
   'internal-links':    'Analyse le maillage interne et suggere des liens',
   'autopilot':         'Lance l\'autopilot. Boucle infinie, traite tout, ne t\'arrete jamais.',
 };
