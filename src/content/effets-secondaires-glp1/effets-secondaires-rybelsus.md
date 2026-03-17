@@ -1,5 +1,5 @@
 ---
-title: "Effets Secondaires Rybelsus (Sémaglutide Oral) : Guide Complet"
+title: "Effets Secondaires Rybelsus Sémaglutide Oral : Guide"
 description: "Effets secondaires Rybelsus (sémaglutide oral) : nausées, troubles digestifs et effets indésirables. Comment les gérer et ce que les études montrent."
 keywords: ['effets secondaires rybelsus', 'rybelsus nausées', 'rybelsus effets indésirables', 'risques rybelsus', 'tolérance rybelsus']
 seoTitle: "Effets Secondaires Rybelsus Sémaglutide Oral : Guide Complet"

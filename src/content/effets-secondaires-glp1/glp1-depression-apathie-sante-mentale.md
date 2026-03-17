@@ -1,5 +1,5 @@
 ---
-title: "Ozempic Dépression et Apathie : Effets Psychologiques des GLP-1"
+title: "Ozempic Dépression et Apathie : Effets Psychologiques"
 description: "Ozempic dépression apathie effets psychologiques : Wegovy, Mounjaro peuvent provoquer des changements d'humeur. Ce que dit la science et que faire en 2026."
 pubDate: 2026-03-15
 date: 2026-03-15
