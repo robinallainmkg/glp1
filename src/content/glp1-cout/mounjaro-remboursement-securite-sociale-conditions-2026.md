@@ -18,7 +18,7 @@ mainKeyword: "Mounjaro remboursement securite sociale conditions 2026"
 secondaryKeywords: ["mounjaro remboursement 2026", "tirzepatide remboursement france", "mounjaro HAS avis ASMR", "mounjaro CEPS négociations", "mounjaro obesite remboursement conditions"]
 ---
 
-Le remboursement de Mounjaro (tirzépatide, Eli Lilly) par l'Assurance Maladie française est l'un des sujets les plus attendus de 2026 dans le domaine de la prise en charge de l'obésité. La Haute Autorité de Santé a rendu un **avis favorable le 9 décembre 2025**, ouvrant la voie aux négociations de prix. Ce guide détaille les conditions qui seront exigées, le calendrier prévisible et ce que cela signifie concrètement pour les patients concernés.
+Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie française est l'un des sujets les plus attendus de 2026 dans le domaine de la prise en charge de l'obésité. La Haute Autorité de Santé a rendu un **avis favorable le 9 décembre 2025**, ouvrant la voie aux négociations de prix. Ce guide détaille les conditions qui seront exigées, le calendrier prévisible et ce que cela signifie concrètement pour les patients concernés.
 
 ## Où en est Mounjaro dans le processus de remboursement ?
 
@@ -69,7 +69,7 @@ En pratique, cela signifie qu'un suivi diététique, une activité physique adap
 
 Compte tenu de la complexité de la prise en charge de l'obésité sévère, la HAS pourrait recommander que la **primo-prescription soit réalisée par un médecin spécialiste** — endocrinologue, nutritionniste ou médecin d'une consultation pluridisciplinaire de l'obésité (CPO).
 
-Le renouvellement pourrait en revanche être possible par le médecin généraliste, comme c'est déjà le cas pour d'autres traitements spécialisés. Depuis juin 2025, la réglementation ANSM a d'ailleurs ouvert la prescription initiale de tous les GLP-1 pour l'obésité à l'ensemble des médecins — une évolution qui pourrait influencer le cadre du remboursement.
+Le renouvellement pourrait en revanche être possible par le médecin généraliste, comme c'est déjà le cas pour d'autres traitements spécialisés. Depuis juin 2025, les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) ont d'ailleurs ouvert la prescription initiale de tous les GLP-1 pour l'obésité à l'ensemble des médecins — une évolution qui pourrait influencer le cadre du remboursement.
 
 ### Un formulaire de demande obligatoire
 

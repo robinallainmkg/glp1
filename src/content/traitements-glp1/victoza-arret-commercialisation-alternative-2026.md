@@ -58,7 +58,7 @@ Les alternatives disponibles en France et remboursées par la Sécurité Sociale
 - **Fréquence** : Injection hebdomadaire
 - **Efficacité** : Supérieure à Victoza — réduction de l'HbA1c de 1,5 à 2% vs 1 à 1,5% avec Victoza
 - **Perte de poids** : Plus importante qu'avec Victoza (environ -4 à -6% vs -2 à -3%)
-- **Remboursement** : Oui, à 30% par la Sécurité Sociale pour le DT2
+- **Remboursement** : Oui, à 30% par la Sécurité Sociale pour le DT2 — voir le [remboursement Ozempic pour le diabète](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/)
 
 #### Trulicity (dulaglutide, injection hebdomadaire)
 [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/) est une autre option remboursée, également en injection hebdomadaire.

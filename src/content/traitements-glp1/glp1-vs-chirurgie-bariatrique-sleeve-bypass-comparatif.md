@@ -118,7 +118,7 @@ Pour les patients éligibles, la chirurgie est donc **sans reste à charge direc
 Wegovy et Mounjaro ne sont actuellement pas remboursés pour l'obésité en France (mars 2026). Leur coût mensuel est entièrement à la charge du patient :
 
 - **Wegovy** : 169 € à 360 €/mois selon dosage
-- **Mounjaro** : 230 € à 440 €/mois selon dosage
+- **Mounjaro** : 230 € à 440 €/mois selon dosage — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 
 Sur 2 à 3 ans de traitement (durée recommandée pour une perte de poids optimale), le coût total peut atteindre 5 000 à 12 000 €.
 
@@ -138,7 +138,7 @@ Un remboursement partiel est prévu pour le second semestre 2026 (sous condition
 
 - **IMC ≥ 30** (avec comorbidité) ou IMC ≥ 35 pour certaines indications
 - **Pas de contre-indication** : antécédents de cancer médullaire thyroïdien, pancréatite chronique, grossesse
-- **Prescription médicale** : depuis juin 2025, tout médecin peut prescrire (plus seulement les spécialistes)
+- **Prescription médicale** : depuis juin 2025, tout médecin peut prescrire selon les [conditions de prescription GLP-1 en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) (plus seulement les spécialistes)
 - **Accessibilité immédiate** : disponibles en pharmacie sans délai d'attente
 
 ## Les avantages décisifs de chaque approche

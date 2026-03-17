@@ -18,7 +18,7 @@ mainKeyword: "remboursement Ozempic diabète justificatif prescription 2026"
 secondaryKeywords: ["ozempic remboursement diabète 2026", "victoza remboursement sécurité sociale", "trulicity remboursement diabète", "justificatif prescription glp1 diabète", "glp1 diabète type 2 remboursé"]
 ---
 
-Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou Trulicity pour le diabète de type 2 est devenu plus complexe. Un nouveau dispositif de justificatif de prescription obligatoire a été mis en place par l'Assurance Maladie, et beaucoup de patients et de médecins se retrouvent désorientés face à ces nouvelles règles. Ce guide pratique explique tout ce que vous devez savoir pour continuer à bénéficier du remboursement de votre traitement GLP-1 anti-diabétique sans interruption.
+Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou Trulicity pour le diabète de type 2 est devenu plus complexe. Un nouveau dispositif de justificatif de prescription obligatoire a été mis en place par l'Assurance Maladie, et beaucoup de patients et de médecins se retrouvent désorientés face à ces [nouvelles règles](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/). Ce guide pratique explique tout ce que vous devez savoir pour continuer à bénéficier du remboursement de votre traitement GLP-1 anti-diabétique sans interruption.
 
 ## Quels GLP-1 sont remboursés pour le diabète en 2026 ?
 
@@ -26,7 +26,7 @@ Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou Trul
 
 En France en 2026, plusieurs médicaments de la classe des agonistes GLP-1 sont remboursés par l'Assurance Maladie **uniquement dans l'indication diabète de type 2** :
 
-- **Ozempic** (sémaglutide 0,5 mg, 1 mg, 2 mg hebdomadaire, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5 mg, 1 mg, 2 mg hebdomadaire, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)
 - **Victoza** (liraglutide 0,6 mg, 1,2 mg, 1,8 mg quotidien, Novo Nordisk) — remboursé à **65 %** (100 % en ALD diabète)
 - **Trulicity** (dulaglutide 0,75 mg, 1,5 mg, 3 mg, 4,5 mg hebdomadaire, Eli Lilly) — remboursé à **65 %** (100 % en ALD diabète)
 - **Rybelsus** (sémaglutide oral 3 mg, 7 mg, 14 mg quotidien, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)

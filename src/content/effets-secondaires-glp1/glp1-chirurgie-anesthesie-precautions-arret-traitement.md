@@ -30,7 +30,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Si vous prenez Ozempic, Wegovy ou Mounjaro et qu'une opération chirurgicale se profile, une question cruciale se pose : faut-il arrêter votre traitement avant l'intervention ? La réponse est oui — et les raisons médicales derrière cette recommandation sont sérieuses. Les sociétés d'anesthésie françaises et internationales ont mis en garde contre un risque spécifique, celui de la pneumopathie d'inhalation, qui peut survenir si le traitement n'est pas interrompu à temps. Voici ce que tout patient sous GLP-1 doit savoir avant de passer au bloc opératoire.
+Si vous prenez [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy ou Mounjaro et qu'une opération chirurgicale se profile, une question cruciale se pose : faut-il arrêter votre traitement avant l'intervention ? La réponse est oui — et les raisons médicales derrière cette recommandation sont sérieuses. Les sociétés d'anesthésie françaises et internationales ont mis en garde contre un risque spécifique, celui de la pneumopathie d'inhalation, qui peut survenir si le traitement n'est pas interrompu à temps. Voici ce que tout patient sous GLP-1 doit savoir avant de passer au bloc opératoire.
 
 ## Pourquoi les GLP-1 posent un problème en anesthésie
 
@@ -137,7 +137,7 @@ En revanche, un arrêt prolongé non anticipé — par exemple si des complicati
 
 ### Particularités de la chirurgie bariatrique
 
-La chirurgie bariatrique (bypass gastrique, sleeve gastrectomie) représente un cas particulier. Ces interventions modifient profondément l'anatomie digestive et peuvent potentialiser ou modifier les effets des GLP-1. Certains patients sous GLP-1 ont recours à la chirurgie bariatrique après une perte de poids partielle. Dans ces situations, la coordination entre le médecin prescripteur du GLP-1 et le chirurgien bariatrique est indispensable.
+La chirurgie bariatrique (bypass gastrique, sleeve gastrectomie) représente un cas particulier. Ces interventions modifient profondément l'anatomie digestive et peuvent potentialiser ou modifier les effets des GLP-1. Certains patients sous GLP-1 ont recours à la [chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) après une perte de poids partielle. Dans ces situations, la coordination entre le médecin prescripteur du GLP-1 et le chirurgien bariatrique est indispensable.
 
 ## Résumé pratique : les points à retenir
 
