@@ -44,6 +44,10 @@ const AGENTS = {
 // Track running agents
 const running = new Map();
 
+// Autopilot state
+let autopilotEnabled = false;
+let autopilotCycle = 0;
+
 // Output buffers — keep last N lines per agent (persists after agent stops)
 const MAX_LINES = 500;
 const outputBuffers = new Map(); // name -> { lines: [], offset: 0 }
@@ -502,6 +506,26 @@ function launchAgent(name, { allowMultiple = false } = {}) {
     if (baseAgent.startsWith('editorial') && code === 0) {
       setTimeout(() => checkAndRelaunchIfNeeded(instanceName), 10000);
     }
+
+    // AUTOPILOT AUTO-RELAUNCH: each cycle is a fresh invocation
+    if (baseAgent === 'autopilot' && code === 0 && autopilotEnabled) {
+      autopilotCycle++;
+      console.log(`🔄 [${new Date().toLocaleTimeString()}] Autopilot cycle ${autopilotCycle} termine — relance dans 10s...`);
+      appendOutput('autopilot', `🔄 Cycle ${autopilotCycle} termine — relance dans 10s...`, 'progress');
+      setTimeout(() => {
+        if (autopilotEnabled && !running.has('autopilot')) {
+          launchAgent('autopilot');
+        }
+      }, 10000);
+    } else if (baseAgent === 'autopilot' && code !== 0) {
+      console.log(`⚠️ [${new Date().toLocaleTimeString()}] Autopilot echoue (exit ${code}) — relance dans 30s...`);
+      appendOutput('autopilot', `⚠️ Cycle echoue — relance dans 30s...`, 'error');
+      setTimeout(() => {
+        if (autopilotEnabled && !running.has('autopilot')) {
+          launchAgent('autopilot');
+        }
+      }, 30000);
+    }
   });
 
   // Create queue entry for dashboard tracking
@@ -566,7 +590,7 @@ const server = createServer(async (req, res) => {
     const totalCost = [...agentCosts.values()].reduce((s, c) => s + c, 0);
 
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost }));
+    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost, autopilot: { enabled: autopilotEnabled, cycle: autopilotCycle, running: running.has('autopilot') } }));
     return;
   }
 
@@ -610,6 +634,44 @@ const server = createServer(async (req, res) => {
         res.end(JSON.stringify({ ok: false, error: e.message }));
       }
     });
+    return;
+  }
+
+  // POST /autopilot/start — start autopilot loop
+  if (req.method === 'POST' && url.pathname === '/autopilot/start') {
+    if (autopilotEnabled) {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: true, message: 'Autopilot deja actif', cycle: autopilotCycle }));
+      return;
+    }
+    autopilotEnabled = true;
+    autopilotCycle = 0;
+    console.log(`🟢 [${new Date().toLocaleTimeString()}] Autopilot ACTIVE`);
+    appendOutput('autopilot', '🟢 Autopilot active — demarrage du premier cycle...', 'progress');
+    const result = launchAgent('autopilot');
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot demarre', cycle: 1, pid: result.pid }));
+    return;
+  }
+
+  // POST /autopilot/stop — stop autopilot loop
+  if (req.method === 'POST' && url.pathname === '/autopilot/stop') {
+    autopilotEnabled = false;
+    console.log(`🔴 [${new Date().toLocaleTimeString()}] Autopilot DESACTIVE (arret apres cycle en cours)`);
+    appendOutput('autopilot', `🔴 Autopilot desactive — arret apres le cycle ${autopilotCycle} en cours`, 'progress');
+    // Also kill the running autopilot if any
+    if (running.has('autopilot')) {
+      stopAgent('autopilot');
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot arrete', cyclesCompleted: autopilotCycle }));
+    return;
+  }
+
+  // GET /autopilot/status — check autopilot state
+  if (req.method === 'GET' && url.pathname === '/autopilot/status') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ enabled: autopilotEnabled, cycle: autopilotCycle, running: running.has('autopilot') }));
     return;
   }
 

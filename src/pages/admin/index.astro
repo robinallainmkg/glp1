@@ -1070,6 +1070,7 @@ import { supabaseConfig } from '../../lib/supabase';
   const AGENT_SERVER = '/__agent';
   let serverOnline = false;
   let runningAgents = {};
+  let serverStatus = null;
 
   async function checkServer() {
     try {
@@ -1079,6 +1080,7 @@ import { supabaseConfig } from '../../lib/supabase';
       clearTimeout(timer);
       const data = await r.json();
       serverOnline = true;
+      serverStatus = data;
       runningAgents = data.running || {};
       window._serverBuffers = data.buffers || {};
       window._serverCosts = data.costs || {};
@@ -1127,17 +1129,22 @@ import { supabaseConfig } from '../../lib/supabase';
   // ========== AUTOPILOT ==========
   let autopilotRunning = false;
 
-  function toggleAutopilot() {
+  async function toggleAutopilot() {
     if (autopilotRunning) {
       if (!confirm('Stopper l\'Autopilot ?')) return;
-      stopAgent('autopilot');
+      try {
+        await fetch(`${AGENT_SERVER}/autopilot/stop`, { method: 'POST' });
+      } catch(e) { stopAgent('autopilot'); }
     } else {
       if (!serverOnline) {
         alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs');
         return;
       }
-      if (!confirm('Lancer l\'Autopilot ?\n\nBoucle infinie, spawne les agents necessaires.\nContinuer ?')) return;
-      launchAgent('autopilot');
+      try {
+        const r = await fetch(`${AGENT_SERVER}/autopilot/start`, { method: 'POST' });
+        const data = await r.json();
+        if (!data.ok) alert('Erreur: ' + data.message);
+      } catch(e) { alert('Erreur: ' + e.message); }
     }
   }
 
@@ -1147,7 +1154,8 @@ import { supabaseConfig } from '../../lib/supabase';
     const label = document.getElementById('apBtnLabel');
     const badge = document.getElementById('apBadge');
 
-    autopilotRunning = !!runningAgents['autopilot'];
+    // Check autopilot state from server
+    autopilotRunning = !!runningAgents['autopilot'] || (serverStatus && serverStatus.autopilot && serverStatus.autopilot.enabled);
 
     if (autopilotRunning) {
       hero.classList.add('is-running');
@@ -1155,7 +1163,8 @@ import { supabaseConfig } from '../../lib/supabase';
       btn.innerHTML = '&#9632;';
       label.textContent = 'Stopper';
       badge.className = 'ap-status-badge running';
-      badge.textContent = 'RUNNING';
+      const cycle = (serverStatus && serverStatus.autopilot) ? serverStatus.autopilot.cycle : '';
+      badge.textContent = cycle ? `CYCLE ${cycle}` : 'RUNNING';
     } else {
       hero.classList.remove('is-running');
       btn.classList.remove('running');
