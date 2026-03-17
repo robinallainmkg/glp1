@@ -10,8 +10,8 @@ updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Sophie Dubois'
 readingTime: 8
-image: "/images/thumbnails/glp1-chute-cheveux-alopecie.jpg"
-thumbnail: "/images/thumbnails/glp1-chute-cheveux-alopecie.jpg"
+image: "/images/thumbnails/sante.jpg"
+thumbnail: "/images/thumbnails/sante.jpg"
 thumbnailAlt: "Chute de cheveux sous traitement GLP-1 Ozempic effluvium"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
@@ -30,7 +30,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Parmi les effets inattendus rapportés par les patients sous traitement GLP-1, la chute de cheveux figure régulièrement dans les forums et témoignages. Environ 3 % des patients sous sémaglutide (Ozempic, Wegovy) ou tirzépatide (Mounjaro) remarquent une augmentation de leur perte capillaire dans les mois suivant le début du traitement. Si ce phénomène peut être inquiétant, la bonne nouvelle est qu'il est dans la grande majorité des cas temporaire et réversible. Voici ce que la science sait sur ce sujet en 2026.
+Parmi les effets inattendus rapportés par les patients sous traitement GLP-1, la chute de cheveux figure régulièrement dans les forums et témoignages. Environ 3 % des patients sous sémaglutide ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) ou tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) remarquent une augmentation de leur perte capillaire dans les mois suivant le début du traitement. Si ce phénomène peut être inquiétant, la bonne nouvelle est qu'il est dans la grande majorité des cas temporaire et réversible. Voici ce que la science sait sur ce sujet en 2026.
 
 ## La chute de cheveux sous GLP-1 : ce n'est pas le médicament, c'est la perte de poids
 

@@ -10,8 +10,8 @@ updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Sophie Dubois'
 readingTime: 10
-image: "/images/thumbnails/glp1-goutte-acide-urique.jpg"
-thumbnail: "/images/thumbnails/glp1-goutte-acide-urique.jpg"
+image: "/images/thumbnails/sante.jpg"
+thumbnail: "/images/thumbnails/sante.jpg"
 thumbnailAlt: "GLP-1 et goutte risque acide urique hyperuricémie"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
@@ -54,7 +54,7 @@ L'étude à l'origine du débat a été présentée au congrès de l'AAOS (Ameri
 
 Les auteurs ont observé une **association statistique significative** entre l'utilisation des GLP-1 et :
 
-- Une augmentation de 15 à 20 % du risque relatif de crise de goutte
+- Une augmentation de 12 % du risque relatif de crise de goutte (risque relatif de 1,12 ; IC 95 % : 1,08-1,16), avec une incidence de 7,4 % chez les patients traités contre 6,6 % chez les témoins
 - Une augmentation du risque de complications osseuses (ostéoporose), traitée dans notre article dédié aux [GLP-1 et risques osseux](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/)
 
 Ces résultats ont été couverts par le Washington Post et plusieurs médias de santé français au printemps 2026.

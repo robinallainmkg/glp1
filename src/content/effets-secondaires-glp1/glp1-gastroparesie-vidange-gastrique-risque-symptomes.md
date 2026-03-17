@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "gastroparésie", "vidange gastrique", "effets secondaires", "ozempic", "wegovy", "mounjaro", "anesthésie", "ANSM"]
 collection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/glp1-gastroparesie.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 thumbnailAlt: "GLP-1 et gastroparésie : ralentissement de la vidange gastrique risque Ozempic"
 featured: true
 published: true
@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Les nausées sous Ozempic ou Wegovy, tout le monde en parle. Mais derrière cet effet indésirable courant se cache un mécanisme plus profond que beaucoup de patients ignorent : le ralentissement significatif de la vidange gastrique. Dans certains cas, ce ralentissement peut évoluer vers une gastroparésie — une condition médicale sérieuse qui désigne la paralysie partielle ou totale du mouvement normal de l'estomac. L'ANSM et l'EPI-Phare surveillent ce signal de pharmacovigilance depuis 2023. Voici ce qu'on sait en 2026.
+Les nausées sous [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), tout le monde en parle. Mais derrière cet effet indésirable courant se cache un mécanisme plus profond que beaucoup de patients ignorent : le ralentissement significatif de la vidange gastrique. Dans certains cas, ce ralentissement peut évoluer vers une gastroparésie — une condition médicale sérieuse qui désigne la paralysie partielle ou totale du mouvement normal de l'estomac. L'ANSM et l'EPI-Phare surveillent ce signal de pharmacovigilance depuis 2023. Voici ce qu'on sait en 2026.
 
 ## Comprendre la vidange gastrique et son ralentissement sous GLP-1
 

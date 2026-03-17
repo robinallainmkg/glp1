@@ -88,7 +88,7 @@ Ce biais vers la graisse viscérale s'explique par plusieurs mécanismes :
 
 ### Les données de l'étude STEP 1
 
-L'essai STEP 1, qui a évalué le sémaglutide 2,4 mg (Wegovy) chez 1 961 adultes obèses sans diabète sur 68 semaines, a mesuré la composition corporelle par méthodes d'imagerie dans un sous-groupe de participants.
+L'essai STEP 1, qui a évalué le sémaglutide 2,4 mg ([Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) chez 1 961 adultes obèses sans diabète sur 68 semaines, a mesuré la composition corporelle par méthodes d'imagerie dans un sous-groupe de participants.
 
 Les résultats sur la graisse viscérale sont significatifs :
 

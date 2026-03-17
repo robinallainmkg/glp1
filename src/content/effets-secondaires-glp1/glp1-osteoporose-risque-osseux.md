@@ -10,8 +10,8 @@ updatedAt: '2026-03-16'
 featured: true
 author: 'Dr. Sophie Dubois'
 readingTime: 10
-image: "/images/thumbnails/glp1-osteoporose-risque-osseux.jpg"
-thumbnail: "/images/thumbnails/glp1-osteoporose-risque-osseux.jpg"
+image: "/images/thumbnails/sante.jpg"
+thumbnail: "/images/thumbnails/sante.jpg"
 thumbnailAlt: "GLP-1 et ostéoporose risque osseux fracture"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
@@ -36,7 +36,7 @@ Une etude presentee en mars 2026 au congres de l'AAOS (American Academy of Ortho
 
 ---
 
-Les medicaments GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et Mounjaro ont transforme la prise en charge de l'obesite et du diabete de type 2. Mais a mesure que des millions de patients les utilisent sur des periodes de plus en plus longues, de nouveaux effets secondaires emergent. En mars 2026, une etude de grande envergure a revele un lien jusqu'alors peu documente : ces traitements pourraient fragiliser les os.
+Les medicaments GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ont transforme la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obesite et du diabete de type 2. Mais a mesure que des millions de patients les utilisent sur des periodes de plus en plus longues, de nouveaux effets secondaires emergent. En mars 2026, une etude de grande envergure a revele un lien jusqu'alors peu documente : ces traitements pourraient fragiliser les os.
 
 ## L'etude AAOS 2026 : des chiffres qui interpellent
 
@@ -67,7 +67,7 @@ Le mecanisme le plus probable n'est pas un effet direct du medicament sur l'os, 
 
 Le tissu adipeux (la graisse corporelle) joue un role protecteur pour le squelette. Il agit comme un "coussin" mecanique qui stimule la formation osseuse, et il produit des hormones — notamment les oestrogenes — qui contribuent au maintien de la densite osseuse. Lorsqu'un patient perd 15 a 20% de son poids en un an sous GLP-1, cette protection diminue rapidement.
 
-Des etudes anterieures sur la chirurgie bariatrique avaient deja montre un phenomene similaire : les patients qui perdent beaucoup de poids rapidement presentent une diminution de la densite minerale osseuse dans les 12 a 24 mois suivant l'intervention, avec un risque accru de fractures.
+Des etudes anterieures sur la [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) avaient deja montre un phenomene similaire : les patients qui perdent beaucoup de poids rapidement presentent une diminution de la densite minerale osseuse dans les 12 a 24 mois suivant l'intervention, avec un risque accru de fractures.
 
 ### L'hypothese d'un effet direct sur le metabolisme osseux
 

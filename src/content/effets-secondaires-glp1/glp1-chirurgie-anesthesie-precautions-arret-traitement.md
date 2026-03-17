@@ -30,13 +30,13 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Si vous prenez [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy ou Mounjaro et qu'une opération chirurgicale se profile, une question cruciale se pose : faut-il arrêter votre traitement avant l'intervention ? La réponse est oui — et les raisons médicales derrière cette recommandation sont sérieuses. Les sociétés d'anesthésie françaises et internationales ont mis en garde contre un risque spécifique, celui de la pneumopathie d'inhalation, qui peut survenir si le traitement n'est pas interrompu à temps. Voici ce que tout patient sous GLP-1 doit savoir avant de passer au bloc opératoire.
+Si vous prenez [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro et qu'une opération chirurgicale se profile, une question cruciale se pose : faut-il arrêter votre traitement avant l'intervention ? La réponse est oui — et les raisons médicales derrière cette recommandation sont sérieuses. Les sociétés d'anesthésie françaises et internationales ont mis en garde contre un risque spécifique, celui de la pneumopathie d'inhalation, qui peut survenir si le traitement n'est pas interrompu à temps. Voici ce que tout patient sous GLP-1 doit savoir avant de passer au bloc opératoire.
 
 ## Pourquoi les GLP-1 posent un problème en anesthésie
 
 ### Le mécanisme : le ralentissement de la vidange gastrique
 
-Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, Zepbound), liraglutide (Victoza, Saxenda) — agissent en partie en ralentissant la vidange gastrique. C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
+Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, Zepbound), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)) — agissent en partie en ralentissant la vidange gastrique. C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
 
 En temps normal, ce ralentissement est bénéfique : on mange moins, on se sent rassasié plus longtemps. Mais au moment d'une anesthésie générale, ce même mécanisme devient dangereux. Le protocole anesthésique standard repose sur le fait que l'estomac du patient est vide au moment de l'induction. Si l'estomac contient encore du contenu gastrique — nourriture, liquide — au moment où le patient perd connaissance et perd ses réflexes de protection des voies aériennes, ce contenu peut remonter (régurgitation) et être aspiré dans les poumons.
 
@@ -56,7 +56,7 @@ La Société Française d'Anesthésie-Réanimation (SFAR) a publié en 2024 une 
 
 Les grandes lignes des recommandations SFAR sont les suivantes :
 
-**Pour les GLP-1 à injection hebdomadaire** (sémaglutide / Ozempic, Wegovy ; tirzépatide / Mounjaro) :
+**Pour les GLP-1 à injection hebdomadaire** (sémaglutide / Ozempic, Wegovy ; tirzépatide / [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) :
 - Arrêt **une semaine avant** une chirurgie programmée (soit sauter la dernière injection hebdomadaire prévue avant l'opération)
 
 **Pour les GLP-1 à injection quotidienne** (liraglutide / Victoza, Saxenda ; exénatide / Byetta) :

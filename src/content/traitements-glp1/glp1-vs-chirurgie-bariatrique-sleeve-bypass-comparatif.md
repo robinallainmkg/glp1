@@ -103,7 +103,7 @@ Les GLP-1 ont un profil de sécurité bien documenté grâce aux grandes études
 
 ### La chirurgie bariatrique : remboursée sous conditions
 
-La chirurgie bariatrique est remboursée à **100 %** par la Sécurité Sociale française sous des conditions strictes :
+La chirurgie bariatrique est [remboursée](/collections/glp1-cout/remboursement-glp1-2026/) à **100 %** par la Sécurité Sociale française sous des conditions strictes :
 
 - IMC ≥ 40 kg/m²
 - OU IMC ≥ 35 kg/m² avec au moins une comorbidité grave (diabète de type 2, hypertension artérielle, syndrome d'apnée du sommeil sévère, etc.)

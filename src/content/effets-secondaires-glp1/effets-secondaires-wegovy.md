@@ -233,7 +233,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 ## 📝 Conclusion
 
-**Wegovy présente des effets secondaires fréquents** mais généralement gérables, avec un profil de tolérance favorable malgré une fréquence légèrement plus élevée que certains concurrents.
+**[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) présente des effets secondaires fréquents** mais généralement gérables, avec un profil de tolérance favorable malgré une fréquence légèrement plus élevée que certains concurrents.
 
 ### Points clés :
 - **Effets fréquents** : Nausées (25-35%), diarrhée (12-18%) — voir tableau détaillé ci-dessus

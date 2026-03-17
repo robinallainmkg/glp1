@@ -14,7 +14,7 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "effets secondaires Saxenda"
 image: "/images/thumbnails/effets-secondaires-saxenda-illus.jpg"
-thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-saxenda-illus.jpg"
 thumbnailAlt: "Effets secondaires du traitement saxenda"
 ---
 
