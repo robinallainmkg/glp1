@@ -87,7 +87,7 @@ La différence tient à la stratégie de remboursement choisie par les laboratoi
 |---|---|---|
 | Molécule | Tirzépatide | Sémaglutide 2,4 mg |
 | Dossier HAS | Déposé pour DT2 et obésité | Déposé uniquement pour obésité |
-| Avis HAS | ASMR 4 favorable (nov. 2025) | Avis défavorable au remboursement |
+| Avis HAS | ASMR 4 favorable (nov. 2025) | Avis favorable au remboursement (déc. 2024, CT-20916) |
 | Remboursement prévu | 2e semestre 2026 | Non prévu |
 | Prix actuel | 230 à 440€/mois | 169 à 360€/mois |
 
