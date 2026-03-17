@@ -1,5 +1,5 @@
 ---
-title: "Victoza Arrêt Commercialisation 2026 : Alternatives et Transition"
+title: "Victoza Arrêt 2026 : Alternatives et Transition"
 description: "Victoza arrêt commercialisation 2026 : alternatives au liraglutide, démarches de transition et conseils pratiques pour les patients traités."
 pubDate: 2026-03-16
 date: "2026-03-16"

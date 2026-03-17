@@ -14,7 +14,7 @@ priority: 5
 schema: "Article"
 mainKeyword: "micronutriments vitamines GLP-1 carences supplémentation"
 
-# Configuration Affiliation
+## Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
 affiliateCollection: "regime-glp1"
@@ -25,7 +25,7 @@ affiliateConfig:
   inlinePositions: [2, 5, 9]
 ---
 
-# Vitamines et GLP-1 : Prévenir les Carences sous Traitement
+## Vitamines et GLP-1 : Prévenir les Carences sous Traitement
 
 ## Sommaire
 

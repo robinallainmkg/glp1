@@ -72,7 +72,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
 - [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
-Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les [traitements GLP-1 en France](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
 
 ## Coût du traitement et facteurs
 Le coût des traitements varie considérablement selon plusieurs facteurs qu'il convient d'analyser pour une estimation précise. Ces variations reflètent la complexité du système de santé et la diversité des options thérapeutiques disponibles.

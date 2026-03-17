@@ -1,5 +1,5 @@
 ---
-title: "Orforglipron Comprimé France : Approbation EMA et Date d'Arrivée"
+title: "Orforglipron Comprimé : Approbation EMA et Date France"
 description: "Orforglipron comprimé France : approbation EMA attendue, efficacité (-15% du poids) et comparaison avec Wegovy et Mounjaro. Pilule GLP-1 d'Eli Lilly."
 pubDate: 2026-03-16
 date: "2026-03-16"

@@ -38,7 +38,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## À retenir
 
-Paris concentre de nombreux diabétologues et endocrinologues spécialisés dans les traitements GLP-1. Ces experts hospitaliers et libéraux accompagnent l'initiation, le suivi et l'optimisation des thérapeutiques Ozempic®, Trulicity®, Victoza® selon les recommandations HAS.
+Paris concentre de nombreux diabétologues et endocrinologues spécialisés dans les traitements GLP-1. Ces experts hospitaliers et libéraux accompagnent l'initiation, le suivi et l'optimisation des thérapeutiques [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)®, Trulicity®, Victoza® selon les recommandations HAS.
 
 ## Prix, disponibilité et variations en France
 

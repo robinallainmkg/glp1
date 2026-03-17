@@ -72,7 +72,7 @@ Le soir, le métabolisme ralentit. La digestion des glucides est moins efficace 
 
 ## Chrono-nutrition et GLP-1 : une combinaison naturelle
 
-Les traitements GLP-1 (Ozempic, Wegovy, Mounjaro) modifient les sensations de faim et de satiété, mais ils n'organisent pas spontanément la distribution des nutriments dans la journée. La chrono-nutrition apporte ce cadre structurant.
+Les traitements GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy, Mounjaro) modifient les sensations de faim et de satiété, mais ils n'organisent pas spontanément la distribution des nutriments dans la journée. La chrono-nutrition apporte ce cadre structurant.
 
 ### Pourquoi cette association est cohérente
 

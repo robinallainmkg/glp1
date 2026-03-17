@@ -61,7 +61,7 @@ Volailles sans peau, poissons, légumineuses. La viande rouge est limitée à mo
 
 ## Régime DASH et GLP-1 : une combinaison de choix pour les diabétiques hypertendus
 
-La majorité des patients traités par Ozempic ou Mounjaro en France présentent un diabète de type 2 souvent associé à une hypertension. Cette double problématique rend le régime DASH particulièrement pertinent.
+La majorité des patients traités par [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou Mounjaro en France présentent un diabète de type 2 souvent associé à une hypertension. Cette double problématique rend le régime DASH particulièrement pertinent.
 
 ### Effets complémentaires
 

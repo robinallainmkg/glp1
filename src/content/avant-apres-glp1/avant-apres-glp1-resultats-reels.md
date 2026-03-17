@@ -16,7 +16,7 @@ seoTitle: "Avant Après GLP-1 : Résultats Réels de Patients"
 seoDescription: "Avant après GLP-1 : résultats réels Ozempic, Wegovy, Mounjaro. Témoignages et attentes réalistes pour la perte de poids en France."
 ---
 
-# Avant Après GLP-1 : Ce que les Études et les Patients Montrent Vraiment
+## Avant Après GLP-1 : Ce que les Études et les Patients Montrent Vraiment
 
 Les réseaux sociaux regorgent de photos "avant/après" spectaculaires avec Ozempic, Wegovy ou Mounjaro. Mais qu'en est-il des résultats réels des patients français ? Quelle perte de poids peut-on espérer raisonnablement ? Combien de temps faut-il ? Et surtout, ces résultats durent-ils dans le temps ?
 

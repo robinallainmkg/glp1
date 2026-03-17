@@ -20,7 +20,7 @@ schema: "Article"
 published: true
 priority: 2
 
-# Configuration Affiliation
+## Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
 affiliateConfig:
@@ -30,7 +30,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-# Ozempic Générique en France : La Réponse Honnête
+## Ozempic Générique en France : La Réponse Honnête
 
 C'est l'une des questions les plus posées dans les consultations et sur les forums dédiés aux traitements GLP-1 : "Quand est-ce qu'Ozempic aura un générique ?" Et la réponse, bien que décevante pour beaucoup, mérite d'être expliquée clairement.
 

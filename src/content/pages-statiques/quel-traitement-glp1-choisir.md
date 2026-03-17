@@ -348,7 +348,7 @@ En savoir plus sur les [résultats attendus avec Mounjaro](/collections/traiteme
 
 ### Puis-je boire de l'alcool avec les GLP-1 ?
 
-Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/regime-glp1/) pour plus de conseils nutritionnels.
+Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/regime-glp1/) pour plus de conseils nutritionnels.
 
 ### Les GLP-1 sont-ils remboursés pour tous ?
 

@@ -29,7 +29,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-# Wegovy en Comprimé Oral : Quand Sera-t-il Disponible en France ?
+## Wegovy en Comprimé Oral : Quand Sera-t-il Disponible en France ?
 
 En décembre 2025, la FDA américaine a marqué un tournant dans le traitement de l'obésité en approuvant le premier comprimé oral de sémaglutide à haute dose, spécifiquement indiqué pour la perte de poids. Cette version orale de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) représente une avancée majeure pour les millions de patients qui souhaitent éviter les injections hebdomadaires. Mais quand ce comprimé arrivera-t-il en France et en Europe ? Voici tout ce que l'on sait en mars 2026.
 

@@ -14,7 +14,7 @@ featured: true
 priority: 2
 schema: "Article"
 
-# Configuration Affiliation
+## Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
 affiliateCollection: "traitements-glp1"
@@ -25,7 +25,7 @@ affiliateConfig:
   inlinePositions: [3, 7]
 ---
 
-# Wegovy vs Mounjaro 2026 : Quel Traitement GLP-1 Choisir ?
+## Wegovy vs Mounjaro 2026 : Quel Traitement GLP-1 Choisir ?
 
 Avec l'arrivee de **Mounjaro** (tirzepatide) en France fin 2024 et la disponibilite croissante de **Wegovy** (semaglutide), de nombreux patients se demandent quel traitement privilegier pour perdre du poids. Ces deux medicaments representent la nouvelle generation des traitements contre l'obesite, mais ils different sur plusieurs points essentiels : mecanisme d'action, efficacite, prix et perspectives de remboursement.
 

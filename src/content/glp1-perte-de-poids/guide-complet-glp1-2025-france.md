@@ -1,5 +1,5 @@
 ---
-title: "Guide Complet GLP-1 2025 France : Tout Savoir sur les Traitements"
+title: "GLP-1 France 2025 : Guide Complet des Traitements"
 description: "Guide complet GLP-1 2025 France tout savoir : médicaments disponibles, efficacité, prix, effets secondaires et alternatives pour une perte de poids réussie."
 author: "Dr. Martin"
 thumbnail: "/images/thumbnails/guide-complet-GLP1.jpg"

@@ -1,5 +1,5 @@
 ---
-title: "Quand Wegovy Remboursé France 2026 : Calendrier et Conditions"
+title: "Wegovy Remboursé France 2026 : Calendrier, Conditions"
 description: "Quand Wegovy remboursé France 2026 conditions calendrier : avis HAS favorable, négociations CEPS en cours. Tout sur le calendrier et les critères d'éligibilité."
 keywords: ['quand wegovy remboursé france', 'wegovy remboursement 2026', 'wegovy remboursé conditions', 'wegovy remboursement calendrier', 'wegovy HAS CEPS remboursement', 'wegovy sécurité sociale 2026']
 seoTitle: "Quand Wegovy Remboursé France 2026 : Calendrier Conditions"

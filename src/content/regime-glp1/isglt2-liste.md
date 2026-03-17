@@ -59,7 +59,7 @@ Les inhibiteurs des co-transporteurs sodium-glucose de type 2 (SGLT2) sont des m
 - **Protection cardiovasculaire** et rénale démontrée dans plusieurs études de grande ampleur
 - **Légère perte de poids** (1 à 3 kg en moyenne) par l'élimination calorique urinaire
 
-Ces effets complètent efficacement l'action des traitements GLP-1 comme l'Ozempic ou le Wegovy, qui, eux, agissent principalement sur la satiété et la vidange gastrique.
+Ces effets complètent efficacement l'action des [traitements GLP-1](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) comme l'Ozempic ou le Wegovy, qui, eux, agissent principalement sur la satiété et la vidange gastrique.
 
 ## Liste des iSGLT2 disponibles en France
 

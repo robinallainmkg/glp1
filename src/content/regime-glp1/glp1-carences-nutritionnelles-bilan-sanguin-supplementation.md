@@ -20,7 +20,7 @@ schema: "Article"
 published: true
 priority: 2
 
-# Configuration Affiliation
+## Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
 affiliateConfig:
@@ -30,7 +30,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-# GLP-1 et Carences Nutritionnelles : Le Guide Pratique
+## GLP-1 et Carences Nutritionnelles : Le Guide Pratique
 
 Moins d'appétit, assiettes plus petites, nausées en début de traitement — les effets des traitements GLP-1 sur l'alimentation sont profonds. Si cette réduction des apports contribue à la perte de poids, elle comporte un revers souvent sous-estimé : le risque de **carences nutritionnelles**, notamment en fer, vitamines du groupe B et oligoéléments.
 
