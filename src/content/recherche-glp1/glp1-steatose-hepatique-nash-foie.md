@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Stéatose Hépatique NASH Foie Gras : Résultats et Traitement 2026"
+title: "GLP-1 et Stéatose Hépatique NASH : Traitement 2026"
 description: "GLP-1 stéatose hépatique NASH foie gras : le sémaglutide résout la NASH chez 56% des patients. Nouvelle indication prometteuse et recommandations 2026."
 pubDate: 2026-03-16
 date: 2026-03-16

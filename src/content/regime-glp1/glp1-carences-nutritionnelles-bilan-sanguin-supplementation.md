@@ -1,8 +1,8 @@
 ---
-title: "GLP-1 et Carences Nutritionnelles : Bilan Sanguin et Supplémentation"
-description: "GLP-1 carences nutritionnelles bilan sanguin : fer, vitamine B1, B12, zinc. Quelles analyses demander, seuils d'alerte et suppléments recommandés sous Ozempic ou Mounjaro."
+title: "GLP-1 et Carences : Bilan Sanguin et Supplémentation"
+description: "GLP-1 carences bilan sanguin : fer, B1, B12, zinc. Analyses à demander, seuils d'alerte et suppléments recommandés sous Ozempic ou Mounjaro."
 keywords: ['glp1 carences nutritionnelles', 'bilan sanguin glp1', 'supplémentation ozempic', 'carence fer glp1', 'vitamines glp1 traitement', 'bilan biologique wegovy mounjaro']
-seoTitle: "GLP-1 Carences Nutritionnelles : Quel Bilan Sanguin et Quelle Supplémentation ?"
+seoTitle: "GLP-1 Carences : Bilan Sanguin et Supplémentation"
 seoDescription: "Sous GLP-1 (Ozempic, Wegovy, Mounjaro), le risque de carences en fer, vitamine B1, B12 et zinc augmente. Guide pratique : analyses à demander, valeurs, compléments."
 publishedAt: '2026-03-17'
 updatedAt: '2026-03-17'

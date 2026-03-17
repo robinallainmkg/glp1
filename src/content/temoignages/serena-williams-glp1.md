@@ -13,7 +13,7 @@ mainKeyword: "serena williams glp1"
 # Serena Williams et les Traitements GLP-1 : Transparence d'une Championne
 
 <div class="guide-buttons">
-  <a href="/traitements-glp1/" class="guide-button primary">
+  <a href="/collections/traitements-glp1/" class="guide-button primary">
     💊 Traitements GLP-1 Disponibles
   </a>
   <a href="/collections/glp1-perte-de-poids/" class="guide-button secondary">

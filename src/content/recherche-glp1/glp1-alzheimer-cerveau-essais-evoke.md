@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Alzheimer Cerveau Maladie Neurodégénérative : Essais EVOKE (2026)"
+title: "GLP-1 et Alzheimer : Résultats des Essais EVOKE (2026)"
 description: "GLP-1 alzheimer cerveau maladie neurodégénérative : les essais EVOKE déçoivent. Sémaglutide oral et déclin cognitif, résultats et perspectives 2026."
 keywords: ['glp1 alzheimer', 'glp1 cerveau', 'semaglutide alzheimer', 'ozempic maladie neurodégénérative', 'evoke essai clinique', 'glp1 neuroprotection']
 seoTitle: "GLP-1 Alzheimer Cerveau : Pourquoi les Essais EVOKE Ont Déçu (2026)"

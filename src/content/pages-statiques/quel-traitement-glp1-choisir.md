@@ -392,7 +392,7 @@ Utilisez notre **[annuaire des médecins GLP-1 en France](/annuaire/)** : diabé
 
 ### Guides par médicament
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) - Tout savoir sur le tirzépatide
-- [Guide complet Ozempic](/guides/guide-complet-ozempic/) - Sémaglutide pour diabète
+- [Guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) - Sémaglutide pour diabète
 - [Guide complet Wegovy](/guides/guide-complet-wegovy/) - Sémaglutide haute dose pour obésité
 
 ### Prix et remboursement

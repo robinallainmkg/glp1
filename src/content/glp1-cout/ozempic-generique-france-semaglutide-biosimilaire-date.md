@@ -1,9 +1,9 @@
 ---
 title: "Ozempic Générique France : Quand et à Quel Prix ? (2026)"
-description: "Ozempic générique France : le brevet du sémaglutide expire en 2031 en Europe. Pourquoi pas avant ? Alternatives moins chères disponibles maintenant et perspective biosimilaire."
+description: "Ozempic générique France : brevet sémaglutide jusqu'en 2031. Alternatives moins chères disponibles et perspectives biosimilaires."
 keywords: ['ozempic generique france', 'semaglutide generique', 'ozempic moins cher', 'biosimilaire semaglutide france', 'semaglutide generique prix', 'quand generique ozempic france']
 seoTitle: "Ozempic Générique en France : Brevet 2031, Biosimilaires et Alternatives Moins Chères"
-seoDescription: "Ozempic générique France : brevet du sémaglutide jusqu'en 2031. Pourquoi pas avant, différence générique/biosimilaire, et les alternatives moins chères disponibles dès maintenant."
+seoDescription: "Ozempic générique France : brevet sémaglutide jusqu'en 2031. Différence générique/biosimilaire et alternatives moins chères disponibles."
 publishedAt: '2026-03-17'
 updatedAt: '2026-03-17'
 date: 2026-03-17

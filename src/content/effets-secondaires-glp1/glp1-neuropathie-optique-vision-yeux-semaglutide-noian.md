@@ -1,8 +1,8 @@
 ---
-title: "GLP-1 et Vision : Risque de Neuropathie Optique (NOIAN) sous Sémaglutide"
+title: "GLP-1 et Vision : Neuropathie Optique NOIAN"
 description: "GLP-1 neuropathie optique NOIAN : risque rare mais grave de perte de vision sous sémaglutide (Ozempic, Wegovy). Symptômes, qui est à risque, que faire."
 keywords: ['glp1 vision', 'neuropathie optique semaglutide', 'NOIAN ozempic', 'GLP-1 yeux risque', 'wegovy perte vision', 'ozempic neuropathie optique ischemique']
-seoTitle: "GLP-1 et Neuropathie Optique (NOIAN) : Risque de Perte de Vision sous Sémaglutide"
+seoTitle: "GLP-1 et Neuropathie Optique NOIAN : Risque Vision"
 seoDescription: "GLP-1 et yeux : le PRAC a ajouté la neuropathie optique ischémique (NOIAN) aux risques du sémaglutide. Symptômes, patients à risque et conduite à tenir."
 publishedAt: '2026-03-17'
 updatedAt: '2026-03-17'
