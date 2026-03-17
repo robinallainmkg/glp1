@@ -1,7 +1,7 @@
 ---
-title: "Sémaglutide Oral Comprimé France 2026 : Guide Complet"
+title: "Semaglutide Oral Comprime France 2026 : Guide Complet Ozempic en Comprimé"
 slug: "semaglutide-oral-comprime-ozempic-france"
-description: "Sémaglutide oral comprimé France 2026 : technologie SNAC, contraintes de prise, prix estimé 300-350€/mois et comparatif avec l'injectable."
+description: "Semaglutide oral comprime France 2026 : technologie SNAC, contraintes de prise, prix estimé 300-350€/mois et comparatif avec l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprime France 2026"
 author: "Dr. Marie Dubois"
 image: "/images/thumbnails/semaglutide-oral-ozempic.webp"

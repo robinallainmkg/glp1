@@ -1,6 +1,6 @@
 ---
-title: "Témoignage Mounjaro Perte de Poids : Laurent, -35 kg en 10 Mois"
-description: "Témoignage Mounjaro perte de poids : Laurent M., 45 ans, a perdu 35 kilos avec le tirzepatide. De 120 kg à 85 kg en 10 mois. Parcours complet."
+title: "Témoignage Laurent Mounjaro Perte de Poids : -35 kg en 10 Mois"
+description: "Témoignage Laurent Mounjaro perte de poids : 45 ans, -35 kilos avec le tirzepatide. De 120 kg à 85 kg en 10 mois. Parcours complet et conseils."
 author: "Laurent M."
 image: "/images/temoignages/Laurent-journey8.jpg"
 collection: "temoignages"

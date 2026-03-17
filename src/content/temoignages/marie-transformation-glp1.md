@@ -1,6 +1,6 @@
 ---
-title: "Témoignage Wegovy Femme : Marie, -32 kg en 12 Mois"
-description: "Témoignage wegovy femme perte de poids : Marie L., 39 ans, raconte sa transformation de 32 kilos en 12 mois avec le sémaglutide. Parcours complet."
+title: "Témoignage Ozempic Perte de Poids Femme : Marie, -32 kg en 12 Mois"
+description: "Témoignage Ozempic perte de poids femme : Marie L., 39 ans, -32 kilos en 12 mois avec le sémaglutide (Wegovy). Parcours complet et résultats concrets."
 author: "Marie L."
 image: "/images/temoignages/mariejourney9.jpg"
 collection: "temoignages"

@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Fonte Musculaire : Préserver la Masse Musculaire"
+title: "GLP-1 Fonte Musculaire Perte Masse Muscle : Prévention et Solutions"
 description: "GLP-1 fonte musculaire perte masse muscle : jusqu'à 40% de muscle perdu sous traitement. Stratégies pour préserver vos muscles (protéines, sport)."
 pubDate: 2026-03-16
 date: 2026-03-16

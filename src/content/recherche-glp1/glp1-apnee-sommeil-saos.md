@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Apnée du Sommeil SAOS : Tirzépatide Réduit le SAOS"
+title: "GLP-1 Apnée du Sommeil SAOS : Tirzépatide Réduit le SAOS de 63%"
 description: "GLP-1 apnée du sommeil SAOS : tirzépatide réduit le SAOS de 55 à 63% selon SURMOUNT-OSA. Guide complet sur GLP-1 et traitement du SAOS."
 pubDate: 2026-03-16
 date: 2026-03-16
