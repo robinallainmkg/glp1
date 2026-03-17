@@ -44,7 +44,7 @@ Au-delà du manque de données, certains risques sont jugés potentiellement plu
 
 **1. La sarcopénie — le risque numéro un**
 
-Les GLP-1 entraînent une perte de poids rapide, mais une partie de cette perte provient de la masse musculaire. Chez un adulte de 40 ans en bonne santé, perdre 25 % de poids sous Wegovy avec une proportion musculaire de 20-25 % est gérable avec un programme d'exercice adapté. Chez un patient de 70 ans qui présente déjà une [fonte musculaire liée à l'âge](/collections/effets-secondaires-glp1/glp1-fonte-musculaire-preserver-muscles/) (sarcopénie physiologique), cette perte supplémentaire peut devenir problématique. Elle peut accélérer la dépendance fonctionnelle, augmenter le risque de chutes, et compromettre l'autonomie.
+Les GLP-1 entraînent une perte de poids rapide, mais une partie de cette perte provient de la masse musculaire. Chez un adulte de 40 ans en bonne santé, perdre 25 % de poids sous Wegovy avec une proportion musculaire de 20-25 % est gérable avec un programme d'exercice adapté. Chez un patient de 70 ans qui présente déjà une [fonte musculaire liée à l'âge](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) (sarcopénie physiologique), cette perte supplémentaire peut devenir problématique. Elle peut accélérer la dépendance fonctionnelle, augmenter le risque de chutes, et compromettre l'autonomie.
 
 **2. Le risque osseux et les fractures**
 

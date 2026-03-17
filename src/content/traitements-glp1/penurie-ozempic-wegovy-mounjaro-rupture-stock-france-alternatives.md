@@ -154,7 +154,7 @@ Pour les GLP-1 à injection hebdomadaire (Ozempic, Wegovy, Mounjaro) : si vous a
 
 ---
 
-Pour en savoir plus sur les [conditions de prescription GLP-1 en France](/traitements-glp1/ansm-regles-prescription-glp1-france/) ou sur [les effets secondaires des GLP-1](/effets-secondaires-glp1/effets-secondaires-ozempic/), consultez nos articles dédiés.
+Pour en savoir plus sur les [conditions de prescription GLP-1 en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) ou sur [les effets secondaires des GLP-1](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), consultez nos articles dédiés.
 
 ---
 

@@ -19,7 +19,7 @@ mainKeyword: "remboursement Mounjaro obésité HAS CEPS calendrier 2026"
 secondaryKeywords: ["mounjaro remboursement 2026", "tirzepatide remboursement france", "mounjaro HAS avis ASMR", "mounjaro CEPS négociations", "mounjaro quand remboursé sécurité sociale"]
 ---
 
-Le remboursement de [Mounjaro](/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie pour le traitement de l'obésité est l'un des dossiers les plus scrutés par les patients et les professionnels de santé français en 2026. Après l'avis favorable de la Haute Autorité de Santé en décembre 2025, le dossier est entré dans la phase des négociations de prix. Ce guide détaille le processus réglementaire en cours, les conditions qui seront exigées et le calendrier le plus probable.
+Le remboursement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) par l'Assurance Maladie pour le traitement de l'obésité est l'un des dossiers les plus scrutés par les patients et les professionnels de santé français en 2026. Après l'avis favorable de la Haute Autorité de Santé en décembre 2025, le dossier est entré dans la phase des négociations de prix. Ce guide détaille le processus réglementaire en cours, les conditions qui seront exigées et le calendrier le plus probable.
 
 ## Où en est le dossier de remboursement de Mounjaro ?
 
@@ -117,7 +117,7 @@ Avec un remboursement à 30 %, un patient sans ALD devra débourser environ 100 
 | Date prévisionnelle | 2e trimestre 2026 | 3e-4e trimestre 2026 |
 | Efficacité perte poids | -15 à -17% | -20 à -22% |
 
-Pour une comparaison complète, consultez notre [comparatif Wegovy vs Mounjaro 2026](/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
+Pour une comparaison complète, consultez notre [comparatif Wegovy vs Mounjaro 2026](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 ## Questions fréquentes
 

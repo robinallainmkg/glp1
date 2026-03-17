@@ -1,6 +1,6 @@
 ---
-title: "Prescription GLP-1 en Télémédecine : Obtenir une Ordonnance en Ligne en France 2026"
-description: "Prescription GLP-1 télémédecine en ligne France 2026 : plateformes, critères médicaux, prix d'une téléconsultation et comment obtenir une ordonnance Wegovy ou Mounjaro."
+title: "Prescription GLP-1 Télémédecine : Ordonnance en Ligne"
+description: "Prescription GLP-1 en télémédecine France 2026 : plateformes, critères médicaux et comment obtenir une ordonnance Wegovy ou Mounjaro."
 pubDate: 2026-03-17
 date: 2026-03-17
 updatedAt: 2026-03-17
@@ -104,7 +104,7 @@ Les tarifs varient selon les plateformes :
 
 ### Le coût du médicament reste inchangé
 
-La téléconsultation ne change rien au prix du médicament lui-même, qui dépend de la pharmacie et de votre couverture santé. En 2026, [Wegovy coûte entre 169 et 360 €/mois](/collections/glp1-cout/prix-wegovy-france-pharmacie/) selon le dosage, et Mounjaro entre 230 et 440 €/mois. Ces médicaments ne sont pas remboursés par la Sécurité Sociale à la date de rédaction de cet article, bien qu'un remboursement partiel soit en cours d'évaluation.
+La téléconsultation ne change rien au prix du médicament lui-même, qui dépend de la pharmacie et de votre couverture santé. En 2026, [Wegovy coûte entre 169 et 360 €/mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, et Mounjaro entre 230 et 440 €/mois. Ces médicaments ne sont pas remboursés par la Sécurité Sociale à la date de rédaction de cet article, bien qu'un remboursement partiel soit en cours d'évaluation.
 
 ## Comment choisir une plateforme sérieuse ?
 

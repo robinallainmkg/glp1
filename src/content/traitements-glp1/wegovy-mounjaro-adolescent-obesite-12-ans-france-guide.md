@@ -161,7 +161,7 @@ Dans l'essai STEP TEENS, aucun impact négatif sur la croissance en hauteur n'a 
 
 **Mon fils est diabétique de type 2 et obèse. Les GLP-1 sont-ils une option ?**
 
-Oui. Les GLP-1 comme [Ozempic (sémaglutide)](/traitements-glp1/guide-complet-ozempic/) sont remboursés pour le diabète de type 2, y compris chez l'adolescent. La prescription se fait selon les règles habituelles du diabète.
+Oui. Les GLP-1 comme [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/) sont remboursés pour le diabète de type 2, y compris chez l'adolescent. La prescription se fait selon les règles habituelles du diabète.
 
 **Doit-on accompagner le traitement d'un régime strict ?**
 
@@ -169,7 +169,7 @@ Non. Un régime trop restrictif peut être contre-productif, notamment sur le pl
 
 ---
 
-Pour en savoir plus sur les [conditions de prescription ANSM pour les GLP-1](/traitements-glp1/ansm-regles-prescription-glp1-france/) ou sur la [comparaison Wegovy versus Mounjaro](/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/), consultez nos articles dédiés.
+Pour en savoir plus sur les [conditions de prescription ANSM pour les GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) ou sur la [comparaison Wegovy versus Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/), consultez nos articles dédiés.
 
 ---
 

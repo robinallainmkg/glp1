@@ -133,7 +133,7 @@ Si vous prenez un GLP-1 pour le diabète de type 2, l'arrêt temporaire devra s'
 
 Une interruption d'une à deux semaines d'un traitement GLP-1 pour une chirurgie programmée n'a pas d'impact significatif sur les résultats à long terme de la prise en charge de l'obésité. Le traitement reprend ses effets dans les jours suivant la réintroduction.
 
-En revanche, un arrêt prolongé non anticipé — par exemple si des complications postopératoires empêchent la reprise rapide du traitement — peut s'accompagner d'une [reprise partielle du poids](/collections/traitements-glp1/arret-glp1-reprise-poids-effet-yoyo-eviter/). Il est donc important d'informer son médecin de toute complication postopératoire qui retarderait la reprise du traitement.
+En revanche, un arrêt prolongé non anticipé — par exemple si des complications postopératoires empêchent la reprise rapide du traitement — peut s'accompagner d'une [reprise partielle du poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/). Il est donc important d'informer son médecin de toute complication postopératoire qui retarderait la reprise du traitement.
 
 ### Particularités de la chirurgie bariatrique
 

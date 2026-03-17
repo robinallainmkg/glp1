@@ -129,7 +129,7 @@ Un remboursement partiel est prévu pour le second semestre 2026 (sous condition
 ### Pour la chirurgie bariatrique
 
 - **IMC ≥ 40** (ou ≥ 35 avec comorbidités)
-- **Âge** : 18 à 65 ans en général ([cas par cas au-delà, avec des limites spécifiques pour les GLP-1 chez les seniors](/traitements-glp1/glp1-seniors-plus-65-ans-limites-ansm-alternatives/))
+- **Âge** : 18 à 65 ans en général ([cas par cas au-delà, avec des limites spécifiques pour les GLP-1 chez les seniors](/collections/traitements-glp1/glp1-seniors-plus-65-ans-limites-ansm-alternatives/))
 - **Stabilité psychologique** : pas de trouble psychiatrique non contrôlé
 - **Engagement** : acceptation d'un suivi à vie et d'une supplémentation nutritionnelle permanente
 - **Délai** : plusieurs mois de bilan pluridisciplinaire avant l'intervention

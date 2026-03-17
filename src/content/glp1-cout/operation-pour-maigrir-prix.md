@@ -1,5 +1,5 @@
 ---
-title: "Opération Bariatrique Prix Remboursement : Sleeve, Bypass et Alternatives GLP-1"
+title: "Opération Bariatrique Prix : Sleeve, Bypass et GLP-1"
 description: "Opération bariatrique prix remboursement 2025 : sleeve à 8 000€, bypass à 12 000€, prise en charge par la Sécu sous conditions. Comparatif complet avec les GLP-1."
 pubDate: 2025-08-23
 date: 2025-08-23
