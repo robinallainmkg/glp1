@@ -17,11 +17,8 @@ collection: "traitements-glp1"
 affiliateCollection: "traitements-glp1"
 mainKeyword: "Wegovy Mounjaro adolescent 12 ans obésité France"
 secondaryKeywords: ["wegovy adolescent prescription", "glp1 obesite pediatrique france", "semaglutide 12 ans résultats", "mounjaro adolescent conditions", "traitement obesite enfant france 2026"]
-
-# Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "traitements-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
