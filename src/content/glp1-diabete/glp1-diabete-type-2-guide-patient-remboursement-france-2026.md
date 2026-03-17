@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Diabète"
 tags: ["glp1", "diabète type 2", "remboursement", "ozempic", "trulicity", "victoza", "rybelsus", "france", "2026", "patient"]
 collection: "glp1-diabete"
-thumbnail: "/images/thumbnails/glp1-diabete-type2.jpg"
+thumbnail: "/images/thumbnails/glp1-diabete.jpg"
 thumbnailAlt: "GLP-1 et diabète de type 2 - guide patient remboursement France 2026"
 featured: true
 published: true

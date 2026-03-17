@@ -8,7 +8,7 @@ author: "Dr. Émilie Martin"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "effets secondaires", "dépression", "apathie", "sante mentale", "ozempic", "psychologie"]
 collection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/glp1-sante-mentale.jpg"
+thumbnail: "/images/thumbnails/psychologie-glp1.jpg"
 thumbnailAlt: "GLP-1 et santé mentale : apathie, dépression, effets psychologiques"
 featured: true
 published: true

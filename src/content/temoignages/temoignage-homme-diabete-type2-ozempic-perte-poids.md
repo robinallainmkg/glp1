@@ -1,6 +1,6 @@
 ---
-title: "Témoignage : Bernard, 54 ans, Diabète Type 2 et -18 kg avec Ozempic"
-description: "Témoignage homme Ozempic diabète type 2 : Bernard, 54 ans, raconte son parcours depuis le diagnostic du diabète jusqu'à -18 kg et HbA1c normalisée sous sémaglutide."
+title: "Témoignage : Bernard, 54 ans, Diabète T2 et -18 kg Ozempic"
+description: "Bernard, 54 ans, raconte son parcours sous Ozempic : diabète type 2 contrôlé, -18 kg en 14 mois et HbA1c normalisée sous sémaglutide."
 author: "Bernard D."
 image: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
 collection: "temoignages"

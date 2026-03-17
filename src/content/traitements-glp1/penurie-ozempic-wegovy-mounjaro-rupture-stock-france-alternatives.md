@@ -1,5 +1,5 @@
 ---
-title: "Pénurie Ozempic, Wegovy, Mounjaro : Que Faire en Cas de Rupture de Stock ?"
+title: "Pénurie Ozempic & Wegovy 2026 : Solutions et Alternatives"
 description: "Pénurie Ozempic Wegovy Mounjaro en pharmacie : situation 2026, conseils ANSM et alternatives médicalement validées selon votre traitement."
 keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide']
 seoTitle: "Pénurie Ozempic, Wegovy, Mounjaro 2026 : Conduite à Tenir et Alternatives"
@@ -11,7 +11,7 @@ featured: true
 priority: 3
 author: 'Dr. Marie Dubois'
 readingTime: 10
-thumbnail: "/images/thumbnails/rupture-stock-medicaments.jpg"
+thumbnail: "/images/thumbnails/ou-trouver-ozempic-illus.jpg"
 thumbnailAlt: "Pénurie Ozempic Wegovy Mounjaro en pharmacie France : que faire en cas de rupture de stock"
 collection: "traitements-glp1"
 affiliateCollection: "traitements-glp1"

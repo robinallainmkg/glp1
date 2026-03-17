@@ -1,5 +1,5 @@
 ---
-title: "Mounjaro et Insuffisance Cardiaque : Résultats SUMMIT et Impact en France"
+title: "Mounjaro et Insuffisance Cardiaque : Étude SUMMIT 2026"
 description: "Mounjaro (tirzepatide) réduit le risque d'insuffisance cardiaque de 38% (étude SUMMIT). Ce que cela change pour les patients cardiaques obèses en France."
 pubDate: 2026-03-17
 date: "2026-03-17"

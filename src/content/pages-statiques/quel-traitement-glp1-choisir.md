@@ -386,7 +386,7 @@ Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de r
 
 ### Où trouver un médecin prescripteur de GLP-1 ?
 
-Utilisez notre **[annuaire des médecins GLP-1 en France](/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
+Utilisez notre **[annuaire des médecins GLP-1 en France](/annuaire/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
 
 ## 📋 Ressources Complémentaires
 
@@ -407,7 +407,7 @@ Utilisez notre **[annuaire des médecins GLP-1 en France](/medecins-glp1-france/
 - [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 ### Trouver un médecin
-- [Médecins GLP-1 en France](/medecins-glp1-france/) - Annuaire par région et ville
+- [Médecins GLP-1 en France](/annuaire/) - Annuaire par région et ville
 
 ---
 

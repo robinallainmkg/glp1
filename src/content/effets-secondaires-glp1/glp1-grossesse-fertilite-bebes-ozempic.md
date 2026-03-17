@@ -10,8 +10,8 @@ updatedAt: '2026-03-15'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 9
-image: "/images/thumbnails/glp1-grossesse-fertilite.jpg"
-thumbnail: "/images/thumbnails/glp1-grossesse-fertilite.jpg"
+image: "/images/thumbnails/sante.jpg"
+thumbnail: "/images/thumbnails/sante.jpg"
 thumbnailAlt: "Femme enceinte et traitement GLP-1 Ozempic grossesse"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"

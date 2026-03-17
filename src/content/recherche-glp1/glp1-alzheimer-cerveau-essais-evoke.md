@@ -10,8 +10,8 @@ updatedAt: '2026-03-16'
 featured: true
 author: 'Dr. Sophie Dubois'
 readingTime: 11
-image: "/images/thumbnails/glp1-alzheimer-cerveau-essais-evoke.jpg"
-thumbnail: "/images/thumbnails/glp1-alzheimer-cerveau-essais-evoke.jpg"
+image: "/images/thumbnails/recherche-clinique-glp1-illus.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1-illus.jpg"
 thumbnailAlt: "GLP-1 et Alzheimer cerveau recherche essais EVOKE"
 collection: "recherche-glp1"
 affiliateCollection: "recherche-glp1"

@@ -8,7 +8,7 @@ category: "traitements-glp1"
 tags: ["wegovy", "mounjaro", "comparatif", "glp-1", "tirzepatide", "semaglutide", "perte de poids", "2026"]
 pubDate: "2026-03-16"
 date: "2026-03-16"
-thumbnail: "/images/thumbnails/wegovy-vs-mounjaro.jpg"
+thumbnail: "/images/thumbnails/vs.jpg"
 thumbnailAlt: "Comparatif Wegovy vs Mounjaro 2026"
 featured: true
 priority: 2

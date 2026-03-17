@@ -10,8 +10,8 @@ updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
-image: "/images/thumbnails/glp1-chirurgie-anesthesie.jpg"
-thumbnail: "/images/thumbnails/glp1-chirurgie-anesthesie.jpg"
+image: "/images/thumbnails/chirurgie-bariatrique-illus.jpg"
+thumbnail: "/images/thumbnails/chirurgie-bariatrique-illus.jpg"
 thumbnailAlt: "Patient sous GLP-1 avant chirurgie et anesthésie"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"

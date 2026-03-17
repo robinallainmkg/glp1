@@ -10,8 +10,8 @@ updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
-image: "/images/thumbnails/ozempic-proces-recours-juridique.jpg"
-thumbnail: "/images/thumbnails/ozempic-proces-recours-juridique.jpg"
+image: "/images/thumbnails/ozempic-danger-illus.jpg"
+thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"
 thumbnailAlt: "Ozempic procès effets secondaires graves recours juridique France"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"

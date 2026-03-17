@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Traitements"
 tags: ["glp1", "ANSM", "prescription", "réglementation", "France", "obésité", "diabète"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/ansm-prescription-glp1.jpg"
+thumbnail: "/images/thumbnails/suivi-medical-glp1.jpg"
 thumbnailAlt: "ANSM nouvelles règles prescription GLP-1 France 2025"
 featured: true
 published: true

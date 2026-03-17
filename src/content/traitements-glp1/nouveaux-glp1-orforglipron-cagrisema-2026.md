@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Traitements GLP-1"
 tags: ["glp1", "orforglipron", "cagrisema", "nouveaux traitements", "obésité", "2026"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/nouveaux-glp1-2026.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "Nouveaux médicaments GLP-1 attendus en France 2026 : orforglipron, CagriSema"
 featured: true
 published: true

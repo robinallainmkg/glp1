@@ -1,6 +1,6 @@
 ---
-title: "GLP-1 et Graisse Abdominale : Comment Ozempic et Mounjaro Éliminent la Graisse Viscérale"
-description: "GLP-1 graisse abdominale viscérale : données cliniques sur Ozempic et Mounjaro pour réduire le ventre. Mécanismes, résultats chiffrés et comparaison des deux traitements."
+title: "GLP-1 et Graisse Abdominale : Ozempic et Mounjaro"
+description: "GLP-1 graisse abdominale viscérale : résultats cliniques Ozempic et Mounjaro. Mécanismes, données chiffrées et comparaison des deux traitements."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
