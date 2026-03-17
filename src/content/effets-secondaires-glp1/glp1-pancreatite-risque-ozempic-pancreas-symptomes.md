@@ -8,7 +8,6 @@ author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "pancréatite", "ozempic", "wegovy", "mounjaro", "effets secondaires", "pancréas", "ANSM"]
 collection: "effets-secondaires-glp1"
-affiliateCollection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 thumbnailAlt: "GLP-1 et pancréatite : risque sur le pancréas sous Ozempic et Wegovy"
 featured: true

@@ -8,7 +8,6 @@ author: "Dr. Marie Dubois"
 category: "Médecins spécialisés"
 tags: ["télémédecine", "prescription", "glp1", "wegovy", "mounjaro", "en ligne", "ordonnance", "france", "2026", "médecin en ligne"]
 collection: "medecins-glp1-france"
-affiliateCollection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/docteur.jpg"
 thumbnailAlt: "Prescription GLP-1 en télémédecine ordonnance en ligne France Wegovy Mounjaro"
 featured: true

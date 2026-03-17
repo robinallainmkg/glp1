@@ -8,7 +8,6 @@ author: "Dr. Sophie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "interactions médicamenteuses", "ozempic", "wegovy", "mounjaro", "pharmacologie", "médicaments", "ANSM"]
 collection: "effets-secondaires-glp1"
-affiliateCollection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/interactions-glp1.jpg"
 thumbnailAlt: "Interactions médicamenteuses sous GLP-1 Ozempic Wegovy Mounjaro guide pratique"
 featured: true
