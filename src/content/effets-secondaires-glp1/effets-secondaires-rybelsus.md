@@ -1,11 +1,12 @@
 ---
-title: "Effets Secondaires Rybelsus : Que savoir avant de commencer ?"
-description: "Effets secondaires Rybelsus : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître."
+title: "Effets Secondaires Rybelsus Sémaglutide Oral : Guide"
+description: "Effets secondaires Rybelsus (sémaglutide oral) : nausées, troubles digestifs et effets indésirables. Comment les gérer et ce que les études montrent."
 keywords: ['effets secondaires rybelsus', 'rybelsus nausées', 'rybelsus effets indésirables', 'risques rybelsus', 'tolérance rybelsus']
-seoTitle: "Effets Secondaires Rybelsus : Les connaître pour mieux les gérer"
-seoDescription: "Guide complet des effets secondaires de Rybelsus : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+seoTitle: "Effets Secondaires Rybelsus Sémaglutide Oral : Guide Complet"
+seoDescription: "Guide complet des effets secondaires de Rybelsus sémaglutide oral : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
@@ -14,6 +15,7 @@ thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
 thumbnailAlt: "Effets secondaires du traitement rybelsus"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires rybelsus semaglutide oral"
 ---
 
 ## Effets Secondaires Rybelsus : Guide Complet

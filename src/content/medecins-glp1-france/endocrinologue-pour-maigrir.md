@@ -1,8 +1,9 @@
 ---
-title: "Endocrinologue Pour Maigrir : Guide 2025"
+title: "Endocrinologue Pour Maigrir avec GLP-1 : Guide 2025"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Consulter un endocrinologue pour maigrir : spécialisation en obésité, traitements GLP-1, suivi personnalisé et prise en charge médicale complète."
+description: "Consulter un endocrinologue pour maigrir avec GLP-1 : spécialisation en obésité, traitements, suivi personnalisé et prise en charge médicale complète."
 category: "Médecins spécialisés"
 tags: ["glp1", "medecins", "specialistes"]
 collection: "medecins-glp1-france"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article endocrinologue-pour-maigrir"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "endocrinologue pour maigrir GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -229,10 +231,10 @@ Idéalement, associez :
 - Psychologue si troubles du comportement alimentaire
 - Coach sportif adapté à votre condition
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [prix Wegovy](../glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

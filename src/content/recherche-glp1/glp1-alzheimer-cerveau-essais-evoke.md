@@ -1,10 +1,11 @@
 ---
-title: "GLP-1 et Alzheimer : Les Résultats Décevants des Essais EVOKE (2025-2026)"
-description: "Les essais EVOKE sur le sémaglutide oral n'ont pas montré d'effet sur le déclin cognitif dans l'Alzheimer précoce. Analyse des résultats, mécanismes et perspectives de recherche."
+title: "GLP-1 Alzheimer Cerveau : Essais EVOKE, Maladie Neurodégénérative"
+description: "GLP-1 alzheimer cerveau maladie neurodégénérative : les essais EVOKE déçoivent. Sémaglutide oral et déclin cognitif, résultats et perspectives 2026."
 keywords: ['glp1 alzheimer', 'glp1 cerveau', 'semaglutide alzheimer', 'ozempic maladie neurodégénérative', 'evoke essai clinique', 'glp1 neuroprotection']
-seoTitle: "GLP-1 et Alzheimer : Pourquoi les Essais EVOKE Ont Déçu (Analyse 2026)"
-seoDescription: "Essais EVOKE et EVOKE+ : le sémaglutide oral n'a pas ralenti le déclin cognitif dans l'Alzheimer. Analyse des résultats, limites et espoirs pour la recherche neurologique GLP-1."
+seoTitle: "GLP-1 Alzheimer Cerveau : Pourquoi les Essais EVOKE Ont Déçu (2026)"
+seoDescription: "Essais EVOKE et EVOKE+ : le sémaglutide n'a pas ralenti le déclin cognitif dans l'Alzheimer. Résultats, limites et espoirs pour la recherche GLP-1."
 publishedAt: '2026-03-16'
+date: '2026-03-16'
 updatedAt: '2026-03-16'
 featured: true
 author: 'Dr. Sophie Dubois'
@@ -82,7 +83,7 @@ Un detail technique important : les essais ont utilise le semaglutide **oral** (
 
 ### Ce que les donnees montrent
 
-Les resultats, publies dans *Nature Medicine* et presentes en 2025, sont sans ambiguite sur le critere principal :
+Les résultats, présentés au congrès CTAD (Clinical Trials on Alzheimer's Disease) en décembre 2025 à San Diego, sont sans ambiguite sur le critere principal :
 
 **Aucune difference significative** n'a ete observee entre le groupe semaglutide et le groupe placebo sur le score CDR-SB (Clinical Dementia Rating - Sum of Boxes), qui mesure la progression du declin cognitif.
 
@@ -155,7 +156,7 @@ L'echec des essais EVOKE ne signifie pas la fin de la recherche sur les GLP-1 et
 L'interet pour les effets cerebraux des GLP-1 depasse largement Alzheimer. Des recherches sont en cours dans plusieurs domaines neurologiques, avec des resultats plus encourageants :
 
 - **Maladie de Parkinson** : Un essai de phase II avec l'exenatide (Byetta) a montre un ralentissement de la progression motrice chez les patients parkinsoniens. Des essais de phase III sont en cours.
-- **Addictions** : Les GLP-1 reduisent les comportements addictifs (alcool, tabac, opioides) en agissant sur le circuit de la recompense. Consultez notre article detaille sur les [GLP-1 et les addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/).
+- **Addictions** : Les GLP-1 reduisent les comportements addictifs (alcool, tabac, opioides) en agissant sur le circuit de la recompense. Consultez notre article detaille sur les [GLP-1 et les addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/). L'[essai ALBATROS sur les GLP-1 et l'alcool](/collections/recherche-glp1/glp1-alcool-reduction-consommation-essai-albatros-2025/) confirme ce mecanisme neurologique pour la reduction de la consommation d'alcool.
 - **Depression** : Des donnees observationnelles suggerent un effet positif des GLP-1 sur l'humeur, bien que le mecanisme soit complexe. Pour en savoir plus, consultez notre article sur les [GLP-1 et la sante mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
 
 ## L'importance de la rigueur scientifique
@@ -190,4 +191,4 @@ Non. Chaque indication est differente. Les mecanismes impliques dans Alzheimer (
 
 ---
 
-*Sources : Essais EVOKE et EVOKE+ (Nature Medicine 2025, 3 808 participants), Imperial College London communique mars 2026, Science mars 2026, Novo Nordisk resultats phase III.*
+*Sources : Essais EVOKE et EVOKE+ (présentés au congrès CTAD décembre 2025, 3 808 participants), protocole publié dans Alzheimer's Research & Therapy (janvier 2025), Imperial College London communiqué mars 2026, Science mars 2026, Novo Nordisk résultats phase III.*

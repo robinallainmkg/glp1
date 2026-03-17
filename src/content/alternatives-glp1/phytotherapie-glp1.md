@@ -1,7 +1,8 @@
 ---
-title: "Phytotherapie GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Phytotherapie GLP-1 : informations médicales et recommandations d'experts."
+title: "Phytothérapie GLP-1 plantes médicinales : Guide 2025"
+description: "Phytothérapie et GLP-1 : quelles plantes médicinales peuvent compléter ce traitement ? Données scientifiques, précautions et recommandations médicales."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -127,11 +128,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Bocaux hermétiques** : Conservation plantes
 - **Balance précision** : Dosage exact
 
-- [nouveau traitement diabète](../traitements-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../traitements-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

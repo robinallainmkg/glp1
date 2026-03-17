@@ -3,6 +3,8 @@ title: "Quel traitement GLP-1 choisir ? Guide complet 2025"
 description: "Découvrez comment choisir le bon traitement GLP-1. Comparaison Ozempic, Wegovy, Mounjaro et autres. Guide d'expert pour faire le bon choix."
 pageType: "Guide statique"
 noIndex: false
+date: 2025-08-30
+mainKeyword: "quel traitement GLP-1 choisir"
 thumbnail: "/images/thumbnails/quel-traitement-glp1-choisir.svg"
 thumbnailAlt: "Illustration pour l'article quel-traitement-glp1-choisir"
 keywords: ['quel glp1 choisir', 'comparaison glp1', 'meilleur traitement glp1', 'ozempic vs wegovy', 'mounjaro ou wegovy', 'glp1 pour maigrir', 'choix traitement diabète', 'comparatif ozempic wegovy mounjaro']
@@ -346,7 +348,7 @@ En savoir plus sur les [résultats attendus avec Mounjaro](/collections/traiteme
 
 ### Puis-je boire de l'alcool avec les GLP-1 ?
 
-Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/regime-glp1/) pour plus de conseils nutritionnels.
+Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/regime-glp1/) pour plus de conseils nutritionnels.
 
 ### Les GLP-1 sont-ils remboursés pour tous ?
 
@@ -384,7 +386,7 @@ Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de r
 
 ### Où trouver un médecin prescripteur de GLP-1 ?
 
-Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
+Utilisez notre **[annuaire des médecins GLP-1 en France](/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
 
 ## 📋 Ressources Complémentaires
 
@@ -405,7 +407,7 @@ Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-
 - [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 ### Trouver un médecin
-- [Médecins GLP-1 en France](/collections/medecins-glp1-france/) - Annuaire par région et ville
+- [Médecins GLP-1 en France](/medecins-glp1-france/) - Annuaire par région et ville
 
 ---
 

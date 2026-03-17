@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Fonte Musculaire : Comment Préserver vos Muscles sous Traitement"
-description: "Jusqu'à 40% de la perte de poids sous GLP-1 peut être de la masse musculaire. Découvrez les stratégies éprouvées pour préserver vos muscles : apport protéique, musculation et suivi adapté."
+title: "GLP-1 Fonte Musculaire : Préserver la Masse Musculaire"
+description: "GLP-1 fonte musculaire perte masse muscle : jusqu'à 40% de muscle perdu sous traitement. Stratégies pour préserver vos muscles (protéines, sport)."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Sophie Dubois"
 category: "Nutrition et exercice"
@@ -53,7 +54,7 @@ Dans les essais cliniques des GLP-1, les données de composition corporelle mont
 
 ### Pourquoi c'est important
 
-La masse musculaire n'est pas seulement une question d'apparence. Elle joue un rôle fondamental dans le métabolisme de base (un kilogramme de muscle brûle environ 13 calories par jour au repos, contre 4,5 pour un kilogramme de graisse), la régulation de la glycémie (le muscle est le principal consommateur de glucose), la prévention des chutes et fractures (surtout après 60 ans), la santé osseuse et l'autonomie au quotidien.
+La masse musculaire n'est pas seulement une question d'apparence. Elle joue un rôle fondamental dans le métabolisme de base (un kilogramme de muscle brûle environ 13 calories par jour au repos, contre 4,5 pour un kilogramme de graisse), la régulation de la glycémie (le muscle est le principal consommateur de glucose), la prévention des chutes et fractures (surtout après 60 ans), la [santé osseuse et le risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) et l'autonomie au quotidien.
 
 ### Le risque de sarcopénie
 
@@ -121,7 +122,7 @@ La leucine est l'acide aminé qui déclenche la synthèse protéique musculaire.
 
 ### Pourquoi la musculation est non négociable
 
-L'exercice de résistance (musculation, bandes élastiques, poids de corps) est le stimulus le plus puissant pour signaler au corps qu'il doit conserver sa masse musculaire. Sans ce stimulus, même un apport protéique adéquat ne suffit pas à prévenir complètement la perte de muscle.
+L'exercice de résistance (musculation, bandes élastiques, poids de corps) est le stimulus le plus puissant pour signaler au corps qu'il doit conserver sa masse musculaire. Sans ce stimulus, même un apport protéique adéquat ne suffit pas à prévenir complètement la perte de muscle. Pour aller plus loin, consultez notre [guide complet sport et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/).
 
 Une étude publiée dans *Obesity* en 2024 a montré que les patients sous sémaglutide qui pratiquaient un exercice de résistance 2 à 3 fois par semaine perdaient significativement moins de masse maigre que ceux qui ne faisaient que du cardio ou pas d'exercice du tout.
 
@@ -224,7 +225,7 @@ Oui. Une analyse de composition corporelle par impédancemétrie (disponible che
 
 ### Les personnes âgées doivent-elles être plus prudentes ?
 
-Oui. Après 60 ans, la résistance anabolique (le muscle répond moins bien aux stimuli de croissance) rend la préservation musculaire plus difficile. L'apport protéique doit être d'au moins 1,5 g/kg/jour, et l'exercice de résistance est encore plus important. Un suivi médical rapproché est recommandé.
+Oui. Après 60 ans, la résistance anabolique (le muscle répond moins bien aux stimuli de croissance) rend la préservation musculaire plus difficile. L'apport protéique doit être d'au moins 1,5 g/kg/jour, et l'exercice de résistance est encore plus important. En complément des protéines, les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) — calcium, vitamine D, magnésium — sont cruciaux pour la santé osseuse. Un suivi médical rapproché est recommandé.
 
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Santé Mentale : Dépression, Apathie et Effets Psychologiques (Ozempic)"
-description: "Ozempic, Wegovy et Mounjaro peuvent causer apathie, perte d'intérêt ou changements d'humeur. Que dit la science sur les effets psychologiques des GLP-1 ? Que faire si vous êtes concerné ?"
+title: "Ozempic Dépression et Apathie : Effets Psychologiques"
+description: "Ozempic dépression apathie effets psychologiques : Wegovy, Mounjaro peuvent provoquer des changements d'humeur. Ce que dit la science et que faire en 2026."
 pubDate: 2026-03-15
+date: 2026-03-15
 updatedAt: 2026-03-15
 author: "Dr. Émilie Martin"
 category: "Effets secondaires GLP-1"
@@ -158,7 +159,7 @@ Ces effets font partie du mécanisme attendu du traitement. Ils sont généralem
 
 ### Ne pas arrêter le traitement seul
 
-Si vous ressentez des changements d'humeur préoccupants, n'arrêtez pas votre traitement sans en parler à votre médecin. Un arrêt brutal peut entraîner une reprise de poids rapide. Votre médecin évaluera avec vous la balance bénéfice/risque et pourra proposer des adaptations.
+Si vous ressentez des changements d'humeur préoccupants, n'arrêtez pas votre traitement sans en parler à votre médecin. Un arrêt brutal peut entraîner une [reprise de poids rapide](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/). Votre médecin évaluera avec vous la balance bénéfice/risque et pourra proposer des adaptations.
 
 ### Informer votre médecin prescripteur
 
@@ -200,11 +201,13 @@ Chez la majorité des patients qui rapportent une apathie en début de traitemen
 Oui, généralement. Aucune interaction médicamenteuse majeure n'a été identifiée entre les GLP-1 et les antidépresseurs courants (ISRS, IRSN). Votre médecin évaluera la situation selon votre profil spécifique.
 
 **Les GLP-1 peuvent-ils au contraire améliorer la dépression ?**
-Des études publiées dans *JAMA Psychiatry* (2024) montrent que la perte de poids induite par les GLP-1 s'accompagne d'une amélioration significative de la qualité de vie, de l'image corporelle et de l'humeur chez la majorité des patients. Pour beaucoup, le bilan psychologique du traitement est positif.
+Des études publiées dans *JAMA Psychiatry* (2024) montrent que la perte de poids induite par les GLP-1 s'accompagne d'une amélioration significative de la qualité de vie, de l'image corporelle et de l'humeur chez la majorité des patients. Pour beaucoup, le bilan psychologique du traitement est positif. Cette action sur les circuits de la récompense explique aussi les [effets des GLP-1 sur les comportements addictifs](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) comme l'alcool ou le tabac.
 
 **Mon enfant ou adolescent peut-il être affecté différemment ?**
 Les GLP-1 ne sont pas encore indiqués chez les moins de 12 ans en France (Wegovy est autorisé dès 12 ans aux États-Unis). La prudence est de mise, et un suivi psychologique renforcé est recommandé pour les adolescents traités.
 
 ---
+
+Au-delà des effets psychologiques, d'[autres effets secondaires émergents des GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) comme le risque osseux ont été identifiés en 2026.
 
 *Ces informations sont fournies à titre éducatif et ne remplacent pas l'avis d'un professionnel de santé. Si vous souffrez d'effets psychologiques liés à votre traitement, consultez votre médecin. En cas d'urgence psychiatrique, appelez le 15 (SAMU) ou le 3114 (numéro national de prévention du suicide).*

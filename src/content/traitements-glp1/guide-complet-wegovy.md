@@ -1,7 +1,7 @@
 ---
-title: "Guide Complet Wegovy : Prix, Effets Secondaires et Posologie"
+title: "Wegovy Guide Complet France : Sémaglutide, Prix et Effets"
 slug: "guide-complet-wegovy"
-description: "Découvrez tout sur Wegovy : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
+description: "Wegovy guide complet France semaglutide sémaglutide : traitement GLP-1 obésité, perte de poids. Prix, effets secondaires et posologie."
 author: "Dr. Martin"
 image: "/images/thumbnails/wegovy.jpg"
 collection: "traitements-glp1"
@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["wegovy", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "wegovy guide complet france semaglutide"
 ---
 
 ## Guide Complet Wegovy : Tout Savoir sur ce Traitement Révolutionnaire

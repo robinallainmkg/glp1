@@ -1,7 +1,8 @@
 ---
-title: "Orforglipron, CagriSema, Amycrétine : Les Nouveaux GLP-1 Attendus en France"
-description: "Orforglipron (comprimé oral), CagriSema (-22,7% de poids) et amycrétine : découvrez les nouveaux traitements GLP-1 en cours d'approbation en France et en Europe pour 2026-2027."
+title: "Orforglipron France : Nouveau Médicament Perte de Poids 2026"
+description: "Orforglipron France, nouveau médicament GLP-1 pour la perte de poids : CagriSema et amycrétine attendus en 2026-2027. Calendrier, efficacité et accès."
 pubDate: 2026-03-15
+date: "2026-03-15"
 updatedAt: 2026-03-15
 author: "Dr. Sophie Dubois"
 category: "Traitements GLP-1"
@@ -88,7 +89,7 @@ L'étude REDEFINE 1, publiée en 2025 dans le *New England Journal of Medicine*,
 
 | Critère | CagriSema | Sémaglutide seul | Différence |
 |---------|-----------|------------------|------------|
-| Perte de poids à 68 semaines | **22,7%** | 15,2% | +7,5% |
+| Perte de poids à 68 semaines | **22,7%** | 16,1% | +6,6% |
 | Patients avec ≥20% de perte | 41% | 22% | +19 points |
 | Réduction tour de taille | -20,4 cm | -13,9 cm | -6,5 cm |
 | Réduction HbA1c (DT2) | -2,2% | -1,7% | -0,5% |
@@ -174,7 +175,7 @@ Pour les traitements actuellement disponibles, consultez notre [guide complet re
 
 | Traitement | Prix mensuel | Remboursement |
 |-----------|-------------|---------------|
-| Ozempic (DT2) | ~77 €/stylo | 30% (DT2 uniquement) |
+| Ozempic (DT2) | ~59,90 €/stylo | 30% (DT2 uniquement, sous conditions de prescription depuis février 2025) |
 | Wegovy (obésité) | 169-360 € | Non remboursé (attendu 2e sem. 2026) |
 | Mounjaro | 230-440 € | Non remboursé (attendu 2e sem. 2026) |
 | Orforglipron | Non commercialisé | — |
@@ -197,7 +198,7 @@ Oui. Des essais cliniques de phase 3 sont encore en cours pour certaines molécu
 Trop tôt pour le dire. L'amycrétine est encore en phase 3. Si les résultats sont confirmés, elle sera soumise à l'EMA, puis évaluée par la HAS pour le remboursement. Ce processus prend généralement 3 à 5 ans après le début de la phase 3.
 
 **Ces nouveaux médicaments remplacent-ils les GLP-1 actuels ?**
-Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure.
+Non, ils s'y ajoutent. Les GLP-1 actuels (Ozempic, Wegovy, Mounjaro) restent des traitements efficaces et disponibles. Notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) vous aide à choisir parmi ces traitements actuellement accessibles. Les nouvelles molécules offriront des alternatives pour les patients qui ne tolèrent pas les injections ou qui nécessitent une efficacité supérieure. Parmi les innovations proches, le [sémaglutide oral (comprimé) en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/) représente une évolution majeure vers des traitements sans injection.
 
 ---
 

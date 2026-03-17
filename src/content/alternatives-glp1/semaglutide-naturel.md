@@ -1,7 +1,8 @@
 ---
-title: "Sémaglutide Naturel : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur les alternatives naturelles au sémaglutide : plantes, compléments alimentaires et approches holistiques pour la gestion de la glycémie."
+title: "Sémaglutide Naturel : Alternatives au GLP-1 — Guide 2026"
+description: "Alternatives naturelles au sémaglutide : plantes, compléments alimentaires et approches holistiques pour stimuler le GLP-1 et gérer la glycémie."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -65,10 +66,10 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 ### Y a-t-il des contre-indications ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 - [opération pour maigrir prix](../glp1-cout/operation-pour-maigrir-prix/)
-- [injection Ozempic prix](../traitements-glp1/ozempic-injection-prix/)
-- [comparatif prix GLP-1](../glp1-cout/wegovy-prix-pharmacie/)
+- [injection Ozempic prix](/collections/glp1-cout/prix-ozempic-france/)
+- [comparatif prix GLP-1](/collections/glp1-cout/prix-wegovy-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

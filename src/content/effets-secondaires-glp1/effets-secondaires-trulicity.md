@@ -1,16 +1,18 @@
 ---
-title: "Effets Secondaires Trulicity : Que savoir avant de commencer ?"
+title: "Effets Secondaires Trulicity : Ce qu'il faut savoir"
 description: "Effets secondaires Trulicity : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître."
 keywords: ['effets secondaires trulicity', 'trulicity nausées', 'trulicity effets indésirables', 'risques trulicity', 'tolérance trulicity']
 seoTitle: "Effets Secondaires Trulicity : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Trulicity : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Trulicity"
 image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 thumbnail: "/images/thumbnails/trulicity.jpg"
 thumbnailAlt: "Effets secondaires du traitement trulicity"

@@ -1,17 +1,19 @@
 ---
-title: "Prix Wegovy 2026 : Coût par Dosage et Remboursement en France"
-description: "Prix Wegovy en France : 169 a 360 euros/mois selon dosage. Non rembourse en 2026. Comparatif des prix par dosage et alternatives."
+title: "Prix Wegovy France 2026 : Coût par Dosage et Remboursement"
+description: "Prix Wegovy France 2026 : 169 à 360€/mois selon dosage, non remboursé. Comparatif prix wegovy france par dosage et alternatives moins chères."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg', 'wegovy prix pharmacie']
-seoTitle: "Prix Wegovy 2026 : Tarifs par Dosage et Remboursement en France"
-seoDescription: "Prix Wegovy : 169 à 360€/mois selon dosage. Non remboursé par la Sécurité Sociale (mars 2026), remboursement possible au 2e semestre 2026. Tous les prix par dosage."
+seoTitle: "Prix Wegovy France 2026 : Tarifs par Dosage et Remboursement"
+seoDescription: "Prix Wegovy France : 169 à 360€/mois selon dosage. Non remboursé par la Sécurité Sociale (mars 2026), remboursement possible au 2e semestre 2026. Tous les prix Wegovy France par dosage."
 publishedAt: '2025-01-28'
-updatedAt: '2026-03-15'
+updatedAt: '2026-03-17'
+date: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
 image: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Wegovy France"
 ---
 
 <script type="application/ld+json">
@@ -253,7 +255,7 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 - **Remboursement possible** : 2e semestre 2026 (négociations CEPS en cours)
 - **Taux probable** : 65% si et quand remboursé (HAS recommande pour IMC ≥ 35)
 
-**Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
+**Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire. Avant d'acheter, vérifiez les [conditions de prescription du Wegovy en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) fixées par l'ANSM en 2025.
 
 thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
@@ -382,7 +384,7 @@ Mais :
 3. **Vérification critères** : IMC ≥ 30 ou ≥ 27 avec comorbidités
 4. **Prescription** : Ordonnance sécurisée valable 3-6 mois
 
-[Trouver un médecin prescripteur Wegovy](/collections/medecins-glp1-france)
+[Trouver un médecin prescripteur Wegovy](/medecins-glp1-france/)
 
 ### Comment réduire le coût de Wegovy ?
 
@@ -506,22 +508,22 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ### Comparatifs et Choix
 - **[Wegovy vs Ozempic : Le Match Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement pour votre profil ?
-- **[Tous les Traitements GLP-1](/collections/glp1-cout)** - Vue d'ensemble des prix
+- **[Tous les Traitements GLP-1](/glp1-cout/)** - Vue d'ensemble des prix
 
 ### Médecins et Suivi
 - **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire complet
-- **[Suivi Médical sous GLP-1](/guides/suivi-medical-glp1)** - Examens et consultations
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-wegovy)** - Examens et consultations
 - **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite)** - Prise en charge globale
 
 ### Témoignages et Communauté
 - **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles
-- **[Communautés GLP-1](/guides/communautes-glp1)** - Forums et groupes d'entraide
+- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**
 - 📞 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 - 🏥 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
 - 💊 **Fédération Française d'Obésité** : 01 56 81 10 10
-- 💬 **[Contactez-nous](/contact)** pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

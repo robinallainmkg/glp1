@@ -1,7 +1,8 @@
 ---
-title: "Guide Complet Ozempic 2025 : Tout Savoir"
-description: "Guide complet sur Ozempic 2025 : effets secondaires, dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée."
+title: "Ozempic Effets Secondaires et Risques : Guide Complet 2025"
+description: "Ozempic effets secondaires risques : dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée du sémaglutide en France."
 pubDate: 2025-08-10
+date: 2025-08-10
 author: "Karim Benali"
 category: "Effets secondaires"
 tags: ["glp1", "effets-secondaires", "tolerance"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Ozempic Danger"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "ozempic effets secondaires risques"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -321,11 +323,11 @@ Dépend de la gravité : effets mineurs (adaptation possible), effets graves (ar
 3. Corticoïdes si nécessaire
 4. Adrénaline si anaphylaxie
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicaments GLP-1](../glp1-diabete/nouveau-traitement-diabete-type-2-injection/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicaments GLP-1](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

@@ -1,21 +1,22 @@
 ---
-title: "Guide Complet GLP-1 2025 en France : Tout Savoir"
-description: "Guide ultime 2025 sur les GLP-1 en France : médicaments, efficacité, prix, effets secondaires et alternatives. Tout ce qu'il faut savoir pour une perte de poids réussie."
+title: "Guide Complet GLP-1 2025 France : Tout Savoir sur les Traitements"
+description: "Guide complet GLP-1 2025 France tout savoir : médicaments disponibles, efficacité, prix, effets secondaires et alternatives pour une perte de poids réussie."
 author: "Dr. Martin"
 thumbnail: "/images/thumbnails/guide-complet-GLP1.jpg"
 collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 tags: ["glp-1", "perte de poids", "france", "2025", "guide complet", "traitements", "efficacité", "prix"]
-date: "2025-08-30"
+date: "2026-03-17"
+mainKeyword: "guide complet GLP-1 2025 France tout savoir"
 ---
 
-# Guide Complet GLP-1 2025 en France : Tout Savoir
+## Guide Complet GLP-1 2025 en France : Tout Savoir
 
 <div class="guide-buttons">
-  <a href="/collections/traitements-glp1/" class="guide-button primary">
+  <a href="/traitements-glp1/" class="guide-button primary">
     💉 Traitements GLP-1 Disponibles
   </a>
-  <a href="/collections/glp1-cout/" class="guide-button secondary">
+  <a href="/glp1-cout/" class="guide-button secondary">
     💰 Prix et Remboursement
   </a>
 </div>
@@ -71,7 +72,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 ### Résultats Cliniques Prouvés
 
-**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France.
+**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France. Pour aller plus loin, consultez les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de vrais patients.
 
 - **Perte de poids moyenne :** 8-15% du poids corporel en 6-12 mois
 - **Ozempic/Wegovy :** Jusqu'à 15-20% de perte de poids (jusqu'à 15kg)
@@ -178,7 +179,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 **La chirurgie bariatrique représente une solution efficace** pour les personnes souffrant d'obésité sévère (IMC > 40) ou d'obésité avec complications (IMC > 35).
 
 - **Indications :** IMC > 40 ou IMC > 35 avec complications associées
-- **Types d'intervention :** Anneau gastrique, sleeve gastrectomie, bypass gastrique
+- **Types d'intervention :** Anneau gastrique, [sleeve gastrectomie, bypass gastrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) — comparés aux GLP-1 dans notre dossier dédié
 - **Efficacité :** Perte de 60-80% de l'excès de poids en 1-2 ans
 - **Suivi :** Accompagnement nutritionnel et psychologique obligatoire
 

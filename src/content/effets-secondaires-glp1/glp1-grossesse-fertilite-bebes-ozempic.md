@@ -1,9 +1,10 @@
 ---
-title: "GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions à Connaître"
-description: "GLP-1 et grossesse : que sait-on sur la fertilité, les risques pour le bébé, et les recommandations médicales pour les femmes sous Ozempic, Wegovy ou Mounjaro ?"
+title: "GLP-1 Grossesse Fertilité Ozempic : Risques et Conseils"
+description: "GLP-1 grossesse et fertilité : risques fœtaux Ozempic, Wegovy, Mounjaro. Quand arrêter le traitement et recommandations médicales."
 keywords: ['ozempic grossesse', 'glp1 grossesse', 'glp1 fertilité', 'bébés ozempic', 'wegovy grossesse', 'mounjaro grossesse', 'glp1 enceinte']
-seoTitle: "GLP-1 et Grossesse : Ce que Toute Femme Sous Ozempic Doit Savoir"
-seoDescription: "Fertilité, risques fœtaux, arrêt du traitement : tout ce que les femmes sous GLP-1 (Ozempic, Wegovy, Mounjaro) doivent savoir avant ou pendant une grossesse."
+seoTitle: "GLP-1 Grossesse Fertilité Bébés Ozempic : Guide Complet 2026"
+seoDescription: "GLP-1 et grossesse : risques fœtaux, fertilité augmentée, arrêt du traitement. Recommandations pour les femmes sous Ozempic ou Wegovy."
+date: '2026-03-15'
 publishedAt: '2026-03-15'
 updatedAt: '2026-03-15'
 featured: true
@@ -14,9 +15,8 @@ thumbnail: "/images/thumbnails/glp1-grossesse-fertilite.jpg"
 thumbnailAlt: "Femme enceinte et traitement GLP-1 Ozempic grossesse"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "GLP-1 grossesse fertilité bébés Ozempic"
 ---
-
-# GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions
 
 La question revient de plus en plus dans les consultations médicales : peut-on tomber enceinte sous Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro ? Et si c'est le cas, que faire ? Depuis que ces médicaments GLP-1 sont prescrits à grande échelle pour la perte de poids, des milliers de femmes en âge de procréer se trouvent face à ces questions — sans toujours obtenir de réponses claires. Voici ce que la science sait aujourd'hui.
 
@@ -80,7 +80,7 @@ Pour le sémaglutide, le délai de deux mois correspond à environ cinq demi-vie
 
 ### La gestion du poids pendant la grossesse
 
-L'arrêt du traitement GLP-1 soulève une question légitime : comment gérer son poids pendant la grossesse, surtout si le médicament avait permis une perte de poids significative ?
+L'arrêt du traitement GLP-1 soulève une question légitime : comment gérer son poids pendant la grossesse, surtout si le médicament avait permis une perte de poids significative ? Notre guide sur [gérer l'arrêt du GLP-1 avant la grossesse](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) vous explique comment limiter la reprise de poids lors de ce sevrage. L'arrêt brutal peut aussi entraîner des changements d'humeur. Consultez notre guide sur les [effets psychologiques du traitement GLP-1](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
 
 Il est normal de reprendre du poids à l'arrêt d'un GLP-1. Pendant la grossesse, la prise de poids est non seulement normale mais nécessaire. Les recommandations actuelles de prise de poids pendant la grossesse sont basées sur l'IMC de départ :
 
@@ -128,7 +128,7 @@ Si vous souhaitez allaiter, vous devrez attendre la fin de la période d'allaite
 
 ## Ce qu'il faut retenir
 
-Les médicaments GLP-1 comme [Ozempic, Wegovy](/collections/glp1-cout/prix-ozempic-france/) et [Mounjaro](/collections/glp1-cout/prix-mounjaro-france/) sont contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et sous traitement GLP-1 :
+Les médicaments GLP-1 comme [Ozempic, Wegovy](/collections/glp1-cout/prix-ozempic-france/) et [Mounjaro (tirzepatide)](/collections/traitements-glp1/guide-complet-mounjaro/) sont formellement contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et sous traitement GLP-1 :
 
 - Assurez-vous d'utiliser une contraception efficace pendant le traitement
 - Planifiez l'arrêt du médicament au moins 2 mois avant une tentative de grossesse (pour le sémaglutide)

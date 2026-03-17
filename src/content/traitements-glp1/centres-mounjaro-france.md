@@ -1,9 +1,10 @@
 ---
-title: "Centres Spécialisés Mounjaro en France 2025 🏥"
+title: "Centres Mounjaro France 2025 : Liste et Accès au Traitement"
 slug: "centres-mounjaro-france"
-description: "Liste des centres hospitaliers et spécialistes qui proposent Mounjaro en France. Carte interactive, démarches, et conseils pour accéder au traitement."
+description: "Centres Mounjaro France 2025 : liste des centres hospitaliers et spécialistes. Carte interactive, démarches et conseils pour accéder au traitement."
 author: "Dr. Sophie Martin"
 pubDate: 2025-10-09T10:00:00Z
+date: "2025-10-09"
 category: "Traitements GLP-1"
 tags: ["mounjaro", "accès", "centres", "france", "carte"]
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"

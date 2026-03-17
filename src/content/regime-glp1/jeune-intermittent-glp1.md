@@ -1,8 +1,9 @@
 ---
-title: "Jeune Intermittent GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Jeûne intermittent GLP-1 : protocoles perte de poids"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Le jeûne intermittent combiné aux GLP-1 : protocoles adaptés, bénéfices pour la perte de poids et conseils pour une pratique sécurisée."
+description: "Jeûne intermittent GLP-1 protocoles perte de poids : bénéfices, risques et conseils pratiques pour une pratique sécurisée sous traitement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Jeune Intermittent GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "jeûne intermittent GLP-1 protocoles perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -41,7 +43,7 @@ Le jeûne intermittent (JI) et les agonistes GLP-1 sont synergiques pour la pert
 ## Prix, disponibilité et variations en France
 
 ### Coûts JI + GLP-1
-- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suivi** : ~59,90€/stylo (remboursé 65 % DT2) + consultation nutritionnelle
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suivi** : ~76,58€/stylo (remboursé 65 % pour le diabète de type 2) + consultation nutritionnelle
 - **Trulicity® + apps** : ~81€/mois (remboursé 65 % DT2) + applications JI (0-10€/mois)
 - **Lecteur glucose continu** : 60€/mois (optionnel surveillance)
 - **Suppléments** : Multivitamines 15-25€/mois
@@ -97,6 +99,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Éviter** : Sucres rapides en rupture jeûne
 - **Qualité** : Aliments entiers, peu transformés
 
+Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour préserver la masse musculaire. Le jeûne intermittent modifie les apports alimentaires. Consultez notre guide sur l'[apport calorique journalier optimal sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) pour équilibrer votre alimentation.
+
 ## Produits cosmétiques recommandés
 
 ### Confort jeûne
@@ -109,11 +113,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Crème mains** : Sécheresse liée jeûne
 - **Spray buccal** : Fraîcheur haleine
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

@@ -1,17 +1,19 @@
 ---
-title: "Prix Rybelsus 2026 : Coût et Accessibilité en France"
-description: "Prix Rybelsus en pharmacie, remboursement sécurité sociale, mutuelle santé. Comparatif des coûts et aides financières pour le traitement Rybelsus."
+title: "Prix Rybelsus France 2026 : Coût et Accessibilité"
+description: "Prix Rybelsus France en pharmacie : non remboursé, coût mensuel et couverture mutuelle. Comparatif des aides financières pour votre traitement Rybelsus."
 keywords: ['prix rybelsus', 'rybelsus pharmacie', 'remboursement rybelsus', 'mutuelle rybelsus', 'coût traitement rybelsus']
-seoTitle: "Prix Rybelsus 2026 : Combien coûte Rybelsus en France ?"
-seoDescription: "Prix Rybelsus en pharmacie française, remboursement sécurité sociale, couverture mutuelle. Tout savoir sur le coût du traitement Rybelsus."
+seoTitle: "Prix Rybelsus France 2026 : Combien coûte Rybelsus en pharmacie ?"
+seoDescription: "Prix Rybelsus France en pharmacie : non remboursé, coût complet et couverture mutuelle. Tout savoir sur le prix du traitement Rybelsus en 2026."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-rybelsus-france-illus.jpg"
+mainKeyword: "prix Rybelsus France"
 thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
 thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 ---

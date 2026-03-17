@@ -1,8 +1,9 @@
 ---
-title: "Micronutriments et GLP-1 : Vitamines Essentielles"
+title: "Micronutriments Vitamines GLP-1 : Carences et Supplémentation"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Guide expert des micronutriments sous GLP-1. Supplémentation personnalisée, bilans biologiques recommandés, et prévention des carences nutritionnelles pendant votre traitement."
+description: "Micronutriments et vitamines sous GLP-1 : prévenir les carences et adapter votre supplémentation. Guide expert avec bilans biologiques recommandés."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article glp1-micronutriments"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "micronutriments vitamines GLP-1 carences supplémentation"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -95,6 +97,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 
+En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour maintenir votre masse musculaire pendant le traitement.
+
 ## Produits cosmétiques recommandés
 
 ### Soins complémentaires
@@ -107,11 +111,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../traitements-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../traitements-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

@@ -1,11 +1,12 @@
 ---
-title: "Prix Mounjaro France 2026 : Tarifs et Conditions d'Accès"
-description: "Prix Mounjaro en France : 230 a 440 euros/mois selon dosage. Non rembourse en 2026. Tarifs par dosage et conditions d'acces."
+title: "Prix Mounjaro France 2026 : Tarifs par Dosage et Accès"
+description: "Prix Mounjaro France : 230 à 440€/mois selon dosage, non remboursé en 2026. Tarifs détaillés par dosage (2.5mg à 15mg) et conditions d'accès en pharmacie."
 keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france', 'mounjaro remboursement 2026', 'prix mounjaro allemagne', 'mounjaro prix italie']
-seoTitle: "Prix Mounjaro France 2026 : Coût, Accès et Tarifs par Dosage"
+seoTitle: "Prix Mounjaro France 2026 : Coût et Tarifs par Dosage"
 seoDescription: "Prix Mounjaro en France : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Tous les prix par dosage (2.5, 5, 7.5, 10, 12.5, 15mg) et comparatifs."
 publishedAt: '2025-09-06'
 updatedAt: '2026-03-08'
+date: 2026-03-08
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -13,6 +14,7 @@ readingTime: 12
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Mounjaro France"
 ---
 
 <script type="application/ld+json">
@@ -194,7 +196,7 @@ La Haute Autorité de Santé (HAS) a rendu un **avis favorable en décembre 2025
 
 ### Conditions d'Accès au Traitement
 
-Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier.
+Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier. Pour connaître en détail les [règles de prescription Mounjaro selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), consultez notre guide dédié.
 
 ### Perspectives de Remboursement
 
@@ -248,7 +250,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 1. **Consultation médicale initiale**
    - Évaluation de l'indication thérapeutique (diabète type 2 ou obésité)
    - Vérification des critères de remboursement
-   - [Consulter notre annuaire de médecins spécialisés](/collections/medecins-glp1-france)
+   - [Consulter notre annuaire de médecins spécialisés](/medecins-glp1-france/)
 
 2. **Prescription et délivrance**
    - Ordonnance sécurisée requise
@@ -274,7 +276,7 @@ Le coût mensuel pour le patient varie entre 230 et 440 euros selon le dosage, M
 L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel remboursement au 2e semestre 2026.
 
 ### Contacts Utiles
-- **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france)
+- **Consultation spécialisée** : [Trouver un endocrinologue](/medecins-glp1-france/)
 - **Information médicale Eli Lilly** : 0 800 10 12 13
 - **Assurance Maladie** : 3646 ou ameli.fr
 
@@ -456,14 +458,14 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 - **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro)** - Posologie, efficacité et mode d'emploi détaillé
 - **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)** - Tous les effets indésirables et comment les gérer
 - **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition adaptée pour maximiser la perte de poids
-- **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france)** - Annuaire des endocrinologues et diabétologues
+- **[Trouver un Médecin Prescripteur](/medecins-glp1-france/)** - Annuaire des endocrinologues et diabétologues
 - **[Mounjaro vs Ozempic : Comparatif Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement choisir selon votre profil
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Alternative si Mounjaro n'est pas accessible
 
 **Besoin d'aide ?**
 - 📞 Service patient Eli Lilly : **0 800 10 12 13** (gratuit)
 - 🏥 Assurance Maladie : **36 46** ou [ameli.fr](https://www.ameli.fr)
-- 💬 [Contactez-nous](/contact) pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

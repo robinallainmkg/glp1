@@ -1,7 +1,8 @@
 ---
-title: "Régime Mounjaro Optimal : Guide Nutritionnel Complet 2025"
-description: "Découvrez le régime alimentaire optimal avec Mounjaro. Guide complet des aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets de votre traitement."
+title: "Régime Mounjaro alimentation optimale tirzepatide"
+description: "Régime Mounjaro alimentation optimale tirzepatide : aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets du traitement."
 pubDate: 2025-09-07
+date: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "traitements", "nutrition"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article regime-mounjaro-optimal"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime Mounjaro alimentation optimale tirzepatide"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -152,7 +154,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 
 ### Programme Adapté
 - **Marche active** : 30 min/jour minimum
-- **Renforcement** : 2-3 séances/semaine
+- **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Souplesse** : Yoga, étirements
 - **Cardio modéré** : Selon tolérance
 

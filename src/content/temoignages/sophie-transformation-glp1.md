@@ -1,17 +1,19 @@
 ---
-title: "Sophie D. : -28 Kilos avec Ozempic - Transformation à 52 Ans"
-description: "Le témoignage inspirant de Sophie D., 52 ans, qui a perdu 28 kilos en 14 mois avec Ozempic. Comment elle a retrouvé confiance et énergie après la ménopause."
+title: "Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans"
+description: "Témoignage ozempic perte de poids : Sophie D., 52 ans, raconte comment elle a perdu 28 kilos en 14 mois avec Ozempic après la ménopause."
 author: "Sophie D."
 image: "/images/temoignages/sophie29.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["ozempic", "sémaglutide", "perte de poids", "28 kilos", "ménopause", "52 ans", "femme"]
 pubDate: 2025-08-25T00:00:00.000Z
+date: "2025-08-25"
 featured: true
 priority: 3
+mainKeyword: "temoignage ozempic perte de poids"
 ---
 
-# Sophie D. : Renaissance à 52 Ans avec Ozempic
+## Sophie D. : Renaissance à 52 Ans avec Ozempic
 
 **28 kilos perdus en 14 mois** - Retrouver sa vie après la ménopause
 
@@ -89,7 +91,7 @@ priority: 3
 
 ### Activité Physique
 - **Avant :** Marche occasionnelle
-- **Après :** Aquagym 2x/semaine + marche nordique
+- **Après :** Aquagym 2x/semaine + marche nordique pour [préserver la masse musculaire sous Ozempic](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 
 ### Énergie
 - **Avant :** Fatigue constante, essoufflement
@@ -159,5 +161,7 @@ priority: 3
 > "N'hésitez pas à franchir le pas. Vous méritez de vous sentir bien dans votre peau, à tout âge."
 
 ---
+
+Pour les chiffres des études cliniques et d'autres témoignages, consultez notre dossier sur les [résultats avant/après documentés des GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

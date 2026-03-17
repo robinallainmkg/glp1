@@ -1,8 +1,9 @@
 ---
-title: "GLP-1 et Addictions : Alcool, Tabac, Opioïdes — Ce que la Recherche Révèle"
+title: "GLP-1 et Addictions Alcool Tabac Opioïdes : Recherche 2025"
 pubDate: 2026-03-15
+date: 2026-03-15
 author: "Dr. Sophie Dubois"
-description: "Les médicaments GLP-1 (Ozempic, Wegovy) pourraient réduire les comportements addictifs. Que disent les études sur l'alcool, le tabac, les opioïdes et les mécanismes en jeu ?"
+description: "GLP-1 addictions alcool tabac opioïdes : Ozempic et Wegovy réduisent les comportements addictifs. Études sur les mécanismes cérébraux en jeu."
 category: "Recherche médicale"
 tags: ["glp1", "addiction", "alcool", "tabac", "recherche"]
 collection: "recherche-glp1"
@@ -11,6 +12,7 @@ thumbnailAlt: "Recherche GLP-1 addictions alcool tabac opioïdes"
 featured: true
 priority: 2
 schema: "Article"
+mainKeyword: "GLP-1 addictions alcool tabac opioïdes"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -124,7 +126,7 @@ L'enthousiasme autour de cette piste de recherche doit être tempéré par quelq
 
 Si les essais en cours confirment l'efficacité des GLP-1 dans les addictions, les premières autorisations de mise sur le marché pour ces nouvelles indications pourraient arriver d'ici 2028-2030. Le chemin réglementaire est long : essais de phase III, soumission aux agences (EMA, FDA), évaluation du rapport bénéfice/risque.
 
-En attendant, la recherche sur ce sujet est l'une des plus actives en médecine des addictions. Les GLP-1, pensés initialement comme des antidiabétiques, pourraient bien s'imposer comme des médicaments clés de plusieurs pathologies neuropsychiatriques — ce qui représenterait une révolution thérapeutique comparable à leur impact déjà transformateur en [cardiologie et en obésité](/collections/traitements-glp1/guide-complet-ozempic/).
+En attendant, la recherche sur ce sujet est l'une des plus actives en médecine des addictions. Les GLP-1, pensés initialement comme des antidiabétiques, pourraient bien s'imposer comme des médicaments clés de plusieurs pathologies neuropsychiatriques — ce qui représenterait une révolution thérapeutique comparable à leur impact déjà transformateur en [cardiologie et en obésité](/collections/traitements-glp1/guide-complet-ozempic/). Ces effets sur la récompense soulèvent des questions sur les [effets psychologiques et santé mentale sous GLP-1](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/) dont l'apathie et la dépression. L'action cérébrale des GLP-1 est aussi étudiée pour les [effets des GLP-1 sur le cerveau et la cognition](/collections/recherche-glp1/glp1-alzheimer-cerveau-essais-evoke/), notamment dans la maladie d'Alzheimer.
 
 ---
 

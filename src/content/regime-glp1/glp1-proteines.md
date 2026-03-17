@@ -1,7 +1,8 @@
 ---
-title: "GLP-1 et Proteines : Apport Optimal sous Traitement"
-description: "Optimisez votre apport en proteines sous traitement GLP-1. Sources de qualite, quantites recommandees et conseils pour preserver la masse musculaire."
+title: "Protéines et GLP-1 : Apport et Masse Musculaire"
+description: "Protéines GLP-1 : apport optimal pour préserver la masse musculaire sous traitement. Sources de qualité, quantités recommandées et conseils pratiques."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article glp1-proteines"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "protéines GLP-1 apport masse musculaire"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -107,11 +109,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../traitements-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../traitements-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
@@ -131,6 +133,6 @@ Protocoles de suivi selon recommandations sociétés savantes françaises (SFD, 
 
 ## Conclusion
 
-GLP-1 et protéines alimentaires représente une approche thérapeutique importante dans le contexte français. Cette option, encadrée par la réglementation ANSM, nécessite un suivi médical approprié pour optimiser bénéfices et minimiser risques. L'accompagnement professionnel guide la mise en œuvre sécurisée.
+GLP-1 et protéines alimentaires représente une approche thérapeutique importante dans le contexte français. Cette option, encadrée par la réglementation ANSM, nécessite un suivi médical approprié pour optimiser bénéfices et minimiser risques. Un apport protéique suffisant est la première ligne de défense pour [prévenir la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). L'accompagnement professionnel guide la mise en œuvre sécurisée.
 
  Ces informations sont fournies à titre éducatif uniquement. Consultez toujours un professionnel de santé qualifié pour un avis médical personnalisé concernant GLP-1 et protéines alimentaires.

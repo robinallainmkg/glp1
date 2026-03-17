@@ -1,8 +1,9 @@
 ---
-title: "Recherche Clinique GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Recherche Clinique GLP-1 : Essais Cliniques en France"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "État de la recherche clinique sur les GLP-1 : études en cours, nouveaux médicaments, avancées thérapeutiques et perspectives médicales 2025."
+description: "Recherche clinique GLP-1 et essais cliniques en cours en France. Nouveaux médicaments, avancées thérapeutiques et perspectives médicales 2025."
 category: "Recherche médicale"
 tags: ["glp1", "recherche", "etudes"]
 collection: "recherche-glp1"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Recherche Clinique GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "recherche clinique GLP-1 essais cliniques"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -133,11 +135,12 @@ Les examens sanguins fréquents nécessitent des soins particuliers pour la peau
 
 Découvrez d'autres ressources sur les traitements GLP-1 pour compléter vos connaissances :
 
-- [nouveau traitement diabète](../traitements-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../traitements-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [CagriSema résultats phase 3 REDEFINE](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
@@ -161,6 +164,6 @@ Les données sont obligatoirement anonymisées, utilisées uniquement à des fin
 
 ## Conclusion
 
-La recherche clinique GLP-1 française contribue activement aux innovations thérapeutiques mondiales. Pour en savoir plus sur les molécules en cours de développement, consultez notre article sur les [nouveaux GLP-1 attendus en France](/collections/recherche-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/). La participation aux essais offre un accès privilégié aux traitements d'avenir tout en bénéficiant d'un suivi médical optimal. Cette démarche altruiste fait progresser la médecine de demain.
+La recherche clinique GLP-1 française contribue activement aux innovations thérapeutiques mondiales. Pour en savoir plus sur les molécules en cours de développement, consultez notre article sur les [nouveaux GLP-1 attendus en France](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/). La participation aux essais offre un accès privilégié aux traitements d'avenir tout en bénéficiant d'un suivi médical optimal. Cette démarche altruiste fait progresser la médecine de demain.
 
 Ces informations sont fournies à titre éducatif uniquement. Consultez les équipes de recherche clinique pour obtenir des informations détaillées sur les essais disponibles.

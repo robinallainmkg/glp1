@@ -1,8 +1,9 @@
 ---
-title: "Diabetologue Paris : Guide Complet et Conseils Pratiques 2025"
+title: "Diabétologue Paris Spécialisé GLP-1 : Guide 2025"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Trouver un diabétologue à Paris spécialisé en GLP-1 : adresses, spécialités, prise de rendez-vous et conseils pour votre traitement diabète/obésité."
+description: "Trouver un diabétologue à Paris spécialisé GLP-1 : adresses, spécialités, prise de rendez-vous et conseils pour votre traitement diabète/obésité."
 category: "Médecins spécialisés"
 tags: ["glp1", "medecins", "specialistes"]
 collection: "medecins-glp1-france"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article diabetologue-paris"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "diabétologue Paris spécialisé GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -108,11 +110,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Balance connectée** : Suivi pondéral régulier
 - **Lecteur glucose** : Auto-surveillance si diabète
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

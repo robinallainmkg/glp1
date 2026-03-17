@@ -1,8 +1,9 @@
 ---
-title: "Régime Chrono Nutrition GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Chrono-nutrition GLP-1 horaires repas métabolisme"
 draft: true
-description: "Optimisez vos GLP-1 avec la chrono-nutrition. Apprenez quand manger quoi pour maximiser l'efficacité de votre traitement, synchroniser hormones et métabolisme pour une perte de poids naturelle."
+description: "Chrono-nutrition GLP-1 horaires repas métabolisme : quand manger pour synchroniser hormones et maximiser l'efficacité de votre traitement."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
@@ -12,6 +13,7 @@ thumbnailAlt: "Illustration pour l'article regime-chrono-nutrition-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "chrono-nutrition GLP-1 horaires repas métabolisme"
 
 # Configuration Affiliation
 enableAffiliation: true

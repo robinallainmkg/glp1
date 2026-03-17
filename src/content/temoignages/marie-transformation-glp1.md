@@ -1,17 +1,19 @@
 ---
-title: "Marie L. : -32 Kilos en 12 Mois avec Wegovy - Transformation Exceptionnelle"
-description: "Découvrez le témoignage inspirant de Marie L., 39 ans, mère de 3 enfants qui a perdu 32 kilos en 12 mois grâce au traitement Wegovy (sémaglutide). Son parcours, ses défis et ses résultats exceptionnels."
+title: "Témoignage Wegovy Femme : Marie, -32 kg en 12 Mois"
+description: "Témoignage wegovy femme perte de poids : Marie L., 39 ans, raconte sa transformation de 32 kilos en 12 mois avec le sémaglutide. Parcours complet."
 author: "Marie L."
 image: "/images/temoignages/mariejourney9.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["wegovy", "sémaglutide", "perte de poids", "transformation", "32 kilos", "mère de famille", "lyon"]
 pubDate: 2025-08-15T00:00:00.000Z
+date: "2025-08-15"
 featured: true
 priority: 1
+mainKeyword: "temoignage Ozempic perte de poids femme"
 ---
 
-# La Transformation Exceptionnelle de Marie L.
+## La Transformation Exceptionnelle de Marie L.
 
 **32 kilos perdus en 12 mois** avec le traitement GLP-1
 
@@ -89,7 +91,7 @@ priority: 1
 
 ### Avant de Commencer
 - "Choisissez bien votre médecin, il sera votre allié"
-- "Préparez-vous aux effets secondaires"
+- "Préparez-vous aux [effets secondaires du Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)"
 - "Fixez-vous des objectifs réalistes"
 
 ### Pendant le Traitement
@@ -117,5 +119,7 @@ priority: 1
 > "Si vous hésitez encore, je vous dirais : osez franchir le pas. Ce traitement peut vraiment changer votre vie, comme il a changé la mienne. Mais n'oubliez pas que c'est un outil, pas une baguette magique. Il faut s'investir, être patient et faire confiance au processus."
 
 ---
+
+Découvrez d'autres témoignages et les données cliniques dans notre guide sur les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

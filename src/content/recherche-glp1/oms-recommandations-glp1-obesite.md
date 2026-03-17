@@ -1,7 +1,8 @@
 ---
-title: "Recommandations OMS sur les GLP-1 pour l'Obésité : Ce que Cela Change en 2026"
-description: "L'OMS a publié ses premières lignes directrices mondiales sur l'utilisation des GLP-1 dans le traitement de l'obésité. Recommandations, conditions d'usage et impact pour les patients français."
+title: "OMS Recommandations GLP-1 Obésité 2025 : Ce qui Change"
+description: "OMS recommandations GLP-1 obésité 2025 : premières lignes directrices mondiales sur les traitements GLP-1. Impact concret pour les patients français."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
@@ -35,7 +36,7 @@ En décembre 2025, l'Organisation mondiale de la santé (OMS) a franchi un pas h
 
 L'OMS estime que plus d'un milliard de personnes dans le monde vivent avec l'obésité en 2025, un chiffre qui a quasiment triplé depuis 1975. En France, selon les données de l'étude ObEpi-Roche 2024, environ 17% de la population adulte est obèse (IMC supérieur ou égal à 30), et près de la moitié est en surpoids.
 
-Face à cette épidémie mondiale, les approches traditionnelles — régime alimentaire, exercice physique, thérapies comportementales — montrent des résultats limités sur le long terme pour de nombreux patients. La chirurgie bariatrique reste efficace mais invasive et réservée aux cas les plus sévères. Les GLP-1 comblent un vide thérapeutique entre ces deux extrêmes.
+Face à cette épidémie mondiale, les approches traditionnelles — régime alimentaire, exercice physique, thérapies comportementales — montrent des résultats limités sur le long terme pour de nombreux patients. La [chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) reste efficace mais invasive et réservée aux cas les plus sévères. Les GLP-1 comblent un vide thérapeutique entre ces deux extrêmes.
 
 ### Le contexte de la décision
 
@@ -61,7 +62,7 @@ Concrètement, l'OMS recommande que les GLP-1 :
 L'OMS précise que ces traitements sont particulièrement pertinents pour :
 
 - Les adultes présentant un **IMC supérieur ou égal à 30 kg/m²** (obésité)
-- Les adultes avec un **IMC supérieur ou égal à 27 kg/m²** accompagné d'au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnée du sommeil, maladies cardiovasculaires)
+- Les adultes avec un **IMC supérieur ou égal à 27 kg/m²** accompagné d'au moins une comorbidité liée au poids (diabète de type 2, hypertension, [apnée du sommeil traitée par GLP-1](/collections/recherche-glp1/glp1-apnee-sommeil-saos/), maladies cardiovasculaires)
 - Les patients chez qui les **interventions non pharmacologiques** seules se sont avérées insuffisantes après une durée raisonnable
 
 ### Ce que l'OMS ne recommande PAS
@@ -83,13 +84,13 @@ L'OMS a fondé ses recommandations sur une revue systématique des essais cliniq
 
 **Études SURMOUNT (tirzépatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/))** : Le tirzépatide, qui agit à la fois sur les récepteurs GLP-1 et GIP, a montré des pertes de poids encore plus importantes, jusqu'à 20-25% du poids initial dans certains essais.
 
-**Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat a particulièrement pesé dans la décision de l'OMS.
+**Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat, qui confirme les [bénéfices cardiovasculaires documentés des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/), a particulièrement pesé dans la décision de l'OMS.
 
 ### Le rapport bénéfice/risque évalué par l'OMS
 
 L'OMS reconnaît que les effets secondaires digestifs (nausées, vomissements, diarrhée) sont fréquents mais généralement temporaires et gérables. Consultez nos guides détaillés sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) pour plus d'informations.
 
-Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais considérés comme acceptables au regard des bénéfices démontrés sur la santé globale des patients obèses.
+Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais considérés comme acceptables au regard des bénéfices démontrés sur la santé globale des patients obèses. L'OMS souligne également les bénéfices inattendus des GLP-1 sur la [réduction des addictions — alcool, tabac et opioïdes](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) — qui s'ajoutent aux effets sur le poids.
 
 ## Ce que cela change pour les patients français
 
@@ -97,7 +98,7 @@ Les risques plus rares (pancréatite, calculs biliaires) sont mentionnés mais c
 
 En France, les décisions de remboursement ne dépendent pas directement de l'OMS mais de la Haute Autorité de Santé (HAS) et du Comité Économique des Produits de Santé (CEPS). Cependant, les recommandations de l'OMS constituent un argument de poids dans les négociations en cours.
 
-La HAS a déjà rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours, avec un remboursement possible au second semestre 2026. Les lignes directrices de l'OMS renforcent considérablement le dossier médico-économique en faveur de ce remboursement.
+La HAS a déjà rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Le [remboursement GLP-1 en France en 2026](/collections/glp1-cout/remboursement-glp1-2026/) est possible au second semestre 2026. Les lignes directrices de l'OMS renforcent considérablement le dossier médico-économique en faveur de ce remboursement.
 
 Pour connaître les prix actuels des traitements GLP-1 en France, consultez nos guides sur le [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/) et le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/).
 

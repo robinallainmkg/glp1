@@ -1,8 +1,9 @@
 ---
-title: "Régime Detox GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Régime détox GLP-1 purification traitement : Guide"
 draft: true
-description: "Programme détox adapté aux traitements GLP-1. Purifiez votre organisme tout en optimisant l'efficacité de votre traitement diabète avec des aliments détoxifiants et des protocoles sécurisés."
+description: "Régime détox GLP-1 purification traitement : programme sécurisé pour purifier l'organisme avec des aliments détoxifiants sous traitement."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
@@ -12,6 +13,7 @@ thumbnailAlt: "Illustration pour l'article regime-detox-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime détox GLP-1 purification traitement"
 
 # Configuration Affiliation
 enableAffiliation: true

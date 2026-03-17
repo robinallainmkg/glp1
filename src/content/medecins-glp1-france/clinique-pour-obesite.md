@@ -1,7 +1,8 @@
 ---
-title: "Clinique Pour Obesite : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet des cliniques spécialisées dans l'obésité en France. Trouvez les meilleurs centres médicaux pour votre prise en charge GLP-1."
+title: "Clinique Pour Obésité France GLP-1 : Guide Complet 2026"
+description: "Clinique pour obésité France GLP-1 : trouvez les meilleurs centres spécialisés. Guide complet des cliniques pour obésité France avec prise en charge GLP-1."
 pubDate: 2025-08-20
+date: '2026-03-17'
 author: "Dr. Émilie Martin"
 category: "Médecins spécialisés"
 tags: ["glp1", "medecins", "specialistes"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article clinique-pour-obesite"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "clinique pour obésité France GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -49,7 +51,7 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 **Services proposés :**
 - Consultations endocrinologie-nutrition
 - Bilans métaboliques complets
-- Prescription de GLP-1 (Ozempic, Wegovy)
+- Prescription de GLP-1 (Ozempic, Wegovy) selon les [règles de prescription des GLP-1 selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
 - Chirurgie bariatrique
 - Suivi psychologique
 - Programmes d'éducation thérapeutique
@@ -314,10 +316,10 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Maintenez le lien avec l'équipe soignante
 - Ne vous découragez pas en cas de plateau
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [prix Wegovy](../glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.

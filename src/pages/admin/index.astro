@@ -27,13 +27,13 @@ import { supabaseConfig } from '../../lib/supabase';
     .mc-header {
       background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%);
       border-bottom: 1px solid #1a2332;
-      padding: 1.25rem 2rem;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .mc-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: #e2e8f0;
       display: flex;
@@ -48,14 +48,8 @@ import { supabaseConfig } from '../../lib/supabase';
       box-shadow: 0 0 8px #22c55e88;
       animation: pulse-glow 2s infinite;
     }
-    .mc-status {
-      font-size: 0.72rem;
-      color: #475569;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
     .mc-clock {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #64748b;
       font-variant-numeric: tabular-nums;
     }
@@ -67,383 +61,476 @@ import { supabaseConfig } from '../../lib/supabase';
 
     .mc-main { padding: 1.5rem 2rem; }
 
-    /* Launch button (small, inline) */
-    .agent-launch-btn {
-      padding: 0.2rem 0.5rem;
-      border: 1px solid #22c55e44;
-      border-radius: 4px;
-      background: #0a1a0f;
-      color: #4ade80;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.55rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      white-space: nowrap;
+    /* ==================== AUTOPILOT HERO ==================== */
+    .autopilot-hero {
+      background: linear-gradient(135deg, #0a1a0f 0%, #111827 50%, #0f172a 100%);
+      border: 1px solid #22c55e33;
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
     }
-    .agent-launch-btn:hover {
-      background: #0f2a17;
-      border-color: #22c55e88;
-      box-shadow: 0 0 8px #22c55e22;
+    .autopilot-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, #22c55e06 0%, transparent 50%);
+      pointer-events: none;
     }
-    .agent-launch-btn:active { transform: scale(0.97); }
-    .agent-launch-btn.is-running {
-      border-color: #22c55e44;
-      background: #071a0d;
-      color: #22c55e;
-      cursor: default;
-      animation: pulse-btn 2s infinite;
+    .autopilot-hero.is-running {
+      border-color: #22c55e66;
+      box-shadow: 0 0 30px #22c55e11;
     }
-    .agent-launch-btn.server-off {
-      border-color: #eab30844;
-      background: #1a1508;
-      color: #fbbf24;
-      font-size: 0.5rem;
-      text-transform: none;
-      letter-spacing: 0;
+    .autopilot-hero.is-running::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #22c55e, transparent);
+      animation: scan-line 3s linear infinite;
     }
-    .pipeline-launch-btn {
-      padding: 0.35rem 1rem;
-      border: 1px solid #22c55e44;
-      border-radius: 6px;
-      background: #0a1a0f;
-      color: #4ade80;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .pipeline-launch-btn:hover {
-      background: #0f2a17;
-      border-color: #22c55e88;
-      box-shadow: 0 0 12px #22c55e22;
-    }
-    @keyframes pulse-btn {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+    @keyframes scan-line {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
     }
 
-    /* Pipeline */
-    .pipeline-section {
-      background: #111827;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-    }
-    .pipeline-header {
+    .ap-top {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0.75rem 1.25rem;
-      border-bottom: 1px solid #1e293b;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
     }
-    .pipeline-title {
-      font-size: 0.72rem;
-      font-weight: 600;
+    .ap-btn-area { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .ap-big-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #22c55e55;
+      background: radial-gradient(circle, #0f2a17 0%, #0a1a0f 100%);
+      color: #4ade80;
+      font-size: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .ap-big-btn:hover {
+      border-color: #22c55e;
+      box-shadow: 0 0 20px #22c55e33;
+      transform: scale(1.05);
+    }
+    .ap-big-btn.running {
+      border-color: #ef444488;
+      background: radial-gradient(circle, #1a0f0f 0%, #150a0a 100%);
+      color: #f87171;
+      animation: ap-pulse 2s infinite;
+    }
+    @keyframes ap-pulse {
+      0%, 100% { box-shadow: 0 0 20px #22c55e22; }
+      50% { box-shadow: 0 0 30px #22c55e44; }
+    }
+    .ap-btn-label {
+      font-size: 0.6rem;
       color: #475569;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-    }
-    .pipeline-total { font-size: 0.68rem; color: #94a3b8; }
-
-    .pipeline-body {
-      display: flex;
-      flex-direction: column;
-    }
-    .pipeline-factories {
-      padding: 0.5rem 0.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      border-bottom: 1px solid #1e293b;
-    }
-    .pipeline-processors {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr auto 1fr;
-      align-items: stretch;
-      min-height: 140px;
+      font-weight: 600;
     }
 
-    /* Phase labels */
-    .pipe-phase {
-      padding: 0.6rem 0.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-    .pipe-phase-label {
-      font-size: 0.55rem;
-      color: #374151;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      padding-bottom: 0.3rem;
-      border-bottom: 1px solid #1e293b;
-      margin-bottom: 0.2rem;
-    }
-
-    /* Factory cards (source agents) */
-    .factory-item {
+    .ap-info { flex: 1; }
+    .ap-title-row {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.5rem;
-      border-radius: 6px;
-      font-size: 0.62rem;
-      transition: background 0.2s;
-      position: relative;
-      border: 1px solid transparent;
+      gap: 0.75rem;
+      margin-bottom: 0.4rem;
     }
-    .factory-item:hover { background: #1a2332; }
-    .factory-item.fi-running { border-color: #22c55e33; background: #0a1a0f; }
-    .factory-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 2px;
-      flex-shrink: 0;
+    .ap-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4ade80;
     }
-    .factory-dot.running { animation: pulse-glow 1.5s infinite; border-radius: 50%; }
-    .factory-info {
-      flex: 1;
+    .ap-status-badge {
+      font-size: 0.55rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .ap-status-badge.idle { background: #1e293b; color: #475569; }
+    .ap-status-badge.running { background: #052e16; color: #22c55e; animation: pulse-glow 2s infinite; }
+    .ap-status-badge.error { background: #450a0a; color: #f87171; }
+
+    .ap-desc {
+      font-size: 0.65rem;
+      color: #64748b;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .ap-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.75rem;
+    }
+    .ap-stat {
       display: flex;
       flex-direction: column;
       gap: 0.1rem;
     }
-    .factory-name { color: #94a3b8; font-weight: 600; }
-    .factory-meta { font-size: 0.5rem; color: #374151; }
-    .factory-right {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .factory-count-pending {
+    .ap-stat-val {
+      font-size: 1.1rem;
       font-weight: 700;
-      font-size: 0.72rem;
-      min-width: 16px;
-      text-align: center;
-      padding: 0.05rem 0.3rem;
-      border-radius: 3px;
+      color: #e2e8f0;
     }
-    .factory-item.fc-zero { opacity: 0.35; }
-
-    /* Processor flow (editorial/validator) */
-    .processor-flow {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.15rem;
-      width: 100%;
-    }
-    .processor-flow-row {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-size: 0.58rem;
-      color: #64748b;
-    }
-    .processor-flow-label {
+    .ap-stat-label {
       font-size: 0.5rem;
+      color: #475569;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #374151;
-    }
-    .processor-flow-num {
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 0.1rem 0.35rem;
-      border-radius: 4px;
-    }
-    .processor-flow-sep {
-      width: 16px;
-      height: 1px;
-      background: #1e293b;
-      margin: 0.15rem 0;
+      letter-spacing: 0.06em;
     }
 
-    /* Arrow separator */
-    .pipe-arrow {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1e293b;
-      font-size: 1.2rem;
-      padding: 0 0.15rem;
-    }
-    .pipe-arrow svg { width: 20px; height: 60px; }
-
-    /* Center processor (editorial) */
-    .pipe-processor {
+    /* Budget meter */
+    .ap-budget {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.75rem;
+      align-items: flex-end;
+      gap: 0.3rem;
+      position: relative;
+      z-index: 1;
+      min-width: 120px;
     }
-    .processor-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      font-weight: 700;
-    }
-    .processor-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .processor-total {
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-    .processor-sub {
-      font-size: 0.58rem;
+    .ap-budget-label {
+      font-size: 0.5rem;
       color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
-
-    /* Status bar at bottom */
-    .pipe-status-bar {
-      display: flex;
-      height: 4px;
-      background: #0a0e17;
-    }
-    .pipe-status-seg {
-      height: 100%;
-      transition: width 0.5s;
-    }
-
-    /* Status indicators */
-    .si-dot {
-      width: 6px;
+    .ap-budget-bar {
+      width: 100%;
       height: 6px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .si-dot.running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
-    .si-dot.completed { background: #3b82f6; }
-    .si-dot.error { background: #ef4444; }
-    .si-dot.idle { background: #475569; }
-
-    /* Log feed */
-    .log-section {
-      background: #111827;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
+      background: #1e293b;
+      border-radius: 3px;
       overflow: hidden;
     }
-    .log-header {
+    .ap-budget-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s;
+    }
+    .ap-budget-val {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    /* ==================== AGENT ARENA ==================== */
+    .arena-section {
+      margin-bottom: 1.5rem;
+    }
+    .arena-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1.25rem;
-      border-bottom: 1px solid #1e293b;
+      margin-bottom: 0.75rem;
     }
-    .log-title {
+    .arena-title {
       font-size: 0.72rem;
       font-weight: 600;
       color: #475569;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-    .log-live {
-      font-size: 0.65rem;
-      color: #22c55e;
+    .arena-legend {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.55rem;
+      color: #475569;
+    }
+    .arena-legend-item {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-    }
-    .log-live .live-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #22c55e;
-      animation: pulse-glow 1.5s infinite;
+      gap: 0.3rem;
     }
 
-    .log-feed {
-      max-height: 320px;
-      overflow-y: auto;
-      padding: 0.25rem 0;
-      scrollbar-width: thin;
-      scrollbar-color: #1e293b transparent;
-    }
-    .log-feed::-webkit-scrollbar { width: 6px; }
-    .log-feed::-webkit-scrollbar-track { background: transparent; }
-    .log-feed::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
-
-    .log-entry {
-      display: flex;
-      align-items: flex-start;
+    .arena-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 0.75rem;
-      padding: 0.35rem 1.25rem;
-      font-size: 0.72rem;
-      transition: background 0.1s;
-      animation: log-appear 0.3s ease-out;
-    }
-    .log-entry:hover { background: #1a2332; }
-
-    @keyframes log-appear {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
-    .log-time {
-      color: #374151;
-      font-variant-numeric: tabular-nums;
-      flex-shrink: 0;
-      min-width: 62px;
+    .arena-cell {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    .log-agent-tag {
-      padding: 0.1rem 0.35rem;
-      border-radius: 3px;
-      font-size: 0.62rem;
+    .arena-cell:hover {
+      border-color: #334155;
+      background: #1a2332;
+    }
+    .arena-cell.has-active {
+      border-color: var(--agent-color, #22c55e)33;
+      background: linear-gradient(180deg, #111827 0%, color-mix(in srgb, var(--agent-color, #22c55e) 3%, #111827) 100%);
+    }
+
+    .arena-cell-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .arena-cell-name {
+      font-size: 0.68rem;
       font-weight: 700;
-      text-transform: uppercase;
-      flex-shrink: 0;
-      min-width: 68px;
-      text-align: center;
+      color: var(--agent-color, #94a3b8);
     }
-    .tag-seo-audit { background: #1e3a5f; color: #38bdf8; }
-    .tag-analytics { background: #1e3a1e; color: #4ade80; }
-    .tag-fact-check { background: #3a2e1e; color: #fbbf24; }
-    .tag-opportunities { background: #2e1e3a; color: #c084fc; }
-    .tag-editorial { background: #1e2e3a; color: #67e8f9; }
-
-    .log-message { color: #94a3b8; flex: 1; }
-    .log-status {
-      font-size: 0.62rem;
-      padding: 0.1rem 0.3rem;
+    .arena-cell-count {
+      font-size: 0.55rem;
+      padding: 0.1rem 0.4rem;
       border-radius: 3px;
-      font-weight: 600;
-      flex-shrink: 0;
+      font-weight: 700;
     }
-    .ls-success { background: #052e16; color: #4ade80; }
-    .ls-error { background: #450a0a; color: #f87171; }
-
-    .log-empty {
-      text-align: center;
-      padding: 2rem;
+    .arena-cell-count.active {
+      background: var(--agent-color, #22c55e)22;
+      color: var(--agent-color, #22c55e);
+    }
+    .arena-cell-count.zero {
+      background: #1e293b;
       color: #374151;
-      font-size: 0.78rem;
     }
 
-    /* Agent Console */
+    /* Character stage */
+    .arena-stage {
+      height: 70px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ==================== CSS CHARACTERS ==================== */
+    .char {
+      width: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Head */
+    .char-head {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--agent-color, #94a3b8);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Body */
+    .char-body {
+      width: 2px;
+      height: 16px;
+      background: var(--agent-color, #94a3b8);
+      position: relative;
+    }
+
+    /* Arms */
+    .char-arms {
+      position: absolute;
+      top: 2px;
+      width: 20px;
+      height: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .char-arm {
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background: var(--agent-color, #94a3b8);
+      top: 0;
+      transform-origin: left center;
+      border-radius: 1px;
+    }
+    .char-arm.left { left: 0; transform-origin: right center; right: 50%; left: auto; }
+    .char-arm.right { left: 50%; transform-origin: left center; }
+
+    /* Legs */
+    .char-legs {
+      display: flex;
+      gap: 2px;
+    }
+    .char-leg {
+      width: 2px;
+      height: 14px;
+      background: var(--agent-color, #94a3b8);
+      transform-origin: top center;
+      border-radius: 0 0 1px 1px;
+    }
+
+    /* === DANCING animation === */
+    .char.dancing {
+      animation: char-bounce 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-arm.left {
+      animation: arm-wave-l 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-arm.right {
+      animation: arm-wave-r 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-leg.left {
+      animation: leg-kick-l 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-leg.right {
+      animation: leg-kick-r 0.6s ease-in-out infinite;
+    }
+
+    @keyframes char-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes arm-wave-l {
+      0%, 100% { transform: rotate(30deg); }
+      50% { transform: rotate(-60deg); }
+    }
+    @keyframes arm-wave-r {
+      0%, 100% { transform: rotate(-30deg); }
+      50% { transform: rotate(60deg); }
+    }
+    @keyframes leg-kick-l {
+      0%, 100% { transform: rotate(15deg); }
+      50% { transform: rotate(-15deg); }
+    }
+    @keyframes leg-kick-r {
+      0%, 100% { transform: rotate(-15deg); }
+      50% { transform: rotate(15deg); }
+    }
+
+    /* Offset animation for multiple characters */
+    .char.dancing.d1 { animation-delay: 0s; }
+    .char.dancing.d1 .char-arm, .char.dancing.d1 .char-leg { animation-delay: 0s; }
+    .char.dancing.d2 { animation-delay: 0.15s; }
+    .char.dancing.d2 .char-arm, .char.dancing.d2 .char-leg { animation-delay: 0.15s; }
+    .char.dancing.d3 { animation-delay: 0.3s; }
+    .char.dancing.d3 .char-arm, .char.dancing.d3 .char-leg { animation-delay: 0.3s; }
+    .char.dancing.d4 { animation-delay: 0.45s; }
+    .char.dancing.d4 .char-arm, .char.dancing.d4 .char-leg { animation-delay: 0.45s; }
+
+    /* === IDLE animation === */
+    .char.idle {
+      animation: char-breathe 3s ease-in-out infinite;
+    }
+    .char.idle .char-arm.left { transform: rotate(10deg); }
+    .char.idle .char-arm.right { transform: rotate(-10deg); }
+    @keyframes char-breathe {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-1px); }
+    }
+
+    /* === SLEEPING animation === */
+    .char.sleeping {
+      transform: rotate(90deg) translateY(5px);
+      opacity: 0.35;
+    }
+    .char.sleeping .char-arm.left { transform: rotate(5deg); }
+    .char.sleeping .char-arm.right { transform: rotate(-5deg); }
+
+    .zzz {
+      position: absolute;
+      top: -8px;
+      right: -4px;
+      font-size: 0.5rem;
+      color: #475569;
+      animation: zzz-float 2.5s ease-in-out infinite;
+      font-style: italic;
+    }
+    .zzz:nth-child(2) { right: -10px; top: -14px; font-size: 0.42rem; animation-delay: 0.8s; opacity: 0.6; }
+    .zzz:nth-child(3) { right: -14px; top: -20px; font-size: 0.35rem; animation-delay: 1.6s; opacity: 0.3; }
+    @keyframes zzz-float {
+      0%, 100% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    /* Arena cell info bar */
+    .arena-cell-meta {
+      font-size: 0.52rem;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .arena-cell-meta .pending-badge {
+      font-size: 0.52rem;
+      font-weight: 700;
+      padding: 0.08rem 0.3rem;
+      border-radius: 3px;
+    }
+
+    /* ==================== KPI ROW ==================== */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .kpi-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      transition: border-color 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .kpi-card:hover { border-color: #334155; }
+    .kpi-label {
+      font-size: 0.52rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #475569;
+      font-weight: 600;
+    }
+    .kpi-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1;
+    }
+    .kpi-sub {
+      font-size: 0.52rem;
+      color: #64748b;
+    }
+    .kpi-bar {
+      height: 3px;
+      border-radius: 2px;
+      background: #1e293b;
+      margin-top: 0.2rem;
+      overflow: hidden;
+    }
+    .kpi-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.5s;
+    }
+
+    /* ==================== CONSOLE ==================== */
     .console-section {
       background: #0c1018;
       border: 1px solid #1e293b;
@@ -452,7 +539,7 @@ import { supabaseConfig } from '../../lib/supabase';
       margin-bottom: 1.5rem;
       display: flex;
       flex-direction: column;
-      max-height: 500px;
+      max-height: 450px;
     }
     .console-header {
       display: flex;
@@ -464,7 +551,7 @@ import { supabaseConfig } from '../../lib/supabase';
       flex-shrink: 0;
     }
     .console-title {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       color: #475569;
       text-transform: uppercase;
@@ -482,7 +569,7 @@ import { supabaseConfig } from '../../lib/supabase';
     .console-tab {
       padding: 0.2rem 0.5rem;
       border-radius: 4px;
-      font-size: 0.58rem;
+      font-size: 0.55rem;
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
@@ -503,20 +590,15 @@ import { supabaseConfig } from '../../lib/supabase';
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .console-tab .tab-dot.running {
-      background: #22c55e;
-      animation: pulse-glow 1.5s infinite;
-    }
-    .console-tab .tab-dot.stopped {
-      background: #475569;
-    }
+    .console-tab .tab-dot.running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
+    .console-tab .tab-dot.stopped { background: #475569; }
     .console-tab .tab-lines {
-      font-size: 0.48rem;
+      font-size: 0.45rem;
       color: #374151;
       font-weight: 400;
     }
     .console-status {
-      font-size: 0.58rem;
+      font-size: 0.55rem;
       color: #374151;
       flex-shrink: 0;
       font-variant-numeric: tabular-nums;
@@ -525,10 +607,10 @@ import { supabaseConfig } from '../../lib/supabase';
       flex: 1;
       overflow-y: auto;
       padding: 0.5rem 0;
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       line-height: 1.5;
-      min-height: 200px;
-      max-height: 420px;
+      min-height: 180px;
+      max-height: 380px;
       scrollbar-width: thin;
       scrollbar-color: #1e293b transparent;
     }
@@ -537,9 +619,9 @@ import { supabaseConfig } from '../../lib/supabase';
     .console-body::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
     .console-empty {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
       color: #374151;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
     }
     .console-line {
       display: flex;
@@ -551,174 +633,138 @@ import { supabaseConfig } from '../../lib/supabase';
     .console-line:hover { background: #111827; }
     .console-line-ts {
       color: #1e293b;
-      font-size: 0.55rem;
+      font-size: 0.52rem;
       flex-shrink: 0;
-      min-width: 58px;
+      min-width: 55px;
       font-variant-numeric: tabular-nums;
       padding-top: 0.05rem;
     }
-    .console-line-text {
-      color: #94a3b8;
-      word-break: break-word;
-      white-space: pre-wrap;
-    }
-    /* Tool calls / thinking highlights */
-    .console-line-text.cl-tool { color: #64748b; font-size: 0.58rem; }
+    .console-line-text { color: #94a3b8; word-break: break-word; white-space: pre-wrap; }
+    .console-line-text.cl-tool { color: #64748b; font-size: 0.55rem; }
     .console-line-text.cl-result { color: #4ade80; font-weight: 600; }
     .console-line-text.cl-error { color: #f87171; font-weight: 700; background: #450a0a66; padding: 0.15rem 0.4rem; border-radius: 3px; border-left: 3px solid #f87171; }
-    .console-line-text.cl-thinking { color: #475569; font-style: italic; font-size: 0.58rem; }
-    .console-line-text.cl-system { color: #fbbf24; font-weight: 700; font-size: 0.72rem; }
-    .console-line-text.cl-important { color: #f59e0b; font-weight: 700; background: #78350f55; padding: 0.15rem 0.5rem; border-radius: 4px; border-left: 3px solid #f59e0b; font-size: 0.72rem; }
+    .console-line-text.cl-thinking { color: #475569; font-style: italic; font-size: 0.55rem; }
+    .console-line-text.cl-system { color: #fbbf24; font-weight: 700; font-size: 0.68rem; }
+    .console-line-text.cl-important { color: #f59e0b; font-weight: 700; background: #78350f55; padding: 0.15rem 0.5rem; border-radius: 4px; border-left: 3px solid #f59e0b; font-size: 0.68rem; }
     .console-line-text.cl-metric { color: #22d3ee; font-weight: 700; background: #0e749022; padding: 0.1rem 0.4rem; border-radius: 3px; border-left: 3px solid #22d3ee; }
-    .console-line-text.cl-file { color: #a78bfa; font-size: 0.6rem; }
+    .console-line-text.cl-file { color: #a78bfa; font-size: 0.58rem; }
     .console-line.has-important { background: #1a1a0a; }
     .console-line.has-error { background: #1a0a0a; }
     .console-line.has-metric { background: #0a1a1a; }
 
-    /* KPI Row */
-    .kpi-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-    }
-    .kpi-card {
-      background: #111827;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      padding: 0.85rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .kpi-card:hover { border-color: #334155; background: #1a2332; }
-    .kpi-label {
-      font-size: 0.58rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #475569;
-      font-weight: 600;
-    }
-    .kpi-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #e2e8f0;
-      line-height: 1;
-    }
-    .kpi-sub {
-      font-size: 0.58rem;
-      color: #64748b;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .kpi-bar {
-      height: 3px;
-      border-radius: 2px;
-      background: #1e293b;
-      margin-top: 0.3rem;
-      overflow: hidden;
-    }
-    .kpi-bar-fill {
-      height: 100%;
-      border-radius: 2px;
-      transition: width 0.5s;
-    }
-    .kpi-trend-up { color: #4ade80; }
-    .kpi-trend-down { color: #f87171; }
-    .kpi-trend-neutral { color: #64748b; }
-
-    /* Agent timeline */
-    .agent-timeline {
+    /* ==================== LOG FEED ==================== */
+    .log-section {
       background: #111827;
       border: 1px solid #1e293b;
       border-radius: 10px;
       overflow: hidden;
-      margin-bottom: 1.5rem;
     }
-    .timeline-header {
+    .log-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.75rem 1.25rem;
+      padding: 0.6rem 1rem;
       border-bottom: 1px solid #1e293b;
     }
-    .timeline-title {
-      font-size: 0.72rem;
+    .log-title {
+      font-size: 0.68rem;
       font-weight: 600;
       color: #475569;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-    .timeline-body {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0;
-    }
-    .timeline-agent {
-      padding: 0.6rem 1rem;
-      border-right: 1px solid #1e293b;
-      border-bottom: 1px solid #1e293b;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      transition: background 0.2s;
-    }
-    .timeline-agent:hover { background: #1a2332; }
-    .timeline-agent-header {
+    .log-live {
+      font-size: 0.6rem;
+      color: #22c55e;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
-    .timeline-agent-dot {
-      width: 7px;
-      height: 7px;
+    .log-live .live-dot {
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
+      background: #22c55e;
+      animation: pulse-glow 1.5s infinite;
+    }
+    .log-feed {
+      max-height: 260px;
+      overflow-y: auto;
+      padding: 0.25rem 0;
+      scrollbar-width: thin;
+      scrollbar-color: #1e293b transparent;
+    }
+    .log-feed::-webkit-scrollbar { width: 6px; }
+    .log-feed::-webkit-scrollbar-track { background: transparent; }
+    .log-feed::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    .log-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.3rem 1rem;
+      font-size: 0.65rem;
+      transition: background 0.1s;
+      animation: log-appear 0.3s ease-out;
+    }
+    .log-entry:hover { background: #1a2332; }
+    @keyframes log-appear {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .log-time { color: #374151; font-variant-numeric: tabular-nums; flex-shrink: 0; min-width: 58px; }
+    .log-agent-tag {
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-size: 0.58rem;
+      font-weight: 700;
+      text-transform: uppercase;
       flex-shrink: 0;
+      min-width: 64px;
+      text-align: center;
     }
-    .timeline-agent-name { font-size: 0.62rem; font-weight: 700; }
-    .timeline-agent-time { font-size: 0.5rem; color: #475569; margin-left: auto; }
-    .timeline-agent-result {
-      font-size: 0.55rem;
-      color: #64748b;
-      padding-left: 1.1rem;
-    }
-    .timeline-agent-status {
-      font-size: 0.48rem;
-      padding: 0.08rem 0.3rem;
+    .tag-seo-audit { background: #1e3a5f; color: #38bdf8; }
+    .tag-analytics { background: #1e3a1e; color: #4ade80; }
+    .tag-fact-check { background: #3a2e1e; color: #fbbf24; }
+    .tag-opportunities { background: #2e1e3a; color: #c084fc; }
+    .tag-editorial { background: #1e2e3a; color: #67e8f9; }
+    .log-message { color: #94a3b8; flex: 1; }
+    .log-status {
+      font-size: 0.58rem;
+      padding: 0.1rem 0.3rem;
       border-radius: 3px;
       font-weight: 600;
-      margin-left: auto;
+      flex-shrink: 0;
     }
-    .tas-completed { background: #052e16; color: #4ade80; }
-    .tas-running { background: #0a1a0f; color: #22c55e; animation: pulse-btn 2s infinite; }
-    .tas-error { background: #450a0a; color: #f87171; }
-    .tas-idle { background: #111827; color: #374151; }
+    .ls-success { background: #052e16; color: #4ade80; }
+    .ls-error { background: #450a0a; color: #f87171; }
+    .log-empty {
+      text-align: center;
+      padding: 1.5rem;
+      color: #374151;
+      font-size: 0.72rem;
+    }
 
-    /* Section titles */
-    .section-title {
-      font-size: 0.68rem;
-      font-weight: 600;
-      color: #334155;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+    /* Server warning */
+    .server-warning {
+      display: none;
+      background: #1a1508;
+      border: 1px solid #eab30844;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.62rem;
+      color: #fbbf24;
+      text-align: center;
     }
 
     @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
     @media (max-width: 768px) {
       .mc-main { padding: 1rem; }
-      .mc-header { padding: 1rem; flex-direction: column; gap: 0.5rem; }
-      .pipeline-body { grid-template-columns: 1fr; }
-      .pipe-arrow { display: none; }
+      .arena-grid { grid-template-columns: repeat(2, 1fr); }
+      .ap-top { flex-direction: column; text-align: center; }
+      .ap-stats { justify-content: center; }
+      .ap-budget { align-items: center; }
       .kpi-row { grid-template-columns: repeat(2, 1fr); }
-      .timeline-body { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -732,26 +778,88 @@ import { supabaseConfig } from '../../lib/supabase';
       <span class="pulse-dot"></span>
       MISSION CONTROL
     </div>
-    <div class="mc-status">GLP-1 France &mdash; Agent Supervision</div>
     <div class="mc-clock" id="clock"></div>
   </div>
 
   <div class="mc-main">
-    <!-- Project Health KPIs -->
+
+    <!-- Autopilot Hero -->
+    <div class="autopilot-hero" id="autopilotHero">
+      <div class="ap-top">
+        <div class="ap-btn-area">
+          <button class="ap-big-btn" id="apBigBtn" onclick="toggleAutopilot()">&#9654;</button>
+          <span class="ap-btn-label" id="apBtnLabel">Lancer</span>
+        </div>
+        <div class="ap-info">
+          <div class="ap-title-row">
+            <span class="ap-name">Autopilot</span>
+            <span class="ap-status-badge idle" id="apBadge">IDLE</span>
+          </div>
+          <div class="ap-desc">
+            Priorisation intelligente : fact-check si coverage &lt; 70%, tickets urgents d'abord, puis cycle complet. Spawne automatiquement les agents necessaires.
+          </div>
+          <div class="ap-stats" id="apStats">
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apCycle">--</span>
+              <span class="ap-stat-label">Cycle</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apAgentsActive">0</span>
+              <span class="ap-stat-label">Agents actifs</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apTicketsProcessed">--</span>
+              <span class="ap-stat-label">Traites (24h)</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apLastRun">--</span>
+              <span class="ap-stat-label">Dernier run</span>
+            </div>
+          </div>
+        </div>
+        <div class="ap-budget">
+          <span class="ap-budget-label">Estimation credits</span>
+          <div class="ap-budget-bar">
+            <div class="ap-budget-fill" id="apBudgetFill" style="width:0%;background:#22c55e"></div>
+          </div>
+          <span class="ap-budget-val" id="apBudgetVal">--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Server Warning -->
+    <div class="server-warning" id="serverWarning">
+      &#9888; Agent Server hors ligne &mdash; lance <code style="background:#0a0e17;padding:0.1rem 0.3rem;border-radius:3px">node scripts/agent-server.mjs</code>
+    </div>
+
+    <!-- Agent Arena -->
+    <div class="arena-section">
+      <div class="arena-header">
+        <span class="arena-title">Agent Arena</span>
+        <div class="arena-legend">
+          <span class="arena-legend-item"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse-glow 1.5s infinite"></span> Actif</span>
+          <span class="arena-legend-item"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#64748b"></span> Idle</span>
+          <span class="arena-legend-item"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#374151;opacity:0.5"></span> Dort</span>
+        </div>
+      </div>
+      <div class="arena-grid" id="arenaGrid"></div>
+    </div>
+
+    <!-- KPIs -->
     <div class="kpi-row" id="kpiRow">
       <a class="kpi-card" href="/admin/editorial">
-        <span class="kpi-label">Articles actifs</span>
+        <span class="kpi-label">Articles</span>
         <span class="kpi-value" id="kpiArticles">--</span>
         <span class="kpi-sub" id="kpiArticlesSub">chargement...</span>
       </a>
       <a class="kpi-card" href="/admin/fact-check">
-        <span class="kpi-label">Couverture Fact-Check</span>
+        <span class="kpi-label">Fact-Check</span>
         <span class="kpi-value" id="kpiFactCheck">--</span>
         <span class="kpi-sub" id="kpiFactCheckSub">chargement...</span>
         <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiFactCheckBar" style="width:0%;background:#22c55e"></div></div>
       </a>
       <a class="kpi-card" href="/admin/audit">
-        <span class="kpi-label">Tickets SEO a traiter</span>
+        <span class="kpi-label">SEO Tickets</span>
         <span class="kpi-value" id="kpiSeoIssues">--</span>
         <span class="kpi-sub" id="kpiSeoSub">chargement...</span>
         <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiSeoBar" style="width:0%;background:#f87171"></div></div>
@@ -768,82 +876,21 @@ import { supabaseConfig } from '../../lib/supabase';
         <span class="kpi-sub" id="kpiOppsSub">chargement...</span>
       </a>
       <div class="kpi-card" style="cursor:default">
-        <span class="kpi-label">Pipeline Throughput</span>
+        <span class="kpi-label">Throughput / 7j</span>
         <span class="kpi-value" id="kpiThroughput">--</span>
         <span class="kpi-sub" id="kpiThroughputSub">chargement...</span>
-      </div>
-    </div>
-
-    <!-- Agent Timeline -->
-    <div class="agent-timeline" id="agentTimeline">
-      <div class="timeline-header">
-        <span class="timeline-title">Derniere activite des agents</span>
-        <span id="timelineLastUpdate" style="font-size:0.55rem;color:#374151"></span>
-      </div>
-      <div class="timeline-body" id="timelineBody">
-        <div style="padding:1.5rem;color:#374151;font-size:0.72rem;text-align:center">Chargement...</div>
-      </div>
-    </div>
-
-    <!-- Pipeline (main view) -->
-    <div class="pipeline-section" id="pipelineSection">
-      <div class="pipeline-header">
-        <span class="pipeline-title">Flux de production</span>
-        <span class="pipeline-total" id="pipelineTotal"></span>
-        <button class="pipeline-launch-btn" id="pipelineAutopilotBtn" onclick="launchAutopilot()">&#9889; Autopilot</button>
-      </div>
-      <div class="pipeline-body" id="pipelineBody"></div>
-      <div class="pipe-status-bar" id="pipelineBar"></div>
-    </div>
-
-    <!-- Agent server warning (shown if server offline) -->
-    <div id="serverWarning" style="display:none;background:#1a1508;border:1px solid #eab30844;border-radius:8px;padding:0.6rem 1rem;margin-bottom:1rem;font-size:0.68rem;color:#fbbf24;text-align:center">
-      &#9888; Agent Server hors ligne &mdash; lance <code style="background:#111827;padding:0.1rem 0.3rem;border-radius:3px">node scripts/agent-server.mjs</code> dans un terminal
-    </div>
-
-    <!-- Agent Launcher -->
-    <div class="launcher-section" style="background:#111827;border:1px solid #1e293b;border-radius:10px;overflow:hidden;margin-bottom:1.5rem">
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.25rem;border-bottom:1px solid #1e293b">
-        <span style="font-size:0.72rem;font-weight:600;color:#475569;text-transform:uppercase;letter-spacing:0.08em">&#127919; Agent Launcher</span>
-        <span style="font-size:0.55rem;color:#374151">Copie la commande, colle dans un terminal</span>
-      </div>
-
-      <!-- Autopilot — Hero button -->
-      <div style="padding:1rem 1.25rem;border-bottom:1px solid #1e293b;background:linear-gradient(135deg,#0a1a0f 0%,#111827 100%)">
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
-          <div style="flex:1;min-width:200px">
-            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem">
-              <span style="font-size:0.85rem;font-weight:700;color:#4ade80">&#9889; Autopilot</span>
-              <span id="autopilotStatus" style="font-size:0.5rem;padding:0.1rem 0.4rem;border-radius:3px;font-weight:600;background:#052e16;color:#4ade80">IDLE</span>
-            </div>
-            <div style="font-size:0.58rem;color:#64748b;line-height:1.5">
-              Boucle infinie : audit &rarr; fact-check &rarr; opportunites &rarr; editorial &rarr; validator. Tourne jusqu'a epuisement des tokens.
-            </div>
-          </div>
-          <button id="autopilotLaunchBtn" onclick="launchAutopilot()" style="padding:0.5rem 1.25rem;border:1px solid #22c55e55;border-radius:8px;background:#0a1a0f;color:#4ade80;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;transition:all 0.2s;display:flex;align-items:center;gap:0.5rem;white-space:nowrap">
-            <span>&#9654;</span> Lancer Autopilot
-          </button>
-          <button id="autopilotStopBtn" onclick="stopAutopilot()" style="padding:0.5rem 1.25rem;border:1px solid #ef444455;border-radius:8px;background:#1a0a0a;color:#ef4444;font-family:'JetBrains Mono',monospace;font-size:0.72rem;font-weight:700;cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;transition:all 0.2s;display:none;align-items:center;gap:0.5rem;white-space:nowrap">
-            <span>&#9632;</span> Stopper Autopilot
-          </button>
-        </div>
-      </div>
-
-      <!-- Individual agents grid -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;padding:0" id="launcherGrid">
-        <!-- Populated by JS -->
       </div>
     </div>
 
     <!-- Agent Console -->
     <div class="console-section" id="consoleSection">
       <div class="console-header">
-        <span class="console-title">&#128187; Console Agent</span>
+        <span class="console-title">Console</span>
         <div class="console-tabs" id="consoleTabs"></div>
         <span class="console-status" id="consoleStatus"></span>
       </div>
       <div class="console-body" id="consoleBody">
-        <div class="console-empty">Clique sur un agent en cours pour voir sa sortie en temps reel...</div>
+        <div class="console-empty">Clique sur un agent pour voir sa sortie en temps reel...</div>
       </div>
     </div>
 
@@ -864,15 +911,16 @@ import { supabaseConfig } from '../../lib/supabase';
   const SUPABASE_URL = supabaseUrl;
   const SUPABASE_ANON_KEY = supabaseAnonKey;
 
-  const AGENTS = [
-    { name: 'strategist', label: 'Strategist', icon: 'strategist', desc: 'GA/GSC, priorites, orchestration' },
-    { name: 'seo-audit', label: 'SEO Audit', icon: 'seo', desc: 'Crawl, meta, liens' },
-    { name: 'analytics', label: 'Analytics', icon: 'analytics', desc: 'Keywords ranking' },
-    { name: 'fact-check', label: 'Fact-Check', icon: 'factcheck', desc: 'Verification medicale' },
-    { name: 'opportunities', label: 'Opportunities', icon: 'opportunities', desc: 'Tendances, gaps' },
-    { name: 'editorial', label: 'Editorial', icon: 'editorial', desc: 'Redaction, corrections' },
-    { name: 'validator', label: 'Validator', icon: 'validator', desc: 'Build, frontmatter, liens' },
-    { name: 'internal-links', label: 'Maillage', icon: 'links', desc: 'Liens internes SEO' },
+  // Agent definitions with colors
+  const ARENA_AGENTS = [
+    { key: 'fact-check', label: 'Fact-Check', color: '#fbbf24', icon: '&#10003;', desc: 'Verification medicale' },
+    { key: 'seo-audit', label: 'SEO Audit', color: '#38bdf8', icon: '&#128269;', desc: 'Crawl, meta, liens' },
+    { key: 'analytics', label: 'Analytics', color: '#4ade80', icon: '&#128202;', desc: 'Keywords ranking' },
+    { key: 'opportunities', label: 'Opportunites', color: '#c084fc', icon: '&#128161;', desc: 'Gaps, tendances' },
+    { key: 'internal-links', label: 'Maillage', color: '#f9a8d4', icon: '&#128279;', desc: 'Liens internes' },
+    { key: 'editorial', label: 'Editorial', color: '#67e8f9', icon: '&#9997;', desc: 'Redaction, corrections' },
+    { key: 'validator', label: 'Validator', color: '#86efac', icon: '&#128737;', desc: 'Build, qualite' },
+    { key: 'ui-designer', label: 'UI Designer', color: '#ec4899', icon: '&#127912;', desc: 'Design, UX' },
   ];
 
   const TAG_CLASSES = {
@@ -895,10 +943,10 @@ import { supabaseConfig } from '../../lib/supabase';
   function timeAgo(dateStr) {
     if (!dateStr) return 'jamais';
     const diff = Date.now() - new Date(dateStr).getTime();
-    if (diff < 60000) return 'il y a < 1min';
-    if (diff < 3600000) return 'il y a ' + Math.floor(diff / 60000) + 'min';
-    if (diff < 86400000) return 'il y a ' + Math.floor(diff / 3600000) + 'h';
-    return 'il y a ' + Math.floor(diff / 86400000) + 'j';
+    if (diff < 60000) return '< 1min';
+    if (diff < 3600000) return Math.floor(diff / 60000) + 'min';
+    if (diff < 86400000) return Math.floor(diff / 3600000) + 'h';
+    return Math.floor(diff / 86400000) + 'j';
   }
 
   function formatDuration(ms) {
@@ -907,117 +955,12 @@ import { supabaseConfig } from '../../lib/supabase';
     return Math.floor(ms / 60000) + 'min ' + Math.round((ms % 60000) / 1000) + 's';
   }
 
-  // --- Agent Launcher ---
-  const AGENT_COMMANDS = {
-    'autopilot': { cmd: "claude -p \"Lance l'autopilot. Boucle infinie, traite tout.\" --agent autopilot", color: '#4ade80', icon: '⚡' },
-    'strategist': { cmd: "claude -p \"Analyse le pipeline et decide des actions\" --agent strategist", color: '#f59e0b', icon: '🧠' },
-    'seo-audit': { cmd: "claude -p \"Lance un audit SEO complet\" --agent seo-audit", color: '#38bdf8', icon: '🔍' },
-    'analytics': { cmd: "claude -p \"Analyse les keywords et positions\" --agent analytics", color: '#4ade80', icon: '📊' },
-    'fact-check': { cmd: "claude -p \"Verifie les articles medicaux\" --agent fact-check", color: '#fbbf24', icon: '✓' },
-    'opportunities': { cmd: "claude -p \"Detecte les gaps de contenu\" --agent opportunities", color: '#c084fc', icon: '💡' },
-    'editorial': { cmd: "claude -p \"Traite les tickets et corrections\" --agent editorial", color: '#67e8f9', icon: '✏️' },
-    'validator': { cmd: "claude -p \"Valide le site complet\" --agent validator", color: '#38bdf8', icon: '🛡' },
-    'internal-links': { cmd: "claude -p \"Analyse le maillage interne\" --agent internal-links", color: '#4ade80', icon: '🔗' },
-    'ui-designer': { cmd: "claude -p \"Ameliore le design du site\" --agent ui-designer", color: '#ec4899', icon: '🎨' },
-  };
-
-  function copyCmd(cmd) {
-    navigator.clipboard.writeText(cmd).then(() => {
-      const btn = event.currentTarget;
-      const orig = btn.innerHTML;
-      btn.innerHTML = '<span>✓</span> Copié !';
-      btn.style.borderColor = '#22c55e';
-      btn.style.color = '#22c55e';
-      setTimeout(() => { btn.innerHTML = orig; btn.style.borderColor = ''; btn.style.color = ''; }, 1500);
-    }).catch(() => {
-      // Fallback: select text
-      const ta = document.createElement('textarea');
-      ta.value = cmd;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    });
-  }
-
-  function buildLauncherGrid() {
-    const grid = document.getElementById('launcherGrid');
-    if (!grid) return;
-    const agentList = ['strategist','seo-audit','analytics','fact-check','opportunities','editorial','validator','internal-links','ui-designer'];
-    grid.innerHTML = agentList.map(name => {
-      const a = AGENT_COMMANDS[name];
-      const agent = AGENTS.find(x => x.name === name);
-      const desc = agent ? agent.desc : '';
-      return `
-        <div style="padding:0.6rem 1rem;border-right:1px solid #1e293b;border-bottom:1px solid #1e293b;display:flex;align-items:center;gap:0.6rem;transition:background 0.2s;cursor:pointer" onclick="copyCmd('${a.cmd.replace(/'/g, "\\'")}')" title="Cliquer pour copier la commande">
-          <span style="font-size:1rem;flex-shrink:0">${a.icon}</span>
-          <div style="flex:1;min-width:0">
-            <div style="font-size:0.65rem;font-weight:700;color:${a.color}">${name}</div>
-            <div style="font-size:0.5rem;color:#475569;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${desc}</div>
-          </div>
-          <span class="launcher-agent-status" data-agent="${name}" style="font-size:0.48rem;padding:0.08rem 0.3rem;border-radius:3px;font-weight:600;background:#111827;color:#374151;flex-shrink:0">IDLE</span>
-          <span style="font-size:0.6rem;color:#374151;flex-shrink:0" title="Copier">📋</span>
-        </div>`;
-    }).join('');
-  }
-  buildLauncherGrid();
-
-  // Update launcher statuses from agent_runs
-  function updateLauncherStatuses(runs) {
-    if (!runs) return;
-    const latest = {};
-    runs.forEach(r => {
-      if (!latest[r.agent_name] || new Date(r.started_at) > new Date(latest[r.agent_name].started_at)) {
-        latest[r.agent_name] = r;
-      }
-    });
-    // Update autopilot status
-    const apStatus = document.getElementById('autopilotStatus');
-    const apRun = latest['autopilot'];
-    const apRunning = runningAgents['autopilot'] || (apRun && (apRun.status === 'started' || apRun.status === 'running'));
-    if (apStatus) {
-      if (apRunning) {
-        apStatus.textContent = 'RUNNING';
-        apStatus.style.background = '#0a1a0f';
-        apStatus.style.color = '#22c55e';
-        apStatus.style.animation = 'pulse-btn 2s infinite';
-      } else if (apRun) {
-        apStatus.textContent = 'LAST: ' + timeAgo(apRun.completed_at || apRun.started_at);
-        apStatus.style.background = '#052e16';
-        apStatus.style.color = '#4ade80';
-        apStatus.style.animation = 'none';
-      }
-    }
-    updateAutopilotButtons(!!apRunning);
-    // Update individual agent statuses
-    document.querySelectorAll('.launcher-agent-status').forEach(el => {
-      const name = el.dataset.agent;
-      const run = latest[name];
-      if (!run) return;
-      if (run.status === 'started' || run.status === 'running') {
-        el.textContent = 'RUNNING';
-        el.style.background = '#0a1a0f';
-        el.style.color = '#22c55e';
-        el.style.animation = 'pulse-btn 2s infinite';
-      } else if (run.status === 'completed') {
-        el.textContent = timeAgo(run.completed_at || run.started_at);
-        el.style.background = '#052e16';
-        el.style.color = '#4ade80';
-        el.style.animation = 'none';
-      } else if (run.status === 'error') {
-        el.textContent = 'ERROR';
-        el.style.background = '#450a0a';
-        el.style.color = '#f87171';
-        el.style.animation = 'none';
-      }
-    });
-  }
-
   function formatTime(dateStr) {
     if (!dateStr) return '--:--';
     return new Date(dateStr).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   }
 
+  // ========== SUPABASE ==========
   async function supabaseFetch(table, query) {
     const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
       headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
@@ -1025,168 +968,6 @@ import { supabaseConfig } from '../../lib/supabase';
     if (!r.ok) throw new Error(await r.text());
     return r.json();
   }
-
-  async function supabaseInsert(table, data) {
-    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
-      method: 'POST',
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=representation'
-      },
-      body: JSON.stringify(data)
-    });
-    if (!r.ok) throw new Error(await r.text());
-    return r.json();
-  }
-
-  async function supabasePatch(table, query, data) {
-    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
-      method: 'PATCH',
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify(data)
-    });
-    if (!r.ok) throw new Error(await r.text());
-  }
-
-  // Agent Server connection
-  // In dev: proxied via Vite (/__agent -> 127.0.0.1:7854)
-  // Direct fallback for non-proxied environments
-  const AGENT_SERVER = '/__agent';
-  let serverOnline = false;
-  let runningAgents = {};
-
-  async function checkServer() {
-    try {
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 2000);
-      const r = await fetch(`${AGENT_SERVER}/status`, { signal: ctrl.signal });
-      clearTimeout(timer);
-      const data = await r.json();
-      serverOnline = true;
-      runningAgents = data.running || {};
-    } catch(e) {
-      serverOnline = false;
-      runningAgents = {};
-    }
-  }
-
-  async function launchAgent(name) {
-    if (!serverOnline) {
-      alert('Agent Server non connecte !\n\nLance dans un terminal :\nnode scripts/agent-server.mjs');
-      return;
-    }
-    if (runningAgents[name]) {
-      alert(name + ' est deja en cours.');
-      return;
-    }
-
-    try {
-      const r = await fetch(`${AGENT_SERVER}/launch`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ agent: name })
-      });
-      const data = await r.json();
-      if (!data.ok) {
-        alert('Erreur: ' + data.error);
-        return;
-      }
-      // Refresh immediately
-      await checkServer();
-      await loadAgentRuns();
-    } catch(e) {
-      alert('Erreur: ' + e.message);
-    }
-  }
-
-  async function stopAgent(name) {
-    try {
-      const r = await fetch(`${AGENT_SERVER}/stop`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ agent: name })
-      });
-      await checkServer();
-      await loadAgentRuns();
-    } catch(e) {}
-  }
-
-  async function launchAutopilot() {
-    if (!serverOnline) {
-      alert('Agent Server non connecte !\n\nLance dans un terminal :\nnode scripts/agent-server.mjs');
-      return;
-    }
-    if (runningAgents['autopilot']) {
-      alert('Autopilot est deja en cours.');
-      return;
-    }
-    if (!confirm('Lancer l\'Autopilot ?\n\nBoucle infinie : audit → fact-check → opportunites → editorial → validator.\nTourne jusqu\'a epuisement des tokens.\n\nContinuer ?')) return;
-
-    try {
-      const r = await fetch(`${AGENT_SERVER}/launch`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ agent: 'autopilot' })
-      });
-      const data = await r.json();
-      if (!data.ok) {
-        alert('Erreur: ' + data.error);
-        return;
-      }
-      updateAutopilotButtons(true);
-      await checkServer();
-      await loadAgentRuns();
-    } catch(e) {
-      alert('Erreur: ' + e.message);
-    }
-  }
-
-  async function stopAutopilot() {
-    if (!confirm('Stopper l\'Autopilot ?\n\nL\'agent sera arrete.')) return;
-    try {
-      await fetch(`${AGENT_SERVER}/stop`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ agent: 'autopilot' })
-      });
-      updateAutopilotButtons(false);
-      await checkServer();
-      await loadAgentRuns();
-    } catch(e) {}
-  }
-
-  function updateAutopilotButtons(isRunning) {
-    const launchBtn = document.getElementById('autopilotLaunchBtn');
-    const stopBtn = document.getElementById('autopilotStopBtn');
-    if (launchBtn) launchBtn.style.display = isRunning ? 'none' : 'flex';
-    if (stopBtn) stopBtn.style.display = isRunning ? 'flex' : 'none';
-  }
-
-  // Expose to onclick
-  window.launchAgent = launchAgent;
-  window.stopAgent = stopAgent;
-  window.launchAutopilot = launchAutopilot;
-  window.stopAutopilot = stopAutopilot;
-
-  // Clock
-  function updateClock() {
-    document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR', {
-      day: '2-digit', month: '2-digit', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', second: '2-digit'
-    });
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-
-  // Editorial backlog
-  let editorialBacklog = { tickets: 0, links: 0, opps: 0 };
 
   async function supabaseFetchCount(table, query) {
     const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
@@ -1207,266 +988,305 @@ import { supabaseConfig } from '../../lib/supabase';
     return 0;
   }
 
-  async function loadEditorialBacklogCounts() {
+  // ========== AGENT SERVER ==========
+  const AGENT_SERVER = '/__agent';
+  let serverOnline = false;
+  let runningAgents = {};
+
+  async function checkServer() {
     try {
-      const [tickets, links, opps] = await Promise.all([
-        supabaseFetchCount('correction_tickets', 'statut=eq.approved'),
-        supabaseFetchCount('internal_link_suggestions', 'status=eq.approved'),
-        supabaseFetchCount('content_opportunities', 'status=eq.approved'),
-      ]);
-      editorialBacklog = { tickets, links, opps };
-    } catch(e) {}
-  }
-
-  // Pipeline data
-  let pipelineData = { tickets: [], links: [], opps: [], decisions: [] };
-
-  async function loadPipelineData() {
-    try {
-      const [tickets, links, opps, decisions] = await Promise.all([
-        supabaseFetch('correction_tickets', 'select=source_agent,statut,ticket_type,created_at&order=created_at.desc'),
-        supabaseFetch('internal_link_suggestions', 'select=status,priority,created_at&order=created_at.desc'),
-        supabaseFetch('content_opportunities', 'select=status,priority,created_at&order=created_at.desc'),
-        supabaseFetch('strategist_decisions', 'select=decision_type,reason,applied,created_at&order=created_at.desc&limit=10').catch(() => []),
-      ]);
-      pipelineData = { tickets, links, opps, decisions };
-      renderPipeline();
-    } catch(e) {}
-  }
-
-  function renderPipeline() {
-    const { tickets, links, opps } = pipelineData;
-
-    // Count tickets by status
-    const tByStatus = { approved: 0, in_progress: 0, ready_to_deploy: 0, deployed: 0 };
-    const tBySource = {};
-    for (const t of tickets) {
-      const s = t.statut || 'approved';
-      if (tByStatus[s] !== undefined) tByStatus[s]++;
-      const src = t.source_agent || 'fact-check';
-      if (!tBySource[src]) tBySource[src] = { total: 0, approved: 0, in_progress: 0, done: 0 };
-      tBySource[src].total++;
-      if (s === 'approved') tBySource[src].approved++;
-      else if (s === 'in_progress') tBySource[src].in_progress++;
-      else tBySource[src].done++;
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 2000);
+      const r = await fetch(`${AGENT_SERVER}/status`, { signal: ctrl.signal });
+      clearTimeout(timer);
+      const data = await r.json();
+      serverOnline = true;
+      runningAgents = data.running || {};
+      window._serverBuffers = data.buffers || {};
+      renderConsoleTabs();
+    } catch(e) {
+      serverOnline = false;
+      runningAgents = {};
     }
+    document.getElementById('serverWarning').style.display = serverOnline ? 'none' : 'block';
+  }
 
-    const lAll = links.length;
-    const lApproved = links.filter(l => l.status === 'approved').length;
-    const oAll = opps.length;
-    const oApproved = opps.filter(o => o.status === 'approved').length;
+  async function launchAgent(name) {
+    if (!serverOnline) {
+      alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs');
+      return;
+    }
+    if (runningAgents[name]) return;
+    try {
+      const r = await fetch(`${AGENT_SERVER}/launch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: name })
+      });
+      const data = await r.json();
+      if (!data.ok) { alert('Erreur: ' + data.error); return; }
+      await checkServer();
+      await loadAgentRuns();
+      renderArena();
+    } catch(e) { alert('Erreur: ' + e.message); }
+  }
 
-    // Totals
-    const editorialStock = tByStatus.approved + lApproved + oApproved;
-    const editorialInProgress = tByStatus.in_progress;
-    const editorialOutput = tByStatus.ready_to_deploy;
-    const validatorOutput = tByStatus.deployed;
-    const totalAll = tickets.length + lAll + oAll;
+  async function stopAgent(name) {
+    try {
+      await fetch(`${AGENT_SERVER}/stop`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: name })
+      });
+      await checkServer();
+      await loadAgentRuns();
+      renderArena();
+    } catch(e) {}
+  }
 
-    document.getElementById('pipelineTotal').textContent = editorialStock > 0
-      ? editorialStock + ' tickets en stock'
-      : totalAll > 0 ? totalAll + ' traites' : 'Pipeline vide';
+  // ========== AUTOPILOT ==========
+  let autopilotRunning = false;
 
-    // Server warning
-    const warn = document.getElementById('serverWarning');
-    if (warn) warn.style.display = serverOnline ? 'none' : 'block';
-
-    // Strategist decisions
-    const decisions = pipelineData.decisions || [];
-    const recentDecisions = decisions.filter(d => {
-      const age = Date.now() - new Date(d.created_at).getTime();
-      return age < 24 * 3600 * 1000; // last 24h
-    });
-
-    // Factory configs — source agents
-    const factories = [
-      { key: 'fact-check', label: 'Fact-Check', color: '#fbbf24' },
-      { key: 'seo-audit', label: 'SEO Audit', color: '#38bdf8' },
-      { key: 'analytics', label: 'Analytics', color: '#4ade80' },
-      { key: 'internal-links', label: 'Maillage', color: '#f9a8d4', pending: lApproved, total: lAll },
-      { key: 'opportunities', label: 'Nouveaux articles', color: '#c084fc', pending: oApproved, total: oAll },
-    ];
-
-    const arrowSvg = `<div class="pipe-arrow"><svg viewBox="0 0 20 60"><path d="M2 30 L14 30 M10 24 L16 30 L10 36" stroke="#2a3444" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>`;
-
-    // Build factory items with launch buttons and status
-    const factoryHtml = factories.map(f => {
-      const src = tBySource[f.key];
-      const pending = f.pending !== undefined ? f.pending : (src ? src.approved : 0);
-      const total = f.total !== undefined ? f.total : (src ? src.total : 0);
-      const isEmpty = total === 0 && !runningAgents[f.key];
-      const hasPending = pending > 0;
-      const isRunning = !!runningAgents[f.key];
-      const run = agentRuns[f.key];
-      const lastTime = run ? timeAgo(run.completed_at || run.started_at) : '';
-
-      // Launch button
-      let btn = '';
+  function toggleAutopilot() {
+    if (autopilotRunning) {
+      if (!confirm('Stopper l\'Autopilot ?')) return;
+      stopAgent('autopilot');
+    } else {
       if (!serverOnline) {
-        btn = '';
-      } else if (isRunning) {
-        const uptime = runningAgents[f.key]?.uptime || '';
-        btn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('${f.key}')">&#9881; ${uptime} &#9724;</button>`;
-      } else {
-        btn = `<button class="agent-launch-btn" onclick="launchAgent('${f.key}')">&#9654;</button>`;
+        alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs');
+        return;
       }
-
-      return `<div class="factory-item ${isEmpty ? 'fc-zero' : ''} ${isRunning ? 'fi-running' : ''}" onclick="selectConsoleAgent('${f.key}')" style="cursor:pointer">
-        <span class="factory-dot ${isRunning ? 'running' : ''}" style="background:${f.color}"></span>
-        <span class="factory-info">
-          <span class="factory-name">${f.label}</span>
-          <span class="factory-meta">${total > 0 ? total + ' crees' : ''}${lastTime ? (total > 0 ? ' · ' : '') + lastTime : ''}</span>
-        </span>
-        <span class="factory-count-pending" style="background:${hasPending ? f.color + '22' : 'transparent'};color:${hasPending ? f.color : '#374151'}">${pending}</span>
-        ${btn}
-      </div>`;
-    }).join('');
-
-    // Editorial variants
-    const editVariants = [
-      { key: 'editorial-medical', label: 'Medical', icon: '&#128138;', color: '#f87171', bg: '#3a1e1e' },
-      { key: 'editorial-seo', label: 'SEO', icon: '&#128269;', color: '#67e8f9', bg: '#1e2e3a' },
-      { key: 'editorial-content', label: 'Content', icon: '&#9997;', color: '#a78bfa', bg: '#2e1e3a' },
-    ];
-    const editorialHtml = editVariants.map(v => {
-      const isRunning = !!runningAgents[v.key];
-      const run = agentRuns[v.key];
-      const meta = run ? timeAgo(run.completed_at || run.started_at) : '';
-      let btn = '';
-      if (serverOnline) {
-        if (isRunning) {
-          const uptime = runningAgents[v.key]?.uptime || '';
-          btn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('${v.key}')" style="margin-top:0.2rem;font-size:0.5rem">&#9881; ${uptime} &#9724;</button>`;
-        } else {
-          btn = `<button class="agent-launch-btn" onclick="event.stopPropagation();launchAgent('${v.key}')" style="margin-top:0.2rem;font-size:0.5rem">&#9654;</button>`;
-        }
-      }
-      return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;padding:0.3rem;cursor:pointer;border-radius:6px;background:${isRunning ? v.color + '0a' : 'transparent'}" onclick="selectConsoleAgent('${v.key}')">
-        <span style="font-size:0.8rem">${v.icon}</span>
-        <span style="font-size:0.55rem;color:${v.color};font-weight:600">${v.label}</span>
-        ${meta ? `<span style="font-size:0.42rem;color:#374151">${meta}</span>` : ''}
-        ${btn}
-      </div>`;
-    }).join('');
-    // Also keep generic editorial for backward compat
-    const editRunning = editVariants.some(v => !!runningAgents[v.key]) || !!runningAgents['editorial'];
-    const editRun = agentRuns['editorial-medical'] || agentRuns['editorial-seo'] || agentRuns['editorial'];
-    const editMeta = editRun ? `${timeAgo(editRun.completed_at || editRun.started_at)}` : '';
-
-    // Validator button
-    const valRunning = !!runningAgents['validator'];
-    let valBtn = '';
-    if (serverOnline) {
-      if (valRunning) {
-        const uptime = runningAgents['validator']?.uptime || '';
-        valBtn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('validator')" style="margin-top:0.3rem">&#9881; ${uptime} &#9724;</button>`;
-      } else {
-        valBtn = `<button class="agent-launch-btn" onclick="launchAgent('validator')" style="margin-top:0.3rem">&#9654; Lancer</button>`;
-      }
-    }
-    const valRun = agentRuns['validator'];
-    const valMeta = valRun ? `${timeAgo(valRun.completed_at || valRun.started_at)}` : '';
-
-    // Strategist block
-    const stratRunning = !!runningAgents['strategist'];
-    const stratRun = agentRuns['strategist'];
-    const stratSrc = tBySource['strategist'];
-    const stratPending = stratSrc ? stratSrc.approved : 0;
-    const stratTotal = stratSrc ? stratSrc.total : 0;
-    const stratMeta = stratRun ? timeAgo(stratRun.completed_at || stratRun.started_at) : '';
-    let stratBtn = '';
-    if (serverOnline) {
-      if (stratRunning) {
-        const uptime = runningAgents['strategist']?.uptime || '';
-        stratBtn = `<button class="agent-launch-btn is-running" onclick="event.stopPropagation();stopAgent('strategist')">&#9881; ${uptime} &#9724;</button>`;
-      } else {
-        stratBtn = `<button class="agent-launch-btn" onclick="launchAgent('strategist')">&#9654;</button>`;
-      }
-    }
-
-    const body = document.getElementById('pipelineBody');
-    body.innerHTML = `
-      <div class="pipeline-factories" style="border-bottom:1px solid #8b5cf622">
-        <div style="display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0.25rem;cursor:pointer" onclick="selectConsoleAgent('strategist')">
-          <span style="font-size:0.9rem">&#129504;</span>
-          <span style="flex:1">
-            <span style="color:#a78bfa;font-weight:700;font-size:0.68rem">STRATEGIST</span>
-            <span style="font-size:0.5rem;color:#475569;margin-left:0.3rem">Vague 0 — GA/GSC + decisions</span>
-          </span>
-          ${recentDecisions.length > 0 ? `<span style="font-size:0.55rem;color:#8b5cf6;background:#8b5cf622;padding:0.1rem 0.4rem;border-radius:3px">${recentDecisions.length} decisions</span>` : ''}
-          ${stratPending > 0 ? `<span class="factory-count-pending" style="background:#a78bfa22;color:#a78bfa">${stratPending}</span>` : ''}
-          ${stratMeta ? `<span style="font-size:0.48rem;color:#374151">${stratMeta}</span>` : ''}
-          ${stratBtn}
-        </div>
-      </div>
-
-      <div class="pipeline-factories">
-        <div class="pipe-phase-label">&#127981; Usines <span style="font-weight:400;color:#475569">(Vague 1 — analyse)</span></div>
-        ${factoryHtml}
-      </div>
-
-      <div class="pipeline-processors">
-      <div class="pipe-phase" style="justify-content:center;align-items:center;background:${editRunning ? '#67e8f90a' : '#67e8f905'};border-right:1px solid #1e293b">
-        <div class="pipe-phase-label" style="text-align:center;border-color:#67e8f933;color:#67e8f9">&#9998; Editorial <span style="font-weight:400;color:#475569">(Vague 2)</span></div>
-        <div style="display:flex;gap:0.3rem;width:100%;padding:0 0.2rem">
-          ${editorialHtml}
-        </div>
-        <div class="processor-flow" style="margin-top:0.3rem">
-          <div class="processor-flow-label">&#9660; stock</div>
-          <div class="processor-flow-num" style="background:${editorialStock > 0 ? '#fbbf2422' : '#22c55e22'};color:${editorialStock > 0 ? '#fbbf24' : '#22c55e'}">${editorialStock}</div>
-          ${editorialInProgress > 0 ? `<div class="processor-flow-row"><span style="color:#3b82f6">&#8635;</span> ${editorialInProgress} en cours</div>` : ''}
-          <div class="processor-flow-sep"></div>
-          <div class="processor-flow-label">&#9650; output</div>
-          <div class="processor-flow-num" style="background:#67e8f922;color:#67e8f9">${editorialOutput}</div>
-        </div>
-      </div>
-
-      <div class="pipe-arrow"><svg viewBox="0 0 20 60"><path d="M2 30 L14 30 M10 24 L16 30 L10 36" stroke="#2a3444" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-
-      <div class="pipe-phase" style="justify-content:center;align-items:center;background:${valRunning ? '#86efac0a' : '#86efac05'};border-right:1px solid #1e293b;cursor:pointer" onclick="selectConsoleAgent('validator')">
-        <div class="pipe-phase-label" style="text-align:center;border-color:#86efac33;color:#86efac">&#128270; Validator <span style="font-weight:400;color:#475569">(Vague 3)</span></div>
-        <div class="processor-icon" style="background:#1e3a2e;color:#86efac${valRunning ? ';box-shadow:0 0 12px #86efac33' : ''}">V</div>
-        <div class="processor-flow">
-          <div class="processor-flow-label">&#9660; a verifier</div>
-          <div class="processor-flow-num" style="background:${editorialOutput > 0 ? '#86efac22' : '#11182722'};color:${editorialOutput > 0 ? '#86efac' : '#374151'}">${editorialOutput}</div>
-          <div class="processor-flow-sep"></div>
-          <div class="processor-flow-label">&#9650; valides</div>
-          <div class="processor-flow-num" style="background:#22c55e22;color:#22c55e">${validatorOutput}</div>
-        </div>
-        ${valMeta ? `<div style="font-size:0.48rem;color:#374151;margin-top:0.2rem">${valMeta}</div>` : ''}
-        ${valBtn}
-      </div>
-
-      <div class="pipe-arrow"><svg viewBox="0 0 20 60"><path d="M2 30 L14 30 M10 24 L16 30 L10 36" stroke="#2a3444" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
-
-      <div class="pipe-phase" style="justify-content:center;align-items:center;background:#22c55e08">
-        <div class="pipe-phase-label" style="text-align:center;border-color:#22c55e33;color:#22c55e">&#128640; Deploy</div>
-        <div class="processor-icon" style="background:#052e16;color:#22c55e">&#10003;</div>
-        <div class="processor-total" style="color:#22c55e;font-size:1.5rem;font-weight:700">${validatorOutput}</div>
-        <div class="processor-sub" style="font-size:0.58rem;color:#475569">deployes</div>
-      </div>
-      </div>
-    `;
-
-    // Status bar
-    const bar = document.getElementById('pipelineBar');
-    if (totalAll > 0) {
-      const pctStock = (editorialStock / totalAll * 100).toFixed(1);
-      const pctInProgress = (editorialInProgress / totalAll * 100).toFixed(1);
-      const pctReady = (editorialOutput / totalAll * 100).toFixed(1);
-      const pctDeployed = (validatorOutput / totalAll * 100).toFixed(1);
-      const pctDone = Math.max(0, 100 - parseFloat(pctStock) - parseFloat(pctInProgress) - parseFloat(pctReady) - parseFloat(pctDeployed)).toFixed(1);
-      bar.innerHTML = `
-        <div class="pipe-status-seg" style="width:${pctStock}%;background:#fbbf24" title="Stock editorial (${editorialStock})"></div>
-        <div class="pipe-status-seg" style="width:${pctInProgress}%;background:#3b82f6" title="En cours (${editorialInProgress})"></div>
-        <div class="pipe-status-seg" style="width:${pctDone}%;background:#1e293b" title="Traites"></div>
-        <div class="pipe-status-seg" style="width:${pctReady}%;background:#67e8f9" title="Prets (${editorialOutput})"></div>
-        <div class="pipe-status-seg" style="width:${pctDeployed}%;background:#22c55e" title="Deployes (${validatorOutput})"></div>
-      `;
+      if (!confirm('Lancer l\'Autopilot ?\n\nBoucle infinie, spawne les agents necessaires.\nContinuer ?')) return;
+      launchAgent('autopilot');
     }
   }
 
-  // Load agent run data (latest run per agent)
+  function updateAutopilotUI() {
+    const hero = document.getElementById('autopilotHero');
+    const btn = document.getElementById('apBigBtn');
+    const label = document.getElementById('apBtnLabel');
+    const badge = document.getElementById('apBadge');
+
+    autopilotRunning = !!runningAgents['autopilot'];
+
+    if (autopilotRunning) {
+      hero.classList.add('is-running');
+      btn.classList.add('running');
+      btn.innerHTML = '&#9632;';
+      label.textContent = 'Stopper';
+      badge.className = 'ap-status-badge running';
+      badge.textContent = 'RUNNING';
+    } else {
+      hero.classList.remove('is-running');
+      btn.classList.remove('running');
+      btn.innerHTML = '&#9654;';
+      label.textContent = 'Lancer';
+
+      const apRun = agentRuns['autopilot'];
+      if (apRun) {
+        badge.className = 'ap-status-badge idle';
+        badge.textContent = 'LAST: ' + timeAgo(apRun.completed_at || apRun.started_at);
+      } else {
+        badge.className = 'ap-status-badge idle';
+        badge.textContent = 'IDLE';
+      }
+    }
+
+    // Active agents count
+    const activeCount = Object.keys(runningAgents).filter(k => k !== 'autopilot').length;
+    document.getElementById('apAgentsActive').textContent = activeCount;
+
+    // Budget estimation (rough: ~5% per cycle, based on agent_runs count last 24h)
+    const runs24h = Object.values(agentRuns).filter(r => {
+      const age = Date.now() - new Date(r.started_at).getTime();
+      return age < 86400000;
+    });
+    const budgetPct = Math.min(100, runs24h.length * 5);
+    const budgetFill = document.getElementById('apBudgetFill');
+    const budgetVal = document.getElementById('apBudgetVal');
+    budgetFill.style.width = budgetPct + '%';
+    budgetFill.style.background = budgetPct > 80 ? '#f87171' : budgetPct > 50 ? '#fbbf24' : '#22c55e';
+    budgetVal.textContent = `~${runs24h.length} runs / 24h (${budgetPct}%)`;
+  }
+
+  // ========== CHARACTER HTML BUILDER ==========
+  function buildCharacter(state, color, index) {
+    const delayClass = 'd' + ((index % 4) + 1);
+    const style = `--agent-color:${color}`;
+
+    if (state === 'sleeping') {
+      return `<div class="char sleeping" style="${style}">
+        <span class="zzz">z</span><span class="zzz">z</span><span class="zzz">z</span>
+        <div class="char-head"></div>
+        <div class="char-body">
+          <div class="char-arms">
+            <div class="char-arm left"></div>
+            <div class="char-arm right"></div>
+          </div>
+        </div>
+        <div class="char-legs">
+          <div class="char-leg left"></div>
+          <div class="char-leg right"></div>
+        </div>
+      </div>`;
+    }
+
+    if (state === 'dancing') {
+      return `<div class="char dancing ${delayClass}" style="${style}">
+        <div class="char-head"></div>
+        <div class="char-body">
+          <div class="char-arms">
+            <div class="char-arm left"></div>
+            <div class="char-arm right"></div>
+          </div>
+        </div>
+        <div class="char-legs">
+          <div class="char-leg left"></div>
+          <div class="char-leg right"></div>
+        </div>
+      </div>`;
+    }
+
+    // idle
+    return `<div class="char idle" style="${style}">
+      <div class="char-head"></div>
+      <div class="char-body">
+        <div class="char-arms">
+          <div class="char-arm left"></div>
+          <div class="char-arm right"></div>
+        </div>
+      </div>
+      <div class="char-legs">
+        <div class="char-leg left"></div>
+        <div class="char-leg right"></div>
+      </div>
+    </div>`;
+  }
+
+  // ========== ARENA RENDERING ==========
+  let arenaPendingCounts = {};
+
+  function renderArena() {
+    const grid = document.getElementById('arenaGrid');
+    if (!grid) return;
+
+    grid.innerHTML = ARENA_AGENTS.map(agent => {
+      const isRunning = !!runningAgents[agent.key];
+      const run = agentRuns[agent.key];
+      const hasRun = !!run;
+      const pending = arenaPendingCounts[agent.key] || 0;
+
+      // Count running instances (for now, 1 per agent — but could be multiple)
+      // Check for variant instances too (editorial-medical, editorial-seo, etc.)
+      let activeInstances = 0;
+      for (const k of Object.keys(runningAgents)) {
+        if (k === agent.key || k.startsWith(agent.key + '-')) activeInstances++;
+      }
+
+      // Determine character states
+      let characters = '';
+      if (activeInstances > 0) {
+        // Show dancing characters for each active instance
+        for (let i = 0; i < activeInstances; i++) {
+          characters += buildCharacter('dancing', agent.color, i);
+        }
+        // If there's pending work, hint we could spawn more
+        if (pending > 10 && activeInstances < 3) {
+          characters += buildCharacter('sleeping', agent.color, activeInstances);
+        }
+      } else if (hasRun) {
+        // Agent finished — show idle
+        characters += buildCharacter('idle', agent.color, 0);
+      } else {
+        // Never run — sleeping
+        characters += buildCharacter('sleeping', agent.color, 0);
+      }
+
+      // Meta info
+      let metaLeft = '';
+      if (isRunning) {
+        const uptime = runningAgents[agent.key]?.uptime || '';
+        metaLeft = uptime ? uptime : 'en cours...';
+      } else if (hasRun) {
+        metaLeft = timeAgo(run.completed_at || run.started_at);
+      } else {
+        metaLeft = 'jamais lance';
+      }
+
+      // Pending badge
+      let pendingHtml = '';
+      if (pending > 0) {
+        pendingHtml = `<span class="pending-badge" style="background:${agent.color}22;color:${agent.color}">${pending} en attente</span>`;
+      }
+
+      const countBadge = activeInstances > 0
+        ? `<span class="arena-cell-count active" style="--agent-color:${agent.color}">x${activeInstances}</span>`
+        : `<span class="arena-cell-count zero">x0</span>`;
+
+      return `<div class="arena-cell ${activeInstances > 0 ? 'has-active' : ''}" style="--agent-color:${agent.color}" onclick="onArenaCellClick('${agent.key}')">
+        <div class="arena-cell-header">
+          <span class="arena-cell-name">${agent.label}</span>
+          ${countBadge}
+        </div>
+        <div class="arena-stage">${characters}</div>
+        <div class="arena-cell-meta">
+          <span>${metaLeft}</span>
+          ${pendingHtml}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  function onArenaCellClick(agentKey) {
+    // Count active instances
+    let activeInstances = 0;
+    let firstInstance = null;
+    for (const k of Object.keys(runningAgents)) {
+      if (k === agentKey || k.startsWith(agentKey + '-')) {
+        activeInstances++;
+        if (!firstInstance) firstInstance = k;
+      }
+    }
+
+    if (activeInstances > 0) {
+      // Show options: view console or spawn another
+      const action = prompt(
+        `${agentKey} — ${activeInstances} instance(s) active(s)\n\n` +
+        `1 = Voir la console\n` +
+        `2 = Spawner une instance supplementaire\n` +
+        `3 = Annuler`,
+        '1'
+      );
+      if (action === '1') {
+        selectConsoleAgent(firstInstance);
+      } else if (action === '2') {
+        launchAgentMulti(agentKey);
+      }
+    } else if (serverOnline) {
+      if (confirm(`Lancer l'agent ${agentKey} ?`)) {
+        launchAgent(agentKey);
+      }
+    }
+  }
+
+  async function launchAgentMulti(name) {
+    if (!serverOnline) return;
+    try {
+      const r = await fetch(`${AGENT_SERVER}/launch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: name, allowMultiple: true })
+      });
+      const data = await r.json();
+      if (!data.ok) { alert('Erreur: ' + data.error); return; }
+      await checkServer();
+      await loadAgentRuns();
+      renderArena();
+    } catch(e) { alert('Erreur: ' + e.message); }
+  }
+  window.onArenaCellClick = onArenaCellClick;
+
+  // ========== LOAD DATA ==========
   let agentRuns = {};
 
   async function loadAgentRuns() {
@@ -1477,27 +1297,128 @@ import { supabaseConfig } from '../../lib/supabase';
         if (!latest[r.agent_name]) latest[r.agent_name] = r;
       }
       agentRuns = latest;
-      renderPipeline();
-      renderTimeline();
-      updateLauncherStatuses(runs);
+
+      // Update autopilot stats
+      const apRun = latest['autopilot'];
+      if (apRun && apRun.metadata) {
+        const m = apRun.metadata;
+        if (m.cycle) document.getElementById('apCycle').textContent = m.cycle;
+      }
+      const apLast = document.getElementById('apLastRun');
+      if (apRun) apLast.textContent = timeAgo(apRun.completed_at || apRun.started_at);
+
+      // Tickets processed 24h
+      const processed24h = runs.filter(r => {
+        const age = Date.now() - new Date(r.started_at).getTime();
+        return age < 86400000 && r.metadata?.items_processed;
+      }).reduce((sum, r) => sum + (r.metadata.items_processed || 0), 0);
+      document.getElementById('apTicketsProcessed').textContent = processed24h || '--';
+
+      updateAutopilotUI();
+      renderArena();
     } catch (e) {}
   }
 
-  // Log feed
+  async function loadPendingCounts() {
+    try {
+      const [tickets, links, opps] = await Promise.all([
+        supabaseFetch('correction_tickets', 'select=source_agent,statut&statut=eq.approved'),
+        supabaseFetchCount('internal_link_suggestions', 'status=eq.approved'),
+        supabaseFetchCount('content_opportunities', 'status=eq.approved'),
+      ]);
+
+      // Count tickets by source
+      const bySource = {};
+      for (const t of tickets) {
+        const src = t.source_agent || 'fact-check';
+        bySource[src] = (bySource[src] || 0) + 1;
+      }
+
+      arenaPendingCounts = {
+        'fact-check': bySource['fact-check'] || 0,
+        'seo-audit': bySource['seo-audit'] || 0,
+        'analytics': bySource['analytics'] || 0,
+        'validator': bySource['validator'] || 0,
+        'internal-links': links,
+        'opportunities': opps,
+        'editorial': (tickets.length || 0) + links + opps,
+      };
+
+      renderArena();
+    } catch(e) {}
+  }
+
+  // ========== KPIs ==========
+  async function loadHealthKPIs() {
+    try {
+      const [articles, seoTickets, keywords, opps, ticketsAll] = await Promise.all([
+        supabaseFetch('articles', 'select=id,is_active,last_fact_checked&is_active=eq.true'),
+        supabaseFetch('correction_tickets', 'select=id,statut,source_agent&source_agent=eq.seo-audit'),
+        supabaseFetch('keyword_rankings', 'select=keyword,position,checked_at&order=checked_at.desc&limit=500'),
+        supabaseFetch('content_opportunities', 'select=id,status'),
+        supabaseFetch('correction_tickets', 'select=id,statut,created_at'),
+      ]);
+
+      // Articles
+      document.getElementById('kpiArticles').textContent = articles.length;
+      const now = Date.now();
+      const recent = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * 86400000).length;
+      document.getElementById('kpiArticlesSub').innerHTML = `<span style="color:#4ade80">${recent}</span> verifies < 14j`;
+
+      // Fact-check coverage
+      const verified = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * 86400000).length;
+      const pct = articles.length > 0 ? Math.round(verified / articles.length * 100) : 0;
+      document.getElementById('kpiFactCheck').textContent = pct + '%';
+      document.getElementById('kpiFactCheckSub').textContent = `${verified}/${articles.length} < 14j`;
+      document.getElementById('kpiFactCheckBar').style.width = pct + '%';
+      document.getElementById('kpiFactCheckBar').style.background = pct > 70 ? '#22c55e' : pct > 40 ? '#fbbf24' : '#f87171';
+
+      // SEO
+      const seoApproved = seoTickets.filter(t => t.statut === 'approved').length;
+      const seoDone = seoTickets.filter(t => t.statut === 'deployed' || t.statut === 'ready_to_deploy').length;
+      document.getElementById('kpiSeoIssues').textContent = seoApproved;
+      document.getElementById('kpiSeoIssues').style.color = seoApproved > 0 ? '#f87171' : '#22c55e';
+      document.getElementById('kpiSeoSub').textContent = seoApproved > 0 ? `a corriger (${seoDone}/${seoTickets.length} resolus)` : `OK (${seoTickets.length} total)`;
+      const seoPct = seoTickets.length > 0 ? Math.round(seoDone / seoTickets.length * 100) : 100;
+      document.getElementById('kpiSeoBar').style.width = seoPct + '%';
+
+      // Keywords
+      const latestKw = {};
+      for (const k of keywords) { if (!latestKw[k.keyword]) latestKw[k.keyword] = k; }
+      const uniqueKw = Object.values(latestKw);
+      const top10 = uniqueKw.filter(k => k.position && k.position <= 10).length;
+      const avgPos = uniqueKw.length > 0 ? (uniqueKw.reduce((s, k) => s + (k.position || 100), 0) / uniqueKw.length).toFixed(1) : '--';
+      document.getElementById('kpiKeywords').textContent = top10;
+      document.getElementById('kpiKeywordsSub').innerHTML = `/${uniqueKw.length} &middot; moy ${avgPos}`;
+      document.getElementById('kpiKeywordsBar').style.width = (uniqueKw.length > 0 ? Math.round(top10 / uniqueKw.length * 100) : 0) + '%';
+
+      // Opps
+      const oppApproved = opps.filter(o => o.status === 'approved').length;
+      const oppPublished = opps.filter(o => o.status === 'published').length;
+      document.getElementById('kpiOpps').textContent = oppApproved;
+      document.getElementById('kpiOppsSub').innerHTML = `en attente &middot; <span style="color:#4ade80">${oppPublished} publiees</span>`;
+
+      // Throughput
+      const last7d = now - 7 * 86400000;
+      const deployedRecent = ticketsAll.filter(t => t.statut === 'deployed' && new Date(t.created_at).getTime() > last7d).length;
+      const pendingAll = ticketsAll.filter(t => t.statut === 'approved').length;
+      document.getElementById('kpiThroughput').textContent = deployedRecent;
+      document.getElementById('kpiThroughputSub').innerHTML = `deployes &middot; <span style="color:#fbbf24">${pendingAll} en stock</span>`;
+    } catch(e) {}
+  }
+
+  // ========== LOG FEED ==========
   let lastLogId = null;
 
   async function loadLogs(append) {
     try {
-      let query = 'select=*&order=created_at.desc&limit=50';
-      const logs = await supabaseFetch('agent_logs', query);
-
+      const logs = await supabaseFetch('agent_logs', 'select=*&order=created_at.desc&limit=50');
       const feed = document.getElementById('logFeed');
       if (logs.length === 0) {
         if (!append) feed.innerHTML = '<div class="log-empty">En attente de logs...</div>';
         return;
       }
-
-      if (append && lastLogId === logs[0].id) return; // no new logs
+      if (append && lastLogId === logs[0].id) return;
       lastLogId = logs[0].id;
 
       feed.innerHTML = logs.map(log => {
@@ -1515,67 +1436,48 @@ import { supabaseConfig } from '../../lib/supabase';
           <span class="log-status ${statusClass}">${escapeHtml(log.status)}</span>
         </div>`;
       }).join('');
-    } catch (e) {
-      // silent fail on polling
-    }
+    } catch (e) {}
   }
 
   // ========== AGENT CONSOLE ==========
-  let consoleAgent = null;  // currently selected agent tab
-  let consoleSince = 0;     // incremental fetch offset
+  let consoleAgent = null;
+  let consoleSince = 0;
   let consoleAutoScroll = true;
   let consoleTimer = null;
 
   function classifyLine(text) {
     if (!text) return '';
-    // Errors first (highest priority)
-    if (/^(Error|Failed|Exception|❌|⚠|WARN|WARNING|CRITICAL|FATAL)/i.test(text)) return 'cl-error';
-    if (/error|failed|exception|broken|missing/i.test(text) && text.length < 200) return 'cl-error';
-    // Important results (tickets, scores, counts)
-    if (/(\d+)\s*(tickets?|issues?|articles?|corrections?|opportunit|created|deploye|fixed|resolved)/i.test(text)) return 'cl-important';
+    if (/^(Error|Failed|Exception)/i.test(text)) return 'cl-error';
+    if (/error|failed|exception/i.test(text) && text.length < 200) return 'cl-error';
+    if (/(\d+)\s*(tickets?|issues?|articles?|corrections?|opportunit|created|deploye|fixed)/i.test(text)) return 'cl-important';
     if (/(score|position|rank|coverage|average).*\d/i.test(text)) return 'cl-metric';
-    // File operations
     if (/\.(astro|md|mdx|json|js|ts|mjs)\b/i.test(text) && /(modif|edit|writ|creat|updat|src\/)/i.test(text)) return 'cl-file';
-    // Tool calls
-    if (/^(Tool|Using|Calling|Running|Execute|Read|Write|Edit|Glob|Grep|Bash|WebSearch|WebFetch|supabase)/i.test(text)) return 'cl-tool';
-    // Success results
-    if (/^(Result|Output|Found|Created|Updated|Inserted|Deleted|Success|Done|Completed|✅|✓)/i.test(text)) return 'cl-result';
-    // System messages
-    if (/^(🚀|📡|🤖|📋|🔐|⏳|Agent .* lance|Agent .* complete|Pipeline|Vague|Phase)/i.test(text)) return 'cl-system';
-    // Thinking (lowest priority, dimmed)
-    if (/^(Thinking|Analyzing|Considering|Planning|Let me|I'll|I need|Looking|Checking|Reviewing)/i.test(text)) return 'cl-thinking';
+    if (/^(Tool|Using|Calling|Running|Execute|Read|Write|Edit|Glob|Grep|Bash|supabase)/i.test(text)) return 'cl-tool';
+    if (/^(Result|Output|Found|Created|Updated|Success|Done|Completed)/i.test(text)) return 'cl-result';
+    if (/^(Agent|Pipeline|Vague|Phase)/i.test(text)) return 'cl-system';
+    if (/^(Thinking|Analyzing|Considering|Planning|Let me|I'll|Looking|Checking)/i.test(text)) return 'cl-thinking';
     return '';
   }
 
   function formatConsoleTs(isoStr) {
     if (!isoStr) return '';
-    const d = new Date(isoStr);
-    return d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    return new Date(isoStr).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   }
 
   function renderConsoleTabs() {
     const tabsEl = document.getElementById('consoleTabs');
     if (!tabsEl) return;
-
-    // Gather agents with buffers (from server status) or running
     const agentNames = new Set();
     for (const name of Object.keys(runningAgents)) agentNames.add(name);
-    // Also check serverBuffers from last status check
     if (window._serverBuffers) {
       for (const name of Object.keys(window._serverBuffers)) agentNames.add(name);
     }
+    if (agentNames.size === 0) { tabsEl.innerHTML = ''; return; }
 
-    if (agentNames.size === 0) {
-      tabsEl.innerHTML = '';
-      return;
-    }
-
-    const sorted = [...agentNames].sort();
-    tabsEl.innerHTML = sorted.map(name => {
+    tabsEl.innerHTML = [...agentNames].sort().map(name => {
       const isRunning = !!runningAgents[name];
       const isActive = consoleAgent === name;
-      const bufInfo = window._serverBuffers?.[name];
-      const lineCount = bufInfo?.lines || 0;
+      const lineCount = window._serverBuffers?.[name]?.lines || 0;
       return `<button class="console-tab ${isActive ? 'active' : ''}" onclick="selectConsoleAgent('${name}')">
         <span class="tab-dot ${isRunning ? 'running' : 'stopped'}"></span>
         ${name}
@@ -1588,53 +1490,33 @@ import { supabaseConfig } from '../../lib/supabase';
     consoleAgent = name;
     consoleSince = 0;
     consoleAutoScroll = true;
-
-    // Clear body
-    const body = document.getElementById('consoleBody');
-    body.innerHTML = '<div class="console-empty">Chargement...</div>';
-
-    // Update tab active state
+    document.getElementById('consoleBody').innerHTML = '<div class="console-empty">Chargement...</div>';
     renderConsoleTabs();
-
-    // Fetch immediately
     fetchConsoleOutput();
-
-    // Start polling
     if (consoleTimer) clearInterval(consoleTimer);
     consoleTimer = setInterval(fetchConsoleOutput, 1500);
   }
 
   async function fetchConsoleOutput() {
     if (!consoleAgent || !serverOnline) return;
-
     try {
       const r = await fetch(`${AGENT_SERVER}/output/${consoleAgent}?since=${consoleSince}`);
       const data = await r.json();
-
       const body = document.getElementById('consoleBody');
       const statusEl = document.getElementById('consoleStatus');
 
-      // Update status
       if (statusEl) {
-        statusEl.textContent = data.running
-          ? `● RUNNING — ${data.total} lines`
-          : `○ STOPPED — ${data.total} lines`;
+        statusEl.textContent = data.running ? `RUNNING (${data.total} lines)` : `STOPPED (${data.total} lines)`;
         statusEl.style.color = data.running ? '#22c55e' : '#475569';
       }
 
       if (data.lines.length === 0 && consoleSince === 0) {
-        body.innerHTML = '<div class="console-empty">Aucune sortie pour cet agent</div>';
+        body.innerHTML = '<div class="console-empty">Aucune sortie</div>';
         return;
       }
+      if (data.lines.length === 0) return;
+      if (consoleSince === 0) body.innerHTML = '';
 
-      if (data.lines.length === 0) return; // No new lines
-
-      // If first load, replace content
-      if (consoleSince === 0) {
-        body.innerHTML = '';
-      }
-
-      // Append new lines
       const fragment = document.createDocumentFragment();
       for (const line of data.lines) {
         const div = document.createElement('div');
@@ -1645,296 +1527,92 @@ import { supabaseConfig } from '../../lib/supabase';
         fragment.appendChild(div);
       }
       body.appendChild(fragment);
-
-      // Update offset
       consoleSince = data.total;
-
-      // Auto-scroll to bottom
-      if (consoleAutoScroll) {
-        body.scrollTop = body.scrollHeight;
-      }
-    } catch(e) {
-      // silent fail
-    }
+      if (consoleAutoScroll) body.scrollTop = body.scrollHeight;
+    } catch(e) {}
   }
 
-  // Detect manual scroll (user scrolled up = disable auto-scroll)
   document.getElementById('consoleBody')?.addEventListener('scroll', function() {
-    const el = this;
-    const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 30;
-    consoleAutoScroll = atBottom;
+    consoleAutoScroll = (this.scrollHeight - this.scrollTop - this.clientHeight) < 30;
   });
 
-  // Expose to onclick
   window.selectConsoleAgent = selectConsoleAgent;
+  window.toggleAutopilot = toggleAutopilot;
 
-  // Enhanced checkServer to save buffer info
-  const _origCheckServer = checkServer;
-  checkServer = async function() {
-    try {
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 2000);
-      const r = await fetch(`${AGENT_SERVER}/status`, { signal: ctrl.signal });
-      clearTimeout(timer);
-      const data = await r.json();
-      serverOnline = true;
-      runningAgents = data.running || {};
-      window._serverBuffers = data.buffers || {};
-      renderConsoleTabs();
-    } catch(e) {
-      serverOnline = false;
-      runningAgents = {};
-    }
-  };
-
-  // Auto-open console when an agent starts running
-  function autoOpenConsole() {
-    if (consoleAgent && runningAgents[consoleAgent]) return; // Already watching a running agent
-    const runningNames = Object.keys(runningAgents);
-    if (runningNames.length > 0 && !consoleAgent) {
-      selectConsoleAgent(runningNames[0]);
-    }
+  // ========== CLOCK ==========
+  function updateClock() {
+    document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
   }
+  updateClock();
+  setInterval(updateClock, 1000);
 
-  // ========== END AGENT CONSOLE ==========
-
-  // Realtime via Supabase
+  // ========== REALTIME ==========
   function setupRealtime() {
-    // Use Supabase Realtime WebSocket for live updates
     const wsUrl = SUPABASE_URL.replace('https://', 'wss://') + '/realtime/v1/websocket?apikey=' + SUPABASE_ANON_KEY + '&vsn=1.0.0';
     let ws;
 
     function connect() {
       ws = new WebSocket(wsUrl);
-
       ws.onopen = () => {
-        // Join agent_runs channel
         ws.send(JSON.stringify({
           topic: 'realtime:public:agent_runs',
           event: 'phx_join',
           payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_runs' }] } },
           ref: '1'
         }));
-        // Join agent_logs channel
         ws.send(JSON.stringify({
           topic: 'realtime:public:agent_logs',
           event: 'phx_join',
           payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_logs' }] } },
           ref: '2'
         }));
-        // Heartbeat
         setInterval(() => {
           if (ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({ topic: 'phoenix', event: 'heartbeat', payload: {}, ref: 'hb' }));
           }
         }, 30000);
       };
-
       ws.onmessage = (event) => {
         try {
           const msg = JSON.parse(event.data);
           if (msg.event === 'postgres_changes') {
             loadAgentRuns();
             loadLogs(true);
-            loadQueue();
+            loadPendingCounts();
           }
         } catch(e) {}
       };
-
-      ws.onclose = () => {
-        // Reconnect after 3s
-        setTimeout(connect, 3000);
-      };
-
+      ws.onclose = () => setTimeout(connect, 3000);
       ws.onerror = () => ws.close();
     }
-
     connect();
   }
 
-  // ========== PROJECT HEALTH KPIs ==========
-  let healthData = {};
-
-  async function loadHealthKPIs() {
-    try {
-      const [articles, factChecks, seoTickets, keywords, opps, ticketsAll, linksAll] = await Promise.all([
-        supabaseFetch('articles', 'select=id,is_active,last_fact_checked,slug&is_active=eq.true'),
-        supabaseFetch('fact_check_results', 'select=id,created_at&order=created_at.desc&limit=1'),
-        supabaseFetch('correction_tickets', 'select=id,statut,created_at,source_agent&source_agent=eq.seo-audit'),
-        supabaseFetch('keyword_rankings', 'select=keyword,position,checked_at&order=checked_at.desc&limit=500'),
-        supabaseFetch('content_opportunities', 'select=id,status,priority,created_at'),
-        supabaseFetch('correction_tickets', 'select=id,statut,created_at'),
-        supabaseFetch('internal_link_suggestions', 'select=id,status,created_at'),
-      ]);
-
-      healthData = { articles, factChecks, seoTickets, keywords, opps, ticketsAll, linksAll };
-      renderKPIs();
-    } catch(e) {
-      console.error('KPI load error:', e);
-    }
-  }
-
-  function renderKPIs() {
-    const { articles, seoTickets, keywords, opps, ticketsAll, linksAll } = healthData;
-    if (!articles) return;
-
-    // Articles
-    const totalArticles = articles.length;
-    document.getElementById('kpiArticles').textContent = totalArticles;
-    const recentArticles = articles.filter(a => {
-      const age = Date.now() - new Date(a.last_fact_checked || '2000-01-01').getTime();
-      return age < 14 * 86400000;
-    }).length;
-    document.getElementById('kpiArticlesSub').innerHTML = `<span class="kpi-trend-up">${recentArticles}</span> verifies recemment`;
-
-    // Fact-check coverage
-    const now = Date.now();
-    const verified14d = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * 86400000).length;
-    const coveragePct = totalArticles > 0 ? Math.round(verified14d / totalArticles * 100) : 0;
-    document.getElementById('kpiFactCheck').textContent = coveragePct + '%';
-    document.getElementById('kpiFactCheckSub').innerHTML = `${verified14d}/${totalArticles} < 14 jours`;
-    document.getElementById('kpiFactCheckBar').style.width = coveragePct + '%';
-    document.getElementById('kpiFactCheckBar').style.background = coveragePct > 70 ? '#22c55e' : coveragePct > 40 ? '#fbbf24' : '#f87171';
-
-    // SEO Tickets (actionable — from correction_tickets with source seo-audit)
-    const seoTicketsApproved = seoTickets.filter(t => t.statut === 'approved').length;
-    const seoTicketsTotal = seoTickets.length;
-    const seoTicketsDone = seoTickets.filter(t => t.statut === 'deployed' || t.statut === 'ready_to_deploy').length;
-    document.getElementById('kpiSeoIssues').textContent = seoTicketsApproved;
-    document.getElementById('kpiSeoIssues').style.color = seoTicketsApproved > 0 ? '#f87171' : '#22c55e';
-    document.getElementById('kpiSeoSub').innerHTML = seoTicketsApproved > 0
-      ? `a corriger &middot; <span style="color:#64748b">${seoTicketsDone}/${seoTicketsTotal} resolus</span>`
-      : `<span class="kpi-trend-up">tout corrige</span> (${seoTicketsTotal} total)`;
-    const seoPct = seoTicketsTotal > 0 ? Math.round(seoTicketsDone / seoTicketsTotal * 100) : 100;
-    document.getElementById('kpiSeoBar').style.width = seoPct + '%';
-    document.getElementById('kpiSeoBar').style.background = seoPct === 100 ? '#22c55e' : seoPct > 50 ? '#fbbf24' : '#f87171';
-
-    // Keywords
-    const latestKeywords = {};
-    for (const k of keywords) {
-      if (!latestKeywords[k.keyword]) latestKeywords[k.keyword] = k;
-    }
-    const uniqueKw = Object.values(latestKeywords);
-    const top10 = uniqueKw.filter(k => k.position && k.position <= 10).length;
-    const avgPos = uniqueKw.length > 0 ? (uniqueKw.reduce((s, k) => s + (k.position || 100), 0) / uniqueKw.length).toFixed(1) : '--';
-    document.getElementById('kpiKeywords').textContent = top10;
-    document.getElementById('kpiKeywordsSub').innerHTML = `/${uniqueKw.length} suivis &middot; pos. moy <strong>${avgPos}</strong>`;
-    const kwPct = uniqueKw.length > 0 ? Math.round(top10 / uniqueKw.length * 100) : 0;
-    document.getElementById('kpiKeywordsBar').style.width = kwPct + '%';
-
-    // Opportunities
-    const oppApproved = opps.filter(o => o.status === 'approved').length;
-    const oppPublished = opps.filter(o => o.status === 'published').length;
-    document.getElementById('kpiOpps').textContent = oppApproved;
-    document.getElementById('kpiOppsSub').innerHTML = `en attente &middot; <span class="kpi-trend-up">${oppPublished} publiees</span>`;
-
-    // Pipeline throughput
-    const last7d = now - 7 * 86400000;
-    const deployedRecent = ticketsAll.filter(t => t.statut === 'deployed' && new Date(t.created_at).getTime() > last7d).length;
-    const pendingTickets = ticketsAll.filter(t => t.statut === 'approved').length;
-    document.getElementById('kpiThroughput').textContent = deployedRecent;
-    document.getElementById('kpiThroughputSub').innerHTML = `deployes / 7j &middot; <span style="color:#fbbf24">${pendingTickets} en stock</span>`;
-  }
-
-  // ========== AGENT TIMELINE ==========
-  function renderTimeline() {
-    const body = document.getElementById('timelineBody');
-    if (!body) return;
-
-    const agentConfigs = [
-      { name: 'strategist', label: 'Strategist', color: '#a78bfa' },
-      { name: 'seo-audit', label: 'SEO Audit', color: '#38bdf8' },
-      { name: 'analytics', label: 'Analytics', color: '#4ade80' },
-      { name: 'fact-check', label: 'Fact-Check', color: '#fbbf24' },
-      { name: 'opportunities', label: 'Opportunities', color: '#c084fc' },
-      { name: 'internal-links', label: 'Maillage', color: '#f9a8d4' },
-      { name: 'editorial', label: 'Editorial', color: '#67e8f9' },
-      { name: 'validator', label: 'Validator', color: '#86efac' },
-    ];
-
-    body.innerHTML = agentConfigs.map(cfg => {
-      const run = agentRuns[cfg.name];
-      const isRunning = !!runningAgents[cfg.name];
-      let statusCls = 'tas-idle';
-      let statusText = 'Jamais execute';
-      let resultText = '';
-      let timeText = '';
-
-      if (isRunning) {
-        statusCls = 'tas-running';
-        statusText = 'En cours';
-        timeText = run ? timeAgo(run.started_at) : '';
-      } else if (run) {
-        const status = run.status || run.result_status;
-        if (status === 'completed' || status === 'success') {
-          statusCls = 'tas-completed';
-          statusText = 'OK';
-        } else if (status === 'error' || status === 'failed') {
-          statusCls = 'tas-error';
-          statusText = 'Erreur';
-        } else {
-          statusCls = 'tas-completed';
-          statusText = status || 'Termine';
-        }
-        timeText = timeAgo(run.completed_at || run.started_at);
-
-        // Build result summary from metadata
-        const meta = run.metadata || run.result_metadata || {};
-        const parts = [];
-        if (meta.tickets_created) parts.push(meta.tickets_created + ' tickets');
-        if (meta.articles_checked) parts.push(meta.articles_checked + ' articles');
-        if (meta.issues_found) parts.push(meta.issues_found + ' issues');
-        if (meta.keywords_tracked) parts.push(meta.keywords_tracked + ' keywords');
-        if (meta.links_suggested) parts.push(meta.links_suggested + ' liens');
-        if (meta.opportunities_found) parts.push(meta.opportunities_found + ' opps');
-        if (meta.files_modified) parts.push(meta.files_modified + ' fichiers');
-        // Duration
-        if (run.started_at && run.completed_at) {
-          const dur = new Date(run.completed_at).getTime() - new Date(run.started_at).getTime();
-          if (dur > 0) parts.push(formatDuration(dur));
-        }
-        resultText = parts.join(' · ');
-      }
-
-      return `<div class="timeline-agent" onclick="selectConsoleAgent('${cfg.name}')" style="cursor:pointer">
-        <div class="timeline-agent-header">
-          <span class="timeline-agent-dot" style="background:${cfg.color}${isRunning ? ';animation:pulse-glow 1.5s infinite' : ''}"></span>
-          <span class="timeline-agent-name" style="color:${cfg.color}">${cfg.label}</span>
-          <span class="timeline-agent-status ${statusCls}">${statusText}</span>
-        </div>
-        ${resultText ? `<div class="timeline-agent-result">${escapeHtml(resultText)}</div>` : ''}
-        ${timeText ? `<div class="timeline-agent-result" style="color:#374151">${timeText}</div>` : ''}
-      </div>`;
-    }).join('');
-
-    const updateEl = document.getElementById('timelineLastUpdate');
-    if (updateEl) updateEl.textContent = 'Maj ' + new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-  }
-
-  // ========== ENHANCED REFRESH CYCLE ==========
-
-  // Polling every 5s for reliable updates
+  // ========== POLLING ==========
   setInterval(() => {
     checkServer().then(() => {
-      renderPipeline();
-      renderTimeline();
-      autoOpenConsole();
+      updateAutopilotUI();
+      renderArena();
+      // Auto-open console for first running agent
+      if (!consoleAgent) {
+        const running = Object.keys(runningAgents);
+        if (running.length > 0) selectConsoleAgent(running[0]);
+      }
     });
     loadLogs(true);
   }, 5000);
 
-  // Refresh editorial backlog + pipeline every 30s
   setInterval(() => {
-    Promise.all([loadEditorialBacklogCounts(), loadPipelineData(), loadHealthKPIs()]).then(() => {
-      loadAgentRuns();
-    });
+    Promise.all([loadPendingCounts(), loadHealthKPIs()]).then(() => loadAgentRuns());
   }, 30000);
 
-  // Init
-  Promise.all([checkServer(), loadEditorialBacklogCounts(), loadPipelineData(), loadHealthKPIs()]).then(() => {
+  // ========== INIT ==========
+  Promise.all([checkServer(), loadPendingCounts(), loadHealthKPIs()]).then(() => {
     loadAgentRuns();
     loadLogs(false);
-    renderTimeline();
   });
   setupRealtime();
 </script>

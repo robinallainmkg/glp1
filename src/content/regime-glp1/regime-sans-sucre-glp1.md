@@ -1,9 +1,10 @@
 ---
-title: "Régime Sans Sucre GLP-1 : Guide Complet et Conseils Pratiques 2025"
+title: "Régime Sans Sucre GLP-1 : Guide Glycémie et Perte de Poids"
 draft: true
 pubDate: 2025-08-20
+date: "2025-08-20"
 author: "Dr. Émilie Martin"
-description: "Éliminer le sucre avec les GLP-1 : guide complet pour réduire les sucres, contrôler la glycémie et amplifier les effets de votre traitement."
+description: "Régime sans sucre GLP-1 : contrôlez votre glycémie et amplifiez la perte de poids avec votre traitement. Conseils pratiques et menus."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
@@ -12,6 +13,7 @@ thumbnailAlt: "Illustration pour l'article regime-sans-sucre-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime sans sucre GLP-1 glycémie perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true

@@ -1,8 +1,9 @@
 ---
-title: "GLP-1 Calories Journalieres : Guide Complet et Conseils Pratiques 2025"
+title: "Calories Journalières et GLP-1 : Régime Perte de Poids"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Calculez vos besoins caloriques journaliers avec les GLP-1. Méthodes de calcul, adaptation selon le traitement et conseils pour un déficit calorique sain et durable pour perdre du poids efficacement."
+description: "Calculez vos calories journalières sous GLP-1 pour un régime perte de poids efficace. Méthodes de calcul, adaptation au traitement et déficit calorique sain."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article glp1-calories-journalieres"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "calories journalières GLP-1 régime perte de poids"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -106,11 +108,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Mètre ruban** : Mesures tour taille/hanches
 - **Photos avant/après** : Motivation visuelle
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

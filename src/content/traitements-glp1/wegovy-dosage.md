@@ -1,7 +1,8 @@
 ---
-title: "Wegovy Dosage : Guide Complet des Posologies 2025"
-description: "Guide complet du dosage Wegovy : posologie, augmentation progressive, adaptation individuelle et recommandations médicales pour une utilisation optimale."
+title: "Wegovy Dosage Posologie : Guide Complet 2026"
+description: "Dosage Wegovy posologie : guide complet sur l'augmentation progressive, les doses 0,25 mg à 2,4 mg et les recommandations médicales officielles."
 pubDate: 2025-08-20
+date: "2025-08-20"
 author: "Dr. Émilie Martin"
 category: "Traitements"
 tags: ["glp1", "traitements", "dosage"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Wegovy Dosage"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "dosage wegovy posologie"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -22,18 +24,13 @@ affiliateConfig:
   desktopStrategy: "sidebar"
   inlinePositions: [2, 6]
 ---
-<!-- 
+<!--
 SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Layout: ArticleWithAffiliateSidebar
 - Produits: Configurés par collection
 - Injection inline: positions 2, 6
 - Responsive: sidebar desktop + inline mobile
 -->
-
-readingTime: 5
-keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
-featured: true
----
 
 ## Sommaire
 1. [Dosage Wegovy : Protocole complet](#dosage-wegovy-protocole-complet)
@@ -160,7 +157,7 @@ Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines
 4. **Protocole de suivi** : Structuré et personnalisé
 
 ### Alternatives en cas d'intolérance
-En cas d'effets indésirables ou d'inefficacité, plusieurs options thérapeutiques restent disponibles selon l'évaluation médicale individuelle.
+En cas d'effets indésirables ou d'inefficacité, plusieurs options thérapeutiques restent disponibles selon l'évaluation médicale individuelle. Avec la perte de poids rapide, il est important de [préserver la masse musculaire pendant le traitement](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) par des apports protéiques adaptés.
 
 ### Prise en charge multidisciplinaire
 L'approche optimale associe :

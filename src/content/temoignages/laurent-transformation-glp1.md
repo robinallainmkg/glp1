@@ -1,17 +1,19 @@
 ---
-title: "Laurent M. : -35 Kilos avec Mounjaro - De 120kg à 85kg en 10 Mois"
-description: "Témoignage inspirant de Laurent M., 45 ans, qui a perdu 35 kilos en 10 mois grâce au traitement Mounjaro (tirzepatide). Son parcours de transformation remarquable."
+title: "Témoignage Mounjaro Perte de Poids : Laurent, -35 kg en 10 Mois"
+description: "Témoignage Mounjaro perte de poids : Laurent M., 45 ans, a perdu 35 kilos avec le tirzepatide. De 120 kg à 85 kg en 10 mois. Parcours complet."
 author: "Laurent M."
 image: "/images/temoignages/Laurent-journey8.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "35 kilos", "homme", "45 ans", "transformation"]
 pubDate: 2025-08-20T00:00:00.000Z
+date: "2025-08-20"
 featured: true
 priority: 2
+mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 ---
 
-# Laurent M. : De 120kg à 85kg grâce à Mounjaro
+## Laurent M. : De 120kg à 85kg grâce à Mounjaro
 
 **35 kilos perdus en 10 mois** - Un parcours inspirant
 
@@ -68,7 +70,7 @@ priority: 2
 ### Phase 3 : La Finalisation (Mois 7-10)
 - **Perte :** 8 kilos supplémentaires
 - **Dosage :** 10 mg
-- **Défis :** Maintenir la motivation
+- **Défis :** [Maintenir les résultats après l'arrêt de Mounjaro](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) et garder la motivation
 - **Victoires :** Objectif atteint, nouvelle garde-robe
 
 ## Les Changements Concrets
@@ -132,5 +134,7 @@ priority: 2
 > "Aujourd'hui, je cours 5km, je joue au foot avec mon fils, ma femme me regarde différemment... Ma vie a complètement changé. Et la vôtre peut changer aussi."
 
 ---
+
+Pour comparer avec les données cliniques, consultez notre guide sur les [résultats réels avant/après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

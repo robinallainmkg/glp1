@@ -1,9 +1,10 @@
 ---
-title: "GLP-1 et Ostéoporose : Un Nouveau Risque Osseux Identifié en 2026"
-description: "Une étude portant sur 150 000 patients révèle un lien entre GLP-1 (Ozempic, Wegovy) et risque accru d'ostéoporose et de goutte. Que faut-il savoir pour protéger vos os ?"
+title: "GLP-1 Ostéoporose Os Fracture : Risque Osseux et Prévention"
+description: "GLP-1 ostéoporose risque osseux : une étude sur 150 000 patients révèle un lien avec la perte osseuse et la goutte. Prévention recommandée."
 keywords: ['glp1 ostéoporose', 'ozempic os fracture', 'glp1 risque osseux', 'wegovy ostéoporose', 'perte osseuse glp1', 'glp1 goutte']
-seoTitle: "GLP-1 et Ostéoporose : Risque Osseux et Goutte — Ce que Révèle l'Étude 2026"
-seoDescription: "Étude AAOS 2026 sur 150 000 patients : les GLP-1 augmentent le risque d'ostéoporose et de goutte. Prévention, surveillance et recommandations pour protéger vos os."
+seoTitle: "GLP-1 Ostéoporose Os Fracture Risque : Guide Prévention 2026"
+seoDescription: "GLP-1 ostéoporose risque osseux : étude AAOS 2026. Prévention, surveillance et recommandations pour protéger vos os sous Ozempic ou Wegovy."
+date: '2026-03-16'
 publishedAt: '2026-03-16'
 updatedAt: '2026-03-16'
 featured: true
@@ -112,9 +113,9 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Supplementation en vitamine D et calcium** : La majorite des Francais sont carences en vitamine D, et la carence est encore plus frequente chez les personnes en situation d'obesite. Une supplementation quotidienne en vitamine D (1 000 a 2 000 UI/jour) et un apport calcique adequat (1 000 a 1 200 mg/jour, alimentation comprise) sont recommandes.
 
-**Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liee a l'amaigrissement. Il est recommande de pratiquer au moins 30 minutes d'exercice avec mise en charge par jour.
+**Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liee a l'amaigrissement. Découvrez notre guide sur l'[activité physique avec mise en charge sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) pour des conseils pratiques.
 
-**Apport proteique suffisant** : Les proteines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommande de consommer 1,2 a 1,5 g de proteines par kg de poids ideal par jour pour preserver la masse maigre.
+**[Apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/)** : Les proteines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommande de consommer 1,2 a 1,5 g de proteines par kg de poids ideal par jour pour preserver la masse maigre.
 
 **Hydratation** : Une bonne hydratation aide a eliminer l'acide urique et reduit le risque de goutte. Il est conseille de boire au moins 1,5 a 2 litres d'eau par jour.
 
@@ -124,7 +125,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 A la date de mars 2026, ni l'Agence Europeenne des Medicaments (EMA) ni l'ANSM francaise n'ont emis d'alerte specifique sur le risque osseux des GLP-1. Les resultats de l'etude AAOS sont recents et necessitent une confirmation par d'autres etudes independantes avant d'entrainer une modification des recommandations officielles.
 
-Cependant, les RCP (Resumes des Caracteristiques du Produit) d'Ozempic et de Wegovy mentionnent deja la perte de masse maigre comme un effet possible, et les medecins prescripteurs sont invites a surveiller l'etat nutritionnel de leurs patients.
+Cependant, les RCP (Resumes des Caracteristiques du Produit) d'Ozempic et de Wegovy mentionnent deja la [fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) comme un effet possible, et les medecins prescripteurs sont invites a surveiller l'etat nutritionnel de leurs patients.
 
 ### Position des societes savantes
 

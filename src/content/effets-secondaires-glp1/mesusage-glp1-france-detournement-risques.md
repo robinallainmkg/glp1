@@ -1,7 +1,8 @@
 ---
-title: "Mésusage des GLP-1 en France : Détournement, Risques et Ce que Dit l'ANSM"
-description: "2,2% de mésusage identifié parmi les utilisateurs de GLP-1 en France. Détournement pour la perte de poids, risques sanitaires et mesures de l'ANSM pour sécuriser l'accès."
+title: "Mésusage GLP-1 France : Détournement Ozempic et Risques ANSM"
+description: "Mésusage GLP-1 France détournement Ozempic : 2,2% des patients sans indication médicale. Risques sanitaires, tensions d'approvisionnement et réponse de l'ANSM."
 pubDate: 2026-03-16
+date: 2026-03-16
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"
 category: "Effets secondaires GLP-1"
@@ -27,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis que les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ont fait la une des médias pour leur efficacité spectaculaire sur la perte de poids, un phénomène préoccupant s'est développé en France : le mésusage. Des personnes sans diabète ni obésité diagnostiquée se procurent ces médicaments dans l'espoir de perdre quelques kilos, parfois au détriment de leur santé et de l'approvisionnement des patients qui en ont véritablement besoin. Voici ce que les études récentes et l'ANSM nous apprennent sur cette réalité.
+Depuis que les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ont fait la une des médias pour leur efficacité spectaculaire sur la [perte de poids avec les GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), un phénomène préoccupant s'est développé en France : le mésusage. Des personnes sans diabète ni obésité diagnostiquée se procurent ces médicaments dans l'espoir de perdre quelques kilos, parfois au détriment de leur santé et de l'approvisionnement des patients qui en ont véritablement besoin. Voici ce que les études récentes et l'ANSM nous apprennent sur cette réalité.
 
 ## L'ampleur du mésusage en France : les chiffres
 
@@ -174,7 +175,7 @@ Les risques sont multiples : produit contrefait, dosage incorrect, absence de su
 
 ### Le formulaire obligatoire va-t-il rendre l'accès plus difficile pour les vrais patients ?
 
-Le formulaire vise spécifiquement les prescriptions d'antidiabétiques GLP-1 pour s'assurer que l'indication de diabète de type 2 est bien confirmée. Il ne concerne pas les prescriptions de Wegovy ou Mounjaro pour l'obésité, qui suivent leur propre circuit de prescription.
+Le formulaire vise spécifiquement les prescriptions d'antidiabétiques GLP-1 pour s'assurer que l'indication de diabète de type 2 est bien confirmée. Il ne concerne pas les prescriptions de Wegovy ou Mounjaro pour l'obésité, qui suivent leur propre circuit de prescription. Pour lutter contre le mésusage, l'ANSM a mis en place les [nouvelles règles de prescription ANSM pour les GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) applicables depuis 2025.
 
 ---
 

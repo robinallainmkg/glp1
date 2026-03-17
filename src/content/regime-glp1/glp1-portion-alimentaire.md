@@ -1,8 +1,9 @@
 ---
-title: "GLP-1 et Portions : Guide des Quantites Optimales"
+title: "Portions Alimentaires GLP-1 : Quantités Repas Optimales"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Guide des portions alimentaires optimales sous traitement GLP-1. Apprenez à adapter les quantités, gérer la satiété et maximiser la perte de poids avec des portions équilibrées et adaptées."
+description: "Portions alimentaires et GLP-1 : quantités repas optimales pour perdre du poids efficacement. Adapter les portions, gérer la satiété sous traitement."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article glp1-portion-alimentaire"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "portions alimentaires GLP-1 quantités repas"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -107,11 +109,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../traitements-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../traitements-glp1/traitement-diabete-type-2/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../traitements-glp1/saxenda-prix/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

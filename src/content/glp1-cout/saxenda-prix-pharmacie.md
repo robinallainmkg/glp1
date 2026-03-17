@@ -1,7 +1,8 @@
 ---
-title: "Prix et Coût Détaillé de Saxenda en France 2025"
-description: "Guide complet sur Saxenda Prix Pharmacie : tarifs officiels, remboursement sécurité sociale et couverture mutuelle pour le traitement Saxenda."
+title: "Prix Saxenda Pharmacie France 2026 : Coût et Remboursement"
+description: "Prix Saxenda pharmacie France : tarifs officiels, remboursement sécurité sociale et couverture mutuelle. Guide complet du prix Saxenda pharmacie France."
 pubDate: 2025-08-23
+date: '2026-03-17'
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Saxenda Prix Pharmacie"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "prix saxenda pharmacie france"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -295,7 +297,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 * [acheter Wegovy France](../glp1-cout/acheter-wegovy-en-france/)
 * [dangers Wegovy](../effets-secondaires-glp1/wegovy-danger/)
 * [remboursement Wegovy](../glp1-cout/wegovy-remboursement-mutuelle/)
-* [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+* [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

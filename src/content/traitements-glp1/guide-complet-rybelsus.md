@@ -1,7 +1,7 @@
 ---
-title: "Guide Complet Rybelsus : Prix, Effets Secondaires et Posologie"
+title: "Rybelsus Guide Complet France : GLP-1 Oral Posologie et Prix"
 slug: "guide-complet-rybelsus"
-description: "Découvrez tout sur Rybelsus : traitement GLP-1 oral pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
+description: "Rybelsus guide complet France : GLP-1 oral pour le diabète de type 2. Posologie, prix, effets secondaires et alternatives. Tout savoir sur le sémaglutide oral."
 author: "Dr. Martin"
 image: "/images/thumbnails/rybelsus-medical-guide.jpg"
 collection: "traitements-glp1"
@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["rybelsus", "glp-1", "diabète", "traitement", "oral"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "rybelsus guide complet france oral"
 ---
 
 ## Guide Complet Rybelsus : Tout Savoir sur ce Traitement Révolutionnaire

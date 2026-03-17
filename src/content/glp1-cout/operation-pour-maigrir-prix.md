@@ -1,7 +1,8 @@
 ---
-title: "Prix et Coût Détaillé de ce traitement GLP-1 en France 2025"
-description: "Guide complet sur Operations Pour Maigrir : informations médicales et recommandations d'experts."
+title: "Opération Bariatrique : Prix, Remboursement et Coûts 2025"
+description: "Opération bariatrique prix remboursement : sleeve à 8 000€, bypass à 12 000€, pris en charge par la Sécu sous conditions. Comparatif avec les traitements GLP-1."
 pubDate: 2025-08-23
+date: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -11,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Operation Pour Maigrir Prix"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "operation bariatrique prix remboursement"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -191,7 +193,7 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Vie professionnelle intense
 * Désir de solution réversible
 
-Pour en savoir plus sur les conditions de prise en charge, consultez notre guide sur le [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
+Pour en savoir plus sur les conditions de prise en charge, consultez notre guide sur le [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Avant d'envisager la chirurgie, explorez les alternatives médicamenteuses comme décrit dans notre [comparatif Wegovy ou Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 ## Financement et Aides
 
@@ -362,7 +364,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 * [acheter Wegovy France](../glp1-cout/acheter-wegovy-en-france/)
 * [dangers Wegovy](../effets-secondaires-glp1/wegovy-danger/)
 * [remboursement Wegovy](../glp1-cout/wegovy-remboursement-mutuelle/)
-* [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+* [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

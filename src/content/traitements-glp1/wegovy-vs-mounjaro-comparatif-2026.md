@@ -1,11 +1,13 @@
 ---
-title: "Wegovy vs Mounjaro 2026 : Comparatif Complet pour Choisir le Bon Traitement"
-description: "Wegovy ou Mounjaro en 2026 ? Comparatif detaille : efficacite, prix, effets secondaires, remboursement. Tout pour choisir le meilleur traitement GLP-1 selon votre profil."
+title: "Wegovy vs Mounjaro 2026 : Comparatif pour Choisir"
+description: "Wegovy vs Mounjaro 2026 : comparatif complet efficacité, prix, effets secondaires et remboursement. Choisissez le meilleur traitement GLP-1."
+mainKeyword: "wegovy vs mounjaro"
 author: "Dr. Marie Dubois"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy", "mounjaro", "comparatif", "glp-1", "tirzepatide", "semaglutide", "perte de poids", "2026"]
 pubDate: "2026-03-16"
+date: "2026-03-16"
 thumbnail: "/images/thumbnails/wegovy-vs-mounjaro.jpg"
 thumbnailAlt: "Comparatif Wegovy vs Mounjaro 2026"
 featured: true
@@ -147,7 +149,7 @@ Les deux traitements ne sont **pas rembourses par la Securite Sociale** en mars 
 
 La situation evolue rapidement pour les deux traitements :
 
-**Wegovy** : La HAS a rendu un **avis favorable au remboursement le 20 fevrier 2026** pour les adultes avec un IMC >= 35 kg/m2 apres echec de la prise en charge nutritionnelle bien conduite. Les negociations de prix entre Novo Nordisk et le CEPS sont en cours. Un remboursement pourrait intervenir au **2e semestre 2026**.
+**Wegovy** : La HAS a rendu un **avis favorable au remboursement le 4 décembre 2024** pour les adultes avec un IMC >= 35 kg/m2 apres echec de la prise en charge nutritionnelle bien conduite. Les negociations de prix entre Novo Nordisk et le CEPS sont en cours. Un remboursement pourrait intervenir au **2e semestre 2026**.
 
 **Mounjaro** : La HAS a rendu un **avis favorable le 19 novembre 2025** (avis CT21349) pour le diabete de type 2 et l'obesite (IMC >= 35). Les negociations tarifaires avec le CEPS sont egalement en cours. Le remboursement est attendu au **2e semestre 2026**.
 
@@ -200,7 +202,7 @@ L'escalade de dose se fait sur **16 semaines** avant d'atteindre la dose cible :
 
 ### Protocole Mounjaro
 
-L'escalade de dose est plus progressive, sur **20 semaines ou plus** :
+Pour le tirzepatide, notre [guide du dosage Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) explique la titration de 2,5 mg à 15 mg. L'escalade de dose est plus progressive, sur **20 semaines ou plus** :
 
 1. **Semaines 1-4** : 2,5 mg/semaine
 2. **Semaines 5-8** : 5 mg/semaine
@@ -243,6 +245,8 @@ Pour approfondir votre reflexion, consultez nos guides dedies :
 - [Guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)
 - [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/)
+
+Pour comparer les profils de tolérance, consultez notre guide complet sur les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) avant de faire votre choix. Côté tirzepatide, notre guide des [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) détaille les symptômes les plus fréquents et comment les gérer.
 
 ---
 

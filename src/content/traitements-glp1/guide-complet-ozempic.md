@@ -1,7 +1,7 @@
 ---
-title: "Guide Complet Ozempic : Prix, Effets Secondaires et Posologie"
+title: "Ozempic Guide Complet France : Posologie, Prix et Effets"
 slug: "guide-complet-ozempic"
-description: "Découvrez tout sur Ozempic : traitement GLP-1 pour le diabète et la perte de poids. Prix, effets secondaires, posologie et alternatives."
+description: "Ozempic guide complet France posologie prix : tout savoir sur le sémaglutide GLP-1. Effets secondaires, indications diabète et perte de poids."
 author: "Dr. Martin"
 image: "/images/thumbnails/ozempic-medical-guide.jpg"
 collection: "traitements-glp1"
@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["ozempic", "glp-1", "diabète", "perte de poids", "traitement", "injection"]
 date: "2025-08-27"
 pubDate: "2025-08-27"
+mainKeyword: "ozempic guide complet france posologie prix"
 ---
 
 ## Guide Complet Ozempic : Tout Savoir sur ce Traitement Révolutionnaire
@@ -169,7 +170,7 @@ Non, en France, Ozempic est **exclusivement indiqué pour le diabète de type 2*
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Ozempic est-il remboursé ?
-Ozempic est remboursé à **30 %** par l'Assurance Maladie (100 % en ALD 30 pour le diabète de type 2) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix en pharmacie est d'environ 76,58 € par stylo.
+Ozempic est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD 30 pour le diabète de type 2) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix en pharmacie est d'environ 76,58 € par stylo.
 
 ### Puis-je arrêter Ozempic brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids après l'arrêt du traitement. Discutez avec votre médecin d'un plan d'arrêt adapté.

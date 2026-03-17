@@ -2,6 +2,8 @@
 title: "Nos Partenaires : Guide Complet et Conseils Pratiques 2025"
 description: "Découvrez nos partenaires de confiance qui nous accompagnent dans notre mission d'information sur les traitements GLP-1 et la santé métabolique."
 pubDate: 2025-08-21
+date: 2025-08-21
+mainKeyword: "partenaires GLP-1 France"
 thumbnail: "/images/thumbnails/partenaires-illus.jpg"
 thumbnailAlt: "Illustration pour Nos Partenaires : Guide Complet et Conseils Pratiques 2025"
 category: "Partenariat"

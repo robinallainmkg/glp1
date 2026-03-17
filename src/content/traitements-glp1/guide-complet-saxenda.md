@@ -1,7 +1,7 @@
 ---
-title: "Guide Complet Saxenda : Prix, Effets Secondaires et Posologie"
+title: "Saxenda Guide Complet France : Liraglutide, Prix et Effets"
 slug: "guide-complet-saxenda"
-description: "Découvrez tout sur Saxenda : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
+description: "Saxenda guide complet France liraglutide : traitement GLP-1 pour l'obésité. Prix, effets secondaires, posologie et alternatives en 2026."
 author: "Dr. Martin"
 image: "/images/thumbnails/guide-complet-saxenda.webp"
 collection: "traitements-glp1"
@@ -9,6 +9,7 @@ category: "traitements-glp1"
 tags: ["saxenda", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
 pubDate: "2025-08-28"
+mainKeyword: "saxenda guide complet france liraglutide"
 ---
 
 ## Guide Complet Saxenda : Tout Savoir sur ce Traitement Révolutionnaire
@@ -78,7 +79,7 @@ Dans les études cliniques SCALE, Saxenda a démontré des résultats significat
 ## Posologie et administration
 
 ### Schéma posologique
-Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalade de dose est essentielle pour minimiser les effets secondaires.
+Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalade de dose est essentielle pour minimiser les [effets secondaires de Saxenda](/collections/effets-secondaires-glp1/effets-secondaires-saxenda/).
 
 **Semaine 1** : 0,6 mg/jour  
 **Semaine 2** : 1,2 mg/jour  
@@ -108,6 +109,8 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 - Durée initiale : 1 semaine
 - Apprentissage de l'injection quotidienne
 - Plan alimentaire personnalisé
+
+> **Important (juin 2025)** : Depuis le 23 juin 2025, la prescription initiale et le renouvellement de Saxenda sont autorisés pour **tout médecin**, sans réservation à un spécialiste. Consultez notre article sur les [règles de prescription ANSM depuis juin 2025](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) pour les détails. Consultez votre médecin traitant.
 
 ### Étape 3 : Période d'adaptation (1-4 semaines)
 **Augmentation progressive** :
@@ -145,8 +148,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
-- **Phentermine/Topiramate (Qsymia)** : Association anorexigène
-- **Bupropion/Naltrexone (Mysimba)** : Action centrale sur l'appétit
+- **Mysimba** (bupropion/naltrexone) : Action centrale sur l'appétit — disponible en France
 
 ## FAQ Saxenda
 
@@ -162,10 +164,10 @@ Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète
 - **Effets maximum** : 6-12 mois
 
 ### Saxenda est-il remboursé pour l'obésité ?
-**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
+**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Pour les [prix Saxenda 2026](/collections/glp1-cout/prix-saxenda-france/) en détail, son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
 
 ### Puis-je arrêter Saxenda brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
+Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids après l'arrêt de Saxenda](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) (effet yoyo). Notre guide dédié vous explique les stratégies pour limiter ce risque.
 
 ---
 

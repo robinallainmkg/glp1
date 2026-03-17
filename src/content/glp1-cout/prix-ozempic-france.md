@@ -1,11 +1,13 @@
 ---
-title: "Prix Ozempic 2026 : Coût Complet par Dosage et Remboursement"
-description: "Prix Ozempic en pharmacie : 77,60€ par stylo. Coût réel de 40-55€ après remboursement 30%. Guide complet des tarifs par dosage (0.25mg, 0.5mg, 1mg), mutuelles et aides."
-keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2025', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
-seoTitle: "Prix Ozempic 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
-seoDescription: "Prix Ozempic : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
+title: "Prix Ozempic France 2026 : Tarifs par Dosage et Remboursement"
+description: "Prix Ozempic France 2026 : 77,60€/stylo, coût réel 40-55€/mois après remboursement 30% en pharmacie. Tarifs par dosage, mutuelles et aides disponibles."
+keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
+seoTitle: "Prix Ozempic France 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
+seoDescription: "Prix Ozempic France : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
+mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
 updatedAt: '2025-12-27'
+date: 2025-12-27
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -343,7 +345,7 @@ Plusieurs solutions existent pour réduire drastiquement le coût d'Ozempic :
 3. Prescription sur ordonnance sécurisée
 4. Délivrance en pharmacie agréée
 
-[Trouver un médecin prescripteur près de chez vous](/collections/medecins-glp1-france)
+[Trouver un médecin prescripteur près de chez vous](/medecins-glp1-france/)
 
 ### Quelle mutuelle rembourse le mieux Ozempic ?
 
@@ -467,18 +469,18 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 ### Médecins et Suivi
 - **[Trouver un Endocrinologue](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire des médecins prescripteurs
 - **[Trouver un Diabétologue à Paris](/collections/medecins-glp1-france/diabetologue-paris)** - Spécialistes région parisienne
-- **[Suivi Médical sous GLP-1](/guides/suivi-medical-glp1)** - Examens et consultations nécessaires
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-ozempic)** - Examens et consultations nécessaires
 
 ### Aide et Soutien
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide complet des mutuelles
 - **[Témoignages Avant/Après GLP-1](/temoignages/avant-apres-glp1)** - Résultats réels de patients
-- **[Communautés GLP-1](/guides/communautes-glp1)** - Forums et groupes d'entraide
+- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour obtenir Ozempic ?**
 - 📞 **Service patient Novo Nordisk** : 0 800 80 16 05 (gratuit)
 - 🏥 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
 - 💊 **Association Française des Diabétiques** : 01 40 09 24 25
-- 💬 **[Contactez-nous](/contact)** pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

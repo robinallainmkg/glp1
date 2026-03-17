@@ -1,7 +1,8 @@
 ---
-title: "ANSM : Nouvelles Règles de Prescription des GLP-1 en France (2025-2026)"
-description: "Depuis juin 2025, tout médecin peut prescrire les GLP-1 pour l'obésité en France. Formulaire obligatoire, conditions de prescription, rapport bénéfice/risque confirmé par l'ANSM."
+title: "ANSM Prescription GLP-1 : Règles France 2025-2026"
+description: "ANSM prescription GLP-1 règles France 2025-2026 : tout médecin peut désormais prescrire les GLP-1. Formulaire obligatoire et conditions."
 pubDate: 2026-03-16
+date: "2026-03-16"
 updatedAt: 2026-03-16
 author: "Dr. Marie Dubois"
 category: "Traitements"
@@ -39,10 +40,10 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 **Ce qui change concrètement** :
 
-- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité
+- Votre médecin traitant peut vous prescrire [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) pour l'obésité, sous réserve d'un IMC initial >= 35 kg/m² et d'un échec préalable d'une prise en charge nutritionnelle (deuxième intention uniquement)
 - Il n'est plus nécessaire de consulter un spécialiste pour la première prescription
 - Le renouvellement peut également être assuré par le médecin traitant
-- Les conditions médicales d'éligibilité restent inchangées (IMC >= 30, ou IMC >= 27 avec comorbidités)
+- Les conditions médicales d'éligibilité selon l'ANSM : IMC initial >= 35 kg/m², en deuxième intention après échec d'une prise en charge nutritionnelle
 
 **Ce qui ne change pas** :
 
@@ -53,7 +54,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 ### Février 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
 
-Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un mésusage documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
+Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
 
 Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabète de type 2. Il vise à s'assurer que :
 
@@ -175,7 +176,7 @@ Pour comparer ces traitements en détail, consultez notre [comparatif des GLP-1]
 
 ### Mon médecin généraliste peut-il me prescrire Ozempic pour maigrir ?
 
-Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte de poids, les traitements approuvés sont Wegovy, Mounjaro et Saxenda. Depuis juin 2025, votre médecin généraliste peut vous prescrire ces traitements anti-obésité si vous remplissez les critères d'éligibilité.
+Non. Ozempic est indiqué uniquement pour le diabète de type 2. Pour la perte de poids, les traitements approuvés sont Wegovy, Mounjaro et Saxenda. Depuis juin 2025, votre généraliste peut vous prescrire ces traitements anti-obésité si vous remplissez les critères d'éligibilité — consultez notre guide sur le [médecin généraliste et conditions de prescription](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) pour connaître les démarches.
 
 ### Le formulaire obligatoire va-t-il ralentir ma prise en charge ?
 
@@ -183,7 +184,7 @@ Non. Le formulaire est rapide à remplir pour le médecin et s'intègre dans la 
 
 ### Les GLP-1 seront-ils bientôt remboursés pour l'obésité ?
 
-La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Un remboursement est envisageable au second semestre 2026. Mounjaro pourrait suivre un processus similaire.
+La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix avec le CEPS sont en cours. Un [remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) est envisageable au second semestre 2026 pour Wegovy. Mounjaro pourrait suivre un processus similaire.
 
 ### L'ANSM a-t-elle identifié de nouveaux risques pour les GLP-1 ?
 
@@ -199,7 +200,7 @@ Oui, un bilan biologique préalable est fortement recommandé. Il comprend au mi
 
 ## Conclusion
 
-Les évolutions réglementaires de 2025 marquent un tournant dans l'accès aux traitements GLP-1 en France. L'ouverture de la prescription aux médecins généralistes facilite considérablement le parcours de soins des patients obèses, tandis que le formulaire obligatoire sécurise l'utilisation des antidiabétiques GLP-1 contre le mésusage.
+Les évolutions réglementaires de 2025 marquent un tournant dans l'accès aux traitements GLP-1 en France. L'ouverture de la prescription aux médecins généralistes facilite considérablement le parcours de soins des patients obèses, tandis que le formulaire obligatoire sécurise l'utilisation des antidiabétiques GLP-1 contre le mésusage. Ces nouvelles règles répondent directement au [phénomène de mésusage des GLP-1](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté par les autorités sanitaires françaises.
 
 Pour les patients, le message de l'ANSM est clair : ces traitements sont efficaces et sûrs dans le cadre d'une utilisation médicalement encadrée. Le meilleur point de départ reste une consultation avec votre médecin traitant.
 

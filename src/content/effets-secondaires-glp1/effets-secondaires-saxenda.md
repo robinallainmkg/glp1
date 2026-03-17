@@ -6,11 +6,13 @@ seoTitle: "Effets Secondaires Saxenda : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Saxenda : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Saxenda"
 image: "/images/thumbnails/effets-secondaires-saxenda-illus.jpg"
 thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
 thumbnailAlt: "Effets secondaires du traitement saxenda"
