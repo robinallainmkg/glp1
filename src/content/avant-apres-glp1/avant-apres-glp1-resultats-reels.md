@@ -12,6 +12,8 @@ featured: true
 priority: 1
 mainKeyword: "avant après glp1"
 secondaryKeywords: ["avant après ozempic", "avant après wegovy", "avant après mounjaro", "résultats glp1", "perte poids glp1 photos"]
+seoTitle: "Avant Après GLP-1 : Résultats Réels de Patients"
+seoDescription: "Avant après GLP-1 : résultats réels Ozempic, Wegovy, Mounjaro. Témoignages et attentes réalistes pour la perte de poids en France."
 ---
 
 # Avant Après GLP-1 : Ce que les Études et les Patients Montrent Vraiment

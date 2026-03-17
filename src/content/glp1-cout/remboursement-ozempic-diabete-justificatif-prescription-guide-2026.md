@@ -3,7 +3,7 @@ title: "Remboursement Ozempic Diabète 2026 : Guide Justificatif"
 description: "Remboursement Ozempic diabète justificatif prescription 2026 : Ozempic, Victoza, Trulicity remboursés pour le diabète de type 2. Guide pratique complet."
 keywords: ['remboursement ozempic diabète', 'ozempic remboursement 2026', 'justificatif prescription ozempic', 'remboursement trulicity victoza diabète', 'glp1 diabète remboursement sécu', 'ordonnance glp1 remboursement']
 seoTitle: "Remboursement Ozempic Diabète 2026 : Justificatif Guide"
-seoDescription: "Ozempic, Victoza et Trulicity remboursés pour le diabète de type 2. Justificatif de prescription obligatoire depuis 2025. Guide pratique."
+seoDescription: "Ozempic, Victoza et Trulicity remboursés pour le diabète de type 2. Justificatif de prescription obligatoire depuis 2025. Guide complet."
 publishedAt: '2026-03-17'
 date: 2026-03-17
 updatedAt: '2026-03-17'

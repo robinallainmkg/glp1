@@ -17,6 +17,8 @@ priority: 2
 schema: "Article"
 mainKeyword: "Ozempic Face visage vieillissement solutions France"
 secondaryKeywords: ["ozempic face joues creuses", "glp1 vieillissement visage", "wegovy face rides", "perte volume facial GLP-1", "acide hyaluronique ozempic"]
+seoTitle: "Ozempic Face : Vieillissement du Visage et Solutions"
+seoDescription: "Ozempic Face : joues creuses et vieillissement sous GLP-1. Causes, mécanismes et solutions esthétiques disponibles en France en 2026."
 
 # Configuration Affiliation
 enableAffiliation: true

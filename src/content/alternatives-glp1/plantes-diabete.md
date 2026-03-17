@@ -1,6 +1,6 @@
 ---
-title: "Plantes Diabète : Remèdes Naturels pour la Glycémie — Guide Complet 2025"
-description: "Plantes pour le diabète et remèdes naturels pour contrôler la glycémie. Guide des plantes médicinales validées par la science, en complément médical."
+title: "Plantes Diabète : Remèdes Naturels pour la Glycémie 2025"
+description: "Plantes médicinales pour le diabète : guide des remèdes naturels validés par la science pour contrôler la glycémie, en complément médical."
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"
