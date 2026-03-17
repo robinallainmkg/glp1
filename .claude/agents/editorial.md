@@ -164,7 +164,7 @@ Apres toutes les modifications :
 
 ### 6. Post-deploy : marquer les tickets deployed
 
-Apres le push sur `production` reussi, marque tous les tickets traites :
+Apres le push sur `main` reussi, marque tous les tickets traites :
 ```sql
 UPDATE correction_tickets SET statut = 'deployed', deployed_at = NOW()
 WHERE statut = 'ready_to_deploy'

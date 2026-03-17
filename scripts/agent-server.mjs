@@ -36,7 +36,7 @@ const AGENTS = {
   'fact-check':        'Verifie les articles contre les sources officielles',
   'opportunities':     'Cherche les opportunites de contenu',
   'editorial':         'Traite les tickets, liens internes et opportunites (commit+push main)',
-  'validator':         'Valide le site (build + deploy production si OK)',
+  'validator':         'Valide le site (build + push main → deploy si OK)',
   'internal-links':    'Analyse le maillage interne et suggere des liens',
   'autopilot':         'Execute UN cycle du pipeline. Ne cherche pas a comprendre le contexte, lis ta definition dans .claude/agents/autopilot.md et execute immediatement les 4 phases: CHECK (SQL Supabase) → GENERATE (agents paralleles) → EDIT (editorial) → VALIDATE (validator+deploy). Pas d\'exploration, pas de recherche, juste execute.',
 };
@@ -119,8 +119,7 @@ function summarizeTool(agentName, toolName, input) {
       if (cmd.includes('git push')) return `🚀 Git push`;
       if (cmd.includes('git add')) return null; // noise before commit
       if (cmd.includes('git diff') || cmd.includes('git status')) return null; // noise
-      if (cmd.includes('git checkout') && cmd.includes('production')) return `🔀 Checkout production`;
-      if (cmd.includes('git merge')) return `🔀 Merge → production`;
+      if (cmd.includes('git merge')) return `🔀 Git merge`;
       if (cmd.includes('astro build') || cmd.includes('npm run build')) return `🏗️ Build du site`;
       if (cmd.includes('npm run')) return `🏗️ ${cmd.slice(0, 50)}`;
       // Hide all ls, find, cat, grep, curl noise

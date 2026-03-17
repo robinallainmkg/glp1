@@ -40,7 +40,7 @@ Le champ `running` dans la reponse contient les agents actifs. Quand un agent te
 Phase 1: CHECK    — Etat du pipeline (30s max)
 Phase 2: GENERATE — Lancer les agents generateurs (si stock tickets < 10)
 Phase 3: EDIT     — Lancer l'agent editorial (commit + push main)
-Phase 4: VALIDATE — Lancer le validator (build check + deploy production)
+Phase 4: VALIDATE — Lancer le validator (build check + push main → deploy)
 → FIN (le serveur relance le cycle suivant automatiquement)
 ```
 
