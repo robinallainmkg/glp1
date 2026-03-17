@@ -12,13 +12,27 @@ Execute **UN cycle complet** du pipeline. Le serveur te relance automatiquement 
 
 1. **UN SEUL CYCLE** — 4 phases puis termine.
 2. **AUTONOME** — JAMAIS de question. JAMAIS AskUserQuestion.
-3. **EXECUTE** — Lance les sous-agents via `Agent` tool.
+3. **HTTP LAUNCH** — Lance les sous-agents via `curl http://localhost:7854/launch` (PAS via Agent tool). Cela les rend visibles dans l'arena admin.
 4. **ZERO EXPLORATION** — Ne lis PAS d'autres fichiers que ceux necessaires. Pas de Glob, pas de find, pas de git log au demarrage.
 5. **PAS DE FICHIERS ADMIN** — Uniquement `src/content/`.
 
 ## Connexion Supabase
 
 Utilise `execute_sql` MCP pour les requetes SQL. Les credentials sont deja dans l'environnement.
+
+## COMMENT LANCER UN AGENT (HTTP)
+
+Pour lancer un agent visible dans l'arena :
+```bash
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"<nom>"}'
+```
+
+Pour verifier le statut des agents en cours :
+```bash
+curl -s http://localhost:7854/status
+```
+
+Le champ `running` dans la reponse contient les agents actifs. Quand un agent termine, il disparait de `running`.
 
 ## LES 4 PHASES DU CYCLE
 
@@ -56,31 +70,62 @@ FROM articles WHERE is_active = true;
 
 Applique les regles de priorisation (voir ci-dessous) pour decider quoi lancer.
 
-Si generation necessaire, lance les agents EN PARALLELE via `Agent` tool (dans un seul message) :
+Si generation necessaire, lance les 4 agents EN PARALLELE via HTTP (chaque curl dans un seul Bash) :
 
-1. **fact-check** — "Verifie les articles qui n'ont pas ete fact-checkes depuis 7 jours."
-2. **seo-audit** — "Lance un audit SEO complet du site."
-3. **opportunities** — "Detecte les gaps de contenu et les tendances GLP-1."
-4. **internal-links** — "Analyse le maillage interne et propose des liens."
+```bash
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"fact-check"}' &
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"seo-audit"}' &
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"opportunities"}' &
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"internal-links"}' &
+wait
+```
+
+Puis **attends** que tous les agents terminent en polling :
+```bash
+while true; do
+  STATUS=$(curl -s http://localhost:7854/status)
+  RUNNING=$(echo "$STATUS" | python3 -c "import sys,json; d=json.load(sys.stdin); r=[k for k in d.get('running',{}) if k != 'autopilot']; print(len(r))")
+  if [ "$RUNNING" = "0" ]; then break; fi
+  sleep 15
+done
+```
 
 ### Phase 3 — EDIT (consommer le travail)
 
-Lance UN SEUL agent editorial (pas de multi-instance pour eviter les conflits git) :
+Lance UN SEUL agent editorial via HTTP (pas de multi-instance pour eviter les conflits git) :
 
+```bash
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"editorial"}'
 ```
-Agent tool -> editorial
-"Traite tous les tickets approved, liens internes approved, et opportunites approved. Fais le maximum."
+
+Puis attends qu'il termine :
+```bash
+while true; do
+  STATUS=$(curl -s http://localhost:7854/status)
+  RUNNING=$(echo "$STATUS" | python3 -c "import sys,json; d=json.load(sys.stdin); r=d.get('running',{}); print('1' if 'editorial' in r else '0')")
+  if [ "$RUNNING" = "0" ]; then break; fi
+  sleep 15
+done
 ```
 
 L'editorial commit + push sur `main` uniquement (PAS sur production).
 
 ### Phase 4 — VALIDATE + DEPLOY
 
-Lance le validator :
+Lance le validator via HTTP :
 
+```bash
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"validator"}'
 ```
-Agent tool -> validator
-"Valide le site complet : build, frontmatter, liens, images, SEO. Si le build passe, deploie sur production."
+
+Puis attends qu'il termine :
+```bash
+while true; do
+  STATUS=$(curl -s http://localhost:7854/status)
+  RUNNING=$(echo "$STATUS" | python3 -c "import sys,json; d=json.load(sys.stdin); r=d.get('running',{}); print('1' if 'validator' in r else '0')")
+  if [ "$RUNNING" = "0" ]; then break; fi
+  sleep 15
+done
 ```
 
 Le validator fait le `npm run build`, et si OK merge `main` sur `production` (declenche le deploy FTP).
@@ -125,8 +170,8 @@ SINON (10-19 tickets, pas d'urgents):
 ## OPTIMISATION DES TOKENS
 
 - Phase CHECK : 1 seule requete SQL, pas de bavardage
-- Phase GENERATE : lance les agents en parallele (1 seul message Agent)
-- Phase EDIT : 1 seul appel editorial
-- Phase VALIDATE : 1 seul appel validator
+- Phase GENERATE : lance les agents via HTTP en parallele (1 seul Bash)
+- Phase EDIT : 1 seul appel HTTP editorial
+- Phase VALIDATE : 1 seul appel HTTP validator
 - ZERO reflexion inutile entre les phases. Juste execute.
 - Pas de recapitulatif verbeux. Juste les chiffres.
