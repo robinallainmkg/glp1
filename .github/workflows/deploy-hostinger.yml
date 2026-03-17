@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
@@ -23,61 +23,27 @@ jobs:
     - name: Build Astro site
       run: npm run astro:build
 
-    - name: Deploy via FTP (attempt 1)
-      id: ftp1
-      continue-on-error: true
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: 147.79.98.140
-        username: u403023291
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: /domains/glp1-france.fr/public_html/
-        port: 21
-        protocol: ftp
-        timeout: 120000
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-
-    - name: Wait before retry
-      if: steps.ftp1.outcome == 'failure'
-      run: echo "FTP attempt 1 failed, waiting 30s..." && sleep 30
-
-    - name: Deploy via FTP (attempt 2)
-      id: ftp2
-      if: steps.ftp1.outcome == 'failure'
-      continue-on-error: true
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: 147.79.98.140
-        username: u403023291
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: /domains/glp1-france.fr/public_html/
-        port: 21
-        protocol: ftp
-        timeout: 120000
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-
-    - name: Fallback deploy via lftp
-      if: steps.ftp1.outcome == 'failure' && steps.ftp2.outcome == 'failure'
+    - name: Deploy via lftp
       run: |
-        sudo apt-get install -y lftp
+        sudo apt-get install -y -qq lftp > /dev/null 2>&1
         lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
           set ftp:passive-mode yes;
-          set net:timeout 30;
-          set net:max-retries 3;
-          set net:reconnect-interval-base 5;
-          mirror --reverse --delete --verbose ./dist/ /domains/glp1-france.fr/public_html/;
+          set ftp:ssl-allow no;
+          set net:timeout 60;
+          set net:max-retries 5;
+          set net:reconnect-interval-base 10;
+          set mirror:parallel-transfer-count 5;
+          set mirror:use-pget-n 3;
+          mirror --reverse --delete --only-newer --verbose --parallel=5 ./dist/ /domains/glp1-france.fr/public_html/;
           quit
         "
 
     - name: Verify deployment
+      if: success()
       run: |
-        echo "Deployment completed"
-        echo "Site: https://glp1-france.fr"
+        sleep 5
+        STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://glp1-france.fr)
+        echo "Site status: $STATUS"
+        if [ "$STATUS" != "200" ]; then
+          echo "Warning: site returned $STATUS"
+        fi
