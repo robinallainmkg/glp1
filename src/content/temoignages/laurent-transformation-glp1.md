@@ -10,7 +10,7 @@ pubDate: 2025-08-20T00:00:00.000Z
 date: "2025-08-20"
 featured: true
 priority: 2
-mainKeyword: "temoignage mounjaro perte de poids"
+mainKeyword: "temoignage ozempic homme"
 ---
 
 ## Laurent M. : De 120kg à 85kg grâce à Mounjaro
