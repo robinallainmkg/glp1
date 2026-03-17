@@ -229,8 +229,6 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/ozempic-medical-care.jpg"
-thumbnailAlt: "Prix et coût du traitement ozempic-france"
 ---
 
 ## Sommaire

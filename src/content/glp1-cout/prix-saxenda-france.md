@@ -213,8 +213,6 @@ mainKeyword: "prix Saxenda France"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
-thumbnailAlt: "Prix et coût du traitement saxenda-france"
 ---
 
 ## Sommaire

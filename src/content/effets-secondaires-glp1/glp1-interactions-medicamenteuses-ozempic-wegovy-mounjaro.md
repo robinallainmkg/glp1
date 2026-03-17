@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Interactions Médicamenteuses : Guide Complet Ozempic, Wegovy, Mounjaro"
+title: "Interactions Médicamenteuses GLP-1 : Guide Ozempic, Wegovy"
 description: "GLP-1 interactions médicamenteuses ozempic wegovy mounjaro : le ralentissement de la vidange gastrique modifie l'absorption de nombreux médicaments. Guide pratique 2026."
 pubDate: 2026-03-17
 date: 2026-03-17

@@ -143,7 +143,7 @@ Les données actuelles ne permettent pas de recommander les GLP-1 comme substitu
 Oui, absolument. Les GLP-1 doivent être arrêtés au moins 2 mois avant toute tentative de conception. Il est essentiel d'en parler à votre médecin et de planifier cet arrêt.
 
 **Les GLP-1 sont-ils remboursés pour le SOPK ?**
-Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2 ou une obésité (IMC ≥ 30 avec comorbidité). À plein tarif, le coût mensuel d'Ozempic est d'environ 100-130 € et celui de Wegovy de 169 à 360 € selon le dosage.
+Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2 ou une obésité (IMC ≥ 30 avec comorbidité). À plein tarif, le coût mensuel d'Ozempic est d'environ 77,60 €/stylo TTC (remboursé à 30 % pour le diabète de type 2, soit environ 54 €/mois après prise en charge) et celui de Wegovy de 169 à 360 € selon le dosage.
 
 ## Conclusion : une piste prometteuse mais à encadrer
 

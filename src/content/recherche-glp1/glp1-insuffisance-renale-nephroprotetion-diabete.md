@@ -8,7 +8,7 @@ author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "rein", "insuffisance rénale", "néphroprotection", "diabète", "DFGe", "sémaglutide"]
 collection: "recherche-glp1"
-thumbnail: "/images/thumbnails/glp1-reins-nephroprotection.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et reins néphroprotection insuffisance rénale"
 featured: true
 published: true
