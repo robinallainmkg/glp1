@@ -18,7 +18,76 @@ import { supabaseConfig } from '../../lib/supabase';
       min-height: 100vh;
     }
 
-    /* Top bar */
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    @keyframes confetti { 0% { transform: translateY(0) rotate(0); opacity:1; } 100% { transform: translateY(-60px) rotate(360deg); opacity:0; } }
+    @keyframes progressFill { from { width: 0; } }
+    .animate-in { animation: fadeIn 0.4s ease-out both; }
+    .animate-delay-1 { animation-delay: 0.1s; }
+    .animate-delay-2 { animation-delay: 0.2s; }
+    .animate-delay-3 { animation-delay: 0.3s; }
+    .animate-delay-4 { animation-delay: 0.4s; }
+
+    /* ===== TOAST ===== */
+    .toast-container {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .toast {
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      animation: slideUp 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    @keyframes fadeOut { to { opacity: 0; transform: translateY(-10px); } }
+    .toast-success { background: #16a34a; }
+    .toast-error { background: #dc2626; }
+    .toast-info { background: #2563eb; }
+
+    /* ===== LOADING SPINNER ===== */
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    .spinner-dark {
+      border-color: rgba(0,0,0,0.1);
+      border-top-color: #16a34a;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(248,250,252,0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      gap: 1rem;
+    }
+    .loading-overlay .spinner { width: 36px; height: 36px; border-width: 3px; }
+    .loading-overlay p { color: #64748b; font-size: 0.9rem; }
+
+    /* ===== TOP BAR ===== */
     .topbar {
       background: white;
       border-bottom: 1px solid #e2e8f0;
@@ -38,10 +107,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .topbar-logo span { color: #1e293b; }
     .topbar-right { display: flex; align-items: center; gap: 0.75rem; }
-    .topbar-user {
-      font-size: 0.82rem;
-      color: #64748b;
-    }
+    .topbar-user { font-size: 0.82rem; color: #64748b; }
     .btn-logout {
       padding: 0.35rem 0.75rem;
       border-radius: 6px;
@@ -50,9 +116,11 @@ import { supabaseConfig } from '../../lib/supabase';
       font-size: 0.75rem;
       cursor: pointer;
       color: #64748b;
+      transition: all 0.2s;
     }
+    .btn-logout:hover { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
 
-    /* Trial banner */
+    /* ===== TRIAL BANNER ===== */
     .trial-banner {
       background: linear-gradient(135deg, #16a34a, #059669);
       color: white;
@@ -63,7 +131,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .trial-banner strong { font-weight: 700; }
 
-    /* Main container */
+    /* ===== MAIN CONTAINER ===== */
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -79,6 +147,7 @@ import { supabaseConfig } from '../../lib/supabase';
       min-height: 80vh;
       text-align: center;
       padding: 2rem;
+      animation: fadeIn 0.5s ease-out;
     }
     .auth-screen h1 {
       font-size: 1.75rem;
@@ -98,7 +167,8 @@ import { supabaseConfig } from '../../lib/supabase';
       padding: 2rem;
       width: 100%;
       max-width: 400px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
     }
     .auth-box h2 {
       font-size: 1.15rem;
@@ -123,11 +193,10 @@ import { supabaseConfig } from '../../lib/supabase';
       font-weight: 600;
       cursor: pointer;
       color: #64748b;
+      transition: all 0.2s;
     }
     .auth-tab.active { background: #16a34a; color: white; }
-    .form-group {
-      margin-bottom: 1rem;
-    }
+    .form-group { margin-bottom: 1rem; }
     .form-group label {
       display: block;
       font-size: 0.78rem;
@@ -135,15 +204,37 @@ import { supabaseConfig } from '../../lib/supabase';
       color: #475569;
       margin-bottom: 0.3rem;
     }
-    .form-group input {
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-wrapper input { padding-right: 2.5rem; }
+    .form-group input, .form-group select {
       width: 100%;
       padding: 0.65rem 0.85rem;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       font-size: 0.88rem;
       outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .form-group input:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
+    .form-group input:focus, .form-group select:focus {
+      border-color: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22,163,74,0.1);
+    }
+    .form-group input.error { border-color: #dc2626; }
+    .toggle-password {
+      position: absolute;
+      right: 0.75rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #94a3b8;
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+    .toggle-password:hover { color: #64748b; }
     .btn-primary {
       width: 100%;
       padding: 0.75rem;
@@ -155,9 +246,15 @@ import { supabaseConfig } from '../../lib/supabase';
       font-weight: 700;
       cursor: pointer;
       margin-top: 0.5rem;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
-    .btn-primary:hover { background: #15803d; }
-    .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn-primary:hover { background: #15803d; transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
     .btn-google {
       width: 100%;
       padding: 0.65rem;
@@ -172,8 +269,9 @@ import { supabaseConfig } from '../../lib/supabase';
       justify-content: center;
       gap: 0.5rem;
       margin-bottom: 1rem;
+      transition: background 0.2s, box-shadow 0.2s;
     }
-    .btn-google:hover { background: #f8fafc; }
+    .btn-google:hover { background: #f8fafc; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
     .auth-divider {
       text-align: center;
       color: #94a3b8;
@@ -194,8 +292,11 @@ import { supabaseConfig } from '../../lib/supabase';
     .auth-error {
       color: #dc2626;
       font-size: 0.78rem;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
       text-align: center;
+      padding: 0.5rem;
+      background: #fef2f2;
+      border-radius: 6px;
       display: none;
     }
     .auth-features {
@@ -211,6 +312,18 @@ import { supabaseConfig } from '../../lib/supabase';
       color: #64748b;
     }
     .auth-feature .icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+    .forgot-password {
+      text-align: right;
+      margin-top: -0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .forgot-password a {
+      font-size: 0.75rem;
+      color: #16a34a;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .forgot-password a:hover { text-decoration: underline; }
 
     /* ===== ONBOARDING ===== */
     .onboarding {
@@ -228,14 +341,16 @@ import { supabaseConfig } from '../../lib/supabase';
       height: 4px;
       border-radius: 2px;
       background: #e2e8f0;
+      transition: background 0.3s, transform 0.3s;
     }
-    .onboarding-progress .step.active { background: #16a34a; }
+    .onboarding-progress .step.active { background: #16a34a; transform: scaleY(1.3); }
     .onboarding-progress .step.done { background: #16a34a; }
     .ob-card {
       background: white;
       border-radius: 16px;
       padding: 1.75rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      animation: fadeIn 0.3s ease-out;
     }
     .ob-card h2 {
       font-size: 1.25rem;
@@ -262,12 +377,11 @@ import { supabaseConfig } from '../../lib/supabase';
       text-align: center;
       font-size: 0.85rem;
       font-weight: 500;
-      transition: all 0.15s;
+      transition: all 0.2s;
     }
-    .ob-option:hover { border-color: #16a34a; background: #f0fdf4; }
-    .ob-option.selected { border-color: #16a34a; background: #f0fdf4; color: #16a34a; font-weight: 700; }
+    .ob-option:hover { border-color: #16a34a; background: #f0fdf4; transform: translateY(-2px); }
+    .ob-option.selected { border-color: #16a34a; background: #f0fdf4; color: #16a34a; font-weight: 700; transform: scale(1.02); }
     .ob-option .emoji { font-size: 1.3rem; display: block; margin-bottom: 0.25rem; }
-    .ob-multi .ob-option.selected { border-color: #16a34a; background: #dcfce7; }
     .ob-nav {
       display: flex;
       gap: 0.75rem;
@@ -281,7 +395,9 @@ import { supabaseConfig } from '../../lib/supabase';
       font-size: 0.85rem;
       cursor: pointer;
       color: #64748b;
+      transition: all 0.2s;
     }
+    .ob-nav .btn-back:hover { background: #f1f5f9; }
     .ob-nav .btn-next {
       flex: 1;
       padding: 0.7rem;
@@ -292,7 +408,13 @@ import { supabaseConfig } from '../../lib/supabase';
       font-size: 0.92rem;
       font-weight: 700;
       cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
+    .ob-nav .btn-next:hover { background: #15803d; }
     .ob-nav .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
     .ob-input-row {
       display: flex;
@@ -300,18 +422,61 @@ import { supabaseConfig } from '../../lib/supabase';
       margin-bottom: 1rem;
     }
     .ob-input-row .form-group { flex: 1; }
+    .ob-validation {
+      font-size: 0.72rem;
+      color: #dc2626;
+      margin-top: 0.25rem;
+      display: none;
+    }
+    .ob-validation.visible { display: block; }
 
     /* ===== DASHBOARD ===== */
-    .dash-greeting {
-      margin-bottom: 1.25rem;
+    .dash-greeting { margin-bottom: 1.25rem; }
+    .dash-greeting h1 { font-size: 1.35rem; font-weight: 800; }
+    .dash-greeting p { color: #64748b; font-size: 0.85rem; }
+
+    /* Goal progress bar */
+    .goal-progress {
+      background: white;
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      border: 1px solid #f1f5f9;
     }
-    .dash-greeting h1 {
-      font-size: 1.35rem;
-      font-weight: 800;
+    .goal-progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
     }
-    .dash-greeting p {
+    .goal-progress-header span {
+      font-size: 0.78rem;
       color: #64748b;
+    }
+    .goal-progress-header strong {
       font-size: 0.85rem;
+      color: #16a34a;
+    }
+    .goal-bar {
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .goal-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #16a34a, #059669);
+      border-radius: 5px;
+      transition: width 1s ease-out;
+      animation: progressFill 1.5s ease-out;
+    }
+    .goal-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+      font-size: 0.72rem;
+      color: #94a3b8;
     }
 
     .card {
@@ -321,7 +486,9 @@ import { supabaseConfig } from '../../lib/supabase';
       margin-bottom: 1rem;
       box-shadow: 0 1px 2px rgba(0,0,0,0.05);
       border: 1px solid #f1f5f9;
+      transition: box-shadow 0.2s;
     }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
     .card-header {
       display: flex;
       align-items: center;
@@ -343,7 +510,9 @@ import { supabaseConfig } from '../../lib/supabase';
       border: none;
       background: none;
       text-decoration: none;
+      transition: color 0.2s;
     }
+    .card-action:hover { color: #15803d; }
 
     /* Profile summary */
     .profile-summary {
@@ -356,21 +525,30 @@ import { supabaseConfig } from '../../lib/supabase';
       padding: 0.6rem 0.25rem;
       background: #f8fafc;
       border-radius: 10px;
+      transition: transform 0.2s;
     }
-    .ps-item .val {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #0f172a;
-    }
-    .ps-item .lbl {
-      font-size: 0.65rem;
-      color: #64748b;
-      margin-top: 0.15rem;
-    }
+    .ps-item:hover { transform: translateY(-2px); }
+    .ps-item .val { font-size: 1.15rem; font-weight: 800; color: #0f172a; }
+    .ps-item .lbl { font-size: 0.65rem; color: #64748b; margin-top: 0.15rem; }
 
-    /* Weight chart area */
+    /* BMI Badge */
+    .bmi-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      margin-top: 0.75rem;
+    }
+    .bmi-normal { background: #dcfce7; color: #16a34a; }
+    .bmi-overweight { background: #fef3c7; color: #d97706; }
+    .bmi-obese { background: #fef2f2; color: #dc2626; }
+
+    /* Weight chart */
     .weight-chart {
-      height: 140px;
+      height: 160px;
       background: #f8fafc;
       border-radius: 10px;
       display: flex;
@@ -381,27 +559,16 @@ import { supabaseConfig } from '../../lib/supabase';
       overflow: hidden;
     }
     .weight-chart canvas { width: 100%; height: 100%; }
-    .weight-chart .empty {
-      color: #94a3b8;
-      font-size: 0.82rem;
-    }
+    .weight-chart .empty { color: #94a3b8; font-size: 0.82rem; }
     .checkin-form {
       display: flex;
       gap: 0.5rem;
       align-items: end;
     }
     .checkin-form .form-group { flex: 1; margin-bottom: 0; }
-    .checkin-form .form-group input {
+    .checkin-form .form-group input, .checkin-form .form-group select {
       padding: 0.5rem 0.65rem;
       font-size: 0.82rem;
-    }
-    .checkin-form .form-group select {
-      width: 100%;
-      padding: 0.5rem 0.65rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      outline: none;
     }
     .btn-checkin {
       padding: 0.5rem 1rem;
@@ -413,7 +580,13 @@ import { supabaseConfig } from '../../lib/supabase';
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
     }
+    .btn-checkin:hover { background: #15803d; }
+    .btn-checkin:disabled { opacity: 0.6; cursor: not-allowed; }
 
     /* Programme */
     .programme-grid {
@@ -426,22 +599,109 @@ import { supabaseConfig } from '../../lib/supabase';
       padding: 1rem 0.5rem;
       background: #f8fafc;
       border-radius: 12px;
+      transition: transform 0.2s;
     }
+    .prog-item:hover { transform: translateY(-2px); }
     .prog-item .icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
-    .prog-item .val {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #0f172a;
+    .prog-item .val { font-size: 1.3rem; font-weight: 800; color: #0f172a; }
+    .prog-item .unit { font-size: 0.7rem; color: #64748b; }
+    .prog-item .lbl { font-size: 0.72rem; color: #64748b; margin-top: 0.2rem; }
+
+    /* Side effects journal */
+    .side-effects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
     }
-    .prog-item .unit {
-      font-size: 0.7rem;
-      color: #64748b;
+    .se-tag {
+      padding: 0.4rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid #e2e8f0;
+      background: white;
+      transition: all 0.2s;
     }
-    .prog-item .lbl {
-      font-size: 0.72rem;
-      color: #64748b;
-      margin-top: 0.2rem;
+    .se-tag:hover { border-color: #f59e0b; background: #fffbeb; }
+    .se-tag.active { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
+    .se-note {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      resize: none;
+      height: 60px;
+      outline: none;
+      font-family: inherit;
     }
+    .se-note:focus { border-color: #f59e0b; }
+    .btn-se-save {
+      margin-top: 0.5rem;
+      padding: 0.45rem 1rem;
+      background: #f59e0b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Dose escalation */
+    .dose-timeline {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .dose-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e2e8f0;
+    }
+    .dose-step {
+      position: relative;
+      padding: 0.5rem 0 0.75rem 1rem;
+    }
+    .dose-step::before {
+      content: '';
+      position: absolute;
+      left: -1.05rem;
+      top: 0.65rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      border: 2px solid white;
+    }
+    .dose-step.current::before { background: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.2); }
+    .dose-step.done::before { background: #16a34a; }
+    .dose-step .dose-label { font-size: 0.82rem; font-weight: 600; }
+    .dose-step .dose-date { font-size: 0.7rem; color: #94a3b8; }
+    .dose-step.current .dose-label { color: #16a34a; }
+
+    /* Badges */
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+    }
+    .badge-item {
+      text-align: center;
+      padding: 0.75rem 0.25rem;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .badge-item:hover { transform: scale(1.05); }
+    .badge-item.locked { opacity: 0.35; filter: grayscale(1); }
+    .badge-item .badge-icon { font-size: 1.5rem; }
+    .badge-item .badge-name { font-size: 0.65rem; color: #64748b; margin-top: 0.2rem; }
+    .badge-item.unlocked .badge-name { color: #16a34a; font-weight: 600; }
 
     /* Reminders */
     .reminder-list { list-style: none; }
@@ -451,7 +711,9 @@ import { supabaseConfig } from '../../lib/supabase';
       gap: 0.75rem;
       padding: 0.75rem 0;
       border-bottom: 1px solid #f1f5f9;
+      transition: background 0.2s;
     }
+    .reminder-item:hover { background: #f8fafc; border-radius: 8px; margin: 0 -0.5rem; padding-left: 0.5rem; padding-right: 0.5rem; }
     .reminder-item:last-child { border-bottom: none; }
     .reminder-icon {
       width: 36px;
@@ -468,15 +730,8 @@ import { supabaseConfig } from '../../lib/supabase';
     .reminder-icon.stock { background: #fef3c7; }
     .reminder-icon.checkin { background: #f3e8ff; }
     .reminder-info { flex: 1; }
-    .reminder-info .title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #0f172a;
-    }
-    .reminder-info .when {
-      font-size: 0.72rem;
-      color: #64748b;
-    }
+    .reminder-info .title { font-size: 0.85rem; font-weight: 600; color: #0f172a; }
+    .reminder-info .when { font-size: 0.72rem; color: #64748b; }
     .btn-cal {
       padding: 0.3rem 0.6rem;
       border: 1px solid #e2e8f0;
@@ -487,7 +742,9 @@ import { supabaseConfig } from '../../lib/supabase';
       color: #16a34a;
       font-weight: 600;
       white-space: nowrap;
+      transition: all 0.2s;
     }
+    .btn-cal:hover { background: #f0fdf4; border-color: #16a34a; }
 
     /* Recommendations */
     .reco-list { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -498,13 +755,11 @@ import { supabaseConfig } from '../../lib/supabase';
       background: #f0fdf4;
       border-radius: 10px;
       border-left: 3px solid #16a34a;
+      transition: transform 0.2s;
     }
+    .reco-item:hover { transform: translateX(4px); }
     .reco-item .reco-icon { font-size: 1.3rem; flex-shrink: 0; }
-    .reco-item .reco-text {
-      font-size: 0.82rem;
-      line-height: 1.45;
-      color: #1e293b;
-    }
+    .reco-item .reco-text { font-size: 0.82rem; line-height: 1.45; color: #1e293b; }
     .reco-item .reco-text strong { color: #16a34a; }
 
     /* Coach CTA */
@@ -515,17 +770,11 @@ import { supabaseConfig } from '../../lib/supabase';
       padding: 1.5rem;
       text-align: center;
       margin-bottom: 1rem;
+      transition: transform 0.2s;
     }
-    .coach-cta h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-    .coach-cta p {
-      font-size: 0.82rem;
-      color: #94a3b8;
-      margin-bottom: 1rem;
-    }
+    .coach-cta:hover { transform: translateY(-2px); }
+    .coach-cta h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .coach-cta p { font-size: 0.82rem; color: #94a3b8; margin-bottom: 1rem; }
     .btn-coach {
       display: inline-block;
       padding: 0.65rem 1.5rem;
@@ -537,9 +786,11 @@ import { supabaseConfig } from '../../lib/supabase';
       font-weight: 700;
       cursor: pointer;
       text-decoration: none;
+      transition: background 0.2s;
     }
+    .btn-coach:hover { background: #15803d; }
 
-    /* Sections hidden by default */
+    /* Screens */
     .screen { display: none; }
     .screen.active { display: block; }
 
@@ -562,43 +813,15 @@ import { supabaseConfig } from '../../lib/supabase';
       max-width: 400px;
       width: 90%;
       text-align: center;
+      animation: slideUp 0.3s ease-out;
     }
-    .paywall-box h2 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-    .paywall-box p {
-      color: #64748b;
-      font-size: 0.85rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-    .paywall-price {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #16a34a;
-    }
-    .paywall-price span {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #64748b;
-    }
-    .paywall-features {
-      text-align: left;
-      margin: 1.25rem 0;
-      list-style: none;
-    }
-    .paywall-features li {
-      padding: 0.3rem 0;
-      font-size: 0.82rem;
-      color: #475569;
-    }
-    .paywall-features li::before {
-      content: '✓ ';
-      color: #16a34a;
-      font-weight: 700;
-    }
+    .paywall-box h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .paywall-box p { color: #64748b; font-size: 0.85rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    .paywall-price { font-size: 2.5rem; font-weight: 900; color: #16a34a; }
+    .paywall-price span { font-size: 0.85rem; font-weight: 500; color: #64748b; }
+    .paywall-features { text-align: left; margin: 1.25rem 0; list-style: none; }
+    .paywall-features li { padding: 0.3rem 0; font-size: 0.82rem; color: #475569; }
+    .paywall-features li::before { content: '\2713 '; color: #16a34a; font-weight: 700; }
     .btn-subscribe {
       width: 100%;
       padding: 0.85rem;
@@ -610,7 +833,9 @@ import { supabaseConfig } from '../../lib/supabase';
       font-weight: 700;
       cursor: pointer;
       margin-bottom: 0.5rem;
+      transition: background 0.2s;
     }
+    .btn-subscribe:hover { background: #15803d; }
     .btn-dismiss-paywall {
       border: none;
       background: none;
@@ -623,72 +848,93 @@ import { supabaseConfig } from '../../lib/supabase';
       .profile-summary { grid-template-columns: repeat(2, 1fr); }
       .programme-grid { grid-template-columns: repeat(3, 1fr); }
       .auth-features { grid-template-columns: repeat(3, 1fr); }
+      .badges-grid { grid-template-columns: repeat(4, 1fr); }
+      .checkin-form { flex-wrap: wrap; }
+      .checkin-form .form-group { min-width: 45%; }
+      .container { padding: 1rem; }
     }
   </style>
 </head>
 <body>
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Loading overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner spinner-dark"></div>
+    <p>Chargement de votre espace...</p>
+  </div>
 
   <!-- ===== SCREEN 1: AUTH ===== -->
-  <div class="screen active" id="screenAuth">
+  <div class="screen" id="screenAuth">
     <div class="auth-screen">
       <h1>Votre Coach GLP-1</h1>
       <p>Suivi personnalise, rappels d'injection, programme nutrition et sport adapte a votre traitement.</p>
 
       <div class="auth-box">
         <div class="auth-tabs">
-          <button class="auth-tab active" onclick="switchAuthTab('signup')">Creer un compte</button>
-          <button class="auth-tab" onclick="switchAuthTab('login')">Se connecter</button>
+          <button class="auth-tab active" onclick="switchAuthTab('signup')" id="tabSignup">Creer un compte</button>
+          <button class="auth-tab" onclick="switchAuthTab('login')" id="tabLogin">Se connecter</button>
         </div>
 
-        <button class="btn-google" onclick="signInGoogle()">
+        <button class="btn-google" onclick="signInGoogle()" aria-label="Se connecter avec Google">
           <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
           Continuer avec Google
         </button>
 
         <div class="auth-divider">ou par email</div>
 
-        <div id="authFormSignup">
+        <form id="authFormSignup" onsubmit="event.preventDefault(); signUpEmail();">
           <div class="form-group">
-            <label>Prenom</label>
-            <input type="text" id="signupName" placeholder="Votre prenom">
+            <label for="signupName">Prenom</label>
+            <input type="text" id="signupName" placeholder="Votre prenom" autocomplete="given-name">
           </div>
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" id="signupEmail" placeholder="votre@email.com">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" placeholder="votre@email.com" autocomplete="email" required>
           </div>
           <div class="form-group">
-            <label>Mot de passe</label>
-            <input type="password" id="signupPassword" placeholder="6 caracteres minimum">
+            <label for="signupPassword">Mot de passe</label>
+            <div class="input-wrapper">
+              <input type="password" id="signupPassword" placeholder="6 caracteres minimum" autocomplete="new-password" minlength="6">
+              <button type="button" class="toggle-password" onclick="togglePw('signupPassword')" aria-label="Afficher le mot de passe">&#128065;</button>
+            </div>
           </div>
-          <button class="btn-primary" onclick="signUpEmail()">Creer mon compte gratuit</button>
-        </div>
+          <button type="submit" class="btn-primary" id="btnSignup">Creer mon compte gratuit</button>
+        </form>
 
-        <div id="authFormLogin" style="display:none;">
+        <form id="authFormLogin" style="display:none;" onsubmit="event.preventDefault(); signInEmail();">
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" id="loginEmail" placeholder="votre@email.com">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="votre@email.com" autocomplete="email" required>
           </div>
           <div class="form-group">
-            <label>Mot de passe</label>
-            <input type="password" id="loginPassword" placeholder="Mot de passe">
+            <label for="loginPassword">Mot de passe</label>
+            <div class="input-wrapper">
+              <input type="password" id="loginPassword" placeholder="Mot de passe" autocomplete="current-password">
+              <button type="button" class="toggle-password" onclick="togglePw('loginPassword')" aria-label="Afficher le mot de passe">&#128065;</button>
+            </div>
           </div>
-          <button class="btn-primary" onclick="signInEmail()">Se connecter</button>
-        </div>
+          <div class="forgot-password">
+            <a onclick="resetPassword()">Mot de passe oublie ?</a>
+          </div>
+          <button type="submit" class="btn-primary" id="btnLogin">Se connecter</button>
+        </form>
 
         <div class="auth-error" id="authError"></div>
       </div>
 
       <div class="auth-features">
         <div class="auth-feature">
-          <div class="icon">💉</div>
+          <div class="icon">&#128137;</div>
           Rappels d'injection
         </div>
         <div class="auth-feature">
-          <div class="icon">📊</div>
+          <div class="icon">&#128200;</div>
           Suivi du poids
         </div>
         <div class="auth-feature">
-          <div class="icon">🥗</div>
+          <div class="icon">&#129367;</div>
           Plan nutrition
         </div>
       </div>
@@ -699,7 +945,7 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="screen" id="screenOnboarding">
     <div class="topbar">
       <a href="/" class="topbar-logo">GLP-1 <span>Coach</span></a>
-      <span style="font-size:0.82rem;color:#64748b;" id="obStepLabel">Etape 1/5</span>
+      <span style="font-size:0.82rem;color:#64748b;" id="obStepLabel">Etape 1/6</span>
     </div>
     <div class="onboarding">
       <div class="onboarding-progress" id="obProgress">
@@ -708,10 +954,9 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="step"></div>
         <div class="step"></div>
         <div class="step"></div>
+        <div class="step"></div>
       </div>
-      <div class="ob-card" id="obContent">
-        <!-- Filled by JS -->
-      </div>
+      <div class="ob-card" id="obContent"></div>
     </div>
   </div>
 
@@ -721,7 +966,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <a href="/" class="topbar-logo">GLP-1 <span>Coach</span></a>
       <div class="topbar-right">
         <span class="topbar-user" id="dashUserName"></span>
-        <button class="btn-logout" onclick="doLogout()">Deconnexion</button>
+        <button class="btn-logout" onclick="doLogout()" aria-label="Se deconnecter">Deconnexion</button>
       </div>
     </div>
     <div class="trial-banner" id="trialBanner" style="display:none;">
@@ -729,15 +974,30 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
 
     <div class="container">
-      <div class="dash-greeting">
+      <div class="dash-greeting animate-in">
         <h1 id="greetingText">Bonjour !</h1>
         <p id="greetingSub">Voici votre suivi du jour</p>
       </div>
 
+      <!-- Goal progress -->
+      <div class="goal-progress animate-in animate-delay-1" id="goalProgress" style="display:none;">
+        <div class="goal-progress-header">
+          <span>Objectif poids</span>
+          <strong id="goalPercent">0%</strong>
+        </div>
+        <div class="goal-bar">
+          <div class="goal-bar-fill" id="goalBarFill" style="width:0%"></div>
+        </div>
+        <div class="goal-stats">
+          <span id="goalStart">-</span>
+          <span id="goalTarget">-</span>
+        </div>
+      </div>
+
       <!-- Profile summary -->
-      <div class="card">
+      <div class="card animate-in animate-delay-1">
         <div class="card-header">
-          <h3>👤 Mon profil</h3>
+          <h3>&#128100; Mon profil</h3>
           <button class="card-action" onclick="editProfile()">Modifier</button>
         </div>
         <div class="profile-summary" id="profileSummary">
@@ -746,12 +1006,15 @@ import { supabaseConfig } from '../../lib/supabase';
           <div class="ps-item"><div class="val" id="psTreatment">-</div><div class="lbl">Traitement</div></div>
           <div class="ps-item"><div class="val" id="psDose">-</div><div class="lbl">Dose</div></div>
         </div>
+        <div style="text-align:center;">
+          <div class="bmi-badge" id="bmiBadge" style="display:none;"></div>
+        </div>
       </div>
 
       <!-- Weight tracking -->
-      <div class="card">
+      <div class="card animate-in animate-delay-2">
         <div class="card-header">
-          <h3>📉 Mon suivi poids</h3>
+          <h3>&#128201; Mon suivi poids</h3>
           <span class="card-action" id="weightDelta"></span>
         </div>
         <div class="weight-chart" id="weightChart">
@@ -759,42 +1022,69 @@ import { supabaseConfig } from '../../lib/supabase';
         </div>
         <div class="checkin-form">
           <div class="form-group">
-            <label>Poids (kg)</label>
-            <input type="number" step="0.1" id="checkinWeight" placeholder="72.5">
+            <label for="checkinWeight">Poids (kg)</label>
+            <input type="number" step="0.1" id="checkinWeight" placeholder="72.5" min="30" max="300">
           </div>
           <div class="form-group">
-            <label>Humeur</label>
+            <label for="checkinMood">Humeur</label>
             <select id="checkinMood">
-              <option value="top">😄 Top</option>
-              <option value="bien" selected>🙂 Bien</option>
-              <option value="moyen">😐 Moyen</option>
-              <option value="difficile">😔 Difficile</option>
+              <option value="top">&#128516; Top</option>
+              <option value="bien" selected>&#128578; Bien</option>
+              <option value="moyen">&#128528; Moyen</option>
+              <option value="difficile">&#128532; Difficile</option>
             </select>
           </div>
-          <button class="btn-checkin" onclick="saveCheckin()">Enregistrer</button>
+          <button class="btn-checkin" onclick="saveCheckin()" id="btnCheckin">Enregistrer</button>
         </div>
       </div>
 
-      <!-- Programme -->
-      <div class="card">
+      <!-- Side effects journal -->
+      <div class="card animate-in animate-delay-2">
         <div class="card-header">
-          <h3>🎯 Mon programme du jour</h3>
+          <h3>&#9888;&#65039; Effets secondaires du jour</h3>
+          <span class="card-action" id="seHistory" onclick="viewSeHistory()">Historique</span>
+        </div>
+        <div class="side-effects" id="sideEffects">
+          <button class="se-tag" data-se="nausees" onclick="toggleSe(this)">&#129326; Nausees</button>
+          <button class="se-tag" data-se="fatigue" onclick="toggleSe(this)">&#128164; Fatigue</button>
+          <button class="se-tag" data-se="maux-tete" onclick="toggleSe(this)">&#129504; Maux de tete</button>
+          <button class="se-tag" data-se="constipation" onclick="toggleSe(this)">&#128580; Constipation</button>
+          <button class="se-tag" data-se="diarrhee" onclick="toggleSe(this)">&#128168; Diarrhee</button>
+          <button class="se-tag" data-se="douleur-injection" onclick="toggleSe(this)">&#128137; Douleur injection</button>
+          <button class="se-tag" data-se="aucun" onclick="toggleSe(this)">&#10004;&#65039; Aucun</button>
+        </div>
+        <textarea class="se-note" id="seNote" placeholder="Notes supplementaires (optionnel)..."></textarea>
+        <button class="btn-se-save" onclick="saveSideEffects()">Enregistrer les effets</button>
+      </div>
+
+      <!-- Dose escalation -->
+      <div class="card animate-in animate-delay-3" id="doseCard" style="display:none;">
+        <div class="card-header">
+          <h3>&#128200; Escalation de dose</h3>
+        </div>
+        <div class="dose-timeline" id="doseTimeline"></div>
+      </div>
+
+      <!-- Programme -->
+      <div class="card animate-in animate-delay-3">
+        <div class="card-header">
+          <h3>&#127919; Mon programme du jour</h3>
         </div>
         <div class="programme-grid">
           <div class="prog-item">
-            <div class="icon">🥩</div>
+            <div class="icon">&#127830;</div>
             <div class="val" id="progCalories">-</div>
             <div class="unit">kcal</div>
             <div class="lbl">Calories</div>
           </div>
           <div class="prog-item">
-            <div class="icon">💪</div>
+            <div class="icon">&#128170;</div>
             <div class="val" id="progProtein">-</div>
             <div class="unit">g</div>
             <div class="lbl">Proteines</div>
           </div>
           <div class="prog-item">
-            <div class="icon">💧</div>
+            <div class="icon">&#128167;</div>
             <div class="val" id="progWater">-</div>
             <div class="unit">L</div>
             <div class="lbl">Eau</div>
@@ -802,15 +1092,23 @@ import { supabaseConfig } from '../../lib/supabase';
         </div>
       </div>
 
-      <!-- Reminders -->
-      <div class="card">
+      <!-- Badges -->
+      <div class="card animate-in animate-delay-3">
         <div class="card-header">
-          <h3>🔔 Mes rappels</h3>
-          <button class="card-action" onclick="exportAllCalendar()">📅 Exporter calendrier</button>
+          <h3>&#127942; Mes badges</h3>
+        </div>
+        <div class="badges-grid" id="badgesGrid"></div>
+      </div>
+
+      <!-- Reminders -->
+      <div class="card animate-in animate-delay-4">
+        <div class="card-header">
+          <h3>&#128276; Mes rappels</h3>
+          <button class="card-action" onclick="exportAllCalendar()">&#128197; Exporter calendrier</button>
         </div>
         <ul class="reminder-list" id="reminderList">
           <li class="reminder-item">
-            <div class="reminder-icon injection">💉</div>
+            <div class="reminder-icon injection">&#128137;</div>
             <div class="reminder-info">
               <div class="title">Prochaine injection</div>
               <div class="when" id="reminderInjection">-</div>
@@ -818,7 +1116,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <button class="btn-cal" onclick="exportICS('injection')">+ Calendrier</button>
           </li>
           <li class="reminder-item">
-            <div class="reminder-icon stock">📦</div>
+            <div class="reminder-icon stock">&#128230;</div>
             <div class="reminder-info">
               <div class="title">Commander stock</div>
               <div class="when" id="reminderStock">Pensez a renouveler votre ordonnance</div>
@@ -826,7 +1124,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <button class="btn-cal" onclick="exportICS('stock')">+ Calendrier</button>
           </li>
           <li class="reminder-item">
-            <div class="reminder-icon rdv">🩺</div>
+            <div class="reminder-icon rdv">&#129658;</div>
             <div class="reminder-info">
               <div class="title">RDV medecin de suivi</div>
               <div class="when" id="reminderRdv">Bilan sanguin recommande a 3 mois</div>
@@ -834,7 +1132,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <button class="btn-cal" onclick="exportICS('rdv')">+ Calendrier</button>
           </li>
           <li class="reminder-item">
-            <div class="reminder-icon checkin">⚖️</div>
+            <div class="reminder-icon checkin">&#9878;&#65039;</div>
             <div class="reminder-info">
               <div class="title">Pesee hebdomadaire</div>
               <div class="when">Chaque lundi matin a jeun</div>
@@ -845,20 +1143,18 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
 
       <!-- Recommendations -->
-      <div class="card">
+      <div class="card animate-in animate-delay-4">
         <div class="card-header">
-          <h3>💡 Recommandations</h3>
+          <h3>&#128161; Recommandations</h3>
         </div>
-        <div class="reco-list" id="recoList">
-          <!-- Filled by JS based on profile -->
-        </div>
+        <div class="reco-list" id="recoList"></div>
       </div>
 
       <!-- Coach CTA -->
-      <div class="coach-cta">
+      <div class="coach-cta animate-in animate-delay-4">
         <h3>Une question ?</h3>
         <p>Votre coach IA connait votre profil et peut vous aider en temps reel</p>
-        <a href="/#coach" class="btn-coach" onclick="localStorage.setItem('glp1_open_coach','1')">💬 Parler au Coach</a>
+        <a href="/#coach" class="btn-coach" onclick="localStorage.setItem('glp1_open_coach','1')">&#128172; Parler au Coach</a>
       </div>
     </div>
   </div>
@@ -868,7 +1164,7 @@ import { supabaseConfig } from '../../lib/supabase';
     <div class="paywall-box">
       <h2>Votre essai gratuit est termine</h2>
       <p>Continuez a beneficier de votre suivi personnalise</p>
-      <div class="paywall-price">9,90€ <span>/mois</span></div>
+      <div class="paywall-price">9,90&#8364; <span>/mois</span></div>
       <ul class="paywall-features">
         <li>Coach IA illimite avec votre profil</li>
         <li>Suivi poids et courbe de progression</li>
@@ -876,7 +1172,7 @@ import { supabaseConfig } from '../../lib/supabase';
         <li>Rappels injection et RDV</li>
         <li>Recommandations adaptees a votre traitement</li>
       </ul>
-      <button class="btn-subscribe" onclick="subscribe()">S'abonner — 9,90€/mois</button>
+      <button class="btn-subscribe" onclick="subscribe()">S'abonner — 9,90&#8364;/mois</button>
       <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir a l'accueil</button>
     </div>
   </div>
@@ -885,6 +1181,27 @@ import { supabaseConfig } from '../../lib/supabase';
   <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
     let sb, currentUser, profile;
 
+    // ===== TOAST SYSTEM =====
+    function showToast(message, type) {
+      type = type || 'success';
+      var container = document.getElementById('toastContainer');
+      var toast = document.createElement('div');
+      toast.className = 'toast toast-' + type;
+      var icons = { success: '\u2705', error: '\u274C', info: '\u2139\uFE0F' };
+      toast.innerHTML = '<span>' + (icons[type] || '') + '</span> ' + message;
+      container.appendChild(toast);
+      setTimeout(function() { if (toast.parentNode) toast.remove(); }, 3000);
+    }
+
+    // ===== LOADING =====
+    function hideLoading() {
+      var el = document.getElementById('loadingOverlay');
+      el.style.opacity = '0';
+      el.style.transition = 'opacity 0.3s';
+      setTimeout(function() { el.style.display = 'none'; }, 300);
+    }
+
+    // ===== SUPABASE INIT =====
     function initSb() {
       if (sb) return sb;
       if (!window.supabase || !window.supabase.createClient) {
@@ -894,20 +1211,29 @@ import { supabaseConfig } from '../../lib/supabase';
       return sb;
     }
 
+    // ===== PASSWORD TOGGLE =====
+    function togglePw(id) {
+      var input = document.getElementById(id);
+      var isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      var btn = input.parentElement.querySelector('.toggle-password');
+      btn.innerHTML = isPassword ? '\uD83D\uDE48' : '\uD83D\uDC41';
+    }
+
     // ===== AUTH =====
     function showScreen(name) {
-      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.screen').forEach(function(s) { s.classList.remove('active'); });
       document.getElementById('screen' + name).classList.add('active');
     }
 
     function switchAuthTab(tab) {
-      document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.auth-tab').forEach(function(t) { t.classList.remove('active'); });
       if (tab === 'signup') {
-        document.querySelectorAll('.auth-tab')[0].classList.add('active');
+        document.getElementById('tabSignup').classList.add('active');
         document.getElementById('authFormSignup').style.display = 'block';
         document.getElementById('authFormLogin').style.display = 'none';
       } else {
-        document.querySelectorAll('.auth-tab')[1].classList.add('active');
+        document.getElementById('tabLogin').classList.add('active');
         document.getElementById('authFormSignup').style.display = 'none';
         document.getElementById('authFormLogin').style.display = 'block';
       }
@@ -920,14 +1246,27 @@ import { supabaseConfig } from '../../lib/supabase';
       setTimeout(function() { el.style.display = 'none'; }, 5000);
     }
 
+    function setButtonLoading(btnId, loading) {
+      var btn = document.getElementById(btnId);
+      if (!btn) return;
+      if (loading) {
+        btn.dataset.originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="spinner"></span> Chargement...';
+        btn.disabled = true;
+      } else {
+        btn.innerHTML = btn.dataset.originalText || btn.innerHTML;
+        btn.disabled = false;
+      }
+    }
+
     async function signInGoogle() {
       try {
         var s = initSb();
-        var { error } = await s.auth.signInWithOAuth({
+        var result = await s.auth.signInWithOAuth({
           provider: 'google',
           options: { redirectTo: window.location.origin + '/mon-espace/' }
         });
-        if (error) showAuthError(error.message);
+        if (result.error) showAuthError(result.error.message);
       } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
     }
 
@@ -940,15 +1279,24 @@ import { supabaseConfig } from '../../lib/supabase';
         if (!email || !pw) return showAuthError('Email et mot de passe requis');
         if (pw.length < 6) return showAuthError('Mot de passe : 6 caracteres minimum');
 
-        var { data, error } = await s.auth.signUp({
+        setButtonLoading('btnSignup', true);
+        var result = await s.auth.signUp({
           email: email,
           password: pw,
           options: { data: { prenom: name } }
         });
-        if (error) return showAuthError(error.message);
-        currentUser = data.user;
-        if (currentUser) onUserReady(name);
-      } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
+        setButtonLoading('btnSignup', false);
+        if (result.error) return showAuthError(result.error.message);
+        currentUser = result.data.user;
+        if (currentUser) {
+          showToast('Compte cree avec succes !');
+          onUserReady(name);
+        }
+      } catch(e) {
+        setButtonLoading('btnSignup', false);
+        showAuthError('Erreur de connexion. Rechargez la page.');
+        console.error(e);
+      }
     }
 
     async function signInEmail() {
@@ -958,31 +1306,51 @@ import { supabaseConfig } from '../../lib/supabase';
         var pw = document.getElementById('loginPassword').value;
         if (!email || !pw) return showAuthError('Email et mot de passe requis');
 
-        var { data, error } = await s.auth.signInWithPassword({ email: email, password: pw });
-        if (error) return showAuthError(error.message);
-        currentUser = data.user;
-        if (currentUser) onUserReady();
-      } catch(e) { showAuthError('Erreur de connexion. Rechargez la page.'); console.error(e); }
+        setButtonLoading('btnLogin', true);
+        var result = await s.auth.signInWithPassword({ email: email, password: pw });
+        setButtonLoading('btnLogin', false);
+        if (result.error) return showAuthError(result.error.message);
+        currentUser = result.data.user;
+        if (currentUser) {
+          showToast('Connexion reussie !');
+          onUserReady();
+        }
+      } catch(e) {
+        setButtonLoading('btnLogin', false);
+        showAuthError('Erreur de connexion. Rechargez la page.');
+        console.error(e);
+      }
+    }
+
+    async function resetPassword() {
+      var email = document.getElementById('loginEmail').value.trim();
+      if (!email) return showAuthError('Entrez votre email ci-dessus');
+      try {
+        var s = initSb();
+        var result = await s.auth.resetPasswordForEmail(email, {
+          redirectTo: window.location.origin + '/mon-espace/'
+        });
+        if (result.error) return showAuthError(result.error.message);
+        showToast('Email de reinitialisation envoye !', 'info');
+      } catch(e) { showAuthError('Erreur. Reessayez.'); }
     }
 
     async function doLogout() {
-      var s = await initSb();
+      var s = initSb();
       await s.auth.signOut();
       currentUser = null;
       profile = null;
       showScreen('Auth');
+      showToast('Deconnecte', 'info');
     }
 
     async function onUserReady(prenomHint) {
-      var s = await initSb();
-
-      // Link chat session to this user (unified funnel)
+      var s = initSb();
       linkChatSession(currentUser.id);
 
-      // Check if profile exists
-      var { data } = await s.from('user_profiles').select('*').eq('user_id', currentUser.id).single();
-      if (data) {
-        profile = data;
+      var result = await s.from('user_profiles').select('*').eq('user_id', currentUser.id).single();
+      if (result.data) {
+        profile = result.data;
         showDashboard();
       } else {
         obData.prenom = prenomHint || currentUser.user_metadata?.prenom || '';
@@ -992,10 +1360,9 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     async function linkChatSession(userId) {
-      // Link any anonymous chat conversations from the widget to this user
       var sessionId = localStorage.getItem('glp1_coach_session');
       if (!sessionId) return;
-      var s = await initSb();
+      var s = initSb();
       try {
         await s.from('coach_conversations').update({ user_id: userId }).eq('session_id', sessionId).is('user_id', null);
         await s.from('coach_messages').update({ user_id: userId }).eq('session_id', sessionId).is('user_id', null);
@@ -1005,20 +1372,19 @@ import { supabaseConfig } from '../../lib/supabase';
     // ===== ONBOARDING =====
     var obStep = 0;
     var obData = {
-      prenom: '',
-      status: '',
-      treatment: '',
-      current_dose: '',
-      injection_day: '',
-      weight_current: '',
-      weight_goal: '',
-      height_cm: '',
-      age: '',
-      gender: '',
-      sport_level: '',
-      sport_types: [],
-      diet_type: 'standard',
+      prenom: '', status: '', treatment: '', current_dose: '', injection_day: '',
+      weight_current: '', weight_goal: '', height_cm: '', age: '', gender: '',
+      sport_level: '', sport_types: [], diet_type: 'standard',
     };
+
+    var doseOptions = {
+      ozempic: ['0.25 mg', '0.5 mg', '1 mg', '2 mg'],
+      wegovy: ['0.25 mg', '0.5 mg', '1 mg', '1.7 mg', '2.4 mg'],
+      mounjaro: ['2.5 mg', '5 mg', '7.5 mg', '10 mg', '12.5 mg', '15 mg'],
+      saxenda: ['0.6 mg', '1.2 mg', '1.8 mg', '2.4 mg', '3 mg'],
+    };
+
+    var injectionDays = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
 
     var obSteps = [
       {
@@ -1027,10 +1393,10 @@ import { supabaseConfig } from '../../lib/supabase';
         field: 'status',
         type: 'select',
         options: [
-          { val: 'exploring', emoji: '🔍', label: 'Je me renseigne' },
-          { val: 'starting', emoji: '🚀', label: 'Je vais commencer' },
-          { val: 'ongoing', emoji: '💉', label: 'Deja en traitement' },
-          { val: 'paused', emoji: '⏸️', label: 'J\'ai arrete' },
+          { val: 'exploring', emoji: '\uD83D\uDD0D', label: 'Je me renseigne' },
+          { val: 'starting', emoji: '\uD83D\uDE80', label: 'Je vais commencer' },
+          { val: 'ongoing', emoji: '\uD83D\uDC89', label: 'Deja en traitement' },
+          { val: 'paused', emoji: '\u23F8\uFE0F', label: 'J\'ai arrete' },
         ]
       },
       {
@@ -1039,13 +1405,18 @@ import { supabaseConfig } from '../../lib/supabase';
         field: 'treatment',
         type: 'select',
         options: [
-          { val: 'ozempic', emoji: '💊', label: 'Ozempic' },
-          { val: 'wegovy', emoji: '💊', label: 'Wegovy' },
-          { val: 'mounjaro', emoji: '💊', label: 'Mounjaro' },
-          { val: 'saxenda', emoji: '💊', label: 'Saxenda' },
-          { val: 'other', emoji: '💊', label: 'Autre' },
-          { val: 'none', emoji: '❌', label: 'Aucun / Je ne sais pas' },
+          { val: 'ozempic', emoji: '\uD83D\uDC8A', label: 'Ozempic' },
+          { val: 'wegovy', emoji: '\uD83D\uDC8A', label: 'Wegovy' },
+          { val: 'mounjaro', emoji: '\uD83D\uDC8A', label: 'Mounjaro' },
+          { val: 'saxenda', emoji: '\uD83D\uDC8A', label: 'Saxenda' },
+          { val: 'other', emoji: '\uD83D\uDC8A', label: 'Autre' },
+          { val: 'none', emoji: '\u274C', label: 'Aucun / Je ne sais pas' },
         ]
+      },
+      {
+        title: 'Dose et jour d\'injection',
+        subtitle: 'Pour vos rappels personnalises',
+        type: 'dose-day',
       },
       {
         title: 'Vos mensurations',
@@ -1075,11 +1446,11 @@ import { supabaseConfig } from '../../lib/supabase';
         field: 'sport_level',
         type: 'select',
         options: [
-          { val: 'sedentaire', emoji: '🛋️', label: 'Sedentaire' },
-          { val: 'leger', emoji: '🚶', label: 'Leger (marche)' },
-          { val: 'modere', emoji: '🏃', label: 'Modere' },
-          { val: 'actif', emoji: '💪', label: 'Actif' },
-          { val: 'sportif', emoji: '🏋️', label: 'Sportif' },
+          { val: 'sedentaire', emoji: '\uD83D\uDECB\uFE0F', label: 'Sedentaire' },
+          { val: 'leger', emoji: '\uD83D\uDEB6', label: 'Leger (marche)' },
+          { val: 'modere', emoji: '\uD83C\uDFC3', label: 'Modere' },
+          { val: 'actif', emoji: '\uD83D\uDCAA', label: 'Actif' },
+          { val: 'sportif', emoji: '\uD83C\uDFCB\uFE0F', label: 'Sportif' },
         ]
       },
       {
@@ -1088,12 +1459,12 @@ import { supabaseConfig } from '../../lib/supabase';
         field: 'diet_type',
         type: 'select',
         options: [
-          { val: 'standard', emoji: '🍽️', label: 'Standard' },
-          { val: 'vegetarien', emoji: '🥬', label: 'Vegetarien' },
-          { val: 'vegan', emoji: '🌱', label: 'Vegan' },
-          { val: 'sans-gluten', emoji: '🌾', label: 'Sans gluten' },
-          { val: 'keto', emoji: '🥑', label: 'Keto / Low-carb' },
-          { val: 'halal', emoji: '🍖', label: 'Halal' },
+          { val: 'standard', emoji: '\uD83C\uDF7D\uFE0F', label: 'Standard' },
+          { val: 'vegetarien', emoji: '\uD83E\uDD6C', label: 'Vegetarien' },
+          { val: 'vegan', emoji: '\uD83C\uDF31', label: 'Vegan' },
+          { val: 'sans-gluten', emoji: '\uD83C\uDF3E', label: 'Sans gluten' },
+          { val: 'keto', emoji: '\uD83E\uDD51', label: 'Keto / Low-carb' },
+          { val: 'halal', emoji: '\uD83C\uDF56', label: 'Halal' },
         ]
       },
     ];
@@ -1102,7 +1473,6 @@ import { supabaseConfig } from '../../lib/supabase';
       var step = obSteps[obStep];
       document.getElementById('obStepLabel').textContent = 'Etape ' + (obStep + 1) + '/' + obSteps.length;
 
-      // Progress
       var steps = document.querySelectorAll('.onboarding-progress .step');
       steps.forEach(function(s, i) {
         s.className = 'step' + (i < obStep ? ' done' : '') + (i === obStep ? ' active' : '');
@@ -1118,13 +1488,35 @@ import { supabaseConfig } from '../../lib/supabase';
           html += '<span class="emoji">' + o.emoji + '</span>' + o.label + '</div>';
         });
         html += '</div>';
+      } else if (step.type === 'dose-day') {
+        // Dose selection
+        var doses = doseOptions[obData.treatment] || [];
+        if (doses.length > 0) {
+          html += '<div class="form-group"><label>Dose actuelle</label></div>';
+          html += '<div class="ob-options">';
+          doses.forEach(function(d) {
+            var sel = obData.current_dose === d ? ' selected' : '';
+            html += '<div class="ob-option' + sel + '" onclick="obSelect(\'current_dose\',\'' + d + '\')">' + d + '</div>';
+          });
+          html += '</div>';
+        } else {
+          html += '<p style="color:#94a3b8;font-size:0.85rem;margin-bottom:1rem;">Pas de dose applicable pour votre traitement.</p>';
+        }
+        // Injection day
+        html += '<div class="form-group"><label>Jour d\'injection prefere</label></div>';
+        html += '<div class="ob-options">';
+        injectionDays.forEach(function(d) {
+          var sel = obData.injection_day === d ? ' selected' : '';
+          html += '<div class="ob-option' + sel + '" onclick="obSelect(\'injection_day\',\'' + d + '\')" style="font-size:0.8rem;">' + d.charAt(0).toUpperCase() + d.slice(1) + '</div>';
+        });
+        html += '</div>';
       } else if (step.type === 'inputs') {
         step.inputs.forEach(function(inp) {
           if (inp.row) {
             html += '<div class="ob-input-row">';
             inp.row.forEach(function(r) {
               html += '<div class="form-group"><label>' + r.label + '</label>';
-              html += '<input type="' + r.type + '" value="' + (obData[r.field] || '') + '" placeholder="' + r.placeholder + '" onchange="obData[\'' + r.field + '\']=this.value"></div>';
+              html += '<input type="' + r.type + '" value="' + (obData[r.field] || '') + '" placeholder="' + r.placeholder + '" onchange="obData[\'' + r.field + '\']=this.value" id="ob_' + r.field + '"></div>';
             });
             html += '</div>';
           } else if (inp.type === 'select-inline') {
@@ -1139,11 +1531,14 @@ import { supabaseConfig } from '../../lib/supabase';
         });
       }
 
+      // Validation message
+      html += '<div class="ob-validation" id="obValidation"></div>';
+
       // Nav
       html += '<div class="ob-nav">';
       if (obStep > 0) html += '<button class="btn-back" onclick="obPrev()">Retour</button>';
       var isLast = obStep === obSteps.length - 1;
-      html += '<button class="btn-next" onclick="' + (isLast ? 'obFinish()' : 'obNext()') + '">' + (isLast ? 'Terminer ✓' : 'Suivant →') + '</button>';
+      html += '<button class="btn-next" id="obNextBtn" onclick="' + (isLast ? 'obFinish()' : 'obNext()') + '">' + (isLast ? 'Terminer \u2713' : 'Suivant \u2192') + '</button>';
       html += '</div>';
 
       document.getElementById('obContent').innerHTML = html;
@@ -1154,17 +1549,52 @@ import { supabaseConfig } from '../../lib/supabase';
       renderObStep();
     }
 
+    function validateObStep() {
+      var step = obSteps[obStep];
+      var validation = document.getElementById('obValidation');
+
+      if (step.type === 'select' && step.field) {
+        if (!obData[step.field]) {
+          validation.textContent = 'Veuillez selectionner une option';
+          validation.classList.add('visible');
+          return false;
+        }
+      } else if (step.type === 'inputs') {
+        var w = obData.weight_current;
+        var wg = obData.weight_goal;
+        if (w && (parseFloat(w) < 30 || parseFloat(w) > 300)) {
+          validation.textContent = 'Poids invalide (30-300 kg)';
+          validation.classList.add('visible');
+          return false;
+        }
+        if (wg && (parseFloat(wg) < 30 || parseFloat(wg) > 300)) {
+          validation.textContent = 'Objectif poids invalide (30-300 kg)';
+          validation.classList.add('visible');
+          return false;
+        }
+      }
+
+      if (validation) validation.classList.remove('visible');
+      return true;
+    }
+
     function obNext() {
+      if (!validateObStep()) return;
       if (obStep < obSteps.length - 1) { obStep++; renderObStep(); }
     }
+
     function obPrev() {
       if (obStep > 0) { obStep--; renderObStep(); }
     }
 
     async function obFinish() {
-      var s = await initSb();
+      if (!validateObStep()) return;
 
-      // Calculate nutrition targets
+      var btn = document.getElementById('obNextBtn');
+      btn.innerHTML = '<span class="spinner"></span> Sauvegarde...';
+      btn.disabled = true;
+
+      var s = initSb();
       var w = parseFloat(obData.weight_current) || 80;
       var h = parseInt(obData.height_cm) || 170;
       var a = parseInt(obData.age) || 40;
@@ -1177,11 +1607,11 @@ import { supabaseConfig } from '../../lib/supabase';
 
       var activityMulti = { sedentaire: 1.2, leger: 1.375, modere: 1.55, actif: 1.725, sportif: 1.9 };
       var tdee = bmr * (activityMulti[obData.sport_level] || 1.3);
-      var dailyCal = Math.round(tdee - 500); // Deficit for weight loss
+      var dailyCal = Math.round(tdee - 500);
       if (dailyCal < 1200) dailyCal = 1200;
 
-      var proteinGoal = Math.round(w * 1.5); // 1.5g/kg under GLP-1
-      var waterGoal = Math.round((w * 0.035) * 10) / 10; // 35ml/kg
+      var proteinGoal = Math.round(w * 1.5);
+      var waterGoal = Math.round((w * 0.035) * 10) / 10;
 
       var profileData = {
         user_id: currentUser.id,
@@ -1204,12 +1634,17 @@ import { supabaseConfig } from '../../lib/supabase';
         subscription_plan: 'free',
       };
 
-      var { data, error } = await s.from('user_profiles').upsert(profileData, { onConflict: 'user_id' }).select().single();
-      if (error) { console.error('Profile save error:', error); alert('Erreur: ' + error.message); return; }
+      var result = await s.from('user_profiles').upsert(profileData, { onConflict: 'user_id' }).select().single();
+      if (result.error) {
+        console.error('Profile save error:', result.error);
+        showToast('Erreur: ' + result.error.message, 'error');
+        btn.innerHTML = 'Terminer \u2713';
+        btn.disabled = false;
+        return;
+      }
 
-      profile = data;
+      profile = result.data;
 
-      // Save first weight checkin
       if (obData.weight_current) {
         await s.from('user_checkins').insert({
           user_id: currentUser.id,
@@ -1218,6 +1653,7 @@ import { supabaseConfig } from '../../lib/supabase';
         });
       }
 
+      showToast('Profil cree avec succes !');
       showDashboard();
     }
 
@@ -1225,7 +1661,6 @@ import { supabaseConfig } from '../../lib/supabase';
     async function showDashboard() {
       showScreen('Dashboard');
 
-      // Greeting
       var hour = new Date().getHours();
       var greet = hour < 12 ? 'Bonjour' : hour < 18 ? 'Bon apres-midi' : 'Bonsoir';
       var name = profile.prenom || currentUser.email?.split('@')[0] || '';
@@ -1240,7 +1675,7 @@ import { supabaseConfig } from '../../lib/supabase';
         if (daysLeft > 0) {
           document.getElementById('trialBanner').style.display = 'block';
           document.getElementById('trialDays').textContent = daysLeft + ' jour' + (daysLeft > 1 ? 's' : '') + ' restant' + (daysLeft > 1 ? 's' : '');
-        } else {
+        } else if (profile.trial_end) {
           document.getElementById('paywallOverlay').classList.add('open');
         }
       }
@@ -1251,6 +1686,27 @@ import { supabaseConfig } from '../../lib/supabase';
       document.getElementById('psGoal').textContent = profile.weight_goal ? profile.weight_goal + ' kg' : '-';
       document.getElementById('psTreatment').textContent = treatNames[profile.treatment] || profile.treatment || '-';
       document.getElementById('psDose').textContent = profile.current_dose || '-';
+
+      // BMI
+      if (profile.weight_current && profile.height_cm) {
+        var hm = profile.height_cm / 100;
+        var bmi = (profile.weight_current / (hm * hm)).toFixed(1);
+        var bmiBadge = document.getElementById('bmiBadge');
+        var bmiClass = bmi < 25 ? 'bmi-normal' : bmi < 30 ? 'bmi-overweight' : 'bmi-obese';
+        var bmiLabel = bmi < 18.5 ? 'Insuffisance ponderale' : bmi < 25 ? 'Poids normal' : bmi < 30 ? 'Surpoids' : 'Obesite';
+        bmiBadge.className = 'bmi-badge ' + bmiClass;
+        bmiBadge.innerHTML = 'IMC ' + bmi + ' \u2014 ' + bmiLabel;
+        bmiBadge.style.display = 'inline-flex';
+      }
+
+      // Goal progress
+      if (profile.weight_current && profile.weight_goal) {
+        var startW = profile.weight_current;
+        var goalW = profile.weight_goal;
+        document.getElementById('goalProgress').style.display = 'block';
+        document.getElementById('goalStart').textContent = 'Depart: ' + startW + ' kg';
+        document.getElementById('goalTarget').textContent = 'Objectif: ' + goalW + ' kg';
+      }
 
       // Programme
       document.getElementById('progCalories').textContent = profile.daily_calories || '-';
@@ -1267,33 +1723,97 @@ import { supabaseConfig } from '../../lib/supabase';
         if (diff <= 0) diff += 7;
         if (diff === 7) {
           document.getElementById('reminderInjection').textContent = 'Aujourd\'hui !';
+          document.getElementById('reminderInjection').style.color = '#16a34a';
+          document.getElementById('reminderInjection').style.fontWeight = '700';
         } else if (diff === 1) {
-          document.getElementById('reminderInjection').textContent = 'Demain — ' + profile.injection_day;
+          document.getElementById('reminderInjection').textContent = 'Demain \u2014 ' + profile.injection_day;
         } else {
-          document.getElementById('reminderInjection').textContent = 'Dans ' + diff + ' jours — ' + profile.injection_day;
+          document.getElementById('reminderInjection').textContent = 'Dans ' + diff + ' jours \u2014 ' + profile.injection_day;
         }
       }
 
-      // Load weight history
-      loadWeightHistory();
+      // Dose escalation timeline
+      renderDoseTimeline();
 
-      // Generate recommendations
+      // Badges
+      renderBadges();
+
+      loadWeightHistory();
       generateRecommendations();
     }
 
+    // ===== DOSE TIMELINE =====
+    function renderDoseTimeline() {
+      var doses = doseOptions[profile.treatment];
+      if (!doses || !profile.current_dose) return;
+
+      document.getElementById('doseCard').style.display = 'block';
+      var currentIdx = doses.indexOf(profile.current_dose);
+      var html = '';
+      doses.forEach(function(d, i) {
+        var cls = i < currentIdx ? 'done' : i === currentIdx ? 'current' : '';
+        var dateLabel = i === currentIdx ? 'Dose actuelle' : i < currentIdx ? 'Complete' : 'A venir';
+        html += '<div class="dose-step ' + cls + '">';
+        html += '<div class="dose-label">' + d + '</div>';
+        html += '<div class="dose-date">' + dateLabel + '</div>';
+        html += '</div>';
+      });
+      document.getElementById('doseTimeline').innerHTML = html;
+    }
+
+    // ===== BADGES =====
+    function renderBadges() {
+      var badges = [
+        { icon: '\uD83C\uDF1F', name: 'Premier pas', condition: true },
+        { icon: '\uD83D\uDCAA', name: '1er check-in', condition: false },
+        { icon: '\uD83D\uDD25', name: '7 jours', condition: false },
+        { icon: '\uD83C\uDFC6', name: '30 jours', condition: false },
+        { icon: '\uD83C\uDFAF', name: '-5 kg', condition: false },
+        { icon: '\uD83D\uDE80', name: '-10 kg', condition: false },
+        { icon: '\uD83D\uDC89', name: '10 injections', condition: false },
+        { icon: '\uD83E\uDDD8', name: 'Zen master', condition: false },
+      ];
+
+      var html = '';
+      badges.forEach(function(b) {
+        var cls = b.condition ? 'unlocked' : 'locked';
+        html += '<div class="badge-item ' + cls + '">';
+        html += '<div class="badge-icon">' + b.icon + '</div>';
+        html += '<div class="badge-name">' + b.name + '</div>';
+        html += '</div>';
+      });
+      document.getElementById('badgesGrid').innerHTML = html;
+    }
+
+    // ===== WEIGHT HISTORY =====
     async function loadWeightHistory() {
-      var s = await initSb();
-      var { data: checkins } = await s.from('user_checkins')
+      var s = initSb();
+      var result = await s.from('user_checkins')
         .select('weight, checked_at, mood')
         .eq('user_id', currentUser.id)
         .order('checked_at', { ascending: true })
         .limit(30);
 
+      var checkins = result.data;
       if (!checkins || checkins.length === 0) return;
 
-      // Update current weight from latest
+      // Update badges
+      updateBadgesFromCheckins(checkins);
+
       var latest = checkins[checkins.length - 1];
       document.getElementById('psWeight').textContent = latest.weight + ' kg';
+
+      // Update goal progress
+      if (profile.weight_goal && checkins.length >= 1) {
+        var firstW = checkins[0].weight;
+        var currentW = latest.weight;
+        var totalToLose = firstW - profile.weight_goal;
+        var lost = firstW - currentW;
+        var pct = totalToLose > 0 ? Math.min(100, Math.max(0, Math.round((lost / totalToLose) * 100))) : 0;
+        document.getElementById('goalPercent').textContent = pct + '%';
+        document.getElementById('goalBarFill').style.width = pct + '%';
+        document.getElementById('goalStart').textContent = 'Depart: ' + firstW + ' kg';
+      }
 
       // Show delta
       if (checkins.length >= 2) {
@@ -1305,64 +1825,111 @@ import { supabaseConfig } from '../../lib/supabase';
         document.getElementById('weightDelta').innerHTML = '<span style="color:' + color + ';font-weight:700;">' + prefix + delta + ' kg</span>';
       }
 
-      // Simple text chart (no canvas dependency)
+      // SVG chart
       var chartEl = document.getElementById('weightChart');
       var weights = checkins.map(function(c) { return c.weight; });
-      var min = Math.min.apply(null, weights);
-      var max = Math.max.apply(null, weights);
+      var min = Math.min.apply(null, weights) - 1;
+      var max = Math.max.apply(null, weights) + 1;
       var range = max - min || 1;
+      var w = 100;
+      var h = 100;
+      var padding = 10;
 
-      var bars = '';
-      checkins.forEach(function(c, i) {
-        var pct = ((c.weight - min) / range * 60) + 20;
-        var date = new Date(c.checked_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
-        var moodEmoji = { top: '😄', bien: '🙂', moyen: '😐', difficile: '😔' };
-        bars += '<div style="display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;">';
-        bars += '<div style="font-size:0.6rem;color:#64748b;margin-bottom:2px;">' + c.weight + '</div>';
-        bars += '<div style="width:100%;max-width:24px;background:#16a34a;border-radius:4px 4px 0 0;height:' + pct + '%;opacity:' + (0.4 + (i / checkins.length) * 0.6) + ';"></div>';
-        bars += '<div style="font-size:0.55rem;color:#94a3b8;margin-top:2px;">' + date + '</div>';
-        bars += '</div>';
+      var points = checkins.map(function(c, i) {
+        var x = padding + (i / Math.max(1, checkins.length - 1)) * (w - 2 * padding);
+        var y = h - padding - ((c.weight - min) / range) * (h - 2 * padding);
+        return { x: x, y: y, weight: c.weight, date: c.checked_at };
       });
 
-      chartEl.innerHTML = '<div style="display:flex;align-items:end;gap:2px;height:100%;width:100%;padding:8px;">' + bars + '</div>';
+      var pathD = points.map(function(p, i) { return (i === 0 ? 'M' : 'L') + p.x + ',' + p.y; }).join(' ');
+      var areaD = pathD + ' L' + points[points.length-1].x + ',' + (h - padding) + ' L' + points[0].x + ',' + (h - padding) + ' Z';
+
+      // Goal line
+      var goalY = profile.weight_goal ? h - padding - ((profile.weight_goal - min) / range) * (h - 2 * padding) : -1;
+
+      var svg = '<svg viewBox="0 0 ' + w + ' ' + h + '" style="width:100%;height:100%;" preserveAspectRatio="none">';
+      svg += '<defs><linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16a34a" stop-opacity="0.3"/><stop offset="100%" stop-color="#16a34a" stop-opacity="0.02"/></linearGradient></defs>';
+      svg += '<path d="' + areaD + '" fill="url(#chartGrad)"/>';
+      svg += '<path d="' + pathD + '" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+
+      if (goalY > 0 && goalY < h) {
+        svg += '<line x1="' + padding + '" y1="' + goalY + '" x2="' + (w - padding) + '" y2="' + goalY + '" stroke="#f59e0b" stroke-width="0.8" stroke-dasharray="3,3"/>';
+        svg += '<text x="' + (w - padding) + '" y="' + (goalY - 2) + '" text-anchor="end" font-size="4" fill="#f59e0b">Objectif</text>';
+      }
+
+      points.forEach(function(p) {
+        svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="2" fill="#16a34a"/>';
+      });
+
+      // Labels
+      svg += '<text x="' + points[0].x + '" y="' + (h - 2) + '" text-anchor="start" font-size="4" fill="#94a3b8">' + new Date(points[0].date).toLocaleDateString('fr-FR', {day:'2-digit',month:'short'}) + '</text>';
+      svg += '<text x="' + points[points.length-1].x + '" y="' + (h - 2) + '" text-anchor="end" font-size="4" fill="#94a3b8">' + new Date(points[points.length-1].date).toLocaleDateString('fr-FR', {day:'2-digit',month:'short'}) + '</text>';
+      svg += '<text x="' + padding + '" y="' + (padding + 3) + '" font-size="4" fill="#64748b">' + max.toFixed(0) + ' kg</text>';
+      svg += '<text x="' + padding + '" y="' + (h - padding - 1) + '" font-size="4" fill="#64748b">' + min.toFixed(0) + ' kg</text>';
+
+      svg += '</svg>';
+      chartEl.innerHTML = svg;
     }
 
+    function updateBadgesFromCheckins(checkins) {
+      if (!checkins || checkins.length === 0) return;
+      var first = checkins[0].weight;
+      var last = checkins[checkins.length - 1].weight;
+      var lost = first - last;
+
+      var badges = [
+        { icon: '\uD83C\uDF1F', name: 'Premier pas', condition: true },
+        { icon: '\uD83D\uDCAA', name: '1er check-in', condition: checkins.length >= 1 },
+        { icon: '\uD83D\uDD25', name: '7 jours', condition: checkins.length >= 7 },
+        { icon: '\uD83C\uDFC6', name: '30 jours', condition: checkins.length >= 30 },
+        { icon: '\uD83C\uDFAF', name: '-5 kg', condition: lost >= 5 },
+        { icon: '\uD83D\uDE80', name: '-10 kg', condition: lost >= 10 },
+        { icon: '\uD83D\uDC89', name: '10 injections', condition: checkins.length >= 10 },
+        { icon: '\uD83E\uDDD8', name: 'Zen master', condition: checkins.filter(function(c){ return c.mood === 'top'; }).length >= 7 },
+      ];
+
+      var html = '';
+      badges.forEach(function(b) {
+        var cls = b.condition ? 'unlocked' : 'locked';
+        html += '<div class="badge-item ' + cls + '">';
+        html += '<div class="badge-icon">' + b.icon + '</div>';
+        html += '<div class="badge-name">' + b.name + '</div>';
+        html += '</div>';
+      });
+      document.getElementById('badgesGrid').innerHTML = html;
+    }
+
+    // ===== RECOMMENDATIONS =====
     function generateRecommendations() {
       var recos = [];
       var p = profile;
 
-      // Treatment-specific
       if (p.treatment === 'ozempic' || p.treatment === 'wegovy') {
-        recos.push({ icon: '💉', text: '<strong>Semaglutide</strong> — Augmentez progressivement la dose toutes les 4 semaines. Ne sautez jamais une injection.' });
+        recos.push({ icon: '\uD83D\uDC89', text: '<strong>Semaglutide</strong> \u2014 Augmentez progressivement la dose toutes les 4 semaines. Ne sautez jamais une injection.' });
       } else if (p.treatment === 'mounjaro') {
-        recos.push({ icon: '💉', text: '<strong>Tirzepatide</strong> — Double action GIP/GLP-1. Injectez toujours dans l\'abdomen, la cuisse ou le bras.' });
+        recos.push({ icon: '\uD83D\uDC89', text: '<strong>Tirzepatide</strong> \u2014 Double action GIP/GLP-1. Injectez toujours dans l\'abdomen, la cuisse ou le bras.' });
       }
 
-      // Protein
       if (p.protein_goal) {
-        recos.push({ icon: '🥩', text: '<strong>' + p.protein_goal + 'g de proteines/jour</strong> — Essentiel sous GLP-1 pour preserver la masse musculaire. Repartissez sur 3 repas.' });
+        recos.push({ icon: '\uD83E\uDD69', text: '<strong>' + p.protein_goal + 'g de proteines/jour</strong> \u2014 Essentiel sous GLP-1 pour preserver la masse musculaire. Repartissez sur 3 repas.' });
       }
 
-      // Hydration
-      recos.push({ icon: '💧', text: '<strong>Hydratation</strong> — Buvez au moins ' + (p.water_goal || 2) + 'L d\'eau par jour. Les GLP-1 augmentent le risque de deshydratation.' });
+      recos.push({ icon: '\uD83D\uDCA7', text: '<strong>Hydratation</strong> \u2014 Buvez au moins ' + (p.water_goal || 2) + 'L d\'eau par jour. Les GLP-1 augmentent le risque de deshydratation.' });
 
-      // Sport-specific
       if (p.sport_level === 'sedentaire') {
-        recos.push({ icon: '🚶', text: '<strong>Commencez doucement</strong> — 20 min de marche par jour suffisent pour commencer. Augmentez progressivement chaque semaine.' });
+        recos.push({ icon: '\uD83D\uDEB6', text: '<strong>Commencez doucement</strong> \u2014 20 min de marche par jour suffisent pour commencer. Augmentez progressivement.' });
       } else if (p.sport_level === 'leger' || p.sport_level === 'modere') {
-        recos.push({ icon: '🏃', text: '<strong>Ajoutez de la resistance</strong> — 2-3 seances de musculation legere par semaine pour maintenir la masse musculaire.' });
+        recos.push({ icon: '\uD83C\uDFC3', text: '<strong>Ajoutez de la resistance</strong> \u2014 2-3 seances de musculation legere par semaine pour maintenir la masse musculaire.' });
       } else {
-        recos.push({ icon: '💪', text: '<strong>Maintenez l\'intensite</strong> — Votre niveau d\'activite est excellent. Privilegiez les proteines apres l\'effort.' });
+        recos.push({ icon: '\uD83D\uDCAA', text: '<strong>Maintenez l\'intensite</strong> \u2014 Votre niveau d\'activite est excellent. Privilegiez les proteines apres l\'effort.' });
       }
 
-      // Nausea tip (common side effect)
-      recos.push({ icon: '🍽️', text: '<strong>Nausees</strong> — Mangez lentement, en petites portions. Evitez les aliments gras et epices les jours suivant l\'injection.' });
+      recos.push({ icon: '\uD83C\uDF7D\uFE0F', text: '<strong>Nausees</strong> \u2014 Mangez lentement, en petites portions. Evitez les aliments gras et epices les jours suivant l\'injection.' });
 
-      // Weight delta motivation
       if (p.weight_current && p.weight_goal) {
         var toGo = (p.weight_current - p.weight_goal).toFixed(1);
         if (toGo > 0) {
-          recos.push({ icon: '🎯', text: '<strong>' + toGo + ' kg de votre objectif</strong> — A raison de 0.5-1kg/semaine avec un GLP-1, vous pouvez y etre dans ' + Math.round(toGo / 0.75) + ' semaines.' });
+          recos.push({ icon: '\uD83C\uDFAF', text: '<strong>' + toGo + ' kg de votre objectif</strong> \u2014 A raison de 0.5-1kg/semaine avec un GLP-1, vous pouvez y etre dans ' + Math.round(toGo / 0.75) + ' semaines.' });
         }
       }
 
@@ -1376,92 +1943,134 @@ import { supabaseConfig } from '../../lib/supabase';
     // ===== CHECKIN =====
     async function saveCheckin() {
       var w = parseFloat(document.getElementById('checkinWeight').value);
-      if (!w || w < 30 || w > 300) return alert('Entrez un poids valide');
+      if (!w || w < 30 || w > 300) return showToast('Entrez un poids valide (30-300 kg)', 'error');
       var mood = document.getElementById('checkinMood').value;
 
-      var s = await initSb();
-      var { error } = await s.from('user_checkins').insert({
+      var btn = document.getElementById('btnCheckin');
+      btn.innerHTML = '<span class="spinner"></span>';
+      btn.disabled = true;
+
+      var s = initSb();
+      var result = await s.from('user_checkins').insert({
         user_id: currentUser.id,
         weight: w,
         mood: mood,
       });
-      if (error) return alert('Erreur: ' + error.message);
 
-      // Update profile weight
+      if (result.error) {
+        btn.innerHTML = 'Enregistrer';
+        btn.disabled = false;
+        return showToast('Erreur: ' + result.error.message, 'error');
+      }
+
       await s.from('user_profiles').update({ weight_current: w, updated_at: new Date().toISOString() }).eq('user_id', currentUser.id);
       profile.weight_current = w;
 
       document.getElementById('checkinWeight').value = '';
       document.getElementById('psWeight').textContent = w + ' kg';
+      btn.innerHTML = 'Enregistrer';
+      btn.disabled = false;
+
+      showToast('Poids enregistre : ' + w + ' kg');
       loadWeightHistory();
       generateRecommendations();
+
+      // Update BMI
+      if (profile.height_cm) {
+        var hm = profile.height_cm / 100;
+        var bmi = (w / (hm * hm)).toFixed(1);
+        var bmiBadge = document.getElementById('bmiBadge');
+        var bmiClass = bmi < 25 ? 'bmi-normal' : bmi < 30 ? 'bmi-overweight' : 'bmi-obese';
+        var bmiLabel = bmi < 18.5 ? 'Insuffisance ponderale' : bmi < 25 ? 'Poids normal' : bmi < 30 ? 'Surpoids' : 'Obesite';
+        bmiBadge.className = 'bmi-badge ' + bmiClass;
+        bmiBadge.innerHTML = 'IMC ' + bmi + ' \u2014 ' + bmiLabel;
+        bmiBadge.style.display = 'inline-flex';
+      }
     }
 
-    // ===== CALENDAR EXPORT (.ics) =====
-    function exportICS(type) {
-      var now = new Date();
-      var event = {};
+    // ===== SIDE EFFECTS =====
+    var activeSideEffects = [];
 
-      if (type === 'injection') {
-        var day = profile.injection_day || 'vendredi';
-        event = {
-          title: 'Injection ' + (profile.treatment || 'GLP-1'),
-          desc: 'Rappel injection hebdomadaire — ' + (profile.current_dose || '') + '\\nConseil: alternez les sites d\'injection',
-          freq: 'WEEKLY',
-          duration: '0030',
-        };
-      } else if (type === 'stock') {
-        event = {
-          title: 'Verifier stock ' + (profile.treatment || 'GLP-1'),
-          desc: 'Verifiez votre stock de stylos/seringues.\\nSi < 2 semaines de stock, renouvelez votre ordonnance.',
-          freq: 'MONTHLY',
-          duration: '0015',
-        };
-      } else if (type === 'rdv') {
-        event = {
-          title: 'RDV medecin — Bilan suivi GLP-1',
-          desc: 'Bilan sanguin recommande :\\n- Glycemie\\n- HbA1c\\n- Bilan lipidique\\n- Fonction renale',
-          freq: 'MONTHLY;INTERVAL=3',
-          duration: '0100',
-        };
-      } else if (type === 'checkin') {
-        event = {
-          title: 'Pesee hebdomadaire',
-          desc: 'Pesez-vous a jeun, le matin.\\nNotez votre poids sur glp1-france.fr/mon-espace/',
-          freq: 'WEEKLY',
-          duration: '0005',
-        };
+    function toggleSe(el) {
+      var se = el.dataset.se;
+      if (se === 'aucun') {
+        activeSideEffects = ['aucun'];
+        document.querySelectorAll('.se-tag').forEach(function(t) { t.classList.remove('active'); });
+        el.classList.add('active');
+        return;
+      }
+      // Remove 'aucun' if selecting something else
+      var aucunIdx = activeSideEffects.indexOf('aucun');
+      if (aucunIdx > -1) {
+        activeSideEffects.splice(aucunIdx, 1);
+        document.querySelector('.se-tag[data-se="aucun"]').classList.remove('active');
       }
 
-      // Generate .ics
+      var idx = activeSideEffects.indexOf(se);
+      if (idx > -1) {
+        activeSideEffects.splice(idx, 1);
+        el.classList.remove('active');
+      } else {
+        activeSideEffects.push(se);
+        el.classList.add('active');
+      }
+    }
+
+    async function saveSideEffects() {
+      if (activeSideEffects.length === 0) return showToast('Selectionnez au moins un effet', 'info');
+
+      var s = initSb();
+      var note = document.getElementById('seNote').value.trim();
+
+      try {
+        await s.from('user_side_effects').insert({
+          user_id: currentUser.id,
+          effects: activeSideEffects,
+          note: note || null,
+        });
+        showToast('Effets secondaires enregistres');
+        activeSideEffects = [];
+        document.querySelectorAll('.se-tag').forEach(function(t) { t.classList.remove('active'); });
+        document.getElementById('seNote').value = '';
+      } catch(e) {
+        showToast('Table non disponible \u2014 effets notes localement', 'info');
+        // Store locally as fallback
+        var stored = JSON.parse(localStorage.getItem('glp1_side_effects') || '[]');
+        stored.push({ date: new Date().toISOString(), effects: activeSideEffects, note: note });
+        localStorage.setItem('glp1_side_effects', JSON.stringify(stored));
+        activeSideEffects = [];
+        document.querySelectorAll('.se-tag').forEach(function(t) { t.classList.remove('active'); });
+        document.getElementById('seNote').value = '';
+      }
+    }
+
+    function viewSeHistory() {
+      showToast('Historique des effets secondaires bientot disponible', 'info');
+    }
+
+    // ===== CALENDAR EXPORT =====
+    function exportICS(type) {
+      var event = {};
+      if (type === 'injection') {
+        event = { title: 'Injection ' + (profile.treatment || 'GLP-1'), desc: 'Rappel injection hebdomadaire \u2014 ' + (profile.current_dose || '') + '\\nConseil: alternez les sites d\'injection', freq: 'WEEKLY', duration: '0030' };
+      } else if (type === 'stock') {
+        event = { title: 'Verifier stock ' + (profile.treatment || 'GLP-1'), desc: 'Verifiez votre stock de stylos/seringues.', freq: 'MONTHLY', duration: '0015' };
+      } else if (type === 'rdv') {
+        event = { title: 'RDV medecin \u2014 Bilan suivi GLP-1', desc: 'Bilan sanguin recommande :\\n- Glycemie\\n- HbA1c\\n- Bilan lipidique\\n- Fonction renale', freq: 'MONTHLY;INTERVAL=3', duration: '0100' };
+      } else if (type === 'checkin') {
+        event = { title: 'Pesee hebdomadaire', desc: 'Pesez-vous a jeun, le matin.', freq: 'WEEKLY', duration: '0005' };
+      }
+
       var dtstart = formatICSDate(nextOccurrence(type));
       var uid = type + '-' + Date.now() + '@glp1-france.fr';
-
-      var ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//GLP1 France//Coach//FR',
-        'BEGIN:VEVENT',
-        'UID:' + uid,
-        'DTSTART:' + dtstart,
-        'DURATION:PT' + (event.duration || '0030').replace(/^00/, '') + 'M',
-        'SUMMARY:' + event.title,
-        'DESCRIPTION:' + (event.desc || ''),
-        'RRULE:FREQ=' + (event.freq || 'WEEKLY'),
-        'BEGIN:VALARM',
-        'TRIGGER:-PT30M',
-        'ACTION:DISPLAY',
-        'DESCRIPTION:Rappel',
-        'END:VALARM',
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
+      var ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//GLP1 France//Coach//FR','BEGIN:VEVENT','UID:' + uid,'DTSTART:' + dtstart,'DURATION:PT' + (event.duration || '0030').replace(/^00/, '') + 'M','SUMMARY:' + event.title,'DESCRIPTION:' + (event.desc || ''),'RRULE:FREQ=' + (event.freq || 'WEEKLY'),'BEGIN:VALARM','TRIGGER:-PT30M','ACTION:DISPLAY','DESCRIPTION:Rappel','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
 
       var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
       var a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       a.download = 'glp1-' + type + '.ics';
       a.click();
+      showToast('Fichier calendrier telecharge', 'success');
     }
 
     function exportAllCalendar() {
@@ -1478,7 +2087,7 @@ import { supabaseConfig } from '../../lib/supabase';
         d.setDate(d.getDate() + diff);
         d.setHours(9, 0, 0);
       } else if (type === 'checkin') {
-        var diff2 = 1 - d.getDay(); // Monday
+        var diff2 = 1 - d.getDay();
         if (diff2 <= 0) diff2 += 7;
         d.setDate(d.getDate() + diff2);
         d.setHours(7, 0, 0);
@@ -1496,18 +2105,12 @@ import { supabaseConfig } from '../../lib/supabase';
     function editProfile() {
       obStep = 0;
       obData = {
-        prenom: profile.prenom || '',
-        status: profile.status || '',
-        treatment: profile.treatment || '',
-        current_dose: profile.current_dose || '',
-        injection_day: profile.injection_day || '',
-        weight_current: profile.weight_current || '',
-        weight_goal: profile.weight_goal || '',
-        height_cm: profile.height_cm || '',
-        age: profile.age || '',
-        gender: profile.gender || '',
-        sport_level: profile.sport_level || '',
-        diet_type: profile.diet_type || '',
+        prenom: profile.prenom || '', status: profile.status || '',
+        treatment: profile.treatment || '', current_dose: profile.current_dose || '',
+        injection_day: profile.injection_day || '', weight_current: profile.weight_current || '',
+        weight_goal: profile.weight_goal || '', height_cm: profile.height_cm || '',
+        age: profile.age || '', gender: profile.gender || '',
+        sport_level: profile.sport_level || '', diet_type: profile.diet_type || '',
       };
       showScreen('Onboarding');
       renderObStep();
@@ -1519,28 +2122,26 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     function subscribe() {
-      // TODO: Stripe integration
-      alert('Paiement Stripe bientot disponible ! Contactez-nous a robin@glp1-france.fr');
+      showToast('Paiement Stripe bientot disponible !', 'info');
     }
 
     // ===== INIT =====
     async function init() {
       try {
         var s = initSb();
-        var { data: { session } } = await s.auth.getSession();
+        var result = await s.auth.getSession();
+        var session = result.data.session;
         if (session && session.user) {
           currentUser = session.user;
-          onUserReady();
+          await onUserReady();
         } else {
           showScreen('Auth');
-          // Handle ?tab=login from chat widget redirect
           var params = new URLSearchParams(window.location.search);
           if (params.get('tab') === 'login') {
             switchAuthTab('login');
           }
         }
 
-        // Listen for auth changes (OAuth redirect)
         s.auth.onAuthStateChange(function(event, session) {
           if (event === 'SIGNED_IN' && session && session.user) {
             currentUser = session.user;
@@ -1549,16 +2150,17 @@ import { supabaseConfig } from '../../lib/supabase';
         });
       } catch(e) {
         console.error('Init error:', e);
-        // Show auth screen even if Supabase fails to load
         showScreen('Auth');
       }
+      hideLoading();
     }
 
-    // Expose functions to global scope for onclick handlers
+    // Expose to global scope
     window.switchAuthTab = switchAuthTab;
     window.signInGoogle = signInGoogle;
     window.signUpEmail = signUpEmail;
     window.signInEmail = signInEmail;
+    window.resetPassword = resetPassword;
     window.doLogout = doLogout;
     window.editProfile = editProfile;
     window.saveCheckin = saveCheckin;
@@ -1570,6 +2172,10 @@ import { supabaseConfig } from '../../lib/supabase';
     window.obPrev = obPrev;
     window.obNext = obNext;
     window.obFinish = obFinish;
+    window.togglePw = togglePw;
+    window.toggleSe = toggleSe;
+    window.saveSideEffects = saveSideEffects;
+    window.viewSeHistory = viewSeHistory;
 
     init();
   </script>
