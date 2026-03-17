@@ -1,6 +1,6 @@
 ---
-title: "ANSM Prescription GLP-1 : Règles et Conditions France 2025"
-description: "ANSM prescription GLP-1 règles France 2025 : depuis 2025, tout médecin peut prescrire les GLP-1. Formulaire obligatoire et conditions détaillées."
+title: "ANSM Prescription GLP-1 : Règles France 2025-2026"
+description: "ANSM prescription GLP-1 règles France 2025-2026 : tout médecin peut désormais prescrire les GLP-1. Formulaire obligatoire et conditions."
 pubDate: 2026-03-16
 date: "2026-03-16"
 updatedAt: 2026-03-16

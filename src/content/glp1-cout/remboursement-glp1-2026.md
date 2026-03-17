@@ -1,6 +1,6 @@
 ---
 title: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
-description: "Remboursement GLP-1 2026 : Mounjaro, Wegovy, Ozempic. Conditions Sécurité Sociale, mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
+description: "Remboursement GLP-1 2026 sécurité sociale conditions : Mounjaro, Wegovy, Ozempic. Mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
 seoDescription: "Remboursement GLP-1 2026 : Ozempic remboursé 30% (DT2), Wegovy et Saxenda non remboursés. Mounjaro en cours de négociation. Guide remboursement GLP-1 2026."

@@ -1,5 +1,5 @@
 ---
-title: "Orforglipron France : Nouveau Médicament GLP-1 pour la Perte de Poids 2026"
+title: "Orforglipron France : Nouveau Médicament Perte de Poids 2026"
 description: "Orforglipron France, nouveau médicament GLP-1 pour la perte de poids : CagriSema et amycrétine attendus en 2026-2027. Calendrier, efficacité et accès."
 pubDate: 2026-03-15
 date: "2026-03-15"

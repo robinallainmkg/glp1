@@ -1,6 +1,6 @@
 ---
 title: "Wegovy vs Mounjaro 2026 : Comparatif pour Choisir"
-description: "Wegovy vs Mounjaro en 2026 : comparatif complet — efficacité, prix, effets secondaires et remboursement pour choisir le meilleur traitement GLP-1."
+description: "Wegovy vs Mounjaro 2026 : comparatif complet efficacité, prix, effets secondaires et remboursement. Choisissez le meilleur traitement GLP-1."
 mainKeyword: "wegovy vs mounjaro"
 author: "Dr. Marie Dubois"
 collection: "traitements-glp1"

@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Ostéoporose, Os et Fracture : Risque Osseux en 2026"
+title: "GLP-1 Ostéoporose Os Fracture : Risque Osseux et Prévention"
 description: "GLP-1 ostéoporose os fracture risque : une étude sur 150 000 patients révèle un lien avec l'ostéoporose et la goutte. Prévention et surveillance recommandées."
 keywords: ['glp1 ostéoporose', 'ozempic os fracture', 'glp1 risque osseux', 'wegovy ostéoporose', 'perte osseuse glp1', 'glp1 goutte']
 seoTitle: "GLP-1 Ostéoporose Os Fracture Risque : Guide Prévention 2026"

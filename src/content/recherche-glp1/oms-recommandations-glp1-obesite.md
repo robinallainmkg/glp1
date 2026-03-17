@@ -1,6 +1,6 @@
 ---
 title: "OMS Recommandations GLP-1 Obésité 2025 : Ce qui Change"
-description: "OMS recommandations GLP-1 obésité 2025 : premières lignes directrices mondiales sur les traitements anti-obésité. Impact concret pour les patients français."
+description: "OMS recommandations GLP-1 obésité 2025 : premières lignes directrices mondiales sur les traitements GLP-1. Impact concret pour les patients français."
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16

@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Accompagnement Psychologique : Pourquoi le Médicament Seul ne Suffit Pas"
+title: "GLP-1 et Accompagnement Psychologique : Guide Complet"
 description: "GLP-1 et accompagnement psychologique : préserver sa relation à la nourriture sous Ozempic ou Mounjaro. Rôle du diététicien et du psychologue."
 pubDate: 2026-03-17
 date: 2026-03-17
