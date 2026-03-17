@@ -505,6 +505,12 @@ function launchAgent(name, { allowMultiple = false } = {}) {
   // Reset output buffer for this instance
   outputBuffers.set(instanceName, { lines: [{ ts: new Date().toISOString(), text: `🚀 Agent ${instanceName} lance (PID ${child.pid})` }], startedAt: new Date().toISOString() });
 
+    // Log spawn to autopilot console if autopilot is running and this isn't autopilot itself
+    if (baseAgent !== 'autopilot' && running.has('autopilot')) {
+      const time = new Date().toLocaleTimeString('fr-FR');
+      appendOutput('autopilot', `🟢 ${time} — ${instanceName} spawné (PID ${child.pid})`, 'progress');
+    }
+
   let output = '';
   let stdoutBuffer = '';
   child.stdout.on('data', d => {
@@ -530,6 +536,13 @@ function launchAgent(name, { allowMultiple = false } = {}) {
     const status = code === 0 ? 'completed' : 'failed';
     appendOutput(instanceName, `\n${code === 0 ? '✅' : '❌'} Agent ${instanceName} ${status} (exit code ${code})`);
     console.log(`${code === 0 ? '✅' : '❌'} [${new Date().toLocaleTimeString()}] ${instanceName} ${status} (exit ${code})`);
+
+    // Log despawn to autopilot console
+    if (baseAgent !== 'autopilot' && (running.has('autopilot') || autopilotEnabled)) {
+      const time = new Date().toLocaleTimeString('fr-FR');
+      const emoji = code === 0 ? '✅' : '❌';
+      appendOutput('autopilot', `${emoji} ${time} — ${instanceName} terminé (${status})`, code === 0 ? 'result' : 'error');
+    }
 
     // Update queue if we have a task ID
     if (child._queueId) {

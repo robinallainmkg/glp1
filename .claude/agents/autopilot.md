@@ -108,7 +108,7 @@ while true; do
 done
 ```
 
-L'editorial commit + push sur `main` uniquement (PAS sur production).
+L'editorial commit localement (PAS de push). Le validator se charge du push apres build check.
 
 ### Phase 4 — VALIDATE + DEPLOY
 
@@ -128,7 +128,7 @@ while true; do
 done
 ```
 
-Le validator fait le `npm run build`, et si OK merge `main` sur `production` (declenche le deploy FTP).
+Le validator fait le `npm run build`, et si OK push `main` (declenche le deploy FTP).
 
 ### Fin du cycle — LOG
 

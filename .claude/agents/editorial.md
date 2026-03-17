@@ -153,15 +153,14 @@ ON CONFLICT (slug) DO NOTHING;
 UPDATE content_opportunities SET status = 'published', updated_at = NOW() WHERE id = '<opp_id>';
 ```
 
-### 5. Git workflow — Commit et push sur main UNIQUEMENT
+### 5. Git workflow — Commit local UNIQUEMENT
 
 Apres toutes les modifications :
 
 1. Stage les fichiers modifies : `git add src/content/...`
 2. Commit sur `main` : `git commit -m "editorial: apply <n> corrections, <n> links, <n> new articles (cycle <N>)"`
-3. Push sur main : `git push origin main`
 
-**IMPORTANT** : Ne PAS merger sur `production`. Ne PAS lancer `npm run build`. C'est le **validator** qui fait le build check et le merge sur production. L'editorial ne fait QUE modifier les fichiers, commit et push sur `main`.
+**IMPORTANT** : Ne PAS faire `git push`. C'est le **validator** qui fait le build check et le push. L'editorial ne fait QUE modifier les fichiers et commit localement.
 
 ### 6. Post-deploy : marquer les tickets deployed
 

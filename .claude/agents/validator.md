@@ -195,21 +195,19 @@ INSERT INTO correction_tickets (
 | `html_output` | `html_issue` | `warning` |
 | `encoding` | `encoding_issue` | `urgent` |
 
-### 14. DEPLOY — Merge sur production (SI build OK)
+### 14. DEPLOY — Push sur main (SI build OK)
 
 **Cette etape ne s'execute QUE si le build a reussi (etape 2 = pass).**
 
 Si aucune erreur `severity: 'error'` de type `build` n'a ete trouvee :
 
 ```bash
-git checkout production
-git pull origin production --rebase
-git merge main --no-edit
-git push origin production
-git checkout main
+git add -A
+git commit -m "validator: fixes applied" --allow-empty
+git push origin main
 ```
 
-Le push sur `production` declenche automatiquement le deploy FTP via GitHub Actions.
+Le push sur `main` declenche automatiquement le deploy FTP via GitHub Actions.
 
 Apres le deploy, marque les tickets comme deployed :
 ```sql

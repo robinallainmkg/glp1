@@ -961,10 +961,6 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="console-header">
         <span class="console-title">Console</span>
         <div class="console-tabs" id="consoleTabs"></div>
-        <div class="console-filters">
-          <button class="console-filter-btn active" data-filter="detail" onclick="setConsoleFilter('detail')">Detail</button>
-          <button class="console-filter-btn" data-filter="essential" onclick="setConsoleFilter('essential')">Essentiel</button>
-        </div>
         <span class="console-status" id="consoleStatus"></span>
       </div>
       <div class="console-body" id="consoleBody">
@@ -1564,17 +1560,11 @@ import { supabaseConfig } from '../../lib/supabase';
   }
 
   // Console filter
-  let consoleFilterMode = 'detail';
-  function setConsoleFilter(mode) {
-    consoleFilterMode = mode;
+  // Always essential mode — hide tool/info noise
+  (function() {
     const body = document.getElementById('consoleBody');
-    body.className = 'console-body' + (mode === 'essential' ? ' filter-essential' : '');
-    // Update filter button active state
-    document.querySelectorAll('.console-filter-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.filter === mode);
-    });
-  }
-  window.setConsoleFilter = setConsoleFilter;
+    if (body) body.className = 'console-body filter-essential';
+  })();
 
   function formatConsoleTs(isoStr) {
     if (!isoStr) return '';
