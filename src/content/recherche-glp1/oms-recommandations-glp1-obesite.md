@@ -62,7 +62,7 @@ Concrètement, l'OMS recommande que les GLP-1 :
 L'OMS précise que ces traitements sont particulièrement pertinents pour :
 
 - Les adultes présentant un **IMC supérieur ou égal à 30 kg/m²** (obésité)
-- Les adultes avec un **IMC supérieur ou égal à 27 kg/m²** accompagné d'au moins une comorbidité liée au poids (diabète de type 2, hypertension, [apnée du sommeil traitée par GLP-1](/collections/effets-secondaires-glp1/glp1-apnee-sommeil-saos/), maladies cardiovasculaires)
+- Les adultes avec un **IMC supérieur ou égal à 27 kg/m²** accompagné d'au moins une comorbidité liée au poids (diabète de type 2, hypertension, [apnée du sommeil traitée par GLP-1](/collections/recherche-glp1/glp1-apnee-sommeil-saos/), maladies cardiovasculaires)
 - Les patients chez qui les **interventions non pharmacologiques** seules se sont avérées insuffisantes après une durée raisonnable
 
 ### Ce que l'OMS ne recommande PAS

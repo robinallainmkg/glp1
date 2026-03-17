@@ -3,7 +3,7 @@ title: "GLP-1 Perte de Poids Résultats Efficacité 2025 : Guide Complet"
 pubDate: 2025-08-20
 date: '2026-03-17'
 author: "Dr. Émilie Martin"
-description: "GLP-1 perte de poids résultats efficacité 2025 : mécanisme, résultats cliniques prouvés, témoignages patients et guide complet pour réussir votre amaigrissement."
+description: "GLP-1 perte de poids 2025 : mécanisme, résultats cliniques prouvés, témoignages patients et guide complet pour réussir votre amaigrissement."
 category: "Perte de poids"
 tags: ["glp1", "perte-de-poids", "minceur"]
 collection: "glp1-perte-de-poids"

@@ -5,6 +5,7 @@ keywords: ['ozempic procès', 'effets secondaires graves ozempic', 'recours juri
 seoTitle: "Ozempic Procès et Effets Graves : Vos Droits en France 2026"
 seoDescription: "Procès Ozempic aux USA pour gastroparésie. En France, droits des patients, déclaration ANSM et recours possibles pour effets secondaires graves GLP-1."
 publishedAt: '2026-03-17'
+date: '2026-03-17'
 updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'

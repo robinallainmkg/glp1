@@ -5,6 +5,7 @@ keywords: ['glp1 goutte', 'ozempic acide urique', 'wegovy goutte', 'glp1 hyperur
 seoTitle: "GLP-1 et Goutte : Risque d'Acide Urique — Étude 2026"
 seoDescription: "Étude 2026 : les GLP-1 augmentent-ils le risque de goutte ? Résultats, limites et recommandations pour les patients sous Ozempic ou Wegovy."
 publishedAt: '2026-03-17'
+date: '2026-03-17'
 updatedAt: '2026-03-17'
 featured: true
 author: 'Dr. Sophie Dubois'
