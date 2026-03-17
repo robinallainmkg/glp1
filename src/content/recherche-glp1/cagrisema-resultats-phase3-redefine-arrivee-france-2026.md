@@ -57,7 +57,7 @@ L'essai REDEFINE 1, publié en 2025 et présenté dans sa version complète au c
 
 | Groupe | Perte de poids moyenne | ≥ 20% de perte |
 |---|---|---|
-| **CagriSema 2,4/2,4 mg** | **-22,7%** | **46%** |
+| **CagriSema 2,4/2,4 mg** | **-22,7%** | **60%** |
 | Sémaglutide seul 2,4 mg | -16,1% | 26% |
 | Placebo | -2,3% | 2% |
 
@@ -69,7 +69,7 @@ En février 2026, Novo Nordisk a annoncé les résultats positifs de l'essai REI
 
 **Résultats clés à 52 semaines :**
 - Réduction de l'HbA1c : **-1,91 points** (vs -1,47 pour le sémaglutide seul)
-- Perte de poids : **-14,2%** du poids initial
+- Perte de poids : **-15,7%** du poids initial à 68 semaines (vs -3,1% pour le placebo)
 
 Ces résultats confirment l'intérêt de la combinaison dans la population diabétique, où CagriSema améliore à la fois le contrôle glycémique et la perte de poids par rapport au sémaglutide seul.
 

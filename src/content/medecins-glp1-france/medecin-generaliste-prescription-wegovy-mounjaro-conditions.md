@@ -166,7 +166,7 @@ En mars 2026, Wegovy et Mounjaro ne sont **pas remboursés par la Sécurité Soc
 
 ### Ce qui pourrait changer en 2026
 
-La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en février 2026. Les négociations de prix avec le CEPS sont en cours. Un remboursement est possible au **2e semestre 2026**, sous conditions :
+La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en décembre 2024. Les négociations de prix avec le CEPS sont en cours. Un remboursement est possible au **2e semestre 2026**, sous conditions :
 
 - IMC ≥ 35 kg/m²
 - Échec d'une prise en charge nutritionnelle bien conduite
@@ -202,4 +202,4 @@ Préparez votre consultation, apportez vos antécédents médicaux, et discutez 
 
 ---
 
-*Sources : ANSM - Évolution des conditions de prescription des analogues du GLP-1 (juin 2025), HAS - Avis de remboursement Wegovy (février 2026), Ameli.fr. Cet article est fourni à titre informatif et ne remplace pas un avis médical personnalisé. Consultez votre médecin avant de commencer tout traitement.*
+*Sources : ANSM - Évolution des conditions de prescription des analogues du GLP-1 (juin 2025), HAS - Avis de remboursement Wegovy (décembre 2024), Ameli.fr. Cet article est fourni à titre informatif et ne remplace pas un avis médical personnalisé. Consultez votre médecin avant de commencer tout traitement.*
