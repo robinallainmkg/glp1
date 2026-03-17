@@ -345,7 +345,7 @@ Plusieurs solutions existent pour réduire drastiquement le coût d'Ozempic :
 3. Prescription sur ordonnance sécurisée
 4. Délivrance en pharmacie agréée
 
-[Trouver un médecin prescripteur près de chez vous](/collections/medecins-glp1-france)
+[Trouver un médecin prescripteur près de chez vous](/medecins-glp1-france/)
 
 ### Quelle mutuelle rembourse le mieux Ozempic ?
 

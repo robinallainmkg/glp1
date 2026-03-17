@@ -348,7 +348,7 @@ En savoir plus sur les [résultats attendus avec Mounjaro](/collections/traiteme
 
 ### Puis-je boire de l'alcool avec les GLP-1 ?
 
-Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/regime-glp1/) pour plus de conseils nutritionnels.
+Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/regime-glp1/) pour plus de conseils nutritionnels.
 
 ### Les GLP-1 sont-ils remboursés pour tous ?
 
@@ -386,7 +386,7 @@ Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de r
 
 ### Où trouver un médecin prescripteur de GLP-1 ?
 
-Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
+Utilisez notre **[annuaire des médecins GLP-1 en France](/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
 
 ## 📋 Ressources Complémentaires
 
@@ -407,7 +407,7 @@ Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-
 - [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 ### Trouver un médecin
-- [Médecins GLP-1 en France](/collections/medecins-glp1-france/) - Annuaire par région et ville
+- [Médecins GLP-1 en France](/medecins-glp1-france/) - Annuaire par région et ville
 
 ---
 

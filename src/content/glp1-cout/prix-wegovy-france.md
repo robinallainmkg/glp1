@@ -384,7 +384,7 @@ Mais :
 3. **Vérification critères** : IMC ≥ 30 ou ≥ 27 avec comorbidités
 4. **Prescription** : Ordonnance sécurisée valable 3-6 mois
 
-[Trouver un médecin prescripteur Wegovy](/collections/medecins-glp1-france)
+[Trouver un médecin prescripteur Wegovy](/medecins-glp1-france/)
 
 ### Comment réduire le coût de Wegovy ?
 
@@ -508,7 +508,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ### Comparatifs et Choix
 - **[Wegovy vs Ozempic : Le Match Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement pour votre profil ?
-- **[Tous les Traitements GLP-1](/collections/glp1-cout)** - Vue d'ensemble des prix
+- **[Tous les Traitements GLP-1](/glp1-cout/)** - Vue d'ensemble des prix
 
 ### Médecins et Suivi
 - **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire complet

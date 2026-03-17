@@ -229,7 +229,7 @@ Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide
 ### Réussite du traitement
 - **Observance** : Prises régulières
 - **Suivi médical** : Consultations respectées
-- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/regime-glp1/))
+- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/regime-glp1/))
 - **Activité physique** : Recommandée
 
 ## ❓ FAQ - Questions Fréquentes
@@ -259,7 +259,7 @@ La plupart des effets secondaires sont **bénins et temporaires** (nausées, dia
 - Boire du gingembre ou infusion menthe
 - Prendre des anti-nauséeux si prescrit
 
-Voir notre [guide alimentation sous GLP-1](/collections/regime-glp1/).
+Voir notre [guide alimentation sous GLP-1](/regime-glp1/).
 
 ### Mounjaro cause-t-il la perte de cheveux ?
 
@@ -321,7 +321,7 @@ Limitez à 1-2 verres occasionnels.
 
 ### Remboursement et accès
 - [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) - Toutes les options
-- [Médecins GLP-1 en France](/collections/medecins-glp1-france/) - Trouver un prescripteur
+- [Médecins GLP-1 en France](/medecins-glp1-france/) - Trouver un prescripteur
 
 ---
 

@@ -250,7 +250,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 1. **Consultation médicale initiale**
    - Évaluation de l'indication thérapeutique (diabète type 2 ou obésité)
    - Vérification des critères de remboursement
-   - [Consulter notre annuaire de médecins spécialisés](/collections/medecins-glp1-france)
+   - [Consulter notre annuaire de médecins spécialisés](/medecins-glp1-france/)
 
 2. **Prescription et délivrance**
    - Ordonnance sécurisée requise
@@ -276,7 +276,7 @@ Le coût mensuel pour le patient varie entre 230 et 440 euros selon le dosage, M
 L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel remboursement au 2e semestre 2026.
 
 ### Contacts Utiles
-- **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france)
+- **Consultation spécialisée** : [Trouver un endocrinologue](/medecins-glp1-france/)
 - **Information médicale Eli Lilly** : 0 800 10 12 13
 - **Assurance Maladie** : 3646 ou ameli.fr
 
@@ -458,7 +458,7 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 - **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro)** - Posologie, efficacité et mode d'emploi détaillé
 - **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)** - Tous les effets indésirables et comment les gérer
 - **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition adaptée pour maximiser la perte de poids
-- **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france)** - Annuaire des endocrinologues et diabétologues
+- **[Trouver un Médecin Prescripteur](/medecins-glp1-france/)** - Annuaire des endocrinologues et diabétologues
 - **[Mounjaro vs Ozempic : Comparatif Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement choisir selon votre profil
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Alternative si Mounjaro n'est pas accessible
 
