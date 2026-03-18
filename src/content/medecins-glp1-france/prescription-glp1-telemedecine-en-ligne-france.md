@@ -104,7 +104,7 @@ Les tarifs varient selon les plateformes :
 
 ### Le coût du médicament reste inchangé
 
-La téléconsultation ne change rien au prix du médicament lui-même, qui dépend de la pharmacie et de votre couverture santé. En 2026, [Wegovy coûte entre 169 et 360 €/mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, et Mounjaro entre 230 et 440 €/mois. Ces médicaments ne sont pas remboursés par la Sécurité Sociale à la date de rédaction de cet article, bien qu'un remboursement partiel soit en cours d'évaluation.
+La téléconsultation ne change rien au prix du médicament lui-même, qui dépend de la pharmacie et de votre couverture santé. En 2026, [Wegovy coûte entre 169 et 360 €/mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, et Mounjaro entre 230 et 440 €/mois. Ces médicaments ne sont pas remboursés par la Sécurité Sociale en mars 2026. Cependant, la HAS a émis un avis économique favorable pour Wegovy (juillet 2025) et un avis favorable pour Mounjaro (décembre 2025). Les négociations de prix avec le CEPS sont en cours et un remboursement conditionnel est attendu pour le second semestre 2026.
 
 ## Comment choisir une plateforme sérieuse ?
 

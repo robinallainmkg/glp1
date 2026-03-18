@@ -72,7 +72,7 @@ Cette étude pionnière comporte des limitations importantes : taille d'échanti
 
 ## L'essai ALBATROS : résultats 2025-2026 {#albatros}
 
-L'essai clinique ALBATROS (ALcohol Behavior And Treatment Responses of Oral Semaglutide) est une étude randomisée de phase II conduite au Danemark, coordonnée par l'Université d'Aarhus et soutenue par le Danish National Research Foundation.
+L'essai clinique ALBATROS (ALcohol Behavior And Treatment Responses of Oral Semaglutide) est une étude randomisée de phase II conduite au Danemark, coordonnée par le Pr Anders Fink-Jensen (Université de Copenhague, Centre hospitalier psychiatrique) et soutenue par le Danish National Research Foundation.
 
 ### Design de l'étude
 
@@ -89,6 +89,10 @@ Les résultats intermédiaires présentés au congrès de la European Associatio
 - **Jours d'abstinence totale** : augmentés de 3,2 jours par semaine dans le groupe sémaglutide contre 1,8 jours dans le groupe placebo
 - **Réduction du craving** : score de craving (OCDS) réduit de 41 % versus 18 % sous placebo
 - **Tolérance** : 18 % d'abandon dans le groupe sémaglutide (principalement pour effets digestifs), versus 12 % dans le groupe placebo
+
+### Une précision importante sur les résultats intermédiaires
+
+Les données préliminaires méritent une nuance : l'effet du sémaglutide sur la réduction de la consommation d'alcool n'est pas significatif dans la population globale de l'étude. L'effet observé est principalement porté par le sous-groupe des patients en surpoids (IMC > 25). Cela suggère que le mécanisme d'action pourrait passer en partie par les effets métaboliques du sémaglutide, et non uniquement par son action sur le circuit de la récompense. Ces résultats incitent à la prudence dans la généralisation à tous les patients avec trouble de l'usage de l'alcool.
 
 ### Publication complète prévue fin 2026
 

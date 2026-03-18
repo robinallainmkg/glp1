@@ -124,7 +124,7 @@ Novo Nordisk a déposé un dossier auprès de l'**Agence européenne des médica
 
 | Étape | Date estimée |
 |-------|-------------|
-| Dépôt dossier EMA | T1 2026 (confirmé) |
+| Dépôt dossier EMA | S2 2025 (effectué) |
 | Avis du CHMP | T4 2026 - T1 2027 |
 | AMM européenne | T1 2027 (estimation) |
 | Disponibilité en pharmacie (France) | S2 2027 (estimation) |

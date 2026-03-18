@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-La pancréatite est l'un des effets indésirables graves les plus discutés autour des traitements GLP-1. Après qu'un décès lié à une pancréatite par mésusage d'un analogue GLP-1 a été signalé par l'ANSM, de nombreux patients s'interrogent : quel est le risque réel ? Suis-je concerné ? Quels symptômes surveiller ? Voici ce que la science dit en 2026.
+La pancréatite est l'un des effets indésirables graves les plus discutés autour des traitements GLP-1. Après qu'un décès survenu dans le contexte d'une pancréatite par mésusage d'un analogue GLP-1 a été signalé par l'ANSM — sans qu'un lien de causalité direct avec le médicament ait pu être établi — de nombreux patients s'interrogent : quel est le risque réel ? Suis-je concerné ? Quels symptômes surveiller ? Voici ce que la science dit en 2026.
 
 ## Qu'est-ce que la pancréatite et pourquoi les GLP-1 sont concernés ?
 
@@ -54,7 +54,7 @@ L'étude SELECT de 2023 — qui a suivi 17 604 patients prenant du sémaglutide 
 
 ### Le cas particulier du mésusage signalé par l'ANSM
 
-En 2024, l'ANSM a publié un point de pharmacovigilance faisant état d'un décès par pancréatite dans le contexte d'un mésusage d'analogue GLP-1. Cette situation — où le médicament était utilisé hors indication médicale, sans suivi médical approprié — illustre l'importance cruciale d'un encadrement médical rigoureux.
+En 2024-2025, l'ANSM a publié un point de pharmacovigilance faisant état d'un décès suite à une pancréatite dans le contexte d'un mésusage d'analogue GLP-1. L'ANSM précise toutefois que les données disponibles ne permettent pas d'établir un lien de causalité direct entre le médicament et ce décès. Cette situation — où le médicament était utilisé hors indication médicale, sans suivi médical approprié — illustre néanmoins l'importance cruciale d'un encadrement médical rigoureux.
 
 L'ANSM a également signalé plusieurs cas de pancréatites aiguës, dont certaines sévères, chez des patients utilisant ces médicaments sans indication validée. Ces données ont conduit à un renforcement de la surveillance et des règles de prescription depuis juin 2025.
 

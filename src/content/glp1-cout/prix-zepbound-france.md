@@ -67,7 +67,7 @@ affiliateConfig:
         "name": "Zepbound est-il remboursé en 2025 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Zepbound est remboursé à En cours par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+          "text": "Zepbound n'existe pas en France. Le tirzépatide est vendu sous le nom Mounjaro et n'est pas remboursé par la Sécurité Sociale en mars 2026. Un remboursement est attendu au 2e semestre 2026 pour IMC ≥ 35 après échec nutritionnel, suite à l'avis favorable de la HAS en décembre 2025."
         }
       }
     ]

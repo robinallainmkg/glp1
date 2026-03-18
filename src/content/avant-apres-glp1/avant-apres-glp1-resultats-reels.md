@@ -88,7 +88,7 @@ Au-delà des chiffres, les patients français qui témoignent dans les associati
 
 **La relation au corps se reconstruit.** Pour des patients en situation d'obésité depuis des années, parfois des décennies, les transformations physiques ont un impact psychologique fort. La plupart des témoignages soulignent l'amélioration de la confiance en soi, de la mobilité, et de la qualité du sommeil.
 
-**Les résultats ne sont pas linéaires.** Quasi tous les patients décrivent des "plateaux" — des périodes de 2 à 6 semaines où le poids stagne malgré le traitement. Ces plateaux sont normaux et ne signifient pas que le traitement ne fonctionne plus.
+**Les résultats ne sont pas linéaires.** Quasi tous les patients décrivent des "[plateau de poids](/collections/glp1-perte-de-poids/plateau-poids-glp1-ozempic-wegovy-causes-solutions/)" — des périodes de 2 à 6 semaines où le poids stagne malgré le traitement. Ces plateaux sont normaux et ne signifient pas que le traitement ne fonctionne plus.
 
 ## Quelle Durée pour des Résultats Visibles ?
 

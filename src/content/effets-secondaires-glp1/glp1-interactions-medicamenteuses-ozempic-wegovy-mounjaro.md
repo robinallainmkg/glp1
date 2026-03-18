@@ -59,13 +59,13 @@ Bien que moins susceptibles d'interactions que les AVK, les AOD peuvent égaleme
 
 ### Contraceptifs oraux
 
-Les contraceptifs oraux combinés (pilule contraceptive) sont particulièrement concernés. Ces médicaments requièrent une absorption régulière et fiable pour garantir leur efficacité contraceptive.
+Les contraceptifs oraux combinés (pilule contraceptive) font l'objet d'une surveillance en pharmacovigilance dans le contexte des traitements GLP-1.
 
-**Ce que disent les fabricants**
-Novo Nordisk mentionne explicitement dans le RCP du sémaglutide que les contraceptifs oraux peuvent être affectés par le ralentissement de la vidange gastrique. Les études pharmacocinétiques ont montré une modification de l'absorption des contraceptifs oraux chez les patientes traitées par sémaglutide, particulièrement pendant la phase de montée en dose.
+**Ce que disent les données officielles**
+Les études pharmacocinétiques publiées (Novo Nordisk) montrent que le sémaglutide ne réduit pas la biodisponibilité de l'éthinylestradiol et du lévonorgestrel de façon cliniquement pertinente. Le RCP officiel de l'Ozempic/Wegovy ne fait donc pas état d'une interaction pharmacocinétique significative avec les contraceptifs oraux combinés. Des grossesses ont cependant été signalées à l'EMA chez des femmes sous sémaglutide et contraceptifs oraux, mais le lien causal n'est pas établi — des vomissements importants en début de traitement pourraient réduire l'efficacité de la pilule dans certains cas.
 
 **La recommandation pratique**
-Si vous prenez une pilule contraceptive, il est recommandé d'utiliser une méthode contraceptive supplémentaire (préservatif) pendant les 4 semaines suivant le début du traitement GLP-1 et pendant les 4 semaines après chaque augmentation de dose. Parlez-en à votre gynécologue.
+Par précaution, si vous prenez une pilule contraceptive et que vous souffrez de vomissements importants en début de traitement GLP-1, discutez-en avec votre médecin ou gynécologue. Une contraception complémentaire (préservatif) peut être envisagée pendant les phases de vomissements intenses.
 
 ### Médicaments pour la thyroïde
 
@@ -79,7 +79,7 @@ Certains antiépileptiques à marge thérapeutique étroite sont potentiellement
 
 ### Antibiotiques
 
-La plupart des antibiotiques courants ne posent pas de problème majeur. Cependant, certains antibiotiques dont la fenêtre d'absorption est précise peuvent être légèrement affectés. Le cas de la **cyclosporine** (immunosuppresseur parfois utilisé comme antibiotique adjuvant en dermatologie ou pour les greffés) est plus préoccupant, car il s'agit d'une molécule à marge étroite.
+La plupart des antibiotiques courants ne posent pas de problème majeur. Cependant, certains antibiotiques dont la fenêtre d'absorption est précise peuvent être légèrement affectés. Le cas de la **cyclosporine** (immunosuppresseur à marge thérapeutique étroite, utilisé en dermatologie pour les maladies auto-immunes sévères comme le psoriasis et l'eczéma grave, et pour les patients transplantés) est plus préoccupant, car il s'agit d'une molécule à marge étroite.
 
 ### Médicaments pour le diabète : hypoglycémie à surveiller
 
@@ -126,7 +126,7 @@ Le ralentissement de la vidange gastrique créé par les GLP-1 a une importance 
 
 Les recommandations actuelles des sociétés d'anesthésie préconisent :
 - D'arrêter un GLP-1 hebdomadaire (Ozempic, Wegovy, Mounjaro) **au moins 7 jours avant** une intervention programmée
-- D'arrêter un GLP-1 quotidien (liraglutide/Saxenda) **au moins 3 jours avant**
+- D'arrêter un GLP-1 quotidien (liraglutide/Saxenda) **le jour de l'intervention** (ou la veille par précaution selon le protocole anesthésique, conformément aux recommandations PRAC de juillet 2024)
 - D'informer l'équipe anesthésique si l'arrêt n'a pas pu être effectué dans ces délais
 - De réaliser une échoendoscopie gastrique en préopératoire dans certains cas à risque
 

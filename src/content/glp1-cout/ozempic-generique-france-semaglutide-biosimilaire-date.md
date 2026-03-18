@@ -86,7 +86,7 @@ La concurrence sera forte une fois les brevets levés, ce qui laisse espérer un
 
 À titre de comparaison, les biosimilaires de l'insuline (molécule de structure similaire) ont permis des réductions de prix de **20 à 50 %** dans les années suivant leur mise sur le marché. Les biosimilaires des anti-TNF (traitement de rhumatismes) ont quant à eux engendré des baisses de **30 à 70 %**.
 
-Pour le sémaglutide, les projections varient selon les analystes. Une réduction de **30 à 60 %** du prix actuel (77,60 € TTC/stylo Ozempic) est envisageable une fois la concurrence installée, soit un prix potentiel de **30 à 55 € par stylo**.
+Pour le sémaglutide, les projections varient selon les analystes. Une réduction de **30 à 60 %** du prix actuel (76,58 € TTC/stylo Ozempic selon Vidal) est envisageable une fois la concurrence installée, soit un prix potentiel de **30 à 55 € par stylo**.
 
 Cela ne rendrait Ozempic complètement "abordable" pour tous que si le remboursement Sécurité Sociale progressait en parallèle.
 
@@ -108,7 +108,7 @@ Pour plus de détails, consultez notre guide sur le [remboursement GLP-1 2026](/
 
 ### 3. Victoza et Saxenda en fin de vie : des prix en baisse
 
-Victoza (liraglutide pour le diabète) a été arrêté en 2026. Saxenda (liraglutide 3 mg pour l'obésité) est encore commercialisé à 240-300 €/mois. Si votre objectif est la perte de poids et que vous n'avez pas de diabète, Saxenda reste plus accessible que Wegovy, même si son efficacité est inférieure.
+Victoza (liraglutide pour le diabète) est en cours d'arrêt de commercialisation — Novo Nordisk a annoncé la fin de sa distribution dans l'UE/EEE d'ici fin 2026. L'EMA recommande de ne pas initier de nouveau traitement avec Victoza. Saxenda (liraglutide 3 mg pour l'obésité) est encore commercialisé à 240-300 €/mois. Si votre objectif est la perte de poids et que vous n'avez pas de diabète, Saxenda reste plus accessible que Wegovy, même si son efficacité est inférieure.
 
 ### 4. Les aides financières et dispositifs d'accès
 

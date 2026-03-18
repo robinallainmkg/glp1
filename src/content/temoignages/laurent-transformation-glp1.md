@@ -99,7 +99,7 @@ mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 3. **Accepter les hauts et bas** : Il y aura des plateaux
 
 ### Pratique
-1. **Planifier les repas** : Surtout avec un travail prenant
+1. **Planifier les repas** : Surtout avec un travail prenant. Laurent a suivi un [régime alimentaire adapté à Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/) pour optimiser ses résultats.
 2. **Toujours avoir un en-cas sain** : Éviter le fast-food
 3. **Utiliser une app** : Pour tracker facilement
 

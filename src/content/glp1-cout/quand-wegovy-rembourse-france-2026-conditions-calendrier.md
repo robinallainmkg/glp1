@@ -122,11 +122,13 @@ En pratique, si vous pesez 95 kg pour 1,70 m (IMC = 32,9), vous ne serez éligib
 
 En attendant le remboursement, Wegovy est disponible en pharmacie sur ordonnance au [prix suivant](/collections/glp1-cout/prix-wegovy-france/) :
 
-- **Wegovy 0,25 mg** (dose d'initiation) : environ 250 euros par mois
-- **Wegovy 0,5 mg** : environ 270 euros par mois
-- **Wegovy 1 mg** : environ 280 euros par mois
-- **Wegovy 1,7 mg** : environ 290 euros par mois
-- **Wegovy 2,4 mg** (dose de maintien) : environ **300 euros par mois**
+- **Wegovy 0,25 mg** (dose d'initiation) : environ **169 à 200 euros par mois** (prix libre, variable selon les pharmacies)
+- **Wegovy 0,5 mg** : environ 200 à 250 euros par mois
+- **Wegovy 1 mg** : environ 250 à 290 euros par mois
+- **Wegovy 1,7 mg** : environ 280 à 320 euros par mois
+- **Wegovy 2,4 mg** (dose de maintien) : environ **295 à 360 euros par mois** (prix variables selon les pharmacies)
+
+Le prix de Wegovy est fixé librement par les pharmacies. Comparer les tarifs entre plusieurs officines peut permettre de réaliser des économies significatives, en particulier sur les doses initiales.
 
 ### La prise en charge par les mutuelles
 

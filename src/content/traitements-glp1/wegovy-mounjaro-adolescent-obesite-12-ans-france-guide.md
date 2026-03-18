@@ -74,8 +74,9 @@ Au-delà du poids, l'essai STEP TEENS a documenté des améliorations significat
 Pour qu'un médecin puisse prescrire Wegovy à un adolescent, les critères suivants doivent être réunis :
 
 1. **Âge ≥ 12 ans** et développement pubertaire en cours ou terminé
-2. **Obésité sévère** : IMC ≥ au 95e percentile pour l'âge et le sexe, avec au moins une comorbidité liée au poids
-3. **Échec des mesures hygiéno-diététiques** : une prise en charge nutritionnelle et comportementale bien conduite pendant au moins 6 mois doit avoir été tentée
+2. **Poids corporel > 60 kg** (condition AMM spécifique aux adolescents)
+3. **Obésité sévère** : IMC ≥ au 95e percentile pour l'âge et le sexe, avec au moins une comorbidité liée au poids
+4. **Échec des mesures hygiéno-diététiques** : une prise en charge nutritionnelle et comportementale bien conduite pendant au moins 6 mois doit avoir été tentée
 4. **Absence de contre-indication** : antécédents personnels ou familiaux de carcinome médullaire thyroïdien, syndrome MEN2, pancréatite chronique ou grossesse
 
 ### Contre-indications spécifiques à l'adolescent

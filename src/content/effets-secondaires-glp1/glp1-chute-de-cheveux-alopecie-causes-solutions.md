@@ -144,7 +144,7 @@ En résumé, si vous constatez une augmentation de votre chute de cheveux sous O
 
 1. **Ne paniquez pas** : dans 90 % des cas, c'est un effluvium télogène temporaire lié à la perte de poids
 2. **Vérifiez vos apports en protéines** et augmentez-les si nécessaire (objectif : ≥ 1,2 g/kg/jour)
-3. **Réalisez un bilan biologique** comprenant ferritine, zinc, vitamine D pour détecter d'éventuelles carences
+3. **Réalisez un bilan biologique** comprenant ferritine, zinc, vitamine D pour détecter d'éventuelles [carences en fer et zinc sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), fréquentes et souvent impliquées dans la chute de cheveux
 4. **Consultez votre médecin** si la chute est très importante ou dure plus de 6 mois
 5. **Consultez un dermatologue** si aucune amélioration après 18 mois ou si des plaques chauves apparaissent
 6. **Continuez votre traitement** sauf avis contraire de votre médecin : l'effluvium n'est pas une raison d'arrêter un traitement GLP-1 bénéfique
