@@ -62,7 +62,7 @@ Des cas de cécité partielle irréversible ont été associés à l'usage de s�
 
 ### L'argument juridique central
 
-Le cœur des plaintes américaines repose sur un argument de **défaut d'information** : les fabricants auraient connu ou dû connaître le risque de gastroparésie grave avant que les médicaments ne soient largement prescrits hors indication (pour la perte de poids), et n'auraient pas suffisamment alerté médecins et patients. Un premier accord partiel a été annoncé fin 2025 pour certains cas, mais les procédures sont toujours en cours.
+Le cœur des plaintes américaines repose sur un argument de **défaut d'information** : les fabricants auraient connu ou dû connaître le risque de gastroparésie grave avant que les médicaments ne soient largement prescrits hors indication (pour la perte de poids), et n'auraient pas suffisamment alerté médecins et patients. Une partie des procès concerne des cas de [mésusage des GLP-1 à l'origine des recours juridiques](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) — patients ayant utilisé Ozempic hors AMM. Un premier accord partiel a été annoncé fin 2025 pour certains cas, mais les procédures sont toujours en cours.
 
 ## La situation en France : un cadre très différent
 

@@ -153,7 +153,7 @@ La situation evolue rapidement pour les deux traitements :
 
 **Mounjaro** : La HAS a rendu un **avis favorable le 19 novembre 2025** (avis CT21349) pour le diabete de type 2 et l'obesite (IMC >= 35). Les negociations tarifaires avec le CEPS sont egalement en cours. Le remboursement est attendu au **2e semestre 2026**.
 
-Pour les patients diabetiques, **Ozempic** (meme principe actif que Wegovy, dosage inferieur) reste l'alternative remboursee a 30% par la Securite Sociale.
+Pour les patients diabetiques, **Ozempic** (meme principe actif que Wegovy, dosage inferieur) reste l'alternative remboursee a 30% par la Securite Sociale. Pour les patients diabétiques de type 2, les conditions de prescription et de remboursement diffèrent — consultez notre guide [GLP-1 pour le diabète de type 2 en France](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
 
 ### Strategies pour reduire le cout
 

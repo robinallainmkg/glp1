@@ -92,7 +92,7 @@ L'essai STEP 1, qui a évalué le sémaglutide 2,4 mg ([Wegovy](/collections/tra
 
 Les résultats sur la graisse viscérale sont significatifs :
 
-- **Réduction du volume de graisse viscérale** : -40% en moyenne dans le groupe sémaglutide vs -11% dans le groupe placebo
+- **Réduction du volume de graisse viscérale** : -27,4 % en moyenne dans le groupe sémaglutide vs -11 % dans le groupe placebo (étude STEP 1, sémaglutide 2,4 mg, 68 semaines)
 - **Réduction du tour de taille** : -13,5 cm en moyenne (vs -4,1 cm sous placebo)
 - **Ratio graisse viscérale/sous-cutanée** : la proportion de graisse perdue était davantage viscérale que sous-cutanée, confirmant l'effet préférentiel
 
@@ -120,11 +120,11 @@ Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traite
 | Paramètre | Tirzépatide | Placebo | Différence |
 |-----------|-------------|---------|------------|
 | Perte de poids totale | -20,9% | -3,1% | -17,8 pts |
-| Réduction graisse viscérale | -44% | -9% | -35 pts |
+| Réduction graisse viscérale | -40,1% | -9% | -31,1 pts |
 | Réduction tour de taille | -17,2 cm | -4,0 cm | -13,2 cm |
 | Réduction graisse totale | -33% | -8% | -25 pts |
 
-Le tirzépatide réduit la graisse viscérale de manière encore plus marquée que le sémaglutide, en partie grâce à son double mécanisme d'action GLP-1 + GIP. Le récepteur GIP (Glucose-Dependent Insulinotropic Polypeptide) joue un rôle dans le métabolisme adipeux et potentialise les effets du GLP-1 sur le déstockage des graisses abdominales.
+Le tirzépatide réduit la graisse viscérale de -40,1 % dans l'étude SURMOUNT-1 (72 semaines), de manière encore plus marquée que le sémaglutide, en partie grâce à son double mécanisme d'action GLP-1 + GIP. Le récepteur GIP (Glucose-Dependent Insulinotropic Polypeptide) joue un rôle dans le métabolisme adipeux et potentialise les effets du GLP-1 sur le déstockage des graisses abdominales.
 
 ### SURMOUNT-4 : données sur le maintien de la réduction viscérale
 
@@ -136,7 +136,7 @@ Il n'existe pas d'essai tête-à-tête direct comparant les deux molécules sur 
 
 | | Ozempic/Wegovy (sémaglutide 2,4 mg) | Mounjaro (tirzépatide 15 mg) |
 |---|---|---|
-| Réduction graisse viscérale | ~40% | ~44% |
+| Réduction graisse viscérale | -27,4% (STEP 1) | ~40,1% (SURMOUNT-1) |
 | Réduction tour de taille | ~13,5 cm | ~17,2 cm |
 | Perte de poids totale | ~15-17% | ~20-22% |
 

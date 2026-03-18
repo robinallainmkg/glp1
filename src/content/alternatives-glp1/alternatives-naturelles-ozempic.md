@@ -57,7 +57,7 @@ Les GLP-1, agonistes GLP-1, diabète type 2 sont des éléments clés dans ce do
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour. Parmi ces alternatives, la [berbérine et son effet GLP-1 naturel](/collections/alternatives-glp1/berberine-glp1/) bénéficie du plus de preuves scientifiques pour la glycémie et la perte de poids.
 
 ## Prix, disponibilité et variations en France
 

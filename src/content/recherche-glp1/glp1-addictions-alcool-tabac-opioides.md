@@ -55,7 +55,7 @@ Ces expériences ont permis de confirmer que l'effet ne passe pas uniquement par
 
 Les témoignages de patients sous GLP-1 concernant l'alcool ont été si nombreux et convergents qu'ils ont attiré l'attention de la communauté scientifique. Des études observationnelles ont ensuite confirmé cette tendance.
 
-Une analyse des données de prescription publiée en 2023 dans la revue *Nature Communications* a montré que les patients sous sémaglutide présentaient un taux d'hospitalisation pour troubles liés à l'alcool significativement inférieur à celui des patients sous d'autres traitements antidiabétiques — une différence d'environ 50 % sur deux ans de suivi.
+Une analyse des données de prescription publiée en 2024 dans la revue *Nature Communications* a montré que les patients sous sémaglutide présentaient un taux d'hospitalisation pour troubles liés à l'alcool significativement inférieur à celui des patients sous d'autres traitements antidiabétiques — une différence d'environ 50 % sur deux ans de suivi.
 
 ### Les essais cliniques en cours
 
@@ -65,7 +65,7 @@ Plusieurs essais randomisés contrôlés sont désormais en cours pour évaluer 
 
 **GLP1-AUD** (en Europe) : Un essai multicentrique impliquant plusieurs universités européennes évalue le liraglutide et le sémaglutide injectables dans les troubles de l'usage de l'alcool. La France participe à cet essai via l'APHP.
 
-Si ces résultats se confirment, les GLP-1 pourraient représenter la première nouvelle classe de médicaments pour les addictions à l'alcool depuis des décennies — aux côtés de la naltrexone et de l'acamprosate, actuellement seuls traitements médicamenteux disponibles.
+Si ces résultats se confirment, les GLP-1 pourraient représenter la première nouvelle classe de médicaments pour les addictions à l'alcool depuis des décennies — aux côtés de la naltrexone (Revia), de l'acamprosate (Campral), du disulfirame (Espéral) et du nalméfène (Selincro), traitements médicamenteux actuellement approuvés en France. Le nalméfène se distingue en permettant une réduction de la consommation sans obligation d'abstinence totale, ce qui le rend particulièrement adapté à certains profils de patients.
 
 ## GLP-1 et tabac : un effet sur la cigarette ?
 
@@ -130,4 +130,4 @@ En attendant, la recherche sur ce sujet est l'une des plus actives en médecine 
 
 ---
 
-*Sources : Klausen MK et al., « Semaglutide reduces alcohol consumption in individuals with alcohol use disorder », Nature Communications, 2023 ; NIDA (National Institute on Drug Abuse), GLP-1 and addiction research program, 2024 ; Inserm, axes de recherche GLP-1 et addictions, 2025.*
+*Sources : Klausen MK et al., « Semaglutide reduces alcohol consumption in individuals with alcohol use disorder », Nature Communications, 2024 ; NIDA (National Institute on Drug Abuse), GLP-1 and addiction research program, 2024 ; Inserm, axes de recherche GLP-1 et addictions, 2025.*

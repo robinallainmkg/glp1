@@ -58,7 +58,7 @@ Saxenda est spécifiquement indiqué pour la prise en charge à long terme de l'
 
 ### Avantages dans l'obésité
 - Perte de poids moyenne de 5-10% du poids initial
-- Maintien du poids chez 70% des patients après 1 an
+- Maintien d'une perte de poids significative (≥5%) chez environ 56% des patients à 56 semaines (étude SCALE Obesity)
 - Amélioration des comorbidités associées
 - Injection quotidienne facile
 
@@ -144,7 +144,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Autres GLP-1 pour l'obésité
 - **Wegovy** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
-- **Mounjaro** : Tirzepatide (injection hebdomadaire, double action GLP-1 + GIP, non remboursé)
+- **Mounjaro** : Tirzepatide (injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, remboursement envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases

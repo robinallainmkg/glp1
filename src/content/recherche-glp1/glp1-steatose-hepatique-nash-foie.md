@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Stéatose Hépatique NASH : Traitement 2026"
-description: "GLP-1 stéatose hépatique NASH foie gras : le sémaglutide résout la NASH chez 56% des patients. Nouvelle indication prometteuse et recommandations 2026."
+description: "GLP-1 stéatose hépatique NASH foie gras : le sémaglutide résout la MASH chez 62,9% des patients (essai ESSENCE). FDA approuve Wegovy pour la MASH en août 2025."
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
@@ -139,7 +139,7 @@ Si vous êtes déjà sous traitement GLP-1 (Ozempic, Wegovy, [Mounjaro](/collect
 
 ### Les GLP-1 peuvent-ils guérir la NASH ?
 
-Les études montrent une résolution de la MASH (disparition de l'inflammation) chez 50 à 60% des patients traités par sémaglutide. Cependant, la fibrose avancée (cicatrices du foie) est plus difficile à inverser. Un traitement précoce est donc essentiel.
+Les études montrent une résolution de la MASH (disparition de l'inflammation) chez 62,9 % des patients traités par sémaglutide 2,4 mg (essai ESSENCE, NEJM 2025). Cependant, la fibrose avancée (cicatrices du foie) est plus difficile à inverser. Un traitement précoce est donc essentiel.
 
 ### Faut-il demander un traitement GLP-1 si j'ai une stéatose hépatique ?
 

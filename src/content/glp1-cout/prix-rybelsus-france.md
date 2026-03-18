@@ -53,7 +53,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
         "name": "Quel est le prix de Rybelsus en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel de Rybelsus en pharmacie est de 80-110€ par mois. Après remboursement (65% Sécurité Sociale pour le diabète de type 2 + mutuelle), le coût réel patient varie selon votre couverture."
+          "text": "Le prix officiel de Rybelsus en pharmacie est de 80-110€ par mois. Rybelsus n'est pas remboursé par la Sécurité Sociale (avis défavorable HAS). Le coût est intégralement à la charge du patient, sauf prise en charge partielle par certaines mutuelles."
         }
       },
       {
@@ -111,12 +111,11 @@ Rybelsus n'étant pas remboursé par l'Assurance Maladie (avis défavorable de l
 
 ### Participation mutuelle
 
-**Mutuelle obligatoire** pour compléter le remboursement :
+Rybelsus n'étant pas remboursé par la Sécurité Sociale, il n'y a pas de ticket modérateur ni de base de remboursement. Le coût reste intégralement à la charge du patient. Certaines mutuelles peuvent proposer une prise en charge partielle dans le cadre d'un forfait "médicaments non remboursés" ou "innovation médicale" :
 
-- **Remboursement Sécu** : Non remboursé du tarif de base
-- **Ticket modérateur** : 35% restant
-- **Mutuelle** : Prend en charge 15-30% supplémentaire
-- **Reste à charge** : 5-20% selon votre contrat
+- **Remboursement Sécu** : Non remboursé
+- **Mutuelle** : Prise en charge partielle possible selon contrat (50-500€/an)
+- **Reste à charge** : Majorité du coût mensuel (80-110€)
 
 ### Exemples de remboursement
 

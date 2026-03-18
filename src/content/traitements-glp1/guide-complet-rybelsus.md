@@ -131,7 +131,7 @@ Rybelsus doit être pris à jeun, au moins 30 minutes avant le premier repas de 
 ## Alternatives à Rybelsus
 
 ### Autres GLP-1 oraux
-- **Adlyxin** : Lixisénatide (injection quotidienne)
+- À ce jour, Rybelsus (sémaglutide) est le seul GLP-1 disponible en comprimés oraux en France.
 
 ### GLP-1 injectables
 - **Ozempic** : Semaglutide (injection hebdomadaire)
@@ -161,7 +161,7 @@ Non, Rybelsus doit être pris à jeun, 30 minutes avant le premier repas, et il 
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Rybelsus est-il remboursé ?
-Rybelsus est remboursé à **65 %** par l'Assurance Maladie pour le diabète de type 2 (100 % en ALD). Son prix se situe entre 80 € et 110 € par mois selon le dosage. Il n'est pas remboursé pour la perte de poids seule.
+Rybelsus **n'est pas remboursé** par l'Assurance Maladie en France. La Haute Autorité de Santé (HAS) a rendu un avis défavorable au remboursement, considérant que Rybelsus n'a pas de place démontrée dans la stratégie thérapeutique du diabète de type 2. Son coût est intégralement à la charge du patient, soit environ 80 à 110 €/mois selon le dosage. Contrairement à Ozempic, Trulicity et Victoza qui sont remboursés à 65 % pour le diabète de type 2, Rybelsus ne bénéficie d'aucun remboursement.
 
 ### Puis-je arrêter Rybelsus brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale.

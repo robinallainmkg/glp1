@@ -48,9 +48,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Sleeve Gastrectomie :**
 
-* Secteur public : **0 € à 500 €** (après remboursement)
+* Secteur public : reste à charge variable. Coût brut 4 000€ à 8 000€, SS rembourse environ 357€ à 608€ du tarif de base. Avec une mutuelle complémentaire, le reste à charge effectif peut être quasi nul.
 * Clinique privée conventionnée : **2 000 € à 4 000 €**
-* Clinique privée non-conventionnée : **8 000 € à 12 000 €**
+* Clinique privée non-conventionnée : **10 000 € à 15 000 €**
 
 **Bypass Gastrique :**
 
@@ -100,8 +100,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Sécurité Sociale (secteur public) :**
 
-* **Remboursement : 100%** des frais d'hospitalisation
-* Franchise : 18 € par jour d'hospitalisation
+* **Remboursement : 70%** de la base tarifaire SS (certains actes ≥ 120 € pris en charge à 100% de la base SS, mais les dépassements d'honoraires restent à charge). La SS rembourse environ 357€ à 608€ pour la sleeve et 575€ à 604€ pour le bypass sur la base de ses tarifs officiels.
+* La mutuelle complémentaire couvre généralement le reste à charge, d'où un coût effectif proche de zéro AVEC une bonne mutuelle
+* Forfait journalier hospitalier : 20€/jour (restant à charge sauf ALD ou CSS)
 * Participation forfaitaire : 24 €
 
 **Secteur privé conventionné :**
@@ -111,6 +112,10 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 * Remboursement mutuelle : variable selon contrat
 
 ### Exemples Concrets de Coûts
+
+**Sleeve en secteur public (hôpital public, chirurgien secteur 1) :**
+
+En secteur public, la sleeve gastrectomie est intégralement prise en charge par l'Assurance maladie et la complémentaire santé pour les patients répondant aux critères HAS (IMC ≥ 40 ou ≥ 35 avec comorbidités). Le reste à charge réel pour le patient est souvent nul ou limité au forfait journalier hospitalier (20 €/jour), soit environ 60-80 € pour un séjour standard de 3-4 jours. En cas d'ALD ou de CSS (Complémentaire santé solidaire), même ce forfait peut être pris en charge.
 
 **Sleeve en clinique privée conventionnée :**
 
@@ -123,8 +128,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 * Coût total : 8 000 €
 * Remboursement SS : 7 800 €
-* Franchise hospitalisation : 54 € (3 jours)
-* **Reste à charge : 254 €**
+* Franchise hospitalisation : 60 € (3 jours × 20 €)
+* **Reste à charge : environ 60-80 € (forfait journalier uniquement)**
 
 ## Alternatives aux Opérations : Traitements GLP-1
 
@@ -133,8 +138,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 | Traitement  | Coût 2 ans    | Perte de poids | Risques     |
 | ----------- | ------------- | -------------- | ----------- |
 | **Sleeve**  | 1 000-4 000 € | -60 à 70%      | Élevés      |
-| **Bypass**  | 1 500-6 000 € | -70 à 80%      | Très élevés |
-| **Wegovy**  | 6 500 €       | -15 à 20%      | Faibles     |
+| **Bypass**  | 1 500-6 000 € | -60 à 70% de l'excès pondéral (~25-35% du poids total) | Très élevés |
+| **Wegovy**  | 4 000 € à 8 700 € sur 2 ans (169€-360€/mois selon dosage) | -15 à 17% | Faibles |
 | **Saxenda** | 4 500 €       | -10 à 15%      | Faibles     |
 
 ### Avantages des GLP-1 vs Chirurgie

@@ -24,18 +24,13 @@ affiliateConfig:
   desktopStrategy: "sidebar"
   inlinePositions: [2, 6]
 ---
-<!-- 
+<!--
 SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Layout: ArticleWithAffiliateSidebar
 - Produits: Configurés par collection
 - Injection inline: positions 2, 6
 - Responsive: sidebar desktop + inline mobile
 -->
-
-readingTime: 5
-keywords: "GLP-1, agonistes GLP-1, diabète type 2, perte de poids"
-featured: true
----
 
 ## Sommaire
 1. [Points essentiels](#points-essentiels)
@@ -85,11 +80,11 @@ Les troubles digestifs sont de loin les effets indésirables les plus courants s
 
 **Neuropathie optique ischémique antérieure non artéritique (NOIAN)** : un signal de sécurité a été ajouté au RCP en 2025 suite à des cas rapportés, bien que le lien de causalité ne soit pas confirmé. Les patients doivent signaler tout trouble visuel soudain.
 
-**Idées suicidaires** : l'EMA surveille un signal potentiel concernant les pensées suicidaires sous agonistes GLP-1. En cas de changement d'humeur, il est important d'en parler à son médecin.
+**Idées suicidaires** : En 2024, le PRAC (comité de pharmacovigilance de l'EMA) a conclu qu'aucun lien causal n'a pu être établi entre les agonistes GLP-1 (dont sémaglutide/Wegovy) et les pensées suicidaires ou auto-lésions. L'investigation est close. En cas de changement d'humeur, il reste important d'en parler à son médecin.
 
 ### Données de pharmacovigilance ANSM
 
-L'ANSM rapporte le suivi de plus de 870 000 patients sous agonistes GLP-1 en France. Entre août 2023 et janvier 2025, 376 cas graves ont été rapportés, dont 1 décès par pancréatite dans un contexte de mésusage. Le profil de sécurité global reste favorable lorsque Wegovy est prescrit dans le cadre de son indication autorisée.
+L'ANSM rapporte le suivi de plus de 870 000 patients sous agonistes GLP-1 indiqués dans le traitement du diabète en France (ce chiffre ne comprend pas les patients traités pour l'obésité avec des médicaments non remboursés). Entre août 2023 et janvier 2025, 376 cas graves ont été rapportés. 19 décès ont été signalés chez des patients traités par aGLP-1 sur cette période, sans qu'un lien causal direct ait pu être établi avec les médicaments. Un décès par pancréatite a été associé à un mésusage. Le profil de sécurité global reste favorable lorsque Wegovy est prescrit dans le cadre de son indication autorisée.
 
 ## Contexte médical
 
@@ -181,7 +176,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie s
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.
 
 ### Le traitement est-il remboursé ?
-Les conditions de remboursement dépendent des critères d'éligibilité définis par l'Assurance Maladie.
+En mars 2026, Wegovy n'est pas remboursé par la Sécurité Sociale en France. Son prix en pharmacie varie de 169€ à 360€ par mois selon le dosage. Un remboursement est à l'étude, avec un possible avis favorable de la HAS pour une prise en charge au 2e semestre 2026 sous conditions strictes (IMC, comorbidités, suivi spécialisé). En attendant, vérifiez si votre mutuelle propose un forfait pour les médicaments non remboursés.
 
 ---
 

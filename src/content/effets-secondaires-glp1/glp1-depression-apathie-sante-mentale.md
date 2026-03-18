@@ -167,6 +167,8 @@ Décrivez précisément ce que vous ressentez : depuis quand, dans quelles situa
 
 ### Évaluation par un professionnel de santé mentale
 
+Face à ces effets psychologiques, un [suivi psychologique recommandé sous GLP-1](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut aider à distinguer les effets du traitement des troubles préexistants.
+
 Si votre médecin l'estime nécessaire, une consultation auprès d'un psychiatre ou d'un psychologue peut être proposée. Cette démarche ne signifie pas que vous êtes "fou" — elle vise à distinguer un effet secondaire du traitement d'une pathologie préexistante ou déclenchée.
 
 ### Signaler à l'ANSM

@@ -59,7 +59,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
         "name": "Trulicity est-il remboursé en 2025 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trulicity est remboursé à 65% par l'Assurance Maladie sous conditions : prescription médicale, IMC ≥ 30 ou diabète type 2 confirmé."
+          "text": "Trulicity est remboursé à 65% par l'Assurance Maladie sous conditions : prescription médicale, diabète de type 2 confirmé insuffisamment contrôlé. Trulicity n'est pas remboursé pour l'obésité seule. Un formulaire justificatif est obligatoire depuis le 1er février 2025."
         }
       }
     ]
@@ -87,7 +87,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
-| Ozempic | ~77,60 € | 30% (DT2 uniquement) |
+| Ozempic | ~77,60 € | 65% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | Mounjaro | 230-440 € | Non remboursé |
@@ -99,10 +99,10 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 **Trulicity est remboursé à 65%** par l'Assurance Maladie sous conditions :
 
 ✅ **Prescription médicale obligatoire**
-✅ **Diabète de type 2 confirmé** (remboursement DT2 uniquement)
-✅ **Échec des antidiabétiques oraux**
-✅ **Formulaire de demande obligatoire** (depuis février 2025)
-✅ **Traitement ≥ 3 mois** avec suivi médical
+✅ **Diabète de type 2 confirmé** (remboursement DT2 uniquement — Trulicity n'est PAS remboursé pour l'obésité seule)
+✅ **Diabète de type 2 insuffisamment contrôlé** malgré un traitement par metformine ou autres antidiabétiques oraux, ou en monothérapie si la metformine est contre-indiquée
+✅ **Formulaire justificatif obligatoire** (depuis le 1er février 2025)
+✅ **Suivi médical régulier**
 
 ### Démarches pour le remboursement
 
@@ -155,7 +155,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 ### Pharmacies autorisées
 
-**Trulicity n'est disponible que sur ordonnance** :
+**Trulicity n'est disponible que sur ordonnance**. **Note importante** : Trulicity a connu des tensions d'approvisionnement significatives en France jusqu'en début 2026. La remise à disposition normale de tous les dosages a été confirmée par l'ANSM à partir du 2 février 2026. En cas de difficultés d'approvisionnement, contactez votre pharmacien ou consultez votre médecin pour une alternative.
 
 ✅ **Pharmacies de ville**
 ✅ **Pharmacies hospitalières**
@@ -221,12 +221,8 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/trulicity.jpg"
-thumbnailAlt: "Prix et coût du traitement trulicity-france"
----
-
 ## Sommaire
 
 
 
-*Prix mis à jour en janvier 2025. Les tarifs peuvent varier selon les pharmacies et régions.*
+*Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions.*

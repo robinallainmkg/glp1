@@ -44,14 +44,14 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 ### Autres effets fréquents
 
 **Maux de tête**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (≥10%, environ 14% selon les études SCALE)
 - **Intensité** : Généralement modérée
 - **Gestion** : Analgésiques courants si nécessaire
 
 **Fatigue**
-- **Fréquence** : Peu fréquent
+- **Fréquence** : Très fréquent (≥10% selon le RCP Saxenda)
 - **Cause** : Adaptation du corps au traitement
-- **Évolution** : Temporaire
+- **Évolution** : Généralement temporaire, diminue avec la poursuite du traitement
 
 ## 🚨 Effets Secondaires Graves
 
@@ -156,12 +156,9 @@ thumbnailAlt: "Effets secondaires du traitement saxenda"
 
 ### Tolérance comparée
 
-| Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
-|------------|---------|----------|-----------|-------------------|
-| Saxenda | 15-25% | 3-5% | 5-8% | Très bonne |
-| Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
-| Wegovy | 25-35% | 12-18% | 8-10% | Moyenne |
-| Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
+La tolérance aux GLP-1 varie considérablement selon les individus, les dosages et la vitesse de titration. Une comparaison directe entre molécules est difficile en raison des différences de design des études cliniques.
+
+> **Note** : La tolérance varie selon les individus et les dosages. Consultez le RCP officiel de chaque médicament ou votre médecin pour une comparaison détaillée adaptée à votre situation.
 
 ## 💡 Conseils pour une Bonne Tolérance
 

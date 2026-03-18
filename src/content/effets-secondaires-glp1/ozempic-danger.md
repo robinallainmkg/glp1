@@ -47,7 +47,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ## Résumé des dangers identifiés
 
-- **Pancréatite aiguë** : 0.2% des patients (potentiellement mortelle)
+- **Pancréatite aiguë** : classée "peu fréquente" (< 1/100 patients, 0,3% dans les études cliniques phase 3a — potentiellement mortelle)
 - **Cancer thyroïde** : risque théorique (études animales)
 - **Occlusion intestinale** : cas rares rapportés
 - **Hypoglycémie sévère** : avec autres antidiabétiques
@@ -57,7 +57,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### 1. Pancréatite aiguë
 
-**Fréquence** : 0.2% des patients (2 cas sur 1000)
+**Fréquence** : classée "peu fréquente" (< 1/100 patients) selon le RCP Ozempic. Dans les études cliniques phase 3a, la fréquence des pancréatites aiguës confirmées était de 0,3% sous sémaglutide vs 0,2% sous comparateur.
 
 **Symptômes d'alerte** :
 - Douleur abdominale intense et persistante
@@ -124,7 +124,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 | Système | Effet grave | Fréquence | Mortalité |
 |---------|-------------|-----------|-----------|
-| **Digestif** | Pancréatite | 0.2% | 5-10% |
+| **Digestif** | Pancréatite | < 1/100 (0,3% études phase 3a) | 5-10% |
 | **Endocrinien** | Thyroïde | Théorique | Variable |
 | **Métabolique** | Hypoglycémie | 1-3%* | <1% |
 | **Allergique** | Angio-œdème | <0.1% | Rare |

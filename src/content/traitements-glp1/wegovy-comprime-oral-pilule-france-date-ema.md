@@ -65,7 +65,7 @@ Il est essentiel de ne pas confondre Wegovy oral avec [Rybelsus](/collections/tr
 |-----------------|----------|-------------|
 | **Indication** | Diabète de type 2 uniquement | Obésité et surpoids |
 | **Dose maximale** | 14 mg/jour | 25 mg/jour |
-| **Perte de poids** | 2 à 5 % en moyenne | 12 à 15 % en moyenne |
+| **Perte de poids** | 2 à 5 % en moyenne | ~16,6 % en moyenne (OASIS 4) |
 | **Cible** | Contrôle glycémique | Perte de poids |
 | **Statut FDA** | Approuvé depuis 2019 | Approuvé décembre 2025 |
 | **Statut France** | Commercialisé (non remboursé) | Non encore disponible |
@@ -89,20 +89,20 @@ Les essais cliniques OASIS (Oral Semaglutide Advancement in Overweight/obesity: 
 - 34 % ont perdu plus de 20 %
 
 **OASIS 4** (sémaglutide oral 25 mg, la dose approuvée par la FDA) :
-- Perte de poids moyenne : **12 à 13 %** du poids corporel sur 68 semaines
+- Perte de poids moyenne : **16,6 %** du poids corporel sur 64 semaines (étude OASIS 4)
 - Profil de tolérance similaire au 50 mg, avec moins de nausées
 
 ### Comparaison avec Wegovy injectable
 
 | Paramètre | Wegovy oral 25 mg | Wegovy injectable 2,4 mg |
 |-----------|-------------------|--------------------------|
-| Perte de poids moyenne | 12-13 % | 15-17 % |
+| Perte de poids moyenne | 16,6 % (OASIS 4, 64 sem.) | 15-17 % |
 | Patients > 10 % perte | ~60 % | ~70 % |
 | Nausées (début traitement) | 20-25 % | 20-25 % |
 | Mode d'administration | 1 comprimé/jour | 1 injection/semaine |
 | Contrainte de prise | À jeun 30 min | Aucune |
 
-Le comprimé est légèrement moins efficace que l'injection — environ 2 à 4 points de pourcentage de différence — mais cette différence est considérée comme acceptable par la plupart des experts, compte tenu de l'avantage pratique de la voie orale pour les patients qui ne supportent pas les injections.
+Le comprimé de 25 mg (OASIS 4) présente une efficacité de 16,6 % de perte de poids sur 64 semaines, comparable voire légèrement supérieure à certaines formulations injectables à dosage équivalent. La différence avec Wegovy injectable 2,4 mg (15-17 % sur 68 semaines dans STEP 1) reste modérée et acceptable pour les patients qui préfèrent la voie orale.
 
 ### Effets secondaires
 
@@ -182,7 +182,7 @@ De plus, les patients qui ont des difficultés à respecter la prise à jeun str
 
 ### Le Wegovy oral est-il aussi efficace que l'injectable ?
 
-Le comprimé de 25 mg est légèrement moins efficace que l'injection de 2,4 mg par semaine (12-13 % de perte de poids vs 15-17 %). Cette différence est modérée et acceptable pour les patients qui préfèrent éviter les injections.
+Le comprimé de 25 mg (OASIS 4) atteint une perte de poids moyenne de 16,6 % sur 64 semaines, une efficacité comparable à Wegovy injectable (15-17 % sur 68 semaines dans STEP 1). Cette performance remarquable fait du Wegovy oral une alternative sérieuse pour les patients qui préfèrent éviter les injections.
 
 ### Quand le Wegovy oral sera-t-il disponible en France ?
 
@@ -202,7 +202,7 @@ Le sémaglutide oral peut interagir avec certains médicaments en raison du rale
 
 ### Quelle est la différence avec le sémaglutide oral déjà existant (Rybelsus) ?
 
-Rybelsus est indiqué uniquement pour le diabète de type 2 et dosé à 14 mg maximum. Le Wegovy oral est indiqué pour l'obésité, dosé à 25 mg, et provoque une perte de poids bien supérieure (12-13 % vs 2-5 %).
+Rybelsus est indiqué uniquement pour le diabète de type 2 et dosé à 14 mg maximum. Le Wegovy oral est indiqué pour l'obésité, dosé à 25 mg, et provoque une perte de poids bien supérieure (~16,6 % dans l'étude OASIS 4 vs 2-5 % pour Rybelsus).
 
 ---
 

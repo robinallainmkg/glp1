@@ -3,7 +3,7 @@ title: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
 description: "Remboursement GLP-1 2026 sécurité sociale conditions : Mounjaro, Wegovy, Ozempic. Mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic remboursé 30% (DT2), Wegovy et Saxenda non remboursés. Mounjaro en cours de négociation. Guide remboursement GLP-1 2026."
+seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 30% (DT2). Rybelsus non remboursé (avis défavorable HAS). Mounjaro en cours de négociation. Guide complet."
 publishedAt: '2025-12-27'
 updatedAt: '2026-03-17'
 date: '2026-03-17'
@@ -28,7 +28,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 | **Ozempic** | Diabète T2 | **30%** (DT2 uniquement) | ~53-54€ | ✅ Maintenu |
 | **Trulicity** | Diabète T2 | **30%** (DT2 uniquement) | ~57€ | ✅ Maintenu |
 | **Victoza** | Diabète T2 | **30%** (DT2 uniquement) | ~42€ | ✅ Maintenu |
-| **Rybelsus** | Diabète T2 (oral) | **30%** (DT2 uniquement) | 56-77€ | ✅ Maintenu |
+| **Rybelsus** | Diabète T2 (oral) | **Non remboursé** (avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
 | **Wegovy** | Obésité (IMC ≥30) | **Non remboursé** | 169-360€ | ❌ Non remboursé |
 | **Mounjaro** | DT2 (avis HAS nov. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
 | **Saxenda** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
@@ -358,7 +358,7 @@ Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dan
 - ✅ Ozempic : Maintenu 30% (DT2 uniquement)
 - ✅ Trulicity : Maintenu 30% (DT2 uniquement)
 - ✅ Victoza : Maintenu 30% (DT2 uniquement)
-- ✅ Rybelsus : Maintenu 30% (DT2 uniquement)
+- ❌ Rybelsus : NON remboursé (avis défavorable HAS)
 - ❌ Wegovy : NON remboursé
 - ❌ Mounjaro : NON remboursé
 - ❌ Saxenda : NON remboursé
@@ -396,7 +396,7 @@ Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dan
 
 ### Les conditions de remboursement vont-elles se durcir en 2026 ?
 
-**Pour les GLP-1 DT2 (Ozempic, Trulicity, Victoza, Rybelsus)**, aucun durcissement n'est prévu en 2026. Les conditions restent identiques à 2025.
+**Pour les GLP-1 DT2 remboursés (Ozempic, Trulicity, Victoza)**, aucun durcissement n'est prévu en 2026. Les conditions restent identiques à 2025. Rappel : Rybelsus n'est pas remboursé (avis défavorable HAS).
 
 **Maintien des critères actuels pour le remboursement DT2 :**
 - ✅ Diabète de type 2 confirmé

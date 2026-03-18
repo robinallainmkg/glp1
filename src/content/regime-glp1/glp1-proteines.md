@@ -42,11 +42,11 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Prix, disponibilité et variations en France
 
-### Coûts et tarification
-- **Prix principal** : XX-XX€/mois
-- **Alternatives** : XX-XX€/mois  
-- **Consultations spécialisées** : 60-80€/consultation
-- **Suivi complémentaire** : XX€/mois
+### Coûts et tarification des compléments protéinés
+- **Whey protéine (poudre)** : 15-30€/kg selon la marque et la qualité
+- **Boissons protéinées prêtes à boire** : 2-5€/unité
+- **Barres protéinées** : 2-4€/unité
+- **Consultations diététiciennes** : 60-80€/consultation
 
 
 

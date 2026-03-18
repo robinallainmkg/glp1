@@ -83,7 +83,7 @@ L'essai clinique ALBATROS (ALcohol Behavior And Treatment Responses of Oral Sema
 
 ### Résultats intermédiaires 2025
 
-Les résultats intermédiaires présentés au congrès de la European Association for the Study of Liver (EASL) en juin 2025 sont significatifs :
+Les résultats intermédiaires présentés au Congrès de la Société Française d'Alcoologie (SFA) — congrès dédié à l'addictologie — en juin 2025 sont significatifs :
 
 - **Réduction de la consommation hebdomadaire d'alcool** : -45 % dans le groupe sémaglutide versus -22 % dans le groupe placebo (différence : -23 %, p < 0,001)
 - **Jours d'abstinence totale** : augmentés de 3,2 jours par semaine dans le groupe sémaglutide contre 1,8 jours dans le groupe placebo
@@ -149,7 +149,7 @@ Malgré des résultats prometteurs, plusieurs questions restent sans réponse :
 
 ### Autres addictions potentiellement concernées
 
-Les données sur l'alcool s'inscrivent dans un mouvement de recherche plus large sur les GLP-1 et les addictions. Des études sont également en cours sur le tabac, les opioïdes, et même la dépendance aux jeux d'argent. Chaque addiction présente des mécanismes partiellement différents, et les résultats pour l'alcool ne présagent pas nécessairement d'une efficacité identique pour d'autres substances.
+Les données sur l'alcool s'inscrivent dans un mouvement de recherche plus large sur les GLP-1 et les addictions. L'essai ALBATROS confirme l'action du sémaglutide sur l'alcool — un mécanisme plus large expliqué dans notre article sur les [effets des GLP-1 sur les autres addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) (tabac, opioïdes). Chaque addiction présente des mécanismes partiellement différents, et les résultats pour l'alcool ne présagent pas nécessairement d'une efficacité identique pour d'autres substances.
 
 ## FAQ {#faq}
 
@@ -171,4 +171,4 @@ L'essai ALBATROS est plus large (300 patients vs 127), utilise le sémaglutide o
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. L'alcoolo-dépendance est une maladie sérieuse qui nécessite une prise en charge spécialisée. En France, si vous ou un proche êtes concernés, contactez le 3114 (numéro national de prévention du suicide) ou Alcool Info Service au 0 980 980 930. Sources : Klausen MK et al., JAMA, 2023 ; résultats préliminaires ALBATROS, EASL 2025 ; Inserm, axes de recherche GLP-1 et addictions, 2025. Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. L'alcoolo-dépendance est une maladie sérieuse qui nécessite une prise en charge spécialisée. En France, si vous ou un proche êtes concernés, contactez le 3114 (numéro national de prévention du suicide) ou Alcool Info Service au 0 980 980 930. Sources : Klausen MK et al., JAMA, 2023 ; résultats préliminaires ALBATROS, Congrès SFA (addictologie) 2025 ; Inserm, axes de recherche GLP-1 et addictions, 2025. Dernière mise à jour : mars 2026.*

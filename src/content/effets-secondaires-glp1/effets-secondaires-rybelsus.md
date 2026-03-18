@@ -24,7 +24,7 @@ mainKeyword: "effets secondaires rybelsus semaglutide oral"
 
 ### Troubles digestifs
 
-> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 30% pour le diabète de type 2), Rybelsus reste intégralement à la charge du patient.
+> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 65% par l'Assurance Maladie pour le diabète de type 2, avec justificatif de prescription depuis février 2025), Rybelsus reste intégralement à la charge du patient.
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>=10% selon le RCP)
@@ -46,7 +46,7 @@ mainKeyword: "effets secondaires rybelsus semaglutide oral"
 ### Autres effets fréquents
 
 **Maux de tête**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (≥1/10 selon le RCP EMA du sémaglutide)
 - **Intensité** : Généralement modérée
 - **Gestion** : Analgésiques courants si nécessaire
 
@@ -87,6 +87,16 @@ mainKeyword: "effets secondaires rybelsus semaglutide oral"
 - Risque très faible
 - Contre-indiqué si antécédents familiaux
 - Surveillance thyroïdienne recommandée
+
+### Risque oculaire (NAION)
+
+**Risque** : Neuropathie optique ischémique antérieure non artéritique (NAION)
+
+**Particularités** :
+- Classé très rare (jusqu'à 1 cas sur 10 000 patients)
+- Confirmé par l'EMA/PRAC en janvier 2025 pour tous les médicaments à base de sémaglutide (Rybelsus, Ozempic, Wegovy)
+- Peut entraîner une perte de vision dans l'œil atteint
+- Consulter immédiatement en cas de troubles visuels soudains
 
 ## 📊 Fréquence des Effets Secondaires
 

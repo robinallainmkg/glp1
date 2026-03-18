@@ -106,10 +106,11 @@ SELECT est l'étude la plus importante pour les patients obèses non diabétique
 ### Étude SURPASS-CVOT (Tirzepatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) — 2025)
 
 **Population** : Patients avec DT2 à haut risque cardiovasculaire
-**Résultats préliminaires 2025** :
-- Réduction de 15% du MACE
-- Meilleur effet sur la pression artérielle systolique que le sémaglutide
-- Données complètes attendues en 2026
+**Résultats publiés 2025 (NEJM)** :
+- Non-infériorité confirmée vs dulaglutide (HR 0,92 ; IC95% 0,83–1,01)
+- Supériorité non atteinte sur le MACE-3 principal
+- Réduction de 8% du MACE vs dulaglutide (non statistiquement significative en supériorité)
+- Résultats publiés dans le *New England Journal of Medicine* (2025)
 
 ---
 
@@ -173,7 +174,7 @@ Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, 
 
 ### Remboursement dans l'indication cardiovasculaire
 
-Ozempic est remboursé à **30%** pour le diabète de type 2 (100% en ALD 30). Les bénéfices cardiovasculaires font partie intégrante de l'indication remboursée, sans nécessiter de justification supplémentaire.
+Ozempic est remboursé à **65%** pour le diabète de type 2 (100% en ALD 30). Les bénéfices cardiovasculaires font partie intégrante de l'indication remboursée, sans nécessiter de justification supplémentaire.
 
 Pour les patients obèses sans diabète mais à haut risque cardiovasculaire (étude SELECT), Wegovy n'est pas encore remboursé en France en mars 2026. Les données SELECT ont cependant renforcé le dossier de remboursement, attendu au 2e semestre 2026.
 
