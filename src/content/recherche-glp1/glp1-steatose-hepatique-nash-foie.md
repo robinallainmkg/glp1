@@ -143,7 +143,7 @@ Les études montrent une résolution de la MASH (disparition de l'inflammation) 
 
 ### Faut-il demander un traitement GLP-1 si j'ai une stéatose hépatique ?
 
-En mars 2026, les GLP-1 ne sont pas encore officiellement indiqués pour la MASH en France. Cependant, si vous présentez à la fois un diabète de type 2 et une stéatose hépatique, votre médecin peut vous prescrire un GLP-1 pour le diabète, ce qui bénéficiera aussi à votre foie.
+En mars 2026, les GLP-1 ne sont pas encore officiellement indiqués pour la MASH en France. Cependant, si vous présentez à la fois un diabète de type 2 et une stéatose hépatique, votre médecin peut vous prescrire un GLP-1 pour la [prise en charge du diabète de type 2 associé à la stéatose](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/), ce qui bénéficiera aussi à votre foie.
 
 ### Quels examens hépatiques faire sous GLP-1 ?
 
