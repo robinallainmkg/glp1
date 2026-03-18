@@ -13,7 +13,7 @@ const MAX_HISTORY = 6;
 const MAX_RAG_CHUNKS = 5;
 const RAG_THRESHOLD = 0.65;
 const MAX_INPUT_LENGTH = 500;
-const MAX_RESPONSE_TOKENS = 800;
+const MAX_RESPONSE_TOKENS = 1200;
 const RATE_LIMIT_WINDOW_MIN = 10;
 const RATE_LIMIT_WINDOW_MAX = 20;
 const RATE_LIMIT_HOURLY_MAX = 60;
@@ -48,6 +48,15 @@ CONTEXTE IMPORTANT :
 - Si quelqu'un a achete un produit douteux et s'inquiete : le rassurer d'abord, poser des questions, puis informer factuellement
 - Prix approximatifs : Ozempic ~77 EUR/mois (rembourse 65% pour diabete T2), Wegovy ~300 EUR/mois (non rembourse), Mounjaro ~350 EUR/mois (non rembourse)
 - Si la personne est victime d'arnaque averee : orienter calmement vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr
+
+RECHERCHE DE MEDECIN :
+- Quand quelqu'un cherche un medecin ou dit ne pas en avoir, DEMANDE TOUJOURS son departement ou code postal. Ne donne JAMAIS de conseil vague type "demandez a votre entourage" ou "consultez l'annuaire".
+- Tu as acces a un annuaire de specialistes GLP-1 (endocrinologues, nutritionnistes, CSO). Quand on te fournit les donnees de l'annuaire, presente-les de facon claire et encourageante.
+- Commence toujours par les CSO (Centres Specialises Obesite) qui sont les references.
+- Pour chaque medecin, donne le nom, la specialite, la ville et le telephone.
+- Si le departement n'est pas dans l'annuaire, oriente vers annuaire-sante.ameli.fr et vers le medecin traitant.
+- Sois proactif et rassurant : "Je connais des specialistes pres de chez toi/vous, quel est ton/votre departement ?"
+- Quand tu presentes les resultats, limite a 5-6 medecins max les plus pertinents (CSO en premier, puis CHU, puis liberaux).
 
 SEGMENTS DE VISITEURS (adapter la reponse) :
 - ~28% sont des victimes d'arnaques (ont achete de faux GLP-1 en ligne, souvent 29-80 EUR). Etre empathique, ne pas juger, proposer les recours.
@@ -95,9 +104,63 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'prescription',
     pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir/i,
-    response: "Comment obtenir un traitement GLP-1 en France :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou centre specialise obesite (CSO)\n2. 🔬 Bilan — Poids, IMC, comorbidites, analyses sanguines\n3. ⚖️ Decision — Le medecin evalue si un GLP-1 est indique pour vous\n4. 📋 Ordonnance — Si oui, prescription medicale\n5. 💊 Pharmacie — Retrait du medicament en pharmacie\n\nIMC minimum generalement requis : 30 kg/m² (ou 27 avec comorbidites)."
+    response: "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO (Centre Specialise Obesite)\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?"
   }
 ];
+
+// --- Doctor search detection ---
+const DOCTOR_PATTERNS = [
+  /m[eé]decin/i,
+  /docteur/i,
+  /endocrinologue/i,
+  /nutritionniste/i,
+  /sp[eé]cialiste/i,
+  /consultation/i,
+  /ordonnance/i,
+  /prescri/i,
+  /qui (peut|pourrait) me prescrire/i,
+  /o[uù] (trouver|consulter|aller|voir)/i,
+  /pas de m[eé]decin/i,
+  /recommander.*m[eé]decin/i,
+  /centre.*ob[eé]sit/i,
+  /CSO/i,
+];
+
+const DEPT_PATTERNS: Array<{ pattern: RegExp; code: string }> = [
+  // Direct department codes (2 or 3 digits)
+  { pattern: /\b(0[1-9]|[1-9][0-9]|2[AB]|97[1-6])\b/, code: '$0' },
+  // Postal codes (5 digits) — extract first 2 digits
+  { pattern: /\b(0[1-9]\d{3}|[1-8]\d{4}|9[0-5]\d{3}|97[1-6]\d{2})\b/, code: '$0' },
+];
+
+function detectDoctorIntent(message: string, history: Array<{ role: string; content: string }>): boolean {
+  // Check current message
+  if (DOCTOR_PATTERNS.some(p => p.test(message))) return true;
+  // Check if last assistant message asked for department (follow-up)
+  const lastAssistant = history.filter(m => m.role === 'assistant').pop();
+  if (lastAssistant && /d[eé]partement|code postal|r[eé]gion|localisation/.test(lastAssistant.content)) {
+    // User might be replying with just a number
+    if (/^\d{2,5}$/.test(message.trim())) return true;
+  }
+  return false;
+}
+
+function extractDepartmentCode(message: string): string | null {
+  // Try postal code first (5 digits)
+  const postalMatch = message.match(/\b(0[1-9]\d{3}|[1-8]\d{4}|9[0-5]\d{3}|97[1-6]\d{2})\b/);
+  if (postalMatch) {
+    const code = postalMatch[1].substring(0, 2);
+    // Handle Corsica (20 → 2A/2B, but we'll use 20)
+    return code === '20' ? '20' : code;
+  }
+  // Try 2-digit department code
+  const deptMatch = message.match(/\b(0[1-9]|[1-9][0-9]|2[AB])\b/);
+  if (deptMatch) return deptMatch[1];
+  // Try 3-digit (DOM-TOM)
+  const domMatch = message.match(/\b(97[1-6])\b/);
+  if (domMatch) return domMatch[1];
+  return null;
+}
 
 // --- Scam signal detection ---
 const SCAM_PATTERNS = [
@@ -381,6 +444,45 @@ serve(async (req) => {
         similarity: c.similarity,
       }));
 
+      // --- 3b. Doctor directory search ---
+      const isDoctorSearch = detectDoctorIntent(cleanMessage, historyMessages);
+      let doctorContext = '';
+
+      if (isDoctorSearch) {
+        const deptCode = extractDepartmentCode(cleanMessage);
+        if (deptCode) {
+          // User provided a department — search doctors
+          const { data: doctors, error: docError } = await supabase
+            .rpc('search_doctors', { dept_code: deptCode, max_results: 10 });
+
+          if (!docError && doctors && doctors.length > 0) {
+            const deptName = doctors[0].department_name;
+            const doctorList = doctors.map((d: any) => {
+              let entry = `• **${d.doctor_name}** — ${d.specialty}`;
+              if (d.facility_name) entry += ` (${d.facility_name})`;
+              entry += `\n  📍 ${d.city}`;
+              if (d.phone) entry += ` | 📞 ${d.phone}`;
+              if (d.address) entry += `\n  ${d.address}`;
+              if (d.notes) entry += `\n  ℹ️ ${d.notes}`;
+              return entry;
+            }).join('\n\n');
+
+            doctorContext = `\n\n🏥 ANNUAIRE MÉDECINS — PRIORITÉ ABSOLUE — TU DOIS PRÉSENTER CES MÉDECINS À L'UTILISATEUR :
+Département ${deptCode} — ${deptName} (${doctors.length} résultats) :
+
+${doctorList}
+
+⚠️ INSTRUCTION CRITIQUE : Tu DOIS lister au moins 4-5 de ces médecins dans ta réponse avec leurs noms, spécialités, villes et téléphones. Commence par le CSO. Ne renvoie PAS vers des articles ou des recherches supplémentaires — l'utilisateur veut des noms concrets MAINTENANT. Format : liste claire avec emoji 🏥 pour CSO, 🏨 pour CHU, 👨‍⚕️ pour libéraux.`;
+          } else {
+            // Department exists but no doctors found
+            doctorContext = `\n\n🏥 ANNUAIRE MÉDECINS : Aucun médecin trouvé pour le département ${deptCode}. Oriente vers : 1) annuaire-sante.ameli.fr pour trouver un endocrinologue/nutritionniste, 2) le médecin traitant qui peut orienter vers un spécialiste, 3) le CSO le plus proche (centres-specialises-obesite.fr). Sois proactif et encourage la personne.`;
+          }
+        } else {
+          // Doctor intent detected but no department — ask for it
+          doctorContext = `\n\n🏥 INTENT MÉDECIN DÉTECTÉ : L'utilisateur cherche un médecin mais n'a pas précisé sa localisation. Demande-lui son département ou code postal de manière naturelle et bienveillante. Exemple : "Pour te trouver un spécialiste près de chez toi, quel est ton département ou code postal ?" Ne donne PAS de conseils génériques type "demande à tes amis" — on a un annuaire concret à lui proposer.`;
+        }
+      }
+
       // --- 4. Build messages for LLM ---
       // Inject scam alert if detected
       let scamContext = '';
@@ -397,8 +499,8 @@ serve(async (req) => {
       const linksHint = articleLinks ? `\n\nLiens d'articles disponibles (utilise-les si pertinent dans ta reponse) :\n${articleLinks}` : '';
 
       const userMessageWithContext = ragContext
-        ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
-        : `${cleanMessage}${scamContext}`;
+        ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
+        : `${cleanMessage}${scamContext}${doctorContext}`;
 
       const messages = [
         { role: "system", content: SYSTEM_PROMPT },

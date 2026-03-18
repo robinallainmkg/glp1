@@ -515,7 +515,7 @@ async function autopilotEdit(state) {
   appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (${numInstances} editorial${numInstances > 1 ? 's' : ''}, ${tickets} tickets)`, 'progress');
 
   // Launch first instance
-  const r = launchAgent('editorial');
+  const r = launchAgent('editorial', { ticketCount: tickets });
   if (!r.ok) {
     appendOutput('autopilot', `❌ Editorial: ${r.error}`, 'error');
     return;
@@ -524,7 +524,7 @@ async function autopilotEdit(state) {
 
   // Launch additional instances with allowMultiple
   for (let i = 1; i < numInstances; i++) {
-    const r2 = launchAgent('editorial', { allowMultiple: true });
+    const r2 = launchAgent('editorial', { allowMultiple: true, ticketCount: tickets });
     if (r2.ok) {
       appendOutput('autopilot', `🟢 ${time()} — ${r2.instance} lancé (PID ${r2.pid})`, 'progress');
     } else {
@@ -549,6 +549,23 @@ async function autopilotEdit(state) {
   });
 
   appendOutput('autopilot', `✅ ${time()} — Phase EDIT terminée (${numInstances} instance${numInstances > 1 ? 's' : ''})`, 'result');
+
+  // Commit all editorial changes in one shot
+  try {
+    const { execSync } = await import('child_process');
+    const status = execSync('git status --short src/content/ src/pages/', { cwd: PROJECT_ROOT, encoding: 'utf-8' }).trim();
+    if (status) {
+      const changedFiles = status.split('\n').length;
+      execSync('git add src/content/ src/pages/', { cwd: PROJECT_ROOT });
+      const cycle = autopilotCycle || 'manual';
+      execSync(`git commit -m "editorial: batch commit ${changedFiles} files (cycle ${cycle})"`, { cwd: PROJECT_ROOT });
+      appendOutput('autopilot', `📦 ${time()} — Commit: ${changedFiles} fichiers (src/content + src/pages)`, 'result');
+    } else {
+      appendOutput('autopilot', `⚠️ ${time()} — Aucun fichier modifié à commit`, 'progress');
+    }
+  } catch (e) {
+    appendOutput('autopilot', `❌ ${time()} — Erreur commit: ${e.message}`, 'error');
+  }
 }
 
 async function autopilotValidate() {
@@ -718,7 +735,7 @@ function getBaseAgent(instanceName) {
   return null;
 }
 
-function launchAgent(name, { allowMultiple = false } = {}) {
+function launchAgent(name, { allowMultiple = false, ticketCount = 0 } = {}) {
   const baseAgent = getBaseAgent(name) || name;
   const prompt = AGENTS[baseAgent];
   if (!prompt) {
@@ -746,21 +763,13 @@ function launchAgent(name, { allowMultiple = false } = {}) {
   const instanceIndex = runningInstanceCount; // 0-based
 
   // Build partitioned prompt to avoid cannibalization
+  // OFFSET/LIMIT partitioning based on total ticket count
   let finalPrompt = prompt;
-  if (totalInstances > 1) {
-    const partitions = [
-      { range: 'a-g', desc: 'slugs commencant par a a g' },
-      { range: 'h-n', desc: 'slugs commencant par h a n' },
-      { range: 'o-z', desc: 'slugs commencant par o a z' },
-    ];
-    // For > 3 instances, use modulo
-    if (totalInstances <= 3) {
-      const p = partitions[instanceIndex] || partitions[2];
-      finalPrompt += `\n\nPARTITION: Tu es l'instance ${instanceIndex + 1}/${totalInstances}. Traite UNIQUEMENT les articles/pages dont le slug commence par ${p.range}. Ignore les autres pour eviter les doublons avec les autres instances.`;
-    } else {
-      finalPrompt += `\n\nPARTITION: Tu es l'instance ${instanceIndex + 1}/${totalInstances}. Traite UNIQUEMENT les articles dont (id modulo ${totalInstances}) = ${instanceIndex}. Ignore les autres.`;
-    }
-    appendOutput(instanceName, `📍 Instance ${instanceIndex + 1}/${totalInstances} — partition assignee`, 'progress');
+  if (totalInstances > 1 && ticketCount > 0) {
+    const perInstance = Math.ceil(ticketCount / totalInstances);
+    const offset = instanceIndex * perInstance;
+    finalPrompt += `\n\nPARTITION: Tu es l'instance ${instanceIndex + 1}/${totalInstances} (${ticketCount} tickets total). Utilise OFFSET ${offset} LIMIT ${perInstance} dans tes requetes de tickets/suggestions/opportunites pour eviter les doublons avec les autres instances.\n\nIMPORTANT: Ne fais PAS git add / git commit. Le serveur s'en charge apres que toutes les instances ont termine.`;
+    appendOutput(instanceName, `📍 Instance ${instanceIndex + 1}/${totalInstances} — OFFSET ${offset} LIMIT ${perInstance}`, 'progress');
   }
 
   console.log(`🚀 [${new Date().toLocaleTimeString()}] Lancement: ${instanceName}${instanceName !== baseAgent ? ` (instance ${instanceIndex + 1}/${totalInstances} de ${baseAgent})` : ''}`);

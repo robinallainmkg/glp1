@@ -16,7 +16,9 @@
       "Bash(curl -s \"http://127.0.0.1:7854/output?agent=fact-check\")",
       "Bash(curl -s \"http://127.0.0.1:7854/output/fact-check\")",
       "Bash(curl -s \"http://127.0.0.1:7854/output/editorial\")",
-      "Bash(CLAUDECODE= claude --help)"
+      "Bash(CLAUDECODE= claude --help)",
+      "Bash(curl -s \"http://127.0.0.1:7854/output/editorial?since=4\")",
+      "Bash(find /c/Users/robin/glp1/glp1/supabase -type f -name *.sql -o -name *.ts)"
     ]
   }
 }

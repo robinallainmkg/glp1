@@ -128,7 +128,7 @@ Si vous constatez une rupture d'approvisionnement, vous pouvez le signaler via l
 
 ### L'usine Novo Nordisk de Chartres
 
-Novo Nordisk a annoncé un investissement majeur pour augmenter les capacités de production de sémaglutide à son site de Chartres (Eure-et-Loir). Cette usine, l'une des principales en Europe, bénéficie d'une extension significative qui devrait être pleinement opérationnelle d'ici fin 2026.
+Novo Nordisk a annoncé un investissement majeur pour augmenter les capacités de production de sémaglutide à son site de Chartres (Eure-et-Loir). Cette usine, l'une des principales en Europe, bénéficie d'une extension significative qui devrait être pleinement opérationnelle d'ici fin 2026. Par ailleurs, un [nouveau stylo Ozempic 3ml disponible en 2026](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) a été lancé pour améliorer la disponibilité en pharmacie.
 
 ### Les biosimilaires : une perspective 2027-2028
 

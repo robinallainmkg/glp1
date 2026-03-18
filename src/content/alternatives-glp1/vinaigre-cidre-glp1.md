@@ -158,7 +158,7 @@ Vinaigre de cidre diabète représente une approche thérapeutique importante da
 ##  recommandés
 
 Pour approfondir ce sujet, consultez nos guides spécialisés :
-- **Médicaments GLP-1** : Panorama complet des traitements
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** : Guide complet sur le traitement GLP-1 de référence
 - **Effets secondaires** : Surveillance et prévention  
 - **Coûts et remboursement** : Guide pratique 2025
 - **Médecins spécialisés** : Annuaire France
