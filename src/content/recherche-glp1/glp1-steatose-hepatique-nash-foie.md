@@ -72,7 +72,7 @@ Le sémaglutide n'agit pas uniquement via la perte de poids. Les études montren
 
 ### Les essais de phase 3 en cours
 
-Novo Nordisk conduit actuellement les essais ESSENCE (sémaglutide 2,4 mg, la dose de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) chez des patients atteints de MASH avec fibrose significative. Les résultats intermédiaires présentés en 2025 sont encourageants, avec une résolution de la MASH chez environ 56% des patients traités.
+Novo Nordisk a conduit l'essai ESSENCE (sémaglutide 2,4 mg, la dose de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) chez des patients atteints de MASH avec fibrose significative. Les résultats définitifs publiés dans le *New England Journal of Medicine* en avril 2025 montrent une résolution de la MASH chez **62,9 % des patients traités** par sémaglutide 2,4 mg (contre 34,3 % sous placebo), avec une amélioration significative de la fibrose.
 
 ## Le survodutide : la nouvelle génération encore plus prometteuse {#survodutide}
 
@@ -85,7 +85,7 @@ Le survodutide, développé par Boehringer Ingelheim, est un double agoniste des
 L'essai AURORA, publié dans le *New England Journal of Medicine* en 2024, a montré des résultats remarquables chez des patients atteints de MASH avec fibrose de stade F1 à F3 :
 
 - **Résolution de la MASH** chez 47 à 64% des patients selon la dose (contre 14% sous placebo)
-- **Amélioration de la fibrose** d'au moins un stade chez 36 à 52% des patients
+- **Amélioration de la fibrose** d'au moins un stade chez 34 à 36 % des patients selon la dose (contre 22 % sous placebo)
 - **Réduction du contenu en graisse hépatique** de 40 à 50% mesurée par IRM
 - **Perte de poids** : 12 à 19% du poids corporel
 
@@ -113,7 +113,7 @@ En mars 2024, la FDA a approuvé le resmetirom (Rezdiffra), un agoniste sélecti
 
 ### Le calendrier probable pour les GLP-1
 
-Le sémaglutide dans l'indication MASH fait actuellement l'objet d'essais de phase 3 (ESSENCE). Les résultats complets sont attendus courant 2026, avec une possible soumission aux autorités réglementaires fin 2026 ou début 2027.
+L'essai de phase 3 ESSENCE a publié ses résultats définitifs dans le *New England Journal of Medicine* en avril 2025. Le **15 août 2025, la FDA a approuvé le sémaglutide (Wegovy) pour le traitement de la MASH avec fibrose modérée à avancée** chez l'adulte. Une demande d'AMM est en cours d'évaluation auprès de l'EMA. En France, aucune indication officielle pour la MASH n'est disponible en mars 2026.
 
 Le survodutide est en phase 3 (essai ASTRAL) depuis fin 2024. Une approbation n'est pas attendue avant 2027 au plus tôt.
 

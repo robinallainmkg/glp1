@@ -499,11 +499,22 @@ async function autopilotGenerate(decision) {
   appendOutput('autopilot', `✅ ${time()} — Phase GENERATE terminée`, 'result');
 }
 
-async function autopilotEdit() {
+async function autopilotEdit(state) {
   autopilotPhase = 'edit';
   const time = () => new Date().toLocaleTimeString('fr-FR');
-  appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (editorial)`, 'progress');
 
+  // Decide how many editorial instances based on ticket count
+  // Each editorial handles ~20 tickets, so scale accordingly
+  const tickets = state?.tickets || 0;
+  let numInstances = 1;
+  if (tickets >= 80) numInstances = 5;
+  else if (tickets >= 50) numInstances = 4;
+  else if (tickets >= 30) numInstances = 3;
+  else if (tickets >= 15) numInstances = 2;
+
+  appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (${numInstances} editorial${numInstances > 1 ? 's' : ''}, ${tickets} tickets)`, 'progress');
+
+  // Launch first instance
   const r = launchAgent('editorial');
   if (!r.ok) {
     appendOutput('autopilot', `❌ Editorial: ${r.error}`, 'error');
@@ -511,10 +522,24 @@ async function autopilotEdit() {
   }
   appendOutput('autopilot', `🟢 ${time()} — editorial lancé (PID ${r.pid})`, 'progress');
 
-  // Wait for editorial to complete
+  // Launch additional instances with allowMultiple
+  for (let i = 1; i < numInstances; i++) {
+    const r2 = launchAgent('editorial', { allowMultiple: true });
+    if (r2.ok) {
+      appendOutput('autopilot', `🟢 ${time()} — ${r2.instance} lancé (PID ${r2.pid})`, 'progress');
+    } else {
+      appendOutput('autopilot', `⚠️ Instance ${i + 1}: ${r2.error}`, 'error');
+    }
+  }
+
+  // Wait for ALL editorial instances to complete
   await new Promise(resolve => {
     const check = () => {
-      if (!running.has('editorial')) {
+      const stillRunning = [...running.keys()].filter(k => {
+        const info = running.get(k);
+        return info.baseAgent === 'editorial' || k === 'editorial';
+      });
+      if (stillRunning.length === 0) {
         resolve();
       } else {
         setTimeout(check, 3000);
@@ -523,7 +548,7 @@ async function autopilotEdit() {
     setTimeout(check, 5000);
   });
 
-  appendOutput('autopilot', `✅ ${time()} — Phase EDIT terminée`, 'result');
+  appendOutput('autopilot', `✅ ${time()} — Phase EDIT terminée (${numInstances} instance${numInstances > 1 ? 's' : ''})`, 'result');
 }
 
 async function autopilotValidate() {
@@ -568,8 +593,8 @@ async function runAutopilotCycle() {
     // Phase 2: GENERATE (may skip)
     await autopilotGenerate(decision);
 
-    // Phase 3: EDIT
-    await autopilotEdit();
+    // Phase 3: EDIT (multi-instance based on ticket count)
+    await autopilotEdit(state);
 
     // Phase 4: VALIDATE
     await autopilotValidate();
