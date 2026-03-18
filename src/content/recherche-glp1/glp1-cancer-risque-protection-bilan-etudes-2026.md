@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Cancer : Risques et Protections — Bilan des Études 2026"
-description: "GLP-1 cancer risque protection thyroïde colorectal pancréatique : bilan complet des études 2026. Sémaglutide, tirzépatide et risque oncologique — ce que la science dit vraiment."
+description: "GLP-1 et cancer : risques et protections pour thyroïde, colorectal et pancréas. Bilan des études 2026 sur le sémaglutide, tirzépatide et risque oncologique."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18

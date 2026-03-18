@@ -70,7 +70,7 @@ Pour bénéficier du remboursement à 30% par l'Assurance Maladie (taux applicab
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349) pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC >= 35). Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
+**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable confirmé de la HAS le 9 décembre 2025** avec ASMR IV (amélioration mineure), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35) après échec des mesures nutritionnelles. Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
 
 ### Ce qu'il faut savoir sur le remboursement Mounjaro
 
@@ -190,7 +190,7 @@ Au-delà du remboursement Sécu + mutuelle, plusieurs aides peuvent réduire vot
 
 ### 1. Complémentaire Santé Solidaire (CSS)
 
-**Pour qui ?** Revenus < 9 719€/an (personne seule) ou < 14 579€/an (couple)
+**Pour qui ?** Revenus < 10 339€/an (personne seule, plafond 2026) ou < 15 509€/an (couple sans enfant)
 
 **Avantages :**
 - ✅ Prise en charge à **100%** sans avance de frais

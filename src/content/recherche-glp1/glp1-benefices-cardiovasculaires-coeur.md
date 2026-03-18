@@ -125,7 +125,7 @@ L'**étude STEP-HFpEF** publiée dans le *NEJM* en 2023 a montré que le sémagl
 - La distance parcourue en 6 minutes (+21,5 m vs +1,2 m)
 - Le poids corporel (–13,3% vs –2,6%)
 
-Ces résultats ont conduit la FDA américaine à élargir les indications du sémaglutide à l'insuffisance cardiaque à FE préservée chez les patients obèses. En Europe, l'EMA étudie cette demande en 2026.
+Ces résultats ont conduit Novo Nordisk à déposer une demande d'extension d'indication auprès de la FDA pour l'insuffisance cardiaque à FE préservée. À ce jour, la FDA a approuvé Wegovy pour la réduction des événements cardiovasculaires majeurs (sur la base de l'étude SELECT, en mars 2024), mais l'indication spécifique IC-FEP n'est pas encore approuvée. En Europe, l'EMA examine ce dossier.
 
 ### Différence avec les iSGLT2
 

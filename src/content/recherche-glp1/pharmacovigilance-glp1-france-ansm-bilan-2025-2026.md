@@ -1,6 +1,6 @@
 ---
 title: "Pharmacovigilance GLP-1 en France : Bilan ANSM / EPI-Phare 2025-2026"
-description: "Bilan pharmacovigilance GLP-1 France ANSM 2025-2026 : effets indésirables graves, mésusage, données EPI-Phare. Synthèse vulgarisée du rapport de surveillance officiel."
+description: "Pharmacovigilance GLP-1 en France : effets indésirables graves, mésusage et données EPI-Phare. Synthèse du rapport ANSM 2025-2026 vulgarisée pour les patients."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18

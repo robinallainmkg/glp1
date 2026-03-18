@@ -42,7 +42,7 @@ La phytothérapie peut compléter efficacement les traitements GLP-1 en optimisa
 
 ## Informations Médicales
 
-Selon les endocrinologues français... Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
+Selon les endocrinologues français, la phytothérapie peut constituer un soutien complémentaire à un traitement GLP-1, mais elle n'est pas spécifiquement recommandée par la HAS. Seules les mesures hygiéno-diététiques classiques — alimentation équilibrée et activité physique régulière — font l'objet de recommandations officielles en complément des traitements médicamenteux.
 
 ### Points clés validés scientifiquement :
 - **Efficacité clinique** : Études randomisées contrôlées
@@ -65,7 +65,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Feuilles de mûrier** : 12-20€/mois (ralentit absorption glucose)
 - **Fenugrec graines** : 8-15€/mois (sensibilité insuline)
 - **Nopal (figue de Barbarie)** : 15-25€/mois (fibres solubles)
-- **Garcinia cambogia** : 18-30€/mois (coupe-faim naturel)
+- **Garcinia cambogia** : 18-30€/mois — ⚠️ L'efficacité comme coupe-faim n'est pas prouvée cliniquement. Des cas de toxicité hépatique ont été documentés par l'ANSM et l'EFSA. Déconseillé en association avec des médicaments hépatotoxiques.
 
 ### Complexes phyto spécialisés
 - **Glyco-régul** (laboratoires) : 25-35€/mois

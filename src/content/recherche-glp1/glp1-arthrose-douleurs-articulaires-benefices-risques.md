@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Arthrose : Soulagement des Douleurs Articulaires"
-description: "GLP-1 arthrose douleurs articulaires : les médicaments contre l'obésité soulagent-ils les genoux ? Données TRIUMPH-4, effet anti-inflammatoire et précautions. Guide 2026."
+description: "GLP-1 et arthrose : Ozempic et Wegovy soulagent-ils les douleurs articulaires ? Données TRIUMPH-4, effet anti-inflammatoire et précautions. Guide 2026."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18

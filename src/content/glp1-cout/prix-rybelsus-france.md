@@ -117,14 +117,9 @@ Rybelsus n'étant pas remboursé par la Sécurité Sociale, il n'y a pas de tick
 - **Mutuelle** : Prise en charge partielle possible selon contrat (50-500€/an)
 - **Reste à charge** : Majorité du coût mensuel (80-110€)
 
-### Exemples de remboursement
+### Remboursement par la mutuelle
 
-| Mutuelle | Remboursement total | Reste à charge |
-|----------|-------------------|----------------|
-| Mutuelle bronze | 80% | 20% |
-| Mutuelle argent | 85% | 15% |
-| Mutuelle or | 90% | 10% |
-| Mutuelle platine | 95% | 5% |
+Rybelsus n'étant pas remboursé par la Sécurité Sociale, le mécanisme classique de remboursement mutuelle (ticket modérateur) ne s'applique pas. Certaines mutuelles proposent un **forfait "traitements non remboursés"** couvrant généralement 100 à 500 €/an — vérifiez votre contrat. Le coût reste majoritairement à votre charge.
 
 ## 💳 Aides Financières Disponibles
 
@@ -153,7 +148,10 @@ Rybelsus n'étant pas remboursé par la Sécurité Sociale, il n'y a pas de tick
 
 ✅ **Pharmacies de ville**
 ✅ **Pharmacies hospitalières**
-✅ **Pharmacies en ligne agréées** (avec ordonnance)
+
+⚠️ **Vigilance : ruptures de stock fréquentes** — Rybelsus peut être temporairement indisponible. Vérifiez la disponibilité auprès de votre pharmacie avant de vous déplacer.
+
+⚠️ **Pharmacies en ligne** : Légal uniquement via des pharmacies physiques françaises agréées disposant d'un espace de vente en ligne. La vente sans ordonnance est illégale et dangereuse.
 
 ### Précautions d'achat
 
