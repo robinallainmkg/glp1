@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["astro", "dev", "--port", "4327"],
+      "runtimeExecutable": "node_modules\\.bin\\astro.cmd",
+      "runtimeArgs": ["dev", "--port", "4327"],
       "port": 4327
     }
   ]
