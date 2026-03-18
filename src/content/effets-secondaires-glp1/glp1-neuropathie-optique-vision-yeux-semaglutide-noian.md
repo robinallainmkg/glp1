@@ -30,7 +30,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-# GLP-1 et Vision : Ce que vous devez savoir sur la NOIAN
+## GLP-1 et Vision : Ce que vous devez savoir sur la NOIAN
 
 Depuis janvier 2025, un signal de pharmacovigilance a conduit les autorités européennes à mettre à jour les notices des traitements GLP-1 à base de sémaglutide. Le PRAC (Comité pour l'évaluation des risques en matière de pharmacovigilance) a recommandé l'ajout de la **neuropathie optique ischémique antérieure non artéritique** (NOIAN) comme effet indésirable rare à surveiller pour [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 

@@ -105,7 +105,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Osteodensitometrie (DEXA)** : Cet examen mesure la densite minerale osseuse au niveau de la colonne lombaire et du col femoral. Il est rembourse par l'Assurance Maladie dans certaines conditions (femme menopausee avec facteurs de risque, antecedent de fracture, etc.). Un examen de reference avant le debut du traitement GLP-1 permet un suivi objectif.
 
-**Bilan biologique osseux** : Dosage de la vitamine D (25-OH-D3), du calcium, du phosphore, et eventuellement des marqueurs du remodelage osseux (CTX, P1NP). Ce bilan est simple et peu couteux.
+**Bilan biologique osseux** : Dosage de la vitamine D (25-OH-D3), du calcium, du phosphore, et eventuellement des marqueurs du remodelage osseux (CTX, P1NP). Ce bilan est simple et peu couteux. Un suivi des [carences en vitamine D et calcium sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) est essentiel pour prévenir la déminéralisation osseuse.
 
 **Dosage de l'acide urique** : Surtout si vous avez des antecedents de goutte ou de calculs renaux.
 

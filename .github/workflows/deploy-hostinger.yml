@@ -29,12 +29,14 @@ jobs:
         lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
           set ftp:passive-mode yes;
           set ftp:ssl-allow no;
-          set net:timeout 60;
-          set net:max-retries 5;
-          set net:reconnect-interval-base 10;
-          set mirror:parallel-transfer-count 5;
-          set mirror:use-pget-n 3;
-          mirror --reverse --delete --only-newer --verbose --parallel=5 ./dist/ /domains/glp1-france.fr/public_html/;
+          set ssl:verify-certificate no;
+          set net:timeout 30;
+          set net:max-retries 10;
+          set net:reconnect-interval-base 5;
+          set net:reconnect-interval-multiplier 1;
+          set mirror:parallel-transfer-count 2;
+          set mirror:use-pget-n 1;
+          mirror --reverse --delete --only-newer --verbose --parallel=2 ./dist/ /domains/glp1-france.fr/public_html/;
           quit
         "
 

@@ -1159,8 +1159,12 @@ import { supabaseConfig } from '../../lib/supabase';
       btn.innerHTML = '&#9632;';
       label.textContent = 'Stopper';
       badge.className = 'ap-status-badge running';
-      const cycle = (serverStatus && serverStatus.autopilot) ? serverStatus.autopilot.cycle : '';
-      badge.textContent = cycle ? `CYCLE ${cycle}` : 'RUNNING';
+      const ap = serverStatus && serverStatus.autopilot;
+      const cycle = ap ? ap.cycle : '';
+      const phase = ap ? (ap.phase || '') : '';
+      const phaseLabels = { check: 'CHECK', generate: 'GENERATE', edit: 'EDIT', validate: 'VALIDATE', done: 'DONE' };
+      const phaseLabel = phaseLabels[phase] || phase.toUpperCase();
+      badge.textContent = cycle ? `CYCLE ${cycle} · ${phaseLabel}` : 'RUNNING';
     } else {
       hero.classList.remove('is-running');
       btn.classList.remove('running');

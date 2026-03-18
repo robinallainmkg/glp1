@@ -38,6 +38,7 @@ Le champ `running` dans la reponse contient les agents actifs. Quand un agent te
 
 ```
 Phase 1: CHECK    — Etat du pipeline (30s max)
+Phase 1b: SAV     — Lancer l'agent sav-email (emails, independant du pipeline)
 Phase 2: GENERATE — Lancer les agents generateurs (si stock tickets < 10)
 Phase 3: EDIT     — Lancer l'agent editorial (commit + push main)
 Phase 4: VALIDATE — Lancer le validator (build check + push main → deploy)
@@ -65,6 +66,16 @@ SELECT
   ROUND(100.0 * COUNT(*) FILTER (WHERE last_fact_checked IS NULL) / NULLIF(COUNT(*), 0)) as pct_unchecked
 FROM articles WHERE is_active = true;
 ```
+
+### Phase 1b — SAV EMAIL (independant du pipeline)
+
+Lance l'agent sav-email pour sync et repondre aux emails. Il tourne en parallele de la Phase 2 :
+
+```bash
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"sav-email"}'
+```
+
+Pas besoin d'attendre — il est autonome et n'affecte pas le pipeline editorial.
 
 ### Phase 2 — GENERATE (creer du travail)
 

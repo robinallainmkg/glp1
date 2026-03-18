@@ -66,14 +66,15 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   /* Transitions */
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--gray-700);
   background-color: var(--gray-50);
   -webkit-font-smoothing: antialiased;
@@ -539,6 +540,7 @@ a:hover {
   color: var(--gray-700);
   line-height: 1.8;
   font-size: var(--font-size-lg);
+  max-width: 72ch;
 }
 
 .article-body h1 {
@@ -568,7 +570,7 @@ a:hover {
   margin: 1.5rem 0 1rem 0;
 }
 
-.article-body p { margin-bottom: 1.25rem; text-align: justify; }
+.article-body p { margin-bottom: 1.25rem; text-align: left; }
 .article-body a { color: var(--primary-blue-light); font-weight: 500; }
 .article-body a:hover { color: var(--primary-blue-dark); text-decoration: underline; }
 
@@ -957,6 +959,128 @@ a:hover {
   .question-card { padding: 1.5rem; }
   .results-title { font-size: 1.5rem; }
   .score-display { font-size: 2rem; }
+}
+
+/* ===== CALLOUT BOXES MÉDICALES ===== */
+/* Usage : <div class="callout callout-info">...</div> */
+.callout {
+  display: flex;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  margin: 1.5rem 0;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.125rem;
+}
+
+.callout-info {
+  background-color: var(--blue-50);
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.callout-info .callout-icon { color: var(--primary-blue); }
+
+.callout-warning {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.callout-warning .callout-icon { color: #d97706; }
+
+.callout-danger {
+  background-color: var(--red-50);
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.callout-danger .callout-icon { color: var(--red-500); }
+
+.callout-tip {
+  background-color: var(--green-50);
+  border-color: #bbf7d0;
+  color: #14532d;
+}
+
+.callout-tip .callout-icon { color: var(--accent-green); }
+
+.callout strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* ===== BADGES DE CONFIANCE ===== */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.trust-badge-verified {
+  background-color: var(--green-50);
+  color: var(--accent-green-dark);
+  border: 1px solid #bbf7d0;
+}
+
+.trust-badge-medical {
+  background-color: var(--blue-50);
+  color: var(--primary-blue-dark);
+  border: 1px solid #bfdbfe;
+}
+
+.trust-badge-updated {
+  background-color: #f5f3ff;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+}
+
+/* ===== DISCLAIMER MÉDICAL ===== */
+.medical-disclaimer {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--gray-400);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 0.875rem 1.25rem;
+  margin: 2rem 0;
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.medical-disclaimer strong {
+  color: var(--gray-600);
+  font-weight: 600;
+}
+
+/* ===== SECTION VÉRIFIÉE (bandeau article) ===== */
+.article-verified-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  background: linear-gradient(135deg, var(--green-50) 0%, #dcfce7 100%);
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--accent-green-dark);
+  font-weight: 500;
 }
 
 /* ===== HOMEPAGE SECTION RHYTHM ===== */

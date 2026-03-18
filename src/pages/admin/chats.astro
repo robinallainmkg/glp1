@@ -8,7 +8,7 @@ import { supabaseConfig } from '../../lib/supabase';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chats IA - GLP1 Admin</title>
+  <title>SAV - GLP1 Admin</title>
   <style is:global>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -435,8 +435,8 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="admin-layout">
     <div class="page-header">
       <div class="page-header-left">
-        <h1>💬 Chats IA</h1>
-        <p>Conversations du Coach GLP-1 — toutes stockees en Supabase</p>
+        <h1>📧 SAV</h1>
+        <p>Coach IA + Emails SAV — conversations et reponses emails</p>
       </div>
       <div class="header-actions">
         <span class="last-update" id="lastUpdate"></span>
@@ -505,6 +505,47 @@ import { supabaseConfig } from '../../lib/supabase';
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
             <span>Selectionnez une conversation pour voir les messages</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAV Emails -->
+      <div class="feedback-section" id="savSection">
+        <h2>📧 Emails SAV</h2>
+        <div class="stats-grid" style="margin-bottom: 1.5rem;">
+          <div class="stat-card">
+            <div class="label">Emails recus</div>
+            <div class="value" id="statEmailsTotal">-</div>
+            <div class="sub" id="statEmailsNew">nouveaux: -</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Repondus</div>
+            <div class="value" id="statEmailsReplied" style="color: #16a34a;">-</div>
+            <div class="sub" id="statEmailsRate">taux: -</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Dernier envoi</div>
+            <div class="value" id="statLastReply" style="font-size: 1rem;">-</div>
+            <div class="sub" id="statLastReplyTo">-</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Categories</div>
+            <div class="value" id="statTopCategory">-</div>
+            <div class="sub" id="statCategories">-</div>
+          </div>
+        </div>
+        <div class="feedback-grid">
+          <div class="feedback-panel" style="flex: 2;">
+            <h3>📬 Emails recents (entrants)</h3>
+            <div id="emailsList" style="max-height: 400px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel" style="flex: 1;">
+            <h3>✅ Reponses envoyees</h3>
+            <div id="repliesList" style="max-height: 400px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
           </div>
         </div>
       </div>
@@ -630,6 +671,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
         renderConvList();
         loadFeedbackAnalytics();
+        loadSavEmails();
       } catch(e) {
         console.error('loadData error:', e);
         document.getElementById('convListContent').innerHTML = '<div class="conv-empty">Erreur de chargement — voir console</div>';
@@ -814,6 +856,113 @@ import { supabaseConfig } from '../../lib/supabase';
     function escapeHtml(str) {
       if (!str) return '';
       return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // SAV Emails
+    async function loadSavEmails() {
+      try {
+        // Load incoming emails
+        const { data: emails, error: emailErr } = await sb
+          .from('incoming_emails')
+          .select('*')
+          .order('received_at', { ascending: false })
+          .limit(50);
+
+        // Load replies
+        const { data: replies, error: replyErr } = await sb
+          .from('email_replies')
+          .select('*')
+          .order('sent_at', { ascending: false })
+          .limit(50);
+
+        if (emailErr || replyErr) {
+          // Tables don't exist yet — show message
+          const el = document.getElementById('emailsList');
+          const rl = document.getElementById('repliesList');
+          if (el) el.innerHTML = '<div class="feedback-empty" style="color:#64748b;">Tables SAV pas encore creees.<br>Lance la migration 021_sav_email_tables.sql</div>';
+          if (rl) rl.innerHTML = '<div class="feedback-empty" style="color:#64748b;">-</div>';
+          return;
+        }
+
+        const allEmails = emails || [];
+        const allReplies = replies || [];
+
+        // Stats
+        const total = allEmails.length;
+        const newCount = allEmails.filter(e => e.status === 'new').length;
+        const replied = allEmails.filter(e => e.status === 'replied').length;
+        const rate = total > 0 ? Math.round((replied / total) * 100) : 0;
+
+        document.getElementById('statEmailsTotal').textContent = total;
+        document.getElementById('statEmailsNew').textContent = 'nouveaux: ' + newCount;
+        document.getElementById('statEmailsReplied').textContent = replied;
+        document.getElementById('statEmailsRate').textContent = 'taux: ' + rate + '%';
+
+        // Last reply
+        if (allReplies.length > 0) {
+          const last = allReplies[0];
+          const d = new Date(last.sent_at);
+          document.getElementById('statLastReply').textContent = d.toLocaleDateString('fr-FR', {day:'numeric', month:'short'});
+          document.getElementById('statLastReplyTo').textContent = last.to_email;
+        }
+
+        // Categories
+        const cats = {};
+        allEmails.forEach(e => { if (e.category) cats[e.category] = (cats[e.category]||0) + 1; });
+        const topCat = Object.entries(cats).sort((a,b) => b[1]-a[1])[0];
+        if (topCat) {
+          document.getElementById('statTopCategory').textContent = topCat[0].replace('_', ' ');
+          document.getElementById('statCategories').textContent = Object.entries(cats).map(([k,v]) => k.replace('_',' ')+': '+v).join(', ');
+        }
+
+        // Render emails list
+        const emailsEl = document.getElementById('emailsList');
+        if (allEmails.length === 0) {
+          emailsEl.innerHTML = '<div class="feedback-empty">Aucun email. Lance l\'agent sav-email pour sync IMAP.</div>';
+        } else {
+          emailsEl.innerHTML = allEmails.map(e => {
+            const d = e.received_at ? new Date(e.received_at).toLocaleDateString('fr-FR', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '-';
+            const statusColor = e.status === 'new' ? '#f59e0b' : e.status === 'replied' ? '#16a34a' : '#64748b';
+            const statusLabel = e.status === 'new' ? 'NOUVEAU' : e.status === 'replied' ? 'REPONDU' : e.status.toUpperCase();
+            const catBadge = e.category ? '<span style="background:#1e293b;padding:2px 8px;border-radius:4px;font-size:0.7rem;color:#94a3b8;">'+escapeHtml(e.category)+'</span>' : '';
+            return '<div style="padding:10px 12px;border-bottom:1px solid #1e293b;cursor:pointer;" class="email-row">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<strong style="color:#e2e8f0;font-size:0.88rem;">' + escapeHtml(e.from_name || e.from_email) + '</strong>'
+              + '<span style="font-size:0.7rem;font-weight:600;color:'+statusColor+';background:'+statusColor+'20;padding:2px 8px;border-radius:4px;">'+statusLabel+'</span>'
+              + '</div>'
+              + '<div style="font-size:0.82rem;color:#94a3b8;margin-top:2px;">' + escapeHtml(e.subject || '(sans objet)') + '</div>'
+              + '<div style="display:flex;gap:8px;align-items:center;margin-top:4px;">'
+              + '<span style="font-size:0.72rem;color:#64748b;">' + d + '</span>'
+              + catBadge
+              + '</div></div>';
+          }).join('');
+        }
+
+        // Render replies list
+        const repliesEl = document.getElementById('repliesList');
+        if (allReplies.length === 0) {
+          repliesEl.innerHTML = '<div class="feedback-empty">Aucune reponse envoyee.</div>';
+        } else {
+          repliesEl.innerHTML = allReplies.map(r => {
+            const d = new Date(r.sent_at).toLocaleDateString('fr-FR', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+            const imapIcon = r.sent_to_imap ? '✅' : '⚠️';
+            return '<div style="padding:8px 12px;border-bottom:1px solid #1e293b;">'
+              + '<div style="font-size:0.82rem;color:#e2e8f0;">' + escapeHtml(r.to_email) + '</div>'
+              + '<div style="font-size:0.75rem;color:#94a3b8;margin-top:2px;">' + escapeHtml(r.subject || '') + '</div>'
+              + '<div style="display:flex;gap:8px;margin-top:4px;font-size:0.72rem;color:#64748b;">'
+              + '<span>' + d + '</span>'
+              + '<span>' + imapIcon + ' Sent</span>'
+              + (r.utm_campaign ? '<span style="color:#3b82f6;">' + escapeHtml(r.utm_campaign) + '</span>' : '')
+              + '</div></div>';
+          }).join('');
+        }
+      } catch(e) {
+        console.log('SAV emails not available yet:', e.message);
+        const el = document.getElementById('emailsList');
+        if (el) el.innerHTML = '<div class="feedback-empty" style="color:#64748b;">Section SAV pas encore active.<br>Migration + premier run agent necessaires.</div>';
+        const rl = document.getElementById('repliesList');
+        if (rl) rl.innerHTML = '<div class="feedback-empty" style="color:#64748b;">-</div>';
+      }
     }
 
     // Expose functions to global scope for onclick handlers

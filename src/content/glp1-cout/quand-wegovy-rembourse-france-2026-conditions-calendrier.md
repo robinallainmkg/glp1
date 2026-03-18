@@ -29,7 +29,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-# Quand Wegovy Sera-t-il Remboursé en France ? Calendrier et Conditions 2026
+## Quand Wegovy Sera-t-il Remboursé en France ? Calendrier et Conditions 2026
 
 "Quand est-ce que Wegovy sera remboursé ?" C'est probablement la question la plus posée par les patients français en surpoids ou obèses qui envisagent un traitement GLP-1. Et pour cause : [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est disponible en France depuis 2024, mais à un prix qui reste élevé sans prise en charge par la Sécurité Sociale. En mars 2026, les choses avancent enfin concrètement. Voici le point complet sur le calendrier, les conditions attendues et ce que vous pouvez faire en attendant.
 

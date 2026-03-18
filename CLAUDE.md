@@ -52,6 +52,7 @@ claude -p "Traite les corrections" --agent editorial
 claude -p "Valide le site" --agent validator
 claude -p "Analyse le maillage interne" --agent internal-links
 claude -p "Ameliore le design du site" --agent ui-designer
+claude -p "Reponds aux emails" --agent sav-email
 ```
 
 ### Agent SEO Audit (`.claude/agents/seo-audit.md`)
@@ -98,6 +99,15 @@ claude -p "Ameliore le design du site" --agent ui-designer
 - Agent autonome, ne depend pas des autres agents
 - Ne touche PAS aux pages admin, ni au contenu editorial, ni a la logique affiliate
 
+### Agent SAV Email (`.claude/agents/sav-email.md`)
+- **Fonction** : Sync IMAP emails entrants, reponse automatique personnalisee, redirection Coach IA
+- **Output** : `incoming_emails` + `email_replies` dans Supabase, emails envoyes via SMTP + copies IMAP Sent
+- Agent autonome, ne depend pas des autres agents du pipeline editorial
+- Envoie depuis robin@glp1-france.fr via smtp.hostinger.com
+- Tracking UTM sur tous les liens (utm_source=email, utm_medium=sav)
+- Copie HTML complete dans INBOX.Sent (JAMAIS de texte brut)
+- Categories : info_request, diagnostic_followup, remboursement, effets_secondaires, scam_victim, medecin, other
+
 ### Dependances entre agents
 - `seo-audit` → cree des `correction_tickets` (source_agent='seo-audit') → `editorial` les consomme
 - `fact-check` → cree des `correction_tickets` (source_agent='fact-check') → `editorial` les consomme
@@ -107,6 +117,7 @@ claude -p "Ameliore le design du site" --agent ui-designer
 - `analytics` → cree des `correction_tickets` (source_agent='analytics', types: content_refresh, seo_optimization) → `editorial` les consomme
 - `editorial` → modifie les fichiers, commit local → `validator` verifie + push + deploie
 - `validator` → build check → si OK push `main` (deploy FTP auto)
+- `sav-email` → autonome, sync IMAP + reponse SMTP + log Supabase (independant du pipeline editorial)
 - **Pipeline complet** (3 phases sequentielles) :
   - Phase 1 GENERATE (parallele) : seo-audit + analytics + fact-check + opportunities + internal-links
   - Phase 2 EDIT : editorial (consomme tous les tickets/suggestions/opportunites, commit local)
@@ -121,6 +132,7 @@ claude -p "Ameliore le design du site" --agent ui-designer
 - **Editorial** (`src/pages/admin/editorial.astro`) — Tickets de correction, articles crees
 - **Validator** (`src/pages/admin/validator.astro`) — Build status, erreurs frontmatter, liens casses
 - **Maillage** (`src/pages/admin/links.astro`) — Suggestions de liens internes
+- **SAV** (`src/pages/admin/chats.astro`) — Coach IA conversations + emails SAV entrants/sortants
 
 ## Base de données Supabase
 
@@ -135,6 +147,8 @@ claude -p "Ameliore le design du site" --agent ui-designer
 - `content_opportunities` — Opportunites de contenu (sujet, priorite, statut)
 - `validation_results` — Resultats de validation technique (check_type, severity, message)
 - `internal_link_suggestions` — Suggestions de liens internes (source, target, ancre, priorite)
+- `incoming_emails` — Emails entrants syncs depuis IMAP (from, subject, body, status, category)
+- `email_replies` — Reponses SAV envoyees (to, html, utm_campaign, sent_to_imap)
 
 ### Statuts des tickets
 Les tickets sont **auto-approuves** (pas de validation humaine) :

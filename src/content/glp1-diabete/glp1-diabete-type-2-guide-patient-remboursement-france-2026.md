@@ -63,7 +63,7 @@ Concrètement, un traitement GLP-1 agit sur le diabète de type 2 de plusieurs m
 - Entraîne une perte de poids de 3 à 7% en moyenne dans les indications diabète (plus importante dans les indications obésité)
 
 **Sur le cœur et les reins** :
-- Protection cardiovasculaire démontrée dans de grandes études (réduction du risque d'infarctus, d'AVC et de décès cardiovasculaire)
+- [Protection cardiovasculaire démontrée dans de grandes études](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) (réduction du risque d'infarctus, d'AVC et de décès cardiovasculaire)
 - Effets néphroprotecteurs documentés, notamment pour le sémaglutide dans l'étude FLOW
 
 ## GLP-1 pour le diabète vs GLP-1 pour l'obésité : les différences essentielles {#difference}

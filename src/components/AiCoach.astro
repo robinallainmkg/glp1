@@ -276,6 +276,63 @@ import { supabaseConfig } from '../lib/supabase.js';
     cursor: default;
   }
 
+  /* ===== SIGNUP CTA ===== */
+  .coach-cta-signup {
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin: 8px 4px;
+    animation: fadeIn 0.4s ease-out;
+  }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .coach-cta-signup p {
+    font-size: 0.8rem;
+    color: #15803d;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  .coach-cta-signup .cta-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  .coach-cta-signup .cta-btn {
+    flex: 1;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+  }
+  .coach-cta-signup .cta-btn-primary {
+    background: #16a34a;
+    color: white;
+  }
+  .coach-cta-signup .cta-btn-primary:hover { background: #15803d; }
+  .coach-cta-signup .cta-btn-secondary {
+    background: white;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+  }
+  .coach-cta-signup .cta-btn-secondary:hover { background: #f0fdf4; }
+  .coach-cta-dismiss {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 6px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+  }
+  .coach-cta-dismiss:hover { color: #64748b; }
+
   /* ===== TYPING INDICATOR ===== */
   .coach-typing {
     display: flex;
@@ -404,6 +461,39 @@ import { supabaseConfig } from '../lib/supabase.js';
   var messageCount = 0;
   var lastMsgTime = 0;
   var isSending = false;
+  var ctaShown = false;
+
+  // ===== AUTH DETECTION =====
+  function isUserLoggedIn() {
+    // Check Supabase auth token in localStorage
+    var keys = Object.keys(localStorage);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i].indexOf('sb-') === 0 && keys[i].indexOf('-auth-token') > -1) {
+        try {
+          var token = JSON.parse(localStorage.getItem(keys[i]));
+          if (token && token.access_token) return true;
+        } catch(e) {}
+      }
+    }
+    return false;
+  }
+
+  function showSignupCTA() {
+    if (ctaShown || isUserLoggedIn()) return;
+    ctaShown = true;
+    localStorage.setItem('glp1_coach_cta_shown', '1');
+    var ctaDiv = document.createElement('div');
+    ctaDiv.className = 'coach-cta-signup';
+    ctaDiv.innerHTML =
+      '<p>🔒 Créez votre espace perso pour sauvegarder vos conversations et obtenir un suivi personnalisé</p>' +
+      '<div class="cta-buttons">' +
+        '<a href="/mon-espace/" class="cta-btn cta-btn-primary">Créer mon compte</a>' +
+        '<a href="/mon-espace/#login" class="cta-btn cta-btn-secondary">Se connecter</a>' +
+      '</div>' +
+      '<button class="coach-cta-dismiss" onclick="this.parentElement.remove()">Plus tard</button>';
+    messagesEl.appendChild(ctaDiv);
+    scrollToBottom();
+  }
 
   // ===== SESSION =====
   function getSessionId() {
@@ -633,6 +723,11 @@ import { supabaseConfig } from '../lib/supabase.js';
 
       // Display response with typewriter effect
       typewriterMessage(data.response || "Desole, je n'ai pas pu repondre.", data.sources || []);
+
+      // Show signup CTA after 2nd user message
+      if (messageCount >= 2 && !ctaShown) {
+        setTimeout(function() { showSignupCTA(); }, 1500);
+      }
 
     } catch (err) {
       hideTyping();

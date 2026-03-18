@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Perte de Poids Résultats Efficacité 2025 : Guide Complet"
+title: "GLP-1 Perte de Poids 2025 : Guide Complet"
 pubDate: 2025-08-20
 date: '2026-03-17'
 author: "Dr. Émilie Martin"

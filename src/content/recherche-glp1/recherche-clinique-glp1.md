@@ -38,7 +38,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## À retenir
 
-La recherche clinique sur les agonistes GLP-1 en France explore de nouvelles indications au-delà du diabète : maladie d'Alzheimer, stéatose hépatique, insuffisance cardiaque. Ces études ouvrent l'accès à des traitements innovants et contribuent aux avancées thérapeutiques mondiales.
+La recherche clinique sur les agonistes GLP-1 en France explore de nouvelles indications au-delà du diabète : maladie d'Alzheimer, stéatose hépatique, insuffisance cardiaque. Ces études ouvrent l'accès à des traitements innovants et contribuent aux avancées thérapeutiques mondiales. Les résultats les plus solides concernent les [bénéfices cardiovasculaires prouvés en études cliniques](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec une réduction de 20% des événements cardiovasculaires majeurs.
 
 ## Prix, disponibilité et variations en France
 

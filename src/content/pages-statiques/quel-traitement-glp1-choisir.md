@@ -29,7 +29,7 @@ readingTime: 15
 - [Alternatives aux GLP-1](#alternatives-aux-glp-1)
 - [FAQ - Questions fréquentes](#faq---questions-fréquentes)
 
-# Quel traitement GLP-1 choisir ? Guide complet 2025
+## Quel traitement GLP-1 choisir ? Guide complet 2025
 
 Guide complet et actualisé pour vous aider à choisir le traitement GLP-1 le plus adapté à votre situation médicale et personnelle.
 

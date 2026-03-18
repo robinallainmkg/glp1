@@ -38,7 +38,8 @@ const AGENTS = {
   'editorial':         'Traite les tickets, liens internes et opportunites (commit+push main)',
   'validator':         'Valide le site (build + push main → deploy si OK)',
   'internal-links':    'Analyse le maillage interne et suggere des liens',
-  'autopilot':         'Execute UN cycle du pipeline. Ne cherche pas a comprendre le contexte, lis ta definition dans .claude/agents/autopilot.md et execute immediatement les 4 phases: CHECK (SQL Supabase) → GENERATE (agents paralleles) → EDIT (editorial) → VALIDATE (validator+deploy). Pas d\'exploration, pas de recherche, juste execute.',
+  'ui-designer':       'Audit visuel et amelioration UX/UI du site (typographie, couleurs, composants, navigation, animations)',
+  // autopilot is now handled natively by the server (no Claude agent needed)
 };
 
 // Track running agents
@@ -47,6 +48,8 @@ const running = new Map();
 // Autopilot state
 let autopilotEnabled = false;
 let autopilotCycle = 0;
+let autopilotPhase = 'idle'; // idle | check | generate | edit | validate | done
+let autopilotCycleStart = null;
 
 // Output buffers — keep last N lines per agent (persists after agent stops)
 const MAX_LINES = 500;
@@ -355,6 +358,250 @@ async function executeStrategistDecisions() {
   }
 }
 
+// ========== AUTOPILOT PIPELINE (native server-side orchestration) ==========
+// No Claude agent needed — the server handles CHECK → GENERATE → EDIT → VALIDATE natively.
+// Transitions are instant, parallel launches are real, zero tokens wasted.
+
+async function autopilotCheck() {
+  autopilotPhase = 'check';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+  appendOutput('autopilot', `\n━━━ CYCLE ${autopilotCycle} ━━━`, 'progress');
+  appendOutput('autopilot', `📍 ${time()} Phase 1 — CHECK`, 'progress');
+
+  if (!SUPABASE_URL) {
+    appendOutput('autopilot', `❌ Pas de SUPABASE_URL — skip check`, 'error');
+    return { tickets: 0, urgents: 0, pctUnchecked: 0, links: 0, opportunities: 0 };
+  }
+
+  try {
+    // Pipeline state query
+    const r1 = await fetch(`${SUPABASE_URL}/rest/v1/rpc/`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({})
+    }).catch(() => null);
+
+    // Use direct REST queries instead of RPC
+    const [ticketsR, linksR, oppsR, fcR] = await Promise.all([
+      fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?statut=eq.approved&select=id,urgence`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+      fetch(`${SUPABASE_URL}/rest/v1/internal_link_suggestions?status=eq.approved&select=id`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+      fetch(`${SUPABASE_URL}/rest/v1/content_opportunities?status=eq.approved&select=id`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+      fetch(`${SUPABASE_URL}/rest/v1/articles?is_active=eq.true&select=id,last_fact_checked`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+    ]);
+
+    const tickets = await ticketsR.json().catch(() => []);
+    const links = await linksR.json().catch(() => []);
+    const opps = await oppsR.json().catch(() => []);
+    const articles = await fcR.json().catch(() => []);
+
+    const nbTickets = Array.isArray(tickets) ? tickets.length : 0;
+    const nbUrgents = Array.isArray(tickets) ? tickets.filter(t => t.urgence === 'urgent').length : 0;
+    const nbLinks = Array.isArray(links) ? links.length : 0;
+    const nbOpps = Array.isArray(opps) ? opps.length : 0;
+    const totalArticles = Array.isArray(articles) ? articles.length : 0;
+    const unchecked = Array.isArray(articles) ? articles.filter(a => !a.last_fact_checked).length : 0;
+    const pctUnchecked = totalArticles > 0 ? Math.round(100 * unchecked / totalArticles) : 0;
+
+    appendOutput('autopilot', `📊 Tickets: ${nbTickets} (${nbUrgents} urgents) | Links: ${nbLinks} | Opps: ${nbOpps}`, 'result');
+    appendOutput('autopilot', `📊 Fact-check: ${pctUnchecked}% non vérifié (${unchecked}/${totalArticles})`, 'result');
+
+    return { tickets: nbTickets, urgents: nbUrgents, pctUnchecked, links: nbLinks, opportunities: nbOpps };
+  } catch (e) {
+    appendOutput('autopilot', `❌ Erreur CHECK: ${e.message}`, 'error');
+    return { tickets: 0, urgents: 0, pctUnchecked: 0, links: 0, opportunities: 0 };
+  }
+}
+
+function autopilotDecide(state) {
+  const { tickets, urgents, pctUnchecked } = state;
+
+  if (pctUnchecked >= 30) {
+    appendOutput('autopilot', `🧠 Décision: ${pctUnchecked}% non vérifié → fact-check → editorial → validator`, 'progress');
+    return 'factcheck-only';
+  }
+  if (urgents > 0) {
+    appendOutput('autopilot', `🧠 Décision: ${urgents} urgents → editorial direct → validator`, 'progress');
+    return 'editorial-direct';
+  }
+  if (tickets >= 20) {
+    appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (≥20) → editorial direct → validator`, 'progress');
+    return 'editorial-direct';
+  }
+  if (tickets < 10) {
+    appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (<10) → generate parallèle → editorial → validator`, 'progress');
+    return 'generate-full';
+  }
+  // 10-19 tickets, no urgents
+  appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (10-19) → editorial → validator`, 'progress');
+  return 'editorial-direct';
+}
+
+async function autopilotGenerate(decision) {
+  autopilotPhase = 'generate';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+
+  if (decision === 'editorial-direct') {
+    appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE (SKIP)`, 'progress');
+    return;
+  }
+
+  appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE`, 'progress');
+
+  let agents;
+  if (decision === 'factcheck-only') {
+    agents = ['fact-check'];
+  } else {
+    agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
+  }
+
+  // Launch all in parallel
+  const results = agents.map(a => {
+    const r = launchAgent(a);
+    if (r.ok) {
+      appendOutput('autopilot', `🟢 ${time()} — ${a} lancé (PID ${r.pid})`, 'progress');
+    } else {
+      appendOutput('autopilot', `⚠️ ${a}: ${r.error}`, 'error');
+    }
+    return { agent: a, ...r };
+  });
+
+  appendOutput('autopilot', `⏳ ${agents.length} agents en parallèle — attente...`, 'progress');
+
+  // Wait for all generate agents to complete
+  await new Promise(resolve => {
+    const check = () => {
+      const stillRunning = agents.filter(a => running.has(a));
+      if (stillRunning.length === 0) {
+        resolve();
+      } else {
+        setTimeout(check, 3000); // Check every 3s (not 15s!)
+      }
+    };
+    setTimeout(check, 5000); // First check after 5s
+  });
+
+  appendOutput('autopilot', `✅ ${time()} — Phase GENERATE terminée`, 'result');
+}
+
+async function autopilotEdit() {
+  autopilotPhase = 'edit';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+  appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (editorial)`, 'progress');
+
+  const r = launchAgent('editorial');
+  if (!r.ok) {
+    appendOutput('autopilot', `❌ Editorial: ${r.error}`, 'error');
+    return;
+  }
+  appendOutput('autopilot', `🟢 ${time()} — editorial lancé (PID ${r.pid})`, 'progress');
+
+  // Wait for editorial to complete
+  await new Promise(resolve => {
+    const check = () => {
+      if (!running.has('editorial')) {
+        resolve();
+      } else {
+        setTimeout(check, 3000);
+      }
+    };
+    setTimeout(check, 5000);
+  });
+
+  appendOutput('autopilot', `✅ ${time()} — Phase EDIT terminée`, 'result');
+}
+
+async function autopilotValidate() {
+  autopilotPhase = 'validate';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+  appendOutput('autopilot', `📍 ${time()} Phase 4 — VALIDATE + DEPLOY`, 'progress');
+
+  const r = launchAgent('validator');
+  if (!r.ok) {
+    appendOutput('autopilot', `❌ Validator: ${r.error}`, 'error');
+    return;
+  }
+  appendOutput('autopilot', `🟢 ${time()} — validator lancé (PID ${r.pid})`, 'progress');
+
+  // Wait for validator to complete
+  await new Promise(resolve => {
+    const check = () => {
+      if (!running.has('validator')) {
+        resolve();
+      } else {
+        setTimeout(check, 3000);
+      }
+    };
+    setTimeout(check, 5000);
+  });
+
+  appendOutput('autopilot', `✅ ${time()} — Phase VALIDATE terminée`, 'result');
+}
+
+async function runAutopilotCycle() {
+  autopilotCycle++;
+  autopilotCycleStart = new Date();
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+
+  try {
+    // Phase 1: CHECK
+    const state = await autopilotCheck();
+
+    // Decide what to do
+    const decision = autopilotDecide(state);
+
+    // Phase 2: GENERATE (may skip)
+    await autopilotGenerate(decision);
+
+    // Phase 3: EDIT
+    await autopilotEdit();
+
+    // Phase 4: VALIDATE
+    await autopilotValidate();
+
+    // Log cycle completion
+    autopilotPhase = 'done';
+    const duration = Math.round((Date.now() - autopilotCycleStart) / 1000);
+    appendOutput('autopilot', `\n🏁 ${time()} — Cycle ${autopilotCycle} terminé en ${duration}s`, 'result');
+
+    // Log to Supabase
+    sbInsert('agent_runs', {
+      agent_name: 'autopilot',
+      status: 'cycle_complete',
+      started_at: autopilotCycleStart.toISOString(),
+      completed_at: new Date().toISOString(),
+      metadata: { cycle: autopilotCycle, decision, duration_s: duration }
+    });
+
+  } catch (e) {
+    appendOutput('autopilot', `❌ Erreur cycle: ${e.message}`, 'error');
+    console.log(`❌ [${time()}] Autopilot cycle ${autopilotCycle} erreur: ${e.message}`);
+  }
+
+  // Schedule next cycle if still enabled
+  if (autopilotEnabled) {
+    const delay = 15000; // 15s between cycles
+    appendOutput('autopilot', `🔄 Prochain cycle dans ${delay / 1000}s...`, 'progress');
+    console.log(`🔄 [${time()}] Cycle ${autopilotCycle} done — next in ${delay / 1000}s`);
+    setTimeout(() => {
+      if (autopilotEnabled) runAutopilotCycle();
+    }, delay);
+  } else {
+    autopilotPhase = 'idle';
+  }
+}
+
 // After editorial finishes, check if remaining tickets need processing
 async function checkAndRelaunchIfNeeded(finishedAgent) {
   if (!SUPABASE_URL) return;
@@ -504,8 +751,8 @@ function launchAgent(name, { allowMultiple = false } = {}) {
   // Reset output buffer for this instance
   outputBuffers.set(instanceName, { lines: [{ ts: new Date().toISOString(), text: `🚀 Agent ${instanceName} lance (PID ${child.pid})` }], startedAt: new Date().toISOString() });
 
-    // Log spawn to autopilot console if autopilot is running and this isn't autopilot itself
-    if (baseAgent !== 'autopilot' && running.has('autopilot')) {
+    // Log spawn to autopilot console if autopilot is active
+    if (autopilotEnabled) {
       const time = new Date().toLocaleTimeString('fr-FR');
       appendOutput('autopilot', `🟢 ${time} — ${instanceName} spawné (PID ${child.pid})`, 'progress');
     }
@@ -537,7 +784,7 @@ function launchAgent(name, { allowMultiple = false } = {}) {
     console.log(`${code === 0 ? '✅' : '❌'} [${new Date().toLocaleTimeString()}] ${instanceName} ${status} (exit ${code})`);
 
     // Log despawn to autopilot console
-    if (baseAgent !== 'autopilot' && (running.has('autopilot') || autopilotEnabled)) {
+    if (autopilotEnabled) {
       const time = new Date().toLocaleTimeString('fr-FR');
       const emoji = code === 0 ? '✅' : '❌';
       appendOutput('autopilot', `${emoji} ${time} — ${instanceName} terminé (${status})`, code === 0 ? 'result' : 'error');
@@ -558,29 +805,9 @@ function launchAgent(name, { allowMultiple = false } = {}) {
       await executeStrategistDecisions();
     }
 
-    // If an editorial agent finished, check if there are remaining tickets
-    if (baseAgent.startsWith('editorial') && code === 0) {
+    // If an editorial agent finished (not in autopilot mode), check remaining tickets
+    if (baseAgent.startsWith('editorial') && code === 0 && !autopilotEnabled) {
       setTimeout(() => checkAndRelaunchIfNeeded(instanceName), 10000);
-    }
-
-    // AUTOPILOT AUTO-RELAUNCH: each cycle is a fresh invocation
-    if (baseAgent === 'autopilot' && code === 0 && autopilotEnabled) {
-      autopilotCycle++;
-      console.log(`🔄 [${new Date().toLocaleTimeString()}] Autopilot cycle ${autopilotCycle} termine — relance dans 10s...`);
-      appendOutput('autopilot', `🔄 Cycle ${autopilotCycle} termine — relance dans 10s...`, 'progress');
-      setTimeout(() => {
-        if (autopilotEnabled && !running.has('autopilot')) {
-          launchAgent('autopilot');
-        }
-      }, 10000);
-    } else if (baseAgent === 'autopilot' && code !== 0) {
-      console.log(`⚠️ [${new Date().toLocaleTimeString()}] Autopilot echoue (exit ${code}) — relance dans 30s...`);
-      appendOutput('autopilot', `⚠️ Cycle echoue — relance dans 30s...`, 'error');
-      setTimeout(() => {
-        if (autopilotEnabled && !running.has('autopilot')) {
-          launchAgent('autopilot');
-        }
-      }, 30000);
     }
   });
 
@@ -646,7 +873,7 @@ const server = createServer(async (req, res) => {
     const totalCost = [...agentCosts.values()].reduce((s, c) => s + c, 0);
 
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost, autopilot: { enabled: autopilotEnabled, cycle: autopilotCycle, running: running.has('autopilot') } }));
+    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost, autopilot: { enabled: autopilotEnabled, cycle: autopilotCycle, phase: autopilotPhase, running: autopilotEnabled } }));
     return;
   }
 
@@ -693,41 +920,39 @@ const server = createServer(async (req, res) => {
     return;
   }
 
-  // POST /autopilot/start — start autopilot loop
+  // POST /autopilot/start — start native autopilot pipeline (no Claude agent!)
   if (req.method === 'POST' && url.pathname === '/autopilot/start') {
     if (autopilotEnabled) {
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ ok: true, message: 'Autopilot deja actif', cycle: autopilotCycle }));
+      res.end(JSON.stringify({ ok: true, message: 'Autopilot deja actif', cycle: autopilotCycle, phase: autopilotPhase }));
       return;
     }
     autopilotEnabled = true;
     autopilotCycle = 0;
-    console.log(`🟢 [${new Date().toLocaleTimeString()}] Autopilot ACTIVE`);
-    appendOutput('autopilot', '🟢 Autopilot active — demarrage du premier cycle...', 'progress');
-    const result = launchAgent('autopilot');
+    autopilotPhase = 'starting';
+    console.log(`🟢 [${new Date().toLocaleTimeString()}] Autopilot ACTIVE (pipeline natif)`);
+    outputBuffers.set('autopilot', { lines: [{ ts: new Date().toISOString(), text: '🟢 Autopilot activé — pipeline natif (zéro token)', level: 'progress' }], startedAt: new Date().toISOString() });
+    // Start the pipeline loop (runs in background, no Claude agent needed)
+    runAutopilotCycle();
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ ok: true, message: 'Autopilot demarre', cycle: 1, pid: result.pid }));
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot natif demarre', cycle: 1 }));
     return;
   }
 
   // POST /autopilot/stop — stop autopilot loop
   if (req.method === 'POST' && url.pathname === '/autopilot/stop') {
     autopilotEnabled = false;
-    console.log(`🔴 [${new Date().toLocaleTimeString()}] Autopilot DESACTIVE (arret apres cycle en cours)`);
-    appendOutput('autopilot', `🔴 Autopilot desactive — arret apres le cycle ${autopilotCycle} en cours`, 'progress');
-    // Also kill the running autopilot if any
-    if (running.has('autopilot')) {
-      stopAgent('autopilot');
-    }
+    console.log(`🔴 [${new Date().toLocaleTimeString()}] Autopilot DESACTIVE`);
+    appendOutput('autopilot', `🔴 Autopilot désactivé — arrêt après phase en cours (${autopilotPhase})`, 'progress');
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ ok: true, message: 'Autopilot arrete', cyclesCompleted: autopilotCycle }));
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot arrete', cyclesCompleted: autopilotCycle, lastPhase: autopilotPhase }));
     return;
   }
 
   // GET /autopilot/status — check autopilot state
   if (req.method === 'GET' && url.pathname === '/autopilot/status') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ enabled: autopilotEnabled, cycle: autopilotCycle, running: running.has('autopilot') }));
+    res.end(JSON.stringify({ enabled: autopilotEnabled, cycle: autopilotCycle, phase: autopilotPhase, running: autopilotEnabled }));
     return;
   }
 

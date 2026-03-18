@@ -162,7 +162,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Médicaments GLP-1 disponibles :**
 - **Ozempic** (sémaglutide) - Pour diabète + obésité
-- **Wegovy** (sémaglutide haute dose) - Spécial obésité
+- [**Wegovy** (sémaglutide haute dose)](/collections/traitements-glp1/guide-complet-wegovy/) - Spécial obésité
 - **Saxenda** (liraglutide) - Première intention souvent
 - **Trulicity** (dulaglutide) - Alternative
 
