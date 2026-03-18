@@ -139,7 +139,7 @@ Une question cruciale se pose : la protection cardiovasculaire des GLP-1 est-ell
 
 ### La réponse des analyses de médiation
 
-Des analyses statistiques de médiation publiées dans *JAMA Cardiology* montrent que **seulement 40 à 50% du bénéfice cardiovasculaire** observé avec le sémaglutide peut être attribué à la perte de poids. Les **50 à 60% restants** résultent d'effets directs : anti-inflammatoires, endothéliaux, et myocardiques.
+Des analyses statistiques de médiation publiées dans *The Lancet* (2025) montrent que **seulement environ 33% du bénéfice cardiovasculaire** observé avec le sémaglutide peut être attribué à la réduction du tour de taille. Les **~67% restants** résultent d'effets indépendants de la perte d'adiposité : anti-inflammatoires, endothéliaux, et myocardiques.
 
 Cela signifie qu'un patient qui perdrait peu de poids (répondeur partiel) bénéficierait néanmoins d'une protection cardiovasculaire significative grâce aux mécanismes non pondéraux.
 
@@ -190,7 +190,7 @@ Si vous êtes sous traitement GLP-1 et que vous présentez des facteurs de risqu
 ## FAQ {#faq}
 
 **Les GLP-1 protègent-ils le coeur même sans perte de poids ?**
-Oui, en partie. Des analyses de médiation montrent que 50 à 60% du bénéfice cardiovasculaire est indépendant de la perte de poids. Même sans amaigrissement significatif, les GLP-1 ont des effets directs anti-inflammatoires et endothéliaux bénéfiques pour le coeur.
+Oui, en grande partie. Une analyse de médiation du SELECT trial publiée dans *The Lancet* (2025) montre qu'environ 33% du bénéfice cardiovasculaire est attribuable à la réduction du tour de taille, et ~67% résultent d'effets indépendants de la perte de poids. Même sans amaigrissement significatif, les GLP-1 ont des effets directs anti-inflammatoires et endothéliaux bénéfiques pour le cœur.
 
 **Peut-on prendre un GLP-1 après un infarctus ?**
 Oui, c'est même recommandé pour les patients diabétiques ayant eu un infarctus, selon les dernières recommandations ESC/SFD. Les GLP-1 réduisent le risque de récidive d'environ 20%. Votre cardiologue évaluera la compatibilité avec vos autres traitements.

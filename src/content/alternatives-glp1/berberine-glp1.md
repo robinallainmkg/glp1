@@ -133,7 +133,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
 - [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
-Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
+Pour aller plus loin, consultez notre guide sur les [alternatives naturelles à l'Ozempic](/collections/alternatives-glp1/alternatives-naturelles-ozempic/) qui récapitule toutes les options disponibles en France. Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
 ## FAQ
 

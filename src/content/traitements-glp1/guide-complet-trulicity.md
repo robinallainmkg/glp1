@@ -70,7 +70,7 @@ Dans les études cliniques AWARD, Trulicity a démontré une efficacité compara
 - 1842 patients randomisés
 - Durée : 52 semaines
 - Dose maximale : 4,5 mg/semaine
-- Résultat : -1,36% d'HbA1c vs -1,21% metformine
+- Résultat : Dulaglutide 4,5 mg/sem : -1,87% d'HbA1c ; dulaglutide 3 mg/sem : -1,73% d'HbA1c — vs dulaglutide 1,5 mg/sem (bras de référence)
 
 ## Trulicity pour la perte de poids
 
@@ -78,7 +78,7 @@ Bien que principalement indiqué pour le diabète, Trulicity peut également fav
 
 ### Résultats cliniques
 - **Perte de poids moyenne** : 2-4 kg
-- **Maintien du poids** : Chez 60% des patients après 1 an
+- **Maintien du poids** : Une perte de poids modérée (2-4 kg en moyenne) est observée dans les études cliniques AWARD. L'effet sur le maintien du poids à long terme varie selon les patients.
 - **Amélioration des comorbidités** : Réduction de l'hypertension
 
 ## Posologie et administration

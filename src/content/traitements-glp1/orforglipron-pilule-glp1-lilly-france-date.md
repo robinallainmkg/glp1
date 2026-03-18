@@ -53,13 +53,13 @@ Eli Lilly a publié en 2025 les résultats des principales études de phase 3 de
 
 **Pour l'obésité (indication principale)** :
 
-| Dose | Perte de poids à 36 semaines | ≥ 10% de perte |
+| Dose | Perte de poids à 72 semaines | ≥ 10% de perte |
 |------|------------------------------|----------------|
-| 12 mg | -12,6% | 56% des patients |
-| 24 mg | -14,7% | 67% des patients |
-| 36 mg | -15,8% | 71% des patients |
+| 6 mg | -7,5% | 22% des patients (≥10%) |
+| 12 mg | -8,4% | 28% des patients (≥10%) |
+| 36 mg | -11,2% | 55% des patients (≥10%) |
 
-Ces résultats sont comparables à ceux de Wegovy (–14 à –17% selon les études STEP), ce qui est remarquable pour un comprimé oral. La durée de suivi étant plus courte (36 semaines vs 68 semaines pour Wegovy), les résultats à long terme seront précisés dans les études post-AMM.
+Ces résultats (-11,2% à 72 semaines pour la dose maximale) sont inférieurs à ceux de Wegovy (–14 à –17% selon les études STEP à 68 semaines), mais constituent une première prometteuse pour un GLP-1 oral sans contrainte alimentaire. La durée de suivi principale dans ATTAIN-1 est de 72 semaines (non 36), comparable à celle de Wegovy (68 semaines dans STEP-1).
 
 **Pour le diabète de type 2** :
 
@@ -73,7 +73,7 @@ Les études sur l'orforglipron dans le diabète de type 2 montrent également de
 
 | Traitement | Forme | Perte de poids | Injection |
 |------------|-------|----------------|-----------|
-| Orforglipron | Comprimé quotidien | ~15% | Non |
+| Orforglipron | Comprimé quotidien | ~11% | Non |
 | Wegovy | Injection hebdomadaire | 15-17% | Oui |
 | Mounjaro | Injection hebdomadaire | 20-22% | Oui |
 | Saxenda | Injection quotidienne | 8% | Oui |
@@ -173,7 +173,7 @@ Pour être informé en temps réel des décisions de l'EMA et des évolutions r�
 Non. En mars 2026, l'orforglipron n'a pas encore reçu son AMM européenne. La commercialisation avant 2027 est très improbable.
 
 **L'orforglipron est-il aussi efficace que Mounjaro ?**
-Non. Mounjaro (tirzépatide) affiche une perte de poids de 20 à 22%, supérieure aux 15 à 16% de l'orforglipron. En revanche, l'orforglipron est comparable à Wegovy en efficacité, avec l'avantage d'être oral.
+Non. Mounjaro (tirzépatide) affiche une perte de poids de 20 à 22%, supérieure aux 11 à 12% de l'orforglipron (dose maximale 36 mg à 72 semaines dans l'étude ATTAIN-1). En revanche, l'orforglipron est comparable à Wegovy en efficacité, avec l'avantage d'être oral.
 
 **L'orforglipron aura-t-il les mêmes contre-indications que les autres GLP-1 ?**
 Le profil de contre-indications sera précisé dans la notice officielle après l'AMM. Les contre-indications classiques des GLP-1 (antécédents de carcinome thyroïdien médullaire, pancréatite chronique, grossesse) s'appliquent probablement, mais les données spécifiques à l'orforglipron seront confirmées par les autorités de santé.

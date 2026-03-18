@@ -15,7 +15,7 @@ featured: true
 published: true
 priority: 1
 schema: "Article"
-mainKeyword: "GLP-1 idées suicidaires risque semaglutide étude EMA 2026"
+mainKeyword: "GLP-1 idées suicidaires risque semaglutide"
 secondaryKeywords: ["ozempic idées suicidaires", "semaglutide risque suicidaire", "wegovy santé mentale", "EMA GLP-1 suicidalité", "Epi-Phare semaglutide signal"]
 
 # Configuration Affiliation

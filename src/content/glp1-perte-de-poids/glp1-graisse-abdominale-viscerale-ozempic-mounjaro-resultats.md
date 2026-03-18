@@ -121,7 +121,7 @@ Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traite
 |-----------|-------------|---------|------------|
 | Perte de poids totale | -20,9% | -3,1% | -17,8 pts |
 | Réduction graisse viscérale | -40,1% | -9% | -31,1 pts |
-| Réduction tour de taille | -17,2 cm | -4,0 cm | -13,2 cm |
+| Réduction tour de taille | -18,5 cm (dose 15 mg) | -4,0 cm | -14,5 cm |
 | Réduction graisse totale | -33% | -8% | -25 pts |
 
 Le tirzépatide réduit la graisse viscérale de -40,1 % dans l'étude SURMOUNT-1 (72 semaines), de manière encore plus marquée que le sémaglutide, en partie grâce à son double mécanisme d'action GLP-1 + GIP. Le récepteur GIP (Glucose-Dependent Insulinotropic Polypeptide) joue un rôle dans le métabolisme adipeux et potentialise les effets du GLP-1 sur le déstockage des graisses abdominales.

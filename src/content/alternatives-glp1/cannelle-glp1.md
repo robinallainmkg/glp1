@@ -50,7 +50,7 @@ Selon les endocrinologues français... Cette approche s'inscrit dans les recomma
 - **Rapport bénéfice/risque** : Évaluation individuelle nécessaire
 - **Suivi long terme** : Protocoles établis
 
-Les GLP-1, agonistes GLP-1, diabète type 2 sont des éléments clés dans ce domaine médical.
+Les GLP-1, agonistes GLP-1, [diabète type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) sont des éléments clés dans ce domaine médical.
 
 
 

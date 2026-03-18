@@ -145,7 +145,7 @@ Pas forcément, mais c'est une option que votre médecin peut envisager. Passer 
 C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise rapide du poids. Les données des études STEP ne suggèrent pas que les "pauses" améliorent les résultats à long terme.
 
 **Le plateau est-il causé par le stress ou le manque de sommeil ?**
-Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité.
+Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique pour dépasser le plateau](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut également aider à identifier les comportements alimentaires qui freinent la progression.
 
 ## Résumé : que faire face à un plateau ?
 
@@ -153,7 +153,7 @@ Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétentio
 |---|---|
 | Moins de 4 semaines | Patience, vérifier les conditions de pesée |
 | 4 à 8 semaines | Revoir l'alimentation (protéines, qualité), augmenter l'activité physique |
-| Plus de 8 semaines | Consultation médicale — évaluer la dose, l'état nutritionnel, envisager une adaptation |
+| Plus de 8 semaines | Consultation médicale — évaluer la dose, les [carences nutritionnelles sous GLP-1](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), envisager une adaptation |
 | Plus de 6 mois à dose max | Accepter le nouvel équilibre, focus sur le maintien |
 
 Le plateau de poids sous GLP-1 est une étape normale du traitement, pas un signe d'échec. Il est le reflet de l'intelligence physiologique de votre corps, qui s'adapte à un nouveau poids pour le défendre. Comprendre ce mécanisme permet de l'aborder avec moins d'anxiété et plus d'efficacité.

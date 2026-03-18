@@ -69,7 +69,7 @@ Dans les études cliniques PIONEER, Rybelsus a démontré une efficacité compar
 - 703 patients randomisés
 - Durée : 26 semaines
 - Dose maximale : 14 mg/jour
-- Résultat : -1,1% d'HbA1c vs -1,2% empagliflozine
+- Résultat : Rybelsus 14 mg : -1,4% d'HbA1c vs placebo (monothérapie). Note : c'est l'étude PIONEER-2 qui compare Rybelsus 14 mg à l'empagliflozine 25 mg.
 
 ## Posologie et administration
 

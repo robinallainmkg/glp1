@@ -111,8 +111,8 @@ mainKeyword: "effets secondaires rybelsus semaglutide oral"
 - Fatigue : 3-5%
 - Étourdissements : 1-3%
 
-### Très peu fréquents (<0.1%)
-- Pancréatite : <0.5%
+### Peu fréquents (<1%)
+- Pancréatite aiguë : peu fréquent (≥1/1000 à <1/100 selon le RCP EMA)
 - Réactions allergiques : <0.3%
 - Problèmes rénaux : <0.2%
 

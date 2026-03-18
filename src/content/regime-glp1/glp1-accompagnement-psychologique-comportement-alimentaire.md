@@ -62,7 +62,7 @@ Pour les patients ayant des antécédents de troubles des comportements alimenta
 
 ### La frustration émotionnelle silencieuse
 
-Certains patients décrivent une forme de deuil inattendu : la nourriture, qui jouait un rôle de réconfort, de plaisir social ou de gestion émotionnelle, perd soudainement cette fonction. Cette perte peut générer une frustration diffuse, une irritabilité, ou même une forme d'apathie.
+Certains patients décrivent une forme de deuil inattendu : la nourriture, qui jouait un rôle de réconfort, de plaisir social ou de gestion émotionnelle, perd soudainement cette fonction. Cette perte peut générer une frustration diffuse, une irritabilité, ou même une forme d'apathie — un phénomène documenté dans notre article sur la [dépression et apathie sous GLP-1](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
 
 Quand l'alimentation émotionnelle n'est pas remplacée par d'autres stratégies de régulation — activité physique, relaxation, lien social, thérapie — le risque est de développer des comportements de substitution : consommation d'alcool, hyperphagie à l'arrêt, ou troubles du sommeil.
 

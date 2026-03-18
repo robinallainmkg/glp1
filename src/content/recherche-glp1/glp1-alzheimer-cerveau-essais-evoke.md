@@ -143,7 +143,7 @@ Il n'existe pas, a ce jour, de traitement GLP-1 indique dans la maladie d'Alzhei
 
 L'echec des essais EVOKE ne signifie pas la fin de la recherche sur les GLP-1 et le cerveau. Plusieurs pistes sont activement explorees :
 
-**GLP-1 injectables a haute dose** : Des etudes precliniques testent des doses superieures de semaglutide injectable, qui atteignent mieux le cerveau que la forme orale. Des essais cliniques de phase II pourraient debuter en 2027.
+**GLP-1 injectables a haute dose** : Des etudes precliniques testent des doses superieures de semaglutide injectable, qui atteignent mieux le cerveau que la forme orale. Des essais cliniques de phase II avec semaglutide injectable sont en préparation. Novo Nordisk a annoncé l'arrêt de l'extension prévue des essais EVOKE. Les perspectives d'essais phase II restent à confirmer officiellement.
 
 **Formulations intranasales** : L'administration intranasale permettrait de contourner la barriere hemato-encephalique et d'augmenter considerablement la concentration cerebrale de GLP-1. Cette approche est encore en phase preclinique.
 

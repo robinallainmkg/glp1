@@ -134,7 +134,7 @@ Pour tirer le meilleur du paléo sans ses inconvénients, une version adaptée e
 - **Remboursement** : 30% par l'Assurance Maladie pour le DT2
 - **ALD 30 (diabète de type 2)** : 100% du ticket modérateur. L'obésité seule n'est pas reconnue comme ALD en France en mars 2026.
 
-### Wegovy (sémaglutide pour l'obésité)
+### [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide pour l'obésité)
 - **Prix** : ~250 à 290 €/mois
 - **Remboursement** : non remboursé en mars 2026
 

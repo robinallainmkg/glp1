@@ -73,7 +73,7 @@ L'Ozempic Face est plus fréquent et plus marqué dans certains profils :
 - **IMC de départ peu élevé** : paradoxalement, les personnes qui commencent avec un surpoids modéré ont moins de "réserve" faciale à perdre
 - **Tabagisme** : le tabac altère l'élasticité cutanée
 - **Exposition solaire chronique** : accélère le vieillissement cutané
-- **Absence de supplémentation protéiné** : favorise la sarcopénie
+- **Absence de [supplémentation pour prévenir le vieillissement cutané](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : des carences en protéines, collagène ou vitamines favorisent la sarcopénie et accélèrent le relâchement cutané
 
 À l'inverse, les personnes qui avaient un visage plus plein avant le traitement, qui perdent du poids progressivement et qui maintiennent une bonne hydratation et un apport protéiné suffisant sont généralement moins touchées.
 
