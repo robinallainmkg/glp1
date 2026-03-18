@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Lorsque l'ANSM a révisé en 2025 les [règles de prescription des GLP-1 en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), une restriction a particulièrement retenu l'attention : les traitements GLP-1 indiqués contre l'obésité (Wegovy, Mounjaro, Saxenda) ne peuvent être prescrits qu'aux patients de moins de 65 ans. Cette limite soulève des questions légitimes, surtout pour les nombreux seniors confrontés à une obésité ou à un surpoids persistant. Voici ce que la science et les autorités sanitaires expliquent sur ce choix, et quelles options restent disponibles pour les plus de 65 ans.
+Lorsque l'ANSM a révisé les [règles de prescription des GLP-1 en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) (conditions publiées début 2025), une restriction a particulièrement retenu l'attention : les traitements GLP-1 indiqués contre l'obésité (Wegovy, Mounjaro, Saxenda) sont **prioritairement réservés** aux patients avec un IMC ≥ 35 kg/m² âgés de moins de 65 ans. Depuis juin 2025, la primoprescription a été élargie à tous les médecins. Cette recommandation de priorité soulève des questions légitimes, surtout pour les nombreux seniors confrontés à une obésité ou à un surpoids persistant. Voici ce que la science et les autorités sanitaires expliquent sur ce choix, et quelles options restent disponibles pour les plus de 65 ans.
 
 ## Pourquoi l'ANSM a-t-elle fixé une limite d'âge à 65 ans ?
 
@@ -70,7 +70,7 @@ Pourquoi ? Parce que le rapport bénéfice/risque dans le diabète est bien docu
 
 ### GLP-1 pour l'obésité : limite à 65 ans
 
-En revanche, les GLP-1 prescrits **uniquement pour l'obésité**, sans diabète associé — Wegovy, Mounjaro dans l'indication obésité, et Saxenda — sont soumis à la restriction d'âge de 65 ans telle que définie par l'ANSM dans ses nouvelles conditions de prescription.
+En revanche, les GLP-1 prescrits **uniquement pour l'obésité**, sans diabète associé — Wegovy, Mounjaro dans l'indication obésité, et Saxenda — sont soumis à des conditions **cumulatives** définies par l'ANSM : un IMC initial ≥ 35 kg/m² **et** un âge inférieur à 65 ans. Ces deux critères doivent être réunis simultanément pour accéder au traitement.
 
 ## Ce que cela signifie concrètement
 
