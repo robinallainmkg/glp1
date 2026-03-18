@@ -1,7 +1,7 @@
 ---
-title: "Remboursement Wegovy Mounjaro 2026 : Conditions"
-description: "Remboursement Wegovy Mounjaro Securite Sociale 2026 : calendrier, négociations CEPS, avis HAS, conditions IMC ≥ 35 et date prévisionnelle 2e semestre 2026."
-keywords: ['remboursement wegovy', 'remboursement mounjaro', 'securite sociale wegovy mounjaro', 'wegovy mounjaro prise en charge 2026', 'remboursement glp1 obésité france']
+title: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026"
+description: "Remboursement Wegovy et Mounjaro par la Sécurité Sociale 2026 : avis HAS, critères IMC ≥ 35, calendrier CEPS. Serez-vous remboursé ? Réponses claires."
+keywords: ['remboursement wegovy mounjaro securite sociale 2026', 'remboursement wegovy', 'remboursement mounjaro', 'securite sociale wegovy mounjaro', 'wegovy mounjaro prise en charge 2026', 'remboursement glp1 obésité france', 'critères remboursement wegovy imc 35', 'quand wegovy remboursé france']
 seoTitle: "Remboursement Wegovy Mounjaro Securite Sociale 2026 en France"
 seoDescription: "Remboursement Wegovy Mounjaro Securite Sociale 2026 : calendrier officiel, avis HAS, conditions IMC ≥ 35. Tout savoir sur la prise en charge GLP-1 en France."
 pubDate: 2026-03-16

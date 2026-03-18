@@ -1,6 +1,6 @@
 ---
-title: "OMS Recommandations GLP-1 Obésité 2025 : Ce qui Change"
-description: "OMS recommandations GLP-1 obésité 2025 : premières lignes directrices mondiales sur les traitements GLP-1. Impact concret pour les patients français."
+title: "OMS Recommandations GLP-1 Obésité 2025 : Ce qui Change en France"
+description: "OMS recommandations GLP-1 obésité 2025 : liraglutide, sémaglutide, tirzépatide validés. Impact sur le remboursement en France et accès équitable."
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
@@ -15,7 +15,7 @@ published: true
 priority: 2
 schema: "Article"
 mainKeyword: "OMS recommandations GLP-1 obésité 2025"
-secondaryKeywords: ["OMS obésité GLP-1", "lignes directrices OMS sémaglutide", "recommandations mondiales obésité médicaments", "OMS traitement obésité 2025"]
+secondaryKeywords: ["OMS recommandations GLP-1 obésité 2025", "OMS obésité GLP-1", "lignes directrices OMS sémaglutide", "recommandations mondiales obésité médicaments", "OMS traitement obésité 2025", "OMS liraglutide semaglutide tirzepatide", "WHO guidelines GLP-1 obesity 2025", "impact OMS remboursement france glp1"]
 
 # Configuration Affiliation
 enableAffiliation: true

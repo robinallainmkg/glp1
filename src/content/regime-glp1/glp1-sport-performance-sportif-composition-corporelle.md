@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Sport de Performance : Composition Corporelle et Endurance"
-description: "GLP-1 sport performance sportif : impact sur la composition corporelle masse grasse vs maigre, endurance, récupération musculaire. Guide pour sportifs amateurs et compétiteurs 2026."
+description: "GLP-1 et sport de performance : impact sur la composition corporelle, l'endurance et la récupération musculaire. Guide sportifs 2026."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18

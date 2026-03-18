@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 vs Chirurgie Bariatrique Sleeve Bypass : Comparaison 2026"
-description: "GLP-1 vs chirurgie bariatrique sleeve bypass comparaison : efficacité, coût, risques et remboursement. Guide complet pour faire le bon choix."
+description: "GLP-1 vs chirurgie bariatrique : sleeve ou Wegovy, bypass ou Mounjaro ? Comparatif efficacité, coûts, risques et remboursement pour choisir en 2026."
 pubDate: 2026-03-16
 date: "2026-03-16"
 updatedAt: 2026-03-16
@@ -16,7 +16,7 @@ published: true
 priority: 2
 schema: "Article"
 mainKeyword: "GLP-1 vs chirurgie bariatrique sleeve bypass comparaison"
-secondaryKeywords: ["sleeve ou glp1", "bypass ou ozempic", "chirurgie ou medicament minceur", "glp1 vs sleeve gastrectomie", "mounjaro ou chirurgie obésité"]
+secondaryKeywords: ["GLP-1 vs chirurgie bariatrique sleeve bypass comparaison", "sleeve ou glp1", "bypass ou ozempic", "chirurgie ou medicament minceur", "glp1 vs sleeve gastrectomie", "mounjaro ou chirurgie obésité", "wegovy vs bypass résultats 2026", "chirurgie bariatrique ou medicament glp1", "sleeve ou wegovy quel choix"]
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
 affiliateConfig:

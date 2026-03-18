@@ -1,8 +1,9 @@
 ---
-title: "Sémaglutide Oral en Comprimé : Guide France 2026"
+title: "Sémaglutide Oral en Comprimé France 2026 : Rybelsus et Après"
 slug: "semaglutide-oral-comprime-ozempic-france"
-description: "Semaglutide oral comprime France 2026 : technologie SNAC, contraintes de prise, prix estimé 300-350€/mois et comparatif avec l'injectable Ozempic."
+description: "Sémaglutide oral en comprimé France 2026 : Rybelsus, Wegovy comprimé attendu fin 2027. Technologie SNAC, efficacité comparée à l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprime France 2026"
+secondaryKeywords: ["semaglutide oral comprime France 2026", "rybelsus sémaglutide oral", "wegovy comprime oral", "glp1 comprimé sans injection", "sémaglutide oral efficacité", "ozempic comprimé France", "traitement obesite oral glp1"]
 author: "Dr. Marie Dubois"
 image: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 collection: "traitements-glp1"

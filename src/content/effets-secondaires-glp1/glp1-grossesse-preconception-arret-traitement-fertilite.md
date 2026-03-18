@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Effets secondaires GLP-1"
 tags: ["glp1", "grossesse", "préconception", "fertilité", "arrêt traitement", "ozempic", "wegovy", "mounjaro", "femmes"]
 collection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/glp1-femmes-fertilite.jpg"
+thumbnail: "/images/thumbnails/sante.jpg"
 thumbnailAlt: "GLP-1 avant grossesse arrêt traitement fertilité préconception"
 featured: true
 published: true

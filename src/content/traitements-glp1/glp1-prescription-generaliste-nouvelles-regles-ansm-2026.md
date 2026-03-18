@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 Obésité : Les Généralistes Peuvent Prescrire (Règles ANSM 2025)"
-description: "Prescription GLP-1 obésité généraliste nouvelles règles ANSM 2026 : depuis juin 2025, tout médecin peut prescrire Wegovy, Mounjaro et Saxenda. Guide pratique complet."
+description: "Prescription GLP-1 obésité : depuis juin 2025, tout généraliste peut prescrire Wegovy, Mounjaro et Saxenda. Nouvelles règles ANSM et guide pratique."
 keywords: ['prescription glp1 generaliste', 'ansm regles prescription glp1 2025', 'wegovy generaliste ordonnance', 'mounjaro medecin traitant', 'glp1 sans specialiste france']
 seoTitle: "GLP-1 Obésité : Généralistes Autorisés à Prescrire depuis Juin 2025 (ANSM)"
 seoDescription: "Depuis juin 2025, votre médecin généraliste peut prescrire Wegovy, Mounjaro et Saxenda pour l'obésité. Conditions, procédure et ce qui change concrètement."

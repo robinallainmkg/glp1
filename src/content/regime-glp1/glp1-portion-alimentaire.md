@@ -4,7 +4,7 @@ pubDate: 2025-08-20
 date: 2025-08-20
 updatedAt: 2026-03-18
 author: "Dr. Sophie Dubois"
-description: "Portions alimentaires et GLP-1 : quantités repas optimales pour perdre du poids efficacement sous Ozempic, Wegovy ou Mounjaro. Adapter les portions, gérer la satiété et éviter les carences."
+description: "Portions alimentaires GLP-1 : quantités de repas optimales sous Ozempic, Wegovy ou Mounjaro pour perdre du poids. Gérer la satiété et éviter les carences."
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition", "portions", "satiété", "ozempic", "wegovy"]
 collection: "regime-glp1"
