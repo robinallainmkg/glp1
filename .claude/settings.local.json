@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npm -v)",
+      "Bash(npx astro:*)",
+      "Bash(curl -s http://127.0.0.1:7854/status)",
+      "Bash(curl -s http://localhost:7854/status)",
+      "Bash(netstat -ano)",
+      "Bash(node scripts/agent-server.mjs)",
+      "Bash(where claude:*)",
+      "Bash(python3 -m json.tool)",
+      "Bash(claude -p \"dis bonjour\" --output-format stream-json)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''Running:'''', list\\(d[''''running''''].keys\\(\\)\\)\\); print\\(''''Fact-check lines:'''', d[''''buffers''''].get\\(''''fact-check'''',{}\\).get\\(''''lines'''',''''N/A''''\\)\\)\")",
+      "Bash(curl -s -X POST http://127.0.0.1:7854/launch -H \"Content-Type: application/json\" -d '{\"\"agent\"\":\"\"fact-check\"\"}')",
+      "Bash(curl -s \"http://127.0.0.1:7854/output?agent=fact-check\")",
+      "Bash(curl -s \"http://127.0.0.1:7854/output/fact-check\")",
+      "Bash(curl -s \"http://127.0.0.1:7854/output/editorial\")",
+      "Bash(CLAUDECODE= claude --help)"
+    ]
+  }
+}

@@ -102,8 +102,8 @@ Sur la base de l'avis HAS et des discussions en cours, voici les conditions d'é
 - Suivi par un médecin (généraliste ou spécialiste)
 
 **Prescription** :
-- Primo-prescription réservée aux **endocrinologues, nutritionnistes, ou médecins des centres spécialisés de l'obésité (CSO)**
-- Renouvellement possible par le médecin généraliste après la première prescription
+- La primo-prescription est ouverte à **tout médecin** (généraliste ou spécialiste) depuis le 23 juin 2025, conformément à la décision de l'ANSM d'élargir la prescription de Wegovy, Mounjaro et Saxenda. Les conditions de remboursement pourront cependant imposer des règles spécifiques de prescription que le CEPS définira lors des négociations.
+- Renouvellement possible par tout médecin traitant
 
 **Durée et renouvellement** :
 - Prescription initiale pour **3 mois**, renouvelable
@@ -170,7 +170,7 @@ Non. Des conditions d'IMC (>= 35, ou >= 30 avec comorbidité) et de parcours de 
 
 ### Mon médecin généraliste pourra-t-il me prescrire Wegovy remboursé ?
 
-La primo-prescription sera probablement réservée aux spécialistes (endocrinologues, nutritionnistes, médecins de CSO). Le renouvellement devrait être possible par le généraliste.
+Depuis le 23 juin 2025, tout médecin peut déjà initier une prescription de Wegovy en dehors du remboursement. Pour le remboursement, les conditions de prescription que définira le CEPS pourraient imposer certaines règles, mais elles ne devraient pas exclure les généralistes qui ont désormais toute légitimité à prescrire ces traitements.
 
 ### Que faire en attendant le remboursement ?
 

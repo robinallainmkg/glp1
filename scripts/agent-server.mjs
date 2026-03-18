@@ -11,8 +11,12 @@ import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+import { execSync } from 'child_process';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
+
+const CLAUDE_BIN = 'claude';
 
 // Load .env
 try {
@@ -736,17 +740,21 @@ function launchAgent(name, { allowMultiple = false } = {}) {
 
   console.log(`🚀 [${new Date().toLocaleTimeString()}] Lancement: ${instanceName}${instanceName !== baseAgent ? ` (instance ${instanceIndex + 1}/${totalInstances} de ${baseAgent})` : ''}`);
 
-  const child = spawn('claude', [
-    '-p', finalPrompt,
+  const child = spawn(CLAUDE_BIN, [
+    '-p', '-',
     '--agent', baseAgent,
     '--output-format', 'stream-json',
     '--verbose',
     '--dangerously-skip-permissions'
   ], {
     cwd: PROJECT_ROOT,
-    stdio: ['ignore', 'pipe', 'pipe'],
-    env: { ...process.env, PATH: process.env.PATH }
+    stdio: ['pipe', 'pipe', 'pipe'],
+    env: { ...process.env, CLAUDECODE: undefined },
+    shell: true
   });
+  // Pass prompt via stdin to avoid shell mangling on Windows
+  child.stdin.write(finalPrompt);
+  child.stdin.end();
 
   // Reset output buffer for this instance
   outputBuffers.set(instanceName, { lines: [{ ts: new Date().toISOString(), text: `🚀 Agent ${instanceName} lance (PID ${child.pid})` }], startedAt: new Date().toISOString() });
