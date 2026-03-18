@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 Ostéoporose Os Fracture Risque : Guide Prévention 2026"
-description: "GLP-1 ostéoporose risque osseux : étude sur 150 000 patients et lien avec la perte osseuse. Prévention sous Ozempic ou Wegovy."
+description: "GLP-1 et ostéoporose : étude AAOS 2026 sur 150 000 patients. Risque osseux sous Ozempic ou Wegovy, conseils de prévention et surveillance recommandée."
 keywords: ['glp1 ostéoporose', 'ozempic os fracture', 'glp1 risque osseux', 'wegovy ostéoporose', 'perte osseuse glp1', 'glp1 goutte']
 seoTitle: "GLP-1 Ostéoporose Os Fracture Risque : Guide Prévention 2026"
 seoDescription: "GLP-1 ostéoporose risque osseux : étude AAOS 2026. Prévention, surveillance et recommandations pour protéger vos os sous Ozempic ou Wegovy."

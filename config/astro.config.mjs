@@ -80,11 +80,9 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !page.includes('/admin/'),
+      filter: (page) => !page.includes('/admin/') && !page.includes('/test-admin/') && !page.includes('/test-supabase/') && !page.includes('/test-affiliation-multi/') && !page.includes('/admin-dashboard/') && !page.includes('/admin-stats/') && !page.includes('/demo-affiliate-sidebar/'),
       customPages: [
         'https://glp1-france.fr/guides/suivi-medical-glp1/',
-        'https://glp1-france.fr/guides/communautes-glp1/',
-        'https://glp1-france.fr/guides/alimentation-personnalisee-glp1/',
         'https://glp1-france.fr/guides/guides-age-glp1/'
       ]
     }),

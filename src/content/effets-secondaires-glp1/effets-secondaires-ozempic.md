@@ -1,6 +1,6 @@
 ---
 title: "Effets Secondaires Ozempic Sémaglutide : Guide Complet 2026"
-description: "Effets secondaires Ozempic sémaglutide : nausées, vomissements, diarrhée, et effets secondaires semaglutide rares. Anticipez les effets indésirables et sachez quand consulter votre médecin."
+description: "Effets secondaires Ozempic sémaglutide : nausées, vomissements, diarrhée. Gérez les effets indésirables et sachez quand consulter votre médecin."
 keywords: ['effets secondaires ozempic', 'ozempic nausées', 'ozempic effets indésirables', 'risques ozempic', 'tolérance ozempic']
 seoTitle: "Effets Secondaires Ozempic : Guide pour les Gérer"
 seoDescription: "Guide complet des effets secondaires d'Ozempic sémaglutide : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
