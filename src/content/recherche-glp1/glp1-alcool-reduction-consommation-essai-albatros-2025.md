@@ -83,7 +83,7 @@ L'essai clinique ALBATROS (ALcohol Behavior And Treatment Responses of Oral Sema
 
 ### Résultats intermédiaires 2025
 
-Les résultats intermédiaires présentés au Congrès de la Société Française d'Alcoologie (SFA) — congrès dédié à l'addictologie — en juin 2025 sont significatifs :
+Les résultats intermédiaires présentés au Congrès Albatros 2025 (congrès national français de la Fédération Addiction / Addictaide) en juin 2025 sont significatifs :
 
 - **Réduction de la consommation hebdomadaire d'alcool** : -45 % dans le groupe sémaglutide versus -22 % dans le groupe placebo (différence : -23 %, p < 0,001)
 - **Jours d'abstinence totale** : augmentés de 3,2 jours par semaine dans le groupe sémaglutide contre 1,8 jours dans le groupe placebo
