@@ -12,6 +12,7 @@ import '../styles/global.css';
             <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
               <circle cx="32" cy="32" r="30" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
               <path d="M32 10c8 12 18 18 18 28a18 18 0 1 1-36 0c0-10 10-16 18-28Z" fill="#1d4ed8" stroke="#1e40af" stroke-width="2"/>
+              <path d="M42 28c-8 0-14 6-14 14 0 6 4 10 10 10 8 0 12-6 12-12 0-6-4-12-8-12Z" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
             </svg>
           </span>
           <span class="font-semibold text-lg text-white">GLP-1 France</span>
@@ -23,8 +24,8 @@ import '../styles/global.css';
           <h4 class="font-medium text-white mb-2">Newsletter</h4>
           <form action="#" method="post" class="flex gap-2" aria-label="Formulaire d'inscription à la newsletter">
             <label for="footer-email" class="sr-only">Votre adresse email</label>
-            <input id="footer-email" name="email" type="email" required placeholder="Votre email" class="w-full p-2 rounded-md text-gray-800 text-sm" />
-            <button class="bg-emerald-600 text-white px-3 py-2 rounded-md text-sm" type="submit">OK</button>
+            <input id="footer-email" name="email" type="email" required placeholder="Votre email" class="w-full p-2 rounded-md text-gray-800 text-sm" autocomplete="email" />
+            <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 whitespace-nowrap" type="submit" aria-label="S'inscrire à la newsletter">S'inscrire</button>
           </form>
         </div>
       </div>

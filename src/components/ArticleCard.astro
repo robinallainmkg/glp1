@@ -181,6 +181,27 @@ const badgeColor = collectionHex || '#10b981';
     text-underline-offset: 3px;
   }
 
+  /* Améliore la lisibilité du titre au survol */
+  .card-article:hover h2 a {
+    text-decoration-color: currentColor;
+  }
+
+  /* Assure une hauteur de carte uniforme sur les grilles */
+  .card-article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-article > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-article > div:last-child .card-cta {
+    margin-top: auto;
+  }
+
   .card-fallback {
     position: relative;
   }

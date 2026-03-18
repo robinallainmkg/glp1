@@ -75,7 +75,8 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: 1.75;
-  color: var(--gray-700);
+  /* Amélioration contraste : gray-800 (#1F2937) vs gray-700 (#374151) pour WCAG AA */
+  color: var(--gray-800);
   background-color: var(--gray-50);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -196,11 +197,15 @@ article h3, section h3, aside h3, nav h3, header h3, footer h3, main h3 {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
+  /* Ombre subtile pour donner de la profondeur au CTA */
+  box-shadow: 0 1px 3px rgba(29, 78, 216, 0.3);
 }
 
 .new-nav-cta:hover {
   background: linear-gradient(135deg, #1e40af, #15803d);
   transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(29, 78, 216, 0.25);
+  text-decoration: none;
 }
 
 .new-mobile-toggle {
@@ -528,6 +533,9 @@ a {
   color: var(--primary-blue);
   text-decoration: none;
   transition: var(--transition);
+  /* Améliore le confort visuel des liens sur fond clair */
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 a:hover {
@@ -537,7 +545,8 @@ a:hover {
 
 /* ===== CONTENU DES ARTICLES ===== */
 .article-body {
-  color: var(--gray-700);
+  /* Contraste amélioré pour la lecture longue : gray-800 (#1F2937) */
+  color: var(--gray-800);
   line-height: 1.8;
   font-size: var(--font-size-lg);
   max-width: 72ch;
@@ -557,7 +566,8 @@ a:hover {
   color: var(--primary-blue-dark);
   border-left: 4px solid var(--primary-blue-light);
   padding-left: 1rem;
-  margin: 2rem 0 1rem -1rem;
+  /* Alignement cohérent : pas de marge négative qui décale le texte */
+  margin: 2.5rem 0 1rem 0;
 }
 
 .article-body h3 {
@@ -1054,17 +1064,18 @@ a:hover {
 .medical-disclaimer {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border: 1px solid var(--gray-200);
-  border-left: 4px solid var(--gray-400);
+  border-left: 4px solid var(--primary-blue);
   border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
   padding: 0.875rem 1.25rem;
   margin: 2rem 0;
   font-size: 0.8125rem;
-  color: var(--gray-500);
+  /* Contraste amélioré : gray-600 au lieu de gray-500 */
+  color: var(--gray-600);
   line-height: 1.6;
 }
 
 .medical-disclaimer strong {
-  color: var(--gray-600);
+  color: var(--gray-700);
   font-weight: 600;
 }
 
@@ -1099,6 +1110,15 @@ a:focus-visible, button:focus-visible {
 /* Smooth image loading */
 img {
   transition: opacity 0.3s ease;
+  /* Évite les repaints inutiles */
+  contain: layout style;
+}
+
+/* Respect du mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  img {
+    transition: none;
+  }
 }
 
 /* ===== UTILITAIRES ===== */
@@ -1113,23 +1133,4 @@ img {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* ===== CONTAINER POUR LA HOMEPAGE ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 0.5rem;
-  }
 }
