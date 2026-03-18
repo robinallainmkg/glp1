@@ -1,6 +1,6 @@
 ---
-title: "GLP-1 et Allaitement : Ozempic, Wegovy, Mounjaro"
-description: "GLP-1 allaitement Ozempic Wegovy post-partum : pourquoi ces traitements sont contre-indiqués pendant l'allaitement, délais à respecter et alternatives sûres."
+title: "GLP-1 Allaitement Ozempic Wegovy Post-partum Contre-indication"
+description: "GLP-1 allaitement ozempic wegovy post-partum contre-indication : pourquoi ces traitements sont contre-indiqués, délais à respecter et alternatives sûres."
 keywords: ['glp1 allaitement', 'ozempic allaitement', 'wegovy post-partum', 'mounjaro allaitement', 'perte de poids allaitement', 'semaglutide lait maternel']
 seoTitle: "GLP-1 Allaitement Ozempic Wegovy : Contre-indication et Alternatives"
 seoDescription: "GLP-1 et allaitement : Ozempic, Wegovy et Mounjaro sont contre-indiqués. Délais, risques pour le nourrisson et alternatives sûres pour perdre du poids post-partum."

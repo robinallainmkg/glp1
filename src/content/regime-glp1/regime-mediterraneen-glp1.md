@@ -1,6 +1,5 @@
 ---
 title: "Régime méditerranéen GLP-1 alimentation santé"
-draft: true
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"

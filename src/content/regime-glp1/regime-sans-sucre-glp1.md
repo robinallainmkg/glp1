@@ -1,6 +1,5 @@
 ---
 title: "Régime Sans Sucre GLP-1 : Guide Glycémie et Perte de Poids"
-draft: true
 pubDate: 2025-08-20
 date: "2025-08-20"
 author: "Dr. Émilie Martin"

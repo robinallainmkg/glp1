@@ -1,6 +1,5 @@
 ---
 title: "Chrono-nutrition GLP-1 horaires repas métabolisme"
-draft: true
 description: "Chrono-nutrition GLP-1 horaires repas métabolisme : quand manger pour synchroniser hormones et maximiser l'efficacité de votre traitement."
 pubDate: 2025-08-20
 date: 2025-08-20

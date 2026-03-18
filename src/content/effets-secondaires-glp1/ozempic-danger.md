@@ -1,6 +1,6 @@
 ---
-title: "Ozempic Effets Secondaires et Risques : Guide Complet 2025"
-description: "Ozempic effets secondaires risques : dangers potentiels, posologie et recommandations médicales pour une utilisation sécurisée du sémaglutide en France."
+title: "Ozempic Effets Secondaires Risques : Guide Complet 2026"
+description: "Ozempic effets secondaires risques et dangers : posologie sécurisée et recommandations médicales pour une utilisation du sémaglutide en France."
 pubDate: 2025-08-10
 date: 2025-08-10
 author: "Karim Benali"
