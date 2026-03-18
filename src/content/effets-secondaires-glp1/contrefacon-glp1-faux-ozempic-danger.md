@@ -96,7 +96,7 @@ Les pharmacies agréées pour la vente en ligne en France sont référencées su
 
 ### Que faire en cas de pénurie ?
 
-La pénurie d'Ozempic et de Wegovy a concerné la France entre 2022 et 2024. Face à une rupture de stock, les options légales sont :
+Les contrefaçons prolifèrent notamment en période de [pénurie GLP-1 et rupture de stock en France](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/) — des alternatives légales existent. La pénurie d'Ozempic et de Wegovy a concerné la France entre 2022 et 2024. Face à une rupture de stock, les options légales sont :
 
 - Demander à votre médecin de contacter plusieurs pharmacies (le stock varie selon les officines)
 - Consulter la liste des médicaments en tension sur le site de l'ANSM

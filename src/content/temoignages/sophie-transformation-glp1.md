@@ -69,6 +69,8 @@ mainKeyword: "temoignage ozempic perte de poids"
 
 > "Les premières semaines ont été difficiles. Les nausées étaient vraiment présentes, surtout le matin. Mais mon médecin m'avait prévenue et m'avait donné des astuces. Et surtout, pour la première fois depuis des années, je n'avais plus envie de grignoter devant la télé le soir."
 
+Sophie a dû gérer les [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) digestifs pendant les deux premiers mois de traitement, une expérience commune chez les nouveaux patients sous Ozempic.
+
 ### Phase 2 : L'Encouragement (Mois 5-8)
 - **Perte :** 12 kilos supplémentaires
 - **Dosage :** 1 mg

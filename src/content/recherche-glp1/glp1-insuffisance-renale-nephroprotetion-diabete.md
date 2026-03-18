@@ -116,7 +116,7 @@ Selon les nouvelles recommandations françaises :
 
 1. **En première intention** (après metformine) : les inhibiteurs SGLT2 (iSGLT2) restent préférés pour la néphroprotection dès lors que le DFGe est ≥ 20. Consultez notre article sur les [iSGLT2 et leur combinaison avec les GLP-1](/collections/regime-glp1/isglt2-liste/).
 
-2. **En deuxième intention ou en association** : les GLP-1 sont recommandés chez les patients avec maladie cardiovasculaire associée, ou lorsque les iSGLT2 sont contre-indiqués ou mal tolérés.
+2. **En deuxième intention ou en association** : les GLP-1 sont recommandés chez les patients avec maladie cardiovasculaire associée, ou lorsque les iSGLT2 sont contre-indiqués ou mal tolérés. Ces bénéfices rénaux sont particulièrement pertinents pour les patients diabétiques — voir notre [guide complet GLP-1 pour les patients diabétiques](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
 
 3. **Objectifs thérapeutiques** : une uricémie normale, une pression artérielle contrôlée et une HbA1c ≤ 7 % sont des cibles importantes pour ralentir la progression de la maladie rénale.
 

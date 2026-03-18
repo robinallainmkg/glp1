@@ -86,7 +86,7 @@ La gastroparésie sous GLP-1 peut se manifester par des symptômes qui ressemble
 
 La gastroparésie franche sous GLP-1 est considérée comme un effet indésirable **rare**. Mais la surveillance de pharmacovigilance a identifié un signal préoccupant :
 
-L'EPI-Phare (groupement d'intérêt scientifique sur les données de santé) a publié des données françaises montrant que le risque de gastroparésie est **significativement augmenté** chez les patients prenant des GLP-1, par rapport aux patients prenant d'autres antidiabétiques. Une étude publiée dans la revue JAMA en 2023 (Sodhi M. et al.) estimait que l'incidence de gastroparésie sous GLP-1 était de **9 cas pour 1 000 patients** sur un suivi de plusieurs années — soit environ 3 fois plus que sous les antidiabétiques de comparaison.
+L'EPI-Phare (groupement d'intérêt scientifique sur les données de santé) a publié des données françaises montrant que le risque de gastroparésie est **significativement augmenté** chez les patients prenant des GLP-1, par rapport aux patients prenant d'autres antidiabétiques. Une étude publiée dans *JAMA* en 2023 (Sodhi M. et al.) a mis en évidence que le risque de gastroparésie était significativement augmenté chez les patients prenant des GLP-1 pour l'obésité, avec un hazard ratio ajusté de **3,7** (IC 95% : 1,2–11,9) comparativement aux patients traités par bupropion-naltrexone — ce qui représente un risque relatif près de 4 fois plus élevé que le groupe comparateur.
 
 Des cas similaires ont été identifiés avec les GLP-1 prescrits pour l'obésité (Wegovy, Saxenda), pas seulement pour le diabète.
 

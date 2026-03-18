@@ -136,7 +136,7 @@ Sans prétendre traiter l'effluvium télogène, certains soins capillaires peuve
 
 L'ANSM et l'EMA ont inclus l'alopécie dans la liste des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et du tirzépatide depuis 2023. Ces mentions figurent désormais dans les notices de médicament.
 
-Le PRAC de l'EMA a confirmé en 2024 que ce phénomène est lié à la perte de poids elle-même plutôt qu'à une toxicité directe de la molécule, et qu'il est généralement résolutif. Il n'y a pas de recommandation d'arrêt du traitement uniquement pour ce motif.
+Le consensus scientifique, confirmé par les données cliniques et la pharmacovigilance, est que ce phénomène est lié à la perte de poids elle-même plutôt qu'à une toxicité directe de la molécule, et qu'il est généralement résolutif. À noter : le PRAC de l'EMA de juillet 2024 a principalement porté sur le risque d'aspiration lors d'une anesthésie, et non spécifiquement sur l'alopécie. Il n'y a pas de recommandation d'arrêt du traitement uniquement pour ce motif.
 
 ## Résumé pratique
 

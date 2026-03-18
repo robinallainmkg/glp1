@@ -145,7 +145,7 @@ Il est préférable d'attendre la stabilisation des effets secondaires (généra
 Oui, l'artichaut est un excellent aliment sous Ozempic. Il facilite la digestion des graisses et soutient le foie, et sa texture à la vapeur est facilement tolérée même en période de nausées. Préférez-le cuit à la vinaigrette légère.
 
 ### Les probiotiques aident-ils à gérer les effets secondaires digestifs des GLP-1 ?
-Plusieurs études suggèrent que les probiotiques (yaourt nature, kéfir, choucroute lacto-fermentée) peuvent améliorer le confort digestif sous GLP-1. Ils ne traitent pas les nausées mais peuvent réduire les ballonnements et améliorer le transit. Intégrez-les progressivement.
+Plusieurs études suggèrent que les probiotiques (yaourt nature, kéfir, choucroute lacto-fermentée) peuvent améliorer le confort digestif sous GLP-1. Ils ne traitent pas les nausées mais peuvent réduire les ballonnements et améliorer le transit. Intégrez-les progressivement. Le régime détox peut aider à atténuer certains [effets secondaires digestifs](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) liés aux traitements GLP-1.
 
 ## Conclusion
 
