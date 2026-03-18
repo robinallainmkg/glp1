@@ -1,0 +1,127 @@
+{
+  "tickets": [
+    {
+      "id": "d85c306e-ab82-444e-8d7c-0e9c76adf800",
+      "article_id": "00fda4e4-b174-43ca-9e87-6dd712c9bac7",
+      "slug": "effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "title": "Chiffre d'incidence de 9/1000 patients non retrouvé dans l'étude Sodhi JAMA 2023",
+      "ticket_type": "false_claim",
+      "urgence": "warning",
+      "before_exact": "Une étude publiée dans la revue JAMA en 2023 (Sodhi M. et al.) estimait que l'incidence de gastroparésie sous GLP-1 était de **9 cas pour 1 000 patients** sur un suivi de plusieurs années — soit environ 3 fois plus que sous les antidiabétiques de comparaison.",
+      "after_suggested": "Une étude publiée dans *JAMA* en 2023 (Sodhi M. et al.) a montré que le risque de gastroparésie était significativement augmenté chez les patients prenant des GLP-1 pour perdre du poids, avec un hazard ratio ajusté de 3,7 (IC 95% : 1,2–11,9) comparativement aux patients sous bupropion-naltrexone.",
+      "claim_original": "Incidence gastroparésie GLP-1 : 9 cas pour 1 000 patients, Sodhi JAMA 2023",
+      "realite_actuelle": "L'étude Sodhi JAMA 2023 rapporte un hazard ratio de 3,7 pour la gastroparésie (risque relatif ~3,7x plus élevé que le comparateur). Aucun chiffre absolu de 9/1000 patients n'est retrouvé dans les données publiées de cette étude spécifique.",
+      "source_reference": "https://jamanetwork.com/journals/jama/fullarticle/2810542",
+      "human_note": null,
+      "source_agent": "fact-check",
+      "statut": "approved"
+    },
+    {
+      "id": "be6f8b13-ba19-45ac-9201-0210d4df983b",
+      "article_id": "9ccd2a50-fcac-4b58-8baf-1de418c2f01a",
+      "slug": "glp1-seniors-plus-65-ans-limites-ansm-alternatives",
+      "title": "GLP1 Seniors : Critère IMC ≥35 cumulatif avec <65 ans non mis en avant",
+      "ticket_type": "missing_info",
+      "urgence": "warning",
+      "before_exact": "L'ANSM demande aux médecins de prescrire les aGLP-1 indiqués dans le traitement de l'obésité aux patients ayant un indice de masse corporel (IMC) initial supérieur ou égal à 35 kg/m², âgés de moins de 65 ans.",
+      "after_suggested": "Ajouter précision que les conditions ANSM sont CUMULATIVES : IMC ≥ 35 kg/m² ET âge < 65 ans. Un patient de 60 ans avec IMC 32 n'est pas éligible non plus. La restriction n'est pas uniquement une limite d'âge.",
+      "claim_original": "L'article parle de la limite 65 ans sans préciser systématiquement le critère IMC ≥ 35 comme condition cumulée dans l'introduction",
+      "realite_actuelle": "Les conditions ANSM sont cumulatives : IMC ≥ 35 kg/m² ET âge < 65 ans. La restriction n'est pas uniquement une limite d'âge.",
+      "source_reference": "https://ansm.sante.fr/actualites/analogues-du-glp-1-et-obesite-nous-prenons-des-mesures-pour-securiser-leur-utilisation-en-france",
+      "human_note": null,
+      "source_agent": "fact-check",
+      "statut": "approved"
+    }
+  ],
+  "links": [
+    {
+      "id": "e3f75c09-53cf-4a52-9ff9-1a106da0c49c",
+      "source_slug": "effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "target_slug": "effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic",
+      "anchor_text": "effets des GLP-1 sur la fertilité et la grossesse",
+      "context_sentence": "Avant d'envisager un arrêt pour une grossesse, consultez notre guide complet sur les [effets des GLP-1 sur la fertilité et la grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/).",
+      "link_type": "related",
+      "priority": 2
+    },
+    {
+      "id": "c4a07da8-98ee-4ff8-b55a-3e42cf5e4c93",
+      "source_slug": "recherche-glp1/recherche-clinique-glp1",
+      "target_slug": "recherche-glp1/glp1-apnee-sommeil-saos",
+      "anchor_text": "efficacité du tirzépatide sur l'apnée du sommeil",
+      "context_sentence": "Parmi les découvertes surprenantes, l'[efficacité du tirzépatide sur l'apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) (réduction de 63% du SAOS) ouvre de nouvelles perspectives thérapeutiques.",
+      "link_type": "contextual",
+      "priority": 3
+    },
+    {
+      "id": "b961797c-74f4-4bfb-9463-7d5688f3ce73",
+      "source_slug": "regime-dash-glp1",
+      "target_slug": "guide-complet-mounjaro",
+      "anchor_text": "Mounjaro",
+      "context_sentence": "L'association régime DASH et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) est particulièrement intéressante pour les patients hypertendus et diabétiques.",
+      "link_type": "contextual",
+      "priority": 3
+    }
+  ],
+  "opps": [
+    {
+      "id": "fbe7898c-f3fd-40e3-8ec8-9dfe044198d5",
+      "topic": "GLP-1 et arthrose : les medicaments de perte de poids soulagent-ils les douleurs articulaires ?",
+      "description": "Nouvelles donnees Phase 3 retatrutide sur arthrose du genou TRIUMPH-4. Effet anti-inflammatoire des GLP-1. Etude mars 2026 sur risque osseux. Benefices et precautions pour patients arthrosiques.",
+      "target_keyword": "GLP-1 arthrose douleurs articulaires anti-inflammatoire",
+      "suggested_collection": "recherche-glp1",
+      "suggested_slug": "glp1-arthrose-douleurs-articulaires-benefices-risques",
+      "source_urls": [
+        "https://www.washingtonpost.com/health/2026/03/08/bone-injury-risk-weight-loss-drugs/"
+      ]
+    },
+    {
+      "id": "a4df4317-ab02-45ee-8764-7bd7d1dfb763",
+      "topic": "GLP-1 et sport de performance : composition corporelle, endurance et precautions",
+      "description": "GLP-1 chez les sportifs amateurs et competiteurs : impact sur composition corporelle masse grasse vs maigre, performance d endurance, recuperation musculaire. Different de l article regime sport existant.",
+      "target_keyword": "GLP-1 sport performance sportif composition corporelle",
+      "suggested_collection": "regime-glp1",
+      "suggested_slug": "glp1-sport-performance-sportif-composition-corporelle",
+      "source_urls": []
+    }
+  ],
+  "partitionIds": [
+    "d5b4bd44-df70-4382-bc3a-c3d24f0ec17b",
+    "f73341a0-61c3-4cf3-b8da-8822ad3caa42",
+    "062f3f3d-7559-4699-8b31-302419654b03",
+    "d4758e23-edce-4c95-80e3-5d08c0dbea2c",
+    "3654560e-a592-4ae3-832b-0b0a90549831",
+    "034f0a24-1215-4b82-810e-418ac57bcea8",
+    "e3389b06-ac38-4c1f-9194-268bfe0cb4a3",
+    "9e692985-3351-4ae9-abb3-ca61fa464c7b",
+    "1df65f5a-9ff6-4b94-97dd-a43e007f92b0",
+    "945d7358-0000-4000-a000-000000000004",
+    "b8bf47ec-0000-4000-a000-000000000009",
+    "b63949f8-3b53-437f-9afc-307eb6c2c5f1",
+    "8de8e4f1-0415-43c8-8511-74890eb59032",
+    "3cbe3381-7e26-42c7-a9d5-13d46022e7ad",
+    "e68904ac-166c-4df6-a571-34e50dbe50e2",
+    "945d7358-bab0-4d52-9abc-548efbd5441b",
+    "0d1b199f-bf9d-47a8-8984-dbfa43acff5a",
+    "3ec13ee7-61ee-4b94-86be-15d666fbe5ac",
+    "0649dd27-05e1-4ed6-a12f-9836d221352b",
+    "73455db5-46d4-4e3b-9657-7246bdd0fb92",
+    "8b8df75b-6aca-4578-8569-2b93c0c23aaa",
+    "318ca4c1-82b8-486f-b647-2f22c5cf8a0c",
+    "9ccd2a50-fcac-4b58-8baf-1de418c2f01a",
+    "f9718a3a-d9b0-45da-a281-0412fa15b7eb",
+    "e1bee1e4-8ced-4147-8259-17000e34a819",
+    "428ca287-f73e-4b01-8d24-55928abd1fd8",
+    "df5cb3c8-b0a8-4ae0-a00c-13ce045c5873",
+    "ed7973d8-f7a0-44d0-a363-b0e3d4cb0545",
+    "48b8a172-0d82-4ed7-811e-7701346bc76a",
+    "38614222-1f31-4544-a23f-e90a1e451be9",
+    "23e28305-a4cd-43d0-8849-637618d415d9",
+    "fa01c004-a6f2-474c-8c6e-e436cf49e02d",
+    "22060c38-098c-42b5-9b1a-e511ea47e2b7",
+    "4bd2aee8-b7a6-496a-98c4-77001a4b5b6b",
+    "4ea0b07c-6baa-4464-8bb9-80351ab3fdc4",
+    "00fda4e4-b174-43ca-9e87-6dd712c9bac7",
+    "a6b1b038-6c89-4118-9ef2-d3a7578f031a",
+    "e95d9c0c-c397-456f-bd7a-cc7dd5bbf76b"
+  ]
+}
