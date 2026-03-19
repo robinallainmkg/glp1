@@ -15,8 +15,8 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       
       <!-- Header -->
       <header class="diagnostic-header">
-        <h1>🎯 Diagnostic Personnalisé GLP-1</h1>
-        <p class="subtitle">Découvrez en 5 minutes quel traitement est le plus adapté à votre situation</p>
+        <h1>Diagnostic GLP-1 Personnalisé</h1>
+        <p class="subtitle">Trouvez le traitement adapté à votre profil en quelques minutes</p>
         <div class="progress-bar">
           <div class="progress-fill" id="progress-fill"></div>
         </div>
@@ -498,7 +498,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       <!-- Results Section -->
       <div class="results-section" id="results-section" style="display: none;">
         <div class="results-header">
-          <h2>🎯 Votre Recommandation Personnalisée</h2>
+          <h2>Votre Recommandation</h2>
           <p>Basée sur vos réponses au diagnostic</p>
         </div>
         <div class="main-results" id="results-content">
@@ -511,51 +511,54 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
 
   <style>
     .diagnostic-page {
-      max-width: 800px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 3rem;
     }
 
+    /* Header */
     .diagnostic-header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     .diagnostic-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #2563EB !important;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--gray-900, #1e293b);
       font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     .subtitle {
-      font-size: 1.2rem;
-      color: var(--gray-600);
-      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: var(--gray-500, #64748b);
+      margin-bottom: 1.5rem;
     }
 
     .progress-bar {
       width: 100%;
-      height: 8px;
-      background: var(--gray-200);
-      border-radius: 4px;
+      height: 4px;
+      background: var(--gray-100, #f1f5f9);
+      border-radius: 2px;
       overflow: hidden;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .progress-fill {
       height: 100%;
-      background: linear-gradient(135deg, var(--primary-blue), var(--accent-green));
+      background: var(--primary-blue, #2563EB);
       width: 12.5%;
-      transition: width 0.3s ease;
+      transition: width 0.4s ease;
     }
 
     .progress-text {
-      color: var(--gray-600);
-      font-size: 0.9rem;
+      color: var(--gray-400, #94a3b8);
+      font-size: 0.8rem;
       margin: 0;
     }
 
+    /* Quiz */
     .quiz-container {
       margin-bottom: 2rem;
     }
@@ -570,32 +573,33 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     }
 
     .question h2 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
       text-align: center;
-      color: var(--gray-900);
+      color: var(--gray-800, #1e293b);
+      font-weight: 600;
     }
 
     .options {
       display: grid;
-      gap: 1rem;
-      max-width: 600px;
+      gap: 0.75rem;
+      max-width: 520px;
       margin: 0 auto;
     }
 
     .option {
       cursor: pointer;
-      border: 2px solid var(--gray-200);
-      border-radius: 12px;
+      border: 1.5px solid var(--gray-200, #e2e8f0);
+      border-radius: 10px;
       padding: 0;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       display: block;
+      background: white;
     }
 
     .option:hover {
-      border-color: var(--primary-blue);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-color: var(--primary-blue, #2563EB);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
     }
 
     .option input[type="radio"] {
@@ -603,76 +607,74 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     }
 
     .option input[type="radio"]:checked + .option-content {
-      background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+      background: var(--primary-blue, #2563EB);
       color: white;
-      border-color: var(--primary-blue);
+      border-radius: 9px;
     }
 
     .option-content {
       display: flex;
       align-items: center;
-      padding: 1.5rem;
-      gap: 1rem;
-      transition: all 0.3s ease;
+      padding: 1rem 1.25rem;
+      gap: 0.75rem;
+      transition: all 0.2s ease;
+      border-radius: 9px;
     }
 
     .option-icon {
-      font-size: 2rem;
-      min-width: 50px;
+      font-size: 1.5rem;
+      min-width: 36px;
       text-align: center;
     }
 
     .option-text strong {
       display: block;
-      font-size: 1.1rem;
-      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
     }
 
     .option-text p {
       margin: 0;
-      font-size: 0.9rem;
-      opacity: 0.8;
+      font-size: 0.8rem;
+      opacity: 0.7;
     }
 
+    /* Navigation */
     .navigation {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
     }
 
+    /* Results */
     .results-section {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       padding: 0;
       background: transparent;
-      border-radius: 0;
-    }
-
-    .results-content {
-      max-width: 800px;
-      margin: 0 auto;
     }
 
     .main-results {
       background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--gray-200, #e2e8f0);
     }
 
     .recommendation {
-      background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border: 1px solid rgba(59, 130, 246, 0.2);
-      box-shadow: 0 2px 12px rgba(59, 130, 246, 0.1);
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--gray-200, #e2e8f0);
     }
 
     .recommendation h3 {
-      color: var(--primary-blue);
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      color: var(--gray-900, #1e293b);
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -680,175 +682,175 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
 
     .recommendation-score {
       display: inline-block;
-      background: linear-gradient(135deg, var(--accent-green), #10b981);
+      background: var(--primary-blue, #2563EB);
       color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
       font-weight: 600;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
     }
 
     .features-list {
       list-style: none;
       padding: 0;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
       display: grid;
-      gap: 0.8rem;
+      gap: 0.5rem;
     }
 
     .features-list li {
-      padding: 0.8rem 1rem;
-      background: rgba(59, 130, 246, 0.05);
-      border-radius: 8px;
-      border-left: 3px solid var(--accent-green);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
+      padding: 0.6rem 0.75rem;
+      background: var(--gray-50, #f8fafc);
+      border-radius: 6px;
+      border-left: 3px solid var(--primary-blue, #2563EB);
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     .features-list li:before {
-      content: "?";
-      font-size: 1.1rem;
-      margin-right: 0;
+      content: none;
     }
 
     .results-header {
       text-align: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 2px solid rgba(59, 130, 246, 0.1);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--gray-100, #f1f5f9);
     }
 
     .results-header h2 {
-      font-size: 2rem;
-      color: var(--primary-blue);
-      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      color: var(--gray-900, #1e293b);
+      margin-bottom: 0.25rem;
+      font-weight: 700;
     }
 
     .results-header p {
-      color: var(--gray-600);
-      font-size: 1.1rem;
+      color: var(--gray-500, #64748b);
+      font-size: 0.9rem;
     }
 
     /* Email Gate */
     .email-gate {
-      animation: fadeIn 0.4s ease;
+      animation: fadeIn 0.3s ease;
     }
 
     .email-gate-card {
-      max-width: 500px;
+      max-width: 440px;
       margin: 0 auto;
-      background: linear-gradient(135deg, #2563EB 0%, #7c3aed 100%);
-      border-radius: 20px;
-      padding: 3rem 2rem;
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
       text-align: center;
-      color: white;
-      box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+      border: 1px solid var(--gray-200, #e2e8f0);
     }
 
     .email-gate-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
     }
 
     .email-gate-card h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.75rem;
-      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--gray-900, #1e293b);
+      font-weight: 700;
     }
 
     .email-gate-card p {
-      font-size: 1rem;
-      opacity: 0.9;
-      margin-bottom: 2rem;
-      line-height: 1.6;
+      font-size: 0.9rem;
+      color: var(--gray-500, #64748b);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
     }
 
     .email-gate-form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      max-width: 360px;
+      gap: 0.75rem;
+      max-width: 320px;
       margin: 0 auto;
     }
 
     .email-gate-input {
-      padding: 1rem 1.25rem;
-      border-radius: 12px;
-      border: 2px solid rgba(255,255,255,0.3);
-      background: rgba(255,255,255,0.95);
-      color: #1e293b;
-      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1.5px solid var(--gray-200, #e2e8f0);
+      background: white;
+      color: var(--gray-900, #1e293b);
+      font-size: 0.95rem;
       outline: none;
-      transition: border-color 0.3s;
+      transition: border-color 0.2s;
     }
 
     .email-gate-input:focus {
-      border-color: #facc15;
+      border-color: var(--primary-blue, #2563EB);
     }
 
     .email-gate-input::placeholder {
-      color: #94a3b8;
+      color: var(--gray-400, #94a3b8);
     }
 
     .email-gate-btn {
-      padding: 1rem;
-      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
       border: none;
-      background: linear-gradient(135deg, #facc15, #f97316);
+      background: var(--primary-blue, #2563EB);
       color: white;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 0.95rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: background 0.2s;
     }
 
     .email-gate-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+      background: #1d4ed8;
     }
 
     .email-gate-btn:disabled {
-      opacity: 0.7;
+      opacity: 0.6;
       cursor: not-allowed;
-      transform: none;
     }
 
     .email-gate-trust {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin-top: 1.5rem;
-      font-size: 0.8rem;
-      opacity: 0.85;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: var(--gray-400, #94a3b8);
       flex-wrap: wrap;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
       .diagnostic-header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
-      
+
       .option-content {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
       }
-      
+
       .navigation {
         flex-direction: column;
       }
+
+      .main-results {
+        padding: 1rem;
+      }
     }
 
-    /* Styles pour les checkboxes (question effets secondaires) */
+    /* Checkboxes (question effets secondaires) */
     .effects-checklist {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.75rem;
     }
 
     .checkbox-option input[type="checkbox"] {
@@ -858,63 +860,97 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     }
 
     .checkbox-option .option-content {
-      transition: all 0.3s ease;
-      border: 2px solid var(--gray-200);
+      transition: all 0.2s ease;
+      border: 1.5px solid var(--gray-200, #e2e8f0);
+      border-radius: 9px;
     }
 
     .checkbox-option input[type="checkbox"]:checked + .option-content {
-      border-color: var(--primary-blue);
-      background: rgba(59, 130, 246, 0.05);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+      border-color: var(--primary-blue, #2563EB);
+      background: rgba(37, 99, 235, 0.04);
     }
 
     .checkbox-option input[type="checkbox"]:checked + .option-content::after {
-      content: "?";
+      content: "✓";
       position: absolute;
-      top: 10px;
-      right: 15px;
-      color: var(--primary-blue);
-      font-weight: bold;
-      font-size: 1.2rem;
+      top: 8px;
+      right: 12px;
+      color: var(--primary-blue, #2563EB);
+      font-weight: 700;
+      font-size: 1rem;
     }
 
-    /* Styles pour les solutions d'effets secondaires */
+    /* Solutions effets secondaires */
     .effect-solution {
-      background: #f8f9fa;
-      border-left: 4px solid var(--accent-green);
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 8px;
+      background: var(--gray-50, #f8fafc);
+      border-left: 3px solid var(--primary-blue, #2563EB);
+      padding: 1.25rem;
+      margin: 1rem 0;
+      border-radius: 6px;
     }
 
     .effect-solution h4 {
-      color: var(--primary-blue);
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
+      color: var(--gray-800, #1e293b);
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
     }
 
     .effect-solution ul {
       margin: 0;
-      padding-left: 1.5rem;
+      padding-left: 1.25rem;
     }
 
     .effect-solution li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       line-height: 1.5;
+      font-size: 0.9rem;
+      color: var(--gray-600, #475569);
     }
 
     .general-advice {
-      background: #e3f2fd;
-      border-left: 4px solid var(--primary-blue);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-radius: 8px;
+      background: var(--gray-50, #f8fafc);
+      border-left: 3px solid var(--primary-blue, #2563EB);
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
     }
 
     .general-advice h4 {
-      color: var(--primary-blue);
-      margin-bottom: 1rem;
+      color: var(--gray-800, #1e293b);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary-blue, #2563EB);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary, .btn-outline {
+      background: white;
+      color: var(--gray-700, #334155);
+      border: 1.5px solid var(--gray-200, #e2e8f0);
+    }
+
+    .btn-secondary:hover, .btn-outline:hover {
+      border-color: var(--primary-blue, #2563EB);
+      color: var(--primary-blue, #2563EB);
     }
   </style>
 
@@ -1316,47 +1352,6 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
             </ul>
           </div>
           
-          <div style="background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid rgba(59, 130, 246, 0.2);">
-            <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center; font-size: 1.3rem;">🛒 Produits pour soulager les effets secondaires</h4>
-            <div style="display: grid; gap: 1.5rem;">
-              <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                  <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🧴</div>
-                  <div>
-                    <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Talika Bust Phytoserum</h5>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Raffermit la peau relâchée • Idéal après amaigrissement GLP-1</p>
-                  </div>
-                </div>
-                <div style="margin-bottom: 1rem;">
-                  <span style="background: var(--accent-green); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">-10% avec GLP1</span>
-                  <span style="margin-left: 0.5rem; color: var(--gray-500); font-size: 0.9rem;">49,90€ au lieu de 55,45€</span>
-                </div>
-                <a href="/produits/talika-bust-phytoserum/" style="display: inline-block; background: var(--primary-blue); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;">
-                  Voir le produit 🔗
-                </a>
-              </div>
-              <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                  <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">💪</div>
-                  <div>
-                    <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Nutrimuscle Whey Native</h5>
-                    <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Évite la fonte musculaire • Compense la réduction d'appétit</p>
-                  </div>
-                </div>
-                <div style="margin-bottom: 1rem;">
-                  <span style="background: var(--accent-green); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">-5% avec NMA_GLP1</span>
-                  <span style="margin-left: 0.5rem; color: var(--gray-500); font-size: 0.9rem;">59,90€ au lieu de 63,05€</span>
-                </div>
-                <a href="https://www.nutrimuscle.com/whey-native?ref=NMA_GLP1" target="_blank" rel="noopener" style="display: inline-block; background: var(--primary-blue); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;">
-                  Commander chez Nutrimuscle 🔗
-                </a>
-              </div>
-            </div>
-            <p style="margin-top: 1rem; text-align: center; font-size: 0.8rem; color: var(--gray-500);">
-              <em>🤝 Liens d'affiliation • Nous touchons une commission sans surcoût pour vous</em>
-            </p>
-          </div>
-          
           <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
             <h4 style="color: #dc3545; margin-bottom: 1rem;">⚠️ Important</h4>
             <p style="margin: 0; font-size: 0.9rem;">Ces conseils sont informatifs. Consultez toujours votre médecin avant de modifier votre traitement ou d'arrêter des médicaments.</p>
@@ -1484,49 +1479,6 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
           <div class="recommendation-score" style="background: linear-gradient(135deg, #64748b, #475569);">Alternative à considérer : ${second.name}</div>
           <p>Si ${top.name} ne vous convient pas, <strong>${second.name}</strong> est également adapté à votre profil. Discutez-en avec votre médecin.</p>
           <a href="/collections/traitements-glp1/guide-complet-${second.key}/" style="color: var(--primary-blue); font-weight: 600;">En savoir plus sur ${second.name} →</a>
-        </div>
-      `;
-
-      recommendation += `
-        <div style="background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid rgba(59, 130, 246, 0.2);">
-          <h4 style="color: var(--primary-blue); margin-bottom: 1.5rem; text-align: center; font-size: 1.3rem;">🛒 Optimisez votre traitement</h4>
-          <div style="display: grid; gap: 1.5rem;">
-            <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🧴</div>
-                <div>
-                  <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Talika Bust Phytoserum</h5>
-                  <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Raffermit la peau relâchée après perte de poids</p>
-                </div>
-              </div>
-              <div style="margin-bottom: 1rem;">
-                <span style="background: var(--accent-green); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">-10% avec GLP1</span>
-                <span style="margin-left: 0.5rem; color: var(--gray-500); font-size: 0.9rem;">49,90€ au lieu de 55,45€</span>
-              </div>
-              <a href="/produits/talika-bust-phytoserum/" style="display: inline-block; background: var(--primary-blue); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;">
-                Voir le produit 🔗
-              </a>
-            </div>
-            <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--accent-green); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">💪</div>
-                <div>
-                  <h5 style="margin: 0 0 0.3rem 0; color: var(--primary-blue); font-size: 1.1rem;">Nutrimuscle Whey Native</h5>
-                  <p style="margin: 0; font-size: 0.9rem; color: var(--gray-600);">Maintient la masse musculaire pendant la perte de poids</p>
-                </div>
-              </div>
-              <div style="margin-bottom: 1rem;">
-                <span style="background: var(--accent-green); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">-5% avec NMA_GLP1</span>
-                <span style="margin-left: 0.5rem; color: var(--gray-500); font-size: 0.9rem;">59,90€ au lieu de 63,05€</span>
-              </div>
-              <a href="https://www.nutrimuscle.com/whey-native?ref=NMA_GLP1" target="_blank" rel="noopener" style="display: inline-block; background: var(--primary-blue); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease;">
-                Commander chez Nutrimuscle 🔗
-              </a>
-            </div>
-          </div>
-          <p style="margin-top: 1rem; text-align: center; font-size: 0.8rem; color: var(--gray-500);">
-            <em>🤝 Liens d'affiliation • Nous touchons une commission sans surcoût pour vous</em>
-          </p>
         </div>
       `;
 
