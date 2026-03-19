@@ -10,8 +10,6 @@ date: "2025-09-01"
 mainKeyword: "serena williams glp1"
 ---
 
-# Serena Williams et le GLP-1 : Son Expérience Complète
-
 ## Serena Williams et les Traitements GLP-1 : Transparence d'une Championne
 
 <div class="guide-buttons">
