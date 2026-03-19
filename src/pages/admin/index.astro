@@ -1148,9 +1148,20 @@ import { supabaseConfig } from '../../lib/supabase';
 
   async function toggleAutopilot() {
     if (autopilotRunning) {
-      if (!confirm('Stopper l\'Autopilot ?')) return;
+      if (!confirm('Stopper l\'Autopilot ? Tous les agents en cours seront tués.')) return;
       try {
-        await fetch(`${AGENT_SERVER}/autopilot/stop`, { method: 'POST' });
+        const r = await fetch(`${AGENT_SERVER}/autopilot/stop`, { method: 'POST' });
+        const data = await r.json();
+        if (data.killed && data.killed.length > 0) {
+          console.log('Autopilot stopped, killed agents:', data.killed);
+          // Clear local running state for killed agents
+          for (const name of data.killed) {
+            delete runningAgents[name];
+          }
+        }
+        autopilotRunning = false;
+        updateAutopilotUI();
+        renderArena();
       } catch(e) { stopAgent('autopilot'); }
     } else {
       if (!serverOnline) {

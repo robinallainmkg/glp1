@@ -1489,6 +1489,18 @@ import { supabaseConfig } from '../../lib/supabase';
         setButtonLoading('btnSignup', false);
         if (result.error) return showAuthError(result.error.message);
         currentUser = result.data.user;
+
+        // Check if email confirmation is pending (no session = not confirmed yet)
+        if (currentUser && !result.data.session) {
+          showToast('Un email de confirmation a ete envoye a ' + email + '. Verifiez votre boite mail.', 'info');
+          return;
+        }
+        // Check for fake signup (email already used with another provider — identities empty)
+        if (currentUser && currentUser.identities && currentUser.identities.length === 0) {
+          showAuthError('Cet email est deja utilise. Essayez de vous connecter.');
+          return;
+        }
+
         if (currentUser) {
           showToast('Compte cree avec succes !');
           onUserReady(name);
@@ -1618,10 +1630,11 @@ import { supabaseConfig } from '../../lib/supabase';
         title: 'Dose et jour d\'injection',
         subtitle: 'Pour vos rappels personnalises',
         type: 'dose-day',
+        showIf: function() { return obData.treatment && obData.treatment !== 'none' && obData.treatment !== 'other'; },
       },
       {
         title: 'Vos mensurations',
-        subtitle: 'Pour calculer vos besoins nutritionnels',
+        subtitle: 'Pour personnaliser votre suivi (tous les champs sont optionnels)',
         type: 'inputs',
         inputs: [
           { row: [
@@ -1670,14 +1683,28 @@ import { supabaseConfig } from '../../lib/supabase';
       },
     ];
 
+    function getVisibleSteps() {
+      var visible = [];
+      for (var i = 0; i < obSteps.length; i++) {
+        if (!obSteps[i].showIf || obSteps[i].showIf()) visible.push(i);
+      }
+      return visible;
+    }
+
     function renderObStep() {
       var step = obSteps[obStep];
-      document.getElementById('obStepLabel').textContent = 'Etape ' + (obStep + 1) + '/' + obSteps.length;
+      var visibleSteps = getVisibleSteps();
+      var visibleIndex = visibleSteps.indexOf(obStep);
+      document.getElementById('obStepLabel').textContent = 'Etape ' + (visibleIndex + 1) + '/' + visibleSteps.length;
 
-      var steps = document.querySelectorAll('.onboarding-progress .step');
-      steps.forEach(function(s, i) {
-        s.className = 'step' + (i < obStep ? ' done' : '') + (i === obStep ? ' active' : '');
-      });
+      // Update progress bar to match visible steps
+      var progressEl = document.getElementById('obProgress');
+      progressEl.innerHTML = '';
+      for (var vi = 0; vi < visibleSteps.length; vi++) {
+        var div = document.createElement('div');
+        div.className = 'step' + (vi < visibleIndex ? ' done' : '') + (vi === visibleIndex ? ' active' : '');
+        progressEl.appendChild(div);
+      }
 
       var html = '<h2>' + step.title + '</h2><p class="subtitle">' + step.subtitle + '</p>';
 
@@ -1737,8 +1764,8 @@ import { supabaseConfig } from '../../lib/supabase';
 
       // Nav
       html += '<div class="ob-nav">';
-      if (obStep > 0) html += '<button class="btn-back" onclick="obPrev()">Retour</button>';
-      var isLast = obStep === obSteps.length - 1;
+      if (visibleIndex > 0) html += '<button class="btn-back" onclick="obPrev()">Retour</button>';
+      var isLast = visibleIndex === visibleSteps.length - 1;
       html += '<button class="btn-next" id="obNextBtn" onclick="' + (isLast ? 'obFinish()' : 'obNext()') + '">' + (isLast ? 'Terminer \u2713' : 'Suivant \u2192') + '</button>';
       html += '</div>';
 
@@ -1789,23 +1816,35 @@ import { supabaseConfig } from '../../lib/supabase';
     function obNext() {
       syncObInputs();
       if (!validateObStep()) return;
-      if (obStep < obSteps.length - 1) { obStep++; renderObStep(); }
+      var next = obStep + 1;
+      while (next < obSteps.length && obSteps[next].showIf && !obSteps[next].showIf()) { next++; }
+      if (next < obSteps.length) { obStep = next; renderObStep(); }
     }
 
     function obPrev() {
       syncObInputs();
-      if (obStep > 0) { obStep--; renderObStep(); }
+      var prev = obStep - 1;
+      while (prev >= 0 && obSteps[prev].showIf && !obSteps[prev].showIf()) { prev--; }
+      if (prev >= 0) { obStep = prev; renderObStep(); }
     }
 
     async function obFinish() {
       syncObInputs();
       if (!validateObStep()) return;
 
+      // Verify we have a valid authenticated user before saving
+      var s = initSb();
+      var sessionCheck = await s.auth.getSession();
+      if (!sessionCheck.data.session || !sessionCheck.data.session.user) {
+        showToast('Session expiree. Veuillez vous reconnecter.', 'error');
+        showScreen('Auth');
+        return;
+      }
+      currentUser = sessionCheck.data.session.user;
+
       var btn = document.getElementById('obNextBtn');
       btn.innerHTML = '<span class="spinner"></span> Sauvegarde...';
       btn.disabled = true;
-
-      var s = initSb();
       var w = parseFloat(obData.weight_current) || 80;
       var h = parseInt(obData.height_cm) || 170;
       var a = parseInt(obData.age) || 40;
@@ -1919,7 +1958,7 @@ import { supabaseConfig } from '../../lib/supabase';
         subBadge.textContent = 'Gratuit';
         subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#f3f4f6;color:#6b7280';
         subDetails.textContent = '3 messages Coach IA par jour';
-        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Passer a Premium — 4\u20ac/mois</a>';
+        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Passer \u00e0 Premium \u2014 4\u20ac/mois</a>';
       }
 
       // Profile summary

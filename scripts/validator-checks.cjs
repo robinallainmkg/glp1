@@ -1,92 +1,115 @@
-#!/usr/bin/env node
-// Validator checks: internal links, images, UTF-8 encoding
+// Validator checks script — used by agent validator
 const fs = require('fs');
 const path = require('path');
 
-function getFiles(dir) {
-  let results = [];
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const e of entries) {
-    const full = path.join(dir, e.name);
-    if (e.isDirectory()) results = results.concat(getFiles(full));
-    else if (e.name.endsWith('.md')) results.push(full);
-  }
-  return results;
+function walkDir(dir, ext) {
+  let files = [];
+  try {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const full = path.join(dir, item);
+      const stat = fs.statSync(full);
+      if (stat.isDirectory() && !item.startsWith('.')) files = files.concat(walkDir(full, ext));
+      else if (!ext || item.endsWith(ext)) files.push(full);
+    }
+  } catch (e) {}
+  return files;
 }
 
-const files = getFiles('src/content').slice(0, 100);
-const issues = [];
+const checks = process.argv[2] || 'all';
 
-// Build slug index
-const validSlugs = new Set();
-for (const f of getFiles('src/content')) {
-  validSlugs.add('/' + path.basename(f, '.md') + '/');
-}
+// === HTML OUTPUT CHECK ===
+if (checks === 'html' || checks === 'all') {
+  const htmlFiles = walkDir('dist', '.html')
+    .filter(f => !f.includes('admin'))
+    .slice(0, 15);
+  const issues = [];
 
-for (const f of files) {
-  const raw = fs.readFileSync(f, 'utf8');
-  const content = raw.split('\r\n').join('\n');
-  const slug = path.basename(f, '.md');
-  const match = content.match(/^---\n[\s\S]*?\n---/);
-  const body = match ? content.slice(match[0].length) : content;
+  for (const f of htmlFiles) {
+    const content = fs.readFileSync(f, 'utf-8');
+    const slug = f
+      .replace(/^.*[/\\]dist[/\\]/, '')
+      .replace(/[/\\]index\.html$/, '')
+      .replace(/\\/g, '/');
 
-  // Internal links
-  const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
-  let m;
-  while ((m = linkRe.exec(body)) !== null) {
-    const href = m[2];
-    if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) continue;
-    let target = href.split('#')[0];
-    if (!target.endsWith('/')) target += '/';
-    if (!target.startsWith('/')) continue;
-    if (!validSlugs.has(target)) {
-      issues.push({ slug, check: 'internal_link', msg: 'Lien interne casse: ' + href, severity: 'error' });
+    if (!content.includes('<title>')) issues.push({ type: 'MISSING_TITLE_TAG', severity: 'error', slug });
+    if (!content.includes('name="description"')) issues.push({ type: 'MISSING_META_DESC', severity: 'error', slug });
+    if (!content.includes('rel="canonical"')) issues.push({ type: 'MISSING_CANONICAL', severity: 'warning', slug });
+    if (!content.includes('og:title')) issues.push({ type: 'MISSING_OG_TITLE', severity: 'warning', slug });
+    if (!content.includes('lang="fr"') && !content.includes("lang='fr'")) {
+      issues.push({ type: 'MISSING_LANG_FR', severity: 'warning', slug });
+    }
+    const mainMatch = content.match(/<main[^>]*>([\s\S]*?)<\/main>/);
+    if (mainMatch && mainMatch[1].trim().length < 100) {
+      issues.push({ type: 'EMPTY_MAIN', severity: 'error', slug });
     }
   }
 
-  // Images
-  const imgRe = /!\[([^\]]*)\]\(([^)]+)\)/g;
-  while ((m = imgRe.exec(body)) !== null) {
-    const alt = m[1];
-    const src = m[2];
-    if (!alt || alt.trim() === '' || alt.toLowerCase() === 'image' || alt.toLowerCase() === 'photo') {
-      issues.push({ slug, check: 'image', msg: 'Alt text manquant: ' + src, severity: 'warning' });
-    }
-    if (src && !src.startsWith('http')) {
-      const imgPath = path.join('public', src.startsWith('/') ? src.slice(1) : src);
-      if (!fs.existsSync(imgPath)) {
-        issues.push({ slug, check: 'image', msg: 'Image manquante: ' + src, severity: 'error' });
+  console.log('=== HTML CHECK ===');
+  console.log('HTML CHECKS: ' + htmlFiles.length + ' pages');
+  for (const i of issues) console.log('[' + i.severity.toUpperCase() + '] [' + i.type + '] ' + i.slug);
+  console.log('HTML ISSUES: ' + issues.length);
+}
+
+// === IMAGE CHECK ===
+if (checks === 'images' || checks === 'all') {
+  const mdFiles = walkDir('src/content', '.md');
+  const missing = [];
+  const emptyAlt = [];
+
+  for (const filePath of mdFiles) {
+    const raw = fs.readFileSync(filePath, 'utf-8').replace(/\r\n/g, '\n');
+    const slug = path.basename(filePath, '.md');
+    const imgRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+    let m;
+    while ((m = imgRegex.exec(raw)) !== null) {
+      const alt = m[1].trim();
+      const src = m[2].trim();
+      if (!alt || alt === 'image' || alt === 'photo') emptyAlt.push({ slug, src });
+      if (!src.startsWith('http') && !src.startsWith('data:')) {
+        const imgPath = src.startsWith('/') ? 'public' + src : path.join(path.dirname(filePath), src);
+        if (!fs.existsSync(imgPath)) missing.push({ slug, src });
       }
     }
   }
+
+  console.log('=== IMAGE CHECK ===');
+  console.log('MISSING IMAGES: ' + missing.length);
+  missing.slice(0, 20).forEach(i => console.log('  [' + i.slug + '] ' + i.src));
+  console.log('EMPTY ALT: ' + emptyAlt.length);
+  emptyAlt.slice(0, 10).forEach(i => console.log('  [' + i.slug + '] ' + i.src));
 }
 
-// UTF-8 encoding check in .astro pages
-function getAstroFiles(dir) {
-  let r = [];
-  if (!fs.existsSync(dir)) return r;
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const e of entries) {
-    const full = path.join(dir, e.name);
-    if (e.isDirectory()) r = r.concat(getAstroFiles(full));
-    else if (e.name.endsWith('.astro')) r.push(full);
+// === CONTENT QUALITY CHECK ===
+if (checks === 'quality' || checks === 'all') {
+  const mdFiles = walkDir('src/content', '.md');
+  const shortContent = [];
+  const headingIssues = [];
+
+  for (const filePath of mdFiles) {
+    const raw = fs.readFileSync(filePath, 'utf-8').replace(/\r\n/g, '\n');
+    const slug = path.basename(filePath, '.md');
+    // Remove frontmatter
+    const body = raw.replace(/^---[\s\S]*?---\n/, '');
+    const wordCount = body.trim().split(/\s+/).length;
+    if (wordCount < 300) shortContent.push({ slug, wordCount });
+
+    // Check heading hierarchy
+    const lines = body.split('\n');
+    let hasH2 = false, hasH3 = false;
+    for (const line of lines) {
+      if (line.startsWith('## ')) hasH2 = true;
+      if (line.startsWith('### ')) {
+        hasH3 = true;
+        if (!hasH2) { headingIssues.push({ slug, issue: 'H3 without H2' }); break; }
+      }
+      if (line.startsWith('#### ') && !hasH3) { headingIssues.push({ slug, issue: 'H4 without H3' }); break; }
+    }
   }
-  return r;
-}
 
-const astroFiles = getAstroFiles('src/pages');
-for (const f of astroFiles) {
-  const content = fs.readFileSync(f, 'utf8');
-  if (content.includes('\uFFFD')) {
-    issues.push({ slug: path.basename(f, '.astro'), check: 'encoding', msg: 'Caracteres corrompus (U+FFFD) dans ' + f, severity: 'error' });
-  }
+  console.log('=== CONTENT QUALITY ===');
+  console.log('SHORT CONTENT (<300 words): ' + shortContent.length);
+  shortContent.slice(0, 10).forEach(i => console.log('  [' + i.slug + '] ' + i.wordCount + ' words'));
+  console.log('HEADING ISSUES: ' + headingIssues.length);
+  headingIssues.slice(0, 10).forEach(i => console.log('  [' + i.slug + '] ' + i.issue));
 }
-
-const errors = issues.filter(i => i.severity === 'error');
-const warnings = issues.filter(i => i.severity === 'warning');
-console.log('LINK ERRORS:', errors.filter(i => i.check === 'internal_link').length);
-console.log('IMAGE ERRORS:', errors.filter(i => i.check === 'image').length);
-console.log('IMAGE WARNINGS:', warnings.filter(i => i.check === 'image').length);
-console.log('ENCODING ERRORS:', errors.filter(i => i.check === 'encoding').length);
-errors.slice(0, 30).forEach(i => console.log('[ERR][' + i.check + '] ' + i.slug + ': ' + i.msg));
-warnings.slice(0, 10).forEach(i => console.log('[WARN][' + i.check + '] ' + i.slug + ': ' + i.msg));

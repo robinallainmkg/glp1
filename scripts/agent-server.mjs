@@ -54,6 +54,7 @@ let autopilotEnabled = false;
 let autopilotCycle = 0;
 let autopilotPhase = 'idle'; // idle | check | generate | edit | validate | done
 let autopilotCycleStart = null;
+const MAX_AUTOPILOT_CYCLES = 100; // Safety limit — auto-stop after 100 cycles
 
 // Output buffers — keep last N lines per agent (persists after agent stops)
 const MAX_LINES = 500;
@@ -602,6 +603,9 @@ async function autopilotValidate() {
   appendOutput('autopilot', `✅ ${time()} — Phase VALIDATE terminée`, 'result');
 }
 
+let lastDecision = null; // Track decision for smart delay
+let consecutiveIdle = 0; // Track consecutive idle cycles
+
 async function runAutopilotCycle() {
   autopilotCycle++;
   autopilotCycleStart = new Date();
@@ -613,15 +617,31 @@ async function runAutopilotCycle() {
 
     // Decide what to do
     const decision = autopilotDecide(state);
+    lastDecision = decision;
 
     // Phase 2: GENERATE (may skip)
     await autopilotGenerate(decision);
 
-    // Phase 3: EDIT (multi-instance based on ticket count)
-    await autopilotEdit(state);
+    // Phase 3: EDIT — skip if generate-only (nothing to edit yet)
+    if (decision === 'generate-only') {
+      appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (SKIP — generate-only, rien à éditer)`, 'progress');
+    } else {
+      await autopilotEdit(state);
+    }
 
-    // Phase 4: VALIDATE
-    await autopilotValidate();
+    // Phase 4: VALIDATE — skip if generate-only (nothing changed)
+    if (decision === 'generate-only') {
+      appendOutput('autopilot', `📍 ${time()} Phase 4 — VALIDATE (SKIP — generate-only)`, 'progress');
+    } else {
+      await autopilotValidate();
+    }
+
+    // Track idle cycles
+    if (decision === 'generate-only') {
+      consecutiveIdle++;
+    } else {
+      consecutiveIdle = 0;
+    }
 
     // Log cycle completion
     autopilotPhase = 'done';
@@ -634,7 +654,7 @@ async function runAutopilotCycle() {
       status: 'cycle_complete',
       started_at: autopilotCycleStart.toISOString(),
       completed_at: new Date().toISOString(),
-      metadata: { cycle: autopilotCycle, decision, duration_s: duration }
+      metadata: { cycle: autopilotCycle, decision, duration_s: duration, consecutiveIdle }
     });
 
   } catch (e) {
@@ -642,11 +662,31 @@ async function runAutopilotCycle() {
     console.log(`❌ [${time()}] Autopilot cycle ${autopilotCycle} erreur: ${e.message}`);
   }
 
-  // Schedule next cycle if still enabled
+  // Safety: auto-stop after MAX_AUTOPILOT_CYCLES
+  if (autopilotCycle >= MAX_AUTOPILOT_CYCLES) {
+    autopilotEnabled = false;
+    autopilotPhase = 'idle';
+    appendOutput('autopilot', `🛑 Limite de ${MAX_AUTOPILOT_CYCLES} cycles atteinte — arrêt automatique`, 'progress');
+    console.log(`🛑 Autopilot auto-stopped after ${MAX_AUTOPILOT_CYCLES} cycles`);
+    return;
+  }
+
+  // Schedule next cycle if still enabled — with SMART delay
   if (autopilotEnabled) {
-    const delay = 15000; // 15s between cycles
-    appendOutput('autopilot', `🔄 Prochain cycle dans ${delay / 1000}s...`, 'progress');
-    console.log(`🔄 [${time()}] Cycle ${autopilotCycle} done — next in ${delay / 1000}s`);
+    // Smart delay: scale up when idle, fast when there's real work
+    let delay;
+    if (consecutiveIdle >= 5) {
+      delay = 600000; // 10 min — nothing to do, chill
+      appendOutput('autopilot', `😴 5+ cycles idle — passage en veille (10 min)`, 'progress');
+    } else if (consecutiveIdle >= 2) {
+      delay = 180000; // 3 min — probably idle
+    } else if (lastDecision === 'generate-only') {
+      delay = 120000; // 2 min — just generated, wait for results
+    } else {
+      delay = 30000;  // 30s — active work, stay responsive
+    }
+    appendOutput('autopilot', `🔄 Prochain cycle dans ${Math.round(delay / 1000)}s...`, 'progress');
+    console.log(`🔄 [${time()}] Cycle ${autopilotCycle} done — next in ${delay / 1000}s (idle: ${consecutiveIdle})`);
     setTimeout(() => {
       if (autopilotEnabled) runAutopilotCycle();
     }, delay);
@@ -922,7 +962,7 @@ const server = createServer(async (req, res) => {
     const totalCost = [...agentCosts.values()].reduce((s, c) => s + c, 0);
 
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost, autopilot: { enabled: autopilotEnabled, cycle: autopilotCycle, phase: autopilotPhase, running: autopilotEnabled } }));
+    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost, autopilot: { enabled: autopilotEnabled, cycle: autopilotCycle, phase: autopilotPhase, running: autopilotEnabled, consecutiveIdle, maxCycles: MAX_AUTOPILOT_CYCLES, lastDecision } }));
     return;
   }
 
@@ -979,6 +1019,8 @@ const server = createServer(async (req, res) => {
     autopilotEnabled = true;
     autopilotCycle = 0;
     autopilotPhase = 'starting';
+    consecutiveIdle = 0;
+    lastDecision = null;
     console.log(`🟢 [${new Date().toLocaleTimeString()}] Autopilot ACTIVE (pipeline natif)`);
     outputBuffers.set('autopilot', { lines: [{ ts: new Date().toISOString(), text: '🟢 Autopilot activé — pipeline natif (zéro token)', level: 'progress' }], startedAt: new Date().toISOString() });
     // Start the pipeline loop (runs in background, no Claude agent needed)
@@ -988,13 +1030,32 @@ const server = createServer(async (req, res) => {
     return;
   }
 
-  // POST /autopilot/stop — stop autopilot loop
+  // POST /autopilot/stop — stop autopilot loop AND kill all running agents
   if (req.method === 'POST' && url.pathname === '/autopilot/stop') {
     autopilotEnabled = false;
     console.log(`🔴 [${new Date().toLocaleTimeString()}] Autopilot DESACTIVE`);
-    appendOutput('autopilot', `🔴 Autopilot désactivé — arrêt après phase en cours (${autopilotPhase})`, 'progress');
+
+    // Kill ALL currently running agents
+    const killed = [];
+    for (const [name, info] of running) {
+      try {
+        process.kill(info.pid, 'SIGTERM');
+        killed.push(name);
+        console.log(`⏹️ [${new Date().toLocaleTimeString()}] Killing agent ${name} (pid ${info.pid})`);
+        // Force kill after 5s if still alive
+        const pid = info.pid;
+        setTimeout(() => {
+          try { process.kill(pid, 'SIGKILL'); } catch(_) { /* already dead */ }
+        }, 5000);
+      } catch(e) {
+        console.log(`⚠️ Could not kill ${name} (pid ${info.pid}): ${e.message}`);
+      }
+    }
+    running.clear();
+
+    appendOutput('autopilot', `🔴 Autopilot désactivé — ${killed.length} agent(s) tués: ${killed.join(', ') || 'aucun'}`, 'progress');
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ ok: true, message: 'Autopilot arrete', cyclesCompleted: autopilotCycle, lastPhase: autopilotPhase }));
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot arrete', killed, cyclesCompleted: autopilotCycle, lastPhase: autopilotPhase }));
     return;
   }
 
