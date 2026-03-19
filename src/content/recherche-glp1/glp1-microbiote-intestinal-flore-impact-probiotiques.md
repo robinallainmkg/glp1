@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Microbiote Intestinal : Impact sur la Flore et Rôle des Probiotiques"
+title: "GLP-1 et Microbiote Intestinal : Flore et Probiotiques"
 description: "GLP-1 et microbiote intestinal : comment Ozempic, Wegovy et Mounjaro modifient la flore. Probiotiques pendant le traitement — ce que la recherche dit vraiment."
 pubDate: 2026-03-18
 date: 2026-03-18

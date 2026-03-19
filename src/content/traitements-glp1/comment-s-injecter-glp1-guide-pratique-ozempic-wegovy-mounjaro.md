@@ -1,5 +1,5 @@
 ---
-title: "Comment s'injecter un GLP-1 : Guide Pratique Ozempic Wegovy Mounjaro"
+title: "Comment s'injecter un GLP-1 : Guide Pratique Ozempic Mounjaro"
 description: "Comment s'injecter Ozempic, Wegovy, Mounjaro : technique d'auto-injection pas à pas, zones recommandées, rotation des sites, conseils douleur et oublis."
 pubDate: 2026-03-18
 date: 2026-03-18

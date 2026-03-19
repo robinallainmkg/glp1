@@ -1,6 +1,6 @@
 ---
 title: "Wegovy Comprimé Oral France : Date et Efficacité"
-description: "Wegovy comprimé oral France : la FDA a approuvé Wegovy en pilule. Date EMA, efficacité et différences avec Rybelsus."
+description: "Wegovy comprimé oral France : approuvé par la FDA en pilule. Date EMA prévue, efficacité et différences avec Rybelsus. Guide 2026."
 keywords: ['wegovy comprimé oral', 'wegovy pilule france', 'wegovy oral date EMA', 'semaglutide oral obesite', 'wegovy sans injection', 'wegovy comprimé 2026']
 seoTitle: "Wegovy Comprimé Oral France : Date EMA et Guide Complet"
 seoDescription: "Wegovy en comprimé oral approuvé par la FDA. Date d'arrivée en France, efficacité vs injectable, différences avec Rybelsus. Guide complet 2026."
