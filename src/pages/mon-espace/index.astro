@@ -950,8 +950,17 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .paywall-box h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
     .paywall-box p { color: #64748b; font-size: 0.85rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    .paywall-toggle { display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-bottom: 1rem; }
+    .pw-toggle-label { font-size: 0.85rem; color: #6b7280; font-weight: 500; }
+    .pw-toggle-switch { position: relative; width: 44px; height: 24px; cursor: pointer; }
+    .pw-toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .pw-toggle-slider { position: absolute; inset: 0; background: #d1d5db; border-radius: 24px; transition: 0.3s; }
+    .pw-toggle-slider::before { content: ''; position: absolute; width: 18px; height: 18px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: 0.3s; }
+    .pw-toggle-switch input:checked + .pw-toggle-slider { background: #16a34a; }
+    .pw-toggle-switch input:checked + .pw-toggle-slider::before { transform: translateX(20px); }
     .paywall-price { font-size: 2.5rem; font-weight: 900; color: #16a34a; }
     .paywall-price span { font-size: 0.85rem; font-weight: 500; color: #64748b; }
+    .paywall-price-detail { font-size: 0.8rem; color: #16a34a; font-weight: 500; margin-bottom: 0.5rem; }
     .paywall-features { text-align: left; margin: 1.25rem 0; list-style: none; }
     .paywall-features li { padding: 0.3rem 0; font-size: 0.82rem; color: #475569; }
     .paywall-features li::before { content: '\2713 '; color: #16a34a; font-weight: 700; }
@@ -1198,6 +1207,18 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="dose-timeline" id="doseTimeline"></div>
       </div>
 
+      <!-- Abonnement -->
+      <div class="card animate-in animate-delay-3" id="subscriptionCard">
+        <div class="card-header">
+          <h3>&#11088; Mon abonnement</h3>
+        </div>
+        <div id="subInfo" style="text-align:center;padding:0.5rem 0">
+          <div id="subPlanBadge" style="display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;margin-bottom:0.5rem">Gratuit</div>
+          <div id="subDetails" style="font-size:0.8rem;color:#6b7280;margin-bottom:0.75rem"></div>
+          <div id="subActions"></div>
+        </div>
+      </div>
+
       <!-- Programme -->
       <div class="card animate-in animate-delay-3">
         <div class="card-header">
@@ -1332,7 +1353,16 @@ import { supabaseConfig } from '../../lib/supabase';
     <div class="paywall-box">
       <h2>Votre essai gratuit est termine</h2>
       <p>Continuez a beneficier de votre suivi personnalise</p>
-      <div class="paywall-price">9,90&#8364; <span>/mois</span></div>
+      <div class="paywall-toggle">
+        <span class="pw-toggle-label" id="pw-label-m">Mensuel</span>
+        <label class="pw-toggle-switch">
+          <input type="checkbox" id="pw-billing-toggle" onchange="togglePaywallBilling()" />
+          <span class="pw-toggle-slider"></span>
+        </label>
+        <span class="pw-toggle-label" id="pw-label-y">Annuel <span style="background:#16a34a;color:white;padding:1px 6px;border-radius:10px;font-size:0.7rem;font-weight:700">-30%</span></span>
+      </div>
+      <div class="paywall-price" id="pw-price">4&#8364; <span>/mois</span></div>
+      <div class="paywall-price-detail" id="pw-detail">7 jours d'essai gratuit</div>
       <ul class="paywall-features">
         <li>Coach IA illimite avec votre profil</li>
         <li>Suivi poids et courbe de progression</li>
@@ -1340,8 +1370,9 @@ import { supabaseConfig } from '../../lib/supabase';
         <li>Rappels injection et RDV</li>
         <li>Recommandations adaptees a votre traitement</li>
       </ul>
-      <button class="btn-subscribe" onclick="subscribe()">S'abonner — 9,90&#8364;/mois</button>
+      <button class="btn-subscribe" id="pw-subscribe-btn" onclick="subscribe()">Commencer l'essai gratuit</button>
       <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir a l'accueil</button>
+      <p style="font-size:0.7rem;color:#94a3b8;margin-top:8px;text-align:center">Paiement securise par Stripe. Annulation a tout moment.</p>
     </div>
   </div>
 
@@ -1858,6 +1889,34 @@ import { supabaseConfig } from '../../lib/supabase';
         }
       }
 
+      // Subscription card
+      var subBadge = document.getElementById('subPlanBadge');
+      var subDetails = document.getElementById('subDetails');
+      var subActions = document.getElementById('subActions');
+      var subStatus = profile.subscription_status || 'free';
+      if (subStatus === 'active' || subStatus === 'trialing') {
+        subBadge.textContent = subStatus === 'trialing' ? 'Premium (essai)' : 'Premium';
+        subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#dcfce7;color:#166534';
+        if (profile.subscription_period_end) {
+          var pEnd = new Date(profile.subscription_period_end);
+          subDetails.textContent = 'Renouvellement : ' + pEnd.toLocaleDateString('fr-FR');
+        }
+        subActions.innerHTML = '<button onclick="openStripePortal()" style="background:#f3f4f6;color:#374151;border:none;padding:8px 16px;border-radius:8px;font-size:0.8rem;cursor:pointer;font-weight:600">Gerer mon abonnement</button>';
+      } else if (subStatus === 'canceled') {
+        subBadge.textContent = 'Premium (annule)';
+        subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#fef3c7;color:#92400e';
+        if (profile.subscription_period_end) {
+          var pEnd2 = new Date(profile.subscription_period_end);
+          subDetails.textContent = 'Acces jusqu\'au ' + pEnd2.toLocaleDateString('fr-FR');
+        }
+        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Se reabonner</a>';
+      } else {
+        subBadge.textContent = 'Gratuit';
+        subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#f3f4f6;color:#6b7280';
+        subDetails.textContent = '3 messages Coach IA par jour';
+        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Passer a Premium — 4\u20ac/mois</a>';
+      }
+
       // Profile summary
       var treatNames = { ozempic: 'Ozempic', wegovy: 'Wegovy', mounjaro: 'Mounjaro', saxenda: 'Saxenda', other: 'Autre', none: '-' };
       document.getElementById('psWeight').textContent = profile.weight_current ? profile.weight_current + ' kg' : '-';
@@ -2316,8 +2375,75 @@ import { supabaseConfig } from '../../lib/supabase';
       window.location.href = '/';
     }
 
-    function subscribe() {
-      showToast('Paiement Stripe bientot disponible !', 'info');
+    var pwBillingType = 'monthly';
+    function togglePaywallBilling() {
+      var toggle = document.getElementById('pw-billing-toggle');
+      var priceEl = document.getElementById('pw-price');
+      var detailEl = document.getElementById('pw-detail');
+      if (toggle.checked) {
+        pwBillingType = 'yearly';
+        priceEl.innerHTML = '33&#8364; <span>/an</span>';
+        detailEl.textContent = 'Soit 2,75€/mois — économisez 30%';
+      } else {
+        pwBillingType = 'monthly';
+        priceEl.innerHTML = '4&#8364; <span>/mois</span>';
+        detailEl.textContent = '7 jours d\'essai gratuit';
+      }
+    }
+
+    async function subscribe() {
+      var btn = document.getElementById('pw-subscribe-btn');
+      btn.disabled = true;
+      btn.textContent = 'Chargement...';
+      try {
+        var session = await sb.auth.getSession();
+        if (!session.data.session) {
+          showToast('Veuillez vous connecter d\'abord', 'error');
+          btn.disabled = false;
+          btn.textContent = 'Commencer l\'essai gratuit';
+          return;
+        }
+        var resp = await fetch(supabaseUrl + '/functions/v1/stripe-checkout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + session.data.session.access_token,
+            'apikey': supabaseKey,
+          },
+          body: JSON.stringify({ price_type: pwBillingType }),
+        });
+        var data = await resp.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          showToast(data.error || 'Erreur lors du paiement', 'error');
+          btn.disabled = false;
+          btn.textContent = 'Commencer l\'essai gratuit';
+        }
+      } catch (err) {
+        showToast('Erreur de connexion', 'error');
+        btn.disabled = false;
+        btn.textContent = 'Commencer l\'essai gratuit';
+      }
+    }
+
+    async function openStripePortal() {
+      try {
+        var session = await sb.auth.getSession();
+        var resp = await fetch(supabaseUrl + '/functions/v1/stripe-portal', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + session.data.session.access_token,
+            'apikey': supabaseKey,
+          },
+        });
+        var data = await resp.json();
+        if (data.url) window.location.href = data.url;
+        else showToast(data.error || 'Erreur', 'error');
+      } catch (err) {
+        showToast('Erreur de connexion', 'error');
+      }
     }
 
     // ===== INIT =====
@@ -2329,11 +2455,24 @@ import { supabaseConfig } from '../../lib/supabase';
         if (session && session.user) {
           currentUser = session.user;
           await onUserReady();
+
+          // Handle Stripe return params
+          var params = new URLSearchParams(window.location.search);
+          if (params.get('subscription') === 'success') {
+            showToast('Abonnement active ! Bienvenue en Premium', 'success');
+            window.history.replaceState({}, '', '/mon-espace/');
+          } else if (params.get('subscription') === 'cancel') {
+            showToast('Paiement annule. Vous pouvez reessayer.', 'info');
+            window.history.replaceState({}, '', '/mon-espace/');
+          }
         } else {
           showScreen('Auth');
           var params = new URLSearchParams(window.location.search);
           if (params.get('tab') === 'login') {
             switchAuthTab('login');
+          }
+          if (params.get('redirect') === 'tarifs') {
+            showToast('Connectez-vous pour acceder a l\'abonnement', 'info');
           }
         }
 

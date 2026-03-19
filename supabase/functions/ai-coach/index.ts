@@ -330,6 +330,69 @@ serve(async (req) => {
       });
     }
 
+    // --- Premium subscription rate limiting (3 msg/day for free users) ---
+    let dailyRemaining: number | null = null; // null = unlimited (premium/trial/anonymous)
+    let isPremiumUser = false;
+    let premiumProfile: any = null;
+    if (user_id) {
+      const { data: userProfile } = await supabase
+        .from("user_profiles")
+        .select("is_subscribed, subscription_status, subscription_period_end, trial_end")
+        .eq("user_id", user_id)
+        .single();
+
+      const isPremium = userProfile && (
+        userProfile.subscription_status === "active" ||
+        userProfile.subscription_status === "trialing" ||
+        (userProfile.subscription_status === "canceled" &&
+         userProfile.subscription_period_end &&
+         new Date(userProfile.subscription_period_end) > new Date())
+      );
+      isPremiumUser = !!isPremium;
+
+      const isInTrial = userProfile?.trial_end && new Date(userProfile.trial_end) > new Date();
+      if (isInTrial) isPremiumUser = true;
+
+      // Fetch full profile for premium personalization
+      if (isPremiumUser) {
+        const { data: fullProfile } = await supabase
+          .from("user_profiles")
+          .select("prenom, treatment, current_dose, weight_current, weight_goal, sport_level, diet_type, height_cm, age, gender")
+          .eq("user_id", user_id)
+          .single();
+        premiumProfile = fullProfile;
+      }
+
+      if (!isPremium && !isInTrial) {
+        // Free tier: enforce 3 messages/day
+        const today = new Date().toISOString().split("T")[0];
+        const { data: dailyCount } = await supabase
+          .from("daily_message_counts")
+          .select("message_count")
+          .eq("user_id", user_id)
+          .eq("date", today)
+          .single();
+
+        const count = dailyCount?.message_count || 0;
+        if (count >= 3) {
+          return jsonResponse({
+            error: "daily_limit",
+            message: "Vous avez atteint la limite de 3 messages gratuits par jour. Passez a Coach Premium pour des echanges illimites !",
+            upgrade_url: "/tarifs/",
+            remaining: 0,
+          }, 429);
+        }
+
+        // Increment daily count
+        await supabase.from("daily_message_counts").upsert(
+          { user_id, date: today, message_count: count + 1 },
+          { onConflict: "user_id,date" }
+        );
+        dailyRemaining = 2 - count; // remaining after this message
+      }
+    }
+    // Non-authenticated users: existing session/IP rate limits apply (above)
+
     // --- Conversation management ---
     let convId = conversation_id;
     if (!convId) {
@@ -398,7 +461,7 @@ serve(async (req) => {
           .select("role, content")
           .eq("conversation_id", convId)
           .order("created_at", { ascending: false })
-          .limit(MAX_HISTORY),
+          .limit(isPremiumUser ? 20 : MAX_HISTORY),
       ]);
 
       if (!embedResponse.ok) {
@@ -502,8 +565,22 @@ ${doctorList}
         ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
         : `${cleanMessage}${scamContext}${doctorContext}`;
 
+      // Build system prompt with premium personalization
+      let systemPrompt = SYSTEM_PROMPT;
+      if (isPremiumUser && premiumProfile) {
+        const p = premiumProfile;
+        systemPrompt += `\n\nPROFIL UTILISATEUR PREMIUM (personnalise tes reponses) :
+- Prenom : ${p.prenom || 'inconnu'}
+- Traitement : ${p.treatment || 'non renseigne'} ${p.current_dose || ''}
+- Poids actuel : ${p.weight_current || '?'} kg, objectif : ${p.weight_goal || '?'} kg
+- Taille : ${p.height_cm || '?'} cm, Age : ${p.age || '?'} ans, Genre : ${p.gender || '?'}
+- Activite : ${p.sport_level || 'non renseigne'}
+- Regime : ${p.diet_type || 'non renseigne'}
+Utilise le prenom et adapte tes conseils a ce profil.`;
+      }
+
       const messages = [
-        { role: "system", content: SYSTEM_PROMPT },
+        { role: "system", content: systemPrompt },
         ...historyMessages,
         { role: "user", content: userMessageWithContext },
       ];
@@ -548,6 +625,7 @@ ${doctorList}
         conversation_id: convId,
         sources: sources.slice(0, 3), // max 3 sources to display
         model: "llama-3.3-70b-versatile",
+        ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });
 
     } catch (llmError) {
@@ -560,6 +638,7 @@ ${doctorList}
         conversation_id: convId,
         sources: [],
         model: "fallback-v1",
+        ...(dailyRemaining !== null && { daily_remaining: dailyRemaining }),
       });
     }
 

@@ -333,6 +333,42 @@ import { supabaseConfig } from '../lib/supabase.js';
   }
   .coach-cta-dismiss:hover { color: #64748b; }
 
+  /* ===== UPGRADE CTA (daily limit) ===== */
+  .coach-cta-upgrade {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #f59e0b;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 8px 0;
+    text-align: center;
+    animation: fadeIn 0.4s ease-out;
+  }
+  .coach-cta-upgrade p {
+    font-size: 0.82rem;
+    color: #92400e;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .coach-cta-upgrade .cta-btn-premium {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .coach-cta-upgrade .cta-btn-premium:hover {
+    background: #15803d;
+  }
+  .coach-cta-upgrade .cta-subtext {
+    font-size: 0.7rem;
+    color: #b45309;
+    margin: 6px 0 0;
+  }
+
   /* ===== TYPING INDICATOR ===== */
   .coach-typing {
     display: flex;
@@ -491,6 +527,17 @@ import { supabaseConfig } from '../lib/supabase.js';
         '<a href="/mon-espace/#login" class="cta-btn cta-btn-secondary">Se connecter</a>' +
       '</div>' +
       '<button class="coach-cta-dismiss" onclick="this.parentElement.remove()">Plus tard</button>';
+    messagesEl.appendChild(ctaDiv);
+    scrollToBottom();
+  }
+
+  function showDailyLimitCTA() {
+    var ctaDiv = document.createElement('div');
+    ctaDiv.className = 'coach-cta-upgrade';
+    ctaDiv.innerHTML =
+      '<p>Vous avez utilisé vos <strong>3 messages gratuits</strong> du jour</p>' +
+      '<a href="/tarifs/" class="cta-btn cta-btn-premium">Passer à Premium — 4€/mois</a>' +
+      '<p class="cta-subtext">7 jours d\'essai gratuit • Ou revenez demain</p>';
     messagesEl.appendChild(ctaDiv);
     scrollToBottom();
   }
@@ -704,7 +751,13 @@ import { supabaseConfig } from '../lib/supabase.js';
       hideTyping();
 
       if (resp.status === 429) {
-        addAssistantMessage("Trop de messages. Reessayez dans quelques minutes.");
+        var errData = null;
+        try { errData = await resp.json(); } catch(e) {}
+        if (errData && errData.error === 'daily_limit') {
+          showDailyLimitCTA();
+        } else {
+          addAssistantMessage("Trop de messages. Reessayez dans quelques minutes.");
+        }
         isSending = false;
         return;
       }
@@ -719,6 +772,19 @@ import { supabaseConfig } from '../lib/supabase.js';
       if (data.conversation_id) {
         conversationId = data.conversation_id;
         localStorage.setItem('glp1_coach_conv', conversationId);
+      }
+
+      // Show daily remaining counter for free users
+      if (typeof data.daily_remaining === 'number') {
+        var counterEl = document.getElementById('coach-daily-counter');
+        if (!counterEl) {
+          counterEl = document.createElement('div');
+          counterEl.id = 'coach-daily-counter';
+          counterEl.style.cssText = 'text-align:center;font-size:0.7rem;color:#6b7280;padding:2px 0;';
+          messagesEl.parentNode.insertBefore(counterEl, messagesEl.nextSibling);
+        }
+        counterEl.textContent = data.daily_remaining + '/3 messages restants aujourd\'hui';
+        if (data.daily_remaining === 0) counterEl.style.color = '#ef4444';
       }
 
       // Display response with typewriter effect
