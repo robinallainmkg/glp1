@@ -1,5 +1,5 @@
 ---
-title: "Nos Partenaires : Guide Complet et Conseils Pratiques 2025"
+title: "Partenaires GLP-1 France : Plateformes Santé de Confiance"
 description: "Nos partenaires de confiance : annuaires et plateformes santé qui soutiennent GLP-1 France dans sa mission d'information sur les traitements GLP-1."
 pubDate: 2025-08-21
 date: 2025-08-21
