@@ -3,10 +3,26 @@ name: Deploy to Hostinger
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'config/**'
+      - 'astro.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      # Ignore: .claude/agents/*, scripts/*, n8n/*, supabase/*, CLAUDE.md
+
+# CRITICAL: Cancel any in-progress deploy when a new push arrives
+# Only the latest commit gets deployed — no wasted FTP transfers
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
     - uses: actions/checkout@v4
