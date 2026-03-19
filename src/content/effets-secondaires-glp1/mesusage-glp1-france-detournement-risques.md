@@ -1,6 +1,6 @@
 ---
 title: "Mésusage GLP-1 France : Détournement Ozempic et Risques ANSM"
-description: "Mésusage GLP-1 France détournement Ozempic : 2,2% des patients sans indication médicale. Risques sanitaires, tensions d'approvisionnement et réponse de l'ANSM."
+description: "Mésusage GLP-1 en France : détournement Ozempic chez 2,2% des patients. Risques sanitaires, tensions d'approvisionnement et réponse de l'ANSM."
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16

@@ -1,6 +1,6 @@
 ---
 title: "Nouveau Stylo Ozempic 3ml 2026 : Guide Patients"
-description: "Nouveau stylo Ozempic 3ml lancé en février 2026 : conservation, utilisation et équivalence de doses. Tout ce que les patients doivent savoir sur ce changement."
+description: "Nouveau stylo Ozempic 3ml lancé en 2026 : conservation, utilisation et équivalence des doses. Ce que les patients doivent savoir."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
