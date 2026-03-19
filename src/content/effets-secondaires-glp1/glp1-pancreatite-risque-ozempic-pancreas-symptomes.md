@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Pancréatite : Risque Réel, Symptômes et Conduite à Tenir"
+title: "GLP-1 et Pancréatite : Risque, Symptômes et Conduite à Tenir"
 description: "GLP-1 pancréatite risque ozempic pancreas symptômes : risque réel évalué à 1/1000, qui est à risque, signes d'alerte et que faire en cas de douleur abdominale."
 pubDate: 2026-03-17
 date: 2026-03-17

@@ -17,7 +17,7 @@ collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
 priority: 2
 schema: "Article"
-mainKeyword: "glp1 ostéoporose os fracture risque"
+mainKeyword: "GLP-1 ostéoporose os fracture risque"
 secondaryKeywords: ["ozempic ostéoporose", "wegovy os", "glp1 fracture", "perte osseuse ozempic", "mounjaro ostéoporose"]
 
 # Configuration Affiliation
