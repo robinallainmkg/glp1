@@ -282,8 +282,8 @@ async function runScenario(scenario) {
       totalChecks++;
     }
 
-    // Rate limit protection
-    await delay(1500);
+    // Rate limit protection (3s between messages to avoid Groq rate limit)
+    await delay(3000);
   }
 
   const score = totalChecks > 0 ? Math.round((passedChecks / totalChecks) * 100) : 100;
