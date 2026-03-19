@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Chute de Cheveux : Causes et Solutions"
+title: "GLP-1 Chute de Cheveux Ozempic : Causes, Perte et Solutions"
 description: "GLP-1 chute de cheveux Ozempic : phénomène touchant 3% des patients. Mécanisme, réversibilité et solutions pour préserver votre chevelure."
 keywords: ['glp1 chute cheveux', 'ozempic perte cheveux', 'wegovy alopécie', 'mounjaro chute cheveux', 'effluvium télogène glp1', 'semaglutide cheveux']
 seoTitle: "GLP-1 Chute de Cheveux Ozempic : Causes, Fréquence et Solutions"
