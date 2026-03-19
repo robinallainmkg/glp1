@@ -1,5 +1,5 @@
 ---
-title: "Wegovy : Effets Secondaires, Dangers et Précautions 2025"
+title: "Wegovy Effets Secondaires Danger : Guide et Précautions 2026"
 description: "Wegovy effets secondaires danger : nausées, pancréatite, risques cardiaques. Guide complet sur les dangers de Wegovy et recommandations médicales."
 pubDate: 2025-08-20
 date: 2025-08-20

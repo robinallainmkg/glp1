@@ -153,7 +153,7 @@ Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétentio
 |---|---|
 | Moins de 4 semaines | Patience, vérifier les conditions de pesée |
 | 4 à 8 semaines | Revoir l'alimentation (protéines, qualité), augmenter l'activité physique |
-| Plus de 8 semaines | Consultation médicale — évaluer la dose, les [carences nutritionnelles sous GLP-1](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), envisager une adaptation |
+| Plus de 8 semaines | Consultation médicale — évaluer la dose, les [carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), envisager une adaptation |
 | Plus de 6 mois à dose max | Accepter le nouvel équilibre, focus sur le maintien |
 
 Le plateau de poids sous GLP-1 est une étape normale du traitement, pas un signe d'échec. Il est le reflet de l'intelligence physiologique de votre corps, qui s'adapte à un nouveau poids pour le défendre. Comprendre ce mécanisme permet de l'aborder avec moins d'anxiété et plus d'efficacité.

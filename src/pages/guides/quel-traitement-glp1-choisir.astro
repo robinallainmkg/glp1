@@ -1,31 +1,14 @@
 ---
-import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSidebar.astro";
-import { getAllAffiliateProducts } from "../../lib/affiliate";
-import { generateAffiliateLink } from '../../utils/affiliateLinks';
+import UnifiedLayout from "../../layouts/UnifiedLayout.astro";
 import { supabase } from '../../lib/supabase';
 
-// Récupération des produits d'affiliation depuis Supabase
-const allProducts = await getAllAffiliateProducts();
-const affiliateProducts = allProducts.slice(0, 3); // 3 premiers produits
-
 const title = "Diagnostic GLP-1 : Quel Traitement Choisir ?";
-const description = "Guide complet pour choisir le bon traitement GLP-1 selon votre profil.";
-
-// Configuration pour sidebar uniquement (pas d'inline products)
-const affiliateConfig = {
-  mobileStrategy: 'sidebar-only',
-  maxInlineProducts: 0,
-  sidebarPosition: 'right'
-};
+const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus adapté à votre situation.";
 ---
 
-<ArticleWithAffiliateSidebar
+<UnifiedLayout
   title={title}
   description={description}
-  affiliateProducts={affiliateProducts}
-  affiliateConfig={affiliateConfig}
-  hideArticleHeader={true}
-  disableInline={true}
 >
   <div class="container">
     <div class="diagnostic-page">
@@ -1599,70 +1582,7 @@ const affiliateConfig = {
     }
   </script>
 
-  <!-- Section Recommandations -->
-  <section class="recommendations-section" style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; color: white;">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">🎯 Nos Recommandations Expert</h2>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-
-        {affiliateProducts.map((product, index) => (
-          <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px);">
-            <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              {index === 0 ? '🏆' : index === 1 ? '⭐' : '✅'} <span>{product.productName}</span>
-            </h3>
-            <p style="margin-bottom: 1rem; opacity: 0.9;">
-              {product.description || product.benefitsText || `Découvrez ${product.productName} - ${product.brand}`}
-            </p>
-            {product.isOnSale && (
-              <div style="background: #ff6b6b; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; display: inline-block; font-size: 0.8rem; margin-bottom: 1rem;">
-                {product.saleBadgeText || 'PROMO'}
-              </div>
-            )}
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-              {product.originalPrice && (
-                <div>
-                  <span style="text-decoration: line-through; opacity: 0.7; margin-right: 0.5rem;">
-                    {product.originalPrice}€
-                  </span>
-                  <span style="font-weight: bold; color: #4ade80;">
-                    {product.discountedPrice}€
-                  </span>
-                </div>
-              )}
-              {product.discountPercent && (
-                <div style="background: #4ade80; color: white; padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.8rem;">
-                  -{product.discountPercent}%
-                </div>
-              )}
-            </div>
-            <a href={generateAffiliateLink(product)} target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #fff; color: #667eea; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.2s; width: 100%; text-align: center;">
-              Découvrir l'offre →
-            </a>
-          </div>
-        ))}
-
-      </div>
-
-      <!-- Call to Action Principal -->
-      <div style="text-align: center; background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 12px; backdrop-filter: blur(10px);">
-        <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">🚀 Prêt à commencer votre transformation ?</h3>
-        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; opacity: 0.9;">
-          Rejoignez les milliers de personnes qui ont déjà transformé leur vie avec les traitements GLP-1.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="/guides/experts/" style="background: #28a745; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: transform 0.2s;">
-            🎯 Consultation Expert
-          </a>
-          <a href="/temoignages/avant-apres-glp1/" style="background: transparent; border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.2s;">
-            📈 Voir les Résultats
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</ArticleWithAffiliateSidebar>
+</UnifiedLayout>
 
 
 
