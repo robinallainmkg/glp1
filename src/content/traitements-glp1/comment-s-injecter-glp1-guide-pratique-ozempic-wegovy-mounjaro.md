@@ -8,7 +8,7 @@ author: "Dr. Sophie Dubois"
 category: "Traitements GLP-1"
 tags: ["glp1", "ozempic", "wegovy", "mounjaro", "injection", "auto-injection", "stylo", "technique"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/stylo-auto-injecteur-glp1.jpg"
+thumbnail: "/images/thumbnails/combien-de-dose-dans-un-stylo-ozempic-illus.jpg"
 thumbnailAlt: "Technique d'auto-injection GLP-1 stylo Ozempic Wegovy Mounjaro"
 featured: true
 published: true

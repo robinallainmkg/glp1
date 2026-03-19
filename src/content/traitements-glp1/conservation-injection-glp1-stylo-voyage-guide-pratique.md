@@ -10,7 +10,7 @@ date: "2026-03-18"
 pubDate: "2026-03-18"
 mainKeyword: "conservation injection GLP-1 stylo voyage avion pratique"
 secondaryKeywords: ["conserver ozempic", "voyage ozempic avion", "conservation wegovy mounjaro", "technique injection glp1", "stylo glp1 chaleur froid"]
-thumbnail: "/images/thumbnails/guide-complet-wegovy.jpg"
+thumbnail: "/images/thumbnails/guide-complet-wegovy-illus.jpg"
 thumbnailAlt: "Conservation et injection des stylos GLP-1 - guide pratique"
 featured: false
 priority: 3
