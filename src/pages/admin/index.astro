@@ -1207,37 +1207,44 @@ import { supabaseConfig } from '../../lib/supabase';
     document.getElementById('apAgentsActive').textContent = activeCount;
 
     // Token estimation per agent type (tokens/minute based on observed patterns)
-    // Claude Max 5h window ≈ 5M tokens (estimated rolling limit)
+    // Claude Max: rolling window — tokens consumed > WINDOW hours ago are recovered
     const TOKEN_RATE_PER_MIN = {
-      'editorial': 8000,      // reads files, reasons, edits
-      'validator': 6000,      // builds, checks, reads files
-      'fact-check': 10000,    // reads articles, searches, verifies sources
-      'seo-audit': 5000,      // scans pages
-      'analytics': 4000,      // queries, analyzes data
-      'opportunities': 5000,  // research + analysis
-      'internal-links': 4000, // link graph analysis
-      'ui-designer': 7000,    // reads components, designs changes
-      'strategist': 3000,     // orchestration, light
-      'sav-email': 5000,      // reads/writes emails
-      'autopilot': 2000,      // orchestration only
+      'editorial': 8000, 'validator': 6000, 'fact-check': 10000,
+      'seo-audit': 5000, 'analytics': 4000, 'opportunities': 5000,
+      'internal-links': 4000, 'ui-designer': 7000, 'strategist': 3000,
+      'sav-email': 5000, 'autopilot': 2000,
     };
     const ROLLING_WINDOW_H = 5;
-    const MAX_TOKENS = 5000000; // 5M estimated rolling limit
+    const MAX_TOKENS = 5000000;
     const windowMs = ROLLING_WINDOW_H * 3600000;
+    const now = Date.now();
 
-    const runs5h = Object.values(agentRuns).filter(r => {
-      const age = Date.now() - new Date(r.started_at).getTime();
-      return age < windowMs;
+    // Estimate tokens per run with age tracking
+    const runTokens = Object.values(agentRuns).map(r => {
+      const startT = new Date(r.started_at).getTime();
+      const endT = r.completed_at ? new Date(r.completed_at).getTime() : now;
+      const durationMin = Math.min(30, (endT - startT) / 60000);
+      const rate = TOKEN_RATE_PER_MIN[r.agent_name] || 5000;
+      const tokens = Math.round(rate * durationMin);
+      const age = now - endT; // ms since run ended
+      return { tokens, age, startT, endT, agent: r.agent_name };
     });
 
-    let estimatedTokens = 0;
-    for (const r of runs5h) {
-      const durationMin = r.completed_at
-        ? (new Date(r.completed_at) - new Date(r.started_at)) / 60000
-        : (Date.now() - new Date(r.started_at)) / 60000;
-      const rate = TOKEN_RATE_PER_MIN[r.agent_name] || 5000;
-      estimatedTokens += Math.round(rate * Math.min(durationMin, 30)); // cap 30min/run
-    }
+    // Current window: only runs that ended within the rolling window
+    const inWindow = runTokens.filter(r => r.age < windowMs);
+    const estimatedTokens = inWindow.reduce((s, r) => s + r.tokens, 0);
+
+    // Tokens recovering soon (runs ending 4-5h ago, about to fall off)
+    const recoveringSoon = inWindow.filter(r => r.age > (windowMs - 3600000)); // last hour of window
+    const recoveryPerHour = recoveringSoon.reduce((s, r) => s + r.tokens, 0);
+
+    // Active burn: tokens from runs started in last 30min (currently consuming)
+    const activeBurn = inWindow.filter(r => (now - r.startT) < 1800000);
+    const activeBurnPerMin = activeBurn.reduce((s, r) => {
+      const rate = TOKEN_RATE_PER_MIN[r.agent] || 5000;
+      // If still running, it's actively burning
+      return s + (r.age < 0 || !r.endT ? rate : 0);
+    }, 0);
 
     const budgetFill = document.getElementById('apBudgetFill');
     const budgetVal = document.getElementById('apBudgetVal');
@@ -1245,76 +1252,84 @@ import { supabaseConfig } from '../../lib/supabase';
     const tokenDisplay = estimatedTokens > 1000000
       ? (estimatedTokens / 1000000).toFixed(1) + 'M'
       : Math.round(estimatedTokens / 1000) + 'k';
+    const recoveryDisplay = recoveryPerHour > 1000
+      ? Math.round(recoveryPerHour / 1000) + 'k'
+      : recoveryPerHour.toString();
     budgetFill.style.width = tokenPct + '%';
     budgetFill.style.background = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#3b82f6';
-    budgetVal.textContent = `~${tokenDisplay} / 5M · ${runs5h.length} runs (${ROLLING_WINDOW_H}h)`;
+    budgetVal.innerHTML = `~${tokenDisplay} / 5M · ${inWindow.length} runs · <span style="color:#4ade80">↻${recoveryDisplay} recup/h</span>`;
 
-    // Color the label based on remaining capacity
     const budgetLabel = document.querySelector('.ap-budget-label');
     if (budgetLabel) {
       budgetLabel.textContent = tokenPct >= 80 ? '⚠ TOKENS (ralentir)' : tokenPct >= 50 ? '◐ TOKENS' : '● TOKENS';
       budgetLabel.style.color = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#475569';
     }
 
-    // ---- BURN RATE (tokens/min over last 1-3 min) ----
+    // ---- BURN RATE (net: consumption - recovery) ----
     if (!window._tokenSnapshots) window._tokenSnapshots = [];
     const snapshots = window._tokenSnapshots;
-    snapshots.push({ t: Date.now(), tokens: estimatedTokens });
-    // Keep only last 5 minutes of snapshots
-    while (snapshots.length > 0 && (Date.now() - snapshots[0].t) > 300000) snapshots.shift();
+    snapshots.push({ t: now, tokens: estimatedTokens, activeAgents: activeBurn.length });
+    while (snapshots.length > 0 && (now - snapshots[0].t) > 300000) snapshots.shift();
 
     const burnFill = document.getElementById('apBurnFill');
     const burnVal = document.getElementById('apBurnVal');
     const burnLabel = document.getElementById('apBurnLabel');
 
     if (snapshots.length >= 2) {
-      // Compare current vs snapshot from ~60-180s ago
-      const now = Date.now();
-      let refSnap = snapshots[0]; // oldest available
+      let refSnap = snapshots[0];
       for (const s of snapshots) {
-        if ((now - s.t) >= 60000) refSnap = s; // prefer ~60s+ ago
+        if ((now - s.t) >= 60000) refSnap = s;
       }
       const dtMin = (now - refSnap.t) / 60000;
       const dTokens = estimatedTokens - refSnap.tokens;
 
-      if (dtMin > 0.3) { // need at least ~20s of data
-        const burnPerMin = Math.round(dTokens / dtMin);
-        const burnDisplay = burnPerMin > 1000 ? Math.round(burnPerMin / 1000) + 'k' : burnPerMin.toString();
-        // Max burn rate scale: 100k tokens/min = 100% bar
-        const MAX_BURN = 100000;
-        const burnPct = Math.min(100, Math.round(Math.abs(burnPerMin) / MAX_BURN * 100));
+      if (dtMin > 0.3) {
+        const grossBurn = Math.round(dTokens / dtMin); // observed change per min
+        const recoveryPerMin = Math.round(recoveryPerHour / 60);
+        const netBurn = grossBurn; // already net (estimatedTokens accounts for window)
+        const fmtRate = (v) => Math.abs(v) > 1000 ? Math.round(v / 1000) + 'k' : v.toString();
 
+        const MAX_BURN = 100000;
+        const burnPct = Math.min(100, Math.round(Math.abs(netBurn) / MAX_BURN * 100));
         burnFill.style.width = burnPct + '%';
-        if (burnPerMin > 50000) {
-          burnFill.style.background = '#f87171'; // red = burning fast
+
+        if (netBurn > 50000) {
+          burnFill.style.background = '#f87171';
           burnLabel.textContent = '🔥 BURN RATE';
           burnLabel.style.color = '#f87171';
-        } else if (burnPerMin > 20000) {
-          burnFill.style.background = '#fbbf24'; // yellow = moderate
+        } else if (netBurn > 20000) {
+          burnFill.style.background = '#fbbf24';
           burnLabel.textContent = '◐ BURN RATE';
           burnLabel.style.color = '#fbbf24';
-        } else if (burnPerMin > 0) {
-          burnFill.style.background = '#3b82f6'; // blue = chill
+        } else if (netBurn > 0) {
+          burnFill.style.background = '#3b82f6';
           burnLabel.textContent = '● BURN RATE';
           burnLabel.style.color = '#475569';
+        } else if (netBurn < -1000) {
+          // Recovering! More tokens falling off than being consumed
+          burnFill.style.background = '#22c55e';
+          burnLabel.textContent = '♻ RECOVERING';
+          burnLabel.style.color = '#22c55e';
         } else {
-          burnFill.style.background = '#1e293b'; // idle
+          burnFill.style.background = '#1e293b';
           burnLabel.textContent = '○ BURN RATE';
           burnLabel.style.color = '#334155';
         }
 
-        // Time to exhaustion
         const remaining = MAX_TOKENS - estimatedTokens;
-        if (burnPerMin > 0 && remaining > 0) {
-          const minsLeft = Math.round(remaining / burnPerMin);
+        if (netBurn > 0 && remaining > 0) {
+          const minsLeft = Math.round(remaining / netBurn);
           const hLeft = Math.floor(minsLeft / 60);
           const mLeft = minsLeft % 60;
           const timeStr = hLeft > 0 ? `${hLeft}h${mLeft.toString().padStart(2,'0')}` : `${mLeft}min`;
-          burnVal.innerHTML = `${burnDisplay} tok/min · <span style="color:${minsLeft < 30 ? '#f87171' : minsLeft < 120 ? '#fbbf24' : '#4ade80'}">${timeStr} restant</span>`;
-        } else if (burnPerMin <= 0) {
-          burnVal.textContent = 'idle — aucune conso';
+          const color = minsLeft < 30 ? '#f87171' : minsLeft < 120 ? '#fbbf24' : '#4ade80';
+          burnVal.innerHTML = `${fmtRate(netBurn)} tok/min · <span style="color:${color}">${timeStr} restant</span>`;
+        } else if (netBurn < -1000) {
+          burnVal.innerHTML = `<span style="color:#4ade80">+${fmtRate(Math.abs(netBurn))} tok/min recup</span> · capacite en hausse`;
+        } else if (netBurn <= 0) {
+          burnVal.textContent = 'idle — tokens se recuperent';
         } else {
-          burnVal.textContent = `${burnDisplay} tok/min`;
+          burnVal.textContent = `${fmtRate(netBurn)} tok/min`;
         }
       } else {
         burnVal.textContent = 'mesure en cours...';
