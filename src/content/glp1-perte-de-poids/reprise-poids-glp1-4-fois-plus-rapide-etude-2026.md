@@ -120,7 +120,7 @@ Si vous êtes dans la situation d'un arrêt inévitable ou programmé, certaines
 La masse musculaire élève le métabolisme de base. Des séances de résistance 2 à 3 fois par semaine dans les mois précédant et suivant l'arrêt peuvent aider à maintenir une dépense calorique plus élevée.
 
 **2. Surveiller les apports en protéines**
-Une alimentation riche en protéines (1,2 à 1,6 g/kg de poids corporel) favorise la satiété et préserve la masse musculaire. Des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) peuvent accélérer la perte de masse maigre et donc ralentir le métabolisme.
+Une alimentation riche en protéines (1,2 à 1,6 g/kg de poids corporel) favorise la satiété et [préserve la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) peuvent accélérer la perte de masse maigre et donc ralentir le métabolisme.
 
 **3. Maintenir une alimentation structurée**
 Conserver les habitudes alimentaires développées pendant le traitement : repas réguliers, petites portions, faible densité calorique. Ne pas "fêter" l'arrêt du médicament en relâchant complètement l'alimentation.

@@ -148,7 +148,7 @@ Pour une comparaison complète entre ces deux traitements, consultez notre artic
 
 ### Pour les patients qui souhaitent réduire leur tour de taille
 
-Si votre objectif principal est de réduire la graisse abdominale — notamment pour des raisons métaboliques et cardiovasculaires — les GLP-1 sont les traitements médicamenteux les plus efficaces disponibles en France en 2026. Leur action préférentielle sur la graisse viscérale en fait une option particulièrement pertinente pour les patients avec obésité abdominale, syndrome métabolique ou risque cardiovasculaire élevé.
+Si votre objectif principal est de réduire la graisse abdominale — notamment pour des raisons métaboliques et cardiovasculaires — les GLP-1 sont les traitements médicamenteux les plus efficaces disponibles en France en 2026. Leur action préférentielle sur la graisse viscérale en fait une option particulièrement pertinente pour les patients avec obésité abdominale, [syndrome métabolique](/collections/glp1-perte-de-poids/glp1-syndrome-metabolique-traitement-composantes/) ou risque cardiovasculaire élevé.
 
 ### L'effet sur le tour de taille est visible dès les premières semaines
 

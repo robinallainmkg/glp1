@@ -130,7 +130,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 **Pendant le traitement**
 - **Dose progressive** : Commencer à 2,5 mg/semaine
 - **Surveillance rapprochée** : Premiers jours/semaines
-- **Alimentation adaptée** : Repas légers, fractionnés
+- **[Alimentation adaptée](/collections/regime-glp1/regime-mounjaro-optimal/)** : Repas légers, fractionnés
 
 ### Gestion des effets secondaires courants
 

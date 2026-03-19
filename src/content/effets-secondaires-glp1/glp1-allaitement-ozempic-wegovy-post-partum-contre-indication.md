@@ -75,7 +75,7 @@ En pratique, la plupart des médecins recommandent d'attendre au moins **2 semai
 
 ## Et si j'allaitais déjà quand j'ai découvert ma grossesse sous GLP-1 ?
 
-Ce scénario est rare mais il arrive, notamment chez les femmes qui découvrent les [effets des GLP-1 sur la fertilité et la grossesse](/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) en tombant enceintes de manière inattendue sous GLP-1 (les fameux « bébés Ozempic »). Si vous avez pris un GLP-1 en début de grossesse sans le savoir et que vous allaitez désormais, il n'y a généralement pas lieu de s'alarmer. Le médicament a été arrêté depuis la découverte de la grossesse (plusieurs mois avant l'accouchement) et a été entièrement éliminé de votre organisme. Votre lait maternel n'en contient plus.
+Ce scénario est rare mais il arrive, notamment chez les femmes qui découvrent les [effets des GLP-1 sur la fertilité et la grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) en tombant enceintes de manière inattendue sous GLP-1 (les fameux « bébés Ozempic »). Si vous avez pris un GLP-1 en début de grossesse sans le savoir et que vous allaitez désormais, il n'y a généralement pas lieu de s'alarmer. Le médicament a été arrêté depuis la découverte de la grossesse (plusieurs mois avant l'accouchement) et a été entièrement éliminé de votre organisme. Votre lait maternel n'en contient plus.
 
 En revanche, si vous prenez actuellement un GLP-1 et que vous allaitez, contactez votre médecin immédiatement pour arrêter le traitement.
 
