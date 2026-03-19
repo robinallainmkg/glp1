@@ -13,6 +13,8 @@ priority: 1
 mainKeyword: "temoignage Ozempic perte de poids femme"
 ---
 
+# Témoignage Ozempic Perte de Poids : Marie, -32 kg
+
 ## La Transformation Exceptionnelle de Marie L.
 
 **32 kilos perdus en 12 mois** avec le traitement GLP-1

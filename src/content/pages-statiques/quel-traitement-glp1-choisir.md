@@ -16,6 +16,8 @@ author: 'Dr. Marie Dubois'
 readingTime: 15
 ---
 
+# Quel traitement GLP-1 choisir ? Guide complet 2025
+
 ## Sommaire
 
 - [Introduction aux traitements GLP-1](#introduction-aux-traitements-glp-1)

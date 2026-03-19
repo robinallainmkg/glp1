@@ -25,6 +25,8 @@ affiliateConfig:
   inlinePositions: [2, 5, 9]
 ---
 
+# Vitamines et GLP-1 : Carences et Supplémentation
+
 ## Vitamines et GLP-1 : Prévenir les Carences sous Traitement
 
 ## Sommaire
