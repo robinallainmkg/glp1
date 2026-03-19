@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Cancer : Risques et Protections — Bilan des Études 2026"
+title: "GLP-1 et Cancer : Risques et Protections — Bilan 2026"
 description: "GLP-1 et cancer : risques et protections pour thyroïde, colorectal et pancréas. Bilan 2026 sur sémaglutide, tirzépatide et risque oncologique."
 pubDate: 2026-03-18
 date: 2026-03-18

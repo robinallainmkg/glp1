@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 vs Chirurgie Bariatrique Sleeve Bypass : Comparaison 2026"
+title: "GLP-1 vs Chirurgie Bariatrique : Sleeve et Bypass 2026"
 description: "GLP-1 vs chirurgie bariatrique : sleeve ou Wegovy, bypass ou Mounjaro ? Comparatif efficacité, coûts, risques et remboursement pour choisir en 2026."
 pubDate: 2026-03-16
 date: "2026-03-16"

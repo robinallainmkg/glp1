@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Ménopause : Perdre du Poids avec Ozempic ou Mounjaro"
+title: "GLP-1 et Ménopause : Perdre du Poids avec Ozempic ou"
 description: "GLP-1 ménopause perte de poids : Wegovy, Mounjaro et Ozempic efficaces pour les femmes ménopausées. Synergie avec le THS, graisse viscérale, guide 2026."
 pubDate: 2026-03-18
 date: 2026-03-18

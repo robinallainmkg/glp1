@@ -1,5 +1,5 @@
 ---
-title: "Protéines et GLP-1 : Apport Optimal pour Préserver les Muscles"
+title: "Protéines et GLP-1 : Apport Optimal pour les Muscles"
 description: "Protéines GLP-1 Ozempic Wegovy : combien de protéines manger pour préserver sa masse musculaire sous traitement. Sources, quantités et conseils pratiques."
 pubDate: 2025-08-20
 date: 2025-08-20

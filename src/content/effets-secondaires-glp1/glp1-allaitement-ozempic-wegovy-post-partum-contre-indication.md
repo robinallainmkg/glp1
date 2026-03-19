@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Allaitement Ozempic Wegovy Post-partum Contre-indication"
+title: "GLP-1 Allaitement Ozempic Wegovy Post-partum"
 description: "GLP-1 allaitement ozempic wegovy post-partum contre-indication : pourquoi ces traitements sont contre-indiqués, délais à respecter et alternatives sûres."
 keywords: ['glp1 allaitement', 'ozempic allaitement', 'wegovy post-partum', 'mounjaro allaitement', 'perte de poids allaitement', 'semaglutide lait maternel']
 seoTitle: "GLP-1 Allaitement Ozempic Wegovy : Contre-indication et Alternatives"

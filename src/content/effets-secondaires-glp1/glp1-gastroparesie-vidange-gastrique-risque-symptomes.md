@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Gastroparésie : Vidange Gastrique Ralentissement et Risques"
+title: "GLP-1 Gastroparésie : Vidange Gastrique Ralentissement et"
 description: "GLP-1 gastroparésie vidange gastrique ralentissement : mécanisme, symptômes, fréquence et risque anesthésique documenté par l'ANSM. Guide complet 2026."
 pubDate: 2026-03-17
 date: 2026-03-17

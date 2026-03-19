@@ -1,5 +1,5 @@
 ---
-title: "Retatrutide : Le Triple Agoniste GLP-1/GIP/Glucagon d'Eli Lilly"
+title: "Retatrutide : Triple Agoniste GLP-1/GIP/Glucagon 2026"
 description: "Retatrutide en France 2026 : résultats phase 3 TRIUMPH-4 (28,7% perte de poids). Triple agoniste GLP-1/GIP/glucagon d'Eli Lilly — quand en France ?"
 pubDate: 2026-03-18
 date: 2026-03-18

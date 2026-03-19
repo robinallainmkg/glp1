@@ -1,5 +1,5 @@
 ---
-title: "Mounjaro Dosage : Guide Complet des Posologies et Titration 2026"
+title: "Mounjaro Dosage : Guide des Posologies et Titration 2026"
 description: "Mounjaro dosage (tirzépatide) : posologie officielle, protocole de titration et adaptation individuelle. Guide complet pour un usage optimal."
 pubDate: 2026-03-15
 date: "2026-03-15"

@@ -1,5 +1,5 @@
 ---
-title: "Ozempic Générique France : Semaglutide Biosimilaire, Prix 2026"
+title: "Ozempic Générique France : Semaglutide Biosimilaire, Prix"
 description: "Ozempic générique France : brevet sémaglutide jusqu'en 2031. Alternatives moins chères disponibles et perspectives biosimilaires."
 keywords: ['ozempic generique france', 'semaglutide generique', 'ozempic moins cher', 'biosimilaire semaglutide france', 'semaglutide generique prix', 'quand generique ozempic france']
 seoTitle: "Ozempic Générique en France : Brevet 2031, Biosimilaires et Alternatives Moins Chères"

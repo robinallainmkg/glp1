@@ -1,5 +1,5 @@
 ---
-title: "Mounjaro Guide Complet France Tirzepatide : Prix et Résultats"
+title: "Mounjaro Guide Complet Tirzepatide : Prix et Résultats"
 slug: "guide-complet-mounjaro"
 description: "Mounjaro guide complet France tirzepatide : perdez 15-20% de votre poids. Prix, posologie, effets secondaires et témoignages. Tout savoir en 2025."
 author: "Dr. Martin"

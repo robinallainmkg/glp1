@@ -1,5 +1,5 @@
 ---
-title: "CagriSema : Résultats Essais Cliniques et Arrivée France 2026"
+title: "CagriSema : Résultats Essais Cliniques France 2026"
 description: "CagriSema résultats essais cliniques France 2026 : -22,7% dans REDEFINE 1. Dossier FDA déposé. Quand arrivera-t-il en France ? Comparatif Zepbound."
 pubDate: 2026-03-17
 date: 2026-03-17
