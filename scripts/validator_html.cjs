@@ -1,60 +1,43 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE = path.join(__dirname, '..');
-const distDir = path.join(BASE, 'dist');
+const distDir = 'C:/Users/robin/glp1/glp1/dist';
 
-function sampleHtmlFiles(dir, max) {
-  const results = [];
-  function walk(d) {
-    if (results.length >= max) return;
-    const entries = fs.readdirSync(d, { withFileTypes: true });
-    for (const entry of entries) {
-      if (results.length >= max) break;
-      const full = path.join(d, entry.name);
-      if (entry.isDirectory()) walk(full);
-      else if (entry.name === 'index.html') results.push(full);
+function getHtmlFiles(dir) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...getHtmlFiles(full));
+    } else if (entry.name.endsWith('.html')) {
+      files.push(full);
     }
   }
-  walk(dir);
-  return results;
+  return files;
 }
 
-const htmlFiles = sampleHtmlFiles(distDir, 10);
+const htmlFiles = getHtmlFiles(distDir);
+console.log('Total HTML files in dist:', htmlFiles.length);
+
+const sample = htmlFiles.slice(0, 10);
 const issues = [];
 
-for (const file of htmlFiles) {
-  const rel = path.relative(distDir, file).replace(/\\/g, '/');
-  const content = fs.readFileSync(file, 'utf8');
+for (const fpath of sample) {
+  const text = fs.readFileSync(fpath, 'utf-8');
+  const relPath = fpath.replace(/\/g, '/').split('/dist').pop();
 
-  const slug = rel.replace('/index.html', '') || 'homepage';
+  if (!text.includes('<title>')) issues.push({ slug: relPath, msg: 'Balise title manquante', severity: 'error' });
+  if (!text.includes('name="description"')) issues.push({ slug: relPath, msg: 'meta description manquante', severity: 'warning' });
+  if (!text.includes('rel="canonical"')) issues.push({ slug: relPath, msg: 'link canonical manquant', severity: 'warning' });
+  if (!text.includes('lang="fr"')) issues.push({ slug: relPath, msg: 'html lang=fr manquant', severity: 'warning' });
+  if (!text.includes('og:title')) issues.push({ slug: relPath, msg: 'og:title manquant', severity: 'warning' });
 
-  // Check essential tags
-  if (!content.includes('<title>')) issues.push({ slug, severity: 'error', message: 'Missing <title>' });
-  if (!content.includes('name="description"') && !content.includes("name='description'")) {
-    issues.push({ slug, severity: 'warning', message: 'Missing meta description' });
-  }
-  if (!content.includes('rel="canonical"') && !content.includes("rel='canonical'")) {
-    issues.push({ slug, severity: 'warning', message: 'Missing canonical link' });
-  }
-  if (!content.includes('lang="fr"') && !content.includes("lang='fr'")) {
-    issues.push({ slug, severity: 'warning', message: 'Missing lang=fr on html tag' });
-  }
-
-  // Check OG tags
-  if (!content.includes('og:title')) issues.push({ slug, severity: 'warning', message: 'Missing og:title' });
-  if (!content.includes('og:description')) issues.push({ slug, severity: 'warning', message: 'Missing og:description' });
-
-  // Check body content not empty
-  const mainMatch = content.match(/<main[^>]*>([\s\S]*?)<\/main>/);
+  const mainMatch = text.match(/<main[^>]*>([\s\S]*?)<\/main>/);
   if (mainMatch && mainMatch[1].trim().length < 100) {
-    issues.push({ slug, severity: 'error', message: 'Main content too short: ' + mainMatch[1].trim().length + ' chars' });
+    issues.push({ slug: relPath, msg: 'Contenu main trop court', severity: 'error' });
   }
 }
 
-console.log('HTML files checked: ' + htmlFiles.length);
-console.log('HTML issues: ' + issues.length);
-for (const i of issues) console.log('  [' + i.severity + '] ' + i.slug + ': ' + i.message);
-
-fs.writeFileSync(path.join(__dirname, 'validator_html.json'), JSON.stringify(issues, null, 2));
-console.log('Saved to scripts/validator_html.json');
+console.log('HTML issues:', issues.length);
+issues.forEach(function(i) { console.log('[' + i.severity + '] ' + i.slug + ': ' + i.msg); });

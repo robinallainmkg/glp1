@@ -192,20 +192,56 @@ article h3, section h3, aside h3, nav h3, header h3, footer h3, main h3 {
 }
 
 .new-nav-cta {
-  background: linear-gradient(135deg, #1d4ed8, #16a34a);
+  background: #2563eb;
   color: white !important;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
-  /* Ombre subtile pour donner de la profondeur au CTA */
   box-shadow: 0 1px 3px rgba(29, 78, 216, 0.3);
+  transition: all 0.2s;
 }
 
 .new-nav-cta:hover {
-  background: linear-gradient(135deg, #1e40af, #15803d);
+  background: #1d4ed8;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(29, 78, 216, 0.25);
   text-decoration: none;
+}
+
+.new-nav-cta-green {
+  background: #16a34a;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(22, 163, 74, 0.3);
+  transition: all 0.2s;
+}
+
+.new-nav-cta-green:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(22, 163, 74, 0.25);
+  text-decoration: none;
+}
+
+/* Mobile CTA buttons */
+.mobile-cta-blue {
+  background: #2563eb !important;
+  color: white !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+.mobile-cta-green {
+  background: #16a34a !important;
+  color: white !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
 }
 
 .new-mobile-toggle {
