@@ -1364,11 +1364,13 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="paywall-price" id="pw-price">4&#8364; <span>/mois</span></div>
       <div class="paywall-price-detail" id="pw-detail">7 jours d'essai gratuit</div>
       <ul class="paywall-features">
-        <li>Coach IA illimite avec votre profil</li>
-        <li>Suivi poids et courbe de progression</li>
-        <li>Programme nutrition et sport personnalise</li>
-        <li>Rappels injection et RDV</li>
-        <li>Recommandations adaptees a votre traitement</li>
+        <li>Messages Coach IA illimites</li>
+        <li>Reponses personnalisees selon votre profil</li>
+        <li>Suivi de poids et courbes de progression</li>
+        <li>Programme nutrition personnalise</li>
+        <li>Rappels injection</li>
+        <li>Recommandations IA personnalisees</li>
+        <li>Historique complet des conversations</li>
       </ul>
       <button class="btn-subscribe" id="pw-subscribe-btn" onclick="subscribe()">Commencer l'essai gratuit</button>
       <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir a l'accueil</button>
@@ -1886,6 +1888,9 @@ import { supabaseConfig } from '../../lib/supabase';
           document.getElementById('trialDays').textContent = daysLeft + ' jour' + (daysLeft > 1 ? 's' : '') + ' restant' + (daysLeft > 1 ? 's' : '');
         } else if (profile.trial_end) {
           document.getElementById('paywallOverlay').classList.add('open');
+          // Trial expired: don't show "7 jours gratuit" — show direct price
+          var pwDetail = document.getElementById('pw-detail');
+          if (pwDetail) pwDetail.textContent = 'Annulation a tout moment';
         }
       }
 
