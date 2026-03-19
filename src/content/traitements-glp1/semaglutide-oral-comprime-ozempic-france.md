@@ -120,7 +120,7 @@ Certains médecins rapportent que des patients refusent de commencer un traiteme
 En attendant l'arrivée du comprimé oral pour l'obésité en France, plusieurs options existent :
 
 1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : non remboursé par la Sécurité Sociale en France (la HAS a rendu un avis défavorable au remboursement), mais déjà disponible en pharmacie
-2. **Wegovy** (sémaglutide injectable 2,4 mg) pour l'obésité : non remboursé, 169-360 €/mois, disponible dès maintenant
+2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : non remboursé, 169-360 €/mois, disponible dès maintenant
 3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 30%, disponible
 4. **Mounjaro** (tirzepatide injectable, double action GLP-1/GIP) : non remboursé, 230-440 €/mois
 
