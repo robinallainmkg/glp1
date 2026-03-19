@@ -18,7 +18,7 @@ featured: true
 published: true
 priority: 2
 schema: "Article"
-mainKeyword: "remboursement Wegovy Mounjaro securite sociale 2026"
+mainKeyword: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026"
 secondaryKeywords: ["wegovy remboursement date", "mounjaro securite sociale", "glp1 obesite remboursement france", "prix wegovy apres remboursement", "HAS wegovy mounjaro avis"]
 ---
 

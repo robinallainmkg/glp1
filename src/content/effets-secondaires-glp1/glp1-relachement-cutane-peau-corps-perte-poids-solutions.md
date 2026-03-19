@@ -15,7 +15,7 @@ featured: true
 published: true
 priority: 2
 schema: "Article"
-mainKeyword: "relâchement cutané GLP-1 peau corps perte poids solutions"
+mainKeyword: "Relâchement Cutané après GLP-1"
 secondaryKeywords: ["peau flasque ozempic perte poids", "excès cutané après GLP-1", "body lift après wegovy", "abdominoplastie après semaglutide", "raffermir peau après GLP-1"]
 seoTitle: "Relâchement Cutané après GLP-1 : Peau et Solutions"
 seoDescription: "Relâchement cutané après GLP-1 : bras, ventre, cuisses flasques après perte de poids. Causes, prévention et solutions chirurgicales en France."

@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Sport de Performance : Composition Corporelle et Endurance"
+title: "GLP-1 et Sport Composition Corporelle et Endurance"
 description: "GLP-1 et sport de performance : impact sur la composition corporelle, l'endurance et la récupération musculaire. Guide sportifs 2026."
 pubDate: 2026-03-18
 date: 2026-03-18
@@ -14,7 +14,7 @@ featured: true
 published: true
 priority: 2
 schema: "Article"
-mainKeyword: "GLP-1 sport performance sportif composition corporelle"
+mainKeyword: "GLP-1 et Sport Composition Corporelle"
 secondaryKeywords: ["ozempic sportif performance", "mounjaro endurance sport", "wegovy athlète composition corporelle", "GLP-1 VO2max", "semaglutide masse musculaire sportif", "tirzepatide performance sportive"]
 
 # Configuration Affiliation

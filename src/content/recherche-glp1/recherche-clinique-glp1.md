@@ -12,7 +12,7 @@ thumbnailAlt: "Illustration pour l'article Recherche Clinique GLP-1"
 featured: false
 priority: 5
 schema: "Article"
-mainKeyword: "recherche clinique GLP-1 essais cliniques"
+mainKeyword: "Recherche Clinique GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true

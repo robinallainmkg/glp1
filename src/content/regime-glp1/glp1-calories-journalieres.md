@@ -1,5 +1,5 @@
 ---
-title: "Calories Journalières et GLP-1 : Régime Perte de Poids"
+title: "Calories Journalières GLP-1 : Régime Perte de Poids"
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Sophie Dubois"
@@ -12,7 +12,7 @@ thumbnailAlt: "Illustration pour l'article glp1-calories-journalieres"
 featured: false
 priority: 5
 schema: "Article"
-mainKeyword: "calories journalières GLP-1 régime perte de poids"
+mainKeyword: "Calories Journalières GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true

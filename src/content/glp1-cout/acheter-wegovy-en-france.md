@@ -11,7 +11,7 @@ thumbnail: "/images/thumbnails/acheter-wegovy-en-france-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Acheter Wegovy En France"
 featured: false
 priority: 5
-mainKeyword: "acheter wegovy france pharmacie"
+mainKeyword: "Acheter Wegovy en France"
 schema: "Article"
 
 # Configuration Affiliation

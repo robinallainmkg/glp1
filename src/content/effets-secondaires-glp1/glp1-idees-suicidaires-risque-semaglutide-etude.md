@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Idées Suicidaires : Études et Risque 2026"
+title: "GLP-1 Idées Suicidaires Risque : Études 2026"
 description: "GLP-1 idées suicidaires risque semaglutide : ce que disent l'EMA, Epi-Phare et les études en 2026. Analyse factuelle et ressources d'aide pour les patients."
 pubDate: 2026-03-17
 date: 2026-03-17
@@ -15,7 +15,7 @@ featured: true
 published: true
 priority: 1
 schema: "Article"
-mainKeyword: "GLP-1 idées suicidaires risque semaglutide"
+mainKeyword: "GLP-1 idées suicidaires risque"
 secondaryKeywords: ["ozempic idées suicidaires", "semaglutide risque suicidaire", "wegovy santé mentale", "EMA GLP-1 suicidalité", "Epi-Phare semaglutide signal"]
 
 # Configuration Affiliation

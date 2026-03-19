@@ -15,7 +15,7 @@ thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
 thumbnailAlt: "Effets secondaires du traitement rybelsus"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
-mainKeyword: "effets secondaires rybelsus semaglutide oral"
+mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 ---
 
 ## Effets Secondaires Rybelsus : Guide Complet

@@ -12,7 +12,7 @@ thumbnailAlt: "Illustration pour l'article GLP-1 Perte De Poids"
 featured: false
 priority: 5
 schema: "Article"
-mainKeyword: "GLP-1 perte de poids résultats efficacité 2025"
+mainKeyword: "GLP-1 perte de poids 2025"
 
 # Configuration Affiliation
 enableAffiliation: true

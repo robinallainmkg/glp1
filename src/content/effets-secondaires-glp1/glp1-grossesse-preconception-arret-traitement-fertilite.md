@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Avant Grossesse : Arrêter le Traitement et Fertilité"
+title: "GLP-1 Grossesse Préconception Arrêt Traitement Fertilité"
 description: "GLP-1 avant grossesse : quand arrêter Ozempic, Wegovy, Mounjaro avant de concevoir. Impact sur la fertilité, délai d'arrêt recommandé et planification."
 pubDate: 2026-03-18
 date: 2026-03-18

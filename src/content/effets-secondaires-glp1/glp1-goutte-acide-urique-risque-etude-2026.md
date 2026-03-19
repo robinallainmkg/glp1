@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Goutte : Risque Accru d'Acide Urique en 2026 ?"
+title: "GLP-1 Goutte Acide Urique Risque : Études 2026"
 description: "Une étude 2026 sur 150 000 patients signale un lien entre GLP-1 et goutte. Risque réel ou confusion avec la perte de poids ? Ce que vous devez savoir."
 keywords: ['glp1 goutte', 'ozempic acide urique', 'wegovy goutte', 'glp1 hyperuricémie', 'ozempic crise goutte', 'mounjaro goutte']
 seoTitle: "GLP-1 et Goutte : Risque d'Acide Urique — Étude 2026"
