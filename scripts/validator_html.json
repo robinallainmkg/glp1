@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "admin/agents",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/agents",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/agents",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/agents",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/analytics",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/analytics",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/analytics",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/analytics",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/audit",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/audit",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/audit",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/audit",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/budget",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/budget",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/budget",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/budget",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/chats",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/chats",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/chats",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/chats",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/content-creator",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/content-creator",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/content-creator",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/content-creator",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/crawlability",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/crawlability",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/crawlability",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/crawlability",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/editorial",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/editorial",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/editorial",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/editorial",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin/fact-check",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin/fact-check",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin/fact-check",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin/fact-check",
+    "severity": "warning",
+    "message": "Missing og:description"
+  },
+  {
+    "slug": "admin",
+    "severity": "warning",
+    "message": "Missing meta description"
+  },
+  {
+    "slug": "admin",
+    "severity": "warning",
+    "message": "Missing canonical link"
+  },
+  {
+    "slug": "admin",
+    "severity": "warning",
+    "message": "Missing og:title"
+  },
+  {
+    "slug": "admin",
+    "severity": "warning",
+    "message": "Missing og:description"
+  }
+]

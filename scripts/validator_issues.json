@@ -1,0 +1,524 @@
+{
+  "issues": [
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "file": "effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: contrefaçon GLP-1 faux ozempic"
+    },
+    {
+      "slug": "effets-secondaires-ozempic",
+      "file": "effets-secondaires-glp1/effets-secondaires-ozempic.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: effets secondaires ozempic semaglutide"
+    },
+    {
+      "slug": "effets-secondaires-rybelsus",
+      "file": "effets-secondaires-glp1/effets-secondaires-rybelsus.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: effets secondaires rybelsus semaglutide oral"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "file": "effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 chirurgie anesthésie arrêt traitement"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "file": "effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 chute de cheveux Ozempic perte cheveux"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "file": "effets-secondaires-glp1/glp1-depression-apathie-sante-mentale.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: ozempic dépression apathie effets psychologiques"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "file": "effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 gastroparésie vidange gastrique ralentissement"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "file": "effets-secondaires-glp1/glp1-goutte-acide-urique-risque-etude-2026.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 goutte acide urique risque"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "file": "effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 grossesse fertilité bébés Ozempic"
+    },
+    {
+      "slug": "glp1-grossesse-preconception-arret-traitement-fertilite",
+      "file": "effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 grossesse préconception arrêt traitement fertilité"
+    },
+    {
+      "slug": "glp1-idees-suicidaires-risque-semaglutide-etude",
+      "file": "effets-secondaires-glp1/glp1-idees-suicidaires-risque-semaglutide-etude.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 idées suicidaires risque semaglutide"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "file": "effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 interactions médicamenteuses ozempic wegovy mounjaro"
+    },
+    {
+      "slug": "glp1-neuropathie-optique-vision-yeux-semaglutide-noian",
+      "file": "effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 neuropathie optique vision yeux semaglutide NOIAN"
+    },
+    {
+      "slug": "glp1-pancreatite-risque-ozempic-pancreas-symptomes",
+      "file": "effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 pancréatite risque ozempic pancreas symptômes"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "file": "effets-secondaires-glp1/glp1-relachement-cutane-peau-corps-perte-poids-solutions.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: relâchement cutané GLP-1 peau corps perte poids solutions"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "file": "effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: GLP-1 blessures osseuses fractures tendons"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "file": "effets-secondaires-glp1/mesusage-glp1-france-detournement-risques.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: mésusage GLP-1 France détournement ozempic"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "file": "effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: Ozempic Face visage vieillissement solutions France"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "file": "effets-secondaires-glp1/ozempic-proces-effets-secondaires-recours-juridique-france.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: Ozempic procès effets secondaires recours juridique France"
+    },
+    {
+      "slug": "wegovy-danger",
+      "file": "effets-secondaires-glp1/wegovy-danger.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: wegovy effets secondaires danger"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "file": "glp1-cout/acheter-wegovy-en-france.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: acheter wegovy france pharmacie"
+    },
+    {
+      "slug": "anneau-gastrique-prix-cmu",
+      "file": "glp1-cout/anneau-gastrique-prix-cmu.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: anneau gastrique prix remboursement CMU"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "file": "glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: Mounjaro remboursement securite sociale conditions 2026"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "file": "glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date.md",
+      "check_type": "seo_meta",
+      "severity": "warning",
+      "message": "mainKeyword absent du title: ozempic générique France semaglutide moins cher biosimilaire"
+    }
+  ],
+  "articleData": [
+    {
+      "slug": "acupuncture-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Acupuncture GLP-1 diabète : Guide Complet et Conseils 2025",
+      "description": "L'acupuncture peut-elle compléter un traitement GLP-1 contre le diabète ou l'obésité ? Bénéfices, preuves scientifiques, coûts et remboursement en France.",
+      "mainKeyword": "acupuncture GLP-1 diabète"
+    },
+    {
+      "slug": "alternatives-bio-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Alternatives Bio GLP-1 : Guide Complet et Conseils 2025",
+      "description": "Alternatives bio aux GLP-1 — berbérine, cannelle, inositol — ce que la science dit sur les substituts naturels à Ozempic et Wegovy. Guide 2025.",
+      "mainKeyword": "alternatives bio GLP-1"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "collection": "alternatives-glp1",
+      "title": "Alternatives Naturelles Ozempic : Guide Complet 2025",
+      "description": "Quelles alternatives naturelles à l'Ozempic existent ? Plantes et compléments pour réguler la glycémie et favoriser la perte de poids naturellement.",
+      "mainKeyword": "alternatives naturelles Ozempic"
+    },
+    {
+      "slug": "berberine-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Berbérine GLP-1 glycémie perte de poids : Guide 2025",
+      "description": "Berbérine et GLP-1 : comment ce complément naturel agit sur la glycémie et la perte de poids, sa posologie et son association avec les médicaments GLP-1.",
+      "mainKeyword": "berbérine GLP-1 glycémie perte de poids"
+    },
+    {
+      "slug": "cannelle-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Cannelle GLP-1 diabète glycémie : Guide Complet 2025",
+      "description": "La cannelle GLP-1 peut-elle réguler la glycémie chez les patients diabétiques ? Données scientifiques, dosage, précautions et recommandations médicales.",
+      "mainKeyword": "cannelle GLP-1 diabète glycémie"
+    },
+    {
+      "slug": "chrome-diabete",
+      "collection": "alternatives-glp1",
+      "title": "Chrome diabète complément alimentaire : Guide 2025",
+      "description": "Chrome diabète complément alimentaire : rôle dans la régulation de la glycémie, dosages recommandés et précautions médicales essentielles à connaître.",
+      "mainKeyword": "chrome diabète complément alimentaire"
+    },
+    {
+      "slug": "homeopathie-diabete",
+      "collection": "alternatives-glp1",
+      "title": "Homéopathie diabète : que dit la science ? Guide 2025",
+      "description": "Homéopathie et diabète : ce que la science dit réellement, ses limites, les risques à éviter et les alternatives sérieuses reconnues médicalement.",
+      "mainKeyword": "homéopathie diabète"
+    },
+    {
+      "slug": "meditation-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Méditation GLP-1 gestion poids : Guide Complet 2025",
+      "description": "Méditation et GLP-1 pour la gestion du poids : techniques de relaxation, réduction du stress alimentaire et impact sur la glycémie pour les patients.",
+      "mainKeyword": "méditation GLP-1 gestion poids"
+    },
+    {
+      "slug": "peut-on-guerir-du-diabete",
+      "collection": "alternatives-glp1",
+      "title": "Peut-on guérir du diabète de type 2 ? Guide 2025",
+      "description": "Peut-on guérir du diabète de type 2 ? Rémission possible, rôle des GLP-1 et stratégies pour contrôler durablement votre glycémie. Guide médical 2025.",
+      "mainKeyword": "peut-on guérir du diabète"
+    },
+    {
+      "slug": "phytotherapie-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Phytothérapie GLP-1 plantes médicinales : Guide 2025",
+      "description": "Phytothérapie et GLP-1 : quelles plantes médicinales peuvent compléter ce traitement ? Données scientifiques, précautions et recommandations médicales.",
+      "mainKeyword": "phytothérapie GLP-1 plantes médicinales"
+    },
+    {
+      "slug": "plantes-diabete",
+      "collection": "alternatives-glp1",
+      "title": "Plantes Diabète Remèdes Naturels : Guide Glycémie 2026",
+      "description": "Plantes diabète remèdes naturels validés par la science pour contrôler la glycémie. Guide des plantes médicinales en complément médical GLP-1.",
+      "mainKeyword": "plantes diabète remèdes naturels"
+    },
+    {
+      "slug": "semaglutide-naturel",
+      "collection": "alternatives-glp1",
+      "title": "Sémaglutide Naturel Alternative au GLP-1 : Guide Complet 2026",
+      "description": "Sémaglutide naturel alternative : plantes, compléments alimentaires et approches holistiques pour stimuler le GLP-1 et gérer la glycémie sans ordonnance.",
+      "mainKeyword": "sémaglutide naturel alternative"
+    },
+    {
+      "slug": "supplements-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Suppléments Naturels GLP-1 : Guide Complet 2025",
+      "description": "Suppléments naturels GLP-1 : quels compléments alimentaires stimulent réellement le GLP-1 ? Vitamines, minéraux et plantes pour soutenir votre glycémie.",
+      "mainKeyword": "suppléments naturels GLP-1"
+    },
+    {
+      "slug": "vinaigre-cidre-glp1",
+      "collection": "alternatives-glp1",
+      "title": "Vinaigre de Cidre GLP-1 Glycémie : Effets et Conseils 2026",
+      "description": "Vinaigre de cidre GLP-1 glycémie : la science confirme-t-elle les effets sur la régulation glycémique et le soutien aux traitements GLP-1 ? Résultats d'études.",
+      "mainKeyword": "vinaigre de cidre GLP-1 glycémie"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "collection": "avant-apres-glp1",
+      "title": "Avant Après GLP1 : Résultats Réels de Patients 2026",
+      "description": "Avant après GLP1 : résultats réels Ozempic, Wegovy et Mounjaro en France. Témoignages patients, chiffres des études et attentes réalistes.",
+      "mainKeyword": "avant après glp1"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "collection": "effets-secondaires-glp1",
+      "title": "Contrefaçon GLP-1 : Faux Ozempic, Dangers et Risques",
+      "description": "Contrefaçon GLP-1 faux ozempic : risques sanitaires graves des médicaments contrefaits achetés en ligne. Comment vous protéger et s'approvisionner en sécurité.",
+      "mainKeyword": "contrefaçon GLP-1 faux ozempic"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Mounjaro Tirzepatide : Guide Complet",
+      "description": "Effets secondaires Mounjaro tirzepatide : nausées, diarrhée, vomissements. Comment les gérer et quand consulter votre médecin.",
+      "mainKeyword": "effets secondaires mounjaro tirzepatide"
+    },
+    {
+      "slug": "effets-secondaires-ozempic",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Ozempic Sémaglutide : Guide Complet 2026",
+      "description": "Effets secondaires Ozempic sémaglutide : nausées, vomissements, diarrhée. Gérez les effets indésirables et sachez quand consulter votre médecin.",
+      "mainKeyword": "effets secondaires ozempic semaglutide"
+    },
+    {
+      "slug": "effets-secondaires-rybelsus",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Rybelsus Sémaglutide Oral : Guide 2026",
+      "description": "Effets secondaires Rybelsus sémaglutide oral : nausées, troubles digestifs, effets indésirables fréquents. Comment les gérer selon les études cliniques.",
+      "mainKeyword": "effets secondaires rybelsus semaglutide oral"
+    },
+    {
+      "slug": "effets-secondaires-saxenda",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Saxenda : Que savoir avant de commencer ?",
+      "description": "Effets secondaires Saxenda : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître.",
+      "mainKeyword": "effets secondaires Saxenda"
+    },
+    {
+      "slug": "effets-secondaires-trulicity",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Trulicity : Ce qu'il faut savoir",
+      "description": "Effets secondaires Trulicity : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître.",
+      "mainKeyword": "effets secondaires Trulicity"
+    },
+    {
+      "slug": "effets-secondaires-victoza",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Victoza : Que savoir avant de commencer ?",
+      "description": "Effets secondaires Victoza : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître.",
+      "mainKeyword": "effets secondaires Victoza"
+    },
+    {
+      "slug": "effets-secondaires-wegovy",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Wegovy : Que savoir avant de commencer ?",
+      "description": "Effets secondaires Wegovy : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître.",
+      "mainKeyword": "effets secondaires Wegovy"
+    },
+    {
+      "slug": "effets-secondaires-zepbound",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Zepbound Tirzepatide : Guide Complet 2025",
+      "description": "Effets secondaires Zepbound tirzepatide : nausées, vomissements, diarrhée, fréquence et conseils pratiques pour minimiser les risques du traitement.",
+      "mainKeyword": "effets secondaires Zepbound tirzepatide"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 Allaitement Ozempic Wegovy Post-partum Contre-indication",
+      "description": "GLP-1 allaitement ozempic wegovy post-partum contre-indication : pourquoi ces traitements sont contre-indiqués, délais à respecter et alternatives sûres.",
+      "mainKeyword": "GLP-1 allaitement ozempic wegovy post-partum contre-indication"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Chirurgie : Arrêt du Traitement Avant Anesthésie",
+      "description": "GLP-1 chirurgie anesthésie arrêt traitement : Ozempic, Wegovy, Mounjaro avant opération — recommandations SFAR 2025 pour éviter le risque d'aspiration.",
+      "mainKeyword": "GLP-1 chirurgie anesthésie arrêt traitement"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Chute de Cheveux : Causes et Solutions",
+      "description": "GLP-1 chute de cheveux Ozempic : phénomène touchant 3% des patients. Mécanisme, réversibilité et solutions pour préserver votre chevelure.",
+      "mainKeyword": "GLP-1 chute de cheveux Ozempic perte cheveux"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "collection": "effets-secondaires-glp1",
+      "title": "Ozempic Dépression et Apathie : Effets Psychologiques",
+      "description": "Ozempic dépression apathie effets psychologiques : Wegovy, Mounjaro peuvent provoquer des changements d'humeur. Ce que dit la science et que faire en 2026.",
+      "mainKeyword": "ozempic dépression apathie effets psychologiques"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Gastroparésie : Vidange Gastrique Ralentie",
+      "description": "GLP-1 gastroparésie vidange gastrique ralentissement : mécanisme, symptômes, fréquence et risque anesthésique documenté par l'ANSM. Guide complet 2026.",
+      "mainKeyword": "GLP-1 gastroparésie vidange gastrique ralentissement"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Goutte : Risque Accru d'Acide Urique en 2026 ?",
+      "description": "Une étude 2026 sur 150 000 patients signale un lien entre GLP-1 et goutte. Risque réel ou confusion avec la perte de poids ? Ce que vous devez savoir.",
+      "mainKeyword": "GLP-1 goutte acide urique risque"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 Grossesse Fertilité Ozempic : Risques et Conseils",
+      "description": "GLP-1 grossesse et fertilité : risques fœtaux Ozempic, Wegovy, Mounjaro. Quand arrêter le traitement et recommandations médicales.",
+      "mainKeyword": "GLP-1 grossesse fertilité bébés Ozempic"
+    },
+    {
+      "slug": "glp1-grossesse-preconception-arret-traitement-fertilite",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 Avant Grossesse : Arrêter le Traitement et Fertilité",
+      "description": "GLP-1 avant grossesse : quand arrêter Ozempic, Wegovy, Mounjaro avant de concevoir. Impact sur la fertilité, délai d'arrêt recommandé et planification.",
+      "mainKeyword": "GLP-1 grossesse préconception arrêt traitement fertilité"
+    },
+    {
+      "slug": "glp1-idees-suicidaires-risque-semaglutide-etude",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Idées Suicidaires : Études et Risque 2026",
+      "description": "GLP-1 idées suicidaires risque semaglutide : ce que disent l'EMA, Epi-Phare et les études en 2026. Analyse factuelle et ressources d'aide pour les patients.",
+      "mainKeyword": "GLP-1 idées suicidaires risque semaglutide"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 : Interactions Médicamenteuses Ozempic, Wegovy",
+      "description": "GLP-1 interactions médicamenteuses : la vidange gastrique ralentie modifie l'absorption de nombreux médicaments. Guide pratique 2026.",
+      "mainKeyword": "GLP-1 interactions médicamenteuses ozempic wegovy mounjaro"
+    },
+    {
+      "slug": "glp1-neuropathie-optique-vision-yeux-semaglutide-noian",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Vision : Neuropathie Optique NOIAN",
+      "description": "GLP-1 neuropathie optique NOIAN : risque rare mais grave de perte de vision sous sémaglutide (Ozempic, Wegovy). Symptômes, qui est à risque, que faire.",
+      "mainKeyword": "GLP-1 neuropathie optique vision yeux semaglutide NOIAN"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 Ostéoporose Os Fracture Risque : Guide Prévention 2026",
+      "description": "GLP-1 et ostéoporose : étude AAOS 2026 sur 150 000 patients. Risque osseux sous Ozempic ou Wegovy, conseils de prévention et surveillance recommandée.",
+      "mainKeyword": "GLP-1 ostéoporose os fracture risque"
+    },
+    {
+      "slug": "glp1-pancreatite-risque-ozempic-pancreas-symptomes",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Pancréatite : Risque, Symptômes et Conduite à Tenir",
+      "description": "GLP-1 pancréatite risque ozempic pancreas symptômes : risque réel évalué à 1/1000, qui est à risque, signes d'alerte et que faire en cas de douleur abdominale.",
+      "mainKeyword": "GLP-1 pancréatite risque ozempic pancreas symptômes"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "collection": "effets-secondaires-glp1",
+      "title": "Relâchement Cutané après GLP-1 : Peau et Solutions",
+      "description": "Relâchement cutané après GLP-1 perte de poids : bras, ventre, cuisses. Causes, prévention et solutions disponibles en France en 2026 pour les patients.",
+      "mainKeyword": "relâchement cutané GLP-1 peau corps perte poids solutions"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "collection": "effets-secondaires-glp1",
+      "title": "GLP-1 et Os : Fractures de Stress, Tendons et Risques 2026",
+      "description": "GLP-1 fractures de stress et blessures tendineuses : étude 2026 sur 150 000 patients. Risques osseux sous Ozempic, Wegovy et Mounjaro — prévention et conseils.",
+      "mainKeyword": "GLP-1 blessures osseuses fractures tendons"
+    },
+    {
+      "slug": "insulevel-effet-indesirable",
+      "collection": "effets-secondaires-glp1",
+      "title": "Effets Secondaires Insulevel : Guide Complet",
+      "description": "Effets secondaires Insulevel : troubles digestifs, allergies, contre-indications et précautions d'usage. Guide médical complet vérifié 2025.",
+      "mainKeyword": "effets secondaires insulevel"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "collection": "effets-secondaires-glp1",
+      "title": "Mésusage GLP-1 France : Détournement Ozempic et Risques ANSM",
+      "description": "Mésusage GLP-1 en France : détournement Ozempic chez 2,2% des patients. Risques sanitaires, tensions d'approvisionnement et réponse de l'ANSM.",
+      "mainKeyword": "mésusage GLP-1 France détournement ozempic"
+    },
+    {
+      "slug": "ozempic-danger",
+      "collection": "effets-secondaires-glp1",
+      "title": "Ozempic Effets Secondaires Risques : Guide Complet 2026",
+      "description": "Ozempic effets secondaires risques et dangers : posologie sécurisée et recommandations médicales pour une utilisation du sémaglutide en France.",
+      "mainKeyword": "ozempic effets secondaires risques"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "collection": "effets-secondaires-glp1",
+      "title": "Ozempic Face : Vieillissement du Visage et Solutions",
+      "description": "Ozempic Face visage vieillissement solutions France : joues creuses et rides sous GLP-1. Causes, mécanismes et options esthétiques disponibles en 2026.",
+      "mainKeyword": "Ozempic Face visage vieillissement solutions France"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "collection": "effets-secondaires-glp1",
+      "title": "Ozempic et Procès : Effets Graves et Recours en France 2026",
+      "description": "Des milliers de procès aux USA pour gastroparésie sous Ozempic. En France, quels droits avez-vous ? Comment déclarer un effet secondaire grave à l'ANSM.",
+      "mainKeyword": "Ozempic procès effets secondaires recours juridique France"
+    },
+    {
+      "slug": "wegovy-danger",
+      "collection": "effets-secondaires-glp1",
+      "title": "Wegovy : Effets Secondaires, Dangers et Précautions 2025",
+      "description": "Wegovy effets secondaires danger : nausées, pancréatite, risques cardiaques. Guide complet sur les dangers de Wegovy et recommandations médicales.",
+      "mainKeyword": "wegovy effets secondaires danger"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "collection": "glp1-cout",
+      "title": "Acheter Wegovy en France en Pharmacie : Guide 2026",
+      "description": "Comment acheter Wegovy France pharmacie en 2026 : ordonnance obligatoire, prix, disponibilité et démarches pratiques pour obtenir votre traitement.",
+      "mainKeyword": "acheter wegovy france pharmacie"
+    },
+    {
+      "slug": "anneau-gastrique-prix-cmu",
+      "collection": "glp1-cout",
+      "title": "Anneau Gastrique Prix et Remboursement CMU 2025",
+      "description": "Anneau gastrique prix remboursement CMU : coût de 3 000 à 6 000€, pris en charge sous conditions. Guide détaillé et alternatives GLP-1 pour patients éligibles.",
+      "mainKeyword": "anneau gastrique prix remboursement CMU"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "collection": "glp1-cout",
+      "title": "Mounjaro Remboursement Sécurité Sociale Conditions 2026 : Guide",
+      "description": "Mounjaro remboursement Sécurité Sociale conditions 2026 : IMC ≥35, avis HAS ASMR 4, négociations CEPS en cours. Date prévisionnelle 2e semestre 2026.",
+      "mainKeyword": "Mounjaro remboursement securite sociale conditions 2026"
+    },
+    {
+      "slug": "operation-pour-maigrir-prix",
+      "collection": "glp1-cout",
+      "title": "Opération Bariatrique Prix Remboursement : Sleeve, Bypass, GLP-1",
+      "description": "Opération bariatrique prix 2025 : sleeve 8 000€, bypass 12 000€, prise en charge Sécu sous conditions. Comparatif avec les GLP-1.",
+      "mainKeyword": "opération bariatrique prix remboursement"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "collection": "glp1-cout",
+      "title": "Ozempic Générique France : Quand et à Quel Prix ? (2026)",
+      "description": "Ozempic générique France : brevet sémaglutide jusqu'en 2031. Alternatives moins chères disponibles et perspectives biosimilaires.",
+      "mainKeyword": "ozempic générique France semaglutide moins cher biosimilaire"
+    }
+  ]
+}

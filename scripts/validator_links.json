@@ -1,0 +1,957 @@
+{
+  "brokenLinks": [
+    {
+      "slug": "alternatives-bio-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "alternatives-bio-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "alternatives-bio-glp1",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "link": "/collections/alternatives-glp1/berberine-glp1/"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "link": "/collections/regime-glp1/regime-cetogene-glp1/"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "link": "/collections/glp1-cout/acheter-wegovy-en-france/"
+    },
+    {
+      "slug": "alternatives-naturelles-ozempic",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "berberine-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "berberine-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "berberine-glp1",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "berberine-glp1",
+      "link": "/collections/alternatives-glp1/alternatives-naturelles-ozempic/"
+    },
+    {
+      "slug": "cannelle-glp1",
+      "link": "/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/"
+    },
+    {
+      "slug": "cannelle-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "cannelle-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "cannelle-glp1",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "chrome-diabete",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "chrome-diabete",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "chrome-diabete",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "homeopathie-diabete",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "homeopathie-diabete",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "homeopathie-diabete",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "meditation-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "meditation-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "meditation-glp1",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "peut-on-guerir-du-diabete",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "peut-on-guerir-du-diabete",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "peut-on-guerir-du-diabete",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "peut-on-guerir-du-diabete",
+      "link": "/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/"
+    },
+    {
+      "slug": "phytotherapie-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "phytotherapie-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "phytotherapie-glp1",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "plantes-diabete",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "plantes-diabete",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "plantes-diabete",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "semaglutide-naturel",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "semaglutide-naturel",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "semaglutide-naturel",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "semaglutide-naturel",
+      "link": "/collections/glp1-cout/prix-wegovy-france/"
+    },
+    {
+      "slug": "supplements-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "supplements-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "supplements-glp1",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "vinaigre-cidre-glp1",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "vinaigre-cidre-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "vinaigre-cidre-glp1",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/glp1-perte-de-poids/plateau-poids-glp1-ozempic-wegovy-causes-solutions/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-wegovy/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/regime-glp1/regime-mounjaro-optimal/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/regime-glp1/glp1-sport-exercice-musculation-guide/"
+    },
+    {
+      "slug": "avant-apres-glp1-resultats-reels",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "contrefacon-glp1-faux-ozempic-danger",
+      "link": "/collections/glp1-cout/wegovy-remboursement-mutuelle/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/glp1-cout/prix-mounjaro-france/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/glp1-cout/prix-mounjaro-france/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-wegovy/"
+    },
+    {
+      "slug": "effets-secondaires-mounjaro",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "effets-secondaires-ozempic",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "effets-secondaires-ozempic",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/"
+    },
+    {
+      "slug": "effets-secondaires-ozempic",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "effets-secondaires-ozempic",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "effets-secondaires-rybelsus",
+      "link": "/collections/traitements-glp1/guide-complet-rybelsus/"
+    },
+    {
+      "slug": "effets-secondaires-rybelsus",
+      "link": "/collections/glp1-cout/prix-rybelsus-france/"
+    },
+    {
+      "slug": "effets-secondaires-saxenda",
+      "link": "/collections/glp1-cout/prix-saxenda-france/"
+    },
+    {
+      "slug": "effets-secondaires-saxenda",
+      "link": "/collections/traitements-glp1/guide-complet-saxenda/"
+    },
+    {
+      "slug": "effets-secondaires-trulicity",
+      "link": "/collections/traitements-glp1/guide-complet-trulicity/"
+    },
+    {
+      "slug": "effets-secondaires-victoza",
+      "link": "/collections/traitements-glp1/guide-complet-victoza/"
+    },
+    {
+      "slug": "effets-secondaires-wegovy",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "effets-secondaires-wegovy",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "effets-secondaires-wegovy",
+      "link": "/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/"
+    },
+    {
+      "slug": "effets-secondaires-zepbound",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-mounjaro"
+    },
+    {
+      "slug": "effets-secondaires-zepbound",
+      "link": "/collections/traitements-glp1/guide-complet-zepbound/"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "link": "/collections/regime-glp1/glp1-micronutriments/"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "link": "/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/"
+    },
+    {
+      "slug": "glp1-allaitement-ozempic-wegovy-post-partum-contre-indication",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "link": "/collections/traitements-glp1/guide-complet-saxenda/"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "link": "/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/"
+    },
+    {
+      "slug": "glp1-chirurgie-anesthesie-precautions-arret-traitement",
+      "link": "/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/regime-glp1/glp1-proteines/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/"
+    },
+    {
+      "slug": "glp1-chute-de-cheveux-alopecie-causes-solutions",
+      "link": "/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/"
+    },
+    {
+      "slug": "glp1-depression-apathie-sante-mentale",
+      "link": "/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "link": "/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "glp1-gastroparesie-vidange-gastrique-risque-symptomes",
+      "link": "/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "glp1-goutte-acide-urique-risque-etude-2026",
+      "link": "/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "glp1-grossesse-fertilite-bebes-ozempic",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-grossesse-preconception-arret-traitement-fertilite",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-grossesse-preconception-arret-traitement-fertilite",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-grossesse-preconception-arret-traitement-fertilite",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-grossesse-preconception-arret-traitement-fertilite",
+      "link": "/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/"
+    },
+    {
+      "slug": "glp1-idees-suicidaires-risque-semaglutide-etude",
+      "link": "/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/"
+    },
+    {
+      "slug": "glp1-idees-suicidaires-risque-semaglutide-etude",
+      "link": "/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "link": "/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/"
+    },
+    {
+      "slug": "glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro",
+      "link": "/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/"
+    },
+    {
+      "slug": "glp1-neuropathie-optique-vision-yeux-semaglutide-noian",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-neuropathie-optique-vision-yeux-semaglutide-noian",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-neuropathie-optique-vision-yeux-semaglutide-noian",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "glp1-neuropathie-optique-vision-yeux-semaglutide-noian",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/regime-glp1/glp1-sport-exercice-musculation-guide/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/regime-glp1/glp1-proteines/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "glp1-osteoporose-risque-osseux",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-wegovy/"
+    },
+    {
+      "slug": "glp1-pancreatite-risque-ozempic-pancreas-symptomes",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-pancreatite-risque-ozempic-pancreas-symptomes",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-pancreatite-risque-ozempic-pancreas-symptomes",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-pancreatite-risque-ozempic-pancreas-symptomes",
+      "link": "/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "link": "/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "link": "/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/"
+    },
+    {
+      "slug": "glp1-relachement-cutane-peau-corps-perte-poids-solutions",
+      "link": "/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "link": "/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "link": "/collections/regime-glp1/glp1-sport-exercice-musculation-guide/"
+    },
+    {
+      "slug": "glp1-risque-osseux-fractures-tendons-blessures-2026",
+      "link": "/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/glp1-perte-de-poids/glp1-perte-de-poids/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-wegovy/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/"
+    },
+    {
+      "slug": "mesusage-glp1-france-detournement-risques",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "ozempic-danger",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "ozempic-danger",
+      "link": "/collections/regime-glp1/regime-cetogene-glp1/"
+    },
+    {
+      "slug": "ozempic-danger",
+      "link": "/collections/glp1-cout/acheter-wegovy-en-france/"
+    },
+    {
+      "slug": "ozempic-danger",
+      "link": "/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/"
+    },
+    {
+      "slug": "ozempic-danger",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "ozempic-danger",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/regime-glp1/glp1-micronutriments/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/regime-glp1/glp1-proteines/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/regime-glp1/glp1-sport-exercice-musculation-guide/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "ozempic-face-vieillissement-visage-solutions",
+      "link": "/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-ozempic/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/"
+    },
+    {
+      "slug": "ozempic-proces-effets-secondaires-recours-juridique-france",
+      "link": "/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/"
+    },
+    {
+      "slug": "wegovy-danger",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-wegovy/"
+    },
+    {
+      "slug": "wegovy-danger",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/glp1-cout/prix-wegovy-france/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/glp1-cout/prix-ozempic-france/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/regime-glp1/regime-cetogene-glp1/"
+    },
+    {
+      "slug": "acheter-wegovy-en-france",
+      "link": "/collections/glp1-cout/acheter-wegovy-en-france/"
+    },
+    {
+      "slug": "anneau-gastrique-prix-cmu",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "anneau-gastrique-prix-cmu",
+      "link": "/collections/traitements-glp1/guide-complet-saxenda/"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "link": "/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "link": "/collections/traitements-glp1/ansm-regles-prescription-glp1-france/"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "link": "/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "mounjaro-remboursement-securite-sociale-conditions-2026",
+      "link": "/collections/glp1-cout/prix-mounjaro-france/"
+    },
+    {
+      "slug": "operation-pour-maigrir-prix",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "operation-pour-maigrir-prix",
+      "link": "/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/"
+    },
+    {
+      "slug": "operation-pour-maigrir-prix",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/traitements-glp1/guide-complet-ozempic/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/traitements-glp1/guide-complet-rybelsus/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/traitements-glp1/guide-complet-wegovy/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/traitements-glp1/guide-complet-mounjaro/"
+    },
+    {
+      "slug": "ozempic-generique-france-semaglutide-biosimilaire-date",
+      "link": "/collections/glp1-cout/remboursement-glp1-2026/"
+    }
+  ],
+  "imgIssues": []
+}
