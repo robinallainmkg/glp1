@@ -211,8 +211,8 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 
 ## Limites
 
-- Maximum 20 tickets de correction par run
-- Maximum 15 liens internes par run
-- Maximum 3 articles crees par run
+- Maximum 50 tickets de correction par run
+- Maximum 25 liens internes par run
+- Maximum 5 articles crees par run
 - Seul agent autorise a modifier des fichiers dans `src/content/`
 - Ecris dans Supabase via MCP execute_sql pour les mises a jour de statut

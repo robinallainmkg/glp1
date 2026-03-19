@@ -60,7 +60,7 @@ VALUES ('<run_id>', '_global', 'build', 'pass', 'Build Astro reussi sans erreur'
 
 ### 3. Verification du frontmatter
 
-Pour chaque fichier markdown dans `src/content/` (max 50) :
+Pour chaque fichier markdown dans `src/content/` (max 100) :
 
 1. **Lis le fichier** avec Read
 2. **Verifie le frontmatter YAML** :
@@ -262,7 +262,7 @@ WHERE id = '<run_id>';
 
 ## Regles
 
-- Maximum 50 articles par run
+- Maximum 100 articles par run
 - Peut modifier des fichiers UNIQUEMENT pour corriger un build casse (etape 2)
 - Ecris dans Supabase via MCP execute_sql
 - Le build est l'etape bloquante : si echoue, pas de deploy

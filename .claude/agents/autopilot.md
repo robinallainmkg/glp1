@@ -103,23 +103,29 @@ done
 
 ### Phase 3 — EDIT (consommer le travail)
 
-Lance UN SEUL agent editorial via HTTP (pas de multi-instance pour eviter les conflits git) :
+Lance **4 instances** editorial en parallele. Chaque instance filtre par `article_id % 4 = N` pour eviter les conflits :
 
 ```bash
-curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"editorial"}'
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"editorial","prompt":"Traite les corrections (partition 1/4, filtre: article_id mod 4 = 0)"}' &
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"editorial","prompt":"Traite les corrections (partition 2/4, filtre: article_id mod 4 = 1)"}' &
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"editorial","prompt":"Traite les corrections (partition 3/4, filtre: article_id mod 4 = 2)"}' &
+curl -s -X POST http://localhost:7854/launch -H 'Content-Type: application/json' -d '{"agent":"editorial","prompt":"Traite les corrections (partition 4/4, filtre: article_id mod 4 = 3)"}' &
+wait
 ```
 
-Puis attends qu'il termine :
+Puis **attends** que tous les editorials terminent en polling :
 ```bash
 while true; do
   STATUS=$(curl -s http://localhost:7854/status)
-  RUNNING=$(echo "$STATUS" | python3 -c "import sys,json; d=json.load(sys.stdin); r=d.get('running',{}); print('1' if 'editorial' in r else '0')")
+  RUNNING=$(echo "$STATUS" | python3 -c "import sys,json; d=json.load(sys.stdin); r=d.get('running',{}); print(sum(1 for k in r if 'editorial' in k))")
   if [ "$RUNNING" = "0" ]; then break; fi
   sleep 15
 done
 ```
 
 L'editorial commit localement (PAS de push). Le validator se charge du push apres build check.
+
+> **NOTE** : Chaque instance traite max 50 tickets (200 total par cycle). Le partitionnement par `article_id % 4` empeche les conflits git car chaque instance travaille sur des fichiers differents.
 
 ### Phase 4 — VALIDATE + DEPLOY
 
@@ -157,19 +163,16 @@ Puis **TERMINE**. Le serveur te relancera automatiquement.
 CHECK → pct_unchecked, nb_tickets, nb_urgents
 
 SI pct_unchecked >= 30%:
-  → fact-check seul → editorial → validator
+  → fact-check seul → editorial (4 instances) → validator
 
-SINON SI nb_urgents > 0:
-  → editorial direct (skip Generate) → validator
-
-SINON SI nb_tickets >= 20:
-  → editorial direct (skip Generate) → validator
+SINON SI nb_urgents > 0 OU nb_tickets >= 10:
+  → editorial direct (4 instances, skip Generate) → validator
 
 SINON SI nb_tickets < 10:
-  → Generate (4 agents parallele) → editorial → validator
+  → Generate (4 agents parallele) → editorial (4 instances) → validator
 
-SINON (10-19 tickets, pas d'urgents):
-  → editorial → validator
+SINON (0 tickets, rien a faire):
+  → Generate seulement → FIN (pas d'editorial si rien a consommer)
 ```
 
 ## GESTION DES ERREURS
