@@ -15,7 +15,7 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
 
 ## La Transformation Exceptionnelle de Marie L.
 
-**32 kilos perdus en 12 mois** avec le traitement GLP-1
+**32 kilos perdus en 12 mois** avec le [traitement GLP-1](/collections/glp1-perte-de-poids/)
 
 ## ⭐ Stats de Transformation
 
@@ -82,7 +82,7 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
 ## Les Clés de Sa Réussite
 
 1. **Suivi médical rigoureux** : Consultations mensuelles
-2. **Alimentation équilibrée** : Pas de régime strict, juste de bonnes habitudes
+2. **[Alimentation équilibrée](/collections/regime-glp1/regime-mounjaro-optimal/)** : Pas de régime strict, juste de bonnes habitudes
 3. **Activité physique progressive** : De la marche à la course
 4. **Soutien familial** : Mari et enfants très encourageants
 5. **Mental positif** : Focus sur la santé, pas juste le poids

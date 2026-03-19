@@ -82,7 +82,7 @@ Le processus d'approbation en Europe suit la procédure centralisée de l'EMA (A
 4. **Évaluation HAS (France)** et négociation prix : 3 à 6 mois supplémentaires
 5. **Commercialisation en France** : estimation fin 2027, voire début 2028
 
-Pour l'indication **obésité**, le remboursement en France sera soumis aux mêmes critères que Wegovy : IMC ≥ 35, après échec des mesures hygiéno-diététiques, sur prescription spécialisée.
+Pour l'indication **obésité**, le [remboursement GLP-1 en France](/collections/glp1-cout/remboursement-glp1-2026/) sera soumis aux mêmes critères que Wegovy : IMC ≥ 35, après échec des mesures hygiéno-diététiques, sur prescription spécialisée.
 
 ### Le prix attendu
 
