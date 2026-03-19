@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Coeur : Bénéfices Cardiovasculaires (2026)"
-description: "GLP-1 bénéfices cardiovasculaires coeur : réduction du risque de 20%, indépendante de la perte de poids. Mécanismes, études LEADER, SELECT et recommandations."
+description: "GLP-1 bénéfices cardiovasculaires : réduction du risque de 20%, indépendante de la perte de poids. Mécanismes, études LEADER, SELECT et recommandations."
 pubDate: 2026-03-15
 date: 2026-03-15
 updatedAt: 2026-03-15

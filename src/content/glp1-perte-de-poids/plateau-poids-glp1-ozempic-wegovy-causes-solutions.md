@@ -1,6 +1,6 @@
 ---
 title: "Plateau de Poids sous GLP-1 : Causes et Solutions"
-description: "Plateau de poids sous GLP-1 Ozempic Wegovy Mounjaro : causes de la stagnation pondérale, adaptation métabolique et stratégies pour relancer la perte de poids."
+description: "Plateau de poids sous GLP-1 Ozempic Wegovy Mounjaro : causes de la stagnation pondérale et stratégies pour relancer la perte de poids."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17

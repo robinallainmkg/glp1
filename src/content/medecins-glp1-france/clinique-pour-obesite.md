@@ -1,6 +1,6 @@
 ---
 title: "Clinique Pour Obésité France GLP-1 : Guide Complet 2026"
-description: "Clinique pour obésité France GLP-1 : trouvez les meilleurs centres spécialisés. Guide complet des cliniques pour obésité France avec prise en charge GLP-1."
+description: "Clinique pour obésité France GLP-1 : trouvez les meilleurs centres spécialisés avec prise en charge GLP-1. Guide complet 2026."
 pubDate: 2025-08-20
 date: '2026-03-17'
 author: "Dr. Émilie Martin"

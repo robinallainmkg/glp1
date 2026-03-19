@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Personne Âgée Senior Plus 65 Ans : Limites et Alternatives"
+title: "GLP-1 Senior Plus 65 Ans : Limites ANSM et Alternatives"
 description: "GLP-1 personne âgée senior plus 65 ans : l'ANSM limite ces traitements aux moins de 65 ans. Risques, raisons médicales et alternatives disponibles."
 pubDate: 2026-03-17
 date: "2026-03-17"

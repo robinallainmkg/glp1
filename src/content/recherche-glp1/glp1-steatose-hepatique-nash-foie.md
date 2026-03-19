@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Stéatose Hépatique NASH : Traitement 2026"
-description: "GLP-1 stéatose hépatique NASH foie gras : le sémaglutide résout la MASH chez 62,9% des patients (essai ESSENCE). FDA approuve Wegovy pour la MASH en août 2025."
+description: "GLP-1 stéatose hépatique NASH : sémaglutide résout la MASH chez 62,9% des patients (essai ESSENCE). FDA approuve Wegovy pour la MASH en 2025."
 pubDate: 2026-03-16
 date: 2026-03-16
 updatedAt: 2026-03-16
