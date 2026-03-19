@@ -8,7 +8,7 @@ author: "Dr. Émilie Martin"
 category: "Nutrition"
 tags: ["glp1", "regime", "nutrition"]
 collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-dash-glp1..jpg"
+thumbnail: "/images/thumbnails/regime-dash-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article Régime Dash GLP-1"
 featured: false
 priority: 5
