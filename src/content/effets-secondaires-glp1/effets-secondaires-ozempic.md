@@ -57,6 +57,8 @@ mainKeyword: "effets secondaires ozempic semaglutide"
 
 ### Pancréatite
 
+La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) est un effet grave rare mais documenté, qui nécessite une reconnaissance immédiate des symptômes d'alerte.
+
 **Signes d'alerte** :
 - Douleurs abdominales intenses
 - Nausées persistantes
@@ -161,7 +163,7 @@ mainKeyword: "effets secondaires ozempic semaglutide"
 |------------|---------|----------|-----------|-------------------|
 | Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
 | [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 25-35% | 12-18% | 8-10% | Moyenne |
-| Saxenda | 15-25% | 8-12% | 5-8% | Très bonne |
+| [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | 15-25% | 8-12% | 5-8% | Très bonne |
 | Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
 
 Si vous souhaitez comparer avec un autre traitement de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.

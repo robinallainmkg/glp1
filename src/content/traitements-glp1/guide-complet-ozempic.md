@@ -113,7 +113,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Augmentation progressive** :
 - Semaine 5-8 : Passage à 0,5 mg
-- Surveillance des effets secondaires
+- Surveillance des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
 - Ajustement selon tolérance
 - Premiers signes d'efficacité
 

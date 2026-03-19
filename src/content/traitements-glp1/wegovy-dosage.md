@@ -143,7 +143,7 @@ Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines
 - Suivi médical rapproché indispensable
 
 ### Critères d'arrêt du traitement
-- Effets indésirables majeurs
+- [Effets indésirables digestifs](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) majeurs
 - Inefficacité après période d'évaluation
 - Changement du profil de risque
 - Décision partagée patient-médecin

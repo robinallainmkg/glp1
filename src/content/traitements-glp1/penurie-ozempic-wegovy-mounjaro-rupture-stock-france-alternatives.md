@@ -55,7 +55,7 @@ Plusieurs facteurs continuent de créer des tensions :
 
 L'interruption brutale d'un traitement GLP-1 n'est pas dangereuse pour la santé à court terme, contrairement à l'arrêt brutal d'autres traitements (insuline, antihypertenseurs). Mais elle entraîne :
 - Une reprise rapide de l'appétit
-- Un risque de reprise du poids perdu
+- Un risque de [reprise de poids après arrêt GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) souvent important, parfois dès les premières semaines
 - Chez les diabétiques, une possible dégradation du contrôle glycémique
 
 L'objectif est d'anticiper et d'éviter cette rupture, pas d'y faire face en urgence.

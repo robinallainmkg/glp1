@@ -34,7 +34,7 @@ Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-comple
 
 ### La fonte musculaire : le risque méconnu
 
-Quand on perd du poids rapidement — que ce soit grâce à un régime strict ou à un traitement GLP-1 — le corps ne perd pas uniquement de la graisse. Il puise également dans ses réserves de protéines musculaires. Les études cliniques sur Wegovy (semaglutide) et Mounjaro (tirzepatide) montrent que 20 à 40 % de la perte de poids totale provient de la masse maigre, principalement des muscles.
+Quand on perd du poids rapidement — que ce soit grâce à un régime strict ou à un traitement GLP-1 — le corps ne perd pas uniquement de la graisse. Il puise également dans ses réserves de protéines musculaires. Pour [prévenir la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), il est essentiel de combiner activité physique et apports protéiques suffisants. Les études cliniques sur Wegovy (semaglutide) et Mounjaro (tirzepatide) montrent que 20 à 40 % de la perte de poids totale provient de la masse maigre, principalement des muscles.
 
 Cette perte musculaire a des conséquences concrètes :
 
