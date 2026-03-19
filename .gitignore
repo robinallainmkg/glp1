@@ -28,3 +28,4 @@ supabase/.temp/
 
 # Claude worktrees
 .claude/worktrees/
+.tmp_agent/
