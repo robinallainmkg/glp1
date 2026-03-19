@@ -1,0 +1,371 @@
+---
+// Admin page: Coach AI Test Transcripts + Feedback
+// Affiche les conversations de test et permet de donner du feedback
+---
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Coach IA — Tests & Feedback</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 20px; }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    .subtitle { color: #94a3b8; margin-bottom: 24px; }
+    .nav { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .nav a { color: #60a5fa; text-decoration: none; padding: 6px 12px; border: 1px solid #334155; border-radius: 6px; font-size: 0.85rem; }
+    .nav a:hover { background: #1e293b; }
+
+    /* Filters */
+    .filters { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+    .filters select, .filters button { padding: 8px 14px; border-radius: 6px; border: 1px solid #334155; background: #1e293b; color: #e2e8f0; font-size: 0.9rem; cursor: pointer; }
+    .filters button.active { background: #2563eb; border-color: #2563eb; }
+
+    /* Stats bar */
+    .stats-bar { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .stat-card { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 12px 18px; min-width: 140px; }
+    .stat-card .label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+    .stat-card .value { font-size: 1.5rem; font-weight: 700; margin-top: 4px; }
+    .stat-card .value.green { color: #22c55e; }
+    .stat-card .value.yellow { color: #eab308; }
+    .stat-card .value.red { color: #ef4444; }
+
+    /* Scenario card */
+    .scenario { background: #1e293b; border: 1px solid #334155; border-radius: 12px; margin-bottom: 24px; overflow: hidden; }
+    .scenario-header { padding: 16px 20px; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+    .scenario-header:hover { background: #253147; }
+    .scenario-header h2 { font-size: 1.1rem; }
+    .scenario-header .meta { display: flex; gap: 12px; align-items: center; }
+    .badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+    .badge.llm { background: #164e63; color: #22d3ee; }
+    .badge.fallback { background: #422006; color: #fbbf24; }
+    .badge.good { background: #14532d; color: #4ade80; }
+    .badge.warn { background: #422006; color: #fbbf24; }
+    .badge.bad { background: #450a0a; color: #f87171; }
+    .page-tag { font-size: 0.75rem; color: #64748b; }
+
+    /* Messages */
+    .messages { padding: 16px 20px; display: none; }
+    .messages.open { display: block; }
+    .message { margin-bottom: 16px; display: flex; gap: 12px; }
+    .message .avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+    .message.user .avatar { background: #1d4ed8; }
+    .message.assistant .avatar { background: #15803d; }
+    .message .bubble { flex: 1; }
+    .message .bubble .role-label { font-size: 0.7rem; color: #64748b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .message.user .bubble .content { background: #1e3a5f; border-radius: 12px; padding: 10px 14px; font-size: 0.95rem; line-height: 1.5; }
+    .message.assistant .bubble .content { background: #1a3329; border-radius: 12px; padding: 10px 14px; font-size: 0.95rem; line-height: 1.5; }
+    .message .bubble .model-tag { font-size: 0.7rem; color: #64748b; margin-top: 4px; }
+
+    /* Feedback section */
+    .feedback-section { padding: 16px 20px; border-top: 1px solid #334155; display: none; }
+    .feedback-section.open { display: block; }
+    .feedback-section h3 { font-size: 0.9rem; color: #94a3b8; margin-bottom: 10px; }
+    .feedback-row { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+    .feedback-row label { font-size: 0.85rem; min-width: 100px; color: #94a3b8; }
+    .rating-btns { display: flex; gap: 4px; }
+    .rating-btns button { width: 36px; height: 36px; border: 1px solid #475569; border-radius: 6px; background: #0f172a; color: #94a3b8; cursor: pointer; font-size: 1rem; transition: all 0.15s; }
+    .rating-btns button:hover { border-color: #60a5fa; color: #60a5fa; }
+    .rating-btns button.selected { background: #2563eb; border-color: #2563eb; color: white; }
+    .feedback-textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #e2e8f0; font-size: 0.9rem; resize: vertical; min-height: 60px; margin-top: 8px; }
+    .feedback-textarea::placeholder { color: #475569; }
+    .save-feedback { margin-top: 10px; padding: 8px 20px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    .save-feedback:hover { background: #1d4ed8; }
+    .save-feedback.saved { background: #15803d; }
+
+    /* Global feedback */
+    .global-feedback { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; margin-top: 24px; }
+    .global-feedback h2 { margin-bottom: 12px; }
+    .global-feedback textarea { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #e2e8f0; font-size: 0.95rem; resize: vertical; min-height: 100px; }
+    .global-feedback textarea::placeholder { color: #475569; }
+    .global-feedback button { margin-top: 10px; padding: 10px 24px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; }
+
+    .loading { text-align: center; padding: 40px; color: #64748b; }
+    .expand-all { background: none; border: 1px solid #475569; color: #94a3b8; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+    .expand-all:hover { border-color: #60a5fa; color: #60a5fa; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="/admin/">← War Room</a>
+    <a href="/admin/chats">Coach IA Conversations</a>
+  </div>
+
+  <h1>🧪 Coach IA — Tests & Feedback</h1>
+  <p class="subtitle">Transcripts des simulations clients • Donne ton feedback pour améliorer le coach</p>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="llm">LLM only</button>
+    <button class="filter-btn" data-filter="fallback">Avec fallback</button>
+    <button class="expand-all" id="expandAll">Tout déplier</button>
+  </div>
+
+  <div class="stats-bar" id="statsBar">
+    <div class="stat-card"><div class="label">Scénarios</div><div class="value" id="statTotal">—</div></div>
+    <div class="stat-card"><div class="label">Messages LLM</div><div class="value green" id="statLlm">—</div></div>
+    <div class="stat-card"><div class="label">Messages Fallback</div><div class="value yellow" id="statFallback">—</div></div>
+    <div class="stat-card"><div class="label">Feedback envoyé</div><div class="value" id="statFeedback">—</div></div>
+  </div>
+
+  <div id="scenarios">
+    <div class="loading">Chargement des transcripts...</div>
+  </div>
+
+  <div class="global-feedback">
+    <h2>💬 Feedback global</h2>
+    <p class="subtitle" style="margin-bottom:10px">Observations générales sur le coach IA, points à améliorer, bugs remarqués...</p>
+    <textarea id="globalFeedback" placeholder="Ex: Le coach devrait mieux gérer les cas de grossesse, ne pas dire 'nos articles', les prix sont parfois incorrects..."></textarea>
+    <button id="saveGlobal" onclick="saveGlobalFeedback()">Enregistrer le feedback global</button>
+  </div>
+
+<script>
+const SUPABASE_URL = 'https://ywekaivgjzsmdocchvum.supabase.co';
+const ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+
+// Scenario names mapping
+const SCENARIO_NAMES = {
+  'acheteuse_sans_medecin': '👩 Marie — Veut Ozempic, pas de médecin',
+  'arnaque_gelules': '😰 Sophie — A acheté des gélules en ligne',
+  'enceinte_gelules': '🤰 Laura — Gélules + grossesse',
+  'diabetique_prix': '💊 Ahmed — Diabétique T2, question prix',
+  'perte_poids_stagnation': '⚖️ Nathalie — Sous Ozempic, stagnation poids',
+  'wegovy_remboursement': '💰 Christine — Wegovy remboursement',
+  'stylo_injecteur': '💉 Philippe — Problème stylo injecteur',
+  'mounjaro_dispo': '🔍 Karim — Cherche Mounjaro en France',
+  'info_generale': '🤔 Julie — Curieuse, veut comprendre les GLP-1',
+  'effets_secondaires': '🤢 Fatima — Nausées sous Ozempic',
+  'doctor': '🏥 Test annuaire médecins',
+  'doc': '🏥 Test annuaire médecins',
+};
+
+const RATING_LABELS = {
+  'pertinence': 'Pertinence',
+  'ton': 'Ton / empathie',
+  'precision': 'Précision info',
+  'medecin': 'Orientation médecin',
+};
+
+// Load feedback from localStorage
+function loadFeedback() {
+  try { return JSON.parse(localStorage.getItem('coach_test_feedback') || '{}'); } catch { return {}; }
+}
+function saveFeedback(data) {
+  localStorage.setItem('coach_test_feedback', JSON.stringify(data));
+}
+
+async function fetchTranscripts() {
+  const resp = await fetch(`${SUPABASE_URL}/rest/v1/coach_conversations?session_id=like.test-*&select=id,session_id,page_url,message_count,started_at&order=started_at.desc`, {
+    headers: { 'apikey': ANON_KEY, 'Authorization': `Bearer ${ANON_KEY}` }
+  });
+  const convs = await resp.json();
+
+  // Deduplicate: keep latest run per scenario type
+  const latest = {};
+  for (const c of convs) {
+    const parts = c.session_id.split('-');
+    // Extract scenario name from session_id like "test-arnaque_gelules-1234567"
+    let scenarioKey = parts.slice(1, -1).join('-');
+    if (!scenarioKey || scenarioKey.match(/^\d+$/)) scenarioKey = parts.slice(1).join('-');
+    // Keep the one with most messages (best run)
+    if (!latest[scenarioKey] || c.message_count > (latest[scenarioKey].message_count || 0)) {
+      latest[scenarioKey] = { ...c, scenarioKey };
+    }
+  }
+
+  // Fetch messages for each
+  const results = [];
+  for (const [key, conv] of Object.entries(latest)) {
+    const msgResp = await fetch(`${SUPABASE_URL}/rest/v1/coach_messages?conversation_id=eq.${conv.id}&select=role,content,model,created_at&order=created_at.asc`, {
+      headers: { 'apikey': ANON_KEY, 'Authorization': `Bearer ${ANON_KEY}` }
+    });
+    const messages = await msgResp.json();
+    results.push({ ...conv, scenarioKey: key, messages });
+  }
+
+  return results.sort((a, b) => {
+    // Sort by scenario order
+    const order = Object.keys(SCENARIO_NAMES);
+    const ai = order.findIndex(k => a.scenarioKey.includes(k));
+    const bi = order.findIndex(k => b.scenarioKey.includes(k));
+    return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+  });
+}
+
+function getScenarioName(key) {
+  for (const [k, v] of Object.entries(SCENARIO_NAMES)) {
+    if (key.includes(k)) return v;
+  }
+  return '💬 ' + key;
+}
+
+function renderScenarios(scenarios) {
+  const container = document.getElementById('scenarios');
+  const feedback = loadFeedback();
+  let totalLlm = 0, totalFallback = 0;
+
+  container.innerHTML = '';
+
+  for (const s of scenarios) {
+    const llmCount = s.messages.filter(m => m.model && m.model !== 'fallback-v1' && m.role === 'assistant').length;
+    const fbCount = s.messages.filter(m => m.model === 'fallback-v1').length;
+    totalLlm += llmCount;
+    totalFallback += fbCount;
+    const hasFallback = fbCount > 0;
+    const scenarioFb = feedback[s.scenarioKey] || {};
+
+    const card = document.createElement('div');
+    card.className = 'scenario';
+    card.dataset.filter = hasFallback ? 'fallback' : 'llm';
+
+    // Header
+    const quality = fbCount === 0 ? 'good' : llmCount > fbCount ? 'warn' : 'bad';
+    card.innerHTML = `
+      <div class="scenario-header" onclick="toggleScenario(this)">
+        <div>
+          <h2>${getScenarioName(s.scenarioKey)}</h2>
+          <span class="page-tag">${s.page_url || '/'} • ${s.messages.length} messages</span>
+        </div>
+        <div class="meta">
+          <span class="badge llm">${llmCount} LLM</span>
+          ${fbCount > 0 ? `<span class="badge fallback">${fbCount} fallback</span>` : ''}
+          <span class="badge ${quality}">${quality === 'good' ? '✓' : quality === 'warn' ? '⚠' : '✗'}</span>
+          ${scenarioFb.note ? '<span class="badge good">📝</span>' : ''}
+        </div>
+      </div>
+      <div class="messages" id="msgs-${s.scenarioKey}">
+        ${s.messages.map((m, i) => `
+          <div class="message ${m.role}">
+            <div class="avatar">${m.role === 'user' ? '👤' : '🤖'}</div>
+            <div class="bubble">
+              <div class="role-label">${m.role === 'user' ? 'Client' : 'Coach IA'}</div>
+              <div class="content">${escapeHtml(m.content)}</div>
+              ${m.model ? `<div class="model-tag">${m.model}</div>` : ''}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="feedback-section" id="fb-${s.scenarioKey}">
+        <h3>📝 Ton feedback sur ce scénario</h3>
+        ${Object.entries(RATING_LABELS).map(([key, label]) => `
+          <div class="feedback-row">
+            <label>${label}</label>
+            <div class="rating-btns" data-scenario="${s.scenarioKey}" data-key="${key}">
+              ${[1,2,3,4,5].map(v => `<button onclick="setRating('${s.scenarioKey}','${key}',${v})" class="${scenarioFb[key] === v ? 'selected' : ''}">${v}</button>`).join('')}
+            </div>
+          </div>
+        `).join('')}
+        <textarea class="feedback-textarea" id="note-${s.scenarioKey}" placeholder="Commentaire libre : ce qui va, ce qui ne va pas, ce qu'il faudrait changer...">${scenarioFb.note || ''}</textarea>
+        <button class="save-feedback" onclick="saveFeedbackForScenario('${s.scenarioKey}')">Enregistrer</button>
+      </div>
+    `;
+    container.appendChild(card);
+  }
+
+  // Stats
+  document.getElementById('statTotal').textContent = scenarios.length;
+  document.getElementById('statLlm').textContent = totalLlm;
+  document.getElementById('statFallback').textContent = totalFallback;
+  document.getElementById('statFeedback').textContent = Object.keys(feedback).filter(k => k !== '_global').length;
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+}
+
+function toggleScenario(header) {
+  const card = header.parentElement;
+  card.querySelector('.messages').classList.toggle('open');
+  card.querySelector('.feedback-section').classList.toggle('open');
+}
+
+function setRating(scenario, key, value) {
+  const fb = loadFeedback();
+  if (!fb[scenario]) fb[scenario] = {};
+  fb[scenario][key] = value;
+  saveFeedback(fb);
+  // Update UI
+  const btns = document.querySelectorAll(`.rating-btns[data-scenario="${scenario}"][data-key="${key}"] button`);
+  btns.forEach((b, i) => b.classList.toggle('selected', i + 1 === value));
+}
+
+function saveFeedbackForScenario(scenario) {
+  const fb = loadFeedback();
+  if (!fb[scenario]) fb[scenario] = {};
+  fb[scenario].note = document.getElementById(`note-${scenario}`).value;
+  fb[scenario].timestamp = new Date().toISOString();
+  saveFeedback(fb);
+
+  // Visual confirmation
+  const btn = event.target;
+  btn.textContent = '✓ Enregistré';
+  btn.classList.add('saved');
+  setTimeout(() => { btn.textContent = 'Enregistrer'; btn.classList.remove('saved'); }, 2000);
+
+  // Update stat
+  document.getElementById('statFeedback').textContent = Object.keys(fb).filter(k => k !== '_global').length;
+
+  // Also save to Supabase for persistence
+  saveFeedbackToSupabase(scenario, fb[scenario]);
+}
+
+async function saveFeedbackToSupabase(scenario, data) {
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/coach_feedback`, {
+      method: 'POST',
+      headers: { 'apikey': ANON_KEY, 'Authorization': `Bearer ${ANON_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' },
+      body: JSON.stringify({
+        session_id: `feedback-${scenario}`,
+        vote: data.pertinence >= 4 ? 'up' : 'down',
+        assistant_message: JSON.stringify(data),
+        page_url: '/admin/coach-tests',
+      })
+    });
+  } catch (e) { console.warn('Supabase save failed:', e); }
+}
+
+function saveGlobalFeedback() {
+  const fb = loadFeedback();
+  fb._global = {
+    note: document.getElementById('globalFeedback').value,
+    timestamp: new Date().toISOString(),
+  };
+  saveFeedback(fb);
+  const btn = document.getElementById('saveGlobal');
+  btn.textContent = '✓ Enregistré';
+  setTimeout(() => { btn.textContent = 'Enregistrer le feedback global'; }, 2000);
+}
+
+// Filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.scenario').forEach(s => {
+      if (filter === 'all') s.style.display = '';
+      else s.style.display = s.dataset.filter === filter ? '' : 'none';
+    });
+  });
+});
+
+document.getElementById('expandAll').addEventListener('click', function() {
+  const isOpen = this.textContent.includes('Replier');
+  document.querySelectorAll('.messages, .feedback-section').forEach(el => {
+    el.classList.toggle('open', !isOpen);
+  });
+  this.textContent = isOpen ? 'Tout déplier' : 'Tout replier';
+});
+
+// Load global feedback
+const fb = loadFeedback();
+if (fb._global) document.getElementById('globalFeedback').value = fb._global.note || '';
+
+// Init
+fetchTranscripts().then(renderScenarios).catch(err => {
+  document.getElementById('scenarios').innerHTML = `<div class="loading" style="color:#ef4444">Erreur: ${err.message}</div>`;
+});
+</script>
+</body>
+</html>
