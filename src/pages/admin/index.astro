@@ -215,10 +215,11 @@ import { supabaseConfig } from '../../lib/supabase';
     }
     .ap-budget-bar {
       width: 100%;
-      height: 6px;
+      height: 10px;
       background: #1e293b;
-      border-radius: 3px;
+      border-radius: 5px;
       overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
     }
     .ap-budget-fill {
       height: 100%;
@@ -953,6 +954,13 @@ import { supabaseConfig } from '../../lib/supabase';
         <span class="kpi-label">Throughput / 7j</span>
         <span class="kpi-value" id="kpiThroughput">--</span>
         <span class="kpi-sub" id="kpiThroughputSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiThroughputBar" style="width:0%;background:#22c55e"></div></div>
+      </div>
+      <div class="kpi-card" style="cursor:default">
+        <span class="kpi-label">Debit / Charge</span>
+        <span class="kpi-value" id="kpiEfficiency">--</span>
+        <span class="kpi-sub" id="kpiEfficiencySub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiEfficiencyBar" style="width:0%;background:#3b82f6"></div></div>
       </div>
     </div>
 
@@ -1185,25 +1193,54 @@ import { supabaseConfig } from '../../lib/supabase';
     const activeCount = Object.keys(runningAgents).filter(k => k !== 'autopilot').length;
     document.getElementById('apAgentsActive').textContent = activeCount;
 
-    // Budget: use real cost data from server, fallback to run count estimate
-    const totalCost = window._serverTotalCost || 0;
-    const runs24h = Object.values(agentRuns).filter(r => {
+    // Token estimation per agent type (tokens/minute based on observed patterns)
+    // Claude Max 5h window ≈ 5M tokens (estimated rolling limit)
+    const TOKEN_RATE_PER_MIN = {
+      'editorial': 8000,      // reads files, reasons, edits
+      'validator': 6000,      // builds, checks, reads files
+      'fact-check': 10000,    // reads articles, searches, verifies sources
+      'seo-audit': 5000,      // scans pages
+      'analytics': 4000,      // queries, analyzes data
+      'opportunities': 5000,  // research + analysis
+      'internal-links': 4000, // link graph analysis
+      'ui-designer': 7000,    // reads components, designs changes
+      'strategist': 3000,     // orchestration, light
+      'sav-email': 5000,      // reads/writes emails
+      'autopilot': 2000,      // orchestration only
+    };
+    const ROLLING_WINDOW_H = 5;
+    const MAX_TOKENS = 5000000; // 5M estimated rolling limit
+    const windowMs = ROLLING_WINDOW_H * 3600000;
+
+    const runs5h = Object.values(agentRuns).filter(r => {
       const age = Date.now() - new Date(r.started_at).getTime();
-      return age < 86400000;
+      return age < windowMs;
     });
+
+    let estimatedTokens = 0;
+    for (const r of runs5h) {
+      const durationMin = r.completed_at
+        ? (new Date(r.completed_at) - new Date(r.started_at)) / 60000
+        : (Date.now() - new Date(r.started_at)) / 60000;
+      const rate = TOKEN_RATE_PER_MIN[r.agent_name] || 5000;
+      estimatedTokens += Math.round(rate * Math.min(durationMin, 30)); // cap 30min/run
+    }
+
     const budgetFill = document.getElementById('apBudgetFill');
     const budgetVal = document.getElementById('apBudgetVal');
-    if (totalCost > 0) {
-      // Real cost tracking from stream-json
-      const budgetPct = Math.min(100, Math.round(totalCost / 5 * 100)); // $5 = 100%
-      budgetFill.style.width = budgetPct + '%';
-      budgetFill.style.background = budgetPct > 80 ? '#f87171' : budgetPct > 50 ? '#fbbf24' : '#22c55e';
-      budgetVal.textContent = `$${totalCost.toFixed(2)} / session`;
-    } else {
-      const budgetPct = Math.min(100, runs24h.length * 5);
-      budgetFill.style.width = budgetPct + '%';
-      budgetFill.style.background = budgetPct > 80 ? '#f87171' : budgetPct > 50 ? '#fbbf24' : '#22c55e';
-      budgetVal.textContent = `~${runs24h.length} runs / 24h`;
+    const tokenPct = Math.min(100, Math.round(estimatedTokens / MAX_TOKENS * 100));
+    const tokenDisplay = estimatedTokens > 1000000
+      ? (estimatedTokens / 1000000).toFixed(1) + 'M'
+      : Math.round(estimatedTokens / 1000) + 'k';
+    budgetFill.style.width = tokenPct + '%';
+    budgetFill.style.background = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#3b82f6';
+    budgetVal.textContent = `~${tokenDisplay} / 5M · ${runs5h.length} runs (${ROLLING_WINDOW_H}h)`;
+
+    // Color the label based on remaining capacity
+    const budgetLabel = document.querySelector('.ap-budget-label');
+    if (budgetLabel) {
+      budgetLabel.textContent = tokenPct >= 80 ? '⚠ TOKENS (ralentir)' : tokenPct >= 50 ? '◐ TOKENS' : '● TOKENS';
+      budgetLabel.style.color = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#475569';
     }
   }
 
@@ -1497,10 +1534,29 @@ import { supabaseConfig } from '../../lib/supabase';
 
       // Throughput
       const last7d = now - 7 * 86400000;
+      const last24h = now - 86400000;
       const deployedRecent = ticketsAll.filter(t => t.statut === 'deployed' && new Date(t.created_at).getTime() > last7d).length;
       const pendingAll = ticketsAll.filter(t => t.statut === 'approved').length;
+      const inProgress = ticketsAll.filter(t => t.statut === 'in_progress').length;
       document.getElementById('kpiThroughput').textContent = deployedRecent;
       document.getElementById('kpiThroughputSub').innerHTML = `deployes &middot; <span style="color:#fbbf24">${pendingAll} en stock</span>`;
+      // Throughput bar: ratio deployed vs total active
+      const totalActive = pendingAll + inProgress + deployedRecent;
+      const throughputPct = totalActive > 0 ? Math.round(deployedRecent / totalActive * 100) : 0;
+      document.getElementById('kpiThroughputBar').style.width = throughputPct + '%';
+      document.getElementById('kpiThroughputBar').style.background = throughputPct > 70 ? '#22c55e' : throughputPct > 40 ? '#fbbf24' : '#f87171';
+
+      // Debit / Charge — tickets created vs resolved last 24h
+      const created24h = ticketsAll.filter(t => new Date(t.created_at).getTime() > last24h).length;
+      const resolved24h = ticketsAll.filter(t => (t.statut === 'deployed' || t.statut === 'ready_to_deploy') && new Date(t.created_at).getTime() > last24h).length;
+      const ratio = created24h > 0 ? (resolved24h / created24h) : (resolved24h > 0 ? 99 : 0);
+      const ratioDisplay = created24h > 0 ? ratio.toFixed(1) + 'x' : '--';
+      document.getElementById('kpiEfficiency').textContent = ratioDisplay;
+      document.getElementById('kpiEfficiency').style.color = ratio >= 1 ? '#22c55e' : ratio >= 0.5 ? '#fbbf24' : '#f87171';
+      document.getElementById('kpiEfficiencySub').innerHTML = `<span style="color:#4ade80">↑${resolved24h}</span> resolus &middot; <span style="color:#f87171">↓${created24h}</span> crees (24h)`;
+      const effPct = Math.min(100, Math.round(ratio * 50));
+      document.getElementById('kpiEfficiencyBar').style.width = effPct + '%';
+      document.getElementById('kpiEfficiencyBar').style.background = ratio >= 1 ? '#22c55e' : ratio >= 0.5 ? '#fbbf24' : '#f87171';
     } catch(e) {}
   }
 

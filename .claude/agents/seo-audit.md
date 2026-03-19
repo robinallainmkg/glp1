@@ -93,8 +93,13 @@ INSERT INTO correction_tickets (
   '<issue_title>',
   '<issue_detail>',
   'approved'
-);
+)
+ON CONFLICT (article_id, ticket_type, source_agent)
+WHERE statut NOT IN ('deployed', 'rejected')
+DO NOTHING;
 ```
+
+> **IMPORTANT** : Utilise TOUJOURS `ON CONFLICT ... DO NOTHING` pour eviter les doublons de tickets actifs.
 
 **Mapping audit_type → ticket_type** :
 | audit_type | ticket_type | urgence |

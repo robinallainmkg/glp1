@@ -52,12 +52,12 @@ Les resultats sont statistiquement significatifs, meme s'ils restent modestes en
 
 | Indicateur | Patients sous GLP-1 | Groupe temoin | Difference |
 |------------|---------------------|---------------|------------|
-| **Goutte** | 7,2% | 6,6% | +0,6 point |
+| **Goutte** | 7,4% | 6,6% | +0,8 point (RR 1,12) |
 | **Osteomalacie** | 0,2% | 0,1% | x2 |
 | **Osteoporose diagnostiquee** | Augmentation significative | Ref. | Signal identifie |
 | **Fractures** | Tendance a la hausse | Ref. | En cours d'analyse |
 
-Le chiffre le plus frappant concerne l'osteomalacie — un ramollissement des os lie a un deficit en vitamine D ou en calcium — dont le taux double chez les patients sous GLP-1. L'augmentation de la goutte (7,2% contre 6,6%) est plus modeste mais concerne des millions de patients potentiels a l'echelle mondiale.
+Le chiffre le plus frappant concerne l'osteomalacie — un ramollissement des os lie a un deficit en vitamine D ou en calcium — dont le taux double chez les patients sous GLP-1. L'augmentation de la goutte (7,4% contre 6,6%, soit un risque relatif de 1,12) est plus modeste mais concerne des millions de patients potentiels a l'echelle mondiale.
 
 ## Pourquoi les GLP-1 pourraient fragiliser les os
 

@@ -102,8 +102,13 @@ INSERT INTO correction_tickets (
   '<resume_du_probleme>',
   '<details_positionnement>',
   'approved'
-);
+)
+ON CONFLICT (article_id, ticket_type, source_agent)
+WHERE statut NOT IN ('deployed', 'rejected')
+DO NOTHING;
 ```
+
+> **IMPORTANT** : Utilise TOUJOURS `ON CONFLICT ... DO NOTHING` pour eviter les doublons de tickets actifs.
 
 **Exemples de contenu** :
 - `before_exact` : "Position 3 → 25 sur 'ozempic prix france' en 2 semaines"

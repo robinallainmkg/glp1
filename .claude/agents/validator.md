@@ -40,7 +40,10 @@ git push origin main
 ```sql
 INSERT INTO correction_tickets (slug, title, source_agent, ticket_type, urgence, before_exact, after_suggested, statut)
 VALUES ('<slug_fautif>', 'Build error: <message>', 'validator', 'build_error', 'urgent',
-  '<erreur_complete>', '<suggestion_correction>', 'approved');
+  '<erreur_complete>', '<suggestion_correction>', 'approved')
+ON CONFLICT (article_id, ticket_type, source_agent)
+WHERE statut NOT IN ('deployed', 'rejected')
+DO NOTHING;
 ```
 7. Enregistre l'echec :
 ```sql
@@ -174,8 +177,15 @@ INSERT INTO correction_tickets (
   '<description_du_probleme>', '<correction_suggeree_ou_null>',
   '<resume_du_probleme>', '<explication_detaillee>',
   'approved'
-);
+)
+ON CONFLICT (article_id, ticket_type, source_agent)
+WHERE statut NOT IN ('deployed', 'rejected')
+DO NOTHING;
 ```
+
+> **IMPORTANT** : L'index unique partiel `idx_tickets_no_duplicate` empeche la creation de doublons.
+> Si un ticket actif existe deja pour le meme (article_id, ticket_type, source_agent), l'INSERT est silencieusement ignore.
+> Utilise **TOUJOURS** `ON CONFLICT ... DO NOTHING` pour chaque INSERT de ticket.
 
 **Ne cree PAS de ticket pour les `severity: 'info'`** — ce sont des suggestions, pas des corrections.
 

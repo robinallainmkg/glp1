@@ -1,5 +1,5 @@
 ---
-title: "Procès Ozempic : Effets Secondaires Graves et Recours Juridique France"
+title: "Procès Ozempic : Effets Graves et Recours Juridique France"
 description: "Des milliers de procès aux USA pour gastroparésie sous Ozempic. En France, quels droits avez-vous ? Comment déclarer un effet secondaire grave à l'ANSM."
 keywords: ['ozempic procès', 'effets secondaires graves ozempic', 'recours juridique glp1 france', 'ozempic gastroparésie procès', 'wegovy pancréatite recours', 'déclarer effet indésirable ansm']
 seoTitle: "Ozempic Procès et Effets Graves : Vos Droits en France 2026"
