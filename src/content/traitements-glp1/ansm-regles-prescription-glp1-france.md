@@ -168,7 +168,7 @@ Si votre IMC est compris entre 25 et 30 sans comorbidité liée au poids :
 |-----------|----------|------|-----------|---------------|
 | Wegovy | Sémaglutide 2,4 mg | Injection | Hebdomadaire | Non (en attente) |
 | Mounjaro | Tirzépatide | Injection | Hebdomadaire | Non |
-| Saxenda | Liraglutide 3 mg | Injection | Quotidienne | Non |
+| [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) | Liraglutide 3 mg | Injection | Quotidienne | Non |
 
 Pour comparer ces traitements en détail, consultez notre [comparatif des GLP-1](/guides/quel-traitement-glp1-choisir/).
 

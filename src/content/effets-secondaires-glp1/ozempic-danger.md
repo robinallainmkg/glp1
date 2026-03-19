@@ -47,7 +47,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ## Résumé des dangers identifiés
 
-- **Pancréatite aiguë** : classée "peu fréquente" (< 1/100 patients, 0,3% dans les études cliniques phase 3a — potentiellement mortelle)
+- **[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)** : classée "peu fréquente" (< 1/100 patients, 0,3% dans les études cliniques phase 3a — potentiellement mortelle)
 - **Cancer thyroïde** : risque théorique (études animales)
 - **Occlusion intestinale** : cas rares rapportés
 - **Hypoglycémie sévère** : avec autres antidiabétiques

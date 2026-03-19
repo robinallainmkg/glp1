@@ -69,7 +69,7 @@ Les alternatives disponibles en France et remboursées par la Sécurité Sociale
 - **Avantage** : Stylo prérempli facile à utiliser, pas de manipulation de l'aiguille
 - **Remboursement** : Oui, à 65% par la Sécurité Sociale pour le DT2
 
-#### Rybelsus (sémaglutide oral, comprimé quotidien)
+#### [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) (sémaglutide oral, comprimé quotidien)
 Pour les patients qui refusent les injections, Rybelsus offre une alternative orale.
 
 - **Molécule** : Sémaglutide oral

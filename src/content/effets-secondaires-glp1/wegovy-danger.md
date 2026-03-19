@@ -55,7 +55,7 @@ Wegovy (sémaglutide 2,4 mg) est un traitement injectable prescrit pour la perte
 
 ### Effets secondaires très fréquents (plus de 10% des patients)
 
-Les troubles digestifs sont de loin les effets indésirables les plus courants sous Wegovy :
+Les troubles digestifs sont de loin les [effets indésirables du sémaglutide](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) les plus courants sous Wegovy :
 
 - **Nausées** : touchent environ 25 à 44% des patients selon les études STEP. Elles apparaissent surtout en début de traitement et lors des augmentations de dose, puis s'atténuent progressivement
 - **Diarrhée** : concerne 15 à 30% des patients, généralement transitoire

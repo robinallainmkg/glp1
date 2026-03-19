@@ -36,7 +36,7 @@ La situation s'est globalement améliorée mais reste fragile :
 - [**Ozempic**](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide pour le diabète) : approvisionnement redevenu globalement stable, avec des tensions ponctuelles selon les dosages et les régions
 - [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg pour l'obésité) : disponible mais les stocks peuvent être tendus dans certaines pharmacies, surtout aux doses intermédiaires
 - [**Mounjaro**](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) : approvisionnement en cours de montée en charge, tensions possibles aux doses élevées (10 mg, 15 mg)
-- **Saxenda** (liraglutide) : disponibilité stable
+- [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide) : disponibilité stable
 
 Novo Nordisk a investi dans l'extension de ses capacités de production, notamment sur son site de Chartres (France), pour sécuriser les approvisionnements européens à long terme.
 
@@ -84,7 +84,7 @@ L'ANSM a publié des recommandations spécifiques pour les patients diabétiques
 
 **Si vous prenez Ozempic (sémaglutide injectable) :**
 - Rybelsus (sémaglutide oral) peut être une alternative si votre médecin estime le passage possible (bioéquivalence non identique, ajustement de dose nécessaire)
-- Trulicity (dulaglutide, Eli Lilly), un autre GLP-1 injectable hebdomadaire remboursé
+- [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/) (dulaglutide, Eli Lilly), un autre GLP-1 injectable hebdomadaire remboursé
 - Victoza (liraglutide, Novo Nordisk), GLP-1 injectable quotidien remboursé pour le diabète de type 2
 
 **Points importants :**

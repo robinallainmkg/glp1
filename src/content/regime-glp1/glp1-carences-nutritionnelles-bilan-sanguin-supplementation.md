@@ -48,7 +48,7 @@ L'ANSM a mis en évidence plusieurs carences particulièrement préoccupantes :
 
 - **Fer et anémie ferriprive** : signal le plus fréquemment rapporté, surtout chez les femmes en âge de procréer
 - **Vitamine B1 (thiamine)** : cas de neuropathie sévère documentés, potentiellement graves
-- **Masse musculaire (sarcopénie)** : perte de muscle associée à la perte de poids rapide, aggravée par des apports insuffisants en protéines
+- **[Masse musculaire (sarcopénie)](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : perte de muscle associée à la perte de poids rapide, aggravée par des apports insuffisants en protéines
 - **Vitamine B12** : notamment chez les patients déjà sous metformine (qui réduit l'absorption de la B12)
 - **Zinc et sélénium** : moins documentés mais possibles en cas de régime très restrictif
 

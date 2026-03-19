@@ -429,7 +429,8 @@ async function autopilotCheck() {
 }
 
 function autopilotDecide(state) {
-  const { tickets, urgents, pctUnchecked } = state;
+  const { tickets, urgents, links, opps, pctUnchecked } = state;
+  const totalWork = tickets + (links || 0) + (opps || 0);
 
   if (pctUnchecked >= 30) {
     appendOutput('autopilot', `🧠 Décision: ${pctUnchecked}% non vérifié → fact-check → editorial → validator`, 'progress');
@@ -442,6 +443,10 @@ function autopilotDecide(state) {
   if (tickets >= 20) {
     appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (≥20) → editorial direct → validator`, 'progress');
     return 'editorial-direct';
+  }
+  if (totalWork === 0) {
+    appendOutput('autopilot', `🧠 Décision: 0 travail → generate seulement (pas d'editorial)`, 'progress');
+    return 'generate-only';
   }
   if (tickets < 10) {
     appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (<10) → generate parallèle → editorial → validator`, 'progress');
@@ -466,6 +471,8 @@ async function autopilotGenerate(decision) {
   let agents;
   if (decision === 'factcheck-only') {
     agents = ['fact-check'];
+  } else if (decision === 'generate-only' || decision === 'generate-full') {
+    agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
   } else {
     agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
   }
