@@ -143,8 +143,8 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 - **Wegovy** : Semaglutide à 2,4 mg (spécifiquement pour l'obésité)
 - [**Mounjaro (tirzepatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : Double action GLP-1/GIP, perte de poids supérieure (jusqu'à -22%) pour les patients souhaitant une alternative plus efficace
 - [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) : Liraglutide (jusqu'à 3 mg/jour, injection quotidienne)
-- **Trulicity** : Dulaglutide (une injection hebdomadaire)
-- **Victoza** : Liraglutide (1,2 mg/jour)
+- [**Trulicity (dulaglutide)**](/collections/traitements-glp1/guide-complet-trulicity/) : une injection hebdomadaire
+- [**Victoza (liraglutide)**](/collections/traitements-glp1/guide-complet-victoza/) : 1,2 mg/jour
 
 ### Alternatives orales
 - [**Rybelsus**](/collections/traitements-glp1/guide-complet-rybelsus/) : Semaglutide oral (jusqu'à 14 mg/jour)

@@ -144,7 +144,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Autres GLP-1 pour l'obésité
 - **Wegovy** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
-- **Mounjaro** : Tirzepatide (injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, remboursement envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
+- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, remboursement envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
@@ -153,7 +153,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 ## FAQ Saxenda
 
 ### Saxenda est-il différent des autres GLP-1 ?
-Oui, Saxenda contient du liraglutide (différent du semaglutide dans Ozempic/Wegovy) et nécessite des injections quotidiennes plutôt qu'hebdomadaires.
+Oui, Saxenda contient du liraglutide (différent du semaglutide dans [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/)/Wegovy) et nécessite des injections quotidiennes plutôt qu'hebdomadaires.
 
 ### Puis-je prendre Saxenda si je n'ai pas de diabète ?
 Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète.

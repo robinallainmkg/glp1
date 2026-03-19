@@ -91,7 +91,7 @@ L'ANSM affirme que **le rapport bénéfice/risque des GLP-1 est favorable lorsqu
 
 ### Pour les patients diabétiques de type 2
 
-Si vous êtes diabétique de type 2 et traité par un GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou Trulicity :
+Si vous êtes diabétique de type 2 et traité par un GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/) :
 
 - Votre prescription sera accompagnée d'un formulaire à remplir par votre médecin
 - Ce formulaire ne complique pas votre accès au traitement — il le sécurise

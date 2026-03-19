@@ -41,7 +41,7 @@ Novo Nordisk concentre désormais ses efforts et sa production sur les traitemen
 ### Ce que cela signifie concrètement
 
 - **Victoza restera disponible jusqu'à fin 2026** : les stocks actuels seront maintenus en pharmacie jusqu'à épuisement
-- **Saxenda (liraglutide 3 mg, pour l'obésité) n'est pas concerné** par cet arrêt dans l'immédiat
+- [**Saxenda (liraglutide)**](/collections/traitements-glp1/guide-complet-saxenda/) **(liraglutide 3 mg, pour l'obésité) n'est pas concerné** par cet arrêt dans l'immédiat
 - **Votre traitement actuel reste efficace** jusqu'à la transition — aucune urgence immédiate si vous êtes bien équilibré
 - **Votre médecin doit être informé** de la nécessité de planifier la transition avant la fin de l'année
 

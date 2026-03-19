@@ -51,7 +51,7 @@ Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines
 
 #### **Semaine 1-4 : Dose initiale**
 - **0,25 mg** par semaine (dose d'initiation)
-- Objectif : Accoutumance progressive à la semaglutide
+- Objectif : Accoutumance progressive à la [sémaglutide](/collections/traitements-glp1/guide-complet-ozempic/) (molécule active de Wegovy et Ozempic)
 - Injection sous-cutanée une fois par semaine
 
 #### **Semaine 5-8 : Première augmentation**

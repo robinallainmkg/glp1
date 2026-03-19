@@ -60,7 +60,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 ## 🚨 Effets Secondaires Graves
 
-### Pancréatite
+### [Pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)
 
 **Signes d'alerte** :
 - Douleurs abdominales intenses
