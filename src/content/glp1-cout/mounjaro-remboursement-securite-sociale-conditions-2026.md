@@ -14,7 +14,7 @@ readingTime: 10
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
-mainKeyword: "Mounjaro remboursement securite sociale conditions 2026"
+mainKeyword: "Mounjaro remboursement Sécurité Sociale conditions 2026"
 secondaryKeywords: ["mounjaro remboursement 2026", "tirzepatide remboursement france", "mounjaro HAS avis ASMR", "mounjaro CEPS négociations", "mounjaro obesite remboursement conditions"]
 ---
 
