@@ -85,7 +85,7 @@ Cette double action sur deux voies hormonales distinctes produit un effet synerg
 
 ### Résultats de l'étude REDEFINE 1
 
-L'étude REDEFINE 1, publiée en 2025 dans le *New England Journal of Medicine*, constitue la preuve d'efficacité la plus solide à ce jour :
+[L'étude REDEFINE 1](/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/), publiée en 2025 dans le *New England Journal of Medicine*, constitue la preuve d'efficacité la plus solide à ce jour :
 
 | Critère | CagriSema | Sémaglutide seul | Différence |
 |---------|-----------|------------------|------------|
