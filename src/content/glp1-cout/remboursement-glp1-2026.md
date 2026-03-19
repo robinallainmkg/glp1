@@ -26,8 +26,8 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
 |------------|------------|-------------------|------------------|-----------------|
 | **Ozempic** | Diabète T2 | **30%** (DT2 uniquement) | ~53-54€ | ✅ Maintenu |
-| **Trulicity** | Diabète T2 | **30%** (DT2 uniquement) | ~57€ | ✅ Maintenu |
-| **Victoza** | Diabète T2 | **30%** (DT2 uniquement) | ~42€ | ✅ Maintenu |
+| **Trulicity** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
+| **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~27€ | ✅ Maintenu |
 | **Rybelsus** | Diabète T2 (oral) | **Non remboursé** (avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
 | **Wegovy** | Obésité (IMC ≥30) | **Non remboursé** | 169-360€ | ❌ Non remboursé |
 | **Mounjaro** | DT2 (avis HAS nov. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
@@ -41,7 +41,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 
 ### Critères Communs à Tous les GLP-1
 
-Pour bénéficier du remboursement à 30% par l'Assurance Maladie (taux applicable aux GLP-1 injectables pour le diabète de type 2), vous devez remplir ces conditions de base :
+Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Saxenda, 65% pour Trulicity/Victoza selon la classification en liste I ou II), vous devez remplir ces conditions de base :
 
 ✅ **Prescription médicale obligatoire**
 - Ordonnance d'un médecin généraliste, endocrinologue ou diabétologue
@@ -70,7 +70,7 @@ Pour bénéficier du remboursement à 30% par l'Assurance Maladie (taux applicab
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable confirmé de la HAS le 9 décembre 2025** avec ASMR IV (amélioration mineure), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35) après échec des mesures nutritionnelles. Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
+**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349, ASMR IV, amélioration mineure), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35) après échec des mesures nutritionnelles. Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
 
 ### Ce qu'il faut savoir sur le remboursement Mounjaro
 
@@ -110,7 +110,7 @@ Pour bénéficier du remboursement à 30% par l'Assurance Maladie (taux applicab
 
 ### Statut Officiel
 
-**Ozempic (sémaglutide 0.5-2 mg)** maintient son remboursement à **30%** en 2026 pour le **diabète de type 2** uniquement.
+**Ozempic (sémaglutide 0.25-1 mg)** maintient son remboursement à **30%** en 2026 pour le **diabète de type 2** uniquement. (Note : le dosage 2 mg n'est pas commercialisé en France.)
 
 ⚠️ **Important** : Ozempic n'est PAS remboursé pour la perte de poids seule (sans diabète). Pour cette indication, utilisez **Wegovy** (même principe actif, dosage supérieur).
 

@@ -51,11 +51,11 @@ Cette flexibilité représente une avancée considérable pour les patients qui 
 
 Les résultats des études de phase 3 publiés en 2025 montrent :
 
-- **Perte de poids** : 14,7 à 15,8% sur 36 semaines pour l'indication obésité
+- **Perte de poids** : 7,5 à 11,2% sur 72 semaines pour l'indication obésité (étude ATTAIN-1, selon la dose)
 - **Diabète de type 2** : réduction de l'HbA1c de 1,3 à 2,1% selon la dose
 - **Cardiovasculaire** : données en cours d'évaluation dans l'étude ATTAIN-TIMI 63
 
-Ces résultats se comparent favorablement à ceux de l'Ozempic injectables (–5 à –7% pour les doses diabète), bien qu'en retrait par rapport au Wegovy (–15 à –17%) ou au Mounjaro (–20 à –22%).
+Ces résultats sont inférieurs à ceux des injectables comme Wegovy (–15 à –17%) ou Mounjaro (–20 à –22%), mais représentent un avantage significatif par rapport à l'absence de traitement, avec l'avantage majeur de la forme orale sans contrainte alimentaire.
 
 ### Statut réglementaire en Europe
 

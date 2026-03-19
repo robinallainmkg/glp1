@@ -85,9 +85,9 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 | 0.25 mg | 77,60 € | 60 € |
 | 0.5 mg | 77,60 € | 60 € |
 | 1 mg | 77,60 € | 120 € |
-| 2 mg | 77,60 € | 120 € |
+| 2 mg | Non commercialisé en France | — |
 
-**Prix moyen mensuel** : 90-120 € selon la posologie
+**Prix moyen mensuel** : 60-120 € selon la posologie (dosages 0.25-1 mg)
 
 ### Comparaison avec autres GLP-1
 
@@ -96,7 +96,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 | Ozempic | 90-120 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
-| Trulicity | ~81 € | 30% (DT2 uniquement) |
+| Trulicity | ~81 € | 65% (DT2 uniquement) |
 | Mounjaro | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale

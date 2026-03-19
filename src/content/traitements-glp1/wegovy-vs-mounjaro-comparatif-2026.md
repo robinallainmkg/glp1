@@ -42,14 +42,14 @@ Ce comparatif detaille vous aide a y voir clair en mars 2026, avec des donnees a
 | **Dose cible** | 2,4 mg/semaine | 15 mg/semaine |
 | **Perte de poids moyenne** | -15% a -17% | -20% a -22,5% |
 | **Prix mensuel** | 169-360 EUR | 230-440 EUR |
-| **Remboursement SS** | Non (avis HAS favorable fev. 2026) | Non (avis HAS favorable nov. 2025) |
+| **Remboursement SS** | Non (avis HAS favorable déc. 2024) | Non (avis HAS favorable nov. 2025) |
 | **Disponible en France** | Depuis octobre 2024 | Depuis novembre 2024 |
 
 ## Comment fonctionnent Wegovy et Mounjaro ?
 
 ### Wegovy : un agoniste GLP-1 pur
 
-Wegovy contient du **semaglutide**, le meme principe actif qu'Ozempic mais a un dosage plus eleve (jusqu'a 2,4 mg par semaine contre 2 mg maximum pour Ozempic). Il agit en reproduisant l'effet du GLP-1, une hormone naturelle de l'intestin qui :
+Wegovy contient du **semaglutide**, le meme principe actif qu'Ozempic mais a un dosage plus eleve (jusqu'a 2,4 mg par semaine contre 1 mg maximum pour Ozempic). Il agit en reproduisant l'effet du GLP-1, une hormone naturelle de l'intestin qui :
 
 - **Reduit l'appetit** en agissant sur les centres de la satiety dans le cerveau
 - **Ralentit la vidange gastrique**, ce qui prolonge la sensation de satiete apres les repas
