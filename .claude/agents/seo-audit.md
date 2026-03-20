@@ -34,6 +34,7 @@ Execute `npm run build` via Bash pour generer le dossier `dist/`.
 - Verifie que `public/robots.txt` existe et est correctement configure
 - Verifie que le sitemap XML existe dans `dist/` ou `public/`
 - Verifie que toutes les pages du sitemap sont accessibles dans `dist/`
+- **Coherence robots.txt vs sitemap** : verifie qu'aucune URL du sitemap n'est bloquee par un `Disallow` dans robots.txt. Attention : un `Disallow: /foo` bloque `/foo`, `/foo/`, `/foobar` mais PAS `/bar/foo/`. Compare les paths correctement selon la spec robots.txt
 
 #### 3.2 Balises meta
 Pour chaque fichier HTML dans `dist/` (max 50 pages) :
@@ -44,7 +45,8 @@ Pour chaque fichier HTML dans `dist/` (max 50 pages) :
 
 #### 3.3 Structure des headings
 Pour chaque page HTML :
-- Verifie qu'il y a exactement un `<h1>`
+- **Ignore les pages de redirection** : si le HTML contient `window.location.replace`, `http-equiv="refresh"`, ou `<meta http-equiv="refresh"`, c'est une page de redirection — ne PAS signaler de h1 manquant
+- Verifie qu'il y a exactement un `<h1>` (uniquement sur les pages de contenu reel)
 - Verifie que la hierarchie h1 > h2 > h3 est respectee (pas de saut)
 
 #### 3.4 Images et accessibilite
@@ -56,6 +58,10 @@ Pour chaque page HTML :
 
 #### 3.5 Maillage interne
 - Identifie les liens internes casses (href vers des pages qui n'existent pas dans `dist/`)
+- **Exclusions obligatoires pour eviter les faux positifs** :
+  - **Ignore les href dans les balises `<script>`** : les `href="$1"`, `href="$2"` etc. sont des backreferences regex JavaScript valides, PAS des vrais liens
+  - **Ignore les liens dans les pages de redirection** : si la page source contient `window.location.replace` ou `http-equiv="refresh"`, ignorer tous ses liens (l'utilisateur ne verra jamais cette page)
+  - **Ignore les pages admin** (`/admin/*`) : elles sont bloquees par robots.txt
 - Identifie les pages orphelines (aucun lien interne pointant vers elles)
 
 #### 3.6 Performance
@@ -131,6 +137,20 @@ UPDATE agent_runs SET status = 'completed', completed_at = NOW(), items_processe
   metadata = '{"pages_audited": <n>, "critical": <n>, "warning": <n>, "info": <n>, "tickets_created": <n>}'::jsonb
 WHERE id = '<run_id>';
 ```
+
+## Prevention des faux positifs
+
+Avant d'enregistrer un resultat `critical`, verifie systematiquement :
+
+1. **Page de redirection ?** Si le HTML contient `window.location.replace`, `http-equiv="refresh"`, ou un body quasi-vide avec un lien unique → c'est une redirection. Ne PAS signaler : h1 manquant, liens casses dans cette page, meta manquantes.
+
+2. **Contenu dans `<script>` ?** Les `href="$1"`, `href="$2"` etc. dans les balises `<script>` sont du code JavaScript (regex backreferences), PAS des vrais liens HTML. Quand tu extrais les liens d'une page, **ignore tout le contenu entre `<script>` et `</script>`**.
+
+3. **Page admin ?** Les pages sous `/admin/` sont bloquees par robots.txt. Les liens casses dans ces pages n'affectent PAS le SEO. Ne cree PAS de ticket pour les pages admin.
+
+4. **Redirect Astro config ?** Les redirects dans `config/astro.config.mjs` generent des pages HTML intermediaires. Ces pages sont des redirections, pas du contenu. Ignore-les.
+
+5. **Matching robots.txt** : `Disallow: /temoignages-glp1` bloque `/temoignages-glp1` et `/temoignages-glp1/*` mais NE bloque PAS `/guides/temoignages-glp1/`. Le match se fait par prefixe depuis la racine uniquement.
 
 ## Limites
 
