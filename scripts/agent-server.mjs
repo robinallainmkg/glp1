@@ -128,7 +128,14 @@ function summarizeTool(agentName, toolName, input) {
       const cmd = (inp.command || '').trim();
       if (!cmd) return null;
       if (cmd.includes('git commit')) return `🔀 Git commit`;
-      if (cmd.includes('git push')) return `🚀 Git push`;
+      if (cmd.includes('git push')) {
+        // BLOCK git push from editorial agents — only validator is allowed to push
+        if (agentName.startsWith('editorial')) {
+          appendOutput(agentName, `⛔ BLOQUÉ: git push interdit pour editorial — seul le validator push`, 'error');
+          return `⛔ Git push BLOQUÉ`;
+        }
+        return `🚀 Git push`;
+      }
       if (cmd.includes('git add')) return null; // noise before commit
       if (cmd.includes('git diff') || cmd.includes('git status')) return null; // noise
       if (cmd.includes('git merge')) return `🔀 Git merge`;

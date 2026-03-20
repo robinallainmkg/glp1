@@ -124,14 +124,17 @@ Apres toutes les modifications :
 1. Stage les fichiers modifies : `git add src/content/...`
 2. Commit sur `main` : `git commit -m "editorial: apply <n> corrections, <n> links, <n> new articles (cycle <N>)"`
 
-**IMPORTANT** : Ne PAS faire `git push`. C'est le **validator** qui fait le build check et le push. L'editorial ne fait QUE modifier les fichiers et commit localement.
+**⛔ INTERDIT DE FAIRE `git push` ⛔** — JAMAIS. JAMAIS. JAMAIS.
+C'est le **validator** qui fait le build check et le push.
+L'editorial ne fait QUE : modifier fichiers → `git add` → `git commit`. RIEN D'AUTRE.
+Si tu fais `git push`, le deploy se lance sans build check et peut casser le site.
 
-### 6. Post-deploy : marquer les tickets deployed
+### 6. Marquer les tickets comme ready_to_deploy
 
-Apres le push sur `main` reussi, marque tous les tickets traites :
+Apres le commit local, marque les tickets traites comme `ready_to_deploy` (PAS deployed — c'est le validator qui les marque deployed apres le push) :
 ```sql
-UPDATE correction_tickets SET statut = 'deployed', deployed_at = NOW()
-WHERE statut = 'ready_to_deploy'
+UPDATE correction_tickets SET statut = 'ready_to_deploy'
+WHERE statut = 'in_progress' AND source_agent IN ('fact-check', 'validator', 'seo-audit', 'analytics')
   AND id IN ('<ticket_id_1>', '<ticket_id_2>', ...);
 ```
 

@@ -756,7 +756,7 @@ import { supabaseConfig } from '../lib/supabase.js';
         if (errData && errData.error === 'daily_limit') {
           showDailyLimitCTA();
         } else {
-          addAssistantMessage("Trop de messages. Reessayez dans quelques minutes.");
+          addAssistantMessage("Trop de messages. R\u00e9essayez dans quelques minutes.");
         }
         isSending = false;
         return;
@@ -788,7 +788,7 @@ import { supabaseConfig } from '../lib/supabase.js';
       }
 
       // Display response with typewriter effect
-      typewriterMessage(data.response || "Desole, je n'ai pas pu repondre.", data.sources || []);
+      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || []);
 
       // Show signup CTA after 2nd user message
       if (messageCount >= 2 && !ctaShown) {

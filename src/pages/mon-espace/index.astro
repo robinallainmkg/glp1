@@ -1366,10 +1366,6 @@ import { supabaseConfig } from '../../lib/supabase';
       <ul class="paywall-features">
         <li>Messages Coach IA illimités</li>
         <li>Réponses personnalisées selon votre profil</li>
-        <li>Suivi de poids et courbes de progression</li>
-        <li>Programme nutrition personnalisé</li>
-        <li>Rappels injection</li>
-        <li>Recommandations IA personnalisées</li>
         <li>Historique complet des conversations</li>
       </ul>
       <button class="btn-subscribe" id="pw-subscribe-btn" onclick="subscribe()">Commencer l'essai gratuit</button>
@@ -1953,7 +1949,7 @@ import { supabaseConfig } from '../../lib/supabase';
           var pEnd2 = new Date(profile.subscription_period_end);
           subDetails.textContent = 'Acc\u00e8s jusqu\'au ' + pEnd2.toLocaleDateString('fr-FR');
         }
-        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Se r\u00e9abonner</a>';
+        subActions.innerHTML = '<button onclick="subscribe()" style="background:#16a34a;color:white;border:none;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;cursor:pointer">Se r\u00e9abonner</button>';
       } else {
         subBadge.textContent = 'Gratuit';
         subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#f3f4f6;color:#6b7280';
