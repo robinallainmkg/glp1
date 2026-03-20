@@ -136,9 +136,7 @@ import AdminNav from '../../components/AdminNav.astro';
 </head>
 <body>
 <script>
-  if (!sessionStorage.getItem('admin_auth')) {
-    window.location.href = '/admin/login/';
-  }
+  // Auth guard handled by AdminNav (localStorage, 24h expiry)
 </script>
 
 <AdminNav />

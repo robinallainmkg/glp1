@@ -66,6 +66,12 @@ const iconSvgs: Record<string, string> = {
       </svg>
       <span>Retour au site</span>
     </a>
+    <a href="#" class="sidebar-link sidebar-back" id="logoutBtn">
+      <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+      </svg>
+      <span>Déconnexion</span>
+    </a>
   </div>
 </aside>
 
@@ -98,15 +104,28 @@ const iconSvgs: Record<string, string> = {
     });
   }
 
-  // Auth check — TEMPORARILY DISABLED FOR LOCAL DEV
-  // (function() {
-  //   const isLoginPage = window.location.pathname.includes('/admin/login');
-  //   if (isLoginPage) return;
-  //   const token = sessionStorage.getItem('admin_auth');
-  //   if (!token) {
-  //     window.location.href = '/admin/login/';
-  //   }
-  // })();
+  // Auth check — centralized, uses localStorage with 24h expiry
+  (function() {
+    const isLoginPage = window.location.pathname.includes('/admin/login');
+    if (isLoginPage) return;
+    const AUTH_KEY = 'admin_auth';
+    const AUTH_EXPIRY_MS = 24 * 60 * 60 * 1000;
+    const token = localStorage.getItem(AUTH_KEY);
+    if (!token || (Date.now() - parseInt(token, 10)) > AUTH_EXPIRY_MS) {
+      localStorage.removeItem(AUTH_KEY);
+      window.location.href = '/admin/login/';
+    }
+  })();
+
+  // Logout button
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('admin_auth');
+      window.location.href = '/admin/login/';
+    });
+  }
 </script>
 
 <style>
