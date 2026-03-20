@@ -138,7 +138,7 @@ Ce processus prend habituellement 12 à 18 mois après l'AMM européenne. En pra
 
 ### La question des approvisionnements
 
-Novo Nordisk a anticipé la demande en investissant massivement dans ses capacités de production. L'usine de Chartres (France) a doublé sa capacité de production d'agonistes GLP-1 en 2025-2026, ce qui devrait limiter les risques de pénurie qui avaient touché [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et Wegovy injectable lors de leur lancement.
+Novo Nordisk a anticipé la demande en investissant massivement dans ses capacités de production. L'usine de Chartres (France) a doublé sa capacité de production d'agonistes GLP-1 en 2025-2026, ce qui devrait limiter les risques de [pénurie](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/) qui avaient touché [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et Wegovy injectable lors de leur lancement.
 
 ## Prix estimé et question du remboursement {#prix-remboursement}
 

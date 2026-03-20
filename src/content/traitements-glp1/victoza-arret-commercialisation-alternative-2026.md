@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Novo Nordisk a annoncé l'arrêt de commercialisation de Victoza (liraglutide 1,2 mg et 1,8 mg) en France pour fin 2026. Si vous êtes traité par Victoza pour votre diabète de type 2, cette décision vous concerne directement. Voici tout ce que vous devez savoir pour anticiper la transition vers une alternative, sans rupture de traitement ni risque pour votre santé.
+Novo Nordisk a annoncé l'arrêt de commercialisation de [Victoza](/collections/traitements-glp1/guide-complet-victoza/) (liraglutide 1,2 mg et 1,8 mg) en France pour fin 2026. Si vous êtes traité par Victoza pour votre diabète de type 2, cette décision vous concerne directement. Voici tout ce que vous devez savoir pour anticiper la transition vers une alternative, sans rupture de traitement ni risque pour votre santé.
 
 ## Pourquoi Victoza est-il arrêté ?
 

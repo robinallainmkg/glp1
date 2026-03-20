@@ -35,7 +35,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
-| **[Ozempic](/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~76,58€/stylo | 30% DT2 uniquement |
+| **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~76,58€/stylo | 30% DT2 uniquement |
 | **[Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 169-360€ | Non remboursé |
 | **Saxenda** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
 | **Trulicity** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 30% DT2 |
@@ -156,7 +156,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 ### Traitements Naturels Efficaces
 
-**Découvrez les [alternatives naturelles](/alternatives-glp1/alternatives-naturelles-ozempic/) aux médicaments GLP-1** pour une approche plus douce de la perte de poids. Ces solutions peuvent compléter ou remplacer les traitements médicamenteux dans certains cas.
+**Découvrez les [alternatives naturelles](/collections/alternatives-glp1/alternatives-naturelles-ozempic/) aux médicaments GLP-1** pour une approche plus douce de la perte de poids. Ces solutions peuvent compléter ou remplacer les traitements médicamenteux dans certains cas.
 
 - **Berbérine :** Régulateur glycémique naturel, efficace contre le diabète et l'obésité
 - **Chrome :** Améliore la sensibilité à l'insuline et aide à contrôler l'appétit

@@ -43,7 +43,7 @@ La révolution des traitements GLP-1 est loin d'être terminée. Après l'Ozempi
 
 ### Qu'est-ce que l'orforglipron ?
 
-L'orforglipron est un agoniste des récepteurs GLP-1 développé par **Eli Lilly** sous forme de **comprimé oral** — une première majeure dans cette classe thérapeutique. Contrairement au Rybelsus (sémaglutide oral de Novo Nordisk), qui nécessite d'être pris le matin à jeun avec un verre d'eau et d'attendre 30 minutes avant de manger, l'orforglipron peut être pris **à n'importe quel moment de la journée**, avec ou sans nourriture.
+L'orforglipron est un agoniste des récepteurs GLP-1 développé par **Eli Lilly** sous forme de **comprimé oral** — une première majeure dans cette classe thérapeutique. Contrairement au [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) (sémaglutide oral de Novo Nordisk), qui nécessite d'être pris le matin à jeun avec un verre d'eau et d'attendre 30 minutes avant de manger, l'orforglipron peut être pris **à n'importe quel moment de la journée**, avec ou sans nourriture.
 
 Cette flexibilité représente une avancée considérable pour les patients qui refusent ou tolèrent mal les injections hebdomadaires.
 
@@ -186,7 +186,7 @@ Pour les traitements actuellement disponibles, consultez notre [guide complet re
 ## FAQ {#faq}
 
 **L'orforglipron est-il disponible en France en 2026 ?**
-Non. En mars 2026, l'orforglipron n'a pas encore reçu son AMM européenne. La demande est en cours d'évaluation par l'EMA. Une commercialisation avant 2027 est peu probable.
+Non. En mars 2026, l'[Orforglipron](/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/) n'a pas encore reçu son AMM européenne. La demande est en cours d'évaluation par l'EMA. Une commercialisation avant 2027 est peu probable.
 
 **Le CagriSema est-il meilleur que le Mounjaro ?**
 En termes de perte de poids, oui : le CagriSema a montré –22,7% dans l'étude REDEFINE 1, contre –20 à –22% pour le Mounjaro. Cependant, Mounjaro est disponible dès maintenant, tandis que le CagriSema n'arrivera pas avant 2027-2028 en France.

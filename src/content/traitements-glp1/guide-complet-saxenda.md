@@ -143,7 +143,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 ## Alternatives à Saxenda
 
 ### Autres GLP-1 pour l'obésité
-- **Wegovy** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
+- **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
 - [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, remboursement envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
 
 ### Traitements alternatifs

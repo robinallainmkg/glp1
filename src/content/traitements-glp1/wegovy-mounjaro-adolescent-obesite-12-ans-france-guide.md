@@ -26,7 +26,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-L'obésité pédiatrique est l'une des problématiques de santé publique les plus préoccupantes en France, touchant environ 17 % des enfants et adolescents. Depuis 2022, Wegovy (sémaglutide 2,4 mg) dispose d'une autorisation de mise sur le marché (AMM) européenne pour les adolescents obèses à partir de 12 ans, ouvrant une nouvelle option thérapeutique pour des familles longtemps démunies face à cette maladie chronique. Voici ce que vous devez savoir en 2026.
+L'obésité pédiatrique est l'une des problématiques de santé publique les plus préoccupantes en France, touchant environ 17 % des enfants et adolescents. Depuis 2022, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) dispose d'une autorisation de mise sur le marché (AMM) européenne pour les adolescents obèses à partir de 12 ans, ouvrant une nouvelle option thérapeutique pour des familles longtemps démunies face à cette maladie chronique. Voici ce que vous devez savoir en 2026.
 
 ## Quelle est la situation réglementaire en France ?
 
@@ -38,7 +38,7 @@ Depuis juin 2025, conformément à la nouvelle réglementation ANSM, tout médec
 
 ### Et Mounjaro (tirzépatide) chez les adolescents ?
 
-Mounjaro (tirzépatide, Eli Lilly) n'a pas encore d'AMM pour les moins de 18 ans en Europe. Des essais cliniques de phase III chez les adolescents sont en cours, avec des résultats attendus courant 2026-2027. En l'état actuel, la prescription de Mounjaro à un adolescent constituerait une utilisation hors AMM, non recommandée hors contexte d'essai clinique.
+[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide, Eli Lilly) n'a pas encore d'AMM pour les moins de 18 ans en Europe. Des essais cliniques de phase III chez les adolescents sont en cours, avec des résultats attendus courant 2026-2027. En l'état actuel, la prescription de Mounjaro à un adolescent constituerait une utilisation hors AMM, non recommandée hors contexte d'essai clinique.
 
 En pratique, c'est donc **Wegovy** qui reste le seul traitement GLP-1 officiellement disponible pour les adolescents en France en mars 2026.
 

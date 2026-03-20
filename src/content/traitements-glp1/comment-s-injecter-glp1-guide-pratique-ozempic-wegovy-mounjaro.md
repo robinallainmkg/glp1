@@ -42,7 +42,7 @@ Commencer un traitement par stylo injecteur GLP-1 peut sembler intimidant au pre
 
 Chaque médicament GLP-1 injectable est conditionné dans un **stylo auto-injecteur prérempli** :
 
-- **Ozempic** : stylo FlexTouch (Novo Nordisk), disponible en 0,25/0,5 mg, 1 mg et 2 mg
+- **Ozempic** : stylo FlexTouch (Novo Nordisk), disponible en 0,25/0,5 mg, 1 mg et 2 mg — un [nouveau stylo Ozempic 3ml](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) est également disponible depuis 2026
 - **Wegovy** : stylo FlexTouch (Novo Nordisk), disponible en 0,25 mg, 0,5 mg, 1 mg, 1,7 mg et 2,4 mg
 - **Mounjaro** : stylo KwikPen (Eli Lilly), disponible en 2,5 mg, 5 mg, 7,5 mg, 10 mg, 12,5 mg et 15 mg
 

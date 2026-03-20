@@ -94,7 +94,7 @@ Insulevel est déconseillé pour :
 
 ### Interactions médicamenteuses
 
-Les personnes sous traitement médical, surtout celles utilisant des antidiabétiques oraux ou de l'insuline, doivent consulter un professionnel de santé avant l'utilisation pour éviter tout effet synergique ou interactif.
+Les personnes sous traitement médical, surtout celles utilisant des antidiabétiques oraux ou de l'insuline, doivent consulter un professionnel de santé avant l'utilisation pour éviter tout effet synergique ou interactif. Pour en savoir plus sur les [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) des traitements GLP-1.
 
 ### Interventions chirurgicales
 

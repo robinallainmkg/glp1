@@ -92,7 +92,7 @@ Sur la base de l'avis HAS et des conditions généralement imposées par le CEPS
 ### Critères de prescription
 
 Les conditions de prescription seront probablement identiques à celles de Wegovy, notamment :
-- **Prescription initiale** par tout médecin (généraliste ou spécialiste), depuis juin 2025
+- **Prescription initiale** réservée aux médecins spécialistes de l'obésité (centres spécialisés de l'obésité, CHU), selon l'avis de la HAS
 - **Formulaire obligatoire** similaire à celui existant pour les GLP-1 anti-diabétiques, à compléter par le médecin
 - **Renouvellement** conditionné à l'atteinte d'objectifs de perte de poids (généralement ≥ 5 % à 6 mois)
 
@@ -125,9 +125,9 @@ Pour une comparaison complète, consultez notre [comparatif Wegovy vs Mounjaro 2
 
 En France, le processus de remboursement est rigoureusement encadré par la loi : avis de la HAS obligatoire, puis négociations CEPS, puis arrêté ministériel. Ce processus prend en moyenne 12 à 18 mois entre le dépôt du dossier et la publication du prix remboursé.
 
-**Mounjaro est déjà remboursé pour le diabète. Pourquoi pas pour l'obésité aussi ?**
+**Mounjaro n'est pas encore remboursé. Pourquoi ?**
 
-Le remboursement est accordé par indication médicale, pas par médicament. Mounjaro remboursé pour le diabète (indication validée depuis 2023) suit des règles de prescription différentes de Mounjaro pour l'obésité. L'indication obésité nécessitait un dossier HAS distinct, déposé ultérieurement.
+Mounjaro n'est remboursé pour aucune indication en France en mars 2026. La HAS a rendu un avis favorable pour le DT2 et pour l'obésité, mais les négociations de prix entre Eli Lilly et le CEPS n'ont pas encore abouti. Le tirzépatide est vendu en prix libre depuis sa commercialisation en novembre 2024. Le remboursement est envisagé au 2e semestre 2026.
 
 **Je prends déjà Mounjaro pour la perte de poids à mes frais. Que dois-je faire en attendant le remboursement ?**
 

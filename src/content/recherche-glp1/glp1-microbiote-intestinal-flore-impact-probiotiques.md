@@ -138,7 +138,7 @@ Des recherches explorent la possibilité d'utiliser la composition du microbiome
 
 ### L'axe intestin-cerveau : un médiateur clé
 
-Le [lien entre GLP-1 et comportements alimentaires](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) passe aussi par l'axe intestin-cerveau. Le microbiote produit des neurotransmetteurs (sérotonine, GABA, dopamine précurseurs) et des métabolites qui communiquent avec le système nerveux central via le nerf vague. Les GLP-1 agissent aussi directement sur ce nerf vague. Cette convergence pourrait expliquer certains effets comportementaux des GLP-1 — comme la réduction des comportements compulsifs alimentaires ou des addictions — et suggère que le microbiote pourrait amplifier ou moduler ces effets.
+Le [lien entre GLP-1 et comportements alimentaires](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) passe aussi par l'axe intestin-cerveau. Le microbiote produit des neurotransmetteurs (sérotonine, GABA, dopamine précurseurs) et des métabolites qui communiquent avec le système nerveux central via le nerf vague. Les GLP-1 agissent aussi directement sur ce nerf vague. Cette convergence pourrait expliquer certains effets comportementaux des GLP-1 — comme la réduction des comportements compulsifs alimentaires ou des [addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) — et suggère que le microbiote pourrait amplifier ou moduler ces effets.
 
 ## Ce qu'on retient
 

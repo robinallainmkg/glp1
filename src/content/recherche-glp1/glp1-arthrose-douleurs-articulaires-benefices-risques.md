@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Parmi les bénéfices inattendus des traitements GLP-1, le soulagement des douleurs articulaires attire une attention croissante. Des milliers de patients sous [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) rapportent une nette amélioration de leurs douleurs de genoux et de hanches. Est-ce uniquement lié à la perte de poids, ou les GLP-1 ont-ils un effet direct sur l'inflammation articulaire ? Les données de 2025-2026, notamment les résultats de l'essai TRIUMPH-4 sur le retatrutide, apportent des réponses concrètes.
+Parmi les bénéfices inattendus des traitements GLP-1, le soulagement des douleurs articulaires attire une attention croissante. Des milliers de patients sous [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) rapportent une nette amélioration de leurs douleurs de genoux et de hanches. Est-ce uniquement lié à la perte de poids, ou les GLP-1 ont-ils un effet direct sur l'inflammation articulaire ? Les données de 2025-2026, notamment les résultats de l'essai TRIUMPH-4 sur le [retatrutide](/collections/recherche-glp1/retatrutide-triple-agoniste-glp1-gip-glucagon-france-2026/), apportent des réponses concrètes.
 
 ## Ce que l'on sait sur le lien entre obésité et arthrose
 

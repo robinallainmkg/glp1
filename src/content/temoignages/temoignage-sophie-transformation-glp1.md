@@ -13,7 +13,7 @@ priority: 3
 mainKeyword: "temoignage ozempic perte de poids"
 ---
 
-# Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans
+## Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans
 
 ## Sophie D. : Renaissance à 52 Ans avec Ozempic
 

@@ -86,7 +86,7 @@ Il est important de bien distinguer les indications officielles des usages "off-
 ### Indications officielles des GLP-1 en France
 
 En France en 2026, les GLP-1 sont [remboursés](/collections/glp1-cout/remboursement-glp1-2026/) uniquement dans deux cadres :
-- **Diabète de type 2** (Ozempic, Victoza, Trulicity, [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/))
+- **Diabète de type 2** (Ozempic, [Victoza](/collections/traitements-glp1/guide-complet-victoza/), [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/), [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/))
 - **Obésité avec IMC ≥ 30** et comorbidité, ou IMC ≥ 35 (Wegovy, Mounjaro — remboursement en cours de négociation)
 
 Le SOPK en lui-même n'est pas une indication officielle pour la prescription de GLP-1.

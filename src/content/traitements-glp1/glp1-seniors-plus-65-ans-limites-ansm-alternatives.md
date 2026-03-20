@@ -34,7 +34,7 @@ Lorsque l'ANSM a révisé les [règles de prescription des GLP-1 en France](/col
 
 ### Les essais cliniques : un angle mort majeur
 
-La principale raison derrière cette restriction est d'ordre scientifique. La plupart des grandes études cliniques ayant démontré l'efficacité et la sécurité de ces médicaments — les essais STEP pour le sémaglutide (Wegovy), et SURMOUNT pour le tirzépatide (Mounjaro) — ont inclus une majorité de patients âgés de moins de 65 ans. Les données disponibles sur les patients plus âgés restent donc limitées.
+La principale raison derrière cette restriction est d'ordre scientifique. La plupart des grandes études cliniques ayant démontré l'efficacité et la sécurité de ces médicaments — les essais STEP pour le sémaglutide (Wegovy), et SURMOUNT pour le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) — ont inclus une majorité de patients âgés de moins de 65 ans. Les données disponibles sur les patients plus âgés restent donc limitées.
 
 L'ANSM et l'EMA (Agence européenne des médicaments) appliquent un principe de précaution : en l'absence de données robustes dans une population donnée, on restreint l'usage jusqu'à ce que des études spécifiques permettent de conclure sur le rapport bénéfice/risque.
 
@@ -64,7 +64,7 @@ Il est crucial de distinguer deux situations très différentes :
 
 ### GLP-1 pour le diabète de type 2 : PAS de limite d'âge
 
-Les GLP-1 prescrits dans le cadre du **diabète de type 2** (Ozempic, Trulicity, Victoza, Rybelsus) ne sont **pas concernés par cette restriction d'âge**. Un patient diabétique de 72 ans peut tout à fait se voir prescrire de l'Ozempic par son médecin traitant ou son diabétologue.
+Les GLP-1 prescrits dans le cadre du **diabète de type 2** (Ozempic, Trulicity, Victoza, Rybelsus) ne sont **pas concernés par cette restriction d'âge**. Un patient diabétique de 72 ans peut tout à fait se voir prescrire de l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) par son médecin traitant ou son diabétologue.
 
 Pourquoi ? Parce que le rapport bénéfice/risque dans le diabète est bien documenté, y compris chez les personnes âgées. L'essai LEADER (Victoza) et l'essai SUSTAIN-6 (Ozempic) incluaient des patients âgés, et les bénéfices cardiovasculaires des GLP-1 sont particulièrement pertinents dans cette population.
 

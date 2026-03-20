@@ -83,9 +83,9 @@ En cas de rupture prolongée (plus de 5-7 jours), informez votre médecin. Il pe
 L'ANSM a publié des recommandations spécifiques pour les patients diabétiques en cas de pénurie de sémaglutide :
 
 **Si vous prenez Ozempic (sémaglutide injectable) :**
-- Rybelsus (sémaglutide oral) peut être une alternative si votre médecin estime le passage possible (bioéquivalence non identique, ajustement de dose nécessaire)
+- [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) (sémaglutide oral) peut être une alternative si votre médecin estime le passage possible (bioéquivalence non identique, ajustement de dose nécessaire)
 - [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/) (dulaglutide, Eli Lilly), un autre GLP-1 injectable hebdomadaire remboursé
-- Victoza (liraglutide, Novo Nordisk), GLP-1 injectable quotidien remboursé pour le diabète de type 2
+- [Victoza](/collections/traitements-glp1/guide-complet-victoza/) (liraglutide, Novo Nordisk), GLP-1 injectable quotidien remboursé pour le diabète de type 2
 
 **Points importants :**
 - Le passage d'un GLP-1 à un autre nécessite un avis médical

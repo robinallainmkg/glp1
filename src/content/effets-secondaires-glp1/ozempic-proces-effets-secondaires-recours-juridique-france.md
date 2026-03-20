@@ -55,9 +55,9 @@ La gastroparésie est un ralentissement sévère ou une paralysie de la vidange 
 Des obstruction et iléus paralytiques ont été rapportés, notamment chez des patients opérés sous anesthésie générale dont le traitement GLP-1 n'avait pas été interrompu avant la chirurgie. Voir notre guide sur les [GLP-1 et la chirurgie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/).
 
 **3. Pancréatite aiguë**
-Des cas de pancréatite (inflammation sévère du pancréas) ont été signalés. Ce risque est mentionné dans les notices des médicaments, mais les plaignants affirment que les patients n'en ont pas été suffisamment avertis.
+Des cas de [pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) (inflammation sévère du pancréas) ont été signalés. Ce risque est mentionné dans les notices des médicaments, mais les plaignants affirment que les patients n'en ont pas été suffisamment avertis.
 
-**4. Neuropathie optique ischémique antérieure non artéritique (NAION)**
+**4. [Neuropathie optique](/collections/effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian/) ischémique antérieure non artéritique (NAION)**
 Des cas de cécité partielle irréversible ont été associés à l'usage de sémaglutide dans une étude de Harvard publiée en 2024. Les poursuites sur ce sujet ont débuté en 2025.
 
 ### L'argument juridique central

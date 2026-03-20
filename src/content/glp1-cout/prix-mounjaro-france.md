@@ -406,8 +406,8 @@ Plusieurs dispositifs d'aide existent pour réduire le coût de Mounjaro :
 - Numéro gratuit : 0 800 10 12 13
 
 **3. CMU-C et Complémentaire Santé Solidaire**
-- Prise en charge à 100% si éligible
-- Demande via votre caisse d'Assurance Maladie
+- **Ne couvre PAS Mounjaro** car le médicament n'est pas remboursé par la Sécurité Sociale
+- La CSS ne prend en charge que les médicaments inscrits sur la liste des médicaments remboursables
 
 **4. Associations de patients**
 - Association Française des Diabétiques (AFD)

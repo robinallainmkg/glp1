@@ -142,12 +142,12 @@ Trulicity s'administre une fois par semaine, à la même heure chaque semaine.
 
 ### Autres GLP-1 injectables
 - [**Ozempic (sémaglutide)**](/collections/traitements-glp1/guide-complet-ozempic/) : injection hebdomadaire
-- [**Wegovy**](/traitements-glp1/guide-complet-wegovy/) : Semaglutide à 2,4 mg (pour l'obésité)
+- [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) : Semaglutide à 2,4 mg (pour l'obésité)
 - [**Saxenda (liraglutide)**](/collections/traitements-glp1/guide-complet-saxenda/) : injection quotidienne
-- **Victoza** : Liraglutide (1,2 mg/jour)
+- **[Victoza](/collections/traitements-glp1/guide-complet-victoza/)** : Liraglutide (1,2 mg/jour)
 
 ### Alternatives orales
-- **Rybelsus** : Semaglutide oral (jusqu'à 14 mg/jour)
+- **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)
 - **Adlyxin** : Lixisénatide (20 µg/jour)
 
 ### Traitements conventionnels

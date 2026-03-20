@@ -117,7 +117,7 @@ Des études publiées dans *Obesity Reviews* (2025) montrent que jusqu'à **15% 
 
 ## Ce que vivent les patients en pratique {#temoignages}
 
-### L'"Ozempic face" et l'"Ozempic personality"
+### L'"[Ozempic face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/)" et l'"Ozempic personality"
 
 Sur les réseaux sociaux (Reddit, TikTok, forums spécialisés), des patients témoignent de deux phénomènes :
 

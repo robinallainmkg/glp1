@@ -19,7 +19,7 @@ mainKeyword: "remboursement Mounjaro France 2026 quand conditions CEPS"
 secondaryKeywords: ["mounjaro remboursé quand", "tirzepatide remboursement 2026", "mounjaro HAS conditions", "mounjaro sécurité sociale date", "quand mounjaro sera remboursé", "mounjaro mutuelle remboursement"]
 ---
 
-**Mounjaro (tirzépatide) sera-t-il remboursé en France en 2026 ?** C'est la question que posent chaque jour des milliers de patients, qui supportent actuellement un coût mensuel de 250 à 400 € entièrement à leur charge. La bonne nouvelle : la Haute Autorité de Santé a rendu un avis favorable en décembre 2025. La réalité nuancée : le remboursement effectif n'est pas encore acté, et plusieurs conditions précises seront exigées. Voici ce que vous devez savoir en mars 2026.
+**[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzépatide) sera-t-il remboursé en France en 2026 ?** C'est la question que posent chaque jour des milliers de patients, qui supportent actuellement un coût mensuel de 250 à 400 € entièrement à leur charge. La bonne nouvelle : la Haute Autorité de Santé a rendu un avis favorable en décembre 2025. La réalité nuancée : le remboursement effectif n'est pas encore acté, et plusieurs conditions précises seront exigées. Voici ce que vous devez savoir en mars 2026.
 
 ## Ce qui s'est passé depuis décembre 2025
 
@@ -57,7 +57,7 @@ En tenant compte des délais habituels du processus réglementaire français, vo
 | Arrêté de remboursement au Journal Officiel | 2e semestre 2026 |
 | Remboursement effectif en pharmacie | 3e ou 4e trimestre 2026 |
 
-Ces délais sont indicatifs. Les négociations peuvent s'étirer si Eli Lilly et le CEPS ne s'accordent pas rapidement sur le prix. Le cas de Wegovy, dont le dossier de remboursement est distinct mais parallèle, ajoute une variable supplémentaire : si les deux médicaments sont remboursés simultanément, cela pourrait accélérer ou complexifier les discussions.
+Ces délais sont indicatifs — consultez notre [calendrier détaillé du remboursement Mounjaro HAS CEPS](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) pour un suivi actualisé. Les négociations peuvent s'étirer si Eli Lilly et le CEPS ne s'accordent pas rapidement sur le prix. Le cas de Wegovy, dont le dossier de remboursement est distinct mais parallèle, ajoute une variable supplémentaire : si les deux médicaments sont remboursés simultanément, cela pourrait accélérer ou complexifier les discussions.
 
 ### Un remboursement certain, mais tardif ?
 
@@ -108,7 +108,7 @@ Si vous correspondez aux critères médicaux attendus (IMC ≥ 35 + comorbidité
 
 ### Et pour Wegovy ?
 
-Le dossier de remboursement de Wegovy (sémaglutide 2,4 mg, Novo Nordisk) est distinct mais suit un calendrier parallèle. Les deux médicaments pourraient être remboursés à des moments proches. Pour en savoir plus sur le [remboursement Wegovy en France](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/), consultez notre guide dédié.
+Le dossier de remboursement de Wegovy (sémaglutide 2,4 mg, Novo Nordisk) est distinct mais suit un calendrier parallèle. Le point complet sur le [remboursement GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) couvre l'ensemble des molécules. Les deux médicaments pourraient être remboursés à des moments proches. Pour en savoir plus sur le [remboursement Wegovy en France](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/), consultez notre guide dédié.
 
 ## Comparaison avec les traitements déjà remboursés
 

@@ -136,7 +136,7 @@ L'oubli d'une injection est fréquent. Voici la procédure officielle :
 
 ## Comparaison des Dosages : Mounjaro vs Ozempic et Wegovy
 
-Les patients qui passent d'Ozempic ou Wegovy à Mounjaro se posent souvent des questions sur les équivalences de doses. Il n'existe pas de conversion directe, mais voici les grandes lignes :
+Les patients qui passent d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) à Mounjaro se posent souvent des questions sur les équivalences de doses. Il n'existe pas de conversion directe, mais voici les grandes lignes :
 
 | Traitement | Dose initiale | Dose max. | Mécanisme |
 |------------|--------------|-----------|-----------|

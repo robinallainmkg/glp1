@@ -287,7 +287,7 @@ Arrêter immédiatement Ozempic et consulter en urgence. Dosage de la lipase ind
 
 ### Ozempic est-il dangereux pour le cœur ?
 
-Au contraire, les études montrent des [bénéfices cardiovasculaires prouvés](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec réduction du risque d'événements cardiovasculaires majeurs.
+Au contraire, les études montrent des [bénéfices cardiovasculaires prouvés](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec réduction du risque d'événements cardiovasculaires majeurs.
 
 ### Peut-on mourir d'Ozempic ?
 

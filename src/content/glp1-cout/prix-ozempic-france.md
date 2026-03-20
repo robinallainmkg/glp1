@@ -60,7 +60,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
         "name": "Ozempic est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui, Ozempic est remboursé à 30% par l'Assurance Maladie en 2026 sous certaines conditions : prescription médicale obligatoire, diagnostic de diabète de type 2 confirmé, échec des antidiabétiques oraux, et IMC ≥ 30 kg/m² ou IMC ≥ 27 kg/m² avec comorbidité."
+          "text": "Oui, Ozempic est remboursé à 30% par l'Assurance Maladie en 2026 sous certaines conditions : prescription médicale obligatoire, diagnostic de diabète de type 2 confirmé par analyses biologiques (HbA1c), et échec des antidiabétiques oraux."
         }
       },
       {
@@ -110,7 +110,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 ✅ **Échec des antidiabétiques oraux**
 ✅ **Formulaire de demande obligatoire** (depuis février 2025)
 
-⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, les traitements comme [Wegovy](/traitements-glp1/guide-complet-wegovy/) ou Saxenda ne sont pas remboursés par la Sécurité Sociale.
+⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, les traitements comme [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Saxenda ne sont pas remboursés par la Sécurité Sociale.
 
 ### Démarches pour le remboursement
 
@@ -272,7 +272,6 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 ✅ **Prescription médicale obligatoire** (endocrinologue, diabétologue ou médecin traitant)
 ✅ **Diagnostic de [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** confirmé par analyses
 ✅ **Échec des antidiabétiques oraux** (metformine, sulfamides)
-✅ **IMC ≥ 30 kg/m²** ou **IMC ≥ 27 kg/m²** avec comorbidités
 
 **Important :** Ozempic n'est **PAS remboursé pour la perte de poids seule** (sans diabète de type 2). Le remboursement est strictement limité au diabète de type 2. Depuis **février 2025**, un formulaire de demande obligatoire doit accompagner la prescription.
 
@@ -401,7 +400,7 @@ Mais en pratique, avec le dosage progressif :
 **Alternatives économiques :**
 
 **1. Autres GLP-1 remboursés (coûts similaires) :**
-- **Trulicity** (dulaglutide) : ~81€/mois, remboursé 30% (DT2 uniquement)
+- **Trulicity** (dulaglutide) : ~81€/mois, remboursé 65% (DT2 uniquement)
 - **Victoza** (liraglutide) : 60,26€/mois, remboursé 30% (DT2 uniquement)
 - **Saxenda** : 240-300€/mois, NON remboursé
 

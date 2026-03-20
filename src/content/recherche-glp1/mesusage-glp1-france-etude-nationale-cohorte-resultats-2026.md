@@ -34,7 +34,7 @@ Une étude nationale publiée dans *Value in Health* en 2026 révèle que 2,2 % 
 
 ---
 
-La prescription de GLP-1 hors de leurs indications officielles est un sujet sensible en France depuis l'explosion de la popularité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) à partir de 2022. Mais jusqu'à récemment, les données chiffrées sur l'ampleur réelle du phénomène manquaient. Une étude publiée en 2026 dans la revue *Value in Health* apporte des éléments précis issus d'une cohorte nationale de patients français traités par GLP-1.
+La prescription de GLP-1 hors de leurs indications officielles — ce que l'on appelle le [détournement des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) — est un sujet sensible depuis l'explosion de la popularité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) à partir de 2022. Mais jusqu'à récemment, les données chiffrées sur l'ampleur réelle du phénomène manquaient. Une étude publiée en 2026 dans la revue *Value in Health* apporte des éléments précis issus d'une cohorte nationale de patients français traités par GLP-1.
 
 ## L'étude : méthodologie et données de cohorte
 
@@ -101,7 +101,7 @@ L'étude rappelle également que le mésusage contribue directement aux [tension
 
 ### Avant l'étude : des alertes répétées
 
-L'ANSM avait déjà tiré la sonnette d'alarme dès 2022 face à l'émergence des prescriptions hors AMM. Plusieurs points de vigilance avaient été publiés, notamment concernant Ozempic utilisé uniquement pour la perte de poids chez des patients non diabétiques.
+L'ANSM avait déjà tiré la sonnette d'alarme dès 2022 face à l'émergence des prescriptions hors AMM. Son [rapport de pharmacovigilance ANSM](/collections/effets-secondaires-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/) détaille les signaux identifiés. Plusieurs points de vigilance avaient été publiés, notamment concernant Ozempic utilisé uniquement pour la perte de poids chez des patients non diabétiques.
 
 ### Le formulaire de prescription obligatoire (février 2025)
 

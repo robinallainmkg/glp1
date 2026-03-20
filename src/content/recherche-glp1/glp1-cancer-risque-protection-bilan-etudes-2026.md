@@ -107,7 +107,7 @@ Ces données sont **observationnelles** et ne permettent pas d'établir une caus
 
 ### Cancer du foie (hépatocarcinome)
 
-Les GLP-1 réduisent la stéatose hépatique et la MASH (anciennement NASH), qui sont des facteurs de risque du carcinome hépatocellulaire. L'approbation par la FDA du sémaglutide pour la MASH en août 2025 pourrait indirectement réduire l'incidence de ce cancer chez les patients traités à long terme. Des études sont en cours pour évaluer cet effet.
+Les GLP-1 réduisent la [stéatose hépatique NASH](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/) et la MASH, qui sont des facteurs de risque du carcinome hépatocellulaire. L'approbation par la FDA du sémaglutide pour la MASH en août 2025 pourrait indirectement réduire l'incidence de ce cancer chez les patients traités à long terme. Des études sont en cours pour évaluer cet effet.
 
 ### Cancer du sein
 
@@ -147,7 +147,7 @@ Les autorités françaises maintiennent les recommandations suivantes :
 
 ### Position de l'EMA
 
-L'Agence Européenne des Médicaments maintient sa surveillance active des données de pharmacovigilance pour les GLP-1, notamment sur le signal thyroïdien. Aucune modification des contre-indications n'a été annoncée depuis 2023.
+L'Agence Européenne des Médicaments maintient sa surveillance active des données de pharmacovigilance pour les GLP-1 (voir notre [bilan de pharmacovigilance de l'ANSM](/collections/effets-secondaires-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/)), notamment sur le signal thyroïdien. Aucune modification des contre-indications n'a été annoncée depuis 2023.
 
 ### Position de la FDA américaine
 

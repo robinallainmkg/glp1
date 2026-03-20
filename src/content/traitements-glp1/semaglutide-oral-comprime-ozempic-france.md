@@ -17,7 +17,7 @@ priority: 3
 
 ## Sémaglutide Oral en Comprimé : Ce qui Arrive en France en 2026
 
-Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement GLP-1 chaque semaine, une alternative de plus en plus attendue se profile à l'horizon : le sémaglutide en comprimé. Cette forme orale du principe actif d'[Ozempic (sémaglutide injectable)](/collections/traitements-glp1/guide-complet-ozempic/) et de Wegovy représente une avancée technologique majeure — et son arrivée en France est désormais une question de mois.
+Pour des millions de patients qui doivent aujourd'hui s'injecter leur traitement GLP-1 chaque semaine, une alternative de plus en plus attendue se profile à l'horizon : le sémaglutide en comprimé. Cette forme orale du principe actif d'[Ozempic (sémaglutide injectable)](/collections/traitements-glp1/guide-complet-ozempic/) et de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) représente une avancée technologique majeure — et son arrivée en France est désormais une question de mois.
 
 ## Le sémaglutide oral existe déjà : Rybelsus, le précurseur
 
@@ -122,7 +122,7 @@ En attendant l'arrivée du comprimé oral pour l'obésité en France, plusieurs 
 1. **Rybelsus** (sémaglutide oral 14 mg max) si vous êtes diabétique de type 2 : non remboursé par la Sécurité Sociale en France (la HAS a rendu un avis défavorable au remboursement), mais déjà disponible en pharmacie
 2. **[Wegovy](/collections/traitements-glp1/wegovy-dosage/)** (sémaglutide injectable 2,4 mg) pour l'obésité : non remboursé, 169-360 €/mois, disponible dès maintenant
 3. **Ozempic** (sémaglutide injectable 2 mg) si vous avez un diabète de type 2 : remboursé à 30%, disponible
-4. **Mounjaro** (tirzepatide injectable, double action GLP-1/GIP) : non remboursé, 230-440 €/mois
+4. **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)** (tirzepatide injectable, double action GLP-1/GIP) : non remboursé, 230-440 €/mois
 
 ## Questions fréquentes
 

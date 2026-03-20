@@ -54,7 +54,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 ### Février 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
 
-Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, Victoza) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
+Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, [Victoza](/collections/traitements-glp1/guide-complet-victoza/)) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
 
 Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabète de type 2. Il vise à s'assurer que :
 
@@ -158,7 +158,7 @@ Si votre IMC est compris entre 25 et 30 sans comorbidité liée au poids :
 | Ozempic | Sémaglutide | Injection | Hebdomadaire | Oui (30%) |
 | Trulicity | Dulaglutide | Injection | Hebdomadaire | Oui (65%) |
 | Victoza* | Liraglutide | Injection | Quotidienne | Oui (65%) |
-| Rybelsus | Sémaglutide oral | Comprimé | Quotidienne | Non |
+| [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) | Sémaglutide oral | Comprimé | Quotidienne | Non |
 
 *Victoza : arrêt de commercialisation annoncé fin 2026
 

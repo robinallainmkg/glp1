@@ -49,7 +49,7 @@ Ce comparatif detaille vous aide a y voir clair en mars 2026, avec des donnees a
 
 ### Wegovy : un agoniste GLP-1 pur
 
-Wegovy contient du **semaglutide**, le meme principe actif qu'Ozempic mais a un dosage plus eleve (jusqu'a 2,4 mg par semaine contre 1 mg maximum pour Ozempic). Il agit en reproduisant l'effet du GLP-1, une hormone naturelle de l'intestin qui :
+Wegovy contient du **semaglutide**, le meme principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) mais a un dosage plus eleve (jusqu'a 2,4 mg par semaine contre 1 mg maximum pour Ozempic). Il agit en reproduisant l'effet du GLP-1, une hormone naturelle de l'intestin qui :
 
 - **Reduit l'appetit** en agissant sur les centres de la satiety dans le cerveau
 - **Ralentit la vidange gastrique**, ce qui prolonge la sensation de satiete apres les repas

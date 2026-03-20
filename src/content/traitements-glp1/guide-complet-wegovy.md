@@ -160,7 +160,7 @@ Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète,
 - **Effets maximum** : 6-12 mois
 
 ### Wegovy est-il remboursé pour l'obésité ?
-**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Pour [acheter Wegovy en France](/collections/glp1-cout/acheter-wegovy-en-france/), son coût se situe [entre 169 € et 360 € par mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
+**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Pour [acheter Wegovy en France](/collections/glp1-cout/acheter-wegovy-en-france/), son coût se situe [entre 169 € et 360 € par mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Wegovy brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Parlez-en à votre médecin pour planifier un arrêt adapté.

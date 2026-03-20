@@ -346,7 +346,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 ### Autres GLP-1 injectables
 - **Ozempic** : Semaglutide (jusqu'à 2 mg/semaine)
 - **Wegovy** : Semaglutide à 2,4 mg (spécifiquement pour l'obésité)
-- **Trulicity** : Dulaglutide (une injection hebdomadaire)
+- **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** : Dulaglutide (une injection hebdomadaire)
 
 ### GLP-1 oraux
 - **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)

@@ -47,7 +47,7 @@ Si vous souffrez d'insuffisance cardiaque et envisagez un traitement GLP-1 — q
 
 La relation entre les GLP-1 et le système cardiovasculaire est l'une des découvertes les plus importantes de la cardiologie des dix dernières années. Les grandes études de sécurité cardiovasculaire obligatoires (exigées par les agences depuis 2008) ont révélé des résultats inattendus : non seulement ces médicaments ne nuisent pas au cœur, mais certains le protègent activement.
 
-Les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) ont été démontrés dans plusieurs essais majeurs, notamment LEADER (liraglutide), SUSTAIN-6 et SELECT (sémaglutide), REWIND (dulaglutide).
+Les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) ont été démontrés dans plusieurs essais majeurs, notamment LEADER ([liraglutide](/collections/traitements-glp1/guide-complet-saxenda/)), SUSTAIN-6 et SELECT (sémaglutide), REWIND ([dulaglutide](/collections/traitements-glp1/guide-complet-trulicity/)).
 
 Mais il faut distinguer deux situations très différentes :
 - Les **maladies cardiovasculaires établies** (infarctus, AVC, artériosclérose) : les GLP-1 montrent des bénéfices clairs
@@ -97,7 +97,7 @@ L'insuffisance cardiaque de stade IV (incapacité à faire le moindre effort san
 
 - Le risque de déshydratation lié aux vomissements peut aggraver l'état hémodynamique
 - La réduction de l'appétit peut entraîner une insuffisance nutritionnelle chez des patients déjà fragilisés
-- Les interactions médicamenteuses sont plus nombreuses et complexes
+- Les [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) sont plus nombreuses et complexes
 
 **La prescription doit être discutée au cas par cas** avec un cardiologue. Elle n'est pas impossible, mais requiert une surveillance étroite.
 

@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Pendant des années, obtenir une prescription de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ou Saxenda pour l'obésité nécessitait de passer par un endocrinologue, un diabétologue ou un médecin nutritionniste. Les délais d'attente pouvaient atteindre 6 à 12 mois dans certaines régions, privant de nombreux patients d'un accès rapide à ces traitements efficaces. Tout cela a changé le 23 juin 2025.
+Pendant des années, obtenir une prescription de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ou [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) pour l'obésité nécessitait de passer par un endocrinologue, un diabétologue ou un médecin nutritionniste. Les délais d'attente pouvaient atteindre 6 à 12 mois dans certaines régions, privant de nombreux patients d'un accès rapide à ces traitements efficaces. Tout cela a changé le 23 juin 2025.
 
 ## Ce qui a changé le 23 juin 2025
 
@@ -48,7 +48,7 @@ Plusieurs facteurs ont conduit à cette évolution réglementaire :
 
 **Les délais d'accès devenaient inacceptables** : dans les déserts médicaux — qui concernent près de 30 % du territoire français — les délais pour obtenir un rendez-vous avec un endocrinologue dépassaient souvent 6 mois. Des patients éligibles se retrouvaient soit à attendre longtemps, soit à se tourner vers des circuits non encadrés (télémédecine hasardeuse, importation parallèle).
 
-**La maturité des généralistes** : depuis la disponibilité d'Ozempic pour le diabète et l'explosion de l'intérêt médiatique pour les GLP-1, de nombreux médecins généralistes se sont formés sur ces molécules. La formation médicale continue et les sociétés savantes (SFE, SFN, SFD) avaient déjà produit de nombreux référentiels accessibles aux généralistes.
+**La maturité des généralistes** : depuis la disponibilité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) pour le diabète et l'explosion de l'intérêt médiatique pour les GLP-1, de nombreux médecins généralistes se sont formés sur ces molécules. La formation médicale continue et les sociétés savantes (SFE, SFN, SFD) avaient déjà produit de nombreux référentiels accessibles aux généralistes.
 
 **La réalité du terrain** : beaucoup de médecins généralistes prescrivaient déjà informellement un accompagnement vers les spécialistes, avec un rôle central dans le suivi. La formalisation de leur droit à prescrire en primo-prescription ne fait qu'officialiser une pratique qui s'imposait.
 

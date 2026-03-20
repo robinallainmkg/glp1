@@ -375,10 +375,10 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 **Alternatives** :
 
-1. **Ozempic** (sémaglutide)
+1. **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide)
    - ✅ Disponible en France
    - ✅ Remboursé si diabète type 2
-   - Efficacité : -5 à 7% de poids avec Ozempic (dose diabète) ; -15% avec Wegovy (dose obésité) (vs -20% pour Mounjaro)
+   - Efficacité : -5 à 7% de poids avec Ozempic (dose diabète) ; -15% avec [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (dose obésité) (vs -20% pour Mounjaro)
 
 2. **Wegovy** (sémaglutide haute dose)
    - ✅ Disponible en France
