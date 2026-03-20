@@ -258,7 +258,7 @@ R: Variable selon contrat, vérifier avec sa mutuelle.
 
 ## Conclusion
 
-**Rappel important** : Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom **Mounjaro** (Eli Lilly) depuis novembre 2024, au prix libre de **230-440€/mois**. Ce traitement n'est **pas remboursé** par la Sécurité Sociale.
+**Rappel important** : Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom **Mounjaro** (Eli Lilly) depuis novembre 2024, au [prix de 230-440€/mois](/collections/glp1-cout/prix-mounjaro-france/). Ce traitement n'est **pas remboursé** par la Sécurité Sociale.
 
 **L'efficacité supérieure** (-21% de perte de poids) peut justifier ce coût pour certains patients. Une évaluation médico-économique personnalisée est recommandée avec votre médecin.
 

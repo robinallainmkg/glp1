@@ -96,7 +96,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 ### Conditions de remboursement
 
-**Trulicity est remboursé à 65%** par l'Assurance Maladie sous conditions :
+**Trulicity est [remboursé à 65%](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie sous conditions :
 
 ✅ **Prescription médicale obligatoire**
 ✅ **Diabète de type 2 confirmé** (remboursement DT2 uniquement — Trulicity n'est PAS remboursé pour l'obésité seule)

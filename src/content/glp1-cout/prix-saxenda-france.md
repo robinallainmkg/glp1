@@ -90,7 +90,7 @@ mainKeyword: "prix Saxenda France"
 
 ### Saxenda n'est PAS remboursé
 
-**Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Son prix est libre et fixé par chaque pharmacie.
+**Saxenda n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie en France. Son prix est libre et fixé par chaque pharmacie.
 
 ❌ **Pas de remboursement Sécurité sociale**
 ❌ **Pas de prise en charge au titre de l'ALD**
@@ -202,7 +202,7 @@ mainKeyword: "prix Saxenda France"
 
 ## 📝 Conclusion
 
-**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à Ozempic (remboursé pour le DT2), Saxenda et Wegovy sont entièrement à la charge du patient. Pour connaître les options de prise en charge, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
+**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (remboursé pour le DT2), Saxenda et Wegovy sont entièrement à la charge du patient. Pour connaître les options de prise en charge, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Points clés à retenir :
 - **Prix moyen** : 240-300 €/mois (prix libre)
