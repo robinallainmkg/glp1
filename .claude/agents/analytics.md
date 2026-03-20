@@ -35,7 +35,7 @@ Si le script echoue avec une erreur de token, signale-le dans les logs et contin
 INSERT INTO agent_runs (agent_name, status) VALUES ('analytics', 'started') RETURNING id;
 ```
 
-### Phase 2 — Extraction des mots-cles cibles
+### Phase 2 — Extraction des mots-cles cibles + auto-seed
 
 Lis les fichiers markdown dans `src/content/` avec Glob et Read. Pour chaque article, extrais du frontmatter YAML :
 - `mainKeyword` (mot-cle principal)
@@ -47,6 +47,24 @@ Recupere les article_id :
 ```sql
 SELECT id, slug, title FROM articles WHERE is_active = true ORDER BY slug;
 ```
+
+#### 2.1 Auto-seed des keywords manquants (OBLIGATOIRE)
+
+Recupere les keywords deja suivis :
+```sql
+SELECT DISTINCT keyword FROM keyword_rankings;
+```
+
+Pour chaque article qui a un `mainKeyword` dans son frontmatter, verifie si ce keyword est deja dans `keyword_rankings`. Si NON, insere-le :
+```sql
+INSERT INTO keyword_rankings (article_id, keyword, keyword_type, position, previous_position, checked_at, week_number, month)
+VALUES ('<article_id>', '<mainKeyword>', 'primary', NULL, NULL, NOW(), EXTRACT(WEEK FROM NOW())::INTEGER, TO_CHAR(NOW(), 'YYYY-MM'))
+ON CONFLICT DO NOTHING;
+```
+
+Idem pour chaque `secondaryKeywords[i]` avec `keyword_type = 'secondary'`.
+
+> **Objectif** : tout article actif doit avoir au minimum son `mainKeyword` dans le tracking. Cela garantit que les nouveaux articles et les opportunites publiees sont automatiquement suivis sans intervention humaine.
 
 ### Phase 3 — Analyse du trafic GA4
 

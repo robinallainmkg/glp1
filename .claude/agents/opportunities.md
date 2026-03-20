@@ -82,6 +82,17 @@ INSERT INTO content_opportunities (agent_run_id, topic, description, target_keyw
 VALUES ('<run_id>', '<topic>', '<description>', '<keyword>', '<volume>', '<competition>', <priority>, '<collection>', '<slug>', '<sources>'::jsonb, '<competitors>'::jsonb, 'approved');
 ```
 
+### 6.1 Auto-seed keyword tracking pour les opportunites
+
+Apres avoir insere une opportunite, ajoute son `target_keyword` dans `keyword_rankings` pour qu'il soit suivi meme AVANT que l'article soit cree :
+```sql
+INSERT INTO keyword_rankings (article_id, keyword, keyword_type, position, previous_position, checked_at, week_number, month)
+SELECT a.id, '<target_keyword>', 'secondary', NULL, NULL, NOW(), EXTRACT(WEEK FROM NOW())::INTEGER, TO_CHAR(NOW(), 'YYYY-MM')
+FROM articles a WHERE a.slug = '<suggested_slug>'
+AND NOT EXISTS (SELECT 1 FROM keyword_rankings kr WHERE kr.keyword = '<target_keyword>');
+```
+> Si l'article n'existe pas encore, pas de souci — l'agent analytics l'ajoutera au prochain run quand l'article sera cree. L'important est de pre-tracker le keyword des qu'on l'identifie.
+
 ### 7. Finalisation
 
 ```sql

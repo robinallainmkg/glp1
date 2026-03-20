@@ -710,55 +710,64 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     function renderConvList() {
-      const container = document.getElementById('convListContent');
+      var container = document.getElementById('convListContent');
+      var searchQuery = (document.getElementById('convSearch').value || '').toLowerCase().trim();
 
-      // Build unified list: Coach IA + Tawk
-      let convs = [];
+      // Build unified list
+      var convs = [];
 
-      // Add Coach IA conversations
+      // Coach IA conversations
       allConversations.forEach(function(c) {
-        if (hideTestConvs && isTestConv(c)) return;
-        convs.push({
-          type: 'coach',
-          id: c.id,
-          date: c.last_message_at || c.started_at || '',
-          data: c
-        });
+        var preview = c.page_url || '';
+        convs.push({ type: 'coach', id: c.id, date: c.last_message_at || c.started_at || '', preview: preview, searchText: preview.toLowerCase(), data: c });
       });
 
-      // Add Tawk conversations
+      // Tawk conversations
       tawkConversations.forEach(function(t) {
         var visitorMsgs = (t.messages || []).filter(function(m) { return m.sender === 'v'; });
-        convs.push({
-          type: 'tawk',
-          id: t.id,
-          date: t.chat_date + 'T12:00:00',
-          preview: visitorMsgs.length > 0 ? visitorMsgs[0].text.substring(0, 60) : '',
-          data: t
-        });
+        var preview = visitorMsgs.map(function(m) { return m.text; }).join(' ').substring(0, 120);
+        convs.push({ type: 'tawk', id: t.id, date: t.chat_date + 'T12:00:00', preview: preview, searchText: preview.toLowerCase(), category: t.category, data: t });
       });
 
-      // Sort by date descending
+      // Sort by date desc
       convs.sort(function(a, b) { return b.date.localeCompare(a.date); });
 
-      // Filter by time
+      // Apply filters
       var now = new Date();
-      var today = now.toISOString().split('T')[0];
-      var weekAgo = new Date(now - 7 * 86400000).toISOString();
-
-      if (currentFilter === 'today') {
-        convs = convs.filter(function(c) { return c.date.startsWith(today); });
-      } else if (currentFilter === 'week') {
-        convs = convs.filter(function(c) { return c.date >= weekAgo; });
+      if (currentFilter === '7') {
+        var cutoff7 = new Date(now - 7 * 86400000).toISOString();
+        convs = convs.filter(function(c) { return c.date >= cutoff7; });
+      } else if (currentFilter === '30') {
+        var cutoff30 = new Date(now - 30 * 86400000).toISOString();
+        convs = convs.filter(function(c) { return c.date >= cutoff30; });
+      } else if (currentFilter === '90') {
+        var cutoff90 = new Date(now - 90 * 86400000).toISOString();
+        convs = convs.filter(function(c) { return c.date >= cutoff90; });
+      } else if (currentFilter.startsWith('cat:')) {
+        var catFilter = currentFilter.substring(4);
+        convs = convs.filter(function(c) { return c.category === catFilter; });
+      } else if (currentFilter === 'source:coach') {
+        convs = convs.filter(function(c) { return c.type === 'coach'; });
+      } else if (currentFilter === 'source:tawk') {
+        convs = convs.filter(function(c) { return c.type === 'tawk'; });
       }
+
+      // Search filter
+      if (searchQuery) {
+        convs = convs.filter(function(c) { return c.searchText.indexOf(searchQuery) !== -1; });
+      }
+
+      // Update count label
+      var label = document.getElementById('convCountLabel');
+      if (label) label.textContent = '(' + convs.length + ')';
 
       if (convs.length === 0) {
         container.innerHTML = '<div class="conv-empty">Aucune conversation</div>';
         return;
       }
 
-      var catColors = { scam_victim: '#dc2626', side_effects: '#f59e0b', info_request: '#3b82f6', product_question: '#8b5cf6', other: '#64748b' };
-      var catLabels = { scam_victim: 'Arnaque', side_effects: 'Effets sec.', info_request: 'Info', product_question: 'Produit', other: 'Autre' };
+      var catColors = { scam_victim: '#dc2626', side_effects: '#f59e0b', info_request: '#3b82f6', product_question: '#8b5cf6', payment_issue: '#f97316', delivery_issue: '#f97316', other: '#64748b' };
+      var catLabels = { scam_victim: 'Arnaque', side_effects: 'Effets sec.', info_request: 'Info', product_question: 'Produit', payment_issue: 'Paiement', delivery_issue: 'Livraison', other: 'Autre' };
 
       container.innerHTML = convs.map(function(item) {
         if (item.type === 'tawk') {
@@ -766,12 +775,13 @@ import { supabaseConfig } from '../../lib/supabase';
           var date = new Date(t.chat_date).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
           var catColor = catColors[t.category] || '#64748b';
           var catLabel = catLabels[t.category] || t.category || '?';
+          var previewText = item.preview.substring(0, 70);
           return '<div class="conv-item conv-tawk" onclick="loadTawkConversation(\'' + t.id + '\', this)">'
             + '<div class="conv-item-top">'
-            + '<span class="conv-visitor">💬 Visiteur Tawk</span>'
+            + '<span class="conv-visitor">\uD83D\uDCAC Visiteur</span>'
             + '<span class="conv-time">' + date + '</span>'
             + '</div>'
-            + '<div class="conv-preview">' + escapeHtml(item.preview || '') + '</div>'
+            + '<div class="conv-preview">' + escapeHtml(previewText) + '</div>'
             + '<div class="conv-meta">'
             + '<span class="conv-badge" style="background:' + catColor + '20;color:' + catColor + ';">' + catLabel + '</span>'
             + '<span class="conv-badge-msgs">' + t.message_count + ' msgs</span>'
@@ -781,16 +791,16 @@ import { supabaseConfig } from '../../lib/supabase';
           var time = c.last_message_at
             ? new Date(c.last_message_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
             : '-';
-          var isTest = isTestConv(c);
-          var sessionShort = (c.session_id || '').substring(0, 12) + '...';
+          var page = c.page_url ? c.page_url.replace(/^\//, '').replace(/\/$/, '').split('/').pop() : '';
           var msgs = c.message_count || 0;
-          var testBadge = isTest ? '<span style="background:#7c3aed;color:#fff;padding:1px 5px;border-radius:3px;font-size:0.65rem;margin-left:4px;">TEST</span>' : '';
-          return '<div class="conv-item' + (isTest ? ' conv-test' : '') + '" onclick="loadConversation(\'' + c.id + '\', this)">'
+          return '<div class="conv-item" onclick="loadConversation(\'' + c.id + '\', this)">'
             + '<div class="conv-item-top">'
-            + '<span class="conv-visitor">' + (isTest ? '🧪' : '🤖') + ' Coach IA ' + sessionShort + testBadge + '</span>'
+            + '<span class="conv-visitor">\uD83E\uDD16 Coach IA</span>'
             + '<span class="conv-time">' + time + '</span>'
             + '</div>'
+            + (page ? '<div class="conv-preview">/' + escapeHtml(page) + '</div>' : '')
             + '<div class="conv-meta">'
+            + '<span class="conv-badge" style="background:rgba(52,211,153,0.15);color:#34d399;">Coach IA</span>'
             + '<span class="conv-badge-msgs">\uD83D\uDCAC ' + msgs + ' msgs</span>'
             + '</div></div>';
         }
@@ -1100,7 +1110,7 @@ import { supabaseConfig } from '../../lib/supabase';
     window.loadConversation = loadConversation;
     window.loadTawkConversation = loadTawkConversation;
     window.filterConvs = filterConvs;
-    window.toggleTests = toggleTests;
+    window.renderConvList = renderConvList;
 
     // Auto-load
     loadData();

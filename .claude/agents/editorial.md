@@ -138,7 +138,19 @@ C'est le **validator** qui fait le build check et le push.
 L'editorial ne fait QUE : modifier fichiers → `git add` → `git commit`. RIEN D'AUTRE.
 Si tu fais `git push`, le deploy se lance sans build check et peut casser le site.
 
-### 6. Marquer les tickets comme ready_to_deploy
+### 6. Auto-seed keyword tracking
+
+Apres le commit, pour chaque article modifie ou cree, verifie que son `mainKeyword` (du frontmatter) est dans `keyword_rankings`. Si non, insere-le pour que l'agent analytics le suive automatiquement :
+```sql
+INSERT INTO keyword_rankings (article_id, keyword, keyword_type, position, previous_position, checked_at, week_number, month)
+SELECT a.id, '<mainKeyword_du_frontmatter>', 'primary', NULL, NULL, NOW(), EXTRACT(WEEK FROM NOW())::INTEGER, TO_CHAR(NOW(), 'YYYY-MM')
+FROM articles a WHERE a.slug = '<slug>'
+AND NOT EXISTS (SELECT 1 FROM keyword_rankings kr WHERE kr.keyword = '<mainKeyword_du_frontmatter>' AND kr.article_id = a.id);
+```
+
+> Cela garantit que tout nouvel article ou article modifie est automatiquement suivi dans le dashboard Analytics.
+
+### 7. Marquer les tickets comme ready_to_deploy
 
 Apres le commit local, marque les tickets traites comme `ready_to_deploy` (PAS deployed — c'est le validator qui les marque deployed apres le push) :
 ```sql
