@@ -124,6 +124,10 @@ import { supabaseConfig } from '../../lib/supabase';
       color: white;
       border-color: #3b82f6;
     }
+    .conv-item.conv-tawk {
+      border-left: 3px solid #f59e0b;
+    }
+    .conv-item.conv-tawk:hover { border-left-color: #f59e0b; }
     .conv-item.conv-test {
       opacity: 0.6;
       border-left: 2px solid #7c3aed;
@@ -456,7 +460,7 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="stat-card">
           <div class="label">Conversations</div>
           <div class="value" id="statConvs">-</div>
-          <div class="sub" id="statConvsToday">aujourd'hui: -</div>
+          <div class="sub" id="statConvsToday">aujourd'hui: - · <span style="color:#f59e0b" id="statTawkCount">tawk: -</span></div>
         </div>
         <div class="stat-card">
           <div class="label">Messages</div>
@@ -592,6 +596,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     let allConversations = [];
+    let tawkConversations = [];
     let allMessages = {};
     let currentFilter = 'all';
     let hideTestConvs = true;
@@ -609,6 +614,14 @@ import { supabaseConfig } from '../../lib/supabase';
 
         if (convErr) { console.error('convs error:', convErr); }
         allConversations = convs || [];
+
+        // Load Tawk archive
+        const { data: tawk, error: tawkErr } = await sb
+          .from('tawk_conversations_archive')
+          .select('*')
+          .order('chat_date', { ascending: false });
+        if (tawkErr) { console.error('tawk error:', tawkErr); }
+        tawkConversations = tawk || [];
 
         // Load stats
         const { count: totalMsgs } = await sb
@@ -665,8 +678,9 @@ import { supabaseConfig } from '../../lib/supabase';
         const satisfactionPct = totalVotes > 0 ? Math.round(((upVotes || 0) / totalVotes) * 100) : 0;
 
         // Update stats
-        document.getElementById('statConvs').textContent = allConversations.length;
-        document.getElementById('statConvsToday').textContent = "aujourd'hui: " + todayConvs;
+        document.getElementById('statConvs').textContent = allConversations.length + tawkConversations.length;
+        document.getElementById('statConvsToday').innerHTML = "aujourd'hui: " + todayConvs;
+        document.getElementById('statTawkCount').textContent = 'tawk: ' + tawkConversations.length;
         document.getElementById('statMsgs').textContent = totalMsgs || 0;
         document.getElementById('statMsgsToday').textContent = "aujourd'hui: " + (todayMsgs || 0);
         document.getElementById('statVisitors').textContent = uniqueSessions;
@@ -705,46 +719,89 @@ import { supabaseConfig } from '../../lib/supabase';
 
     function renderConvList() {
       const container = document.getElementById('convListContent');
-      let convs = [...allConversations];
 
-      // Hide test conversations
-      if (hideTestConvs) {
-        convs = convs.filter(c => !isTestConv(c));
-      }
+      // Build unified list: Coach IA + Tawk
+      let convs = [];
 
-      const now = new Date();
-      const today = now.toISOString().split('T')[0];
-      const weekAgo = new Date(now - 7 * 86400000).toISOString();
+      // Add Coach IA conversations
+      allConversations.forEach(function(c) {
+        if (hideTestConvs && isTestConv(c)) return;
+        convs.push({
+          type: 'coach',
+          id: c.id,
+          date: c.last_message_at || c.started_at || '',
+          data: c
+        });
+      });
+
+      // Add Tawk conversations
+      tawkConversations.forEach(function(t) {
+        var visitorMsgs = (t.messages || []).filter(function(m) { return m.sender === 'v'; });
+        convs.push({
+          type: 'tawk',
+          id: t.id,
+          date: t.chat_date + 'T12:00:00',
+          preview: visitorMsgs.length > 0 ? visitorMsgs[0].text.substring(0, 60) : '',
+          data: t
+        });
+      });
+
+      // Sort by date descending
+      convs.sort(function(a, b) { return b.date.localeCompare(a.date); });
+
+      // Filter by time
+      var now = new Date();
+      var today = now.toISOString().split('T')[0];
+      var weekAgo = new Date(now - 7 * 86400000).toISOString();
 
       if (currentFilter === 'today') {
-        convs = convs.filter(c => c.last_message_at && c.last_message_at.startsWith(today));
+        convs = convs.filter(function(c) { return c.date.startsWith(today); });
       } else if (currentFilter === 'week') {
-        convs = convs.filter(c => c.last_message_at && c.last_message_at >= weekAgo);
+        convs = convs.filter(function(c) { return c.date >= weekAgo; });
       }
 
       if (convs.length === 0) {
-        container.innerHTML = '<div class="conv-empty">Aucune conversation' + (hideTestConvs ? ' (tests masques)' : '') + '</div>';
+        container.innerHTML = '<div class="conv-empty">Aucune conversation</div>';
         return;
       }
 
-      container.innerHTML = convs.map((c, i) => {
-        const time = c.last_message_at
-          ? new Date(c.last_message_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
-          : '-';
-        const isTest = isTestConv(c);
-        const sessionShort = (c.session_id || '').substring(0, 12) + '...';
-        const msgs = c.message_count || 0;
-        const testBadge = isTest ? '<span style="background:#7c3aed;color:#fff;padding:1px 5px;border-radius:3px;font-size:0.65rem;margin-left:4px;">TEST</span>' : '';
+      var catColors = { scam_victim: '#dc2626', side_effects: '#f59e0b', info_request: '#3b82f6', product_question: '#8b5cf6', other: '#64748b' };
+      var catLabels = { scam_victim: 'Arnaque', side_effects: 'Effets sec.', info_request: 'Info', product_question: 'Produit', other: 'Autre' };
 
-        return `<div class="conv-item${isTest ? ' conv-test' : ''}" onclick="loadConversation('${c.id}', this)">
-          <div class="conv-item-top">
-            <span class="conv-visitor">${isTest ? '🧪' : '🇫🇷'} ${sessionShort}${testBadge}</span>
-            <span class="conv-time">${time}</span>
-          </div>
-          <div class="conv-meta">
-            <span class="conv-badge-msgs">💬 ${msgs} msgs</span>
-          </div>
-        </div>`;
+      container.innerHTML = convs.map(function(item) {
+        if (item.type === 'tawk') {
+          var t = item.data;
+          var date = new Date(t.chat_date).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
+          var catColor = catColors[t.category] || '#64748b';
+          var catLabel = catLabels[t.category] || t.category || '?';
+          return '<div class="conv-item conv-tawk" onclick="loadTawkConversation(\'' + t.id + '\', this)">'
+            + '<div class="conv-item-top">'
+            + '<span class="conv-visitor">💬 Visiteur Tawk</span>'
+            + '<span class="conv-time">' + date + '</span>'
+            + '</div>'
+            + '<div class="conv-preview">' + escapeHtml(item.preview || '') + '</div>'
+            + '<div class="conv-meta">'
+            + '<span class="conv-badge" style="background:' + catColor + '20;color:' + catColor + ';">' + catLabel + '</span>'
+            + '<span class="conv-badge-msgs">' + t.message_count + ' msgs</span>'
+            + '</div></div>';
+        } else {
+          var c = item.data;
+          var time = c.last_message_at
+            ? new Date(c.last_message_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
+            : '-';
+          var isTest = isTestConv(c);
+          var sessionShort = (c.session_id || '').substring(0, 12) + '...';
+          var msgs = c.message_count || 0;
+          var testBadge = isTest ? '<span style="background:#7c3aed;color:#fff;padding:1px 5px;border-radius:3px;font-size:0.65rem;margin-left:4px;">TEST</span>' : '';
+          return '<div class="conv-item' + (isTest ? ' conv-test' : '') + '" onclick="loadConversation(\'' + c.id + '\', this)">'
+            + '<div class="conv-item-top">'
+            + '<span class="conv-visitor">' + (isTest ? '🧪' : '🤖') + ' Coach IA ' + sessionShort + testBadge + '</span>'
+            + '<span class="conv-time">' + time + '</span>'
+            + '</div>'
+            + '<div class="conv-meta">'
+            + '<span class="conv-badge-msgs">\uD83D\uDCAC ' + msgs + ' msgs</span>'
+            + '</div></div>';
+        }
       }).join('');
     }
 
@@ -803,6 +860,54 @@ import { supabaseConfig } from '../../lib/supabase';
 
       // Scroll to bottom
       const msgsEl = detail.querySelector('.conv-messages');
+      if (msgsEl) msgsEl.scrollTop = msgsEl.scrollHeight;
+    }
+
+    function loadTawkConversation(tawkId, el) {
+      // Active state
+      document.querySelectorAll('.conv-item').forEach(i => i.classList.remove('active'));
+      if (el) el.classList.add('active');
+
+      const t = tawkConversations.find(c => c.id === tawkId);
+      if (!t) return;
+
+      const detail = document.getElementById('convDetail');
+      const date = new Date(t.chat_date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      const catLabels = { scam_victim: 'Victime arnaque', side_effects: 'Effets secondaires', info_request: 'Demande info', product_question: 'Question produit', payment_issue: 'Probl\u00e8me paiement', delivery_issue: 'Probl\u00e8me livraison', other: 'Autre' };
+      const catLabel = catLabels[t.category] || t.category || 'Non class\u00e9';
+      const messages = t.messages || [];
+
+      detail.innerHTML = '<div class="conv-detail-header">'
+        + '<div>'
+        + '<h3>\uD83D\uDCE6 Tawk.to \u2014 ' + escapeHtml(t.visitor_name || 'Visiteur anonyme') + '</h3>'
+        + '<div class="conv-detail-meta">' + date + ' \u00b7 ' + messages.length + ' messages \u00b7 Cat\u00e9gorie: ' + catLabel
+        + (t.visitor_city ? ' \u00b7 ' + escapeHtml(t.visitor_city) : '')
+        + (t.page_url ? ' \u00b7 Page: ' + escapeHtml(t.page_url) : '')
+        + '</div>'
+        + '</div>'
+        + '<span class="conv-badge" style="background:rgba(245,158,11,0.2);color:#f59e0b;font-size:0.75rem;padding:4px 10px;">ARCHIVE TAWK</span>'
+        + '</div>'
+        + '<div class="conv-messages">'
+        + messages.map(function(m) {
+            var isVisitor = m.sender === 'v';
+            var isSystem = m.sender === 's';
+            var cls = isVisitor ? 'user' : 'assistant';
+            var avatarLabel = isVisitor ? '\uD83D\uDC64' : (isSystem ? '\u2699\uFE0F' : '\uD83E\uDD16');
+            var senderLabel = isVisitor ? 'Visiteur' : (isSystem ? 'Syst\u00e8me' : 'Bot Tawk');
+            var text = m.text || '';
+            // Remove [option] tags
+            text = text.replace(/\[option\][^\n]*/g, '').trim();
+            if (!text) return '';
+            return '<div class="msg-row ' + cls + '">'
+              + '<div class="msg-avatar">' + avatarLabel + '</div>'
+              + '<div class="msg-content">'
+              + '<div class="msg-sender">' + senderLabel + '</div>'
+              + '<div class="msg-bubble">' + formatMarkdown(text) + '</div>'
+              + '</div></div>';
+          }).filter(function(x) { return x; }).join('')
+        + '</div>';
+
+      var msgsEl = detail.querySelector('.conv-messages');
       if (msgsEl) msgsEl.scrollTop = msgsEl.scrollHeight;
     }
 
@@ -1001,6 +1106,7 @@ import { supabaseConfig } from '../../lib/supabase';
     // Expose functions to global scope for onclick handlers
     window.loadData = loadData;
     window.loadConversation = loadConversation;
+    window.loadTawkConversation = loadTawkConversation;
     window.filterConvs = filterConvs;
     window.toggleTests = toggleTests;
 

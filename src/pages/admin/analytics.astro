@@ -228,13 +228,13 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="stat-card"><div class="label">Conversions (30j)</div><div class="value" style="color:#ec4899">-</div><div class="sub">Tous canaux</div><div class="icon-bg" style="background:#ec4899"></div></div>
       </div>
 
-      <!-- Charts: Ranking moyen + Trafic -->
+      <!-- Charts: Positions par keyword + Trafic -->
       <div class="charts-row">
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <div class="chart-title">Ranking moyen</div>
-              <div class="chart-subtitle">Position moyenne des mots-cles suivis</div>
+              <div class="chart-title">Positions par mot-cle</div>
+              <div class="chart-subtitle">Evolution des mots-cles prioritaires (plus bas = meilleur)</div>
             </div>
             <div class="chart-period-btns">
               <button class="chart-period-btn active" onclick="setRankingPeriod(30, this)">30j</button>
@@ -243,6 +243,7 @@ import { supabaseConfig } from '../../lib/supabase';
             </div>
           </div>
           <div class="chart-canvas" id="avgRankingChart"></div>
+          <div class="chart-legend" id="overviewRankingLegend"></div>
         </div>
 
         <div class="chart-card">
@@ -388,18 +389,36 @@ import { supabaseConfig } from '../../lib/supabase';
 
     <!-- ===================== TAB: CONVERSIONS ===================== -->
     <div class="tab-content" id="tab-conversions">
+
+      <!-- Section LEADS -->
+      <div style="margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem">
+        <span style="font-size:0.92rem;font-weight:700;color:#e2e8f0">Leads</span>
+        <span style="font-size:0.68rem;color:#64748b;background:#1e293b;padding:2px 8px;border-radius:10px">Collecte de contacts</span>
+      </div>
       <div class="conv-stats" id="convStats">
         <div class="conv-card"><div class="conv-value" style="color:#3b82f6" id="convNewsletter">-</div><div class="conv-label">Newsletter</div><div class="conv-today" id="convNewsletterToday">-</div></div>
         <div class="conv-card"><div class="conv-value" style="color:#22c55e" id="convDiag">-</div><div class="conv-label">Diagnostic</div><div class="conv-today" id="convDiagToday">-</div></div>
         <div class="conv-card"><div class="conv-value" style="color:#f59e0b" id="convChat">-</div><div class="conv-label">Chat AI Coach</div><div class="conv-today" id="convChatToday">-</div></div>
-        <div class="conv-card"><div class="conv-value" style="color:#ec4899" id="convContact">-</div><div class="conv-label">Contact</div><div class="conv-today" id="convContactToday">-</div></div>
+        <div class="conv-card"><div class="conv-value" style="color:#ec4899" id="convContact">-</div><div class="conv-label">Contact / Formulaire</div><div class="conv-today" id="convContactToday">-</div></div>
       </div>
 
-      <div class="charts-row">
+      <!-- Section REVENUE -->
+      <div style="margin-top:1.5rem;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem">
+        <span style="font-size:0.92rem;font-weight:700;color:#e2e8f0">Revenue</span>
+        <span style="font-size:0.68rem;color:#64748b;background:#1e293b;padding:2px 8px;border-radius:10px">Abonnements Stripe</span>
+      </div>
+      <div class="conv-stats" id="revenueStats" style="grid-template-columns: repeat(3, 1fr)">
+        <div class="conv-card" style="border-color:#22c55e33"><div class="conv-value" style="color:#22c55e" id="revCheckouts">-</div><div class="conv-label">Abonnements</div><div class="conv-today" id="revCheckoutsToday">-</div></div>
+        <div class="conv-card" style="border-color:#f59e0b33"><div class="conv-value" style="color:#f59e0b" id="revTrials">-</div><div class="conv-label">Essais gratuits</div><div class="conv-today" id="revTrialsSub">En cours</div></div>
+        <div class="conv-card" style="border-color:#3b82f633"><div class="conv-value" style="color:#3b82f6" id="revPaid">-</div><div class="conv-label">Paiements recus</div><div class="conv-today" id="revPaidSub">invoice.paid</div></div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-row" style="margin-top:1.5rem">
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <div class="chart-title">Conversions par jour</div>
+              <div class="chart-title">Leads par jour</div>
               <div class="chart-subtitle">Toutes sources confondues</div>
             </div>
             <div class="chart-period-btns">
@@ -413,26 +432,30 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="chart-legend-item" onclick="toggleConvLine('newsletter')"><div class="chart-legend-dot" style="background:#3b82f6"></div> Newsletter</div>
             <div class="chart-legend-item" onclick="toggleConvLine('diagnostic')"><div class="chart-legend-dot" style="background:#22c55e"></div> Diagnostic</div>
             <div class="chart-legend-item" onclick="toggleConvLine('chat')"><div class="chart-legend-dot" style="background:#f59e0b"></div> Chat AI</div>
-            <div class="chart-legend-item" onclick="toggleConvLine('contact')"><div class="chart-legend-dot" style="background:#ec4899"></div> Contact</div>
+            <div class="chart-legend-item" onclick="toggleConvLine('contact')"><div class="chart-legend-dot" style="background:#ec4899"></div> Formulaire</div>
           </div>
         </div>
 
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <div class="chart-title">Repartition des conversions</div>
-              <div class="chart-subtitle">Part de chaque canal</div>
+              <div class="chart-title">Funnel de conversion</div>
+              <div class="chart-subtitle">Leads → Chat AI → Abonnement</div>
             </div>
           </div>
-          <div class="chart-canvas" id="convPieChart"></div>
+          <div class="chart-canvas" id="convFunnelChart"></div>
         </div>
       </div>
 
       <!-- Conversion table -->
+      <div style="margin-top:1.5rem;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem">
+        <span style="font-size:0.92rem;font-weight:700;color:#e2e8f0">Historique</span>
+        <span style="font-size:0.68rem;color:#64748b;background:#1e293b;padding:2px 8px;border-radius:10px" id="convTotalBadge">0</span>
+      </div>
       <div class="kw-table-wrap">
         <table class="kw-table">
-          <thead><tr><th>Date</th><th>Type</th><th>Email</th><th>Source</th><th>Detail</th></tr></thead>
-          <tbody id="convTableBody"><tr><td colspan="5" class="empty-state">Chargement...</td></tr></tbody>
+          <thead><tr><th>Date</th><th>Type</th><th>Email</th><th>Detail</th></tr></thead>
+          <tbody id="convTableBody"><tr><td colspan="4" class="empty-state">Chargement...</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -459,7 +482,7 @@ import { supabaseConfig } from '../../lib/supabase';
   // Data stores
   let gscData = [];
   let gaData = [];
-  let convData = { newsletter: [], diagnostic: [], chat: [], contact: [] };
+  let convData = { newsletter: [], diagnostic: [], chat: [], contact: [], checkouts: [], invoices: [], trials: [] };
 
   function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
@@ -651,31 +674,57 @@ import { supabaseConfig } from '../../lib/supabase';
     const rawRankings = window._rawRankings || [];
     if (rawRankings.length === 0) return;
 
-    // Group by date, compute average position
-    const byDate = {};
+    const cutoff = rankingPeriodDays > 0 ? new Date(Date.now() - rankingPeriodDays * 86400000) : null;
+
+    // Group history per keyword
+    const kwHistory = {};
+    const kwTypes = {};
     for (const r of rawRankings) {
-      if (!r.position || !r.checked_at) continue;
-      const day = r.checked_at.slice(0, 10);
-      if (!byDate[day]) byDate[day] = [];
-      byDate[day].push(r.position);
+      if (!r.position || !r.checked_at || !r.keyword) continue;
+      if (cutoff && new Date(r.checked_at) < cutoff) continue;
+      if (!kwHistory[r.keyword]) kwHistory[r.keyword] = [];
+      kwHistory[r.keyword].push({ date: r.checked_at.slice(0, 10), value: r.position });
+      if (r.keyword_type) kwTypes[r.keyword] = r.keyword_type;
     }
 
-    let points = Object.entries(byDate).map(([date, positions]) => ({
-      date,
-      value: positions.reduce((a,b) => a+b, 0) / positions.length
-    })).sort((a,b) => a.date.localeCompare(b.date));
+    // Sort: primary first, then by most data points, take top 8
+    const sortedKws = Object.entries(kwHistory)
+      .sort((a, b) => {
+        const aP = kwTypes[a[0]] === 'primary' ? 0 : 1;
+        const bP = kwTypes[b[0]] === 'primary' ? 0 : 1;
+        if (aP !== bP) return aP - bP;
+        return b[1].length - a[1].length;
+      })
+      .slice(0, 8);
 
-    if (rankingPeriodDays > 0) {
-      const cutoff = new Date();
-      cutoff.setDate(cutoff.getDate() - rankingPeriodDays);
-      points = points.filter(p => new Date(p.date) >= cutoff);
-    }
+    if (sortedKws.length === 0) return;
 
-    buildLineChart('avgRankingChart', [{
-      points,
-      color: '#f59e0b',
-      fill: true
-    }], { invertY: true });
+    // Dedupe per keyword per day (keep latest)
+    sortedKws.forEach(([kw, hist]) => {
+      const byDay = {};
+      hist.sort((a, b) => a.date.localeCompare(b.date));
+      for (const h of hist) byDay[h.date] = h.value;
+      kwHistory[kw] = Object.entries(byDay).map(([date, value]) => ({ date, value }));
+    });
+
+    const datasets = sortedKws.map(([kw], idx) => ({
+      points: kwHistory[kw],
+      color: CHART_COLORS[idx % CHART_COLORS.length],
+      hidden: false,
+      fill: false
+    }));
+
+    buildLineChart('avgRankingChart', datasets, { invertY: true });
+
+    // Legend with keyword names
+    document.getElementById('overviewRankingLegend').innerHTML = sortedKws.map(([kw], idx) => {
+      const color = CHART_COLORS[idx % CHART_COLORS.length];
+      const isPrimary = kwTypes[kw] === 'primary';
+      return `<div class="chart-legend-item" style="cursor:default">
+        <div class="chart-legend-dot" style="background:${color}"></div>
+        ${esc(kw)}${isPrimary ? ' <span style="font-size:0.6rem;color:#93c5fd">★</span>' : ''}
+      </div>`;
+    }).join('');
   }
 
   // ==================== TRAFFIC CHART ====================
@@ -821,27 +870,27 @@ import { supabaseConfig } from '../../lib/supabase';
 
   async function loadConversions() {
     try {
-      const [contacts, conversations] = await Promise.all([
-        sbFetch('contacts', 'select=id,email,nom,newsletter,telephone,message,source,created_at&order=created_at.desc&limit=500'),
-        sbFetch('coach_conversations', 'select=id,session_id,started_at,message_count&order=started_at.desc&limit=500'),
+      const [contacts, conversations, stripeEvents] = await Promise.all([
+        sbFetch('contacts', 'select=id,email,nom,newsletter,telephone,subject,message,created_at&order=created_at.desc&limit=500'),
+        sbFetch('coach_conversations', 'select=id,session_id,started_at,message_count,user_id&order=started_at.desc&limit=500'),
+        sbFetch('subscription_events', 'select=id,user_id,stripe_event_id,event_type,metadata,created_at&order=created_at.desc&limit=500'),
       ]);
 
       const today = new Date().toISOString().slice(0, 10);
 
-      // Categorize contacts
+      // Categorize contacts by subject (reliable field)
       convData.newsletter = [];
       convData.diagnostic = [];
       convData.contact = [];
 
       for (const c of contacts) {
         const date = (c.created_at || '').slice(0, 10);
-        const isNewsletter = c.newsletter === true && (!c.nom && !c.telephone);
-        const isDiagnostic = (c.source === 'diagnostic' || c.source === 'quiz') || (c.message && c.message.toLowerCase().includes('diagnostic'));
+        const subj = (c.subject || '').toLowerCase();
 
-        if (isNewsletter) {
-          convData.newsletter.push({ ...c, date });
-        } else if (isDiagnostic) {
+        if (subj.includes('diagnostic') || subj.includes('quiz')) {
           convData.diagnostic.push({ ...c, date });
+        } else if (subj.includes('newsletter') || (c.newsletter === true && !subj.includes('diagnostic'))) {
+          convData.newsletter.push({ ...c, date });
         } else {
           convData.contact.push({ ...c, date });
         }
@@ -850,7 +899,12 @@ import { supabaseConfig } from '../../lib/supabase';
       // Chat conversations
       convData.chat = conversations.map(c => ({ ...c, date: (c.started_at || '').slice(0, 10) }));
 
-      // Stats
+      // Stripe events
+      convData.checkouts = stripeEvents.filter(e => e.event_type === 'checkout.session.completed').map(e => ({ ...e, date: (e.created_at || '').slice(0, 10) }));
+      convData.invoices = stripeEvents.filter(e => e.event_type === 'invoice.paid').map(e => ({ ...e, date: (e.created_at || '').slice(0, 10) }));
+      convData.trials = convData.checkouts.filter(e => e.metadata && e.metadata.status === 'trialing');
+
+      // Lead stats
       document.getElementById('convNewsletter').textContent = convData.newsletter.length;
       document.getElementById('convDiag').textContent = convData.diagnostic.length;
       document.getElementById('convChat').textContent = convData.chat.length;
@@ -861,14 +915,20 @@ import { supabaseConfig } from '../../lib/supabase';
       document.getElementById('convChatToday').textContent = `Aujourd'hui: ${convData.chat.filter(c => c.date === today).length}`;
       document.getElementById('convContactToday').textContent = `Aujourd'hui: ${convData.contact.filter(c => c.date === today).length}`;
 
-      // Total for overview
+      // Revenue stats
+      document.getElementById('revCheckouts').textContent = convData.checkouts.length;
+      document.getElementById('revCheckoutsToday').textContent = `Aujourd'hui: ${convData.checkouts.filter(c => c.date === today).length}`;
+      document.getElementById('revTrials').textContent = convData.trials.length;
+      document.getElementById('revPaid').textContent = convData.invoices.length;
+
+      // Total for overview (leads 30d)
       const total30d = new Date(Date.now() - 30*86400000).toISOString().slice(0,10);
       const conv30 = [...convData.newsletter, ...convData.diagnostic, ...convData.chat, ...convData.contact].filter(c => c.date >= total30d).length;
       const statsConv = document.querySelector('#statsGrid .stat-card:last-child .value');
       if (statsConv) statsConv.textContent = conv30;
 
       renderConvChart();
-      renderConvPie();
+      renderConvFunnel();
       renderConvTable();
     } catch(e) {
       console.error('Conversions load error:', e);
@@ -895,70 +955,69 @@ import { supabaseConfig } from '../../lib/supabase';
     ]);
   }
 
-  function renderConvPie() {
-    const totals = [
-      { label: 'Newsletter', value: convData.newsletter.length, color: '#3b82f6' },
+  function renderConvFunnel() {
+    const steps = [
+      { label: 'Tous leads', value: convData.newsletter.length + convData.diagnostic.length + convData.chat.length + convData.contact.length, color: '#64748b' },
       { label: 'Diagnostic', value: convData.diagnostic.length, color: '#22c55e' },
       { label: 'Chat AI', value: convData.chat.length, color: '#f59e0b' },
-      { label: 'Contact', value: convData.contact.length, color: '#ec4899' },
+      { label: 'Abonnement', value: (convData.checkouts || []).length, color: '#8b5cf6' },
     ];
-    const total = totals.reduce((s,t) => s + t.value, 0);
-    if (total === 0) {
-      document.getElementById('convPieChart').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#64748b;font-size:0.85rem">Aucune conversion</div>';
-      return;
-    }
 
-    const W = 400, H = 240, cx = W/2, cy = H/2 - 10, R = 90;
+    const container = document.getElementById('convFunnelChart');
+    const maxVal = Math.max(...steps.map(s => s.value), 1);
+    const W = 400, H = 240;
+    const barH = 38, gap = 16;
+    const startY = (H - (steps.length * (barH + gap) - gap)) / 2;
+    const maxBarW = W - 140;
+
     let svg = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">`;
-    let startAngle = -Math.PI / 2;
 
-    totals.forEach(t => {
-      if (t.value === 0) return;
-      const pct = t.value / total;
-      const endAngle = startAngle + 2 * Math.PI * pct;
-      const largeArc = pct > 0.5 ? 1 : 0;
-      const x1 = cx + R * Math.cos(startAngle);
-      const y1 = cy + R * Math.sin(startAngle);
-      const x2 = cx + R * Math.cos(endAngle);
-      const y2 = cy + R * Math.sin(endAngle);
+    steps.forEach((step, i) => {
+      const y = startY + i * (barH + gap);
+      const barW = Math.max(20, (step.value / maxVal) * maxBarW);
+      const x = (maxBarW - barW) / 2 + 10;
 
-      if (pct >= 0.999) {
-        svg += `<circle cx="${cx}" cy="${cy}" r="${R}" fill="${t.color}" opacity="0.85"/>`;
-      } else {
-        svg += `<path d="M${cx},${cy} L${x1},${y1} A${R},${R} 0 ${largeArc},1 ${x2},${y2} Z" fill="${t.color}" opacity="0.85"/>`;
+      // Bar
+      svg += `<rect x="${x}" y="${y}" width="${barW}" height="${barH}" rx="6" fill="${step.color}" opacity="0.75"/>`;
+
+      // Value inside bar
+      svg += `<text x="${x + barW/2}" y="${y + barH/2 + 1}" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="13" font-weight="800">${step.value}</text>`;
+
+      // Label right
+      svg += `<text x="${maxBarW + 20}" y="${y + barH/2 - 4}" fill="#e2e8f0" font-size="11" font-weight="600" dominant-baseline="middle">${step.label}</text>`;
+
+      // Conversion rate
+      if (i > 0 && steps[i-1].value > 0) {
+        const rate = ((step.value / steps[i-1].value) * 100).toFixed(0);
+        svg += `<text x="${maxBarW + 20}" y="${y + barH/2 + 12}" fill="#64748b" font-size="9" dominant-baseline="middle">${rate}% du precedent</text>`;
       }
 
-      // Label
-      const midAngle = startAngle + Math.PI * pct;
-      const labelR = R + 25;
-      const lx = cx + labelR * Math.cos(midAngle);
-      const ly = cy + labelR * Math.sin(midAngle);
-      if (pct >= 0.05) {
-        svg += `<text x="${lx}" y="${ly}" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">${t.label}</text>`;
-        svg += `<text x="${lx}" y="${ly+14}" text-anchor="middle" fill="#94a3b8" font-size="10">${t.value} (${(pct*100).toFixed(0)}%)</text>`;
+      // Arrow between steps
+      if (i < steps.length - 1) {
+        const arrowY = y + barH + gap/2;
+        svg += `<text x="${maxBarW/2 + 10}" y="${arrowY + 2}" text-anchor="middle" fill="#334155" font-size="12" dominant-baseline="middle">▼</text>`;
       }
-
-      startAngle = endAngle;
     });
 
-    // Center text
-    svg += `<text x="${cx}" y="${cy-4}" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="800">${total}</text>`;
-    svg += `<text x="${cx}" y="${cy+14}" text-anchor="middle" fill="#64748b" font-size="10">total</text>`;
     svg += '</svg>';
-    document.getElementById('convPieChart').innerHTML = svg;
+    container.innerHTML = svg;
   }
 
   function renderConvTable() {
     const allConv = [
-      ...convData.newsletter.map(c => ({ ...c, type: 'Newsletter', typeColor: '#3b82f6' })),
-      ...convData.diagnostic.map(c => ({ ...c, type: 'Diagnostic', typeColor: '#22c55e' })),
-      ...convData.chat.map(c => ({ ...c, type: 'Chat AI', typeColor: '#f59e0b', email: c.session_id ? c.session_id.slice(0,12) + '...' : '-' })),
-      ...convData.contact.map(c => ({ ...c, type: 'Contact', typeColor: '#ec4899' })),
+      ...convData.newsletter.map(c => ({ ...c, type: 'Newsletter', typeColor: '#3b82f6', detail: c.subject || '-' })),
+      ...convData.diagnostic.map(c => ({ ...c, type: 'Diagnostic', typeColor: '#22c55e', detail: c.message ? c.message.slice(0, 80) : '-' })),
+      ...convData.chat.map(c => ({ ...c, type: 'Chat AI', typeColor: '#f59e0b', email: c.session_id ? c.session_id.slice(0,12) + '...' : '-', detail: c.message_count ? c.message_count + ' messages' : '-' })),
+      ...convData.contact.map(c => ({ ...c, type: 'Formulaire', typeColor: '#ec4899', detail: c.message || c.nom || '-' })),
+      ...(convData.checkouts || []).map(c => ({ ...c, type: 'Abonnement', typeColor: '#8b5cf6', email: '-', detail: (c.metadata && c.metadata.status === 'trialing') ? 'Essai gratuit' : 'Paiement' })),
+      ...(convData.invoices || []).map(c => ({ ...c, type: 'Paiement', typeColor: '#22c55e', email: '-', detail: c.metadata && c.metadata.amount !== undefined ? (c.metadata.amount / 100).toFixed(2) + ' EUR' : 'Facture payee' })),
     ].sort((a,b) => (b.date||'').localeCompare(a.date||'')).slice(0, 50);
+
+    document.getElementById('convTotalBadge').textContent = allConv.length + ' evenements';
 
     const body = document.getElementById('convTableBody');
     if (allConv.length === 0) {
-      body.innerHTML = '<tr><td colspan="5" class="empty-state">Aucune conversion enregistree</td></tr>';
+      body.innerHTML = '<tr><td colspan="4" class="empty-state">Aucune conversion enregistree</td></tr>';
       return;
     }
     body.innerHTML = allConv.map(c => {
@@ -967,8 +1026,7 @@ import { supabaseConfig } from '../../lib/supabase';
         <td style="font-size:0.78rem;color:#94a3b8">${dateStr}</td>
         <td><span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size:0.68rem;font-weight:600;background:${c.typeColor}22;color:${c.typeColor}">${c.type}</span></td>
         <td style="font-family:monospace;font-size:0.75rem;color:#a78bfa">${esc(c.email || '-')}</td>
-        <td style="font-size:0.75rem;color:#64748b">${esc(c.source || '-')}</td>
-        <td style="font-size:0.75rem;color:#64748b;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(c.message || c.nom || (c.message_count ? c.message_count + ' messages' : '-'))}</td>
+        <td style="font-size:0.75rem;color:#64748b;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(c.detail || '-')}</td>
       </tr>`;
     }).join('');
   }
