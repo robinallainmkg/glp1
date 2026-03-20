@@ -87,7 +87,9 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
   
   <!-- Hotjar Tracking -->
   <Hotjar />
-  
+
+  <!-- A/B Testing Engine (before body to avoid flicker) -->
+  <script src="/ab-engine.js" is:inline></script>
 
 </head>
 

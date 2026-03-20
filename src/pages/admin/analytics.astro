@@ -1143,8 +1143,8 @@ import { supabaseConfig } from '../../lib/supabase';
     const avgPos = positioned.length > 0 ? (positioned.reduce((s,r) => s + r.position, 0) / positioned.length).toFixed(1) : '-';
 
     const cards = document.querySelectorAll('#statsGrid .stat-card');
-    if (cards[0]) { cards[0].querySelector('.value').textContent = total; cards[0].querySelector('.sub').textContent = `${rankings.filter(r => r.keyword_type === 'primary').length} prioritaires`; }
-    if (cards[1]) { cards[1].querySelector('.value').textContent = avgPos; }
+    if (cards[0]) { cards[0].querySelector('.value').textContent = total; cards[0].querySelector('.sub').textContent = `${positioned.length} positionnes / ${rankings.filter(r => r.keyword_type === 'primary').length} prioritaires`; }
+    if (cards[1]) { cards[1].querySelector('.value').textContent = avgPos; cards[1].querySelector('.sub').textContent = positioned.length > 0 ? `Sur ${positioned.length} mots-cles visibles` : 'Lancez l\'agent analytics'; }
     if (cards[2]) { cards[2].querySelector('.value').textContent = top10; cards[2].querySelector('.sub').textContent = `dont ${positioned.filter(r => r.position <= 3).length} en top 3`; }
     if (cards[3]) { cards[3].querySelector('.value').textContent = improving; }
   }

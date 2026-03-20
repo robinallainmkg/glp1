@@ -153,7 +153,15 @@ ORDER BY impressions DESC LIMIT 15;
 
 ### Phase 5 — Mise a jour keyword_rankings
 
-Pour les 30 mots-cles les plus importants (ceux avec le plus d'impressions dans GSC), upsert dans `keyword_rankings` :
+**Etape 5.1** — D'abord, mets a jour les positions des mots-cles DEJA SUIVIS dans `keyword_rankings` (la table a ete pre-seedee avec ~70 keywords strategiques) :
+```sql
+SELECT DISTINCT keyword, article_id FROM keyword_rankings;
+```
+Pour chacun de ces keywords, cherche sa position actuelle dans `gsc_metrics` et mets a jour.
+
+**Etape 5.2** — Ensuite, ajoute les 30 mots-cles avec le plus d'impressions dans GSC qui ne sont PAS encore dans `keyword_rankings`.
+
+Format d'upsert :
 
 ```sql
 INSERT INTO keyword_rankings (article_id, keyword, keyword_type, position, previous_position, search_url, checked_at, week_number, month)
@@ -276,7 +284,7 @@ WHERE id = '<run_id>';
 ## Limites
 
 - La sync GA/GSC depend des credentials `.env` — si ca echoue, continue avec les donnees existantes en base
-- Maximum 30 keywords dans keyword_rankings par run
+- Mets a jour TOUS les keywords existants + ajoute max 30 nouveaux par run
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql
 - Reponds uniquement en francais

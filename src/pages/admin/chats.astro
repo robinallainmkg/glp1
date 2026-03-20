@@ -93,29 +93,48 @@ import { supabaseConfig } from '../../lib/supabase';
       overflow-y: auto;
     }
     .conv-list-header {
-      padding: 1rem 1.25rem;
+      padding: 0.75rem 1.25rem;
       border-bottom: 1px solid #1e293b;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: #e2e8f0;
       position: sticky;
       top: 0;
       background: #111827;
       z-index: 2;
+    }
+    .conv-list-header-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 0.5rem;
     }
+    .conv-list-header-top span {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+    }
+    .conv-search {
+      width: 100%;
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #2d3748;
+      background: #0d1117;
+      color: #e2e8f0;
+      font-size: 0.78rem;
+      margin-bottom: 0.5rem;
+      outline: none;
+    }
+    .conv-search::placeholder { color: #4b5563; }
+    .conv-search:focus { border-color: #3b82f6; }
     .conv-filter {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.35rem;
+      flex-wrap: wrap;
     }
     .conv-filter button {
-      padding: 0.25rem 0.6rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 6px;
       border: 1px solid #2d3748;
       background: #1e293b;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       cursor: pointer;
       color: #c8d6e5;
     }
@@ -460,27 +479,27 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="stat-card">
           <div class="label">Conversations</div>
           <div class="value" id="statConvs">-</div>
-          <div class="sub" id="statConvsToday">aujourd'hui: - · <span style="color:#f59e0b" id="statTawkCount">tawk: -</span></div>
+          <div class="sub"><span id="statCoachCount" style="color:#34d399">Coach: -</span> · <span id="statTawkCount" style="color:#f59e0b">Tawk: -</span></div>
         </div>
         <div class="stat-card">
           <div class="label">Messages</div>
           <div class="value" id="statMsgs">-</div>
-          <div class="sub" id="statMsgsToday">aujourd'hui: -</div>
+          <div class="sub" id="statAvgMsgs">moy: - msgs/conv</div>
         </div>
         <div class="stat-card">
-          <div class="label">Visiteurs uniques</div>
-          <div class="value" id="statVisitors">-</div>
-          <div class="sub">sessions distinctes</div>
+          <div class="label" style="color:#f87171">Victimes arnaques</div>
+          <div class="value" id="statScam" style="color:#f87171;">-</div>
+          <div class="sub" id="statScamPct">- % des conversations</div>
         </div>
         <div class="stat-card">
-          <div class="label">Modele LLM</div>
-          <div class="value" id="statLlmPct" style="color: #16a34a;">-</div>
-          <div class="sub" id="statFallback">fallback: -</div>
+          <div class="label" style="color:#a78bfa">Questions produit</div>
+          <div class="value" id="statProduct" style="color:#a78bfa;">-</div>
+          <div class="sub" id="statProductSub">infos, prix, efficacite</div>
         </div>
         <div class="stat-card">
-          <div class="label">Msg/Conv moyen</div>
-          <div class="value" id="statAvgMsgs">-</div>
-          <div class="sub">messages par conversation</div>
+          <div class="label" style="color:#fbbf24">Effets secondaires</div>
+          <div class="value" id="statSideEffects" style="color:#fbbf24;">-</div>
+          <div class="sub" id="statSideEffectsSub">stylo, nausees, douleurs</div>
         </div>
         <div class="stat-card">
           <div class="label">Satisfaction</div>
@@ -494,16 +513,21 @@ import { supabaseConfig } from '../../lib/supabase';
         <!-- Liste -->
         <div class="conv-list" id="convList">
           <div class="conv-list-header">
-            <span>Conversations</span>
+            <div class="conv-list-header-top">
+              <span>Conversations <span id="convCountLabel" style="color:#64748b;font-weight:400;font-size:0.75rem;"></span></span>
+            </div>
+            <input type="text" class="conv-search" id="convSearch" placeholder="Rechercher un message..." oninput="renderConvList()">
             <div class="conv-filter">
               <button class="active" data-filter="all" onclick="filterConvs('all', this)">Toutes</button>
-              <button data-filter="today" onclick="filterConvs('today', this)">Aujourd'hui</button>
-              <button data-filter="week" onclick="filterConvs('week', this)">7j</button>
+              <button data-filter="7" onclick="filterConvs('7', this)">7j</button>
+              <button data-filter="30" onclick="filterConvs('30', this)">30j</button>
+              <button data-filter="90" onclick="filterConvs('90', this)">90j</button>
+              <button data-filter="cat:scam_victim" onclick="filterConvs('cat:scam_victim', this)" style="color:#f87171;">Arnaques</button>
+              <button data-filter="cat:product_question" onclick="filterConvs('cat:product_question', this)" style="color:#a78bfa;">Produit</button>
+              <button data-filter="cat:side_effects" onclick="filterConvs('cat:side_effects', this)" style="color:#fbbf24;">Effets sec.</button>
+              <button data-filter="source:coach" onclick="filterConvs('source:coach', this)" style="color:#34d399;">Coach IA</button>
+              <button data-filter="source:tawk" onclick="filterConvs('source:tawk', this)" style="color:#f59e0b;">Tawk</button>
             </div>
-            <label style="display:flex;align-items:center;gap:6px;font-size:0.72rem;color:#94a3b8;cursor:pointer;margin-top:4px;">
-              <input type="checkbox" id="hideTests" checked onchange="toggleTests()" style="accent-color:#3b82f6;">
-              Masquer les tests
-            </label>
           </div>
           <div id="convListContent">
             <div class="loading-spinner">Chargement...</div>
@@ -599,7 +623,6 @@ import { supabaseConfig } from '../../lib/supabase';
     let tawkConversations = [];
     let allMessages = {};
     let currentFilter = 'all';
-    let hideTestConvs = true;
 
     async function loadData() {
       try {
@@ -623,76 +646,54 @@ import { supabaseConfig } from '../../lib/supabase';
         if (tawkErr) { console.error('tawk error:', tawkErr); }
         tawkConversations = tawk || [];
 
-        // Load stats
-        const { count: totalMsgs } = await sb
-          .from('coach_messages')
-          .select('*', { count: 'exact', head: true });
+        // Render conversations immediately (don't wait for stats)
+        renderConvList();
 
-        const today = new Date().toISOString().split('T')[0];
-        const { count: todayMsgs } = await sb
-          .from('coach_messages')
-          .select('*', { count: 'exact', head: true })
-          .gte('created_at', today);
+        // Compute stats
+        var totalMsgs = 0, upVotes = 0, downVotes = 0;
 
-        const todayConvs = allConversations.filter(c =>
-          c.last_message_at && c.last_message_at.startsWith(today)
-        ).length;
+        try {
+          var r1 = await sb.from('coach_messages').select('*', { count: 'exact', head: true });
+          totalMsgs = r1.count || 0;
+        } catch(e) { console.warn('coach_messages count:', e.message); }
 
-        // Unique sessions
-        const uniqueSessions = new Set(allConversations.map(c => c.session_id)).size;
+        try {
+          var r5 = await sb.from('coach_feedback').select('*', { count: 'exact', head: true }).eq('vote', 'up');
+          upVotes = r5.count || 0;
+          var r6 = await sb.from('coach_feedback').select('*', { count: 'exact', head: true }).eq('vote', 'down');
+          downVotes = r6.count || 0;
+        } catch(e) { console.warn('feedback stats:', e.message); }
 
-        // LLM vs fallback
-        const { count: llmCount } = await sb
-          .from('coach_messages')
-          .select('*', { count: 'exact', head: true })
-          .eq('role', 'assistant')
-          .neq('model', 'fallback-v1')
-          .not('model', 'is', null);
+        // Category stats from tawk
+        var catCounts = { scam_victim: 0, product_question: 0, side_effects: 0, info_request: 0, other: 0 };
+        tawkConversations.forEach(function(t) {
+          var cat = t.category || 'other';
+          catCounts[cat] = (catCounts[cat] || 0) + 1;
+        });
 
-        const { count: fallbackCount } = await sb
-          .from('coach_messages')
-          .select('*', { count: 'exact', head: true })
-          .eq('role', 'assistant')
-          .eq('model', 'fallback-v1');
+        var tawkMsgTotal = tawkConversations.reduce(function(sum, t) { return sum + (t.message_count || 0); }, 0);
+        var totalConvs = allConversations.length + tawkConversations.length;
+        var totalAllMsgs = totalMsgs + tawkMsgTotal;
+        var avgMsgs = totalConvs > 0 ? (totalAllMsgs / totalConvs).toFixed(1) : 0;
 
-        const totalAssistant = (llmCount || 0) + (fallbackCount || 0);
-        const llmPct = totalAssistant > 0 ? Math.round((llmCount / totalAssistant) * 100) : 0;
-
-        // Avg msgs per conv
-        const avgMsgs = allConversations.length > 0
-          ? Math.round((totalMsgs || 0) / allConversations.length)
-          : 0;
-
-        // Feedback stats
-        const { count: upVotes } = await sb
-          .from('coach_feedback')
-          .select('*', { count: 'exact', head: true })
-          .eq('vote', 'up');
-
-        const { count: downVotes } = await sb
-          .from('coach_feedback')
-          .select('*', { count: 'exact', head: true })
-          .eq('vote', 'down');
-
-        const totalVotes = (upVotes || 0) + (downVotes || 0);
-        const satisfactionPct = totalVotes > 0 ? Math.round(((upVotes || 0) / totalVotes) * 100) : 0;
+        var totalVotes = upVotes + downVotes;
+        var satisfactionPct = totalVotes > 0 ? Math.round((upVotes / totalVotes) * 100) : 0;
 
         // Update stats
-        document.getElementById('statConvs').textContent = allConversations.length + tawkConversations.length;
-        document.getElementById('statConvsToday').innerHTML = "aujourd'hui: " + todayConvs;
-        document.getElementById('statTawkCount').textContent = 'tawk: ' + tawkConversations.length;
-        document.getElementById('statMsgs').textContent = totalMsgs || 0;
-        document.getElementById('statMsgsToday').textContent = "aujourd'hui: " + (todayMsgs || 0);
-        document.getElementById('statVisitors').textContent = uniqueSessions;
-        document.getElementById('statLlmPct').textContent = llmPct + '%';
-        document.getElementById('statFallback').textContent = 'fallback: ' + (fallbackCount || 0);
-        document.getElementById('statAvgMsgs').textContent = avgMsgs;
+        document.getElementById('statConvs').textContent = totalConvs;
+        document.getElementById('statCoachCount').textContent = 'Coach: ' + allConversations.length;
+        document.getElementById('statTawkCount').textContent = 'Tawk: ' + tawkConversations.length;
+        document.getElementById('statMsgs').textContent = totalAllMsgs;
+        document.getElementById('statAvgMsgs').textContent = 'moy: ' + avgMsgs + ' msgs/conv';
+        document.getElementById('statScam').textContent = catCounts.scam_victim;
+        document.getElementById('statScamPct').textContent = totalConvs > 0 ? Math.round((catCounts.scam_victim / totalConvs) * 100) + ' % des conversations' : '-';
+        document.getElementById('statProduct').textContent = catCounts.product_question + (catCounts.info_request || 0);
+        document.getElementById('statSideEffects').textContent = catCounts.side_effects;
         document.getElementById('statSatisfaction').textContent = totalVotes > 0 ? satisfactionPct + '%' : '-';
         document.getElementById('statSatisfaction').style.color = satisfactionPct >= 70 ? '#16a34a' : satisfactionPct >= 40 ? '#f59e0b' : '#dc2626';
-        document.getElementById('statFeedbackTotal').textContent = totalVotes + ' votes (' + (upVotes || 0) + '👍 ' + (downVotes || 0) + '👎)';
+        document.getElementById('statFeedbackTotal').textContent = totalVotes + ' votes (' + upVotes + '\uD83D\uDC4D ' + downVotes + '\uD83D\uDC4E)';
         document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
 
-        renderConvList();
         loadFeedbackAnalytics();
         loadSavEmails();
       } catch(e) {
@@ -703,18 +704,9 @@ import { supabaseConfig } from '../../lib/supabase';
 
     function filterConvs(filter, btn) {
       currentFilter = filter;
-      document.querySelectorAll('.conv-filter button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.conv-filter button').forEach(function(b) { b.classList.remove('active'); });
       if (btn) btn.classList.add('active');
       renderConvList();
-    }
-
-    function toggleTests() {
-      hideTestConvs = document.getElementById('hideTests').checked;
-      renderConvList();
-    }
-
-    function isTestConv(c) {
-      return c.session_id && c.session_id.startsWith('test-');
     }
 
     function renderConvList() {

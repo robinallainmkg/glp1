@@ -69,7 +69,10 @@ const ogImage = new URL("/og-image.svg", Astro.site).href;
   
   <!-- Hotjar Tracking -->
   <Hotjar />
-  
+
+  <!-- A/B Testing Engine (before body to avoid flicker) -->
+  <script src="/ab-engine.js" is:inline></script>
+
 </head>
 <body>
   <SiteHeader />
