@@ -433,28 +433,23 @@ function autopilotDecide(state) {
   const { tickets, urgents, links, opps, pctUnchecked } = state;
   const totalWork = tickets + (links || 0) + (opps || 0);
 
-  if (pctUnchecked >= 30) {
-    appendOutput('autopilot', `🧠 Décision: ${pctUnchecked}% non vérifié → fact-check → editorial → validator`, 'progress');
-    return 'factcheck-only';
-  }
-  if (urgents > 0) {
-    appendOutput('autopilot', `🧠 Décision: ${urgents} urgents → editorial direct → validator`, 'progress');
-    return 'editorial-direct';
-  }
-  if (tickets >= 20) {
-    appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (≥20) → editorial direct → validator`, 'progress');
-    return 'editorial-direct';
-  }
+  // No work at all → generate to create some
   if (totalWork === 0) {
-    appendOutput('autopilot', `🧠 Décision: 0 travail → generate seulement (pas d'editorial)`, 'progress');
+    appendOutput('autopilot', `🧠 Décision: 0 travail → generate seulement`, 'progress');
     return 'generate-only';
   }
-  if (tickets < 10) {
-    appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (<10) → generate parallèle → editorial → validator`, 'progress');
-    return 'generate-full';
+
+  // Decide: should we also generate while editing?
+  // Generate if fact-check coverage is low OR few tickets remain
+  const needsGenerate = pctUnchecked >= 15 || tickets < 10;
+
+  if (needsGenerate && totalWork > 0) {
+    appendOutput('autopilot', `🧠 Décision: ${totalWork} items (${tickets}T/${links || 0}L/${opps || 0}O) + generate en parallèle (${pctUnchecked}% unchecked)`, 'progress');
+    return 'generate-and-edit'; // NEW: generate + edit in parallel
   }
-  // 10-19 tickets, no urgents
-  appendOutput('autopilot', `🧠 Décision: ${tickets} tickets (10-19) → editorial → validator`, 'progress');
+
+  // Lots of work, no need to generate more
+  appendOutput('autopilot', `🧠 Décision: ${totalWork} items (${tickets}T/${links || 0}L/${opps || 0}O) → editorial direct → validator`, 'progress');
   return 'editorial-direct';
 }
 
@@ -463,20 +458,13 @@ async function autopilotGenerate(decision) {
   const time = () => new Date().toLocaleTimeString('fr-FR');
 
   if (decision === 'editorial-direct') {
-    appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE (SKIP)`, 'progress');
+    appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE (SKIP — assez de travail)`, 'progress');
     return;
   }
 
   appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE`, 'progress');
 
-  let agents;
-  if (decision === 'factcheck-only') {
-    agents = ['fact-check'];
-  } else if (decision === 'generate-only' || decision === 'generate-full') {
-    agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
-  } else {
-    agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
-  }
+  const agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
 
   // Launch all in parallel
   const results = agents.map(a => {
@@ -511,16 +499,19 @@ async function autopilotEdit(state) {
   autopilotPhase = 'edit';
   const time = () => new Date().toLocaleTimeString('fr-FR');
 
-  // Decide how many editorial instances based on ticket count
-  // Each editorial handles ~20 tickets, so scale accordingly
+  // Scale editorial instances based on TOTAL work (tickets + links + opps)
   const tickets = state?.tickets || 0;
+  const links = state?.links || 0;
+  const opps = state?.opps || 0;
+  const totalWork = tickets + links + opps;
   let numInstances = 1;
-  if (tickets >= 80) numInstances = 5;
-  else if (tickets >= 50) numInstances = 4;
-  else if (tickets >= 30) numInstances = 3;
-  else if (tickets >= 15) numInstances = 2;
+  if (totalWork >= 80) numInstances = 4;
+  else if (totalWork >= 40) numInstances = 3;
+  else if (totalWork >= 15) numInstances = 2;
+  // Minimum 2 instances if there are both tickets AND links
+  if (tickets > 0 && links > 0 && numInstances < 2) numInstances = 2;
 
-  appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (${numInstances} editorial${numInstances > 1 ? 's' : ''}, ${tickets} tickets)`, 'progress');
+  appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (${numInstances} editorial${numInstances > 1 ? 's' : ''}, ${totalWork} items: ${tickets}T/${links}L/${opps}O)`, 'progress');
 
   // Launch first instance
   const r = launchAgent('editorial', { ticketCount: tickets });
@@ -619,13 +610,20 @@ async function runAutopilotCycle() {
     const decision = autopilotDecide(state);
     lastDecision = decision;
 
-    // Phase 2: GENERATE (may skip)
-    await autopilotGenerate(decision);
-
-    // Phase 3: EDIT — skip if generate-only (nothing to edit yet)
-    if (decision === 'generate-only') {
-      appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (SKIP — generate-only, rien à éditer)`, 'progress');
+    // Phase 2+3: GENERATE and EDIT — parallel when possible
+    if (decision === 'generate-and-edit') {
+      // Launch generate and edit IN PARALLEL — max throughput
+      appendOutput('autopilot', `⚡ Generate + Edit en PARALLÈLE`, 'progress');
+      await Promise.all([
+        autopilotGenerate(decision),
+        autopilotEdit(state)
+      ]);
+    } else if (decision === 'generate-only') {
+      await autopilotGenerate(decision);
+      appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (SKIP — generate-only)`, 'progress');
     } else {
+      // editorial-direct: skip generate, just edit
+      await autopilotGenerate(decision);
       await autopilotEdit(state);
     }
 
@@ -830,7 +828,7 @@ function launchAgent(name, { allowMultiple = false, ticketCount = 0 } = {}) {
   ], {
     cwd: PROJECT_ROOT,
     stdio: ['pipe', 'pipe', 'pipe'],
-    env: { ...process.env, CLAUDECODE: undefined },
+    env: Object.fromEntries(Object.entries(process.env).filter(([k]) => !k.startsWith('CLAUDE'))),
     shell: true
   });
   // Pass prompt via stdin to avoid shell mangling on Windows
@@ -864,7 +862,7 @@ function launchAgent(name, { allowMultiple = false, ticketCount = 0 } = {}) {
     appendOutput(instanceName, `⚠️ ${text.trim()}`);
   });
 
-  running.set(instanceName, { pid: child.pid, started: new Date(), baseAgent });
+  running.set(instanceName, { pid: child.pid, child, started: new Date(), baseAgent });
 
   child.on('close', async (code) => {
     running.delete(instanceName);
@@ -1035,20 +1033,28 @@ const server = createServer(async (req, res) => {
     autopilotEnabled = false;
     console.log(`🔴 [${new Date().toLocaleTimeString()}] Autopilot DESACTIVE`);
 
-    // Kill ALL currently running agents
+    // Kill ALL currently running agents — use child.kill() for proper tree kill
     const killed = [];
     for (const [name, info] of running) {
       try {
-        process.kill(info.pid, 'SIGTERM');
         killed.push(name);
         console.log(`⏹️ [${new Date().toLocaleTimeString()}] Killing agent ${name} (pid ${info.pid})`);
-        // Force kill after 5s if still alive
-        const pid = info.pid;
-        setTimeout(() => {
-          try { process.kill(pid, 'SIGKILL'); } catch(_) { /* already dead */ }
-        }, 5000);
+        // Use child process handle if available, fallback to process.kill
+        if (info.child && !info.child.killed) {
+          info.child.kill('SIGTERM');
+          // On Windows, also kill the process tree via taskkill
+          try {
+            require('child_process').execSync(`taskkill /PID ${info.pid} /T /F`, { stdio: 'ignore' });
+          } catch(_) {}
+        } else {
+          process.kill(info.pid, 'SIGTERM');
+        }
       } catch(e) {
         console.log(`⚠️ Could not kill ${name} (pid ${info.pid}): ${e.message}`);
+        // Last resort: force kill on Windows
+        try {
+          require('child_process').execSync(`taskkill /PID ${info.pid} /T /F`, { stdio: 'ignore' });
+        } catch(_) {}
       }
     }
     running.clear();

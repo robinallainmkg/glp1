@@ -8,6 +8,8 @@ Detecter les tendances actuelles, identifier les gaps de contenu par rapport aux
 
 ## Procedure
 
+> **NOTE**: La création d'articles est actuellement DÉSACTIVÉE côté editorial. Les opportunités sont toujours détectées et enregistrées en base, mais ne seront pas consommées pour créer de nouveaux articles. L'éditorial se concentre sur les corrections et le maillage interne de l'existant.
+
 ### 1. Initialisation
 
 ```sql

@@ -111,47 +111,11 @@ VALUES ('editorial', 'success', '{"action": "internal_link", "source": "<source_
 - Si le texte ne permet pas d'inserer le lien naturellement, passe (ne force PAS)
 - Si la suggestion est impossibe a appliquer, marque-la `rejected`
 
-### 4. Mode Creation — Opportunites approuvees
+### 4. Mode Creation — DESACTIVE
 
-Recupere les opportunites approuvees :
-```sql
-SELECT id, topic, description, target_keyword, suggested_collection, suggested_slug, source_urls
-FROM content_opportunities
-WHERE status = 'approved'
-ORDER BY priority ASC
-LIMIT 3;
-```
+> **MODE CREATION DESACTIVE** — On peaufine l'existant. Ne cree AUCUN nouvel article. Concentre-toi sur les corrections (Mode 1) et le maillage interne (Mode 2).
 
-Pour chaque opportunite :
-
-1. **Marque en cours** :
-```sql
-UPDATE content_opportunities SET status = 'in_progress', updated_at = NOW() WHERE id = '<opp_id>';
-```
-
-2. **Recherche** : Lis 2-3 articles existants de la meme collection pour comprendre le style, la structure, et le frontmatter attendu
-
-3. **Redige l'article** : Cree un fichier markdown complet avec :
-   - Frontmatter conforme au schema de la collection
-   - Contenu informatif, bien structure (h2, h3, listes)
-   - Ton bienveillant et professionnel
-   - SEO naturel (mots-cles integres dans le texte)
-   - Minimum 1500 mots
-   - Liens internes vers 2-3 articles existants pertinents
-
-4. **Ecris le fichier** avec Write dans `src/content/<collection>/<slug>.md`
-
-5. **Insere l'article en base** :
-```sql
-INSERT INTO articles (slug, collection, title, is_active)
-VALUES ('<slug>', '<collection>', '<title>', true)
-ON CONFLICT (slug) DO NOTHING;
-```
-
-6. **Met a jour l'opportunite** :
-```sql
-UPDATE content_opportunities SET status = 'published', updated_at = NOW() WHERE id = '<opp_id>';
-```
+Ce mode est desactive. Ne recupere PAS d'opportunites, ne cree AUCUN fichier. Passe directement au git workflow.
 
 ### 5. Git workflow — Commit local UNIQUEMENT
 
@@ -179,6 +143,10 @@ UPDATE agent_runs SET status = 'completed', completed_at = NOW(),
   metadata = '{"corrections_applied": <n>, "links_inserted": <n>, "articles_created": <n>, "tickets_deployed": <n>}'::jsonb
 WHERE id = '<run_id>';
 ```
+
+## Regle thumbnail
+
+Quand tu modifies un article, verifie que `thumbnail:` et `thumbnailAlt:` sont presents dans le frontmatter. Si manquants, ajoute-les en pointant vers `/images/thumbnails/<slug>-illus.jpg` (verifie que le fichier existe avec Glob avant).
 
 ## Regles de style
 
@@ -213,6 +181,6 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 
 - Maximum 50 tickets de correction par run
 - Maximum 25 liens internes par run
-- Maximum 5 articles crees par run
+- Maximum 0 articles crees par run (creation desactivee)
 - Seul agent autorise a modifier des fichiers dans `src/content/`
 - Ecris dans Supabase via MCP execute_sql pour les mises a jour de statut

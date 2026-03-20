@@ -40,7 +40,7 @@ Le champ `running` dans la reponse contient les agents actifs. Quand un agent te
 Phase 1: CHECK    — Etat du pipeline (30s max)
 Phase 1b: SAV     — Lancer l'agent sav-email (emails, independant du pipeline)
 Phase 2: GENERATE — Lancer les agents generateurs (si stock tickets < 10)
-Phase 3: EDIT     — Lancer l'agent editorial (commit + push main)
+Phase 3: EDIT     — Lancer l'agent editorial (corrections + maillage, PAS de creation d'articles)
 Phase 4: VALIDATE — Lancer le validator (build check + push main → deploy)
 → FIN (le serveur relance le cycle suivant automatiquement)
 ```
@@ -152,24 +152,26 @@ Le validator fait le `npm run build`, et si OK push `main` (declenche le deploy 
 ```sql
 INSERT INTO agent_runs (agent_name, status, started_at, completed_at, items_processed, metadata)
 VALUES ('autopilot', 'cycle_complete', '<cycle_start>', NOW(), <total_items>,
-  '{"corrections_applied": <n>, "links_inserted": <n>, "articles_created": <n>, "deployed": <true|false>}'::jsonb);
+  '{"corrections_applied": <n>, "links_inserted": <n>, "deployed": <true|false>}'::jsonb);
 ```
 
 Puis **TERMINE**. Le serveur te relancera automatiquement.
 
 ## REGLES DE PRIORISATION
 
+> **NOTE** : La creation d'articles est DESACTIVEE. L'editorial traite uniquement les corrections (tickets) et le maillage interne (liens). Les opportunites sont toujours detectees par l'agent opportunities mais ne sont pas consommees.
+
 ```
 CHECK → pct_unchecked, nb_tickets, nb_urgents
 
 SI pct_unchecked >= 30%:
-  → fact-check seul → editorial (4 instances) → validator
+  → fact-check seul → editorial (4 instances, corrections + liens) → validator
 
 SINON SI nb_urgents > 0 OU nb_tickets >= 10:
-  → editorial direct (4 instances, skip Generate) → validator
+  → editorial direct (4 instances, corrections + liens, skip Generate) → validator
 
 SINON SI nb_tickets < 10:
-  → Generate (4 agents parallele) → editorial (4 instances) → validator
+  → Generate (4 agents parallele) → editorial (4 instances, corrections + liens) → validator
 
 SINON (0 tickets, rien a faire):
   → Generate seulement → FIN (pas d'editorial si rien a consommer)
