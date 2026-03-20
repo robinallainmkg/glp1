@@ -151,7 +151,7 @@ Ces effets font partie du mécanisme attendu du traitement. Ils sont généralem
 - **Troubles du sommeil** : insomnie ou hypersomnie non liée aux nausées
 - **Irritabilité ou anxiété inhabituelles**
 - **Pensées négatives récurrentes** sur soi-même ou l'avenir
-- **Idées suicidaires ou pensées de mort** : consulter en urgence
+- **Idées suicidaires ou pensées de mort** : consulter en urgence — voir notre article sur le [risque d'idées suicidaires sous GLP-1](/collections/effets-secondaires-glp1/glp1-idees-suicidaires-risque-semaglutide-etude/)
 
 ---
 
@@ -203,7 +203,7 @@ Chez la majorité des patients qui rapportent une apathie en début de traitemen
 Oui, généralement. Aucune interaction médicamenteuse majeure n'a été identifiée entre les GLP-1 et les antidépresseurs courants (ISRS, IRSN). Votre médecin évaluera la situation selon votre profil spécifique.
 
 **Les GLP-1 peuvent-ils au contraire améliorer la dépression ?**
-Des études publiées dans *JAMA Psychiatry* (2024) montrent que la perte de poids induite par les GLP-1 s'accompagne d'une amélioration significative de la qualité de vie, de l'image corporelle et de l'humeur chez la majorité des patients. Pour beaucoup, le bilan psychologique du traitement est positif. Cette action sur les circuits de la récompense explique aussi les [effets des GLP-1 sur les comportements addictifs](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) comme l'alcool ou le tabac.
+Des études publiées dans *JAMA Psychiatry* (2024) montrent que la perte de poids induite par les GLP-1 s'accompagne d'une amélioration significative de la qualité de vie, de l'image corporelle et de l'humeur chez la majorité des patients. Pour beaucoup, le bilan psychologique du traitement est positif. Cette action sur les circuits de la récompense explique aussi les [effets des GLP-1 sur les comportements addictifs](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) comme l'alcool ou le tabac. Chez certains patients, ces modifications neurobiologiques peuvent aussi révéler ou aggraver des [troubles des conduites alimentaires (TCA)](/collections/effets-secondaires-glp1/glp1-boulimie-hyperphagie-troubles-conduites-alimentaires-tca-france/) préexistants.
 
 **Mon enfant ou adolescent peut-il être affecté différemment ?**
 Les GLP-1 ne sont pas encore indiqués chez les moins de 12 ans en France (Wegovy est autorisé dès 12 ans aux États-Unis). La prudence est de mise, et un suivi psychologique renforcé est recommandé pour les adolescents traités.

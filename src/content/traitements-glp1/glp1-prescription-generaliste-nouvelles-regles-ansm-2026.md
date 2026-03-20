@@ -34,7 +34,7 @@ Pendant des années, obtenir une prescription de [Wegovy](/collections/traitemen
 
 ### La décision de l'ANSM
 
-Le 23 juin 2025, l'Agence Nationale de Sécurité du Médicament et des produits de santé (ANSM) a publié une décision faisant évoluer les conditions de prescription et de délivrance des analogues du GLP-1 indiqués dans le traitement de l'obésité. Cette décision concerne spécifiquement :
+Le 23 juin 2025, l'Agence Nationale de Sécurité du Médicament et des produits de santé (ANSM) a publié de nouvelles [règles de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) faisant évoluer les conditions de prescription et de délivrance des analogues du GLP-1 indiqués dans le traitement de l'obésité. Cette décision concerne spécifiquement :
 
 - **Wegovy** (sémaglutide 2,4 mg, Novo Nordisk) — indiqué pour l'obésité et le surpoids avec comorbidité
 - **Mounjaro** (tirzépatide, Eli Lilly) — indiqué pour l'obésité et le surpoids avec comorbidité
@@ -58,7 +58,7 @@ Plusieurs facteurs ont conduit à cette évolution réglementaire :
 
 ### Vous n'avez plus besoin d'un spécialiste pour une première prescription
 
-C'est le changement le plus important. Si vous souffrez d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27 avec hypertension, diabète, dyslipidémie ou apnée du sommeil), votre médecin traitant peut désormais :
+C'est le changement le plus important. Si vous souffrez d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27 avec hypertension, diabète, dyslipidémie ou apnée du sommeil), les [conditions de prescription par le médecin généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) sont désormais remplies et votre médecin traitant peut :
 
 1. Évaluer votre éligibilité lors d'une consultation dédiée
 2. Prescrire un traitement par Wegovy, Mounjaro ou Saxenda

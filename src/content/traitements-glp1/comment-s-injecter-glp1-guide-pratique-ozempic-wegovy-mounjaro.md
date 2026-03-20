@@ -46,7 +46,7 @@ Chaque médicament GLP-1 injectable est conditionné dans un **stylo auto-inject
 - **Wegovy** : stylo FlexTouch (Novo Nordisk), disponible en 0,25 mg, 0,5 mg, 1 mg, 1,7 mg et 2,4 mg
 - **Mounjaro** : stylo KwikPen (Eli Lilly), disponible en 2,5 mg, 5 mg, 7,5 mg, 10 mg, 12,5 mg et 15 mg
 
-Ces stylos sont à usage unique ou multi-doses selon le modèle. Conservez-les au réfrigérateur (2-8°C) avant la première utilisation. Une fois entamé, le stylo peut être conservé à température ambiante (< 30°C) pendant 56 jours pour Ozempic, 42 jours (6 semaines) pour Wegovy et 30 jours pour Mounjaro.
+Ces stylos sont à usage unique ou multi-doses selon le modèle. Conservez-les au réfrigérateur (2-8°C) avant la première utilisation. Une fois entamé, le stylo peut être conservé à température ambiante (< 30°C) pendant 6 semaines (42 jours) pour Ozempic, 42 jours (6 semaines) pour Wegovy et 21 jours pour Mounjaro (stylo à usage unique, conservation hors réfrigérateur).
 
 ### Les aiguilles
 

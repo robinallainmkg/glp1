@@ -66,7 +66,7 @@ La plupart des nutritionnistes et médecins spécialisés dans l'obésité recom
 
 **Exemple concret** : pour une personne de 90 kg, cela représente entre 108 g et 144 g de protéines par jour — soit environ 3 à 4 portions de protéines animales de bonne taille.
 
-Ces recommandations sont supérieures aux apports journaliers recommandés classiques (0,8 g/kg), car la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) augmente les besoins en protéines pour préserver les muscles.
+Ces recommandations sont supérieures aux apports journaliers recommandés classiques (0,8 g/kg), car la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) augmente les besoins en protéines pour préserver les muscles. Pour déterminer vos [calories journalières recommandées](/collections/regime-glp1/glp1-calories-journalieres/) sous traitement, un suivi nutritionnel est conseillé.
 
 ### Répartir les protéines sur la journée
 
@@ -153,7 +153,7 @@ Pas forcément. La grande majorité des personnes peut atteindre ses objectifs p
 
 ### Mon médecin devrait-il surveiller mon apport protéique ?
 
-Oui. Dans le cadre d'un suivi sous GLP-1, une évaluation nutritionnelle régulière est recommandée. Votre médecin peut évaluer vos apports et vous orienter vers une diététicienne si nécessaire. Un bilan biologique peut également vérifier l'absence de carences (albumine, préalbumine comme marqueurs d'un apport protéique suffisant sur la durée).
+Oui. Dans le cadre d'un suivi sous GLP-1, une évaluation nutritionnelle régulière est recommandée. Votre médecin peut évaluer vos apports et vous orienter vers une diététicienne si nécessaire. Un [bilan sanguin et supplémentation](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) adaptée peuvent également vérifier l'absence de carences (albumine, préalbumine comme marqueurs d'un apport protéique suffisant sur la durée).
 
 ### Qu'en est-il des protéines végétales uniquement ?
 

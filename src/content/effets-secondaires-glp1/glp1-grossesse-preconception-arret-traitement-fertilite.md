@@ -115,7 +115,7 @@ Si vous découvrez une grossesse en cours de traitement GLP-1, arrêtez immédia
 
 ### Puis-je reprendre le GLP-1 après l'accouchement ?
 
-Non pas pendant l'allaitement. Le sémaglutide est excrété dans le lait animal. Par précaution, le traitement est contre-indiqué pendant l'allaitement. Attendez l'arrêt de l'allaitement pour reprendre le traitement, et consultez notre article sur les [GLP-1 et grossesse-allaitement](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) pour plus de détails.
+Non pas pendant l'allaitement. Le sémaglutide est excrété dans le lait animal. Par précaution, il existe des [contre-indications pendant l'allaitement](/collections/effets-secondaires-glp1/glp1-allaitement-ozempic-wegovy-post-partum-contre-indication/). Attendez l'arrêt de l'allaitement pour reprendre le traitement, et consultez notre article sur les [GLP-1 et grossesse-allaitement](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) pour plus de détails.
 
 ### Le GLP-1 peut-il provoquer une fausse couche ?
 

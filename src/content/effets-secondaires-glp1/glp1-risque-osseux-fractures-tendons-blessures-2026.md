@@ -3,7 +3,7 @@ title: "GLP-1 et Os : Fractures de Stress, Tendons et Risques 2026"
 description: "GLP-1 fractures et blessures tendineuses : deux études AAOS 2026 (78 590 et 73 483 patients). Risques osseux sous Ozempic, Wegovy, Mounjaro et prévention."
 keywords: ['glp1 fractures', 'ozempic tendinite', 'wegovy fracture stress', 'glp1 blessures osseuses', 'mounjaro tendons', 'glp1 blessures sportives 2026']
 seoTitle: "GLP-1 et Blessures Osseuses : Fractures, Tendons — Étude 2026"
-seoDescription: "GLP-1 et ruptures tendineuses, ostéoporose : deux études AAOS 2026 sur plus de 150 000 patients. Risques, populations concernées et prévention sous Ozempic ou Wegovy."
+seoDescription: "GLP-1 et ruptures tendineuses, ostéoporose : deux études AAOS 2026 (78 590 et 73 483 patients appariés). Risques, populations concernées et prévention sous Ozempic ou Wegovy."
 publishedAt: '2026-03-18'
 date: '2026-03-18'
 updatedAt: '2026-03-18'

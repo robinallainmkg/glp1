@@ -47,7 +47,7 @@ Les données les plus complètes sur ce sujet proviennent des extensions des gra
 
 L'étude STEP 1 a montré qu'après 68 semaines de traitement par sémaglutide 2,4 mg (Wegovy), les patients avaient perdu en moyenne 14,9 % de leur poids. Une extension de l'étude a suivi les patients après l'arrêt du traitement :
 
-- **À 12 mois après l'arrêt** : les patients avaient récupéré en moyenne **deux tiers (2/3) du poids perdu**, soit environ 10 % du poids initial
+- **À 12 mois après l'arrêt** : les patients avaient récupéré en moyenne **deux tiers (2/3) du poids perdu** — une [reprise de poids 4 fois plus rapide après GLP-1](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) que dans les groupes placebo, soit environ 10 % du poids initial
 - **À 18-24 mois** : le retour au poids initial était quasi-complet chez la majorité des patients qui n'avaient pas modifié leur mode de vie
 
 Ces chiffres sont cohérents avec ce qu'on observe dans d'autres contextes de perte de poids : la grande majorité des personnes qui perdent du poids de manière médicale ou chirurgicale reprennent une partie ou la totalité de leur poids dans les 2 à 5 ans suivant l'arrêt de l'intervention.
@@ -105,7 +105,7 @@ Le temps sous GLP-1 doit être utilisé comme une "fenêtre de changement". Le m
 - Réduire les portions sans frustration (l'appétit diminué facilite cela)
 - Augmenter la consommation de protéines et de légumes
 - Instaurer un [programme d'exercice pour maintenir les résultats](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
-- Travailler sur les comportements alimentaires émotionnels avec un professionnel si nécessaire
+- Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
 
 Ces changements, s'ils sont consolidés pendant 12 à 18 mois de traitement, ont plus de chances de se maintenir après l'arrêt.
 

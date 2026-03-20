@@ -52,9 +52,9 @@ C'est pourquoi **tous les GLP-1 portent une contre-indication chez les personnes
 
 ### Les données chez l'humain : pas de signal clair
 
-Les études observationnelles chez l'humain sont rassurantes. Une vaste analyse publiée en 2024 dans le *NEJM Evidence* portant sur plus de 1,6 million de patients traités par GLP-1 n'a pas identifié d'augmentation significative du risque de CMT par rapport aux patients traités par d'autres antidiabétiques.
+Les études observationnelles chez l'humain sont rassurantes. Une vaste analyse internationale multisite publiée en 2025 portant sur 98 147 utilisateurs de GLP-1 comparés à 2,5 millions d'utilisateurs de DPP-4i n'a pas identifié d'augmentation significative du risque de CMT par rapport aux patients traités par d'autres antidiabétiques.
 
-Une étude française basée sur les données du Système National des Données de Santé (SNDS) publiée en 2025 a examiné plus de 600 000 patients traités par GLP-1 en France entre 2010 et 2023. Elle n'a pas non plus détecté de signal de sur-risque thyroïdien.
+Une étude française basée sur les données du Système National des Données de Santé (SNDS), publiée en 2023, a examiné une cohorte de patients diabétiques de type 2 traités par antidiabétiques de deuxième ligne entre 2006 et 2018. Cette étude cas-témoin a trouvé des résultats nuancés, avec une association possible entre l'utilisation de GLP-1 RA pendant 1 à 3 ans et le risque de cancer thyroïdien, nécessitant un suivi prolongé.
 
 **Conclusion actuelle (mars 2026)** : Le risque thyroïdien reste théorique chez l'humain, documenté uniquement chez les rongeurs. La contre-indication aux antécédents de CMT et NEM2 est maintenue par précaution, mais le risque pour la population générale n'est pas démontré dans les données de vie réelle.
 
@@ -88,7 +88,7 @@ Des données observationnelles récentes suggèrent que les GLP-1 pourraient ré
 
 ### L'étude de la Clinique Cleveland (2023-2024)
 
-Une grande étude rétrospective publiée dans *JAMA Oncology* en 2023 a comparé 1 651 patients obèses ou en surpoids avec diabète de type 2 traités par sémaglutide à des patients traités par d'autres médicaments contre le diabète. Les patients sous sémaglutide présentaient une réduction du risque de cancer colorectal de **17 %** sur 10 ans de suivi, après ajustement pour les facteurs confondants.
+Une grande étude rétrospective de Wang et al. (Case Western Reserve University) publiée dans *JAMA Oncology* en décembre 2023 a analysé plus de 1,2 million de dossiers médicaux avec des cohortes appariées de 22 572 patients ou en surpoids avec diabète de type 2 traités par sémaglutide à des patients traités par d'autres médicaments contre le diabète. Les patients sous sémaglutide présentaient une réduction du risque de cancer colorectal de **17 %** sur 10 ans de suivi, après ajustement pour les facteurs confondants.
 
 ### Mécanismes biologiques proposés
 

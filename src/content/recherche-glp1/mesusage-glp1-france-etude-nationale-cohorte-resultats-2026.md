@@ -60,10 +60,10 @@ Ce chiffre peut sembler modeste, mais rapporté au nombre total d'utilisateurs d
 
 ### Qui sont ces patients ?
 
-L'analyse des profils révèle une hétérogénéité importante parmi les patients sans indication validée :
+Les profils décrits ci-dessous sont des catégories éditoriales et non des résultats directs de l'étude Value in Health :
 
 **Profil 1 — Surpoids sans obésité franche (IMC 27-29,9)**
-La majorité des cas de mésusage concernent des personnes en surpoids mais n'atteignant pas le seuil d'IMC requis pour Wegovy (IMC ≥ 30) ou Mounjaro (IMC ≥ 35). Ces patients cherchent souvent à perdre "les derniers kilos" ou à améliorer leur silhouette plutôt qu'à traiter une obésité médicalement documentée.
+La majorité des cas de mésusage concernent des personnes en surpoids mais n'atteignant pas le seuil d'IMC requis par l'AMM pour Wegovy (IMC ≥ 30 ou ≥ 27 avec comorbidités) ou les conditions de remboursement HAS pour Mounjaro (IMC ≥ 35). Ces patients cherchent souvent à perdre "les derniers kilos" ou à améliorer leur silhouette plutôt qu'à traiter une obésité médicalement documentée.
 
 **Profil 2 — Patients "esthétiques"**
 Un sous-groupe utilise les GLP-1 uniquement à des fins esthétiques, sans problème de santé associé. Ce phénomène, largement médiatisé par les réseaux sociaux et les influenceurs, est particulièrement documenté chez les jeunes femmes de 25-40 ans.

@@ -49,7 +49,7 @@ L'effet le plus documenté des GLP-1 sur le profil lipidique concerne la **rédu
 
 Dans les grandes études cliniques, les GLP-1 ont montré des réductions significatives des triglycérides :
 
-- **Ozempic (sémaglutide 1 mg)** : réduction des triglycérides de **-12 à -22%** selon les études SUSTAIN
+- **Ozempic (sémaglutide 1 mg)** : réduction des triglycérides de **-5 à -12%** selon les études SUSTAIN
 - **Wegovy (sémaglutide 2,4 mg)** : réduction des triglycérides de **-23%** en moyenne à 68 semaines dans l'étude STEP 1
 - **Mounjaro (tirzépatide)** : réduction des triglycérides de **-24 à -30%** selon la dose dans les études SURPASS
 
@@ -115,7 +115,7 @@ Des études précliniques montrent que les GLP-1 exercent des effets anti-inflam
 
 ### Essai LEADER (liraglutide)
 
-L'essai LEADER a suivi 9 340 patients diabétiques à haut risque cardiovasculaire pendant 3,8 ans. Au-delà de la réduction significative des événements cardiovasculaires (-13% de mortalité cardiovasculaire), LEADER a montré des modifications favorables du profil lipidique : réduction des triglycérides de -15%, légère réduction du LDL de -4%.
+L'essai LEADER a suivi 9 340 patients diabétiques à haut risque cardiovasculaire pendant 3,8 ans. Au-delà de la réduction significative des événements cardiovasculaires (-13% de mortalité cardiovasculaire), LEADER a montré une réduction significative de -13% du risque de MACE composite et de -22% de la mortalité cardiovasculaire spécifique, accompagnée de modifications favorables mais modestes du profil lipidique.
 
 ### Essais SUSTAIN (sémaglutide)
 
@@ -178,7 +178,7 @@ Les GLP-1 ne nécessitent pas de surveillance lipidique spécifique plus fréque
 
 ### Ozempic fait-il baisser le cholestérol ?
 
-Oui, partiellement. Ozempic (sémaglutide 1 mg) réduit modestement le LDL (-3 à -5%) et plus significativement les triglycérides (-12 à -22%). Il ne remplace pas un traitement par statine si celui-ci est indiqué.
+Oui, partiellement. Ozempic (sémaglutide 1 mg) réduit modestement le LDL (-3 à -5%) et plus significativement les triglycérides (-5 à -12%). Il ne remplace pas un traitement par statine si celui-ci est indiqué.
 
 ### Mon HDL est bas. Un GLP-1 peut-il l'améliorer ?
 

@@ -87,7 +87,7 @@ L'essai clinique [SUMMIT](/collections/recherche-glp1/mounjaro-tirzepatide-insuf
 - Amélioration significative de la capacité à l'exercice
 - Réduction des symptômes (essoufflement, fatigue)
 
-Ces données ont conduit à une extension de l'indication du tirzépatide à l'IC-FEP chez les patients obèses dans plusieurs pays. En France, cette indication est en cours d'évaluation par la HAS.
+Ces données pourraient conduire à terme à une extension de l'indication du tirzépatide à l'IC-FEP. En mars 2026, cette indication spécifique n'a pas encore été approuvée par les agences réglementaires. En France, cette indication est en cours d'évaluation par la HAS.
 
 ## Les contre-indications et précautions spécifiques {#contre-indications}
 
