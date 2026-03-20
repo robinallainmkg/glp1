@@ -1011,11 +1011,11 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="screen" id="screenAuth">
     <div class="auth-screen">
       <h1>Votre Coach GLP-1</h1>
-      <p>Suivi personnalise, rappels d'injection, programme nutrition et sport adapte a votre traitement.</p>
+      <p>Suivi personnalisé, rappels d'injection, programme nutrition et sport adapté à votre traitement.</p>
 
       <div class="auth-box">
         <div class="auth-tabs">
-          <button class="auth-tab active" onclick="switchAuthTab('signup')" id="tabSignup">Creer un compte</button>
+          <button class="auth-tab active" onclick="switchAuthTab('signup')" id="tabSignup">Créer un compte</button>
           <button class="auth-tab" onclick="switchAuthTab('login')" id="tabLogin">Se connecter</button>
         </div>
 
@@ -1028,8 +1028,8 @@ import { supabaseConfig } from '../../lib/supabase';
 
         <form id="authFormSignup" onsubmit="event.preventDefault(); signUpEmail();">
           <div class="form-group">
-            <label for="signupName">Prenom</label>
-            <input type="text" id="signupName" placeholder="Votre prenom" autocomplete="given-name">
+            <label for="signupName">Prénom</label>
+            <input type="text" id="signupName" placeholder="Votre prénom" autocomplete="given-name">
           </div>
           <div class="form-group">
             <label for="signupEmail">Email</label>
@@ -1038,11 +1038,11 @@ import { supabaseConfig } from '../../lib/supabase';
           <div class="form-group">
             <label for="signupPassword">Mot de passe</label>
             <div class="input-wrapper">
-              <input type="password" id="signupPassword" placeholder="6 caracteres minimum" autocomplete="new-password" minlength="6">
+              <input type="password" id="signupPassword" placeholder="6 caractères minimum" autocomplete="new-password" minlength="6">
               <button type="button" class="toggle-password" onclick="togglePw('signupPassword')" aria-label="Afficher le mot de passe">&#128065;</button>
             </div>
           </div>
-          <button type="submit" class="btn-primary" id="btnSignup">Creer mon compte gratuit</button>
+          <button type="submit" class="btn-primary" id="btnSignup">Créer mon compte gratuit</button>
         </form>
 
         <form id="authFormLogin" style="display:none;" onsubmit="event.preventDefault(); signInEmail();">
@@ -1058,7 +1058,7 @@ import { supabaseConfig } from '../../lib/supabase';
             </div>
           </div>
           <div class="forgot-password">
-            <a onclick="resetPassword()">Mot de passe oublie ?</a>
+            <a onclick="resetPassword()">Mot de passe oublié ?</a>
           </div>
           <button type="submit" class="btn-primary" id="btnLogin">Se connecter</button>
         </form>
@@ -1087,7 +1087,7 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="screen" id="screenOnboarding">
     <div class="topbar">
       <a href="/" class="topbar-logo">GLP-1 <span>Coach</span></a>
-      <span style="font-size:0.82rem;color:#64748b;" id="obStepLabel">Etape 1/6</span>
+      <span style="font-size:0.82rem;color:#64748b;" id="obStepLabel">Étape 1/6</span>
     </div>
     <div class="onboarding">
       <div class="onboarding-progress" id="obProgress">
@@ -1108,7 +1108,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <a href="/" class="topbar-logo">GLP-1 <span>Coach</span></a>
       <div class="topbar-right">
         <span class="topbar-user" id="dashUserName"></span>
-        <button class="btn-logout" onclick="doLogout()" aria-label="Se deconnecter">Deconnexion</button>
+        <button class="btn-logout" onclick="doLogout()" aria-label="Se déconnecter">Déconnexion</button>
       </div>
     </div>
     <div class="trial-banner" id="trialBanner" style="display:none;">
@@ -1187,15 +1187,15 @@ import { supabaseConfig } from '../../lib/supabase';
           <span class="card-action" id="seHistory" onclick="viewSeHistory()">Historique</span>
         </div>
         <div class="side-effects" id="sideEffects">
-          <button class="se-tag" data-se="nausees" onclick="toggleSe(this)">&#129326; Nausees</button>
+          <button class="se-tag" data-se="nausees" onclick="toggleSe(this)">&#129326; Nausées</button>
           <button class="se-tag" data-se="fatigue" onclick="toggleSe(this)">&#128164; Fatigue</button>
-          <button class="se-tag" data-se="maux-tete" onclick="toggleSe(this)">&#129504; Maux de tete</button>
+          <button class="se-tag" data-se="maux-tete" onclick="toggleSe(this)">&#129504; Maux de tête</button>
           <button class="se-tag" data-se="constipation" onclick="toggleSe(this)">&#128580; Constipation</button>
-          <button class="se-tag" data-se="diarrhee" onclick="toggleSe(this)">&#128168; Diarrhee</button>
+          <button class="se-tag" data-se="diarrhee" onclick="toggleSe(this)">&#128168; Diarrhée</button>
           <button class="se-tag" data-se="douleur-injection" onclick="toggleSe(this)">&#128137; Douleur injection</button>
           <button class="se-tag" data-se="aucun" onclick="toggleSe(this)">&#10004;&#65039; Aucun</button>
         </div>
-        <textarea class="se-note" id="seNote" placeholder="Notes supplementaires (optionnel)..."></textarea>
+        <textarea class="se-note" id="seNote" placeholder="Notes supplémentaires (optionnel)..."></textarea>
         <button class="btn-se-save" onclick="saveSideEffects()">Enregistrer les effets</button>
       </div>
 
@@ -1225,7 +1225,7 @@ import { supabaseConfig } from '../../lib/supabase';
           <h3>&#127919; Mon programme du jour</h3>
         </div>
         <div id="progBanner" style="display:none;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:10px;padding:0.75rem 1rem;margin-bottom:0.75rem;font-size:0.8rem;color:#166534;line-height:1.5;">
-          <strong>Programme sur mesure</strong> — calcule a partir de votre profil (<span id="progBannerDetails"></span>)
+          <strong>Programme sur mesure</strong> — calculé à partir de votre profil (<span id="progBannerDetails"></span>)
         </div>
         <div class="programme-grid">
           <div class="prog-item">
@@ -1238,7 +1238,7 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="icon">&#128170;</div>
             <div class="val" id="progProtein">-</div>
             <div class="unit">g</div>
-            <div class="lbl">Proteines</div>
+            <div class="lbl">Protéines</div>
           </div>
           <div class="prog-item">
             <div class="icon">&#128167;</div>
@@ -1276,23 +1276,23 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="reminder-icon stock">&#128230;</div>
             <div class="reminder-info">
               <div class="title">Commander stock</div>
-              <div class="when" id="reminderStock">Pensez a renouveler votre ordonnance</div>
+              <div class="when" id="reminderStock">Pensez à renouveler votre ordonnance</div>
             </div>
             <button class="btn-cal" onclick="exportICS('stock')">+ Calendrier</button>
           </li>
           <li class="reminder-item">
             <div class="reminder-icon rdv">&#129658;</div>
             <div class="reminder-info">
-              <div class="title">RDV medecin de suivi</div>
-              <div class="when" id="reminderRdv">Bilan sanguin recommande a 3 mois</div>
+              <div class="title">RDV médecin de suivi</div>
+              <div class="when" id="reminderRdv">Bilan sanguin recommandé à 3 mois</div>
             </div>
             <button class="btn-cal" onclick="exportICS('rdv')">+ Calendrier</button>
           </li>
           <li class="reminder-item">
             <div class="reminder-icon checkin">&#9878;&#65039;</div>
             <div class="reminder-info">
-              <div class="title">Pesee hebdomadaire</div>
-              <div class="when">Chaque lundi matin a jeun</div>
+              <div class="title">Pesée hebdomadaire</div>
+              <div class="when">Chaque lundi matin à jeun</div>
             </div>
             <button class="btn-cal" onclick="exportICS('checkin')">+ Calendrier</button>
           </li>
@@ -1310,7 +1310,7 @@ import { supabaseConfig } from '../../lib/supabase';
       <!-- Coach CTA -->
       <div class="coach-cta animate-in animate-delay-4">
         <h3>Une question ?</h3>
-        <p>Votre coach IA connait votre profil et peut vous aider en temps reel</p>
+        <p>Votre coach IA connaît votre profil et peut vous aider en temps réel</p>
         <button class="btn-coach" onclick="openChat()">&#128172; Parler au Coach</button>
       </div>
     </div>
@@ -1330,11 +1330,11 @@ import { supabaseConfig } from '../../lib/supabase';
         <div class="chat-msg chat-msg-assistant" id="chatWelcome">
           Bonjour ! Je suis votre Coach GLP-1 personnel. Je connais votre profil et peux vous aider.<br><br>Que puis-je faire pour vous ?
         </div>
-        <div class="chat-typing" id="chatTyping">Le coach ecrit...</div>
+        <div class="chat-typing" id="chatTyping">Le coach écrit...</div>
       </div>
       <div class="chat-quick-btns" id="chatQuickBtns">
-        <button class="chat-quick-btn" onclick="chatQuick('Quels aliments privilegier avec mon traitement ?')">Alimentation</button>
-        <button class="chat-quick-btn" onclick="chatQuick('Comment gerer les effets secondaires ?')">Effets secondaires</button>
+        <button class="chat-quick-btn" onclick="chatQuick('Quels aliments privilégier avec mon traitement ?')">Alimentation</button>
+        <button class="chat-quick-btn" onclick="chatQuick('Comment gérer les effets secondaires ?')">Effets secondaires</button>
         <button class="chat-quick-btn" onclick="chatQuick('Quand sera ma prochaine escalation de dose ?')">Dose suivante</button>
         <button class="chat-quick-btn" onclick="chatQuick('Donne-moi un programme sport adapte')">Sport</button>
       </div>
@@ -1344,15 +1344,15 @@ import { supabaseConfig } from '../../lib/supabase';
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
       </div>
-      <div class="chat-disclaimer">Information uniquement — ne remplace pas un avis medical</div>
+      <div class="chat-disclaimer">Information uniquement — ne remplace pas un avis médical</div>
     </div>
   </div>
 
   <!-- Paywall -->
   <div class="paywall-overlay" id="paywallOverlay">
     <div class="paywall-box">
-      <h2>Votre essai gratuit est termine</h2>
-      <p>Continuez a beneficier de votre suivi personnalise</p>
+      <h2>Votre essai gratuit est terminé</h2>
+      <p>Continuez à bénéficier de votre suivi personnalisé</p>
       <div class="paywall-toggle">
         <span class="pw-toggle-label" id="pw-label-m">Mensuel</span>
         <label class="pw-toggle-switch">
@@ -1364,17 +1364,17 @@ import { supabaseConfig } from '../../lib/supabase';
       <div class="paywall-price" id="pw-price">4&#8364; <span>/mois</span></div>
       <div class="paywall-price-detail" id="pw-detail">7 jours d'essai gratuit</div>
       <ul class="paywall-features">
-        <li>Messages Coach IA illimites</li>
-        <li>Reponses personnalisees selon votre profil</li>
+        <li>Messages Coach IA illimités</li>
+        <li>Réponses personnalisées selon votre profil</li>
         <li>Suivi de poids et courbes de progression</li>
-        <li>Programme nutrition personnalise</li>
+        <li>Programme nutrition personnalisé</li>
         <li>Rappels injection</li>
-        <li>Recommandations IA personnalisees</li>
+        <li>Recommandations IA personnalisées</li>
         <li>Historique complet des conversations</li>
       </ul>
       <button class="btn-subscribe" id="pw-subscribe-btn" onclick="subscribe()">Commencer l'essai gratuit</button>
-      <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir a l'accueil</button>
-      <p style="font-size:0.7rem;color:#94a3b8;margin-top:8px;text-align:center">Paiement securise par Stripe. Annulation a tout moment.</p>
+      <button class="btn-dismiss-paywall" onclick="closePaywall()">Revenir à l'accueil</button>
+      <p style="font-size:0.7rem;color:#94a3b8;margin-top:8px;text-align:center">Paiement sécurisé par Stripe. Annulation à tout moment.</p>
     </div>
   </div>
 
@@ -1478,7 +1478,7 @@ import { supabaseConfig } from '../../lib/supabase';
         var pw = document.getElementById('signupPassword').value;
         var name = document.getElementById('signupName').value.trim();
         if (!email || !pw) return showAuthError('Email et mot de passe requis');
-        if (pw.length < 6) return showAuthError('Mot de passe : 6 caracteres minimum');
+        if (pw.length < 6) return showAuthError('Mot de passe : 6 caract\u00e8res minimum');
 
         setButtonLoading('btnSignup', true);
         var result = await s.auth.signUp({
@@ -1492,17 +1492,17 @@ import { supabaseConfig } from '../../lib/supabase';
 
         // Check if email confirmation is pending (no session = not confirmed yet)
         if (currentUser && !result.data.session) {
-          showToast('Un email de confirmation a ete envoye a ' + email + '. Verifiez votre boite mail.', 'info');
+          showToast('Un email de confirmation a \u00e9t\u00e9 envoy\u00e9 \u00e0 ' + email + '. V\u00e9rifiez votre bo\u00eete mail.', 'info');
           return;
         }
         // Check for fake signup (email already used with another provider — identities empty)
         if (currentUser && currentUser.identities && currentUser.identities.length === 0) {
-          showAuthError('Cet email est deja utilise. Essayez de vous connecter.');
+          showAuthError('Cet email est d\u00e9j\u00e0 utilis\u00e9. Essayez de vous connecter.');
           return;
         }
 
         if (currentUser) {
-          showToast('Compte cree avec succes !');
+          showToast('Compte cr\u00e9\u00e9 avec succ\u00e8s !');
           onUserReady(name);
         }
       } catch(e) {
@@ -1525,7 +1525,7 @@ import { supabaseConfig } from '../../lib/supabase';
         if (result.error) return showAuthError(result.error.message);
         currentUser = result.data.user;
         if (currentUser) {
-          showToast('Connexion reussie !');
+          showToast('Connexion r\u00e9ussie !');
           onUserReady();
         }
       } catch(e) {
@@ -1544,8 +1544,8 @@ import { supabaseConfig } from '../../lib/supabase';
           redirectTo: window.location.origin + '/mon-espace/'
         });
         if (result.error) return showAuthError(result.error.message);
-        showToast('Email de reinitialisation envoye !', 'info');
-      } catch(e) { showAuthError('Erreur. Reessayez.'); }
+        showToast('Email de r\u00e9initialisation envoy\u00e9 !', 'info');
+      } catch(e) { showAuthError('Erreur. R\u00e9essayez.'); }
     }
 
     async function doLogout() {
@@ -1554,7 +1554,7 @@ import { supabaseConfig } from '../../lib/supabase';
       currentUser = null;
       profile = null;
       showScreen('Auth');
-      showToast('Deconnecte', 'info');
+      showToast('D\u00e9connect\u00e9', 'info');
     }
 
     async function onUserReady(prenomHint) {
@@ -1601,8 +1601,8 @@ import { supabaseConfig } from '../../lib/supabase';
 
     var obSteps = [
       {
-        title: 'Ou en etes-vous ?',
-        subtitle: 'Cela nous permet d\'adapter votre experience',
+        title: 'O\u00f9 en \u00eates-vous ?',
+        subtitle: 'Cela nous permet d\'adapter votre exp\u00e9rience',
         field: 'status',
         type: 'select',
         options: [
@@ -1628,7 +1628,7 @@ import { supabaseConfig } from '../../lib/supabase';
       },
       {
         title: 'Dose et jour d\'injection',
-        subtitle: 'Pour vos rappels personnalises',
+        subtitle: 'Pour vos rappels personnalis\u00e9s',
         type: 'dose-day',
         showIf: function() { return obData.treatment && obData.treatment !== 'none' && obData.treatment !== 'other'; },
       },
@@ -1655,7 +1655,7 @@ import { supabaseConfig } from '../../lib/supabase';
         ]
       },
       {
-        title: 'Votre activite physique',
+        title: 'Votre activit\u00e9 physique',
         subtitle: 'Pour adapter votre programme',
         field: 'sport_level',
         type: 'select',
@@ -1695,7 +1695,7 @@ import { supabaseConfig } from '../../lib/supabase';
       var step = obSteps[obStep];
       var visibleSteps = getVisibleSteps();
       var visibleIndex = visibleSteps.indexOf(obStep);
-      document.getElementById('obStepLabel').textContent = 'Etape ' + (visibleIndex + 1) + '/' + visibleSteps.length;
+      document.getElementById('obStepLabel').textContent = '\u00c9tape ' + (visibleIndex + 1) + '/' + visibleSteps.length;
 
       // Update progress bar to match visible steps
       var progressEl = document.getElementById('obProgress');
@@ -1731,7 +1731,7 @@ import { supabaseConfig } from '../../lib/supabase';
           html += '<p style="color:#94a3b8;font-size:0.85rem;margin-bottom:1rem;">Pas de dose applicable pour votre traitement.</p>';
         }
         // Injection day
-        html += '<div class="form-group"><label>Jour d\'injection prefere</label></div>';
+        html += '<div class="form-group"><label>Jour d\'injection pr\u00e9f\u00e9r\u00e9</label></div>';
         html += '<div class="ob-options">';
         injectionDays.forEach(function(d) {
           var sel = obData.injection_day === d ? ' selected' : '';
@@ -1783,7 +1783,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
       if (step.type === 'select' && step.field) {
         if (!obData[step.field]) {
-          validation.textContent = 'Veuillez selectionner une option';
+          validation.textContent = 'Veuillez s\u00e9lectionner une option';
           validation.classList.add('visible');
           return false;
         }
@@ -1836,7 +1836,7 @@ import { supabaseConfig } from '../../lib/supabase';
       var s = initSb();
       var sessionCheck = await s.auth.getSession();
       if (!sessionCheck.data.session || !sessionCheck.data.session.user) {
-        showToast('Session expiree. Veuillez vous reconnecter.', 'error');
+        showToast('Session expir\u00e9e. Veuillez vous reconnecter.', 'error');
         showScreen('Auth');
         return;
       }
@@ -1903,7 +1903,7 @@ import { supabaseConfig } from '../../lib/supabase';
         });
       }
 
-      showToast('Profil cree avec succes !');
+      showToast('Profil cr\u00e9\u00e9 avec succ\u00e8s !');
       showDashboard();
     }
 
@@ -1912,7 +1912,7 @@ import { supabaseConfig } from '../../lib/supabase';
       showScreen('Dashboard');
 
       var hour = new Date().getHours();
-      var greet = hour < 12 ? 'Bonjour' : hour < 18 ? 'Bon apres-midi' : 'Bonsoir';
+      var greet = hour < 12 ? 'Bonjour' : hour < 18 ? 'Bon apr\u00e8s-midi' : 'Bonsoir';
       var name = profile.prenom || currentUser.email?.split('@')[0] || '';
       document.getElementById('greetingText').textContent = greet + (name ? ', ' + name : '') + ' !';
       document.getElementById('dashUserName').textContent = name || currentUser.email;
@@ -1929,7 +1929,7 @@ import { supabaseConfig } from '../../lib/supabase';
           document.getElementById('paywallOverlay').classList.add('open');
           // Trial expired: don't show "7 jours gratuit" — show direct price
           var pwDetail = document.getElementById('pw-detail');
-          if (pwDetail) pwDetail.textContent = 'Annulation a tout moment';
+          if (pwDetail) pwDetail.textContent = 'Annulation \u00e0 tout moment';
         }
       }
 
@@ -1945,15 +1945,15 @@ import { supabaseConfig } from '../../lib/supabase';
           var pEnd = new Date(profile.subscription_period_end);
           subDetails.textContent = 'Renouvellement : ' + pEnd.toLocaleDateString('fr-FR');
         }
-        subActions.innerHTML = '<button onclick="openStripePortal()" style="background:#f3f4f6;color:#374151;border:none;padding:8px 16px;border-radius:8px;font-size:0.8rem;cursor:pointer;font-weight:600">Gerer mon abonnement</button>';
+        subActions.innerHTML = '<button onclick="openStripePortal()" style="background:#f3f4f6;color:#374151;border:none;padding:8px 16px;border-radius:8px;font-size:0.8rem;cursor:pointer;font-weight:600">G\u00e9rer mon abonnement</button>';
       } else if (subStatus === 'canceled') {
-        subBadge.textContent = 'Premium (annule)';
+        subBadge.textContent = 'Premium (annul\u00e9)';
         subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#fef3c7;color:#92400e';
         if (profile.subscription_period_end) {
           var pEnd2 = new Date(profile.subscription_period_end);
-          subDetails.textContent = 'Acces jusqu\'au ' + pEnd2.toLocaleDateString('fr-FR');
+          subDetails.textContent = 'Acc\u00e8s jusqu\'au ' + pEnd2.toLocaleDateString('fr-FR');
         }
-        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Se reabonner</a>';
+        subActions.innerHTML = '<a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:8px 16px;border-radius:8px;font-size:0.8rem;font-weight:600;text-decoration:none">Se r\u00e9abonner</a>';
       } else {
         subBadge.textContent = 'Gratuit';
         subBadge.style.cssText = 'display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:700;background:#f3f4f6;color:#6b7280';
@@ -1974,7 +1974,7 @@ import { supabaseConfig } from '../../lib/supabase';
         var bmi = (profile.weight_current / (hm * hm)).toFixed(1);
         var bmiBadge = document.getElementById('bmiBadge');
         var bmiClass = bmi < 25 ? 'bmi-normal' : bmi < 30 ? 'bmi-overweight' : 'bmi-obese';
-        var bmiLabel = bmi < 18.5 ? 'Insuffisance ponderale' : bmi < 25 ? 'Poids normal' : bmi < 30 ? 'Surpoids' : 'Obesite';
+        var bmiLabel = bmi < 18.5 ? 'Insuffisance pond\u00e9rale' : bmi < 25 ? 'Poids normal' : bmi < 30 ? 'Surpoids' : 'Ob\u00e9sit\u00e9';
         bmiBadge.className = 'bmi-badge ' + bmiClass;
         bmiBadge.innerHTML = 'IMC ' + bmi + ' \u2014 ' + bmiLabel;
         bmiBadge.style.display = 'inline-flex';
@@ -1985,7 +1985,7 @@ import { supabaseConfig } from '../../lib/supabase';
         var startW = profile.weight_current;
         var goalW = profile.weight_goal;
         document.getElementById('goalProgress').style.display = 'block';
-        document.getElementById('goalStart').textContent = 'Depart: ' + startW + ' kg';
+        document.getElementById('goalStart').textContent = 'D\u00e9part : ' + startW + ' kg';
         document.getElementById('goalTarget').textContent = 'Objectif: ' + goalW + ' kg';
       }
 
@@ -2050,7 +2050,7 @@ import { supabaseConfig } from '../../lib/supabase';
       var html = '';
       doses.forEach(function(d, i) {
         var cls = i < currentIdx ? 'done' : i === currentIdx ? 'current' : '';
-        var dateLabel = i === currentIdx ? 'Dose actuelle' : i < currentIdx ? 'Complete' : 'A venir';
+        var dateLabel = i === currentIdx ? 'Dose actuelle' : i < currentIdx ? 'Compl\u00e9t\u00e9' : '\u00c0 venir';
         html += '<div class="dose-step ' + cls + '">';
         html += '<div class="dose-label">' + d + '</div>';
         html += '<div class="dose-date">' + dateLabel + '</div>';
@@ -2110,7 +2110,7 @@ import { supabaseConfig } from '../../lib/supabase';
         var pct = totalToLose > 0 ? Math.min(100, Math.max(0, Math.round((lost / totalToLose) * 100))) : 0;
         document.getElementById('goalPercent').textContent = pct + '%';
         document.getElementById('goalBarFill').style.width = pct + '%';
-        document.getElementById('goalStart').textContent = 'Depart: ' + firstW + ' kg';
+        document.getElementById('goalStart').textContent = 'D\u00e9part : ' + firstW + ' kg';
       }
 
       // Show delta
@@ -2212,7 +2212,7 @@ import { supabaseConfig } from '../../lib/supabase';
         recos.push({ icon: '\uD83E\uDD69', text: '<strong>' + p.protein_goal + 'g de proteines/jour</strong> \u2014 Essentiel sous GLP-1 pour preserver la masse musculaire. Repartissez sur 3 repas.' });
       }
 
-      recos.push({ icon: '\uD83D\uDCA7', text: '<strong>Hydratation</strong> \u2014 Buvez au moins ' + (p.water_goal || 2) + 'L d\'eau par jour. Les GLP-1 augmentent le risque de deshydratation.' });
+      recos.push({ icon: '\uD83D\uDCA7', text: '<strong>Hydratation</strong> \u2014 Buvez au moins ' + (p.water_goal || 2) + 'L d\'eau par jour. Les GLP-1 augmentent le risque de d\u00e9shydratation.' });
 
       if (p.sport_level === 'sedentaire') {
         recos.push({ icon: '\uD83D\uDEB6', text: '<strong>Commencez doucement</strong> \u2014 20 min de marche par jour suffisent pour commencer. Augmentez progressivement.' });
@@ -2222,12 +2222,12 @@ import { supabaseConfig } from '../../lib/supabase';
         recos.push({ icon: '\uD83D\uDCAA', text: '<strong>Maintenez l\'intensite</strong> \u2014 Votre niveau d\'activite est excellent. Privilegiez les proteines apres l\'effort.' });
       }
 
-      recos.push({ icon: '\uD83C\uDF7D\uFE0F', text: '<strong>Nausees</strong> \u2014 Mangez lentement, en petites portions. Evitez les aliments gras et epices les jours suivant l\'injection.' });
+      recos.push({ icon: '\uD83C\uDF7D\uFE0F', text: '<strong>Naus\u00e9es</strong> \u2014 Mangez lentement, en petites portions. \u00c9vitez les aliments gras et \u00e9pic\u00e9s les jours suivant l\'injection.' });
 
       if (p.weight_current && p.weight_goal) {
         var toGo = (p.weight_current - p.weight_goal).toFixed(1);
         if (toGo > 0) {
-          recos.push({ icon: '\uD83C\uDFAF', text: '<strong>' + toGo + ' kg de votre objectif</strong> \u2014 A raison de 0.5-1kg/semaine avec un GLP-1, vous pouvez y etre dans ' + Math.round(toGo / 0.75) + ' semaines.' });
+          recos.push({ icon: '\uD83C\uDFAF', text: '<strong>' + toGo + ' kg de votre objectif</strong> \u2014 \u00c0 raison de 0.5-1kg/semaine avec un GLP-1, vous pouvez y \u00eatre dans ' + Math.round(toGo / 0.75) + ' semaines.' });
         }
       }
 
@@ -2269,7 +2269,7 @@ import { supabaseConfig } from '../../lib/supabase';
       btn.innerHTML = 'Enregistrer';
       btn.disabled = false;
 
-      showToast('Poids enregistre : ' + w + ' kg');
+      showToast('Poids enregistr\u00e9 : ' + w + ' kg');
       loadWeightHistory();
       generateRecommendations();
 
@@ -2279,7 +2279,7 @@ import { supabaseConfig } from '../../lib/supabase';
         var bmi = (w / (hm * hm)).toFixed(1);
         var bmiBadge = document.getElementById('bmiBadge');
         var bmiClass = bmi < 25 ? 'bmi-normal' : bmi < 30 ? 'bmi-overweight' : 'bmi-obese';
-        var bmiLabel = bmi < 18.5 ? 'Insuffisance ponderale' : bmi < 25 ? 'Poids normal' : bmi < 30 ? 'Surpoids' : 'Obesite';
+        var bmiLabel = bmi < 18.5 ? 'Insuffisance pond\u00e9rale' : bmi < 25 ? 'Poids normal' : bmi < 30 ? 'Surpoids' : 'Ob\u00e9sit\u00e9';
         bmiBadge.className = 'bmi-badge ' + bmiClass;
         bmiBadge.innerHTML = 'IMC ' + bmi + ' \u2014 ' + bmiLabel;
         bmiBadge.style.display = 'inline-flex';
@@ -2315,7 +2315,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     async function saveSideEffects() {
-      if (activeSideEffects.length === 0) return showToast('Selectionnez au moins un effet', 'info');
+      if (activeSideEffects.length === 0) return showToast('S\u00e9lectionnez au moins un effet', 'info');
 
       var s = initSb();
       var note = document.getElementById('seNote').value.trim();
@@ -2326,12 +2326,12 @@ import { supabaseConfig } from '../../lib/supabase';
           effects: activeSideEffects,
           note: note || null,
         });
-        showToast('Effets secondaires enregistres');
+        showToast('Effets secondaires enregistr\u00e9s');
         activeSideEffects = [];
         document.querySelectorAll('.se-tag').forEach(function(t) { t.classList.remove('active'); });
         document.getElementById('seNote').value = '';
       } catch(e) {
-        showToast('Table non disponible \u2014 effets notes localement', 'info');
+        showToast('Table non disponible \u2014 effets not\u00e9s localement', 'info');
         // Store locally as fallback
         var stored = JSON.parse(localStorage.getItem('glp1_side_effects') || '[]');
         stored.push({ date: new Date().toISOString(), effects: activeSideEffects, note: note });
@@ -2343,7 +2343,7 @@ import { supabaseConfig } from '../../lib/supabase';
     }
 
     function viewSeHistory() {
-      showToast('Historique des effets secondaires bientot disponible', 'info');
+      showToast('Historique des effets secondaires bient\u00f4t disponible', 'info');
     }
 
     // ===== CALENDAR EXPORT =====
@@ -2368,7 +2368,7 @@ import { supabaseConfig } from '../../lib/supabase';
       a.href = URL.createObjectURL(blob);
       a.download = 'glp1-' + type + '.ics';
       a.click();
-      showToast('Fichier calendrier telecharge', 'success');
+      showToast('Fichier calendrier t\u00e9l\u00e9charg\u00e9', 'success');
     }
 
     function exportAllCalendar() {
@@ -2427,7 +2427,7 @@ import { supabaseConfig } from '../../lib/supabase';
       if (toggle.checked) {
         pwBillingType = 'yearly';
         priceEl.innerHTML = '33&#8364; <span>/an</span>';
-        detailEl.textContent = 'Soit 2,75€/mois — économisez 30%';
+        detailEl.textContent = 'Soit 2,75\u20ac/mois \u2014 \u00e9conomisez 30%';
       } else {
         pwBillingType = 'monthly';
         priceEl.innerHTML = '4&#8364; <span>/mois</span>';
@@ -2503,10 +2503,10 @@ import { supabaseConfig } from '../../lib/supabase';
           // Handle Stripe return params
           var params = new URLSearchParams(window.location.search);
           if (params.get('subscription') === 'success') {
-            showToast('Abonnement active ! Bienvenue en Premium', 'success');
+            showToast('Abonnement activ\u00e9 ! Bienvenue en Premium', 'success');
             window.history.replaceState({}, '', '/mon-espace/');
           } else if (params.get('subscription') === 'cancel') {
-            showToast('Paiement annule. Vous pouvez reessayer.', 'info');
+            showToast('Paiement annul\u00e9. Vous pouvez r\u00e9essayer.', 'info');
             window.history.replaceState({}, '', '/mon-espace/');
           }
         } else {
@@ -2516,7 +2516,7 @@ import { supabaseConfig } from '../../lib/supabase';
             switchAuthTab('login');
           }
           if (params.get('redirect') === 'tarifs') {
-            showToast('Connectez-vous pour acceder a l\'abonnement', 'info');
+            showToast('Connectez-vous pour acc\u00e9der \u00e0 l\'abonnement', 'info');
           }
         }
 
@@ -2616,7 +2616,7 @@ import { supabaseConfig } from '../../lib/supabase';
         if (!response.ok) {
           var errDiv = document.createElement('div');
           errDiv.className = 'chat-msg chat-msg-assistant';
-          errDiv.textContent = 'Desole, une erreur est survenue. Reessayez dans quelques instants.';
+          errDiv.textContent = 'D\u00e9sol\u00e9, une erreur est survenue. R\u00e9essayez dans quelques instants.';
           messagesEl.insertBefore(errDiv, document.getElementById('chatTyping'));
           sendBtn.disabled = false;
           return;
@@ -2630,7 +2630,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
         var assistDiv = document.createElement('div');
         assistDiv.className = 'chat-msg chat-msg-assistant';
-        assistDiv.innerHTML = (data.response || 'Desole, je n\'ai pas pu repondre.').replace(/\n/g, '<br>');
+        assistDiv.innerHTML = (data.response || 'D\u00e9sol\u00e9, je n\'ai pas pu r\u00e9pondre.').replace(/\n/g, '<br>');
         messagesEl.insertBefore(assistDiv, document.getElementById('chatTyping'));
         messagesEl.scrollTop = messagesEl.scrollHeight;
 
@@ -2638,7 +2638,7 @@ import { supabaseConfig } from '../../lib/supabase';
         document.getElementById('chatTyping').classList.remove('visible');
         var errDiv2 = document.createElement('div');
         errDiv2.className = 'chat-msg chat-msg-assistant';
-        errDiv2.textContent = 'Le service est temporairement indisponible. Reessayez dans quelques instants.';
+        errDiv2.textContent = 'Le service est temporairement indisponible. R\u00e9essayez dans quelques instants.';
         messagesEl.insertBefore(errDiv2, document.getElementById('chatTyping'));
       }
       sendBtn.disabled = false;

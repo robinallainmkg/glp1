@@ -124,6 +124,10 @@ import { supabaseConfig } from '../../lib/supabase';
       color: white;
       border-color: #3b82f6;
     }
+    .conv-item.conv-test {
+      opacity: 0.6;
+      border-left: 2px solid #7c3aed;
+    }
     .conv-item {
       padding: 0.9rem 1.25rem;
       border-bottom: 1px solid #1e293b;
@@ -492,6 +496,10 @@ import { supabaseConfig } from '../../lib/supabase';
               <button data-filter="today" onclick="filterConvs('today', this)">Aujourd'hui</button>
               <button data-filter="week" onclick="filterConvs('week', this)">7j</button>
             </div>
+            <label style="display:flex;align-items:center;gap:6px;font-size:0.72rem;color:#94a3b8;cursor:pointer;margin-top:4px;">
+              <input type="checkbox" id="hideTests" checked onchange="toggleTests()" style="accent-color:#3b82f6;">
+              Masquer les tests
+            </label>
           </div>
           <div id="convListContent">
             <div class="loading-spinner">Chargement...</div>
@@ -586,6 +594,7 @@ import { supabaseConfig } from '../../lib/supabase';
     let allConversations = [];
     let allMessages = {};
     let currentFilter = 'all';
+    let hideTestConvs = true;
 
     async function loadData() {
       try {
@@ -685,9 +694,23 @@ import { supabaseConfig } from '../../lib/supabase';
       renderConvList();
     }
 
+    function toggleTests() {
+      hideTestConvs = document.getElementById('hideTests').checked;
+      renderConvList();
+    }
+
+    function isTestConv(c) {
+      return c.session_id && c.session_id.startsWith('test-');
+    }
+
     function renderConvList() {
       const container = document.getElementById('convListContent');
       let convs = [...allConversations];
+
+      // Hide test conversations
+      if (hideTestConvs) {
+        convs = convs.filter(c => !isTestConv(c));
+      }
 
       const now = new Date();
       const today = now.toISOString().split('T')[0];
@@ -700,7 +723,7 @@ import { supabaseConfig } from '../../lib/supabase';
       }
 
       if (convs.length === 0) {
-        container.innerHTML = '<div class="conv-empty">Aucune conversation</div>';
+        container.innerHTML = '<div class="conv-empty">Aucune conversation' + (hideTestConvs ? ' (tests masques)' : '') + '</div>';
         return;
       }
 
@@ -708,12 +731,14 @@ import { supabaseConfig } from '../../lib/supabase';
         const time = c.last_message_at
           ? new Date(c.last_message_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
           : '-';
+        const isTest = isTestConv(c);
         const sessionShort = (c.session_id || '').substring(0, 12) + '...';
         const msgs = c.message_count || 0;
+        const testBadge = isTest ? '<span style="background:#7c3aed;color:#fff;padding:1px 5px;border-radius:3px;font-size:0.65rem;margin-left:4px;">TEST</span>' : '';
 
-        return `<div class="conv-item" onclick="loadConversation('${c.id}', this)">
+        return `<div class="conv-item${isTest ? ' conv-test' : ''}" onclick="loadConversation('${c.id}', this)">
           <div class="conv-item-top">
-            <span class="conv-visitor">🇫🇷 ${sessionShort}</span>
+            <span class="conv-visitor">${isTest ? '🧪' : '🇫🇷'} ${sessionShort}${testBadge}</span>
             <span class="conv-time">${time}</span>
           </div>
           <div class="conv-meta">
@@ -768,7 +793,7 @@ import { supabaseConfig } from '../../lib/supabase';
               <div class="msg-avatar">${avatarLabel}</div>
               <div class="msg-content">
                 <div class="msg-sender">${senderLabel}</div>
-                <div class="msg-bubble">${escapeHtml(m.content)}</div>
+                <div class="msg-bubble">${formatMarkdown(m.content)}</div>
                 <div class="msg-time">${time}${modelTag}</div>
               </div>
             </div>`;
@@ -856,6 +881,14 @@ import { supabaseConfig } from '../../lib/supabase';
     function escapeHtml(str) {
       if (!str) return '';
       return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function formatMarkdown(str) {
+      var safe = escapeHtml(str);
+      return safe
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\[(.*?)\]\((\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:underline;">$1</a>')
+        .replace(/\n/g, '<br>');
     }
 
     // SAV Emails
@@ -969,6 +1002,7 @@ import { supabaseConfig } from '../../lib/supabase';
     window.loadData = loadData;
     window.loadConversation = loadConversation;
     window.filterConvs = filterConvs;
+    window.toggleTests = toggleTests;
 
     // Auto-load
     loadData();
