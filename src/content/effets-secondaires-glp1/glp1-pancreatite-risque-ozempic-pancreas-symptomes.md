@@ -46,7 +46,7 @@ Des récepteurs GLP-1 ont été identifiés dans les cellules acinaires du pancr
 
 ### Les données des études cliniques
 
-Les grandes études cliniques menées avant la mise sur le marché ont évalué ce risque avec soin. Dans les essais SUSTAIN (sémaglutide/Ozempic) et SCALE (liraglutide/Saxenda), les taux de pancréatite observés étaient comparables entre les groupes traités et les groupes placebo — environ 0,1 à 0,2% des patients sur plusieurs années.
+Les grandes études cliniques menées avant la mise sur le marché ont évalué ce risque avec soin. Dans les essais SUSTAIN (sémaglutide/Ozempic) et SCALE (liraglutide/[Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/)), les taux de pancréatite observés étaient comparables entre les groupes traités et les groupes placebo — environ 0,1 à 0,2% des patients sur plusieurs années.
 
 L'étude SELECT de 2023 — qui a suivi 17 604 patients prenant du sémaglutide (Wegovy) sur 5 ans — n'a pas mis en évidence d'augmentation significative du risque de pancréatite par rapport au placebo.
 

@@ -63,7 +63,7 @@ Il est important de souligner que ces augmentations de risque sont **relatives**
 
 ### La perte de masse musculaire : le facteur clé
 
-Le premier mécanisme incriminé est la perte de masse musculaire qui accompagne inévitablement la perte de poids sous GLP-1. Lorsqu'un patient maigrit rapidement, il perd à la fois de la graisse et de la masse maigre (muscles). On estime qu'environ **25 à 35 % du poids perdu sous GLP-1 correspond à de la masse musculaire**, même avec un apport protéique adéquat.
+Le premier mécanisme incriminé est la [perte musculaire et fragilité osseuse sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) qui accompagne inévitablement la perte de poids. Lorsqu'un patient maigrit rapidement, il perd à la fois de la graisse et de la masse maigre (muscles). On estime qu'environ **25 à 35 % du poids perdu sous GLP-1 correspond à de la masse musculaire**, même avec un apport protéique adéquat.
 
 Or les muscles jouent un rôle protecteur fondamental pour les os et les tendons. Ils absorbent les chocs, stabilisent les articulations et répartissent les contraintes mécaniques lors des mouvements. Des muscles plus faibles signifient des tendons et des os plus exposés aux contraintes, notamment lors d'activités physiques.
 
@@ -169,7 +169,7 @@ L'objectif n'est pas d'alarmer, mais d'informer pour mieux prévenir. Une repris
 Aucun lien de causalité direct n'est établi à ce jour. Le mécanisme le plus probable est indirect : la perte de masse musculaire rapide fragilise le soutien mécanique des tendons, les rendant plus vulnérables lors d'efforts. Une reprise d'activité progressive et un apport protéique suffisant limitent ce risque.
 
 **Dois-je arrêter le sport sous GLP-1 ?**
-Non, au contraire. L'activité physique est bénéfique et recommandée sous traitement GLP-1, notamment la musculation et les exercices avec mise en charge qui préservent la masse musculaire et osseuse. L'important est de reprendre progressivement et d'éviter les augmentations brutales de volume ou d'intensité.
+Non, au contraire. L'activité physique est bénéfique et recommandée sous traitement GLP-1, notamment la musculation et les [exercices avec mise en charge](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) qui préservent la masse musculaire et osseuse. L'important est de reprendre progressivement et d'éviter les augmentations brutales de volume ou d'intensité.
 
 **Que faire si j'ai une douleur au tendon ?**
 Consultez votre médecin si la douleur persiste plus d'une semaine malgré le repos. Ne continuez pas à solliciter un tendon douloureux, car une tendinite négligée peut évoluer vers une rupture.

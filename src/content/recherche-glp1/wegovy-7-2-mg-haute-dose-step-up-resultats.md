@@ -48,7 +48,7 @@ Le sémaglutide 2,4 mg (Wegovy) a démontré une perte de poids moyenne d'enviro
 
 En pratique clinique, on observe plusieurs situations :
 
-- **Certains patients atteignent un plateau** après 12 à 18 mois de traitement, avec une reprise pondérale partielle malgré la poursuite du traitement.
+- **Certains patients atteignent un [plateau pondéral et augmentation de dose Wegovy](/collections/glp1-perte-de-poids/plateau-poids-glp1-ozempic-wegovy-causes-solutions/)** après 12 à 18 mois de traitement, avec une reprise pondérale partielle malgré la poursuite du traitement.
 - **Les patients avec un IMC très élevé** (supérieur à 40-45) peuvent perdre 15 % de leur poids mais rester en obésité sévère avec des comorbidités persistantes.
 - **La variabilité interindividuelle** est importante : certains patients répondent très bien au sémaglutide, d'autres moins.
 

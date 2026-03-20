@@ -193,6 +193,8 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 - Bilan trimestriel ensuite
 - Consultation annuelle spécialisée
 
+Pensez également à surveiller les [carences nutritionnelles à surveiller sous Ozempic](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), notamment en vitamine B12, vitamine D et protéines, surtout en cas de perte de poids rapide.
+
 ## 📞 Ressources d'Aide
 
 ### Associations de patients

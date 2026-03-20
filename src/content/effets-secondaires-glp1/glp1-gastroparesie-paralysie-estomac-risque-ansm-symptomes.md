@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Gastroparésie : Risque Réel, Symptômes et Que Faire ?"
+title: "GLP-1 et Gastroparésie : Risques, Symptômes, Solutions"
 description: "GLP-1 gastroparésie paralysie estomac : risque ANSM, symptômes et que faire si votre estomac se vide mal sous Ozempic ou Wegovy."
 pubDate: 2026-03-19
 date: "2026-03-19"

@@ -189,7 +189,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 **La première étape indispensable** pour commencer un traitement GLP-1 est une consultation médicale complète avec votre médecin.
 
-- **Médecin traitant** ou **endocrinologue** spécialisé en diabète/obésité
+- **Médecin traitant** ou **endocrinologue** spécialisé en diabète/obésité — il est aussi possible d'[obtenir une prescription GLP-1 en ligne](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) via la télémédecine
 - **Bilan sanguin complet :** Glycémie, HbA1c, cholestérol, triglycérides
 - **Évaluation IMC** et composition corporelle
 - **Recherche de comorbidités :** Hypertension, apnée du sommeil, etc.

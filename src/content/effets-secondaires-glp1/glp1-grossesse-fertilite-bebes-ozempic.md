@@ -18,7 +18,7 @@ affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "GLP-1 grossesse fertilité bébés Ozempic"
 ---
 
-La question revient de plus en plus dans les consultations médicales : peut-on tomber enceinte sous Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro ? Et si c'est le cas, que faire ? Depuis que ces médicaments GLP-1 sont prescrits à grande échelle pour la perte de poids, des milliers de femmes en âge de procréer se trouvent face à ces questions — sans toujours obtenir de réponses claires. Voici ce que la science sait aujourd'hui.
+La question revient de plus en plus dans les consultations médicales : peut-on tomber enceinte sous [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Mounjaro ? Et si c'est le cas, que faire ? Depuis que ces médicaments GLP-1 sont prescrits à grande échelle pour la perte de poids, des milliers de femmes en âge de procréer se trouvent face à ces questions — sans toujours obtenir de réponses claires. Voici ce que la science sait aujourd'hui.
 
 ## Les GLP-1 et la fertilité : une relation inattendue
 

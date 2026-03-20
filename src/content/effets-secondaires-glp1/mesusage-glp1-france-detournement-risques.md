@@ -66,7 +66,7 @@ Le mésusage emprunte plusieurs canaux :
 
 L'ANSM surveille de près les effets gastro-intestinaux graves associés à l'utilisation des GLP-1, et le mésusage amplifie ces risques pour plusieurs raisons :
 
-**Pancréatite aiguë** : Le risque de pancréatite, bien que rare dans le cadre d'une utilisation supervisée, augmente chez les personnes qui ne bénéficient pas d'un suivi médical adapté. Les patients en mésusage ne réalisent pas toujours les bilans biologiques préalables recommandés, et certains présentent des facteurs de risque non identifiés (antécédents biliaires, alcoolisme).
+**Pancréatite aiguë** : Le risque de [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), bien que rare dans le cadre d'une utilisation supervisée, augmente chez les personnes qui ne bénéficient pas d'un suivi médical adapté. Les patients en mésusage ne réalisent pas toujours les bilans biologiques préalables recommandés, et certains présentent des facteurs de risque non identifiés (antécédents biliaires, alcoolisme).
 
 **Occlusion intestinale** : Des cas d'occlusion intestinale ont été signalés, particulièrement chez des personnes utilisant des doses inappropriées ou augmentant trop rapidement la posologie sans supervision médicale.
 
@@ -76,7 +76,7 @@ Pour une vue complète des effets secondaires, consultez nos guides sur les [eff
 
 ### Risques nutritionnels et métaboliques
 
-**Carences nutritionnelles** : L'ANSM a identifié un risque de carences nutritionnelles chez les personnes qui perdent du poids rapidement sous GLP-1 sans suivi diététique. Les carences en protéines, fer, vitamines B12 et D sont les plus fréquemment rapportées.
+**Carences nutritionnelles** : L'ANSM a identifié un risque de [carences nutritionnelles liées au mésusage des GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) chez les personnes qui perdent du poids rapidement sans suivi diététique. Les carences en protéines, fer, vitamines B12 et D sont les plus fréquemment rapportées.
 
 **Sarcopénie** : La perte de masse musculaire accompagnant la perte de poids rapide est un sujet de préoccupation croissant. Sans accompagnement par une activité physique adaptée et un apport protéique suffisant, la perte de poids obtenue peut être qualitativement délétère.
 
