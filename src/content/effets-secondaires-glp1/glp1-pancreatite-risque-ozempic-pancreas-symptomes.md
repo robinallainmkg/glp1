@@ -151,7 +151,7 @@ La règle d'or : si vous développez une douleur abdominale intense et persistan
 
 ### La position de l'ANSM
 
-L'ANSM maintient que le rapport bénéfice-risque des analogues GLP-1 reste favorable lorsqu'ils sont utilisés dans leurs indications officielles et avec un suivi médical approprié. L'agence a cependant renforcé ses recommandations de vigilance sur les signes de pancréatite et insiste sur l'importance du bilan préalable à la prescription.
+L'ANSM maintient, dans son [bilan de pharmacovigilance ANSM 2025-2026](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/), que le rapport bénéfice-risque des analogues GLP-1 reste favorable lorsqu'ils sont utilisés dans leurs indications officielles et avec un suivi médical approprié. L'agence a cependant renforcé ses recommandations de vigilance sur les signes de pancréatite et insiste sur l'importance du bilan préalable à la prescription.
 
 ### La position de l'EMA
 
@@ -166,7 +166,7 @@ Oui, l'exposition au risque cesse avec l'arrêt du médicament. En cas de pancr�
 La décision dépend des circonstances de votre pancréatite passée. Une pancréatite ancienne bien résolue, sans cause identifiable ou liée à des calculs maintenant traités, peut être compatible avec une prescription GLP-1 si le rapport bénéfice-risque est favorable. Parlez-en explicitement avec votre médecin pour qu'il documente son évaluation.
 
 **Les GLP-1 peuvent-ils provoquer un cancer du pancréas ?**
-Cette question a fait l'objet d'une surveillance intensive. Après des années d'études et de pharmacovigilance incluant des millions de patients, les autorités sanitaires (FDA, EMA, ANSM) n'ont pas établi de lien causal entre les GLP-1 et le cancer du pancréas. Les premières inquiétudes soulevées en 2013 n'ont pas été confirmées par les études de long terme.
+Cette question a fait l'objet d'une surveillance intensive. Après des années d'études et de pharmacovigilance incluant des millions de patients, les autorités sanitaires (FDA, EMA, ANSM) n'ont pas établi de lien causal entre les GLP-1 et le cancer du pancréas. Pour un état des lieux complet, consultez notre article sur le [risque de cancer du pancréas sous GLP-1](/collections/recherche-glp1/glp1-cancer-risque-protection-bilan-etudes-2026/). Les premières inquiétudes soulevées en 2013 n'ont pas été confirmées par les études de long terme.
 
 **Quels médicaments GLP-1 sont les plus concernés ?**
 Tous les analogues GLP-1 partagent ce signal de pharmacovigilance : sémaglutide (Ozempic, Wegovy, Rybelsus), tirzépatide (Mounjaro), liraglutide (Victoza, Saxenda) et dulaglutide ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)). Le risque n'est pas spécifique à une molécule.

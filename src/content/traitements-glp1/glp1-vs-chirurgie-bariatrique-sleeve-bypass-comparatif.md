@@ -111,7 +111,7 @@ La chirurgie bariatrique est [remboursée](/collections/glp1-cout/remboursement-
 - Évaluation pluridisciplinaire validée par une équipe spécialisée
 - Consultation psychiatrique préopératoire
 
-Pour les patients éligibles, la chirurgie est donc **sans reste à charge direct** (hors chambre individuelle, actes non remboursés). C'est un avantage financier considérable.
+Pour les patients éligibles, la chirurgie est donc **sans reste à charge direct** (hors chambre individuelle, actes non remboursés). Pour une estimation détaillée du [prix de la chirurgie bariatrique](/collections/glp1-cout/operation-pour-maigrir-prix/), c'est un avantage financier considérable.
 
 ### Les GLP-1 Wegovy et Mounjaro : pas encore remboursés
 
@@ -196,7 +196,7 @@ Une sleeve gastrectomie ou un bypass gastrique laparoscopique dure 1 à 2 heures
 
 GLP-1 et chirurgie bariatrique ne sont pas concurrents — ils sont complémentaires et s'adressent à des profils de patients différents. La bonne nouvelle pour les patients est que la médecine de l'obésité dispose désormais d'un arsenal thérapeutique très enrichi, avec deux catégories d'options puissantes là où il n'y en avait qu'une auparavant.
 
-Pour prendre votre décision, consultez votre médecin traitant qui pourra vous orienter vers un endocrinologue ou un chirurgien spécialisé en obésité. Un bilan pluridisciplinaire, incluant un avis nutritionnel, psychologique et médical, est la meilleure base pour faire le bon choix.
+Pour prendre votre décision, consultez votre médecin traitant qui pourra vous orienter vers un endocrinologue ou vers des [cliniques spécialisées en obésité](/collections/medecins-glp1-france/clinique-pour-obesite/). Un bilan pluridisciplinaire, incluant un avis nutritionnel, psychologique et médical, est la meilleure base pour faire le bon choix.
 
 Pour en savoir plus sur les traitements GLP-1 disponibles, consultez nos guides sur [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), ainsi que notre comparatif [Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 

@@ -110,7 +110,7 @@ Les règles de conservation sont identiques à celles de l'ancien stylo :
 - **À l'abri de la chaleur et de la lumière** : ne laissez pas le stylo en plein soleil ou dans une voiture en été
 - **Durée de vie** : vérifiez la date de péremption imprimée sur le stylo. N'utilisez jamais un stylo périmé
 
-Le stylo 3 ml étant utilisé sur deux mois (à la dose de 0,5 mg/semaine), il est impératif de noter la date de la **première injection** sur le stylo ou dans un agenda. Le stylo entamé ne doit pas être utilisé au-delà de 8 semaines, même s'il contient encore de la solution.
+Pour la [conservation du stylo en voyage](/collections/traitements-glp1/conservation-injection-glp1-stylo-voyage-guide-pratique/), des précautions supplémentaires s'appliquent. Le stylo 3 ml étant utilisé sur deux mois (à la dose de 0,5 mg/semaine), il est impératif de noter la date de la **première injection** sur le stylo ou dans un agenda. Le stylo entamé ne doit pas être utilisé au-delà de 8 semaines, même s'il contient encore de la solution.
 
 ## Transition entre les deux stylos {#transition}
 
@@ -151,7 +151,7 @@ Non, les règles de conservation sont identiques : réfrigérateur avant ouvertu
 Les informations disponibles en mars 2026 concernent spécifiquement le changement du conditionnement d'Ozempic 0,5 mg. Pour le 1 mg, renseignez-vous auprès de votre pharmacien ou consultez les communications officielles de l'ANSM.
 
 **J'ai des difficultés à manipuler le nouveau stylo. Qui consulter ?**
-Votre pharmacien peut vous montrer le fonctionnement du nouveau stylo lors du retrait. Votre médecin traitant ou une infirmière peut également vous accompagner lors des premières injections si nécessaire.
+Votre pharmacien peut vous montrer le fonctionnement du nouveau stylo lors du retrait. Pour un guide détaillé, consultez notre article sur [comment s'injecter Ozempic](/collections/traitements-glp1/comment-s-injecter-glp1-guide-pratique-ozempic-wegovy-mounjaro/). Votre médecin traitant ou une infirmière peut également vous accompagner lors des premières injections si nécessaire.
 
 ## Conclusion
 

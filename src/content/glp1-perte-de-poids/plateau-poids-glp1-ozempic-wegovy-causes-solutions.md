@@ -50,7 +50,7 @@ Ce mécanisme est universel et indépendant du traitement utilisé : il s'observ
 
 ### 2. La perte de masse musculaire réduit les dépenses
 
-Lors d'une perte de poids, une partie du poids perdu est de la masse maigre (muscle). Or le muscle est le tissu le plus consommateur d'énergie au repos. Moins de muscle = moins de dépense de base = poids plus difficile à perdre.
+Lors d'une perte de poids, une partie du poids perdu est de la masse maigre (muscle). Or le muscle est le tissu le plus consommateur d'énergie au repos. Moins de muscle = moins de dépense de base = poids plus difficile à perdre. La [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un enjeu majeur du traitement.
 
 Sous GLP-1, cet effet est réel : les études montrent que 20 à 40 % du poids perdu peut être de la masse maigre, contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
 
@@ -108,7 +108,7 @@ Certains patients reprennent des aliments à index glycémique élevé progressi
 
 L'activité physique est le levier le plus efficace pour contrecarrer l'adaptation métabolique. En période de plateau, deux types d'activités sont particulièrement utiles :
 
-- **La musculation / l'entraînement en résistance** : 2 à 3 séances par semaine de 30 à 45 minutes. La construction ou le maintien de la masse musculaire relève directement le métabolisme de base. Ce n'est pas l'activité qui brûle le plus de calories sur le moment, mais c'est celle qui a l'effet métabolique le plus durable.
+- **La musculation / l'entraînement en résistance** : un programme d'[exercice physique et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) de 2 à 3 séances par semaine de 30 à 45 minutes. La construction ou le maintien de la masse musculaire relève directement le métabolisme de base. Ce n'est pas l'activité qui brûle le plus de calories sur le moment, mais c'est celle qui a l'effet métabolique le plus durable.
 - **L'augmentation du NEAT** (Non-Exercise Activity Thermogenesis) : les activités du quotidien — marcher, prendre les escaliers, se déplacer à pied, jardiner — représentent une dépense énergétique souvent négligée. Viser 8 000 à 10 000 pas par jour peut faire la différence.
 
 ### Étape 4 : Parlez de la dose avec votre médecin

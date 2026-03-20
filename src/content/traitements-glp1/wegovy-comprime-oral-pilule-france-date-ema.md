@@ -72,7 +72,7 @@ Il est essentiel de ne pas confondre Wegovy oral avec [Rybelsus](/collections/tr
 
 ### Pourquoi le dosage fait toute la différence
 
-Rybelsus à 14 mg ne permet d'atteindre qu'une concentration plasmatique de sémaglutide modeste, suffisante pour améliorer le contrôle glycémique mais insuffisante pour provoquer une perte de poids comparable à l'injectable. Le comprimé de 25 mg de Wegovy oral atteint des concentrations plasmatiques bien supérieures, se rapprochant de celles obtenues avec Wegovy injectable à 2,4 mg par semaine.
+Rybelsus à 14 mg ne permet d'atteindre qu'une concentration plasmatique de sémaglutide modeste, suffisante pour améliorer le contrôle glycémique mais insuffisante pour provoquer une perte de poids comparable à l'injectable. Le comprimé de 25 mg de Wegovy oral atteint des concentrations plasmatiques bien supérieures, se rapprochant de celles obtenues avec Wegovy injectable à 2,4 mg par semaine. Un autre GLP-1 oral en développement, l'[orforglipron de Lilly](/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/), propose une approche sans contrainte de prise à jeun.
 
 La technologie SNAC reste la même : le comprimé doit être pris à jeun, au moins 30 minutes avant le premier repas, avec un maximum de 120 mL d'eau. Cette contrainte, inhérente à la biodisponibilité orale du sémaglutide, n'a pas pu être contournée avec cette nouvelle formulation.
 

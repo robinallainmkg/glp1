@@ -90,7 +90,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
-- Utilisation d'un stylo prérempli
+- Utilisation d'un stylo prérempli (voir le [nouveau stylo Ozempic 3 ml disponible en 2026](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/))
 - Pas besoin de reconstitution
 - Formation rapide (quelques minutes)
 
@@ -113,7 +113,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Augmentation progressive** :
 - Semaine 5-8 : Passage à 0,5 mg
-- Surveillance des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
+- Surveillance des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et des [dangers et risques d'Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - Ajustement selon tolérance
 - Premiers signes d'efficacité
 

@@ -162,13 +162,13 @@ Le programme REDEFINE comporte plusieurs essais de phase 3 (REDEFINE 2, 3, 4...)
 
 **Y aura-t-il un médicament encore plus efficace après CagriSema ?**
 
-La recherche ne s'arrête pas. Plusieurs combinaisons "tri-agonistes" sont en cours d'évaluation — ciblant simultanément trois récepteurs hormonaux différents. Certains candidats préliminaires montrent des pertes de poids de 25 à 30 % dans des études de phase 2. La pharmacologie de l'obésité entre dans une ère de progrès accéléré qui rappelle l'évolution des traitements de l'hépatite C ou du VIH dans d'autres domaines.
+La recherche ne s'arrête pas. Plusieurs combinaisons "tri-agonistes" sont en cours d'évaluation, comme le [retatrutide (triple agoniste)](/collections/recherche-glp1/retatrutide-triple-agoniste-glp1-gip-glucagon-france-2026/) — ciblant simultanément trois récepteurs hormonaux différents. Certains candidats préliminaires montrent des pertes de poids de 25 à 30 % dans des études de phase 2. La pharmacologie de l'obésité entre dans une ère de progrès accéléré qui rappelle l'évolution des traitements de l'hépatite C ou du VIH dans d'autres domaines.
 
 ## Conclusion
 
 CagriSema représente une avancée réelle dans le traitement médicamenteux de l'obésité, avec une perte de poids de 22,7 % dans l'étude REDEFINE 1 — un résultat qui dépasse légèrement Mounjaro et se rapproche des performances de la chirurgie bariatrique. Pour les patients français, les prochaines étapes clés à surveiller sont l'approbation FDA (attendue fin 2026 ou début 2027) et le dépôt du dossier EMA. Un accès en France dans les conditions standard n'est pas prévisible avant 2028 au plus tôt.
 
-En attendant, les patients éligibles à un traitement GLP-1 peuvent déjà bénéficier de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), deux traitements d'ores et déjà disponibles en pharmacie française avec des niveaux d'efficacité remarquables. Le suivi de la [recherche clinique sur les nouveaux GLP-1](/collections/recherche-glp1/recherche-clinique-glp1/) permet de rester informé des avancées à venir.
+En attendant, les patients éligibles à un traitement GLP-1 peuvent déjà bénéficier de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), deux traitements d'ores et déjà disponibles en pharmacie française avec des niveaux d'efficacité remarquables. Pour un panorama complet, consultez notre article sur les [nouveaux GLP-1 attendus en 2026](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/). Le suivi de la [recherche clinique sur les nouveaux GLP-1](/collections/recherche-glp1/recherche-clinique-glp1/) permet de rester informé des avancées à venir.
 
 ---
 

@@ -106,7 +106,7 @@ Mounjaro (tirzepatide) dispose de son côté d'une AMM à la fois pour le diabè
 - En association ou non avec d'autres antidiabétiques (metformine, insuline, etc.)
 - Depuis février 2025 : formulaire obligatoire de prescription
 
-**Prix remboursé** :
+**Prix remboursé** (voir le détail sur le [prix d'Ozempic en France](/collections/glp1-cout/prix-ozempic-france/)) :
 - Prix de vente officiel : 77,60 € TTC/stylo (1 stylo = 4 injections hebdomadaires, soit 1 mois de traitement à dose stabilisée)
 - Remboursement Sécurité Sociale : 30% = environ 23,28 €
 - Reste à charge sans complémentaire : environ 54,32 €/mois
@@ -229,7 +229,7 @@ Les GLP-1 s'associent fréquemment et efficacement avec d'autres médicaments du
 
 **Avec la metformine** : association de référence. La metformine reste le traitement de première intention, et les GLP-1 sont généralement prescrits en deuxième intention. Leur association est bien tolérée et particulièrement efficace sur le contrôle glycémique.
 
-**Avec les inhibiteurs SGLT2** (dapagliflozine, empagliflozine, canagliflozine) : association de choix pour les patients à haut risque cardiovasculaire ou rénal. Les deux classes ont des effets complémentaires et leurs mécanismes sont différents.
+**Avec les [inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/)** (dapagliflozine, empagliflozine, canagliflozine) : association de choix pour les patients à haut risque cardiovasculaire ou rénal. Les deux classes ont des effets complémentaires et leurs mécanismes sont différents.
 
 **Avec l'insuline** : possible mais nécessite une surveillance plus stricte des hypoglycémies. L'ajout d'un GLP-1 permet souvent de réduire les doses d'insuline, sous supervision médicale.
 

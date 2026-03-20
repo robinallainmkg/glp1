@@ -421,10 +421,11 @@ Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dan
 - Remboursement : NON remboursé
 - Indication : Obésité principalement
 - Commercialisé depuis octobre 2024
+- Voir aussi le [calendrier de remboursement Wegovy](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les perspectives
 
 **Mounjaro (tirzépatide, Eli Lilly) :**
 - Coût pharmacie : **230-440€/mois** (prix libre)
-- Remboursement : NON remboursé
+- Remboursement : NON remboursé (voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) pour les conditions attendues)
 - Indication : Obésité / DT2
 - Commercialisé depuis novembre 2024
 

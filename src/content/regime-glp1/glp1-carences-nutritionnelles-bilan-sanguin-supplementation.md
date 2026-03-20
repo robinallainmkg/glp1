@@ -50,7 +50,7 @@ L'ANSM a mis en évidence plusieurs carences particulièrement préoccupantes :
 - **Vitamine B1 (thiamine)** : cas de neuropathie sévère documentés, potentiellement graves
 - **[Masse musculaire (sarcopénie)](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : perte de muscle associée à la perte de poids rapide, aggravée par des apports insuffisants en protéines
 - **Vitamine B12** : notamment chez les patients déjà sous metformine (qui réduit l'absorption de la B12)
-- **Zinc et sélénium** : moins documentés mais possibles en cas de régime très restrictif
+- **Zinc et sélénium** : moins documentés mais possibles en cas de régime très restrictif — les carences en fer, zinc et biotine peuvent aussi provoquer une [chute de cheveux liée aux carences](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)
 
 ### La perte de poids rapide accentue le phénomène
 

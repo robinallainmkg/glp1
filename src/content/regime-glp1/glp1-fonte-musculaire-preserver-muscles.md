@@ -64,7 +64,7 @@ Chez les personnes de plus de 60 ans, la perte de masse musculaire liée au trai
 
 ### La restriction calorique sévère
 
-Les GLP-1 réduisent considérablement l'appétit. De nombreux patients rapportent manger 40 à 60% de moins qu'avant le traitement. Cette restriction calorique importante, si elle n'est pas compensée par un apport protéique suffisant, conduit le corps à puiser dans ses réserves musculaires pour obtenir les acides aminés nécessaires à ses fonctions vitales.
+Les GLP-1 réduisent considérablement l'appétit. De nombreux patients rapportent manger 40 à 60% de moins qu'avant le traitement. Cette restriction calorique importante, si elle n'est pas compensée par un apport protéique suffisant — en respectant les [calories journalières recommandées sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) — conduit le corps à puiser dans ses réserves musculaires pour obtenir les acides aminés nécessaires à ses fonctions vitales.
 
 ### La perte de poids rapide
 

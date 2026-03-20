@@ -46,7 +46,7 @@ Le régime méditerranéen — aussi appelé régime crétois — s'inspire de l
 **Aliments à consommer au quotidien :**
 - Légumes et fruits frais en abondance (au moins 5 portions par jour)
 - Légumineuses : lentilles, pois chiches, haricots (3 à 4 fois par semaine)
-- Céréales complètes : pain complet, quinoa, riz brun, avoine
+- Céréales complètes à [index glycémique](/collections/regime-glp1/glp1-index-glycemique/) bas : pain complet, quinoa, riz brun, avoine
 - Huile d'olive extra vierge comme principale source de matières grasses
 - Herbes aromatiques et épices (ail, thym, basilic) en remplacement du sel
 
@@ -68,7 +68,7 @@ Le régime méditerranéen — aussi appelé régime crétois — s'inspire de l
 
 ## Pourquoi le régime méditerranéen est-il idéal avec les GLP-1 ?
 
-Les traitements GLP-1 réduisent l'appétit et ralentissent la vidange gastrique, ce qui permet de manger moins sans ressentir la faim. Le régime méditerranéen, naturellement riche en fibres et en protéines végétales, prolonge ce sentiment de satiété et stabilise la glycémie entre les injections.
+Les traitements GLP-1 réduisent l'appétit et ralentissent la vidange gastrique, ce qui permet de manger moins sans ressentir la faim, mais expose aussi à des [carences nutritionnelles à surveiller](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/). Le régime méditerranéen, naturellement riche en fibres et en protéines végétales, prolonge ce sentiment de satiété et stabilise la glycémie entre les injections.
 
 **Bénéfices synergiques documentés :**
 

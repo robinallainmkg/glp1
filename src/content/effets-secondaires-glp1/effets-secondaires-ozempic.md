@@ -173,7 +173,7 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 ### Préparation mentale
 
 **Se préparer psychologiquement** :
-- Connaître les effets possibles
+- Connaître les effets possibles, y compris les [effets psychologiques (dépression, apathie)](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
 - Prévoir des aménagements professionnels
 - Avoir un soutien familial
 
@@ -228,7 +228,7 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 - Tolérance confirmée à long terme
 
 **Données de pharmacovigilance** :
-- Signalements rares d'effets graves
+- Signalements rares d'effets graves — pour un panorama complet, consultez notre dossier sur les [risques et dangers d'Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - Profil de sécurité favorable
 - Bénéfice/risque positif
 

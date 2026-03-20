@@ -51,7 +51,7 @@ Il ne s'agit pas, à proprement parler, d'un effet secondaire direct des médica
 
 ### La graisse sous-cutanée : un rôle structural essentiel
 
-Le visage humain doit sa forme et son aspect jeune en grande partie à des compartiments graisseux sous-cutanés. Ces "coussins" de graisse — dans les joues, autour des yeux, sous le menton — soutiennent les tissus cutanés et leur donnent leur galbe naturel. Avec l'âge, ces compartiments graisseux diminuent progressivement, ce qui explique le "dégonflement" facial qui accompagne le vieillissement.
+Le visage humain doit sa forme et son aspect jeune en grande partie à des compartiments graisseux sous-cutanés. Ces "coussins" de graisse — dans les joues, autour des yeux, sous le menton — soutiennent les tissus cutanés et leur donnent leur galbe naturel. Le phénomène ne se limite pas au visage : le [relâchement cutané du corps après GLP-1](/collections/effets-secondaires-glp1/glp1-relachement-cutane-peau-corps-perte-poids-solutions/) est un enjeu connexe fréquent. Avec l'âge, ces compartiments graisseux diminuent progressivement, ce qui explique le "dégonflement" facial qui accompagne le vieillissement.
 
 Lors d'une perte de poids rapide, le corps puise dans ses réserves lipidiques de manière globale — y compris dans la graisse faciale. Le visage peut ainsi perdre une partie de ce volume naturel en quelques mois, donnant un aspect creux et vieilli qui contraste avec le regain de dynamisme corporel.
 

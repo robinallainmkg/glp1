@@ -114,7 +114,7 @@ Une erreur fréquente : certains patients, voyant leur poids se stabiliser aprè
 
 ## Les stratégies pour limiter la reprise
 
-Si vous êtes dans la situation d'un arrêt inévitable ou programmé, certaines approches peuvent ralentir la reprise :
+Si vous êtes dans la situation d'un arrêt inévitable ou programmé, certaines [stratégies pour éviter l'effet yoyo après GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) peuvent ralentir la reprise :
 
 **1. Intensifier l'activité physique, surtout la musculation**
 La masse musculaire élève le métabolisme de base. Des séances de résistance 2 à 3 fois par semaine dans les mois précédant et suivant l'arrêt peuvent aider à maintenir une dépense calorique plus élevée.

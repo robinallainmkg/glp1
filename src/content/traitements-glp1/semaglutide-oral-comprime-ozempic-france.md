@@ -86,7 +86,7 @@ Pour l'indication **obésité**, le [remboursement GLP-1 en France](/collections
 
 ### Le prix attendu
 
-Les estimations du marché tablent sur un prix mensuel de **300 à 350 €** pour le comprimé oral haute dose, soit un positionnement proche de Wegovy (169-360 €/mois selon dosage). Une légère prime par rapport à l'injectable serait justifiée par la commodité de la prise orale.
+Pour le [prix du sémaglutide oral en France](/collections/glp1-cout/prix-rybelsus-france/), les estimations du marché tablent sur un prix mensuel de **300 à 350 €** pour le comprimé oral haute dose, soit un positionnement proche de Wegovy (169-360 €/mois selon dosage). Une légère prime par rapport à l'injectable serait justifiée par la commodité de la prise orale.
 
 Pour le **remboursement**, les mêmes incertitudes que Wegovy et Mounjaro s'appliquent : la décision dépendra des négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé).
 
@@ -139,7 +139,7 @@ Eli Lilly travaille également sur des formulations orales de tirzepatide, mais 
 
 Le sémaglutide oral haute dose représente l'évolution naturelle des traitements GLP-1 : une molécule déjà prouvée, rendue accessible sans injection. Si la contrainte de la prise à jeun persiste, elle est jugée acceptable par la majorité des patients dans les études cliniques.
 
-En France, l'arrivée de cette formulation est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
+Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
 
 ---
 

@@ -182,7 +182,7 @@ Ces ressources complètent les informations de ce guide.
 La prescription médicale reste indispensable pour les GLP-1 et traitements similaires en France.
 
 ### Quelle est l'efficacité comparée aux autres traitements ?
-Les études cliniques montrent une efficacité variable selon les patients et le contexte médical. L'évaluation individuelle reste primordiale.
+Les études cliniques montrent une efficacité variable selon les patients et le contexte médical — voir notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) pour une analyse détaillée. L'évaluation individuelle reste primordiale.
 
 ### Y a-t-il des contre-indications absolues ?
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie selon les protocoles ANSM.
@@ -191,7 +191,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie s
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.
 
 ### Le traitement est-il remboursé ?
-Les [conditions de remboursement](/collections/glp1-cout/remboursement-glp1-2026/) dépendent des critères d'éligibilité définis par l'Assurance Maladie.
+Les [conditions de remboursement](/collections/glp1-cout/remboursement-glp1-2026/) dépendent des critères d'éligibilité définis par l'Assurance Maladie. Pour connaître le [prix de Wegovy par dosage](/collections/glp1-cout/prix-wegovy-france/), consultez notre guide tarifaire.
 
 ---
 

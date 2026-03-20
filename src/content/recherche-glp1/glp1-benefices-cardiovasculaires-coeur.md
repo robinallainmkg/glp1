@@ -120,7 +120,7 @@ SELECT est l'étude la plus importante pour les patients obèses non diabétique
 
 L'insuffisance cardiaque à fraction d'éjection préservée (IC-FEP), également appelée insuffisance cardiaque diastolique, est une pathologie où le coeur se contracte normalement mais ne se relaxe pas suffisamment. Elle est très fréquente chez les patients obèses et représentait jusqu'à récemment un domaine thérapeutique difficile.
 
-L'**étude STEP-HFpEF** publiée dans le *NEJM* en 2023 a montré que le sémaglutide 2,4 mg (Wegovy) réduit de manière significative :
+L'[étude SUMMIT sur le tirzepatide et l'insuffisance cardiaque](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/) a confirmé ces résultats pour le double agoniste GLP-1/GIP. L'**étude STEP-HFpEF** publiée dans le *NEJM* en 2023 a montré que le sémaglutide 2,4 mg (Wegovy) réduit de manière significative :
 - Les symptômes d'insuffisance cardiaque (score KCCQ : +7,8 points vs +3,1 pour le placebo)
 - La distance parcourue en 6 minutes (+21,5 m vs +1,2 m)
 - Le poids corporel (–13,3% vs –2,6%)
@@ -180,7 +180,7 @@ Pour les patients obèses sans diabète mais à haut risque cardiovasculaire (é
 
 ### Consultez un cardiologue si vous avez un risque cardiovasculaire
 
-Si vous êtes sous traitement GLP-1 et que vous présentez des facteurs de risque cardiovasculaire (tabagisme, hypertension, antécédent familial d'infarctus, hypercholestérolémie), il est recommandé de :
+Si vous êtes sous traitement GLP-1 et que vous présentez des facteurs de risque cardiovasculaire (tabagisme, hypertension, antécédent familial d'infarctus, altération du [profil lipidique et cholestérol](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/)), il est recommandé de :
 1. Demander à votre médecin un bilan cardiovasculaire complet
 2. Discuter de l'optimisation de votre traitement GLP-1 en fonction du risque cardiovasculaire
 3. Associer les mesures hygiéno-diététiques recommandées (activité physique, régime méditerranéen)

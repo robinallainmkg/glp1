@@ -117,7 +117,7 @@ Aucune toxicité grave spécifique au cagrilintide n'a été identifiée dans le
 
 ### Un mécanisme d'action inédit
 
-L'**amycrétine** est développée par Novo Nordisk sous forme orale. Il s'agit d'un **double agoniste GLP-1/amyline** en un seul comprimé — une molécule unique qui reproduit simultanément les actions du sémaglutide et du cagrilintide dans la même prise.
+Parmi les molécules les plus avancées, le [retatrutide (triple agoniste GLP-1/GIP/glucagon)](/collections/recherche-glp1/retatrutide-triple-agoniste-glp1-gip-glucagon-france-2026/) cible simultanément trois récepteurs hormonaux pour une efficacité potentiellement inédite. L'**amycrétine** est développée par Novo Nordisk sous forme orale. Il s'agit d'un **double agoniste GLP-1/amyline** en un seul comprimé — une molécule unique qui reproduit simultanément les actions du sémaglutide et du cagrilintide dans la même prise.
 
 Les données de phase 2 publiées en 2024 montrent une perte de poids de **13,1%** sur 12 semaines seulement — un résultat exceptionnellement rapide pour cette classe thérapeutique.
 

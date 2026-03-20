@@ -38,7 +38,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 **Constipation**
 - **Fréquence** : Fréquent (1-10%)
-- **Gestion** : Augmenter les fibres, activité physique
+- **Gestion** : Augmenter les fibres, activité physique. Dans de rares cas, un ralentissement digestif important peut évoquer une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/)
 - **Prévention** : Boire beaucoup d'eau
 
 ### Autres effets fréquents
@@ -174,7 +174,7 @@ mainKeyword: "effets secondaires Wegovy"
 ### Préparation mentale
 
 **Se préparer psychologiquement** :
-- Connaître les effets possibles
+- Connaître les effets possibles, notamment les [effets psychologiques possibles](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
 - Prévoir des aménagements professionnels
 - Avoir un soutien familial
 

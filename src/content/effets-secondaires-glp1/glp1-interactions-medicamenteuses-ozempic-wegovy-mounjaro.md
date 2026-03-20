@@ -65,7 +65,7 @@ Les contraceptifs oraux combinés (pilule contraceptive) font l'objet d'une surv
 Les études pharmacocinétiques publiées (Novo Nordisk) montrent que le sémaglutide ne réduit pas la biodisponibilité de l'éthinylestradiol et du lévonorgestrel de façon cliniquement pertinente. Le RCP officiel de l'Ozempic/Wegovy ne fait donc pas état d'une interaction pharmacocinétique significative avec les contraceptifs oraux combinés. Des grossesses ont cependant été signalées à l'EMA chez des femmes sous sémaglutide et contraceptifs oraux, mais le lien causal n'est pas établi — des vomissements importants en début de traitement pourraient réduire l'efficacité de la pilule dans certains cas.
 
 **La recommandation pratique**
-Par précaution, si vous prenez une pilule contraceptive et que vous souffrez de vomissements importants en début de traitement GLP-1, discutez-en avec votre médecin ou gynécologue. Une contraception complémentaire (préservatif) peut être envisagée pendant les phases de vomissements intenses.
+Par précaution, si vous prenez une pilule contraceptive et que vous souffrez de vomissements importants en début de traitement GLP-1, discutez-en avec votre médecin ou gynécologue. Si vous envisagez une grossesse, consultez notre guide sur l'[arrêt du traitement GLP-1 avant la grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/). Une contraception complémentaire (préservatif) peut être envisagée pendant les phases de vomissements intenses.
 
 ### Médicaments pour la thyroïde
 
@@ -95,6 +95,7 @@ Pour rassurer, de nombreux médicaments sont considérés comme sûrs avec les G
 - La plupart des antihypertenseurs (amlodipine, bisoprolol, périndopril)
 - Les statines (atorvastatine, rosuvastatine) pour le cholestérol
 - La metformine pour le diabète de type 2
+- Les [inhibiteurs SGLT2](/collections/regime-glp1/isglt2-liste/) (dapagliflozine, empagliflozine) pour le diabète et la protection cardiaque
 - Les inhibiteurs de la pompe à protons (oméprazole, ésoméprazole) pour le reflux
 - La plupart des antihistaminiques et médicaments pour l'allergie
 

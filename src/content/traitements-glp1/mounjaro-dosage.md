@@ -146,7 +146,7 @@ Les patients qui passent d'Ozempic ou Wegovy à Mounjaro se posent souvent des q
 
 Les dosages se mesurent en mg absolus différents selon les molécules — une dose de 2,5 mg de tirzépatide n'est pas comparable à 2,5 mg de sémaglutide.
 
-Ce qui distingue Mounjaro, c'est son **double mécanisme** : le tirzépatide agit à la fois sur les récepteurs GLP-1 (comme Ozempic/Wegovy) ET sur les récepteurs GIP, ce qui explique sa supériorité en termes d'efficacité à perte de poids.
+Ce qui distingue Mounjaro, c'est son **double mécanisme** : le tirzépatide agit à la fois sur les récepteurs GLP-1 (comme Ozempic/Wegovy) ET sur les récepteurs GIP, ce qui explique sa supériorité en termes d'efficacité à perte de poids. Pour une analyse détaillée des différences, consultez notre [comparatif Mounjaro vs Wegovy](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 ## Précautions et Ajustements Spéciaux
 

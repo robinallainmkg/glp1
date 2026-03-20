@@ -113,7 +113,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 
 #### Mutuelles et assurances privées
 
-Certaines mutuelles commencent à proposer une prise en charge partielle :
+Certaines mutuelles commencent à proposer une prise en charge partielle — consultez notre guide sur le [remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/) :
 
 * **Forfait médecine douce** : 50-200 € par an
 * **Garantie innovation médicale** : jusqu'à 500 € par an
@@ -178,6 +178,7 @@ Plusieurs pharmacies en ligne françaises agréées proposent Wegovy :
 * Endocrinologue : délai moyen 3-6 mois
 * Diabétologue : délai moyen 2-4 mois
 * Centre spécialisé obésité : délai moyen 4-8 mois
+* [Prescription GLP-1 en télémédecine](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) : alternative plus rapide selon disponibilité
 
 **Examen médical complet**
 

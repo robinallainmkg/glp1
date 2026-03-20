@@ -131,7 +131,7 @@ Les stylos injectables GLP-1 contiennent un liquide médicamenteux. Contrairemen
 **Recommandation officielle : toujours en cabine**, car :
 - La soute peut descendre à des températures négatives à haute altitude
 - Le gel irréversible du médicament est possible dans la soute
-- Perte ou vol plus difficile à gérer en soute
+- En cas de [pénurie de GLP-1 en France](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/), un stylo perdu en soute peut être difficile à remplacer
 
 ### Aiguilles et seringues
 
@@ -219,5 +219,7 @@ Retirez-la rapidement. L'aiguille laissée en place peut permettre à l'air d'en
 Non. La congélation détruit irrémédiablement le médicament. Une fois congelé, le stylo doit être jeté même s'il semble intact après décongélation.
 
 ---
+
+Pour approfondir la technique d'administration, consultez notre guide détaillé sur [comment s'injecter un GLP-1](/collections/traitements-glp1/comment-s-injecter-glp1-guide-pratique-ozempic-wegovy-mounjaro/).
 
 *Ce guide pratique sur la conservation et l'injection des GLP-1 est fourni à titre informatif. Consultez la notice officielle de votre médicament et votre pharmacien pour toute question spécifique. Sources : notices ANSM Ozempic, Wegovy, Mounjaro ; recommandations VIDAL ; fiches pratiques Novo Nordisk et Eli Lilly. Dernière mise à jour : mars 2026.*
