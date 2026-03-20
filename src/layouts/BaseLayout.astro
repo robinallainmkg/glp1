@@ -17,6 +17,7 @@ export interface Props {
 
 const { title, description, keywords = "" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("/og-image.svg", Astro.site).href;
 
 // Produits affiliés pour le footer - temporairement désactivé
 // Footer products placeholder (unused for now)
@@ -48,15 +49,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:url" content={canonicalURL}>
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
-  <meta property="og:image" content="/og-image.svg">
+  <meta property="og:image" content={ogImage}>
   <meta property="og:site_name" content="GLP-1 France">
-  
+
   <!-- Twitter Card -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content={canonicalURL}>
   <meta property="twitter:title" content={title}>
   <meta property="twitter:description" content={description}>
-  <meta property="twitter:image" content="/og-image.svg">
+  <meta property="twitter:image" content={ogImage}>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
