@@ -163,7 +163,7 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   </div>
 
   <div class="comparison-row">
-    <span>Ozempic (sémaglutide)</span>
+    <span><a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic (sémaglutide)</a></span>
     <span>GLP-1 agoniste</span>
     <span>~77,60€ (TTC)</span>
     <span>Remboursé 30% (DT2 uniquement)</span>

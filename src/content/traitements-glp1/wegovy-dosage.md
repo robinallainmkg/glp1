@@ -191,7 +191,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie s
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.
 
 ### Le traitement est-il remboursé ?
-Les conditions de remboursement dépendent des critères d'éligibilité définis par l'Assurance Maladie.
+Les [conditions de remboursement](/collections/glp1-cout/remboursement-glp1-2026/) dépendent des critères d'éligibilité définis par l'Assurance Maladie.
 
 ---
 

@@ -349,7 +349,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 - **Trulicity** : Dulaglutide (une injection hebdomadaire)
 
 ### GLP-1 oraux
-- **Rybelsus** : Semaglutide oral (jusqu'à 14 mg/jour)
+- **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)
 
 ## FAQ Mounjaro
 

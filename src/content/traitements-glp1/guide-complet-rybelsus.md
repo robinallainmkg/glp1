@@ -135,7 +135,7 @@ Rybelsus doit être pris à jeun, au moins 30 minutes avant le premier repas de 
 
 ### GLP-1 injectables
 - **Ozempic** : Semaglutide (injection hebdomadaire)
-- **Trulicity** : Dulaglutide (injection hebdomadaire)
+- **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** : Dulaglutide (injection hebdomadaire)
 - **[Victoza (liraglutide)](/collections/traitements-glp1/guide-complet-victoza/)** : injection quotidienne
 - [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) : Liraglutide à 3 mg (pour l'obésité)
 

@@ -176,7 +176,7 @@ Oui, certaines pathologies nécessitent une évaluation préalable approfondie s
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.
 
 ### Le traitement est-il remboursé ?
-En mars 2026, Wegovy n'est pas remboursé par la Sécurité Sociale en France. Son prix en pharmacie varie de 169€ à 360€ par mois selon le dosage. Un remboursement est à l'étude, avec un possible avis favorable de la HAS pour une prise en charge au 2e semestre 2026 sous conditions strictes (IMC, comorbidités, suivi spécialisé). En attendant, vérifiez si votre mutuelle propose un forfait pour les médicaments non remboursés.
+En mars 2026, Wegovy n'est pas remboursé par la Sécurité Sociale en France. Son prix en pharmacie varie de 169€ à 360€ par mois selon le dosage. Un [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) est à l'étude, avec un possible avis favorable de la HAS pour une prise en charge au 2e semestre 2026 sous conditions strictes (IMC, comorbidités, suivi spécialisé). En attendant, vérifiez si votre mutuelle propose un forfait pour les médicaments non remboursés.
 
 ---
 

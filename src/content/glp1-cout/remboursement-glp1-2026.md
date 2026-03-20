@@ -26,12 +26,12 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
 |------------|------------|-------------------|------------------|-----------------|
 | **Ozempic** | Diabète T2 | **30%** (DT2 uniquement) | ~53-54€ | ✅ Maintenu |
-| **Trulicity** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
+| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
 | **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~27€ | ✅ Maintenu |
 | **Rybelsus** | Diabète T2 (oral) | **Non remboursé** (avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
 | **Wegovy** | Obésité (IMC ≥30) | **Non remboursé** | 169-360€ | ❌ Non remboursé |
 | **Mounjaro** | DT2 (avis HAS nov. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
-| **Saxenda** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
+| **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
 
 > **Mise à jour mars 2026** : La HAS a rendu un avis **favorable** au remboursement de **Mounjaro** le 19 novembre 2025 (avis CT21349) pour le diabète de type 2 et l'obésité (IMC >= 35). Les négociations de prix avec le CEPS sont en cours — le remboursement est **prévu pour le 2e semestre 2026**. En attendant, Mounjaro reste à la charge du patient. Les traitements indiqués pour l'**obésité seule** (Wegovy, Saxenda) restent non remboursés. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
 

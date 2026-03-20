@@ -95,7 +95,7 @@ mainKeyword: "prix Wegovy France"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Wegovy (sémaglutide) | 169-360 € | Non remboursé |
-| Ozempic (sémaglutide) | ~77,60 €/stylo (TTC) | 30% (DT2 uniquement) |
+| [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo (TTC) | 30% (DT2 uniquement) |
 | Saxenda (liraglutide) | 240-300 € | Non remboursé |
 | [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
 

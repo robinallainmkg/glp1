@@ -114,7 +114,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 | Traitement | Nausées | Diarrhée | Maux de tête |
 |------------|---------|----------|-------------|
 | Mounjaro | 15-20% | 8-12% | 6-8% |
-| Ozempic | 10-15% | 5-8% | 4-6% |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | 10-15% | 5-8% | 4-6% |
 | Trulicity | 8-12% | 4-6% | 3-5% |
 | Victoza | 6-10% | 3-5% | 2-4% |
 
