@@ -155,7 +155,7 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
           <span style="color: #9ca3af;">→</span>
           {detectedCategory && (
             <>
-              <a href={`/collections/${detectedCategory}/`} style="color: #3b82f6; text-decoration: none; display: flex; align-items: center; gap: 4px;">
+              <a href={detectedCategory === 'guides' || detectedCategory === 'temoignages' ? `/${detectedCategory}/` : `/collections/${detectedCategory}/`} style="color: #3b82f6; text-decoration: none; display: flex; align-items: center; gap: 4px;">
                 <span>{categoryIcon}</span>
                 <span>{detectedCategory.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
               </a>

@@ -42,7 +42,7 @@ while IFS= read -r page; do
   rel="${page#$DIST}"
   source_path=$(echo "$rel" | sed 's|/index\.html$|/|' | sed 's|\.html$||')
 
-  # Extract href values
+  # Extract href values - filter out JS template artifacts
   hrefs=$(grep -oE 'href="[^"]*"' "$page" 2>/dev/null | sed 's/href="//;s/"$//' | \
     grep -v '^$' | \
     grep -v '^#' | \
@@ -62,7 +62,17 @@ while IFS= read -r page; do
     grep -v '\.woff' | \
     grep -v '/_astro/' | \
     grep -v '/api/' | \
-    grep -v '^/admin' \
+    grep -v '^/admin' | \
+    grep -v "'" | \
+    grep -v '\$' | \
+    grep -v '/+/' | \
+    grep -v '\.collection' | \
+    grep -v '\.slug' | \
+    grep -v '\.url' | \
+    grep -v 'article\.' | \
+    grep -v '{' | \
+    grep -v '}' | \
+    grep -v '\.\.' \
   )
 
   link_count=0
@@ -108,13 +118,13 @@ while IFS= read -r page; do
 
     # Check if target exists
     target_file="$DIST${normalized}index.html"
-    target_file2="$DIST${normalized}"
     no_slash="${normalized%/}"
-    target_file3="$DIST${no_slash}/index.html"
-    target_file4="$DIST${no_slash}.html"
+    target_file2="$DIST${no_slash}/index.html"
+    target_file3="$DIST${no_slash}.html"
+    target_file4="$DIST${normalized}"
 
     if [ ! -f "$target_file" ] && [ ! -f "$target_file2" ] && [ ! -f "$target_file3" ] && [ ! -f "$target_file4" ]; then
-      echo "$source_path	$normalized" >> "$BROKEN_LINKS"
+      echo "$source_path	$href" >> "$BROKEN_LINKS"
     fi
   done
 
@@ -139,11 +149,22 @@ if [ "$BROKEN_COUNT" -eq 0 ]; then
 else
   echo "Found $BROKEN_COUNT unique broken internal links:"
   echo ""
-  printf "%-55s  ->  %s\n" "SOURCE PAGE" "BROKEN HREF"
-  printf "%-55s  ->  %s\n" "-------------------" "-------------------"
-  while IFS=$'\t' read -r src tgt; do
-    printf "%-55s  ->  %s\n" "$src" "$tgt"
-  done < "$TMPDIR/broken_dedup.txt"
+
+  # Group by broken href for cleaner output
+  echo "--- Broken targets and pages linking to them ---"
+  echo ""
+  cut -f2 "$TMPDIR/broken_dedup.txt" | sort -u | while IFS= read -r target; do
+    count=$(grep -cF "	$target" "$TMPDIR/broken_dedup.txt")
+    echo "BROKEN: $target ($count pages link to this)"
+    grep -F "	$target" "$TMPDIR/broken_dedup.txt" | cut -f1 | head -5 | while IFS= read -r src; do
+      echo "    from: $src"
+    done
+    remaining=$((count - 5))
+    if [ "$remaining" -gt 0 ]; then
+      echo "    ... and $remaining more"
+    fi
+    echo ""
+  done
 fi
 
 # --- Step 4: Orphan pages ---
@@ -151,8 +172,11 @@ echo ""
 echo "============================================"
 echo "  ORPHAN PAGES (0 incoming internal links)"
 echo "============================================"
+echo "(excluding test/backup/diagnostic pages)"
+echo ""
 
 orphan_count=0
+orphan_real_count=0
 while IFS= read -r page; do
   rel="${page#$DIST}"
   url_path=$(echo "$rel" | sed 's|/index\.html$|/|' | sed 's|\.html$||')
@@ -167,30 +191,41 @@ while IFS= read -r page; do
   with_slash="${no_slash}/"
 
   found=0
-  # Use fgrep for literal matching on the target column
-  if grep -qF "	${with_slash}" "$ALL_LINKS" 2>/dev/null; then
+  if grep -q "	${with_slash}$" "$ALL_LINKS" 2>/dev/null; then
     found=1
-  elif grep -qF "	${no_slash}" "$ALL_LINKS" 2>/dev/null; then
+  elif [ -n "$no_slash" ] && grep -q "	${no_slash}$" "$ALL_LINKS" 2>/dev/null; then
     found=1
   fi
 
   if [ "$found" -eq 0 ]; then
-    echo "  $url_path"
     orphan_count=$((orphan_count + 1))
+    # Classify
+    is_test=0
+    echo "$url_path" | grep -qE '(test-|backup|diagnostic|fixed)' && is_test=1
+
+    if [ "$is_test" -eq 0 ]; then
+      orphan_real_count=$((orphan_real_count + 1))
+      echo "  $url_path"
+    fi
   fi
 done < "$ALL_PAGES"
 
 echo ""
-echo "Total orphan pages: $orphan_count"
+echo "Real orphan pages: $orphan_real_count (+ $(( orphan_count - orphan_real_count )) test/backup pages)"
 
 # --- Step 5: Pages with fewest outgoing internal links ---
 echo ""
 echo "============================================"
 echo "  PAGES WITH VERY FEW OUTGOING LINKS (<=2)"
+echo "  (excluding /collections/ mirror pages)"
 echo "============================================"
 
 sort -t$'\t' -k2 -n "$OUTGOING_COUNT" | while IFS=$'\t' read -r pg cnt; do
   if [ "$cnt" -le 2 ]; then
+    # Skip /collections/ pages (they seem to be raw content without nav)
+    if echo "$pg" | grep -q '/collections/'; then
+      continue
+    fi
     printf "  %-65s  %s outgoing links\n" "$pg" "$cnt"
   fi
 done
@@ -199,6 +234,7 @@ done
 echo ""
 echo "============================================"
 echo "  PAGES WITH FEW INCOMING LINKS (1-2)"
+echo "  (excluding /collections/ and test pages)"
 echo "============================================"
 
 while IFS= read -r page; do
@@ -209,17 +245,24 @@ while IFS= read -r page; do
     continue
   fi
 
+  # Skip collections and test pages
+  if echo "$url_path" | grep -qE '(/collections/|test-|backup|diagnostic|fixed)'; then
+    continue
+  fi
+
   no_slash="${url_path%/}"
   with_slash="${no_slash}/"
 
-  # Count incoming links
-  count1=$(grep -cF "	${with_slash}" "$ALL_LINKS" 2>/dev/null || echo 0)
-  count2=$(grep -cF "	${no_slash}" "$ALL_LINKS" 2>/dev/null || echo 0)
-  # Avoid double counting: if with_slash matches, no_slash also matches (substring)
-  # Use exact tab+path+end matching
-  count=$(grep -c "	${with_slash}$" "$ALL_LINKS" 2>/dev/null || echo 0)
-  count_ns=$(grep -c "	${no_slash}$" "$ALL_LINKS" 2>/dev/null || echo 0)
-  total=$((count + count_ns))
+  # Count incoming links using line-end matching
+  count_ws=$(grep -c "	${with_slash}$" "$ALL_LINKS" 2>/dev/null || true)
+  count_ns=0
+  if [ -n "$no_slash" ]; then
+    count_ns=$(grep -c "	${no_slash}$" "$ALL_LINKS" 2>/dev/null || true)
+  fi
+  # Ensure numeric
+  count_ws=${count_ws:-0}
+  count_ns=${count_ns:-0}
+  total=$((count_ws + count_ns))
 
   if [ "$total" -ge 1 ] && [ "$total" -le 2 ]; then
     printf "  %-65s  %s incoming links\n" "$url_path" "$total"
@@ -229,10 +272,10 @@ done < "$ALL_PAGES"
 # --- Step 7: Top linked pages ---
 echo ""
 echo "============================================"
-echo "  TOP 15 MOST LINKED-TO PAGES"
+echo "  TOP 20 MOST LINKED-TO PAGES"
 echo "============================================"
 
-cut -f2 "$ALL_LINKS" | sort | uniq -c | sort -rn | head -15 | while read -r cnt path; do
+cut -f2 "$ALL_LINKS" | sort | uniq -c | sort -rn | head -20 | while read -r cnt path; do
   printf "  %4s  %s\n" "$cnt" "$path"
 done
 
@@ -243,8 +286,9 @@ echo "  SUMMARY"
 echo "============================================"
 echo "  Total content pages:        $TOTAL_PAGES"
 echo "  Total internal links:       $TOTAL_LINKS"
-echo "  Broken links:               $BROKEN_COUNT"
-echo "  Orphan pages:               $orphan_count"
+echo "  Broken links (unique):      $BROKEN_COUNT"
+echo "  Orphan pages (real):        $orphan_real_count"
+echo "  Orphan pages (test/backup): $((orphan_count - orphan_real_count))"
 
 avg_outgoing=$(awk -F'\t' '{sum+=$2} END {printf "%.1f", sum/NR}' "$OUTGOING_COUNT")
 echo "  Avg outgoing links/page:    $avg_outgoing"

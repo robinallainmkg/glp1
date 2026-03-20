@@ -273,7 +273,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 
 Le coût mensuel pour le patient varie entre 230 et 440 euros selon le dosage, Mounjaro étant vendu en prix libre et non remboursé par la Sécurité Sociale en mars 2026.
 
-L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel [remboursement GLP-1 2026](/glp1-cout/remboursement-glp1-2026/) au 2e semestre.
+L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) au 2e semestre.
 
 ### Contacts Utiles
 - **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france/)

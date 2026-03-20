@@ -5,7 +5,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://glp1-france.fr/sitemap.xml
+Sitemap: https://glp1-france.fr/sitemap-index.xml
 
 # Bloquer les pages d'administration et test
 Disallow: /admin/
