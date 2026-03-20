@@ -172,7 +172,7 @@ Pour être considéré comme candidat à Mounjaro dans une perspective d'insuffi
 - **IMC ≥ 30 kg/m²** (obésité confirmée)
 - **Fraction d'éjection ≥ 50%** (ICFEp, évaluée par échocardiographie)
 - **Symptômes d'insuffisance cardiaque** de classe NYHA II (limitation légère à l'effort) ou III (limitation significative à l'effort modéré)
-- **Absence de contre-indications aux GLP-1** (antécédents de pancréatite, antécédents de carcinome thyroïdien médullaire ou NEM2)
+- **Absence de [contre-indications aux GLP-1](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/)** (antécédents de pancréatite, antécédents de carcinome thyroïdien médullaire ou NEM2)
 
 ### Le bilan cardiologique préalable
 
@@ -223,7 +223,7 @@ SUMMIT n'a évalué les effets que sur 52 semaines (1 an). Les données à plus 
 
 L'étude SUMMIT marque un tournant dans la prise en charge de l'insuffisance cardiaque à fraction d'éjection préservée associée à l'obésité. En réduisant de 38% le risque d'aggravation cardiaque, le tirzepatide s'impose comme le premier traitement de l'obésité à démontrer simultanément un bénéfice majeur sur l'insuffisance cardiaque dans cette population.
 
-Pour les patients français concernés, le principal obstacle reste le coût, en l'absence de remboursement spécifique pour cette indication. Mais les négociations en cours et les données scientifiques solides laissent espérer une évolution favorable dans les prochains mois. En attendant, si vous souffrez d'obésité et d'insuffisance cardiaque, discutez avec votre cardiologue et votre médecin traitant de l'opportunité d'un traitement par Mounjaro. Pour comprendre toutes les options disponibles, notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) reste le point de départ le plus complet.
+Pour les patients français concernés, le principal obstacle reste le coût, en l'absence de remboursement spécifique pour cette indication. Mais les négociations en cours et les données scientifiques solides laissent espérer une évolution favorable dans les prochains mois. En attendant, si vous souffrez d'obésité et d'insuffisance cardiaque, discutez avec votre cardiologue et votre médecin traitant de l'opportunité d'un traitement par Mounjaro. Pour comprendre toutes les options disponibles, notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) reste le point de départ le plus complet. Consultez également notre [guide patient GLP-1 et insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/) pour les contre-indications et précautions spécifiques.
 
 ---
 

@@ -86,14 +86,14 @@ Le terme "mésusage" désigne l'utilisation d'un médicament en dehors de ses in
 - La prescription et l'utilisation chez des patients avec un IMC inférieur au seuil d'indication (< 30 kg/m² ou < 27 kg/m² avec comorbidité)
 - L'achat via des circuits non officiels (parapharmacies, sites internet, pseudo-consultations en ligne)
 
-Les données EPI-Phare sur les remboursements indiquent qu'une proportion significative des nouvelles initiations de GLP-1 en France ne correspondent pas strictement aux critères des recommandations HAS. L'ANSM a publié une alerte spécifique sur ce sujet et a renforcé les contrôles.
+L'[étude nationale de cohorte sur le mésusage des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/) et les données EPI-Phare sur les remboursements indiquent qu'une proportion significative des nouvelles initiations de GLP-1 en France ne correspondent pas strictement aux critères des recommandations HAS. L'ANSM a publié une alerte spécifique sur ce sujet et a renforcé les contrôles.
 
 ### Pourquoi le mésusage est dangereux
 
 Le mésusage n'est pas seulement un problème de conformité réglementaire. Il pose des questions de sécurité concrètes :
 
 **Pour les patients utilisateurs hors indication :**
-- Prise de risque (effets indésirables, interactions) sans bénéfice médical proportionné
+- Prise de risque (effets indésirables, interactions) sans bénéfice médical proportionné — des [procès Ozempic et recours juridiques en France](/collections/effets-secondaires-glp1/ozempic-proces-effets-secondaires-recours-juridique-france/) ont été engagés par des patients victimes d'effets graves
 - Absence de suivi médical structuré
 - Risque d'achats de contrefaçons si le médicament est indisponible en pharmacie
 

@@ -101,7 +101,7 @@ L'étude rappelle également que le mésusage contribue directement aux [tension
 
 ### Avant l'étude : des alertes répétées
 
-L'ANSM avait déjà tiré la sonnette d'alarme dès 2022 face à l'émergence des prescriptions hors AMM. Son [rapport de pharmacovigilance ANSM](/collections/effets-secondaires-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/) détaille les signaux identifiés. Plusieurs points de vigilance avaient été publiés, notamment concernant Ozempic utilisé uniquement pour la perte de poids chez des patients non diabétiques.
+L'ANSM avait déjà tiré la sonnette d'alarme dès 2022 face à l'émergence des prescriptions hors AMM. Son [rapport de pharmacovigilance ANSM](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/) détaille les signaux identifiés. Plusieurs points de vigilance avaient été publiés, notamment concernant Ozempic utilisé uniquement pour la perte de poids chez des patients non diabétiques.
 
 ### Le formulaire de prescription obligatoire (février 2025)
 

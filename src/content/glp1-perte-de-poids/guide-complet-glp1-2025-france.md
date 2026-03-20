@@ -25,7 +25,7 @@ mainKeyword: "GLP-1 France 2025 guide complet"
 
 ## Qu'est-ce que les GLP-1 ?
 
-Les **GLP-1 (Glucagon-Like Peptide-1)** sont des hormones naturellement produites par l'organisme qui régulent la glycémie et l'appétit. Depuis leur découverte, ils ont révolutionné la prise en charge du diabète de type 2 et de l'obésité.
+Les **GLP-1 (Glucagon-Like Peptide-1)** sont des hormones naturellement produites par l'organisme qui régulent la glycémie et l'appétit. Depuis leur découverte, ils ont révolutionné la prise en charge du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité.
 
 ## Les Traitements GLP-1 Disponibles en France en 2025
 
@@ -130,7 +130,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 **Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Pour toutes les conditions détaillées, consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
-- **Diabète type 2 :** 30% remboursé par la Sécurité Sociale (100% en ALD 30)
+- **Diabète type 2 :** 30% remboursé par la Sécurité Sociale (100% en ALD 30) — depuis février 2025, un formulaire obligatoire encadre la prescription selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
 - **Obésité (IMC ≥30) :** Wegovy, Mounjaro et Saxenda ne sont **pas remboursés** en France (mars 2026)
 - **ALD 30 (diabète de type 2) :** 100% du ticket modérateur pour Ozempic
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat

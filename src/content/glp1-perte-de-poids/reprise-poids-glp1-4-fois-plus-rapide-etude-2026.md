@@ -117,7 +117,7 @@ Une erreur fréquente : certains patients, voyant leur poids se stabiliser aprè
 Si vous êtes dans la situation d'un arrêt inévitable ou programmé, certaines [stratégies pour éviter l'effet yoyo après GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) peuvent ralentir la reprise :
 
 **1. Intensifier l'activité physique, surtout la musculation**
-La masse musculaire élève le métabolisme de base. Des séances de résistance 2 à 3 fois par semaine dans les mois précédant et suivant l'arrêt peuvent aider à maintenir une dépense calorique plus élevée.
+La masse musculaire élève le métabolisme de base. Un programme d'[exercice physique et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) de 2 à 3 séances de résistance par semaine dans les mois précédant et suivant l'arrêt peuvent aider à maintenir une dépense calorique plus élevée.
 
 **2. Surveiller les apports en protéines**
 Une alimentation riche en protéines (1,2 à 1,6 g/kg de poids corporel) favorise la satiété et [préserve la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) peuvent accélérer la perte de masse maigre et donc ralentir le métabolisme.

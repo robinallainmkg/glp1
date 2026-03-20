@@ -86,7 +86,7 @@ La nutrition intuitive est une approche qui vise à reconnecter le patient à se
 Un accompagnement en nutrition intuitive pendant le traitement permet de :
 
 - **Apprendre à distinguer la faim physique de la faim émotionnelle** — une compétence essentielle pour l'après-traitement
-- **Manger en pleine conscience (mindful eating)** : ralentir, savourer, être attentif aux signaux de satiété
+- **Manger en pleine conscience (mindful eating)** : ralentir, savourer, être attentif aux signaux de satiété. La [méditation de pleine conscience](/collections/alternatives-glp1/meditation-glp1/) est un outil complémentaire précieux pour développer cette compétence
 - **Dé-diaboliser certains aliments** plutôt que de construire une relation de peur ou d'évitement qui persiste après l'arrêt
 - **Préparer psychologiquement le terrain** pour une alimentation autonome, sans béquille médicamenteuse
 

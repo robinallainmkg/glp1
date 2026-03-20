@@ -19,7 +19,7 @@ mainKeyword: "remboursement GLP-1 2026"
 
 ## Remboursement GLP-1 2026 : Guide Officiel Complet
 
-Les traitements GLP-1 représentent une avancée majeure pour le [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et l'obésité. En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
+Les traitements GLP-1 représentent une avancée majeure pour le [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et l'obésité. Pour une vue d'ensemble des molécules disponibles, consultez notre [guide complet des traitements GLP-1 disponibles en France](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/). En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
 
 ## 📋 Tableau Récapitulatif Remboursement GLP-1 2026
 
@@ -70,7 +70,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349, ASMR IV, amélioration mineure), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35) après échec des mesures nutritionnelles. Les négociations tarifaires avec le CEPS sont en cours et le remboursement est attendu **au 2e semestre 2026**.
+**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349, ASMR IV, amélioration mineure), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35) après échec des mesures nutritionnelles. Les négociations tarifaires avec le CEPS sont en cours et le [remboursement de Mounjaro en 2026](/collections/glp1-cout/remboursement-mounjaro-france-2026-quand-conditions-ceps/) est attendu **au 2e semestre 2026**.
 
 ### Ce qu'il faut savoir sur le remboursement Mounjaro
 

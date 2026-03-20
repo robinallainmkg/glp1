@@ -62,7 +62,7 @@ Cette tolérance est plus marquée pour l'effet "coupeur d'appétit" que pour le
 
 ### 4. Le poids d'équilibre biologique
 
-Votre organisme a un "poids de consigne" (set point) qu'il cherche à défendre. Ce poids est influencé par votre génétique, votre historique pondéral, votre microbiote intestinal et vos habitudes de vie. Quand vous vous approchez de ce point d'équilibre, la résistance biologique à la perte de poids supplémentaire augmente.
+Votre organisme a un "poids de consigne" (set point) qu'il cherche à défendre. Ce poids est influencé par votre génétique, votre historique pondéral, votre [microbiote intestinal](/collections/recherche-glp1/glp1-microbiote-intestinal-flore-impact-probiotiques/) et vos habitudes de vie. Quand vous vous approchez de ce point d'équilibre, la résistance biologique à la perte de poids supplémentaire augmente.
 
 Pour certains patients, le plateau sous GLP-1 correspond à l'atteinte de ce poids de consigne. Il ne s'agit pas d'un échec du traitement : maintenir ce nouveau poids inférieur au poids initial représente déjà un bénéfice de santé considérable.
 
@@ -98,7 +98,7 @@ L'alimentation sous GLP-1 doit être centrée sur les protéines. En période de
 
 **Qualité plutôt que restriction supplémentaire**
 
-Réduire encore davantage les calories est rarement la bonne réponse : un déficit trop sévère aggrave l'adaptation métabolique et la perte musculaire. Mieux vaut améliorer la qualité des aliments : réduire les sucres rapides et les ultra-transformés, augmenter les légumes et les fibres pour soutenir le microbiote.
+Adopter une [alimentation optimale sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/) ou un régime adapté à votre GLP-1 est plus efficace que de réduire davantage les calories. Réduire encore davantage les calories est rarement la bonne réponse : un déficit trop sévère aggrave l'adaptation métabolique et la perte musculaire. Mieux vaut améliorer la qualité des aliments : réduire les sucres rapides et les ultra-transformés, augmenter les légumes et les fibres pour soutenir le microbiote.
 
 **Revoir l'index glycémique**
 

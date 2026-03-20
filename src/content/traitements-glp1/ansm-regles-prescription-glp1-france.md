@@ -44,6 +44,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 - Il n'est plus nécessaire de consulter un spécialiste pour la première prescription
 - Le renouvellement peut également être assuré par le médecin traitant
 - Les conditions médicales d'éligibilité selon l'ANSM pour la prescription (AMM) : IMC >= 30 kg/m² (obésité) ou IMC >= 27 kg/m² avec au moins une comorbidité liée au poids. Les critères IMC >= 35 s'appliquent uniquement aux conditions de remboursement HAS (en cours d'évaluation).
+- Ces évolutions concernent aussi la prescription des [GLP-1 pour les adolescents obèses de 12 ans et plus](/collections/traitements-glp1/wegovy-mounjaro-adolescent-obesite-12-ans-france-guide/), un cadre spécifique encadré par l'ANSM
 
 **Ce qui ne change pas** :
 
@@ -54,7 +55,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 ### Février 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
 
-Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, [Victoza](/collections/traitements-glp1/guide-complet-victoza/)) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) documenté — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
+Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, [Victoza](/collections/traitements-glp1/guide-complet-victoza/)) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) confirmé par une [étude nationale sur le mésusage des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/) — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
 
 Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabète de type 2. Il vise à s'assurer que :
 
@@ -85,7 +86,7 @@ En 2025, l'ANSM a publié un bilan de pharmacovigilance complet sur les analogue
 
 ### La position claire de l'ANSM
 
-L'ANSM affirme que **le rapport bénéfice/risque des GLP-1 est favorable lorsque ces médicaments sont utilisés conformément aux recommandations**. Cette formulation est importante : elle légitime l'utilisation des GLP-1 dans leurs indications approuvées tout en mettant en garde contre le mésusage.
+L'ANSM affirme que **le rapport bénéfice/risque des GLP-1 est favorable lorsque ces médicaments sont utilisés conformément aux recommandations**. Cette formulation est importante : elle légitime l'utilisation des GLP-1 dans leurs indications approuvées tout en mettant en garde contre le [mésusage](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/).
 
 ## Ce que cela signifie pour les patients
 

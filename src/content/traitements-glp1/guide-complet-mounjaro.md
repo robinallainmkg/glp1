@@ -245,7 +245,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 - **Échec des mesures hygiéno-diététiques**
 
 ### Résultats cliniques
-- **Perte de poids moyenne** : 15-20% du poids corporel
+- **Perte de poids moyenne** : 15-20% du poids corporel — découvrez le [témoignage de Laurent : -35 kg en 10 mois avec Mounjaro](/collections/temoignages/temoignage-laurent-transformation-glp1/)
 - **Pourcentage de patients** : 50% perdent ≥15% de leur poids
 - **Maintien du poids** : avec poursuite du traitement
 
@@ -319,7 +319,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 <div class="expert-conclusion">
   <h3>🎯 Conclusion de l'Expert</h3>
   <blockquote>
-    "Mounjaro représente l'avenir des traitements pour la perte de poids. Ses résultats exceptionnels 
+    "Mounjaro représente l'avenir des traitements pour la perte de poids, avec les [recommandations de l'OMS validant les GLP-1](/collections/recherche-glp1/oms-recommandations-glp1-obesite/) comme option thérapeutique. Ses résultats exceptionnels
     (-20% du poids corporel) et sa tolérance remarquable en font LE traitement de référence en 2025."
     <cite>- Dr. Martin, Endocrinologue</cite>
   </blockquote>

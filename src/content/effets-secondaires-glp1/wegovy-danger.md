@@ -78,7 +78,7 @@ Les troubles digestifs sont de loin les [effets indésirables du sémaglutide](/
 
 **Calculs biliaires (cholélithiase)** : le risque est augmenté en cas de perte de poids rapide. Une surveillance est recommandée.
 
-**Neuropathie optique ischémique antérieure non artéritique (NOIAN)** : un signal de sécurité a été ajouté au RCP en 2025 suite à des cas rapportés, bien que le lien de causalité ne soit pas confirmé. Les patients doivent signaler tout trouble visuel soudain.
+**[Neuropathie optique ischémique (NOIAN) sous sémaglutide](/collections/effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian/)** : un signal de sécurité a été ajouté au RCP en 2025 suite à des cas rapportés, bien que le lien de causalité ne soit pas confirmé. Les patients doivent signaler tout trouble visuel soudain.
 
 **Idées suicidaires** : En 2024, le PRAC (comité de pharmacovigilance de l'EMA) a conclu qu'aucun lien causal n'a pu être établi entre les agonistes GLP-1 (dont sémaglutide/Wegovy) et les pensées suicidaires ou auto-lésions. L'investigation est close. En cas de changement d'humeur, il reste important d'en parler à son médecin.
 

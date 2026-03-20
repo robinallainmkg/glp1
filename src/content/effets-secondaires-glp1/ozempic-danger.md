@@ -147,6 +147,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Dénutrition
 - Associations médicamenteuses
 
+Des études récentes ont également mis en évidence un [risque de goutte et d'hyperuricémie sous GLP-1](/collections/effets-secondaires-glp1/glp1-goutte-acide-urique-risque-etude-2026/), à surveiller chez les patients prédisposés.
+
 ## 🚨 Signaux d'alerte à reconnaître
 
 ### Urgences médicales
@@ -342,7 +344,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 - **Reconnaissance précoce** des signaux d'alerte (voir tous les [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/))
 - **Accès facilité** aux soins d'urgence si nécessaire
 
-**Recommandation finale** : Ozempic peut être utilisé en sécurité chez les patients bien sélectionnés, avec un encadrement médical approprié et une information complète sur les risques potentiels. Pour en savoir plus, consultez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/).
+**Recommandation finale** : Ozempic peut être utilisé en sécurité chez les patients bien sélectionnés, avec un encadrement médical approprié et une information complète sur les risques potentiels. Pour en savoir plus, consultez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et notre dossier sur les [procès Ozempic et recours en France](/collections/effets-secondaires-glp1/ozempic-proces-effets-secondaires-recours-juridique-france/).
 
 **⚠️ Rappel crucial** : Cet article ne remplace pas l'avis médical personnalisé. Toute question sur la sécurité d'Ozempic doit être discutée avec votre médecin prescripteur.
 

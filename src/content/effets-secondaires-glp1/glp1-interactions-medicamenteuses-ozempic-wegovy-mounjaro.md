@@ -103,7 +103,7 @@ Pour rassurer, de nombreux médicaments sont considérés comme sûrs avec les G
 
 ### Faire la liste complète de vos médicaments
 
-Avant de commencer un traitement GLP-1, établissez la liste complète de tous les médicaments que vous prenez, y compris les médicaments sans ordonnance, les compléments alimentaires, les produits de phytothérapie et les contraceptifs. Présentez cette liste à votre médecin prescripteur.
+Avant de commencer un traitement GLP-1, établissez la liste complète de tous les médicaments que vous prenez, y compris les médicaments sans ordonnance, les compléments alimentaires, les produits de phytothérapie et les contraceptifs. Incluez également les [produits de phytothérapie](/collections/alternatives-glp1/phytotherapie-glp1/) qui peuvent interagir avec vos traitements. Présentez cette liste à votre médecin prescripteur.
 
 ### Demander à votre pharmacien
 

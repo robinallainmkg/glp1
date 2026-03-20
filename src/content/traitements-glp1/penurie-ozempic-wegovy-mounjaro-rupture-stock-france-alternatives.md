@@ -47,7 +47,7 @@ Plusieurs facteurs continuent de créer des tensions :
 1. **La forte croissance de la demande** : le nombre de patients sous GLP-1 augmente de 30 à 40 % par an en France
 2. **Les difficultés de fabrication** : ces médicaments biologiques complexes nécessitent des processus de production longs (plusieurs mois)
 3. **Les variations saisonnières** : les lancements dans de nouveaux pays créent des ajustements de distribution
-4. **Les spéculations** : dans certains pays, des détournements vers l'usage cosmétique non médical ont créé des pénuries artificielles
+4. **Les spéculations** : dans certains pays, des détournements vers l'usage cosmétique non médical ont créé des pénuries artificielles. Certains patients se tournent alors vers des [alternatives naturelles au sémaglutide](/collections/alternatives-glp1/semaglutide-naturel/) en attendant le rétablissement des stocks
 
 ## Que faire concrètement si votre pharmacie n'a plus votre médicament ?
 

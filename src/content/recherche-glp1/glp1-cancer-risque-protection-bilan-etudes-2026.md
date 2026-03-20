@@ -147,7 +147,7 @@ Les autorités françaises maintiennent les recommandations suivantes :
 
 ### Position de l'EMA
 
-L'Agence Européenne des Médicaments maintient sa surveillance active des données de pharmacovigilance pour les GLP-1 (voir notre [bilan de pharmacovigilance de l'ANSM](/collections/effets-secondaires-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/)), notamment sur le signal thyroïdien. Aucune modification des contre-indications n'a été annoncée depuis 2023.
+L'Agence Européenne des Médicaments maintient sa surveillance active des données de pharmacovigilance pour les GLP-1 (voir notre [bilan de pharmacovigilance de l'ANSM](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/)), notamment sur le signal thyroïdien. Aucune modification des contre-indications n'a été annoncée depuis 2023.
 
 ### Position de la FDA américaine
 

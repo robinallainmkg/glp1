@@ -58,7 +58,7 @@ Le mésusage emprunte plusieurs canaux :
 
 **L'achat en ligne** : Des sites internet non autorisés vendent du sémaglutide ou du tirzépatide sans ordonnance. Outre l'illégalité, ces achats exposent à des [risques de contrefaçon graves](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/).
 
-**Le partage de traitements** : Des patients sous traitement partagent ou revendent leurs stylos injecteurs à des proches, une pratique dangereuse et illégale.
+**Le partage de traitements** : Des patients sous traitement partagent ou revendent leurs stylos injecteurs à des proches, une pratique dangereuse et illégale. Le [témoignage de Serena Williams sur les GLP-1](/collections/temoignages/serena-williams-glp1/) a par ailleurs contribué à la médiatisation de ces traitements, amplifiant la demande hors indication.
 
 ## Les risques du mésusage
 

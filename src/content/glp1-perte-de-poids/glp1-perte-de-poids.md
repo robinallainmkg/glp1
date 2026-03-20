@@ -80,7 +80,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - 83% patients perdent ≥5% poids
 - 66% patients perdent ≥10% poids
 - 48% patients perdent ≥15% poids
-- 32% patients perdent ≥20% poids
+- 32% patients perdent ≥20% poids — un résultat que pourrait dépasser le [Wegovy 7,2 mg haute dose (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-resultats/)
 
 **Profil d'efficacité détaillé :**
 - Perte rapide : -5% dès 12 semaines
@@ -114,7 +114,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 Pour maximiser votre perte de poids avec les GLP-1 :
 
-Pour optimiser les résultats, certains compléments alimentaires peuvent être envisagés en complément du traitement : probiotiques pour la santé digestive, magnésium pour réduire les crampes, et vitamines du groupe B pour soutenir le métabolisme. Consultez votre médecin ou pharmacien avant tout ajout.
+Pour optimiser les résultats, certains compléments alimentaires peuvent être envisagés en complément du traitement : [probiotiques pour la santé digestive sous GLP-1](/collections/recherche-glp1/glp1-microbiote-intestinal-flore-impact-probiotiques/), magnésium pour réduire les crampes, et vitamines du groupe B pour soutenir le métabolisme. Consultez votre médecin ou pharmacien avant tout ajout.
 
 ## Facteurs Influençant l'Efficacité
 

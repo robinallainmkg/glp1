@@ -31,7 +31,7 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 ## Principes Fondamentaux du Régime Mounjaro
 
 ### 1. Réduction Progressive des Portions
-- **Semaines 1-4** : Réduction de 25% des portions habituelles
+- **Semaines 1-4** : Réduction de 25% des portions habituelles — pour des conseils détaillés, consultez notre guide pour [adapter vos portions alimentaires sous GLP-1](/collections/regime-glp1/glp1-portion-alimentaire/)
 - **Semaines 5-8** : Réduction de 40% avec stabilisation
 - **Maintenance** : Portions adaptées à la satiété naturelle
 
@@ -153,7 +153,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 ## Activité Physique Complémentaire
 
 ### Programme Adapté
-- **Marche active** : 30 min/jour minimum
+- **Marche active** : 30 min/jour minimum — consultez notre [guide exercice physique et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)
 - **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Souplesse** : Yoga, étirements
 - **Cardio modéré** : Selon tolérance

@@ -395,7 +395,7 @@ Mais en pratique, avec le dosage progressif :
 
 ### Y a-t-il un générique d'Ozempic moins cher ?
 
-**Non, il n'existe pas encore de générique d'Ozempic** en France en 2025. Le sémaglutide (principe actif) est toujours protégé par le brevet de Novo Nordisk jusqu'en **2026-2027**.
+**Non, il n'existe pas encore de [générique d'Ozempic](/collections/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/)** en France en 2025. Le sémaglutide (principe actif) est toujours protégé par le brevet de Novo Nordisk jusqu'en **2026-2027**.
 
 **Alternatives économiques :**
 

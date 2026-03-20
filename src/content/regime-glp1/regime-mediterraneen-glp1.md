@@ -113,7 +113,7 @@ Les nausées, fréquentes en début de traitement GLP-1, sont mieux tolérées a
 
 Lors de l'initiation d'un traitement GLP-1, les nausées peuvent être importantes. Voici les adaptations recommandées :
 
-- Fractionnez vos repas en 4 à 5 petites prises plutôt que 3 grands repas
+- Adaptez vos [portions alimentaires adaptées aux GLP-1](/collections/regime-glp1/glp1-portion-alimentaire/) et fractionnez vos repas en 4 à 5 petites prises plutôt que 3 grands repas
 - Privilégiez les textures douces : soupes, purées de légumes, poissons en papillote
 - Évitez les aliments très gras ou très odorants (fromages forts, fritures, plats épicés)
 - Buvez de l'eau plate entre les repas, pas pendant (pour ne pas diluer les enzymes digestives)
@@ -162,7 +162,7 @@ Oui. La plupart des médecins traitants peuvent vous orienter vers un diététic
 
 L'association du régime méditerranéen et d'un traitement GLP-1 est aujourd'hui la stratégie la mieux étayée scientifiquement pour traiter l'obésité et le diabète de type 2 en France. Ce mode alimentaire riche en légumes, légumineuses, poissons gras et huile d'olive complète naturellement l'action des médicaments en améliorant la sensibilité à l'insuline, en stabilisant la glycémie et en favorisant une perte de poids durable.
 
-Il ne s'agit pas d'un régime restrictif, mais d'un changement de mode de vie qui s'installe progressivement. Commencez par remplacer les graisses saturées par de l'huile d'olive, augmentez votre consommation de légumineuses, et réduisez les sucres raffinés : ces trois ajustements simples produisent déjà des effets mesurables en quelques semaines.
+Il ne s'agit pas d'un régime restrictif, mais d'un changement de mode de vie qui s'installe progressivement. Commencez par remplacer les graisses saturées par de l'huile d'olive, augmentez votre consommation de légumineuses, adoptez la [chrono-nutrition pour optimiser les horaires de repas](/collections/regime-glp1/regime-chrono-nutrition-glp1/), explorez le [régime sans sucre sous GLP-1](/collections/regime-glp1/regime-sans-sucre-glp1/) et réduisez les sucres raffinés : ces trois ajustements simples produisent déjà des effets mesurables en quelques semaines.
 
 Pour tout ajustement de votre traitement médicamenteux ou de votre alimentation, consultez toujours votre médecin ou votre diabétologue.
 

@@ -164,7 +164,7 @@ Les aliments ultra-transformés, les sodas et les confiseries occupent de la pla
 
 ## Quels compléments alimentaires sous GLP-1 ?
 
-La supplémentation systématique n'est pas recommandée pour tous les patients. En revanche, certains peuvent bénéficier d'une supplémentation ciblée en fonction de leur bilan sanguin et de leurs habitudes alimentaires.
+La supplémentation systématique n'est pas recommandée pour tous les patients. En revanche, certains peuvent bénéficier de [suppléments naturels compatibles avec les GLP-1](/collections/alternatives-glp1/supplements-glp1/) et d'une supplémentation ciblée en fonction de leur bilan sanguin et de leurs habitudes alimentaires.
 
 **Compléments fréquemment utiles :**
 
@@ -206,7 +206,7 @@ Les traitements GLP-1 sont très efficaces, mais ils demandent un suivi nutritio
 - Signalez à votre médecin tout signe de fatigue intense, de neuropathie ou de chute de cheveux importante
 - La supplémentation doit être guidée par le bilan sanguin, pas systématique
 
-Pour aller plus loin, consultez notre guide sur les [micronutriments et vitamines sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) ou notre article sur le [régime alimentaire optimal sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/).
+Pour aller plus loin, consultez notre guide sur les [micronutriments et vitamines sous GLP-1](/collections/regime-glp1/glp1-micronutriments/), notre [programme détox doux compatible GLP-1](/collections/regime-glp1/regime-detox-glp1/) ou notre article sur le [régime alimentaire optimal sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/).
 
 ---
 

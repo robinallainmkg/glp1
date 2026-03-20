@@ -119,7 +119,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 ## FAQ
 
 ### Faut-il compter les calories avec GLP-1 ?
-Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionnelle plutôt que comptage strict.
+Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionnelle plutôt que comptage strict. Le [jeûne intermittent sous GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) peut également aider à structurer les apports sans comptage.
 
 ### Combien de calories économise-t-on avec GLP-1 ?
 300-500 kcal/jour en moyenne, soit 2100-3500 kcal/semaine → 0,3-0,5 kg perte/semaine théorique.

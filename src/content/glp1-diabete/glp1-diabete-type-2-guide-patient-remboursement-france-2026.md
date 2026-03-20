@@ -269,7 +269,7 @@ Les traitements GLP-1 représentent une avancée majeure dans la prise en charge
 
 Pour tirer le meilleur parti de votre traitement, maintenez un suivi régulier avec votre médecin, adoptez une alimentation adaptée et pratiquez une activité physique. Les GLP-1 sont des alliés puissants, mais ils fonctionnent d'autant mieux qu'ils s'inscrivent dans une prise en charge globale de votre santé.
 
-Si vous avez des questions sur votre traitement spécifique, consultez nos guides dédiés à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et aux [règles de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/).
+Si vous avez des questions sur votre traitement spécifique, consultez nos guides dédiés à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et aux [règles de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/). Certains patients s'interrogent sur les approches complémentaires comme l'[homéopathie et diabète](/collections/alternatives-glp1/homeopathie-diabete/) — les données scientifiques restent cependant limitées dans ce domaine.
 
 ---
 

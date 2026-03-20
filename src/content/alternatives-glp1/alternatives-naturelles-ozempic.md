@@ -65,7 +65,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Berberine** : 15-25€/mois (500mg 3×/jour)
 - **Chrome picolinate** : 8-15€/mois (200-400 μg/jour)
 - **Gymnema sylvestris** : 20-30€/mois (extrait standardisé)
-- **Cannelle Ceylon** : 10-18€/mois (extrait concentré)
+- **[Cannelle Ceylon et ses effets sur la glycémie](/collections/alternatives-glp1/cannelle-glp1/)** : 10-18€/mois (extrait concentré)
 
 ### Comparaison coût/efficacité
 - **Ozempic®** : ~76,58€/stylo (remboursé 30 % DT2) → HbA1c -1,0-1,5%

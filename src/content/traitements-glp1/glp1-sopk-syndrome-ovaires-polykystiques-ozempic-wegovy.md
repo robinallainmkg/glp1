@@ -140,7 +140,7 @@ Oui. Si votre IMC est supérieur à 30, votre médecin peut prescrire un GLP-1 p
 Les données actuelles ne permettent pas de recommander les GLP-1 comme substituts systématiques de la metformine dans le SOPK. Les deux molécules ont des mécanismes complémentaires et peuvent être utilisées conjointement, selon l'avis de votre médecin. La metformine reste moins coûteuse et bénéficie d'un recul plus important dans cette indication.
 
 **Dois-je arrêter mon GLP-1 si je veux tomber enceinte ?**
-Oui, absolument. Les GLP-1 doivent être arrêtés au moins 2 mois avant toute tentative de conception. Il est essentiel d'en parler à votre médecin et de planifier cet arrêt.
+Oui, absolument. Les GLP-1 doivent être arrêtés au moins 2 mois avant toute tentative de conception. Il est essentiel d'en parler à votre médecin et de [planifier cet arrêt](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/).
 
 **Les GLP-1 sont-ils remboursés pour le SOPK ?**
 Non. Le SOPK n'est pas une indication remboursée. Le remboursement ne s'applique que si vous avez également un diabète de type 2 ou une obésité (IMC ≥ 30 avec comorbidité). À plein tarif, le coût mensuel d'Ozempic est d'environ 77,60 €/stylo TTC (remboursé à 30 % pour le diabète de type 2, soit environ 54 €/mois après prise en charge) et celui de Wegovy de 169 à 360 € selon le dosage.

@@ -75,7 +75,7 @@ mainKeyword: "prix Saxenda France"
 |--------|----------------|-------------------|
 | 6 mg/ml (dose max 3 mg/jour) | 240-300 € | 240-300 € |
 
-**Prix moyen mensuel** : 240-300 € (prix libre, non remboursé)
+**Prix moyen mensuel** : 240-300 € (prix libre, non remboursé). Consultez notre article dédié au [prix de Saxenda en pharmacie en France](/collections/glp1-cout/saxenda-prix-pharmacie/) pour un comparatif détaillé par dosage.
 
 ### Comparaison avec autres GLP-1
 

@@ -118,7 +118,7 @@ SELECT est l'étude la plus importante pour les patients obèses non diabétique
 
 ### Une indication qui se confirme
 
-L'insuffisance cardiaque à fraction d'éjection préservée (IC-FEP), également appelée insuffisance cardiaque diastolique, est une pathologie où le coeur se contracte normalement mais ne se relaxe pas suffisamment. Elle est très fréquente chez les patients obèses et représentait jusqu'à récemment un domaine thérapeutique difficile.
+L'insuffisance cardiaque à fraction d'éjection préservée (IC-FEP), également appelée insuffisance cardiaque diastolique, est une pathologie où le coeur se contracte normalement mais ne se relaxe pas suffisamment. Elle est très fréquente chez les patients obèses et représentait jusqu'à récemment un domaine thérapeutique difficile. Pour les patients concernés, consultez notre guide sur les [GLP-1 et insuffisance cardiaque : contre-indications et précautions](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/).
 
 L'[étude SUMMIT sur le tirzepatide et l'insuffisance cardiaque](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/) a confirmé ces résultats pour le double agoniste GLP-1/GIP. L'**étude STEP-HFpEF** publiée dans le *NEJM* en 2023 a montré que le sémaglutide 2,4 mg (Wegovy) réduit de manière significative :
 - Les symptômes d'insuffisance cardiaque (score KCCQ : +7,8 points vs +3,1 pour le placebo)
@@ -170,7 +170,7 @@ Le mécanisme suspecté implique la réduction de l'inflammation auriculaire, la
 
 En France, les recommandations de la **Société Française de Cardiologie** (SFC) et de la **Société Francophone du Diabète** (SFD) intègrent les GLP-1 comme traitement de première ligne (après la metformine) chez les patients diabétiques de type 2 présentant une maladie cardiovasculaire établie ou un risque élevé.
 
-Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, un antécédent d'AVC, ou une insuffisance cardiaque**, votre cardiologue ou diabétologue devrait discuter avec vous d'une prescription d'Ozempic ou d'un autre GLP-1 remboursé — indépendamment de votre poids.
+Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, un antécédent d'AVC, ou une [insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/)**, votre cardiologue ou diabétologue devrait discuter avec vous d'une prescription d'Ozempic ou d'un autre GLP-1 remboursé — indépendamment de votre poids.
 
 ### Remboursement dans l'indication cardiovasculaire
 

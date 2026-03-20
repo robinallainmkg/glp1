@@ -168,14 +168,14 @@ Les GLP-1 modifient la digestion et peuvent affecter votre tolérance à l'effor
 - **Nausées à l'effort** : fréquentes en début de traitement. Réduisez l'intensité, respirez calmement, restez bien hydraté. Si elles persistent, consultez votre médecin.
 - **Hypoglycémie** : rare avec les GLP-1 seuls (ils n'abaissent la glycémie qu'en présence de glucose), mais possible si vous combinez GLP-1 avec d'autres antidiabétiques (sulfamides, insuline). Ayez du sucre à disposition.
 - **Fatigue inhabituelle** : souvent liée à une restriction calorique trop sévère. Vérifiez vos [besoins caloriques journaliers sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/).
-- **Douleurs articulaires** : la perte de poids rapide peut modifier la biomécanique. Consultez un kinésithérapeute si des douleurs apparaissent.
+- **Douleurs articulaires** : la perte de poids rapide peut modifier la biomécanique et augmenter le [risque de fractures et blessures tendineuses sous GLP-1](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/). Consultez un kinésithérapeute si des douleurs apparaissent.
 
 ### Patients avec comorbidités
 
 Avant de démarrer un programme d'entraînement, consultez votre médecin si vous présentez :
 
 - **Pathologie cardiaque ou antécédent cardiovasculaire** : un test d'effort peut être recommandé avant de commencer
-- **Arthrose avancée** : privilégiez la natation, le vélo ou les exercices en piscine
+- **Arthrose avancée** : privilégiez la natation, le vélo ou les exercices en piscine — consultez aussi les [bénéfices des GLP-1 sur les douleurs articulaires](/collections/recherche-glp1/glp1-arthrose-douleurs-articulaires-benefices-risques/)
 - **Neuropathie diabétique** : les exercices en décharge (natation, vélo) sont préférables à la marche prolongée
 - **Hypertension non contrôlée** : l'exercice intense doit être évité jusqu'à stabilisation
 

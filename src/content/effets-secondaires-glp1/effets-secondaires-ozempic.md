@@ -144,7 +144,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 
 ### Consultation rapide (dans la semaine)
 
-- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/)
+- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/). L'[acupuncture pour soulager les nausées sous GLP-1](/collections/alternatives-glp1/acupuncture-glp1/) est une piste complémentaire à explorer avec votre médecin
 - Diarrhée abondante (>3 jours)
 - Perte de poids rapide (>2 kg/semaine)
 - Fatigue intense
@@ -166,7 +166,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 | [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | 15-25% | 8-12% | 5-8% | Très bonne |
 | Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
 
-Si vous souhaitez comparer avec un autre traitement de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
+Si vous souhaitez comparer avec un autre traitement de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) ou les [effets secondaires de Rybelsus (sémaglutide oral)](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
 
 ## 💡 Conseils pour une Bonne Tolérance
 

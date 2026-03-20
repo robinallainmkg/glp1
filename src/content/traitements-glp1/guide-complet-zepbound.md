@@ -181,6 +181,6 @@ L'alcool peut augmenter les risques d'effets secondaires gastro-intestinaux. Lim
 
 Zepbound représente une avancée majeure dans le traitement de l'obésité grâce à son mécanisme d'action double GLP-1/GIP. Avec des résultats cliniques impressionnants (15-20% de perte de poids), il offre une alternative efficace aux patients ne répondant pas aux traitements classiques.
 
-Bien que son prix soit élevé, son efficacité et son profil de sécurité en font un traitement prometteur pour la prise en charge médicale de l'obésité.
+Bien que son prix soit élevé — consultez le détail du [prix de Zepbound en France](/collections/glp1-cout/prix-zepbound-france/) — son efficacité et son profil de sécurité en font un traitement prometteur pour la prise en charge médicale de l'obésité.
 
 **Rendez-vous chez votre médecin** pour discuter de l'éligibilité à Zepbound et bénéficier d'un suivi médical adapté.

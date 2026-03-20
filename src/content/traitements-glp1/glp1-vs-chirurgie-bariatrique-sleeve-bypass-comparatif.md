@@ -38,7 +38,7 @@ La chirurgie bariatrique reste le traitement le plus efficace de l'obésité sé
 |-----------|----------------------|--------------------------|---------------------|
 | **Bypass gastrique** | 30-40 kg | 60-80 % | 70-75 % |
 | **Sleeve gastrectomie** | 25-35 kg | 50-70 % | 60-65 % |
-| **Anneau gastrique** | 20-30 kg | 40-60 % | 50-55 % |
+| **[Anneau gastrique](/collections/glp1-cout/anneau-gastrique-prix-cmu/)** | 20-30 kg | 40-60 % | 50-55 % |
 
 L'**EWL (Excess Weight Loss)** mesure le pourcentage de l'excès de poids perdu. Un patient de 120 kg dont le poids idéal est 70 kg a un excès de 50 kg. Un EWL de 70 % signifie qu'il perdra environ 35 kg.
 

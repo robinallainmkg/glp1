@@ -135,7 +135,7 @@ Certaines situations constituent des contre-indications formelles ou des drapeau
 
 ## L'accompagnement psychiatrique : une condition non négociable {#psychiatrie}
 
-Tous les experts s'accordent sur un point : les GLP-1 ne peuvent pas être prescrits seuls chez un patient avec TCA. L'[accompagnement psychologique sous GLP-1](/collections/traitements-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) n'est pas un "plus" — c'est une condition sine qua non.
+Tous les experts s'accordent sur un point : les GLP-1 ne peuvent pas être prescrits seuls chez un patient avec TCA. L'[accompagnement psychologique sous GLP-1](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) n'est pas un "plus" — c'est une condition sine qua non.
 
 ### Pourquoi l'accompagnement est indispensable
 

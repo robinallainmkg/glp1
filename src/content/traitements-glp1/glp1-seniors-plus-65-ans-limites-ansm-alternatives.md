@@ -52,7 +52,7 @@ La perte de poids rapide réduit les contraintes mécaniques exercées sur les o
 
 **3. Les carences nutritionnelles**
 
-Les GLP-1 réduisent l'appétit de manière très significative. Chez les jeunes adultes, cela favorise la perte de poids sans compromettre les apports essentiels si les repas sont bien équilibrés. Chez les seniors, dont les besoins en protéines, calcium, vitamine D et vitamines B sont souvent plus élevés et dont l'alimentation peut déjà être insuffisante, une réduction supplémentaire des apports alimentaires risque d'aggraver des carences préexistantes.
+Les GLP-1 réduisent l'appétit de manière très significative. Chez les jeunes adultes, cela favorise la perte de poids sans compromettre les apports essentiels si les repas sont bien équilibrés. Chez les seniors, dont les besoins en protéines, calcium, vitamine D et vitamines B sont souvent plus élevés et dont l'alimentation peut déjà être insuffisante, une réduction supplémentaire des apports alimentaires risque d'aggraver des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) préexistantes.
 
 **4. Les effets cardiovasculaires et rénaux**
 

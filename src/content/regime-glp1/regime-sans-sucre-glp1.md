@@ -118,7 +118,7 @@ Supprimer brutalement tout sucre peut provoquer des envies irrésistibles et un 
 
 ### Gérer les envies de sucre sous GLP-1
 Même sous traitement GLP-1, certaines envies de sucre persistent, surtout en soirée ou lors de moments de stress. Quelques stratégies utiles :
-- Une tisane chaude sucrée à la stévia ou simplement nature
+- Une tisane chaude sucrée à la stévia ou simplement nature, ou un verre d'eau avec du [vinaigre de cidre et glycémie](/collections/alternatives-glp1/vinaigre-cidre-glp1/) pour stabiliser la glycémie
 - Un carré de chocolat noir 85%
 - 5 à 10 minutes de marche ou d'étirements pour diffuser la tension
 
@@ -140,7 +140,7 @@ Oui, dans de nombreux cas. Les aliments sucrés, notamment les boissons sucrées
 
 Réduire les sucres ajoutés est peut-être le changement alimentaire le plus immédiatement impactant pour un patient débutant un traitement GLP-1. Les bénéfices se mesurent rapidement : stabilisation de la glycémie, réduction des nausées, perte de poids accélérée et meilleur confort digestif.
 
-Il ne s'agit pas de supprimer tous les plaisirs alimentaires, mais de distinguer les sucres qui nuisent (sodas, biscuits industriels, confiseries) de ceux qui nourrissent vraiment (fruits entiers, céréales complètes, produits laitiers nature). Avec du temps et de la pratique, ce tri devient naturel.
+Il ne s'agit pas de supprimer tous les plaisirs alimentaires, mais de distinguer les sucres qui nuisent (sodas, biscuits industriels, confiseries) de ceux qui nourrissent vraiment (fruits entiers, céréales complètes, produits laitiers nature). Si vous souhaitez aller plus loin dans votre démarche, découvrez les [alternatives biologiques aux GLP-1](/collections/alternatives-glp1/alternatives-bio-glp1/) pour compléter votre approche. Avec du temps et de la pratique, ce tri devient naturel.
 
 ---
 

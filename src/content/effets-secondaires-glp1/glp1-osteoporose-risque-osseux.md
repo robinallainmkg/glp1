@@ -32,7 +32,7 @@ affiliateConfig:
 
 ## A retenir
 
-Une etude presentee en mars 2026 au congres de l'AAOS (American Academy of Orthopaedic Surgeons), portant sur 150 000 patients suivis pendant 5 ans, a mis en evidence une association entre la prise de medicaments GLP-1 et un risque accru d'osteoporose et de goutte. Ces resultats ne remettent pas en cause le rapport benefice/risque global des GLP-1, mais invitent a une surveillance osseuse renforcee chez les patients traites.
+Une etude presentee en mars 2026 au congres de l'AAOS (American Academy of Orthopaedic Surgeons), portant sur 150 000 patients suivis pendant 5 ans, a mis en evidence une association entre la prise de medicaments GLP-1 et un risque accru d'osteoporose et de [goutte](/collections/effets-secondaires-glp1/glp1-goutte-acide-urique-risque-etude-2026/). Ces resultats ne remettent pas en cause le rapport benefice/risque global des GLP-1, mais invitent a une surveillance osseuse renforcee chez les patients traites.
 
 ---
 
@@ -67,7 +67,7 @@ Le mecanisme le plus probable n'est pas un effet direct du medicament sur l'os, 
 
 Le tissu adipeux (la graisse corporelle) joue un role protecteur pour le squelette. Il agit comme un "coussin" mecanique qui stimule la formation osseuse, et il produit des hormones — notamment les oestrogenes — qui contribuent au maintien de la densite osseuse. Lorsqu'un patient perd 15 a 20% de son poids en un an sous GLP-1, cette protection diminue rapidement.
 
-Des etudes anterieures sur la [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) avaient deja montre un phenomene similaire : les patients qui perdent beaucoup de poids rapidement presentent une diminution de la densite minerale osseuse dans les 12 a 24 mois suivant l'intervention, avec un risque accru de fractures.
+Des etudes anterieures sur la [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) avaient deja montre un phenomene similaire : les patients qui perdent beaucoup de poids rapidement presentent une diminution de la densite minerale osseuse dans les 12 a 24 mois suivant l'intervention, avec un [risque accru de fractures](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/).
 
 ### L'hypothese d'un effet direct sur le metabolisme osseux
 

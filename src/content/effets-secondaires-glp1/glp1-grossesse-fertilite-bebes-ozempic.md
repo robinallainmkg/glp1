@@ -26,7 +26,7 @@ La question revient de plus en plus dans les consultations médicales : peut-on 
 
 C'est l'un des effets les plus surprenants des traitements GLP-1 : en favorisant la perte de poids chez les femmes souffrant d'obésité, ces médicaments peuvent indirectement améliorer la fertilité. Ce n'est pas un effet direct du médicament sur les ovaires, mais une conséquence de la perte de poids.
 
-L'obésité perturbe les cycles menstruels et réduit la fertilité de plusieurs façons. Elle provoque une résistance à l'insuline qui déséquilibre les hormones sexuelles, notamment la LH et la FSH indispensables à l'ovulation. Chez les femmes souffrant de syndrome des ovaires polykystiques (SOPK) — une cause majeure d'infertilité — la perte de 5 à 10 % du poids corporel suffit souvent à rétablir des cycles ovulatoires réguliers.
+L'obésité perturbe les cycles menstruels et réduit la fertilité de plusieurs façons. Elle provoque une résistance à l'insuline qui déséquilibre les hormones sexuelles, notamment la LH et la FSH indispensables à l'ovulation. Chez les femmes souffrant de [syndrome des ovaires polykystiques (SOPK)](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-ozempic-wegovy/) — une cause majeure d'infertilité — la perte de 5 à 10 % du poids corporel suffit souvent à rétablir des cycles ovulatoires réguliers.
 
 Des femmes sous GLP-1 qui ne parvenaient pas à concevoir depuis plusieurs années ont ainsi rapporté des grossesses inattendues. Ce phénomène a même été surnommé dans certains médias le « bébé Ozempic ».
 

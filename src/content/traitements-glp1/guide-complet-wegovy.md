@@ -54,7 +54,7 @@ Cette action combinée permet une [perte de poids](/collections/glp1-perte-de-po
 
 ## Wegovy pour l'obésité
 
-Wegovy est spécifiquement indiqué pour la prise en charge à long terme de l'obésité (IMC ≥ 30) ou du surpoids (IMC ≥ 27) avec au moins une comorbidité associée.
+Wegovy est spécifiquement indiqué pour la prise en charge à long terme de l'obésité (IMC ≥ 30) ou du surpoids (IMC ≥ 27) avec au moins une comorbidité associée, conformément aux [recommandations de l'OMS sur les GLP-1 contre l'obésité](/collections/recherche-glp1/oms-recommandations-glp1-obesite/).
 
 ### Avantages dans l'obésité
 - Perte de poids moyenne de 15-20% du poids initial
@@ -85,7 +85,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 **Semaine 5-8** : 0,5 mg  
 **Semaine 9-12** : 1 mg  
 **Semaine 13-16** : 1,7 mg  
-**Semaine 17+** : 2,4 mg (dose maximale)
+**Semaine 17+** : 2,4 mg (dose maximale) — une dose encore plus élevée est à l'étude avec le programme [Wegovy haute dose 7,2 mg (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-resultats/)
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
