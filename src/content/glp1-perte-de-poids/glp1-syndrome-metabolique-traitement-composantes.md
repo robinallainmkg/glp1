@@ -57,7 +57,7 @@ En France, le syndrome métabolique touche environ 23 % des adultes selon les é
 - Une alimentation riche en sucres raffinés et graisses saturées
 - Des facteurs génétiques
 
-Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multiplié par 2 à 3 par rapport à la population générale. Le risque de développer un diabète de type 2 est multiplié par 5.
+Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multiplié par 2 à 3 par rapport à la population générale — une [protection cardiovasculaire des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) a été démontrée dans plusieurs grandes études. Le risque de développer un diabète de type 2 est multiplié par 5.
 
 ## Comment les GLP-1 agissent-ils sur le syndrome métabolique ?
 
@@ -94,7 +94,7 @@ Sous traitement GLP-1, on observe en général :
 - Réduction modeste du **LDL-cholestérol**
 - Réduction du **LDL oxydé** (marqueur d'athérosclérose)
 
-Ces effets s'expliquent en partie par la perte de poids, mais aussi par l'action directe des GLP-1 sur le métabolisme hépatique des lipides.
+Ces effets s'expliquent en partie par la perte de poids, mais aussi par l'action directe des GLP-1 sur le métabolisme hépatique des lipides — qui explique également leur action bénéfique sur la [stéatose hépatique et le syndrome métabolique](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), une comorbidité présente chez une majorité de patients.
 
 ## Le profil du patient idéal sous GLP-1 pour syndrome métabolique
 

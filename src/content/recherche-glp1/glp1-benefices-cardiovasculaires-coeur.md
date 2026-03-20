@@ -206,6 +206,6 @@ Les deux classes protègent le coeur, mais par des mécanismes différents. Les 
 
 ---
 
-La protection cardio-vasculaire des GLP-1 s'accompagne d'une [protection rénale des GLP-1](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) documentée dans l'étude FLOW pour le sémaglutide — un bénéfice complémentaire particulièrement précieux pour les patients diabétiques avec insuffisance rénale chronique.
+La protection cardio-vasculaire des GLP-1 s'accompagne d'une [protection rénale des GLP-1](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) documentée dans l'étude FLOW pour le sémaglutide — un bénéfice complémentaire particulièrement précieux pour les patients diabétiques avec insuffisance rénale chronique. Ces mêmes voies métaboliques expliquent également les [bénéfices du sémaglutide sur le foie gras (MASH)](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), une comorbidité fréquente chez les patients à risque cardiovasculaire.
 
 *Ces informations sont fournies à titre éducatif sur la base des données scientifiques disponibles en mars 2026. Elles ne remplacent pas l'avis d'un cardiologue ou d'un endocrinologue. Si vous avez des questions sur votre traitement, consultez votre médecin.*

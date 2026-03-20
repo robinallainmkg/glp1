@@ -129,9 +129,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 - [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
 - [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
-- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
-- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../traitements-glp1/guide-complet-saxenda/)
+- [plantes anti-diabète](/collections/alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

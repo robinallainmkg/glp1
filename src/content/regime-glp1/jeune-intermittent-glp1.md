@@ -115,7 +115,7 @@ Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/coll
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
 - [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 

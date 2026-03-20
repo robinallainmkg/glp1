@@ -233,9 +233,9 @@ Idéalement, associez :
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
 - [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
-- [prix Wegovy](../glp1-cout/wegovy-prix/)
+- [prix Wegovy](/collections/glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

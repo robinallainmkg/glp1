@@ -34,7 +34,7 @@ Depuis que [tout médecin généraliste peut prescrire les GLP-1 pour l'obésit�
 
 ### Le problème d'accès aux médecins spécialistes
 
-Avant juin 2025, seuls les endocrinologues, diabétologues et médecins nutritionnistes pouvaient initier un traitement GLP-1 pour l'obésité. Les délais d'attente atteignaient 6 à 12 mois dans certaines régions. Pour beaucoup de patients — notamment dans les déserts médicaux — l'accès à un spécialiste relevait du parcours du combattant.
+Avant juin 2025, seuls les endocrinologues, diabétologues et médecins nutritionnistes pouvaient initier un traitement GLP-1 pour l'obésité. Les délais d'attente atteignaient 6 à 12 mois dans certaines régions. Pour beaucoup de patients — notamment dans les déserts médicaux — l'accès à un spécialiste relevait du parcours du combattant. Retrouvez le détail des [nouvelles règles ANSM 2025 pour les généralistes](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/).
 
 Même après l'ouverture de la prescription aux généralistes, de nombreux médecins traitants restent réticents ou peu à l'aise avec ces nouvelles molécules. La télémédecine a comblé ce vide en mettant en contact les patients avec des médecins formés et disponibles rapidement.
 

@@ -189,7 +189,7 @@ Oui. Un médecin peut toujours exercer sa clause de conscience ou estimera qu'un
 Vous pouvez tout à fait aborder le sujet avec votre médecin. Expliquez votre situation, votre IMC, vos tentatives passées et votre souhait d'explorer les options médicamenteuses. Un médecin informé sera votre meilleur allié.
 
 **Les téléconsultations donnent-elles accès aux prescriptions GLP-1 ?**
-Techniquement, un médecin peut prescrire lors d'une téléconsultation. Cependant, l'examen physique (mesure du poids, de la taille, de la tension artérielle) est nécessaire. En pratique, une première consultation en présentiel est presque toujours requise.
+Techniquement, un médecin peut prescrire lors d'une téléconsultation. Cependant, l'examen physique (mesure du poids, de la taille, de la tension artérielle) est nécessaire. En pratique, une première consultation en présentiel est presque toujours requise. Notre guide complet sur la [prescription GLP-1 en ligne via télémédecine](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) vous explique comment cela fonctionne.
 
 **Mon généraliste connaît-il bien ces traitements ?**
 La formation des médecins généralistes sur les GLP-1 a considérablement progressé depuis 2023. La plupart des médecins sont désormais familiarisés avec ces traitements. Si votre médecin n'est pas à l'aise avec ces prescriptions, il pourra vous orienter vers un confrère spécialisé ou un spécialiste.

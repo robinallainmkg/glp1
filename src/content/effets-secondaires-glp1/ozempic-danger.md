@@ -325,7 +325,7 @@ Dépend de la gravité : effets mineurs (adaptation possible), effets graves (ar
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
 - [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicaments GLP-1](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
 

@@ -110,7 +110,7 @@ Sous GLP-1, l'objectif est de maintenir un apport d'au moins **1,2 à 1,5 g de p
 - Fractionner les prises alimentaires en petites portions fréquentes
 - Utiliser des compléments protéinés si les apports alimentaires sont insuffisants (poudres de protéines de lactosérum, de pois ou de soja)
 
-**Surveiller les [micronutriments essentiels sous GLP-1](/regime-glp1/glp1-micronutriments/)**
+**Surveiller les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/)**
 
 Plusieurs carences favorisent directement la chute de cheveux :
 

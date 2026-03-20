@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et TCA : Boulimie, Hyperphagie et Troubles Alimentaires"
+title: "GLP-1 et TCA : Boulimie, Hyperphagie, Troubles Alimentaires"
 description: "GLP-1 boulimie hyperphagie troubles conduites alimentaires : risques, précautions et accompagnement psychiatrique indispensable. Guide France 2026."
 pubDate: 2026-03-19
 date: 2026-03-19

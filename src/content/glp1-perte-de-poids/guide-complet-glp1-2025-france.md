@@ -93,7 +93,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 5. **Hydratation optimale :** 1.5-2L d'eau par jour
 6. **Éducation thérapeutique :** Comprendre son traitement pour mieux l'utiliser
 
-**L'accompagnement nutritionnel est essentiel** pour réussir votre perte de poids avec les GLP-1. Un diététicien spécialisé peut vous aider à adapter votre alimentation à votre nouveau mode de vie.
+**L'accompagnement nutritionnel est essentiel** pour réussir votre perte de poids avec les GLP-1. Un diététicien spécialisé peut vous aider à adapter votre alimentation à votre nouveau mode de vie. Pensez également à surveiller votre [bilan nutritionnel sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) pour prévenir les carences.
 
 ## Effets Secondaires des GLP-1 : Comment les Gérer
 
@@ -238,7 +238,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 - **Prévention du diabète :** Chez les personnes à risque
 - **Traitement de la stéatose hépatique :** Foie gras non alcoolique
-- **Protection cardiovasculaire :** Réduction des événements cardiaques
+- **[Bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) :** Réduction des événements cardiaques
 - **Applications neurologiques :** Maladie d'Alzheimer, Parkinson
 - **Santé mentale :** Dépression, troubles du comportement alimentaire
 

@@ -60,7 +60,7 @@ Les experts anticipent que les critères suivants pourraient être retenus :
 
 - **IMC ≥ 30 kg/m²** (obésité caractérisée)
 - **IMC ≥ 27 kg/m²** avec comorbidités associées (diabète de type 2, hypertension artérielle, dyslipidémie)
-- **Échec documenté** des mesures diététiques et d'exercice physique sur 6 mois minimum
+- **Échec documenté** des mesures diététiques et d'exercice physique sur 6 mois minimum — consultez notre [calendrier de remboursement Wegovy 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les dernières informations
 - **Prise en charge** dans un centre spécialisé en endocrinologie ou nutrition
 
 ## Prise en charge par les mutuelles complémentaires

@@ -159,7 +159,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 **Semaines 13-24 (dose cible) :**
 - Perte : 8-15 kg
 - Effets : nouveau rapport nourriture
-- Plateau : possible stabilisation temporaire
+- [Plateau](/collections/glp1-perte-de-poids/plateau-poids-glp1-ozempic-wegovy-causes-solutions/) : possible stabilisation temporaire
 
 **Semaines 25-52 (maintien) :**
 - Perte : 10-20 kg total
@@ -210,7 +210,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 - Facteur clé : poursuite traitement
 
 **Gestion de l'arrêt :**
-- Transition progressive sur 3-6 mois
+- Transition progressive sur 3-6 mois pour [éviter la reprise de poids après GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/)
 - Renforcement suivi nutritionnel
 - Reprise possible si rebond
 
@@ -294,10 +294,10 @@ La chirurgie reste plus efficace (60-80% perte poids) mais les GLP-1 offrent un 
 
  Ces informations sont données à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de commencer, modifier ou arrêter un traitement.
 
-- [Prix Ozempic en France](../glp1-cout/prix-ozempic-france/)
-- [Effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [Prix Wegovy en France](../glp1-cout/prix-wegovy-france/)
-- [Remboursement GLP-1 2026](../glp1-cout/remboursement-glp1-2026/)
+- [Prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/)
+- [Effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+- [Prix Wegovy en France](/collections/glp1-cout/prix-wegovy-france/)
+- [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

@@ -67,7 +67,7 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
 - [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
-- [opération pour maigrir prix](../glp1-cout/operation-pour-maigrir-prix/)
+- [opération pour maigrir prix](/collections/glp1-cout/operation-pour-maigrir-prix/)
 - [injection Ozempic prix](/collections/glp1-cout/prix-ozempic-france/)
 - [comparatif prix GLP-1](/collections/glp1-cout/prix-wegovy-france/)
 

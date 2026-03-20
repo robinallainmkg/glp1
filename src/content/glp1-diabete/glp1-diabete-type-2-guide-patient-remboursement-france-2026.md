@@ -219,7 +219,7 @@ Quand vous débutez un GLP-1 pour votre diabète, votre médecin vous prescrira 
 - Difficulté respiratoire sévère
 - Perte de connaissance
 
-Pour les situations complexes — contrôle glycémique difficile à équilibrer, polythérapie ou complication rénale —, une consultation chez un [diabétologue spécialisé en GLP-1](/medecins-glp1-france/diabetologue-paris/) peut être recommandée par votre médecin traitant.
+Pour les situations complexes — contrôle glycémique difficile à équilibrer, polythérapie ou complication rénale —, une consultation chez un [diabétologue spécialisé en GLP-1](/collections/medecins-glp1-france/diabetologue-paris/) peut être recommandée par votre médecin traitant.
 
 ## Associations avec d'autres traitements du diabète {#associations}
 

@@ -121,7 +121,7 @@ Une étude similaire avec Ozempic (étude SUSTAIN-Extended) montre une reprise d
 
 Ce phénomène s'explique par la physiologie : le GLP-1 traite une cause biologique de l'obésité (la résistance à la satiété), mais n'agit que tant que le médicament est présent. À l'arrêt, les mécanismes de faim reprennent le dessus.
 
-### Comment limiter la reprise de poids après l'arrêt
+### Comment [maintenir les résultats après l'arrêt du GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/)
 
 Cela ne veut pas dire que l'arrêt est condamné à l'échec. Des stratégies permettent de maintenir une partie des bénéfices :
 

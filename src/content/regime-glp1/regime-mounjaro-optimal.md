@@ -148,7 +148,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 - **Glycémie** : Contrôle régulier
 - **Fonction rénale** : Créatinine, urée
 - **Bilan lipidique** : Tous les 3 mois
-- **Vitamines** : B12, D, folates
+- **Vitamines** : B12, D, folates — consultez notre guide sur les [carences nutritionnelles à surveiller sous Mounjaro](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 
 ## Activité Physique Complémentaire
 

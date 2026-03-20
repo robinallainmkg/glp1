@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 Grossesse Fertilité Bébés Ozempic : Risques et Conseils"
+title: "GLP-1 Grossesse Fertilité Ozempic : Risques et Conseils"
 description: "GLP-1 grossesse fertilité bébés Ozempic : risques fœtaux, fertilité augmentée, quand arrêter Wegovy ou Mounjaro. Recommandations médicales."
 keywords: ['ozempic grossesse', 'glp1 grossesse', 'glp1 fertilité', 'bébés ozempic', 'wegovy grossesse', 'mounjaro grossesse', 'glp1 enceinte']
 seoTitle: "GLP-1 Grossesse Fertilité Bébés Ozempic : Guide Complet 2026"
