@@ -19,7 +19,7 @@ mainKeyword: "remboursement GLP-1 2026"
 
 ## Remboursement GLP-1 2026 : Guide Officiel Complet
 
-Les traitements GLP-1 représentent une avancée majeure pour le diabète de type 2 et l'obésité. En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
+Les traitements GLP-1 représentent une avancée majeure pour le [diabète de type 2](/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et l'obésité. En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
 
 ## 📋 Tableau Récapitulatif Remboursement GLP-1 2026
 
@@ -435,7 +435,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 - **Efficacité maximale** --> Mounjaro
 - **Remboursement souhaité** --> Ozempic (30% DT2 uniquement, principe actif identique à Wegovy)
 
-[Comparaison détaillée Wegovy vs Mounjaro →](/guides/quel-traitement-glp1-choisir)
+[Comparaison détaillée Wegovy vs Mounjaro →](/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
 ---
 

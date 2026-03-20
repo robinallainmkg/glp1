@@ -60,7 +60,7 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,5 à -2%)
 - Perte de poids moyenne de 5-10 kg
-- Réduction du risque cardiovasculaire
+- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) du sémaglutide
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée
@@ -170,7 +170,7 @@ Non, en France, Ozempic est **exclusivement indiqué pour le diabète de type 2*
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Ozempic est-il remboursé ?
-Ozempic est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD 30 pour le diabète de type 2) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix en pharmacie est d'environ 76,58 € par stylo.
+Ozempic est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD 30 pour le diabète de type 2) **uniquement pour le diabète de type 2**. Il n'est pas remboursé pour la perte de poids. Pour toutes les conditions détaillées, consultez notre guide sur le [remboursement](/glp1-cout/remboursement-glp1-2026/) des GLP-1. Depuis le 1er février 2025, le médecin doit remplir un formulaire de prescription obligatoire pour que le remboursement soit effectif. Le prix en pharmacie est d'environ 76,58 € par stylo.
 
 ### Puis-je arrêter Ozempic brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids après l'arrêt du traitement. Discutez avec votre médecin d'un plan d'arrêt adapté.

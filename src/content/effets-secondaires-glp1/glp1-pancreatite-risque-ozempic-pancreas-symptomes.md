@@ -169,7 +169,7 @@ La décision dépend des circonstances de votre pancréatite passée. Une pancr�
 Cette question a fait l'objet d'une surveillance intensive. Après des années d'études et de pharmacovigilance incluant des millions de patients, les autorités sanitaires (FDA, EMA, ANSM) n'ont pas établi de lien causal entre les GLP-1 et le cancer du pancréas. Les premières inquiétudes soulevées en 2013 n'ont pas été confirmées par les études de long terme.
 
 **Quels médicaments GLP-1 sont les plus concernés ?**
-Tous les analogues GLP-1 partagent ce signal de pharmacovigilance : sémaglutide (Ozempic, Wegovy, Rybelsus), tirzépatide (Mounjaro), liraglutide (Victoza, Saxenda) et dulaglutide (Trulicity). Le risque n'est pas spécifique à une molécule.
+Tous les analogues GLP-1 partagent ce signal de pharmacovigilance : sémaglutide (Ozempic, Wegovy, Rybelsus), tirzépatide (Mounjaro), liraglutide (Victoza, Saxenda) et dulaglutide ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)). Le risque n'est pas spécifique à une molécule.
 
 ---
 

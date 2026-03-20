@@ -69,7 +69,7 @@ Certains facteurs augmentent le risque d'effluvium télogène sous GLP-1 :
 - **Restriction calorique sévère** : une alimentation trop restrictive amplifie le stress métabolique
 - **Carences nutritionnelles** : insuffisance en protéines, en zinc, en fer (particulièrement chez les femmes), en biotine ou en vitamine D fragilise les cheveux
 - **Antécédent de chute de cheveux** : les personnes ayant déjà présenté un effluvium télogène (post-partum, par exemple) y sont souvent plus sensibles
-- **Femmes en période de périménopause** : les fluctuations hormonales peuvent s'additionner au stress métabolique
+- **Femmes en période de [périménopause](/collections/glp1-perte-de-poids/glp1-menopause-perte-poids-femme-ths/)** : les fluctuations hormonales peuvent s'additionner au stress métabolique
 
 ## La chute est-elle réversible ?
 

@@ -60,7 +60,7 @@ La sévérité du SAOS se mesure par l'Indice d'Apnée-Hypopnée (IAH), c'est-à
 
 ### Les conséquences sur la santé
 
-Le SAOS non traité est associé à un risque accru d'hypertension artérielle (présente chez 50 à 60% des patients SAOS), d'accidents cardiovasculaires (infarctus, AVC), de diabète de type 2 (l'apnée du sommeil aggrave l'insulinorésistance), d'accidents de la route (risque multiplié par 2 à 3) et de dépression.
+Le SAOS non traité est associé à un risque accru d'hypertension artérielle (présente chez 50 à 60% des patients SAOS), d'accidents cardiovasculaires (infarctus, AVC), de diabète de type 2 (l'apnée du sommeil aggrave l'insulinorésistance), d'accidents de la route (risque multiplié par 2 à 3) et de [dépression](/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/).
 
 ## Le lien entre obésité et apnée du sommeil {#lien-obesite}
 

@@ -110,7 +110,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 ✅ **Échec des antidiabétiques oraux**
 ✅ **Formulaire de demande obligatoire** (depuis février 2025)
 
-⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la perte de poids sans diabète, les traitements comme Wegovy ou Saxenda ne sont pas remboursés par la Sécurité Sociale.
+⚠️ **Important** : Ozempic n'est remboursé que pour le **diabète de type 2**, pas pour l'obésité seule. Pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) sans diabète, les traitements comme [Wegovy](/traitements-glp1/guide-complet-wegovy/) ou Saxenda ne sont pas remboursés par la Sécurité Sociale.
 
 ### Démarches pour le remboursement
 

@@ -110,7 +110,7 @@ Zepbound se présente sous forme de stylos préremplis avec différentes concent
 
 ### Efficacité démontrée
 Dans les études cliniques SURMOUNT, Zepbound a permis :
-- **Perte de poids moyenne** : 15-20% du poids corporel initial
+- **[Perte de poids](/glp1-perte-de-poids/glp1-perte-de-poids/) moyenne** : 15-20% du poids corporel initial
 - **Patients perdant ≥5%** : 85%
 - **Patients perdant ≥10%** : 65%
 - **Patients perdant ≥15%** : 40%
@@ -135,7 +135,7 @@ Le prix est libre et varie selon les pharmacies et le dosage :
 - **12,5-15 mg** : environ 400-440 €/mois
 
 ### Remboursement
-Mounjaro **n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). La HAS a émis un avis favorable en décembre 2025 ; un remboursement est envisagé au second semestre 2026 pour les patients avec un IMC ≥ 35, après échec d'une prise en charge nutritionnelle.
+Mounjaro **n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). La HAS a émis un avis favorable en décembre 2025 ; un [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026/) est envisagé au second semestre 2026 pour les patients avec un IMC ≥ 35, après échec d'une prise en charge nutritionnelle.
 
 ## Effets secondaires
 

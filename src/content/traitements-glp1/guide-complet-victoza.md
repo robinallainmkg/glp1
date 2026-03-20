@@ -126,7 +126,7 @@ Victoza s'administre une fois par jour, à la même heure chaque jour.
 
 ### Autres GLP-1 injectables
 - [**Ozempic (sémaglutide)**](/collections/traitements-glp1/guide-complet-ozempic/) : injection hebdomadaire
-- **Trulicity** : Dulaglutide (injection hebdomadaire)
+- [**Trulicity**](/collections/traitements-glp1/guide-complet-trulicity/) : Dulaglutide (injection hebdomadaire)
 - [**Saxenda (liraglutide)**](/collections/traitements-glp1/guide-complet-saxenda/) : liraglutide à 3 mg (pour l'obésité)
 - **Adlyxin** : Lixisénatide (injection quotidienne)
 

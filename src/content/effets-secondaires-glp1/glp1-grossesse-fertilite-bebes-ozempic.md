@@ -73,7 +73,7 @@ Les délais recommandés varient selon le médicament :
 |---|---|---|
 | Ozempic / Wegovy (sémaglutide) | ~1 semaine | **2 mois minimum** |
 | Mounjaro / Zepbound (tirzépatide) | ~5 jours | **1 mois minimum** |
-| Saxenda (liraglutide) | ~13 heures | **72 heures** |
+| [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | ~13 heures | **72 heures** |
 | Victoza (liraglutide) | ~13 heures | **72 heures** |
 
 Pour le sémaglutide, le délai de deux mois correspond à environ cinq demi-vies, durée après laquelle la molécule est considérée comme éliminée de l'organisme.

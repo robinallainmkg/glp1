@@ -38,7 +38,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## À retenir
 
-Bien qu'aucune alternative naturelle ne reproduise exactement l'efficacité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)®, certaines plantes et suppléments peuvent soutenir la perte de poids et le contrôle glycémique. Ces approches complémentaires nécessitent une supervision médicale et des attentes réalistes.
+Bien qu'aucune alternative naturelle ne reproduise exactement l'efficacité d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)®, certaines plantes et suppléments peuvent soutenir la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) et le contrôle glycémique. Ces approches complémentaires nécessitent une supervision médicale et des attentes réalistes.
 
 ## Informations Médicales
 
@@ -77,7 +77,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Statut réglementaire
 - **Compléments alimentaires** : Non remboursés Sécurité Sociale
-- **Phytothérapie** : Remboursement mutuelle possible
+- **Phytothérapie** : [Remboursement](/collections/glp1-cout/remboursement-glp1-2026/) mutuelle possible
 - **Consultations naturopathe** : Prise en charge mutuelle variable
 - **Surveillance médicale** : Indispensable, remboursée ALD
 

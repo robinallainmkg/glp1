@@ -51,7 +51,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Introduction
 
-Wegovy (sémaglutide 2,4 mg) est un traitement injectable prescrit pour la perte de poids chez les adultes obèses ou en surpoids avec comorbidités. Comme tout médicament, il comporte des risques qu'il est essentiel de connaître avant de commencer le traitement. Les données ci-dessous sont issues du RCP (Résumé des Caractéristiques du Produit) approuvé par l'EMA et l'ANSM.
+Wegovy (sémaglutide 2,4 mg) est un traitement injectable prescrit pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) chez les adultes obèses ou en surpoids avec comorbidités. Comme tout médicament, il comporte des risques qu'il est essentiel de connaître avant de commencer le traitement. Les données ci-dessous sont issues du RCP (Résumé des Caractéristiques du Produit) approuvé par l'EMA et l'ANSM.
 
 ### Effets secondaires très fréquents (plus de 10% des patients)
 

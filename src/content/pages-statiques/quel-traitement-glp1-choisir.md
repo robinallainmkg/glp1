@@ -54,7 +54,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Indications** : Diabète type 2, prévention cardiovasculaire
 - **Perte de poids** : 5-10% du poids corporel
 - **Posologie** : 1 injection par semaine
-- **Avantages** : Efficace sur le diabète, protection cardiovasculaire
+- **Avantages** : Efficace sur le diabète, [protection cardiovasculaire](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
 - **Prix** : ~76,58€/stylo (prix public 2026)
 
 #### Wegovy (sémaglutide 0,25-2,4 mg)
@@ -308,7 +308,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 ### Alternatives non médicamenteuses
 
-#### Chirurgie bariatrique :
+#### [Chirurgie bariatrique](/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) :
 - **Pour obésité sévère** (IMC >40)
 - **Perte de poids** : 20-30%
 - **Indications** : Échec traitements médicaux

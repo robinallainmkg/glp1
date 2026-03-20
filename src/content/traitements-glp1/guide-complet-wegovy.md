@@ -50,7 +50,7 @@ Wegovy agit en mimant l'action naturelle du GLP-1, une hormone intestinale qui :
 - **Ralenti la vidange gastrique** (sensation de satiété prolongée)
 - **Réduit l'appétit** au niveau cérébral
 
-Cette action combinée permet une perte de poids significative et durable.
+Cette action combinée permet une [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) significative et durable.
 
 ## Wegovy pour l'obésité
 
@@ -160,7 +160,7 @@ Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète,
 - **Effets maximum** : 6-12 mois
 
 ### Wegovy est-il remboursé pour l'obésité ?
-**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Son coût se situe entre 169 € et 360 € par mois selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un remboursement (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
+**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Son coût se situe entre 169 € et 360 € par mois selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Wegovy brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Parlez-en à votre médecin pour planifier un arrêt adapté.

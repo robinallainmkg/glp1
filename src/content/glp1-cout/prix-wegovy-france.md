@@ -247,7 +247,7 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 
 ## 📝 Conclusion
 
-**Wegovy est un traitement efficace** pour la perte de poids, mais son coût reste élevé car il n'est pas remboursé par la Sécurité Sociale en mars 2026.
+**Wegovy est un traitement efficace** pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), mais son coût reste élevé car il n'est pas remboursé par la Sécurité Sociale en mars 2026.
 
 ### Points clés à retenir :
 - **Prix mensuel** : 169-360 €/mois selon le dosage
@@ -486,7 +486,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 | Première tentative GLP-1 | **Wegovy** | Moins cher, efficacité prouvée |
 | Échec Wegovy | **Mounjaro** | Mécanisme d'action différent |
 
-[Comparaison complète Wegovy vs Mounjaro](/guides/quel-traitement-glp1-choisir)
+[Comparaison complète Wegovy vs Mounjaro](/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
 ---
 

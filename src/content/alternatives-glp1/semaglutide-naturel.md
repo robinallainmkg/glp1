@@ -90,7 +90,7 @@ Ces éléments déterminent le reste à charge pour le patient et l'accessibilit
 Le système français de remboursement des médicaments repose sur plusieurs niveaux d'intervention qui se complètent pour optimiser l'accès aux soins.
 
 **Mécanismes de remboursement :**
-- Sécurité Sociale : remboursement de base selon le taux de référence
+- Sécurité Sociale : [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) de base selon le taux de référence
 - Mutuelles complémentaires : prise en charge du ticket modérateur
 - Dispositifs spécifiques : ALD, CMU-C, AME selon les situations
 - Programmes d'aide des laboratoires pharmaceutiques

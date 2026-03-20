@@ -45,7 +45,7 @@ La stéatose hépatique, communément appelée "foie gras", correspond à une ac
 
 ### La stéatose simple (MASLD)
 
-Il s'agit d'une accumulation de graisse sans inflammation significative. La stéatose simple est réversible avec des changements de mode de vie (alimentation, activité physique, perte de poids). Elle est très fréquente chez les personnes en surpoids ou obèses, les diabétiques de type 2 et les personnes présentant un syndrome métabolique.
+Il s'agit d'une accumulation de graisse sans inflammation significative. La stéatose simple est réversible avec des changements de mode de vie (alimentation, activité physique, perte de poids). Elle est très fréquente chez les personnes en surpoids ou obèses, les diabétiques de type 2 et les personnes présentant un [syndrome métabolique](/collections/glp1-perte-de-poids/glp1-syndrome-metabolique-traitement-composantes/).
 
 ### La MASH (ex-NASH) : le stade inflammatoire
 

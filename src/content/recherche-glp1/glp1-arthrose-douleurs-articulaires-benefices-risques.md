@@ -102,7 +102,7 @@ Pour les patients qui présentent de l'arthrose et commencent un traitement GLP-
 1. **Informer le rhumatologue** du démarrage du traitement GLP-1 pour un suivi adapté
 2. **Réaliser une ostéodensitométrie (DXA)** de référence, surtout après 60 ans, avant de commencer le traitement ou dans les 3 premiers mois
 3. **Assurer un apport suffisant en calcium et vitamine D** : au minimum 1 000 mg de calcium et 800 UI de vitamine D par jour, idéalement en supplémentation
-4. **Maintenir une activité physique avec mise en charge** : la marche, les exercices en piscine et la musculation légère préservent la densité osseuse tout en protégeant les articulations
+4. **Maintenir une [activité physique](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) avec mise en charge** : la marche, les exercices en piscine et la musculation légère préservent la densité osseuse tout en protégeant les articulations
 5. **Ne pas augmenter la dose trop rapidement** : l'escalade progressive minimise les effets secondaires digestifs et évite une perte de poids trop brutale
 
 ## L'avis des sociétés savantes françaises

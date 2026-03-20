@@ -142,7 +142,7 @@ Trulicity s'administre une fois par semaine, à la même heure chaque semaine.
 
 ### Autres GLP-1 injectables
 - [**Ozempic (sémaglutide)**](/collections/traitements-glp1/guide-complet-ozempic/) : injection hebdomadaire
-- **Wegovy** : Semaglutide à 2,4 mg (pour l'obésité)
+- [**Wegovy**](/traitements-glp1/guide-complet-wegovy/) : Semaglutide à 2,4 mg (pour l'obésité)
 - [**Saxenda (liraglutide)**](/collections/traitements-glp1/guide-complet-saxenda/) : injection quotidienne
 - **Victoza** : Liraglutide (1,2 mg/jour)
 
@@ -158,7 +158,7 @@ Trulicity s'administre une fois par semaine, à la même heure chaque semaine.
 ## FAQ Trulicity
 
 ### Puis-je prendre Trulicity si je ne suis pas diabétique ?
-Non, Trulicity est spécifiquement indiqué pour le diabète de type 2, contrairement à Wegovy qui est indiqué pour l'obésité.
+Non, Trulicity est spécifiquement indiqué pour le diabète de type 2, contrairement à [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) qui est indiqué pour l'obésité.
 
 ### Combien de temps faut-il pour voir les effets ?
 - **Contrôle glycémique** : 1-2 semaines
