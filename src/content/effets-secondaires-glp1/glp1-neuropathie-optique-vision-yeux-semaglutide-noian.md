@@ -32,7 +32,7 @@ affiliateConfig:
 
 ## GLP-1 et Vision : Ce que vous devez savoir sur la NOIAN
 
-Depuis janvier 2025, un signal de pharmacovigilance a conduit les autorités européennes à mettre à jour les notices des traitements GLP-1 à base de sémaglutide. Le PRAC (Comité pour l'évaluation des risques en matière de pharmacovigilance) a recommandé l'ajout de la **neuropathie optique ischémique antérieure non artéritique** (NOIAN) comme effet indésirable rare à surveiller pour [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
+Depuis juin 2025, un signal de pharmacovigilance a conduit les autorités européennes à mettre à jour les notices des traitements GLP-1 à base de sémaglutide. Le PRAC (Comité pour l'évaluation des risques en matière de pharmacovigilance) a recommandé l'ajout de la **neuropathie optique ischémique antérieure non artéritique** (NOIAN) comme effet indésirable **très rare** à surveiller pour [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
 Cet effet reste **très rare** — estimé à environ 1 cas pour 10 000 patients traités — mais sa gravité potentielle, pouvant aller jusqu'à une perte permanente de la vision, justifie une information claire de tous les patients sous sémaglutide.
 
@@ -55,7 +55,7 @@ La NOIAN se traduit habituellement par :
 
 ### La recommandation du PRAC en 2025
 
-Suite à une revue systématique des données de pharmacovigilance, le Comité européen de pharmacovigilance (PRAC) a conclu en janvier 2025 qu'il existait un **signal statistiquement significatif** associant les analogues GLP-1 à base de sémaglutide (Ozempic, Wegovy) à la survenue de NOIAN.
+Suite à une revue systématique des données de pharmacovigilance, le Comité européen de pharmacovigilance (PRAC) a conclu en juin 2025 qu'il existait un **signal statistiquement significatif** associant les analogues GLP-1 à base de sémaglutide (Ozempic, Wegovy) à la survenue de NOIAN.
 
 Cette association a été initialement mise en évidence par une étude publiée dans le *JAMA Ophthalmology* en 2024, qui observait une incidence plus élevée de NOIAN chez les patients diabétiques de type 2 traités par sémaglutide comparativement aux patients recevant d'autres antidiabétiques. Le risque absolu restait néanmoins **très faible** : environ 13,1 cas pour 100 000 personnes-années sous sémaglutide, contre 6,9 pour les patients non traités.
 
@@ -115,7 +115,7 @@ Il n'existe pas de surveillance ophtalmologique réglementaire spécifique liée
 
 - Tout symptôme visuel doit être pris au sérieux et investigué rapidement
 - Chez les patients diabétiques, le dépistage annuel de la rétinopathie diabétique est maintenu
-- En cas de NOIAN avérée, la question de la poursuite ou de l'arrêt du traitement GLP-1 doit être discutée au cas par cas avec un ophtalmologue
+- En cas de NOIAN avérée, l'EMA recommande l'arrêt du traitement par sémaglutide. La décision finale doit être discutée au cas par cas avec un ophtalmologue en tenant compte du bénéfice global du traitement
 
 ## Ce risque concerne-t-il tous les GLP-1 ?
 
@@ -159,4 +159,4 @@ Pour consulter la liste complète des [effets secondaires du sémaglutide](/coll
 
 ---
 
-*Sources : PRAC — Compte-rendu de la réunion de janvier 2025 (ANSM) ; JAMA Ophthalmology, "Semaglutide and risk of non-arteritic anterior ischemic optic neuropathy", 2024 ; Medscape France, 2025. Article révisé par l'équipe médicale de GLP-1 France — mars 2026.*
+*Sources : PRAC — Compte-rendu de la réunion de juin 2025 (EMA) ; JAMA Ophthalmology, "Semaglutide and risk of non-arteritic anterior ischemic optic neuropathy", 2024 ; Medscape France, 2025. Article révisé par l'équipe médicale de GLP-1 France — mars 2026.*

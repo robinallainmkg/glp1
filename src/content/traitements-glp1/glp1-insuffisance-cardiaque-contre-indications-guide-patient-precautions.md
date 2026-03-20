@@ -8,7 +8,7 @@ author: "Dr. Marie Dubois"
 category: "Traitements GLP-1"
 tags: ["glp1", "insuffisance cardiaque", "contre-indications", "cardiologie", "ozempic", "wegovy", "mounjaro", "bêtabloquants", "diurétiques", "sécurité"]
 collection: "traitements-glp1"
-thumbnail: "/images/thumbnails/glp1-cardiovasculaire.jpg"
+thumbnail: "/images/thumbnails/recherche-clinique-glp1.jpg"
 thumbnailAlt: "GLP-1 et insuffisance cardiaque : guide patient contre-indications et précautions 2026"
 featured: true
 published: true

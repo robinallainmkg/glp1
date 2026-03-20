@@ -170,7 +170,7 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   </div>
 
   <div class="comparison-row">
-    <span>Wegovy (sémaglutide)</span>
+    <span><a href="/collections/traitements-glp1/guide-complet-wegovy/">Wegovy (sémaglutide)</a></span>
     <span>GLP-1 agoniste</span>
     <span>169-360€</span>
     <span>Non remboursé (mars 2026)</span>

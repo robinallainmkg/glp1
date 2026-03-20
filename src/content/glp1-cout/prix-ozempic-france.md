@@ -1,5 +1,5 @@
 ---
-title: "Prix Ozempic France 2026 : Tarifs par Dosage et"
+title: "Prix Ozempic France 2026 : Tarifs par Dosage et Remboursement"
 description: "Prix Ozempic France 2026 : 77,60€/stylo, coût réel 40-55€/mois après remboursement 30% en pharmacie. Tarifs par dosage, mutuelles et aides disponibles."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
 seoTitle: "Prix Ozempic France 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
@@ -94,10 +94,10 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Ozempic | 90-120 € | 30% (DT2 uniquement) |
-| Wegovy | 169-360 € | Non remboursé |
+| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
-| Mounjaro | 230-440 € | Non remboursé |
+| [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
 

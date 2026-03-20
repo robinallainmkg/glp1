@@ -162,7 +162,7 @@ Votre médecin généraliste assurera le suivi selon les recommandations habitue
 
 La décision de l'ANSM ouvre la prescription aux généralistes, mais ne modifie pas les conditions de remboursement. En mars 2026, Wegovy, Mounjaro et Saxenda ne sont pas remboursés par l'Assurance Maladie pour l'indication obésité.
 
-La HAS a rendu un avis favorable pour Wegovy (avis CT du 23 octobre 2024, publié le 4 décembre 2024 ; l'avis CEESP économique date de juillet 2025) et Mounjaro (décembre 2025). Les négociations de prix avec le CEPS sont en cours, et un [remboursement est attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
+La HAS a rendu un avis favorable au remboursement de Wegovy (avis CT du 23 octobre 2024, publié le 4 décembre 2024 ; l'avis CEESP économique date de juillet 2025) et de Mounjaro (décembre 2025), mais **uniquement pour les patients avec un IMC initial ≥ 35 kg/m²** en cas d'échec de la prise en charge nutritionnelle. L'avis est défavorable pour les autres situations couvertes par l'AMM (IMC 27-35 avec comorbidité). Les négociations de prix avec le CEPS sont en cours, et un [remboursement est attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
 
 ### Pour les patients diabétiques : situation inchangée
 

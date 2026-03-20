@@ -111,6 +111,10 @@ function summarizeTool(agentName, toolName, input) {
       counter.lastTool = 'edit';
       counter.count = 1;
       toolCounters.set(agentName, counter);
+      // Show what was added (new_string preview) for link insertions
+      const preview = (inp.new_string || '').trim();
+      const linkMatch = preview.match(/\[([^\]]{5,40})\]\(\/[^)]+\)/);
+      if (linkMatch) return `🔗 ${f} — lien: "${linkMatch[1]}"`;
       return `✏️ ${f}`;
     }
     case 'Write': {
@@ -146,14 +150,23 @@ function summarizeTool(agentName, toolName, input) {
       // MCP tools
       if (toolName.includes('execute_sql')) {
         const sql = (inp.sql || inp.query || '').replace(/\s+/g, ' ').trim();
-        // Classify SQL
-        if (/^SELECT/i.test(sql)) return `📊 SQL query`;
-        if (/^INSERT.*agent_runs/i.test(sql)) return `📊 Log agent run`;
+        // Classify SQL with meaningful summaries
+        if (/^SELECT.*COUNT/i.test(sql)) return null; // noise — just counting
+        if (/^SELECT/i.test(sql)) return null; // hide reads
+        if (/^INSERT.*agent_runs/i.test(sql)) return null; // internal logging
+        if (/^UPDATE.*agent_runs/i.test(sql)) return null; // internal logging
+        if (/^UPDATE.*correction_tickets.*deployed/i.test(sql)) return `✅ Tickets marqués deployed`;
         if (/^UPDATE.*correction_tickets/i.test(sql)) return `📊 Update tickets`;
-        if (/^UPDATE.*agent_runs/i.test(sql)) return `📊 Update agent run`;
-        if (/^INSERT.*correction_tickets/i.test(sql)) return `📊 Nouveau ticket`;
-        if (/^INSERT.*validation_results/i.test(sql)) return `📊 Resultat validation`;
-        return `📊 SQL`;
+        if (/^UPDATE.*internal_link_suggestions.*applied/i.test(sql)) return `🔗 Lien marqué applied`;
+        if (/^UPDATE.*internal_link_suggestions/i.test(sql)) return `📊 Update liens`;
+        if (/^INSERT.*correction_tickets/i.test(sql)) {
+          const slugMatch = sql.match(/'([a-z0-9-]+)'/);
+          return `🎫 Ticket: ${slugMatch ? slugMatch[1] : 'nouveau'}`;
+        }
+        if (/^INSERT.*fact_check_results/i.test(sql)) return `🔬 Résultat fact-check`;
+        if (/^INSERT.*internal_link_suggestions/i.test(sql)) return `🔗 Suggestion de lien`;
+        if (/^INSERT.*validation_results/i.test(sql)) return `📊 Résultat validation`;
+        return null; // hide all other SQL — too noisy
       }
       if (toolName.includes('supabase') || toolName.includes('mcp__100191b9')) {
         const action = toolName.split('__').pop();
@@ -172,11 +185,15 @@ function isUsefulText(line) {
   if (/^[#\-\*]{1,3}\s*$/.test(line)) return false;
   if (/^```/.test(line)) return false;
   if (/^\|[\s\-\|:]+\|$/.test(line)) return false; // table separators
+  // ALWAYS keep lines with concrete results (numbers, scores, links, corrections)
+  if (/\d+\s*(ticket|lien|article|correction|suggestion|score|erreur|fichier)/i.test(line)) return true;
+  if (/→|✅|❌|⚠️|🔗|Score|Bilan|Résumé|Récap/i.test(line)) return true;
+  if (/^[\s]*[-•▸]\s/.test(line) && line.length > 20) return true; // bullet points with content
   // Skip thinking/planning filler (EN + FR)
   if (/^(Let me|I'll|I need to|I should|Now I|First,|Next,|OK |Alright|Looking at|Let's|Checking|Hmm|Ok,)/i.test(line)) return false;
   if (/^(Thinking|Analyzing|Considering|Planning|Reviewing|Understanding)/i.test(line)) return false;
-  if (/^(Voyons|Laisse-moi|Je vais|Bien,|Maintenant|D'accord|Commençons|Parfait)/i.test(line)) return false;
-  if (/^(Je dois|Il faut|On va|Ensuite)/i.test(line)) return false;
+  if (/^(Voyons|Laisse-moi|Bien,|D'accord|Commençons|Parfait)/i.test(line)) return false;
+  if (/^(Il faut|Ensuite)/i.test(line)) return false;
   // Skip repetitive status lines
   if (/^(L'autopilot|Le serveur|C'est\.\.\.)/i.test(line)) return false;
   // Keep everything else (results, actions, summaries)
@@ -292,7 +309,12 @@ function parseStreamJson(name, rawLine) {
 
       case 'system':
         if (event.subtype === 'init') {
-          appendOutput(name, `🚀 Agent initialise`, 'progress');
+          // Only show init ONCE per agent (suppress sub-agent inits)
+          const initKey = `init_${name}`;
+          if (!toolCounters.has(initKey)) {
+            toolCounters.set(initKey, true);
+            appendOutput(name, `🚀 Agent initialise`, 'progress');
+          }
         } else if (event.message) {
           appendOutput(name, `⚙ ${event.message}`, 'info');
         }
