@@ -144,7 +144,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 
 ### Consultation rapide (dans la semaine)
 
-- Nausées persistantes (>1 semaine)
+- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/)
 - Diarrhée abondante (>3 jours)
 - Perte de poids rapide (>2 kg/semaine)
 - Fatigue intense

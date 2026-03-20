@@ -173,14 +173,15 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 ## Regles de priorite
 
 1. Si `human_note` est present dans un ticket : respecter ses instructions EN PRIORITE
-2. Tickets `urgent` avant `warning` avant `ok`
-3. Corrections avant maillage avant creations
-4. Tickets fact-check et validator sont traites de la meme maniere
+2. **MAILLAGE INTERNE EN PRIORITE** — Traite les liens internes AVANT les tickets non-urgents. 159 articles avec quasi 0 liens internes = catastrophe SEO
+3. Tickets `urgent` en parallele du maillage
+4. Tickets `warning` et `ok` APRES le maillage
+5. Tickets fact-check et validator sont traites de la meme maniere
 
 ## Limites
 
-- Maximum 50 tickets de correction par run
-- Maximum 25 liens internes par run
+- Maximum 30 tickets de correction par run
+- Maximum 80 liens internes par run (PRIORITE ABSOLUE — le maillage est critique pour le SEO)
 - Maximum 0 articles crees par run (creation desactivee)
 - Seul agent autorise a modifier des fichiers dans `src/content/`
 - Ecris dans Supabase via MCP execute_sql pour les mises a jour de statut

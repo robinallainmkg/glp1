@@ -311,7 +311,7 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **Différence avec Ozempic :**
 - Wegovy = Indication **perte de poids**/obésité — **non remboursé**
-- Ozempic = Indication **diabète de type 2** — **remboursé à 30%** (DT2 uniquement)
+- Ozempic = Indication **[diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** — **remboursé à 30%** (DT2 uniquement)
 - Même principe actif (sémaglutide) mais dosages différents
 
 ### Ma mutuelle peut-elle prendre en charge Wegovy ?

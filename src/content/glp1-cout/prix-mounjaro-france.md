@@ -79,7 +79,7 @@ mainKeyword: "prix Mounjaro France"
 
 ## Prix Mounjaro France 2026 : Guide Complet des Tarifs
 
-Le tirzépatide, commercialisé sous le nom de Mounjaro par le laboratoire **Eli Lilly**, est disponible en France depuis **novembre 2024**. Ce traitement innovant pour la gestion du diabète de type 2 et de l'obésité est actuellement vendu en **prix libre** et **non remboursé** par la Sécurité Sociale (mars 2026). La HAS a émis un avis favorable en décembre 2025, laissant entrevoir un remboursement possible au 2e semestre 2026.
+Le tirzépatide, commercialisé sous le nom de Mounjaro par le laboratoire **Eli Lilly**, est disponible en France depuis **novembre 2024**. Ce traitement innovant pour la gestion du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité est actuellement vendu en **prix libre** et **non remboursé** par la Sécurité Sociale (mars 2026). La HAS a émis un avis favorable en décembre 2025, laissant entrevoir un remboursement possible au 2e semestre 2026.
 
 <div class="price-hero">
   <div class="price-highlight">

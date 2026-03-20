@@ -124,7 +124,7 @@ Le tirzépatide semble avoir un avantage sur le sémaglutide pour l'apnée du so
 
 ### Effet mécanique de la perte de poids
 
-Le mécanisme principal est la réduction de la graisse péri-pharyngée. La perte de poids induite par les GLP-1 réduit les dépôts graisseux autour des voies aériennes supérieures, augmentant leur calibre et réduisant leur collapsibilité pendant le sommeil. La réduction de la graisse abdominale améliore aussi la mécanique respiratoire en augmentant le volume pulmonaire résiduel.
+Le mécanisme principal est la réduction de la graisse péri-pharyngée. La perte de poids induite par les GLP-1 réduit les dépôts graisseux autour des voies aériennes supérieures, augmentant leur calibre et réduisant leur collapsibilité pendant le sommeil. La réduction de la [graisse abdominale](/collections/glp1-perte-de-poids/glp1-graisse-abdominale-viscerale-ozempic-mounjaro-resultats/) améliore aussi la mécanique respiratoire en augmentant le volume pulmonaire résiduel.
 
 ### Effets potentiellement indépendants du poids
 

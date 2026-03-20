@@ -100,8 +100,8 @@ Les suggestions `approved` seront consommees par l'agent `editorial` qui inserer
 
 ## Limites
 
-- Maximum 30 articles par run
-- Maximum 50 suggestions par run
+- Maximum 60 articles par run
+- Maximum 100 suggestions par run
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql
 - Reponds uniquement en francais

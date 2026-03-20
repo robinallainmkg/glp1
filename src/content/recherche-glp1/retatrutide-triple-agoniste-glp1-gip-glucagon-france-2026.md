@@ -81,26 +81,25 @@ La combinaison de ces trois mécanismes crée une synergie dont l'ampleur sur la
 
 ### Design de l'étude
 
-L'essai TRIUMPH-4 est la plus grande et la plus récente étude de phase 3 sur le retatrutide. Ses caractéristiques :
+L'essai TRIUMPH-4 est un essai de phase 3 spécifiquement conçu pour évaluer le retatrutide chez des patients souffrant d'obésité **et** d'arthrose du genou. Ses caractéristiques :
 
-- **Population** : 1 847 adultes en situation d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27), sans diabète
+- **Population** : 445 adultes en situation d'obésité avec arthrose du genou documentée
 - **Traitement** : retatrutide 12 mg/semaine versus placebo (après titration progressive sur 20 semaines)
 - **Durée** : 68 semaines
-- **Critères principaux** : pourcentage de perte de poids corporel et proportion de patients ayant perdu ≥ 5 % du poids
+- **Critères principaux** : pourcentage de perte de poids corporel et amélioration de la fonction articulaire
 
 ### Résultats en termes de perte de poids
 
-Les résultats publiés en décembre 2025 dans le *New England Journal of Medicine* sont historiques :
+Les résultats ont été annoncés par Eli Lilly via un communiqué de presse en décembre 2025 (les données complètes n'ont pas encore fait l'objet d'une publication dans une revue médicale à comité de lecture) :
 
-| Paramètre | Retatrutide 12 mg | Placebo |
-|-----------|------------------|---------|
-| Perte de poids moyenne | **28,7 %** | 2,3 % |
-| Patients avec ≥ 5 % perte | 96 % | 26 % |
-| Patients avec ≥ 10 % perte | 94 % | 12 % |
-| Patients avec ≥ 20 % perte | 83 % | 3 % |
-| Patients avec ≥ 30 % perte | 57 % | < 1 % |
+| Paramètre | Retatrutide 12 mg |
+|-----------|------------------|
+| Perte de poids moyenne | **28,7 %** |
+| Patients avec ≥ 25 % de perte | 58,6 % |
+| Patients avec ≥ 30 % de perte | 39,4 % |
+| Patients avec ≥ 35 % de perte | 23,7 % |
 
-Pour une personne pesant 110 kg, une perte de 28,7 % représente environ 31 kg. C'est un niveau de perte de poids qui se rapproche des résultats obtenus avec la chirurgie bariatrique (sleeve gastrectomie : 25-30 % du poids initial).
+Pour une personne pesant 110 kg, une perte de 28,7 % représente environ 31 kg. C'est un niveau de perte de poids qui se rapproche des résultats obtenus avec la chirurgie bariatrique (sleeve gastrectomie : 25-30 % du poids initial). À noter que ces seuils catégoriels sont plus élevés que dans les essais précédents, reflétant l'ambition croissante de cette nouvelle génération de traitements.
 
 ### Composition corporelle
 
@@ -131,17 +130,17 @@ Le retatrutide représente un bond qualitatif par rapport à ses prédécesseurs
 
 ## Au-delà de l'obésité : l'arthrose du genou {#arthrose}
 
-### Un signal inattendu mais prometteur
+### Un essai dédié à l'arthrose du genou
 
-L'une des découvertes les plus surprenantes de l'essai TRIUMPH-4 est l'effet du retatrutide sur l'arthrose du genou. Dans un sous-groupe de 412 patients souffrant d'arthrose du genou (une complication fréquente de l'obésité), les chercheurs ont documenté :
+TRIUMPH-4 est en réalité un essai spécifiquement conçu pour évaluer l'effet du retatrutide chez 445 patients obèses souffrant d'arthrose du genou — et non un simple sous-groupe d'un essai obésité. Les résultats sur la douleur articulaire sont remarquables :
 
-- Réduction du score de douleur KOOS (Knee Injury and Osteoarthritis Outcome Score) de **42 %** dans le groupe retatrutide vs **12 %** dans le groupe placebo
-- Amélioration de la mobilité et de la capacité à marcher
-- Réduction marqueurs inflammatoires articulaires (IL-6, CRP)
+- Amélioration du score WOMAC douleur (Western Ontario and McMaster Universities Osteoarthritis Index) de **75,8 %** dans le groupe retatrutide, soit un soulagement très significatif de la douleur au quotidien
+- Amélioration de la mobilité et de la capacité fonctionnelle
+- Réduction des marqueurs inflammatoires articulaires (IL-6, CRP)
 
 ### Mécanismes potentiels
 
-La réduction de la douleur arthrosique sous retatrutide dépasse ce qu'on attendrait de la seule perte de poids. Plusieurs mécanismes sont proposés :
+L'amplitude de la réduction de la douleur arthrosique sous retatrutide dépasse ce qu'on attendrait de la seule perte de poids. Plusieurs mécanismes sont proposés :
 
 **Réduction mécanique** : chaque kilogramme perdu réduit d'environ 4 kg la charge sur le genou lors de la marche. Une perte de 28 kg représente une réduction de charge de plus de 100 kg, un soulagement considérable pour le cartilage.
 
@@ -149,19 +148,19 @@ La réduction de la douleur arthrosique sous retatrutide dépasse ce qu'on atten
 
 **Amélioration de la composition corporelle** : la préservation relative de la masse musculaire sous retatrutide améliore la stabilité articulaire du genou, réduisant le stress mécanique sur le cartilage.
 
-Ce signal est suffisamment prometteur pour qu'Eli Lilly ait annoncé un essai clinique dédié à l'arthrose du genou sous retatrutide, prévu pour démarrer mi-2026.
+Ces résultats sont suffisamment prometteurs pour qu'Eli Lilly envisage des études complémentaires sur le retatrutide dans l'arthrose, au-delà de TRIUMPH-4.
 
 ## Calendrier pour l'Europe et la France {#calendrier}
 
 ### Où en est le dossier réglementaire ?
 
-Après les résultats de TRIUMPH-4 en décembre 2025, Eli Lilly a annoncé le dépôt d'un dossier auprès de la FDA américaine pour le retatrutide dans les premiers mois de 2026. La demande d'AMM auprès de l'EMA devrait suivre dans le courant de 2026.
+Après les résultats de TRIUMPH-4 en décembre 2025, Eli Lilly n'a pas encore déposé de dossier (NDA) auprès de la FDA américaine pour le retatrutide en mars 2026. Les analystes estiment ce dépôt pour fin 2026 ou début 2027. La demande d'AMM auprès de l'EMA devrait suivre dans le courant de 2026.
 
 | Étape | Date estimée |
 |-------|-------------|
-| Dépôt dossier FDA | T1-T2 2026 |
-| Approbation FDA | T4 2026 - T1 2027 (estimation) |
-| Dépôt dossier EMA | S2 2026 |
+| Dépôt dossier FDA | Fin 2026 - début 2027 (estimation) |
+| Approbation FDA | S2 2027 (estimation) |
+| Dépôt dossier EMA | S1 2027 (estimation) |
 | AMM européenne | T2-T3 2027 (estimation) |
 | Évaluation HAS France | 2027-2028 |
 | Disponibilité en pharmacie France | **2028 au plus tôt** |
@@ -184,8 +183,9 @@ Les effets secondaires du retatrutide dans TRIUMPH-4 sont comparables à ceux ob
 
 - **Nausées** : 44 % des patients, principalement en phase de titration (semaines 1-20)
 - **Vomissements** : 22 %
-- **Diarrhée** : 18 %
-- **Constipation** : 12 %
+- **Diarrhée** : 33,1 %
+- **Constipation** : 25,0 %
+- **Dysesthésie** (sensations cutanées anormales) : 20,9 % à la dose de 12 mg — un effet secondaire nouveau, non observé avec les autres GLP-1
 - **Douleurs abdominales** : 8 %
 
 Ces effets sont dose-dépendants et diminuent significativement après la phase de titration. Le taux d'abandon dû aux effets secondaires était de 16 % dans le groupe retatrutide (vs 4 % dans le groupe placebo) — comparable aux essais sur le tirzépatide.
@@ -202,7 +202,7 @@ Comme pour tous les GLP-1, les signaux habituels de pharmacovigilance sont suivi
 - Accélération du rythme cardiaque
 - Hypothyroïdie (signal histologique dans les études animales, non confirmé chez l'humain à ce jour)
 
-Aucun signal de sécurité nouveau spécifique au triple agonisme glucagon n'a été identifié dans TRIUMPH-4, mais le recul clinique reste limité et la pharmacovigilance post-AMM sera cruciale.
+Un signal de sécurité nouveau a été identifié dans TRIUMPH-4 : la **dysesthésie** (sensations anormales de type picotements ou engourdissements), rapportée chez 20,9 % des patients à la dose de 12 mg. Cet effet n'avait pas été observé avec les autres agonistes GLP-1 et pourrait être lié au composant glucagon du triple agoniste. Le recul clinique reste limité et la pharmacovigilance post-AMM sera cruciale.
 
 ## Questions fréquentes {#faq}
 
@@ -228,4 +228,4 @@ Eli Lilly conduit des essais sur le retatrutide dans le diabète de type 2 (TRIU
 
 ---
 
-*Sources : Jastreboff AM et al. "Retatrutide for Obesity — A Randomized, Double-Blind, Placebo-Controlled Phase 3 Trial" (TRIUMPH-4). New England Journal of Medicine, décembre 2025 ; Eli Lilly press release, décembre 2025. Cet article est fourni à titre informatif. Les données de phase 3 sont prometteuses mais le médicament n'est pas encore autorisé. Consultez votre médecin pour les traitements disponibles en France.*
+*Sources : Eli Lilly press release, décembre 2025 (résultats TRIUMPH-4, 445 patients, arthrose du genou). Les résultats complets n'ont pas encore été publiés dans une revue à comité de lecture. Cet article est fourni à titre informatif. Les données de phase 3 sont prometteuses mais le médicament n'est pas encore autorisé. Consultez votre médecin pour les traitements disponibles en France.*

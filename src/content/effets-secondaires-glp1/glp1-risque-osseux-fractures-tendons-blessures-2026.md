@@ -1,9 +1,9 @@
 ---
 title: "GLP-1 et Os : Fractures de Stress, Tendons et Risques 2026"
-description: "GLP-1 fractures de stress et blessures tendineuses : étude 2026 sur 150 000 patients. Risques osseux sous Ozempic, Wegovy, Mounjaro et prévention."
+description: "GLP-1 fractures et blessures tendineuses : deux études AAOS 2026 (78 590 et 73 483 patients). Risques osseux sous Ozempic, Wegovy, Mounjaro et prévention."
 keywords: ['glp1 fractures', 'ozempic tendinite', 'wegovy fracture stress', 'glp1 blessures osseuses', 'mounjaro tendons', 'glp1 blessures sportives 2026']
 seoTitle: "GLP-1 et Blessures Osseuses : Fractures, Tendons — Étude 2026"
-seoDescription: "GLP-1 et fractures de stress, tendinites : nouvelle étude 2026 sur 150 000 patients. Risques, populations concernées et prévention sous Ozempic ou Wegovy."
+seoDescription: "GLP-1 et ruptures tendineuses, ostéoporose : deux études AAOS 2026 sur plus de 150 000 patients. Risques, populations concernées et prévention sous Ozempic ou Wegovy."
 publishedAt: '2026-03-18'
 date: '2026-03-18'
 updatedAt: '2026-03-18'
@@ -32,30 +32,35 @@ affiliateConfig:
 
 ## A retenir
 
-Une étude publiée en mars 2026, portant sur une cohorte de 150 000 patients suivis pendant plusieurs années, confirme un risque accru de blessures osseuses et tendineuses chez les personnes traitées par des médicaments GLP-1. Fractures de stress, tendinites et blessures sportives sont les complications les plus fréquemment observées. Ces résultats complètent les données déjà connues sur l'[ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) et invitent à une vigilance accrue, notamment chez les patients physiquement actifs.
+Deux études distinctes présentées à l'AAOS 2026 confirment un risque accru de blessures osseuses et tendineuses chez les personnes traitées par des médicaments GLP-1. La première (UTMB, 78 590 patients) met en évidence des ruptures tendineuses significativement plus fréquentes — coiffe des rotateurs, tendon d'Achille, tendon pectoral. La seconde (Michigan State, 73 483 patients) révèle un sur-risque d'ostéoporose et de goutte. Ces résultats complètent les données déjà connues sur l'[ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) et invitent à une vigilance accrue, notamment chez les patients physiquement actifs.
 
 ---
 
-Les agonistes du récepteur GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) permettent des pertes de poids spectaculaires, souvent comprises entre 10 et 20 % du poids corporel en moins d'un an. Cette transformation rapide est bénéfique pour la santé cardiovasculaire et métabolique, mais elle s'accompagne de changements structurels dans les muscles, les tendons et les os que le corps n'a pas toujours le temps d'intégrer. Une grande étude américaine présentée début 2026 met désormais en lumière un risque de blessures musculosquelettiques qu'il serait imprudent d'ignorer.
+Les agonistes du récepteur GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) permettent des pertes de poids spectaculaires, souvent comprises entre 10 et 20 % du poids corporel en moins d'un an. Cette transformation rapide est bénéfique pour la santé cardiovasculaire et métabolique, mais elle s'accompagne de changements structurels dans les muscles, les tendons et les os que le corps n'a pas toujours le temps d'intégrer. Deux grandes études américaines présentées à l'AAOS début 2026 mettent désormais en lumière un risque de blessures musculosquelettiques qu'il serait imprudent d'ignorer.
 
 ## L'étude 2026 : fractures et tendons dans le collimateur
 
-### Un signal fort sur 150 000 patients
+### Deux études distinctes, un signal convergent
 
-L'étude publiée en mars 2026 — relayée notamment par le Washington Post et plusieurs revues médicales — a analysé les données de santé de **150 000 patients** traités par des agonistes GLP-1 sur une période allant de deux à cinq ans. Les chercheurs ont comparé ces patients à un groupe témoin de taille similaire, présentant des profils de santé équivalents (même âge, même IMC, mêmes comorbidités) mais n'ayant pas reçu de traitement GLP-1.
+Contrairement à ce qui a pu être relayé dans certains médias, il ne s'agit pas d'une seule étude sur 150 000 patients, mais de **deux études distinctes** présentées à l'AAOS (American Academy of Orthopaedic Surgeons) en mars 2026.
 
-L'objectif était de quantifier les blessures musculosquelettiques survenues pendant le traitement, en distinguant plusieurs catégories : fractures de stress, fractures traumatiques, tendinites et ruptures tendineuses, blessures ligamentaires et complications articulaires.
+**L'étude UTMB** (University of Texas Medical Branch) a analysé les données de **78 590 patients** traités par des agonistes GLP-1, en les comparant à un groupe témoin de profil équivalent. Elle s'est concentrée sur les ruptures tendineuses — coiffe des rotateurs, tendon d'Achille, tendon pectoral — survenues pendant le traitement.
+
+**L'étude Michigan State** a porté sur **73 483 patients** et a exploré un autre versant du risque musculosquelettique : l'ostéoporose et la goutte sous GLP-1.
+
+Les deux travaux convergent vers le même constat : les agonistes GLP-1 sont associés à un risque accru de complications musculosquelettiques qu'il convient de surveiller.
 
 ### Les résultats : un risque relatif accru mais un risque absolu modéré
 
-Les résultats sont statistiquement significatifs sur plusieurs indicateurs :
+L'étude UTMB fournit des chiffres précis sur le sur-risque de ruptures tendineuses chez les patients sous GLP-1 par rapport au groupe témoin :
 
-| Type de blessure | Patients sous GLP-1 | Groupe témoin | Différence relative |
-|-----------------|---------------------|---------------|---------------------|
-| **Fractures de stress** | Risque augmenté | Référence | +15 à 20% |
-| **Tendinites** | Risque augmenté | Référence | +12 à 18% |
-| **Ruptures tendineuses** | Signal identifié | Référence | Données en cours |
-| **Blessures sportives** | Risque augmenté | Référence | Signal significatif |
+| Type de rupture tendineuse | Hazard Ratio | Sur-risque relatif |
+|---------------------------|-------------|-------------------|
+| **Coiffe des rotateurs** (épaule) | HR 1,55 | **+55 %** |
+| **Tendon d'Achille** (cheville) | HR 1,49 | **+49 %** |
+| **Tendon pectoral** (poitrine) | HR 1,46 | **+46 %** |
+
+En termes simples, un patient sous GLP-1 a environ **une fois et demie plus de risque** de subir une rupture de la coiffe des rotateurs qu'un patient non traité, à profil de santé équivalent. Pour le tendon d'Achille et le tendon pectoral, le sur-risque est du même ordre.
 
 Il est important de souligner que ces augmentations de risque sont **relatives**, pas absolues. En valeur absolue, le nombre de patients concernés reste limité. Mais à l'échelle de millions de personnes traitées dans le monde, ces signaux méritent une attention sérieuse.
 
@@ -63,7 +68,7 @@ Il est important de souligner que ces augmentations de risque sont **relatives**
 
 ### La perte de masse musculaire : le facteur clé
 
-Le premier mécanisme incriminé est la [perte musculaire et fragilité osseuse sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) qui accompagne inévitablement la perte de poids. Lorsqu'un patient maigrit rapidement, il perd à la fois de la graisse et de la masse maigre (muscles). On estime qu'environ **25 à 35 % du poids perdu sous GLP-1 correspond à de la masse musculaire**, même avec un apport protéique adéquat.
+Le premier mécanisme incriminé est la [perte musculaire et fragilité osseuse sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) qui accompagne inévitablement la perte de poids. Lorsqu'un patient maigrit rapidement, il perd à la fois de la graisse et de la masse maigre (muscles). On estime qu'environ **26 à 40 % du poids perdu sous GLP-1 correspond à de la masse musculaire** — et jusqu'à 45 % dans l'essai STEP 1 — même avec un apport protéique adéquat.
 
 Or les muscles jouent un rôle protecteur fondamental pour les os et les tendons. Ils absorbent les chocs, stabilisent les articulations et répartissent les contraintes mécaniques lors des mouvements. Des muscles plus faibles signifient des tendons et des os plus exposés aux contraintes, notamment lors d'activités physiques.
 
@@ -178,4 +183,4 @@ Consultez votre médecin si la douleur persiste plus d'une semaine malgré le re
 Une supplémentation en vitamine D est recommandée pour la plupart des patients, surtout en période hivernale. Pour les protéines et le calcium, privilégiez d'abord les sources alimentaires. En cas de doute, consultez votre médecin ou un diététicien.
 
 **Ces risques concernent-ils tous les GLP-1 de la même façon ?**
-L'étude 2026 porte sur les agonistes GLP-1 en général, sans distinguer nettement les molécules entre elles. Le mécanisme principal étant lié à la perte de poids et de masse musculaire, les molécules induisant les pertes de poids les plus importantes (sémaglutide 2,4 mg, tirzépatide) pourraient théoriquement présenter un risque plus élevé, mais cela reste à confirmer.
+Les études AAOS 2026 portent sur les agonistes GLP-1 en général, sans distinguer nettement les molécules entre elles. Le mécanisme principal étant lié à la perte de poids et de masse musculaire, les molécules induisant les pertes de poids les plus importantes (sémaglutide 2,4 mg, tirzépatide) pourraient théoriquement présenter un risque plus élevé, mais cela reste à confirmer.

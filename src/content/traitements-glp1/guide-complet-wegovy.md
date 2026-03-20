@@ -72,7 +72,7 @@ Dans les études cliniques STEP, Wegovy a démontré des résultats exceptionnel
 - Résultat : -14,9% de perte de poids vs -2,4% placebo
 
 ### Dans l'étude STEP 3
-- 611 patients avec diabète de type 2
+- 611 patients avec [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)
 - Durée : 68 semaines
 - Résultat : -16,0% de perte de poids vs -5,7% placebo
 

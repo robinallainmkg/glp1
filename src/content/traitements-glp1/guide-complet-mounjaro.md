@@ -365,7 +365,7 @@ Oui, Mounjaro peut être prescrit pour la perte de poids chez les personnes obè
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Mounjaro est-il remboursé pour l'obésité ?
-**Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au remboursement en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
+**Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Mounjaro brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Si vous devez subir une intervention chirurgicale, consultez notre guide sur les [précautions avant chirurgie sous Mounjaro](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour connaître le protocole d'arrêt recommandé.

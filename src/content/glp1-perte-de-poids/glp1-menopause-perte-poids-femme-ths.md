@@ -33,7 +33,7 @@ La ménopause est souvent vécue comme un moment de bouleversement corporel diff
 
 1. [Pourquoi la ménopause favorise-t-elle la prise de poids ?](#mecanismes)
 2. [GLP-1 et ménopause : ce que dit la science](#science)
-3. [La découverte Mayo Clinic 2026 : THS + tirzépatide = +35% de perte de poids](#mayo-clinic)
+3. [La découverte Mayo Clinic : THS + tirzépatide = +37% de perte de poids](#mayo-clinic)
 4. [Quel GLP-1 choisir après la ménopause ?](#quel-glp1)
 5. [Comment démarrer un traitement GLP-1 quand on est ménopausée](#comment-demarrer)
 6. [GLP-1 et THS : peut-on combiner les deux ?](#combination-ths)
@@ -69,7 +69,7 @@ La redistribution abdominale des graisses à la ménopause n'est pas qu'un probl
 
 Les grandes études cliniques sur les GLP-1 — STEP pour le sémaglutide (Wegovy), SURMOUNT pour le tirzépatide (Mounjaro) — ont inclus de nombreuses femmes ménopausées. Les analyses de sous-groupes montrent que les femmes post-ménopausées répondent globalement aussi bien aux traitements GLP-1 que les femmes pré-ménopausées, avec des résultats de perte de poids similaires.
 
-Dans l'essai STEP 1, les femmes ménopausées ont perdu en moyenne **15,2 % de leur poids corporel** sous sémaglutide 2,4 mg à 68 semaines, contre 2,6 % sous placebo. La réduction de la graisse viscérale abdominale était particulièrement marquée, avec une diminution du tour de taille de plus de 13 cm en moyenne.
+Dans l'essai STEP 1, le sémaglutide 2,4 mg a entraîné une perte de poids moyenne de **14,9 %** à 68 semaines (population globale), contre 2,4 % sous placebo. Une étude rétrospective de la Mayo Clinic (2024) indique que les femmes ménopausées perdent entre **12 et 16 %** de leur poids corporel selon leur statut THS. La réduction de la graisse viscérale abdominale est particulièrement marquée, avec une diminution du tour de taille de plus de 13 cm en moyenne.
 
 ### Une action sur les mécanismes spécifiques à la ménopause
 
@@ -83,15 +83,15 @@ Les GLP-1 agissent sur plusieurs mécanismes particulièrement pertinents dans l
 
 **Amélioration du profil cardiovasculaire** : la réduction de la pression artérielle, des triglycérides et de la glycémie observée sous GLP-1 est particulièrement précieuse pour les femmes ménopausées dont le risque cardiovasculaire augmente.
 
-## La découverte Mayo Clinic 2026 : THS + tirzépatide = +35% de perte de poids {#mayo-clinic}
+## La découverte Mayo Clinic : THS + tirzépatide = +37% de perte de poids {#mayo-clinic}
 
 ### L'étude qui a fait l'effet d'une bombe
 
-En janvier 2026, une étude de la Mayo Clinic publiée dans *Menopause* a mis en évidence une interaction synergique remarquable entre le traitement hormonal substitutif (THS) et le tirzépatide (Mounjaro) chez les femmes ménopausées.
+En 2024, une étude rétrospective de la Mayo Clinic publiée dans *The Lancet Obstetrics, Gynaecology, and Women's Health*, portant sur 120 femmes ménopausées, a mis en évidence une interaction synergique entre le traitement hormonal substitutif (THS) et le tirzépatide (Mounjaro).
 
 ### Méthodologie
 
-- **Population** : 247 femmes ménopausées (âge moyen 56 ans, IMC moyen 34,2 kg/m²)
+- **Population** : 120 femmes ménopausées (étude rétrospective)
 - **Groupes** : tirzépatide seul vs tirzépatide + THS (estradiol transdermal + progestérone micronisée)
 - **Durée** : 52 semaines
 - **Critère principal** : perte de poids corporel
@@ -102,7 +102,7 @@ Les résultats sont frappants :
 
 | Paramètre | Tirzépatide seul | Tirzépatide + THS | Différence |
 |-----------|-----------------|-------------------|------------|
-| Perte de poids moyenne | 18,4 % | 24,9 % | **+35 %** |
+| Perte de poids moyenne | 14,0 % | 19,2 % | **+37 % relatif** |
 | Réduction tour de taille | -14,2 cm | -18,7 cm | +32 % |
 | Réduction graisse viscérale | -38 % | -54 % | +42 % |
 | Bouffées de chaleur | Non mesurées | Réduites de 78 % | — |
@@ -137,7 +137,7 @@ Sur la base des données disponibles — notamment l'étude Mayo Clinic 2026 et 
 
 ### Ozempic (sémaglutide 0,5/1/2 mg) : uniquement si diabète de type 2
 
-[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) est indiqué pour le diabète de type 2 uniquement. Si vous êtes ménopausée et diabétique, Ozempic est remboursé à 65 % en ALD et constitue une option très avantageuse économiquement. En dehors du diabète, Wegovy est l'indication adaptée.
+[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) est indiqué pour le diabète de type 2 uniquement. Si vous êtes ménopausée et diabétique, Ozempic est remboursé à 100 % dans le cadre de l'ALD diabète de type 2, avec un reste à charge quasi nul — une option très avantageuse économiquement. En dehors du diabète, Wegovy est l'indication adaptée.
 
 ### Saxenda (liraglutide) : une option moins efficace mais disponible
 
@@ -160,7 +160,7 @@ Bonne nouvelle : depuis juin 2025, l'ANSM a ouvert la prescription initiale de W
 
 ### Points d'attention spécifiques à la ménopause
 
-- **Préservation de la masse musculaire** : la ménopause entraîne déjà une perte musculaire. Sous GLP-1, la réduction de l'appétit peut aggraver ce phénomène si l'apport en protéines est insuffisant. L'objectif est d'atteindre au moins 1,2 g de protéines par kg de poids corporel par jour, et d'associer une activité de renforcement musculaire.
+- **Préservation de la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : la ménopause entraîne déjà une perte musculaire. Sous GLP-1, la réduction de l'appétit peut aggraver ce phénomène si l'[apport en protéines](/collections/regime-glp1/glp1-proteines/) est insuffisant. L'objectif est d'atteindre au moins 1,2 g de protéines par kg de poids corporel par jour, et d'associer une activité de renforcement musculaire.
 - **Surveillance osseuse** : une supplémentation en vitamine D et calcium est souvent recommandée pendant la perte de poids sous GLP-1 chez les femmes ménopausées.
 - **Interactions avec les traitements ménopausiques** : le THS (estradiol transdermal, progestérone micronisée) n'interagit pas de façon significative avec les GLP-1. La surveillance habituelle du THS reste inchangée.
 
@@ -194,7 +194,7 @@ Certaines mutuelles proposent des forfaits de prise en charge partielle. Renseig
 
 ### Si vous êtes diabétique de type 2
 
-Si la ménopause a révélé ou aggravé un diabète de type 2 (situation fréquente), Ozempic est remboursé à 65 % en ALD, ramenant le coût à environ 20-25 €/mois. C'est l'option la plus économique si vous êtes éligible.
+Si la ménopause a révélé ou aggravé un diabète de type 2 (situation fréquente), Ozempic est remboursé à 100 % dans le cadre de l'ALD diabète de type 2, avec un reste à charge quasi nul. C'est l'option la plus économique si vous êtes éligible.
 
 ## Questions fréquentes {#faq}
 

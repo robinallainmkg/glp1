@@ -46,11 +46,11 @@ Chaque médicament GLP-1 injectable est conditionné dans un **stylo auto-inject
 - **Wegovy** : stylo FlexTouch (Novo Nordisk), disponible en 0,25 mg, 0,5 mg, 1 mg, 1,7 mg et 2,4 mg
 - **Mounjaro** : stylo KwikPen (Eli Lilly), disponible en 2,5 mg, 5 mg, 7,5 mg, 10 mg, 12,5 mg et 15 mg
 
-Ces stylos sont à usage unique ou multi-doses selon le modèle. Conservez-les au réfrigérateur (2-8°C) avant la première utilisation. Une fois entamé, le stylo peut être conservé à température ambiante (< 30°C) pendant 56 jours pour Ozempic/Wegovy et 30 jours pour Mounjaro.
+Ces stylos sont à usage unique ou multi-doses selon le modèle. Conservez-les au réfrigérateur (2-8°C) avant la première utilisation. Une fois entamé, le stylo peut être conservé à température ambiante (< 30°C) pendant 56 jours pour Ozempic, 42 jours (6 semaines) pour Wegovy et 30 jours pour Mounjaro.
 
 ### Les aiguilles
 
-Les stylos ne sont **pas fournis avec les aiguilles** — vous devez les acheter séparément en pharmacie. Les aiguilles compatibles sont des aiguilles BD Micro-Fine ou équivalentes, en 4 mm, 5 mm ou 6 mm. La longueur recommandée est de **4 mm** pour la plupart des patients ; une aiguille plus longue n'est pas nécessaire, même chez les patients en surpoids.
+Les aiguilles fournies varient selon le stylo : **Ozempic** est livré avec 4 aiguilles NovoFine Plus, **Wegovy** et **Mounjaro** disposent d'aiguilles intégrées ou pré-fixées à usage unique. Pour Ozempic, si vous avez besoin d'aiguilles supplémentaires, vous pouvez en acheter en pharmacie. Les aiguilles compatibles sont des aiguilles BD Micro-Fine ou équivalentes, en 4 mm, 5 mm ou 6 mm. La longueur recommandée est de **4 mm** pour la plupart des patients ; une aiguille plus longue n'est pas nécessaire, même chez les patients en surpoids.
 
 Comptez environ **4 à 6 € pour une boîte de 100 aiguilles**.
 

@@ -50,24 +50,23 @@ Les GLP-1 permettant des pertes de poids de 10 à 22 % selon la molécule et la 
 
 ### L'essai TRIUMPH-4 sur le retatrutide
 
-Le retatrutide est un triple agoniste GLP-1/GIP/glucagon en phase de développement avancée. En mars 2026, les résultats préliminaires de l'essai TRIUMPH-4, qui évalue spécifiquement son efficacité dans l'arthrose du genou chez des patients en surpoids ou obèses, ont été présentés lors du congrès de la Ligue européenne contre le rhumatisme (EULAR).
+Le retatrutide est un triple agoniste GLP-1/GIP/glucagon développé par Eli Lilly, actuellement en phase avancée de développement clinique. L'essai TRIUMPH-4 évalue spécifiquement son efficacité dans l'arthrose du genou chez des patients en surpoids ou obèses. En décembre 2025, Eli Lilly a annoncé les résultats topline de cet essai.
 
-Les résultats sont frappants : après 52 semaines de traitement par retatrutide, les patients ont montré :
+Les chiffres sont remarquables : sur 445 participants suivis pendant 68 semaines, le retatrutide à la dose de 12 mg a montré :
 
-- Une réduction de la douleur articulaire de 45 % en moyenne sur l'échelle WOMAC (Western Ontario and McMaster Universities Osteoarthritis Index)
-- Une amélioration de la mobilité et de la fonction articulaire de 38 %
-- Une réduction du marqueur d'inflammation C-réactive protéine (CRP) de 35 %
-- Une perte de poids moyenne de 15,7 % — mais une analyse statistique montrant un bénéfice articulaire partiellement indépendant de la perte de poids
+- Une réduction de la douleur articulaire de 75,8 % sur l'échelle WOMAC (Western Ontario and McMaster Universities Osteoarthritis Index) — un résultat nettement supérieur au placebo
+- Une perte de poids moyenne de 28,7 %, cohérente avec les résultats observés dans les autres essais sur le retatrutide
+- Une amélioration globale de la fonction articulaire et de la mobilité
 
-Ce dernier point est crucial : même en contrôlant statistiquement pour la perte de poids, le retatrutide conservait un effet anti-arthrosique significatif. Cela suggère un mécanisme d'action direct des agonistes GLP-1 sur le tissu articulaire.
+Ce qui frappe les spécialistes, c'est l'ampleur de l'amélioration de la douleur : une réduction de plus de 75 % sur l'échelle WOMAC dépasse largement ce qu'on attendrait de la seule perte de poids. Cela suggère un mécanisme d'action anti-inflammatoire direct des agonistes GLP-1 sur le tissu articulaire, en complément du soulagement mécanique lié aux kilos perdus.
 
 ### Les données sur sémaglutide et tirzépatide
 
 Pour les molécules déjà commercialisées, les preuves proviennent d'analyses secondaires d'essais cliniques et d'études observationnelles :
 
-**Sémaglutide (Ozempic/Wegovy)** : Une analyse secondaire de l'essai STEP-9, publiée en 2025, a évalué spécifiquement les patients obèses avec arthrose du genou sous sémaglutide 2,4 mg. Sur 68 semaines, le groupe sémaglutide a montré une amélioration de 41 % du score de douleur WOMAC contre 27 % dans le groupe placebo — une différence statistiquement significative qui dépasse ce qu'attendrait la seule perte de poids.
+**Sémaglutide (Ozempic/Wegovy)** : L'essai STEP-9, un essai de phase 3 dédié publié dans le *New England Journal of Medicine* en octobre 2024, a inclus 407 patients obèses souffrant d'arthrose du genou, traités par sémaglutide 2,4 mg pendant 68 semaines. Le groupe sémaglutide a montré une amélioration de 41 % du score de douleur WOMAC contre 27 % dans le groupe placebo — une différence statistiquement significative qui dépasse ce qu'on attendrait de la seule perte de poids.
 
-**Tirzépatide (Mounjaro)** : Des données de pharmacovigilance réelles (*real-world data*) issues des bases de données françaises EPI-Phare montrent que les patients sous tirzépatide pour l'obésité ont une consommation d'anti-inflammatoires non stéroïdiens (AINS) réduite de 18 % après 6 mois de traitement, suggérant une amélioration objective des douleurs inflammatoires.
+**Tirzépatide (Mounjaro)** : Les données spécifiques sur le tirzépatide et l'arthrose sont encore limitées. Des analyses secondaires des essais SURMOUNT sur l'obésité rapportent une amélioration des scores de douleur articulaire chez les patients traités, probablement liée à l'ampleur de la perte de poids (jusqu'à 22 % dans les essais de phase 3). Des études dédiées à l'arthrose sous tirzépatide sont attendues.
 
 ## Les mécanismes : comment les GLP-1 agissent-ils sur les articulations ?
 
@@ -92,7 +91,7 @@ Si ces effets chondroprotecteurs se confirment dans les études cliniques humain
 
 ### La perte de poids rapide et la densité osseuse
 
-Si le tableau est globalement positif, il existe une mise en garde importante : la perte de poids rapide induite par les GLP-1 peut aggraver la perte de masse osseuse, notamment chez les patients déjà fragilisés. Une étude de mars 2026 publiée dans le *New England Journal of Medicine Evidence* a montré que les patients sous sémaglutide à haute dose perdaient en moyenne 1,2 % de densité minérale osseuse après 18 mois — une valeur similaire à ce qu'on observe avec les régimes très restrictifs.
+Si le tableau est globalement positif, il existe une mise en garde importante : la perte de poids rapide induite par les GLP-1 peut s'accompagner d'une réduction de la densité minérale osseuse, comme c'est le cas avec tout amaigrissement important. Les données issues des essais STEP montrent que la perte de masse maigre (incluant la masse osseuse) représente environ 25 à 40 % du poids total perdu — une proportion comparable à celle observée après chirurgie bariatrique ou régimes très restrictifs.
 
 Chez les patients arthrosiques avancés qui souffrent souvent déjà d'ostéopénie ou d'ostéoporose associée, ce risque mérite une surveillance spécifique. Notre article sur le [risque d'ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/) détaille les précautions à prendre.
 
@@ -110,7 +109,7 @@ Pour les patients qui présentent de l'arthrose et commencent un traitement GLP-
 
 ### La Société française de rhumatologie (SFR)
 
-La SFR a publié en 2025 un avis favorable à l'utilisation des GLP-1 chez les patients présentant une obésité associée à une arthrose des membres inférieurs, soulignant le double bénéfice mécanique (perte de poids) et potentiellement anti-inflammatoire. La société recommande une collaboration entre le médecin prescripteur du GLP-1 et le rhumatologue pour adapter le suivi.
+Lors de son congrès de décembre 2024, la SFR a discuté des perspectives des GLP-1 dans l'arthrose avec prudence, soulignant à la fois le potentiel bénéfique (perte de poids, effet anti-inflammatoire) et le risque de sarcopénie lié à la perte de masse musculaire rapide. La société recommande une collaboration étroite entre le médecin prescripteur du GLP-1 et le rhumatologue pour adapter le suivi et surveiller la composition corporelle.
 
 ### La Haute Autorité de Santé (HAS)
 

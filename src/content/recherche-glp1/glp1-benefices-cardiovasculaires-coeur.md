@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis plusieurs années, les médecins constataient que leurs patients diabétiques traités par GLP-1 semblaient moins souvent hospitalisés pour des problèmes cardiaques. Ce que l'on observait empiriquement dans les cabinets médicaux, les grandes études cliniques l'ont désormais confirmé avec un niveau de preuve très élevé : les traitements GLP-1 réduisent le risque cardiovasculaire de manière significative, et une partie de ce bénéfice est **indépendante de la perte de poids**.
+Depuis plusieurs années, les médecins constataient que leurs patients diabétiques traités par GLP-1 semblaient moins souvent hospitalisés pour des problèmes cardiaques. Ce que l'on observait empiriquement dans les cabinets médicaux, les grandes études cliniques l'ont désormais confirmé avec un niveau de preuve très élevé : les traitements GLP-1 réduisent le risque cardiovasculaire de manière significative, et une partie de ce bénéfice est **indépendante de la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/)**.
 
 ## Sommaire
 

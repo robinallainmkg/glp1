@@ -270,7 +270,7 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 **Oui, Ozempic est remboursé à 30%** par l'Assurance Maladie en 2026, sous certaines conditions :
 
 ✅ **Prescription médicale obligatoire** (endocrinologue, diabétologue ou médecin traitant)
-✅ **Diagnostic de diabète de type 2** confirmé par analyses
+✅ **Diagnostic de [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** confirmé par analyses
 ✅ **Échec des antidiabétiques oraux** (metformine, sulfamides)
 ✅ **IMC ≥ 30 kg/m²** ou **IMC ≥ 27 kg/m²** avec comorbidités
 

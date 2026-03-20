@@ -42,7 +42,7 @@ La popularité explosive des médicaments GLP-1 comme [Ozempic](/collections/tra
 
 ### Le contexte des class actions américaines
 
-Depuis 2023, plus de 10 000 plaintes individuelles ont été consolidées dans un procès collectif ("class action") intenté devant les tribunaux fédéraux américains contre Novo Nordisk (Ozempic, Wegovy) et Eli Lilly (Mounjaro). Ces poursuites regroupent principalement des patients atteints de **gastroparésie** (paralysie partielle de l'estomac) après avoir pris ces médicaments.
+Depuis 2023, plus de 3 400 plaintes individuelles ont été consolidées dans deux MDL (multidistrict litigation) devant les tribunaux fédéraux américains contre Novo Nordisk (Ozempic, Wegovy) et Eli Lilly (Mounjaro). Ces poursuites regroupent principalement des patients atteints de **gastroparésie** (paralysie partielle de l'estomac) après avoir pris ces médicaments.
 
 ### Les effets secondaires les plus souvent invoqués
 
@@ -62,7 +62,7 @@ Des cas de cécité partielle irréversible ont été associés à l'usage de s�
 
 ### L'argument juridique central
 
-Le cœur des plaintes américaines repose sur un argument de **défaut d'information** : les fabricants auraient connu ou dû connaître le risque de gastroparésie grave avant que les médicaments ne soient largement prescrits hors indication (pour la perte de poids), et n'auraient pas suffisamment alerté médecins et patients. Une partie des procès concerne des cas de [mésusage des GLP-1 à l'origine des recours juridiques](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) — patients ayant utilisé Ozempic hors AMM. Un premier accord partiel a été annoncé fin 2025 pour certains cas, mais les procédures sont toujours en cours.
+Le cœur des plaintes américaines repose sur un argument de **défaut d'information** : les fabricants auraient connu ou dû connaître le risque de gastroparésie grave avant que les médicaments ne soient largement prescrits hors indication (pour la perte de poids), et n'auraient pas suffisamment alerté médecins et patients. Une partie des procès concerne des cas de [mésusage des GLP-1 à l'origine des recours juridiques](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) — patients ayant utilisé Ozempic hors AMM. Aucun accord global n'a encore été conclu (mars 2026). Le MDL est en phase de discovery et les premiers bellwether trials sont prévus courant 2026.
 
 ## La situation en France : un cadre très différent
 
@@ -186,7 +186,7 @@ La prescription hors AMM n'est pas illégale mais engage davantage la responsabi
 
 ### Y a-t-il une association de patients en France pour les victimes de GLP-1 ?
 
-À ce jour (mars 2026), aucune association spécialisée sur les effets indésirables des GLP-1 n'est officiellement reconnue en France, contrairement aux États-Unis. L'AMAPA (Association pour le Médicament et l'Accompagnement du Patient) peut orienter les patients vers les bons interlocuteurs.
+À ce jour (mars 2026), aucune association spécialisée sur les effets indésirables des GLP-1 n'est officiellement reconnue en France, contrairement aux États-Unis. France Assos Santé (union nationale des associations agréées d'usagers du système de santé) peut orienter les patients vers les bons interlocuteurs.
 
 ---
 

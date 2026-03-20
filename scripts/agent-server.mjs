@@ -505,11 +505,12 @@ async function autopilotEdit(state) {
   const opps = state?.opps || 0;
   const totalWork = tickets + links + opps;
   let numInstances = 1;
-  if (totalWork >= 80) numInstances = 4;
+  if (totalWork >= 200) numInstances = 5;
+  else if (totalWork >= 80) numInstances = 4;
   else if (totalWork >= 40) numInstances = 3;
   else if (totalWork >= 15) numInstances = 2;
-  // Minimum 2 instances if there are both tickets AND links
-  if (tickets > 0 && links > 0 && numInstances < 2) numInstances = 2;
+  // When lots of links pending, always max out
+  if (links >= 100) numInstances = Math.max(numInstances, 4);
 
   appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (${numInstances} editorial${numInstances > 1 ? 's' : ''}, ${totalWork} items: ${tickets}T/${links}L/${opps}O)`, 'progress');
 

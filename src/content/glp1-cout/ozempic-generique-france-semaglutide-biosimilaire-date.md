@@ -76,7 +76,7 @@ En pratique, les experts de l'industrie pharmaceutique anticipent les premiers b
 ### Des acteurs déjà positionnés
 
 Plusieurs laboratoires ont annoncé travailler sur des biosimilaires du sémaglutide. Parmi les plus avancés :
-- **Sun Pharma** (Inde) : essais de phase 3 en cours pour un biosimilaire injectable
+- **Sun Pharma** (Inde) : a obtenu l'approbation DCGI en Inde pour un générique sémaglutide (Noveltreat/Sematrinity), mais aucun dossier EMA n'a été déposé pour un biosimilaire européen
 - **Sandoz** (groupe Novartis) : biosimilaires biologiques complexes est leur spécialité
 - Des laboratoires chinois (Hengrui, etc.) : avancés en Asie mais délais longs pour l'EMA
 
@@ -96,9 +96,9 @@ En attendant 2032-2034, plusieurs options permettent de réduire le coût du tra
 
 ### 1. Rybelsus (sémaglutide oral) : même molécule, prix plus accessible pour le diabète
 
-[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) contient la même molécule que l'Ozempic injectable, mais en comprimé oral. Il est indiqué pour le **diabète de type 2** et est **remboursé à 65 %** par la Sécurité Sociale pour cette indication.
+[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) contient la même molécule que l'Ozempic injectable, mais en comprimé oral. Il est indiqué pour le **diabète de type 2**, mais attention : **Rybelsus n'est pas remboursé en France**. La HAS (Haute Autorité de Santé) a rendu un avis défavorable au remboursement, jugeant le SMR (Service Médical Rendu) insuffisant. Le coût est donc **intégralement à la charge du patient**.
 
-Son prix : environ 60-75 € par boîte de 30 comprimés — soit un coût mensuel similaire à Ozempic, mais avec un remboursement supérieur. Si vous êtes diabétique de type 2, Rybelsus peut représenter une alternative économiquement avantageuse.
+Son prix : environ 80-110 € par boîte de 30 comprimés selon le dosage. Sans remboursement Sécurité Sociale, cela représente un budget mensuel conséquent. Rybelsus reste toutefois une option pour les patients qui préfèrent un traitement oral au sémaglutide plutôt qu'injectable.
 
 ### 2. Le remboursement Ozempic pour les diabétiques : 30 % de remboursement
 
@@ -124,7 +124,7 @@ Notre article sur les [contrefaçons GLP-1](/collections/effets-secondaires-glp1
 
 ## La situation au Canada et aux États-Unis : ce qu'il faut savoir
 
-Au **Canada**, le brevet du sémaglutide a expiré en 2026. Le premier générique (non biosimilaire, car le Canada a des règles différentes) a été annoncé par la société PharmaScience à un prix de **70-80 % inférieur** à la version originale. Ce générique n'est pas exportable légalement en France.
+Au **Canada**, le brevet du sémaglutide a expiré en 2026. Plusieurs sociétés (Sandoz, Vimy Pharma, Dr Reddy's, Apotex, Taro, Aspen, Teva) ont déposé des demandes pour commercialiser des versions génériques du sémaglutide. La réduction de prix initiale est estimée à environ **35 %**, et pourrait atteindre **60-70 %** à terme avec l'arrivée de la concurrence. Ces génériques ne sont pas exportables légalement en France.
 
 Aux **États-Unis**, la situation est complexe. Le brevet principal du sémaglutide expirait en 2026, mais Novo Nordisk possède une série de **brevets secondaires** (sur la formulation, le stylo injecteur, les excipients) qui pourraient protéger Ozempic jusqu'en 2033. Des batailles juridiques sont en cours.
 
@@ -142,7 +142,7 @@ Le remboursement intégral à 65 % (comme pour les traitements du diabète rembo
 Non. L'achat de médicaments non autorisés par l'EMA en France est illégal. Des sites vendent du "sémaglutide" sans prescription et sans AMM européenne : ces produits ne sont pas contrôlés et présentent des risques sérieux pour la santé.
 
 **Le Rybelsus est-il moins cher qu'Ozempic ?**
-Le prix facial est similaire, mais Rybelsus est mieux remboursé pour les diabétiques de type 2 (65 % vs 30 % pour Ozempic). Pour les patients diabétiques, Rybelsus peut donc être financièrement avantageux.
+Le prix facial est similaire (80-110 €/mois), mais contrairement à Ozempic (remboursé à 30 % pour le diabète de type 2), Rybelsus n'est pas remboursé en France (avis HAS défavorable). Pour les patients diabétiques, Ozempic est donc financièrement plus avantageux malgré l'injection.
 
 **Un biosimilaire sera-t-il aussi efficace qu'Ozempic ?**
 Les biosimilaires approuvés par l'EMA sont soumis à des études de comparabilité rigoureuses. Leur efficacité et leur sécurité doivent être démontrées comme équivalentes à celles de l'original. Ils ne seront pas "moins bons" — simplement fabriqués par un concurrent.

@@ -73,10 +73,10 @@ claude -p "Reponds aux emails" --agent sav-email
 - **Output** : `content_opportunities` dans Supabase
 
 ### Agent Editorial (`.claude/agents/editorial.md`)
-- **Fonction** : 3 modes — corrections (tickets), maillage interne (liens), creation (opportunites)
-- **Input** : `correction_tickets` (fact-check + validator + seo-audit) + `internal_link_suggestions` + `content_opportunities`
+- **Fonction** : 2 modes actifs — corrections (tickets) + maillage interne (liens). Creation DESACTIVEE.
+- **Input** : `correction_tickets` (fact-check + validator + seo-audit) + `internal_link_suggestions`
 - **Output** : Fichiers modifies dans `src/content/`, commit local uniquement, le validator push
-- **Limites** : 50 tickets + 25 liens + 5 articles par run
+- **Limites** : 30 tickets + 80 liens par run (maillage = priorite absolue)
 - Seul agent autorise a modifier des fichiers source
 - **Ne deploie PAS** — commit sur `main` uniquement, le validator fait le deploy
 

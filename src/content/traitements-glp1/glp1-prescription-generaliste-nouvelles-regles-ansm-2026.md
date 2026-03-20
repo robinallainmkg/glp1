@@ -48,7 +48,7 @@ Plusieurs facteurs ont conduit à cette évolution réglementaire :
 
 **Les délais d'accès devenaient inacceptables** : dans les déserts médicaux — qui concernent près de 30 % du territoire français — les délais pour obtenir un rendez-vous avec un endocrinologue dépassaient souvent 6 mois. Des patients éligibles se retrouvaient soit à attendre longtemps, soit à se tourner vers des circuits non encadrés (télémédecine hasardeuse, importation parallèle).
 
-**La maturité des généralistes** : depuis la disponibilité d'Ozempic pour le diabète et l'explosion de l'intérêt médiatique pour les GLP-1, de nombreux médecins généralistes se sont formés sur ces molécules. La formation médicale continue et les sociétés savantes (SFED, SFN, SFD) avaient déjà produit de nombreux référentiels accessibles aux généralistes.
+**La maturité des généralistes** : depuis la disponibilité d'Ozempic pour le diabète et l'explosion de l'intérêt médiatique pour les GLP-1, de nombreux médecins généralistes se sont formés sur ces molécules. La formation médicale continue et les sociétés savantes (SFE, SFN, SFD) avaient déjà produit de nombreux référentiels accessibles aux généralistes.
 
 **La réalité du terrain** : beaucoup de médecins généralistes prescrivaient déjà informellement un accompagnement vers les spécialistes, avec un rôle central dans le suivi. La formalisation de leur droit à prescrire en primo-prescription ne fait qu'officialiser une pratique qui s'imposait.
 
@@ -162,11 +162,11 @@ Votre médecin généraliste assurera le suivi selon les recommandations habitue
 
 La décision de l'ANSM ouvre la prescription aux généralistes, mais ne modifie pas les conditions de remboursement. En mars 2026, Wegovy, Mounjaro et Saxenda ne sont pas remboursés par l'Assurance Maladie pour l'indication obésité.
 
-La HAS a rendu un avis favorable pour Wegovy (juillet 2025) et Mounjaro (décembre 2025). Les négociations de prix avec le CEPS sont en cours, et un [remboursement est attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
+La HAS a rendu un avis favorable pour Wegovy (avis CT du 23 octobre 2024, publié le 4 décembre 2024 ; l'avis CEESP économique date de juillet 2025) et Mounjaro (décembre 2025). Les négociations de prix avec le CEPS sont en cours, et un [remboursement est attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
 
 ### Pour les patients diabétiques : situation inchangée
 
-Ozempic (sémaglutide jusqu'à 2 mg) reste indiqué et remboursé uniquement pour le diabète de type 2. Les conditions de remboursement — avec le formulaire CEPS obligatoire depuis février 2025 — n'ont pas été modifiées par la décision de l'ANSM sur les GLP-1 obésité.
+Ozempic (sémaglutide jusqu'à 2 mg) reste indiqué et remboursé uniquement pour le diabète de type 2. Les conditions de remboursement — avec le formulaire Assurance Maladie (sur Amelipro) obligatoire depuis février 2025 — n'ont pas été modifiées par la décision de l'ANSM sur les GLP-1 obésité.
 
 ## Questions que vous pouvez poser à votre médecin
 

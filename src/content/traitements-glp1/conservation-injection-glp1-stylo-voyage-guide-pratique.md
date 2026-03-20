@@ -66,17 +66,13 @@ Une fois le stylo ouvert (première injection réalisée), les conditions de con
 
 ### Ozempic et Wegovy (sémaglutide)
 
-Après la première utilisation, le stylo Ozempic et Wegovy peut être conservé :
-- **Au réfrigérateur (2-8°C)** : jusqu'à la date d'expiration
-- **À température ambiante** (ne dépassant pas **30°C**) : pendant **6 semaines maximum**
+Après la première utilisation, le stylo Ozempic ou Wegovy se conserve **6 semaines maximum**, que ce soit au réfrigérateur (2-8°C) ou à température ambiante (ne dépassant pas **30°C**). La date d'expiration imprimée sur la boîte ne s'applique plus une fois le stylo ouvert.
 
-Après 6 semaines à température ambiante, le stylo doit être jeté même s'il reste du produit.
+Passé ce délai de 6 semaines, le stylo doit être jeté même s'il reste du produit.
 
-### Mounjaro (tirzépatide)
+### Mounjaro KwikPen (tirzépatide)
 
-Après ouverture, Mounjaro peut être conservé :
-- **Au réfrigérateur (2-8°C)** : jusqu'à la date d'expiration
-- **À température ambiante** (ne dépassant pas **30°C**) : pendant **21 jours maximum**
+Après ouverture, le stylo Mounjaro KwikPen (le format commercialisé en France) se conserve **30 jours maximum à température ambiante** (ne dépassant pas **30°C**). Une fois sorti du réfrigérateur, ne remettez pas le stylo au frigo. Passé 30 jours, jetez le stylo même s'il reste du produit.
 
 ### Saxenda (liraglutide)
 

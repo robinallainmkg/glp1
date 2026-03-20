@@ -242,7 +242,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 
 **Patients post-ménopause :**
 - Réponse légèrement réduite
-- Bénéfice cardiovasculaire important
+- [Bénéfice cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) important
 - Attention ostéoporose
 - Suivi hormonal parallèle
 

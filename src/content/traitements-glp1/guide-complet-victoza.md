@@ -59,7 +59,7 @@ Victoza est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,0 à -1,5%)
 - Perte de poids moyenne de 2-3 kg
-- Réduction du risque cardiovasculaire
+- Réduction du [risque cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
 - Injection quotidienne
 
 ### Efficacité prouvée
