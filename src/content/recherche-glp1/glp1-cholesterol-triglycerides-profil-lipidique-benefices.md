@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Cholestérol : Impact sur le Profil Lipidique"
-description: "GLP-1 cholestérol triglycérides profil lipidique : sémaglutide et tirzépatide réduisent le LDL et les TG. Bénéfices pour patients avec dyslipidémie et obésité."
+description: "GLP-1 et profil lipidique : sémaglutide et tirzépatide réduisent le LDL et les triglycérides. Bénéfices pour patients avec dyslipidémie."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18

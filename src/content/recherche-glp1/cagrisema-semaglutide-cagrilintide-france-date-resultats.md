@@ -1,6 +1,6 @@
 ---
 title: "CagriSema : La Prochaine Révolution Après Ozempic et Mounjaro ?"
-description: "CagriSema (cagrilintide + sémaglutide) : résultats REDEFINE à 22,7% de perte de poids, demande FDA en cours et ce que les patients français peuvent espérer."
+description: "CagriSema (cagrilintide + sémaglutide) : résultats REDEFINE à 22,7% de perte de poids. Ce que les patients français peuvent espérer."
 pubDate: 2026-03-19
 date: "2026-03-19"
 updatedAt: 2026-03-19

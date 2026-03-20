@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Insuffisance Cardiaque : Guide Patient 2026"
-description: "GLP-1 insuffisance cardiaque contre-indications : précautions, interactions avec diurétiques et bêtabloquants, suivi cardiologique. Guide patient France 2026."
+description: "GLP-1 et insuffisance cardiaque : contre-indications, interactions diurétiques et bêtabloquants, suivi cardiologique. Guide patient 2026."
 pubDate: 2026-03-19
 date: 2026-03-19
 updatedAt: 2026-03-19
