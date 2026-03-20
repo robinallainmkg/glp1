@@ -79,7 +79,7 @@ Dans les études cliniques STEP, Wegovy a démontré des résultats exceptionnel
 ## Posologie et administration
 
 ### Schéma posologique
-Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'escalade de dose est essentielle pour minimiser les effets secondaires.
+Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[escalade de dose](/collections/traitements-glp1/wegovy-dosage/) est essentielle pour minimiser les effets secondaires.
 
 **Semaine 1-4** : 0,25 mg  
 **Semaine 5-8** : 0,5 mg  
@@ -113,7 +113,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Augmentation progressive** :
 - Semaine 5-8 : Passage à 0,5 mg
-- Surveillance des effets secondaires
+- Surveillance des [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 - Suivi hebdomadaire des premiers signes
 - Ajustement alimentaire
 
@@ -160,7 +160,7 @@ Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète,
 - **Effets maximum** : 6-12 mois
 
 ### Wegovy est-il remboursé pour l'obésité ?
-**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Son coût se situe entre 169 € et 360 € par mois selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
+**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Son coût se situe [entre 169 € et 360 € par mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Wegovy brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Parlez-en à votre médecin pour planifier un arrêt adapté.

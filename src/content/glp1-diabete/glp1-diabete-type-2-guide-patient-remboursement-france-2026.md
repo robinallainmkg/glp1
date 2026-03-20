@@ -156,7 +156,7 @@ Dans la pratique, ce formulaire ne change pas grand-chose pour les patients diab
 - Votre remboursement n'est pas affecté si la prescription est conforme
 - Le pharmacien vérifiera la présence du formulaire avant de délivrer le médicament
 
-Ce qui change en revanche : les patients qui cherchaient à obtenir Ozempic pour maigrir sans diabète diagnostiqué ne peuvent plus bénéficier d'une prescription remboursée dans ce cadre. Pour ces patients, les options légitimes sont [Wegovy](/traitements-glp1/guide-complet-wegovy/) et Mounjaro, disponibles sur ordonnance mais non remboursés.
+Ce qui change en revanche : les patients qui cherchaient à obtenir Ozempic pour maigrir sans diabète diagnostiqué ne peuvent plus bénéficier d'une prescription remboursée dans ce cadre. Pour ces patients, les options légitimes sont [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et Mounjaro, disponibles sur ordonnance mais non remboursés.
 
 Pour comprendre l'ensemble du cadre réglementaire, consultez notre article sur les [règles de prescription ANSM pour les GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/).
 
@@ -265,7 +265,7 @@ Non. Les GLP-1 sont contre-indiqués pendant la grossesse et l'allaitement. Si v
 
 ## Conclusion
 
-Les traitements GLP-1 représentent une avancée majeure dans la prise en charge du diabète de type 2, allant bien au-delà du simple contrôle de la glycémie. En France, plusieurs de ces médicaments sont [remboursés](/glp1-cout/remboursement-glp1-2026/) pour les patients diabétiques, sous réserve de respecter les conditions de prescription — notamment le formulaire obligatoire instauré en février 2025.
+Les traitements GLP-1 représentent une avancée majeure dans la prise en charge du diabète de type 2, allant bien au-delà du simple contrôle de la glycémie. En France, plusieurs de ces médicaments sont [remboursés](/collections/glp1-cout/remboursement-glp1-2026/) pour les patients diabétiques, sous réserve de respecter les conditions de prescription — notamment le formulaire obligatoire instauré en février 2025.
 
 Pour tirer le meilleur parti de votre traitement, maintenez un suivi régulier avec votre médecin, adoptez une alimentation adaptée et pratiquez une activité physique. Les GLP-1 sont des alliés puissants, mais ils fonctionnent d'autant mieux qu'ils s'inscrivent dans une prise en charge globale de votre santé.
 

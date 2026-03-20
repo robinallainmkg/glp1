@@ -33,7 +33,7 @@ La ménopause est souvent vécue comme un moment de bouleversement corporel diff
 
 1. [Pourquoi la ménopause favorise-t-elle la prise de poids ?](#mecanismes)
 2. [GLP-1 et ménopause : ce que dit la science](#science)
-3. [La découverte Mayo Clinic : THS + tirzépatide = +37% de perte de poids](#mayo-clinic)
+3. [La découverte Mayo Clinic : THS + tirzépatide = +35% de perte de poids](#mayo-clinic)
 4. [Quel GLP-1 choisir après la ménopause ?](#quel-glp1)
 5. [Comment démarrer un traitement GLP-1 quand on est ménopausée](#comment-demarrer)
 6. [GLP-1 et THS : peut-on combiner les deux ?](#combination-ths)
@@ -69,7 +69,7 @@ La redistribution abdominale des graisses à la ménopause n'est pas qu'un probl
 
 Les grandes études cliniques sur les GLP-1 — STEP pour le sémaglutide (Wegovy), SURMOUNT pour le tirzépatide (Mounjaro) — ont inclus de nombreuses femmes ménopausées. Les analyses de sous-groupes montrent que les femmes post-ménopausées répondent globalement aussi bien aux traitements GLP-1 que les femmes pré-ménopausées, avec des résultats de perte de poids similaires.
 
-Dans l'essai STEP 1, le sémaglutide 2,4 mg a entraîné une perte de poids moyenne de **14,9 %** à 68 semaines (population globale), contre 2,4 % sous placebo. Une étude rétrospective de la Mayo Clinic (2024) indique que les femmes ménopausées perdent entre **12 et 16 %** de leur poids corporel selon leur statut THS. La réduction de la graisse viscérale abdominale est particulièrement marquée, avec une diminution du tour de taille de plus de 13 cm en moyenne.
+Dans l'essai STEP 1, le sémaglutide 2,4 mg a entraîné une perte de poids moyenne de **14,9 %** à 68 semaines (population globale), contre 2,4 % sous placebo. Une étude rétrospective de la Mayo Clinic (2025) indique que les femmes ménopausées perdent entre **12 et 16 %** de leur poids corporel selon leur statut THS. La réduction de la graisse viscérale abdominale est particulièrement marquée, avec une diminution du tour de taille de plus de 13 cm en moyenne.
 
 ### Une action sur les mécanismes spécifiques à la ménopause
 
@@ -83,11 +83,11 @@ Les GLP-1 agissent sur plusieurs mécanismes particulièrement pertinents dans l
 
 **Amélioration du profil cardiovasculaire** : la réduction de la pression artérielle, des triglycérides et de la glycémie observée sous GLP-1 est particulièrement précieuse pour les femmes ménopausées dont le risque cardiovasculaire augmente.
 
-## La découverte Mayo Clinic : THS + tirzépatide = +37% de perte de poids {#mayo-clinic}
+## La découverte Mayo Clinic : THS + tirzépatide = +35% de perte de poids {#mayo-clinic}
 
 ### L'étude qui a fait l'effet d'une bombe
 
-En 2024, une étude rétrospective de la Mayo Clinic publiée dans *The Lancet Obstetrics, Gynaecology, and Women's Health*, portant sur 120 femmes ménopausées, a mis en évidence une interaction synergique entre le traitement hormonal substitutif (THS) et le tirzépatide (Mounjaro).
+En 2025, une étude rétrospective de la Mayo Clinic publiée dans *The Lancet Obstetrics, Gynaecology, & Women's Health* et présentée à ENDO 2025, portant sur 120 femmes ménopausées, a mis en évidence une interaction synergique entre le traitement hormonal substitutif (THS) et le tirzépatide (Mounjaro).
 
 ### Méthodologie
 
@@ -102,7 +102,7 @@ Les résultats sont frappants :
 
 | Paramètre | Tirzépatide seul | Tirzépatide + THS | Différence |
 |-----------|-----------------|-------------------|------------|
-| Perte de poids moyenne | 14,0 % | 19,2 % | **+37 % relatif** |
+| Perte de poids moyenne | 14 % | 17 % | **+35 % relatif** |
 | Réduction tour de taille | -14,2 cm | -18,7 cm | +32 % |
 | Réduction graisse viscérale | -38 % | -54 % | +42 % |
 | Bouffées de chaleur | Non mesurées | Réduites de 78 % | — |
@@ -184,7 +184,7 @@ La question du THS et du risque de cancer du sein est indépendante des GLP-1. S
 
 ### Situation actuelle (mars 2026)
 
-En mars 2026, les GLP-1 pour l'obésité ne sont pas remboursés par l'Assurance Maladie. La HAS a rendu un avis favorable pour Wegovy (juillet 2025) et Mounjaro (décembre 2025). Les négociations de prix avec le CEPS sont en cours pour un [remboursement attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
+En mars 2026, les GLP-1 pour l'obésité ne sont pas remboursés par l'Assurance Maladie. La HAS a rendu un avis favorable pour Wegovy (décembre 2024) et Mounjaro (décembre 2025). Les négociations de prix avec le CEPS sont en cours pour un [remboursement attendu au second semestre 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/).
 
 ### Ce que cela coûte concrètement
 

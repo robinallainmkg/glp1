@@ -68,7 +68,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 **GLP-1 vs Autres Mécanismes :**
 - **Coupe-faim traditionnels** : action centrale uniquement
 - **Inhibiteurs absorption** : pas d'effet satiété
-- **[Chirurgie bariatrique](/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/)** : modification anatomique
+- **[Chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/)** : modification anatomique
 - **GLP-1** : action physiologique naturelle complète
 
 ## Efficacité des Différents GLP-1

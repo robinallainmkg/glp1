@@ -126,7 +126,7 @@ Chez les sportifs de plus de 50 ans, la combinaison d'une restriction calorique 
 
 Les GLP-1 (sémaglutide, tirzépatide, liraglutide) ne figurent pas sur la liste des substances interdites de l'Agence mondiale antidopage (AMA) en 2026. Ils peuvent être utilisés légalement par les sportifs compétiteurs à condition d'être prescrits dans les indications médicales habituelles. Aucune exemption d'usage thérapeutique (AUT) n'est requise.
 
-Cependant, la situation évolue : des discussions sont en cours à l'AMA sur la classification des GLP-1 comme potentiels agents de modification de la composition corporelle. Les sportifs de haut niveau devraient surveiller les mises à jour réglementaires.
+**Attention cependant** : depuis 2024, le sémaglutide est inscrit au **Programme de surveillance** de l'AMA. Depuis janvier 2026, le tirzépatide y figure également. Ce programme permet aux laboratoires antidopage de suivre l'usage de ces substances sans sanction, mais pourrait aboutir à une future interdiction si des abus sont constatés. Des discussions sont par ailleurs en cours à l'AMA sur la classification des GLP-1 comme potentiels agents de modification de la composition corporelle. Les sportifs de compétition doivent surveiller les mises à jour annuelles de la Liste des interdictions.
 
 ## En résumé : le bilan pour le sportif actif
 

@@ -77,9 +77,9 @@ affiliateConfig:
 
 ## Prix Zepbound France : Guide Complet 2025
 
-> **ATTENTION : Zepbound n'existe pas en France.** Le tirzépatide est commercialisé en Europe sous le nom **Mounjaro** (par Eli Lilly), pas sous le nom Zepbound (nom utilisé aux États-Unis uniquement). En France, le traitement équivalent est **Mounjaro**, commercialisé depuis novembre 2024 au prix de **230-440 EUR/mois** (prix libre, non remboursé par la Sécurité Sociale).
+> **ATTENTION : Zepbound n'existe pas en France.** Le tirzépatide est commercialisé en Europe sous le nom **Mounjaro** (par Eli Lilly), pas sous le nom Zepbound (nom utilisé aux États-Unis uniquement). En France, le traitement équivalent est **[Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)**, commercialisé depuis novembre 2024 au prix de **230-440 EUR/mois** (prix libre, non remboursé par la Sécurité Sociale).
 
-**Zepbound** est le nom commercial américain du tirzépatide (Eli Lilly). **En France et en Europe, ce même principe actif est commercialisé sous le nom Mounjaro.** Les informations ci-dessous concernent donc le Mounjaro (tirzépatide) tel qu'il est disponible en France.
+**Zepbound** est le nom commercial américain du tirzépatide (Eli Lilly). **En France et en Europe, ce même principe actif est commercialisé sous le nom Mounjaro.** Pour le détail des tarifs, consultez le [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/). Les informations ci-dessous concernent donc le Mounjaro (tirzépatide) tel qu'il est disponible en France.
 
 ## Prix du Mounjaro (tirzépatide) en France
 

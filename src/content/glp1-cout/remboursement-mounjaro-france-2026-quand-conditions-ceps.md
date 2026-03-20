@@ -1,6 +1,6 @@
 ---
 title: "Remboursement Mounjaro France 2026 : Quand et Conditions ?"
-description: "Remboursement Mounjaro France 2026 : HAS favorable décembre 2025, négociations CEPS Eli Lilly en cours, calendrier réaliste et conditions IMC."
+description: "Remboursement Mounjaro France 2026 : HAS favorable décembre 2025, négociations CEPS Eli Lilly en cours, calendrier et conditions IMC."
 keywords: ['remboursement mounjaro', 'mounjaro rembourse france', 'mounjaro 2026 securite sociale', 'mounjaro when remboursement', 'tirzepatide remboursement has', 'mounjaro prix remboursement']
 seoTitle: "Remboursement Mounjaro 2026 : Date, Conditions et Démarches"
 seoDescription: "Mounjaro sera-t-il remboursé en France en 2026 ? HAS a rendu un avis favorable fin 2025. Voici le calendrier réaliste, les conditions IMC et ce que vous devez faire maintenant."

@@ -26,7 +26,7 @@ affiliateConfig:
   inlinePositions: [2, 6, 10]
 ---
 
-L'acupuncture est l'une des pratiques de médecine traditionnelle les plus étudiées scientifiquement dans le domaine du diabète et de la gestion du poids. Pour les patients sous traitement GLP-1 (Ozempic, Wegovy, Mounjaro), la question de son intérêt comme approche complémentaire se pose régulièrement. Voici ce que disent les données et ce que prévoit le système de santé français.
+L'acupuncture est l'une des pratiques de médecine traditionnelle les plus étudiées scientifiquement dans le domaine du diabète et de la gestion du poids. Pour les patients sous traitement GLP-1 (Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)), la question de son intérêt comme approche complémentaire se pose régulièrement. Voici ce que disent les données et ce que prévoit le système de santé français.
 
 ## Sommaire
 

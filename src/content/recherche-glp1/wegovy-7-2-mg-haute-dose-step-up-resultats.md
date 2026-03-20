@@ -90,8 +90,8 @@ Les résultats présentés par Novo Nordisk montrent une différence cliniquemen
 
 | Groupe | Perte de poids moyenne à 72 semaines | ≥ 20% de perte | ≥ 25% de perte |
 |---|---|---|---|
-| **Sémaglutide 7,2 mg** | **-18,7%** | **~45%** | **~28%** |
-| Sémaglutide 2,4 mg | -15,6% | ~28% | ~14% |
+| **Sémaglutide 7,2 mg** | **-20,7%** | **~45%** | **~33%** |
+| Sémaglutide 2,4 mg | -17,5% | ~28% | ~14% |
 | Placebo | -1,8% | ~2% | <1% |
 
 La dose de 7,2 mg apporte donc un gain d'environ 3 points de pourcentage de perte de poids par rapport à la dose de 2,4 mg. Cela peut sembler modeste en valeur absolue, mais en termes cliniques, cette différence est significative : pour un patient de 120 kg, cela représente environ 3,6 kg de perte supplémentaire.
@@ -161,10 +161,10 @@ Pour l'Europe, la procédure passe par l'EMA, qui émet un avis avant que chaque
 
 En se basant sur les délais habituels, voici un calendrier indicatif :
 
-- **2026** : dépôt des dossiers FDA et EMA
-- **2027** : avis probable de l'EMA, approbation FDA attendue
-- **2027-2028** : évaluation par la HAS en France, négociation du prix avec le CEPS
-- **2028 (au plus tôt)** : disponibilité et remboursement potentiel en France
+- **Mars 2026** : FDA a approuvé Wegovy HD (7,2 mg) aux États-Unis
+- **Décembre 2025** : avis positif de l'EMA, Commission européenne a approuvé (administration via 3 injections de 2,4 mg)
+- **S2 2026** : décision réglementaire attendue en UE pour le stylo unique 7,2 mg
+- **2027 (au plus tôt)** : évaluation HAS et remboursement potentiel en France
 
 Ce calendrier reste soumis à de nombreuses incertitudes : les discussions sur le prix, les éventuelles demandes de données complémentaires par l'EMA, et la question des capacités de production de Novo Nordisk, qui a déjà connu des [tensions d'approvisionnement](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/) avec le Wegovy 2,4 mg.
 

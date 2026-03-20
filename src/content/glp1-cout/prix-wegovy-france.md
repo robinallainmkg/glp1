@@ -486,7 +486,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 | Première tentative GLP-1 | **Wegovy** | Moins cher, efficacité prouvée |
 | Échec Wegovy | **Mounjaro** | Mécanisme d'action différent |
 
-[Comparaison complète Wegovy vs Mounjaro](/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
+[Comparaison complète Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
 ---
 

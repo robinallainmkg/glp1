@@ -44,7 +44,7 @@ Ce processus est contrôlé par le système nerveux autonome (notamment le nerf 
 
 La **gastroparésie** (littéralement "paralysie partielle de l'estomac") est un tableau clinique dans lequel la vidange gastrique est si fortement ralentie qu'elle devient symptomatique et chronique. L'estomac n'arrive plus à vider son contenu correctement, même plusieurs heures après un repas.
 
-La gastroparésie est une maladie connue bien avant les GLP-1 : elle touche classiquement les patients atteints de [diabète de type 2](/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) de longue date (neuropathie autonome diabétique), les personnes ayant subi une chirurgie gastrique, et dans une proportion significative de cas, elle est dite "idiopathique" (sans cause identifiée).
+La gastroparésie est une maladie connue bien avant les GLP-1 : elle touche classiquement les patients atteints de [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) de longue date (neuropathie autonome diabétique), les personnes ayant subi une chirurgie gastrique, et dans une proportion significative de cas, elle est dite "idiopathique" (sans cause identifiée).
 
 Les GLP-1 ne "créent" pas une gastroparésie ex nihilo. Mais ils peuvent :
 1. **Démasquer une gastroparésie préexistante** ignorée ou peu symptomatique

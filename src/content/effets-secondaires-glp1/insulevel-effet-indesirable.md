@@ -129,7 +129,7 @@ Une cure initiale de 30 jours est souvent suggérée, mais pour des résultats s
 
 ## Comparaison avec d'autres traitements
 
-**Important** : Insulevel est un complément alimentaire et ne peut en aucun cas être comparé à des médicaments comme la metformine ou les agonistes GLP-1, qui sont des traitements médicaux validés par des essais cliniques rigoureux. Insulevel n'a pas fait l'objet d'études cliniques publiées et ne dispose d'aucune autorisation de mise sur le marché (AMM).
+**Important** : Insulevel est un complément alimentaire et ne peut en aucun cas être comparé à des médicaments comme la metformine ou les [agonistes GLP-1](/collections/traitements-glp1/guide-complet-ozempic/), qui sont des traitements médicaux validés par des essais cliniques rigoureux. Insulevel n'a pas fait l'objet d'études cliniques publiées et ne dispose d'aucune autorisation de mise sur le marché (AMM).
 
 ## Points clés à retenir
 

@@ -196,7 +196,7 @@ Oui, en grande partie. Une analyse de médiation du SELECT trial publiée dans *
 Oui, c'est même recommandé pour les patients diabétiques ayant eu un infarctus, selon les dernières recommandations ESC/SFD. Les GLP-1 réduisent le risque de récidive d'environ 20%. Votre cardiologue évaluera la compatibilité avec vos autres traitements.
 
 **Mon cardiologue peut-il me prescrire un GLP-1 ?**
-Oui. En France, les cardiologues peuvent prescrire les GLP-1 remboursés (Ozempic, [Trulicity (dulaglutide)](/traitements-glp1/guide-complet-trulicity/)) pour le diabète de type 2. Ils peuvent aussi initier un traitement Wegovy (non remboursé) si vous êtes obèse avec antécédent cardiovasculaire, dans l'attente du remboursement.
+Oui. En France, les cardiologues peuvent prescrire les GLP-1 remboursés (Ozempic, [Trulicity (dulaglutide)](/collections/traitements-glp1/guide-complet-trulicity/)) pour le diabète de type 2. Ils peuvent aussi initier un traitement Wegovy (non remboursé) si vous êtes obèse avec antécédent cardiovasculaire, dans l'attente du remboursement.
 
 **GLP-1 et anti-agrégants plaquettaires ou anticoagulants : compatibles ?**
 Oui. Les GLP-1 n'interfèrent pas avec l'aspirine, les thienopyridines (clopidogrel) ou les anticoagulants (warfarine, rivaroxaban, apixaban). Aucun ajustement de dose n'est nécessaire.

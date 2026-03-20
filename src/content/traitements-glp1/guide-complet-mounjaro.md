@@ -226,13 +226,13 @@ Mounjaro est indiqué dans le traitement du diabète de type 2 chez l'adulte, en
 
 ### Avantages dans le diabète
 - **Réduction d'HbA1c** : jusqu'à -2,4% (supérieure aux autres GLP-1)
-- **Perte de poids** : 5-15 kg en moyenne
+- **Perte de poids** : 5-15 kg en moyenne — pour [préserver la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant cette perte, un apport protéique adapté est essentiel
 - **Une injection hebdomadaire** : facilité d'utilisation
 - **Efficacité durable** : maintien des effets à long terme
 
 ### Posologie recommandée
 - **Dose initiale** : 2,5 mg/semaine
-- **Augmentation progressive** : 5 mg, puis 7,5 mg, 10 mg, 12,5 mg, 15 mg
+- **Augmentation progressive** : 5 mg, puis 7,5 mg, 10 mg, 12,5 mg, 15 mg — consultez notre guide sur le [dosage progressif du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) pour les détails
 - **Dose maximale** : 15 mg/semaine
 
 ## Mounjaro pour la perte de poids

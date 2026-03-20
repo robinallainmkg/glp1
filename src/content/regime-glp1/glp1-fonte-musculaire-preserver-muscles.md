@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy ou Mounjaro permettent des pertes de poids spectaculaires, souvent supérieures à 15% du poids initial. Mais cette perte de poids n'est pas uniquement composée de graisse. Les études cliniques montrent qu'une proportion significative de la masse perdue est de la masse maigre, principalement du muscle squelettique. Comprendre ce phénomène et savoir comment l'atténuer est essentiel pour tirer le meilleur parti de votre traitement.
+Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) permettent des pertes de poids spectaculaires, souvent supérieures à 15% du poids initial. Mais cette perte de poids n'est pas uniquement composée de graisse. Les études cliniques montrent qu'une proportion significative de la masse perdue est de la masse maigre, principalement du muscle squelettique. Comprendre ce phénomène et savoir comment l'atténuer est essentiel pour tirer le meilleur parti de votre traitement.
 
 ## Sommaire
 

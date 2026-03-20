@@ -87,7 +87,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
-| Ozempic | ~77,60 € | 65% (DT2 uniquement) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 65% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | Mounjaro | 230-440 € | Non remboursé |
@@ -211,7 +211,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 ## 📝 Conclusion
 
-**Trulicity offre un prix fixe avantageux** pour le diabète de type 2, avec un remboursement identique aux autres GLP-1.
+**Trulicity offre un prix fixe avantageux** pour le diabète de type 2, avec un [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) identique aux autres traitements de la même classe.
 
 ### Points clés à retenir :
 - **Prix fixe** : ~81 €/mois quelle que soit la dose

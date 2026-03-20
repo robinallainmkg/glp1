@@ -84,7 +84,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Victoza | ~48,42 € | 65% (DT2 uniquement) |
-| Ozempic | ~77,60 € | 30% (DT2 uniquement) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 
@@ -209,7 +209,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 ## 📝 Conclusion
 
-**Attention : Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026**, pour des raisons commerciales (non liées à la sécurité du médicament). Les patients actuellement sous Victoza doivent consulter leur médecin pour envisager une alternative comme Ozempic ou Trulicity. Des pénuries intermittentes sont possibles avant l'arrêt définitif.
+**Attention : Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026**, pour des raisons commerciales (non liées à la sécurité du médicament). Les patients actuellement sous Victoza doivent consulter leur médecin pour envisager une alternative comme Ozempic ou [Trulicity](/collections/glp1-cout/prix-trulicity-france/). Des pénuries intermittentes sont possibles avant l'arrêt définitif.
 
 Victoza reste pour l'instant un traitement au bon rapport prix/tolérance pour le diabète de type 2.
 

@@ -1,5 +1,5 @@
 ---
-title: "Témoignage Ozempic Perte de Poids : Marie, -32 kg"
+title: "Témoignage Ozempic : Marie, -32 kg avec GLP-1"
 description: "Témoignage Ozempic perte de poids femme : Marie L., 39 ans, -32 kilos en 12 mois avec le sémaglutide (Wegovy). Parcours complet et résultats concrets."
 author: "Marie L."
 image: "/images/temoignages/mariejourney9.jpg"

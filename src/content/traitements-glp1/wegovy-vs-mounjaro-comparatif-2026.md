@@ -27,7 +27,7 @@ affiliateConfig:
 
 ## Wegovy vs Mounjaro 2026 : Quel Traitement GLP-1 Choisir ?
 
-Avec l'arrivee de **Mounjaro** (tirzepatide) en France fin 2024 et la disponibilite croissante de **Wegovy** (semaglutide), de nombreux patients se demandent quel traitement privilegier pour leur [perte de poids](/glp1-perte-de-poids/glp1-perte-de-poids/). Ces deux medicaments representent la nouvelle generation des traitements contre l'obesite, mais ils different sur plusieurs points essentiels : mecanisme d'action, efficacite, prix et perspectives de remboursement.
+Avec l'arrivee de **Mounjaro** (tirzepatide) en France fin 2024 et la disponibilite croissante de **Wegovy** (semaglutide), de nombreux patients se demandent quel traitement privilegier pour leur [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/). Ces deux medicaments representent la nouvelle generation des traitements contre l'obesite, mais ils different sur plusieurs points essentiels : mecanisme d'action, efficacite, prix et perspectives de remboursement.
 
 Ce comparatif detaille vous aide a y voir clair en mars 2026, avec des donnees actualisees et des conseils concrets pour orienter votre choix en concertation avec votre medecin.
 
@@ -103,7 +103,7 @@ Les deux traitements apportent des ameliorations metaboliques significatives :
 - **Glycemie et HbA1c** : reduction comparable, Mounjaro legerement superieur chez les patients diabetiques
 - **Tension arterielle** : amelioration similaire avec les deux traitements
 - **Profil lipidique** : Mounjaro montre un avantage sur la reduction des triglycerides
-- **Risque cardiovasculaire** : Wegovy a demontre des [bénéfices cardiovasculaires](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec une reduction de 20% des evenements cardiovasculaires majeurs (etude SELECT), Mounjaro est en cours d'evaluation
+- **Risque cardiovasculaire** : Wegovy a demontre des [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec une reduction de 20% des evenements cardiovasculaires majeurs (etude SELECT), Mounjaro est en cours d'evaluation
 
 ## Effets secondaires : lequel est le mieux tolere ?
 
