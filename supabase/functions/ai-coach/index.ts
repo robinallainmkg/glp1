@@ -330,10 +330,40 @@ serve(async (req) => {
       });
     }
 
-    // --- Premium subscription rate limiting (3 msg/day for free users) ---
-    let dailyRemaining: number | null = null; // null = unlimited (premium/trial/anonymous)
+    // --- Daily message limit (anonymous = 5/day by IP, free registered = 3/day, premium = unlimited) ---
+    let dailyRemaining: number | null = null;
     let isPremiumUser = false;
     let premiumProfile: any = null;
+
+    if (!user_id && clientIp !== "unknown") {
+      // Anonymous users: 5 messages/day by IP
+      const ANON_DAILY_LIMIT = 5;
+      const today = new Date().toISOString().split("T")[0];
+      const ipDailyKey = `daily:${clientIp}:${today}`;
+      const { data: ipDaily } = await supabase
+        .from("coach_rate_limits")
+        .select("message_count")
+        .eq("session_id", ipDailyKey)
+        .single();
+
+      const ipDayCount = ipDaily?.message_count || 0;
+      if (ipDayCount >= ANON_DAILY_LIMIT) {
+        return jsonResponse({
+          error: "daily_limit",
+          message: "Vous avez utilise vos 5 messages gratuits du jour. Creez un compte gratuit pour continuer, ou passez a Premium pour des echanges illimites !",
+          upgrade_url: "/tarifs/",
+          signup_url: "/mon-espace/",
+          remaining: 0,
+        }, 429);
+      }
+
+      await supabase.from("coach_rate_limits").upsert(
+        { session_id: ipDailyKey, message_count: ipDayCount + 1, window_start: now.toISOString(), hourly_count: 0, hourly_start: now.toISOString() },
+        { onConflict: "session_id" }
+      );
+      dailyRemaining = ANON_DAILY_LIMIT - 1 - ipDayCount;
+    }
+
     if (user_id) {
       const { data: userProfile } = await supabase
         .from("user_profiles")

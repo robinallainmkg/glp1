@@ -67,8 +67,10 @@ function computeHash(content) {
 }
 
 function extractSlug(filePath, collection) {
+  // IMPORTANT: Always use short slug (basename only, no collection prefix)
+  // This avoids duplicates like "glp1-cout/prix-mounjaro-france" vs "prix-mounjaro-france"
   const basename = path.basename(filePath, '.md');
-  return `${collection}/${basename}`;
+  return basename;
 }
 
 /**
