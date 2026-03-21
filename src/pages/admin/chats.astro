@@ -607,6 +607,16 @@ import { supabaseConfig } from '../../lib/supabase';
               <div class="feedback-empty">Chargement...</div>
             </div>
           </div>
+          <div class="feedback-panel" style="flex: 1;">
+            <h3>🔔 Follow-up 2 mois</h3>
+            <p style="font-size:0.75rem;color:#64748b;margin-bottom:0.75rem;">Contacts sans interaction depuis 60+ jours</p>
+            <div id="followupList" style="max-height: 320px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+            <button id="followupSendBtn" onclick="sendFollowups()" style="display:none;width:100%;margin-top:0.75rem;padding:0.6rem;border-radius:8px;border:1px solid #059669;background:#05966920;color:#34d399;font-size:0.82rem;font-weight:600;cursor:pointer;">
+              📧 Envoyer les follow-ups
+            </button>
+          </div>
         </div>
       </div>
 
@@ -646,8 +656,116 @@ import { supabaseConfig } from '../../lib/supabase';
     let allConversations = [];
     let tawkConversations = [];
     let contactSubmissions = [];
+    let followupEligible = [];
     let allMessages = {};
     let currentFilter = 'all';
+
+    async function loadFollowups() {
+      try {
+        var el = document.getElementById('followupList');
+        var btn = document.getElementById('followupSendBtn');
+        var cutoff = new Date(Date.now() - 60 * 86400000).toISOString();
+
+        var { data: contacts } = await sb
+          .from('contacts')
+          .select('*')
+          .lt('created_at', cutoff)
+          .neq('contact_type', 'newsletter')
+          .order('created_at', { ascending: true });
+
+        var eligible = (contacts || []).filter(function(c) {
+          return c.email && !c.email.includes('test') && !c.email.includes('example')
+            && c.status !== 'followup_sent';
+        });
+        followupEligible = eligible;
+
+        var sent = (contacts || []).filter(function(c) {
+          return c.status === 'followup_sent';
+        });
+
+        if (eligible.length === 0 && sent.length === 0) {
+          el.innerHTML = '<div style="padding:16px;text-align:center;color:#64748b;font-size:0.82rem;">Aucun contact de plus de 60 jours.</div>';
+          btn.style.display = 'none';
+          return;
+        }
+
+        var html = '';
+        if (eligible.length > 0) {
+          html += eligible.map(function(c) {
+            var days = Math.round((Date.now() - new Date(c.created_at).getTime()) / 86400000);
+            var nom = c.nom || c.email.split('@')[0];
+            var type = c.contact_type === 'diagnostic' ? 'Diagnostic' : 'Contact';
+            return '<div style="padding:8px 12px;border-bottom:1px solid #1e293b;border-left:3px solid #f59e0b;">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<strong style="color:#e2e8f0;font-size:0.82rem;">' + escapeHtml(nom) + '</strong>'
+              + '<span style="font-size:0.68rem;padding:2px 6px;border-radius:4px;background:#f59e0b20;color:#f59e0b;font-weight:600;">' + days + 'j</span>'
+              + '</div>'
+              + '<div style="font-size:0.75rem;color:#94a3b8;">' + escapeHtml(c.email) + '</div>'
+              + '<div style="font-size:0.72rem;color:#64748b;margin-top:2px;">' + type + (c.treatment ? ' \xB7 ' + c.treatment : '') + '</div>'
+              + '</div>';
+          }).join('');
+          btn.style.display = 'block';
+          btn.textContent = '\uD83D\uDCE7 Envoyer ' + eligible.length + ' follow-up' + (eligible.length > 1 ? 's' : '');
+        } else {
+          btn.style.display = 'none';
+        }
+
+        if (sent.length > 0) {
+          html += '<div style="padding:8px 12px;border-top:1px solid #1e293b;"><span style="font-size:0.72rem;color:#64748b;font-weight:600;">DEJA ENVOYES</span></div>';
+          html += sent.map(function(c) {
+            var nom = c.nom || c.email.split('@')[0];
+            return '<div style="padding:6px 12px;border-bottom:1px solid #1e293b;border-left:3px solid #16a34a;opacity:0.6;">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<span style="color:#94a3b8;font-size:0.78rem;">' + escapeHtml(nom) + '</span>'
+              + '<span style="font-size:0.65rem;padding:2px 6px;border-radius:4px;background:#16a34a20;color:#16a34a;">ENVOYE</span>'
+              + '</div>'
+              + '<div style="font-size:0.72rem;color:#64748b;">' + escapeHtml(c.email) + '</div>'
+              + '</div>';
+          }).join('');
+        }
+
+        el.innerHTML = html;
+      } catch(e) {
+        console.log('Followup load error:', e.message);
+        document.getElementById('followupList').innerHTML = '<div style="padding:16px;color:#64748b;font-size:0.82rem;">Erreur chargement.</div>';
+      }
+    }
+
+    async function sendFollowups() {
+      if (followupEligible.length === 0) return;
+      var btn = document.getElementById('followupSendBtn');
+      btn.disabled = true;
+      btn.textContent = '\u23F3 Envoi en cours...';
+      btn.style.opacity = '0.6';
+
+      var sent = 0, errors = 0;
+      for (var i = 0; i < followupEligible.length; i++) {
+        var c = followupEligible[i];
+        try {
+          var res = await fetch(supabaseUrl + '/functions/v1/send-followup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + supabaseKey },
+            body: JSON.stringify({ contact_id: c.id })
+          });
+          if (res.ok) { sent++; } else { errors++; }
+        } catch(e) { errors++; }
+      }
+
+      if (errors > 0 && sent === 0) {
+        btn.textContent = '\u26A0\uFE0F Lancer: node scripts/followup-contacts.mjs';
+        btn.style.background = '#f59e0b20';
+        btn.style.borderColor = '#f59e0b';
+        btn.style.color = '#f59e0b';
+        btn.disabled = false;
+        btn.onclick = function() { navigator.clipboard.writeText('node scripts/followup-contacts.mjs'); btn.textContent = '\u2705 Commande copiee !'; };
+      } else {
+        btn.textContent = '\u2705 ' + sent + ' follow-up' + (sent > 1 ? 's' : '') + ' envoye' + (sent > 1 ? 's' : '') + (errors > 0 ? ' (' + errors + ' erreurs)' : '');
+        btn.style.background = '#16a34a20';
+        btn.style.borderColor = '#16a34a';
+        setTimeout(function() { loadFollowups(); }, 2000);
+      }
+    }
+    window.sendFollowups = sendFollowups;
 
     async function loadData() {
       try {
@@ -732,6 +850,7 @@ import { supabaseConfig } from '../../lib/supabase';
         loadFeedbackAnalytics();
         loadSavEmails();
         loadContacts();
+        loadFollowups();
       } catch(e) {
         console.error('loadData error:', e);
         document.getElementById('convListContent').innerHTML = '<div class="conv-empty">Erreur de chargement — voir console</div>';
