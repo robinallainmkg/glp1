@@ -1,5 +1,6 @@
 ---
 title: "Wegovy Guide Complet France : Sémaglutide, Prix et Effets"
+thumbnail: "/images/thumbnails/guide-complet-wegovy-illus.jpg"
 slug: "guide-complet-wegovy"
 description: "Wegovy guide complet France semaglutide sémaglutide : traitement GLP-1 obésité, perte de poids. Prix, effets secondaires et posologie."
 author: "Dr. Martin"

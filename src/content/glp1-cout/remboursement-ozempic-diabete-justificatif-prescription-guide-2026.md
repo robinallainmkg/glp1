@@ -1,5 +1,6 @@
 ---
 title: "Remboursement Ozempic Diabète 2026 : Justificatif et"
+thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
 description: "Remboursement Ozempic diabète 2026 : justificatif de prescription obligatoire depuis février 2025. Comment l'obtenir et parcours patient complet."
 keywords: ['remboursement ozempic diabète justificatif prescription 2026', 'remboursement ozempic diabète', 'ozempic remboursement 2026', 'justificatif prescription ozempic', 'remboursement trulicity victoza diabète', 'glp1 diabète remboursement sécu', 'ordonnance glp1 remboursement', 'ozempic tiers payant diabète type 2', 'comment obtenir justificatif ozempic', 'critères remboursement ozempic sécu']
 seoTitle: "Remboursement Ozempic Diabète 2026 : Justificatif Guide"

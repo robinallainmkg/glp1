@@ -1,5 +1,6 @@
 ---
 title: "Prix Trulicity France 2026 : Remboursement et Mutuelle"
+thumbnail: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 description: "Prix Trulicity France en pharmacie : remboursé à 65% pour le diabète de type 2. Coût réel, couverture mutuelle et aides financières pour votre traitement."
 keywords: ['prix trulicity', 'trulicity pharmacie', 'remboursement trulicity', 'mutuelle trulicity', 'coût traitement trulicity']
 seoTitle: "Prix Trulicity France 2026 : Combien coûte Trulicity en pharmacie ?"

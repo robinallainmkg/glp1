@@ -1,5 +1,6 @@
 ---
 title: "Victoza Guide Complet France : Liraglutide, Prix et Effets"
+thumbnail: "/images/thumbnails/guide-complet-victoza-illus.jpg"
 slug: "guide-complet-victoza"
 description: "Victoza guide complet France liraglutide : traitement GLP-1 pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"

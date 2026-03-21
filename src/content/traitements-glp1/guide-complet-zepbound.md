@@ -1,5 +1,6 @@
 ---
 title: "Zepbound Guide Complet France : Prix, Effets et Poids"
+thumbnail: "/images/thumbnails/zepbound.webp"
 slug: "guide-complet-zepbound"
 description: "Zepbound guide complet France : traitement GLP-1 d'Eli Lilly pour la perte de poids. Prix, effets secondaires, posologie et résultats."
 author: "Dr. Martin"

@@ -1,5 +1,6 @@
 ---
 title: "Rybelsus Guide Complet France : GLP-1 Oral Posologie et Prix"
+thumbnail: "/images/thumbnails/rybelsus-medical-guide.jpg"
 slug: "guide-complet-rybelsus"
 description: "Rybelsus guide complet France : GLP-1 oral pour le diabète de type 2. Posologie, prix, effets secondaires et alternatives."
 author: "Dr. Martin"

@@ -1,5 +1,7 @@
 ---
 title: "Prix Victoza France 2026 : Coût et Arrêt de"
+thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
+thumbnailAlt: "Prix et coût du traitement victoza-france"
 description: "Prix Victoza France : environ 60€/mois, remboursé à 65% pour le diabète de type 2. Commercialisation arrêtée — alternatives GLP-1 disponibles."
 keywords: ['prix victoza', 'victoza pharmacie', 'remboursement victoza', 'mutuelle victoza', 'coût traitement victoza']
 seoTitle: "Prix Victoza France 2026 : Combien coûte Victoza en pharmacie ?"

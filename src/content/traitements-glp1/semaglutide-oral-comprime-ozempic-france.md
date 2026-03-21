@@ -1,5 +1,6 @@
 ---
 title: "Sémaglutide Oral en Comprimé France 2026 : Rybelsus et Après"
+thumbnail: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
 slug: "semaglutide-oral-comprime-ozempic-france"
 description: "Sémaglutide oral en comprimé France 2026 : Rybelsus, Wegovy comprimé attendu fin 2027. Technologie SNAC, efficacité comparée à l'injectable Ozempic."
 mainKeyword: "semaglutide oral comprime France 2026"
