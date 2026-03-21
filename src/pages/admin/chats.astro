@@ -645,6 +645,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
     let allConversations = [];
     let tawkConversations = [];
+    let contactSubmissions = [];
     let allMessages = {};
     let currentFilter = 'all';
 
@@ -669,6 +670,16 @@ import { supabaseConfig } from '../../lib/supabase';
           .order('chat_date', { ascending: false });
         if (tawkErr) { console.error('tawk error:', tawkErr); }
         tawkConversations = tawk || [];
+
+        // Load contact form submissions
+        try {
+          const { data: contacts } = await sb
+            .from('contacts')
+            .select('*')
+            .order('created_at', { ascending: false })
+            .limit(50);
+          contactSubmissions = (contacts || []).filter(function(c) { return !c.email || !c.email.includes('test-'); });
+        } catch(e) { contactSubmissions = []; }
 
         // Render conversations immediately (don't wait for stats)
         renderConvList();
@@ -754,6 +765,12 @@ import { supabaseConfig } from '../../lib/supabase';
         convs.push({ type: 'tawk', id: t.id, date: t.chat_date + 'T12:00:00', preview: preview, searchText: preview.toLowerCase(), category: t.category, data: t });
       });
 
+      // Contact form submissions
+      contactSubmissions.forEach(function(c) {
+        var preview = (c.nom ? c.nom + ' — ' : '') + (c.message || c.subject || '').substring(0, 120);
+        convs.push({ type: 'contact', id: c.id, date: c.created_at || '', preview: preview, searchText: (c.email + ' ' + c.nom + ' ' + c.message + ' ' + c.subject).toLowerCase(), category: c.contact_type, data: c });
+      });
+
       // Sort by date desc
       convs.sort(function(a, b) { return b.date.localeCompare(a.date); });
 
@@ -775,6 +792,8 @@ import { supabaseConfig } from '../../lib/supabase';
         convs = convs.filter(function(c) { return c.type === 'coach'; });
       } else if (currentFilter === 'source:tawk') {
         convs = convs.filter(function(c) { return c.type === 'tawk'; });
+      } else if (currentFilter === 'source:contact') {
+        convs = convs.filter(function(c) { return c.type === 'contact'; });
       }
 
       // Search filter
@@ -810,6 +829,25 @@ import { supabaseConfig } from '../../lib/supabase';
             + '<div class="conv-meta">'
             + '<span class="conv-badge" style="background:' + catColor + '20;color:' + catColor + ';">' + catLabel + '</span>'
             + '<span class="conv-badge-msgs">' + t.message_count + ' msgs</span>'
+            + '</div></div>';
+        } else if (item.type === 'contact') {
+          var ct = item.data;
+          var ctDate = ct.created_at ? new Date(ct.created_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '-';
+          var ctName = ct.nom || ct.email || 'Anonyme';
+          var ctPreview = (ct.message || ct.subject || '').substring(0, 70);
+          var ctStatusColor = ct.status === 'replied' ? '#16a34a' : '#f59e0b';
+          var ctStatusLabel = ct.status === 'replied' ? 'REPONDU' : 'NOUVEAU';
+          var ctTypeLabel = ct.contact_type === 'diagnostic' ? 'Diagnostic' : ct.contact_type === 'newsletter' ? 'Newsletter' : 'Contact';
+          return '<div class="conv-item" style="border-left:3px solid #a78bfa;" onclick="loadContactDetail(\'' + ct.id + '\', this)">'
+            + '<div class="conv-item-top">'
+            + '<span class="conv-visitor">\uD83D\uDCE9 ' + escapeHtml(ctName) + '</span>'
+            + '<span class="conv-time">' + ctDate + '</span>'
+            + '</div>'
+            + '<div class="conv-preview">' + escapeHtml(ctPreview) + '</div>'
+            + '<div class="conv-meta">'
+            + '<span class="conv-badge" style="background:#a78bfa20;color:#a78bfa;">' + ctTypeLabel + '</span>'
+            + '<span class="conv-badge" style="background:' + ctStatusColor + '20;color:' + ctStatusColor + ';">' + ctStatusLabel + '</span>'
+            + (ct.treatment ? '<span class="conv-badge" style="background:#3b82f620;color:#60a5fa;">' + escapeHtml(ct.treatment) + '</span>' : '')
             + '</div></div>';
         } else {
           var c = item.data;
@@ -889,6 +927,47 @@ import { supabaseConfig } from '../../lib/supabase';
       const msgsEl = detail.querySelector('.conv-messages');
       if (msgsEl) msgsEl.scrollTop = msgsEl.scrollHeight;
     }
+
+    function loadContactDetail(contactId, el) {
+      document.querySelectorAll('.conv-item').forEach(function(i) { i.classList.remove('active'); });
+      if (el) el.classList.add('active');
+
+      var ct = contactSubmissions.find(function(c) { return String(c.id) === String(contactId); });
+      if (!ct) return;
+
+      var detail = document.getElementById('convDetail');
+      var date = ct.created_at ? new Date(ct.created_at).toLocaleString('fr-FR') : '-';
+      var statusColor = ct.status === 'replied' ? '#16a34a' : '#f59e0b';
+      var statusLabel = ct.status === 'replied' ? 'REPONDU' : 'NOUVEAU';
+      var typeLabel = ct.contact_type === 'diagnostic' ? 'Diagnostic GLP-1' : ct.contact_type === 'newsletter' ? 'Newsletter' : 'Formulaire Contact';
+
+      var fields = [];
+      if (ct.nom) fields.push(['Nom', ct.nom]);
+      if (ct.email) fields.push(['Email', ct.email]);
+      if (ct.telephone) fields.push(['Telephone', ct.telephone]);
+      if (ct.age) fields.push(['Age', ct.age]);
+      if (ct.treatment) fields.push(['Traitement', ct.treatment]);
+      if (ct.concerns && ct.concerns.length) fields.push(['Preoccupations', ct.concerns.join(', ')]);
+      if (ct.newsletter) fields.push(['Newsletter', 'Oui']);
+
+      detail.innerHTML = '<div class="conv-detail-header">'
+        + '<div>'
+        + '<h3>\uD83D\uDCE9 ' + escapeHtml(ct.nom || ct.email || 'Contact') + '</h3>'
+        + '<div class="conv-detail-meta">' + typeLabel + ' · ' + date + ' · <span style="color:' + statusColor + ';font-weight:700;">' + statusLabel + '</span></div>'
+        + '</div></div>'
+        + '<div class="conv-messages" style="gap:1rem;">'
+        + '<div style="background:#111827;border-radius:12px;padding:1.25rem;border:1px solid #1e293b;">'
+        + '<h4 style="color:#a78bfa;font-size:0.85rem;margin-bottom:0.75rem;">' + escapeHtml(ct.subject || 'Sans sujet') + '</h4>'
+        + fields.map(function(f) {
+            return '<div style="display:flex;gap:8px;margin-bottom:6px;font-size:0.84rem;">'
+              + '<span style="color:#64748b;min-width:120px;">' + f[0] + '</span>'
+              + '<span style="color:#e2e8f0;">' + escapeHtml(f[1]) + '</span></div>';
+          }).join('')
+        + '</div>'
+        + (ct.message ? '<div class="msg-row assistant"><div class="msg-avatar">\uD83D\uDCE9</div><div class="msg-content"><div class="msg-sender">MESSAGE</div><div class="msg-bubble">' + escapeHtml(ct.message) + '</div><div class="msg-time">' + date + '</div></div></div>' : '')
+        + '</div>';
+    }
+    window.loadContactDetail = loadContactDetail;
 
     function loadTawkConversation(tawkId, el) {
       // Active state
