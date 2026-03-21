@@ -539,6 +539,7 @@ import { supabaseConfig } from '../../lib/supabase';
               <button data-filter="cat:side_effects" onclick="filterConvs('cat:side_effects', this)" style="color:#fbbf24;">Effets sec.</button>
               <button data-filter="source:coach" onclick="filterConvs('source:coach', this)" style="color:#34d399;">Coach IA</button>
               <button data-filter="source:tawk" onclick="filterConvs('source:tawk', this)" style="color:#f59e0b;">Tawk</button>
+              <button data-filter="source:contact" onclick="filterConvs('source:contact', this)" style="color:#a78bfa;">Contact</button>
             </div>
           </div>
           <div id="convListContent">
@@ -557,9 +558,9 @@ import { supabaseConfig } from '../../lib/supabase';
         </div>
       </div>
 
-      <!-- SAV Emails -->
+      <!-- SAV Emails + Contacts -->
       <div class="feedback-section" id="savSection">
-        <h2>📧 Emails SAV</h2>
+        <h2>📧 Emails SAV & Contacts</h2>
         <div class="stats-grid" style="margin-bottom: 1.5rem;">
           <div class="stat-card">
             <div class="label">Emails recus</div>
@@ -570,6 +571,11 @@ import { supabaseConfig } from '../../lib/supabase';
             <div class="label">Repondus</div>
             <div class="value" id="statEmailsReplied" style="color: #16a34a;">-</div>
             <div class="sub" id="statEmailsRate">taux: -</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Formulaire Contact</div>
+            <div class="value" id="statContactsTotal" style="color: #a78bfa;">-</div>
+            <div class="sub" id="statContactsNew">-</div>
           </div>
           <div class="stat-card">
             <div class="label">Dernier envoi</div>
@@ -592,6 +598,12 @@ import { supabaseConfig } from '../../lib/supabase';
           <div class="feedback-panel" style="flex: 1;">
             <h3>✅ Reponses envoyees</h3>
             <div id="repliesList" style="max-height: 400px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel" style="flex: 2;">
+            <h3>📋 Formulaire Contact</h3>
+            <div id="contactsList" style="max-height: 400px; overflow-y: auto;">
               <div class="feedback-empty">Chargement...</div>
             </div>
           </div>
@@ -708,6 +720,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
         loadFeedbackAnalytics();
         loadSavEmails();
+        loadContacts();
       } catch(e) {
         console.error('loadData error:', e);
         document.getElementById('convListContent').innerHTML = '<div class="conv-empty">Erreur de chargement — voir console</div>';
@@ -1114,6 +1127,76 @@ import { supabaseConfig } from '../../lib/supabase';
         if (el) el.innerHTML = '<div class="feedback-empty" style="color:#64748b;">Section SAV pas encore active.<br>Migration + premier run agent necessaires.</div>';
         const rl = document.getElementById('repliesList');
         if (rl) rl.innerHTML = '<div class="feedback-empty" style="color:#64748b;">-</div>';
+      }
+    }
+
+    // Load contacts from form
+    async function loadContacts() {
+      try {
+        const { data: contacts, error } = await sb
+          .from('contacts')
+          .select('*')
+          .order('created_at', { ascending: false })
+          .limit(50);
+
+        if (error) {
+          document.getElementById('contactsList').innerHTML = '<div class="feedback-empty" style="color:#64748b;">Table contacts pas encore creee.</div>';
+          return;
+        }
+
+        var all = contacts || [];
+        // Filter out test entries
+        all = all.filter(function(c) { return !c.email || !c.email.includes('test-'); });
+
+        // Stats
+        document.getElementById('statContactsTotal').textContent = all.length;
+        var recent = all.filter(function(c) {
+          return c.created_at && (Date.now() - new Date(c.created_at).getTime()) < 7 * 86400000;
+        }).length;
+        document.getElementById('statContactsNew').textContent = recent + ' cette semaine';
+
+        // Render
+        var el = document.getElementById('contactsList');
+        if (all.length === 0) {
+          el.innerHTML = '<div class="feedback-empty">Aucun contact recu.</div>';
+        } else {
+          el.innerHTML = all.map(function(c) {
+            var d = c.created_at ? new Date(c.created_at).toLocaleDateString('fr-FR', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '-';
+            var subjectMap = {
+              'information-medicaments': 'Info medicaments',
+              'prix-disponibilite': 'Prix/Dispo',
+              'effets-secondaires': 'Effets secondaires',
+              'remboursement': 'Remboursement',
+              'temoignage': 'Temoignage',
+              'medecin-prescription': 'Medecin',
+              'partenariat': 'Partenariat',
+              'autre': 'Autre',
+              'Diagnostic GLP-1': 'Coach IA Diagnostic'
+            };
+            var subjectLabel = subjectMap[c.subject] || c.subject || '(sans sujet)';
+            var statusColor = c.status === 'new' ? '#f59e0b' : c.status === 'replied' ? '#16a34a' : '#a78bfa';
+            var statusLabel = c.status === 'replied' ? 'REPONDU' : c.status === 'new' ? 'NOUVEAU' : (c.status || 'NOUVEAU').toUpperCase();
+            var treatBadge = c.treatment ? '<span style="background:#1e293b;padding:2px 8px;border-radius:4px;font-size:0.7rem;color:#60a5fa;">'+escapeHtml(c.treatment)+'</span>' : '';
+            var nlBadge = c.newsletter ? '<span style="background:#16a34a20;padding:2px 8px;border-radius:4px;font-size:0.7rem;color:#16a34a;">Newsletter</span>' : '';
+            var msgPreview = c.message ? escapeHtml(c.message.substring(0, 100)) + (c.message.length > 100 ? '...' : '') : '';
+
+            return '<div style="padding:10px 12px;border-bottom:1px solid #1e293b;border-left:3px solid #a78bfa;">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<strong style="color:#e2e8f0;font-size:0.88rem;">' + escapeHtml(c.nom || c.email) + '</strong>'
+              + '<span style="font-size:0.7rem;font-weight:600;color:'+statusColor+';background:'+statusColor+'20;padding:2px 8px;border-radius:4px;">'+statusLabel+'</span>'
+              + '</div>'
+              + '<div style="font-size:0.82rem;color:#e2e8f0;margin-top:2px;">' + escapeHtml(c.email) + '</div>'
+              + '<div style="font-size:0.82rem;color:#94a3b8;margin-top:2px;">' + escapeHtml(subjectLabel) + '</div>'
+              + (msgPreview ? '<div style="font-size:0.78rem;color:#64748b;margin-top:4px;line-height:1.3;">' + msgPreview + '</div>' : '')
+              + '<div style="display:flex;gap:8px;align-items:center;margin-top:4px;flex-wrap:wrap;">'
+              + '<span style="font-size:0.72rem;color:#64748b;">' + d + '</span>'
+              + treatBadge + nlBadge
+              + '</div></div>';
+          }).join('');
+        }
+      } catch(e) {
+        console.log('Contacts load error:', e.message);
+        document.getElementById('contactsList').innerHTML = '<div class="feedback-empty" style="color:#64748b;">Erreur chargement contacts.</div>';
       }
     }
 
