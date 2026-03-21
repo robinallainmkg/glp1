@@ -9,119 +9,261 @@ import { supabaseConfig } from '../../lib/supabase';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A/B Testing - GLP1 Admin</title>
-  <style>
+  <style is:global>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #e2e8f0; }
     .admin-layout { margin-left: 260px; min-height: 100vh; }
-    .page-header { background: #111827; border-bottom: 1px solid #1e293b; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
-    .page-header-left p { font-size: 0.88rem; color: #94a3b8; margin-top: 0.25rem; }
+
+    /* ===== HEADER ===== */
+    .page-header {
+      background: #111827;
+      border-bottom: 1px solid #1e293b;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; }
+    .page-header-left p { font-size: 0.85rem; color: #94a3b8; margin-top: 0.25rem; }
     .header-actions { display: flex; gap: 0.75rem; align-items: center; }
     .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #111827; color: #c8d6e5; font-size: 0.82rem; cursor: pointer; }
     .refresh-btn:hover { background: #1a2332; }
     .last-update { font-size: 0.72rem; color: #64748b; }
     .main { padding: 2rem; }
 
-    /* Stats grid */
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
-    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
-    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .stat-card .sub { font-size: 0.75rem; color: #64748b; margin-top: 0.35rem; }
+    /* ===== STAT CARDS ===== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .stat-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      border-top: 3px solid #334155;
+    }
+    .stat-card.sc-green { border-top-color: #22c55e; }
+    .stat-card.sc-yellow { border-top-color: #eab308; }
+    .stat-card.sc-blue { border-top-color: #3b82f6; }
+    .stat-card.sc-purple { border-top-color: #8b5cf6; }
+    .stat-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; margin-bottom: 0.4rem; }
+    .stat-value { font-size: 2rem; font-weight: 800; }
+    .stat-sub { font-size: 0.72rem; color: #475569; margin-top: 0.3rem; }
 
-    /* Actions bar */
-    .actions-bar { display: flex; gap: 0.75rem; margin-bottom: 2rem; align-items: center; }
-    .btn { padding: 0.55rem 1.1rem; border-radius: 8px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.82rem; cursor: pointer; font-weight: 600; transition: all 0.15s; }
+    /* ===== ACTIONS BAR ===== */
+    .actions-bar { display: flex; gap: 0.75rem; margin-bottom: 1.75rem; align-items: center; flex-wrap: wrap; }
+    .btn { padding: 0.55rem 1.15rem; border-radius: 8px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.82rem; cursor: pointer; font-weight: 600; transition: all 0.15s; font-family: inherit; }
     .btn:hover { background: #1e293b; }
-    .btn-primary { background: #3b82f6; border-color: #3b82f6; color: white; }
-    .btn-primary:hover { background: #2563eb; }
+    .btn-primary { background: #6366f1; border-color: #6366f1; color: white; }
+    .btn-primary:hover { background: #4f46e5; }
     .btn-green { background: #059669; border-color: #059669; color: white; }
     .btn-green:hover { background: #047857; }
     .btn-red { background: #dc2626; border-color: #dc2626; color: white; }
     .btn-red:hover { background: #b91c1c; }
-    .filter-pills { display: flex; gap: 0.5rem; margin-left: auto; }
-    .pill { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; }
-    .pill:hover { border-color: #334155; color: #e2e8f0; }
-    .pill.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .btn-sm { padding: 0.4rem 0.85rem; font-size: 0.75rem; }
+    .pills { display: flex; gap: 4px; margin-left: auto; background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 3px; }
+    .pill { padding: 0.35rem 0.85rem; border-radius: 7px; border: none; background: transparent; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; font-family: inherit; }
+    .pill.active { background: #3b82f6; color: white; }
 
-    /* Test cards */
-    .test-card { background: #111827; border: 1px solid #1e293b; border-radius: 14px; padding: 1.5rem; margin-bottom: 1.25rem; transition: border-color 0.15s; }
-    .test-card:hover { border-color: #334155; }
-    .test-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-    .test-status { display: inline-flex; align-items: center; gap: 0.35rem; padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
-    .ts-running { background: #052e16; color: #4ade80; }
-    .ts-running::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: pulse-dot 2s infinite; }
-    .ts-paused { background: #451a03; color: #fbbf24; }
-    .ts-completed { background: #1e3a5f; color: #93c5fd; }
-    .ts-draft { background: #1e293b; color: #64748b; }
-    .test-name { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; flex: 1; }
-    .test-meta { font-size: 0.75rem; color: #64748b; }
-    .test-description { font-size: 0.85rem; color: #94a3b8; margin-bottom: 1.25rem; line-height: 1.5; }
+    /* ===== TEST CARD ===== */
+    .test-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .tc-header {
+      padding: 1.5rem 1.75rem 1.25rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .tc-header-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+    .tc-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 10px; border-radius: 20px;
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .tc-badge-running { background: #052e16; color: #4ade80; }
+    .tc-badge-running::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: blink 2s infinite; }
+    .tc-badge-paused { background: #422006; color: #fbbf24; }
+    .tc-badge-completed { background: #172554; color: #60a5fa; }
+    .tc-badge-draft { background: #1e293b; color: #94a3b8; }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .tc-name { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; font-family: 'Courier New', monospace; }
+    .tc-meta { font-size: 0.75rem; color: #64748b; margin-top: 0.15rem; }
+    .tc-desc { font-size: 0.82rem; color: #94a3b8; line-height: 1.6; margin-top: 0.65rem; }
 
-    /* Variant table inside test card */
-    .variant-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
-    .variant-table th { text-align: left; padding: 0.6rem 0.75rem; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #1e293b; }
-    .variant-table td { padding: 0.6rem 0.75rem; font-size: 0.85rem; border-bottom: 1px solid #1a2332; }
-    .variant-table tr:last-child td { border-bottom: none; }
-    .variant-table tr:hover td { background: #0f1520; }
-    .variant-name { font-weight: 600; color: #e2e8f0; }
-    .variant-control { color: #94a3b8; }
-    .delta-positive { color: #4ade80; font-weight: 700; }
-    .delta-negative { color: #f87171; font-weight: 700; }
-    .delta-neutral { color: #64748b; }
+    /* ===== VARIANT PREVIEWS (visual mockup) ===== */
+    .tc-previews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1.5rem 1.75rem;
+      border-bottom: 1px solid #1e293b;
+      background: #0d1117;
+    }
+    .preview-card {
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #111827;
+    }
+    .preview-label {
+      padding: 0.6rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .preview-label-a { background: #172554; color: #60a5fa; }
+    .preview-label-b { background: #052e16; color: #4ade80; }
+    .preview-mockup {
+      padding: 1.25rem;
+      background: #f8fafc;
+      color: #1e293b;
+      min-height: 120px;
+    }
+    .mock-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .mock-h1 { font-size: 0.95rem; font-weight: 800; color: #1e293b; margin-bottom: 0.5rem; line-height: 1.3; }
+    .mock-p { font-size: 0.68rem; color: #64748b; margin-bottom: 0.85rem; line-height: 1.5; }
+    .mock-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 6px 14px; border-radius: 10px;
+      font-size: 0.72rem; font-weight: 700; color: white;
+      border: none;
+    }
+    .mock-btn-blue { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+    .mock-btn-green { background: linear-gradient(135deg, #16a34a, #059669); }
+    .mock-btn-secondary {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 6px 14px; border-radius: 10px;
+      font-size: 0.72rem; font-weight: 700; color: white;
+      background: linear-gradient(135deg, #16a34a, #059669);
+      border: none; margin-left: 6px;
+    }
 
-    /* Significance bar */
-    .sig-box { background: #0f1520; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
-    .sig-bar-wrap { height: 8px; background: #1e293b; border-radius: 4px; overflow: hidden; margin-bottom: 0.6rem; }
-    .sig-bar { height: 100%; border-radius: 4px; transition: width 0.5s; }
-    .sig-bar.significant { background: linear-gradient(90deg, #059669, #4ade80); }
-    .sig-bar.not-significant { background: linear-gradient(90deg, #d97706, #fbbf24); }
-    .sig-details { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .sig-detail { font-size: 0.78rem; }
-    .sig-label { color: #64748b; }
-    .sig-value { font-weight: 700; margin-left: 0.35rem; }
-    .sig-pass { color: #4ade80; }
-    .sig-fail { color: #fbbf24; }
+    /* ===== DATA TABLE ===== */
+    .tc-data { padding: 1.5rem 1.75rem; }
+    .tc-section-label {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      color: #475569; margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b;
+    }
+    .vtable { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; }
+    .vtable th {
+      text-align: left; padding: 0.6rem 0.85rem;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+      color: #475569; background: #0d1117; border-bottom: 1px solid #1e293b;
+    }
+    .vtable td { padding: 0.75rem 0.85rem; font-size: 0.85rem; border-bottom: 1px solid #141c2e; }
+    .vtable tr:last-child td { border-bottom: none; }
+    .vtable tr:hover td { background: rgba(255,255,255,0.02); }
+    .vname { font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+    .vid-tag {
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem; font-weight: 700;
+      padding: 2px 7px; border-radius: 5px;
+    }
+    .vid-a { background: #172554; color: #60a5fa; }
+    .vid-b { background: #052e16; color: #4ade80; }
+    .vid-c { background: #422006; color: #fbbf24; }
+    .vlabel { color: #94a3b8; font-weight: 500; font-size: 0.82rem; }
+    .mono { font-family: 'Courier New', monospace; font-weight: 600; }
+    .delta-up { color: #4ade80; font-weight: 800; font-family: 'Courier New', monospace; }
+    .delta-down { color: #f87171; font-weight: 800; font-family: 'Courier New', monospace; }
+    .delta-none { color: #475569; }
+    .winner-tag { background: #422006; color: #fbbf24; font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 5px; margin-left: 0.4rem; }
 
-    /* Chart */
-    .chart-container { background: #0f1520; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; }
-    .chart-title { font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.75rem; }
-    canvas { width: 100% !important; height: 200px !important; }
+    /* ===== SIGNIFICANCE PANEL ===== */
+    .sig-panel {
+      background: #0d1117;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .sig-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem; }
+    .sig-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; }
+    .sig-verdict {
+      font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 8px;
+    }
+    .sig-yes { background: #052e16; color: #4ade80; }
+    .sig-no { background: #1e293b; color: #fbbf24; }
+    .sig-bar-bg { height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; margin-bottom: 1rem; position: relative; }
+    .sig-bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s; }
+    .sig-fill-ok { background: linear-gradient(90deg, #22c55e, #4ade80); }
+    .sig-fill-wait { background: linear-gradient(90deg, #ca8a04, #eab308); }
+    .sig-threshold { position: absolute; top: -3px; bottom: -3px; width: 2px; background: white; opacity: 0.3; border-radius: 1px; }
+    .sig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    .sig-box { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; }
+    .sig-box-label { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #475569; margin-bottom: 0.3rem; }
+    .sig-box-val { font-size: 1rem; font-weight: 800; font-family: 'Courier New', monospace; }
+    .sig-ok { color: #4ade80; }
+    .sig-wait { color: #fbbf24; }
+    .sig-neutral { color: #94a3b8; }
+    .sample-row { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid #1e293b; }
+    .sample-bar-bg { flex: 1; height: 4px; background: #1e293b; border-radius: 2px; overflow: hidden; }
+    .sample-bar-fill { height: 100%; background: #6366f1; border-radius: 2px; transition: width 0.5s; }
+    .sample-text { font-size: 0.7rem; color: #64748b; font-family: 'Courier New', monospace; white-space: nowrap; }
 
-    /* Test card actions */
-    .test-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .test-actions .btn { font-size: 0.75rem; padding: 0.4rem 0.85rem; }
+    /* ===== CHART ===== */
+    .chart-box { background: #0d1117; border: 1px solid #1e293b; border-radius: 12px; padding: 1rem; margin-bottom: 1.25rem; }
+    .chart-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
+    .chart-title { font-size: 0.75rem; font-weight: 700; color: #94a3b8; }
+    .chart-legend { display: flex; gap: 1rem; }
+    .chart-legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.7rem; color: #64748b; }
+    .chart-dot { width: 8px; height: 8px; border-radius: 2px; }
+    canvas { width: 100% !important; height: 180px !important; display: block; }
 
-    /* Create test modal */
+    /* ===== CARD FOOTER ===== */
+    .tc-actions {
+      padding: 1rem 1.75rem;
+      background: #0d1117;
+      border-top: 1px solid #1e293b;
+      display: flex; gap: 0.5rem; align-items: center;
+    }
+    .tc-actions .spacer { flex: 1; }
+    .tc-duration { font-size: 0.7rem; color: #475569; font-family: 'Courier New', monospace; }
+
+    /* ===== MODAL ===== */
     .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 500; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
     .modal-overlay.open { display: flex; }
-    .modal { background: #111827; border: 1px solid #1e293b; border-radius: 16px; padding: 2rem; width: 600px; max-width: 90vw; max-height: 85vh; overflow-y: auto; }
-    .modal h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; }
-    .form-group { margin-bottom: 1.25rem; }
-    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.04em; }
-    .form-input { width: 100%; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #e2e8f0; font-size: 0.85rem; }
-    .form-input:focus { outline: none; border-color: #3b82f6; }
-    .form-input::placeholder { color: #475569; }
-    textarea.form-input { resize: vertical; min-height: 80px; }
-    select.form-input { cursor: pointer; }
+    .modal { background: #111827; border: 1px solid #1e293b; border-radius: 16px; padding: 2rem; width: 600px; max-width: 92vw; max-height: 85vh; overflow-y: auto; }
+    .modal h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .modal .modal-sub { font-size: 0.82rem; color: #64748b; margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1.15rem; }
+    .form-group label { display: block; font-size: 0.72rem; font-weight: 700; color: #94a3b8; margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .form-input { width: 100%; padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid #1e293b; background: #0d1117; color: #e2e8f0; font-size: 0.85rem; font-family: inherit; }
+    .form-input:focus { outline: none; border-color: #6366f1; }
+    .form-input::placeholder { color: #334155; }
+    textarea.form-input { resize: vertical; min-height: 70px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .variant-builder { background: #0f1520; border-radius: 10px; padding: 1rem; }
-    .variant-row { display: grid; grid-template-columns: 80px 1fr 80px 40px; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
-    .variant-row input { padding: 0.4rem 0.6rem; border-radius: 6px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.82rem; }
-    .variant-row .remove-variant { background: none; border: none; color: #64748b; cursor: pointer; font-size: 1rem; padding: 0.25rem; }
-    .variant-row .remove-variant:hover { color: #ef4444; }
-    .add-variant-btn { background: none; border: 1px dashed #334155; color: #64748b; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.78rem; cursor: pointer; margin-top: 0.5rem; }
-    .add-variant-btn:hover { border-color: #3b82f6; color: #3b82f6; }
-    .modal-actions { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem; }
+    .variant-builder { background: #0d1117; border-radius: 10px; padding: 0.85rem; border: 1px solid #1e293b; }
+    .variant-row { display: grid; grid-template-columns: 70px 1fr 65px 30px; gap: 0.4rem; align-items: center; margin-bottom: 0.4rem; }
+    .variant-row input { padding: 0.4rem 0.6rem; border-radius: 6px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.82rem; font-family: inherit; }
+    .variant-row input:focus { outline: none; border-color: #6366f1; }
+    .variant-row .rm-v { background: none; border: none; color: #475569; cursor: pointer; font-size: 1rem; }
+    .variant-row .rm-v:hover { color: #f87171; }
+    .add-v { background: none; border: 1px dashed #334155; color: #64748b; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.75rem; cursor: pointer; margin-top: 0.4rem; font-family: inherit; }
+    .add-v:hover { border-color: #6366f1; color: #818cf8; }
+    .modal-btns { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #1e293b; }
 
-    /* History */
+    /* ===== HISTORY ===== */
     .history-section { margin-top: 2rem; }
-    .section-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
+    .section-divider { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #1e293b; }
 
-    .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
+    .empty-state { text-align: center; padding: 3rem; color: #475569; }
+    .empty-state-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .empty-state-sub { font-size: 0.78rem; color: #334155; }
 
-    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: 1fr 1fr; } .sig-grid { grid-template-columns: 1fr 1fr; } .tc-previews { grid-template-columns: 1fr; } }
     @media (max-width: 768px) { .admin-layout { margin-left: 0; } .main { padding: 1rem; } .stats-grid { grid-template-columns: 1fr 1fr; } .form-row { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -133,10 +275,10 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="page-header">
     <div class="page-header-left">
       <h1>A/B Testing</h1>
-      <p>Experimentation et optimisation des conversions — Coach IA, leads, affiliates</p>
+      <p>Experimentation et optimisation des conversions</p>
     </div>
     <div class="header-actions">
-      <span class="last-update" id="lastUpdate">-</span>
+      <span class="last-update" id="lastUpdate">--:--</span>
       <button class="refresh-btn" onclick="loadAll()">&#x27F3; Rafraichir</button>
     </div>
   </div>
@@ -144,32 +286,32 @@ import { supabaseConfig } from '../../lib/supabase';
   <div class="main">
     <!-- Stats -->
     <div class="stats-grid">
-      <div class="stat-card">
-        <div class="label">Tests actifs</div>
-        <div class="value" id="statRunning" style="color:#4ade80">-</div>
-        <div class="sub">En cours</div>
+      <div class="stat-card sc-green">
+        <div class="stat-label">Tests actifs</div>
+        <div class="stat-value" id="statRunning" style="color:#4ade80">-</div>
+        <div class="stat-sub">En cours</div>
       </div>
-      <div class="stat-card">
-        <div class="label">Tests pauses</div>
-        <div class="value" id="statPaused" style="color:#fbbf24">-</div>
-        <div class="sub">En attente</div>
+      <div class="stat-card sc-yellow">
+        <div class="stat-label">En pause</div>
+        <div class="stat-value" id="statPaused" style="color:#eab308">-</div>
+        <div class="stat-sub">En attente</div>
       </div>
-      <div class="stat-card">
-        <div class="label">Winners declares</div>
-        <div class="value" id="statCompleted" style="color:#3b82f6">-</div>
-        <div class="sub">Termines</div>
+      <div class="stat-card sc-blue">
+        <div class="stat-label">Termines</div>
+        <div class="stat-value" id="statCompleted" style="color:#3b82f6">-</div>
+        <div class="stat-sub">Winners declares</div>
       </div>
-      <div class="stat-card">
-        <div class="label">Lift moyen</div>
-        <div class="value" id="statAvgLift" style="color:#a78bfa">-</div>
-        <div class="sub">Sur les winners</div>
+      <div class="stat-card sc-purple">
+        <div class="stat-label">Lift moyen</div>
+        <div class="stat-value" id="statAvgLift" style="color:#a78bfa">-</div>
+        <div class="stat-sub">Sur tests gagnes</div>
       </div>
     </div>
 
-    <!-- Actions bar -->
+    <!-- Actions -->
     <div class="actions-bar">
       <button class="btn btn-primary" onclick="openCreateModal()">+ Nouveau test</button>
-      <div class="filter-pills">
+      <div class="pills">
         <button class="pill active" data-filter="all" onclick="setStatusFilter('all')">Tous</button>
         <button class="pill" data-filter="running" onclick="setStatusFilter('running')">Actifs</button>
         <button class="pill" data-filter="paused" onclick="setStatusFilter('paused')">Pauses</button>
@@ -178,29 +320,29 @@ import { supabaseConfig } from '../../lib/supabase';
       </div>
     </div>
 
-    <!-- Test cards -->
-    <div id="testsContainer"><div class="empty-state">Chargement...</div></div>
+    <!-- Tests -->
+    <div id="testsContainer"><div class="empty-state"><div class="empty-state-title">Chargement...</div></div></div>
 
-    <!-- Completed tests history -->
     <div class="history-section" id="historySection" style="display:none">
-      <div class="section-title">Historique des tests termines</div>
+      <div class="section-divider">Tests termines</div>
       <div id="historyContainer"></div>
     </div>
   </div>
 </div>
 
-<!-- Create/Edit Modal -->
+<!-- Modal -->
 <div class="modal-overlay" id="createModal">
   <div class="modal">
     <h2 id="modalTitle">Nouveau test A/B</h2>
+    <p class="modal-sub">Definissez l'hypothese, les variantes et la metrique a suivre.</p>
     <input type="hidden" id="editTestId" value="">
     <div class="form-group">
       <label>Nom du test</label>
       <input type="text" class="form-input" id="formName" placeholder="ex: homepage_hero_cta_v2">
     </div>
     <div class="form-group">
-      <label>Description</label>
-      <textarea class="form-input" id="formDescription" placeholder="Hypothese : changer le CTA principal augmente les conversions coach IA..."></textarea>
+      <label>Description / Hypothese</label>
+      <textarea class="form-input" id="formDescription" placeholder="Hypothese : ..."></textarea>
     </div>
     <div class="form-row">
       <div class="form-group">
@@ -235,7 +377,7 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Echantillon min. par variante</label>
+        <label>Echantillon min. / variante</label>
         <input type="number" class="form-input" id="formSample" value="1000" min="100">
       </div>
       <div class="form-group">
@@ -243,27 +385,25 @@ import { supabaseConfig } from '../../lib/supabase';
         <input type="text" class="form-input" id="formSecondary" placeholder="coach_open, tarifs_visit">
       </div>
     </div>
-
     <div class="form-group">
       <label>Variantes</label>
       <div class="variant-builder" id="variantBuilder">
         <div class="variant-row">
-          <input type="text" value="control" readonly style="opacity:0.6" class="vid">
+          <input type="text" value="control" readonly style="opacity:0.5" class="vid">
           <input type="text" value="Original" placeholder="Label" class="vlabel">
           <input type="number" value="50" min="1" max="100" class="vweight">
-          <span style="color:#64748b;font-size:0.72rem">%</span>
+          <span style="color:#475569;font-size:0.7rem">%</span>
         </div>
         <div class="variant-row">
           <input type="text" value="B" placeholder="ID" class="vid">
           <input type="text" value="Variante B" placeholder="Label" class="vlabel">
           <input type="number" value="50" min="1" max="100" class="vweight">
-          <button class="remove-variant" onclick="this.closest('.variant-row').remove()">x</button>
+          <button class="rm-v" onclick="this.closest('.variant-row').remove()">&times;</button>
         </div>
       </div>
-      <button class="add-variant-btn" onclick="addVariantRow()">+ Ajouter une variante</button>
+      <button class="add-v" onclick="addVariantRow()">+ Ajouter une variante</button>
     </div>
-
-    <div class="modal-actions">
+    <div class="modal-btns">
       <button class="btn" onclick="closeCreateModal()">Annuler</button>
       <button class="btn btn-primary" onclick="saveTest()">Creer le test</button>
     </div>
@@ -274,584 +414,324 @@ import { supabaseConfig } from '../../lib/supabase';
   const SB_URL = supabaseUrl;
   const SB_KEY = supabaseAnonKey;
   let allTests = [];
-  let allStats = [];
+  let allStats = {};
   let statusFilter = 'all';
 
   function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
   async function sbFetch(table, query) {
-    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}`, {
-      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+    const r = await fetch(SB_URL + '/rest/v1/' + table + '?' + query, {
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
     });
     if (!r.ok) throw new Error(await r.text());
     return r.json();
   }
 
   async function sbRpc(body, table, method, query) {
-    const opts = {
+    const r = await fetch(SB_URL + '/rest/v1/' + table + (query ? '?' + query : ''), {
       method: method || 'POST',
-      headers: {
-        'apikey': SB_KEY,
-        'Authorization': `Bearer ${SB_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=representation'
-      }
-    };
-    if (body) opts.body = JSON.stringify(body);
-    const url = `${SB_URL}/rest/v1/${table}${query ? '?' + query : ''}`;
-    const r = await fetch(url, opts);
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
+      body: body ? JSON.stringify(body) : undefined
+    });
     if (!r.ok) throw new Error(await r.text());
     return r.json();
   }
 
-  // ============= Statistical significance =============
-  function calcZTest(impressionsA, conversionsA, impressionsB, conversionsB) {
-    if (impressionsA < 1 || impressionsB < 1) return { z: 0, pValue: 1, significant: false, confidence: 0 };
-    const pA = conversionsA / impressionsA;
-    const pB = conversionsB / impressionsB;
-    const pPool = (conversionsA + conversionsB) / (impressionsA + impressionsB);
-    const se = Math.sqrt(pPool * (1 - pPool) * (1 / impressionsA + 1 / impressionsB));
-    if (se === 0) return { z: 0, pValue: 1, significant: false, confidence: 0 };
-    const z = (pB - pA) / se;
-    // Two-tailed p-value approximation
-    const pValue = 2 * (1 - normalCDF(Math.abs(z)));
-    return { z, pValue, significant: false, confidence: 1 - pValue, lift: pA > 0 ? ((pB - pA) / pA * 100) : 0 };
+  // Z-test
+  function calcZTest(nA, cA, nB, cB) {
+    if (nA < 1 || nB < 1) return { z: 0, pValue: 1, confidence: 0, lift: 0 };
+    var pA = cA / nA, pB = cB / nB;
+    var pPool = (cA + cB) / (nA + nB);
+    var se = Math.sqrt(pPool * (1 - pPool) * (1 / nA + 1 / nB));
+    if (se === 0) return { z: 0, pValue: 1, confidence: 0, lift: 0 };
+    var z = (pB - pA) / se;
+    var pValue = 2 * (1 - normalCDF(Math.abs(z)));
+    return { z: z, pValue: pValue, confidence: 1 - pValue, lift: pA > 0 ? ((pB - pA) / pA * 100) : 0 };
   }
-
   function normalCDF(x) {
-    const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429;
-    const p = 0.3275911;
-    const sign = x < 0 ? -1 : 1;
+    var a1=0.254829592, a2=-0.284496736, a3=1.421413741, a4=-1.453152027, a5=1.061405429, p=0.3275911;
+    var sign = x < 0 ? -1 : 1;
     x = Math.abs(x) / Math.SQRT2;
-    const t = 1.0 / (1.0 + p * x);
-    const y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
-    return 0.5 * (1.0 + sign * y);
+    var t = 1 / (1 + p * x);
+    var y = 1 - (((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+    return 0.5 * (1 + sign * y);
   }
 
-  // ============= Load data =============
+  // ===== VISUAL MOCKUPS for known tests =====
+  var TEST_PREVIEWS = {
+    'homepage_hero_cta': {
+      control: '<div class="mock-badge" style="background:#dbeafe;color:#1d4ed8">Mis a jour mars 2026</div><div class="mock-h1">Traitements GLP-1 en France :<br><span style="color:#1d4ed8">Le Guide Complet</span></div><div class="mock-p">Tout sur Ozempic, Wegovy et Mounjaro : <strong style="color:#16a34a">prix reels</strong>, remboursement, effets secondaires...</div><div><span class="mock-btn mock-btn-blue">Quel traitement choisir ? &#8250;</span><span class="mock-btn-secondary">Mon Espace Perso</span></div>',
+      B: '<div class="mock-badge" style="background:#dbeafe;color:#1d4ed8">Mis a jour mars 2026</div><div class="mock-h1">Traitements GLP-1 en France :<br><span style="color:#1d4ed8">Le Guide Complet</span></div><div class="mock-p">Tout sur Ozempic, Wegovy et Mounjaro : <strong style="color:#16a34a">prix reels</strong>, remboursement, effets secondaires...</div><div><span class="mock-btn mock-btn-green">&#128172; Posez vos questions au Coach IA &#8250;</span><span class="mock-btn-secondary">Mon Espace Perso</span></div>'
+    }
+  };
+
+  // ===== Load =====
   async function loadAll() {
     try {
-      // Load tests
       allTests = await sbFetch('ab_tests', 'select=*&order=created_at.desc');
-
-      // Load stats per test (impressions + conversions aggregated)
       allStats = {};
-      for (const test of allTests) {
-        if (test.status === 'draft') continue;
-        const [impressions, conversions] = await Promise.all([
-          sbFetch('ab_impressions', `select=variant_id&test_id=eq.${test.id}`),
-          sbFetch('ab_conversions', `select=variant_id,metric_name&test_id=eq.${test.id}`)
+      for (var t of allTests) {
+        if (t.status === 'draft') continue;
+        var res = await Promise.all([
+          sbFetch('ab_impressions', 'select=variant_id&test_id=eq.' + t.id),
+          sbFetch('ab_conversions', 'select=variant_id,metric_name&test_id=eq.' + t.id)
         ]);
-
-        const variants = test.variants || [];
-        const stats = {};
-        for (const v of variants) {
-          stats[v.id] = { impressions: 0, conversions: {}, totalPrimaryConv: 0 };
-        }
-        for (const imp of impressions) {
-          if (stats[imp.variant_id]) stats[imp.variant_id].impressions++;
-        }
-        for (const conv of conversions) {
+        var impressions = res[0], conversions = res[1];
+        var stats = {};
+        for (var v of (t.variants || [])) stats[v.id] = { impressions: 0, conversions: {}, totalPrimaryConv: 0 };
+        for (var imp of impressions) { if (stats[imp.variant_id]) stats[imp.variant_id].impressions++; }
+        for (var conv of conversions) {
           if (!stats[conv.variant_id]) continue;
-          if (!stats[conv.variant_id].conversions[conv.metric_name]) stats[conv.variant_id].conversions[conv.metric_name] = 0;
-          stats[conv.variant_id].conversions[conv.metric_name]++;
-          if (conv.metric_name === test.primary_metric) stats[conv.variant_id].totalPrimaryConv++;
+          stats[conv.variant_id].conversions[conv.metric_name] = (stats[conv.variant_id].conversions[conv.metric_name] || 0) + 1;
+          if (conv.metric_name === t.primary_metric) stats[conv.variant_id].totalPrimaryConv++;
         }
-        allStats[test.id] = stats;
+        allStats[t.id] = stats;
       }
-
       renderStats();
-      renderTests();
-      document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
+      renderAndDrawCharts();
+      document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString('fr-FR');
     } catch(err) {
-      document.getElementById('testsContainer').innerHTML = `<div style="background:#450a0a;border:1px solid #991b1b;padding:1rem;border-radius:10px;color:#fca5a5;font-size:0.85rem"><strong>Erreur:</strong> ${esc(err.message)}</div>`;
+      document.getElementById('testsContainer').innerHTML = '<div style="background:#450a0a;border:1px solid #991b1b;padding:1rem;border-radius:10px;color:#fca5a5;font-size:0.85rem"><strong>Erreur:</strong> ' + esc(err.message) + '</div>';
     }
   }
 
   function renderStats() {
-    const running = allTests.filter(t => t.status === 'running').length;
-    const paused = allTests.filter(t => t.status === 'paused').length;
-    const completed = allTests.filter(t => t.status === 'completed').length;
-
+    var running = allTests.filter(function(t){return t.status==='running'}).length;
+    var paused = allTests.filter(function(t){return t.status==='paused'}).length;
+    var completed = allTests.filter(function(t){return t.status==='completed'}).length;
     document.getElementById('statRunning').textContent = running;
     document.getElementById('statPaused').textContent = paused;
     document.getElementById('statCompleted').textContent = completed;
-
-    // Average lift from completed tests with winners
-    const lifts = [];
-    for (const test of allTests) {
-      if (test.status !== 'completed' || !test.winner_variant || test.winner_variant === 'control') continue;
-      const stats = allStats[test.id];
-      if (!stats) continue;
-      const control = stats['control'];
-      const winner = stats[test.winner_variant];
-      if (control && winner && control.impressions > 0) {
-        const rateC = control.totalPrimaryConv / control.impressions;
-        const rateW = winner.totalPrimaryConv / winner.impressions;
-        if (rateC > 0) lifts.push((rateW - rateC) / rateC * 100);
-      }
+    var lifts = [];
+    for (var t of allTests) {
+      if (t.status !== 'completed' || !t.winner_variant || t.winner_variant === 'control') continue;
+      var s = allStats[t.id]; if (!s) continue;
+      var c = s['control'], w = s[t.winner_variant];
+      if (c && w && c.impressions > 0) { var rC = c.totalPrimaryConv/c.impressions, rW = w.totalPrimaryConv/w.impressions; if (rC > 0) lifts.push((rW-rC)/rC*100); }
     }
-    document.getElementById('statAvgLift').textContent = lifts.length > 0 ? '+' + (lifts.reduce((a, b) => a + b, 0) / lifts.length).toFixed(1) + '%' : '-';
+    document.getElementById('statAvgLift').textContent = lifts.length > 0 ? '+' + (lifts.reduce(function(a,b){return a+b},0)/lifts.length).toFixed(1) + '%' : '-';
   }
 
+  var METRIC_LABELS = { coach_open:'Coach IA ouvert', newsletter_signup:'Newsletter signup', affiliate_click:'Clic affiliate', cta_click:'Clic CTA', tarifs_visit:'Visite /tarifs', diagnostic_start:'Diagnostic' };
+
   function renderTests() {
-    let tests = allTests;
-    if (statusFilter !== 'all') tests = tests.filter(t => t.status === statusFilter);
-
-    const active = tests.filter(t => t.status !== 'completed');
-    const completed = tests.filter(t => t.status === 'completed');
-
+    var tests = statusFilter === 'all' ? allTests : allTests.filter(function(t){return t.status === statusFilter});
+    var active = tests.filter(function(t){return t.status !== 'completed'});
+    var completed = tests.filter(function(t){return t.status === 'completed'});
     if (active.length === 0 && completed.length === 0) {
-      document.getElementById('testsContainer').innerHTML = '<div class="empty-state">Aucun test A/B — cliquez "Nouveau test" pour commencer</div>';
+      document.getElementById('testsContainer').innerHTML = '<div class="empty-state"><div class="empty-state-title">Aucun test A/B</div><div class="empty-state-sub">Cliquez "+ Nouveau test" pour commencer</div></div>';
       document.getElementById('historySection').style.display = 'none';
       return;
     }
-
-    document.getElementById('testsContainer').innerHTML = active.length > 0 ? active.map(t => renderTestCard(t)).join('') : '<div class="empty-state">Aucun test actif avec ce filtre</div>';
-
+    document.getElementById('testsContainer').innerHTML = active.length > 0 ? active.map(renderTestCard).join('') : '<div class="empty-state"><div class="empty-state-sub">Aucun test avec ce filtre</div></div>';
     if (completed.length > 0) {
       document.getElementById('historySection').style.display = '';
-      document.getElementById('historyContainer').innerHTML = completed.map(t => renderTestCard(t)).join('');
+      document.getElementById('historyContainer').innerHTML = completed.map(renderTestCard).join('');
     } else {
       document.getElementById('historySection').style.display = 'none';
     }
   }
 
   function renderTestCard(test) {
-    const variants = test.variants || [];
-    const stats = allStats[test.id] || {};
-    const statusCls = { running: 'ts-running', paused: 'ts-paused', completed: 'ts-completed', draft: 'ts-draft' };
-    const statusLabels = { running: 'Actif', paused: 'Pause', completed: 'Termine', draft: 'Brouillon' };
-
-    // Duration
-    let duration = '';
+    var variants = test.variants || [];
+    var stats = allStats[test.id] || {};
+    var badgeCls = { running:'tc-badge-running', paused:'tc-badge-paused', completed:'tc-badge-completed', draft:'tc-badge-draft' };
+    var badgeTxt = { running:'En cours', paused:'En pause', completed:'Termine', draft:'Brouillon' };
+    var duration = '';
     if (test.started_at) {
-      const start = new Date(test.started_at);
-      const end = test.ended_at ? new Date(test.ended_at) : new Date();
-      const days = Math.ceil((end - start) / 86400000);
-      duration = `${days} jour${days > 1 ? 's' : ''}`;
+      var days = Math.ceil((( test.ended_at ? new Date(test.ended_at) : new Date()) - new Date(test.started_at)) / 86400000);
+      duration = days + 'j';
+    }
+    var controlStats = stats['control'] || { impressions:0, totalPrimaryConv:0 };
+    var controlRate = controlStats.impressions > 0 ? controlStats.totalPrimaryConv / controlStats.impressions : 0;
+
+    // Variant table rows
+    var rows = '', bestSig = null;
+    for (var i = 0; i < variants.length; i++) {
+      var v = variants[i], vs = stats[v.id] || { impressions:0, totalPrimaryConv:0 };
+      var rate = vs.impressions > 0 ? vs.totalPrimaryConv / vs.impressions : 0;
+      var isCtrl = v.id === 'control';
+      var deltaHtml = '<span class="delta-none">&mdash;</span>';
+      if (!isCtrl && controlRate > 0) {
+        var lift = (rate - controlRate) / controlRate * 100;
+        deltaHtml = '<span class="' + (lift > 0 ? 'delta-up' : lift < 0 ? 'delta-down' : 'delta-none') + '">' + (lift >= 0 ? '+' : '') + lift.toFixed(1) + '%</span>';
+      }
+      if (!isCtrl && controlStats.impressions > 0 && vs.impressions > 0) {
+        var sig = calcZTest(controlStats.impressions, controlStats.totalPrimaryConv, vs.impressions, vs.totalPrimaryConv);
+        if (!bestSig || sig.confidence > bestSig.confidence) bestSig = sig;
+      }
+      var vidCls = isCtrl ? 'vid-a' : i === 1 ? 'vid-b' : 'vid-c';
+      var winTag = test.winner_variant === v.id ? '<span class="winner-tag">&#9733; WINNER</span>' : '';
+      rows += '<tr><td><div class="vname"><span class="vid-tag ' + vidCls + '">' + esc(v.id) + '</span><span class="vlabel">' + esc(v.label) + '</span>' + winTag + '</div></td><td class="mono">' + vs.impressions.toLocaleString('fr-FR') + '</td><td class="mono">' + vs.totalPrimaryConv.toLocaleString('fr-FR') + '</td><td class="mono">' + (rate * 100).toFixed(2) + '%</td><td>' + deltaHtml + '</td></tr>';
     }
 
-    // Control stats for delta calculations
-    const controlStats = stats['control'] || { impressions: 0, totalPrimaryConv: 0 };
-    const controlRate = controlStats.impressions > 0 ? controlStats.totalPrimaryConv / controlStats.impressions : 0;
-
-    // Build variant rows
-    let variantRows = '';
-    let bestVariant = null;
-    let bestSignificance = null;
-
-    for (const v of variants) {
-      const vs = stats[v.id] || { impressions: 0, totalPrimaryConv: 0 };
-      const rate = vs.impressions > 0 ? vs.totalPrimaryConv / vs.impressions : 0;
-      const rateStr = (rate * 100).toFixed(2) + '%';
-      const isControl = v.id === 'control';
-
-      let deltaStr = '-';
-      let deltaCls = 'delta-neutral';
-      if (!isControl && controlRate > 0) {
-        const lift = ((rate - controlRate) / controlRate * 100);
-        deltaStr = (lift >= 0 ? '+' : '') + lift.toFixed(1) + '%';
-        deltaCls = lift > 0 ? 'delta-positive' : lift < 0 ? 'delta-negative' : 'delta-neutral';
-      }
-
-      // Significance vs control
-      if (!isControl && controlStats.impressions > 0 && vs.impressions > 0) {
-        const result = calcZTest(controlStats.impressions, controlStats.totalPrimaryConv, vs.impressions, vs.totalPrimaryConv);
-        if (!bestSignificance || result.confidence > bestSignificance.confidence) {
-          bestSignificance = result;
-          bestVariant = v.id;
-        }
-      }
-
-      const nameClass = isControl ? 'variant-control' : 'variant-name';
-      const winBadge = test.winner_variant === v.id ? ' &#x1F3C6;' : '';
-      variantRows += `<tr>
-        <td class="${nameClass}">${esc(v.id)}${winBadge} <span style="color:#64748b;font-size:0.72rem">${esc(v.label)}</span></td>
-        <td>${vs.impressions.toLocaleString('fr-FR')}</td>
-        <td>${vs.totalPrimaryConv.toLocaleString('fr-FR')}</td>
-        <td>${rateStr}</td>
-        <td class="${deltaCls}">${deltaStr}</td>
-      </tr>`;
+    // Significance
+    var sigHtml = '';
+    if (bestSig && test.status !== 'draft') {
+      var confPct = (bestSig.confidence * 100).toFixed(1);
+      var target = (test.confidence_target || 0.95) * 100;
+      var isSig = bestSig.confidence >= (test.confidence_target || 0.95);
+      var barW = Math.min(parseFloat(confPct), 100);
+      var minSample = test.min_sample_size || 1000;
+      var minImp = Math.min.apply(null, variants.map(function(v){ return (stats[v.id]||{impressions:0}).impressions; }));
+      var samplePct = Math.min(Math.round(minImp / minSample * 100), 100);
+      sigHtml = '<div class="sig-panel"><div class="sig-top"><span class="sig-title">Significativite statistique</span><span class="sig-verdict ' + (isSig ? 'sig-yes' : 'sig-no') + '">' + (isSig ? '&#10003; Significatif' : '&#9679; En attente de donnees') + '</span></div><div class="sig-bar-bg"><div class="sig-bar-fill ' + (isSig ? 'sig-fill-ok' : 'sig-fill-wait') + '" style="width:' + barW + '%"></div><div class="sig-threshold" style="left:' + target + '%"></div></div><div class="sig-grid"><div class="sig-box"><div class="sig-box-label">p-value</div><div class="sig-box-val ' + (isSig?'sig-ok':'sig-wait') + '">' + bestSig.pValue.toFixed(4) + '</div></div><div class="sig-box"><div class="sig-box-label">Confiance</div><div class="sig-box-val ' + (isSig?'sig-ok':'sig-wait') + '">' + confPct + '%</div></div><div class="sig-box"><div class="sig-box-label">Seuil cible</div><div class="sig-box-val sig-neutral">' + target + '%</div></div><div class="sig-box"><div class="sig-box-label">Lift observe</div><div class="sig-box-val ' + (bestSig.lift > 0 ? 'sig-ok' : bestSig.lift < 0 ? 'sig-wait' : 'sig-neutral') + '">' + (bestSig.lift ? (bestSig.lift > 0 ? '+' : '') + bestSig.lift.toFixed(1) + '%' : '&mdash;') + '</div></div></div><div class="sample-row"><div class="sample-bar-bg"><div class="sample-bar-fill" style="width:' + samplePct + '%"></div></div><span class="sample-text">' + minImp.toLocaleString('fr-FR') + ' / ' + minSample.toLocaleString('fr-FR') + ' impressions (' + samplePct + '%)</span></div></div>';
     }
 
-    // Significance box
-    let sigBox = '';
-    if (bestSignificance && test.status !== 'draft') {
-      const confPct = (bestSignificance.confidence * 100).toFixed(1);
-      const target = (test.confidence_target || 0.95) * 100;
-      const isSig = bestSignificance.confidence >= (test.confidence_target || 0.95);
-      const barWidth = Math.min(confPct, 100);
-      const barClass = isSig ? 'significant' : 'not-significant';
-
-      // Sample size progress
-      const minSample = test.min_sample_size || 1000;
-      const minImpressions = Math.min(...variants.map(v => (stats[v.id] || { impressions: 0 }).impressions));
-      const samplePct = Math.min(Math.round(minImpressions / minSample * 100), 100);
-      const sampleOk = minImpressions >= minSample;
-
-      sigBox = `<div class="sig-box">
-        <div class="sig-bar-wrap"><div class="sig-bar ${barClass}" style="width:${barWidth}%"></div></div>
-        <div class="sig-details">
-          <div class="sig-detail"><span class="sig-label">p-value :</span><span class="sig-value ${isSig ? 'sig-pass' : 'sig-fail'}">${bestSignificance.pValue.toFixed(4)}</span></div>
-          <div class="sig-detail"><span class="sig-label">Confiance :</span><span class="sig-value ${isSig ? 'sig-pass' : 'sig-fail'}">${confPct}%</span></div>
-          <div class="sig-detail"><span class="sig-label">Seuil :</span><span class="sig-value">${target}%</span></div>
-          <div class="sig-detail"><span class="sig-label">Significatif :</span><span class="sig-value ${isSig ? 'sig-pass' : 'sig-fail'}">${isSig ? 'Oui' : 'Pas encore'}</span></div>
-          <div class="sig-detail"><span class="sig-label">Echantillon :</span><span class="sig-value ${sampleOk ? 'sig-pass' : 'sig-fail'}">${samplePct}% (${minImpressions}/${minSample})</span></div>
-        </div>
-      </div>`;
+    // Visual previews
+    var previewsHtml = '';
+    var previews = TEST_PREVIEWS[test.name];
+    if (previews && test.status !== 'draft') {
+      var previewCards = '';
+      for (var j = 0; j < variants.length; j++) {
+        var vv = variants[j];
+        var mockHtml = previews[vv.id] || '<div class="mock-p" style="text-align:center;padding:2rem 0;color:#94a3b8">Apercu non configure</div>';
+        var labelCls = vv.id === 'control' ? 'preview-label-a' : 'preview-label-b';
+        previewCards += '<div class="preview-card"><div class="preview-label ' + labelCls + '"><span class="vid-tag ' + (vv.id === 'control' ? 'vid-a' : 'vid-b') + '">' + esc(vv.id) + '</span> ' + esc(vv.label) + '</div><div class="preview-mockup">' + mockHtml + '</div></div>';
+      }
+      previewsHtml = '<div class="tc-previews">' + previewCards + '</div>';
     }
 
     // Actions
-    let actions = '';
+    var actions = '';
     if (test.status === 'draft') {
-      actions = `<button class="btn btn-green" onclick="startTest('${test.id}')">Lancer</button>
-        <button class="btn" onclick="openEditModal('${test.id}')">Modifier</button>
-        <button class="btn btn-red" onclick="deleteTest('${test.id}')">Supprimer</button>`;
+      actions = '<button class="btn btn-sm btn-green" onclick="startTest(\'' + test.id + '\')">&#9654; Lancer</button><button class="btn btn-sm" onclick="openEditModal(\'' + test.id + '\')">Modifier</button><span class="spacer"></span><button class="btn btn-sm btn-red" onclick="deleteTest(\'' + test.id + '\')">Supprimer</button>';
     } else if (test.status === 'running') {
-      actions = `<button class="btn" onclick="pauseTest('${test.id}')">Pause</button>
-        <button class="btn btn-green" onclick="declareWinner('${test.id}')">Declarer winner</button>
-        <button class="btn btn-red" onclick="stopTest('${test.id}')">Arreter</button>`;
+      actions = '<button class="btn btn-sm" onclick="pauseTest(\'' + test.id + '\')">&#10074;&#10074; Pause</button><button class="btn btn-sm btn-green" onclick="declareWinner(\'' + test.id + '\')">&#9733; Winner</button><span class="spacer"></span>' + (duration ? '<span class="tc-duration">' + duration + '</span>' : '') + '<button class="btn btn-sm btn-red" onclick="stopTest(\'' + test.id + '\')">Arreter</button>';
     } else if (test.status === 'paused') {
-      actions = `<button class="btn btn-green" onclick="resumeTest('${test.id}')">Reprendre</button>
-        <button class="btn btn-red" onclick="stopTest('${test.id}')">Arreter</button>`;
+      actions = '<button class="btn btn-sm btn-green" onclick="resumeTest(\'' + test.id + '\')">&#9654; Reprendre</button><span class="spacer"></span><button class="btn btn-sm btn-red" onclick="stopTest(\'' + test.id + '\')">Arreter</button>';
+    } else {
+      actions = '<span class="tc-duration">' + duration + '</span><span class="spacer"></span>';
     }
 
-    const metricLabels = { coach_open: 'Coach IA ouvert', newsletter_signup: 'Newsletter signup', affiliate_click: 'Clic affiliate', cta_click: 'Clic CTA', tarifs_visit: 'Visite /tarifs', diagnostic_start: 'Diagnostic' };
-
-    return `<div class="test-card">
-      <div class="test-header">
-        <span class="test-status ${statusCls[test.status] || ''}">${statusLabels[test.status] || test.status}</span>
-        <span class="test-name">${esc(test.name)}</span>
-        <span class="test-meta">${esc(test.page_target)} · ${esc(metricLabels[test.primary_metric] || test.primary_metric)}${duration ? ' · ' + duration : ''}</span>
-      </div>
-      ${test.description ? `<div class="test-description">${esc(test.description)}</div>` : ''}
-      ${test.status !== 'draft' ? `
-        <table class="variant-table">
-          <thead><tr><th>Variante</th><th>Impressions</th><th>Conversions</th><th>Taux</th><th>Delta</th></tr></thead>
-          <tbody>${variantRows}</tbody>
-        </table>
-        ${sigBox}
-        <div class="chart-container">
-          <div class="chart-title">Taux de conversion par jour — ${esc(metricLabels[test.primary_metric] || test.primary_metric)}</div>
-          <canvas id="chart-${test.id}" height="200"></canvas>
-        </div>
-      ` : ''}
-      <div class="test-actions">${actions}</div>
-    </div>`;
+    return '<div class="test-card"><div class="tc-header"><div class="tc-header-row"><span class="tc-badge ' + (badgeCls[test.status]||'') + '">' + (badgeTxt[test.status]||test.status) + '</span><span class="tc-name">' + esc(test.name) + '</span></div><div class="tc-meta">' + esc(test.page_target) + ' &middot; ' + esc(METRIC_LABELS[test.primary_metric]||test.primary_metric) + (duration ? ' &middot; ' + duration : '') + '</div>' + (test.description ? '<div class="tc-desc">' + esc(test.description) + '</div>' : '') + '</div>' + previewsHtml + (test.status !== 'draft' ? '<div class="tc-data"><div class="tc-section-label">Resultats par variante</div><table class="vtable"><thead><tr><th>Variante</th><th>Impressions</th><th>Conversions</th><th>Taux</th><th>Delta</th></tr></thead><tbody>' + rows + '</tbody></table>' + sigHtml + '<div class="chart-box"><div class="chart-top"><span class="chart-title">Taux de conversion / jour</span><div class="chart-legend" id="legend-' + test.id + '"></div></div><canvas id="chart-' + test.id + '" height="180"></canvas></div></div>' : '') + '<div class="tc-actions">' + actions + '</div></div>';
   }
 
-  // ============= Charts =============
-  async function loadDailyData(testId, metric) {
-    const [impressions, conversions] = await Promise.all([
-      sbFetch('ab_impressions', `select=variant_id,created_at&test_id=eq.${testId}&order=created_at.asc`),
-      sbFetch('ab_conversions', `select=variant_id,created_at&test_id=eq.${testId}&metric_name=eq.${metric}&order=created_at.asc`)
-    ]);
+  // ===== Charts =====
+  var COLORS = ['#60a5fa','#4ade80','#fbbf24','#f87171','#a78bfa'];
 
-    // Aggregate by day + variant
-    const byDay = {};
-    for (const imp of impressions) {
-      const day = imp.created_at.slice(0, 10);
-      const key = day + ':' + imp.variant_id;
-      if (!byDay[key]) byDay[key] = { day, variant: imp.variant_id, impressions: 0, conversions: 0 };
-      byDay[key].impressions++;
-    }
-    for (const conv of conversions) {
-      const day = conv.created_at.slice(0, 10);
-      const key = day + ':' + conv.variant_id;
-      if (!byDay[key]) byDay[key] = { day, variant: conv.variant_id, impressions: 0, conversions: 0 };
-      byDay[key].conversions++;
-    }
+  async function loadDailyData(testId, metric) {
+    var res = await Promise.all([
+      sbFetch('ab_impressions', 'select=variant_id,created_at&test_id=eq.' + testId + '&order=created_at.asc'),
+      sbFetch('ab_conversions', 'select=variant_id,created_at&test_id=eq.' + testId + '&metric_name=eq.' + metric + '&order=created_at.asc')
+    ]);
+    var byDay = {};
+    for (var imp of res[0]) { var d = imp.created_at.slice(0,10), k = d+':'+imp.variant_id; if(!byDay[k]) byDay[k]={day:d,variant:imp.variant_id,impressions:0,conversions:0}; byDay[k].impressions++; }
+    for (var conv of res[1]) { var d2 = conv.created_at.slice(0,10), k2 = d2+':'+conv.variant_id; if(!byDay[k2]) byDay[k2]={day:d2,variant:conv.variant_id,impressions:0,conversions:0}; byDay[k2].conversions++; }
     return Object.values(byDay);
   }
 
-  const VARIANT_COLORS = ['#64748b', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'];
-
   function drawChart(canvasId, test) {
-    const canvas = document.getElementById(canvasId);
+    var canvas = document.getElementById(canvasId);
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const rect = canvas.parentElement.getBoundingClientRect();
-    canvas.width = rect.width - 32;
-    canvas.height = 200;
-    const W = canvas.width, H = canvas.height;
-    const pad = { top: 20, right: 20, bottom: 30, left: 50 };
+    var ctx = canvas.getContext('2d');
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = (rect.width - 24) * dpr; canvas.height = 180 * dpr;
+    canvas.style.width = (rect.width - 24) + 'px'; canvas.style.height = '180px';
+    ctx.scale(dpr, dpr);
+    var W = rect.width - 24, H = 180;
+    var pad = { top: 10, right: 12, bottom: 26, left: 44 };
 
-    loadDailyData(test.id, test.primary_metric).then(data => {
-      if (data.length === 0) {
-        ctx.fillStyle = '#64748b';
-        ctx.font = '13px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.fillText('Pas encore de donnees', W / 2, H / 2);
-        return;
-      }
+    var legendEl = document.getElementById('legend-' + test.id);
+    if (legendEl) legendEl.innerHTML = test.variants.map(function(v, i) {
+      return '<div class="chart-legend-item"><div class="chart-dot" style="background:' + COLORS[i] + '"></div>' + esc(v.label || v.id) + '</div>';
+    }).join('');
 
-      const variants = test.variants.map(v => v.id);
-      const days = [...new Set(data.map(d => d.day))].sort();
-
-      // Compute daily rates per variant
-      const ratesByVariant = {};
-      for (const v of variants) {
-        ratesByVariant[v] = days.map(day => {
-          const entry = data.find(d => d.day === day && d.variant === v);
-          if (!entry || entry.impressions === 0) return null;
-          return entry.conversions / entry.impressions * 100;
-        });
-      }
-
-      const allRates = Object.values(ratesByVariant).flat().filter(r => r !== null);
-      const maxRate = allRates.length > 0 ? Math.max(...allRates) * 1.2 : 10;
-
-      const plotW = W - pad.left - pad.right;
-      const plotH = H - pad.top - pad.bottom;
-
-      // Background
-      ctx.fillStyle = '#0f1520';
-      ctx.fillRect(0, 0, W, H);
-
-      // Grid lines
-      ctx.strokeStyle = '#1e293b';
-      ctx.lineWidth = 1;
-      for (let i = 0; i <= 4; i++) {
-        const y = pad.top + (plotH / 4) * i;
-        ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
-        ctx.fillStyle = '#475569';
-        ctx.font = '10px sans-serif';
-        ctx.textAlign = 'right';
-        ctx.fillText((maxRate - (maxRate / 4) * i).toFixed(1) + '%', pad.left - 6, y + 3);
-      }
-
-      // X labels
-      ctx.fillStyle = '#475569';
-      ctx.font = '10px sans-serif';
-      ctx.textAlign = 'center';
-      const step = Math.max(1, Math.floor(days.length / 7));
-      for (let i = 0; i < days.length; i += step) {
-        const x = pad.left + (i / Math.max(days.length - 1, 1)) * plotW;
-        ctx.fillText(days[i].slice(5), x, H - 8);
-      }
-
-      // Lines per variant
-      variants.forEach((v, vi) => {
-        const rates = ratesByVariant[v];
-        const color = VARIANT_COLORS[vi % VARIANT_COLORS.length];
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        let started = false;
-        for (let i = 0; i < days.length; i++) {
-          if (rates[i] === null) continue;
-          const x = pad.left + (i / Math.max(days.length - 1, 1)) * plotW;
-          const y = pad.top + plotH - (rates[i] / maxRate) * plotH;
-          if (!started) { ctx.moveTo(x, y); started = true; } else ctx.lineTo(x, y);
-        }
+    loadDailyData(test.id, test.primary_metric).then(function(data) {
+      ctx.clearRect(0, 0, W, H);
+      if (data.length === 0) { ctx.fillStyle = '#334155'; ctx.font = '12px sans-serif'; ctx.textAlign = 'center'; ctx.fillText('En attente de donnees...', W/2, H/2); return; }
+      var vs = test.variants.map(function(v){return v.id});
+      var days = []; data.forEach(function(d){ if(days.indexOf(d.day)===-1) days.push(d.day); }); days.sort();
+      var ratesBy = {};
+      vs.forEach(function(v){ ratesBy[v] = days.map(function(day){ var e = data.find(function(d){return d.day===day && d.variant===v}); return (!e||e.impressions===0) ? null : e.conversions/e.impressions*100; }); });
+      var all = []; Object.values(ratesBy).forEach(function(r){ r.forEach(function(v){ if(v!==null) all.push(v); }); });
+      var maxR = all.length > 0 ? Math.max.apply(null, all) * 1.3 : 10;
+      var pW = W-pad.left-pad.right, pH = H-pad.top-pad.bottom;
+      ctx.strokeStyle = '#1e293b'; ctx.lineWidth = 1;
+      for (var g = 0; g <= 4; g++) { var y = pad.top+(pH/4)*g; ctx.beginPath(); ctx.moveTo(pad.left,y); ctx.lineTo(W-pad.right,y); ctx.stroke(); ctx.fillStyle='#475569'; ctx.font='10px monospace'; ctx.textAlign='right'; ctx.fillText((maxR-(maxR/4)*g).toFixed(1)+'%', pad.left-6, y+3); }
+      ctx.fillStyle='#475569'; ctx.font='10px monospace'; ctx.textAlign='center';
+      var step = Math.max(1, Math.floor(days.length / 6));
+      for (var xi = 0; xi < days.length; xi += step) { var xx = pad.left + (xi / Math.max(days.length-1,1)) * pW; ctx.fillText(days[xi].slice(5), xx, H-6); }
+      vs.forEach(function(v, vi) {
+        var rates = ratesBy[v], color = COLORS[vi % COLORS.length];
+        ctx.strokeStyle = color; ctx.lineWidth = 2.5; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+        ctx.beginPath(); var started = false;
+        for (var di = 0; di < days.length; di++) { if (rates[di] === null) continue; var x2 = pad.left + (di/Math.max(days.length-1,1))*pW; var y2 = pad.top+pH-(rates[di]/maxR)*pH; if(!started){ctx.moveTo(x2,y2);started=true;}else ctx.lineTo(x2,y2); }
         ctx.stroke();
-
-        // Dots
-        for (let i = 0; i < days.length; i++) {
-          if (rates[i] === null) continue;
-          const x = pad.left + (i / Math.max(days.length - 1, 1)) * plotW;
-          const y = pad.top + plotH - (rates[i] / maxRate) * plotH;
-          ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2); ctx.fillStyle = color; ctx.fill();
-        }
-      });
-
-      // Legend
-      let lx = pad.left;
-      ctx.font = '11px sans-serif';
-      variants.forEach((v, vi) => {
-        const color = VARIANT_COLORS[vi % VARIANT_COLORS.length];
-        ctx.fillStyle = color;
-        ctx.fillRect(lx, 4, 12, 3);
-        ctx.fillStyle = '#94a3b8';
-        ctx.textAlign = 'left';
-        const label = (test.variants[vi] || {}).label || v;
-        ctx.fillText(label, lx + 16, 10);
-        lx += ctx.measureText(label).width + 32;
+        for (var di2 = 0; di2 < days.length; di2++) { if (rates[di2] === null) continue; var x3 = pad.left+(di2/Math.max(days.length-1,1))*pW; var y3 = pad.top+pH-(rates[di2]/maxR)*pH; ctx.beginPath(); ctx.arc(x3,y3,3,0,Math.PI*2); ctx.fillStyle='#0a0e17'; ctx.fill(); ctx.strokeStyle=color; ctx.lineWidth=2; ctx.stroke(); }
       });
     });
   }
 
-  // ============= Render & draw charts after DOM update =============
   function renderAndDrawCharts() {
     renderTests();
-    // Small delay for DOM update, then draw charts
-    requestAnimationFrame(() => {
-      for (const test of allTests) {
-        if (test.status === 'draft') continue;
-        drawChart('chart-' + test.id, test);
-      }
+    requestAnimationFrame(function() {
+      allTests.forEach(function(t) { if (t.status !== 'draft') drawChart('chart-' + t.id, t); });
     });
   }
 
-  // ============= Test actions =============
-  window.setStatusFilter = function(f) {
-    statusFilter = f;
-    document.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p.dataset.filter === f));
-    renderAndDrawCharts();
-  };
-
-  window.startTest = async function(id) {
-    await sbRpc({ status: 'running', started_at: new Date().toISOString() }, 'ab_tests', 'PATCH', `id=eq.${id}`);
-    loadAll().then(renderAndDrawCharts);
-  };
-
-  window.pauseTest = async function(id) {
-    await sbRpc({ status: 'paused' }, 'ab_tests', 'PATCH', `id=eq.${id}`);
-    loadAll().then(renderAndDrawCharts);
-  };
-
-  window.resumeTest = async function(id) {
-    await sbRpc({ status: 'running' }, 'ab_tests', 'PATCH', `id=eq.${id}`);
-    loadAll().then(renderAndDrawCharts);
-  };
-
-  window.stopTest = async function(id) {
-    if (!confirm('Arreter ce test definitivement ?')) return;
-    await sbRpc({ status: 'completed', ended_at: new Date().toISOString() }, 'ab_tests', 'PATCH', `id=eq.${id}`);
-    loadAll().then(renderAndDrawCharts);
-  };
-
-  window.deleteTest = async function(id) {
-    if (!confirm('Supprimer ce test et toutes ses donnees ?')) return;
-    await fetch(`${SB_URL}/rest/v1/ab_tests?id=eq.${id}`, {
-      method: 'DELETE',
-      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
-    });
-    loadAll().then(renderAndDrawCharts);
-  };
-
+  // ===== Actions =====
+  window.setStatusFilter = function(f) { statusFilter = f; document.querySelectorAll('.pill').forEach(function(p){p.classList.toggle('active', p.dataset.filter===f)}); renderAndDrawCharts(); };
+  window.startTest = async function(id) { await sbRpc({status:'running',started_at:new Date().toISOString()},'ab_tests','PATCH','id=eq.'+id); loadAll(); };
+  window.pauseTest = async function(id) { await sbRpc({status:'paused'},'ab_tests','PATCH','id=eq.'+id); loadAll(); };
+  window.resumeTest = async function(id) { await sbRpc({status:'running'},'ab_tests','PATCH','id=eq.'+id); loadAll(); };
+  window.stopTest = async function(id) { if(!confirm('Arreter ce test ?')) return; await sbRpc({status:'completed',ended_at:new Date().toISOString()},'ab_tests','PATCH','id=eq.'+id); loadAll(); };
+  window.deleteTest = async function(id) { if(!confirm('Supprimer ce test ?')) return; await fetch(SB_URL+'/rest/v1/ab_tests?id=eq.'+id,{method:'DELETE',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}}); loadAll(); };
   window.declareWinner = async function(id) {
-    const test = allTests.find(t => t.id === id);
-    if (!test) return;
-    const variants = (test.variants || []).filter(v => v.id !== 'control');
-    const options = variants.map(v => v.id + ' (' + v.label + ')').join(', ');
-    const winner = prompt('Declarer le winner parmi: ' + options + '\n\nEntrez l\'ID de la variante gagnante:', variants.length > 0 ? variants[0].id : '');
-    if (!winner) return;
-    await sbRpc({ status: 'completed', winner_variant: winner, ended_at: new Date().toISOString() }, 'ab_tests', 'PATCH', `id=eq.${id}`);
-    loadAll().then(renderAndDrawCharts);
+    var test = allTests.find(function(t){return t.id===id});
+    if(!test) return;
+    var vs = (test.variants||[]).filter(function(v){return v.id!=='control'});
+    var winner = prompt('Declarer le winner :\n' + vs.map(function(v){return '  '+v.id+' — '+v.label}).join('\n') + '\n\nEntrez l\'ID:', vs[0]?.id||'');
+    if(!winner) return;
+    await sbRpc({status:'completed',winner_variant:winner,ended_at:new Date().toISOString()},'ab_tests','PATCH','id=eq.'+id); loadAll();
   };
 
-  // ============= Create/Edit Modal =============
+  // ===== Modal =====
   window.openCreateModal = function() {
-    document.getElementById('editTestId').value = '';
-    document.getElementById('modalTitle').textContent = 'Nouveau test A/B';
-    document.getElementById('formName').value = '';
-    document.getElementById('formDescription').value = '';
-    document.getElementById('formPage').value = '/';
-    document.getElementById('formSelector').value = '';
-    document.getElementById('formMetric').value = 'coach_open';
-    document.getElementById('formConfidence').value = '0.95';
-    document.getElementById('formSample').value = '1000';
-    document.getElementById('formSecondary').value = '';
-    document.getElementById('variantBuilder').innerHTML = `
-      <div class="variant-row">
-        <input type="text" value="control" readonly style="opacity:0.6" class="vid">
-        <input type="text" value="Original" placeholder="Label" class="vlabel">
-        <input type="number" value="50" min="1" max="100" class="vweight">
-        <span style="color:#64748b;font-size:0.72rem">%</span>
-      </div>
-      <div class="variant-row">
-        <input type="text" value="B" placeholder="ID" class="vid">
-        <input type="text" value="Variante B" placeholder="Label" class="vlabel">
-        <input type="number" value="50" min="1" max="100" class="vweight">
-        <button class="remove-variant" onclick="this.closest('.variant-row').remove()">x</button>
-      </div>`;
+    document.getElementById('editTestId').value=''; document.getElementById('modalTitle').textContent='Nouveau test A/B';
+    document.getElementById('formName').value=''; document.getElementById('formDescription').value='';
+    document.getElementById('formPage').value='/'; document.getElementById('formSelector').value='';
+    document.getElementById('formMetric').value='coach_open'; document.getElementById('formConfidence').value='0.95';
+    document.getElementById('formSample').value='1000'; document.getElementById('formSecondary').value='';
+    document.getElementById('variantBuilder').innerHTML='<div class="variant-row"><input type="text" value="control" readonly style="opacity:0.5" class="vid"><input type="text" value="Original" placeholder="Label" class="vlabel"><input type="number" value="50" min="1" max="100" class="vweight"><span style="color:#475569;font-size:0.7rem">%</span></div><div class="variant-row"><input type="text" value="B" placeholder="ID" class="vid"><input type="text" value="Variante B" placeholder="Label" class="vlabel"><input type="number" value="50" min="1" max="100" class="vweight"><button class="rm-v" onclick="this.closest(\'.variant-row\').remove()">&times;</button></div>';
     document.getElementById('createModal').classList.add('open');
   };
-
   window.openEditModal = function(id) {
-    const test = allTests.find(t => t.id === id);
-    if (!test) return;
-    document.getElementById('editTestId').value = id;
-    document.getElementById('modalTitle').textContent = 'Modifier le test';
-    document.getElementById('formName').value = test.name;
-    document.getElementById('formDescription').value = test.description || '';
-    document.getElementById('formPage').value = test.page_target;
-    document.getElementById('formSelector').value = test.element_selector || '';
-    document.getElementById('formMetric').value = test.primary_metric;
-    document.getElementById('formConfidence').value = String(test.confidence_target || 0.95);
-    document.getElementById('formSample').value = test.min_sample_size || 1000;
-    document.getElementById('formSecondary').value = (test.secondary_metrics || []).join(', ');
-
-    const variants = test.variants || [];
-    document.getElementById('variantBuilder').innerHTML = variants.map((v, i) => `
-      <div class="variant-row">
-        <input type="text" value="${esc(v.id)}" ${i === 0 ? 'readonly style="opacity:0.6"' : ''} class="vid">
-        <input type="text" value="${esc(v.label)}" placeholder="Label" class="vlabel">
-        <input type="number" value="${v.weight}" min="1" max="100" class="vweight">
-        ${i === 0 ? '<span style="color:#64748b;font-size:0.72rem">%</span>' : '<button class="remove-variant" onclick="this.closest(\'.variant-row\').remove()">x</button>'}
-      </div>`).join('');
-
+    var test = allTests.find(function(t){return t.id===id}); if(!test) return;
+    document.getElementById('editTestId').value=id; document.getElementById('modalTitle').textContent='Modifier le test';
+    document.getElementById('formName').value=test.name; document.getElementById('formDescription').value=test.description||'';
+    document.getElementById('formPage').value=test.page_target; document.getElementById('formSelector').value=test.element_selector||'';
+    document.getElementById('formMetric').value=test.primary_metric; document.getElementById('formConfidence').value=String(test.confidence_target||0.95);
+    document.getElementById('formSample').value=test.min_sample_size||1000; document.getElementById('formSecondary').value=(test.secondary_metrics||[]).join(', ');
+    document.getElementById('variantBuilder').innerHTML=(test.variants||[]).map(function(v,i){return '<div class="variant-row"><input type="text" value="'+esc(v.id)+'" '+(i===0?'readonly style="opacity:0.5"':'')+' class="vid"><input type="text" value="'+esc(v.label)+'" placeholder="Label" class="vlabel"><input type="number" value="'+v.weight+'" min="1" max="100" class="vweight">'+(i===0?'<span style="color:#475569;font-size:0.7rem">%</span>':'<button class="rm-v" onclick="this.closest(\'.variant-row\').remove()">&times;</button>')+'</div>';}).join('');
     document.getElementById('createModal').classList.add('open');
   };
-
-  window.closeCreateModal = function() {
-    document.getElementById('createModal').classList.remove('open');
-  };
-
+  window.closeCreateModal = function() { document.getElementById('createModal').classList.remove('open'); };
   window.addVariantRow = function() {
-    const builder = document.getElementById('variantBuilder');
-    const count = builder.querySelectorAll('.variant-row').length;
-    const letter = String.fromCharCode(65 + count); // B, C, D...
-    const div = document.createElement('div');
-    div.className = 'variant-row';
-    div.innerHTML = `
-      <input type="text" value="${letter}" placeholder="ID" class="vid">
-      <input type="text" value="Variante ${letter}" placeholder="Label" class="vlabel">
-      <input type="number" value="33" min="1" max="100" class="vweight">
-      <button class="remove-variant" onclick="this.closest('.variant-row').remove()">x</button>`;
-    builder.appendChild(div);
+    var b = document.getElementById('variantBuilder'), c = b.querySelectorAll('.variant-row').length, l = String.fromCharCode(65+c);
+    var d = document.createElement('div'); d.className='variant-row';
+    d.innerHTML='<input type="text" value="'+l+'" class="vid"><input type="text" value="Variante '+l+'" class="vlabel"><input type="number" value="33" min="1" max="100" class="vweight"><button class="rm-v" onclick="this.closest(\'.variant-row\').remove()">&times;</button>';
+    b.appendChild(d);
   };
-
   window.saveTest = async function() {
-    const editId = document.getElementById('editTestId').value;
-    const name = document.getElementById('formName').value.trim();
-    if (!name) { alert('Nom requis'); return; }
-
-    const rows = document.querySelectorAll('#variantBuilder .variant-row');
-    const variants = [];
-    rows.forEach(row => {
-      const vid = row.querySelector('.vid').value.trim();
-      const vlabel = row.querySelector('.vlabel').value.trim();
-      const vweight = parseInt(row.querySelector('.vweight').value) || 50;
-      if (vid) variants.push({ id: vid, label: vlabel || vid, weight: vweight });
+    var editId = document.getElementById('editTestId').value;
+    var name = document.getElementById('formName').value.trim(); if(!name){alert('Nom requis');return;}
+    var variants = [];
+    document.querySelectorAll('#variantBuilder .variant-row').forEach(function(row){
+      var vid=row.querySelector('.vid').value.trim(), vl=row.querySelector('.vlabel').value.trim(), vw=parseInt(row.querySelector('.vweight').value)||50;
+      if(vid) variants.push({id:vid,label:vl||vid,weight:vw});
     });
-
-    const secondaryStr = document.getElementById('formSecondary').value;
-    const secondary = secondaryStr ? secondaryStr.split(',').map(s => s.trim()).filter(Boolean) : [];
-
-    const body = {
-      name,
-      description: document.getElementById('formDescription').value.trim() || null,
-      page_target: document.getElementById('formPage').value.trim() || '/',
-      element_selector: document.getElementById('formSelector').value.trim() || null,
-      primary_metric: document.getElementById('formMetric').value,
-      confidence_target: parseFloat(document.getElementById('formConfidence').value),
-      min_sample_size: parseInt(document.getElementById('formSample').value) || 1000,
-      secondary_metrics: secondary,
-      variants
-    };
-
-    if (editId) {
-      await sbRpc(body, 'ab_tests', 'PATCH', `id=eq.${editId}`);
-    } else {
-      await sbRpc(body, 'ab_tests', 'POST', '');
-    }
-
-    closeCreateModal();
-    loadAll().then(renderAndDrawCharts);
+    var sec = document.getElementById('formSecondary').value;
+    var body = { name:name, description:document.getElementById('formDescription').value.trim()||null, page_target:document.getElementById('formPage').value.trim()||'/', element_selector:document.getElementById('formSelector').value.trim()||null, primary_metric:document.getElementById('formMetric').value, confidence_target:parseFloat(document.getElementById('formConfidence').value), min_sample_size:parseInt(document.getElementById('formSample').value)||1000, secondary_metrics:sec?sec.split(',').map(function(s){return s.trim()}).filter(Boolean):[], variants:variants };
+    if(editId) await sbRpc(body,'ab_tests','PATCH','id=eq.'+editId);
+    else await sbRpc(body,'ab_tests','POST','');
+    closeCreateModal(); loadAll();
   };
+  document.getElementById('createModal').addEventListener('click',function(e){if(e.target===this) closeCreateModal()});
 
-  // Close modal on overlay click
-  document.getElementById('createModal').addEventListener('click', function(e) {
-    if (e.target === this) closeCreateModal();
-  });
-
-  // ============= Init =============
-  loadAll().then(renderAndDrawCharts);
-  setInterval(function() { loadAll().then(renderAndDrawCharts); }, 30000);
+  loadAll();
+  setInterval(loadAll, 30000);
 </script>
-
 </body>
 </html>

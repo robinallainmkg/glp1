@@ -998,6 +998,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
               subject: 'Diagnostic GLP-1',
               message: `Diagnostic complété - Recommandation: ${recommendation}. Réponses: ${JSON.stringify(answers)}`,
               newsletter: true,
+              contact_type: 'diagnostic',
               status: 'new',
               created_at: new Date().toISOString()
             });

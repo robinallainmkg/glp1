@@ -100,7 +100,7 @@ const mainKeyword = "GLP-1 France";
 
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row gap-3">
-              <a href="/guides/quel-traitement-glp1-choisir/" class="group inline-flex items-center justify-center gap-3 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:-translate-y-0.5">
+              <a id="hero-cta-primary" href="/guides/quel-traitement-glp1-choisir/" data-ab-cta="hero_primary" class="hero-cta-primary group inline-flex items-center justify-center gap-3 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:-translate-y-0.5">
                 Quel traitement choisir ?
                 <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
@@ -765,6 +765,46 @@ const mainKeyword = "GLP-1 France";
 </style>
 
 <script>
+  // A/B Test: homepage_hero_cta — Variante B swaps hero CTA to Coach IA
+  // Uses polling because ab-engine.js fetches tests async
+  (function() {
+    var applied = false;
+    function applyHeroAB() {
+      if (applied) return;
+      var variant = window.abGetVariant && window.abGetVariant('homepage_hero_cta');
+      if (!variant) return; // engine not ready yet
+      applied = true;
+      if (variant !== 'B') return;
+      var cta = document.getElementById('hero-cta-primary');
+      if (!cta) return;
+      // Swap to Coach IA CTA
+      cta.removeAttribute('href');
+      cta.style.cursor = 'pointer';
+      cta.className = cta.className
+        .replace('from-blue-600', 'from-green-600')
+        .replace('to-blue-700', 'to-emerald-600')
+        .replace('hover:from-blue-700', 'hover:from-green-700')
+        .replace('hover:to-blue-800', 'hover:to-emerald-700')
+        .replace('shadow-blue-600/25', 'shadow-green-600/25');
+      cta.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg> Posez vos questions au Coach IA <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
+      cta.addEventListener('click', function(e) {
+        e.preventDefault();
+        var toggle = document.getElementById('coach-toggle');
+        if (toggle) toggle.click();
+        if (window.abTrack) window.abTrack('cta_click', { cta: 'hero_coach_variant_B' });
+      });
+    }
+    // Try immediately (cached tests), then poll briefly for async fetch
+    applyHeroAB();
+    if (!applied) {
+      var attempts = 0;
+      var poll = setInterval(function() {
+        applyHeroAB();
+        if (applied || ++attempts > 20) clearInterval(poll); // max 2s
+      }, 100);
+    }
+  })();
+
   // Intersection Observer for scroll-triggered animations
   document.addEventListener('DOMContentLoaded', function() {
     const fadeElements = document.querySelectorAll('.hp-fade-in');

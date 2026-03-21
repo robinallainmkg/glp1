@@ -798,6 +798,7 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                   message: data.message || '',
                   treatment: data.treatment || null,
                   newsletter: data.newsletter === 'yes',
+                  contact_type: 'contact',
                   concerns: Array.isArray(data.concerns) ? data.concerns : (data.concerns ? [data.concerns] : []),
                   created_at: new Date().toISOString()
                 };

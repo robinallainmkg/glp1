@@ -27,7 +27,11 @@ node scripts/sync-analytics.mjs --days 14
 
 > Ce script utilise les credentials Google dans `.env` (GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN, GA4_PROPERTY_ID, GSC_SITE_URL) et upsert les donnees dans les tables `ga_metrics` et `gsc_metrics` de Supabase.
 
-Si le script echoue avec une erreur de token, signale-le dans les logs et continue avec les donnees existantes.
+**Si le script echoue** :
+1. Verifie que `.env` existe avec les variables Google : `cat .env | grep GOOGLE`
+2. Si les variables manquent, insere un log d'erreur et continue avec les donnees existantes
+3. Verifie les donnees existantes : `SELECT COUNT(*), MAX(date) FROM gsc_metrics;` — si la derniere date > 7 jours, ajoute un avertissement dans le rapport final
+4. Ne bloque JAMAIS l'execution sur l'echec de la sync — les phases suivantes doivent tourner
 
 ### Phase 1 — Initialisation
 
@@ -213,13 +217,44 @@ ORDER BY (kr1.position - kr2.position) DESC;
 ```
 
 #### 6.2 Quick-wins (position 11-20, fort volume)
-→ Ticket `seo_optimization`, urgence `warning`
+```sql
+SELECT kr.keyword, kr.article_id, kr.position, a.slug, a.title,
+  COALESCE((SELECT SUM(impressions) FROM gsc_metrics g WHERE g.query = kr.keyword AND g.date >= CURRENT_DATE - INTERVAL '14 days'), 0) as impressions
+FROM keyword_rankings kr
+JOIN articles a ON a.id = kr.article_id
+WHERE kr.position BETWEEN 11 AND 20
+  AND kr.checked_at >= CURRENT_DATE - INTERVAL '7 days'
+ORDER BY impressions DESC LIMIT 10;
+```
+→ Pour chaque resultat avec impressions >= 5, cree un ticket `seo_optimization`, urgence `warning`
+→ `before_exact` = "Position #X sur 'keyword' — Y impressions, Z clicks"
+→ `after_suggested` = "Optimiser le title/H1 pour inclure 'keyword', enrichir le contenu, renforcer le maillage interne vers cette page"
 
 #### 6.3 Pages a fort bounce rate (>80%) avec trafic
+```sql
+SELECT page_path, SUM(sessions) as sessions, ROUND(AVG(bounce_rate)::numeric, 2) as avg_bounce
+FROM ga_metrics WHERE date >= CURRENT_DATE - INTERVAL '7 days'
+GROUP BY page_path HAVING SUM(sessions) >= 5 AND AVG(bounce_rate) > 0.8
+ORDER BY sessions DESC LIMIT 10;
+```
 → Ticket `content_refresh`, urgence `warning`
+→ `before_exact` = "Bounce rate X% sur /page/ (Y sessions/7j)"
+→ `after_suggested` = "Ameliorer l'intro, ajouter un sommaire, CTA coach IA, enrichir le contenu"
 
 #### 6.4 Pages avec CTR < 2% malgre bonne position (<15) et impressions
+```sql
+SELECT query, page_path, SUM(impressions) as impressions, SUM(clicks) as clicks,
+  ROUND(AVG(position)::numeric, 1) as avg_pos, ROUND(AVG(ctr)::numeric * 100, 2) as ctr_pct
+FROM gsc_metrics WHERE date >= CURRENT_DATE - INTERVAL '14 days'
+GROUP BY query, page_path
+HAVING AVG(position) < 15 AND SUM(impressions) >= 10 AND AVG(ctr) < 0.02
+ORDER BY impressions DESC LIMIT 10;
+```
 → Ticket `seo_optimization`, urgence `warning` (title/description a optimiser)
+→ `before_exact` = "Position X, Y impressions, Z% CTR sur /page/ pour 'query'"
+→ `after_suggested` = "Retravailler le title et la meta description pour augmenter le CTR. Le title doit matcher l'intention de recherche."
+
+**IMPORTANT** : Tu DOIS creer au moins 1 ticket si des problemes sont detectes. Ne te contente pas de logger les resultats — cree les tickets pour que l'agent editorial puisse agir.
 
 #### Procedure de creation de ticket
 

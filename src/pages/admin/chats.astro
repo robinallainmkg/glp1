@@ -45,6 +45,12 @@ import { supabaseConfig } from '../../lib/supabase';
 
     .main { padding: 2rem; }
 
+    /* Command box */
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
+
     /* Stats */
     .stats-grid {
       display: grid;
@@ -474,6 +480,12 @@ import { supabaseConfig } from '../../lib/supabase';
     </div>
 
     <div class="main">
+      <!-- Command box -->
+      <div class="cmd-box">
+        <code>claude -p "Reponds aux emails" --agent sav-email</code>
+        <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Reponds aux emails&quot; --agent sav-email');this.textContent='Copie !'">Copier</button>
+      </div>
+
       <!-- Stats -->
       <div class="stats-grid" id="statsGrid">
         <div class="stat-card">

@@ -533,7 +533,7 @@ import { supabaseConfig } from '../../lib/supabase';
     return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
   }
 
-  function fmtNum(n) { return n >= 1000 ? (n/1000).toFixed(1) + 'k' : n.toString(); }
+  function fmtNum(n) { return n >= 10000 ? (n/1000).toFixed(1) + 'k' : n.toString(); }
 
   // ==================== SVG CHART ENGINE ====================
   function buildLineChart(containerId, datasets, opts = {}) {
@@ -871,25 +871,25 @@ import { supabaseConfig } from '../../lib/supabase';
   async function loadConversions() {
     try {
       const [contacts, conversations, stripeEvents] = await Promise.all([
-        sbFetch('contacts', 'select=id,email,nom,newsletter,telephone,subject,message,created_at&order=created_at.desc&limit=500'),
+        sbFetch('contacts', 'select=id,email,nom,newsletter,telephone,subject,message,contact_type,created_at&order=created_at.desc&limit=500'),
         sbFetch('coach_conversations', 'select=id,session_id,started_at,message_count,user_id&order=started_at.desc&limit=500'),
         sbFetch('subscription_events', 'select=id,user_id,stripe_event_id,event_type,metadata,created_at&order=created_at.desc&limit=500'),
       ]);
 
       const today = new Date().toISOString().slice(0, 10);
 
-      // Categorize contacts by subject (reliable field)
+      // Categorize contacts by contact_type column (reliable)
       convData.newsletter = [];
       convData.diagnostic = [];
       convData.contact = [];
 
       for (const c of contacts) {
         const date = (c.created_at || '').slice(0, 10);
-        const subj = (c.subject || '').toLowerCase();
+        const type = c.contact_type || 'contact';
 
-        if (subj.includes('diagnostic') || subj.includes('quiz')) {
+        if (type === 'diagnostic') {
           convData.diagnostic.push({ ...c, date });
-        } else if (subj.includes('newsletter') || (c.newsletter === true && !subj.includes('diagnostic'))) {
+        } else if (type === 'newsletter') {
           convData.newsletter.push({ ...c, date });
         } else {
           convData.contact.push({ ...c, date });
@@ -956,8 +956,9 @@ import { supabaseConfig } from '../../lib/supabase';
   }
 
   function renderConvFunnel() {
+    const totalLeads = convData.newsletter.length + convData.diagnostic.length + convData.chat.length + convData.contact.length;
     const steps = [
-      { label: 'Tous leads', value: convData.newsletter.length + convData.diagnostic.length + convData.chat.length + convData.contact.length, color: '#64748b' },
+      { label: 'Tous leads', value: totalLeads, color: '#64748b' },
       { label: 'Diagnostic', value: convData.diagnostic.length, color: '#22c55e' },
       { label: 'Chat AI', value: convData.chat.length, color: '#f59e0b' },
       { label: 'Abonnement', value: (convData.checkouts || []).length, color: '#8b5cf6' },
@@ -983,13 +984,14 @@ import { supabaseConfig } from '../../lib/supabase';
       // Value inside bar
       svg += `<text x="${x + barW/2}" y="${y + barH/2 + 1}" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="13" font-weight="800">${step.value}</text>`;
 
-      // Label right
+      // Label + conversion rate right
       svg += `<text x="${maxBarW + 20}" y="${y + barH/2 - 4}" fill="#e2e8f0" font-size="11" font-weight="600" dominant-baseline="middle">${step.label}</text>`;
 
-      // Conversion rate
-      if (i > 0 && steps[i-1].value > 0) {
-        const rate = ((step.value / steps[i-1].value) * 100).toFixed(0);
-        svg += `<text x="${maxBarW + 20}" y="${y + barH/2 + 12}" fill="#64748b" font-size="9" dominant-baseline="middle">${rate}% du precedent</text>`;
+      if (i > 0) {
+        const prevVal = steps[i-1].value;
+        const fromTotal = totalLeads > 0 ? ((step.value / totalLeads) * 100).toFixed(0) : '0';
+        const fromPrev = prevVal > 0 ? ((step.value / prevVal) * 100).toFixed(0) : '0';
+        svg += `<text x="${maxBarW + 20}" y="${y + barH/2 + 12}" fill="#64748b" font-size="9" dominant-baseline="middle">${fromPrev}% du precedent · ${fromTotal}% du total</text>`;
       }
 
       // Arrow between steps
@@ -1135,18 +1137,35 @@ import { supabaseConfig } from '../../lib/supabase';
   }
 
   // ==================== OVERVIEW STATS & CHARTS ====================
+  function trendBadge(current, previous, invert) {
+    if (previous === null || previous === undefined || current === null || current === undefined) return '';
+    const diff = current - previous;
+    if (diff === 0) return '<span class="trend-indicator" style="color:#64748b">= stable</span>';
+    // For positions, lower is better (invert)
+    const isGood = invert ? diff < 0 : diff > 0;
+    const sign = diff > 0 ? '+' : '';
+    const color = isGood ? '#4ade80' : '#f87171';
+    return `<span class="trend-indicator" style="color:${color}">${sign}${invert ? diff.toFixed(1) : diff}</span>`;
+  }
+
   function renderStats(rankings) {
     const total = rankings.length;
     const positioned = rankings.filter(r => r.position !== null && r.position !== undefined);
     const top10 = positioned.filter(r => r.position <= 10).length;
     const improving = rankings.filter(r => r.previous_position !== null && r.previous_position !== undefined && r.position !== null && r.position < r.previous_position).length;
+    const declining = rankings.filter(r => r.previous_position !== null && r.previous_position !== undefined && r.position !== null && r.position > r.previous_position).length;
     const avgPos = positioned.length > 0 ? (positioned.reduce((s,r) => s + r.position, 0) / positioned.length).toFixed(1) : '-';
 
+    // Previous period averages from previous_position
+    const withPrev = positioned.filter(r => r.previous_position !== null && r.previous_position !== undefined);
+    const prevAvgPos = withPrev.length > 0 ? (withPrev.reduce((s,r) => s + r.previous_position, 0) / withPrev.length).toFixed(1) : null;
+    const prevTop10 = withPrev.filter(r => r.previous_position <= 10).length;
+
     const cards = document.querySelectorAll('#statsGrid .stat-card');
-    if (cards[0]) { cards[0].querySelector('.value').textContent = total; cards[0].querySelector('.sub').textContent = `${positioned.length} positionnes / ${rankings.filter(r => r.keyword_type === 'primary').length} prioritaires`; }
-    if (cards[1]) { cards[1].querySelector('.value').textContent = avgPos; cards[1].querySelector('.sub').textContent = positioned.length > 0 ? `Sur ${positioned.length} mots-cles visibles` : 'Lancez l\'agent analytics'; }
-    if (cards[2]) { cards[2].querySelector('.value').textContent = top10; cards[2].querySelector('.sub').textContent = `dont ${positioned.filter(r => r.position <= 3).length} en top 3`; }
-    if (cards[3]) { cards[3].querySelector('.value').textContent = improving; }
+    if (cards[0]) { cards[0].querySelector('.value').textContent = total; cards[0].querySelector('.sub').innerHTML = `${positioned.length} positionnes / ${rankings.filter(r => r.keyword_type === 'primary').length} prioritaires`; }
+    if (cards[1]) { cards[1].querySelector('.value').textContent = avgPos; cards[1].querySelector('.sub').innerHTML = positioned.length > 0 ? `Sur ${positioned.length} visibles ${trendBadge(parseFloat(avgPos), parseFloat(prevAvgPos), true)}` : 'Lancez l\'agent analytics'; }
+    if (cards[2]) { cards[2].querySelector('.value').textContent = top10; cards[2].querySelector('.sub').innerHTML = `dont ${positioned.filter(r => r.position <= 3).length} en top 3 ${withPrev.length > 0 ? trendBadge(top10, prevTop10, false) : ''}`; }
+    if (cards[3]) { cards[3].querySelector('.value').textContent = improving; cards[3].querySelector('.sub').innerHTML = declining > 0 ? `${declining} en recul` : 'vs dernier check'; }
   }
 
   function renderDistribution(rankings) {
@@ -1220,22 +1239,59 @@ import { supabaseConfig } from '../../lib/supabase';
 
     const positioned = rankings.filter(r => r.position);
     const top3 = positioned.filter(r => r.position <= 3);
+    const top10 = positioned.filter(r => r.position <= 10);
+    const quickWins = positioned.filter(r => r.position > 10 && r.position <= 20);
     const none = rankings.filter(r => !r.position);
     const improving = rankings.filter(r => r.previous_position && r.position && r.position < r.previous_position);
     const declining = rankings.filter(r => r.previous_position && r.position && r.position > r.previous_position);
+    const biggestLosers = declining.sort((a,b) => (b.position - b.previous_position) - (a.position - a.previous_position)).slice(0, 3);
 
     const tips = [];
-    if (top3.length > 0) tips.push({ type: 'ok', text: `${top3.length} mot(s)-cle(s) en top 3. Consolidez avec du contenu enrichi et du maillage interne.` });
-    if (improving.length > 0) tips.push({ type: 'ok', text: `${improving.length} mot(s)-cle(s) en progression. Le travail SEO porte ses fruits.` });
-    if (declining.length > 0) tips.push({ type: 'warn', text: `${declining.length} mot(s)-cle(s) en recul. Verifiez le contenu et les backlinks de ces pages.` });
-    if (none.length > total * 0.5) tips.push({ type: 'warn', text: `${Math.round(none.length / total * 100)}% des mots-cles non visibles. Priorisez le contenu.` });
-    if (positioned.length > 0 && positioned.length < 10) tips.push({ type: 'tip', text: 'Ciblez les requetes longue traine pour augmenter le nombre de mots-cles positionnes.' });
-    tips.push({ type: 'tip', text: 'Relancez l\'agent analytics regulierement pour suivre l\'evolution.' });
+
+    // Couverture
+    const coveragePct = Math.round(positioned.length / total * 100);
+    if (positioned.length === 0) {
+      tips.push({ type: 'warn', text: `Aucun des ${total} mots-cles suivis n'a de position. Lancez l'agent analytics avec la sync GSC pour remplir les positions.` });
+    } else {
+      tips.push({ type: coveragePct >= 50 ? 'ok' : 'warn', text: `Visibilite : ${positioned.length}/${total} mots-cles positionnes (${coveragePct}%). ${none.length} restent invisibles sur Google.` });
+    }
+
+    // Top positions
+    if (top3.length > 0) {
+      const kwNames = top3.slice(0, 3).map(r => `"${r.keyword}"`).join(', ');
+      tips.push({ type: 'ok', text: `${top3.length} mot(s)-cle(s) en top 3 : ${kwNames}. Protegez ces positions avec du maillage interne et du contenu frais.` });
+    }
+
+    // Quick-wins actionnables
+    if (quickWins.length > 0) {
+      const kwNames = quickWins.slice(0, 3).map(r => `"${r.keyword}" (#${r.position})`).join(', ');
+      tips.push({ type: 'tip', text: `${quickWins.length} quick-win(s) en position 11-20 : ${kwNames}. Optimisez le title, ajoutez du maillage et du contenu pour passer en page 1.` });
+    }
+
+    // Progressions
+    if (improving.length > 0) {
+      tips.push({ type: 'ok', text: `${improving.length} mot(s)-cle(s) en progression. Le travail SEO porte ses fruits.` });
+    }
+
+    // Biggest losers avec details
+    if (biggestLosers.length > 0) {
+      const details = biggestLosers.map(r => `"${r.keyword}" (${r.previous_position} → ${r.position})`).join(', ');
+      tips.push({ type: 'warn', text: `Reculs importants : ${details}. Verifiez le contenu, les backlinks et la concurrence sur ces requetes.` });
+    }
+
+    // Ratio positionnes / total
+    if (positioned.length > 0 && positioned.length < total * 0.3) {
+      tips.push({ type: 'tip', text: `Seulement ${coveragePct}% de vos mots-cles sont visibles. Priorisez la creation de contenu pour les ${none.length} keywords non positionnes.` });
+    }
+
+    if (tips.length === 0) {
+      tips.push({ type: 'tip', text: 'Relancez l\'agent analytics regulierement pour suivre l\'evolution.' });
+    }
 
     document.getElementById('diagBody').innerHTML = tips.map(t => `
       <div class="diag-item">
         <div class="diag-icon diag-${t.type}">${t.type === 'ok' ? '&#x2713;' : t.type === 'warn' ? '!' : '&#x2192;'}</div>
-        <span>${esc(t.text)}</span>
+        <span>${t.text}</span>
       </div>
     `).join('');
   }
@@ -1268,7 +1324,7 @@ import { supabaseConfig } from '../../lib/supabase';
   async function loadAll() {
     try {
       const [rawRankings, articles, gscRaw, gaRaw] = await Promise.all([
-        sbFetch('keyword_rankings', 'select=*&order=checked_at.desc'),
+        sbFetch('keyword_rankings', 'select=*&order=checked_at.desc&limit=2000'),
         sbFetch('articles', 'select=id,slug&is_active=eq.true'),
         sbFetch('gsc_metrics', 'select=*&order=date.desc&limit=500'),
         sbFetch('ga_metrics', 'select=*&order=date.desc&limit=500'),
