@@ -39,22 +39,35 @@ jobs:
     - name: Build Astro site
       run: npm run astro:build
 
-    - name: Deploy via lftp
+    - name: Deploy via lftp (with retry)
       run: |
         sudo apt-get install -y -qq lftp > /dev/null 2>&1
-        lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
-          set ftp:passive-mode yes;
-          set ftp:ssl-allow no;
-          set ssl:verify-certificate no;
-          set net:timeout 30;
-          set net:max-retries 10;
-          set net:reconnect-interval-base 5;
-          set net:reconnect-interval-multiplier 1;
-          set mirror:parallel-transfer-count 2;
-          set mirror:use-pget-n 1;
-          mirror --reverse --delete --only-newer --verbose --parallel=2 ./dist/ /domains/glp1-france.fr/public_html/;
-          quit
-        "
+
+        # Retry wrapper — up to 3 full attempts
+        for ATTEMPT in 1 2 3; do
+          echo "=== Deploy attempt $ATTEMPT/3 ==="
+          lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
+            set ftp:passive-mode yes;
+            set ftp:ssl-allow no;
+            set ssl:verify-certificate no;
+            set net:timeout 60;
+            set net:max-retries 20;
+            set net:reconnect-interval-base 5;
+            set net:reconnect-interval-multiplier 2;
+            set mirror:parallel-transfer-count 1;
+            set mirror:use-pget-n 1;
+            set ftp:sync-mode off;
+            set xfer:clobber yes;
+            mirror --reverse --delete --only-newer --verbose --no-perms --parallel=1 ./dist/ /domains/glp1-france.fr/public_html/;
+            quit
+          " && echo "Deploy SUCCESS on attempt $ATTEMPT" && exit 0
+
+          echo "Attempt $ATTEMPT failed, waiting 15s..."
+          sleep 15
+        done
+
+        echo "All 3 deploy attempts failed"
+        exit 1
 
     - name: Verify deployment
       if: success()
