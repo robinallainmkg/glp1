@@ -1,6 +1,7 @@
 name: Deploy to Hostinger
 
 on:
+  workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
   push:
     branches: [ main ]
     paths:
@@ -11,6 +12,7 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'tsconfig.json'
+      - '.github/workflows/**'
       # Ignore: .claude/agents/*, scripts/*, n8n/*, supabase/*, CLAUDE.md
 
 # CRITICAL: Cancel any in-progress deploy when a new push arrives
