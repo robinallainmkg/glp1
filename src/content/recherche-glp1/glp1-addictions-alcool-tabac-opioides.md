@@ -1,5 +1,5 @@
 ---
-title: "GLP-1 et Addictions Alcool Tabac Opioïdes : Recherche 2025"
+title: "GLP-1 et Addictions Alcool Tabac Opioïdes : Recherche 2026"
 pubDate: 2026-03-15
 date: 2026-03-15
 author: "Dr. Sophie Dubois"

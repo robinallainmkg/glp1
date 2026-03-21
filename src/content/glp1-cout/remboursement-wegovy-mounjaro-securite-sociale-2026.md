@@ -106,7 +106,7 @@ Wegovy et Mounjaro n'étant pas remboursés, les pharmacies fixent librement leu
 
 Si votre médecin estime que votre situation médicale le justifie, certains GLP-1 sont déjà remboursés en France :
 
-- **Ozempic** (semaglutide, indication diabète de type 2) : remboursé à 65 % pour le diabète de type 2. Attention : son utilisation pour la perte de poids seule constitue un mésusage.
+- **Ozempic** (semaglutide, indication diabète de type 2) : remboursé à 30 % (65 % en ALD diabète) pour le diabète de type 2. Attention : son utilisation pour la perte de poids seule constitue un mésusage.
 - **Trulicity, Victoza** : remboursés pour le diabète de type 2 avec ou sans co-indication obésité.
 
 Pour en savoir plus sur les remboursements actuels, consultez notre guide complet sur le [remboursement GLP-1 en France 2026](/collections/glp1-cout/remboursement-glp1-2026/).

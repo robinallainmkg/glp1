@@ -1,5 +1,5 @@
 ---
-title: "Alternatives Naturelles Ozempic : Guide Complet 2025"
+title: "Alternatives Naturelles Ozempic : Guide Complet 2026"
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"

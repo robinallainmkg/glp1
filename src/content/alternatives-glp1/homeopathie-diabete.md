@@ -1,5 +1,5 @@
 ---
-title: "Homéopathie diabète : que dit la science ? Guide 2025"
+title: "Homéopathie diabète : que dit la science ? Guide 2026"
 description: "Homéopathie et diabète : ce que la science dit réellement, ses limites, les risques à éviter et les alternatives sérieuses reconnues médicalement."
 pubDate: 2025-08-20
 date: 2025-08-20

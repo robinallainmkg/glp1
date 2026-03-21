@@ -1,5 +1,5 @@
 ---
-title: "Peut-on guérir du diabète de type 2 ? Guide 2025"
+title: "Peut-on guérir du diabète de type 2 ? Guide 2026"
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"

@@ -1,5 +1,5 @@
 ---
-title: "Effets Secondaires Zepbound Tirzepatide : Guide Complet 2025"
+title: "Effets Secondaires Zepbound Tirzepatide : Guide Complet 2026"
 description: "Effets secondaires Zepbound tirzepatide : nausées, vomissements, diarrhée, fréquence et conseils pratiques pour minimiser les risques du traitement."
 pubDate: 2025-09-07
 date: 2025-09-07

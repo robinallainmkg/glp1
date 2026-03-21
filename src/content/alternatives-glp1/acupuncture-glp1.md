@@ -1,5 +1,5 @@
 ---
-title: "Acupuncture GLP-1 diabète : Guide Complet et Conseils 2025"
+title: "Acupuncture GLP-1 diabète : Guide Complet et Conseils 2026"
 description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Bénéfices, preuves scientifiques, coûts et remboursement en France."
 pubDate: 2025-08-20
 date: 2025-08-20

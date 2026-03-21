@@ -1,5 +1,5 @@
 ---
-title: "Phytothérapie GLP-1 plantes médicinales : Guide 2025"
+title: "Phytothérapie GLP-1 plantes médicinales : Guide 2026"
 description: "Phytothérapie et GLP-1 : quelles plantes médicinales peuvent compléter ce traitement ? Données scientifiques, précautions et recommandations médicales."
 pubDate: 2025-08-20
 date: 2025-08-20

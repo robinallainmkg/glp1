@@ -1,5 +1,5 @@
 ---
-title: "Diabétologue Paris Spécialisé GLP-1 : Guide 2025"
+title: "Diabétologue Paris Spécialisé GLP-1 : Guide 2026"
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"

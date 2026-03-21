@@ -24,7 +24,7 @@ mainKeyword: "effets secondaires Rybelsus sémaglutide oral"
 
 ### Troubles digestifs
 
-> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 65% par l'Assurance Maladie pour le diabète de type 2, avec justificatif de prescription depuis février 2025), Rybelsus reste intégralement à la charge du patient.
+> **Bon à savoir** : La HAS a rendu un avis défavorable au remboursement de Rybelsus. Contrairement à Ozempic (sémaglutide injectable, remboursé à 30 % (65 % en ALD diabète) par l'Assurance Maladie pour le diabète de type 2, avec justificatif de prescription depuis février 2025), Rybelsus reste intégralement à la charge du patient.
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>=10% selon le RCP)

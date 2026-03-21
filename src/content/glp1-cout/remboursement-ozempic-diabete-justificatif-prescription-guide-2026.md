@@ -169,7 +169,7 @@ Si vous prenez Ozempic uniquement pour la perte de poids (sans diabète diagnost
 **Ozempic et Wegovy sont-ils la même molécule ? Ozempic peut-il être prescrit pour l'obésité ?**
 Ozempic et Wegovy contiennent tous deux du sémaglutide, mais à des dosages différents. Ozempic est indiqué et remboursé uniquement pour le diabète de type 2. Wegovy (dosage 2,4 mg) est indiqué pour l'obésité mais non remboursé. Un médecin peut techniquement prescrire Ozempic hors AMM pour l'obésité, mais sans remboursement dans ce cas.
 
-**Victoza est-il vraiment remboursé à 65 % ? C'est beaucoup moins cher qu'Ozempic.**
+**Victoza est-il vraiment remboursé à 30 % (65 % en ALD diabète) ? C'est beaucoup moins cher qu'Ozempic.**
 Oui, Victoza (liraglutide quotidien) est remboursé à 65 % (hors ALD) pour le diabète depuis de nombreuses années. Son prix après remboursement est nettement inférieur à Ozempic. C'est un facteur que votre diabétologue peut prendre en compte pour le choix du traitement.
 
 ---
