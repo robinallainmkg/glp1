@@ -126,6 +126,10 @@ const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciO
   </main>
 
   <script define:vars={{ SUPABASE_URL, SUPABASE_ANON_KEY }}>
+    // Initialise le client Supabase pour obtenir des tokens toujours frais
+    const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
     const toggle = document.getElementById('billing-toggle');
     const priceEl = document.querySelector('#premium-price .price');
     const periodEl = document.querySelector('#premium-price .period');
@@ -152,12 +156,11 @@ const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciO
       btnEl.textContent = 'Chargement...';
 
       try {
-        // Check if user is logged in (Supabase auth token in localStorage)
-        const authKey = Object.keys(localStorage).find(k => k.startsWith('sb-') && k.endsWith('-auth-token'));
-        const authData = authKey ? JSON.parse(localStorage.getItem(authKey)) : null;
-        const accessToken = authData?.access_token;
+        // Utilise getSession() pour obtenir un token frais (auto-refresh si expiré)
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
 
-        if (!accessToken) {
+        if (sessionError || !session?.access_token) {
+          // Pas connecté ou session irrecupérable → page de connexion
           window.location.href = '/mon-espace/?redirect=tarifs';
           return;
         }
@@ -166,7 +169,7 @@ const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciO
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + accessToken,
+            'Authorization': 'Bearer ' + session.access_token,
             'apikey': SUPABASE_ANON_KEY,
           },
           body: JSON.stringify({ price_type: billingType }),
@@ -175,6 +178,10 @@ const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciO
         const data = await resp.json();
         if (data.url) {
           window.location.href = data.url;
+        } else if (data.error === 'Token invalide' || resp.status === 401) {
+          // Token invalide côté serveur → forcer reconnexion
+          await supabase.auth.signOut();
+          window.location.href = '/mon-espace/?redirect=tarifs&reason=session_expired';
         } else {
           alert(data.error || 'Erreur lors de la création du paiement');
           btnEl.disabled = false;
