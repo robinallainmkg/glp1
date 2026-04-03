@@ -1505,7 +1505,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     const resultsBtn = typeof document !== 'undefined' ? document.getElementById('results-btn') : null;
     if (nextBtn) (nextBtn as HTMLElement).addEventListener('click', nextQuestion);
     if (prevBtn) (prevBtn as HTMLElement).addEventListener('click', prevQuestion);
-    if (resultsBtn) (resultsBtn as HTMLElement).addEventListener('click', calculateResults);
+    if (resultsBtn) (resultsBtn as HTMLElement).addEventListener('click', nextQuestion);
 
     // Email gate form handler
     const emailForm = typeof document !== 'undefined' ? document.getElementById('diagnostic-email-form') : null;
