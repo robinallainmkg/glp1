@@ -954,23 +954,23 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     }
   </style>
 
-  <script>
-    import { supabase } from '../../lib/supabase';
+  <script is:inline>
+    (function() {
+    var SB_URL = "https://ywekaivgjzsmdocchvum.supabase.co";
+    var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY";
 
-    // permissive types for inline client script
-    let currentQuestion: number = 1;
-    const totalQuestions: number = 9;
-    const answers: any = {};
-    let selectedEffets: any[] = [];
+    var currentQuestion = 1;
+    var totalQuestions = 9;
+    var answers = {};
+    var selectedEffets = [];
 
-    let diagnosticEmail = '';
+    var diagnosticEmail = '';
 
-    // Fonction pour enregistrer le diagnostic dans Supabase
-    async function saveDiagnosticToSupabase(answers: any, recommendation: string, scores?: { ozempic: number, wegovy: number, mounjaro: number }) {
+    // Fonction pour enregistrer le diagnostic dans Supabase via REST API
+    async function saveDiagnosticToSupabase(answersData, recommendation, scores) {
       try {
-        // Save diagnostic data
-        const diagnosticData = {
-          answers: answers,
+        var diagnosticData = {
+          answers: answersData,
           recommendation: recommendation,
           scores: scores || null,
           email: diagnosticEmail || null,
@@ -979,43 +979,56 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
           page_url: window.location.href
         };
 
-        const { data, error } = await supabase
-          .from('diagnostics')
-          .insert([diagnosticData]);
+        var resp = await fetch(SB_URL + '/rest/v1/diagnostics', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SB_KEY,
+            'Authorization': 'Bearer ' + SB_KEY,
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify(diagnosticData)
+        });
 
-        if (error) {
-          console.error('❌ Erreur Supabase diagnostic:', error);
+        if (!resp.ok) {
+          console.error('Erreur Supabase diagnostic:', resp.status, await resp.text());
         } else {
-          console.log('✅ Diagnostic enregistré:', data);
+          console.log('Diagnostic enregistre');
         }
 
         // Save email to contacts table for lead collection
         if (diagnosticEmail) {
-          const { error: contactError } = await supabase
-            .from('contacts')
-            .insert({
+          var contactResp = await fetch(SB_URL + '/rest/v1/contacts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SB_KEY,
+              'Authorization': 'Bearer ' + SB_KEY
+            },
+            body: JSON.stringify({
               email: diagnosticEmail,
               subject: 'Diagnostic GLP-1',
-              message: `Diagnostic complété - Recommandation: ${recommendation}. Réponses: ${JSON.stringify(answers)}`,
+              message: 'Diagnostic complete - Recommandation: ' + recommendation + '. Reponses: ' + JSON.stringify(answersData),
               newsletter: true,
               contact_type: 'diagnostic',
               status: 'new',
               created_at: new Date().toISOString()
-            });
+            })
+          });
 
-          if (contactError) {
-            console.error('❌ Erreur Supabase contact:', contactError);
+          if (!contactResp.ok) {
+            console.error('Erreur Supabase contact:', contactResp.status);
           } else {
-            console.log('✅ Contact diagnostic enregistré');
+            console.log('Contact diagnostic enregistre');
           }
         }
       } catch (err) {
-        console.error('❌ Erreur lors de l\'enregistrement:', err);
+        console.error('Erreur enregistrement:', err);
       }
     }
 
     // Navigation functions
-  function showQuestion(n: number) {
+  function showQuestion(n) {
       document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
       
       // Logique conditionnelle pour la question 9 (effets secondaires)
@@ -1035,7 +1048,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       // Si c'est la question 9 et que l'objectif est "effets-secondaires", s'assurer qu'elle est visible
         if (n === 9 && answers.q1 === 'effets-secondaires') {
           const effEl = document.getElementById('effets-secondaires-question');
-          if (effEl) (effEl as HTMLElement).style.display = 'block';
+          if (effEl) effEl.style.display = 'block';
         }
       
   const qEl = document.querySelector(`[data-question="${n}"]`);
@@ -1046,34 +1059,34 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
         const qNum = document.getElementById('question-number');
         if (qNum) qNum.textContent = 'Question finale';
         const pFill = document.getElementById('progress-fill');
-        if (pFill) (pFill as HTMLElement).style.width = '100%';
+        if (pFill) pFill.style.width = '100%';
       } else {
         const qNum = document.getElementById('question-number');
         if (qNum) qNum.textContent = String(n);
         const pFill = document.getElementById('progress-fill');
-        if (pFill) (pFill as HTMLElement).style.width = `${(n / totalQuestions) * 100}%`;
+        if (pFill) pFill.style.width = `${(n / totalQuestions) * 100}%`;
       }
       
   const prevBtn = document.getElementById('prev-btn');
-  if (prevBtn) (prevBtn as HTMLElement).style.display = n === 1 ? 'none' : 'inline-block';
+  if (prevBtn) prevBtn.style.display = n === 1 ? 'none' : 'inline-block';
       
       // Gestion spéciale des boutons pour la question 9 (effets secondaires)
       if (n === 9 && answers.q1 === 'effets-secondaires') {
         // Pour le parcours effets secondaires, la question 9 est la dernière - afficher le bouton "Voir les résultats"
         const nextBtn = document.getElementById('next-btn');
         const resultsBtn = document.getElementById('results-btn');
-        if (nextBtn) (nextBtn as HTMLElement).style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
         if (resultsBtn) {
-          (resultsBtn as HTMLElement).style.display = 'inline-block';
+          resultsBtn.style.display = 'inline-block';
           resultsBtn.textContent = 'Voir mes Solutions 🛠️';
         }
       } else {
         // Pour toutes les autres questions, afficher le bouton Suivant sauf si on est à la dernière question du parcours normal
         const nextBtn = document.getElementById('next-btn');
         const resultsBtn = document.getElementById('results-btn');
-        if (nextBtn) (nextBtn as HTMLElement).style.display = (n >= totalQuestions) ? 'none' : 'inline-block';
+        if (nextBtn) nextBtn.style.display = (n >= totalQuestions) ? 'none' : 'inline-block';
         if (resultsBtn) {
-          (resultsBtn as HTMLElement).style.display = 'none';
+          resultsBtn.style.display = 'none';
           resultsBtn.textContent = 'Voir mes Résultats 🎯';
         }
       }
@@ -1084,7 +1097,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       
       // Gestion spéciale pour la question 9 (choix multiples)
       if (currentQuestion === 9) {
-        const checkedEffets = document.querySelectorAll<HTMLInputElement>('input[name="effets"]:checked');
+        const checkedEffets = document.querySelectorAll('input[name="effets"]:checked');
         if (!checkedEffets || checkedEffets.length === 0) {
           alert('Veuillez sélectionner au moins un effet secondaire.');
           return;
@@ -1092,7 +1105,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
         selectedEffets = Array.from(checkedEffets).map((input) => input.value);
         answers[`q${currentQuestion}`] = selectedEffets;
       } else {
-        const currentAnswer = document.querySelector<HTMLInputElement>(`input[name="q${currentQuestion}"]:checked`);
+        const currentAnswer = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
         if (!currentAnswer) {
           alert('Veuillez sélectionner une réponse avant de continuer.');
           return;
@@ -1127,7 +1140,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     function showResults() {
       console.log('showResults called with answers:', answers);
       document.getElementById('quiz-container').style.display = 'none';
-      const navEl = document.querySelector<HTMLElement>('.navigation');
+      const navEl = document.querySelector('.navigation');
       if (navEl) navEl.style.display = 'none';
       // Show email gate instead of results directly
       document.getElementById('email-gate').style.display = 'block';
@@ -1167,7 +1180,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
 
       // Pour les autres cas, récupérer la dernière réponse si nécessaire
       if (currentQuestion <= totalQuestions) {
-        const currentAnswer = document.querySelector<HTMLInputElement>(`input[name="q${currentQuestion}"]:checked`);
+        const currentAnswer = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
           if (!currentAnswer) {
             alert('Veuillez sélectionner une réponse avant de voir les résultats.');
             return;
@@ -1224,7 +1237,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
 
     function showEffetsSideSolutions() {
   const resultsEl = document.getElementById('results-section');
-  if (resultsEl) (resultsEl as HTMLElement).style.display = 'block';
+  if (resultsEl) resultsEl.style.display = 'block';
 
       let solutions = '';
       const effets = selectedEffets;
@@ -1240,13 +1253,14 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       if (effets.includes('nausees') || effets.includes('vomissements')) {
         solutions += `
           <div class="effect-solution">
-            <h4>🤢 Nausées et vomissements</h4>
+            <h4>🤢 Nausees et vomissements</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">Effet le plus frequent sous GLP-1 (30-40% des patients), surtout lors de la montee en dose. Il s'attenue generalement en 2-4 semaines.</p>
             <ul>
-              <li>Prenez votre injection après un repas léger</li>
-              <li>Évitez les aliments gras et épicés</li>
-              <li>Mangez de plus petites portions, plus fréquemment</li>
-              <li>Considérez du gingembre (tisane ou gélules)</li>
-              <li>Discutez d'une réduction temporaire de dose avec votre médecin</li>
+              <li><strong>Protocole alimentaire :</strong> Fractionnez en 5-6 petits repas par jour. Privilegiez les aliments froids ou tiedes (moins d'odeur). Arretez de manger des que vous sentez la satiete — ne forcez jamais.</li>
+              <li><strong>Gingembre therapeutique :</strong> 1g de gingembre frais rape dans de l'eau chaude, 3x/jour avant les repas. Le gingembre est un antiemetique prouve (etude Phytotherapy Research 2020).</li>
+              <li><strong>Timing injection :</strong> Faites votre injection le soir avant le coucher plutot que le matin — les nausees passent pendant le sommeil.</li>
+              <li><strong>Hydratation :</strong> Buvez par petites gorgees tout au long de la journee. Evitez de boire pendant les repas. Eau gazeuse froide ou eau citron peut aider.</li>
+              <li><strong>Si persistant apres 4 semaines :</strong> Demandez a votre medecin un retour a la dose precedente pendant 2-4 semaines supplementaires avant de re-augmenter. Un antiemetique ponctuel (domperidone) peut etre prescrit.</li>
             </ul>
           </div>
         `;
@@ -1255,13 +1269,14 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       if (effets.includes('diarrhee')) {
         solutions += `
           <div class="effect-solution">
-            <h4>💩 Diarrhée</h4>
+            <h4>💩 Diarrhee</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">Touche environ 15-20% des patients. Souvent liee a l'acceleration du transit par le GLP-1.</p>
             <ul>
-              <li>Augmentez les fibres solubles (avoine, bananes)</li>
-              <li>Évitez les édulcorants artificiels</li>
-              <li>Hydratez-vous davantage</li>
-              <li>Envisagez des probiotiques</li>
-              <li>Réduisez temporairement les graisses dans l'alimentation</li>
+              <li><strong>Regime BRATTY :</strong> Bananes, riz, compote de pommes, toast, the, yaourt nature. Ce protocole calme rapidement le transit.</li>
+              <li><strong>Probiotiques cibles :</strong> Saccharomyces boulardii (Ultra-Levure) 1 gelule/jour pendant 2 semaines, puis Lactobacillus rhamnosus en entretien.</li>
+              <li><strong>Eliminez les declencheurs :</strong> Lactose, sorbitol/xylitol (chewing-gums, bonbons "sans sucre"), edulcorants artificiels, cafe, alcool, fritures.</li>
+              <li><strong>Rehydratation :</strong> Buvez 2-3L/jour. Ajoutez une pincee de sel et un peu de jus de citron a votre eau — cela remplace les electrolytes perdus.</li>
+              <li><strong>Si severe (>4 selles liquides/jour pendant >3 jours) :</strong> Consultez rapidement. Un ajustement de dose ou un changement de molecule peut etre necessaire. Risque de deshydratation.</li>
             </ul>
           </div>
         `;
@@ -1271,12 +1286,29 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
         solutions += `
           <div class="effect-solution">
             <h4>🚽 Constipation</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">Frequent surtout avec le tirzepatide (Mounjaro). Le ralentissement gastrique reduit aussi le transit intestinal.</p>
             <ul>
-              <li>Augmentez votre consommation de fibres progressivement</li>
-              <li>Buvez plus d'eau (2L minimum par jour)</li>
-              <li>Marchez 20-30 minutes après les repas</li>
-              <li>Considérez le psyllium ou des prunes</li>
-              <li>Évitez de forcer, consultez si ça persiste</li>
+              <li><strong>Fibres progressives :</strong> Augmentez de 5g/semaine jusqu'a 25-30g/jour. Psyllium blond (Metamucil) : 1 cuillere dans un grand verre d'eau le matin, excellent regulateur.</li>
+              <li><strong>Hydratation cle :</strong> 2.5L d'eau minimum par jour. Buvez un grand verre d'eau tiede au reveil — cela stimule le reflexe gastro-colique.</li>
+              <li><strong>Mouvement :</strong> 30 minutes de marche apres le repas principal. Le mouvement active mecaniquement le peristaltisme intestinal.</li>
+              <li><strong>Aliments laxatifs naturels :</strong> Pruneaux (3-4/jour), graines de chia trempees, kiwis (2 le matin a jeun — etude publiee dans AJG 2023), huile d'olive 1 cuillere a soupe a jeun.</li>
+              <li><strong>Si >3 jours sans selles :</strong> Macrogol (Forlax) en vente libre, efficace et bien tolere. Consultez si chronique — votre medecin peut prescrire un laxatif osmotique adapte.</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('brulures-estomac')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>🔥 Brulures d'estomac et reflux</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">Le ralentissement de la vidange gastrique par le GLP-1 peut aggraver le reflux gastro-oesophagien (RGO).</p>
+            <ul>
+              <li><strong>Position :</strong> Ne vous allongez jamais dans les 2-3h suivant un repas. Surelever la tete du lit de 15cm avec des cales (pas juste des oreillers).</li>
+              <li><strong>Repas anti-reflux :</strong> Petites portions, pas de repas tardifs. Evitez : tomates, agrumes, chocolat, menthe, oignons crus, aliments epices, boissons gazeuses.</li>
+              <li><strong>Protection naturelle :</strong> Aloe vera en gel buvable (30ml avant les repas). Bicarbonate de soude : 1/2 cuillere a cafe dans un verre d'eau en cas de crise aigue (max 2x/jour).</li>
+              <li><strong>Vetements :</strong> Evitez les ceintures serrees et les pantalons trop ajustes a la taille — la pression abdominale aggrave le reflux.</li>
+              <li><strong>Traitement medical :</strong> Si frequent (>2x/semaine), votre medecin peut prescrire un IPP (omeprazole) le temps de l'adaptation au GLP-1. Ne prenez pas d'anti-inflammatoires (ibuprofene) qui aggravent.</li>
             </ul>
           </div>
         `;
@@ -1285,13 +1317,14 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       if (effets.includes('fatigue')) {
         solutions += `
           <div class="effect-solution">
-            <h4>😴 Fatigue</h4>
+            <h4>😴 Fatigue excessive</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">Souvent causee par un deficit calorique trop important ou des carences liees a la reduction de l'appetit.</p>
             <ul>
-              <li>Assurez-vous de consommer suffisamment de calories</li>
-              <li>Complément en vitamines B et fer (après analyse)</li>
-              <li>Respectez un rythme de sommeil régulier</li>
-              <li>Exercice doux (marche, yoga)</li>
-              <li>Évitez les chutes drastiques de sucre</li>
+              <li><strong>Apport calorique minimum :</strong> Ne descendez jamais sous 1200 kcal/jour (femmes) ou 1500 kcal/jour (hommes), meme si vous n'avez pas faim. Le GLP-1 coupe l'appetit mais votre corps a besoin de carburant.</li>
+              <li><strong>Proteines prioritaires :</strong> 1.2-1.5g/kg de poids par jour minimum. Oeuf, poulet, poisson, legumineuses, fromage blanc. Les proteines maintiennent la masse musculaire et l'energie.</li>
+              <li><strong>Fer + Vitamine B12 :</strong> Faites doser ces deux marqueurs. La fatigue sous GLP-1 est souvent un fer bas (ferritine <30) ou une B12 basse. Supplementez si necessaire.</li>
+              <li><strong>Routine energetique :</strong> 20 min de marche rapide le matin (pas le soir). Exposition a la lumiere naturelle des le reveil. Sieste de 20 min max si besoin.</li>
+              <li><strong>Alerte :</strong> Si fatigue extreme + essoufflement + paleur = consultez en urgence (risque d'anemie). Si fatigue + soif intense + urines frequentes = verifiez votre glycemie.</li>
             </ul>
           </div>
         `;
@@ -1301,12 +1334,13 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
         solutions += `
           <div class="effect-solution">
             <h4>💇 Chute de cheveux</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">L'effluvium telogene (chute diffuse) touche 5-10% des patients, generalement 2-4 mois apres le debut du traitement. C'est lie a la perte de poids rapide, pas directement au medicament.</p>
             <ul>
-              <li>Complément en biotine et vitamines du groupe B</li>
-              <li>Massage du cuir chevelu quotidien</li>
-              <li>Évitez les coiffures tirées et la chaleur excessive</li>
-              <li>Assurez-vous d'un apport suffisant en protéines</li>
-              <li>Consultez un dermatologue si la chute persiste</li>
+              <li><strong>Proteines +++:</strong> Visez 1.5g/kg/jour minimum. Les cheveux sont faits de keratine (proteine). Oeufs, viande, poisson, lentilles, tofu a chaque repas.</li>
+              <li><strong>Supplementation ciblee :</strong> Biotine 5000mcg/jour + Zinc 15mg + Fer (si ferritine <50) + Vitamine D (si <30ng/ml). Cure de 3 mois minimum pour voir les resultats.</li>
+              <li><strong>Ralentir la perte de poids :</strong> Visez 0.5-1kg/semaine max. Une perte trop rapide (>1.5kg/semaine) declenche la chute. Discutez un palier de dose avec votre medecin.</li>
+              <li><strong>Soins capillaires :</strong> Shampoing doux sans sulfate. Evitez colorations, lissage, seche-cheveux chaud. Massage du cuir chevelu 5 min/jour (stimule la microcirculation).</li>
+              <li><strong>Rassurant :</strong> Dans 90% des cas, les cheveux repoussent completement 6-12 mois apres stabilisation du poids. Si la chute est massive (>100 cheveux/jour), consultez un dermatologue.</li>
             </ul>
           </div>
         `;
@@ -1315,13 +1349,30 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       if (effets.includes('peau-relachee')) {
         solutions += `
           <div class="effect-solution">
-            <h4>👴 Peau relâchée</h4>
+            <h4>👴 Peau relachee ("Ozempic face")</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">La perte de graisse faciale et corporelle rapide peut entrainer un relachement cutane. Plus frequent apres 40 ans et pour les pertes >15% du poids.</p>
             <ul>
-              <li>Hydratation intense avec des crèmes raffermissantes</li>
-              <li>Massage quotidien avec des huiles (rose musquée)</li>
-              <li>Exercices de renforcement musculaire</li>
-              <li>Ralentir la perte de poids (1-2kg/mois max)</li>
-              <li>Considérer des soins esthétiques (radiofréquence, etc.)</li>
+              <li><strong>Musculation obligatoire :</strong> 3 seances/semaine de renforcement musculaire. Le muscle remplit la peau lachee et ameliore le tonus. Squats, pompes, gainage — les exercices de base suffisent.</li>
+              <li><strong>Collagene :</strong> Supplementation en peptides de collagene hydrolysee (10-15g/jour). Etude Journal of Cosmetic Dermatology : amelioration significative de l'elasticite cutanee apres 8 semaines.</li>
+              <li><strong>Ralentir la perte :</strong> Objectif 0.5-1kg/semaine max. Une perte >1.5kg/semaine ne laisse pas le temps a la peau de se retractrer. Discutez un palier avec votre medecin.</li>
+              <li><strong>Hydratation cutanee :</strong> Creme au retinol le soir + vitamine C le matin sur le visage. Huile de rose musquee ou beurre de karite sur le corps apres la douche.</li>
+              <li><strong>Options medicales :</strong> Radiofrequence (Morpheus8), microneedling, ou ultrasons focalises (Ulthera) peuvent aider sans chirurgie. En cas de perte massive (>30kg), la chirurgie reparatrice peut etre prise en charge par l'Assurance Maladie.</li>
+            </ul>
+          </div>
+        `;
+      }
+
+      if (effets.includes('vertige')) {
+        solutions += `
+          <div class="effect-solution">
+            <h4>😵‍💫 Vertiges et etourdissements</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">Souvent lies a une hypoglycemie, une deshydratation ou une baisse de tension arterielle sous GLP-1.</p>
+            <ul>
+              <li><strong>Verifiez votre glycemie :</strong> Si vous etes diabetique, les GLP-1 combines a d'autres traitements (sulfamides, insuline) peuvent provoquer des hypos. Ayez toujours du sucre sur vous (3 morceaux = 15g de glucose).</li>
+              <li><strong>Hydratation + sel :</strong> Buvez 2-3L/jour. Les GLP-1 peuvent reduire la tension arterielle. Si vos vertiges surviennent au lever : ajoutez du sel a votre alimentation et levez-vous lentement (assis 30 sec puis debout).</li>
+              <li><strong>Ne sautez pas de repas :</strong> Meme si l'appetit est coupe, mangez au moins 3 repas legers. Un en-cas proteine + glucides complexes (pomme + fromage, crackers + houmous) previent les baisses d'energie.</li>
+              <li><strong>Tension arterielle :</strong> Si vous prenez des antihypertenseurs, la perte de poids peut rendre votre dose trop forte. Faites verifier votre tension — un ajustement peut etre necessaire.</li>
+              <li><strong>Urgence :</strong> Si vertiges + confusion + sueurs froides = hypoglycemie severe, prenez du sucre immediatement et appelez le 15. Si vertiges + douleur thoracique + essoufflement = urgences.</li>
             </ul>
           </div>
         `;
@@ -1331,36 +1382,38 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
         solutions += `
           <div class="effect-solution">
             <h4>💊 Carences nutritionnelles</h4>
+            <p style="color:#6b7280;margin-bottom:0.8rem;">La forte reduction de l'appetit sous GLP-1 peut entrainer des carences si l'alimentation n'est pas optimisee. Risque accru apres 3 mois de traitement.</p>
             <ul>
-              <li>Bilan sanguin complet (vitamines B12, D, fer, folates)</li>
-              <li>Complément multivitaminé adapté</li>
-              <li>Privilégier les aliments denses en nutriments</li>
-              <li>Consultation avec un nutritionniste</li>
-              <li>Supplémentation ciblée selon les carences détectées</li>
+              <li><strong>Bilan sanguin complet :</strong> A faire avant de commencer le GLP-1 puis tous les 3 mois : NFS, ferritine, B12, folates, vitamine D, calcium, magnesium, zinc, albumine. Demandez ces analyses a votre medecin.</li>
+              <li><strong>Supplementation de base recommandee :</strong> Multivitamine complete + Vitamine D3 2000UI/jour + Omega-3 (1g EPA+DHA/jour). C'est le minimum sous traitement GLP-1.</li>
+              <li><strong>Alimentation densite maximale :</strong> Chaque bouchee compte quand l'appetit est reduit. Priorite aux proteines (viande, poisson, oeufs, legumineuses), puis legumes colores, puis feculents complets. Eliminez les calories vides (sucres, alcool, ultra-transformes).</li>
+              <li><strong>Signes d'alerte :</strong> Ongles cassants + cheveux fins = fer/zinc. Crampes nocturnes = magnesium. Fourmillements mains/pieds = B12. Fatigue + douleurs osseuses = vitamine D.</li>
+              <li><strong>Suivi nutritionnel :</strong> Consultez un dieteticien-nutritionniste (remboursable via "Mon Bilan Dietetique" depuis 2024). Un suivi professionnel reduit le risque de carences de 60%.</li>
             </ul>
           </div>
         `;
       }
 
       solutions += `
-          <div class="general-advice">
-            <h4>💡 Conseils généraux</h4>
+          <div class="general-advice" style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);padding:1.5rem;border-radius:12px;margin-top:2rem;border-left:4px solid #0284c7;">
+            <h4>💡 Strategie globale anti-effets secondaires</h4>
             <ul>
-              <li><strong>Communiquez avec votre médecin :</strong> N'hésitez pas à discuter d'un ajustement de dose</li>
-              <li><strong>Progressivité :</strong> La plupart des effets s'atténuent après 4-8 semaines</li>
-              <li><strong>Suivi régulier :</strong> Tenez un journal de vos symptômes</li>
-              <li><strong>Patience :</strong> L'adaptation peut prendre du temps</li>
+              <li><strong>Montee en dose progressive :</strong> C'est LA cle. Restez a la dose minimale 4-6 semaines avant d'augmenter. Demandez a votre medecin de ralentir le protocole si les effets sont trop forts.</li>
+              <li><strong>Journal des symptomes :</strong> Notez chaque jour vos effets, leur intensite (1-10), et ce que vous avez mange. Apres 2 semaines, des patterns clairs emergeront.</li>
+              <li><strong>Timing optimal :</strong> Injectez le soir avant le coucher. Choisissez un jour ou vous pouvez vous reposer le lendemain (vendredi soir par exemple).</li>
+              <li><strong>Seuil d'alerte :</strong> Si un effet vous empeche de travailler ou de dormir pendant >5 jours, contactez votre medecin sans attendre.</li>
+              <li><strong>Communaute :</strong> Rejoignez des groupes de patients GLP-1 (forums, reseaux sociaux) — partager son experience aide enormement a relativiser et trouver des astuces.</li>
             </ul>
           </div>
-          
-          <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+
+          <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #dc2626;">
             <h4 style="color: #dc3545; margin-bottom: 1rem;">⚠️ Important</h4>
-            <p style="margin: 0; font-size: 0.9rem;">Ces conseils sont informatifs. Consultez toujours votre médecin avant de modifier votre traitement ou d'arrêter des médicaments.</p>
+            <p style="margin: 0; font-size: 0.9rem;">Ces conseils sont informatifs et ne remplacent pas un avis medical. Consultez toujours votre medecin avant de modifier votre traitement, d'ajouter des supplements ou d'arreter des medicaments. En cas d'effets secondaires graves (vomissements incontrolables, douleurs abdominales intenses, signes de pancreatite), appelez le 15 ou rendez-vous aux urgences.</p>
           </div>
 
-          <div style="margin-top: 2rem;">
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
             <a href="/effets-secondaires-glp1/" class="btn btn-primary">Guide complet des effets secondaires</a>
-            <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un médecin spécialisé</a>
+            <a href="/medecins-glp1-france/" class="btn btn-outline">Trouver un medecin specialise</a>
           </div>
         </div>
       `;
@@ -1371,7 +1424,7 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
       saveDiagnosticToSupabase(answers, 'effets-secondaires', { ozempic: 0, wegovy: 0, mounjaro: 0 });
     }
 
-    function showTraitementResults(ozempicScore: number, wegovyScore: number, mounjaroScore: number) {
+    function showTraitementResults(ozempicScore, wegovyScore, mounjaroScore) {
       console.log('showTraitementResults called with scores:', { ozempicScore, wegovyScore, mounjaroScore });
       document.getElementById('results-section').style.display = 'block';
 
@@ -1500,20 +1553,20 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     }
 
     // Event listeners
-    const nextBtn = typeof document !== 'undefined' ? document.getElementById('next-btn') : null;
-    const prevBtn = typeof document !== 'undefined' ? document.getElementById('prev-btn') : null;
-    const resultsBtn = typeof document !== 'undefined' ? document.getElementById('results-btn') : null;
-    if (nextBtn) (nextBtn as HTMLElement).addEventListener('click', nextQuestion);
-    if (prevBtn) (prevBtn as HTMLElement).addEventListener('click', prevQuestion);
-    if (resultsBtn) (resultsBtn as HTMLElement).addEventListener('click', nextQuestion);
+    var nextBtn = document.getElementById('next-btn');
+    var prevBtn = document.getElementById('prev-btn');
+    var resultsBtn = document.getElementById('results-btn');
+    if (nextBtn) nextBtn.addEventListener('click', nextQuestion);
+    if (prevBtn) prevBtn.addEventListener('click', prevQuestion);
+    if (resultsBtn) resultsBtn.addEventListener('click', nextQuestion);
 
     // Email gate form handler
-    const emailForm = typeof document !== 'undefined' ? document.getElementById('diagnostic-email-form') : null;
+    var emailForm = document.getElementById('diagnostic-email-form');
     if (emailForm) {
-      emailForm.addEventListener('submit', async (e: Event) => {
+      emailForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        const emailInput = document.getElementById('diagnostic-email') as HTMLInputElement;
-        const submitBtn = emailForm.querySelector('button') as HTMLButtonElement;
+        var emailInput = document.getElementById('diagnostic-email');
+        var submitBtn = emailForm.querySelector('button');
         diagnosticEmail = emailInput.value;
 
         submitBtn.textContent = 'Chargement...';
@@ -1526,13 +1579,12 @@ const description = "Découvrez en 5 minutes quel traitement GLP-1 est le plus a
     }
 
     // Auto-advance on selection (sauf pour la question 9 qui utilise des checkboxes)
-    if (typeof document !== 'undefined') {
-      document.addEventListener('change', function(e: any) {
+      document.addEventListener('change', function(e) {
         if (e && e.target && e.target.type === 'radio' && currentQuestion !== 9) {
           setTimeout(nextQuestion, 500);
         }
       });
-    }
+    })();
   </script>
 
 </UnifiedLayout>
