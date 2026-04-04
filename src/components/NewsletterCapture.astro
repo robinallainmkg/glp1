@@ -56,52 +56,61 @@
   </div>
 </div>
 
-<script>
-import { createClient } from '@supabase/supabase-js';
+<script is:inline>
+(function() {
+  var SB_URL = "https://ywekaivgjzsmdocchvum.supabase.co";
+  var SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY";
 
-const supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+  var form = document.getElementById('newsletter-form');
+  if (!form) return;
 
-document.getElementById('newsletter-form')?.addEventListener('submit', async (e) => {
-  e.preventDefault();
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-  const email = (document.getElementById('email') as HTMLInputElement).value;
-  const button = (e.target as HTMLFormElement).querySelector('button');
-  if (!button) return;
-  const originalText = button.textContent;
+    var emailInput = document.getElementById('email');
+    var email = emailInput ? emailInput.value : '';
+    var button = form.querySelector('button');
+    if (!button || !email) return;
+    var originalText = button.textContent;
 
-  button.textContent = 'Inscription...';
-  button.disabled = true;
+    button.textContent = 'Inscription...';
+    button.disabled = true;
 
-  try {
-    const { error } = await supabase
-      .from('contacts')
-      .insert({
-        email,
-        subject: 'Newsletter - Guide Prix GLP-1',
-        message: 'Inscription newsletter via homepage',
-        newsletter: true,
-        contact_type: 'newsletter',
-        status: 'new'
+    try {
+      var resp = await fetch(SB_URL + '/rest/v1/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SB_KEY,
+          'Authorization': 'Bearer ' + SB_KEY
+        },
+        body: JSON.stringify({
+          email: email,
+          subject: 'Newsletter - Guide Prix GLP-1',
+          message: 'Inscription newsletter via homepage',
+          newsletter: true,
+          contact_type: 'newsletter',
+          status: 'new'
+        })
       });
 
-    if (error) {
-      console.error('Erreur Supabase:', error);
+      if (!resp.ok) {
+        console.error('Erreur Supabase:', resp.status);
+        button.textContent = originalText;
+        button.disabled = false;
+        alert('Erreur lors de l\'inscription. Veuillez reessayer.');
+        return;
+      }
+
+      button.textContent = '✅ Inscrit !';
+      button.className = button.className.replace('from-yellow-400 to-orange-500', 'from-green-400 to-green-500');
+      if (emailInput) emailInput.disabled = true;
+    } catch (error) {
+      console.error('Erreur:', error);
       button.textContent = originalText;
       button.disabled = false;
-      alert('Erreur lors de l\'inscription. Veuillez réessayer.');
-      return;
+      alert('Erreur de connexion. Veuillez reessayer.');
     }
-
-    button.textContent = '✅ Inscrit !';
-    button.className = button.className.replace('from-yellow-400 to-orange-500', 'from-green-400 to-green-500');
-    (document.getElementById('email') as HTMLInputElement).disabled = true;
-  } catch (error) {
-    console.error('Erreur:', error);
-    button.textContent = originalText;
-    button.disabled = false;
-    alert('Erreur de connexion. Veuillez réessayer.');
-  }
-});
+  });
+})();
 </script>
