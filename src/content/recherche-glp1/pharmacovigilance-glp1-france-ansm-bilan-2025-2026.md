@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis 2022, les agonistes des récepteurs GLP-1 — sémaglutide ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)), tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)), liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)) — ont fait l'objet d'une surveillance renforcée en France. L'ANSM (Agence nationale de sécurité du médicament) et EPI-Phare (groupement d'intérêt scientifique ANSM–Cnam sur les données de santé) ont publié des bilans réguliers. Voici une synthèse des principales conclusions disponibles pour la période 2025-2026.
+Depuis 2022, les agonistes des récepteurs GLP-1 — sémaglutide ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/), tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) — ont fait l'objet d'une surveillance renforcée en France. L'ANSM (Agence nationale de sécurité du médicament) et EPI-Phare (groupement d'intérêt scientifique ANSM–Cnam sur les données de santé) ont publié des bilans réguliers. Voici une synthèse des principales conclusions disponibles pour la période 2025-2026.
 
 ## Qui surveille les GLP-1 en France ?
 

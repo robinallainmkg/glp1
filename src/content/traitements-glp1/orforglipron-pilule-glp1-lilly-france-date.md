@@ -65,7 +65,7 @@ Ces résultats (-12,4% à 72 semaines pour la dose maximale) sont inférieurs à
 
 Les études sur l'orforglipron dans le diabète de type 2 montrent également des résultats solides :
 
-- Réduction de l'HbA1c : **1,3 à 2,1%** selon la dose (vs 1 à 1,6% pour [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/))
+- Réduction de l'HbA1c : **1,3 à 2,1%** selon la dose (vs 1 à 1,6% pour [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)/)
 - Perte de poids associée : **7 à 10%** sur 26 semaines
 - Contrôle glycémique à jeun significativement amélioré
 

@@ -34,7 +34,7 @@ Lorsque l'ANSM a révisé les [règles de prescription des GLP-1 en France](/col
 
 ### Les essais cliniques : un angle mort majeur
 
-La principale raison derrière cette restriction est d'ordre scientifique. La plupart des grandes études cliniques ayant démontré l'efficacité et la sécurité de ces médicaments — les essais STEP pour le sémaglutide (Wegovy), et SURMOUNT pour le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) — ont inclus une majorité de patients âgés de moins de 65 ans. Les données disponibles sur les patients plus âgés restent donc limitées.
+La principale raison derrière cette restriction est d'ordre scientifique. La plupart des grandes études cliniques ayant démontré l'efficacité et la sécurité de ces médicaments — les essais STEP pour le sémaglutide (Wegovy), et SURMOUNT pour le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) — ont inclus une majorité de patients âgés de moins de 65 ans. Les données disponibles sur les patients plus âgés restent donc limitées.
 
 L'ANSM et l'EMA (Agence européenne des médicaments) appliquent un principe de précaution : en l'absence de données robustes dans une population donnée, on restreint l'usage jusqu'à ce que des études spécifiques permettent de conclure sur le rapport bénéfice/risque.
 

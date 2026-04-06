@@ -76,7 +76,7 @@ Un diététicien spécialisé dans l'accompagnement des traitements GLP-1 peut v
 
 - **Structurer des repas denses en nutriments** malgré un volume alimentaire réduit : privilégier les [protéines](/collections/regime-glp1/glp1-proteines/) maigres, les légumes, les glucides complexes et les bonnes graisses
 - **Éviter les carences en micronutriments** — vitamine D, fer, magnésium, oméga-3 — fréquentes quand l'apport calorique chute rapidement
-- **Maintenir un apport protéique suffisant** pour préserver la masse musculaire, un enjeu majeur sous GLP-1 (voir notre guide sur la [préservation musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/))
+- **Maintenir un apport protéique suffisant** pour préserver la masse musculaire, un enjeu majeur sous GLP-1 (voir notre guide sur la [préservation musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)/)
 - **Planifier la transition post-traitement** : comment maintenir les nouvelles habitudes quand le médicament ne soutient plus l'appétit
 
 ### La nutrition intuitive : reprendre contact avec ses signaux internes

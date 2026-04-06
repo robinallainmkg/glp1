@@ -43,7 +43,7 @@ Vous cherchez un endocrinologue pour vous aider à perdre du poids ? Ce guide vo
 ### L'expertise spécialisée
 Un endocrinologue est le médecin spécialiste des hormones et du métabolisme. Pour la perte de poids, il est particulièrement qualifié pour :
 
-- **Diagnostiquer les causes hormonales** de la prise de poids (thyroïde, insulinorésistance, [SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-ozempic-wegovy/))
+- **Diagnostiquer les causes hormonales** de la prise de poids (thyroïde, insulinorésistance, [SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-ozempic-wegovy/)/)
 - **Prescrire des médicaments** comme Ozempic, Wegovy ou Saxenda
 - **Adapter le traitement** selon votre profil métabolique
 - **Suivre l'évolution** avec des analyses précises

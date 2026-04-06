@@ -43,7 +43,7 @@ Vous avez commencé un traitement par GLP-1 — [Ozempic](/collections/traitemen
 
 ### Avant l'ouverture : toujours au réfrigérateur
 
-Tous les stylos GLP-1 disponibles en France (Ozempic, Wegovy, Mounjaro, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), [Victoza](/collections/traitements-glp1/guide-complet-victoza/)) doivent être conservés **entre 2°C et 8°C au réfrigérateur** avant leur première utilisation. Ne les placez jamais :
+Tous les stylos GLP-1 disponibles en France (Ozempic, Wegovy, Mounjaro, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), [Victoza](/collections/traitements-glp1/guide-complet-victoza/)/) doivent être conservés **entre 2°C et 8°C au réfrigérateur** avant leur première utilisation. Ne les placez jamais :
 
 - Dans le compartiment à légumes (trop froid)
 - Contre la paroi du fond du réfrigérateur (risque de gel)

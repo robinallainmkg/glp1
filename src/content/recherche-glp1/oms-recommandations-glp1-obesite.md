@@ -80,9 +80,9 @@ Le document est également clair sur les limites :
 
 L'OMS a fondé ses recommandations sur une revue systématique des essais cliniques randomisés disponibles. Parmi les études les plus influentes :
 
-**Études STEP (sémaglutide 2,4 mg — [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/))** : Ces essais ont démontré une perte de poids moyenne de 15 à 17% du poids corporel initial sur 68 semaines, avec une amélioration significative des paramètres métaboliques et cardiovasculaires.
+**Études STEP (sémaglutide 2,4 mg — [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/)** : Ces essais ont démontré une perte de poids moyenne de 15 à 17% du poids corporel initial sur 68 semaines, avec une amélioration significative des paramètres métaboliques et cardiovasculaires.
 
-**Études SURMOUNT (tirzépatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/))** : Le tirzépatide, qui agit à la fois sur les récepteurs GLP-1 et GIP, a montré des pertes de poids encore plus importantes, jusqu'à 20-25% du poids initial dans certains essais.
+**Études SURMOUNT (tirzépatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/)** : Le tirzépatide, qui agit à la fois sur les récepteurs GLP-1 et GIP, a montré des pertes de poids encore plus importantes, jusqu'à 20-25% du poids initial dans certains essais.
 
 **Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat, qui confirme les [bénéfices cardiovasculaires documentés des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/), a particulièrement pesé dans la décision de l'OMS.
 

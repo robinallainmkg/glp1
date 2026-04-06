@@ -112,7 +112,7 @@ Aucun traitement médicamenteux n'avait jamais démontré une telle efficacité 
 
 ### Données cliniques disponibles
 
-Le sémaglutide (principe actif d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) a également montré des effets bénéfiques sur le SAOS, bien que les données soient moins robustes que pour le tirzépatide.
+Le sémaglutide (principe actif d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/) a également montré des effets bénéfiques sur le SAOS, bien que les données soient moins robustes que pour le tirzépatide.
 
 Une analyse post-hoc de l'étude STEP 1 a montré que les patients sous sémaglutide 2,4 mg présentaient une amélioration significative de leurs symptômes d'apnée du sommeil auto-rapportés. Des études spécifiques sont en cours.
 

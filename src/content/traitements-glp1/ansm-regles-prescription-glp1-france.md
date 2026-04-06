@@ -55,7 +55,7 @@ Depuis juin 2025, **tout médecin peut initier un traitement par GLP-1 pour l'ob
 
 ### Février 2025 : Formulaire obligatoire pour les antidiabétiques GLP-1
 
-Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, [Victoza](/collections/traitements-glp1/guide-complet-victoza/)) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) confirmé par une [étude nationale sur le mésusage des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/) — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
+Face à l'augmentation des prescriptions d'antidiabétiques GLP-1 (Ozempic, Trulicity, [Victoza](/collections/traitements-glp1/guide-complet-victoza/)/) à des patients sans diabète de type 2 — un [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) confirmé par une [étude nationale sur le mésusage des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/) — l'ANSM a instauré un **formulaire de prescription obligatoire** à compter du 1er février 2025.
 
 Ce formulaire s'applique spécifiquement aux GLP-1 ayant une AMM pour le diabète de type 2. Il vise à s'assurer que :
 

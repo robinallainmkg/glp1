@@ -65,7 +65,7 @@ Ces résultats sont encourageants, même si les études restent de petite taille
 
 Le tirzépatide, molécule active de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), agit sur deux récepteurs (GLP-1 et GIP) et pourrait offrir des bénéfices supplémentaires dans le SOPK. Des données préliminaires issues d'une étude de 2024 suggèrent une amélioration encore plus marquée de la résistance à l'insuline et des marqueurs hormonaux comparativement au sémaglutide seul, bien que les études comparatives directes manquent encore.
 
-### Liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)) : les données les plus anciennes
+### Liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) : les données les plus anciennes
 
 Le liraglutide (Saxenda), un GLP-1 plus ancien, a fait l'objet d'études plus nombreuses dans le SOPK. Un essai randomisé publié dans *Fertility and Sterility* (2019) a comparé liraglutide à la metformine chez des femmes en surpoids avec SOPK. Le liraglutide a obtenu de meilleurs résultats sur la perte de poids et s'est montré aussi efficace sur la résistance à l'insuline. La fréquence des ovulations s'est également améliorée.
 
@@ -86,7 +86,7 @@ Il est important de bien distinguer les indications officielles des usages "off-
 ### Indications officielles des GLP-1 en France
 
 En France en 2026, les GLP-1 sont [remboursés](/collections/glp1-cout/remboursement-glp1-2026/) uniquement dans deux cadres :
-- **Diabète de type 2** (Ozempic, [Victoza](/collections/traitements-glp1/guide-complet-victoza/), [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/), [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/))
+- **Diabète de type 2** (Ozempic, [Victoza](/collections/traitements-glp1/guide-complet-victoza/), [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/), [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)/)
 - **Obésité avec IMC ≥ 30** et comorbidité, ou IMC ≥ 35 (Wegovy, Mounjaro — remboursement en cours de négociation)
 
 Le SOPK en lui-même n'est pas une indication officielle pour la prescription de GLP-1.

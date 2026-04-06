@@ -57,7 +57,7 @@ Contrairement aux idées reçues, Serena n'a pas choisi les GLP-1 comme solution
 ## Son expérience avec les GLP-1
 
 ### Le choix du traitement
-Serena a opté pour un traitement GLP-1 injectable, probablement de la famille du semaglutide (Ozempic/[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) ou du tirzepatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/Zepbound). Son choix était motivé par :
+Serena a opté pour un traitement GLP-1 injectable, probablement de la famille du semaglutide (Ozempic/[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/) ou du tirzepatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/Zepbound). Son choix était motivé par :
 
 - **Efficacité prouvée** : Études cliniques montrant 12-15% de perte de poids
 - **Sécurité** : Profil de tolérance bien établi

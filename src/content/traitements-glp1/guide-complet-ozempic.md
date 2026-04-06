@@ -91,7 +91,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
-- Utilisation d'un stylo prérempli (voir le [nouveau stylo Ozempic 3 ml disponible en 2026](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/))
+- Utilisation d'un stylo prérempli (voir le [nouveau stylo Ozempic 3 ml disponible en 2026](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/)/)
 - Pas besoin de reconstitution
 - Formation rapide (quelques minutes)
 

@@ -76,7 +76,7 @@ Les 3 808 participants avaient un diagnostic confirme de trouble cognitif leger 
 
 ### Pourquoi la forme orale
 
-Un detail technique important : les essais ont utilise le semaglutide **oral** (Rybelsus), et non la forme injectable ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)). Ce choix s'expliquait par des considerations pratiques — une prise orale quotidienne est plus acceptable pour une population agee atteinte de demence — mais il a peut-etre contribue a l'echec.
+Un detail technique important : les essais ont utilise le semaglutide **oral** (Rybelsus), et non la forme injectable ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/). Ce choix s'expliquait par des considerations pratiques — une prise orale quotidienne est plus acceptable pour une population agee atteinte de demence — mais il a peut-etre contribue a l'echec.
 
 ## Les resultats : un echec sur le critere principal
 

@@ -230,7 +230,7 @@ Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide
 ### Réussite du traitement
 - **Observance** : Prises régulières
 - **Suivi médical** : Consultations respectées
-- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/regime-glp1/))
+- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/regime-glp1/)/)
 - **Activité physique** : Recommandée
 
 ## ❓ FAQ - Questions Fréquentes

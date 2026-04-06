@@ -36,7 +36,7 @@ Si vous prenez [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), 
 
 ### Le mécanisme : le ralentissement de la vidange gastrique
 
-Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, Zepbound), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)) — agissent en partie en ralentissant la vidange gastrique. C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
+Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, Zepbound), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) — agissent en partie en ralentissant la vidange gastrique. C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
 
 En temps normal, ce ralentissement est bénéfique : on mange moins, on se sent rassasié plus longtemps. Mais au moment d'une anesthésie générale, ce même mécanisme devient dangereux. Le protocole anesthésique standard repose sur le fait que l'estomac du patient est vide au moment de l'induction. Si l'estomac contient encore du contenu gastrique — nourriture, liquide — au moment où le patient perd connaissance et perd ses réflexes de protection des voies aériennes, ce contenu peut remonter (régurgitation) et être aspiré dans les poumons.
 
@@ -56,7 +56,7 @@ La Société Française d'Anesthésie-Réanimation (SFAR) a publié en 2024 une 
 
 Les grandes lignes des recommandations SFAR sont les suivantes :
 
-**Pour les GLP-1 à injection hebdomadaire** (sémaglutide / Ozempic, Wegovy ; tirzépatide / [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) :
+**Pour les GLP-1 à injection hebdomadaire** (sémaglutide / Ozempic, Wegovy ; tirzépatide / [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) :
 - Arrêt **une semaine avant** une chirurgie programmée (soit sauter la dernière injection hebdomadaire prévue avant l'opération)
 
 **Pour les GLP-1 à injection quotidienne** (liraglutide / Victoza, Saxenda ; exénatide / Byetta) :

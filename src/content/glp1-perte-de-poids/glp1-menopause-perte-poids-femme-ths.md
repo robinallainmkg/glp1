@@ -125,7 +125,7 @@ Les chercheurs de la Mayo Clinic proposent plusieurs mécanismes explicatifs :
 
 ### Mounjaro (tirzépatide) : l'option la plus efficace sur la graisse viscérale
 
-Sur la base des données disponibles — notamment l'étude Mayo Clinic 2026 et les essais SURMOUNT — le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) semble être le GLP-1 le plus efficace pour réduire la graisse viscérale abdominale chez les femmes ménopausées. Son double mécanisme d'action (GLP-1 + GIP) lui confère une efficacité supérieure sur la composition corporelle, avec une réduction de la graisse viscérale de l'ordre de 44 % dans SURMOUNT-1.
+Sur la base des données disponibles — notamment l'étude Mayo Clinic 2026 et les essais SURMOUNT — le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) semble être le GLP-1 le plus efficace pour réduire la graisse viscérale abdominale chez les femmes ménopausées. Son double mécanisme d'action (GLP-1 + GIP) lui confère une efficacité supérieure sur la composition corporelle, avec une réduction de la graisse viscérale de l'ordre de 44 % dans SURMOUNT-1.
 
 **Prix** : 230 à 440 €/mois selon le dosage. Non remboursé en mars 2026 pour l'obésité, remboursement attendu S2 2026.
 

@@ -82,7 +82,7 @@ C'est l'explication la plus probable. Lors d'une perte de poids rapide, le tissu
 
 ### Effet potentiel sur la fonction rénale
 
-Les GLP-1 modifient le flux sanguin rénal et la filtration glomérulaire. Bien que cet effet soit généralement néphroprotecteur (voir notre article sur les [GLP-1 et la protection rénale](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/)), des variations de la clairance de l'urate sont possibles en début de traitement.
+Les GLP-1 modifient le flux sanguin rénal et la filtration glomérulaire. Bien que cet effet soit généralement néphroprotecteur (voir notre article sur les [GLP-1 et la protection rénale](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/)/), des variations de la clairance de l'urate sont possibles en début de traitement.
 
 ### Le rôle de la déshydratation
 

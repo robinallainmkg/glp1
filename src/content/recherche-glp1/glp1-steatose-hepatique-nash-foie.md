@@ -72,7 +72,7 @@ Le sémaglutide n'agit pas uniquement via la perte de poids. Les études montren
 
 ### Les essais de phase 3 en cours
 
-Novo Nordisk a conduit l'essai ESSENCE (sémaglutide 2,4 mg, la dose de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) chez des patients atteints de MASH avec fibrose significative. Les résultats définitifs publiés dans le *New England Journal of Medicine* en avril 2025 montrent une résolution de la MASH chez **62,9 % des patients traités** par sémaglutide 2,4 mg (contre 34,3 % sous placebo), avec une amélioration significative de la fibrose.
+Novo Nordisk a conduit l'essai ESSENCE (sémaglutide 2,4 mg, la dose de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/) chez des patients atteints de MASH avec fibrose significative. Les résultats définitifs publiés dans le *New England Journal of Medicine* en avril 2025 montrent une résolution de la MASH chez **62,9 % des patients traités** par sémaglutide 2,4 mg (contre 34,3 % sous placebo), avec une amélioration significative de la fibrose.
 
 ## Le survodutide : la nouvelle génération encore plus prometteuse {#survodutide}
 
@@ -133,7 +133,7 @@ Le dépistage de la stéatose hépatique repose sur une échographie abdominale 
 
 ### En attendant les nouvelles indications
 
-Si vous êtes déjà sous traitement GLP-1 (Ozempic, Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)), votre foie en bénéficie déjà. Si vous n'êtes pas sous GLP-1 et présentez une MASH diagnostiquée, les mesures actuellement recommandées par la HAS restent la perte de poids par modification du mode de vie (alimentation méditerranéenne, activité physique régulière). Consultez notre guide sur l'[alimentation sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/) pour optimiser votre régime.
+Si vous êtes déjà sous traitement GLP-1 (Ozempic, Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), votre foie en bénéficie déjà. Si vous n'êtes pas sous GLP-1 et présentez une MASH diagnostiquée, les mesures actuellement recommandées par la HAS restent la perte de poids par modification du mode de vie (alimentation méditerranéenne, activité physique régulière). Consultez notre guide sur l'[alimentation sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/) pour optimiser votre régime.
 
 ## FAQ
 

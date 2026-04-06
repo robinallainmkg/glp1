@@ -55,7 +55,7 @@ La graisse corporelle n'est pas homogène. On distingue principalement deux type
 La graisse viscérale est un tissu endocrinien à part entière : elle sécrète des cytokines pro-inflammatoires (comme le TNF-α et l'IL-6), des acides gras libres et des hormones. Ces substances, libérées directement dans la circulation portale vers le foie, contribuent à :
 
 - La résistance à l'insuline, première étape vers le diabète de type 2
-- La stéatose hépatique (accumulation de graisse dans le foie — lire notre article sur les [GLP-1 et la stéatose hépatique](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/))
+- La stéatose hépatique (accumulation de graisse dans le foie — lire notre article sur les [GLP-1 et la stéatose hépatique](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/)/)
 - L'inflammation chronique de bas grade, facteur de risque cardiovasculaire
 - La dyslipidémie (augmentation des triglycérides, baisse du HDL)
 - L'hypertension artérielle
@@ -88,7 +88,7 @@ Ce biais vers la graisse viscérale s'explique par plusieurs mécanismes :
 
 ### Les données de l'étude STEP 1
 
-L'essai STEP 1, qui a évalué le sémaglutide 2,4 mg ([Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) chez 1 961 adultes obèses sans diabète sur 68 semaines, a mesuré la composition corporelle par DEXA (absorptiométrie à double énergie) dans un sous-groupe de participants. Les données d'imagerie par IRM spécifiquement centrées sur la graisse viscérale proviennent principalement de l'essai STEP 6 (population asiatique) et de son sous-groupe d'imagerie. Les deux études confirment la réduction préférentielle de graisse viscérale sous sémaglutide.
+L'essai STEP 1, qui a évalué le sémaglutide 2,4 mg ([Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/) chez 1 961 adultes obèses sans diabète sur 68 semaines, a mesuré la composition corporelle par DEXA (absorptiométrie à double énergie) dans un sous-groupe de participants. Les données d'imagerie par IRM spécifiquement centrées sur la graisse viscérale proviennent principalement de l'essai STEP 6 (population asiatique) et de son sous-groupe d'imagerie. Les deux études confirment la réduction préférentielle de graisse viscérale sous sémaglutide.
 
 Les résultats sur la graisse viscérale sont significatifs :
 
@@ -113,7 +113,7 @@ L'étude SELECT, qui a démontré une réduction de 20% des événements cardiov
 
 ### Les données SURMOUNT : une réduction viscérale supérieure
 
-Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) dans l'obésité. Les données d'imagerie sur la composition corporelle sont particulièrement convaincantes :
+Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) dans l'obésité. Les données d'imagerie sur la composition corporelle sont particulièrement convaincantes :
 
 **SURMOUNT-1 (86 semaines, dose maximale 15 mg)** :
 

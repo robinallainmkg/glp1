@@ -341,7 +341,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 - **Sélection rigoureuse** des patients (respect contre-indications)
 - **Surveillance médicale** régulière et structurée
 - **Éducation thérapeutique** complète du patient
-- **Reconnaissance précoce** des signaux d'alerte (voir tous les [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/))
+- **Reconnaissance précoce** des signaux d'alerte (voir tous les [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)/)
 - **Accès facilité** aux soins d'urgence si nécessaire
 
 **Recommandation finale** : Ozempic peut être utilisé en sécurité chez les patients bien sélectionnés, avec un encadrement médical approprié et une information complète sur les risques potentiels. Pour en savoir plus, consultez notre [guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et notre dossier sur les [procès Ozempic et recours en France](/collections/effets-secondaires-glp1/ozempic-proces-effets-secondaires-recours-juridique-france/).

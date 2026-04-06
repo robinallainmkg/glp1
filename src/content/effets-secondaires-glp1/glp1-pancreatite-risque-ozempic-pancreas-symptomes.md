@@ -46,7 +46,7 @@ Des récepteurs GLP-1 ont été identifiés dans les cellules acinaires du pancr
 
 ### Les données des études cliniques
 
-Les grandes études cliniques menées avant la mise sur le marché ont évalué ce risque avec soin. Dans les essais SUSTAIN (sémaglutide/Ozempic) et SCALE (liraglutide/[Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/)), les taux de pancréatite observés étaient comparables entre les groupes traités et les groupes placebo — environ 0,1 à 0,2% des patients sur plusieurs années.
+Les grandes études cliniques menées avant la mise sur le marché ont évalué ce risque avec soin. Dans les essais SUSTAIN (sémaglutide/Ozempic) et SCALE (liraglutide/[Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/)/), les taux de pancréatite observés étaient comparables entre les groupes traités et les groupes placebo — environ 0,1 à 0,2% des patients sur plusieurs années.
 
 L'étude SELECT de 2023 — qui a suivi 17 604 patients prenant du sémaglutide (Wegovy) sur 5 ans — n'a pas mis en évidence d'augmentation significative du risque de pancréatite par rapport au placebo.
 
@@ -169,7 +169,7 @@ La décision dépend des circonstances de votre pancréatite passée. Une pancr�
 Cette question a fait l'objet d'une surveillance intensive. Après des années d'études et de pharmacovigilance incluant des millions de patients, les autorités sanitaires (FDA, EMA, ANSM) n'ont pas établi de lien causal entre les GLP-1 et le cancer du pancréas. Pour un état des lieux complet, consultez notre article sur le [risque de cancer du pancréas sous GLP-1](/collections/recherche-glp1/glp1-cancer-risque-protection-bilan-etudes-2026/). Les premières inquiétudes soulevées en 2013 n'ont pas été confirmées par les études de long terme.
 
 **Quels médicaments GLP-1 sont les plus concernés ?**
-Tous les analogues GLP-1 partagent ce signal de pharmacovigilance : sémaglutide (Ozempic, Wegovy, Rybelsus), tirzépatide (Mounjaro), liraglutide (Victoza, Saxenda) et dulaglutide ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)). Le risque n'est pas spécifique à une molécule.
+Tous les analogues GLP-1 partagent ce signal de pharmacovigilance : sémaglutide (Ozempic, Wegovy, Rybelsus), tirzépatide (Mounjaro), liraglutide (Victoza, Saxenda) et dulaglutide ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)/). Le risque n'est pas spécifique à une molécule.
 
 ---
 

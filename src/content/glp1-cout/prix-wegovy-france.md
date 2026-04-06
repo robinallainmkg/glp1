@@ -332,7 +332,7 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **À noter :** Si le remboursement Sécu est accordé (possiblement au 2e semestre 2026), les mutuelles prendront alors en charge le ticket modérateur comme pour tout médicament remboursé.
 
-[Voir le guide complet remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)
+[Voir le guide complet remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)
 
 ### Wegovy ou Ozempic : lequel est le moins cher ?
 
@@ -497,25 +497,25 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 **Optimisez votre traitement Wegovy :**
 
 ### Guides Wegovy Essentiels
-- **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy)** - Posologie complète de 0.25mg à 2.4mg
-- **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy)** - Comment gérer nausées et vomissements
-- **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage)** - Guide d'escalade progressive
-- **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition optimale
+- **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy/)** - Posologie complète de 0.25mg à 2.4mg
+- **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)** - Comment gérer nausées et vomissements
+- **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage/)** - Guide d'escalade progressive
+- **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition optimale
 
 ### Remboursement et Mutuelles
-- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide exhaustif 2026
-- **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france)** - Alternative plus efficace (230-440 €/mois)
-- **[Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france)** - Remboursé si diabétique (~77,60 €/stylo (TTC))
-- **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france)** - Injection quotidienne
+- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide exhaustif 2026
+- **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france/)** - Alternative plus efficace (230-440 €/mois)
+- **[Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)** - Remboursé si diabétique (~77,60 €/stylo (TTC))
+- **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france/)** - Injection quotidienne
 
 ### Comparatifs et Choix
 - **[Wegovy vs Ozempic : Le Match Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement pour votre profil ?
 - **[Tous les Traitements GLP-1](/collections/glp1-cout/)** - Vue d'ensemble des prix
 
 ### Médecins et Suivi
-- **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire complet
-- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-wegovy)** - Examens et consultations
-- **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite)** - Prise en charge globale
+- **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)** - Annuaire complet
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-wegovy/)** - Examens et consultations
+- **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite/)** - Prise en charge globale
 
 ### Témoignages et Communauté
 - **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles

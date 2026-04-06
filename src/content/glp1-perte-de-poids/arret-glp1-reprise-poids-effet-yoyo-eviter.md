@@ -41,7 +41,7 @@ C'est l'une des questions les plus fréquentes que posent les patients sous GLP-
 
 ## Ce que disent les études sur la reprise de poids {#donnees}
 
-Les données les plus complètes sur ce sujet proviennent des extensions des grandes études cliniques sur le sémaglutide ([Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)) et le tirzépatide (Mounjaro).
+Les données les plus complètes sur ce sujet proviennent des extensions des grandes études cliniques sur le sémaglutide ([Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/) et le tirzépatide (Mounjaro).
 
 ### Étude STEP 1 Extension (sémaglutide 2,4 mg)
 

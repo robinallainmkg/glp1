@@ -46,7 +46,7 @@ Ces chiffres sont d'autant plus significatifs qu'ils contrastent avec la vitesse
 
 ### Pourquoi c'est si rapide ? La biologie du rebond
 
-Pour comprendre ce phénomène, il faut rappeler comment les GLP-1 agissent. Des médicaments comme le sémaglutide (Ozempic, Wegovy) ou le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)) ne modifient pas durablement le "point de consigne" pondéral de l'organisme — ce que les physiologistes appellent le *set point*. Le sémaglutide agit en mimant l'action de l'hormone GLP-1 naturelle, tandis que le tirzépatide est un double agoniste qui mime à la fois le GLP-1 et le GIP, pour réduire l'appétit et ralentir la vidange gastrique.
+Pour comprendre ce phénomène, il faut rappeler comment les GLP-1 agissent. Des médicaments comme le sémaglutide (Ozempic, Wegovy) ou le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) ne modifient pas durablement le "point de consigne" pondéral de l'organisme — ce que les physiologistes appellent le *set point*. Le sémaglutide agit en mimant l'action de l'hormone GLP-1 naturelle, tandis que le tirzépatide est un double agoniste qui mime à la fois le GLP-1 et le GIP, pour réduire l'appétit et ralentir la vidange gastrique.
 
 Quand le médicament est arrêté, ces effets disparaissent rapidement. Le corps reprend ses réflexes biologiques originels :
 
@@ -67,7 +67,7 @@ L'étude STEP 1 avait inclus une phase de suivi après arrêt du sémaglutide 2,
 
 ### SCALE de suivi (liraglutide, Saxenda)
 
-Des résultats comparables ont été observés avec le liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)) : dans les 12 semaines suivant l'arrêt, les patients enregistraient déjà une reprise substantielle, et la trajectoire sur 1 an montrait une récupération quasi-complète du poids perdu.
+Des résultats comparables ont été observés avec le liraglutide ([Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) : dans les 12 semaines suivant l'arrêt, les patients enregistraient déjà une reprise substantielle, et la trajectoire sur 1 an montrait une récupération quasi-complète du poids perdu.
 
 ### Le tirzépatide (Mounjaro) : même profil, effets plus intenses
 

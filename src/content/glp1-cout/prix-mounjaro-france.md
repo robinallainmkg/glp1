@@ -256,18 +256,18 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 2. **Prescription et délivrance**
    - Ordonnance sécurisée requise
    - Délivrance en pharmacie de ville ou hospitalière
-   - [Information sur les effets secondaires à connaître](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)
+   - [Information sur les effets secondaires à connaître](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)
 
 3. **Suivi thérapeutique**
    - Consultations de suivi régulières
    - Adaptation posologique selon tolérance et efficacité
-   - [Recommandations alimentaires pendant le traitement](/collections/regime-glp1/glp1-proteines)
+   - [Recommandations alimentaires pendant le traitement](/collections/regime-glp1/glp1-proteines/)
 
 ## Ressources Complémentaires
 
 ### Documentation Mounjaro
-- [Guide complet du traitement Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro) : Posologie, mécanisme d'action et efficacité clinique
-- [Profil de tolérance et effets indésirables](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro) : Information médicale complète
+- [Guide complet du traitement Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) : Posologie, mécanisme d'action et efficacité clinique
+- [Profil de tolérance et effets indésirables](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) : Information médicale complète
 - [Comparaison thérapeutique](/guides/quel-traitement-glp1-choisir) : Mounjaro face aux autres options GLP-1
 
 ### Information Pratique
@@ -456,12 +456,12 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 
 **Articles connexes pour optimiser votre traitement :**
 
-- **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro)** - Posologie, efficacité et mode d'emploi détaillé
-- **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)** - Tous les effets indésirables et comment les gérer
-- **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition adaptée pour maximiser la perte de poids
+- **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro/)** - Posologie, efficacité et mode d'emploi détaillé
+- **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)** - Tous les effets indésirables et comment les gérer
+- **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition adaptée pour maximiser la perte de poids
 - **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france/)** - Annuaire des endocrinologues et diabétologues
 - **[Mounjaro vs Ozempic : Comparatif Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement choisir selon votre profil
-- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Alternative si Mounjaro n'est pas accessible
+- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Alternative si Mounjaro n'est pas accessible
 
 **Besoin d'aide ?**
 - 📞 Service patient Eli Lilly : **0 800 10 12 13** (gratuit)

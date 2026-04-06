@@ -123,7 +123,7 @@ Les experts français recommandent une approche personnalisée tenant compte du 
 
 ### Points clés validés scientifiquement :
 - **Efficacité clinique** : Études randomisées contrôlées
-- **Sécurité d'emploi** : Surveillance post-marketing ANSM (voir la liste complète des [effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/))
+- **Sécurité d'emploi** : Surveillance post-marketing ANSM (voir la liste complète des [effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)/)
 - **Rapport bénéfice/risque** : Évaluation individuelle nécessaire
 - **Suivi long terme** : Protocoles établis
 

@@ -85,7 +85,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 - Indication : Diabète de type 2 insuffisamment contrôlé
 - Critères prévisionnels : HbA1c > 7% malgré metformine + autre antidiabétique oral, IMC ≥ 30 kg/m²
 
-[Voir le détail complet des prix Mounjaro -->](/collections/glp1-cout/prix-mounjaro-france)
+[Voir le détail complet des prix Mounjaro -->](/collections/glp1-cout/prix-mounjaro-france/)
 
 ---
 
@@ -103,7 +103,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 - Le coût est intégralement à la charge du patient
 - Certaines mutuelles peuvent proposer une participation partielle (vérifier votre contrat)
 
-[Détails complets prix Wegovy -->](/collections/glp1-cout/prix-wegovy-france)
+[Détails complets prix Wegovy -->](/collections/glp1-cout/prix-wegovy-france/)
 
 ---
 
@@ -131,7 +131,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 
 **Le moins cher des GLP-1 injectables !**
 
-[Prix détaillés Ozempic par dosage →](/collections/glp1-cout/prix-ozempic-france)
+[Prix détaillés Ozempic par dosage →](/collections/glp1-cout/prix-ozempic-france/)
 
 ---
 
@@ -446,15 +446,15 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 ### Guides Complets par Médicament
 
 **Prix et Remboursements Détaillés :**
-- [Prix Mounjaro France 2025](/collections/glp1-cout/prix-mounjaro-france)
-- [Prix Wegovy France 2025](/collections/glp1-cout/prix-wegovy-france)
-- [Prix Ozempic France 2025](/collections/glp1-cout/prix-ozempic-france)
-- [Remboursement Wegovy Mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle)
+- [Prix Mounjaro France 2025](/collections/glp1-cout/prix-mounjaro-france/)
+- [Prix Wegovy France 2025](/collections/glp1-cout/prix-wegovy-france/)
+- [Prix Ozempic France 2025](/collections/glp1-cout/prix-ozempic-france/)
+- [Remboursement Wegovy Mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/)
 
 **Guides Thérapeutiques :**
-- [Guide Complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro)
-- [Guide Complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy)
-- [Guide Complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic)
+- [Guide Complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)
+- [Guide Complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)
+- [Guide Complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)
 
 **Comparatifs :**
 - [Quel Traitement GLP-1 Choisir ?](/guides/quel-traitement-glp1-choisir)
@@ -462,8 +462,8 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 
 ### Trouver un Médecin Prescripteur
 
-- [Annuaire Endocrinologues GLP-1](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)
-- [Diabétologues Paris](/collections/medecins-glp1-france/diabetologue-paris)
+- [Annuaire Endocrinologues GLP-1](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)
+- [Diabétologues Paris](/collections/medecins-glp1-france/diabetologue-paris/)
 - [Tous les Médecins GLP-1](/collections/medecins-glp1-france/)
 
 ### Contacts Officiels
@@ -483,7 +483,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 
 **Aide et Questions :**
 - 💊 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
-- 🤝 [Témoignages de patients GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels)
+- 🤝 [Témoignages de patients GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)
 
 ---
 

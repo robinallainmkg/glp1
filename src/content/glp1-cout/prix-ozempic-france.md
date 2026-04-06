@@ -451,26 +451,26 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 **Articles connexes pour optimiser votre traitement Ozempic :**
 
 ### Guides Ozempic
-- **[Guide Complet Ozempic 2025](/collections/traitements-glp1/guide-complet-ozempic)** - Posologie, efficacité, mode d'emploi détaillé
-- **[Effets Secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic)** - Comment gérer nausées, vomissements et autres effets
-- **[Régime Alimentaire sous Ozempic](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition optimale pour maximiser la perte de poids
+- **[Guide Complet Ozempic 2025](/collections/traitements-glp1/guide-complet-ozempic/)** - Posologie, efficacité, mode d'emploi détaillé
+- **[Effets Secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)** - Comment gérer nausées, vomissements et autres effets
+- **[Régime Alimentaire sous Ozempic](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition optimale pour maximiser la perte de poids
 
 ### Remboursement
 - **[Guide complet remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)** - Conditions détaillées pour 2026, CSS, ALD et mutuelles
 
 ### Comparatifs et Alternatives
 - **[Ozempic vs Wegovy : Quel est le meilleur ?](/guides/quel-traitement-glp1-choisir)** - Comparaison complète pour choisir
-- **[Prix Wegovy France](/collections/glp1-cout/prix-wegovy-france)** - Alternative pour la perte de poids
-- **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france)** - Traitement dual GLP-1/GIP plus récent
-- **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france)** - Alternative injection quotidienne
+- **[Prix Wegovy France](/collections/glp1-cout/prix-wegovy-france/)** - Alternative pour la perte de poids
+- **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france/)** - Traitement dual GLP-1/GIP plus récent
+- **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france/)** - Alternative injection quotidienne
 
 ### Médecins et Suivi
-- **[Trouver un Endocrinologue](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire des médecins prescripteurs
-- **[Trouver un Diabétologue à Paris](/collections/medecins-glp1-france/diabetologue-paris)** - Spécialistes région parisienne
-- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-ozempic)** - Examens et consultations nécessaires
+- **[Trouver un Endocrinologue](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)** - Annuaire des médecins prescripteurs
+- **[Trouver un Diabétologue à Paris](/collections/medecins-glp1-france/diabetologue-paris/)** - Spécialistes région parisienne
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-ozempic/)** - Examens et consultations nécessaires
 
 ### Aide et Soutien
-- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide complet des mutuelles
+- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide complet des mutuelles
 - **[Témoignages Avant/Après GLP-1](/temoignages/avant-apres-glp1)** - Résultats réels de patients
 - **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 

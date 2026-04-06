@@ -72,7 +72,7 @@ La notice Mounjaro indique que le médicament est déconseillé pendant la gross
 
 ### Un effet indirect positif via la perte de poids
 
-L'obésité est associée à des troubles de la fertilité chez la femme : cycles irréguliers, anovulation, syndrome des ovaires polykystiques ([SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-ozempic-wegovy/)). La perte de poids induite par les GLP-1 peut améliorer ces paramètres et augmenter les chances de conception.
+L'obésité est associée à des troubles de la fertilité chez la femme : cycles irréguliers, anovulation, syndrome des ovaires polykystiques ([SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-ozempic-wegovy/)/). La perte de poids induite par les GLP-1 peut améliorer ces paramètres et augmenter les chances de conception.
 
 Des données observationnelles montrent que des femmes sous GLP-1 pour obésité ont vu leurs cycles se régulariser et leur fertilité s'améliorer. Certaines grossesses non planifiées ont été rapportées chez des femmes qui pensaient ne pas pouvoir concevoir en raison de leur obésité.
 

@@ -58,7 +58,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 * Clinique privée conventionnée : **3 000 € à 6 000 €**
 * Clinique privée non-conventionnée : **12 000 € à 18 000 €**
 
-**Anneau Gastrique** (voir le détail du [prix de l'anneau gastrique avec prise en charge CMU](/collections/glp1-cout/anneau-gastrique-prix-cmu/)) **:**
+**Anneau Gastrique** (voir le détail du [prix de l'anneau gastrique avec prise en charge CMU](/collections/glp1-cout/anneau-gastrique-prix-cmu/)/) **:**
 
 * Secteur public : **0 € à 300 €** (après remboursement)
 * Clinique privée conventionnée : **1 500 € à 3 000 €**

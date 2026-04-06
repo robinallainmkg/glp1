@@ -59,7 +59,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Critères médicaux obligatoires
 
-Pour obtenir une prescription de Wegovy en France, vous devez répondre aux critères suivants (voir les [règles ANSM pour acheter Wegovy légalement](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)) :
+Pour obtenir une prescription de Wegovy en France, vous devez répondre aux critères suivants (voir les [règles ANSM pour acheter Wegovy légalement](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)/) :
 
 **IMC supérieur à 30 kg/m²** ou **IMC supérieur à 27 kg/m²** avec au moins une complication :
 
