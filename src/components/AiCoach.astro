@@ -925,7 +925,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     srcDiv.className = 'coach-sources';
     srcDiv.innerHTML = '<span class="coach-sources-label">En savoir plus :</span> ' +
       unique.slice(0, 3).map(function(s) {
-        return '<a href="/' + s.collection + '/' + s.slug + '/">' + escapeHtml(s.title) + '</a>';
+        return '<a href="/collections/' + s.collection + '/' + s.slug + '/">' + escapeHtml(s.title) + '</a>';
       }).join(' &bull; ');
     parentDiv.appendChild(srcDiv);
   }

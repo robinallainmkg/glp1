@@ -527,7 +527,7 @@ serve(async (req) => {
       })).sort((a: any, b: any) => b.similarity - a.similarity);
 
       const ragContext = rankedChunks
-        .map((c: any) => `---\nArticle: ${c.title} (/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${c.content}\n---`)
+        .map((c: any) => `---\nArticle: ${c.title} (/collections/${c.collection}/${c.article_slug}/)\nSection: ${c.section_heading || "Introduction"}\n${c.content}\n---`)
         .join("\n\n");
 
       const sources = rankedChunks.map((c: any) => ({
@@ -587,7 +587,7 @@ ${doctorList}
       const articleLinks = rankedChunks
         .filter((c: any, i: number, arr: any[]) => arr.findIndex((x: any) => x.article_slug === c.article_slug) === i)
         .slice(0, 3)
-        .map((c: any) => `- [${c.title}](/${c.collection}/${c.article_slug}/)`)
+        .map((c: any) => `- [${c.title}](/collections/${c.collection}/${c.article_slug}/)`)
         .join('\n');
       const linksHint = articleLinks ? `\n\nLiens d'articles disponibles (utilise-les si pertinent dans ta reponse) :\n${articleLinks}` : '';
 
