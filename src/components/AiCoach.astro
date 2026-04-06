@@ -579,7 +579,7 @@ import { supabaseConfig } from '../lib/supabase.js';
   var messageCount = 0;
   var lastMsgTime = 0;
   var isSending = false;
-  var ctaShown = false;
+  var ctaShown = !!(localStorage.getItem('glp1_coach_cta_shown') && localStorage.getItem('glp1_coach_email'));
 
   // ===== AUTH DETECTION =====
   function isUserLoggedIn() {
@@ -603,14 +603,77 @@ import { supabaseConfig } from '../lib/supabase.js';
     var ctaDiv = document.createElement('div');
     ctaDiv.className = 'coach-cta-signup';
     ctaDiv.innerHTML =
-      '<p>🔒 Créez votre espace perso pour sauvegarder vos conversations et obtenir un suivi personnalisé</p>' +
-      '<div class="cta-buttons">' +
-        '<a href="/mon-espace/" class="cta-btn cta-btn-primary">Créer mon compte</a>' +
-        '<a href="/mon-espace/#login" class="cta-btn cta-btn-secondary">Se connecter</a>' +
-      '</div>' +
-      '<button class="coach-cta-dismiss" onclick="this.parentElement.remove()">Plus tard</button>';
+      '<p>📩 Recevez un recap personnalise de cette conversation + conseils adaptes par email</p>' +
+      '<form id="coach-email-capture" style="display:flex;flex-direction:column;gap:8px;">' +
+        '<input type="email" id="coach-capture-email" placeholder="Votre email" required ' +
+          'style="width:100%;padding:8px 12px;border:1px solid #bbf7d0;border-radius:8px;font-size:0.85rem;outline:none;font-family:inherit;">' +
+        '<button type="submit" class="cta-btn cta-btn-primary" style="width:100%;padding:8px;border:none;cursor:pointer;">Recevoir mon recap</button>' +
+      '</form>' +
+      '<button class="coach-cta-dismiss" onclick="this.parentElement.remove()">Non merci</button>';
     messagesEl.appendChild(ctaDiv);
     scrollToBottom();
+
+    // Handle email capture form submission
+    var captureForm = document.getElementById('coach-email-capture');
+    if (captureForm) {
+      captureForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById('coach-capture-email');
+        var email = emailInput ? emailInput.value : '';
+        if (!email) return;
+
+        var submitBtn = captureForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.textContent = 'Envoi...';
+          submitBtn.disabled = true;
+        }
+
+        try {
+          // Save contact
+          var contactResp = await fetch(supabaseUrl + '/rest/v1/contacts', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SB_KEY,
+              'Authorization': 'Bearer ' + SB_KEY
+            },
+            body: JSON.stringify({
+              email: email,
+              subject: 'Coach IA - Conversation',
+              message: 'Email capture depuis le chat coach. Conversation: ' + (conversationId || 'N/A') + '. Page: ' + window.location.pathname,
+              newsletter: true,
+              contact_type: 'coach_chat',
+              status: 'new'
+            })
+          });
+
+          // Also update the coach_messages conversation with this email
+          if (conversationId) {
+            await fetch(supabaseUrl + '/rest/v1/coach_messages?conversation_id=eq.' + conversationId, {
+              method: 'PATCH',
+              headers: {
+                'Content-Type': 'application/json',
+                'apikey': SB_KEY,
+                'Authorization': 'Bearer ' + SB_KEY
+              },
+              body: JSON.stringify({ user_email: email })
+            }).catch(function() { /* silent - column may not exist yet */ });
+          }
+
+          // Success UI
+          ctaDiv.innerHTML =
+            '<p style="color:#15803d;font-weight:600;margin:0;">✅ Merci ! Nous vous enverrons un recap de cette conversation.</p>';
+          localStorage.setItem('glp1_coach_email', email);
+
+        } catch (err) {
+          console.error('Email capture error:', err);
+          if (submitBtn) {
+            submitBtn.textContent = 'Recevoir mon recap';
+            submitBtn.disabled = false;
+          }
+        }
+      });
+    }
   }
 
   function showDailyLimitCTA() {
