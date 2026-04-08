@@ -8,14 +8,14 @@ import path from 'node:path';
 // Fonction pour lire le contenu des dossiers de catégories
 async function getCategoryContent() {
   const categories: any[] = [
-    { slug: 'glp1-cout', name: 'Prix et Où Acheter', icon: '💰', description: 'Prix Ozempic/Wegovy, remboursements et pharmacies en France' },
-    { slug: 'glp1-perte-de-poids', name: 'Perdre du Poids', icon: '📉', description: 'Résultats réels, témoignages et avant/après avec Ozempic & Wegovy' },
-    { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: '⚠️', description: 'Nausées, fatigue : comment gérer les effets secondaires' },
-    { slug: 'regime-glp1', name: 'Que Manger', icon: '🥗', description: 'Alimentation adaptée pendant un traitement Ozempic/Wegovy' },
-    { slug: 'alternatives-glp1', name: 'Autres Solutions', icon: '🌿', description: 'Alternatives naturelles et autres médicaments pour maigrir' },
-    { slug: 'medecins-glp1-france', name: 'Trouver un Médecin', icon: '👨‍⚕️', description: 'Médecins qui prescrivent Ozempic/Wegovy près de chez vous' },
-    { slug: 'recherche-glp1', name: 'Études et Nouveautés', icon: '🔬', description: 'Dernières études scientifiques et innovations médicamenteuses' },
-    { slug: 'traitements-glp1', name: 'Guides Traitements', icon: '💊', description: 'Guides complets Ozempic, Wegovy, Mounjaro et Saxenda' }
+    { slug: 'glp1-cout', name: 'Prix et Où Acheter', icon: 'euro', description: 'Prix Ozempic/Wegovy, remboursements et pharmacies en France' },
+    { slug: 'glp1-perte-de-poids', name: 'Perdre du Poids', icon: 'trending-down', description: 'Résultats réels, témoignages et avant/après avec Ozempic & Wegovy' },
+    { slug: 'effets-secondaires-glp1', name: 'Effets Secondaires', icon: 'alert', description: 'Nausées, fatigue : comment gérer les effets secondaires' },
+    { slug: 'regime-glp1', name: 'Que Manger', icon: 'salad', description: 'Alimentation adaptée pendant un traitement Ozempic/Wegovy' },
+    { slug: 'alternatives-glp1', name: 'Autres Solutions', icon: 'leaf', description: 'Alternatives naturelles et autres médicaments pour maigrir' },
+    { slug: 'medecins-glp1-france', name: 'Trouver un Médecin', icon: 'stethoscope', description: 'Médecins qui prescrivent Ozempic/Wegovy près de chez vous' },
+    { slug: 'recherche-glp1', name: 'Études et Nouveautés', icon: 'microscope', description: 'Dernières études scientifiques et innovations médicamenteuses' },
+    { slug: 'traitements-glp1', name: 'Guides Traitements', icon: 'pill', description: 'Guides complets Ozempic, Wegovy, Mounjaro et Saxenda' }
   ];
 
   const astroRoot = (typeof Astro !== 'undefined' && (Astro as any).root) ? (Astro as any).root : process.cwd();
@@ -70,40 +70,26 @@ const mainKeyword = "GLP-1 France";
     <!-- ============================================ -->
     <!-- SECTION 1 : HERO (Dark green, centré, Medvi) -->
     <!-- ============================================ -->
-    <section style="background:linear-gradient(160deg,#1a3c34 0%,#2d5a4e 60%,#1a3c34 100%);padding:3rem 1.5rem 2.5rem;text-align:center;color:#fff;position:relative;overflow:hidden;">
+    <section class="hp-hero" style="background:linear-gradient(160deg,#1a3c34 0%,#2d5a4e 60%,#1a3c34 100%);padding:3rem 1.5rem 2.5rem;text-align:center;color:#fff;position:relative;overflow:hidden;">
       <div style="max-width:800px;margin:0 auto;position:relative;z-index:2;">
-        <p style="display:inline-block;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.3rem 1rem;font-size:.8rem;margin-bottom:1.2rem;letter-spacing:.3px;">
+        <p class="hp-hero-pill" style="display:inline-block;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.3rem 1rem;font-size:.8rem;margin-bottom:1.2rem;letter-spacing:.3px;">
           Rejoignez <strong>50+ articles experts</strong> sur les GLP-1 en France
         </p>
-        <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;line-height:1.05;margin-bottom:1rem;letter-spacing:-.03em;color:#fff !important;">
+        <h1 style="font-size:clamp(1.7rem,4.5vw,3.2rem);font-weight:900;line-height:1.05;margin-bottom:.75rem;letter-spacing:-.03em;color:#fff !important;">
           Traitements GLP-1<br>en France : <em style="color:#6ee7a0;font-style:normal;">Le Guide Complet</em>
         </h1>
-        <p style="font-size:1.05rem;color:rgba(255,255,255,.8);max-width:580px;margin:0 auto 1.5rem;line-height:1.6;">
-          Tout sur Ozempic, Wegovy et Mounjaro : <strong style="color:#fff;">prix réels</strong>, remboursement, effets secondaires et conseils d'experts médicaux français.
+        <p class="hp-hero-sub" style="font-size:clamp(.88rem,2.5vw,1.05rem);color:rgba(255,255,255,.8);max-width:580px;margin:0 auto 1.2rem;line-height:1.55;">
+          Tout sur Ozempic, Wegovy et Mounjaro : <strong style="color:#fff;">prix r&eacute;els</strong>, remboursement, effets secondaires et conseils d'experts m&eacute;dicaux fran&ccedil;ais.
         </p>
-        <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.8rem;">
-          <a id="hero-cta-primary" href="/guides/quel-traitement-glp1-choisir/" data-ab-cta="hero_primary" style="background:#fff;color:#1a3c34;padding:.7rem 1.6rem;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);">
+        <div class="hp-hero-ctas" style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;">
+          <a id="hero-cta-primary" href="/guides/quel-traitement-glp1-choisir/" data-ab-cta="hero_primary" style="background:#fff;color:#1a3c34;padding:.6rem 1.4rem;border-radius:10px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);">
             Quel traitement choisir ? →
           </a>
-          <a href="/mon-espace/" style="background:transparent;color:#fff;padding:.7rem 1.6rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid rgba(255,255,255,.3);transition:all .2s;">
+          <a href="/mon-espace/" style="background:transparent;color:#fff;padding:.6rem 1.4rem;border-radius:10px;font-weight:600;font-size:.88rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .2s;">
             Mon Espace Perso
           </a>
         </div>
-        <!-- Stats row -->
-        <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;">
-          <div style="text-align:center;">
-            <div style="font-size:1.8rem;font-weight:800;color:#6ee7a0;line-height:1;">50+</div>
-            <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;">Articles experts</div>
-          </div>
-          <div style="text-align:center;">
-            <div style="font-size:1.8rem;font-weight:800;color:#6ee7a0;line-height:1;">7</div>
-            <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;">Traitements comparés</div>
-          </div>
-          <div style="text-align:center;">
-            <div style="font-size:1.8rem;font-weight:800;color:#6ee7a0;line-height:1;">2026</div>
-            <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;">Données à jour</div>
-          </div>
-        </div>
+        <!-- Stats row supprimé -->
       </div>
     </section>
 
@@ -145,41 +131,102 @@ const mainKeyword = "GLP-1 France";
     <section style="background:#1a3c34;padding:.7rem 0;overflow:hidden;margin-top:1.2rem;">
       <div style="display:flex;animation:hp-marquee 25s linear infinite;width:max-content;">
         <div style="display:flex;gap:3rem;padding:0 1.5rem;color:rgba(255,255,255,.7);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;white-space:nowrap;">
-          <span>✦ SOURCES ANSM, HAS, VIDAL</span>
-          <span>✦ 50+ ARTICLES EXPERTS</span>
-          <span>✦ 7 TRAITEMENTS COMPARÉS</span>
-          <span>✦ DONNÉES 2026</span>
-          <span>✦ COACH IA GRATUIT</span>
-          <span>✦ SPÉCIALISÉ FRANCE</span>
-          <span>✦ SOURCES ANSM, HAS, VIDAL</span>
-          <span>✦ 50+ ARTICLES EXPERTS</span>
-          <span>✦ 7 TRAITEMENTS COMPARÉS</span>
-          <span>✦ DONNÉES 2026</span>
-          <span>✦ COACH IA GRATUIT</span>
-          <span>✦ SPÉCIALISÉ FRANCE</span>
+          <span>&#183; SOURCES ANSM, HAS, VIDAL</span>
+          <span>&#183; 50+ ARTICLES EXPERTS</span>
+          <span>&#183; 7 TRAITEMENTS COMPARÉS</span>
+          <span>&#183; DONNÉES 2026</span>
+          <span>&#183; COACH IA GRATUIT</span>
+          <span>&#183; SPÉCIALISÉ FRANCE</span>
+          <span>&#183; SOURCES ANSM, HAS, VIDAL</span>
+          <span>&#183; 50+ ARTICLES EXPERTS</span>
+          <span>&#183; 7 TRAITEMENTS COMPARÉS</span>
+          <span>&#183; DONNÉES 2026</span>
+          <span>&#183; COACH IA GRATUIT</span>
+          <span>&#183; SPÉCIALISÉ FRANCE</span>
         </div>
       </div>
     </section>
 
     <style>
       @keyframes hp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-      @media(max-width:768px){
-        .hp-cat-grid{grid-template-columns:repeat(2,1fr)!important;}
-        .hp-lifestyle-grid{grid-template-columns:1fr!important;}
-        .hp-glp1-grid{grid-template-columns:1fr!important;}
-        .hp-effects-grid{grid-template-columns:1fr!important;}
-        .hp-guides-grid{grid-template-columns:repeat(2,1fr)!important;}
-        .hp-glp1-bottom{grid-template-columns:1fr!important;}
-        .hp-prix-hero{grid-template-columns:1fr!important;}
-        .hp-prix-hero img{height:200px!important;}
-        .hp-prix-duo{grid-template-columns:1fr!important;}
-      }
+
+      /* === DESKTOP HOVERS === */
       .hp-guide-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.1);border-color:#bbf7d0!important;}
       .hp-guide-card:hover img{transform:scale(1.05);}
       .hp-prix-hero:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.1)!important;}
       .hp-prix-hero:hover img{transform:scale(1.04);}
       .hp-prix-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.1)!important;}
       .hp-prix-card:hover img{transform:scale(1.05);}
+
+      /* === MOBILE (<768px) === */
+      @media(max-width:768px){
+        /* Hero compact */
+        .hp-hero{padding:2rem 1rem 1.8rem!important;}
+        .hp-hero-pill{font-size:.72rem!important;padding:.25rem .8rem!important;margin-bottom:.8rem!important;}
+        .hp-hero-sub{margin-bottom:1rem!important;}
+        .hp-hero-ctas a{padding:.55rem 1.1rem!important;font-size:.82rem!important;}
+
+        /* Hero cat grid → horizontal scroll */
+        .hp-cat-grid{
+          display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;
+          -webkit-overflow-scrolling:touch;padding-bottom:.5rem!important;gap:.6rem!important;
+          scrollbar-width:none;
+        }
+        .hp-cat-grid::-webkit-scrollbar{display:none;}
+        .hp-cat-grid > a{flex:0 0 70%;scroll-snap-align:start;aspect-ratio:16/10!important;}
+
+        /* GLP-1 bento section */
+        .hp-glp1-grid{grid-template-columns:1fr!important;}
+        .hp-glp1-bottom{grid-template-columns:1fr!important;}
+
+        /* Effects → horizontal scroll cards */
+        .hp-effects-grid{
+          display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;
+          -webkit-overflow-scrolling:touch;padding-bottom:.5rem!important;gap:.75rem!important;
+          scrollbar-width:none;
+        }
+        .hp-effects-grid::-webkit-scrollbar{display:none;}
+        .hp-effects-grid > div{flex:0 0 80%;scroll-snap-align:start;min-width:0;}
+
+        /* Prix section */
+        .hp-prix-hero{grid-template-columns:1fr!important;}
+        .hp-prix-hero img{height:180px!important;}
+        .hp-prix-hero > div:last-child{padding:1.2rem 1rem 1rem!important;}
+        /* Prix duo → horizontal scroll */
+        .hp-prix-duo{
+          display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;
+          -webkit-overflow-scrolling:touch;padding-bottom:.5rem!important;gap:.75rem!important;
+          scrollbar-width:none;
+        }
+        .hp-prix-duo::-webkit-scrollbar{display:none;}
+        .hp-prix-duo > a{flex:0 0 85%;scroll-snap-align:start;}
+
+        /* Categories grid → 1st card full-width, rest 2-col */
+        .hp-guides-grid{
+          grid-template-columns:1fr 1fr!important;
+        }
+        .hp-guides-grid > a:first-child{
+          grid-column:1 / -1!important;
+        }
+        .hp-guides-grid > a:first-child > div:first-child{
+          height:160px!important;
+        }
+      }
+
+      /* === SMALL MOBILE (<400px) === */
+      @media(max-width:400px){
+        .hp-cat-grid > a{flex:0 0 78%;}
+        .hp-effects-grid > div{flex:0 0 85%;}
+        .hp-prix-duo > a{flex:0 0 90%;}
+      }
+
+      /* === TABLET (769-1079px) === */
+      @media(min-width:769px) and (max-width:1079px){
+        .hp-cat-grid{grid-template-columns:repeat(2,1fr)!important;}
+        .hp-guides-grid{grid-template-columns:repeat(3,1fr)!important;}
+        .hp-glp1-grid{grid-template-columns:1fr!important;}
+        .hp-glp1-bottom{grid-template-columns:1fr 1fr!important;}
+      }
     </style>
 
     <!-- Section lifestyle supprimée — remplacée par bento dans section GLP-1 -->
@@ -489,7 +536,7 @@ const mainKeyword = "GLP-1 France";
           <div style="background:linear-gradient(135deg,#fef2f2,#fff5f5);border:1px solid #fecaca;border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;">
             <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#ef4444,#f87171);"></div>
             <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;">
-              <span style="width:32px;height:32px;background:#fee2e2;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;">⚠️</span>
+              <span style="width:32px;height:32px;background:#fee2e2;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <div>
                 <div style="font-weight:700;color:#991b1b;font-size:.95rem;">Fréquents</div>
                 <div style="font-size:.7rem;color:#dc2626;font-weight:600;">20-40% des patients</div>
@@ -507,7 +554,7 @@ const mainKeyword = "GLP-1 France";
           <div style="background:linear-gradient(135deg,#fffbeb,#fef9c3);border:1px solid #fde68a;border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;">
             <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#f59e0b,#fbbf24);"></div>
             <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;">
-              <span style="width:32px;height:32px;background:#fef3c7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;">💡</span>
+              <span style="width:32px;height:32px;background:#fef3c7;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2z" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <div>
                 <div style="font-weight:700;color:#92400e;font-size:.95rem;">Modérés</div>
                 <div style="font-size:.7rem;color:#d97706;font-weight:600;">5-15% des patients</div>
@@ -525,7 +572,7 @@ const mainKeyword = "GLP-1 France";
           <div style="background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid #bbf7d0;border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;">
             <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#22c55e,#4ade80);"></div>
             <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;">
-              <span style="width:32px;height:32px;background:#dcfce7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;">✅</span>
+              <span style="width:32px;height:32px;background:#dcfce7;border-radius:8px;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a10 10 0 11-20 0 10 10 0 0120 0z" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
               <div>
                 <div style="font-weight:700;color:#166534;font-size:.95rem;">Rares</div>
                 <div style="font-size:.7rem;color:#16a34a;font-weight:600;">&lt;1% des patients</div>
@@ -545,7 +592,8 @@ const mainKeyword = "GLP-1 France";
             Guide complet des effets secondaires →
           </a>
           <button onclick="document.getElementById('coach-toggle')?.click()" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#f0fdf4;color:#166534;font-weight:600;font-size:.9rem;border-radius:10px;border:1.5px solid #bbf7d0;cursor:pointer;transition:all .2s;">
-            💬 Posez vos questions au Coach IA
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Posez vos questions au Coach IA
           </button>
         </div>
       </div>
@@ -584,7 +632,6 @@ const mainKeyword = "GLP-1 France";
                 </div>
                 <div style="padding:.9rem 1rem;">
                   <div style="display:flex;align-items:center;gap:.4rem;margin-bottom:.3rem;">
-                    <span style="font-size:1rem;">{category.icon}</span>
                     <h3 style="font-size:.9rem;font-weight:700;color:#1a3c34;margin:0;">{category.name}</h3>
                   </div>
                   <p style="font-size:.78rem;color:#6b7280;line-height:1.4;margin:0 0 .5rem;">{category.description}</p>
