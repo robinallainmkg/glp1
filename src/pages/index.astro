@@ -65,168 +65,117 @@ const mainKeyword = "GLP-1 France";
   }
   </script>
 
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+  <div class="min-h-screen">
 
     <!-- ============================================ -->
-    <!-- SECTION 1 : HERO                             -->
+    <!-- SECTION 1 : HERO (Dark green, centré, Medvi) -->
     <!-- ============================================ -->
-    <section class="relative py-16 md:py-24 lg:py-28 overflow-hidden">
-      <!-- Background decoration -->
-      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-green-100/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
-      </div>
-
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div class="space-y-8 hp-fade-in">
-            <div class="space-y-5">
-              <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-blue-700">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Mis à jour mars 2026
-              </div>
-              <h1 class="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.1] tracking-tight">
-                Traitements GLP-1<br class="hidden sm:block"> en France :
-                <span class="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 bg-clip-text text-transparent">
-                  Le Guide Complet
-                </span>
-              </h1>
-              <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
-                Tout sur Ozempic, Wegovy et Mounjaro :
-                <strong class="text-green-600 font-semibold">prix réels</strong>, remboursement, effets secondaires
-                et conseils d'experts médicaux français.
-              </p>
-            </div>
-
-            <!-- CTAs -->
-            <div class="flex flex-col sm:flex-row gap-3">
-              <a id="hero-cta-primary" href="/guides/quel-traitement-glp1-choisir/" data-ab-cta="hero_primary" class="hero-cta-primary group inline-flex items-center justify-center gap-3 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:-translate-y-0.5">
-                Quel traitement choisir ?
-                <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-              <a href="/mon-espace/" class="group inline-flex items-center justify-center gap-3 px-7 py-3.5 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-2xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-600/25 hover:shadow-xl hover:-translate-y-0.5">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                Mon Espace Perso
-              </a>
-            </div>
-
-            <!-- Quick links pills -->
-            <div class="flex flex-wrap gap-2.5">
-              <a href="/collections/glp1-cout/prix-wegovy-france" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-700 hover:bg-green-100 hover:border-green-300 transition-all duration-200">
-                Prix Wegovy
-              </a>
-              <a href="/collections/glp1-cout/prix-mounjaro-france" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-blue-700 hover:bg-blue-100 hover:border-blue-300 transition-all duration-200">
-                Prix Mounjaro
-              </a>
-              <a href="/guides/qu-est-ce-que-glp1/" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm font-medium text-gray-600 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200">
-                Comprendre les GLP-1
-              </a>
-              <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200 rounded-full text-sm font-medium text-orange-700 hover:bg-orange-100 hover:border-orange-300 transition-all duration-200">
-                Remboursement
-              </a>
-            </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-3 gap-6 pt-4 border-t border-gray-100">
-              <div class="text-center">
-                <div class="text-3xl md:text-4xl font-extrabold text-blue-600 mb-1 tabular-nums">50+</div>
-                <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Articles experts</div>
-              </div>
-              <div class="text-center border-x border-gray-100">
-                <div class="text-3xl md:text-4xl font-extrabold text-green-600 mb-1 tabular-nums">7</div>
-                <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Traitements comparés</div>
-              </div>
-              <div class="text-center">
-                <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 mb-1 tabular-nums">2026</div>
-                <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">Données à jour</div>
-              </div>
-            </div>
+    <section style="background:linear-gradient(160deg,#1a3c34 0%,#2d5a4e 60%,#1a3c34 100%);padding:3rem 1.5rem 2.5rem;text-align:center;color:#fff;position:relative;overflow:hidden;">
+      <div style="max-width:800px;margin:0 auto;position:relative;z-index:2;">
+        <p style="display:inline-block;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.3rem 1rem;font-size:.8rem;margin-bottom:1.2rem;letter-spacing:.3px;">
+          Rejoignez <strong>50+ articles experts</strong> sur les GLP-1 en France
+        </p>
+        <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:1rem;letter-spacing:-.02em;color:#fff !important;">
+          Traitements GLP-1<br>en France : <em style="color:#6ee7a0;font-style:normal;">Le Guide Complet</em>
+        </h1>
+        <p style="font-size:1.05rem;color:rgba(255,255,255,.8);max-width:580px;margin:0 auto 1.5rem;line-height:1.6;">
+          Tout sur Ozempic, Wegovy et Mounjaro : <strong style="color:#fff;">prix réels</strong>, remboursement, effets secondaires et conseils d'experts médicaux français.
+        </p>
+        <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.8rem;">
+          <a id="hero-cta-primary" href="/guides/quel-traitement-glp1-choisir/" data-ab-cta="hero_primary" style="background:#fff;color:#1a3c34;padding:.7rem 1.6rem;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);">
+            Quel traitement choisir ? →
+          </a>
+          <a href="/mon-espace/" style="background:transparent;color:#fff;padding:.7rem 1.6rem;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid rgba(255,255,255,.3);transition:all .2s;">
+            Mon Espace Perso
+          </a>
+        </div>
+        <!-- Stats row -->
+        <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-size:1.8rem;font-weight:800;color:#6ee7a0;line-height:1;">50+</div>
+            <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;">Articles experts</div>
           </div>
-
-          <!-- Image Hero -->
-          <div class="relative hp-fade-in hp-delay-1">
-            <div class="relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5">
-              <img
-                src="/images/home/image-home2.jpg"
-                alt="Traitements GLP-1 en France - Guide complet Ozempic Wegovy Mounjaro"
-                class="w-full h-auto object-cover object-center aspect-[4/3]"
-                width="600"
-                height="450"
-                loading="eager"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-              <!-- Floating badge on image -->
-              <div class="absolute bottom-6 left-6 right-6 flex gap-3">
-                <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-lg flex items-center gap-2">
-                  <span class="text-green-600 font-bold text-sm">Ozempic</span>
-                  <span class="text-gray-400">|</span>
-                  <span class="text-gray-700 text-sm font-medium">~59,90 EUR/stylo</span>
-                </div>
-                <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2.5 shadow-lg flex items-center gap-2">
-                  <span class="text-blue-600 font-bold text-sm">Wegovy</span>
-                  <span class="text-gray-400">|</span>
-                  <span class="text-gray-700 text-sm font-medium">169-360 EUR</span>
-                </div>
-              </div>
-            </div>
+          <div style="text-align:center;">
+            <div style="font-size:1.8rem;font-weight:800;color:#6ee7a0;line-height:1;">7</div>
+            <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;">Traitements comparés</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:1.8rem;font-weight:800;color:#6ee7a0;line-height:1;">2026</div>
+            <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:.25rem;">Données à jour</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 2 : TRUST INDICATORS                 -->
+    <!-- SECTION 1b : CATEGORY CARDS (images, Medvi)  -->
     <!-- ============================================ -->
-    <section class="py-8 bg-white border-y border-gray-100">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
-          <div class="flex items-center gap-4 py-4 lg:py-0 lg:px-6 first:pt-0 lg:first:pl-0 last:pb-0 lg:last:pr-0">
-            <div class="flex-shrink-0 w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center ring-1 ring-green-100">
-              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-gray-900">Informations vérifiées</h4>
-              <p class="text-gray-500 text-xs mt-0.5">Sources ANSM, HAS, VIDAL</p>
-            </div>
+    <section style="padding:0 1.5rem;margin-top:-1.5rem;position:relative;z-index:3;">
+      <div class="hp-cat-grid" style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;">
+        <a href="/collections/glp1-cout/" style="text-decoration:none;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;display:block;">
+          <img src="/images/landing/wegovy-box.jpg" alt="Prix GLP-1" loading="eager" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>Prix et remboursement</span><span>→</span>
           </div>
-          <div class="flex items-center gap-4 py-4 lg:py-0 lg:px-6">
-            <div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center ring-1 ring-blue-100">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-gray-900">Spécialisé France</h4>
-              <p class="text-gray-500 text-xs mt-0.5">Prix, pharmacies et remboursements FR</p>
-            </div>
+        </a>
+        <a href="/collections/glp1-perte-de-poids/" style="text-decoration:none;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;display:block;">
+          <img src="/images/landing/woman-scale.jpg" alt="Perte de poids GLP-1" loading="eager" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>Perte de poids</span><span>→</span>
           </div>
-          <div class="flex items-center gap-4 py-4 lg:py-0 lg:px-6">
-            <div class="flex-shrink-0 w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center ring-1 ring-purple-100">
-              <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-gray-900">Mis à jour mars 2026</h4>
-              <p class="text-gray-500 text-xs mt-0.5">Données actualisées régulièrement</p>
-            </div>
+        </a>
+        <a href="/collections/regime-glp1/" style="text-decoration:none;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;display:block;">
+          <img src="/images/landing/healthy-meal.jpg" alt="Nutrition et régime GLP-1" loading="eager" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>Nutrition adaptée</span><span>→</span>
           </div>
-          <div class="flex items-center gap-4 py-4 lg:py-0 lg:px-6 lg:last:pr-0">
-            <div class="flex-shrink-0 w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center ring-1 ring-emerald-100">
-              <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-            </div>
-            <div>
-              <h4 class="text-sm font-bold text-gray-900">Coach IA gratuit</h4>
-              <p class="text-gray-500 text-xs mt-0.5">Posez vos questions en direct</p>
-            </div>
+        </a>
+        <a href="/collections/effets-secondaires-glp1/" style="text-decoration:none;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;display:block;">
+          <img src="/images/landing/doctor-consultation.jpg" alt="Effets secondaires et suivi médical" loading="eager" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:1rem;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;">
+            <span>Effets et suivi</span><span>→</span>
           </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1c : MARQUEE TRUST BAR               -->
+    <!-- ============================================ -->
+    <section style="background:#1a3c34;padding:.7rem 0;overflow:hidden;margin-top:1.2rem;">
+      <div style="display:flex;animation:hp-marquee 25s linear infinite;width:max-content;">
+        <div style="display:flex;gap:3rem;padding:0 1.5rem;color:rgba(255,255,255,.7);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;white-space:nowrap;">
+          <span>✦ SOURCES ANSM, HAS, VIDAL</span>
+          <span>✦ 50+ ARTICLES EXPERTS</span>
+          <span>✦ 7 TRAITEMENTS COMPARÉS</span>
+          <span>✦ DONNÉES 2026</span>
+          <span>✦ COACH IA GRATUIT</span>
+          <span>✦ SPÉCIALISÉ FRANCE</span>
+          <span>✦ SOURCES ANSM, HAS, VIDAL</span>
+          <span>✦ 50+ ARTICLES EXPERTS</span>
+          <span>✦ 7 TRAITEMENTS COMPARÉS</span>
+          <span>✦ DONNÉES 2026</span>
+          <span>✦ COACH IA GRATUIT</span>
+          <span>✦ SPÉCIALISÉ FRANCE</span>
         </div>
       </div>
     </section>
+
+    <style>
+      @keyframes hp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+      @media(max-width:768px){.hp-cat-grid{grid-template-columns:repeat(2,1fr)!important;}.hp-lifestyle-grid{grid-template-columns:1fr!important;}.hp-glp1-grid{grid-template-columns:1fr!important;}.hp-effects-grid{grid-template-columns:1fr!important;}.hp-guides-grid{grid-template-columns:repeat(2,1fr)!important;}.hp-glp1-bottom{grid-template-columns:1fr!important;}}
+      .hp-guide-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.1);border-color:#bbf7d0!important;}.hp-guide-card:hover img{transform:scale(1.05);}
+    </style>
+
+    <!-- Section lifestyle supprimée — remplacée par bento dans section GLP-1 -->
 
     <!-- ============================================ -->
     <!-- SECTION 3 : PRIX (3 cards)                   -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-50">
+    <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/40">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12 hp-fade-in">
-          <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">Prix actualisés mars 2026</span>
+          <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">Prix actualisés mars 2026</span>
           <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">
             Prix des Traitements GLP-1 en France
           </h2>
@@ -235,7 +184,7 @@ const mainKeyword = "GLP-1 France";
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
           <!-- Ozempic -->
           <div class="relative bg-white rounded-2xl shadow-lg p-7 border-2 border-green-200 hover:shadow-xl transition-all duration-300">
             <div class="absolute top-4 right-4">
@@ -279,21 +228,21 @@ const mainKeyword = "GLP-1 France";
           </div>
 
           <!-- Mounjaro -->
-          <div class="relative bg-white rounded-2xl shadow-lg p-7 border-2 border-blue-200 hover:shadow-xl transition-all duration-300">
+          <div class="relative bg-white rounded-2xl shadow-lg p-7 border-2 border-teal-200 hover:shadow-xl transition-all duration-300">
             <div class="absolute top-4 right-4">
-              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold">NON remboursé</span>
+              <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold">NON remboursé</span>
             </div>
             <div class="text-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-1">Mounjaro</h3>
               <p class="text-sm text-gray-500 mb-4">Tirzépatide — Eli Lilly</p>
-              <div class="text-4xl font-bold text-blue-600 mb-1">230-440 €</div>
+              <div class="text-4xl font-bold text-teal-600 mb-1">230-440 €</div>
               <div class="text-gray-500 text-sm mb-4">par mois — à votre charge</div>
               <div class="space-y-2 text-sm text-gray-600 mb-5">
-                <div class="flex items-center gap-2"><span class="text-blue-500">★</span> Double agoniste GLP-1/GIP</div>
+                <div class="flex items-center gap-2"><span class="text-teal-500">★</span> Double agoniste GLP-1/GIP</div>
                 <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Disponible depuis nov. 2024</div>
                 <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
               </div>
-              <a href="/collections/glp1-cout/prix-mounjaro-france" class="block w-full bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition-colors">
+              <a href="/collections/glp1-cout/prix-mounjaro-france" class="block w-full bg-teal-600 text-white font-semibold py-3 rounded-xl hover:bg-teal-700 transition-colors">
                 Voir les détails
               </a>
             </div>
@@ -306,7 +255,7 @@ const mainKeyword = "GLP-1 France";
         </div>
 
         <div class="text-center mt-6">
-          <a href="/collections/glp1-cout/" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-200 shadow-lg">
+          <a href="/collections/glp1-cout/" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-700 to-emerald-800 text-white font-semibold rounded-xl hover:from-emerald-800 hover:to-emerald-900 transition-all duration-200 shadow-lg">
             Voir tous les prix et remboursements
           </a>
         </div>
@@ -400,48 +349,65 @@ const mainKeyword = "GLP-1 France";
     <!-- ============================================ -->
     <!-- SECTION 5 : BRIDGE "Que signifie GLP-1?"     -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50/80 to-indigo-50/60">
-      <div class="container mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-5xl mx-auto">
-          <div class="space-y-5 hp-fade-in">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
-              Ozempic, Wegovy, Mounjaro... Que signifie GLP-1 ?
+    <section style="padding:4rem 1.5rem;background:#f8faf9;">
+      <div style="max-width:1100px;margin:0 auto;">
+        <!-- Bento top row: image left + text right -->
+        <div class="hp-glp1-grid" style="display:grid;grid-template-columns:1fr 1.2fr;gap:1.5rem;align-items:start;">
+          <!-- Large rounded image -->
+          <div style="border-radius:24px;overflow:hidden;background:#eef5f0;">
+            <img src="/images/home/seringue-adn.jpg" alt="Molécule GLP-1 et recherche scientifique" loading="lazy" width="600" height="500" style="width:100%;height:100%;object-fit:cover;display:block;min-height:320px;">
+          </div>
+          <!-- Text content -->
+          <div style="padding:.5rem 0;">
+            <span style="display:inline-block;color:#6b7280;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.8rem;">Comprendre les traitements GLP-1</span>
+            <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#1a3c34;line-height:1.1;margin-bottom:1.2rem;letter-spacing:-.02em;">
+              Votre parcours <em style="color:#2d5a4e;font-style:normal;">santé,</em> simplifié et accompagné
             </h2>
-            <p class="text-gray-600 leading-relaxed">
-              <strong class="text-blue-600">Ozempic, Wegovy et Mounjaro</strong> sont des noms commerciaux de médicaments de la famille des
-              <strong class="text-blue-600">"agonistes GLP-1"</strong>.
-              Ils imitent une hormone naturelle pour réguler la glycémie et réduire l'appétit.
-            </p>
-
-            <div class="space-y-2.5">
-              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                <span class="text-lg">💊</span>
-                <span class="text-gray-700 font-medium text-sm">Ozempic = Diabète type 2 + perte de poids (remboursé)</span>
+            <h3 style="font-size:1rem;font-weight:700;color:#1a3c34;margin-bottom:.8rem;">3 traitements, 3 usages</h3>
+            <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem;">
+              <div style="display:flex;align-items:center;gap:.6rem;">
+                <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span style="font-size:.9rem;color:#374151;"><strong>Ozempic</strong> — Diabète type 2 + perte de poids <span style="background:#dcfce7;color:#166534;padding:.1rem .35rem;border-radius:4px;font-size:.68rem;font-weight:700;">Remboursé</span></span>
               </div>
-              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                <span class="text-lg">📉</span>
-                <span class="text-gray-700 font-medium text-sm">Wegovy = Spécialement pour l'obésité (non remboursé)</span>
+              <div style="display:flex;align-items:center;gap:.6rem;">
+                <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span style="font-size:.9rem;color:#374151;"><strong>Wegovy</strong> — Spécialement pour l'obésité</span>
               </div>
-              <div class="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                <span class="text-lg">🔬</span>
-                <span class="text-gray-700 font-medium text-sm">Mounjaro = Double agoniste GLP-1/GIP (non remboursé)</span>
+              <div style="display:flex;align-items:center;gap:.6rem;">
+                <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span style="font-size:.9rem;color:#374151;"><strong>Mounjaro</strong> — Double agoniste GLP-1/GIP</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:.6rem;">
+                <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span style="font-size:.9rem;color:#374151;"><strong>Sources vérifiées</strong> — ANSM, HAS, Vidal</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:.6rem;">
+                <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span style="font-size:.9rem;color:#374151;"><strong>Coach IA gratuit</strong> — Réponses personnalisées 24h/24</span>
               </div>
             </div>
-
-            <a href="/guides/qu-est-ce-que-glp1/" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-200 text-sm">
+            <a href="/guides/qu-est-ce-que-glp1/" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.6rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;">
               En savoir plus sur les GLP-1 →
             </a>
           </div>
-
-          <div class="relative">
-            <img
-              src="/images/home/seringue-adn.jpg"
-              alt="Molécule GLP-1 et recherche scientifique"
-              class="w-full h-auto rounded-xl shadow-lg"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
+        </div>
+        <!-- Bento bottom row: 2 contextual images -->
+        <div class="hp-glp1-bottom" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
+          <div style="border-radius:20px;overflow:hidden;height:220px;">
+            <img src="/images/landing/doctor-tablet.jpg" alt="Médecin consultant un dossier patient" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div style="border-radius:20px;overflow:hidden;height:220px;">
+            <img src="/images/landing/injection-pen.jpg" alt="Stylo injecteur GLP-1" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
           </div>
         </div>
       </div>
@@ -450,64 +416,81 @@ const mainKeyword = "GLP-1 France";
     <!-- ============================================ -->
     <!-- SECTION 6 : EFFETS SECONDAIRES (simplifié)   -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-10 hp-fade-in">
-            <span class="inline-block px-4 py-1.5 bg-red-100 text-red-700 rounded-full text-sm font-semibold mb-4">Transparence</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">
-              Effets Secondaires : Ce qu'il Faut Savoir
-            </h2>
-            <p class="text-gray-600">
-              Comme tout médicament, les GLP-1 peuvent provoquer des effets secondaires.
-              <strong class="text-gray-900">La transparence avant tout.</strong>
-            </p>
+    <section style="padding:4rem 1.5rem;background:#fff;">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <span style="display:inline-block;background:#fef2f2;color:#dc2626;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Transparence</span>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#1a3c34;line-height:1.15;margin-bottom:.6rem;">
+            Effets Secondaires : Ce qu'il Faut Savoir
+          </h2>
+          <p style="color:#6b7280;font-size:.95rem;max-width:550px;margin:0 auto;">
+            Comme tout médicament, les GLP-1 peuvent provoquer des effets secondaires. <strong style="color:#1a3c34;">La transparence avant tout.</strong>
+          </p>
+        </div>
+
+        <div class="hp-effects-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;">
+          <!-- Fréquents -->
+          <div style="background:linear-gradient(135deg,#fef2f2,#fff5f5);border:1px solid #fecaca;border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#ef4444,#f87171);"></div>
+            <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;">
+              <span style="width:32px;height:32px;background:#fee2e2;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;">⚠️</span>
+              <div>
+                <div style="font-weight:700;color:#991b1b;font-size:.95rem;">Fréquents</div>
+                <div style="font-size:.7rem;color:#dc2626;font-weight:600;">20-40% des patients</div>
+              </div>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#ef4444;font-size:.5rem;">●</span><strong>Nausées</strong> <span style="color:#9ca3af;">— surtout au début</span></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#ef4444;font-size:.5rem;">●</span><strong>Vomissements</strong> <span style="color:#9ca3af;">— transitoires</span></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#ef4444;font-size:.5rem;">●</span><strong>Diarrhées</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#ef4444;font-size:.5rem;">●</span><strong>Constipation</strong></li>
+            </ul>
           </div>
 
-          <div class="grid md:grid-cols-3 gap-6 mb-8">
-            <!-- Fréquents -->
-            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-red-400">
-              <h3 class="text-lg font-bold text-gray-900 mb-3">Fréquents (20-40%)</h3>
-              <ul class="space-y-1.5 text-sm text-gray-700">
-                <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">•</span><strong>Nausées</strong> — surtout au début</li>
-                <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">•</span><strong>Vomissements</strong> — transitoires</li>
-                <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">•</span><strong>Diarrhées</strong></li>
-                <li class="flex items-start gap-2"><span class="text-red-500 mt-0.5">•</span><strong>Constipation</strong></li>
-              </ul>
+          <!-- Modérés -->
+          <div style="background:linear-gradient(135deg,#fffbeb,#fef9c3);border:1px solid #fde68a;border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#f59e0b,#fbbf24);"></div>
+            <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;">
+              <span style="width:32px;height:32px;background:#fef3c7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;">💡</span>
+              <div>
+                <div style="font-weight:700;color:#92400e;font-size:.95rem;">Modérés</div>
+                <div style="font-size:.7rem;color:#d97706;font-weight:600;">5-15% des patients</div>
+              </div>
             </div>
-
-            <!-- Modérés -->
-            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-orange-400">
-              <h3 class="text-lg font-bold text-gray-900 mb-3">Modérés (5-15%)</h3>
-              <ul class="space-y-1.5 text-sm text-gray-700">
-                <li class="flex items-start gap-2"><span class="text-orange-500 mt-0.5">•</span><strong>Fatigue</strong></li>
-                <li class="flex items-start gap-2"><span class="text-orange-500 mt-0.5">•</span><strong>Maux de tête</strong></li>
-                <li class="flex items-start gap-2"><span class="text-orange-500 mt-0.5">•</span><strong>Ballonnements</strong></li>
-                <li class="flex items-start gap-2"><span class="text-orange-500 mt-0.5">•</span><strong>Reflux gastrique</strong></li>
-              </ul>
-            </div>
-
-            <!-- Rares -->
-            <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-red-600">
-              <h3 class="text-lg font-bold text-gray-900 mb-3">Rares (&lt;1%)</h3>
-              <ul class="space-y-1.5 text-sm text-gray-700">
-                <li class="flex items-start gap-2"><span class="text-red-600 mt-0.5">•</span><strong>Pancréatite</strong></li>
-                <li class="flex items-start gap-2"><span class="text-red-600 mt-0.5">•</span><strong>Problèmes thyroïdiens</strong></li>
-                <li class="flex items-start gap-2"><span class="text-red-600 mt-0.5">•</span><strong>Hypoglycémie</strong></li>
-                <li class="flex items-start gap-2"><span class="text-red-600 mt-0.5">•</span><strong>Réactions allergiques</strong></li>
-              </ul>
-            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#f59e0b;font-size:.5rem;">●</span><strong>Fatigue</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#f59e0b;font-size:.5rem;">●</span><strong>Maux de tête</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#f59e0b;font-size:.5rem;">●</span><strong>Ballonnements</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#f59e0b;font-size:.5rem;">●</span><strong>Reflux gastrique</strong></li>
+            </ul>
           </div>
 
-          <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/collections/effets-secondaires-glp1/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-md">
-              Guide complet des effets secondaires
-            </a>
-            <button onclick="document.getElementById('coach-toggle')?.click()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-50 border-2 border-green-200 text-green-700 font-semibold rounded-xl hover:bg-green-100 transition-colors cursor-pointer">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-              Posez vos questions au Coach IA
-            </button>
+          <!-- Rares -->
+          <div style="background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid #bbf7d0;border-radius:16px;padding:1.5rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#22c55e,#4ade80);"></div>
+            <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;">
+              <span style="width:32px;height:32px;background:#dcfce7;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;">✅</span>
+              <div>
+                <div style="font-weight:700;color:#166534;font-size:.95rem;">Rares</div>
+                <div style="font-size:.7rem;color:#16a34a;font-weight:600;">&lt;1% des patients</div>
+              </div>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#22c55e;font-size:.5rem;">●</span><strong>Pancréatite</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#22c55e;font-size:.5rem;">●</span><strong>Problèmes thyroïdiens</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#22c55e;font-size:.5rem;">●</span><strong>Hypoglycémie</strong></li>
+              <li style="font-size:.85rem;color:#374151;display:flex;align-items:center;gap:.4rem;"><span style="color:#22c55e;font-size:.5rem;">●</span><strong>Réactions allergiques</strong></li>
+            </ul>
           </div>
+        </div>
+
+        <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;">
+          <a href="/collections/effets-secondaires-glp1/" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 15px rgba(26,60,52,.2);">
+            Guide complet des effets secondaires →
+          </a>
+          <button onclick="document.getElementById('coach-toggle')?.click()" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#f0fdf4;color:#166534;font-weight:600;font-size:.9rem;border-radius:10px;border:1.5px solid #bbf7d0;cursor:pointer;transition:all .2s;">
+            💬 Posez vos questions au Coach IA
+          </button>
         </div>
       </div>
     </section>
@@ -515,39 +498,45 @@ const mainKeyword = "GLP-1 France";
     <!-- ============================================ -->
     <!-- SECTION 7 : CATEGORIES GRID                  -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-24 bg-gray-50/80">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12 hp-fade-in">
-          <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold mb-4">Explorez nos guides</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">
+    <section style="padding:4rem 1.5rem;background:#f8faf9;">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <span style="display:inline-block;background:rgba(110,231,160,.15);color:#166534;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Explorez nos guides</span>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#1a3c34;line-height:1.15;margin-bottom:.5rem;">
             Tout Savoir sur les Traitements GLP-1
           </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Guides détaillés par nos experts médicaux pour comprendre ces nouveaux traitements.
-          </p>
+          <p style="color:#6b7280;font-size:.95rem;">Guides détaillés par nos experts médicaux.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {categories.map((category) => (
-            <a href={`/collections/${category.slug}/`} class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-blue-100 transition-colors duration-300">{category.icon}</div>
-              <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {category.name}
-              </h3>
-              <p class="text-gray-500 mb-5 leading-relaxed text-sm">
-                {category.description}
-              </p>
-              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                <span class="text-xs text-gray-400 font-medium">
-                  {category.articleCount} articles
-                </span>
-                <span class="text-blue-600 font-medium text-sm group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-1">
-                  Lire
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </span>
-              </div>
-            </a>
-          ))}
+        <div class="hp-guides-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;">
+          {categories.map((category, i) => {
+            const images = [
+              '/images/categories/prix-remboursement.jpg',
+              '/images/categories/perte-de-poids.jpg',
+              '/images/categories/effets-secondaires.jpg',
+              '/images/categories/nutrition.jpg',
+              '/images/categories/alternatives.jpg',
+              '/images/categories/medecin.jpg',
+              '/images/categories/recherche.jpg',
+              '/images/categories/guides-traitements.jpg'
+            ];
+            return (
+              <a href={`/collections/${category.slug}/`} style="text-decoration:none;border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;border:1px solid #e5e7eb;transition:all .25s;" class="hp-guide-card">
+                <div style="position:relative;height:120px;overflow:hidden;">
+                  <img src={images[i]} alt={category.name} loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" />
+                  <div style="position:absolute;top:.5rem;right:.5rem;background:rgba(255,255,255,.9);backdrop-filter:blur(4px);padding:.15rem .5rem;border-radius:6px;font-size:.65rem;font-weight:600;color:#1a3c34;">{category.articleCount} articles</div>
+                </div>
+                <div style="padding:.9rem 1rem;">
+                  <div style="display:flex;align-items:center;gap:.4rem;margin-bottom:.3rem;">
+                    <span style="font-size:1rem;">{category.icon}</span>
+                    <h3 style="font-size:.9rem;font-weight:700;color:#1a3c34;margin:0;">{category.name}</h3>
+                  </div>
+                  <p style="font-size:.78rem;color:#6b7280;line-height:1.4;margin:0 0 .5rem;">{category.description}</p>
+                  <span style="font-size:.8rem;font-weight:600;color:#2d5a4e;display:inline-flex;align-items:center;gap:.25rem;">Lire →</span>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
