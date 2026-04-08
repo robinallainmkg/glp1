@@ -75,7 +75,7 @@ const mainKeyword = "GLP-1 France";
         <p style="display:inline-block;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.3rem 1rem;font-size:.8rem;margin-bottom:1.2rem;letter-spacing:.3px;">
           Rejoignez <strong>50+ articles experts</strong> sur les GLP-1 en France
         </p>
-        <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.1;margin-bottom:1rem;letter-spacing:-.02em;color:#fff !important;">
+        <h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;line-height:1.05;margin-bottom:1rem;letter-spacing:-.03em;color:#fff !important;">
           Traitements GLP-1<br>en France : <em style="color:#6ee7a0;font-style:normal;">Le Guide Complet</em>
         </h1>
         <p style="font-size:1.05rem;color:rgba(255,255,255,.8);max-width:580px;margin:0 auto 1.5rem;line-height:1.6;">
@@ -163,100 +163,156 @@ const mainKeyword = "GLP-1 France";
 
     <style>
       @keyframes hp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-      @media(max-width:768px){.hp-cat-grid{grid-template-columns:repeat(2,1fr)!important;}.hp-lifestyle-grid{grid-template-columns:1fr!important;}.hp-glp1-grid{grid-template-columns:1fr!important;}.hp-effects-grid{grid-template-columns:1fr!important;}.hp-guides-grid{grid-template-columns:repeat(2,1fr)!important;}.hp-glp1-bottom{grid-template-columns:1fr!important;}}
-      .hp-guide-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.1);border-color:#bbf7d0!important;}.hp-guide-card:hover img{transform:scale(1.05);}
+      @media(max-width:768px){
+        .hp-cat-grid{grid-template-columns:repeat(2,1fr)!important;}
+        .hp-lifestyle-grid{grid-template-columns:1fr!important;}
+        .hp-glp1-grid{grid-template-columns:1fr!important;}
+        .hp-effects-grid{grid-template-columns:1fr!important;}
+        .hp-guides-grid{grid-template-columns:repeat(2,1fr)!important;}
+        .hp-glp1-bottom{grid-template-columns:1fr!important;}
+        .hp-prix-hero{grid-template-columns:1fr!important;}
+        .hp-prix-hero img{height:200px!important;}
+        .hp-prix-duo{grid-template-columns:1fr!important;}
+      }
+      .hp-guide-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.1);border-color:#bbf7d0!important;}
+      .hp-guide-card:hover img{transform:scale(1.05);}
+      .hp-prix-hero:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.1)!important;}
+      .hp-prix-hero:hover img{transform:scale(1.04);}
+      .hp-prix-card:hover{transform:translateY(-3px);box-shadow:0 6px 24px rgba(0,0,0,.1)!important;}
+      .hp-prix-card:hover img{transform:scale(1.05);}
     </style>
 
     <!-- Section lifestyle supprimée — remplacée par bento dans section GLP-1 -->
 
     <!-- ============================================ -->
-    <!-- SECTION 3 : PRIX (3 cards)                   -->
+    <!-- SECTION 3 : PRIX (showcase layout)            -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-24 bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/40">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12 hp-fade-in">
-          <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold mb-4">Prix actualisés mars 2026</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">
-            Prix des Traitements GLP-1 en France
-          </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Prix réels en pharmacie. Seuls les traitements pour le diabète de type 2 sont remboursés.
-          </p>
+    <section style="padding:4rem 0;background:#f8faf9;">
+      <div style="max-width:1100px;margin:0 auto;padding:0 1.25rem;">
+        <!-- Header -->
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <span style="display:inline-block;padding:.35rem .9rem;background:#dcfce7;color:#166534;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:.75rem;">Prix actualis&eacute;s mars 2026</span>
+          <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;color:#111827;margin:0 0 .5rem;letter-spacing:-.03em;">Prix des Traitements GLP-1 en France</h2>
+          <p style="color:#6b7280;max-width:550px;margin:0 auto;font-size:.95rem;">Prix r&eacute;els en pharmacie. Seuls les traitements pour le diab&egrave;te de type 2 sont rembours&eacute;s.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
-          <!-- Ozempic -->
-          <div class="relative bg-white rounded-2xl shadow-lg p-7 border-2 border-green-200 hover:shadow-xl transition-all duration-300">
-            <div class="absolute top-4 right-4">
-              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">Remboursé 65%</span>
-            </div>
-            <div class="text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">Ozempic</h3>
-              <p class="text-sm text-gray-500 mb-4">Semaglutide — Novo Nordisk</p>
-              <div class="text-4xl font-bold text-green-600 mb-1">~59,90 €</div>
-              <div class="text-gray-500 text-sm mb-4">par stylo injecteur</div>
-              <div class="space-y-2 text-sm text-gray-600 mb-5">
-                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Remboursé (diabète type 2)</div>
-                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
-                <div class="flex items-center gap-2"><span class="text-blue-500">i</span> Formulaire obligatoire (fév. 2025)</div>
-              </div>
-              <a href="/collections/glp1-cout/prix-ozempic-france" class="block w-full bg-green-600 text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition-colors">
-                Voir les détails
-              </a>
+        <!-- === OZEMPIC — Featured hero card === -->
+        <a href="/collections/glp1-cout/prix-ozempic-france" class="hp-prix-hero" style="display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.06);border:1px solid #e5e7eb;margin-bottom:1.25rem;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;">
+          <div style="position:relative;overflow:hidden;min-height:260px;">
+            <img src="/images/landing/ozempic-pen.jpg" alt="Stylo Ozempic semaglutide" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;">
+            <div style="position:absolute;top:1rem;left:1rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+              <span style="background:#166534;color:#fff;padding:.3rem .7rem;border-radius:8px;font-size:.7rem;font-weight:700;backdrop-filter:blur(8px);">Rembours&eacute; 65%</span>
+              <span style="background:rgba(255,255,255,.9);color:#166534;padding:.3rem .7rem;border-radius:8px;font-size:.7rem;font-weight:700;">Le + prescrit</span>
             </div>
           </div>
+          <div style="padding:2rem 2rem 1.75rem;display:flex;flex-direction:column;justify-content:center;">
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem;">
+              <h3 style="font-size:1.75rem;font-weight:800;color:#111827;margin:0;">Ozempic</h3>
+              <span style="background:#f0fdf4;color:#166534;padding:.15rem .55rem;border-radius:6px;font-size:.65rem;font-weight:700;border:1px solid #bbf7d0;">Semaglutide</span>
+            </div>
+            <p style="color:#9ca3af;font-size:.8rem;margin:0 0 1rem;">Novo Nordisk -- Injection hebdomadaire</p>
+            <div style="display:flex;align-items:baseline;gap:.4rem;margin-bottom:1.25rem;">
+              <span style="font-size:2.5rem;font-weight:800;color:#16a34a;line-height:1;">~59,90</span>
+              <span style="font-size:1.1rem;font-weight:600;color:#16a34a;">&euro;</span>
+              <span style="color:#9ca3af;font-size:.8rem;margin-left:.25rem;">/ stylo injecteur</span>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem;">
+              <span style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .65rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;font-size:.75rem;color:#166534;font-weight:600;">
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Diab&egrave;te type 2
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .65rem;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;font-size:.75rem;color:#166534;font-weight:600;">
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Perte de poids
+              </span>
+              <span style="display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .65rem;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;font-size:.75rem;color:#92400e;font-weight:600;">
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#d97706" stroke-width="2"/><path d="M12 8v4m0 4h.01" stroke="#d97706" stroke-width="2" stroke-linecap="round"/></svg>
+                Formulaire obligatoire
+              </span>
+            </div>
+            <span style="display:inline-flex;align-items:center;gap:.4rem;color:#16a34a;font-weight:700;font-size:.9rem;">
+              Voir prix et d&eacute;tails
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- === WEGOVY + MOUNJARO — Side by side === -->
+        <div class="hp-prix-duo" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;">
 
           <!-- Wegovy -->
-          <div class="relative bg-white rounded-2xl shadow-lg p-7 border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
-            <div class="absolute top-4 right-4">
-              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold">NON remboursé</span>
-            </div>
-            <div class="text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">Wegovy</h3>
-              <p class="text-sm text-gray-500 mb-4">Semaglutide 2,4 mg — Novo Nordisk</p>
-              <div class="text-4xl font-bold text-orange-600 mb-1">169-360 €</div>
-              <div class="text-gray-500 text-sm mb-4">par mois — à votre charge</div>
-              <div class="space-y-2 text-sm text-gray-600 mb-5">
-                <div class="flex items-center gap-2"><span class="text-orange-500">!</span> Obésité (IMC ≥ 30)</div>
-                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
-                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Disponible en pharmacie</div>
+          <a href="/collections/glp1-cout/prix-wegovy-france" class="hp-prix-card" style="display:block;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;">
+            <div style="position:relative;height:180px;overflow:hidden;">
+              <img src="/images/landing/wegovy-pen.jpg" alt="Stylo Wegovy semaglutide" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;">
+              <div style="position:absolute;top:.75rem;left:.75rem;">
+                <span style="background:#dc2626;color:#fff;padding:.25rem .6rem;border-radius:8px;font-size:.65rem;font-weight:700;">Non rembours&eacute;</span>
               </div>
-              <a href="/collections/glp1-cout/prix-wegovy-france" class="block w-full bg-orange-600 text-white font-semibold py-3 rounded-xl hover:bg-orange-700 transition-colors">
-                Voir les détails
-              </a>
+              <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,.35));"></div>
+              <div style="position:absolute;bottom:.75rem;left:.75rem;">
+                <span style="color:#fff;font-size:1.5rem;font-weight:800;text-shadow:0 1px 4px rgba(0,0,0,.3);">169-360 &euro;</span>
+                <span style="color:rgba(255,255,255,.85);font-size:.7rem;display:block;text-shadow:0 1px 2px rgba(0,0,0,.3);">par mois -- &agrave; votre charge</span>
+              </div>
             </div>
-          </div>
+            <div style="padding:1.1rem 1.25rem 1.25rem;">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.25rem;">
+                <h3 style="font-size:1.2rem;font-weight:800;color:#111827;margin:0;">Wegovy</h3>
+                <span style="background:#eff6ff;color:#1e40af;padding:.1rem .45rem;border-radius:5px;font-size:.6rem;font-weight:700;border:1px solid #bfdbfe;">2,4 mg</span>
+              </div>
+              <p style="color:#9ca3af;font-size:.75rem;margin:0 0 .75rem;">Novo Nordisk -- Ob&eacute;sit&eacute; (IMC &ge; 30)</p>
+              <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem;">
+                <span style="padding:.2rem .5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-size:.7rem;color:#374151;font-weight:500;">Injection hebdo</span>
+                <span style="padding:.2rem .5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-size:.7rem;color:#374151;font-weight:500;">Semaglutide</span>
+                <span style="padding:.2rem .5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-size:.7rem;color:#374151;font-weight:500;">Pharmacie</span>
+              </div>
+              <span style="display:inline-flex;align-items:center;gap:.3rem;color:#2563eb;font-weight:700;font-size:.8rem;">
+                D&eacute;couvrir
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
 
           <!-- Mounjaro -->
-          <div class="relative bg-white rounded-2xl shadow-lg p-7 border-2 border-teal-200 hover:shadow-xl transition-all duration-300">
-            <div class="absolute top-4 right-4">
-              <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-bold">NON remboursé</span>
-            </div>
-            <div class="text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-1">Mounjaro</h3>
-              <p class="text-sm text-gray-500 mb-4">Tirzépatide — Eli Lilly</p>
-              <div class="text-4xl font-bold text-teal-600 mb-1">230-440 €</div>
-              <div class="text-gray-500 text-sm mb-4">par mois — à votre charge</div>
-              <div class="space-y-2 text-sm text-gray-600 mb-5">
-                <div class="flex items-center gap-2"><span class="text-teal-500">★</span> Double agoniste GLP-1/GIP</div>
-                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Disponible depuis nov. 2024</div>
-                <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Injection hebdomadaire</div>
+          <a href="/collections/glp1-cout/prix-mounjaro-france" class="hp-prix-card" style="display:block;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;transition:transform .25s,box-shadow .25s;">
+            <div style="position:relative;height:180px;overflow:hidden;">
+              <img src="/images/landing/mounjaro-pen.jpg" alt="Stylo Mounjaro tirzepatide" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;">
+              <div style="position:absolute;top:.75rem;left:.75rem;display:flex;gap:.4rem;">
+                <span style="background:#dc2626;color:#fff;padding:.25rem .6rem;border-radius:8px;font-size:.65rem;font-weight:700;">Non rembours&eacute;</span>
+                <span style="background:rgba(255,255,255,.9);color:#0f766e;padding:.25rem .6rem;border-radius:8px;font-size:.65rem;font-weight:700;">Nouveau</span>
               </div>
-              <a href="/collections/glp1-cout/prix-mounjaro-france" class="block w-full bg-teal-600 text-white font-semibold py-3 rounded-xl hover:bg-teal-700 transition-colors">
-                Voir les détails
-              </a>
+              <div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,rgba(0,0,0,.35));"></div>
+              <div style="position:absolute;bottom:.75rem;left:.75rem;">
+                <span style="color:#fff;font-size:1.5rem;font-weight:800;text-shadow:0 1px 4px rgba(0,0,0,.3);">230-440 &euro;</span>
+                <span style="color:rgba(255,255,255,.85);font-size:.7rem;display:block;text-shadow:0 1px 2px rgba(0,0,0,.3);">par mois -- &agrave; votre charge</span>
+              </div>
             </div>
-          </div>
+            <div style="padding:1.1rem 1.25rem 1.25rem;">
+              <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.25rem;">
+                <h3 style="font-size:1.2rem;font-weight:800;color:#111827;margin:0;">Mounjaro</h3>
+                <span style="background:#f0fdfa;color:#0f766e;padding:.1rem .45rem;border-radius:5px;font-size:.6rem;font-weight:700;border:1px solid #99f6e4;">GLP-1 + GIP</span>
+              </div>
+              <p style="color:#9ca3af;font-size:.75rem;margin:0 0 .75rem;">Eli Lilly -- Double agoniste</p>
+              <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem;">
+                <span style="padding:.2rem .5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-size:.7rem;color:#374151;font-weight:500;">Injection hebdo</span>
+                <span style="padding:.2rem .5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-size:.7rem;color:#374151;font-weight:500;">Tirzépatide</span>
+                <span style="padding:.2rem .5rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;font-size:.7rem;color:#374151;font-weight:500;">Nov. 2024</span>
+              </div>
+              <span style="display:inline-flex;align-items:center;gap:.3rem;color:#0f766e;font-weight:700;font-size:.8rem;">
+                D&eacute;couvrir
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+          </a>
         </div>
 
-        <!-- Disclaimer prix -->
-        <div class="bg-white/80 rounded-xl p-4 text-center text-sm text-gray-500 max-w-4xl mx-auto">
-          <p><strong>Important :</strong> Prix indicatifs mars 2026. Wegovy, Mounjaro et Saxenda ne sont <strong>pas remboursés</strong> par l'Assurance Maladie. Le remboursement à 65% concerne uniquement le diabète de type 2 (Ozempic, Trulicity, Victoza).</p>
+        <!-- Disclaimer + CTA -->
+        <div style="background:#fff;border-radius:12px;padding:1rem 1.5rem;text-align:center;font-size:.8rem;color:#9ca3af;border:1px solid #f3f4f6;margin-bottom:1.25rem;">
+          <strong style="color:#6b7280;">Important :</strong> Prix indicatifs mars 2026. Wegovy, Mounjaro et Saxenda ne sont <strong style="color:#6b7280;">pas rembours&eacute;s</strong> par l'Assurance Maladie. Le remboursement &agrave; 65% concerne uniquement le diab&egrave;te de type 2.
         </div>
 
-        <div class="text-center mt-6">
-          <a href="/collections/glp1-cout/" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-700 to-emerald-800 text-white font-semibold rounded-xl hover:from-emerald-800 hover:to-emerald-900 transition-all duration-200 shadow-lg">
+        <div style="text-align:center;">
+          <a href="/collections/glp1-cout/" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;background:linear-gradient(135deg,#166534,#15803d);color:#fff;font-weight:700;font-size:.9rem;border-radius:12px;text-decoration:none;box-shadow:0 4px 14px rgba(22,101,52,.2);transition:transform .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(22,101,52,.3)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 14px rgba(22,101,52,.2)'">
             Voir tous les prix et remboursements
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
@@ -278,7 +334,7 @@ const mainKeyword = "GLP-1 France";
                   <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                   Gratuit et disponible 24h/24
                 </div>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+                <h2 class="text-3xl md:text-4xl text-gray-900 tracking-tight" style="font-weight:900;letter-spacing:-.03em;">
                   Posez vos questions à notre Coach IA
                 </h2>
                 <p class="text-gray-600 leading-relaxed">
@@ -360,7 +416,7 @@ const mainKeyword = "GLP-1 France";
           <!-- Text content -->
           <div style="padding:.5rem 0;">
             <span style="display:inline-block;color:#6b7280;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:.8rem;">Comprendre les traitements GLP-1</span>
-            <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#1a3c34;line-height:1.1;margin-bottom:1.2rem;letter-spacing:-.02em;">
+            <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#1a3c34;line-height:1.05;margin-bottom:1.2rem;letter-spacing:-.03em;">
               Votre parcours <em style="color:#2d5a4e;font-style:normal;">santé,</em> simplifié et accompagné
             </h2>
             <h3 style="font-size:1rem;font-weight:700;color:#1a3c34;margin-bottom:.8rem;">3 traitements, 3 usages</h3>
@@ -420,7 +476,7 @@ const mainKeyword = "GLP-1 France";
       <div style="max-width:1100px;margin:0 auto;">
         <div style="text-align:center;margin-bottom:2.5rem;">
           <span style="display:inline-block;background:#fef2f2;color:#dc2626;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Transparence</span>
-          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#1a3c34;line-height:1.15;margin-bottom:.6rem;">
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:#1a3c34;line-height:1.1;margin-bottom:.6rem;letter-spacing:-.03em;">
             Effets Secondaires : Ce qu'il Faut Savoir
           </h2>
           <p style="color:#6b7280;font-size:.95rem;max-width:550px;margin:0 auto;">
@@ -502,7 +558,7 @@ const mainKeyword = "GLP-1 France";
       <div style="max-width:1100px;margin:0 auto;">
         <div style="text-align:center;margin-bottom:2.5rem;">
           <span style="display:inline-block;background:rgba(110,231,160,.15);color:#166534;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Explorez nos guides</span>
-          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;color:#1a3c34;line-height:1.15;margin-bottom:.5rem;">
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;color:#1a3c34;line-height:1.1;margin-bottom:.5rem;letter-spacing:-.03em;">
             Tout Savoir sur les Traitements GLP-1
           </h2>
           <p style="color:#6b7280;font-size:.95rem;">Guides détaillés par nos experts médicaux.</p>
@@ -549,8 +605,8 @@ const mainKeyword = "GLP-1 France";
         <div class="max-w-3xl mx-auto">
           <div class="text-center mb-10 hp-fade-in">
             <span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-700 rounded-full text-sm font-semibold mb-4">FAQ</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">
-              Questions Fréquentes sur les GLP-1
+            <h2 class="text-3xl md:text-4xl text-gray-900 mb-3" style="font-weight:900;letter-spacing:-.03em;">
+              Questions Fr&eacute;quentes sur les GLP-1
             </h2>
             <p class="text-gray-600">
               Réponses claires aux questions les plus posées par les patients français
@@ -676,7 +732,7 @@ const mainKeyword = "GLP-1 France";
     <!-- ============================================ -->
     <section class="py-16 md:py-20" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);">
       <div class="container mx-auto px-4 max-w-4xl hp-fade-in text-center">
-        <h2 style="font-size:1.8rem;font-weight:800;color:#1f2937;margin-bottom:0.5rem">Coach GLP-1 Premium</h2>
+        <h2 style="font-size:1.8rem;font-weight:900;color:#1f2937;margin-bottom:0.5rem;letter-spacing:-.03em">Coach GLP-1 Premium</h2>
         <p style="color:#6b7280;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">Un accompagnement intelligent et personnalisé pour votre parcours GLP-1</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:600px;margin:0 auto 1.5rem">
           <div style="background:white;border-radius:14px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.06);text-align:center">
