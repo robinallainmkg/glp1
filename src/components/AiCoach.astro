@@ -35,10 +35,16 @@ import { supabaseConfig } from '../lib/supabase.js';
 
     <div id="coach-messages">
       <!-- Message de bienvenue -->
-      <div class="coach-msg coach-msg-assistant">
-        <div class="coach-bubble coach-bubble-assistant">
-          Bonjour ! Je suis le Coach GLP-1, votre assistant d'information sur les traitements GLP-1 en France.<br><br>
-          Comment puis-je vous aider ?
+      <div class="coach-msg coach-msg-assistant" style="display:flex;gap:8px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:18px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
+          <span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>
+          <div class="coach-bubble coach-bubble-assistant">
+            Bonjour ! Je suis le Coach GLP-1, votre assistant d'information sur les traitements GLP-1 en France.<br><br>
+            Comment puis-je vous aider ?
+          </div>
         </div>
       </div>
       <!-- Quick actions (populated dynamically based on page context) -->
@@ -56,7 +62,7 @@ import { supabaseConfig } from '../lib/supabase.js';
     </div>
 
     <div id="coach-disclaimer">
-      Information uniquement — ne remplace pas un avis medical. <a href="/mentions-legales/">Mentions legales</a>
+      Information uniquement — ne remplace pas un avis médical. <a href="/mentions-legales/">Mentions légales</a>
     </div>
   </div>
 </div>
@@ -171,30 +177,35 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   .coach-msg {
     display: flex;
-    max-width: 85%;
+    gap: 8px;
+    max-width: 90%;
   }
   .coach-msg-user {
     align-self: flex-end;
+    flex-direction: row-reverse;
   }
   .coach-msg-assistant {
     align-self: flex-start;
   }
 
+  /* Avatars, labels and content wrappers use inline styles (Astro scoping fix) */
+
   .coach-bubble {
-    padding: 12px 16px;
+    padding: 10px 14px;
     border-radius: 14px;
     font-size: 0.875rem;
     line-height: 1.6;
     word-break: break-word;
   }
   .coach-bubble-user {
-    background: var(--primary-blue, #2563EB);
+    background: #1e40af;
     color: white;
     border-bottom-right-radius: 4px;
   }
   .coach-bubble-assistant {
-    background: var(--gray-100, #F3F4F6);
+    background: #f8fafc;
     color: var(--gray-800, #1F2937);
+    border: 1px solid #e2e8f0;
     border-bottom-left-radius: 4px;
   }
 
@@ -950,10 +961,18 @@ import { supabaseConfig } from '../lib/supabase.js';
   }
 
   // ===== UI HELPERS =====
+  var botAvatarHTML = '<div style="width:28px;height:28px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:18px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>';
+  var userAvatarHTML = '<div style="width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:18px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
+
   function addUserMessage(text) {
     var div = document.createElement('div');
     div.className = 'coach-msg coach-msg-user';
-    div.innerHTML = '<div class="coach-bubble coach-bubble-user">' + escapeHtml(text) + '</div>';
+    div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-end;flex-direction:row-reverse;';
+    div.innerHTML = userAvatarHTML +
+      '<div style="display:flex;flex-direction:column;gap:2px;min-width:0;align-items:flex-end;">' +
+        '<span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#2563eb;">Vous</span>' +
+        '<div class="coach-bubble coach-bubble-user" style="padding:10px 14px;border-radius:14px;font-size:0.875rem;line-height:1.6;word-break:break-word;background:#1e40af;color:white;border-bottom-right-radius:4px;">' + escapeHtml(text) + '</div>' +
+      '</div>';
     messagesEl.appendChild(div);
     scrollToBottom();
   }
@@ -961,8 +980,13 @@ import { supabaseConfig } from '../lib/supabase.js';
   function addAssistantMessage(text) {
     var div = document.createElement('div');
     div.className = 'coach-msg coach-msg-assistant';
+    div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
     var formatted = formatResponse(text);
-    div.innerHTML = '<div class="coach-bubble coach-bubble-assistant">' + formatted + '</div>';
+    div.innerHTML = botAvatarHTML +
+      '<div style="display:flex;flex-direction:column;gap:2px;min-width:0;">' +
+        '<span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>' +
+        '<div class="coach-bubble coach-bubble-assistant" style="padding:10px 14px;border-radius:14px;font-size:0.875rem;line-height:1.6;word-break:break-word;background:#f8fafc;color:#1F2937;border:1px solid #e2e8f0;border-bottom-left-radius:4px;">' + formatted + '</div>' +
+      '</div>';
     messagesEl.appendChild(div);
     scrollToBottom();
   }
@@ -970,9 +994,16 @@ import { supabaseConfig } from '../lib/supabase.js';
   function typewriterMessage(text, sources) {
     var div = document.createElement('div');
     div.className = 'coach-msg coach-msg-assistant';
+    div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
+    var content = document.createElement('div');
+    content.style.cssText = 'display:flex;flex-direction:column;gap:2px;min-width:0;';
+    content.innerHTML = '<span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>';
     var bubble = document.createElement('div');
     bubble.className = 'coach-bubble coach-bubble-assistant';
-    div.appendChild(bubble);
+    bubble.style.cssText = 'padding:10px 14px;border-radius:14px;font-size:0.875rem;line-height:1.6;word-break:break-word;background:#f8fafc;color:#1F2937;border:1px solid #e2e8f0;border-bottom-left-radius:4px;';
+    content.appendChild(bubble);
+    div.innerHTML = botAvatarHTML;
+    div.appendChild(content);
     messagesEl.appendChild(div);
 
     var formatted = formatResponse(text);
