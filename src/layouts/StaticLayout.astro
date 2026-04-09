@@ -16,16 +16,18 @@ export interface Props {
   url?: string;
   type?: string;
   author?: string;
+  robots?: string;
 }
 
-const { 
-  title, 
-  description, 
-  keywords = "", 
+const {
+  title,
+  description,
+  keywords = "",
   image = "/og-image.svg",
   url,
   type = "website",
-  author = "Équipe GLP-1 France"
+  author = "Équipe GLP-1 France",
+  robots
 } = Astro.props;
 
 const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
@@ -53,7 +55,8 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
   <meta name="description" content={description}>
   {keywords && <meta name="keywords" content={keywords}>}
   {author && <meta name="author" content={author}>}
-  
+  {robots && <meta name="robots" content={robots}>}
+
   <!-- Open Graph -->
   <meta property="og:type" content={type}>
   <meta property="og:url" content={canonicalURL}>

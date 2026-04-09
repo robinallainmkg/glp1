@@ -1,0 +1,568 @@
+---
+import GoogleAnalytics from '../../../components/GoogleAnalytics.astro';
+import Hotjar from '../../../components/Hotjar.astro';
+const charles = "https://poids.charles.co/?utm_source=glp1france&utm_medium=cpa&utm_campaign=charles_lp";
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traitement GLP-1 avec Charles.co — Consultation en ligne avec un endocrinologue</title>
+  <meta name="description" content="Consultez un endocrinologue en ligne et obtenez votre prescription GLP-1 (Wegovy, Mounjaro, Ozempic) en 48h. Programme Body Reset par Charles.co : suivi nutritionnel, coaching illimité, application mobile.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://glp1-france.fr/charles/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <GoogleAnalytics />
+  <Hotjar />
+</head>
+<body>
+
+<!-- ══════ NAVBAR ══════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="logo-dot"></span>GLP-1 France <span class="logo-x">x</span> Charles.co</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#programme">Comment ça marche</a>
+      <a href="#services">Services</a>
+      <a href="#resultats">Résultats</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href={charles} target="_blank" rel="noopener sponsored" class="nav-cta">Prendre rendez-vous</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#programme">Comment ça marche</a>
+  <a href="#services">Services</a>
+  <a href="#resultats">Résultats</a>
+  <a href="#faq">FAQ</a>
+  <a href={charles} target="_blank" rel="noopener sponsored" class="btn-primary" style="text-align:center;margin-top:12px;">Prendre rendez-vous</a>
+</div>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-partner fade-up">
+      <span class="partner-badge">Partenaire officiel</span>
+    </div>
+    <h1 class="fade-up">Votre traitement GLP-1,<br><em>prescrit en 48h.</em></h1>
+    <p class="hero-desc fade-up">Consultez un endocrinologue en ligne. Prescription Wegovy, Mounjaro ou Ozempic si éligible. Suivi nutritionnel et coaching inclus dans le programme Body Reset de Charles.co.</p>
+    <div class="hero-actions fade-up">
+      <a href={charles} target="_blank" rel="noopener sponsored" class="btn-hero">Prendre rendez-vous avec un endocrinologue &rarr;</a>
+    </div>
+    <div class="hero-trust fade-up">
+      <div class="ht-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7a0" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>4.6/5 sur Trustpilot</span></div>
+      <div class="ht-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7a0" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Médecins français</span></div>
+      <div class="ht-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ee7a0" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span>Ordonnance en pharmacie</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ LOGO BAR ══════ -->
+<section class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span>&#183; ENDOCRINOLOGUES SPÉCIALISÉS</span>
+      <span>&#183; PRESCRIPTION SOUS 48H</span>
+      <span>&#183; APPLICATION MOBILE DÉDIÉE</span>
+      <span>&#183; COACHING NUTRITION ILLIMITÉ</span>
+      <span>&#183; COMITÉ SCIENTIFIQUE 9 EXPERTS</span>
+      <span>&#183; ENDOCRINOLOGUES SPÉCIALISÉS</span>
+      <span>&#183; PRESCRIPTION SOUS 48H</span>
+      <span>&#183; APPLICATION MOBILE DÉDIÉE</span>
+      <span>&#183; COACHING NUTRITION ILLIMITÉ</span>
+      <span>&#183; COMITÉ SCIENTIFIQUE 9 EXPERTS</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PRODUCT SHOWCASE ══════ -->
+<section class="showcase">
+  <div class="container">
+    <div class="showcase-label fade-up">PROGRAMME BODY RESET — CHARLES.CO</div>
+    <h2 class="showcase-title fade-up">Un programme médical <em>complet</em><br>pour votre perte de poids</h2>
+
+    <div class="showcase-grid">
+      <div class="showcase-images fade-up">
+        <div class="showcase-img-main">
+          <img src="/images/landing/wegovy-pen.jpg" alt="Wegovy semaglutide" loading="lazy">
+        </div>
+        <div class="showcase-img-center">
+          <img src="/images/landing/woman-activewear.jpg" alt="Patiente en forme" loading="lazy">
+        </div>
+        <div class="showcase-img-right">
+          <img src="/images/landing/mounjaro-pen.jpg" alt="Mounjaro tirzepatide" loading="lazy">
+        </div>
+      </div>
+
+      <div class="showcase-checklist fade-up">
+        <h3>Ce qui est inclus :</h3>
+        <ul>
+          <li><span class="check">&#10003;</span> Consultation endocrinologue spécialisé</li>
+          <li><span class="check">&#10003;</span> Prescription Wegovy, Mounjaro ou Ozempic</li>
+          <li><span class="check">&#10003;</span> Application mobile de suivi dédiée</li>
+          <li><span class="check">&#10003;</span> Coaching nutrition illimité par chat</li>
+          <li><span class="check">&#10003;</span> Suivi régulier personnalisé</li>
+          <li><span class="check">&#10003;</span> Comité scientifique de 9 experts</li>
+        </ul>
+        <a href={charles} target="_blank" rel="noopener sponsored" class="btn-primary" style="margin-top:24px;">Prendre rendez-vous &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ COMMENT CA MARCHE ══════ -->
+<section class="steps" id="programme">
+  <div class="container">
+    <div class="pill fade-up">Comment ça marche</div>
+    <h2 class="fade-up">3 étapes simples,<br><em>100% en ligne</em></h2>
+
+    <div class="steps-grid-3">
+      <div class="step fade-up">
+        <div class="step-num">01</div>
+        <h3>Téléconsultation</h3>
+        <p>Prenez rendez-vous en ligne. Un endocrinologue vous reçoit en vidéo sous 48h pour évaluer votre éligibilité.</p>
+        <div class="step-img"><img src="/images/landing/doctor-tablet.jpg" alt="Téléconsultation" loading="lazy"></div>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">02</div>
+        <h3>Prescription</h3>
+        <p>Si éligible, recevez votre ordonnance électronique (Wegovy, Mounjaro ou Ozempic). Valable en pharmacie.</p>
+        <div class="step-img"><img src="/images/landing/ozempic-pen.jpg" alt="Prescription" loading="lazy"></div>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">03</div>
+        <h3>Suivi continu</h3>
+        <p>Application mobile dédiée, coaching nutrition illimité, et suivi régulier avec votre équipe médicale.</p>
+        <div class="step-img"><img src="/images/landing/app-coaching.jpg" alt="Suivi" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FULL-WIDTH IMAGE ══════ -->
+<section class="full-img fade-up">
+  <img src="/images/landing/healthy-meal.jpg" alt="Nutrition adaptée GLP-1" loading="lazy">
+  <div class="full-img-text">
+    <h3>Chaque bouchée compte</h3>
+    <p>Coaching nutrition inclus pour maximiser vos résultats sous traitement GLP-1</p>
+  </div>
+</section>
+
+<!-- ══════ SERVICES ══════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="pill fade-up">Le programme Body Reset</div>
+    <h2 class="fade-up">Un accompagnement<br><em>médical complet</em></h2>
+
+    <div class="svc-row fade-up">
+      <div class="svc-text">
+        <div class="tag tag-blue">Téléconsultation</div>
+        <h3>Un endocrinologue en 48h</h3>
+        <p>Consultez un endocrinologue spécialisé dans le traitement de l'obésité. Consultation vidéo sécurisée, ordonnance électronique envoyée directement à votre pharmacie.</p>
+        <ul class="wh-list"><li>Endocrinologues inscrits au Conseil de l'Ordre</li><li>Consultation vidéo sécurisée</li><li>Ordonnance valable en pharmacie</li><li>Renouvellement simplifié</li></ul>
+      </div>
+      <div class="svc-img"><img src="/images/landing/hero-doctor.jpg" alt="Téléconsultation" loading="lazy"></div>
+    </div>
+
+    <div class="svc-row reverse fade-up">
+      <div class="svc-text">
+        <div class="tag tag-green">Coaching nutrition</div>
+        <h3>Un plan alimentaire adapté à votre traitement</h3>
+        <p>Les GLP-1 coupent l'appétit — mais chaque bouchée doit compter. Le coaching nutrition de Charles.co préserve votre masse musculaire, prévient les carences, et maximise la perte de graisse.</p>
+        <ul class="wh-list"><li>Plan personnalisé selon votre traitement</li><li>Objectifs protéines, fibres, micronutriments</li><li>Coaching illimité par chat</li><li>Recettes et listes de courses incluses</li></ul>
+      </div>
+      <div class="svc-img"><img src="/images/landing/coaching-nutrition.jpg" alt="Coaching nutrition" loading="lazy"></div>
+    </div>
+
+    <div class="svc-row fade-up">
+      <div class="svc-text">
+        <div class="tag tag-purple">Application mobile</div>
+        <h3>Votre suivi dans la poche</h3>
+        <p>L'application Charles.co centralise tout : suivi de poids, messages avec votre équipe médicale, rappels, conseils personnalisés. Tout au même endroit.</p>
+        <ul class="wh-list"><li>Suivi de poids et objectifs</li><li>Messages directs avec l'équipe médicale</li><li>Rappels et notifications</li><li>Contenu éducatif personnalisé</li></ul>
+      </div>
+      <div class="svc-img"><img src="/images/landing/suivi-patient.jpg" alt="Application mobile" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ INLINE CTA ══════ -->
+<section class="charles-inline fade-up">
+  <div class="container">
+    <div class="charles-inline-inner">
+      <div><strong>Prêt pour votre téléconsultation ?</strong><p>Consultez un endocrinologue spécialisé GLP-1. Prescription en ligne si éligible.</p></div>
+      <a href={charles} target="_blank" rel="noopener sponsored" class="btn-charles">Prendre rendez-vous &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ RESULTATS ══════ -->
+<section class="results" id="resultats">
+  <div class="container">
+    <div class="pill fade-up">Résultats cliniques</div>
+    <h2 class="fade-up">Des résultats prouvés<br><em>par la science</em></h2>
+    <div class="results-grid">
+      <div class="res-card fade-up">
+        <img src="/images/landing/before-after.jpg" alt="Transformation GLP-1" loading="lazy">
+        <div class="res-overlay"><strong>-15 à -20%</strong><span>de poids corporel en 12-18 mois</span></div>
+      </div>
+      <div class="res-stats">
+        <div class="stat fade-up"><div class="stat-n">15-20%</div><div class="stat-l">Perte de poids moyenne avec Wegovy/Mounjaro (études STEP & SURMOUNT)</div></div>
+        <div class="stat fade-up"><div class="stat-n">9 experts</div><div class="stat-l">Comité scientifique Charles.co (endocrinologues, nutritionnistes, psychiatres)</div></div>
+        <div class="stat fade-up"><div class="stat-n">4.6/5</div><div class="stat-l">Note Trustpilot — plus de 19 000 avis patients</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ LIFESTYLE IMAGE ══════ -->
+<section class="full-img fade-up">
+  <img src="/images/landing/couple-walking.jpg" alt="Mode de vie actif après GLP-1" loading="lazy">
+  <div class="full-img-text">
+    <h3>Retrouvez une vie active</h3>
+    <p>Le programme Body Reset ne se limite pas à la prescription — c'est un accompagnement global</p>
+  </div>
+</section>
+
+<!-- ══════ PRICING ══════ -->
+<section class="pricing" id="tarifs">
+  <div class="container">
+    <div class="pill fade-up">Le programme</div>
+    <h2 class="fade-up">Programme Body Reset<br><em>Charles.co</em></h2>
+    <p class="sub fade-up">Le programme médical le plus complet en France pour la perte de poids sous GLP-1.</p>
+
+    <div class="pricing-solo">
+      <div class="price-card-hero fade-up">
+        <div class="pch-left">
+          <span class="pn" style="color:#6366f1;">Body Reset</span>
+          <div class="pa">249&euro;<span>/mois</span></div>
+          <p class="pd">Programme médical complet avec endocrinologue, application de suivi et coaching nutrition illimité.</p>
+          <a href={charles} target="_blank" rel="noopener sponsored" class="btn-charles" style="display:inline-block;margin-top:8px;">Prendre rendez-vous &rarr;</a>
+        </div>
+        <div class="pch-right">
+          <ul class="pf">
+            <li class="y b">Consultation endocrinologue spécialisé</li>
+            <li class="y b">Prescription Wegovy / Mounjaro / Ozempic</li>
+            <li class="y">Application mobile dédiée</li>
+            <li class="y">Coaching nutrition illimité</li>
+            <li class="y">Suivi régulier personnalisé</li>
+            <li class="y">Comité scientifique de 9 experts</li>
+            <li class="y">Renouvellement ordonnance facilité</li>
+            <li class="y">Support par chat illimité</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="pricing-note fade-up">Le coût du médicament (Wegovy, Mounjaro, Ozempic) n'est pas inclus dans le programme. Ozempic est remboursé à 30% (100% en ALD) pour le diabète de type 2.</p>
+  </div>
+</section>
+
+<!-- ══════ TRUST ══════ -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item fade-up"><div class="ti"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1a3c34" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h4>Données sécurisées</h4><p>Hébergement HDS, chiffrement bout en bout.</p></div>
+      <div class="trust-item fade-up"><div class="ti"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1a3c34" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Médecins français</h4><p>Inscrits au Conseil de l'Ordre. Ordonnances valables en France.</p></div>
+      <div class="trust-item fade-up"><div class="ti"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1a3c34" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h4>Rendez-vous sous 48h</h4><p>Téléconsultation rapide avec un endocrinologue.</p></div>
+      <div class="trust-item fade-up"><div class="ti"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1a3c34" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div><h4>4.6/5 Trustpilot</h4><p>Plus de 19 000 avis patients vérifiés.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ TEMOIGNAGES ══════ -->
+<section class="testi">
+  <div class="container">
+    <div class="pill fade-up">Témoignages</div>
+    <h2 class="fade-up">Ils ont choisi<br><em>Charles.co</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+        <p>&laquo; En 6 mois avec Wegovy et le suivi nutrition Charles, j'ai perdu 18 kg. L'application est top pour suivre sa progression. &raquo;</p>
+        <div class="testi-author"><img src="/images/landing/woman-scale.jpg" alt="Marie L." loading="lazy"><div><strong>Marie L.</strong><span>Paris — Wegovy</span></div></div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+        <p>&laquo; Rendez-vous pris le lundi, consultation le mercredi, ordonnance le jour même. Très professionnel. &raquo;</p>
+        <div class="testi-author"><img src="/images/landing/woman-mirror.jpg" alt="Laurent D." loading="lazy"><div><strong>Laurent D.</strong><span>Lyon — Mounjaro</span></div></div>
+      </div>
+      <div class="testi-card fade-up">
+        <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+        <p>&laquo; Le coaching nutrition m'a aidée à manger correctement malgré la perte d'appétit. Les recettes sont adaptées et faciles. &raquo;</p>
+        <div class="testi-author"><img src="/images/landing/coaching-nutrition.jpg" alt="Sophie M." loading="lazy"><div><strong>Sophie M.</strong><span>Bordeaux — Ozempic</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FAQ ══════ -->
+<section class="faq" id="faq">
+  <div class="container narrow">
+    <div class="pill fade-up">Questions fréquentes</div>
+    <h2 class="fade-up">Tout ce que vous<br><em>devez savoir</em></h2>
+    <div class="faq-list">
+      <details class="faq-item fade-up"><summary>Qui peut bénéficier du programme Body Reset ?</summary><div class="faq-a"><p>Le programme s'adresse aux adultes en situation d'obésité (IMC &ge; 30) ou de surpoids (IMC &ge; 27) avec des comorbidités. L'endocrinologue évaluera votre éligibilité lors de la téléconsultation.</p></div></details>
+      <details class="faq-item fade-up"><summary>Quels traitements peuvent être prescrits ?</summary><div class="faq-a"><p>Les endocrinologues Charles.co peuvent prescrire Wegovy (sémaglutide), Mounjaro (tirzépatide) ou Ozempic (sémaglutide) selon votre profil médical et vos objectifs.</p></div></details>
+      <details class="faq-item fade-up"><summary>Les traitements sont-ils remboursés ?</summary><div class="faq-a"><p>Ozempic est remboursé à 30% pour le diabète de type 2 (100% en ALD). Wegovy et Mounjaro pour l'obésité ne sont pas remboursés par la Sécurité sociale. Certaines mutuelles couvrent une partie.</p></div></details>
+      <details class="faq-item fade-up"><summary>En combien de temps obtient-on un rendez-vous ?</summary><div class="faq-a"><p>Les téléconsultations sont généralement disponibles sous 48h. Vous choisissez le créneau qui vous convient le mieux.</p></div></details>
+      <details class="faq-item fade-up"><summary>L'ordonnance est-elle valable en pharmacie ?</summary><div class="faq-a"><p>Oui, l'ordonnance électronique est délivrée par un endocrinologue inscrit au Conseil de l'Ordre et est valable dans toutes les pharmacies en France.</p></div></details>
+      <details class="faq-item fade-up"><summary>Quel résultat puis-je espérer ?</summary><div class="faq-a"><p>Les études cliniques montrent 15-20% de perte de poids en 12-18 mois avec les GLP-1. Le suivi nutritionnel du programme Body Reset aide à maintenir les résultats dans la durée.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CTA FINAL ══════ -->
+<section class="cta-final">
+  <div class="container narrow">
+    <h2 class="fade-up">Prêt à commencer<br>votre programme ?</h2>
+    <p class="fade-up">Prenez rendez-vous avec un endocrinologue Charles.co et démarrez votre parcours de perte de poids.</p>
+    <div class="cta-btns fade-up">
+      <a href={charles} target="_blank" rel="noopener sponsored" class="btn-primary large">Prendre rendez-vous &rarr;</a>
+    </div>
+    <span class="cta-sub fade-up">Téléconsultation disponible sous 48h. Sans engagement.</span>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="lp-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo"><span class="logo-dot"></span> GLP-1 France</a>
+      <div class="footer-links"><a href="/mentions-legales/">Mentions légales</a><a href="/politique-de-confidentialite/">Confidentialité</a><a href="/contact/">Contact</a></div>
+      <p class="footer-copy">&copy; 2026 GLP-1 France. Contenu informatif — ne remplace pas un avis médical.<br><small>Les liens vers Charles.co sont des liens d'affiliation. Commission possible sans surcoût pour vous.</small></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════ STYLES ══════════════════════ -->
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Onest',system-ui,-apple-system,sans-serif;color:#1a1a2e;background:#fff;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  .container{max-width:1140px;margin:0 auto;padding:0 24px}
+  .container.narrow{max-width:760px}
+
+  /* Animations */
+  .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+  .fade-up.visible{opacity:1;transform:translateY(0)}
+
+  /* Navbar */
+  #navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}
+  #navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.08)}
+  .nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-logo{font-weight:800;font-size:1.15rem;color:#1a3c34;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .logo-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6)}
+  .logo-x{font-size:.7rem;font-weight:500;color:#94a3b8;margin:0 2px}
+  .nav-links{display:flex;gap:28px}
+  .nav-links a{text-decoration:none;color:#64748b;font-size:.86rem;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:#1a3c34}
+  .nav-cta{background:#6366f1;color:#fff!important;padding:8px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.85rem;transition:background .2s}
+  .nav-cta:hover{background:#4f46e5}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative;z-index:1001}
+  .burger span{display:block;width:100%;height:2px;background:#1a3c34;border-radius:2px;position:absolute;left:0;transition:all .3s}
+  .burger span:nth-child(1){top:0}.burger span:nth-child(2){top:9px}.burger span:nth-child(3){top:18px}
+  .burger.open span:nth-child(1){top:9px;transform:rotate(45deg)}.burger.open span:nth-child(2){opacity:0}.burger.open span:nth-child(3){top:9px;transform:rotate(-45deg)}
+  .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;padding:32px 24px;z-index:999;flex-direction:column;gap:24px}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{font-size:1.2rem;color:#1a3c34;text-decoration:none;font-weight:600}
+
+  /* HERO */
+  .hero{background:linear-gradient(160deg,#1e1b4b 0%,#312e81 40%,#1e1b4b 100%);color:#fff;padding:160px 24px 100px;text-align:center;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 70%,rgba(99,102,241,.15) 0%,transparent 50%);pointer-events:none}
+  .hero-inner{max-width:800px;margin:0 auto;position:relative;z-index:1}
+  .hero-partner{margin-bottom:20px}
+  .partner-badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);padding:8px 20px;border-radius:100px;font-size:.82rem;font-weight:600;letter-spacing:.02em}
+  .hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px}
+  .hero h1 em{font-style:normal;color:#a5b4fc}
+  .hero-desc{font-size:1.05rem;opacity:.8;max-width:620px;margin:0 auto 36px;line-height:1.7}
+  .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+  .btn-hero{display:inline-block;background:#6366f1;color:#fff;padding:16px 36px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1rem;transition:all .3s}
+  .btn-hero:hover{background:#4f46e5;transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,.4)}
+  .hero-trust{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+  .ht-item{display:flex;align-items:center;gap:6px;font-size:.82rem;opacity:.7}
+
+  /* Marquee */
+  .marquee{background:#f5f5f0;padding:18px 0;overflow:hidden;border-top:1px solid #e8e8e0;border-bottom:1px solid #e8e8e0}
+  .marquee-track{display:flex;width:max-content}
+  .marquee-content{display:flex;gap:48px;animation:scroll 30s linear infinite;white-space:nowrap}
+  .marquee-content span{font-size:.82rem;font-weight:700;letter-spacing:.1em;color:#312e81;text-transform:uppercase}
+  @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* Buttons */
+  .btn-primary{display:inline-block;background:#6366f1;color:#fff;padding:14px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.95rem;transition:all .3s;border:none;cursor:pointer}
+  .btn-primary:hover{background:#4f46e5;transform:translateY(-2px);box-shadow:0 8px 25px rgba(99,102,241,.3)}
+  .btn-primary.large{padding:18px 40px;font-size:1.1rem}
+  .btn-charles{display:inline-block;background:#6366f1;color:#fff;padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.92rem;transition:all .3s}
+  .btn-charles:hover{background:#4f46e5;transform:translateY(-2px);box-shadow:0 8px 25px rgba(99,102,241,.3)}
+  .btn-ghost-light{display:inline-block;color:rgba(255,255,255,.7);padding:14px 24px;border-radius:12px;text-decoration:none;font-weight:500;font-size:.9rem;transition:color .2s}
+  .btn-ghost-light:hover{color:#fff}
+
+  /* Section utils */
+  .pill{display:inline-block;background:rgba(99,102,241,.08);color:#6366f1;padding:6px 16px;border-radius:100px;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+  .sub{font-size:1.05rem;color:#64748b;max-width:560px;margin:0 auto 48px;line-height:1.7}
+  h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+  h2 em{font-style:normal;background:linear-gradient(135deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+  /* Showcase */
+  .showcase{padding:100px 0;background:#faf8ff;text-align:center}
+  .showcase-label{font-size:.78rem;font-weight:700;letter-spacing:.1em;color:#6366f1;text-transform:uppercase;margin-bottom:12px}
+  .showcase-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;line-height:1.15;margin-bottom:48px}
+  .showcase-title em{font-style:normal;color:#6366f1}
+  .showcase-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;text-align:left}
+  .showcase-images{display:grid;grid-template-columns:1.1fr .8fr .7fr;gap:12px;align-items:center}
+  .showcase-img-main img,.showcase-img-center img,.showcase-img-right img{width:100%;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+  .showcase-img-center{margin-top:-30px}
+  .showcase-checklist h3{font-size:1.3rem;font-weight:800;margin-bottom:20px}
+  .showcase-checklist ul{list-style:none;font-size:.95rem;line-height:2.4}
+  .showcase-checklist .check{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:#6366f1;color:#fff;font-size:.7rem;font-weight:700;margin-right:10px}
+
+  /* Steps - 3 col */
+  .steps{padding:100px 0;background:#fafafa;text-align:center}
+  .steps-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+  .step{background:#fff;border-radius:20px;padding:32px 24px;border:1px solid #f0f0f0;text-align:left;transition:transform .3s,box-shadow .3s;overflow:hidden}
+  .step:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
+  .step-num{font-size:2rem;font-weight:900;background:linear-gradient(135deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+  .step h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+  .step p{font-size:.85rem;color:#64748b;line-height:1.6;margin-bottom:16px}
+  .step-img{border-radius:12px;overflow:hidden;margin:0 -24px -32px}
+  .step-img img{width:100%;height:160px;object-fit:cover;display:block}
+
+  /* Full img */
+  .full-img{position:relative;height:400px;overflow:hidden}
+  .full-img img{width:100%;height:100%;object-fit:cover}
+  .full-img-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,.4);color:#fff;text-align:center;padding:24px}
+  .full-img-text h3{font-size:2rem;font-weight:900;margin-bottom:8px}
+  .full-img-text p{font-size:1rem;opacity:.9;max-width:500px}
+
+  /* Services */
+  .services{padding:100px 0;text-align:center}
+  .svc-row{display:flex;align-items:center;gap:60px;margin-bottom:80px;text-align:left}
+  .svc-row.reverse{flex-direction:row-reverse}
+  .svc-text{flex:1}
+  .svc-img{flex:0 0 420px;max-width:100%}
+  .svc-img img{width:100%;border-radius:20px;box-shadow:0 16px 50px rgba(0,0,0,.08)}
+  .tag{display:inline-block;padding:5px 14px;border-radius:8px;font-size:.78rem;font-weight:600;margin-bottom:16px}
+  .tag-blue{background:#eff6ff;color:#1d4ed8}.tag-green{background:#f0fdf4;color:#166534}.tag-purple{background:#faf5ff;color:#7c3aed}
+  .svc-text h3{font-size:1.5rem;font-weight:800;margin-bottom:12px}
+  .svc-text p{font-size:.92rem;color:#475569;line-height:1.7;margin-bottom:20px}
+  .wh-list{list-style:none;font-size:.88rem;color:#334155;line-height:2.2}
+  .wh-list li::before{content:"\2713  ";color:#6366f1;font-weight:700}
+
+  /* Charles inline */
+  .charles-inline{padding:40px 0;background:#faf5ff;border-top:1px solid #e9d5ff;border-bottom:1px solid #e9d5ff}
+  .charles-inline-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .charles-inline-inner strong{font-size:1.05rem}
+  .charles-inline-inner p{font-size:.88rem;color:#6b7280;margin:4px 0 0}
+
+  /* Results */
+  .results{padding:100px 0;background:#fafafa;text-align:center}
+  .results-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:48px;text-align:left}
+  .res-card{position:relative;border-radius:24px;overflow:hidden}
+  .res-card img{width:100%;display:block}
+  .res-overlay{position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff}
+  .res-overlay strong{font-size:1.8rem;font-weight:900;display:block}
+  .res-overlay span{font-size:.85rem;opacity:.9}
+  .res-stats{display:flex;flex-direction:column;gap:20px}
+  .stat{background:#fff;padding:24px;border-radius:16px;border:1px solid #e8e8e8}
+  .stat-n{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,#6366f1,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
+  .stat-l{font-size:.85rem;color:#64748b;line-height:1.5}
+
+  /* Testimonials */
+  .testi{padding:100px 0;text-align:center}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;text-align:left}
+  .testi-card{background:#fff;border-radius:20px;padding:28px;border:1px solid #e8e8e8;display:flex;flex-direction:column}
+  .stars{color:#f59e0b;font-size:.9rem;margin-bottom:12px;letter-spacing:2px}
+  .testi-card p{font-size:.9rem;color:#334155;line-height:1.7;flex:1;margin-bottom:20px;font-style:italic}
+  .testi-author{display:flex;align-items:center;gap:12px}
+  .testi-author img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+  .testi-author strong{display:block;font-size:.88rem}
+  .testi-author span{font-size:.78rem;color:#94a3b8}
+
+  /* Pricing solo hero card */
+  .pricing{padding:100px 0;background:#fafafa;text-align:center}
+  .pricing-solo{max-width:800px;margin:48px auto 0}
+  .price-card-hero{background:#fff;border:2px solid #6366f1;border-radius:24px;padding:48px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;text-align:left;box-shadow:0 16px 50px rgba(99,102,241,.1)}
+  .pch-left{display:flex;flex-direction:column;justify-content:center}
+  .pn{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8}
+  .pa{font-size:3rem;font-weight:900;color:#1a1a2e;letter-spacing:-.03em;margin:8px 0}
+  .pa span{font-size:1rem;font-weight:500;color:#94a3b8}
+  .pd{font-size:.9rem;color:#64748b;line-height:1.6;margin-bottom:8px}
+  .pf{list-style:none;font-size:.88rem;line-height:2.4}
+  .pf .y{color:#334155}.pf .y::before{content:"\2713  ";color:#6366f1;font-weight:700}.pf .y.b{font-weight:700}
+  .pricing-note{font-size:.8rem;color:#94a3b8;margin-top:24px}
+
+  /* Trust */
+  .trust{padding:80px 0;background:#faf8ff}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .trust-item{padding:24px}.ti{font-size:2rem;margin-bottom:12px;display:flex;justify-content:center}
+  .trust-item h4{font-size:.95rem;font-weight:700;margin-bottom:6px}
+  .trust-item p{font-size:.82rem;color:#475569;line-height:1.5}
+
+  /* FAQ */
+  .faq{padding:100px 0;text-align:center}
+  .faq-list{text-align:left;margin-top:40px;display:flex;flex-direction:column;gap:12px}
+  .faq-item{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e8e8e8;transition:box-shadow .3s}
+  .faq-item[open]{box-shadow:0 4px 20px rgba(0,0,0,.06)}
+  .faq-item summary{padding:20px 24px;font-weight:700;font-size:.95rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:"+";font-size:1.4rem;color:#94a3b8;font-weight:400}
+  .faq-item[open] summary::after{content:"\2212"}
+  .faq-a{padding:0 24px 20px}.faq-a p{font-size:.9rem;color:#475569;line-height:1.7}
+
+  /* CTA final */
+  .cta-final{padding:120px 0;text-align:center;background:linear-gradient(135deg,#1e1b4b,#312e81);color:#fff}
+  .cta-final h2{color:#fff;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+  .cta-final h2 em{-webkit-text-fill-color:#fff}
+  .cta-final p{color:rgba(255,255,255,.75);font-size:1.1rem;margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
+  .cta-btns{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .cta-sub{display:block;margin-top:16px;font-size:.8rem;color:rgba(255,255,255,.4)}
+
+  /* Footer */
+  .lp-footer{padding:40px 0;border-top:1px solid #f0f0f0}
+  .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .footer-links{display:flex;gap:24px}
+  .footer-links a{text-decoration:none;color:#94a3b8;font-size:.82rem}.footer-links a:hover{color:#1a3c34}
+  .footer-copy{font-size:.75rem;color:#cbd5e1;width:100%;text-align:center;margin-top:16px}
+  .footer-copy small{color:#94a3b8}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .burger{display:block}.nav-links,.nav-cta{display:none}
+    .hero{padding:120px 24px 80px}
+    .showcase-grid{grid-template-columns:1fr}.showcase-images{margin-bottom:40px}
+    .steps-grid-3{grid-template-columns:1fr}
+    .svc-row,.svc-row.reverse{flex-direction:column;gap:32px}.svc-img{flex:1 1 100%}
+    .results-grid{grid-template-columns:1fr}
+    .testi-grid{grid-template-columns:1fr}
+    .price-card-hero{grid-template-columns:1fr;padding:32px 24px}
+    .trust-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:600px){
+    .hero h1{font-size:2rem}
+    .hero-trust{flex-direction:column;align-items:center;gap:8px}
+    .full-img{height:280px}
+    .trust-grid{grid-template-columns:1fr}
+    .footer-inner{flex-direction:column;text-align:center}
+    .footer-links{justify-content:center}
+    .charles-inline-inner{flex-direction:column;text-align:center}
+  }
+</style>
+
+<!-- ══════════════════════ SCRIPTS ══════════════════════ -->
+<script>
+  const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+  burger?.addEventListener('click',()=>{burger.classList.toggle('open');mm?.classList.toggle('open')});
+  mm?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{burger?.classList.remove('open');mm?.classList.remove('open')}));
+  const nb=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>nb?.classList.toggle('scrolled',window.scrollY>20),{passive:true});
+  const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href')||'');t?.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+
+</body>
+</html>
