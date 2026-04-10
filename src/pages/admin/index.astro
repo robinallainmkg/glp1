@@ -1131,60 +1131,19 @@ import { supabaseConfig } from '../../lib/supabase';
   let autopilotRunning = false; // compat
 
   async function launchRoutine() {
-    if (routineRunning) { alert('Routine deja en cours...'); return; }
+    if (routineRunning) { alert('Pipeline deja en cours...'); return; }
     if (!serverOnline) { alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs'); return; }
 
-    routineRunning = true;
-    autopilotRunning = true; // compat UI
-    updateAutopilotUI();
-
+    // Fire and forget — the server orchestrates everything in background
     try {
-      // Phase GENERATE
-      const genAgents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
-      for (const a of genAgents) {
-        await fetch(`${AGENT_SERVER}/launch`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agent:a}) }).catch(()=>{});
-      }
-      document.getElementById('apBadge').textContent = 'GENERATE';
-      document.getElementById('apBadge').className = 'ap-status-badge running';
-      renderArena();
-      await waitRoutinePhase(genAgents, 900000);
-
-      // Phase EDIT
-      document.getElementById('apBadge').textContent = 'EDIT';
-      for (let i = 0; i < 4; i++) {
-        await fetch(`${AGENT_SERVER}/launch`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agent:'editorial', prompt:`Partition ${i+1}/4, filtre: article_id mod 4 = ${i}`}) }).catch(()=>{});
-      }
-      renderArena();
-      await waitRoutinePhase(['editorial'], 900000);
-
-      // Phase VALIDATE
-      document.getElementById('apBadge').textContent = 'VALIDATE';
-      await fetch(`${AGENT_SERVER}/launch`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agent:'validator'}) }).catch(()=>{});
-      renderArena();
-      await waitRoutinePhase(['validator'], 600000);
-
-      document.getElementById('apBadge').textContent = 'TERMINE';
-      document.getElementById('apBadge').className = 'ap-status-badge idle';
+      const r = await fetch(`${AGENT_SERVER}/pipeline`, { method: 'POST' });
+      const data = await r.json();
+      if (!data.ok) { alert('Erreur: ' + (data.error || 'inconnue')); return; }
+      routineRunning = true;
+      autopilotRunning = true;
+      updateAutopilotUI();
     } catch(e) {
-      document.getElementById('apBadge').textContent = 'ERREUR';
-      console.error('Routine error:', e);
-    }
-    routineRunning = false;
-    autopilotRunning = false;
-    updateAutopilotUI();
-    renderArena();
-  }
-
-  async function waitRoutinePhase(agentNames, maxWait) {
-    const start = Date.now();
-    while (Date.now() - start < maxWait) {
-      await new Promise(r => setTimeout(r, 10000));
-      try {
-        const st = await (await fetch(`${AGENT_SERVER}/status`)).json();
-        const running = Object.keys(st.running || {}).filter(k => agentNames.some(a => k.includes(a)));
-        document.getElementById('apAgentsActive').textContent = running.length;
-        if (running.length === 0) return;
-      } catch(e) { return; }
+      alert('Erreur connexion agent-server: ' + e.message);
     }
   }
 
@@ -1210,36 +1169,35 @@ import { supabaseConfig } from '../../lib/supabase';
     const label = document.getElementById('apBtnLabel');
     const badge = document.getElementById('apBadge');
 
-    // Check autopilot state from server
-    autopilotRunning = !!runningAgents['autopilot'] || (serverStatus && serverStatus.autopilot && serverStatus.autopilot.enabled);
-
-    if (autopilotRunning) {
-      hero.classList.add('is-running');
-      btn.classList.add('running');
-      btn.innerHTML = '&#9632;';
-      label.textContent = 'Stopper';
-      badge.className = 'ap-status-badge running';
-      const ap = serverStatus && serverStatus.autopilot;
-      const cycle = ap ? ap.cycle : '';
-      const phase = ap ? (ap.phase || '') : '';
-      const phaseLabels = { check: 'CHECK', generate: 'GENERATE', edit: 'EDIT', validate: 'VALIDATE', done: 'DONE' };
-      const phaseLabel = phaseLabels[phase] || phase.toUpperCase();
-      badge.textContent = cycle ? `CYCLE ${cycle} · ${phaseLabel}` : 'RUNNING';
-    } else {
-      hero.classList.remove('is-running');
-      btn.classList.remove('running');
-      btn.innerHTML = '&#9654;';
-      label.textContent = 'Lancer';
-
-      const apRun = agentRuns['autopilot'];
-      if (apRun) {
-        badge.className = 'ap-status-badge idle';
-        badge.textContent = 'LAST: ' + timeAgo(apRun.completed_at || apRun.started_at);
+    // Check pipeline state from server
+    fetch(`${AGENT_SERVER}/pipeline/status`).then(r => r.json()).then(ps => {
+      routineRunning = ps.running;
+      autopilotRunning = ps.running;
+      if (ps.running) {
+        hero.classList.add('is-running');
+        btn.classList.add('running');
+        btn.innerHTML = '&#9632;';
+        label.textContent = 'En cours...';
+        badge.className = 'ap-status-badge running';
+        const phaseLabels = { sync: 'SYNC', generate: 'GENERATE', edit: 'EDIT', validate: 'VALIDATE', done: 'DONE', error: 'ERREUR' };
+        badge.textContent = phaseLabels[ps.phase] || ps.phase?.toUpperCase() || 'RUNNING';
       } else {
-        badge.className = 'ap-status-badge idle';
-        badge.textContent = 'IDLE';
+        hero.classList.remove('is-running');
+        btn.classList.remove('running');
+        btn.innerHTML = '&#9654;';
+        label.textContent = 'Lancer Pipeline';
+        if (ps.phase === 'done') {
+          badge.className = 'ap-status-badge idle';
+          badge.textContent = 'TERMINE';
+        } else if (ps.phase === 'error') {
+          badge.className = 'ap-status-badge idle';
+          badge.textContent = 'ERREUR';
+        } else {
+          badge.className = 'ap-status-badge idle';
+          badge.textContent = 'IDLE';
+        }
       }
-    }
+    }).catch(() => {});
 
     // Active agents count
     const activeCount = Object.keys(runningAgents).filter(k => k !== 'autopilot').length;

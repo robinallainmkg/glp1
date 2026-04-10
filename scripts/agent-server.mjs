@@ -49,12 +49,86 @@ const AGENTS = {
 // Track running agents
 const running = new Map();
 
-// Autopilot state
+// Autopilot state (legacy compat)
 let autopilotEnabled = false;
 let autopilotCycle = 0;
-let autopilotPhase = 'idle'; // idle | check | generate | edit | validate | done
+let autopilotPhase = 'idle';
 let autopilotCycleStart = null;
-const MAX_AUTOPILOT_CYCLES = 100; // Safety limit — auto-stop after 100 cycles
+const MAX_AUTOPILOT_CYCLES = 100;
+
+// Pipeline orchestrator state
+let pipelineRunning = false;
+let pipelinePhase = 'idle'; // idle | sync | generate | edit | validate | done | error
+let pipelineStartedAt = null;
+
+// Wait for all agents matching filter to finish
+function waitForAgentsDone(filter, maxWaitMs = 900000) {
+  return new Promise((resolve) => {
+    const start = Date.now();
+    const check = () => {
+      const active = [...running.keys()].filter(k => filter.some(f => k.includes(f)));
+      if (active.length === 0) return resolve(true);
+      if (Date.now() - start > maxWaitMs) {
+        console.log(`⏰ Pipeline timeout en attente de: ${active.join(', ')}`);
+        return resolve(false);
+      }
+      setTimeout(check, 10000);
+    };
+    check();
+  });
+}
+
+// Full pipeline orchestration
+async function runPipeline() {
+  const t = () => new Date().toLocaleTimeString('fr-FR');
+
+  // Phase 0: Sync analytics
+  pipelinePhase = 'sync';
+  console.log(`\n📡 [${t()}] PIPELINE — Phase 0: Sync Analytics`);
+  try {
+    const { execSync: es } = await import('child_process');
+    es('node scripts/sync-analytics.mjs --days 7', { cwd: PROJECT_ROOT, timeout: 120000, stdio: 'pipe' });
+    console.log(`✅ [${t()}] Analytics syncees`);
+  } catch(e) {
+    console.log(`⚠️ [${t()}] Sync analytics echouee (${e.message?.substring(0, 80)}), on continue`);
+  }
+
+  // Phase 1: GENERATE
+  pipelinePhase = 'generate';
+  console.log(`\n🔍 [${t()}] PIPELINE — Phase 1: GENERATE`);
+  const generateAgents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
+  for (const a of generateAgents) {
+    const r = launchAgent(a);
+    console.log(`  🚀 ${a}: ${r.ok ? 'lance (PID ' + r.pid + ')' : r.error}`);
+  }
+  await waitForAgentsDone(generateAgents);
+  console.log(`✅ [${t()}] GENERATE termine`);
+
+  // Phase 2: EDIT
+  pipelinePhase = 'edit';
+  console.log(`\n✏️ [${t()}] PIPELINE — Phase 2: EDIT (editorial x4)`);
+  for (let i = 0; i < 4; i++) {
+    const r = launchAgent('editorial', { allowMultiple: true });
+    console.log(`  🚀 editorial ${i+1}/4: ${r.ok ? 'lance' : r.error}`);
+  }
+  await waitForAgentsDone(['editorial']);
+  console.log(`✅ [${t()}] EDIT termine`);
+
+  // Phase 3: VALIDATE + DEPLOY
+  pipelinePhase = 'validate';
+  console.log(`\n🏗️ [${t()}] PIPELINE — Phase 3: VALIDATE + DEPLOY`);
+  const vr = launchAgent('validator');
+  console.log(`  🚀 validator: ${vr.ok ? 'lance' : vr.error}`);
+  await waitForAgentsDone(['validator'], 600000);
+  console.log(`✅ [${t()}] VALIDATE termine`);
+
+  // Done
+  pipelinePhase = 'done';
+  const duration = Math.round((Date.now() - new Date(pipelineStartedAt).getTime()) / 1000);
+  console.log(`\n============================================================`);
+  console.log(`🎉 [${t()}] PIPELINE TERMINE en ${Math.floor(duration/60)}m${duration%60}s`);
+  console.log(`============================================================\n`);
+}
 
 // Output buffers — keep last N lines per agent (persists after agent stops)
 const MAX_LINES = 500;
@@ -1150,30 +1224,40 @@ const server = createServer(async (req, res) => {
     return;
   }
 
-  // POST /pipeline — launch full pipeline
+  // POST /pipeline — launch full orchestrated pipeline (background)
   if (req.method === 'POST' && url.pathname === '/pipeline') {
-    if (running.size > 0) {
+    if (pipelineRunning) {
       res.writeHead(409, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ ok: false, error: `Agents deja en cours: ${[...running.keys()].join(', ')}` }));
+      res.end(JSON.stringify({ ok: false, error: 'Pipeline deja en cours', phase: pipelinePhase }));
       return;
     }
 
-    // New pipeline:
-    // Vague 0: sync-analytics (script) + strategist (agent) — sequential, strategist after sync
-    // Vague 1: seo-audit + analytics + fact-check + opportunities + internal-links — parallel
-    // Vague 2: editorial
-    // Vague 3: validator
-    // For now: launch wave 1 + strategist in parallel, the rest is manual
-    const wave1 = ['seo-audit', 'analytics', 'fact-check', 'opportunities', 'internal-links', 'strategist'];
-    const results = wave1.map(a => ({ agent: a, ...launchAgent(a) }));
+    pipelineRunning = true;
+    pipelinePhase = 'starting';
+    pipelineStartedAt = new Date().toISOString();
 
-    console.log('📋 Pipeline lance — Vague 1 + Strategist en cours');
-
+    // Respond immediately — pipeline runs in background
     res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, message: 'Pipeline demarre en arriere-plan' }));
+
+    // Run the full pipeline in background
+    runPipeline().catch(e => {
+      console.error('❌ Pipeline error:', e.message);
+      pipelinePhase = 'error';
+    }).finally(() => {
+      pipelineRunning = false;
+    });
+    return;
+  }
+
+  // GET /pipeline/status
+  if (req.method === 'GET' && url.pathname === '/pipeline/status') {
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
     res.end(JSON.stringify({
-      ok: true,
-      launched: results,
-      note: 'Vague 1 + Strategist lances. Lancer editorial apres completion, puis validator.'
+      running: pipelineRunning,
+      phase: pipelinePhase,
+      startedAt: pipelineStartedAt,
+      agents: [...running.keys()]
     }));
     return;
   }
