@@ -268,7 +268,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 ## Questions Fréquemment Posées
 
 **Combien peut-on perdre avec les GLP-1 ?**
-En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec Saxenda, variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans nos témoignages documentés.
+En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans nos témoignages documentés.
 
 **Combien de temps pour voir les premiers résultats ?**
 Les premiers effets apparaissent dès 2-4 semaines, avec une perte significative visible après 8-12 semaines.

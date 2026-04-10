@@ -84,7 +84,7 @@ Par ailleurs, la modification de la composition corporelle change la façon dont
 
 Sous GLP-1, l'appétit est significativement réduit. Ce qui est une bonne chose pour la perte de poids peut devenir problématique si l'alimentation devient insuffisante en certains nutriments essentiels :
 
-**Protéines** : Indispensables pour la synthèse du collagène, composant structurel des tendons et des os. Une carence protéique ralentit la réparation des micro-traumatismes et fragilise les structures tendineuses.
+**[Protéines](/regime-glp1/glp1-proteines/)** : Indispensables pour la synthèse du collagène, composant structurel des tendons et des os. Une carence protéique ralentit la réparation des micro-traumatismes et fragilise les structures tendineuses.
 
 **Vitamine D** : Essentielle pour l'absorption du calcium et la minéralisation osseuse. Sa carence est très fréquente en France, et encore plus chez les personnes en situation d'obésité.
 

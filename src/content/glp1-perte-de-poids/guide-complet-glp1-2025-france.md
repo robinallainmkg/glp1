@@ -76,7 +76,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 - **Perte de poids moyenne :** 8-15% du poids corporel en 6-12 mois
 - **Ozempic/Wegovy :** Jusqu'à 15-20% de perte de poids (jusqu'à 15kg)
-- **Saxenda :** 5-10% de perte de poids efficace et progressive
+- **[Saxenda](/traitements-glp1/guide-complet-saxenda/) :** 5-10% de perte de poids efficace et progressive
 - **Maintien du poids :** 80% des patients maintiennent leur perte de poids à 1 an
 - **Amélioration santé :** Réduction du risque cardiovasculaire et diabète
 
@@ -144,7 +144,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 | **Ozempic** | ~76,58€/stylo | 30% DT2 | ~54€ (DT2) |
 | **Wegovy** | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
-| **Trulicity** | ~81€ | 30% DT2 | ~57€ (DT2) |
+| **[Trulicity](/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 30% DT2 | ~57€ (DT2) |
 | **Victoza** | ~60,26€ | 30% DT2 | ~42€ (DT2) |
 | **Rybelsus** | 80-110€ | 30% DT2 | 56-77€ (DT2) |
 

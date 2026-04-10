@@ -69,7 +69,7 @@ Des études de petite taille suggèrent que l'acupuncture peut réduire modestem
 
 ### Absence de contre-indication formelle
 
-Il n'existe pas de contre-indication connue à l'association d'un traitement GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda) avec des séances d'acupuncture. Les aiguilles d'acupuncture n'interagissent pas avec le mécanisme d'action pharmacologique des GLP-1.
+Il n'existe pas de contre-indication connue à l'association d'un traitement GLP-1 ([Ozempic](/traitements-glp1/guide-complet-ozempic/), Wegovy, Mounjaro, Saxenda) avec des séances d'acupuncture. Les aiguilles d'acupuncture n'interagissent pas avec le mécanisme d'action pharmacologique des GLP-1.
 
 ### Des bénéfices potentiels complémentaires
 

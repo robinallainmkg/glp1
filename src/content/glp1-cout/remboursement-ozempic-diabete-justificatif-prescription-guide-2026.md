@@ -28,13 +28,13 @@ Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou <a h
 En France en 2026, plusieurs médicaments de la classe des agonistes GLP-1 sont remboursés par l'Assurance Maladie **uniquement dans l'indication diabète de type 2** :
 
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5 mg, 1 mg, 2 mg hebdomadaire, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)
-- **Victoza** (liraglutide 0,6 mg, 1,2 mg, 1,8 mg quotidien, Novo Nordisk) — remboursé à **65 %** (100 % en ALD diabète)
+- **[Victoza](/traitements-glp1/guide-complet-victoza/)** (liraglutide 0,6 mg, 1,2 mg, 1,8 mg quotidien, Novo Nordisk) — remboursé à **65 %** (100 % en ALD diabète)
 - **[Trulicity](/traitements-glp1/guide-complet-trulicity/)** (dulaglutide 0,75 mg, 1,5 mg, 3 mg, 4,5 mg hebdomadaire, Eli Lilly) — remboursé à **65 %** (100 % en ALD diabète)
 - **Rybelsus** (sémaglutide oral 3 mg, 7 mg, 14 mg quotidien, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)
 - **Byetta** (exénatide 5 µg, 10 µg biquotidien, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 - **Bydureon** (exénatide LP 2 mg hebdomadaire, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 
-**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. Wegovy (sémaglutide 2,4 mg) et Saxenda (liraglutide 3 mg), indiqués pour l'obésité, ne sont **pas remboursés** en France à ce jour.
+**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. [Wegovy](/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) et Saxenda (liraglutide 3 mg), indiqués pour l'obésité, ne sont **pas remboursés** en France à ce jour.
 
 ### Ce qui a changé depuis février 2025
 

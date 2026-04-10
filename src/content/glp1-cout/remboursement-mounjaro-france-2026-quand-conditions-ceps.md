@@ -63,7 +63,7 @@ Ces délais sont indicatifs — consultez notre [calendrier détaillé du rembou
 
 L'avis HAS favorable rend le remboursement de Mounjaro quasi-inévitable à terme. Il ne reste plus qu'à trouver un accord de prix entre le laboratoire et l'État. En France, cet accord aboutit toujours — la question est de savoir en combien de temps.
 
-Le précédent de Wegovy est instructif : la HAS avait rendu un avis favorable à l'été 2024, et les négociations CEPS ont pris plusieurs mois. Si un schéma similaire se produit pour Mounjaro, le remboursement effectif serait attendu entre octobre 2026 et début 2027.
+Le précédent de [Wegovy](/traitements-glp1/guide-complet-wegovy/) est instructif : la HAS avait rendu un avis favorable à l'été 2024, et les négociations CEPS ont pris plusieurs mois. Si un schéma similaire se produit pour Mounjaro, le remboursement effectif serait attendu entre octobre 2026 et début 2027.
 
 ## Quelles conditions pour être remboursé ?
 
@@ -88,7 +88,7 @@ Le remboursement de Mounjaro pour des patients en **surpoids simple** (IMC entre
 Le taux de remboursement de Mounjaro n'est pas encore fixé. Pour comparaison :
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic)** (sémaglutide pour le diabète) : remboursé à 30 % par la Sécurité Sociale
 - **Trulicity** (dulaglutide pour le diabète) : remboursé à 65 %
-- **Wegovy** (remboursement en cours de négociation) : taux non encore fixé
+- **[Wegovy](/traitements-glp1/guide-complet-wegovy/)** (remboursement en cours de négociation) : taux non encore fixé
 
 Pour un médicament indiqué dans l'obésité — considérée par certains comme une pathologie à fort composant comportemental — le taux de 30 % est souvent cité comme référence. Un taux à 65 % serait plus favorable pour les patients mais moins probable pour un médicament hors AMM diabète.
 

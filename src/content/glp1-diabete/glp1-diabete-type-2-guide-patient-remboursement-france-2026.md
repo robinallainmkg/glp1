@@ -129,9 +129,9 @@ Trulicity est une injection hebdomadaire bien tolérée, particulièrement appr�
 
 ### Victoza (liraglutide) — remboursé à 65%, arrêt fin 2026
 
-Victoza est une injection quotidienne qui sera progressivement abandonnée avec l'arrêt annoncé de commercialisation fin 2026. Si vous êtes sous Victoza, votre médecin vous proposera une alternative : Ozempic ou Trulicity pour les patients diabétiques, ou Wegovy si vous êtes également en situation d'obésité éligible.
+[Victoza](/traitements-glp1/guide-complet-victoza/) est une injection quotidienne qui sera progressivement abandonnée avec l'arrêt annoncé de commercialisation fin 2026. Si vous êtes sous Victoza, votre médecin vous proposera une alternative : Ozempic ou Trulicity pour les patients diabétiques, ou Wegovy si vous êtes également en situation d'obésité éligible.
 
-### Rybelsus (sémaglutide oral) — non remboursé
+### [Rybelsus](/traitements-glp1/guide-complet-rybelsus/) (sémaglutide oral) — non remboursé
 
 Rybelsus est le seul GLP-1 oral disponible en France pour le diabète. Il offre l'avantage d'être un comprimé (pas d'injection), mais ses contraintes de prise (le matin à jeun avec un verre d'eau, 30 minutes avant tout aliment) limitent son intérêt pour certains patients. Il n'est actuellement pas remboursé par la Sécurité Sociale.
 
