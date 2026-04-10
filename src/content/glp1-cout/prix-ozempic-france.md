@@ -1,10 +1,10 @@
 ---
-title: "Prix Ozempic France 2026 : Tarifs par Dosage et Remboursement"
+title: "Prix Ozempic France 2026 : Coût Réel Avec et Sans Ordonnance"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
-description: "Prix Ozempic France 2026 : 77,60€/stylo, coût réel 40-55€/mois après remboursement 30% en pharmacie. Tarifs par dosage, mutuelles et aides disponibles."
-keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
-seoTitle: "Prix Ozempic France 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
-seoDescription: "Prix Ozempic France : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
+description: "Prix Ozempic en pharmacie : 77,60€/stylo. Sur ordonnance diabète : remboursé à 65%, reste 40-55€/mois. Sans ordonnance pour maigrir : prix complet. Comparatif par dosage."
+keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois']
+seoTitle: "Prix Ozempic 2026 : Combien Coûte Ozempic Avec et Sans Ordonnance ?"
+seoDescription: "Prix Ozempic avril 2026 : 77,60€/stylo. Remboursé 65% pour le diabète (reste 40€/mois). Sans ordonnance pour maigrir : 155€/mois. Tous les tarifs + mutuelles."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
 updatedAt: '2025-12-27'

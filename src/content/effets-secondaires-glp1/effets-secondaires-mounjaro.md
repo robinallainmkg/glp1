@@ -1,10 +1,10 @@
 ---
-title: "Effets Secondaires Mounjaro Tirzepatide : Guide Complet"
+title: "Effets Secondaires Mounjaro : Les Risques Graves à Connaître (2026)"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
-description: "Effets secondaires Mounjaro tirzepatide : nausées, diarrhée, vomissements. Comment les gérer et quand consulter votre médecin."
-keywords: ['effets secondaires mounjaro', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'tolérance mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'comment gérer effets mounjaro']
-seoTitle: "Effets Secondaires Mounjaro : Guide Complet"
-seoDescription: "Guide complet des effets secondaires de Mounjaro tirzepatide : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+description: "Effets secondaires Mounjaro graves et fréquents : nausées, diarrhée, pancréatite, perte de cheveux. Ce que votre médecin ne vous dit pas toujours. Liste complète + solutions."
+keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro effet secondaire long terme', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger']
+seoTitle: "Effets Secondaires Mounjaro : Risques Graves et Fréquents (2026)"
+seoDescription: "Effets secondaires Mounjaro : les 12 effets les plus fréquents + les risques graves (pancréatite, gastroparésie). Témoignages patients et solutions concrètes."
 publishedAt: '2025-08-30'
 updatedAt: '2025-12-27'
 date: 2025-08-30
