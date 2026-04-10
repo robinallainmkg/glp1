@@ -60,7 +60,7 @@ En 2026, quatre traitements injectables sont accessibles en France pour la perte
 
 ### 1. Wegovy -- L'Injection de Reference pour l'Obesite
 
-**[Wegovy (semaglutide 2.4mg)](/collections/traitements-glp1/guide-complet-wegovy/)** est le traitement injectable de reference pour la perte de poids en France. Developpe par Novo Nordisk, il a recu l'**Autorisation de Mise sur le Marche (AMM) specifiquement pour le traitement de l'obesite** en janvier 2024.
+**[Wegovy (semaglutide 2.4mg)](/collections/traitements-glp1/guide-complet-wegovy/)** est le traitement injectable de reference pour la perte de poids en France. Developpe par Novo Nordisk, il a recu l'**Autorisation de Mise sur le Marche (AMM) specifiquement pour le traitement de l'obesite** en janvier 2022 (AMM EMA), commercialise en pharmacie depuis octobre 2024.
 
 - **Molecule** : Semaglutide a dose elevee (2.4mg)
 - **Frequence** : Une injection par semaine (le meme jour chaque semaine)

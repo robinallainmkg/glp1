@@ -163,7 +163,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a></strong></td>
       <td>~8 %</td>
-      <td>280-320 euros</td>
+      <td>240-300 euros</td>
       <td>1x/jour</td>
       <td>Non</td>
       <td>30+ ou 27+ avec comorbidites</td>
@@ -304,7 +304,7 @@ Le cout reste le principal frein a l'acces aux medicaments pour maigrir en Franc
     </tr>
     <tr>
       <td><strong>Saxenda</strong></td>
-      <td>280-320 euros</td>
+      <td>240-300 euros</td>
       <td>Non</td>
       <td>Tres rare</td>
     </tr>

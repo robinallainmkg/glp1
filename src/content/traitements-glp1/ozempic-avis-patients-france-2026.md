@@ -43,10 +43,10 @@ Ozempic est un medicament injectable a base de **semaglutide**, developpe par le
 **Caracteristiques principales :**
 
 - **Principe actif** : semaglutide
-- **Dosages disponibles** : 0.25 mg (initiation), 0.5 mg, 1 mg
+- **Dosages disponibles** : 0.25 mg (initiation), 0.5 mg, 1 mg, 2 mg
 - **Frequence** : une injection sous-cutanee par semaine
 - **Indication officielle** : diabete de type 2, en complement du regime alimentaire et de l'exercice physique
-- **AMM en France** : oui, depuis 2019
+- **AMM en France** : oui, depuis 2018 (AMM europeenne du 8 fevrier 2018)
 
 Il est important de noter qu'Ozempic n'est **pas officiellement approuve pour la perte de poids** en France. C'est **Wegovy** (semaglutide 2.4 mg) qui detient l'indication obesite. Cependant, de nombreux medecins prescrivent Ozempic hors AMM pour la perte de poids, ce qui alimente une grande partie des avis en ligne.
 
@@ -62,7 +62,7 @@ Avant d'aborder les temoignages individuels, il est essentiel de replacer les av
 
 Les etudes STEP (Semaglutide Treatment Effect in People with obesity) ont demontre les resultats suivants avec le semaglutide :
 
-- **Perte de poids moyenne** : entre 12 % et 15 % du poids initial sur 68 semaines
+- **Perte de poids moyenne** : entre 5 % et 10 % du poids initial sur 68 semaines (Ozempic 1 mg ; Wegovy a 2.4 mg atteint 12-15 %)
 - **Patients perdant plus de 10 %** : environ 70 % des participants
 - **Patients perdant plus de 20 %** : environ 30 % des participants
 
