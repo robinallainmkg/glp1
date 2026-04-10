@@ -50,7 +50,7 @@ Wegovy est un medicament injectable a base de **semaglutide**, la meme molecule 
 - **Frequence** : une injection sous-cutanee par semaine
 - **Laboratoire** : Novo Nordisk
 - **AMM en France** : oui, autorise par l'EMA depuis janvier 2022
-- **Remboursement** : non rembourse en avril 2026 (remboursement envisage au S2 2026)
+- **Remboursement** : Non rembourse en avril 2026 (avis HAS favorable, negociations CEPS en cours)
 
 Pour une presentation complete du traitement, consultez notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
@@ -186,7 +186,7 @@ Pour un comparatif detaille des prix, consultez notre page [prix Wegovy en Franc
 
 ### Perspectives de remboursement
 
-La Haute Autorite de Sante (HAS) a rendu un avis favorable au remboursement de Wegovy pour les patients presentant une obesite severe (IMC superieur ou egal a 35) avec comorbidites. L'inscription sur la liste des specialites remboursables est envisagee pour le **second semestre 2026**, sous reserve de l'accord final sur le prix negocie avec le laboratoire.
+La Haute Autorite de Sante (HAS) a rendu un avis favorable au remboursement de Wegovy pour les patients presentant une obesite severe (IMC superieur ou egal a 35). L'inscription sur la liste des specialites remboursables depend de l'issue des **negociations en cours avec le CEPS** (Comite economique des produits de sante) sur le prix negocie avec le laboratoire.
 
 Certaines mutuelles commencent a proposer des forfaits partiels pour les traitements de l'obesite. Pour verifier votre situation, consultez notre guide [Wegovy et remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
 
@@ -228,7 +228,7 @@ La comparaison entre Wegovy et Mounjaro (tirzepatide) est l'une des questions le
 | Critere | Wegovy (semaglutide) | Mounjaro (tirzepatide) |
 |---------|---------------------|----------------------|
 | Mecanisme | Agoniste GLP-1 | Double agoniste GLP-1 + GIP |
-| Perte de poids moyenne | -15 a -17% | -18 a -22.5% |
+| Perte de poids moyenne | -15 a -17% | -15.7 a -22.5 % |
 | Frequence d'injection | 1 fois par semaine | 1 fois par semaine |
 | Tolerance digestive | Nausees frequentes | Nausees legerement moins frequentes selon les retours |
 | Prix mensuel (dose max) | 320 - 360 euros | 280 - 350 euros |
@@ -266,7 +266,7 @@ Les effets secondaires les plus frequents sont d'ordre digestif : nausees (rappo
 
 ### Reprend-on du poids apres l'arret de Wegovy ?
 
-Les donnees de l'etude STEP 4 montrent que les patients ayant arrete Wegovy apres 20 semaines ont repris environ deux tiers du poids perdu dans l'annee suivante. C'est un point important a prendre en compte : Wegovy est concu comme un traitement de long terme, pas comme une solution temporaire. Votre medecin pourra discuter avec vous d'une strategie de maintien incluant le suivi dietetique et l'activite physique, avec ou sans poursuite du traitement.
+Les donnees de l'extension de STEP 1 (Wilding 2022) montrent que les patients ayant arrete Wegovy ont repris environ deux tiers du poids perdu dans l'annee suivante. C'est un point important a prendre en compte : Wegovy est concu comme un traitement de long terme, pas comme une solution temporaire. Votre medecin pourra discuter avec vous d'une strategie de maintien incluant le suivi dietetique et l'activite physique, avec ou sans poursuite du traitement.
 
 ### Wegovy est-il mieux que Mounjaro ?
 

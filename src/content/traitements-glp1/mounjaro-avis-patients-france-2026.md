@@ -39,12 +39,12 @@ Avant d'examiner les avis patients, rappelons les donnees scientifiques. Les ess
 
 | Essai | Duree | Dose maximale | Perte de poids moyenne | Patients ayant perdu plus de 20% |
 |-------|-------|---------------|----------------------|----------------------------------|
-| SURMOUNT-1 | 72 semaines | 15 mg | -20,9% | 36% des patients |
-| SURMOUNT-2 | 72 semaines | 15 mg | -14,7% (patients diabetiques) | 19% des patients |
-| SURMOUNT-3 | 84 semaines | 15 mg (apres programme intensif) | -26,6% | 48% des patients |
+| SURMOUNT-1 | 72 semaines | 15 mg | -22,5% | 63 % des patients |
+| SURMOUNT-2 | 72 semaines | 15 mg | -15,7% (patients diabetiques) | 30 % des patients |
+| SURMOUNT-3 | 72 semaines de traitement (84 semaines incluant la phase intensive pre-randomisation) | 15 mg (apres programme intensif) | -26,6% | 48% des patients |
 | SURMOUNT-4 | 88 semaines | 15 mg (arret vs continuation) | Maintien du poids perdu | Reprise de 14% a l'arret |
 
-**SURMOUNT-1** a etabli le premier jalon : une perte de poids moyenne de 20,9% a la dose maximale de 15 mg chez des adultes obeses ou en surpoids sans diabete. Ce resultat est significativement superieur aux 15% habituellement observes avec le semaglutide 2,4 mg (Wegovy).
+**SURMOUNT-1** a etabli le premier jalon : une perte de poids moyenne de 22,5% a la dose maximale de 15 mg chez des adultes obeses ou en surpoids sans diabete. Ce resultat est significativement superieur aux 15% habituellement observes avec le semaglutide 2,4 mg (Wegovy).
 
 **SURMOUNT-3** a pousse les resultats encore plus loin en combinant le tirzepatide avec un programme de modification du mode de vie : la perte de poids a atteint 26,6%, un record dans la classe des GLP-1.
 
@@ -132,7 +132,7 @@ L'un des aspects les plus demandes dans les avis sur Mounjaro concerne la compar
 | **Indication principale** | Diabete type 2, obesite | Obesite | Diabete type 2 |
 | **Frequence injection** | 1x par semaine | 1x par semaine | 1x par semaine |
 | **Note patients** | 4,4/5 | 4,1/5 | 4,0/5 |
-| **Prix mensuel (estimation)** | 250-320 EUR | 260-300 EUR | 160-220 EUR |
+| **Prix mensuel (estimation)** | 230-440 EUR | 260-300 EUR | ~77-90 EUR |
 | **Remboursement** | Non (attendu 2e semestre 2026) | Non (obesite) | Oui (diabete uniquement) |
 | **Disponibilite France** | Disponible depuis novembre 2024 | Ruptures frequentes | Disponible |
 
@@ -175,9 +175,9 @@ Pour une analyse exhaustive de chaque effet secondaire avec les strategies de ge
 Le cout de Mounjaro est le sujet qui revient le plus frequemment dans les avis negatifs ou mitiges. En avril 2026, le tirzepatide n'est toujours pas rembourse par la Securite sociale pour l'indication obesite.
 
 **Fourchette de prix constatee en pharmacie (avril 2026)** :
-- Mounjaro 2,5 mg : 180 a 220 EUR par mois
-- Mounjaro 5 mg : 220 a 260 EUR par mois
-- Mounjaro 7,5 a 15 mg : 250 a 320 EUR par mois
+- Mounjaro 2,5 mg : ~230 EUR par mois
+- Mounjaro 5 mg : ~275 EUR par mois
+- Mounjaro 7,5 a 15 mg : 395 a 440 EUR par mois
 
 Le remboursement est attendu au second semestre 2026 pour les patients repondant a des criteres precis (IMC superieur ou egal a 30, ou IMC superieur ou egal a 27 avec comorbidites). Retrouvez toutes les informations actualisees sur notre page [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) et sur les [conditions de remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
 

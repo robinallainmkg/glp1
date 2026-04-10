@@ -51,7 +51,7 @@ Ce protocole est indispensable car le semaglutide est une proteine fragile. Sans
 
 ### Prix et remboursement
 
-Le Rybelsus coute environ **130 euros par mois** en France. Il est rembourse a 30 % par la Securite sociale uniquement dans le cadre du **diabete de type 2**, et non pour la perte de poids seule. Les patients qui le prennent pour maigrir doivent donc le financer integralement.
+Le Rybelsus coute environ **80 a 100 euros par mois** en France. Il est rembourse a 65 % par la Securite sociale uniquement dans le cadre du **diabete de type 2**, et non pour la perte de poids seule. Les patients qui le prennent pour maigrir doivent donc le financer integralement.
 
 Pour un guide complet sur ce traitement, consultez notre article dedie : [Guide Complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/).
 
@@ -121,7 +121,7 @@ Les etudes de Phase II ont montre des resultats encourageants :
 - Amelioration significative de la glycemie chez les patients diabetiques
 - Profil de tolerance comparable aux GLP-1 injectables
 
-Les essais de Phase III sont en cours. Le laboratoire Eli Lilly vise une **mise sur le marche potentielle en 2027-2028**, sous reserve des approbations reglementaires de la FDA et de l'EMA.
+Les essais Phase III (ATTAIN) sont termines et positifs. Approuve par la FDA en avril 2026 sous le nom Foundayo. Les resultats de Phase III montrent une perte de poids de **12,4 % a 72 semaines** (ATTAIN-1, 36 mg). Le laboratoire Eli Lilly vise une **mise sur le marche en Europe courant 2027** (soumission EMA en cours, approbation FDA obtenue en avril 2026).
 
 ### Ce que cela changerait
 

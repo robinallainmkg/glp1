@@ -66,7 +66,7 @@ Les etudes STEP (Semaglutide Treatment Effect in People with obesity) ont demont
 - **Patients perdant plus de 10 %** : environ 70 % des participants
 - **Patients perdant plus de 20 %** : environ 30 % des participants
 
-Avec Ozempic specifiquement (dose maximale de 1 mg, inferieure aux 2.4 mg de Wegovy), la perte de poids moyenne se situe plutot entre **8 % et 12 %** du poids initial.
+Avec Ozempic specifiquement (dose maximale de 1 mg, inferieure aux 2.4 mg de Wegovy), la perte de poids moyenne se situe plutot entre **5 a 7 %** du poids initial chez les patients diabetiques, et jusqu'a **5 a 10 %** en utilisation hors AMM pour la perte de poids.
 
 ### Controle glycemique
 
@@ -85,7 +85,7 @@ Les patients rapportent generalement la chronologie suivante :
 | Semaines 1-4 | Reduction de l'appetit, premiers effets secondaires digestifs |
 | Semaines 4-8 | Debut de perte de poids visible, adaptation aux effets secondaires |
 | Mois 3-4 | Perte de poids significative (environ 5 % du poids initial) |
-| Mois 6 | Plateau intermediaire, perte de 8-12 % du poids |
+| Mois 6 | Plateau intermediaire, perte de 5-10 % du poids |
 | Mois 12 | Resultats maximaux, stabilisation du poids |
 
 Ces donnees sont issues des essais controles. Les resultats individuels varient en fonction du profil metabolique, de l'alimentation et de l'activite physique.
@@ -233,7 +233,7 @@ De nombreux patients comparent Ozempic aux autres agonistes GLP-1. Voici un comp
 
 | Critere | Ozempic (semaglutide 1mg) | Wegovy (semaglutide 2.4mg) | Mounjaro (tirzepatide) |
 |---------|--------------------------|---------------------------|----------------------|
-| **Perte de poids moyenne** | 8-12 % | 12-15 % | 15-22 % |
+| **Perte de poids moyenne** | 5-10 % | 12-15 % | 15-22 % |
 | **Indication officielle** | Diabete type 2 | Obesite | Diabete type 2 |
 | **Tolerance digestive** | Moderee | Moderee | Legerement meilleure |
 | **Frequence injection** | 1x/semaine | 1x/semaine | 1x/semaine |
@@ -253,8 +253,8 @@ L'analyse des avis patients revele une hierarchie claire des effets secondaires 
 
 ### Effets secondaires digestifs (les plus frequents)
 
-- **Nausees** : citees dans environ 70 % des avis, majoritairement pendant les 2 a 4 premieres semaines. La plupart des patients rapportent une attenuation progressive. Une montee de dose trop rapide aggrave ce symptome.
-- **Constipation** : mentionnee dans 30 a 40 % des avis. Les patients recommandent une hydratation renforcee et un apport accru en fibres.
+- **Nausees** : citees dans environ 20 a 45 % selon le dosage des avis, majoritairement pendant les 2 a 4 premieres semaines. La plupart des patients rapportent une attenuation progressive. Une montee de dose trop rapide aggrave ce symptome.
+- **Constipation** : mentionnee dans 5 a 24 % selon le dosage des avis. Les patients recommandent une hydratation renforcee et un apport accru en fibres.
 - **Diarrhees** : rapportees dans 15 a 20 % des cas, souvent en alternance avec la constipation en debut de traitement.
 - **Reflux gastro-oesophagien** : present dans 10 a 15 % des avis, parfois associe a une sensation de gastroparesie.
 
@@ -279,7 +279,7 @@ La question du cout est omnipresente dans les avis patients. Elle constitue souv
 
 ### Situation actuelle du remboursement
 
-- **Patients diabetiques de type 2** : Ozempic est rembourse a **65 % par la Securite sociale**, avec une prise en charge complementaire par la mutuelle. Le reste a charge est generalement nul ou tres faible.
+- **Patients diabetiques de type 2** : Ozempic est rembourse a **30 % par la Securite sociale** (taux en vigueur depuis decembre 2021), avec une prise en charge complementaire par la mutuelle. Les patients en **ALD (Affection Longue Duree)** beneficient d'un remboursement a **100 %**. Pour les autres, le reste a charge depend de la couverture mutuelle.
 - **Patients en surpoids/obesite (hors diabete)** : Ozempic est prescrit hors AMM et **n'est pas rembourse**. Le cout mensuel se situe entre **80 et 130 euros** selon le dosage et la pharmacie.
 
 ### Ce que disent les patients
@@ -318,7 +318,7 @@ Pour vous proteger, consultez notre article : [Contrefacon GLP-1 : les dangers d
 
 ### Est-ce qu'Ozempic marche vraiment pour maigrir ?
 
-Oui, les etudes cliniques et les avis patients convergent : Ozempic entraine une perte de poids de **8 a 12 % du poids initial** en moyenne a la dose de 1 mg. Cependant, il est important de rappeler qu'Ozempic n'a pas d'AMM pour la perte de poids en France. C'est Wegovy (semaglutide 2.4 mg) qui est approuve pour cette indication. La perte de poids est reelle mais necessiste un accompagnement medical et dietetique pour etre durable.
+Oui, les etudes cliniques et les avis patients convergent : Ozempic entraine une perte de poids de **5 a 10 % du poids initial** en moyenne a la dose de 1 mg. Cependant, il est important de rappeler qu'Ozempic n'a pas d'AMM pour la perte de poids en France. C'est Wegovy (semaglutide 2.4 mg) qui est approuve pour cette indication. La perte de poids est reelle mais necessiste un accompagnement medical et dietetique pour etre durable.
 
 ### Combien de temps pour voir les resultats avec Ozempic ?
 

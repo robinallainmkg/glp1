@@ -78,16 +78,16 @@ Wegovy a demontre dans l'etude STEP 1 une perte de poids moyenne de 14.9% contre
 
 - **Molecule** : Tirzepatide, double agoniste GLP-1/GIP
 - **Frequence** : Une injection par semaine
-- **Efficacite record** : Perte de poids de **20 a 26% du poids corporel** dans les essais cliniques SURMOUNT
+- **Efficacite record** : Perte de poids de **16 a 22.5 % du poids corporel** dans les essais cliniques SURMOUNT
 - **Prix** : 230 a 440 euros par mois selon la dose
 - **Indication** : Traitement de l'obesite et du surpoids avec comorbidites
 - **Doses disponibles** : 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg et 15mg
 
-Mounjaro a marque l'histoire de la medecine de l'obesite en 2024 : dans l'essai SURMOUNT-1, les patients sous la dose maximale de 15mg ont perdu en moyenne 22.5% de leur poids corporel. Plus de **60% des participants ont perdu plus de 20% de leur poids**, un resultat sans precedent pour un traitement medicamenteux. Cette double action GLP-1/GIP confere a Mounjaro le profil d'efficacite le plus eleve de tous les traitements injectables actuellement disponibles.
+Mounjaro a marque l'histoire de la medecine de l'obesite en 2024 : dans l'essai SURMOUNT-1, les patients sous la dose maximale de 15mg ont perdu en moyenne 22.5% de leur poids corporel. Environ **57 % des participants (a la dose de 15 mg) ont perdu plus de 20% de leur poids**, un resultat sans precedent pour un traitement medicamenteux. Cette double action GLP-1/GIP confere a Mounjaro le profil d'efficacite le plus eleve de tous les traitements injectables actuellement disponibles.
 
 ### 3. Saxenda -- Le Pionnier des Injections Minceur
 
-**[Saxenda (liraglutide 3mg)](/collections/traitements-glp1/guide-complet-saxenda/)** est le premier agoniste GLP-1 a avoir recu une AMM pour le traitement de l'obesite en France. Commercialise depuis 2016, il a ouvert la voie aux traitements injectables de la perte de poids.
+**[Saxenda (liraglutide 3mg)](/collections/traitements-glp1/guide-complet-saxenda/)** est le premier agoniste GLP-1 a avoir recu une AMM pour le traitement de l'obesite en France. Commercialise depuis 2021 (commercialisation effective en France en mars 2021, AMM europeenne 2015), il a ouvert la voie aux traitements injectables de la perte de poids.
 
 - **Molecule** : Liraglutide a dose elevee (3mg)
 - **Frequence** : **Une injection par jour** (contrairement aux autres qui sont hebdomadaires)
@@ -102,9 +102,9 @@ Saxenda reste une option valable, mais **son injection quotidienne et son effica
 
 **[Ozempic (semaglutide 1mg)](/collections/traitements-glp1/guide-complet-ozempic/)** est officiellement un traitement du **diabete de type 2**. Sa molecule active, le semaglutide, est identique a celle de Wegovy mais a une dose inferieure. Malgre l'absence d'AMM pour l'obesite, Ozempic est largement prescrit hors indication (off-label) pour la perte de poids.
 
-- **Molecule** : Semaglutide (0.25mg, 0.5mg ou 1mg)
+- **Molecule** : Semaglutide (0.25mg, 0.5mg, 1mg ou 2mg)
 - **Frequence** : Une injection par semaine
-- **Efficacite** : Perte de poids de **12 a 15% du poids corporel** (dose 1mg)
+- **Efficacite** : Perte de poids de **5 a 10 % du poids corporel** (dose 1mg)
 - **Prix** : Environ 76 euros par stylo
 - **Remboursement** : Prise en charge a 30% par la Securite sociale **uniquement en cas de diabete de type 2**
 - **Indication officielle** : Diabete de type 2 insuffisamment controle
@@ -138,7 +138,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a></strong></td>
       <td>1x/semaine</td>
-      <td>-20 a 26%</td>
+      <td>-16 a 22.5 %</td>
       <td>230-440 euros</td>
       <td>Non rembourse (prevu S2 2026)</td>
       <td>IMC 30+ ou 27+ avec comorbidites</td>
@@ -154,7 +154,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a></strong></td>
       <td>1x/semaine</td>
-      <td>-12 a 15%</td>
+      <td>-5 a 10 %</td>
       <td>~76 euros/stylo</td>
       <td>30% (diabete type 2 uniquement)</td>
       <td>Pas d'AMM obesite</td>
@@ -313,7 +313,7 @@ Les injections GLP-1 disposent d'un **profil de securite bien etabli**, valide p
 
 ### Combien de kilos peut-on perdre avec une injection pour maigrir ?
 
-La perte de poids varie selon le traitement et le profil du patient. En moyenne : **Saxenda** permet de perdre 8 a 10% du poids corporel, **Ozempic** 12 a 15%, **Wegovy** 15 a 17%, et **Mounjaro** 20 a 26%. Pour une personne de 100 kg, cela represente une perte de 8 a 26 kg selon le traitement. Les resultats sont meilleurs lorsque le traitement est associe a une alimentation equilibree et a une activite physique reguliere. Decouvrez des [resultats reels avant/apres](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de patients sous GLP-1.
+La perte de poids varie selon le traitement et le profil du patient. En moyenne : **Saxenda** permet de perdre 8 a 10% du poids corporel, **Ozempic** 5 a 10 %, **Wegovy** 15 a 17%, et **Mounjaro** 16 a 22.5 %. Pour une personne de 100 kg, cela represente une perte de 8 a 26 kg selon le traitement. Les resultats sont meilleurs lorsque le traitement est associe a une alimentation equilibree et a une activite physique reguliere. Decouvrez des [resultats reels avant/apres](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de patients sous GLP-1.
 
 ### Faut-il une ordonnance pour une injection pour maigrir ?
 

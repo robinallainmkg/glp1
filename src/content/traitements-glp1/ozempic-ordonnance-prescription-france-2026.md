@@ -52,9 +52,8 @@ Jusqu'en 2025, la prescription d'Ozempic et des autres agonistes GLP-1 pour la p
 
 **Depuis juin 2025, l'ANSM a assoupli les regles de prescription.** Desormais, tout medecin peut prescrire un traitement GLP-1, y compris les medecins generalistes, sous certaines conditions :
 
-- **Formation obligatoire** : le medecin doit avoir suivi une formation specifique sur les traitements GLP-1 et la prise en charge de l'obesite.
 - **Criteres d'eligibilite du patient** : IMC superieur ou egal a 30 kg/m2, ou IMC superieur ou egal a 27 kg/m2 avec au moins une comorbidite liee au poids (diabete de type 2, hypertension, apnee du sommeil, dyslipidemia).
-- **Suivi regulier** : le medecin prescripteur doit assurer un suivi trimestriel pendant la premiere annee de traitement.
+- **Suivi regulier recommande** : un suivi regulier est recommande pendant la premiere annee de traitement, idealement tous les 3 mois.
 - **Prescription initiale limitee** : la premiere ordonnance est valable 3 mois maximum, renouvelable apres reevaluation clinique.
 
 Pour en savoir plus sur ces nouvelles regles, consultez notre article dedie sur les [conditions de prescription par les generalistes](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/).
@@ -127,10 +126,10 @@ Le cout d'Ozempic varie considerablement selon votre situation medicale et votre
 
 ### Ozempic pour le diabete de type 2 (avec ordonnance)
 
-Lorsque Ozempic est prescrit dans le cadre du diabete de type 2, il beneficie d'un **remboursement par l'Assurance maladie a hauteur de 65 %**, le reste etant pris en charge par votre mutuelle dans la plupart des cas.
+Lorsque Ozempic est prescrit dans le cadre du diabete de type 2, il beneficie d'un **remboursement par l'Assurance maladie a hauteur de 30 %** (taux en vigueur depuis decembre 2021), le reste etant pris en charge par votre mutuelle dans la plupart des cas.
 
 - **Prix public** : environ 80 a 90 euros par stylo (1 mois de traitement a 0,5 mg ou 1 mg).
-- **Reste a charge apres remboursement Secu** : environ 28 a 32 euros (avant mutuelle).
+- **Reste a charge apres remboursement Secu** : environ 54 a 63 euros (avant mutuelle).
 - **Avec ALD (Affection longue duree)** : si votre diabete est reconnu en ALD, le remboursement atteint 100 %. Vous ne payez rien.
 
 ### Ozempic pour la perte de poids (hors AMM)
@@ -180,14 +179,14 @@ Ozempic et Wegovy contiennent exactement la meme molecule : le semaglutide, fabr
 
 - **AMM** : diabete de type 2 uniquement.
 - **Dosage** : 0,25 mg, 0,5 mg et 1 mg par semaine.
-- **Remboursement** : 65 % par la Securite sociale (100 % en ALD).
+- **Remboursement** : 30 % par la Securite sociale (100 % en ALD).
 - **Prescription** : tout medecin peut prescrire pour le diabete.
 
 ### Wegovy : indication obesite
 
 - **AMM** : traitement de l'obesite et du surpoids avec comorbidites.
 - **Dosage** : jusqu'a 2,4 mg par semaine (dose therapeutique pour la perte de poids).
-- **Remboursement** : partiellement rembourse sous conditions strictes depuis 2025.
+- **Remboursement** : non rembourse en avril 2026.
 - **Prescription** : tout medecin forme (depuis juin 2025).
 
 ### Quel traitement demander ?
