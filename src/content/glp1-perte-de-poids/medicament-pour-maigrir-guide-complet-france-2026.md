@@ -77,14 +77,14 @@ Le **Mounjaro** d'Eli Lilly est le medicament le plus efficace actuellement disp
 - Obesite et surpoids avec comorbidites (AMM obtenue en 2025 sous le nom Zepbound dans certains pays, prescription possible en France)
 
 **Efficacite clinique :**
-- Perte de poids moyenne de **20 a 26 %** du poids corporel a la dose maximale (etude SURMOUNT-1)
-- Pour une personne de 100 kg, cela represente une perte de 20 a 26 kg
+- Perte de poids moyenne de **16 a 22.5 %** du poids corporel selon le dosage (etude SURMOUNT-1 : 22.5 % a la dose de 15 mg)
+- Pour une personne de 100 kg, cela represente une perte de 16 a 22.5 kg
 - C'est le **medicament pour maigrir le plus puissant** disponible en France a ce jour
 
 **Prix et remboursement :**
 - Entre **230 et 440 euros par mois** selon le dosage (2.5 mg a 15 mg)
-- Partiellement rembourse pour le diabete de type 2
-- Non rembourse pour l'indication obesite seule en avril 2026
+- **Non rembourse** par la Securite sociale en avril 2026 (ni pour le diabete, ni pour l'obesite -- negociations CEPS en cours)
+- Remboursement attendu au second semestre 2026
 
 **Administration :** injection sous-cutanee une fois par semaine, titration progressive sur plusieurs mois.
 
@@ -99,12 +99,12 @@ Le **Saxenda** de Novo Nordisk a ete le premier agoniste GLP-1 a recevoir une AM
 - Surpoids (IMC superieur ou egal a 27) avec comorbidites
 
 **Efficacite clinique :**
-- Perte de poids moyenne de **8 a 10 %** du poids corporel (etude SCALE)
+- Perte de poids moyenne d'environ **8 %** du poids corporel (etude SCALE)
 - Pour une personne de 100 kg, cela represente une perte de 8 a 10 kg
 - Moins performant que le Wegovy ou le Mounjaro, mais reste significatif
 
 **Prix et remboursement :**
-- Entre **280 et 320 euros par mois**
+- Entre **240 et 300 euros par mois**
 - **Non rembourse** par la Securite sociale
 
 **Administration :** injection sous-cutanee **quotidienne** (contrairement aux autres qui sont hebdomadaires), ce qui constitue un inconvenient notable.
@@ -118,12 +118,12 @@ L'**Ozempic** de Novo Nordisk est officiellement autorise uniquement pour le tra
 **Indications officielles :** diabete de type 2 uniquement.
 
 **Utilisation hors AMM pour la perte de poids :**
-- Perte de poids moyenne de **12 a 15 %** du poids corporel
+- Perte de poids moyenne de **5 a 10 %** du poids corporel (inferieure au Wegovy 2.4 mg, car dose plus faible)
 - Dose maximale de 1 mg par semaine (contre 2.4 mg pour le Wegovy)
 
 **Prix et remboursement :**
 - Environ **77 euros par stylo**
-- **Rembourse a 30 %** par la Securite sociale uniquement sur prescription pour le diabete de type 2
+- **Rembourse a 30 %** par la Securite sociale pour le diabete de type 2 (jusqu'a 100 % en ALD -- Affection de Longue Duree)
 - Non rembourse pour la perte de poids seule
 
 **Attention :** la prescription hors AMM de l'Ozempic pour la perte de poids comporte des risques. En cas d'effet secondaire grave, la responsabilite du medecin est engagee differemment. De plus, les tensions d'approvisionnement liees a la forte demande pour la perte de poids peuvent priver les patients diabetiques de leur traitement. Privilegiez le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) si votre objectif est la perte de poids.
@@ -146,7 +146,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
   <tbody>
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-wegovy/">Wegovy</a></strong></td>
-      <td>15-17 %</td>
+      <td>~15 %</td>
       <td>169-360 euros</td>
       <td>1x/semaine</td>
       <td>Non (prevu S2 2026)</td>
@@ -154,15 +154,15 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
     </tr>
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a></strong></td>
-      <td>20-26 %</td>
+      <td>16-22.5 %</td>
       <td>230-440 euros</td>
       <td>1x/semaine</td>
-      <td>Partiel (diabete)</td>
+      <td>Non (avril 2026)</td>
       <td>30+ ou 27+ avec comorbidites</td>
     </tr>
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a></strong></td>
-      <td>8-10 %</td>
+      <td>~8 %</td>
       <td>280-320 euros</td>
       <td>1x/jour</td>
       <td>Non</td>
@@ -170,7 +170,7 @@ Pour en savoir plus : [guide complet Ozempic](/collections/traitements-glp1/guid
     </tr>
     <tr>
       <td><strong><a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a></strong></td>
-      <td>12-15 % (hors AMM)</td>
+      <td>5-10 % (hors AMM)</td>
       <td>~77 euros/stylo</td>
       <td>1x/semaine</td>
       <td>30 % (diabete uniquement)</td>
@@ -190,7 +190,7 @@ Le **Rybelsus** est le seul GLP-1 disponible sous forme de comprime en France. I
 - **Dose :** 3 mg, 7 mg ou 14 mg, un comprime par jour a jeun
 - **Indication officielle :** diabete de type 2
 - **Efficacite pour la perte de poids :** inferieure aux formes injectables (environ 5 a 10 % de perte de poids)
-- **Prix :** 80 a 110 euros par mois, rembourse a 30 % pour le diabete
+- **Prix :** 80 a 110 euros par mois, rembourse a 65 % pour le diabete de type 2
 
 Le Rybelsus doit etre pris a jeun avec un demi-verre d'eau, au moins 30 minutes avant le premier repas. Cette contrainte peut etre genante au quotidien.
 
@@ -198,13 +198,13 @@ Pour en savoir plus : [guide complet Rybelsus](/collections/traitements-glp1/gui
 
 ### Orforglipron -- La Future Pilule pour Maigrir
 
-L'**orforglipron** d'Eli Lilly est la molecule la plus attendue dans le domaine des medicaments pour maigrir. Il s'agit d'un agoniste GLP-1 oral de nouvelle generation actuellement en **phase III** d'essais cliniques.
+L'**orforglipron** (nom commercial : Foundayo) d'Eli Lilly est un agoniste GLP-1 oral de nouvelle generation. Il a ete **approuve par la FDA aux Etats-Unis en avril 2026**, devenant la premiere pilule GLP-1 non peptidique autorisee.
 
-**Ce qui rend l'orforglipron prometteur :**
+**Ce qui rend l'orforglipron important :**
 - **Forme orale** : un simple comprime une fois par jour, sans contrainte de jeune
-- **Efficacite proche des injectables** : les resultats preliminaires montrent une perte de poids de 14 a 15 % en 36 semaines
+- **Efficacite demontree en Phase III** : perte de poids de 12.4 % a 72 semaines (essai ATTAIN-1, dose 36 mg)
 - **Cout de production reduit** : molecule de petite taille, plus facile a fabriquer que les peptides injectables
-- **Arrivee prevue :** 2027-2028 en France, sous reserve des resultats de phase III et de l'approbation de l'EMA
+- **Arrivee prevue en France :** courant 2027, sous reserve de l'approbation de l'EMA (soumission reglementaire en cours)
 
 L'orforglipron pourrait democratiser l'acces aux traitements anti-obesite en offrant une alternative plus pratique et potentiellement moins couteuse.
 
@@ -257,7 +257,7 @@ Pour en savoir plus : [alternatives aux GLP-1](/collections/alternatives-glp1/)
 
 Comme tout medicament, les GLP-1 peuvent provoquer des effets secondaires. La bonne nouvelle : la grande majorite sont benins et transitoires.
 
-### Effets secondaires frequents (touches 60 a 80 % des patients)
+### Effets secondaires frequents (touches 20 a 45 % des patients selon la molecule)
 
 - **Nausees** : l'effet le plus courant, surtout en debut de traitement et lors des augmentations de dose. Elles diminuent generalement en 4 a 6 semaines.
 - **Diarrhee ou constipation** : troubles du transit frequents pendant la phase d'adaptation.
@@ -336,7 +336,7 @@ Quelques mutuelles haut de gamme commencent a proposer une prise en charge parti
 
 ### Quel est le medicament le plus efficace pour maigrir ?
 
-Le **Mounjaro (tirzepatide)** est actuellement le medicament pour maigrir le plus efficace disponible en France, avec une perte de poids moyenne de 20 a 26 % du poids corporel dans les essais cliniques. Son mecanisme d'action double (GLP-1 et GIP) explique cette efficacite superieure. Le Wegovy (semaglutide 2.4 mg) arrive en deuxieme position avec 15 a 17 % de perte de poids.
+Le **Mounjaro (tirzepatide)** est actuellement le medicament pour maigrir le plus efficace disponible en France, avec une perte de poids moyenne de 16 a 22.5 % du poids corporel dans les essais cliniques (SURMOUNT-1). Son mecanisme d'action double (GLP-1 et GIP) explique cette efficacite superieure. Le Wegovy (semaglutide 2.4 mg) arrive en deuxieme position avec environ 15 % de perte de poids (STEP 1).
 
 ### Peut-on acheter ces medicaments sans ordonnance ?
 
