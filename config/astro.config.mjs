@@ -112,6 +112,7 @@ export default defineConfig({
     '/admin-stats-new/': '/',
     '/experts/': '/',
     '/produits-recommandes/': '/',
+    '/collections/glp1-cout/wegovy-prix/': '/collections/glp1-cout/prix-wegovy-france/',
     '/guide-debutant/': '/',
     '/guide-glp1-perte-de-poids/': '/',
     '/guide-beaute-perte-de-poids-glp1/': '/',

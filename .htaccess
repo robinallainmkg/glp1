@@ -1,1 +1,5 @@
 DirectoryIndex index.html
+
+# 301 Redirects — Fix cannibalization
+RewriteEngine On
+RewriteRule ^collections/glp1-cout/wegovy-prix/?$ /collections/glp1-cout/prix-wegovy-france/ [R=301,L]

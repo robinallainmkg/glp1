@@ -859,59 +859,41 @@ import { supabaseConfig } from '../../lib/supabase';
 
   <div class="mc-main">
 
-    <!-- Autopilot Hero -->
+    <!-- Routine Pipeline Hero -->
     <div class="autopilot-hero" id="autopilotHero">
       <div class="ap-top">
         <div class="ap-btn-area">
-          <button class="ap-big-btn" id="apBigBtn" onclick="toggleAutopilot()">&#9654;</button>
-          <span class="ap-btn-label" id="apBtnLabel">Lancer</span>
+          <button class="ap-big-btn" id="apBigBtn" onclick="launchRoutine()">&#9654;</button>
+          <span class="ap-btn-label" id="apBtnLabel">Lancer Routine</span>
         </div>
         <div class="ap-info">
           <div class="ap-title-row">
-            <span class="ap-name">Autopilot</span>
+            <span class="ap-name">Pipeline Routine</span>
             <span class="ap-status-badge idle" id="apBadge">IDLE</span>
           </div>
           <div class="ap-desc">
-            Priorisation intelligente : fact-check si coverage &lt; 70%, tickets urgents d'abord, puis cycle complet. Spawne automatiquement les agents necessaires.
+            UN cycle complet : sync analytics &rarr; fact-check + seo-audit + opportunities + maillage &rarr; editorial (corrections) &rarr; validator (deploy).
+            <br><code style="font-size:0.7rem;color:#64748b">node scripts/routine.mjs</code>
+            <button onclick="showRoutineInfo()" style="margin-left:0.5rem;background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:4px;cursor:pointer;font-size:0.7rem;font-family:inherit">+ d'infos</button>
           </div>
           <div class="ap-stats" id="apStats">
-            <div class="ap-stat">
-              <span class="ap-stat-val" id="apCycle">--</span>
-              <span class="ap-stat-label">Cycle</span>
-            </div>
             <div class="ap-stat">
               <span class="ap-stat-val" id="apAgentsActive">0</span>
               <span class="ap-stat-label">Agents actifs</span>
             </div>
             <div class="ap-stat">
               <span class="ap-stat-val" id="apTicketsProcessed">--</span>
-              <span class="ap-stat-label">Traites (24h)</span>
+              <span class="ap-stat-label">Tickets (24h)</span>
             </div>
             <div class="ap-stat">
               <span class="ap-stat-val" id="apLastRun">--</span>
               <span class="ap-stat-label">Dernier run</span>
             </div>
-          </div>
-        </div>
-        <div class="ap-budget">
-          <span class="ap-budget-label">Estimation credits</span>
-          <div class="ap-budget-bar">
-            <div class="ap-budget-fill" id="apBudgetFill" style="width:0%;background:#22c55e"></div>
-          </div>
-          <span class="ap-budget-val" id="apBudgetVal">--</span>
-        </div>
-        <div class="ap-budget" style="margin-top:0.4rem">
-          <span class="ap-budget-label" id="apBurnLabel">Burn rate</span>
-          <div class="ap-budget-bar" style="position:relative">
-            <div class="ap-budget-fill" id="apBurnFill" style="width:0%;background:#3b82f6;transition:width 1s"></div>
-            <div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex">
-              <div style="flex:1;border-right:1px solid #ffffff15"></div>
-              <div style="flex:1;border-right:1px solid #ffffff15"></div>
-              <div style="flex:1;border-right:1px solid #ffffff15"></div>
-              <div style="flex:1"></div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apArticles">166</span>
+              <span class="ap-stat-label">Articles</span>
             </div>
           </div>
-          <span class="ap-budget-val" id="apBurnVal">--</span>
         </div>
       </div>
     </div>
@@ -1144,37 +1126,82 @@ import { supabaseConfig } from '../../lib/supabase';
     } catch(e) {}
   }
 
-  // ========== AUTOPILOT ==========
-  let autopilotRunning = false;
+  // ========== ROUTINE PIPELINE ==========
+  let routineRunning = false;
+  let autopilotRunning = false; // compat
 
-  async function toggleAutopilot() {
-    if (autopilotRunning) {
-      if (!confirm('Stopper l\'Autopilot ? Tous les agents en cours seront tués.')) return;
-      try {
-        const r = await fetch(`${AGENT_SERVER}/autopilot/stop`, { method: 'POST' });
-        const data = await r.json();
-        if (data.killed && data.killed.length > 0) {
-          console.log('Autopilot stopped, killed agents:', data.killed);
-          // Clear local running state for killed agents
-          for (const name of data.killed) {
-            delete runningAgents[name];
-          }
-        }
-        autopilotRunning = false;
-        updateAutopilotUI();
-        renderArena();
-      } catch(e) { stopAgent('autopilot'); }
-    } else {
-      if (!serverOnline) {
-        alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs');
-        return;
+  async function launchRoutine() {
+    if (routineRunning) { alert('Routine deja en cours...'); return; }
+    if (!serverOnline) { alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs'); return; }
+
+    routineRunning = true;
+    autopilotRunning = true; // compat UI
+    updateAutopilotUI();
+
+    try {
+      // Phase GENERATE
+      const genAgents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
+      for (const a of genAgents) {
+        await fetch(`${AGENT_SERVER}/launch`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agent:a}) }).catch(()=>{});
       }
-      try {
-        const r = await fetch(`${AGENT_SERVER}/autopilot/start`, { method: 'POST' });
-        const data = await r.json();
-        if (!data.ok) alert('Erreur: ' + data.message);
-      } catch(e) { alert('Erreur: ' + e.message); }
+      document.getElementById('apBadge').textContent = 'GENERATE';
+      document.getElementById('apBadge').className = 'ap-status-badge running';
+      renderArena();
+      await waitRoutinePhase(genAgents, 900000);
+
+      // Phase EDIT
+      document.getElementById('apBadge').textContent = 'EDIT';
+      for (let i = 0; i < 4; i++) {
+        await fetch(`${AGENT_SERVER}/launch`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agent:'editorial', prompt:`Partition ${i+1}/4, filtre: article_id mod 4 = ${i}`}) }).catch(()=>{});
+      }
+      renderArena();
+      await waitRoutinePhase(['editorial'], 900000);
+
+      // Phase VALIDATE
+      document.getElementById('apBadge').textContent = 'VALIDATE';
+      await fetch(`${AGENT_SERVER}/launch`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({agent:'validator'}) }).catch(()=>{});
+      renderArena();
+      await waitRoutinePhase(['validator'], 600000);
+
+      document.getElementById('apBadge').textContent = 'TERMINE';
+      document.getElementById('apBadge').className = 'ap-status-badge idle';
+    } catch(e) {
+      document.getElementById('apBadge').textContent = 'ERREUR';
+      console.error('Routine error:', e);
     }
+    routineRunning = false;
+    autopilotRunning = false;
+    updateAutopilotUI();
+    renderArena();
+  }
+
+  async function waitRoutinePhase(agentNames, maxWait) {
+    const start = Date.now();
+    while (Date.now() - start < maxWait) {
+      await new Promise(r => setTimeout(r, 10000));
+      try {
+        const st = await (await fetch(`${AGENT_SERVER}/status`)).json();
+        const running = Object.keys(st.running || {}).filter(k => agentNames.some(a => k.includes(a)));
+        document.getElementById('apAgentsActive').textContent = running.length;
+        if (running.length === 0) return;
+      } catch(e) { return; }
+    }
+  }
+
+  function showRoutineInfo() {
+    alert(
+      'ROUTINE GLP-1 — Pipeline complet en 4 phases\n\n' +
+      '1. GENERATE : Lance fact-check + seo-audit + opportunities + internal-links\n' +
+      '   → Cree des tickets de correction dans Supabase\n\n' +
+      '2. EDIT : Lance 4 instances editorial en parallele\n' +
+      '   → Applique les corrections dans les fichiers markdown\n\n' +
+      '3. VALIDATE : Lance le validator\n' +
+      '   → Build check, si OK push main → deploy FTP auto\n\n' +
+      'Equivalent terminal : node scripts/routine.mjs\n' +
+      '(inclut aussi la sync analytics GA4/GSC)\n\n' +
+      'Les agents ecrivent dans Supabase (correction_tickets, fact_check_results, etc.)\n' +
+      'Seul l\'editorial modifie les fichiers. Seul le validator deploie.'
+    );
   }
 
   function updateAutopilotUI() {
