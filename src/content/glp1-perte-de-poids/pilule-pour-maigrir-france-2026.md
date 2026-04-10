@@ -131,9 +131,9 @@ Pour suivre l'avancee de ce traitement, consultez notre article : [Orforglipron,
 
 ---
 
-## 4. Wegovy Oral (Comprime de Semaglutide Haute Dose) : En Developpement
+## 4. Wegovy Oral (Comprime de Semaglutide Haute Dose) : Approuve par la FDA
 
-Novo Nordisk, le fabricant du Wegovy injectable, developpe egalement une **version orale a haute dose du semaglutide** specifiquement concue pour la perte de poids.
+Novo Nordisk, le fabricant du Wegovy injectable, a developpe une **version orale a haute dose du semaglutide** specifiquement concue pour la perte de poids. Approuve par la FDA en 2026, c'est la premiere pilule GLP-1 autorisee pour l'obesite.
 
 ### Differences avec Rybelsus
 
@@ -147,7 +147,7 @@ Les essais cliniques de Phase III (programme OASIS) ont demontre des resultats p
 - Ces resultats se rapprochent de ceux de l'injection Wegovy
 - Le profil de securite est coherent avec ce que l'on connait du semaglutide
 
-Novo Nordisk a soumis des demandes d'autorisation aupres de la FDA et de l'EMA. L'approbation pourrait intervenir courant 2026-2027.
+Approuve par la FDA en 2026 pour la perte de poids, le Wegovy oral est la premiere pilule GLP-1 autorisee pour l'obesite. La soumission EMA est en cours pour une mise a disposition en France.
 
 Pour suivre les dernieres informations, consultez : [Wegovy comprime oral en France](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/).
 
@@ -188,8 +188,8 @@ L'ANSM (Agence Nationale de Securite du Medicament) publie regulierement des ale
 | **Type** | Comprime oral (GLP-1) | Comprime oral (inhibiteur lipase) | Injection sous-cutanee (GLP-1) |
 | **Perte de poids moyenne** | 10-12 % | 3-5 % | 15-22 % |
 | **Frequence** | 1 comprime/jour | 1 a 3 comprimes/jour | 1 injection/semaine |
-| **Prix mensuel** | ~130 euros | 50-70 euros | 170-360 euros |
-| **Remboursement** | 30 % (DT2 uniquement) | Non rembourse | 30 % (DT2 pour Ozempic) |
+| **Prix mensuel** | 80-100 euros | 50-70 euros | 170-360 euros |
+| **Remboursement** | 65 % (DT2 uniquement) | Non rembourse | 65 % (DT2 pour Ozempic) |
 | **Contraintes** | A jeun, 30 min avant repas | Regime pauvre en graisses | Injection a realiser soi-meme |
 | **Effets secondaires principaux** | Nausees, diarrhee | Selles grasses, flatulences | Nausees, diarrhee |
 | **Ordonnance requise** | Oui | Oui (Xenical) | Oui |
@@ -214,11 +214,11 @@ Un **medicament** (comme le Rybelsus ou le Xenical) a passe des essais cliniques
 
 ### Les pilules pour maigrir sont-elles remboursees par la Securite sociale ?
 
-La situation du [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) est complexe. Le Rybelsus est rembourse a 30 % uniquement pour le diabete de type 2, pas pour la perte de poids. L'orlistat n'est pas rembourse. Les GLP-1 injectables comme Ozempic sont rembourses pour le diabete, mais pas pour l'obesite seule. Le cout reste donc majoritairement a la charge du patient.
+La situation du [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) est complexe. Le Rybelsus est rembourse a 65 % uniquement pour le diabete de type 2, pas pour la perte de poids. L'orlistat n'est pas rembourse. Les GLP-1 injectables comme Ozempic sont rembourses pour le diabete, mais pas pour l'obesite seule. Le cout reste donc majoritairement a la charge du patient.
 
 ### Quand les nouvelles pilules GLP-1 seront-elles disponibles en France ?
 
-Deux molecules orales majeures sont en cours de developpement. L'**orforglipron** (Eli Lilly) pourrait obtenir une approbation en 2027-2028. Le **Wegovy oral** (semaglutide haute dose de Novo Nordisk) pourrait arriver d'ici 2026-2027. Ces traitements pourraient offrir une alternative orale aussi efficace que les injections actuelles.
+Deux molecules orales majeures sont en cours de developpement. L'**orforglipron** (Eli Lilly), approuve par la FDA en avril 2026 sous le nom Foundayo, devrait arriver en Europe courant 2027 (soumission EMA en cours). Le **Wegovy oral** (semaglutide haute dose de Novo Nordisk) a ete approuve par la FDA en 2026, et la soumission EMA est en cours pour la France. Ces traitements pourraient offrir une alternative orale aussi efficace que les injections actuelles.
 
 ---
 

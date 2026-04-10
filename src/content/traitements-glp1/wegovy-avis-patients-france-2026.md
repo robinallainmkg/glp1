@@ -231,7 +231,7 @@ La comparaison entre Wegovy et Mounjaro (tirzepatide) est l'une des questions le
 | Perte de poids moyenne | -15 a -17% | -15.7 a -22.5 % |
 | Frequence d'injection | 1 fois par semaine | 1 fois par semaine |
 | Tolerance digestive | Nausees frequentes | Nausees legerement moins frequentes selon les retours |
-| Prix mensuel (dose max) | 320 - 360 euros | 280 - 350 euros |
+| Prix mensuel (dose max) | 320 - 360 euros | ~440 euros |
 | Remboursement (avril 2026) | Non | Non (sauf indication diabete) |
 | Recul clinique | Plus de 5 ans d'etudes | Plus recent (etudes SURMOUNT) |
 

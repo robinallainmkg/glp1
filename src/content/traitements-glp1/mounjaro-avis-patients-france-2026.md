@@ -133,7 +133,7 @@ L'un des aspects les plus demandes dans les avis sur Mounjaro concerne la compar
 | **Frequence injection** | 1x par semaine | 1x par semaine | 1x par semaine |
 | **Note patients** | 4,4/5 | 4,1/5 | 4,0/5 |
 | **Prix mensuel (estimation)** | 230-440 EUR | 260-300 EUR | ~77-90 EUR |
-| **Remboursement** | Non (attendu 2e semestre 2026) | Non (obesite) | Oui (diabete uniquement) |
+| **Remboursement** | Non (attendu 2e semestre 2026) | Non rembourse en avril 2026 | Oui (diabete uniquement) |
 | **Disponibilite France** | Disponible depuis novembre 2024 | Ruptures frequentes | Disponible |
 
 Le detail des prix est mis a jour regulierement sur nos pages dediees : [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/), [prix Ozempic](/collections/glp1-cout/prix-ozempic-france/), [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/).

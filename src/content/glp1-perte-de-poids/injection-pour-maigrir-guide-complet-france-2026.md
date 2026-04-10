@@ -92,7 +92,7 @@ Mounjaro a marque l'histoire de la medecine de l'obesite en 2024 : dans l'essai 
 - **Molecule** : Liraglutide a dose elevee (3mg)
 - **Frequence** : **Une injection par jour** (contrairement aux autres qui sont hebdomadaires)
 - **Efficacite** : Perte de poids de **8 a 10% du poids corporel**
-- **Prix** : 280 a 320 euros par mois
+- **Prix** : 240 a 300 euros par mois
 - **Indication** : IMC superieur ou egal a 30, ou superieur ou egal a 27 avec comorbidites
 - **Titration** : Augmentation progressive de 0.6mg par semaine pendant 5 semaines
 
@@ -147,7 +147,7 @@ La prescription hors AMM d'Ozempic pour la perte de poids est une pratique medic
       <td><strong><a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a></strong></td>
       <td>1x/jour</td>
       <td>-8 a 10%</td>
-      <td>280-320 euros</td>
+      <td>240-300 euros</td>
       <td>Non rembourse</td>
       <td>IMC 30+ ou 27+ avec comorbidites</td>
     </tr>
@@ -234,7 +234,7 @@ Comme tout medicament, les injections GLP-1 peuvent provoquer des effets seconda
 
 ### Effets secondaires frequents (premiers jours a premieres semaines)
 
-- **Nausees** : L'effet secondaire le plus courant, rapporte par **60 a 80% des patients** en debut de traitement. Les nausees sont generalement legeres et disparaissent progressivement en 2 a 4 semaines a mesure que l'organisme s'adapte.
+- **Nausees** : L'effet secondaire le plus courant, rapporte par **20 a 45 % des patients selon la molecule et le dosage** en debut de traitement. Les nausees sont generalement legeres et disparaissent progressivement en 2 a 4 semaines a mesure que l'organisme s'adapte.
 - **Diarrhee ou constipation** : Des troubles du transit sont frequents au debut du traitement. Ils se normalisent dans la majorite des cas.
 - **Douleurs abdominales** : Des crampes ou un inconfort abdominal peuvent survenir, en particulier lors des augmentations de dose.
 - **Maux de tete** et **fatigue** : Des symptomes generaux transitoires sont parfois rapportes.
@@ -287,7 +287,7 @@ La recherche sur les traitements injectables de l'obesite progresse rapidement. 
 
 Developpe par Novo Nordisk, **[CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/)** combine le semaglutide (l'ingredient actif de Wegovy) avec la cagrilintide, un analogue de l'amyline. Les resultats de l'essai clinique de phase 3 sont prometteurs :
 
-- **Perte de poids** : -22.7% en moyenne
+- **Perte de poids** : -20.4 % en intention de traiter (22.7 % chez les patients restes sous traitement)
 - **Injection** : Une fois par semaine
 - **Commercialisation estimee** : 2027-2028
 
@@ -313,7 +313,7 @@ Les injections GLP-1 disposent d'un **profil de securite bien etabli**, valide p
 
 ### Combien de kilos peut-on perdre avec une injection pour maigrir ?
 
-La perte de poids varie selon le traitement et le profil du patient. En moyenne : **Saxenda** permet de perdre 8 a 10% du poids corporel, **Ozempic** 5 a 10 %, **Wegovy** 15 a 17%, et **Mounjaro** 16 a 22.5 %. Pour une personne de 100 kg, cela represente une perte de 8 a 26 kg selon le traitement. Les resultats sont meilleurs lorsque le traitement est associe a une alimentation equilibree et a une activite physique reguliere. Decouvrez des [resultats reels avant/apres](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de patients sous GLP-1.
+La perte de poids varie selon le traitement et le profil du patient. En moyenne : **Saxenda** permet de perdre 8 a 10% du poids corporel, **Ozempic** 5 a 10 %, **Wegovy** 15 a 17%, et **Mounjaro** 16 a 22.5 %. Pour une personne de 100 kg, cela represente une perte de 5 a 22.5 kg selon le traitement. Les resultats sont meilleurs lorsque le traitement est associe a une alimentation equilibree et a une activite physique reguliere. Decouvrez des [resultats reels avant/apres](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de patients sous GLP-1.
 
 ### Faut-il une ordonnance pour une injection pour maigrir ?
 

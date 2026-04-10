@@ -129,7 +129,9 @@ Son avis : le plus difficile selon elle, ce sont les premieres semaines d'adapta
 
 Thomas a ete oriente vers Ozempic par son medecin generaliste dans le cadre d'une prise en charge globale. Il a commence a 0.25 mg et est monte a 1 mg en 6 semaines.
 
-Apres **8 mois de traitement**, il a perdu **18 kg** (de 108 kg a 90 kg).
+Apres **8 mois de traitement**, il a perdu **18 kg** (de 108 kg a 90 kg), soit environ 17 % de son poids initial.
+
+> **Note** : ce resultat est nettement superieur a la moyenne observee avec Ozempic 1 mg (5 a 10 % de perte de poids). Il s'explique probablement par la combinaison du traitement avec des modifications significatives du mode de vie (alimentation + activite physique).
 
 - **Tension arterielle** : normalisee sans modification du traitement antihypertenseur
 - **Appetit** : reduction drastique, notamment des envies de grignotage nocturne

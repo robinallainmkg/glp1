@@ -104,7 +104,7 @@ Depuis l'elargissement des regles de prescription, il est possible d'obtenir une
 
 ### Conditions de la teleconsultation
 
-- Le medecin teleconsultant doit avoir la formation GLP-1 requise par l'ANSM.
+- Le medecin teleconsultant doit etre habilite a prescrire des traitements GLP-1.
 - Une premiere consultation en presentiel est recommandee (mais pas obligatoire) pour prendre les mesures anthropometriques (poids, taille, tour de taille).
 - Si vous avez deja des bilans sanguins recents (moins de 3 mois), le medecin peut evaluer votre eligibilite a distance.
 
@@ -118,7 +118,7 @@ Depuis l'elargissement des regles de prescription, il est possible d'obtenir une
 
 - Le medecin peut vous demander de realiser un bilan sanguin en laboratoire avant de prescrire.
 - Le suivi regulier (tous les 3 mois la premiere annee) peut alterner entre consultations en presentiel et teleconsultations.
-- Certaines plateformes de teleconsultation ne proposent pas de medecins formes aux GLP-1 : verifiez avant de prendre rendez-vous.
+- Certaines plateformes de teleconsultation ne proposent pas de medecins habilites a prescrire des GLP-1 : verifiez avant de prendre rendez-vous.
 
 ## Prix et remboursement Ozempic avec ordonnance
 
@@ -166,8 +166,8 @@ L'achat d'Ozempic en dehors du circuit pharmaceutique officiel expose a des dang
 
 ### Que faire si vous ne trouvez pas de medecin prescripteur ?
 
-- Consultez votre medecin traitant en premier lieu : depuis juin 2025, les generalistes formes peuvent prescrire.
-- Utilisez les plateformes de teleconsultation pour acceder a un medecin forme aux GLP-1.
+- Consultez votre medecin traitant en premier lieu : depuis juin 2025, les generalistes peuvent prescrire sous certaines conditions.
+- Utilisez les plateformes de teleconsultation pour acceder a un medecin habilite a prescrire des GLP-1.
 - Contactez un centre specialise en obesite (CSO) si votre situation est complexe.
 - Ne cedez jamais a la tentation d'acheter en ligne sans ordonnance.
 
@@ -203,15 +203,15 @@ Non, c'est strictement impossible. Ozempic est un medicament de la liste I, soum
 
 ### Mon medecin generaliste peut-il me prescrire Ozempic ?
 
-Oui. Pour le diabete de type 2, tout medecin generaliste peut prescrire Ozempic sans restriction. Pour la perte de poids, depuis juin 2025, les medecins generalistes ayant suivi la formation ANSM sur les traitements GLP-1 peuvent egalement prescrire des agonistes GLP-1. Demandez a votre medecin s'il a cette habilitation.
+Oui. Pour le diabete de type 2, tout medecin generaliste peut prescrire Ozempic sans restriction. Pour la perte de poids, depuis juin 2025, les medecins generalistes peuvent egalement prescrire des agonistes GLP-1 sous certaines conditions. Demandez a votre medecin s'il est habilite.
 
 ### Combien coute Ozempic avec une ordonnance ?
 
-Le prix public d'un stylo Ozempic varie entre 80 et 90 euros pour un mois de traitement. Pour les patients diabetiques, la Securite sociale rembourse 65 % du cout (100 % en ALD). Pour une prescription hors AMM (perte de poids), le medicament n'est pas rembourse et reste entierement a votre charge. Retrouvez tous les details sur notre [page dediee aux prix Ozempic](/collections/glp1-cout/prix-ozempic-france/).
+Le prix public d'un stylo Ozempic varie entre 80 et 90 euros pour un mois de traitement. Pour les patients diabetiques, la Securite sociale rembourse 30 % du cout (100 % en ALD). Pour une prescription hors AMM (perte de poids), le medicament n'est pas rembourse et reste entierement a votre charge. Retrouvez tous les details sur notre [page dediee aux prix Ozempic](/collections/glp1-cout/prix-ozempic-france/).
 
 ### Peut-on obtenir une ordonnance Ozempic par teleconsultation ?
 
-Oui, c'est possible depuis l'elargissement des regles de prescription en 2025. Le medecin teleconsultant doit etre forme aux traitements GLP-1. Il vous demandera probablement des bilans sanguins recents et un releve de votre poids et taille. L'ordonnance electronique est ensuite envoyee directement a votre pharmacie.
+Oui, c'est possible depuis l'elargissement des regles de prescription en 2025. Le medecin teleconsultant doit etre habilite a prescrire des traitements GLP-1. Il vous demandera probablement des bilans sanguins recents et un releve de votre poids et taille. L'ordonnance electronique est ensuite envoyee directement a votre pharmacie.
 
 ### Quelle est la duree de validite d'une ordonnance Ozempic ?
 
