@@ -74,7 +74,7 @@ Les sucres ajoutés sont des calories "vides" sans pouvoir rassasiant. En les su
 ### Alternatives aux sucreries et desserts
 - **Fruits entiers** : une pomme, une poire, des fruits rouges — la fibre ralentit l'absorption
 - **Chocolat noir 85%** minimum : 1 à 2 carrés apportent satisfaction sans pic glycémique
-- **Yaourt nature avec cannelle** : la cannelle a un effet stabilisateur reconnu sur la glycémie
+- **Yaourt nature avec cannelle** : la cannelle a un effet stabilisateur reconnu sur l'[index glycémique des aliments](/regime-glp1/glp1-index-glycemique/)
 - **Compote sans sucre ajouté** : vérifiez l'étiquette (uniquement les sucres naturels des fruits)
 
 ### Alternatives aux céréales du petit-déjeuner industrielles

@@ -1,10 +1,10 @@
 ---
-title: "Prix Ozempic France 2026 : Coût Réel Avec et Sans Ordonnance"
+title: "Prix Ozempic France 2026 : Coût Réel et Remboursement"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
-description: "Prix Ozempic en pharmacie : 77,60€/stylo. Sur ordonnance diabète : remboursé à 65%, reste 40-55€/mois. Sans ordonnance pour maigrir : prix complet. Comparatif par dosage."
+description: "Prix Ozempic pharmacie : 77,60€/stylo remboursé 65% pour le diabète. Sans ordonnance : 155€/mois. Comparatif par dosage 2026."
 keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois']
 seoTitle: "Prix Ozempic 2026 : Combien Coûte Ozempic Avec et Sans Ordonnance ?"
-seoDescription: "Prix Ozempic avril 2026 : 77,60€/stylo. Remboursé 65% pour le diabète (reste 40€/mois). Sans ordonnance pour maigrir : 155€/mois. Tous les tarifs + mutuelles."
+seoDescription: "Prix Ozempic 2026 : 77,60€/stylo, remboursé 65% pour le diabète (reste 40€/mois). Sans ordonnance : 155€/mois. Tarifs par dosage."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
 updatedAt: '2025-12-27'
@@ -97,7 +97,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 | Ozempic | 90-120 € | 30% (DT2 uniquement) |
 | [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
-| Trulicity | ~81 € | 65% (DT2 uniquement) |
+| <a href="/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
 | [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale

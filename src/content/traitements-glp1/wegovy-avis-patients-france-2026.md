@@ -1,6 +1,6 @@
 ---
-title: "Wegovy Avis 2026 : Témoignages et Retours d'Expérience en France"
-description: "Wegovy avis patients France 2026 : témoignages réels, résultats perte de poids (-15 à 17%), effets secondaires et prix. Vaut-il le coût sans remboursement ?"
+title: "Wegovy Avis 2026 : Témoignages Patients en France"
+description: "Wegovy avis patients France 2026 : témoignages réels, résultats perte de poids (-15 à 17%), effets secondaires et prix. Vaut-il le coût ?"
 author: "Dr. Marie Dubois"
 thumbnail: "/images/thumbnails/wegovy.jpg"
 collection: "traitements-glp1"

@@ -1,6 +1,6 @@
 ---
-title: "Ozempic Avis 2026 : Témoignages Patients et Résultats Réels en France"
-description: "Ozempic avis patients France 2026 : témoignages réels, perte de poids moyenne, effets secondaires vécus et retours d'expérience après 3, 6 et 12 mois de traitement."
+title: "Ozempic Avis 2026 : Témoignages Patients en France"
+description: "Ozempic avis 2026 : témoignages réels, perte de poids moyenne, effets secondaires et retours d'expérience après 3, 6 et 12 mois de traitement."
 author: "Dr. Marie Dubois"
 thumbnail: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
 collection: "traitements-glp1"

@@ -1,6 +1,6 @@
 ---
-title: "Injection pour Maigrir en France 2026 : Guide Complet des Traitements"
-description: "Injections pour maigrir en France : Wegovy, Mounjaro, Saxenda, Ozempic. Prix, efficacité, conditions de prescription et avis patients. Tout savoir avant de commencer."
+title: "Injection pour Maigrir 2026 : Guide Complet France"
+description: "Injections pour maigrir en France : Wegovy, Mounjaro, Saxenda, Ozempic. Prix, efficacité et conditions de prescription en 2026."
 author: "Dr. Marie Dubois"
 thumbnail: "/images/thumbnails/guide-complet-GLP1.jpg"
 collection: "glp1-perte-de-poids"

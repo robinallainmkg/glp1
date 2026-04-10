@@ -36,11 +36,11 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le régime DASH (*Dietary Approaches to Stop Hypertension*) a été conçu aux États-Unis pour abaisser la tension artérielle sans médicament. Ses effets bénéfiques sur la glycémie et le poids ont ensuite été largement documentés, faisant de lui une approche particulièrement adaptée aux patients qui cumulent hypertension, diabète de type 2 et surpoids — un profil très fréquent chez les personnes sous traitement GLP-1 en France.
+Le régime DASH (*Dietary Approaches to Stop Hypertension*) a été conçu aux États-Unis pour abaisser la tension artérielle sans médicament. Ses effets bénéfiques sur la glycémie et le poids ont ensuite été largement documentés, faisant de lui une approche particulièrement adaptée aux patients qui cumulent hypertension, diabète de type 2 et surpoids — un profil très fréquent chez les personnes sous traitement GLP-1 en France. Pour une alimentation complémentaire à faible [index glycémique](/regime-glp1/glp1-index-glycemique/), le régime DASH offre un cadre structuré.
 
 ## Qu'est-ce que le régime DASH ?
 
-Le régime DASH n'est pas un régime hypocalorique au sens strict. Il s'agit d'un mode d'alimentation structuré autour de la réduction du sodium, de l'augmentation des potassium et magnésium alimentaires, et d'un apport élevé en fibres. Son efficacité sur la tension artérielle est validée par de nombreuses études cliniques, dont plusieurs menées en collaboration avec les sociétés savantes de cardiologie et de diabétologie européennes.
+Le régime DASH n'est pas un régime hypocalorique au sens strict. Il s'agit d'un mode d'alimentation structuré autour de la réduction du sodium, de l'augmentation des [micronutriments](/regime-glp1/glp1-micronutriments/) clés (potassium, magnésium), et d'un apport élevé en fibres. Son efficacité sur la tension artérielle est validée par de nombreuses études cliniques, dont plusieurs menées en collaboration avec les sociétés savantes de cardiologie et de diabétologie européennes.
 
 ### Principes nutritionnels clés du DASH
 
@@ -141,7 +141,7 @@ Non. Le régime DASH peut réduire significativement la tension artérielle mais
 
 ## Conclusion
 
-Le régime DASH constitue l'un des meilleurs partenaires alimentaires d'un traitement GLP-1 chez les patients présentant une hypertension associée au diabète de type 2 ou à l'obésité. Sa richesse en potassium, fibres et calcium, combinée à la réduction sodée, agit sur des mécanismes complémentaires de ceux des GLP-1 pour améliorer la santé cardiométabolique globale.
+Le régime DASH constitue l'un des meilleurs partenaires alimentaires d'un traitement GLP-1 chez les patients présentant une hypertension associée au diabète de type 2 ou à l'obésité. Sa richesse en potassium, fibres et calcium, combinée à la réduction sodée, agit sur des mécanismes complémentaires de ceux des GLP-1 — dont les [bénéfices cardiovasculaires](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) sont prouvés — pour améliorer la santé cardiométabolique globale.
 
 Sa mise en place est progressive et ne nécessite pas de compter les calories au gramme près. Quelques ajustements simples — moins de sel, plus de légumes et de légumineuses, des céréales complètes — suffisent à enclencher des bénéfices mesurables en quelques semaines, en synergie avec votre traitement médicamenteux.
 

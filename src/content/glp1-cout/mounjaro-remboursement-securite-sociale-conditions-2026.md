@@ -120,8 +120,8 @@ Pour ces patients, le traitement restera à leur charge, au prix libre pratiqué
 En attendant la finalisation du dossier Mounjaro, voici le statut des autres GLP-1 sur le marché français :
 
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic)** (sémaglutide) : remboursé à 30% pour le **diabète de type 2 uniquement**
-- **Victoza** (liraglutide) : remboursé à **65%** pour le **diabète de type 2**
-- **Trulicity** (dulaglutide) : remboursé à **65%** pour le **diabète de type 2**
+- **<a href="/traitements-glp1/guide-complet-victoza/">Victoza</a>** (liraglutide) : remboursé à **65%** pour le **diabète de type 2**
+- **<a href="/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** (dulaglutide) : remboursé à **65%** pour le **diabète de type 2**
 - **Rybelsus** (sémaglutide oral) : remboursé à 30% pour le **diabète de type 2**
 - **Saxenda** (liraglutide obésité) : **non remboursé**
 - **Wegovy** (sémaglutide obésité) : **non remboursé**

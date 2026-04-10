@@ -1,6 +1,6 @@
 ---
 title: "Reprise de Poids après GLP-1 : 4× Plus Rapide"
-description: "Reprise de poids après arrêt des GLP-1 : 4 fois plus rapide qu'après un régime. Causes biologiques et stratégies pour éviter l'effet rebond."
+description: "Reprise de poids après arrêt GLP-1 : 4 fois plus rapide qu'après un régime classique. Causes biologiques et stratégies anti-effet rebond."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18

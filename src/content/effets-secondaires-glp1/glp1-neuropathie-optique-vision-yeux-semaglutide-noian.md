@@ -124,7 +124,7 @@ La recommandation du PRAC en 2025 concerne spécifiquement les **molécules de s
 Pour l'heure, ce signal n'a pas été formellement identifié pour les autres GLP-1 comme :
 
 - Le **liraglutide** (Victoza, Saxenda)
-- Le **tirzépatide** (Mounjaro)
+- Le **tirzépatide** (<a href="/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a>)
 - Le **dulaglutide** ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity))
 
 Cela peut en partie s'expliquer par le fait que le sémaglutide est le GLP-1 le plus prescrit au monde, ce qui augmente mécaniquement la détection de signaux rares. Des études spécifiques pour les autres molécules sont en cours.

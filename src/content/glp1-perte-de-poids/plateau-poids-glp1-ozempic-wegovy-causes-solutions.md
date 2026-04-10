@@ -1,6 +1,6 @@
 ---
 title: "Plateau de Poids sous GLP-1 : Causes et Solutions"
-description: "Plateau de poids sous GLP-1 Ozempic Wegovy Mounjaro : causes de la stagnation pondérale et stratégies pour relancer la perte de poids."
+description: "Plateau de poids sous GLP-1 (Ozempic, Wegovy, Mounjaro) : causes de la stagnation pondérale et stratégies efficaces pour relancer la perte de poids."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
@@ -142,10 +142,10 @@ Pas nécessairement. Un plateau de 2 mois à mi-parcours de traitement peut refl
 Pas forcément, mais c'est une option que votre médecin peut envisager. Passer d'un sémaglutide (Ozempic/Wegovy) à un tirzépatide (Mounjaro), dont le mécanisme dual (GLP-1 et GIP) produit des pertes de poids supérieures dans les études comparatives, peut être une stratégie.
 
 **Puis-je faire une "pause" dans mon traitement pour le relancer ?**
-C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise rapide du poids. Les données des études STEP ne suggèrent pas que les "pauses" améliorent les résultats à long terme.
+C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise rapide du poids. Les données des études STEP ne suggèrent pas que les "pauses" améliorent les résultats à long terme. La [reprise de poids](/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) est un risque bien documenté après un arrêt.
 
 **Le plateau est-il causé par le stress ou le manque de sommeil ?**
-Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique pour dépasser le plateau](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut également aider à identifier les comportements alimentaires qui freinent la progression.
+Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique](/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pour dépasser le plateau peut également aider à identifier les comportements alimentaires qui freinent la progression.
 
 ## Résumé : que faire face à un plateau ?
 

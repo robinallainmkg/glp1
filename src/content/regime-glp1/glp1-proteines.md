@@ -37,7 +37,7 @@ Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-comple
 
 ## Pourquoi les protéines sont essentielles sous GLP-1
 
-### La fonte musculaire : un risque réel
+### La <a href="/regime-glp1/glp1-fonte-musculaire-preserver-muscles/">fonte musculaire</a> : un risque réel
 
 Quand le corps perd du poids rapidement, il ne puise pas uniquement dans ses réserves de graisse. Une partie de la perte provient du tissu musculaire. Les études cliniques sur le sémaglutide (Wegovy) et le tirzépatide (Mounjaro) montrent que 20 à 40 % de la perte de poids totale peut concerner la masse maigre, c'est-à-dire les muscles, quand l'alimentation n'est pas adaptée.
 
@@ -135,7 +135,7 @@ Soyez attentif à ces signaux qui peuvent indiquer un manque de protéines :
 
 - Fatigue persistante malgré un sommeil suffisant
 - Perte de force rapide lors de l'activité physique
-- Ongles cassants, cheveux fragilisés (les [chutes de cheveux sous GLP-1](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/) peuvent être amplifiées par un manque de protéines)
+- Ongles cassants, cheveux fragilisés (les [chutes de cheveux sous GLP-1](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/) peuvent être amplifiées par un manque de protéines) — ces symptômes signalent souvent des [carences nutritionnelles](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) à surveiller par bilan sanguin
 - Cicatrisation lente
 - Sensation de faiblesse musculaire lors des activités quotidiennes
 

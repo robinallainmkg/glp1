@@ -47,7 +47,7 @@ Le succès des traitements GLP-1 comme [Wegovy](/collections/traitements-glp1/gu
 
 ### Le rôle du collagène et de l'élastine
 
-La peau est un organe vivant dont l'élasticité repose sur deux protéines clés : le collagène (qui assure la structure et la fermeté) et l'élastine (qui permet à la peau de reprendre sa forme après étirement). Quand une personne est en surpoids ou obèse pendant plusieurs années, la peau s'étire pour s'adapter au volume corporel. Ce processus endommage progressivement les fibres de collagène et d'élastine.
+La peau est un organe vivant dont l'élasticité repose sur deux [protéines](/regime-glp1/glp1-proteines/) clés : le collagène (qui assure la structure et la fermeté) et l'élastine (qui permet à la peau de reprendre sa forme après étirement). Quand une personne est en surpoids ou obèse pendant plusieurs années, la peau s'étire pour s'adapter au volume corporel. Ce processus endommage progressivement les fibres de collagène et d'élastine.
 
 Lors d'une perte de poids, le volume graisseux diminue, mais la peau étirée ne se rétracte pas toujours. La capacité de rétraction dépend de l'état des fibres de collagène et d'élastine, qui ont pu être dégradées de manière irréversible par l'étirement prolongé.
 
@@ -124,7 +124,7 @@ Les recommandations pour les patients sous GLP-1 incluent au minimum 2 à 3 séa
 
 ### L'apport protéique
 
-Un apport protéique suffisant (1,2 à 1,6 g de protéines par kg de poids cible par jour) est recommandé pour préserver la masse musculaire pendant la perte de poids. Cela peut être un défi sous GLP-1, car ces traitements réduisent l'appétit et peuvent rendre difficile la consommation de quantités suffisantes de nourriture.
+Un [apport en protéines](/regime-glp1/glp1-proteines/) suffisant (1,2 à 1,6 g de protéines par kg de poids cible par jour) est recommandé pour préserver la masse musculaire pendant la perte de poids. Cela peut être un défi sous GLP-1, car ces traitements réduisent l'appétit et peuvent rendre difficile la consommation de quantités suffisantes de nourriture.
 
 Des compléments protéinés (whey, caséine, protéines végétales) peuvent aider à atteindre les objectifs protéiques quotidiens sans nécessiter de gros volumes alimentaires.
 

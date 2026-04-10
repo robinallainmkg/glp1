@@ -1,9 +1,9 @@
 ---
-title: "Prix Mounjaro France 2026 : Combien Ça Coûte Vraiment ? (Tous Dosages)"
+title: "Prix Mounjaro France 2026 : Tarifs par Dosage"
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
-description: "Prix Mounjaro en France : 230 à 440€/mois selon dosage. Tableau comparatif 2.5mg à 15mg, pharmacies les moins chères en France et à l'étranger (Italie, Espagne, Allemagne). Avril 2026."
+description: "Prix Mounjaro France 2026 : 230 à 440€/mois. Tableau comparatif 2.5mg à 15mg, pharmacies les moins chères en France et en Europe. Avril 2026."
 keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'mounjaro prix le moins cher', 'mounjaro prix le moins cher pharmacie', 'carte prix mounjaro france', 'mounjaro prix espagne', 'mounjaro prix allemagne', 'mounjaro prix italie', 'mounjaro tarif']
-seoTitle: "Prix Mounjaro France 2026 : Le Moins Cher par Dosage (Comparatif)"
+seoTitle: "Prix Mounjaro 2026 : Comparatif par Dosage en France"
 seoDescription: "Prix Mounjaro France avril 2026 : 230-440€/mois. Comparatif par dosage, pharmacies les moins chères et prix en Europe. Non remboursé — astuces pour payer moins."
 publishedAt: '2025-09-06'
 updatedAt: '2026-03-08'

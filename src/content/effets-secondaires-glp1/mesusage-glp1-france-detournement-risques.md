@@ -70,7 +70,7 @@ L'ANSM surveille de près les effets gastro-intestinaux graves associés à l'ut
 
 **Occlusion intestinale** : Des cas d'occlusion intestinale ont été signalés, particulièrement chez des personnes utilisant des doses inappropriées ou augmentant trop rapidement la posologie sans supervision médicale.
 
-**Gastroparésie** : Le ralentissement de la vidange gastrique — un effet recherché pour la perte de poids — peut devenir problématique et évoluer vers une gastroparésie persistante chez certains patients.
+**[Gastroparésie](/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/)** : Le ralentissement de la vidange gastrique — un effet recherché pour la perte de poids — peut devenir problématique et évoluer vers une gastroparésie persistante chez certains patients.
 
 Pour une vue complète des effets secondaires, consultez nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
 
@@ -121,7 +121,7 @@ Les signaux d'alerte d'un mésusage incluent :
 
 - Utilisation sans diagnostic médical d'obésité ou de diabète
 - Absence de suivi médical régulier
-- Obtention du médicament via des canaux non officiels (internet, partage)
+- Obtention du médicament via des canaux non officiels (internet, partage) — risque d'[interactions médicamenteuses](/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) non détectées
 - Augmentation de la dose sans avis médical
 - Utilisation simultanée avec des régimes très restrictifs
 - Objectif uniquement esthétique sans bénéfice de santé attendu

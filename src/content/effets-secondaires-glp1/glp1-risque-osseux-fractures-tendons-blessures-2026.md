@@ -110,7 +110,7 @@ Avec l'âge, la capacité de régénération des tendons et des os diminue. La c
 
 ### Les patients en déficit nutritionnel
 
-Les personnes qui réduisent drastiquement leurs apports alimentaires sous GLP-1 — en mangeant moins de 1 000 à 1 200 kcal/jour — s'exposent à des carences qui fragilisent directement os et tendons. Un suivi nutritionnel régulier est particulièrement important dans ces cas.
+Les personnes qui réduisent drastiquement leurs apports alimentaires sous GLP-1 — en mangeant moins de 1 000 à 1 200 kcal/jour — s'exposent à des [carences nutritionnelles](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) qui fragilisent directement os et tendons. Un suivi nutritionnel régulier est particulièrement important dans ces cas.
 
 ### Les sportifs confirmés
 
@@ -132,7 +132,7 @@ Une progression raisonnable pourrait ressembler à ceci :
 
 ### Maintenir un apport protéique suffisant
 
-La recommandation générale pour les patients sous GLP-1 est de consommer au minimum **1,2 à 1,5 g de protéines par kilogramme de poids idéal par jour**. Cet apport est essentiel pour préserver la masse musculaire et soutenir la synthèse de collagène dans les tendons.
+La recommandation générale pour les patients sous GLP-1 est de consommer au minimum **1,2 à 1,5 g de [protéines](/regime-glp1/glp1-proteines/) par kilogramme de poids idéal par jour**. Cet apport est essentiel pour préserver la masse musculaire et soutenir la synthèse de collagène dans les tendons.
 
 Concrètement, pour une personne visant un poids de 70 kg, cela représente 84 à 105 g de protéines par jour — à répartir sur tous les repas, en privilégiant des sources de haute qualité biologique (viandes maigres, poissons, œufs, légumineuses, produits laitiers).
 

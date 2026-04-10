@@ -125,9 +125,21 @@ async function runPipeline() {
   // Done
   pipelinePhase = 'done';
   const duration = Math.round((Date.now() - new Date(pipelineStartedAt).getTime()) / 1000);
+  const durationStr = `${Math.floor(duration/60)}m${duration%60}s`;
   console.log(`\n============================================================`);
-  console.log(`🎉 [${t()}] PIPELINE TERMINE en ${Math.floor(duration/60)}m${duration%60}s`);
+  console.log(`🎉 [${t()}] PIPELINE TERMINE en ${durationStr}`);
   console.log(`============================================================\n`);
+
+  // Windows notification
+  try {
+    const { execSync: es2 } = await import('child_process');
+    es2(`powershell -Command "New-BurntToastNotification -Text 'Pipeline GLP-1 termine', 'Duree: ${durationStr}' -AppLogo ''"`, { stdio: 'pipe' });
+  } catch {
+    try {
+      const { execSync: es3 } = await import('child_process');
+      es3(`msg * /TIME:10 "Pipeline GLP-1 termine en ${durationStr}"`, { stdio: 'pipe' });
+    } catch {}
+  }
 }
 
 // Output buffers — keep last N lines per agent (persists after agent stops)
@@ -1259,6 +1271,23 @@ const server = createServer(async (req, res) => {
       startedAt: pipelineStartedAt,
       agents: [...running.keys()]
     }));
+    return;
+  }
+
+  // GET /logs/:agent — get agent output buffer
+  const logsMatch = url.pathname.match(/^\/logs\/(.+)$/);
+  if (req.method === 'GET' && logsMatch) {
+    const name = decodeURIComponent(logsMatch[1]);
+    const buf = outputBuffers.get(name);
+    if (!buf) {
+      res.writeHead(404, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+      res.end(JSON.stringify({ error: `Pas de logs pour: ${name}`, available: [...outputBuffers.keys()] }));
+      return;
+    }
+    const last = parseInt(url.searchParams.get('last') || '50');
+    const lines = buf.lines.slice(-last);
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+    res.end(JSON.stringify({ agent: name, running: buf.running || false, total: buf.lines.length, lines }));
     return;
   }
 

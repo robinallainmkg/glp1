@@ -93,11 +93,12 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Contre-indications** : Vérification préalable obligatoire
 - **Interactions** : Attention médicaments concomitants
 - **Effets secondaires** : Surveillance symptômes
+- **[Carences](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : Bilan sanguin recommandé sous traitement GLP-1
 - **Urgences** : Protocoles d'action définis
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés
+- **Suivi biologique** : Bilans réguliers programmés pour prévenir les [carences nutritionnelles](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 

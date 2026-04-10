@@ -1,10 +1,10 @@
 ---
-title: "Effets Secondaires Mounjaro : Les Risques Graves à Connaître (2026)"
+title: "Effets Secondaires Mounjaro : Risques (2026)"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
-description: "Effets secondaires Mounjaro graves et fréquents : nausées, diarrhée, pancréatite, [perte de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions). Ce que votre médecin ne vous dit pas toujours. Liste complète + solutions."
+description: "Effets secondaires Mounjaro : nausées, diarrhée, pancréatite. Liste complète des risques fréquents et graves + solutions concrètes pour les gérer."
 keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro effet secondaire long terme', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger']
-seoTitle: "Effets Secondaires Mounjaro : Risques Graves et Fréquents (2026)"
-seoDescription: "Effets secondaires Mounjaro : les 12 effets les plus fréquents + les risques graves (pancréatite, gastroparésie). Témoignages patients et solutions concrètes."
+seoTitle: "Effets Secondaires Mounjaro : Risques Graves (2026)"
+seoDescription: "Effets secondaires Mounjaro : 12 effets fréquents + risques graves (pancréatite, gastroparésie). Témoignages et solutions concrètes."
 publishedAt: '2025-08-30'
 updatedAt: '2025-12-27'
 date: 2025-08-30
@@ -81,7 +81,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 - Urticaire généralisée
 - Choc anaphylactique
 
-**Pancréatite aiguë**
+**[Pancréatite aiguë](/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)**
 - Douleurs abdominales intenses
 - Nausées et vomissements persistants
 - Fièvre
@@ -249,7 +249,7 @@ Si vous vomissez **dans les 30 minutes** après l'injection, contactez votre mé
 
 ### Les effets secondaires de Mounjaro sont-ils dangereux ?
 
-La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves (pancréatite, insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
+La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves ([pancréatite aiguë](/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
 
 ### Comment éviter les nausées avec Mounjaro ?
 

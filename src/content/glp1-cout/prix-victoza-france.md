@@ -211,9 +211,9 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 ## 📝 Conclusion
 
-**Attention : Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026**, pour des raisons commerciales (non liées à la sécurité du médicament). Les patients actuellement sous Victoza doivent consulter leur médecin pour envisager une alternative comme Ozempic ou [Trulicity](/collections/glp1-cout/prix-trulicity-france/). Des pénuries intermittentes sont possibles avant l'arrêt définitif.
+**Attention : Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026**, pour des raisons commerciales (non liées à la sécurité du médicament). Les patients actuellement sous Victoza doivent consulter leur médecin pour envisager une alternative comme Ozempic et vérifier les conditions de [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026/) ou [Trulicity](/collections/glp1-cout/prix-trulicity-france/). Des pénuries intermittentes sont possibles avant l'arrêt définitif.
 
-Victoza reste pour l'instant un traitement au bon rapport prix/tolérance pour le diabète de type 2.
+Victoza reste pour l'instant un traitement au bon rapport prix/tolérance pour le diabète de type 2. Consultez notre page dédiée aux [effets secondaires Victoza](/effets-secondaires-glp1/effets-secondaires-victoza/) pour connaître les précautions.
 
 ### Points clés à retenir :
 - **Prix moyen** : ~48,42 €/mois (prix Vidal pour 2 stylos)

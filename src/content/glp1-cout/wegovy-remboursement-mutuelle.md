@@ -1,6 +1,6 @@
 ---
-title: "Wegovy Remboursement 2026 : Quelles Mutuelles Remboursent ? (Liste Complète)"
-description: "Wegovy remboursement 2026 : liste des mutuelles qui remboursent (MGEN, Harmonie, Alan...), montants réels constatés, et calendrier du remboursement Sécu prévu S2 2026."
+title: "Wegovy Remboursement 2026 : Mutuelles et Sécu"
+description: "Wegovy remboursement 2026 : mutuelles qui remboursent (MGEN, Harmonie, Alan), montants et calendrier Sécu prévu S2 2026."
 pubDate: 2025-08-23
 date: '2026-03-17'
 updatedAt: '2026-03-17'

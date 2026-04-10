@@ -1,6 +1,6 @@
 ---
 title: "GLP-1 et Graisse Abdominale : Ozempic et Mounjaro"
-description: "GLP-1 graisse abdominale viscérale : résultats cliniques Ozempic et Mounjaro. Mécanismes, données chiffrées et comparaison des deux traitements."
+description: "GLP-1 et graisse abdominale viscérale : résultats cliniques Ozempic vs Mounjaro. Mécanismes, données chiffrées et comparaison 2026."
 pubDate: 2026-03-17
 date: "2026-03-17"
 updatedAt: 2026-03-17
@@ -105,9 +105,9 @@ L'étude SUSTAIN-6 chez des patients diabétiques de type 2 à haut risque cardi
 
 Pour les patients traités par [Ozempic pour le diabète](/collections/traitements-glp1/guide-complet-ozempic/), ces bénéfices sur la graisse viscérale s'ajoutent aux effets hypoglycémiants.
 
-### L'étude SELECT : bénéfices cardiovasculaires liés à la réduction viscérale
+### L'étude SELECT : [bénéfices cardiovasculaires des GLP-1](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) liés à la réduction viscérale
 
-L'étude SELECT, qui a démontré une réduction de 20% des événements cardiovasculaires majeurs sous sémaglutide 2,4 mg, suggère que la réduction de la graisse viscérale joue un rôle dans ce bénéfice cardiovasculaire — en plus des effets directs sur l'athérosclérose.
+L'étude SELECT, qui a démontré une réduction de 20% des événements cardiovasculaires majeurs sous sémaglutide 2,4 mg, suggère que la réduction de la graisse viscérale joue un rôle dans les [bénéfices cardiovasculaires des GLP-1](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) — en plus des effets directs sur l'athérosclérose.
 
 ## Mounjaro (tirzépatide) : résultats sur la graisse abdominale {#mounjaro}
 

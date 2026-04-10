@@ -72,7 +72,7 @@ Huile de coco, huile d'olive, graisses animales non transformées, noix, avocats
 Le régime paléo partage plusieurs caractéristiques avec les recommandations nutritionnelles pour les patients sous GLP-1 :
 
 - **Très faible en sucres rapides** : l'absence de céréales raffinées et de sucres ajoutés stabilise parfaitement la glycémie, potentialisant l'effet des GLP-1 sur l'insuline
-- **Riche en protéines** : les protéines sont hautement satiantes et préservent la masse musculaire pendant la perte de poids induite par le traitement
+- **Riche en protéines** : les protéines sont hautement satiantes et permettent de [préserver la masse musculaire](/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids induite par le traitement
 - **Riche en légumes et fibres** : améliore le transit, souvent perturbé en début de traitement GLP-1
 
 ### Points de vigilance importants
@@ -148,7 +148,7 @@ Pour tirer le meilleur du paléo sans ses inconvénients, une version adaptée e
 Ne supprimez pas toutes les céréales et légumineuses du jour au lendemain. Commencez par supprimer les céréales raffinées (pain blanc, riz blanc, pâtes blanches) et gardez les légumineuses et les céréales complètes pendant la phase d'adaptation au GLP-1.
 
 ### Surveiller les protéines
-Le régime paléo est souvent très riche en protéines. Sous GLP-1, l'appétit est réduit, ce qui peut entraîner une consommation insuffisante de protéines. L'[apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) est essentiel pour préserver la masse musculaire pendant la perte de poids. Veillez à atteindre au moins 1,2 g de protéines par kg de poids corporel par jour.
+Le régime paléo est souvent très riche en protéines. Sous GLP-1, l'appétit est réduit, ce qui peut entraîner une consommation insuffisante de protéines. L'[apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) est essentiel pour <a href="/glp1-fonte-musculaire-preserver-muscles/">préserver la masse musculaire</a> pendant la perte de poids. Veillez à atteindre au moins 1,2 g de protéines par kg de poids corporel par jour.
 
 ### Hydratation
 Le régime paléo, en éliminant les céréales qui retiennent l'eau, peut entraîner une perte hydrique plus rapide. Buvez suffisamment (1,5 à 2 litres par jour) et veillez aux apports en sodium si vous transpirez beaucoup.

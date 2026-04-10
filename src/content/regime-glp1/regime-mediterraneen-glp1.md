@@ -35,7 +35,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le régime méditerranéen est aujourd'hui reconnu comme l'un des modes d'alimentation les mieux documentés pour la santé cardiovasculaire et métabolique. Associé à un traitement GLP-1 comme l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy) ou le Mounjaro (tirzepatide), il constitue un soutien naturel et complémentaire pour amplifier les bénéfices du traitement. Cette combinaison est d'ailleurs celle recommandée en première intention par la plupart des endocrinologues et diabétologues français.
+Le régime méditerranéen est aujourd'hui reconnu comme l'un des modes d'alimentation les mieux documentés pour la santé cardiovasculaire et métabolique. Associé à un traitement GLP-1 comme l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy) ou le <a href="/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a> (tirzepatide), il constitue un soutien naturel et complémentaire pour amplifier les bénéfices du traitement. Cette combinaison est d'ailleurs celle recommandée en première intention par la plupart des endocrinologues et diabétologues français.
 
 ## Qu'est-ce que le régime méditerranéen ?
 

@@ -174,7 +174,7 @@ mainKeyword: "effets secondaires Wegovy"
 ### Préparation mentale
 
 **Se préparer psychologiquement** :
-- Connaître les effets possibles, notamment les [effets psychologiques possibles](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
+- Connaître les effets possibles, notamment les impacts sur la [santé mentale](/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
 - Prévoir des aménagements professionnels
 - Avoir un soutien familial
 
@@ -228,7 +228,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 **Données de pharmacovigilance** :
 - Signalements rares d'effets graves
-- Profil de sécurité favorable
+- Profil de sécurité favorable, avec des [bénéfices cardiovasculaires démontrés par l'étude SELECT](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
 - Bénéfice/risque positif
 
 ## 📝 Conclusion

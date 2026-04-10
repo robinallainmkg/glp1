@@ -214,9 +214,9 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 ### Contre-indications absolues
 
 1. **Diabète type 1** : risque acidocétose
-2. **Grossesse/allaitement** : sécurité non établie
+2. **[Grossesse](/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/)/allaitement** : sécurité non établie
 3. **Allergie sémaglutide** : réaction anaphylactique
-4. **Gastroparésie sévère** : aggravation possible
+4. **[Gastroparésie](/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/) sévère** : aggravation possible
 5. **Antécédents carcinome médullaire thyroïde**
 
 ### Précautions renforcées
@@ -229,7 +229,7 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 **Patients âgés > 75 ans** :
 - Début doses plus faibles
 - Surveillance rapprochée
-- Attention interactions médicamenteuses
+- Attention [interactions médicamenteuses](/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 
 **Antécédents pancréatiques** :
 - Contrôle lipase régulier

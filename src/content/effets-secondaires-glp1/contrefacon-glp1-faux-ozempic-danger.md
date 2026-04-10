@@ -18,7 +18,7 @@ affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "contrefaçon GLP-1 faux ozempic"
 ---
 
-Depuis que la pénurie d'Ozempic a frappé la France et le monde entier, un marché parallèle dangereux a émergé, directement lié au [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) qui alimente cette demande. Des dizaines de sites internet proposent des versions prétendument identiques d'Ozempic, Wegovy ou Mounjaro — souvent à des prix défiant toute concurrence. Derrière ces offres attractives se cachent des risques sanitaires graves, documentés par les autorités de santé mondiales.
+Depuis que la pénurie d'Ozempic a frappé la France et le monde entier, un marché parallèle dangereux a émergé, directement lié au [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) qui alimente cette demande. Des dizaines de sites internet proposent des versions prétendument identiques d'Ozempic, Wegovy ou [Mounjaro](/traitements-glp1/guide-complet-mounjaro/) — souvent à des prix défiant toute concurrence. Derrière ces offres attractives se cachent des risques sanitaires graves, documentés par les autorités de santé mondiales.
 
 ## L'explosion des contrefaçons GLP-1
 
@@ -54,15 +54,15 @@ L'ANSM française suit également des signalements de patients ayant reçu des p
 
 ### Le cas particulier des « compounding pharmacies »
 
-Aux États-Unis, un marché légal mais controversé s'est développé : les « compounding pharmacies » (pharmacies de préparation magistrale) ont commencé à préparer du sémaglutide compoundé — c'est-à-dire fabriqué artisanalement — pendant la pénurie. Bien que légale dans ce cadre spécifique, cette pratique soulève des questions de qualité et de standardisation.
+Aux États-Unis, un marché légal mais controversé s'est développé : les « compounding pharmacies » (pharmacies de préparation magistrale) ont commencé à préparer du sémaglutide compoundé — c'est-à-dire fabriqué artisanalement — pendant la [pénurie d'Ozempic](/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives/). Bien que légale dans ce cadre spécifique, cette pratique soulève des questions de qualité et de standardisation.
 
 Ce marché n'existe pas en France sous la même forme. En France, une préparation magistrale de sémaglutide ne peut être réalisée que dans des conditions très strictes, sur ordonnance et pour des cas exceptionnels. Les sites qui vendent du « sémaglutide français préparé en pharmacie » à des particuliers via internet opèrent illégalement.
 
 ## Comment reconnaître un produit authentique
 
-### Les signes d'un [Ozempic authentique](/collections/traitements-glp1/guide-complet-ozempic/) ou Wegovy authentique
+### Les signes d'un [Ozempic authentique](/collections/traitements-glp1/guide-complet-ozempic/) ou [Wegovy](/traitements-glp1/guide-complet-wegovy/) authentique
 
-Un stylo injectable Ozempic ou Wegovy légal présente plusieurs caractéristiques vérifiables :
+Un stylo injectable Ozempic ou [Wegovy](/traitements-glp1/guide-complet-wegovy/) légal présente plusieurs caractéristiques vérifiables :
 
 **L'emballage** : Il doit comporter un numéro de lot, une date de péremption, et le logo du fabricant (Novo Nordisk). La notice doit être en français et mentionner l'autorisation de mise sur le marché européenne.
 
@@ -76,7 +76,7 @@ Un stylo injectable Ozempic ou Wegovy légal présente plusieurs caractéristiqu
 
 Certains signaux doivent vous alerter immédiatement :
 
-- Le site propose de l'Ozempic, Wegovy ou Mounjaro sans ordonnance
+- Le site propose de l'Ozempic, Wegovy ou [Mounjaro](/traitements-glp1/guide-complet-mounjaro/) sans ordonnance
 - Les prix sont anormalement bas (30–50 % en dessous du prix officiel)
 - Le site n'a pas d'adresse physique vérifiable en Europe
 - Le paiement est uniquement possible en cryptomonnaie ou virement bancaire
