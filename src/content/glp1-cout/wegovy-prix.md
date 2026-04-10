@@ -239,7 +239,7 @@ Contactez votre médecin prescripteur ou directement Novo Nordisk France via leu
 ## Nos recommandations
 
 Pour maîtriser le coût de Wegovy :
-1. **Évaluez immédiatement** votre éligibilité au remboursement
+1. **Évaluez immédiatement** votre éligibilité au [remboursement des GLP-1](/glp1-cout/remboursement-glp1-2026/)
 2. **Optimisez votre couverture** mutuelle avant de commencer le traitement
 3. **Explorez tous les programmes d'aide** disponibles
 4. **Planifiez votre budget** sur 12 à 18 mois minimum
