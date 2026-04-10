@@ -1,7 +1,7 @@
 ---
 import StaticLayout from '../layouts/StaticLayout.astro';
-import FeedbackSection from '../components/FeedbackSection.astro';
-import NewsletterCapture from '../components/NewsletterCapture.astro';
+import PartnerComparator from '../components/PartnerComparator.astro';
+// import NewsletterCapture from '../components/NewsletterCapture.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -82,11 +82,11 @@ const mainKeyword = "GLP-1 France";
           Tout sur Ozempic, Wegovy et Mounjaro : <strong style="color:#fff;">prix r&eacute;els</strong>, remboursement, effets secondaires et conseils d'experts m&eacute;dicaux fran&ccedil;ais.
         </p>
         <div class="hp-hero-ctas" style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;">
-          <a id="hero-cta-primary" href="/guides/quel-traitement-glp1-choisir/" data-ab-cta="hero_primary" style="background:#fff;color:#1a3c34;padding:.6rem 1.4rem;border-radius:10px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);">
+          <a href="/guides/quel-traitement-glp1-choisir/" style="background:#fff;color:#1a3c34;padding:.6rem 1.4rem;border-radius:10px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);">
             Quel traitement choisir ? →
           </a>
-          <a href="/mon-espace/" style="background:transparent;color:#fff;padding:.6rem 1.4rem;border-radius:10px;font-weight:600;font-size:.88rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .2s;">
-            Mon Espace Perso
+          <a href="#partenaires" style="background:transparent;color:#fff;padding:.6rem 1.4rem;border-radius:10px;font-weight:600;font-size:.88rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .2s;">
+            Consulter un spécialiste ↓
           </a>
         </div>
         <!-- Stats row supprimé -->
@@ -135,13 +135,13 @@ const mainKeyword = "GLP-1 France";
           <span>&#183; 50+ ARTICLES EXPERTS</span>
           <span>&#183; 7 TRAITEMENTS COMPARÉS</span>
           <span>&#183; DONNÉES 2026</span>
-          <span>&#183; COACH IA GRATUIT</span>
+          <span>&#183; PARTENAIRES SANTÉ CERTIFIÉS</span>
           <span>&#183; SPÉCIALISÉ FRANCE</span>
           <span>&#183; SOURCES ANSM, HAS, VIDAL</span>
           <span>&#183; 50+ ARTICLES EXPERTS</span>
           <span>&#183; 7 TRAITEMENTS COMPARÉS</span>
           <span>&#183; DONNÉES 2026</span>
-          <span>&#183; COACH IA GRATUIT</span>
+          <span>&#183; PARTENAIRES SANTÉ CERTIFIÉS</span>
           <span>&#183; SPÉCIALISÉ FRANCE</span>
         </div>
       </div>
@@ -367,88 +367,11 @@ const mainKeyword = "GLP-1 France";
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 4 : COACH IA (nouveau bloc dédié)    -->
+    <!-- SECTION 4 : PARTENAIRES SANTÉ (comparateur)  -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-          <div class="relative bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 rounded-3xl p-8 md:p-12 overflow-hidden border border-green-100">
-            <!-- Decoration -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-green-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" aria-hidden="true"></div>
-
-            <div class="grid md:grid-cols-5 gap-8 items-center relative z-10">
-              <div class="md:col-span-3 space-y-5">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-100 border border-green-200 rounded-full text-sm font-medium text-green-700">
-                  <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  Gratuit et disponible 24h/24
-                </div>
-                <h2 class="text-3xl md:text-4xl text-gray-900 tracking-tight" style="font-weight:900;letter-spacing:-.03em;">
-                  Posez vos questions à notre Coach IA
-                </h2>
-                <p class="text-gray-600 leading-relaxed">
-                  Vous avez des questions sur les traitements GLP-1, les prix, les effets secondaires ou votre éligibilité ?
-                  Notre assistant intelligent, entraîné sur nos articles vérifiés, vous répond <strong class="text-green-700">instantanément</strong>.
-                </p>
-                <ul class="space-y-2 text-sm text-gray-700">
-                  <li class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Réponses basées sur nos articles médicaux vérifiés
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Suggestions personnalisées selon votre situation
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Liens vers les sources pour approfondir
-                  </li>
-                </ul>
-                <div class="flex flex-col sm:flex-row gap-3 pt-2">
-                  <button onclick="document.getElementById('coach-toggle')?.click()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all duration-200 shadow-lg shadow-green-600/25 hover:shadow-xl cursor-pointer">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-                    Parler au Coach IA
-                  </button>
-                  <a href="/mon-espace/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-green-200 text-green-700 font-semibold rounded-xl hover:bg-green-50 hover:border-green-300 transition-all duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    Créer mon espace perso
-                  </a>
-                </div>
-              </div>
-              <div class="md:col-span-2">
-                <!-- Chat preview mockup -->
-                <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden max-w-sm mx-auto">
-                  <div class="bg-green-600 px-4 py-3 flex items-center gap-2">
-                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-                    </div>
-                    <div>
-                      <div class="text-white font-semibold text-sm">Coach GLP-1</div>
-                      <div class="text-green-200 text-xs">En ligne</div>
-                    </div>
-                  </div>
-                  <div class="p-4 space-y-3 bg-gray-50">
-                    <div class="bg-white rounded-xl rounded-tl-sm px-3 py-2 text-sm text-gray-700 shadow-sm max-w-[85%]">
-                      Bonjour ! Posez-moi vos questions sur les traitements GLP-1.
-                    </div>
-                    <div class="bg-green-600 rounded-xl rounded-tr-sm px-3 py-2 text-sm text-white ml-auto max-w-[85%]">
-                      Wegovy est-il remboursé ?
-                    </div>
-                    <div class="bg-white rounded-xl rounded-tl-sm px-3 py-2 text-sm text-gray-700 shadow-sm max-w-[85%]">
-                      Non, Wegovy n'est pas remboursé. Le coût est de 169 à 360 €/mois...
-                    </div>
-                  </div>
-                  <div class="px-4 py-3 border-t border-gray-100 bg-white">
-                    <div class="flex items-center gap-2 text-sm text-gray-400">
-                      <span>Tapez votre question...</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="partenaires">
+      <PartnerComparator context="homepage" />
+    </div>
 
     <!-- ============================================ -->
     <!-- SECTION 5 : BRIDGE "Que signifie GLP-1?"     -->
@@ -497,7 +420,7 @@ const mainKeyword = "GLP-1 France";
                 <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                   <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </div>
-                <span style="font-size:.9rem;color:#374151;"><strong>Coach IA gratuit</strong> — Réponses personnalisées 24h/24</span>
+                <span style="font-size:.9rem;color:#374151;"><strong>Partenaires certifiés</strong> — Médecins et accompagnement spécialisé</span>
               </div>
             </div>
             <a href="/guides/qu-est-ce-que-glp1/" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.6rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;">
@@ -592,10 +515,9 @@ const mainKeyword = "GLP-1 France";
           <a href="/collections/effets-secondaires-glp1/" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 15px rgba(26,60,52,.2);">
             Guide complet des effets secondaires →
           </a>
-          <button onclick="document.getElementById('coach-toggle')?.click()" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#f0fdf4;color:#166534;font-weight:600;font-size:.9rem;border-radius:10px;border:1.5px solid #bbf7d0;cursor:pointer;transition:all .2s;">
-            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" style="flex-shrink:0;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#166534" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Posez vos questions au Coach IA
-          </button>
+          <a href="#partenaires" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#f0fdf4;color:#166534;font-weight:600;font-size:.9rem;border-radius:10px;border:1.5px solid #bbf7d0;text-decoration:none;transition:all .2s;">
+            Consulter un spécialiste →
+          </a>
         </div>
       </div>
     </section>
@@ -713,13 +635,13 @@ const mainKeyword = "GLP-1 France";
             </details>
           </div>
 
-          <!-- CTA Coach après FAQ -->
+          <!-- CTA partenaires après FAQ -->
           <div class="mt-8 text-center">
-            <p class="text-gray-500 text-sm mb-3">D'autres questions ? Notre Coach IA peut vous aider instantanément.</p>
-            <button onclick="document.getElementById('coach-toggle')?.click()" class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-sm cursor-pointer">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-              Poser une question au Coach IA
-            </button>
+            <p class="text-gray-500 text-sm mb-3">Prêt à passer à l'action ? Nos partenaires santé certifiés vous accompagnent.</p>
+            <a href="#partenaires" class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-sm" style="text-decoration:none;">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+              Voir nos partenaires santé
+            </a>
           </div>
         </div>
       </div>
@@ -776,32 +698,22 @@ const mainKeyword = "GLP-1 France";
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 8.5 : COACH PREMIUM                  -->
+    <!-- SECTION 8.5 : CTA PARTENAIRES (bandeau)      -->
     <!-- ============================================ -->
-    <section class="py-16 md:py-20" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);">
-      <div class="container mx-auto px-4 max-w-4xl hp-fade-in text-center">
-        <h2 style="font-size:1.8rem;font-weight:900;color:#1f2937;margin-bottom:0.5rem;letter-spacing:-.03em">Coach GLP-1 Premium</h2>
-        <p style="color:#6b7280;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto">Un accompagnement intelligent et personnalisé pour votre parcours GLP-1</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:600px;margin:0 auto 1.5rem">
-          <div style="background:white;border-radius:14px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,0.06);text-align:center">
-            <div style="font-size:0.85rem;font-weight:600;color:#6b7280;margin-bottom:0.5rem">Mensuel</div>
-            <div style="font-size:2rem;font-weight:800;color:#1f2937">4€<span style="font-size:0.85rem;font-weight:500;color:#6b7280">/mois</span></div>
-            <div style="font-size:0.75rem;color:#16a34a;margin-top:4px">7 jours gratuits</div>
-          </div>
-          <div style="background:white;border:2px solid #16a34a;border-radius:14px;padding:1.5rem;box-shadow:0 4px 12px rgba(22,163,74,0.12);text-align:center;position:relative">
-            <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#16a34a;color:white;padding:2px 10px;border-radius:10px;font-size:0.7rem;font-weight:700">-30%</span>
-            <div style="font-size:0.85rem;font-weight:600;color:#6b7280;margin-bottom:0.5rem">Annuel</div>
-            <div style="font-size:2rem;font-weight:800;color:#1f2937">33€<span style="font-size:0.85rem;font-weight:500;color:#6b7280">/an</span></div>
-            <div style="font-size:0.75rem;color:#16a34a;margin-top:4px">2,75€/mois</div>
-          </div>
+    <section style="background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 50%,#f0f9ff 100%);padding:3rem 1.5rem;">
+      <div style="max-width:800px;margin:0 auto;text-align:center;">
+        <h2 style="font-size:1.6rem;font-weight:900;color:#1f2937;margin-bottom:.5rem;letter-spacing:-.03em;">Besoin d'un accompagnement professionnel ?</h2>
+        <p style="color:#6b7280;margin-bottom:1.5rem;font-size:.95rem;">Nos partenaires santé certifiés vous aident à démarrer votre traitement en toute sécurité.</p>
+        <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;">
+          <a href="https://poids.charles.co/?utm_source=glp1france&utm_medium=cpa&utm_campaign=charles_banner" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.5rem;background:#4f46e5;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 14px rgba(79,70,229,.2);">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Consultation médicale — Charles.co
+          </a>
+          <a href="https://www.annette.care/?utm_source=glp1france&utm_medium=cpa&utm_campaign=annette_banner" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.5rem;background:#d97706;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 14px rgba(217,119,6,.2);">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Accompagnement — Annette.care
+          </a>
         </div>
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-bottom:1.5rem">
-          <span style="font-size:0.8rem;color:#374151;background:white;padding:4px 12px;border-radius:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">Messages illimités</span>
-          <span style="font-size:0.8rem;color:#374151;background:white;padding:4px 12px;border-radius:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">Suivi de poids</span>
-          <span style="font-size:0.8rem;color:#374151;background:white;padding:4px 12px;border-radius:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">Nutrition personnalisée</span>
-          <span style="font-size:0.8rem;color:#374151;background:white;padding:4px 12px;border-radius:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">Rappels injection</span>
-        </div>
-        <a href="/tarifs/" style="display:inline-block;background:#16a34a;color:white;padding:12px 32px;border-radius:10px;font-weight:700;text-decoration:none;transition:all 0.2s;font-size:1rem">Essayer 7 jours gratuit</a>
       </div>
     </section>
 
@@ -810,7 +722,17 @@ const mainKeyword = "GLP-1 France";
     <!-- ============================================ -->
     <!-- SECTION 10 : FEEDBACK                        -->
     <!-- ============================================ -->
-    <FeedbackSection />
+    <!-- Section témoignages (remplace FeedbackSection) -->
+    <section style="padding:3rem 1.5rem;background:#f8faf9;">
+      <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <h2 style="font-size:1.4rem;font-weight:800;color:#1a3c34;margin-bottom:.5rem;">Partagez votre expérience</h2>
+        <p style="color:#6b7280;font-size:.9rem;margin-bottom:1rem;">Vous suivez un traitement GLP-1 ? Votre témoignage peut aider des milliers de patients.</p>
+        <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;">
+          <a href="/collections/temoignages/" style="padding:.6rem 1.2rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.85rem;border-radius:10px;text-decoration:none;">Lire les témoignages</a>
+          <a href="/contact/" style="padding:.6rem 1.2rem;background:#fff;color:#1a3c34;font-weight:600;font-size:.85rem;border-radius:10px;text-decoration:none;border:1.5px solid #d1d5db;">Partager mon expérience</a>
+        </div>
+      </div>
+    </section>
 
     <!-- ============================================ -->
     <!-- DISCLAIMER MÉDICAL (bas de page)             -->
@@ -858,46 +780,6 @@ const mainKeyword = "GLP-1 France";
 </style>
 
 <script>
-  // A/B Test: homepage_hero_cta — Variante B swaps hero CTA to Coach IA
-  // Uses polling because ab-engine.js fetches tests async
-  (function() {
-    var applied = false;
-    function applyHeroAB() {
-      if (applied) return;
-      var variant = window.abGetVariant && window.abGetVariant('homepage_hero_cta');
-      if (!variant) return; // engine not ready yet
-      applied = true;
-      if (variant !== 'B') return;
-      var cta = document.getElementById('hero-cta-primary');
-      if (!cta) return;
-      // Swap to Coach IA CTA
-      cta.removeAttribute('href');
-      cta.style.cursor = 'pointer';
-      cta.className = cta.className
-        .replace('from-blue-600', 'from-green-600')
-        .replace('to-blue-700', 'to-emerald-600')
-        .replace('hover:from-blue-700', 'hover:from-green-700')
-        .replace('hover:to-blue-800', 'hover:to-emerald-700')
-        .replace('shadow-blue-600/25', 'shadow-green-600/25');
-      cta.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg> Posez vos questions au Coach IA <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>';
-      cta.addEventListener('click', function(e) {
-        e.preventDefault();
-        var toggle = document.getElementById('coach-toggle');
-        if (toggle) toggle.click();
-        if (window.abTrack) window.abTrack('cta_click', { cta: 'hero_coach_variant_B' });
-      });
-    }
-    // Try immediately (cached tests), then poll briefly for async fetch
-    applyHeroAB();
-    if (!applied) {
-      var attempts = 0;
-      var poll = setInterval(function() {
-        applyHeroAB();
-        if (applied || ++attempts > 20) clearInterval(poll); // max 2s
-      }, 100);
-    }
-  })();
-
   // Intersection Observer for scroll-triggered animations
   document.addEventListener('DOMContentLoaded', function() {
     const fadeElements = document.querySelectorAll('.hp-fade-in');

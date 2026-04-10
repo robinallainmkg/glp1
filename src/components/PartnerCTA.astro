@@ -1,0 +1,120 @@
+---
+interface Props {
+  partner: "charles" | "annette" | "both";
+  context?: string;
+}
+
+const { partner, context = "article" } = Astro.props;
+
+const charlesLink = `https://poids.charles.co/?utm_source=glp1france&utm_medium=cpa&utm_campaign=charles_${context}`;
+const annetteLink = `https://www.annette.care/?utm_source=glp1france&utm_medium=cpa&utm_campaign=annette_${context}`;
+---
+
+{partner === "charles" && (
+  <div
+    data-partner-block="cta"
+    style="margin:1.5rem 0;max-width:100%;background:linear-gradient(135deg,#eef2ff,#e0e7ff);border:1px solid #c7d2fe;border-radius:14px;padding:1.5rem 1.75rem;display:flex;align-items:flex-start;gap:1.25rem;flex-wrap:wrap;"
+  >
+    <div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:#e0e7ff;display:flex;align-items:center;justify-content:center;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+        <path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/>
+        <circle cx="20" cy="10" r="2"/>
+      </svg>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <p style="margin:0 0 .5rem 0;font-size:1.1rem;font-weight:700;color:#312e81;line-height:1.3;">
+        Besoin d'une consultation m&eacute;dicale&nbsp;?
+      </p>
+      <p style="margin:0 0 1rem 0;font-size:.95rem;color:#4338ca;line-height:1.55;">
+        Les m&eacute;decins sp&eacute;cialis&eacute;s de Charles.co peuvent &eacute;valuer votre &eacute;ligibilit&eacute; &agrave; un traitement GLP-1 et vous prescrire une ordonnance adapt&eacute;e.
+      </p>
+      <a
+        href={charlesLink}
+        rel="noopener sponsored"
+        target="_blank"
+        style="display:inline-block;background:#4f46e5;color:#fff;font-size:.95rem;font-weight:600;padding:.7rem 1.4rem;border-radius:8px;text-decoration:none;transition:background .2s;"
+      >
+        Consulter un m&eacute;decin &rarr;
+      </a>
+      <p style="margin:.75rem 0 0 0;font-size:.8rem;color:#6366a1;line-height:1.4;">
+        &#11088; 4.6/5 Trustpilot &middot; M&eacute;decins certifi&eacute;s
+      </p>
+    </div>
+  </div>
+)}
+
+{partner === "annette" && (
+  <div
+    data-partner-block="cta"
+    style="margin:1.5rem 0;max-width:100%;background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #fde68a;border-radius:14px;padding:1.5rem 1.75rem;display:flex;align-items:flex-start;gap:1.25rem;flex-wrap:wrap;"
+  >
+    <div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:#fef3c7;display:flex;align-items:center;justify-content:center;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M20 8v6"/>
+        <path d="M23 11h-6"/>
+      </svg>
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <p style="margin:0 0 .5rem 0;font-size:1.1rem;font-weight:700;color:#78350f;line-height:1.3;">
+        Un accompagnement pour de meilleurs r&eacute;sultats
+      </p>
+      <p style="margin:0 0 1rem 0;font-size:.95rem;color:#92400e;line-height:1.55;">
+        Annette.care propose un suivi personnalis&eacute; avec di&eacute;t&eacute;ticiens et comportementalistes pour maximiser l'efficacit&eacute; de votre traitement.
+      </p>
+      <a
+        href={annetteLink}
+        rel="noopener sponsored"
+        target="_blank"
+        style="display:inline-block;background:#d97706;color:#fff;font-size:.95rem;font-weight:600;padding:.7rem 1.4rem;border-radius:8px;text-decoration:none;transition:background .2s;"
+      >
+        D&eacute;couvrir l'accompagnement &rarr;
+      </a>
+      <p style="margin:.75rem 0 0 0;font-size:.8rem;color:#a16207;line-height:1.4;">
+        &#11088; 4.8/5 satisfaction &middot; Di&eacute;t&eacute;ticiens certifi&eacute;s
+      </p>
+    </div>
+  </div>
+)}
+
+{partner === "both" && (
+  <div
+    data-partner-block="cta"
+    style="margin:1.5rem 0;max-width:100%;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:1.5rem 1.75rem;"
+  >
+    <p style="margin:0 0 1.1rem 0;font-size:1.15rem;font-weight:700;color:#14532d;line-height:1.3;text-align:center;">
+      Pr&ecirc;t &agrave; passer &agrave; l'action&nbsp;?
+    </p>
+    <div style="display:flex;flex-direction:column;gap:.75rem;">
+      <a
+        href={charlesLink}
+        rel="noopener sponsored"
+        target="_blank"
+        style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:#4f46e5;color:#fff;font-size:.95rem;font-weight:600;padding:.75rem 1.2rem;border-radius:8px;text-decoration:none;transition:background .2s;"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+          <path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/>
+          <circle cx="20" cy="10" r="2"/>
+        </svg>
+        Consulter un m&eacute;decin prescripteur &rarr;
+      </a>
+      <a
+        href={annetteLink}
+        rel="noopener sponsored"
+        target="_blank"
+        style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:#d97706;color:#fff;font-size:.95rem;font-weight:600;padding:.75rem 1.2rem;border-radius:8px;text-decoration:none;transition:background .2s;"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M20 8v6"/>
+          <path d="M23 11h-6"/>
+        </svg>
+        Se faire accompagner par un di&eacute;t&eacute;ticien &rarr;
+      </a>
+    </div>
+  </div>
+)}
