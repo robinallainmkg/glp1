@@ -52,7 +52,7 @@ Eli Lilly, qui commercialise déjà Mounjaro, positionne le retatrutide comme la
 
 ### GLP-1 (Glucagon-Like Peptide-1)
 
-L'agonisme GLP-1 est le socle commun à tous les médicaments de cette classe — Ozempic, Wegovy, Mounjaro, Saxenda. Il agit sur :
+L'agonisme GLP-1 est le socle commun à tous les médicaments de cette classe — [Ozempic](/collections/traitements-glp1/guide-complet-ozempic), Wegovy, Mounjaro, Saxenda. Il agit sur :
 - La sécrétion d'insuline en réponse au glucose
 - Le ralentissement de la vidange gastrique
 - Les centres hypothalamiques de la satiété

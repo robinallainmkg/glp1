@@ -402,7 +402,7 @@ Mais en pratique, avec le dosage progressif :
 
 **1. Autres GLP-1 remboursés (coûts similaires) :**
 - **Trulicity** (dulaglutide) : ~81€/mois, remboursé 65% (DT2 uniquement)
-- **Victoza** (liraglutide) : 60,26€/mois, remboursé 30% (DT2 uniquement)
+- **[Victoza](/collections/traitements-glp1/guide-complet-victoza)** (liraglutide) : 60,26€/mois, remboursé 30% (DT2 uniquement)
 - **Saxenda** : 240-300€/mois, NON remboursé
 
 **2. Attendre le générique (2027) :**
@@ -482,7 +482,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 ---
 
-**Mise à jour importante :** Avec la pénurie d'Ozempic constatée en 2024-2025, les délais d'approvisionnement peuvent être plus longs. [Voir les alternatives disponibles](/guides/quel-traitement-glp1-choisir) si votre pharmacie est en rupture.
+**Mise à jour importante :** Avec la [pénurie d'Ozempic](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives) constatée en 2024-2025, les délais d'approvisionnement peuvent être plus longs. [Voir les alternatives disponibles](/guides/quel-traitement-glp1-choisir) si votre pharmacie est en rupture.
 
 ---
 

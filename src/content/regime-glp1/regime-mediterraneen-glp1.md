@@ -35,7 +35,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le régime méditerranéen est aujourd'hui reconnu comme l'un des modes d'alimentation les mieux documentés pour la santé cardiovasculaire et métabolique. Associé à un traitement GLP-1 comme l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), le Wegovy ou le Mounjaro (tirzepatide), il constitue un soutien naturel et complémentaire pour amplifier les bénéfices du traitement. Cette combinaison est d'ailleurs celle recommandée en première intention par la plupart des endocrinologues et diabétologues français.
+Le régime méditerranéen est aujourd'hui reconnu comme l'un des modes d'alimentation les mieux documentés pour la santé cardiovasculaire et métabolique. Associé à un traitement GLP-1 comme l'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide), le [Wegovy](/collections/traitements-glp1/guide-complet-wegovy) ou le Mounjaro (tirzepatide), il constitue un soutien naturel et complémentaire pour amplifier les bénéfices du traitement. Cette combinaison est d'ailleurs celle recommandée en première intention par la plupart des endocrinologues et diabétologues français.
 
 ## Qu'est-ce que le régime méditerranéen ?
 
@@ -124,7 +124,7 @@ Visez 1,5 à 2 litres d'eau par jour. Les tisanes à la camomille, verveine ou m
 
 ### Activité physique complémentaire
 
-La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour les patients sous traitement GLP-1 avec objectif de perte de poids. L'activité physique amplifie la perte de masse grasse tout en préservant la masse musculaire.
+La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour les patients sous traitement GLP-1 avec objectif de perte de poids. L'activité physique amplifie la perte de masse grasse tout en préservant la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles).
 
 ## Remboursement et coûts en France (mars 2026)
 

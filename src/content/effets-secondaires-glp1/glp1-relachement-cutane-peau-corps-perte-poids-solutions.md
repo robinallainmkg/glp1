@@ -9,7 +9,7 @@ category: "Effets secondaires GLP-1"
 tags: ["glp1", "relâchement cutané", "peau", "perte de poids", "chirurgie esthétique", "body lift", "effets secondaires", "ozempic", "wegovy"]
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-[ozempic](/collections/traitements-glp1/guide-complet-ozempic)-illus.jpg"
 thumbnailAlt: "Relâchement cutané après perte de poids sous GLP-1 corps solutions"
 featured: true
 published: true
@@ -98,7 +98,7 @@ Les bourrelets du dos et les « poignées d'amour » peuvent laisser place à de
 
 Le relâchement du visage et du cou après perte de poids sous GLP-1 est traité en détail dans notre article sur l'[Ozempic Face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/).
 
-## GLP-1 vs chirurgie bariatrique : le relâchement est-il différent ? {#glp1-vs-chirurgie}
+## GLP-1 vs [chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif) : le relâchement est-il différent ? {#glp1-vs-chirurgie}
 
 ### Des profils de perte de poids différents
 

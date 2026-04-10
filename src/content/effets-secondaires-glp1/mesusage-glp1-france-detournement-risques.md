@@ -167,7 +167,7 @@ Ozempic est indiqué pour le diabète de type 2, pas pour la perte de poids seul
 
 ### L'ANSM va-t-elle interdire les GLP-1 pour l'obésité ?
 
-Non. L'ANSM confirme le rapport bénéfice/risque favorable des GLP-1 lorsqu'ils sont utilisés conformément aux recommandations. Wegovy et Mounjaro sont approuvés pour l'obésité. C'est le détournement d'Ozempic (indiqué pour le diabète) qui est problématique, pas l'utilisation des GLP-1 anti-obésité dans leur indication.
+Non. L'ANSM confirme le rapport bénéfice/risque favorable des GLP-1 lorsqu'ils sont utilisés conformément aux recommandations. Wegovy et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro) sont approuvés pour l'obésité. C'est le détournement d'Ozempic (indiqué pour le diabète) qui est problématique, pas l'utilisation des GLP-1 anti-obésité dans leur indication.
 
 ### Quels sont les risques si j'achète un GLP-1 en ligne sans ordonnance ?
 

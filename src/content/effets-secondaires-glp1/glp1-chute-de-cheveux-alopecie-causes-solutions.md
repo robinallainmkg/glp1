@@ -59,7 +59,7 @@ Dans l'essai STEP 1 sur le sémaglutide 2,4 mg (Wegovy), la chute de cheveux (al
 
 Des données similaires ont été observées pour le tirzépatide (Mounjaro) dans les essais SURMOUNT. La fréquence reste faible mais réelle, ce qui a conduit à l'ajout de l'alopécie dans la liste des effets indésirables connus de ces médicaments.
 
-Pour Saxenda (liraglutide 3 mg), des cas similaires ont été rapportés dans la pharmacovigilance post-commercialisation, avec un mécanisme identique.
+Pour [Saxenda](/collections/traitements-glp1/guide-complet-saxenda) (liraglutide 3 mg), des cas similaires ont été rapportés dans la pharmacovigilance post-commercialisation, avec un mécanisme identique.
 
 ### Les profils à risque plus élevé
 

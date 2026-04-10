@@ -39,7 +39,7 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 
 Ce qui signifie concrètement : pour une personne pesant 100 kg au départ, la perte de poids moyenne sous Wegovy est d'environ 15 kg sur 16 mois. Un tiers des patients en perdent 20 kg ou plus.
 
-### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) / Zepbound (tirzépatide) — L'étude SURMOUNT-1
+### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) / [Zepbound](/collections/traitements-glp1/guide-complet-zepbound) (tirzépatide) — L'étude SURMOUNT-1
 
 Mounjaro (tirzépatide) a produit des résultats encore plus impressionnants dans l'étude SURMOUNT-1, qui a suivi 2 539 patients pendant 72 semaines (18 mois) :
 
@@ -139,7 +139,7 @@ Les meilleurs résultats sont obtenus lorsque le traitement GLP-1 est associé �
 
 Le GLP-1 réduit l'appétit, mais ne choisit pas ce que vous mangez. Il est essentiel de privilégier :
 
-- **Les protéines** (viandes maigres, poissons, légumineuses, oeufs) pour [préserver la masse musculaire pendant la perte de poids](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
+- **Les [protéines](/collections/regime-glp1/glp1-proteines)** (viandes maigres, poissons, légumineuses, oeufs) pour [préserver la masse musculaire pendant la perte de poids](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Les légumes et fibres** pour la satiété et le microbiome
 - **L'hydratation** (au moins 1,5L d'eau par jour) car la diurèse augmente
 - **La réduction des aliments ultra-transformés** qui contournent les signaux de satiété

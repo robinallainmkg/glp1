@@ -61,7 +61,7 @@ Jusqu'à l'arrivée des GLP-1 de nouvelle génération, aucun traitement médica
 - **Objectif 20-30 % de perte de poids** (ex : perdre 25 kg pour un patient de 110 kg) → Les GLP-1 les plus puissants (Mounjaro) peuvent y parvenir, mais la chirurgie est plus sûre pour atteindre cet objectif durablement
 - **Objectif > 30 % de perte de poids** (ex : perdre 40+ kg pour un patient de 140 kg) → La chirurgie bariatrique reste le traitement de référence
 
-## Risques et effets secondaires
+## Risques et [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-wegovy)
 
 ### Les risques chirurgicaux
 

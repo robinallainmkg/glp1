@@ -89,7 +89,7 @@ La NOIAN peut également survenir chez des patients sans facteur de risque ident
 
 ## Quels symptômes doivent vous alerter ?
 
-Si vous prenez Ozempic, Wegovy ou Rybelsus (sémaglutide oral) et que vous observez l'un des signes suivants, **consultez un ophtalmologue en urgence le jour même** :
+Si vous prenez Ozempic, Wegovy ou [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus) (sémaglutide oral) et que vous observez l'un des signes suivants, **consultez un ophtalmologue en urgence le jour même** :
 
 - Flou visuel soudain dans un œil
 - Perte de vision partielle ou totale dans un œil (même momentanée)
@@ -125,7 +125,7 @@ Pour l'heure, ce signal n'a pas été formellement identifié pour les autres GL
 
 - Le **liraglutide** (Victoza, Saxenda)
 - Le **tirzépatide** (Mounjaro)
-- Le **dulaglutide** (Trulicity)
+- Le **dulaglutide** ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity))
 
 Cela peut en partie s'expliquer par le fait que le sémaglutide est le GLP-1 le plus prescrit au monde, ce qui augmente mécaniquement la détection de signaux rares. Des études spécifiques pour les autres molécules sont en cours.
 

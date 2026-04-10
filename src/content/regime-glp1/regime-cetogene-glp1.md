@@ -127,7 +127,7 @@ Oui, mais surveillance accrue nécessaire. Risque potentiel d'acidocétose chez 
 Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance. Vous pouvez aussi explorer le [régime paléo sous GLP-1](/collections/regime-glp1/regime-paleo-glp1/) comme alternative moins restrictive.
 
 ### Combien de temps maintenir cette association ?
-3-6 mois généralement, puis transition vers régime méditerranéen équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
+3-6 mois généralement, puis transition vers [régime méditerranéen](/collections/regime-glp1/regime-mediterraneen-glp1) équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
 
 ### Quels risques spécifiques à surveiller ?
 Acidocétose (diabétiques), constipation majorée, calculs rénaux, carences vitamines liposolubles.

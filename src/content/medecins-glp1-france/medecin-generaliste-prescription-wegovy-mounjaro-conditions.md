@@ -49,7 +49,7 @@ L'ANSM a décidé d'ouvrir la prescription initiale des GLP-1 pour l'obésité �
 - **Mounjaro** (tirzépatide)
 - **Saxenda** (liraglutide 3 mg)
 
-**Important** : Pour les GLP-1 antidiabétiques (Ozempic, Trulicity, Victoza/Rybelsus), la prescription par le médecin généraliste était déjà possible. Ce qui est nouveau, c'est l'ouverture pour les traitements spécifiquement indiqués dans l'**obésité**.
+**Important** : Pour les GLP-1 antidiabétiques ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic), Trulicity, Victoza/Rybelsus), la prescription par le médecin généraliste était déjà possible. Ce qui est nouveau, c'est l'ouverture pour les traitements spécifiquement indiqués dans l'**obésité**.
 
 ## Les conditions pour obtenir une prescription GLP-1
 

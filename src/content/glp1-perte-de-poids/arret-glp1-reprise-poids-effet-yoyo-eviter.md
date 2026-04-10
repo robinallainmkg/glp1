@@ -103,7 +103,7 @@ Le temps sous GLP-1 doit être utilisé comme une "fenêtre de changement". Le m
 
 - Apprendre à manger plus lentement et en pleine conscience
 - Réduire les portions sans frustration (l'appétit diminué facilite cela)
-- Augmenter la consommation de protéines et de légumes
+- Augmenter la consommation de [protéines](/collections/regime-glp1/glp1-proteines) et de légumes
 - Instaurer un [programme d'exercice pour maintenir les résultats](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
 - Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
 

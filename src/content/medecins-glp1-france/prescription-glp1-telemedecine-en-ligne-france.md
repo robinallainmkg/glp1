@@ -34,7 +34,7 @@ Depuis que [tout médecin généraliste peut prescrire les GLP-1 pour l'obésit�
 
 ### Le problème d'accès aux médecins spécialistes
 
-Avant juin 2025, seuls les endocrinologues, diabétologues et médecins nutritionnistes pouvaient initier un traitement GLP-1 pour l'obésité. Les délais d'attente atteignaient 6 à 12 mois dans certaines régions. Pour beaucoup de patients — notamment dans les déserts médicaux — l'accès à un spécialiste relevait du parcours du combattant. Retrouvez le détail des [nouvelles règles ANSM 2025 pour les généralistes](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/).
+Avant juin 2025, seuls les [endocrinologues](/collections/medecins-glp1-france/endocrinologue-pour-maigrir), diabétologues et médecins nutritionnistes pouvaient initier un traitement GLP-1 pour l'obésité. Les délais d'attente atteignaient 6 à 12 mois dans certaines régions. Pour beaucoup de patients — notamment dans les déserts médicaux — l'accès à un spécialiste relevait du parcours du combattant. Retrouvez le détail des [nouvelles règles ANSM 2025 pour les généralistes](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/).
 
 Même après l'ouverture de la prescription aux généralistes, de nombreux médecins traitants restent réticents ou peu à l'aise avec ces nouvelles molécules. La télémédecine a comblé ce vide en mettant en contact les patients avec des médecins formés et disponibles rapidement.
 
@@ -57,7 +57,7 @@ La téléconsultation ne change pas les critères médicaux pour bénéficier d'
 - Mêmes critères d'IMC que Wegovy
 - Indication officiellement élargie à l'obésité depuis 2025
 
-**Pour Ozempic (sémaglutide injectable) :**
+**Pour [Ozempic](/collections/traitements-glp1/guide-complet-ozempic) (sémaglutide injectable) :**
 - Diabète de type 2 uniquement — la prescription pour l'obésité seule reste un usage hors AMM (légalement possible mais non recommandé)
 
 Un médecin sérieux en téléconsultation vous posera exactement les mêmes questions qu'en présentiel : votre taille et votre poids (pour calculer l'IMC), vos antécédents médicaux, vos traitements en cours, vos antécédents de pancréatite, vos antécédents familiaux de cancer médullaire de la thyroïde, votre situation cardiologique.

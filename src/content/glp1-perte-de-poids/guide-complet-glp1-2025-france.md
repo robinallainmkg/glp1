@@ -80,7 +80,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 - **Maintien du poids :** 80% des patients maintiennent leur perte de poids à 1 an
 - **Amélioration santé :** Réduction du risque cardiovasculaire et diabète
 
-**Les études cliniques montrent que les GLP-1 comme Ozempic permettent une perte de poids significative** tout en préservant la masse musculaire. Ces médicaments agissent sur les centres de la faim du cerveau pour réduire l'appétit naturellement.
+**Les études cliniques montrent que les GLP-1 comme Ozempic permettent une perte de poids significative** tout en préservant la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles). Ces médicaments agissent sur les centres de la faim du cerveau pour réduire l'appétit naturellement.
 
 ### Facteurs d'Efficacité pour Optimiser Votre Perte de Poids
 
@@ -161,7 +161,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 - **Berbérine :** Régulateur glycémique naturel, efficace contre le diabète et l'obésité
 - **Chrome :** Améliore la sensibilité à l'insuline et aide à contrôler l'appétit
 - **Cannelle :** Propriétés anti-diabétiques et anti-inflammatoires
-- **Exercice physique :** Marche, natation, musculation pour brûler des calories
+- **[Exercice physique](/collections/regime-glp1/glp1-sport-exercice-musculation-guide) :** Marche, natation, musculation pour brûler des calories
 - **Méditation :** Réduction du stress et meilleure gestion des émotions alimentaires
 
 ### Autres Traitements Médicamenteux

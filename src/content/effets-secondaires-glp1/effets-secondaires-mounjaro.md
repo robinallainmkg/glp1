@@ -1,7 +1,7 @@
 ---
 title: "Effets Secondaires Mounjaro : Les Risques Graves à Connaître (2026)"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
-description: "Effets secondaires Mounjaro graves et fréquents : nausées, diarrhée, pancréatite, perte de cheveux. Ce que votre médecin ne vous dit pas toujours. Liste complète + solutions."
+description: "Effets secondaires Mounjaro graves et fréquents : nausées, diarrhée, pancréatite, [perte de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions). Ce que votre médecin ne vous dit pas toujours. Liste complète + solutions."
 keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro effet secondaire long terme', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger']
 seoTitle: "Effets Secondaires Mounjaro : Risques Graves et Fréquents (2026)"
 seoDescription: "Effets secondaires Mounjaro : les 12 effets les plus fréquents + les risques graves (pancréatite, gastroparésie). Témoignages patients et solutions concrètes."
@@ -205,7 +205,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 
 Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour planifier votre suivi.
 
-## 💊 Interactions Médicamenteuses
+## 💊 [Interactions Médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro)
 
 ### Médicaments à surveiller
 - **Antidiabétiques oraux** : Risque d'hypoglycémie

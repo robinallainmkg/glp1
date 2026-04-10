@@ -1,6 +1,6 @@
 ---
 title: "Acupuncture GLP-1 diabète : Guide Complet et Conseils 2026"
-description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Bénéfices, preuves scientifiques, coûts et remboursement en France."
+description: "L'acupuncture peut-elle compléter un traitement GLP-1 ? Bénéfices, preuves scientifiques, coûts et [remboursement](/collections/glp1-cout/remboursement-glp1-2026) en France."
 pubDate: 2025-08-20
 date: 2025-08-20
 updatedAt: 2026-03-18
@@ -51,7 +51,7 @@ Plusieurs méta-analyses publiées dans des revues internationales montrent que 
 
 ### Position des sociétés savantes
 
-Les recommandations actuelles de la Société Francophone du Diabète (SFD) et de la HAS n'intègrent pas l'acupuncture dans les stratégies thérapeutiques standardisées du diabète. Son utilisation dans ce contexte doit être discutée au cas par cas avec le médecin traitant ou l'endocrinologue, en complément (jamais en remplacement) du traitement médicamenteux.
+Les recommandations actuelles de la Société Francophone du Diabète (SFD) et de la HAS n'intègrent pas l'acupuncture dans les stratégies thérapeutiques standardisées du diabète. Son utilisation dans ce contexte doit être discutée au cas par cas avec le médecin traitant ou l'[endocrinologue](/collections/medecins-glp1-france/endocrinologue-pour-maigrir), en complément (jamais en remplacement) du traitement médicamenteux.
 
 ## Acupuncture et perte de poids : l'état des preuves {#poids}
 

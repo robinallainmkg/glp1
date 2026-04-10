@@ -52,9 +52,9 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
 
 ## Son Témoignage
 
-> "Après mes trois grossesses, mon corps avait complètement changé. Malgré tous mes efforts - régimes, sport, coaching nutritionnel - impossible de perdre du poids durablement. Je pesais 98 kilos pour 1m65, j'étais épuisée et je n'arrivais plus à suivre mes enfants."
+> "Après mes trois grossesses, mon corps avait complètement changé. Malgré tous mes efforts - régimes, [sport](/collections/regime-glp1/glp1-sport-exercice-musculation-guide), coaching nutritionnel - impossible de perdre du poids durablement. Je pesais 98 kilos pour 1m65, j'étais épuisée et je n'arrivais plus à suivre mes enfants."
 
-> "Mon médecin m'a parlé du Wegovy. Au début, j'étais sceptique : encore un traitement qui ne marcherait pas... Mais dès les premières semaines, j'ai senti la différence. Mon appétit s'est régulé naturellement, je n'avais plus ces fringales incontrôlables, surtout le soir."
+> "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a parlé du Wegovy. Au début, j'étais sceptique : encore un traitement qui ne marcherait pas... Mais dès les premières semaines, j'ai senti la différence. Mon appétit s'est régulé naturellement, je n'avais plus ces fringales incontrôlables, surtout le soir."
 
 > "Le plus dur, ça a été les premiers mois. Les nausées étaient présentes, mais supportables. Mon médecin m'avait prévenue et m'avait donné des conseils pour les gérer. Petit à petit, mon corps s'est habitué."
 

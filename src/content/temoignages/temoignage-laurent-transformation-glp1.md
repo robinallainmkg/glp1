@@ -52,14 +52,14 @@ mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 
 > "Le déclic, ça a été quand mon fils de 8 ans m'a dit qu'il avait honte de moi devant ses copains. Ça m'a anéanti, mais ça m'a aussi donné la force de changer."
 
-> "Mon médecin m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, sport... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
+> "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, sport... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
 
 ## Son Parcours de Transformation
 
 ### Phase 1 : Les Premiers Pas (Mois 1-3)
 - **Perte :** 12 kilos
 - **Dosage :** 2,5 mg puis 5 mg
-- **Défis :** Légères nausées, adaptation alimentaire
+- **Défis :** Légères [nausées](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro), adaptation alimentaire
 - **Victoires :** Plus de grignotage compulsif
 
 ### Phase 2 : L'Accélération (Mois 4-6)

@@ -204,7 +204,7 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 
 ### Surveillance post-marketing
 
-**Pharmacovigilance européenne** :
+**[Pharmacovigilance européenne](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026)** :
 - 2.3 millions patients-années d'exposition
 - Profil de sécurité stable
 - Pas de nouveau signal identifié

@@ -64,7 +64,7 @@ Certains signaux font néanmoins l'objet d'une surveillance continue ou renforc�
 
 L'étude EPI-Phare sur la [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/) a confirmé un risque significativement augmenté sous GLP-1. Les données françaises sont cohérentes avec l'étude Sodhi (JAMA 2023) montrant un hazard ratio de 3,7 pour la gastroparésie par rapport aux patients sous bupropion-naltrexone. L'ANSM a demandé la mise à jour des RCP pour mentionner explicitement ce risque et les précautions anesthésiques associées.
 
-#### 2. Idées suicidaires et troubles psychiatriques
+#### 2. Idées suicidaires et [troubles psychiatriques](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale)
 
 L'EMA avait lancé en 2023 une évaluation sur le risque d'idées suicidaires sous GLP-1, à la suite de déclarations spontanées. Le bilan de l'ANSM pour 2025-2026 conclut à l'**absence de signal causal établi** entre les GLP-1 et les idées suicidaires dans les données françaises. Les déclarations semblaient liées à d'autres facteurs (pathologies sous-jacentes, comorbidités, arrêts concomitants d'autres traitements). La surveillance reste cependant active.
 

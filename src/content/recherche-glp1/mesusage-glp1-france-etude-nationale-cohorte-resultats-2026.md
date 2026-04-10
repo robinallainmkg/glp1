@@ -47,7 +47,7 @@ L'étude a été publiée dans *Value in Health* (Elsevier), revue international
 La cohorte comprend plusieurs centaines de milliers de patients ayant initié un traitement GLP-1 en France sur une période récente. L'étude distingue :
 
 - Les patients avec **diabète de type 2** (indication principale historique d'Ozempic, Trulicity, Victoza)
-- Les patients avec **obésité documentée** (IMC ≥ 30, indication principale de Wegovy et Saxenda)
+- Les patients avec **obésité documentée** (IMC ≥ 30, indication principale de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy) et Saxenda)
 - Les patients **sans ces diagnostics** dans leur dossier médical — le groupe dit "mésusage présumé"
 
 ### Résultat principal
