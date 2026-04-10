@@ -55,7 +55,7 @@ Le **Wegovy** est le medicament phare de Novo Nordisk pour le traitement de l'ob
 - Surpoids (IMC superieur ou egal a 27) avec au moins une comorbidite liee au poids (diabete de type 2, hypertension, dyslipidemie, apnee du sommeil)
 
 **Efficacite clinique :**
-- Perte de poids moyenne de **15 a 17 %** du poids corporel en 68 semaines (etude STEP 1)
+- Perte de poids moyenne d'environ **15 %** du poids corporel en 68 semaines (14.9 % dans l'etude STEP 1)
 - Pour une personne de 100 kg, cela represente une perte de 15 a 17 kg
 - 86 % des patients perdent au moins 5 % de leur poids
 
