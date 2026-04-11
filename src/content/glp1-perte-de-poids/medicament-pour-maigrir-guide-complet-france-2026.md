@@ -49,7 +49,7 @@ En avril 2026, quatre medicaments de la classe GLP-1 sont utilisés en France po
 
 ### 1. Wegovy (Semaglutide 2.4 mg) -- La Référence
 
-Le **Wegovy** est le médicament phare de Novo Nordisk pour le traitement de l'obésité. Il contient du semaglutide a la dose de 2.4 mg par semaine, soit une dose supérieure a celle de l'Ozempic utilise dans le diabète.
+Le **Wegovy** est le médicament phare de Novo Nordisk pour le traitement de l'obésité. Il contient du semaglutide a la dose de 2.4 mg par semaine, soit une dose supérieure a celle de l'Ozempic utilisé dans le diabète.
 
 **Indications officielles :**
 - Obésité (IMC supérieur ou égal a 30)

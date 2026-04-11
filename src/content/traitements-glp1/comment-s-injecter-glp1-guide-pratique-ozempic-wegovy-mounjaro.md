@@ -103,7 +103,7 @@ Un exemple de rotation sur 4 semaines :
 9. **Appuyez sur le bouton d'injection** lentement et fermement, jusqu'à la butée
 10. **Maintenez** l'aiguille en place pendant **6 à 10 secondes** après avoir appuyé jusqu'à la butée — cela évite les fuites et assure que la totalité de la dose est injectée
 11. **Retirez l'aiguille** avec un mouvement droit et ferme
-12. **Comprimer légèrement** si vous voyez un peu de sang, sans masser (le massage peut accélérer l'absorption de manière non contrôlée)
+12. **Comprimér légèrement** si vous voyez un peu de sang, sans masser (le massage peut accélérer l'absorption de manière non contrôlée)
 
 ### Après l'injection
 

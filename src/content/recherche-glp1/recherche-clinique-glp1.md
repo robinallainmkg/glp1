@@ -38,7 +38,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## À retenir
 
-La recherche clinique sur les agonistes GLP-1 en France explore de nouvelles indications au-delà du diabète : maladie d'Alzheimer, stéatose hépatique, insuffisance cardiaque. Parmi les découvertes surprenantes, l'[efficacité du tirzépatide sur l'apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) (réduction de 63% du SAOS) ouvre de nouvelles perspectives thérapeutiques. Ces études ouvrent l'accès à des traitements innovants et contribuent aux avancées thérapeutiques mondiales. Les résultats les plus solides concernent les [bénéfices cardiovasculaires prouvés en études cliniques](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec une réduction de 20% des événements cardiovasculaires majeurs.
+La recherche clinique sur les agonistes GLP-1 en France explore de nouvelles indications au-delà du diabète : maladie d'Alzheimer, stéatose hépatique, insuffisance cardiaque. Parmi les découvertes surprenantes, l'[efficacité du tirzépatide sur l'apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) (réduction de 63% du SAOS) ouvre de nouvelles perspectives thérapeutiques. Ces études ouvrent l'accès à des traitements innovants et contribuent aux avancées thérapeutiques mondiales. Les résultats les plus solides concernent les [bénéfices cardiovasculaires prouvés en études cliniques](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) avec une réduction de 20% des événements cardiovasculaires majeurs.
 
 ## Prix, disponibilité et variations en France
 
@@ -136,7 +136,7 @@ Les examens sanguins fréquents nécessitent des soins particuliers pour la peau
 Découvrez d'autres ressources sur les traitements GLP-1 pour compléter vos connaissances :
 
 - [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
-- [CagriSema résultats phase 3 REDEFINE](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/)
+- [CagriSema résultats phase 3 REDEFINE](/collections/recherche-glp1/cagrisema-résultats-phase3-redefine-arrivee-france-2026/)
 - [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
 - [plantes anti-diabète](/collections/alternatives-glp1/plantes-diabete/)
 - [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)

@@ -111,7 +111,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés, notamment [cholestérol et triglycérides](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/)
+- **Suivi biologique** : Bilans réguliers programmés, notamment [cholestérol et triglycérides](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-bénéfices/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 

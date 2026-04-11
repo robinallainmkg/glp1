@@ -86,7 +86,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 **Semaine 5-8** : 0,5 mg  
 **Semaine 9-12** : 1 mg  
 **Semaine 13-16** : 1,7 mg  
-**Semaine 17+** : 2,4 mg (dose maximale) — une dose encore plus élevée est à l'étude avec le programme [Wegovy haute dose 7,2 mg (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-resultats/)
+**Semaine 17+** : 2,4 mg (dose maximale) — une dose encore plus élevée est à l'étude avec le programme [Wegovy haute dose 7,2 mg (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-résultats/)
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)

@@ -5,10 +5,10 @@ date: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Régime méditerranéen GLP-1 alimentation santé : menu type, aliments clés et conseils pratiques pour allier cuisine méditerranéenne et traitement."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-mediterraneen-glp1.jpg"
-thumbnailAlt: "Illustration pour l'article regime-mediterraneen-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-mediterraneen-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article régime-mediterraneen-glp1"
 featured: false
 priority: 5
 schema: "Article"
@@ -17,7 +17,7 @@ mainKeyword: "régime méditerranéen GLP-1 alimentation santé"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -46,7 +46,7 @@ Le régime méditerranéen — aussi appelé régime crétois — s'inspire de l
 **Aliments à consommer au quotidien :**
 - Légumes et fruits frais en abondance (au moins 5 portions par jour)
 - Légumineuses : lentilles, pois chiches, haricots (3 à 4 fois par semaine)
-- Céréales complètes à [index glycémique](/collections/regime-glp1/glp1-index-glycemique/) bas : pain complet, quinoa, riz brun, avoine
+- Céréales complètes à [index glycémique](/collections/régime-glp1/glp1-index-glycemique/) bas : pain complet, quinoa, riz brun, avoine
 - Huile d'olive extra vierge comme principale source de matières grasses
 - Herbes aromatiques et épices (ail, thym, basilic) en remplacement du sel
 
@@ -68,7 +68,7 @@ Le régime méditerranéen — aussi appelé régime crétois — s'inspire de l
 
 ## Pourquoi le régime méditerranéen est-il idéal avec les GLP-1 ?
 
-Les traitements GLP-1 réduisent l'appétit et ralentissent la vidange gastrique, ce qui permet de manger moins sans ressentir la faim, mais expose aussi à des [carences nutritionnelles à surveiller](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/). Le régime méditerranéen, naturellement riche en fibres et en protéines végétales, prolonge ce sentiment de satiété et stabilise la glycémie entre les injections.
+Les traitements GLP-1 réduisent l'appétit et ralentissent la vidange gastrique, ce qui permet de manger moins sans ressentir la faim, mais expose aussi à des [carences nutritionnelles à surveiller](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/). Le régime méditerranéen, naturellement riche en fibres et en protéines végétales, prolonge ce sentiment de satiété et stabilise la glycémie entre les injections.
 
 **Bénéfices synergiques documentés :**
 
@@ -113,7 +113,7 @@ Les nausées, fréquentes en début de traitement GLP-1, sont mieux tolérées a
 
 Lors de l'initiation d'un traitement GLP-1, les nausées peuvent être importantes. Voici les adaptations recommandées :
 
-- Adaptez vos [portions alimentaires adaptées aux GLP-1](/collections/regime-glp1/glp1-portion-alimentaire/) et fractionnez vos repas en 4 à 5 petites prises plutôt que 3 grands repas
+- Adaptez vos [portions alimentaires adaptées aux GLP-1](/collections/régime-glp1/glp1-portion-alimentaire/) et fractionnez vos repas en 4 à 5 petites prises plutôt que 3 grands repas
 - Privilégiez les textures douces : soupes, purées de légumes, poissons en papillote
 - Évitez les aliments très gras ou très odorants (fromages forts, fritures, plats épicés)
 - Buvez de l'eau plate entre les repas, pas pendant (pour ne pas diluer les enzymes digestives)
@@ -124,7 +124,7 @@ Visez 1,5 à 2 litres d'eau par jour. Les tisanes à la camomille, verveine ou m
 
 ### Activité physique complémentaire
 
-La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour les patients sous traitement GLP-1 avec objectif de perte de poids. L'activité physique amplifie la perte de masse grasse tout en préservant la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles).
+La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour les patients sous traitement GLP-1 avec objectif de perte de poids. L'activité physique amplifie la perte de masse grasse tout en préservant la [masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles).
 
 ## Remboursement et coûts en France (mars 2026)
 
@@ -162,7 +162,7 @@ Oui. La plupart des médecins traitants peuvent vous orienter vers un diététic
 
 L'association du régime méditerranéen et d'un traitement GLP-1 est aujourd'hui la stratégie la mieux étayée scientifiquement pour traiter l'obésité et le diabète de type 2 en France. Ce mode alimentaire riche en légumes, légumineuses, poissons gras et huile d'olive complète naturellement l'action des médicaments en améliorant la sensibilité à l'insuline, en stabilisant la glycémie et en favorisant une perte de poids durable.
 
-Il ne s'agit pas d'un régime restrictif, mais d'un changement de mode de vie qui s'installe progressivement. Commencez par remplacer les graisses saturées par de l'huile d'olive, augmentez votre consommation de légumineuses, adoptez la [chrono-nutrition pour optimiser les horaires de repas](/collections/regime-glp1/regime-chrono-nutrition-glp1/), explorez le [régime sans sucre sous GLP-1](/collections/regime-glp1/regime-sans-sucre-glp1/) et réduisez les sucres raffinés : ces trois ajustements simples produisent déjà des effets mesurables en quelques semaines.
+Il ne s'agit pas d'un régime restrictif, mais d'un changement de mode de vie qui s'installe progressivement. Commencez par remplacer les graisses saturées par de l'huile d'olive, augmentez votre consommation de légumineuses, adoptez la [chrono-nutrition pour optimiser les horaires de repas](/collections/régime-glp1/régime-chrono-nutrition-glp1/), explorez le [régime sans sucre sous GLP-1](/collections/régime-glp1/régime-sans-sucre-glp1/) et réduisez les sucres raffinés : ces trois ajustements simples produisent déjà des effets mesurables en quelques semaines.
 
 Pour tout ajustement de votre traitement médicamenteux ou de votre alimentation, consultez toujours votre médecin ou votre diabétologue.
 

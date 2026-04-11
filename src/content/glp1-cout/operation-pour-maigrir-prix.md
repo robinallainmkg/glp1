@@ -170,7 +170,7 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Vitamines B12, fer, calcium
 * Prévient les carences nutritionnelles
 
-**[Protéines en Poudre Digestibles](https://bit.ly/proteines-sleeve)** - *34,90 €*
+**[Protéines en Poudre Digestibles](https://bit.ly/protéines-sleeve)** - *34,90 €*
 
 * Maintient la masse musculaire
 * Facilite la cicatrisation

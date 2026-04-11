@@ -54,7 +54,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Indications** : Diabète type 2, prévention cardiovasculaire
 - **Perte de poids** : 5-10% du poids corporel
 - **Posologie** : 1 injection par semaine
-- **Avantages** : Efficace sur le diabète, [protection cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
+- **Avantages** : Efficace sur le diabète, [protection cardiovasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/)
 - **Prix** : ~76,58€/stylo (prix public 2026)
 
 #### Wegovy (sémaglutide 0,25-2,4 mg)
@@ -350,7 +350,7 @@ En savoir plus sur les [résultats attendus avec Mounjaro](/collections/traiteme
 
 ### Puis-je boire de l'alcool avec les GLP-1 ?
 
-Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/regime-glp1/) pour plus de conseils nutritionnels.
+Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/régime-glp1/) pour plus de conseils nutritionnels.
 
 ### Les GLP-1 sont-ils remboursés pour tous ?
 

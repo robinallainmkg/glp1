@@ -48,7 +48,7 @@ Le Rybelsus impose un protocole de prise tres precis :
 - Attendre **au moins 30 minutes** avant de manger, boire ou prendre d'autres medicaments
 - Ne pas croquer ni ecraser le comprimé
 
-Ce protocole est indispensable car le semaglutide est une proteine fragile. Sans ces précautions, la biodisponibilite chute considerablement et le médicament perd son efficacité.
+Ce protocole est indispensable car le semaglutide est une protéine fragile. Sans ces précautions, la biodisponibilite chute considerablement et le médicament perd son efficacité.
 
 ### Prix et remboursement
 

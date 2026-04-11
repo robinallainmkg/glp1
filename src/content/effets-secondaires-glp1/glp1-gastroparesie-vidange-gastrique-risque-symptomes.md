@@ -34,7 +34,7 @@ Les nausées sous [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/
 
 ### Comment fonctionnent normalement la digestion et la vidange
 
-En temps normal, après un repas, l'estomac effectue des contractions régulières pour broyer les aliments et les acheminer progressivement vers l'intestin grêle. Ce processus, appelé vidange gastrique, dure généralement 2 à 4 heures pour un repas solide normal.
+En temps normal, après un repas, l'estomac effectué des contractions régulières pour broyer les aliments et les acheminer progressivement vers l'intestin grêle. Ce processus, appelé vidange gastrique, dure généralement 2 à 4 heures pour un repas solide normal.
 
 ### Le mécanisme d'action des GLP-1 sur l'estomac
 
@@ -106,11 +106,11 @@ Les médecins et chercheurs identifient plusieurs profils de patients potentiell
 
 L'un des aspects les moins connus mais les plus graves du ralentissement de la vidange gastrique sous GLP-1 concerne l'anesthésie générale. Un des risques majeurs en anesthésie est l'inhalation de contenu gastrique — ce qu'on appelle un syndrome de Mendelson. Cela survient quand un patient ayant un estomac non vide vomit et inhale ses vomissures dans les voies respiratoires pendant ou après l'anesthésie.
 
-C'est pourquoi la règle habituelle est d'être à jeun depuis 6 heures pour les solides avant une [intervention chirurgicale](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/).
+C'est pourquoi la règle habituelle est d'être à jeun depuis 6 heures pour les solides avant une [intervention chirurgicale](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/).
 
 ### Problème : le "jeûne" standard peut être insuffisant sous GLP-1
 
-Si la vidange gastrique est significativement ralentie par un GLP-1, un patient peut avoir des aliments non digérés dans l'estomac même après respecter les consignes habituelles de jeûne. Des cas d'inhalation et de complications respiratoires ont été rapportés à la FDA et à l'EMA chez des patients sous GLP-1 qui respectaient pourtant les consignes de jeûne. Consultez notre guide sur la [chirurgie sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les précautions à prendre.
+Si la vidange gastrique est significativement ralentie par un GLP-1, un patient peut avoir des aliments non digérés dans l'estomac même après respecter les consignes habituelles de jeûne. Des cas d'inhalation et de complications respiratoires ont été rapportés à la FDA et à l'EMA chez des patients sous GLP-1 qui respectaient pourtant les consignes de jeûne. Consultez notre guide sur la [chirurgie sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) pour les précautions à prendre.
 
 ### Les recommandations des sociétés d'anesthésie
 
@@ -139,7 +139,7 @@ Consultez votre médecin si vous ressentez des vomissements répétés, une impo
 - Prescrire des médicaments prokinétiques (qui stimulent la motilité gastrique) si nécessaire
 - Réaliser des explorations complémentaires (vidange gastrique scintigraphique)
 
-### Avant toute [intervention chirurgicale](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) ou endoscopique
+### Avant toute [intervention chirurgicale](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) ou endoscopique
 
 Informez systématiquement l'équipe médicale de votre traitement GLP-1 **dès la consultation préanesthésique**. Cela inclut les coloscopies, les endoscopies digestives, et toute intervention sous anesthésie générale ou sédation.
 
@@ -149,7 +149,7 @@ Informez systématiquement l'équipe médicale de votre traitement GLP-1 **dès 
 
 L'ANSM surveille activement ce signal depuis 2023. Elle a demandé aux fabricants de mettre à jour les résumés des caractéristiques du produit (RCP) pour mentionner plus explicitement le risque de gastroparésie et les précautions anesthésiques. Cette mise à jour a été effectuée pour la plupart des molécules concernées.
 
-L'ANSM a également contribué à la publication de l'alerte EPI-Phare et recommande aux prescripteurs de prendre en compte le risque de gastroparésie dans leur évaluation clinique, notamment chez les patients ayant des antécédents digestifs.
+L'ANSM a également contribué à la publication de l'alerte EPI-Phare et recommandé aux prescripteurs de prendre en compte le risque de gastroparésie dans leur évaluation clinique, notamment chez les patients ayant des antécédents digestifs.
 
 ### L'EMA (Agence européenne des médicaments)
 
@@ -175,4 +175,4 @@ Les recommandations concernant les GLP-1 et l'anesthésie sont relativement réc
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. En cas de symptômes digestifs persistants sous GLP-1, consultez votre médecin. Ces douleurs abdominales peuvent être confondues avec un autre effet indésirable grave : le [risque de pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/). Pour les effets secondaires courants des traitements GLP-1, consultez également nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et sur le [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/). Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. En cas de symptômes digestifs persistants sous GLP-1, consultez votre médecin. Ces douleurs abdominales peuvent être confondues avec un autre effet indésirable grave : le [risque de pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/). Pour les effets secondaires courants des traitements GLP-1, consultez également nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et sur le [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/). Dernière mise à jour : mars 2026.*

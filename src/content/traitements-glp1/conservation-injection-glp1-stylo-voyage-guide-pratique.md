@@ -32,7 +32,7 @@ Vous avez commencé un traitement par GLP-1 — [Ozempic](/collections/traitemen
 ## Sommaire
 
 1. [Règles de conservation générales](#conservation)
-2. [Conservation après ouverture du stylo](#apres-ouverture)
+2. [Conservation après ouverture du stylo](#après-ouverture)
 3. [Voyager avec un stylo GLP-1](#voyage)
 4. [Prendre l'avion avec son traitement](#avion)
 5. [Technique d'injection correcte](#injection)
@@ -60,7 +60,7 @@ Tous les stylos GLP-1 disponibles en France (Ozempic, Wegovy, Mounjaro, [Saxenda
 | Mounjaro (tirzépatide) | Jusqu'à la date d'expiration |
 | Saxenda (liraglutide 3 mg) | Jusqu'à la date d'expiration |
 
-## Conservation après ouverture du stylo {#apres-ouverture}
+## Conservation après ouverture du stylo {#après-ouverture}
 
 Une fois le stylo ouvert (première injection réalisée), les conditions de conservation changent pour certains médicaments.
 

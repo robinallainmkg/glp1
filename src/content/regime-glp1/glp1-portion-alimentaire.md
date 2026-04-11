@@ -6,8 +6,8 @@ updatedAt: 2026-03-18
 author: "Dr. Sophie Dubois"
 description: "Portions alimentaires GLP-1 : quantités de repas optimales sous Ozempic, Wegovy ou Mounjaro pour perdre du poids. Gérer la satiété et éviter les carences."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition", "portions", "satiété", "ozempic", "wegovy"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition", "portions", "satiété", "ozempic", "wegovy"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-portion-alimentaire.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-portion-alimentaire"
 featured: false
@@ -18,7 +18,7 @@ mainKeyword: "portions alimentaires GLP-1 quantités repas"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -32,7 +32,7 @@ L'un des effets les plus marquants des traitements GLP-1 — comme Ozempic (sém
 
 1. [Comment les GLP-1 modifient la sensation de faim et de satiété](#mecanisme)
 2. [Quelle taille d'assiette sous GLP-1 ?](#taille-assiette)
-3. [Fréquence des repas recommandée](#frequence-repas)
+3. [Fréquence des repas recommandée](#fréquence-repas)
 4. [Aliments à privilégier et à éviter](#aliments)
 5. [Gérer la satiété précoce sans se priver](#gestion-satieté)
 6. [Apports nutritionnels essentiels à surveiller](#nutrition)
@@ -60,7 +60,7 @@ La majorité des professionnels de santé spécialisés recommandent d'adopter u
 - **Protéines maigres** : un quart de l'assiette (poulet, poisson, œufs, légumineuses, tofu)
 - **Féculents complets** : un quart de l'assiette au maximum (riz complet, quinoa, patate douce, pain complet)
 
-Cette répartition garantit un [apport en protéines](/collections/regime-glp1/glp1-proteines/) et en [micronutriments](/collections/regime-glp1/glp1-micronutriments/) suffisants dans un volume alimentaire réduit. Les protéines sont particulièrement importantes car elles permettent de [préserver la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids.
+Cette répartition garantit un [apport en protéines](/collections/régime-glp1/glp1-protéines/) et en [micronutriments](/collections/régime-glp1/glp1-micronutriments/) suffisants dans un volume alimentaire réduit. Les protéines sont particulièrement importantes car elles permettent de [préserver la masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids.
 
 ### Volumes orientatifs
 
@@ -74,14 +74,14 @@ En début de traitement GLP-1 (titration), les quantités tolérées varient con
 
 Ces volumes sont indicatifs et doivent s'adapter à votre ressenti de satiété. Forcer à manger plus que votre estomac ne tolère entraîne nausées et vomissements — des effets secondaires très fréquents (≥10% des patients) qui sont aggravés par la surcharge gastrique.
 
-## Fréquence des repas recommandée {#frequence-repas}
+## Fréquence des repas recommandée {#fréquence-repas}
 
 ### 3 à 4 petits repas plutôt que 2 gros
 
 La réduction du volume toléré par repas incite naturellement à fractionner les prises alimentaires. Cette stratégie présente plusieurs avantages :
 
 - Elle évite la distension gastrique douloureuse souvent ressentie avec de grosses portions
-- Elle répartit mieux l'[apport en protéines](/collections/regime-glp1/glp1-proteines/) sur la journée (objectif : 20-30 g de protéines par repas pour une synthèse musculaire optimale)
+- Elle répartit mieux l'[apport en protéines](/collections/régime-glp1/glp1-protéines/) sur la journée (objectif : 20-30 g de protéines par repas pour une synthèse musculaire optimale)
 - Elle maintient une glycémie plus stable, limitant les coups de fatigue
 
 **Exemple d'organisation type** :

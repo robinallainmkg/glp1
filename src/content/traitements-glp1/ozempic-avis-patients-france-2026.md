@@ -39,7 +39,7 @@ Plutot que de s'appuyer uniquement sur les promesses marketing, nous avons compi
 
 ## Ozempic : Rappel du Traitement
 
-Ozempic est un médicament injectable a base de **semaglutide**, developpe par le laboratoire Novo Nordisk. Il appartient a la classe des **agonistes des recepteurs GLP-1** et a été approuve en France pour le traitement du **diabète de type 2** chez l'adulte.
+Ozempic est un médicament injectable a base de **semaglutide**, developpe par le laboratoire Novo Nordisk. Il appartient a la classe des **agonistes des récepteurs GLP-1** et a été approuve en France pour le traitement du **diabète de type 2** chez l'adulte.
 
 **Caracteristiques principales :**
 
@@ -370,7 +370,7 @@ Les témoignages montrent que les meilleurs résultats sont obtenus par les pati
 - Adoptent une approche a long terme plutot que de rechercher une perte de poids rapide
 - Sont informes des effets secondaires possibles et de l'effet rebond a l'arret
 
-Ozempic n'est pas une solution miracle, mais c'est un outil thérapeutique puissant lorsqu'il est utilise dans le cadre d'une prise en charge globale. Parlez-en avec votre médecin pour determiner s'il correspond a votre situation.
+Ozempic n'est pas une solution miracle, mais c'est un outil thérapeutique puissant lorsqu'il est utilisé dans le cadre d'une prise en charge globale. Parlez-en avec votre médecin pour determiner s'il correspond a votre situation.
 
 ---
 

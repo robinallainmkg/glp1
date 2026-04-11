@@ -75,7 +75,7 @@ Les bénéficiaires de la **Complémentaire Santé Solidaire (CSS, ex-CMU-C)** p
 
 ## Parcours de soins obligatoire
 
-La HAS recommande un parcours structuré avant toute chirurgie bariatrique :
+La HAS recommandé un parcours structuré avant toute chirurgie bariatrique :
 
 1. **Consultation initiale** avec le médecin traitant
 2. **Bilan multidisciplinaire** (6 à 12 mois de suivi minimum)

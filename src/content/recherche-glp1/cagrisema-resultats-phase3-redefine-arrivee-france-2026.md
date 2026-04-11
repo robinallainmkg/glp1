@@ -121,7 +121,7 @@ Ce qui distingue CagriSema de Mounjaro/Zepbound, c'est le mécanisme d'action. A
 
 ## L'impact sur l'écosystème des traitements anti-obésité
 
-L'arrivée potentielle de CagriSema s'inscrit dans un contexte de compétition intense entre Novo Nordisk et Eli Lilly. Cette concurrence est, à terme, une bonne nouvelle pour les patients : elle favorise l'innovation, peut faire baisser les prix (consultez le [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) pour les tarifs actuels), et élargit les options thérapeutiques. Au-delà de la perte de poids, les chercheurs espèrent reproduire et amplifier les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) déjà documentés pour le sémaglutide.
+L'arrivée potentielle de CagriSema s'inscrit dans un contexte de compétition intense entre Novo Nordisk et Eli Lilly. Cette concurrence est, à terme, une bonne nouvelle pour les patients : elle favorise l'innovation, peut faire baisser les prix (consultez le [prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) pour les tarifs actuels), et élargit les options thérapeutiques. Au-delà de la perte de poids, les chercheurs espèrent reproduire et amplifier les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) déjà documentés pour le sémaglutide.
 
 Elle s'ajoute à d'autres candidats en développement comme l'orforglipron (GLP-1 oral de Eli Lilly), le retatrutide (triple agoniste GLP-1/GIP/glucagon) ou le mazdutide. Pour les patients qui ne tolèrent pas ou ne répondent pas aux traitements actuels, cette diversification de l'arsenal thérapeutique représente un espoir concret.
 

@@ -62,7 +62,7 @@ Certains signaux font néanmoins l'objet d'une surveillance continue ou renforc�
 
 #### 1. Gastroparésie
 
-L'étude EPI-Phare sur la [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/) a confirmé un risque significativement augmenté sous GLP-1. Les données françaises sont cohérentes avec l'étude Sodhi (JAMA 2023) montrant un hazard ratio de 3,7 pour la gastroparésie par rapport aux patients sous bupropion-naltrexone. L'ANSM a demandé la mise à jour des RCP pour mentionner explicitement ce risque et les précautions anesthésiques associées.
+L'étude EPI-Phare sur la [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/) a confirmé un risque significativement augmenté sous GLP-1. Les données françaises sont cohérentes avec l'étude Sodhi (JAMA 2023) montrant un hazard ratio de 3,7 pour la gastroparésie par rapport aux patients sous bupropion-naltrexone. L'ANSM a demandé la mise à jour des RCP pour mentionner explicitement ce risque et les précautions anesthésiques associées.
 
 #### 2. Idées suicidaires et [troubles psychiatriques](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale)
 
@@ -70,11 +70,11 @@ L'EMA avait lancé en 2023 une évaluation sur le risque d'idées suicidaires so
 
 #### 3. Pancréatite aiguë
 
-Le risque de pancréatite sous GLP-1 fait l'objet d'une surveillance depuis la mise sur le marché, avec des [cas de pancréatite signalés à l'ANSM](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) régulièrement analysés. Les données françaises d'EPI-Phare ne retrouvent pas de signal significatif supérieur au risque de base dans la population diabétique et obèse — qui est déjà naturellement plus élevé. L'ANSM maintient néanmoins ce risque dans les informations prescripteur.
+Le risque de pancréatite sous GLP-1 fait l'objet d'une surveillance depuis la mise sur le marché, avec des [cas de pancréatite signalés à l'ANSM](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/) régulièrement analysés. Les données françaises d'EPI-Phare ne retrouvent pas de signal significatif supérieur au risque de base dans la population diabétique et obèse — qui est déjà naturellement plus élevé. L'ANSM maintient néanmoins ce risque dans les informations prescripteur.
 
 #### 4. Interactions et carences nutritionnelles
 
-Un [signal ANSM sur les carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) documenté dans le bilan 2025-2026 concerne les **carences nutritionnelles** chez les patients sous GLP-1, particulièrement en vitamine B12, vitamine D et protéines. Ces carences, liées à la réduction significative des apports alimentaires, peuvent avoir des conséquences cliniques (fatigue, fragilité musculaire, troubles neurologiques). L'ANSM recommande un bilan biologique annuel chez les patients traités au long cours.
+Un [signal ANSM sur les carences nutritionnelles sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) documenté dans le bilan 2025-2026 concerne les **carences nutritionnelles** chez les patients sous GLP-1, particulièrement en vitamine B12, vitamine D et protéines. Ces carences, liées à la réduction significative des apports alimentaires, peuvent avoir des conséquences cliniques (fatigue, fragilité musculaire, troubles neurologiques). L'ANSM recommandé un bilan biologique annuel chez les patients traités au long cours.
 
 ## Le mésusage : un problème de santé publique documenté
 
@@ -86,7 +86,7 @@ Le terme "mésusage" désigne l'utilisation d'un médicament en dehors de ses in
 - La prescription et l'utilisation chez des patients avec un IMC inférieur au seuil d'indication (< 30 kg/m² ou < 27 kg/m² avec comorbidité)
 - L'achat via des circuits non officiels (parapharmacies, sites internet, pseudo-consultations en ligne)
 
-L'[étude nationale de cohorte sur le mésusage des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-resultats-2026/) et les données EPI-Phare sur les remboursements indiquent qu'une proportion significative des nouvelles initiations de GLP-1 en France ne correspondent pas strictement aux critères des recommandations HAS. L'ANSM a publié une alerte spécifique sur ce sujet et a renforcé les contrôles.
+L'[étude nationale de cohorte sur le mésusage des GLP-1](/collections/recherche-glp1/mesusage-glp1-france-etude-nationale-cohorte-résultats-2026/) et les données EPI-Phare sur les remboursements indiquent qu'une proportion significative des nouvelles initiations de GLP-1 en France ne correspondent pas strictement aux critères des recommandations HAS. L'ANSM a publié une alerte spécifique sur ce sujet et a renforcé les contrôles.
 
 ### Pourquoi le mésusage est dangereux
 

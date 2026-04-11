@@ -28,13 +28,13 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Depuis que [tout médecin généraliste peut prescrire les GLP-1 pour l'obésité](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) depuis juin 2025, une nouvelle voie d'accès s'est développée rapidement : la télémédecine. Les plateformes de consultation en ligne permettent aujourd'hui d'obtenir une prescription de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) sans quitter son domicile. Voici comment cela fonctionne, ce que cela coûte, et ce qu'il faut vérifier pour s'assurer d'un suivi médical sérieux.
+Depuis que [tout médecin généraliste peut prescrire les GLP-1 pour l'obésité](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/) depuis juin 2025, une nouvelle voie d'accès s'est développée rapidement : la télémédecine. Les plateformes de consultation en ligne permettent aujourd'hui d'obtenir une prescription de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) sans quitter son domicile. Voici comment cela fonctionne, ce que cela coûte, et ce qu'il faut vérifier pour s'assurer d'un suivi médical sérieux.
 
 ## Pourquoi la télémédecine s'est imposée pour les GLP-1 ?
 
 ### Le problème d'accès aux médecins spécialistes
 
-Avant juin 2025, seuls les [endocrinologues](/collections/medecins-glp1-france/endocrinologue-pour-maigrir), diabétologues et médecins nutritionnistes pouvaient initier un traitement GLP-1 pour l'obésité. Les délais d'attente atteignaient 6 à 12 mois dans certaines régions. Pour beaucoup de patients — notamment dans les déserts médicaux — l'accès à un spécialiste relevait du parcours du combattant. Retrouvez le détail des [nouvelles règles ANSM 2025 pour les généralistes](/collections/traitements-glp1/glp1-prescription-generaliste-nouvelles-regles-ansm-2026/).
+Avant juin 2025, seuls les [endocrinologues](/collections/medecins-glp1-france/endocrinologue-pour-maigrir), diabétologues et médecins nutritionnistes pouvaient initier un traitement GLP-1 pour l'obésité. Les délais d'attente atteignaient 6 à 12 mois dans certaines régions. Pour beaucoup de patients — notamment dans les déserts médicaux — l'accès à un spécialiste relevait du parcours du combattant. Retrouvez le détail des [nouvelles règles ANSM 2025 pour les généralistes](/collections/traitements-glp1/glp1-prescription-généraliste-nouvelles-regles-ansm-2026/).
 
 Même après l'ouverture de la prescription aux généralistes, de nombreux médecins traitants restent réticents ou peu à l'aise avec ces nouvelles molécules. La télémédecine a comblé ce vide en mettant en contact les patients avec des médecins formés et disponibles rapidement.
 

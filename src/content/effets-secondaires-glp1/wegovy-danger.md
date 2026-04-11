@@ -5,7 +5,7 @@ pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Effets secondaires"
-tags: ["glp1", "effets-secondaires", "tolerance"]
+tags: ["glp1", "effets-secondaires", "tolérance"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/wegovy-danger-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Danger"
@@ -72,7 +72,7 @@ Les troubles digestifs sont de loin les [effets indésirables du sémaglutide](/
 
 ### Effets graves rares mais documentés
 
-**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)** : des cas de pancréatite ont été rapportés sous sémaglutide. Toute douleur abdominale intense et persistante doit conduire à l'arrêt immédiat du traitement et à une consultation en urgence.
+**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)** : des cas de pancréatite ont été rapportés sous sémaglutide. Toute douleur abdominale intense et persistante doit conduire à l'arrêt immédiat du traitement et à une consultation en urgence.
 
 **Risque thyroïdien** : des tumeurs thyroïdiennes (carcinome médullaire) ont été observées chez l'animal. Par précaution, Wegovy est contre-indiqué chez les patients ayant des antécédents personnels ou familiaux de carcinome médullaire de la thyroïde ou de néoplasie endocrinienne multiple de type 2 (NEM 2).
 

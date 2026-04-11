@@ -31,7 +31,7 @@ C'est l'une des questions les plus fréquentes que posent les patients sous GLP-
 
 ## Sommaire
 
-1. [Ce que disent les études sur la reprise de poids](#donnees)
+1. [Ce que disent les études sur la reprise de poids](#données)
 2. [Pourquoi le poids revient-il ?](#mecanismes)
 3. [Facteurs qui influencent la reprise](#facteurs)
 4. [Stratégies pour maintenir les résultats](#strategies)
@@ -39,7 +39,7 @@ C'est l'une des questions les plus fréquentes que posent les patients sous GLP-
 6. [Alternatives en cas d'arrêt forcé](#alternatives)
 7. [FAQ](#faq)
 
-## Ce que disent les études sur la reprise de poids {#donnees}
+## Ce que disent les études sur la reprise de poids {#données}
 
 Les données les plus complètes sur ce sujet proviennent des extensions des grandes études cliniques sur le sémaglutide ([Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)/) et le tirzépatide (Mounjaro).
 
@@ -103,9 +103,9 @@ Le temps sous GLP-1 doit être utilisé comme une "fenêtre de changement". Le m
 
 - Apprendre à manger plus lentement et en pleine conscience
 - Réduire les portions sans frustration (l'appétit diminué facilite cela)
-- Augmenter la consommation de [protéines](/collections/regime-glp1/glp1-proteines) et de légumes
-- Instaurer un [programme d'exercice pour maintenir les résultats](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
-- Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
+- Augmenter la consommation de [protéines](/collections/régime-glp1/glp1-protéines) et de légumes
+- Instaurer un [programme d'exercice pour maintenir les résultats](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
+- Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
 
 Ces changements, s'ils sont consolidés pendant 12 à 18 mois de traitement, ont plus de chances de se maintenir après l'arrêt.
 
@@ -135,7 +135,7 @@ En pratique, une réduction progressive de la dose sur 2 à 3 mois avant l'arrê
 
 ## Alternatives en cas d'arrêt forcé {#alternatives}
 
-Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis. La [préservation de la masse musculaire lors du sevrage](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un point crucial souvent négligé lors de l'arrêt.
+Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis. La [préservation de la masse musculaire lors du sevrage](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un point crucial souvent négligé lors de l'arrêt.
 
 ### Orlistat (Xenical)
 
@@ -173,4 +173,4 @@ Oui. Il n'existe pas de contre-indication médicale à la reprise d'un traitemen
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. La décision d'arrêter ou de poursuivre un traitement GLP-1 doit être prise en concertation avec votre médecin. Pour comprendre les [résultats attendus sous GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/), consultez nos guides détaillés. Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un professionnel de santé. La décision d'arrêter ou de poursuivre un traitement GLP-1 doit être prise en concertation avec votre médecin. Pour comprendre les [résultats attendus sous GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/), consultez nos guides détaillés. Dernière mise à jour : mars 2026.*

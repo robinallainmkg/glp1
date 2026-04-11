@@ -6,8 +6,8 @@ pubDate: 2026-03-17
 date: 2026-03-17
 author: "Dr. Sophie Dubois"
 category: "Nutrition et comportement alimentaire"
-tags: ["glp1", "accompagnement", "psychologie", "comportement alimentaire", "nutrition", "diététicien", "regime-glp1"]
-collection: "regime-glp1"
+tags: ["glp1", "accompagnement", "psychologie", "comportement alimentaire", "nutrition", "diététicien", "régime-glp1"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/psychologie-glp1.jpg"
 thumbnailAlt: "Accompagnement psychologique et comportement alimentaire sous traitement GLP-1"
 featured: true
@@ -20,7 +20,7 @@ secondaryKeywords: ["ozempic comportement alimentaire", "nutrition intuitive glp
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -74,9 +74,9 @@ Sous GLP-1, l'appétit est fortement réduit. Ce qui semble être une bonne nouv
 
 Un diététicien spécialisé dans l'accompagnement des traitements GLP-1 peut vous aider à :
 
-- **Structurer des repas denses en nutriments** malgré un volume alimentaire réduit : privilégier les [protéines](/collections/regime-glp1/glp1-proteines/) maigres, les légumes, les glucides complexes et les bonnes graisses
+- **Structurer des repas denses en nutriments** malgré un volume alimentaire réduit : privilégier les [protéines](/collections/régime-glp1/glp1-protéines/) maigres, les légumes, les glucides complexes et les bonnes graisses
 - **Éviter les carences en micronutriments** — vitamine D, fer, magnésium, oméga-3 — fréquentes quand l'apport calorique chute rapidement
-- **Maintenir un apport protéique suffisant** pour préserver la masse musculaire, un enjeu majeur sous GLP-1 (voir notre guide sur la [préservation musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)/)
+- **Maintenir un apport protéique suffisant** pour préserver la masse musculaire, un enjeu majeur sous GLP-1 (voir notre guide sur la [préservation musculaire sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)/)
 - **Planifier la transition post-traitement** : comment maintenir les nouvelles habitudes quand le médicament ne soutient plus l'appétit
 
 ### La nutrition intuitive : reprendre contact avec ses signaux internes
@@ -135,7 +135,7 @@ La phase la plus critique est celle qui suit l'arrêt du traitement. Les habitud
 
 - **Ne pas arrêter brutalement** le suivi diététique et psychologique à la fin du traitement
 - **Prévoir une période de transition** de 3 à 6 mois avec un accompagnement renforcé après l'arrêt du médicament
-- **Maintenir l'activité physique** : la [musculation et l'exercice régulier](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) sont les meilleurs alliés du maintien du poids à long terme
+- **Maintenir l'activité physique** : la [musculation et l'exercice régulier](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) sont les meilleurs alliés du maintien du poids à long terme
 - **S'appuyer sur les outils de pleine conscience** acquis pendant le traitement pour gérer les éventuels rebonds de craving
 
 ## Ce que dit la recherche en 2026

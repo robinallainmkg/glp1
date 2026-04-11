@@ -87,7 +87,7 @@ Si vous êtes diabétique et que vous prenez déjà des médicaments hypoglycém
 
 ### Médicaments contre la douleur (AINS et opioïdes)
 
-Les anti-inflammatoires non stéroïdiens (ibuprofène, naproxène) et les analgésiques opioïdes ont une absorption qui peut être modifiée sous GLP-1. Les opioïdes ralentissent eux-mêmes la vidange gastrique — la combinaison peut créer un ralentissement excessif et des symptômes de [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/).
+Les anti-inflammatoires non stéroïdiens (ibuprofène, naproxène) et les analgésiques opioïdes ont une absorption qui peut être modifiée sous GLP-1. Les opioïdes ralentissent eux-mêmes la vidange gastrique — la combinaison peut créer un ralentissement excessif et des symptômes de [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/).
 
 ## Médicaments sans interaction connue significative
 
@@ -95,7 +95,7 @@ Pour rassurer, de nombreux médicaments sont considérés comme sûrs avec les G
 - La plupart des antihypertenseurs (amlodipine, bisoprolol, périndopril)
 - Les statines (atorvastatine, rosuvastatine) pour le cholestérol
 - La metformine pour le diabète de type 2
-- Les [inhibiteurs SGLT2](/collections/regime-glp1/isglt2-liste/) (dapagliflozine, empagliflozine) pour le diabète et la protection cardiaque
+- Les [inhibiteurs SGLT2](/collections/régime-glp1/isglt2-liste/) (dapagliflozine, empagliflozine) pour le diabète et la protection cardiaque
 - Les inhibiteurs de la pompe à protons (oméprazole, ésoméprazole) pour le reflux
 - La plupart des antihistaminiques et médicaments pour l'allergie
 
@@ -131,7 +131,7 @@ Les recommandations actuelles des sociétés d'anesthésie préconisent :
 - D'informer l'équipe anesthésique si l'arrêt n'a pas pu être effectué dans ces délais
 - De réaliser une échoendoscopie gastrique en préopératoire dans certains cas à risque
 
-Si vous avez une chirurgie programmée, informez **immédiatement** le chirurgien et l'anesthésiste de votre traitement GLP-1. Consultez notre guide complet sur les [précautions d'arrêt avant chirurgie et anesthésie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les délais et protocoles recommandés.
+Si vous avez une chirurgie programmée, informez **immédiatement** le chirurgien et l'anesthésiste de votre traitement GLP-1. Consultez notre guide complet sur les [précautions d'arrêt avant chirurgie et anesthésie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) pour les délais et protocoles recommandés.
 
 ## Déclarer une interaction suspecte
 

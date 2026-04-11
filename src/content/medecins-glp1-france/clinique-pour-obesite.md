@@ -5,7 +5,7 @@ pubDate: 2025-08-20
 date: '2026-03-17'
 author: "Dr. Émilie Martin"
 category: "Médecins spécialisés"
-tags: ["glp1", "medecins", "specialistes"]
+tags: ["glp1", "medecins", "spécialistes"]
 collection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/clinique-pour-obesite.jpg"
 thumbnailAlt: "Illustration pour l'article clinique-pour-obesite"
@@ -317,7 +317,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Ne vous découragez pas en cas de plateau
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [prix Wegovy](/collections/glp1-cout/wegovy-prix/)

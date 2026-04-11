@@ -39,7 +39,7 @@ Nous avons croise les données des essais cliniques STEP, les témoignages de pa
 
 ## Wegovy : Rappel du Traitement
 
-Wegovy est un médicament injectable a base de **semaglutide**, la même molécule que celle presente dans Ozempic, mais a une dose supérieure (2.4 mg contre 1 mg maximum pour Ozempic). Il est spécifiquement indique pour la **gestion du poids** chez les adultes presentant :
+Wegovy est un médicament injectable a base de **semaglutide**, la même molécule que celle présenté dans Ozempic, mais a une dose supérieure (2.4 mg contre 1 mg maximum pour Ozempic). Il est spécifiquement indique pour la **gestion du poids** chez les adultes presentant :
 
 - Un **IMC supérieur ou égal a 30** (obésité), ou
 - Un **IMC supérieur ou égal a 27** avec au moins une comorbidité liée au poids (hypertension, diabète de type 2, dyslipidemie)
@@ -98,7 +98,7 @@ Les essais cliniques du programme STEP (Semaglutide Treatment Effect in People w
 
 ## Témoignages Patients : 5 Avis Reels
 
-Les avis ci-dessous ont ete recueillis aupres de patients francais ayant utilise Wegovy pendant au moins 3 mois, dans le cadre d'un suivi medical. Les prenoms ont ete modifies pour preserver l'anonymat.
+Les avis ci-dessous ont ete recueillis aupres de patients francais ayant utilisé Wegovy pendant au moins 3 mois, dans le cadre d'un suivi medical. Les prenoms ont ete modifies pour preserver l'anonymat.
 
 ### Témoignage 1 -- Sophie, 42 ans, Paris (avis tres positif)
 

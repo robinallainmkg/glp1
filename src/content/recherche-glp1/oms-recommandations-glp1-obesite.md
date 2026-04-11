@@ -44,13 +44,13 @@ Avant décembre 2025, l'OMS n'avait émis aucune recommandation spécifique sur 
 
 La publication de ces lignes directrices répond donc à un double objectif : guider les professionnels de santé du monde entier et poser les bases d'un accès plus équitable à ces traitements.
 
-## Ce que recommande l'OMS
+## Ce que recommandé l'OMS
 
 ### Recommandation conditionnelle pour un usage au long cours
 
 L'OMS formule une **recommandation conditionnelle** en faveur de l'utilisation des agonistes du récepteur GLP-1 pour le traitement de l'obésité chez l'adulte. Le terme "conditionnel" signifie que le niveau de certitude des preuves est modéré et que l'utilisation doit être encadrée par des conditions précises.
 
-Concrètement, l'OMS recommande que les GLP-1 :
+Concrètement, l'OMS recommandé que les GLP-1 :
 
 - Soient prescrits **en association avec des interventions comportementales** (alimentation, activité physique, soutien psychologique) — jamais comme traitement isolé
 - Soient utilisés comme **traitement au long cours**, car l'arrêt du médicament entraîne généralement une reprise de poids
@@ -65,7 +65,7 @@ L'OMS précise que ces traitements sont particulièrement pertinents pour :
 - Les adultes avec un **IMC supérieur ou égal à 27 kg/m²** accompagné d'au moins une comorbidité liée au poids (diabète de type 2, hypertension, [apnée du sommeil traitée par GLP-1](/collections/recherche-glp1/glp1-apnee-sommeil-saos/), maladies cardiovasculaires)
 - Les patients chez qui les **interventions non pharmacologiques** seules se sont avérées insuffisantes après une durée raisonnable
 
-### Ce que l'OMS ne recommande PAS
+### Ce que l'OMS ne recommandé PAS
 
 Le document est également clair sur les limites :
 
@@ -84,7 +84,7 @@ L'OMS a fondé ses recommandations sur une revue systématique des essais cliniq
 
 **Études SURMOUNT (tirzépatide — [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/)** : Le tirzépatide, qui agit à la fois sur les récepteurs GLP-1 et GIP, a montré des pertes de poids encore plus importantes, jusqu'à 20-25% du poids initial dans certains essais.
 
-**Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat, qui confirme les [bénéfices cardiovasculaires documentés des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/), a particulièrement pesé dans la décision de l'OMS.
+**Étude SELECT** : Cette étude majeure a démontré que le sémaglutide 2,4 mg réduit de 20% le risque d'événements cardiovasculaires majeurs chez les patients obèses, indépendamment du statut diabétique. Ce résultat, qui confirme les [bénéfices cardiovasculaires documentés des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/), a particulièrement pesé dans la décision de l'OMS.
 
 ### Le rapport bénéfice/risque évalué par l'OMS
 
@@ -132,17 +132,17 @@ L'OMS répond à cette critique en insistant sur le fait que les traitements mé
 
 ## Questions fréquentes
 
-### L'OMS recommande-t-elle Ozempic pour perdre du poids ?
+### L'OMS recommandé-t-elle Ozempic pour perdre du poids ?
 
-L'OMS recommande les agonistes du récepteur GLP-1 de manière générale, sans nommer de marque spécifique. [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide) est indiqué pour le diabète de type 2, tandis que Wegovy (même molécule, dosage plus élevé) est spécifiquement approuvé pour l'obésité. C'est Wegovy qui correspond le mieux aux recommandations de l'OMS pour la perte de poids.
+L'OMS recommandé les agonistes du récepteur GLP-1 de manière générale, sans nommer de marque spécifique. [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (sémaglutide) est indiqué pour le diabète de type 2, tandis que Wegovy (même molécule, dosage plus élevé) est spécifiquement approuvé pour l'obésité. C'est Wegovy qui correspond le mieux aux recommandations de l'OMS pour la perte de poids.
 
 ### Les recommandations de l'OMS sont-elles contraignantes ?
 
 Non. Les recommandations de l'OMS sont des avis d'experts destinés à guider les politiques de santé nationales. Chaque pays conserve sa souveraineté en matière de décisions réglementaires et de remboursement. En France, c'est la HAS qui décide.
 
-### L'OMS recommande-t-elle ces traitements pour les personnes en simple surpoids ?
+### L'OMS recommandé-t-elle ces traitements pour les personnes en simple surpoids ?
 
-Non. Les recommandations ciblent spécifiquement l'obésité (IMC >= 30) ou le surpoids avec comorbidités (IMC >= 27 avec complications). L'OMS ne recommande pas l'utilisation des GLP-1 pour des objectifs esthétiques ou un surpoids isolé sans complication de santé.
+Non. Les recommandations ciblent spécifiquement l'obésité (IMC >= 30) ou le surpoids avec comorbidités (IMC >= 27 avec complications). L'OMS ne recommandé pas l'utilisation des GLP-1 pour des objectifs esthétiques ou un surpoids isolé sans complication de santé.
 
 ### Ces recommandations accéléreront-elles le remboursement en France ?
 

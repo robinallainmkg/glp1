@@ -127,7 +127,7 @@ Les effets secondaires des GLP-1 sont les mêmes chez les femmes atteintes de SO
 
 - **Nausées et troubles digestifs** : fréquents en début de traitement (30 à 40 % des patients), généralement transitoires et liés à la titration progressive des doses.
 - **Risque d'hypoglycémie** : faible en l'absence de diabète traité par sulfonylurées ou insuline, car les GLP-1 agissent de façon glucose-dépendante.
-- **[Chute de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)** : un effluvium télogène a été rapporté sous GLP-1, notamment en cas de perte de poids rapide et d'apports protéiques insuffisants. Maintenir un [apport en protéines](/collections/regime-glp1/glp1-proteines/) d'au moins 1,2 g/kg/jour est recommandé.
+- **[Chute de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)** : un effluvium télogène a été rapporté sous GLP-1, notamment en cas de perte de poids rapide et d'apports protéiques insuffisants. Maintenir un [apport en protéines](/collections/régime-glp1/glp1-protéines/) d'au moins 1,2 g/kg/jour est recommandé.
 
 Pour une vue complète, consultez les [effets secondaires des GLP-1](/collections/effets-secondaires-glp1/) sur notre site.
 

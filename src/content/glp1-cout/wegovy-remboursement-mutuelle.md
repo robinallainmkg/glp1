@@ -52,7 +52,7 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 ### Position officielle en 2025
 
-Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
+Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/).
 
 ### Critères potentiels pour un futur remboursement
 

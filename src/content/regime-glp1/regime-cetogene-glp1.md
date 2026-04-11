@@ -5,10 +5,10 @@ date: 2025-08-20
 author: "Dr. Sophie Dubois"
 description: "Régime cétogène GLP-1 perte de poids keto : combiner ces deux approches pour des résultats accélérés. Avantages, précautions et protocole."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-cetogene-glp1.jpg"
-thumbnailAlt: "Illustration pour l'article regime-cetogene-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-cetogene-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article régime-cetogene-glp1"
 featured: false
 priority: 5
 schema: "Article"
@@ -17,7 +17,7 @@ mainKeyword: "régime cétogène GLP-1 perte de poids keto"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -111,7 +111,7 @@ Le régime cétogène (ou "keto") réduit drastiquement les glucides au profit d
 - **Probiotiques** : Microbiote intestinal
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
@@ -124,10 +124,10 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 Oui, mais surveillance accrue nécessaire. Risque potentiel d'acidocétose chez diabétiques prédisposés.
 
 ### Faut-il diminuer la dose de GLP-1 en keto ?
-Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance. Vous pouvez aussi explorer le [régime paléo sous GLP-1](/collections/regime-glp1/regime-paleo-glp1/) comme alternative moins restrictive.
+Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance. Vous pouvez aussi explorer le [régime paléo sous GLP-1](/collections/régime-glp1/régime-paleo-glp1/) comme alternative moins restrictive.
 
 ### Combien de temps maintenir cette association ?
-3-6 mois généralement, puis transition vers [régime méditerranéen](/collections/regime-glp1/regime-mediterraneen-glp1) équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
+3-6 mois généralement, puis transition vers [régime méditerranéen](/collections/régime-glp1/régime-mediterraneen-glp1) équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/régime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
 
 ### Quels risques spécifiques à surveiller ?
 Acidocétose (diabétiques), constipation majorée, calculs rénaux, carences vitamines liposolubles.

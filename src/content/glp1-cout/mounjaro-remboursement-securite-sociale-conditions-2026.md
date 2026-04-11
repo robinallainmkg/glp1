@@ -2,7 +2,7 @@
 title: "Mounjaro Remboursement Sécurité Sociale Conditions 2026"
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
 description: "Mounjaro remboursement Sécurité Sociale conditions 2026 : IMC ≥35, avis HAS ASMR 4, négociations CEPS en cours. Date prévisionnelle 2e semestre 2026."
-keywords: ['mounjaro remboursement securite sociale', 'mounjaro remboursement 2026', 'mounjaro conditions remboursement', 'mounjaro has avis', 'mounjaro ceps negociations', 'remboursement tirzepatide france', 'mounjaro imc 35 remboursement']
+keywords: ['mounjaro remboursement sécurité sociale', 'mounjaro remboursement 2026', 'mounjaro conditions remboursement', 'mounjaro has avis', 'mounjaro ceps negociations', 'remboursement tirzepatide france', 'mounjaro imc 35 remboursement']
 seoTitle: "Mounjaro Remboursement Sécurité Sociale 2026 : Guide"
 seoDescription: "Mounjaro remboursement Sécurité Sociale 2026 : conditions IMC ≥35, avis HAS ASMR 4, négociations CEPS en cours. Date prévisionnelle 2e semestre 2026."
 publishedAt: '2026-03-17'

@@ -5,8 +5,8 @@ pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-index-glycemique.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-index-glycemique"
 featured: false
@@ -17,7 +17,7 @@ mainKeyword: "index glycémique GLP-1 aliments glycémie"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"

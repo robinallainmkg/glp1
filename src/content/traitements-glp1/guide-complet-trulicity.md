@@ -61,7 +61,7 @@ Trulicity est indiqué dans le traitement du diabète de type 2 chez l'adulte, e
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,1 à -1,6%)
 - Perte de poids moyenne de 2-4 kg
-- [Réduction du risque cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
+- [Réduction du risque cardiovasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/)
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée

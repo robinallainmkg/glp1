@@ -3,15 +3,15 @@ title: "Témoignage Ozempic : Marie, -32 kg avec GLP-1"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Témoignage Ozempic perte de poids femme : Marie L., 39 ans, -32 kilos en 12 mois avec le sémaglutide (Wegovy). Parcours complet et résultats concrets."
 author: "Marie L."
-image: "/images/collections/temoignages/mariejourney9.jpg"
-collection: "temoignages"
+image: "/images/collections/témoignages/mariejourney9.jpg"
+collection: "témoignages"
 category: "transformation"
 tags: ["wegovy", "sémaglutide", "perte de poids", "transformation", "32 kilos", "mère de famille", "lyon"]
 pubDate: 2025-08-15T00:00:00.000Z
 date: "2025-08-15"
 featured: true
 priority: 1
-mainKeyword: "temoignage Ozempic perte de poids femme"
+mainKeyword: "témoignage Ozempic perte de poids femme"
 ---
 
 ## Témoignage Ozempic Perte de Poids : Marie, -32 kg
@@ -37,7 +37,7 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
   </div>
 </div>
 
-![Marie L. transformation exceptionnelle GLP-1 32 kilos](/images/collections/temoignages/mariejourney9.jpg)
+![Marie L. transformation exceptionnelle GLP-1 32 kilos](/images/collections/témoignages/mariejourney9.jpg)
 
 ## Profil de Marie
 
@@ -52,7 +52,7 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
 
 ## Son Témoignage
 
-> "Après mes trois grossesses, mon corps avait complètement changé. Malgré tous mes efforts - régimes, [sport](/collections/regime-glp1/glp1-sport-exercice-musculation-guide), coaching nutritionnel - impossible de perdre du poids durablement. Je pesais 98 kilos pour 1m65, j'étais épuisée et je n'arrivais plus à suivre mes enfants."
+> "Après mes trois grossesses, mon corps avait complètement changé. Malgré tous mes efforts - régimes, [sport](/collections/régime-glp1/glp1-sport-exercice-musculation-guide), coaching nutritionnel - impossible de perdre du poids durablement. Je pesais 98 kilos pour 1m65, j'étais épuisée et je n'arrivais plus à suivre mes enfants."
 
 > "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a parlé du Wegovy. Au début, j'étais sceptique : encore un traitement qui ne marcherait pas... Mais dès les premières semaines, j'ai senti la différence. Mon appétit s'est régulé naturellement, je n'avais plus ces fringales incontrôlables, surtout le soir."
 
@@ -85,7 +85,7 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
 ## Les Clés de Sa Réussite
 
 1. **Suivi médical rigoureux** : Consultations mensuelles
-2. **[Alimentation équilibrée](/collections/regime-glp1/regime-mounjaro-optimal/)** : Pas de régime strict, juste de bonnes habitudes
+2. **[Alimentation équilibrée](/collections/régime-glp1/régime-mounjaro-optimal/)** : Pas de régime strict, juste de bonnes habitudes
 3. **Activité physique progressive** : De la marche à la course
 4. **Soutien familial** : Mari et enfants très encourageants
 5. **Mental positif** : Focus sur la santé, pas juste le poids
@@ -123,6 +123,6 @@ mainKeyword: "temoignage Ozempic perte de poids femme"
 
 ---
 
-Découvrez d'autres témoignages et les données cliniques dans notre guide sur les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
+Découvrez d'autres témoignages et les données cliniques dans notre guide sur les [résultats avant/après des traitements GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

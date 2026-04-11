@@ -115,7 +115,7 @@ Il n'existe pas de surveillance ophtalmologique réglementaire spécifique liée
 
 - Tout symptôme visuel doit être pris au sérieux et investigué rapidement
 - Chez les patients diabétiques, le dépistage annuel de la rétinopathie diabétique est maintenu
-- En cas de NOIAN avérée, l'EMA recommande l'arrêt du traitement par sémaglutide. La décision finale doit être discutée au cas par cas avec un ophtalmologue en tenant compte du bénéfice global du traitement
+- En cas de NOIAN avérée, l'EMA recommandé l'arrêt du traitement par sémaglutide. La décision finale doit être discutée au cas par cas avec un ophtalmologue en tenant compte du bénéfice global du traitement
 
 ## Ce risque concerne-t-il tous les GLP-1 ?
 

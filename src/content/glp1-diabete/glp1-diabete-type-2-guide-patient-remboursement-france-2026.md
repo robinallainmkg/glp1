@@ -63,7 +63,7 @@ Concrètement, un traitement GLP-1 agit sur le diabète de type 2 de plusieurs m
 - Entraîne une perte de poids de 3 à 7% en moyenne dans les indications diabète (plus importante dans les indications obésité)
 
 **Sur le cœur et les reins** :
-- [Protection cardiovasculaire démontrée dans de grandes études](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) (réduction du risque d'infarctus, d'AVC et de décès cardiovasculaire)
+- [Protection cardiovasculaire démontrée dans de grandes études](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) (réduction du risque d'infarctus, d'AVC et de décès cardiovasculaire)
 - Effets néphroprotecteurs documentés, notamment pour le sémaglutide dans l'étude FLOW
 
 ## GLP-1 pour le diabète vs GLP-1 pour l'obésité : les différences essentielles {#difference}
@@ -229,7 +229,7 @@ Les GLP-1 s'associent fréquemment et efficacement avec d'autres médicaments du
 
 **Avec la metformine** : association de référence. La metformine reste le traitement de première intention, et les GLP-1 sont généralement prescrits en deuxième intention. Leur association est bien tolérée et particulièrement efficace sur le contrôle glycémique.
 
-**Avec les [inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/)** (dapagliflozine, empagliflozine, canagliflozine) : association de choix pour les patients à haut risque cardiovasculaire ou rénal. Les deux classes ont des effets complémentaires et leurs mécanismes sont différents.
+**Avec les [inhibiteurs SGLT2 (iSGLT2)](/collections/régime-glp1/isglt2-liste/)** (dapagliflozine, empagliflozine, canagliflozine) : association de choix pour les patients à haut risque cardiovasculaire ou rénal. Les deux classes ont des effets complémentaires et leurs mécanismes sont différents.
 
 **Avec l'insuline** : possible mais nécessite une surveillance plus stricte des hypoglycémies. L'ajout d'un GLP-1 permet souvent de réduire les doses d'insuline, sous supervision médicale.
 
@@ -252,7 +252,7 @@ Oui, si vous êtes diabétique de type 2 et que votre médecin remplit le formul
 La perte de poids est un effet secondaire attendu et bénéfique des GLP-1 prescrits dans le diabète. Ozempic peut entraîner une perte de 3 à 7% du poids en moyenne, ce qui est favorable pour le contrôle glycémique. Cependant, vous ne pouvez pas légalement obtenir une prescription d'Ozempic à des doses plus élevées ou hors AMM uniquement pour perdre du poids. Si vous souhaitez un traitement médicamenteux dédié à la perte de poids, Wegovy et Mounjaro sont les options approuvées.
 
 **Mon médecin généraliste peut-il prescrire mon GLP-1 pour le diabète ?**
-Oui. Les GLP-1 pour le diabète de type 2 ont toujours pu être prescrits par les [médecins généralistes](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions). La restriction aux spécialistes ne s'appliquait qu'aux GLP-1 pour l'obésité (Wegovy, Mounjaro), et elle a été levée en juin 2025.
+Oui. Les GLP-1 pour le diabète de type 2 ont toujours pu être prescrits par les [médecins généralistes](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions). La restriction aux spécialistes ne s'appliquait qu'aux GLP-1 pour l'obésité (Wegovy, Mounjaro), et elle a été levée en juin 2025.
 
 **J'ai raté une injection d'Ozempic cette semaine. Que faire ?**
 Si vous l'avez oublié et qu'il reste plus de 5 jours avant votre prochain jour d'injection habituel, injectez dès que vous vous en souvenez et reprenez votre calendrier habituel. Si il reste moins de 5 jours, attendez et injectez à la date prévue sans doubler la dose.

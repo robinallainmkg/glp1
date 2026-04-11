@@ -146,7 +146,7 @@ Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que
 
 **Mon Ozempic a été prescrit pour l'obésité (hors AMM). Suis-je prioritaire en cas de pénurie ?**
 
-Non. L'ANSM recommande en cas de pénurie d'Ozempic de donner la priorité aux patients diabétiques de type 2 pour qui il est officiellement indiqué. Les patients prenant Ozempic pour l'obésité (hors AMM) devraient basculer vers Wegovy ou Saxenda.
+Non. L'ANSM recommandé en cas de pénurie d'Ozempic de donner la priorité aux patients diabétiques de type 2 pour qui il est officiellement indiqué. Les patients prenant Ozempic pour l'obésité (hors AMM) devraient basculer vers Wegovy ou Saxenda.
 
 **J'ai oublié une injection. Que faire ?**
 

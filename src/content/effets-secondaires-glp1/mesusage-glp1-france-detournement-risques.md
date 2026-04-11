@@ -58,7 +58,7 @@ Le mésusage emprunte plusieurs canaux :
 
 **L'achat en ligne** : Des sites internet non autorisés vendent du sémaglutide ou du tirzépatide sans ordonnance. Outre l'illégalité, ces achats exposent à des [risques de contrefaçon graves](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/).
 
-**Le partage de traitements** : Des patients sous traitement partagent ou revendent leurs stylos injecteurs à des proches, une pratique dangereuse et illégale. Le [témoignage de Serena Williams sur les GLP-1](/collections/temoignages/serena-williams-glp1/) a par ailleurs contribué à la médiatisation de ces traitements, amplifiant la demande hors indication.
+**Le partage de traitements** : Des patients sous traitement partagent ou revendent leurs stylos injecteurs à des proches, une pratique dangereuse et illégale. Le [témoignage de Serena Williams sur les GLP-1](/collections/témoignages/serena-williams-glp1/) a par ailleurs contribué à la médiatisation de ces traitements, amplifiant la demande hors indication.
 
 ## Les risques du mésusage
 
@@ -66,17 +66,17 @@ Le mésusage emprunte plusieurs canaux :
 
 L'ANSM surveille de près les effets gastro-intestinaux graves associés à l'utilisation des GLP-1, et le mésusage amplifie ces risques pour plusieurs raisons :
 
-**Pancréatite aiguë** : Le risque de [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), bien que rare dans le cadre d'une utilisation supervisée, augmente chez les personnes qui ne bénéficient pas d'un suivi médical adapté. Les patients en mésusage ne réalisent pas toujours les bilans biologiques préalables recommandés, et certains présentent des facteurs de risque non identifiés (antécédents biliaires, alcoolisme).
+**Pancréatite aiguë** : Le risque de [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/), bien que rare dans le cadre d'une utilisation supervisée, augmente chez les personnes qui ne bénéficient pas d'un suivi médical adapté. Les patients en mésusage ne réalisent pas toujours les bilans biologiques préalables recommandés, et certains présentent des facteurs de risque non identifiés (antécédents biliaires, alcoolisme).
 
 **Occlusion intestinale** : Des cas d'occlusion intestinale ont été signalés, particulièrement chez des personnes utilisant des doses inappropriées ou augmentant trop rapidement la posologie sans supervision médicale.
 
-**[Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)** : Le ralentissement de la vidange gastrique — un effet recherché pour la perte de poids — peut devenir problématique et évoluer vers une gastroparésie persistante chez certains patients.
+**[Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/)** : Le ralentissement de la vidange gastrique — un effet recherché pour la perte de poids — peut devenir problématique et évoluer vers une gastroparésie persistante chez certains patients.
 
 Pour une vue complète des effets secondaires, consultez nos guides sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
 
 ### Risques nutritionnels et métaboliques
 
-**Carences nutritionnelles** : L'ANSM a identifié un risque de [carences nutritionnelles liées au mésusage des GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) chez les personnes qui perdent du poids rapidement sans suivi diététique. Les carences en protéines, fer, vitamines B12 et D sont les plus fréquemment rapportées.
+**Carences nutritionnelles** : L'ANSM a identifié un risque de [carences nutritionnelles liées au mésusage des GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) chez les personnes qui perdent du poids rapidement sans suivi diététique. Les carences en protéines, fer, vitamines B12 et D sont les plus fréquemment rapportées.
 
 **Sarcopénie** : La perte de masse musculaire accompagnant la perte de poids rapide est un sujet de préoccupation croissant. Sans accompagnement par une activité physique adaptée et un apport protéique suffisant, la perte de poids obtenue peut être qualitativement délétère.
 

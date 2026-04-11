@@ -66,7 +66,7 @@ Les profils décrits ci-dessous sont des catégories éditoriales et non des ré
 La majorité des cas de mésusage concernent des personnes en surpoids mais n'atteignant pas le seuil d'IMC requis par l'AMM pour Wegovy (IMC ≥ 30 ou ≥ 27 avec comorbidités) ou les conditions de remboursement HAS pour Mounjaro (IMC ≥ 35). Ces patients cherchent souvent à perdre "les derniers kilos" ou à améliorer leur silhouette plutôt qu'à traiter une obésité médicalement documentée.
 
 **Profil 2 — Patients "esthétiques"**
-Un sous-groupe utilise les GLP-1 uniquement à des fins esthétiques, sans problème de santé associé. Ce phénomène, largement médiatisé par les réseaux sociaux et les influenceurs, est particulièrement documenté chez les jeunes femmes de 25-40 ans.
+Un sous-groupe utilisé les GLP-1 uniquement à des fins esthétiques, sans problème de santé associé. Ce phénomène, largement médiatisé par les réseaux sociaux et les influenceurs, est particulièrement documenté chez les jeunes femmes de 25-40 ans.
 
 **Profil 3 — Pré-diabétiques non classifiés**
 Certains patients sont à la frontière diagnostique : glycémie à jeun élevée mais n'atteignant pas encore le seuil du diabète (1,26 g/L). Des médecins prescrivent parfois les GLP-1 de manière anticipatoire dans cette population, ce que les recommandations HAS 2025 ne valident pas encore formellement.

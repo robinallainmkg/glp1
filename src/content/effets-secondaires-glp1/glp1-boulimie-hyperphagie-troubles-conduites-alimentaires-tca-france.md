@@ -94,7 +94,7 @@ La boulimie associe souvent des vomissements provoqués. Or, les GLP-1 provoquen
 - **Renforcer les comportements de purge** si le patient interprète les nausées du médicament comme une "permission" de vomir
 - **Déstabiliser un équilibre psychologique fragile** chez des patients en rémission partielle
 
-La société française de psychiatrie de l'enfant et de l'adolescent (SFPEA) recommande une **évaluation psychiatrique spécialisée avant toute initiation** de GLP-1 chez un patient avec antécédents de boulimie.
+La société française de psychiatrie de l'enfant et de l'adolescent (SFPEA) recommandé une **évaluation psychiatrique spécialisée avant toute initiation** de GLP-1 chez un patient avec antécédents de boulimie.
 
 ## GLP-1 et hyperphagie boulimique : une piste thérapeutique ? {#hyperphagie}
 
@@ -114,7 +114,7 @@ Plusieurs études récentes montrent que le sémaglutide réduit significativeme
 Malgré ces résultats encourageants, plusieurs experts français soulignent que :
 
 1. **Traiter uniquement le symptôme** (les crises) sans travailler sur les causes psychologiques sous-jacentes expose à un effet rebond à l'arrêt du traitement
-2. **La dépendance psychologique au médicament** peut se développer si le patient l'utilise comme seul outil de gestion de ses compulsions
+2. **La dépendance psychologique au médicament** peut se développer si le patient l'utilisé comme seul outil de gestion de ses compulsions
 3. **Un suivi diététique et psychologique parallèle** est indispensable pour un résultat durable
 
 ## Contre-indications et précautions absolues {#contre-indications}
@@ -135,7 +135,7 @@ Certaines situations constituent des contre-indications formelles ou des drapeau
 
 ## L'accompagnement psychiatrique : une condition non négociable {#psychiatrie}
 
-Tous les experts s'accordent sur un point : les GLP-1 ne peuvent pas être prescrits seuls chez un patient avec TCA. L'[accompagnement psychologique sous GLP-1](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) n'est pas un "plus" — c'est une condition sine qua non.
+Tous les experts s'accordent sur un point : les GLP-1 ne peuvent pas être prescrits seuls chez un patient avec TCA. L'[accompagnement psychologique sous GLP-1](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) n'est pas un "plus" — c'est une condition sine qua non.
 
 ### Pourquoi l'accompagnement est indispensable
 
@@ -162,7 +162,7 @@ En France, plusieurs organismes ont publié des recommandations spécifiques sur
 
 ### HAS (Haute Autorité de Santé)
 
-La HAS précise dans ses recommandations de 2025 sur Wegovy et Mounjaro que les patients avec "troubles psychiatriques actifs, notamment les troubles des conduites alimentaires" doivent bénéficier d'une évaluation spécialisée avant toute prescription. Elle ne liste pas les TCA en rémission comme contre-indication absolue, mais recommande la prudence.
+La HAS précise dans ses recommandations de 2025 sur Wegovy et Mounjaro que les patients avec "troubles psychiatriques actifs, notamment les troubles des conduites alimentaires" doivent bénéficier d'une évaluation spécialisée avant toute prescription. Elle ne liste pas les TCA en rémission comme contre-indication absolue, mais recommandé la prudence.
 
 ### FFAB (Fédération Française Anorexie Boulimie)
 

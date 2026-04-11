@@ -102,14 +102,14 @@ Pour les patients qui présentent de l'arthrose et commencent un traitement GLP-
 1. **Informer le rhumatologue** du démarrage du traitement GLP-1 pour un suivi adapté
 2. **Réaliser une ostéodensitométrie (DXA)** de référence, surtout après 60 ans, avant de commencer le traitement ou dans les 3 premiers mois
 3. **Assurer un apport suffisant en calcium et vitamine D** : au minimum 1 000 mg de calcium et 800 UI de vitamine D par jour, idéalement en supplémentation
-4. **Maintenir une [activité physique](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) avec mise en charge** : la marche, les exercices en piscine et la musculation légère préservent la densité osseuse tout en protégeant les articulations
+4. **Maintenir une [activité physique](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) avec mise en charge** : la marche, les exercices en piscine et la musculation légère préservent la densité osseuse tout en protégeant les articulations
 5. **Ne pas augmenter la dose trop rapidement** : l'escalade progressive minimise les effets secondaires digestifs et évite une perte de poids trop brutale
 
 ## L'avis des sociétés savantes françaises
 
 ### La Société française de rhumatologie (SFR)
 
-Lors de son congrès de décembre 2024, la SFR a discuté des perspectives des GLP-1 dans l'arthrose avec prudence, soulignant à la fois le potentiel bénéfique (perte de poids, effet anti-inflammatoire) et le risque de sarcopénie lié à la perte de masse musculaire rapide. La société recommande une collaboration étroite entre le médecin prescripteur du GLP-1 et le rhumatologue pour adapter le suivi et surveiller la composition corporelle.
+Lors de son congrès de décembre 2024, la SFR a discuté des perspectives des GLP-1 dans l'arthrose avec prudence, soulignant à la fois le potentiel bénéfique (perte de poids, effet anti-inflammatoire) et le risque de sarcopénie lié à la perte de masse musculaire rapide. La société recommandé une collaboration étroite entre le médecin prescripteur du GLP-1 et le rhumatologue pour adapter le suivi et surveiller la composition corporelle.
 
 ### La Haute Autorité de Santé (HAS)
 
@@ -153,4 +153,4 @@ Non, le retatrutide (en développement chez Eli Lilly) n'a pas encore d'AMM en E
 
 ---
 
-*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un rhumatologue ou d'un médecin. Les indications des GLP-1 en France restent strictement encadrées par l'ANSM. Pour comprendre les effets des GLP-1 sur la composition osseuse, consultez notre article sur le [risque osseux et ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/). Pour les bénéfices cardiovasculaires des GLP-1, voir nos [données sur la santé du cœur](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/). Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif et ne remplace pas l'avis d'un rhumatologue ou d'un médecin. Les indications des GLP-1 en France restent strictement encadrées par l'ANSM. Pour comprendre les effets des GLP-1 sur la composition osseuse, consultez notre article sur le [risque osseux et ostéoporose sous GLP-1](/collections/effets-secondaires-glp1/glp1-osteoporose-risque-osseux/). Pour les bénéfices cardiovasculaires des GLP-1, voir nos [données sur la santé du cœur](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/). Dernière mise à jour : mars 2026.*

@@ -5,7 +5,7 @@ date: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Consulter un endocrinologue pour maigrir avec GLP-1 : spécialisation en obésité, traitements, suivi personnalisé et prise en charge médicale complète."
 category: "Médecins spécialisés"
-tags: ["glp1", "medecins", "specialistes"]
+tags: ["glp1", "medecins", "spécialistes"]
 collection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/endocrinologue-pour-maigrir.jpg"
 thumbnailAlt: "Illustration pour l'article endocrinologue-pour-maigrir"
@@ -68,7 +68,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ### 2. Utiliser les annuaires officiels
 
 **Conseil de l'Ordre des Médecins :**
-- Site web : conseil-national.medecin.fr
+- Site web : conseil-national.médecin.fr
 - Recherche par spécialité et localisation
 - Vérification des diplômes et inscriptions
 
@@ -232,7 +232,7 @@ Idéalement, associez :
 - Coach sportif adapté à votre condition
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [prix Wegovy](/collections/glp1-cout/wegovy-prix/)

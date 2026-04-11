@@ -50,9 +50,9 @@ Ce mécanisme est universel et indépendant du traitement utilisé : il s'observ
 
 ### 2. La perte de masse musculaire réduit les dépenses
 
-Lors d'une perte de poids, une partie du poids perdu est de la masse maigre (muscle). Or le muscle est le tissu le plus consommateur d'énergie au repos. Moins de muscle = moins de dépense de base = poids plus difficile à perdre. La [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un enjeu majeur du traitement.
+Lors d'une perte de poids, une partie du poids perdu est de la masse maigre (muscle). Or le muscle est le tissu le plus consommateur d'énergie au repos. Moins de muscle = moins de dépense de base = poids plus difficile à perdre. La [fonte musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un enjeu majeur du traitement.
 
-Sous GLP-1, cet effet est réel : les études montrent que 20 à 40 % du poids perdu peut être de la masse maigre, contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
+Sous GLP-1, cet effet est réel : les études montrent que 20 à 40 % du poids perdu peut être de la masse maigre, contre 60 à 80 % de masse grasse. Ce ratio peut être amélioré par un apport suffisant en [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) (minimum 1,2 g/kg/jour) et par la pratique d'une activité physique avec résistance (musculation, marche avec charges).
 
 ### 3. La tolérance pharmacologique
 
@@ -98,7 +98,7 @@ L'alimentation sous GLP-1 doit être centrée sur les protéines. En période de
 
 **Qualité plutôt que restriction supplémentaire**
 
-Adopter une [alimentation optimale sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/) ou un régime adapté à votre GLP-1 est plus efficace que de réduire davantage les calories. Réduire encore davantage les calories est rarement la bonne réponse : un déficit trop sévère aggrave l'adaptation métabolique et la perte musculaire. Mieux vaut améliorer la qualité des aliments : réduire les sucres rapides et les ultra-transformés, augmenter les légumes et les fibres pour soutenir le microbiote.
+Adopter une [alimentation optimale sous Mounjaro](/collections/régime-glp1/régime-mounjaro-optimal/) ou un régime adapté à votre GLP-1 est plus efficace que de réduire davantage les calories. Réduire encore davantage les calories est rarement la bonne réponse : un déficit trop sévère aggrave l'adaptation métabolique et la perte musculaire. Mieux vaut améliorer la qualité des aliments : réduire les sucres rapides et les ultra-transformés, augmenter les légumes et les fibres pour soutenir le microbiote.
 
 **Revoir l'index glycémique**
 
@@ -108,7 +108,7 @@ Certains patients reprennent des aliments à index glycémique élevé progressi
 
 L'activité physique est le levier le plus efficace pour contrecarrer l'adaptation métabolique. En période de plateau, deux types d'activités sont particulièrement utiles :
 
-- **La musculation / l'entraînement en résistance** : un programme d'[exercice physique et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) de 2 à 3 séances par semaine de 30 à 45 minutes. La construction ou le maintien de la masse musculaire relève directement le métabolisme de base. Ce n'est pas l'activité qui brûle le plus de calories sur le moment, mais c'est celle qui a l'effet métabolique le plus durable.
+- **La musculation / l'entraînement en résistance** : un programme d'[exercice physique et musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) de 2 à 3 séances par semaine de 30 à 45 minutes. La construction ou le maintien de la masse musculaire relève directement le métabolisme de base. Ce n'est pas l'activité qui brûle le plus de calories sur le moment, mais c'est celle qui a l'effet métabolique le plus durable.
 - **L'augmentation du NEAT** (Non-Exercise Activity Thermogenesis) : les activités du quotidien — marcher, prendre les escaliers, se déplacer à pied, jardiner — représentent une dépense énergétique souvent négligée. Viser 8 000 à 10 000 pas par jour peut faire la différence.
 
 ### Étape 4 : Parlez de la dose avec votre médecin
@@ -145,7 +145,7 @@ Pas forcément, mais c'est une option que votre médecin peut envisager. Passer 
 C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise rapide du poids. Les données des études STEP ne suggèrent pas que les "pauses" améliorent les résultats à long terme. La [reprise de poids](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) est un risque bien documenté après un arrêt.
 
 **Le plateau est-il causé par le stress ou le manque de sommeil ?**
-Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pour dépasser le plateau peut également aider à identifier les comportements alimentaires qui freinent la progression.
+Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pour dépasser le plateau peut également aider à identifier les comportements alimentaires qui freinent la progression.
 
 ## Résumé : que faire face à un plateau ?
 
@@ -153,7 +153,7 @@ Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétentio
 |---|---|
 | Moins de 4 semaines | Patience, vérifier les conditions de pesée |
 | 4 à 8 semaines | Revoir l'alimentation (protéines, qualité), augmenter l'activité physique |
-| Plus de 8 semaines | Consultation médicale — évaluer la dose, les [carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), envisager une adaptation |
+| Plus de 8 semaines | Consultation médicale — évaluer la dose, les [carences nutritionnelles sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), envisager une adaptation |
 | Plus de 6 mois à dose max | Accepter le nouvel équilibre, focus sur le maintien |
 
 Le plateau de poids sous GLP-1 est une étape normale du traitement, pas un signe d'échec. Il est le reflet de l'intelligence physiologique de votre corps, qui s'adapte à un nouveau poids pour le défendre. Comprendre ce mécanisme permet de l'aborder avec moins d'anxiété et plus d'efficacité.

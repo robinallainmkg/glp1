@@ -80,13 +80,13 @@ Cet article vous présente les informations essentielles et actualisées. Pour u
 - 83% patients perdent ≥5% poids
 - 66% patients perdent ≥10% poids
 - 48% patients perdent ≥15% poids
-- 32% patients perdent ≥20% poids — un résultat que pourrait dépasser le [Wegovy 7,2 mg haute dose (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-resultats/)
+- 32% patients perdent ≥20% poids — un résultat que pourrait dépasser le [Wegovy 7,2 mg haute dose (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-résultats/)
 
 **Profil d'efficacité détaillé :**
 - Perte rapide : -5% dès 12 semaines
 - Perte maximale : 52-68 semaines
 - Maintien : stable jusqu'à 104 semaines
-- Reprise modérée si arrêt : +7% à 1 an — pour limiter la [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), l'apport en protéines est essentiel
+- Reprise modérée si arrêt : +7% à 1 an — pour limiter la [fonte musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/), l'apport en protéines est essentiel
 
 ### <a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a> (Liraglutide 3 mg) - Efficacité Prouvée
 
@@ -200,7 +200,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 **Suivi pluridisciplinaire :**
 - Consultation médicale trimestrielle
 - Suivi nutritionnel personnalisé
-- [Accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si besoin
+- [Accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si besoin
 
 ### Données de Maintien Long Terme
 
@@ -242,7 +242,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 
 **Patients post-ménopause :**
 - Réponse légèrement réduite
-- [Bénéfice cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) important
+- [Bénéfice cardiovasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) important
 - Attention ostéoporose
 - Suivi hormonal parallèle
 
@@ -268,7 +268,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 ## Questions Fréquemment Posées
 
 **Combien peut-on perdre avec les GLP-1 ?**
-En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans nos témoignages documentés.
+En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) dans nos témoignages documentés.
 
 **Combien de temps pour voir les premiers résultats ?**
 Les premiers effets apparaissent dès 2-4 semaines, avec une perte significative visible après 8-12 semaines.

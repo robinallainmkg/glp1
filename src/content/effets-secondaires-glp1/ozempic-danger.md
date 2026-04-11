@@ -5,7 +5,7 @@ pubDate: 2025-08-10
 date: 2025-08-10
 author: "Karim Benali"
 category: "Effets secondaires"
-tags: ["glp1", "effets-secondaires", "tolerance"]
+tags: ["glp1", "effets-secondaires", "tolérance"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/ozempic-danger-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Ozempic Danger"
@@ -47,7 +47,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ## Résumé des dangers identifiés
 
-- **[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)** : classée "peu fréquente" (< 1/100 patients, 0,3% dans les études cliniques phase 3a — potentiellement mortelle)
+- **[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)** : classée "peu fréquente" (< 1/100 patients, 0,3% dans les études cliniques phase 3a — potentiellement mortelle)
 - **Cancer thyroïde** : risque théorique (études animales)
 - **Occlusion intestinale** : cas rares rapportés
 - **Hypoglycémie sévère** : avec autres antidiabétiques
@@ -216,7 +216,7 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 1. **Diabète type 1** : risque acidocétose
 2. **[Grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/)/allaitement** : sécurité non établie
 3. **Allergie sémaglutide** : réaction anaphylactique
-4. **[Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/) sévère** : aggravation possible
+4. **[Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/) sévère** : aggravation possible
 5. **Antécédents carcinome médullaire thyroïde**
 
 ### Précautions renforcées
@@ -289,7 +289,7 @@ Arrêter immédiatement Ozempic et consulter en urgence. Dosage de la lipase ind
 
 ### Ozempic est-il dangereux pour le cœur ?
 
-Au contraire, les études montrent des [bénéfices cardiovasculaires prouvés](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec réduction du risque d'événements cardiovasculaires majeurs.
+Au contraire, les études montrent des [bénéfices cardiovasculaires prouvés](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) avec réduction du risque d'événements cardiovasculaires majeurs.
 
 ### Peut-on mourir d'Ozempic ?
 
@@ -326,7 +326,7 @@ Dépend de la gravité : effets mineurs (adaptation possible), effets graves (ar
 4. Adrénaline si anaphylaxie
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicaments GLP-1](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)

@@ -52,7 +52,7 @@ Le sémaglutide (Ozempic, Wegovy) a une demi-vie d'environ **7 jours**. Cela sig
 
 Pour avoir une marge de sécurité raisonnable, les autorités sanitaires et les fabricants recommandent d'arrêter le sémaglutide au moins **2 mois avant la conception** prévue.
 
-Le tirzépatide (Mounjaro) a une demi-vie légèrement plus courte (~5 jours). Le fabricant recommande un arrêt au moins **1 mois avant** la conception, mais beaucoup de médecins appliquent par précaution la même règle des 2 mois.
+Le tirzépatide (Mounjaro) a une demi-vie légèrement plus courte (~5 jours). Le fabricant recommandé un arrêt au moins **1 mois avant** la conception, mais beaucoup de médecins appliquent par précaution la même règle des 2 mois.
 
 ## Que disent les notices officielles ?
 
@@ -66,7 +66,7 @@ Même principe que pour Ozempic, avec la recommandation d'arrêt **2 mois avant*
 
 ### Mounjaro (tirzépatide)
 
-La notice Mounjaro indique que le médicament est déconseillé pendant la grossesse. Le fabricant recommande un arrêt **au moins 1 mois avant** une grossesse planifiée, mais précise que des données humaines de sécurité manquent.
+La notice Mounjaro indique que le médicament est déconseillé pendant la grossesse. Le fabricant recommandé un arrêt **au moins 1 mois avant** une grossesse planifiée, mais précise que des données humaines de sécurité manquent.
 
 ## GLP-1 et fertilité : quels effets ?
 

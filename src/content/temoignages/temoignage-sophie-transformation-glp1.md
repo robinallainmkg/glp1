@@ -1,17 +1,17 @@
 ---
-title: "Temoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans"
+title: "Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
-description: "Temoignage ozempic perte de poids : Sophie D., 52 ans, -28 kilos en 14 mois avec Ozempic après la ménopause. Transformation et conseils."
+description: "Témoignage ozempic perte de poids : Sophie D., 52 ans, -28 kilos en 14 mois avec Ozempic après la ménopause. Transformation et conseils."
 author: "Sophie D."
-image: "/images/collections/temoignages/sophie29.jpg"
-collection: "temoignages"
+image: "/images/collections/témoignages/sophie29.jpg"
+collection: "témoignages"
 category: "transformation"
 tags: ["ozempic", "sémaglutide", "perte de poids", "28 kilos", "ménopause", "52 ans", "femme"]
 pubDate: 2025-08-25T00:00:00.000Z
 date: "2025-08-25"
 featured: true
 priority: 3
-mainKeyword: "temoignage ozempic perte de poids"
+mainKeyword: "témoignage ozempic perte de poids"
 ---
 
 ## Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans
@@ -96,7 +96,7 @@ Sophie a dû gérer les [effets secondaires](/collections/effets-secondaires-glp
 
 ### Activité Physique
 - **Avant :** Marche occasionnelle
-- **Après :** Aquagym 2x/semaine + marche nordique pour [préserver la masse musculaire sous Ozempic](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
+- **Après :** Aquagym 2x/semaine + marche nordique pour [préserver la masse musculaire sous Ozempic](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 
 ### Énergie
 - **Avant :** Fatigue constante, essoufflement
@@ -167,6 +167,6 @@ Sophie a dû gérer les [effets secondaires](/collections/effets-secondaires-glp
 
 ---
 
-Pour les chiffres des études cliniques et d'autres témoignages, consultez notre dossier sur les [résultats avant/après documentés des GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
+Pour les chiffres des études cliniques et d'autres témoignages, consultez notre dossier sur les [résultats avant/après documentés des GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

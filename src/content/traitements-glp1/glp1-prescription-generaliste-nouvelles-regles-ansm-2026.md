@@ -1,7 +1,7 @@
 ---
 title: "GLP-1 : Les Généralistes Peuvent Prescrire (ANSM 2026)"
 description: "Prescription GLP-1 obésité : depuis juin 2025, tout généraliste peut prescrire Wegovy, Mounjaro et Saxenda. Nouvelles règles ANSM et guide pratique."
-keywords: ['prescription glp1 generaliste', 'ansm regles prescription glp1 2025', 'wegovy generaliste ordonnance', 'mounjaro medecin traitant', 'glp1 sans specialiste france']
+keywords: ['prescription glp1 généraliste', 'ansm regles prescription glp1 2025', 'wegovy généraliste ordonnance', 'mounjaro médecin traitant', 'glp1 sans spécialiste france']
 seoTitle: "GLP-1 Obésité : Généralistes Autorisés à Prescrire depuis Juin 2025 (ANSM)"
 seoDescription: "Depuis juin 2025, votre médecin généraliste peut prescrire Wegovy, Mounjaro et Saxenda pour l'obésité. Conditions, procédure et ce qui change concrètement."
 publishedAt: '2026-03-18'
@@ -58,7 +58,7 @@ Plusieurs facteurs ont conduit à cette évolution réglementaire :
 
 ### Vous n'avez plus besoin d'un spécialiste pour une première prescription
 
-C'est le changement le plus important. Si vous souffrez d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27 avec hypertension, diabète, dyslipidémie ou apnée du sommeil), les [conditions de prescription par le médecin généraliste](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions/) sont désormais remplies et votre médecin traitant peut :
+C'est le changement le plus important. Si vous souffrez d'obésité (IMC ≥ 30) ou de surpoids avec comorbidité (IMC ≥ 27 avec hypertension, diabète, dyslipidémie ou apnée du sommeil), les [conditions de prescription par le médecin généraliste](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/) sont désormais remplies et votre médecin traitant peut :
 
 1. Évaluer votre éligibilité lors d'une consultation dédiée
 2. Prescrire un traitement par Wegovy, Mounjaro ou Saxenda
@@ -197,7 +197,7 @@ Oui, c'est effectif depuis le 23 juin 2025. Tout médecin inscrit à l'Ordre des
 
 **Mon médecin traitant n'est pas formé sur les GLP-1. Que faire ?**
 
-Tous les médecins ne sont pas encore à l'aise avec ces nouvelles molécules. Si le vôtre ne souhaite pas les prescrire, vous pouvez consulter un autre médecin généraliste — en présentiel ou en télémédecine — sans avoir besoin d'un spécialiste. Des plateformes de [télémédecine spécialisées](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) proposent des consultations avec des médecins formés.
+Tous les médecins ne sont pas encore à l'aise avec ces nouvelles molécules. Si le vôtre ne souhaite pas les prescrire, vous pouvez consulter un autre médecin généraliste — en présentiel ou en télémédecine — sans avoir besoin d'un spécialiste. Des plateformes de [télémédecine spécialisées](/collections/medecins-glp1-france/prescription-glp1-télémédecine-en-ligne-france/) proposent des consultations avec des médecins formés.
 
 **Le fait que mon généraliste prescrive plutôt qu'un spécialiste change-t-il le remboursement ?**
 
