@@ -3,7 +3,7 @@ title: "Témoignage Laurent : -35 kg en 10 Mois avec Mounjaro"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Témoignage Laurent Mounjaro perte de poids : 45 ans, -35 kilos avec le tirzepatide. De 120 kg à 85 kg en 10 mois. Parcours complet et conseils."
 author: "Laurent M."
-image: "/images/temoignages/Laurent-journey8.jpg"
+image: "/images/collections/temoignages/Laurent-journey8.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "35 kilos", "homme", "45 ans", "transformation"]
@@ -52,7 +52,7 @@ mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 
 > "Le déclic, ça a été quand mon fils de 8 ans m'a dit qu'il avait honte de moi devant ses copains. Ça m'a anéanti, mais ça m'a aussi donné la force de changer."
 
-> "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, <a href="/regime-glp1/glp1-sport-exercice-musculation-guide/">sport</a>... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
+> "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, <a href="/collections/regime-glp1/glp1-sport-exercice-musculation-guide/">sport</a>... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
 
 ## Son Parcours de Transformation
 

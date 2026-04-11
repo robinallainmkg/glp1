@@ -81,7 +81,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 - Urticaire généralisée
 - Choc anaphylactique
 
-**[Pancréatite aiguë](/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)**
+**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)**
 - Douleurs abdominales intenses
 - Nausées et vomissements persistants
 - Fièvre
@@ -249,7 +249,7 @@ Si vous vomissez **dans les 30 minutes** après l'injection, contactez votre mé
 
 ### Les effets secondaires de Mounjaro sont-ils dangereux ?
 
-La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves ([pancréatite aiguë](/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
+La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves ([pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
 
 ### Comment éviter les nausées avec Mounjaro ?
 
@@ -328,4 +328,4 @@ Limitez à 1-2 verres occasionnels.
 ---
 
 *Ce guide sur les effets secondaires de Mounjaro est informatif. En cas d'effets secondaires, consultez immédiatement votre médecin. Chaque patient est unique et la tolérance peut varier.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/effets-secondaires-glp1/effets-secondaires-mounjaro.md
+<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/effets-secondaires-glp1/effets-secondaires-mounjaro.md

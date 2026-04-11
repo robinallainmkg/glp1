@@ -68,7 +68,7 @@ Concrètement, un traitement GLP-1 agit sur le diabète de type 2 de plusieurs m
 
 ## GLP-1 pour le diabète vs GLP-1 pour l'obésité : les différences essentielles {#difference}
 
-C'est la question que posent le plus souvent les patients — et c'est normal, car la confusion est facile à faire lorsqu'on voit les mêmes noms (Ozempic/Wegovy pour le sémaglutide, Saxenda/<a href="/traitements-glp1/guide-complet-victoza/">Victoza</a> pour le liraglutide) dans des contextes différents.
+C'est la question que posent le plus souvent les patients — et c'est normal, car la confusion est facile à faire lorsqu'on voit les mêmes noms (Ozempic/Wegovy pour le sémaglutide, Saxenda/<a href="/collections/traitements-glp1/guide-complet-victoza/">Victoza</a> pour le liraglutide) dans des contextes différents.
 
 ### Deux indications, deux cadres réglementaires
 
@@ -77,9 +77,9 @@ Les GLP-1 existent dans deux grandes catégories selon leur indication :
 | Médicament | Molécule | Indication | Remboursement (mars 2026) |
 |------------|----------|------------|--------------------------|
 | **Ozempic** | Sémaglutide 0,5/1/2 mg | Diabète type 2 | Oui, 30% (avec formulaire) |
-| **<a href="/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Dulaglutide | Diabète type 2 | Oui, 65% |
-| **[Victoza](/traitements-glp1/guide-complet-victoza/)*** | Liraglutide 1,2/1,8 mg | Diabète type 2 | Oui, 65% |
-| **<a href="/traitements-glp1/guide-complet-rybelsus/">Rybelsus</a>** | Sémaglutide oral | Diabète type 2 | Non |
+| **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Dulaglutide | Diabète type 2 | Oui, 65% |
+| **[Victoza](/collections/traitements-glp1/guide-complet-victoza/)*** | Liraglutide 1,2/1,8 mg | Diabète type 2 | Oui, 65% |
+| **<a href="/collections/traitements-glp1/guide-complet-rybelsus/">Rybelsus</a>** | Sémaglutide oral | Diabète type 2 | Non |
 | **Wegovy** | Sémaglutide 2,4 mg | Obésité (IMC ≥ 30) | Non (attendu 2026) |
 | **Mounjaro** | Tirzépatide | Obésité ou DT2 avec obésité | Non (attendu 2026) |
 | **Saxenda** | Liraglutide 3 mg | Obésité | Non |
@@ -129,9 +129,9 @@ Trulicity est une injection hebdomadaire bien tolérée, particulièrement appr�
 
 ### Victoza (liraglutide) — remboursé à 65%, arrêt fin 2026
 
-[Victoza](/traitements-glp1/guide-complet-victoza/) est une injection quotidienne qui sera progressivement abandonnée avec l'arrêt annoncé de commercialisation fin 2026. Si vous êtes sous Victoza, votre médecin vous proposera une alternative : Ozempic ou Trulicity pour les patients diabétiques, ou Wegovy si vous êtes également en situation d'obésité éligible.
+[Victoza](/collections/traitements-glp1/guide-complet-victoza/) est une injection quotidienne qui sera progressivement abandonnée avec l'arrêt annoncé de commercialisation fin 2026. Si vous êtes sous Victoza, votre médecin vous proposera une alternative : Ozempic ou Trulicity pour les patients diabétiques, ou Wegovy si vous êtes également en situation d'obésité éligible.
 
-### [Rybelsus](/traitements-glp1/guide-complet-rybelsus/) (sémaglutide oral) — non remboursé
+### [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) (sémaglutide oral) — non remboursé
 
 Rybelsus est le seul GLP-1 oral disponible en France pour le diabète. Il offre l'avantage d'être un comprimé (pas d'injection), mais ses contraintes de prise (le matin à jeun avec un verre d'eau, 30 minutes avant tout aliment) limitent son intérêt pour certains patients. Il n'est actuellement pas remboursé par la Sécurité Sociale.
 
@@ -205,7 +205,7 @@ Quand vous débutez un GLP-1 pour votre diabète, votre médecin vous prescrira 
 ### Les signes à surveiller
 
 **Effets secondaires fréquents en début de traitement** :
-- Nausées, vomissements, diarrhée ou constipation : très courants les 2 à 4 premières semaines, généralement transitoires — consultez notre guide sur les [effets secondaires d'Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic/) pour les détails. Commencer avec une dose faible et augmenter progressivement réduit ces désagréments.
+- Nausées, vomissements, diarrhée ou constipation : très courants les 2 à 4 premières semaines, généralement transitoires — consultez notre guide sur les [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) pour les détails. Commencer avec une dose faible et augmenter progressivement réduit ces désagréments.
 - Perte d'appétit marquée : normale et attendue
 - Légère accélération du rythme cardiaque : peut survenir, disparaît généralement avec le temps
 

@@ -131,7 +131,7 @@ Contrairement à Ozempic (remboursé à 30% pour le diabète de type 2 uniquemen
 
 ### Prise en charge par les mutuelles
 
-Certaines [mutuelles remboursant Wegovy](/glp1-cout/wegovy-remboursement-mutuelle/) proposent une prise en charge partielle :
+Certaines [mutuelles remboursant Wegovy](/collections/glp1-cout/wegovy-remboursement-mutuelle/) proposent une prise en charge partielle :
 - Forfait médicaments non remboursés : 50 à 200€ par an
 - Garantie innovation médicale : jusqu'à 500€ par an
 - Contrats spécialisés : remboursement partiel variable
@@ -143,7 +143,7 @@ Certaines [mutuelles remboursant Wegovy](/glp1-cout/wegovy-remboursement-mutuell
 - Remboursement Sécurité Sociale : 0€ (non remboursé)
 - Prise en charge mutuelle éventuelle : variable selon contrat
 
-**Le coût reste intégralement à la charge du patient hors aide mutuelle.** Pour en savoir plus sur les perspectives de [remboursement](/glp1-cout/remboursement-glp1-2026/) en 2026, consultez notre guide dédié.
+**Le coût reste intégralement à la charge du patient hors aide mutuelle.** Pour en savoir plus sur les perspectives de [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en 2026, consultez notre guide dédié.
 
 ## Programmes d'aide financière
 
@@ -239,7 +239,7 @@ Contactez votre médecin prescripteur ou directement Novo Nordisk France via leu
 ## Nos recommandations
 
 Pour maîtriser le coût de Wegovy :
-1. **Évaluez immédiatement** votre éligibilité au [remboursement des GLP-1](/glp1-cout/remboursement-glp1-2026/)
+1. **Évaluez immédiatement** votre éligibilité au [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)
 2. **Optimisez votre couverture** mutuelle avant de commencer le traitement
 3. **Explorez tous les programmes d'aide** disponibles
 4. **Planifiez votre budget** sur 12 à 18 mois minimum

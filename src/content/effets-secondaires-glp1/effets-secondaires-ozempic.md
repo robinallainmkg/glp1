@@ -144,7 +144,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 
 ### Consultation rapide (dans la semaine)
 
-- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/). L'[acupuncture pour soulager les nausées sous GLP-1](/collections/alternatives-glp1/acupuncture-glp1/) est une piste complémentaire à explorer avec votre médecin
+- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/). L'[acupuncture pour soulager les nausées sous GLP-1](/collections/alternatives-glp1/acupuncture-glp1/) est une piste complémentaire à explorer avec votre médecin
 - Diarrhée abondante (>3 jours)
 - Perte de poids rapide (>2 kg/semaine)
 - Fatigue intense

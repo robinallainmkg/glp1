@@ -39,7 +39,7 @@ Les **agonistes du récepteur GLP-1** ont révolutionné la prise en charge de l
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Pour une vue d'ensemble, consultez également notre [guide complet des GLP-1](/glp1-perte-de-poids/guide-complet-glp1-2025-france/) 2026 en France. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+Cet article vous présente les informations essentielles et actualisées. Pour une vue d'ensemble, consultez également notre [guide complet des GLP-1](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/) 2026 en France. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
 
 ## Mécanisme d'Action GLP-1 pour la Perte de Poids
 
@@ -86,9 +86,9 @@ Cet article vous présente les informations essentielles et actualisées. Pour u
 - Perte rapide : -5% dès 12 semaines
 - Perte maximale : 52-68 semaines
 - Maintien : stable jusqu'à 104 semaines
-- Reprise modérée si arrêt : +7% à 1 an — pour limiter la [fonte musculaire](/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), l'apport en protéines est essentiel
+- Reprise modérée si arrêt : +7% à 1 an — pour limiter la [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), l'apport en protéines est essentiel
 
-### <a href="/traitements-glp1/guide-complet-saxenda/">Saxenda</a> (Liraglutide 3 mg) - Efficacité Prouvée
+### <a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a> (Liraglutide 3 mg) - Efficacité Prouvée
 
 **Performance clinique :**
 - **Perte moyenne : 8,4%** en 56 semaines
@@ -189,7 +189,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 
 **Poursuite traitement :**
 - Maintien dose efficace long terme
-- Surveillance des [effets secondaires d'Ozempic](/effets-secondaires-glp1/effets-secondaires-ozempic/) et autres GLP-1
+- Surveillance des [effets secondaires d'Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et autres GLP-1
 - Adaptation selon évolution pondérale
 
 **Éducation thérapeutique :**
@@ -268,7 +268,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 ## Questions Fréquemment Posées
 
 **Combien peut-on perdre avec les GLP-1 ?**
-En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans nos témoignages documentés.
+En moyenne 15-20% du poids initial avec Wegovy, 8-12% avec [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/), variables selon profil individuel. Pour une vision concrète, découvrez les [résultats avant/après réels avec les GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) dans nos témoignages documentés.
 
 **Combien de temps pour voir les premiers résultats ?**
 Les premiers effets apparaissent dès 2-4 semaines, avec une perte significative visible après 8-12 semaines.

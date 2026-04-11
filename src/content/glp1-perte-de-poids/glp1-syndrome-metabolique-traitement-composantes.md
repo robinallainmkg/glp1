@@ -34,7 +34,7 @@ Le syndrome métabolique réunit au moins trois facteurs de risque cardiovascula
 
 ---
 
-Le syndrome métabolique, parfois appelé "syndrome X" ou "syndrome de résistance à l'insuline", concerne entre 20 et 25 % des adultes en France. Ce n'est pas une maladie en soi, mais un regroupement de facteurs de risque qui, ensemble, multiplient le risque de développer un <a href="/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/">diabète de type 2</a> et des maladies cardiovasculaires. Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ont la particularité d'agir sur plusieurs de ces facteurs simultanément — ce qui en fait une option thérapeutique particulièrement intéressante pour ce profil.
+Le syndrome métabolique, parfois appelé "syndrome X" ou "syndrome de résistance à l'insuline", concerne entre 20 et 25 % des adultes en France. Ce n'est pas une maladie en soi, mais un regroupement de facteurs de risque qui, ensemble, multiplient le risque de développer un <a href="/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/">diabète de type 2</a> et des maladies cardiovasculaires. Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) ont la particularité d'agir sur plusieurs de ces facteurs simultanément — ce qui en fait une option thérapeutique particulièrement intéressante pour ce profil.
 
 ## Qu'est-ce que le syndrome métabolique ?
 
@@ -57,7 +57,7 @@ En France, le syndrome métabolique touche environ 23 % des adultes selon les é
 - Une alimentation riche en sucres raffinés et graisses saturées
 - Des facteurs génétiques
 
-Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multiplié par 2 à 3 par rapport à la population générale — les [bénéfices cardiovasculaires](/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) des GLP-1 ont été démontrés dans plusieurs grandes études. Le risque de développer un [diabète de type 2](/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) est multiplié par 5.
+Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multiplié par 2 à 3 par rapport à la population générale — les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) des GLP-1 ont été démontrés dans plusieurs grandes études. Le risque de développer un [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) est multiplié par 5.
 
 ## Comment les GLP-1 agissent-ils sur le syndrome métabolique ?
 

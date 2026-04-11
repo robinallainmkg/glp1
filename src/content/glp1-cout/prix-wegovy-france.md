@@ -518,7 +518,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 - **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite/)** - Prise en charge globale
 
 ### Témoignages et Communauté
-- **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles
+- **[Résultats Avant/Après Wegovy](/collections/temoignages/avant-apres-glp1)** - Transformations réelles
 - **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**

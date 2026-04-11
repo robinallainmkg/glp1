@@ -31,26 +31,26 @@ Les **GLP-1 (Glucagon-Like Peptide-1)** sont des hormones naturellement produite
 
 Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre perte de poids. Que vous cherchiez un **traitement pour diabète** ou un **médicament pour maigrir**, voici le guide complet des **GLP-1 2025** avec prix, posologie et indications.
 
-**Les GLP-1 révolutionnent la prise en charge de l'obésité et du diabète en France.** Ces médicaments innovants permettent une [perte de poids sous GLP-1](/glp1-perte-de-poids/glp1-perte-de-poids/) significative tout en améliorant le contrôle glycémique.
+**Les GLP-1 révolutionnent la prise en charge de l'obésité et du diabète en France.** Ces médicaments innovants permettent une [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) significative tout en améliorant le contrôle glycémique.
 
 | Médicament | Laboratoire | Indications | Posologie | Prix/mois | Remboursement |
 |------------|-------------|-------------|-----------|-----------|---------------|
 | **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** | Novo Nordisk | Diabète type 2 | 0.25mg à 2mg/semaine | ~76,58€/stylo | 30% DT2 uniquement |
 | **[Wegovy (sémaglutide)](/collections/traitements-glp1/guide-complet-wegovy/)** | Novo Nordisk | Obésité (IMC ≥30) | 0.25mg à 2.4mg/semaine | 169-360€ | Non remboursé |
-| **<a href="/traitements-glp1/guide-complet-saxenda/">Saxenda</a>** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
-| **<a href="/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 30% DT2 |
-| **<a href="/traitements-glp1/guide-complet-victoza/">Victoza</a>** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 30% DT2 |
+| **<a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a>** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
+| **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 30% DT2 |
+| **<a href="/collections/traitements-glp1/guide-complet-victoza/">Victoza</a>** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 30% DT2 |
 | **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | 30% DT2 |
 
-**💡 Conseil d'expert :** Pour optimiser votre [perte de poids sous GLP-1](/glp1-perte-de-poids/glp1-perte-de-poids/), combinez votre traitement avec une alimentation équilibrée et de l'activité physique régulière.
+**💡 Conseil d'expert :** Pour optimiser votre [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), combinez votre traitement avec une alimentation équilibrée et de l'activité physique régulière.
 
-**Les médicaments GLP-1 comme Ozempic et Wegovy sont devenus des références** pour la prise en charge de l'obésité en France. Ces traitements innovants, comme [Mounjaro](/traitements-glp1/guide-complet-mounjaro/), permettent non seulement de perdre du poids de manière significative, mais aussi d'améliorer durablement les marqueurs de santé.
+**Les médicaments GLP-1 comme Ozempic et Wegovy sont devenus des références** pour la prise en charge de l'obésité en France. Ces traitements innovants, comme [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), permettent non seulement de perdre du poids de manière significative, mais aussi d'améliorer durablement les marqueurs de santé.
 
 ### Pourquoi choisir un traitement GLP-1 en 2025 ?
 
 - **Efficacité prouvée :** Perte de poids de 8-15% en moyenne
 - **Action durable :** Maintien du poids sur le long terme
-- **Sécurité :** Profil d'<a href="/effets-secondaires-glp1/effets-secondaires-ozempic/">effets secondaires</a> bien connu
+- **Sécurité :** Profil d'<a href="/collections/effets-secondaires-glp1/effets-secondaires-ozempic/">effets secondaires</a> bien connu
 - **Innovation :** Nouvelles formulations disponibles
 - **Suivi médical :** Accompagnement personnalisé
 
@@ -76,7 +76,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 
 - **Perte de poids moyenne :** 8-15% du poids corporel en 6-12 mois
 - **Ozempic/Wegovy :** Jusqu'à 15-20% de perte de poids (jusqu'à 15kg)
-- **[Saxenda](/traitements-glp1/guide-complet-saxenda/) :** 5-10% de perte de poids efficace et progressive
+- **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/) :** 5-10% de perte de poids efficace et progressive
 - **Maintien du poids :** 80% des patients maintiennent leur perte de poids à 1 an
 - **Amélioration santé :** Réduction du risque cardiovasculaire et diabète
 
@@ -99,7 +99,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 ### Effets Gastro-Intestinaux (Les Plus Fréquents)
 
-**Les nausées et troubles digestifs sont les [effets secondaires](/effets-secondaires-glp1/effets-secondaires-ozempic/) les plus courants** des médicaments GLP-1, mais ils sont généralement temporaires et diminuent avec le temps.
+**Les nausées et troubles digestifs sont les [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) les plus courants** des médicaments GLP-1, mais ils sont généralement temporaires et diminuent avec le temps.
 
 - **Nausées :** 30-40% des patients (diminuent après 4-6 semaines)
 - **Vomissements :** 10-15% des patients (rares à posologie optimale)
@@ -144,11 +144,11 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 | **Ozempic** | ~76,58€/stylo | 30% DT2 | ~54€ (DT2) |
 | **Wegovy** | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
-| **[Trulicity](/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 30% DT2 | ~57€ (DT2) |
+| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 30% DT2 | ~57€ (DT2) |
 | **Victoza** | ~60,26€ | 30% DT2 | ~42€ (DT2) |
 | **Rybelsus** | 80-110€ | 30% DT2 | 56-77€ (DT2) |
 
-**💰 Conseil économique :** Pour réduire le coût de votre traitement GLP-1, vérifiez d'abord votre éligibilité au remboursement diabète. Les médicaments comme Ozempic — consultez le [prix d'Ozempic](/glp1-cout/prix-ozempic-france/) en détail — et Trulicity peuvent être très abordables une fois remboursés.
+**💰 Conseil économique :** Pour réduire le coût de votre traitement GLP-1, vérifiez d'abord votre éligibilité au remboursement diabète. Les médicaments comme Ozempic — consultez le [prix d'Ozempic](/collections/glp1-cout/prix-ozempic-france/) en détail — et Trulicity peuvent être très abordables une fois remboursés.
 
 **Les prix des GLP-1 varient selon les pharmacies et les dosages.** N'hésitez pas à comparer les prix et demander des devis avant de commencer votre traitement.
 

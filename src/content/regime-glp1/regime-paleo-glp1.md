@@ -72,7 +72,7 @@ Huile de coco, huile d'olive, graisses animales non transformées, noix, avocats
 Le régime paléo partage plusieurs caractéristiques avec les recommandations nutritionnelles pour les patients sous GLP-1 :
 
 - **Très faible en sucres rapides** : l'absence de céréales raffinées et de sucres ajoutés stabilise parfaitement la glycémie, potentialisant l'effet des GLP-1 sur l'insuline
-- **Riche en protéines** : les protéines sont hautement satiantes et permettent de [préserver la masse musculaire](/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids induite par le traitement
+- **Riche en protéines** : les protéines sont hautement satiantes et permettent de [préserver la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids induite par le traitement
 - **Riche en légumes et fibres** : améliore le transit, souvent perturbé en début de traitement GLP-1
 
 ### Points de vigilance importants

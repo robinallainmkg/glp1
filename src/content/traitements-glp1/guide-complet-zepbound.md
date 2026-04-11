@@ -152,7 +152,7 @@ Mounjaro **n'est pas remboursé** par l'Assurance Maladie en France (mars 2026).
 - Étourdissements
 - Réduction de l'appétit
 
-### Gestion des [effets secondaires du tirzépatide](/effets-secondaires-glp1/effets-secondaires-zepbound/)
+### Gestion des [effets secondaires du tirzépatide](/collections/effets-secondaires-glp1/effets-secondaires-zepbound/)
 - Commencer par la dose la plus faible
 - Augmenter progressivement
 - Prendre les injections le même jour chaque semaine

@@ -145,7 +145,7 @@ Saxenda s'administre une fois par jour, à la même heure chaque jour. L'escalad
 
 ### Autres GLP-1 pour l'obésité
 - **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)** : Semaglutide à 2,4 mg/semaine (injection hebdomadaire)
-- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026/) envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
+- [**Mounjaro (tirzépatide)**](/collections/traitements-glp1/guide-complet-mounjaro/) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé à ce jour — avis favorable HAS décembre 2025, [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) envisagé au second semestre 2026 pour IMC ≥ 35 après échec nutritionnel, sous conditions de prescription spécialisée)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
@@ -165,7 +165,7 @@ Oui, Saxenda est spécifiquement indiqué pour l'obésité avec ou sans diabète
 - **Effets maximum** : 6-12 mois
 
 ### Saxenda est-il remboursé pour l'obésité ?
-**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Consultez notre guide sur le [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026/) pour les conditions générales. Pour le [prix de Saxenda en pharmacie](/collections/glp1-cout/saxenda-prix-pharmacie/) en détail, son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
+**Non, Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Consultez notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) pour les conditions générales. Pour le [prix de Saxenda en pharmacie](/collections/glp1-cout/saxenda-prix-pharmacie/) en détail, son coût se situe entre 240 € et 300 € par mois, entièrement à la charge du patient. Certaines mutuelles proposent un forfait annuel pour les médicaments non remboursés, mais la prise en charge reste marginale.
 
 ### Puis-je arrêter Saxenda brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une [reprise de poids après l'arrêt de Saxenda](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) (effet yoyo). Notre guide dédié vous explique les stratégies pour limiter ce risque.

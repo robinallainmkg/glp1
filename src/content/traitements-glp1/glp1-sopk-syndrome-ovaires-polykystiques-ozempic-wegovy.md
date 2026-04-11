@@ -75,7 +75,7 @@ La question de la fertilité est centrale pour de nombreuses femmes atteintes de
 
 1. **La perte de poids induite par les GLP-1 améliore indirectement la fertilité** : chez les femmes en surpoids avec SOPK, même une perte modeste de poids peut rétablir l'ovulation et améliorer les chances de grossesse spontanée.
 
-2. **Les GLP-1 doivent être arrêtés avant une grossesse** : ces médicaments ne sont pas approuvés pendant la grossesse et doivent être stoppés au minimum 2 mois avant toute tentative de conception. Les données de tératogénicité chez l'animal ont conduit à cette recommandation de précaution. Consultez notre guide sur la [grossesse et arrêt du traitement GLP-1](/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/) pour les recommandations complètes.
+2. **Les GLP-1 doivent être arrêtés avant une grossesse** : ces médicaments ne sont pas approuvés pendant la grossesse et doivent être stoppés au minimum 2 mois avant toute tentative de conception. Les données de tératogénicité chez l'animal ont conduit à cette recommandation de précaution. Consultez notre guide sur la [grossesse et arrêt du traitement GLP-1](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/) pour les recommandations complètes.
 
 3. **L'amélioration hormonale peut augmenter la fertilité** : la réduction des androgènes et la régularisation des cycles peuvent augmenter les chances d'ovulation spontanée. Une contraception est donc recommandée pendant le traitement si une grossesse n'est pas souhaitée.
 

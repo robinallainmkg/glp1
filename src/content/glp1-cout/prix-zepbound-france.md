@@ -120,7 +120,7 @@ affiliateConfig:
 ### Taux de Remboursement
 
 **Situation Actuelle (2025) :**
-- **Sécurité Sociale** : **NON remboursé** — consultez notre guide sur le [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026/) pour les perspectives 2026
+- **Sécurité Sociale** : **NON remboursé** — consultez notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) pour les perspectives 2026
 - **Mounjaro** (équivalent de Zepbound en France) : **NON remboursé** par la Sécurité Sociale
 - **Coût intégralement à la charge du patient** : 230-440€/mois
 
@@ -139,7 +139,7 @@ affiliateConfig:
 - **Zepbound** : Plus cher mais plus efficace (-21% poids)
 - **ROI santé** : Économies sur comorbidités
 - **Durée traitement** : 12-18 mois en moyenne
-- **Tolérance** : consultez les [effets secondaires Zepbound](/effets-secondaires-glp1/effets-secondaires-zepbound/) avant de commencer
+- **Tolérance** : consultez les [effets secondaires Zepbound](/collections/effets-secondaires-glp1/effets-secondaires-zepbound/) avant de commencer
 
 ## Accessibilité et Disponibilité
 

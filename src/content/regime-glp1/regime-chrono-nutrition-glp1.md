@@ -123,10 +123,10 @@ Lors de l'initiation du traitement, les nausées peuvent perturber les habitudes
 La chrono-nutrition n'est pas rigide : l'important est de respecter l'ordre des repas (gras le matin, complet à midi, léger le soir) plus que l'heure exacte. Si votre emploi du temps ne permet pas de déjeuner avant 13h30, ce n'est pas un problème.
 
 ### Ne pas forcer si la faim est absente
-Sous GLP-1, la faim peut être très réduite, parfois jusqu'à oublier de manger. Dans ce cas, ne vous forcez pas à finir votre assiette. L'objectif n'est pas de manger un certain volume, mais d'apporter les bons nutriments au bon moment, en tenant compte de vos [calories journalières](/regime-glp1/glp1-calories-journalieres/).
+Sous GLP-1, la faim peut être très réduite, parfois jusqu'à oublier de manger. Dans ce cas, ne vous forcez pas à finir votre assiette. L'objectif n'est pas de manger un certain volume, mais d'apporter les bons nutriments au bon moment, en tenant compte de vos [calories journalières](/collections/regime-glp1/glp1-calories-journalieres/).
 
 ### Surveiller la masse musculaire
-Une perte de poids rapide peut entraîner une perte de masse musculaire. Assurez-vous d'apporter suffisamment de [protéines sous GLP-1](/regime-glp1/glp1-proteines/) à chaque repas (au moins 1,2 g par kg de poids corporel par jour) pour préserver vos muscles.
+Une perte de poids rapide peut entraîner une perte de masse musculaire. Assurez-vous d'apporter suffisamment de [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) à chaque repas (au moins 1,2 g par kg de poids corporel par jour) pour préserver vos muscles.
 
 ## FAQ
 
@@ -143,7 +143,7 @@ Oui. L'injection de Mounjaro (hebdomadaire) peut se faire à n'importe quel mome
 
 La chrono-nutrition offre un cadre structurant qui complète efficacement l'action des traitements GLP-1 : là où Ozempic, Wegovy ou Mounjaro agissent sur la faim et l'insuline, la chrono-nutrition optimise le moment où chaque nutriment est consommé pour en maximiser l'utilisation par l'organisme.
 
-Son principal atout est sa compatibilité avec le [jeûne intermittent et GLP-1](/regime-glp1/jeune-intermittent-glp1/) et la vie quotidienne française : un petit-déjeuner nourrissant, un déjeuner complet et un dîner léger correspondent bien aux habitudes alimentaires de nombreux Français, à condition de rééquilibrer la composition de chaque repas.
+Son principal atout est sa compatibilité avec le [jeûne intermittent et GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) et la vie quotidienne française : un petit-déjeuner nourrissant, un déjeuner complet et un dîner léger correspondent bien aux habitudes alimentaires de nombreux Français, à condition de rééquilibrer la composition de chaque repas.
 
 ---
 

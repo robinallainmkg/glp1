@@ -3,7 +3,7 @@ title: "Temoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Temoignage ozempic perte de poids : Sophie D., 52 ans, -28 kilos en 14 mois avec Ozempic après la ménopause. Transformation et conseils."
 author: "Sophie D."
-image: "/images/temoignages/sophie29.jpg"
+image: "/images/collections/temoignages/sophie29.jpg"
 collection: "temoignages"
 category: "transformation"
 tags: ["ozempic", "sémaglutide", "perte de poids", "28 kilos", "ménopause", "52 ans", "femme"]
@@ -54,7 +54,7 @@ mainKeyword: "temoignage ozempic perte de poids"
 
 > "Les régimes ne marchaient plus comme avant. Mon corps résistait, je reprenais tout dès que j'arrêtais. J'étais découragée, fatiguée, complexée. Mes élèves ne le montraient pas, mais je sentais bien qu'ils me regardaient différemment."
 
-> "Mon gynécologue m'a orientée vers un <a href="/medecins-glp1-france/endocrinologue-pour-maigrir/">endocrinologue</a> qui m'a parlé d'Ozempic. Au début, j'étais réticente : 'encore un régime', je me disais. Mais il m'a expliqué que c'était différent, que ça aidait à réguler l'appétit naturellement."
+> "Mon gynécologue m'a orientée vers un <a href="/collections/medecins-glp1-france/endocrinologue-pour-maigrir/">endocrinologue</a> qui m'a parlé d'Ozempic. Au début, j'étais réticente : 'encore un régime', je me disais. Mais il m'a expliqué que c'était différent, que ça aidait à réguler l'appétit naturellement."
 
 ## Son Parcours Détaillé
 

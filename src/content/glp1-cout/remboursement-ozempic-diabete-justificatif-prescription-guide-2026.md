@@ -19,7 +19,7 @@ mainKeyword: "remboursement Ozempic diabète justificatif prescription 2026"
 secondaryKeywords: ["ozempic remboursement diabète 2026", "victoza remboursement sécurité sociale", "trulicity remboursement diabète", "justificatif prescription glp1 diabète", "glp1 diabète type 2 remboursé"]
 ---
 
-Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou <a href="/traitements-glp1/guide-complet-trulicity/">Trulicity</a> pour le diabète de type 2 est devenu plus complexe. Un nouveau dispositif de justificatif de prescription obligatoire a été mis en place par l'Assurance Maladie, et beaucoup de patients et de médecins se retrouvent désorientés face à ces [nouvelles règles](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/). Ce guide pratique explique tout ce que vous devez savoir pour continuer à bénéficier du remboursement de votre traitement GLP-1 anti-diabétique sans interruption.
+Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> pour le diabète de type 2 est devenu plus complexe. Un nouveau dispositif de justificatif de prescription obligatoire a été mis en place par l'Assurance Maladie, et beaucoup de patients et de médecins se retrouvent désorientés face à ces [nouvelles règles](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/). Ce guide pratique explique tout ce que vous devez savoir pour continuer à bénéficier du remboursement de votre traitement GLP-1 anti-diabétique sans interruption.
 
 ## Quels GLP-1 sont remboursés pour le diabète en 2026 ?
 
@@ -28,19 +28,19 @@ Depuis le 1er février 2025, obtenir le remboursement d'Ozempic, Victoza ou <a h
 En France en 2026, plusieurs médicaments de la classe des agonistes GLP-1 sont remboursés par l'Assurance Maladie **uniquement dans l'indication diabète de type 2** :
 
 - **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide 0,5 mg, 1 mg, 2 mg hebdomadaire, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)
-- **[Victoza](/traitements-glp1/guide-complet-victoza/)** (liraglutide 0,6 mg, 1,2 mg, 1,8 mg quotidien, Novo Nordisk) — remboursé à **65 %** (100 % en ALD diabète)
-- **[Trulicity](/traitements-glp1/guide-complet-trulicity/)** (dulaglutide 0,75 mg, 1,5 mg, 3 mg, 4,5 mg hebdomadaire, Eli Lilly) — remboursé à **65 %** (100 % en ALD diabète)
+- **[Victoza](/collections/traitements-glp1/guide-complet-victoza/)** (liraglutide 0,6 mg, 1,2 mg, 1,8 mg quotidien, Novo Nordisk) — remboursé à **65 %** (100 % en ALD diabète)
+- **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** (dulaglutide 0,75 mg, 1,5 mg, 3 mg, 4,5 mg hebdomadaire, Eli Lilly) — remboursé à **65 %** (100 % en ALD diabète)
 - **Rybelsus** (sémaglutide oral 3 mg, 7 mg, 14 mg quotidien, Novo Nordisk) — remboursé à **30 %** (65 % en ALD diabète)
 - **Byetta** (exénatide 5 µg, 10 µg biquotidien, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 - **Bydureon** (exénatide LP 2 mg hebdomadaire, AstraZeneca) — remboursé à **65 %** (100 % en ALD diabète)
 
-**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. [Wegovy](/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) et Saxenda (liraglutide 3 mg), indiqués pour l'obésité, ne sont **pas remboursés** en France à ce jour.
+**Important** : ces remboursements s'appliquent exclusivement pour le traitement du diabète de type 2. [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (sémaglutide 2,4 mg) et Saxenda (liraglutide 3 mg), indiqués pour l'obésité, ne sont **pas remboursés** en France à ce jour.
 
 ### Ce qui a changé depuis février 2025
 
 Avant le 1er février 2025, l'ordonnance habituelle d'un médecin suffisait pour obtenir le remboursement d'Ozempic, Victoza ou Trulicity en pharmacie. Depuis cette date, un **justificatif de prescription spécifique** doit obligatoirement accompagner l'ordonnance pour que le remboursement soit effectif.
 
-Ce changement fait suite aux constats de l'Assurance Maladie d'un fort mésusage de ces médicaments : de nombreux patients se faisaient prescrire Ozempic — dont le [prix d'Ozempic](/glp1-cout/prix-ozempic-france/) reste modéré grâce au remboursement — non pas pour un diabète avéré, mais pour une perte de poids hors indication, contribuant à la pénurie qui a perturbé l'approvisionnement en France depuis 2022.
+Ce changement fait suite aux constats de l'Assurance Maladie d'un fort mésusage de ces médicaments : de nombreux patients se faisaient prescrire Ozempic — dont le [prix d'Ozempic](/collections/glp1-cout/prix-ozempic-france/) reste modéré grâce au remboursement — non pas pour un diabète avéré, mais pour une perte de poids hors indication, contribuant à la pénurie qui a perturbé l'approvisionnement en France depuis 2022.
 
 ## Le justificatif de prescription : comment ça marche ?
 
@@ -123,8 +123,8 @@ Si vous estimez que votre situation médicale justifie le remboursement mais que
 Il est important de ne pas confondre la situation des GLP-1 prescrits pour le diabète et celle des GLP-1 prescrits pour l'obésité :
 
 - **Ozempic pour le diabète** → remboursé (avec justificatif)
-- **[Wegovy](/traitements-glp1/guide-complet-wegovy/) pour l'obésité** → non remboursé (entièrement à la charge du patient, entre 170 et 360 €/mois)
-- **[Victoza](/traitements-glp1/guide-complet-victoza/) pour le diabète** → remboursé (avec justificatif)
+- **[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) pour l'obésité** → non remboursé (entièrement à la charge du patient, entre 170 et 360 €/mois)
+- **[Victoza](/collections/traitements-glp1/guide-complet-victoza/) pour le diabète** → remboursé (avec justificatif)
 - **Saxenda pour l'obésité** → non remboursé (entre 240 et 300 €/mois)
 
 Ce point est source de confusion fréquente : un patient sous Ozempic pour son diabète qui perd aussi du poids bénéficie du remboursement. Un patient qui demande Ozempic uniquement pour perdre du poids, sans diabète diagnostiqué, ne bénéficie d'aucun remboursement.

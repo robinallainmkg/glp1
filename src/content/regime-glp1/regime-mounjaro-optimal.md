@@ -32,12 +32,12 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 
 ### 1. Réduction Progressive des Portions
 - **Semaines 1-4** : Réduction de 25% des portions habituelles — pour des conseils détaillés, consultez notre guide pour [adapter vos portions alimentaires sous GLP-1](/collections/regime-glp1/glp1-portion-alimentaire/)
-- **Semaines 5-8** : Réduction de 40% avec stabilisation — adaptez selon le [dosage du Mounjaro](/traitements-glp1/mounjaro-dosage/) prescrit par votre médecin
+- **Semaines 5-8** : Réduction de 40% avec stabilisation — adaptez selon le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) prescrit par votre médecin
 - **Maintenance** : Portions adaptées à la satiété naturelle
 
 ### 2. Aliments Prioritaires
 
-#### <a href="/regime-glp1/glp1-proteines/">Protéines de Qualité</a> (30-35% des calories)
+#### <a href="/collections/regime-glp1/glp1-proteines/">Protéines de Qualité</a> (30-35% des calories)
 - **Viandes maigres** : Poulet, dinde, porc filet
 - **Poissons gras** : Saumon, sardines, maquereau
 - **Légumineuses** : Lentilles, haricots, pois chiches

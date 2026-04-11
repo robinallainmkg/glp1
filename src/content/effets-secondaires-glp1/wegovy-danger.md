@@ -149,7 +149,7 @@ L'approche optimale associe :
 - **Médecin prescripteur** : Suivi médical
 - **Diététicien** : Accompagnement nutritionnel
 - **Activité physique adaptée** : Selon les capacités
-- **Soutien psychologique** : En cas d'[effets sur la santé mentale](/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/) (dépression, apathie), un accompagnement est recommandé
+- **Soutien psychologique** : En cas d'[effets sur la santé mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/) (dépression, apathie), un accompagnement est recommandé
 
 ##  recommandés
 

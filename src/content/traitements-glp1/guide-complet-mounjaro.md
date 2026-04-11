@@ -425,7 +425,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="link-category">
     <h4>🎯 Témoignages et Résultats</h4>
     <ul>
-      <li><a href="/temoignages/avant-apres-glp1">Transformations Mounjaro : Avant/Après</a></li>
+      <li><a href="/collections/temoignages/avant-apres-glp1">Transformations Mounjaro : Avant/Après</a></li>
       <li><a href="/collections/temoignages/temoignage-marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
       <li><a href="/collections/temoignages/temoignage-sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
     </ul>

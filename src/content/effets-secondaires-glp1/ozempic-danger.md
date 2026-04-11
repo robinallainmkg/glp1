@@ -214,9 +214,9 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 ### Contre-indications absolues
 
 1. **Diabète type 1** : risque acidocétose
-2. **[Grossesse](/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/)/allaitement** : sécurité non établie
+2. **[Grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/)/allaitement** : sécurité non établie
 3. **Allergie sémaglutide** : réaction anaphylactique
-4. **[Gastroparésie](/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/) sévère** : aggravation possible
+4. **[Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/) sévère** : aggravation possible
 5. **Antécédents carcinome médullaire thyroïde**
 
 ### Précautions renforcées
@@ -229,7 +229,7 @@ L'ANSM suit plus de **870 000 patients sous agonistes GLP-1** en France. Entre a
 **Patients âgés > 75 ans** :
 - Début doses plus faibles
 - Surveillance rapprochée
-- Attention [interactions médicamenteuses](/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
+- Attention [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 
 **Antécédents pancréatiques** :
 - Contrôle lipase régulier
@@ -367,7 +367,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "/effets-secondaires-glp1/ozempic-danger/"
+    "@id": "/collections/effets-secondaires-glp1/ozempic-danger/"
   }
 }
 </script>

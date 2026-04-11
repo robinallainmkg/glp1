@@ -471,4 +471,4 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 ---
 
 *Dernière mise à jour : 8 mars 2026. Les prix (libres) et conditions de remboursement sont susceptibles d'évoluer. Un remboursement est envisagé au 2e semestre 2026. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et les prix actualisés.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/glp1-cout/prix-mounjaro-france.md
+<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/glp1-cout/prix-mounjaro-france.md

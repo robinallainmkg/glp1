@@ -132,7 +132,7 @@ Novo Nordisk a annoncé un investissement majeur pour augmenter les capacités d
 
 ### Les biosimilaires : une perspective 2027-2028
 
-Les brevets sur certaines formulations de liraglutide (Saxenda) arrivent à expiration, ouvrant la voie aux biosimilaires. Pour le sémaglutide (Ozempic/Wegovy), les premiers [génériques et biosimilaires](/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/) sont attendus vers 2027-2028, ce qui devrait considérablement augmenter l'offre disponible et faire baisser les prix.
+Les brevets sur certaines formulations de liraglutide (Saxenda) arrivent à expiration, ouvrant la voie aux biosimilaires. Pour le sémaglutide (Ozempic/Wegovy), les premiers [génériques et biosimilaires](/collections/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/) sont attendus vers 2027-2028, ce qui devrait considérablement augmenter l'offre disponible et faire baisser les prix.
 
 ## Questions fréquentes
 
@@ -142,7 +142,7 @@ Lors des périodes de tension, les grossistes peuvent limiter les commandes par 
 
 **Puis-je commander mes GLP-1 sur Internet ?**
 
-Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que dans des pharmacies agréées. Les sites proposant des GLP-1 sans ordonnance ou à prix cassé sont illégaux et peuvent proposer des [contrefaçons et faux Ozempic](/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) — certains cas ont été documentés avec des séquelles graves.
+Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que dans des pharmacies agréées. Les sites proposant des GLP-1 sans ordonnance ou à prix cassé sont illégaux et peuvent proposer des [contrefaçons et faux Ozempic](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) — certains cas ont été documentés avec des séquelles graves.
 
 **Mon Ozempic a été prescrit pour l'obésité (hors AMM). Suis-je prioritaire en cas de pénurie ?**
 

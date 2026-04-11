@@ -52,7 +52,7 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 - Consultations endocrinologie-nutrition
 - Bilans métaboliques complets
 - Prescription de GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic), Wegovy) selon les [règles de prescription des GLP-1 selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
-- <a href="/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/">Chirurgie bariatrique</a>
+- <a href="/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/">Chirurgie bariatrique</a>
 - Suivi psychologique
 - Programmes d'éducation thérapeutique
 

@@ -43,8 +43,8 @@ Vous cherchez un endocrinologue pour vous aider à perdre du poids ? Ce guide vo
 ### L'expertise spécialisée
 Un endocrinologue est le médecin spécialiste des hormones et du métabolisme. Pour la perte de poids, il est particulièrement qualifié pour :
 
-- **Diagnostiquer les causes hormonales** de la prise de poids (thyroïde, insulinorésistance, [SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-[ozempic](/collections/traitements-glp1/guide-complet-ozempic)-<a href="/traitements-glp1/guide-complet-wegovy/">wegovy</a>/)/)
-- **Prescrire des médicaments** comme Ozempic, [Wegovy](/traitements-glp1/guide-complet-wegovy/) ou Saxenda et déterminer le [dosage du Mounjaro](/traitements-glp1/mounjaro-dosage/) adapté à votre profil
+- **Diagnostiquer les causes hormonales** de la prise de poids (thyroïde, insulinorésistance, [SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-[ozempic](/collections/traitements-glp1/guide-complet-ozempic)-<a href="/collections/traitements-glp1/guide-complet-wegovy/">wegovy</a>/)/)
+- **Prescrire des médicaments** comme Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Saxenda et déterminer le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) adapté à votre profil
 - **Adapter le traitement** selon votre profil métabolique
 - **Suivre l'évolution** avec des analyses précises
 
@@ -61,7 +61,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 **La marche à suivre :**
 - Prenez rendez-vous avec votre médecin généraliste
 - Expliquez vos difficultés de perte de poids
-- Depuis juin 2025, votre généraliste peut prescrire directement les GLP-1 pour l'obésité (Wegovy, [Mounjaro](/traitements-glp1/guide-complet-mounjaro/), Saxenda) — une lettre de recommandation vers un endocrinologue n'est plus obligatoire pour la primo-prescription. Renseignez-vous sur les conditions de [remboursement GLP-1](/glp1-cout/remboursement-glp1-2026/) selon votre profil. Une consultation d'endocrinologue reste utile pour les cas complexes ou si votre généraliste préfère vous adresser à un spécialiste.
+- Depuis juin 2025, votre généraliste peut prescrire directement les GLP-1 pour l'obésité (Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda) — une lettre de recommandation vers un endocrinologue n'est plus obligatoire pour la primo-prescription. Renseignez-vous sur les conditions de [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) selon votre profil. Une consultation d'endocrinologue reste utile pour les cas complexes ou si votre généraliste préfère vous adresser à un spécialiste.
 
 **Avantages :** Remboursement optimal, médecin qui connaît votre dossier, accès plus rapide depuis l'ouverture de la prescription aux généralistes
 
@@ -244,7 +244,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 Trouver le bon endocrinologue pour maigrir demande du temps et de la recherche, mais c'est un investissement crucial pour votre santé. Privilégiez la compétence à la proximité, n'hésitez pas à changer si vous n'êtes pas satisfait, et gardez en tête que la perte de poids durable nécessite du temps et un suivi médical régulier.
 
 **Points clés à retenir :**
-- Commencez par votre médecin traitant : depuis juin 2025, il peut prescrire directement les GLP-1 (Wegovy, [Mounjaro](/traitements-glp1/guide-complet-mounjaro/), Saxenda) sans passer par un spécialiste
+- Commencez par votre médecin traitant : depuis juin 2025, il peut prescrire directement les GLP-1 (Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda) sans passer par un spécialiste
 - Pour les cas complexes, l'endocrinologue reste le référent idéal — vérifiez ses qualifications sur l'annuaire du Conseil de l'Ordre
 - Préparez vos consultations et posez toutes vos questions
 - Le suivi régulier est essentiel pour réussir durablement
