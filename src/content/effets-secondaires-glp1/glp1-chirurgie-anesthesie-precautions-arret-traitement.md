@@ -36,7 +36,7 @@ Si vous prenez [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), 
 
 ### Le mécanisme : le ralentissement de la vidange gastrique
 
-Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, [Zepbound](/collections/traitements-glp1/guide-complet-zepbound)), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) — agissent en partie en provoquant un [ralentissement de la vidange gastrique](/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/). C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
+Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, [Zepbound](/collections/traitements-glp1/guide-complet-zepbound)), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) — agissent en partie en provoquant un [ralentissement de la vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/). C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
 
 En temps normal, ce ralentissement est bénéfique : on mange moins, on se sent rassasié plus longtemps. Mais au moment d'une anesthésie générale, ce même mécanisme devient dangereux. Le protocole anesthésique standard repose sur le fait que l'estomac du patient est vide au moment de l'induction. Si l'estomac contient encore du contenu gastrique — nourriture, liquide — au moment où le patient perd connaissance et perd ses réflexes de protection des voies aériennes, ce contenu peut remonter (régurgitation) et être aspiré dans les poumons.
 

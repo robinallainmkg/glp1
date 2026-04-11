@@ -116,7 +116,7 @@ Eli Lilly a déposé une **demande d'Autorisation de Mise sur le Marché (AMM)**
 5. **Décision nationale** : chaque pays adapte l'AMM à ses règles nationales
 
 **Calendrier estimé** :
-- Décision EMA : 2e semestre 2026 au plus tôt. Note : la FDA américaine doit se prononcer autour du 10 avril 2026 (date PDUFA), une approbation rapide outre-Atlantique pourrait soutenir le calendrier européen
+- Décision EMA : 2e semestre 2026 au plus tôt. **Mise à jour avril 2026** : la FDA a approuvé l'orforglipron (nom commercial : Foundayo) le 1er avril 2026, faisant de lui la première pilule GLP-1 non peptidique autorisée. Cette approbation rapide outre-Atlantique pourrait soutenir le calendrier européen
 - Commercialisation en France : 2027 (sous réserve des négociations de prix avec le CEPS)
 
 La France ajoute systématiquement un délai de négociation tarifaire avec le Comité Économique des Produits de Santé (CEPS) après l'AMM européenne, ce qui explique ce délai supplémentaire de 6 à 18 mois.

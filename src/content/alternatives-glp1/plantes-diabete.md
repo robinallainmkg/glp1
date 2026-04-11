@@ -99,7 +99,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Conseils pratiques
 
 ### Mise en œuvre optimale
-- **Phase initiation** : Démarrage progressif supervisé — la [berbérine](/alternatives-glp1/berberine-glp1/) est l'une des plantes les plus étudiées
+- **Phase initiation** : Démarrage progressif supervisé — la [berbérine](/collections/alternatives-glp1/berberine-glp1/) est l'une des plantes les plus étudiées
 - **Surveillance** : Contrôles réguliers nécessaires
 - **Adaptation** : Personnalisation selon réponse
 - **Compliance** : Observance facteur clé succès
@@ -129,7 +129,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 - [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
 - [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
-- [alternatives naturelles](/alternatives-glp1/alternatives-naturelles-ozempic/) aux GLP-1
+- [alternatives naturelles](/collections/alternatives-glp1/alternatives-naturelles-ozempic/) aux GLP-1
 - [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
 - [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 

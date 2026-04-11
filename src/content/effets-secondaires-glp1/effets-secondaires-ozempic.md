@@ -215,7 +215,7 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 
 **Rôle du pharmacien** :
 - Conseils sur la tolérance
-- Surveillance des [interactions médicamenteuses](/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
+- Surveillance des [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 - Aide à la compliance
 
 ## 🔬 Données Scientifiques
@@ -242,7 +242,7 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner une [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) et des modifications esthétiques du visage, un phénomène souvent appelé "[Ozempic face](/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/)" (fonte du visage), à connaître avant de commencer le traitement. Consultez votre médecin si vous constatez des changements importants.
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner une [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) et des modifications esthétiques du visage, un phénomène souvent appelé "[Ozempic face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/)" (fonte du visage), à connaître avant de commencer le traitement. Consultez votre médecin si vous constatez des changements importants.
 
 ## Sommaire
 

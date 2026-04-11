@@ -38,7 +38,7 @@ En temps normal, après un repas, l'estomac effectue des contractions régulièr
 
 ### Le mécanisme d'action des GLP-1 sur l'estomac
 
-Les agonistes des récepteurs GLP-1 (sémaglutide dans Ozempic/Wegovy, tirzépatide dans [Mounjaro](/traitements-glp1/guide-complet-mounjaro/)/Zepbound, liraglutide dans Saxenda/Victoza) agissent sur plusieurs niveaux pour réduire l'appétit. L'un des mécanismes clés est le ralentissement délibéré de la vidange gastrique. En retardant le passage des aliments de l'estomac vers l'intestin, le médicament prolonge la sensation de satiété après le repas.
+Les agonistes des récepteurs GLP-1 (sémaglutide dans Ozempic/Wegovy, tirzépatide dans [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/Zepbound, liraglutide dans Saxenda/Victoza) agissent sur plusieurs niveaux pour réduire l'appétit. L'un des mécanismes clés est le ralentissement délibéré de la vidange gastrique. En retardant le passage des aliments de l'estomac vers l'intestin, le médicament prolonge la sensation de satiété après le repas.
 
 C'est précisément ce qui explique la réduction de l'appétit : on a moins faim parce que l'estomac est "encore plein" plus longtemps.
 
@@ -97,7 +97,7 @@ Les médecins et chercheurs identifient plusieurs profils de patients potentiell
 - Diabète de type 1 ou de type 2 avec neuropathie autonome (qui peut déjà altérer la motricité gastrique)
 - Antécédents de gastroparésie, même légère
 - Hypothyroïdie non traitée ou mal équilibrée
-- Prise concomitante d'opiacés (morphiniques) qui ralentissent aussi la motricité intestinale — voir aussi les [interactions médicamenteuses](/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) des GLP-1
+- Prise concomitante d'opiacés (morphiniques) qui ralentissent aussi la motricité intestinale — voir aussi les [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/) des GLP-1
 - Doses élevées de GLP-1 (les phases de titration rapide pourraient augmenter le risque)
 
 ## Le risque anesthésique : une urgence médicale méconnue
@@ -106,11 +106,11 @@ Les médecins et chercheurs identifient plusieurs profils de patients potentiell
 
 L'un des aspects les moins connus mais les plus graves du ralentissement de la vidange gastrique sous GLP-1 concerne l'anesthésie générale. Un des risques majeurs en anesthésie est l'inhalation de contenu gastrique — ce qu'on appelle un syndrome de Mendelson. Cela survient quand un patient ayant un estomac non vide vomit et inhale ses vomissures dans les voies respiratoires pendant ou après l'anesthésie.
 
-C'est pourquoi la règle habituelle est d'être à jeun depuis 6 heures pour les solides avant une [intervention chirurgicale](/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/).
+C'est pourquoi la règle habituelle est d'être à jeun depuis 6 heures pour les solides avant une [intervention chirurgicale](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/).
 
 ### Problème : le "jeûne" standard peut être insuffisant sous GLP-1
 
-Si la vidange gastrique est significativement ralentie par un GLP-1, un patient peut avoir des aliments non digérés dans l'estomac même après respecter les consignes habituelles de jeûne. Des cas d'inhalation et de complications respiratoires ont été rapportés à la FDA et à l'EMA chez des patients sous GLP-1 qui respectaient pourtant les consignes de jeûne. Consultez notre guide sur la [chirurgie sous GLP-1](/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les précautions à prendre.
+Si la vidange gastrique est significativement ralentie par un GLP-1, un patient peut avoir des aliments non digérés dans l'estomac même après respecter les consignes habituelles de jeûne. Des cas d'inhalation et de complications respiratoires ont été rapportés à la FDA et à l'EMA chez des patients sous GLP-1 qui respectaient pourtant les consignes de jeûne. Consultez notre guide sur la [chirurgie sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les précautions à prendre.
 
 ### Les recommandations des sociétés d'anesthésie
 
@@ -139,7 +139,7 @@ Consultez votre médecin si vous ressentez des vomissements répétés, une impo
 - Prescrire des médicaments prokinétiques (qui stimulent la motilité gastrique) si nécessaire
 - Réaliser des explorations complémentaires (vidange gastrique scintigraphique)
 
-### Avant toute [intervention chirurgicale](/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) ou endoscopique
+### Avant toute [intervention chirurgicale](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) ou endoscopique
 
 Informez systématiquement l'équipe médicale de votre traitement GLP-1 **dès la consultation préanesthésique**. Cela inclut les coloscopies, les endoscopies digestives, et toute intervention sous anesthésie générale ou sédation.
 

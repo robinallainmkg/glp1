@@ -58,7 +58,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Questions fréquentes (FAQ)
 
 ### Puis-je utiliser cette approche sans ordonnance ?
-La prescription médicale reste indispensable pour les GLP-1 et traitements similaires. Pour un panorama complet des [alternatives naturelles à Ozempic](/alternatives-glp1/alternatives-naturelles-ozempic/), consultez notre guide dédié. Voir aussi notre [guide complet sur le sémaglutide (Ozempic)](/collections/traitements-glp1/guide-complet-ozempic/) pour comprendre le traitement médical de référence.
+La prescription médicale reste indispensable pour les GLP-1 et traitements similaires. Pour un panorama complet des [alternatives naturelles à Ozempic](/collections/alternatives-glp1/alternatives-naturelles-ozempic/), consultez notre guide dédié. Voir aussi notre [guide complet sur le sémaglutide (Ozempic)](/collections/traitements-glp1/guide-complet-ozempic/) pour comprendre le traitement médical de référence.
 
 ### Quelle est l'efficacité comparée ?
 Les études cliniques montrent une efficacité variable selon les patients et le contexte médical. Pour comprendre les résultats attendus avec les traitements médicaux, consultez notre article sur la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/).

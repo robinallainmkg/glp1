@@ -105,11 +105,11 @@ Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines
 
 #### **Contre-indications absolues**
 - Allergie à la semaglutide
-- Antécédents de médullaire thyroïdienne
+- Antécédents de carcinome médullaire thyroïdien
 - Grossesse et allaitement
-- Insuffisance rénale sévère
 
 #### **Précautions d'emploi**
+- Insuffisance rénale sévère : surveillance rénale renforcée (ce n'est pas une contre-indication absolue selon le RCP EMA/FDA)
 - Surveillance thyroïdienne
 - Contrôle de la glycémie
 - Évaluation cardiovasculaire
@@ -118,7 +118,7 @@ Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines
 ### ❓ **Questions fréquentes**
 
 #### **Que faire en cas d'oubli d'injection ?**
-- Injection dès que possible dans les 5 jours
+- Injection dès que possible si la prochaine dose prévue est dans plus de 48 heures
 - Reprise du schéma normal ensuite
 - Consultation médicale si doute
 

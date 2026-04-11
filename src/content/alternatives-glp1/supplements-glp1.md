@@ -111,7 +111,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés pour détecter d'éventuelles [carences nutritionnelles](/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
+- **Suivi biologique** : Bilans réguliers programmés pour détecter d'éventuelles [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 

@@ -63,7 +63,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Plantes complémentaires courantes
 - **Feuilles de mûrier** : 12-20€/mois (ralentit absorption glucose)
-- **Fenugrec graines** : 8-15€/mois (sensibilité insuline) — la [berbérine](/alternatives-glp1/berberine-glp1/) est une autre option étudiée
+- **Fenugrec graines** : 8-15€/mois (sensibilité insuline) — la [berbérine](/collections/alternatives-glp1/berberine-glp1/) est une autre option étudiée
 - **Nopal (figue de Barbarie)** : 15-25€/mois (fibres solubles)
 - **Garcinia cambogia** : 18-30€/mois — ⚠️ L'efficacité comme coupe-faim n'est pas prouvée cliniquement. Des cas de toxicité hépatique ont été documentés par l'ANSM et l'EFSA. Déconseillé en association avec des médicaments hépatotoxiques.
 

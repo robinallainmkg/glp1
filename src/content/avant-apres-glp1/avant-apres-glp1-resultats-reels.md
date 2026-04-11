@@ -19,7 +19,7 @@ seoDescription: "Avant après GLP-1 : résultats réels Ozempic, Wegovy, Mounjar
 
 ## Avant Après GLP-1 : Ce que les Études et les Patients Montrent Vraiment
 
-Les réseaux sociaux regorgent de photos "avant/après" spectaculaires avec <a href="/traitements-glp1/guide-complet-ozempic/">Ozempic</a>, Wegovy ou Mounjaro. Mais qu'en est-il des résultats réels des patients français ? Quelle [perte de poids sous GLP-1](/glp1-perte-de-poids/glp1-perte-de-poids/) peut-on espérer raisonnablement ? Combien de temps faut-il ? Et surtout, ces résultats durent-ils dans le temps ?
+Les réseaux sociaux regorgent de photos "avant/après" spectaculaires avec <a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a>, Wegovy ou Mounjaro. Mais qu'en est-il des résultats réels des patients français ? Quelle [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) peut-on espérer raisonnablement ? Combien de temps faut-il ? Et surtout, ces résultats durent-ils dans le temps ?
 
 Ce guide compile les données des études cliniques, les témoignages de patients et les retours des équipes médicales françaises pour vous donner une image honnête et complète de ce qu'un traitement GLP-1 peut vous apporter.
 
@@ -129,7 +129,7 @@ Cela ne veut pas dire que l'arrêt est condamné à l'échec. Des stratégies pe
 - **L'éducation thérapeutique** : les patients qui ont travaillé avec un diététicien ou un coach pendant le traitement maintiennent mieux leurs résultats
 - **La dose de maintenance** : certains médecins proposent une dose réduite (par exemple Wegovy 0,5 mg au lieu de 2,4 mg) pour maintenir les effets avec moins d'[effets secondaires de Wegovy à connaître](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) et un coût moindre
 - **Le passage à Saxenda** : moins efficace mais moins cher, parfois utilisé comme "relais"
-- **Le suivi comportemental** : un [accompagnement psychologique](/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) spécialisé en comportement alimentaire peut aider à consolider les nouvelles habitudes acquises pendant le traitement
+- **Le suivi comportemental** : un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) spécialisé en comportement alimentaire peut aider à consolider les nouvelles habitudes acquises pendant le traitement
 
 ## Combiner les GLP-1 avec une Approche Globale
 
