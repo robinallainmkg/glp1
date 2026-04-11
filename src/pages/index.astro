@@ -40,6 +40,32 @@ async function getCategoryContent() {
 
 const categories = await getCategoryContent();
 const mainKeyword = "GLP-1 France";
+
+// Fetch latest articles for "Dernières Actualités" section
+import { getCollection } from 'astro:content';
+const allCollections = ['traitements-glp1', 'glp1-cout', 'effets-secondaires-glp1', 'recherche-glp1', 'glp1-perte-de-poids', 'regime-glp1', 'alternatives-glp1', 'medecins-glp1-france'];
+let latestArticles: any[] = [];
+for (const col of allCollections) {
+  try {
+    const entries = await getCollection(col as any);
+    for (const entry of entries) {
+      const d = entry.data as any;
+      latestArticles.push({
+        slug: entry.slug,
+        collection: col,
+        title: d.title || '',
+        description: d.description || '',
+        date: d.date || d.pubDate || null,
+        thumbnail: d.thumbnail || null,
+        thumbnailAlt: d.thumbnailAlt || d.title || '',
+      });
+    }
+  } catch {}
+}
+latestArticles = latestArticles
+  .filter(a => a.date)
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 6);
 ---
 
 <StaticLayout title="GLP-1 France : Guide Traitements Diabète et Perte de Poids"
@@ -646,7 +672,42 @@ const mainKeyword = "GLP-1 France";
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 8 : FAQ (Featured Snippets)          -->
+    <!-- SECTION 8 : Dernières Actualités             -->
+    <!-- ============================================ -->
+    <section style="padding:4rem 0;background:#f8fafc;">
+      <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;">
+        <div style="text-align:center;margin-bottom:2.5rem;">
+          <span style="display:inline-block;padding:4px 14px;background:#ecfdf5;color:#059669;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;">Mis a jour avril 2026</span>
+          <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:#1e293b;letter-spacing:-0.03em;margin:0 0 0.5rem;">
+            Derniers Articles et Actualites GLP-1
+          </h2>
+          <p style="color:#64748b;max-width:600px;margin:0 auto;">Les informations les plus recentes sur les traitements, prix et etudes cliniques en France.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.25rem;">
+          {latestArticles.map((article) => (
+            <a href={`/collections/${article.collection}/${article.slug}/`} style="display:block;background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;transition:transform 0.15s,box-shadow 0.15s;text-decoration:none;color:inherit;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+              {article.thumbnail && (
+                <img src={article.thumbnail} alt={article.thumbnailAlt} loading="lazy" style="width:100%;height:180px;object-fit:cover;" />
+              )}
+              <div style="padding:1.25rem;">
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                  <span style="font-size:0.7rem;font-weight:600;text-transform:uppercase;color:#059669;background:#ecfdf5;padding:2px 8px;border-radius:10px;">{article.collection.replace(/-/g, ' ').replace('glp1 ', 'GLP-1 ')}</span>
+                  {article.date && <span style="font-size:0.72rem;color:#94a3b8;">{new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })}</span>}
+                </div>
+                <h3 style="font-size:0.95rem;font-weight:700;color:#1e293b;margin:0 0 0.4rem;line-height:1.35;">{article.title.length > 70 ? article.title.substring(0, 70) + '...' : article.title}</h3>
+                <p style="font-size:0.82rem;color:#64748b;line-height:1.5;margin:0;">{article.description?.substring(0, 120)}...</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+          <a href="/articles/" style="display:inline-block;padding:0.75rem 2rem;background:#059669;color:#fff;border-radius:10px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#047857'" onmouseout="this.style.background='#059669'">Voir tous les articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9 : FAQ (Featured Snippets)          -->
     <!-- ============================================ -->
     <section class="py-16 md:py-24 bg-white">
       <div class="container mx-auto px-4">
