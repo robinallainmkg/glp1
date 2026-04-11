@@ -1542,7 +1542,7 @@ import { supabaseConfig } from '../../lib/supabase';
 
       updateAutopilotUI();
       renderArena();
-    } catch (e) {}
+    } catch (e) { console.error('Admin load error:', e); }
   }
 
   async function loadPendingCounts() {
@@ -1681,7 +1681,7 @@ import { supabaseConfig } from '../../lib/supabase';
           <span class="log-status ${statusClass}">${escapeHtml(log.status)}</span>
         </div>`;
       }).join('');
-    } catch (e) {}
+    } catch (e) { console.error('Admin load error:', e); }
   }
 
   // ========== AGENT CONSOLE ==========
@@ -1797,7 +1797,8 @@ import { supabaseConfig } from '../../lib/supabase';
   });
 
   window.selectConsoleAgent = selectConsoleAgent;
-  window.toggleAutopilot = toggleAutopilot;
+  window.toggleAutopilot = launchRoutine; // compat
+  window.launchRoutine = launchRoutine;
 
   // ========== CLOCK ==========
   function updateClock() {
