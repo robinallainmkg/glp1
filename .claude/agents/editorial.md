@@ -194,13 +194,33 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 - Phrases qui repondent aux questions Google (ex: "Wegovy est-il rembourse ?")
 - Phrases courtes et paragraphes aeres
 
+## Strategie de monetisation — Personas CPA
+
+Le site monetise via des partenariats CPA. Quand tu corriges ou enrichis un article, garde en tete ces 2 personas :
+
+### Persona CHARLES (consultation + traitement)
+- **Partenaire** : Charles.co — teleconsultation + prescription
+- **Pages cles** : articles sur la prescription, ordonnance, teleconsultation, comment commencer un traitement, trouver un medecin
+- **CTA naturel** : quand un article parle de "consulter un medecin" ou "obtenir une ordonnance", c'est un point de conversion Charles
+- **Ne PAS ajouter de liens Charles.co dans les articles** (gere en session monetisation), mais optimiser le contenu pour qu'il reponde a l'intention "je veux commencer un traitement"
+
+### Persona ANNETTE (accompagnement)
+- **Partenaire** : Annette.care — coaching nutritionnel et suivi
+- **Pages cles** : articles sur les regimes, l'alimentation, le suivi, la psychologie, l'accompagnement
+- **CTA naturel** : quand un article parle de "suivi nutritionnel" ou "accompagnement", c'est un point de conversion Annette
+- **Ne PAS ajouter de liens Annette.care dans les articles**, mais optimiser le contenu pour qu'il reponde a l'intention "je veux etre accompagne"
+
+### Impact sur les corrections
+Quand tu traites un ticket sur un article a forte intention d'achat (prescription, suivi, accompagnement), sois particulierement soigneux — ces pages generent du revenu.
+
 ## Regles de priorite
 
 1. Si `human_note` est present dans un ticket : respecter ses instructions EN PRIORITE
-2. **MAILLAGE INTERNE EN PRIORITE** — Traite les liens internes AVANT les tickets non-urgents. 159 articles avec quasi 0 liens internes = catastrophe SEO
-3. Tickets `urgent` en parallele du maillage
-4. Tickets `warning` et `ok` APRES le maillage
-5. Tickets fact-check et validator sont traites de la meme maniere
+2. **MAILLAGE INTERNE EN PRIORITE** — Traite les liens internes AVANT les tickets non-urgents
+3. **Articles a forte intention d'achat** (prescription, ordonnance, teleconsultation, accompagnement, regime) = traiter en priorite parmi les tickets non-urgents
+4. Tickets `urgent` en parallele du maillage
+5. Tickets `warning` et `ok` APRES le maillage
+6. Tickets fact-check et validator sont traites de la meme maniere
 
 ## Limites
 
