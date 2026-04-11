@@ -133,9 +133,81 @@ UPDATE agent_runs SET status = 'completed', completed_at = NOW(),
 WHERE id = '<run_id>';
 ```
 
+### 12. Core Web Vitals + Performance
+
+Pour les 10 pages critiques, utilise WebFetch pour mesurer :
+
+**Taille de page** :
+- Recupere la page et mesure la taille du HTML
+- HTML > 200KB = `warning`, > 500KB = `critical`
+
+**Images** :
+- Verifie que les images utilisent `loading="lazy"` (sauf above-the-fold)
+- Verifie le format : WebP ou AVIF prefere, JPEG/PNG > 200KB = `warning`
+- Verifie que les images ont `width` et `height` (evite CLS)
+
+**Scripts** :
+- Compte les `<script>` bloquants (sans `async` ou `defer`) = `warning` par script
+- CSS inline > 50KB = `warning`
+
+**Mobile** :
+- Verifie la presence de `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+- Verifie qu'il n'y a pas de `width:` en pixels fixes dans le CSS inline principal (ex: `width: 1200px`)
+
+Enregistre dans `seo_audit_results` avec audit_type `performance` ou `mobile`.
+
+### 13. E-E-A-T (Experience, Expertise, Authority, Trust)
+
+Verification critique car le site est dans la categorie YMYL (Your Money Your Life — sante).
+
+**Auteurs** :
+- Verifie que chaque article dans `src/content/` a un champ `author` dans le frontmatter
+- Verifie qu'il existe une page auteur ou au minimum un schema Person pour chaque auteur unique
+- Si les auteurs sont fictifs (pas de page LinkedIn, pas de credentials verifiables), signale en `warning` avec recommandation de creer des pages auteurs ou d'utiliser "Equipe editoriale GLP-1 France"
+
+**Trust signals** :
+- Verifie la presence d'une page mentions legales (`/mentions-legales/` ou `/legal/mentions-legales/`)
+- Verifie la presence d'une page politique de confidentialite
+- Verifie la presence d'une page contact avec formulaire
+- Verifie la presence d'un disclaimer medical sur les articles sante
+- Verifie que le site affiche des sources (liens vers ameli.fr, has-sante.fr, vidal.fr, etc.)
+
+**Schema Organization** :
+- Verifie que la homepage a un schema `Organization` ou `MedicalBusiness`
+- Verifie que les articles ont un schema `author` avec `@type: Person` et `name`
+
+Enregistre avec audit_type `eeat`.
+
+### 14. FAQ Schema (Featured Snippets)
+
+Pour les articles qui contiennent des sections FAQ (recherche `## FAQ` ou `### FAQ` dans le markdown) :
+- Verifie qu'un schema `FAQPage` est present dans le JSON-LD
+- Si absent, cree un ticket `seo_issue` pour ajouter le schema
+
+Les FAQ schemas augmentent la visibilite dans les SERP (featured snippets, People Also Ask).
+
+Enregistre avec audit_type `structured_data`.
+
+### 15. Duplicate Content Detection
+
+Compare les `<title>` et `<meta description>` de toutes les pages :
+- Si 2 pages ont le meme `<title>` exact → `critical` (cannibalisation)
+- Si 2 pages ont la meme `<meta description>` exacte → `warning`
+
+Enregistre avec audit_type `duplicate_content`.
+
+### 16. URL Structure
+
+Pour chaque URL du sitemap :
+- Verifie que le slug contient le mot-cle principal (compare avec `mainKeyword` du frontmatter)
+- Verifie qu'il n'y a pas de slugs trop longs (> 75 caracteres) = `info`
+- Verifie qu'il n'y a pas de caracteres speciaux ou accents dans les URLs
+
+Enregistre avec audit_type `url_structure`.
+
 ## Limites
 
-- Maximum 30 pages verifiees par run (WebFetch est lent)
+- Maximum 30 pages verifiees en WebFetch par run
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql
 - Reponds uniquement en francais
