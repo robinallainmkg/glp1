@@ -69,8 +69,14 @@ claude -p "Reponds aux emails" --agent sav-email
 - **Output** : `fact_check_results` + `correction_tickets` dans Supabase
 
 ### Agent Opportunites (`.claude/agents/opportunities.md`)
-- **Fonction** : Detection tendances GLP-1, gaps de contenu vs concurrents
+- **Fonction** : Detection tendances GLP-1, gaps de contenu vs concurrents, priorisation CPA (Charles/Annette)
 - **Output** : `content_opportunities` dans Supabase
+
+### Agent Crawler (`.claude/agents/crawler.md`)
+- **Fonction** : Verification post-deploy du site live — crawlabilite, indexation Google, schema.org, performance, liens sortants
+- **Output** : `seo_audit_results` + `correction_tickets` dans Supabase
+- Tourne APRES le validator (phase 4 du pipeline)
+- Verifie les 30 URLs critiques en production, compare sitemap vs index Google
 
 ### Agent Editorial (`.claude/agents/editorial.md`)
 - **Fonction** : 2 modes actifs — corrections (tickets) + maillage interne (liens). Creation DESACTIVEE.
@@ -118,10 +124,12 @@ claude -p "Reponds aux emails" --agent sav-email
 - `editorial` → modifie les fichiers, commit local → `validator` verifie + push + deploie
 - `validator` → build check → si OK push `main` (deploy FTP auto)
 - `sav-email` → autonome, sync IMAP + reponse SMTP + log Supabase (independant du pipeline editorial)
-- **Pipeline complet** (3 phases sequentielles) :
+- **Pipeline complet** (5 phases sequentielles, lance via `curl -X POST localhost:7854/pipeline`) :
+  - Phase 0 SYNC : sync analytics GA4/GSC → Supabase
   - Phase 1 GENERATE (parallele) : seo-audit + analytics + fact-check + opportunities + internal-links
-  - Phase 2 EDIT : editorial (consomme tous les tickets/suggestions/opportunites, commit local)
+  - Phase 2 EDIT : editorial x4 (consomme tous les tickets/suggestions/opportunites, commit local)
   - Phase 3 VALIDATE+DEPLOY : validator (build check, si OK → push main → deploy)
+  - Phase 4 CRAWL : crawler (verification post-deploy du site live, indexation, schema.org)
 
 ### Dashboards Admin
 - **Vue d'ensemble** (`src/pages/admin/index.astro`) — War room temps reel, statut des 7 agents, graphe dependances, live feed

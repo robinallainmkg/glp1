@@ -43,6 +43,7 @@ const AGENTS = {
   'validator':         'Valide le site (build + push main → deploy si OK)',
   'internal-links':    'Analyse le maillage interne et suggere des liens',
   'ui-designer':       'Audit visuel et amelioration UX/UI du site (typographie, couleurs, composants, navigation, animations)',
+  'crawler':           'Verification post-deploy du site live (crawlabilite, indexation Google, schema.org, performance, liens sortants)',
   // autopilot is now handled natively by the server (no Claude agent needed)
 };
 
@@ -121,6 +122,14 @@ async function runPipeline() {
   console.log(`  🚀 validator: ${vr.ok ? 'lance' : vr.error}`);
   await waitForAgentsDone(['validator'], 600000);
   console.log(`✅ [${t()}] VALIDATE termine`);
+
+  // Phase 4: CRAWL (post-deploy verification)
+  pipelinePhase = 'crawl';
+  console.log(`\n🔍 [${t()}] PIPELINE — Phase 4: CRAWL (verification post-deploy)`);
+  const cr = launchAgent('crawler');
+  console.log(`  🚀 crawler: ${cr.ok ? 'lance' : cr.error}`);
+  await waitForAgentsDone(['crawler'], 600000);
+  console.log(`✅ [${t()}] CRAWL termine`);
 
   // Done
   pipelinePhase = 'done';
