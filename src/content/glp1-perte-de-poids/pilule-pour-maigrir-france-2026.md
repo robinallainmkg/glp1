@@ -2,7 +2,8 @@
 title: "Pilule pour Maigrir en France 2026 : Ce Qui Existe Vraiment"
 description: "Pilule pour maigrir 2026 : Rybelsus, Orforglipron, Alli, Xenical. Guide des médicaments oraux pour perdre du poids en France."
 author: "Dr. Marie Dubois"
-thumbnail: "/images/thumbnails/guide-complet-GLP1.jpg"
+thumbnail: "/images/thumbnails/pilule-pour-maigrir-illus.jpg"
+thumbnailAlt: "Pilule pour maigrir : comprimés GLP-1"
 collection: "glp1-perte-de-poids"
 category: "glp1-perte-de-poids"
 tags: ["pilule pour maigrir", "comprime pour maigrir", "medicament oral perte de poids", "rybelsus", "orforglipron", "alli", "xenical"]

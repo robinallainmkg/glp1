@@ -2,7 +2,8 @@
 title: "Wegovy Avis 2026 : Témoignages Patients en France"
 description: "Wegovy avis patients France 2026 : témoignages réels, résultats perte de poids (-15 à 17%), effets secondaires et prix. Vaut-il le coût ?"
 author: "Dr. Marie Dubois"
-thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnail: "/images/thumbnails/wegovy-avis-illus.jpg"
+thumbnailAlt: "Wegovy avis et retours patients France 2026"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy avis", "wegovy temoignage", "wegovy perte de poids", "wegovy avant apres", "wegovy resultats", "semaglutide avis"]

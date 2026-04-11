@@ -2,7 +2,8 @@
 title: "Ozempic Ordonnance 2026 : Obtenir sa Prescription"
 description: "Ozempic ordonnance 2026 : conditions de prescription, téléconsultation et prix avec ou sans ordonnance. Guide complet France."
 author: "Dr. Marie Dubois"
-thumbnail: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
+thumbnail: "/images/thumbnails/ozempic-ordonnance-illus.jpg"
+thumbnailAlt: "Ozempic ordonnance et prescription en France"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["ozempic ordonnance", "ozempic sans ordonnance", "prescription ozempic", "ozempic medecin generaliste", "comment avoir ozempic", "ozempic teleconsultation"]

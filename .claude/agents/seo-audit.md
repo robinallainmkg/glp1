@@ -54,6 +54,7 @@ Pour chaque page HTML :
 - Verifie que les images ne sont pas trop volumineuses (> 500KB)
 - Verifie que chaque article dans `src/content/` a une image/thumbnail dans son frontmatter (`image`, `thumbnail`, ou `heroImage`). Si absente : severity `warning`, audit_type `images`
 - Verifie que les images referencees dans le frontmatter existent reellement dans `public/` ou `src/assets/`
+- **Verifie que chaque thumbnail est UNIQUE** : deux articles differents ne doivent PAS avoir le meme chemin `thumbnail`. Si 2+ articles partagent la meme image, signale en severity `warning`, audit_type `images`, issue_title `Thumbnail dupliquee` avec la liste des slugs concernes
 - Dans les pages de collections (`dist/collections/*/index.html`, `dist/*/index.html` qui listent des articles), verifie que chaque article liste a bien une image visible (`<img>` dans le card/lien). Si une image est absente ou cassee : severity `warning`, audit_type `images`
 
 #### 3.5 Maillage interne

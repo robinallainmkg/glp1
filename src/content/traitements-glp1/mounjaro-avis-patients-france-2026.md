@@ -2,7 +2,8 @@
 title: "Mounjaro Avis 2026 : Témoignages Patients et Résultats Réels"
 description: "Mounjaro avis patients 2026 : témoignages réels, perte de poids record (-20 à 26%), effets secondaires vécus. Le traitement le plus efficace pour maigrir ?"
 author: "Dr. Marie Dubois"
-thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+thumbnail: "/images/thumbnails/mounjaro-avis-illus.jpg"
+thumbnailAlt: "Mounjaro avis et résultats patients 2026"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["mounjaro avis", "mounjaro temoignage", "mounjaro perte de poids", "mounjaro avant apres", "mounjaro resultats", "tirzepatide avis"]

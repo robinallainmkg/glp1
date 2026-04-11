@@ -170,7 +170,12 @@ WHERE id = '<run_id>';
 
 ## Regle thumbnail
 
-Quand tu modifies un article, verifie que `thumbnail:` et `thumbnailAlt:` sont presents dans le frontmatter. Si manquants, ajoute-les en pointant vers `/images/thumbnails/<slug>-illus.jpg` (verifie que le fichier existe avec Glob avant).
+Quand tu modifies un article, verifie que :
+1. `thumbnail:` et `thumbnailAlt:` sont presents dans le frontmatter
+2. Le thumbnail est **UNIQUE** — il ne doit pas etre partage avec un autre article
+3. Si manquants ou dupliques, ajoute/change en pointant vers `/images/thumbnails/<slug>-illus.jpg`
+4. Verifie que le fichier existe avec Glob avant de l'assigner
+5. Si aucune image unique n'existe pour cet article, cree un ticket `missing_image` pour signaler le besoin de creation d'image
 
 ## Regles de style
 
