@@ -187,11 +187,19 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 - Integrer les informations de maniere fluide, pas en appendice
 - En cas de doute, relire a voix haute : si ca sonne comme un tableau, reformuler
 
+### Accents obligatoires (CRITIQUE)
+- **Tous les textes doivent avoir les accents français corrects** : é, è, ê, à, ù, ç, ô, î, etc.
+- JAMAIS de texte sans accents comme "temoignage", "donnees", "resultat", "efficacite", "securite"
+- ✅ Correct : "témoignage", "données", "résultat", "efficacité", "sécurité"
+- Quand tu corriges un article, vérifie aussi les accents manquants dans le texte existant et corrige-les
+- C'est une **exigence légale et de crédibilité** pour un site santé français
+
 ### Anti-patterns a eviter
 - Empilement de donnees brutes separees par des tirets
 - Perte de contexte par rapport a l'original
 - Jargon medical sans explication
 - Ton robotique ou telegraphique
+- **Texte sans accents**
 
 ### Regles SEO
 - Garder les mots-cles existants dans le passage
