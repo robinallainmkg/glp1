@@ -9,7 +9,7 @@ category: "Effets secondaires GLP-1"
 tags: ["glp1", "relâchement cutané", "peau", "perte de poids", "chirurgie esthétique", "body lift", "effets secondaires", "ozempic", "wegovy"]
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
-thumbnail: "/images/thumbnails/effets-secondaires-[ozempic](/collections/traitements-glp1/guide-complet-ozempic)-illus.jpg"
+thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
 thumbnailAlt: "Relâchement cutané après perte de poids sous GLP-1 corps solutions"
 featured: true
 published: true
