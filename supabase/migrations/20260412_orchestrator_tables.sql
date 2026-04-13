@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS orchestrator_state (
   budget_month TEXT,                  -- 'YYYY-MM' for reset logic
   last_cycle_at TIMESTAMPTZ,
   last_report_at TIMESTAMPTZ,
+  awaiting_human JSONB DEFAULT NULL,   -- { "question": "...", "options": [...], "since": "..." }
   notes JSONB DEFAULT '{}'::jsonb,
   updated_at TIMESTAMPTZ DEFAULT now()
 );

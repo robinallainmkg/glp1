@@ -122,14 +122,18 @@ curl -H "Authorization: Bearer <TOKEN>" https://xxxxx.trycloudflare.com/health
 6. **Variables d'environnement** (secrets de la workspace) :
    - `BRIDGE_URL` = l'URL Cloudflare de l'étape 4
    - `BRIDGE_TOKEN` = `ORCHESTRATOR_TOKEN` de l'étape 1
-   - `SUPABASE_URL` = même que `.env`
-   - `SUPABASE_ANON_KEY` = même que `.env`
+   - ~~`SUPABASE_URL`~~ — **PAS nécessaire** (Supabase passe par le bridge)
+   - ~~`SUPABASE_ANON_KEY`~~ — **PAS nécessaire** (idem)
 7. **MCP servers** à activer :
    - **HTTP client** (avec auth bearer) pointant sur `$BRIDGE_URL`
-   - **Supabase MCP** (ou HTTP REST avec `$SUPABASE_URL` + anon key)
+     - Toutes les lectures/écritures Supabase passent par le bridge
+       (`GET /supabase/read`, `POST /supabase/write`) — PAS de MCP Supabase direct
    - **GitHub MCP** scopé à `robinallainmkg/*`
    - **Web Search**
    - **Email** (optionnel — pour envoyer les rapports)
+
+   ⚠️ **NE PAS** configurer de MCP Supabase direct — la clé anon ne doit pas
+   être dans la workspace cloud. Le bridge filtre les tables autorisées.
 
 ---
 

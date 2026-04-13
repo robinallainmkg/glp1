@@ -81,20 +81,44 @@ function isAllowed(method, path) {
   return ALLOWED_ROUTES.some(r => r.method === method && (r.path === path || path.startsWith(r.path + '/')));
 }
 
-// Budget: read current month cumulative from Supabase
+// Supabase tables the orchestrator is allowed to read/write
+const ALLOWED_TABLES = new Set([
+  'countries', 'deployments', 'orchestrator_state',
+  'orchestrator_decisions', 'orchestrator_reports', 'partner_outreach'
+]);
+
+// Budget: read current month cumulative from Supabase, auto-reset on month change
 async function getBudgetState() {
   if (!supabase) return { cumulative: 0, mode: 'normal' };
   try {
     const { data } = await supabase
       .from('orchestrator_state')
-      .select('budget_cumulative_usd')
+      .select('budget_cumulative_usd, budget_month')
       .eq('id', 'singleton')
       .maybeSingle();
+
+    const currentMonth = new Date().toISOString().slice(0, 7); // 'YYYY-MM'
+
+    // Auto-reset budget on month change
+    if (data?.budget_month && data.budget_month !== currentMonth) {
+      log('info', 'budget_month_reset', { old: data.budget_month, new: currentMonth });
+      await supabase.from('orchestrator_state').update({
+        budget_cumulative_usd: 0,
+        budget_month: currentMonth,
+        updated_at: new Date().toISOString()
+      }).eq('id', 'singleton');
+      await supabase.from('orchestrator_decisions').insert({
+        kind: 'budget_reset',
+        payload: { old_month: data.budget_month, new_month: currentMonth, old_cumulative: data.budget_cumulative_usd }
+      });
+      return { cumulative: 0, mode: 'normal', month: currentMonth };
+    }
+
     const cum = data?.budget_cumulative_usd || 0;
     let mode = 'normal';
     if (cum > DEGRADE_THRESHOLD_USD) mode = 'frozen';
     else if (cum > WARN_THRESHOLD_USD) mode = 'degraded';
-    return { cumulative: cum, mode };
+    return { cumulative: cum, mode, month: currentMonth };
   } catch(e) {
     return { cumulative: 0, mode: 'normal' };
   }
@@ -170,6 +194,78 @@ const server = createServer(async (req, res) => {
         log('info', 'budget_track', { usd, label });
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ ok: true }));
+      } catch(e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: e.message }));
+      }
+    });
+    return;
+  }
+
+  // Supabase read proxy — orchestrator reads tables through bridge (not direct)
+  if (req.method === 'GET' && url.pathname === '/supabase/read') {
+    const table = url.searchParams.get('table');
+    if (!table || !ALLOWED_TABLES.has(table)) {
+      log('warn', 'supabase_table_denied', { table });
+      res.writeHead(403, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'table_not_allowed', allowed: [...ALLOWED_TABLES] }));
+      return;
+    }
+    try {
+      let query = supabase.from(table).select('*');
+      // Simple filter support: filters=col.eq.value,col2.neq.value2
+      const filters = url.searchParams.get('filters');
+      if (filters) {
+        for (const f of filters.split(',')) {
+          const [col, op, ...valParts] = f.split('.');
+          const val = valParts.join('.');
+          if (op === 'eq') query = query.eq(col, val);
+          else if (op === 'neq') query = query.neq(col, val);
+          else if (op === 'is' && val === 'null') query = query.is(col, null);
+        }
+      }
+      const limit = parseInt(url.searchParams.get('limit') || '100');
+      query = query.limit(limit);
+      const { data, error } = await query;
+      if (error) throw error;
+      log('info', 'supabase_read', { table, rows: data?.length || 0 });
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ data }));
+    } catch(e) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: e.message }));
+    }
+    return;
+  }
+
+  // Supabase write proxy — orchestrator writes through bridge (not direct)
+  if (req.method === 'POST' && url.pathname === '/supabase/write') {
+    let body = '';
+    req.on('data', d => body += d);
+    req.on('end', async () => {
+      try {
+        const { table, method, data: payload, match } = JSON.parse(body);
+        if (!table || !ALLOWED_TABLES.has(table)) {
+          res.writeHead(403, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'table_not_allowed' }));
+          return;
+        }
+        let result;
+        if (method === 'insert') {
+          result = await supabase.from(table).insert(payload).select();
+        } else if (method === 'upsert') {
+          result = await supabase.from(table).upsert(payload).select();
+        } else if (method === 'update' && match) {
+          let q = supabase.from(table).update(payload);
+          for (const [k, v] of Object.entries(match)) q = q.eq(k, v);
+          result = await q.select();
+        } else {
+          throw new Error('method must be insert|upsert|update (with match for update)');
+        }
+        if (result.error) throw result.error;
+        log('info', 'supabase_write', { table, method, rows: result.data?.length || 0 });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ data: result.data }));
       } catch(e) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ error: e.message }));
