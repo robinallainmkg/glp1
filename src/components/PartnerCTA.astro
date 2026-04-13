@@ -7,7 +7,7 @@ interface Props {
 const { partner, context = "article" } = Astro.props;
 
 const charlesLink = `https://poids.charles.co/?utm_source=glp1france&utm_medium=cpa&utm_campaign=charles_${context}`;
-const annetteLink = `https://www.annette.care/?utm_source=glp1france&utm_medium=cpa&utm_campaign=annette_${context}`;
+const annetteLink = `https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_${context}`;
 ---
 
 {partner === "charles" && (
@@ -47,10 +47,10 @@ const annetteLink = `https://www.annette.care/?utm_source=glp1france&utm_medium=
 {partner === "annette" && (
   <div
     data-partner-block="cta"
-    style="margin:1.5rem 0;max-width:100%;background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #fde68a;border-radius:14px;padding:1.5rem 1.75rem;display:flex;align-items:flex-start;gap:1.25rem;flex-wrap:wrap;"
+    style="margin:1.5rem 0;max-width:100%;background:linear-gradient(135deg,#F0F9FF,#E8F6FF);border:1px solid #A9E1FF;border-radius:14px;padding:1.5rem 1.75rem;display:flex;align-items:flex-start;gap:1.25rem;flex-wrap:wrap;"
   >
-    <div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:#fef3c7;display:flex;align-items:center;justify-content:center;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:#E8F6FF;display:flex;align-items:center;justify-content:center;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B6FA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
         <circle cx="9" cy="7" r="4"/>
         <path d="M20 8v6"/>
@@ -58,22 +58,25 @@ const annetteLink = `https://www.annette.care/?utm_source=glp1france&utm_medium=
       </svg>
     </div>
     <div style="flex:1;min-width:220px;">
-      <p style="margin:0 0 .5rem 0;font-size:1.1rem;font-weight:700;color:#78350f;line-height:1.3;">
-        Un accompagnement pour de meilleurs r&eacute;sultats
+      <p style="margin:0 0 .5rem 0;font-size:1.1rem;font-weight:700;color:#0D4F73;line-height:1.3;">
+        Un accompagnement structur&eacute; pour de meilleurs r&eacute;sultats
       </p>
-      <p style="margin:0 0 1rem 0;font-size:.95rem;color:#92400e;line-height:1.55;">
-        Annette.care propose un suivi personnalis&eacute; avec di&eacute;t&eacute;ticiens et comportementalistes pour maximiser l'efficacit&eacute; de votre traitement.
+      <p style="margin:0 0 .6rem 0;font-size:.95rem;color:#1B6FA0;line-height:1.55;">
+        Annette propose un suivi di&eacute;t&eacute;tique personnalis&eacute; et un encadrement adapt&eacute; aux patients sous traitement GLP-1, pour optimiser les r&eacute;sultats et limiter les effets secondaires.
+      </p>
+      <p style="margin:0 0 1rem 0;font-size:.85rem;color:#1B6FA0;line-height:1.4;font-weight:600;background:#E8F6FF;display:inline-block;padding:.3rem .7rem;border-radius:6px;border:1px dashed #1B6FA0;">
+        Avec le code GLP1FRANCE50, b&eacute;n&eacute;ficiez de 50% sur votre premier mois
       </p>
       <a
         href={annetteLink}
         rel="noopener sponsored"
         target="_blank"
-        style="display:inline-block;background:#d97706;color:#fff;font-size:.95rem;font-weight:600;padding:.7rem 1.4rem;border-radius:8px;text-decoration:none;transition:background .2s;"
+        style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.95rem;font-weight:600;padding:.7rem 1.4rem;border-radius:8px;text-decoration:none;transition:background .2s;"
       >
-        D&eacute;couvrir l'accompagnement &rarr;
+        D&eacute;couvrir Annette &mdash; 1er mois &agrave; 24,50&euro; &rarr;
       </a>
-      <p style="margin:.75rem 0 0 0;font-size:.8rem;color:#a16207;line-height:1.4;">
-        &#11088; 4.8/5 satisfaction &middot; Di&eacute;t&eacute;ticiens certifi&eacute;s
+      <p style="margin:.75rem 0 0 0;font-size:.8rem;color:#3B9FD9;line-height:1.4;">
+        2 000+ patients accompagn&eacute;s &middot; Di&eacute;t&eacute;ticiens certifi&eacute;s &middot; M&eacute;decins partenaires
       </p>
     </div>
   </div>
@@ -105,7 +108,7 @@ const annetteLink = `https://www.annette.care/?utm_source=glp1france&utm_medium=
         href={annetteLink}
         rel="noopener sponsored"
         target="_blank"
-        style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:#d97706;color:#fff;font-size:.95rem;font-weight:600;padding:.75rem 1.2rem;border-radius:8px;text-decoration:none;transition:background .2s;"
+        style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:#1B6FA0;color:#fff;font-size:.95rem;font-weight:600;padding:.75rem 1.2rem;border-radius:8px;text-decoration:none;transition:background .2s;"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>

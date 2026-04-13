@@ -3,7 +3,7 @@
 import BaseLayout from './BaseLayout.astro';
 import AdaptiveAffiliateDisplay from '../components/AdaptiveAffiliateDisplay.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
-import CoachCTA from '../components/CoachCTA.astro';
+import PartnerCTA from '../components/PartnerCTA.astro';
 
 export interface Props {
   title?: string;
@@ -44,15 +44,17 @@ const articleContent = props.articleContent ?? article?.body ?? '';
 const availableProducts = props.availableProducts ?? props.affiliateProducts ?? [];
 const detectedCategory = props.detectedCategory ?? props.category ?? (article?.data?.collection || article?.collection) ?? null;
 
-// Detect coach CTA context from collection/category
-function detectCoachContext(cat: string | null): string {
+// Detect partner CTA variant from collection/category
+function detectPartnerVariant(cat: string | null): "charles" | "annette" | "both" {
   const c = (cat || '').toLowerCase();
-  if (c.includes('cout') || c.includes('prix') || c.includes('remboursement')) return 'prix';
-  if (c.includes('effets') || c.includes('secondaires')) return 'effets';
-  if (c.includes('traitement') || c.includes('guide')) return 'guide';
-  return 'general';
+  // Articles sur les prix/remboursement → consultation médicale (Charles)
+  if (c.includes('cout') || c.includes('prix') || c.includes('remboursement')) return 'charles';
+  // Articles sur les régimes/alimentation → accompagnement diététique (Annette)
+  if (c.includes('regime') || c.includes('alimentation')) return 'annette';
+  // Tous les autres → les deux partenaires
+  return 'both';
 }
-const coachContext = detectCoachContext(detectedCategory);
+const partnerVariant = detectPartnerVariant(detectedCategory);
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
 const config = props.config ?? {};
@@ -141,8 +143,8 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTA Coach IA contextuel -->
-        <CoachCTA context={coachContext} />
+        <!-- CTA Partenaires contextuel -->
+        <PartnerCTA partner={partnerVariant} context="article" />
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
