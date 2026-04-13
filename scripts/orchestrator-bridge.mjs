@@ -19,6 +19,7 @@
 import { createServer } from 'http';
 import { readFileSync, appendFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
+import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 import { createClient } from '@supabase/supabase-js';
 
@@ -79,6 +80,7 @@ const ALLOWED_ROUTES = [
   { method: 'POST', path: '/launch' },
   { method: 'POST', path: '/sync-analytics' },
   { method: 'POST', path: '/discord/send' },
+  { method: 'POST', path: '/admin/restart-agent-server' },
 ];
 
 function isAllowed(method, path) {
@@ -228,6 +230,36 @@ const server = createServer(async (req, res) => {
         res.end(JSON.stringify({ error: e.message }));
       }
     });
+    return;
+  }
+
+  // Admin: restart agent-server.mjs if it's down
+  if (req.method === 'POST' && url.pathname === '/admin/restart-agent-server') {
+    log('info', 'restart_agent_server_requested');
+    try {
+      // Check if already running
+      const check = await fetch(UPSTREAM + '/status').then(r => r.json()).catch(() => null);
+      if (check?.available) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: true, message: 'agent-server already running', status: check }));
+        return;
+      }
+    } catch(e) {}
+    // Not running — restart it
+    const agentServerPath = join(PROJECT_ROOT, 'scripts', 'agent-server.mjs');
+    exec(`node "${agentServerPath}" &`, { cwd: PROJECT_ROOT, detached: true, stdio: 'ignore' });
+    // Wait a bit and check
+    await new Promise(r => setTimeout(r, 3000));
+    try {
+      const check = await fetch(UPSTREAM + '/status').then(r => r.json());
+      log('info', 'agent_server_restarted', { available: check.available?.length });
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: true, message: 'agent-server restarted', available: check.available }));
+    } catch(e) {
+      log('error', 'agent_server_restart_failed', { err: e.message });
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'restart failed, agent-server not responding after 3s' }));
+    }
     return;
   }
 
