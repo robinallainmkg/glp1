@@ -67,6 +67,9 @@ function log(level, msg, extra = {}) {
   console.log(`[${level}] ${msg}`, Object.keys(extra).length ? extra : '');
 }
 
+// Discord webhook for notifications
+const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK || 'https://discord.com/api/webhooks/1493139688825815162/la0jmuiBvga-0VYPKI4XcTyHzEEArAAh4GUZN_b4rdN8R42FJ2Sy0McpXYin11LOldSa';
+
 // Whitelist of endpoints the orchestrator can hit
 const ALLOWED_ROUTES = [
   { method: 'GET', path: '/status' },
@@ -75,6 +78,7 @@ const ALLOWED_ROUTES = [
   { method: 'POST', path: '/pipeline' },
   { method: 'POST', path: '/launch' },
   { method: 'POST', path: '/sync-analytics' },
+  { method: 'POST', path: '/discord/send' },
 ];
 
 function isAllowed(method, path) {
@@ -192,6 +196,31 @@ const server = createServer(async (req, res) => {
           });
         }
         log('info', 'budget_track', { usd, label });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: true }));
+      } catch(e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: e.message }));
+      }
+    });
+    return;
+  }
+
+  // Discord notification proxy — orchestrator sends messages to Discord
+  if (req.method === 'POST' && url.pathname === '/discord/send') {
+    let body = '';
+    req.on('data', d => body += d);
+    req.on('end', async () => {
+      try {
+        const { message, level } = JSON.parse(body);
+        if (!message) throw new Error('message required');
+        const prefix = level === 'urgent' ? '🔴' : level === 'question' ? '🟡' : '🟢';
+        const discordRes = await fetch(DISCORD_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: `${prefix} **GLP1-EU** — ${message}`.slice(0, 2000) })
+        });
+        log('info', 'discord_send', { level, status: discordRes.status });
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ ok: true }));
       } catch(e) {
