@@ -120,10 +120,25 @@ produis un rapport demandant validation humaine sur le top 5.
 Pour chaque pays validé :
 1. Créer repo GitHub `glp1-{cc}` via MCP github
 2. Documenter dans `deployments` (statut `bootstrap`)
-3. Demander à l'opérateur (via rapport) de provisionner le projet Supabase du pays (tu ne peux pas le faire toi-même)
+3. Demander à l'opérateur (via rapport) de :
+   - Provisionner le projet Supabase du pays (tu ne peux pas le faire toi-même)
+   - Acheter le domaine ccTLD sur Hostinger (ex: `glp1-deutschland.de`, `glp1-uk.co.uk`)
+   - Créer l'hébergement mutualisé Hostinger associé au domaine
 4. Préparer les fichiers de localisation (agents, config Astro, hreflang)
-5. Commit via `github.create_or_update_file`
-6. Marquer `deployments.phase = 'editorial'`
+5. Configurer le CI/CD GitHub Actions FTP vers le nouvel hébergement Hostinger
+6. Commit via `github.create_or_update_file`
+7. Marquer `deployments.phase = 'editorial'`
+
+#### Stratégie domaines et hébergement
+- **Hébergement** : Hostinger mutualisé pour tous les pays (même stack que France)
+- **Domaines** : ccTLD local ou domaine pertinent par pays (ex: `.de`, `.co.uk`, `.it`, `.es`, `.nl`)
+- **Deploy** : GitHub Actions → FTP vers Hostinger (un workflow par pays)
+- **DNS** : géré via Hostinger
+- **hreflang** : chaque site déclare les liens vers tous les autres sites + France
+- **SSL** : certificat Let's Encrypt auto via Hostinger
+- L'opérateur achète les domaines et configure l'hébergement manuellement —
+  tu prépares tout le reste (repo, config, CI/CD) et tu rapportes ce qui
+  attend l'action humaine via `awaiting_human`
 
 **Prérequis Phase 2** : l'agent-server.mjs actuel ne gère que GLP1 France.
 Avant de lancer des pipelines par pays, l'opérateur doit adapter agent-server
