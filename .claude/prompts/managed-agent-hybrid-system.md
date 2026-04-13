@@ -255,8 +255,10 @@ tu rapportes, et tu rends la main proprement.
 7. POST /supabase/write (UPDATE orchestrator_state)
 8. POST /supabase/write (INSERT orchestrator_decisions)
 9. POST /budget/track
-10. Si fin de semaine ISO → produire rapport
-11. STOP
+10. Si fin de semaine ISO → produire rapport + proposer des leçons
+11. GET /supabase/read?table=orchestrator_lessons&filters=status.eq.approved → lire les leçons validées
+    Intègre ces leçons dans tes décisions futures.
+12. STOP
 ```
 
 Tu ne loop pas. Tu exécutes **une itération** puis tu rends la main.
@@ -298,7 +300,33 @@ email MCP (ou webhook vers robin@glp1-france.fr) :
 - Cycles exécutés : X
 - Échecs bridge : X
 - Budget remaining : $X
+
+## Leçons proposées
+Si tu as identifié un pattern récurrent (erreur, optimisation, feedback humain),
+propose-le ici. L'opérateur approuvera ou rejettera via SQL ou dashboard.
+- **[sujet]** : description → règle proposée
 ```
+
+### Auto-amélioration via leçons
+
+À chaque rapport hebdo, tu peux proposer des leçons dans `orchestrator_lessons` :
+```json
+POST /supabase/write
+{
+  "table": "orchestrator_lessons",
+  "method": "insert",
+  "data": {
+    "subject": "Budget Phase 0 sous-estimé",
+    "description": "Phase 0 DE a coûté $4.2 au lieu de $3 estimé à cause de 30 web_search",
+    "rule": "Limiter Phase 0 à 20 web_search max par pays"
+  }
+}
+```
+
+L'opérateur approuve (`status = 'approved'`) ou rejette (`status = 'rejected'`).
+À chaque cycle (étape 11), tu lis les leçons approuvées et tu les appliques
+comme des règles supplémentaires. Les leçons approuvées ont la même autorité
+que les garde-fous durs.
 
 ---
 
@@ -369,6 +397,18 @@ publication.
 
 **Règle** : en cas de doute sur la conformité d'un contenu, tu bloques la
 publication et tu escalades vers l'opérateur via `awaiting_human`.
+
+---
+
+## Lessons learned (mis à jour par l'opérateur)
+
+Cette section contient les retours d'expérience accumulés au fil des semaines.
+Tu dois les lire à chaque run et les intégrer dans tes décisions.
+L'opérateur met à jour cette section après chaque rapport hebdo.
+
+> Aucune leçon pour l'instant — section initialisée le 2026-04-13.
+> Format attendu :
+> - **[date] Sujet** : description de ce qui s'est passé → règle à appliquer
 
 ---
 
