@@ -81,6 +81,7 @@ const ALLOWED_ROUTES = [
   { method: 'POST', path: '/sync-analytics' },
   { method: 'POST', path: '/discord/send' },
   { method: 'POST', path: '/admin/restart-agent-server' },
+  { method: 'POST', path: '/admin/git-push' },
 ];
 
 function isAllowed(method, path) {
@@ -201,6 +202,49 @@ const server = createServer(async (req, res) => {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ ok: true }));
       } catch(e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: e.message }));
+      }
+    });
+    return;
+  }
+
+  // Git push proxy — orchestrator writes files to a repo and pushes via the laptop
+  if (req.method === 'POST' && url.pathname === '/admin/git-push') {
+    let body = '';
+    req.on('data', d => body += d);
+    req.on('end', async () => {
+      try {
+        const { repo, files, commit_message, branch } = JSON.parse(body);
+        if (!repo || !files || !commit_message) throw new Error('repo, files, commit_message required');
+        // repo format: "glp1-de" or "robinallainmkg/glp1-de"
+        const repoName = repo.includes('/') ? repo.split('/')[1] : repo;
+        const homedir = process.env.USERPROFILE || process.env.HOME;
+        const repoDir = join(homedir, 'glp1-repos', repoName);
+        if (!existsSync(repoDir)) throw new Error(`repo dir not found: ${repoDir}`);
+        const targetBranch = branch || 'main';
+
+        // Write files
+        const { writeFileSync } = await import('fs');
+        const { mkdirSync: mkdirs } = await import('fs');
+        for (const f of files) {
+          const fullPath = join(repoDir, f.path);
+          const dir = dirname(fullPath);
+          if (!existsSync(dir)) mkdirs(dir, { recursive: true });
+          writeFileSync(fullPath, f.content, 'utf-8');
+        }
+
+        // Git add, commit, push
+        const { execSync } = await import('child_process');
+        execSync(`git add -A && git commit -m "${commit_message.replace(/"/g, '\\"')}" && git push origin ${targetBranch}`, {
+          cwd: repoDir, timeout: 30000, stdio: 'pipe'
+        });
+
+        log('info', 'git_push', { repo: repoName, files: files.length, branch: targetBranch });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: true, repo: repoName, files_written: files.length }));
+      } catch(e) {
+        log('error', 'git_push_failed', { err: e.message });
         res.writeHead(400, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ error: e.message }));
       }
