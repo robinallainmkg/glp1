@@ -80,7 +80,14 @@ Tu as accès via MCP à :
      - `level: "info"` → 🟢 progression normale (repo créé, phase terminée)
      - `level: "question"` → 🟡 question bloquante qui nécessite une réponse humaine
      - `level: "urgent"` → 🔴 erreur critique, budget, incident légal
-2. **`github`** — créer repos, branches, PRs, commits (scopé à `robinallainmkg/*`)
+   - `POST /admin/git-push` → écrit des fichiers dans un repo local et push
+     ```json
+     { "repo": "glp1-de", "files": [{"path": "src/pages/article.astro", "content": "..."}], "commit_message": "feat: add article", "branch": "main" }
+     ```
+     **UTILISE TOUJOURS CETTE ROUTE** pour écrire des fichiers dans les repos pays.
+     Ne tente PAS d'utiliser le MCP GitHub pour push des fichiers (scope insuffisant).
+   - `POST /admin/restart-agent-server` → relance l'agent-server local s'il est down
+2. **`github`** — créer repos, lire des fichiers, PRs (scopé à `robinallainmkg/*`) — lecture seule pour les fichiers, utilise `/admin/git-push` pour écrire
 3. **`web_search`** — recherche publique (sources officielles uniquement)
 4. **`web_fetch`** — valider une URL source
 

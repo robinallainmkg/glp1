@@ -19,6 +19,7 @@
 import { createServer } from 'http';
 import { readFileSync, appendFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
+import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 import { createClient } from '@supabase/supabase-js';
 
@@ -79,6 +80,8 @@ const ALLOWED_ROUTES = [
   { method: 'POST', path: '/launch' },
   { method: 'POST', path: '/sync-analytics' },
   { method: 'POST', path: '/discord/send' },
+  { method: 'POST', path: '/admin/restart-agent-server' },
+  { method: 'POST', path: '/admin/git-push' },
 ];
 
 function isAllowed(method, path) {
@@ -206,6 +209,49 @@ const server = createServer(async (req, res) => {
     return;
   }
 
+  // Git push proxy — orchestrator writes files to a repo and pushes via the laptop
+  if (req.method === 'POST' && url.pathname === '/admin/git-push') {
+    let body = '';
+    req.on('data', d => body += d);
+    req.on('end', async () => {
+      try {
+        const { repo, files, commit_message, branch } = JSON.parse(body);
+        if (!repo || !files || !commit_message) throw new Error('repo, files, commit_message required');
+        // repo format: "glp1-de" or "robinallainmkg/glp1-de"
+        const repoName = repo.includes('/') ? repo.split('/')[1] : repo;
+        const homedir = process.env.USERPROFILE || process.env.HOME;
+        const repoDir = join(homedir, 'glp1-repos', repoName);
+        if (!existsSync(repoDir)) throw new Error(`repo dir not found: ${repoDir}`);
+        const targetBranch = branch || 'main';
+
+        // Write files
+        const { writeFileSync } = await import('fs');
+        const { mkdirSync: mkdirs } = await import('fs');
+        for (const f of files) {
+          const fullPath = join(repoDir, f.path);
+          const dir = dirname(fullPath);
+          if (!existsSync(dir)) mkdirs(dir, { recursive: true });
+          writeFileSync(fullPath, f.content, 'utf-8');
+        }
+
+        // Git add, commit, push
+        const { execSync } = await import('child_process');
+        execSync(`git add -A && git commit -m "${commit_message.replace(/"/g, '\\"')}" && git push origin ${targetBranch}`, {
+          cwd: repoDir, timeout: 30000, stdio: 'pipe'
+        });
+
+        log('info', 'git_push', { repo: repoName, files: files.length, branch: targetBranch });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: true, repo: repoName, files_written: files.length }));
+      } catch(e) {
+        log('error', 'git_push_failed', { err: e.message });
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ error: e.message }));
+      }
+    });
+    return;
+  }
+
   // Discord notification proxy — orchestrator sends messages to Discord
   if (req.method === 'POST' && url.pathname === '/discord/send') {
     let body = '';
@@ -228,6 +274,36 @@ const server = createServer(async (req, res) => {
         res.end(JSON.stringify({ error: e.message }));
       }
     });
+    return;
+  }
+
+  // Admin: restart agent-server.mjs if it's down
+  if (req.method === 'POST' && url.pathname === '/admin/restart-agent-server') {
+    log('info', 'restart_agent_server_requested');
+    try {
+      // Check if already running
+      const check = await fetch(UPSTREAM + '/status').then(r => r.json()).catch(() => null);
+      if (check?.available) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: true, message: 'agent-server already running', status: check }));
+        return;
+      }
+    } catch(e) {}
+    // Not running — restart it
+    const agentServerPath = join(PROJECT_ROOT, 'scripts', 'agent-server.mjs');
+    exec(`node "${agentServerPath}" &`, { cwd: PROJECT_ROOT, detached: true, stdio: 'ignore' });
+    // Wait a bit and check
+    await new Promise(r => setTimeout(r, 3000));
+    try {
+      const check = await fetch(UPSTREAM + '/status').then(r => r.json());
+      log('info', 'agent_server_restarted', { available: check.available?.length });
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: true, message: 'agent-server restarted', available: check.available }));
+    } catch(e) {
+      log('error', 'agent_server_restart_failed', { err: e.message });
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'restart failed, agent-server not responding after 3s' }));
+    }
     return;
   }
 
