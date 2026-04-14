@@ -21,25 +21,48 @@
 - Push sur `main` déclenche le deploy
 - **NE JAMAIS court-circuiter les agents** — toujours passer par le pipeline pour les modifications
 
-## Monetisation — Strategie CPA
+## Monetisation — Partenariat Annette.care (CPA)
 
-Le site monetise via des partenariats CPA avec 2 plateformes :
+**Seul partenaire actif** : Annette.care (Charles.co retire, pas de deal signe)
 
-### Charles.co — Consultation + Traitement
-- CPA : paiement par patient orienté vers Charles
-- Offre : téléconsultation médicale + prescription GLP-1
-- Cible : personnes prêtes à commencer un traitement
-- Requêtes à forte valeur : "ordonnance", "prescription", "médecin", "téléconsultation"
-- Landing pages : `/programme/` et `/charles/`
+### Annette.care — Accompagnement + Prescription GLP-1
+- **CPA** : commission par patient oriente vers Annette
+- **Offre** : suivi dietetique + medecins partenaires (primo-prescription si eligible + renouvellement)
+- **Code promo** : `CARE50` (50% sur le 1er mois → 24,50€ au lieu de 49€)
+- **Note Google** : 4.8/5, 2 000+ patients accompagnes
+- **Lien affilie** : `https://www.annette.care/?utm_source=glp1france&utm_medium={medium}&utm_campaign=partenariat_{context}`
 
-### Annette.care — Accompagnement
-- CPA : paiement par patient orienté vers Annette
-- Offre : coaching nutritionnel + suivi perte de poids
-- Cible : personnes sous traitement qui cherchent un suivi
-- Requêtes à forte valeur : "accompagnement", "suivi nutritionnel", "coaching", "programme alimentaire"
-- Landing page : `/annette/`
+### Points de contact affiliation (tous les liens vers annette.care) :
+1. **Nav header** : bouton bleu "Consulter un specialiste" (desktop + mobile) — `utm_medium=nav`
+2. **CTA mid-article** : injecte apres le 2e H2 dans chaque article — `utm_medium=affiliation`, context=`article_inline`
+3. **CTA bottom article** : en bas de chaque article — `utm_medium=affiliation`, context=`article`
+4. **Sidebar** : card partenaire sticky sur desktop, sous l'article sur mobile — `utm_medium=affiliation`, context=`sidebar`
+5. **Comparateur homepage** : bloc complet section #partenaires — `utm_medium=affiliation`
+6. **Chat Coach IA** : redirection naturelle quand pertinent (prescription, accompagnement) — `utm_medium=chat_coach`
+7. **Banner homepage** : bandeau CTA section 8.5 — `utm_medium=affiliation`, context=`banner`
 
-Les agents (opportunities, editorial, internal-links) priorisent le contenu à forte intention d'achat pour ces personas.
+### Composants partenaires :
+- `src/components/PartnerCTA.astro` — CTA inline (articles)
+- `src/components/PartnerComparator.astro` — Bloc comparateur (homepage)
+- `src/components/PartnerSidebar.astro` — Sidebar sticky (articles)
+- `src/components/AffiliateTracker.astro` — Tracking clics (tous les layouts)
+
+### Tracking des clics affilies :
+- **Table Supabase** : `affiliate_clicks` (partner, campaign, page_url, element, session_id, created_at)
+- **JS client** : `AffiliateTracker.astro` intercepte les clics `rel="sponsored"` ou `href*="annette.care"`
+- **Requete reporting** :
+  ```sql
+  SELECT partner, campaign, element, count(*), date_trunc('day', created_at) as jour
+  FROM affiliate_clicks GROUP BY partner, campaign, element, jour ORDER BY jour DESC;
+  ```
+
+### Coach IA avec redirection Annette :
+- **Edge function** : `supabase/functions/ai-coach/index.ts` (Groq/Llama 3.3 70B + RAG Mistral)
+- **Widget** : `src/components/AiCoach.astro` — chat flottant sur toutes les pages
+- **Active dans** : BaseLayout, StaticLayout, UnifiedLayout, DiagnosticLayout
+- **System prompt** inclut une section PARTENAIRE ANNETTE.CARE qui redirige naturellement vers annette.care quand l'utilisateur parle de prescription, eligibilite, accompagnement, suivi nutritionnel
+- **Fallbacks** prescription et diet mentionnent aussi Annette avec le code CARE50
+- Les agents (opportunities, editorial, internal-links) priorisent le contenu a forte intention d'achat
 
 ## Structure du projet
 
@@ -195,6 +218,7 @@ Le serveur orchestre tout en arriere-plan. Notification Windows a la fin.
 - `gsc_metrics` (13391+) — Donnees Search Console (clicks, impressions, position)
 - `incoming_emails` (36+) — Emails entrants IMAP
 - `email_replies` (21+) — Reponses SAV envoyees
+- `affiliate_clicks` — Clics sortants vers les partenaires (partner, campaign, element, page_url)
 
 ### Statuts des tickets
 Les tickets sont **auto-approuves** (pas de validation humaine) :
