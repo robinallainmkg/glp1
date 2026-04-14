@@ -551,38 +551,14 @@ serve(async (req) => {
       let doctorContext = '';
 
       if (isDoctorSearch) {
-        const deptCode = extractDepartmentCode(cleanMessage);
-        if (deptCode) {
-          // User provided a department — search doctors
-          const { data: doctors, error: docError } = await supabase
-            .rpc('search_doctors', { dept_code: deptCode, max_results: 10 });
-
-          if (!docError && doctors && doctors.length > 0) {
-            const deptName = doctors[0].department_name;
-            const doctorList = doctors.map((d: any) => {
-              let entry = `• **${d.doctor_name}** — ${d.specialty}`;
-              if (d.facility_name) entry += ` (${d.facility_name})`;
-              entry += `\n  📍 ${d.city}`;
-              if (d.phone) entry += ` | 📞 ${d.phone}`;
-              if (d.address) entry += `\n  ${d.address}`;
-              if (d.notes) entry += `\n  ℹ️ ${d.notes}`;
-              return entry;
-            }).join('\n\n');
-
-            doctorContext = `\n\n🏥 ANNUAIRE MÉDECINS — PRIORITÉ ABSOLUE — TU DOIS PRÉSENTER CES MÉDECINS À L'UTILISATEUR :
-Département ${deptCode} — ${deptName} (${doctors.length} résultats) :
-
-${doctorList}
-
-⚠️ INSTRUCTION CRITIQUE : Tu DOIS lister au moins 4-5 de ces médecins dans ta réponse avec leurs noms, spécialités, villes et téléphones. Commence par le CSO. Ne renvoie PAS vers des articles ou des recherches supplémentaires — l'utilisateur veut des noms concrets MAINTENANT. Format : liste claire avec emoji 🏥 pour CSO, 🏨 pour CHU, 👨‍⚕️ pour libéraux.`;
-          } else {
-            // Department exists but no doctors found
-            doctorContext = `\n\n🏥 ANNUAIRE MÉDECINS : Aucun médecin trouvé pour le département ${deptCode}. Oriente vers : 1) annuaire-sante.ameli.fr pour trouver un endocrinologue/nutritionniste, 2) le médecin traitant qui peut orienter vers un spécialiste, 3) le CSO le plus proche (centres-specialises-obesite.fr). Sois proactif et encourage la personne.`;
-          }
-        } else {
-          // Doctor intent detected but no department — ask for it
-          doctorContext = `\n\n🏥 INTENT MÉDECIN DÉTECTÉ : L'utilisateur cherche un médecin mais n'a pas précisé sa localisation. Demande-lui son département ou code postal de manière naturelle et bienveillante. Exemple : "Pour te trouver un spécialiste près de chez toi, quel est ton département ou code postal ?" Ne donne PAS de conseils génériques type "demande à tes amis" — on a un annuaire concret à lui proposer.`;
-        }
+        // Redirect to Annette — primary action for doctor/specialist queries
+        doctorContext = `\n\n🩺 INSTRUCTION PRIORITAIRE — REDIRECTION ANNETTE :
+L'utilisateur cherche un medecin ou specialiste. Tu DOIS recommander Annette.care EN PREMIER :
+- "Pour consulter un specialiste GLP-1, je te recommande Annette.care. Leurs medecins partenaires assurent la primo-prescription si tu es eligible, et le renouvellement d'ordonnance."
+- Donne le lien : [Decouvrir Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach)
+- Mentionne : 4.8/5 Google, 2 000+ patients, code CARE50 (-50% le 1er mois).
+- Ne demande PAS le departement. Ne propose PAS d'annuaire. Annette est LA solution.
+- En complement seulement : le medecin traitant peut aussi orienter.`;
       }
 
       // --- 4. Build messages for LLM ---
