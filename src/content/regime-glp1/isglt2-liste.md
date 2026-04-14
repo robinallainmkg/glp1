@@ -7,7 +7,7 @@ updatedAt: 2026-03-15
 author: "Dr. Julien Lefèvre"
 category: "Nutrition"
 tags: ["isglt2", "glp1", "diabète", "jardiance", "forxiga", "traitement"]
-collection: "regime-glp1"
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/isglt2-liste.jpg"
 thumbnailAlt: "Médicaments iSGLT2 - liste et guide complet"
 featured: false
@@ -19,7 +19,7 @@ mainKeyword: "iSGLT2 liste médicaments prix France GLP-1"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -43,7 +43,7 @@ Les **inhibiteurs des SGLT2** (iSGLT2, ou gliflozines) représentent une classe 
 2. [Liste des iSGLT2 disponibles en France](#liste-isglt2-france)
 3. [Prix et remboursement des iSGLT2](#prix-remboursement)
 4. [iSGLT2 et GLP-1 : peut-on combiner ?](#combination-glp1)
-5. [Précautions et effets secondaires](#precautions)
+5. [Précautions et effets secondaires](#précautions)
 6. [FAQ](#faq)
 
 ## Qu'est-ce qu'un iSGLT2 ?

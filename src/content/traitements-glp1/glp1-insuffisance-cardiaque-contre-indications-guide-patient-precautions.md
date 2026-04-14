@@ -14,8 +14,8 @@ featured: true
 published: true
 priority: 2
 schema: "Article"
-mainKeyword: "GLP-1 insuffisance cardiaque contre-indications guide patient precautions"
-secondaryKeywords: ["ozempic insuffisance cardiaque", "wegovy contre-indication cardiaque", "glp1 patient cardiaque france", "mounjaro insuffisance cardiaque", "semaglutide coeur precautions", "glp1 diuretiques interaction"]
+mainKeyword: "GLP-1 insuffisance cardiaque contre-indications guide patient précautions"
+secondaryKeywords: ["ozempic insuffisance cardiaque", "wegovy contre-indication cardiaque", "glp1 patient cardiaque france", "mounjaro insuffisance cardiaque", "semaglutide coeur précautions", "glp1 diuretiques interaction"]
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -34,7 +34,7 @@ Si vous souffrez d'insuffisance cardiaque et envisagez un traitement GLP-1 — q
 
 1. [Ce que l'on sait sur les GLP-1 et le cœur](#glp1-coeur)
 2. [Insuffisance cardiaque : de quoi parle-t-on ?](#definition)
-3. [Bénéfices cardiovasculaires des GLP-1 : les données](#benefices)
+3. [Bénéfices cardiovasculaires des GLP-1 : les données](#bénéfices)
 4. [Les contre-indications et précautions spécifiques à l'insuffisance cardiaque](#contre-indications)
 5. [Interactions avec les traitements cardiaques habituels](#interactions)
 6. [Suivi cardiologique recommandé](#suivi)
@@ -47,7 +47,7 @@ Si vous souffrez d'insuffisance cardiaque et envisagez un traitement GLP-1 — q
 
 La relation entre les GLP-1 et le système cardiovasculaire est l'une des découvertes les plus importantes de la cardiologie des dix dernières années. Les grandes études de sécurité cardiovasculaire obligatoires (exigées par les agences depuis 2008) ont révélé des résultats inattendus : non seulement ces médicaments ne nuisent pas au cœur, mais certains le protègent activement.
 
-Les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) ont été démontrés dans plusieurs essais majeurs, notamment LEADER ([liraglutide](/collections/traitements-glp1/guide-complet-saxenda/)/), SUSTAIN-6 et SELECT (sémaglutide), REWIND ([dulaglutide](/collections/traitements-glp1/guide-complet-trulicity/)/).
+Les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) ont été démontrés dans plusieurs essais majeurs, notamment LEADER ([liraglutide](/collections/traitements-glp1/guide-complet-saxenda/)/), SUSTAIN-6 et SELECT (sémaglutide), REWIND ([dulaglutide](/collections/traitements-glp1/guide-complet-trulicity/)/).
 
 Mais il faut distinguer deux situations très différentes :
 - Les **maladies cardiovasculaires établies** (infarctus, AVC, artériosclérose) : les GLP-1 montrent des bénéfices clairs
@@ -67,7 +67,7 @@ Appelée aussi insuffisance cardiaque systolique, c'est la forme "classique" : l
 
 Dans cette forme, le cœur se contracte normalement mais ne se relâche pas correctement (défaut de relaxation). La fraction d'éjection est supérieure à 50 %. Cette forme est fréquemment associée à l'obésité et au diabète de type 2 — deux indications des GLP-1.
 
-## Bénéfices cardiovasculaires des GLP-1 : les données {#benefices}
+## Bénéfices cardiovasculaires des GLP-1 : les données {#bénéfices}
 
 ### Les bénéfices bien établis
 
@@ -81,7 +81,7 @@ L'étude SELECT (2023) a montré que le sémaglutide réduisait de 20 % le risqu
 
 ### L'étude SUMMIT : une révolution pour l'IC-FEP
 
-L'essai clinique [SUMMIT](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/) a évalué le tirzépatide (Mounjaro) chez des patients obèses avec insuffisance cardiaque à fraction d'éjection préservée. Les résultats, publiés en 2024, sont remarquables :
+L'essai clinique [SUMMIT](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-résultats-france/) a évalué le tirzépatide (Mounjaro) chez des patients obèses avec insuffisance cardiaque à fraction d'éjection préservée. Les résultats, publiés en 2024, sont remarquables :
 
 - Réduction de 38 % du risque de décès cardiovasculaire ou d'aggravation de l'insuffisance cardiaque
 - Amélioration significative de la capacité à l'exercice

@@ -1,5 +1,5 @@
 ---
-title: "CagriSema : La Prochaine Révolution Après Ozempic et Mounjaro ?"
+title: "CagriSema : Révolution Après Ozempic et Mounjaro ?"
 description: "CagriSema (cagrilintide + sémaglutide) : résultats REDEFINE à 22,7% de perte de poids. Ce que les patients français peuvent espérer."
 pubDate: 2026-03-19
 date: "2026-03-19"
@@ -28,7 +28,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-Cinq ans après l'irruption d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) sur la scène mondiale, et deux ans après le lancement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), un nouveau candidat se profile à l'horizon : le CagriSema. Cette combinaison innovante, développée par Novo Nordisk, associe deux mécanismes d'action distincts pour dépasser les plafonds de perte de poids des traitements actuels. Les [résultats de l'étude REDEFINE 1](/collections/recherche-glp1/cagrisema-resultats-phase3-redefine-arrivee-france-2026/), publiés dans le New England Journal of Medicine début 2025, ont confirmé des performances impressionnantes : une perte de poids moyenne de 22,7 % du poids corporel à 68 semaines. Voici ce que l'on sait, et ce que les patients français peuvent raisonnablement espérer.
+Cinq ans après l'irruption d'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) sur la scène mondiale, et deux ans après le lancement de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), un nouveau candidat se profile à l'horizon : le CagriSema. Cette combinaison innovante, développée par Novo Nordisk, associe deux mécanismes d'action distincts pour dépasser les plafonds de perte de poids des traitements actuels. Les [résultats de l'étude REDEFINE 1](/collections/recherche-glp1/cagrisema-résultats-phase3-redefine-arrivee-france-2026/), publiés dans le New England Journal of Medicine début 2025, ont confirmé des performances impressionnantes : une perte de poids moyenne de 22,7 % du poids corporel à 68 semaines. Voici ce que l'on sait, et ce que les patients français peuvent raisonnablement espérer.
 
 ## Qu'est-ce que le CagriSema ?
 

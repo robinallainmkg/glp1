@@ -1,6 +1,6 @@
 ---
-title: "Prix Wegovy France Pharmacie 2026 : Combien Coûte Wegovy ?"
-description: "Prix Wegovy France pharmacie 2026 : de 169€ à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale. Guide complet des tarifs."
+title: "Prix Wegovy Pharmacie 2026 : Tarifs par Dosage"
+description: "Prix Wegovy pharmacie 2026 : 169€ à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale. Guide complet des tarifs."
 pubDate: 2025-08-23
 date: '2026-03-17'
 updatedAt: '2026-03-17'
@@ -70,7 +70,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Wegovy Prix Pharmacie 2026 : Combien Coûte Wegovy en France ?
 
-Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par mois** selon le dosage prescrit. Ce médicament (sémaglutide) est indiqué dans le traitement de l'obésité. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026, mais un [remboursement Wegovy par la Sécurité Sociale prévu en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) est en cours de négociation avec le CEPS. Certaines mutuelles peuvent proposer une prise en charge partielle.
+Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par mois** selon le dosage prescrit. Ce médicament (sémaglutide) est indiqué dans le traitement de l'obésité. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026, mais un [remboursement Wegovy par la Sécurité Sociale prévu en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/) est en cours de négociation avec le CEPS. Certaines mutuelles peuvent proposer une prise en charge partielle.
 
 ## Points clés à retenir
 
@@ -131,7 +131,7 @@ Contrairement à Ozempic (remboursé à 30% pour le diabète de type 2 uniquemen
 
 ### Prise en charge par les mutuelles
 
-Certaines mutuelles complémentaires proposent une prise en charge partielle :
+Certaines [mutuelles remboursant Wegovy](/collections/glp1-cout/wegovy-remboursement-mutuelle/) proposent une prise en charge partielle :
 - Forfait médicaments non remboursés : 50 à 200€ par an
 - Garantie innovation médicale : jusqu'à 500€ par an
 - Contrats spécialisés : remboursement partiel variable
@@ -143,7 +143,7 @@ Certaines mutuelles complémentaires proposent une prise en charge partielle :
 - Remboursement Sécurité Sociale : 0€ (non remboursé)
 - Prise en charge mutuelle éventuelle : variable selon contrat
 
-**Le coût reste intégralement à la charge du patient hors aide mutuelle.**
+**Le coût reste intégralement à la charge du patient hors aide mutuelle.** Pour en savoir plus sur les perspectives de [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en 2026, consultez notre guide dédié.
 
 ## Programmes d'aide financière
 
@@ -239,7 +239,7 @@ Contactez votre médecin prescripteur ou directement Novo Nordisk France via leu
 ## Nos recommandations
 
 Pour maîtriser le coût de Wegovy :
-1. **Évaluez immédiatement** votre éligibilité au remboursement
+1. **Évaluez immédiatement** votre éligibilité au [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)
 2. **Optimisez votre couverture** mutuelle avant de commencer le traitement
 3. **Explorez tous les programmes d'aide** disponibles
 4. **Planifiez votre budget** sur 12 à 18 mois minimum

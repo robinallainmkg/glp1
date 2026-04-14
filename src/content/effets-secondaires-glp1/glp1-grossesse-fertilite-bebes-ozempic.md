@@ -65,7 +65,7 @@ Si vous tombez enceinte sous GLP-1 :
 
 ### Délai d'arrêt recommandé
 
-Les recommandations actuelles sont claires sur un point : **les femmes qui souhaitent concevoir doivent arrêter leur traitement GLP-1 avant de tenter une grossesse**.
+Les recommandations actuelles sont claires sur un point : **les femmes qui souhaitent concevoir doivent procéder à l'[arrêt du traitement avant conception](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/) avant de tenter une grossesse**. Ce guide détaille les délais recommandés et les précautions pour chaque molécule.
 
 Les délais recommandés varient selon le médicament :
 

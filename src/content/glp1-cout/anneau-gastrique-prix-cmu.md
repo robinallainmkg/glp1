@@ -44,6 +44,8 @@ Le coût d'un anneau gastrique varie selon le type d'établissement :
 * **En clinique privée conventionnée** : **6 000 à 10 000 €** avant remboursement, avec un reste à charge variable selon les dépassements
 * **En clinique privée non conventionnée** : **8 000 à 15 000 €**, faible remboursement
 
+Pour une vue d'ensemble, consultez notre comparatif du [prix des opérations pour maigrir](/collections/glp1-cout/operation-pour-maigrir-prix/).
+
 ### Détail des frais
 
 | Poste de dépense | Coût estimé |
@@ -73,7 +75,7 @@ Les bénéficiaires de la **Complémentaire Santé Solidaire (CSS, ex-CMU-C)** p
 
 ## Parcours de soins obligatoire
 
-La HAS recommande un parcours structuré avant toute chirurgie bariatrique :
+La HAS recommandé un parcours structuré avant toute chirurgie bariatrique :
 
 1. **Consultation initiale** avec le médecin traitant
 2. **Bilan multidisciplinaire** (6 à 12 mois de suivi minimum)
@@ -83,7 +85,7 @@ La HAS recommande un parcours structuré avant toute chirurgie bariatrique :
 
 ## Alternatives GLP-1 à l'anneau gastrique
 
-Les traitements GLP-1 représentent une alternative moins invasive à la chirurgie bariatrique pour certains patients :
+Les traitements GLP-1 représentent une alternative moins invasive à l'anneau gastrique. Consultez notre comparatif [GLP-1 vs chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) pour évaluer les options. Pour certains patients, avec des perspectives de [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) en 2026 :
 
 | Option | Coût mensuel | Remboursement | Perte de poids moyenne |
 |--------|-------------|---------------|----------------------|

@@ -36,7 +36,7 @@ Chez les patients obèses ou en surpoids, la dyslipidémie — élévation du ch
 2. [Réduction du LDL cholestérol](#ldl)
 3. [Amélioration du HDL cholestérol](#hdl)
 4. [Mécanismes d'action sur le métabolisme lipidique](#mecanismes)
-5. [Données cliniques : LEADER, SUSTAIN, SURMOUNT](#donnees)
+5. [Données cliniques : LEADER, SUSTAIN, SURMOUNT](#données)
 6. [Mounjaro vs Wegovy sur le profil lipidique](#comparatif)
 7. [Ce que cela signifie pour les patients avec dyslipidémie](#pratique)
 8. [FAQ](#faq)
@@ -109,9 +109,9 @@ Les GLP-1 ralentissent la vidange gastrique, ce qui réduit le pic post-prandial
 
 ### Effets anti-inflammatoires sur les macrophages vasculaires
 
-Des études précliniques montrent que les GLP-1 exercent des effets anti-inflammatoires directs sur les macrophages présents dans les plaques d'athérome, réduisant [l'inflammation vasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) indépendamment des modifications du profil lipidique circulant.
+Des études précliniques montrent que les GLP-1 exercent des effets anti-inflammatoires directs sur les macrophages présents dans les plaques d'athérome, réduisant [l'inflammation vasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) indépendamment des modifications du profil lipidique circulant.
 
-## Données cliniques : LEADER, SUSTAIN, SURMOUNT {#donnees}
+## Données cliniques : LEADER, SUSTAIN, SURMOUNT {#données}
 
 ### Essai LEADER (liraglutide)
 

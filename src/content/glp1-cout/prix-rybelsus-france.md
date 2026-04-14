@@ -105,7 +105,7 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 ### Pas de remboursement Sécurité Sociale
 
-Rybelsus n'étant pas remboursé par l'Assurance Maladie (avis défavorable de la HAS), il n'y a pas de démarches de remboursement à effectuer auprès de la Sécurité Sociale. Le coût total reste à la charge du patient. Pour comprendre les conditions de prise en charge des autres traitements, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Certaines mutuelles peuvent proposer une prise en charge partielle : vérifiez votre contrat.
+Rybelsus n'étant pas remboursé par l'Assurance Maladie (avis défavorable de la HAS), il n'y a pas de démarches de remboursement à effectuér auprès de la Sécurité Sociale. Le coût total reste à la charge du patient. Pour comprendre les conditions de prise en charge des autres traitements, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Certaines mutuelles peuvent proposer une prise en charge partielle : vérifiez votre contrat.
 
 ## 🏥 Couverture Mutuelle Santé
 
@@ -203,7 +203,7 @@ Rybelsus n'étant pas remboursé par la Sécurité Sociale, le mécanisme classi
 
 ## 📝 Conclusion
 
-**Rybelsus est une [alternative orale du sémaglutide](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/)** pour le diabète de type 2, mais il n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) par la Sécurité Sociale en France (avis défavorable de la HAS). Le coût reste intégralement à la charge du patient.
+**Rybelsus est une [alternative orale du sémaglutide](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/)** pour le diabète de type 2, mais il n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) par la Sécurité Sociale en France (avis défavorable de la HAS). Le coût reste intégralement à la charge du patient.
 
 ### Points clés à retenir :
 - **Prix moyen** : 80-110 €/mois

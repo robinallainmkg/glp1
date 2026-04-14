@@ -141,7 +141,7 @@ Ce risque, aussi faible soit-il en valeur absolue, justifie quelques précaution
 
 ### L'alcool à éviter ou à réduire
 
-Pendant un traitement GLP-1, il est conseillé de réduire sa consommation d'alcool — d'autant que l'alcool peut interagir avec le ralentissement de la vidange gastrique et aggraver certains effets secondaires. Les GLP-1 agissent sur le pancréas mais aussi sur la motilité digestive — un autre effet indésirable grave à connaître est la [gastroparésie et ralentissement de la vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/). Si vous avez des antécédents de pancréatite alcoolique, votre médecin devra évaluer soigneusement le rapport bénéfice-risque avant toute prescription.
+Pendant un traitement GLP-1, il est conseillé de réduire sa consommation d'alcool — d'autant que l'alcool peut interagir avec le ralentissement de la vidange gastrique et aggraver certains effets secondaires. Les GLP-1 agissent sur le pancréas mais aussi sur la motilité digestive — un autre effet indésirable grave à connaître est la [gastroparésie et ralentissement de la vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/). Si vous avez des antécédents de pancréatite alcoolique, votre médecin devra évaluer soigneusement le rapport bénéfice-risque avant toute prescription.
 
 ### Signaler immédiatement toute douleur abdominale inhabituelle
 
@@ -155,7 +155,7 @@ L'ANSM maintient, dans son [bilan de pharmacovigilance ANSM 2025-2026](/collecti
 
 ### La position de l'EMA
 
-L'Agence européenne des médicaments (EMA) a réexaminé en 2023 le dossier de pharmacovigilance des GLP-1 et confirmé que le risque de pancréatite existe mais reste faible. Elle recommande de ne pas prescrire ces médicaments chez les patients ayant un antécédent de pancréatite aiguë ou chronique.
+L'Agence européenne des médicaments (EMA) a réexaminé en 2023 le dossier de pharmacovigilance des GLP-1 et confirmé que le risque de pancréatite existe mais reste faible. Elle recommandé de ne pas prescrire ces médicaments chez les patients ayant un antécédent de pancréatite aiguë ou chronique.
 
 ## Questions fréquentes
 

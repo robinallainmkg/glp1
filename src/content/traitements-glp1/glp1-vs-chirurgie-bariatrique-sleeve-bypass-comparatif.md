@@ -61,7 +61,7 @@ Jusqu'à l'arrivée des GLP-1 de nouvelle génération, aucun traitement médica
 - **Objectif 20-30 % de perte de poids** (ex : perdre 25 kg pour un patient de 110 kg) → Les GLP-1 les plus puissants (Mounjaro) peuvent y parvenir, mais la chirurgie est plus sûre pour atteindre cet objectif durablement
 - **Objectif > 30 % de perte de poids** (ex : perdre 40+ kg pour un patient de 140 kg) → La chirurgie bariatrique reste le traitement de référence
 
-## Risques et effets secondaires
+## Risques et [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-wegovy)
 
 ### Les risques chirurgicaux
 
@@ -118,11 +118,11 @@ Pour les patients éligibles, la chirurgie est donc **sans reste à charge direc
 Wegovy et Mounjaro ne sont actuellement pas remboursés pour l'obésité en France (mars 2026). Leur coût mensuel est entièrement à la charge du patient :
 
 - **Wegovy** : 169 € à 360 €/mois selon dosage
-- **Mounjaro** : 230 € à 440 €/mois selon dosage — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
+- **Mounjaro** : 230 € à 440 €/mois selon dosage — voir [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/)
 
 Sur 2 à 3 ans de traitement (durée recommandée pour une perte de poids optimale), le coût total peut atteindre 5 000 à 12 000 €.
 
-Un remboursement partiel est prévu pour le second semestre 2026 (sous conditions d'IMC et de comorbidités). Consultez notre guide sur le [remboursement Wegovy et Mounjaro 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/) pour les dernières informations.
+Un remboursement partiel est prévu pour le second semestre 2026 (sous conditions d'IMC et de comorbidités). Consultez notre guide sur le [remboursement Wegovy et Mounjaro 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/) pour les dernières informations.
 
 ## Conditions d'accès et critères d'éligibilité
 

@@ -59,7 +59,7 @@ Dans l'essai STEP 1 sur le sémaglutide 2,4 mg (Wegovy), la chute de cheveux (al
 
 Des données similaires ont été observées pour le tirzépatide (Mounjaro) dans les essais SURMOUNT. La fréquence reste faible mais réelle, ce qui a conduit à l'ajout de l'alopécie dans la liste des effets indésirables connus de ces médicaments.
 
-Pour Saxenda (liraglutide 3 mg), des cas similaires ont été rapportés dans la pharmacovigilance post-commercialisation, avec un mécanisme identique.
+Pour [Saxenda](/collections/traitements-glp1/guide-complet-saxenda) (liraglutide 3 mg), des cas similaires ont été rapportés dans la pharmacovigilance post-commercialisation, avec un mécanisme identique.
 
 ### Les profils à risque plus élevé
 
@@ -98,7 +98,7 @@ Dans ces situations, d'autres causes de chute de cheveux doivent être écartée
 
 ### L'alimentation est le levier principal
 
-La mesure la plus efficace pour limiter l'effluvium télogène sous GLP-1 est de maintenir un apport nutritionnel suffisant malgré la réduction de l'appétit. Les GLP-1 diminuent considérablement la faim, ce qui peut conduire à des apports très faibles en [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) et en micronutriments — un terrain fertile pour l'effluvium.
+La mesure la plus efficace pour limiter l'effluvium télogène sous GLP-1 est de maintenir un apport nutritionnel suffisant malgré la réduction de l'appétit. Les GLP-1 diminuent considérablement la faim, ce qui peut conduire à des apports très faibles en [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) et en micronutriments — un terrain fertile pour l'effluvium.
 
 **Prioriser les protéines**
 
@@ -110,7 +110,7 @@ Sous GLP-1, l'objectif est de maintenir un apport d'au moins **1,2 à 1,5 g de p
 - Fractionner les prises alimentaires en petites portions fréquentes
 - Utiliser des compléments protéinés si les apports alimentaires sont insuffisants (poudres de protéines de lactosérum, de pois ou de soja)
 
-**Surveiller les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/)**
+**Surveiller les [micronutriments essentiels sous GLP-1](/collections/régime-glp1/glp1-micronutriments/)**
 
 Plusieurs carences favorisent directement la chute de cheveux :
 
@@ -144,12 +144,12 @@ En résumé, si vous constatez une augmentation de votre chute de cheveux sous O
 
 1. **Ne paniquez pas** : dans 90 % des cas, c'est un effluvium télogène temporaire lié à la perte de poids
 2. **Vérifiez vos apports en protéines** et augmentez-les si nécessaire (objectif : ≥ 1,2 g/kg/jour)
-3. **Réalisez un bilan biologique** comprenant ferritine, zinc, vitamine D pour détecter d'éventuelles [carences en fer et zinc sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), fréquentes et souvent impliquées dans la chute de cheveux
+3. **Réalisez un bilan biologique** comprenant ferritine, zinc, vitamine D pour détecter d'éventuelles [carences en fer et zinc sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), fréquentes et souvent impliquées dans la chute de cheveux
 4. **Consultez votre médecin** si la chute est très importante ou dure plus de 6 mois
 5. **Consultez un dermatologue** si aucune amélioration après 18 mois ou si des plaques chauves apparaissent
 6. **Continuez votre traitement** sauf avis contraire de votre médecin : l'effluvium n'est pas une raison d'arrêter un traitement GLP-1 bénéfique
 
-Pour les patients qui s'inquiètent aussi de la perte de masse musculaire qui peut accompagner la perte de poids sous GLP-1, notre article sur la [fonte musculaire et comment préserver ses muscles sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) fournit des stratégies complémentaires.
+Pour les patients qui s'inquiètent aussi de la perte de masse musculaire qui peut accompagner la perte de poids sous GLP-1, notre article sur la [fonte musculaire et comment préserver ses muscles sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) fournit des stratégies complémentaires.
 
 ## Questions fréquentes
 

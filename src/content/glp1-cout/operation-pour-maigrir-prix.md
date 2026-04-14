@@ -140,7 +140,7 @@ En secteur public, la sleeve gastrectomie est intégralement prise en charge par
 | **Sleeve**  | 1 000-4 000 € | -60 à 70%      | Élevés      |
 | **Bypass**  | 1 500-6 000 € | -60 à 70% de l'excès pondéral (~25-35% du poids total) | Très élevés |
 | **Wegovy**  | 4 000 € à 8 700 € sur 2 ans (169€-360€/mois selon dosage) | -15 à 17% | Faibles |
-| **Saxenda** | 4 500 €       | -10 à 15%      | Faibles     |
+| **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda)** | 4 500 €       | -10 à 15%      | Faibles     |
 
 ### Avantages des GLP-1 vs Chirurgie
 
@@ -170,7 +170,7 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Vitamines B12, fer, calcium
 * Prévient les carences nutritionnelles
 
-**[Protéines en Poudre Digestibles](https://bit.ly/proteines-sleeve)** - *34,90 €*
+**[Protéines en Poudre Digestibles](https://bit.ly/protéines-sleeve)** - *34,90 €*
 
 * Maintient la masse musculaire
 * Facilite la cicatrisation

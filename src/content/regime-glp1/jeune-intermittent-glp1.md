@@ -5,8 +5,8 @@ date: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Jeûne intermittent GLP-1 protocoles perte de poids : bénéfices, risques et conseils pratiques pour une pratique sécurisée sous traitement."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/jeune-intermittent-glp.jpg"
 thumbnailAlt: "Illustration pour l'article Jeune Intermittent GLP-1"
 featured: false
@@ -17,7 +17,7 @@ mainKeyword: "jeûne intermittent GLP-1 protocoles perte de poids"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -99,7 +99,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Éviter** : Sucres rapides en rupture jeûne
 - **Qualité** : Aliments entiers, peu transformés
 
-Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour préserver la masse musculaire. Le jeûne intermittent modifie les apports alimentaires. Consultez notre guide sur l'[apport calorique journalier optimal sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) pour équilibrer votre alimentation.
+Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) pour préserver la masse musculaire. Le jeûne intermittent modifie les apports alimentaires. Consultez notre guide sur l'[apport calorique journalier optimal sous GLP-1](/collections/régime-glp1/glp1-calories-journalieres/) pour équilibrer votre alimentation.
 
 ## Produits cosmétiques recommandés
 
@@ -114,7 +114,7 @@ Pendant les fenêtres alimentaires, concentrez vos [protéines sous GLP-1](/coll
 - **Spray buccal** : Fraîcheur haleine
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)

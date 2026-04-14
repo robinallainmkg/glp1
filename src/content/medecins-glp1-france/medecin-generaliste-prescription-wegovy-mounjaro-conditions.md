@@ -15,7 +15,7 @@ published: true
 priority: 1
 schema: "Article"
 mainKeyword: "médecin généraliste prescrire Wegovy Mounjaro conditions"
-secondaryKeywords: ["médecin traitant wegovy", "prescription glp1 generaliste", "conditions imc wegovy mounjaro", "ordonnance glp1 generaliste", "qui peut prescrire wegovy france"]
+secondaryKeywords: ["médecin traitant wegovy", "prescription glp1 généraliste", "conditions imc wegovy mounjaro", "ordonnance glp1 généraliste", "qui peut prescrire wegovy france"]
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -49,7 +49,7 @@ L'ANSM a décidé d'ouvrir la prescription initiale des GLP-1 pour l'obésité �
 - **Mounjaro** (tirzépatide)
 - **Saxenda** (liraglutide 3 mg)
 
-**Important** : Pour les GLP-1 antidiabétiques (Ozempic, Trulicity, Victoza/Rybelsus), la prescription par le médecin généraliste était déjà possible. Ce qui est nouveau, c'est l'ouverture pour les traitements spécifiquement indiqués dans l'**obésité**.
+**Important** : Pour les GLP-1 antidiabétiques ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic), Trulicity, Victoza/Rybelsus), la prescription par le médecin généraliste était déjà possible. Ce qui est nouveau, c'est l'ouverture pour les traitements spécifiquement indiqués dans l'**obésité**.
 
 ## Les conditions pour obtenir une prescription GLP-1
 
@@ -166,7 +166,7 @@ En mars 2026, Wegovy et Mounjaro ne sont **pas remboursés par la Sécurité Soc
 
 ### Ce qui pourrait changer en 2026
 
-La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en décembre 2024. Les négociations de prix avec le CEPS sont en cours. Un [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) est possible au **2e semestre 2026**, sous conditions :
+La HAS (Haute Autorité de Santé) a rendu un avis favorable au remboursement de Wegovy en décembre 2024. Les négociations de prix avec le CEPS sont en cours. Un [remboursement Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/) est possible au **2e semestre 2026**, sous conditions :
 
 - IMC ≥ 35 kg/m²
 - Échec d'une prise en charge nutritionnelle bien conduite
@@ -189,7 +189,7 @@ Oui. Un médecin peut toujours exercer sa clause de conscience ou estimera qu'un
 Vous pouvez tout à fait aborder le sujet avec votre médecin. Expliquez votre situation, votre IMC, vos tentatives passées et votre souhait d'explorer les options médicamenteuses. Un médecin informé sera votre meilleur allié.
 
 **Les téléconsultations donnent-elles accès aux prescriptions GLP-1 ?**
-Techniquement, un médecin peut prescrire lors d'une téléconsultation. Cependant, l'examen physique (mesure du poids, de la taille, de la tension artérielle) est nécessaire. En pratique, une première consultation en présentiel est presque toujours requise. Notre guide complet sur la [prescription GLP-1 en ligne via télémédecine](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) vous explique comment cela fonctionne.
+Techniquement, un médecin peut prescrire lors d'une téléconsultation. Cependant, l'examen physique (mesure du poids, de la taille, de la tension artérielle) est nécessaire. En pratique, une première consultation en présentiel est presque toujours requise. Notre guide complet sur la [prescription GLP-1 en ligne via télémédecine](/collections/medecins-glp1-france/prescription-glp1-télémédecine-en-ligne-france/) vous explique comment cela fonctionne.
 
 **Mon généraliste connaît-il bien ces traitements ?**
 La formation des médecins généralistes sur les GLP-1 a considérablement progressé depuis 2023. La plupart des médecins sont désormais familiarisés avec ces traitements. Si votre médecin n'est pas à l'aise avec ces prescriptions, il pourra vous orienter vers un confrère spécialisé ou un spécialiste.

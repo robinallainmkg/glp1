@@ -1,10 +1,10 @@
 ---
 title: "Sémaglutide Oral en Comprimé France 2026 : Rybelsus et Après"
 thumbnail: "/images/thumbnails/guide-complet-ozempic-illus.jpg"
-slug: "semaglutide-oral-comprime-ozempic-france"
+slug: "semaglutide-oral-comprimé-ozempic-france"
 description: "Sémaglutide oral en comprimé France 2026 : Rybelsus, Wegovy comprimé attendu fin 2027. Technologie SNAC, efficacité comparée à l'injectable Ozempic."
-mainKeyword: "semaglutide oral comprime France 2026"
-secondaryKeywords: ["semaglutide oral comprime France 2026", "rybelsus sémaglutide oral", "wegovy comprime oral", "glp1 comprimé sans injection", "sémaglutide oral efficacité", "ozempic comprimé France", "traitement obesite oral glp1"]
+mainKeyword: "semaglutide oral comprimé France 2026"
+secondaryKeywords: ["semaglutide oral comprimé France 2026", "rybelsus sémaglutide oral", "wegovy comprimé oral", "glp1 comprimé sans injection", "sémaglutide oral efficacité", "ozempic comprimé France", "traitement obesite oral glp1"]
 author: "Dr. Marie Dubois"
 image: "/images/thumbnails/pilule-qui-fait-maigrir-illus.jpg"
 collection: "traitements-glp1"
@@ -140,7 +140,7 @@ Eli Lilly travaille également sur des formulations orales de tirzepatide, mais 
 
 Le sémaglutide oral haute dose représente l'évolution naturelle des traitements GLP-1 : une molécule déjà prouvée, rendue accessible sans injection. Si la contrainte de la prise à jeun persiste, elle est jugée acceptable par la majorité des patients dans les études cliniques.
 
-Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
+Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprimé-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
 
 ---
 

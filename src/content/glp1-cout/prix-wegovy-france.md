@@ -1,10 +1,10 @@
 ---
-title: "Prix Wegovy France 2026 : Coût par Dosage et Remboursement"
+title: "Prix Wegovy France 2026 : Tarifs et Remboursement"
 thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
-description: "Prix Wegovy France 2026 : de 169 à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale. Comparatif et alternatives moins chères."
+description: "Prix Wegovy en pharmacie France : 169 à 360€/mois. Où trouver le moins cher à Paris et en ligne ? Non remboursé en 2026 mais remboursement prévu S2 2026."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg', 'wegovy prix pharmacie']
-seoTitle: "Prix Wegovy France 2026 : Tarifs par Dosage et Remboursement"
+seoTitle: "Prix Wegovy 2026 : Tarifs par Dosage et Remboursement"
 seoDescription: "Prix Wegovy France : 169 à 360€/mois selon dosage. Non remboursé par la Sécurité Sociale (mars 2026), remboursement possible au 2e semestre 2026. Tous les prix Wegovy France par dosage."
 publishedAt: '2025-01-28'
 updatedAt: '2026-03-17'
@@ -62,7 +62,7 @@ mainKeyword: "prix Wegovy France"
         "name": "Wegovy est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Les négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé) sont en cours, avec un remboursement possible au 2e semestre 2026. La HAS recommande le remboursement pour les patients avec un IMC ≥ 35 après échec des mesures nutritionnelles."
+          "text": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Les négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé) sont en cours, avec un remboursement possible au 2e semestre 2026. La HAS recommandé le remboursement pour les patients avec un IMC ≥ 35 après échec des mesures nutritionnelles."
         }
       },
       {
@@ -70,7 +70,7 @@ mainKeyword: "prix Wegovy France"
         "name": "Wegovy sera-t-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Un remboursement de Wegovy est possible au 2e semestre 2026. Les négociations CEPS sont en cours. La HAS recommande le remboursement pour IMC ≥ 35 après échec nutritionnel. Le taux probable serait de 65% si et quand le remboursement est accordé."
+          "text": "Un remboursement de Wegovy est possible au 2e semestre 2026. Les négociations CEPS sont en cours. La HAS recommandé le remboursement pour IMC ≥ 35 après échec nutritionnel. Le taux probable serait de 65% si et quand le remboursement est accordé."
         }
       }
     ]
@@ -255,7 +255,7 @@ Les différences de prix entre la France et les pays voisins sont souvent minime
 - **Prix mensuel** : 169-360 €/mois selon le dosage
 - **Remboursement Sécu** : Non remboursé (mars 2026)
 - **Remboursement possible** : 2e semestre 2026 (négociations CEPS en cours)
-- **Taux probable** : 65% si et quand remboursé (HAS recommande pour IMC ≥ 35)
+- **Taux probable** : 65% si et quand remboursé (HAS recommandé pour IMC ≥ 35)
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire. Avant d'acheter, vérifiez les [conditions de prescription du Wegovy en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) fixées par l'ANSM en 2025.
 
@@ -308,7 +308,7 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 **Perspectives de remboursement :**
 - Les **négociations CEPS** (Comité économique des produits de santé) sont en cours
 - Remboursement possible au **2e semestre 2026**
-- La **HAS recommande** le remboursement pour **IMC ≥ 35** après échec des mesures nutritionnelles
+- La **HAS recommandé** le remboursement pour **IMC ≥ 35** après échec des mesures nutritionnelles
 - Taux probable : **65%** si et quand le remboursement est accordé
 
 **Différence avec Ozempic :**
@@ -500,7 +500,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 - **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy/)** - Posologie complète de 0.25mg à 2.4mg
 - **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)** - Comment gérer nausées et vomissements
 - **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage/)** - Guide d'escalade progressive
-- **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition optimale
+- **[Régime Alimentaire sous Wegovy](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition optimale
 
 ### Remboursement et Mutuelles
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide exhaustif 2026
@@ -518,8 +518,8 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 - **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite/)** - Prise en charge globale
 
 ### Témoignages et Communauté
-- **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles
-- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
+- **[Résultats Avant/Après Wegovy](/collections/témoignages/avant-après-glp1)** - Transformations réelles
+- **[Témoignages Avant/Après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**
 - 📞 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)

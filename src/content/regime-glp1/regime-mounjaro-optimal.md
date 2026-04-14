@@ -6,9 +6,9 @@ date: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "traitements", "nutrition"]
-collection: "regime-glp1"
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
-thumbnailAlt: "Illustration pour l'article regime-mounjaro-optimal"
+thumbnailAlt: "Illustration pour l'article régime-mounjaro-optimal"
 featured: false
 priority: 5
 schema: "Article"
@@ -17,7 +17,7 @@ mainKeyword: "régime Mounjaro alimentation optimale tirzepatide"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enabled: true
   title: "Produits Recommandés"
@@ -31,13 +31,13 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 ## Principes Fondamentaux du Régime Mounjaro
 
 ### 1. Réduction Progressive des Portions
-- **Semaines 1-4** : Réduction de 25% des portions habituelles — pour des conseils détaillés, consultez notre guide pour [adapter vos portions alimentaires sous GLP-1](/collections/regime-glp1/glp1-portion-alimentaire/)
-- **Semaines 5-8** : Réduction de 40% avec stabilisation
+- **Semaines 1-4** : Réduction de 25% des portions habituelles — pour des conseils détaillés, consultez notre guide pour [adapter vos portions alimentaires sous GLP-1](/collections/régime-glp1/glp1-portion-alimentaire/)
+- **Semaines 5-8** : Réduction de 40% avec stabilisation — adaptez selon le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) prescrit par votre médecin
 - **Maintenance** : Portions adaptées à la satiété naturelle
 
 ### 2. Aliments Prioritaires
 
-#### Protéines de Qualité (30-35% des calories)
+#### <a href="/collections/régime-glp1/glp1-protéines/">Protéines de Qualité</a> (30-35% des calories)
 - **Viandes maigres** : Poulet, dinde, porc filet
 - **Poissons gras** : Saumon, sardines, maquereau
 - **Légumineuses** : Lentilles, haricots, pois chiches
@@ -148,13 +148,13 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 - **Glycémie** : Contrôle régulier
 - **Fonction rénale** : Créatinine, urée
 - **Bilan lipidique** : Tous les 3 mois
-- **Vitamines** : B12, D, folates — consultez notre guide sur les [carences nutritionnelles à surveiller sous Mounjaro](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
+- **Vitamines** : B12, D, folates — consultez notre guide sur les [carences nutritionnelles à surveiller sous Mounjaro](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 
 ## Activité Physique Complémentaire
 
 ### Programme Adapté
-- **Marche active** : 30 min/jour minimum — consultez notre [guide exercice physique et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)
-- **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
+- **Marche active** : 30 min/jour minimum — consultez notre [guide exercice physique et musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/)
+- **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Souplesse** : Yoga, étirements
 - **Cardio modéré** : Selon tolérance
 

@@ -1,10 +1,10 @@
 ---
-title: "Prix Ozempic France 2026 : Tarifs par Dosage et Remboursement"
+title: "Prix Ozempic France 2026 : Coût Réel et Remboursement"
 thumbnail: "/images/thumbnails/prix-ozempic-france-illus.jpg"
-description: "Prix Ozempic France 2026 : 77,60€/stylo, coût réel 40-55€/mois après remboursement 30% en pharmacie. Tarifs par dosage, mutuelles et aides disponibles."
-keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic pharmacie', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois', 'ozempic 0.5 mg prix']
-seoTitle: "Prix Ozempic France 2026 : Tarifs par Dosage, Remboursement et Coût Réel"
-seoDescription: "Prix Ozempic France : 77,60€/stylo. Après remboursement 30%, payez environ 40-55€/mois. Tous les prix par dosage (0.25, 0.5, 1mg), mutuelles et aides financières 2026."
+description: "Prix Ozempic pharmacie : 77,60€/stylo remboursé 65% pour le diabète. Sans ordonnance : 155€/mois. Comparatif par dosage 2026."
+keywords: ['prix ozempic', 'ozempic prix', 'prix ozempic france', 'ozempic prix sans ordonnance', 'ozempic 1 mg prix sans ordonnance', 'remboursement ozempic', 'ozempic prix france 2026', 'coût ozempic', 'prix ozempic 1 mg', 'ozempic prix par mois']
+seoTitle: "Prix Ozempic 2026 : Combien Coûte Ozempic Avec et Sans Ordonnance ?"
+seoDescription: "Prix Ozempic 2026 : 77,60€/stylo, remboursé 65% pour le diabète (reste 40€/mois). Sans ordonnance : 155€/mois. Tarifs par dosage."
 mainKeyword: "prix Ozempic France"
 publishedAt: '2025-01-28'
 updatedAt: '2025-12-27'
@@ -97,7 +97,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 | Ozempic | 90-120 € | 30% (DT2 uniquement) |
 | [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
-| Trulicity | ~81 € | 65% (DT2 uniquement) |
+| <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
 | [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
@@ -402,7 +402,7 @@ Mais en pratique, avec le dosage progressif :
 
 **1. Autres GLP-1 remboursés (coûts similaires) :**
 - **Trulicity** (dulaglutide) : ~81€/mois, remboursé 65% (DT2 uniquement)
-- **Victoza** (liraglutide) : 60,26€/mois, remboursé 30% (DT2 uniquement)
+- **[Victoza](/collections/traitements-glp1/guide-complet-victoza)** (liraglutide) : 60,26€/mois, remboursé 30% (DT2 uniquement)
 - **Saxenda** : 240-300€/mois, NON remboursé
 
 **2. Attendre le générique (2027) :**
@@ -453,7 +453,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 ### Guides Ozempic
 - **[Guide Complet Ozempic 2025](/collections/traitements-glp1/guide-complet-ozempic/)** - Posologie, efficacité, mode d'emploi détaillé
 - **[Effets Secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)** - Comment gérer nausées, vomissements et autres effets
-- **[Régime Alimentaire sous Ozempic](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition optimale pour maximiser la perte de poids
+- **[Régime Alimentaire sous Ozempic](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition optimale pour maximiser la perte de poids
 
 ### Remboursement
 - **[Guide complet remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)** - Conditions détaillées pour 2026, CSS, ALD et mutuelles
@@ -471,8 +471,8 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 ### Aide et Soutien
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide complet des mutuelles
-- **[Témoignages Avant/Après GLP-1](/temoignages/avant-apres-glp1)** - Résultats réels de patients
-- **[Témoignages Avant/Après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)** - Résultats réels de patients
+- **[Témoignages Avant/Après GLP-1](/collections/témoignages/avant-après-glp1)** - Résultats réels de patients
+- **[Témoignages Avant/Après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour obtenir Ozempic ?**
 - 📞 **Service patient Novo Nordisk** : 0 800 80 16 05 (gratuit)
@@ -482,7 +482,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 ---
 
-**Mise à jour importante :** Avec la pénurie d'Ozempic constatée en 2024-2025, les délais d'approvisionnement peuvent être plus longs. [Voir les alternatives disponibles](/guides/quel-traitement-glp1-choisir) si votre pharmacie est en rupture.
+**Mise à jour importante :** Avec la [pénurie d'Ozempic](/collections/traitements-glp1/penurie-ozempic-wegovy-mounjaro-rupture-stock-france-alternatives) constatée en 2024-2025, les délais d'approvisionnement peuvent être plus longs. [Voir les alternatives disponibles](/guides/quel-traitement-glp1-choisir) si votre pharmacie est en rupture.
 
 ---
 

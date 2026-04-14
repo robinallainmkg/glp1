@@ -6,10 +6,10 @@ pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-detox-glp1.jpg"
-thumbnailAlt: "Illustration pour l'article regime-detox-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-detox-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article régime-detox-glp1"
 featured: false
 priority: 5
 schema: "Article"
@@ -18,7 +18,7 @@ mainKeyword: "régime détox GLP-1 purification traitement"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -132,7 +132,7 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 
 ### Ce qu'il faut éviter en "détox" sous GLP-1
 
-**Les cures de jus et jeûnes prolongés sont contre-indiqués** sous traitement GLP-1. L'absence de nourriture solide peut aggraver les nausées, provoquer des hypoglycémies chez les patients diabétiques et compromettre l'apport protéique nécessaire à la préservation musculaire. La HAS déconseille formellement tout jeûne non médical chez les patients sous traitement antidiabétique.
+**Les cures de jus et jeûnes prolongés sont contre-indiqués** sous traitement GLP-1. L'absence de nourriture solide peut aggraver les nausées, provoquer des hypoglycémies chez les patients diabétiques et aggraver les [carences nutritionnelles sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) ainsi que compromettre l'apport protéique nécessaire à la préservation musculaire. La HAS déconseille formellement tout jeûne non médical chez les patients sous traitement antidiabétique.
 
 **Les compléments "détox" sans avis médical** (charbon actif, argile, certaines plantes comme la valériane ou la réglisse à forte dose) peuvent interagir avec l'absorption des médicaments ou fatiguer les reins. Demandez toujours l'avis de votre médecin ou pharmacien.
 

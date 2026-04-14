@@ -27,9 +27,9 @@ affiliateConfig:
 
 ## Wegovy vs Mounjaro 2026 : Quel Traitement GLP-1 Choisir ?
 
-Avec l'arrivee de **Mounjaro** (tirzepatide) en France fin 2024 et la disponibilite croissante de **Wegovy** (semaglutide), de nombreux patients se demandent quel traitement privilegier pour leur [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/). Ces deux medicaments representent la nouvelle generation des traitements contre l'obesite, mais ils different sur plusieurs points essentiels : mecanisme d'action, efficacite, prix et perspectives de remboursement.
+Avec l'arrivee de **Mounjaro** (tirzepatide) en France fin 2024 et la disponibilite croissante de **Wegovy** (semaglutide), de nombreux patients se demandent quel traitement privilegier pour leur [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/). Ces deux medicaments représentent la nouvelle generation des traitements contre l'obesite, mais ils different sur plusieurs points essentiels : mecanisme d'action, efficacité, prix et perspectives de remboursement.
 
-Ce comparatif detaille vous aide a y voir clair en mars 2026, avec des donnees actualisees et des conseils concrets pour orienter votre choix en concertation avec votre medecin.
+Ce comparatif détaillé vous aide a y voir clair en mars 2026, avec des données actualisees et des conseils concrets pour orienter votre choix en concertation avec votre médecin.
 
 ## Tableau comparatif rapide : Wegovy vs Mounjaro
 
@@ -51,8 +51,8 @@ Ce comparatif detaille vous aide a y voir clair en mars 2026, avec des donnees a
 
 Wegovy contient du **semaglutide**, le meme principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) mais a un dosage plus eleve (jusqu'a 2,4 mg par semaine contre 1 mg maximum pour Ozempic). Il agit en reproduisant l'effet du GLP-1, une hormone naturelle de l'intestin qui :
 
-- **Reduit l'appetit** en agissant sur les centres de la satiety dans le cerveau
-- **Ralentit la vidange gastrique**, ce qui prolonge la sensation de satiete apres les repas
+- **Reduit l'appétit** en agissant sur les centres de la satiety dans le cerveau
+- **Ralentit la vidange gastrique**, ce qui prolonge la sensation de satiété après les repas
 - **Stimule la secretion d'insuline** en fonction du taux de sucre sanguin
 - **Diminue la production de glucagon**, l'hormone qui fait monter la glycemie
 
@@ -60,16 +60,16 @@ Cette action ciblee sur le GLP-1 a fait ses preuves depuis plusieurs annees, d'a
 
 ### Mounjaro : la double action GLP-1 et GIP
 
-Mounjaro contient du **tirzepatide**, une molecule innovante qui agit simultanement sur **deux recepteurs hormonaux** :
+Mounjaro contient du **tirzepatide**, une molécule innovante qui agit simultanement sur **deux récepteurs hormonaux** :
 
-- Le **recepteur GLP-1**, avec les memes effets que le semaglutide (reduction de l'appetit, ralentissement gastrique)
-- Le **recepteur GIP** (Glucose-dependent Insulinotropic Polypeptide), qui apporte des effets complementaires sur le metabolisme des graisses et la sensibilite a l'insuline
+- Le **récepteur GLP-1**, avec les memes effets que le semaglutide (reduction de l'appétit, ralentissement gastrique)
+- Le **récepteur GIP** (Glucose-dependent Insulinotropic Polypeptide), qui apporte des effets complémentaires sur le métabolisme des graisses et la sensibilite a l'insuline
 
-Cette double action explique en partie pourquoi Mounjaro affiche des resultats superieurs en termes de perte de poids dans les etudes cliniques. Le GIP ameliore notamment la capacite du corps a bruler les graisses et favorise une meilleure repartition des nutriments.
+Cette double action explique en partie pourquoi Mounjaro affiche des résultats supérieurs en termes de perte de poids dans les etudes cliniques. Le GIP améliore notamment la capacite du corps a bruler les graisses et favorise une meilleure repartition des nutriments.
 
-## Efficacite comparee : que disent les etudes cliniques ?
+## Efficacité comparee : que disent les etudes cliniques ?
 
-### Resultats de perte de poids
+### Résultats de perte de poids
 
 Les essais cliniques de grande envergure permettent de comparer objectivement ces deux traitements :
 
@@ -83,7 +83,7 @@ Les essais cliniques de grande envergure permettent de comparer objectivement ce
 - **SURMOUNT-2** (patients DT2) : **-14,7%** a 72 semaines
 - **SURMOUNT-3** (avec intervention comportementale) : jusqu'a **-26,6%** en association
 
-En moyenne, Mounjaro permet de perdre environ **5 points de pourcentage de plus** que Wegovy. Pour un patient de 100 kg, cela represente environ 5 kg supplementaires de perte de poids.
+En moyenne, Mounjaro permet de perdre environ **5 points de pourcentage de plus** que Wegovy. Pour un patient de 100 kg, cela représente environ 5 kg supplémentaires de perte de poids.
 
 ### Proportion de patients atteignant des seuils significatifs
 
@@ -94,20 +94,20 @@ En moyenne, Mounjaro permet de perdre environ **5 points de pourcentage de plus*
 | ≥ 15% du poids | ~50% | ~65-70% |
 | ≥ 20% du poids | ~30% | ~55% |
 
-Ces chiffres montrent que Mounjaro offre une probabilite plus elevee d'atteindre une perte de poids importante, mais Wegovy reste un traitement tres efficace pour la majorite des patients.
+Ces chiffres montrent que Mounjaro offre une probabilite plus élevée d'atteindre une perte de poids importante, mais Wegovy reste un traitement tres efficace pour la majorite des patients.
 
 ### Benefices sur la sante au-dela du poids
 
-Les deux traitements apportent des ameliorations metaboliques significatives :
+Les deux traitements apportent des améliorations metaboliques significatives :
 
-- **Glycemie et HbA1c** : reduction comparable, Mounjaro legerement superieur chez les patients diabetiques
-- **Tension arterielle** : amelioration similaire avec les deux traitements
+- **Glycemie et HbA1c** : reduction comparable, Mounjaro legerement supérieur chez les patients diabetiques
+- **Tension artérielle** : amélioration similaire avec les deux traitements
 - **Profil lipidique** : Mounjaro montre un avantage sur la reduction des triglycerides
-- **Risque cardiovasculaire** : Wegovy a demontre des [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec une reduction de 20% des evenements cardiovasculaires majeurs (etude SELECT), Mounjaro est en cours d'evaluation
+- **Risque cardiovasculaire** : Wegovy a démontré des [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) avec une reduction de 20% des evenements cardiovasculaires majeurs (etude SELECT), Mounjaro est en cours d'evaluation
 
-## Effets secondaires : lequel est le mieux tolere ?
+## Effets secondaires : lequel est le mieux toléré ?
 
-### Profil de tolerance compare
+### Profil de tolérance compare
 
 Les effets secondaires des deux traitements sont principalement gastro-intestinaux et generalement temporaires :
 
@@ -120,21 +120,21 @@ Les effets secondaires des deux traitements sont principalement gastro-intestina
 | **Douleurs abdominales** | 5-10% | 5-10% |
 | **Arret pour intolerance** | ~5-7% | ~4-6% |
 
-Dans l'ensemble, **Mounjaro est legerement mieux tolere** que Wegovy, avec un taux de nausees inferieur. Cela s'explique en partie par le protocole d'escalade de dose plus progressif du tirzepatide.
+Dans l'ensemble, **Mounjaro est legerement mieux toléré** que Wegovy, avec un taux de nausées inferieur. Cela s'explique en partie par le protocole d'escalade de dose plus progressif du tirzepatide.
 
 ### Conseils communs pour minimiser les effets secondaires
 
 Quel que soit le traitement choisi, plusieurs strategies aident a reduire l'inconfort digestif :
 
-1. **Respecter l'escalade de dose** progressive preconisee par votre medecin
+1. **Respecter l'escalade de dose** progressive preconisee par votre médecin
 2. **Manger lentement** et en quantites reduites a chaque repas
 3. **Eviter les aliments trop gras** ou trop epices pendant la phase d'adaptation
 4. **Bien s'hydrater** tout au long de la journee
-5. **Signaler rapidement** tout symptome persistant a votre medecin
+5. **Signaler rapidement** tout symptome persistant a votre médecin
 
 ## Prix et remboursement en France (mars 2026)
 
-### Cout mensuel detaille
+### Cout mensuel détaillé
 
 | Dosage | **Wegovy** | **Mounjaro** |
 |--------|-----------|-------------|
@@ -143,17 +143,17 @@ Quel que soit le traitement choisi, plusieurs strategies aident a reduire l'inco
 | Dose cible | ~360 EUR/mois | ~350-440 EUR/mois |
 | **Cout annuel estime** | **~3 800 EUR** | **~4 200-5 000 EUR** |
 
-Les deux traitements ne sont **pas rembourses par la Securite Sociale** en mars 2026. Leur cout est integralement a la charge du patient, hors aide eventuelle de la mutuelle.
+Les deux traitements ne sont **pas rembourses par la Sécurité Sociale** en mars 2026. Leur cout est integralement a la charge du patient, hors aide eventuelle de la mutuelle.
 
 ### Perspectives de remboursement
 
 La situation evolue rapidement pour les deux traitements :
 
-**Wegovy** : La HAS a rendu un **avis favorable au remboursement le 4 décembre 2024** pour les adultes avec un IMC >= 35 kg/m2 apres echec de la prise en charge nutritionnelle bien conduite. Les negociations de prix entre Novo Nordisk et le CEPS sont en cours. Un remboursement pourrait intervenir au **2e semestre 2026**.
+**Wegovy** : La HAS a rendu un **avis favorable au remboursement le 4 décembre 2024** pour les adultes avec un IMC >= 35 kg/m2 après echec de la prise en charge nutritionnelle bien conduite. Les negociations de prix entre Novo Nordisk et le CEPS sont en cours. Un remboursement pourrait intervenir au **2e semestre 2026**.
 
-**Mounjaro** : La HAS a rendu un **avis favorable le 19 novembre 2025** (avis CT21349) pour le diabete de type 2 et l'obesite (IMC >= 35). Les negociations tarifaires avec le CEPS sont egalement en cours. Le remboursement est attendu au **2e semestre 2026**.
+**Mounjaro** : La HAS a rendu un **avis favorable le 19 novembre 2025** (avis CT21349) pour le diabete de type 2 et l'obesite (IMC >= 35). Les negociations tarifaires avec le CEPS sont également en cours. Le remboursement est attendu au **2e semestre 2026**.
 
-Pour les patients diabetiques, **Ozempic** (meme principe actif que Wegovy, dosage inferieur) reste l'alternative remboursee a 30% par la Securite Sociale. Pour les patients diabétiques de type 2, les conditions de prescription et de remboursement diffèrent — consultez notre guide [GLP-1 pour le diabète de type 2 en France](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
+Pour les patients diabetiques, **Ozempic** (meme principe actif que Wegovy, dosage inferieur) reste l'alternative remboursee a 30% par la Sécurité Sociale. Pour les patients diabétiques de type 2, les conditions de prescription et de remboursement diffèrent — consultez notre guide [GLP-1 pour le diabète de type 2 en France](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
 
 ### Strategies pour reduire le cout
 
@@ -166,25 +166,25 @@ Pour en savoir plus, consultez notre [guide complet du remboursement GLP-1 2026]
 
 ## Quel traitement choisir selon votre profil ?
 
-Le choix entre Wegovy et Mounjaro depend de plusieurs facteurs individuels. Voici un guide d'orientation, sachant que seul votre medecin peut determiner le traitement le plus adapte a votre situation.
+Le choix entre Wegovy et Mounjaro depend de plusieurs facteurs individuels. Voici un guide d'orientation, sachant que seul votre médecin peut determiner le traitement le plus adapte a votre situation.
 
 ### Privilegiez Mounjaro si :
 
-- **Vous visez une perte de poids maximale** : les etudes montrent une efficacite superieure de Mounjaro, particulierement pour les patients avec un IMC eleve
+- **Vous visez une perte de poids maximale** : les etudes montrent une efficacité supérieure de Mounjaro, particulierement pour les patients avec un IMC eleve
 - **Vous etes diabetique de type 2** : le tirzepatide offre un excellent controle glycemique grace a sa double action
-- **Vous avez mal tolere un traitement GLP-1 pur** : le profil de tolerance legerement different peut etre benefique
+- **Vous avez mal toléré un traitement GLP-1 pur** : le profil de tolérance legerement different peut etre benefique
 - **Vous souhaitez une reduction importante des triglycerides** : Mounjaro montre un avantage marque sur ce parametre
 
 ### Privilegiez Wegovy si :
 
 - **Le budget est un critere determinant** : Wegovy est en moyenne 50 a 80 EUR moins cher par mois
 - **Vous avez un risque cardiovasculaire eleve** : l'etude SELECT a prouve une reduction de 20% des evenements cardiaques majeurs
-- **Vous preferez un traitement avec un recul clinique plus long** : le semaglutide est utilise depuis plus longtemps que le tirzepatide
-- **Votre medecin connait bien le semaglutide** : l'experience du prescripteur avec la molecule compte dans l'ajustement du traitement
+- **Vous préfèrez un traitement avec un recul clinique plus long** : le semaglutide est utilisé depuis plus longtemps que le tirzepatide
+- **Votre médecin connait bien le semaglutide** : l'experience du prescripteur avec la molécule compte dans l'ajustement du traitement
 
 ### Dans tous les cas
 
-- **Consultez un specialiste** (endocrinologue, diabetologue ou medecin nutritionniste) avant de choisir
+- **Consultez un spécialiste** (endocrinologue, diabetologue ou médecin nutritionniste) avant de choisir
 - **Associez le traitement** a une alimentation equilibree et a une activite physique reguliere
 - **Prevoyez un suivi regulier** : consultations mensuelles les 3 premiers mois, puis tous les 3 mois
 
@@ -211,13 +211,13 @@ Pour le tirzepatide, notre [guide du dosage Mounjaro](/collections/traitements-g
 5. **Semaines 17-20** : 12,5 mg/semaine
 6. **A partir de la semaine 21** : 15 mg/semaine (dose maximale)
 
-Les deux traitements s'administrent par **injection sous-cutanee hebdomadaire** (une fois par semaine, le meme jour chaque semaine), a l'aide d'un stylo prerempli jetable. L'injection se fait dans l'abdomen, la cuisse ou le haut du bras.
+Les deux traitements s'administrent par **injection sous-cutanée hebdomadaire** (une fois par semaine, le meme jour chaque semaine), a l'aide d'un stylo prerempli jetable. L'injection se fait dans l'abdomen, la cuisse ou le haut du bras.
 
-## Questions frequentes
+## Questions fréquentes
 
 ### Peut-on passer de Wegovy a Mounjaro (ou inversement) ?
 
-Oui, un changement de traitement est possible sous supervision medicale. Votre medecin adaptera le protocole de transition en fonction de votre dose actuelle et de votre tolerance. En general, il est recommande de recommencer l'escalade de dose du nouveau traitement pour limiter les effets secondaires.
+Oui, un changement de traitement est possible sous supervision medicale. Votre médecin adaptera le protocole de transition en fonction de votre dose actuelle et de votre tolérance. En général, il est recommandé de recommencer l'escalade de dose du nouveau traitement pour limiter les effets secondaires.
 
 ### Wegovy et Mounjaro sont-ils disponibles en pharmacie ?
 
@@ -225,21 +225,21 @@ Oui, les deux medicaments sont commercialises en France et disponibles en pharma
 
 ### Peut-on combiner Wegovy et Mounjaro ?
 
-Non, il ne faut **jamais combiner deux agonistes GLP-1**. L'association de ces traitements augmenterait considerablement le risque d'effets secondaires graves (vomissements severes, deshydratation, pancreatite). Un seul traitement a la fois, toujours sous prescription medicale.
+Non, il ne faut **jamais combiner deux agonistes GLP-1**. L'association de ces traitements augmenterait considerablement le risque d'effets secondaires graves (vomissements severes, deshydratation, pancréatite). Un seul traitement a la fois, toujours sous prescription medicale.
 
 ### Faut-il une ordonnance speciale ?
 
-Les deux traitements necessitent une **ordonnance medicale** classique. Il n'y a pas de prescription initiale hospitaliere requise. Cependant, le suivi par un medecin specialise (endocrinologue, diabetologue ou nutritionniste) est vivement recommande pour optimiser les resultats.
+Les deux traitements nécessitént une **ordonnance medicale** classique. Il n'y a pas de prescription initiale hospitaliere requise. Cependant, le suivi par un médecin specialise (endocrinologue, diabetologue ou nutritionniste) est vivement recommandé pour optimiser les résultats.
 
 ### Que se passe-t-il a l'arret du traitement ?
 
-Les etudes montrent qu'une reprise de poids est frequente a l'arret des deux traitements (environ 50 a 70% du poids perdu sur 1 a 2 ans). C'est pourquoi il est essentiel d'adopter des habitudes de vie saines pendant le traitement pour maintenir les resultats a long terme.
+Les etudes montrent qu'une reprise de poids est fréquente a l'arret des deux traitements (environ 50 a 70% du poids perdu sur 1 a 2 ans). C'est pourquoi il est essentiel d'adopter des habitudes de vie saines pendant le traitement pour maintenir les résultats a long terme.
 
 ## Conclusion : Wegovy ou Mounjaro, le bon choix depend de vous
 
-**Mounjaro** se distingue par une **efficacite superieure** en termes de perte de poids et une tolerance digestive legerement meilleure. En revanche, **Wegovy** offre un **recul clinique plus important**, un **benefice cardiovasculaire prouve** et un **cout mensuel inferieur**.
+**Mounjaro** se distingue par une **efficacité supérieure** en termes de perte de poids et une tolérance digestive legerement meilleure. En revanche, **Wegovy** offre un **recul clinique plus important**, un **bénéfice cardiovasculaire prouve** et un **cout mensuel inferieur**.
 
-Les deux traitements representent des avancees majeures dans la prise en charge de l'obesite en France. Le choix ideal depend de votre profil medical, de vos objectifs, de votre budget et de l'avis de votre medecin. Dans tous les cas, ces medicaments ne sont qu'un outil parmi d'autres : une alimentation equilibree, une activite physique reguliere et un suivi medical sont indispensables pour obtenir des resultats durables.
+Les deux traitements représentent des avancees majeures dans la prise en charge de l'obesite en France. Le choix ideal depend de votre profil medical, de vos objectifs, de votre budget et de l'avis de votre médecin. Dans tous les cas, ces medicaments ne sont qu'un outil parmi d'autres : une alimentation equilibree, une activite physique reguliere et un suivi medical sont indispensables pour obtenir des résultats durables.
 
 Pour approfondir votre reflexion, consultez nos guides dedies :
 - [Guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)
@@ -250,4 +250,4 @@ Pour comparer les profils de tolérance, consultez notre guide complet sur les [
 
 ---
 
-*Cet article est fourni a titre informatif et ne remplace pas l'avis d'un professionnel de sante. Consultez toujours votre medecin avant de commencer ou de modifier un traitement medical. Derniere mise a jour : mars 2026.*
+*Cet article est fourni a titre informatif et ne remplace pas l'avis d'un professionnel de sante. Consultez toujours votre médecin avant de commencer ou de modifier un traitement medical. Derniere mise a jour : mars 2026.*

@@ -102,6 +102,25 @@ WHERE id = '<run_id>';
 - Ne pas suggerer de liens vers des articles de la meme URL (auto-liens)
 - Ne pas creer de boucles A→B et B→A sauf si vraiment pertinent
 
+## Strategie de monetisation — Pages a forte valeur CPA
+
+Le site monetise via CPA. Certaines pages sont des "hubs de conversion" qui doivent recevoir plus de liens internes :
+
+### Pages hub CHARLES (consultation + traitement)
+- Articles sur la prescription, ordonnance, teleconsultation, medecins, commencer un traitement
+- Slugs types : `*ordonnance*`, `*prescription*`, `*teleconsultation*`, `*medecin*`, `*commencer*`
+- **Bonus priorite -1** pour tout lien VERS ces pages (elles ont besoin de PageRank)
+
+### Pages hub ANNETTE (accompagnement)
+- Articles sur les regimes, nutrition, coaching, suivi, psychologie, accompagnement
+- Slugs types : `*regime*`, `*nutrition*`, `*accompagnement*`, `*coaching*`, `*suivi*`, `*psycholog*`
+- **Bonus priorite -1** pour tout lien VERS ces pages
+
+### Application
+Quand tu scores une suggestion de lien interne :
+- Si le `target_slug` est une page hub de conversion → priorite -1 (plus haute)
+- Cela dirige naturellement le PageRank vers les pages qui generent du revenu
+
 ## Integration avec l'editorial
 
 Les suggestions `approved` seront consommees par l'agent `editorial` qui inserera les liens dans les articles markdown.

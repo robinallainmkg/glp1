@@ -125,7 +125,7 @@ Si le sémaglutide obtient l'indication MASH, cela représenterait un changement
 
 ### Qui est concerné ?
 
-En France, la MASH touche principalement les personnes présentant un syndrome métabolique : obésité abdominale, diabète de type 2, hypertension artérielle et/ou dyslipidémie. Si vous êtes traité par un GLP-1 pour votre diabète ou votre poids et que vous présentez également une stéatose hépatique, votre traitement actuel agit déjà de manière bénéfique sur votre foie. Les patients traités pour une stéatose hépatique bénéficient également de la [protection cardiovasculaire des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) démontrée dans plusieurs grandes études. L'obésité viscérale est aussi associée à d'autres comorbidités. Consultez notre article sur les [GLP-1 et apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) qui touchent fréquemment les mêmes patients. Les GLP-1 agissent également sur la [réduction de la consommation d'alcool](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/), facteur aggravant de la stéatose.
+En France, la MASH touche principalement les personnes présentant un syndrome métabolique : obésité abdominale, diabète de type 2, hypertension artérielle et/ou dyslipidémie. Si vous êtes traité par un GLP-1 pour votre diabète ou votre poids et que vous présentez également une stéatose hépatique, votre traitement actuel agit déjà de manière bénéfique sur votre foie. Les patients traités pour une stéatose hépatique bénéficient également de la [protection cardiovasculaire des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) démontrée dans plusieurs grandes études. L'obésité viscérale est aussi associée à d'autres comorbidités. Consultez notre article sur les [GLP-1 et apnée du sommeil](/collections/recherche-glp1/glp1-apnee-sommeil-saos/) qui touchent fréquemment les mêmes patients. Les GLP-1 agissent également sur la [réduction de la consommation d'alcool](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/), facteur aggravant de la stéatose.
 
 ### Le dépistage
 
@@ -133,7 +133,7 @@ Le dépistage de la stéatose hépatique repose sur une échographie abdominale 
 
 ### En attendant les nouvelles indications
 
-Si vous êtes déjà sous traitement GLP-1 (Ozempic, Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), votre foie en bénéficie déjà. Si vous n'êtes pas sous GLP-1 et présentez une MASH diagnostiquée, les mesures actuellement recommandées par la HAS restent la perte de poids par modification du mode de vie (alimentation méditerranéenne, activité physique régulière). Consultez notre guide sur l'[alimentation sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/) pour optimiser votre régime.
+Si vous êtes déjà sous traitement GLP-1 (Ozempic, Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), votre foie en bénéficie déjà. Si vous n'êtes pas sous GLP-1 et présentez une MASH diagnostiquée, les mesures actuellement recommandées par la HAS restent la perte de poids par modification du mode de vie (alimentation méditerranéenne, activité physique régulière). Consultez notre guide sur l'[alimentation sous GLP-1](/collections/régime-glp1/régime-mediterraneen-glp1/) pour optimiser votre régime.
 
 ## FAQ
 

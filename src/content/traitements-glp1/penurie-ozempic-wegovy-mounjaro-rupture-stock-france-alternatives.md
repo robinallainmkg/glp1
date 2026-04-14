@@ -1,8 +1,8 @@
 ---
-title: "Pénurie Ozempic & Wegovy 2026 : Solutions et Alternatives"
+title: "Pénurie Ozempic, Wegovy 2026 : Alternatives"
 description: "Pénurie Ozempic Wegovy Mounjaro en pharmacie : situation 2026, conseils ANSM et alternatives médicalement validées selon votre traitement."
 keywords: ['penurie ozempic', 'rupture stock wegovy', 'penurie mounjaro', 'penurie glp1 pharmacie', 'ozempic indisponible pharmacie', 'alternative penurie glp1', 'rupture approvisionnement semaglutide']
-seoTitle: "Pénurie Ozempic, Wegovy, Mounjaro 2026 : Conduite à Tenir et Alternatives"
+seoTitle: "Pénurie Ozempic, Wegovy, Mounjaro 2026 : Alternatives"
 seoDescription: "Pénurie Ozempic Wegovy Mounjaro en pharmacie : que faire ? Conseils ANSM, alternatives médicalement validées et situation de l'approvisionnement en France en 2026."
 publishedAt: '2026-03-17'
 updatedAt: '2026-03-17'
@@ -132,7 +132,7 @@ Novo Nordisk a annoncé un investissement majeur pour augmenter les capacités d
 
 ### Les biosimilaires : une perspective 2027-2028
 
-Les brevets sur certaines formulations de liraglutide (Saxenda) arrivent à expiration, ouvrant la voie aux biosimilaires. Pour le sémaglutide (Ozempic/Wegovy), les premiers biosimilaires sont attendus vers 2027-2028, ce qui devrait considérablement augmenter l'offre disponible et faire baisser les prix.
+Les brevets sur certaines formulations de liraglutide (Saxenda) arrivent à expiration, ouvrant la voie aux biosimilaires. Pour le sémaglutide (Ozempic/Wegovy), les premiers [génériques et biosimilaires](/collections/glp1-cout/ozempic-generique-france-semaglutide-biosimilaire-date/) sont attendus vers 2027-2028, ce qui devrait considérablement augmenter l'offre disponible et faire baisser les prix.
 
 ## Questions fréquentes
 
@@ -142,11 +142,11 @@ Lors des périodes de tension, les grossistes peuvent limiter les commandes par 
 
 **Puis-je commander mes GLP-1 sur Internet ?**
 
-Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que dans des pharmacies agréées. Les sites proposant des GLP-1 sans ordonnance ou à prix cassé sont illégaux et peuvent proposer des produits contrefaits — certains cas ont été documentés avec des séquelles graves.
+Non. Les médicaments sur ordonnance ne peuvent légalement être commandés que dans des pharmacies agréées. Les sites proposant des GLP-1 sans ordonnance ou à prix cassé sont illégaux et peuvent proposer des [contrefaçons et faux Ozempic](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) — certains cas ont été documentés avec des séquelles graves.
 
 **Mon Ozempic a été prescrit pour l'obésité (hors AMM). Suis-je prioritaire en cas de pénurie ?**
 
-Non. L'ANSM recommande en cas de pénurie d'Ozempic de donner la priorité aux patients diabétiques de type 2 pour qui il est officiellement indiqué. Les patients prenant Ozempic pour l'obésité (hors AMM) devraient basculer vers Wegovy ou Saxenda.
+Non. L'ANSM recommandé en cas de pénurie d'Ozempic de donner la priorité aux patients diabétiques de type 2 pour qui il est officiellement indiqué. Les patients prenant Ozempic pour l'obésité (hors AMM) devraient basculer vers Wegovy ou Saxenda.
 
 **J'ai oublié une injection. Que faire ?**
 

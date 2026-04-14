@@ -30,7 +30,7 @@ mainKeyword: "zepbound guide complet france"
 3. [Zepbound vs autres GLP-1](#zepbound-vs-autres-glp1)
 4. [Indications et contre-indications](#indications-zepbound)
 5. [Posologie et administration](#posologie-zepbound)
-6. [Résultats et perte de poids](#resultats-zepbound)
+6. [Résultats et perte de poids](#résultats-zepbound)
 7. [Prix et remboursement](#prix-zepbound)
 8. [FAQ Zepbound](#faq-zepbound)
 
@@ -152,7 +152,7 @@ Mounjaro **n'est pas remboursé** par l'Assurance Maladie en France (mars 2026).
 - Étourdissements
 - Réduction de l'appétit
 
-### Gestion des effets secondaires
+### Gestion des [effets secondaires du tirzépatide](/collections/effets-secondaires-glp1/effets-secondaires-zepbound/)
 - Commencer par la dose la plus faible
 - Augmenter progressivement
 - Prendre les injections le même jour chaque semaine

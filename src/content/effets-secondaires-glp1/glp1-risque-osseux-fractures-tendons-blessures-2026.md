@@ -68,7 +68,7 @@ Il est important de souligner que ces augmentations de risque sont **relatives**
 
 ### La perte de masse musculaire : le facteur clé
 
-Le premier mécanisme incriminé est la [perte musculaire et fragilité osseuse sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) qui accompagne inévitablement la perte de poids. Lorsqu'un patient maigrit rapidement, il perd à la fois de la graisse et de la masse maigre (muscles). On estime qu'environ **26 à 40 % du poids perdu sous GLP-1 correspond à de la masse musculaire** — et jusqu'à 45 % dans l'essai STEP 1 — même avec un apport protéique adéquat.
+Le premier mécanisme incriminé est la [perte musculaire et fragilité osseuse sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) qui accompagne inévitablement la perte de poids. Lorsqu'un patient maigrit rapidement, il perd à la fois de la graisse et de la masse maigre (muscles). On estime qu'environ **26 à 40 % du poids perdu sous GLP-1 correspond à de la masse musculaire** — et jusqu'à 45 % dans l'essai STEP 1 — même avec un apport protéique adéquat.
 
 Or les muscles jouent un rôle protecteur fondamental pour les os et les tendons. Ils absorbent les chocs, stabilisent les articulations et répartissent les contraintes mécaniques lors des mouvements. Des muscles plus faibles signifient des tendons et des os plus exposés aux contraintes, notamment lors d'activités physiques.
 
@@ -84,7 +84,7 @@ Par ailleurs, la modification de la composition corporelle change la façon dont
 
 Sous GLP-1, l'appétit est significativement réduit. Ce qui est une bonne chose pour la perte de poids peut devenir problématique si l'alimentation devient insuffisante en certains nutriments essentiels :
 
-**Protéines** : Indispensables pour la synthèse du collagène, composant structurel des tendons et des os. Une carence protéique ralentit la réparation des micro-traumatismes et fragilise les structures tendineuses.
+**[Protéines](/collections/régime-glp1/glp1-protéines/)** : Indispensables pour la synthèse du collagène, composant structurel des tendons et des os. Une carence protéique ralentit la réparation des micro-traumatismes et fragilise les structures tendineuses.
 
 **Vitamine D** : Essentielle pour l'absorption du calcium et la minéralisation osseuse. Sa carence est très fréquente en France, et encore plus chez les personnes en situation d'obésité.
 
@@ -110,7 +110,7 @@ Avec l'âge, la capacité de régénération des tendons et des os diminue. La c
 
 ### Les patients en déficit nutritionnel
 
-Les personnes qui réduisent drastiquement leurs apports alimentaires sous GLP-1 — en mangeant moins de 1 000 à 1 200 kcal/jour — s'exposent à des carences qui fragilisent directement os et tendons. Un suivi nutritionnel régulier est particulièrement important dans ces cas.
+Les personnes qui réduisent drastiquement leurs apports alimentaires sous GLP-1 — en mangeant moins de 1 000 à 1 200 kcal/jour — s'exposent à des [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) qui fragilisent directement os et tendons. Un suivi nutritionnel régulier est particulièrement important dans ces cas.
 
 ### Les sportifs confirmés
 
@@ -128,11 +128,11 @@ Une progression raisonnable pourrait ressembler à ceci :
 - **Mois 3-4** : Introduction de la musculation légère avec mise en charge progressive
 - **Mois 5-6 et au-delà** : Augmentation progressive de l'intensité et du volume
 
-Évitez d'augmenter votre volume d'entraînement de plus de 10 % par semaine. C'est la règle des 10 % bien connue des coureurs, qui s'applique particulièrement bien aux patients sous GLP-1. Notre guide sur le [sport et l'activité physique sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) vous donnera des repères pratiques pour structurer votre reprise.
+Évitez d'augmenter votre volume d'entraînement de plus de 10 % par semaine. C'est la règle des 10 % bien connue des coureurs, qui s'applique particulièrement bien aux patients sous GLP-1. Notre guide sur le [sport et l'activité physique sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) vous donnera des repères pratiques pour structurer votre reprise.
 
 ### Maintenir un apport protéique suffisant
 
-La recommandation générale pour les patients sous GLP-1 est de consommer au minimum **1,2 à 1,5 g de protéines par kilogramme de poids idéal par jour**. Cet apport est essentiel pour préserver la masse musculaire et soutenir la synthèse de collagène dans les tendons.
+La recommandation générale pour les patients sous GLP-1 est de consommer au minimum **1,2 à 1,5 g de [protéines](/collections/régime-glp1/glp1-protéines/) par kilogramme de poids idéal par jour**. Cet apport est essentiel pour préserver la masse musculaire et soutenir la synthèse de collagène dans les tendons.
 
 Concrètement, pour une personne visant un poids de 70 kg, cela représente 84 à 105 g de protéines par jour — à répartir sur tous les repas, en privilégiant des sources de haute qualité biologique (viandes maigres, poissons, œufs, légumineuses, produits laitiers).
 
@@ -174,7 +174,7 @@ L'objectif n'est pas d'alarmer, mais d'informer pour mieux prévenir. Une repris
 Aucun lien de causalité direct n'est établi à ce jour. Le mécanisme le plus probable est indirect : la perte de masse musculaire rapide fragilise le soutien mécanique des tendons, les rendant plus vulnérables lors d'efforts. Une reprise d'activité progressive et un apport protéique suffisant limitent ce risque.
 
 **Dois-je arrêter le sport sous GLP-1 ?**
-Non, au contraire. L'activité physique est bénéfique et recommandée sous traitement GLP-1, notamment la musculation et les [exercices avec mise en charge](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) qui préservent la masse musculaire et osseuse. L'important est de reprendre progressivement et d'éviter les augmentations brutales de volume ou d'intensité.
+Non, au contraire. L'activité physique est bénéfique et recommandée sous traitement GLP-1, notamment la musculation et les [exercices avec mise en charge](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) qui préservent la masse musculaire et osseuse. L'important est de reprendre progressivement et d'éviter les augmentations brutales de volume ou d'intensité.
 
 **Que faire si j'ai une douleur au tendon ?**
 Consultez votre médecin si la douleur persiste plus d'une semaine malgré le repos. Ne continuez pas à solliciter un tendon douloureux, car une tendinite négligée peut évoluer vers une rupture.

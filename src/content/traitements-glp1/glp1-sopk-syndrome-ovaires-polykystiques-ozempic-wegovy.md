@@ -75,7 +75,7 @@ La question de la fertilité est centrale pour de nombreuses femmes atteintes de
 
 1. **La perte de poids induite par les GLP-1 améliore indirectement la fertilité** : chez les femmes en surpoids avec SOPK, même une perte modeste de poids peut rétablir l'ovulation et améliorer les chances de grossesse spontanée.
 
-2. **Les GLP-1 doivent être arrêtés avant une grossesse** : ces médicaments ne sont pas approuvés pendant la grossesse et doivent être stoppés au minimum 2 mois avant toute tentative de conception. Les données de tératogénicité chez l'animal ont conduit à cette recommandation de précaution. Consultez notre article sur les [GLP-1 et la grossesse](/collections/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/) pour plus de détails.
+2. **Les GLP-1 doivent être arrêtés avant une grossesse** : ces médicaments ne sont pas approuvés pendant la grossesse et doivent être stoppés au minimum 2 mois avant toute tentative de conception. Les données de tératogénicité chez l'animal ont conduit à cette recommandation de précaution. Consultez notre guide sur la [grossesse et arrêt du traitement GLP-1](/collections/effets-secondaires-glp1/glp1-grossesse-preconception-arret-traitement-fertilite/) pour les recommandations complètes.
 
 3. **L'amélioration hormonale peut augmenter la fertilité** : la réduction des androgènes et la régularisation des cycles peuvent augmenter les chances d'ovulation spontanée. Une contraception est donc recommandée pendant le traitement si une grossesse n'est pas souhaitée.
 
@@ -127,7 +127,7 @@ Les effets secondaires des GLP-1 sont les mêmes chez les femmes atteintes de SO
 
 - **Nausées et troubles digestifs** : fréquents en début de traitement (30 à 40 % des patients), généralement transitoires et liés à la titration progressive des doses.
 - **Risque d'hypoglycémie** : faible en l'absence de diabète traité par sulfonylurées ou insuline, car les GLP-1 agissent de façon glucose-dépendante.
-- **[Chute de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)** : un effluvium télogène a été rapporté sous GLP-1, notamment en cas de perte de poids rapide et d'apports protéiques insuffisants. Maintenir un [apport en protéines](/collections/regime-glp1/glp1-proteines/) d'au moins 1,2 g/kg/jour est recommandé.
+- **[Chute de cheveux](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)** : un effluvium télogène a été rapporté sous GLP-1, notamment en cas de perte de poids rapide et d'apports protéiques insuffisants. Maintenir un [apport en protéines](/collections/régime-glp1/glp1-protéines/) d'au moins 1,2 g/kg/jour est recommandé.
 
 Pour une vue complète, consultez les [effets secondaires des GLP-1](/collections/effets-secondaires-glp1/) sur notre site.
 

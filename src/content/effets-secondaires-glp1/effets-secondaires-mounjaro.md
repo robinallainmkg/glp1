@@ -1,10 +1,10 @@
 ---
-title: "Effets Secondaires Mounjaro Tirzepatide : Guide Complet"
+title: "Effets Secondaires Mounjaro : Risques (2026)"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
-description: "Effets secondaires Mounjaro tirzepatide : nausées, diarrhée, vomissements. Comment les gérer et quand consulter votre médecin."
-keywords: ['effets secondaires mounjaro', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'tolérance mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'comment gérer effets mounjaro']
-seoTitle: "Effets Secondaires Mounjaro : Guide Complet"
-seoDescription: "Guide complet des effets secondaires de Mounjaro tirzepatide : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+description: "Effets secondaires Mounjaro : nausées, diarrhée, pancréatite. Liste complète des risques fréquents et graves + solutions concrètes pour les gérer."
+keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro effet secondaire long terme', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger']
+seoTitle: "Effets Secondaires Mounjaro : Risques Graves (2026)"
+seoDescription: "Effets secondaires Mounjaro : 12 effets fréquents + risques graves (pancréatite, gastroparésie). Témoignages et solutions concrètes."
 publishedAt: '2025-08-30'
 updatedAt: '2025-12-27'
 date: 2025-08-30
@@ -81,7 +81,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 - Urticaire généralisée
 - Choc anaphylactique
 
-**Pancréatite aiguë**
+**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)**
 - Douleurs abdominales intenses
 - Nausées et vomissements persistants
 - Fièvre
@@ -131,7 +131,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 **Pendant le traitement**
 - **Dose progressive** : Commencer à 2,5 mg/semaine
 - **Surveillance rapprochée** : Premiers jours/semaines
-- **[Alimentation adaptée](/collections/regime-glp1/regime-mounjaro-optimal/)** : Repas légers, fractionnés
+- **[Alimentation adaptée](/collections/régime-glp1/régime-mounjaro-optimal/)** : Repas légers, fractionnés
 
 ### Gestion des effets secondaires courants
 
@@ -205,7 +205,7 @@ mainKeyword: "effets secondaires mounjaro tirzepatide"
 
 Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour planifier votre suivi.
 
-## 💊 Interactions Médicamenteuses
+## 💊 [Interactions Médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro)
 
 ### Médicaments à surveiller
 - **Antidiabétiques oraux** : Risque d'hypoglycémie
@@ -230,7 +230,7 @@ Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide
 ### Réussite du traitement
 - **Observance** : Prises régulières
 - **Suivi médical** : Consultations respectées
-- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/regime-glp1/)/)
+- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/régime-glp1/)/)
 - **Activité physique** : Recommandée
 
 ## ❓ FAQ - Questions Fréquentes
@@ -249,7 +249,7 @@ Si vous vomissez **dans les 30 minutes** après l'injection, contactez votre mé
 
 ### Les effets secondaires de Mounjaro sont-ils dangereux ?
 
-La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves (pancréatite, insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
+La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves ([pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/), insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
 
 ### Comment éviter les nausées avec Mounjaro ?
 
@@ -260,7 +260,7 @@ La plupart des effets secondaires sont **bénins et temporaires** (nausées, dia
 - Boire du gingembre ou infusion menthe
 - Prendre des anti-nauséeux si prescrit
 
-Voir notre [guide alimentation sous GLP-1](/collections/regime-glp1/).
+Voir notre [guide alimentation sous GLP-1](/collections/régime-glp1/).
 
 ### Mounjaro cause-t-il la perte de cheveux ?
 
@@ -312,7 +312,7 @@ Limitez à 1-2 verres occasionnels.
 
 ### Guides pratiques
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) - Tout savoir sur le traitement
-- [Régime alimentaire sous GLP-1](/collections/regime-glp1/) - Alimentation adaptée
+- [Régime alimentaire sous GLP-1](/collections/régime-glp1/) - Alimentation adaptée
 - [Prix Mounjaro France 2026](/collections/glp1-cout/prix-mounjaro-france/) - Coûts et remboursement
 
 ### Comparaisons
@@ -328,4 +328,4 @@ Limitez à 1-2 verres occasionnels.
 ---
 
 *Ce guide sur les effets secondaires de Mounjaro est informatif. En cas d'effets secondaires, consultez immédiatement votre médecin. Chaque patient est unique et la tolérance peut varier.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/effets-secondaires-glp1/effets-secondaires-mounjaro.md
+<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/effets-secondaires-glp1/effets-secondaires-mounjaro.md

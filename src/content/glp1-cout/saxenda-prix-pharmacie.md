@@ -136,7 +136,7 @@ Pour optimiser votre traitement Saxenda :
 * Réduit les fringales sucrées
 * Améliore l'utilisation du glucose
 
-**[Fibres Solubles Premium](https://bit.ly/fibres-satiete)** - *19,90 €*
+**[Fibres Solubles Premium](https://bit.ly/fibres-satiété)** - *19,90 €*
 
 * Prolonge l'effet de satiété
 * Stabilise la glycémie

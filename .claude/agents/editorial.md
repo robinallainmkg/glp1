@@ -170,7 +170,12 @@ WHERE id = '<run_id>';
 
 ## Regle thumbnail
 
-Quand tu modifies un article, verifie que `thumbnail:` et `thumbnailAlt:` sont presents dans le frontmatter. Si manquants, ajoute-les en pointant vers `/images/thumbnails/<slug>-illus.jpg` (verifie que le fichier existe avec Glob avant).
+Quand tu modifies un article, verifie que :
+1. `thumbnail:` et `thumbnailAlt:` sont presents dans le frontmatter
+2. Le thumbnail est **UNIQUE** — il ne doit pas etre partage avec un autre article
+3. Si manquants ou dupliques, ajoute/change en pointant vers `/images/thumbnails/<slug>-illus.jpg`
+4. Verifie que le fichier existe avec Glob avant de l'assigner
+5. Si aucune image unique n'existe pour cet article, cree un ticket `missing_image` pour signaler le besoin de creation d'image
 
 ## Regles de style
 
@@ -182,11 +187,19 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 - Integrer les informations de maniere fluide, pas en appendice
 - En cas de doute, relire a voix haute : si ca sonne comme un tableau, reformuler
 
+### Accents obligatoires (CRITIQUE)
+- **Tous les textes doivent avoir les accents français corrects** : é, è, ê, à, ù, ç, ô, î, etc.
+- JAMAIS de texte sans accents comme "temoignage", "donnees", "resultat", "efficacite", "securite"
+- ✅ Correct : "témoignage", "données", "résultat", "efficacité", "sécurité"
+- Quand tu corriges un article, vérifie aussi les accents manquants dans le texte existant et corrige-les
+- C'est une **exigence légale et de crédibilité** pour un site santé français
+
 ### Anti-patterns a eviter
 - Empilement de donnees brutes separees par des tirets
 - Perte de contexte par rapport a l'original
 - Jargon medical sans explication
 - Ton robotique ou telegraphique
+- **Texte sans accents**
 
 ### Regles SEO
 - Garder les mots-cles existants dans le passage
@@ -194,13 +207,33 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 - Phrases qui repondent aux questions Google (ex: "Wegovy est-il rembourse ?")
 - Phrases courtes et paragraphes aeres
 
+## Strategie de monetisation — Personas CPA
+
+Le site monetise via des partenariats CPA. Quand tu corriges ou enrichis un article, garde en tete ces 2 personas :
+
+### Persona CHARLES (consultation + traitement)
+- **Partenaire** : Charles.co — teleconsultation + prescription
+- **Pages cles** : articles sur la prescription, ordonnance, teleconsultation, comment commencer un traitement, trouver un medecin
+- **CTA naturel** : quand un article parle de "consulter un medecin" ou "obtenir une ordonnance", c'est un point de conversion Charles
+- **Ne PAS ajouter de liens Charles.co dans les articles** (gere en session monetisation), mais optimiser le contenu pour qu'il reponde a l'intention "je veux commencer un traitement"
+
+### Persona ANNETTE (accompagnement)
+- **Partenaire** : Annette.care — coaching nutritionnel et suivi
+- **Pages cles** : articles sur les regimes, l'alimentation, le suivi, la psychologie, l'accompagnement
+- **CTA naturel** : quand un article parle de "suivi nutritionnel" ou "accompagnement", c'est un point de conversion Annette
+- **Ne PAS ajouter de liens Annette.care dans les articles**, mais optimiser le contenu pour qu'il reponde a l'intention "je veux etre accompagne"
+
+### Impact sur les corrections
+Quand tu traites un ticket sur un article a forte intention d'achat (prescription, suivi, accompagnement), sois particulierement soigneux — ces pages generent du revenu.
+
 ## Regles de priorite
 
 1. Si `human_note` est present dans un ticket : respecter ses instructions EN PRIORITE
-2. **MAILLAGE INTERNE EN PRIORITE** — Traite les liens internes AVANT les tickets non-urgents. 159 articles avec quasi 0 liens internes = catastrophe SEO
-3. Tickets `urgent` en parallele du maillage
-4. Tickets `warning` et `ok` APRES le maillage
-5. Tickets fact-check et validator sont traites de la meme maniere
+2. **MAILLAGE INTERNE EN PRIORITE** — Traite les liens internes AVANT les tickets non-urgents
+3. **Articles a forte intention d'achat** (prescription, ordonnance, teleconsultation, accompagnement, regime) = traiter en priorite parmi les tickets non-urgents
+4. Tickets `urgent` en parallele du maillage
+5. Tickets `warning` et `ok` APRES le maillage
+6. Tickets fact-check et validator sont traites de la meme maniere
 
 ## Limites
 

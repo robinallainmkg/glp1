@@ -1,7 +1,7 @@
 ---
 title: "Remboursement Mounjaro Obésité HAS CEPS Calendrier 2026"
 description: "Remboursement Mounjaro obésité 2026 : avis HAS décembre 2025, négociations CEPS en cours, date prévisionnelle et conditions IMC détaillées."
-keywords: ['remboursement mounjaro obesite', 'mounjaro remboursement has', 'mounjaro ceps 2026', 'tirzepatide remboursement france', 'mounjaro quand rembourse', 'mounjaro securite sociale obesite', 'mounjaro conditions remboursement imc']
+keywords: ['remboursement mounjaro obesite', 'mounjaro remboursement has', 'mounjaro ceps 2026', 'tirzepatide remboursement france', 'mounjaro quand rembourse', 'mounjaro sécurité sociale obesite', 'mounjaro conditions remboursement imc']
 seoTitle: "Remboursement Mounjaro Obésité 2026 : HAS, CEPS, Date et Conditions"
 seoDescription: "Remboursement Mounjaro obésité 2026 : avis HAS ASMR favorable décembre 2025, négociations CEPS en cours, date prévisionnelle 2e semestre 2026 et conditions précises (IMC ≥35)."
 publishedAt: '2026-03-17'
@@ -76,7 +76,7 @@ Si les négociations CEPS se déroulent sans accroc, le remboursement de Mounjar
 
 Des délais supplémentaires sont possibles si les négociations achoppent sur le prix, si le CEPS demande des données complémentaires, ou si des questions de sécurité émergent entre-temps.
 
-**Point de vigilance** : le remboursement de Wegovy pour l'obésité, dont le dossier est plus avancé (avis HAS dès décembre 2024), est attendu légèrement avant Mounjaro, probablement au 2e trimestre 2026. Le remboursement de Mounjaro devrait suivre dans un délai de 3 à 6 mois. Pour suivre l'ensemble des [remboursements GLP-1 par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/), consultez notre guide global.
+**Point de vigilance** : le remboursement de Wegovy pour l'obésité, dont le dossier est plus avancé (avis HAS dès décembre 2024), est attendu légèrement avant Mounjaro, probablement au 2e trimestre 2026. Le remboursement de Mounjaro devrait suivre dans un délai de 3 à 6 mois. Pour suivre l'ensemble des [remboursements GLP-1 par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/), consultez notre guide global.
 
 ## Les conditions précises pour bénéficier du remboursement
 

@@ -5,8 +5,8 @@ date: 2025-08-20
 author: "Dr. Sophie Dubois"
 description: "Micronutriments et vitamines sous GLP-1 : prévenir les carences et adapter votre supplémentation. Guide expert avec bilans biologiques recommandés."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-micronutriments.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-micronutriments"
 featured: false
@@ -17,7 +17,7 @@ mainKeyword: "micronutriments vitamines GLP-1 carences supplémentation"
 ## Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -93,15 +93,16 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Contre-indications** : Vérification préalable obligatoire
 - **Interactions** : Attention médicaments concomitants
 - **Effets secondaires** : Surveillance symptômes
+- **[Carences](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : Bilan sanguin recommandé sous traitement GLP-1
 - **Urgences** : Protocoles d'action définis
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés
+- **Suivi biologique** : Bilans réguliers programmés pour prévenir les [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 
-En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour maintenir votre masse musculaire pendant le traitement.
+En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) pour maintenir votre masse musculaire pendant le traitement.
 
 ## Produits cosmétiques recommandés
 

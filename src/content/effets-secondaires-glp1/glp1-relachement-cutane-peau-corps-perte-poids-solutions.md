@@ -47,7 +47,7 @@ Le succès des traitements GLP-1 comme [Wegovy](/collections/traitements-glp1/gu
 
 ### Le rôle du collagène et de l'élastine
 
-La peau est un organe vivant dont l'élasticité repose sur deux protéines clés : le collagène (qui assure la structure et la fermeté) et l'élastine (qui permet à la peau de reprendre sa forme après étirement). Quand une personne est en surpoids ou obèse pendant plusieurs années, la peau s'étire pour s'adapter au volume corporel. Ce processus endommage progressivement les fibres de collagène et d'élastine.
+La peau est un organe vivant dont l'élasticité repose sur deux [protéines](/collections/régime-glp1/glp1-protéines/) clés : le collagène (qui assure la structure et la fermeté) et l'élastine (qui permet à la peau de reprendre sa forme après étirement). Quand une personne est en surpoids ou obèse pendant plusieurs années, la peau s'étire pour s'adapter au volume corporel. Ce processus endommage progressivement les fibres de collagène et d'élastine.
 
 Lors d'une perte de poids, le volume graisseux diminue, mais la peau étirée ne se rétracte pas toujours. La capacité de rétraction dépend de l'état des fibres de collagène et d'élastine, qui ont pu être dégradées de manière irréversible par l'étirement prolongé.
 
@@ -98,7 +98,7 @@ Les bourrelets du dos et les « poignées d'amour » peuvent laisser place à de
 
 Le relâchement du visage et du cou après perte de poids sous GLP-1 est traité en détail dans notre article sur l'[Ozempic Face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/).
 
-## GLP-1 vs chirurgie bariatrique : le relâchement est-il différent ? {#glp1-vs-chirurgie}
+## GLP-1 vs [chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif) : le relâchement est-il différent ? {#glp1-vs-chirurgie}
 
 ### Des profils de perte de poids différents
 
@@ -124,7 +124,7 @@ Les recommandations pour les patients sous GLP-1 incluent au minimum 2 à 3 séa
 
 ### L'apport protéique
 
-Un apport protéique suffisant (1,2 à 1,6 g de protéines par kg de poids cible par jour) est recommandé pour préserver la masse musculaire pendant la perte de poids. Cela peut être un défi sous GLP-1, car ces traitements réduisent l'appétit et peuvent rendre difficile la consommation de quantités suffisantes de nourriture.
+Un [apport en protéines](/collections/régime-glp1/glp1-protéines/) suffisant (1,2 à 1,6 g de protéines par kg de poids cible par jour) est recommandé pour préserver la masse musculaire pendant la perte de poids. Cela peut être un défi sous GLP-1, car ces traitements réduisent l'appétit et peuvent rendre difficile la consommation de quantités suffisantes de nourriture.
 
 Des compléments protéinés (whey, caséine, protéines végétales) peuvent aider à atteindre les objectifs protéiques quotidiens sans nécessiter de gros volumes alimentaires.
 
@@ -140,7 +140,7 @@ Si vous fumez et que vous commencez un traitement GLP-1, l'arrêt du tabac est d
 
 ### La radiofréquence
 
-La radiofréquence utilise des ondes électromagnétiques pour chauffer le derme profond, ce qui stimule la production de nouveau collagène et provoque un raffermissement modéré de la peau. Plusieurs séances sont nécessaires, espacées de 2 à 4 semaines.
+La radiofréquence utilisé des ondes électromagnétiques pour chauffer le derme profond, ce qui stimule la production de nouveau collagène et provoque un raffermissement modéré de la peau. Plusieurs séances sont nécessaires, espacées de 2 à 4 semaines.
 
 **Efficacité** : modeste pour un relâchement léger à modéré. Insuffisante pour un excès cutané important.
 
@@ -215,7 +215,7 @@ Les chirurgiens plasticiens recommandent généralement d'attendre :
 - **Un bon état nutritionnel** : bilan sanguin correct, pas de carence majeure
 - **L'arrêt du tabac** : au moins 6 semaines avant et après l'intervention
 
-Pour les patients encore sous GLP-1, la question de l'arrêt du traitement avant la chirurgie doit être discutée avec le prescripteur et le chirurgien. Le [jeûne préopératoire et les précautions liées à l'anesthésie sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) font l'objet de recommandations spécifiques.
+Pour les patients encore sous GLP-1, la question de l'arrêt du traitement avant la chirurgie doit être discutée avec le prescripteur et le chirurgien. Le [jeûne préopératoire et les précautions liées à l'anesthésie sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) font l'objet de recommandations spécifiques.
 
 ## Remboursement et prise en charge en France {#remboursement}
 

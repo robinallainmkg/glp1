@@ -42,7 +42,7 @@ secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu"
 - **Comment prendre RDV** :
   - Nécessite une lettre de votre médecin traitant
   - Rendez-vous via Doctolib ou standard téléphonique
-  - Critères : Diabète type 2 + IMC >30 ou IMC >27 avec comorbidités
+  - Critères : Diabète type 2 + IMC >30 ou IMC >27 avec comorbidités — voir le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) prescrit selon le profil
 
 **🏥 Hôpital Saint-Louis**
 - **Service** : Endocrinologie-Diabétologie
@@ -313,7 +313,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 ---
 
-## 💰 Coûts & Remboursement
+## 💰 Coûts & <a href="/collections/glp1-cout/remboursement-glp1-2026/">Remboursement</a>
 
 ### Prix actuel (2026)
 
@@ -471,7 +471,7 @@ Cette page est mise à jour régulièrement avec :
 **📊 Suivi recommandé** :
 - Pesée hebdomadaire (même jour, même heure)
 - Mesure glycémie (si diabétique)
-- Journal des effets secondaires
+- Journal des [effets secondaires du tirzépatide](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)
 - Photos "avant/après" (motivation)
 
 **🩺 Consultations régulières** :

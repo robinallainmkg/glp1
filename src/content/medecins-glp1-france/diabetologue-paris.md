@@ -5,7 +5,7 @@ date: 2025-08-20
 author: "Dr. Émilie Martin"
 description: "Trouver un diabétologue à Paris spécialisé GLP-1 : adresses, spécialités, prise de rendez-vous et conseils pour votre traitement diabète/obésité."
 category: "Médecins spécialisés"
-tags: ["glp1", "medecins", "specialistes"]
+tags: ["glp1", "medecins", "spécialistes"]
 collection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/diabetologue-paris.jpg"
 thumbnailAlt: "Illustration pour l'article diabetologue-paris"
@@ -111,7 +111,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Lecteur glucose** : Auto-surveillance si diabète
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)

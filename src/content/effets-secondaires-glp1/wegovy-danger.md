@@ -5,7 +5,7 @@ pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Effets secondaires"
-tags: ["glp1", "effets-secondaires", "tolerance"]
+tags: ["glp1", "effets-secondaires", "tolérance"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/wegovy-danger-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Wegovy Danger"
@@ -72,7 +72,7 @@ Les troubles digestifs sont de loin les [effets indésirables du sémaglutide](/
 
 ### Effets graves rares mais documentés
 
-**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)** : des cas de pancréatite ont été rapportés sous sémaglutide. Toute douleur abdominale intense et persistante doit conduire à l'arrêt immédiat du traitement et à une consultation en urgence.
+**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)** : des cas de pancréatite ont été rapportés sous sémaglutide. Toute douleur abdominale intense et persistante doit conduire à l'arrêt immédiat du traitement et à une consultation en urgence.
 
 **Risque thyroïdien** : des tumeurs thyroïdiennes (carcinome médullaire) ont été observées chez l'animal. Par précaution, Wegovy est contre-indiqué chez les patients ayant des antécédents personnels ou familiaux de carcinome médullaire de la thyroïde ou de néoplasie endocrinienne multiple de type 2 (NEM 2).
 
@@ -80,11 +80,11 @@ Les troubles digestifs sont de loin les [effets indésirables du sémaglutide](/
 
 **[Neuropathie optique ischémique (NOIAN) sous sémaglutide](/collections/effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian/)** : un signal de sécurité a été ajouté au RCP en 2025 suite à des cas rapportés, bien que le lien de causalité ne soit pas confirmé. Les patients doivent signaler tout trouble visuel soudain.
 
-**Idées suicidaires** : En 2024, le PRAC (comité de pharmacovigilance de l'EMA) a conclu qu'aucun lien causal n'a pu être établi entre les agonistes GLP-1 (dont sémaglutide/Wegovy) et les pensées suicidaires ou auto-lésions. L'investigation est close. En cas de changement d'humeur, il reste important d'en parler à son médecin.
+**Idées suicidaires** : En 2024, le PRAC (comité de pharmacovigilance de l'EMA) a conclu qu'aucun lien causal n'a pu être établi entre les agonistes GLP-1 (dont sémaglutide/Wegovy) et les pensées suicidaires ou auto-lésions. L'investigation est close. En cas de [changement d'humeur](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale), il reste important d'en parler à son médecin.
 
 ### Données de pharmacovigilance ANSM
 
-L'ANSM rapporte le suivi de plus de 870 000 patients sous agonistes GLP-1 indiqués dans le traitement du diabète en France (ce chiffre ne comprend pas les patients traités pour l'obésité avec des médicaments non remboursés). Entre août 2023 et janvier 2025, 376 cas graves ont été rapportés. 19 décès ont été signalés chez des patients traités par aGLP-1 sur cette période, sans qu'un lien causal direct ait pu être établi avec les médicaments. Un décès par pancréatite a été associé à un mésusage. Le profil de sécurité global reste favorable lorsque Wegovy est prescrit dans le cadre de son indication autorisée.
+L'ANSM rapporte le suivi de plus de 870 000 patients sous agonistes GLP-1 indiqués dans le traitement du diabète en France (ce chiffre ne comprend pas les patients traités pour l'obésité avec des médicaments non remboursés). Entre août 2023 et janvier 2025, 376 cas graves ont été rapportés. 19 décès ont été signalés chez des patients traités par aGLP-1 sur cette période, sans qu'un lien causal direct ait pu être établi avec les médicaments. Un décès par pancréatite a été associé à un [mésusage](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques). Le profil de sécurité global reste favorable lorsque Wegovy est prescrit dans le cadre de son indication autorisée.
 
 ## Contexte médical
 
@@ -149,7 +149,7 @@ L'approche optimale associe :
 - **Médecin prescripteur** : Suivi médical
 - **Diététicien** : Accompagnement nutritionnel
 - **Activité physique adaptée** : Selon les capacités
-- **Soutien psychologique** : Si nécessaire
+- **Soutien psychologique** : En cas d'[effets sur la santé mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/) (dépression, apathie), un accompagnement est recommandé
 
 ##  recommandés
 

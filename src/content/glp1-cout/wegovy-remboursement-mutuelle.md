@@ -1,6 +1,6 @@
 ---
-title: "Wegovy Remboursement Mutuelle 2026 : Le Guide Complet"
-description: "Wegovy remboursement mutuelle 2026 : mutuelles qui remboursent, montants, demarches et conseils pour reduire votre reste a charge."
+title: "Wegovy Remboursement 2026 : Mutuelles et Sécu"
+description: "Wegovy remboursement 2026 : mutuelles qui remboursent (MGEN, Harmonie, Alan), montants et calendrier Sécu prévu S2 2026."
 pubDate: 2025-08-23
 date: '2026-03-17'
 updatedAt: '2026-03-17'
@@ -52,7 +52,7 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 ### Position officielle en 2025
 
-Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
+Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/).
 
 ### Critères potentiels pour un futur remboursement
 

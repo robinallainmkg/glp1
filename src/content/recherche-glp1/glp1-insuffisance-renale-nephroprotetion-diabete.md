@@ -34,7 +34,7 @@ En France, plus de 3 millions de personnes souffrent d'insuffisance rénale chro
 
 1. [Comment les GLP-1 protègent-ils les reins ?](#mecanisme)
 2. [Les grandes études cliniques](#etudes)
-3. [Peut-on prendre des GLP-1 en insuffisance rénale ?](#precautions)
+3. [Peut-on prendre des GLP-1 en insuffisance rénale ?](#précautions)
 4. [Recommandations françaises 2026](#recommandations)
 5. [Questions fréquentes](#faq)
 
@@ -80,7 +80,7 @@ Une méta-analyse publiée en 2025 portant sur 9 essais cliniques randomisés et
 
 L'essai FLOW (sémaglutide 1 mg, Ozempic) est le premier essai randomisé spécifiquement conçu pour évaluer un GLP-1 comme traitement rénoprotecteur chez des patients diabétiques avec néphropathie chronique. Présenté en 2024, il a démontré une réduction de **24 %** du risque d'événements rénaux majeurs (doublement de la créatinine, DFGe < 15 mL/min/1,73 m², dialyse, décès rénal) chez les patients traités par sémaglutide.
 
-## Peut-on prendre des GLP-1 en insuffisance rénale ? {#precautions}
+## Peut-on prendre des GLP-1 en insuffisance rénale ? {#précautions}
 
 La réponse dépend du stade de l'insuffisance rénale, évalué par le débit de filtration glomérulaire estimé (DFGe).
 
@@ -114,7 +114,7 @@ Les recommandations de la Société Francophone du Diabète (SFD) et de la Haute
 
 Selon les nouvelles recommandations françaises :
 
-1. **En première intention** (après metformine) : les inhibiteurs SGLT2 (iSGLT2) restent préférés pour la néphroprotection dès lors que le DFGe est ≥ 20. Consultez notre article sur les [iSGLT2 et leur combinaison avec les GLP-1](/collections/regime-glp1/isglt2-liste/).
+1. **En première intention** (après metformine) : les inhibiteurs SGLT2 (iSGLT2) restent préférés pour la néphroprotection dès lors que le DFGe est ≥ 20. Consultez notre article sur les [iSGLT2 et leur combinaison avec les GLP-1](/collections/régime-glp1/isglt2-liste/).
 
 2. **En deuxième intention ou en association** : les GLP-1 sont recommandés chez les patients avec maladie cardiovasculaire associée, ou lorsque les iSGLT2 sont contre-indiqués ou mal tolérés. Ces bénéfices rénaux sont particulièrement pertinents pour les patients diabétiques — voir notre [guide complet GLP-1 pour les patients diabétiques](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/).
 

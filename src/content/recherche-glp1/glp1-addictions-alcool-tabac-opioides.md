@@ -63,7 +63,7 @@ Plusieurs essais randomisés contrôlés sont désormais en cours pour évaluer 
 
 **SEMA-TUA** : Un essai de phase II mené aux États-Unis évalue l'efficacité du sémaglutide oral (Rybelsus) chez des patients présentant un trouble modéré à sévère de l'usage de l'alcool. Les résultats préliminaires, présentés en 2024, montrent une réduction significative de la consommation et du craving.
 
-**GLP1-AUD** (en Europe) : Un essai multicentrique impliquant plusieurs universités européennes évalue le liraglutide et le sémaglutide injectables dans les troubles de l'usage de l'alcool. La France participe à cet essai via l'APHP.
+**GLP1-AUD** (en Europe) : Un essai multicentrique impliquant plusieurs universités européennes évalue le liraglutide et le sémaglutide injectables dans les troubles de l'usage de l'alcool. La France participe à cet essai via l'APHP. L'[essai ALBATROS](/collections/recherche-glp1/glp1-alcool-reduction-consommation-essai-albatros-2025/) au Danemark constitue également un programme majeur sur le sémaglutide oral et l'alcoolo-dépendance.
 
 Si ces résultats se confirment, les GLP-1 pourraient représenter la première nouvelle classe de médicaments pour les addictions à l'alcool depuis des décennies — aux côtés de la naltrexone (Revia), de l'acamprosate (Campral), du disulfirame (Espéral) et du nalméfène (Selincro), traitements médicamenteux actuellement approuvés en France. Le nalméfène se distingue en permettant une réduction de la consommation sans obligation d'abstinence totale, ce qui le rend particulièrement adapté à certains profils de patients.
 

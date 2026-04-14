@@ -5,8 +5,8 @@ date: 2025-08-20
 author: "Dr. Sophie Dubois"
 description: "Calculez vos calories journalières sous GLP-1 pour un régime efficace. Méthodes de calcul, adaptation au traitement et déficit calorique sain."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-calories-journalieres.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-calories-journalieres"
 featured: false
@@ -17,7 +17,7 @@ mainKeyword: "Calories Journalières GLP-1"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -109,7 +109,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Photos avant/après** : Motivation visuelle
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
@@ -119,7 +119,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 ## FAQ
 
 ### Faut-il compter les calories avec GLP-1 ?
-Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionnelle plutôt que comptage strict. Le [jeûne intermittent sous GLP-1](/collections/regime-glp1/jeune-intermittent-glp1/) peut également aider à structurer les apports sans comptage.
+Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionnelle plutôt que comptage strict. Le [jeûne intermittent sous GLP-1](/collections/régime-glp1/jeune-intermittent-glp1/) peut également aider à structurer les apports sans comptage.
 
 ### Combien de calories économise-t-on avec GLP-1 ?
 300-500 kcal/jour en moyenne, soit 2100-3500 kcal/semaine → 0,3-0,5 kg perte/semaine théorique.

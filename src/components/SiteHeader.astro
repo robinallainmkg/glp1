@@ -2,6 +2,7 @@
 // Composant header utilisé par toutes les layouts
 ---
 
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
 <header class="new-header sticky top-0 z-50">
   <div class="new-header-container">
     <div class="new-logo" style="flex-shrink:0;">
@@ -45,7 +46,9 @@
 
     <div class="new-search">
       <input type="text" class="new-search-input" placeholder="Rechercher..." id="new-search-input">
-      <div class="new-search-icon" aria-hidden>🔍</div>
+      <div class="new-search-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </div>
       <div class="new-search-results" id="new-search-results" aria-live="polite"></div>
     </div>
 

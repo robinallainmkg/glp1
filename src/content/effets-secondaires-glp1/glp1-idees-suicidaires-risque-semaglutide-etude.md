@@ -81,7 +81,7 @@ En avril 2024, le PRAC a publié ses premières conclusions après analyse de l'
 
 En 2025, le PRAC a étendu sa surveillance au tirzépatide (Mounjaro, Zepbound). Les données préliminaires n'ont pas non plus montré de signal clair, mais le suivi se poursuit.
 
-Il est important de noter que l'EMA n'a pas « blanchi » définitivement les GLP-1 sur ce sujet. L'agence a simplement conclu que les données actuelles ne justifient pas une modification des RCP (résumés des caractéristiques du produit) ni une restriction d'usage, tout en maintenant une vigilance active.
+Il est important de noter que l'EMA n'a pas « blanchi » définitivement les GLP-1 sur ce sujet. L'agence a simplement conclu que les données actuelles ne justifient pas une modification des RCP (résumés des caractéristiques du produit) ni une restriction d'usage, tout en maintenant une vigilance active. **Mise à jour avril 2026** : aux États-Unis, la FDA a retiré en janvier 2026 l'avertissement relatif au risque suicidaire des notices du sémaglutide, après analyse approfondie des données post-commercialisation et des études épidémiologiques, concluant à l'absence de lien causal établi.
 
 ## L'étude Epi-Phare en France {#epi-phare}
 
@@ -91,7 +91,7 @@ Epi-Phare est le groupement d'intérêt scientifique (GIS) qui associe l'ANSM et
 
 ### L'étude française sur les GLP-1
 
-Epi-Phare a lancé une étude spécifique sur le risque de tentative de suicide et d'idées suicidaires chez les patients traités par GLP-1 en France. Cette étude utilise les données du SNDS pour comparer le risque de passages aux urgences ou d'hospitalisations pour tentative de suicide ou idées suicidaires entre :
+Epi-Phare a lancé une étude spécifique sur le risque de tentative de suicide et d'idées suicidaires chez les patients traités par GLP-1 en France. Cette étude utilisé les données du SNDS pour comparer le risque de passages aux urgences ou d'hospitalisations pour tentative de suicide ou idées suicidaires entre :
 
 - Les patients nouvellement traités par un agoniste GLP-1
 - Des patients appariés (même âge, sexe, comorbidités) non traités par GLP-1
@@ -142,7 +142,7 @@ En théorie, une modulation de l'activité dans ces régions pourrait influencer
 
 ### L'hypothèse du « food reward » modifié
 
-Les GLP-1 réduisent le plaisir associé à la nourriture (récompense alimentaire). Or, chez certaines personnes, la nourriture joue un rôle important dans la régulation émotionnelle — c'est ce qu'on appelle l'alimentation émotionnelle. Si un patient utilise la nourriture comme mécanisme de gestion du stress, de l'anxiété ou de la tristesse, la suppression brutale de ce mécanisme par un GLP-1 pourrait théoriquement déstabiliser l'équilibre émotionnel.
+Les GLP-1 réduisent le plaisir associé à la nourriture (récompense alimentaire). Or, chez certaines personnes, la nourriture joue un rôle important dans la régulation émotionnelle — c'est ce qu'on appelle l'alimentation émotionnelle. Si un patient utilisé la nourriture comme mécanisme de gestion du stress, de l'anxiété ou de la tristesse, la suppression brutale de ce mécanisme par un GLP-1 pourrait théoriquement déstabiliser l'équilibre émotionnel.
 
 Cette hypothèse est plausible sur le plan psychologique mais n'a pas été confirmée par des données cliniques spécifiques.
 

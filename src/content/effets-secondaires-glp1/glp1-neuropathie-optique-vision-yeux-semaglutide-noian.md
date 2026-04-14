@@ -89,7 +89,7 @@ La NOIAN peut également survenir chez des patients sans facteur de risque ident
 
 ## Quels symptômes doivent vous alerter ?
 
-Si vous prenez Ozempic, Wegovy ou Rybelsus (sémaglutide oral) et que vous observez l'un des signes suivants, **consultez un ophtalmologue en urgence le jour même** :
+Si vous prenez Ozempic, Wegovy ou [Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus) (sémaglutide oral) et que vous observez l'un des signes suivants, **consultez un ophtalmologue en urgence le jour même** :
 
 - Flou visuel soudain dans un œil
 - Perte de vision partielle ou totale dans un œil (même momentanée)
@@ -115,7 +115,7 @@ Il n'existe pas de surveillance ophtalmologique réglementaire spécifique liée
 
 - Tout symptôme visuel doit être pris au sérieux et investigué rapidement
 - Chez les patients diabétiques, le dépistage annuel de la rétinopathie diabétique est maintenu
-- En cas de NOIAN avérée, l'EMA recommande l'arrêt du traitement par sémaglutide. La décision finale doit être discutée au cas par cas avec un ophtalmologue en tenant compte du bénéfice global du traitement
+- En cas de NOIAN avérée, l'EMA recommandé l'arrêt du traitement par sémaglutide. La décision finale doit être discutée au cas par cas avec un ophtalmologue en tenant compte du bénéfice global du traitement
 
 ## Ce risque concerne-t-il tous les GLP-1 ?
 
@@ -124,8 +124,8 @@ La recommandation du PRAC en 2025 concerne spécifiquement les **molécules de s
 Pour l'heure, ce signal n'a pas été formellement identifié pour les autres GLP-1 comme :
 
 - Le **liraglutide** (Victoza, Saxenda)
-- Le **tirzépatide** (Mounjaro)
-- Le **dulaglutide** (Trulicity)
+- Le **tirzépatide** (<a href="/collections/traitements-glp1/guide-complet-mounjaro/">Mounjaro</a>)
+- Le **dulaglutide** ([Trulicity](/collections/traitements-glp1/guide-complet-trulicity))
 
 Cela peut en partie s'expliquer par le fait que le sémaglutide est le GLP-1 le plus prescrit au monde, ce qui augmente mécaniquement la détection de signaux rares. Des études spécifiques pour les autres molécules sont en cours.
 

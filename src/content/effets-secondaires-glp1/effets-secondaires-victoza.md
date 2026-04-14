@@ -20,7 +20,7 @@ thumbnailAlt: "Effets secondaires du traitement victoza"
 
 ## Effets Secondaires Victoza : Guide Complet
 
-> **Information importante** : Novo Nordisk a annonce l'arret progressif de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026. Si vous etes actuellement sous Victoza, consultez votre medecin pour envisager une alternative (Ozempic, Trulicity). Ce guide reste valable pour les patients encore sous traitement.
+> **Information importante** : Novo Nordisk a annonce l'arret progressif de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026. Si vous etes actuellement sous Victoza, consultez votre médecin pour envisager une alternative (Ozempic, Trulicity). Ce guide reste valable pour les patients encore sous traitement.
 
 ## ⚠️ Effets Secondaires Fréquents
 

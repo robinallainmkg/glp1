@@ -6,9 +6,9 @@ pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-dash-glp1.jpg"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-dash-glp1.jpg"
 thumbnailAlt: "Illustration pour l'article Régime Dash GLP-1"
 featured: false
 priority: 5
@@ -18,7 +18,7 @@ mainKeyword: "régime DASH GLP-1 hypertension diabète"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -36,11 +36,11 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le régime DASH (*Dietary Approaches to Stop Hypertension*) a été conçu aux États-Unis pour abaisser la tension artérielle sans médicament. Ses effets bénéfiques sur la glycémie et le poids ont ensuite été largement documentés, faisant de lui une approche particulièrement adaptée aux patients qui cumulent hypertension, diabète de type 2 et surpoids — un profil très fréquent chez les personnes sous traitement GLP-1 en France.
+Le régime DASH (*Dietary Approaches to Stop Hypertension*) a été conçu aux États-Unis pour abaisser la tension artérielle sans médicament. Ses effets bénéfiques sur la glycémie et le poids ont ensuite été largement documentés, faisant de lui une approche particulièrement adaptée aux patients qui cumulent hypertension, diabète de type 2 et surpoids — un profil très fréquent chez les personnes sous traitement GLP-1 en France. Pour une alimentation complémentaire à faible [index glycémique](/collections/régime-glp1/glp1-index-glycemique/), le régime DASH offre un cadre structuré.
 
 ## Qu'est-ce que le régime DASH ?
 
-Le régime DASH n'est pas un régime hypocalorique au sens strict. Il s'agit d'un mode d'alimentation structuré autour de la réduction du sodium, de l'augmentation des potassium et magnésium alimentaires, et d'un apport élevé en fibres. Son efficacité sur la tension artérielle est validée par de nombreuses études cliniques, dont plusieurs menées en collaboration avec les sociétés savantes de cardiologie et de diabétologie européennes.
+Le régime DASH n'est pas un régime hypocalorique au sens strict. Il s'agit d'un mode d'alimentation structuré autour de la réduction du sodium, de l'augmentation des [micronutriments](/collections/régime-glp1/glp1-micronutriments/) clés (potassium, magnésium), et d'un apport élevé en fibres. Son efficacité sur la tension artérielle est validée par de nombreuses études cliniques, dont plusieurs menées en collaboration avec les sociétés savantes de cardiologie et de diabétologie européennes.
 
 ### Principes nutritionnels clés du DASH
 
@@ -48,7 +48,7 @@ Le régime DASH n'est pas un régime hypocalorique au sens strict. Il s'agit d'u
 L'objectif est de descendre sous 2,3 g de sodium par jour (soit 5,8 g de sel), voire 1,5 g chez les patients hypertendus sévères. En pratique, cela signifie éliminer les charcuteries, les plats préparés, les chips et les sauces industrielles, et cuisiner soi-même en utilisant des herbes aromatiques.
 
 **Augmentation des fruits et légumes :**
-Le régime DASH recommande 8 à 10 portions de fruits et légumes par jour. Les légumes riches en potassium (épinards, banane, avocat, patate douce) sont particulièrement recommandés car ils neutralisent les effets vasoconstricteurs du sodium.
+Le régime DASH recommandé 8 à 10 portions de fruits et légumes par jour. Les légumes riches en potassium (épinards, banane, avocat, patate douce) sont particulièrement recommandés car ils neutralisent les effets vasoconstricteurs du sodium.
 
 **Produits laitiers allégés :**
 Deux à trois portions quotidiennes de lait écrémé, yaourt nature 0% ou fromage blanc apportent le calcium nécessaire sans surcharger en graisses saturées.
@@ -141,7 +141,7 @@ Non. Le régime DASH peut réduire significativement la tension artérielle mais
 
 ## Conclusion
 
-Le régime DASH constitue l'un des meilleurs partenaires alimentaires d'un traitement GLP-1 chez les patients présentant une hypertension associée au diabète de type 2 ou à l'obésité. Sa richesse en potassium, fibres et calcium, combinée à la réduction sodée, agit sur des mécanismes complémentaires de ceux des GLP-1 pour améliorer la santé cardiométabolique globale.
+Le régime DASH constitue l'un des meilleurs partenaires alimentaires d'un traitement GLP-1 chez les patients présentant une hypertension associée au diabète de type 2 ou à l'obésité. Sa richesse en potassium, fibres et calcium, combinée à la réduction sodée, agit sur des mécanismes complémentaires de ceux des GLP-1 — dont les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) sont prouvés — pour améliorer la santé cardiométabolique globale.
 
 Sa mise en place est progressive et ne nécessite pas de compter les calories au gramme près. Quelques ajustements simples — moins de sel, plus de légumes et de légumineuses, des céréales complètes — suffisent à enclencher des bénéfices mesurables en quelques semaines, en synergie avec votre traitement médicamenteux.
 

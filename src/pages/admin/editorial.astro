@@ -153,6 +153,20 @@ import { supabaseConfig } from '../../lib/supabase';
   </div>
 
   <div class="main">
+    <!-- Pipeline Status Banner -->
+    <div id="pipelineBanner" style="display:none; background:linear-gradient(135deg,#0a1a0f,#111827); border:1px solid #22c55e33; border-radius:12px; padding:1rem 1.5rem; margin-bottom:1rem; display:flex; align-items:center; gap:1rem;">
+      <div style="width:12px;height:12px;border-radius:50%;background:#22c55e;animation:pulse-glow 2s infinite;flex-shrink:0"></div>
+      <div style="flex:1">
+        <div style="font-weight:700;font-size:0.88rem;color:#e2e8f0" id="pipelinePhaseLabel">Pipeline en cours...</div>
+        <div style="font-size:0.75rem;color:#64748b" id="pipelineAgents">-</div>
+      </div>
+      <div style="display:flex;gap:1.5rem;font-size:0.78rem">
+        <div style="text-align:center"><div style="font-size:1.1rem;font-weight:800;color:#22c55e" id="plAgentsCount">0</div><div style="color:#64748b;font-size:0.65rem">ACTIFS</div></div>
+        <div style="text-align:center"><div style="font-size:1.1rem;font-weight:800;color:#f59e0b" id="plTicketsPending">-</div><div style="color:#64748b;font-size:0.65rem">EN ATTENTE</div></div>
+      </div>
+    </div>
+    <style>@keyframes pulse-glow{0%,100%{opacity:1;box-shadow:0 0 8px #22c55e88}50%{opacity:.5;box-shadow:0 0 4px #22c55e44}}</style>
+
     <!-- Command -->
     <div class="cmd-box">
       <code>claude -p "Traite les corrections" --agent editorial</code>
@@ -537,6 +551,45 @@ import { supabaseConfig } from '../../lib/supabase';
   // Initial load + auto-refresh 30s
   loadAll();
   setInterval(loadAll, 30000);
+
+  // Pipeline status polling
+  const AGENT_SERVER = 'http://127.0.0.1:7854';
+  async function checkPipeline() {
+    const banner = document.getElementById('pipelineBanner');
+    try {
+      const [ps, st] = await Promise.all([
+        fetch(`${AGENT_SERVER}/pipeline/status`).then(r=>r.json()),
+        fetch(`${AGENT_SERVER}/status`).then(r=>r.json())
+      ]);
+      const agents = Object.keys(st.running || {});
+      const editorialAgents = agents.filter(a => a.includes('editorial'));
+
+      if (ps.running || agents.length > 0) {
+        banner.style.display = 'flex';
+        const phaseLabels = {sync:'Sync Analytics',generate:'Audit & Fact-Check',edit:'Corrections Editoriales',validate:'Validation & Deploy',done:'Termine',error:'Erreur'};
+        document.getElementById('pipelinePhaseLabel').textContent = 'Pipeline : ' + (phaseLabels[ps.phase] || ps.phase || 'actif');
+        document.getElementById('pipelineAgents').textContent = agents.length ? agents.join(', ') : 'en attente...';
+        document.getElementById('plAgentsCount').textContent = agents.length;
+        const pending = document.getElementById('statApproved')?.textContent || '-';
+        document.getElementById('plTicketsPending').textContent = pending;
+
+        if (ps.phase === 'edit' && editorialAgents.length > 0) {
+          document.getElementById('pipelinePhaseLabel').textContent = 'Corrections en cours (' + editorialAgents.length + ' editoriaux)';
+        }
+      } else {
+        banner.style.display = ps.phase === 'done' ? 'flex' : 'none';
+        if (ps.phase === 'done') {
+          document.getElementById('pipelinePhaseLabel').textContent = 'Pipeline termine';
+          document.getElementById('pipelineAgents').textContent = 'Toutes les corrections ont ete appliquees';
+          document.getElementById('plAgentsCount').textContent = '0';
+        }
+      }
+    } catch(e) {
+      banner.style.display = 'none';
+    }
+  }
+  checkPipeline();
+  setInterval(checkPipeline, 5000);
 </script>
 
 </body>

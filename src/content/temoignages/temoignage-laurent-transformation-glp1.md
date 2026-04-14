@@ -3,15 +3,15 @@ title: "Témoignage Laurent : -35 kg en 10 Mois avec Mounjaro"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Témoignage Laurent Mounjaro perte de poids : 45 ans, -35 kilos avec le tirzepatide. De 120 kg à 85 kg en 10 mois. Parcours complet et conseils."
 author: "Laurent M."
-image: "/images/temoignages/Laurent-journey8.jpg"
-collection: "temoignages"
+image: "/images/collections/témoignages/Laurent-journey8.jpg"
+collection: "témoignages"
 category: "transformation"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "35 kilos", "homme", "45 ans", "transformation"]
 pubDate: 2025-08-20T00:00:00.000Z
 date: "2025-08-20"
 featured: true
 priority: 2
-mainKeyword: "temoignage Laurent Mounjaro perte de poids"
+mainKeyword: "témoignage Laurent Mounjaro perte de poids"
 ---
 
 ## Laurent M. : De 120kg à 85kg grâce à Mounjaro
@@ -52,14 +52,14 @@ mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 
 > "Le déclic, ça a été quand mon fils de 8 ans m'a dit qu'il avait honte de moi devant ses copains. Ça m'a anéanti, mais ça m'a aussi donné la force de changer."
 
-> "Mon médecin m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, sport... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
+> "Mon [médecin](/collections/medecins-glp1-france/endocrinologue-pour-maigrir) m'a proposé Mounjaro. J'avais déjà tout essayé : Weight Watchers, Dukan, <a href="/collections/régime-glp1/glp1-sport-exercice-musculation-guide/">sport</a>... Rien ne tenait sur le long terme. Mais là, dès la première injection, j'ai senti que c'était différent."
 
 ## Son Parcours de Transformation
 
 ### Phase 1 : Les Premiers Pas (Mois 1-3)
 - **Perte :** 12 kilos
 - **Dosage :** 2,5 mg puis 5 mg
-- **Défis :** Légères nausées, adaptation alimentaire
+- **Défis :** Légères [nausées](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro), adaptation alimentaire
 - **Victoires :** Plus de grignotage compulsif
 
 ### Phase 2 : L'Accélération (Mois 4-6)
@@ -100,7 +100,7 @@ mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 3. **Accepter les hauts et bas** : Il y aura des plateaux
 
 ### Pratique
-1. **Planifier les repas** : Surtout avec un travail prenant. Laurent a suivi un [régime alimentaire adapté à Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/) pour optimiser ses résultats.
+1. **Planifier les repas** : Surtout avec un travail prenant. Laurent a suivi un [régime alimentaire adapté à Mounjaro](/collections/régime-glp1/régime-mounjaro-optimal/) pour optimiser ses résultats.
 2. **Toujours avoir un en-cas sain** : Éviter le fast-food
 3. **Utiliser une app** : Pour tracker facilement
 
@@ -136,6 +136,6 @@ mainKeyword: "temoignage Laurent Mounjaro perte de poids"
 
 ---
 
-Pour comparer avec les données cliniques, consultez notre guide sur les [résultats réels avant/après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/).
+Pour comparer avec les données cliniques, consultez notre guide sur les [résultats réels avant/après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/).
 
 *Témoignage recueilli en août 2025. Résultats individuels, consulter votre médecin.*

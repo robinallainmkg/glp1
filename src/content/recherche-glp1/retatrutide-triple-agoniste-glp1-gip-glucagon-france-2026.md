@@ -52,7 +52,7 @@ Eli Lilly, qui commercialise déjà Mounjaro, positionne le retatrutide comme la
 
 ### GLP-1 (Glucagon-Like Peptide-1)
 
-L'agonisme GLP-1 est le socle commun à tous les médicaments de cette classe — Ozempic, Wegovy, Mounjaro, Saxenda. Il agit sur :
+L'agonisme GLP-1 est le socle commun à tous les médicaments de cette classe — [Ozempic](/collections/traitements-glp1/guide-complet-ozempic), Wegovy, Mounjaro, Saxenda. Il agit sur :
 - La sécrétion d'insuline en réponse au glucose
 - Le ralentissement de la vidange gastrique
 - Les centres hypothalamiques de la satiété
@@ -224,7 +224,7 @@ Un accès à titre exceptionnel (accès précoce via la HAS) pourrait être acco
 
 **Quels sont les essais en cours sur le retatrutide au-delà de l'obésité ?**
 
-Eli Lilly conduit des essais sur le retatrutide dans le diabète de type 2 (TRIUMPH-1 et TRIUMPH-2), la stéatohépatite non alcoolique (NASH/MASH), et a annoncé un futur essai sur l'arthrose du genou. Parmi les autres molécules en développement, [CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-resultats/) (Novo Nordisk) et l'[orforglipron oral de Lilly](/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/) font partie des traitements prometteurs à suivre. Les données cardiovasculaires à long terme font l'objet de l'essai TRIUMPH CV, dont les résultats sont attendus en 2028-2029.
+Eli Lilly conduit des essais sur le retatrutide dans le diabète de type 2 (TRIUMPH-1 et TRIUMPH-2), la stéatohépatite non alcoolique (NASH/MASH), et a annoncé un futur essai sur l'arthrose du genou. Parmi les autres molécules en développement, [CagriSema](/collections/recherche-glp1/cagrisema-semaglutide-cagrilintide-france-date-résultats/) (Novo Nordisk) et l'[orforglipron oral de Lilly](/collections/traitements-glp1/orforglipron-pilule-glp1-lilly-france-date/) font partie des traitements prometteurs à suivre. Les données cardiovasculaires à long terme font l'objet de l'essai TRIUMPH CV, dont les résultats sont attendus en 2028-2029.
 
 ---
 

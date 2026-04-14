@@ -167,7 +167,7 @@ Non — pas dans l'état actuel des connaissances. Les traitements approuvés on
 
 **Quelle est la différence entre l'essai ALBATROS et l'étude JAMA 2023 ?**
 
-L'essai ALBATROS est plus large (300 patients vs 127), utilise le sémaglutide oral (Rybelsus) plutôt que le sémaglutide injectable, et inclut un suivi plus long. Ces différences permettent de mieux évaluer la généralisation des résultats et la tolérance à long terme.
+L'essai ALBATROS est plus large (300 patients vs 127), utilisé le sémaglutide oral (Rybelsus) plutôt que le sémaglutide injectable, et inclut un suivi plus long. Ces différences permettent de mieux évaluer la généralisation des résultats et la tolérance à long terme.
 
 ---
 

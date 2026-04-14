@@ -37,7 +37,7 @@ En décembre 2025, la FDA américaine a marqué un tournant dans le traitement d
 
 1. [Ce qui a été approuvé par la FDA](#fda-approbation)
 2. [La différence entre Wegovy oral et Rybelsus](#difference-rybelsus)
-3. [Efficacité du comprimé vs l'injectable](#efficacite)
+3. [Efficacité du comprimé vs l'injectable](#efficacité)
 4. [Calendrier pour l'Europe et la France](#calendrier-europe)
 5. [Prix estimé et remboursement](#prix-remboursement)
 6. [Pour qui est destiné ce traitement ?](#pour-qui)
@@ -76,7 +76,7 @@ Rybelsus à 14 mg ne permet d'atteindre qu'une concentration plasmatique de sém
 
 La technologie SNAC reste la même : le comprimé doit être pris à jeun, au moins 30 minutes avant le premier repas, avec un maximum de 120 mL d'eau. Cette contrainte, inhérente à la biodisponibilité orale du sémaglutide, n'a pas pu être contournée avec cette nouvelle formulation.
 
-## Efficacité : que disent les essais cliniques ? {#efficacite}
+## Efficacité : que disent les essais cliniques ? {#efficacité}
 
 ### Les résultats des essais OASIS
 

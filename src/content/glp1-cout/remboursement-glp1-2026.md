@@ -58,7 +58,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 
 ✅ **Échec des traitements de première intention**
 - Essai d'antidiabétiques oraux (metformine, sulfamides)
-- Note : les [inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/) sont souvent associés aux GLP-1 et remboursés séparément pour le diabète de type 2
+- Note : les [inhibiteurs SGLT2 (iSGLT2)](/collections/régime-glp1/isglt2-liste/) sont souvent associés aux GLP-1 et remboursés séparément pour le diabète de type 2
 
 ✅ **Absence de contre-indications**
 - Pas d'antécédent de cancer médullaire de la thyroïde
@@ -426,7 +426,7 @@ Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dan
 
 **Mounjaro (tirzépatide, Eli Lilly) :**
 - Coût pharmacie : **230-440€/mois** (prix libre)
-- Remboursement : NON remboursé (voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/) pour les conditions attendues)
+- Remboursement : NON remboursé (voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/) pour les conditions attendues)
 - Indication : Obésité / DT2
 - Commercialisé depuis novembre 2024
 
@@ -483,7 +483,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 
 **Aide et Questions :**
 - 💊 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
-- 🤝 [Témoignages de patients GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/)
+- 🤝 [Témoignages de patients GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)
 
 ---
 

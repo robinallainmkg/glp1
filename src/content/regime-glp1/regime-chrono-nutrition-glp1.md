@@ -5,10 +5,10 @@ pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-chrono-nutrition-glp1.jpg"
-thumbnailAlt: "Illustration pour l'article regime-chrono-nutrition-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-chrono-nutrition-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article régime-chrono-nutrition-glp1"
 featured: false
 priority: 5
 schema: "Article"
@@ -17,7 +17,7 @@ mainKeyword: "chrono-nutrition GLP-1 horaires repas métabolisme"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -35,7 +35,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-La chrono-nutrition est une approche diététique développée en France par le Dr Alain Delabos dans les années 1980. Son principe fondateur : l'organisme n'utilise pas les nutriments de la même manière selon l'heure de la journée. En synchronisant les apports alimentaires avec les rythmes biologiques naturels (rythmes circadiens), il est possible d'optimiser le métabolisme, de réduire la masse grasse et d'améliorer l'énergie. Associée à un traitement GLP-1, cette approche peut compléter efficacement l'action médicamenteuse.
+La chrono-nutrition est une approche diététique développée en France par le Dr Alain Delabos dans les années 1980. Son principe fondateur : l'organisme n'utilisé pas les nutriments de la même manière selon l'heure de la journée. En synchronisant les apports alimentaires avec les rythmes biologiques naturels (rythmes circadiens), il est possible d'optimiser le métabolisme, de réduire la masse grasse et d'améliorer l'énergie. Associée à un traitement GLP-1, cette approche peut compléter efficacement l'action médicamenteuse.
 
 ## Principes fondamentaux de la chrono-nutrition
 
@@ -123,10 +123,10 @@ Lors de l'initiation du traitement, les nausées peuvent perturber les habitudes
 La chrono-nutrition n'est pas rigide : l'important est de respecter l'ordre des repas (gras le matin, complet à midi, léger le soir) plus que l'heure exacte. Si votre emploi du temps ne permet pas de déjeuner avant 13h30, ce n'est pas un problème.
 
 ### Ne pas forcer si la faim est absente
-Sous GLP-1, la faim peut être très réduite, parfois jusqu'à oublier de manger. Dans ce cas, ne vous forcez pas à finir votre assiette. L'objectif n'est pas de manger un certain volume, mais d'apporter les bons nutriments au bon moment.
+Sous GLP-1, la faim peut être très réduite, parfois jusqu'à oublier de manger. Dans ce cas, ne vous forcez pas à finir votre assiette. L'objectif n'est pas de manger un certain volume, mais d'apporter les bons nutriments au bon moment, en tenant compte de vos [calories journalières](/collections/régime-glp1/glp1-calories-journalieres/).
 
 ### Surveiller la masse musculaire
-Une perte de poids rapide peut entraîner une perte de masse musculaire. Assurez-vous d'apporter suffisamment de protéines à chaque repas (au moins 1,2 g par kg de poids corporel par jour) pour préserver vos muscles.
+Une perte de poids rapide peut entraîner une perte de masse musculaire. Assurez-vous d'apporter suffisamment de [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) à chaque repas (au moins 1,2 g par kg de poids corporel par jour) pour préserver vos muscles.
 
 ## FAQ
 
@@ -143,7 +143,7 @@ Oui. L'injection de Mounjaro (hebdomadaire) peut se faire à n'importe quel mome
 
 La chrono-nutrition offre un cadre structurant qui complète efficacement l'action des traitements GLP-1 : là où Ozempic, Wegovy ou Mounjaro agissent sur la faim et l'insuline, la chrono-nutrition optimise le moment où chaque nutriment est consommé pour en maximiser l'utilisation par l'organisme.
 
-Son principal atout est sa compatibilité avec la vie quotidienne française : un petit-déjeuner nourrissant, un déjeuner complet et un dîner léger correspondent bien aux habitudes alimentaires de nombreux Français, à condition de rééquilibrer la composition de chaque repas.
+Son principal atout est sa compatibilité avec le [jeûne intermittent et GLP-1](/collections/régime-glp1/jeune-intermittent-glp1/) et la vie quotidienne française : un petit-déjeuner nourrissant, un déjeuner complet et un dîner léger correspondent bien aux habitudes alimentaires de nombreux Français, à condition de rééquilibrer la composition de chaque repas.
 
 ---
 

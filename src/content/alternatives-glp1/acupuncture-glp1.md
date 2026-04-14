@@ -26,7 +26,7 @@ affiliateConfig:
   inlinePositions: [2, 6, 10]
 ---
 
-L'acupuncture est l'une des pratiques de médecine traditionnelle les plus étudiées scientifiquement dans le domaine du diabète et de la gestion du poids. Pour les patients sous traitement GLP-1 (Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), la question de son intérêt comme approche complémentaire se pose régulièrement. Voici ce que disent les données et ce que prévoit le système de santé français.
+L'acupuncture est l'une des pratiques de médecine traditionnelle les plus étudiées scientifiquement dans le domaine du diabète et de la gestion du poids. Pour les patients sous traitement GLP-1 (<a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a>, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), la question de son intérêt comme approche complémentaire se pose régulièrement. Voici ce que disent les données et ce que prévoit le système de santé français.
 
 ## Sommaire
 
@@ -51,7 +51,7 @@ Plusieurs méta-analyses publiées dans des revues internationales montrent que 
 
 ### Position des sociétés savantes
 
-Les recommandations actuelles de la Société Francophone du Diabète (SFD) et de la HAS n'intègrent pas l'acupuncture dans les stratégies thérapeutiques standardisées du diabète. Son utilisation dans ce contexte doit être discutée au cas par cas avec le médecin traitant ou l'endocrinologue, en complément (jamais en remplacement) du traitement médicamenteux.
+Les recommandations actuelles de la Société Francophone du Diabète (SFD) et de la HAS n'intègrent pas l'acupuncture dans les stratégies thérapeutiques standardisées du diabète. Son utilisation dans ce contexte doit être discutée au cas par cas avec le médecin traitant ou l'[endocrinologue](/collections/medecins-glp1-france/endocrinologue-pour-maigrir), en complément (jamais en remplacement) du traitement médicamenteux.
 
 ## Acupuncture et perte de poids : l'état des preuves {#poids}
 
@@ -69,14 +69,14 @@ Des études de petite taille suggèrent que l'acupuncture peut réduire modestem
 
 ### Absence de contre-indication formelle
 
-Il n'existe pas de contre-indication connue à l'association d'un traitement GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda) avec des séances d'acupuncture. Les aiguilles d'acupuncture n'interagissent pas avec le mécanisme d'action pharmacologique des GLP-1.
+Il n'existe pas de contre-indication connue à l'association d'un traitement GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), Wegovy, Mounjaro, Saxenda) avec des séances d'acupuncture. Les aiguilles d'acupuncture n'interagissent pas avec le mécanisme d'action pharmacologique des GLP-1.
 
 ### Des bénéfices potentiels complémentaires
 
 L'acupuncture peut être envisagée comme approche complémentaire dans la gestion du diabète de type 2 ou de l'obésité, avec une possible utilité pour :
 
-- **Gérer les effets secondaires digestifs** des GLP-1 ([nausées et vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)/) — certains points d'acupuncture sont traditionnellement utilisés pour réduire les nausées, bien que leur efficacité spécifique dans le contexte GLP-1 ne soit pas étudiée
-- **Réduire l'anxiété et le [stress et santé mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)** liés au suivi d'un régime alimentaire ou à l'initiation d'un nouveau traitement
+- **Gérer les effets secondaires digestifs** des GLP-1 ([nausées et vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/)/) — certains points d'acupuncture sont traditionnellement utilisés pour réduire les nausées, bien que leur efficacité spécifique dans le contexte GLP-1 ne soit pas étudiée
+- **Réduire l'anxiété et le stress** liés au suivi d'un régime alimentaire ou à l'initiation d'un nouveau traitement — un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) complémentaire est souvent recommandé
 - **Accompagner les douleurs de neuropathie** chez les patients diabétiques
 
 L'acupuncture peut être envisagée comme approche complémentaire dans la gestion du diabète de type 2 ou de l'obésité, mais la Haute Autorité de Santé (HAS) ne dispose pas de recommandations officielles validant son association systématique avec les traitements GLP-1. Son utilisation doit être discutée avec votre médecin au cas par cas.

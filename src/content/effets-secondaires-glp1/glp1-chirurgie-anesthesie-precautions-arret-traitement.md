@@ -3,7 +3,7 @@ title: "GLP-1 Chirurgie Anesthésie Arrêt Traitement : Guide"
 description: "GLP-1 chirurgie anesthésie arrêt traitement : Ozempic, Wegovy, Mounjaro avant opération — recommandations SFAR 2025 pour éviter le risque d'aspiration."
 keywords: ['glp1 chirurgie', 'ozempic avant opération', 'glp1 anesthésie', 'arrêt ozempic chirurgie', 'wegovy opération', 'mounjaro anesthésie', 'glp1 risque aspiration']
 seoTitle: "GLP-1 Chirurgie Anesthésie : Quand Arrêter le Traitement"
-seoDescription: "Sous Ozempic, Wegovy ou Mounjaro avant une opération ? La SFAR recommande un arrêt préalable pour éviter le risque d'aspiration. Guide complet et conseils pratiques."
+seoDescription: "Sous Ozempic, Wegovy ou Mounjaro avant une opération ? La SFAR recommandé un arrêt préalable pour éviter le risque d'aspiration. Guide complet et conseils pratiques."
 publishedAt: '2026-03-17'
 date: "2026-03-17"
 updatedAt: '2026-03-17'
@@ -36,7 +36,7 @@ Si vous prenez [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), 
 
 ### Le mécanisme : le ralentissement de la vidange gastrique
 
-Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, Zepbound), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) — agissent en partie en ralentissant la vidange gastrique. C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
+Les agonistes du récepteur GLP-1 — sémaglutide (Ozempic, Wegovy), tirzépatide (Mounjaro, [Zepbound](/collections/traitements-glp1/guide-complet-zepbound)), liraglutide (Victoza, [Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)/) — agissent en partie en provoquant un [ralentissement de la vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/). C'est l'un des mécanismes qui explique la sensation de satiété prolongée et la réduction de l'appétit qu'ils procurent.
 
 En temps normal, ce ralentissement est bénéfique : on mange moins, on se sent rassasié plus longtemps. Mais au moment d'une anesthésie générale, ce même mécanisme devient dangereux. Le protocole anesthésique standard repose sur le fait que l'estomac du patient est vide au moment de l'induction. Si l'estomac contient encore du contenu gastrique — nourriture, liquide — au moment où le patient perd connaissance et perd ses réflexes de protection des voies aériennes, ce contenu peut remonter (régurgitation) et être aspiré dans les poumons.
 
@@ -67,7 +67,7 @@ Les grandes lignes des recommandations SFAR sont les suivantes :
 
 ### Pourquoi une semaine pour les formes hebdomadaires ?
 
-La demi-vie du sémaglutide est d'environ 7 jours. Cela signifie qu'une semaine après la dernière injection, la concentration du médicament est réduite de moitié — mais des effets sur la vidange gastrique peuvent persister au-delà. La SFAR recommande donc d'attendre une semaine complète pour minimiser l'impact sur la motricité gastrique au moment de l'anesthésie.
+La demi-vie du sémaglutide est d'environ 7 jours. Cela signifie qu'une semaine après la dernière injection, la concentration du médicament est réduite de moitié — mais des effets sur la vidange gastrique peuvent persister au-delà. La SFAR recommandé donc d'attendre une semaine complète pour minimiser l'impact sur la motricité gastrique au moment de l'anesthésie.
 
 Cette durée peut sembler longue, mais elle est justifiée par la pharmacocinétique du médicament et par les cas rapportés de complications survenues même après un seul jour d'arrêt.
 
@@ -147,7 +147,7 @@ Si vous prenez un GLP-1 et qu'une intervention chirurgicale ou endoscopique est 
 2. **Arrêtez le traitement une semaine avant** si vous prenez un GLP-1 hebdomadaire (Ozempic, Wegovy, Mounjaro)
 3. **Arrêtez le traitement la veille** si vous prenez un GLP-1 quotidien (Victoza, Saxenda)
 4. **Consultez votre médecin prescripteur** pour adapter la prise en charge pendant l'arrêt, surtout si vous êtes diabétique
-5. **Reprenez le traitement** lorsque vous mangez normalement et que votre médecin vous y autorise
+5. **Reprenez le traitement** lorsque vous mangez normalement et que votre médecin vous y autorisé
 6. **En urgence**, signalez toujours votre traitement à l'équipe soignante pour que des mesures adaptées soient prises
 
 Ces précautions sont simples à appliquer et permettent de réduire très significativement le risque de complications anesthésiques liées aux GLP-1. La transparence avec votre équipe médicale est le meilleur outil de prévention.

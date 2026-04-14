@@ -26,7 +26,7 @@ Mounjaro (tirzépatide) est un traitement injectable commercialisé en France de
 3. [Adaptation individuelle du dosage](#adaptation-individuelle)
 4. [Que faire en cas d'oubli ?](#oubli-injection)
 5. [Dosage Mounjaro vs Ozempic et Wegovy](#comparaison)
-6. [Précautions et ajustements spéciaux](#precautions)
+6. [Précautions et ajustements spéciaux](#précautions)
 7. [Questions fréquentes](#faq)
 
 ## Les Dosages Disponibles en France
@@ -191,7 +191,7 @@ R : Il n'y a pas de durée standard. Les études montrent un bénéfice continu 
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) — Présentation générale du traitement
 - [Centres Mounjaro en France](/collections/traitements-glp1/centres-mounjaro-france/) — Où accéder au traitement
 - [Prix Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) — Tarifs et remboursement
-- [Résultats avant/après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) — Ce qu'on peut espérer
+- [Résultats avant/après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) — Ce qu'on peut espérer
 
 ---
 

@@ -1,15 +1,15 @@
 ---
 title: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026"
 description: "Remboursement Wegovy et Mounjaro par la Sécurité Sociale 2026 : avis HAS, critères IMC ≥ 35, calendrier CEPS. Serez-vous remboursé ? Réponses claires."
-keywords: ['remboursement wegovy mounjaro securite sociale 2026', 'remboursement wegovy', 'remboursement mounjaro', 'securite sociale wegovy mounjaro', 'wegovy mounjaro prise en charge 2026', 'remboursement glp1 obésité france', 'critères remboursement wegovy imc 35', 'quand wegovy remboursé france']
-seoTitle: "Remboursement Wegovy Mounjaro Securite Sociale 2026 en France"
-seoDescription: "Remboursement Wegovy Mounjaro Securite Sociale 2026 : calendrier officiel, avis HAS, conditions IMC ≥ 35. Tout savoir sur la prise en charge GLP-1 en France."
+keywords: ['remboursement wegovy mounjaro sécurité sociale 2026', 'remboursement wegovy', 'remboursement mounjaro', 'sécurité sociale wegovy mounjaro', 'wegovy mounjaro prise en charge 2026', 'remboursement glp1 obésité france', 'critères remboursement wegovy imc 35', 'quand wegovy remboursé france']
+seoTitle: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 en France"
+seoDescription: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026 : calendrier officiel, avis HAS, conditions IMC ≥ 35. Tout savoir sur la prise en charge GLP-1 en France."
 pubDate: 2026-03-16
 date: '2026-03-17'
 updatedAt: '2026-03-17'
 author: "Dr. Marie Dubois"
 category: "Économie santé"
-tags: ["wegovy", "mounjaro", "remboursement", "securite sociale", "glp1", "prix", "2026"]
+tags: ["wegovy", "mounjaro", "remboursement", "sécurité sociale", "glp1", "prix", "2026"]
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
@@ -19,7 +19,7 @@ published: true
 priority: 2
 schema: "Article"
 mainKeyword: "Remboursement Wegovy Mounjaro Sécurité Sociale 2026"
-secondaryKeywords: ["wegovy remboursement date", "mounjaro securite sociale", "glp1 obesite remboursement france", "prix wegovy apres remboursement", "HAS wegovy mounjaro avis"]
+secondaryKeywords: ["wegovy remboursement date", "mounjaro sécurité sociale", "glp1 obesite remboursement france", "prix wegovy après remboursement", "HAS wegovy mounjaro avis"]
 ---
 
 La question est sur toutes les lèvres des patients souffrant d'obésité : quand [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) seront-ils enfin remboursés par la Sécurité Sociale française ? Ces deux médicaments, qui permettent des pertes de poids de 15 à 20 %, restent actuellement entièrement à la charge des patients — soit entre 170 et 440 euros par mois. Voici l'état exact des négociations en mars 2026 et ce que vous pouvez espérer pour les prochains mois.

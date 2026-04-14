@@ -1,14 +1,14 @@
 ---
 title: "Avant Après GLP1 : Résultats Réels de Patients 2026"
-thumbnail: "/images/thumbnails/avant-apres-glp1.jpg"
+thumbnail: "/images/thumbnails/avant-après-glp1.jpg"
 description: "Avant après GLP1 : résultats réels Ozempic, Wegovy et Mounjaro en France. Témoignages patients, chiffres des études et attentes réalistes."
 author: "Dr. Émilie Dupont"
 pubDate: 2026-03-15
 date: 2026-03-15
-category: "avant-apres"
+category: "avant-après"
 tags: ["avant après", "glp1", "résultats", "perte de poids", "témoignages", "ozempic", "wegovy", "mounjaro"]
-image: "/images/thumbnails/avant-apres-glp1.jpg"
-collection: "avant-apres-glp1"
+image: "/images/thumbnails/avant-après-glp1.jpg"
+collection: "avant-après-glp1"
 featured: true
 priority: 1
 mainKeyword: "avant après glp1"
@@ -19,7 +19,7 @@ seoDescription: "Avant après GLP-1 : résultats réels Ozempic, Wegovy, Mounjar
 
 ## Avant Après GLP-1 : Ce que les Études et les Patients Montrent Vraiment
 
-Les réseaux sociaux regorgent de photos "avant/après" spectaculaires avec Ozempic, Wegovy ou Mounjaro. Mais qu'en est-il des résultats réels des patients français ? Quelle perte de poids peut-on espérer raisonnablement ? Combien de temps faut-il ? Et surtout, ces résultats durent-ils dans le temps ?
+Les réseaux sociaux regorgent de photos "avant/après" spectaculaires avec <a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic</a>, Wegovy ou Mounjaro. Mais qu'en est-il des résultats réels des patients français ? Quelle [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) peut-on espérer raisonnablement ? Combien de temps faut-il ? Et surtout, ces résultats durent-ils dans le temps ?
 
 Ce guide compile les données des études cliniques, les témoignages de patients et les retours des équipes médicales françaises pour vous donner une image honnête et complète de ce qu'un traitement GLP-1 peut vous apporter.
 
@@ -39,7 +39,7 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 
 Ce qui signifie concrètement : pour une personne pesant 100 kg au départ, la perte de poids moyenne sous Wegovy est d'environ 15 kg sur 16 mois. Un tiers des patients en perdent 20 kg ou plus.
 
-### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) / Zepbound (tirzépatide) — L'étude SURMOUNT-1
+### [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) / [Zepbound](/collections/traitements-glp1/guide-complet-zepbound) (tirzépatide) — L'étude SURMOUNT-1
 
 Mounjaro (tirzépatide) a produit des résultats encore plus impressionnants dans l'étude SURMOUNT-1, qui a suivi 2 539 patients pendant 72 semaines (18 mois) :
 
@@ -129,7 +129,7 @@ Cela ne veut pas dire que l'arrêt est condamné à l'échec. Des stratégies pe
 - **L'éducation thérapeutique** : les patients qui ont travaillé avec un diététicien ou un coach pendant le traitement maintiennent mieux leurs résultats
 - **La dose de maintenance** : certains médecins proposent une dose réduite (par exemple Wegovy 0,5 mg au lieu de 2,4 mg) pour maintenir les effets avec moins d'[effets secondaires de Wegovy à connaître](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/) et un coût moindre
 - **Le passage à Saxenda** : moins efficace mais moins cher, parfois utilisé comme "relais"
-- **Le suivi comportemental** : une psychologue spécialisée en comportement alimentaire peut aider à consolider les nouvelles habitudes acquises pendant le traitement
+- **Le suivi comportemental** : un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) spécialisé en comportement alimentaire peut aider à consolider les nouvelles habitudes acquises pendant le traitement
 
 ## Combiner les GLP-1 avec une Approche Globale
 
@@ -139,19 +139,19 @@ Les meilleurs résultats sont obtenus lorsque le traitement GLP-1 est associé �
 
 Le GLP-1 réduit l'appétit, mais ne choisit pas ce que vous mangez. Il est essentiel de privilégier :
 
-- **Les protéines** (viandes maigres, poissons, légumineuses, oeufs) pour [préserver la masse musculaire pendant la perte de poids](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
+- **Les [protéines](/collections/régime-glp1/glp1-protéines)** (viandes maigres, poissons, légumineuses, oeufs) pour [préserver la masse musculaire pendant la perte de poids](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Les légumes et fibres** pour la satiété et le microbiome
 - **L'hydratation** (au moins 1,5L d'eau par jour) car la diurèse augmente
 - **La réduction des aliments ultra-transformés** qui contournent les signaux de satiété
 
-Pour des conseils détaillés selon votre traitement, consultez notre [guide du régime avec Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/) ou les autres guides nutritionnels par molécule.
+Pour des conseils détaillés selon votre traitement, consultez notre [guide du régime avec Mounjaro](/collections/régime-glp1/régime-mounjaro-optimal/) ou les autres guides nutritionnels par molécule.
 
 ### L'activité physique
 
 Contrairement à une idée reçue, les GLP-1 ne font pas "fondre" les muscles. Mais la perte de poids rapide peut entraîner une perte de masse maigre si elle n'est pas accompagnée d'exercice. Les recommandations :
 
 - **30 minutes de marche rapide** par jour minimum
-- **Musculation légère** 2 à 3 fois par semaine pour préserver la masse musculaire — consultez notre guide [sport et exercice pour maximiser la transformation](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)
+- **Musculation légère** 2 à 3 fois par semaine pour préserver la masse musculaire — consultez notre guide [sport et exercice pour maximiser la transformation](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/)
 - **Activités plaisantes** : on s'y tient mieux dans la durée
 
 ## Questions Fréquentes sur les Résultats Avant/Après

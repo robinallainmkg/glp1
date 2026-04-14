@@ -1,6 +1,6 @@
 ---
 title: "Reprise de Poids après GLP-1 : 4× Plus Rapide"
-description: "Reprise de poids après arrêt des GLP-1 : 4 fois plus rapide qu'après un régime. Causes biologiques et stratégies pour éviter l'effet rebond."
+description: "Reprise de poids après arrêt GLP-1 : 4 fois plus rapide qu'après un régime classique. Causes biologiques et stratégies anti-effet rebond."
 pubDate: 2026-03-18
 date: 2026-03-18
 updatedAt: 2026-03-18
@@ -87,7 +87,7 @@ Là où les deux méthodes divergent : après un régime seul, les patients ont 
 
 Après un GLP-1, en revanche, l'appétit avait été "supprimé" par voie pharmacologique, sans nécessairement transformer en profondeur les comportements alimentaires. À l'arrêt du médicament, l'appétit peut revenir de manière particulièrement intense, surtout si la restriction alimentaire n'a pas été accompagnée d'un travail de fond sur les comportements.
 
-C'est l'une des raisons pour lesquelles un [accompagnement psychologique et comportemental](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pendant le traitement est de plus en plus recommandé par les spécialistes — non pas pour perdre plus vite, mais pour maximiser les chances de maintien à l'arrêt.
+C'est l'une des raisons pour lesquelles un [accompagnement psychologique et comportemental](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pendant le traitement est de plus en plus recommandé par les spécialistes — non pas pour perdre plus vite, mais pour maximiser les chances de maintien à l'arrêt.
 
 ## Ce que ces données signifient pour les patients
 
@@ -117,10 +117,10 @@ Une erreur fréquente : certains patients, voyant leur poids se stabiliser aprè
 Si vous êtes dans la situation d'un arrêt inévitable ou programmé, certaines [stratégies pour éviter l'effet yoyo après GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) peuvent ralentir la reprise :
 
 **1. Intensifier l'activité physique, surtout la musculation**
-La masse musculaire élève le métabolisme de base. Un programme d'[exercice physique et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) de 2 à 3 séances de résistance par semaine dans les mois précédant et suivant l'arrêt peuvent aider à maintenir une dépense calorique plus élevée.
+La masse musculaire élève le métabolisme de base. Un programme d'[exercice physique et musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) de 2 à 3 séances de résistance par semaine dans les mois précédant et suivant l'arrêt peuvent aider à maintenir une dépense calorique plus élevée.
 
-**2. Surveiller les apports en protéines**
-Une alimentation riche en protéines (1,2 à 1,6 g/kg de poids corporel) favorise la satiété et [préserve la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) peuvent accélérer la perte de masse maigre et donc ralentir le métabolisme.
+**2. Surveiller les apports en [protéines](/collections/régime-glp1/glp1-protéines)**
+Une alimentation riche en protéines (1,2 à 1,6 g/kg de poids corporel) favorise la satiété et [préserve la masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/). Des [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) peuvent accélérer la perte de masse maigre et donc ralentir le métabolisme.
 
 **3. Maintenir une alimentation structurée**
 Conserver les habitudes alimentaires développées pendant le traitement : repas réguliers, petites portions, faible densité calorique. Ne pas "fêter" l'arrêt du médicament en relâchant complètement l'alimentation.

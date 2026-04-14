@@ -54,6 +54,7 @@ Pour chaque page HTML :
 - Verifie que les images ne sont pas trop volumineuses (> 500KB)
 - Verifie que chaque article dans `src/content/` a une image/thumbnail dans son frontmatter (`image`, `thumbnail`, ou `heroImage`). Si absente : severity `warning`, audit_type `images`
 - Verifie que les images referencees dans le frontmatter existent reellement dans `public/` ou `src/assets/`
+- **Verifie que chaque thumbnail est UNIQUE** : deux articles differents ne doivent PAS avoir le meme chemin `thumbnail`. Si 2+ articles partagent la meme image, signale en severity `warning`, audit_type `images`, issue_title `Thumbnail dupliquee` avec la liste des slugs concernes
 - Dans les pages de collections (`dist/collections/*/index.html`, `dist/*/index.html` qui listent des articles), verifie que chaque article liste a bien une image visible (`<img>` dans le card/lien). Si une image est absente ou cassee : severity `warning`, audit_type `images`
 
 #### 3.5 Maillage interne
@@ -138,19 +139,47 @@ UPDATE agent_runs SET status = 'completed', completed_at = NOW(), items_processe
 WHERE id = '<run_id>';
 ```
 
-## Prevention des faux positifs
+## Prevention des faux positifs (CRITIQUE)
 
-Avant d'enregistrer un resultat `critical`, verifie systematiquement :
+L'audit genere beaucoup de faux positifs si tu ne filtres pas correctement. Applique ces regles AVANT d'enregistrer un resultat :
 
-1. **Page de redirection ?** Si le HTML contient `window.location.replace`, `http-equiv="refresh"`, ou un body quasi-vide avec un lien unique → c'est une redirection. Ne PAS signaler : h1 manquant, liens casses dans cette page, meta manquantes.
+### Etape 1 : Identifier les pages de redirection
 
-2. **Contenu dans `<script>` ?** Les `href="$1"`, `href="$2"` etc. dans les balises `<script>` sont du code JavaScript (regex backreferences), PAS des vrais liens HTML. Quand tu extrais les liens d'une page, **ignore tout le contenu entre `<script>` et `</script>`**.
+**Methode fiable** : lis le fichier HTML. Si le contenu fait < 2KB ET contient un de ces patterns, c'est une REDIRECT — IGNORE COMPLETEMENT :
+- `window.location.replace`
+- `http-equiv="refresh"`
+- `<meta http-equiv="refresh"`
+- Body avec un seul `<a href=` et quasi rien d'autre
 
-3. **Page admin ?** Les pages sous `/admin/` sont bloquees par robots.txt. Les liens casses dans ces pages n'affectent PAS le SEO. Ne cree PAS de ticket pour les pages admin.
+**Aussi des redirects** (IGNORER) :
+- Toutes les URLs dans `redirects:` de `config/astro.config.mjs`
+- `/collections/medicaments-glp1/*` (ancien routing, redirige vers /collections/traitements-glp1/)
+- Les pages bare-path qui dupliquent une page /collections/ (ex: `/wegovy-prix/` redirige vers `/collections/glp1-cout/prix-wegovy-france/`)
 
-4. **Redirect Astro config ?** Les redirects dans `config/astro.config.mjs` generent des pages HTML intermediaires. Ces pages sont des redirections, pas du contenu. Ignore-les.
+### Etape 2 : Ignorer les pages non-SEO
 
-5. **Matching robots.txt** : `Disallow: /temoignages-glp1` bloque `/temoignages-glp1` et `/temoignages-glp1/*` mais NE bloque PAS `/guides/temoignages-glp1/`. Le match se fait par prefixe depuis la racine uniquement.
+NE CREE AUCUN resultat pour :
+- `/admin/*` — bloque par robots.txt
+- `/test-*`, `/demo-*`, `*-backup*`, `*-fixed*` — pages de dev
+- `/mon-espace/*` — app authentifiee, pas indexee
+- Tout fichier dans `src/pages/_disabled/` ou `src/pages/_utils/`
+
+### Etape 3 : Construire la liste des pages reelles
+
+Avant de scanner, construis la liste des pages de contenu reel :
+1. Toutes les URLs sous `/collections/*/` qui ne sont PAS des redirects
+2. Les guides sous `/guides/` (pages autonomes)
+3. La homepage `/`
+4. Les pages outils `/outils/*`
+5. `/contact/`, `/programme/`, `/tarifs/`, `/partenaires/`
+6. Les landing pages `/annette/`, `/charles/`
+
+**N'audite QUE ces pages.** Tout le reste est du bruit.
+
+### Rappels techniques
+
+- **Contenu dans `<script>`** : les `href="$1"` dans les `<script>` sont du JavaScript, PAS des vrais liens. Ignore tout entre `<script>` et `</script>`.
+- **Matching robots.txt** : `Disallow: /temoignages-glp1` bloque `/temoignages-glp1/*` mais PAS `/collections/temoignages/`. Le match se fait par prefixe.
 
 ## Limites
 

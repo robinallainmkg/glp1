@@ -80,7 +80,7 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !page.includes('/admin/') && !page.includes('/test-admin/') && !page.includes('/test-supabase/') && !page.includes('/test-affiliation-multi/') && !page.includes('/admin-dashboard/') && !page.includes('/admin-stats/') && !page.includes('/demo-affiliate-sidebar/') && !page.includes('/temoignages-glp1') && !page.includes('/guide-beaute-perte-de-poids-glp1') && !page.includes('/produits-recommandes') && !page.includes('/temoignage-') && !page.includes('/diagnostic-') && !page.includes('/test-affiliation/') && !page.match(/glp1-france\.fr\/glp1-perte-de-poids\//) && !page.includes('/mentions-legales/') && !page.includes('/politique-confidentialite/') && !page.match(/glp1-france\.fr\/quel-traitement-glp1-choisir\/$/),
+      filter: (page) => !page.includes('/admin/') && !page.includes('/test-admin/') && !page.includes('/test-supabase/') && !page.includes('/test-affiliation-multi/') && !page.includes('/admin-dashboard/') && !page.includes('/admin-stats/') && !page.includes('/demo-affiliate-sidebar/') && !page.includes('/temoignages-glp1') && !page.includes('/guide-beaute-perte-de-poids-glp1') && !page.includes('/produits-recommandes') && !page.match(/glp1-france\.fr\/temoignage-/) && !page.includes('/diagnostic-') && !page.includes('/test-affiliation/') && !page.match(/glp1-france\.fr\/glp1-perte-de-poids\//) && !page.includes('/mentions-legales/') && !page.includes('/politique-confidentialite/') && !page.match(/glp1-france\.fr\/quel-traitement-glp1-choisir\/$/),
       customPages: [
         'https://glp1-france.fr/guides/suivi-medical-glp1/',
         'https://glp1-france.fr/guides/guides-age-glp1/'
@@ -112,6 +112,7 @@ export default defineConfig({
     '/admin-stats-new/': '/',
     '/experts/': '/',
     '/produits-recommandes/': '/',
+    '/collections/glp1-cout/wegovy-prix/': '/collections/glp1-cout/prix-wegovy-france/',
     '/guide-debutant/': '/',
     '/guide-glp1-perte-de-poids/': '/',
     '/guide-beaute-perte-de-poids-glp1/': '/',

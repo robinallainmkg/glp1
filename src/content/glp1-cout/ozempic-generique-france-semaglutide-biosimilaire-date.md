@@ -108,7 +108,7 @@ Pour plus de détails, consultez notre guide sur le [remboursement GLP-1 2026](/
 
 ### 3. Victoza et Saxenda en fin de vie : des prix en baisse
 
-Victoza (liraglutide pour le diabète) est en cours d'arrêt de commercialisation — Novo Nordisk a annoncé la fin de sa distribution dans l'UE/EEE d'ici fin 2026. L'EMA recommande de ne pas initier de nouveau traitement avec Victoza. Saxenda (liraglutide 3 mg pour l'obésité) est encore commercialisé à 240-300 €/mois. Si votre objectif est la perte de poids et que vous n'avez pas de diabète, Saxenda reste plus accessible que Wegovy, même si son efficacité est inférieure.
+Victoza (liraglutide pour le diabète) est en cours d'arrêt de commercialisation — Novo Nordisk a annoncé la fin de sa distribution dans l'UE/EEE d'ici fin 2026. L'EMA recommandé de ne pas initier de nouveau traitement avec Victoza. Saxenda (liraglutide 3 mg pour l'obésité) est encore commercialisé à 240-300 €/mois. Si votre objectif est la perte de poids et que vous n'avez pas de diabète, Saxenda reste plus accessible que Wegovy, même si son efficacité est inférieure.
 
 ### 4. Les aides financières et dispositifs d'accès
 

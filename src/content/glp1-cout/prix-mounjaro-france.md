@@ -1,10 +1,10 @@
 ---
-title: "Prix Mounjaro France 2026 : Tarifs par Dosage et Accès"
+title: "Prix Mounjaro France 2026 : Tarifs par Dosage"
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
-description: "Prix Mounjaro France : 230 à 440€/mois selon dosage, non remboursé en 2026. Tarifs de 2,5 mg à 15 mg et conditions d'accès en pharmacie."
-keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france', 'mounjaro remboursement 2026', 'prix mounjaro allemagne', 'mounjaro prix italie']
-seoTitle: "Prix Mounjaro France 2026 : Coût et Tarifs par Dosage"
-seoDescription: "Prix Mounjaro en France : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Tous les prix par dosage (2.5, 5, 7.5, 10, 12.5, 15mg) et comparatifs."
+description: "Prix Mounjaro France 2026 : 230 à 440€/mois. Tableau comparatif 2.5mg à 15mg, pharmacies les moins chères en France et en Europe. Avril 2026."
+keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'mounjaro prix le moins cher', 'mounjaro prix le moins cher pharmacie', 'carte prix mounjaro france', 'mounjaro prix espagne', 'mounjaro prix allemagne', 'mounjaro prix italie', 'mounjaro tarif']
+seoTitle: "Prix Mounjaro 2026 : Comparatif par Dosage en France"
+seoDescription: "Prix Mounjaro France avril 2026 : 230-440€/mois. Comparatif par dosage, pharmacies les moins chères et prix en Europe. Non remboursé — astuces pour payer moins."
 publishedAt: '2025-09-06'
 updatedAt: '2026-03-08'
 date: 2026-03-08
@@ -261,7 +261,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 3. **Suivi thérapeutique**
    - Consultations de suivi régulières
    - Adaptation posologique selon tolérance et efficacité
-   - [Recommandations alimentaires pendant le traitement](/collections/regime-glp1/glp1-proteines/)
+   - [Recommandations alimentaires pendant le traitement](/collections/régime-glp1/glp1-protéines/)
 
 ## Ressources Complémentaires
 
@@ -458,7 +458,7 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 
 - **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro/)** - Posologie, efficacité et mode d'emploi détaillé
 - **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)** - Tous les effets indésirables et comment les gérer
-- **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal/)** - Nutrition adaptée pour maximiser la perte de poids
+- **[Régime Alimentaire Optimal sous Mounjaro](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition adaptée pour maximiser la perte de poids
 - **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france/)** - Annuaire des endocrinologues et diabétologues
 - **[Mounjaro vs Ozempic : Comparatif Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement choisir selon votre profil
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Alternative si Mounjaro n'est pas accessible
@@ -471,4 +471,4 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 ---
 
 *Dernière mise à jour : 8 mars 2026. Les prix (libres) et conditions de remboursement sont susceptibles d'évoluer. Un remboursement est envisagé au 2e semestre 2026. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et les prix actualisés.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/glp1-cout/prix-mounjaro-france.md
+<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/glp1-cout/prix-mounjaro-france.md

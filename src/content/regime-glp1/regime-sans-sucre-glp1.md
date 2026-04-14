@@ -5,10 +5,10 @@ date: "2025-08-20"
 author: "Dr. Émilie Martin"
 description: "Régime sans sucre GLP-1 : contrôlez votre glycémie et amplifiez la perte de poids avec votre traitement. Conseils pratiques et menus."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-sans-sucre-glp1.jpg"
-thumbnailAlt: "Illustration pour l'article regime-sans-sucre-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-sans-sucre-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article régime-sans-sucre-glp1"
 featured: false
 priority: 5
 schema: "Article"
@@ -17,7 +17,7 @@ mainKeyword: "régime sans sucre GLP-1 glycémie perte de poids"
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -74,7 +74,7 @@ Les sucres ajoutés sont des calories "vides" sans pouvoir rassasiant. En les su
 ### Alternatives aux sucreries et desserts
 - **Fruits entiers** : une pomme, une poire, des fruits rouges — la fibre ralentit l'absorption
 - **Chocolat noir 85%** minimum : 1 à 2 carrés apportent satisfaction sans pic glycémique
-- **Yaourt nature avec cannelle** : la cannelle a un effet stabilisateur reconnu sur la glycémie
+- **Yaourt nature avec cannelle** : la cannelle a un effet stabilisateur reconnu sur l'[index glycémique des aliments](/collections/régime-glp1/glp1-index-glycemique/)
 - **Compote sans sucre ajouté** : vérifiez l'étiquette (uniquement les sucres naturels des fruits)
 
 ### Alternatives aux céréales du petit-déjeuner industrielles
