@@ -1,7 +1,7 @@
 ---
 // Layout avancé avec système d'affiliation adaptatif (version sans TinaCMS)
 import BaseLayout from './BaseLayout.astro';
-import AdaptiveAffiliateDisplay from '../components/AdaptiveAffiliateDisplay.astro';
+import PartnerSidebar from '../components/PartnerSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 
@@ -44,17 +44,7 @@ const articleContent = props.articleContent ?? article?.body ?? '';
 const availableProducts = props.availableProducts ?? props.affiliateProducts ?? [];
 const detectedCategory = props.detectedCategory ?? props.category ?? (article?.data?.collection || article?.collection) ?? null;
 
-// Detect partner CTA variant from collection/category
-function detectPartnerVariant(cat: string | null): "charles" | "annette" | "both" {
-  const c = (cat || '').toLowerCase();
-  // Articles sur les prix/remboursement → consultation médicale (Charles)
-  if (c.includes('cout') || c.includes('prix') || c.includes('remboursement')) return 'charles';
-  // Articles sur les régimes/alimentation → accompagnement diététique (Annette)
-  if (c.includes('regime') || c.includes('alimentation')) return 'annette';
-  // Tous les autres → les deux partenaires
-  return 'both';
-}
-const partnerVariant = detectPartnerVariant(detectedCategory);
+// Annette est le seul partenaire actif
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
 const config = props.config ?? {};
@@ -137,30 +127,25 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   )}
 
   <main class="adaptive-article-layout">
-    <div class={`article-wrapper ${availableProducts.length > 0 ? 'has-sidebar' : ''}`}>
+    <div class="article-wrapper has-sidebar">
       <!-- Contenu principal de l'article -->
       <article class="article-content">
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTA Partenaires contextuel -->
-        <PartnerCTA partner={partnerVariant} context="article" />
+        <!-- CTA Partenaire Annette (inline mid-article + bottom fallback) -->
+        <div id="partner-cta-template" style="display:none;">
+          <PartnerCTA partner="annette" context="article_inline" />
+        </div>
+        <PartnerCTA partner="annette" context="article" />
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
         </div>
       </article>
-      
-      <!-- Système d'affiliation adaptatif -->
-      {availableProducts.length > 0 && (
-        <AdaptiveAffiliateDisplay 
-          affiliateProducts={availableProducts}
-          config={affiliateConfig || config}
-          disableInline={props.disableInline || false}
-          forceSidebar={true}
-          shouldInject={shouldInjectProducts}
-        />
-      )}
+
+      <!-- Sidebar partenaire Annette -->
+      <PartnerSidebar context="article" />
     </div>
 
     <!-- Articles connexes -->
@@ -579,40 +564,26 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
 }
 </style>
 
+<!-- Injection mid-article du CTA partenaire -->
 <script>
-  // Injection automatique des produits inline dans le contenu de l'article
-  document.addEventListener('DOMContentLoaded', function() {
-    const articleContent = document.getElementById('article-content');
-    const inlineContainer = document.querySelector('.inline-products-container');
+(function() {
+  var body = document.getElementById('article-content');
+  var tpl = document.getElementById('partner-cta-template');
+  if (!body || !tpl) return;
 
-    if (!articleContent || !inlineContainer) return;
+  // Find all H2s in the article body
+  var headings = body.querySelectorAll('h2');
+  if (headings.length < 2) return; // Too short, keep bottom CTA only
 
-    // Récupérer tous les produits inline disponibles
-    const inlineProducts = inlineContainer.querySelectorAll('.inline-affiliate-product');
+  // Insert after the 3rd H2's section (or 2nd if fewer), before the next H2
+  var targetIndex = Math.min(2, headings.length - 1); // 0-indexed, so 2 = 3rd H2
+  var target = headings[targetIndex];
 
-    if (inlineProducts.length === 0) return;
+  // Clone the CTA and make it visible
+  var cta = tpl.firstElementChild.cloneNode(true);
+  cta.style.display = '';
 
-    // Récupérer tous les paragraphes de l'article
-    const paragraphs = articleContent.querySelectorAll('p');
-
-    if (paragraphs.length < 3) return; // Pas assez de contenu
-
-    // Configuration d'injection : 2ème, 5ème, 7ème paragraphe
-    const injectionPoints = [2, 5, 7]; // Index basé sur 0 (donc 3ème, 6ème, 8ème paragraphe)
-
-    let productIndex = 0;
-
-    injectionPoints.forEach(paragraphIndex => {
-      if (paragraphIndex < paragraphs.length && productIndex < inlineProducts.length) {
-        const targetParagraph = paragraphs[paragraphIndex];
-        const productToInject = inlineProducts[productIndex].cloneNode(true);
-
-        // Insérer le produit après le paragraphe cible
-        targetParagraph.parentNode.insertBefore(productToInject, targetParagraph.nextSibling);
-
-        productIndex++;
-      }
-    });    // Cacher le conteneur original des produits inline (ils sont maintenant dans l'article)
-    inlineContainer.style.display = 'none';
-  });
+  // Insert before the target H2
+  target.parentNode.insertBefore(cta, target);
+})();
 </script>

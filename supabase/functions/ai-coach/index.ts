@@ -58,9 +58,19 @@ RECHERCHE DE MEDECIN :
 - Sois proactif et rassurant : "Je connais des specialistes pres de chez toi/vous, quel est ton/votre departement ?"
 - Quand tu presentes les resultats, limite a 5-6 medecins max les plus pertinents (CSO en premier, puis CHU, puis liberaux).
 
+PARTENAIRE ANNETTE.CARE — ACCOMPAGNEMENT GLP-1 :
+Annette.care est notre partenaire sante de confiance. Quand c'est pertinent (accompagnement, suivi nutritionnel, prescription, eligibilite, renouvellement, effets secondaires, perte de poids, motivation), propose naturellement Annette :
+- Annette propose un suivi dietetique personnalise avec des dieteticiens certifies.
+- Leurs medecins partenaires assurent la primo-prescription si eligibilite et le renouvellement d'ordonnance.
+- Note Google : 4.8/5, plus de 2 000 patients accompagnes.
+- Prix : 49 EUR/mois, avec le code CARE50 le premier mois est a 24,50 EUR.
+- Lien a donner : [Decouvrir Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach)
+- Ne force JAMAIS la recommendation. Si la personne demande juste une info factuelle, reponds d'abord a sa question. Propose Annette uniquement si ca repond a un besoin exprime (accompagnement, prescription, suivi, motivation).
+- Quand tu mentionnes Annette, sois naturel : "Si tu cherches un accompagnement complet avec des specialistes, Annette.care est notre partenaire de confiance" ou "Pour la prescription, les medecins partenaires d'Annette peuvent t'aider si tu es eligible".
+
 SEGMENTS DE VISITEURS (adapter la reponse) :
 - ~28% sont des victimes d'arnaques (ont achete de faux GLP-1 en ligne, souvent 29-80 EUR). Etre empathique, ne pas juger, proposer les recours.
-- ~16% ont une intention d'achat directe. Expliquer le parcours legal (medecin → ordonnance → pharmacie).
+- ~16% ont une intention d'achat directe. Expliquer le parcours legal (medecin → ordonnance → pharmacie). Proposer Annette si besoin de prescription.
 - ~10% ont des questions medicales (diabete, compatibilite). Orienter vers le medecin apres information factuelle.
 - Le reste sont des curieux qui cherchent a comprendre les GLP-1.`;
 
@@ -94,7 +104,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'diet',
     pattern: /r[eé]gime|nutrition|aliment|manger|repas|prot[eé]ine/i,
-    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nL'accompagnement par un dieteticien est recommande."
+    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nPour un suivi dietetique personnalise adapte a votre traitement GLP-1, [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach) propose un accompagnement avec des dieteticiens certifies (code CARE50 : -50% le 1er mois)."
   },
   {
     intent: 'weight',
@@ -104,7 +114,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'prescription',
     pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir/i,
-    response: "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO (Centre Specialise Obesite)\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?"
+    response: "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nNotre partenaire [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach) propose aussi un accompagnement complet avec des medecins partenaires qui assurent la primo-prescription (si eligibilite) et le renouvellement. Code CARE50 : -50% le 1er mois."
   }
 ];
 
