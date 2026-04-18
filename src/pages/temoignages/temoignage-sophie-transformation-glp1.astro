@@ -4,10 +4,15 @@ import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSideb
 const affiliateProducts = [];
 const affiliateConfig = {};
 const entry = {};
-const frontmatter = null;
 ---
 
-<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
+<ArticleWithAffiliateSidebar
+  title="Témoignage Sophie T. : 22 kilos perdus avec Wegovy à 29 ans"
+  description="Découvrez le témoignage de Sophie T., 29 ans, qui a perdu 22 kilos en 10 mois grâce au traitement Wegovy. Avant/après, parcours et conseils pour jeunes femmes."
+  articleContent={entry}
+  affiliateProducts={affiliateProducts ?? []}
+  affiliateConfig={affiliateConfig ?? {}}
+>
 
 <div class="container">
   <article class="testimonial-detail">
@@ -17,7 +22,7 @@ const frontmatter = null;
         <span class="testimonial-tag">Transformation Jeune Femme</span>
         <time>Octobre 2025</time>
       </div>
-      <h1>La Transformation de Sophie T.</h1>
+      <h2>La Transformation de Sophie T.</h2>
       <p class="testimonial-subtitle">
         <strong>22 kilos perdus en 10 mois</strong> à seulement 29 ans
       </p>

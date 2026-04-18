@@ -1,8 +1,9 @@
 ---
-title: "Nos Partenaires : Guide Complet et Conseils Pratiques 2025"
-description: "Découvrez nos partenaires de confiance qui nous accompagnent dans notre mission d'information sur les traitements GLP-1 et la santé métabolique."
-slug: "partenaires"
+title: "Partenaires GLP-1 France : Plateformes Santé de Confiance"
+description: "Nos partenaires de confiance : annuaires et plateformes santé qui soutiennent GLP-1 France dans sa mission d'information sur les traitements GLP-1."
 pubDate: 2025-08-21
+date: 2025-08-21
+mainKeyword: "partenaires GLP-1 France"
 thumbnail: "/images/thumbnails/partenaires-illus.jpg"
 thumbnailAlt: "Illustration pour Nos Partenaires : Guide Complet et Conseils Pratiques 2025"
 category: "Partenariat"
@@ -64,7 +65,6 @@ Vous souhaitez devenir partenaire de **GLP-1 France** ?
 ## 🔗 Liens Utiles
 
 - [Accueil GLP-1 France](/)
-- [À propos de nous](/a-propos)
 - [Contact](/contact)
 - [Mentions légales](/mentions-legales)
 

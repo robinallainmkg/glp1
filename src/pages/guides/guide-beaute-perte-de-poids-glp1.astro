@@ -3,11 +3,15 @@ import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSideb
 
 const affiliateProducts = [];
 const affiliateConfig = {};
-const entry = {};
-const frontmatter = null;
 ---
 
-<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts} affiliateConfig={affiliateConfig}>
+<ArticleWithAffiliateSidebar
+  title="Guide Beauté et Perte de Poids avec les GLP-1"
+  description="Secrets pour une peau éclatante pendant votre perte de poids GLP-1. Routine beauté, soins adaptés et conseils d'experts."
+  affiliateProducts={affiliateProducts}
+  affiliateConfig={affiliateConfig}
+  hideArticleHeader={true}
+>
   <div class="container">
     <!-- Hero Section -->
     <section class="landing-hero">
@@ -69,7 +73,6 @@ const frontmatter = null;
               <option value="wegovy">Wegovy</option>
               <option value="ozempic">Ozempic</option>
               <option value="saxenda">Saxenda</option>
-              <option value="trulicity">Trulicity</option>
               <option value="autre">Autre</option>
               <option value="pas-encore-decide">Pas encore décidé</option>
             </select>

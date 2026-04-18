@@ -1,22 +1,23 @@
 ---
-title: "Régime Cetogene GLP-1 : Guide Complet et Conseils Pratiques 2025"
-slug: "regime-cetogene-glp1"
+title: "Régime cétogène GLP-1 perte de poids keto : Guide"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Associer régime cétogène et GLP-1 pour une perte de poids accélérée. Guide complet, avantages, précautions et protocole détaillé pour combiner ces deux approches minceur efficaces."
+description: "Régime cétogène GLP-1 perte de poids keto : combiner ces deux approches pour des résultats accélérés. Avantages, précautions et protocole."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
-thumbnail: "/images/thumbnails/regime-cetogene-glp1.jpg"
-thumbnailAlt: "Illustration pour l'article regime-cetogene-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
+thumbnail: "/images/thumbnails/régime-cetogene-glp1.jpg"
+thumbnailAlt: "Illustration pour l'article régime-cetogene-glp1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime cétogène GLP-1 perte de poids keto"
 
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -42,7 +43,7 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 ## Prix, disponibilité et variations en France
 
 ### Coûts régime cétogène + GLP-1
-- **Ozempic® + suppléments** : ~59,90€/stylo (remboursé 65 % DT2) + 30-50€/mois
+- **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)® + suppléments** : ~76,58€/stylo (remboursé 30 % DT2) + 30-50€/mois
 - **Trulicity® + MCT oil** : ~81€/mois (remboursé 65 % DT2) + 25-40€/mois
 - **Suivi nutritionnel** : 60-80€/consultation
 - **Bandelettes cétones** : 40-60€/mois
@@ -52,7 +53,7 @@ L'association régime cétogène et agonistes GLP-1 peut être synergique pour l
 
 ## Introduction
 
-Cet article vous présente les informations essentielles et actualisées. Les données proviennent de sources médicales officielles et sont régulièrement mises à jour.
+Le régime cétogène (ou "keto") réduit drastiquement les glucides au profit des lipides, forçant l'organisme à produire des corps cétoniques comme carburant. Associé à un traitement GLP-1 (Ozempic, Wegovy, Mounjaro), il peut potentialiser la perte de poids et améliorer le contrôle glycémique — mais cette combinaison exige une surveillance médicale renforcée. Les deux approches agissent sur des mécanismes complémentaires : le GLP-1 réduit l'appétit et stimule l'insuline, tandis que la cétose réduit les pics glycémiques en éliminant les glucides.
 
 ## Remboursement et prise en charge (France)
 
@@ -80,7 +81,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Conseils pratiques
 
 ### Phase d'adaptation (2-4 semaines)
-- **Réduction GLP-1** : Diminution temporaire 25-50%
+- **Ajustement GLP-1** : Réévaluation de la posologie par le médecin prescripteur selon la tolérance et la glycémie
 - **Surveillance cétose** : Bandelettes urinaires quotidiennes
 - **Hydratation** : 2,5-3L/jour minimum
 - **Électrolytes** : Supplémentation magnésium, potassium
@@ -109,11 +110,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Électrolytes poudre** : Équilibre hydrique
 - **Probiotiques** : Microbiote intestinal
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
@@ -123,10 +124,10 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 Oui, mais surveillance accrue nécessaire. Risque potentiel d'acidocétose chez diabétiques prédisposés.
 
 ### Faut-il diminuer la dose de GLP-1 en keto ?
-Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance.
+Souvent utile initialement car le keto réduit naturellement l'appétit. Réajustement progressif selon tolérance. Vous pouvez aussi explorer le [régime paléo sous GLP-1](/collections/régime-glp1/régime-paleo-glp1/) comme alternative moins restrictive.
 
 ### Combien de temps maintenir cette association ?
-3-6 mois généralement, puis transition vers régime méditerranéen équilibré tout en maintenant GLP-1.
+3-6 mois généralement, puis transition vers [régime méditerranéen](/collections/régime-glp1/régime-mediterraneen-glp1) équilibré tout en maintenant GLP-1. Certains patients optent pour le [jeûne intermittent associé aux GLP-1](/collections/régime-glp1/jeune-intermittent-glp1/) comme alternative lors de la transition.
 
 ### Quels risques spécifiques à surveiller ?
 Acidocétose (diabétiques), constipation majorée, calculs rénaux, carences vitamines liposolubles.

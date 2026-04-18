@@ -1,22 +1,23 @@
 ---
-title: "GLP-1 Calories Journalieres : Guide Complet et Conseils Pratiques 2025"
-slug: "glp1-calories-journalieres"
+title: "Calories Journalières GLP-1 : Régime Perte de Poids"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Calculez vos besoins caloriques journaliers avec les GLP-1. Méthodes de calcul, adaptation selon le traitement et conseils pour un déficit calorique sain et durable pour perdre du poids efficacement."
+description: "Calculez vos calories journalières sous GLP-1 pour un régime efficace. Méthodes de calcul, adaptation au traitement et déficit calorique sain."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-calories-journalieres.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-calories-journalieres"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "Calories Journalières GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -42,8 +43,8 @@ Les agonistes GLP-1 réduisent naturellement l'apport calorique de 200-500 kcal/
 ## Prix, disponibilité et variations en France
 
 ### Coût par calorie économisée
-- **Ozempic®** : ~59,90€/stylo (remboursé 65 % DT2) → ~0,33€ par 100 kcal réduites
-- **Trulicity®** : ~81€/mois (remboursé 65 % DT2) → ~0,43€ par 100 kcal réduites
+- **Ozempic®** : ~76,58€/stylo (remboursé 30 % DT2) → ~0,42€ par 100 kcal réduites
+- **Trulicity®** : ~81€/mois (remboursé 30 % DT2) → ~0,43€ par 100 kcal réduites
 - **Saxenda®** : 240-300€/mois (non remboursé) → ~1,30€ par 100 kcal réduites
 
 
@@ -107,18 +108,18 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Mètre ruban** : Mesures tour taille/hanches
 - **Photos avant/après** : Motivation visuelle
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
 ## FAQ
 
 ### Faut-il compter les calories avec GLP-1 ?
-Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionnelle plutôt que comptage strict.
+Non obligatoire grâce à la satiété naturelle. Focus sur qualité nutritionnelle plutôt que comptage strict. Le [jeûne intermittent sous GLP-1](/collections/régime-glp1/jeune-intermittent-glp1/) peut également aider à structurer les apports sans comptage.
 
 ### Combien de calories économise-t-on avec GLP-1 ?
 300-500 kcal/jour en moyenne, soit 2100-3500 kcal/semaine → 0,3-0,5 kg perte/semaine théorique.

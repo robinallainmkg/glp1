@@ -1,0 +1,252 @@
+---
+import StaticLayout from '../../../layouts/StaticLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const dataPath = path.resolve(process.cwd(), 'public/data/pharmacies.json');
+  let pharmacies = { schema: [], rows: [] };
+  try { pharmacies = JSON.parse(fs.readFileSync(dataPath, 'utf-8')); } catch {}
+
+  const iId = pharmacies.schema.indexOf('id');
+  const iName = pharmacies.schema.indexOf('name');
+  const iCity = pharmacies.schema.indexOf('city');
+  const iSlug = pharmacies.schema.indexOf('city_slug');
+  const iCP = pharmacies.schema.indexOf('postal_code');
+  const iDept = pharmacies.schema.indexOf('department');
+  const iLat = pharmacies.schema.indexOf('lat');
+  const iLng = pharmacies.schema.indexOf('lng');
+
+  // Groupe par code postal
+  const byZip = {};
+  for (const row of pharmacies.rows) {
+    const zip = row[iCP];
+    if (!zip) continue;
+    if (!byZip[zip]) byZip[zip] = [];
+    byZip[zip].push({
+      id: row[iId],
+      name: row[iName],
+      city: row[iCity],
+      city_slug: row[iSlug],
+      postal: zip,
+      department: row[iDept],
+      lat: row[iLat],
+      lng: row[iLng],
+    });
+  }
+
+  // Génère une page par zipcode ayant >=3 pharmacies (évite les pages 1-row sans valeur)
+  const zips = Object.entries(byZip).filter(([_, list]) => list.length >= 3);
+  return zips.map(([zip, pharmas]) => {
+    const city = pharmas[0].city;
+    const citySlug = pharmas[0].city_slug;
+    const dept = pharmas[0].department;
+    let minLat = Infinity, minLng = Infinity, maxLat = -Infinity, maxLng = -Infinity;
+    for (const p of pharmas) {
+      const lat = Number(p.lat), lng = Number(p.lng);
+      if (!Number.isFinite(lat)) continue;
+      if (lat < minLat) minLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lat > maxLat) maxLat = lat;
+      if (lng > maxLng) maxLng = lng;
+    }
+    return {
+      params: { zipcode: zip },
+      props: { zip, city, citySlug, dept, pharmas, bbox: [minLng, minLat, maxLng, maxLat] },
+    };
+  });
+}
+
+const { zip, city, citySlug, dept, pharmas, bbox } = Astro.props;
+function titleCase(s) { return (s || '').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()); }
+const cityCap = titleCase(city);
+
+const title = `Pharmacies GLP-1 ${zip} (${cityCap}) — Prix Ozempic, Wegovy, Mounjaro`;
+const description = `${pharmas.length} pharmacies au code postal ${zip} à ${cityCap}. Prix Ozempic officiel 77,60 €, prix Wegovy / Mounjaro / Saxenda estimés par pharmacie.`;
+
+// Autres codes postaux de la même ville
+import fs2 from 'node:fs';
+import path2 from 'node:path';
+let otherZips = [];
+try {
+  const dataPath = path2.resolve(process.cwd(), 'public/data/pharmacies.json');
+  const all = JSON.parse(fs2.readFileSync(dataPath, 'utf-8'));
+  const iSlug = all.schema.indexOf('city_slug');
+  const iCP = all.schema.indexOf('postal_code');
+  const zipCounts = {};
+  for (const r of all.rows) {
+    if (r[iSlug] === citySlug && r[iCP] && r[iCP] !== zip) {
+      zipCounts[r[iCP]] = (zipCounts[r[iCP]] || 0) + 1;
+    }
+  }
+  otherZips = Object.entries(zipCounts)
+    .filter(([, c]) => c >= 3)
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .slice(0, 24)
+    .map(([z, c]) => ({ zip: z, count: c }));
+} catch {}
+
+const mapPharmas = pharmas.slice(0, 500).map((p) => ({ id: p.id, name: p.name, lat: p.lat, lng: p.lng }));
+---
+
+<StaticLayout title={title} description={description} keywords={`pharmacie ${zip}, pharmacie ${cityCap}, prix GLP-1 ${zip}`}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://glp1-france.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Pharmacies", "item": "https://glp1-france.fr/pharmacies/" },
+      { "@type": "ListItem", "position": 3, "name": cityCap, "item": `https://glp1-france.fr/pharmacies/${citySlug}/` },
+      { "@type": "ListItem", "position": 4, "name": `Code postal ${zip}`, "item": `https://glp1-france.fr/pharmacies/cp/${zip}/` },
+    ],
+  })} />
+
+  <div class="zip-page">
+    <section class="zip-hero">
+      <div class="zip-hero-inner">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a> <span>›</span>
+          <a href="/pharmacies/">Pharmacies</a> <span>›</span>
+          <a href={`/pharmacies/${citySlug}/`}>{cityCap}</a> <span>›</span>
+          <strong>{zip}</strong>
+        </nav>
+        <h1>Pharmacies code postal {zip} — {cityCap}</h1>
+        <p class="zip-hero-sub"><strong>{pharmas.length} pharmacies</strong> référencées dans le secteur {zip} ({cityCap}, {dept}). Prix Ozempic officiel CEPS, estimations Wegovy/Mounjaro/Saxenda.</p>
+        <div class="zip-ctas">
+          <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Carte interactive complète →</a>
+          <a href={`/pharmacies/${citySlug}/`} class="btn-secondary">Retour à {cityCap}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="zip-map-section">
+      <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+      <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" is:inline></script>
+      <div id="zip-map" class="zip-map"></div>
+      <script is:inline define:vars={{ pharmaciesData: mapPharmas, bbox }}>
+        (function () {
+          if (typeof maplibregl === 'undefined') return;
+          const map = new maplibregl.Map({
+            container: 'zip-map',
+            style: {
+              version: 8,
+              sources: { tiles: { type: 'raster', tiles: ['https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'], tileSize: 256, attribution: '© OSM · CARTO' } },
+              layers: [{ id: 'bg', type: 'raster', source: 'tiles' }],
+            },
+            bounds: [[bbox[0], bbox[1]], [bbox[2], bbox[3]]],
+            fitBoundsOptions: { padding: 40, maxZoom: 15 },
+          });
+          map.addControl(new maplibregl.NavigationControl(), 'top-right');
+          const ready = new Promise((resolve) => {
+            let done = false;
+            const go = () => { if (done) return; done = true; resolve(); };
+            map.on('styledata', () => { if (map.isStyleLoaded()) go(); });
+            map.on('load', go);
+            setTimeout(go, 6000);
+          });
+          ready.then(() => {
+            const features = pharmaciesData.map((p) => ({
+              type: 'Feature',
+              geometry: { type: 'Point', coordinates: [Number(p.lng), Number(p.lat)] },
+              properties: { name: p.name },
+            }));
+            map.addSource('pharma', { type: 'geojson', data: { type: 'FeatureCollection', features } });
+            map.addLayer({
+              id: 'points', type: 'circle', source: 'pharma',
+              paint: { 'circle-color': '#16a34a', 'circle-radius': 7, 'circle-stroke-width': 1.5, 'circle-stroke-color': '#fff' },
+            });
+            map.on('click', 'points', (e) => {
+              const f = e.features[0];
+              new maplibregl.Popup({ maxWidth: '260px' })
+                .setLngLat(f.geometry.coordinates)
+                .setHTML('<strong>' + f.properties.name + '</strong>')
+                .addTo(map);
+            });
+          });
+        })();
+      </script>
+    </section>
+
+    <section class="zip-list-section">
+      <div class="zip-section-inner">
+        <h2>Les {pharmas.length} pharmacies au {zip}</h2>
+        <div class="pharmas-grid">
+          {pharmas.slice(0, 40).map((p) => (
+            <div class="pharma-card">
+              <div class="pharma-name">{titleCase(p.name)}</div>
+              <div class="pharma-postal">{p.postal} {titleCase(p.city)}</div>
+            </div>
+          ))}
+        </div>
+        {pharmas.length > 40 && <p class="more-note">Et {pharmas.length - 40} autres. <a href="/outils/carte-prix-pharmacies/">Toutes sur la carte →</a></p>}
+      </div>
+    </section>
+
+    {otherZips.length > 0 && (
+      <section class="zip-others-section">
+        <div class="zip-section-inner">
+          <h2>Autres codes postaux à {cityCap}</h2>
+          <div class="zip-grid">
+            {otherZips.map((z) => (
+              <a href={`/pharmacies/cp/${z.zip}/`} class="zip-card">
+                <span class="zip-code">{z.zip}</span>
+                <span class="zip-count">{z.count} pharmacies</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="zip-disclaimer">
+      <p>Source : référentiel FINESS (data.gouv.fr / Atlasanté). Cette page est informative ; consultez la pharmacie pour confirmer les prix des traitements en prix libéré (Wegovy, Mounjaro, Saxenda).</p>
+    </section>
+  </div>
+
+  <style>
+  .zip-page { background: #f8faf9; min-height: 100vh; }
+  .zip-hero { background: linear-gradient(135deg, #f0fdf4, #ecfdf5 50%, #f0f9ff); padding: 2rem 1.5rem; border-bottom: 1px solid #e5e7eb; }
+  .zip-hero-inner, .zip-section-inner { max-width: 1100px; margin: 0 auto; }
+  .breadcrumb { font-size: .82rem; color: #6b7280; margin-bottom: .75rem; }
+  .breadcrumb a { color: #1a3c34; text-decoration: none; }
+  .breadcrumb span { margin: 0 .35rem; color: #9ca3af; }
+  .zip-hero h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 900; color: #1a3c34; margin: 0 0 .5rem; letter-spacing: -.02em; line-height: 1.2; }
+  .zip-hero-sub { color: #475569; font-size: .95rem; margin: 0 0 1.25rem; line-height: 1.5; }
+  .zip-ctas { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary {
+    display: inline-flex; padding: .65rem 1.3rem; font-weight: 700; font-size: .88rem;
+    border-radius: 10px; text-decoration: none; transition: all .2s;
+  }
+  .btn-primary { background: #1a3c34; color: #fff; }
+  .btn-primary:hover { background: #0f2d25; transform: translateY(-1px); color: #fff; }
+  .btn-secondary { background: #fff; color: #1a3c34; border: 1.5px solid #d1d5db; }
+  .btn-secondary:hover { border-color: #1a3c34; }
+
+  .zip-map-section { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .zip-map { width: 100%; height: 400px; background: #e5e7eb; }
+  @media (max-width: 640px) { .zip-map { height: 300px; } }
+
+  .zip-list-section, .zip-others-section { padding: 2.5rem 1.5rem; border-bottom: 1px solid #e5e7eb; }
+  .zip-list-section { background: #f8faf9; }
+  .zip-others-section { background: #fff; }
+  h2 { font-size: 1.25rem; font-weight: 800; color: #1a3c34; margin: 0 0 1.25rem; }
+
+  .pharmas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .6rem; }
+  .pharma-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: .7rem .9rem; }
+  .pharma-name { font-weight: 600; color: #1a3c34; font-size: .88rem; line-height: 1.3; }
+  .pharma-postal { font-size: .76rem; color: #6b7280; margin-top: .2rem; }
+  .more-note { font-size: .88rem; color: #6b7280; text-align: center; margin-top: 1rem; }
+  .more-note a { color: #1B6FA0; font-weight: 600; }
+
+  .zip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: .5rem; }
+  .zip-card {
+    background: #f8faf9; border: 1px solid #e5e7eb; border-radius: 10px; padding: .7rem .9rem;
+    text-decoration: none; color: #1a3c34; display: flex; flex-direction: column; gap: .15rem;
+  }
+  .zip-card:hover { border-color: #16a34a; background: #f0fdf4; }
+  .zip-code { font-weight: 800; font-size: 1rem; font-variant-numeric: tabular-nums; }
+  .zip-count { font-size: .78rem; color: #6b7280; }
+
+  .zip-disclaimer { max-width: 1100px; margin: 0 auto; padding: 1.5rem; font-size: .75rem; color: #6b7280; line-height: 1.55; border-top: 1px solid #e5e7eb; }
+  </style>
+</StaticLayout>

@@ -1,17 +1,21 @@
 ---
-title: "Mounjaro Guide 2025 : Le Traitement #1 pour Perdre du Poids (Résultats -20kg)"
-description: "🔥 Mounjaro : LE traitement révolutionnaire qui fait perdre 15-20% du poids ! Prix France, témoignages, effets secondaires. Guide complet 2025."
+title: "Mounjaro Guide Complet : Prix et Résultats"
+thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+slug: "guide-complet-mounjaro"
+description: "Mounjaro (tirzepatide) guide complet France : perdez 15-20% de poids. Prix, posologie, effets secondaires et témoignages 2026."
 author: "Dr. Martin"
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["mounjaro", "tirzepatide", "perte de poids", "résultats", "avant après", "prix france", "traitement efficace"]
 date: "2025-09-06"
+pubDate: "2025-09-06"
 featured: true
 priority: 1
+mainKeyword: "mounjaro guide complet france tirzepatide"
 ---
 
-# 🔥 Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
+## Mounjaro 2025 : Le Traitement N°1 qui Révolutionne la Perte de Poids
 
 <div class="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white p-6 rounded-2xl mb-8 shadow-2xl border-2 border-orange-400">
   <div class="flex items-start gap-4">
@@ -84,7 +88,7 @@ priority: 1
   <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="block bg-gray-600 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
     ⚠️ Effets Secondaires (TOUT Savoir)
   </a>
-  <a href="#resultats-avant-apres" class="block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
+  <a href="#résultats-avant-après" class="block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
     📸 Voir les Résultats Avant/Après
   </a>
 </div>
@@ -92,7 +96,7 @@ priority: 1
 ## 🚀 Sommaire : Votre Guide Complet Mounjaro
 1. [⚡ Pourquoi Mounjaro SURPASSE Ozempic ?](#pourquoi-mounjaro-surpasse-ozempic)
 2. [🔬 Comment Mounjaro RÉVOLUTIONNE la perte de poids ?](#comment-mounjaro-revolutionne)
-3. [📊 Résultats RÉELS : Témoignages et avant/après](#resultats-avant-apres)
+3. [📊 Résultats RÉELS : Témoignages et avant/après](#résultats-avant-après)
 4. [💉 Posologie : Le dosage OPTIMAL](#posologie-optimale)
 5. [💰 Prix France 2025 & Remboursement](#prix-france-2025)
 6. [🆚 Mounjaro vs Ozempic vs Wegovy](#comparaison-traitements)
@@ -114,7 +118,7 @@ priority: 1
 | **Rapidité** | **Résultats dès 4 semaines** | 8-12 semaines |
 | **Efficacité diabète** | **HbA1c -2.4%** | HbA1c -1.8% |
 | **Mécanisme** | **DOUBLE GLP-1 + GIP** | Simple GLP-1 |
-| **Satisfaction patients** | **89%** | 74% |
+| **Satisfaction patients** | **Données insuffisantes** | Données insuffisantes |
 
 <div class="testimonial-highlight">
   💬 <strong>"J'ai testé Ozempic pendant 6 mois : -8kg. Avec Mounjaro : -15kg en 4 mois !"</strong>
@@ -146,7 +150,7 @@ Mounjaro agit simultanément sur deux hormones intestinales :
 
 Cette double action permet un contrôle glycémique exceptionnel et une perte de poids significative supérieure aux autres GLP-1.
 
-## 📊 Résultats RÉELS : Témoignages et Avant/Après {#resultats-avant-apres}
+## 📊 Résultats RÉELS : Témoignages et Avant/Après {#résultats-avant-après}
 
 <div class="results-showcase">
   <h3>🔥 Transformations SPECTACULAIRES avec Mounjaro</h3>
@@ -193,8 +197,8 @@ Cette double action permet un contrôle glycémique exceptionnel et une perte de
 <div class="clinical-stats">
   <div class="stat-row">
     <span class="stat-label">Patients perdant +15% de leur poids</span>
-    <span class="stat-bar"><span class="fill" style="width: 89%"></span></span>
-    <span class="stat-value">89%</span>
+    <span class="stat-bar"><span class="fill" style="width: 50%"></span></span>
+    <span class="stat-value">~50%</span>
   </div>
   
   <div class="stat-row">
@@ -223,13 +227,13 @@ Mounjaro est indiqué dans le traitement du diabète de type 2 chez l'adulte, en
 
 ### Avantages dans le diabète
 - **Réduction d'HbA1c** : jusqu'à -2,4% (supérieure aux autres GLP-1)
-- **Perte de poids** : 5-15 kg en moyenne
+- **Perte de poids** : 5-15 kg en moyenne — pour [préserver la masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant cette perte, un apport protéique adapté est essentiel
 - **Une injection hebdomadaire** : facilité d'utilisation
 - **Efficacité durable** : maintien des effets à long terme
 
 ### Posologie recommandée
 - **Dose initiale** : 2,5 mg/semaine
-- **Augmentation progressive** : 5 mg, puis 7,5 mg, 10 mg, 12,5 mg, 15 mg
+- **Augmentation progressive** : 5 mg, puis 7,5 mg, 10 mg, 12,5 mg, 15 mg — consultez notre guide sur le [dosage progressif du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) pour les détails
 - **Dose maximale** : 15 mg/semaine
 
 ## Mounjaro pour la perte de poids
@@ -242,7 +246,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 - **Échec des mesures hygiéno-diététiques**
 
 ### Résultats cliniques
-- **Perte de poids moyenne** : 15-20% du poids corporel
+- **Perte de poids moyenne** : 15-20% du poids corporel — découvrez le [témoignage de Laurent : -35 kg en 10 mois avec Mounjaro](/collections/témoignages/témoignage-laurent-transformation-glp1/)
 - **Pourcentage de patients** : 50% perdent ≥15% de leur poids
 - **Maintien du poids** : avec poursuite du traitement
 
@@ -282,7 +286,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
     <div class="action-card">
       <h4>🥗 3. Optimisez Votre Régime</h4>
       <p>Alimentation spéciale Mounjaro pour maximiser les résultats</p>
-      <a href="/collections/regime-glp1/glp1-proteines" class="action-button">
+      <a href="/collections/régime-glp1/glp1-protéines" class="action-button">
         Régime Mounjaro
       </a>
     </div>
@@ -316,7 +320,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 <div class="expert-conclusion">
   <h3>🎯 Conclusion de l'Expert</h3>
   <blockquote>
-    "Mounjaro représente l'avenir des traitements pour la perte de poids. Ses résultats exceptionnels 
+    "Mounjaro représente l'avenir des traitements pour la perte de poids, avec les [recommandations de l'OMS validant les GLP-1](/collections/recherche-glp1/oms-recommandations-glp1-obesite/) comme option thérapeutique. Ses résultats exceptionnels
     (-20% du poids corporel) et sa tolérance remarquable en font LE traitement de référence en 2025."
     <cite>- Dr. Martin, Endocrinologue</cite>
   </blockquote>
@@ -343,10 +347,10 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 ### Autres GLP-1 injectables
 - **Ozempic** : Semaglutide (jusqu'à 2 mg/semaine)
 - **Wegovy** : Semaglutide à 2,4 mg (spécifiquement pour l'obésité)
-- **Trulicity** : Dulaglutide (une injection hebdomadaire)
+- **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** : Dulaglutide (une injection hebdomadaire)
 
 ### GLP-1 oraux
-- **Rybelsus** : Semaglutide oral (jusqu'à 14 mg/jour)
+- **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)
 
 ## FAQ Mounjaro
 
@@ -362,10 +366,10 @@ Oui, Mounjaro peut être prescrit pour la perte de poids chez les personnes obè
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Mounjaro est-il remboursé pour l'obésité ?
-**Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au remboursement en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
+**Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Mounjaro brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
+Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Si vous devez subir une intervention chirurgicale, consultez notre guide sur les [précautions avant chirurgie sous Mounjaro](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) pour connaître le protocole d'arrêt recommandé.
 
 ---
 
@@ -391,7 +395,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="next-step-card">
     <h3>🥗 Régime Mounjaro</h3>
     <p>Le régime alimentaire optimal pour maximiser vos résultats avec Mounjaro.</p>
-    <a href="/collections/regime-glp1/regime-mounjaro-optimal" class="cta-button">
+    <a href="/collections/régime-glp1/régime-mounjaro-optimal" class="cta-button">
       Découvrir le Régime →
     </a>
   </div>
@@ -412,23 +416,24 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="link-category">
     <h4>💡 Optimisation Mounjaro</h4>
     <ul>
-      <li><a href="/collections/regime-glp1/glp1-proteines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
-      <li><a href="/collections/regime-glp1/jeune-intermittent-glp1">Jeûne Intermittent + Mounjaro</a></li>
-      <li><a href="/guides/sport-activite-physique-glp1">Sport et Mounjaro : Maximiser les Résultats</a></li>
+      <li><a href="/collections/régime-glp1/glp1-protéines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
+      <li><a href="/collections/régime-glp1/jeune-intermittent-glp1">Jeûne Intermittent + Mounjaro</a></li>
+      <li><a href="/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/">Sport et Mounjaro : Maximiser les Résultats</a></li>
     </ul>
   </div>
   
   <div class="link-category">
     <h4>🎯 Témoignages et Résultats</h4>
     <ul>
-      <li><a href="/temoignages/avant-apres-glp1">Transformations Mounjaro : Avant/Après</a></li>
-      <li><a href="/temoignages/marie">Marie : -18kg avec Mounjaro en 6 mois</a></li>
-      <li><a href="/temoignages/laurent">Laurent : De 120kg à 85kg grâce à Mounjaro</a></li>
+      <li><a href="/collections/témoignages/avant-après-glp1">Transformations Mounjaro : Avant/Après</a></li>
+      <li><a href="/collections/témoignages/témoignage-marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
+      <li><a href="/collections/témoignages/témoignage-sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
     </ul>
   </div>
 </div>
 
 ---
 
-*Ce guide complet sur Mounjaro est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-mounjaro.md
+Pour trouver un spécialiste qui prescrit Mounjaro, consultez notre liste des [centres prescripteurs Mounjaro en France](/collections/traitements-glp1/centres-mounjaro-france/) ou notre annuaire d'[endocrinologues spécialisés en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/).
+
+*Ce guide complet sur Mounjaro est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

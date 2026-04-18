@@ -8,183 +8,839 @@ import { supabaseConfig } from '../../lib/supabase';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Admin - GLP1 France</title>
-  <style>
+  <style is:inline>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
-    }
-    .admin-layout {
-      margin-left: 260px;
+      font-family: 'JetBrains Mono', monospace;
+      background: #0a0e17;
+      color: #c8d6e5;
       min-height: 100vh;
     }
-    .page-header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 1.5rem 2rem;
+
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+
+    /* Header */
+    .mc-header {
+      background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%);
+      border-bottom: 1px solid #1a2332;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .page-header h1 {
-      font-size: 1.5rem;
+    .mc-title {
+      font-size: 1.1rem;
       font-weight: 700;
-      color: #0f172a;
-    }
-    .page-header p {
-      font-size: 0.88rem;
-      color: #64748b;
-      margin-top: 0.25rem;
-    }
-    .main { padding: 2rem; max-width: 1200px; }
-
-    /* Stats grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .stat-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.25rem;
-      border: 1px solid #e2e8f0;
-    }
-    .stat-label {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-top: 0.35rem;
-    }
-    .stat-hint {
-      font-size: 0.78rem;
-      color: #94a3b8;
-      margin-top: 0.25rem;
-    }
-    .stat-red .stat-value { color: #dc2626; }
-    .stat-amber .stat-value { color: #f59e0b; }
-    .stat-green .stat-value { color: #22c55e; }
-    .stat-blue .stat-value { color: #3b82f6; }
-
-    /* Cards grid */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .overview-card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      border: 1px solid #e2e8f0;
-      text-decoration: none;
-      color: inherit;
-      transition: box-shadow 0.2s, transform 0.15s;
-      display: block;
-    }
-    .overview-card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      transform: translateY(-2px);
-    }
-    .card-top {
+      color: #e2e8f0;
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 1rem;
     }
-    .card-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
+    .mc-title .pulse-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e88;
+      animation: pulse-glow 2s infinite;
+    }
+    .mc-clock {
+      font-size: 0.8rem;
+      color: #64748b;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px #22c55e88; }
+      50% { opacity: 0.5; box-shadow: 0 0 4px #22c55e44; }
+    }
+
+    .mc-main { padding: 1.5rem 2rem; }
+
+    /* ==================== AUTOPILOT HERO ==================== */
+    .autopilot-hero {
+      background: linear-gradient(135deg, #0a1a0f 0%, #111827 50%, #0f172a 100%);
+      border: 1px solid #22c55e33;
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .autopilot-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 50%, #22c55e06 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .autopilot-hero.is-running {
+      border-color: #22c55e66;
+      box-shadow: 0 0 30px #22c55e11;
+    }
+    .autopilot-hero.is-running::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #22c55e, transparent);
+      animation: scan-line 3s linear infinite;
+    }
+    @keyframes scan-line {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .ap-top {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .ap-btn-area { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .ap-big-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #22c55e55;
+      background: radial-gradient(circle, #0f2a17 0%, #0a1a0f 100%);
+      color: #4ade80;
+      font-size: 2rem;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      flex-shrink: 0;
+      transition: all 0.3s;
+      position: relative;
     }
-    .card-icon.blue { background: #dbeafe; color: #2563eb; }
-    .card-icon.purple { background: #f3e8ff; color: #7c3aed; }
-    .card-icon.green { background: #dcfce7; color: #16a34a; }
-    .card-icon.indigo { background: #e0e7ff; color: #4338ca; }
-    .card-icon.amber { background: #fef3c7; color: #d97706; }
-    .card-title {
-      font-size: 1.05rem;
-      font-weight: 700;
+    .ap-big-btn:hover {
+      border-color: #22c55e;
+      box-shadow: 0 0 20px #22c55e33;
+      transform: scale(1.05);
     }
-    .card-desc {
-      font-size: 0.85rem;
-      color: #64748b;
-      line-height: 1.5;
-      margin-bottom: 1rem;
+    .ap-big-btn.running {
+      border-color: #ef444488;
+      background: radial-gradient(circle, #1a0f0f 0%, #150a0a 100%);
+      color: #f87171;
+      animation: ap-pulse 2s infinite;
     }
-    .card-stats {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+    @keyframes ap-pulse {
+      0%, 100% { box-shadow: 0 0 20px #22c55e22; }
+      50% { box-shadow: 0 0 30px #22c55e44; }
     }
-    .mini-stat {
-      padding: 0.3rem 0.65rem;
-      border-radius: 6px;
-      font-size: 0.78rem;
+    .ap-btn-label {
+      font-size: 0.6rem;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       font-weight: 600;
     }
 
-    /* Recent activity */
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .activity-list {
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-    }
-    .activity-item {
-      padding: 0.85rem 1.25rem;
+    .ap-info { flex: 1; }
+    .ap-title-row {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      border-bottom: 1px solid #f1f5f9;
-      font-size: 0.88rem;
+      margin-bottom: 0.4rem;
     }
-    .activity-item:last-child { border-bottom: none; }
-    .activity-dot {
-      width: 8px;
-      height: 8px;
+    .ap-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4ade80;
+    }
+    .ap-status-badge {
+      font-size: 0.55rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .ap-status-badge.idle { background: #1e293b; color: #475569; }
+    .ap-status-badge.running { background: #052e16; color: #22c55e; animation: pulse-glow 2s infinite; }
+    .ap-status-badge.error { background: #450a0a; color: #f87171; }
+
+    .ap-desc {
+      font-size: 0.65rem;
+      color: #64748b;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .ap-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.75rem;
+    }
+    .ap-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .ap-stat-val {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+    .ap-stat-label {
+      font-size: 0.5rem;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Budget meter */
+    .ap-budget {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.3rem;
+      position: relative;
+      z-index: 1;
+      min-width: 120px;
+    }
+    .ap-budget-label {
+      font-size: 0.5rem;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .ap-budget-bar {
+      width: 100%;
+      height: 10px;
+      background: #1e293b;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .ap-budget-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s;
+    }
+    .ap-budget-val {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+
+    /* ==================== AGENT ARENA ==================== */
+    .arena-section {
+      margin-bottom: 1.5rem;
+    }
+    .arena-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .arena-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .arena-legend {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.55rem;
+      color: #475569;
+    }
+    .arena-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .arena-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .arena-cell {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .arena-cell:hover {
+      border-color: #334155;
+      background: #1a2332;
+    }
+    .arena-cell.has-active {
+      border-color: var(--agent-color, #22c55e)33;
+      background: linear-gradient(180deg, #111827 0%, color-mix(in srgb, var(--agent-color, #22c55e) 3%, #111827) 100%);
+    }
+
+    .arena-cell-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .arena-cell-name {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--agent-color, #94a3b8);
+    }
+    .arena-cell-count {
+      font-size: 0.55rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+    .arena-cell-count.active {
+      background: var(--agent-color, #22c55e)22;
+      color: var(--agent-color, #22c55e);
+    }
+    .arena-cell-count.zero {
+      background: #1e293b;
+      color: #374151;
+    }
+
+    /* Character stage */
+    .arena-stage {
+      height: 70px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ==================== CSS CHARACTERS ==================== */
+    .char {
+      width: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Head */
+    .char-head {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--agent-color, #94a3b8);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Body */
+    .char-body {
+      width: 2px;
+      height: 16px;
+      background: var(--agent-color, #94a3b8);
+      position: relative;
+    }
+
+    /* Arms */
+    .char-arms {
+      position: absolute;
+      top: 2px;
+      width: 20px;
+      height: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .char-arm {
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background: var(--agent-color, #94a3b8);
+      top: 0;
+      transform-origin: left center;
+      border-radius: 1px;
+    }
+    .char-arm.left { left: 0; transform-origin: right center; right: 50%; left: auto; }
+    .char-arm.right { left: 50%; transform-origin: left center; }
+
+    /* Legs */
+    .char-legs {
+      display: flex;
+      gap: 2px;
+    }
+    .char-leg {
+      width: 2px;
+      height: 14px;
+      background: var(--agent-color, #94a3b8);
+      transform-origin: top center;
+      border-radius: 0 0 1px 1px;
+    }
+
+    /* === DANCING animation === */
+    .char.dancing {
+      animation: char-bounce 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-arm.left {
+      animation: arm-wave-l 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-arm.right {
+      animation: arm-wave-r 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-leg.left {
+      animation: leg-kick-l 0.6s ease-in-out infinite;
+    }
+    .char.dancing .char-leg.right {
+      animation: leg-kick-r 0.6s ease-in-out infinite;
+    }
+
+    @keyframes char-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes arm-wave-l {
+      0%, 100% { transform: rotate(30deg); }
+      50% { transform: rotate(-60deg); }
+    }
+    @keyframes arm-wave-r {
+      0%, 100% { transform: rotate(-30deg); }
+      50% { transform: rotate(60deg); }
+    }
+    @keyframes leg-kick-l {
+      0%, 100% { transform: rotate(15deg); }
+      50% { transform: rotate(-15deg); }
+    }
+    @keyframes leg-kick-r {
+      0%, 100% { transform: rotate(-15deg); }
+      50% { transform: rotate(15deg); }
+    }
+
+    /* Offset animation for multiple characters */
+    .char.dancing.d1 { animation-delay: 0s; }
+    .char.dancing.d1 .char-arm, .char.dancing.d1 .char-leg { animation-delay: 0s; }
+    .char.dancing.d2 { animation-delay: 0.15s; }
+    .char.dancing.d2 .char-arm, .char.dancing.d2 .char-leg { animation-delay: 0.15s; }
+    .char.dancing.d3 { animation-delay: 0.3s; }
+    .char.dancing.d3 .char-arm, .char.dancing.d3 .char-leg { animation-delay: 0.3s; }
+    .char.dancing.d4 { animation-delay: 0.45s; }
+    .char.dancing.d4 .char-arm, .char.dancing.d4 .char-leg { animation-delay: 0.45s; }
+
+    /* === IDLE animation === */
+    .char.idle {
+      animation: char-breathe 3s ease-in-out infinite;
+    }
+    .char.idle .char-arm.left { transform: rotate(10deg); }
+    .char.idle .char-arm.right { transform: rotate(-10deg); }
+    @keyframes char-breathe {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-1px); }
+    }
+
+    /* === SLEEPING animation === */
+    .char.sleeping {
+      transform: rotate(90deg) translateY(5px);
+      opacity: 0.35;
+    }
+    .char.sleeping .char-arm.left { transform: rotate(5deg); }
+    .char.sleeping .char-arm.right { transform: rotate(-5deg); }
+
+    .zzz {
+      position: absolute;
+      top: -8px;
+      right: -4px;
+      font-size: 0.5rem;
+      color: #475569;
+      animation: zzz-float 2.5s ease-in-out infinite;
+      font-style: italic;
+    }
+    .zzz:nth-child(2) { right: -10px; top: -14px; font-size: 0.42rem; animation-delay: 0.8s; opacity: 0.6; }
+    .zzz:nth-child(3) { right: -14px; top: -20px; font-size: 0.35rem; animation-delay: 1.6s; opacity: 0.3; }
+    @keyframes zzz-float {
+      0%, 100% { transform: translateY(0); opacity: 0.5; }
+      50% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    /* Arena cell action buttons */
+    .arena-cell-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-bottom: 0.4rem;
+      min-height: 22px;
+    }
+    .arena-btn {
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    .arena-btn:hover { transform: scale(1.05); }
+    .arena-btn-go {
+      border-color: #22c55e44;
+      background: #0a1a0f;
+      color: #4ade80;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.6rem;
+    }
+    .arena-btn-go:hover { border-color: #22c55e; box-shadow: 0 0 8px #22c55e22; }
+    .arena-btn-console {
+      border-color: #3b82f644;
+      background: #0a0f1a;
+      color: #60a5fa;
+    }
+    .arena-btn-spawn {
+      border-color: #22c55e44;
+      background: #0a1a0f;
+      color: #4ade80;
+    }
+    .arena-btn-spawn:hover { border-color: #22c55e; }
+    .arena-btn-stop {
+      border-color: #ef444444;
+      background: #1a0a0a;
+      color: #f87171;
+      font-size: 0.55rem;
+    }
+    .arena-btn-stop:hover { border-color: #ef4444; }
+
+    /* Arena cell info bar */
+    .arena-cell-meta {
+      font-size: 0.52rem;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .arena-cell-meta .pending-badge {
+      font-size: 0.52rem;
+      font-weight: 700;
+      padding: 0.08rem 0.3rem;
+      border-radius: 3px;
+    }
+
+    /* ==================== KPI ROW ==================== */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .kpi-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      transition: border-color 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .kpi-card:hover { border-color: #334155; }
+    .kpi-label {
+      font-size: 0.52rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #475569;
+      font-weight: 600;
+    }
+    .kpi-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1;
+    }
+    .kpi-sub {
+      font-size: 0.52rem;
+      color: #64748b;
+    }
+    .kpi-bar {
+      height: 3px;
+      border-radius: 2px;
+      background: #1e293b;
+      margin-top: 0.2rem;
+      overflow: hidden;
+    }
+    .kpi-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.5s;
+    }
+
+    /* ==================== CONSOLE ==================== */
+    .console-section {
+      background: #0c1018;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      max-height: 450px;
+    }
+    .console-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #1e293b;
+      background: #111827;
+      flex-shrink: 0;
+    }
+    .console-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+    }
+    .console-tabs {
+      display: flex;
+      gap: 0.25rem;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .console-tabs::-webkit-scrollbar { display: none; }
+    .console-tab {
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.55rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #475569;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .console-tab:hover { background: #1a2332; color: #94a3b8; }
+    .console-tab.active { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+    .console-tab .tab-dot {
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .activity-time {
-      font-size: 0.78rem;
-      color: #94a3b8;
-      margin-left: auto;
-      white-space: nowrap;
+    .console-tab .tab-dot.running { background: #22c55e; animation: pulse-glow 1.5s infinite; }
+    .console-tab .tab-dot.stopped { background: #475569; }
+    .console-tab .tab-lines {
+      font-size: 0.45rem;
+      color: #374151;
+      font-weight: 400;
     }
-
-    .loading {
+    .console-status {
+      font-size: 0.55rem;
+      color: #374151;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+    .console-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem 0;
+      font-size: 0.62rem;
+      line-height: 1.5;
+      min-height: 180px;
+      max-height: 380px;
+      scrollbar-width: thin;
+      scrollbar-color: #1e293b transparent;
+    }
+    .console-body::-webkit-scrollbar { width: 6px; }
+    .console-body::-webkit-scrollbar-track { background: transparent; }
+    .console-body::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    .console-empty {
       text-align: center;
-      padding: 2rem;
-      color: #64748b;
+      padding: 2.5rem 1rem;
+      color: #374151;
+      font-size: 0.68rem;
+    }
+    .console-line {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.08rem 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      transition: background 0.1s;
+    }
+    .console-line:hover { background: #111827; }
+    .console-line-ts {
+      color: #1e293b;
+      font-size: 0.52rem;
+      flex-shrink: 0;
+      min-width: 55px;
+      font-variant-numeric: tabular-nums;
+      padding-top: 0.05rem;
+    }
+    .console-line-text { color: #94a3b8; word-break: break-word; white-space: pre-wrap; }
+    /* Level-based styling (from server) */
+    .console-line-text.cl-tool { color: #64748b; font-size: 0.55rem; padding-left: 0.5rem; }
+    .console-line-text.cl-result { color: #4ade80; font-weight: 600; background: #052e1633; padding: 0.12rem 0.4rem; border-radius: 3px; border-left: 3px solid #4ade80; }
+    .console-line-text.cl-error { color: #f87171; font-weight: 700; background: #450a0a66; padding: 0.15rem 0.4rem; border-radius: 3px; border-left: 3px solid #f87171; }
+    .console-line-text.cl-progress { color: #fbbf24; font-weight: 700; font-size: 0.68rem; margin-top: 0.3rem; }
+    .console-line-text.cl-action { color: #e2e8f0; }
+    .console-line-text.cl-cost { color: #a78bfa; font-weight: 600; font-size: 0.6rem; }
+    .console-line-text.cl-info { color: #94a3b8; }
+    .console-line.has-result { background: #0a1a0a; }
+    .console-line.has-error { background: #1a0a0a; }
+    .console-line.has-progress { background: #1a1a0a; }
+    /* Filter: hide tool lines in essential mode */
+    .console-body.filter-essential .console-line.level-tool { display: none; }
+    .console-body.filter-essential .console-line.level-info { display: none; }
+    /* Filter: show all in detail mode (default) */
+    /* Filter: hide nothing in raw mode */
+    /* Console filter bar */
+    .console-filters {
+      display: flex;
+      gap: 0.2rem;
+      flex-shrink: 0;
+    }
+    .console-filter-btn {
+      padding: 0.12rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #1e293b;
+      background: transparent;
+      color: #475569;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.15s;
+    }
+    .console-filter-btn:hover { border-color: #334155; color: #94a3b8; }
+    .console-filter-btn.active { background: #1e293b; color: #e2e8f0; border-color: #334155; }
+
+    /* ==================== LOG FEED ==================== */
+    .log-section {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .log-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .log-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .log-live {
+      font-size: 0.6rem;
+      color: #22c55e;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .log-live .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse-glow 1.5s infinite;
+    }
+    .log-feed {
+      max-height: 260px;
+      overflow-y: auto;
+      padding: 0.25rem 0;
+      scrollbar-width: thin;
+      scrollbar-color: #1e293b transparent;
+    }
+    .log-feed::-webkit-scrollbar { width: 6px; }
+    .log-feed::-webkit-scrollbar-track { background: transparent; }
+    .log-feed::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    .log-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.3rem 1rem;
+      font-size: 0.65rem;
+      transition: background 0.1s;
+      animation: log-appear 0.3s ease-out;
+    }
+    .log-entry:hover { background: #1a2332; }
+    @keyframes log-appear {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .log-time { color: #374151; font-variant-numeric: tabular-nums; flex-shrink: 0; min-width: 58px; }
+    .log-agent-tag {
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-size: 0.58rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      min-width: 64px;
+      text-align: center;
+    }
+    .tag-seo-audit { background: #1e3a5f; color: #38bdf8; }
+    .tag-analytics { background: #1e3a1e; color: #4ade80; }
+    .tag-fact-check { background: #3a2e1e; color: #fbbf24; }
+    .tag-opportunities { background: #2e1e3a; color: #c084fc; }
+    .tag-editorial { background: #1e2e3a; color: #67e8f9; }
+    .log-message { color: #94a3b8; flex: 1; }
+    .log-status {
+      font-size: 0.58rem;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .ls-success { background: #052e16; color: #4ade80; }
+    .ls-error { background: #450a0a; color: #f87171; }
+    .log-empty {
+      text-align: center;
+      padding: 1.5rem;
+      color: #374151;
+      font-size: 0.72rem;
     }
 
-    @media (max-width: 1024px) {
-      .admin-layout { margin-left: 0; padding-top: 56px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Server warning */
+    .server-warning {
+      display: none;
+      background: #1a1508;
+      border: 1px solid #eab30844;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.62rem;
+      color: #fbbf24;
+      text-align: center;
     }
-    @media (max-width: 640px) {
-      .stats-grid { grid-template-columns: 1fr; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .main { padding: 1rem; }
-      .page-header { padding: 1rem; }
+
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 768px) {
+      .mc-main { padding: 1rem; }
+      .arena-grid { grid-template-columns: repeat(2, 1fr); }
+      .ap-top { flex-direction: column; text-align: center; }
+      .ap-stats { justify-content: center; }
+      .ap-budget { align-items: center; }
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -193,100 +849,138 @@ import { supabaseConfig } from '../../lib/supabase';
 <AdminNav />
 
 <div class="admin-layout">
-  <div class="page-header">
-    <h1>Vue d'ensemble</h1>
-    <p>Tableau de bord de l'administration GLP-1 France</p>
+  <div class="mc-header">
+    <div class="mc-title">
+      <span class="pulse-dot"></span>
+      MISSION CONTROL
+    </div>
+    <div class="mc-clock" id="clock"></div>
   </div>
 
-  <div class="main">
-    <!-- Stats -->
-    <div class="stats-grid">
-      <div class="stat-card stat-red">
-        <div class="stat-label">Tickets urgents</div>
-        <div class="stat-value" id="stat-urgent">-</div>
-        <div class="stat-hint">Corrections prioritaires</div>
-      </div>
-      <div class="stat-card stat-amber">
-        <div class="stat-label">En attente de revue</div>
-        <div class="stat-value" id="stat-pending">-</div>
-        <div class="stat-hint">Tickets a examiner</div>
-      </div>
-      <div class="stat-card stat-green">
-        <div class="stat-label">Prets a deployer</div>
-        <div class="stat-value" id="stat-ready">-</div>
-        <div class="stat-hint">Corrections validees</div>
-      </div>
-      <div class="stat-card stat-blue">
-        <div class="stat-label">Score moyen</div>
-        <div class="stat-value" id="stat-score">-</div>
-        <div class="stat-hint">Fiabilite des articles</div>
+  <div class="mc-main">
+
+    <!-- Routine Pipeline Hero -->
+    <div class="autopilot-hero" id="autopilotHero">
+      <div class="ap-top">
+        <div class="ap-btn-area">
+          <button class="ap-big-btn" id="apBigBtn" onclick="launchRoutine()">&#9654;</button>
+          <span class="ap-btn-label" id="apBtnLabel">Lancer Routine</span>
+        </div>
+        <div class="ap-info">
+          <div class="ap-title-row">
+            <span class="ap-name">Pipeline Routine</span>
+            <span class="ap-status-badge idle" id="apBadge">IDLE</span>
+          </div>
+          <div class="ap-desc">
+            UN cycle complet : sync analytics &rarr; fact-check + seo-audit + opportunities + maillage &rarr; editorial (corrections) &rarr; validator (deploy).
+            <br><code style="font-size:0.7rem;color:#64748b">node scripts/routine.mjs</code>
+            <button onclick="showRoutineInfo()" style="margin-left:0.5rem;background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 8px;border-radius:4px;cursor:pointer;font-size:0.7rem;font-family:inherit">+ d'infos</button>
+          </div>
+          <div class="ap-stats" id="apStats">
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apAgentsActive">0</span>
+              <span class="ap-stat-label">Agents actifs</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apTicketsProcessed">--</span>
+              <span class="ap-stat-label">Tickets (24h)</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apLastRun">--</span>
+              <span class="ap-stat-label">Dernier run</span>
+            </div>
+            <div class="ap-stat">
+              <span class="ap-stat-val" id="apArticles">166</span>
+              <span class="ap-stat-label">Articles</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Module cards -->
-    <div class="cards-grid">
-      <a href="/admin/fact-check/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-          </div>
-          <div class="card-title">Fact-Check</div>
-        </div>
-        <div class="card-desc">Resultats de verification. Approuvez, rejetez ou annotez les tickets de correction.</div>
-        <div class="card-stats" id="fc-stats"></div>
-      </a>
-
-      <a href="/admin/editorial/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon purple">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-          </div>
-          <div class="card-title">Editorial</div>
-        </div>
-        <div class="card-desc">Suivi des corrections editoriales. Deploiement des tickets valides.</div>
-        <div class="card-stats" id="ed-stats"></div>
-      </a>
-
-      <a href="/admin/integration/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon green">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
-          </div>
-          <div class="card-title">Integration</div>
-        </div>
-        <div class="card-desc">Historique des corrections deployees sur le site.</div>
-        <div class="card-stats" id="int-stats"></div>
-      </a>
-
-      <a href="/admin/pipelines/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon indigo">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 11V3h-7v3H9V3H2v8h7V8h2v10h4v3h7v-8h-7v3h-2V8h2v3h7zM7 9H4V5h3v4zm10 6h3v4h-3v-4zm0-10h3v4h-3V5z"/></svg>
-          </div>
-          <div class="card-title">Pipelines</div>
-        </div>
-        <div class="card-desc">Vue en temps reel des pipelines de traitement des corrections.</div>
-        <div class="card-stats" id="pip-stats"></div>
-      </a>
-
-      <a href="/admin/seo/" class="overview-card">
-        <div class="card-top">
-          <div class="card-icon amber">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          </div>
-          <div class="card-title">SEO</div>
-        </div>
-        <div class="card-desc">Agent Opportunite SEO — Phase 2. Analyse et recommandations.</div>
-        <div class="card-stats">
-          <span class="mini-stat" style="background:#fef3c7;color:#92400e">Bientot</span>
-        </div>
-      </a>
+    <!-- Server Warning -->
+    <div class="server-warning" id="serverWarning">
+      &#9888; Agent Server hors ligne &mdash; lance <code style="background:#0a0e17;padding:0.1rem 0.3rem;border-radius:3px">node scripts/agent-server.mjs</code>
     </div>
 
-    <!-- Recent activity -->
-    <div class="section-title">Activite recente</div>
-    <div class="activity-list" id="activity">
-      <div class="loading">Chargement...</div>
+    <!-- Agent Arena -->
+    <div class="arena-section">
+      <div class="arena-header">
+        <span class="arena-title">Agent Arena</span>
+        <div class="arena-legend">
+          <span class="arena-legend-item"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse-glow 1.5s infinite"></span> Actif</span>
+          <span class="arena-legend-item"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#64748b"></span> Idle</span>
+          <span class="arena-legend-item"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#374151;opacity:0.5"></span> Dort</span>
+        </div>
+      </div>
+      <div class="arena-grid" id="arenaGrid"></div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-row" id="kpiRow">
+      <a class="kpi-card" href="/admin/editorial">
+        <span class="kpi-label">Articles</span>
+        <span class="kpi-value" id="kpiArticles">--</span>
+        <span class="kpi-sub" id="kpiArticlesSub">chargement...</span>
+      </a>
+      <a class="kpi-card" href="/admin/fact-check">
+        <span class="kpi-label">Fact-Check</span>
+        <span class="kpi-value" id="kpiFactCheck">--</span>
+        <span class="kpi-sub" id="kpiFactCheckSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiFactCheckBar" style="width:0%;background:#22c55e"></div></div>
+      </a>
+      <a class="kpi-card" href="/admin/audit">
+        <span class="kpi-label">SEO Tickets</span>
+        <span class="kpi-value" id="kpiSeoIssues">--</span>
+        <span class="kpi-sub" id="kpiSeoSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiSeoBar" style="width:0%;background:#f87171"></div></div>
+      </a>
+      <a class="kpi-card" href="/admin/analytics">
+        <span class="kpi-label">Keywords Top 10</span>
+        <span class="kpi-value" id="kpiKeywords">--</span>
+        <span class="kpi-sub" id="kpiKeywordsSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiKeywordsBar" style="width:0%;background:#3b82f6"></div></div>
+      </a>
+      <a class="kpi-card" href="/admin/opportunites">
+        <span class="kpi-label">Opportunites</span>
+        <span class="kpi-value" id="kpiOpps">--</span>
+        <span class="kpi-sub" id="kpiOppsSub">chargement...</span>
+      </a>
+      <div class="kpi-card" style="cursor:default">
+        <span class="kpi-label">Throughput / 7j</span>
+        <span class="kpi-value" id="kpiThroughput">--</span>
+        <span class="kpi-sub" id="kpiThroughputSub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiThroughputBar" style="width:0%;background:#22c55e"></div></div>
+      </div>
+      <div class="kpi-card" style="cursor:default">
+        <span class="kpi-label">Debit / Charge</span>
+        <span class="kpi-value" id="kpiEfficiency">--</span>
+        <span class="kpi-sub" id="kpiEfficiencySub">chargement...</span>
+        <div class="kpi-bar"><div class="kpi-bar-fill" id="kpiEfficiencyBar" style="width:0%;background:#3b82f6"></div></div>
+      </div>
+    </div>
+
+    <!-- Agent Console -->
+    <div class="console-section" id="consoleSection">
+      <div class="console-header">
+        <span class="console-title">Console</span>
+        <div class="console-tabs" id="consoleTabs"></div>
+        <span class="console-status" id="consoleStatus"></span>
+      </div>
+      <div class="console-body" id="consoleBody">
+        <div class="console-empty">Clique sur un agent pour voir sa sortie en temps reel...</div>
+      </div>
+    </div>
+
+    <!-- Live log feed -->
+    <div class="log-section">
+      <div class="log-header">
+        <span class="log-title">Live Feed</span>
+        <span class="log-live"><span class="live-dot"></span> Realtime</span>
+      </div>
+      <div class="log-feed" id="logFeed">
+        <div class="log-empty">En attente de logs...</div>
+      </div>
     </div>
   </div>
 </div>
@@ -295,124 +989,893 @@ import { supabaseConfig } from '../../lib/supabase';
   const SUPABASE_URL = supabaseUrl;
   const SUPABASE_ANON_KEY = supabaseAnonKey;
 
+  // Agent definitions with colors
+  const ARENA_AGENTS = [
+    { key: 'fact-check', label: 'Fact-Check', color: '#fbbf24', icon: '&#10003;', desc: 'Verification medicale' },
+    { key: 'seo-audit', label: 'SEO Audit', color: '#38bdf8', icon: '&#128269;', desc: 'Crawl, meta, liens' },
+    { key: 'analytics', label: 'Analytics', color: '#4ade80', icon: '&#128202;', desc: 'Keywords ranking' },
+    { key: 'opportunities', label: 'Opportunites', color: '#c084fc', icon: '&#128161;', desc: 'Gaps, tendances' },
+    { key: 'internal-links', label: 'Maillage', color: '#f9a8d4', icon: '&#128279;', desc: 'Liens internes' },
+    { key: 'editorial', label: 'Editorial', color: '#67e8f9', icon: '&#9997;', desc: 'Redaction, corrections' },
+    { key: 'validator', label: 'Validator', color: '#86efac', icon: '&#128737;', desc: 'Build, qualite' },
+    { key: 'ui-designer', label: 'UI Designer', color: '#ec4899', icon: '&#127912;', desc: 'Design, UX' },
+  ];
+
+  const TAG_CLASSES = {
+    'seo-audit': 'tag-seo-audit',
+    'analytics': 'tag-analytics',
+    'fact-check': 'tag-fact-check',
+    'opportunities': 'tag-opportunities',
+    'editorial': 'tag-editorial',
+    'validator': 'tag-seo-audit',
+    'internal-links': 'tag-analytics',
+  };
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  function timeAgo(dateStr) {
+    if (!dateStr) return 'jamais';
+    const diff = Date.now() - new Date(dateStr).getTime();
+    if (diff < 60000) return '< 1min';
+    if (diff < 3600000) return Math.floor(diff / 60000) + 'min';
+    if (diff < 86400000) return Math.floor(diff / 3600000) + 'h';
+    return Math.floor(diff / 86400000) + 'j';
+  }
+
+  function formatDuration(ms) {
+    if (!ms) return '';
+    if (ms < 60000) return Math.round(ms / 1000) + 's';
+    return Math.floor(ms / 60000) + 'min ' + Math.round((ms % 60000) / 1000) + 's';
+  }
+
+  function formatTime(dateStr) {
+    if (!dateStr) return '--:--';
+    return new Date(dateStr).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
+  // ========== SUPABASE ==========
   async function supabaseFetch(table, query) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  async function supabaseFetchCount(table, query) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
       headers: {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer': 'count=exact',
+        'Range-Unit': 'items',
+        'Range': '0-0'
       }
     });
-    if (!response.ok) throw new Error(await response.text());
-    return response.json();
+    if (!r.ok) return 0;
+    const range = r.headers.get('content-range');
+    if (range) {
+      const total = range.split('/')[1];
+      return total === '*' ? 0 : parseInt(total);
+    }
+    return 0;
   }
 
-  function formatDate(dateStr) {
-    if (!dateStr) return '';
-    return new Date(dateStr).toLocaleDateString('fr-FR', {
-      day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
-    });
-  }
+  // ========== AGENT SERVER ==========
+  const AGENT_SERVER = '/__agent';
+  let serverOnline = false;
+  let runningAgents = {};
+  let serverStatus = null;
 
-  function statutLabel(statut) {
-    return {
-      pending_review: 'En attente',
-      approved: 'Approuve',
-      rejected: 'Rejete',
-      in_progress: 'En cours',
-      ready_to_deploy: 'Pret',
-      deployed: 'Deploye',
-      revision_needed: 'Revision'
-    }[statut] || statut;
-  }
-
-  function statutDotColor(statut) {
-    return {
-      pending_review: '#f59e0b',
-      approved: '#3b82f6',
-      rejected: '#ef4444',
-      in_progress: '#8b5cf6',
-      ready_to_deploy: '#22c55e',
-      deployed: '#16a34a',
-      revision_needed: '#f59e0b'
-    }[statut] || '#94a3b8';
-  }
-
-  async function loadOverview() {
+  async function checkServer() {
     try {
-      const [results, tickets] = await Promise.all([
-        supabaseFetch('fact_check_results', 'select=id,score_fiabilite,statut&limit=500'),
-        supabaseFetch('correction_tickets', 'select=id,statut,urgence,ticket_type,updated_at,title&order=updated_at.desc&limit=500')
-      ]);
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 2000);
+      const r = await fetch(`${AGENT_SERVER}/status`, { signal: ctrl.signal });
+      clearTimeout(timer);
+      const data = await r.json();
+      serverOnline = true;
+      serverStatus = data;
+      runningAgents = data.running || {};
+      window._serverBuffers = data.buffers || {};
+      window._serverCosts = data.costs || {};
+      window._serverTotalCost = data.totalCost || 0;
+      renderConsoleTabs();
+    } catch(e) {
+      serverOnline = false;
+      runningAgents = {};
+    }
+    document.getElementById('serverWarning').style.display = serverOnline ? 'none' : 'block';
+  }
 
-      // Stats
-      const urgent = tickets.filter(t => t.urgence === 'urgent' && t.statut === 'pending_review').length;
-      const pending = tickets.filter(t => t.statut === 'pending_review').length;
-      const ready = tickets.filter(t => t.statut === 'ready_to_deploy').length;
-      const avgScore = results.length > 0
-        ? Math.round(results.reduce((sum, r) => sum + (r.score_fiabilite || 0), 0) / results.length)
-        : 0;
-      const deployed = tickets.filter(t => t.statut === 'deployed').length;
+  async function launchAgent(name) {
+    if (!serverOnline) {
+      alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs');
+      return;
+    }
+    if (runningAgents[name]) return;
+    try {
+      const r = await fetch(`${AGENT_SERVER}/launch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: name })
+      });
+      const data = await r.json();
+      if (!data.ok) { alert('Erreur: ' + data.error); return; }
+      await checkServer();
+      await loadAgentRuns();
+      renderArena();
+    } catch(e) { alert('Erreur: ' + e.message); }
+  }
 
-      document.getElementById('stat-urgent').textContent = urgent;
-      document.getElementById('stat-pending').textContent = pending;
-      document.getElementById('stat-ready').textContent = ready;
-      document.getElementById('stat-score').textContent = avgScore + '/100';
+  async function stopAgent(name) {
+    try {
+      await fetch(`${AGENT_SERVER}/stop`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: name })
+      });
+      await checkServer();
+      await loadAgentRuns();
+      renderArena();
+    } catch(e) {}
+  }
 
-      // Module cards stats
-      const fcEl = document.getElementById('fc-stats');
-      if (fcEl) {
-        const urgentResults = results.filter(r => r.statut === 'Urgent').length;
-        fcEl.innerHTML = `
-          <span class="mini-stat" style="background:#fef2f2;color:#dc2626">${urgentResults} urgent(s)</span>
-          <span class="mini-stat" style="background:#f5f3ff;color:#7c3aed">${pending} en attente</span>
-        `;
-      }
-      const edEl = document.getElementById('ed-stats');
-      if (edEl) {
-        const inProg = tickets.filter(t => t.statut === 'approved' || t.statut === 'in_progress').length;
-        edEl.innerHTML = `
-          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${ready} pret(s)</span>
-          <span class="mini-stat" style="background:#f3e8ff;color:#7c3aed">${inProg} en cours</span>
-        `;
-      }
-      const intEl = document.getElementById('int-stats');
-      if (intEl) {
-        intEl.innerHTML = `
-          <span class="mini-stat" style="background:#dcfce7;color:#16a34a">${deployed} deploye(s)</span>
-        `;
-      }
-      const pipEl = document.getElementById('pip-stats');
-      if (pipEl) {
-        const active = tickets.filter(t => ['pending_review','approved','in_progress','ready_to_deploy','revision_needed'].includes(t.statut)).length;
-        pipEl.innerHTML = `
-          <span class="mini-stat" style="background:#e0e7ff;color:#4338ca">${active} actif(s)</span>
-        `;
-      }
+  // ========== ROUTINE PIPELINE ==========
+  let routineRunning = false;
+  let autopilotRunning = false; // compat
 
-      // Recent activity (last 10 tickets)
-      const recent = tickets.slice(0, 10);
-      const actEl = document.getElementById('activity');
-      if (recent.length === 0) {
-        actEl.innerHTML = '<div class="loading" style="color:#94a3b8">Aucune activite recente</div>';
-        return;
-      }
-      actEl.innerHTML = recent.map(t => `
-        <div class="activity-item">
-          <div class="activity-dot" style="background:${statutDotColor(t.statut)}"></div>
-          <span>${t.title || t.ticket_type || 'Ticket'} — <strong>${statutLabel(t.statut)}</strong></span>
-          <span class="activity-time">${formatDate(t.updated_at)}</span>
-        </div>
-      `).join('');
+  async function launchRoutine() {
+    if (routineRunning) { alert('Pipeline deja en cours...'); return; }
+    if (!serverOnline) { alert('Agent Server non connecte !\n\nLance: node scripts/agent-server.mjs'); return; }
 
-    } catch (err) {
-      console.error('Overview load error:', err);
-      document.getElementById('activity').innerHTML = `
-        <div style="padding:1rem;color:#991b1b;font-size:0.88rem">Erreur: ${err.message}</div>
-      `;
+    // Fire and forget — the server orchestrates everything in background
+    try {
+      const r = await fetch(`${AGENT_SERVER}/pipeline`, { method: 'POST' });
+      const data = await r.json();
+      if (!data.ok) { alert('Erreur: ' + (data.error || 'inconnue')); return; }
+      routineRunning = true;
+      autopilotRunning = true;
+      updateAutopilotUI();
+    } catch(e) {
+      alert('Erreur connexion agent-server: ' + e.message);
     }
   }
 
-  loadOverview();
+  function showRoutineInfo() {
+    alert(
+      'ROUTINE GLP-1 — Pipeline complet en 4 phases\n\n' +
+      '1. GENERATE : Lance fact-check + seo-audit + opportunities + internal-links\n' +
+      '   → Cree des tickets de correction dans Supabase\n\n' +
+      '2. EDIT : Lance 4 instances editorial en parallele\n' +
+      '   → Applique les corrections dans les fichiers markdown\n\n' +
+      '3. VALIDATE : Lance le validator\n' +
+      '   → Build check, si OK push main → deploy FTP auto\n\n' +
+      'Equivalent terminal : node scripts/routine.mjs\n' +
+      '(inclut aussi la sync analytics GA4/GSC)\n\n' +
+      'Les agents ecrivent dans Supabase (correction_tickets, fact_check_results, etc.)\n' +
+      'Seul l\'editorial modifie les fichiers. Seul le validator deploie.'
+    );
+  }
+
+  function updateAutopilotUI() {
+    const hero = document.getElementById('autopilotHero');
+    const btn = document.getElementById('apBigBtn');
+    const label = document.getElementById('apBtnLabel');
+    const badge = document.getElementById('apBadge');
+
+    // Check pipeline state from server
+    fetch(`${AGENT_SERVER}/pipeline/status`).then(r => r.json()).then(ps => {
+      routineRunning = ps.running;
+      autopilotRunning = ps.running;
+      if (ps.running) {
+        hero.classList.add('is-running');
+        btn.classList.add('running');
+        btn.innerHTML = '&#9632;';
+        label.textContent = 'En cours...';
+        badge.className = 'ap-status-badge running';
+        const phaseLabels = { sync: 'SYNC', generate: 'GENERATE', edit: 'EDIT', validate: 'VALIDATE', done: 'DONE', error: 'ERREUR' };
+        badge.textContent = phaseLabels[ps.phase] || ps.phase?.toUpperCase() || 'RUNNING';
+      } else {
+        hero.classList.remove('is-running');
+        btn.classList.remove('running');
+        btn.innerHTML = '&#9654;';
+        label.textContent = 'Lancer Pipeline';
+        if (ps.phase === 'done') {
+          badge.className = 'ap-status-badge idle';
+          badge.textContent = 'TERMINE';
+        } else if (ps.phase === 'error') {
+          badge.className = 'ap-status-badge idle';
+          badge.textContent = 'ERREUR';
+        } else {
+          badge.className = 'ap-status-badge idle';
+          badge.textContent = 'IDLE';
+        }
+      }
+    }).catch(() => {});
+
+    // Active agents count
+    const activeCount = Object.keys(runningAgents).filter(k => k !== 'autopilot').length;
+    document.getElementById('apAgentsActive').textContent = activeCount;
+
+    // Token estimation per agent type (tokens/minute based on observed patterns)
+    // Claude Max: rolling window — tokens consumed > WINDOW hours ago are recovered
+    const TOKEN_RATE_PER_MIN = {
+      'editorial': 8000, 'validator': 6000, 'fact-check': 10000,
+      'seo-audit': 5000, 'analytics': 4000, 'opportunities': 5000,
+      'internal-links': 4000, 'ui-designer': 7000, 'strategist': 3000,
+      'sav-email': 5000, 'autopilot': 2000,
+    };
+    const ROLLING_WINDOW_H = 5;
+    const MAX_TOKENS = 5000000;
+    const windowMs = ROLLING_WINDOW_H * 3600000;
+    const now = Date.now();
+
+    // Estimate tokens per run with age tracking
+    const runTokens = Object.values(agentRuns).map(r => {
+      const startT = new Date(r.started_at).getTime();
+      const endT = r.completed_at ? new Date(r.completed_at).getTime() : now;
+      const durationMin = Math.min(30, (endT - startT) / 60000);
+      const rate = TOKEN_RATE_PER_MIN[r.agent_name] || 5000;
+      const tokens = Math.round(rate * durationMin);
+      const age = now - endT; // ms since run ended
+      return { tokens, age, startT, endT, agent: r.agent_name };
+    });
+
+    // Current window: only runs that ended within the rolling window
+    const inWindow = runTokens.filter(r => r.age < windowMs);
+    const estimatedTokens = inWindow.reduce((s, r) => s + r.tokens, 0);
+
+    // Tokens recovering soon (runs ending 4-5h ago, about to fall off)
+    const recoveringSoon = inWindow.filter(r => r.age > (windowMs - 3600000)); // last hour of window
+    const recoveryPerHour = recoveringSoon.reduce((s, r) => s + r.tokens, 0);
+
+    // Active burn: tokens from runs started in last 30min (currently consuming)
+    const activeBurn = inWindow.filter(r => (now - r.startT) < 1800000);
+    const activeBurnPerMin = activeBurn.reduce((s, r) => {
+      const rate = TOKEN_RATE_PER_MIN[r.agent] || 5000;
+      // If still running, it's actively burning
+      return s + (r.age < 0 || !r.endT ? rate : 0);
+    }, 0);
+
+    const budgetFill = document.getElementById('apBudgetFill');
+    const budgetVal = document.getElementById('apBudgetVal');
+    const tokenPct = Math.min(100, Math.round(estimatedTokens / MAX_TOKENS * 100));
+    const tokenDisplay = estimatedTokens > 1000000
+      ? (estimatedTokens / 1000000).toFixed(1) + 'M'
+      : Math.round(estimatedTokens / 1000) + 'k';
+    const recoveryDisplay = recoveryPerHour > 1000
+      ? Math.round(recoveryPerHour / 1000) + 'k'
+      : recoveryPerHour.toString();
+    budgetFill.style.width = tokenPct + '%';
+    budgetFill.style.background = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#3b82f6';
+    budgetVal.innerHTML = `~${tokenDisplay} / 5M · ${inWindow.length} runs · <span style="color:#4ade80">↻${recoveryDisplay} recup/h</span>`;
+
+    const budgetLabel = document.querySelector('.ap-budget-label');
+    if (budgetLabel) {
+      budgetLabel.textContent = tokenPct >= 80 ? '⚠ TOKENS (ralentir)' : tokenPct >= 50 ? '◐ TOKENS' : '● TOKENS';
+      budgetLabel.style.color = tokenPct > 80 ? '#f87171' : tokenPct > 50 ? '#fbbf24' : '#475569';
+    }
+
+    // ---- BURN RATE (net: consumption - recovery) ----
+    if (!window._tokenSnapshots) window._tokenSnapshots = [];
+    const snapshots = window._tokenSnapshots;
+    snapshots.push({ t: now, tokens: estimatedTokens, activeAgents: activeBurn.length });
+    while (snapshots.length > 0 && (now - snapshots[0].t) > 300000) snapshots.shift();
+
+    const burnFill = document.getElementById('apBurnFill');
+    const burnVal = document.getElementById('apBurnVal');
+    const burnLabel = document.getElementById('apBurnLabel');
+
+    if (snapshots.length >= 2) {
+      let refSnap = snapshots[0];
+      for (const s of snapshots) {
+        if ((now - s.t) >= 60000) refSnap = s;
+      }
+      const dtMin = (now - refSnap.t) / 60000;
+      const dTokens = estimatedTokens - refSnap.tokens;
+
+      if (dtMin > 0.3) {
+        const grossBurn = Math.round(dTokens / dtMin); // observed change per min
+        const recoveryPerMin = Math.round(recoveryPerHour / 60);
+        const netBurn = grossBurn; // already net (estimatedTokens accounts for window)
+        const fmtRate = (v) => Math.abs(v) > 1000 ? Math.round(v / 1000) + 'k' : v.toString();
+
+        const MAX_BURN = 100000;
+        const burnPct = Math.min(100, Math.round(Math.abs(netBurn) / MAX_BURN * 100));
+        burnFill.style.width = burnPct + '%';
+
+        if (netBurn > 50000) {
+          burnFill.style.background = '#f87171';
+          burnLabel.textContent = '🔥 BURN RATE';
+          burnLabel.style.color = '#f87171';
+        } else if (netBurn > 20000) {
+          burnFill.style.background = '#fbbf24';
+          burnLabel.textContent = '◐ BURN RATE';
+          burnLabel.style.color = '#fbbf24';
+        } else if (netBurn > 0) {
+          burnFill.style.background = '#3b82f6';
+          burnLabel.textContent = '● BURN RATE';
+          burnLabel.style.color = '#475569';
+        } else if (netBurn < -1000) {
+          // Recovering! More tokens falling off than being consumed
+          burnFill.style.background = '#22c55e';
+          burnLabel.textContent = '♻ RECOVERING';
+          burnLabel.style.color = '#22c55e';
+        } else {
+          burnFill.style.background = '#1e293b';
+          burnLabel.textContent = '○ BURN RATE';
+          burnLabel.style.color = '#334155';
+        }
+
+        const remaining = MAX_TOKENS - estimatedTokens;
+        if (netBurn > 0 && remaining > 0) {
+          const minsLeft = Math.round(remaining / netBurn);
+          const hLeft = Math.floor(minsLeft / 60);
+          const mLeft = minsLeft % 60;
+          const timeStr = hLeft > 0 ? `${hLeft}h${mLeft.toString().padStart(2,'0')}` : `${mLeft}min`;
+          const color = minsLeft < 30 ? '#f87171' : minsLeft < 120 ? '#fbbf24' : '#4ade80';
+          burnVal.innerHTML = `${fmtRate(netBurn)} tok/min · <span style="color:${color}">${timeStr} restant</span>`;
+        } else if (netBurn < -1000) {
+          burnVal.innerHTML = `<span style="color:#4ade80">+${fmtRate(Math.abs(netBurn))} tok/min recup</span> · capacite en hausse`;
+        } else if (netBurn <= 0) {
+          burnVal.textContent = 'idle — tokens se recuperent';
+        } else {
+          burnVal.textContent = `${fmtRate(netBurn)} tok/min`;
+        }
+      } else {
+        burnVal.textContent = 'mesure en cours...';
+      }
+    } else {
+      burnVal.textContent = 'en attente (30s)...';
+    }
+  }
+
+  // ========== CHARACTER HTML BUILDER ==========
+  function buildCharacter(state, color, index) {
+    const delayClass = 'd' + ((index % 4) + 1);
+    const style = `--agent-color:${color}`;
+
+    if (state === 'sleeping') {
+      return `<div class="char sleeping" style="${style}">
+        <span class="zzz">z</span><span class="zzz">z</span><span class="zzz">z</span>
+        <div class="char-head"></div>
+        <div class="char-body">
+          <div class="char-arms">
+            <div class="char-arm left"></div>
+            <div class="char-arm right"></div>
+          </div>
+        </div>
+        <div class="char-legs">
+          <div class="char-leg left"></div>
+          <div class="char-leg right"></div>
+        </div>
+      </div>`;
+    }
+
+    if (state === 'dancing') {
+      return `<div class="char dancing ${delayClass}" style="${style}">
+        <div class="char-head"></div>
+        <div class="char-body">
+          <div class="char-arms">
+            <div class="char-arm left"></div>
+            <div class="char-arm right"></div>
+          </div>
+        </div>
+        <div class="char-legs">
+          <div class="char-leg left"></div>
+          <div class="char-leg right"></div>
+        </div>
+      </div>`;
+    }
+
+    // idle
+    return `<div class="char idle" style="${style}">
+      <div class="char-head"></div>
+      <div class="char-body">
+        <div class="char-arms">
+          <div class="char-arm left"></div>
+          <div class="char-arm right"></div>
+        </div>
+      </div>
+      <div class="char-legs">
+        <div class="char-leg left"></div>
+        <div class="char-leg right"></div>
+      </div>
+    </div>`;
+  }
+
+  // ========== ARENA RENDERING ==========
+  let arenaPendingCounts = {};
+
+  function renderArena() {
+    const grid = document.getElementById('arenaGrid');
+    if (!grid) return;
+
+    grid.innerHTML = ARENA_AGENTS.map(agent => {
+      const run = agentRuns[agent.key];
+      const hasRun = !!run;
+      const pending = arenaPendingCounts[agent.key] || 0;
+
+      // Count running instances
+      let activeInstances = 0;
+      const instanceNames = [];
+      for (const k of Object.keys(runningAgents)) {
+        if (k === agent.key || k.startsWith(agent.key + '-')) {
+          activeInstances++;
+          instanceNames.push(k);
+        }
+      }
+
+      // Determine character states
+      let characters = '';
+      if (activeInstances > 0) {
+        for (let i = 0; i < activeInstances; i++) {
+          characters += buildCharacter('dancing', agent.color, i);
+        }
+        // Hint: sleeping bonhomme if lots of pending work
+        if (pending > 10 && activeInstances < 3) {
+          characters += buildCharacter('sleeping', agent.color, activeInstances);
+        }
+      } else if (hasRun) {
+        characters += buildCharacter('idle', agent.color, 0);
+      } else {
+        characters += buildCharacter('sleeping', agent.color, 0);
+      }
+
+      // Cost from server
+      const cost = window._serverCosts?.[agent.key] || 0;
+      const costHtml = cost > 0 ? `<span style="font-size:0.45rem;color:#475569">$${cost.toFixed(2)}</span>` : '';
+
+      // Pending badge
+      let pendingHtml = '';
+      if (pending > 0) {
+        pendingHtml = `<span class="pending-badge" style="background:${agent.color}22;color:${agent.color}">${pending} en attente</span>`;
+      }
+
+      // Meta left
+      let metaLeft = '';
+      if (activeInstances > 0) {
+        const uptime = runningAgents[agent.key]?.uptime || '';
+        metaLeft = uptime || 'en cours...';
+      } else if (hasRun) {
+        metaLeft = timeAgo(run.completed_at || run.started_at);
+      } else {
+        metaLeft = 'jamais lance';
+      }
+
+      const countBadge = activeInstances > 0
+        ? `<span class="arena-cell-count active" style="--agent-color:${agent.color}">x${activeInstances}</span>`
+        : `<span class="arena-cell-count zero">x0</span>`;
+
+      // Action buttons — inline, no more prompt()
+      let btns = '';
+      if (serverOnline) {
+        if (activeInstances === 0) {
+          btns = `<button class="arena-btn arena-btn-go" onclick="event.stopPropagation();launchAgent('${agent.key}')" title="Lancer">+</button>`;
+        } else {
+          // Show console button + spawn more button
+          btns = `<button class="arena-btn arena-btn-console" onclick="event.stopPropagation();selectConsoleAgent('${instanceNames[0]}')" title="Console">&#128187;</button>`
+            + `<button class="arena-btn arena-btn-spawn" onclick="event.stopPropagation();launchAgentMulti('${agent.key}')" title="Spawner +1">+1</button>`
+            + `<button class="arena-btn arena-btn-stop" onclick="event.stopPropagation();stopAllInstances('${agent.key}')" title="Stopper tout">&#9632;</button>`;
+        }
+      }
+
+      return `<div class="arena-cell ${activeInstances > 0 ? 'has-active' : ''}" style="--agent-color:${agent.color}" onclick="selectConsoleAgent('${instanceNames[0] || agent.key}')">
+        <div class="arena-cell-header">
+          <span class="arena-cell-name">${agent.label}</span>
+          ${costHtml}
+          ${countBadge}
+        </div>
+        <div class="arena-stage">${characters}</div>
+        <div class="arena-cell-actions">${btns}</div>
+        <div class="arena-cell-meta">
+          <span>${metaLeft}</span>
+          ${pendingHtml}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  async function launchAgentMulti(name) {
+    if (!serverOnline) return;
+    try {
+      const r = await fetch(`${AGENT_SERVER}/launch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent: name, allowMultiple: true })
+      });
+      const data = await r.json();
+      if (!data.ok) { alert('Erreur: ' + data.error); return; }
+      await checkServer();
+      await loadAgentRuns();
+      renderArena();
+    } catch(e) { alert('Erreur: ' + e.message); }
+  }
+
+  async function stopAllInstances(baseKey) {
+    for (const k of Object.keys(runningAgents)) {
+      if (k === baseKey || k.startsWith(baseKey + '-')) {
+        await stopAgent(k);
+      }
+    }
+    renderArena();
+  }
+
+  window.launchAgent = launchAgent;
+  window.stopAgent = stopAgent;
+  window.launchAgentMulti = launchAgentMulti;
+  window.stopAllInstances = stopAllInstances;
+
+  // ========== LOAD DATA ==========
+  let agentRuns = {};
+
+  async function loadAgentRuns() {
+    try {
+      const runs = await supabaseFetch('agent_runs', 'select=*&order=started_at.desc&limit=50');
+      const latest = {};
+      for (const r of runs) {
+        if (!latest[r.agent_name]) latest[r.agent_name] = r;
+      }
+      agentRuns = latest;
+
+      // Update autopilot stats
+      const apRun = latest['autopilot'];
+      if (apRun && apRun.metadata) {
+        const m = apRun.metadata;
+        if (m.cycle) document.getElementById('apCycle').textContent = m.cycle;
+      }
+      const apLast = document.getElementById('apLastRun');
+      if (apRun) apLast.textContent = timeAgo(apRun.completed_at || apRun.started_at);
+
+      // Tickets processed 24h
+      const processed24h = runs.filter(r => {
+        const age = Date.now() - new Date(r.started_at).getTime();
+        return age < 86400000 && r.metadata?.items_processed;
+      }).reduce((sum, r) => sum + (r.metadata.items_processed || 0), 0);
+      document.getElementById('apTicketsProcessed').textContent = processed24h || '--';
+
+      updateAutopilotUI();
+      renderArena();
+    } catch (e) { console.error('Admin load error:', e); }
+  }
+
+  async function loadPendingCounts() {
+    try {
+      const [tickets, links, opps] = await Promise.all([
+        supabaseFetch('correction_tickets', 'select=source_agent,statut&statut=eq.approved'),
+        supabaseFetchCount('internal_link_suggestions', 'status=eq.approved'),
+        supabaseFetchCount('content_opportunities', 'status=eq.approved'),
+      ]);
+
+      // Count tickets by source
+      const bySource = {};
+      for (const t of tickets) {
+        const src = t.source_agent || 'fact-check';
+        bySource[src] = (bySource[src] || 0) + 1;
+      }
+
+      arenaPendingCounts = {
+        'fact-check': bySource['fact-check'] || 0,
+        'seo-audit': bySource['seo-audit'] || 0,
+        'analytics': bySource['analytics'] || 0,
+        'validator': bySource['validator'] || 0,
+        'internal-links': links,
+        'opportunities': opps,
+        'editorial': (tickets.length || 0) + links + opps,
+      };
+
+      renderArena();
+    } catch(e) {}
+  }
+
+  // ========== KPIs ==========
+  async function loadHealthKPIs() {
+    try {
+      const [articles, seoTickets, keywords, opps, ticketsAll] = await Promise.all([
+        supabaseFetch('articles', 'select=id,is_active,last_fact_checked&is_active=eq.true'),
+        supabaseFetch('correction_tickets', 'select=id,statut,source_agent&source_agent=eq.seo-audit'),
+        supabaseFetch('keyword_rankings', 'select=keyword,position,checked_at&order=checked_at.desc&limit=500'),
+        supabaseFetch('content_opportunities', 'select=id,status'),
+        supabaseFetch('correction_tickets', 'select=id,statut,created_at'),
+      ]);
+
+      // Articles
+      document.getElementById('kpiArticles').textContent = articles.length;
+      const now = Date.now();
+      const recent = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * 86400000).length;
+      document.getElementById('kpiArticlesSub').innerHTML = `<span style="color:#4ade80">${recent}</span> verifies < 14j`;
+
+      // Fact-check coverage
+      const verified = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * 86400000).length;
+      const pct = articles.length > 0 ? Math.round(verified / articles.length * 100) : 0;
+      document.getElementById('kpiFactCheck').textContent = pct + '%';
+      document.getElementById('kpiFactCheckSub').textContent = `${verified}/${articles.length} < 14j`;
+      document.getElementById('kpiFactCheckBar').style.width = pct + '%';
+      document.getElementById('kpiFactCheckBar').style.background = pct > 70 ? '#22c55e' : pct > 40 ? '#fbbf24' : '#f87171';
+
+      // SEO
+      const seoApproved = seoTickets.filter(t => t.statut === 'approved').length;
+      const seoDone = seoTickets.filter(t => t.statut === 'deployed' || t.statut === 'ready_to_deploy').length;
+      document.getElementById('kpiSeoIssues').textContent = seoApproved;
+      document.getElementById('kpiSeoIssues').style.color = seoApproved > 0 ? '#f87171' : '#22c55e';
+      document.getElementById('kpiSeoSub').textContent = seoApproved > 0 ? `a corriger (${seoDone}/${seoTickets.length} resolus)` : `OK (${seoTickets.length} total)`;
+      const seoPct = seoTickets.length > 0 ? Math.round(seoDone / seoTickets.length * 100) : 100;
+      document.getElementById('kpiSeoBar').style.width = seoPct + '%';
+
+      // Keywords
+      const latestKw = {};
+      for (const k of keywords) { if (!latestKw[k.keyword]) latestKw[k.keyword] = k; }
+      const uniqueKw = Object.values(latestKw);
+      const top10 = uniqueKw.filter(k => k.position && k.position <= 10).length;
+      const avgPos = uniqueKw.length > 0 ? (uniqueKw.reduce((s, k) => s + (k.position || 100), 0) / uniqueKw.length).toFixed(1) : '--';
+      document.getElementById('kpiKeywords').textContent = top10;
+      document.getElementById('kpiKeywordsSub').innerHTML = `/${uniqueKw.length} &middot; moy ${avgPos}`;
+      document.getElementById('kpiKeywordsBar').style.width = (uniqueKw.length > 0 ? Math.round(top10 / uniqueKw.length * 100) : 0) + '%';
+
+      // Opps
+      const oppApproved = opps.filter(o => o.status === 'approved').length;
+      const oppPublished = opps.filter(o => o.status === 'published').length;
+      document.getElementById('kpiOpps').textContent = oppApproved;
+      document.getElementById('kpiOppsSub').innerHTML = `en attente &middot; <span style="color:#4ade80">${oppPublished} publiees</span>`;
+
+      // Throughput
+      const last7d = now - 7 * 86400000;
+      const last24h = now - 86400000;
+      const deployedRecent = ticketsAll.filter(t => t.statut === 'deployed' && new Date(t.created_at).getTime() > last7d).length;
+      const pendingAll = ticketsAll.filter(t => t.statut === 'approved').length;
+      const inProgress = ticketsAll.filter(t => t.statut === 'in_progress').length;
+      document.getElementById('kpiThroughput').textContent = deployedRecent;
+      document.getElementById('kpiThroughputSub').innerHTML = `deployes &middot; <span style="color:#fbbf24">${pendingAll} en stock</span>`;
+      // Throughput bar: ratio deployed vs total active
+      const totalActive = pendingAll + inProgress + deployedRecent;
+      const throughputPct = totalActive > 0 ? Math.round(deployedRecent / totalActive * 100) : 0;
+      document.getElementById('kpiThroughputBar').style.width = throughputPct + '%';
+      document.getElementById('kpiThroughputBar').style.background = throughputPct > 70 ? '#22c55e' : throughputPct > 40 ? '#fbbf24' : '#f87171';
+
+      // Debit / Charge — tickets created vs resolved last 24h
+      const created24h = ticketsAll.filter(t => new Date(t.created_at).getTime() > last24h).length;
+      const resolved24h = ticketsAll.filter(t => (t.statut === 'deployed' || t.statut === 'ready_to_deploy') && new Date(t.created_at).getTime() > last24h).length;
+      const ratio = created24h > 0 ? (resolved24h / created24h) : (resolved24h > 0 ? 99 : 0);
+      const ratioDisplay = created24h > 0 ? ratio.toFixed(1) + 'x' : '--';
+      document.getElementById('kpiEfficiency').textContent = ratioDisplay;
+      document.getElementById('kpiEfficiency').style.color = ratio >= 1 ? '#22c55e' : ratio >= 0.5 ? '#fbbf24' : '#f87171';
+      document.getElementById('kpiEfficiencySub').innerHTML = `<span style="color:#4ade80">↑${resolved24h}</span> resolus &middot; <span style="color:#f87171">↓${created24h}</span> crees (24h)`;
+      const effPct = Math.min(100, Math.round(ratio * 50));
+      document.getElementById('kpiEfficiencyBar').style.width = effPct + '%';
+      document.getElementById('kpiEfficiencyBar').style.background = ratio >= 1 ? '#22c55e' : ratio >= 0.5 ? '#fbbf24' : '#f87171';
+    } catch(e) {}
+  }
+
+  // ========== LOG FEED ==========
+  let lastLogId = null;
+
+  async function loadLogs(append) {
+    try {
+      const logs = await supabaseFetch('agent_logs', 'select=*&order=created_at.desc&limit=50');
+      const feed = document.getElementById('logFeed');
+      if (logs.length === 0) {
+        if (!append) feed.innerHTML = '<div class="log-empty">En attente de logs...</div>';
+        return;
+      }
+      if (append && lastLogId === logs[0].id) return;
+      lastLogId = logs[0].id;
+
+      feed.innerHTML = logs.map(log => {
+        const meta = log.metadata || {};
+        const details = meta.action || meta.tickets_created !== undefined
+          ? `${meta.action || ''} ${meta.tickets_created ? meta.tickets_created + ' tickets' : ''} ${meta.score ? 'score:' + meta.score : ''}`.trim()
+          : '';
+        const tagClass = TAG_CLASSES[log.agent_type] || 'tag-seo-audit';
+        const statusClass = log.status === 'success' ? 'ls-success' : 'ls-error';
+
+        return `<div class="log-entry">
+          <span class="log-time">${formatTime(log.created_at)}</span>
+          <span class="log-agent-tag ${tagClass}">${escapeHtml(log.agent_type)}</span>
+          <span class="log-message">${escapeHtml(details || '-')}</span>
+          <span class="log-status ${statusClass}">${escapeHtml(log.status)}</span>
+        </div>`;
+      }).join('');
+    } catch (e) { console.error('Admin load error:', e); }
+  }
+
+  // ========== AGENT CONSOLE ==========
+  let consoleAgent = null;
+  let consoleSince = 0;
+  let consoleAutoScroll = true;
+  let consoleTimer = null;
+
+  // Map server-side level to CSS class
+  function levelToClass(level) {
+    const map = {
+      'tool': 'cl-tool',
+      'result': 'cl-result',
+      'error': 'cl-error',
+      'progress': 'cl-progress',
+      'action': 'cl-action',
+      'cost': 'cl-cost',
+      'info': 'cl-info',
+    };
+    return map[level] || 'cl-info';
+  }
+
+  function levelToLineCls(level) {
+    if (level === 'result') return 'has-result';
+    if (level === 'error') return 'has-error';
+    if (level === 'progress') return 'has-progress';
+    return '';
+  }
+
+  // Console filter
+  // Always essential mode — hide tool/info noise
+  (function() {
+    const body = document.getElementById('consoleBody');
+    if (body) body.className = 'console-body filter-essential';
+  })();
+
+  function formatConsoleTs(isoStr) {
+    if (!isoStr) return '';
+    return new Date(isoStr).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+
+  function renderConsoleTabs() {
+    const tabsEl = document.getElementById('consoleTabs');
+    if (!tabsEl) return;
+    const agentNames = new Set();
+    for (const name of Object.keys(runningAgents)) agentNames.add(name);
+    if (window._serverBuffers) {
+      for (const name of Object.keys(window._serverBuffers)) agentNames.add(name);
+    }
+    if (agentNames.size === 0) { tabsEl.innerHTML = ''; return; }
+
+    tabsEl.innerHTML = [...agentNames].sort().map(name => {
+      const isRunning = !!runningAgents[name];
+      const isActive = consoleAgent === name;
+      const lineCount = window._serverBuffers?.[name]?.lines || 0;
+      return `<button class="console-tab ${isActive ? 'active' : ''}" onclick="selectConsoleAgent('${name}')">
+        <span class="tab-dot ${isRunning ? 'running' : 'stopped'}"></span>
+        ${name}
+        ${lineCount > 0 ? `<span class="tab-lines">(${lineCount})</span>` : ''}
+      </button>`;
+    }).join('');
+  }
+
+  function selectConsoleAgent(name) {
+    consoleAgent = name;
+    consoleSince = 0;
+    consoleAutoScroll = true;
+    document.getElementById('consoleBody').innerHTML = '<div class="console-empty">Chargement...</div>';
+    renderConsoleTabs();
+    fetchConsoleOutput();
+    if (consoleTimer) clearInterval(consoleTimer);
+    consoleTimer = setInterval(fetchConsoleOutput, 1500);
+  }
+
+  async function fetchConsoleOutput() {
+    if (!consoleAgent || !serverOnline) return;
+    try {
+      const r = await fetch(`${AGENT_SERVER}/output/${consoleAgent}?since=${consoleSince}`);
+      const data = await r.json();
+      const body = document.getElementById('consoleBody');
+      const statusEl = document.getElementById('consoleStatus');
+
+      if (statusEl) {
+        statusEl.textContent = data.running ? `RUNNING (${data.total} lines)` : `STOPPED (${data.total} lines)`;
+        statusEl.style.color = data.running ? '#22c55e' : '#475569';
+      }
+
+      if (data.lines.length === 0 && consoleSince === 0) {
+        body.innerHTML = '<div class="console-empty">Aucune sortie</div>';
+        return;
+      }
+      if (data.lines.length === 0) return;
+      if (consoleSince === 0) body.innerHTML = '';
+
+      const fragment = document.createDocumentFragment();
+      for (const line of data.lines) {
+        const div = document.createElement('div');
+        const level = line.level || 'info';
+        const cls = levelToClass(level);
+        const lineCls = levelToLineCls(level);
+        div.className = 'console-line level-' + level + (lineCls ? ' ' + lineCls : '');
+        div.innerHTML = `<span class="console-line-ts">${formatConsoleTs(line.ts)}</span><span class="console-line-text ${cls}">${escapeHtml(line.text)}</span>`;
+        fragment.appendChild(div);
+      }
+      body.appendChild(fragment);
+      consoleSince = data.total;
+      if (consoleAutoScroll) body.scrollTop = body.scrollHeight;
+    } catch(e) {}
+  }
+
+  document.getElementById('consoleBody')?.addEventListener('scroll', function() {
+    consoleAutoScroll = (this.scrollHeight - this.scrollTop - this.clientHeight) < 30;
+  });
+
+  window.selectConsoleAgent = selectConsoleAgent;
+  window.toggleAutopilot = launchRoutine; // compat
+  window.launchRoutine = launchRoutine;
+
+  // ========== CLOCK ==========
+  function updateClock() {
+    document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // ========== REALTIME ==========
+  function setupRealtime() {
+    const wsUrl = SUPABASE_URL.replace('https://', 'wss://') + '/realtime/v1/websocket?apikey=' + SUPABASE_ANON_KEY + '&vsn=1.0.0';
+    let ws;
+
+    function connect() {
+      ws = new WebSocket(wsUrl);
+      ws.onopen = () => {
+        ws.send(JSON.stringify({
+          topic: 'realtime:public:agent_runs',
+          event: 'phx_join',
+          payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_runs' }] } },
+          ref: '1'
+        }));
+        ws.send(JSON.stringify({
+          topic: 'realtime:public:agent_logs',
+          event: 'phx_join',
+          payload: { config: { broadcast: { self: false }, postgres_changes: [{ event: '*', schema: 'public', table: 'agent_logs' }] } },
+          ref: '2'
+        }));
+        setInterval(() => {
+          if (ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({ topic: 'phoenix', event: 'heartbeat', payload: {}, ref: 'hb' }));
+          }
+        }, 30000);
+      };
+      ws.onmessage = (event) => {
+        try {
+          const msg = JSON.parse(event.data);
+          if (msg.event === 'postgres_changes') {
+            loadAgentRuns();
+            loadLogs(true);
+            loadPendingCounts();
+          }
+        } catch(e) {}
+      };
+      ws.onclose = () => setTimeout(connect, 3000);
+      ws.onerror = () => ws.close();
+    }
+    connect();
+  }
+
+  // ========== POLLING ==========
+  setInterval(() => {
+    checkServer().then(() => {
+      updateAutopilotUI();
+      renderArena();
+      // Auto-open console for first running agent
+      if (!consoleAgent) {
+        const running = Object.keys(runningAgents);
+        if (running.length > 0) selectConsoleAgent(running[0]);
+      }
+    });
+    loadLogs(true);
+  }, 5000);
+
+  setInterval(() => {
+    Promise.all([loadPendingCounts(), loadHealthKPIs()]).then(() => loadAgentRuns());
+  }, 30000);
+
+  // ========== INIT ==========
+  Promise.all([checkServer(), loadPendingCounts(), loadHealthKPIs()]).then(() => {
+    loadAgentRuns();
+    loadLogs(false);
+  });
+  setupRealtime();
 </script>
 
 </body>

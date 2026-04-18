@@ -1,9 +1,10 @@
 ---
-title: "GLP-1 France : Guide Complet des Traitements pour le Diabète et la Perte de Poids 2025"
-description: "Site de référence sur les traitements GLP-1 en France. Guides experts, comparatifs médicaments (Ozempic, Wegovy, Mounjaro), témoignages patients et conseils pratiques pour votre parcours santé."
-slug: "/"
+title: "GLP-1 France : Guide Traitements Diabète et Perte de Poids"
+description: "Site de référence sur les traitements GLP-1 en France. Guides experts, comparatifs Ozempic, Wegovy, Mounjaro et conseils pratiques pour votre santé."
 pageType: "Homepage"
 noIndex: false
+date: 2025-08-01
+mainKeyword: "traitements GLP-1 France"
 thumbnail: "/images/thumbnails/homepage-illus.jpg"
 thumbnailAlt: "GLP-1 France - Guide complet des traitements"
 ---
@@ -32,15 +33,15 @@ Les **agonistes du récepteur GLP-1** (Glucagon-Like Peptide-1) représentent un
 
 | Traitement | Indication | Efficacité Poids | Prix/Mois | Remboursement |
 |------------|------------|------------------|-----------|---------------|
-| **Ozempic** | Diabète T2 | -12% à -15% | ~59,90€/stylo | Remboursé 65% (DT2) |
+| **Ozempic** | Diabète T2 | -5% à -10% | ~76,58€/stylo | Remboursé 30% (DT2) |
 | **Wegovy** | Obésité | -15% à -17% | 169-360€ | NON remboursé |
 | **Saxenda** | Obésité | -8% à -12% | 240-300€ | NON remboursé |
 | **Mounjaro** | DT2 / Obésité | -17% à -21% | 230-440€ | NON remboursé |
 | **Trulicity** | Diabète T2 | -3% à -5% | ~81€ | Remboursé 65% (DT2) |
 | **Victoza** | Diabète T2 | -3% à -6% | ~60,26€ | Remboursé 65% (DT2) |
-| **Rybelsus** | Diabète T2 | -4% à -7% | 80-110€ | Remboursé 65% (DT2) |
+| **Rybelsus** | Diabète T2 | -4% à -7% | 80-110€ | NON remboursé |
 
-*Prix indicatifs mars 2026. Le remboursement à 65% concerne uniquement l'indication diabète de type 2 (DT2) sur prescription. Les traitements indiqués pour l'obésité (Wegovy, Saxenda, Mounjaro) restent à la charge du patient. Mounjaro (tirzépatide) et Trulicity (dulaglutide) sont fabriqués par Eli Lilly. Consultation médicale requise.*
+*Prix indicatifs mars 2026. Ozempic est remboursé à 30% (SMR modéré, DT2 uniquement) ; Trulicity et Victoza sont remboursés à 65% (DT2 uniquement). Rybelsus n'est pas remboursé (avis HAS défavorable). Les traitements indiqués pour l'obésité (Wegovy, Saxenda, Mounjaro) restent entièrement à la charge du patient. Consultation médicale requise.*
 
 ## 🏥 Nos Services Experts
 

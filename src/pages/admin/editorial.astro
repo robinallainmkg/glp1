@@ -1,7 +1,4 @@
 ---
-// src/pages/admin/editorial.astro
-// Dashboard Editorial — Client-side rendering (Hostinger static)
-// Design: glp1-dashboard-v2.html reference
 import AdminNav from '../../components/AdminNav.astro';
 import { supabaseConfig } from '../../lib/supabase';
 ---
@@ -10,859 +7,589 @@ import { supabaseConfig } from '../../lib/supabase';
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editorial - GLP1 Admin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style is:inline>
-    :root {
-      --bg: #f7f5f2;
-      --surface: #ffffff;
-      --surface2: #f0ede8;
-      --surface3: #e8e4dd;
-      --border: #e2ddd6;
-      --border2: #d0c9be;
-      --text: #18150f;
-      --text2: #3d3830;
-      --muted: #7a7268;
-      --urgent: #b83030;
-      --urgent-light: #fdf2f2;
-      --urgent-border: #edc0c0;
-      --warning: #9a6200;
-      --warning-light: #fdf8ee;
-      --warning-border: #e8d090;
-      --ok: #1e6e3a;
-      --ok-light: #f0faf4;
-      --ok-border: #a8dab8;
-      --blue: #1a3f7a;
-      --blue-light: #eef3fc;
-      --blue-border: #a8c0e8;
-      --purple: #5a3a8a;
-      --purple-light: #f5f0fc;
-      --purple-border: #c8a8e8;
-    }
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Bricolage Grotesque', sans-serif;
-      min-height: 100vh;
-      font-size: 14px;
-    }
-    .admin-layout { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: all 0.15s; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
+    .main { padding: 2rem; }
 
-    /* Topbar */
-    .topbar {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 0 32px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
-      position: sticky;
-      top: 0;
-      z-index: 40;
-    }
-    .topbar-left { display: flex; align-items: center; gap: 16px; }
-    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
-    .topbar-meta {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      padding: 3px 8px;
-      background: var(--surface2);
-      border-radius: 4px;
-    }
-    .topbar-actions { display: flex; gap: 8px; }
+    /* Stats cards */
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
 
-    /* Buttons */
-    .btn {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 7px 14px;
-      border-radius: 7px;
-      cursor: pointer;
-      border: none;
-      transition: all 0.15s;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
-    .btn:active:not(:disabled) { transform: scale(0.97); }
-    .btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
-    .btn-ghost:hover:not(:disabled) { border-color: var(--text); color: var(--text); }
-    .btn-blue { background: var(--blue-light); border: 1px solid var(--blue-border); color: var(--blue); }
-    .btn-blue:hover:not(:disabled) { background: var(--blue); color: white; }
-    .btn-ok { background: var(--ok-light); border: 1px solid var(--ok-border); color: var(--ok); }
-    .btn-ok:hover:not(:disabled) { background: var(--ok); color: white; }
-    .btn-danger { background: var(--urgent-light); border: 1px solid var(--urgent-border); color: var(--urgent); }
-    .btn-danger:hover:not(:disabled) { background: var(--urgent); color: white; }
-    .btn-purple { background: var(--purple-light); border: 1px solid var(--purple-border); color: var(--purple); }
-    .btn-purple:hover:not(:disabled) { background: var(--purple); color: white; }
+    /* Command box */
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
-    /* Content */
-    .content { padding: 28px 32px; overflow-y: auto; flex: 1; }
+    /* Filters */
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 200px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
 
-    /* Stats */
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
-    .stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 18px;
-    }
-    .stat-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
-    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    /* Sections */
+    .section-title { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: #e2e8f0; }
 
-    /* Section */
-    .section-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      margin-top: 8px;
-    }
-    .section-title { font-size: 13px; font-weight: 700; }
-    .section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+    /* Ticket table */
+    .ticket-table { width: 100%; background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; margin-bottom: 1.5rem; }
+    .ticket-table table { width: 100%; border-collapse: collapse; }
+    .ticket-table th { text-align: left; padding: 0.75rem 1rem; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #1e293b; background: #0f1520; }
+    .ticket-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #1a2332; vertical-align: top; color: #c8d6e5; }
+    .ticket-table tr:last-child td { border-bottom: none; }
+    .ticket-table tr:hover td { background: #1a2332; }
 
-    /* Ticket card */
-    .ticket-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      margin-bottom: 14px;
-      overflow: hidden;
-    }
-    .ticket-card-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-bottom: 1px solid var(--border);
-    }
-    .urgence-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-    .urgence-dot.urgent { background: var(--urgent); }
-    .urgence-dot.warning { background: var(--warning); }
-    .urgence-dot.ok { background: var(--ok); }
-    .ticket-type-badge {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      padding: 2px 7px;
-      border-radius: 4px;
-    }
-    .type-urgent { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
-    .type-warning { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
-    .type-ok { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
-    .ticket-card-title { font-size: 13px; font-weight: 700; flex: 1; }
-    .ticket-status {
-      margin-left: auto;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      flex-shrink: 0;
-    }
-    .status-ready { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
-    .status-approved { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
-    .status-revision { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
-    .status-deployed { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
-    .status-progress { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+    /* Badges */
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+    .badge-approved { background: #451a03; color: #fcd34d; }
+    .badge-in_progress { background: #1e3a5f; color: #93c5fd; }
+    .badge-ready { background: #312e81; color: #a5b4fc; }
+    .badge-deployed { background: #052e16; color: #86efac; }
+    .badge-rejected { background: #450a0a; color: #fca5a5; }
+    .badge-urgent { background: #450a0a; color: #fca5a5; }
+    .badge-warning { background: #451a03; color: #fcd34d; }
+    .badge-ok { background: #052e16; color: #86efac; }
+    .badge-price { background: #4a1942; color: #f9a8d4; }
+    .badge-info { background: #312e81; color: #a5b4fc; }
+    .badge-claim { background: #450a0a; color: #fca5a5; }
+    .badge-missing { background: #3b1764; color: #d8b4fe; }
 
-    .ticket-card-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; }
+    /* Diff preview */
+    .diff-toggle { color: #a78bfa; font-size: 0.75rem; cursor: pointer; text-decoration: underline; background: none; border: none; font-family: inherit; }
+    .diff-toggle:hover { color: #c4b5fd; }
+    .diff-panel { display: none; margin-top: 0.5rem; padding: 0.75rem; background: #0f1520; border-radius: 8px; border: 1px solid #1e293b; }
+    .diff-panel.open { display: block; }
+    .diff-before { background: #1c0a0a; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; border-radius: 4px; margin-bottom: 0.5rem; font-size: 0.78rem; color: #fca5a5; text-decoration: line-through; line-height: 1.5; }
+    .diff-after { background: #051c0b; border-left: 3px solid #22c55e; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.78rem; color: #86efac; line-height: 1.5; }
+    .diff-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; opacity: 0.7; }
+
+    /* Slug cell */
+    .slug-cell { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #a78bfa; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Empty/loading */
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; }
+    .loading { text-align: center; padding: 3rem; color: #64748b; }
+
+    /* Opportunities section */
+    .opp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .opp-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; }
+    .opp-card .opp-topic { font-weight: 700; font-size: 0.88rem; margin-bottom: 0.35rem; color: #e2e8f0; }
+    .opp-card .opp-keyword { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; margin-bottom: 0.5rem; }
+    .opp-card .opp-meta { font-size: 0.72rem; color: #64748b; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* Deployed recently */
+    .deployed-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .deployed-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .deployed-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .deployed-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.75rem; border: 1px solid #1e293b; border-radius: 8px; font-size: 0.82rem; transition: background 0.1s; }
+    .deployed-item:hover { background: #1a2332; }
+    .deployed-item .di-icon { width: 28px; height: 28px; border-radius: 50%; background: #052e16; color: #4ade80; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800; flex-shrink: 0; }
+    .deployed-item .di-info { flex: 1; min-width: 0; }
+    .deployed-item .di-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; }
+    .deployed-item .di-type { font-size: 0.68rem; }
+    .deployed-item .di-date { font-size: 0.72rem; color: #64748b; white-space: nowrap; }
+    .deployed-item .di-link { color: #60a5fa; text-decoration: none; font-size: 0.75rem; font-weight: 500; white-space: nowrap; }
+    .deployed-item .di-link:hover { text-decoration: underline; }
+
+    /* Source agent badge */
+    .badge-source { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+    .bs-fact-check { background: #1e3a5f; color: #93c5fd; }
+    .bs-validator { background: #451a03; color: #fcd34d; }
+    .bs-seo-audit { background: #312e81; color: #a5b4fc; }
+    .bs-analytics { background: #3b1764; color: #d8b4fe; }
+    .bs-unknown { background: #1e293b; color: #94a3b8; }
 
     /* Article link */
-    .article-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--blue);
-      padding: 8px 12px;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
-      border-radius: 6px;
-      text-decoration: none;
-      transition: all 0.15s;
-    }
-    .article-link:hover { background: var(--blue); color: white; }
+    .article-link { color: #a78bfa; text-decoration: none; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; }
+    .article-link:hover { text-decoration: underline; color: #c4b5fd; }
 
-    /* Origin info */
-    .origin-info {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+    /* Source filter */
+    .source-filters { display: flex; gap: 0.35rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+    .source-filter-btn { padding: 0.3rem 0.6rem; border-radius: 14px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.72rem; cursor: pointer; font-weight: 500; }
+    .source-filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .source-filter-btn.active { background: #475569; color: white; border-color: #475569; }
 
-    /* Diff blocks */
-    .final-diff { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .diff-block { border-radius: 8px; padding: 12px 14px; }
-    .diff-before {
-      background: #fdf5f5;
-      border: 1px solid var(--urgent-border);
-      border-left: 3px solid var(--urgent);
-    }
-    .diff-after {
-      background: #f3faf6;
-      border: 1px solid var(--ok-border);
-      border-left: 3px solid var(--ok);
-    }
-    .diff-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    .diff-before .diff-label { color: var(--urgent); }
-    .diff-after .diff-label { color: var(--ok); }
-    .diff-text { font-size: 12px; line-height: 1.5; color: var(--text2); }
-    .diff-before .diff-text { text-decoration: line-through; opacity: 0.7; color: var(--urgent); }
-
-    .ticket-explication {
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.5;
-      padding: 8px 10px;
-      background: var(--surface2);
-      border-radius: 6px;
-    }
-    .ticket-source {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--blue);
-    }
-    .ticket-source a { color: var(--blue); text-decoration: none; }
-    .ticket-source a:hover { text-decoration: underline; }
-    .human-note-block {
-      font-size: 11px;
-      color: var(--purple);
-      padding: 8px 10px;
-      background: var(--purple-light);
-      border: 1px solid var(--purple-border);
-      border-radius: 6px;
-      line-height: 1.5;
-    }
-
-    /* Deploy info box */
-    .deploy-info-box {
-      background: var(--blue-light);
-      border: 1px solid var(--blue-border);
-      border-radius: 8px;
-      padding: 10px 14px;
-      font-size: 11px;
-      color: var(--blue);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      line-height: 1.4;
-    }
-    .deploy-info-box code {
-      background: rgba(255,255,255,0.5);
-      padding: 1px 5px;
-      border-radius: 3px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-    }
-
-    /* Actions */
-    .ticket-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding-top: 8px;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-    .human-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      color: var(--purple);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-right: 2px;
-    }
-
-    /* Agent hint */
-    .agent-hint {
-      font-size: 11px;
-      color: var(--muted);
-      padding: 10px 14px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-    .agent-hint code {
-      background: rgba(0,0,0,0.06);
-      padding: 1px 5px;
-      border-radius: 3px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-    }
-
-    /* Modal */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      z-index: 200;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal {
-      background: var(--surface);
-      border-radius: 14px;
-      padding: 28px;
-      width: 460px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    }
-    .modal-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-    .modal-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
-    .modal textarea {
-      width: 100%;
-      height: 100px;
-      background: var(--surface2);
-      border: 1px solid var(--border2);
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 13px;
-      color: var(--text);
-      resize: none;
-      margin-bottom: 14px;
-    }
-    .modal textarea:focus { outline: none; border-color: var(--purple); }
-    .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
-
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--text);
-      color: white;
-      padding: 13px 18px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: all 0.25s;
-      z-index: 300;
-      max-width: 320px;
-      pointer-events: none;
-    }
-    .toast.show { opacity: 1; transform: translateY(0); }
-    .toast-sub { font-size: 11px; font-weight: 400; opacity: 0.65; margin-top: 2px; }
-
-    .empty-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
-    .loading-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
-
-    @media (max-width: 1024px) {
-      .admin-layout { margin-left: 0; padding-top: 56px; }
-    }
-    @media (max-width: 768px) {
-      .topbar { padding: 0 16px; }
-      .content { padding: 16px; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .final-diff { grid-template-columns: 1fr; }
-      .ticket-card-header { flex-wrap: wrap; }
-      .ticket-actions { flex-wrap: wrap; }
-    }
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px) { .admin-layout { margin-left: 0; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .main { padding: 1rem; } }
   </style>
 </head>
 <body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  // Auth guard handled by AdminNav (localStorage, 24h expiry)
+</script>
 
 <AdminNav />
 
 <div class="admin-layout">
-  <div class="topbar">
-    <div class="topbar-left">
-      <div class="page-title">Editorial Dashboard</div>
-      <div class="topbar-meta" id="topbar-meta">Chargement...</div>
+  <div class="page-header">
+    <div class="page-header-left">
+      <h1>Editorial</h1>
+      <p>Corrections et redaction — Agent Editorial</p>
     </div>
-    <div class="topbar-actions">
-      <button class="btn btn-ghost" onclick="loadDashboard()">&#x27F3; Rafraichir</button>
-    </div>
-  </div>
-
-  <div class="content">
-    <div class="stats">
-      <div class="stat" style="border-color:var(--blue-border)">
-        <div class="stat-label" style="color:var(--blue)">Prets a deployer</div>
-        <div class="stat-value" id="stat-ready" style="color:var(--blue)">-</div>
-        <div class="stat-sub">Validation finale requise</div>
-      </div>
-      <div class="stat" style="border-color:var(--warning-border)">
-        <div class="stat-label" style="color:var(--warning)">En attente agent</div>
-        <div class="stat-value" id="stat-waiting" style="color:var(--warning)">-</div>
-        <div class="stat-sub">Approuves dans Fact-Check</div>
-      </div>
-      <div class="stat" style="border-color:var(--purple-border)">
-        <div class="stat-label" style="color:var(--purple)">En revision</div>
-        <div class="stat-value" id="stat-revision" style="color:var(--purple)">-</div>
-        <div class="stat-sub">Notes a traiter</div>
-      </div>
-      <div class="stat" style="border-color:var(--ok-border)">
-        <div class="stat-label" style="color:var(--ok)">Deployes</div>
-        <div class="stat-value" id="stat-deployed" style="color:var(--ok)">-</div>
-        <div class="stat-sub">Corrections en production</div>
-      </div>
-    </div>
-
-    <div id="main-content">
-      <div class="loading-state">Chargement des donnees...</div>
+    <div class="header-actions">
+      <span class="last-update" id="lastUpdate">-</span>
+      <button class="refresh-btn" onclick="loadAll()">&#x27F3; Rafraichir</button>
     </div>
   </div>
-</div>
 
-<!-- Modal note -->
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <div class="modal-title">Note de revision</div>
-    <div class="modal-sub">Cette note sera transmise a l'Agent Editorial. Il reprendra la redaction en tenant compte de vos instructions.</div>
-    <textarea id="noteText" placeholder="Ex: Le prix doit etre exprime en mensuel. Ajouter la mention que les prix varient selon la pharmacie..."></textarea>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" id="noteCancel">Annuler</button>
-      <button class="btn btn-purple" id="noteSend">Renvoyer en revision</button>
+  <div class="main">
+    <!-- Pipeline Status Banner -->
+    <div id="pipelineBanner" style="display:none; background:linear-gradient(135deg,#0a1a0f,#111827); border:1px solid #22c55e33; border-radius:12px; padding:1rem 1.5rem; margin-bottom:1rem; display:flex; align-items:center; gap:1rem;">
+      <div style="width:12px;height:12px;border-radius:50%;background:#22c55e;animation:pulse-glow 2s infinite;flex-shrink:0"></div>
+      <div style="flex:1">
+        <div style="font-weight:700;font-size:0.88rem;color:#e2e8f0" id="pipelinePhaseLabel">Pipeline en cours...</div>
+        <div style="font-size:0.75rem;color:#64748b" id="pipelineAgents">-</div>
+      </div>
+      <div style="display:flex;gap:1.5rem;font-size:0.78rem">
+        <div style="text-align:center"><div style="font-size:1.1rem;font-weight:800;color:#22c55e" id="plAgentsCount">0</div><div style="color:#64748b;font-size:0.65rem">ACTIFS</div></div>
+        <div style="text-align:center"><div style="font-size:1.1rem;font-weight:800;color:#f59e0b" id="plTicketsPending">-</div><div style="color:#64748b;font-size:0.65rem">EN ATTENTE</div></div>
+      </div>
+    </div>
+    <style>@keyframes pulse-glow{0%,100%{opacity:1;box-shadow:0 0 8px #22c55e88}50%{opacity:.5;box-shadow:0 0 4px #22c55e44}}</style>
+
+    <!-- Command -->
+    <div class="cmd-box">
+      <code>claude -p "Traite les corrections" --agent editorial</code>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p \"Traite les corrections\" --agent editorial');this.textContent='Copie !'">Copier</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="label">Total tickets</div>
+        <div class="value" id="statTotal" style="color:#1e293b">-</div>
+        <div class="sub">Tous statuts confondus</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">En attente</div>
+        <div class="value" id="statApproved" style="color:#d97706">-</div>
+        <div class="sub">Approuves, a traiter</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">En cours</div>
+        <div class="value" id="statProgress" style="color:#2563eb">-</div>
+        <div class="sub">Agent en train de corriger</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Prets</div>
+        <div class="value" id="statReady" style="color:#7c3aed">-</div>
+        <div class="sub">Corriges, prets a deployer</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Deployes</div>
+        <div class="value" id="statDeployed" style="color:#059669">-</div>
+        <div class="sub">En production</div>
+      </div>
+    </div>
+
+    <!-- Deployed recently -->
+    <div class="deployed-section" id="deployedSection" style="display:none">
+      <div class="deployed-title">Deployes recemment</div>
+      <div class="deployed-list" id="deployedList"></div>
+    </div>
+
+    <!-- Opportunities in progress -->
+    <div id="oppSection" style="display:none">
+      <div class="section-title">&#x1F4DD; Articles en cours de redaction (opportunites)</div>
+      <div class="opp-cards" id="oppCards"></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
+      <button class="filter-btn" data-filter="approved" onclick="setFilter('approved')">En attente</button>
+      <button class="filter-btn" data-filter="in_progress" onclick="setFilter('in_progress')">En cours</button>
+      <button class="filter-btn" data-filter="ready_to_deploy" onclick="setFilter('ready_to_deploy')">Prets</button>
+      <button class="filter-btn" data-filter="deployed" onclick="setFilter('deployed')">Deployes</button>
+      <button class="filter-btn" data-filter="rejected" onclick="setFilter('rejected')">Rejetes</button>
+      <input type="text" class="search-input" placeholder="Rechercher un article..." oninput="setSearch(this.value)" />
+    </div>
+
+    <!-- Source filter -->
+    <div class="source-filters" id="sourceFilters">
+      <button class="source-filter-btn active" data-source="all" onclick="setSourceFilter('all')">Toutes sources</button>
+      <button class="source-filter-btn" data-source="fact-check" onclick="setSourceFilter('fact-check')">Fact-check</button>
+      <button class="source-filter-btn" data-source="validator" onclick="setSourceFilter('validator')">Validator</button>
+      <button class="source-filter-btn" data-source="seo-audit" onclick="setSourceFilter('seo-audit')">SEO Audit</button>
+      <button class="source-filter-btn" data-source="analytics" onclick="setSourceFilter('analytics')">Analytics</button>
+    </div>
+
+    <!-- Tickets table -->
+    <div id="ticketsContainer">
+      <div class="loading">Chargement...</div>
     </div>
   </div>
-</div>
-
-<!-- Toast -->
-<div class="toast" id="toast">
-  <div id="toastMsg"></div>
-  <div class="toast-sub" id="toastSub"></div>
 </div>
 
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
-  const SUPABASE_URL = supabaseUrl;
-  const SUPABASE_ANON_KEY = supabaseAnonKey;
-  let pendingNoteTicketId = null;
+  const SB_URL = supabaseUrl;
+  const SB_KEY = supabaseAnonKey;
+  let allTickets = [];
+  let currentFilter = 'all';
+  let currentSearch = '';
+  let currentSourceFilter = 'all';
+  let articleSlugMap = {}; // slug -> { collection, title }
 
-  function escapeHtml(str) {
+  function esc(str) {
     if (!str) return '';
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  function timeAgo(dateStr) {
+    if (!dateStr) return '-';
+    const diff = Date.now() - new Date(dateStr).getTime();
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return 'a l\'instant';
+    if (mins < 60) return mins + ' min';
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24) return hrs + 'h';
+    const days = Math.floor(hrs / 24);
+    return days + 'j';
   }
 
   function formatDate(dateStr) {
-    if (!dateStr) return '';
+    if (!dateStr) return '-';
     return new Date(dateStr).toLocaleDateString('fr-FR', {
       day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
     });
   }
 
-  function typeLabel(type) {
-    const labels = {
-      price_update: 'prix',
-      info_outdated: 'info obsolete',
-      false_claim: 'claim faux',
-      missing_info: 'info manquante',
-      context_fr: 'contexte FR',
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  function statusBadge(statut) {
+    const map = {
+      approved: ['En attente', 'badge-approved'],
+      in_progress: ['En cours', 'badge-in_progress'],
+      ready_to_deploy: ['Pret', 'badge-ready'],
+      deployed: ['Deploye', 'badge-deployed'],
+      rejected: ['Rejete', 'badge-rejected'],
     };
-    return labels[type] || type || '?';
+    const [label, cls] = map[statut] || [statut, ''];
+    return `<span class="badge ${cls}">${esc(label)}</span>`;
   }
 
-  function urgenceClass(urgence) {
-    if (urgence === 'urgent') return 'urgent';
-    if (urgence === 'warning') return 'warning';
-    return 'ok';
+  function urgBadge(urgence) {
+    const map = { urgent: 'badge-urgent', warning: 'badge-warning', ok: 'badge-ok' };
+    return `<span class="badge ${map[urgence] || ''}">${esc(urgence || '-')}</span>`;
   }
 
-  function typeClass(urgence) {
-    if (urgence === 'urgent') return 'type-urgent';
-    if (urgence === 'warning') return 'type-warning';
-    return 'type-ok';
+  function typeBadge(type) {
+    const labels = {
+      price_update: 'Prix',
+      info_outdated: 'Obsolete',
+      false_claim: 'Faux',
+      missing_info: 'Manquant',
+      context_fr: 'Contexte FR',
+      missing_description: 'Description',
+      broken_link: 'Lien casse',
+      missing_image: 'Image',
+      seo_issue: 'SEO',
+      duplicate_content: 'Doublon',
+      sync_issue: 'Sync',
+      content_quality: 'Qualite',
+      heading_issue: 'Titres',
+      html_issue: 'HTML',
+      build_error: 'Build',
+      content_refresh: 'Refresh',
+      seo_optimization: 'Opti SEO',
+    };
+    const classes = {
+      price_update: 'badge-price',
+      info_outdated: 'badge-info',
+      false_claim: 'badge-claim',
+      missing_info: 'badge-missing',
+    };
+    return `<span class="badge ${classes[type] || 'badge-info'}">${esc(labels[type] || type || '-')}</span>`;
   }
 
-  function urgIcon(urgence) {
-    return { urgent: '\u{1F534}', warning: '\u{1F7E1}', ok: '\u{1F7E2}' }[urgence] || '\u26AA';
+  function sourceBadge(source) {
+    const s = source || 'fact-check';
+    const labels = { 'fact-check': 'Fact-check', 'validator': 'Validator', 'seo-audit': 'SEO Audit', 'analytics': 'Analytics' };
+    const cls = { 'fact-check': 'bs-fact-check', 'validator': 'bs-validator', 'seo-audit': 'bs-seo-audit', 'analytics': 'bs-analytics' };
+    return `<span class="badge-source ${cls[s] || 'bs-unknown'}">${esc(labels[s] || s)}</span>`;
   }
 
-  function buildArticleUrl(slug) {
-    if (!slug) return '';
-    // Slugs in DB: "collection/article-name" → URL: "/collections/collection/article-name/"
-    // Astro pages: "astro-pages/path" → URL: "/path/"
-    if (slug.startsWith('astro-pages/')) return '/' + slug.replace('astro-pages/', '') + '/';
-    return '/collections/' + slug + '/';
+  function toggleDiff(id) {
+    const el = document.getElementById('diff-' + id);
+    if (el) el.classList.toggle('open');
   }
 
-  async function supabaseFetch(table, query) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      }
-    });
-    if (!response.ok) throw new Error(await response.text());
-    return response.json();
-  }
-
-  async function updateTicket(ticketId, updates) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?id=eq.${ticketId}`, {
-      method: 'PATCH',
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify(updates)
-    });
-    if (!response.ok) throw new Error(await response.text());
-  }
-
-  let toastTimer;
-  function showToast(msg, sub) {
-    const t = document.getElementById('toast');
-    document.getElementById('toastMsg').textContent = msg;
-    document.getElementById('toastSub').textContent = sub || '';
-    t.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
-  }
-
-  // ── Render ready_to_deploy ticket (with deploy/reject/note buttons) ──
-  function renderReadyTicket(t) {
-    const articleUrl = buildArticleUrl(t.slug);
-    const hasAfterFinal = t.after_final && t.after_final !== t.after_suggested;
-    return `
-      <div class="ticket-card" data-ticket-id="${t.id}">
-        <div class="ticket-card-header">
-          <div class="urgence-dot ${urgenceClass(t.urgence)}"></div>
-          <div class="ticket-type-badge ${typeClass(t.urgence)}">${urgIcon(t.urgence)} ${escapeHtml(typeLabel(t.ticket_type))}</div>
-          <div class="ticket-card-title">${escapeHtml(t.title || t.claim_original || 'Correction')}</div>
-          <div class="ticket-status status-ready">Pret a deployer</div>
-        </div>
-        <div class="ticket-card-body">
-          <div class="origin-info">
-            <span>Ticket #${escapeHtml(String(t.id).substring(0, 8))}</span>
-            <span>\u00b7</span>
-            <span>Urgence : ${escapeHtml(t.urgence)}</span>
-            <span>\u00b7</span>
-            <span>Modele : ${escapeHtml(t.model_used || '?')}</span>
-          </div>
-
-          ${articleUrl ? `<a class="article-link" href="${articleUrl}" target="_blank" rel="noopener">\u{1F517} Voir l'article : ${escapeHtml(t.slug)}</a>` : ''}
-
-          <div class="final-diff">
-            <div class="diff-block diff-before">
-              <div class="diff-label">Texte actuel dans l'article</div>
-              <div class="diff-text">${escapeHtml(t.before_exact)}</div>
-            </div>
-            <div class="diff-block diff-after">
-              <div class="diff-label">${hasAfterFinal ? 'Correction redigee par l\'Agent Editorial' : 'Correction (fact-check uniquement)'}</div>
-              <div class="diff-text">${escapeHtml(t.after_final || t.after_suggested)}</div>
-            </div>
-          </div>
-
-          ${!hasAfterFinal ? `<div style="background:var(--warning-light);border:1px solid var(--warning-border);border-radius:6px;padding:8px 10px;font-size:11px;color:var(--warning);line-height:1.4">
-            <strong>Attention :</strong> L'Agent Editorial n'a pas encore tourne sur ce ticket. La correction affichee est celle du fact-checker (approximative). Lancez l'agent pour obtenir une redaction optimisee : <code style="background:rgba(0,0,0,0.06);padding:1px 4px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:10px">node scripts/editorial-agent.mjs</code>
-          </div>` : ''}
-
-          ${t.realite_actuelle ? `<div class="ticket-explication"><strong>Contexte :</strong> ${escapeHtml(t.realite_actuelle)}</div>` : ''}
-          ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
-          ${t.human_note ? `<div class="human-note-block"><strong>Note humaine :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
-
-          <div class="deploy-info-box">
-            Le deploiement va remplacer le texte actuel par la correction dans le fichier markdown de l'article.
-          </div>
-
-          <div class="ticket-actions">
-            <span class="human-label">\u{1F464} Decision finale :</span>
-            <button class="btn btn-blue" onclick="handleDeploy('${t.id}', this)">\u{1F680} Envoyer en integration</button>
-            <button class="btn btn-danger" onclick="handleReject('${t.id}', this)">\u2717 Rejeter</button>
-            <button class="btn btn-purple" onclick="openNote('${t.id}')">\u{1F4DD} Revision avec note</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  // ── Render waiting ticket (approved, waiting for agent) ──
-  function renderWaitingTicket(t) {
-    const articleUrl = buildArticleUrl(t.slug);
-    const statusLabel = t.statut === 'in_progress' ? 'Agent en cours...' : 'En attente agent';
-    const statusClass = t.statut === 'in_progress' ? 'status-progress' : 'status-approved';
-    return `
-      <div class="ticket-card" data-ticket-id="${t.id}">
-        <div class="ticket-card-header">
-          <div class="urgence-dot ${urgenceClass(t.urgence)}"></div>
-          <div class="ticket-type-badge ${typeClass(t.urgence)}">${urgIcon(t.urgence)} ${escapeHtml(typeLabel(t.ticket_type))}</div>
-          <div class="ticket-card-title">${escapeHtml(t.title || t.claim_original || 'Correction')}</div>
-          <div class="ticket-status ${statusClass}">${statusLabel}</div>
-        </div>
-        <div class="ticket-card-body">
-          ${articleUrl ? `<a class="article-link" href="${articleUrl}" target="_blank" rel="noopener">\u{1F517} ${escapeHtml(t.slug)}</a>` : ''}
-          <div class="final-diff">
-            <div class="diff-block diff-before">
-              <div class="diff-label">Erreur detectee</div>
-              <div class="diff-text">${escapeHtml(t.before_exact)}</div>
-            </div>
-            <div class="diff-block diff-after">
-              <div class="diff-label">Correction suggeree (fact-check)</div>
-              <div class="diff-text">${escapeHtml(t.after_suggested)}</div>
-            </div>
-          </div>
-          ${t.realite_actuelle ? `<div class="ticket-explication"><strong>Contexte :</strong> ${escapeHtml(t.realite_actuelle)}</div>` : ''}
-          ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
-          ${t.human_note ? `<div class="human-note-block"><strong>Note humaine :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
-
-          <div style="background:var(--warning-light);border:1px solid var(--warning-border);border-radius:6px;padding:8px 10px;font-size:11px;color:var(--warning);line-height:1.4">
-            L'Agent Editorial n'a pas encore tourne. Vous pouvez envoyer la correction du fact-checker telle quelle, ou ajouter une note pour guider l'agent.
-          </div>
-
-          <div class="ticket-actions">
-            <span class="human-label">\u{1F464} Decision :</span>
-            <button class="btn btn-blue" onclick="handleDeploy('${t.id}', this)">\u{1F680} Envoyer en integration</button>
-            <button class="btn btn-danger" onclick="handleReject('${t.id}', this)">\u2717 Rejeter</button>
-            <button class="btn btn-purple" onclick="openNote('${t.id}')">\u{1F4DD} + Note pour l'agent</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  // ── Render revision ticket ──
-  function renderRevisionTicket(t) {
-    const articleUrl = buildArticleUrl(t.slug);
-    return `
-      <div class="ticket-card" data-ticket-id="${t.id}">
-        <div class="ticket-card-header">
-          <div class="urgence-dot ${urgenceClass(t.urgence)}"></div>
-          <div class="ticket-type-badge ${typeClass(t.urgence)}">${urgIcon(t.urgence)} ${escapeHtml(typeLabel(t.ticket_type))}</div>
-          <div class="ticket-card-title">${escapeHtml(t.title || t.claim_original || 'Correction')}</div>
-          <div class="ticket-status status-revision">Revision demandee</div>
-        </div>
-        <div class="ticket-card-body">
-          ${articleUrl ? `<a class="article-link" href="${articleUrl}" target="_blank" rel="noopener">\u{1F517} ${escapeHtml(t.slug)}</a>` : ''}
-          <div class="final-diff">
-            <div class="diff-block diff-before">
-              <div class="diff-label">Erreur detectee</div>
-              <div class="diff-text">${escapeHtml(t.before_exact)}</div>
-            </div>
-            <div class="diff-block diff-after">
-              <div class="diff-label">${t.after_final ? 'Derniere version (a reviser)' : 'Correction suggeree'}</div>
-              <div class="diff-text">${escapeHtml(t.after_final || t.after_suggested)}</div>
-            </div>
-          </div>
-          ${t.realite_actuelle ? `<div class="ticket-explication"><strong>Contexte :</strong> ${escapeHtml(t.realite_actuelle)}</div>` : ''}
-          ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
-          ${t.human_note ? `<div class="human-note-block"><strong>Note de revision :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
-
-          <div class="ticket-actions">
-            <span class="human-label">\u{1F464} Decision :</span>
-            <button class="btn btn-blue" onclick="handleDeploy('${t.id}', this)">\u{1F680} Envoyer en integration</button>
-            <button class="btn btn-danger" onclick="handleReject('${t.id}', this)">\u2717 Rejeter</button>
-            <button class="btn btn-purple" onclick="openNote('${t.id}')">\u{1F4DD} Modifier la note</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  // ── Actions ──
-  window.handleDeploy = async function(ticketId, button) {
-    button.disabled = true;
-    button.textContent = '...';
-    const row = button.closest('.ticket-actions');
-    if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = true);
-
-    try {
-      // Tickets in "ready_to_deploy" stay as-is (already correct status for Integration dashboard)
-      // Tickets in "approved" or "in_progress" need to be moved to ready_to_deploy
-      const ticket = document.querySelector(`[data-ticket-id="${ticketId}"]`);
-      const currentStatus = ticket ? ticket.querySelector('.ticket-status')?.textContent?.trim() : '';
-      const isAlreadyReady = currentStatus === 'Pret a deployer';
-
-      if (!isAlreadyReady) {
-        await updateTicket(ticketId, { statut: 'ready_to_deploy', reviewed_at: new Date().toISOString() });
-      }
-
-      if (row) row.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye en integration</span>';
-      const statusEl = document.querySelector(`[data-ticket-id="${ticketId}"] .ticket-status`);
-      if (statusEl) { statusEl.className = 'ticket-status status-ready'; statusEl.textContent = '\u2713 En integration'; }
-      showToast('\u{1F680} Envoye en integration', 'Visible dans le dashboard Integration');
-    } catch (err) {
-      if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = false);
-      button.textContent = '\u{1F680} Envoyer en integration';
-      showToast('Erreur: ' + err.message, '');
+  function renderTickets(tickets) {
+    const container = document.getElementById('ticketsContainer');
+    if (tickets.length === 0) {
+      container.innerHTML = `<div class="empty-state">Aucun ticket pour ce filtre</div>`;
+      return;
     }
-  };
 
-  window.handleReject = async function(ticketId, button) {
-    button.disabled = true;
-    button.textContent = '...';
-    const row = button.closest('.ticket-actions');
-    if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = true);
+    let html = `<div class="ticket-table"><table>
+      <thead><tr>
+        <th>Urgence</th>
+        <th>Type</th>
+        <th>Source</th>
+        <th>Article</th>
+        <th>Titre</th>
+        <th>Statut</th>
+        <th>Date</th>
+        <th>Diff</th>
+      </tr></thead><tbody>`;
 
-    try {
-      await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
-      if (row) row.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--urgent)">\u2717 Rejete</span>';
-      const statusEl = document.querySelector(`[data-ticket-id="${ticketId}"] .ticket-status`);
-      if (statusEl) { statusEl.className = 'ticket-status'; statusEl.style.cssText = 'background:var(--urgent-light);color:var(--urgent);border:1px solid var(--urgent-border)'; statusEl.textContent = '\u2717 Rejete'; }
-      showToast('Ticket rejete', '');
-    } catch (err) {
-      if (row) row.querySelectorAll('.btn').forEach(b => b.disabled = false);
-      button.textContent = '\u2717 Rejeter';
-      showToast('Erreur: ' + err.message, '');
+    for (const t of tickets) {
+      const shortId = t.id.substring(0, 8);
+      const afterText = t.after_final || t.after_suggested || '';
+      const artInfo = articleSlugMap[t.slug];
+      const artUrl = artInfo ? `/${artInfo.collection}/${t.slug}` : null;
+      const slugCell = artUrl
+        ? `<a class="article-link" href="${esc(artUrl)}" target="_blank" title="${esc(artInfo?.title || t.slug)}">${esc(t.slug)}</a>`
+        : `<span class="slug-cell" title="${esc(t.slug)}">${esc(t.slug)}</span>`;
+
+      html += `<tr>
+        <td>${urgBadge(t.urgence)}</td>
+        <td>${typeBadge(t.ticket_type)}</td>
+        <td>${sourceBadge(t.source_agent)}</td>
+        <td>${slugCell}</td>
+        <td>${esc(t.title || t.claim_original || '-')}</td>
+        <td>${statusBadge(t.statut)}</td>
+        <td style="white-space:nowrap;font-size:0.75rem;color:#64748b" title="${formatDate(t.updated_at)}">${timeAgo(t.updated_at)}</td>
+        <td>
+          <button class="diff-toggle" onclick="toggleDiff('${shortId}')">Voir</button>
+          <div class="diff-panel" id="diff-${shortId}">
+            ${t.before_exact ? `<div class="diff-before">
+              <div class="diff-label">Avant</div>
+              ${esc(t.before_exact)}
+            </div>` : ''}
+            ${afterText ? `<div class="diff-after">
+              <div class="diff-label">${t.after_final ? 'Apres (editorial)' : 'Apres (suggestion)'}</div>
+              ${esc(afterText)}
+            </div>` : ''}
+            ${t.realite_actuelle ? `<div style="margin-top:0.5rem;font-size:0.75rem;color:#64748b;line-height:1.4"><strong>Contexte:</strong> ${esc(t.realite_actuelle)}</div>` : ''}
+            ${t.source_reference ? `<div style="margin-top:0.35rem;font-size:0.72rem"><a href="${esc(t.source_reference)}" target="_blank" rel="noopener" style="color:#7c3aed">${esc(t.source_reference)}</a></div>` : ''}
+          </div>
+        </td>
+      </tr>`;
     }
-  };
 
-  window.openNote = function(ticketId) {
-    pendingNoteTicketId = ticketId;
-    document.getElementById('modal').classList.add('open');
-    document.getElementById('noteText').value = '';
-    document.getElementById('noteText').focus();
-  };
+    html += '</tbody></table></div>';
+    container.innerHTML = html;
+  }
 
-  // ── Load ──
-  window.loadDashboard = async function() {
-    try {
-      const tickets = await supabaseFetch(
-        'correction_tickets',
-        'select=*&statut=in.(approved,in_progress,ready_to_deploy,deployed,revision_needed)&order=updated_at.desc&limit=200'
+  function applyFilters() {
+    let filtered = allTickets;
+    if (currentFilter !== 'all') {
+      filtered = filtered.filter(t => t.statut === currentFilter);
+    }
+    if (currentSourceFilter !== 'all') {
+      filtered = filtered.filter(t => (t.source_agent || 'fact-check') === currentSourceFilter);
+    }
+    if (currentSearch) {
+      const q = currentSearch.toLowerCase();
+      filtered = filtered.filter(t =>
+        (t.slug || '').toLowerCase().includes(q) ||
+        (t.title || '').toLowerCase().includes(q) ||
+        (t.claim_original || '').toLowerCase().includes(q)
       );
+    }
+    renderTickets(filtered);
+  }
 
-      const ready = tickets.filter(t => t.statut === 'ready_to_deploy');
-      const waiting = tickets.filter(t => t.statut === 'approved' || t.statut === 'in_progress');
-      const revision = tickets.filter(t => t.statut === 'revision_needed');
-      const deployed = tickets.filter(t => t.statut === 'deployed');
+  window.setFilter = function(f) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.filter === f);
+    });
+    applyFilters();
+  };
 
-      document.getElementById('stat-ready').textContent = ready.length;
-      document.getElementById('stat-waiting').textContent = waiting.length;
-      document.getElementById('stat-revision').textContent = revision.length;
-      document.getElementById('stat-deployed').textContent = deployed.length;
-      document.getElementById('topbar-meta').textContent = `${ready.length} pret(s) \u00b7 ${waiting.length} en attente agent \u00b7 ${deployed.length} deploye(s)`;
+  window.setSearch = function(q) {
+    currentSearch = q;
+    applyFilters();
+  };
 
-      const mainEl = document.getElementById('main-content');
+  window.setSourceFilter = function(s) {
+    currentSourceFilter = s;
+    document.querySelectorAll('.source-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.source === s));
+    applyFilters();
+  };
 
-      if (tickets.length === 0) {
-        mainEl.innerHTML = `
-          <div class="empty-state">
-            <div style="font-size:28px;margin-bottom:8px">\u270D\uFE0F</div>
-            <p>Aucun ticket editorial</p>
-            <p style="margin-top:4px;font-size:11px">Approuvez des tickets depuis <a href="/admin/fact-check/" style="color:var(--blue)">Fact-Check</a>, puis lancez l'agent editorial.</p>
-          </div>
-        `;
-        return;
+  function updateFilterCounts() {
+    const counts = { all: allTickets.length };
+    for (const t of allTickets) {
+      counts[t.statut] = (counts[t.statut] || 0) + 1;
+    }
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      const f = btn.dataset.filter;
+      const count = counts[f] || 0;
+      const existing = btn.querySelector('.filter-count');
+      if (existing) existing.remove();
+      if (count > 0 || f === 'all') {
+        btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${count}</span>`);
       }
+    });
+  }
 
-      let html = '';
+  function renderDeployed() {
+    const deployed = allTickets
+      .filter(t => t.statut === 'deployed')
+      .sort((a, b) => new Date(b.deployed_at || b.updated_at || 0) - new Date(a.deployed_at || a.updated_at || 0))
+      .slice(0, 8);
 
-      // Ready to deploy
-      if (ready.length > 0) {
-        html += `<div class="section-head"><div class="section-title" style="color:var(--blue)">\u{1F680} Prets a deployer</div><div class="section-sub">${ready.length} ticket(s) \u00b7 validation finale requise</div></div>`;
-        html += ready.map(t => renderReadyTicket(t)).join('');
-      }
+    if (deployed.length === 0) {
+      document.getElementById('deployedSection').style.display = 'none';
+      return;
+    }
 
-      // Waiting for agent
-      if (waiting.length > 0) {
-        html += `<div class="section-head"><div class="section-title" style="color:var(--warning)">\u23F3 En attente de l'Agent Editorial</div><div class="section-sub">${waiting.length} ticket(s)</div></div>`;
-        html += `<div class="agent-hint">Ces tickets ont ete approuves dans Fact-Check. Lancez l'agent pour generer les corrections finales : <code>node scripts/editorial-agent.mjs</code></div>`;
-        html += waiting.map(t => renderWaitingTicket(t)).join('');
-      }
+    document.getElementById('deployedSection').style.display = 'block';
+    document.getElementById('deployedList').innerHTML = deployed.map(t => {
+      const artInfo = articleSlugMap[t.slug];
+      const artUrl = artInfo ? `/${artInfo.collection}/${t.slug}` : null;
+      return `<div class="deployed-item">
+        <div class="di-icon">&#x2713;</div>
+        <div class="di-info">
+          <div class="di-slug">${esc(t.slug)}</div>
+          <div class="di-type">${typeBadge(t.ticket_type)} ${sourceBadge(t.source_agent)}</div>
+        </div>
+        <div class="di-date">${timeAgo(t.deployed_at || t.updated_at)}</div>
+        ${artUrl ? `<a class="di-link" href="${esc(artUrl)}" target="_blank">Voir &#x2192;</a>` : ''}
+      </div>`;
+    }).join('');
+  }
 
-      // Revision needed
-      if (revision.length > 0) {
-        html += `<div class="section-head"><div class="section-title" style="color:var(--purple)">\u{1F4DD} En revision</div><div class="section-sub">${revision.length} ticket(s) avec notes</div></div>`;
-        html += `<div class="agent-hint">Ces tickets ont une note de revision. Relancez l'agent editorial : <code>node scripts/editorial-agent.mjs</code></div>`;
-        html += revision.map(t => renderRevisionTicket(t)).join('');
-      }
+  async function loadAll() {
+    try {
+      const [tickets, articles] = await Promise.all([
+        sbFetch('correction_tickets', 'select=*&order=updated_at.desc&limit=200'),
+        sbFetch('articles', 'select=slug,title,collection&is_active=eq.true')
+      ]);
 
-      // Deployed (summary)
-      if (deployed.length > 0) {
-        html += `
-          <div style="background:var(--ok-light);border:1px solid var(--ok-border);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--ok);font-weight:600;margin-top:12px;">
-            \u2713 ${deployed.length} correction(s) deployee(s) en production
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:400;color:var(--muted);margin-left:12px;">
-              <a href="/admin/integration/" style="color:var(--blue);text-decoration:none">Voir l'historique \u2192</a>
-            </span>
-          </div>
-        `;
-      }
+      // Build slug map
+      articleSlugMap = {};
+      articles.forEach(a => { articleSlugMap[a.slug] = { collection: a.collection, title: a.title }; });
 
-      mainEl.innerHTML = html;
+      allTickets = tickets;
+
+      // Stats
+      const approved = tickets.filter(t => t.statut === 'approved').length;
+      const inProgress = tickets.filter(t => t.statut === 'in_progress').length;
+      const ready = tickets.filter(t => t.statut === 'ready_to_deploy').length;
+      const deployed = tickets.filter(t => t.statut === 'deployed').length;
+
+      document.getElementById('statTotal').textContent = tickets.length;
+      document.getElementById('statApproved').textContent = approved;
+      document.getElementById('statProgress').textContent = inProgress;
+      document.getElementById('statReady').textContent = ready;
+      document.getElementById('statDeployed').textContent = deployed;
+
+      updateFilterCounts();
+      renderDeployed();
+      applyFilters();
+
+      // Load opportunities in_progress or published
+      try {
+        const opps = await sbFetch(
+          'content_opportunities',
+          'select=*&status=in.(in_progress,published)&order=priority.asc&limit=20'
+        );
+        const oppSection = document.getElementById('oppSection');
+        const oppCards = document.getElementById('oppCards');
+        if (opps.length > 0) {
+          oppSection.style.display = 'block';
+          oppCards.innerHTML = opps.map(o => `
+            <div class="opp-card">
+              <div class="opp-topic">${esc(o.topic)}</div>
+              <div class="opp-keyword">${esc(o.target_keyword)}</div>
+              <div class="opp-meta">
+                <span>${statusBadge(o.status)}</span>
+                <span>Priorite: ${o.priority}</span>
+                <span>Collection: ${esc(o.suggested_collection)}</span>
+                ${o.suggested_slug ? `<span>Slug: ${esc(o.suggested_slug)}</span>` : ''}
+              </div>
+            </div>
+          `).join('');
+        } else {
+          oppSection.style.display = 'none';
+        }
+      } catch (e) { /* ignore if no opps */ }
+
+      document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
 
     } catch (err) {
-      document.getElementById('main-content').innerHTML = `
-        <div style="background:var(--urgent-light);border:1px solid var(--urgent-border);padding:14px 18px;border-radius:10px;color:var(--urgent);font-size:12px">
-          <strong>Erreur Supabase</strong> : ${escapeHtml(err.message)}
+      document.getElementById('ticketsContainer').innerHTML = `
+        <div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:10px;color:#991b1b;font-size:0.85rem">
+          <strong>Erreur Supabase:</strong> ${esc(err.message)}
         </div>
       `;
     }
-  };
+  }
 
-  // ── Modal ──
-  document.getElementById('noteCancel').addEventListener('click', () => {
-    document.getElementById('modal').classList.remove('open');
-    pendingNoteTicketId = null;
-  });
+  // Initial load + auto-refresh 30s
+  loadAll();
+  setInterval(loadAll, 30000);
 
-  document.getElementById('noteSend').addEventListener('click', async () => {
-    const note = document.getElementById('noteText').value.trim();
-    if (!note) { showToast('Veuillez saisir une note', ''); return; }
-
-    const sendBtn = document.getElementById('noteSend');
-    sendBtn.disabled = true;
-    sendBtn.textContent = '...';
-
+  // Pipeline status polling
+  const AGENT_SERVER = 'http://127.0.0.1:7854';
+  async function checkPipeline() {
+    const banner = document.getElementById('pipelineBanner');
     try {
-      await updateTicket(pendingNoteTicketId, {
-        statut: 'revision_needed',
-        human_note: note,
-        reviewed_at: new Date().toISOString()
-      });
-      document.getElementById('modal').classList.remove('open');
+      const [ps, st] = await Promise.all([
+        fetch(`${AGENT_SERVER}/pipeline/status`).then(r=>r.json()),
+        fetch(`${AGENT_SERVER}/status`).then(r=>r.json())
+      ]);
+      const agents = Object.keys(st.running || {});
+      const editorialAgents = agents.filter(a => a.includes('editorial'));
 
-      const statusEl = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"] .ticket-status`);
-      if (statusEl) { statusEl.className = 'ticket-status status-revision'; statusEl.textContent = 'Revision'; }
-      const actionsEl = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"] .ticket-actions`);
-      if (actionsEl) { actionsEl.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--purple)">\u{1F4DD} Renvoye en revision</span>'; }
+      if (ps.running || agents.length > 0) {
+        banner.style.display = 'flex';
+        const phaseLabels = {sync:'Sync Analytics',generate:'Audit & Fact-Check',edit:'Corrections Editoriales',validate:'Validation & Deploy',done:'Termine',error:'Erreur'};
+        document.getElementById('pipelinePhaseLabel').textContent = 'Pipeline : ' + (phaseLabels[ps.phase] || ps.phase || 'actif');
+        document.getElementById('pipelineAgents').textContent = agents.length ? agents.join(', ') : 'en attente...';
+        document.getElementById('plAgentsCount').textContent = agents.length;
+        const pending = document.getElementById('statApproved')?.textContent || '-';
+        document.getElementById('plTicketsPending').textContent = pending;
 
-      showToast('\u{1F4DD} Note transmise', 'Relancez l\'agent editorial pour traiter');
-    } catch (err) {
-      showToast('Erreur: ' + err.message, '');
+        if (ps.phase === 'edit' && editorialAgents.length > 0) {
+          document.getElementById('pipelinePhaseLabel').textContent = 'Corrections en cours (' + editorialAgents.length + ' editoriaux)';
+        }
+      } else {
+        banner.style.display = ps.phase === 'done' ? 'flex' : 'none';
+        if (ps.phase === 'done') {
+          document.getElementById('pipelinePhaseLabel').textContent = 'Pipeline termine';
+          document.getElementById('pipelineAgents').textContent = 'Toutes les corrections ont ete appliquees';
+          document.getElementById('plAgentsCount').textContent = '0';
+        }
+      }
+    } catch(e) {
+      banner.style.display = 'none';
     }
-    sendBtn.disabled = false;
-    sendBtn.textContent = 'Renvoyer en revision';
-    pendingNoteTicketId = null;
-  });
-
-  document.getElementById('modal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-      document.getElementById('modal').classList.remove('open');
-      pendingNoteTicketId = null;
-    }
-  });
-
-  loadDashboard();
+  }
+  checkPipeline();
+  setInterval(checkPipeline, 5000);
 </script>
 
 </body>

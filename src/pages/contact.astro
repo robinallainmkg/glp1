@@ -723,17 +723,15 @@ import StaticLayout from '../layouts/StaticLayout.astro';
     }
   </style>
 
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script is:inline>
     // Load Supabase from CDN and handle contact form
-    (async function() {
+    (function() {
       try {
-        // Import Supabase from CDN
-        const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
-        
         // Initialize Supabase client with public credentials
-        const supabaseUrl = 'https://zmdzbhvxprldvvlnjzhu.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InptZHpiaHZ4cHJsZHZ2bG5qemh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQzMjU5OTEsImV4cCI6MjAzOTkwMTk5MX0.6CPDkaNBWVZgQzlvBRFWVEY6m4Y4wDn3-FsKl8gHpAg';
-        const supabase = createClient(supabaseUrl, supabaseKey);
+        const supabaseUrl = 'https://ywekaivgjzsmdocchvum.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
         
         console.log('🚀 Supabase client initialized');
         
@@ -800,6 +798,7 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                   message: data.message || '',
                   treatment: data.treatment || null,
                   newsletter: data.newsletter === 'yes',
+                  contact_type: 'contact',
                   concerns: Array.isArray(data.concerns) ? data.concerns : (data.concerns ? [data.concerns] : []),
                   created_at: new Date().toISOString()
                 };
@@ -819,10 +818,9 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                 }
                 
                 // Insert into Supabase contacts table
-                const { data: result, error } = await supabase
+                const { error } = await supabase
                   .from('contacts')
-                  .insert(contactData)
-                  .select();
+                  .insert(contactData);
                 
                 if (error) {
                   console.error('❌ Supabase error:', error);
@@ -830,7 +828,7 @@ import StaticLayout from '../layouts/StaticLayout.astro';
                   throw error;
                 }
                 
-                console.log('✅ Contact form success:', result);
+                console.log('✅ Contact form success');
                 
                 // Show success message
                 successMessage.style.display = 'block';

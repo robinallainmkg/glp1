@@ -1,17 +1,18 @@
 ---
-title: "Endocrinologue Pour Maigrir : Guide Complet et Conseils Pratiques 2025"
-slug: "endocrinologue-pour-maigrir"
+title: "Endocrinologue Pour Maigrir avec GLP-1 : Guide 2026"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
-description: "Consulter un endocrinologue pour maigrir : spécialisation en obésité, traitements GLP-1, suivi personnalisé et prise en charge médicale complète."
+description: "Consulter un endocrinologue pour maigrir avec GLP-1 : spécialisation en obésité, traitements, suivi personnalisé et prise en charge médicale complète."
 category: "Médecins spécialisés"
-tags: ["glp1", "medecins", "specialistes"]
+tags: ["glp1", "medecins", "spécialistes"]
 collection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/endocrinologue-pour-maigrir.jpg"
 thumbnailAlt: "Illustration pour l'article endocrinologue-pour-maigrir"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "endocrinologue pour maigrir GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -42,8 +43,8 @@ Vous cherchez un endocrinologue pour vous aider à perdre du poids ? Ce guide vo
 ### L'expertise spécialisée
 Un endocrinologue est le médecin spécialiste des hormones et du métabolisme. Pour la perte de poids, il est particulièrement qualifié pour :
 
-- **Diagnostiquer les causes hormonales** de la prise de poids (thyroïde, insulin­résistance, SOPK)
-- **Prescrire des médicaments** comme Ozempic, Wegovy ou Saxenda
+- **Diagnostiquer les causes hormonales** de la prise de poids (thyroïde, insulinorésistance, [SOPK](/collections/traitements-glp1/glp1-sopk-syndrome-ovaires-polykystiques-[ozempic](/collections/traitements-glp1/guide-complet-ozempic)-<a href="/collections/traitements-glp1/guide-complet-wegovy/">wegovy</a>/)/)
+- **Prescrire des médicaments** comme Ozempic, [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) ou Saxenda et déterminer le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) adapté à votre profil
 - **Adapter le traitement** selon votre profil métabolique
 - **Suivre l'évolution** avec des analyses précises
 
@@ -60,14 +61,14 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 **La marche à suivre :**
 - Prenez rendez-vous avec votre médecin généraliste
 - Expliquez vos difficultés de perte de poids
-- Demandez une lettre de recommandation pour un endocrinologue
+- Depuis juin 2025, votre généraliste peut prescrire directement les GLP-1 pour l'obésité (Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda) — une lettre de recommandation vers un endocrinologue n'est plus obligatoire pour la primo-prescription. Renseignez-vous sur les conditions de [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) selon votre profil. Une consultation d'endocrinologue reste utile pour les cas complexes ou si votre généraliste préfère vous adresser à un spécialiste.
 
-**Avantages :** Remboursement optimal, médecin qui connaît votre dossier
+**Avantages :** Remboursement optimal, médecin qui connaît votre dossier, accès plus rapide depuis l'ouverture de la prescription aux généralistes
 
 ### 2. Utiliser les annuaires officiels
 
 **Conseil de l'Ordre des Médecins :**
-- Site web : conseil-national.medecin.fr
+- Site web : conseil-national.médecin.fr
 - Recherche par spécialité et localisation
 - Vérification des diplômes et inscriptions
 
@@ -221,6 +222,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Médecin nutritionniste** (formation spécialisée)
 - **Consultation obésité** en CHU
 - **Médecin généraliste formé** (certains sont très compétents)
+- **[Diabétologue à Paris](/collections/medecins-glp1-france/diabetologue-paris/)** si vous êtes en Île-de-France
 
 ### Approche multidisciplinaire
 Idéalement, associez :
@@ -229,11 +231,11 @@ Idéalement, associez :
 - Psychologue si troubles du comportement alimentaire
 - Coach sportif adapté à votre condition
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [prix Wegovy](../glp1-cout/wegovy-prix/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [prix Wegovy](/collections/glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
@@ -242,7 +244,7 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
 Trouver le bon endocrinologue pour maigrir demande du temps et de la recherche, mais c'est un investissement crucial pour votre santé. Privilégiez la compétence à la proximité, n'hésitez pas à changer si vous n'êtes pas satisfait, et gardez en tête que la perte de poids durable nécessite du temps et un suivi médical régulier.
 
 **Points clés à retenir :**
-- Commencez par votre médecin traitant pour avoir une lettre de recommandation
-- Vérifiez les qualifications sur l'annuaire du Conseil de l'Ordre
+- Commencez par votre médecin traitant : depuis juin 2025, il peut prescrire directement les GLP-1 (Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/), Saxenda) sans passer par un spécialiste
+- Pour les cas complexes, l'endocrinologue reste le référent idéal — vérifiez ses qualifications sur l'annuaire du Conseil de l'Ordre
 - Préparez vos consultations et posez toutes vos questions
 - Le suivi régulier est essentiel pour réussir durablement

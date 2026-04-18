@@ -1,0 +1,731 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunites - GLP1 Admin</title>
+  <style is:inline>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
+    .main { padding: 2rem; }
+
+    /* Command box */
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
+
+    /* Pipeline funnel */
+    .pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 1.5rem; }
+    .pipe-step { padding: 1rem 1.25rem; text-align: center; position: relative; border: 1px solid #1e293b; }
+    .pipe-step:first-child { border-radius: 12px 0 0 12px; }
+    .pipe-step:last-child { border-radius: 0 12px 12px 0; }
+    .pipe-step .pipe-count { font-size: 1.8rem; font-weight: 800; line-height: 1; }
+    .pipe-step .pipe-label { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.35rem; }
+    .pipe-step .pipe-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
+    .pipe-step::after { content: ''; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 8px solid #1e293b; z-index: 1; }
+    .pipe-step:last-child::after { display: none; }
+    .ps-pending { background: #0f172a; }
+    .ps-pending .pipe-count { color: #60a5fa; }
+    .ps-pending .pipe-label { color: #64748b; }
+    .ps-pending .pipe-bar { background: #3b82f6; }
+    .ps-progress { background: #1a1508; }
+    .ps-progress .pipe-count { color: #fbbf24; }
+    .ps-progress .pipe-label { color: #64748b; }
+    .ps-progress .pipe-bar { background: #f59e0b; }
+    .ps-published { background: #071a0e; }
+    .ps-published .pipe-count { color: #4ade80; }
+    .ps-published .pipe-label { color: #64748b; }
+    .ps-published .pipe-bar { background: #22c55e; }
+    .ps-rejected { background: #1a0808; }
+    .ps-rejected .pipe-count { color: #f87171; }
+    .ps-rejected .pipe-label { color: #64748b; }
+    .ps-rejected .pipe-bar { background: #ef4444; }
+
+    /* Stats row */
+    .stats-row { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .mini-stat { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.6rem; flex: 1; min-width: 140px; }
+    .mini-stat-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+    .mini-stat-value { font-size: 1.25rem; font-weight: 800; color: #e2e8f0; line-height: 1; }
+    .mini-stat-label { font-size: 0.68rem; color: #64748b; }
+
+    /* Filters */
+    .toolbar { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
+
+    /* View toggle + sort */
+    .controls-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .view-toggle { display: flex; gap: 0.25rem; }
+    .view-btn { padding: 0.35rem 0.75rem; border: 1px solid #1e293b; border-radius: 6px; background: #111827; font-size: 0.75rem; cursor: pointer; color: #94a3b8; font-weight: 500; }
+    .view-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .sort-controls { display: flex; gap: 0.5rem; align-items: center; }
+    .sort-label { font-size: 0.72rem; color: #64748b; }
+    .sort-select { padding: 0.3rem 0.5rem; border: 1px solid #1e293b; border-radius: 6px; font-size: 0.75rem; background: #111827; color: #e2e8f0; }
+
+    /* ===== TABLE VIEW ===== */
+    .opp-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .opp-table thead th { position: sticky; top: 0; background: #0f1520; padding: 0.5rem 0.65rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; text-align: left; border-bottom: 2px solid #1e293b; white-space: nowrap; }
+    .opp-table thead th.th-center { text-align: center; }
+    .opp-table tbody tr { transition: background 0.1s; }
+    .opp-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+    .opp-table tbody tr:hover { background: #1a2332; }
+    .opp-table td { padding: 0.45rem 0.65rem; border-bottom: 1px solid #141c2b; font-size: 0.8rem; vertical-align: middle; }
+    .td-prio { width: 36px; text-align: center; }
+    .td-topic { max-width: 340px; }
+    .td-topic-title { font-weight: 600; color: #e2e8f0; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 340px; }
+    .td-topic-kw { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.65rem; color: #7c6bc4; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 300px; opacity: 0.8; }
+    .td-center { text-align: center; }
+
+    /* Metric bars */
+    .metric-bar { display: inline-flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
+    .metric-dots { display: flex; gap: 3px; }
+    .metric-dot { width: 8px; height: 16px; border-radius: 2px; background: #1e293b; }
+    .metric-dot.filled { background: currentColor; }
+    .metric-label { font-size: 0.72rem; font-weight: 600; }
+
+    .vol-high { color: #f87171; }
+    .vol-medium { color: #fbbf24; }
+    .vol-low { color: #4ade80; }
+    .comp-high { color: #f87171; }
+    .comp-medium { color: #fbbf24; }
+    .comp-low { color: #4ade80; }
+
+    /* Score badge */
+    .score-circle { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 24px; border-radius: 6px; font-size: 0.72rem; font-weight: 800; padding: 0 6px; }
+    .sc-high { background: #450a0a; color: #fca5a5; }
+    .sc-mid { background: #451a03; color: #fcd34d; }
+    .sc-low { background: #052e16; color: #86efac; }
+
+    /* Priority mini */
+    .prio-mini { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-weight: 800; font-size: 0.75rem; }
+    .pm-high { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .pm-mid { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .pm-low { background: #052e16; color: #4ade80; border: 2px solid #166534; }
+
+    /* Status pill */
+    .status-pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+    .sp-identified { background: #1e293b; color: #94a3b8; }
+    .sp-approved { background: #1e3a5f; color: #93c5fd; }
+    .sp-in_progress { background: #451a03; color: #fcd34d; }
+    .sp-published { background: #052e16; color: #86efac; }
+    .sp-rejected { background: #450a0a; color: #fca5a5; }
+
+    /* Collection badge */
+    .badge-collection { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: 600; background: #1e1b4b; color: #c4b5fd; white-space: nowrap; }
+
+    /* ===== CARD VIEW ===== */
+    .opp-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
+    .opp-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; transition: all 0.15s; display: flex; flex-direction: column; }
+    .opp-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.3); border-color: #334155; }
+
+    .opp-card-header { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .prio-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; flex-shrink: 0; }
+    .pc-high { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .pc-mid { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .pc-low { background: #052e16; color: #4ade80; border: 2px solid #166534; }
+
+    .opp-card-title { font-size: 0.88rem; font-weight: 700; color: #e2e8f0; line-height: 1.3; }
+    .opp-card-kw { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; margin-top: 0.15rem; }
+
+    .opp-card-desc { font-size: 0.78rem; color: #94a3b8; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 0.75rem; cursor: pointer; }
+    .opp-card-desc.expanded { -webkit-line-clamp: unset; }
+
+    .opp-card-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; padding: 0.75rem 0; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; margin-bottom: 0.5rem; }
+    .card-metric { text-align: center; }
+    .card-metric-label { font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #475569; margin-bottom: 0.2rem; }
+    .card-metric-value { font-size: 0.78rem; font-weight: 700; }
+
+    .opp-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.5rem; font-size: 0.72rem; color: #64748b; }
+    .opp-card-footer code { font-size: 0.68rem; color: #7c3aed; }
+
+    /* ===== KANBAN ===== */
+    .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .kanban-col { background: #0f1520; border-radius: 12px; padding: 0.75rem; min-height: 200px; border: 1px solid #1e293b; }
+    .kanban-col-header { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #94a3b8; padding: 0.5rem 0.25rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .kanban-col-header .kc-count { background: #1e293b; color: #94a3b8; padding: 1px 6px; border-radius: 8px; font-size: 0.65rem; }
+    .kanban-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem; font-size: 0.78rem; }
+    .kanban-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-color: #334155; }
+    .kanban-card .kc-title { font-weight: 600; color: #e2e8f0; margin-bottom: 0.25rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .kanban-card .kc-keyword { font-family: monospace; font-size: 0.68rem; color: #a78bfa; margin-bottom: 0.35rem; }
+    .kanban-card .kc-prio { display: inline-block; width: 20px; height: 20px; border-radius: 50%; font-size: 0.65rem; font-weight: 800; text-align: center; line-height: 20px; margin-right: 0.35rem; }
+    .kanban-card .kc-meta { display: flex; gap: 0.35rem; margin-top: 0.35rem; flex-wrap: wrap; }
+
+    /* Bottom sections */
+    .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .section-card { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #1e293b; color: #94a3b8; }
+    .list-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #1a2332; font-size: 0.82rem; }
+    .list-item:last-child { border-bottom: none; }
+    .list-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .list-info { flex: 1; }
+    .list-title { font-weight: 500; color: #e2e8f0; }
+    .list-sub { font-size: 0.72rem; color: #64748b; }
+    .list-count { font-size: 1.1rem; font-weight: 800; color: #a78bfa; }
+
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
+
+    /* Table wrapper for scroll */
+    .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid #1e293b; background: #111827; margin-bottom: 1.5rem; }
+
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 1100px) { .pipeline { grid-template-columns: repeat(2, 1fr); } .pipe-step::after { display: none; } .pipe-step { border-radius: 8px !important; } .two-cols { grid-template-columns: 1fr; } .kanban { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .main { padding: 1rem; } .pipeline { grid-template-columns: 1fr; } .opp-cards { grid-template-columns: 1fr; } .stats-row { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <div class="page-header-left">
+      <h1>Opportunites de Contenu</h1>
+      <p>Sujets et gaps identifies par l'agent Opportunities</p>
+    </div>
+    <div class="header-actions">
+      <span class="last-update" id="lastUpdate">-</span>
+      <button class="refresh-btn" onclick="loadAll()">&#x27F3; Rafraichir</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="cmd-box">
+      <code>claude -p "Cherche les opportunites" --agent opportunities</code>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Cherche les opportunites&quot; --agent opportunities');this.textContent='Copie !'">Copier</button>
+    </div>
+
+    <!-- Pipeline funnel -->
+    <div class="pipeline">
+      <div class="pipe-step ps-pending">
+        <div class="pipe-count" id="pipePending">-</div>
+        <div class="pipe-label">A traiter</div>
+        <div class="pipe-bar"></div>
+      </div>
+      <div class="pipe-step ps-progress">
+        <div class="pipe-count" id="pipeProgress">-</div>
+        <div class="pipe-label">En cours</div>
+        <div class="pipe-bar"></div>
+      </div>
+      <div class="pipe-step ps-published">
+        <div class="pipe-count" id="pipePublished">-</div>
+        <div class="pipe-label">Publiees</div>
+        <div class="pipe-bar"></div>
+      </div>
+      <div class="pipe-step ps-rejected">
+        <div class="pipe-count" id="pipeRejected">-</div>
+        <div class="pipe-label">Rejetees</div>
+        <div class="pipe-bar"></div>
+      </div>
+    </div>
+
+    <!-- Mini stats -->
+    <div class="stats-row">
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#1e1b4b;color:#a78bfa">&#x2211;</div>
+        <div>
+          <div class="mini-stat-value" id="statTotal">-</div>
+          <div class="mini-stat-label">Total</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#450a0a;color:#f87171">!</div>
+        <div>
+          <div class="mini-stat-value" id="statHigh">-</div>
+          <div class="mini-stat-label">Haute priorite</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#052e16;color:#4ade80">&#x2191;</div>
+        <div>
+          <div class="mini-stat-value" id="statHighVol">-</div>
+          <div class="mini-stat-label">Fort volume</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#0c1a33;color:#60a5fa">&#x25CB;</div>
+        <div>
+          <div class="mini-stat-value" id="statLowComp">-</div>
+          <div class="mini-stat-label">Faible competition</div>
+        </div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-icon" style="background:#1a1508;color:#fbbf24">&#x2605;</div>
+        <div>
+          <div class="mini-stat-value" id="statAvgScore">-</div>
+          <div class="mini-stat-label">Score moyen</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="toolbar">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
+      <button class="filter-btn" data-filter="approved" onclick="setFilter('approved')">A traiter</button>
+      <button class="filter-btn" data-filter="in_progress" onclick="setFilter('in_progress')">En cours</button>
+      <button class="filter-btn" data-filter="published" onclick="setFilter('published')">Publiees</button>
+      <button class="filter-btn" data-filter="rejected" onclick="setFilter('rejected')">Rejetees</button>
+      <button class="filter-btn" data-filter="high" onclick="setFilter('high')">Haute prio</button>
+      <input type="text" class="search-input" placeholder="Rechercher un sujet..." oninput="setSearch(this.value)" />
+    </div>
+
+    <!-- View toggle + sort -->
+    <div class="controls-row">
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="table" onclick="setView('table')">Tableau</button>
+        <button class="view-btn" data-view="grid" onclick="setView('grid')">Cartes</button>
+        <button class="view-btn" data-view="kanban" onclick="setView('kanban')">Kanban</button>
+      </div>
+      <div class="sort-controls">
+        <span class="sort-label">Trier par:</span>
+        <select class="sort-select" id="sortSelect" onchange="setSort(this.value)">
+          <option value="score">Score</option>
+          <option value="priority">Priorite</option>
+          <option value="date">Date</option>
+          <option value="volume">Volume</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div id="oppsContainer"><div class="empty-state">Chargement...</div></div>
+
+    <!-- Bottom: runs + collections -->
+    <div class="two-cols" style="margin-top:1.5rem">
+      <div class="section-card">
+        <div class="section-header">
+          Historique des runs
+          <span class="badge-count" id="runCount">0</span>
+        </div>
+        <div id="runsList"><div class="empty-state">Chargement...</div></div>
+      </div>
+      <div class="section-card">
+        <div class="section-header">
+          Par collection
+          <span class="badge-count" id="collCount">0</span>
+        </div>
+        <div id="collList"><div class="empty-state">Chargement...</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SB_URL = supabaseUrl;
+  const SB_KEY = supabaseAnonKey;
+  let allOpps = [];
+  let currentFilter = 'all';
+  let currentSearch = '';
+  let currentView = 'table';
+  let currentSort = 'score';
+
+  function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  function oppScore(o) {
+    let score = 0;
+    const p = o.priority || 5;
+    score += (10 - p) * 3;
+    const vol = (o.estimated_volume || '').toLowerCase();
+    if (vol.includes('high') || vol.includes('eleve')) score += 20;
+    else if (vol.includes('medium') || vol.includes('moyen')) score += 10;
+    const comp = (o.competition || '').toLowerCase();
+    if (comp.includes('low') || comp.includes('faible')) score += 15;
+    else if (comp.includes('medium') || comp.includes('moyen')) score += 8;
+    return score;
+  }
+
+  function volLevel(v) {
+    if (!v) return 'low';
+    const lv = v.toLowerCase();
+    if (lv.includes('high') || lv.includes('eleve')) return 'high';
+    if (lv.includes('medium') || lv.includes('moyen')) return 'medium';
+    return 'low';
+  }
+
+  function compLevel(c) {
+    if (!c) return 'low';
+    const lc = c.toLowerCase();
+    if (lc.includes('high') || lc.includes('forte')) return 'high';
+    if (lc.includes('medium') || lc.includes('moyen')) return 'medium';
+    return 'low';
+  }
+
+  function metricDotsHtml(level, type) {
+    const levels = { high: 3, medium: 2, low: 1 };
+    const n = levels[level] || 1;
+    const labels = { high: 'Fort', medium: 'Moyen', low: 'Faible' };
+    return `<div class="metric-bar ${type}-${level}">
+      <div class="metric-dots">${[1,2,3].map(i => `<div class="metric-dot${i <= n ? ' filled' : ''}"></div>`).join('')}</div>
+      <span class="metric-label">${labels[level]}</span>
+    </div>`;
+  }
+
+  function prioMini(p) {
+    if (!p) return '<span class="prio-mini pm-low">?</span>';
+    const cls = p <= 3 ? 'pm-high' : p <= 6 ? 'pm-mid' : 'pm-low';
+    return `<span class="prio-mini ${cls}">${p}</span>`;
+  }
+
+  function scoreCircle(score) {
+    const cls = score >= 35 ? 'sc-high' : score >= 20 ? 'sc-mid' : 'sc-low';
+    return `<span class="score-circle ${cls}">${score}</span>`;
+  }
+
+  function statusPill(status) {
+    const labels = { approved: 'A traiter', identified: 'Identifiee', in_progress: 'En cours', published: 'Publiee', rejected: 'Rejetee' };
+    return `<span class="status-pill sp-${status || 'identified'}">${labels[status] || status || '-'}</span>`;
+  }
+
+  function timeAgo(d) {
+    if (!d) return '-';
+    const now = new Date(), then = new Date(d);
+    const h = Math.round((now - then) / 3600000);
+    if (h < 1) return "A l'instant";
+    if (h < 24) return `Il y a ${h}h`;
+    const days = Math.round(h / 24);
+    if (days === 1) return 'Hier';
+    if (days < 7) return `Il y a ${days}j`;
+    return then.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  }
+
+  window.setFilter = function(f) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    renderOpps();
+  };
+
+  window.setSearch = function(q) {
+    currentSearch = q.toLowerCase();
+    renderOpps();
+  };
+
+  window.setView = function(v) {
+    currentView = v;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+    renderOpps();
+  };
+
+  window.setSort = function(s) {
+    currentSort = s;
+    renderOpps();
+  };
+
+  function filterOpps() {
+    let list = allOpps;
+    switch (currentFilter) {
+      case 'approved': list = list.filter(o => o.status === 'approved' || o.status === 'identified'); break;
+      case 'in_progress': list = list.filter(o => o.status === 'in_progress'); break;
+      case 'published': list = list.filter(o => o.status === 'published'); break;
+      case 'rejected': list = list.filter(o => o.status === 'rejected'); break;
+      case 'high': list = list.filter(o => o.priority && o.priority <= 3); break;
+    }
+    if (currentSearch) {
+      list = list.filter(o =>
+        (o.topic || '').toLowerCase().includes(currentSearch) ||
+        (o.target_keyword || '').toLowerCase().includes(currentSearch) ||
+        (o.description || '').toLowerCase().includes(currentSearch)
+      );
+    }
+    return list;
+  }
+
+  function sortOpps(list) {
+    const sorted = [...list];
+    switch (currentSort) {
+      case 'priority': sorted.sort((a, b) => (a.priority || 10) - (b.priority || 10)); break;
+      case 'date': sorted.sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0)); break;
+      case 'volume':
+        const volOrder = v => { const lv = (v||'').toLowerCase(); if (lv.includes('high')||lv.includes('eleve')) return 0; if (lv.includes('medium')||lv.includes('moyen')) return 1; return 2; };
+        sorted.sort((a, b) => volOrder(a.estimated_volume) - volOrder(b.estimated_volume));
+        break;
+      case 'score': sorted.sort((a, b) => oppScore(b) - oppScore(a)); break;
+    }
+    return sorted;
+  }
+
+  function renderOpps() {
+    const filtered = sortOpps(filterOpps());
+    const container = document.getElementById('oppsContainer');
+
+    if (filtered.length === 0) {
+      container.innerHTML = allOpps.length > 0
+        ? '<div class="empty-state">Aucune opportunite pour ce filtre</div>'
+        : '<div class="empty-state">Aucune opportunite — lancez l\'agent opportunities</div>';
+      return;
+    }
+
+    if (currentView === 'kanban') { renderKanban(filtered, container); return; }
+    if (currentView === 'grid') { renderGrid(filtered, container); return; }
+    renderTable(filtered, container);
+  }
+
+  // ===== TABLE VIEW =====
+  function renderTable(filtered, container) {
+    container.innerHTML = `<div class="table-wrap"><table class="opp-table">
+      <thead><tr>
+        <th class="th-center">Prio</th>
+        <th>Sujet</th>
+        <th>Collection</th>
+        <th>Volume</th>
+        <th>Competition</th>
+        <th class="th-center">Score</th>
+        <th>Statut</th>
+        <th>Date</th>
+      </tr></thead>
+      <tbody>${filtered.map(o => {
+        const score = oppScore(o);
+        const vl = volLevel(o.estimated_volume);
+        const cl = compLevel(o.competition);
+        return `<tr>
+          <td class="td-prio">${prioMini(o.priority)}</td>
+          <td class="td-topic">
+            <div class="td-topic-title" title="${esc(o.topic)}">${esc(o.topic)}</div>
+            ${o.target_keyword ? `<div class="td-topic-kw">${esc(o.target_keyword)}</div>` : ''}
+          </td>
+          <td>${o.suggested_collection ? `<span class="badge-collection">${esc(o.suggested_collection)}</span>` : '<span style="color:#475569">-</span>'}</td>
+          <td>${metricDotsHtml(vl, 'vol')}</td>
+          <td>${metricDotsHtml(cl, 'comp')}</td>
+          <td class="td-center">${scoreCircle(score)}</td>
+          <td>${statusPill(o.status)}</td>
+          <td style="font-size:0.75rem;color:#64748b;white-space:nowrap">${timeAgo(o.created_at)}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table></div>`;
+  }
+
+  // ===== GRID VIEW =====
+  function renderGrid(filtered, container) {
+    container.innerHTML = '<div class="opp-cards">' + filtered.map(o => {
+      const score = oppScore(o);
+      const vl = volLevel(o.estimated_volume);
+      const cl = compLevel(o.competition);
+      const volLabels = { high: 'Fort', medium: 'Moyen', low: 'Faible' };
+      const compLabels = { high: 'Forte', medium: 'Moyenne', low: 'Faible' };
+      const volColors = { high: '#f87171', medium: '#fbbf24', low: '#4ade80' };
+      const compColors = { high: '#f87171', medium: '#fbbf24', low: '#4ade80' };
+      const scoreColor = score >= 35 ? '#f87171' : score >= 20 ? '#fbbf24' : '#4ade80';
+
+      const pc = o.priority && o.priority <= 3 ? 'pc-high' : o.priority && o.priority <= 6 ? 'pc-mid' : 'pc-low';
+
+      return `<div class="opp-card">
+        <div class="opp-card-header">
+          <div class="prio-circle ${pc}">${o.priority || '?'}</div>
+          <div style="flex:1;min-width:0">
+            <div class="opp-card-title">${esc(o.topic)}</div>
+            ${o.target_keyword ? `<div class="opp-card-kw">${esc(o.target_keyword)}</div>` : ''}
+          </div>
+          ${statusPill(o.status)}
+        </div>
+        <div class="opp-card-desc" onclick="this.classList.toggle('expanded')">${esc(o.description || '')}</div>
+        <div class="opp-card-metrics">
+          <div class="card-metric">
+            <div class="card-metric-label">Volume</div>
+            <div class="card-metric-value" style="color:${volColors[vl]}">${volLabels[vl]}</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-label">Competition</div>
+            <div class="card-metric-value" style="color:${compColors[cl]}">${compLabels[cl]}</div>
+          </div>
+          <div class="card-metric">
+            <div class="card-metric-label">Score</div>
+            <div class="card-metric-value" style="color:${scoreColor}">${score} pts</div>
+          </div>
+        </div>
+        <div class="opp-card-footer">
+          <div>
+            ${o.suggested_collection ? `<span class="badge-collection">${esc(o.suggested_collection)}</span>` : ''}
+            ${o.suggested_slug ? ` <code>${esc(o.suggested_slug)}</code>` : ''}
+          </div>
+          <span>${timeAgo(o.created_at)}</span>
+        </div>
+      </div>`;
+    }).join('') + '</div>';
+  }
+
+  // ===== KANBAN VIEW =====
+  function renderKanban(filtered, container) {
+    const columns = [
+      { key: 'identified', label: 'Identifiees', color: '#64748b', items: [] },
+      { key: 'approved', label: 'A traiter', color: '#3b82f6', items: [] },
+      { key: 'in_progress', label: 'En cours', color: '#f59e0b', items: [] },
+      { key: 'published', label: 'Publiees', color: '#22c55e', items: [] },
+    ];
+    const colMap = {};
+    columns.forEach(c => colMap[c.key] = c);
+
+    for (const o of filtered) {
+      const col = colMap[o.status] || colMap['identified'];
+      col.items.push(o);
+    }
+
+    container.innerHTML = `<div class="kanban">${columns.map(col => `
+      <div class="kanban-col">
+        <div class="kanban-col-header" style="border-bottom:2px solid ${col.color}">
+          ${col.label}
+          <span class="kc-count">${col.items.length}</span>
+        </div>
+        ${col.items.length === 0 ? '<div style="text-align:center;color:#475569;font-size:0.75rem;padding:1rem">Aucune</div>' : col.items.map(o => {
+          const pcClass = o.priority && o.priority <= 3 ? 'pc-high' : o.priority && o.priority <= 6 ? 'pc-mid' : 'pc-low';
+          const score = oppScore(o);
+          return `<div class="kanban-card">
+            <div style="display:flex;align-items:center;margin-bottom:0.25rem">
+              <span class="kc-prio ${pcClass}">${o.priority || '?'}</span>
+              <span class="kc-title">${esc(o.topic)}</span>
+            </div>
+            ${o.target_keyword ? `<div class="kc-keyword">${esc(o.target_keyword)}</div>` : ''}
+            <div class="kc-meta">
+              ${o.suggested_collection ? `<span class="badge-collection">${esc(o.suggested_collection)}</span>` : ''}
+              ${scoreCircle(score)}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    `).join('')}</div>`;
+  }
+
+  function renderCollections() {
+    const byCol = {};
+    allOpps.forEach(o => {
+      const col = o.suggested_collection || 'Non defini';
+      byCol[col] = (byCol[col] || 0) + 1;
+    });
+    const sorted = Object.entries(byCol).sort((a, b) => b[1] - a[1]);
+    document.getElementById('collCount').textContent = sorted.length;
+
+    if (sorted.length === 0) {
+      document.getElementById('collList').innerHTML = '<div class="empty-state">-</div>';
+      return;
+    }
+
+    const colors = ['#8b5cf6', '#3b82f6', '#22c55e', '#f59e0b', '#ef4444', '#ec4899', '#06b6d4'];
+    document.getElementById('collList').innerHTML = sorted.map(([col, count], i) => `
+      <div class="list-item">
+        <div class="list-dot" style="background:${colors[i % colors.length]}"></div>
+        <div class="list-info">
+          <div class="list-title">${esc(col)}</div>
+          <div class="list-sub">${count} opportunite${count > 1 ? 's' : ''}</div>
+        </div>
+        <div class="list-count">${count}</div>
+      </div>
+    `).join('');
+  }
+
+  async function loadRuns() {
+    try {
+      const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.opportunities&order=started_at.desc&limit=10');
+      document.getElementById('runCount').textContent = runs.length;
+      if (runs.length === 0) {
+        document.getElementById('runsList').innerHTML = '<div class="empty-state">Aucun run</div>';
+        return;
+      }
+      document.getElementById('runsList').innerHTML = runs.map(r => {
+        const date = new Date(r.started_at);
+        const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+        return `<div class="list-item">
+          <div class="list-dot" style="background:${r.status === 'completed' ? '#22c55e' : '#ef4444'}"></div>
+          <div class="list-info">
+            <div class="list-title">${esc(dateStr)}</div>
+            <div class="list-sub">${r.items_processed || '?'} opportunites detectees</div>
+          </div>
+        </div>`;
+      }).join('');
+    } catch(e) {}
+  }
+
+  async function loadAll() {
+    try {
+      allOpps = await sbFetch('content_opportunities', 'select=*&order=priority.asc,created_at.desc');
+
+      // Pipeline counts
+      const pending = allOpps.filter(o => o.status === 'approved' || o.status === 'identified').length;
+      const progress = allOpps.filter(o => o.status === 'in_progress').length;
+      const published = allOpps.filter(o => o.status === 'published').length;
+      const rejected = allOpps.filter(o => o.status === 'rejected').length;
+      const high = allOpps.filter(o => o.priority && o.priority <= 3).length;
+
+      document.getElementById('pipePending').textContent = pending;
+      document.getElementById('pipeProgress').textContent = progress;
+      document.getElementById('pipePublished').textContent = published;
+      document.getElementById('pipeRejected').textContent = rejected;
+
+      // Mini stats
+      document.getElementById('statTotal').textContent = allOpps.length;
+      document.getElementById('statHigh').textContent = high;
+
+      const highVol = allOpps.filter(o => {
+        const v = (o.estimated_volume || '').toLowerCase();
+        return v.includes('high') || v.includes('eleve');
+      }).length;
+      document.getElementById('statHighVol').textContent = highVol;
+
+      const lowComp = allOpps.filter(o => {
+        const c = (o.competition || '').toLowerCase();
+        return c.includes('low') || c.includes('faible');
+      }).length;
+      document.getElementById('statLowComp').textContent = lowComp;
+
+      const scores = allOpps.map(oppScore);
+      const avgScore = scores.length ? Math.round(scores.reduce((a,b) => a+b, 0) / scores.length) : 0;
+      document.getElementById('statAvgScore').textContent = avgScore;
+
+      // Filter counts
+      const counts = {
+        all: allOpps.length,
+        approved: pending,
+        in_progress: progress,
+        published: published,
+        rejected: rejected,
+        high: high,
+      };
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const f = btn.dataset.filter;
+        const existing = btn.querySelector('.filter-count');
+        if (existing) existing.remove();
+        if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
+      });
+
+      renderOpps();
+      renderCollections();
+      loadRuns();
+
+      document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
+    } catch (err) {
+      document.getElementById('oppsContainer').innerHTML = `<div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:10px;color:#991b1b;font-size:0.85rem"><strong>Erreur:</strong> ${esc(err.message)}</div>`;
+    }
+  }
+
+  loadAll();
+  setInterval(loadAll, 30000);
+</script>
+
+</body>
+</html>

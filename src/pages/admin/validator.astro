@@ -1,0 +1,489 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validator - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #e2e8f0; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header { background: #111827; border-bottom: 1px solid #1e293b; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #94a3b8; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #111827; color: #c8d6e5; font-size: 0.82rem; cursor: pointer; }
+    .refresh-btn:hover { background: #1a2332; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
+    .main { padding: 2rem; }
+
+    .cmd-box { background: #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #475569; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
+
+    /* Build banner */
+    .build-banner { border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 0.88rem; }
+    .build-ok { background: #052e16; border: 1px solid #166534; color: #4ade80; }
+    .build-fail { background: #450a0a; border: 1px solid #991b1b; color: #fca5a5; }
+    .build-unknown { background: #111827; border: 1px solid #1e293b; color: #64748b; }
+
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #64748b; margin-top: 0.35rem; }
+
+    /* Check type breakdown */
+    .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 1.5rem; }
+    .breakdown-item { background: #111827; border: 1px solid #1e293b; border-radius: 10px; padding: 0.75rem; text-align: center; cursor: pointer; transition: all 0.15s; }
+    .breakdown-item:hover { border-color: #a78bfa; box-shadow: 0 2px 6px rgba(124,58,237,0.15); }
+    .breakdown-item.active { border-color: #a78bfa; background: #1a1535; }
+    .breakdown-count { font-size: 1.25rem; font-weight: 800; line-height: 1; }
+    .breakdown-label { font-size: 0.68rem; color: #94a3b8; margin-top: 0.3rem; font-weight: 500; }
+    .ct-build { color: #c4b5fd; }
+    .ct-frontmatter { color: #93c5fd; }
+    .ct-internal_link { color: #f9a8d4; }
+    .ct-image { color: #fcd34d; }
+    .ct-seo_meta { color: #a5b4fc; }
+    .ct-duplicate { color: #fdba74; }
+    .ct-content_quality { color: #7dd3fc; }
+    .ct-heading_hierarchy { color: #6ee7b7; }
+    .ct-sync { color: #fca5a5; }
+    .ct-sitemap { color: #c4b5fd; }
+    .ct-html_output { color: #67e8f9; }
+
+    /* Filters */
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.2); }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 200px; margin-left: auto; }
+    .search-input::placeholder { color: #64748b; }
+    .search-input:focus { outline: none; border-color: #a78bfa; }
+
+    /* Results table */
+    .results-table { width: 100%; background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; margin-bottom: 1.5rem; }
+    .results-table table { width: 100%; border-collapse: collapse; }
+    .results-table th { text-align: left; padding: 0.75rem 1rem; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #1e293b; background: #0f1520; }
+    .results-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #1a2332; vertical-align: middle; color: #c8d6e5; }
+    .results-table tr:last-child td { border-bottom: none; }
+    .results-table tr:hover td { background: #1a2332; }
+
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; }
+    .badge-error { background: #450a0a; color: #fca5a5; }
+    .badge-warning { background: #451a03; color: #fcd34d; }
+    .badge-info { background: #1e3a5f; color: #93c5fd; }
+    .badge-pass { background: #052e16; color: #6ee7b7; }
+
+    .type-badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.68rem; font-weight: 600; }
+    .tb-build { background: #2e1065; color: #c4b5fd; }
+    .tb-frontmatter { background: #1e3a5f; color: #93c5fd; }
+    .tb-internal_link { background: #500724; color: #f9a8d4; }
+    .tb-image { background: #451a03; color: #fcd34d; }
+    .tb-seo_meta { background: #1e1b4b; color: #a5b4fc; }
+    .tb-duplicate { background: #431407; color: #fdba74; }
+    .tb-content_quality { background: #0c4a6e; color: #7dd3fc; }
+    .tb-heading_hierarchy { background: #052e16; color: #6ee7b7; }
+    .tb-sync { background: #450a0a; color: #fca5a5; }
+    .tb-sitemap { background: #2e1065; color: #c4b5fd; }
+    .tb-html_output { background: #083344; color: #67e8f9; }
+
+    .slug-cell { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #a78bfa; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .msg-cell { max-width: 350px; line-height: 1.4; }
+
+    /* Run history */
+    .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .section-card { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #1e293b; color: #94a3b8; }
+    .run-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #1a2332; font-size: 0.82rem; }
+    .run-item:last-child { border-bottom: none; }
+    .run-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .run-dot-ok { background: #22c55e; }
+    .run-dot-fail { background: #ef4444; }
+    .run-dot-run { background: #f59e0b; }
+    .run-info { flex: 1; }
+    .run-date { font-weight: 500; color: #e2e8f0; }
+    .run-meta { font-size: 0.72rem; color: #64748b; }
+    .run-badges { display: flex; gap: 0.35rem; }
+    .run-badge { padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 700; }
+
+    /* Articles summary */
+    .article-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 1.25rem; border-bottom: 1px solid #1a2332; font-size: 0.82rem; }
+    .article-row:last-child { border-bottom: none; }
+    .article-status { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .as-ok { background: #22c55e; }
+    .as-warn { background: #f59e0b; }
+    .as-err { background: #ef4444; }
+    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.75rem; color: #a78bfa; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .article-counts { display: flex; gap: 0.35rem; }
+
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
+
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .admin-layout { margin-left: 0; } .main { padding: 1rem; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <div class="page-header-left">
+      <h1>Validator</h1>
+      <p>Verification technique complete — Build, frontmatter, liens, images, SEO, doublons, coherence</p>
+    </div>
+    <div class="header-actions">
+      <span class="last-update" id="lastUpdate">-</span>
+      <button class="refresh-btn" onclick="loadAll()">&#x27F3; Rafraichir</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="cmd-box">
+      <code>claude -p "Valide le site" --agent validator</code>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Valide le site&quot; --agent validator');this.textContent='Copie !'">Copier</button>
+    </div>
+
+    <div id="buildBanner" class="build-banner build-unknown">En attente du premier run...</div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="label">Articles verifies</div>
+        <div class="value" id="statTotal" style="color:#e2e8f0">-</div>
+        <div class="sub">Derniere validation</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Erreurs</div>
+        <div class="value" id="statErrors" style="color:#dc2626">-</div>
+        <div class="sub">Bloquent le deploiement</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Warnings</div>
+        <div class="value" id="statWarnings" style="color:#d97706">-</div>
+        <div class="sub">A corriger</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Infos</div>
+        <div class="value" id="statInfos" style="color:#3b82f6">-</div>
+        <div class="sub">Suggestions</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Score</div>
+        <div class="value" id="statScore" style="color:#059669">-</div>
+        <div class="sub">Taux de conformite</div>
+      </div>
+    </div>
+
+    <!-- Check type breakdown -->
+    <div class="breakdown-grid" id="breakdownGrid"></div>
+
+    <!-- Severity filters + search -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
+      <button class="filter-btn" data-filter="error" onclick="setFilter('error')">Erreurs</button>
+      <button class="filter-btn" data-filter="warning" onclick="setFilter('warning')">Warnings</button>
+      <button class="filter-btn" data-filter="info" onclick="setFilter('info')">Infos</button>
+      <input type="text" class="search-input" placeholder="Rechercher un article..." oninput="setSearch(this.value)" />
+    </div>
+
+    <!-- Results table -->
+    <div id="resultsContainer"><div class="empty-state">Aucun resultat — lancez l'agent validator</div></div>
+
+    <!-- Bottom: Run history + Articles summary -->
+    <div class="two-cols" style="margin-top:1.5rem">
+      <div class="section-card">
+        <div class="section-header">
+          Historique des runs
+          <span class="badge-count" id="runCount">0</span>
+        </div>
+        <div id="runsList"><div class="empty-state">Chargement...</div></div>
+      </div>
+      <div class="section-card">
+        <div class="section-header">
+          Resume par article
+          <span class="badge-count" id="articleCount">0</span>
+        </div>
+        <div id="articlesList" style="max-height:400px;overflow-y:auto"><div class="empty-state">Chargement...</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SB_URL = supabaseUrl;
+  const SB_KEY = supabaseAnonKey;
+  let allResults = [];
+  let currentFilter = 'all';
+  let currentTypeFilter = null;
+  let currentSearch = '';
+
+  function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  const CHECK_TYPE_LABELS = {
+    build: 'Build',
+    frontmatter: 'Frontmatter',
+    internal_link: 'Liens internes',
+    image: 'Images',
+    seo_meta: 'SEO Meta',
+    duplicate: 'Doublons',
+    content_quality: 'Contenu',
+    heading_hierarchy: 'Headings',
+    sync: 'Sync DB',
+    sitemap: 'Sitemap',
+    html_output: 'HTML Output'
+  };
+
+  function sevBadge(sev) {
+    const cls = { error: 'badge-error', warning: 'badge-warning', info: 'badge-info', pass: 'badge-pass' };
+    return `<span class="badge ${cls[sev] || ''}">${esc(sev)}</span>`;
+  }
+
+  function typeBadge(type) {
+    return `<span class="type-badge tb-${type}">${esc(CHECK_TYPE_LABELS[type] || type)}</span>`;
+  }
+
+  window.setFilter = function(f) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    renderResults();
+  };
+
+  window.setTypeFilter = function(type) {
+    if (currentTypeFilter === type) {
+      currentTypeFilter = null;
+    } else {
+      currentTypeFilter = type;
+    }
+    document.querySelectorAll('.breakdown-item').forEach(b => b.classList.toggle('active', b.dataset.type === currentTypeFilter));
+    renderResults();
+  };
+
+  window.setSearch = function(q) {
+    currentSearch = q.toLowerCase();
+    renderResults();
+  };
+
+  function renderBreakdown(results) {
+    const nonPass = results.filter(r => r.severity !== 'pass');
+    const typeCounts = {};
+    for (const r of nonPass) {
+      typeCounts[r.check_type] = (typeCounts[r.check_type] || 0) + 1;
+    }
+
+    const grid = document.getElementById('breakdownGrid');
+    if (Object.keys(typeCounts).length === 0) {
+      grid.innerHTML = '';
+      return;
+    }
+
+    // Sort by count descending
+    const sorted = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
+    grid.innerHTML = sorted.map(([type, count]) => `
+      <div class="breakdown-item${currentTypeFilter === type ? ' active' : ''}" data-type="${type}" onclick="setTypeFilter('${type}')">
+        <div class="breakdown-count ct-${type}">${count}</div>
+        <div class="breakdown-label">${esc(CHECK_TYPE_LABELS[type] || type)}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderResults() {
+    let filtered = allResults.filter(r => r.severity !== 'pass');
+
+    if (currentFilter !== 'all') {
+      filtered = filtered.filter(r => r.severity === currentFilter);
+    }
+    if (currentTypeFilter) {
+      filtered = filtered.filter(r => r.check_type === currentTypeFilter);
+    }
+    if (currentSearch) {
+      filtered = filtered.filter(r =>
+        (r.article_slug || '').toLowerCase().includes(currentSearch) ||
+        (r.message || '').toLowerCase().includes(currentSearch)
+      );
+    }
+
+    const container = document.getElementById('resultsContainer');
+
+    if (filtered.length === 0) {
+      container.innerHTML = allResults.length > 0
+        ? '<div class="empty-state" style="color:#059669">&#x2705; Aucun probleme pour ces filtres</div>'
+        : '<div class="empty-state">Aucun resultat — lancez l\'agent validator</div>';
+      return;
+    }
+
+    let html = '<div class="results-table"><table><thead><tr><th>Severite</th><th>Type</th><th>Article</th><th>Message</th></tr></thead><tbody>';
+    for (const r of filtered) {
+      html += `<tr>
+        <td>${sevBadge(r.severity)}</td>
+        <td>${typeBadge(r.check_type)}</td>
+        <td class="slug-cell" title="${esc(r.article_slug)}">${esc(r.article_slug)}</td>
+        <td class="msg-cell">${esc(r.message)}</td>
+      </tr>`;
+    }
+    html += '</tbody></table></div>';
+    container.innerHTML = html;
+  }
+
+  function renderArticlesSummary(results) {
+    const nonPass = results.filter(r => r.severity !== 'pass');
+    const bySlug = {};
+    for (const r of nonPass) {
+      if (!r.article_slug || r.article_slug === '_global') continue;
+      if (!bySlug[r.article_slug]) bySlug[r.article_slug] = { errors: 0, warnings: 0, infos: 0 };
+      if (r.severity === 'error') bySlug[r.article_slug].errors++;
+      if (r.severity === 'warning') bySlug[r.article_slug].warnings++;
+      if (r.severity === 'info') bySlug[r.article_slug].infos++;
+    }
+
+    const slugs = Object.keys(bySlug).sort((a, b) => {
+      const ae = bySlug[a].errors, be = bySlug[b].errors;
+      if (ae !== be) return be - ae;
+      return bySlug[b].warnings - bySlug[a].warnings;
+    });
+
+    document.getElementById('articleCount').textContent = slugs.length;
+    const container = document.getElementById('articlesList');
+
+    if (slugs.length === 0) {
+      container.innerHTML = '<div class="empty-state" style="color:#059669">Aucun probleme detecte</div>';
+      return;
+    }
+
+    container.innerHTML = slugs.map(slug => {
+      const s = bySlug[slug];
+      const statusClass = s.errors > 0 ? 'as-err' : s.warnings > 0 ? 'as-warn' : 'as-ok';
+      return `<div class="article-row">
+        <div class="article-status ${statusClass}"></div>
+        <div class="article-slug" title="${esc(slug)}">${esc(slug)}</div>
+        <div class="article-counts">
+          ${s.errors > 0 ? `<span class="run-badge" style="background:#450a0a;color:#fca5a5">${s.errors}E</span>` : ''}
+          ${s.warnings > 0 ? `<span class="run-badge" style="background:#451a03;color:#fcd34d">${s.warnings}W</span>` : ''}
+          ${s.infos > 0 ? `<span class="run-badge" style="background:#1e3a5f;color:#93c5fd">${s.infos}I</span>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  async function loadRuns() {
+    try {
+      const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.validator&order=started_at.desc&limit=10');
+      document.getElementById('runCount').textContent = runs.length;
+
+      if (runs.length === 0) {
+        document.getElementById('runsList').innerHTML = '<div class="empty-state">Aucun run</div>';
+        return;
+      }
+
+      document.getElementById('runsList').innerHTML = runs.map(r => {
+        const meta = r.metadata || {};
+        const dotClass = r.status === 'completed' ? 'run-dot-ok' : r.status === 'failed' ? 'run-dot-fail' : 'run-dot-run';
+        const date = new Date(r.started_at);
+        const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+
+        return `<div class="run-item">
+          <div class="run-dot ${dotClass}"></div>
+          <div class="run-info">
+            <div class="run-date">${esc(dateStr)}</div>
+            <div class="run-meta">${meta.articles_checked || r.items_processed || '?'} articles${meta.build_ok === true ? ' · build OK' : meta.build_ok === false ? ' · build FAIL' : ''}</div>
+          </div>
+          <div class="run-badges">
+            ${meta.errors ? `<span class="run-badge" style="background:#450a0a;color:#fca5a5">${meta.errors}E</span>` : ''}
+            ${meta.warnings ? `<span class="run-badge" style="background:#451a03;color:#fcd34d">${meta.warnings}W</span>` : ''}
+            ${!meta.errors && !meta.warnings && r.status === 'completed' ? `<span class="run-badge" style="background:#052e16;color:#6ee7b7">OK</span>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+    } catch(e) {
+      document.getElementById('runsList').innerHTML = `<div class="empty-state" style="color:#ef4444">${esc(e.message)}</div>`;
+    }
+  }
+
+  async function loadAll() {
+    try {
+      // Get latest run
+      const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.validator&order=started_at.desc&limit=1');
+      const run = runs[0];
+
+      if (!run) {
+        document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
+        loadRuns();
+        return;
+      }
+
+      const meta = run.metadata || {};
+
+      // Build banner
+      const banner = document.getElementById('buildBanner');
+      if (meta.build_ok === true) {
+        banner.className = 'build-banner build-ok';
+        banner.innerHTML = '&#x2705; Build OK — le site compile sans erreur';
+      } else if (meta.build_ok === false) {
+        banner.className = 'build-banner build-fail';
+        banner.innerHTML = '&#x274C; Build ECHOUE — des erreurs bloquent la compilation';
+      }
+
+      // Get results for this run
+      const results = await sbFetch('validation_results', `select=*&agent_run_id=eq.${run.id}&order=severity.asc,check_type.asc,article_slug.asc`);
+      allResults = results;
+
+      const errors = results.filter(r => r.severity === 'error').length;
+      const warnings = results.filter(r => r.severity === 'warning').length;
+      const infos = results.filter(r => r.severity === 'info').length;
+      const total = meta.articles_checked || run.items_processed || 0;
+      const totalChecks = results.length;
+      const passCount = results.filter(r => r.severity === 'pass').length;
+      const score = totalChecks > 0 ? Math.round((passCount / totalChecks) * 100) : (errors === 0 && total > 0 ? 100 : '-');
+
+      document.getElementById('statTotal').textContent = total;
+      document.getElementById('statErrors').textContent = errors;
+      document.getElementById('statWarnings').textContent = warnings;
+      document.getElementById('statInfos').textContent = infos;
+      document.getElementById('statScore').textContent = score !== '-' ? score + '%' : '-';
+
+      // Update filter counts
+      const counts = { all: results.filter(r => r.severity !== 'pass').length, error: errors, warning: warnings, info: infos };
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const f = btn.dataset.filter;
+        const existing = btn.querySelector('.filter-count');
+        if (existing) existing.remove();
+        if (counts[f]) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
+      });
+
+      renderBreakdown(results);
+      renderResults();
+      renderArticlesSummary(results);
+      loadRuns();
+
+      document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
+    } catch (err) {
+      document.getElementById('resultsContainer').innerHTML = `<div style="background:#450a0a;border:1px solid #991b1b;padding:1rem;border-radius:10px;color:#fca5a5;font-size:0.85rem"><strong>Erreur:</strong> ${esc(err.message)}</div>`;
+    }
+  }
+
+  loadAll();
+  setInterval(loadAll, 30000);
+</script>
+
+</body>
+</html>

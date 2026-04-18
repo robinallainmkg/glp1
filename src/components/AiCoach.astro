@@ -1,0 +1,1111 @@
+---
+import { supabaseConfig } from '../lib/supabase.js';
+---
+
+<div id="ai-coach-widget">
+  <!-- Bouton flottant -->
+  <button id="coach-toggle" aria-label="Ouvrir le Coach GLP-1" title="Coach GLP-1">
+    <svg id="coach-icon-chat" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <svg id="coach-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Panel chat -->
+  <div id="coach-panel" class="coach-hidden">
+    <div id="coach-header">
+      <div id="coach-header-info">
+        <div id="coach-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div>
+          <strong>Coach GLP-1</strong>
+          <span id="coach-status">En ligne</span>
+        </div>
+      </div>
+      <button id="coach-close" aria-label="Fermer le chat">&times;</button>
+    </div>
+
+    <div id="coach-messages">
+      <!-- Message de bienvenue -->
+      <div class="coach-msg coach-msg-assistant" style="display:flex;gap:8px;">
+        <div style="width:28px;height:28px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:18px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
+          <span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>
+          <div class="coach-bubble coach-bubble-assistant">
+            Bonjour ! Je suis le Coach GLP-1, votre assistant d'information sur les traitements GLP-1 en France.<br><br>
+            Comment puis-je vous aider ?
+          </div>
+        </div>
+      </div>
+      <!-- Quick actions (populated dynamically based on page context) -->
+      <div id="coach-quick-actions"></div>
+    </div>
+
+    <div id="coach-input-area">
+      <textarea id="coach-input" placeholder="Posez votre question..." rows="1"></textarea>
+      <button id="coach-send" aria-label="Envoyer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+
+    <div id="coach-disclaimer">
+      Information uniquement — ne remplace pas un avis médical. <a href="/mentions-legales/">Mentions légales</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ===== WIDGET CONTAINER ===== */
+  #ai-coach-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    font-family: var(--font-family, 'Inter', system-ui, sans-serif);
+  }
+
+  /* ===== BOUTON FLOTTANT ===== */
+  #coach-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--accent-green, #16A34A);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+  #coach-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: var(--accent-green-dark, #15803D);
+  }
+
+  /* ===== PANEL CHAT ===== */
+  #coach-panel {
+    position: absolute;
+    bottom: 72px;
+    right: 0;
+    width: 400px;
+    max-height: 580px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  #coach-panel.coach-hidden {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    pointer-events: none;
+  }
+
+  /* ===== HEADER ===== */
+  #coach-header {
+    background: var(--accent-green, #16A34A);
+    color: white;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  #coach-header-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #coach-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #coach-header-info strong {
+    display: block;
+    font-size: 0.95rem;
+  }
+  #coach-status {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+  #coach-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    opacity: 0.8;
+  }
+  #coach-close:hover { opacity: 1; }
+
+  /* ===== MESSAGES ===== */
+  #coach-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 200px;
+    max-height: 380px;
+  }
+
+  .coach-msg {
+    display: flex;
+    gap: 8px;
+    max-width: 90%;
+  }
+  .coach-msg-user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+  }
+  .coach-msg-assistant {
+    align-self: flex-start;
+  }
+
+  /* Avatars, labels and content wrappers use inline styles (Astro scoping fix) */
+
+  .coach-bubble {
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    word-break: break-word;
+  }
+  .coach-bubble-user {
+    background: #1e40af;
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+  .coach-bubble-assistant {
+    background: #f8fafc;
+    color: var(--gray-800, #1F2937);
+    border: 1px solid #e2e8f0;
+    border-bottom-left-radius: 4px;
+  }
+
+  .coach-bubble a {
+    color: var(--primary-blue, #2563EB);
+    text-decoration: none;
+    background: rgba(37, 99, 235, 0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border-bottom: 1.5px solid rgba(37, 99, 235, 0.3);
+    transition: all 0.15s;
+    word-break: break-word;
+  }
+  .coach-bubble a:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-bottom-color: var(--primary-blue, #2563EB);
+  }
+  .coach-bubble-user a {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+  }
+  .coach-bubble-user a:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  /* ===== SOURCES ===== */
+  .coach-sources {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, #f0f9ff, #eff6ff);
+    border-radius: 10px;
+    border: 1px solid #bfdbfe;
+  }
+  .coach-sources-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #2d5a4e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .coach-sources a {
+    display: block;
+    font-size: 0.8rem;
+    color: #1e40af;
+    text-decoration: none;
+    padding: 6px 10px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #dbeafe;
+    transition: all 0.15s;
+    line-height: 1.35;
+  }
+  .coach-sources a:hover {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateX(2px);
+  }
+  .coach-sources a::before {
+    content: "📄 ";
+    font-size: 0.75rem;
+  }
+
+  /* ===== LISTS IN BUBBLES ===== */
+  .coach-bubble .coach-list {
+    margin: 6px 0;
+    padding-left: 18px;
+    list-style: none;
+  }
+  .coach-bubble ul.coach-list li::before {
+    content: "→ ";
+    color: var(--accent-green, #16A34A);
+    font-weight: 600;
+  }
+  .coach-bubble ol.coach-list {
+    counter-reset: coach-counter;
+  }
+  .coach-bubble ol.coach-list li {
+    counter-increment: coach-counter;
+  }
+  .coach-bubble ol.coach-list li::before {
+    content: counter(coach-counter) ". ";
+    color: var(--primary-blue, #2563EB);
+    font-weight: 600;
+  }
+  .coach-bubble .coach-list li {
+    padding: 3px 0;
+    line-height: 1.45;
+  }
+
+  /* ===== QUICK ACTIONS ===== */
+  #coach-quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .coach-quick-btn {
+    background: white;
+    border: 1px solid var(--accent-green, #16A34A);
+    color: var(--accent-green-dark, #15803D);
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    font-family: inherit;
+  }
+  .coach-quick-btn:hover {
+    background: var(--accent-green, #16A34A);
+    color: white;
+  }
+
+  /* Decision tree buttons */
+  .coach-decision-btn {
+    background: white;
+    border: 1px solid var(--primary-blue, #2563EB);
+    color: var(--primary-blue, #2563EB);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    font-family: inherit;
+    margin: 2px;
+  }
+  .coach-decision-btn:hover {
+    background: var(--primary-blue, #2563EB);
+    color: white;
+  }
+
+  /* ===== FEEDBACK BUTTONS ===== */
+  .coach-feedback {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+    align-self: flex-start;
+  }
+  .coach-feedback-btn {
+    background: none;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: var(--gray-400, #9CA3AF);
+    transition: all 0.15s;
+    line-height: 1.4;
+  }
+  .coach-feedback-btn:hover {
+    border-color: var(--gray-400, #9CA3AF);
+    color: var(--gray-600, #4B5563);
+  }
+  .coach-feedback-btn.selected {
+    border-color: var(--accent-green, #16A34A);
+    color: var(--accent-green, #16A34A);
+    background: rgba(22, 163, 74, 0.08);
+    cursor: default;
+  }
+
+  /* ===== SIGNUP CTA ===== */
+  .coach-cta-signup {
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin: 8px 4px;
+    animation: fadeIn 0.4s ease-out;
+  }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .coach-cta-signup p {
+    font-size: 0.8rem;
+    color: #15803d;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  .coach-cta-signup .cta-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  .coach-cta-signup .cta-btn {
+    flex: 1;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+  }
+  .coach-cta-signup .cta-btn-primary {
+    background: #16a34a;
+    color: white;
+  }
+  .coach-cta-signup .cta-btn-primary:hover { background: #15803d; }
+  .coach-cta-signup .cta-btn-secondary {
+    background: white;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+  }
+  .coach-cta-signup .cta-btn-secondary:hover { background: #f0fdf4; }
+  .coach-cta-dismiss {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 6px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+  }
+  .coach-cta-dismiss:hover { color: #64748b; }
+
+  /* ===== UPGRADE CTA (daily limit) ===== */
+  .coach-cta-upgrade {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #f59e0b;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 8px 0;
+    text-align: center;
+    animation: fadeIn 0.4s ease-out;
+  }
+  .coach-cta-upgrade p {
+    font-size: 0.82rem;
+    color: #92400e;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .coach-cta-upgrade .cta-btn-premium {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .coach-cta-upgrade .cta-btn-premium:hover {
+    background: #15803d;
+  }
+  .coach-cta-upgrade .cta-subtext {
+    font-size: 0.7rem;
+    color: #b45309;
+    margin: 6px 0 0;
+  }
+
+  /* ===== TYPING INDICATOR ===== */
+  .coach-typing {
+    display: flex;
+    gap: 4px;
+    padding: 10px 14px;
+    background: var(--gray-100, #F3F4F6);
+    border-radius: 12px;
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+    max-width: 60px;
+  }
+  .coach-typing span {
+    width: 6px;
+    height: 6px;
+    background: var(--gray-400, #9CA3AF);
+    border-radius: 50%;
+    animation: coach-bounce 1.2s infinite;
+  }
+  .coach-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .coach-typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes coach-bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-4px); }
+  }
+
+  /* ===== INPUT AREA ===== */
+  #coach-input-area {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid var(--gray-200, #E5E7EB);
+    flex-shrink: 0;
+  }
+  #coach-input {
+    flex: 1;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    resize: none;
+    max-height: 80px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #coach-input:focus {
+    border-color: var(--accent-green, #16A34A);
+  }
+  #coach-send {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-green, #16A34A);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  #coach-send:hover {
+    background: var(--accent-green-dark, #15803D);
+  }
+  #coach-send:disabled {
+    background: var(--gray-300, #D1D5DB);
+    cursor: not-allowed;
+  }
+
+  /* ===== DISCLAIMER ===== */
+  #coach-disclaimer {
+    padding: 8px 16px;
+    font-size: 0.7rem;
+    color: var(--gray-400, #9CA3AF);
+    text-align: center;
+    border-top: 1px solid var(--gray-100, #F3F4F6);
+    flex-shrink: 0;
+  }
+  #coach-disclaimer a {
+    color: var(--gray-500, #6B7280);
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 640px) {
+    #ai-coach-widget {
+      bottom: 16px;
+      right: 16px;
+    }
+    #coach-toggle {
+      width: 52px;
+      height: 52px;
+    }
+    #coach-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-height: 100%;
+      border-radius: 0;
+    }
+    #coach-messages {
+      max-height: none;
+      flex: 1;
+    }
+  }
+</style>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+(function() {
+  'use strict';
+
+  // ===== CONFIG =====
+  var EDGE_FN_URL = supabaseUrl + '/functions/v1/ai-coach';
+  var SB_KEY = supabaseAnonKey;
+  var MAX_MSG_LENGTH = 500;
+  var MAX_MESSAGES_SESSION = 30;
+  var MSG_COOLDOWN_MS = 1000;
+
+  // ===== STATE =====
+  var isOpen = false;
+  var conversationId = localStorage.getItem('glp1_coach_conv') || null;
+  var messageCount = 0;
+  var lastMsgTime = 0;
+  var isSending = false;
+  var ctaShown = !!(localStorage.getItem('glp1_coach_cta_shown') && localStorage.getItem('glp1_coach_email'));
+
+  // ===== AUTH DETECTION =====
+  function isUserLoggedIn() {
+    // Check Supabase auth token in localStorage
+    var keys = Object.keys(localStorage);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i].indexOf('sb-') === 0 && keys[i].indexOf('-auth-token') > -1) {
+        try {
+          var token = JSON.parse(localStorage.getItem(keys[i]));
+          if (token && token.access_token) return true;
+        } catch(e) {}
+      }
+    }
+    return false;
+  }
+
+  function showSignupCTA() {
+    if (ctaShown) return;
+    ctaShown = true;
+    localStorage.setItem('glp1_coach_cta_shown', '1');
+    var ctaDiv = document.createElement('div');
+    ctaDiv.className = 'coach-cta-signup';
+    ctaDiv.style.cssText = 'background:linear-gradient(135deg,#F0F9FF,#E8F6FF);border:1px solid #A9E1FF;border-radius:12px;padding:14px;margin:8px 4px;animation:fadeIn 0.4s ease-out;';
+    ctaDiv.innerHTML =
+      '<p style="color:#0D4F73;font-weight:600;margin:0 0 8px;font-size:0.82rem;line-height:1.4;">Besoin d\'un accompagnement personnalis\u00e9 avec un sp\u00e9cialiste ?</p>' +
+      '<a href="https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_cta_chat" target="_blank" rel="noopener sponsored" ' +
+        'style="display:block;text-align:center;background:#1B6FA0;color:#fff;padding:10px;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;transition:background .2s;">' +
+        'D\u00e9couvrir Annette.care \u2192</a>' +
+      '<p style="font-size:0.7rem;color:#3B9FD9;margin:6px 0 0;text-align:center;">M\u00e9decins partenaires \u00b7 4.8/5 Google \u00b7 Code CARE50 : -50%</p>' +
+      '<button class="coach-cta-dismiss" onclick="this.parentElement.remove()">Non merci</button>';
+    messagesEl.appendChild(ctaDiv);
+    scrollToBottom();
+
+  }
+
+  function showDailyLimitCTA() {
+    var ctaDiv = document.createElement('div');
+    ctaDiv.className = 'coach-cta-upgrade';
+    ctaDiv.innerHTML =
+      '<p>Vous avez utilis\u00e9 vos messages du jour</p>' +
+      '<a href="https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_daily_limit" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-premium" style="background:#1B6FA0;">Parler \u00e0 un sp\u00e9cialiste Annette</a>' +
+      '<p class="cta-subtext">M\u00e9decins + di\u00e9t\u00e9ticiens \u2022 Code CARE50 : -50% le 1er mois</p>';
+    messagesEl.appendChild(ctaDiv);
+    scrollToBottom();
+  }
+
+  // ===== SESSION =====
+  function getSessionId() {
+    var sid = localStorage.getItem('glp1_coach_session');
+    if (!sid) {
+      sid = crypto.randomUUID();
+      localStorage.setItem('glp1_coach_session', sid);
+    }
+    return sid;
+  }
+  var sessionId = getSessionId();
+
+  // ===== DOM REFS =====
+  var toggleBtn = document.getElementById('coach-toggle');
+  var panel = document.getElementById('coach-panel');
+  var closeBtn = document.getElementById('coach-close');
+  var messagesEl = document.getElementById('coach-messages');
+  var inputEl = document.getElementById('coach-input');
+  var sendBtn = document.getElementById('coach-send');
+  var iconChat = document.getElementById('coach-icon-chat');
+  var iconClose = document.getElementById('coach-icon-close');
+  var quickActions = document.getElementById('coach-quick-actions');
+
+  // ===== TOGGLE =====
+  function togglePanel() {
+    isOpen = !isOpen;
+    panel.classList.toggle('coach-hidden', !isOpen);
+    iconChat.style.display = isOpen ? 'none' : 'block';
+    iconClose.style.display = isOpen ? 'block' : 'none';
+    if (isOpen) {
+      setTimeout(function() { inputEl.focus(); }, 200);
+    }
+  }
+
+  toggleBtn.addEventListener('click', togglePanel);
+  closeBtn.addEventListener('click', togglePanel);
+
+  // ===== CONTEXTUAL QUICK ACTIONS =====
+  function buildQuickActions() {
+    var path = window.location.pathname.toLowerCase();
+    var actions = [];
+
+    if (path.includes('ozempic')) {
+      actions = [
+        { q: "Quel est le prix d'Ozempic en pharmacie ?", label: "Prix Ozempic" },
+        { q: "Ozempic est-il rembourse ?", label: "Remboursement" },
+        { q: "Quels sont les effets secondaires d'Ozempic ?", label: "Effets secondaires" },
+        { q: "Comment obtenir Ozempic ?", label: "Obtenir Ozempic" }
+      ];
+    } else if (path.includes('wegovy')) {
+      actions = [
+        { q: "Quel est le prix de Wegovy ?", label: "Prix Wegovy" },
+        { q: "Wegovy est-il disponible en France ?", label: "Disponibilite" },
+        { q: "Quelle est la difference entre Wegovy et Ozempic ?", label: "Wegovy vs Ozempic" },
+        { q: "Wegovy est-il rembourse ?", label: "Remboursement" }
+      ];
+    } else if (path.includes('mounjaro')) {
+      actions = [
+        { q: "Quel est le prix de Mounjaro ?", label: "Prix Mounjaro" },
+        { q: "Mounjaro est-il disponible en pharmacie ?", label: "Disponibilite" },
+        { q: "Quelle difference entre Mounjaro et Ozempic ?", label: "Mounjaro vs Ozempic" },
+        { q: "Quels sont les effets secondaires de Mounjaro ?", label: "Effets secondaires" }
+      ];
+    } else if (path.includes('prix') || path.includes('remboursement')) {
+      actions = [
+        { q: "Quel GLP-1 est le moins cher ?", label: "Le moins cher" },
+        { q: "Quels traitements sont rembourses ?", label: "Remboursements" },
+        { q: "Comment se faire rembourser Ozempic ?", label: "Remboursement Ozempic" },
+        { q: "Combien coute Wegovy par mois ?", label: "Prix Wegovy" }
+      ];
+    } else if (path.includes('effet') || path.includes('secondaire')) {
+      actions = [
+        { q: "Quels sont les effets secondaires les plus courants ?", label: "Effets courants" },
+        { q: "Les nausees disparaissent-elles avec le temps ?", label: "Nausees" },
+        { q: "Que faire en cas d'effets secondaires graves ?", label: "Effets graves" },
+        { q: "Comment reduire les nausees sous GLP-1 ?", label: "Reduire nausees" }
+      ];
+    } else if (path.includes('poids') || path.includes('maigrir') || path.includes('regime')) {
+      actions = [
+        { q: "Combien de poids peut-on perdre avec un GLP-1 ?", label: "Perte de poids" },
+        { q: "Quel regime alimentaire suivre sous GLP-1 ?", label: "Alimentation" },
+        { q: "Faut-il faire du sport avec un GLP-1 ?", label: "Sport" },
+        { q: "Reprend-on du poids a l'arret du traitement ?", label: "Reprise de poids" }
+      ];
+    } else {
+      actions = [
+        { q: "Est-ce que vous vendez du GLP-1 ?", label: "Vous vendez du GLP-1 ?" },
+        { q: "Combien coute un traitement GLP-1 ?", label: "Prix des traitements" },
+        { q: "Comment obtenir une ordonnance pour un GLP-1 ?", label: "Obtenir une ordonnance" },
+        { q: "J'ai un probleme avec mon stylo injecteur", label: "Probleme de stylo" }
+      ];
+    }
+
+    quickActions.innerHTML = actions.map(function(a) {
+      return '<button class="coach-quick-btn" data-question="' + a.q.replace(/"/g, '&quot;') + '">' + a.label + '</button>';
+    }).join('');
+  }
+  buildQuickActions();
+
+  // ===== RESTORE HISTORY =====
+  async function restoreHistory() {
+    if (!conversationId) return;
+    try {
+      var resp = await fetch(
+        supabaseUrl + '/rest/v1/coach_messages?conversation_id=eq.' + conversationId + '&order=created_at.asc&limit=30',
+        { headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY } }
+      );
+      if (!resp.ok) return;
+      var msgs = await resp.json();
+      if (!msgs || msgs.length === 0) return;
+      // Hide quick actions if there's history
+      if (quickActions) quickActions.style.display = 'none';
+      // Remove the default welcome message
+      var defaultWelcome = messagesEl.querySelector('.coach-msg-assistant');
+      if (defaultWelcome) defaultWelcome.remove();
+      // Re-add welcome then history
+      addAssistantMessage("Bonjour ! Je suis le Coach GLP-1, votre assistant d'information sur les traitements GLP-1 en France.\n\nComment puis-je vous aider ?");
+      for (var i = 0; i < msgs.length; i++) {
+        var m = msgs[i];
+        messageCount++;
+        if (m.role === 'user') {
+          addUserMessage(m.content);
+        } else {
+          addAssistantMessage(m.content);
+        }
+      }
+    } catch (e) {
+      // Silently fail — fresh session is fine
+    }
+  }
+  restoreHistory();
+
+  // ===== QUICK ACTIONS =====
+  quickActions.addEventListener('click', function(e) {
+    var btn = e.target.closest('.coach-quick-btn');
+    if (btn) {
+      var question = btn.getAttribute('data-question');
+      handleUserMessage(question);
+    }
+  });
+
+  // ===== SEND =====
+  sendBtn.addEventListener('click', function() {
+    var text = inputEl.value.trim();
+    if (text) handleUserMessage(text);
+  });
+
+  inputEl.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      var text = inputEl.value.trim();
+      if (text) handleUserMessage(text);
+    }
+  });
+
+  // Auto-resize textarea
+  inputEl.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = Math.min(this.scrollHeight, 80) + 'px';
+  });
+
+  // ===== MESSAGE HANDLING =====
+  async function handleUserMessage(text) {
+    if (isSending) return;
+
+    // Rate limiting
+    var now = Date.now();
+    if (now - lastMsgTime < MSG_COOLDOWN_MS) return;
+    if (messageCount >= MAX_MESSAGES_SESSION) {
+      addAssistantMessage("Vous avez atteint la limite de messages pour cette session. Rafraichissez la page pour continuer.");
+      return;
+    }
+
+    // Truncate
+    text = text.substring(0, MAX_MSG_LENGTH);
+    lastMsgTime = now;
+    messageCount++;
+    isSending = true;
+
+    // Hide quick actions after first message
+    if (quickActions) quickActions.style.display = 'none';
+
+    // Display user message
+    addUserMessage(text);
+    inputEl.value = '';
+    inputEl.style.height = 'auto';
+
+    // Show typing indicator
+    showTyping();
+
+    try {
+      // Call Edge Function
+      var resp = await fetch(EDGE_FN_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SB_KEY,
+          'Authorization': 'Bearer ' + SB_KEY
+        },
+        body: JSON.stringify({
+          session_id: sessionId,
+          message: text,
+          conversation_id: conversationId,
+          page_url: window.location.pathname
+        })
+      });
+
+      hideTyping();
+
+      if (resp.status === 429) {
+        var errData = null;
+        try { errData = await resp.json(); } catch(e) {}
+        if (errData && errData.error === 'daily_limit') {
+          showDailyLimitCTA();
+        } else {
+          addAssistantMessage("Trop de messages. R\u00e9essayez dans quelques minutes.");
+        }
+        isSending = false;
+        return;
+      }
+
+      if (!resp.ok) {
+        throw new Error('HTTP ' + resp.status);
+      }
+
+      var data = await resp.json();
+
+      // Persist conversation_id
+      if (data.conversation_id) {
+        conversationId = data.conversation_id;
+        localStorage.setItem('glp1_coach_conv', conversationId);
+      }
+
+      // Show daily remaining counter for free users
+      if (typeof data.daily_remaining === 'number') {
+        var counterEl = document.getElementById('coach-daily-counter');
+        if (!counterEl) {
+          counterEl = document.createElement('div');
+          counterEl.id = 'coach-daily-counter';
+          counterEl.style.cssText = 'text-align:center;font-size:0.7rem;color:#6b7280;padding:2px 0;';
+          messagesEl.parentNode.insertBefore(counterEl, messagesEl.nextSibling);
+        }
+        counterEl.textContent = data.daily_remaining + '/3 messages restants aujourd\'hui';
+        if (data.daily_remaining === 0) counterEl.style.color = '#ef4444';
+      }
+
+      // Display response with typewriter effect
+      typewriterMessage(data.response || "D\u00e9sol\u00e9, je n'ai pas pu r\u00e9pondre.", data.sources || []);
+
+      // Show signup CTA after 2nd user message
+      if (messageCount >= 2 && !ctaShown) {
+        setTimeout(function() { showSignupCTA(); }, 1500);
+      }
+
+    } catch (err) {
+      hideTyping();
+      console.error('Coach error:', err);
+      addAssistantMessage("Service temporairement indisponible. Reessayez dans quelques instants.");
+    }
+
+    isSending = false;
+  }
+
+  // ===== UI HELPERS =====
+  var botAvatarHTML = '<div style="width:28px;height:28px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:18px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>';
+  var userAvatarHTML = '<div style="width:28px;height:28px;border-radius:50%;background:#dbeafe;color:#2563eb;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:18px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>';
+
+  function addUserMessage(text) {
+    var div = document.createElement('div');
+    div.className = 'coach-msg coach-msg-user';
+    div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-end;flex-direction:row-reverse;';
+    div.innerHTML = userAvatarHTML +
+      '<div style="display:flex;flex-direction:column;gap:2px;min-width:0;align-items:flex-end;">' +
+        '<span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#2563eb;">Vous</span>' +
+        '<div class="coach-bubble coach-bubble-user" style="padding:10px 14px;border-radius:14px;font-size:0.875rem;line-height:1.6;word-break:break-word;background:#1e40af;color:white;border-bottom-right-radius:4px;">' + escapeHtml(text) + '</div>' +
+      '</div>';
+    messagesEl.appendChild(div);
+    scrollToBottom();
+  }
+
+  function addAssistantMessage(text) {
+    var div = document.createElement('div');
+    div.className = 'coach-msg coach-msg-assistant';
+    div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
+    var formatted = formatResponse(text);
+    div.innerHTML = botAvatarHTML +
+      '<div style="display:flex;flex-direction:column;gap:2px;min-width:0;">' +
+        '<span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>' +
+        '<div class="coach-bubble coach-bubble-assistant" style="padding:10px 14px;border-radius:14px;font-size:0.875rem;line-height:1.6;word-break:break-word;background:#f8fafc;color:#1F2937;border:1px solid #e2e8f0;border-bottom-left-radius:4px;">' + formatted + '</div>' +
+      '</div>';
+    messagesEl.appendChild(div);
+    scrollToBottom();
+  }
+
+  function typewriterMessage(text, sources) {
+    var div = document.createElement('div');
+    div.className = 'coach-msg coach-msg-assistant';
+    div.style.cssText = 'display:flex;gap:8px;max-width:90%;align-self:flex-start;';
+    var content = document.createElement('div');
+    content.style.cssText = 'display:flex;flex-direction:column;gap:2px;min-width:0;';
+    content.innerHTML = '<span style="font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:0 4px;color:#16a34a;">Coach GLP-1</span>';
+    var bubble = document.createElement('div');
+    bubble.className = 'coach-bubble coach-bubble-assistant';
+    bubble.style.cssText = 'padding:10px 14px;border-radius:14px;font-size:0.875rem;line-height:1.6;word-break:break-word;background:#f8fafc;color:#1F2937;border:1px solid #e2e8f0;border-bottom-left-radius:4px;';
+    content.appendChild(bubble);
+    div.innerHTML = botAvatarHTML;
+    div.appendChild(content);
+    messagesEl.appendChild(div);
+
+    var formatted = formatResponse(text);
+    var i = 0;
+    var speed = 8;
+    // Write HTML progressively (by chunks to avoid broken tags)
+    bubble.innerHTML = '';
+    var chars = formatted.split('');
+    var buffer = '';
+    var inTag = false;
+
+    function tick() {
+      if (i >= chars.length) {
+        bubble.innerHTML = formatted;
+        // Add sources after typewriter
+        if (sources && sources.length > 0) {
+          addSources(div, sources);
+        }
+        // Add feedback buttons
+        addFeedback(div, text);
+        scrollToBottom();
+        return;
+      }
+
+      // Process a batch of chars for speed
+      var batch = Math.min(3, chars.length - i);
+      for (var j = 0; j < batch; j++) {
+        var c = chars[i];
+        buffer += c;
+        if (c === '<') inTag = true;
+        if (c === '>') inTag = false;
+        i++;
+        // If we're inside a tag, keep going until we close it
+        if (inTag) { j--; continue; }
+      }
+
+      bubble.innerHTML = buffer;
+      scrollToBottom();
+      requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  function addFeedback(parentDiv, msgContent) {
+    var feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'coach-feedback';
+    feedbackDiv.innerHTML =
+      '<button class="coach-feedback-btn" data-vote="up" aria-label="Bonne reponse">&#128077;</button>' +
+      '<button class="coach-feedback-btn" data-vote="down" aria-label="Mauvaise reponse">&#128078;</button>';
+    parentDiv.appendChild(feedbackDiv);
+
+    feedbackDiv.addEventListener('click', function(e) {
+      var btn = e.target.closest('.coach-feedback-btn');
+      if (!btn || btn.classList.contains('selected')) return;
+      var vote = btn.getAttribute('data-vote');
+      // Visual feedback
+      feedbackDiv.querySelectorAll('.coach-feedback-btn').forEach(function(b) {
+        b.disabled = true;
+      });
+      btn.classList.add('selected');
+      // Send to Supabase
+      fetch(supabaseUrl + '/rest/v1/coach_feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SB_KEY,
+          'Authorization': 'Bearer ' + SB_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          session_id: sessionId,
+          conversation_id: conversationId,
+          vote: vote,
+          assistant_message: msgContent.substring(0, 500),
+          page_url: window.location.pathname
+        })
+      }).catch(function() { /* silent */ });
+    });
+  }
+
+  function addSources(parentDiv, sources) {
+    // Deduplicate by slug
+    var seen = {};
+    var unique = [];
+    for (var i = 0; i < sources.length; i++) {
+      if (!seen[sources[i].slug]) {
+        seen[sources[i].slug] = true;
+        unique.push(sources[i]);
+      }
+    }
+    if (unique.length === 0) return;
+
+    var srcDiv = document.createElement('div');
+    srcDiv.className = 'coach-sources';
+    srcDiv.innerHTML = '<span class="coach-sources-label">En savoir plus</span>' +
+      unique.slice(0, 3).map(function(s) {
+        return '<a href="/collections/' + s.collection + '/' + s.slug + '/">' + escapeHtml(s.title) + '</a>';
+      }).join('');
+    parentDiv.appendChild(srcDiv);
+  }
+
+  function formatResponse(text) {
+    // Sanitize first, then convert markdown-like formatting to HTML
+    var safe = escapeHtml(text);
+    safe = safe
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\[(.*?)\]\((\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    // Convert markdown lists to styled HTML lists
+    var lines = safe.split('\n');
+    var result = [];
+    var inList = false;
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i];
+      var listMatch = line.match(/^[\-\*]\s+(.+)/);
+      var numMatch = line.match(/^\d+[\.\)]\s+(.+)/);
+      if (listMatch || numMatch) {
+        if (!inList) {
+          result.push(listMatch ? '<ul class="coach-list">' : '<ol class="coach-list">');
+          inList = listMatch ? 'ul' : 'ol';
+        }
+        result.push('<li>' + (listMatch ? listMatch[1] : numMatch[1]) + '</li>');
+      } else {
+        if (inList) {
+          result.push(inList === 'ul' ? '</ul>' : '</ol>');
+          inList = false;
+        }
+        if (line.trim() === '') {
+          result.push('<div style="height:8px;"></div>');
+        } else {
+          result.push(line + '<br>');
+        }
+      }
+    }
+    if (inList) result.push(inList === 'ul' ? '</ul>' : '</ol>');
+    return result.join('');
+  }
+
+  function showTyping() {
+    var div = document.createElement('div');
+    div.className = 'coach-typing';
+    div.id = 'coach-typing-indicator';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    messagesEl.appendChild(div);
+    scrollToBottom();
+    sendBtn.disabled = true;
+  }
+
+  function hideTyping() {
+    var el = document.getElementById('coach-typing-indicator');
+    if (el) el.remove();
+    sendBtn.disabled = false;
+  }
+
+  function scrollToBottom() {
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function escapeHtml(text) {
+    var div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+})();
+</script>

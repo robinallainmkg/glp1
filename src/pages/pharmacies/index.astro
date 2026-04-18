@@ -1,0 +1,218 @@
+---
+import StaticLayout from '../../layouts/StaticLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Charger pharmacies.json au build pour calculer les villes
+const dataPath = path.resolve(process.cwd(), 'public/data/pharmacies.json');
+let pharmacies = { schema: [], rows: [] };
+try {
+  pharmacies = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+} catch {}
+
+const iName = pharmacies.schema.indexOf('name');
+const iCity = pharmacies.schema.indexOf('city');
+const iSlug = pharmacies.schema.indexOf('city_slug');
+const iDept = pharmacies.schema.indexOf('department');
+
+// Regroupe par city_slug
+const cities = {};
+for (const row of pharmacies.rows) {
+  const slug = row[iSlug];
+  if (!slug) continue;
+  if (!cities[slug]) {
+    cities[slug] = {
+      slug,
+      city: row[iCity],
+      department: row[iDept],
+      count: 0,
+    };
+  }
+  cities[slug].count += 1;
+}
+
+// Top 100 villes par nombre de pharmacies
+const topCities = Object.values(cities)
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 100);
+
+const totalPharmacies = pharmacies.rows.length;
+---
+
+<StaticLayout
+  title="Pharmacies GLP-1 en France — Trouver votre pharmacie Ozempic, Wegovy, Mounjaro"
+  description={`Annuaire de ${totalPharmacies.toLocaleString('fr-FR')} pharmacies françaises : prix Ozempic, Wegovy, Mounjaro et Saxenda. Filtre par ville, carte interactive, contributions communautaires.`}
+  keywords="pharmacie GLP-1 France, annuaire pharmacies Ozempic, liste pharmacies Mounjaro, prix Wegovy pharmacie"
+>
+  <div class="pharma-hub">
+    <section class="hub-hero">
+      <div class="hub-hero-inner">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a> <span>›</span> <strong>Pharmacies</strong>
+        </nav>
+        <h1>Pharmacies GLP-1 en France</h1>
+        <p class="hub-sub">
+          <strong>{totalPharmacies.toLocaleString('fr-FR')} pharmacies référencées</strong> · Prix Ozempic, Wegovy, Mounjaro, Saxenda · Données officielles + contributions patients
+        </p>
+        <div class="hub-ctas">
+          <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Voir la carte interactive →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-cities">
+      <div class="hub-cities-inner">
+        <h2>Trouver une pharmacie par ville</h2>
+        <p class="cities-intro">Top 100 des villes françaises couvertes. Cliquez pour voir les pharmacies et prix GLP-1 disponibles.</p>
+
+        <div class="cities-grid">
+          {topCities.map((c) => (
+            <a href={`/pharmacies/${c.slug}/`} class="city-card">
+              <div class="city-name">{c.city}</div>
+              <div class="city-meta">
+                <span class="city-count">{c.count} pharmacies</span>
+                <span class="city-dept">{c.department}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-info">
+      <div class="hub-info-inner">
+        <h2>Comment ça marche</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h3>Référentiel national</h3>
+            <p>Base de {totalPharmacies.toLocaleString('fr-FR')} pharmacies d'officine françaises depuis <a href="https://www.data.gouv.fr/datasets/referentiel-finess-t-finess">data.gouv.fr (FINESS)</a>, géocodage BAN officiel, mis à jour tous les 2 mois.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">💰</div>
+            <h3>Prix Ozempic officiel</h3>
+            <p>Tarif CEPS de 77,60&nbsp;€/stylo appliqué partout en France (remboursé à 30% pour le diabète de type 2). Pour Wegovy, Mounjaro et Saxenda, le prix est libéré — il varie selon la pharmacie.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">👥</div>
+            <h3>Contributions communautaires</h3>
+            <p>Vous avez vu un prix en pharmacie ? <a href="/outils/carte-prix-pharmacies/">Partagez-le</a>. Chaque soumission est vérifiée avant affichage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-disclaimer">
+      <p><strong>Avertissement :</strong> cette page est informative. Les prix Wegovy, Mounjaro et Saxenda ne sont pas remboursés par l'Assurance Maladie. Consultez votre pharmacien pour confirmer le tarif exact. La prescription GLP-1 nécessite une consultation médicale préalable.</p>
+    </section>
+  </div>
+
+  <style>
+  .pharma-hub { background: #f8faf9; min-height: 100vh; }
+
+  .hub-hero {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 1.5rem;
+  }
+  .hub-hero-inner { max-width: 1100px; margin: 0 auto; }
+  .breadcrumb { font-size: .82rem; color: #6b7280; margin-bottom: .75rem; }
+  .breadcrumb a { color: #1a3c34; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 .35rem; color: #9ca3af; }
+  .hub-hero h1 {
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
+    font-weight: 900;
+    color: #1a3c34;
+    margin: 0 0 .6rem;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+  .hub-sub {
+    color: #475569;
+    font-size: clamp(.9rem, 2vw, 1rem);
+    margin: 0 0 1.25rem 0;
+    max-width: 700px;
+    line-height: 1.5;
+  }
+  .hub-ctas { display: flex; gap: .75rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .3rem;
+    padding: .7rem 1.4rem;
+    background: #1a3c34;
+    color: #fff;
+    font-weight: 700;
+    font-size: .92rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .2s;
+  }
+  .btn-primary:hover { background: #0f2d25; transform: translateY(-1px); color: #fff; }
+
+  .hub-cities { padding: 2.5rem 1.5rem; }
+  .hub-cities-inner { max-width: 1100px; margin: 0 auto; }
+  .hub-cities h2 {
+    font-size: 1.35rem; font-weight: 800; color: #1a3c34;
+    margin: 0 0 .4rem; letter-spacing: -.02em;
+  }
+  .cities-intro {
+    color: #6b7280;
+    font-size: .9rem;
+    margin: 0 0 1.5rem;
+  }
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .75rem;
+  }
+  .city-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: #1f2937;
+    transition: all .15s;
+    display: block;
+  }
+  .city-card:hover {
+    border-color: #86efac;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    color: #1f2937;
+  }
+  .city-name { font-weight: 700; font-size: .95rem; margin-bottom: .3rem; text-transform: capitalize; }
+  .city-meta { display: flex; justify-content: space-between; align-items: center; font-size: .78rem; }
+  .city-count { color: #15803d; font-weight: 600; }
+  .city-dept { color: #9ca3af; font-variant-numeric: tabular-nums; }
+
+  .hub-info { padding: 2.5rem 1.5rem; background: #fff; border-top: 1px solid #e5e7eb; }
+  .hub-info-inner { max-width: 1100px; margin: 0 auto; }
+  .hub-info h2 { font-size: 1.35rem; font-weight: 800; color: #1a3c34; margin: 0 0 1.5rem; }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .info-card {
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f8faf9;
+  }
+  .info-icon { font-size: 1.75rem; margin-bottom: .6rem; }
+  .info-card h3 { font-size: 1rem; font-weight: 700; margin: 0 0 .5rem; color: #1a3c34; }
+  .info-card p { font-size: .88rem; color: #475569; line-height: 1.55; margin: 0; }
+  .info-card a { color: #1B6FA0; }
+
+  .hub-disclaimer {
+    max-width: 1100px; margin: 0 auto; padding: 1.5rem;
+    font-size: .78rem; color: #6b7280; line-height: 1.5;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  @media (max-width: 640px) {
+    .cities-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  </style>
+</StaticLayout>

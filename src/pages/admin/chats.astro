@@ -1,0 +1,1415 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAV - GLP1 Admin</title>
+  <style is:global>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0e17;
+      color: #e2e8f0;
+    }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: #111827;
+      border-bottom: 1px solid #1e293b;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #94a3b8; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #2d3748;
+      background: #1e293b;
+      color: #c8d6e5;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .refresh-btn:hover { background: #2d3748; }
+    .last-update { font-size: 0.72rem; color: #94a3b8; }
+
+    .main { padding: 2rem; }
+
+    /* Command box */
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: #111827;
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid #1e293b;
+    }
+    .stat-card .label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+    }
+    .stat-card .value {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .stat-card .sub {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-top: 0.35rem;
+    }
+
+    /* Layout 2 colonnes */
+    .chat-layout {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 1rem;
+      height: calc(100vh - 220px);
+    }
+
+    /* Liste conversations */
+    .conv-list {
+      background: #111827;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      overflow-y: auto;
+    }
+    .conv-list-header {
+      padding: 0.75rem 1.25rem;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      background: #111827;
+      z-index: 2;
+    }
+    .conv-list-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .conv-list-header-top span {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+    }
+    .conv-search {
+      width: 100%;
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #2d3748;
+      background: #0d1117;
+      color: #e2e8f0;
+      font-size: 0.78rem;
+      margin-bottom: 0.5rem;
+      outline: none;
+    }
+    .conv-search::placeholder { color: #4b5563; }
+    .conv-search:focus { border-color: #3b82f6; }
+    .conv-filter {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+    .conv-filter button {
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      border: 1px solid #2d3748;
+      background: #1e293b;
+      font-size: 0.7rem;
+      cursor: pointer;
+      color: #c8d6e5;
+    }
+    .conv-filter button.active {
+      background: #3b82f6;
+      color: white;
+      border-color: #3b82f6;
+    }
+    .conv-item.conv-tawk {
+      border-left: 3px solid #f59e0b;
+    }
+    .conv-item.conv-tawk:hover { border-left-color: #f59e0b; }
+    .conv-item.conv-test {
+      opacity: 0.6;
+      border-left: 2px solid #7c3aed;
+    }
+    .conv-item {
+      padding: 0.9rem 1.25rem;
+      border-bottom: 1px solid #1e293b;
+      cursor: pointer;
+      transition: all 0.15s;
+      border-left: 3px solid transparent;
+    }
+    .conv-item:hover { background: #1a2332; border-left-color: #334155; }
+    .conv-item.active { background: rgba(59,130,246,0.12); border-left: 3px solid #3b82f6; }
+    .conv-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.3rem;
+    }
+    .conv-visitor {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .conv-visitor .flag { font-size: 1rem; }
+    .conv-time {
+      font-size: 0.7rem;
+      color: #94a3b8;
+    }
+    .conv-preview {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .conv-meta {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.3rem;
+    }
+    .conv-badge {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .conv-badge.llm { background: rgba(34,197,94,0.2); color: #4ade80; }
+    .conv-badge.fallback { background: rgba(245,158,11,0.2); color: #fbbf24; }
+    .conv-badge-msgs {
+      font-size: 0.65rem;
+      color: #94a3b8;
+    }
+    .conv-empty {
+      padding: 3rem;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.88rem;
+    }
+
+    /* Detail conversation */
+    .conv-detail {
+      background: #0d1117;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .conv-detail-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #1e293b;
+      background: #111827;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .conv-detail-header h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+    .conv-detail-meta {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      margin-top: 0.2rem;
+    }
+    .conv-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      background: #0d1117;
+    }
+    .conv-messages::-webkit-scrollbar { width: 6px; }
+    .conv-messages::-webkit-scrollbar-track { background: transparent; }
+    .conv-messages::-webkit-scrollbar-thumb { background: #2d3748; border-radius: 3px; }
+
+    /* Message row */
+    .msg-row {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 90%;
+    }
+    .msg-row.user { align-self: flex-end; flex-direction: row-reverse; }
+    .msg-row.assistant { align-self: flex-start; }
+
+    /* Avatar */
+    .msg-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+    .msg-row.user .msg-avatar {
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      color: white;
+    }
+    .msg-row.assistant .msg-avatar {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+
+    /* Message content wrapper */
+    .msg-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .msg-row.user .msg-content { align-items: flex-end; }
+    .msg-row.assistant .msg-content { align-items: flex-start; }
+
+    /* Sender label */
+    .msg-sender {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0 0.25rem;
+    }
+    .msg-row.user .msg-sender { color: #818cf8; }
+    .msg-row.assistant .msg-sender { color: #34d399; }
+
+    /* Bubble */
+    .msg-bubble {
+      padding: 0.85rem 1.1rem;
+      border-radius: 16px;
+      font-size: 0.84rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .msg-row.user .msg-bubble {
+      background: linear-gradient(135deg, #3b82f6, #4f46e5);
+      color: white;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
+    }
+    .msg-row.assistant .msg-bubble {
+      background: #161d2d;
+      color: #e2e8f0;
+      border: 1px solid #1e293b;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Timestamp */
+    .msg-time {
+      font-size: 0.65rem;
+      color: #64748b;
+      padding: 0 0.3rem;
+    }
+    .msg-model-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      font-weight: 600;
+      margin-left: 0.35rem;
+    }
+
+    .no-conv-selected {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #64748b;
+      font-size: 0.95rem;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .no-conv-selected svg { opacity: 0.2; }
+    .no-conv-selected span { font-size: 0.88rem; }
+
+    .loading-spinner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      color: #94a3b8;
+    }
+
+    /* Feedback analytics */
+    .feedback-section {
+      margin-top: 1.5rem;
+    }
+    .feedback-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 1rem;
+    }
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .feedback-panel {
+      background: #111827;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      padding: 1.25rem;
+    }
+    .feedback-panel h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .feedback-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #1e293b;
+      font-size: 0.82rem;
+    }
+    .feedback-item:last-child { border-bottom: none; }
+    .feedback-item .fb-msg {
+      color: #cbd5e1;
+      margin-bottom: 0.25rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .feedback-item .fb-meta {
+      font-size: 0.72rem;
+      color: #64748b;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .fb-vote-up { color: #16a34a; }
+    .fb-vote-down { color: #dc2626; }
+    .feedback-empty {
+      color: #64748b;
+      font-size: 0.82rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    .intent-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.82rem;
+    }
+    .intent-bar .intent-label {
+      min-width: 100px;
+      color: #94a3b8;
+    }
+    .intent-bar .intent-fill {
+      flex: 1;
+      height: 8px;
+      border-radius: 4px;
+      background: #1e293b;
+      overflow: hidden;
+    }
+    .intent-bar .intent-fill-inner {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s;
+    }
+    .intent-bar .intent-count {
+      min-width: 32px;
+      text-align: right;
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .chat-layout { grid-template-columns: 1fr; height: auto; }
+      .feedback-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <AdminNav />
+  <div class="admin-layout">
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>📧 SAV</h1>
+        <p>Coach IA + Emails SAV — conversations et reponses emails</p>
+      </div>
+      <div class="header-actions">
+        <span class="last-update" id="lastUpdate"></span>
+        <button class="refresh-btn" id="refreshBtn" onclick="loadData()">
+          🔄 Rafraichir
+        </button>
+      </div>
+    </div>
+
+    <div class="main">
+      <!-- Command box -->
+      <div class="cmd-box">
+        <code>claude -p "Reponds aux emails" --agent sav-email</code>
+        <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Reponds aux emails&quot; --agent sav-email');this.textContent='Copie !'">Copier</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <div class="label">Conversations</div>
+          <div class="value" id="statConvs">-</div>
+          <div class="sub"><span id="statCoachCount" style="color:#34d399">Coach: -</span> · <span id="statTawkCount" style="color:#f59e0b">Tawk: -</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Messages</div>
+          <div class="value" id="statMsgs">-</div>
+          <div class="sub" id="statAvgMsgs">moy: - msgs/conv</div>
+        </div>
+        <div class="stat-card">
+          <div class="label" style="color:#f87171">Victimes arnaques</div>
+          <div class="value" id="statScam" style="color:#f87171;">-</div>
+          <div class="sub" id="statScamPct">- % des conversations</div>
+        </div>
+        <div class="stat-card">
+          <div class="label" style="color:#a78bfa">Questions produit</div>
+          <div class="value" id="statProduct" style="color:#a78bfa;">-</div>
+          <div class="sub" id="statProductSub">infos, prix, efficacite</div>
+        </div>
+        <div class="stat-card">
+          <div class="label" style="color:#fbbf24">Effets secondaires</div>
+          <div class="value" id="statSideEffects" style="color:#fbbf24;">-</div>
+          <div class="sub" id="statSideEffectsSub">stylo, nausees, douleurs</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Satisfaction</div>
+          <div class="value" id="statSatisfaction" style="color: #16a34a;">-</div>
+          <div class="sub" id="statFeedbackTotal">0 votes</div>
+        </div>
+      </div>
+
+      <!-- Layout 2 colonnes -->
+      <div class="chat-layout">
+        <!-- Liste -->
+        <div class="conv-list" id="convList">
+          <div class="conv-list-header">
+            <div class="conv-list-header-top">
+              <span>Conversations <span id="convCountLabel" style="color:#64748b;font-weight:400;font-size:0.75rem;"></span></span>
+            </div>
+            <input type="text" class="conv-search" id="convSearch" placeholder="Rechercher un message..." oninput="renderConvList()">
+            <div class="conv-filter">
+              <button class="active" data-filter="all" onclick="filterConvs('all', this)">Toutes</button>
+              <button data-filter="7" onclick="filterConvs('7', this)">7j</button>
+              <button data-filter="30" onclick="filterConvs('30', this)">30j</button>
+              <button data-filter="90" onclick="filterConvs('90', this)">90j</button>
+              <button data-filter="cat:scam_victim" onclick="filterConvs('cat:scam_victim', this)" style="color:#f87171;">Arnaques</button>
+              <button data-filter="cat:product_question" onclick="filterConvs('cat:product_question', this)" style="color:#a78bfa;">Produit</button>
+              <button data-filter="cat:side_effects" onclick="filterConvs('cat:side_effects', this)" style="color:#fbbf24;">Effets sec.</button>
+              <button data-filter="source:coach" onclick="filterConvs('source:coach', this)" style="color:#34d399;">Coach IA</button>
+              <button data-filter="source:tawk" onclick="filterConvs('source:tawk', this)" style="color:#f59e0b;">Tawk</button>
+              <button data-filter="source:contact" onclick="filterConvs('source:contact', this)" style="color:#a78bfa;">Contact</button>
+            </div>
+          </div>
+          <div id="convListContent">
+            <div class="loading-spinner">Chargement...</div>
+          </div>
+        </div>
+
+        <!-- Detail -->
+        <div class="conv-detail" id="convDetail">
+          <div class="no-conv-selected">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>Selectionnez une conversation pour voir les messages</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAV Emails + Contacts -->
+      <div class="feedback-section" id="savSection">
+        <h2>📧 Emails SAV & Contacts</h2>
+        <div class="stats-grid" style="margin-bottom: 1.5rem;">
+          <div class="stat-card">
+            <div class="label">Emails recus</div>
+            <div class="value" id="statEmailsTotal">-</div>
+            <div class="sub" id="statEmailsNew">nouveaux: -</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Repondus</div>
+            <div class="value" id="statEmailsReplied" style="color: #16a34a;">-</div>
+            <div class="sub" id="statEmailsRate">taux: -</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Formulaire Contact</div>
+            <div class="value" id="statContactsTotal" style="color: #a78bfa;">-</div>
+            <div class="sub" id="statContactsNew">-</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Dernier envoi</div>
+            <div class="value" id="statLastReply" style="font-size: 1rem;">-</div>
+            <div class="sub" id="statLastReplyTo">-</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Categories</div>
+            <div class="value" id="statTopCategory">-</div>
+            <div class="sub" id="statCategories">-</div>
+          </div>
+        </div>
+        <div class="feedback-grid">
+          <div class="feedback-panel" style="flex: 2;">
+            <h3>📬 Emails recents (entrants)</h3>
+            <div id="emailsList" style="max-height: 400px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel" style="flex: 1;">
+            <h3>✅ Reponses envoyees</h3>
+            <div id="repliesList" style="max-height: 400px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel" style="flex: 2;">
+            <h3>📋 Formulaire Contact</h3>
+            <div id="contactsList" style="max-height: 400px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel" style="flex: 1;">
+            <h3>🔔 Follow-up 2 mois</h3>
+            <p style="font-size:0.75rem;color:#64748b;margin-bottom:0.75rem;">Contacts sans interaction depuis 60+ jours</p>
+            <div id="followupList" style="max-height: 320px; overflow-y: auto;">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+            <button id="followupSendBtn" onclick="sendFollowups()" style="display:none;width:100%;margin-top:0.75rem;padding:0.6rem;border-radius:8px;border:1px solid #059669;background:#05966920;color:#34d399;font-size:0.82rem;font-weight:600;cursor:pointer;">
+              📧 Envoyer les follow-ups
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback analytics -->
+      <div class="feedback-section">
+        <h2>📊 Analyse des feedbacks</h2>
+        <div class="feedback-grid">
+          <div class="feedback-panel">
+            <h3>👎 Reponses mal notees (a ameliorer)</h3>
+            <div id="feedbackDown">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+          <div class="feedback-panel">
+            <h3>📈 Intents detectes</h3>
+            <div id="intentStats">
+              <div class="feedback-empty">Chargement...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
+    // Supabase client
+    let sb;
+    function initSupabase() {
+      if (sb) return;
+      if (!window.supabase || !window.supabase.createClient) {
+        throw new Error('Supabase JS not loaded');
+      }
+      sb = window.supabase.createClient(supabaseUrl, supabaseKey);
+    }
+
+    let allConversations = [];
+    let tawkConversations = [];
+    let contactSubmissions = [];
+    let followupEligible = [];
+    let allMessages = {};
+    let currentFilter = 'all';
+
+    async function loadFollowups() {
+      try {
+        var el = document.getElementById('followupList');
+        var btn = document.getElementById('followupSendBtn');
+        var cutoff = new Date(Date.now() - 60 * 86400000).toISOString();
+
+        var { data: contacts } = await sb
+          .from('contacts')
+          .select('*')
+          .lt('created_at', cutoff)
+          .neq('contact_type', 'newsletter')
+          .order('created_at', { ascending: true });
+
+        var eligible = (contacts || []).filter(function(c) {
+          return c.email && !c.email.includes('test') && !c.email.includes('example')
+            && c.status !== 'followup_sent';
+        });
+        followupEligible = eligible;
+
+        var sent = (contacts || []).filter(function(c) {
+          return c.status === 'followup_sent';
+        });
+
+        if (eligible.length === 0 && sent.length === 0) {
+          el.innerHTML = '<div style="padding:16px;text-align:center;color:#64748b;font-size:0.82rem;">Aucun contact de plus de 60 jours.</div>';
+          btn.style.display = 'none';
+          return;
+        }
+
+        var html = '';
+        if (eligible.length > 0) {
+          html += eligible.map(function(c) {
+            var days = Math.round((Date.now() - new Date(c.created_at).getTime()) / 86400000);
+            var nom = c.nom || c.email.split('@')[0];
+            var type = c.contact_type === 'diagnostic' ? 'Diagnostic' : 'Contact';
+            return '<div style="padding:8px 12px;border-bottom:1px solid #1e293b;border-left:3px solid #f59e0b;">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<strong style="color:#e2e8f0;font-size:0.82rem;">' + escapeHtml(nom) + '</strong>'
+              + '<span style="font-size:0.68rem;padding:2px 6px;border-radius:4px;background:#f59e0b20;color:#f59e0b;font-weight:600;">' + days + 'j</span>'
+              + '</div>'
+              + '<div style="font-size:0.75rem;color:#94a3b8;">' + escapeHtml(c.email) + '</div>'
+              + '<div style="font-size:0.72rem;color:#64748b;margin-top:2px;">' + type + (c.treatment ? ' \xB7 ' + c.treatment : '') + '</div>'
+              + '</div>';
+          }).join('');
+          btn.style.display = 'block';
+          btn.textContent = '\uD83D\uDCE7 Envoyer ' + eligible.length + ' follow-up' + (eligible.length > 1 ? 's' : '');
+        } else {
+          btn.style.display = 'none';
+        }
+
+        if (sent.length > 0) {
+          html += '<div style="padding:8px 12px;border-top:1px solid #1e293b;"><span style="font-size:0.72rem;color:#64748b;font-weight:600;">DEJA ENVOYES</span></div>';
+          html += sent.map(function(c) {
+            var nom = c.nom || c.email.split('@')[0];
+            return '<div style="padding:6px 12px;border-bottom:1px solid #1e293b;border-left:3px solid #16a34a;opacity:0.6;">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<span style="color:#94a3b8;font-size:0.78rem;">' + escapeHtml(nom) + '</span>'
+              + '<span style="font-size:0.65rem;padding:2px 6px;border-radius:4px;background:#16a34a20;color:#16a34a;">ENVOYE</span>'
+              + '</div>'
+              + '<div style="font-size:0.72rem;color:#64748b;">' + escapeHtml(c.email) + '</div>'
+              + '</div>';
+          }).join('');
+        }
+
+        el.innerHTML = html;
+      } catch(e) {
+        console.log('Followup load error:', e.message);
+        document.getElementById('followupList').innerHTML = '<div style="padding:16px;color:#64748b;font-size:0.82rem;">Erreur chargement.</div>';
+      }
+    }
+
+    async function sendFollowups() {
+      if (followupEligible.length === 0) return;
+      var btn = document.getElementById('followupSendBtn');
+      btn.disabled = true;
+      btn.textContent = '\u23F3 Envoi en cours...';
+      btn.style.opacity = '0.6';
+
+      var sent = 0, errors = 0;
+      for (var i = 0; i < followupEligible.length; i++) {
+        var c = followupEligible[i];
+        try {
+          var res = await fetch(supabaseUrl + '/functions/v1/send-followup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + supabaseKey },
+            body: JSON.stringify({ contact_id: c.id })
+          });
+          if (res.ok) { sent++; } else { errors++; }
+        } catch(e) { errors++; }
+      }
+
+      if (errors > 0 && sent === 0) {
+        btn.textContent = '\u26A0\uFE0F Lancer: node scripts/followup-contacts.mjs';
+        btn.style.background = '#f59e0b20';
+        btn.style.borderColor = '#f59e0b';
+        btn.style.color = '#f59e0b';
+        btn.disabled = false;
+        btn.onclick = function() { navigator.clipboard.writeText('node scripts/followup-contacts.mjs'); btn.textContent = '\u2705 Commande copiee !'; };
+      } else {
+        btn.textContent = '\u2705 ' + sent + ' follow-up' + (sent > 1 ? 's' : '') + ' envoye' + (sent > 1 ? 's' : '') + (errors > 0 ? ' (' + errors + ' erreurs)' : '');
+        btn.style.background = '#16a34a20';
+        btn.style.borderColor = '#16a34a';
+        setTimeout(function() { loadFollowups(); }, 2000);
+      }
+    }
+    window.sendFollowups = sendFollowups;
+
+    async function loadData() {
+      try {
+        if (!sb) initSupabase();
+
+        // Load conversations
+        const { data: convs, error: convErr } = await sb
+          .from('coach_conversations')
+          .select('*')
+          .order('last_message_at', { ascending: false })
+          .limit(200);
+
+        if (convErr) { console.error('convs error:', convErr); }
+        allConversations = convs || [];
+
+        // Load Tawk archive
+        const { data: tawk, error: tawkErr } = await sb
+          .from('tawk_conversations_archive')
+          .select('*')
+          .order('chat_date', { ascending: false });
+        if (tawkErr) { console.error('tawk error:', tawkErr); }
+        tawkConversations = tawk || [];
+
+        // Load contact form submissions
+        try {
+          const { data: contacts } = await sb
+            .from('contacts')
+            .select('*')
+            .order('created_at', { ascending: false })
+            .limit(50);
+          contactSubmissions = (contacts || []).filter(function(c) { return !c.email || !c.email.includes('test-'); });
+        } catch(e) { contactSubmissions = []; }
+
+        // Render conversations immediately (don't wait for stats)
+        renderConvList();
+
+        // Compute stats
+        var totalMsgs = 0, upVotes = 0, downVotes = 0;
+
+        try {
+          var r1 = await sb.from('coach_messages').select('*', { count: 'exact', head: true });
+          totalMsgs = r1.count || 0;
+        } catch(e) { console.warn('coach_messages count:', e.message); }
+
+        try {
+          var r5 = await sb.from('coach_feedback').select('*', { count: 'exact', head: true }).eq('vote', 'up');
+          upVotes = r5.count || 0;
+          var r6 = await sb.from('coach_feedback').select('*', { count: 'exact', head: true }).eq('vote', 'down');
+          downVotes = r6.count || 0;
+        } catch(e) { console.warn('feedback stats:', e.message); }
+
+        // Category stats from tawk
+        var catCounts = { scam_victim: 0, product_question: 0, side_effects: 0, info_request: 0, other: 0 };
+        tawkConversations.forEach(function(t) {
+          var cat = t.category || 'other';
+          catCounts[cat] = (catCounts[cat] || 0) + 1;
+        });
+
+        var tawkMsgTotal = tawkConversations.reduce(function(sum, t) { return sum + (t.message_count || 0); }, 0);
+        var totalConvs = allConversations.length + tawkConversations.length;
+        var totalAllMsgs = totalMsgs + tawkMsgTotal;
+        var avgMsgs = totalConvs > 0 ? (totalAllMsgs / totalConvs).toFixed(1) : 0;
+
+        var totalVotes = upVotes + downVotes;
+        var satisfactionPct = totalVotes > 0 ? Math.round((upVotes / totalVotes) * 100) : 0;
+
+        // Update stats
+        document.getElementById('statConvs').textContent = totalConvs;
+        document.getElementById('statCoachCount').textContent = 'Coach: ' + allConversations.length;
+        document.getElementById('statTawkCount').textContent = 'Tawk: ' + tawkConversations.length;
+        document.getElementById('statMsgs').textContent = totalAllMsgs;
+        document.getElementById('statAvgMsgs').textContent = 'moy: ' + avgMsgs + ' msgs/conv';
+        document.getElementById('statScam').textContent = catCounts.scam_victim;
+        document.getElementById('statScamPct').textContent = totalConvs > 0 ? Math.round((catCounts.scam_victim / totalConvs) * 100) + ' % des conversations' : '-';
+        document.getElementById('statProduct').textContent = catCounts.product_question + (catCounts.info_request || 0);
+        document.getElementById('statSideEffects').textContent = catCounts.side_effects;
+        document.getElementById('statSatisfaction').textContent = totalVotes > 0 ? satisfactionPct + '%' : '-';
+        document.getElementById('statSatisfaction').style.color = satisfactionPct >= 70 ? '#16a34a' : satisfactionPct >= 40 ? '#f59e0b' : '#dc2626';
+        document.getElementById('statFeedbackTotal').textContent = totalVotes + ' votes (' + upVotes + '\uD83D\uDC4D ' + downVotes + '\uD83D\uDC4E)';
+        document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
+
+        loadFeedbackAnalytics();
+        loadSavEmails();
+        loadContacts();
+        loadFollowups();
+      } catch(e) {
+        console.error('loadData error:', e);
+        document.getElementById('convListContent').innerHTML = '<div class="conv-empty">Erreur de chargement — voir console</div>';
+      }
+    }
+
+    function filterConvs(filter, btn) {
+      currentFilter = filter;
+      document.querySelectorAll('.conv-filter button').forEach(function(b) { b.classList.remove('active'); });
+      if (btn) btn.classList.add('active');
+      renderConvList();
+    }
+
+    function renderConvList() {
+      var container = document.getElementById('convListContent');
+      var searchQuery = (document.getElementById('convSearch').value || '').toLowerCase().trim();
+
+      // Build unified list
+      var convs = [];
+
+      // Coach IA conversations
+      allConversations.forEach(function(c) {
+        var preview = c.page_url || '';
+        convs.push({ type: 'coach', id: c.id, date: c.last_message_at || c.started_at || '', preview: preview, searchText: preview.toLowerCase(), data: c });
+      });
+
+      // Tawk conversations
+      tawkConversations.forEach(function(t) {
+        var visitorMsgs = (t.messages || []).filter(function(m) { return m.sender === 'v'; });
+        var preview = visitorMsgs.map(function(m) { return m.text; }).join(' ').substring(0, 120);
+        convs.push({ type: 'tawk', id: t.id, date: t.chat_date + 'T12:00:00', preview: preview, searchText: preview.toLowerCase(), category: t.category, data: t });
+      });
+
+      // Contact form submissions
+      contactSubmissions.forEach(function(c) {
+        var preview = (c.nom ? c.nom + ' — ' : '') + (c.message || c.subject || '').substring(0, 120);
+        convs.push({ type: 'contact', id: c.id, date: c.created_at || '', preview: preview, searchText: (c.email + ' ' + c.nom + ' ' + c.message + ' ' + c.subject).toLowerCase(), category: c.contact_type, data: c });
+      });
+
+      // Sort by date desc
+      convs.sort(function(a, b) { return b.date.localeCompare(a.date); });
+
+      // Apply filters
+      var now = new Date();
+      if (currentFilter === '7') {
+        var cutoff7 = new Date(now - 7 * 86400000).toISOString();
+        convs = convs.filter(function(c) { return c.date >= cutoff7; });
+      } else if (currentFilter === '30') {
+        var cutoff30 = new Date(now - 30 * 86400000).toISOString();
+        convs = convs.filter(function(c) { return c.date >= cutoff30; });
+      } else if (currentFilter === '90') {
+        var cutoff90 = new Date(now - 90 * 86400000).toISOString();
+        convs = convs.filter(function(c) { return c.date >= cutoff90; });
+      } else if (currentFilter.startsWith('cat:')) {
+        var catFilter = currentFilter.substring(4);
+        convs = convs.filter(function(c) { return c.category === catFilter; });
+      } else if (currentFilter === 'source:coach') {
+        convs = convs.filter(function(c) { return c.type === 'coach'; });
+      } else if (currentFilter === 'source:tawk') {
+        convs = convs.filter(function(c) { return c.type === 'tawk'; });
+      } else if (currentFilter === 'source:contact') {
+        convs = convs.filter(function(c) { return c.type === 'contact'; });
+      }
+
+      // Search filter
+      if (searchQuery) {
+        convs = convs.filter(function(c) { return c.searchText.indexOf(searchQuery) !== -1; });
+      }
+
+      // Update count label
+      var label = document.getElementById('convCountLabel');
+      if (label) label.textContent = '(' + convs.length + ')';
+
+      if (convs.length === 0) {
+        container.innerHTML = '<div class="conv-empty">Aucune conversation</div>';
+        return;
+      }
+
+      var catColors = { scam_victim: '#dc2626', side_effects: '#f59e0b', info_request: '#3b82f6', product_question: '#8b5cf6', payment_issue: '#f97316', delivery_issue: '#f97316', other: '#64748b' };
+      var catLabels = { scam_victim: 'Arnaque', side_effects: 'Effets sec.', info_request: 'Info', product_question: 'Produit', payment_issue: 'Paiement', delivery_issue: 'Livraison', other: 'Autre' };
+
+      container.innerHTML = convs.map(function(item) {
+        if (item.type === 'tawk') {
+          var t = item.data;
+          var date = new Date(t.chat_date).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' });
+          var catColor = catColors[t.category] || '#64748b';
+          var catLabel = catLabels[t.category] || t.category || '?';
+          var previewText = item.preview.substring(0, 70);
+          return '<div class="conv-item conv-tawk" onclick="loadTawkConversation(\'' + t.id + '\', this)">'
+            + '<div class="conv-item-top">'
+            + '<span class="conv-visitor">\uD83D\uDCAC Visiteur</span>'
+            + '<span class="conv-time">' + date + '</span>'
+            + '</div>'
+            + '<div class="conv-preview">' + escapeHtml(previewText) + '</div>'
+            + '<div class="conv-meta">'
+            + '<span class="conv-badge" style="background:' + catColor + '20;color:' + catColor + ';">' + catLabel + '</span>'
+            + '<span class="conv-badge-msgs">' + t.message_count + ' msgs</span>'
+            + '</div></div>';
+        } else if (item.type === 'contact') {
+          var ct = item.data;
+          var ctDate = ct.created_at ? new Date(ct.created_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '-';
+          var ctName = ct.nom || ct.email || 'Anonyme';
+          var ctPreview = (ct.message || ct.subject || '').substring(0, 70);
+          var ctStatusColor = ct.status === 'replied' ? '#16a34a' : '#f59e0b';
+          var ctStatusLabel = ct.status === 'replied' ? 'REPONDU' : 'NOUVEAU';
+          var ctTypeLabel = ct.contact_type === 'diagnostic' ? 'Diagnostic' : ct.contact_type === 'newsletter' ? 'Newsletter' : 'Contact';
+          return '<div class="conv-item" style="border-left:3px solid #a78bfa;" onclick="loadContactDetail(\'' + ct.id + '\', this)">'
+            + '<div class="conv-item-top">'
+            + '<span class="conv-visitor">\uD83D\uDCE9 ' + escapeHtml(ctName) + '</span>'
+            + '<span class="conv-time">' + ctDate + '</span>'
+            + '</div>'
+            + '<div class="conv-preview">' + escapeHtml(ctPreview) + '</div>'
+            + '<div class="conv-meta">'
+            + '<span class="conv-badge" style="background:#a78bfa20;color:#a78bfa;">' + ctTypeLabel + '</span>'
+            + '<span class="conv-badge" style="background:' + ctStatusColor + '20;color:' + ctStatusColor + ';">' + ctStatusLabel + '</span>'
+            + (ct.treatment ? '<span class="conv-badge" style="background:#3b82f620;color:#60a5fa;">' + escapeHtml(ct.treatment) + '</span>' : '')
+            + '</div></div>';
+        } else {
+          var c = item.data;
+          var time = c.last_message_at
+            ? new Date(c.last_message_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
+            : '-';
+          var page = c.page_url ? c.page_url.replace(/^\//, '').replace(/\/$/, '').split('/').pop() : '';
+          var msgs = c.message_count || 0;
+          return '<div class="conv-item" onclick="loadConversation(\'' + c.id + '\', this)">'
+            + '<div class="conv-item-top">'
+            + '<span class="conv-visitor">\uD83E\uDD16 Coach IA</span>'
+            + '<span class="conv-time">' + time + '</span>'
+            + '</div>'
+            + (page ? '<div class="conv-preview">/' + escapeHtml(page) + '</div>' : '')
+            + '<div class="conv-meta">'
+            + '<span class="conv-badge" style="background:rgba(52,211,153,0.15);color:#34d399;">Coach IA</span>'
+            + '<span class="conv-badge-msgs">\uD83D\uDCAC ' + msgs + ' msgs</span>'
+            + '</div></div>';
+        }
+      }).join('');
+    }
+
+    async function loadConversation(convId, el) {
+      if (!sb) initSupabase();
+
+      // Active state
+      document.querySelectorAll('.conv-item').forEach(i => i.classList.remove('active'));
+      if (el) el.classList.add('active');
+
+      const detail = document.getElementById('convDetail');
+      detail.innerHTML = '<div class="loading-spinner">Chargement...</div>';
+
+      // Load messages
+      const { data: messages } = await sb
+        .from('coach_messages')
+        .select('*')
+        .eq('conversation_id', convId)
+        .order('created_at', { ascending: true });
+
+      if (!messages || messages.length === 0) {
+        detail.innerHTML = '<div class="no-conv-selected"><span>Aucun message</span></div>';
+        return;
+      }
+
+      const conv = allConversations.find(c => c.id === convId);
+      const sessionShort = conv ? (conv.session_id || '').substring(0, 16) + '...' : convId;
+      const startTime = new Date(messages[0].created_at).toLocaleString('fr-FR');
+      const models = [...new Set(messages.filter(m => m.model).map(m => m.model))];
+
+      detail.innerHTML = `
+        <div class="conv-detail-header">
+          <div>
+            <h3>🇫🇷 ${sessionShort}</h3>
+            <div class="conv-detail-meta">${startTime} · ${messages.length} messages · ${models.join(', ')}</div>
+          </div>
+        </div>
+        <div class="conv-messages">
+          ${messages.map(m => {
+            const time = new Date(m.created_at).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+            const cls = m.role === 'user' ? 'user' : 'assistant';
+            const avatarLabel = cls === 'user' ? '👤' : '🤖';
+            const senderLabel = cls === 'user' ? 'Visiteur' : 'Coach IA';
+            const modelTag = m.model ? '<span class="msg-model-tag">' + escapeHtml(m.model) + '</span>' : '';
+            return `<div class="msg-row ${cls}">
+              <div class="msg-avatar">${avatarLabel}</div>
+              <div class="msg-content">
+                <div class="msg-sender">${senderLabel}</div>
+                <div class="msg-bubble">${formatMarkdown(m.content)}</div>
+                <div class="msg-time">${time}${modelTag}</div>
+              </div>
+            </div>`;
+          }).join('')}
+        </div>
+      `;
+
+      // Scroll to bottom
+      const msgsEl = detail.querySelector('.conv-messages');
+      if (msgsEl) msgsEl.scrollTop = msgsEl.scrollHeight;
+    }
+
+    function loadContactDetail(contactId, el) {
+      document.querySelectorAll('.conv-item').forEach(function(i) { i.classList.remove('active'); });
+      if (el) el.classList.add('active');
+
+      var ct = contactSubmissions.find(function(c) { return String(c.id) === String(contactId); });
+      if (!ct) return;
+
+      var detail = document.getElementById('convDetail');
+      var date = ct.created_at ? new Date(ct.created_at).toLocaleString('fr-FR') : '-';
+      var statusColor = ct.status === 'replied' ? '#16a34a' : '#f59e0b';
+      var statusLabel = ct.status === 'replied' ? 'REPONDU' : 'NOUVEAU';
+      var typeLabel = ct.contact_type === 'diagnostic' ? 'Diagnostic GLP-1' : ct.contact_type === 'newsletter' ? 'Newsletter' : 'Formulaire Contact';
+
+      var fields = [];
+      if (ct.nom) fields.push(['Nom', ct.nom]);
+      if (ct.email) fields.push(['Email', ct.email]);
+      if (ct.telephone) fields.push(['Telephone', ct.telephone]);
+      if (ct.age) fields.push(['Age', ct.age]);
+      if (ct.treatment) fields.push(['Traitement', ct.treatment]);
+      if (ct.concerns && ct.concerns.length) fields.push(['Preoccupations', ct.concerns.join(', ')]);
+      if (ct.newsletter) fields.push(['Newsletter', 'Oui']);
+
+      detail.innerHTML = '<div class="conv-detail-header">'
+        + '<div>'
+        + '<h3>\uD83D\uDCE9 ' + escapeHtml(ct.nom || ct.email || 'Contact') + '</h3>'
+        + '<div class="conv-detail-meta">' + typeLabel + ' · ' + date + ' · <span style="color:' + statusColor + ';font-weight:700;">' + statusLabel + '</span></div>'
+        + '</div></div>'
+        + '<div class="conv-messages" style="gap:1rem;">'
+        + '<div style="background:#111827;border-radius:12px;padding:1.25rem;border:1px solid #1e293b;">'
+        + '<h4 style="color:#a78bfa;font-size:0.85rem;margin-bottom:0.75rem;">' + escapeHtml(ct.subject || 'Sans sujet') + '</h4>'
+        + fields.map(function(f) {
+            return '<div style="display:flex;gap:8px;margin-bottom:6px;font-size:0.84rem;">'
+              + '<span style="color:#64748b;min-width:120px;">' + f[0] + '</span>'
+              + '<span style="color:#e2e8f0;">' + escapeHtml(f[1]) + '</span></div>';
+          }).join('')
+        + '</div>'
+        + (ct.message ? '<div class="msg-row assistant"><div class="msg-avatar">\uD83D\uDCE9</div><div class="msg-content"><div class="msg-sender">MESSAGE</div><div class="msg-bubble">' + escapeHtml(ct.message) + '</div><div class="msg-time">' + date + '</div></div></div>' : '')
+        + '</div>';
+    }
+    window.loadContactDetail = loadContactDetail;
+
+    function loadTawkConversation(tawkId, el) {
+      // Active state
+      document.querySelectorAll('.conv-item').forEach(i => i.classList.remove('active'));
+      if (el) el.classList.add('active');
+
+      const t = tawkConversations.find(c => c.id === tawkId);
+      if (!t) return;
+
+      const detail = document.getElementById('convDetail');
+      const date = new Date(t.chat_date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+      const catLabels = { scam_victim: 'Victime arnaque', side_effects: 'Effets secondaires', info_request: 'Demande info', product_question: 'Question produit', payment_issue: 'Probl\u00e8me paiement', delivery_issue: 'Probl\u00e8me livraison', other: 'Autre' };
+      const catLabel = catLabels[t.category] || t.category || 'Non class\u00e9';
+      const messages = t.messages || [];
+
+      detail.innerHTML = '<div class="conv-detail-header">'
+        + '<div>'
+        + '<h3>\uD83D\uDCE6 Tawk.to \u2014 ' + escapeHtml(t.visitor_name || 'Visiteur anonyme') + '</h3>'
+        + '<div class="conv-detail-meta">' + date + ' \u00b7 ' + messages.length + ' messages \u00b7 Cat\u00e9gorie: ' + catLabel
+        + (t.visitor_city ? ' \u00b7 ' + escapeHtml(t.visitor_city) : '')
+        + (t.page_url ? ' \u00b7 Page: ' + escapeHtml(t.page_url) : '')
+        + '</div>'
+        + '</div>'
+        + '<span class="conv-badge" style="background:rgba(245,158,11,0.2);color:#f59e0b;font-size:0.75rem;padding:4px 10px;">ARCHIVE TAWK</span>'
+        + '</div>'
+        + '<div class="conv-messages">'
+        + messages.map(function(m) {
+            var isVisitor = m.sender === 'v';
+            var isSystem = m.sender === 's';
+            var cls = isVisitor ? 'user' : 'assistant';
+            var avatarLabel = isVisitor ? '\uD83D\uDC64' : (isSystem ? '\u2699\uFE0F' : '\uD83E\uDD16');
+            var senderLabel = isVisitor ? 'Visiteur' : (isSystem ? 'Syst\u00e8me' : 'Bot Tawk');
+            var text = m.text || '';
+            // Remove [option] tags
+            text = text.replace(/\[option\][^\n]*/g, '').trim();
+            if (!text) return '';
+            return '<div class="msg-row ' + cls + '">'
+              + '<div class="msg-avatar">' + avatarLabel + '</div>'
+              + '<div class="msg-content">'
+              + '<div class="msg-sender">' + senderLabel + '</div>'
+              + '<div class="msg-bubble">' + formatMarkdown(text) + '</div>'
+              + '</div></div>';
+          }).filter(function(x) { return x; }).join('')
+        + '</div>';
+
+      var msgsEl = detail.querySelector('.conv-messages');
+      if (msgsEl) msgsEl.scrollTop = msgsEl.scrollHeight;
+    }
+
+    async function loadFeedbackAnalytics() {
+      try {
+        // Load recent negative feedback
+        const { data: downFeedback } = await sb
+          .from('coach_feedback')
+          .select('*')
+          .eq('vote', 'down')
+          .order('created_at', { ascending: false })
+          .limit(10);
+
+        const downEl = document.getElementById('feedbackDown');
+        if (downFeedback && downFeedback.length > 0) {
+          downEl.innerHTML = downFeedback.map(f => {
+            const time = new Date(f.created_at).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+            const page = f.page_url || '-';
+            const msg = (f.assistant_message || '').substring(0, 200);
+            return `<div class="feedback-item">
+              <div class="fb-msg">${escapeHtml(msg)}</div>
+              <div class="fb-meta">
+                <span class="fb-vote-down">👎</span>
+                <span>${time}</span>
+                <span>page: ${escapeHtml(page)}</span>
+              </div>
+            </div>`;
+          }).join('');
+        } else {
+          downEl.innerHTML = '<div class="feedback-empty">Aucun feedback negatif — bravo !</div>';
+        }
+
+        // Load intent distribution from messages
+        const { data: intentMsgs } = await sb
+          .from('coach_messages')
+          .select('intent')
+          .eq('role', 'user')
+          .not('intent', 'is', null)
+          .limit(500);
+
+        const intentEl = document.getElementById('intentStats');
+        if (intentMsgs && intentMsgs.length > 0) {
+          const counts = {};
+          intentMsgs.forEach(m => {
+            const key = m.intent || 'unknown';
+            counts[key] = (counts[key] || 0) + 1;
+          });
+          const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+          const maxCount = sorted[0][1];
+
+          const colors = {
+            'scam': '#dc2626', 'scam:high': '#dc2626', 'scam:low': '#f59e0b',
+            'selling': '#3b82f6', 'price': '#8b5cf6', 'prescription': '#06b6d4',
+            'weight': '#16a34a', 'diet': '#84cc16', 'diabetes': '#f97316',
+            'device': '#64748b', 'general': '#94a3b8'
+          };
+
+          intentEl.innerHTML = sorted.map(([intent, count]) => {
+            const pct = Math.round((count / maxCount) * 100);
+            const color = colors[intent] || '#3b82f6';
+            const label = intent.replace('scam:high', 'Arnaque (grave)').replace('scam:low', 'Arnaque (faible)').replace('scam', 'Arnaque');
+            return `<div class="intent-bar">
+              <span class="intent-label">${escapeHtml(label)}</span>
+              <div class="intent-fill"><div class="intent-fill-inner" style="width:${pct}%; background:${color};"></div></div>
+              <span class="intent-count">${count}</span>
+            </div>`;
+          }).join('');
+        } else {
+          intentEl.innerHTML = '<div class="feedback-empty">Pas encore de donnees d\'intent</div>';
+        }
+      } catch (e) {
+        console.error('loadFeedbackAnalytics error:', e);
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function formatMarkdown(str) {
+      var safe = escapeHtml(str);
+      return safe
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\[(.*?)\]\((\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:underline;">$1</a>')
+        .replace(/\n/g, '<br>');
+    }
+
+    // SAV Emails
+    async function loadSavEmails() {
+      try {
+        // Load incoming emails
+        const { data: emails, error: emailErr } = await sb
+          .from('incoming_emails')
+          .select('*')
+          .order('received_at', { ascending: false })
+          .limit(50);
+
+        // Load replies
+        const { data: replies, error: replyErr } = await sb
+          .from('email_replies')
+          .select('*')
+          .order('sent_at', { ascending: false })
+          .limit(50);
+
+        if (emailErr || replyErr) {
+          // Tables don't exist yet — show message
+          const el = document.getElementById('emailsList');
+          const rl = document.getElementById('repliesList');
+          if (el) el.innerHTML = '<div class="feedback-empty" style="color:#64748b;">Tables SAV pas encore creees.<br>Lance la migration 021_sav_email_tables.sql</div>';
+          if (rl) rl.innerHTML = '<div class="feedback-empty" style="color:#64748b;">-</div>';
+          return;
+        }
+
+        const allEmails = emails || [];
+        const allReplies = replies || [];
+
+        // Stats
+        const total = allEmails.length;
+        const newCount = allEmails.filter(e => e.status === 'new').length;
+        const replied = allEmails.filter(e => e.status === 'replied').length;
+        const rate = total > 0 ? Math.round((replied / total) * 100) : 0;
+
+        document.getElementById('statEmailsTotal').textContent = total;
+        document.getElementById('statEmailsNew').textContent = 'nouveaux: ' + newCount;
+        document.getElementById('statEmailsReplied').textContent = replied;
+        document.getElementById('statEmailsRate').textContent = 'taux: ' + rate + '%';
+
+        // Last reply
+        if (allReplies.length > 0) {
+          const last = allReplies[0];
+          const d = new Date(last.sent_at);
+          document.getElementById('statLastReply').textContent = d.toLocaleDateString('fr-FR', {day:'numeric', month:'short'});
+          document.getElementById('statLastReplyTo').textContent = last.to_email;
+        }
+
+        // Categories
+        const cats = {};
+        allEmails.forEach(e => { if (e.category) cats[e.category] = (cats[e.category]||0) + 1; });
+        const topCat = Object.entries(cats).sort((a,b) => b[1]-a[1])[0];
+        if (topCat) {
+          document.getElementById('statTopCategory').textContent = topCat[0].replace('_', ' ');
+          document.getElementById('statCategories').textContent = Object.entries(cats).map(([k,v]) => k.replace('_',' ')+': '+v).join(', ');
+        }
+
+        // Render emails list
+        const emailsEl = document.getElementById('emailsList');
+        if (allEmails.length === 0) {
+          emailsEl.innerHTML = '<div class="feedback-empty">Aucun email. Lance l\'agent sav-email pour sync IMAP.</div>';
+        } else {
+          emailsEl.innerHTML = allEmails.map(e => {
+            const d = e.received_at ? new Date(e.received_at).toLocaleDateString('fr-FR', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '-';
+            const statusColor = e.status === 'new' ? '#f59e0b' : e.status === 'replied' ? '#16a34a' : '#64748b';
+            const statusLabel = e.status === 'new' ? 'NOUVEAU' : e.status === 'replied' ? 'REPONDU' : e.status.toUpperCase();
+            const catBadge = e.category ? '<span style="background:#1e293b;padding:2px 8px;border-radius:4px;font-size:0.7rem;color:#94a3b8;">'+escapeHtml(e.category)+'</span>' : '';
+            return '<div style="padding:10px 12px;border-bottom:1px solid #1e293b;cursor:pointer;" class="email-row">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<strong style="color:#e2e8f0;font-size:0.88rem;">' + escapeHtml(e.from_name || e.from_email) + '</strong>'
+              + '<span style="font-size:0.7rem;font-weight:600;color:'+statusColor+';background:'+statusColor+'20;padding:2px 8px;border-radius:4px;">'+statusLabel+'</span>'
+              + '</div>'
+              + '<div style="font-size:0.82rem;color:#94a3b8;margin-top:2px;">' + escapeHtml(e.subject || '(sans objet)') + '</div>'
+              + '<div style="display:flex;gap:8px;align-items:center;margin-top:4px;">'
+              + '<span style="font-size:0.72rem;color:#64748b;">' + d + '</span>'
+              + catBadge
+              + '</div></div>';
+          }).join('');
+        }
+
+        // Render replies list
+        const repliesEl = document.getElementById('repliesList');
+        if (allReplies.length === 0) {
+          repliesEl.innerHTML = '<div class="feedback-empty">Aucune reponse envoyee.</div>';
+        } else {
+          repliesEl.innerHTML = allReplies.map(r => {
+            const d = new Date(r.sent_at).toLocaleDateString('fr-FR', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+            const imapIcon = r.sent_to_imap ? '✅' : '⚠️';
+            return '<div style="padding:8px 12px;border-bottom:1px solid #1e293b;">'
+              + '<div style="font-size:0.82rem;color:#e2e8f0;">' + escapeHtml(r.to_email) + '</div>'
+              + '<div style="font-size:0.75rem;color:#94a3b8;margin-top:2px;">' + escapeHtml(r.subject || '') + '</div>'
+              + '<div style="display:flex;gap:8px;margin-top:4px;font-size:0.72rem;color:#64748b;">'
+              + '<span>' + d + '</span>'
+              + '<span>' + imapIcon + ' Sent</span>'
+              + (r.utm_campaign ? '<span style="color:#3b82f6;">' + escapeHtml(r.utm_campaign) + '</span>' : '')
+              + '</div></div>';
+          }).join('');
+        }
+      } catch(e) {
+        console.log('SAV emails not available yet:', e.message);
+        const el = document.getElementById('emailsList');
+        if (el) el.innerHTML = '<div class="feedback-empty" style="color:#64748b;">Section SAV pas encore active.<br>Migration + premier run agent necessaires.</div>';
+        const rl = document.getElementById('repliesList');
+        if (rl) rl.innerHTML = '<div class="feedback-empty" style="color:#64748b;">-</div>';
+      }
+    }
+
+    // Load contacts from form
+    async function loadContacts() {
+      try {
+        const { data: contacts, error } = await sb
+          .from('contacts')
+          .select('*')
+          .order('created_at', { ascending: false })
+          .limit(50);
+
+        if (error) {
+          document.getElementById('contactsList').innerHTML = '<div class="feedback-empty" style="color:#64748b;">Table contacts pas encore creee.</div>';
+          return;
+        }
+
+        var all = contacts || [];
+        // Filter out test entries
+        all = all.filter(function(c) { return !c.email || !c.email.includes('test-'); });
+
+        // Stats
+        document.getElementById('statContactsTotal').textContent = all.length;
+        var recent = all.filter(function(c) {
+          return c.created_at && (Date.now() - new Date(c.created_at).getTime()) < 7 * 86400000;
+        }).length;
+        document.getElementById('statContactsNew').textContent = recent + ' cette semaine';
+
+        // Render
+        var el = document.getElementById('contactsList');
+        if (all.length === 0) {
+          el.innerHTML = '<div class="feedback-empty">Aucun contact recu.</div>';
+        } else {
+          el.innerHTML = all.map(function(c) {
+            var d = c.created_at ? new Date(c.created_at).toLocaleDateString('fr-FR', {day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}) : '-';
+            var subjectMap = {
+              'information-medicaments': 'Info medicaments',
+              'prix-disponibilite': 'Prix/Dispo',
+              'effets-secondaires': 'Effets secondaires',
+              'remboursement': 'Remboursement',
+              'temoignage': 'Temoignage',
+              'medecin-prescription': 'Medecin',
+              'partenariat': 'Partenariat',
+              'autre': 'Autre',
+              'Diagnostic GLP-1': 'Coach IA Diagnostic'
+            };
+            var subjectLabel = subjectMap[c.subject] || c.subject || '(sans sujet)';
+            var statusColor = c.status === 'new' ? '#f59e0b' : c.status === 'replied' ? '#16a34a' : '#a78bfa';
+            var statusLabel = c.status === 'replied' ? 'REPONDU' : c.status === 'new' ? 'NOUVEAU' : (c.status || 'NOUVEAU').toUpperCase();
+            var treatBadge = c.treatment ? '<span style="background:#1e293b;padding:2px 8px;border-radius:4px;font-size:0.7rem;color:#60a5fa;">'+escapeHtml(c.treatment)+'</span>' : '';
+            var nlBadge = c.newsletter ? '<span style="background:#16a34a20;padding:2px 8px;border-radius:4px;font-size:0.7rem;color:#16a34a;">Newsletter</span>' : '';
+            var msgPreview = c.message ? escapeHtml(c.message.substring(0, 100)) + (c.message.length > 100 ? '...' : '') : '';
+
+            return '<div style="padding:10px 12px;border-bottom:1px solid #1e293b;border-left:3px solid #a78bfa;">'
+              + '<div style="display:flex;justify-content:space-between;align-items:center;">'
+              + '<strong style="color:#e2e8f0;font-size:0.88rem;">' + escapeHtml(c.nom || c.email) + '</strong>'
+              + '<span style="font-size:0.7rem;font-weight:600;color:'+statusColor+';background:'+statusColor+'20;padding:2px 8px;border-radius:4px;">'+statusLabel+'</span>'
+              + '</div>'
+              + '<div style="font-size:0.82rem;color:#e2e8f0;margin-top:2px;">' + escapeHtml(c.email) + '</div>'
+              + '<div style="font-size:0.82rem;color:#94a3b8;margin-top:2px;">' + escapeHtml(subjectLabel) + '</div>'
+              + (msgPreview ? '<div style="font-size:0.78rem;color:#64748b;margin-top:4px;line-height:1.3;">' + msgPreview + '</div>' : '')
+              + '<div style="display:flex;gap:8px;align-items:center;margin-top:4px;flex-wrap:wrap;">'
+              + '<span style="font-size:0.72rem;color:#64748b;">' + d + '</span>'
+              + treatBadge + nlBadge
+              + '</div></div>';
+          }).join('');
+        }
+      } catch(e) {
+        console.log('Contacts load error:', e.message);
+        document.getElementById('contactsList').innerHTML = '<div class="feedback-empty" style="color:#64748b;">Erreur chargement contacts.</div>';
+      }
+    }
+
+    // Expose functions to global scope for onclick handlers
+    window.loadData = loadData;
+    window.loadConversation = loadConversation;
+    window.loadTawkConversation = loadTawkConversation;
+    window.filterConvs = filterConvs;
+    window.renderConvList = renderConvList;
+
+    // Auto-load
+    loadData();
+    // Auto-refresh every 30s
+    setInterval(loadData, 30000);
+  </script>
+</body>
+</html>

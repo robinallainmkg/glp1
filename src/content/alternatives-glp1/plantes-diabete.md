@@ -1,8 +1,8 @@
 ---
-title: "Plantes Diabète : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Plantes Diabète : informations médicales et recommandations d'experts."
-slug: "plantes-diabete"
+title: "Plantes Diabète Remèdes Naturels : Guide Glycémie 2026"
+description: "Plantes diabète remèdes naturels validés par la science pour contrôler la glycémie. Guide des plantes médicinales en complément médical GLP-1."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Plantes Diabète"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "plantes diabète remèdes naturels"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -98,7 +99,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 ## Conseils pratiques
 
 ### Mise en œuvre optimale
-- **Phase initiation** : Démarrage progressif supervisé
+- **Phase initiation** : Démarrage progressif supervisé — la [berbérine](/collections/alternatives-glp1/berberine-glp1/) est l'une des plantes les plus étudiées
 - **Surveillance** : Contrôles réguliers nécessaires
 - **Adaptation** : Personnalisation selon réponse
 - **Compliance** : Observance facteur clé succès
@@ -126,11 +127,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
-- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
-- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
+- [alternatives naturelles](/collections/alternatives-glp1/alternatives-naturelles-ozempic/) aux GLP-1
+- [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

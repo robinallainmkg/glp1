@@ -1,8 +1,8 @@
 ---
-title: "Alternatives Bio GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Alternatives Bio GLP-1 : informations médicales et recommandations d'experts."
-slug: "alternatives-bio-glp1"
+title: "Alternatives Bio GLP-1 : Guide Complet et Conseils 2026"
+description: "Alternatives bio aux GLP-1 — berbérine, cannelle, inositol — ce que la science dit sur les substituts naturels à Ozempic et Wegovy. Guide 2025."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Émilie Martin"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Alternatives Bio GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "alternatives bio GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -126,11 +127,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
-- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
-- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
+- [plantes anti-diabète](/collections/alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

@@ -1,0 +1,877 @@
+{
+  "test-doctor-123": {
+    "page_url": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Je n ai pas de m�decin, je suis dans le 75",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, je comprends que vous cherchez un médecin et que vous êtes dans le département 75. Je peux vous aider à trouver un spécialiste près de chez vous. Pouvez-vous me dire si vous recherchez un endocrinologue ou un diabétologue en particulier ? Il y a des Centres Spécialisés Obésité (CSO) et des hôpitaux parisiens comme l'Hôpital Pitié-Salpêtrière ou l'Hôpital Cochin qui ont des services de diabétologie. Je peux vous donner plus d'informations sur ces options si vous le souhaitez. Quel est votre objectif en consultant un médecin ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, je comprends que vous cherchez un médecin et que vous êtes dans le département 75. Pour trouver un spécialiste près de chez vous, je vous recommande de commencer par contacter votre médecin traitant pour une orientation spécialisée. Si vous n'avez pas de médecin traitant, vous pouvez également contacter les Centres Spécialisés Obésité (CSO) ou les hôpitaux parisiens tels que l'Hôpital Pitié-Salpêtrière ou l'Hôpital Cochin, qui ont des services de diabétologie. Vous pouvez également consulter notre article [Diabetologue Paris : Guide Complet et Conseils Pratiques 2025](/medecins-glp1-france/diabetologue-paris/) pour plus d'informations sur les diabétologues parisiens et leurs spécialités. Quel est votre objectif en consultant un médecin ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je n ai pas de m�decin, je suis dans le 75",
+        "model": null
+      }
+    ]
+  },
+  "test-doctor-456": {
+    "page_url": null,
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Pour trouver un médecin spécialisé dans le traitement avec Ozempic dans le département 69, je vous recommande de commencer par les Centres Spécialisés Obésité (CSO) ou les endocrinologues. Pouvez-vous me donner votre ville ou votre code postal pour que je puisse vous fournir des informations plus précises sur les médecins disponibles près de chez vous ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je cherche un m�decin pour Ozempic dans le 69",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je cherche un m�decin pour Ozempic dans le 69",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour trouver un médecin spécialisé dans le traitement avec Ozempic dans le département 69, je vous recommande de commencer par les Centres Spécialisés Obésité (CSO) ou les endocrinologues. Pouvez-vous me donner votre ville ou votre code postal pour que je puisse vous fournir des informations plus précises sur les médecins disponibles près de chez vous ? Vous pouvez également consulter un médecin nutritionniste ou un médecin généraliste formé pour discuter de votre traitement. \n\nJe vous invite à consulter notre article [Endocrinologue Pour Maigrir : Guide Complet et Conseils Pratiques 2025](/medecins-glp1-france/endocrinologue-pour-maigrir/) pour plus d'informations sur les spécialistes qui peuvent vous aider.",
+        "model": "llama-3.3-70b-versatile"
+      }
+    ]
+  },
+  "test-doc-v10-lyon": {
+    "page_url": null,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Je cherche un m�decin pour Ozempic dans le 69",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je comprends que vous cherchez un médecin pour obtenir un traitement avec Ozempic dans le département 69. Pouvez-vous me dire si vous avez déjà consulté un médecin généraliste ou si vous cherchez un spécialiste comme un endocrinologue ? Je peux vous aider à trouver des options dans votre région. Quel est votre code postal exact pour que je puisse vous donner des informations plus précises ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "69000",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je comprends que vous cherchez un médecin pour obtenir un traitement avec Ozempic dans le département 69, près de Lyon. Voici quelques options de médecins spécialisés dans l'obésité et le diabète qui pourraient vous aider :\n\n* **CSO HCL Lyon-Sud** 🏥 : Centre Spécialisé Obésité, 165 Chemin du Grand Revoyet, 69310 Pierre-Bénite, 📞 04 78 86 14 87\n* **Dr Emmanuel Disse** 👨‍⚕️ : Endocrinologue, HCL Lyon Sud, 165 Chemin du Grand Revoyet, 69310 Pierre-Bénite, 📞 04 78 86 14 87\n* **Dr Cyrielle Caussy** 👨‍⚕️ : Endocrinologue, HCL Lyon Sud, 165 Chemin du Grand Revoyet, 69310 Pierre-Bénite, 📞 04 78 86 14 87\n* **Centre Médical Nutrition Bellecour** 🏨 : Nutrition, 12 Place Bellecour, 69002 Lyon, 📞 04 78 42 18 90\n* **Service Diabétologie Hôpital Edouard Herriot** 🏨 : Diabétologie, 5 Place d'Arsonval, 69003 Lyon, 📞 04 72 11 02 18\n\nJe vous recommande de contacter ces médecins pour prendre rendez-vous et discuter de vos options de traitement avec Ozempic. N'oubliez pas de leur demander si ils ont de l'expérience avec les traitements GLP-1.",
+        "model": "llama-3.3-70b-versatile"
+      }
+    ]
+  },
+  "test-acheteuse_sans_medecin-1773899713495": {
+    "page_url": "/collections/glp1-cout/prix-ozempic-france/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bonjour je voudrais commander Ozempic pour perdre du poids. Combien ça coûte ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, merci de votre question. Avant de parler du coût, il est important de noter que Ozempic est actuellement indiqué pour le traitement du diabète de type 2 en France et non spécifiquement pour la perte de poids. Cependant, il peut avoir un effet bénéfique sur la perte de poids chez les patients diabétiques.\n\nLe coût d'Ozempic peut varier en fonction de votre situation médicale et de votre couverture d'assurance. Si vous avez un diabète de type 2, Ozempic peut être remboursé à 65% par la Sécurité Sociale, ce qui signifie que le coût mensuel après remboursement pourrait être d'environ 21-42€.\n\nIl est important de consulter un médecin pour discuter de votre situation spécifique et déterminer si Ozempic est adapté pour vous. Il pourra également vous aider à explorer d'autres options de traitement pour la perte de poids si nécessaire.\n\nPour plus d'informations sur le coût et les alternatives, vous pouvez consulter notre article [Prix Ozempic 2025 : Coût Complet par Dosage et Remboursement](/glp1-cout/prix-ozempic-france/). \n\nQuel est votre département ? Je pourrais vous aider à trouver un médecin spécialisé près de chez vous.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, le prix d'Ozempic peut varier en fonction de votre situation médicale et de votre couverture d'assurance. Si vous avez un diabète de type 2, Ozempic peut être remboursé à 65% par la Sécurité Sociale. Le coût mensuel après remboursement pourrait être d'environ **21-42€**.\n\nIl est important de consulter un médecin pour discuter de votre situation spécifique et déterminer si Ozempic est adapté pour vous. Pouvez-vous me dire quel est votre département ? Je pourrais vous aider à trouver un médecin spécialisé près de chez vous.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je voudrais Ozempic pour un mois, le prix svp",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je n'ai pas de médecin. Vous pouvez me recommander quelqu'un ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, je comprends que vous cherchez un médecin. Pour vous trouver un spécialiste près de chez vous, quel est votre département ou code postal ? Cela me permettra de vous donner des recommandations plus précises et personnalisées. Nous avons un annuaire de médecins spécialisés dans le traitement du diabète et de l'obésité, et je serais ravi de vous aider à trouver quelqu'un qui correspond à vos besoins.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je suis dans le 13, à Marseille",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-arnaque_gelules-1773899731741": {
+    "page_url": "/contact/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Je comprends que vous êtes inquiet. Pouvez-vous me dire sur quel site vous avez acheté ces gélules Ozempic et si vous avez reçu un numéro de suivi ou des informations sur l'expédition ? Il est important de savoir que les vrais médicaments GLP-1, comme Ozempic, ne sont disponibles qu'en pharmacie sur ordonnance en France. \n\nSi vous n'avez rien reçu, il est possible que cela soit une arnaque. Je vous conseille de contacter votre banque pour signaler la transaction suspecte et de conserver toutes les preuves de votre achat, comme les captures d'écran ou les emails échangés avec le vendeur. \n\nVous pouvez également signaler ce problème sur le site [signal.conso.gouv.fr](http://signal.conso.gouv.fr) pour aider à protéger d'autres personnes. Si vous avez des inquiétudes pour votre santé, je vous recommande de consulter un médecin. \n\nPour plus d'informations sur les dangers des contrefaçons GLP-1, vous pouvez consulter notre article : [Faux Ozempic et Contrefaçons GLP-1 : Dangers Réels et Comment les Éviter](/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/).",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "J'ai commandé des gélules Ozempic sur internet et j'ai rien reçu, c'est une arnaque ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "C'était sur le site elaraessence, j'ai payé 59 euros",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux me faire rembourser ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-acheteuse_sans_medecin-1773899748541": {
+    "page_url": "/collections/glp1-cout/prix-ozempic-france/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Bonjour, je comprends que vous cherchez à perdre du poids avec Ozempic. Cependant, il est important de noter que Ozempic est exclusivement indiqué pour le diabète de type 2 en France et ne doit pas être prescrit pour la perte de poids seule. \n\nSi vous êtes diabétique de type 2, le coût d'Ozempic peut varier, mais il est généralement remboursé à 65% par la Sécurité Sociale, ce qui laisse un coût mensuel d'environ 21-42€. \n\nPour la perte de poids, il existe d'autres options comme Wegovy, qui est spécifiquement indiqué pour l'obésité, mais son coût est plus élevé, autour de 169-360€ par mois, et il n'est pas remboursé.\n\nJe vous recommande de consulter un médecin pour discuter de vos options et déterminer le traitement le plus adapté à votre situation. Pouvez-vous me dire si vous avez déjà consulté un médecin à ce sujet ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Bonjour je voudrais commander Ozempic pour perdre du poids. Combien ça coûte ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je voudrais Ozempic pour un mois, le prix svp",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Je n'ai pas de médecin. Vous pouvez me recommander quelqu'un ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "GLP-1 France est un site d'information independant, nous ne vendons aucun produit.\n\nLes traitements GLP-1 injectables sont des medicaments sur ordonnance. Le parcours :\n1. Consultation medecin traitant ou endocrinologue\n2. Ordonnance si indique medicalement\n3. Achat en pharmacie uniquement\n\nVous cherchez un traitement en particulier ? Je peux vous informer.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Je suis dans le 13, à Marseille",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-arnaque_gelules-1773899760792": {
+    "page_url": "/contact/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Je suis désolé d'apprendre cela. Il est possible que vous ayez été victime d'une arnaque. Les médicaments GLP-1, comme Ozempic, ne sont disponibles que sur ordonnance et en pharmacie agréée en France. Les ventes en ligne sans ordonnance sont illégales et peuvent être dangereuses.\n\nPouvez-vous me dire où vous avez acheté ces gélules et si vous avez reçu un numéro de suivi ou des informations sur l'expédition ? Il est important de signaler cette arnaque pour protéger d'autres personnes. Vous pouvez également consulter le site [Faux Ozempic et Contrefaçons GLP-1 : Dangers Réels et Comment les Éviter](/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) pour plus d'informations.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "J'ai commandé des gélules Ozempic sur internet et j'ai rien reçu, c'est une arnaque ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "C'était sur le site elaraessence, j'ai payé 59 euros",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux me faire rembourser ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-enceinte_gelules-1773899769583": {
+    "page_url": "/contact/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bonjour, j'ai acheté des gélules GLP-1 sur Facebook et j'essaie de tomber enceinte, c'est dangereux ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "GLP-1 France est un site d'information independant, nous ne vendons aucun produit.\n\nLes traitements GLP-1 injectables sont des medicaments sur ordonnance. Le parcours :\n1. Consultation medecin traitant ou endocrinologue\n2. Ordonnance si indique medicalement\n3. Achat en pharmacie uniquement\n\nVous cherchez un traitement en particulier ? Je peux vous informer.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "C'est des gélules minceur Ozempic que j'ai prises pendant 2 semaines",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Est-ce que je dois voir un médecin ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Je suis dans le 75",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-diabetique_prix-1773899778371": {
+    "page_url": "/collections/glp1-cout/prix-ozempic-france/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Je suis diabétique type 2 et mon médecin veut me mettre sous Ozempic, combien ça coûte ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Est-ce que c'est remboursé par la sécu ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Ozempic est remboursé à 65% pour les diabétiques de type 2. Le prix est d'environ 59,90€ par stylo, ce qui laisse un reste à charge d'environ 21€ par mois. \n\nPour plus d'informations, vous pouvez consulter [Prix et Coût Détaillé de ce traitement GLP-1 en France 2025](/glp1-cout/operation-pour-maigrir-prix/).",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Merci ! Et Wegovy c'est pareil ?",
+        "model": null
+      }
+    ]
+  },
+  "test-perte_poids_stagnation-1773899785530": {
+    "page_url": "/traitements-glp1/guide-complet-ozempic/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bonjour, je suis sous Ozempic depuis 3 mois et j'ai perdu 5kg le premier mois mais depuis je stagne",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Je suis au dosage 0.5mg, est-ce que je dois augmenter ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Mon médecin est en vacances, je peux voir quelqu'un d'autre ? Je suis dans le 33",
+        "model": null
+      }
+    ]
+  },
+  "test-wegovy_remboursement-1773899792373": {
+    "page_url": "/collections/glp1-cout/prix-wegovy-france/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Bonjour, sur votre site vous parlez de remboursement pour Wegovy, c'est vrai ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Mon IMC est de 35, j'ai de l'hypertension, est-ce que je peux avoir Wegovy remboursé ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-stylo_injecteur-1773899796586": {
+    "page_url": "/traitements-glp1/guide-complet-ozempic/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mon stylo Ozempic est bloqué, je n'arrive pas à injecter",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Désolé d'entendre cela. Un stylo Ozempic bloqué peut être frustrant, surtout si vous avez besoin de votre traitement. Pouvez-vous me dire depuis combien de temps vous utilisez ce stylo et si vous avez déjà rencontré des problèmes avec lui ? Avez-vous suivi les instructions de conservation et de manipulation du stylo ? Il est important de vérifier si le problème vient du stylo lui-même ou si c'est lié à la technique d'injection. Vous pouvez également consulter le [Guide Complet Ozempic](/traitements-glp1/guide-complet-ozempic/) pour vérifier les instructions d'utilisation. Il serait également recommandé de contacter votre médecin ou un professionnel de santé pour obtenir des conseils spécifiques sur la façon de procéder.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Oui l'aiguille est neuve, mais quand j'appuie sur le bouton rien ne sort",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Merci, je vais essayer. Sinon je contacte qui ?",
+        "model": null
+      }
+    ]
+  },
+  "test-mounjaro_dispo-1773899804037": {
+    "page_url": "/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Est-ce que Mounjaro est disponible en France ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux l'obtenir ? C'est cher ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je suis à Lille, il y a des spécialistes qui le prescrivent ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour te trouver un spécialiste près de chez toi à Lille, je peux te proposer quelques options. Il y a des centres spécialisés dans l'obésité et le diabète qui pourraient t'aider. \n\nAs-tu déjà un médecin traitant qui pourrait t'orienter vers un spécialiste ? Sinon, je peux te donner quelques noms de diabétologues ou d'endocrinologues à Lille qui pourraient être compétents pour discuter de traitements GLP-1 comme Mounjaro. \n\nQu'est-ce que tu préfères ?",
+        "model": "llama-3.3-70b-versatile"
+      }
+    ]
+  },
+  "test-info_generale-1773899811247": {
+    "page_url": "/qu-est-ce-que-glp1/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "C'est quoi exactement les GLP-1 ? C'est comme un régime ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines\n🍽️ Aliments faciles a digerer\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nL'accompagnement par un dieteticien est recommande.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Est-ce qu'on peut en acheter sans ordonnance ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "GLP-1 France est un site d'information independant, nous ne vendons aucun produit.\n\nLes traitements GLP-1 injectables sont des medicaments sur ordonnance. Le parcours :\n1. Consultation medecin traitant ou endocrinologue\n2. Ordonnance si indique medicalement\n3. Achat en pharmacie uniquement\n\nVous cherchez un traitement en particulier ? Je peux vous informer.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "D'accord, et ça fait perdre combien de kilos en moyenne ?",
+        "model": null
+      }
+    ]
+  },
+  "test-effets_secondaires-1773899818389": {
+    "page_url": "/effets-secondaires-glp1/effets-secondaires-ozempic/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "J'ai commencé Ozempic il y a une semaine et j'ai très mal au ventre avec des nausées, c'est normal ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Ça dure combien de temps les nausées ? Je n'arrive presque plus à manger",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Si ça ne passe pas, je dois aller aux urgences ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Les nausées et les vomissements sont des effets secondaires fréquents lors du début d'un traitement GLP-1 comme l'Ozempic. Ils apparaissent généralement les premiers jours et diminuent souvent après 1-2 semaines. \n\nCependant, si vous avez des vomissements incoercibles, de la douleur abdominale intense, des signes de déshydratation ou une altération de votre état général, il est recommandé de contacter votre médecin en urgence. \n\nSi vous ressentez des symptômes graves tels que des douleurs abdominales sévères, des vomissements persistants, ou des signes de déshydratation, appelez le 15 (SAMU) pour obtenir de l'aide médicale immédiate. \n\nIl est important de discuter de ces effets secondaires avec votre médecin pour ajuster votre traitement si nécessaire et assurer un suivi approprié. \n\nVous pouvez trouver plus d'informations sur les effets secondaires des traitements GLP-1 et les conduites à tenir sur notre site, notamment dans les articles [Effets Secondaires Zepbound : Guide Complet et Gestion 2025](/effets-secondaires-glp1/effets-secondaires-zepbound/) et [Guide Complet Ozempic 2025 : Tout Savoir](/effets-secondaires-glp1/ozempic-danger/).",
+        "model": "llama-3.3-70b-versatile"
+      }
+    ]
+  },
+  "test-acheteuse_sans_medecin-1773900089998": {
+    "page_url": "/collections/glp1-cout/prix-ozempic-france/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bonjour je voudrais commander Ozempic pour perdre du poids. Combien ça coûte ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, merci de votre question. Avant de parler du coût, il est important de noter que Ozempic est exclusivement indiqué pour le diabète de type 2 en France et ne doit pas être prescrit pour la perte de poids seule. Cependant, si vous êtes diabétique de type 2, le coût d'Ozempic peut varier. Le prix approximatif est de 59,90€-119,80€ par mois, mais il est remboursé à 65% par la Sécurité Sociale pour les patients diabétiques de type 2, ce qui réduit le coût à environ 21-42€ par mois. \n\nSi vous cherchez un traitement spécifiquement pour l'obésité, il existe d'autres options comme Wegovy, qui contient la même molécule qu'Ozempic mais à une dose plus élevée et est spécifiquement indiqué pour la gestion du poids. Il est important de consulter un médecin pour discuter de vos options et déterminer le traitement le plus approprié pour votre situation. Pouvez-vous me dire si vous avez déjà consulté un médecin à ce sujet ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je voudrais Ozempic pour un mois, le prix svp",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Le prix d'Ozempic peut varier en fonction de votre situation et du dosage prescrit. Pour le diabète de type 2, le prix approximatif est de 59,90€-119,80€ par mois, mais il est remboursé à 65% par la Sécurité Sociale, ce qui réduit le coût à environ 21-42€ par mois. \n\nCependant, si vous cherchez à utiliser Ozempic spécifiquement pour la perte de poids et que vous n'avez pas de diabète de type 2, il est important de noter que Ozempic n'est pas remboursé pour cette indication en France. Dans ce cas, vous pourriez considérer d'autres options comme Wegovy ou Mounjaro, mais ceux-ci sont non remboursés et leurs prix sont respectivement de 169-360€ et 230-440€ par mois.\n\nIl est crucial de consulter un médecin pour déterminer la meilleure option pour votre situation spécifique et pour obtenir une ordonnance si nécessaire. Pouvez-vous me dire si vous avez déjà consulté un médecin à ce sujet ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Pour te trouver un spécialiste près de chez toi, quel est ton département ou code postal ? Cela me permettra de te donner des recommandations plus ciblées et de t'orienter vers des professionnels de santé compétents dans le domaine des GLP-1 et de l'obésité.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je n'ai pas de médecin. Vous pouvez me recommander quelqu'un ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Je suis dans le 13, à Marseille",
+        "model": null
+      }
+    ]
+  },
+  "test-arnaque_gelules-1773900199187": {
+    "page_url": "/contact/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "J'ai commandé des gélules Ozempic sur internet et j'ai rien reçu, c'est une arnaque ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Désolé d'apprendre cela. Pour comprendre la situation, pouvez-vous me dire combien vous avez payé pour ces gélules et sur quel site vous les avez commandées ? Et avez-vous reçu un numéro de suivi ou des informations sur l'expédition ? [Faux Ozempic et Contrefaçons GLP-1 : Dangers Réels et Comment les Éviter](/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/)",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Désolé d'apprendre cela. Il semblerait que vous ayez été victime d'une arnaque. Les médicaments GLP-1, comme l'Ozempic, ne sont disponibles qu'en pharmacie sur ordonnance en France et leur prix est bien supérieur à 59 euros. Je vous conseille de signaler cette arnaque sur le site [signal.conso.gouv.fr](http://signal.conso.gouv.fr) et de faire une pré-plainte en ligne sur [pre-plainte-en-ligne.gouv.fr](http://pre-plainte-en-ligne.gouv.fr). Il est important de être vigilant lors de l'achat de médicaments en ligne. Si vous avez des questions sur les GLP-1 ou les alternatives, je suis là pour vous aider. Vous pouvez également consulter notre article sur les [alternatives GLP-1](/alternatives-glp1/phytotherapie-glp1/) pour plus d'informations.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "C'était sur le site elaraessence, j'ai payé 59 euros",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Désolé d'apprendre que vous avez été victime d'une arnaque. Pour obtenir un remboursement légal pour un traitement GLP-1, il est essentiel de passer par un médecin prescripteur. Vous pouvez consulter notre article [Remboursement GLP-1 2026 : Guide Complet par Médicament et Mutuelle](/glp1-cout/remboursement-glp1-2026/) pour plus d'informations sur les démarches à suivre. Il est important de noter que les médicaments GLP-1, comme l'Ozempic, ne sont disponibles qu'en pharmacie sur ordonnance en France. Pour trouver un médecin prescripteur près de chez vous, je vous invite à me donner votre département ou code postal.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux me faire rembourser ?",
+        "model": null
+      }
+    ]
+  },
+  "test-enceinte_gelules-1773900307220": {
+    "page_url": "/contact/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bonjour, j'ai acheté des gélules GLP-1 sur Facebook et j'essaie de tomber enceinte, c'est dangereux ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, je suis là pour vous aider. Tout d'abord, je tiens à vous informer que les vrais médicaments GLP-1, comme Ozempic ou Wegovy, ne sont disponibles qu'en pharmacie sur ordonnance en France. Les gélules que vous avez achetées sur Facebook sont probablement des produits douteux.\n\nEn ce qui concerne la grossesse, il est important de savoir que les médicaments GLP-1 sont contre-indiqués pendant la grossesse et l'allaitement. Si vous êtes en âge de procréer et que vous prenez un médicament GLP-1, il est recommandé d'utiliser une contraception efficace pendant le traitement.\n\nCependant, comme vous avez acheté des gélules sur Facebook, je ne sais pas exactement ce que vous avez pris. Je vous conseille de contacter un médecin pour discuter de votre situation et de la sécurité de votre grossesse. Il est également important de signaler cet achat à signal.conso.gouv.fr pour prévenir d'autres personnes.\n\nPour en savoir plus sur les GLP-1 et la grossesse, vous pouvez consulter notre article [GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions à Connaître](/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/). Mais surtout, je vous encourage à consulter un médecin pour obtenir des conseils personnalisés et sécurisés.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "C'est des gélules minceur Ozempic que j'ai prises pendant 2 semaines",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je comprends que vous avez pris des gélules minceur que vous croyez être de l'Ozempic pendant 2 semaines. Tout d'abord, je tiens à vous informer que les vrais médicaments GLP-1, comme Ozempic, ne sont disponibles qu'en pharmacie sur ordonnance en France et sous forme d'injection, pas de gélules.\n\nÉtant donné que vous souhaitez tomber enceinte, il est important de savoir que les médicaments GLP-1, s'ils sont pris sous leur forme authentique et sous surveillance médicale, nécessitent des précautions particulières pendant la grossesse. Cependant, comme vous avez acheté des gélules sur Facebook, je ne sais pas exactement ce que vous avez pris.\n\nJe vous conseille vivement de contacter un médecin pour discuter de votre situation et de la sécurité de votre grossesse. Il est également important de signaler cet achat à signal.conso.gouv.fr pour prévenir d'autres personnes. Pour plus d'informations sur les GLP-1 et la grossesse, vous pouvez consulter notre article [GLP-1 et Grossesse : Fertilité, Bébés Ozempic et Précautions à Connaître](/effets-secondaires-glp1/glp1-grossesse-fertilite-bebes-ozempic/). Mais surtout, je vous encourage à consulter un médecin pour obtenir des conseils personnalisés et sécurisés.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Est-ce que je dois voir un médecin ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Oui, il est fortement recommandé de consulter un médecin, notamment un endocrinologue, pour discuter de votre situation et de la sécurité de votre grossesse. Les médicaments GLP-1, s'ils sont pris sous leur forme authentique et sous surveillance médicale, nécessitent des précautions particulières pendant la grossesse.\n\nPour te trouver un spécialiste près de chez toi, quel est ton département ou code postal ? Je peux ainsi t'aider à trouver un endocrinologue ou un centre spécialisé dans l'obésité qui pourra te fournir des conseils personnalisés et sécurisés.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je suis dans le 75",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-diabetique_prix-1773900416633": {
+    "page_url": "/collections/glp1-cout/prix-ozempic-france/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Bonjour, je suis là pour t'aider. Pour le traitement d'Ozempic, le coût approximatif est de 77 EUR par mois, mais il est remboursé à 65% pour les diabétiques de type 2, ce qui te laisserait environ 21-42 EUR par mois à payer. Cependant, je te recommande de vérifier les détails avec ton médecin ou ta pharmacie pour avoir les informations les plus précises et à jour. Et si tu as besoin de trouver un spécialiste près de chez toi, quel est ton département ou code postal ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Je suis diabétique type 2 et mon médecin veut me mettre sous Ozempic, combien ça coûte ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, en tant que diabétique de type 2, le traitement avec Ozempic est remboursé à 65% par la Sécurité Sociale. Cela signifie que le coût mensuel d'environ 59,90€ pour un stylo d'Ozempic serait remboursé à hauteur de 65%, laissant un reste à charge d'environ 21€ par mois. Il est important de vérifier ces détails avec ton médecin ou ta pharmacie pour avoir les informations les plus précises et à jour. [Prix et Coût Détaillé de ce traitement GLP-1 en France 2025](/glp1-cout/operation-pour-maigrir-prix/) pour plus d'informations.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Est-ce que c'est remboursé par la sécu ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Merci ! Et Wegovy c'est pareil ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale pour le traitement de l'obésité. Il est spécifiquement indiqué pour la prise en charge de l'obésité (IMC ≥ 30) ou du surpoids (IMC ≥ 27) avec au moins une comorbidité associée, mais son coût est actuellement à la charge du patient. Le coût approximatif de Wegovy est d'environ 300 EUR par mois. Pour plus d'informations, tu peux consulter le [Guide Complet Wegovy : Prix, Effets Secondaires et Posologie](/traitements-glp1/guide-complet-wegovy/). Il est important de discuter de ces détails avec ton médecin pour comprendre les options disponibles pour toi.",
+        "model": "llama-3.3-70b-versatile"
+      }
+    ]
+  },
+  "test-perte_poids_stagnation-1773900523610": {
+    "page_url": "/traitements-glp1/guide-complet-ozempic/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Bonjour, félicitations pour vos 5kg de perte de poids ! La stagnation après une perte initiale est courante. Pour mieux comprendre, pouvez-vous me dire si vous avez modifié votre régime alimentaire ou votre activité physique depuis que vous avez commencé le traitement ? Et avez-vous discuté de cette stagnation avec votre médecin ? [Guide Complet Ozempic : Prix, Effets Secondaires et Posologie](/traitements-glp1/guide-complet-ozempic/) pourrait vous aider à mieux comprendre les facteurs influençant votre perte de poids.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Bonjour, je suis sous Ozempic depuis 3 mois et j'ai perdu 5kg le premier mois mais depuis je stagne",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je suis au dosage 0.5mg, est-ce que je dois augmenter ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, pour déterminer si vous devez augmenter votre dosage de Mounjaro, il est essentiel de consulter votre médecin. Le protocole standard de titration recommande d'augmenter le dosage tous les 4 semaines, mais cela peut varier en fonction de votre tolérance et de vos résultats. Si vous éprouvez des effets secondaires digestifs persistants ou si vous avez atteint vos objectifs à un palier inférieur, votre médecin peut décider de maintenir le dosage actuel. Vous pouvez trouver plus d'informations sur le [Mounjaro Dosage : Guide Complet des Posologies et Titration 2026](/traitements-glp1/mounjaro-dosage/). Quels sont vos effets secondaires actuels et quels sont vos objectifs de traitement ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, je comprends que vous cherchez un médecin pour une consultation urgente pendant les vacances de votre médecin traitant. Dans le département 33, Gironde, voici quelques options pour vous :\n\n🏥 **CSO CHU Bordeaux Haut-Lévêque** — Centre Spécialisé Obésité (CHU Bordeaux - Haut-Lévêque)\n  📍 Pessac | 📞 05 57 65 64 39\n  Avenue de Magellan, 33600 Pessac\n  ℹ️ Centre de référence obésité Aquitaine.\n\n🏨 **Service Endocrinologie Saint-André** — Endocrinologie (CHU Bordeaux - Saint-André)\n  📍 Bordeaux | 📞 05 56 79 58 14\n  1 Rue Jean Burguet, 33000 Bordeaux\n  ℹ️ Service endocrinologie-diabétologie-nutrition.\n\n👨‍⚕️ **Dr Anne-Sophie Romain** — Endocrinologie (Cabinet libéral)\n  📍 Mérignac | 📞 05 56 97 18 20\n  12 Avenue de la Libération, 33700 Mérignac\n  ℹ️ Endocrinologue, suivi diabète et obésité.\n\n👨‍⚕️ **Dr Blandine Gatta-Cherifi** — Endocrinologie-Nutrition (CHU Bordeaux)\n  📍 Pessac | 📞 05 57 65 64 39\n  Avenue de Magellan, 33600 Pessac\n  ℹ️ Spécialiste obésité, prescripteur GLP-1.\n\n👨‍⚕️ **Dr Stéphanie Ranc** — Nutrition (Cabinet libéral)\n  📍 Bordeaux | 📞 05 56 44 28 90\n  45 Cours du Médoc, 33000 Bordeaux\n  ℹ️ Médecin nutritionniste, suivi traitements GLP-1.\n\nJe vous conseille de contacter ces médecins pour savoir s'ils ont des créneaux disponibles et si ils peuvent vous aider pour votre situation spécifique. N'oubliez pas de leur fournir vos informations médicales pour une évaluation appropriée.",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Mon médecin est en vacances, je peux voir quelqu'un d'autre ? Je suis dans le 33",
+        "model": null
+      }
+    ]
+  },
+  "test-wegovy_remboursement-1773900631783": {
+    "page_url": "/collections/glp1-cout/prix-wegovy-france/",
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "Bonjour, merci de nous contacter. Oui, nous avons des informations sur le remboursement de Wegovy en France. Actuellement, Wegovy n'est pas remboursé par la Sécurité Sociale, mais certaines mutuelles proposent une prise en charge partielle. Vous pouvez trouver plus d'informations sur notre site, notamment dans les articles [Prix Wegovy 2026 : Coût par Dosage et Remboursement en France](/glp1-cout/prix-wegovy-france/) et [Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?](/glp1-cout/wegovy-remboursement-mutuelle/). Pouvez-vous me dire ce que vous cherchez exactement ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Bonjour, sur votre site vous parlez de remboursement pour Wegovy, c'est vrai ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Mon IMC est de 35, j'ai de l'hypertension, est-ce que je peux avoir Wegovy remboursé ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Bonjour, merci de nous contacter. Actuellement, Wegovy n'est pas remboursé par la Sécurité Sociale en France pour l'indication perte de poids, même avec un IMC de 35 et des comorbidités comme l'hypertension. Cependant, certaines mutuelles proposent une prise en charge partielle. Je vous recommande de consulter un spécialiste (endocrinologue, diabétologue ou médecin nutritionniste) pour discuter de votre situation et des options de traitement disponibles. Vous pouvez également trouver plus d'informations sur notre site, notamment dans l'article [Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?](/glp1-cout/wegovy-remboursement-mutuelle/). Quel est votre département ? Je pourrais vous aider à trouver un spécialiste près de chez vous.",
+        "model": "llama-3.3-70b-versatile"
+      }
+    ]
+  },
+  "test-stylo_injecteur-1773900732651": {
+    "page_url": "/traitements-glp1/guide-complet-ozempic/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mon stylo Ozempic est bloqué, je n'arrive pas à injecter",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Désolé d'entendre cela. Un stylo Ozempic bloqué peut être frustrant. Avant de prendre toute mesure, je vous conseille de contacter votre pharmacie ou votre médecin pour obtenir des conseils spécifiques. Ils pourront vous aider à résoudre le problème ou vous fournir un nouveau stylo si nécessaire. Vous pouvez également consulter le [Guide Complet Ozempic : Prix, Effets Secondaires et Posologie](/traitements-glp1/guide-complet-ozempic/) pour plus d'informations sur l'utilisation et la manipulation du stylo. Qu'est-ce que vous avez déjà essayé pour débloquer le stylo ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "user",
+        "content": "Oui l'aiguille est neuve, mais quand j'appuie sur le bouton rien ne sort",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je comprends que vous avez un stylo Ozempic bloqué et que l'aiguille est neuve, mais rien ne sort lorsque vous appuyez sur le bouton. Avant de prendre toute mesure, je vous conseille de contacter votre pharmacie ou votre médecin pour obtenir des conseils spécifiques. Ils pourront vous aider à résoudre le problème ou vous fournir un nouveau stylo si nécessaire. Vous pouvez également consulter le [Guide Complet Ozempic](/traitements-glp1/guide-complet-ozempic/) pour plus d'informations sur l'utilisation et la manipulation du stylo. Qu'est-ce que vous avez déjà essayé pour débloquer le stylo ?",
+        "model": "llama-3.3-70b-versatile"
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Merci, je vais essayer. Sinon je contacte qui ?",
+        "model": null
+      }
+    ]
+  },
+  "test-mounjaro_dispo-1773901179906": {
+    "page_url": "/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Est-ce que Mounjaro est disponible en France ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux l'obtenir ? C'est cher ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Je suis à Lille, il y a des spécialistes qui le prescrivent ?",
+        "model": null
+      }
+    ]
+  },
+  "test-mounjaro_dispo-1773901205648": {
+    "page_url": "/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Est-ce que Mounjaro est disponible en France ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux l'obtenir ? C'est cher ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je suis à Lille, il y a des spécialistes qui le prescrivent ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?",
+        "model": "fallback-v1"
+      }
+    ]
+  },
+  "test-mounjaro_dispo-1773901238075": {
+    "page_url": "/",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Est-ce que Mounjaro est disponible en France ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "assistant",
+        "content": "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2.",
+        "model": "fallback-v1"
+      },
+      {
+        "role": "user",
+        "content": "Comment je peux l'obtenir ? C'est cher ?",
+        "model": null
+      },
+      {
+        "role": "user",
+        "content": "Je suis à Lille, il y a des spécialistes qui le prescrivent ?",
+        "model": null
+      },
+      {
+        "role": "assistant",
+        "content": "Pour obtenir un traitement GLP-1, il faut une ordonnance medicale. Le parcours :\n\n1. 🏥 Consultation — Medecin traitant, endocrinologue, ou CSO\n2. 🔬 Bilan — Poids, IMC, analyses sanguines\n3. 📋 Ordonnance — Si le medecin juge le traitement indique\n4. 💊 Pharmacie — Retrait du medicament\n\nJe peux vous orienter vers des specialistes pres de chez vous ! Quel est votre departement ou code postal ?",
+        "model": "fallback-v1"
+      }
+    ]
+  }
+}

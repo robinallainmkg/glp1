@@ -1,7 +1,4 @@
 ---
-// src/pages/admin/fact-check.astro
-// Dashboard Fact-Check — Client-side rendering (Hostinger static)
-// Design: glp1-dashboard-v2.html reference
 import AdminNav from '../../components/AdminNav.astro';
 import { supabaseConfig } from '../../lib/supabase';
 ---
@@ -10,884 +7,877 @@ import { supabaseConfig } from '../../lib/supabase';
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fact-Check - GLP1 Admin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style is:inline>
-    :root {
-      --bg: #f7f5f2;
-      --surface: #ffffff;
-      --surface2: #f0ede8;
-      --surface3: #e8e4dd;
-      --border: #e2ddd6;
-      --border2: #d0c9be;
-      --text: #18150f;
-      --text2: #3d3830;
-      --muted: #7a7268;
-      --urgent: #b83030;
-      --urgent-light: #fdf2f2;
-      --urgent-border: #edc0c0;
-      --warning: #9a6200;
-      --warning-light: #fdf8ee;
-      --warning-border: #e8d090;
-      --ok: #1e6e3a;
-      --ok-light: #f0faf4;
-      --ok-border: #a8dab8;
-      --blue: #1a3f7a;
-      --blue-light: #eef3fc;
-      --blue-border: #a8c0e8;
-      --purple: #5a3a8a;
-      --purple-light: #f5f0fc;
-      --purple-border: #c8a8e8;
-    }
-
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
+    .main { padding: 2rem; }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Bricolage Grotesque', sans-serif;
-      min-height: 100vh;
-      font-size: 14px;
-    }
+    /* Command box */
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .cmd-box code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; color: #a5f3fc; }
+    .cmd-box .copy-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #334155; background: transparent; color: #94a3b8; font-size: 0.72rem; cursor: pointer; }
+    .cmd-box .copy-btn:hover { background: #334155; color: white; }
 
-    .admin-layout { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+    /* Goal tracker */
+    .goal-tracker { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .goal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .goal-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+    .goal-subtitle { font-size: 0.78rem; color: #64748b; }
+    .goal-pct { font-size: 2.5rem; font-weight: 900; line-height: 1; }
+    .goal-pct-label { font-size: 0.72rem; color: #64748b; margin-top: 0.25rem; }
+    .goal-bar-wrap { background: #1e293b; border-radius: 10px; height: 24px; overflow: hidden; margin-bottom: 0.75rem; position: relative; }
+    .goal-bar-fill { height: 100%; border-radius: 10px; transition: width 0.6s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; font-size: 0.68rem; font-weight: 700; color: white; }
+    .goal-bar-target { position: absolute; top: 0; bottom: 0; width: 2px; background: white; opacity: 0.5; }
+    .goal-bar-target::after { content: attr(data-label); position: absolute; top: -16px; left: 50%; transform: translateX(-50%); font-size: 0.6rem; color: #94a3b8; white-space: nowrap; }
+    .goal-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .goal-detail { text-align: center; padding: 0.75rem; background: #0f1520; border-radius: 8px; }
+    .goal-detail .gd-value { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+    .goal-detail .gd-label { font-size: 0.68rem; color: #64748b; margin-top: 0.35rem; }
+    .goal-detail .gd-pct { font-size: 0.72rem; font-weight: 600; margin-top: 0.15rem; }
 
-    /* Topbar */
-    .topbar {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 0 32px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
-      position: sticky;
-      top: 0;
-      z-index: 40;
-    }
-    .topbar-left { display: flex; align-items: center; gap: 16px; }
-    .page-title { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; }
-    .topbar-meta {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-      padding: 3px 8px;
-      background: var(--surface2);
-      border-radius: 4px;
-    }
-    .topbar-actions { display: flex; gap: 8px; }
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
 
-    /* Buttons */
-    .btn {
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 7px 14px;
-      border-radius: 7px;
-      cursor: pointer;
-      border: none;
-      transition: all 0.15s;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
-    .btn:active:not(:disabled) { transform: scale(0.97); }
-    .btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
-    .btn-ghost:hover:not(:disabled) { border-color: var(--text); color: var(--text); }
-    .btn-primary { background: var(--text); color: #fff; }
-    .btn-primary:hover:not(:disabled) { opacity: 0.85; }
-    .btn-ok { background: var(--ok-light); border: 1px solid var(--ok-border); color: var(--ok); }
-    .btn-ok:hover:not(:disabled) { background: var(--ok); color: white; }
-    .btn-danger { background: var(--urgent-light); border: 1px solid var(--urgent-border); color: var(--urgent); }
-    .btn-danger:hover:not(:disabled) { background: var(--urgent); color: white; }
-    .btn-purple { background: var(--purple-light); border: 1px solid var(--purple-border); color: var(--purple); }
-    .btn-purple:hover:not(:disabled) { background: var(--purple); color: white; }
+    /* Score distribution */
+    .score-distrib { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .score-distrib-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; }
+    .score-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; }
+    .score-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
+    .seg-urgent { background: #ef4444; }
+    .seg-warn { background: #f59e0b; }
+    .seg-ok { background: #22c55e; }
+    .score-legend { display: flex; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
 
-    /* Content */
-    .content { padding: 28px 32px; overflow-y: auto; flex: 1; }
+    /* Coverage section */
+    .coverage-section { background: #111827; border-radius: 12px; border: 1px solid #1e293b; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .coverage-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; }
+    .freshness-bar { display: flex; height: 32px; border-radius: 8px; overflow: hidden; background: #1e293b; margin-bottom: 0.5rem; }
+    .fresh-seg { display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: white; transition: width 0.5s; }
+    .fseg-fresh { background: #22c55e; }
+    .fseg-aging { background: #f59e0b; }
+    .fseg-stale { background: #ef4444; }
+    .fseg-never { background: #64748b; }
+    .freshness-legend { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .freshness-legend .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: #94a3b8; }
+    .stale-list { margin-top: 1rem; }
+    .stale-list-title { font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
+    .stale-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0.75rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; transition: background 0.1s; }
+    .stale-item:hover { background: #1a2332; }
+    .stale-item:last-child { border-bottom: none; }
+    .stale-slug { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #a78bfa; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .stale-slug a { color: #a78bfa; text-decoration: none; }
+    .stale-slug a:hover { color: #c4b5fd; text-decoration: underline; }
+    .stale-collection { font-size: 0.65rem; padding: 1px 6px; border-radius: 8px; background: #1e293b; color: #94a3b8; flex-shrink: 0; }
+    .stale-days { font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; flex-shrink: 0; }
+    .sd-stale { background: #450a0a; color: #fca5a5; }
+    .sd-aging { background: #451a03; color: #fcd34d; }
+    .sd-never { background: #1e293b; color: #94a3b8; }
+    .stale-link { font-size: 0.68rem; color: #3b82f6; text-decoration: none; flex-shrink: 0; }
+    .stale-link:hover { text-decoration: underline; }
 
-    /* Stats grid */
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
-    .stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 18px;
-    }
-    .stat-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .stat-value { font-size: 30px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
-    .stat-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
-    .stat-urgent { border-color: var(--urgent-border); }
-    .stat-urgent .stat-value { color: var(--urgent); }
+    /* Filters */
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; font-weight: 500; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+    .filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+    .filter-sep { width: 1px; height: 20px; background: #1e293b; margin: 0 0.25rem; }
+    .filter-select { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #94a3b8; font-size: 0.78rem; cursor: pointer; appearance: none; padding-right: 1.5rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
+    .filter-select:focus { outline: none; border-color: #3b82f6; }
+    .search-input { padding: 0.4rem 0.85rem; border-radius: 20px; border: 1px solid #1e293b; background: #111827; color: #e2e8f0; font-size: 0.78rem; width: 220px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
 
-    /* Section */
-    .section-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      margin-top: 8px;
-    }
-    .section-title { font-size: 13px; font-weight: 700; }
-    .section-sub { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+    /* Article cards */
+    .article-cards { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .article-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; }
+    .article-card-header { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; cursor: pointer; transition: background 0.1s; }
+    .article-card-header:hover { background: #1a2332; }
+    .article-card.open .article-card-header { border-bottom: 1px solid #1e293b; }
 
-    /* Article group */
-    .article-group {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      margin-bottom: 16px;
-      overflow: hidden;
-    }
-    .article-group-header {
-      display: flex;
-      align-items: center;
-      padding: 14px 18px;
-      gap: 12px;
-      cursor: pointer;
-      transition: background 0.1s;
-    }
-    .article-group-header:hover { background: var(--surface2); }
-    .article-info { flex: 1; }
-    .article-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
-    .article-slug {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-    }
-    .score-bar-wrap { display: flex; align-items: center; gap: 10px; }
-    .score-bar { width: 80px; height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
-    .score-fill { height: 100%; border-radius: 3px; }
-    .score-badge {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 6px;
-    }
-    .article-meta {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--muted);
-    }
-    .chevron { font-size: 11px; color: var(--muted); transition: transform 0.2s; }
-    .article-group.open .chevron { transform: rotate(180deg); }
-    .tickets-list { display: none; padding: 0 18px 18px; }
-    .article-group.open .tickets-list { display: flex; flex-direction: column; gap: 10px; }
+    .score-circle { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.82rem; flex-shrink: 0; }
+    .sc-urgent { background: #450a0a; color: #f87171; border: 2px solid #7f1d1d; }
+    .sc-warn { background: #451a03; color: #fbbf24; border: 2px solid #78350f; }
+    .sc-ok { background: #052e16; color: #4ade80; border: 2px solid #166534; }
 
-    /* Ticket */
-    .ticket {
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .ticket-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 11px 14px;
-      background: var(--surface2);
-      border-bottom: 1px solid var(--border);
-    }
+    .article-info { flex: 1; min-width: 0; }
+    .article-title-row { display: flex; align-items: center; gap: 0.5rem; }
+    .article-title { font-size: 0.88rem; font-weight: 600; color: #e2e8f0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .article-link { font-size: 0.68rem; color: #3b82f6; text-decoration: none; flex-shrink: 0; opacity: 0; transition: opacity 0.15s; }
+    .article-card-header:hover .article-link { opacity: 1; }
+    .article-link:hover { text-decoration: underline; }
+    .article-slug-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; }
+    .article-slug { font-family: 'SF Mono', 'Fira Code', monospace; color: #a78bfa; }
+    .article-slug a { color: #a78bfa; text-decoration: none; }
+    .article-slug a:hover { color: #c4b5fd; text-decoration: underline; }
+    .article-collection-badge { font-size: 0.62rem; padding: 1px 6px; border-radius: 8px; background: #1e293b; color: #94a3b8; }
+    .article-date { color: #475569; }
+    .article-meta { display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0; }
+    .ticket-count-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600; }
+    .tcb-urgent { background: #450a0a; color: #fca5a5; }
+    .tcb-warn { background: #451a03; color: #fcd34d; }
+    .tcb-ok { background: #052e16; color: #86efac; }
+    .freshness-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.65rem; font-weight: 600; }
+    .fb-fresh { background: #052e16; color: #86efac; }
+    .fb-aging { background: #451a03; color: #fcd34d; }
+    .fb-stale { background: #450a0a; color: #fca5a5; }
+    .chevron { font-size: 0.72rem; color: #64748b; transition: transform 0.2s; flex-shrink: 0; }
+    .article-card.open .chevron { transform: rotate(180deg); }
+
+    .article-card-body { display: none; padding: 0 1.25rem 1.25rem; }
+    .article-card.open .article-card-body { display: block; }
+
+    .article-summary { display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid #1e293b; margin-bottom: 0.5rem; flex-wrap: wrap; }
+    .article-summary-item { font-size: 0.75rem; color: #94a3b8; }
+    .article-summary-item strong { color: #e2e8f0; }
+    .article-summary-link { font-size: 0.75rem; color: #3b82f6; text-decoration: none; margin-left: auto; }
+    .article-summary-link:hover { text-decoration: underline; }
+
+    /* Tickets within article */
+    .ticket { border: 1px solid #1e293b; border-radius: 10px; margin-top: 0.75rem; overflow: hidden; }
+    .ticket-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; background: #0f1520; border-bottom: 1px solid #1e293b; flex-wrap: wrap; }
     .urgence-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-    .urgence-dot.urgent { background: var(--urgent); }
-    .urgence-dot.warning { background: var(--warning); }
-    .urgence-dot.ok { background: var(--ok); }
-    .ticket-type-badge {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      padding: 2px 7px;
-      border-radius: 4px;
-    }
-    .type-urgent { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
-    .type-warning { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
-    .type-ok { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
-    .ticket-desc { font-size: 12px; font-weight: 600; color: var(--text2); flex: 1; }
-    .ticket-status {
-      margin-left: auto;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      padding: 2px 7px;
-      border-radius: 4px;
-      flex-shrink: 0;
-    }
-    .status-pending { background: var(--surface3); color: var(--muted); border: 1px solid var(--border2); }
-    .status-approved { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
-    .status-rejected { background: var(--urgent-light); color: var(--urgent); border: 1px solid var(--urgent-border); }
-    .status-ready { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
-    .status-deployed { background: var(--ok-light); color: var(--ok); border: 1px solid var(--ok-border); }
-    .status-revision { background: var(--purple-light); color: var(--purple); border: 1px solid var(--purple-border); }
+    .ud-urgent { background: #ef4444; }
+    .ud-warning { background: #f59e0b; }
+    .ud-ok { background: #22c55e; }
+    .ticket-type { font-size: 0.68rem; font-weight: 600; padding: 2px 6px; border-radius: 4px; }
+    .tt-urgent { background: #450a0a; color: #fca5a5; }
+    .tt-warning { background: #451a03; color: #fcd34d; }
+    .tt-ok { background: #052e16; color: #86efac; }
+    .ticket-desc { font-size: 0.78rem; color: #94a3b8; flex: 1; }
+    .ticket-status { font-size: 0.65rem; font-weight: 600; padding: 2px 6px; border-radius: 4px; margin-left: auto; }
+    .ts-approved { background: #1e3a5f; color: #93c5fd; }
+    .ts-deployed { background: #052e16; color: #86efac; }
+    .ts-in_progress { background: #451a03; color: #fcd34d; }
+    .ts-ready_to_deploy { background: #312e81; color: #a5b4fc; }
+    .ts-rejected { background: #450a0a; color: #fca5a5; }
+    .ts-pending_review { background: #1e293b; color: #94a3b8; }
 
-    .ticket-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
-
-    /* Diff blocks — side by side */
-    .final-diff { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .diff-block { border-radius: 8px; padding: 12px 14px; }
-    .diff-before {
-      background: #fdf5f5;
-      border: 1px solid var(--urgent-border);
-      border-left: 3px solid var(--urgent);
-    }
-    .diff-after {
-      background: #f3faf6;
-      border: 1px solid var(--ok-border);
-      border-left: 3px solid var(--ok);
-    }
-    .diff-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    .diff-before .diff-label { color: var(--urgent); }
-    .diff-after .diff-label { color: var(--ok); }
-    .diff-text { font-size: 12px; line-height: 1.5; color: var(--text2); }
-    .diff-before .diff-text { text-decoration: line-through; opacity: 0.7; color: var(--urgent); }
-
-    .ticket-explication {
-      font-size: 11px;
-      color: var(--muted);
-      line-height: 1.5;
-      padding: 8px 10px;
-      background: var(--surface2);
-      border-radius: 6px;
-    }
-    .ticket-source {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      color: var(--blue);
-      display: flex;
-      align-items: flex-start;
-      gap: 5px;
-    }
-    .ticket-source a { color: var(--blue); text-decoration: none; }
+    .ticket-body { padding: 0.75rem; }
+    .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .diff-block { border-radius: 8px; padding: 0.75rem; font-size: 0.78rem; line-height: 1.5; }
+    .diff-before { background: #1c0a0a; border-left: 3px solid #ef4444; color: #fca5a5; }
+    .diff-after { background: #051c0b; border-left: 3px solid #22c55e; color: #86efac; }
+    .diff-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; color: inherit; opacity: 0.7; }
+    .ticket-context { font-size: 0.75rem; color: #94a3b8; line-height: 1.5; padding: 0.5rem 0.65rem; background: #0f1520; border-radius: 6px; margin-top: 0.5rem; }
+    .ticket-source { font-size: 0.72rem; margin-top: 0.35rem; }
+    .ticket-source a { color: #60a5fa; text-decoration: none; }
     .ticket-source a:hover { text-decoration: underline; }
-    .human-note-block {
-      font-size: 11px;
-      color: var(--purple);
-      padding: 8px 10px;
-      background: var(--purple-light);
-      border: 1px solid var(--purple-border);
-      border-radius: 6px;
-      line-height: 1.5;
-    }
-    .ticket-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding-top: 4px;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-    .human-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px;
-      color: var(--purple);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-right: 2px;
-    }
 
-    /* No tickets warning */
-    .no-tickets-msg {
-      font-size: 12px;
-      color: var(--muted);
-      padding: 12px 14px;
-      background: var(--surface2);
-      border-radius: 8px;
-      line-height: 1.5;
-    }
-    .no-tickets-msg code {
-      background: rgba(0,0,0,0.06);
-      padding: 1px 5px;
-      border-radius: 3px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 11px;
-    }
+    /* Bottom panels */
+    .two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .section-card { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .section-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; justify-content: space-between; }
+    .section-header .badge-count { font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 10px; background: #1e293b; color: #94a3b8; }
+    .run-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #1e293b; font-size: 0.82rem; }
+    .run-item:last-child { border-bottom: none; }
+    .run-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .run-dot-ok { background: #22c55e; }
+    .run-dot-fail { background: #ef4444; }
+    .run-info { flex: 1; }
+    .run-date { font-weight: 500; color: #e2e8f0; }
+    .run-meta { font-size: 0.72rem; color: #64748b; }
+    .run-badges { display: flex; gap: 0.35rem; }
+    .run-badge { padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 700; }
 
-    /* OK summary */
-    .ok-summary {
-      background: var(--ok-light);
-      border: 1px solid var(--ok-border);
-      border-radius: 10px;
-      padding: 14px 18px;
-      font-size: 12px;
-      color: var(--ok);
-      font-weight: 600;
-      margin-top: 8px;
-    }
-    .ok-summary .detail {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px;
-      font-weight: 400;
-      color: var(--muted);
-      margin-left: 12px;
-    }
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; font-size: 0.85rem; }
 
-    /* Modal */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      z-index: 200;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal {
-      background: var(--surface);
-      border-radius: 14px;
-      padding: 28px;
-      width: 460px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    }
-    .modal-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-    .modal-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
-    .modal textarea {
-      width: 100%;
-      height: 100px;
-      background: var(--surface2);
-      border: 1px solid var(--border2);
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 13px;
-      color: var(--text);
-      resize: none;
-      margin-bottom: 14px;
-    }
-    .modal textarea:focus { outline: none; border-color: var(--purple); }
-    .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+    /* Collection coverage grid */
+    .collection-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+    .coll-card { background: #0f1520; border-radius: 8px; padding: 0.75rem; }
+    .coll-name { font-size: 0.75rem; font-weight: 600; color: #e2e8f0; margin-bottom: 0.35rem; }
+    .coll-bar { height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; margin-bottom: 0.25rem; }
+    .coll-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
+    .coll-stats { font-size: 0.68rem; color: #64748b; }
 
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--text);
-      color: white;
-      padding: 13px 18px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: all 0.25s;
-      z-index: 300;
-      max-width: 320px;
-      pointer-events: none;
-    }
-    .toast.show { opacity: 1; transform: translateY(0); }
-    .toast-sub { font-size: 11px; font-weight: 400; opacity: 0.65; margin-top: 2px; }
-
-    /* Loading / Empty */
-    .empty-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
-    .loading-state { text-align: center; padding: 40px; color: var(--muted); font-size: 13px; }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .admin-layout { margin-left: 0; padding-top: 56px; }
-    }
-    @media (max-width: 768px) {
-      .topbar { padding: 0 16px; }
-      .content { padding: 16px; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .final-diff { grid-template-columns: 1fr; }
-      .article-group-header { flex-wrap: wrap; }
-      .ticket-actions { flex-wrap: wrap; }
-      .topbar-left { flex-wrap: wrap; gap: 8px; }
-    }
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } .two-cols { grid-template-columns: 1fr; } .diff-grid { grid-template-columns: 1fr; } .goal-details { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .main { padding: 1rem; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .collection-grid { grid-template-columns: 1fr 1fr; } }
   </style>
 </head>
 <body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  // Auth guard handled by AdminNav (localStorage, 24h expiry)
+</script>
 
 <AdminNav />
 
 <div class="admin-layout">
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="topbar-left">
-      <div class="page-title">Fact-Check Dashboard</div>
-      <div class="topbar-meta" id="topbar-meta">Chargement...</div>
+  <div class="page-header">
+    <div class="page-header-left">
+      <h1>Fact-Check</h1>
+      <p>Verification medicale des articles — Objectif : 100% verifies tous les 14 jours</p>
     </div>
-    <div class="topbar-actions">
-      <button class="btn btn-ghost" onclick="loadDashboard()">&#x27F3; Rafraichir</button>
-    </div>
-  </div>
-
-  <!-- Stats -->
-  <div class="content">
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-label">Articles verifies</div>
-        <div class="stat-value" id="stat-total">-</div>
-        <div class="stat-sub" id="stat-total-sub">&nbsp;</div>
-      </div>
-      <div class="stat stat-urgent">
-        <div class="stat-label">Urgents</div>
-        <div class="stat-value" id="stat-urgent">-</div>
-        <div class="stat-sub">Action requise</div>
-      </div>
-      <div class="stat" style="border-color:var(--warning-border)">
-        <div class="stat-label" style="color:var(--warning)">A verifier</div>
-        <div class="stat-value" id="stat-warning" style="color:var(--warning)">-</div>
-        <div class="stat-sub">Corrections mineures</div>
-      </div>
-      <div class="stat" style="border-color:var(--ok-border)">
-        <div class="stat-label" style="color:var(--ok)">OK</div>
-        <div class="stat-value" id="stat-ok" style="color:var(--ok)">-</div>
-        <div class="stat-sub">Aucune action</div>
-      </div>
-    </div>
-
-    <div id="main-content">
-      <div class="loading-state">Chargement des donnees...</div>
+    <div class="header-actions">
+      <span class="last-update" id="lastUpdate">-</span>
+      <button class="refresh-btn" onclick="loadAll()">&#x27F3; Rafraichir</button>
     </div>
   </div>
-</div>
 
-<!-- Modal Note -->
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <div class="modal-title">Note au redacteur</div>
-    <div class="modal-sub">Cette note sera transmise a l'Agent Editorial pour guider la revision.</div>
-    <textarea id="noteText" placeholder="Ex: Le prix doit etre exprime en mensuel, pas a l'unite. Ajouter la mention que les prix varient selon la pharmacie..."></textarea>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" id="noteCancel">Annuler</button>
-      <button class="btn btn-purple" id="noteSend">Envoyer a l'Editorial</button>
+  <div class="main">
+    <div class="cmd-box">
+      <code>claude -p "Verifie les articles" --agent fact-check</code>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('claude -p &quot;Verifie les articles&quot; --agent fact-check');this.textContent='Copie !'">Copier</button>
+    </div>
+
+    <!-- Goal tracker: 14-day coverage -->
+    <div class="goal-tracker" id="goalTracker" style="display:none">
+      <div class="goal-header">
+        <div>
+          <div class="goal-title">Objectif : 100% des articles verifies sous 14 jours</div>
+          <div class="goal-subtitle" id="goalSubtitle">-</div>
+        </div>
+        <div style="text-align:right">
+          <div class="goal-pct" id="goalPct" style="color:#64748b">-</div>
+          <div class="goal-pct-label">couverture 14j</div>
+        </div>
+      </div>
+      <div class="goal-bar-wrap">
+        <div class="goal-bar-fill" id="goalBar" style="width:0%;background:#64748b"></div>
+      </div>
+      <div class="goal-details" id="goalDetails"></div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="label">Articles verifies</div>
+        <div class="value" id="statTotal" style="color:#e2e8f0">-</div>
+        <div class="sub">Total unique</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Urgents</div>
+        <div class="value" id="statUrgent" style="color:#f87171">-</div>
+        <div class="sub">Action requise</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">A verifier</div>
+        <div class="value" id="statWarn" style="color:#fbbf24">-</div>
+        <div class="sub">Corrections mineures</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Conformes</div>
+        <div class="value" id="statOk" style="color:#4ade80">-</div>
+        <div class="sub">Aucune action</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Tickets crees</div>
+        <div class="value" id="statTickets" style="color:#a78bfa">-</div>
+        <div class="sub">Corrections pour l'editorial</div>
+      </div>
+    </div>
+
+    <!-- Score distribution bar -->
+    <div class="score-distrib" id="distribContainer" style="display:none">
+      <div class="score-distrib-title">Repartition des scores de fiabilite</div>
+      <div class="score-bar" id="distribBar"></div>
+      <div class="score-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> Urgent (&lt;50)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> A verifier (50-74)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> Conforme (75+)</div>
+      </div>
+    </div>
+
+    <!-- Coverage & freshness -->
+    <div class="coverage-section" id="coverageSection" style="display:none">
+      <div class="coverage-title">
+        <span>Fraicheur par collection</span>
+        <span id="coverageSummary" style="font-size:0.72rem;font-weight:400;color:#64748b"></span>
+      </div>
+      <div class="freshness-bar" id="freshnessBar"></div>
+      <div class="freshness-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> &lt; 14 jours</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> 14-30 jours</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> &gt; 30 jours</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#94a3b8"></div> Jamais verifie</div>
+      </div>
+      <div class="collection-grid" id="collectionGrid"></div>
+      <div class="stale-list" id="staleList"></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Tous</button>
+      <button class="filter-btn" data-filter="urgent" onclick="setFilter('urgent')">Urgents</button>
+      <button class="filter-btn" data-filter="warning" onclick="setFilter('warning')">A verifier</button>
+      <button class="filter-btn" data-filter="ok" onclick="setFilter('ok')">Conformes</button>
+      <div class="filter-sep"></div>
+      <select class="filter-select" id="collectionFilter" onchange="setCollectionFilter(this.value)">
+        <option value="all">Toutes les collections</option>
+      </select>
+      <select class="filter-select" id="freshnessFilter" onchange="setFreshnessFilter(this.value)">
+        <option value="all">Toute fraicheur</option>
+        <option value="fresh">&lt; 14 jours</option>
+        <option value="aging">14-30 jours</option>
+        <option value="stale">&gt; 30 jours</option>
+      </select>
+      <input type="text" class="search-input" placeholder="Rechercher un article..." oninput="setSearch(this.value)" />
+    </div>
+
+    <!-- Article cards -->
+    <div id="articlesContainer"><div class="empty-state">Chargement...</div></div>
+
+    <!-- Bottom: runs + ticket status -->
+    <div class="two-cols" style="margin-top:1.5rem">
+      <div class="section-card">
+        <div class="section-header">
+          Historique des runs
+          <span class="badge-count" id="runCount">0</span>
+        </div>
+        <div id="runsList"><div class="empty-state">Chargement...</div></div>
+      </div>
+      <div class="section-card">
+        <div class="section-header">
+          Pipeline tickets
+          <span class="badge-count" id="pipelineCount">0</span>
+        </div>
+        <div id="pipelineList"><div class="empty-state">Chargement...</div></div>
+      </div>
     </div>
   </div>
-</div>
-
-<!-- Toast -->
-<div class="toast" id="toast">
-  <div id="toastMsg"></div>
-  <div class="toast-sub" id="toastSub"></div>
 </div>
 
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
-  const SUPABASE_URL = supabaseUrl;
-  const SUPABASE_ANON_KEY = supabaseAnonKey;
-  let pendingNoteTicketId = null;
+  const SB_URL = supabaseUrl;
+  const SB_KEY = supabaseAnonKey;
+  let allArticles = [];
+  let allArticlesData = [];
+  let currentFilter = 'all';
+  let currentCollectionFilter = 'all';
+  let currentFreshnessFilter = 'all';
+  let currentSearch = '';
 
-  // ── Helpers ──
-  function escapeHtml(str) {
-    if (!str) return '';
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
+  function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
-  function formatDate(dateStr) {
-    if (!dateStr) return '';
-    return new Date(dateStr).toLocaleDateString('fr-FR', {
-      day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'
+  async function sbFetch(table, query) {
+    const r = await fetch(`${SB_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
     });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
   }
 
-  function scoreColor(score) {
-    if (score < 50) return 'var(--urgent)';
-    if (score < 75) return 'var(--warning)';
-    return 'var(--ok)';
+  function articleUrl(collection, slug) {
+    if (!slug) return null;
+    // Slug already includes collection prefix (e.g. "regime-glp1/isglt2-liste")
+    if (slug.includes('/')) return `/collections/${slug}`;
+    // Fallback: slug without collection prefix
+    if (collection) return `/collections/${collection}/${slug}`;
+    return null;
   }
 
-  function scoreClass(score) {
-    if (score < 50) return 'type-urgent';
-    if (score < 75) return 'type-warning';
-    return 'type-ok';
+  function displaySlug(slug) {
+    // Show just the article part without collection prefix
+    if (!slug) return '-';
+    const parts = slug.split('/');
+    return parts.length > 1 ? parts[parts.length - 1] : slug;
   }
 
-  function urgenceClass(urgence) {
-    if (urgence === 'urgent') return 'urgent';
-    if (urgence === 'warning') return 'warning';
+  function scoreCircle(score) {
+    if (score < 50) return `<div class="score-circle sc-urgent">${score}</div>`;
+    if (score < 75) return `<div class="score-circle sc-warn">${score}</div>`;
+    return `<div class="score-circle sc-ok">${score}</div>`;
+  }
+
+  function scoreCategory(score) {
+    if (score < 50) return 'urgent';
+    if (score < 75) return 'warning';
     return 'ok';
   }
 
-  function typeClass(urgence) {
-    if (urgence === 'urgent') return 'type-urgent';
-    if (urgence === 'warning') return 'type-warning';
-    return 'type-ok';
+  function freshnessCategory(checkedAt) {
+    if (!checkedAt) return 'never';
+    const days = Math.round((Date.now() - new Date(checkedAt).getTime()) / 86400000);
+    if (days < 14) return 'fresh';
+    if (days < 30) return 'aging';
+    return 'stale';
   }
 
-  function typeLabel(type) {
-    const labels = {
-      price_update: 'prix',
-      info_outdated: 'info obsolete',
-      false_claim: 'claim faux',
-      missing_info: 'info manquante',
-      context_fr: 'contexte FR',
-    };
-    return labels[type] || type || '?';
+  function typeLabel(t) {
+    const m = { price_update: 'Prix', info_outdated: 'Info obsolete', false_claim: 'Claim faux', missing_info: 'Info manquante', context_fr: 'Contexte FR', seo_optimization: 'SEO', content_refresh: 'Refresh' };
+    return m[t] || t || '?';
   }
 
-  function statutLabel(statut) {
-    const labels = {
-      pending_review: 'En attente',
-      approved: 'Approuve',
-      rejected: 'Rejete',
-      in_progress: 'En cours',
-      ready_to_deploy: 'Pret a deployer',
-      deployed: 'Deploye',
-      revision_needed: 'Revision',
-    };
-    return labels[statut] || statut;
+  function statusLabel(s) {
+    const m = { approved: 'Approuve', in_progress: 'En cours', ready_to_deploy: 'Pret', deployed: 'Deploye', rejected: 'Rejete', pending_review: 'En attente' };
+    return m[s] || s;
   }
 
-  function statutClass(statut) {
-    const map = {
-      pending_review: 'status-pending',
-      approved: 'status-approved',
-      rejected: 'status-rejected',
-      in_progress: 'status-approved',
-      ready_to_deploy: 'status-ready',
-      deployed: 'status-deployed',
-      revision_needed: 'status-revision',
-    };
-    return map[statut] || 'status-pending';
+  function timeAgo(d) {
+    if (!d) return 'Jamais';
+    const now = new Date(), then = new Date(d);
+    const h = Math.round((now - then) / 3600000);
+    if (h < 1) return "A l'instant";
+    if (h < 24) return `Il y a ${h}h`;
+    const days = Math.round(h / 24);
+    if (days === 1) return 'Hier';
+    if (days < 7) return `Il y a ${days}j`;
+    return then.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
   }
 
-  // ── Supabase API ──
-  async function supabaseFetch(table, query) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      }
-    });
-    if (!response.ok) throw new Error(await response.text());
-    return response.json();
+  function daysAgo(d) {
+    if (!d) return Infinity;
+    return Math.round((Date.now() - new Date(d).getTime()) / 86400000);
   }
 
-  async function updateTicket(ticketId, updates) {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?id=eq.${ticketId}`, {
-      method: 'PATCH',
-      headers: {
-        'apikey': SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify(updates)
-    });
-    if (!response.ok) {
-      const errText = await response.text();
-      throw new Error(`Erreur ${response.status}: ${errText}`);
+  window.setFilter = function(f) {
+    currentFilter = f;
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === f));
+    renderArticles();
+  };
+
+  window.setCollectionFilter = function(c) {
+    currentCollectionFilter = c;
+    renderArticles();
+  };
+
+  window.setFreshnessFilter = function(f) {
+    currentFreshnessFilter = f;
+    renderArticles();
+  };
+
+  window.setSearch = function(q) {
+    currentSearch = q.toLowerCase();
+    renderArticles();
+  };
+
+  window.toggleArticle = function(id) {
+    document.getElementById('article-' + id)?.classList.toggle('open');
+  };
+
+  function renderArticles() {
+    let filtered = allArticles;
+    if (currentFilter !== 'all') {
+      filtered = filtered.filter(a => scoreCategory(a.score) === currentFilter);
     }
-  }
+    if (currentCollectionFilter !== 'all') {
+      filtered = filtered.filter(a => a.collection === currentCollectionFilter);
+    }
+    if (currentFreshnessFilter !== 'all') {
+      filtered = filtered.filter(a => freshnessCategory(a.checkedAt) === currentFreshnessFilter);
+    }
+    if (currentSearch) {
+      filtered = filtered.filter(a =>
+        (a.title || '').toLowerCase().includes(currentSearch) ||
+        (a.slug || '').toLowerCase().includes(currentSearch) ||
+        (a.collection || '').toLowerCase().includes(currentSearch)
+      );
+    }
 
-  // ── Toast ──
-  let toastTimer;
-  function showToast(msg, sub) {
-    const t = document.getElementById('toast');
-    document.getElementById('toastMsg').textContent = msg;
-    document.getElementById('toastSub').textContent = sub || '';
-    t.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => t.classList.remove('show'), 3500);
-  }
-
-  // ── Render functions ──
-  function renderTicket(t) {
-    const urg = urgenceClass(t.urgence);
-    const tClass = typeClass(t.urgence);
-    const sClass = statutClass(t.statut);
-    const isPending = t.statut === 'pending_review';
-
-    const urgIcon = t.urgence === 'urgent' ? '\u{1F534}' : (t.urgence === 'warning' ? '\u{1F7E1}' : '\u{1F7E2}');
-
-    // Build short description from before_exact (first 50 chars)
-    const shortDesc = t.before_exact ? t.before_exact.substring(0, 60) + (t.before_exact.length > 60 ? '...' : '') : '';
-
-    return `
-      <div class="ticket" data-ticket-id="${t.id}">
-        <div class="ticket-header">
-          <div class="urgence-dot ${urg}"></div>
-          <div class="ticket-type-badge ${tClass}">${urgIcon} ${escapeHtml(typeLabel(t.ticket_type))}</div>
-          <span class="ticket-desc">${escapeHtml(shortDesc)}</span>
-          <div class="ticket-status ${sClass}">${isPending ? '' : (t.statut === 'approved' ? '\u2713 ' : '')}${escapeHtml(statutLabel(t.statut))}</div>
-        </div>
-        <div class="ticket-body">
-          <div class="final-diff">
-            <div class="diff-block diff-before">
-              <div class="diff-label">Erreur detectee</div>
-              <div class="diff-text">${escapeHtml(t.before_exact)}</div>
-            </div>
-            <div class="diff-block diff-after">
-              <div class="diff-label">Correction suggeree</div>
-              <div class="diff-text">${escapeHtml(t.after_suggested)}</div>
-            </div>
-          </div>
-          ${t.realite_actuelle ? `<div class="ticket-explication">${escapeHtml(t.realite_actuelle)}</div>` : ''}
-          ${t.source_reference ? `<div class="ticket-source">\u{1F4CE} <a href="${escapeHtml(t.source_reference)}" target="_blank" rel="noopener">${escapeHtml(t.source_reference)}</a></div>` : ''}
-          ${t.human_note ? `<div class="human-note-block"><strong>Note :</strong> ${escapeHtml(t.human_note)}</div>` : ''}
-          ${isPending ? `
-            <div class="ticket-actions">
-              <span class="human-label">\u{1F464} Decision :</span>
-              <button class="btn btn-ok" onclick="handleAction('approve', '${t.id}', this)">\u2713 Approuver</button>
-              <button class="btn btn-danger" onclick="handleAction('reject', '${t.id}', this)">\u2717 Rejeter</button>
-              <button class="btn btn-purple" onclick="handleAction('note', '${t.id}', this)">\u{1F4DD} + Note</button>
-            </div>
-          ` : (t.statut === 'approved' ? `
-            <div class="ticket-actions">
-              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye a l'Agent Editorial</span>
-            </div>
-          ` : '')}
-        </div>
-      </div>
-    `;
-  }
-
-  function renderArticleGroup(article, factResult, tickets, index) {
-    const score = factResult.score_fiabilite || 0;
-    const color = scoreColor(score);
-    const badgeClass = scoreClass(score);
-    const pendingCount = tickets.filter(t => t.statut === 'pending_review').length;
-    const ticketCountLabel = tickets.length + ' ticket' + (tickets.length > 1 ? 's' : '') + (pendingCount > 0 ? ` \u00b7 ${pendingCount} en attente` : '');
-    const slug = article.collection ? article.collection + '/' + article.slug : article.slug || '';
-
-    return `
-      <div class="article-group ${index === 0 ? 'open' : ''}" id="group-${factResult.id}">
-        <div class="article-group-header" onclick="document.getElementById('group-${factResult.id}').classList.toggle('open')">
-          <div class="article-info">
-            <div class="article-title">${escapeHtml(article.title || 'Article inconnu')}</div>
-            <div class="article-slug">${escapeHtml(slug)} \u00b7 ${ticketCountLabel}</div>
-          </div>
-          <div class="score-bar-wrap">
-            <div class="score-bar"><div class="score-fill" style="width:${score}%;background:${color}"></div></div>
-            <div class="score-badge ${badgeClass}">${score}/100</div>
-          </div>
-          <div class="article-meta">${formatDate(factResult.checked_at)}</div>
-          <div class="chevron">\u25BC</div>
-        </div>
-        <div class="tickets-list">
-          ${tickets.length === 0
-            ? `<div class="no-tickets-msg">
-                <strong>Aucun ticket genere</strong> (score : ${score}/100).
-                ${score < 70 ? '<br>Relancez : <code>node scripts/fact-check-runner.mjs --article-id ' + (factResult.article_id || '') + '</code>' : ''}
-              </div>`
-            : tickets.map(t => renderTicket(t)).join('')}
-        </div>
-      </div>
-    `;
-  }
-
-  // ── Action handler ──
-  window.handleAction = async function(action, ticketId, button) {
-    if (action === 'note') {
-      pendingNoteTicketId = ticketId;
-      document.getElementById('modal').classList.add('open');
-      document.getElementById('noteText').value = '';
-      document.getElementById('noteText').focus();
+    const container = document.getElementById('articlesContainer');
+    if (filtered.length === 0) {
+      container.innerHTML = allArticles.length > 0
+        ? '<div class="empty-state">Aucun resultat pour ce filtre</div>'
+        : '<div class="empty-state">Aucun fact-check — lancez l\'agent fact-check</div>';
       return;
     }
 
-    button.disabled = true;
-    const originalText = button.textContent;
-    button.textContent = '...';
-    const actionRow = button.closest('.ticket-actions');
-    if (actionRow) actionRow.querySelectorAll('.btn').forEach(b => b.disabled = true);
+    container.innerHTML = '<div class="article-cards">' + filtered.map((a, i) => {
+      const cat = scoreCategory(a.score);
+      const urgentTickets = a.tickets.filter(t => t.urgence === 'urgent').length;
+      const warnTickets = a.tickets.filter(t => t.urgence === 'warning').length;
+      const url = articleUrl(a.collection, a.slug);
+      const fresh = freshnessCategory(a.checkedAt);
+      const days = daysAgo(a.checkedAt);
 
-    try {
-      if (action === 'approve') {
-        await updateTicket(ticketId, { statut: 'approved', reviewed_at: new Date().toISOString() });
+      let ticketBadges = '';
+      if (urgentTickets > 0) ticketBadges += `<span class="ticket-count-badge tcb-urgent">${urgentTickets} urgent${urgentTickets > 1 ? 's' : ''}</span>`;
+      if (warnTickets > 0) ticketBadges += `<span class="ticket-count-badge tcb-warn">${warnTickets} warning${warnTickets > 1 ? 's' : ''}</span>`;
+      if (a.tickets.length === 0) ticketBadges = `<span class="ticket-count-badge tcb-ok">OK</span>`;
 
-        // Declencher l'agent editorial immediatement via Edge Function
-        try {
-          await fetch(`${SUPABASE_URL}/functions/v1/trigger-agent`, {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ agent: 'editorial', ticket_id: ticketId })
-          });
-        } catch (triggerErr) {
-          // Pas bloquant : le cron editorial rattrapera au prochain passage
-          console.warn('Edge Function trigger-agent erreur (non bloquant):', triggerErr);
-        }
+      let freshBadge = '';
+      if (fresh === 'fresh') freshBadge = `<span class="freshness-badge fb-fresh">${days}j</span>`;
+      else if (fresh === 'aging') freshBadge = `<span class="freshness-badge fb-aging">${days}j</span>`;
+      else if (fresh === 'stale') freshBadge = `<span class="freshness-badge fb-stale">${days}j</span>`;
+      else freshBadge = `<span class="freshness-badge fb-stale">Jamais</span>`;
 
-        if (actionRow) {
-          actionRow.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--ok)">\u2713 Envoye a l\'Agent Editorial</span>';
-        }
-        const statusEl = button.closest('[data-ticket-id]').querySelector('.ticket-status');
-        if (statusEl) {
-          statusEl.className = 'ticket-status status-approved';
-          statusEl.textContent = '\u2713 Approuve';
-        }
-        showToast('\u270D\uFE0F Agent Editorial lance', 'Redaction de after_final en cours');
-      } else if (action === 'reject') {
-        await updateTicket(ticketId, { statut: 'rejected', reviewed_at: new Date().toISOString() });
-        if (actionRow) {
-          actionRow.innerHTML = '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--urgent)">\u2717 Rejete \u00b7 archive</span>';
-        }
-        const statusEl = button.closest('[data-ticket-id]').querySelector('.ticket-status');
-        if (statusEl) {
-          statusEl.className = 'ticket-status status-rejected';
-          statusEl.textContent = '\u2717 Rejete';
-        }
-        showToast('\u{1F5D1} Ticket rejete', 'Archive sans modification');
-      }
-    } catch (err) {
-      if (actionRow) actionRow.querySelectorAll('.btn').forEach(b => b.disabled = false);
-      button.textContent = originalText;
-      showToast('Erreur: ' + err.message, '');
-    }
-  };
+      const checkedDate = a.checkedAt ? new Date(a.checkedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Jamais verifie';
 
-  // ── Load dashboard ──
-  window.loadDashboard = async function() {
-    try {
-      const [results, tickets] = await Promise.all([
-        supabaseFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,model_used,articles(id,slug,title,collection)&order=checked_at.desc&limit=100'),
-        supabaseFetch('correction_tickets', 'select=*&order=created_at.desc&limit=500')
-      ]);
-
-      // Group tickets by fact_check_result_id
-      const ticketsByResult = new Map();
-      for (const t of tickets) {
-        const key = t.fact_check_result_id;
-        if (!ticketsByResult.has(key)) ticketsByResult.set(key, []);
-        ticketsByResult.get(key).push(t);
-      }
-
-      // Categorize results
-      const urgent = results.filter(r => r.statut === 'Urgent');
-      const aVerifier = results.filter(r => r.statut === 'A verifier' || r.statut === 'À vérifier');
-      const ok = results.filter(r => r.statut === 'OK');
-      const pendingTickets = tickets.filter(t => t.statut === 'pending_review').length;
-
-      // Update stats
-      document.getElementById('stat-total').textContent = results.length;
-      document.getElementById('stat-total-sub').textContent = pendingTickets > 0 ? pendingTickets + ' tickets en attente' : 'Tous les tickets traites';
-      document.getElementById('stat-urgent').textContent = urgent.length;
-      document.getElementById('stat-warning').textContent = aVerifier.length;
-      document.getElementById('stat-ok').textContent = ok.length;
-
-      // Update topbar meta
-      const lastRun = results.length > 0 ? formatDate(results[0].checked_at) : '?';
-      document.getElementById('topbar-meta').textContent = results.length + ' articles \u00b7 dernier run ' + lastRun;
-
-      const mainEl = document.getElementById('main-content');
-
-      if (results.length === 0) {
-        mainEl.innerHTML = `
-          <div class="empty-state">
-            <div style="font-size:28px;margin-bottom:8px">\u{1F50D}</div>
-            <p>Aucun resultat de fact-check</p>
-            <p style="margin-top:4px;font-size:11px">Lancez : <code>node scripts/fact-check-runner.mjs --limit 5</code></p>
+      return `<div class="article-card${i === 0 ? ' open' : ''}" id="article-${a.resultId}">
+        <div class="article-card-header" onclick="toggleArticle('${a.resultId}')">
+          ${scoreCircle(a.score)}
+          <div class="article-info">
+            <div class="article-title-row">
+              <span class="article-title">${esc(a.title)}</span>
+              ${url ? `<a href="${url}" class="article-link" target="_blank" onclick="event.stopPropagation()">Voir l'article &#x2197;</a>` : ''}
+            </div>
+            <div class="article-slug-row">
+              <span class="article-slug">${url ? `<a href="${url}" target="_blank" onclick="event.stopPropagation()">${esc(displaySlug(a.slug))}</a>` : esc(displaySlug(a.slug))}</span>
+              <span class="article-collection-badge">${esc(a.collection)}</span>
+              <span class="article-date">${a.tickets.length} ticket${a.tickets.length > 1 ? 's' : ''} · ${timeAgo(a.checkedAt)}</span>
+            </div>
           </div>
-        `;
+          <div class="article-meta">${freshBadge}${ticketBadges}</div>
+          <div class="chevron">&#x25BC;</div>
+        </div>
+        <div class="article-card-body">
+          <div class="article-summary">
+            <span class="article-summary-item">Score: <strong>${a.score}/100</strong></span>
+            <span class="article-summary-item">Verifie le: <strong>${checkedDate}</strong></span>
+            <span class="article-summary-item">Tickets: <strong>${a.tickets.length}</strong></span>
+            ${url ? `<a href="${url}" class="article-summary-link" target="_blank">Ouvrir l'article &#x2197;</a>` : ''}
+          </div>
+          ${a.tickets.length === 0
+            ? `<div style="padding:0.75rem;color:#4ade80;font-size:0.82rem">Aucun probleme detecte — article conforme</div>`
+            : a.tickets.map(t => {
+              const urgClass = t.urgence === 'urgent' ? 'ud-urgent' : t.urgence === 'warning' ? 'ud-warning' : 'ud-ok';
+              const ttClass = t.urgence === 'urgent' ? 'tt-urgent' : t.urgence === 'warning' ? 'tt-warning' : 'tt-ok';
+              const tsClass = 'ts-' + (t.statut || 'approved');
+              return `<div class="ticket">
+                <div class="ticket-header">
+                  <div class="urgence-dot ${urgClass}"></div>
+                  <span class="ticket-type ${ttClass}">${esc(typeLabel(t.ticket_type))}</span>
+                  <span class="ticket-desc">${esc(t.claim_original || (t.before_exact || '').substring(0, 100))}</span>
+                  <span class="ticket-status ${tsClass}">${esc(statusLabel(t.statut))}</span>
+                </div>
+                <div class="ticket-body">
+                  ${t.before_exact || t.after_suggested ? `<div class="diff-grid">
+                    ${t.before_exact ? `<div class="diff-block diff-before"><div class="diff-label">Texte actuel</div>${esc(t.before_exact)}</div>` : ''}
+                    ${t.after_suggested ? `<div class="diff-block diff-after"><div class="diff-label">Correction proposee</div>${esc(t.after_suggested)}</div>` : ''}
+                  </div>` : ''}
+                  ${t.realite_actuelle ? `<div class="ticket-context"><strong>Contexte :</strong> ${esc(t.realite_actuelle)}</div>` : ''}
+                  ${t.source_reference ? `<div class="ticket-source">Source : <a href="${esc(t.source_reference)}" target="_blank" rel="noopener">${esc(t.source_reference)}</a></div>` : ''}
+                </div>
+              </div>`;
+            }).join('')
+          }
+        </div>
+      </div>`;
+    }).join('') + '</div>';
+  }
+
+  function renderDistrib() {
+    if (allArticles.length === 0) return;
+    const total = allArticles.length;
+    const urgent = allArticles.filter(a => a.score < 50).length;
+    const warn = allArticles.filter(a => a.score >= 50 && a.score < 75).length;
+    const ok = allArticles.filter(a => a.score >= 75).length;
+    const pct = v => (v / total * 100).toFixed(1);
+
+    document.getElementById('distribContainer').style.display = 'block';
+    document.getElementById('distribBar').innerHTML = [
+      urgent > 0 ? `<div class="score-seg seg-urgent" style="width:${pct(urgent)}%">${urgent}</div>` : '',
+      warn > 0 ? `<div class="score-seg seg-warn" style="width:${pct(warn)}%">${warn}</div>` : '',
+      ok > 0 ? `<div class="score-seg seg-ok" style="width:${pct(ok)}%">${ok}</div>` : '',
+    ].join('');
+  }
+
+  async function loadRuns() {
+    try {
+      const runs = await sbFetch('agent_runs', 'select=*&agent_name=eq.fact-check&order=started_at.desc&limit=10');
+      document.getElementById('runCount').textContent = runs.length;
+      if (runs.length === 0) {
+        document.getElementById('runsList').innerHTML = '<div class="empty-state">Aucun run</div>';
         return;
       }
-
-      let html = '';
-
-      // Urgent section
-      if (urgent.length > 0) {
-        html += `<div class="section-head"><div class="section-title" style="color:var(--urgent)">\u{1F534} Urgents</div><div class="section-sub">${urgent.length} article(s)</div></div>`;
-        urgent.forEach((r, i) => {
-          const articleTickets = ticketsByResult.get(r.id) || [];
-          html += renderArticleGroup(r.articles || {}, r, articleTickets, i);
-        });
-      }
-
-      // A verifier section
-      if (aVerifier.length > 0) {
-        html += `<div class="section-head"><div class="section-title" style="color:var(--warning)">\u{1F7E1} A verifier</div><div class="section-sub">${aVerifier.length} article(s)</div></div>`;
-        aVerifier.forEach((r, i) => {
-          const articleTickets = ticketsByResult.get(r.id) || [];
-          html += renderArticleGroup(r.articles || {}, r, articleTickets, urgent.length === 0 && i === 0 ? 0 : -1);
-        });
-      }
-
-      // OK summary
-      if (ok.length > 0) {
-        html += `
-          <div class="ok-summary">
-            \u{1F7E2} ${ok.length} article(s) verifie(s) et conforme(s) — aucune action requise
-            <span class="detail">Score moyen : ${Math.round(ok.reduce((s,r) => s + (r.score_fiabilite || 0), 0) / ok.length)}/100</span>
+      document.getElementById('runsList').innerHTML = runs.map(r => {
+        const meta = r.metadata || {};
+        const dotClass = r.status === 'completed' ? 'run-dot-ok' : 'run-dot-fail';
+        const date = new Date(r.started_at);
+        const dateStr = date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+        const avgScore = meta.avg_score ? ` · Score moy. ${Math.round(meta.avg_score)}` : '';
+        const ticketsCreated = meta.tickets_created ? ` · ${meta.tickets_created} tickets` : '';
+        return `<div class="run-item">
+          <div class="run-dot ${dotClass}"></div>
+          <div class="run-info">
+            <div class="run-date">${esc(dateStr)}</div>
+            <div class="run-meta">${r.items_processed || '?'} articles${avgScore}${ticketsCreated}</div>
           </div>
-        `;
-      }
+          <div class="run-badges">
+            ${r.items_errors ? `<span class="run-badge" style="background:#fee2e2;color:#991b1b">${r.items_errors} issues</span>` : `<span class="run-badge" style="background:#d1fae5;color:#065f46">OK</span>`}
+          </div>
+        </div>`;
+      }).join('');
+    } catch(e) {}
+  }
 
-      mainEl.innerHTML = html;
+  function renderPipeline(tickets) {
+    const statuses = ['approved', 'in_progress', 'ready_to_deploy', 'deployed', 'rejected'];
+    const counts = {};
+    statuses.forEach(s => counts[s] = tickets.filter(t => t.statut === s).length);
+    const total = tickets.length;
+    document.getElementById('pipelineCount').textContent = total;
 
-    } catch (err) {
-      document.getElementById('main-content').innerHTML = `
-        <div style="background:var(--urgent-light);border:1px solid var(--urgent-border);padding:14px 18px;border-radius:10px;color:var(--urgent);font-size:12px">
-          <strong>Erreur Supabase</strong> : ${escapeHtml(err.message)}
+    if (total === 0) {
+      document.getElementById('pipelineList').innerHTML = '<div class="empty-state">Aucun ticket</div>';
+      return;
+    }
+
+    const colors = { approved: '#3b82f6', in_progress: '#f59e0b', ready_to_deploy: '#8b5cf6', deployed: '#22c55e', rejected: '#ef4444' };
+    const labels = { approved: 'A traiter', in_progress: 'En cours', ready_to_deploy: 'Pret', deployed: 'Deploye', rejected: 'Rejete' };
+
+    document.getElementById('pipelineList').innerHTML = statuses.filter(s => counts[s] > 0).map(s => `
+      <div class="run-item">
+        <div class="run-dot" style="background:${colors[s]}"></div>
+        <div class="run-info">
+          <div class="run-date">${labels[s]}</div>
+          <div class="run-meta">${counts[s]} ticket${counts[s] > 1 ? 's' : ''}</div>
         </div>
+        <div style="font-size:1.2rem;font-weight:800;color:${colors[s]}">${counts[s]}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderGoalTracker(articles) {
+    if (!articles || articles.length === 0) return;
+    const now = Date.now();
+    const DAY = 86400000;
+    const total = articles.length;
+    const fresh = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * DAY).length;
+    const aging = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY && (now - new Date(a.last_fact_checked).getTime()) < 30 * DAY).length;
+    const stale = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 30 * DAY).length;
+    const never = articles.filter(a => !a.last_fact_checked).length;
+    const pctFresh = total > 0 ? Math.round(fresh / total * 100) : 0;
+    const remaining = total - fresh;
+
+    document.getElementById('goalTracker').style.display = 'block';
+
+    // Goal percentage color
+    let goalColor = '#ef4444';
+    if (pctFresh >= 90) goalColor = '#4ade80';
+    else if (pctFresh >= 70) goalColor = '#22c55e';
+    else if (pctFresh >= 50) goalColor = '#fbbf24';
+    else if (pctFresh >= 25) goalColor = '#f59e0b';
+
+    document.getElementById('goalPct').textContent = pctFresh + '%';
+    document.getElementById('goalPct').style.color = goalColor;
+    document.getElementById('goalSubtitle').textContent = remaining > 0
+      ? `${remaining} article${remaining > 1 ? 's' : ''} a (re)verifier pour atteindre 100%`
+      : 'Tous les articles sont a jour !';
+
+    const bar = document.getElementById('goalBar');
+    bar.style.width = pctFresh + '%';
+    bar.style.background = `linear-gradient(90deg, ${goalColor}, ${goalColor}dd)`;
+    bar.textContent = pctFresh > 5 ? pctFresh + '%' : '';
+
+    document.getElementById('goalDetails').innerHTML = `
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#4ade80">${fresh}</div>
+        <div class="gd-label">&lt; 14 jours</div>
+        <div class="gd-pct" style="color:#4ade80">${total > 0 ? Math.round(fresh/total*100) : 0}%</div>
+      </div>
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#fbbf24">${aging}</div>
+        <div class="gd-label">14-30 jours</div>
+        <div class="gd-pct" style="color:#fbbf24">${total > 0 ? Math.round(aging/total*100) : 0}%</div>
+      </div>
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#f87171">${stale}</div>
+        <div class="gd-label">&gt; 30 jours</div>
+        <div class="gd-pct" style="color:#f87171">${total > 0 ? Math.round(stale/total*100) : 0}%</div>
+      </div>
+      <div class="goal-detail">
+        <div class="gd-value" style="color:#94a3b8">${never}</div>
+        <div class="gd-label">Jamais verifie</div>
+        <div class="gd-pct" style="color:#94a3b8">${total > 0 ? Math.round(never/total*100) : 0}%</div>
+      </div>
+    `;
+  }
+
+  function renderCoverage(articles) {
+    if (!articles || articles.length === 0) return;
+    const now = Date.now();
+    const DAY = 86400000;
+
+    const total = articles.length;
+    const fresh = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) < 14 * DAY).length;
+    const aging = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY && (now - new Date(a.last_fact_checked).getTime()) < 30 * DAY).length;
+    const stale = articles.filter(a => a.last_fact_checked && (now - new Date(a.last_fact_checked).getTime()) >= 30 * DAY).length;
+    const never = articles.filter(a => !a.last_fact_checked).length;
+
+    document.getElementById('coverageSection').style.display = 'block';
+    document.getElementById('coverageSummary').textContent = `${fresh}/${total} a jour · ${aging + stale + never} a reverifier`;
+
+    // Freshness bar
+    const pct = v => (v / total * 100).toFixed(1);
+    document.getElementById('freshnessBar').innerHTML = [
+      fresh > 0 ? `<div class="fresh-seg fseg-fresh" style="width:${pct(fresh)}%">${fresh}</div>` : '',
+      aging > 0 ? `<div class="fresh-seg fseg-aging" style="width:${pct(aging)}%">${aging}</div>` : '',
+      stale > 0 ? `<div class="fresh-seg fseg-stale" style="width:${pct(stale)}%">${stale}</div>` : '',
+      never > 0 ? `<div class="fresh-seg fseg-never" style="width:${pct(never)}%">${never}</div>` : '',
+    ].join('');
+
+    // Collection breakdown
+    const collections = {};
+    for (const a of articles) {
+      const c = a.collection || 'sans-collection';
+      if (!collections[c]) collections[c] = { total: 0, fresh: 0, aging: 0, stale: 0, never: 0 };
+      collections[c].total++;
+      if (!a.last_fact_checked) collections[c].never++;
+      else {
+        const d = (now - new Date(a.last_fact_checked).getTime()) / DAY;
+        if (d < 14) collections[c].fresh++;
+        else if (d < 30) collections[c].aging++;
+        else collections[c].stale++;
+      }
+    }
+
+    // Populate collection filter
+    const select = document.getElementById('collectionFilter');
+    const existingOptions = select.querySelectorAll('option:not(:first-child)');
+    existingOptions.forEach(o => o.remove());
+    Object.keys(collections).sort().forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = `${c} (${collections[c].total})`;
+      select.appendChild(opt);
+    });
+
+    // Collection grid
+    const sortedColls = Object.entries(collections).sort((a, b) => {
+      const pctA = a[1].fresh / a[1].total;
+      const pctB = b[1].fresh / b[1].total;
+      return pctA - pctB;
+    });
+
+    document.getElementById('collectionGrid').innerHTML = sortedColls.map(([name, c]) => {
+      const pctFresh = Math.round(c.fresh / c.total * 100);
+      let barColor = '#ef4444';
+      if (pctFresh >= 80) barColor = '#22c55e';
+      else if (pctFresh >= 50) barColor = '#f59e0b';
+      return `<div class="coll-card">
+        <div class="coll-name">${esc(name)}</div>
+        <div class="coll-bar"><div class="coll-bar-fill" style="width:${pctFresh}%;background:${barColor}"></div></div>
+        <div class="coll-stats">${c.fresh}/${c.total} a jour (${pctFresh}%)${c.never > 0 ? ` · ${c.never} jamais` : ''}</div>
+      </div>`;
+    }).join('');
+
+    // Stale articles list
+    const staleArticles = articles
+      .filter(a => !a.last_fact_checked || (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY)
+      .slice(0, 15);
+
+    if (staleArticles.length > 0) {
+      const totalStale = articles.filter(a => !a.last_fact_checked || (now - new Date(a.last_fact_checked).getTime()) >= 14 * DAY).length;
+      document.getElementById('staleList').innerHTML = `
+        <div class="stale-list-title">&#x26A0; Articles a re-verifier en priorite (${totalStale} au total)</div>
+        ${staleArticles.map(a => {
+          let daysText, daysClass;
+          const url = articleUrl(a.collection, a.slug);
+          if (!a.last_fact_checked) {
+            daysText = 'Jamais';
+            daysClass = 'sd-never';
+          } else {
+            const days = Math.round((now - new Date(a.last_fact_checked).getTime()) / DAY);
+            if (days > 30) {
+              daysText = days + 'j';
+              daysClass = 'sd-stale';
+            } else {
+              daysText = days + 'j';
+              daysClass = 'sd-aging';
+            }
+          }
+          return `<div class="stale-item">
+            <span class="stale-slug">${url ? `<a href="${url}" target="_blank" title="${esc(a.title)}">${esc(displaySlug(a.slug))}</a>` : `<span title="${esc(a.title)}">${esc(displaySlug(a.slug))}</span>`}</span>
+            <span class="stale-collection">${esc(a.collection || '-')}</span>
+            <span class="stale-days ${daysClass}">${daysText}</span>
+            ${url ? `<a href="${url}" target="_blank" class="stale-link">Voir &#x2197;</a>` : ''}
+          </div>`;
+        }).join('')}
       `;
     }
-  };
+  }
 
-  // ── Modal handlers ──
-  document.getElementById('noteCancel').addEventListener('click', () => {
-    document.getElementById('modal').classList.remove('open');
-    pendingNoteTicketId = null;
-  });
-
-  document.getElementById('noteSend').addEventListener('click', async () => {
-    const note = document.getElementById('noteText').value.trim();
-    if (!note) { showToast('Veuillez saisir une note', ''); return; }
-
-    const sendBtn = document.getElementById('noteSend');
-    sendBtn.disabled = true;
-    sendBtn.textContent = '...';
-
+  async function loadAll() {
     try {
-      await updateTicket(pendingNoteTicketId, {
-        statut: 'revision_needed',
-        human_note: note,
-        reviewed_at: new Date().toISOString()
+      const [results, tickets, articlesRaw] = await Promise.all([
+        sbFetch('fact_check_results', 'select=id,article_id,score_fiabilite,statut,checked_at,articles(id,slug,title,collection)&order=score_fiabilite.asc,checked_at.desc&limit=500'),
+        sbFetch('correction_tickets', 'select=*&source_agent=eq.fact-check&order=created_at.desc&limit=500'),
+        sbFetch('articles', 'select=id,slug,title,collection,is_active,last_fact_checked&is_active=eq.true&order=last_fact_checked.asc.nullsfirst')
+      ]);
+
+      allArticlesData = articlesRaw;
+
+      // Group tickets by fact_check_result_id
+      const ticketsByResult = {};
+      for (const t of tickets) {
+        const key = t.fact_check_result_id;
+        if (key) {
+          if (!ticketsByResult[key]) ticketsByResult[key] = [];
+          ticketsByResult[key].push(t);
+        }
+      }
+
+      // Deduplicate results by article (keep latest)
+      const seen = {};
+      const uniqueResults = [];
+      for (const r of results) {
+        const artId = r.article_id;
+        if (!seen[artId]) {
+          seen[artId] = true;
+          uniqueResults.push(r);
+        }
+      }
+
+      allArticles = uniqueResults.map(r => ({
+        resultId: r.id,
+        articleId: r.article_id,
+        title: r.articles?.title || 'Article inconnu',
+        slug: r.articles?.slug || '-',
+        collection: r.articles?.collection || '',
+        score: r.score_fiabilite || 0,
+        statut: r.statut,
+        checkedAt: r.checked_at,
+        tickets: ticketsByResult[r.id] || []
+      }));
+
+      // Sort: urgent first
+      allArticles.sort((a, b) => a.score - b.score);
+
+      // Stats
+      const urgent = allArticles.filter(a => a.score < 50).length;
+      const warn = allArticles.filter(a => a.score >= 50 && a.score < 75).length;
+      const ok = allArticles.filter(a => a.score >= 75).length;
+
+      document.getElementById('statTotal').textContent = allArticles.length;
+      document.getElementById('statUrgent').textContent = urgent;
+      document.getElementById('statWarn').textContent = warn;
+      document.getElementById('statOk').textContent = ok;
+      document.getElementById('statTickets').textContent = tickets.length;
+
+      // Filter counts
+      const counts = { all: allArticles.length, urgent, warning: warn, ok };
+      document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+        const f = btn.dataset.filter;
+        const existing = btn.querySelector('.filter-count');
+        if (existing) existing.remove();
+        if (counts[f] !== undefined) btn.insertAdjacentHTML('beforeend', `<span class="filter-count">${counts[f]}</span>`);
       });
-      document.getElementById('modal').classList.remove('open');
 
-      const statusEl = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"] .ticket-status`);
-      if (statusEl) {
-        statusEl.className = 'ticket-status status-revision';
-        statusEl.textContent = 'Revision';
-      }
-      const actionsEl = document.querySelector(`[data-ticket-id="${pendingNoteTicketId}"] .ticket-actions`);
-      if (actionsEl) {
-        actionsEl.innerHTML = `<span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--purple)">\u{1F4DD} Note transmise \u00b7 revision en cours</span>`;
-      }
+      renderGoalTracker(articlesRaw);
+      renderDistrib();
+      renderCoverage(articlesRaw);
+      renderArticles();
+      renderPipeline(tickets);
+      loadRuns();
 
-      showToast('\u{1F4DD} Note transmise', 'Agent Editorial va reviser avec votre instruction');
+      document.getElementById('lastUpdate').textContent = 'Mis a jour: ' + new Date().toLocaleTimeString('fr-FR');
     } catch (err) {
-      showToast('Erreur: ' + err.message, '');
+      document.getElementById('articlesContainer').innerHTML = `<div style="background:#fef2f2;border:1px solid #fecaca;padding:1rem;border-radius:10px;color:#991b1b;font-size:0.85rem"><strong>Erreur:</strong> ${esc(err.message)}</div>`;
     }
-    sendBtn.disabled = false;
-    sendBtn.textContent = 'Envoyer a l\'Editorial';
-    pendingNoteTicketId = null;
-  });
+  }
 
-  document.getElementById('modal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-      document.getElementById('modal').classList.remove('open');
-      pendingNoteTicketId = null;
-    }
-  });
-
-  // ── Init ──
-  loadDashboard();
+  loadAll();
+  setInterval(loadAll, 30000);
 </script>
 
 </body>

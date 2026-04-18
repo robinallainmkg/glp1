@@ -4,21 +4,25 @@ description: "Effets secondaires Wegovy : nausées, vomissements, diarrhée. Com
 keywords: ['effets secondaires wegovy', 'wegovy nausées', 'wegovy effets indésirables', 'risques wegovy', 'tolérance wegovy']
 seoTitle: "Effets Secondaires Wegovy : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Wegovy : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+date: '2025-01-28'
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
 image: "/images/thumbnails/effets-secondaires-wegovy-illus.jpg"
+thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnailAlt: "Effets secondaires du traitement wegovy"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Wegovy"
 ---
 
-# Effets Secondaires Wegovy : Guide Complet
+## Effets Secondaires Wegovy : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (85-95% des patients)
+### Troubles digestifs
 
 **Nausées et vomissements**
 - **Fréquence** : Très fréquent (>10%)
@@ -34,7 +38,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Constipation**
 - **Fréquence** : Fréquent (1-10%)
-- **Gestion** : Augmenter les fibres, activité physique
+- **Gestion** : Augmenter les fibres, activité physique. Dans de rares cas, un ralentissement digestif important peut évoquer une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/)
 - **Prévention** : Boire beaucoup d'eau
 
 ### Autres effets fréquents
@@ -56,7 +60,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 ## 🚨 Effets Secondaires Graves
 
-### Pancréatite
+### [Pancréatite](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)
 
 **Signes d'alerte** :
 - Douleurs abdominales intenses
@@ -161,8 +165,8 @@ affiliateCollection: "effets-secondaires-glp1"
 | Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
 |------------|---------|----------|-----------|-------------------|
 | Wegovy | 25-35% | 12-18% | 8-10% | Moyenne |
-| Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
-| Saxenda | 15-25% | 8-12% | 5-8% | Très bonne |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | 20-30% | 10-15% | 10-12% | Bonne |
+| [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | 15-25% | 8-12% | 5-8% | Très bonne |
 | Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
 
 ## 💡 Conseils pour une Bonne Tolérance
@@ -170,7 +174,7 @@ affiliateCollection: "effets-secondaires-glp1"
 ### Préparation mentale
 
 **Se préparer psychologiquement** :
-- Connaître les effets possibles
+- Connaître les effets possibles, notamment les impacts sur la [santé mentale](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
 - Prévoir des aménagements professionnels
 - Avoir un soutien familial
 
@@ -224,24 +228,20 @@ affiliateCollection: "effets-secondaires-glp1"
 
 **Données de pharmacovigilance** :
 - Signalements rares d'effets graves
-- Profil de sécurité favorable
+- Profil de sécurité favorable, avec des [bénéfices cardiovasculaires démontrés par l'étude SELECT](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/)
 - Bénéfice/risque positif
 
 ## 📝 Conclusion
 
-**Wegovy présente des effets secondaires fréquents** mais généralement gérables, avec un profil de tolérance favorable malgré une fréquence légèrement plus élevée que certains concurrents.
+**[Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) présente des effets secondaires fréquents** mais généralement gérables, avec un profil de tolérance favorable malgré une fréquence légèrement plus élevée que certains concurrents.
 
 ### Points clés :
-- **Effets fréquents** : Nausées, diarrhée (85-95% des patients)
+- **Effets fréquents** : Nausées (25-35%), diarrhée (12-18%) — voir tableau détaillé ci-dessus
 - **Effets graves** : Rares (<1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/wegovy.jpg"
-thumbnailAlt: "Effets secondaires du traitement wegovy"
----
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. Si vous vous interrogez sur les conséquences d'un arrêt du traitement, sachez que la [reprise de poids après l'arrêt d'un GLP-1](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/) est un phénomène fréquent qui nécessite un accompagnement médical adapté. Parlez-en à votre médecin pour anticiper cette éventualité.
 
 ## Sommaire
 

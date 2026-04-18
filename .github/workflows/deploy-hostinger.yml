@@ -1,45 +1,85 @@
 name: Deploy to Hostinger
 
 on:
+  workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
   push:
-    branches: [ production ]
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'config/**'
+      - 'astro.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - '.github/workflows/**'
+      # Ignore: .claude/agents/*, scripts/*, n8n/*, supabase/*, CLAUDE.md
+
+# CRITICAL: Cancel any in-progress deploy when a new push arrives
+# Only the latest commit gets deployed — no wasted FTP transfers
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 55
+
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v4
+
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    
+
     - name: Install dependencies
       run: npm ci
-    
+
     - name: Build Astro site
       run: npm run astro:build
-    
-    - name: Deploy via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: 147.79.98.140
-        username: u403023291
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./dist/
-        server-dir: /domains/glp1-france.fr/public_html/
-        port: 21
-        protocol: ftp
-        timeout: 60000
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-        
-    - name: Verify deployment via FTP
+
+    - name: Deploy via lftp (with retry)
       run: |
-        echo "Deployment completed via FTP"
-        echo "Site should be accessible at: https://glp1-france.fr/partenaires"
+        sudo apt-get install -y -qq lftp > /dev/null 2>&1
+
+        # Retry wrapper — up to 3 full attempts
+        for ATTEMPT in 1 2 3; do
+          echo "=== Deploy attempt $ATTEMPT/3 ==="
+          lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
+            set ftp:passive-mode yes;
+            set ftp:ssl-allow no;
+            set ssl:verify-certificate no;
+            set net:timeout 60;
+            set net:max-retries 20;
+            set net:reconnect-interval-base 5;
+            set net:reconnect-interval-multiplier 2;
+            set mirror:parallel-transfer-count 6;
+            set mirror:use-pget-n 1;
+            set ftp:sync-mode off;
+            set xfer:clobber yes;
+            # --ignore-time (-I) : compare par taille uniquement (ignore timestamp).
+            # Les 20k pages pharmacies ont du contenu byte-stable entre builds :
+            # skip si taille identique. 1er deploy ~30min, suivants ~3-5min.
+            mirror --reverse --delete --verbose --no-perms --parallel=6 --ignore-time ./dist/ /domains/glp1-france.fr/public_html/;
+            quit
+          " && echo "Deploy SUCCESS on attempt $ATTEMPT" && exit 0
+
+          echo "Attempt $ATTEMPT failed, waiting 15s..."
+          sleep 15
+        done
+
+        echo "All 3 deploy attempts failed"
+        exit 1
+
+    - name: Verify deployment
+      if: success()
+      run: |
+        sleep 5
+        STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://glp1-france.fr)
+        echo "Site status: $STATUS"
+        if [ "$STATUS" != "200" ]; then
+          echo "Warning: site returned $STATUS"
+        fi

@@ -1,8 +1,8 @@
 ---
-title: "Effets Secondaires Zepbound : Guide Complet et Gestion 2025"
-description: "Découvrez les effets secondaires de Zepbound (tirzepatide). Guide complet des symptômes, fréquence, gestion pratique et conseils pour minimiser les risques de ce traitement GLP-1."
-slug: "effets-secondaires-zepbound"
+title: "Effets Secondaires Zepbound Tirzepatide : Guide Complet 2026"
+description: "Effets secondaires Zepbound tirzepatide : nausées, vomissements, diarrhée, fréquence et conseils pratiques pour minimiser les risques du traitement."
 pubDate: 2025-09-07
+date: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Effets Secondaires"
 tags: ["glp1", "traitements", "nutrition"]
@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article effets-secondaires-zepbound"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "effets secondaires Zepbound tirzepatide"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -23,9 +24,9 @@ affiliateConfig:
   position: "sidebar"
 ---
 
-# Effets Secondaires Zepbound : Guide Complet
+## Effets Secondaires Zepbound : Guide Complet
 
-> **⚠️ Important pour les lecteurs français** : Zepbound est le **nom commercial américain** du tirzepatide pour l'indication obésité. **En Europe et en France, ce même médicament est commercialisé sous le nom Mounjaro.** Zepbound n'a pas d'AMM européenne et n'est pas disponible en France. Les informations ci-dessous concernent le tirzepatide (Mounjaro en France). Consultez notre [guide des effets secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro) pour les informations adaptées au contexte français.
+> **⚠️ Important pour les lecteurs français** : Zepbound est le **nom commercial américain** du tirzepatide pour l'indication obésité. **En Europe et en France, ce même médicament est commercialisé sous le nom Mounjaro.** Zepbound n'a pas d'AMM européenne et n'est pas disponible en France. Les informations ci-dessous concernent le tirzepatide (Mounjaro en France). Consultez notre [guide des effets secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) et notre [guide complet Zepbound](/collections/traitements-glp1/guide-complet-zepbound/) pour les informations adaptées au contexte français.
 
 **Zepbound / Mounjaro** (tirzepatide) est un traitement pour la perte de poids, mais comme tout médicament puissant, il peut provoquer des effets secondaires. Ce guide complet vous aide à les comprendre et les gérer.
 

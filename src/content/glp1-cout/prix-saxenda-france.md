@@ -1,17 +1,20 @@
 ---
-title: "Prix Saxenda 2026 : Coût, Remboursement et Mutuelle en France"
-description: "Prix Saxenda en pharmacie (240-300€/mois, non remboursé). Comparatif des coûts GLP-1, couverture mutuelle et aides financières."
+title: "Prix Saxenda France 2026 : Coût, Remboursement et Mutuelle"
+thumbnail: "/images/thumbnails/prix-saxenda-france-illus.jpg"
+description: "Prix Saxenda France : 240-300€/mois, non remboursé par la Sécurité Sociale. Couverture mutuelle, comparatif des coûts GLP-1 et aides financières."
 keywords: ['prix saxenda', 'saxenda pharmacie', 'remboursement saxenda', 'mutuelle saxenda', 'coût traitement saxenda']
-seoTitle: "Prix Saxenda 2026 : Combien coûte Saxenda en France ?"
-seoDescription: "Prix Saxenda en pharmacie française : 240-300€/mois, non remboursé. Couverture mutuelle, comparatif GLP-1 et aides disponibles."
+seoTitle: "Prix Saxenda France 2026 : Combien coûte Saxenda en pharmacie ?"
+seoDescription: "Prix Saxenda France en pharmacie : 240-300€/mois, non remboursé. Couverture mutuelle, comparatif GLP-1 et aides disponibles pour 2026."
 publishedAt: '2025-01-28'
 updatedAt: '2026-03-08'
+date: 2026-03-08
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 8
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
 image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
+mainKeyword: "prix Saxenda France"
 ---
 <script type="application/ld+json">
 {
@@ -73,14 +76,14 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 |--------|----------------|-------------------|
 | 6 mg/ml (dose max 3 mg/jour) | 240-300 € | 240-300 € |
 
-**Prix moyen mensuel** : 240-300 € (prix libre, non remboursé)
+**Prix moyen mensuel** : 240-300 € (prix libre, non remboursé). Consultez notre article dédié au [prix de Saxenda en pharmacie en France](/collections/glp1-cout/saxenda-prix-pharmacie/) pour un comparatif détaillé par dosage.
 
 ### Comparaison avec autres GLP-1
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Saxenda | 240-300 € | Non remboursé |
-| Ozempic | ~59,90 €/stylo | 65% (DT2 uniquement) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Trulicity | 85 € | 65% (DT2 uniquement) |
 
@@ -88,7 +91,7 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 
 ### Saxenda n'est PAS remboursé
 
-**Saxenda n'est pas remboursé** par l'Assurance Maladie en France. Son prix est libre et fixé par chaque pharmacie.
+**Saxenda n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie en France. Son prix est libre et fixé par chaque pharmacie.
 
 ❌ **Pas de remboursement Sécurité sociale**
 ❌ **Pas de prise en charge au titre de l'ALD**
@@ -193,14 +196,14 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 
 | Critère | Saxenda | Ozempic | Wegovy |
 |---------|---------|--------|---------|
-| Prix mensuel | 240-300 € | ~59,90 €/stylo | 169-360 € |
+| Prix mensuel | 240-300 € | ~77,60 €/stylo | 169-360 € |
 | Perte poids moyenne | -8% | -15% | -20% |
-| Remboursement | Non remboursé | 65% (DT2 uniquement) | Non remboursé |
+| Remboursement | Non remboursé | 30% (DT2 uniquement) | Non remboursé |
 | Rapport qualité/prix | Élevé (non remboursé) | Bon (si DT2) | Élevé (non remboursé) |
 
 ## 📝 Conclusion
 
-**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à Ozempic (remboursé pour le DT2), Saxenda et Wegovy sont entièrement à la charge du patient.
+**Saxenda est un traitement GLP-1 non remboursé** dont le coût reste élevé. Contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) (remboursé pour le DT2), Saxenda et Wegovy sont entièrement à la charge du patient. Pour connaître les options de prise en charge, consultez notre guide sur le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ### Points clés à retenir :
 - **Prix moyen** : 240-300 €/mois (prix libre)
@@ -211,8 +214,6 @@ image: "/images/thumbnails/prix-saxenda-france-illus.jpg"
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
 
-thumbnail: "/images/thumbnails/saxenda-medical-guide.jpg"
-thumbnailAlt: "Prix et coût du traitement saxenda-france"
 ---
 
 ## Sommaire

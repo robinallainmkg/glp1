@@ -4,6 +4,8 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Hotjar from '../components/Hotjar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import AiCoach from '../components/AiCoach.astro';
+import AffiliateTracker from '../components/AffiliateTracker.astro';
 
 export interface Props {
   title: string;
@@ -15,19 +17,22 @@ export interface Props {
   url?: string;
   type?: string;
   author?: string;
+  robots?: string;
 }
 
-const { 
-  title, 
-  description, 
-  keywords = "", 
+const {
+  title,
+  description,
+  keywords = "",
   image = "/og-image.svg",
   url,
   type = "website",
-  author = "Équipe GLP-1 France"
+  author = "Équipe GLP-1 France",
+  robots
 } = Astro.props;
 
 const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
+const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).href;
 ---
 
 <!DOCTYPE html>
@@ -51,79 +56,45 @@ const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
   <meta name="description" content={description}>
   {keywords && <meta name="keywords" content={keywords}>}
   {author && <meta name="author" content={author}>}
-  
+  {robots && <meta name="robots" content={robots}>}
+
   <!-- Open Graph -->
   <meta property="og:type" content={type}>
   <meta property="og:url" content={canonicalURL}>
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
-  <meta property="og:image" content={image}>
-  
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:site_name" content="GLP-1 France">
+
   <!-- Twitter Card -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content={canonicalURL}>
   <meta property="twitter:title" content={title}>
   <meta property="twitter:description" content={description}>
-  <meta property="twitter:image" content={image}>
+  <meta property="twitter:image" content={ogImage}>
 
   <!-- Structured Data -->
-  <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "{title}",
-      "description": "{description}",
-      "url": "{canonicalURL}",
-      "author": {
-        "@type": "Organization",
-        "name": "GLP-1 France"
-      }
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description || "",
+    "url": canonicalURL.toString(),
+    "author": {
+      "@type": "Organization",
+      "name": "GLP-1 France"
     }
-  </script>
+  })} />
 
   <!-- Google Analytics -->
   <GoogleAnalytics />
   
   <!-- Hotjar Tracking -->
   <Hotjar />
-  
-  <!-- Tawk.to Chat Widget -->
-  <script type="text/javascript" is:inline>
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/68e7acb49820fe194b817deb/1j74fl8ck';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-  
-  <!-- Configuration Tawk.to en français -->
-  <script type="text/javascript" is:inline>
-    // Attendre que Tawk.to soit chargé
-    var Tawk_API = Tawk_API || {};
-    Tawk_API.onLoad = function(){
-      console.log('✅ Tawk.to chat chargé avec succès !');
-      
-      // Personnalisation
-      Tawk_API.setAttributes({
-        'name': 'Visiteur GLP-1 France',
-        'email': ''
-      }, function(error){
-        if(error) {
-          console.error('Erreur configuration Tawk.to:', error);
-        }
-      });
-    };
-    
-    // Message de bienvenue personnalisé (optionnel)
-    Tawk_API.onChatStarted = function(){
-      console.log('💬 Conversation démarrée');
-    };
-  </script>
-  
+
+  <!-- A/B Testing Engine (before body to avoid flicker) -->
+  <script src="/ab-engine.js" is:inline></script>
+
 </head>
 
 <body class="bg-white text-gray-900 font-sans">
@@ -131,12 +102,16 @@ const canonicalURL = new URL(url || Astro.url.pathname, Astro.site);
   <SiteHeader />
 
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
     <slot />
   </main>
 
   <!-- Footer -->
   <SiteFooter />
+
+  <!-- Coach IA GLP-1 -->
+  <AiCoach />
+  <AffiliateTracker />
 
   <!-- JavaScript pour la navigation -->
   <script is:inline>

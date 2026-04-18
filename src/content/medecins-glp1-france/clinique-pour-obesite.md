@@ -1,17 +1,18 @@
 ---
-title: "Clinique Pour Obesite : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet des cliniques spécialisées dans l'obésité en France. Trouvez les meilleurs centres médicaux pour votre prise en charge GLP-1."
-slug: "clinique-pour-obesite"
+title: "Clinique Pour Obésité France GLP-1 : Guide Complet 2026"
+description: "Clinique pour obésité France GLP-1 : trouvez les meilleurs centres spécialisés avec prise en charge GLP-1. Guide complet 2026."
 pubDate: 2025-08-20
+date: '2026-03-17'
 author: "Dr. Émilie Martin"
 category: "Médecins spécialisés"
-tags: ["glp1", "medecins", "specialistes"]
+tags: ["glp1", "medecins", "spécialistes"]
 collection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/clinique-pour-obesite.jpg"
 thumbnailAlt: "Illustration pour l'article clinique-pour-obesite"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "clinique pour obésité France GLP-1"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -50,8 +51,8 @@ Vous recherchez une clinique spécialisée dans le traitement de l'obésité ? C
 **Services proposés :**
 - Consultations endocrinologie-nutrition
 - Bilans métaboliques complets
-- Prescription de GLP-1 (Ozempic, Wegovy)
-- Chirurgie bariatrique
+- Prescription de GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic), Wegovy) selon les [règles de prescription des GLP-1 selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
+- <a href="/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/">Chirurgie bariatrique</a>
 - Suivi psychologique
 - Programmes d'éducation thérapeutique
 
@@ -84,6 +85,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **3. Services disponibles :**
 - Prescription de médicaments (GLP-1, etc.)
+- Orientation vers un [endocrinologue spécialisé en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)
 - Bilans biologiques complets
 - Soutien psychologique
 - Programmes d'exercices adaptés
@@ -160,7 +162,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Médicaments GLP-1 disponibles :**
 - **Ozempic** (sémaglutide) - Pour diabète + obésité
-- **Wegovy** (sémaglutide haute dose) - Spécial obésité
+- [**Wegovy** (sémaglutide haute dose)](/collections/traitements-glp1/guide-complet-wegovy/) - Spécial obésité
 - **Saxenda** (liraglutide) - Première intention souvent
 - **Trulicity** (dulaglutide) - Alternative
 
@@ -314,11 +316,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Maintenez le lien avec l'équipe soignante
 - Ne vous découragez pas en cas de plateau
 
-- [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-- [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
-- [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-- [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-- [prix Wegovy](../glp1-cout/wegovy-prix/)
+- [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
+- [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+- [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+- [prix Wegovy](/collections/glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

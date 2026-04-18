@@ -1,8 +1,10 @@
 ---
-title: "Centres Spécialisés Mounjaro en France 2025 🏥"
-description: "Liste des centres hospitaliers et spécialistes qui proposent Mounjaro en France. Carte interactive, démarches, et conseils pour accéder au traitement."
+title: "Centres Mounjaro France 2026 : Liste et Accès au Traitement"
+slug: "centres-mounjaro-france"
+description: "Centres Mounjaro France 2026 : liste des centres hospitaliers et spécialistes. Carte interactive, démarches et conseils pour accéder au traitement."
 author: "Dr. Sophie Martin"
 pubDate: 2025-10-09T10:00:00Z
+date: "2025-10-09"
 category: "Traitements GLP-1"
 tags: ["mounjaro", "accès", "centres", "france", "carte"]
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
@@ -13,13 +15,13 @@ mainKeyword: "centres mounjaro france"
 secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu", "accès mounjaro france"]
 ---
 
-# 🏥 Centres Spécialisés Mounjaro en France 2025
+## Centres Specialises Mounjaro en France 2026
 
-**Mise à jour : 9 octobre 2025**
+**Mise à jour : mars 2026**
 
 <div style="background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%); border-left: 5px solid #FF9800; padding: 1.5rem; margin: 2rem 0; border-radius: 12px;">
   
-📢 **Important** : Mounjaro (tirzepatide) est en déploiement progressif en France depuis son autorisation européenne (AMM) en 2022. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
+📢 **Important** : Mounjaro (tirzepatide) a obtenu son autorisation de mise sur le marché (AMM) européenne en septembre 2022 et est commercialisé en France depuis novembre 2024. Cette page recense les centres et spécialistes qui proposent actuellement le traitement.
 
 </div>
 
@@ -40,7 +42,7 @@ secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu"
 - **Comment prendre RDV** :
   - Nécessite une lettre de votre médecin traitant
   - Rendez-vous via Doctolib ou standard téléphonique
-  - Critères : Diabète type 2 + IMC >30 ou IMC >27 avec comorbidités
+  - Critères : Diabète type 2 + IMC >30 ou IMC >27 avec comorbidités — voir le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) prescrit selon le profil
 
 **🏥 Hôpital Saint-Louis**
 - **Service** : Endocrinologie-Diabétologie
@@ -252,9 +254,8 @@ secondaryKeywords: ["mounjaro hôpitaux", "où trouver mounjaro", "mounjaro chu"
 - Traitements antidiabétiques déjà essayés (si diabète type 2)
 
 **Critères d'éligibilité** :
-- ✅ Diabète type 2 + IMC ≥27 avec comorbidité (hypertension, apnée du sommeil, etc.)
-- ✅ Diabète type 2 + IMC ≥30
-- ✅ Échec des traitements antidiabétiques de 1ère ligne (metformine, etc.)
+- ✅ **Diabète type 2** : IMC ≥27 avec comorbidité (hypertension, apnée du sommeil, etc.) ou IMC ≥30, en cas d'échec des traitements de 1re ligne (metformine, etc.)
+- ✅ **Obésité sans diabète** : IMC ≥30 (ou IMC ≥27 avec comorbidité) — indication reconnue depuis l'AMM européenne de décembre 2023 pour la gestion du poids
 
 ---
 
@@ -302,8 +303,8 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 #### A) Pharmacie de ville (si disponible)
 - Ordonnance sécurisée du spécialiste
-- Vérifiez la disponibilité avant (stock limité en 2025)
-- Prix : ~285€/mois (non remboursé actuellement)
+- Vérifiez la disponibilité avant (stock limité en 2026)
+- Prix : 230€ à 440€/mois selon dosage (non remboursé actuellement)
 
 #### B) Importation nominative
 - Demande spéciale via le pharmacien hospitalier
@@ -312,22 +313,23 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 ---
 
-## 💰 Coûts & Remboursement
+## 💰 Coûts & <a href="/collections/glp1-cout/remboursement-glp1-2026/">Remboursement</a>
 
-### Prix actuel (2025)
+### Prix actuel (2026)
 
 | Aspect | Détail |
 |--------|--------|
-| **Prix Mounjaro** | ~285€/mois |
-| **Remboursement Sécu** | ⏳ En attente évaluation HAS |
-| **Remboursement Mutuelle** | Selon contrat (rare) |
+| **Prix Mounjaro** | 230€ à 440€/mois selon dosage (prix libre en pharmacie) |
+| **Remboursement Sécu** | ⏳ Avis favorable HAS (déc. 2025) — Remboursement prévu 2e semestre 2026 |
+| **Remboursement Mutuelle** | Selon contrat (variable) |
 | **Prescription** | Sur ordonnance uniquement |
 
-### Évolution attendue
+### Évolution du remboursement
 
-📅 **2025** : Dossier HAS en cours d'évaluation
-- Si avis favorable : remboursement 65% (Sécu) + mutuelle
-- Critères : Diabète type 2 + échec metformine
+📅 **Décembre 2025** : La HAS a rendu un **avis favorable** au remboursement de Mounjaro pour le diabète de type 2.
+- Des négociations de prix avec le CEPS sont en cours
+- Le remboursement à 65% est attendu pour le 2e semestre 2026
+- Critères prévisionnels : Diabète de type 2 insuffisamment contrôlé, IMC ≥ 30 kg/m²
 
 ---
 
@@ -335,10 +337,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 ### Puis-je obtenir Mounjaro sans passer par un centre spécialisé ?
 
-**Non**, actuellement Mounjaro nécessite :
-- Une prescription d'un endocrinologue ou diabétologue
-- Un suivi médical régulier
-- Des critères d'éligibilité stricts
+**Oui, depuis juin 2025**, tout médecin, y compris votre médecin généraliste, peut prescrire Mounjaro (tirzépatide) en initiation comme en renouvellement, suite à une décision de l'ANSM. Vous n'avez donc plus besoin de consulter un endocrinologue ou un diabétologue pour obtenir une première ordonnance. Un suivi médical régulier reste toutefois indispensable pour ajuster le dosage et surveiller les effets du traitement.
 
 ⚠️ **Attention** : Évitez les sites internet qui proposent Mounjaro sans ordonnance (contrefaçons dangereuses).
 
@@ -357,15 +356,13 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 ### Mon médecin traitant peut-il prescrire Mounjaro directement ?
 
-**Généralement non** en 2025. La prescription initiale doit être faite par un spécialiste (endocrinologue/diabétologue).
-
-**Exception** : Si vous êtes déjà sous Mounjaro, votre médecin traitant peut renouveler l'ordonnance après avis du spécialiste.
+**Oui**, depuis juin 2025, votre médecin traitant peut prescrire Mounjaro directement, aussi bien en initiation qu'en renouvellement (décision ANSM). Il n'est plus nécessaire de passer par un spécialiste, même pour la première prescription.
 
 ---
 
 ### Mounjaro est-il disponible dans toutes les pharmacies ?
 
-**Non**, en 2025 la disponibilité est encore limitée :
+**Non**, en 2026 la disponibilité est encore limitée :
 - Certaines pharmacies hospitalières
 - Quelques pharmacies de ville (stock limité)
 - Importation nominative si indisponible
@@ -378,10 +375,10 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 **Alternatives** :
 
-1. **Ozempic** (sémaglutide)
+1. **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)** (sémaglutide)
    - ✅ Disponible en France
    - ✅ Remboursé si diabète type 2
-   - Efficacité : -15% de poids (vs -20% pour Mounjaro)
+   - Efficacité : -5 à 7% de poids avec Ozempic (dose diabète) ; -15% avec [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) (dose obésité) (vs -20% pour Mounjaro)
 
 2. **Wegovy** (sémaglutide haute dose)
    - ✅ Disponible en France
@@ -436,7 +433,7 @@ Nous travaillons sur une carte interactive qui vous permettra de :
 - ⭐ Consulter les avis des patients
 - 📞 Prendre rendez-vous directement
 
-**Disponibilité prévue** : Fin 2025
+**Disponibilité prévue** : 2026
 
 ---
 
@@ -448,7 +445,7 @@ Cette page est mise à jour régulièrement avec :
 - ✅ Changements de remboursement
 - ✅ Retours d'expérience des patients
 
-**Dernière mise à jour** : 9 octobre 2025
+**Dernière mise à jour** : mars 2026
 
 ---
 
@@ -474,7 +471,7 @@ Cette page est mise à jour régulièrement avec :
 **📊 Suivi recommandé** :
 - Pesée hebdomadaire (même jour, même heure)
 - Mesure glycémie (si diabétique)
-- Journal des effets secondaires
+- Journal des [effets secondaires du tirzépatide](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)
 - Photos "avant/après" (motivation)
 
 **🩺 Consultations régulières** :
@@ -510,6 +507,6 @@ Vous avez des questions sur l'accès à Mounjaro dans votre région ? Utilisez l
 
 ---
 
-**Auteur** : Dr. Sophie Martin, Endocrinologue  
-**Date de publication** : 9 octobre 2025  
-**Dernière mise à jour** : 9 octobre 2025
+**Auteur** : Dr. Sophie Martin, Endocrinologue
+**Date de publication** : 9 octobre 2025
+**Dernière mise à jour** : mars 2026

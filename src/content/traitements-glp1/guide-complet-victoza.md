@@ -1,15 +1,19 @@
 ---
-title: "Guide Complet Victoza : Prix, Effets Secondaires et Posologie"
-description: "Découvrez tout sur Victoza : traitement GLP-1 pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
+title: "Victoza Guide Complet France : Liraglutide, Prix et Effets"
+thumbnail: "/images/thumbnails/guide-complet-victoza-illus.jpg"
+slug: "guide-complet-victoza"
+description: "Victoza guide complet France liraglutide : traitement GLP-1 pour le diabète de type 2. Prix, effets secondaires, posologie et alternatives."
 author: "Dr. Martin"
 image: "/images/thumbnails/victoza-medical-guide.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["victoza", "glp-1", "diabète", "traitement", "injection"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
+mainKeyword: "victoza guide complet france liraglutide"
 ---
 
-# Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire
+## Guide Complet Victoza : Tout Savoir sur ce Traitement Révolutionnaire
 
 <div class="guide-buttons">
   <a href="/collections/glp1-cout/prix-victoza-france" class="guide-button primary">
@@ -56,7 +60,7 @@ Victoza est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,0 à -1,5%)
 - Perte de poids moyenne de 2-3 kg
-- Réduction du risque cardiovasculaire
+- Réduction du [risque cardiovasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/)
 - Injection quotidienne
 
 ### Efficacité prouvée
@@ -103,7 +107,7 @@ Victoza s'administre une fois par jour, à la même heure chaque jour.
 **Augmentation progressive** :
 - Semaine 1 : 0,6 mg/jour
 - Semaine 2 : 1,2 mg/jour
-- Surveillance des effets secondaires
+- Surveillance des [effets secondaires de Victoza](/collections/effets-secondaires-glp1/effets-secondaires-victoza/)
 - Premiers signes d'efficacité
 
 ### Étape 4 : Traitement d'entretien (à partir de 2 semaines)
@@ -122,13 +126,13 @@ Victoza s'administre une fois par jour, à la même heure chaque jour.
 ## Alternatives à Victoza
 
 ### Autres GLP-1 injectables
-- **Ozempic** : Semaglutide (injection hebdomadaire)
-- **Trulicity** : Dulaglutide (injection hebdomadaire)
-- **Saxenda** : Liraglutide à 3 mg (pour l'obésité)
+- [**Ozempic (sémaglutide)**](/collections/traitements-glp1/guide-complet-ozempic/) : injection hebdomadaire
+- [**Trulicity**](/collections/traitements-glp1/guide-complet-trulicity/) : Dulaglutide (injection hebdomadaire)
+- [**Saxenda (liraglutide)**](/collections/traitements-glp1/guide-complet-saxenda/) : liraglutide à 3 mg (pour l'obésité)
 - **Adlyxin** : Lixisénatide (injection quotidienne)
 
 ### Alternatives orales
-- **Rybelsus** : Semaglutide oral (jusqu'à 14 mg/jour)
+- **[Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/)** : Semaglutide oral (jusqu'à 14 mg/jour)
 
 ### Traitements conventionnels
 - Metformine
@@ -152,12 +156,11 @@ Non, Victoza est spécifiquement indiqué pour le diabète de type 2.
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Victoza est-il remboursé ?
-Victoza est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2**. Son prix a baissé à **60,26 € par mois** depuis février 2025. Depuis le 1er février 2025, un formulaire de prescription obligatoire doit accompagner l'ordonnance pour que le remboursement soit effectif.
+Victoza est remboursé à **65 %** par l'Assurance Maladie (100 % en ALD) **uniquement pour le diabète de type 2** — voir notre guide sur le [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Consultez notre guide sur les [prix Victoza en France](/collections/glp1-cout/prix-victoza-france/) pour le détail des tarifs depuis février 2025. Depuis le 1er février 2025, un formulaire de [prescription](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) obligatoire doit accompagner l'ordonnance pour que le remboursement soit effectif.
 
 ### Puis-je arrêter Victoza brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale.
+Non, l'arrêt doit être progressif sous surveillance médicale. Attention : Novo Nordisk a annoncé l'[arrêt de commercialisation de Victoza en 2026](/collections/traitements-glp1/victoza-arret-commercialisation-alternative-2026/). Pour comprendre ce qui se passe après l'[arrêt du traitement Victoza et la reprise de poids](/collections/glp1-perte-de-poids/arret-glp1-reprise-poids-effet-yoyo-eviter/), consultez notre guide dédié.
 
 ---
 
-*Ce guide complet sur Victoza est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-victoza.md
+*Ce guide complet sur Victoza est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

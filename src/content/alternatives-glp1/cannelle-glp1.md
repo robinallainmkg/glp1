@@ -1,8 +1,8 @@
 ---
-title: "Cannelle GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Cannelle GLP-1 : informations médicales et recommandations d'experts."
-slug: "cannelle-glp1"
+title: "Cannelle GLP-1 diabète glycémie : Guide Complet 2026"
+description: "La cannelle GLP-1 peut-elle réguler la glycémie chez les patients diabétiques ? Données scientifiques, dosage, précautions et recommandations médicales."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Cannelle GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "cannelle GLP-1 diabète glycémie"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -49,7 +50,7 @@ Selon les endocrinologues français... Cette approche s'inscrit dans les recomma
 - **Rapport bénéfice/risque** : Évaluation individuelle nécessaire
 - **Suivi long terme** : Protocoles établis
 
-Les GLP-1, agonistes GLP-1, diabète type 2 sont des éléments clés dans ce domaine médical.
+Les GLP-1, agonistes GLP-1, [diabète type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) sont des éléments clés dans ce domaine médical.
 
 
 
@@ -126,11 +127,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
-- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
-- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
+- [plantes anti-diabète](/collections/alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

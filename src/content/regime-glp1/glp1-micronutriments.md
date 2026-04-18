@@ -1,22 +1,23 @@
 ---
-title: "Micronutriments GLP-1 : Supplémentation Vitamines et Minéraux Essentiels 2025"
-slug: "glp1-micronutriments"
+title: "Vitamines et GLP-1 : Carences et Supplémentation"
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
-description: "Guide expert des micronutriments sous GLP-1. Supplémentation personnalisée, bilans biologiques recommandés, et prévention des carences nutritionnelles pendant votre traitement."
+description: "Micronutriments et vitamines sous GLP-1 : prévenir les carences et adapter votre supplémentation. Guide expert avec bilans biologiques recommandés."
 category: "Nutrition"
-tags: ["glp1", "regime", "nutrition"]
-collection: "regime-glp1"
+tags: ["glp1", "régime", "nutrition"]
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/glp1-micronutriments.jpg"
 thumbnailAlt: "Illustration pour l'article glp1-micronutriments"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "micronutriments vitamines GLP-1 carences supplémentation"
 
-# Configuration Affiliation
+## Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enableAutoInjection: true
   mobileStrategy: "both"
@@ -24,10 +25,14 @@ affiliateConfig:
   inlinePositions: [2, 5, 9]
 ---
 
+## Vitamines et GLP-1 : Carences et Supplémentation
+
+## Vitamines et GLP-1 : Prévenir les Carences sous Traitement
+
 ## Sommaire
 
 
-<!-- 
+<!--
 SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Layout: ArticleWithAffiliateSidebar
 - Produits: Configurés par collection
@@ -88,13 +93,16 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Contre-indications** : Vérification préalable obligatoire
 - **Interactions** : Attention médicaments concomitants
 - **Effets secondaires** : Surveillance symptômes
+- **[Carences](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : Bilan sanguin recommandé sous traitement GLP-1
 - **Urgences** : Protocoles d'action définis
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés
+- **Suivi biologique** : Bilans réguliers programmés pour prévenir les [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
+
+En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) pour maintenir votre masse musculaire pendant le traitement.
 
 ## Produits cosmétiques recommandés
 
@@ -108,11 +116,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Applications mobiles** : Aide observance
 - **Documentation** : Carnets suivi personnalisés
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
-- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
-- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
+- [plantes anti-diabète](/collections/alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

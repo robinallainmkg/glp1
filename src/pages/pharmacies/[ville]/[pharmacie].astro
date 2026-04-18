@@ -1,0 +1,343 @@
+---
+import StaticLayout from '../../../layouts/StaticLayout.astro';
+import { computePharmacyPrices, slugifyName } from '../../../lib/pharmacyPricing';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const dataPath = path.resolve(process.cwd(), 'public/data/pharmacies.json');
+  let pharmacies = { schema: [], rows: [] };
+  try { pharmacies = JSON.parse(fs.readFileSync(dataPath, 'utf-8')); } catch {}
+
+  const iId = pharmacies.schema.indexOf('id');
+  const iFin = pharmacies.schema.indexOf('finess');
+  const iName = pharmacies.schema.indexOf('name');
+  const iCity = pharmacies.schema.indexOf('city');
+  const iSlug = pharmacies.schema.indexOf('city_slug');
+  const iCP = pharmacies.schema.indexOf('postal_code');
+  const iDept = pharmacies.schema.indexOf('department');
+  const iLat = pharmacies.schema.indexOf('lat');
+  const iLng = pharmacies.schema.indexOf('lng');
+
+  // Génère une page par pharmacie. Pour éviter des collisions de slug dans la même ville,
+  // on suffixe le slug avec les 4 derniers chars du FINESS si plusieurs pharmacies ont le même nom.
+  const paths = [];
+  const slugSeen = new Map<string, number>(); // "city|slug" -> count
+  for (const row of pharmacies.rows) {
+    const citySlug = row[iSlug];
+    const finess = row[iFin];
+    const name = row[iName];
+    if (!citySlug || !finess || !name) continue;
+    let pharmaSlug = slugifyName(name);
+    if (!pharmaSlug) continue;
+    const key = citySlug + '|' + pharmaSlug;
+    const seenCount = slugSeen.get(key) || 0;
+    slugSeen.set(key, seenCount + 1);
+    if (seenCount > 0) pharmaSlug = pharmaSlug + '-' + String(finess).slice(-4);
+    paths.push({
+      params: { ville: citySlug, pharmacie: pharmaSlug },
+      props: {
+        pharmacy: {
+          id: row[iId],
+          finess,
+          name,
+          city: row[iCity],
+          city_slug: citySlug,
+          postal: row[iCP],
+          department: row[iDept],
+          lat: row[iLat],
+          lng: row[iLng],
+        },
+      },
+    });
+  }
+  return paths;
+}
+
+const { pharmacy } = Astro.props;
+
+function titleCase(s: string) {
+  return (s || '').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+}
+const nameCap = titleCase(pharmacy.name);
+const cityCap = titleCase(pharmacy.city);
+const prices = computePharmacyPrices(pharmacy.finess, pharmacy.department);
+
+const title = `${nameCap} ${cityCap} — Prix Ozempic, Wegovy, Mounjaro`;
+const description = `Prix GLP-1 à ${nameCap} (${pharmacy.postal} ${cityCap}). Ozempic 77,60 € officiel CEPS, estimations Wegovy/Mounjaro/Saxenda par dosage.`;
+
+// Position pour la map — bbox étroit autour de la pharmacie
+const bbox = [
+  Number(pharmacy.lng) - 0.01, Number(pharmacy.lat) - 0.006,
+  Number(pharmacy.lng) + 0.01, Number(pharmacy.lat) + 0.006,
+];
+
+// FAQ
+const faq = [
+  {
+    q: `Quels traitements GLP-1 sont disponibles à ${nameCap} ?`,
+    a: `Comme toutes les pharmacies d'officine françaises, ${nameCap} peut délivrer Ozempic, Wegovy, Mounjaro et Saxenda sur présentation d'une ordonnance médicale. Les stocks peuvent varier — contactez la pharmacie pour confirmer la disponibilité.`,
+  },
+  {
+    q: `Pourquoi les prix Wegovy et Mounjaro varient-ils d'une pharmacie à l'autre ?`,
+    a: `Wegovy, Mounjaro et Saxenda sont en "prix libéré" : chaque pharmacie fixe son tarif. Seul Ozempic a un prix public CEPS identique partout (77,60 € par stylo, remboursé à 30% pour le diabète de type 2). Les prix affichés ici sont des estimations basées sur la moyenne marché + variance géographique.`,
+  },
+  {
+    q: `Faut-il une ordonnance pour obtenir un GLP-1 ?`,
+    a: `Oui, tous les traitements GLP-1 sont sur ordonnance médicale. Depuis juin 2025, la restriction aux endocrinologues a été levée : tout médecin peut désormais prescrire Wegovy et les autres agonistes GLP-1. Vous pouvez consulter en téléconsultation pour gagner du temps.`,
+  },
+];
+---
+
+<StaticLayout title={title} description={description} keywords={`${nameCap}, pharmacie ${pharmacy.postal}, prix Ozempic ${cityCap}, prix Mounjaro ${pharmacy.postal}`}>
+  <!-- Schema.org : Pharmacy + Breadcrumb + FAQ -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Pharmacy",
+        "@id": `https://glp1-france.fr/pharmacies/${pharmacy.city_slug}/${Astro.params.pharmacie}/#pharmacy`,
+        "name": nameCap,
+        "address": {
+          "@type": "PostalAddress",
+          "postalCode": pharmacy.postal,
+          "addressLocality": cityCap,
+          "addressCountry": "FR",
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": pharmacy.lat,
+          "longitude": pharmacy.lng,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://glp1-france.fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Pharmacies", "item": "https://glp1-france.fr/pharmacies/" },
+          { "@type": "ListItem", "position": 3, "name": cityCap, "item": `https://glp1-france.fr/pharmacies/${pharmacy.city_slug}/` },
+          { "@type": "ListItem", "position": 4, "name": nameCap },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faq.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })),
+      },
+    ],
+  })} />
+
+  <div class="pharma-page">
+    <section class="pharma-hero">
+      <div class="pharma-hero-inner">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a> <span>›</span>
+          <a href="/pharmacies/">Pharmacies</a> <span>›</span>
+          <a href={`/pharmacies/${pharmacy.city_slug}/`}>{cityCap}</a> <span>›</span>
+          <strong>{nameCap}</strong>
+        </nav>
+        <h1>{nameCap}</h1>
+        <p class="pharma-addr">{pharmacy.postal} {cityCap} · Département {pharmacy.department}</p>
+        <div class="pharma-ctas">
+          <a href={`/pharmacies/cp/${pharmacy.postal}/`} class="btn-secondary">Autres pharmacies {pharmacy.postal}</a>
+          <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Voir sur la carte →</a>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nameCap + ' ' + pharmacy.postal + ' ' + cityCap)}`} target="_blank" rel="noopener" class="btn-ghost">Google Maps ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pharma-map-section">
+      <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+      <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" is:inline></script>
+      <div id="pharma-map"></div>
+      <script is:inline define:vars={{ lat: pharmacy.lat, lng: pharmacy.lng, name: nameCap, bbox }}>
+        (function () {
+          if (typeof maplibregl === 'undefined') return;
+          const map = new maplibregl.Map({
+            container: 'pharma-map',
+            style: {
+              version: 8,
+              sources: { tiles: { type: 'raster', tiles: ['https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'], tileSize: 256, attribution: '© OSM · CARTO' } },
+              layers: [{ id: 'bg', type: 'raster', source: 'tiles' }],
+            },
+            bounds: [[bbox[0], bbox[1]], [bbox[2], bbox[3]]],
+            fitBoundsOptions: { padding: 40, maxZoom: 16 },
+          });
+          map.addControl(new maplibregl.NavigationControl(), 'top-right');
+          const ready = new Promise((resolve) => {
+            let done = false;
+            const go = () => { if (done) return; done = true; resolve(); };
+            map.on('styledata', () => { if (map.isStyleLoaded()) go(); });
+            map.on('load', go);
+            setTimeout(go, 6000);
+          });
+          ready.then(() => {
+            new maplibregl.Marker({ color: '#16a34a' })
+              .setLngLat([Number(lng), Number(lat)])
+              .setPopup(new maplibregl.Popup().setHTML('<strong>' + name + '</strong>'))
+              .addTo(map);
+          });
+        })();
+      </script>
+    </section>
+
+    <section class="pharma-prices">
+      <div class="pharma-section-inner">
+        <h2>Prix des traitements GLP-1 à {nameCap}</h2>
+        <p class="prices-intro">Tableau complet des prix par traitement et dosage. <strong>Ozempic</strong> = prix CEPS légal identique France entière. <strong>Wegovy, Mounjaro, Saxenda</strong> = prix libéré, estimation basée sur la moyenne marché + variance géographique pour cette pharmacie.</p>
+
+        <div class="drug-sections">
+          {Object.entries(prices).map(([slug, d]) => (
+            <div class="drug-section">
+              <div class="drug-section-head">
+                <h3>{d.name}</h3>
+                <span class={`src-badge ${d.fixed ? 'src-off' : 'src-est'}`}>{d.fixed ? 'Officiel CEPS' : 'Estimation'}</span>
+              </div>
+              <p class="drug-note">{d.note}</p>
+              <table class="price-table">
+                <thead>
+                  <tr><th>Dosage</th><th>Prix</th></tr>
+                </thead>
+                <tbody>
+                  {d.rows.map((r) => (
+                    <tr>
+                      <td>{r.dose}</td>
+                      <td><strong>{r.price.toFixed(2)} €</strong></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder avis Google Maps : activable après validation quota API Places -->
+    <section class="pharma-reviews-placeholder">
+      <div class="pharma-section-inner">
+        <h2>Avis Google Maps</h2>
+        <div class="reviews-placeholder-card">
+          <span class="reviews-icon">⭐</span>
+          <p><strong>Bientôt disponible</strong> — nous travaillons à l'intégration des avis Google Maps pour cette pharmacie. Pour le moment, vous pouvez consulter la pharmacie sur Google Maps directement :</p>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nameCap + ' ' + pharmacy.postal + ' ' + cityCap)}`} target="_blank" rel="noopener" class="btn-secondary">Voir sur Google Maps →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pharma-cta">
+      <div class="pharma-section-inner">
+        <h2>Consultation rapide pour votre prescription</h2>
+        <p>Tous les traitements GLP-1 nécessitent une ordonnance. Si vous n'avez pas encore de prescription, la téléconsultation est une option rapide et peu onéreuse.</p>
+        <div class="partner-cards">
+          <a href="https://poids.charles.co/?utm_source=affiliation&utm_medium=glp1france&utm_campaign=page_pharmacie" target="_blank" rel="noopener sponsored" class="partner-card partner-charles">
+            <div class="partner-badge">Téléconsultation spécialiste</div>
+            <div class="partner-title">Charles</div>
+            <div class="partner-desc">Médecin spécialiste français. 35 € (au lieu de 80 € en cabinet). Ordonnance si éligible.</div>
+          </a>
+          <a href="https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=page_pharmacie" target="_blank" rel="noopener sponsored" class="partner-card partner-annette">
+            <div class="partner-badge">Accompagnement</div>
+            <div class="partner-title">Annette</div>
+            <div class="partner-desc">Suivi nutritionnel sous GLP-1 : diététicien, coaching comportemental, app. Code CARE50.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pharma-faq">
+      <div class="pharma-section-inner">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-list">
+          {faq.map((f) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <div class="faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="pharma-disclaimer">
+      <p><strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical. Les prix Wegovy, Mounjaro et Saxenda sont des estimations basées sur la moyenne marché FR, vérifiez le tarif exact auprès de la pharmacie. Sources : référentiel FINESS (data.gouv.fr / Atlasanté), CEPS.</p>
+    </section>
+  </div>
+
+  <style>
+  .pharma-page { background: #f8faf9; min-height: 100vh; }
+  .pharma-hero { background: linear-gradient(135deg, #f0fdf4, #ecfdf5 50%, #f0f9ff); padding: 2rem 1.5rem; border-bottom: 1px solid #e5e7eb; }
+  .pharma-hero-inner, .pharma-section-inner { max-width: 1100px; margin: 0 auto; }
+  .breadcrumb { font-size: .82rem; color: #6b7280; margin-bottom: .75rem; }
+  .breadcrumb a { color: #1a3c34; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 .35rem; color: #9ca3af; }
+  .pharma-hero h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 900; color: #1a3c34; margin: 0 0 .4rem; letter-spacing: -.02em; line-height: 1.2; }
+  .pharma-addr { color: #475569; font-size: .95rem; margin: 0 0 1.25rem; }
+  .pharma-ctas { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary {
+    display: inline-flex; padding: .6rem 1.2rem; font-weight: 700; font-size: .85rem;
+    border-radius: 10px; text-decoration: none; transition: all .2s;
+  }
+  .btn-primary { background: #1a3c34; color: #fff; }
+  .btn-primary:hover { background: #0f2d25; color: #fff; transform: translateY(-1px); }
+  .btn-secondary { background: #fff; color: #1a3c34; border: 1.5px solid #d1d5db; }
+  .btn-secondary:hover { border-color: #1a3c34; }
+  .btn-ghost {
+    display: inline-flex; padding: .6rem 1rem; font-weight: 600; font-size: .82rem;
+    border-radius: 10px; text-decoration: none; transition: all .2s;
+    background: transparent; color: #4b5563; border: 1px dashed #9ca3af;
+  }
+  .btn-ghost:hover { color: #1a3c34; border-color: #1a3c34; }
+
+  .pharma-map-section { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  #pharma-map { width: 100%; height: 340px; background: #e5e7eb; }
+  @media (max-width: 640px) { #pharma-map { height: 260px; } }
+
+  .pharma-prices, .pharma-reviews-placeholder, .pharma-cta, .pharma-faq { padding: 2.25rem 1.5rem; }
+  .pharma-prices { background: #f8faf9; border-bottom: 1px solid #e5e7eb; }
+  .pharma-reviews-placeholder { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .pharma-cta { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-bottom: 1px solid #e5e7eb; }
+  .pharma-faq { background: #fff; }
+  h2 { font-size: 1.25rem; font-weight: 800; color: #1a3c34; margin: 0 0 1rem; }
+  .prices-intro { color: #475569; font-size: .88rem; line-height: 1.55; margin: 0 0 1.5rem; max-width: 800px; }
+
+  .drug-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+  .drug-section { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.1rem 1.25rem; }
+  .drug-section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .25rem; }
+  .drug-section h3 { font-size: 1.05rem; font-weight: 800; color: #1a3c34; margin: 0; }
+  .src-badge { font-size: .65rem; padding: .18rem .5rem; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; }
+  .src-off { background: #dcfce7; color: #15803d; }
+  .src-est { background: #f3f4f6; color: #6b7280; }
+  .drug-note { font-size: .75rem; color: #6b7280; font-style: italic; margin: 0 0 .75rem; line-height: 1.4; }
+  .price-table { width: 100%; border-collapse: collapse; }
+  .price-table th { text-align: left; font-size: .72rem; color: #64748b; text-transform: uppercase; letter-spacing: .05em; padding: .35rem .5rem; border-bottom: 1px solid #e5e7eb; font-weight: 600; }
+  .price-table td { padding: .45rem .5rem; border-bottom: 1px solid #f3f4f6; font-size: .88rem; color: #374151; }
+  .price-table td strong { color: #1a3c34; font-weight: 800; }
+  .price-table tr:last-child td { border-bottom: none; }
+
+  .reviews-placeholder-card {
+    background: #f8faf9; border: 1px dashed #d1d5db; border-radius: 12px;
+    padding: 1.25rem; text-align: center; display: flex; flex-direction: column;
+    align-items: center; gap: .6rem; max-width: 620px; margin: 0 auto;
+  }
+  .reviews-icon { font-size: 1.75rem; }
+  .reviews-placeholder-card p { color: #475569; font-size: .88rem; line-height: 1.5; margin: 0; }
+
+  .partner-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .partner-card { display: block; padding: 1.2rem; border-radius: 14px; text-decoration: none; transition: all .2s; border: 1px solid transparent; }
+  .partner-card:hover { transform: translateY(-2px); }
+  .partner-charles { background: #F8F3E9; border-color: #1a1a1a; color: #1a1a1a; }
+  .partner-annette { background: #F0F9FF; border-color: #A9E1FF; color: #0D4F73; }
+  .partner-badge { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; opacity: .7; margin-bottom: .4rem; }
+  .partner-title { font-size: 1.3rem; font-weight: 900; letter-spacing: -.02em; margin-bottom: .4rem; }
+  .partner-desc { font-size: .85rem; line-height: 1.5; }
+
+  .faq-list { display: flex; flex-direction: column; gap: .5rem; max-width: 800px; }
+  .faq-item { background: #f8faf9; border: 1px solid #e5e7eb; border-radius: 10px; padding: .85rem 1.1rem; }
+  .faq-item summary { font-weight: 700; color: #1a3c34; cursor: pointer; font-size: .92rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: #6b7280; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-answer { margin-top: .55rem; color: #475569; font-size: .85rem; line-height: 1.55; }
+
+  .pharma-disclaimer { max-width: 1100px; margin: 0 auto; padding: 1.5rem; font-size: .72rem; color: #6b7280; line-height: 1.55; border-top: 1px solid #e5e7eb; }
+  </style>
+</StaticLayout>

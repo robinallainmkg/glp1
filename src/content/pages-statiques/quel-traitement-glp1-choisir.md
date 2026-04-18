@@ -1,9 +1,10 @@
 ---
-title: "Quel traitement GLP-1 choisir ? Guide complet 2025"
+title: "Quel traitement GLP-1 choisir ? Guide complet 2026"
 description: "Découvrez comment choisir le bon traitement GLP-1. Comparaison Ozempic, Wegovy, Mounjaro et autres. Guide d'expert pour faire le bon choix."
-slug: "/quel-traitement-glp1-choisir"
 pageType: "Guide statique"
 noIndex: false
+date: 2025-08-30
+mainKeyword: "quel traitement GLP-1 choisir"
 thumbnail: "/images/thumbnails/quel-traitement-glp1-choisir.svg"
 thumbnailAlt: "Illustration pour l'article quel-traitement-glp1-choisir"
 keywords: ['quel glp1 choisir', 'comparaison glp1', 'meilleur traitement glp1', 'ozempic vs wegovy', 'mounjaro ou wegovy', 'glp1 pour maigrir', 'choix traitement diabète', 'comparatif ozempic wegovy mounjaro']
@@ -14,6 +15,8 @@ updatedAt: '2025-12-27'
 author: 'Dr. Marie Dubois'
 readingTime: 15
 ---
+
+# Quel traitement GLP-1 choisir ? Guide complet 2025
 
 ## Sommaire
 
@@ -28,7 +31,7 @@ readingTime: 15
 - [Alternatives aux GLP-1](#alternatives-aux-glp-1)
 - [FAQ - Questions fréquentes](#faq---questions-fréquentes)
 
-# Quel traitement GLP-1 choisir ? Guide complet 2025
+## Quel traitement GLP-1 choisir ? Guide complet 2025
 
 Guide complet et actualisé pour vous aider à choisir le traitement GLP-1 le plus adapté à votre situation médicale et personnelle.
 
@@ -51,8 +54,8 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Indications** : Diabète type 2, prévention cardiovasculaire
 - **Perte de poids** : 5-10% du poids corporel
 - **Posologie** : 1 injection par semaine
-- **Avantages** : Efficace sur le diabète, protection cardiovasculaire
-- **Prix** : ~59,90€/stylo
+- **Avantages** : Efficace sur le diabète, [protection cardiovasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/)
+- **Prix** : ~76,58€/stylo (prix public 2026)
 
 #### Wegovy (sémaglutide 0,25-2,4 mg)
 - **Indications** : Obésité (IMC ≥30) ou surpoids (IMC ≥27 avec comorbidité)
@@ -81,6 +84,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Posologie** : 1 injection par jour
 - **Avantages** : Expérience clinique longue, injection quotidienne
 - **Prix** : ~60€/mois
+- ⚠️ **Arrêt de commercialisation prévu fin 2026** : Novo Nordisk a annoncé la fin de la commercialisation de Victoza en France et en Europe. Consultez votre médecin pour anticiper un changement de traitement (Ozempic ou Trulicity en alternative).
 
 #### Saxenda (liraglutide 3 mg)
 - **Indications** : Obésité
@@ -102,13 +106,13 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
-| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~59,90€/stylo | 65% DT2 |
+| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~76,58€/stylo | 30% DT2 |
 | **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | 169-360€ | Non remboursé |
 | **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | 230-440€ | Non remboursé |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
 | **Victoza** | Liraglutide | Diabète | 5-8% | Quotidienne | ~60€ | 65% DT2 |
 | **Saxenda** | Liraglutide HD | Obésité | 8-12% | Quotidienne | 240-300€ | Non remboursé |
-| **Rybelsus** | Sémaglutide oral | Diabète | 3-7% | Quotidienne | 80-110€ | 65% DT2 |
+| **Rybelsus** | Sémaglutide oral | Diabète | 3-7% | Quotidienne | 80-110€ | Non remboursé |
 
 ## Critères pour choisir son traitement
 
@@ -127,7 +131,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 ### 2. Vos objectifs de perte de poids
 
 - **Perte modérée (5-10%)** : Ozempic, Trulicity, Victoza, Rybelsus
-- **Perte significative (10-15%)** : Wegovy, Saxenda
+- **[Perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) significative (10-15%)** : Wegovy, Saxenda
 - **Perte importante (15-20%)** : Mounjaro
 
 ### 3. Votre préférence d'administration
@@ -143,11 +147,11 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 ### 4. Votre tolérance budgétaire
 
-#### Budget limité (remboursés 65% DT2) :
-- Ozempic (~59,90€/stylo)
-- Victoza (~60€/mois)
-- Trulicity (~81€/mois)
-- Rybelsus (80-110€/mois)
+#### Budget limité (remboursés SS pour DT2) :
+- Ozempic (~76,58€/stylo, remboursé 30% DT2)
+- Victoza (~60€/mois, remboursé 65% DT2)
+- Trulicity (~81€/mois, remboursé 65% DT2)
+- Rybelsus (80-110€/mois, non remboursé)
 
 #### Budget moyen (non remboursés) :
 - Wegovy (169-360€/mois)
@@ -196,17 +200,19 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Formulaire spécifique** obligatoire depuis février 2025 pour Ozempic
 
 #### Taux de remboursement :
-- **65%** pour les GLP-1 indiqués dans le diabète de type 2 uniquement (Ozempic, Trulicity, Victoza, Rybelsus). Les traitements anti-obésité (Wegovy, Mounjaro, Saxenda) ne sont **PAS remboursés**.
+- **65%** pour Trulicity (dulaglutide) et Victoza (liraglutide) en diabète de type 2.
+- **30%** pour Ozempic (sémaglutide) en diabète de type 2 (SMR modéré).
+- **Non remboursé** : Rybelsus (avis HAS défavorable), Wegovy, Mounjaro, Saxenda.
 - **Supplément** possible selon mutuelle pour les médicaments remboursés (30-35% restants)
 
 ### Coûts réels après remboursement
 
 | Médicament | Prix brut/mois | Remboursement SS | Coût net estimé |
 |------------|----------------|------------------|-----------------|
-| Ozempic | ~59,90€/stylo | 65% (DT2) | ~21€/stylo |
+| Ozempic | ~76,58€/stylo | 30% (DT2) | ~53,61€/stylo |
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
-| Rybelsus | 80-110€ | 65% (DT2) | 28-39€ |
+| Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |
 | Wegovy | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | Mounjaro | 230-440€ | Non remboursé | 230-440€ (à charge) |
 | Saxenda | 240-300€ | Non remboursé | 240-300€ (à charge) |
@@ -302,7 +308,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 ### Alternatives non médicamenteuses
 
-#### Chirurgie bariatrique :
+#### [Chirurgie bariatrique](/collections/traitements-glp1/glp1-vs-chirurgie-bariatrique-sleeve-bypass-comparatif/) :
 - **Pour obésité sévère** (IMC >40)
 - **Perte de poids** : 20-30%
 - **Indications** : Échec traitements médicaux
@@ -324,7 +330,7 @@ Oui, il est possible de changer de médicament selon votre tolérance et vos ré
 
 ### Les GLP-1 sont-ils dangereux pour le pancréas ?
 
-Non, contrairement aux anciennes craintes, les études montrent que les GLP-1 sont sûrs et n'augmentent pas le risque de pancréatite.
+Le risque de pancréatite sous GLP-1 est rare (< 1%) mais identifié par l'ANSM. Un suivi médical régulier permet de le surveiller. En cas de douleurs abdominales sévères, consultez immédiatement votre médecin.
 
 ### Puis-je arrêter le traitement une fois mon objectif atteint ?
 
@@ -344,7 +350,7 @@ En savoir plus sur les [résultats attendus avec Mounjaro](/collections/traiteme
 
 ### Puis-je boire de l'alcool avec les GLP-1 ?
 
-Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/regime-glp1/) pour plus de conseils nutritionnels.
+Modérément oui, mais l'alcool peut augmenter les effets secondaires gastro-intestinaux. Limitez-vous à 1-2 verres maximum. Consultez notre [guide alimentation sous GLP-1](/collections/régime-glp1/) pour plus de conseils nutritionnels.
 
 ### Les GLP-1 sont-ils remboursés pour tous ?
 
@@ -366,7 +372,7 @@ Oui, c'est possible puisque les deux contiennent du sémaglutide. **Wegovy est d
 
 ### Quel GLP-1 pour diabète type 2 avec obésité ?
 
-Pour cette double indication, **Mounjaro est optimal** car il traite efficacement les deux conditions. Alternative : Ozempic si budget limité. Consultez notre [guide diabète et GLP-1](/conditions/diabete-et-glp1).
+Pour cette double indication, **Mounjaro est optimal** car il traite efficacement les deux conditions. Alternative : Ozempic si budget limité. Consultez votre endocrinologue pour un traitement adapté à cette double indication.
 
 ### Existe-t-il des GLP-1 en comprimés ?
 
@@ -374,21 +380,21 @@ Oui, **Rybelsus (sémaglutide oral)** est le seul GLP-1 en comprimé actuellemen
 
 ### Les GLP-1 sont-ils dangereux à long terme ?
 
-Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de recul). Effets secondaires diminuent généralement après les premiers mois. Surveillance médicale régulière recommandée. Consultez les [effets secondaires de Mounjaro](/effets-secondaires-glp1/effets-secondaires-mounjaro).
+Les études montrent une **bonne tolérance à long terme** (jusqu'à 5 ans de recul). Effets secondaires diminuent généralement après les premiers mois. Surveillance médicale régulière recommandée. Consultez les [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/).
 
 ### Comment choisir entre Saxenda et Wegovy ?
 
-**Wegovy est généralement préféré** : injection hebdomadaire vs quotidienne pour Saxenda, efficacité supérieure (15% vs 10% de perte de poids). Saxenda peut convenir si vous préférez la routine quotidienne. Voir le [remboursement Wegovy par les mutuelles](/glp1-cout/wegovy-remboursement-mutuelle).
+**Wegovy est généralement préféré** : injection hebdomadaire vs quotidienne pour Saxenda, efficacité supérieure (15% vs 10% de perte de poids). Saxenda peut convenir si vous préférez la routine quotidienne. Voir le [remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/).
 
 ### Où trouver un médecin prescripteur de GLP-1 ?
 
-Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-glp1-france/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
+Utilisez notre **[annuaire des médecins GLP-1 en France](/annuaire/)** : diabétologues, endocrinologues et médecins généralistes habilités par région.
 
 ## 📋 Ressources Complémentaires
 
 ### Guides par médicament
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) - Tout savoir sur le tirzépatide
-- [Guide complet Ozempic](/guides/guide-complet-ozempic/) - Sémaglutide pour diabète
+- [Guide complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) - Sémaglutide pour diabète
 - [Guide complet Wegovy](/guides/guide-complet-wegovy/) - Sémaglutide haute dose pour obésité
 
 ### Prix et remboursement
@@ -403,7 +409,7 @@ Utilisez notre **[annuaire des médecins GLP-1 en France](/collections/medecins-
 - [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 ### Trouver un médecin
-- [Médecins GLP-1 en France](/collections/medecins-glp1-france/) - Annuaire par région et ville
+- [Médecins GLP-1 en France](/annuaire/) - Annuaire par région et ville
 
 ---
 

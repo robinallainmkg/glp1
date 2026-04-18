@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const guides = [
+  { title: "Diagnostic GLP-1 Personnalisé", href: "/guides/quel-traitement-glp1-choisir/", icon: "🎯", desc: "Trouvez le traitement adapté à votre profil en quelques minutes" },
+  { title: "Guide Complet Wegovy 2026", href: "/guides/guide-complet-wegovy/", icon: "💊", desc: "Tout savoir sur le sémaglutide haute dose pour l'obésité" },
+  { title: "Qu'est-ce que les GLP-1 ?", href: "/guides/qu-est-ce-que-glp1/", icon: "🧬", desc: "Comprendre le fonctionnement des traitements GLP-1" },
+  { title: "FAQ GLP-1", href: "/guides/faq-glp1/", icon: "❓", desc: "Réponses à toutes vos questions sur les GLP-1" },
+  { title: "Suivi Médical GLP-1", href: "/guides/suivi-medical-glp1/", icon: "🏥", desc: "Comment assurer un suivi médical optimal sous traitement" },
+  { title: "Sport et Activité Physique", href: "/guides/sport-activite-physique-glp1/", icon: "🏃", desc: "Optimiser l'activité physique pendant votre traitement" },
+  { title: "Alimentation Personnalisée", href: "/guides/alimentation-personnalisee-glp1/", icon: "🥗", desc: "Adapter votre alimentation pour maximiser les résultats" },
+  { title: "Psychologie et Motivation", href: "/guides/psychologie-motivation-glp1/", icon: "🧠", desc: "Gérer les aspects psychologiques de la perte de poids" },
+  { title: "Interactions Médicamenteuses", href: "/guides/interactions-medicamenteuses-glp1/", icon: "⚕️", desc: "Les interactions à connaître avec les autres médicaments" },
+  { title: "GLP-1 selon l'Âge", href: "/guides/guides-age-glp1/", icon: "👥", desc: "Recommandations adaptées à chaque tranche d'âge" },
+  { title: "Communautés GLP-1", href: "/guides/communautes-glp1/", icon: "🤝", desc: "Groupes de soutien et communautés de patients" },
+  { title: "Nos Experts", href: "/guides/experts/", icon: "👨‍⚕️", desc: "L'équipe médicale derrière nos contenus" },
+];
+---
+
+<BaseLayout
+  title="Guides GLP-1 : Tout Savoir sur les Traitements"
+  description="Guides complets sur les traitements GLP-1 : diagnostic personnalisé, suivi médical, alimentation, sport, FAQ et conseils d'experts."
+>
+  <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+    <header style="text-align: center; margin-bottom: 2.5rem;">
+      <h1 style="font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 800; color: #1e293b; margin-bottom: 0.75rem;">Guides GLP-1</h1>
+      <p style="font-size: 1.1rem; color: #64748b; max-width: 600px; margin: 0 auto;">
+        Tout ce qu'il faut savoir pour bien démarrer et réussir votre traitement GLP-1.
+      </p>
+    </header>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem;">
+      {guides.map(g => (
+        <a href={g.href} style="display: block; padding: 1.25rem; background: white; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.08)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='none'">
+          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">{g.icon}</div>
+          <h2 style="font-size: 1rem; font-weight: 600; color: #1e293b; margin: 0 0 0.4rem 0;">{g.title}</h2>
+          <p style="font-size: 0.875rem; color: #64748b; margin: 0; line-height: 1.5;">{g.desc}</p>
+        </a>
+      ))}
+    </div>
+
+    <div style="text-align: center; margin-top: 2.5rem; padding: 1.5rem; background: #f0f9ff; border-radius: 12px;">
+      <p style="margin: 0 0 0.75rem 0; font-weight: 600; color: #1e40af;">Vous cherchez un traitement spécifique ?</p>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/collections/traitements-glp1/" style="padding: 0.5rem 1rem; background: #1d4ed8; color: white; border-radius: 8px; text-decoration: none; font-size: 0.875rem; font-weight: 500;">Tous les traitements</a>
+        <a href="/collections/glp1-cout/" style="padding: 0.5rem 1rem; background: white; color: #1d4ed8; border: 1px solid #1d4ed8; border-radius: 8px; text-decoration: none; font-size: 0.875rem; font-weight: 500;">Prix et remboursement</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

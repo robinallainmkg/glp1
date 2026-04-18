@@ -1,17 +1,21 @@
 ---
-title: "Prix Wegovy 2026 : Coût par Dosage et Remboursement en France"
-description: "Prix Wegovy en pharmacie : 169 à 360€/mois selon le dosage. Non remboursé par la Sécurité Sociale (mars 2026). Guide complet des tarifs par dosage (0.25mg, 0.5mg, 1mg, 1.7mg, 2.4mg)."
+title: "Prix Wegovy France 2026 : Tarifs et Remboursement"
+thumbnail: "/images/thumbnails/wegovy.jpg"
+thumbnailAlt: "Prix et coût du traitement wegovy-france"
+description: "Prix Wegovy en pharmacie France : 169 à 360€/mois. Où trouver le moins cher à Paris et en ligne ? Non remboursé en 2026 mais remboursement prévu S2 2026."
 keywords: ['prix wegovy', 'wegovy prix', 'prix wegovy france', 'wegovy pharmacie', 'remboursement wegovy', 'wegovy prix 2026', 'coût wegovy', 'wegovy non remboursé', 'prix wegovy 2.4 mg', 'wegovy prix pharmacie']
-seoTitle: "Prix Wegovy 2026 : Tarifs par Dosage et Remboursement en France"
-seoDescription: "Prix Wegovy : 169 à 360€/mois selon dosage. Non remboursé par la Sécurité Sociale (mars 2026), remboursement possible au 2e semestre 2026. Tous les prix par dosage."
+seoTitle: "Prix Wegovy 2026 : Tarifs par Dosage et Remboursement"
+seoDescription: "Prix Wegovy France : 169 à 360€/mois selon dosage. Non remboursé par la Sécurité Sociale (mars 2026), remboursement possible au 2e semestre 2026. Tous les prix Wegovy France par dosage."
 publishedAt: '2025-01-28'
-updatedAt: '2026-03-08'
+updatedAt: '2026-03-17'
+date: '2026-03-17'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
 image: "/images/thumbnails/prix-wegovy-france-illus.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Wegovy France"
 ---
 
 <script type="application/ld+json">
@@ -58,7 +62,7 @@ affiliateCollection: "glp1-cout"
         "name": "Wegovy est-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Les négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé) sont en cours, avec un remboursement possible au 2e semestre 2026. La HAS recommande le remboursement pour les patients avec un IMC ≥ 35 après échec des mesures nutritionnelles."
+          "text": "Non, Wegovy n'est pas remboursé par la Sécurité Sociale en mars 2026. Les négociations entre Novo Nordisk et le CEPS (Comité économique des produits de santé) sont en cours, avec un remboursement possible au 2e semestre 2026. La HAS recommandé le remboursement pour les patients avec un IMC ≥ 35 après échec des mesures nutritionnelles."
         }
       },
       {
@@ -66,7 +70,7 @@ affiliateCollection: "glp1-cout"
         "name": "Wegovy sera-t-il remboursé en 2026 ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Un remboursement de Wegovy est possible au 2e semestre 2026. Les négociations CEPS sont en cours. La HAS recommande le remboursement pour IMC ≥ 35 après échec nutritionnel. Le taux probable serait de 65% si et quand le remboursement est accordé."
+          "text": "Un remboursement de Wegovy est possible au 2e semestre 2026. Les négociations CEPS sont en cours. La HAS recommandé le remboursement pour IMC ≥ 35 après échec nutritionnel. Le taux probable serait de 65% si et quand le remboursement est accordé."
         }
       }
     ]
@@ -93,9 +97,9 @@ affiliateCollection: "glp1-cout"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Wegovy (sémaglutide) | 169-360 € | Non remboursé |
-| Ozempic (sémaglutide) | ~59,90 €/stylo | 65% (DT2 uniquement) |
+| [Ozempic (sémaglutide)](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 €/stylo (TTC) | 30% (DT2 uniquement) |
 | Saxenda (liraglutide) | 240-300 € | Non remboursé |
-| Mounjaro (tirzépatide) | 230-440 € | Non remboursé |
+| [Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/) | 230-440 € | Non remboursé |
 
 ## 💊 Remboursement Sécurité Sociale
 
@@ -191,6 +195,33 @@ Les négociations entre Novo Nordisk et le **CEPS** (Comité économique des pro
 - **Médecin traitant** : Pour renouvellement d'ordonnance
 - **Endocrinologue** : Pour suivi spécialisé
 
+## Où trouver Wegovy moins cher en pharmacie ?
+
+### Comparer les prix entre pharmacies en France
+
+En France, le prix de Wegovy n'est pas réglementé (médicament non remboursé) : chaque officine fixe librement son prix. En pratique, les écarts entre pharmacies restent limités (rarement plus de 5 à 10 %) car les grossistes appliquent des tarifs proches. Cependant, quelques pistes permettent de réduire le coût :
+
+- **Demandez un devis à plusieurs pharmacies** de votre secteur avant de déposer votre ordonnance
+- **Pharmacies indépendantes vs enseignes** : les pharmacies appartenant à un groupe (Pharmacie Lafayette, CityPharma à Paris) peuvent parfois proposer de légères remises sur les médicaments non remboursés en raison de leur volume d'achat
+- **Pharmacies hospitalières** : si vous suivez votre traitement en centre hospitalier, la pharmacie de l'hôpital peut parfois délivrer Wegovy à un tarif légèrement inférieur
+
+### Prix Wegovy en Espagne et en Belgique (mars 2026)
+
+Certains patients envisagent de s'approvisionner à l'étranger pour réduire le coût. Voici les réalités du marché européen :
+
+**Espagne :**
+- Prix constaté : environ **220 à 280 € par stylo** selon les dosages, prix libre (non remboursé en indication obésité)
+- Disponibilité variable selon les communautés autonomes
+- **Important** : l'importation personnelle de médicaments depuis l'Espagne avec une ordonnance française n'est pas reconnue en pharmacie française. Il s'agit d'un usage à titre personnel soumis à déclaration douanière.
+
+**Belgique :**
+- Prix constaté : **160 à 340 €/mois** selon dosage (remboursement partiel possible pour les patients belges avec certaines conditions)
+- Les ressortissants français ne peuvent pas bénéficier du remboursement belge
+- L'achat en Belgique avec une ordonnance belge est légal, mais nécessite une consultation avec un médecin belge
+
+**Conclusion sur l'achat à l'étranger :**
+Les différences de prix entre la France et les pays voisins sont souvent minimes (5 à 15 %). Le coût et les démarches administratives (consultation médicale étrangère, transport, risques de rupture de stock) dépassent généralement les économies potentielles. La meilleure option reste de vérifier votre contrat mutuelle et d'attendre le remboursement Sécu attendu au second semestre 2026.
+
 ## 💡 Conseils pour Réduire les Coûts
 
 ### Optimisation du traitement
@@ -211,22 +242,22 @@ Les négociations entre Novo Nordisk et le **CEPS** (Comité économique des pro
 
 | Critère | Wegovy | Ozempic | Saxenda |
 |---------|---------|--------|---------|
-| Prix mensuel | 169-360 € | ~59,90 €/stylo | 240-300 € |
-| Perte poids moyenne | -15 à -20% | -12 à -15% | -5 à -8% |
-| Remboursement | Non remboursé | 65% (DT2 uniquement) | Non remboursé |
+| Prix mensuel | 169-360 € | ~77,60 €/stylo (TTC) | 240-300 € |
+| Perte poids moyenne | -15 à -20% | -5 à 15% selon dosage | -5 à -8% |
+| Remboursement | Non remboursé | 30% (DT2 uniquement) | Non remboursé |
 | Rapport qualité/prix | Efficace mais coûteux | Bon (si DT2) | Coûteux, efficacité moindre |
 
 ## 📝 Conclusion
 
-**Wegovy est un traitement efficace** pour la perte de poids, mais son coût reste élevé car il n'est pas remboursé par la Sécurité Sociale en mars 2026.
+**Wegovy est un traitement efficace** pour la [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), mais son coût reste élevé car il n'est pas remboursé par la Sécurité Sociale en mars 2026.
 
 ### Points clés à retenir :
 - **Prix mensuel** : 169-360 €/mois selon le dosage
 - **Remboursement Sécu** : Non remboursé (mars 2026)
 - **Remboursement possible** : 2e semestre 2026 (négociations CEPS en cours)
-- **Taux probable** : 65% si et quand remboursé (HAS recommande pour IMC ≥ 35)
+- **Taux probable** : 65% si et quand remboursé (HAS recommandé pour IMC ≥ 35)
 
-**Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.
+**Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire. Avant d'acheter, vérifiez les [conditions de prescription du Wegovy en France](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) fixées par l'ANSM en 2025.
 
 thumbnail: "/images/thumbnails/wegovy.jpg"
 thumbnailAlt: "Prix et coût du traitement wegovy-france"
@@ -277,12 +308,12 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 **Perspectives de remboursement :**
 - Les **négociations CEPS** (Comité économique des produits de santé) sont en cours
 - Remboursement possible au **2e semestre 2026**
-- La **HAS recommande** le remboursement pour **IMC ≥ 35** après échec des mesures nutritionnelles
+- La **HAS recommandé** le remboursement pour **IMC ≥ 35** après échec des mesures nutritionnelles
 - Taux probable : **65%** si et quand le remboursement est accordé
 
 **Différence avec Ozempic :**
 - Wegovy = Indication **perte de poids**/obésité — **non remboursé**
-- Ozempic = Indication **diabète de type 2** — **remboursé à 65%** (DT2 uniquement)
+- Ozempic = Indication **[diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** — **remboursé à 30%** (DT2 uniquement)
 - Même principe actif (sémaglutide) mais dosages différents
 
 ### Ma mutuelle peut-elle prendre en charge Wegovy ?
@@ -301,7 +332,7 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **À noter :** Si le remboursement Sécu est accordé (possiblement au 2e semestre 2026), les mutuelles prendront alors en charge le ticket modérateur comme pour tout médicament remboursé.
 
-[Voir le guide complet remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)
+[Voir le guide complet remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)
 
 ### Wegovy ou Ozempic : lequel est le moins cher ?
 
@@ -314,12 +345,12 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 - Perte de poids moyenne : **-15 à -20%**
 
 **Ozempic (sémaglutide 2 mg - diabète) :**
-- Prix pharmacie : **~59,90 €/stylo**
-- Remboursement : **65%** (diabète de type 2 uniquement)
+- Prix pharmacie : **~77,60 €/stylo (TTC)**
+- Remboursement : **30%** (diabète de type 2 uniquement)
 - Dosage maximal : 2 mg/semaine
 - Perte de poids moyenne : **-12 à -15%**
 
-**Verdict : Ozempic est beaucoup moins cher** car remboursé à 65% pour le diabète de type 2, contre aucun remboursement pour Wegovy.
+**Verdict : Ozempic est beaucoup moins cher** car remboursé à 30% pour le diabète de type 2, contre aucun remboursement pour Wegovy.
 
 Mais :
 - **Ozempic** est remboursé **uniquement** pour le diabète de type 2 (pas pour la perte de poids seule)
@@ -355,7 +386,7 @@ Mais :
 3. **Vérification critères** : IMC ≥ 30 ou ≥ 27 avec comorbidités
 4. **Prescription** : Ordonnance sécurisée valable 3-6 mois
 
-[Trouver un médecin prescripteur Wegovy](/collections/medecins-glp1-france)
+[Trouver un médecin prescripteur Wegovy](/collections/medecins-glp1-france/)
 
 ### Comment réduire le coût de Wegovy ?
 
@@ -410,7 +441,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 **1. Ozempic (sémaglutide 2 mg max)**
 - Indication : Diabète type 2 uniquement
-- Prix : **~59,90 €/stylo**, remboursé à 65% (DT2)
+- Prix : **~77,60 €/stylo (TTC)**, remboursé à 30% (DT2)
 - Moins cher si diabétique, mais dosage inférieur
 
 **2. Rybelsus (sémaglutide oral)**
@@ -457,7 +488,7 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 | Première tentative GLP-1 | **Wegovy** | Moins cher, efficacité prouvée |
 | Échec Wegovy | **Mounjaro** | Mécanisme d'action différent |
 
-[Comparaison complète Wegovy vs Mounjaro](/guides/quel-traitement-glp1-choisir)
+[Comparaison complète Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
 ---
 
@@ -466,35 +497,35 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 **Optimisez votre traitement Wegovy :**
 
 ### Guides Wegovy Essentiels
-- **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy)** - Posologie complète de 0.25mg à 2.4mg
-- **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy)** - Comment gérer nausées et vomissements
-- **[Dosage Wegovy Optimal](/collections/effets-secondaires-glp1/wegovy-dosage)** - Guide d'escalade progressive
-- **[Régime Alimentaire sous Wegovy](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition optimale
+- **[Guide Complet Wegovy 2026](/collections/traitements-glp1/guide-complet-wegovy/)** - Posologie complète de 0.25mg à 2.4mg
+- **[Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)** - Comment gérer nausées et vomissements
+- **[Dosage Wegovy Optimal](/collections/traitements-glp1/wegovy-dosage/)** - Guide d'escalade progressive
+- **[Régime Alimentaire sous Wegovy](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition optimale
 
 ### Remboursement et Mutuelles
-- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Guide exhaustif 2026
-- **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france)** - Alternative plus efficace (230-440 €/mois)
-- **[Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france)** - Remboursé si diabétique (~59,90 €/stylo)
-- **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france)** - Injection quotidienne
+- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide exhaustif 2026
+- **[Prix Mounjaro France](/collections/glp1-cout/prix-mounjaro-france/)** - Alternative plus efficace (230-440 €/mois)
+- **[Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)** - Remboursé si diabétique (~77,60 €/stylo (TTC))
+- **[Prix Saxenda France](/collections/glp1-cout/prix-saxenda-france/)** - Injection quotidienne
 
 ### Comparatifs et Choix
 - **[Wegovy vs Ozempic : Le Match Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement pour votre profil ?
-- **[Tous les Traitements GLP-1](/collections/glp1-cout)** - Vue d'ensemble des prix
+- **[Tous les Traitements GLP-1](/collections/glp1-cout/)** - Vue d'ensemble des prix
 
 ### Médecins et Suivi
-- **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)** - Annuaire complet
-- **[Suivi Médical sous GLP-1](/guides/suivi-medical-glp1)** - Examens et consultations
-- **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite)** - Prise en charge globale
+- **[Trouver un Endocrinologue pour Wegovy](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)** - Annuaire complet
+- **[Suivi Médical sous GLP-1](/collections/traitements-glp1/guide-complet-wegovy/)** - Examens et consultations
+- **[Cliniques Spécialisées Obésité](/collections/medecins-glp1-france/clinique-pour-obesite/)** - Prise en charge globale
 
 ### Témoignages et Communauté
-- **[Résultats Avant/Après Wegovy](/temoignages/avant-apres-glp1)** - Transformations réelles
-- **[Communautés GLP-1](/guides/communautes-glp1)** - Forums et groupes d'entraide
+- **[Résultats Avant/Après Wegovy](/collections/témoignages/avant-après-glp1)** - Transformations réelles
+- **[Témoignages Avant/Après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour Wegovy ?**
 - 📞 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 - 🏥 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
 - 💊 **Fédération Française d'Obésité** : 01 56 81 10 10
-- 💬 **[Contactez-nous](/contact)** pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 

@@ -9,6 +9,7 @@ import { supabaseConfig } from '../../lib/supabase';
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pipelines - GLP1 Admin</title>
   <style>
@@ -169,6 +170,10 @@ import { supabaseConfig } from '../../lib/supabase';
   </style>
 </head>
 <body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  // Auth guard handled by AdminNav (localStorage, 24h expiry)
+</script>
 
 <AdminNav />
 

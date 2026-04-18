@@ -3,15 +3,19 @@ import ArticleWithAffiliateSidebar from "../../layouts/ArticleWithAffiliateSideb
 
 const affiliateProducts = [];
 const affiliateConfig = {};
-const entry = {};
-const frontmatter = null;
 ---
 
-<ArticleWithAffiliateSidebar articleContent={frontmatter || entry} affiliateProducts={affiliateProducts ?? []} affiliateConfig={affiliateConfig ?? {}}>
+<ArticleWithAffiliateSidebar
+  title="Nouveaux Médicaments pour Perdre du Poids : Révolution 2026"
+  description="Découvrez les nouveaux médicaments GLP-1 pour perdre du poids : Ozempic, Wegovy, Mounjaro. Efficacité, prix et accès en France."
+  affiliateProducts={affiliateProducts ?? []}
+  affiliateConfig={affiliateConfig ?? {}}
+  hideArticleHeader={true}
+>
   <div class="container">
     <article class="weight-loss-guide">
       <header class="hero-header">
-        <h1>Nouveaux Médicaments pour Perdre du Poids : La Révolution 2025</h1>
+        <h1>Nouveaux Médicaments pour Perdre du Poids : La Révolution 2026</h1>
         <p class="hero-subtitle">
           Une nouvelle génération de médicaments change tout pour la perte de poids. 
           Découvrez ces traitements révolutionnaires qui aident des millions de personnes à retrouver leur poids idéal.
@@ -281,7 +285,7 @@ const frontmatter = null;
               <div class="criteria-list">
                 <div class="criteria-item">
                   <span class="criteria-icon">⚖️</span>
-                  <span class="criteria-text">IMC ≥ 30 (obésité) ou IMC ≥ 27 avec problèmes de santé</span>
+                  <span class="criteria-text">IMC ≥ 35 (seuil ANSM 2025 pour les GLP-1 anti-obésité en France) ou IMC ≥ 27 avec comorbidités selon l'AMM internationale</span>
                 </div>
                 <div class="criteria-item">
                   <span class="criteria-icon">📉</span>

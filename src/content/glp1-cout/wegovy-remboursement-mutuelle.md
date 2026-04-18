@@ -1,8 +1,9 @@
 ---
-title: "Wegovy Remboursement Mutuelle : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur le remboursement Wegovy par la mutuelle santé en France. Conditions, démarches et couverture pour le traitement Wegovy."
-slug: "wegovy-remboursement-mutuelle"
+title: "Wegovy Remboursement 2026 : Mutuelles et Sécu"
+description: "Wegovy remboursement 2026 : mutuelles qui remboursent (MGEN, Harmonie, Alan), montants et calendrier Sécu prévu S2 2026."
 pubDate: 2025-08-23
+date: '2026-03-17'
+updatedAt: '2026-03-17'
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -12,6 +13,7 @@ thumbnailAlt: "Illustration pour l'article Wegovy Remboursement Mutuelle"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "wegovy remboursement mutuelle"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -31,7 +33,9 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Le Wegovy révolutionne la prise en charge de l'obésité, mais son prix élevé interroge sur les possibilités de remboursement. Découvrez tout ce qu'il faut savoir sur la prise en charge par les mutuelles françaises en 2025.
+## Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
+
+Le **remboursement de Wegovy par les mutuelles** est une question centrale pour les patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) n'est pas remboursé par la Sécurité Sociale — mais certaines mutuelles complémentaires proposent une prise en charge partielle. Découvrez la liste des mutuelles favorables et les montants de remboursement en 2026.
 
 ## Wegovy : Un traitement révolutionnaire mais coûteux
 
@@ -48,7 +52,7 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 ### Position officielle en 2025
 
-Le Wegovy n'est actuellement **pas remboursé par l'Assurance Maladie** pour l'indication perte de poids. Bien que l'ANSM (Agence Nationale de Sécurité du Médicament) ait autorisé sa commercialisation, la HAS (Haute Autorité de Santé) n'a pas encore rendu sa décision concernant le remboursement.
+Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/).
 
 ### Critères potentiels pour un futur remboursement
 
@@ -56,7 +60,7 @@ Les experts anticipent que les critères suivants pourraient être retenus :
 
 - **IMC ≥ 30 kg/m²** (obésité caractérisée)
 - **IMC ≥ 27 kg/m²** avec comorbidités associées (diabète de type 2, hypertension artérielle, dyslipidémie)
-- **Échec documenté** des mesures diététiques et d'exercice physique sur 6 mois minimum
+- **Échec documenté** des mesures diététiques et d'exercice physique sur 6 mois minimum — consultez notre [calendrier de remboursement Wegovy 2026](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les dernières informations
 - **Prise en charge** dans un centre spécialisé en endocrinologie ou nutrition
 
 ## Prise en charge par les mutuelles complémentaires
@@ -272,7 +276,7 @@ Le paysage du remboursement du Wegovy évolue rapidement en 2025. Bien que la S�
 - Les programmes d'aide laboratoire constituent une alternative crédible
 - L'évolution réglementaire pourrait changer la donne en 2026
 
-**Notre recommandation :** N'attendez pas pour vous informer et préparer votre dossier. La prise en charge de l'obésité représente un enjeu de santé publique majeur, et les solutions de financement continueront de se développer.
+**Notre recommandation :** N'attendez pas pour vous informer et préparer votre dossier. La prise en charge de l'obésité représente un enjeu de santé publique majeur, et les solutions de financement continueront de se développer. En complément des mutuelles, consultez notre guide sur le [remboursement GLP-1 par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-glp1-2026/) pour comprendre l'ensemble du dispositif.
 
 ---
 

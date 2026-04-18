@@ -1,0 +1,33 @@
+{
+  "phantoms": [
+    "astro-pages/glp1-perte-de-poids/index",
+    "astro-pages/index",
+    "astro-pages/guides/interactions-medicamenteuses-glp1",
+    "astro-pages/temoignages/avant-apres-glp1",
+    "astro-pages/guides/psychologie-motivation-glp1",
+    "laurent-transformation-glp1",
+    "astro-pages/legal/politique-confidentialite",
+    "astro-pages/contact",
+    "astro-pages/guides/qu-est-ce-que-glp1",
+    "marie-transformation-glp1",
+    "astro-pages/guides/sport-activite-physique-glp1",
+    "astro-pages/guides/guides-age-glp1",
+    "astro-pages/legal/mentions-legales",
+    "astro-pages/guides/guide-beaute-perte-de-poids-glp1",
+    "temoignages/laurent-transformation-glp1",
+    "temoignages/marie-transformation-glp1",
+    "astro-pages/guides/alimentation-personnalisee-glp1",
+    "astro-pages/guides/nouveaux-medicaments-perdre-poids",
+    "astro-pages/guides/communautes-glp1",
+    "astro-pages/collections/temoignages/index",
+    "astro-pages/annuaire/index",
+    "temoignages/sophie-transformation-glp1",
+    "sophie-transformation-glp1",
+    "astro-pages/guides/faq-glp1",
+    "astro-pages/articles/index",
+    "astro-pages/guides/suivi-medical-glp1",
+    "astro-pages/mon-espace/index",
+    "astro-pages/outils/calculateur-cout"
+  ],
+  "unindexed": []
+}

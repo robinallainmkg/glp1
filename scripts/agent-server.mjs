@@ -1,0 +1,1371 @@
+#!/usr/bin/env node
+// =============================================================================
+// Agent Server — HTTP endpoint to launch Claude Code agents from the dashboard
+// Usage: node scripts/agent-server.mjs
+// Stop: Ctrl+C
+// =============================================================================
+
+import { createServer } from 'http';
+import { spawn } from 'child_process';
+import { readFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+import { execSync } from 'child_process';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const PROJECT_ROOT = join(__dirname, '..');
+
+const CLAUDE_BIN = 'claude';
+
+// Load .env
+try {
+  const envFile = readFileSync(join(PROJECT_ROOT, '.env'), 'utf-8');
+  for (const line of envFile.split('\n')) {
+    if (line && !line.startsWith('#')) {
+      const [key, ...vals] = line.split('=');
+      process.env[key.trim()] = vals.join('=').trim();
+    }
+  }
+} catch(e) {}
+
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const PORT = 7854;
+
+const AGENTS = {
+  'strategist':        'Analyse GA/GSC + etat pipeline, prend des decisions strategiques et oriente les agents',
+  'seo-audit':         'Realise l\'audit SEO complet du site',
+  'analytics':         'Analyse les keywords et le positionnement',
+  'fact-check':        'Verifie les articles contre les sources officielles',
+  'opportunities':     'Cherche les opportunites de contenu',
+  'editorial':         'Traite les tickets, liens internes et opportunites (commit+push main)',
+  'validator':         'Valide le site (build + push main → deploy si OK)',
+  'internal-links':    'Analyse le maillage interne et suggere des liens',
+  'ui-designer':       'Audit visuel et amelioration UX/UI du site (typographie, couleurs, composants, navigation, animations)',
+  'crawler':           'Verification post-deploy du site live (crawlabilite, indexation Google, schema.org, performance, liens sortants)',
+  // autopilot is now handled natively by the server (no Claude agent needed)
+};
+
+// Track running agents
+const running = new Map();
+
+// Autopilot state (legacy compat)
+let autopilotEnabled = false;
+let autopilotCycle = 0;
+let autopilotPhase = 'idle';
+let autopilotCycleStart = null;
+const MAX_AUTOPILOT_CYCLES = 100;
+
+// Pipeline orchestrator state
+let pipelineRunning = false;
+let pipelinePhase = 'idle'; // idle | sync | generate | edit | validate | done | error
+let pipelineStartedAt = null;
+
+// Wait for all agents matching filter to finish
+function waitForAgentsDone(filter, maxWaitMs = 900000) {
+  return new Promise((resolve) => {
+    const start = Date.now();
+    const check = () => {
+      const active = [...running.keys()].filter(k => filter.some(f => k.includes(f)));
+      if (active.length === 0) return resolve(true);
+      if (Date.now() - start > maxWaitMs) {
+        console.log(`⏰ Pipeline timeout en attente de: ${active.join(', ')}`);
+        return resolve(false);
+      }
+      setTimeout(check, 10000);
+    };
+    check();
+  });
+}
+
+// Full pipeline orchestration
+async function runPipeline() {
+  const t = () => new Date().toLocaleTimeString('fr-FR');
+
+  // Phase 0: Sync analytics
+  pipelinePhase = 'sync';
+  console.log(`\n📡 [${t()}] PIPELINE — Phase 0: Sync Analytics`);
+  try {
+    const { execSync: es } = await import('child_process');
+    es('node scripts/sync-analytics.mjs --days 7', { cwd: PROJECT_ROOT, timeout: 120000, stdio: 'pipe' });
+    console.log(`✅ [${t()}] Analytics syncees`);
+  } catch(e) {
+    console.log(`⚠️ [${t()}] Sync analytics echouee (${e.message?.substring(0, 80)}), on continue`);
+  }
+
+  // Phase 1: GENERATE
+  pipelinePhase = 'generate';
+  console.log(`\n🔍 [${t()}] PIPELINE — Phase 1: GENERATE`);
+  const generateAgents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
+  for (const a of generateAgents) {
+    const r = launchAgent(a);
+    console.log(`  🚀 ${a}: ${r.ok ? 'lance (PID ' + r.pid + ')' : r.error}`);
+  }
+  await waitForAgentsDone(generateAgents);
+  console.log(`✅ [${t()}] GENERATE termine`);
+
+  // Phase 2: EDIT
+  pipelinePhase = 'edit';
+  console.log(`\n✏️ [${t()}] PIPELINE — Phase 2: EDIT (editorial x4)`);
+  for (let i = 0; i < 4; i++) {
+    const r = launchAgent('editorial', { allowMultiple: true });
+    console.log(`  🚀 editorial ${i+1}/4: ${r.ok ? 'lance' : r.error}`);
+  }
+  await waitForAgentsDone(['editorial']);
+  console.log(`✅ [${t()}] EDIT termine`);
+
+  // Phase 3: VALIDATE + DEPLOY
+  pipelinePhase = 'validate';
+  console.log(`\n🏗️ [${t()}] PIPELINE — Phase 3: VALIDATE + DEPLOY`);
+  const vr = launchAgent('validator');
+  console.log(`  🚀 validator: ${vr.ok ? 'lance' : vr.error}`);
+  await waitForAgentsDone(['validator'], 600000);
+  console.log(`✅ [${t()}] VALIDATE termine`);
+
+  // Phase 4: CRAWL (post-deploy verification)
+  pipelinePhase = 'crawl';
+  console.log(`\n🔍 [${t()}] PIPELINE — Phase 4: CRAWL (verification post-deploy)`);
+  const cr = launchAgent('crawler');
+  console.log(`  🚀 crawler: ${cr.ok ? 'lance' : cr.error}`);
+  await waitForAgentsDone(['crawler'], 600000);
+  console.log(`✅ [${t()}] CRAWL termine`);
+
+  // Done
+  pipelinePhase = 'done';
+  const duration = Math.round((Date.now() - new Date(pipelineStartedAt).getTime()) / 1000);
+  const durationStr = `${Math.floor(duration/60)}m${duration%60}s`;
+  console.log(`\n============================================================`);
+  console.log(`🎉 [${t()}] PIPELINE TERMINE en ${durationStr}`);
+  console.log(`============================================================\n`);
+
+  // Windows notification
+  try {
+    const { execSync: es2 } = await import('child_process');
+    es2(`powershell -Command "New-BurntToastNotification -Text 'Pipeline GLP-1 termine', 'Duree: ${durationStr}' -AppLogo ''"`, { stdio: 'pipe' });
+  } catch {
+    try {
+      const { execSync: es3 } = await import('child_process');
+      es3(`msg * /TIME:10 "Pipeline GLP-1 termine en ${durationStr}"`, { stdio: 'pipe' });
+    } catch {}
+  }
+}
+
+// Output buffers — keep last N lines per agent (persists after agent stops)
+const MAX_LINES = 500;
+const outputBuffers = new Map(); // name -> { lines: [], offset: 0 }
+
+function appendOutput(name, text, level) {
+  if (!outputBuffers.has(name)) outputBuffers.set(name, { lines: [], startedAt: new Date().toISOString() });
+  const buf = outputBuffers.get(name);
+  const newLines = text.split('\n');
+  for (const line of newLines) {
+    if (line.trim()) {
+      buf.lines.push({ ts: new Date().toISOString(), text: line, level: level || 'info' });
+      if (buf.lines.length > MAX_LINES) buf.lines.shift();
+    }
+  }
+}
+
+// ========== HUMAN-READABLE CONSOLE OUTPUT ==========
+
+// Track consecutive similar tool calls for grouping
+const toolCounters = new Map(); // name -> { lastTool, count }
+
+// Summarize tool calls into clear French — focuses on ACTIONS, hides noise
+function summarizeTool(agentName, toolName, input) {
+  const inp = input || {};
+  const counter = toolCounters.get(agentName) || { lastTool: '', count: 0 };
+
+  // Helper: detect repeated tool type and group them
+  function checkRepeat(toolType, label) {
+    if (counter.lastTool === toolType) {
+      counter.count++;
+      toolCounters.set(agentName, counter);
+      return null; // suppress — will show count when type changes
+    }
+    // Emit grouped count from previous repeated tool
+    let prefix = '';
+    if (counter.count > 1) {
+      prefix = `(${counter.count}x) `;
+    }
+    counter.lastTool = toolType;
+    counter.count = 1;
+    toolCounters.set(agentName, counter);
+    return prefix ? [prefix, label] : label;
+  }
+
+  switch (toolName) {
+    case 'Read': {
+      const f = (inp.file_path || '').split('/').slice(-2).join('/');
+      return checkRepeat('read', f ? `📖 ${f}` : null);
+    }
+    case 'Edit': {
+      const f = (inp.file_path || '').split('/').slice(-2).join('/');
+      // Always show edits — they're the real work
+      counter.lastTool = 'edit';
+      counter.count = 1;
+      toolCounters.set(agentName, counter);
+      // Show what was added (new_string preview) for link insertions
+      const preview = (inp.new_string || '').trim();
+      const linkMatch = preview.match(/\[([^\]]{5,40})\]\(\/[^)]+\)/);
+      if (linkMatch) return `🔗 ${f} — lien: "${linkMatch[1]}"`;
+      return `✏️ ${f}`;
+    }
+    case 'Write': {
+      const f = (inp.file_path || '').split('/').slice(-2).join('/');
+      counter.lastTool = 'write';
+      counter.count = 1;
+      toolCounters.set(agentName, counter);
+      return `📝 Nouveau: ${f}`;
+    }
+    case 'Bash': {
+      const cmd = (inp.command || '').trim();
+      if (!cmd) return null;
+      if (cmd.includes('git commit')) return `🔀 Git commit`;
+      if (cmd.includes('git push')) {
+        // BLOCK git push from editorial agents — only validator is allowed to push
+        if (agentName.startsWith('editorial')) {
+          appendOutput(agentName, `⛔ BLOQUÉ: git push interdit pour editorial — seul le validator push`, 'error');
+          return `⛔ Git push BLOQUÉ`;
+        }
+        return `🚀 Git push`;
+      }
+      if (cmd.includes('git add')) return null; // noise before commit
+      if (cmd.includes('git diff') || cmd.includes('git status')) return null; // noise
+      if (cmd.includes('git merge')) return `🔀 Git merge`;
+      if (cmd.includes('astro build') || cmd.includes('npm run build')) return `🏗️ Build du site`;
+      if (cmd.includes('npm run')) return `🏗️ ${cmd.slice(0, 50)}`;
+      // Hide all ls, find, cat, grep, curl noise
+      if (/^(ls|find|cat|head|tail|grep|curl|echo|cd|for |wc )/.test(cmd)) return null;
+      if (cmd.includes('node -e')) return null; // inline scripts = noise
+      if (cmd.includes('node ')) return `⚙️ Script: ${cmd.split('/').pop().slice(0, 40)}`;
+      return null; // hide unknown commands — too noisy
+    }
+    case 'Grep': return null; // hide — too noisy, dozens per run
+    case 'Glob': return null; // hide — too noisy
+    case 'Agent': return `🤖 ${inp.description || 'Sous-agent'}`;
+    case 'WebSearch': return `🔍 ${(inp.query || '').slice(0, 50)}`;
+    case 'WebFetch': return null; // noise
+    case 'TodoWrite': return null;
+    default: {
+      // MCP tools
+      if (toolName.includes('execute_sql')) {
+        const sql = (inp.sql || inp.query || '').replace(/\s+/g, ' ').trim();
+        // Classify SQL with meaningful summaries
+        if (/^SELECT.*COUNT/i.test(sql)) return null; // noise — just counting
+        if (/^SELECT/i.test(sql)) return null; // hide reads
+        if (/^INSERT.*agent_runs/i.test(sql)) return null; // internal logging
+        if (/^UPDATE.*agent_runs/i.test(sql)) return null; // internal logging
+        if (/^UPDATE.*correction_tickets.*deployed/i.test(sql)) return `✅ Tickets marqués deployed`;
+        if (/^UPDATE.*correction_tickets/i.test(sql)) return `📊 Update tickets`;
+        if (/^UPDATE.*internal_link_suggestions.*applied/i.test(sql)) return `🔗 Lien marqué applied`;
+        if (/^UPDATE.*internal_link_suggestions/i.test(sql)) return `📊 Update liens`;
+        if (/^INSERT.*correction_tickets/i.test(sql)) {
+          const slugMatch = sql.match(/'([a-z0-9-]+)'/);
+          return `🎫 Ticket: ${slugMatch ? slugMatch[1] : 'nouveau'}`;
+        }
+        if (/^INSERT.*fact_check_results/i.test(sql)) return `🔬 Résultat fact-check`;
+        if (/^INSERT.*internal_link_suggestions/i.test(sql)) return `🔗 Suggestion de lien`;
+        if (/^INSERT.*validation_results/i.test(sql)) return `📊 Résultat validation`;
+        return null; // hide all other SQL — too noisy
+      }
+      if (toolName.includes('supabase') || toolName.includes('mcp__100191b9')) {
+        const action = toolName.split('__').pop();
+        return `📊 ${action}`;
+      }
+      if (toolName.startsWith('mcp__')) return null; // hide unknown MCP
+      return null;
+    }
+  }
+}
+
+// Filter assistant text: keep meaningful lines, skip thinking/filler
+function isUsefulText(line) {
+  if (!line || line.length < 3) return false;
+  // Skip markdown formatting noise
+  if (/^[#\-\*]{1,3}\s*$/.test(line)) return false;
+  if (/^```/.test(line)) return false;
+  if (/^\|[\s\-\|:]+\|$/.test(line)) return false; // table separators
+  // ALWAYS keep lines with concrete results (numbers, scores, links, corrections)
+  if (/\d+\s*(ticket|lien|article|correction|suggestion|score|erreur|fichier)/i.test(line)) return true;
+  if (/→|✅|❌|⚠️|🔗|Score|Bilan|Résumé|Récap/i.test(line)) return true;
+  if (/^[\s]*[-•▸]\s/.test(line) && line.length > 20) return true; // bullet points with content
+  // Skip thinking/planning filler (EN + FR)
+  if (/^(Let me|I'll|I need to|I should|Now I|First,|Next,|OK |Alright|Looking at|Let's|Checking|Hmm|Ok,)/i.test(line)) return false;
+  if (/^(Thinking|Analyzing|Considering|Planning|Reviewing|Understanding)/i.test(line)) return false;
+  if (/^(Voyons|Laisse-moi|Bien,|D'accord|Commençons|Parfait)/i.test(line)) return false;
+  if (/^(Il faut|Ensuite)/i.test(line)) return false;
+  // Skip repetitive status lines
+  if (/^(L'autopilot|Le serveur|C'est\.\.\.)/i.test(line)) return false;
+  // Keep everything else (results, actions, summaries)
+  return true;
+}
+
+// Classify text importance: 'action' | 'result' | 'progress' | 'info' | null
+function classifyText(line) {
+  if (/(\d+)\s*(tickets?|corrections?|articles?|problemes?|erreurs?|liens?|issues?)\s*(crees?|trouves?|traites?|inseres?|verifies?|corriges?|generes?)/i.test(line)) return 'result';
+  if (/(termine|complete|fini|done|succes|success|deploye)/i.test(line)) return 'result';
+  if (/^(CYCLE|PHASE|VAGUE|ETAPE|MODE|=+)/i.test(line)) return 'progress';
+  if (/(score|position|coverage|pourcentage|moyenne|rank).*\d/i.test(line)) return 'result';
+  if (/(article|page|fichier).*:/i.test(line) && line.length < 150) return 'action';
+  if (/^(Correction|Insertion|Creation|Verification|Modification|Mise a jour|Traitement)/i.test(line)) return 'action';
+  if (/(erreur|error|failed|echoue|broken|manquant|missing)/i.test(line)) return 'error';
+  return 'info';
+}
+
+// Track per-agent cost
+const agentCosts = new Map(); // name -> total USD
+
+// Parse stream-json output from claude CLI — human-readable version
+function parseStreamJson(name, rawLine) {
+  if (!rawLine.trim()) return;
+  try {
+    const event = JSON.parse(rawLine);
+
+    switch (event.type) {
+      case 'assistant':
+        if (event.message?.content) {
+          for (const block of event.message.content) {
+            if (block.type === 'text' && block.text) {
+              for (const line of block.text.split('\n')) {
+                const trimmed = line.trim();
+                if (!trimmed) continue;
+                if (!isUsefulText(trimmed)) continue;
+                const cls = classifyText(trimmed);
+                const prefix = cls === 'result' ? '✅ ' : cls === 'progress' ? '📍 ' : cls === 'action' ? '▸ ' : cls === 'error' ? '❌ ' : '';
+                appendOutput(name, `${prefix}${trimmed}`, cls);
+              }
+            } else if (block.type === 'tool_use') {
+              const summary = summarizeTool(name, block.name, block.input);
+              if (summary) appendOutput(name, `   ↳ ${summary}`, 'tool');
+            }
+          }
+        }
+        break;
+
+      case 'content_block_delta':
+        if (event.delta?.type === 'text_delta' && event.delta.text) {
+          const text = event.delta.text;
+          const buf = outputBuffers.get(name);
+          // Accumulate text deltas into complete lines
+          if (text.includes('\n')) {
+            for (const line of text.split('\n')) {
+              const trimmed = line.trim();
+              if (!trimmed) continue;
+              if (!isUsefulText(trimmed)) continue;
+              const cls = classifyText(trimmed);
+              const prefix = cls === 'result' ? '✅ ' : cls === 'progress' ? '📍 ' : cls === 'action' ? '▸ ' : cls === 'error' ? '❌ ' : '';
+              appendOutput(name, `${prefix}${trimmed}`, cls);
+            }
+          } else if (text.trim()) {
+            const last = buf?.lines[buf.lines.length - 1];
+            if (last && !last.text.startsWith('   ↳') && (Date.now() - new Date(last.ts).getTime()) < 3000) {
+              last.text += text;
+              last.ts = new Date().toISOString();
+            } else if (isUsefulText(text.trim())) {
+              appendOutput(name, text.trim(), 'info');
+            }
+          }
+        }
+        break;
+
+      case 'result':
+        if (event.result) {
+          appendOutput(name, `━━━ TERMINE ━━━`, 'result');
+          if (typeof event.result === 'string') {
+            for (const line of event.result.split('\n').slice(0, 5)) {
+              if (line.trim()) appendOutput(name, `  ${line.trim()}`, 'result');
+            }
+          }
+        }
+        if (event.cost_usd !== undefined) {
+          const cost = event.cost_usd;
+          const prev = agentCosts.get(name) || 0;
+          agentCosts.set(name, prev + cost);
+          appendOutput(name, `💰 Cout de ce run: $${cost.toFixed(3)} (total: $${(prev + cost).toFixed(3)})`, 'cost');
+        }
+        break;
+
+      case 'tool_use': {
+        const summary = summarizeTool(name, event.name, event.input);
+        if (summary) appendOutput(name, `   ↳ ${summary}`, 'tool');
+        break;
+      }
+
+      case 'tool_result': {
+        // Only show tool results that contain useful info (errors, counts, etc.)
+        const content = typeof event.content === 'string' ? event.content : JSON.stringify(event.content || '');
+        // Show errors
+        if (/error|fail|exception/i.test(content) && content.length < 300) {
+          appendOutput(name, `   ⚠ ${content.slice(0, 150)}`, 'error');
+        }
+        // Show results with numbers (likely counts, scores)
+        else if (/\d+\s*(rows?|articles?|tickets?|created|inserted|updated|deleted)/i.test(content)) {
+          const match = content.match(/(\d+\s*(rows?|articles?|tickets?|created|inserted|updated|deleted)[^.]*)/i);
+          if (match) appendOutput(name, `   → ${match[1]}`, 'result');
+        }
+        // Skip everything else (file contents, large JSON, etc.)
+        break;
+      }
+
+      case 'system':
+        if (event.subtype === 'init') {
+          // Only show init ONCE per agent (suppress sub-agent inits)
+          const initKey = `init_${name}`;
+          if (!toolCounters.has(initKey)) {
+            toolCounters.set(initKey, true);
+            appendOutput(name, `🚀 Agent initialise`, 'progress');
+          }
+        } else if (event.message) {
+          appendOutput(name, `⚙ ${event.message}`, 'info');
+        }
+        break;
+
+      default:
+        // Skip ALL noise: rate_limit_event, content_block_start/stop, message_start/stop, etc.
+        break;
+    }
+  } catch(e) {
+    // Not valid JSON — only show non-empty, non-debug lines
+    const trimmed = rawLine.trim();
+    if (trimmed && !trimmed.startsWith('{') && trimmed.length > 5) {
+      appendOutput(name, trimmed, 'info');
+    }
+  }
+}
+
+// Execute strategist decisions after it completes
+async function executeStrategistDecisions() {
+  if (!SUPABASE_URL) return;
+  try {
+    // Fetch unapplied launch_agent decisions
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/strategist_decisions?decision_type=eq.launch_agent&applied=eq.false&order=created_at.asc`, {
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      }
+    });
+    const decisions = await r.json();
+    if (!Array.isArray(decisions) || decisions.length === 0) {
+      appendOutput('strategist', '📋 Aucune decision launch_agent a executer');
+      return;
+    }
+
+    for (const decision of decisions) {
+      const agentName = decision.target_agent;
+      if (!agentName || !AGENTS[agentName]) {
+        appendOutput('strategist', `⚠️ Agent inconnu dans decision: ${agentName}`);
+        continue;
+      }
+
+      appendOutput('strategist', `🤖 Auto-lancement: ${agentName} — ${decision.reason?.slice(0, 80)}...`);
+      const result = launchAgent(agentName);
+
+      if (result.ok) {
+        appendOutput('strategist', `✅ ${agentName} lance (PID ${result.pid})`);
+      } else {
+        appendOutput('strategist', `❌ Echec lancement ${agentName}: ${result.error}`);
+      }
+
+      // Mark decision as applied
+      await fetch(`${SUPABASE_URL}/rest/v1/strategist_decisions?id=eq.${decision.id}`, {
+        method: 'PATCH',
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ applied: true })
+      });
+    }
+
+    appendOutput('strategist', `🏁 ${decisions.length} decision(s) executee(s)`);
+  } catch(e) {
+    appendOutput('strategist', `❌ Erreur execution decisions: ${e.message}`);
+  }
+}
+
+// ========== AUTOPILOT PIPELINE (native server-side orchestration) ==========
+// No Claude agent needed — the server handles CHECK → GENERATE → EDIT → VALIDATE natively.
+// Transitions are instant, parallel launches are real, zero tokens wasted.
+
+async function autopilotCheck() {
+  autopilotPhase = 'check';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+  appendOutput('autopilot', `\n━━━ CYCLE ${autopilotCycle} ━━━`, 'progress');
+  appendOutput('autopilot', `📍 ${time()} Phase 1 — CHECK`, 'progress');
+
+  if (!SUPABASE_URL) {
+    appendOutput('autopilot', `❌ Pas de SUPABASE_URL — skip check`, 'error');
+    return { tickets: 0, urgents: 0, pctUnchecked: 0, links: 0, opportunities: 0 };
+  }
+
+  try {
+    // Pipeline state query
+    const r1 = await fetch(`${SUPABASE_URL}/rest/v1/rpc/`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({})
+    }).catch(() => null);
+
+    // Use direct REST queries instead of RPC
+    const [ticketsR, linksR, oppsR, fcR] = await Promise.all([
+      fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?statut=eq.approved&select=id,urgence`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+      fetch(`${SUPABASE_URL}/rest/v1/internal_link_suggestions?status=eq.approved&select=id`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+      fetch(`${SUPABASE_URL}/rest/v1/content_opportunities?status=eq.approved&select=id`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+      fetch(`${SUPABASE_URL}/rest/v1/articles?is_active=eq.true&select=id,last_fact_checked`, {
+        headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+      }),
+    ]);
+
+    const tickets = await ticketsR.json().catch(() => []);
+    const links = await linksR.json().catch(() => []);
+    const opps = await oppsR.json().catch(() => []);
+    const articles = await fcR.json().catch(() => []);
+
+    const nbTickets = Array.isArray(tickets) ? tickets.length : 0;
+    const nbUrgents = Array.isArray(tickets) ? tickets.filter(t => t.urgence === 'urgent').length : 0;
+    const nbLinks = Array.isArray(links) ? links.length : 0;
+    const nbOpps = Array.isArray(opps) ? opps.length : 0;
+    const totalArticles = Array.isArray(articles) ? articles.length : 0;
+    const unchecked = Array.isArray(articles) ? articles.filter(a => !a.last_fact_checked).length : 0;
+    const pctUnchecked = totalArticles > 0 ? Math.round(100 * unchecked / totalArticles) : 0;
+
+    appendOutput('autopilot', `📊 Tickets: ${nbTickets} (${nbUrgents} urgents) | Links: ${nbLinks} | Opps: ${nbOpps}`, 'result');
+    appendOutput('autopilot', `📊 Fact-check: ${pctUnchecked}% non vérifié (${unchecked}/${totalArticles})`, 'result');
+
+    return { tickets: nbTickets, urgents: nbUrgents, pctUnchecked, links: nbLinks, opportunities: nbOpps };
+  } catch (e) {
+    appendOutput('autopilot', `❌ Erreur CHECK: ${e.message}`, 'error');
+    return { tickets: 0, urgents: 0, pctUnchecked: 0, links: 0, opportunities: 0 };
+  }
+}
+
+function autopilotDecide(state) {
+  const { tickets, urgents, links, opps, pctUnchecked } = state;
+  const totalWork = tickets + (links || 0) + (opps || 0);
+
+  // No work at all → generate to create some
+  if (totalWork === 0) {
+    appendOutput('autopilot', `🧠 Décision: 0 travail → generate seulement`, 'progress');
+    return 'generate-only';
+  }
+
+  // Decide: should we also generate while editing?
+  // Generate if fact-check coverage is low OR few tickets remain
+  const needsGenerate = pctUnchecked >= 15 || tickets < 10;
+
+  if (needsGenerate && totalWork > 0) {
+    appendOutput('autopilot', `🧠 Décision: ${totalWork} items (${tickets}T/${links || 0}L/${opps || 0}O) + generate en parallèle (${pctUnchecked}% unchecked)`, 'progress');
+    return 'generate-and-edit'; // NEW: generate + edit in parallel
+  }
+
+  // Lots of work, no need to generate more
+  appendOutput('autopilot', `🧠 Décision: ${totalWork} items (${tickets}T/${links || 0}L/${opps || 0}O) → editorial direct → validator`, 'progress');
+  return 'editorial-direct';
+}
+
+async function autopilotGenerate(decision) {
+  autopilotPhase = 'generate';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+
+  if (decision === 'editorial-direct') {
+    appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE (SKIP — assez de travail)`, 'progress');
+    return;
+  }
+
+  appendOutput('autopilot', `📍 ${time()} Phase 2 — GENERATE`, 'progress');
+
+  const agents = ['fact-check', 'seo-audit', 'opportunities', 'internal-links'];
+
+  // Launch all in parallel
+  const results = agents.map(a => {
+    const r = launchAgent(a);
+    if (r.ok) {
+      appendOutput('autopilot', `🟢 ${time()} — ${a} lancé (PID ${r.pid})`, 'progress');
+    } else {
+      appendOutput('autopilot', `⚠️ ${a}: ${r.error}`, 'error');
+    }
+    return { agent: a, ...r };
+  });
+
+  appendOutput('autopilot', `⏳ ${agents.length} agents en parallèle — attente...`, 'progress');
+
+  // Wait for all generate agents to complete
+  await new Promise(resolve => {
+    const check = () => {
+      const stillRunning = agents.filter(a => running.has(a));
+      if (stillRunning.length === 0) {
+        resolve();
+      } else {
+        setTimeout(check, 3000); // Check every 3s (not 15s!)
+      }
+    };
+    setTimeout(check, 5000); // First check after 5s
+  });
+
+  appendOutput('autopilot', `✅ ${time()} — Phase GENERATE terminée`, 'result');
+}
+
+async function autopilotEdit(state) {
+  autopilotPhase = 'edit';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+
+  // Scale editorial instances based on TOTAL work (tickets + links + opps)
+  const tickets = state?.tickets || 0;
+  const links = state?.links || 0;
+  const opps = state?.opps || 0;
+  const totalWork = tickets + links + opps;
+  let numInstances = 1;
+  if (totalWork >= 200) numInstances = 5;
+  else if (totalWork >= 80) numInstances = 4;
+  else if (totalWork >= 40) numInstances = 3;
+  else if (totalWork >= 15) numInstances = 2;
+  // When lots of links pending, always max out
+  if (links >= 100) numInstances = Math.max(numInstances, 4);
+
+  appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (${numInstances} editorial${numInstances > 1 ? 's' : ''}, ${totalWork} items: ${tickets}T/${links}L/${opps}O)`, 'progress');
+
+  // Launch first instance
+  const r = launchAgent('editorial', { ticketCount: tickets });
+  if (!r.ok) {
+    appendOutput('autopilot', `❌ Editorial: ${r.error}`, 'error');
+    return;
+  }
+  appendOutput('autopilot', `🟢 ${time()} — editorial lancé (PID ${r.pid})`, 'progress');
+
+  // Launch additional instances with allowMultiple
+  for (let i = 1; i < numInstances; i++) {
+    const r2 = launchAgent('editorial', { allowMultiple: true, ticketCount: tickets });
+    if (r2.ok) {
+      appendOutput('autopilot', `🟢 ${time()} — ${r2.instance} lancé (PID ${r2.pid})`, 'progress');
+    } else {
+      appendOutput('autopilot', `⚠️ Instance ${i + 1}: ${r2.error}`, 'error');
+    }
+  }
+
+  // Wait for ALL editorial instances to complete
+  await new Promise(resolve => {
+    const check = () => {
+      const stillRunning = [...running.keys()].filter(k => {
+        const info = running.get(k);
+        return info.baseAgent === 'editorial' || k === 'editorial';
+      });
+      if (stillRunning.length === 0) {
+        resolve();
+      } else {
+        setTimeout(check, 3000);
+      }
+    };
+    setTimeout(check, 5000);
+  });
+
+  appendOutput('autopilot', `✅ ${time()} — Phase EDIT terminée (${numInstances} instance${numInstances > 1 ? 's' : ''})`, 'result');
+
+  // Commit all editorial changes in one shot
+  try {
+    const { execSync } = await import('child_process');
+    const status = execSync('git status --short src/content/ src/pages/', { cwd: PROJECT_ROOT, encoding: 'utf-8' }).trim();
+    if (status) {
+      const changedFiles = status.split('\n').length;
+      execSync('git add src/content/ src/pages/', { cwd: PROJECT_ROOT });
+      const cycle = autopilotCycle || 'manual';
+      execSync(`git commit -m "editorial: batch commit ${changedFiles} files (cycle ${cycle})"`, { cwd: PROJECT_ROOT });
+      appendOutput('autopilot', `📦 ${time()} — Commit: ${changedFiles} fichiers (src/content + src/pages)`, 'result');
+    } else {
+      appendOutput('autopilot', `⚠️ ${time()} — Aucun fichier modifié à commit`, 'progress');
+    }
+  } catch (e) {
+    appendOutput('autopilot', `❌ ${time()} — Erreur commit: ${e.message}`, 'error');
+  }
+}
+
+async function autopilotValidate() {
+  autopilotPhase = 'validate';
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+  appendOutput('autopilot', `📍 ${time()} Phase 4 — VALIDATE + DEPLOY`, 'progress');
+
+  const r = launchAgent('validator');
+  if (!r.ok) {
+    appendOutput('autopilot', `❌ Validator: ${r.error}`, 'error');
+    return;
+  }
+  appendOutput('autopilot', `🟢 ${time()} — validator lancé (PID ${r.pid})`, 'progress');
+
+  // Wait for validator to complete
+  await new Promise(resolve => {
+    const check = () => {
+      if (!running.has('validator')) {
+        resolve();
+      } else {
+        setTimeout(check, 3000);
+      }
+    };
+    setTimeout(check, 5000);
+  });
+
+  appendOutput('autopilot', `✅ ${time()} — Phase VALIDATE terminée`, 'result');
+}
+
+let lastDecision = null; // Track decision for smart delay
+let consecutiveIdle = 0; // Track consecutive idle cycles
+
+async function runAutopilotCycle() {
+  autopilotCycle++;
+  autopilotCycleStart = new Date();
+  const time = () => new Date().toLocaleTimeString('fr-FR');
+
+  try {
+    // Phase 1: CHECK
+    const state = await autopilotCheck();
+
+    // Decide what to do
+    const decision = autopilotDecide(state);
+    lastDecision = decision;
+
+    // Phase 2+3: GENERATE and EDIT — parallel when possible
+    if (decision === 'generate-and-edit') {
+      // Launch generate and edit IN PARALLEL — max throughput
+      appendOutput('autopilot', `⚡ Generate + Edit en PARALLÈLE`, 'progress');
+      await Promise.all([
+        autopilotGenerate(decision),
+        autopilotEdit(state)
+      ]);
+    } else if (decision === 'generate-only') {
+      await autopilotGenerate(decision);
+      appendOutput('autopilot', `📍 ${time()} Phase 3 — EDIT (SKIP — generate-only)`, 'progress');
+    } else {
+      // editorial-direct: skip generate, just edit
+      await autopilotGenerate(decision);
+      await autopilotEdit(state);
+    }
+
+    // Phase 4: VALIDATE — skip if generate-only (nothing changed)
+    if (decision === 'generate-only') {
+      appendOutput('autopilot', `📍 ${time()} Phase 4 — VALIDATE (SKIP — generate-only)`, 'progress');
+    } else {
+      await autopilotValidate();
+    }
+
+    // Track idle cycles
+    if (decision === 'generate-only') {
+      consecutiveIdle++;
+    } else {
+      consecutiveIdle = 0;
+    }
+
+    // Log cycle completion
+    autopilotPhase = 'done';
+    const duration = Math.round((Date.now() - autopilotCycleStart) / 1000);
+    appendOutput('autopilot', `\n🏁 ${time()} — Cycle ${autopilotCycle} terminé en ${duration}s`, 'result');
+
+    // Log to Supabase
+    sbInsert('agent_runs', {
+      agent_name: 'autopilot',
+      status: 'cycle_complete',
+      started_at: autopilotCycleStart.toISOString(),
+      completed_at: new Date().toISOString(),
+      metadata: { cycle: autopilotCycle, decision, duration_s: duration, consecutiveIdle }
+    });
+
+  } catch (e) {
+    appendOutput('autopilot', `❌ Erreur cycle: ${e.message}`, 'error');
+    console.log(`❌ [${time()}] Autopilot cycle ${autopilotCycle} erreur: ${e.message}`);
+  }
+
+  // Safety: auto-stop after MAX_AUTOPILOT_CYCLES
+  if (autopilotCycle >= MAX_AUTOPILOT_CYCLES) {
+    autopilotEnabled = false;
+    autopilotPhase = 'idle';
+    appendOutput('autopilot', `🛑 Limite de ${MAX_AUTOPILOT_CYCLES} cycles atteinte — arrêt automatique`, 'progress');
+    console.log(`🛑 Autopilot auto-stopped after ${MAX_AUTOPILOT_CYCLES} cycles`);
+    return;
+  }
+
+  // Schedule next cycle if still enabled — with SMART delay
+  if (autopilotEnabled) {
+    // Smart delay: scale up when idle, fast when there's real work
+    let delay;
+    if (consecutiveIdle >= 5) {
+      delay = 600000; // 10 min — nothing to do, chill
+      appendOutput('autopilot', `😴 5+ cycles idle — passage en veille (10 min)`, 'progress');
+    } else if (consecutiveIdle >= 2) {
+      delay = 180000; // 3 min — probably idle
+    } else if (lastDecision === 'generate-only') {
+      delay = 120000; // 2 min — just generated, wait for results
+    } else {
+      delay = 30000;  // 30s — active work, stay responsive
+    }
+    appendOutput('autopilot', `🔄 Prochain cycle dans ${Math.round(delay / 1000)}s...`, 'progress');
+    console.log(`🔄 [${time()}] Cycle ${autopilotCycle} done — next in ${delay / 1000}s (idle: ${consecutiveIdle})`);
+    setTimeout(() => {
+      if (autopilotEnabled) runAutopilotCycle();
+    }, delay);
+  } else {
+    autopilotPhase = 'idle';
+  }
+}
+
+// After editorial finishes, check if remaining tickets need processing
+async function checkAndRelaunchIfNeeded(finishedAgent) {
+  if (!SUPABASE_URL) return;
+
+  // Don't relaunch if other editorials are still running
+  const editorialsRunning = [...running.keys()].filter(k => k.startsWith('editorial'));
+  if (editorialsRunning.length > 0) {
+    console.log(`⏳ ${editorialsRunning.length} editorial(s) encore en cours, on attend...`);
+    return;
+  }
+
+  try {
+    // Count remaining approved tickets
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/correction_tickets?statut=eq.approved&select=id`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    const tickets = await r.json();
+    const remaining = Array.isArray(tickets) ? tickets.length : 0;
+
+    if (remaining > 0) {
+      appendOutput(finishedAgent, `\n🔄 ${remaining} tickets restants — relance du strategist pour redistribuer...`);
+      console.log(`🔄 [${new Date().toLocaleTimeString()}] ${remaining} tickets restants — relance strategist`);
+      launchAgent('strategist');
+    } else {
+      appendOutput(finishedAgent, `\n✅ Tous les tickets traites ! Pipeline termine.`);
+      console.log(`✅ [${new Date().toLocaleTimeString()}] Pipeline termine — 0 tickets restants`);
+    }
+  } catch(e) {
+    console.log(`⚠️ Erreur check tickets: ${e.message}`);
+  }
+}
+
+// Supabase helper
+async function sbPatch(path, data) {
+  if (!SUPABASE_URL) return;
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+      method: 'PATCH',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(data)
+    });
+  } catch(e) {}
+}
+
+async function sbInsert(table, data) {
+  if (!SUPABASE_URL) return null;
+  try {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=representation'
+      },
+      body: JSON.stringify(data)
+    });
+    const result = await r.json();
+    return Array.isArray(result) ? result[0] : result;
+  } catch(e) { return null; }
+}
+
+// Resolve instance name: fact-check -> fact-check, fact-check (if running) -> fact-check-2, etc.
+function resolveInstanceName(baseName) {
+  if (!running.has(baseName)) return baseName;
+  for (let i = 2; i <= 10; i++) {
+    const instanceName = `${baseName}-${i}`;
+    if (!running.has(instanceName)) return instanceName;
+  }
+  return null; // max 10 instances
+}
+
+// Get the base agent name (strip instance suffix)
+function getBaseAgent(instanceName) {
+  // Check direct match first
+  if (AGENTS[instanceName]) return instanceName;
+  // Try stripping -N suffix
+  const match = instanceName.match(/^(.+)-(\d+)$/);
+  if (match && AGENTS[match[1]]) return match[1];
+  return null;
+}
+
+function launchAgent(name, { allowMultiple = false, ticketCount = 0 } = {}) {
+  const baseAgent = getBaseAgent(name) || name;
+  const prompt = AGENTS[baseAgent];
+  if (!prompt) {
+    return { ok: false, error: `Agent inconnu: ${name}` };
+  }
+
+  let instanceName = name;
+  if (running.has(name)) {
+    if (!allowMultiple) {
+      return { ok: false, error: `${name} est deja en cours` };
+    }
+    // Find next available instance name
+    instanceName = resolveInstanceName(baseAgent);
+    if (!instanceName) {
+      return { ok: false, error: `Max instances atteint pour ${baseAgent}` };
+    }
+  }
+
+  // Count how many instances of this base agent are running (for partitioning)
+  let runningInstanceCount = 0;
+  for (const [k, info] of running) {
+    if (info.baseAgent === baseAgent || k === baseAgent) runningInstanceCount++;
+  }
+  const totalInstances = runningInstanceCount + 1; // including this new one
+  const instanceIndex = runningInstanceCount; // 0-based
+
+  // Build partitioned prompt to avoid cannibalization
+  // OFFSET/LIMIT partitioning based on total ticket count
+  let finalPrompt = prompt;
+  if (totalInstances > 1 && ticketCount > 0) {
+    const perInstance = Math.ceil(ticketCount / totalInstances);
+    const offset = instanceIndex * perInstance;
+    finalPrompt += `\n\nPARTITION: Tu es l'instance ${instanceIndex + 1}/${totalInstances} (${ticketCount} tickets total). Utilise OFFSET ${offset} LIMIT ${perInstance} dans tes requetes de tickets/suggestions/opportunites pour eviter les doublons avec les autres instances.\n\nIMPORTANT: Ne fais PAS git add / git commit. Le serveur s'en charge apres que toutes les instances ont termine.`;
+    appendOutput(instanceName, `📍 Instance ${instanceIndex + 1}/${totalInstances} — OFFSET ${offset} LIMIT ${perInstance}`, 'progress');
+  }
+
+  console.log(`🚀 [${new Date().toLocaleTimeString()}] Lancement: ${instanceName}${instanceName !== baseAgent ? ` (instance ${instanceIndex + 1}/${totalInstances} de ${baseAgent})` : ''}`);
+
+  const child = spawn(CLAUDE_BIN, [
+    '-p', '-',
+    '--agent', baseAgent,
+    '--output-format', 'stream-json',
+    '--verbose',
+    '--dangerously-skip-permissions'
+  ], {
+    cwd: PROJECT_ROOT,
+    stdio: ['pipe', 'pipe', 'pipe'],
+    env: Object.fromEntries(Object.entries(process.env).filter(([k]) => !k.startsWith('CLAUDE'))),
+    shell: true
+  });
+  // Pass prompt via stdin to avoid shell mangling on Windows
+  child.stdin.write(finalPrompt);
+  child.stdin.end();
+
+  // Reset output buffer for this instance
+  outputBuffers.set(instanceName, { lines: [{ ts: new Date().toISOString(), text: `🚀 Agent ${instanceName} lance (PID ${child.pid})` }], startedAt: new Date().toISOString() });
+
+    // Log spawn to autopilot console if autopilot is active
+    if (autopilotEnabled) {
+      const time = new Date().toLocaleTimeString('fr-FR');
+      appendOutput('autopilot', `🟢 ${time} — ${instanceName} spawné (PID ${child.pid})`, 'progress');
+    }
+
+  let output = '';
+  let stdoutBuffer = '';
+  child.stdout.on('data', d => {
+    const text = d.toString();
+    output += text;
+    stdoutBuffer += text;
+    const lines = stdoutBuffer.split('\n');
+    stdoutBuffer = lines.pop();
+    for (const line of lines) {
+      parseStreamJson(instanceName, line);
+    }
+  });
+  child.stderr.on('data', d => {
+    const text = d.toString();
+    output += text;
+    appendOutput(instanceName, `⚠️ ${text.trim()}`);
+  });
+
+  running.set(instanceName, { pid: child.pid, child, started: new Date(), baseAgent });
+
+  child.on('close', async (code) => {
+    running.delete(instanceName);
+    const status = code === 0 ? 'completed' : 'failed';
+    appendOutput(instanceName, `\n${code === 0 ? '✅' : '❌'} Agent ${instanceName} ${status} (exit code ${code})`);
+    console.log(`${code === 0 ? '✅' : '❌'} [${new Date().toLocaleTimeString()}] ${instanceName} ${status} (exit ${code})`);
+
+    // Log despawn to autopilot console
+    if (autopilotEnabled) {
+      const time = new Date().toLocaleTimeString('fr-FR');
+      const emoji = code === 0 ? '✅' : '❌';
+      appendOutput('autopilot', `${emoji} ${time} — ${instanceName} terminé (${status})`, code === 0 ? 'result' : 'error');
+    }
+
+    // Update queue if we have a task ID
+    if (child._queueId) {
+      await sbPatch(`agent_queue?id=eq.${child._queueId}`, {
+        status,
+        completed_at: new Date().toISOString(),
+        error_message: code !== 0 ? output.slice(-200) : null
+      });
+    }
+
+    // If strategist just completed successfully, execute its decisions
+    if (baseAgent === 'strategist' && code === 0) {
+      console.log('🤖 Strategist termine — execution des decisions...');
+      await executeStrategistDecisions();
+    }
+
+    // If an editorial agent finished (not in autopilot mode), check remaining tickets
+    if (baseAgent.startsWith('editorial') && code === 0 && !autopilotEnabled) {
+      setTimeout(() => checkAndRelaunchIfNeeded(instanceName), 10000);
+    }
+  });
+
+  // Create queue entry for dashboard tracking
+  sbInsert('agent_queue', {
+    agent_name: instanceName,
+    status: 'running',
+    started_at: new Date().toISOString()
+  }).then(entry => {
+    if (entry?.id) child._queueId = entry.id;
+  });
+
+  return { ok: true, pid: child.pid, instance: instanceName };
+}
+
+function stopAgent(name) {
+  const info = running.get(name);
+  if (!info) return { ok: false, error: `${name} n'est pas en cours` };
+
+  try {
+    process.kill(info.pid, 'SIGTERM');
+    running.delete(name);
+    console.log(`⏹️ [${new Date().toLocaleTimeString()}] ${name} arrete`);
+    return { ok: true };
+  } catch(e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+// HTTP Server
+const server = createServer(async (req, res) => {
+  // CORS headers for dashboard
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
+
+  const url = new URL(req.url, `http://localhost:${PORT}`);
+
+  // GET /status — list running agents + buffer info
+  if (req.method === 'GET' && url.pathname === '/status') {
+    const agents = {};
+    for (const [name, info] of running) {
+      agents[name] = {
+        pid: info.pid,
+        uptime: Math.round((Date.now() - info.started) / 1000) + 's',
+        lines: outputBuffers.get(name)?.lines.length || 0
+      };
+    }
+    // Include agents with buffers (even stopped)
+    const buffers = {};
+    for (const [name, buf] of outputBuffers) {
+      buffers[name] = { lines: buf.lines.length, startedAt: buf.startedAt, running: running.has(name) };
+    }
+    // Aggregate costs
+    const costs = {};
+    for (const [n, c] of agentCosts) costs[n] = c;
+    const totalCost = [...agentCosts.values()].reduce((s, c) => s + c, 0);
+
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ running: agents, available: Object.keys(AGENTS), buffers, costs, totalCost, autopilot: { enabled: autopilotEnabled, cycle: autopilotCycle, phase: autopilotPhase, running: autopilotEnabled, consecutiveIdle, maxCycles: MAX_AUTOPILOT_CYCLES, lastDecision } }));
+    return;
+  }
+
+  // GET /output/:agent — stream agent output (with ?since=N for incremental)
+  if (req.method === 'GET' && url.pathname.startsWith('/output/')) {
+    const agentName = url.pathname.replace('/output/', '');
+    const since = parseInt(url.searchParams.get('since') || '0');
+    const buf = outputBuffers.get(agentName);
+
+    if (!buf) {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ agent: agentName, lines: [], total: 0, running: false }));
+      return;
+    }
+
+    // Return lines after 'since' index
+    const lines = since > 0 ? buf.lines.slice(since) : buf.lines;
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      agent: agentName,
+      lines,
+      total: buf.lines.length,
+      running: running.has(agentName),
+      startedAt: buf.startedAt
+    }));
+    return;
+  }
+
+  // POST /launch — launch an agent (supports { allowMultiple: true } for multi-instance)
+  if (req.method === 'POST' && url.pathname === '/launch') {
+    let body = '';
+    req.on('data', d => body += d);
+    req.on('end', () => {
+      try {
+        const { agent, allowMultiple } = JSON.parse(body);
+        const result = launchAgent(agent, { allowMultiple: !!allowMultiple });
+        res.writeHead(result.ok ? 200 : 409, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(result));
+      } catch(e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: false, error: e.message }));
+      }
+    });
+    return;
+  }
+
+  // POST /autopilot/start — start native autopilot pipeline (no Claude agent!)
+  if (req.method === 'POST' && url.pathname === '/autopilot/start') {
+    if (autopilotEnabled) {
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: true, message: 'Autopilot deja actif', cycle: autopilotCycle, phase: autopilotPhase }));
+      return;
+    }
+    autopilotEnabled = true;
+    autopilotCycle = 0;
+    autopilotPhase = 'starting';
+    consecutiveIdle = 0;
+    lastDecision = null;
+    console.log(`🟢 [${new Date().toLocaleTimeString()}] Autopilot ACTIVE (pipeline natif)`);
+    outputBuffers.set('autopilot', { lines: [{ ts: new Date().toISOString(), text: '🟢 Autopilot activé — pipeline natif (zéro token)', level: 'progress' }], startedAt: new Date().toISOString() });
+    // Start the pipeline loop (runs in background, no Claude agent needed)
+    runAutopilotCycle();
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot natif demarre', cycle: 1 }));
+    return;
+  }
+
+  // POST /autopilot/stop — stop autopilot loop AND kill all running agents
+  if (req.method === 'POST' && url.pathname === '/autopilot/stop') {
+    autopilotEnabled = false;
+    console.log(`🔴 [${new Date().toLocaleTimeString()}] Autopilot DESACTIVE`);
+
+    // Kill ALL currently running agents — use child.kill() for proper tree kill
+    const killed = [];
+    for (const [name, info] of running) {
+      try {
+        killed.push(name);
+        console.log(`⏹️ [${new Date().toLocaleTimeString()}] Killing agent ${name} (pid ${info.pid})`);
+        // Use child process handle if available, fallback to process.kill
+        if (info.child && !info.child.killed) {
+          info.child.kill('SIGTERM');
+          // On Windows, also kill the process tree via taskkill
+          try {
+            require('child_process').execSync(`taskkill /PID ${info.pid} /T /F`, { stdio: 'ignore' });
+          } catch(_) {}
+        } else {
+          process.kill(info.pid, 'SIGTERM');
+        }
+      } catch(e) {
+        console.log(`⚠️ Could not kill ${name} (pid ${info.pid}): ${e.message}`);
+        // Last resort: force kill on Windows
+        try {
+          require('child_process').execSync(`taskkill /PID ${info.pid} /T /F`, { stdio: 'ignore' });
+        } catch(_) {}
+      }
+    }
+    running.clear();
+
+    appendOutput('autopilot', `🔴 Autopilot désactivé — ${killed.length} agent(s) tués: ${killed.join(', ') || 'aucun'}`, 'progress');
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, message: 'Autopilot arrete', killed, cyclesCompleted: autopilotCycle, lastPhase: autopilotPhase }));
+    return;
+  }
+
+  // GET /autopilot/status — check autopilot state
+  if (req.method === 'GET' && url.pathname === '/autopilot/status') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ enabled: autopilotEnabled, cycle: autopilotCycle, phase: autopilotPhase, running: autopilotEnabled }));
+    return;
+  }
+
+  // POST /stop — stop an agent
+  if (req.method === 'POST' && url.pathname === '/stop') {
+    let body = '';
+    req.on('data', d => body += d);
+    req.on('end', () => {
+      try {
+        const { agent } = JSON.parse(body);
+        const result = stopAgent(agent);
+        res.writeHead(result.ok ? 200 : 404, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(result));
+      } catch(e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: false, error: e.message }));
+      }
+    });
+    return;
+  }
+
+  // POST /sync-analytics — run sync-analytics.mjs script
+  if (req.method === 'POST' && url.pathname === '/sync-analytics') {
+    if (running.has('sync-analytics')) {
+      res.writeHead(409, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'Sync already running' }));
+      return;
+    }
+
+    console.log(`📡 [${new Date().toLocaleTimeString()}] Lancement sync-analytics`);
+    const child = spawn('node', ['scripts/sync-analytics.mjs'], {
+      cwd: PROJECT_ROOT,
+      stdio: ['ignore', 'pipe', 'pipe'],
+      env: { ...process.env, PATH: process.env.PATH }
+    });
+
+    let output = '';
+    child.stdout.on('data', d => { output += d.toString(); process.stdout.write(d); });
+    child.stderr.on('data', d => { output += d.toString(); process.stderr.write(d); });
+
+    running.set('sync-analytics', { pid: child.pid, started: new Date() });
+    child.on('close', (code) => {
+      running.delete('sync-analytics');
+      console.log(`${code === 0 ? '✅' : '❌'} sync-analytics done (exit ${code})`);
+    });
+
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, pid: child.pid }));
+    return;
+  }
+
+  // POST /pipeline — launch full orchestrated pipeline (background)
+  if (req.method === 'POST' && url.pathname === '/pipeline') {
+    if (pipelineRunning) {
+      res.writeHead(409, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'Pipeline deja en cours', phase: pipelinePhase }));
+      return;
+    }
+
+    pipelineRunning = true;
+    pipelinePhase = 'starting';
+    pipelineStartedAt = new Date().toISOString();
+
+    // Respond immediately — pipeline runs in background
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, message: 'Pipeline demarre en arriere-plan' }));
+
+    // Run the full pipeline in background
+    runPipeline().catch(e => {
+      console.error('❌ Pipeline error:', e.message);
+      pipelinePhase = 'error';
+    }).finally(() => {
+      pipelineRunning = false;
+    });
+    return;
+  }
+
+  // POST /seo-index-check/run — vérifie l'indexation Google des pages du site
+  if (req.method === 'POST' && url.pathname === '/seo-index-check/run') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    try {
+      const output = execSync('node scripts/pharmacy-map/seo-index-check.mjs', {
+        cwd: PROJECT_ROOT,
+        encoding: 'utf8',
+        env: process.env,
+        timeout: 3 * 60 * 1000,
+      });
+      let report;
+      try { report = JSON.parse(output.trim()); }
+      catch { report = { ok: false, parseError: true, raw: output.slice(-500) }; }
+      res.end(JSON.stringify({ ok: true, ...report }));
+    } catch (e) {
+      res.end(JSON.stringify({
+        ok: false,
+        error: e.message,
+        stderr: (e.stderr || '').toString().slice(-500),
+      }));
+    }
+    return;
+  }
+
+  // POST /pharmacy-curator/run — modère les soumissions pharmacy + refresh JSON + push main
+  if (req.method === 'POST' && url.pathname === '/pharmacy-curator/run') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+
+    // Exécution synchrone — le script est rapide (<30s typiquement)
+    try {
+      const output = execSync('node scripts/pharmacy-map/curate.mjs', {
+        cwd: PROJECT_ROOT,
+        encoding: 'utf8',
+        env: process.env,
+        timeout: 5 * 60 * 1000,  // 5 min safety
+      });
+
+      // Stdout contient uniquement le JSON (les logs vont sur stderr via console.error)
+      let report;
+      try { report = JSON.parse(output.trim()); }
+      catch { report = { ok: false, parseError: true, raw: output.slice(-500) }; }
+
+      res.end(JSON.stringify({ ok: true, ...report }));
+    } catch (e) {
+      res.end(JSON.stringify({
+        ok: false,
+        error: e.message,
+        stderr: (e.stderr || '').toString().slice(-500),
+      }));
+    }
+    return;
+  }
+
+  // GET /pipeline/status
+  if (req.method === 'GET' && url.pathname === '/pipeline/status') {
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+    res.end(JSON.stringify({
+      running: pipelineRunning,
+      phase: pipelinePhase,
+      startedAt: pipelineStartedAt,
+      agents: [...running.keys()]
+    }));
+    return;
+  }
+
+  // GET /logs/:agent — get agent output buffer
+  const logsMatch = url.pathname.match(/^\/logs\/(.+)$/);
+  if (req.method === 'GET' && logsMatch) {
+    const name = decodeURIComponent(logsMatch[1]);
+    const buf = outputBuffers.get(name);
+    if (!buf) {
+      res.writeHead(404, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+      res.end(JSON.stringify({ error: `Pas de logs pour: ${name}`, available: [...outputBuffers.keys()] }));
+      return;
+    }
+    const last = parseInt(url.searchParams.get('last') || '50');
+    const lines = buf.lines.slice(-last);
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+    res.end(JSON.stringify({ agent: name, running: buf.running || false, total: buf.lines.length, lines }));
+    return;
+  }
+
+  res.writeHead(404, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ error: 'Not found' }));
+});
+
+server.listen(PORT, '127.0.0.1', () => {
+  console.log(`\n🤖 Agent Server en ecoute sur http://127.0.0.1:${PORT}`);
+  console.log(`   Agents disponibles: ${Object.keys(AGENTS).join(', ')}`);
+  console.log(`   Endpoints:`);
+  console.log(`     GET  /status   — voir les agents en cours`);
+  console.log(`     POST /launch   — { "agent": "editorial" }`);
+  console.log(`     POST /stop     — { "agent": "editorial" }`);
+  console.log(`     POST /pipeline — lancer le pipeline complet`);
+  console.log(`     POST /pharmacy-curator/run — moderer soumissions pharmacy + push main`);
+  console.log(`     POST /seo-index-check/run — verifier indexation Google (hebdo)`);
+  console.log(`   Ctrl+C pour arreter\n`);
+});

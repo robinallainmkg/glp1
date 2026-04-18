@@ -1,39 +1,48 @@
 ---
-title: "Effets Secondaires Trulicity : Que savoir avant de commencer ?"
+title: "Effets Secondaires Trulicity : Ce qu'il faut savoir"
 description: "Effets secondaires Trulicity : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître."
 keywords: ['effets secondaires trulicity', 'trulicity nausées', 'trulicity effets indésirables', 'risques trulicity', 'tolérance trulicity']
 seoTitle: "Effets Secondaires Trulicity : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Trulicity : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
+date: 2025-01-28
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Trulicity"
 image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
+thumbnail: "/images/thumbnails/trulicity.jpg"
+thumbnailAlt: "Effets secondaires du traitement trulicity"
 ---
 
-# Effets Secondaires Trulicity : Guide Complet
+## Effets Secondaires Trulicity : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (60-70% des patients)
+### Troubles digestifs (30-40% des patients)
 
 **Nausées et vomissements**
-- **Fréquence** : Fréquent (1-10%)
+- **Fréquence** : Très fréquent (12,9 à 21,2% selon le RCP)
 - **Apparition** : Généralement les premiers jours
 - **Gestion** : Prendre le médicament le soir, manger léger
 - **Évolution** : Diminue généralement après 1-2 semaines
 
 **Diarrhée**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (10 à 13,7% selon le RCP)
 - **Causes** : Accélération du transit intestinal
 - **Gestion** : Hydratation, alimentation pauvre en fibres
 - **Durée** : Généralement temporaire
 
+**Vomissements**
+- **Fréquence** : Fréquent (6,8 à 11,5% selon le RCP)
+- **Gestion** : Fractionner les repas, éviter les aliments gras
+- **Évolution** : Diminue avec le temps
+
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Fréquent (1-10%)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -84,14 +93,14 @@ image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 
 ## 📊 Fréquence des Effets Secondaires
 
-### Fréquents (1-10%)
-- Nausées : 10-20%
-- Vomissements : 3-8%
-- Maux de tête : 3-5%
+### Très fréquents (>=10%)
+- Nausées : 12,9-21,2%
+- Diarrhée : 10-13,7%
+- Vomissements : 6,8-11,5%
 
-### Peu fréquents (<1%)
-- Diarrhée : 2-4%
-- Constipation : 1-3%
+### Fréquents (1-10%)
+- Constipation : 3-5%
+- Maux de tête : 3-5%
 - Fatigue : 2-4%
 - Étourdissements : 1-2%
 
@@ -189,8 +198,8 @@ image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 
 ### Associations de patients
 
-**Association Française des Diabétiques (AFD)**
-- **Site** : afdiabete.fr
+**Fédération Française des Diabétiques (FFD)**
+- **Site** : federationdesdiabetiques.org
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
 
@@ -224,19 +233,15 @@ image: "/images/thumbnails/effets-secondaires-trulicity-illus.jpg"
 
 ## 📝 Conclusion
 
-**Trulicity présente une tolérance exceptionnelle** avec des effets secondaires parmi les moins fréquents des GLP-1.
+**Trulicity présente une tolérance exceptionnelle** avec des effets secondaires parmi les moins fréquents des GLP-1. Pour en savoir plus, consultez notre [guide complet Trulicity](/collections/traitements-glp1/guide-complet-trulicity/).
 
 ### Points clés :
-- **Effets fréquents** : Nausées (60-70% des patients)
+- **Effets fréquents** : Nausées, diarrhée (30-40% des patients)
 - **Effets graves** : Très rares (<0.1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/trulicity.jpg"
-thumbnailAlt: "Effets secondaires du traitement trulicity"
----
 
 ## Sommaire
 

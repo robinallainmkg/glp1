@@ -2,19 +2,14 @@
 import '../styles/global.css';
 ---
 
-<footer class="site-footer bg-gray-800 text-white" role="contentinfo" aria-label="Pied de page">
+<footer class="site-footer text-white" role="contentinfo" aria-label="Pied de page" style="background:#1a3c34;">
   <div class="max-w-7xl mx-auto px-4 py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Section principale -->
       <div>
-        <a href="/" class="flex items-center gap-3 mb-3" aria-label="GLP-1 France, page d'accueil">
-          <span class="w-10 h-10 rounded-md bg-white flex items-center justify-center">
-            <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
-              <circle cx="32" cy="32" r="30" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-              <path d="M32 10c8 12 18 18 18 28a18 18 0 1 1-36 0c0-10 10-16 18-28Z" fill="#1d4ed8" stroke="#1e40af" stroke-width="2"/>
-            </svg>
-          </span>
-          <span class="font-semibold text-lg text-white">GLP-1 France</span>
+        <a href="/" class="flex items-center gap-2 mb-3" aria-label="GLP-1 France, page d'accueil">
+          <span style="width:10px;height:10px;border-radius:50%;background:#6ee7a0;display:inline-block;"></span>
+          <span class="font-bold text-lg text-white" style="letter-spacing:-.02em;">GLP-1 France</span>
         </a>
         <p class="text-gray-300 text-sm mb-4">Guide pratique et ressources sur les traitements GLP-1 en France.</p>
 
@@ -23,8 +18,8 @@ import '../styles/global.css';
           <h4 class="font-medium text-white mb-2">Newsletter</h4>
           <form action="#" method="post" class="flex gap-2" aria-label="Formulaire d'inscription à la newsletter">
             <label for="footer-email" class="sr-only">Votre adresse email</label>
-            <input id="footer-email" name="email" type="email" required placeholder="Votre email" class="w-full p-2 rounded-md text-gray-800 text-sm" />
-            <button class="bg-emerald-600 text-white px-3 py-2 rounded-md text-sm" type="submit">OK</button>
+            <input id="footer-email" name="email" type="email" required placeholder="Votre email" class="w-full p-2 rounded-md text-gray-800 text-sm" autocomplete="email" />
+            <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 whitespace-nowrap" type="submit" aria-label="S'inscrire à la newsletter">S'inscrire</button>
           </form>
         </div>
       </div>
@@ -67,8 +62,23 @@ import '../styles/global.css';
     </div>
 
     <!-- Section secondaire avec plus de liens -->
-    <div class="border-t border-gray-700 mt-8 pt-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="border-t border-white/10 mt-8 pt-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Pharmacies (NEW) -->
+        <div>
+          <h5 class="font-medium text-white mb-3">Pharmacies & Prix</h5>
+          <ul class="space-y-1 text-sm">
+            <li><a href="/outils/carte-prix-pharmacies/" class="text-gray-300 hover:text-white transition-colors">🗺️ Carte des prix</a></li>
+            <li><a href="/pharmacies/" class="text-gray-300 hover:text-white transition-colors">Pharmacies par ville</a></li>
+            <li><a href="/pharmacies/paris/" class="text-gray-300 hover:text-white transition-colors">Pharmacies Paris</a></li>
+            <li><a href="/pharmacies/lyon/" class="text-gray-300 hover:text-white transition-colors">Pharmacies Lyon</a></li>
+            <li><a href="/pharmacies/marseille/" class="text-gray-300 hover:text-white transition-colors">Pharmacies Marseille</a></li>
+            <li><a href="/pharmacies/toulouse/" class="text-gray-300 hover:text-white transition-colors">Pharmacies Toulouse</a></li>
+            <li><a href="/pharmacies/bordeaux/" class="text-gray-300 hover:text-white transition-colors">Pharmacies Bordeaux</a></li>
+            <li><a href="/pharmacies/nice/" class="text-gray-300 hover:text-white transition-colors">Pharmacies Nice</a></li>
+          </ul>
+        </div>
+
         <!-- Santé et Nutrition -->
         <div>
           <h5 class="font-medium text-white mb-3">Santé & Nutrition</h5>
@@ -102,7 +112,7 @@ import '../styles/global.css';
     </div>
 
     <!-- Copyright -->
-    <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+    <div class="border-t border-white/10 mt-6 pt-6 text-center text-gray-400 text-sm">
       <p>&copy; {new Date().getFullYear()} GLP-1 France. Tous droits réservés. Site d'information médicale non substituable à l'avis d'un professionnel de santé.</p>
     </div>
   </div>

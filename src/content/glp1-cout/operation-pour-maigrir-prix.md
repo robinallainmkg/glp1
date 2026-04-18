@@ -1,8 +1,8 @@
 ---
-title: "Prix et Coût Détaillé de ce traitement GLP-1 en France 2025"
-description: "Guide complet sur Operations Pour Maigrir : informations médicales et recommandations d'experts."
-slug: "operation-pour-maigrir-prix"
+title: "Opération Bariatrique Prix Remboursement : Sleeve, Bypass, GLP-1"
+description: "Opération bariatrique prix 2025 : sleeve 8 000€, bypass 12 000€, prise en charge Sécu sous conditions. Comparatif avec les GLP-1."
 pubDate: 2025-08-23
+date: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Operation Pour Maigrir Prix"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "opération bariatrique prix remboursement"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -47,9 +48,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Sleeve Gastrectomie :**
 
-* Secteur public : **0 € à 500 €** (après remboursement)
+* Secteur public : reste à charge variable. Coût brut 4 000€ à 8 000€, SS rembourse environ 357€ à 608€ du tarif de base. Avec une mutuelle complémentaire, le reste à charge effectif peut être quasi nul.
 * Clinique privée conventionnée : **2 000 € à 4 000 €**
-* Clinique privée non-conventionnée : **8 000 € à 12 000 €**
+* Clinique privée non-conventionnée : **10 000 € à 15 000 €**
 
 **Bypass Gastrique :**
 
@@ -57,7 +58,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 * Clinique privée conventionnée : **3 000 € à 6 000 €**
 * Clinique privée non-conventionnée : **12 000 € à 18 000 €**
 
-**Anneau Gastrique :**
+**Anneau Gastrique** (voir le détail du [prix de l'anneau gastrique avec prise en charge CMU](/collections/glp1-cout/anneau-gastrique-prix-cmu/)/) **:**
 
 * Secteur public : **0 € à 300 €** (après remboursement)
 * Clinique privée conventionnée : **1 500 € à 3 000 €**
@@ -99,8 +100,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Sécurité Sociale (secteur public) :**
 
-* **Remboursement : 100%** des frais d'hospitalisation
-* Franchise : 18 € par jour d'hospitalisation
+* **Remboursement : 70%** de la base tarifaire SS (certains actes ≥ 120 € pris en charge à 100% de la base SS, mais les dépassements d'honoraires restent à charge). La SS rembourse environ 357€ à 608€ pour la sleeve et 575€ à 604€ pour le bypass sur la base de ses tarifs officiels.
+* La mutuelle complémentaire couvre généralement le reste à charge, d'où un coût effectif proche de zéro AVEC une bonne mutuelle
+* Forfait journalier hospitalier : 20€/jour (restant à charge sauf ALD ou CSS)
 * Participation forfaitaire : 24 €
 
 **Secteur privé conventionné :**
@@ -110,6 +112,10 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 * Remboursement mutuelle : variable selon contrat
 
 ### Exemples Concrets de Coûts
+
+**Sleeve en secteur public (hôpital public, chirurgien secteur 1) :**
+
+En secteur public, la sleeve gastrectomie est intégralement prise en charge par l'Assurance maladie et la complémentaire santé pour les patients répondant aux critères HAS (IMC ≥ 40 ou ≥ 35 avec comorbidités). Le reste à charge réel pour le patient est souvent nul ou limité au forfait journalier hospitalier (20 €/jour), soit environ 60-80 € pour un séjour standard de 3-4 jours. En cas d'ALD ou de CSS (Complémentaire santé solidaire), même ce forfait peut être pris en charge.
 
 **Sleeve en clinique privée conventionnée :**
 
@@ -122,8 +128,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 * Coût total : 8 000 €
 * Remboursement SS : 7 800 €
-* Franchise hospitalisation : 54 € (3 jours)
-* **Reste à charge : 254 €**
+* Franchise hospitalisation : 60 € (3 jours × 20 €)
+* **Reste à charge : environ 60-80 € (forfait journalier uniquement)**
 
 ## Alternatives aux Opérations : Traitements GLP-1
 
@@ -132,9 +138,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 | Traitement  | Coût 2 ans    | Perte de poids | Risques     |
 | ----------- | ------------- | -------------- | ----------- |
 | **Sleeve**  | 1 000-4 000 € | -60 à 70%      | Élevés      |
-| **Bypass**  | 1 500-6 000 € | -70 à 80%      | Très élevés |
-| **Wegovy**  | 6 500 €       | -15 à 20%      | Faibles     |
-| **Saxenda** | 4 500 €       | -10 à 15%      | Faibles     |
+| **Bypass**  | 1 500-6 000 € | -60 à 70% de l'excès pondéral (~25-35% du poids total) | Très élevés |
+| **Wegovy**  | 4 000 € à 8 700 € sur 2 ans (169€-360€/mois selon dosage) | -15 à 17% | Faibles |
+| **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda)** | 4 500 €       | -10 à 15%      | Faibles     |
 
 ### Avantages des GLP-1 vs Chirurgie
 
@@ -164,7 +170,7 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Vitamines B12, fer, calcium
 * Prévient les carences nutritionnelles
 
-**[Protéines en Poudre Digestibles](https://bit.ly/proteines-sleeve)** - *34,90 €*
+**[Protéines en Poudre Digestibles](https://bit.ly/protéines-sleeve)** - *34,90 €*
 
 * Maintient la masse musculaire
 * Facilite la cicatrisation
@@ -191,6 +197,8 @@ Si vous choisissez la chirurgie, ces compléments sont essentiels :
 * Peur de la chirurgie
 * Vie professionnelle intense
 * Désir de solution réversible
+
+Pour en savoir plus sur les conditions de prise en charge, consultez notre guide sur le [remboursement des traitements GLP-1](/collections/glp1-cout/remboursement-glp1-2026/). Avant d'envisager la chirurgie, explorez les alternatives médicamenteuses comme décrit dans notre [comparatif Wegovy ou Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/).
 
 ## Financement et Aides
 
@@ -357,11 +365,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-* [prix Wegovy](../glp1-cout/wegovy-prix/)
-* [acheter Wegovy France](../glp1-cout/acheter-wegovy-en-france/)
-* [dangers Wegovy](../effets-secondaires-glp1/wegovy-danger/)
-* [remboursement Wegovy](../glp1-cout/wegovy-remboursement-mutuelle/)
-* [médicament maigrir puissant](../glp1-perte-de-poids/medicament-pour-maigrir-tres-puissant/)
+* [prix Wegovy](/collections/glp1-cout/wegovy-prix/)
+* [acheter Wegovy France](/collections/glp1-cout/acheter-wegovy-en-france/)
+* [dangers Wegovy](/collections/effets-secondaires-glp1/wegovy-danger/)
+* [remboursement Wegovy](/collections/glp1-cout/wegovy-remboursement-mutuelle/)
+* [médicament maigrir puissant](/collections/traitements-glp1/guide-complet-mounjaro/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

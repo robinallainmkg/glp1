@@ -1,0 +1,616 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit SEO - GLP1 Admin</title>
+  <style is:inline>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header { background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header p { font-size: 0.85rem; color: #64748b; margin-top: 0.15rem; }
+    .main { padding: 2rem; }
+
+    /* Run selector */
+    .run-bar { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .run-select { padding: 0.5rem 0.75rem; border: 1px solid #1e293b; border-radius: 8px; font-size: 0.85rem; background: #111827; color: #e2e8f0; min-width: 340px; }
+    .run-meta { font-size: 0.78rem; color: #94a3b8; }
+    .run-meta strong { color: #e2e8f0; }
+    .cmd-box { background: #1a1f2e; border: 1px solid #1e293b; color: #a5f3fc; padding: 0.5rem 1rem; border-radius: 8px; font-family: monospace; font-size: 0.8rem; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; gap: 0.5rem; margin-left: auto; }
+    .cmd-box:hover { background: #1e293b; }
+    .cmd-box .copy-icon { opacity: 0.6; }
+    .cmd-box.copied { color: #4ade80; }
+
+    /* Stats cards */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; text-align: center; }
+    .stat-value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { font-size: 0.75rem; color: #64748b; margin-top: 0.35rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+    .stat-critical .stat-value { color: #f87171; }
+    .stat-warning .stat-value { color: #fbbf24; }
+    .stat-info .stat-value { color: #60a5fa; }
+    .stat-pages .stat-value { color: #e2e8f0; }
+
+    /* Filters */
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .filter-btn { padding: 0.4rem 0.8rem; border: 1px solid #1e293b; border-radius: 8px; background: #111827; color: #94a3b8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-btn .count { display: inline-block; min-width: 18px; height: 18px; line-height: 18px; text-align: center; border-radius: 9px; font-size: 0.68rem; margin-left: 0.3rem; background: rgba(255,255,255,0.1); color: #94a3b8; }
+    .filter-btn.active .count { background: rgba(255,255,255,0.25); color: white; }
+    .search-input { padding: 0.4rem 0.8rem; border: 1px solid #1e293b; border-radius: 8px; background: #111827; color: #e2e8f0; font-size: 0.78rem; min-width: 200px; margin-left: auto; }
+    .search-input::placeholder { color: #475569; }
+    .search-input:focus { outline: none; border-color: #3b82f6; }
+
+    /* Issues table */
+    .issues-section { background: #111827; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; }
+    .issues-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; }
+    .issues-header h2 { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+    .issues-count { font-size: 0.78rem; color: #94a3b8; }
+    .issues-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .issues-table th { text-align: left; padding: 0.6rem 1rem; font-weight: 600; color: #64748b; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; background: #0f1520; border-bottom: 1px solid #1e293b; }
+    .issues-table td { padding: 0.6rem 1rem; border-bottom: 1px solid #1a2332; vertical-align: top; color: #c8d6e5; }
+    .issues-table tr:hover { background: #1a2332; }
+
+    /* Badges */
+    .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+    .badge-critical { background: #450a0a; color: #fca5a5; }
+    .badge-warning { background: #451a03; color: #fcd34d; }
+    .badge-info { background: #1e3a5f; color: #93c5fd; }
+    .badge-type { background: #1e293b; color: #94a3b8; }
+
+    .page-url { font-family: monospace; font-size: 0.75rem; color: #94a3b8; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .page-url a { color: #60a5fa; text-decoration: none; transition: color 0.15s; }
+    .page-url a:hover { color: #93c5fd; text-decoration: underline; }
+    .issue-title { font-weight: 600; color: #e2e8f0; }
+    .issue-detail { font-size: 0.78rem; color: #94a3b8; margin-top: 0.2rem; max-width: 400px; }
+    .recommendation { font-size: 0.78rem; color: #4ade80; font-style: italic; }
+
+    /* History */
+    .history-section { background: #111827; border: 1px solid #1e293b; border-radius: 12px; overflow: hidden; margin-top: 1.5rem; }
+    .history-header { padding: 1rem 1.25rem; border-bottom: 1px solid #1e293b; }
+    .history-header h2 { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+    .history-list { padding: 0; }
+    .history-item { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1.25rem; border-bottom: 1px solid #1a2332; cursor: pointer; transition: background 0.1s; font-size: 0.82rem; }
+    .history-item:hover { background: #1a2332; }
+    .history-item.active { background: #1e3a5f; border-left: 3px solid #3b82f6; }
+    .history-date { font-weight: 600; color: #e2e8f0; min-width: 140px; }
+    .history-stats { display: flex; gap: 0.75rem; color: #94a3b8; }
+    .history-stats span { display: flex; align-items: center; gap: 0.25rem; }
+    .history-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dot-critical { background: #f87171; }
+    .dot-warning { background: #fbbf24; }
+    .dot-info { background: #60a5fa; }
+
+    .empty-state { text-align: center; padding: 3rem; color: #64748b; }
+    .loading { text-align: center; padding: 3rem; color: #64748b; }
+
+    /* Synthesis section */
+    .synthesis { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
+    .synthesis-title { font-size: 0.82rem; font-weight: 700; color: #e2e8f0; margin-bottom: 1rem; }
+    .synthesis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .synth-block h3 { font-size: 0.78rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+    .top-pages-list { list-style: none; padding: 0; }
+    .top-pages-list li { display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid #1a2332; font-size: 0.82rem; }
+    .top-pages-list li:last-child { border-bottom: none; }
+    .top-page-url { font-family: monospace; font-size: 0.72rem; color: #94a3b8; max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-page-counts { display: flex; gap: 0.35rem; }
+    .top-page-counts .mini-badge { padding: 1px 5px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; }
+    .type-distrib { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .type-chip { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0.6rem; border-radius: 6px; background: #1e293b; font-size: 0.75rem; color: #94a3b8; cursor: pointer; transition: all 0.15s; }
+    .type-chip:hover { background: #334155; color: #e2e8f0; }
+    .type-chip .chip-count { font-weight: 700; color: #e2e8f0; }
+    .comparison { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1e293b; }
+    .comparison-title { font-size: 0.78rem; font-weight: 600; color: #94a3b8; margin-bottom: 0.5rem; }
+    .comparison-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .comp-stat { text-align: center; }
+    .comp-stat .comp-value { font-size: 1.25rem; font-weight: 800; }
+    .comp-stat .comp-label { font-size: 0.68rem; color: #64748b; }
+    .badge-recurring { background: #451a03; color: #fcd34d; font-size: 0.65rem; padding: 1px 5px; border-radius: 4px; margin-left: 0.3rem; font-weight: 600; }
+
+    /* Score bar */
+    .score-bar { display: flex; align-items: center; gap: 0.5rem; }
+    .score-bar-bg { flex: 1; height: 6px; background: #1e293b; border-radius: 3px; overflow: hidden; min-width: 60px; }
+    .score-bar-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+    .score-value { font-size: 0.72rem; font-weight: 700; min-width: 32px; text-align: right; }
+
+    /* Export button */
+    .export-btn { padding: 0.4rem 0.8rem; border: 1px solid #1e293b; border-radius: 8px; background: #111827; color: #94a3b8; font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; gap: 0.4rem; }
+    .export-btn:hover { border-color: #334155; color: #e2e8f0; background: #1a2332; }
+
+    /* Sortable headers */
+    .issues-table th.sortable { cursor: pointer; user-select: none; }
+    .issues-table th.sortable:hover { color: #e2e8f0; }
+    .sort-arrow { margin-left: 0.25rem; font-size: 0.65rem; }
+
+    /* Top pages score column */
+    .top-pages-list li { gap: 0.5rem; }
+    .top-page-score { min-width: 60px; }
+
+    @media (max-width: 1024px) { .admin-layout { margin-left: 0; padding-top: 56px; } }
+    @media (max-width: 768px) {
+      .main { padding: 1rem; }
+      .page-header { padding: 1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .run-bar { flex-direction: column; align-items: stretch; }
+      .cmd-box { margin-left: 0; }
+      .search-input { margin-left: 0; min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  // Auth guard — redirect to login if not authenticated
+  // Auth guard handled by AdminNav (localStorage, 24h expiry)
+</script>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <div>
+      <h1>Audit SEO</h1>
+      <p>Resultats d'audit du site — issues, recommandations, historique</p>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Run selector + command -->
+    <div class="run-bar">
+      <select class="run-select" id="runSelect">
+        <option value="">Chargement...</option>
+      </select>
+      <span class="run-meta" id="runMeta"></span>
+      <div class="cmd-box" id="cmdBox" title="Cliquer pour copier">
+        <span class="copy-icon">&#x2398;</span>
+        <span>claude -p "Lance l'audit SEO" --agent seo-audit</span>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid" id="statsGrid">
+      <div class="stat-card stat-critical"><div class="stat-value" id="statCritical">-</div><div class="stat-label">Critical</div></div>
+      <div class="stat-card stat-warning"><div class="stat-value" id="statWarning">-</div><div class="stat-label">Warning</div></div>
+      <div class="stat-card stat-info"><div class="stat-value" id="statInfo">-</div><div class="stat-label">Info</div></div>
+      <div class="stat-card stat-pages"><div class="stat-value" id="statPages">-</div><div class="stat-label">Pages auditees</div></div>
+    </div>
+
+    <!-- Synthesis -->
+    <div class="synthesis" id="synthesisSection" style="display:none">
+      <div class="synthesis-title">Synthese de l'audit</div>
+      <div class="synthesis-grid">
+        <div class="synth-block">
+          <h3>Pages les plus problematiques</h3>
+          <ul class="top-pages-list" id="topPagesList"></ul>
+        </div>
+        <div class="synth-block">
+          <h3>Repartition par type d'audit</h3>
+          <div class="type-distrib" id="typeDistrib"></div>
+        </div>
+      </div>
+      <div class="comparison" id="comparisonSection" style="display:none">
+        <div class="comparison-title">Evolution vs audit precedent</div>
+        <div class="comparison-grid" id="comparisonGrid"></div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">Tout <span class="count" id="countAll">0</span></button>
+      <button class="filter-btn" data-filter="critical">Critical <span class="count" id="countCritical">0</span></button>
+      <button class="filter-btn" data-filter="warning">Warning <span class="count" id="countWarning">0</span></button>
+      <button class="filter-btn" data-filter="info">Info <span class="count" id="countInfo">0</span></button>
+      <input class="search-input" id="searchInput" type="text" placeholder="Filtrer par URL ou titre...">
+    </div>
+
+    <!-- Issues table -->
+    <div class="issues-section">
+      <div class="issues-header">
+        <h2>Issues detectees</h2>
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <span class="issues-count" id="issuesCount"></span>
+          <button class="export-btn" id="exportBtn" title="Exporter en CSV">&#x2913; CSV</button>
+        </div>
+      </div>
+      <div id="issuesContent">
+        <div class="loading">Chargement des resultats...</div>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="history-section">
+      <div class="history-header">
+        <h2>Historique des audits</h2>
+      </div>
+      <div id="historyContent">
+        <div class="loading">Chargement...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+  const SUPABASE_URL = supabaseUrl;
+  const SUPABASE_ANON_KEY = supabaseAnonKey;
+
+  let allIssues = [];
+  let allRuns = [];
+  let currentFilter = 'all';
+  let searchQuery = '';
+  let sortColumn = 'severity';
+  let sortAsc = true;
+
+  const severityOrder = { critical: 0, warning: 1, info: 2 };
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '-';
+    return new Date(dateStr).toLocaleDateString('fr-FR', {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  function formatDuration(ms) {
+    if (!ms) return '-';
+    if (ms < 60000) return Math.round(ms / 1000) + 's';
+    return Math.round(ms / 60000) + 'min';
+  }
+
+  async function supabaseFetch(table, query) {
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+      headers: { 'apikey': SUPABASE_ANON_KEY, 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` }
+    });
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  async function loadRuns() {
+    allRuns = await supabaseFetch('agent_runs', 'select=*&agent_name=eq.seo-audit&order=started_at.desc&limit=20');
+    const select = document.getElementById('runSelect');
+    if (allRuns.length === 0) {
+      select.innerHTML = '<option value="">Aucun audit — lancez-en un !</option>';
+      document.getElementById('issuesContent').innerHTML = '<div class="empty-state">Aucun audit disponible. Lancez la commande ci-dessus.</div>';
+      document.getElementById('historyContent').innerHTML = '<div class="empty-state">Pas encore d\'historique</div>';
+      return null;
+    }
+    select.innerHTML = allRuns.map((r, i) => {
+      const date = formatDate(r.started_at);
+      const meta = r.metadata || {};
+      const critical = meta.critical ?? '?';
+      const warning = meta.warning ?? '?';
+      return `<option value="${r.id}"${i === 0 ? ' selected' : ''}>${date} — ${r.items_processed || '?'} pages, ${critical} critical / ${warning} warning — ${r.status}</option>`;
+    }).join('');
+    renderHistory();
+    return allRuns[0].id;
+  }
+
+  function renderHistory() {
+    const el = document.getElementById('historyContent');
+    if (allRuns.length === 0) { el.innerHTML = '<div class="empty-state">Pas d\'historique</div>'; return; }
+    const selectedId = document.getElementById('runSelect').value;
+    el.innerHTML = '<div class="history-list">' + allRuns.map(r => {
+      const meta = r.metadata || {};
+      return `<div class="history-item${r.id === selectedId ? ' active' : ''}" data-run-id="${r.id}">
+        <span class="history-date">${formatDate(r.started_at)}</span>
+        <span class="history-stats">
+          <span><span class="history-dot dot-critical"></span> ${meta.critical ?? 0}</span>
+          <span><span class="history-dot dot-warning"></span> ${meta.warning ?? 0}</span>
+          <span><span class="history-dot dot-info"></span> ${meta.info ?? 0}</span>
+        </span>
+        <span style="color:#64748b">${r.items_processed || 0} pages</span>
+        <span style="color:#64748b;margin-left:auto">${formatDuration(r.duration_ms)}</span>
+      </div>`;
+    }).join('') + '</div>';
+
+    el.querySelectorAll('.history-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const runId = item.dataset.runId;
+        document.getElementById('runSelect').value = runId;
+        loadIssues(runId);
+        renderHistory();
+      });
+    });
+  }
+
+  let previousRunIssues = [];
+
+  async function loadIssues(runId) {
+    if (!runId) return;
+    const run = allRuns.find(r => r.id === runId);
+    if (run) {
+      const meta = run.metadata || {};
+      document.getElementById('runMeta').innerHTML = `<strong>${run.items_processed || 0}</strong> pages &middot; <strong>${formatDuration(run.duration_ms)}</strong> &middot; ${run.status}`;
+    }
+
+    allIssues = await supabaseFetch('seo_audit_results', `select=*&agent_run_id=eq.${runId}&order=severity.asc,audit_type.asc`);
+
+    // Load previous run issues for comparison
+    const runIndex = allRuns.findIndex(r => r.id === runId);
+    if (runIndex >= 0 && runIndex < allRuns.length - 1) {
+      const prevRunId = allRuns[runIndex + 1].id;
+      try {
+        previousRunIssues = await supabaseFetch('seo_audit_results', `select=*&agent_run_id=eq.${prevRunId}&order=severity.asc`);
+      } catch(e) { previousRunIssues = []; }
+    } else {
+      previousRunIssues = [];
+    }
+
+    const critical = allIssues.filter(i => i.severity === 'critical').length;
+    const warning = allIssues.filter(i => i.severity === 'warning').length;
+    const info = allIssues.filter(i => i.severity === 'info').length;
+
+    document.getElementById('statCritical').textContent = critical;
+    document.getElementById('statWarning').textContent = warning;
+    document.getElementById('statInfo').textContent = info;
+    document.getElementById('statPages').textContent = run ? (run.items_processed || 0) : '-';
+
+    document.getElementById('countAll').textContent = allIssues.length;
+    document.getElementById('countCritical').textContent = critical;
+    document.getElementById('countWarning').textContent = warning;
+    document.getElementById('countInfo').textContent = info;
+
+    renderSynthesis();
+    renderIssues();
+  }
+
+  function renderSynthesis() {
+    if (allIssues.length === 0) {
+      document.getElementById('synthesisSection').style.display = 'none';
+      return;
+    }
+    document.getElementById('synthesisSection').style.display = 'block';
+
+    // Top 5 pages by issue count (critical+warning weighted)
+    const pageScores = {};
+    for (const issue of allIssues) {
+      const url = issue.page_url || 'unknown';
+      if (!pageScores[url]) pageScores[url] = { critical: 0, warning: 0, info: 0, total: 0 };
+      pageScores[url][issue.severity] = (pageScores[url][issue.severity] || 0) + 1;
+      pageScores[url].total += issue.severity === 'critical' ? 3 : issue.severity === 'warning' ? 2 : 1;
+    }
+    const topPages = Object.entries(pageScores)
+      .sort((a, b) => b[1].total - a[1].total)
+      .slice(0, 5);
+
+    // Calculate SEO score per page: 100 - (critical*15 + warning*5 + info*1), min 0
+    function calcScore(counts) {
+      return Math.max(0, 100 - (counts.critical * 15 + counts.warning * 5 + counts.info * 1));
+    }
+    function scoreColor(score) {
+      if (score >= 80) return '#4ade80';
+      if (score >= 50) return '#fbbf24';
+      return '#f87171';
+    }
+
+    document.getElementById('topPagesList').innerHTML = topPages.map(([url, counts]) => {
+      const pageLink = url.startsWith('/') ? `https://glp1-france.fr${url}` : url;
+      const score = calcScore(counts);
+      return `
+      <li>
+        <span class="top-page-url" title="${escapeHtml(url)}"><a href="${escapeHtml(pageLink)}" target="_blank" rel="noopener">${escapeHtml(url)}</a></span>
+        <span class="top-page-score">
+          <div class="score-bar">
+            <div class="score-bar-bg"><div class="score-bar-fill" style="width:${score}%;background:${scoreColor(score)}"></div></div>
+            <span class="score-value" style="color:${scoreColor(score)}">${score}</span>
+          </div>
+        </span>
+        <span class="top-page-counts">
+          ${counts.critical > 0 ? `<span class="mini-badge" style="background:#fef2f2;color:#dc2626">${counts.critical} critical</span>` : ''}
+          ${counts.warning > 0 ? `<span class="mini-badge" style="background:#fffbeb;color:#d97706">${counts.warning} warning</span>` : ''}
+          ${counts.info > 0 ? `<span class="mini-badge" style="background:#eff6ff;color:#2563eb">${counts.info} info</span>` : ''}
+        </span>
+      </li>`;
+    }).join('');
+
+    // Type distribution
+    const typeCounts = {};
+    for (const issue of allIssues) {
+      const t = issue.audit_type || 'other';
+      typeCounts[t] = (typeCounts[t] || 0) + 1;
+    }
+    const sortedTypes = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
+    document.getElementById('typeDistrib').innerHTML = sortedTypes.map(([type, count]) =>
+      `<div class="type-chip" onclick="filterByType('${escapeHtml(type)}')" title="Cliquer pour filtrer"><span class="chip-count">${count}</span> ${escapeHtml(type)}</div>`
+    ).join('');
+
+    // Comparison with previous audit
+    renderComparison();
+  }
+
+  function renderComparison() {
+    if (previousRunIssues.length === 0 || allIssues.length === 0) {
+      document.getElementById('comparisonSection').style.display = 'none';
+      return;
+    }
+    document.getElementById('comparisonSection').style.display = 'block';
+
+    // Build issue signatures for comparison
+    const prevSet = new Set(previousRunIssues.map(i => `${i.page_url}||${i.audit_type}||${i.issue_title}`));
+    const currSet = new Set(allIssues.map(i => `${i.page_url}||${i.audit_type}||${i.issue_title}`));
+
+    const newIssues = allIssues.filter(i => !prevSet.has(`${i.page_url}||${i.audit_type}||${i.issue_title}`));
+    const resolved = previousRunIssues.filter(i => !currSet.has(`${i.page_url}||${i.audit_type}||${i.issue_title}`));
+    const recurring = allIssues.filter(i => prevSet.has(`${i.page_url}||${i.audit_type}||${i.issue_title}`));
+
+    document.getElementById('comparisonGrid').innerHTML = `
+      <div class="comp-stat">
+        <div class="comp-value" style="color:#ef4444">+${newIssues.length}</div>
+        <div class="comp-label">Nouvelles issues</div>
+      </div>
+      <div class="comp-stat">
+        <div class="comp-value" style="color:#22c55e">-${resolved.length}</div>
+        <div class="comp-label">Issues resolues</div>
+      </div>
+      <div class="comp-stat">
+        <div class="comp-value" style="color:#f59e0b">${recurring.length}</div>
+        <div class="comp-label">Recurrentes</div>
+      </div>
+      <div class="comp-stat">
+        <div class="comp-value" style="color:#3b82f6">${allIssues.length - previousRunIssues.length > 0 ? '+' : ''}${allIssues.length - previousRunIssues.length}</div>
+        <div class="comp-label">Delta total</div>
+      </div>
+    `;
+
+    // Store recurring signatures for table marking
+    window._recurringSet = new Set(recurring.map(i => `${i.page_url}||${i.audit_type}||${i.issue_title}`));
+  }
+
+  window.filterByType = function(type) {
+    const searchInput = document.getElementById('searchInput');
+    searchInput.value = type;
+    searchQuery = type;
+    renderIssues();
+  };
+
+  function renderIssues() {
+    let filtered = allIssues;
+    if (currentFilter !== 'all') filtered = filtered.filter(i => i.severity === currentFilter);
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      filtered = filtered.filter(i =>
+        (i.page_url || '').toLowerCase().includes(q) ||
+        (i.issue_title || '').toLowerCase().includes(q) ||
+        (i.audit_type || '').toLowerCase().includes(q)
+      );
+    }
+
+    document.getElementById('issuesCount').textContent = `${filtered.length} issue${filtered.length > 1 ? 's' : ''}`;
+
+    if (filtered.length === 0) {
+      document.getElementById('issuesContent').innerHTML = '<div class="empty-state">Aucune issue pour ce filtre</div>';
+      return;
+    }
+
+    const recurringSet = window._recurringSet || new Set();
+
+    // Sort
+    filtered.sort((a, b) => {
+      let cmp = 0;
+      if (sortColumn === 'severity') cmp = (severityOrder[a.severity] || 9) - (severityOrder[b.severity] || 9);
+      else if (sortColumn === 'type') cmp = (a.audit_type || '').localeCompare(b.audit_type || '');
+      else if (sortColumn === 'page') cmp = (a.page_url || '').localeCompare(b.page_url || '');
+      else if (sortColumn === 'title') cmp = (a.issue_title || '').localeCompare(b.issue_title || '');
+      return sortAsc ? cmp : -cmp;
+    });
+
+    function sortArrow(col) {
+      if (sortColumn !== col) return '';
+      return `<span class="sort-arrow">${sortAsc ? '&#9650;' : '&#9660;'}</span>`;
+    }
+
+    let html = `<table class="issues-table"><thead><tr>
+      <th class="sortable" data-sort="severity">Severite${sortArrow('severity')}</th>
+      <th class="sortable" data-sort="type">Type${sortArrow('type')}</th>
+      <th class="sortable" data-sort="page">Page${sortArrow('page')}</th>
+      <th class="sortable" data-sort="title">Probleme${sortArrow('title')}</th>
+      <th>Recommandation</th>
+    </tr></thead><tbody>`;
+
+    for (const issue of filtered) {
+      const isRecurring = recurringSet.has(`${issue.page_url}||${issue.audit_type}||${issue.issue_title}`);
+      const pageUrl = issue.page_url || '';
+      const fullUrl = pageUrl.startsWith('/') ? `https://glp1-france.fr${pageUrl}` : pageUrl;
+      html += `<tr>
+        <td><span class="badge badge-${issue.severity}">${issue.severity}</span></td>
+        <td><span class="badge badge-type">${escapeHtml(issue.audit_type)}</span></td>
+        <td><div class="page-url" title="${escapeHtml(pageUrl)}">${pageUrl ? `<a href="${escapeHtml(fullUrl)}" target="_blank" rel="noopener">${escapeHtml(pageUrl)}</a>` : '-'}</div></td>
+        <td>
+          <div class="issue-title">${escapeHtml(issue.issue_title)}${isRecurring ? '<span class="badge-recurring">Recurrent</span>' : ''}</div>
+          ${issue.issue_detail ? `<div class="issue-detail">${escapeHtml(issue.issue_detail)}</div>` : ''}
+        </td>
+        <td><div class="recommendation">${escapeHtml(issue.recommendation || '')}</div></td>
+      </tr>`;
+    }
+
+    html += '</tbody></table>';
+    document.getElementById('issuesContent').innerHTML = html;
+  }
+
+  // Filter buttons
+  document.getElementById('filters').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderIssues();
+  });
+
+  // Search
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    searchQuery = e.target.value;
+    renderIssues();
+  });
+
+  // Run selector
+  document.getElementById('runSelect').addEventListener('change', (e) => {
+    loadIssues(e.target.value);
+    renderHistory();
+  });
+
+  // Sort columns
+  document.getElementById('issuesContent').addEventListener('click', (e) => {
+    const th = e.target.closest('th.sortable');
+    if (!th) return;
+    const col = th.dataset.sort;
+    if (sortColumn === col) { sortAsc = !sortAsc; }
+    else { sortColumn = col; sortAsc = true; }
+    renderIssues();
+  });
+
+  // Export CSV
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    if (allIssues.length === 0) return;
+    const headers = ['Severite', 'Type', 'Page', 'Probleme', 'Detail', 'Recommandation'];
+    const rows = allIssues.map(i => [
+      i.severity, i.audit_type, i.page_url || '', i.issue_title || '', i.issue_detail || '', i.recommendation || ''
+    ].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','));
+    const csv = [headers.join(','), ...rows].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    const run = allRuns.find(r => r.id === document.getElementById('runSelect').value);
+    a.download = `audit-seo-${run ? formatDate(run.started_at).replace(/[/:]/g, '-') : 'export'}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  // Copy command
+  document.getElementById('cmdBox').addEventListener('click', async () => {
+    const box = document.getElementById('cmdBox');
+    try {
+      await navigator.clipboard.writeText('claude -p "Lance l\'audit SEO" --agent seo-audit');
+      box.classList.add('copied');
+      box.querySelector('span:last-child').textContent = 'Copie !';
+      setTimeout(() => {
+        box.classList.remove('copied');
+        box.querySelector('span:last-child').textContent = 'claude -p "Lance l\'audit SEO" --agent seo-audit';
+      }, 2000);
+    } catch(e) {}
+  });
+
+  // Init
+  (async () => {
+    const runId = await loadRuns();
+    if (runId) await loadIssues(runId);
+  })();
+</script>
+
+</body>
+</html>

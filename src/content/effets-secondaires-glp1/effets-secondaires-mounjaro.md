@@ -1,20 +1,23 @@
 ---
-title: "Effets Secondaires Mounjaro : Que savoir avant de commencer ?"
-description: "Effets secondaires Mounjaro : nausées, vomissements, diarrhée. Comment les gérer, quand consulter, effets secondaires graves à connaître."
-keywords: ['effets secondaires mounjaro', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'tolérance mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'comment gérer effets mounjaro']
-seoTitle: "Effets Secondaires Mounjaro : Les connaître pour mieux les gérer"
-seoDescription: "Guide complet des effets secondaires de Mounjaro : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+title: "Effets Secondaires Mounjaro : Risques (2026)"
+thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
+description: "Effets secondaires Mounjaro : nausées, diarrhée, pancréatite. Liste complète des risques fréquents et graves + solutions concrètes pour les gérer."
+keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro effet secondaire long terme', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger']
+seoTitle: "Effets Secondaires Mounjaro : Risques Graves (2026)"
+seoDescription: "Effets secondaires Mounjaro : 12 effets fréquents + risques graves (pancréatite, gastroparésie). Témoignages et solutions concrètes."
 publishedAt: '2025-08-30'
 updatedAt: '2025-12-27'
+date: 2025-08-30
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires mounjaro tirzepatide"
 ---
 
-# Effets Secondaires Mounjaro : Guide Complet
+## Effets Secondaires Mounjaro : Guide Complet
 
 ## ⚠️ Effets Secondaires Fréquents
 
@@ -33,7 +36,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Durée** : Généralement temporaire
 
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP VIDAL)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -78,7 +81,7 @@ affiliateCollection: "effets-secondaires-glp1"
 - Urticaire généralisée
 - Choc anaphylactique
 
-**Pancréatite aiguë**
+**[Pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)**
 - Douleurs abdominales intenses
 - Nausées et vomissements persistants
 - Fièvre
@@ -103,7 +106,7 @@ affiliateCollection: "effets-secondaires-glp1"
 | Nausées | 15-20% | 5% |
 | Vomissements | 5-10% | 2% |
 | Diarrhée | 8-12% | 4% |
-| Constipation | 3-5% | 2% |
+| Constipation | 10-12% | 2% |
 | Maux de tête | 6-8% | 4% |
 | Fatigue | 4-6% | 3% |
 
@@ -112,7 +115,7 @@ affiliateCollection: "effets-secondaires-glp1"
 | Traitement | Nausées | Diarrhée | Maux de tête |
 |------------|---------|----------|-------------|
 | Mounjaro | 15-20% | 8-12% | 6-8% |
-| Ozempic | 10-15% | 5-8% | 4-6% |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | 10-15% | 5-8% | 4-6% |
 | Trulicity | 8-12% | 4-6% | 3-5% |
 | Victoza | 6-10% | 3-5% | 2-4% |
 
@@ -128,7 +131,7 @@ affiliateCollection: "effets-secondaires-glp1"
 **Pendant le traitement**
 - **Dose progressive** : Commencer à 2,5 mg/semaine
 - **Surveillance rapprochée** : Premiers jours/semaines
-- **Alimentation adaptée** : Repas légers, fractionnés
+- **[Alimentation adaptée](/collections/régime-glp1/régime-mounjaro-optimal/)** : Repas légers, fractionnés
 
 ### Gestion des effets secondaires courants
 
@@ -179,10 +182,12 @@ affiliateCollection: "effets-secondaires-glp1"
 - **Polymédication** : Interactions possibles
 
 ### Précautions particulières
-- **Grossesse** : Contre-indiqué (catégorie C)
+- **Grossesse** : Contre-indiqué (arrêter le traitement au moins 2 mois avant une grossesse planifiée)
 - **Allaitement** : Déconseillé
 - **Enfants** : Non étudié chez <18 ans
 - **Chirurgie** : Arrêt temporaire si nécessaire
+
+> **Remboursement** : Mounjaro n'est pas remboursé par l'Assurance Maladie en France (mars 2026). Le coût reste intégralement à la charge du patient.
 
 ## 📈 Tolérance à Long Terme
 
@@ -200,7 +205,7 @@ affiliateCollection: "effets-secondaires-glp1"
 
 Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour planifier votre suivi.
 
-## 💊 Interactions Médicamenteuses
+## 💊 [Interactions Médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro)
 
 ### Médicaments à surveiller
 - **Antidiabétiques oraux** : Risque d'hypoglycémie
@@ -225,7 +230,7 @@ Consultez notre [guide complet sur Mounjaro](/collections/traitements-glp1/guide
 ### Réussite du traitement
 - **Observance** : Prises régulières
 - **Suivi médical** : Consultations respectées
-- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/regime-glp1/))
+- **Alimentation équilibrée** : Complète le traitement (voir [régime alimentaire sous GLP-1](/collections/régime-glp1/)/)
 - **Activité physique** : Recommandée
 
 ## ❓ FAQ - Questions Fréquentes
@@ -244,7 +249,7 @@ Si vous vomissez **dans les 30 minutes** après l'injection, contactez votre mé
 
 ### Les effets secondaires de Mounjaro sont-ils dangereux ?
 
-La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves (pancréatite, insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
+La plupart des effets secondaires sont **bénins et temporaires** (nausées, diarrhée). Les effets graves ([pancréatite aiguë](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/), insuffisance rénale) sont **rares (<1%)**. Surveillance médicale régulière recommandée. Consultez immédiatement en cas de douleurs abdominales intenses ou signes allergiques.
 
 ### Comment éviter les nausées avec Mounjaro ?
 
@@ -255,7 +260,7 @@ La plupart des effets secondaires sont **bénins et temporaires** (nausées, dia
 - Boire du gingembre ou infusion menthe
 - Prendre des anti-nauséeux si prescrit
 
-Voir notre [guide alimentation sous GLP-1](/collections/regime-glp1/).
+Voir notre [guide alimentation sous GLP-1](/collections/régime-glp1/).
 
 ### Mounjaro cause-t-il la perte de cheveux ?
 
@@ -275,7 +280,7 @@ Voir notre [comparatif des GLP-1](/quel-traitement-glp1-choisir).
 
 **Les deux sont possibles** :
 - **Diarrhée** : Plus fréquente (8-12% patients) en début de traitement
-- **Constipation** : Moins fréquente (3-5%) due au ralentissement digestif
+- **Constipation** : Très fréquente (10-12%) due au ralentissement digestif
 
 Hydratation et alimentation équilibrée permettent de gérer les deux.
 
@@ -307,13 +312,14 @@ Limitez à 1-2 verres occasionnels.
 
 ### Guides pratiques
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) - Tout savoir sur le traitement
-- [Régime alimentaire sous GLP-1](/collections/regime-glp1/) - Alimentation adaptée
+- [Régime alimentaire sous GLP-1](/collections/régime-glp1/) - Alimentation adaptée
 - [Prix Mounjaro France 2026](/collections/glp1-cout/prix-mounjaro-france/) - Coûts et remboursement
 
 ### Comparaisons
 - [Quel traitement GLP-1 choisir ?](/guides/quel-traitement-glp1-choisir/) - Comparatif détaillé
 - [Effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)
 - [Effets secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
+- [Effets secondaires de Zepbound (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-zepbound/)
 
 ### Remboursement et accès
 - [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) - Toutes les options
@@ -322,4 +328,4 @@ Limitez à 1-2 verres occasionnels.
 ---
 
 *Ce guide sur les effets secondaires de Mounjaro est informatif. En cas d'effets secondaires, consultez immédiatement votre médecin. Chaque patient est unique et la tolérance peut varier.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/effets-secondaires-glp1/effets-secondaires-mounjaro.md
+<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/effets-secondaires-glp1/effets-secondaires-mounjaro.md

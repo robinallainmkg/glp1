@@ -22,3 +22,10 @@ dist/
 # Ignore local tsconfig created accidentally in components folder
 src/components/tsconfig.json
 src/components/tsconfig.json
+.astro/
+src/content/_validator_temp.mjs
+supabase/.temp/
+
+# Claude worktrees
+.claude/worktrees/
+.tmp_agent/

@@ -1,0 +1,131 @@
+---
+// CTA contextuel vers le Coach IA — injecté dans les articles
+// Adapte le message selon la page (prix, effets secondaires, etc.)
+export interface Props {
+  context?: string; // 'prix' | 'effets' | 'guide' | 'remboursement' | 'general'
+}
+
+const { context = 'general' } = Astro.props;
+
+const messages: Record<string, { title: string; text: string; cta: string }> = {
+  prix: {
+    title: '💬 Besoin d\'aide pour le remboursement ?',
+    text: 'Notre Coach IA peut vous guider sur les options de prise en charge et les démarches auprès de votre mutuelle.',
+    cta: 'Parler au Coach IA'
+  },
+  effets: {
+    title: '💬 Des effets secondaires vous inquiètent ?',
+    text: 'Posez vos questions au Coach IA pour des informations personnalisées. Il vous orientera vers un médecin si nécessaire.',
+    cta: 'Poser ma question'
+  },
+  remboursement: {
+    title: '💬 Perdu dans les démarches de remboursement ?',
+    text: 'Le Coach IA connaît les conditions de prise en charge et peut vous guider étape par étape.',
+    cta: 'Me faire aider'
+  },
+  guide: {
+    title: '💬 Des questions sur votre traitement ?',
+    text: 'Le Coach IA répond à vos questions sur les GLP-1 en temps réel, gratuitement.',
+    cta: 'Parler au Coach IA'
+  },
+  general: {
+    title: '💬 Une question sur les GLP-1 ?',
+    text: 'Notre Coach IA est disponible 24h/24 pour répondre à vos questions sur les traitements GLP-1 en France.',
+    cta: 'Poser ma question'
+  }
+};
+
+const msg = messages[context] || messages.general;
+---
+
+<div class="coach-cta-block">
+  <div class="coach-cta-icon">🤖</div>
+  <div class="coach-cta-content">
+    <h3>{msg.title}</h3>
+    <p>{msg.text}</p>
+    <div class="coach-cta-actions">
+      <button class="coach-cta-btn" onclick="document.getElementById('coach-toggle')?.click()">
+        {msg.cta}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <span class="coach-cta-free">Gratuit • Réponse immédiate</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.coach-cta-block {
+  display: flex;
+  gap: 16px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #16a34a;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 32px 0;
+  align-items: flex-start;
+}
+
+.coach-cta-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.coach-cta-content h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.coach-cta-content p {
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.coach-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.coach-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #16a34a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-family: inherit;
+}
+.coach-cta-btn:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+.coach-cta-free {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .coach-cta-block {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+  }
+  .coach-cta-icon {
+    font-size: 1.5rem;
+  }
+}
+</style>

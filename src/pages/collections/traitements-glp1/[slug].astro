@@ -19,7 +19,6 @@ const { Content } = await article.render();
 let affiliateProducts = [];
 try {
   affiliateProducts = await getAllAffiliateProducts();
-  console.log(`✅ Produits d'affiliation chargés: ${affiliateProducts.length} produits`);
 } catch (error) {
   console.error('❌ Erreur lors du chargement des produits d\'affiliation:', error);
   // Fallback vers des produits statiques si Supabase n'est pas disponible

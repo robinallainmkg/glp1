@@ -1,42 +1,43 @@
 ---
-title: "Régime Mounjaro Optimal : Guide Nutritionnel Complet 2025"
-description: "Découvrez le régime alimentaire optimal avec Mounjaro. Guide complet des aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets de votre traitement."
-slug: "regime-mounjaro-optimal"
+title: "Régime Mounjaro alimentation optimale tirzepatide"
+description: "Régime Mounjaro alimentation optimale tirzepatide : aliments recommandés, menus types et conseils nutritionnels pour maximiser les effets du traitement."
 pubDate: 2025-09-07
+date: 2025-09-07
 author: "Dr. Sophie Dubois"
 category: "Nutrition"
 tags: ["glp1", "traitements", "nutrition"]
-collection: "regime-glp1"
+collection: "régime-glp1"
 thumbnail: "/images/thumbnails/mounjaro-blue.webp"
-thumbnailAlt: "Illustration pour l'article regime-mounjaro-optimal"
+thumbnailAlt: "Illustration pour l'article régime-mounjaro-optimal"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "régime Mounjaro alimentation optimale tirzepatide"
 
 # Configuration Affiliation
 enableAffiliation: true
 affiliateLayout: "ArticleWithAffiliateSidebar"
-affiliateCollection: "regime-glp1"
+affiliateCollection: "régime-glp1"
 affiliateConfig:
   enabled: true
   title: "Produits Recommandés"
   position: "sidebar"
 ---
 
-# Régime Mounjaro Optimal : Guide Nutritionnel Complet
+## Régime Mounjaro Optimal : Guide Nutritionnel Complet
 
-Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alimentation adaptée pour maximiser la perte de poids et améliorer le contrôle glycémique.
+Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alimentation adaptée pour maximiser la perte de poids et améliorer le contrôle glycémique. Pour comprendre en détail le fonctionnement du médicament, consultez le [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/). À noter : Mounjaro (tirzepatide) n'est pas remboursé en mars 2026, avec un [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) de 230 à 440 €/mois selon le dosage. La HAS a rendu un avis favorable en décembre 2025, et un remboursement est possible au second semestre 2026 sous conditions (IMC ≥ 35 notamment).
 
 ## Principes Fondamentaux du Régime Mounjaro
 
 ### 1. Réduction Progressive des Portions
-- **Semaines 1-4** : Réduction de 25% des portions habituelles
-- **Semaines 5-8** : Réduction de 40% avec stabilisation
+- **Semaines 1-4** : Réduction de 25% des portions habituelles — pour des conseils détaillés, consultez notre guide pour [adapter vos portions alimentaires sous GLP-1](/collections/régime-glp1/glp1-portion-alimentaire/)
+- **Semaines 5-8** : Réduction de 40% avec stabilisation — adaptez selon le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) prescrit par votre médecin
 - **Maintenance** : Portions adaptées à la satiété naturelle
 
 ### 2. Aliments Prioritaires
 
-#### Protéines de Qualité (30-35% des calories)
+#### <a href="/collections/régime-glp1/glp1-protéines/">Protéines de Qualité</a> (30-35% des calories)
 - **Viandes maigres** : Poulet, dinde, porc filet
 - **Poissons gras** : Saumon, sardines, maquereau
 - **Légumineuses** : Lentilles, haricots, pois chiches
@@ -106,6 +107,8 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 
 ## Gestion des Effets Secondaires par l'Alimentation
 
+Pour une vue complète, consultez notre guide sur les [effets secondaires de Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/).
+
 ### Nausées et Vomissements
 - **Repas fractionnés** : 5-6 petits repas
 - **Aliments fades** : Riz, bananes, biscottes
@@ -136,7 +139,7 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 ## Supplémentation Recommandée
 
 ### Vitamines et Minéraux
-- **Vitamine B12** : 2.4 μg/jour
+- **Vitamine B12** : 4 μg/jour (référence nutritionnelle ANSES pour les adultes)
 - **Vitamine D** : 1000-2000 UI/jour
 - **Magnésium** : 300-400 mg/jour
 - **Oméga-3** : 1-2g/jour
@@ -145,20 +148,20 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 - **Glycémie** : Contrôle régulier
 - **Fonction rénale** : Créatinine, urée
 - **Bilan lipidique** : Tous les 3 mois
-- **Vitamines** : B12, D, folates
+- **Vitamines** : B12, D, folates — consultez notre guide sur les [carences nutritionnelles à surveiller sous Mounjaro](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 
 ## Activité Physique Complémentaire
 
 ### Programme Adapté
-- **Marche active** : 30 min/jour minimum
-- **Renforcement** : 2-3 séances/semaine
+- **Marche active** : 30 min/jour minimum — consultez notre [guide exercice physique et musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/)
+- **Renforcement** : 2-3 séances/semaine pour [préserver vos muscles sous Mounjaro](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 - **Souplesse** : Yoga, étirements
 - **Cardio modéré** : Selon tolérance
 
 ## Suivi et Ajustements
 
 ### Indicateurs de Réussite
-- **Perte de poids** : 5-10% sur 6 mois
+- **Perte de poids** : 15-22% sur 72 semaines (étude SURMOUNT-1)
 - **HbA1c** : Amélioration significative
 - **Tour de taille** : Réduction mesurable
 - **Bien-être général** : Énergie, sommeil
@@ -186,6 +189,8 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 Le **régime Mounjaro optimal** n'est pas restrictif mais **adaptatif**. Il s'appuie sur la régulation naturelle de l'appétit induite par le traitement tout en fournissant les nutriments essentiels.
 
 La **réussite dépend** de la régularité, de l'écoute des signaux de satiété et d'un suivi médical approprié. Chaque patient étant unique, ces recommandations doivent être personnalisées selon les besoins individuels.
+
+Pour en savoir plus sur les conditions d'accès et le remboursement, consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
 ---
 

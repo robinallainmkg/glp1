@@ -1,11 +1,13 @@
 ---
-title: "Prix Mounjaro France 2026 : Tarifs et Conditions d'Accès"
-description: "Prix Mounjaro en pharmacie : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Guide complet des tarifs par dosage (2.5mg, 5mg, 10mg, 15mg)."
-keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'remboursement mounjaro', 'coût mounjaro france', 'mounjaro remboursement 2026', 'prix mounjaro allemagne', 'mounjaro prix italie']
-seoTitle: "Prix Mounjaro France 2026 : Coût, Accès et Tarifs par Dosage"
-seoDescription: "Prix Mounjaro en France : 230 à 440€/mois selon dosage (prix libre). Non remboursé par la Sécurité Sociale (mars 2026). Tous les prix par dosage (2.5, 5, 7.5, 10, 12.5, 15mg) et comparatifs."
+title: "Prix Mounjaro France 2026 : Tarifs par Dosage"
+thumbnail: "/images/thumbnails/mounjaro-blue.webp"
+description: "Prix Mounjaro France 2026 : 230 à 440€/mois. Tableau comparatif 2.5mg à 15mg, pharmacies les moins chères en France et en Europe. Avril 2026."
+keywords: ['prix mounjaro france', 'mounjaro prix', 'prix mounjaro 2026', 'mounjaro pharmacie prix', 'mounjaro prix le moins cher', 'mounjaro prix le moins cher pharmacie', 'carte prix mounjaro france', 'mounjaro prix espagne', 'mounjaro prix allemagne', 'mounjaro prix italie', 'mounjaro tarif']
+seoTitle: "Prix Mounjaro 2026 : Comparatif par Dosage en France"
+seoDescription: "Prix Mounjaro France avril 2026 : 230-440€/mois. Comparatif par dosage, pharmacies les moins chères et prix en Europe. Non remboursé — astuces pour payer moins."
 publishedAt: '2025-09-06'
 updatedAt: '2026-03-08'
+date: 2026-03-08
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -13,6 +15,7 @@ readingTime: 12
 image: "/images/thumbnails/mounjaro-blue.webp"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "prix Mounjaro France"
 ---
 
 <script type="application/ld+json">
@@ -75,9 +78,9 @@ affiliateCollection: "glp1-cout"
 }
 </script>
 
-# Prix Mounjaro France 2026 : Guide Complet des Tarifs
+## Prix Mounjaro France 2026 : Guide Complet des Tarifs
 
-Le tirzépatide, commercialisé sous le nom de Mounjaro par le laboratoire **Eli Lilly**, est disponible en France depuis **novembre 2024**. Ce traitement innovant pour la gestion du diabète de type 2 et de l'obésité est actuellement vendu en **prix libre** et **non remboursé** par la Sécurité Sociale (mars 2026). La HAS a émis un avis favorable en décembre 2025, laissant entrevoir un remboursement possible au 2e semestre 2026.
+Le tirzépatide, commercialisé sous le nom de Mounjaro par le laboratoire **Eli Lilly**, est disponible en France depuis **novembre 2024**. Ce traitement innovant pour la gestion du [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et de l'obésité est actuellement vendu en **prix libre** et **non remboursé** par la Sécurité Sociale (mars 2026). La HAS a émis un avis favorable en décembre 2025, laissant entrevoir un remboursement possible au 2e semestre 2026.
 
 <div class="price-hero">
   <div class="price-highlight">
@@ -161,14 +164,14 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   </div>
 
   <div class="comparison-row">
-    <span>Ozempic (sémaglutide)</span>
+    <span><a href="/collections/traitements-glp1/guide-complet-ozempic/">Ozempic (sémaglutide)</a></span>
     <span>GLP-1 agoniste</span>
-    <span>~59,90€</span>
-    <span>Remboursé 65% (DT2 uniquement)</span>
+    <span>~77,60€ (TTC)</span>
+    <span>Remboursé 30% (DT2 uniquement)</span>
   </div>
 
   <div class="comparison-row">
-    <span>Wegovy (sémaglutide)</span>
+    <span><a href="/collections/traitements-glp1/guide-complet-wegovy/">Wegovy (sémaglutide)</a></span>
     <span>GLP-1 agoniste</span>
     <span>169-360€</span>
     <span>Non remboursé (mars 2026)</span>
@@ -182,7 +185,7 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   </div>
 </div>
 
-Seul Ozempic bénéficie d'un remboursement à 65% par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
+Seul Ozempic bénéficie d'un remboursement à 30% par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
 
 ## Statut de Remboursement (Mars 2026) {#remboursement}
 
@@ -194,7 +197,7 @@ La Haute Autorité de Santé (HAS) a rendu un **avis favorable en décembre 2025
 
 ### Conditions d'Accès au Traitement
 
-Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier.
+Bien que non remboursé, Mounjaro reste un médicament soumis à prescription médicale. Les conditions d'accès incluent une prescription par un médecin (endocrinologue, diabétologue ou généraliste), un diagnostic de diabète de type 2 ou d'obésité (IMC supérieur ou égal a 30 kg/m²), et un suivi médical régulier. Pour connaître en détail les [règles de prescription Mounjaro selon l'ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/), consultez notre guide dédié.
 
 ### Perspectives de Remboursement
 
@@ -237,7 +240,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 
 ### Dispositifs Sociaux Complémentaires
 
-- **Couverture Maladie Universelle Complémentaire (CMU-C)** : Prise en charge complète
+- **Complémentaire Santé Solidaire (CSS, ex-CMU-C)** : Ne couvre pas Mounjaro car le médicament n'est pas remboursé par la Sécurité Sociale. La CSS ne prend en charge que les médicaments inscrits sur la liste des médicaments remboursables
 - **Aide au paiement d'une Complémentaire Santé (ACS)** : Réduction sur les contrats mutuelles
 - **Fonds d'action sociale** : Aides exceptionnelles selon les caisses d'Assurance Maladie
 
@@ -248,33 +251,33 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 1. **Consultation médicale initiale**
    - Évaluation de l'indication thérapeutique (diabète type 2 ou obésité)
    - Vérification des critères de remboursement
-   - [Consulter notre annuaire de médecins spécialisés](/collections/medecins-glp1-france)
+   - [Consulter notre annuaire de médecins spécialisés](/collections/medecins-glp1-france/)
 
 2. **Prescription et délivrance**
    - Ordonnance sécurisée requise
    - Délivrance en pharmacie de ville ou hospitalière
-   - [Information sur les effets secondaires à connaître](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)
+   - [Information sur les effets secondaires à connaître](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)
 
 3. **Suivi thérapeutique**
    - Consultations de suivi régulières
    - Adaptation posologique selon tolérance et efficacité
-   - [Recommandations alimentaires pendant le traitement](/collections/regime-glp1/glp1-proteines)
+   - [Recommandations alimentaires pendant le traitement](/collections/régime-glp1/glp1-protéines/)
 
 ## Ressources Complémentaires
 
 ### Documentation Mounjaro
-- [Guide complet du traitement Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro) : Posologie, mécanisme d'action et efficacité clinique
-- [Profil de tolérance et effets indésirables](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro) : Information médicale complète
+- [Guide complet du traitement Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) : Posologie, mécanisme d'action et efficacité clinique
+- [Profil de tolérance et effets indésirables](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) : Information médicale complète
 - [Comparaison thérapeutique](/guides/quel-traitement-glp1-choisir) : Mounjaro face aux autres options GLP-1
 
 ### Information Pratique
 
 Le coût mensuel pour le patient varie entre 230 et 440 euros selon le dosage, Mounjaro étant vendu en prix libre et non remboursé par la Sécurité Sociale en mars 2026.
 
-L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel remboursement au 2e semestre 2026.
+L'accès au traitement Mounjaro nécessite une prescription médicale. Une consultation spécialisée permet d'évaluer l'indication et d'informer le patient sur le coût total du traitement, en attendant un éventuel [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/) au 2e semestre.
 
 ### Contacts Utiles
-- **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france)
+- **Consultation spécialisée** : [Trouver un endocrinologue](/collections/medecins-glp1-france/)
 - **Information médicale Eli Lilly** : 0 800 10 12 13
 - **Assurance Maladie** : 3646 ou ameli.fr
 
@@ -404,8 +407,8 @@ Plusieurs dispositifs d'aide existent pour réduire le coût de Mounjaro :
 - Numéro gratuit : 0 800 10 12 13
 
 **3. CMU-C et Complémentaire Santé Solidaire**
-- Prise en charge à 100% si éligible
-- Demande via votre caisse d'Assurance Maladie
+- **Ne couvre PAS Mounjaro** car le médicament n'est pas remboursé par la Sécurité Sociale
+- La CSS ne prend en charge que les médicaments inscrits sur la liste des médicaments remboursables
 
 **4. Associations de patients**
 - Association Française des Diabétiques (AFD)
@@ -429,7 +432,7 @@ Plusieurs dispositifs d'aide existent pour réduire le coût de Mounjaro :
 - Efficacité : Perte de poids prouvée (STEP)
 - Remboursement : Non remboursé (mars 2026)
 
-**Verdict :** Wegovy est généralement **moins cher** que Mounjaro, mais les deux restent des traitements coûteux non remboursés. Mounjaro montre une efficacité supérieure dans les études cliniques (SURMOUNT). Le choix dépend de votre situation médicale et budgétaire.
+**Verdict :** [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) est généralement **moins cher** que Mounjaro, mais les deux restent des traitements coûteux non remboursés. Mounjaro montre une efficacité supérieure dans les études cliniques (SURMOUNT). Le choix dépend de votre situation médicale et budgétaire.
 
 [Comparer tous les traitements GLP-1](/guides/quel-traitement-glp1-choisir)
 
@@ -453,19 +456,19 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 
 **Articles connexes pour optimiser votre traitement :**
 
-- **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro)** - Posologie, efficacité et mode d'emploi détaillé
-- **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro)** - Tous les effets indésirables et comment les gérer
-- **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/regime-mounjaro-optimal)** - Nutrition adaptée pour maximiser la perte de poids
-- **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france)** - Annuaire des endocrinologues et diabétologues
+- **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro/)** - Posologie, efficacité et mode d'emploi détaillé
+- **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)** - Tous les effets indésirables et comment les gérer
+- **[Régime Alimentaire Optimal sous Mounjaro](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition adaptée pour maximiser la perte de poids
+- **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france/)** - Annuaire des endocrinologues et diabétologues
 - **[Mounjaro vs Ozempic : Comparatif Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement choisir selon votre profil
-- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle)** - Alternative si Mounjaro n'est pas accessible
+- **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Alternative si Mounjaro n'est pas accessible
 
 **Besoin d'aide ?**
 - 📞 Service patient Eli Lilly : **0 800 10 12 13** (gratuit)
 - 🏥 Assurance Maladie : **36 46** ou [ameli.fr](https://www.ameli.fr)
-- 💬 [Contactez-nous](/contact) pour toute question
+- 💊 **Novo Nordisk France** : 0 800 80 16 05 (gratuit)
 
 ---
 
 *Dernière mise à jour : 8 mars 2026. Les prix (libres) et conditions de remboursement sont susceptibles d'évoluer. Un remboursement est envisagé au 2e semestre 2026. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et les prix actualisés.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/glp1-cout/prix-mounjaro-france.md
+<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/glp1-cout/prix-mounjaro-france.md

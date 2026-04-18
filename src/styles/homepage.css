@@ -46,7 +46,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #1a3c34, #2d5a4e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -84,10 +84,10 @@
 }
 
 .pill-link:hover {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #1a3c34, #2d5a4e);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 25px rgba(26, 60, 52, 0.3);
 }
 
 /* Boutons CTA améliorés */
@@ -115,29 +115,29 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #1a3c34, #2d5a4e);
   color: white;
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 20px rgba(26, 60, 52, 0.3);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  background: linear-gradient(135deg, #2d5a4e, #0f2e27);
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 12px 30px rgba(26, 60, 52, 0.4);
 }
 
 .btn-outline {
   background: white;
-  color: #2563eb;
-  border: 3px solid #2563eb;
+  color: #1a3c34;
+  border: 3px solid #1a3c34;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline:hover {
-  background: #2563eb;
+  background: #1a3c34;
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 12px 30px rgba(26, 60, 52, 0.3);
 }
 
 .btn-lg {
@@ -166,7 +166,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 900;
-  color: #2563eb;
+  color: #1a3c34;
   margin-bottom: 0.5rem;
 }
 
@@ -267,7 +267,7 @@
   font-size: 1rem;
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #2563eb;
+  border-left: 4px solid #1a3c34;
 }
 
 /* ===== TÉMOIGNAGES ===== */
@@ -323,7 +323,7 @@
 
 .testimonial-card.featured-testimonial {
   grid-column: span 2;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #1a3c34, #2d5a4e);
   color: white;
 }
 
@@ -386,7 +386,7 @@
 }
 
 .testimonial-link {
-  color: #2563eb;
+  color: #1a3c34;
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
@@ -394,7 +394,7 @@
 }
 
 .testimonial-link:hover {
-  color: #1d4ed8;
+  color: #2d5a4e;
   text-decoration: underline;
 }
 
@@ -516,7 +516,7 @@
 }
 
 .side-effect-link {
-  color: #2563eb;
+  color: #1a3c34;
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
@@ -524,7 +524,7 @@
 }
 
 .side-effect-link:hover {
-  color: #1d4ed8;
+  color: #2d5a4e;
   text-decoration: underline;
 }
 
@@ -631,7 +631,7 @@
 .category-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-color: #2563eb;
+  border-color: #1a3c34;
 }
 
 .category-icon {
@@ -665,7 +665,7 @@
 }
 
 .article-count {
-  color: #2563eb;
+  color: #1a3c34;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -678,7 +678,7 @@
 }
 
 .category-card:hover .read-more {
-  color: #2563eb;
+  color: #1a3c34;
 }
 
 /* ===== FAQ ===== */
@@ -731,7 +731,7 @@
 
 .faq-cta {
   text-align: center;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, #1a3c34, #2d5a4e);
   border-radius: 20px;
   padding: 3rem;
   color: white;
@@ -746,7 +746,7 @@
 .cta-button {
   display: inline-block;
   background: white;
-  color: #2563eb;
+  color: #1a3c34;
   padding: 1rem 2rem;
   border-radius: 12px;
   font-weight: 700;
@@ -1001,6 +1001,6 @@
 .pill-link:focus-visible,
 .category-card:focus-visible,
 .testimonial-link:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #1a3c34;
   outline-offset: 2px;
 }

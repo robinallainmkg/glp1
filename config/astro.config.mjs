@@ -80,10 +80,9 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
+      filter: (page) => !page.includes('/admin/') && !page.includes('/test-admin/') && !page.includes('/test-supabase/') && !page.includes('/test-affiliation-multi/') && !page.includes('/admin-dashboard/') && !page.includes('/admin-stats/') && !page.includes('/demo-affiliate-sidebar/') && !page.includes('/temoignages-glp1') && !page.includes('/guide-beaute-perte-de-poids-glp1') && !page.includes('/produits-recommandes') && !page.match(/glp1-france\.fr\/temoignage-/) && !page.includes('/diagnostic-') && !page.includes('/test-affiliation/') && !page.match(/glp1-france\.fr\/glp1-perte-de-poids\//) && !page.includes('/mentions-legales/') && !page.includes('/politique-confidentialite/') && !page.match(/glp1-france\.fr\/quel-traitement-glp1-choisir\/$/),
       customPages: [
         'https://glp1-france.fr/guides/suivi-medical-glp1/',
-        'https://glp1-france.fr/guides/communautes-glp1/',
-        'https://glp1-france.fr/guides/alimentation-personnalisee-glp1/',
         'https://glp1-france.fr/guides/guides-age-glp1/'
       ]
     }),
@@ -91,21 +90,20 @@ export default defineConfig({
     integrationApi()
   ],
   redirects: {
-    '/collections/medicaments-glp1/wegovy-avis': '/traitements-glp1/guide-complet-wegovy/',
-    '/collections/medicaments-glp1/saxenda-prix': '/glp1-cout/prix-saxenda-france/',
-    '/collections/medicaments-glp1/ozempic-injection-prix': '/glp1-cout/prix-ozempic-france/',
-    '/collections/medicaments-glp1/mounjaro-effet-secondaire': '/traitements-glp1/guide-complet-mounjaro/',
-    '/collections/medicaments-glp1/mounjaro-injection-pour-maigrir': '/traitements-glp1/guide-complet-mounjaro/',
-    '/collections/medicaments-glp1/victoza-posologie': '/traitements-glp1/guide-complet-victoza/',
-    '/collections/medicaments-glp1/victoza-rupture': '/traitements-glp1/guide-complet-victoza/',
-    '/collections/medicaments-glp1/trulicity-ou-ozempic': '/traitements-glp1/guide-complet-trulicity/',
-    '/collections/medicaments-glp1/trulicity-danger': '/traitements-glp1/guide-complet-trulicity/',
-    '/guides/guide-complet-trulicity/': '/traitements-glp1/guide-complet-trulicity/',
-    '/guides/guide-complet-januvia/': '/traitements-glp1/guide-complet-januvia/',
-    '/guides/guide-complet-mounjaro/': '/traitements-glp1/guide-complet-mounjaro/',
-    '/guides/guide-complet-ozempic/': '/traitements-glp1/guide-complet-ozempic/',
-    '/guides/guide-complet-wegovy/': '/traitements-glp1/guide-complet-wegovy/',
-    '/guides/guide-complet-saxenda/': '/traitements-glp1/guide-complet-saxenda/',
+    '/collections/medicaments-glp1/wegovy-avis': '/collections/traitements-glp1/guide-complet-wegovy/',
+    '/collections/medicaments-glp1/saxenda-prix': '/collections/glp1-cout/prix-saxenda-france/',
+    '/collections/medicaments-glp1/ozempic-injection-prix': '/collections/glp1-cout/prix-ozempic-france/',
+    '/collections/medicaments-glp1/mounjaro-effet-secondaire': '/collections/traitements-glp1/guide-complet-mounjaro/',
+    '/collections/medicaments-glp1/mounjaro-injection-pour-maigrir': '/collections/traitements-glp1/guide-complet-mounjaro/',
+    '/collections/medicaments-glp1/victoza-posologie': '/collections/traitements-glp1/guide-complet-victoza/',
+    '/collections/medicaments-glp1/victoza-rupture': '/collections/traitements-glp1/guide-complet-victoza/',
+    '/collections/medicaments-glp1/trulicity-ou-ozempic': '/collections/traitements-glp1/guide-complet-trulicity/',
+    '/collections/medicaments-glp1/trulicity-danger': '/collections/traitements-glp1/guide-complet-trulicity/',
+    '/guides/guide-complet-trulicity/': '/collections/traitements-glp1/guide-complet-trulicity/',
+    '/guides/guide-complet-januvia/': '/collections/traitements-glp1/guide-complet-januvia/',
+    '/guides/guide-complet-mounjaro/': '/collections/traitements-glp1/guide-complet-mounjaro/',
+    '/guides/guide-complet-ozempic/': '/collections/traitements-glp1/guide-complet-ozempic/',
+    '/guides/guide-complet-saxenda/': '/collections/traitements-glp1/guide-complet-saxenda/',
     '/index-backup-original/': '/',
     '/diagnostic-live-content-backup/': '/',
     '/quel-traitement-glp1-choisir-backup/': '/',
@@ -114,22 +112,23 @@ export default defineConfig({
     '/admin-stats-new/': '/',
     '/experts/': '/',
     '/produits-recommandes/': '/',
+    '/collections/glp1-cout/wegovy-prix/': '/collections/glp1-cout/prix-wegovy-france/',
     '/guide-debutant/': '/',
     '/guide-glp1-perte-de-poids/': '/',
     '/guide-beaute-perte-de-poids-glp1/': '/',
     '/qu-est-ce-que-glp1/': '/',
-    '/temoignage-marie-transformation-glp1/': '/temoignages/',
-    '/temoignage-sophie-transformation-glp1/': '/temoignages/',
-    '/temoignage-laurent-transformation-glp1/': '/temoignages/',
-    '/pages-statiques/serena-williams-glp1/': '/temoignages/',
+    '/temoignage-marie-transformation-glp1/': '/collections/temoignages/',
+    '/temoignage-sophie-transformation-glp1/': '/collections/temoignages/',
+    '/temoignage-laurent-transformation-glp1/': '/collections/temoignages/',
+    '/pages-statiques/serena-williams-glp1/': '/collections/temoignages/',
     '/legal/confidentialite/': '/politique-confidentialite/',
     '/legal/cgu/': '/mentions-legales/',
-    '/medicaments-glp1/mounjaro-prix-france/': '/glp1-cout/prix-mounjaro-france/',
-    '/mounjaro-prix/': '/glp1-cout/prix-mounjaro-france/',
-    '/mounjaro/': '/traitements-glp1/guide-complet-mounjaro/',
+    '/medicaments-glp1/mounjaro-prix-france/': '/collections/glp1-cout/prix-mounjaro-france/',
+    '/mounjaro-prix/': '/collections/glp1-cout/prix-mounjaro-france/',
+    '/mounjaro/': '/collections/traitements-glp1/guide-complet-mounjaro/',
     '/nouveaux-medicaments-perdre-poids/': '/guides/qu-est-ce-que-glp1/',
     '/medicaments-glp1': '/collections/glp1-cout/',
-    '/temoignages-glp1/': '/temoignages/'
+    '/temoignages-glp1/': '/collections/temoignages/'
   },
   server: {
     port: 4321,
@@ -149,5 +148,14 @@ export default defineConfig({
         }
       }
     },
+    server: {
+      proxy: {
+        '/__agent': {
+          target: 'http://127.0.0.1:7854',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/__agent/, ''),
+        }
+      }
+    }
   }
 });

@@ -4,6 +4,7 @@ description: "Effets secondaires Victoza : nausées, vomissements, diarrhée. Co
 keywords: ['effets secondaires victoza', 'victoza nausées', 'victoza effets indésirables', 'risques victoza', 'tolérance victoza']
 seoTitle: "Effets Secondaires Victoza : Les connaître pour mieux les gérer"
 seoDescription: "Guide complet des effets secondaires de Victoza : fréquence, gestion, quand s'inquiéter. Préparez-vous sereinement à votre traitement."
+date: '2025-01-28'
 publishedAt: '2025-01-28'
 updatedAt: '2025-01-28'
 featured: true
@@ -11,29 +12,34 @@ author: 'Dr. Marie Dubois'
 readingTime: 10
 collection: "effets-secondaires-glp1"
 affiliateCollection: "effets-secondaires-glp1"
+mainKeyword: "effets secondaires Victoza"
 image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
+thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
+thumbnailAlt: "Effets secondaires du traitement victoza"
 ---
 
-# Effets Secondaires Victoza : Guide Complet
+## Effets Secondaires Victoza : Guide Complet
+
+> **Information importante** : Novo Nordisk a annonce l'arret progressif de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026. Si vous etes actuellement sous Victoza, consultez votre médecin pour envisager une alternative (Ozempic, Trulicity). Ce guide reste valable pour les patients encore sous traitement.
 
 ## ⚠️ Effets Secondaires Fréquents
 
-### Troubles digestifs (65-75% des patients)
+### Troubles digestifs (30-40% des patients)
 
 **Nausées et vomissements**
-- **Fréquence** : Fréquent (1-10%)
+- **Fréquence** : Très fréquent (>=10%, soit 20 à 27% dans les études LEAD)
 - **Apparition** : Généralement les premiers jours
 - **Gestion** : Prendre le médicament le soir, manger léger
 - **Évolution** : Diminue généralement après 1-2 semaines
 
 **Diarrhée**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Très fréquent (>=10% selon le RCP)
 - **Causes** : Accélération du transit intestinal
 - **Gestion** : Hydratation, alimentation pauvre en fibres
 - **Durée** : Généralement temporaire
 
 **Constipation**
-- **Fréquence** : Peu fréquent (<1%)
+- **Fréquence** : Fréquent (1-10%)
 - **Gestion** : Augmenter les fibres, activité physique
 - **Prévention** : Boire beaucoup d'eau
 
@@ -84,14 +90,14 @@ image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
 
 ## 📊 Fréquence des Effets Secondaires
 
-### Fréquents (1-10%)
-- Nausées : 15-25%
-- Vomissements : 5-10%
-- Maux de tête : 5-8%
+### Très fréquents (>=10%)
+- Nausées : 20-27%
+- Diarrhée : 10-15%
 
-### Peu fréquents (<1%)
-- Diarrhée : 3-5%
-- Constipation : 2-4%
+### Fréquents (1-10%)
+- Vomissements : 5-10%
+- Constipation : 3-5%
+- Maux de tête : 5-8%
 - Fatigue : 3-5%
 - Étourdissements : 1-3%
 
@@ -189,8 +195,8 @@ image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
 
 ### Associations de patients
 
-**Association Française des Diabétiques (AFD)**
-- **Site** : afdiabete.fr
+**Fédération Française des Diabétiques (FFD)**
+- **Site** : federationdesdiabetiques.org
 - **Téléphone** : 01 42 81 28 81
 - **Support** : Groupes de parole, conseils
 
@@ -224,19 +230,15 @@ image: "/images/thumbnails/effets-secondaires-victoza-illus.jpg"
 
 ## 📝 Conclusion
 
-**Victoza présente une très bonne tolérance** avec des effets secondaires bien maîtrisés.
+**Victoza présente une très bonne tolérance** avec des effets secondaires bien maîtrisés. Pour en savoir plus, consultez notre [guide complet Victoza](/collections/traitements-glp1/guide-complet-victoza/).
 
 ### Points clés :
-- **Effets fréquents** : Nausées (65-75% des patients)
+- **Effets fréquents** : Nausées, diarrhée (30-40% des patients)
 - **Effets graves** : Très rares (<0.1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
 **Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale.
-
-thumbnail: "/images/thumbnails/victoza-medical-guide.jpg"
-thumbnailAlt: "Effets secondaires du traitement victoza"
----
 
 ## Sommaire
 

@@ -1,8 +1,8 @@
 ---
-title: "Acheter Wegovy En France : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Comment Acheter Wegovy En France En 2025 : informations médicales et recommandations d'experts."
-slug: "acheter-wegovy-en-france"
+title: "Acheter Wegovy en France en Pharmacie : Guide 2026"
+description: "Comment acheter Wegovy France pharmacie en 2026 : ordonnance obligatoire, prix, disponibilité et démarches pratiques pour obtenir votre traitement."
 pubDate: 2025-08-23
+date: 2025-08-23
 author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "prix", "remboursement"]
@@ -11,6 +11,7 @@ thumbnail: "/images/thumbnails/acheter-wegovy-en-france-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Acheter Wegovy En France"
 featured: false
 priority: 5
+mainKeyword: "Acheter Wegovy en France"
 schema: "Article"
 
 # Configuration Affiliation
@@ -35,7 +36,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 - Responsive: sidebar desktop + inline mobile
 -->
 
-Wegovy, le traitement révolutionnaire pour la perte de poids, suscite un intérêt grandissant en France. Ce médicament à base de sémaglutide, approuvé par l'ANSM, offre une nouvelle espérance pour les personnes en surpoids ou obèses. Mais comment l'acheter légalement en France ? Quels sont les prix pratiqués ? Ce guide complet vous explique tout ce que vous devez savoir.
+Wegovy, le traitement révolutionnaire pour la perte de poids, suscite un intérêt grandissant en France. Ce médicament à base de sémaglutide, autorisé en France (AMM européenne EMA), offre une nouvelle espérance pour les personnes en surpoids ou obèses. Mais comment l'acheter légalement en France ? Quels sont les prix pratiqués ? Ce guide complet vous explique tout ce que vous devez savoir.
 
 ## Qu'est-ce que Wegovy ?
 
@@ -58,7 +59,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Critères médicaux obligatoires
 
-Pour obtenir une prescription de Wegovy en France, vous devez répondre aux critères suivants :
+Pour obtenir une prescription de Wegovy en France, vous devez répondre aux critères suivants (voir les [règles ANSM pour acheter Wegovy légalement](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)/) :
 
 **IMC supérieur à 30 kg/m²** ou **IMC supérieur à 27 kg/m²** avec au moins une complication :
 
@@ -82,7 +83,7 @@ Seuls certains spécialistes peuvent prescrire Wegovy :
 
 ### Tarifs officiels
 
-Le prix de Wegovy varie selon la posologie et la pharmacie :
+Le prix de Wegovy varie selon la posologie et la pharmacie. Consultez notre guide complet sur les [tarifs Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) pour une comparaison détaillée :
 
 | Dosage  | Coût mensuel estimé | Durée      |
 | ------- | ------------------- | ---------- |
@@ -103,7 +104,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 * **Province** : prix variables selon les pharmacies (à partir de 169 €/mois)
 * Statut actuel du remboursement
 
-**Wegovy n'est actuellement pas remboursé** par l'Assurance Maladie en France. Cependant, certaines situations particulières peuvent bénéficier d'une prise en charge :
+**Wegovy n'est actuellement pas remboursé** par l'Assurance Maladie en France. Pour les conditions de [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/), consultez notre guide mis à jour. Cependant, certaines situations particulières peuvent bénéficier d'une prise en charge :
 
 #### Prise en charge hospitalière
 
@@ -112,7 +113,7 @@ Les prix peuvent légèrement varier selon les pharmacies et les régions :
 
 #### Mutuelles et assurances privées
 
-Certaines mutuelles commencent à proposer une prise en charge partielle :
+Certaines mutuelles commencent à proposer une prise en charge partielle — consultez notre guide sur le [remboursement Wegovy par les mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/) :
 
 * **Forfait médecine douce** : 50-200 € par an
 * **Garantie innovation médicale** : jusqu'à 500 € par an
@@ -120,7 +121,7 @@ Certaines mutuelles commencent à proposer une prise en charge partielle :
 
 ### Évolution du remboursement
 
-L'ANSM étudie actuellement l'inscription de Wegovy au remboursement. Les critères envisagés :
+La HAS a rendu un avis favorable au remboursement de Wegovy. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours, avec un remboursement possible au 2e semestre 2026. Les critères envisagés :
 
 * **Efficacité démontrée** : perte de poids > 10%
 * **Suivi médical strict** : consultation mensuelle
@@ -166,7 +167,7 @@ Plusieurs pharmacies en ligne françaises agréées proposent Wegovy :
 * Prix anormalement bas
 * Sites non français
 
-*Risques* : médicaments contrefaits, dosages incorrects, contamination
+*Risques* : médicaments contrefaits, dosages incorrects, contamination. Consultez notre dossier sur les [risques des contrefaçons GLP-1](/collections/effets-secondaires-glp1/contrefacon-glp1-faux-ozempic-danger/) pour comprendre l'ampleur du phénomène.
 
 ## Process d'achat étape par étape
 
@@ -177,6 +178,7 @@ Plusieurs pharmacies en ligne françaises agréées proposent Wegovy :
 * Endocrinologue : délai moyen 3-6 mois
 * Diabétologue : délai moyen 2-4 mois
 * Centre spécialisé obésité : délai moyen 4-8 mois
+* [Prescription GLP-1 en télémédecine](/collections/medecins-glp1-france/prescription-glp1-télémédecine-en-ligne-france/) : alternative plus rapide selon disponibilité
 
 **Examen médical complet**
 
@@ -224,8 +226,8 @@ Si Wegovy n'est pas disponible ou accessible :
 
 * **Indication première** : diabète de type 2
 * **Effet secondaire** : perte de poids
-* **Prix** : ~59,90 €/stylo
-* **Remboursement** : oui, 65% (diabète de type 2 uniquement)
+* **Prix** : ~77,60 €/stylo (prix public TTC)
+* **Remboursement** : oui, 30% (diabète de type 2 uniquement)
 
 **Saxenda** (liraglutide)
 
@@ -381,11 +383,11 @@ Les études cliniques montrent une efficacité variable selon les patients et le
 
 Oui, certaines pathologies nécessitent une évaluation préalable approfondie.
 
-* [prix Ozempic France](../glp1-perte-de-poids/ozempic-prix/)
-* [régime Ozempic](../glp1-perte-de-poids/ozempic-regime/)
-* [effets secondaires Ozempic](../effets-secondaires-glp1/ozempic-danger/)
-* [où trouver Ozempic](../glp1-perte-de-poids/ou-trouver-ozempic/)
-* [prix Wegovy](../glp1-cout/wegovy-prix/)
+* [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
+* [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
+* [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+* [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
+* [prix Wegovy](/collections/glp1-cout/wegovy-prix/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

@@ -1,15 +1,19 @@
 ---
-title: "Guide Complet Wegovy : Prix, Effets Secondaires et Posologie"
-description: "Découvrez tout sur Wegovy : traitement GLP-1 pour l'obésité et la perte de poids. Prix, effets secondaires, posologie et alternatives."
+title: "Wegovy Guide Complet France : Sémaglutide, Prix et Effets"
+thumbnail: "/images/thumbnails/guide-complet-wegovy-illus.jpg"
+slug: "guide-complet-wegovy"
+description: "Wegovy guide complet France semaglutide sémaglutide : traitement GLP-1 obésité, perte de poids. Prix, effets secondaires et posologie."
 author: "Dr. Martin"
 image: "/images/thumbnails/wegovy.jpg"
 collection: "traitements-glp1"
 category: "traitements-glp1"
 tags: ["wegovy", "glp-1", "obésité", "perte de poids", "traitement", "injection"]
 date: "2025-08-28"
+pubDate: "2025-08-28"
+mainKeyword: "wegovy guide complet france semaglutide"
 ---
 
-# Guide Complet Wegovy : Tout Savoir sur ce Traitement Révolutionnaire
+## Guide Complet Wegovy : Tout Savoir sur ce Traitement Révolutionnaire
 
 <div class="guide-buttons">
   <a href="/collections/glp1-cout/prix-wegovy-france" class="guide-button primary">
@@ -47,11 +51,11 @@ Wegovy agit en mimant l'action naturelle du GLP-1, une hormone intestinale qui :
 - **Ralenti la vidange gastrique** (sensation de satiété prolongée)
 - **Réduit l'appétit** au niveau cérébral
 
-Cette action combinée permet une perte de poids significative et durable.
+Cette action combinée permet une [perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) significative et durable.
 
 ## Wegovy pour l'obésité
 
-Wegovy est spécifiquement indiqué pour la prise en charge à long terme de l'obésité (IMC ≥ 30) ou du surpoids (IMC ≥ 27) avec au moins une comorbidité associée.
+Wegovy est spécifiquement indiqué pour la prise en charge à long terme de l'obésité (IMC ≥ 30) ou du surpoids (IMC ≥ 27) avec au moins une comorbidité associée, conformément aux [recommandations de l'OMS sur les GLP-1 contre l'obésité](/collections/recherche-glp1/oms-recommandations-glp1-obesite/).
 
 ### Avantages dans l'obésité
 - Perte de poids moyenne de 15-20% du poids initial
@@ -69,20 +73,20 @@ Dans les études cliniques STEP, Wegovy a démontré des résultats exceptionnel
 - Résultat : -14,9% de perte de poids vs -2,4% placebo
 
 ### Dans l'étude STEP 3
-- 611 patients avec diabète de type 2
+- 611 patients avec [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)
 - Durée : 68 semaines
 - Résultat : -16,0% de perte de poids vs -5,7% placebo
 
 ## Posologie et administration
 
 ### Schéma posologique
-Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'escalade de dose est essentielle pour minimiser les effets secondaires.
+Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[escalade de dose](/collections/traitements-glp1/wegovy-dosage/) est essentielle pour minimiser les effets secondaires.
 
 **Semaine 1-4** : 0,25 mg  
 **Semaine 5-8** : 0,5 mg  
 **Semaine 9-12** : 1 mg  
 **Semaine 13-16** : 1,7 mg  
-**Semaine 17+** : 2,4 mg (dose maximale)
+**Semaine 17+** : 2,4 mg (dose maximale) — une dose encore plus élevée est à l'étude avec le programme [Wegovy haute dose 7,2 mg (STEP-UP)](/collections/recherche-glp1/wegovy-7-2-mg-haute-dose-step-up-résultats/)
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
@@ -110,7 +114,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Augmentation progressive** :
 - Semaine 5-8 : Passage à 0,5 mg
-- Surveillance des effets secondaires
+- Surveillance des [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 - Suivi hebdomadaire des premiers signes
 - Ajustement alimentaire
 
@@ -131,12 +135,12 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 ## Alternatives à Wegovy
 
 ### Autres GLP-1 indiqués pour l'obésité
-- **Mounjaro** (tirzepatide) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé (230-440 €/mois)
-- **Saxenda** (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
+- [**Mounjaro**](/collections/traitements-glp1/guide-complet-mounjaro/) (tirzepatide) : injection hebdomadaire, double action GLP-1 + GIP, non remboursé (230-440 €/mois) — voir notre [comparatif Wegovy vs Mounjaro 2026](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
+- [**Saxenda**](/collections/traitements-glp1/guide-complet-saxenda/) (liraglutide 3 mg) : injection quotidienne, non remboursé (240-300 €/mois)
 
 ### GLP-1 remboursés pour le diabète de type 2 uniquement
-- **Ozempic** (semaglutide 2 mg) : injection hebdomadaire, remboursé à 65 % pour le DT2
-- **Trulicity** (dulaglutide) : injection hebdomadaire, remboursé à 65 % pour le DT2 (~81 €/mois)
+- **Ozempic** (semaglutide 2 mg) : injection hebdomadaire, remboursé à 30 % pour le DT2 (~76,58 €/stylo)
+- **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** (dulaglutide) : injection hebdomadaire, remboursé à 65 % pour le DT2 (~81 €/mois)
 
 ### Traitements alternatifs
 - **Orlistat (Xenical)** : Inhibiteur des lipases
@@ -149,7 +153,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'es
 Oui, Wegovy contient la même molécule (semaglutide) mais à une dose maximale plus élevée (2,4 mg vs 2 mg) et est spécifiquement indiqué pour l'obésité.
 
 ### Puis-je prendre Wegovy si je n'ai pas de diabète ?
-Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète, contrairement à Ozempic qui est **exclusivement indiqué pour le diabète de type 2** en France et ne doit pas être utilisé pour la perte de poids (contrôles ANSM renforcés depuis février 2025).
+Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète, contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) qui est **exclusivement indiqué pour le diabète de type 2** en France et ne doit pas être utilisé pour la perte de poids (contrôles ANSM renforcés depuis février 2025).
 
 ### Combien de temps faut-il pour voir les effets ?
 - **Perte d'appétit** : Quelques jours
@@ -157,12 +161,13 @@ Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète,
 - **Effets maximum** : 6-12 mois
 
 ### Wegovy est-il remboursé pour l'obésité ?
-**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Son coût se situe entre 169 € et 360 € par mois selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un remboursement (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
+**Non, Wegovy n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Pour [acheter Wegovy en France](/collections/glp1-cout/acheter-wegovy-en-france/), son coût se situe [entre 169 € et 360 € par mois](/collections/glp1-cout/prix-wegovy-france/) selon le dosage, entièrement à la charge du patient. Des négociations de prix sont en cours avec le CEPS ; un [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) (probablement à 65 %) est envisagé pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec documenté d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Wegovy brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide.
+Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Parlez-en à votre médecin pour planifier un arrêt adapté.
 
 ---
 
-*Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/traitements-glp1/guide-complet-wegovy.md
+Pour obtenir une prescription de Wegovy, consultez notre annuaire d'[endocrinologues spécialisés en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/).
+
+*Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*

@@ -1,0 +1,78 @@
+---
+// Tracking des clics affilies — envoie un event a Supabase pour chaque clic sortant vers un partenaire
+import { supabaseConfig } from '../lib/supabase.js';
+---
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+(function() {
+  'use strict';
+
+  var API = supabaseUrl + '/rest/v1/affiliate_clicks';
+  var KEY = supabaseAnonKey;
+
+  // Extract UTM campaign from href
+  function getCampaign(href) {
+    try {
+      var url = new URL(href);
+      return url.searchParams.get('utm_campaign') || 'direct';
+    } catch(e) { return 'unknown'; }
+  }
+
+  // Detect which partner from the URL
+  function getPartner(href) {
+    if (href.indexOf('annette.care') > -1) return 'annette';
+    return 'other';
+  }
+
+  // Detect click source element
+  function getElement(el) {
+    // Check parent data attributes
+    var block = el.closest('[data-partner-block]');
+    if (block) return 'partner_' + block.getAttribute('data-partner-block');
+    if (el.closest('.partner-sidebar')) return 'sidebar';
+    if (el.closest('.new-nav-desktop')) return 'nav_desktop';
+    if (el.closest('.new-nav-mobile')) return 'nav_mobile';
+    if (el.closest('#coach-panel')) return 'chat_coach';
+    if (el.closest('.mobile-nav-cta')) return 'nav_mobile';
+    return 'other';
+  }
+
+  // Session ID (reuse coach session if exists)
+  var sid = localStorage.getItem('glp1_coach_session') || 'anon_' + Math.random().toString(36).slice(2, 10);
+
+  // Listen to all clicks on affiliate links
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"]');
+    if (!link) return;
+
+    var href = link.href;
+    var partner = getPartner(href);
+    var campaign = getCampaign(href);
+    var element = getElement(link);
+
+    // Fire and forget — don't block navigation
+    var payload = JSON.stringify({
+      partner: partner,
+      campaign: campaign,
+      page_url: window.location.pathname,
+      element: element,
+      session_id: sid,
+      user_agent: navigator.userAgent.substring(0, 200),
+      referrer: document.referrer.substring(0, 200)
+    });
+
+    // Fire-and-forget with keepalive (works even during page unload)
+    fetch(API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': KEY,
+        'Authorization': 'Bearer ' + KEY,
+        'Prefer': 'return=minimal'
+      },
+      body: payload,
+      keepalive: true
+    }).catch(function() {});
+  });
+})();
+</script>

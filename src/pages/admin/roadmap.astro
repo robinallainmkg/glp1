@@ -1,0 +1,355 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roadmap - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-size: 14px;
+    }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 2rem;
+    }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #0f172a; }
+    .page-header p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .main { padding: 2rem; max-width: 1000px; }
+
+    .phase {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .phase-header {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .phase-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .phase-badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-done { background: #dcfce7; color: #166534; }
+    .badge-active { background: #dbeafe; color: #1e40af; }
+    .badge-planned { background: #f1f5f9; color: #64748b; }
+
+    .phase-body { padding: 0 1.5rem 1.25rem; }
+
+    .task-list { list-style: none; }
+    .task-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+    }
+    .task-item:last-child { border-bottom: none; }
+    .task-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      margin-top: 1px;
+    }
+    .check-done { background: #dcfce7; color: #166534; }
+    .check-active { background: #dbeafe; color: #1e40af; }
+    .check-todo { background: #f1f5f9; color: #94a3b8; }
+
+    .task-label { flex: 1; }
+    .task-label strong { color: #0f172a; }
+    .task-detail { font-size: 0.78rem; color: #64748b; margin-top: 0.15rem; }
+
+    .cron-badge {
+      display: inline-block;
+      padding: 0.1rem 0.4rem;
+      background: #f3e8ff;
+      color: #7c3aed;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .objective {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #92400e;
+    }
+    .objective strong { color: #78350f; }
+
+    .feedback-section {
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .feedback-title { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .feedback-card {
+      padding: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+    }
+    .feedback-card h4 { font-size: 0.88rem; margin-bottom: 0.35rem; }
+    .feedback-card p { font-size: 0.78rem; color: #64748b; line-height: 1.5; }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+    }
+    @media (max-width: 768px) {
+      .main { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  // Auth guard handled by AdminNav (localStorage, 24h expiry)
+</script>
+
+<AdminNav />
+
+<div class="admin-layout">
+  <div class="page-header">
+    <h1>Roadmap — Site Auto-Gere</h1>
+    <p>Plan de developpement vers un site GLP-1 France entierement autonome</p>
+  </div>
+
+  <div class="main">
+    <div class="objective">
+      <strong>Objectif final :</strong> Un site qui s'autogere — cree du contenu, trouve des opportunites SEO, verifie les faits, corrige les erreurs. L'humain approuve les decisions strategiques.
+    </div>
+
+    <!-- PHASE 1 -->
+    <div class="phase">
+      <div class="phase-header">
+        <span class="phase-title">Phase 1 — Fondations</span>
+        <span class="phase-badge badge-done">Terminee</span>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check check-done">&#10003;</div>
+            <div class="task-label">
+              <strong>Securite admin</strong> — Mot de passe hashe + auth guard toutes pages
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-done">&#10003;</div>
+            <div class="task-label">
+              <strong>Agent SEO Opportunity Finder</strong>
+              <div class="task-detail">Detecte les lacunes de contenu via Claude + web search <span class="cron-badge">Mercredi 8h</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-done">&#10003;</div>
+            <div class="task-label">
+              <strong>Agent Content Creator</strong>
+              <div class="task-detail">Genere des articles complets a partir des opportunites approuvees <span class="cron-badge">Quotidien 12h</span></div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-done">&#10003;</div>
+            <div class="task-label">
+              <strong>Dashboards SEO + Content Creator</strong>
+              <div class="task-detail">Approbation des opportunites, pipeline de contenu, logs agents</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-done">&#10003;</div>
+            <div class="task-label">
+              <strong>Table Supabase seo_opportunities</strong>
+              <div class="task-detail">Migration executee, RLS configuree</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-done">&#10003;</div>
+            <div class="task-label">
+              <strong>Notifications agent</strong>
+              <div class="task-detail">GitHub Step Summary + email apres chaque run</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="phase">
+      <div class="phase-header">
+        <span class="phase-title">Phase 2 — Intelligence & Monitoring</span>
+        <span class="phase-badge badge-planned">A venir</span>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Google Search Console API</strong>
+              <div class="task-detail">Connecter GSC pour mesurer l'impact reel des articles generes (impressions, clics, positions)</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Dashboard analytique centralise</strong>
+              <div class="task-detail">Vue unique : articles crees, trafic genere, score fact-check, cout API</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Auto-approbation des opportunites low-risk</strong>
+              <div class="task-detail">Les opportunites a faible risque (enrichissement, FAQ) sont auto-approuvees</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>A/B testing de titres</strong>
+              <div class="task-detail">Generer 2-3 variantes de titres, mesurer le CTR via GSC</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Budget tracker automatique</strong>
+              <div class="task-detail">Suivi en temps reel des tokens consommes et du cout API par agent</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="phase">
+      <div class="phase-header">
+        <span class="phase-title">Phase 3 — Monetisation</span>
+        <span class="phase-badge badge-planned">A venir</span>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Agent Affiliation Optimizer</strong>
+              <div class="task-detail">Analyse les pages a fort trafic, optimise le placement des produits affilies</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Conversion tracking</strong>
+              <div class="task-detail">Mesurer les clics affilies par article, optimiser les CTA</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Newsletter automatisee</strong>
+              <div class="task-detail">Envoi hebdomadaire aux abonnes avec les derniers articles generes</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Landing pages dynamiques</strong>
+              <div class="task-detail">Pages de comparaison auto-generees (Ozempic vs Wegovy, etc.)</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="phase">
+      <div class="phase-header">
+        <span class="phase-title">Phase 4 — Autonomie Totale</span>
+        <span class="phase-badge badge-planned">Vision</span>
+      </div>
+      <div class="phase-body">
+        <ul class="task-list">
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Agent Teams (Claude Opus)</strong>
+              <div class="task-detail">Orchestration multi-agents : un planifie, un redige, un verifie, un deploie</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Self-healing</strong>
+              <div class="task-detail">Detection et correction automatique des erreurs 404, liens casses, images manquantes</div>
+            </div>
+          </li>
+          <li class="task-item">
+            <div class="task-check check-todo">&#8226;</div>
+            <div class="task-label">
+              <strong>Expansion multi-niche</strong>
+              <div class="task-detail">Dupliquer le modele sur d'autres niches sante (ex: probiotiques, complements)</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Feedback channels -->
+    <div class="feedback-section">
+      <div class="feedback-title">Comment tu recois du feedback</div>
+      <div class="feedback-grid">
+        <div class="feedback-card">
+          <h4>GitHub Actions</h4>
+          <p>Apres chaque run d'agent, un rapport apparait dans l'onglet <strong>Actions</strong> de ton repo. Clique sur un run pour voir le Step Summary avec les metriques.</p>
+        </div>
+        <div class="feedback-card">
+          <h4>Email (si configure)</h4>
+          <p>Configure <code>SMTP_*</code> et <code>ALERT_EMAIL_TO</code> dans GitHub Secrets pour recevoir un email apres chaque run.</p>
+        </div>
+        <div class="feedback-card">
+          <h4>Dashboards Admin</h4>
+          <p>Les pages <a href="/admin/seo/">/admin/seo/</a> et <a href="/admin/content-creator/">/admin/content-creator/</a> montrent l'etat en temps reel.</p>
+        </div>
+        <div class="feedback-card">
+          <h4>Supabase agent_logs</h4>
+          <p>Chaque agent ecrit dans <code>agent_logs</code> : statut, duree, tokens, erreurs. Visible dans les dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 ---
-title: "Phytotherapie GLP-1 : Guide Complet et Conseils Pratiques 2025"
-description: "Guide complet sur Phytotherapie GLP-1 : informations médicales et recommandations d'experts."
-slug: "phytotherapie-glp1"
+title: "Phytothérapie GLP-1 plantes médicinales : Guide 2026"
+description: "Phytothérapie et GLP-1 : quelles plantes médicinales peuvent compléter ce traitement ? Données scientifiques, précautions et recommandations médicales."
 pubDate: 2025-08-20
+date: 2025-08-20
 author: "Dr. Sophie Dubois"
 category: "Alternatives thérapeutiques"
 tags: ["glp1", "alternatives", "traitements"]
@@ -12,6 +12,7 @@ thumbnailAlt: "Illustration pour l'article Phytotherapie GLP-1"
 featured: false
 priority: 5
 schema: "Article"
+mainKeyword: "phytothérapie GLP-1 plantes médicinales"
 
 # Configuration Affiliation
 enableAffiliation: true
@@ -41,7 +42,7 @@ La phytothérapie peut compléter efficacement les traitements GLP-1 en optimisa
 
 ## Informations Médicales
 
-Selon les endocrinologues français... Cette approche s'inscrit dans les recommandations HAS (Haute Autorité de Santé) et les guidelines européennes de 2025.
+Selon les endocrinologues français, la phytothérapie peut constituer un soutien complémentaire à un traitement GLP-1, mais elle n'est pas spécifiquement recommandée par la HAS. Seules les mesures hygiéno-diététiques classiques — alimentation équilibrée et activité physique régulière — font l'objet de recommandations officielles en complément des traitements médicamenteux.
 
 ### Points clés validés scientifiquement :
 - **Efficacité clinique** : Études randomisées contrôlées
@@ -62,9 +63,9 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 ### Plantes complémentaires courantes
 - **Feuilles de mûrier** : 12-20€/mois (ralentit absorption glucose)
-- **Fenugrec graines** : 8-15€/mois (sensibilité insuline)
+- **Fenugrec graines** : 8-15€/mois (sensibilité insuline) — la [berbérine](/collections/alternatives-glp1/berberine-glp1/) est une autre option étudiée
 - **Nopal (figue de Barbarie)** : 15-25€/mois (fibres solubles)
-- **Garcinia cambogia** : 18-30€/mois (coupe-faim naturel)
+- **Garcinia cambogia** : 18-30€/mois — ⚠️ L'efficacité comme coupe-faim n'est pas prouvée cliniquement. Des cas de toxicité hépatique ont été documentés par l'ANSM et l'EFSA. Déconseillé en association avec des médicaments hépatotoxiques.
 
 ### Complexes phyto spécialisés
 - **Glyco-régul** (laboratoires) : 25-35€/mois
@@ -127,11 +128,11 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Bocaux hermétiques** : Conservation plantes
 - **Balance précision** : Dosage exact
 
-- [nouveau traitement diabète](../medicaments-glp1/nouveau-traitement-diabete-type-2-injection/)
-- [traitement diabète type 2](../medicaments-glp1/traitement-diabete-type-2/)
-- [plantes anti-diabète](../alternatives-glp1/plantes-diabete/)
-- [guérir du diabète](../alternatives-glp1/peut-on-guerir-du-diabete/)
-- [prix Saxenda](../medicaments-glp1/saxenda-prix/)
+- [nouveau traitement diabète](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)
+- [traitement diabète type 2](/collections/traitements-glp1/guide-complet-ozempic/)
+- [plantes anti-diabète](/collections/alternatives-glp1/plantes-diabete/)
+- [guérir du diabète](/collections/alternatives-glp1/peut-on-guerir-du-diabete/)
+- [prix Saxenda](/collections/glp1-cout/prix-saxenda-france/)
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 

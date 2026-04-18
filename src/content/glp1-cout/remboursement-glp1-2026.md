@@ -1,11 +1,13 @@
 ---
-title: "Remboursement GLP-1 2026 : Guide Complet par Médicament et Mutuelle"
-description: "Remboursement GLP-1 en 2026 : Mounjaro, Wegovy, Ozempic. Conditions Sécurité Sociale, mutuelles qui remboursent, démarches et aides financières. Guide officiel 2026."
+title: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
+thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
+description: "Remboursement GLP-1 2026 sécurité sociale conditions : Mounjaro, Wegovy, Ozempic. Mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
-seoTitle: "Remboursement GLP-1 2026 : Mounjaro, Wegovy, Ozempic - Guide Complet"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza, Rybelsus remboursés 65% (DT2). Wegovy, Mounjaro, Saxenda NON remboursés. Guide complet."
+seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
+seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 30% (DT2). Rybelsus non remboursé (avis défavorable HAS). Mounjaro en cours de négociation. Guide complet."
 publishedAt: '2025-12-27'
-updatedAt: '2025-12-27'
+updatedAt: '2026-03-17'
+date: '2026-03-17'
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -13,25 +15,26 @@ readingTime: 15
 image: "/images/thumbnails/remboursement-glp1-2026.jpg"
 collection: "glp1-cout"
 affiliateCollection: "glp1-cout"
+mainKeyword: "remboursement GLP-1 2026"
 ---
 
-# Remboursement GLP-1 2026 : Guide Officiel Complet
+## Remboursement GLP-1 2026 : Guide Officiel Complet
 
-Les traitements GLP-1 représentent une avancée majeure pour le diabète de type 2 et l'obésité. En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
+Les traitements GLP-1 représentent une avancée majeure pour le [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) et l'obésité. Pour une vue d'ensemble des molécules disponibles, consultez notre [guide complet des traitements GLP-1 disponibles en France](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/). En 2026, le remboursement de ces médicaments évolue avec l'arrivée de nouvelles molécules et l'élargissement des conditions de prise en charge. Ce guide complet détaille tout ce qu'il faut savoir sur le remboursement de chaque traitement GLP-1 disponible en France.
 
 ## 📋 Tableau Récapitulatif Remboursement GLP-1 2026
 
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
 |------------|------------|-------------------|------------------|-----------------|
-| **Ozempic** | Diabète T2 | **65%** (DT2 uniquement) | 21-42€ | ✅ Maintenu |
-| **Trulicity** | Diabète T2 | **65%** (DT2 uniquement) | ~28€ | ✅ Maintenu |
-| **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~21€ | ✅ Maintenu |
-| **Rybelsus** | Diabète T2 (oral) | **65%** (DT2 uniquement) | 28-38€ | ✅ Maintenu |
+| **Ozempic** | Diabète T2 | **30%** (DT2 uniquement) | ~53-54€ | ✅ Maintenu |
+| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
+| **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~27€ | ✅ Maintenu |
+| **Rybelsus** | Diabète T2 (oral) | **Non remboursé** (avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
 | **Wegovy** | Obésité (IMC ≥30) | **Non remboursé** | 169-360€ | ❌ Non remboursé |
-| **Mounjaro** | Obésité / DT2 | **Non remboursé** | 230-440€ | ❌ Non remboursé |
-| **Saxenda** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
+| **Mounjaro** | DT2 (avis HAS nov. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
+| **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
 
-> **Important** : Seuls les GLP-1 indiqués pour le **diabète de type 2** (Ozempic, Trulicity, Victoza, Rybelsus) sont remboursés à 65%. Les traitements indiqués pour l'**obésité** (Wegovy, Mounjaro, Saxenda) ne sont **PAS remboursés** par la Sécurité Sociale. De plus, depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription des GLP-1 remboursés.
+> **Mise à jour mars 2026** : La HAS a rendu un avis **favorable** au remboursement de **Mounjaro** le 19 novembre 2025 (avis CT21349) pour le diabète de type 2 et l'obésité (IMC >= 35). Les négociations de prix avec le CEPS sont en cours — le remboursement est **prévu pour le 2e semestre 2026**. En attendant, Mounjaro reste à la charge du patient. Les traitements indiqués pour l'**obésité seule** (Wegovy, Saxenda) restent non remboursés. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
 
 ---
 
@@ -39,7 +42,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le diabète de typ
 
 ### Critères Communs à Tous les GLP-1
 
-Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez remplir ces conditions de base :
+Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Saxenda, 65% pour Trulicity/Victoza selon la classification en liste I ou II), vous devez remplir ces conditions de base :
 
 ✅ **Prescription médicale obligatoire**
 - Ordonnance d'un médecin généraliste, endocrinologue ou diabétologue
@@ -55,6 +58,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ✅ **Échec des traitements de première intention**
 - Essai d'antidiabétiques oraux (metformine, sulfamides)
+- Note : les [inhibiteurs SGLT2 (iSGLT2)](/collections/régime-glp1/isglt2-liste/) sont souvent associés aux GLP-1 et remboursés séparément pour le diabète de type 2
 
 ✅ **Absence de contre-indications**
 - Pas d'antécédent de cancer médullaire de la thyroïde
@@ -67,17 +71,21 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Statut Officiel
 
-**Mounjaro (tirzépatide, Eli Lilly)** n'est **PAS remboursé** par la Sécurité Sociale en 2026. Commercialisé en France depuis novembre 2024, il reste entièrement à la charge du patient.
+**Mounjaro (tirzépatide, Eli Lilly)** n'est **pas encore remboursé** par la Sécurité Sociale en mars 2026, mais un remboursement est en cours de finalisation. Commercialisé en France depuis novembre 2024, le tirzépatide a obtenu un **avis favorable de la HAS le 19 novembre 2025** (avis CT21349, ASMR IV, amélioration mineure), pour le diabète de type 2 insuffisamment contrôlé et l'obésité (IMC ≥ 35) après échec des mesures nutritionnelles. Les négociations tarifaires avec le CEPS sont en cours et le [remboursement de Mounjaro en 2026](/collections/glp1-cout/remboursement-mounjaro-france-2026-quand-conditions-ceps/) est attendu **au 2e semestre 2026**.
 
-### Coût Patient 2026
+### Ce qu'il faut savoir sur le remboursement Mounjaro
 
-**Prix pharmacie :** 230-440€/mois (prix libre, non réglementé, variable selon dosage et pharmacie)
+**Situation actuelle (mars 2026)** :
+- Prix libre en pharmacie : 230 à 440€/mois selon le dosage
+- Aucun remboursement Sécurité Sociale pour le moment
+- Certaines mutuelles proposent une prise en charge partielle
 
-**Aucun remboursement Sécurité Sociale** :
-- Le coût est intégralement à la charge du patient
-- Certaines mutuelles peuvent proposer une participation partielle (vérifier votre contrat)
+**Remboursement attendu (2e semestre 2026)** :
+- Taux prévu : 30% (Sécurité Sociale, SMR modéré)
+- Indication : Diabète de type 2 insuffisamment contrôlé
+- Critères prévisionnels : HbA1c > 7% malgré metformine + autre antidiabétique oral, IMC ≥ 30 kg/m²
 
-[Voir le détail complet des prix Mounjaro -->](/collections/glp1-cout/prix-mounjaro-france)
+[Voir le détail complet des prix Mounjaro -->](/collections/glp1-cout/prix-mounjaro-france/)
 
 ---
 
@@ -95,7 +103,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 - Le coût est intégralement à la charge du patient
 - Certaines mutuelles peuvent proposer une participation partielle (vérifier votre contrat)
 
-[Détails complets prix Wegovy -->](/collections/glp1-cout/prix-wegovy-france)
+[Détails complets prix Wegovy -->](/collections/glp1-cout/prix-wegovy-france/)
 
 ---
 
@@ -103,7 +111,7 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Statut Officiel
 
-**Ozempic (sémaglutide 0.5-2 mg)** maintient son remboursement à **65%** en 2026 pour le **diabète de type 2** uniquement.
+**Ozempic (sémaglutide 0.25-1 mg)** maintient son remboursement à **30%** en 2026 pour le **diabète de type 2** uniquement. (Note : le dosage 2 mg n'est pas commercialisé en France.)
 
 ⚠️ **Important** : Ozempic n'est PAS remboursé pour la perte de poids seule (sans diabète). Pour cette indication, utilisez **Wegovy** (même principe actif, dosage supérieur).
 
@@ -115,15 +123,15 @@ Pour bénéficier du remboursement à 65% par l'Assurance Maladie, vous devez re
 
 ### Coût Réel Patient 2026
 
-**Prix pharmacie :** 59,90€/stylo
+**Prix pharmacie :** ~76,58€/stylo
 
 **Selon dosage :**
-- 0.25-0.5 mg : 1 stylo/mois = **21€/mois** après remboursement
-- 1-2 mg : 2 stylos/mois = **42€/mois** après remboursement
+- 0.25-0.5 mg : 1 stylo/mois = **~54€/mois** après remboursement à 30%
+- 1-2 mg : 2 stylos/mois = **~107€/mois** après remboursement à 30%
 
 **Le moins cher des GLP-1 injectables !**
 
-[Prix détaillés Ozempic par dosage →](/collections/glp1-cout/prix-ozempic-france)
+[Prix détaillés Ozempic par dosage →](/collections/glp1-cout/prix-ozempic-france/)
 
 ---
 
@@ -183,7 +191,7 @@ Au-delà du remboursement Sécu + mutuelle, plusieurs aides peuvent réduire vot
 
 ### 1. Complémentaire Santé Solidaire (CSS)
 
-**Pour qui ?** Revenus < 9 719€/an (personne seule) ou < 14 579€/an (couple)
+**Pour qui ?** Revenus < 10 339€/an (personne seule, plafond 2026) ou < 15 509€/an (couple sans enfant)
 
 **Avantages :**
 - ✅ Prise en charge à **100%** sans avance de frais
@@ -244,7 +252,7 @@ Certains départements proposent des aides exceptionnelles pour traitements coû
 - ✅ Historique des traitements essayés
 - ✅ Carnet de mesures (poids, glycémie si diabète)
 
-[Trouver un médecin prescripteur GLP-1 →](/collections/medecins-glp1-france)
+[Trouver un médecin prescripteur GLP-1 →](/collections/medecins-glp1-france/)
 
 ### Étape 2 : Bilan Médical Complet
 
@@ -345,13 +353,13 @@ Pour continuer à être remboursé, vous devez démontrer :
 
 ### Le remboursement GLP-1 sera-t-il maintenu en 2026 ?
 
-Le remboursement à 65% est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** uniquement. Les traitements pour l'obésité restent non remboursés.
+Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** uniquement (taux applicable aux médicaments à SMR modéré). Les traitements pour l'obésité restent non remboursés.
 
 **Statut par traitement :**
-- ✅ Ozempic : Maintenu 65% (DT2 uniquement)
-- ✅ Trulicity : Maintenu 65% (DT2 uniquement)
-- ✅ Victoza : Maintenu 65% (DT2 uniquement)
-- ✅ Rybelsus : Maintenu 65% (DT2 uniquement)
+- ✅ Ozempic : Maintenu 30% (DT2 uniquement)
+- ✅ Trulicity : Maintenu 30% (DT2 uniquement)
+- ✅ Victoza : Maintenu 30% (DT2 uniquement)
+- ❌ Rybelsus : NON remboursé (avis défavorable HAS)
 - ❌ Wegovy : NON remboursé
 - ❌ Mounjaro : NON remboursé
 - ❌ Saxenda : NON remboursé
@@ -389,7 +397,7 @@ Le remboursement à 65% est **confirmé pour 2026** pour les GLP-1 indiqués dan
 
 ### Les conditions de remboursement vont-elles se durcir en 2026 ?
 
-**Pour les GLP-1 DT2 (Ozempic, Trulicity, Victoza, Rybelsus)**, aucun durcissement n'est prévu en 2026. Les conditions restent identiques à 2025.
+**Pour les GLP-1 DT2 remboursés (Ozempic, Trulicity, Victoza)**, aucun durcissement n'est prévu en 2026. Les conditions restent identiques à 2025. Rappel : Rybelsus n'est pas remboursé (avis défavorable HAS).
 
 **Maintien des critères actuels pour le remboursement DT2 :**
 - ✅ Diabète de type 2 confirmé
@@ -414,10 +422,11 @@ Le remboursement à 65% est **confirmé pour 2026** pour les GLP-1 indiqués dan
 - Remboursement : NON remboursé
 - Indication : Obésité principalement
 - Commercialisé depuis octobre 2024
+- Voir aussi le [calendrier de remboursement Wegovy](/collections/glp1-cout/quand-wegovy-rembourse-france-2026-conditions-calendrier/) pour les perspectives
 
 **Mounjaro (tirzépatide, Eli Lilly) :**
 - Coût pharmacie : **230-440€/mois** (prix libre)
-- Remboursement : NON remboursé
+- Remboursement : NON remboursé (voir le [remboursement Mounjaro Sécurité Sociale](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/) pour les conditions attendues)
 - Indication : Obésité / DT2
 - Commercialisé depuis novembre 2024
 
@@ -426,9 +435,9 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 **Choix recommandé :**
 - **Budget limité** --> Wegovy (moins cher)
 - **Efficacité maximale** --> Mounjaro
-- **Remboursement souhaité** --> Ozempic (65% DT2 uniquement, principe actif identique à Wegovy)
+- **Remboursement souhaité** --> Ozempic (30% DT2 uniquement, principe actif identique à Wegovy)
 
-[Comparaison détaillée Wegovy vs Mounjaro →](/guides/quel-traitement-glp1-choisir)
+[Comparaison détaillée Wegovy vs Mounjaro →](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
 ---
 
@@ -437,25 +446,25 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 ### Guides Complets par Médicament
 
 **Prix et Remboursements Détaillés :**
-- [Prix Mounjaro France 2025](/collections/glp1-cout/prix-mounjaro-france)
-- [Prix Wegovy France 2025](/collections/glp1-cout/prix-wegovy-france)
-- [Prix Ozempic France 2025](/collections/glp1-cout/prix-ozempic-france)
-- [Remboursement Wegovy Mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle)
+- [Prix Mounjaro France 2025](/collections/glp1-cout/prix-mounjaro-france/)
+- [Prix Wegovy France 2025](/collections/glp1-cout/prix-wegovy-france/)
+- [Prix Ozempic France 2025](/collections/glp1-cout/prix-ozempic-france/)
+- [Remboursement Wegovy Mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/)
 
 **Guides Thérapeutiques :**
-- [Guide Complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro)
-- [Guide Complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy)
-- [Guide Complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic)
+- [Guide Complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)
+- [Guide Complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/)
+- [Guide Complet Ozempic](/collections/traitements-glp1/guide-complet-ozempic/)
 
 **Comparatifs :**
 - [Quel Traitement GLP-1 Choisir ?](/guides/quel-traitement-glp1-choisir)
-- [Vue d'Ensemble Prix GLP-1](/collections/glp1-cout)
+- [Vue d'Ensemble Prix GLP-1](/collections/glp1-cout/)
 
 ### Trouver un Médecin Prescripteur
 
-- [Annuaire Endocrinologues GLP-1](/collections/medecins-glp1-france/endocrinologue-pour-maigrir)
-- [Diabétologues Paris](/collections/medecins-glp1-france/diabetologue-paris)
-- [Tous les Médecins GLP-1](/collections/medecins-glp1-france)
+- [Annuaire Endocrinologues GLP-1](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/)
+- [Diabétologues Paris](/collections/medecins-glp1-france/diabetologue-paris/)
+- [Tous les Médecins GLP-1](/collections/medecins-glp1-france/)
 
 ### Contacts Officiels
 
@@ -473,8 +482,8 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 - **Fédération Française d'Obésité** : 01 56 81 10 10
 
 **Aide et Questions :**
-- 💬 [Contactez notre équipe](/contact)
-- 🤝 [Rejoindre les communautés GLP-1](/guides/communautes-glp1)
+- 💊 **Assurance Maladie** : 36 46 ou [ameli.fr](https://www.ameli.fr)
+- 🤝 [Témoignages de patients GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)
 
 ---
 
@@ -505,10 +514,10 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 4. ✅ **Assurer le suivi médical** pour maintenir la prise en charge
 5. ✅ **Se renseigner sur les programmes laboratoires**
 
-**Économies possibles :** Jusqu'à **1 200€/an** avec la bonne stratégie !
+**Économies possibles :** Jusqu'à **1 200€/an** avec la bonne stratégie ! Le remboursement est conditionné au respect des [nouvelles règles de prescription ANSM 2025-2026](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) pour limiter le mésusage.
 
 ---
 
 *Dernière mise à jour : 27 décembre 2025. Les informations de remboursement sont basées sur les directives officielles de l'Assurance Maladie et de la Haute Autorité de Santé. Pour une situation personnalisée, consultez votre CPAM et votre médecin.*
 
-**📱 Restez informé des évolutions 2026** : [Inscrivez-vous à notre newsletter](/contact) pour recevoir les mises à jour sur les remboursements GLP-1.
+**📱 Restez informé des évolutions 2026** : Consultez régulièrement [ameli.fr](https://www.ameli.fr) pour les dernières mises à jour sur les remboursements GLP-1.

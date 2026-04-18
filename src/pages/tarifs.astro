@@ -1,0 +1,494 @@
+---
+import StaticLayout from '../layouts/StaticLayout.astro';
+const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL || 'https://ywekaivgjzsmdocchvum.supabase.co';
+const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3ZWthaXZnanpzbWRvY2NodnVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNjQ0MDcsImV4cCI6MjA3MDk0MDQwN30.f2Mo-77InzZHnK1o7bMNs1ZC3DyX7EkPl964ksQTafY';
+---
+<StaticLayout title="Tarifs Coach GLP-1 Premium | GLP-1 France" description="Abonnez-vous au Coach GLP-1 Premium pour un accompagnement personnalisé illimité. 4€/mois ou 33€/an.">
+  <main class="pricing-page">
+    <!-- Hero -->
+    <section class="pricing-hero">
+      <h1>Votre Coach GLP-1 Personnel</h1>
+      <p class="pricing-subtitle">Un accompagnement intelligent et personnalisé pour votre parcours GLP-1</p>
+    </section>
+
+    <!-- Toggle mensuel/annuel -->
+    <div class="billing-toggle">
+      <span class="toggle-label" id="label-monthly">Mensuel</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="billing-toggle" />
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label" id="label-yearly">Annuel <span class="badge-discount">-30%</span></span>
+    </div>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-cards">
+      <!-- Free -->
+      <div class="pricing-card">
+        <div class="card-header">
+          <h3>Gratuit</h3>
+          <div class="card-price">
+            <span class="price">0€</span>
+            <span class="period">/mois</span>
+          </div>
+        </div>
+        <ul class="features-list">
+          <li class="feature-yes">3 messages Coach IA / jour</li>
+          <li class="feature-yes">Suivi de poids et nutrition</li>
+          <li class="feature-yes">Rappels injection</li>
+          <li class="feature-yes">Journal effets secondaires</li>
+          <li class="feature-no">Réponses personnalisées</li>
+          <li class="feature-no">Messages illimités</li>
+          <li class="feature-no">Historique complet</li>
+        </ul>
+        <a href="/mon-espace/" class="btn-plan btn-free">Créer un compte</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="pricing-card card-premium">
+        <div class="popular-badge">Le plus populaire</div>
+        <div class="card-header">
+          <h3>Premium</h3>
+          <div class="card-price" id="premium-price">
+            <span class="price">4€</span>
+            <span class="period">/mois</span>
+          </div>
+          <p class="price-detail" id="price-detail">7 jours d'essai gratuit</p>
+        </div>
+        <ul class="features-list">
+          <li class="feature-yes">Messages Coach IA illimités</li>
+          <li class="feature-yes">Réponses personnalisées (votre profil)</li>
+          <li class="feature-yes">Historique complet des conversations</li>
+          <li class="feature-yes">Suivi de poids et nutrition</li>
+          <li class="feature-yes">Rappels injection</li>
+          <li class="feature-yes">Journal effets secondaires</li>
+        </ul>
+        <button class="btn-plan btn-premium" id="btn-subscribe" onclick="startCheckout()">
+          Commencer l'essai gratuit
+        </button>
+      </div>
+    </section>
+
+    <!-- Feature comparison -->
+    <section class="comparison-section">
+      <h2>Comparaison détaillée</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Fonctionnalité</th>
+            <th>Gratuit</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Messages Coach IA</td><td>3 / jour</td><td class="highlight">Illimité</td></tr>
+          <tr><td>Réponses personnalisées</td><td>Génériques</td><td class="highlight">Basées sur votre profil</td></tr>
+          <tr><td>Historique conversations</td><td>Limité</td><td class="highlight">Illimité</td></tr>
+          <tr><td>Suivi de poids</td><td>Inclus</td><td class="highlight">Inclus</td></tr>
+          <tr><td>Programme nutrition</td><td>Inclus</td><td class="highlight">Inclus</td></tr>
+          <tr><td>Rappels injection</td><td>Inclus</td><td class="highlight">Inclus</td></tr>
+          <tr><td>Journal effets secondaires</td><td>Inclus</td><td class="highlight">Inclus</td></tr>
+          <tr><td>Recommandations santé</td><td>Inclus</td><td class="highlight">Inclus</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Questions fréquentes</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Puis-je annuler à tout moment ?</h4>
+          <p>Oui, vous pouvez annuler votre abonnement à tout moment depuis votre espace personnel. Vous gardez l'accès jusqu'à la fin de la période payée.</p>
+        </div>
+        <div class="faq-item">
+          <h4>L'essai gratuit est-il sans engagement ?</h4>
+          <p>Oui, les 7 premiers jours sont gratuits. Si vous annulez pendant l'essai, vous ne serez pas débité.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Quels moyens de paiement acceptez-vous ?</h4>
+          <p>Carte bancaire (Visa, Mastercard, CB), Apple Pay, Google Pay. Paiement sécurisé par Stripe.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Mes données sont-elles protégées ?</h4>
+          <p>Vos données de santé sont stockées de manière sécurisée et ne sont jamais partagées. Conformité RGPD.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Le Coach IA remplace-t-il un médecin ?</h4>
+          <p>Non. Le Coach fournit des informations générales sur les traitements GLP-1. Il ne pose pas de diagnostic et vous oriente vers un professionnel de santé.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Puis-je changer de formule ?</h4>
+          <p>Oui, vous pouvez passer du mensuel à l'annuel (et inversement) à tout moment depuis votre espace personnel.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script define:vars={{ SUPABASE_URL, SUPABASE_ANON_KEY }}>
+    // Initialise le client Supabase pour obtenir des tokens toujours frais
+    const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const toggle = document.getElementById('billing-toggle');
+    const priceEl = document.querySelector('#premium-price .price');
+    const periodEl = document.querySelector('#premium-price .period');
+    const detailEl = document.getElementById('price-detail');
+    const btnEl = document.getElementById('btn-subscribe');
+    let billingType = 'monthly';
+
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        billingType = 'yearly';
+        priceEl.textContent = '33€';
+        periodEl.textContent = '/an';
+        detailEl.textContent = 'Soit 2,75€/mois — 7 jours d\'essai gratuit';
+      } else {
+        billingType = 'monthly';
+        priceEl.textContent = '4€';
+        periodEl.textContent = '/mois';
+        detailEl.textContent = '7 jours d\'essai gratuit';
+      }
+    });
+
+    async function startCheckout() {
+      btnEl.disabled = true;
+      btnEl.textContent = 'Chargement...';
+
+      try {
+        // Utilise getSession() pour obtenir un token frais (auto-refresh si expiré)
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+
+        if (sessionError || !session?.access_token) {
+          // Pas connecté ou session irrecupérable → page de connexion
+          window.location.href = '/mon-espace/?redirect=tarifs';
+          return;
+        }
+
+        const resp = await fetch(SUPABASE_URL + '/functions/v1/stripe-checkout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + session.access_token,
+            'apikey': SUPABASE_ANON_KEY,
+          },
+          body: JSON.stringify({ price_type: billingType }),
+        });
+
+        const data = await resp.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else if (data.error === 'Token invalide' || resp.status === 401) {
+          // Token invalide côté serveur → forcer reconnexion
+          await supabase.auth.signOut();
+          window.location.href = '/mon-espace/?redirect=tarifs&reason=session_expired';
+        } else {
+          alert(data.error || 'Erreur lors de la création du paiement');
+          btnEl.disabled = false;
+          btnEl.textContent = 'Commencer l\'essai gratuit';
+        }
+      } catch (err) {
+        alert('Erreur de connexion. Réessayez.');
+        btnEl.disabled = false;
+        btnEl.textContent = 'Commencer l\'essai gratuit';
+      }
+    }
+
+    // Expose to onclick
+    window.startCheckout = startCheckout;
+  </script>
+
+  <style>
+    .pricing-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .pricing-hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .pricing-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+    .pricing-subtitle {
+      font-size: 1.15rem;
+      color: #6b7280;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Billing toggle */
+    .billing-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .toggle-label {
+      font-size: 0.95rem;
+      color: #6b7280;
+      font-weight: 500;
+    }
+    .badge-discount {
+      background: #16a34a;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 52px;
+      height: 28px;
+      cursor: pointer;
+    }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute;
+      inset: 0;
+      background: #d1d5db;
+      border-radius: 28px;
+      transition: 0.3s;
+    }
+    .toggle-slider::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 3px;
+      bottom: 3px;
+      background: white;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .toggle-switch input:checked + .toggle-slider {
+      background: #16a34a;
+    }
+    .toggle-switch input:checked + .toggle-slider::before {
+      transform: translateX(24px);
+    }
+
+    /* Pricing cards */
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 750px;
+      margin: 0 auto 3rem;
+    }
+    .pricing-card {
+      background: white;
+      border: 2px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+    .card-premium {
+      border-color: #16a34a;
+      box-shadow: 0 4px 20px rgba(22,163,74,0.15);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #16a34a;
+      color: white;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .card-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .card-header h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+    .card-price {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 2px;
+    }
+    .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1f2937;
+    }
+    .period {
+      font-size: 1rem;
+      color: #6b7280;
+    }
+    .price-detail {
+      font-size: 0.85rem;
+      color: #16a34a;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* Features list */
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    .features-list li {
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #374151;
+    }
+    .feature-yes::before {
+      content: '✓';
+      color: #16a34a;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .feature-no::before {
+      content: '✗';
+      color: #d1d5db;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .feature-no {
+      color: #9ca3af;
+    }
+
+    /* Buttons */
+    .btn-plan {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      text-decoration: none;
+    }
+    .btn-free {
+      background: #f3f4f6;
+      color: #374151;
+    }
+    .btn-free:hover {
+      background: #e5e7eb;
+    }
+    .btn-premium {
+      background: #16a34a;
+      color: white;
+    }
+    .btn-premium:hover {
+      background: #15803d;
+      transform: translateY(-1px);
+    }
+    .btn-premium:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+
+    /* Comparison table */
+    .comparison-section {
+      margin-bottom: 3rem;
+    }
+    .comparison-section h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #f3f4f6;
+      font-size: 0.9rem;
+    }
+    .comparison-table th {
+      background: #f9fafb;
+      font-weight: 700;
+      color: #374151;
+    }
+    .comparison-table td.highlight {
+      color: #16a34a;
+      font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-section h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .faq-item {
+      background: white;
+      padding: 1.25rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .faq-item h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+    .faq-item p {
+      font-size: 0.85rem;
+      color: #6b7280;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .pricing-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</StaticLayout>

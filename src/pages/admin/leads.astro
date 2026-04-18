@@ -1,0 +1,316 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leads & Data - GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #e2e8f0; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header { background: linear-gradient(180deg, #0f1520, #0a0e17); border-bottom: 1px solid #1a2332; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .page-header-left h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header-left p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .refresh-btn { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b; background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+    .last-update { font-size: 0.72rem; color: #64748b; }
+    .main { padding: 2rem; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin-bottom: 0.5rem; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.75rem; color: #475569; margin-top: 0.35rem; }
+
+    .source-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .source-tab { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #2d3748; background: #1e293b; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; color: #c8d6e5; font-weight: 500; }
+    .source-tab:hover { background: #2d3748; }
+    .source-tab.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .source-tab .count { background: rgba(0,0,0,0.1); padding: 0.1rem 0.4rem; border-radius: 10px; font-size: 0.7rem; font-weight: 700; }
+    .source-tab.active .count { background: rgba(255,255,255,0.25); }
+
+    .feed-table-wrap { background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .feed-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .feed-table th { text-align: left; padding: 0.75rem 1rem; background: #0d1321; border-bottom: 1px solid #1e293b; font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8; }
+    .feed-table td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e293b; vertical-align: top; }
+    .feed-table tr:hover td { background: #1a2332; }
+    .feed-table tr:last-child td { border-bottom: none; }
+
+    .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 6px; font-size: 0.68rem; font-weight: 600; white-space: nowrap; }
+    .badge-newsletter { background: rgba(59,130,246,0.2); color: #60a5fa; }
+    .badge-contact { background: rgba(236,72,153,0.2); color: #f472b6; }
+    .badge-diagnostic { background: rgba(139,92,246,0.2); color: #a78bfa; }
+    .badge-feedback { background: rgba(245,158,11,0.2); color: #fbbf24; }
+    .badge-testimonial { background: rgba(168,85,247,0.2); color: #c084fc; }
+    .badge-intent { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; font-weight: 600; background: #1e293b; color: #94a3b8; }
+    .email-cell { font-weight: 600; color: #e2e8f0; }
+    .preview-cell { max-width: 350px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #94a3b8; }
+    .time-cell { font-size: 0.75rem; color: #94a3b8; white-space: nowrap; }
+    .empty-state { padding: 3rem; text-align: center; color: #94a3b8; }
+
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 300; backdrop-filter: blur(2px); align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #111827; border: 1px solid #1e293b; border-radius: 16px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+    .modal-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid #1e293b; display: flex; justify-content: space-between; align-items: center; }
+    .modal-header h3 { font-size: 1rem; font-weight: 700; color: #e2e8f0; }
+    .modal-close { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #94a3b8; padding: 0.25rem; }
+    .modal-body { padding: 1.5rem; }
+    .modal-field { margin-bottom: 1rem; }
+    .modal-field label { display: block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8; margin-bottom: 0.25rem; }
+    .modal-field .val { font-size: 0.88rem; color: #e2e8f0; line-height: 1.5; white-space: pre-wrap; }
+
+    @media (max-width: 1024px) {
+      .admin-layout { margin-left: 0; padding-top: 56px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <AdminNav />
+  <div class="admin-layout">
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>📊 Leads & Data</h1>
+        <p>Contacts, newsletter, diagnostics, feedback — toutes les donnees entrantes</p>
+      </div>
+      <div class="header-actions">
+        <span class="last-update" id="lastUpdate"></span>
+        <button class="refresh-btn" onclick="loadAllData()">🔄 Rafraichir</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="stats-grid">
+        <div class="stat-card"><div class="label">Total leads</div><div class="value" id="statTotal">-</div><div class="sub" id="statTotalSub">aujourd'hui: -</div></div>
+        <div class="stat-card"><div class="label">Newsletter</div><div class="value" style="color:#3b82f6;" id="statNewsletter">-</div><div class="sub" id="statNewsletterSub">inscriptions</div></div>
+        <div class="stat-card"><div class="label">Contacts</div><div class="value" style="color:#ec4899;" id="statContact">-</div><div class="sub" id="statContactSub">messages</div></div>
+        <div class="stat-card"><div class="label">Diagnostics</div><div class="value" style="color:#8b5cf6;" id="statDiag">-</div><div class="sub" id="statDiagSub">remplis</div></div>
+        <div class="stat-card"><div class="label">Feedback</div><div class="value" style="color:#f59e0b;" id="statFeedback">-</div><div class="sub" id="statFeedbackSub">avis + temoignages</div></div>
+      </div>
+
+      <div class="source-tabs">
+        <button class="source-tab active" onclick="filterSource('all', this)">🔥 Tout <span class="count" id="countAll">-</span></button>
+        <button class="source-tab" onclick="filterSource('newsletter', this)">📧 Newsletter <span class="count" id="countNewsletter">-</span></button>
+        <button class="source-tab" onclick="filterSource('contact', this)">✉️ Contacts <span class="count" id="countContact">-</span></button>
+        <button class="source-tab" onclick="filterSource('diagnostic', this)">🩺 Diagnostics <span class="count" id="countDiag">-</span></button>
+        <button class="source-tab" onclick="filterSource('feedback', this)">⭐ Feedback <span class="count" id="countFeedback">-</span></button>
+      </div>
+
+      <div class="feed-table-wrap">
+        <table class="feed-table">
+          <thead><tr><th>Source</th><th>Identifiant</th><th>Apercu</th><th>Details</th><th>Date</th></tr></thead>
+          <tbody id="feedBody"><tr><td colspan="5" class="empty-state">Chargement...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header"><h3 id="modalTitle">Detail</h3><button class="modal-close" onclick="closeModal()">✕</button></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script is:inline define:vars={{ supabaseUrl: supabaseConfig.url, supabaseKey: supabaseConfig.anonKey }}>
+    let sb;
+    function initSb() { if(sb)return sb; sb=window.supabase.createClient(supabaseUrl,supabaseKey); return sb; }
+
+    let allEntries = [];
+    let currentSource = 'all';
+
+    async function loadAllData() {
+      try {
+        var s = initSb();
+
+        // Contacts (newsletter + contact + diagnostic)
+        var rc = await s.from('contacts').select('*').order('created_at', { ascending: false }).limit(300);
+        var contacts = rc.data || [];
+
+        // User feedback + testimonials
+        var rf = await s.from('user_feedback').select('*').order('created_at', { ascending: false }).limit(200);
+        var feedback = rf.data || [];
+
+        // Coach feedback (satisfaction votes)
+        var rcf = await s.from('coach_feedback').select('*').order('created_at', { ascending: false }).limit(200);
+        var coachFb = rcf.data || [];
+
+        // Build unified feed
+        allEntries = [];
+
+        contacts.forEach(function(c) {
+          var isNewsletter = c.newsletter === true && !c.nom && !c.telephone && !c.treatment;
+          var isDiag = !!c.treatment;
+          var type = isDiag ? 'diagnostic' : isNewsletter ? 'newsletter' : 'contact';
+
+          var preview = isDiag ? (c.treatment + (c.concerns ? ' — ' + c.concerns : '')) :
+            isNewsletter ? 'Inscription newsletter' :
+            (c.message || c.subject || '-');
+
+          var detail = isDiag ? c.treatment :
+            isNewsletter ? 'Newsletter' :
+            (c.subject || 'Contact');
+
+          allEntries.push({ source: type, id: c.id, identifier: c.email || '-', preview: preview, detail: detail, date: c.created_at, raw: c });
+        });
+
+        feedback.forEach(function(f) {
+          var isTesti = f.type === 'testimonial';
+          allEntries.push({
+            source: 'feedback',
+            id: 'fb-' + f.id,
+            identifier: f.name || f.email || 'Anonyme',
+            preview: f.story || ('Note: ' + (f.rating || '-') + '/5'),
+            detail: isTesti ? 'Temoignage' : (f.interest || f.discovery || 'Avis'),
+            date: f.created_at,
+            raw: f,
+            subtype: isTesti ? 'testimonial' : 'feedback'
+          });
+        });
+
+        // Coach feedback as feedback entries
+        coachFb.forEach(function(f) {
+          allEntries.push({
+            source: 'feedback',
+            id: 'cf-' + f.id,
+            identifier: 'Coach IA',
+            preview: (f.vote === 'up' ? '👍 ' : '👎 ') + (f.assistant_message || '').substring(0, 80),
+            detail: f.vote === 'up' ? 'Positif' : 'Negatif',
+            date: f.created_at,
+            raw: f,
+            subtype: 'coach_vote'
+          });
+        });
+
+        allEntries.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+
+        // Stats
+        var newsletters = allEntries.filter(function(e){return e.source==='newsletter';});
+        var contactsF = allEntries.filter(function(e){return e.source==='contact';});
+        var diags = allEntries.filter(function(e){return e.source==='diagnostic';});
+        var feedbacks = allEntries.filter(function(e){return e.source==='feedback';});
+        var today = new Date().toISOString().split('T')[0];
+        var todayTotal = allEntries.filter(function(e){return e.date && e.date.startsWith(today);}).length;
+
+        document.getElementById('statTotal').textContent = allEntries.length;
+        document.getElementById('statTotalSub').textContent = "aujourd'hui: " + todayTotal;
+        document.getElementById('statNewsletter').textContent = newsletters.length;
+        document.getElementById('statNewsletterSub').textContent = "aujourd'hui: " + newsletters.filter(function(e){return e.date&&e.date.startsWith(today);}).length;
+        document.getElementById('statContact').textContent = contactsF.length;
+        document.getElementById('statContactSub').textContent = "aujourd'hui: " + contactsF.filter(function(e){return e.date&&e.date.startsWith(today);}).length;
+        document.getElementById('statDiag').textContent = diags.length;
+        document.getElementById('statDiagSub').textContent = "aujourd'hui: " + diags.filter(function(e){return e.date&&e.date.startsWith(today);}).length;
+        document.getElementById('statFeedback').textContent = feedbacks.length;
+        document.getElementById('statFeedbackSub').textContent = "aujourd'hui: " + feedbacks.filter(function(e){return e.date&&e.date.startsWith(today);}).length;
+
+        document.getElementById('countAll').textContent = allEntries.length;
+        document.getElementById('countNewsletter').textContent = newsletters.length;
+        document.getElementById('countContact').textContent = contactsF.length;
+        document.getElementById('countDiag').textContent = diags.length;
+        document.getElementById('countFeedback').textContent = feedbacks.length;
+
+        document.getElementById('lastUpdate').textContent = 'MAJ ' + new Date().toLocaleTimeString('fr-FR');
+        renderFeed();
+      } catch(err) {
+        console.error('loadAllData error:', err);
+        document.getElementById('feedBody').innerHTML = '<tr><td colspan="5" class="empty-state">Erreur: ' + err.message + '</td></tr>';
+      }
+    }
+
+    function filterSource(source, btn) {
+      currentSource = source;
+      document.querySelectorAll('.source-tab').forEach(function(t){t.classList.remove('active');});
+      if(btn) btn.classList.add('active');
+      renderFeed();
+    }
+
+    function renderFeed() {
+      var body = document.getElementById('feedBody');
+      var entries = currentSource === 'all' ? allEntries : allEntries.filter(function(e){return e.source===currentSource;});
+      if (!entries.length) { body.innerHTML = '<tr><td colspan="5" class="empty-state">Aucune donnee</td></tr>'; return; }
+
+      body.innerHTML = entries.slice(0, 100).map(function(e, i) {
+        var bc = e.subtype === 'testimonial' ? 'badge-testimonial' :
+          e.subtype === 'coach_vote' ? 'badge-feedback' :
+          'badge-' + e.source;
+        var bl = e.source === 'newsletter' ? 'Newsletter' :
+          e.source === 'contact' ? 'Contact' :
+          e.source === 'diagnostic' ? 'Diagnostic' :
+          e.subtype === 'testimonial' ? 'Temoignage' :
+          e.subtype === 'coach_vote' ? 'Coach Vote' : 'Feedback';
+        var time = e.date ? new Date(e.date).toLocaleString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '-';
+
+        return '<tr onclick="showDetail('+i+')" style="cursor:pointer;">'
+          + '<td><span class="badge '+bc+'">'+bl+'</span></td>'
+          + '<td class="email-cell">'+escapeHtml(e.identifier)+'</td>'
+          + '<td class="preview-cell">'+escapeHtml((e.preview||'').substring(0,80))+'</td>'
+          + '<td><span class="badge-intent">'+escapeHtml(e.detail)+'</span></td>'
+          + '<td class="time-cell">'+time+'</td></tr>';
+      }).join('');
+    }
+
+    function showDetail(index) {
+      var entries = currentSource === 'all' ? allEntries : allEntries.filter(function(e){return e.source===currentSource;});
+      var e = entries[index];
+      if (!e) return;
+
+      var icon = e.source==='newsletter'?'📧':e.source==='contact'?'✉️':e.source==='diagnostic'?'🩺':'⭐';
+      document.getElementById('modalTitle').textContent = icon + ' ' + e.source.charAt(0).toUpperCase() + e.source.slice(1);
+
+      var html = '';
+      var raw = e.raw;
+      if (e.source === 'newsletter') {
+        html = field('Email', raw.email) + field('Date', fmtDate(raw.created_at)) + field('Statut', raw.status || 'actif');
+      } else if (e.source === 'contact') {
+        html = field('Nom', raw.nom) + field('Email', raw.email) + field('Telephone', raw.telephone) + field('Age', raw.age)
+          + field('Sujet', raw.subject) + field('Traitement', raw.treatment) + field('Message', raw.message)
+          + field('Newsletter', raw.newsletter ? 'Oui' : 'Non') + field('Date', fmtDate(raw.created_at));
+      } else if (e.source === 'diagnostic') {
+        html = field('Email', raw.email) + field('Nom', raw.nom) + field('Traitement recommande', raw.treatment)
+          + field('Preoccupations', raw.concerns) + field('Age', raw.age) + field('Message', raw.message)
+          + field('Newsletter', raw.newsletter ? 'Oui' : 'Non') + field('Date', fmtDate(raw.created_at))
+          + '<p style="margin-top:1rem;"><a href="/admin/chats/" style="color:#3b82f6;font-weight:600;text-decoration:none;">→ Voir dans SAV (reponse email)</a></p>';
+      } else if (e.source === 'feedback') {
+        if (e.subtype === 'coach_vote') {
+          html = field('Vote', raw.vote === 'up' ? '👍 Positif' : '👎 Negatif')
+            + field('Message IA', raw.assistant_message) + field('Page', raw.page_url)
+            + field('Date', fmtDate(raw.created_at));
+        } else {
+          html = field('Nom', raw.name) + field('Email', raw.email) + field('Type', raw.type)
+            + field('Note', raw.rating ? raw.rating + '/5' : '-') + field('Decouverte', raw.discovery)
+            + field('Interet', raw.interest) + field('Contenu', raw.story || '-')
+            + field('Page', raw.page_url) + field('Date', fmtDate(raw.created_at));
+        }
+      }
+
+      document.getElementById('modalBody').innerHTML = html;
+      document.getElementById('modalOverlay').classList.add('open');
+    }
+
+    function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+    document.getElementById('modalOverlay').addEventListener('click', function(ev) { if(ev.target===this)closeModal(); });
+
+    function field(label, val) {
+      if (!val && val !== 0) return '';
+      return '<div class="modal-field"><label>'+escapeHtml(label)+'</label><div class="val">'+escapeHtml(String(val))+'</div></div>';
+    }
+    function fmtDate(d) { if(!d)return'-'; return new Date(d).toLocaleString('fr-FR',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); }
+    function escapeHtml(str) { if(!str)return''; var d=document.createElement('div'); d.textContent=str; return d.innerHTML; }
+
+    window.loadAllData = loadAllData;
+    window.filterSource = filterSource;
+    window.showDetail = showDetail;
+    window.closeModal = closeModal;
+
+    loadAllData();
+    setInterval(loadAllData, 30000);
+  </script>
+</body>
+</html>
