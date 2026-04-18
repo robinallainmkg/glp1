@@ -1271,6 +1271,35 @@ const server = createServer(async (req, res) => {
     return;
   }
 
+  // POST /pharmacy-curator/run — modère les soumissions pharmacy + refresh JSON + push main
+  if (req.method === 'POST' && url.pathname === '/pharmacy-curator/run') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+
+    // Exécution synchrone — le script est rapide (<30s typiquement)
+    try {
+      const output = execSync('node scripts/pharmacy-map/curate.mjs', {
+        cwd: PROJECT_ROOT,
+        encoding: 'utf8',
+        env: process.env,
+        timeout: 5 * 60 * 1000,  // 5 min safety
+      });
+
+      // Stdout contient uniquement le JSON (les logs vont sur stderr via console.error)
+      let report;
+      try { report = JSON.parse(output.trim()); }
+      catch { report = { ok: false, parseError: true, raw: output.slice(-500) }; }
+
+      res.end(JSON.stringify({ ok: true, ...report }));
+    } catch (e) {
+      res.end(JSON.stringify({
+        ok: false,
+        error: e.message,
+        stderr: (e.stderr || '').toString().slice(-500),
+      }));
+    }
+    return;
+  }
+
   // GET /pipeline/status
   if (req.method === 'GET' && url.pathname === '/pipeline/status') {
     res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
@@ -1312,5 +1341,6 @@ server.listen(PORT, '127.0.0.1', () => {
   console.log(`     POST /launch   — { "agent": "editorial" }`);
   console.log(`     POST /stop     — { "agent": "editorial" }`);
   console.log(`     POST /pipeline — lancer le pipeline complet`);
+  console.log(`     POST /pharmacy-curator/run — moderer soumissions pharmacy + push main`);
   console.log(`   Ctrl+C pour arreter\n`);
 });
