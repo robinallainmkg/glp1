@@ -47,7 +47,7 @@ affiliateConfig:
 ### Très Fréquents (>30%)
 
 **Nausées**
-- **Fréquence** : 40-50% des patients
+- **Fréquence** : Très fréquent (>10%) — environ 22% des patients dans les études SURMOUNT/SURPASS
 - **Intensité** : Légère à modérée généralement
 - **Durée** : 2-4 semaines en moyenne
 - **Pic** : Jours 2-5 après injection
