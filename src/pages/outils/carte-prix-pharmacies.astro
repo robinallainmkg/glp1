@@ -298,15 +298,17 @@ const updatedFr = stats.updated_at
     }), 'top-right');
 
     await new Promise((resolve) => {
+      let done = false;
+      const finish = () => { if (done) return; done = true; resolve(); };
       const onceReady = () => {
-        if (map.isStyleLoaded && map.isStyleLoaded()) {
-          map.off('styledata', onceReady);
-          map.off('load', onceReady);
-          resolve();
-        }
+        if (map.isStyleLoaded && map.isStyleLoaded()) finish();
       };
       map.on('styledata', onceReady);
-      map.on('load', onceReady);
+      map.on('load', finish);
+      // Check synchronously (au cas où le style est déjà loaded)
+      onceReady();
+      // Safety net : si rien ne fire en 6s (CDN lent, sandbox...), on continue
+      setTimeout(finish, 6000);
     });
 
     function buildGeoJSON(drugFilter) {
