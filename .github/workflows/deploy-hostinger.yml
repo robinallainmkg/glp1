@@ -24,7 +24,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 55
 
     steps:
     - uses: actions/checkout@v4
@@ -56,11 +56,11 @@ jobs:
             set net:max-retries 20;
             set net:reconnect-interval-base 5;
             set net:reconnect-interval-multiplier 2;
-            set mirror:parallel-transfer-count 1;
+            set mirror:parallel-transfer-count 6;
             set mirror:use-pget-n 1;
             set ftp:sync-mode off;
             set xfer:clobber yes;
-            mirror --reverse --delete --only-newer --verbose --no-perms --parallel=1 ./dist/ /domains/glp1-france.fr/public_html/;
+            mirror --reverse --delete --only-newer --verbose --no-perms --parallel=6 ./dist/ /domains/glp1-france.fr/public_html/;
             quit
           " && echo "Deploy SUCCESS on attempt $ATTEMPT" && exit 0
 
