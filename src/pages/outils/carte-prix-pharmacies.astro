@@ -159,6 +159,56 @@ const updatedFr = stats.updated_at
       saxenda: 'Saxenda',
     };
 
+    // Prix de référence par (drug, dose) : affichés quand aucune soumission communautaire.
+    // Ozempic = CEPS officiel (77,60€ identique toute dose, pack 4 doses/stylo).
+    // Wegovy / Mounjaro / Saxenda = prix libéré indicatif (médiane fourchette marché FR avril 2026).
+    const REFERENCE_PRICES = {
+      ozempic: {
+        sourceLabel: 'Officiel CEPS',
+        sourceClass: 'pop-src-off',
+        note: 'Remboursé 30% (diabète type 2) · prix identique toutes doses',
+        doses: [
+          { dose: '0,25 mg', price: 77.60 },
+          { dose: '0,5 mg', price: 77.60 },
+          { dose: '1 mg', price: 77.60 },
+          { dose: '2 mg', price: 77.60 },
+        ],
+      },
+      wegovy: {
+        sourceLabel: 'Indicatif',
+        sourceClass: 'pop-src-ref',
+        note: 'Prix libéré · non remboursé · fourchette marché FR',
+        doses: [
+          { dose: '0,25 mg', price: 135 },
+          { dose: '0,5 mg', price: 135 },
+          { dose: '1 mg', price: 170 },
+          { dose: '1,7 mg', price: 230 },
+          { dose: '2,4 mg', price: 270 },
+        ],
+      },
+      mounjaro: {
+        sourceLabel: 'Indicatif',
+        sourceClass: 'pop-src-ref',
+        note: 'Prix libéré · non remboursé · fourchette marché FR',
+        doses: [
+          { dose: '2,5 mg', price: 220 },
+          { dose: '5 mg', price: 260 },
+          { dose: '7,5 mg', price: 320 },
+          { dose: '10 mg', price: 375 },
+          { dose: '12,5 mg', price: 420 },
+          { dose: '15 mg', price: 470 },
+        ],
+      },
+      saxenda: {
+        sourceLabel: 'Indicatif',
+        sourceClass: 'pop-src-ref',
+        note: 'Prix libéré · non remboursé · pack 5 stylos',
+        doses: [
+          { dose: '6 mg/ml', price: 280 },
+        ],
+      },
+    };
+
     let currentDrug = 'all';
     let pharmacies = null;
     let pharmaciesSchema = null;
@@ -348,50 +398,69 @@ const updatedFr = stats.updated_at
         map.easeTo({ center: features[0].geometry.coordinates, zoom });
       });
 
-      // Popup sur point — prix groupés par drug, chaque drug listant ses doses
+      // Popup sur point — liste complète des 4 drugs avec leurs doses.
+      // Pour chaque dose : prix communautaire soumis si disponible, sinon prix de référence.
       map.on('click', 'pharmacy-points', (e) => {
         const f = e.features[0];
         const props = f.properties;
         const id = props.id;
-        const prices = latestPrices[id] || [];
+        const submittedPrices = latestPrices[id] || [];
 
-        // Regroupe par drug
-        const byDrug = {};
-        for (const pr of prices) {
-          (byDrug[pr.d] ||= []).push(pr);
+        // Index des prix soumis par (drug, dose-key)
+        const submitted = {};
+        for (const pr of submittedPrices) {
+          const key = pr.d + '|' + (pr.dose || '');
+          submitted[key] = pr;
         }
-        // Ordre d'affichage : drug actuel en premier, puis les autres
+
         const drugOrder = ['ozempic', 'wegovy', 'mounjaro', 'saxenda'];
-        const ordered = drugOrder
-          .filter((d) => byDrug[d])
-          .sort((a, b) => (a === currentDrug ? -1 : b === currentDrug ? 1 : 0));
+        // Drug actif en premier
+        const ordered = [...drugOrder].sort((a, b) =>
+          a === currentDrug ? -1 : b === currentDrug ? 1 : 0
+        );
 
         const drugSections = ordered.map((d) => {
-          const list = byDrug[d].sort((x, y) => {
-            // tri par dose numérique si possible
-            const xn = parseFloat((x.dose || '').replace(',', '.'));
-            const yn = parseFloat((y.dose || '').replace(',', '.'));
-            if (Number.isFinite(xn) && Number.isFinite(yn)) return xn - yn;
-            return 0;
-          });
-          const sources = new Set(list.map((p) => p.s));
-          const srcBadge = sources.has('official_ceps')
-            ? '<span class="pop-src-off">Officiel</span>'
-            : sources.has('scraped')
-              ? '<span class="pop-src-scr">Référencé</span>'
-              : '<span class="pop-src-usr">Communauté</span>';
+          const ref = REFERENCE_PRICES[d];
+          if (!ref) return '';
           const highlight = d === currentDrug ? ' pop-drug-active' : '';
-          const rows = list.map((pr) => {
-            const doseLabel = pr.dose ? escapeHtml(pr.dose) : 'Tous dosages';
-            return `<div class="pop-dose-row"><span class="pop-dose">${doseLabel}</span><strong>${Number(pr.p).toFixed(2)}&nbsp;€</strong></div>`;
+
+          // Détermine la source dominante pour le badge
+          const hasCommunity = ref.doses.some((ds) => {
+            const key = d + '|' + ds.dose;
+            return submitted[key] && submitted[key].s === 'user';
+          });
+          const hasOfficial = d === 'ozempic' || ref.doses.some((ds) => {
+            const key = d + '|' + ds.dose;
+            return submitted[key] && submitted[key].s === 'official_ceps';
+          });
+          const badge = hasCommunity
+            ? '<span class="pop-src-usr">Communauté</span>'
+            : hasOfficial
+              ? '<span class="pop-src-off">Officiel</span>'
+              : '<span class="pop-src-ref">Indicatif</span>';
+
+          const rows = ref.doses.map((ds) => {
+            const key = d + '|' + ds.dose;
+            const sub = submitted[key];
+            if (sub) {
+              const srcPill = sub.s === 'user'
+                ? '<span class="pop-dose-src pop-src-usr">Communauté</span>'
+                : sub.s === 'scraped'
+                  ? '<span class="pop-dose-src pop-src-scr">Référencé</span>'
+                  : '<span class="pop-dose-src pop-src-off">Officiel</span>';
+              return `<div class="pop-dose-row"><span class="pop-dose">${escapeHtml(ds.dose)}</span><strong>${Number(sub.p).toFixed(2)}&nbsp;€</strong>${srcPill}</div>`;
+            }
+            return `<div class="pop-dose-row pop-dose-ref"><span class="pop-dose">${escapeHtml(ds.dose)}</span><strong>${Number(ds.price).toFixed(2)}&nbsp;€</strong></div>`;
           }).join('');
+
           return `
             <div class="pop-drug${highlight}">
               <div class="pop-drug-head">
                 <span class="pop-drug-name">${escapeHtml(DRUG_LABELS[d] || d)}</span>
-                ${srcBadge}
+                ${badge}
               </div>
               <div class="pop-dose-list">${rows}</div>
+              ${ref.note ? '<div class="pop-drug-note">' + ref.note + '</div>' : ''}
             </div>`;
         }).join('');
 
@@ -402,12 +471,12 @@ const updatedFr = stats.updated_at
               <div class="pop-city">${escapeHtml(props.city || '')} · ${escapeHtml(props.cp || '')}</div>
             </div>
             <div class="pop-prices">
-              ${drugSections || '<em class="pop-empty">Aucun prix renseigné pour le moment.</em>'}
+              ${drugSections}
             </div>
-            <button type="button" class="pop-cta" data-action="submit-for" data-pharmacy="${id}">Ajouter un prix</button>
+            <button type="button" class="pop-cta" data-action="submit-for" data-pharmacy="${id}">Ajouter un prix vu ici</button>
           </div>`;
 
-        new maplibregl.Popup({ maxWidth: '340px' })
+        new maplibregl.Popup({ maxWidth: '360px' })
           .setLngLat(f.geometry.coordinates)
           .setHTML(html)
           .addTo(map);
@@ -427,10 +496,10 @@ const updatedFr = stats.updated_at
           btn.classList.add('active');
           currentDrug = btn.dataset.drug;
 
-          // Scroll map wrapper into view (sur mobile surtout)
+          // Scroll map wrapper into view — instantané
           const mapWrap = document.getElementById('map-wrap');
           if (mapWrap) {
-            mapWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            mapWrap.scrollIntoView({ behavior: 'auto', block: 'start' });
           }
 
           // Si la map et la source existent, update data + fit bounds
@@ -443,11 +512,13 @@ const updatedFr = stats.updated_at
 
           const feats = geojson.features;
           if (!feats.length) {
-            map.easeTo({ center: [2.4, 46.5], zoom: 5.2, duration: 800 });
+            // Aucun prix pour ce drug : on zoome quand même fort (niveau 10) sur la
+            // localisation user ou sur Paris par défaut, pour inciter à partager.
+            map.jumpTo({ center: [2.35, 48.86], zoom: 10 });
             return;
           }
           if (feats.length === 1) {
-            map.easeTo({ center: feats[0].geometry.coordinates, zoom: 14, duration: 800 });
+            map.jumpTo({ center: feats[0].geometry.coordinates, zoom: 15 });
             return;
           }
           let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
@@ -459,9 +530,9 @@ const updatedFr = stats.updated_at
             if (lat > maxLat) maxLat = lat;
           }
           map.fitBounds([[minLng, minLat], [maxLng, maxLat]], {
-            padding: { top: 40, bottom: 40, left: 40, right: 40 },
-            maxZoom: 13,
-            duration: 800,
+            padding: { top: 30, bottom: 30, left: 30, right: 30 },
+            maxZoom: 16,
+            duration: 0,  // instantané
           });
         });
       });
@@ -766,7 +837,7 @@ const updatedFr = stats.updated_at
   }
   :global(.pop-dose) { color: #6b7280; font-size: .78rem; }
   :global(.pop-dose-row strong) { font-size: .95rem; color: #1a3c34; font-weight: 800; }
-  :global(.pop-src-off), :global(.pop-src-scr), :global(.pop-src-usr) {
+  :global(.pop-src-off), :global(.pop-src-scr), :global(.pop-src-usr), :global(.pop-src-ref) {
     font-size: .62rem;
     padding: .12rem .4rem;
     border-radius: 4px;
@@ -775,9 +846,26 @@ const updatedFr = stats.updated_at
     letter-spacing: .3px;
     white-space: nowrap;
   }
+  :global(.pop-src-ref) { background: #f3f4f6; color: #6b7280; }
+  :global(.pop-dose-src) {
+    font-size: .55rem;
+    padding: .08rem .3rem;
+    margin-left: .25rem;
+    vertical-align: middle;
+  }
+  :global(.pop-dose-ref) { opacity: .75; }
+  :global(.pop-dose-ref strong) { color: #6b7280 !important; font-weight: 700 !important; }
+  :global(.pop-drug-note) {
+    font-size: .68rem;
+    color: #9ca3af;
+    margin-top: .4rem;
+    font-style: italic;
+    line-height: 1.35;
+  }
   :global(.pop-src-off) { background: #dcfce7; color: #15803d; }
   :global(.pop-src-scr) { background: #dbeafe; color: #1e40af; }
   :global(.pop-src-usr) { background: #fef3c7; color: #92400e; }
+  :global(.pop-dose-row) { position: relative; }
   :global(.pop-empty) { font-size: .82rem; color: #9ca3af; }
   :global(.pop-cta) {
     display: block;
