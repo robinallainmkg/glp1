@@ -207,10 +207,14 @@ const updatedFr = stats.updated_at
 
     // Câble le modal immédiatement (indépendant de la map)
     setupSubmissionModal();
+    // Câble le filtre drug — on n'a pas encore la map ni la source, mais le click
+    // mettra à jour currentDrug et, si la map est prête, fera aussi setData + fitBounds.
+    setupDrugFilter();
 
     // ── 2) Créer la map ── (si les tiles sont bloquées, la map ne rendra rien
     // visuellement, mais le reste de la page — filtres, modal, CTA — fonctionne)
-    const map = new maplibregl.Map({
+    // eslint-disable-next-line no-var
+    var map = new maplibregl.Map({
       container: 'map',
       style,
       center: [2.4, 46.5],
@@ -344,23 +348,52 @@ const updatedFr = stats.updated_at
         map.easeTo({ center: features[0].geometry.coordinates, zoom });
       });
 
-      // Popup sur point
+      // Popup sur point — prix groupés par drug, chaque drug listant ses doses
       map.on('click', 'pharmacy-points', (e) => {
         const f = e.features[0];
         const props = f.properties;
         const id = props.id;
         const prices = latestPrices[id] || [];
-        const allPrices = prices
-          .map((pr) => {
-            const label = DRUG_LABELS[pr.d] || pr.d;
-            const src = pr.s === 'official_ceps'
-              ? '<span class="pop-src-off">Officiel CEPS</span>'
-              : pr.s === 'scraped'
-                ? '<span class="pop-src-scr">Référencé</span>'
-                : '<span class="pop-src-usr">Communauté</span>';
-            return `<div class="pop-price"><span>${label}${pr.dose ? ' ' + pr.dose : ''}</span><strong>${pr.p.toFixed(2)}&nbsp;€</strong>${src}</div>`;
-          })
-          .join('');
+
+        // Regroupe par drug
+        const byDrug = {};
+        for (const pr of prices) {
+          (byDrug[pr.d] ||= []).push(pr);
+        }
+        // Ordre d'affichage : drug actuel en premier, puis les autres
+        const drugOrder = ['ozempic', 'wegovy', 'mounjaro', 'saxenda'];
+        const ordered = drugOrder
+          .filter((d) => byDrug[d])
+          .sort((a, b) => (a === currentDrug ? -1 : b === currentDrug ? 1 : 0));
+
+        const drugSections = ordered.map((d) => {
+          const list = byDrug[d].sort((x, y) => {
+            // tri par dose numérique si possible
+            const xn = parseFloat((x.dose || '').replace(',', '.'));
+            const yn = parseFloat((y.dose || '').replace(',', '.'));
+            if (Number.isFinite(xn) && Number.isFinite(yn)) return xn - yn;
+            return 0;
+          });
+          const sources = new Set(list.map((p) => p.s));
+          const srcBadge = sources.has('official_ceps')
+            ? '<span class="pop-src-off">Officiel</span>'
+            : sources.has('scraped')
+              ? '<span class="pop-src-scr">Référencé</span>'
+              : '<span class="pop-src-usr">Communauté</span>';
+          const highlight = d === currentDrug ? ' pop-drug-active' : '';
+          const rows = list.map((pr) => {
+            const doseLabel = pr.dose ? escapeHtml(pr.dose) : 'Tous dosages';
+            return `<div class="pop-dose-row"><span class="pop-dose">${doseLabel}</span><strong>${Number(pr.p).toFixed(2)}&nbsp;€</strong></div>`;
+          }).join('');
+          return `
+            <div class="pop-drug${highlight}">
+              <div class="pop-drug-head">
+                <span class="pop-drug-name">${escapeHtml(DRUG_LABELS[d] || d)}</span>
+                ${srcBadge}
+              </div>
+              <div class="pop-dose-list">${rows}</div>
+            </div>`;
+        }).join('');
 
         const html = `
           <div class="pop">
@@ -369,12 +402,12 @@ const updatedFr = stats.updated_at
               <div class="pop-city">${escapeHtml(props.city || '')} · ${escapeHtml(props.cp || '')}</div>
             </div>
             <div class="pop-prices">
-              ${allPrices || '<em class="pop-empty">Aucun prix renseigné pour le moment.</em>'}
+              ${drugSections || '<em class="pop-empty">Aucun prix renseigné pour le moment.</em>'}
             </div>
             <button type="button" class="pop-cta" data-action="submit-for" data-pharmacy="${id}">Ajouter un prix</button>
           </div>`;
 
-        new maplibregl.Popup({ maxWidth: '320px' })
+        new maplibregl.Popup({ maxWidth: '340px' })
           .setLngLat(f.geometry.coordinates)
           .setHTML(html)
           .addTo(map);
@@ -387,16 +420,52 @@ const updatedFr = stats.updated_at
       });
     }
 
-    // Filtre drug
-    document.querySelectorAll('.drug-pill').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.drug-pill').forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentDrug = btn.dataset.drug;
-        const src = map.getSource('pharmacies');
-        if (src) src.setData(buildGeoJSON(currentDrug));
+    function setupDrugFilter() {
+      document.querySelectorAll('.drug-pill').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.drug-pill').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentDrug = btn.dataset.drug;
+
+          // Scroll map wrapper into view (sur mobile surtout)
+          const mapWrap = document.getElementById('map-wrap');
+          if (mapWrap) {
+            mapWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+
+          // Si la map et la source existent, update data + fit bounds
+          if (typeof map === 'undefined' || !map) return;
+          const src = map.getSource('pharmacies');
+          if (!src) return;
+
+          const geojson = buildGeoJSON(currentDrug);
+          src.setData(geojson);
+
+          const feats = geojson.features;
+          if (!feats.length) {
+            map.easeTo({ center: [2.4, 46.5], zoom: 5.2, duration: 800 });
+            return;
+          }
+          if (feats.length === 1) {
+            map.easeTo({ center: feats[0].geometry.coordinates, zoom: 14, duration: 800 });
+            return;
+          }
+          let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
+          for (const f of feats) {
+            const [lng, lat] = f.geometry.coordinates;
+            if (lng < minLng) minLng = lng;
+            if (lat < minLat) minLat = lat;
+            if (lng > maxLng) maxLng = lng;
+            if (lat > maxLat) maxLat = lat;
+          }
+          map.fitBounds([[minLng, minLat], [maxLng, maxLat]], {
+            padding: { top: 40, bottom: 40, left: 40, right: 40 },
+            maxZoom: 13,
+            duration: 800,
+          });
+        });
       });
-    });
+    }
 
     // ═══════════════════════════════════════════════════════════════
     // SUBMISSION MODAL — autocomplete pharmacie + insert Supabase
@@ -664,19 +733,47 @@ const updatedFr = stats.updated_at
   }
   :global(.pop-name) { font-weight: 700; font-size: .95rem; line-height: 1.3; }
   :global(.pop-city) { font-size: .78rem; opacity: .8; margin-top: .2rem; }
-  :global(.pop-prices) { padding: .6rem 1rem; display: flex; flex-direction: column; gap: .4rem; }
-  :global(.pop-price) {
-    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
-    font-size: .85rem; color: #374151;
+  :global(.pop-prices) {
+    padding: .5rem .85rem;
+    display: flex; flex-direction: column; gap: .5rem;
+    max-height: 280px; overflow-y: auto;
   }
-  :global(.pop-price strong) { font-size: 1rem; color: #1a3c34; font-weight: 800; }
+  :global(.pop-drug) {
+    background: #f8faf9;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: .55rem .7rem;
+  }
+  :global(.pop-drug-active) {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+  :global(.pop-drug-head) {
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+    margin-bottom: .35rem;
+  }
+  :global(.pop-drug-name) {
+    font-weight: 800; font-size: .8rem; color: #1a3c34;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  :global(.pop-dose-list) {
+    display: flex; flex-direction: column; gap: .2rem;
+  }
+  :global(.pop-dose-row) {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: .82rem; color: #4b5563;
+    padding: .15rem 0;
+  }
+  :global(.pop-dose) { color: #6b7280; font-size: .78rem; }
+  :global(.pop-dose-row strong) { font-size: .95rem; color: #1a3c34; font-weight: 800; }
   :global(.pop-src-off), :global(.pop-src-scr), :global(.pop-src-usr) {
-    font-size: .68rem;
-    padding: .15rem .45rem;
+    font-size: .62rem;
+    padding: .12rem .4rem;
     border-radius: 4px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .3px;
+    white-space: nowrap;
   }
   :global(.pop-src-off) { background: #dcfce7; color: #15803d; }
   :global(.pop-src-scr) { background: #dbeafe; color: #1e40af; }

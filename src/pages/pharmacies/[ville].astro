@@ -1,0 +1,379 @@
+---
+import StaticLayout from '../../layouts/StaticLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const dataPath = path.resolve(process.cwd(), 'public/data/pharmacies.json');
+  const pricesPath = path.resolve(process.cwd(), 'public/data/latest-prices.json');
+  let pharmacies = { schema: [], rows: [] };
+  let latestPrices = {};
+  try { pharmacies = JSON.parse(fs.readFileSync(dataPath, 'utf-8')); } catch {}
+  try { latestPrices = JSON.parse(fs.readFileSync(pricesPath, 'utf-8')); } catch {}
+
+  const iId = pharmacies.schema.indexOf('id');
+  const iName = pharmacies.schema.indexOf('name');
+  const iCity = pharmacies.schema.indexOf('city');
+  const iSlug = pharmacies.schema.indexOf('city_slug');
+  const iDept = pharmacies.schema.indexOf('department');
+  const iCP = pharmacies.schema.indexOf('postal_code');
+  const iLat = pharmacies.schema.indexOf('lat');
+  const iLng = pharmacies.schema.indexOf('lng');
+
+  // Index par ville
+  const byCity = {};
+  for (const row of pharmacies.rows) {
+    const slug = row[iSlug];
+    if (!slug) continue;
+    if (!byCity[slug]) {
+      byCity[slug] = { slug, city: row[iCity], department: row[iDept], pharmacies: [], centerLat: 0, centerLng: 0 };
+    }
+    byCity[slug].pharmacies.push({
+      id: row[iId],
+      name: row[iName],
+      postal: row[iCP],
+      lat: row[iLat],
+      lng: row[iLng],
+      prices: latestPrices[row[iId]] || [],
+    });
+  }
+
+  // Calcule le centre de chaque ville + tri pharmacies par prix (meilleur d'abord)
+  for (const slug of Object.keys(byCity)) {
+    const c = byCity[slug];
+    c.centerLat = c.pharmacies.reduce((a, p) => a + Number(p.lat), 0) / c.pharmacies.length;
+    c.centerLng = c.pharmacies.reduce((a, p) => a + Number(p.lng), 0) / c.pharmacies.length;
+  }
+
+  // Top 100 villes seulement (budget build time)
+  const topCities = Object.values(byCity)
+    .sort((a, b) => b.pharmacies.length - a.pharmacies.length)
+    .slice(0, 100);
+
+  return topCities.map((c) => ({
+    params: { ville: c.slug },
+    props: { city: c },
+  }));
+}
+
+const { city } = Astro.props;
+const ville = city.slug;
+
+// Capitalise proprement "PARIS" → "Paris", "AIX EN PROVENCE" → "Aix en Provence"
+function titleCase(s) {
+  return (s || '').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+}
+const villeCap = titleCase(city.city);
+
+// Stats par drug : prix moyen, min, max, pharmacies qui ont un prix
+const DRUGS = [
+  { slug: 'ozempic', name: 'Ozempic', note: 'remboursé 30% (diabète type 2)' },
+  { slug: 'wegovy', name: 'Wegovy', note: 'prix libéré, non remboursé' },
+  { slug: 'mounjaro', name: 'Mounjaro', note: 'prix libéré, non remboursé' },
+  { slug: 'saxenda', name: 'Saxenda', note: 'prix libéré, non remboursé' },
+];
+
+const drugStats = DRUGS.map((d) => {
+  const prices = [];
+  const pharmaWithPrice = [];
+  for (const p of city.pharmacies) {
+    const pr = p.prices.find((x) => x.d === d.slug);
+    if (pr) {
+      prices.push(Number(pr.p));
+      pharmaWithPrice.push({ ...p, pr });
+    }
+  }
+  if (!prices.length) return { ...d, count: 0 };
+  return {
+    ...d,
+    count: prices.length,
+    min: Math.min(...prices),
+    max: Math.max(...prices),
+    avg: prices.reduce((a, b) => a + b, 0) / prices.length,
+    topPharmacies: pharmaWithPrice
+      .sort((a, b) => a.pr.p - b.pr.p)
+      .slice(0, 10),
+  };
+});
+
+const hasUserPrices = drugStats.some((d) => d.count > 0 && d.slug !== 'ozempic');
+
+// Top 10 pharmacies par prix Ozempic (77,60€ uniforme donc tri alphabétique)
+const topPharmacies = [...city.pharmacies]
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .slice(0, 20);
+
+const title = `Pharmacies GLP-1 à ${villeCap} — Prix Ozempic, Wegovy, Mounjaro 2026`;
+const description = `${city.pharmacies.length} pharmacies référencées à ${villeCap} (${city.department}). Prix Ozempic officiel 77,60 €, prix Wegovy et Mounjaro variables. Carte interactive + contributions communautaires.`;
+
+// FAQ schema
+const faq = [
+  {
+    q: `Combien de pharmacies vendent Ozempic, Wegovy ou Mounjaro à ${villeCap} ?`,
+    a: `Nous avons référencé ${city.pharmacies.length} pharmacies d'officine à ${villeCap}. Toutes peuvent potentiellement délivrer Ozempic (remboursé pour diabète type 2) sur ordonnance. Wegovy et Mounjaro sont également disponibles sur ordonnance mais leur prix varie selon l'officine.`,
+  },
+  {
+    q: `Quel est le prix d'Ozempic à ${villeCap} ?`,
+    a: `Ozempic est vendu au prix public CEPS de 77,60 € par stylo, identique dans toutes les pharmacies de France, y compris à ${villeCap}. Il est remboursé à 30% par l'Assurance Maladie pour les patients atteints de diabète de type 2 (100% en ALD).`,
+  },
+  {
+    q: `Wegovy et Mounjaro sont-ils remboursés à ${villeCap} ?`,
+    a: `Non. Wegovy et Mounjaro ne sont pas remboursés par l'Assurance Maladie en France (avril 2026). Leur prix est libéré, ce qui signifie que chaque pharmacie fixe son propre tarif. Les prix observés varient généralement entre 169 et 360 € pour Wegovy et entre 230 et 440 € pour Mounjaro selon le dosage.`,
+  },
+  {
+    q: `Comment obtenir une ordonnance pour ces traitements ?`,
+    a: `Tous les traitements GLP-1 nécessitent une prescription médicale. Pour Ozempic et Wegovy, la restriction aux endocrinologues a été levée en juin 2025 : tout médecin peut désormais prescrire. Pour une téléconsultation rapide, vous pouvez passer par des plateformes comme Charles ou Annette.`,
+  },
+];
+---
+
+<StaticLayout title={title} description={description} keywords={`pharmacie GLP-1 ${villeCap}, prix Ozempic ${villeCap}, prix Wegovy ${villeCap}, prix Mounjaro ${villeCap}, pharmacie ${city.department}`}>
+  <!-- Breadcrumb + FAQ schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://glp1-france.fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Pharmacies", "item": "https://glp1-france.fr/pharmacies/" },
+          { "@type": "ListItem", "position": 3, "name": villeCap, "item": `https://glp1-france.fr/pharmacies/${ville}/` },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faq.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })),
+      },
+    ],
+  })} />
+
+  <div class="ville-page">
+    <section class="ville-hero">
+      <div class="ville-hero-inner">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a> <span>›</span>
+          <a href="/pharmacies/">Pharmacies</a> <span>›</span>
+          <strong>{villeCap}</strong>
+        </nav>
+        <h1>Pharmacies GLP-1 à {villeCap}</h1>
+        <p class="ville-sub">
+          <strong>{city.pharmacies.length} pharmacies</strong> référencées à {villeCap} ({city.department}) · Prix Ozempic officiel, prix Wegovy/Mounjaro variables
+        </p>
+        <div class="ville-ctas">
+          <a href={`/outils/carte-prix-pharmacies/?lat=${city.centerLat.toFixed(4)}&lng=${city.centerLng.toFixed(4)}&zoom=12`} class="btn-primary">Voir sur la carte →</a>
+          <a href="/outils/carte-prix-pharmacies/#partager" class="btn-secondary">Partager un prix</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tableau prix par médicament -->
+    <section class="ville-prices">
+      <div class="ville-section-inner">
+        <h2>Prix des traitements GLP-1 à {villeCap}</h2>
+
+        <div class="drug-grid">
+          {drugStats.map((d) => (
+            <div class="drug-card">
+              <div class="drug-head">
+                <h3>{d.name}</h3>
+                <span class="drug-note">{d.note}</span>
+              </div>
+              {d.count > 0 ? (
+                <div class="drug-stats">
+                  {d.slug === 'ozempic' ? (
+                    <div class="drug-price-row">
+                      <div class="price-label">Prix officiel</div>
+                      <div class="price-big">77,60 €</div>
+                      <div class="price-meta">par stylo · identique France entière</div>
+                    </div>
+                  ) : (
+                    <>
+                      <div class="drug-price-row">
+                        <div class="price-label">Prix le plus bas</div>
+                        <div class="price-big">{d.min.toFixed(2)} €</div>
+                      </div>
+                      <div class="drug-price-row">
+                        <div class="price-label">Prix moyen</div>
+                        <div class="price-mid">{d.avg.toFixed(2)} €</div>
+                        <div class="price-meta">{d.count} prix soumis</div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              ) : (
+                <div class="drug-empty">
+                  <p>Aucun prix soumis par la communauté pour l'instant.</p>
+                  <a href="/outils/carte-prix-pharmacies/" class="link-small">Partagez le vôtre →</a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <p class="prices-note">
+          Les prix Wegovy, Mounjaro et Saxenda sont <strong>libérés</strong> (non remboursés) : chaque pharmacie fixe son tarif. Les valeurs ci-dessus proviennent des soumissions communautaires vérifiées. Pour une information temps réel, <a href="/outils/carte-prix-pharmacies/">consultez la carte</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Liste pharmacies -->
+    <section class="ville-list">
+      <div class="ville-section-inner">
+        <h2>Pharmacies à {villeCap}</h2>
+        <p class="list-intro">{city.pharmacies.length} pharmacies d'officine référencées (FINESS). Affichage alphabétique des 20 premières.</p>
+
+        <div class="pharmacy-list">
+          {topPharmacies.map((p) => (
+            <div class="pharmacy-row">
+              <div class="pharmacy-info">
+                <div class="pharmacy-name">{titleCase(p.name)}</div>
+                <div class="pharmacy-postal">{p.postal} {titleCase(city.city)}</div>
+              </div>
+              <div class="pharmacy-prices">
+                {p.prices.length > 0 ? (
+                  p.prices.map((pr) => (
+                    <span class="price-pill">
+                      <strong>{DRUGS.find((d) => d.slug === pr.d)?.name || pr.d}</strong>
+                      {' '}{Number(pr.p).toFixed(2)} €
+                    </span>
+                  ))
+                ) : (
+                  <span class="price-pill price-none">Pas de prix soumis</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        {city.pharmacies.length > 20 && (
+          <p class="list-more">
+            Et <strong>{city.pharmacies.length - 20}</strong> autres pharmacies à {villeCap}. <a href={`/outils/carte-prix-pharmacies/?lat=${city.centerLat.toFixed(4)}&lng=${city.centerLng.toFixed(4)}&zoom=12`}>Voir toutes sur la carte →</a>
+          </p>
+        )}
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="ville-faq">
+      <div class="ville-section-inner">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-list">
+          {faq.map((f) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <div class="faq-answer">{f.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="ville-disclaimer">
+      <p>
+        <strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical. Tous les traitements GLP-1 nécessitent une prescription médicale. Les prix indiqués (hors Ozempic) sont des contributions communautaires, vérifiez le tarif directement auprès de la pharmacie.
+        Sources : référentiel FINESS (Atlasanté / data.gouv.fr), CEPS.
+      </p>
+    </section>
+  </div>
+
+  <style>
+  .ville-page { background: #f8faf9; min-height: 100vh; }
+
+  .ville-hero {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 1.5rem 1.75rem;
+  }
+  .ville-hero-inner, .ville-section-inner { max-width: 1100px; margin: 0 auto; }
+  .breadcrumb { font-size: .82rem; color: #6b7280; margin-bottom: .75rem; }
+  .breadcrumb a { color: #1a3c34; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 .35rem; color: #9ca3af; }
+  .ville-hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    font-weight: 900; color: #1a3c34;
+    margin: 0 0 .5rem; letter-spacing: -.02em; line-height: 1.2;
+  }
+  .ville-sub { color: #475569; font-size: clamp(.9rem, 2vw, 1rem); margin: 0 0 1.25rem; line-height: 1.5; }
+  .ville-ctas { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary {
+    display: inline-flex; align-items: center; gap: .3rem;
+    padding: .65rem 1.3rem; font-weight: 700; font-size: .88rem;
+    border-radius: 10px; text-decoration: none; transition: all .2s;
+  }
+  .btn-primary { background: #1a3c34; color: #fff; }
+  .btn-primary:hover { background: #0f2d25; color: #fff; transform: translateY(-1px); }
+  .btn-secondary { background: #fff; color: #1a3c34; border: 1.5px solid #d1d5db; }
+  .btn-secondary:hover { border-color: #1a3c34; }
+
+  .ville-prices, .ville-list, .ville-faq { padding: 2.5rem 1.5rem; }
+  .ville-prices { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .ville-list { background: #f8faf9; border-bottom: 1px solid #e5e7eb; }
+  .ville-faq { background: #fff; border-bottom: 1px solid #e5e7eb; }
+
+  h2 { font-size: 1.35rem; font-weight: 800; color: #1a3c34; margin: 0 0 1.25rem; letter-spacing: -.02em; }
+
+  /* Drug cards */
+  .drug-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
+  .drug-card {
+    border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.1rem; background: #fff;
+    display: flex; flex-direction: column; gap: .75rem;
+  }
+  .drug-head h3 { font-size: 1.05rem; font-weight: 800; color: #1a3c34; margin: 0 0 .2rem; }
+  .drug-note { font-size: .72rem; color: #6b7280; }
+  .drug-price-row { margin-bottom: .3rem; }
+  .price-label { font-size: .72rem; color: #6b7280; text-transform: uppercase; letter-spacing: .05em; }
+  .price-big { font-size: 1.5rem; font-weight: 800; color: #15803d; line-height: 1.1; }
+  .price-mid { font-size: 1.15rem; font-weight: 700; color: #1a3c34; line-height: 1.1; }
+  .price-meta { font-size: .72rem; color: #6b7280; margin-top: .2rem; }
+  .drug-empty { padding: .5rem 0; font-size: .82rem; color: #6b7280; }
+  .drug-empty p { margin: 0 0 .4rem; }
+  .link-small { color: #1B6FA0; font-size: .82rem; text-decoration: none; font-weight: 600; }
+  .link-small:hover { text-decoration: underline; }
+  .prices-note { font-size: .82rem; color: #6b7280; line-height: 1.55; max-width: 800px; }
+  .prices-note a { color: #1B6FA0; }
+
+  /* Pharmacy list */
+  .list-intro { color: #6b7280; font-size: .88rem; margin: 0 0 1.25rem; }
+  .pharmacy-list { display: flex; flex-direction: column; gap: .5rem; }
+  .pharmacy-row {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: .85rem 1.1rem;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+  }
+  .pharmacy-name { font-weight: 700; color: #1a3c34; font-size: .92rem; line-height: 1.3; }
+  .pharmacy-postal { font-size: .76rem; color: #6b7280; margin-top: .15rem; }
+  .pharmacy-prices { display: flex; gap: .35rem; flex-wrap: wrap; }
+  .price-pill {
+    display: inline-block; padding: .25rem .6rem; border-radius: 14px;
+    background: #dcfce7; color: #15803d; font-size: .75rem; font-weight: 600;
+  }
+  .price-pill strong { font-weight: 700; margin-right: .15rem; }
+  .price-none { background: #f3f4f6; color: #9ca3af; font-weight: 500; }
+  .list-more { font-size: .88rem; color: #6b7280; text-align: center; margin-top: 1rem; }
+  .list-more a { color: #1B6FA0; font-weight: 600; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: .6rem; }
+  .faq-item {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: .9rem 1.1rem;
+  }
+  .faq-item summary {
+    font-weight: 700; color: #1a3c34; cursor: pointer; font-size: .95rem;
+    list-style: none; display: flex; align-items: center; justify-content: space-between;
+  }
+  .faq-item summary::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: #6b7280; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-answer { margin-top: .6rem; color: #475569; font-size: .88rem; line-height: 1.55; }
+
+  .ville-disclaimer {
+    max-width: 1100px; margin: 0 auto; padding: 1.5rem;
+    font-size: .75rem; color: #6b7280; line-height: 1.55;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  @media (max-width: 640px) {
+    .pharmacy-row { flex-direction: column; align-items: flex-start; }
+  }
+  </style>
+</StaticLayout>
