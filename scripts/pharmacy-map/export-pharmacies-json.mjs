@@ -106,12 +106,42 @@ async function main() {
     s.count += 1;
     s[row.source === 'official_ceps' ? 'official' : row.source] += 1;
   }
+  // Endocrinologues
+  console.log('Export endocrinologues…');
+  const endos = await fetchAll(
+    'healthcare_professionals',
+    'id,rpps,civility,first_name,last_name,structure_name,city,city_slug,postal_code,department,lat,lng,practice_mode,phone,specialties',
+  );
+  const endosGeo = endos.filter((e) => e.lat !== null);
+  console.log(`  ${endos.length} endocrinologues (${endosGeo.length} géocodés)`);
+  const endoCompact = {
+    schema: ['id', 'rpps', 'civility', 'first_name', 'last_name', 'structure', 'city', 'city_slug', 'cp', 'dept', 'lat', 'lng', 'mode', 'phone'],
+    rows: endosGeo.map((e) => [
+      e.id, e.rpps, e.civility, e.first_name, e.last_name, e.structure_name,
+      e.city, e.city_slug, e.postal_code, e.department, e.lat, e.lng,
+      e.practice_mode, e.phone,
+    ]),
+  };
+  writeFileSync('public/data/endocrinologues.json', JSON.stringify(endoCompact));
+  console.log(`  → public/data/endocrinologues.json`);
+
+  // CSO
+  console.log('Export CSO…');
+  const csos = await fetchAll(
+    'obesity_centers',
+    'id,slug,name,parent_hospital,is_pediatric,address,city,city_slug,postal_code,department,lat,lng,phone,website,specialties',
+  );
+  writeFileSync('public/data/cso.json', JSON.stringify(csos));
+  console.log(`  ${csos.length} CSO → public/data/cso.json`);
+
   const statsPath = 'public/data/pharmacy-stats.json';
   writeFileSync(
     statsPath,
     JSON.stringify({
       pharmacies: pharmacies.length,
       prices: prices.length,
+      endocrinologues: endosGeo.length,
+      cso: csos.length,
       by_drug: statsByDrug,
       updated_at: new Date().toISOString(),
     }),

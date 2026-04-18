@@ -75,13 +75,29 @@ const updatedFr = stats.updated_at
     <!-- Hero compact -->
     <section class="map-hero">
       <div class="map-hero-inner">
-        <h1>Prix GLP-1 en pharmacie&nbsp;: la carte de France</h1>
+        <h1>Carte GLP-1 France&nbsp;: pharmacies, endocrinologues, CSO</h1>
         <p class="map-hero-sub">
-          <strong>{fmtNum(stats.pharmacies)}</strong> pharmacies référencées · Prix officiel CEPS + contributions patients · Mis à jour le {updatedFr}
+          <strong>{fmtNum(stats.pharmacies)}</strong> pharmacies · <strong>{fmtNum((stats as any).endocrinologues || 2204)}</strong> endocrinologues · <strong>{(stats as any).cso || 40}</strong> CSO · Mis à jour le {updatedFr}
         </p>
 
-        <!-- Filtre drug -->
-        <div class="drug-filter" role="tablist" aria-label="Filtrer par traitement">
+        <!-- Toggle layer : pharmacies / endocrino / CSO -->
+        <div class="layer-toggle" role="tablist" aria-label="Type de professionnel">
+          <button type="button" class="layer-pill active" data-layer="pharmacies">
+            <span class="layer-dot" style="background:#16a34a;"></span>
+            Pharmacies
+          </button>
+          <button type="button" class="layer-pill" data-layer="endocrinologues">
+            <span class="layer-dot" style="background:#7c3aed;"></span>
+            Endocrinologues
+          </button>
+          <button type="button" class="layer-pill" data-layer="cso">
+            <span class="layer-dot" style="background:#dc2626;"></span>
+            Centres obésité (CSO)
+          </button>
+        </div>
+
+        <!-- Filtre drug (visible uniquement pour layer=pharmacies) -->
+        <div class="drug-filter" id="drug-filter" role="tablist" aria-label="Filtrer par traitement">
           <button type="button" class="drug-pill active" data-drug="all">Tous</button>
           <button type="button" class="drug-pill" data-drug="ozempic">Ozempic</button>
           <button type="button" class="drug-pill" data-drug="wegovy">Wegovy</button>
@@ -339,9 +355,19 @@ const updatedFr = stats.updated_at
     }
 
     let currentDrug = 'all';
+    let currentLayer = 'pharmacies';
     let pharmacies = null;
     let pharmaciesSchema = null;
     let latestPrices = null;
+    let endocrinologues = null;
+    let endoSchema = null;
+    let csos = null;
+
+    const LAYER_COLORS = {
+      pharmacies: '#16a34a',
+      endocrinologues: '#7c3aed',
+      cso: '#dc2626',
+    };
 
     // Tiles gratuits : Carto Voyager (style neutre lisible)
     const style = {
@@ -391,6 +417,8 @@ const updatedFr = stats.updated_at
     // Câble le filtre drug — on n'a pas encore la map ni la source, mais le click
     // mettra à jour currentDrug et, si la map est prête, fera aussi setData + fitBounds.
     setupDrugFilter();
+    // Layer toggle : switch entre Pharmacies / Endocrinologues / CSO
+    setupLayerToggle();
 
     // ── 2) Créer la map ── (si les tiles sont bloquées, la map ne rendra rien
     // visuellement, mais le reste de la page — filtres, modal, CTA — fonctionne)
@@ -430,30 +458,88 @@ const updatedFr = stats.updated_at
       for (const row of pharmacies) {
         const id = row[idxId];
         const prices = latestPrices[id] || [];
-        // Pour la couleur du marker : prend le prix réel si dispo pour le drug filtré,
-        // sinon on marque 'estimated' pour griser légèrement.
         let drugShown = drugFilter !== 'all' ? drugFilter : null;
         let hasRealPrice = false;
-        if (drugShown) {
-          hasRealPrice = prices.some((x) => x.d === drugShown);
-        }
+        if (drugShown) hasRealPrice = prices.some((x) => x.d === drugShown);
         features.push({
           type: 'Feature',
           geometry: { type: 'Point', coordinates: [row[idxLng], row[idxLat]] },
           properties: {
-            id,
-            finess: row[idxFiness],
-            name: row[idxName],
-            city: row[idxCity],
-            city_slug: row[idxCitySlug],
-            cp: row[idxCP],
-            dept: row[idxDept],
-            drug: drugShown,
-            hasRealPrice,
+            layer: 'pharmacies',
+            id, finess: row[idxFiness], name: row[idxName],
+            city: row[idxCity], city_slug: row[idxCitySlug],
+            cp: row[idxCP], dept: row[idxDept],
+            drug: drugShown, hasRealPrice,
           },
         });
       }
       return { type: 'FeatureCollection', features };
+    }
+
+    function buildEndoGeoJSON() {
+      if (!endocrinologues || !endoSchema) return { type: 'FeatureCollection', features: [] };
+      const s = endoSchema;
+      const iid = s.indexOf('id'), iciv = s.indexOf('civility'),
+            ifn = s.indexOf('first_name'), iln = s.indexOf('last_name'),
+            istr = s.indexOf('structure'), ic = s.indexOf('city'),
+            icslug = s.indexOf('city_slug'), icp = s.indexOf('cp'),
+            idept = s.indexOf('dept'), ilat = s.indexOf('lat'),
+            ilng = s.indexOf('lng'), imode = s.indexOf('mode'),
+            iphone = s.indexOf('phone');
+      return {
+        type: 'FeatureCollection',
+        features: endocrinologues.map((r) => ({
+          type: 'Feature',
+          geometry: { type: 'Point', coordinates: [r[ilng], r[ilat]] },
+          properties: {
+            layer: 'endocrinologues',
+            id: r[iid],
+            name: [r[iciv], r[ifn], r[iln]].filter(Boolean).join(' '),
+            structure: r[istr] || '',
+            city: r[ic], city_slug: r[icslug], cp: r[icp], dept: r[idept],
+            mode: r[imode], phone: r[iphone] || '',
+          },
+        })),
+      };
+    }
+
+    function buildCsoGeoJSON() {
+      if (!csos) return { type: 'FeatureCollection', features: [] };
+      return {
+        type: 'FeatureCollection',
+        features: csos
+          .filter((c) => c.lat !== null)
+          .map((c) => ({
+            type: 'Feature',
+            geometry: { type: 'Point', coordinates: [c.lng, c.lat] },
+            properties: {
+              layer: 'cso',
+              id: c.id, slug: c.slug, name: c.name,
+              parent: c.parent_hospital, address: c.address,
+              city: c.city, city_slug: c.city_slug,
+              cp: c.postal_code, dept: c.department,
+              phone: c.phone || '', website: c.website || '',
+              is_pediatric: c.is_pediatric,
+            },
+          })),
+      };
+    }
+
+    function buildCurrentGeoJSON() {
+      if (currentLayer === 'pharmacies') return buildGeoJSON(currentDrug);
+      if (currentLayer === 'endocrinologues') return buildEndoGeoJSON();
+      if (currentLayer === 'cso') return buildCsoGeoJSON();
+      return { type: 'FeatureCollection', features: [] };
+    }
+
+    async function ensureLayerData(layer) {
+      if (layer === 'endocrinologues' && !endocrinologues) {
+        const data = await fetch('/data/endocrinologues.json').then((r) => r.json());
+        endoSchema = data.schema;
+        endocrinologues = data.rows;
+      } else if (layer === 'cso' && !csos) {
+        csos = await fetch('/data/cso.json').then((r) => r.json());
+      }
     }
 
     // À ce stade : map loaded + data fetched. On injecte directement.
@@ -504,7 +590,7 @@ const updatedFr = stats.updated_at
         paint: { 'text-color': '#fff' },
       });
 
-      // Points individuels
+      // Points individuels — couleur par layer
       map.addLayer({
         id: 'pharmacy-points',
         type: 'circle',
@@ -513,13 +599,19 @@ const updatedFr = stats.updated_at
         paint: {
           'circle-color': [
             'case',
+            ['==', ['get', 'layer'], 'endocrinologues'], LAYER_COLORS.endocrinologues,
+            ['==', ['get', 'layer'], 'cso'], LAYER_COLORS.cso,
             ['==', ['get', 'drug'], 'ozempic'], DRUG_COLORS.ozempic,
             ['==', ['get', 'drug'], 'wegovy'], DRUG_COLORS.wegovy,
             ['==', ['get', 'drug'], 'mounjaro'], DRUG_COLORS.mounjaro,
             ['==', ['get', 'drug'], 'saxenda'], DRUG_COLORS.saxenda,
-            '#6b7280',
+            LAYER_COLORS.pharmacies,
           ],
-          'circle-radius': 6,
+          'circle-radius': [
+            'case',
+            ['==', ['get', 'layer'], 'cso'], 9,
+            6,
+          ],
           'circle-stroke-width': 1.5,
           'circle-stroke-color': '#fff',
         },
@@ -554,34 +646,68 @@ const updatedFr = stats.updated_at
           btn.classList.add('active');
           currentDrug = btn.dataset.drug;
 
-          // Scroll map wrapper into view — instantané
           const mapWrap = document.getElementById('map-wrap');
-          if (mapWrap) {
-            mapWrap.scrollIntoView({ behavior: 'auto', block: 'start' });
+          if (mapWrap) mapWrap.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+          if (typeof map === 'undefined' || !map) return;
+          const src = map.getSource('pharmacies');
+          if (!src) return;
+          src.setData(buildCurrentGeoJSON());
+
+          if (currentDrug === 'all') map.jumpTo({ center: [2.4, 46.5], zoom: 5.5 });
+          else map.jumpTo({ center: [2.35, 48.86], zoom: 11 });
+        });
+      });
+    }
+
+    function setupLayerToggle() {
+      document.querySelectorAll('.layer-pill').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const newLayer = btn.dataset.layer;
+          if (newLayer === currentLayer) return;
+          document.querySelectorAll('.layer-pill').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentLayer = newLayer;
+
+          // Drug filter visible uniquement pour pharmacies
+          const drugFilter = document.getElementById('drug-filter');
+          if (drugFilter) drugFilter.style.display = currentLayer === 'pharmacies' ? '' : 'none';
+
+          // Scroll map into view
+          const mapWrap = document.getElementById('map-wrap');
+          if (mapWrap) mapWrap.scrollIntoView({ behavior: 'auto', block: 'start' });
+
+          // Lazy-load les données du nouveau layer
+          try {
+            await ensureLayerData(currentLayer);
+          } catch (e) {
+            console.error('Layer data load failed', e);
           }
 
           if (typeof map === 'undefined' || !map) return;
           const src = map.getSource('pharmacies');
           if (!src) return;
+          src.setData(buildCurrentGeoJSON());
 
-          // Update data (couleur par drug, pas de filtrage)
-          src.setData(buildGeoJSON(currentDrug));
-
-          // Pour un drug spécifique : zoom sur Paris à niveau 11 (les gens voient leur zone urbaine).
-          // Pour "Tous" : retour vue France.
-          if (currentDrug === 'all') {
-            map.jumpTo({ center: [2.4, 46.5], zoom: 5.5 });
-          } else {
-            map.jumpTo({ center: [2.35, 48.86], zoom: 11 });
-          }
+          // Vue adaptée par layer : CSO = vue France (37 points éparpillés), endo/pharma = Paris
+          if (currentLayer === 'cso') map.jumpTo({ center: [2.4, 46.5], zoom: 5.5 });
+          else if (currentLayer === 'endocrinologues') map.jumpTo({ center: [2.35, 48.86], zoom: 10 });
+          else map.jumpTo({ center: [2.4, 46.5], zoom: 5.5 });
         });
       });
     }
 
     // ═══════════════════════════════════════════════════════════════
-    // PHARMACY DRAWER — side panel sur click marker
+    // DRAWER — side panel, contenu adapté par type de marker
     // ═══════════════════════════════════════════════════════════════
     function openPharmacyDrawer(props) {
+      // Route vers le bon renderer selon le layer
+      if (props.layer === 'endocrinologues') return openEndoDrawer(props);
+      if (props.layer === 'cso') return openCsoDrawer(props);
+      return openPharmacyPriceDrawer(props);
+    }
+
+    function openPharmacyPriceDrawer(props) {
       const drawer = document.getElementById('pharmacy-drawer');
       if (!drawer) return;
       const id = props.id;
@@ -648,7 +774,10 @@ const updatedFr = stats.updated_at
       drawer.querySelector('.drawer-city').textContent =
         (props.city || '') + (props.cp ? ' · ' + props.cp : '');
       document.getElementById('drawer-body').innerHTML = drugSections;
-      document.getElementById('drawer-submit-btn').dataset.pharmacy = id;
+      const cta = document.getElementById('drawer-submit-btn');
+      cta.dataset.pharmacy = id;
+      cta.dataset.action = '';
+      cta.textContent = 'Vous avez vu un prix ici ? Partagez-le';
 
       drawer.hidden = false;
       drawer.setAttribute('aria-hidden', 'false');
@@ -663,13 +792,108 @@ const updatedFr = stats.updated_at
       setTimeout(() => { drawer.hidden = true; }, 220);
     }
 
+    function openEndoDrawer(props) {
+      const drawer = document.getElementById('pharmacy-drawer');
+      if (!drawer) return;
+      drawer.querySelector('.drawer-name').textContent = props.name || 'Endocrinologue';
+      drawer.querySelector('.drawer-city').textContent =
+        (props.city || '') + (props.cp ? ' · ' + props.cp : '');
+
+      const phoneLink = props.phone
+        ? `<a href="tel:${escapeHtml(props.phone.replace(/\s/g, ''))}" class="pro-phone">${escapeHtml(props.phone)}</a>`
+        : '<span class="pro-nophone">Téléphone non renseigné</span>';
+
+      const structure = props.structure
+        ? `<div class="pro-structure">${escapeHtml(props.structure)}</div>`
+        : '';
+
+      const mode = props.mode
+        ? `<span class="pro-badge">${escapeHtml(props.mode)}</span>`
+        : '';
+
+      document.getElementById('drawer-body').innerHTML = `
+        <div class="pro-info">
+          <div class="pro-meta">
+            <span class="pro-specialty">Endocrinologie et métabolisme</span>
+            ${mode}
+          </div>
+          ${structure}
+          <div class="pro-contact">${phoneLink}</div>
+        </div>
+        <div class="pro-note">
+          <strong>À savoir</strong> — Les endocrinologues sont historiquement les spécialistes de référence pour la prescription des GLP-1 (Ozempic, Wegovy, Mounjaro). Depuis juin 2025, <strong>tout médecin peut prescrire</strong>, mais l'endocrino reste recommandé pour les profils complexes ou diabétiques.
+        </div>
+      `;
+      // Adapt CTA
+      const cta = document.getElementById('drawer-submit-btn');
+      cta.textContent = 'Consultation plus rapide : téléconsultation spécialiste →';
+      cta.dataset.action = 'external-charles';
+      drawer.hidden = false;
+      drawer.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => drawer.classList.add('open'));
+    }
+
+    function openCsoDrawer(props) {
+      const drawer = document.getElementById('pharmacy-drawer');
+      if (!drawer) return;
+      drawer.querySelector('.drawer-name').textContent = props.name || 'CSO';
+      drawer.querySelector('.drawer-city').textContent =
+        (props.city || '') + (props.cp ? ' · ' + props.cp : '');
+
+      const pediatric = props.is_pediatric
+        ? '<span class="pro-badge pro-badge-peds">Pédiatrique</span>'
+        : '<span class="pro-badge">Adultes</span>';
+
+      const parent = props.parent
+        ? `<div class="pro-structure">${escapeHtml(props.parent)}</div>`
+        : '';
+
+      const address = props.address
+        ? `<div class="pro-address">${escapeHtml(props.address)}<br>${escapeHtml(props.cp || '')} ${escapeHtml(props.city || '')}</div>`
+        : '';
+
+      const phoneLink = props.phone
+        ? `<a href="tel:${escapeHtml(props.phone.replace(/\s/g, ''))}" class="pro-phone">${escapeHtml(props.phone)}</a>`
+        : '';
+
+      document.getElementById('drawer-body').innerHTML = `
+        <div class="pro-info">
+          <div class="pro-meta">
+            <span class="pro-specialty">Centre Spécialisé Obésité</span>
+            ${pediatric}
+          </div>
+          ${parent}
+          ${address}
+          <div class="pro-contact">${phoneLink}</div>
+        </div>
+        <div class="pro-note">
+          <strong>Qu'est-ce qu'un CSO&nbsp;?</strong> — Les Centres Spécialisés de l'Obésité prennent en charge les obésités sévères et complexes (IMC &gt; 35, complications, récidives). Prise en charge multidisciplinaire&nbsp;: endocrino, chirurgien bariatrique, diététicien, psychologue, médecin du sport. Accès généralement sur <strong>adressage médecin</strong>.
+        </div>
+      `;
+      const cta = document.getElementById('drawer-submit-btn');
+      cta.textContent = 'Accompagnement nutritionnel personnalisé →';
+      cta.dataset.action = 'external-annette';
+      drawer.hidden = false;
+      drawer.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => drawer.classList.add('open'));
+    }
+
     // Wire drawer close
     document.getElementById('drawer-close')?.addEventListener('click', closePharmacyDrawer);
     document.getElementById('drawer-backdrop')?.addEventListener('click', closePharmacyDrawer);
     document.getElementById('drawer-submit-btn')?.addEventListener('click', (e) => {
-      const pid = e.currentTarget.dataset.pharmacy;
+      const action = e.currentTarget.dataset.action;
       closePharmacyDrawer();
-      // Open submission modal avec pharmacie pré-sélectionnée
+      if (action === 'external-charles') {
+        window.open('https://poids.charles.co/?utm_source=affiliation&utm_medium=glp1france&utm_campaign=carte_endocrinologues', '_blank', 'noopener');
+        return;
+      }
+      if (action === 'external-annette') {
+        window.open('https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=carte_cso', '_blank', 'noopener');
+        return;
+      }
+      // Default : soumission pharmacie
+      const pid = e.currentTarget.dataset.pharmacy;
       document.dispatchEvent(new CustomEvent('open-submit-for', { detail: { pharmacyId: pid } }));
     });
     document.addEventListener('keydown', (e) => {
@@ -895,6 +1119,102 @@ const updatedFr = stats.updated_at
     font-size: .95rem;
     margin: 0 0 1rem 0;
   }
+  /* Layer toggle — Pharmacies / Endocrinologues / CSO */
+  .layer-toggle {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .layer-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: #fff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 999px;
+    padding: .55rem 1.15rem;
+    font-size: .92rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .layer-pill:hover { border-color: #1a3c34; color: #1a3c34; }
+  .layer-pill.active {
+    background: #1a3c34;
+    color: #fff;
+    border-color: #1a3c34;
+  }
+  .layer-pill.active .layer-dot {
+    box-shadow: 0 0 0 2px rgba(255,255,255,.5);
+  }
+  .layer-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Contenu drawer pour endo / CSO */
+  :global(.pro-info) {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: .85rem 1rem;
+    display: flex; flex-direction: column;
+    gap: .5rem;
+  }
+  :global(.pro-meta) { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+  :global(.pro-specialty) {
+    font-size: .78rem; font-weight: 700;
+    color: #7c3aed;
+    background: #f5f3ff;
+    padding: .2rem .55rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  :global(.pro-badge) {
+    font-size: .7rem; font-weight: 600;
+    background: #f3f4f6; color: #4b5563;
+    padding: .15rem .5rem;
+    border-radius: 6px;
+  }
+  :global(.pro-badge-peds) { background: #fef3c7; color: #92400e; }
+  :global(.pro-structure) {
+    font-size: .88rem;
+    color: #1a3c34;
+    font-weight: 600;
+  }
+  :global(.pro-address) {
+    font-size: .82rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  :global(.pro-contact) { display: flex; gap: .5rem; }
+  :global(.pro-phone) {
+    display: inline-block;
+    background: #1a3c34; color: #fff;
+    padding: .35rem .85rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 600;
+  }
+  :global(.pro-phone:hover) { background: #0f2d25; color: #fff; }
+  :global(.pro-nophone) { font-size: .78rem; color: #9ca3af; font-style: italic; }
+  :global(.pro-note) {
+    font-size: .78rem;
+    color: #475569;
+    line-height: 1.55;
+    background: #f8faf9;
+    border-left: 3px solid #d1d5db;
+    padding: .7rem .85rem;
+    border-radius: 6px;
+  }
+  :global(.pro-note strong) { color: #1a3c34; }
+
   .drug-filter {
     display: flex;
     gap: .5rem;
