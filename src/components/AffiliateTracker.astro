@@ -21,6 +21,7 @@ import { supabaseConfig } from '../lib/supabase.js';
   // Detect which partner from the URL
   function getPartner(href) {
     if (href.indexOf('annette.care') > -1) return 'annette';
+    if (href.indexOf('charles.co') > -1) return 'charles';
     return 'other';
   }
 
@@ -42,7 +43,7 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   // Listen to all clicks on affiliate links
   document.addEventListener('click', function(e) {
-    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"]');
+    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"], a[href*="charles.co"]');
     if (!link) return;
 
     var href = link.href;
