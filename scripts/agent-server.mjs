@@ -1271,6 +1271,30 @@ const server = createServer(async (req, res) => {
     return;
   }
 
+  // POST /seo-index-check/run — vérifie l'indexation Google des pages du site
+  if (req.method === 'POST' && url.pathname === '/seo-index-check/run') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    try {
+      const output = execSync('node scripts/pharmacy-map/seo-index-check.mjs', {
+        cwd: PROJECT_ROOT,
+        encoding: 'utf8',
+        env: process.env,
+        timeout: 3 * 60 * 1000,
+      });
+      let report;
+      try { report = JSON.parse(output.trim()); }
+      catch { report = { ok: false, parseError: true, raw: output.slice(-500) }; }
+      res.end(JSON.stringify({ ok: true, ...report }));
+    } catch (e) {
+      res.end(JSON.stringify({
+        ok: false,
+        error: e.message,
+        stderr: (e.stderr || '').toString().slice(-500),
+      }));
+    }
+    return;
+  }
+
   // POST /pharmacy-curator/run — modère les soumissions pharmacy + refresh JSON + push main
   if (req.method === 'POST' && url.pathname === '/pharmacy-curator/run') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -1342,5 +1366,6 @@ server.listen(PORT, '127.0.0.1', () => {
   console.log(`     POST /stop     — { "agent": "editorial" }`);
   console.log(`     POST /pipeline — lancer le pipeline complet`);
   console.log(`     POST /pharmacy-curator/run — moderer soumissions pharmacy + push main`);
+  console.log(`     POST /seo-index-check/run — verifier indexation Google (hebdo)`);
   console.log(`   Ctrl+C pour arreter\n`);
 });
