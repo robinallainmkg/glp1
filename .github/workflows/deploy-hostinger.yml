@@ -60,7 +60,10 @@ jobs:
             set mirror:use-pget-n 1;
             set ftp:sync-mode off;
             set xfer:clobber yes;
-            mirror --reverse --delete --only-newer --verbose --no-perms --parallel=6 ./dist/ /domains/glp1-france.fr/public_html/;
+            # --size-only : compare par taille (ignore timestamp). Les 20k pages pharmacies
+            # ont du contenu byte-stable entre builds → skip si taille identique.
+            # Conséquence pratique : premier deploy full ~30min, suivants ~3-5min.
+            mirror --reverse --delete --verbose --no-perms --parallel=6 --size-only ./dist/ /domains/glp1-france.fr/public_html/;
             quit
           " && echo "Deploy SUCCESS on attempt $ATTEMPT" && exit 0
 

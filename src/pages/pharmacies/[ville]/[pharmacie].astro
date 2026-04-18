@@ -140,6 +140,7 @@ const faq = [
         <div class="pharma-ctas">
           <a href={`/pharmacies/cp/${pharmacy.postal}/`} class="btn-secondary">Autres pharmacies {pharmacy.postal}</a>
           <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Voir sur la carte →</a>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nameCap + ' ' + pharmacy.postal + ' ' + cityCap)}`} target="_blank" rel="noopener" class="btn-ghost">Google Maps ↗</a>
         </div>
       </div>
     </section>
@@ -280,6 +281,12 @@ const faq = [
   .btn-primary:hover { background: #0f2d25; color: #fff; transform: translateY(-1px); }
   .btn-secondary { background: #fff; color: #1a3c34; border: 1.5px solid #d1d5db; }
   .btn-secondary:hover { border-color: #1a3c34; }
+  .btn-ghost {
+    display: inline-flex; padding: .6rem 1rem; font-weight: 600; font-size: .82rem;
+    border-radius: 10px; text-decoration: none; transition: all .2s;
+    background: transparent; color: #4b5563; border: 1px dashed #9ca3af;
+  }
+  .btn-ghost:hover { color: #1a3c34; border-color: #1a3c34; }
 
   .pharma-map-section { background: #fff; border-bottom: 1px solid #e5e7eb; }
   #pharma-map { width: 100%; height: 340px; background: #e5e7eb; }
