@@ -1,0 +1,554 @@
+---
+import StaticLayout from '../../layouts/StaticLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Charger les stats au build time
+let stats = { pharmacies: 0, prices: 0, by_drug: {}, updated_at: null };
+try {
+  const statsPath = path.resolve(process.cwd(), 'public/data/pharmacy-stats.json');
+  if (fs.existsSync(statsPath)) {
+    stats = JSON.parse(fs.readFileSync(statsPath, 'utf-8'));
+  }
+} catch {}
+
+const fmtNum = (n) => new Intl.NumberFormat('fr-FR').format(n);
+const updatedFr = stats.updated_at
+  ? new Date(stats.updated_at).toLocaleDateString('fr-FR', { day: '2-digit', month: 'long', year: 'numeric' })
+  : '—';
+---
+
+<StaticLayout
+  title="Carte des prix Ozempic, Wegovy, Mounjaro, Saxenda en pharmacie France"
+  description="Carte interactive des prix GLP-1 en pharmacie : Ozempic, Wegovy, Mounjaro, Saxenda. Données officielles + contributions patients. Trouvez la pharmacie la moins chère près de chez vous."
+  keywords="prix Ozempic pharmacie, prix Wegovy pharmacie, prix Mounjaro pharmacie, carte pharmacie GLP-1"
+>
+  <!-- MapLibre GL JS depuis CDN (zéro dépendance npm, gratuit, open source) -->
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" is:inline></script>
+
+  <div class="map-page">
+    <!-- Hero compact -->
+    <section class="map-hero">
+      <div class="map-hero-inner">
+        <h1>Prix GLP-1 en pharmacie&nbsp;: la carte de France</h1>
+        <p class="map-hero-sub">
+          <strong>{fmtNum(stats.pharmacies)}</strong> pharmacies référencées · Prix officiel CEPS + contributions patients · Mis à jour le {updatedFr}
+        </p>
+
+        <!-- Filtre drug -->
+        <div class="drug-filter" role="tablist" aria-label="Filtrer par traitement">
+          <button type="button" class="drug-pill active" data-drug="all">Tous</button>
+          <button type="button" class="drug-pill" data-drug="ozempic">Ozempic</button>
+          <button type="button" class="drug-pill" data-drug="wegovy">Wegovy</button>
+          <button type="button" class="drug-pill" data-drug="mounjaro">Mounjaro</button>
+          <button type="button" class="drug-pill" data-drug="saxenda">Saxenda</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carte -->
+    <div id="map-wrap">
+      <div id="map" role="region" aria-label="Carte des pharmacies"></div>
+      <div id="map-loading" class="map-loading">Chargement de la carte…</div>
+    </div>
+
+    <!-- Contrib CTA -->
+    <section class="contrib-banner">
+      <div class="contrib-inner">
+        <div>
+          <h2>Vous avez vu un prix en pharmacie&nbsp;?</h2>
+          <p>Partagez-le pour aider la communauté. Anonyme, 30&nbsp;secondes.</p>
+        </div>
+        <button type="button" class="contrib-btn" id="open-submit">Partager un prix →</button>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="map-disclaimer">
+      <p>
+        <strong>Source&nbsp;:</strong> Référentiel FINESS (data.gouv.fr / Atlasanté — mis à jour bimensuel) · Prix officiels Ozempic = CEPS (77,60&nbsp;€/stylo, remboursé 30% pour diabète de type 2) · Prix Wegovy / Mounjaro / Saxenda = <strong>prix libéré</strong>, varie selon pharmacie et n'est pas remboursé.
+        Les prix soumis par la communauté sont modérés avant affichage. Cette page est informative et ne remplace pas un avis médical.
+      </p>
+    </section>
+  </div>
+
+  <!-- Modal soumission (phase 2 — désactivé pour l'instant) -->
+  <div id="submit-modal" class="submit-modal" hidden>
+    <div class="submit-modal-inner">
+      <button type="button" class="modal-close" id="close-submit" aria-label="Fermer">×</button>
+      <h3>Partager un prix</h3>
+      <p class="submit-todo">Fonction en cours d'intégration. Reviens bientôt&nbsp;!</p>
+    </div>
+  </div>
+
+  <script is:inline>
+  // ═══════════════════════════════════════════════════════════════
+  // MAP LOGIC — MapLibre GL + clustering natif sur 20k+ markers
+  // ═══════════════════════════════════════════════════════════════
+  (async function() {
+    'use strict';
+
+    const DRUG_COLORS = {
+      ozempic: '#16a34a',  // vert (remboursé)
+      wegovy: '#f59e0b',   // orange
+      mounjaro: '#3b82f6', // bleu
+      saxenda: '#a855f7',  // violet
+    };
+    const DRUG_LABELS = {
+      ozempic: 'Ozempic',
+      wegovy: 'Wegovy',
+      mounjaro: 'Mounjaro',
+      saxenda: 'Saxenda',
+    };
+
+    let currentDrug = 'all';
+    let pharmacies = null;
+    let pharmaciesSchema = null;
+    let latestPrices = null;
+
+    // Tiles gratuits : Carto Voyager (style neutre lisible)
+    const style = {
+      version: 8,
+      sources: {
+        'raster-tiles': {
+          type: 'raster',
+          tiles: [
+            'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+            'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+            'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+          ],
+          tileSize: 256,
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>',
+        },
+      },
+      layers: [{ id: 'raster', type: 'raster', source: 'raster-tiles' }],
+    };
+
+    const map = new maplibregl.Map({
+      container: 'map',
+      style,
+      center: [2.4, 46.5],   // centre France
+      zoom: 5.2,
+      minZoom: 4,
+      maxZoom: 18,
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+    map.addControl(new maplibregl.GeolocateControl({
+      positionOptions: { enableHighAccuracy: true },
+      trackUserLocation: false,
+    }), 'top-right');
+
+    // Data fetch en parallèle
+    const dataPromise = Promise.all([
+      fetch('/data/pharmacies.json').then((r) => r.json()),
+      fetch('/data/latest-prices.json').then((r) => r.json()),
+    ]).then(([phResp, prResp]) => {
+      pharmaciesSchema = phResp.schema;
+      pharmacies = phResp.rows;
+      latestPrices = prResp;
+    });
+
+    // Attendre que le style soit parsé. 'load' fire après que le style est loaded ET
+    // les tiles initiales sont arrivées. On utilise 'styledata' + isStyleLoaded pour
+    // gérer les environnements où les tiles pourraient être lentes ou bloquées.
+    await new Promise((resolve) => {
+      const onceReady = () => {
+        if (map.isStyleLoaded && map.isStyleLoaded()) {
+          map.off('styledata', onceReady);
+          map.off('load', onceReady);
+          resolve();
+        }
+      };
+      map.on('styledata', onceReady);
+      map.on('load', onceReady);
+    });
+
+    try {
+      await dataPromise;
+    } catch (err) {
+      document.getElementById('map-loading').textContent = 'Erreur de chargement des données.';
+      console.error('[map] data error:', err);
+      return;
+    }
+
+    const idxId = pharmaciesSchema.indexOf('id');
+    const idxName = pharmaciesSchema.indexOf('name');
+    const idxCity = pharmaciesSchema.indexOf('city');
+    const idxCitySlug = pharmaciesSchema.indexOf('city_slug');
+    const idxCP = pharmaciesSchema.indexOf('postal_code');
+    const idxLat = pharmaciesSchema.indexOf('lat');
+    const idxLng = pharmaciesSchema.indexOf('lng');
+
+    function buildGeoJSON(drugFilter) {
+      const features = [];
+      for (const row of pharmacies) {
+        const id = row[idxId];
+        const prices = latestPrices[id];
+        // Si filtre drug, on garde uniquement celles qui ont un prix pour ce drug
+        let priceForDrug = null;
+        if (drugFilter && drugFilter !== 'all') {
+          if (!prices) continue;
+          priceForDrug = prices.find((x) => x.d === drugFilter);
+          if (!priceForDrug) continue;
+        }
+        features.push({
+          type: 'Feature',
+          geometry: { type: 'Point', coordinates: [row[idxLng], row[idxLat]] },
+          properties: {
+            id,
+            name: row[idxName],
+            city: row[idxCity],
+            city_slug: row[idxCitySlug],
+            cp: row[idxCP],
+            price: priceForDrug ? priceForDrug.p : null,
+            drug: priceForDrug ? priceForDrug.d : null,
+            source: priceForDrug ? priceForDrug.s : null,
+          },
+        });
+      }
+      return { type: 'FeatureCollection', features };
+    }
+
+    // À ce stade : map loaded + data fetched. On injecte directement.
+    document.getElementById('map-loading').style.display = 'none';
+
+    {
+      map.addSource('pharmacies', {
+        type: 'geojson',
+        data: buildGeoJSON(currentDrug),
+        cluster: true,
+        clusterRadius: 50,
+        clusterMaxZoom: 12,
+      });
+
+      // Clusters
+      map.addLayer({
+        id: 'clusters',
+        type: 'circle',
+        source: 'pharmacies',
+        filter: ['has', 'point_count'],
+        paint: {
+          'circle-color': [
+            'step', ['get', 'point_count'],
+            '#93c5fd', 20,
+            '#60a5fa', 100,
+            '#2563eb',
+          ],
+          'circle-radius': [
+            'step', ['get', 'point_count'],
+            14, 20,
+            18, 100,
+            24,
+          ],
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#fff',
+        },
+      });
+      map.addLayer({
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'pharmacies',
+        filter: ['has', 'point_count'],
+        layout: {
+          'text-field': '{point_count_abbreviated}',
+          'text-font': ['Noto Sans Regular'],
+          'text-size': 12,
+        },
+        paint: { 'text-color': '#fff' },
+      });
+
+      // Points individuels
+      map.addLayer({
+        id: 'pharmacy-points',
+        type: 'circle',
+        source: 'pharmacies',
+        filter: ['!', ['has', 'point_count']],
+        paint: {
+          'circle-color': [
+            'case',
+            ['==', ['get', 'drug'], 'ozempic'], DRUG_COLORS.ozempic,
+            ['==', ['get', 'drug'], 'wegovy'], DRUG_COLORS.wegovy,
+            ['==', ['get', 'drug'], 'mounjaro'], DRUG_COLORS.mounjaro,
+            ['==', ['get', 'drug'], 'saxenda'], DRUG_COLORS.saxenda,
+            '#6b7280',
+          ],
+          'circle-radius': 6,
+          'circle-stroke-width': 1.5,
+          'circle-stroke-color': '#fff',
+        },
+      });
+
+      // Zoom sur cluster
+      map.on('click', 'clusters', async (e) => {
+        const features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
+        const clusterId = features[0].properties.cluster_id;
+        const src = map.getSource('pharmacies');
+        const zoom = await src.getClusterExpansionZoom(clusterId);
+        map.easeTo({ center: features[0].geometry.coordinates, zoom });
+      });
+
+      // Popup sur point
+      map.on('click', 'pharmacy-points', (e) => {
+        const f = e.features[0];
+        const props = f.properties;
+        const id = props.id;
+        const prices = latestPrices[id] || [];
+        const allPrices = prices
+          .map((pr) => {
+            const label = DRUG_LABELS[pr.d] || pr.d;
+            const src = pr.s === 'official_ceps'
+              ? '<span class="pop-src-off">Officiel CEPS</span>'
+              : pr.s === 'scraped'
+                ? '<span class="pop-src-scr">Référencé</span>'
+                : '<span class="pop-src-usr">Communauté</span>';
+            return `<div class="pop-price"><span>${label}${pr.dose ? ' ' + pr.dose : ''}</span><strong>${pr.p.toFixed(2)}&nbsp;€</strong>${src}</div>`;
+          })
+          .join('');
+
+        const html = `
+          <div class="pop">
+            <div class="pop-head">
+              <div class="pop-name">${escapeHtml(props.name || '')}</div>
+              <div class="pop-city">${escapeHtml(props.city || '')} · ${escapeHtml(props.cp || '')}</div>
+            </div>
+            <div class="pop-prices">
+              ${allPrices || '<em class="pop-empty">Aucun prix renseigné pour le moment.</em>'}
+            </div>
+            <button type="button" class="pop-cta" data-action="submit-for" data-pharmacy="${id}">Ajouter un prix</button>
+          </div>`;
+
+        new maplibregl.Popup({ maxWidth: '320px' })
+          .setLngLat(f.geometry.coordinates)
+          .setHTML(html)
+          .addTo(map);
+      });
+
+      // Curseur pointer sur éléments cliquables
+      ['clusters', 'pharmacy-points'].forEach((layer) => {
+        map.on('mouseenter', layer, () => { map.getCanvas().style.cursor = 'pointer'; });
+        map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; });
+      });
+    }
+
+    // Filtre drug
+    document.querySelectorAll('.drug-pill').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.drug-pill').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentDrug = btn.dataset.drug;
+        const src = map.getSource('pharmacies');
+        if (src) src.setData(buildGeoJSON(currentDrug));
+      });
+    });
+
+    // Modal soumission
+    const modal = document.getElementById('submit-modal');
+    document.getElementById('open-submit').addEventListener('click', () => { modal.hidden = false; });
+    document.getElementById('close-submit').addEventListener('click', () => { modal.hidden = true; });
+    document.addEventListener('click', (e) => {
+      if (e.target && e.target.matches('[data-action="submit-for"]')) {
+        modal.hidden = false;
+      }
+    });
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    }
+  })();
+  </script>
+
+  <style>
+  .map-page {
+    background: #f8faf9;
+    min-height: 100vh;
+  }
+  .map-hero {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  .map-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .map-hero h1 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 900;
+    color: #1a3c34;
+    margin: 0 0 .5rem 0;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+  .map-hero-sub {
+    color: #475569;
+    font-size: .95rem;
+    margin: 0 0 1rem 0;
+  }
+  .drug-filter {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+  }
+  .drug-pill {
+    background: #fff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 999px;
+    padding: .45rem 1.1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .drug-pill:hover { border-color: #16a34a; color: #15803d; }
+  .drug-pill.active {
+    background: #1a3c34;
+    color: #fff;
+    border-color: #1a3c34;
+  }
+  #map-wrap {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+  }
+  #map { width: 100%; height: 100%; }
+  .map-loading {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: rgba(255,255,255,.95);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-size: .9rem;
+    color: #374151;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    z-index: 5;
+  }
+
+  /* Popup pharmacie */
+  :global(.maplibregl-popup-content) {
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  :global(.pop) { font-family: inherit; }
+  :global(.pop-head) {
+    background: #1a3c34;
+    color: #fff;
+    padding: .8rem 1rem;
+  }
+  :global(.pop-name) { font-weight: 700; font-size: .95rem; line-height: 1.3; }
+  :global(.pop-city) { font-size: .78rem; opacity: .8; margin-top: .2rem; }
+  :global(.pop-prices) { padding: .6rem 1rem; display: flex; flex-direction: column; gap: .4rem; }
+  :global(.pop-price) {
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+    font-size: .85rem; color: #374151;
+  }
+  :global(.pop-price strong) { font-size: 1rem; color: #1a3c34; font-weight: 800; }
+  :global(.pop-src-off), :global(.pop-src-scr), :global(.pop-src-usr) {
+    font-size: .68rem;
+    padding: .15rem .45rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+  }
+  :global(.pop-src-off) { background: #dcfce7; color: #15803d; }
+  :global(.pop-src-scr) { background: #dbeafe; color: #1e40af; }
+  :global(.pop-src-usr) { background: #fef3c7; color: #92400e; }
+  :global(.pop-empty) { font-size: .82rem; color: #9ca3af; }
+  :global(.pop-cta) {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
+    padding: .6rem;
+    background: #1B6FA0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: .88rem;
+    cursor: pointer;
+  }
+  :global(.pop-cta:hover) { background: #0D4F73; }
+
+  /* Bandeau contrib */
+  .contrib-banner {
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    padding: 1.5rem;
+  }
+  .contrib-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .contrib-banner h2 { font-size: 1.1rem; font-weight: 800; color: #1a3c34; margin: 0; }
+  .contrib-banner p { color: #6b7280; font-size: .85rem; margin: .2rem 0 0; }
+  .contrib-btn {
+    padding: .7rem 1.4rem;
+    background: #1a3c34;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .contrib-btn:hover { background: #0f2d25; transform: translateY(-1px); }
+
+  .map-disclaimer {
+    background: #f8faf9;
+    padding: 1.25rem 1.5rem 2.5rem;
+  }
+  .map-disclaimer p {
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+
+  /* Modal soumission */
+  .submit-modal {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    padding: 1rem;
+  }
+  .submit-modal[hidden] { display: none; }
+  .submit-modal-inner {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem;
+    max-width: 420px;
+    width: 100%;
+    position: relative;
+  }
+  .submit-modal h3 { margin: 0 0 .5rem; font-size: 1.25rem; color: #1a3c34; }
+  .submit-todo { color: #6b7280; font-size: .9rem; }
+  .modal-close {
+    position: absolute;
+    top: .5rem; right: .75rem;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: #9ca3af;
+    line-height: 1;
+  }
+  .modal-close:hover { color: #1a3c34; }
+
+  @media (max-width: 640px) {
+    #map-wrap { height: 60vh; min-height: 400px; }
+    .contrib-inner { flex-direction: column; align-items: stretch; text-align: center; }
+    .contrib-btn { width: 100%; }
+  }
+  </style>
+</StaticLayout>

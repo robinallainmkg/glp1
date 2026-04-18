@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --port 4321 --open",
-    "build": "astro build && node scripts/inject-vercel-redirects.mjs",
+    "export:pharmacies": "node scripts/pharmacy-map/export-pharmacies-json.mjs",
+    "build": "npm run export:pharmacies && astro build && node scripts/inject-vercel-redirects.mjs",
     "astro:build": "astro build",
     "preview": "astro preview --port 4321 --open",
     "start": "astro preview --port 4321 --open",
@@ -57,6 +58,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "csv-parse": "^6.2.1",
     "imapflow": "^1.2.14",
     "pg": "^8.20.0",
     "prettier": "^3.6.2"
