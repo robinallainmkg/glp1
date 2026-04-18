@@ -94,3 +94,27 @@ export function getPartnerForPath(pathname: string): Partner {
   const slug = segs[segs.length - 1];
   return getPartnerForArticle({ collection, slug, path: p });
 }
+
+export function oppositePartner(p: Partner): Partner {
+  return p === "annette" ? "charles" : "annette";
+}
+
+// Hash stable dérivé du slug : permet d'alterner l'ordre de la sidebar
+// de manière déterministe (même article -> même ordre, différents articles -> ordre varié).
+function slugHash(slug?: string): number {
+  const s = (slug || "").toLowerCase();
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (h * 31 + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+// Retourne l'ordre des 2 partenaires dans la sidebar empilée.
+// ~50% des articles auront le partenaire routé en premier, ~50% en second.
+export function getSidebarOrder(input: RouteInput & { routed?: Partner }): [Partner, Partner] {
+  const routed = input.routed ?? getPartnerForArticle(input);
+  const other = oppositePartner(routed);
+  const flip = slugHash(input.slug || input.path) % 2 === 1;
+  return flip ? [other, routed] : [routed, other];
+}

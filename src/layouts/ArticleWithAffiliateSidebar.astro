@@ -6,7 +6,7 @@ import CharlesSidebar from '../components/CharlesSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 import CharlesCTA from '../components/CharlesCTA.astro';
-import { getPartnerForArticle } from '../lib/partnerRouter';
+import { getPartnerForArticle, oppositePartner, getSidebarOrder } from '../lib/partnerRouter';
 
 export interface Props {
   title?: string;
@@ -51,11 +51,14 @@ const detectedCategory = props.detectedCategory ?? props.category ?? (article?.d
 const articleSlug = (article?.slug as string | undefined)
   ?? (article?.data?.slug as string | undefined)
   ?? (typeof Astro.url?.pathname === 'string' ? Astro.url.pathname.split('/').filter(Boolean).pop() : undefined);
-const partner = getPartnerForArticle({
+const routeInput = {
   collection: detectedCategory || undefined,
   slug: articleSlug,
   path: typeof Astro.url?.pathname === 'string' ? Astro.url.pathname : undefined,
-});
+};
+const partner = getPartnerForArticle(routeInput);
+const inlinePartner = oppositePartner(partner);
+const sidebarOrder = getSidebarOrder({ ...routeInput, routed: partner });
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
@@ -145,9 +148,10 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTA Partenaire (routé selon l'intention de l'article) -->
+        <!-- CTA Partenaire : inline = opposé du routé (les 2 partenaires sur la page),
+             bottom = partenaire routé selon l'intention. -->
         <div id="partner-cta-template" style="display:none;">
-          {partner === 'charles'
+          {inlinePartner === 'charles'
             ? <CharlesCTA context="article_inline" />
             : <PartnerCTA partner="annette" context="article_inline" />}
         </div>
@@ -160,19 +164,13 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         </div>
       </article>
 
-      <!-- Sidebars partenaires (primaire selon l'intention, secondaire en dessous) -->
+      <!-- Sidebars partenaires : ordre alterné par article (hash du slug) -->
       <div class="partner-sidebar-stack">
-        {partner === 'charles' ? (
-          <>
-            <CharlesSidebar context="article" />
-            <PartnerSidebar context="article_secondary" />
-          </>
-        ) : (
-          <>
-            <PartnerSidebar context="article" />
-            <CharlesSidebar context="article_secondary" />
-          </>
-        )}
+        {sidebarOrder.map((p) => (
+          p === 'charles'
+            ? <CharlesSidebar context={p === partner ? 'article' : 'article_secondary'} />
+            : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />
+        ))}
       </div>
     </div>
 
