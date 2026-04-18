@@ -74,6 +74,27 @@ const updatedFr = stats.updated_at
     </section>
   </div>
 
+  <!-- Drawer pharmacie : remplace les popups MapLibre (mauvaise UX / clipping) -->
+  <div id="pharmacy-drawer" class="pharmacy-drawer" hidden aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside class="drawer-panel" role="dialog" aria-labelledby="drawer-title">
+      <button type="button" class="drawer-close" id="drawer-close" aria-label="Fermer">×</button>
+      <div class="drawer-head">
+        <h3 id="drawer-title" class="drawer-name"></h3>
+        <div class="drawer-city"></div>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+      <div class="drawer-footer">
+        <div class="drawer-legend">
+          <span class="pop-src-off">Officiel</span> prix CEPS légal ·
+          <span class="pop-src-usr">Communauté</span> prix user ·
+          <span class="pop-src-est">Estimation</span> moyenne marché
+        </div>
+        <button type="button" class="drawer-cta" id="drawer-submit-btn">Vous avez vu un prix ici ? Partagez-le</button>
+      </div>
+    </aside>
+  </div>
+
   <!-- Modal soumission -->
   <div id="submit-modal" class="submit-modal" hidden aria-hidden="true">
     <div class="submit-modal-inner" role="dialog" aria-labelledby="submit-title">
@@ -422,99 +443,10 @@ const updatedFr = stats.updated_at
         map.easeTo({ center: features[0].geometry.coordinates, zoom });
       });
 
-      // Popup : liste complète des 4 drugs × toutes doses.
-      // Prix source : soumission communautaire / scraping chaîne > estimation par pharmacie.
+      // Click marker → open side drawer (remplace popup MapLibre pour éviter les soucis de clipping/z-index)
       map.on('click', 'pharmacy-points', (e) => {
         const f = e.features[0];
-        const props = f.properties;
-        const id = props.id;
-        const finess = props.finess;
-        const dept = (props.cp || '').slice(0, 2);
-        const submittedPrices = latestPrices[id] || [];
-
-        // Index des prix soumis par (drug, dose-key)
-        const submitted = {};
-        for (const pr of submittedPrices) {
-          const key = pr.d + '|' + (pr.dose || '');
-          submitted[key] = pr;
-        }
-
-        const drugOrder = ['ozempic', 'wegovy', 'mounjaro', 'saxenda'];
-        const ordered = [...drugOrder].sort((a, b) =>
-          a === currentDrug ? -1 : b === currentDrug ? 1 : 0
-        );
-
-        const drugSections = ordered.map((d) => {
-          const ref = DRUG_REF[d];
-          if (!ref) return '';
-          const highlight = d === currentDrug ? ' pop-drug-active' : '';
-
-          const rows = ref.doses.map((ds) => {
-            const key = d + '|' + ds.dose;
-            const sub = submitted[key];
-            let priceHtml, srcPill, rowClass = '';
-            if (sub) {
-              // Prix source avérée (user, scraped, official_ceps)
-              priceHtml = Number(sub.p).toFixed(2);
-              srcPill = sub.s === 'user'
-                ? '<span class="pop-dose-src pop-src-usr">Communauté</span>'
-                : sub.s === 'scraped'
-                  ? '<span class="pop-dose-src pop-src-scr">Vérifié</span>'
-                  : '<span class="pop-dose-src pop-src-off">Officiel</span>';
-            } else if (ref.fixed) {
-              // Prix fixe CEPS (Ozempic)
-              priceHtml = ds.price.toFixed(2);
-              srcPill = '<span class="pop-dose-src pop-src-off">Officiel</span>';
-            } else {
-              // Estimation par pharmacie
-              const estimated = estimatePrice(ds.price, finess, dept, d, ds.dose);
-              priceHtml = estimated.toFixed(2);
-              srcPill = '<span class="pop-dose-src pop-src-est">Estimation</span>';
-              rowClass = ' pop-dose-est';
-            }
-            return `<div class="pop-dose-row${rowClass}"><span class="pop-dose">${escapeHtml(ds.dose)}</span><strong>${priceHtml}&nbsp;€</strong>${srcPill}</div>`;
-          }).join('');
-
-          // Badge global du drug (source dominante)
-          const hasReal = ref.doses.some((ds) => submitted[d + '|' + ds.dose]);
-          const globalBadge = ref.fixed
-            ? '<span class="pop-src-off">Officiel CEPS</span>'
-            : hasReal
-              ? '<span class="pop-src-usr">Données communauté</span>'
-              : '<span class="pop-src-est">Estimation</span>';
-
-          return `
-            <div class="pop-drug${highlight}">
-              <div class="pop-drug-head">
-                <span class="pop-drug-name">${escapeHtml(DRUG_LABELS[d] || d)}</span>
-                ${globalBadge}
-              </div>
-              <div class="pop-dose-list">${rows}</div>
-              ${ref.note ? '<div class="pop-drug-note">' + ref.note + '</div>' : ''}
-            </div>`;
-        }).join('');
-
-        const html = `
-          <div class="pop">
-            <div class="pop-head">
-              <div class="pop-name">${escapeHtml(props.name || '')}</div>
-              <div class="pop-city">${escapeHtml(props.city || '')} · ${escapeHtml(props.cp || '')}</div>
-            </div>
-            <div class="pop-prices">
-              ${drugSections}
-            </div>
-            <div class="pop-legend">
-              <span class="pop-src-off">Officiel</span> prix CEPS légal ·
-              <span class="pop-src-usr">Communauté</span> soumis par un utilisateur ·
-              <span class="pop-src-est">Estimation</span> moyenne marché + variance locale
-            </div>
-            <button type="button" class="pop-cta" data-action="submit-for" data-pharmacy="${id}">Vous avez vu un prix ici ? Partagez-le</button>
-          </div>`;
-
-        new maplibregl.Popup({ maxWidth: '380px' })
-          .setLngLat(f.geometry.coordinates)
-          .setHTML(html)
-          .addTo(map);
+        openPharmacyDrawer(f.properties);
       });
 
       // Curseur pointer sur éléments cliquables
@@ -554,6 +486,107 @@ const updatedFr = stats.updated_at
         });
       });
     }
+
+    // ═══════════════════════════════════════════════════════════════
+    // PHARMACY DRAWER — side panel sur click marker
+    // ═══════════════════════════════════════════════════════════════
+    function openPharmacyDrawer(props) {
+      const drawer = document.getElementById('pharmacy-drawer');
+      if (!drawer) return;
+      const id = props.id;
+      const finess = props.finess;
+      const dept = (props.cp || '').slice(0, 2);
+      const submittedPrices = latestPrices[id] || [];
+
+      const submitted = {};
+      for (const pr of submittedPrices) {
+        submitted[pr.d + '|' + (pr.dose || '')] = pr;
+      }
+
+      const drugOrder = ['ozempic', 'wegovy', 'mounjaro', 'saxenda'];
+      const ordered = [...drugOrder].sort((a, b) =>
+        a === currentDrug ? -1 : b === currentDrug ? 1 : 0
+      );
+
+      const drugSections = ordered.map((d) => {
+        const ref = DRUG_REF[d];
+        if (!ref) return '';
+        const highlight = d === currentDrug ? ' pop-drug-active' : '';
+
+        const rows = ref.doses.map((ds) => {
+          const key = d + '|' + ds.dose;
+          const sub = submitted[key];
+          let priceHtml, srcPill, rowClass = '';
+          if (sub) {
+            priceHtml = Number(sub.p).toFixed(2);
+            srcPill = sub.s === 'user'
+              ? '<span class="pop-dose-src pop-src-usr">Communauté</span>'
+              : sub.s === 'scraped'
+                ? '<span class="pop-dose-src pop-src-scr">Vérifié</span>'
+                : '<span class="pop-dose-src pop-src-off">Officiel</span>';
+          } else if (ref.fixed) {
+            priceHtml = ds.price.toFixed(2);
+            srcPill = '<span class="pop-dose-src pop-src-off">Officiel</span>';
+          } else {
+            priceHtml = estimatePrice(ds.price, finess, dept, d, ds.dose).toFixed(2);
+            srcPill = '<span class="pop-dose-src pop-src-est">Estimation</span>';
+            rowClass = ' pop-dose-est';
+          }
+          return `<div class="pop-dose-row${rowClass}"><span class="pop-dose">${escapeHtml(ds.dose)}</span><strong>${priceHtml}&nbsp;€</strong>${srcPill}</div>`;
+        }).join('');
+
+        const hasReal = ref.doses.some((ds) => submitted[d + '|' + ds.dose]);
+        const globalBadge = ref.fixed
+          ? '<span class="pop-src-off">Officiel CEPS</span>'
+          : hasReal
+            ? '<span class="pop-src-usr">Données communauté</span>'
+            : '<span class="pop-src-est">Estimation</span>';
+
+        return `
+          <div class="pop-drug${highlight}">
+            <div class="pop-drug-head">
+              <span class="pop-drug-name">${escapeHtml(DRUG_LABELS[d] || d)}</span>
+              ${globalBadge}
+            </div>
+            <div class="pop-dose-list">${rows}</div>
+            ${ref.note ? '<div class="pop-drug-note">' + ref.note + '</div>' : ''}
+          </div>`;
+      }).join('');
+
+      drawer.querySelector('.drawer-name').textContent = props.name || '';
+      drawer.querySelector('.drawer-city').textContent =
+        (props.city || '') + (props.cp ? ' · ' + props.cp : '');
+      document.getElementById('drawer-body').innerHTML = drugSections;
+      document.getElementById('drawer-submit-btn').dataset.pharmacy = id;
+
+      drawer.hidden = false;
+      drawer.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => drawer.classList.add('open'));
+    }
+
+    function closePharmacyDrawer() {
+      const drawer = document.getElementById('pharmacy-drawer');
+      if (!drawer) return;
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      setTimeout(() => { drawer.hidden = true; }, 220);
+    }
+
+    // Wire drawer close
+    document.getElementById('drawer-close')?.addEventListener('click', closePharmacyDrawer);
+    document.getElementById('drawer-backdrop')?.addEventListener('click', closePharmacyDrawer);
+    document.getElementById('drawer-submit-btn')?.addEventListener('click', (e) => {
+      const pid = e.currentTarget.dataset.pharmacy;
+      closePharmacyDrawer();
+      // Open submission modal avec pharmacie pré-sélectionnée
+      document.dispatchEvent(new CustomEvent('open-submit-for', { detail: { pharmacyId: pid } }));
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const drawer = document.getElementById('pharmacy-drawer');
+        if (drawer && !drawer.hidden) closePharmacyDrawer();
+      }
+    });
 
     // ═══════════════════════════════════════════════════════════════
     // SUBMISSION MODAL — autocomplete pharmacie + insert Supabase
@@ -664,6 +697,10 @@ const updatedFr = stats.updated_at
       if (e.target && e.target.matches('[data-action="submit-for"]')) {
         openModal(e.target.getAttribute('data-pharmacy'));
       }
+    });
+    // Event custom déclenché par le drawer pharmacie
+    document.addEventListener('open-submit-for', (e) => {
+      openModal(e.detail && e.detail.pharmacyId);
     });
 
     // Submit
@@ -953,6 +990,174 @@ const updatedFr = stats.updated_at
     font-size: .78rem;
     line-height: 1.5;
   }
+
+  /* Drawer pharmacie — side panel desktop, bottom sheet mobile */
+  .pharmacy-drawer {
+    position: fixed; inset: 0;
+    z-index: 1100;
+    pointer-events: none;
+  }
+  .pharmacy-drawer[hidden] { display: none; }
+  .drawer-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(15, 23, 42, 0);
+    transition: background .22s ease;
+    pointer-events: auto;
+  }
+  .pharmacy-drawer.open .drawer-backdrop { background: rgba(15, 23, 42, .4); }
+  .drawer-panel {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 420px;
+    max-width: 92vw;
+    background: #fff;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, .2);
+    transform: translateX(100%);
+    transition: transform .22s cubic-bezier(.2, .9, .3, 1);
+    display: flex; flex-direction: column;
+    pointer-events: auto;
+  }
+  .pharmacy-drawer.open .drawer-panel { transform: translateX(0); }
+  .drawer-close {
+    position: absolute; top: .5rem; right: .75rem;
+    background: none; border: none;
+    font-size: 1.85rem; line-height: 1;
+    cursor: pointer; color: rgba(255, 255, 255, .8);
+    z-index: 2;
+  }
+  .drawer-close:hover { color: #fff; }
+  .drawer-head {
+    background: #1a3c34;
+    color: #fff;
+    padding: 1.1rem 1.25rem 1rem;
+  }
+  .drawer-name {
+    font-size: 1rem; font-weight: 800;
+    margin: 0;
+    line-height: 1.25;
+    padding-right: 2rem;
+  }
+  .drawer-city {
+    font-size: .78rem; opacity: .8; margin-top: .3rem;
+  }
+  .drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: .85rem 1.1rem;
+    display: flex; flex-direction: column;
+    gap: .6rem;
+    background: #f8faf9;
+  }
+  .drawer-footer {
+    padding: .85rem 1.1rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+  }
+  .drawer-legend {
+    font-size: .64rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: .65rem;
+  }
+  .drawer-cta {
+    display: block;
+    width: 100%;
+    padding: .85rem;
+    background: #1B6FA0;
+    color: #fff;
+    border: none; border-radius: 10px;
+    font-weight: 700; font-size: .9rem;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  .drawer-cta:hover { background: #0D4F73; }
+
+  /* Mobile : bottom sheet qui slide depuis le bas */
+  @media (max-width: 640px) {
+    .drawer-panel {
+      top: auto; right: 0; bottom: 0; left: 0;
+      width: 100%;
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: 16px 16px 0 0;
+      transform: translateY(100%);
+      box-shadow: 0 -12px 40px rgba(0, 0, 0, .2);
+    }
+    .pharmacy-drawer.open .drawer-panel { transform: translateY(0); }
+    .drawer-head {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  /* Drug/dose styles réutilisés dans le drawer */
+  .drawer-body .pop-drug {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: .75rem .9rem;
+  }
+  .drawer-body .pop-drug-active {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+  .drawer-body .pop-drug-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: .45rem;
+  }
+  .drawer-body .pop-drug-name {
+    font-weight: 800; font-size: .82rem; color: #1a3c34;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .drawer-body .pop-dose-list {
+    display: flex; flex-direction: column; gap: .25rem;
+  }
+  .drawer-body .pop-dose-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: .85rem; color: #4b5563;
+    padding: .2rem 0;
+  }
+  .drawer-body .pop-dose { color: #6b7280; font-size: .8rem; }
+  .drawer-body .pop-dose-row strong { font-size: 1rem; color: #1a3c34; font-weight: 800; }
+  .drawer-body .pop-dose-est { opacity: .85; }
+  .drawer-body .pop-dose-est strong { color: #4b5563 !important; }
+  .drawer-body .pop-drug-note {
+    font-size: .7rem;
+    color: #9ca3af;
+    margin-top: .45rem;
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .drawer-body :global(.pop-src-off),
+  .drawer-body :global(.pop-src-usr),
+  .drawer-body :global(.pop-src-est),
+  .drawer-body :global(.pop-src-scr) {
+    font-size: .62rem;
+    padding: .12rem .4rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+  }
+  .drawer-body :global(.pop-src-off) { background: #dcfce7; color: #15803d; }
+  .drawer-body :global(.pop-src-usr) { background: #fef3c7; color: #92400e; }
+  .drawer-body :global(.pop-src-est) { background: #f3f4f6; color: #6b7280; }
+  .drawer-body :global(.pop-src-scr) { background: #dbeafe; color: #1e40af; }
+  .drawer-body :global(.pop-dose-src) {
+    font-size: .55rem;
+    padding: .08rem .3rem;
+    margin-left: .25rem;
+  }
+  .drawer-legend :global(.pop-src-off),
+  .drawer-legend :global(.pop-src-usr),
+  .drawer-legend :global(.pop-src-est) {
+    font-size: .58rem;
+    padding: .08rem .3rem;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .drawer-legend :global(.pop-src-off) { background: #dcfce7; color: #15803d; }
+  .drawer-legend :global(.pop-src-usr) { background: #fef3c7; color: #92400e; }
+  .drawer-legend :global(.pop-src-est) { background: #f3f4f6; color: #6b7280; }
 
   /* Modal soumission */
   .submit-modal {
