@@ -59,18 +59,57 @@ export async function getStaticPaths() {
   }
   const topGlobalForOthers = topCities.slice(0, 12);
 
+  // Groupe par code postal pour chaque ville (arrondissements Paris, districts Marseille, etc.)
+  const zipcodesByCity = {};
+  for (const c of topCities) {
+    const zipCounts = {};
+    for (const p of c.pharmacies) {
+      const zip = p.postal;
+      if (!zip) continue;
+      zipCounts[zip] = (zipCounts[zip] || 0) + 1;
+    }
+    zipcodesByCity[c.slug] = Object.entries(zipCounts)
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([zip, count]) => ({ zip, count }));
+  }
+
+  // Calcule le bbox de chaque ville (pour zoomer la mini-map)
+  for (const c of topCities) {
+    let minLat = Infinity, minLng = Infinity, maxLat = -Infinity, maxLng = -Infinity;
+    for (const p of c.pharmacies) {
+      const lat = Number(p.lat), lng = Number(p.lng);
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+      if (lat < minLat) minLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lat > maxLat) maxLat = lat;
+      if (lng > maxLng) maxLng = lng;
+    }
+    c.bbox = [minLng, minLat, maxLng, maxLat];
+  }
+
   return topCities.map((c) => ({
     params: { ville: c.slug },
     props: {
       city: c,
       sameDept: sameDeptByCity[c.slug] || [],
       topGlobal: topGlobalForOthers.filter((o) => o.slug !== c.slug).slice(0, 10),
+      zipcodes: zipcodesByCity[c.slug] || [],
     },
   }));
 }
 
-const { city, sameDept = [], topGlobal = [] } = Astro.props;
+const { city, sameDept = [], topGlobal = [], zipcodes = [] } = Astro.props;
 const ville = city.slug;
+
+// Pharmacies sérialisées pour la mini-map (limitées à 1000 pour la perf)
+const mapPharmacies = city.pharmacies.slice(0, 1000).map((p) => ({
+  id: p.id,
+  name: p.name,
+  postal: p.postal,
+  lat: p.lat,
+  lng: p.lng,
+}));
+const bbox = city.bbox || [city.centerLng - 0.05, city.centerLat - 0.05, city.centerLng + 0.05, city.centerLat + 0.05];
 
 // Capitalise proprement "PARIS" → "Paris", "AIX EN PROVENCE" → "Aix en Provence"
 function titleCase(s) {
@@ -191,6 +230,106 @@ const faq = [
         </div>
       </div>
     </section>
+
+    <!-- Mini-map : pharmacies de la ville -->
+    <section class="ville-map-section">
+      <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+      <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" is:inline></script>
+      <div id="ville-map" class="ville-map" aria-label={`Carte des pharmacies à ${villeCap}`}></div>
+      <script is:inline define:vars={{ pharmaciesData: mapPharmacies, bbox, cityName: villeCap }}>
+        (function () {
+          if (typeof maplibregl === 'undefined') return;
+          const style = {
+            version: 8,
+            sources: {
+              'tiles': {
+                type: 'raster',
+                tiles: [
+                  'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+                  'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+                ],
+                tileSize: 256,
+                attribution: '© OpenStreetMap · © CARTO',
+              },
+            },
+            layers: [{ id: 'bg', type: 'raster', source: 'tiles' }],
+          };
+          const map = new maplibregl.Map({
+            container: 'ville-map',
+            style,
+            bounds: [[bbox[0], bbox[1]], [bbox[2], bbox[3]]],
+            fitBoundsOptions: { padding: 30, maxZoom: 14 },
+          });
+          map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+          const ready = new Promise((resolve) => {
+            let done = false;
+            const go = () => { if (done) return; done = true; resolve(); };
+            map.on('styledata', () => { if (map.isStyleLoaded()) go(); });
+            map.on('load', go);
+            setTimeout(go, 6000);
+          });
+
+          ready.then(() => {
+            const features = pharmaciesData.map((p) => ({
+              type: 'Feature',
+              geometry: { type: 'Point', coordinates: [Number(p.lng), Number(p.lat)] },
+              properties: { name: p.name, postal: p.postal },
+            }));
+            map.addSource('pharma', {
+              type: 'geojson',
+              data: { type: 'FeatureCollection', features },
+              cluster: true,
+              clusterRadius: 40,
+              clusterMaxZoom: 14,
+            });
+            map.addLayer({
+              id: 'clusters', type: 'circle', source: 'pharma', filter: ['has', 'point_count'],
+              paint: {
+                'circle-color': ['step', ['get', 'point_count'], '#93c5fd', 20, '#60a5fa', 100, '#2563eb'],
+                'circle-radius': ['step', ['get', 'point_count'], 14, 20, 18, 100, 22],
+                'circle-stroke-width': 2, 'circle-stroke-color': '#fff',
+              },
+            });
+            map.addLayer({
+              id: 'cluster-count', type: 'symbol', source: 'pharma', filter: ['has', 'point_count'],
+              layout: { 'text-field': '{point_count_abbreviated}', 'text-font': ['Noto Sans Regular'], 'text-size': 12 },
+              paint: { 'text-color': '#fff' },
+            });
+            map.addLayer({
+              id: 'points', type: 'circle', source: 'pharma', filter: ['!', ['has', 'point_count']],
+              paint: { 'circle-color': '#16a34a', 'circle-radius': 6, 'circle-stroke-width': 1.5, 'circle-stroke-color': '#fff' },
+            });
+            map.on('click', 'points', (e) => {
+              const f = e.features[0];
+              new maplibregl.Popup({ maxWidth: '280px' })
+                .setLngLat(f.geometry.coordinates)
+                .setHTML('<strong>' + f.properties.name + '</strong><br><small>' + f.properties.postal + '</small>')
+                .addTo(map);
+            });
+            map.on('mouseenter', 'points', () => { map.getCanvas().style.cursor = 'pointer'; });
+            map.on('mouseleave', 'points', () => { map.getCanvas().style.cursor = ''; });
+          });
+        })();
+      </script>
+    </section>
+
+    {zipcodes.length > 1 && (
+      <section class="ville-zipcodes">
+        <div class="ville-section-inner">
+          <h2>Pharmacies par code postal à {villeCap}</h2>
+          <p class="zip-intro">{zipcodes.length} codes postaux référencés. Cliquez pour voir les pharmacies de chaque secteur.</p>
+          <div class="zip-grid">
+            {zipcodes.map((z) => (
+              <a href={`/pharmacies/cp/${z.zip}/`} class="zip-card">
+                <span class="zip-code">{z.zip}</span>
+                <span class="zip-count">{z.count} pharmacies</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     <!-- Tableau prix par médicament -->
     <section class="ville-prices">
@@ -380,6 +519,59 @@ const faq = [
   .btn-primary:hover { background: #0f2d25; color: #fff; transform: translateY(-1px); }
   .btn-secondary { background: #fff; color: #1a3c34; border: 1.5px solid #d1d5db; }
   .btn-secondary:hover { border-color: #1a3c34; }
+
+  /* Mini-map de la ville */
+  .ville-map-section {
+    background: #f8faf9;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .ville-map {
+    width: 100%;
+    height: 420px;
+    background: #e5e7eb;
+  }
+  @media (max-width: 640px) {
+    .ville-map { height: 320px; }
+  }
+
+  /* Zipcodes grid */
+  .ville-zipcodes {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .zip-intro { color: #6b7280; font-size: .88rem; margin: 0 0 1.25rem; }
+  .zip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    gap: .5rem;
+  }
+  .zip-card {
+    background: #f8faf9;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: .7rem .9rem;
+    text-decoration: none;
+    color: #1a3c34;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    transition: all .15s;
+  }
+  .zip-card:hover {
+    border-color: #16a34a;
+    background: #f0fdf4;
+    transform: translateY(-1px);
+  }
+  .zip-code {
+    font-weight: 800;
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .zip-count {
+    font-size: .78rem;
+    color: #6b7280;
+  }
 
   .ville-prices, .ville-list, .ville-faq { padding: 2.5rem 1.5rem; }
   .ville-prices { background: #fff; border-bottom: 1px solid #e5e7eb; }
