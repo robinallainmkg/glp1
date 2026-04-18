@@ -1,5 +1,6 @@
 ---
 import StaticLayout from '../../layouts/StaticLayout.astro';
+import { supabaseConfig } from '../../lib/supabase';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -73,16 +74,72 @@ const updatedFr = stats.updated_at
     </section>
   </div>
 
-  <!-- Modal soumission (phase 2 — désactivé pour l'instant) -->
-  <div id="submit-modal" class="submit-modal" hidden>
-    <div class="submit-modal-inner">
+  <!-- Modal soumission -->
+  <div id="submit-modal" class="submit-modal" hidden aria-hidden="true">
+    <div class="submit-modal-inner" role="dialog" aria-labelledby="submit-title">
       <button type="button" class="modal-close" id="close-submit" aria-label="Fermer">×</button>
-      <h3>Partager un prix</h3>
-      <p class="submit-todo">Fonction en cours d'intégration. Reviens bientôt&nbsp;!</p>
+      <h3 id="submit-title">Partager un prix</h3>
+      <p class="submit-help">Vous avez vu un prix en pharmacie&nbsp;? Partagez-le pour aider la communauté.<br>Votre soumission sera vérifiée avant affichage.</p>
+
+      <form id="submit-form">
+        <!-- Pharmacie : champ autocomplete (ou lecture seule si préfilled) -->
+        <div class="form-row">
+          <label for="f-pharmacy">Pharmacie</label>
+          <input type="text" id="f-pharmacy" autocomplete="off" placeholder="Nom ou ville de la pharmacie…" required>
+          <input type="hidden" id="f-pharmacy-id" name="pharmacy_id" required>
+          <div id="f-pharmacy-results" class="autocomplete-results" hidden></div>
+          <div id="f-pharmacy-selected" class="pharmacy-selected" hidden>
+            <span class="ps-name"></span>
+            <span class="ps-city"></span>
+            <button type="button" class="ps-change" id="f-pharmacy-change">Changer</button>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="f-drug">Médicament</label>
+            <select id="f-drug" required>
+              <option value="">Choisir…</option>
+              <option value="ozempic">Ozempic</option>
+              <option value="wegovy">Wegovy</option>
+              <option value="mounjaro">Mounjaro</option>
+              <option value="saxenda">Saxenda</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="f-dose">Dose <span class="optional">(optionnel)</span></label>
+            <input type="text" id="f-dose" placeholder="ex. 1 mg, 2,5 mg" maxlength="16">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="f-price">Prix en euros</label>
+          <input type="number" id="f-price" min="1" max="1000" step="0.01" placeholder="ex. 285,50" required>
+        </div>
+
+        <div class="form-row">
+          <label for="f-notes">Remarque <span class="optional">(optionnel)</span></label>
+          <textarea id="f-notes" rows="2" maxlength="200" placeholder="ex. Prix vu le 12 avril, pharmacie habituelle…"></textarea>
+        </div>
+
+        <div class="form-row form-row-check">
+          <label>
+            <input type="checkbox" id="f-confirm" required>
+            Je confirme avoir vu ce prix en pharmacie (toute fausse déclaration sera supprimée).
+          </label>
+        </div>
+
+        <div id="f-error" class="form-error" hidden></div>
+        <div id="f-success" class="form-success" hidden>
+          Merci&nbsp;! Votre prix a été soumis. Il sera affiché après vérification.
+        </div>
+
+        <button type="submit" class="submit-btn" id="f-submit">Envoyer</button>
+      </form>
     </div>
   </div>
 
-  <script is:inline>
+  <script define:vars={{ SB_URL: supabaseConfig.url, SB_KEY: supabaseConfig.anonKey }}>
   // ═══════════════════════════════════════════════════════════════
   // MAP LOGIC — MapLibre GL + clustering natif sur 20k+ markers
   // ═══════════════════════════════════════════════════════════════
@@ -125,47 +182,15 @@ const updatedFr = stats.updated_at
       layers: [{ id: 'raster', type: 'raster', source: 'raster-tiles' }],
     };
 
-    const map = new maplibregl.Map({
-      container: 'map',
-      style,
-      center: [2.4, 46.5],   // centre France
-      zoom: 5.2,
-      minZoom: 4,
-      maxZoom: 18,
-    });
-    map.addControl(new maplibregl.NavigationControl(), 'top-right');
-    map.addControl(new maplibregl.GeolocateControl({
-      positionOptions: { enableHighAccuracy: true },
-      trackUserLocation: false,
-    }), 'top-right');
-
-    // Data fetch en parallèle
-    const dataPromise = Promise.all([
-      fetch('/data/pharmacies.json').then((r) => r.json()),
-      fetch('/data/latest-prices.json').then((r) => r.json()),
-    ]).then(([phResp, prResp]) => {
+    // ── 1) Fetch data first (modal et autocomplete en dépendent) ──
+    try {
+      const [phResp, prResp] = await Promise.all([
+        fetch('/data/pharmacies.json').then((r) => r.json()),
+        fetch('/data/latest-prices.json').then((r) => r.json()),
+      ]);
       pharmaciesSchema = phResp.schema;
       pharmacies = phResp.rows;
       latestPrices = prResp;
-    });
-
-    // Attendre que le style soit parsé. 'load' fire après que le style est loaded ET
-    // les tiles initiales sont arrivées. On utilise 'styledata' + isStyleLoaded pour
-    // gérer les environnements où les tiles pourraient être lentes ou bloquées.
-    await new Promise((resolve) => {
-      const onceReady = () => {
-        if (map.isStyleLoaded && map.isStyleLoaded()) {
-          map.off('styledata', onceReady);
-          map.off('load', onceReady);
-          resolve();
-        }
-      };
-      map.on('styledata', onceReady);
-      map.on('load', onceReady);
-    });
-
-    try {
-      await dataPromise;
     } catch (err) {
       document.getElementById('map-loading').textContent = 'Erreur de chargement des données.';
       console.error('[map] data error:', err);
@@ -179,6 +204,37 @@ const updatedFr = stats.updated_at
     const idxCP = pharmaciesSchema.indexOf('postal_code');
     const idxLat = pharmaciesSchema.indexOf('lat');
     const idxLng = pharmaciesSchema.indexOf('lng');
+
+    // Câble le modal immédiatement (indépendant de la map)
+    setupSubmissionModal();
+
+    // ── 2) Créer la map ── (si les tiles sont bloquées, la map ne rendra rien
+    // visuellement, mais le reste de la page — filtres, modal, CTA — fonctionne)
+    const map = new maplibregl.Map({
+      container: 'map',
+      style,
+      center: [2.4, 46.5],
+      zoom: 5.2,
+      minZoom: 4,
+      maxZoom: 18,
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+    map.addControl(new maplibregl.GeolocateControl({
+      positionOptions: { enableHighAccuracy: true },
+      trackUserLocation: false,
+    }), 'top-right');
+
+    await new Promise((resolve) => {
+      const onceReady = () => {
+        if (map.isStyleLoaded && map.isStyleLoaded()) {
+          map.off('styledata', onceReady);
+          map.off('load', onceReady);
+          resolve();
+        }
+      };
+      map.on('styledata', onceReady);
+      map.on('load', onceReady);
+    });
 
     function buildGeoJSON(drugFilter) {
       const features = [];
@@ -342,15 +398,184 @@ const updatedFr = stats.updated_at
       });
     });
 
-    // Modal soumission
+    // ═══════════════════════════════════════════════════════════════
+    // SUBMISSION MODAL — autocomplete pharmacie + insert Supabase
+    // ═══════════════════════════════════════════════════════════════
+    function setupSubmissionModal() {
     const modal = document.getElementById('submit-modal');
-    document.getElementById('open-submit').addEventListener('click', () => { modal.hidden = false; });
-    document.getElementById('close-submit').addEventListener('click', () => { modal.hidden = true; });
+    const fPharmacy = document.getElementById('f-pharmacy');
+    const fPharmacyId = document.getElementById('f-pharmacy-id');
+    const fPharmacyResults = document.getElementById('f-pharmacy-results');
+    const fPharmacySelected = document.getElementById('f-pharmacy-selected');
+    const fForm = document.getElementById('submit-form');
+    const fError = document.getElementById('f-error');
+    const fSuccess = document.getElementById('f-success');
+    const fSubmit = document.getElementById('f-submit');
+
+    function openModal(pharmacyId) {
+      resetForm();
+      if (pharmacyId) {
+        const row = pharmacies.find((p) => p[idxId] === pharmacyId);
+        if (row) selectPharmacy(row);
+      }
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal() {
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+    }
+    function resetForm() {
+      fForm.reset();
+      fPharmacyId.value = '';
+      fPharmacySelected.hidden = true;
+      fPharmacy.hidden = false;
+      fPharmacyResults.hidden = true;
+      fError.hidden = true;
+      fSuccess.hidden = true;
+      fSubmit.disabled = false;
+      fSubmit.textContent = 'Envoyer';
+    }
+
+    function selectPharmacy(row) {
+      fPharmacyId.value = row[idxId];
+      fPharmacy.hidden = true;
+      fPharmacyResults.hidden = true;
+      fPharmacySelected.querySelector('.ps-name').textContent = row[idxName] || '';
+      fPharmacySelected.querySelector('.ps-city').textContent =
+        (row[idxCity] || '') + (row[idxCP] ? ' · ' + row[idxCP] : '');
+      fPharmacySelected.hidden = false;
+    }
+
+    // Autocomplete (débouncé)
+    let acTimer = null;
+    fPharmacy.addEventListener('input', () => {
+      clearTimeout(acTimer);
+      acTimer = setTimeout(() => renderAutocomplete(fPharmacy.value.trim()), 180);
+    });
+    function renderAutocomplete(q) {
+      if (!q || q.length < 2) {
+        fPharmacyResults.hidden = true;
+        return;
+      }
+      const norm = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const qn = norm(q);
+      const hits = [];
+      for (const row of pharmacies) {
+        const name = norm(row[idxName]);
+        const city = norm(row[idxCity]);
+        if (name.indexOf(qn) > -1 || city.indexOf(qn) > -1) {
+          hits.push(row);
+          if (hits.length >= 10) break;
+        }
+      }
+      if (!hits.length) {
+        fPharmacyResults.innerHTML = '<div class="ac-empty">Aucune pharmacie trouvée</div>';
+      } else {
+        fPharmacyResults.innerHTML = hits.map((row, i) =>
+          `<button type="button" class="ac-item" data-i="${i}">
+             <span class="ac-name">${escapeHtml(row[idxName] || '')}</span>
+             <span class="ac-city">${escapeHtml(row[idxCity] || '')} · ${escapeHtml(row[idxCP] || '')}</span>
+           </button>`
+        ).join('');
+        // Bind clicks
+        fPharmacyResults.querySelectorAll('.ac-item').forEach((btn, i) => {
+          btn.addEventListener('click', () => selectPharmacy(hits[i]));
+        });
+      }
+      fPharmacyResults.hidden = false;
+    }
+
+    document.getElementById('f-pharmacy-change').addEventListener('click', () => {
+      fPharmacyId.value = '';
+      fPharmacySelected.hidden = true;
+      fPharmacy.hidden = false;
+      fPharmacy.value = '';
+      fPharmacy.focus();
+    });
+
+    // Open/close modal
+    document.getElementById('open-submit').addEventListener('click', () => openModal());
+    document.getElementById('close-submit').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
     document.addEventListener('click', (e) => {
       if (e.target && e.target.matches('[data-action="submit-for"]')) {
-        modal.hidden = false;
+        openModal(e.target.getAttribute('data-pharmacy'));
       }
     });
+
+    // Submit
+    fForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      fError.hidden = true;
+      fSuccess.hidden = true;
+
+      const pharmacy_id = fPharmacyId.value;
+      const drug_slug = document.getElementById('f-drug').value;
+      const dose = document.getElementById('f-dose').value.trim() || null;
+      const priceStr = document.getElementById('f-price').value.replace(',', '.');
+      const price_eur = parseFloat(priceStr);
+      const notes = document.getElementById('f-notes').value.trim() || null;
+
+      if (!pharmacy_id) {
+        showErr('Sélectionne une pharmacie dans la liste.');
+        return;
+      }
+      if (!drug_slug) {
+        showErr('Choisis un médicament.');
+        return;
+      }
+      if (!Number.isFinite(price_eur) || price_eur <= 0 || price_eur > 1000) {
+        showErr('Prix invalide (entre 1 et 1000 €).');
+        return;
+      }
+
+      const session_id = localStorage.getItem('glp1_coach_session')
+        || 'anon_' + Math.random().toString(36).slice(2, 10);
+
+      fSubmit.disabled = true;
+      fSubmit.textContent = 'Envoi…';
+      try {
+        const r = await fetch(SB_URL + '/rest/v1/pharmacy_prices', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SB_KEY,
+            'Authorization': 'Bearer ' + SB_KEY,
+            'Prefer': 'return=minimal',
+          },
+          body: JSON.stringify({
+            pharmacy_id, drug_slug, dose, price_eur,
+            source: 'user', verified: false, display: true,
+            submitted_by_session: session_id,
+            notes,
+          }),
+        });
+        if (!r.ok) {
+          const t = await r.text();
+          throw new Error(t || ('HTTP ' + r.status));
+        }
+        fSuccess.hidden = false;
+        fSubmit.textContent = 'Merci !';
+        setTimeout(closeModal, 2500);
+      } catch (err) {
+        console.error(err);
+        showErr('Erreur lors de l\'envoi. Réessaie dans un instant.');
+        fSubmit.disabled = false;
+        fSubmit.textContent = 'Envoyer';
+      }
+    });
+
+    function showErr(msg) {
+      fError.textContent = msg;
+      fError.hidden = false;
+    }
+    } // end setupSubmissionModal
 
     function escapeHtml(s) {
       return String(s).replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
@@ -531,8 +756,130 @@ const updatedFr = stats.updated_at
     width: 100%;
     position: relative;
   }
+  .submit-modal-inner {
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
   .submit-modal h3 { margin: 0 0 .5rem; font-size: 1.25rem; color: #1a3c34; }
-  .submit-todo { color: #6b7280; font-size: .9rem; }
+  .submit-help { color: #6b7280; font-size: .82rem; line-height: 1.5; margin-bottom: 1.25rem; }
+
+  #submit-form .form-row { margin-bottom: 1rem; position: relative; }
+  #submit-form .form-grid { display: grid; grid-template-columns: 1fr 120px; gap: .75rem; }
+  #submit-form label {
+    display: block; font-size: .78rem; font-weight: 600; color: #374151;
+    margin-bottom: .3rem;
+  }
+  #submit-form label .optional { color: #9ca3af; font-weight: 400; }
+  #submit-form input[type="text"],
+  #submit-form input[type="number"],
+  #submit-form select,
+  #submit-form textarea {
+    width: 100%;
+    padding: .6rem .75rem;
+    font-size: .92rem;
+    font-family: inherit;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #1f2937;
+    transition: border-color .15s;
+    box-sizing: border-box;
+  }
+  #submit-form input:focus,
+  #submit-form select:focus,
+  #submit-form textarea:focus {
+    outline: none; border-color: #1a3c34;
+  }
+  .form-row-check label {
+    display: flex; align-items: flex-start; gap: .5rem;
+    font-size: .78rem; color: #4b5563; font-weight: 400;
+    cursor: pointer;
+  }
+  .form-row-check input { margin-top: .15rem; flex-shrink: 0; }
+
+  .autocomplete-results {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-top: .25rem;
+    max-height: 260px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
+  }
+  .ac-item {
+    display: block; width: 100%; text-align: left;
+    background: none; border: none;
+    padding: .6rem .75rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f3f4f6;
+    font-family: inherit;
+  }
+  .ac-item:last-child { border-bottom: none; }
+  .ac-item:hover { background: #f0fdf4; }
+  .ac-name { display: block; font-size: .88rem; color: #1f2937; font-weight: 600; line-height: 1.3; }
+  .ac-city { display: block; font-size: .72rem; color: #6b7280; margin-top: .15rem; }
+  .ac-empty { padding: .75rem; font-size: .85rem; color: #9ca3af; text-align: center; }
+
+  .pharmacy-selected {
+    background: #f0fdf4;
+    border: 1.5px solid #bbf7d0;
+    border-radius: 8px;
+    padding: .7rem .85rem;
+    display: flex; align-items: center; gap: .75rem;
+    flex-wrap: wrap;
+  }
+  .ps-name { font-weight: 600; font-size: .88rem; color: #15803d; flex: 1; min-width: 0; }
+  .ps-city { font-size: .75rem; color: #16a34a; }
+  .ps-change {
+    background: none; border: 1px solid #86efac; color: #15803d;
+    padding: .25rem .6rem; border-radius: 6px; font-size: .72rem; font-weight: 600;
+    cursor: pointer;
+  }
+  .ps-change:hover { background: #dcfce7; }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: .85rem;
+    background: #1a3c34;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: .95rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background .2s;
+  }
+  .submit-btn:hover { background: #0f2d25; }
+  .submit-btn:disabled { opacity: .6; cursor: wait; }
+
+  .form-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: .6rem .85rem;
+    border-radius: 8px;
+    font-size: .82rem;
+    margin-bottom: .75rem;
+  }
+  .form-success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+    padding: .7rem .85rem;
+    border-radius: 8px;
+    font-size: .88rem;
+    margin-bottom: .75rem;
+  }
+
+  @media (max-width: 480px) {
+    #submit-form .form-grid { grid-template-columns: 1fr; }
+  }
   .modal-close {
     position: absolute;
     top: .5rem; right: .75rem;

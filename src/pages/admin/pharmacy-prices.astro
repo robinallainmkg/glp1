@@ -1,0 +1,330 @@
+---
+import AdminNav from '../../components/AdminNav.astro';
+import { supabaseConfig } from '../../lib/supabase';
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prix pharmacies — GLP1 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0e17; color: #c8d6e5; }
+    .admin-layout { margin-left: 260px; min-height: 100vh; }
+    .page-header {
+      background: linear-gradient(180deg, #0f1520 0%, #0a0e17 100%);
+      border-bottom: 1px solid #1a2332;
+      padding: 1.5rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #e2e8f0; }
+    .page-header p { font-size: 0.88rem; color: #64748b; margin-top: 0.25rem; }
+    .refresh-btn {
+      padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #1e293b;
+      background: #0f1520; color: #94a3b8; font-size: 0.82rem; cursor: pointer;
+    }
+    .refresh-btn:hover { background: #1e293b; color: #e2e8f0; }
+
+    .main { padding: 2rem; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #111827; border-radius: 12px; padding: 1.25rem; border: 1px solid #1e293b; }
+    .stat-card .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; color: #64748b; margin-bottom: 0.4rem; letter-spacing: .05em; }
+    .stat-card .value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-card .sub { font-size: 0.72rem; color: #475569; margin-top: 0.35rem; }
+
+    .filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 0.4rem 0.85rem; border-radius: 20px;
+      border: 1px solid #1e293b; background: #111827; color: #94a3b8;
+      font-size: 0.78rem; cursor: pointer; font-weight: 500;
+    }
+    .filter-btn:hover { border-color: #334155; color: #e2e8f0; }
+    .filter-btn.active { background: #3b82f6; color: white; border-color: #3b82f6; }
+    .filter-count { font-size: 0.68rem; background: rgba(255,255,255,0.1); padding: 1px 6px; border-radius: 10px; margin-left: 4px; }
+
+    .ticket-table { width: 100%; background: #111827; border-radius: 12px; border: 1px solid #1e293b; overflow: hidden; }
+    .ticket-table table { width: 100%; border-collapse: collapse; }
+    .ticket-table th {
+      text-align: left; padding: 0.75rem 1rem; font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: #64748b;
+      border-bottom: 1px solid #1e293b; background: #0f1520;
+    }
+    .ticket-table td { padding: 0.75rem 1rem; font-size: 0.82rem; border-bottom: 1px solid #1a2332; color: #c8d6e5; vertical-align: top; }
+    .ticket-table tr:last-child td { border-bottom: none; }
+    .ticket-table tr:hover td { background: #1a2332; }
+
+    .ph-name { font-weight: 600; color: #e2e8f0; }
+    .ph-city { font-size: 0.72rem; color: #64748b; margin-top: 2px; }
+
+    .drug-badge {
+      display: inline-block; padding: 2px 8px; border-radius: 12px;
+      font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em;
+    }
+    .drug-ozempic { background: #052e16; color: #86efac; }
+    .drug-wegovy { background: #451a03; color: #fcd34d; }
+    .drug-mounjaro { background: #1e3a5f; color: #93c5fd; }
+    .drug-saxenda { background: #3b1764; color: #d8b4fe; }
+
+    .src-user { background: #451a03; color: #fcd34d; padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; }
+    .src-scraped { background: #1e3a5f; color: #93c5fd; padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; }
+    .src-official_ceps { background: #052e16; color: #86efac; padding: 2px 6px; border-radius: 8px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; }
+
+    .price-value { font-size: 1rem; font-weight: 800; color: #e2e8f0; white-space: nowrap; }
+
+    .actions { display: flex; gap: 6px; }
+    .btn {
+      padding: 0.3rem 0.75rem; border-radius: 6px; border: none;
+      font-size: 0.72rem; font-weight: 600; cursor: pointer;
+    }
+    .btn-approve { background: #16a34a; color: white; }
+    .btn-approve:hover { background: #15803d; }
+    .btn-reject { background: #450a0a; color: #fca5a5; border: 1px solid #7f1d1d; }
+    .btn-reject:hover { background: #7f1d1d; color: white; }
+    .btn-disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .empty { text-align: center; padding: 3rem 1rem; color: #475569; }
+    .loading { text-align: center; padding: 2rem; color: #94a3b8; font-size: 0.88rem; }
+
+    .notes-cell { font-size: 0.75rem; color: #94a3b8; max-width: 260px; }
+    .submitted-cell { font-size: 0.72rem; color: #64748b; white-space: nowrap; }
+  </style>
+</head>
+
+<body>
+  <AdminNav currentPage="pharmacy-prices" />
+
+  <div class="admin-layout">
+    <div class="page-header">
+      <div>
+        <h1>Prix pharmacies</h1>
+        <p>Modération des soumissions communautaires</p>
+      </div>
+      <button class="refresh-btn" id="refresh-btn">↻ Rafraîchir</button>
+    </div>
+
+    <div class="main">
+      <div class="stats-grid" id="stats">
+        <div class="stat-card"><div class="label">En attente</div><div class="value" id="stat-pending">-</div><div class="sub">à modérer</div></div>
+        <div class="stat-card"><div class="label">Vérifiés</div><div class="value" id="stat-verified" style="color:#86efac">-</div><div class="sub">affichés publiquement</div></div>
+        <div class="stat-card"><div class="label">Rejetés</div><div class="value" id="stat-rejected" style="color:#fca5a5">-</div><div class="sub">masqués</div></div>
+        <div class="stat-card"><div class="label">Soumissions 7j</div><div class="value" id="stat-recent" style="color:#93c5fd">-</div><div class="sub">cette semaine</div></div>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="pending">En attente <span class="filter-count" id="fc-pending">0</span></button>
+        <button class="filter-btn" data-filter="verified">Vérifiés <span class="filter-count" id="fc-verified">0</span></button>
+        <button class="filter-btn" data-filter="rejected">Rejetés <span class="filter-count" id="fc-rejected">0</span></button>
+        <button class="filter-btn" data-filter="all">Tout <span class="filter-count" id="fc-all">0</span></button>
+      </div>
+
+      <div class="ticket-table">
+        <div id="table-body">
+          <div class="loading">Chargement…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script define:vars={{ SB_URL: supabaseConfig.url, SB_KEY: supabaseConfig.anonKey }}>
+    let allPrices = [];
+    let pharmacyIndex = {}; // id -> {name, city, postal_code}
+    let currentFilter = 'pending';
+
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s || '';
+      return d.innerHTML;
+    }
+
+    function timeAgo(dateStr) {
+      if (!dateStr) return '-';
+      const diff = Date.now() - new Date(dateStr).getTime();
+      const mins = Math.floor(diff / 60000);
+      if (mins < 1) return 'maintenant';
+      if (mins < 60) return mins + ' min';
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return hrs + ' h';
+      const days = Math.floor(hrs / 24);
+      return days + ' j';
+    }
+
+    async function sbGet(path) {
+      const r = await fetch(SB_URL + '/rest/v1/' + path, {
+        headers: { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY },
+      });
+      if (!r.ok) throw new Error(await r.text());
+      return r.json();
+    }
+
+    async function sbPatch(path, body) {
+      const r = await fetch(SB_URL + '/rest/v1/' + path, {
+        method: 'PATCH',
+        headers: {
+          apikey: SB_KEY,
+          Authorization: 'Bearer ' + SB_KEY,
+          'Content-Type': 'application/json',
+          Prefer: 'return=minimal',
+        },
+        body: JSON.stringify(body),
+      });
+      if (!r.ok) throw new Error(await r.text());
+    }
+
+    async function loadAll() {
+      document.getElementById('table-body').innerHTML = '<div class="loading">Chargement…</div>';
+      // All non-official prices, plus les officiels gérés séparément
+      const prices = await sbGet('pharmacy_prices?source=neq.official_ceps&select=*&order=submitted_at.desc&limit=500');
+
+      // Charger les pharmacies pour les prix trouvés
+      const ids = [...new Set(prices.map((p) => p.pharmacy_id))];
+      const pharmacies = ids.length
+        ? await sbGet('pharmacies?select=id,name,city,postal_code&id=in.(' + ids.map((i) => '"' + i + '"').join(',') + ')')
+        : [];
+      pharmacyIndex = {};
+      for (const p of pharmacies) pharmacyIndex[p.id] = p;
+
+      allPrices = prices;
+      render();
+      renderStats();
+    }
+
+    function priceStatus(p) {
+      if (p.verified) return 'verified';
+      if (p.display === false) return 'rejected';
+      return 'pending';
+    }
+
+    function render() {
+      const filtered = allPrices.filter((p) =>
+        currentFilter === 'all' ? true : priceStatus(p) === currentFilter
+      );
+
+      const counts = { pending: 0, verified: 0, rejected: 0 };
+      for (const p of allPrices) counts[priceStatus(p)]++;
+      document.getElementById('fc-pending').textContent = counts.pending;
+      document.getElementById('fc-verified').textContent = counts.verified;
+      document.getElementById('fc-rejected').textContent = counts.rejected;
+      document.getElementById('fc-all').textContent = allPrices.length;
+
+      const tbody = document.getElementById('table-body');
+      if (!filtered.length) {
+        tbody.innerHTML = '<div class="empty">Aucune soumission.</div>';
+        return;
+      }
+
+      const rows = filtered.map((p) => {
+        const ph = pharmacyIndex[p.pharmacy_id] || {};
+        const status = priceStatus(p);
+        const canVerify = !p.verified;
+        const canReject = p.display !== false;
+        return `
+          <tr data-id="${esc(p.id)}">
+            <td>
+              <div class="ph-name">${esc(ph.name || '(pharmacie introuvable)')}</div>
+              <div class="ph-city">${esc(ph.city || '')} · ${esc(ph.postal_code || '')}</div>
+            </td>
+            <td>
+              <span class="drug-badge drug-${esc(p.drug_slug)}">${esc(p.drug_slug)}</span>
+              ${p.dose ? '<span style="color:#64748b;font-size:.72rem;margin-left:4px">' + esc(p.dose) + '</span>' : ''}
+            </td>
+            <td><span class="price-value">${Number(p.price_eur).toFixed(2)} €</span></td>
+            <td><span class="src-${esc(p.source)}">${esc(p.source)}</span></td>
+            <td class="notes-cell">${esc(p.notes || '-')}</td>
+            <td class="submitted-cell">${timeAgo(p.submitted_at)}</td>
+            <td>
+              <div class="actions">
+                <button class="btn btn-approve ${!canVerify ? 'btn-disabled' : ''}" data-action="approve" data-id="${esc(p.id)}" ${!canVerify ? 'disabled' : ''}>Valider</button>
+                <button class="btn btn-reject ${!canReject ? 'btn-disabled' : ''}" data-action="reject" data-id="${esc(p.id)}" ${!canReject ? 'disabled' : ''}>Rejeter</button>
+              </div>
+            </td>
+          </tr>`;
+      }).join('');
+
+      tbody.innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Pharmacie</th>
+              <th>Médicament</th>
+              <th>Prix</th>
+              <th>Source</th>
+              <th>Note</th>
+              <th>Soumis</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+
+      // Bind actions
+      tbody.querySelectorAll('button[data-action]').forEach((btn) => {
+        btn.addEventListener('click', () => handleAction(btn.dataset.action, btn.dataset.id, btn));
+      });
+    }
+
+    function renderStats() {
+      const counts = { pending: 0, verified: 0, rejected: 0, recent: 0 };
+      const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+      for (const p of allPrices) {
+        counts[priceStatus(p)]++;
+        if (new Date(p.submitted_at).getTime() > weekAgo) counts.recent++;
+      }
+      document.getElementById('stat-pending').textContent = counts.pending;
+      document.getElementById('stat-verified').textContent = counts.verified;
+      document.getElementById('stat-rejected').textContent = counts.rejected;
+      document.getElementById('stat-recent').textContent = counts.recent;
+    }
+
+    async function handleAction(action, id, btn) {
+      btn.disabled = true;
+      btn.textContent = '…';
+      try {
+        if (action === 'approve') {
+          await sbPatch('pharmacy_prices?id=eq.' + encodeURIComponent(id), {
+            verified: true,
+            verified_at: new Date().toISOString(),
+            display: true,
+          });
+          // Update local
+          const p = allPrices.find((x) => x.id === id);
+          if (p) { p.verified = true; p.display = true; p.verified_at = new Date().toISOString(); }
+        } else if (action === 'reject') {
+          await sbPatch('pharmacy_prices?id=eq.' + encodeURIComponent(id), {
+            display: false,
+          });
+          const p = allPrices.find((x) => x.id === id);
+          if (p) p.display = false;
+        }
+        render();
+        renderStats();
+      } catch (err) {
+        alert('Erreur : ' + err.message);
+        btn.textContent = action === 'approve' ? 'Valider' : 'Rejeter';
+        btn.disabled = false;
+      }
+    }
+
+    // Filters
+    document.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        render();
+      });
+    });
+
+    // Refresh
+    document.getElementById('refresh-btn').addEventListener('click', loadAll);
+
+    // Initial load
+    loadAll().catch((err) => {
+      document.getElementById('table-body').innerHTML = '<div class="empty">Erreur : ' + esc(err.message) + '</div>';
+    });
+  </script>
+</body>
+</html>
