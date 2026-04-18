@@ -91,6 +91,7 @@ Le **prix de Wegovy en pharmacie** en France varie entre **169€ et 360€ par 
 | 1 mg | ~250€ |
 | 1,7 mg | ~310€ |
 | 2,4 mg (dose cible) | ~360€ |
+| 7,2 mg (3×2,4 mg) | Prix non encore fixé |
 
 Le prix de Wegovy varie entre 169€ et 360€ par mois selon le dosage. Wegovy n'est pas remboursé par la Sécurité Sociale en 2026.
 

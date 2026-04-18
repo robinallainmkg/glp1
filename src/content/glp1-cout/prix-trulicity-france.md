@@ -88,7 +88,7 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Trulicity | ~81 € | 65% (DT2 uniquement) |
-| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 65% (DT2 uniquement) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 30% (DT2 uniquement) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | Mounjaro | 230-440 € | Non remboursé |
@@ -135,11 +135,11 @@ image: "/images/thumbnails/prix-trulicity-france-illus.jpg"
 
 ## 💳 Aides Financières Disponibles
 
-### Aide à l'acquisition (Aide APA)
+### Complémentaire Santé Solidaire (CSS, ex-CMU-C)
 
-- **Conditions** : Revenus modestes, âge ≥ 18 ans
-- **Montant** : Jusqu'à 50 € par mois
-- **Demande** : Via votre CPAM
+- **Conditions** : Revenus inférieurs au plafond CSS
+- **Montant** : Prise en charge complète des médicaments remboursés
+- **Demande** : Via ameli.fr ou votre CPAM
 
 ### Fonds d'aide à la santé (FAS)
 

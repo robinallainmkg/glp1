@@ -143,11 +143,11 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
 
 ## 💳 Aides Financières Disponibles
 
-### Aide à l'acquisition (Aide APA)
+### Complémentaire Santé Solidaire (CSS, ex-CMU-C)
 
-- **Conditions** : Revenus modestes, âge ≥ 18 ans
-- **Montant** : Jusqu'à 50 € par mois
-- **Demande** : Via votre CPAM
+- **Conditions** : Revenus inférieurs au plafond CSS
+- **Montant** : Prise en charge complète des médicaments remboursés
+- **Demande** : Via ameli.fr ou votre CPAM
 
 ### Fonds d'aide à la santé (FAS)
 

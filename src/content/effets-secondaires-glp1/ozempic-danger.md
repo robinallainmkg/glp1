@@ -67,8 +67,8 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 
 **Action immédiate** : Arrêt d'Ozempic et hospitalisation urgente
 
-**Témoignage médical - Dr. Rousseau, gastro-entérologue**
-> *"J'ai traité 3 cas de pancréatite sous Ozempic en 2 ans. Diagnostic précoce crucial : toute douleur abdominale intense chez un patient sous GLP-1 nécessite dosage lipase immédiat."*
+**Recommandation officielle (RCP Ozempic, ANSM/EMA)**
+> *Selon le RCP Ozempic (ANSM/EMA), la pancréatite aiguë est classifiée "peu fréquente" (<1/100 patients). Toute douleur abdominale intense chez un patient sous GLP-1 nécessite un dosage de lipase en urgence.*
 
 ### 2. Risque thyroïdien
 
@@ -371,5 +371,3 @@ Ces ressources complémentaires vous aideront à approfondir vos connaissances s
   }
 }
 </script>
-
- et rappel de précautions.

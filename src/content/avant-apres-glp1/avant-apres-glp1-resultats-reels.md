@@ -31,7 +31,7 @@ L'étude STEP 1, publiée dans le New England Journal of Medicine en 2021, reste
 
 | Résultat | Wegovy | Placebo |
 |----------|--------|---------|
-| Perte de poids moyenne | **-15,3%** | -2,6% |
+| Perte de poids moyenne | **-14,9%** | -2,4% |
 | Patients ayant perdu ≥ 5% | 83% | 31% |
 | Patients ayant perdu ≥ 10% | 66% | 12% |
 | Patients ayant perdu ≥ 15% | 48% | 5% |
@@ -45,11 +45,11 @@ Mounjaro (tirzépatide) a produit des résultats encore plus impressionnants dan
 
 | Dosage | Perte moyenne | ≥ 20% de perte |
 |--------|--------------|----------------|
-| 5 mg | -15,0% | 30% des patients |
-| 10 mg | -19,5% | 46% des patients |
-| 15 mg | **-20,9%** | 57% des patients |
+| 5 mg | -16,0% | 32% des patients |
+| 10 mg | -21,4% | 55% des patients |
+| 15 mg | **-22,5%** | 63% des patients |
 
-Pour une personne de 100 kg, le tirzépatide à la dose maximale entraîne une perte moyenne de **21 kg** en 18 mois. Plus de la moitié des patients perdent plus de 20% de leur poids initial.
+Pour une personne de 100 kg, le tirzépatide à la dose maximale entraîne une perte moyenne de **22,5 kg** en 18 mois. Près de deux tiers des patients perdent plus de 20% de leur poids initial.
 
 ### Saxenda (liraglutide 3 mg) — L'étude SCALE
 
