@@ -418,7 +418,7 @@ async function fetchGSC(token, days) {
   }
 
   const data = await r.json();
-  const rows = (data.rows || []).map(row => {
+  const allRows = (data.rows || []).map(row => {
     const pagePath = new URL(row.keys[0]).pathname;
     return {
       page_path: pagePath,
@@ -433,7 +433,17 @@ async function fetchGSC(token, days) {
     };
   });
 
-  console.log(`  🔎 ${rows.length} rows fetched`);
+  // Keep only rows from the top 500 pages by impressions to limit Supabase disk IO
+  const pageImpressions = new Map();
+  for (const row of allRows) {
+    pageImpressions.set(row.page_path, (pageImpressions.get(row.page_path) || 0) + row.impressions);
+  }
+  const top500Pages = new Set(
+    [...pageImpressions.entries()].sort((a, b) => b[1] - a[1]).slice(0, 500).map(([p]) => p)
+  );
+  const rows = allRows.filter(r => top500Pages.has(r.page_path));
+
+  console.log(`  🔎 ${rows.length} rows fetched (${allRows.length} total, capped to top ${top500Pages.size} pages)`);
   return rows;
 }
 

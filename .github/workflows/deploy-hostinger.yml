@@ -24,7 +24,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 90
 
     steps:
     - uses: actions/checkout@v4
@@ -56,14 +56,14 @@ jobs:
             set net:max-retries 20;
             set net:reconnect-interval-base 5;
             set net:reconnect-interval-multiplier 2;
-            set mirror:parallel-transfer-count 6;
+            set mirror:parallel-transfer-count 10;
             set mirror:use-pget-n 1;
             set ftp:sync-mode off;
             set xfer:clobber yes;
             # --ignore-time (-I) : compare par taille uniquement (ignore timestamp).
             # Les 20k pages pharmacies ont du contenu byte-stable entre builds :
             # skip si taille identique. 1er deploy ~30min, suivants ~3-5min.
-            mirror --reverse --delete --verbose --no-perms --parallel=6 --ignore-time ./dist/ /domains/glp1-france.fr/public_html/;
+            mirror --reverse --delete --verbose --no-perms --parallel=10 --ignore-time ./dist/ /domains/glp1-france.fr/public_html/;
             quit
           " && echo "Deploy SUCCESS on attempt $ATTEMPT" && exit 0
 
