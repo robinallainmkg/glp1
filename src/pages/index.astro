@@ -1,6 +1,6 @@
 ---
 import StaticLayout from '../layouts/StaticLayout.astro';
-import PartnerComparator from '../components/PartnerComparator.astro';
+import DualPartnerBanner from '../components/DualPartnerBanner.astro';
 // import NewsletterCapture from '../components/NewsletterCapture.astro';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -482,10 +482,10 @@ latestArticles = latestArticles
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 4 : PARTENAIRES SANTÉ (comparateur)  -->
+    <!-- SECTION 4 : PARTENAIRES SANTÉ (Charles + Annette) -->
     <!-- ============================================ -->
     <div id="partenaires">
-      <PartnerComparator context="homepage" />
+      <DualPartnerBanner context="homepage" />
     </div>
 
     <!-- ============================================ -->
@@ -847,22 +847,7 @@ latestArticles = latestArticles
       </script>
     </section>
 
-    <!-- ============================================ -->
-    <!-- SECTION 8.5 : CTA PARTENAIRES (bandeau)      -->
-    <!-- ============================================ -->
-    <section style="background:linear-gradient(135deg,#F0F9FF 0%,#E8F6FF 50%,#f0fdf4 100%);padding:3rem 1.5rem;">
-      <div style="max-width:800px;margin:0 auto;text-align:center;">
-        <h2 style="font-size:1.6rem;font-weight:900;color:#1f2937;margin-bottom:.5rem;letter-spacing:-.03em;">Besoin d'un accompagnement professionnel ?</h2>
-        <p style="color:#6b7280;margin-bottom:1.5rem;font-size:.95rem;">Notre partenaire santé certifié vous aide à optimiser votre traitement GLP-1.</p>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem;">
-          <a href="https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_banner" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 2rem;background:#1B6FA0;color:#fff;font-weight:700;font-size:1rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 14px rgba(27,111,160,.2);">
-            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Découvrir Annette — 1er mois à 24,50€
-          </a>
-          <span style="font-size:.78rem;color:#6b7280;">Code CARE50 · Diététiciens certifiés · 2 000+ patients accompagnés</span>
-        </div>
-      </div>
-    </section>
+    <!-- SECTION 8.5 — supprimée (duplicatait section 4 dual banner) -->
 
     <!-- SECTION 9 : NEWSLETTER — désactivée -->
 

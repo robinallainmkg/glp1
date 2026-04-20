@@ -1,0 +1,240 @@
+---
+// Sidebar partenaire Charles — téléconsultation + prescription si éligible
+interface Props {
+  context?: string;
+}
+
+const { context = "sidebar" } = Astro.props;
+const charlesBase = "https://poids.charles.co/?utm_source=affiliation&utm_medium=glp1france";
+const charlesLink = `${charlesBase}&utm_campaign=partenariat_${context}`;
+---
+
+<aside class="partner-sidebar partner-sidebar-charles">
+  <div class="partner-card">
+    <div class="partner-header">
+      <span class="partner-name">Charles</span>
+      <span class="partner-badge">Partenaire</span>
+    </div>
+
+    <p class="partner-tagline">T&eacute;l&eacute;consultation avec un m&eacute;decin sp&eacute;cialiste fran&ccedil;ais et prescription si vous &ecirc;tes &eacute;ligible.</p>
+
+    <div class="partner-features">
+      <div class="feature-item">
+        <span class="feature-icon">&#10003;</span>
+        <span>M&eacute;decins sp&eacute;cialistes fran&ccedil;ais</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#10003;</span>
+        <span>Ordonnance si profil &eacute;ligible</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#10003;</span>
+        <span>Suivi par l'&eacute;quipe Charles</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">&#10003;</span>
+        <span>H&eacute;bergeur agr&eacute;&eacute; donn&eacute;es sant&eacute;</span>
+      </div>
+    </div>
+
+    <div class="partner-pricing">
+      <div class="price-row">
+        <span class="price-old">80&euro; en cabinet</span>
+        <span class="price-new">35&euro;</span>
+      </div>
+      <span class="price-note">T&eacute;l&eacute;consultation sp&eacute;cialiste</span>
+    </div>
+
+    <a
+      href={charlesLink}
+      target="_blank"
+      rel="noopener sponsored"
+      class="partner-cta"
+    >
+      V&eacute;rifier mon &eacute;ligibilit&eacute; &rarr;
+    </a>
+
+    <div class="partner-trust">
+      <span>Clinique digitale</span>
+      <span class="trust-sep">&middot;</span>
+      <span>01 86 65 17 33</span>
+    </div>
+  </div>
+
+  <p class="partner-disclaimer">
+    Lien d'affiliation. GLP-1 France peut recevoir une commission. Cela n'affecte pas nos recommandations &eacute;ditoriales.
+  </p>
+</aside>
+
+<style>
+.partner-sidebar-charles {
+  position: sticky;
+  top: 2rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.partner-sidebar-charles .partner-card {
+  background: #F8F3E9;
+  border: 1px solid #1a1a1a;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.partner-sidebar-charles .partner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partner-sidebar-charles .partner-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.partner-sidebar-charles .partner-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.partner-sidebar-charles .partner-tagline {
+  font-size: 0.9rem;
+  color: #3a3a3a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.partner-sidebar-charles .partner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.partner-sidebar-charles .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.partner-sidebar-charles .feature-icon {
+  color: #1a1a1a;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.partner-sidebar-charles .partner-pricing {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: 1px solid #e5dcc8;
+}
+
+.partner-sidebar-charles .price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.partner-sidebar-charles .price-old {
+  font-size: 0.85rem;
+  color: #9a9a9a;
+  text-decoration: line-through;
+}
+
+.partner-sidebar-charles .price-new {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.partner-sidebar-charles .price-note {
+  font-size: 0.75rem;
+  color: #6b6b6b;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.partner-sidebar-charles .partner-cta {
+  display: block;
+  text-align: center;
+  background: #1a1a1a;
+  color: #F8F3E9;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.partner-sidebar-charles .partner-cta:hover {
+  background: #000;
+  transform: translateY(-1px);
+  color: #F8F3E9;
+  text-decoration: none;
+}
+
+.partner-sidebar-charles .partner-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #6b6b6b;
+}
+
+.partner-sidebar-charles .trust-sep {
+  color: #d1d5db;
+}
+
+.partner-sidebar-charles .partner-disclaimer {
+  font-size: 0.68rem;
+  color: #9a9a9a;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .partner-sidebar-charles {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-sidebar-charles .partner-card {
+    padding: 1.25rem;
+  }
+}
+
+@media print {
+  .partner-sidebar-charles {
+    display: none;
+  }
+}
+</style>
