@@ -4,7 +4,6 @@ import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Hotjar from '../components/Hotjar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import AiCoach from '../components/AiCoach.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
 
 export interface Props {
@@ -109,8 +108,6 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
   <!-- Footer -->
   <SiteFooter />
 
-  <!-- Coach IA GLP-1 -->
-  <AiCoach />
   <AffiliateTracker />
 
   <!-- JavaScript pour la navigation -->
