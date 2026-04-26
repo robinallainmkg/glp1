@@ -94,7 +94,7 @@ Pendant l'allaitement, l'objectif n'est pas de faire un régime strict, mais d'a
 - **Apport calorique** : ne descendez pas en dessous de 1 800 kcal/jour pendant l'allaitement (contre environ 2 000-2 300 kcal recommandées). Un déficit trop important réduit la production de lait et peut affecter sa qualité nutritionnelle.
 - **Protéines** : visez 1,2 à 1,5 g/kg de poids corporel par jour pour préserver votre masse musculaire et assurer la qualité du lait. Des sources variées comme la volaille, les oeufs, les légumineuses et les produits laitiers sont recommandées.
 - **Hydratation** : buvez au minimum 2 litres d'eau par jour, davantage si vous allaitez fréquemment.
-- **Micronutriments** : une supplémentation en fer, vitamine D, oméga-3 et iode est souvent recommandée pendant l'allaitement. Consultez notre guide sur les [micronutriments sous traitement GLP-1](/collections/régime-glp1/glp1-micronutriments/) pour en savoir plus sur les carences à surveiller.
+- **Micronutriments** : une supplémentation en fer, vitamine D, oméga-3 et iode est souvent recommandée pendant l'allaitement. Consultez notre guide sur les [micronutriments sous traitement GLP-1](/collections/regime-glp1/glp1-micronutriments/) pour en savoir plus sur les carences à surveiller.
 
 ### Activité physique post-partum
 
@@ -109,7 +109,7 @@ L'exercice physique n'affecte pas la qualité ni la quantité du lait maternel, 
 
 ### Accompagnement psychologique
 
-La période post-partum est émotionnellement intense. L'image corporelle peut être source d'anxiété, surtout dans un contexte social où la pression à « retrouver son corps » est omniprésente. Si vous ressentez une détresse liée à votre poids après l'accouchement, n'hésitez pas à en parler à votre médecin ou à consulter un psychologue spécialisé. L'[accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) est un pilier essentiel de toute démarche de perte de poids durable, avant même d'envisager un traitement médicamenteux.
+La période post-partum est émotionnellement intense. L'image corporelle peut être source d'anxiété, surtout dans un contexte social où la pression à « retrouver son corps » est omniprésente. Si vous ressentez une détresse liée à votre poids après l'accouchement, n'hésitez pas à en parler à votre médecin ou à consulter un psychologue spécialisé. L'[accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) est un pilier essentiel de toute démarche de perte de poids durable, avant même d'envisager un traitement médicamenteux.
 
 ## Quand consulter pour envisager un traitement GLP-1 après l'allaitement ?
 

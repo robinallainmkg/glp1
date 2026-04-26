@@ -80,7 +80,7 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 - **Maintien du poids :** 80% des patients maintiennent leur perte de poids à 1 an
 - **Amélioration santé :** Réduction du risque cardiovasculaire et diabète
 
-**Les études cliniques montrent que les GLP-1 comme Ozempic permettent une perte de poids significative** tout en préservant la [masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles). Ces médicaments agissent sur les centres de la faim du cerveau pour réduire l'appétit naturellement.
+**Les études cliniques montrent que les GLP-1 comme Ozempic permettent une perte de poids significative** tout en préservant la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles). Ces médicaments agissent sur les centres de la faim du cerveau pour réduire l'appétit naturellement.
 
 ### Facteurs d'Efficacité pour Optimiser Votre Perte de Poids
 
@@ -93,7 +93,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 5. **Hydratation optimale :** 1.5-2L d'eau par jour
 6. **Éducation thérapeutique :** Comprendre son traitement pour mieux l'utiliser
 
-**L'accompagnement nutritionnel est essentiel** pour réussir votre perte de poids avec les GLP-1. Un diététicien spécialisé peut vous aider à adapter votre alimentation à votre nouveau mode de vie. Pensez également à surveiller votre [bilan nutritionnel sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) pour prévenir les carences.
+**L'accompagnement nutritionnel est essentiel** pour réussir votre perte de poids avec les GLP-1. Un diététicien spécialisé peut vous aider à adapter votre alimentation à votre nouveau mode de vie. Pensez également à surveiller votre [bilan nutritionnel sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) pour prévenir les carences.
 
 ## Effets Secondaires des GLP-1 : Comment les Gérer
 
@@ -161,7 +161,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 - **Berbérine :** Régulateur glycémique naturel, efficace contre le diabète et l'obésité
 - **Chrome :** Améliore la sensibilité à l'insuline et aide à contrôler l'appétit
 - **Cannelle :** Propriétés anti-diabétiques et anti-inflammatoires
-- **[Exercice physique](/collections/régime-glp1/glp1-sport-exercice-musculation-guide) :** Marche, natation, musculation pour brûler des calories
+- **[Exercice physique](/collections/regime-glp1/glp1-sport-exercice-musculation-guide) :** Marche, natation, musculation pour brûler des calories
 - **Méditation :** Réduction du stress et meilleure gestion des émotions alimentaires
 
 ### Autres Traitements Médicamenteux
@@ -238,7 +238,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 - **Prévention du diabète :** Chez les personnes à risque
 - **Traitement de la stéatose hépatique :** Foie gras non alcoolique
-- **[Bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) :** Réduction des événements cardiaques
+- **[Bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) :** Réduction des événements cardiaques
 - **Applications neurologiques :** Maladie d'Alzheimer, Parkinson
 - **Santé mentale :** Dépression, troubles du comportement alimentaire
 

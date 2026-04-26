@@ -105,9 +105,9 @@ L'étude SUSTAIN-6 chez des patients diabétiques de type 2 à haut risque cardi
 
 Pour les patients traités par [Ozempic pour le diabète](/collections/traitements-glp1/guide-complet-ozempic/), ces bénéfices sur la graisse viscérale s'ajoutent aux effets hypoglycémiants.
 
-### L'étude SELECT : [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) liés à la réduction viscérale
+### L'étude SELECT : [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) liés à la réduction viscérale
 
-L'étude SELECT, qui a démontré une réduction de 20% des événements cardiovasculaires majeurs sous sémaglutide 2,4 mg, suggère que la réduction de la graisse viscérale joue un rôle dans les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) — en plus des effets directs sur l'athérosclérose.
+L'étude SELECT, qui a démontré une réduction de 20% des événements cardiovasculaires majeurs sous sémaglutide 2,4 mg, suggère que la réduction de la graisse viscérale joue un rôle dans les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) — en plus des effets directs sur l'athérosclérose.
 
 ## Mounjaro (tirzépatide) : résultats sur la graisse abdominale {#mounjaro}
 
@@ -156,7 +156,7 @@ Contrairement à la perte de poids globale, qui peut prendre plusieurs semaines 
 
 ### L'association avec l'exercice amplifie les résultats
 
-Les études montrent que l'association d'un GLP-1 avec une activité physique régulière — en particulier des exercices de renforcement musculaire — amplifie la réduction de la graisse viscérale tout en préservant la [masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/). Consultez notre guide sur le [sport et l'exercice sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) pour des recommandations pratiques.
+Les études montrent que l'association d'un GLP-1 avec une activité physique régulière — en particulier des exercices de renforcement musculaire — amplifie la réduction de la graisse viscérale tout en préservant la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Consultez notre guide sur le [sport et l'exercice sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) pour des recommandations pratiques.
 
 ### La durée du traitement est importante
 

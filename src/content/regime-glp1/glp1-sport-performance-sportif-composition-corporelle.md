@@ -58,7 +58,7 @@ Chez le sportif, préserver la masse musculaire sous GLP-1 nécessite une strat�
 
 **L'entraînement en résistance :** Les exercices de musculation et de résistance (squats, soulevés de terre, tractions, exercices avec bandes élastiques) envoient un signal anabolique puissant qui contrebalance la tendance catabolique de la restriction calorique induite par le GLP-1. Deux à trois séances par semaine d'entraînement en résistance suffisent pour modifier significativement la composition de la perte de poids en faveur de la graisse.
 
-**Les apports protéiques :** Les GLP-1 réduisent l'appétit de 20 à 30 %. Chez le sportif qui a des besoins en protéines plus élevés (1,6 à 2,2 g/kg/jour contre 0,8 g/kg/jour en population générale), cette réduction spontanée des apports peut rapidement créer un déficit protéique. Il est donc essentiel de surveiller activement ses apports et, si nécessaire, de se supplémenter en protéines de qualité (whey, caséine, protéines végétales complètes). Notre article sur les [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) détaille les stratégies pratiques.
+**Les apports protéiques :** Les GLP-1 réduisent l'appétit de 20 à 30 %. Chez le sportif qui a des besoins en protéines plus élevés (1,6 à 2,2 g/kg/jour contre 0,8 g/kg/jour en population générale), cette réduction spontanée des apports peut rapidement créer un déficit protéique. Il est donc essentiel de surveiller activement ses apports et, si nécessaire, de se supplémenter en protéines de qualité (whey, caséine, protéines végétales complètes). Notre article sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) détaille les stratégies pratiques.
 
 ### Données sur la force musculaire
 
@@ -120,7 +120,7 @@ Si ces signes apparaissent, il faut revoir les apports nutritionnels avec un di�
 
 ### L'hypothèse de la sarcopénie d'effort
 
-Chez les sportifs de plus de 50 ans, la combinaison d'une restriction calorique induite par les GLP-1 et d'un entraînement intense peut théoriquement accélérer la sarcopénie (perte de masse musculaire liée à l'âge). Notre article sur la [préservation musculaire sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) détaille les stratégies pour y faire face.
+Chez les sportifs de plus de 50 ans, la combinaison d'une restriction calorique induite par les GLP-1 et d'un entraînement intense peut théoriquement accélérer la sarcopénie (perte de masse musculaire liée à l'âge). Notre article sur la [préservation musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) détaille les stratégies pour y faire face.
 
 ### Le dopage sportif : les GLP-1 sont-ils interdits ?
 
@@ -159,4 +159,4 @@ Oui. La veille et le jour d'une compétition importante, vous pouvez — en acco
 
 ---
 
-*Cet article est fourni à titre informatif. Il ne remplace pas un accompagnement par un médecin du sport ou un diététicien sportif. Pour aller plus loin, consultez notre [guide complet sur le sport et la musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) et notre article sur la [fonte musculaire et sa prévention](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/). Dernière mise à jour : mars 2026.*
+*Cet article est fourni à titre informatif. Il ne remplace pas un accompagnement par un médecin du sport ou un diététicien sportif. Pour aller plus loin, consultez notre [guide complet sur le sport et la musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) et notre article sur la [fonte musculaire et sa prévention](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/). Dernière mise à jour : mars 2026.*

@@ -43,8 +43,8 @@ Le Wegovy (semaglutide) représente une avancée majeure dans le traitement de l
 
 ### Le défi financier
 
-- **Coût mensuel** : 280€ par mois
-- **Coût annuel** : Plus de 3 360€ par an
+- **Coût mensuel** : 169 à 360€ par mois selon le dosage
+- **Coût annuel** : 2 000 à 4 300€ par an selon le dosage
 
 Face à ce coût substantiel, la question du remboursement devient centrale pour de nombreux patients. En 2025, la situation évolue rapidement avec l'émergence de nouvelles solutions de financement.
 

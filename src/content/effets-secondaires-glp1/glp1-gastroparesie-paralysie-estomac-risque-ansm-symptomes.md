@@ -178,7 +178,7 @@ Ces informations permettent d'anticiper le risque et de définir un suivi adapt�
 
 ## Lien avec les autres effets indésirables digestifs des GLP-1
 
-La gastroparésie s'inscrit dans un spectre plus large d'effets digestifs associés aux GLP-1. Pour une vue complète des [risques de pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/), des [carences nutritionnelles possibles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) ou des [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/), consultez nos guides dédiés.
+La gastroparésie s'inscrit dans un spectre plus large d'effets digestifs associés aux GLP-1. Pour une vue complète des [risques de pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/), des [carences nutritionnelles possibles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) ou des [interactions médicamenteuses](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/), consultez nos guides dédiés.
 
 La surveillance de la pharmacovigilance sur l'ensemble des effets indésirables graves est accessible dans le [bilan de pharmacovigilance ANSM 2025-2026](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/).
 

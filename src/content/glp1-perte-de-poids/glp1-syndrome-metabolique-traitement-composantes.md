@@ -57,7 +57,7 @@ En France, le syndrome métabolique touche environ 23 % des adultes selon les é
 - Une alimentation riche en sucres raffinés et graisses saturées
 - Des facteurs génétiques
 
-Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multiplié par 2 à 3 par rapport à la population générale — les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) des GLP-1 ont été démontrés dans plusieurs grandes études. Le risque de développer un [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) est multiplié par 5.
+Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multiplié par 2 à 3 par rapport à la population générale — les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) des GLP-1 ont été démontrés dans plusieurs grandes études. Le risque de développer un [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/) est multiplié par 5.
 
 ## Comment les GLP-1 agissent-ils sur le syndrome métabolique ?
 
@@ -138,7 +138,7 @@ Il est important de noter que ces effets sont maintenus tant que le traitement e
 Les GLP-1 sont un outil puissant contre le syndrome métabolique, mais ils fonctionnent mieux en association avec des modifications du mode de vie :
 
 - **Alimentation** : réduction des sucres raffinés, des graisses saturées et du sel ; augmentation des fibres et des protéines de qualité
-- **Activité physique** : au moins 150 minutes par semaine d'activité modérée ; la [musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) est particulièrement recommandée pour préserver la masse musculaire
+- **Activité physique** : au moins 150 minutes par semaine d'activité modérée ; la [musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) est particulièrement recommandée pour préserver la masse musculaire
 - **Réduction du stress** : stress chronique et syndrome métabolique entretiennent un cercle vicieux via le cortisol
 - **Sommeil** : l'apnée du sommeil, fréquente dans ce profil, aggrave le syndrome métabolique ; les GLP-1 réduisent aussi la sévérité de l'apnée
 

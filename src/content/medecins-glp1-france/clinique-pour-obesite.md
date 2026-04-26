@@ -317,7 +317,7 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - Ne vous découragez pas en cas de plateau
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/régime-glp1/régime-cetogene-glp1/)
+- [régime Ozempic](/collections/regime-glp1/régime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [prix Wegovy](/collections/glp1-cout/wegovy-prix/)

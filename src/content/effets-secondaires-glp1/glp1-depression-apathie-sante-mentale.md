@@ -167,7 +167,7 @@ Décrivez précisément ce que vous ressentez : depuis quand, dans quelles situa
 
 ### Évaluation par un professionnel de santé mentale
 
-Face à ces effets psychologiques, un [suivi psychologique recommandé sous GLP-1](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut aider à distinguer les effets du traitement des troubles préexistants.
+Face à ces effets psychologiques, un [suivi psychologique recommandé sous GLP-1](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) peut aider à distinguer les effets du traitement des troubles préexistants.
 
 Si votre médecin l'estime nécessaire, une consultation auprès d'un psychiatre ou d'un psychologue peut être proposée. Cette démarche ne signifie pas que vous êtes "fou" — elle vise à distinguer un effet secondaire du traitement d'une pathologie préexistante ou déclenchée.
 
@@ -177,7 +177,7 @@ Si vous pensez que votre traitement GLP-1 est responsable d'effets psychiatrique
 
 ### Soutien psychologique adapté
 
-L'obésité est une maladie chronique dont la prise en charge optimale inclut souvent un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/). Plusieurs approches ont fait leurs preuves :
+L'obésité est une maladie chronique dont la prise en charge optimale inclut souvent un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/). Plusieurs approches ont fait leurs preuves :
 
 - **Thérapie cognitive et comportementale (TCC)** : efficace sur l'image corporelle, les comportements alimentaires et la dépression légère à modérée
 - **Psychothérapie de soutien** : pour traverser la période de transition liée à la perte de poids

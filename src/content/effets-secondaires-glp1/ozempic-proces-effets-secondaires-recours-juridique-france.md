@@ -49,13 +49,13 @@ Depuis 2023, plus de 3 400 plaintes individuelles ont été consolidées dans de
 Les principaux griefs invoqués dans les plaintes américaines sont :
 
 **1. Gastroparésie (paralysie gastrique)**
-La gastroparésie est un ralentissement sévère ou une paralysie de la vidange de l'estomac. Les GLP-1 ralentissent physiologiquement la vidange gastrique — c'est l'un des mécanismes par lesquels ils réduisent l'appétit. Mais chez certains patients, ce ralentissement serait devenu permanent ou très prolongé, même après l'arrêt du traitement. Pour en savoir plus, consultez notre article sur la [gastroparésie et les GLP-1](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/).
+La gastroparésie est un ralentissement sévère ou une paralysie de la vidange de l'estomac. Les GLP-1 ralentissent physiologiquement la vidange gastrique — c'est l'un des mécanismes par lesquels ils réduisent l'appétit. Mais chez certains patients, ce ralentissement serait devenu permanent ou très prolongé, même après l'arrêt du traitement. Pour en savoir plus, consultez notre article sur la [gastroparésie et les GLP-1](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/).
 
 **2. Occlusions intestinales**
 Des obstruction et iléus paralytiques ont été rapportés, notamment chez des patients opérés sous anesthésie générale dont le traitement GLP-1 n'avait pas été interrompu avant la chirurgie. Voir notre guide sur les [GLP-1 et la chirurgie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/).
 
 **3. Pancréatite aiguë**
-Des cas de [pancréatite](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/) (inflammation sévère du pancréas) ont été signalés. Ce risque est mentionné dans les notices des médicaments, mais les plaignants affirment que les patients n'en ont pas été suffisamment avertis.
+Des cas de [pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) (inflammation sévère du pancréas) ont été signalés. Ce risque est mentionné dans les notices des médicaments, mais les plaignants affirment que les patients n'en ont pas été suffisamment avertis.
 
 **4. [Neuropathie optique](/collections/effets-secondaires-glp1/glp1-neuropathie-optique-vision-yeux-semaglutide-noian/) ischémique antérieure non artéritique (NAION)**
 Des cas de cécité partielle irréversible ont été associés à l'usage de sémaglutide dans une étude de Harvard publiée en 2024. Les poursuites sur ce sujet ont débuté en 2025.
@@ -190,6 +190,6 @@ La prescription hors AMM n'est pas illégale mais engage davantage la responsabi
 
 ---
 
-Pour en savoir plus sur les effets secondaires des traitements GLP-1, consultez nos guides détaillés : [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) et [GLP-1 et gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/).
+Pour en savoir plus sur les effets secondaires des traitements GLP-1, consultez nos guides détaillés : [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/), [mésusage des GLP-1 en France](/collections/effets-secondaires-glp1/mesusage-glp1-france-detournement-risques/) et [GLP-1 et gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/).
 
 *Dernière mise à jour : 17 mars 2026. Cet article est à titre informatif et ne constitue pas un conseil juridique. Consultez un avocat spécialisé pour votre situation.*

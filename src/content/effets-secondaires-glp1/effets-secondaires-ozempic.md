@@ -57,7 +57,7 @@ mainKeyword: "effets secondaires ozempic semaglutide"
 
 ### Pancréatite
 
-La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/) est un effet grave rare mais documenté, qui nécessite une reconnaissance immédiate des symptômes d'alerte.
+La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) est un effet grave rare mais documenté, qui nécessite une reconnaissance immédiate des symptômes d'alerte.
 
 **Signes d'alerte** :
 - Douleurs abdominales intenses
@@ -144,7 +144,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancréat
 
 ### Consultation rapide (dans la semaine)
 
-- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/). L'[acupuncture pour soulager les nausées sous GLP-1](/collections/alternatives-glp1/acupuncture-glp1/) est une piste complémentaire à explorer avec votre médecin
+- Nausées persistantes (>1 semaine) — pouvant signaler une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/). L'[acupuncture pour soulager les nausées sous GLP-1](/collections/alternatives-glp1/acupuncture-glp1/) est une piste complémentaire à explorer avec votre médecin
 - Diarrhée abondante (>3 jours)
 - Perte de poids rapide (>2 kg/semaine)
 - Fatigue intense
@@ -193,7 +193,7 @@ Si vous souhaitez comparer avec un autre traitement de la même famille, consult
 - Bilan trimestriel ensuite
 - Consultation annuelle spécialisée
 
-Pensez également à surveiller les [carences nutritionnelles à surveiller sous Ozempic](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), notamment en vitamine B12, vitamine D et protéines, surtout en cas de perte de poids rapide.
+Pensez également à surveiller les [carences nutritionnelles à surveiller sous Ozempic](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/), notamment en vitamine B12, vitamine D et protéines, surtout en cas de perte de poids rapide.
 
 ## 📞 Ressources d'Aide
 
@@ -242,7 +242,7 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité
 
-**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner une [fonte musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) et des modifications esthétiques du visage, un phénomène souvent appelé "[Ozempic face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/)" (fonte du visage), à connaître avant de commencer le traitement. Consultez votre médecin si vous constatez des changements importants.
+**Important** : Chaque patient réagit différemment. Un suivi médical personnalisé est indispensable pour une prise en charge optimale. La perte de poids rapide peut également entraîner une [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) et des modifications esthétiques du visage, un phénomène souvent appelé "[Ozempic face](/collections/effets-secondaires-glp1/ozempic-face-vieillissement-visage-solutions/)" (fonte du visage), à connaître avant de commencer le traitement. Consultez votre médecin si vous constatez des changements importants.
 
 ## Sommaire
 

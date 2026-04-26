@@ -26,7 +26,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 
 | Médicament | Indication | Remboursement Sécu | Coût patient/mois | Statut 2026 |
 |------------|------------|-------------------|------------------|-----------------|
-| **Ozempic** | Diabète T2 | **30%** (DT2 uniquement) | ~53-54€ | ✅ Maintenu |
+| **Ozempic** | Diabète T2 | **65%** (bithérapie metformine) / 30% (trithérapie insuline) | ~28-56€ | ✅ Maintenu |
 | **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | Diabète T2 | **65%** (DT2 uniquement) | ~33€ | ✅ Maintenu |
 | **Victoza** | Diabète T2 | **65%** (DT2 uniquement) | ~27€ | ✅ Maintenu |
 | **Rybelsus** | Diabète T2 (oral) | **Non remboursé** (avis défavorable HAS) | 80-110€ | ❌ Non remboursé |
@@ -58,7 +58,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 
 ✅ **Échec des traitements de première intention**
 - Essai d'antidiabétiques oraux (metformine, sulfamides)
-- Note : les [inhibiteurs SGLT2 (iSGLT2)](/collections/régime-glp1/isglt2-liste/) sont souvent associés aux GLP-1 et remboursés séparément pour le diabète de type 2
+- Note : les [inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/) sont souvent associés aux GLP-1 et remboursés séparément pour le diabète de type 2
 
 ✅ **Absence de contre-indications**
 - Pas d'antécédent de cancer médullaire de la thyroïde
@@ -111,7 +111,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 
 ### Statut Officiel
 
-**Ozempic (sémaglutide 0.25-1 mg)** maintient son remboursement à **30%** en 2026 pour le **diabète de type 2** uniquement. (Note : le dosage 2 mg n'est pas commercialisé en France.)
+**Ozempic (sémaglutide 0.25-1 mg)** maintient son remboursement à **65%** en 2026 pour le **diabète de type 2** en bithérapie avec metformine (30% en trithérapie avec insuline basale). (Note : le dosage 2 mg n'est pas commercialisé en France.)
 
 ⚠️ **Important** : Ozempic n'est PAS remboursé pour la perte de poids seule (sans diabète). Pour cette indication, utilisez **Wegovy** (même principe actif, dosage supérieur).
 
@@ -123,7 +123,7 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 
 ### Coût Réel Patient 2026
 
-**Prix pharmacie :** ~76,58€/stylo
+**Prix pharmacie :** ~80,18€/stylo (hors honoraires de dispensation)
 
 **Selon dosage :**
 - 0.25-0.5 mg : 1 stylo/mois = **~54€/mois** après remboursement à 30%

@@ -44,7 +44,7 @@ Au-delà du manque de données, certains risques sont jugés potentiellement plu
 
 **1. La sarcopénie — le risque numéro un**
 
-Les GLP-1 entraînent une perte de poids rapide, mais une partie de cette perte provient de la masse musculaire. Chez un adulte de 40 ans en bonne santé, perdre 25 % de poids sous Wegovy avec une proportion musculaire de 20-25 % est gérable avec un programme d'exercice adapté. Chez un patient de 70 ans qui présente déjà une [fonte musculaire liée à l'âge](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) (sarcopénie physiologique), cette perte supplémentaire peut devenir problématique. Elle peut accélérer la dépendance fonctionnelle, augmenter le risque de chutes, et compromettre l'autonomie.
+Les GLP-1 entraînent une perte de poids rapide, mais une partie de cette perte provient de la masse musculaire. Chez un adulte de 40 ans en bonne santé, perdre 25 % de poids sous Wegovy avec une proportion musculaire de 20-25 % est gérable avec un programme d'exercice adapté. Chez un patient de 70 ans qui présente déjà une [fonte musculaire liée à l'âge](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) (sarcopénie physiologique), cette perte supplémentaire peut devenir problématique. Elle peut accélérer la dépendance fonctionnelle, augmenter le risque de chutes, et compromettre l'autonomie.
 
 **2. Le risque osseux et les fractures**
 
@@ -52,7 +52,7 @@ La perte de poids rapide réduit les contraintes mécaniques exercées sur les o
 
 **3. Les carences nutritionnelles**
 
-Les GLP-1 réduisent l'appétit de manière très significative. Chez les jeunes adultes, cela favorise la perte de poids sans compromettre les apports essentiels si les repas sont bien équilibrés. Chez les seniors, dont les besoins en protéines, calcium, vitamine D et vitamines B sont souvent plus élevés et dont l'alimentation peut déjà être insuffisante, une réduction supplémentaire des apports alimentaires risque d'aggraver des [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) préexistantes.
+Les GLP-1 réduisent l'appétit de manière très significative. Chez les jeunes adultes, cela favorise la perte de poids sans compromettre les apports essentiels si les repas sont bien équilibrés. Chez les seniors, dont les besoins en protéines, calcium, vitamine D et vitamines B sont souvent plus élevés et dont l'alimentation peut déjà être insuffisante, une réduction supplémentaire des apports alimentaires risque d'aggraver des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) préexistantes.
 
 **4. Les effets cardiovasculaires et rénaux**
 

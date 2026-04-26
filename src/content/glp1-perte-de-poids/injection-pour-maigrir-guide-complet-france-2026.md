@@ -189,7 +189,7 @@ La grande majorite des patients decrivent l'injection comme **indolore ou a pein
 
 ## Qui Peut Beneficier d'une Injection pour Maigrir ?
 
-Les injections pour maigrir ne sont pas destinees a toute personne souhaitant perdre quelques kilos. Elles s'inscrivent dans un cadre medical precis avec des criteres stricts. Pour connaitre les conditions détaillées de prescription, consultez notre guide sur [les conditions de prescription de Wegovy et Mounjaro](/collections/médecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/).
+Les injections pour maigrir ne sont pas destinees a toute personne souhaitant perdre quelques kilos. Elles s'inscrivent dans un cadre medical precis avec des criteres stricts. Pour connaitre les conditions détaillées de prescription, consultez notre guide sur [les conditions de prescription de Wegovy et Mounjaro](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/).
 
 ### Criteres d'eligibilite
 

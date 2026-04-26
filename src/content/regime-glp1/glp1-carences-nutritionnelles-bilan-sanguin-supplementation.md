@@ -48,7 +48,7 @@ L'ANSM a mis en évidence plusieurs carences particulièrement préoccupantes :
 
 - **Fer et anémie ferriprive** : signal le plus fréquemment rapporté, surtout chez les femmes en âge de procréer
 - **Vitamine B1 (thiamine)** : cas de neuropathie sévère documentés, potentiellement graves
-- **[Masse musculaire (sarcopénie)](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : perte de muscle associée à la perte de poids rapide, aggravée par des apports insuffisants en protéines
+- **[Masse musculaire (sarcopénie)](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : perte de muscle associée à la perte de poids rapide, aggravée par des apports insuffisants en protéines
 - **Vitamine B12** : notamment chez les patients déjà sous metformine (qui réduit l'absorption de la B12)
 - **Zinc et sélénium** : moins documentés mais possibles en cas de régime très restrictif — les carences en fer, zinc et biotine peuvent aussi provoquer une [chute de cheveux liée aux carences](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/)
 
@@ -140,8 +140,8 @@ La perte de poids rapide sous GLP-1 ne distingue pas toujours entre la masse gra
 
 **Comment préserver sa masse musculaire :**
 
-- **Apports protéiques suffisants** : viser 1,2 à 1,6 g de protéines par kg de poids corporel par jour (soit 80-100 g/j pour une personne de 70 kg). Consultez notre guide sur les [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/)
-- **Activité physique régulière** : la musculation et les exercices de résistance sont prioritaires par rapport au cardio pour préserver la masse musculaire. Voir notre guide [sport et GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/)
+- **Apports protéiques suffisants** : viser 1,2 à 1,6 g de protéines par kg de poids corporel par jour (soit 80-100 g/j pour une personne de 70 kg). Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/)
+- **Activité physique régulière** : la musculation et les exercices de résistance sont prioritaires par rapport au cardio pour préserver la masse musculaire. Voir notre guide [sport et GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)
 - **Répartition des protéines sur la journée** : plutôt que de concentrer les protéines au dîner, viser un apport à chaque repas
 
 ## Comment adapter son alimentation pour prévenir les carences ?
@@ -206,7 +206,7 @@ Les traitements GLP-1 sont très efficaces, mais ils demandent un suivi nutritio
 - Signalez à votre médecin tout signe de fatigue intense, de neuropathie ou de chute de cheveux importante
 - La supplémentation doit être guidée par le bilan sanguin, pas systématique
 
-Pour aller plus loin, consultez notre guide sur les [micronutriments et vitamines sous GLP-1](/collections/régime-glp1/glp1-micronutriments/), notre [programme détox doux compatible GLP-1](/collections/régime-glp1/régime-detox-glp1/) ou notre article sur le [régime alimentaire optimal sous GLP-1](/collections/régime-glp1/régime-mediterraneen-glp1/).
+Pour aller plus loin, consultez notre guide sur les [micronutriments et vitamines sous GLP-1](/collections/regime-glp1/glp1-micronutriments/), notre [programme détox doux compatible GLP-1](/collections/regime-glp1/régime-detox-glp1/) ou notre article sur le [régime alimentaire optimal sous GLP-1](/collections/regime-glp1/régime-mediterraneen-glp1/).
 
 ---
 

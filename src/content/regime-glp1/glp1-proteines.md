@@ -37,7 +37,7 @@ Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-comple
 
 ## Pourquoi les protéines sont essentielles sous GLP-1
 
-### La <a href="/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/">fonte musculaire</a> : un risque réel
+### La <a href="/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/">fonte musculaire</a> : un risque réel
 
 Quand le corps perd du poids rapidement, il ne puise pas uniquement dans ses réserves de graisse. Une partie de la perte provient du tissu musculaire. Les études cliniques sur le sémaglutide (Wegovy) et le tirzépatide (Mounjaro) montrent que 20 à 40 % de la perte de poids totale peut concerner la masse maigre, c'est-à-dire les muscles, quand l'alimentation n'est pas adaptée.
 
@@ -66,7 +66,7 @@ La plupart des nutritionnistes et médecins spécialisés dans l'obésité recom
 
 **Exemple concret** : pour une personne de 90 kg, cela représente entre 108 g et 144 g de protéines par jour — soit environ 3 à 4 portions de protéines animales de bonne taille.
 
-Ces recommandations sont supérieures aux apports journaliers recommandés classiques (0,8 g/kg), car la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) augmente les besoins en protéines pour préserver les muscles. Pour déterminer vos [calories journalières recommandées](/collections/régime-glp1/glp1-calories-journalieres/) sous traitement, un suivi nutritionnel est conseillé.
+Ces recommandations sont supérieures aux apports journaliers recommandés classiques (0,8 g/kg), car la [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) augmente les besoins en protéines pour préserver les muscles. Pour déterminer vos [calories journalières recommandées](/collections/regime-glp1/glp1-calories-journalieres/) sous traitement, un suivi nutritionnel est conseillé.
 
 ### Répartir les protéines sur la journée
 
@@ -127,7 +127,7 @@ Sous GLP-1, l'appétit est fortement diminué. Il faut donc être stratégique p
 
 **Ne pas sauter le petit-déjeuner** : même si vous n'avez pas faim le matin, un petit-déjeuner protéiné (œufs brouillés, skyr, fromage blanc) contribue significativement à l'apport quotidien.
 
-**Combiner protéines et [activité physique](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/)** : l'exercice de résistance (musculation, gainage) stimule la synthèse protéique musculaire et rend l'apport protéique encore plus efficace.
+**Combiner protéines et [activité physique](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/)** : l'exercice de résistance (musculation, gainage) stimule la synthèse protéique musculaire et rend l'apport protéique encore plus efficace.
 
 ## Signes que votre apport protéique est insuffisant
 
@@ -135,7 +135,7 @@ Soyez attentif à ces signaux qui peuvent indiquer un manque de protéines :
 
 - Fatigue persistante malgré un sommeil suffisant
 - Perte de force rapide lors de l'activité physique
-- Ongles cassants, cheveux fragilisés (les [chutes de cheveux sous GLP-1](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/) peuvent être amplifiées par un manque de protéines) — ces symptômes signalent souvent des [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) à surveiller par bilan sanguin
+- Ongles cassants, cheveux fragilisés (les [chutes de cheveux sous GLP-1](/collections/effets-secondaires-glp1/glp1-chute-de-cheveux-alopecie-causes-solutions/) peuvent être amplifiées par un manque de protéines) — ces symptômes signalent souvent des [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) à surveiller par bilan sanguin
 - Cicatrisation lente
 - Sensation de faiblesse musculaire lors des activités quotidiennes
 
@@ -153,7 +153,7 @@ Pas forcément. La grande majorité des personnes peut atteindre ses objectifs p
 
 ### Mon médecin devrait-il surveiller mon apport protéique ?
 
-Oui. Dans le cadre d'un suivi sous GLP-1, une évaluation nutritionnelle régulière est recommandée. Votre médecin peut évaluer vos apports et vous orienter vers une diététicienne si nécessaire. Un [bilan sanguin et supplémentation](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) adaptée peuvent également vérifier l'absence de carences (albumine, préalbumine comme marqueurs d'un apport protéique suffisant sur la durée).
+Oui. Dans le cadre d'un suivi sous GLP-1, une évaluation nutritionnelle régulière est recommandée. Votre médecin peut évaluer vos apports et vous orienter vers une diététicienne si nécessaire. Un [bilan sanguin et supplémentation](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) adaptée peuvent également vérifier l'absence de carences (albumine, préalbumine comme marqueurs d'un apport protéique suffisant sur la durée).
 
 ### Qu'en est-il des protéines végétales uniquement ?
 
@@ -161,7 +161,7 @@ Un régime végétarien ou végétalien bien planifié peut couvrir les besoins 
 
 ## Conclusion
 
-Sous traitement GLP-1, l'apport protéique est un pilier fondamental pour préserver votre masse musculaire et assurer le succès à long terme du traitement. Viser 1,2 à 1,6 g de protéines par kilogramme de poids par jour, réparties sur plusieurs repas, est l'objectif à atteindre. Combinez cet apport avec une [activité physique régulière, notamment la musculation](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/), et vous maximiserez les bénéfices de votre traitement tout en préservant votre capital musculaire.
+Sous traitement GLP-1, l'apport protéique est un pilier fondamental pour préserver votre masse musculaire et assurer le succès à long terme du traitement. Viser 1,2 à 1,6 g de protéines par kilogramme de poids par jour, réparties sur plusieurs repas, est l'objectif à atteindre. Combinez cet apport avec une [activité physique régulière, notamment la musculation](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/), et vous maximiserez les bénéfices de votre traitement tout en préservant votre capital musculaire.
 
 ---
 

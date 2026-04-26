@@ -61,7 +61,7 @@ La peau est un tissu élastique, mais son élasticité a des limites. Lors d'une
 
 ### La fonte musculaire aggrave le tableau
 
-La [fonte musculaire sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un sujet de préoccupation croissant. Les études montrent qu'une partie de la perte de poids obtenue sous GLP-1 correspond à de la masse musculaire (sarcopénie), notamment chez les personnes qui ne suivent pas un régime protéiné adapté. Or, les muscles faciaux contribuent eux aussi au soutien des tissus cutanés. Une fonte musculaire globale peut accentuer l'aspect affaissé du visage.
+La [fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un sujet de préoccupation croissant. Les études montrent qu'une partie de la perte de poids obtenue sous GLP-1 correspond à de la masse musculaire (sarcopénie), notamment chez les personnes qui ne suivent pas un régime protéiné adapté. Or, les muscles faciaux contribuent eux aussi au soutien des tissus cutanés. Une fonte musculaire globale peut accentuer l'aspect affaissé du visage.
 
 ## Qui est le plus concerné ? {#profil}
 
@@ -73,7 +73,7 @@ L'Ozempic Face est plus fréquent et plus marqué dans certains profils :
 - **IMC de départ peu élevé** : paradoxalement, les personnes qui commencent avec un surpoids modéré ont moins de "réserve" faciale à perdre
 - **Tabagisme** : le tabac altère l'élasticité cutanée
 - **Exposition solaire chronique** : accélère le vieillissement cutané
-- **Absence de [supplémentation pour prévenir le vieillissement cutané](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : des carences en protéines, collagène ou vitamines favorisent la sarcopénie et accélèrent le relâchement cutané
+- **Absence de [supplémentation pour prévenir le vieillissement cutané](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : des carences en protéines, collagène ou vitamines favorisent la sarcopénie et accélèrent le relâchement cutané
 
 À l'inverse, les personnes qui avaient un visage plus plein avant le traitement, qui perdent du poids progressivement et qui maintiennent une bonne hydratation et un apport protéiné suffisant sont généralement moins touchées.
 
@@ -116,7 +116,7 @@ Les traitements GLP-1 permettent parfois des pertes de poids très rapides, mais
 
 ### Augmenter les apports protéinés
 
-Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par kilo de poids corporel par jour — permet de préserver la masse musculaire et de soutenir la synthèse de collagène. Les [micronutriments essentiels sous GLP-1](/collections/régime-glp1/glp1-micronutriments/) (zinc, vitamine C, sélénium) jouent également un rôle clé dans la santé cutanée. Consultez notre guide sur les [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) pour des conseils pratiques.
+Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par kilo de poids corporel par jour — permet de préserver la masse musculaire et de soutenir la synthèse de collagène. Les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) (zinc, vitamine C, sélénium) jouent également un rôle clé dans la santé cutanée. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) pour des conseils pratiques.
 
 ### Prendre soin de sa peau
 
@@ -127,7 +127,7 @@ Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par ki
 
 ### Pratiquer une activité physique incluant du renforcement musculaire
 
-L'exercice physique, et particulièrement la musculation ou le [renforcement musculaire pour prévenir l'Ozempic Face](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/), contribue à préserver la masse musculaire et à maintenir un tonus cutané global. Une pratique régulière de 2 à 3 séances par semaine est recommandée pendant toute la durée du traitement.
+L'exercice physique, et particulièrement la musculation ou le [renforcement musculaire pour prévenir l'Ozempic Face](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/), contribue à préserver la masse musculaire et à maintenir un tonus cutané global. Une pratique régulière de 2 à 3 séances par semaine est recommandée pendant toute la durée du traitement.
 
 ## FAQ {#faq}
 

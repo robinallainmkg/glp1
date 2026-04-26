@@ -132,7 +132,7 @@ Pour une semaine de rééquilibrage alimentaire adapté aux patients GLP-1 :
 
 ### Ce qu'il faut éviter en "détox" sous GLP-1
 
-**Les cures de jus et jeûnes prolongés sont contre-indiqués** sous traitement GLP-1. L'absence de nourriture solide peut aggraver les nausées, provoquer des hypoglycémies chez les patients diabétiques et aggraver les [carences nutritionnelles sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) ainsi que compromettre l'apport protéique nécessaire à la préservation musculaire. La HAS déconseille formellement tout jeûne non médical chez les patients sous traitement antidiabétique.
+**Les cures de jus et jeûnes prolongés sont contre-indiqués** sous traitement GLP-1. L'absence de nourriture solide peut aggraver les nausées, provoquer des hypoglycémies chez les patients diabétiques et aggraver les [carences nutritionnelles sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) ainsi que compromettre l'apport protéique nécessaire à la préservation musculaire. La HAS déconseille formellement tout jeûne non médical chez les patients sous traitement antidiabétique.
 
 **Les compléments "détox" sans avis médical** (charbon actif, argile, certaines plantes comme la valériane ou la réglisse à forte dose) peuvent interagir avec l'absorption des médicaments ou fatiguer les reins. Demandez toujours l'avis de votre médecin ou pharmacien.
 

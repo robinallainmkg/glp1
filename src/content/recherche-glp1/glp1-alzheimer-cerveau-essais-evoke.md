@@ -49,7 +49,7 @@ Avant les essais EVOKE, plusieurs etudes observationnelles avaient suscite un en
 
 **Donnees precliniques** : Chez les souris modeles d'Alzheimer, le semaglutide et le liraglutide reduisaient l'accumulation de plaques amyloides, diminuaient la neuro-inflammation et amélioraient les performances cognitives. Ces résultats etaient coherents et reproductibles dans plusieurs laboratoires.
 
-**Mecanismes biologiques plausibles** : Les récepteurs GLP-1 sont exprimes dans l'hippocampe (la region cerebrale cle pour la memoire) et le cortex cerebral. Les GLP-1 possedent des proprietes anti-inflammatoires et neuroprotectrices — incluant les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) — qui, en theorie, pourraient ralentir les processus neurodegeneratifs.
+**Mecanismes biologiques plausibles** : Les récepteurs GLP-1 sont exprimes dans l'hippocampe (la region cerebrale cle pour la memoire) et le cortex cerebral. Les GLP-1 possedent des proprietes anti-inflammatoires et neuroprotectrices — incluant les [bénéfices cardiovasculaires des GLP-1](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) — qui, en theorie, pourraient ralentir les processus neurodegeneratifs.
 
 ### L'hypothese metabolique d'Alzheimer
 

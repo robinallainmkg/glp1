@@ -453,7 +453,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 ### Guides Ozempic
 - **[Guide Complet Ozempic 2025](/collections/traitements-glp1/guide-complet-ozempic/)** - Posologie, efficacité, mode d'emploi détaillé
 - **[Effets Secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/)** - Comment gérer nausées, vomissements et autres effets
-- **[Régime Alimentaire sous Ozempic](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition optimale pour maximiser la perte de poids
+- **[Régime Alimentaire sous Ozempic](/collections/regime-glp1/régime-mounjaro-optimal/)** - Nutrition optimale pour maximiser la perte de poids
 
 ### Remboursement
 - **[Guide complet remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/)** - Conditions détaillées pour 2026, CSS, ALD et mutuelles
@@ -471,7 +471,7 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 ### Aide et Soutien
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Guide complet des mutuelles
-- **[Témoignages Avant/Après GLP-1](/collections/témoignages/avant-après-glp1)** - Résultats réels de patients
+- **[Témoignages Avant/Après GLP-1](/collections/temoignages/avant-après-glp1)** - Résultats réels de patients
 - **[Témoignages Avant/Après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/)** - Résultats réels de patients
 
 **Besoin d'aide pour obtenir Ozempic ?**

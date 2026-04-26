@@ -261,7 +261,7 @@ Le laboratoire Eli Lilly propose plusieurs dispositifs d'accompagnement :
 3. **Suivi thérapeutique**
    - Consultations de suivi régulières
    - Adaptation posologique selon tolérance et efficacité
-   - [Recommandations alimentaires pendant le traitement](/collections/régime-glp1/glp1-protéines/)
+   - [Recommandations alimentaires pendant le traitement](/collections/regime-glp1/glp1-protéines/)
 
 ## Ressources Complémentaires
 
@@ -458,7 +458,7 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 
 - **[Guide Complet Mounjaro 2025](/collections/traitements-glp1/guide-complet-mounjaro/)** - Posologie, efficacité et mode d'emploi détaillé
 - **[Effets Secondaires Mounjaro](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/)** - Tous les effets indésirables et comment les gérer
-- **[Régime Alimentaire Optimal sous Mounjaro](/collections/régime-glp1/régime-mounjaro-optimal/)** - Nutrition adaptée pour maximiser la perte de poids
+- **[Régime Alimentaire Optimal sous Mounjaro](/collections/regime-glp1/régime-mounjaro-optimal/)** - Nutrition adaptée pour maximiser la perte de poids
 - **[Trouver un Médecin Prescripteur](/collections/medecins-glp1-france/)** - Annuaire des endocrinologues et diabétologues
 - **[Mounjaro vs Ozempic : Comparatif Complet](/guides/quel-traitement-glp1-choisir)** - Quel traitement choisir selon votre profil
 - **[Remboursement Wegovy par les Mutuelles](/collections/glp1-cout/wegovy-remboursement-mutuelle/)** - Alternative si Mounjaro n'est pas accessible
