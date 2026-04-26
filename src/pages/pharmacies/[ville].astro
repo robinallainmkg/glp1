@@ -132,9 +132,9 @@ const villeCap = titleCase(city.city);
 
 // Stats par drug : prix moyen, min, max, pharmacies qui ont un prix
 const DRUGS = [
-  { slug: 'ozempic', name: 'Ozempic', note: 'remboursé 30% (diabète type 2)' },
+  { slug: 'ozempic', name: 'Ozempic', note: 'remboursé 65% bithérapie metformine / 30% trithérapie insuline (DT2) — prix CEPS 80,18 €' },
   { slug: 'wegovy', name: 'Wegovy', note: 'prix libéré, non remboursé' },
-  { slug: 'mounjaro', name: 'Mounjaro', note: 'prix libéré, non remboursé' },
+  { slug: 'mounjaro', name: 'Mounjaro', note: 'prix libéré, non remboursé (avis HAS favorable nov. 2025, négociation CEPS en cours)' },
   { slug: 'saxenda', name: 'Saxenda', note: 'prix libéré, non remboursé' },
 ];
 
@@ -163,13 +163,13 @@ const drugStats = DRUGS.map((d) => {
 
 const hasUserPrices = drugStats.some((d) => d.count > 0 && d.slug !== 'ozempic');
 
-// Top 10 pharmacies par prix Ozempic (77,60€ uniforme donc tri alphabétique)
+// Top 10 pharmacies par prix Ozempic (80,18€ uniforme CEPS, donc tri alphabétique)
 const topPharmacies = [...city.pharmacies]
   .sort((a, b) => a.name.localeCompare(b.name))
   .slice(0, 20);
 
 const title = `Pharmacies GLP-1 à ${villeCap} — Prix Ozempic, Wegovy, Mounjaro 2026`;
-const description = `${city.pharmacies.length} pharmacies référencées à ${villeCap} (${city.department}). Prix Ozempic officiel 77,60 €, prix Wegovy et Mounjaro variables. Carte interactive + contributions communautaires.`;
+const description = `${city.pharmacies.length} pharmacies référencées à ${villeCap} (${city.department}). Prix Ozempic officiel CEPS 80,18 € (remboursé 65% DT2 bithérapie), prix Wegovy et Mounjaro variables. Carte interactive + contributions communautaires.`;
 
 // FAQ schema
 const faq = [
@@ -179,7 +179,7 @@ const faq = [
   },
   {
     q: `Quel est le prix d'Ozempic à ${villeCap} ?`,
-    a: `Ozempic est vendu au prix public CEPS de 77,60 € par stylo, identique dans toutes les pharmacies de France, y compris à ${villeCap}. Il est remboursé à 30% par l'Assurance Maladie pour les patients atteints de diabète de type 2 (100% en ALD).`,
+    a: `Ozempic est vendu au prix public CEPS de **80,18 € par stylo**, identique dans toutes les pharmacies de France, y compris à ${villeCap}. En 2026, il est remboursé à **65 %** par l'Assurance Maladie en bithérapie avec metformine (et 30 % en trithérapie avec insuline) pour les patients atteints de diabète de type 2 — 100 % en ALD. Détails : [Prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/).`,
   },
   {
     q: `Wegovy et Mounjaro sont-ils remboursés à ${villeCap} ?`,
@@ -348,7 +348,7 @@ const faq = [
                   {d.slug === 'ozempic' ? (
                     <div class="drug-price-row">
                       <div class="price-label">Prix officiel</div>
-                      <div class="price-big">77,60 €</div>
+                      <div class="price-big">80,18 €</div>
                       <div class="price-meta">par stylo · identique France entière</div>
                     </div>
                   ) : (

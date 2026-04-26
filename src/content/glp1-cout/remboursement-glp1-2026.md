@@ -4,7 +4,7 @@ thumbnail: "/images/thumbnails/remboursement-glp1-2026.jpg"
 description: "Remboursement GLP-1 2026 sécurité sociale conditions : Mounjaro, Wegovy, Ozempic. Mutuelles et aides. Guide remboursement GLP-1 2026 mis à jour."
 keywords: ['remboursement glp1 2026', 'mounjaro remboursement 2026', 'wegovy remboursement 2026', 'remboursement ozempic 2026', 'glp1 remboursement mutuelle', 'quelle mutuelle rembourse glp1', 'prise en charge glp1 2026']
 seoTitle: "Remboursement GLP-1 2026 : Guide par Médicament et Mutuelle"
-seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 30% (DT2). Rybelsus non remboursé (avis défavorable HAS). Mounjaro en cours de négociation. Guide complet."
+seoDescription: "Remboursement GLP-1 2026 : Ozempic, Trulicity, Victoza remboursés 65% (DT2 bithérapie metformine). Rybelsus non remboursé (avis défavorable HAS). Mounjaro en cours de négociation. Guide complet."
 publishedAt: '2025-12-27'
 updatedAt: '2026-03-17'
 date: '2026-03-17'
@@ -42,7 +42,7 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 
 ### Critères Communs à Tous les GLP-1
 
-Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Saxenda, 65% pour Trulicity/Victoza selon la classification en liste I ou II), vous devez remplir ces conditions de base :
+Pour bénéficier du remboursement par l'Assurance Maladie (65% pour Ozempic/Trulicity/Victoza en bithérapie metformine, 30% en trithérapie avec insuline ; Saxenda non remboursé), vous devez remplir ces conditions de base :
 
 ✅ **Prescription médicale obligatoire**
 - Ordonnance d'un médecin généraliste, endocrinologue ou diabétologue
@@ -126,8 +126,8 @@ Pour bénéficier du remboursement par l'Assurance Maladie (30% pour Ozempic/Sax
 **Prix pharmacie :** ~80,18€/stylo (hors honoraires de dispensation)
 
 **Selon dosage :**
-- 0.25-0.5 mg : 1 stylo/mois = **~54€/mois** après remboursement à 30%
-- 1-2 mg : 2 stylos/mois = **~107€/mois** après remboursement à 30%
+- 0.25-0.5 mg : 1 stylo/mois = **~28€/mois** (bithérapie 65%) ou **~56€/mois** (trithérapie 30%)
+- 1-2 mg : 2 stylos/mois = **~56€/mois** (bithérapie 65%) ou **~112€/mois** (trithérapie 30%)
 
 **Le moins cher des GLP-1 injectables !**
 
@@ -353,12 +353,12 @@ Pour continuer à être remboursé, vous devez démontrer :
 
 ### Le remboursement GLP-1 sera-t-il maintenu en 2026 ?
 
-Le remboursement à 30% est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** uniquement (taux applicable aux médicaments à SMR modéré). Les traitements pour l'obésité restent non remboursés.
+Le remboursement est **confirmé pour 2026** pour les GLP-1 indiqués dans le **diabète de type 2** uniquement : **65% en bithérapie avec metformine** (cas le plus fréquent), 30% en trithérapie avec insuline basale. Les traitements pour l'obésité restent non remboursés.
 
 **Statut par traitement :**
-- ✅ Ozempic : Maintenu 30% (DT2 uniquement)
-- ✅ Trulicity : Maintenu 30% (DT2 uniquement)
-- ✅ Victoza : Maintenu 30% (DT2 uniquement)
+- ✅ Ozempic : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement)
+- ✅ Trulicity : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement)
+- ✅ Victoza : Maintenu 65% bithérapie metformine / 30% trithérapie insuline (DT2 uniquement, **arrêt commercialisation prévu fin 2026**)
 - ❌ Rybelsus : NON remboursé (avis défavorable HAS)
 - ❌ Wegovy : NON remboursé
 - ❌ Mounjaro : NON remboursé
@@ -435,7 +435,7 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 **Choix recommandé :**
 - **Budget limité** --> Wegovy (moins cher)
 - **Efficacité maximale** --> Mounjaro
-- **Remboursement souhaité** --> Ozempic (30% DT2 uniquement, principe actif identique à Wegovy)
+- **Remboursement souhaité** --> Ozempic (65% en bithérapie metformine / 30% en trithérapie insuline, DT2 uniquement, principe actif identique à Wegovy)
 
 [Comparaison détaillée Wegovy vs Mounjaro →](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/)
 
