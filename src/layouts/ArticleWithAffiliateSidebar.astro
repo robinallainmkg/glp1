@@ -6,6 +6,7 @@ import CharlesSidebar from '../components/CharlesSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 import CharlesCTA from '../components/CharlesCTA.astro';
+import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder } from '../lib/partnerRouter';
 
 export interface Props {
@@ -69,6 +70,18 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
 ---
 
 <BaseLayout title={title} description={description}>
+  <!-- Schema.org : Article + BreadcrumbList (E-E-A-T + featured snippets) -->
+  <ArticleSchema
+    title={title}
+    description={description}
+    author={author}
+    pubDate={article?.data?.pubDate ? new Date(article.data.pubDate) : new Date()}
+    image={image}
+    url={Astro.url.pathname}
+    siteUrl={Astro.site?.toString() || 'https://glp1-france.fr/'}
+    collection={detectedCategory}
+  />
+
   <!-- Breadcrumb Navigation -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <div class="breadcrumb-inner">

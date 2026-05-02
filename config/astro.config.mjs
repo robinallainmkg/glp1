@@ -128,6 +128,10 @@ export default defineConfig({
     '/mounjaro/': '/collections/traitements-glp1/guide-complet-mounjaro/',
     '/nouveaux-medicaments-perdre-poids/': '/guides/qu-est-ce-que-glp1/',
     '/medicaments-glp1': '/collections/glp1-cout/',
+    '/collections/medicaments-glp1/': '/collections/traitements-glp1/',
+    '/collections/medicaments-glp1': '/collections/traitements-glp1/',
+    '/politique-de-confidentialite/': '/legal/politique-confidentialite/',
+    '/politique-de-confidentialite': '/legal/politique-confidentialite/',
     '/temoignages-glp1/': '/collections/temoignages/'
   },
   server: {
