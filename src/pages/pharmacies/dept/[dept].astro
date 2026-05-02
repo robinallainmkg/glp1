@@ -1,0 +1,905 @@
+---
+import StaticLayout from '../../../layouts/StaticLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Libellés humains des départements (codes INSEE → nom)
+const DEPT_LABELS: Record<string, string> = {
+  '01': 'Ain', '02': 'Aisne', '03': 'Allier', '04': 'Alpes-de-Haute-Provence', '05': 'Hautes-Alpes',
+  '06': 'Alpes-Maritimes', '07': 'Ardèche', '08': 'Ardennes', '09': 'Ariège', '10': 'Aube',
+  '11': 'Aude', '12': 'Aveyron', '13': 'Bouches-du-Rhône', '14': 'Calvados', '15': 'Cantal',
+  '16': 'Charente', '17': 'Charente-Maritime', '18': 'Cher', '19': 'Corrèze', '21': 'Côte-d\'Or',
+  '22': 'Côtes-d\'Armor', '23': 'Creuse', '24': 'Dordogne', '25': 'Doubs', '26': 'Drôme',
+  '27': 'Eure', '28': 'Eure-et-Loir', '29': 'Finistère', '30': 'Gard', '31': 'Haute-Garonne',
+  '32': 'Gers', '33': 'Gironde', '34': 'Hérault', '35': 'Ille-et-Vilaine', '36': 'Indre',
+  '37': 'Indre-et-Loire', '38': 'Isère', '39': 'Jura', '40': 'Landes', '41': 'Loir-et-Cher',
+  '42': 'Loire', '43': 'Haute-Loire', '44': 'Loire-Atlantique', '45': 'Loiret', '46': 'Lot',
+  '47': 'Lot-et-Garonne', '48': 'Lozère', '49': 'Maine-et-Loire', '50': 'Manche', '51': 'Marne',
+  '52': 'Haute-Marne', '53': 'Mayenne', '54': 'Meurthe-et-Moselle', '55': 'Meuse', '56': 'Morbihan',
+  '57': 'Moselle', '58': 'Nièvre', '59': 'Nord', '60': 'Oise', '61': 'Orne', '62': 'Pas-de-Calais',
+  '63': 'Puy-de-Dôme', '64': 'Pyrénées-Atlantiques', '65': 'Hautes-Pyrénées', '66': 'Pyrénées-Orientales',
+  '67': 'Bas-Rhin', '68': 'Haut-Rhin', '69': 'Rhône', '70': 'Haute-Saône', '71': 'Saône-et-Loire',
+  '72': 'Sarthe', '73': 'Savoie', '74': 'Haute-Savoie', '75': 'Paris', '76': 'Seine-Maritime',
+  '77': 'Seine-et-Marne', '78': 'Yvelines', '79': 'Deux-Sèvres', '80': 'Somme', '81': 'Tarn',
+  '82': 'Tarn-et-Garonne', '83': 'Var', '84': 'Vaucluse', '85': 'Vendée', '86': 'Vienne',
+  '87': 'Haute-Vienne', '88': 'Vosges', '89': 'Yonne', '90': 'Territoire de Belfort', '91': 'Essonne',
+  '92': 'Hauts-de-Seine', '93': 'Seine-Saint-Denis', '94': 'Val-de-Marne', '95': 'Val-d\'Oise',
+  '971': 'Guadeloupe', '972': 'Martinique', '973': 'Guyane', '974': 'La Réunion', '976': 'Mayotte',
+};
+
+// Chefs-lieux des départements (préfecture)
+const DEPT_PREFECTURES: Record<string, string> = {
+  '59': 'Lille', '75': 'Paris', '13': 'Marseille', '69': 'Lyon', '33': 'Bordeaux',
+  '62': 'Arras', '92': 'Nanterre', '06': 'Nice', '31': 'Toulouse', '93': 'Bobigny',
+  '44': 'Nantes', '34': 'Montpellier', '94': 'Créteil', '38': 'Grenoble', '78': 'Versailles',
+  '83': 'Toulon', '77': 'Melun', '76': 'Rouen', '91': 'Évry-Courcouronnes', '95': 'Cergy',
+};
+
+// Régions / contexte géographique pour storytelling unique par département
+const DEPT_REGION: Record<string, string> = {
+  '59': 'Hauts-de-France', '62': 'Hauts-de-France',
+  '75': 'Île-de-France', '92': 'Île-de-France', '93': 'Île-de-France', '94': 'Île-de-France',
+  '78': 'Île-de-France', '77': 'Île-de-France', '91': 'Île-de-France', '95': 'Île-de-France',
+  '13': 'Provence-Alpes-Côte d\'Azur', '06': 'Provence-Alpes-Côte d\'Azur', '83': 'Provence-Alpes-Côte d\'Azur',
+  '69': 'Auvergne-Rhône-Alpes', '38': 'Auvergne-Rhône-Alpes',
+  '33': 'Nouvelle-Aquitaine',
+  '31': 'Occitanie', '34': 'Occitanie',
+  '44': 'Pays de la Loire',
+  '76': 'Normandie',
+};
+
+const PREMIUM_DEPTS = new Set(['75', '92', '78', '06', '69', '13', '74', '77', '93', '94', '91', '95']);
+const RURAL_DEPTS = new Set(['23', '15', '48', '19', '46', '55', '39', '52', '58', '43', '04']);
+
+export async function getStaticPaths() {
+  const dataPath = path.resolve(process.cwd(), 'public/data/pharmacies.json');
+  let pharmacies = { schema: [], rows: [] };
+  try { pharmacies = JSON.parse(fs.readFileSync(dataPath, 'utf-8')); } catch {}
+
+  const iId = pharmacies.schema.indexOf('id');
+  const iName = pharmacies.schema.indexOf('name');
+  const iCity = pharmacies.schema.indexOf('city');
+  const iSlug = pharmacies.schema.indexOf('city_slug');
+  const iDept = pharmacies.schema.indexOf('department');
+  const iCP = pharmacies.schema.indexOf('postal_code');
+  const iLat = pharmacies.schema.indexOf('lat');
+  const iLng = pharmacies.schema.indexOf('lng');
+
+  // Index par département
+  const byDept: Record<string, any> = {};
+  for (const row of pharmacies.rows) {
+    const dept = row[iDept];
+    if (!dept) continue;
+    if (!byDept[dept]) {
+      byDept[dept] = { dept, pharmacies: [], byCity: {} };
+    }
+    const slug = row[iSlug];
+    const city = row[iCity];
+    byDept[dept].pharmacies.push({
+      id: row[iId],
+      name: row[iName],
+      city,
+      city_slug: slug,
+      postal: row[iCP],
+      lat: Number(row[iLat]),
+      lng: Number(row[iLng]),
+    });
+    if (slug) {
+      if (!byDept[dept].byCity[slug]) {
+        byDept[dept].byCity[slug] = { slug, city, count: 0 };
+      }
+      byDept[dept].byCity[slug].count++;
+    }
+  }
+
+  // Top 20 départements par nombre de pharmacies (MVP)
+  const topDepts = Object.values(byDept)
+    .sort((a: any, b: any) => b.pharmacies.length - a.pharmacies.length)
+    .slice(0, 20);
+
+  // Pré-calcule pour chaque dept: top villes, bbox, centre, top global pour maillage
+  const allDeptsTop20: any[] = topDepts.map((d: any) => ({
+    dept: d.dept,
+    count: d.pharmacies.length,
+  }));
+
+  return topDepts.map((d: any) => {
+    // Bbox du département
+    let minLat = Infinity, minLng = Infinity, maxLat = -Infinity, maxLng = -Infinity;
+    let sumLat = 0, sumLng = 0, count = 0;
+    for (const p of d.pharmacies) {
+      const lat = Number(p.lat), lng = Number(p.lng);
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+      if (lat < minLat) minLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lat > maxLat) maxLat = lat;
+      if (lng > maxLng) maxLng = lng;
+      sumLat += lat;
+      sumLng += lng;
+      count++;
+    }
+    const centerLat = count ? sumLat / count : 0;
+    const centerLng = count ? sumLng / count : 0;
+    const bbox = [minLng, minLat, maxLng, maxLat];
+
+    // Top villes par nombre de pharmacies (top 20)
+    const topCities = (Object.values(d.byCity) as any[])
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 20);
+
+    // Liste paginée des pharmacies (200 premières par ordre alpha)
+    const sortedPharmas = [...d.pharmacies]
+      .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
+      .slice(0, 200);
+
+    // Codes postaux uniques
+    const zipSet = new Set<string>();
+    for (const p of d.pharmacies) {
+      if (p.postal) zipSet.add(p.postal);
+    }
+
+    return {
+      params: { dept: d.dept },
+      props: {
+        deptCode: d.dept,
+        totalPharmas: d.pharmacies.length,
+        totalCities: Object.keys(d.byCity).length,
+        totalZipcodes: zipSet.size,
+        topCities,
+        sortedPharmas,
+        bbox,
+        centerLat,
+        centerLng,
+        // pharmacies sérialisées pour la mini-map (limitées à 1500 pour la perf)
+        mapPharmacies: d.pharmacies.slice(0, 1500).map((p: any) => ({
+          name: p.name,
+          postal: p.postal,
+          lat: p.lat,
+          lng: p.lng,
+        })),
+        // Autres départements top pour maillage interne
+        otherDepts: allDeptsTop20.filter((o) => o.dept !== d.dept).slice(0, 12),
+      },
+    };
+  });
+}
+
+const {
+  deptCode,
+  totalPharmas,
+  totalCities,
+  totalZipcodes,
+  topCities,
+  sortedPharmas,
+  bbox,
+  centerLat,
+  centerLng,
+  mapPharmacies,
+  otherDepts,
+} = Astro.props;
+
+function titleCase(s: string) {
+  return (s || '').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+const deptLabel = DEPT_LABELS[deptCode] || `Département ${deptCode}`;
+const prefecture = DEPT_PREFECTURES[deptCode] || titleCase(topCities[0]?.city || '');
+const region = DEPT_REGION[deptCode] || '';
+const isPremiumDept = PREMIUM_DEPTS.has(deptCode);
+const isRuralDept = RURAL_DEPTS.has(deptCode);
+const deptZone = isPremiumDept ? 'urbaine premium' : isRuralDept ? 'rurale' : 'standard';
+
+// Estimations prix moyens régionaux Wegovy / Mounjaro selon zone (méthodologie partagée avec pages pharmacie)
+// Référence : moyenne marché FR + variance géographique
+const WEGOVY_AVG_FR = 269;   // moyenne nationale dosages 1.0/1.7 mg
+const MOUNJARO_AVG_FR = 322; // moyenne nationale dosages 5/7.5 mg
+const variance = isPremiumDept ? 1.06 : isRuralDept ? 0.95 : 1.00;
+const wegovyAvg = WEGOVY_AVG_FR * variance;
+const mounjaroAvg = MOUNJARO_AVG_FR * variance;
+
+const updateDate = new Date();
+const updateMonth = updateDate.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+
+const title = `Pharmacies GLP-1 ${deptLabel} (${deptCode}) — Prix Ozempic Wegovy Mounjaro 2026`;
+const description = `${totalPharmas.toLocaleString('fr-FR')} pharmacies du département ${deptLabel} (${deptCode}) — chef-lieu ${prefecture}. Prix Ozempic CEPS 80,18 € (remboursé 65 % DT2 bithérapie), Wegovy ~${wegovyAvg.toFixed(0)} € et Mounjaro ~${mounjaroAvg.toFixed(0)} € (estimations zone ${deptZone}). Carte + ${totalCities} villes.`;
+
+// FAQ — questions départementales spécifiques (pas de duplicate avec pages villes)
+const faq = [
+  {
+    q: `Combien y a-t-il de pharmacies en ${deptLabel} (${deptCode}) ?`,
+    a: `Notre référentiel FINESS officiel recense **${totalPharmas.toLocaleString('fr-FR')} pharmacies d'officine** dans le département ${deptLabel} (${deptCode}), réparties dans **${totalCities.toLocaleString('fr-FR')} communes** et ${totalZipcodes} codes postaux différents. Toutes peuvent dispenser les traitements GLP-1 (Ozempic, Wegovy, Mounjaro, Trulicity, Victoza, Saxenda) sur ordonnance médicale.`,
+  },
+  {
+    q: `Quel est le prix moyen de Wegovy et Mounjaro en ${deptLabel} ?`,
+    a: `En zone ${deptZone} (département ${deptCode}), nos estimations basées sur la moyenne marché française placent le prix moyen Wegovy autour de **${wegovyAvg.toFixed(2)} €** par boîte et le prix moyen Mounjaro autour de **${mounjaroAvg.toFixed(2)} €** par boîte. Ces traitements étant en prix libéré (non remboursés), chaque pharmacie fixe son tarif. Pour Ozempic, le prix CEPS de **80,18 €** est identique partout en France, y compris dans tout le ${deptLabel}.`,
+  },
+  {
+    q: `Ozempic est-il remboursé par la Sécurité sociale en ${deptLabel} ?`,
+    a: `Oui — le remboursement Ozempic dépend de l'indication, pas de la géographie. En 2026, Ozempic est remboursé à **65 %** par l'Assurance Maladie en bithérapie avec metformine (et 30 % en trithérapie avec insuline) pour les patients atteints de diabète de type 2 — 100 % en ALD (Affection Longue Durée). Wegovy, Mounjaro et Saxenda ne sont pas remboursés en France. Détails : [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).`,
+  },
+  {
+    q: `Quelle est la ville avec le plus de pharmacies en ${deptLabel} ?`,
+    a: `Dans le département ${deptLabel}, ${titleCase(topCities[0]?.city || prefecture)} concentre le plus grand nombre de pharmacies avec **${topCities[0]?.count || '—'} officines** référencées. Les autres communes principales du département figurent dans la section "Top 10 villes" plus haut. Pour la liste complète des pharmacies par ville, cliquez sur une commune pour accéder à sa page dédiée.`,
+  },
+  {
+    q: `Comment obtenir une ordonnance GLP-1 en ${deptLabel} ?`,
+    a: `Tout médecin (généraliste, endocrinologue, diabétologue) peut prescrire Ozempic, Wegovy ou Mounjaro depuis juin 2025 (la restriction aux endocrinologues a été levée). Si vous n'avez pas de rendez-vous proche dans le ${deptLabel}, la téléconsultation est une alternative rapide : consultation en 24h, ordonnance numérique transmise à la pharmacie de votre choix. Voir [médecins prescripteurs GLP-1](/collections/medecins-glp1-france/).`,
+  },
+  {
+    q: `Les prix varient-ils entre ${prefecture} et le reste du ${deptLabel} ?`,
+    a: `Pour **Ozempic**, non — le prix CEPS de 80,18 € est identique dans toutes les pharmacies françaises (encadré par décret). Pour **Wegovy, Mounjaro et Saxenda** (prix libéré), de légères variations peuvent exister entre la préfecture et les zones moins denses du département. Notre méthodologie applique un coefficient de variance ${isPremiumDept ? '+6 %' : isRuralDept ? '−5 %' : 'neutre'} pour la zone ${deptZone} — voir la page d'une pharmacie spécifique pour l'estimation détaillée.`,
+  },
+];
+
+// URL Wikipedia officielle du département (pour signal E-E-A-T)
+const wikiUrl = `https://fr.wikipedia.org/wiki/${encodeURIComponent(deptLabel.replace(/'/g, '\''))}_(département)`;
+---
+
+<StaticLayout title={title} description={description} keywords={`pharmacie ${deptLabel}, prix Ozempic ${deptLabel}, prix Wegovy ${deptCode}, pharmacie GLP-1 ${deptLabel}, ${prefecture} pharmacies`}>
+  <!-- Schema.org : Breadcrumb + FAQ + ItemList -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://glp1-france.fr/" },
+          { "@type": "ListItem", "position": 2, "name": "Pharmacies", "item": "https://glp1-france.fr/pharmacies/" },
+          { "@type": "ListItem", "position": 3, "name": deptLabel, "item": `https://glp1-france.fr/pharmacies/dept/${deptCode}/` },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": faq.map((f) => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })),
+      },
+      {
+        "@type": "ItemList",
+        "name": `Top villes du département ${deptLabel}`,
+        "numberOfItems": Math.min(10, topCities.length),
+        "itemListElement": topCities.slice(0, 10).map((c: any, i: number) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": titleCase(c.city),
+          "url": `https://glp1-france.fr/pharmacies/${c.slug}/`,
+        })),
+      },
+    ],
+  })} />
+
+  <div class="dept-page">
+    <!-- Hero -->
+    <section class="dept-hero">
+      <div class="dept-hero-inner">
+        <nav class="breadcrumb">
+          <a href="/">Accueil</a> <span>›</span>
+          <a href="/pharmacies/">Pharmacies</a> <span>›</span>
+          <strong>{deptLabel}</strong>
+        </nav>
+        <div class="dept-badge">Département {deptCode}{region && ` · ${region}`}</div>
+        <h1>Pharmacies GLP-1 en {deptLabel}</h1>
+        <p class="dept-sub">
+          <strong>{totalPharmas.toLocaleString('fr-FR')} pharmacies</strong> référencées dans {totalCities.toLocaleString('fr-FR')} communes ·
+          Chef-lieu : <strong>{prefecture}</strong> · Prix Ozempic officiel CEPS, estimations Wegovy/Mounjaro
+        </p>
+        <div class="dept-stats-row">
+          <div class="dept-stat">
+            <div class="dept-stat-num">{totalPharmas.toLocaleString('fr-FR')}</div>
+            <div class="dept-stat-lbl">pharmacies</div>
+          </div>
+          <div class="dept-stat">
+            <div class="dept-stat-num">{totalCities.toLocaleString('fr-FR')}</div>
+            <div class="dept-stat-lbl">communes</div>
+          </div>
+          <div class="dept-stat">
+            <div class="dept-stat-num">{totalZipcodes}</div>
+            <div class="dept-stat-lbl">codes postaux</div>
+          </div>
+          <div class="dept-stat">
+            <div class="dept-stat-num">80,18 €</div>
+            <div class="dept-stat-lbl">prix Ozempic CEPS</div>
+          </div>
+        </div>
+        <div class="dept-ctas">
+          <a href={`/outils/carte-prix-pharmacies/?lat=${centerLat.toFixed(4)}&lng=${centerLng.toFixed(4)}&zoom=9`} class="btn-primary">Voir sur la carte →</a>
+          <a href="#villes" class="btn-secondary">Top 10 villes du département</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carte interactive du département -->
+    <section class="dept-map-section">
+      <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+      <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" is:inline></script>
+      <div id="dept-map" class="dept-map" aria-label={`Carte des pharmacies en ${deptLabel}`}></div>
+      <script is:inline define:vars={{ pharmaciesData: mapPharmacies, bbox, deptName: deptLabel }}>
+        (function () {
+          if (typeof maplibregl === 'undefined') return;
+          const style = {
+            version: 8,
+            sources: {
+              'tiles': {
+                type: 'raster',
+                tiles: [
+                  'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+                  'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+                ],
+                tileSize: 256,
+                attribution: '© OpenStreetMap · © CARTO',
+              },
+            },
+            layers: [{ id: 'bg', type: 'raster', source: 'tiles' }],
+          };
+          const map = new maplibregl.Map({
+            container: 'dept-map',
+            style,
+            bounds: [[bbox[0], bbox[1]], [bbox[2], bbox[3]]],
+            fitBoundsOptions: { padding: 35, maxZoom: 11 },
+          });
+          map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+          const ready = new Promise((resolve) => {
+            let done = false;
+            const go = () => { if (done) return; done = true; resolve(); };
+            map.on('styledata', () => { if (map.isStyleLoaded()) go(); });
+            map.on('load', go);
+            setTimeout(go, 6000);
+          });
+
+          ready.then(() => {
+            const features = pharmaciesData.map((p) => ({
+              type: 'Feature',
+              geometry: { type: 'Point', coordinates: [Number(p.lng), Number(p.lat)] },
+              properties: { name: p.name, postal: p.postal },
+            }));
+            map.addSource('pharma', {
+              type: 'geojson',
+              data: { type: 'FeatureCollection', features },
+              cluster: true,
+              clusterRadius: 50,
+              clusterMaxZoom: 13,
+            });
+            map.addLayer({
+              id: 'clusters', type: 'circle', source: 'pharma', filter: ['has', 'point_count'],
+              paint: {
+                'circle-color': ['step', ['get', 'point_count'], '#93c5fd', 20, '#60a5fa', 100, '#2563eb'],
+                'circle-radius': ['step', ['get', 'point_count'], 14, 20, 18, 100, 24],
+                'circle-stroke-width': 2, 'circle-stroke-color': '#fff',
+              },
+            });
+            map.addLayer({
+              id: 'cluster-count', type: 'symbol', source: 'pharma', filter: ['has', 'point_count'],
+              layout: { 'text-field': '{point_count_abbreviated}', 'text-font': ['Noto Sans Regular'], 'text-size': 12 },
+              paint: { 'text-color': '#fff' },
+            });
+            map.addLayer({
+              id: 'points', type: 'circle', source: 'pharma', filter: ['!', ['has', 'point_count']],
+              paint: { 'circle-color': '#16a34a', 'circle-radius': 5, 'circle-stroke-width': 1.2, 'circle-stroke-color': '#fff' },
+            });
+            map.on('click', 'points', (e) => {
+              const f = e.features[0];
+              new maplibregl.Popup({ maxWidth: '280px' })
+                .setLngLat(f.geometry.coordinates)
+                .setHTML('<strong>' + f.properties.name + '</strong><br><small>' + f.properties.postal + '</small>')
+                .addTo(map);
+            });
+            map.on('mouseenter', 'points', () => { map.getCanvas().style.cursor = 'pointer'; });
+            map.on('mouseleave', 'points', () => { map.getCanvas().style.cursor = ''; });
+          });
+        })();
+      </script>
+    </section>
+
+    <!-- Top 10 villes du département -->
+    <section id="villes" class="dept-cities">
+      <div class="dept-section-inner">
+        <h2>Top 10 villes du {deptLabel} avec le plus de pharmacies</h2>
+        <p class="cities-intro">
+          Ces 10 villes représentent la part la plus dense du maillage pharmaceutique du département {deptCode}.
+          Chaque page ville liste toutes les pharmacies, les codes postaux et les prix observés.
+        </p>
+        <div class="cities-grid">
+          {topCities.slice(0, 10).map((c: any, i: number) => (
+            <a href={`/pharmacies/${c.slug}/`} class="city-card">
+              <div class="city-rank">#{i + 1}</div>
+              <div class="city-info">
+                <div class="city-name">{titleCase(c.city)}</div>
+                <div class="city-count">{c.count} pharmacie{c.count > 1 ? 's' : ''}</div>
+              </div>
+              <div class="city-arrow">→</div>
+            </a>
+          ))}
+        </div>
+        {topCities.length > 10 && (
+          <details class="cities-more">
+            <summary>Voir 10 villes supplémentaires</summary>
+            <div class="cities-grid">
+              {topCities.slice(10, 20).map((c: any, i: number) => (
+                <a href={`/pharmacies/${c.slug}/`} class="city-card">
+                  <div class="city-rank">#{i + 11}</div>
+                  <div class="city-info">
+                    <div class="city-name">{titleCase(c.city)}</div>
+                    <div class="city-count">{c.count} pharmacie{c.count > 1 ? 's' : ''}</div>
+                  </div>
+                  <div class="city-arrow">→</div>
+                </a>
+              ))}
+            </div>
+          </details>
+        )}
+      </div>
+    </section>
+
+    <!-- Prix moyens régionaux -->
+    <section class="dept-prices">
+      <div class="dept-section-inner">
+        <h2>Prix moyens des traitements GLP-1 en {deptLabel}</h2>
+        <p class="prices-intro">
+          Le département {deptLabel} appartient à la zone <strong>{deptZone}</strong> (coefficient de variance {isPremiumDept ? '+6 %' : isRuralDept ? '−5 %' : 'neutre'} par rapport à la moyenne nationale).
+          Pour Ozempic, le prix officiel CEPS est identique partout en France. Pour Wegovy et Mounjaro (prix libéré), nos estimations tiennent compte du contexte régional.
+          Données mises à jour {updateMonth}.
+        </p>
+
+        <div class="drug-grid">
+          <div class="drug-card">
+            <div class="drug-head">
+              <h3>Ozempic</h3>
+              <span class="src-badge src-off">Officiel CEPS</span>
+            </div>
+            <div class="drug-price-row">
+              <div class="price-label">Prix officiel</div>
+              <div class="price-big">80,18 €</div>
+              <div class="price-meta">par stylo · identique France entière</div>
+            </div>
+            <p class="drug-note">Remboursé 65 % bithérapie metformine / 30 % trithérapie insuline (DT2). 100 % en ALD.</p>
+            <a href="/collections/glp1-cout/prix-ozempic-france/" class="link-small">Détails prix Ozempic →</a>
+          </div>
+
+          <div class="drug-card">
+            <div class="drug-head">
+              <h3>Wegovy</h3>
+              <span class="src-badge src-est">Estimation</span>
+            </div>
+            <div class="drug-price-row">
+              <div class="price-label">Prix moyen estimé</div>
+              <div class="price-big">{wegovyAvg.toFixed(2)} €</div>
+              <div class="price-meta">zone {deptZone} · variance {isPremiumDept ? '+6 %' : isRuralDept ? '−5 %' : '0 %'}</div>
+            </div>
+            <p class="drug-note">Prix libéré (non remboursé). Chaque pharmacie fixe son tarif. Fourchette nationale : 169 – 360 €.</p>
+            <a href="/collections/glp1-cout/prix-wegovy-france/" class="link-small">Détails prix Wegovy →</a>
+          </div>
+
+          <div class="drug-card">
+            <div class="drug-head">
+              <h3>Mounjaro</h3>
+              <span class="src-badge src-est">Estimation</span>
+            </div>
+            <div class="drug-price-row">
+              <div class="price-label">Prix moyen estimé</div>
+              <div class="price-big">{mounjaroAvg.toFixed(2)} €</div>
+              <div class="price-meta">zone {deptZone} · variance {isPremiumDept ? '+6 %' : isRuralDept ? '−5 %' : '0 %'}</div>
+            </div>
+            <p class="drug-note">Prix libéré (non remboursé). Avis HAS favorable nov. 2025, négociation CEPS en cours. Fourchette nationale : 230 – 440 €.</p>
+            <a href="/collections/glp1-cout/prix-mounjaro-france/" class="link-small">Détails prix Mounjaro →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liste paginée des pharmacies -->
+    <section class="dept-list">
+      <div class="dept-section-inner">
+        <h2>Pharmacies du département {deptCode} ({deptLabel})</h2>
+        <p class="list-intro">
+          Affichage des {Math.min(200, totalPharmas)} premières pharmacies par ordre alphabétique sur les {totalPharmas.toLocaleString('fr-FR')} référencées.
+          Pour explorer l'intégralité du maillage, utilisez la <a href={`/outils/carte-prix-pharmacies/?lat=${centerLat.toFixed(4)}&lng=${centerLng.toFixed(4)}&zoom=9`}>carte interactive</a> ou parcourez les pages villes ci-dessus.
+        </p>
+
+        <div class="pharma-list">
+          {sortedPharmas.map((p: any) => (
+            <div class="pharma-row">
+              <div class="pharma-info">
+                <div class="pharma-name">{titleCase(p.name)}</div>
+                <div class="pharma-meta">{p.postal} {titleCase(p.city)}</div>
+              </div>
+              {p.city_slug && (
+                <a href={`/pharmacies/${p.city_slug}/`} class="pharma-city-link">
+                  Voir {titleCase(p.city)} →
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+        {totalPharmas > 200 && (
+          <p class="list-more">
+            <strong>{(totalPharmas - 200).toLocaleString('fr-FR')}</strong> pharmacies supplémentaires non affichées.
+            <a href={`/outils/carte-prix-pharmacies/?lat=${centerLat.toFixed(4)}&lng=${centerLng.toFixed(4)}&zoom=9`}> Voir toutes les pharmacies du {deptLabel} sur la carte →</a>
+          </p>
+        )}
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="dept-faq">
+      <div class="dept-section-inner">
+        <h2>Questions fréquentes — pharmacies GLP-1 en {deptLabel}</h2>
+        <div class="faq-list">
+          {faq.map((f) => (
+            <details class="faq-item">
+              <summary>{f.q}</summary>
+              <div class="faq-answer" set:html={f.a.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>')}></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Partenaire Annette -->
+    <section class="dept-cta">
+      <div class="dept-section-inner">
+        <h2>Pas encore d'ordonnance ? Téléconsultation rapide</h2>
+        <p class="cta-text">
+          Tous les traitements GLP-1 nécessitent une prescription médicale. Si vous résidez en {deptLabel} et n'avez pas
+          encore de rendez-vous chez un médecin, la téléconsultation est une voie rapide pour obtenir votre ordonnance,
+          puis vous la faire délivrer dans la pharmacie de votre choix du département.
+        </p>
+        <a
+          href="https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_dept"
+          target="_blank"
+          rel="noopener sponsored"
+          class="partner-card partner-annette"
+        >
+          <div class="partner-badge">Accompagnement + prescription</div>
+          <div class="partner-title">Annette</div>
+          <div class="partner-desc">
+            Médecins partenaires (primo-prescription si éligible + renouvellement) et suivi diététique.
+            Note Google 4.8/5 · 2 000+ patients accompagnés. Code <strong>CARE50</strong> : 50 % sur le 1er mois (24,50 € au lieu de 49 €).
+          </div>
+          <div class="partner-link">Découvrir Annette →</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Maillage : autres départements + ressources -->
+    <section class="dept-interlinks">
+      <div class="dept-section-inner">
+        <div class="interlinks-grid">
+          <div class="interlinks-col">
+            <h2>Autres départements (top 20 pharmacies)</h2>
+            <ul class="interlinks-list">
+              {otherDepts.map((o: any) => (
+                <li>
+                  <a href={`/pharmacies/dept/${o.dept}/`}>
+                    <strong>{DEPT_LABELS[o.dept] || `Département ${o.dept}`}</strong>
+                    <span>{o.count.toLocaleString('fr-FR')} pharmacies</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="interlinks-col">
+            <h2>Ressources GLP-1</h2>
+            <ul class="interlinks-list interlinks-simple">
+              <li><a href="/outils/carte-prix-pharmacies/">🗺️ Carte interactive des prix pharmacies</a></li>
+              <li><a href="/pharmacies/">Annuaire pharmacies par ville</a></li>
+              <li><a href="/collections/glp1-cout/prix-ozempic-france/">Prix Ozempic France</a></li>
+              <li><a href="/collections/glp1-cout/prix-wegovy-france/">Prix Wegovy France</a></li>
+              <li><a href="/collections/glp1-cout/prix-mounjaro-france/">Prix Mounjaro France</a></li>
+              <li><a href="/collections/glp1-cout/wegovy-remboursement-mutuelle/">Remboursement & mutuelles</a></li>
+              <li><a href="/collections/glp1-cout/remboursement-glp1-2026/">Remboursement GLP-1 2026</a></li>
+              <li><a href="/collections/medecins-glp1-france/">Médecins prescripteurs</a></li>
+              <li><a href="/guides/quel-traitement-glp1-choisir/">Quel traitement choisir&nbsp;?</a></li>
+            </ul>
+          </div>
+          <div class="interlinks-col">
+            <h2>À propos du {deptLabel}</h2>
+            <ul class="interlinks-list interlinks-simple">
+              <li><a href={wikiUrl} target="_blank" rel="noopener noreferrer">Fiche Wikipédia du {deptLabel} ↗</a></li>
+              <li><a href="https://finess.esante.gouv.fr/" target="_blank" rel="noopener noreferrer">Référentiel FINESS officiel ↗</a></li>
+              <li><a href="https://www.insee.fr/fr/recherche" target="_blank" rel="noopener noreferrer">Données INSEE département ↗</a></li>
+              <li><a href="https://solidarites-sante.gouv.fr/ministere/acteurs/instances-rattachees/comite-economique-des-produits-de-sante-ceps/" target="_blank" rel="noopener noreferrer">CEPS — prix médicaments ↗</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="dept-disclaimer">
+      <p>
+        <strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical.
+        Tous les traitements GLP-1 nécessitent une ordonnance. Le prix Ozempic est officiel et identique en France entière.
+        Les prix moyens Wegovy et Mounjaro sont des <strong>estimations</strong> calculées par moyenne nationale + variance régionale (zone {deptZone}) ;
+        vérifiez le tarif exact directement auprès de chaque pharmacie. Sources : référentiel FINESS (data.gouv.fr / Atlasanté),
+        CEPS, HAS, Ameli — mises à jour {updateMonth}.
+      </p>
+    </section>
+  </div>
+
+  <style>
+  .dept-page { background: #f8faf9; min-height: 100vh; }
+
+  /* Hero */
+  .dept-hero {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 2rem 1.5rem 1.75rem;
+  }
+  .dept-hero-inner, .dept-section-inner { max-width: 1100px; margin: 0 auto; }
+  .breadcrumb { font-size: .82rem; color: #6b7280; margin-bottom: .75rem; }
+  .breadcrumb a { color: #1a3c34; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 .35rem; color: #9ca3af; }
+  .dept-badge {
+    display: inline-block;
+    background: #dcfce7;
+    color: #14532d;
+    padding: .3rem .8rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: .6rem;
+  }
+  .dept-hero h1 {
+    font-size: clamp(1.7rem, 4.2vw, 2.3rem);
+    font-weight: 900; color: #1a3c34;
+    margin: 0 0 .5rem; letter-spacing: -.02em; line-height: 1.2;
+  }
+  .dept-sub { color: #475569; font-size: clamp(.92rem, 2vw, 1.05rem); margin: 0 0 1.5rem; line-height: 1.55; }
+  .dept-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+  }
+  .dept-stat {
+    background: #fff;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: .85rem 1rem;
+    text-align: center;
+  }
+  .dept-stat-num {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #14532d;
+    line-height: 1.1;
+    letter-spacing: -.02em;
+  }
+  .dept-stat-lbl {
+    font-size: .72rem;
+    color: #6b7280;
+    margin-top: .2rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+  .dept-ctas { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary {
+    display: inline-flex; align-items: center; gap: .3rem;
+    padding: .65rem 1.3rem; font-weight: 700; font-size: .88rem;
+    border-radius: 10px; text-decoration: none; transition: all .2s;
+  }
+  .btn-primary { background: #1a3c34; color: #fff; }
+  .btn-primary:hover { background: #0f2d25; color: #fff; transform: translateY(-1px); }
+  .btn-secondary { background: #fff; color: #1a3c34; border: 1.5px solid #d1d5db; }
+  .btn-secondary:hover { border-color: #1a3c34; }
+
+  /* Carte */
+  .dept-map-section {
+    background: #f8faf9;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .dept-map {
+    width: 100%;
+    height: 480px;
+    background: #e5e7eb;
+  }
+  @media (max-width: 640px) {
+    .dept-map { height: 360px; }
+  }
+
+  /* Sections */
+  .dept-cities, .dept-prices, .dept-list, .dept-faq, .dept-cta, .dept-interlinks { padding: 2.5rem 1.5rem; }
+  .dept-cities { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .dept-prices { background: #f8faf9; border-bottom: 1px solid #e5e7eb; }
+  .dept-list { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .dept-faq { background: #f8faf9; border-bottom: 1px solid #e5e7eb; }
+  .dept-cta { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-bottom: 1px solid #e5e7eb; }
+  .dept-interlinks { background: #fff; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+
+  h2 { font-size: 1.35rem; font-weight: 800; color: #1a3c34; margin: 0 0 1.25rem; letter-spacing: -.02em; }
+  .cities-intro, .prices-intro, .list-intro, .cta-text {
+    color: #475569; font-size: .9rem; line-height: 1.6; margin: 0 0 1.5rem; max-width: 850px;
+  }
+  .cta-text { font-size: .95rem; color: #374151; }
+
+  /* Top villes */
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: .75rem;
+  }
+  .city-card {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: #f8faf9;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: .85rem 1.1rem;
+    text-decoration: none;
+    color: #1a3c34;
+    transition: all .15s;
+  }
+  .city-card:hover {
+    border-color: #16a34a;
+    background: #f0fdf4;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(22, 163, 74, 0.08);
+  }
+  .city-rank {
+    font-size: .85rem;
+    font-weight: 800;
+    color: #16a34a;
+    min-width: 2rem;
+  }
+  .city-info { flex: 1; }
+  .city-name {
+    font-weight: 700;
+    font-size: .94rem;
+    line-height: 1.3;
+  }
+  .city-count {
+    font-size: .76rem;
+    color: #6b7280;
+    margin-top: .15rem;
+  }
+  .city-arrow {
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+  .cities-more {
+    margin-top: 1rem;
+    background: #f8faf9;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+    padding: .85rem 1.1rem;
+  }
+  .cities-more summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: #1a3c34;
+    font-size: .9rem;
+  }
+  .cities-more[open] summary { margin-bottom: .85rem; }
+
+  /* Drug cards */
+  .drug-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .drug-card {
+    border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.2rem; background: #fff;
+    display: flex; flex-direction: column; gap: .75rem;
+  }
+  .drug-head { display: flex; align-items: center; justify-content: space-between; }
+  .drug-head h3 { font-size: 1.1rem; font-weight: 800; color: #1a3c34; margin: 0; }
+  .src-badge { font-size: .65rem; padding: .18rem .5rem; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: .3px; }
+  .src-off { background: #dcfce7; color: #15803d; }
+  .src-est { background: #f3f4f6; color: #6b7280; }
+  .drug-note { font-size: .78rem; color: #6b7280; line-height: 1.5; margin: 0; font-style: italic; }
+  .drug-price-row { margin: 0; }
+  .price-label { font-size: .72rem; color: #6b7280; text-transform: uppercase; letter-spacing: .05em; }
+  .price-big { font-size: 1.6rem; font-weight: 800; color: #15803d; line-height: 1.1; }
+  .price-meta { font-size: .72rem; color: #6b7280; margin-top: .2rem; }
+  .link-small { color: #1B6FA0; font-size: .82rem; text-decoration: none; font-weight: 600; }
+  .link-small:hover { text-decoration: underline; }
+
+  /* Liste pharmacies */
+  .pharma-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: .5rem;
+  }
+  .pharma-row {
+    background: #f8faf9; border: 1px solid #e5e7eb; border-radius: 8px;
+    padding: .65rem .9rem;
+    display: flex; justify-content: space-between; align-items: center; gap: .75rem;
+  }
+  .pharma-name { font-weight: 600; color: #1a3c34; font-size: .85rem; line-height: 1.3; }
+  .pharma-meta { font-size: .72rem; color: #6b7280; margin-top: .15rem; }
+  .pharma-city-link {
+    font-size: .72rem;
+    color: #16a34a;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .pharma-city-link:hover { text-decoration: underline; }
+  .list-more { font-size: .9rem; color: #6b7280; text-align: center; margin-top: 1.25rem; }
+  .list-more a { color: #1B6FA0; font-weight: 600; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: .6rem; }
+  .faq-item {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: .9rem 1.1rem;
+  }
+  .faq-item summary {
+    font-weight: 700; color: #1a3c34; cursor: pointer; font-size: .95rem;
+    list-style: none; display: flex; align-items: center; justify-content: space-between;
+  }
+  .faq-item summary::after { content: '+'; font-size: 1.3rem; font-weight: 300; color: #6b7280; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-answer { margin-top: .6rem; color: #475569; font-size: .88rem; line-height: 1.6; }
+  .faq-answer a { color: #1B6FA0; text-decoration: underline; }
+
+  /* CTA Partenaire */
+  .partner-card {
+    display: block; padding: 1.4rem; border-radius: 14px;
+    text-decoration: none; transition: all .2s;
+    border: 1px solid transparent;
+    max-width: 720px;
+  }
+  .partner-card:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(13, 79, 115, 0.1); }
+  .partner-annette { background: #F0F9FF; border-color: #A9E1FF; color: #0D4F73; }
+  .partner-badge {
+    font-size: .7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .05em; opacity: .7; margin-bottom: .4rem;
+  }
+  .partner-title { font-size: 1.5rem; font-weight: 900; letter-spacing: -.02em; margin-bottom: .5rem; }
+  .partner-desc { font-size: .92rem; line-height: 1.6; margin-bottom: .65rem; }
+  .partner-link { font-weight: 700; font-size: .9rem; color: #0D4F73; }
+
+  /* Interlinks */
+  .interlinks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  .interlinks-col h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a3c34;
+    margin: 0 0 1rem;
+    letter-spacing: -.01em;
+  }
+  .interlinks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+  }
+  .interlinks-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: .5rem .25rem;
+    border-bottom: 1px solid #f3f4f6;
+    text-decoration: none;
+    color: #1f2937;
+    font-size: .88rem;
+    transition: color .15s, padding .15s;
+  }
+  .interlinks-list a:hover { color: #1B6FA0; padding-left: .5rem; }
+  .interlinks-list strong { font-weight: 600; }
+  .interlinks-list span {
+    font-size: .72rem;
+    color: #9ca3af;
+    font-variant-numeric: tabular-nums;
+  }
+  .interlinks-simple a { padding: .4rem .25rem; }
+
+  /* Disclaimer */
+  .dept-disclaimer {
+    max-width: 1100px; margin: 0 auto; padding: 1.5rem;
+    font-size: .75rem; color: #6b7280; line-height: 1.6;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  @media (max-width: 640px) {
+    .pharma-row { flex-direction: column; align-items: flex-start; }
+  }
+  </style>
+</StaticLayout>

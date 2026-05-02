@@ -1,10 +1,13 @@
 // Routage partenaire selon l'intention du visiteur déduite du chemin / collection / slug.
-// annette = accompagnement nutritionnel (CPA 50€) — gagne sur les pages "comprendre / suivre"
-// charles = téléconsultation + prescription (CPA 19€) — gagne sur les pages "accéder au traitement"
+// PIVOT 2026-05 : Charles retiré (CPA 19€ qui ne convertit pas, mismatch d'intention).
+// Remplacé par "mutuelle" (CPA 50-150€/lead via Awin — Magnolia, Acheel, Apicil, Henner, Alan).
+//
+// annette  = accompagnement nutritionnel (CPA 50€) — pages "comprendre / suivre / régime"
+// mutuelle = comparateur mutuelle qui rembourse GLP-1 — pages "prix / remboursement / accès"
 
-export type Partner = "annette" | "charles";
+export type Partner = "annette" | "mutuelle";
 
-const CHARLES_COLLECTIONS = new Set<string>([
+const MUTUELLE_COLLECTIONS = new Set<string>([
   "glp1-cout",
   "medecins-glp1-france",
   "glp1-diabete",
@@ -18,7 +21,7 @@ const ANNETTE_COLLECTIONS = new Set<string>([
   "avant-apres-glp1",
 ]);
 
-const CHARLES_SLUG_HINTS = [
+const MUTUELLE_SLUG_HINTS = [
   "prix",
   "cout",
   "tarif",
@@ -43,6 +46,9 @@ const CHARLES_SLUG_HINTS = [
   "portugal",
   "europe",
   "etranger",
+  "secu",
+  "ameli",
+  "has",
 ];
 
 const ANNETTE_SLUG_HINTS = [
@@ -72,17 +78,17 @@ export function getPartnerForArticle(input: RouteInput): Partner {
   const sl = (input.slug || "").toLowerCase();
   const p = (input.path || "").toLowerCase();
 
-  if (CHARLES_COLLECTIONS.has(col)) return "charles";
+  if (MUTUELLE_COLLECTIONS.has(col)) return "mutuelle";
   if (ANNETTE_COLLECTIONS.has(col)) return "annette";
 
   const haystack = `${sl} ${p}`;
-  const charlesHit = CHARLES_SLUG_HINTS.some((h) => haystack.includes(h));
+  const mutuelleHit = MUTUELLE_SLUG_HINTS.some((h) => haystack.includes(h));
   const annetteHit = ANNETTE_SLUG_HINTS.some((h) => haystack.includes(h));
 
-  if (charlesHit && !annetteHit) return "charles";
-  if (annetteHit && !charlesHit) return "annette";
+  if (mutuelleHit && !annetteHit) return "mutuelle";
+  if (annetteHit && !mutuelleHit) return "annette";
 
-  // Ambigu ou aucun match : fallback Annette (CPA plus élevé, profil evergreen)
+  // Ambigu ou aucun match : fallback Annette (CPA stable, profil evergreen)
   return "annette";
 }
 
@@ -96,7 +102,7 @@ export function getPartnerForPath(pathname: string): Partner {
 }
 
 export function oppositePartner(p: Partner): Partner {
-  return p === "annette" ? "charles" : "annette";
+  return p === "annette" ? "mutuelle" : "annette";
 }
 
 // Hash stable dérivé du slug : permet d'alterner l'ordre de la sidebar

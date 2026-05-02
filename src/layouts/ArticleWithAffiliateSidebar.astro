@@ -2,10 +2,10 @@
 // Layout avancé avec système d'affiliation adaptatif (version sans TinaCMS)
 import BaseLayout from './BaseLayout.astro';
 import PartnerSidebar from '../components/PartnerSidebar.astro';
-import CharlesSidebar from '../components/CharlesSidebar.astro';
+import MutuelleSidebar from '../components/MutuelleSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
-import CharlesCTA from '../components/CharlesCTA.astro';
+import MutuelleCTA from '../components/MutuelleCTA.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder } from '../lib/partnerRouter';
 
@@ -162,14 +162,15 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
           <slot />
         </div>
         <!-- CTA Partenaire : inline = opposé du routé (les 2 partenaires sur la page),
-             bottom = partenaire routé selon l'intention. -->
+             bottom = partenaire routé selon l'intention.
+             Mai 2026 : Charles retiré (mismatch intention), remplacé par MutuelleCTA (Awin). -->
         <div id="partner-cta-template" style="display:none;">
-          {inlinePartner === 'charles'
-            ? <CharlesCTA context="article_inline" />
+          {inlinePartner === 'mutuelle'
+            ? <MutuelleCTA context="article_inline" />
             : <PartnerCTA partner="annette" context="article_inline" />}
         </div>
-        {partner === 'charles'
-          ? <CharlesCTA context="article" />
+        {partner === 'mutuelle'
+          ? <MutuelleCTA context="article" />
           : <PartnerCTA partner="annette" context="article" />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
@@ -180,8 +181,8 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
       <!-- Sidebars partenaires : ordre alterné par article (hash du slug) -->
       <div class="partner-sidebar-stack">
         {sidebarOrder.map((p) => (
-          p === 'charles'
-            ? <CharlesSidebar context={p === partner ? 'article' : 'article_secondary'} />
+          p === 'mutuelle'
+            ? <MutuelleSidebar context={p === partner ? 'article' : 'article_secondary'} />
             : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />
         ))}
       </div>

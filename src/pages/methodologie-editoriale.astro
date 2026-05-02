@@ -1,0 +1,303 @@
+---
+import StaticLayout from '../layouts/StaticLayout.astro';
+
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Méthodologie éditoriale — GLP-1 France",
+  "description": "Découvrez la méthodologie éditoriale de GLP-1 France : sources officielles utilisées (HAS, ANSM, AMELI, Vidal), processus de fact-checking automatisé, indépendance et mise à jour des contenus.",
+  "url": "https://glp1-france.fr/methodologie-editoriale/",
+  "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://glp1-france.fr/favicon.svg"
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Dr Marie Dubois",
+    "url": "https://glp1-france.fr/auteurs/dr-marie-dubois/"
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "headline": "Méthodologie éditoriale et sources",
+    "author": {
+      "@type": "Person",
+      "name": "Dr Marie Dubois"
+    },
+    "datePublished": "2026-01-15",
+    "dateModified": "2026-05-02"
+  },
+  "citation": [
+    { "@type": "CreativeWork", "name": "Haute Autorité de Santé (HAS)", "url": "https://www.has-sante.fr/" },
+    { "@type": "CreativeWork", "name": "Agence nationale de sécurité du médicament (ANSM)", "url": "https://ansm.sante.fr/" },
+    { "@type": "CreativeWork", "name": "Assurance Maladie (AMELI)", "url": "https://www.ameli.fr/" },
+    { "@type": "CreativeWork", "name": "Vidal", "url": "https://www.vidal.fr/" },
+    { "@type": "CreativeWork", "name": "Base de données publique des médicaments", "url": "https://base-donnees-publique.medicaments.gouv.fr/" }
+  ]
+};
+---
+
+<StaticLayout
+  title="Méthodologie éditoriale &amp; sources | GLP-1 France"
+  description="Notre méthodologie : sources officielles (HAS, ANSM, AMELI, Vidal), fact-checking automatisé, indépendance éditoriale et mise à jour continue des contenus GLP-1."
+  keywords="méthodologie éditoriale, sources médicales, HAS, ANSM, AMELI, Vidal, fact-checking, transparence, indépendance, GLP-1"
+  url="/methodologie-editoriale/"
+  type="article"
+  author="Dr Marie Dubois"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(aboutPageJsonLd)} />
+
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700 text-white">
+      <div class="max-w-4xl mx-auto px-4 py-16 sm:py-20">
+        <nav class="text-sm text-emerald-100 mb-6" aria-label="Fil d'Ariane">
+          <a href="/" class="hover:underline">Accueil</a>
+          <span class="mx-2">/</span>
+          <span class="text-white">Méthodologie éditoriale</span>
+        </nav>
+        <p class="uppercase tracking-wider text-emerald-100 text-sm font-semibold mb-3">Transparence éditoriale</p>
+        <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 leading-tight">Notre méthodologie éditoriale</h1>
+        <p class="text-lg sm:text-xl text-emerald-50 max-w-3xl leading-relaxed">
+          Comment nous produisons, vérifions et tenons à jour les contenus médicaux de GLP-1 France :
+          sources officielles, fact-checking automatisé, indépendance et avertissements.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-emerald-50">
+          <span>Auteure principale&nbsp;: <a href="/auteurs/dr-marie-dubois/" class="underline font-medium hover:text-white">Dr Marie Dubois</a></span>
+          <span aria-hidden="true">•</span>
+          <span>Dernière révision&nbsp;: 2 mai 2026</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12 sm:py-16">
+      <!-- Sommaire -->
+      <nav aria-label="Sommaire" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-10">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-gray-500 mb-3">Sommaire</h2>
+        <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+          <li><a href="#methodologie" class="text-emerald-700 hover:underline">1. Notre méthodologie</a></li>
+          <li><a href="#sources" class="text-emerald-700 hover:underline">2. Sources utilisées</a></li>
+          <li><a href="#fact-checking" class="text-emerald-700 hover:underline">3. Fact-checking</a></li>
+          <li><a href="#independance" class="text-emerald-700 hover:underline">4. Indépendance éditoriale</a></li>
+          <li><a href="#mise-a-jour" class="text-emerald-700 hover:underline">5. Mise à jour des contenus</a></li>
+          <li><a href="#avertissement" class="text-emerald-700 hover:underline">6. Avertissement médical</a></li>
+        </ol>
+      </nav>
+
+      <article class="space-y-12">
+        <!-- Section 1 : Méthodologie -->
+        <section id="methodologie" aria-labelledby="methodologie-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+          <h2 id="methodologie-title" class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">1. Notre méthodologie</h2>
+          <div class="prose prose-emerald max-w-none text-gray-700 leading-relaxed">
+            <p>
+              GLP-1 France produit des contenus pédagogiques sur les analogues du GLP-1
+              (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity) destinés au grand public
+              francophone. Notre démarche éditoriale s'articule autour de quatre principes&nbsp;:
+            </p>
+            <ul>
+              <li><strong>Rigueur</strong> — chaque article est rédigé à partir de sources institutionnelles françaises uniquement.</li>
+              <li><strong>Transparence</strong> — l'auteure principale, ses qualifications et les sources utilisées sont publiquement identifiables.</li>
+              <li><strong>Vérification continue</strong> — les contenus sont fact-checkés régulièrement par un agent automatique de vérification.</li>
+              <li><strong>Pédagogie</strong> — un langage clair, sans jargon, accessible à un patient non spécialiste.</li>
+            </ul>
+            <p>
+              Chaque article est rédigé puis revu sous la supervision éditoriale du
+              <a href="/auteurs/dr-marie-dubois/">Dr Marie Dubois</a>, médecin nutritionniste,
+              avant publication.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 : Sources -->
+        <section id="sources" aria-labelledby="sources-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+          <h2 id="sources-title" class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">2. Sources utilisées</h2>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Nous nous appuyons exclusivement sur des sources officielles, institutionnelles
+            ou reconnues par les autorités sanitaires françaises&nbsp;:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="https://www.has-sante.fr/" target="_blank" rel="noopener noreferrer" class="group block p-5 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-md transition">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700">HAS</h3>
+                <span class="text-xs uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Officiel</span>
+              </div>
+              <p class="text-sm text-gray-600">Haute Autorité de Santé — recommandations cliniques, évaluations de médicaments, avis de la Commission de la Transparence.</p>
+            </a>
+
+            <a href="https://ansm.sante.fr/" target="_blank" rel="noopener noreferrer" class="group block p-5 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-md transition">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700">ANSM</h3>
+                <span class="text-xs uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Officiel</span>
+              </div>
+              <p class="text-sm text-gray-600">Agence nationale de sécurité du médicament — autorisations de mise sur le marché, alertes de pharmacovigilance, ruptures de stock.</p>
+            </a>
+
+            <a href="https://www.ameli.fr/" target="_blank" rel="noopener noreferrer" class="group block p-5 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-md transition">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700">AMELI</h3>
+                <span class="text-xs uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Officiel</span>
+              </div>
+              <p class="text-sm text-gray-600">Assurance Maladie — taux de remboursement, conditions de prise en charge, base de remboursement des médicaments.</p>
+            </a>
+
+            <a href="https://www.vidal.fr/" target="_blank" rel="noopener noreferrer" class="group block p-5 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-md transition">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700">Vidal</h3>
+                <span class="text-xs uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-0.5 rounded">Référence</span>
+              </div>
+              <p class="text-sm text-gray-600">Référence pharmacologique — posologies, interactions médicamenteuses, contre-indications, effets indésirables.</p>
+            </a>
+
+            <a href="https://base-donnees-publique.medicaments.gouv.fr/" target="_blank" rel="noopener noreferrer" class="group block p-5 rounded-xl border border-gray-200 hover:border-emerald-500 hover:shadow-md transition sm:col-span-2">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700">Base de données publique des médicaments</h3>
+                <span class="text-xs uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Officiel</span>
+              </div>
+              <p class="text-sm text-gray-600">base-donnees-publique.medicaments.gouv.fr — RCP officiels, notices patient, dates d'AMM, conditions de prescription et de délivrance.</p>
+            </a>
+          </div>
+
+          <p class="text-sm text-gray-500 mt-6">
+            Pour les contenus traitant d'études scientifiques, nous citons également les
+            publications référencées sur PubMed et les communiqués officiels des laboratoires
+            (Novo Nordisk, Eli Lilly), en précisant systématiquement leur nature.
+          </p>
+        </section>
+
+        <!-- Section 3 : Fact-checking -->
+        <section id="fact-checking" aria-labelledby="factcheck-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+          <h2 id="factcheck-title" class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">3. Fact-checking</h2>
+          <div class="prose prose-emerald max-w-none text-gray-700 leading-relaxed">
+            <p>
+              GLP-1 France utilise un <strong>agent automatique de vérification</strong>
+              (fact-check) qui analyse en continu chaque article publié&nbsp;:
+            </p>
+            <ul>
+              <li>Identification des affirmations factuelles (prix, posologies, taux de remboursement, dates).</li>
+              <li>Recherche en temps réel sur les sites officiels (HAS, ANSM, AMELI, Vidal).</li>
+              <li>Comparaison entre l'information publiée et la donnée actuelle issue de la source.</li>
+              <li>Génération d'un ticket de correction en cas de divergence.</li>
+            </ul>
+            <p>
+              Aucune donnée n'est codée «&nbsp;en dur&nbsp;» dans nos articles&nbsp;:
+              chaque chiffre, chaque taux et chaque date est vérifié en temps réel par
+              rapport à la source institutionnelle. Les corrections détectées sont
+              traitées sous 24&nbsp;à 48&nbsp;heures par notre équipe éditoriale.
+            </p>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="text-center p-5 bg-emerald-50 rounded-xl border border-emerald-100">
+              <div class="text-3xl font-extrabold text-emerald-700">100%</div>
+              <div class="text-sm text-emerald-900 mt-1">des articles fact-checkés</div>
+            </div>
+            <div class="text-center p-5 bg-emerald-50 rounded-xl border border-emerald-100">
+              <div class="text-3xl font-extrabold text-emerald-700">0</div>
+              <div class="text-sm text-emerald-900 mt-1">donnée hardcodée</div>
+            </div>
+            <div class="text-center p-5 bg-emerald-50 rounded-xl border border-emerald-100">
+              <div class="text-3xl font-extrabold text-emerald-700">24-48h</div>
+              <div class="text-sm text-emerald-900 mt-1">délai de correction</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4 : Indépendance -->
+        <section id="independance" aria-labelledby="independance-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+          <h2 id="independance-title" class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">4. Indépendance éditoriale</h2>
+          <div class="prose prose-emerald max-w-none text-gray-700 leading-relaxed">
+            <p>
+              GLP-1 France est un site éditorial <strong>indépendant des laboratoires
+              pharmaceutiques</strong>. Nous ne recevons aucun financement de Novo Nordisk,
+              Eli Lilly, Sanofi ou de tout autre fabricant de médicaments GLP-1.
+            </p>
+            <p>
+              Notre modèle économique repose sur des <strong>partenariats d'affiliation
+              transparents</strong> avec des plateformes de téléconsultation et
+              d'accompagnement (notamment Annette.care). Ces partenariats sont&nbsp;:
+            </p>
+            <ul>
+              <li><strong>signalés explicitement</strong> par la mention <em>«&nbsp;contenu sponsorisé&nbsp;»</em> ou des liens balisés <code>rel="sponsored"</code>;</li>
+              <li><strong>séparés du contenu éditorial</strong> — les recommandations médicales ne sont jamais influencées par un partenariat&nbsp;;</li>
+              <li><strong>compatibles avec une orientation neutre</strong> — chaque article peut citer plusieurs alternatives.</li>
+            </ul>
+            <p>
+              L'auteure principale, le <a href="/auteurs/dr-marie-dubois/">Dr Marie Dubois</a>,
+              n'a aucun lien d'intérêt avec un laboratoire pharmaceutique fabriquant des analogues du GLP-1.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 5 : Mise à jour -->
+        <section id="mise-a-jour" aria-labelledby="maj-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+          <h2 id="maj-title" class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">5. Mise à jour des contenus</h2>
+          <div class="prose prose-emerald max-w-none text-gray-700 leading-relaxed">
+            <p>
+              L'environnement réglementaire et tarifaire des GLP-1 évolue rapidement
+              en France (modifications de remboursement, alertes ANSM, mises à jour des
+              RCP, ruptures de stock). Pour garantir la fiabilité de nos contenus&nbsp;:
+            </p>
+            <ul>
+              <li>Chaque article affiche sa <strong>date de dernière mise à jour</strong>.</li>
+              <li>Le pipeline de fact-checking tourne <strong>en continu</strong> et déclenche des corrections automatiques.</li>
+              <li>Les articles à fort trafic (Ozempic, Wegovy, Mounjaro) sont <strong>revus manuellement chaque mois</strong>.</li>
+              <li>Les alertes ANSM majeures (rupture, retrait, contre-indication nouvelle) déclenchent une mise à jour <strong>sous 24&nbsp;heures</strong>.</li>
+            </ul>
+            <p>
+              Si vous repérez une information qui vous semble obsolète ou erronée, vous
+              pouvez nous la signaler via la <a href="/contact/">page contact</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 6 : Avertissement -->
+        <section id="avertissement" aria-labelledby="avertissement-title" class="bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl" aria-hidden="true">!</div>
+            <div>
+              <h2 id="avertissement-title" class="text-2xl font-bold text-amber-900 mb-3">6. Avertissement médical</h2>
+              <p class="text-amber-900 leading-relaxed mb-3">
+                Les informations publiées sur GLP-1 France ont une <strong>vocation
+                pédagogique et informative</strong>. Elles ne constituent en aucun cas un
+                avis médical, un diagnostic ou une prescription.
+              </p>
+              <p class="text-amber-900 leading-relaxed mb-3">
+                Les médicaments GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity) sont
+                des <strong>médicaments soumis à prescription médicale obligatoire</strong>.
+                Leur instauration, leur posologie et leur suivi doivent obligatoirement
+                être encadrés par un professionnel de santé qualifié (médecin généraliste,
+                endocrinologue, diabétologue ou nutritionniste).
+              </p>
+              <p class="text-amber-900 leading-relaxed">
+                <strong>En cas de doute, de symptôme préoccupant ou avant toute décision
+                thérapeutique, consultez votre médecin traitant.</strong> En situation
+                d'urgence, contactez le 15 (SAMU) ou le 112.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!-- Footer CTA -->
+      <div class="mt-12 text-center bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-3">Une question sur notre méthodologie&nbsp;?</h2>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Notre équipe éditoriale répond à toutes les demandes de précision sur nos sources, nos auteurs ou notre processus de vérification.</p>
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="/contact/" class="inline-flex items-center px-6 py-3 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition">Contacter l'équipe</a>
+          <a href="/auteurs/dr-marie-dubois/" class="inline-flex items-center px-6 py-3 rounded-lg border-2 border-emerald-600 text-emerald-700 font-semibold hover:bg-emerald-50 transition">Profil de l'auteure</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</StaticLayout>

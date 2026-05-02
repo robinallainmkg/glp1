@@ -1,6 +1,6 @@
 ---
-title: "Wegovy Remboursement 2026 : Mutuelles et Sécu"
-description: "Wegovy remboursement 2026 : mutuelles qui remboursent (MGEN, Harmonie, Alan), montants et calendrier Sécu prévu S2 2026."
+title: "Wegovy Remboursement Mutuelle 2026 : Liste Complète"
+description: "Wegovy remboursement mutuelle 2026 : MGEN, Harmonie, Alan… 50 à 200€/an pris en charge. Calendrier Sécu (avis HAS favorable) + dossier type."
 pubDate: 2025-08-23
 date: '2026-03-17'
 updatedAt: '2026-03-17'
@@ -35,7 +35,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
 
-Le **remboursement de Wegovy par les mutuelles** est une question centrale pour les patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) n'est pas remboursé par la Sécurité Sociale — mais certaines mutuelles complémentaires proposent une prise en charge partielle. Découvrez la liste des mutuelles favorables et les montants de remboursement en 2026.
+Le **remboursement Wegovy par la mutuelle** est devenu la principale option pour alléger la facture de **169 à 360€/mois** des patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) **n'est pas encore remboursé** par la Sécurité Sociale, mais la **HAS a rendu un avis favorable le 20 février 2026** pour un remboursement attendu au S2 2026 chez les adultes IMC ≥ 35 kg/m². En attendant, plusieurs **mutuelles santé** comme MGEN, Harmonie Mutuelle, Alan ou April proposent un **forfait médicaments non remboursés** de 50 à 200€/an applicable au Wegovy. Découvrez ci-dessous la liste à jour des mutuelles favorables, les montants pris en charge et le calendrier officiel. Pour aller plus loin, comparez aussi les [prix Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) et le calendrier de [remboursement Wegovy/Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/).
 
 ## Wegovy : Un traitement révolutionnaire mais coûteux
 

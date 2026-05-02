@@ -1,10 +1,10 @@
 ---
-title: "Effets Secondaires Mounjaro : Risques (2026)"
+title: "Effets Secondaires Mounjaro Long Terme 2026 : Liste"
 thumbnail: "/images/thumbnails/effets-secondaires-ozempic-illus.jpg"
-description: "Effets secondaires Mounjaro : nausées, diarrhée, pancréatite. Liste complète des risques fréquents et graves + solutions concrètes pour les gérer."
-keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro effet secondaire long terme', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger']
-seoTitle: "Effets Secondaires Mounjaro : Risques Graves (2026)"
-seoDescription: "Effets secondaires Mounjaro : 12 effets fréquents + risques graves (pancréatite, gastroparésie). Témoignages et solutions concrètes."
+description: "Effets secondaires Mounjaro à long terme 2026 : 12 effets fréquents + risques graves (pancréatite, gastroparésie, thyroïde). Témoignages et solutions."
+keywords: ['effets secondaires mounjaro', 'mounjaro effet secondaire long terme', 'effets secondaires mounjaro long terme', 'mounjaro effet secondaire grave', 'mounjaro nausées', 'mounjaro effets indésirables', 'risques mounjaro', 'mounjaro vomissements', 'mounjaro diarrhée', 'mounjaro danger', 'mounjaro pancréatite']
+seoTitle: "Mounjaro Effet Secondaire Long Terme : Liste 2026"
+seoDescription: "Mounjaro effet secondaire long terme : 12 troubles digestifs, risques graves (pancréatite, thyroïde), gestion et solutions concrètes en 2026."
 publishedAt: '2025-08-30'
 updatedAt: '2025-12-27'
 date: 2025-08-30
@@ -17,9 +17,11 @@ affiliateCollection: "effets-secondaires-glp1"
 mainKeyword: "effets secondaires mounjaro tirzepatide"
 ---
 
-## Effets Secondaires Mounjaro : Guide Complet
+## Effets Secondaires Mounjaro à Long Terme : Guide Complet 2026
 
-## ⚠️ Effets Secondaires Fréquents
+Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (Mounjaro) provoque chez **80 à 90% des patients** des troubles digestifs (nausées, vomissements, diarrhée, constipation), généralement transitoires les 8 premières semaines. À **long terme** (au-delà de 6-12 mois), les principaux risques surveillés sont la **pancréatite aiguë** (rare, 0,1-0,2%), la **gastroparésie** persistante, des **troubles thyroïdiens** (cancer médullaire chez l'animal, contre-indication MEN-2) et une **fonte musculaire** liée à la perte de poids rapide. Voici la liste complète des **effets indésirables Mounjaro** classés par fréquence et gravité, avec les solutions concrètes pour les gérer. Lire aussi notre [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et le [comparatif effets secondaires GLP-1](/collections/effets-secondaires-glp1/).
+
+## ⚠️ Effets Secondaires Fréquents Mounjaro
 
 ### Troubles digestifs (80-90% des patients)
 
