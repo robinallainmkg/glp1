@@ -98,28 +98,41 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   </section>
 
   <!-- ============================================ -->
-  <!-- 3. PITCH STORY (texte centré, sans image)    -->
+  <!-- 3. PACK TOUT-EN-UN (image lifestyle + copy)  -->
   <!-- ============================================ -->
   <section class="gp-section gp-pitch">
-    <div class="gp-section-inner gp-section-narrow gp-pitch-narrow">
-      <span class="gp-eyebrow">Pourquoi GlucoPulse</span>
-      <h2 class="gp-h2 gp-pitch-h2">Conçu pour les patients sous traitement GLP-1.</h2>
-      <p class="gp-pitch-lede">
-        Sous Ozempic, Mounjaro ou Wegovy, les variations glycémiques sont plus fréquentes
-        au démarrage du traitement. Mesurer régulièrement permet à votre médecin d'ajuster
-        la dose et d'éviter les hypoglycémies. <strong>Mais carnet papier + Excel + photos
-        de l'écran, c'est lourd.</strong>
-      </p>
-      <p class="gp-pitch-lede">
-        GlucoPulse synchronise <strong>chaque mesure automatiquement</strong> dans une app
-        conçue avec des diabétologues : courbes, alertes hypo/hyper personnalisées selon
-        votre traitement, et un PDF prêt à envoyer à Doctolib avant chaque rendez-vous.
-      </p>
-      <ul class="gp-pitch-bullets">
-        <li><span class="gp-check-lg">✓</span> Plus de saisie manuelle, plus d'oubli</li>
-        <li><span class="gp-check-lg">✓</span> Alertes adaptées (Ozempic, Mounjaro, Wegovy, Trulicity, Victoza, Rybelsus)</li>
-        <li><span class="gp-check-lg">✓</span> Partage médecin en 1 clic (PDF format dossier médical)</li>
-      </ul>
+    <div class="gp-section-inner gp-pitch-grid">
+      <div class="gp-pitch-text">
+        <span class="gp-eyebrow">Pack démarrage</span>
+        <h2 class="gp-h2 gp-pitch-h2">Tout est inclus dans la boîte.</h2>
+        <p class="gp-pitch-lede">
+          Pas besoin d'acheter quoi que ce soit en plus. Le pack démarrage GlucoPulse
+          contient l'appareil, <strong>50 bandelettes test</strong>, <strong>50 lancettes
+          stériles</strong>, l'autopiqueur ajustable et l'étui de transport.
+          De quoi tenir <strong>1 mois</strong> à raison de deux mesures par jour.
+        </p>
+        <p class="gp-pitch-lede">
+          L'app iOS &amp; Android est gratuite et synchronisée en Bluetooth dès la
+          première mise en route. Aucun compte obligatoire, aucune publicité.
+          <strong>Livraison 48h offerte</strong> en France métropolitaine.
+        </p>
+        <ul class="gp-pitch-bullets">
+          <li><span class="gp-check-lg">✓</span> Prêt à mesurer dès l'ouverture (pile incluse)</li>
+          <li><span class="gp-check-lg">✓</span> Bandelettes &amp; lancettes pour 1 mois</li>
+          <li><span class="gp-check-lg">✓</span> Étui de transport compact inclus</li>
+          <li><span class="gp-check-lg">✓</span> App gratuite, mises à jour à vie</li>
+        </ul>
+      </div>
+      <div class="gp-pitch-visual">
+        <img
+          src="/images/lifestyle.png"
+          alt="Contenu du pack GlucoPulse : lecteur, 50 bandelettes test, autopiqueur, lancettes, câble et étui"
+          class="gp-pitch-image"
+          loading="lazy"
+          width="870"
+          height="655"
+        />
+      </div>
     </div>
   </section>
 
@@ -859,32 +872,37 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   }
 
   /* ============================================
-     PITCH (story, texte centré)
+     PITCH (story, image + copy 2-col)
      ============================================ */
-  .gp-pitch-narrow {
-    text-align: center;
+  .gp-pitch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 4rem;
+    align-items: center;
   }
-  .gp-pitch-h2 {
-    margin-bottom: 1.5rem;
-  }
+  .gp-pitch-text .gp-eyebrow { margin-bottom: 0.75rem; }
+  .gp-pitch-text .gp-h2 { text-align: left; margin-bottom: 1.25rem; }
   .gp-pitch-lede {
     color: #4b5563;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin: 0 auto 1.25rem;
-    max-width: 680px;
-    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin: 0 0 1.25rem;
   }
   .gp-pitch-bullets {
-    list-style: none; padding: 0; margin: 2rem auto 0;
-    display: flex; flex-direction: column; gap: 0.75rem;
-    max-width: 580px; text-align: left;
+    list-style: none; padding: 0; margin: 1.75rem 0 0;
+    display: flex; flex-direction: column; gap: 0.65rem;
   }
   .gp-pitch-bullets li {
     display: flex; align-items: flex-start; gap: 0.7rem;
     color: #1a3c34; font-size: 1rem; font-weight: 500;
   }
   .gp-check-lg { color: #16a34a; font-weight: 800; flex-shrink: 0; font-size: 1.1rem; }
+  .gp-pitch-image {
+    width: 100%; height: auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(10, 31, 26, 0.25);
+    display: block;
+  }
 
   /* ============================================
      DEMO VIDEO
@@ -1224,6 +1242,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   @media (max-width: 960px) {
     .gp-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
     .gp-hero-visual { order: -1; max-width: 360px; margin: 0 auto; }
+    .gp-pitch-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .gp-pitch-text .gp-h2 { text-align: center; }
+    .gp-pitch-bullets { max-width: 480px; margin-left: auto; margin-right: auto; }
+    .gp-pitch-image { max-width: 480px; margin: 0 auto; }
     .gp-features-grid { grid-template-columns: 1fr 1fr; }
     .gp-feat-large { grid-column: span 2; }
     .gp-pack-grid { grid-template-columns: 1fr 1fr; }
