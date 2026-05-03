@@ -51,7 +51,9 @@ jobs:
           echo "=== Deploy attempt $ATTEMPT/3 ==="
 
           # ÉTAPE 1/2 : pages dynamiques en priorité (collections + guides + outils + racine)
-          # Exclut /pharmacies/* et /_astro/* pour aller vite sur le contenu modifié
+          # Exclut /pharmacies/* et /_astro/* pour aller vite sur le contenu modifié.
+          # PAS de --ignore-time ici : on veut forcer la re-upload des HTML modifiés
+          # même si la taille est identique (cas .jpg→.svg dans un même slot).
           echo "--- Step 1/2: dynamic content (collections, guides, root) ---"
           lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
             set ftp:passive-mode yes;
@@ -65,7 +67,7 @@ jobs:
             set mirror:use-pget-n 1;
             set ftp:sync-mode off;
             set xfer:clobber yes;
-            mirror --reverse --verbose --no-perms --parallel=25 --ignore-time --exclude-glob 'pharmacies/*' --exclude-glob '_astro/*' ./dist/ /domains/glp1-france.fr/public_html/;
+            mirror --reverse --verbose --no-perms --parallel=25 --only-newer --exclude-glob 'pharmacies/*' --exclude-glob '_astro/*' ./dist/ /domains/glp1-france.fr/public_html/;
             quit
           " || echo "Step 1 had issues but continuing..."
 
