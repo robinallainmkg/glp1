@@ -62,12 +62,13 @@ const partner = getPartnerForArticle(routeInput);
 const inlinePartner = oppositePartner(partner);
 const sidebarOrder = getSidebarOrder({ ...routeInput, routed: partner });
 
-// Sinocare cross-sell : afficher CTA secondaire sur pages diabète / glycémie / insuline.
-// Cible : audience qui surveille sa glycémie (besoin d'un lecteur Sinocare).
+// Sinocare cross-sell : afficher CTA secondaire sur pages où l'audience est susceptible
+// d'avoir besoin d'un lecteur de glycémie : DT2 (Ozempic, Trulicity, Victoza, Rybelsus,
+// metformine, iSGLT2) + slugs explicites diabète/glycémie/insuline.
 const articleSlugLower = (articleSlug || '').toLowerCase();
 const collectionLower = (detectedCategory || '').toLowerCase();
 const showSinocare = collectionLower === 'glp1-diabete'
-  || /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2)/.test(articleSlugLower);
+  || /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2|ozempic|trulicity|victoza|rybelsus)/.test(articleSlugLower);
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];

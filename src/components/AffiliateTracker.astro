@@ -10,10 +10,19 @@ import { supabaseConfig } from '../lib/supabase.js';
   var API = supabaseUrl + '/rest/v1/affiliate_clicks';
   var KEY = supabaseAnonKey;
 
-  // Extract UTM campaign from href
+  // Map Awin advertiser ID (awinmid) → partner name (extensible)
+  var AWIN_MID_TO_PARTNER = {
+    '114180': 'sinocare',
+    // Ajouter ici quand d'autres advertisers Awin sont validés (DocMorris, Filorga, etc.)
+  };
+
+  // Extract UTM campaign or Awin clickref from href
   function getCampaign(href) {
     try {
       var url = new URL(href);
+      // Awin clickref prend la priorité (notre tracking par contexte)
+      var clickref = url.searchParams.get('clickref');
+      if (clickref) return clickref;
       return url.searchParams.get('utm_campaign') || 'direct';
     } catch(e) { return 'unknown'; }
   }
@@ -22,6 +31,15 @@ import { supabaseConfig } from '../lib/supabase.js';
   function getPartner(href) {
     if (href.indexOf('annette.care') > -1) return 'annette';
     if (href.indexOf('charles.co') > -1) return 'charles';
+    // Awin tracking : extraire awinmid pour mapper au partenaire réel
+    if (href.indexOf('awin1.com') > -1 || href.indexOf('awinmid=') > -1) {
+      try {
+        var url = new URL(href);
+        var mid = url.searchParams.get('awinmid');
+        if (mid && AWIN_MID_TO_PARTNER[mid]) return AWIN_MID_TO_PARTNER[mid];
+        return 'awin_' + (mid || 'unknown');
+      } catch(e) { return 'awin_unknown'; }
+    }
     return 'other';
   }
 
@@ -41,9 +59,9 @@ import { supabaseConfig } from '../lib/supabase.js';
   // Session ID (reuse coach session if exists)
   var sid = localStorage.getItem('glp1_coach_session') || 'anon_' + Math.random().toString(36).slice(2, 10);
 
-  // Listen to all clicks on affiliate links
+  // Listen to all clicks on affiliate links (Annette, Charles, Awin)
   document.addEventListener('click', function(e) {
-    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"], a[href*="charles.co"]');
+    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"], a[href*="charles.co"], a[href*="awin1.com"], a[href*="awinmid="]');
     if (!link) return;
 
     var href = link.href;

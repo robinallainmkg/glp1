@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev --port 4321 --open",
     "export:pharmacies": "node scripts/pharmacy-map/export-pharmacies-json.mjs",
-    "build": "npm run export:pharmacies && astro build && node scripts/inject-vercel-redirects.mjs",
+    "build": "npm run export:pharmacies && astro build && node scripts/inject-vercel-redirects.mjs && node scripts/generate-htaccess.mjs",
     "astro:build": "astro build",
     "preview": "astro preview --port 4321 --open",
     "start": "astro preview --port 4321 --open",

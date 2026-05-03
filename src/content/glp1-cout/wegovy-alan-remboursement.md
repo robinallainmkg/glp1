@@ -176,4 +176,22 @@ Dès l'inscription au JO (S2 2026 attendue), Alan applique le complément de tic
 
 ---
 
+
+---
+
+## Voir aussi : autres mutuelles qui remboursent Wegovy
+
+Comparez d'autres mutuelles partenaires pour optimiser votre couverture GLP-1 :
+
+- [Wegovy + Apicil : remboursement 2026](/collections/glp1-cout/wegovy-apicil-remboursement/)
+- [Wegovy + April : remboursement 2026](/collections/glp1-cout/wegovy-april-remboursement/)
+- [Wegovy + Harmonie Mutuelle : remboursement 2026](/collections/glp1-cout/wegovy-harmonie-mutuelle-remboursement/)
+- [Wegovy + Malakoff Humanis : remboursement 2026](/collections/glp1-cout/wegovy-malakoff-humanis-remboursement/)
+- [Wegovy + MGEN : remboursement 2026](/collections/glp1-cout/wegovy-mgen-remboursement/)
+
+**Pour aller plus loin :**
+- [Comparatif complet des mutuelles obésité 2026](/collections/glp1-cout/mutuelle-obesite-comparatif-2026/)
+- [Comprendre le forfait médecines préventives](/collections/glp1-cout/forfait-medecine-prevention-mutuelle-glp1/)
+- [Guide général : Wegovy remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/)
+
 > **Avertissement médical** : cet article a une vocation informative. Les analogues du GLP-1 sont des médicaments soumis à prescription, avec contre-indications et effets indésirables. Consultez un médecin avant toute initiation. Les conditions de remboursement sont indicatives ; vérifiez via l'application Alan et auprès de l'Assurance Maladie. Sources : HAS, Ameli.fr, alan.com.
