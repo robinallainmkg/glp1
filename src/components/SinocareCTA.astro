@@ -1,0 +1,153 @@
+---
+// CTA Sinocare — partenaire affiliation Awin actif (advertiser ID 114180).
+// Cible : pages où l'audience est patients DT2 / besoin de surveiller glycémie.
+// Lecteurs glycémie + bandelettes — match parfait avec audience GLP-1 diabète.
+
+interface Props {
+  context?: string;
+}
+
+const { context = "article" } = Astro.props;
+
+// Deeplink Awin avec clickref dynamique pour tracking par contexte
+const sinocareLink = `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_${context}&ued=${encodeURIComponent("https://www.sinocare.com/")}`;
+---
+
+<div
+  data-partner-block="cta"
+  data-partner="sinocare"
+  class="sinocare-cta-block"
+>
+  <div class="sinocare-cta-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9b1d20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 12h2"/>
+      <path d="M19 12h2"/>
+      <path d="M12 3v2"/>
+      <path d="M12 19v2"/>
+      <circle cx="12" cy="12" r="6"/>
+      <path d="M9 12h6"/>
+      <path d="M12 9v6"/>
+    </svg>
+  </div>
+  <div class="sinocare-cta-content">
+    <p class="sinocare-cta-headline">
+      Surveillez votre glyc&eacute;mie chez vous &mdash; lecteur Sinocare
+    </p>
+    <p class="sinocare-cta-lede">
+      Sous traitement GLP-1 et diab&egrave;te de type 2, le contr&ocirc;le r&eacute;gulier de la glyc&eacute;mie permet d'ajuster les doses et d'&eacute;viter les hypoglyc&eacute;mies. Sinocare propose des lecteurs et bandelettes parmi les plus fiables &agrave; petit prix.
+    </p>
+
+    <div class="sinocare-cta-features">
+      <span class="sinocare-feature">&#10003; R&eacute;sultat en 5 sec</span>
+      <span class="sinocare-feature">&#10003; M&eacute;moire 500 mesures</span>
+      <span class="sinocare-feature">&#10003; Bandelettes 0,15&euro;</span>
+    </div>
+
+    <a
+      href={sinocareLink}
+      rel="noopener sponsored"
+      target="_blank"
+      class="sinocare-cta-button"
+    >
+      D&eacute;couvrir les lecteurs Sinocare
+      <span aria-hidden="true">&rarr;</span>
+    </a>
+
+    <p class="sinocare-cta-trust">
+      Marque pr&eacute;sente dans 130 pays &middot; Lien d'affiliation
+    </p>
+  </div>
+</div>
+
+<style>
+  .sinocare-cta-block {
+    margin: 1.5rem 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #FFF5F5 0%, #FFEEEE 100%);
+    border: 2px solid #9b1d20;
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(155, 29, 32, 0.08);
+  }
+  .sinocare-cta-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #9b1d20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sinocare-cta-content {
+    flex: 1;
+    min-width: 220px;
+  }
+  .sinocare-cta-headline {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #9b1d20;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .sinocare-cta-lede {
+    margin: 0 0 0.85rem 0;
+    font-size: 0.95rem;
+    color: #5a1416;
+    line-height: 1.55;
+  }
+  .sinocare-cta-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0 0 1rem 0;
+    padding: 0.6rem 0.85rem;
+    background: #fff;
+    border: 1px solid #f1c4c5;
+    border-radius: 8px;
+  }
+  .sinocare-feature {
+    font-size: 0.85rem;
+    color: #5a1416;
+    font-weight: 600;
+  }
+  .sinocare-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #9b1d20;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.9rem 1.6rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 4px 12px rgba(155, 29, 32, 0.25);
+  }
+  .sinocare-cta-button:hover {
+    background: #7a1518;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(155, 29, 32, 0.35);
+    color: #fff;
+    text-decoration: none;
+  }
+  .sinocare-cta-trust {
+    margin: 0.85rem 0 0 0;
+    font-size: 0.78rem;
+    color: #8b1517;
+    line-height: 1.4;
+  }
+  @media (max-width: 480px) {
+    .sinocare-cta-headline { font-size: 1.05rem; }
+    .sinocare-cta-button { width: 100%; justify-content: center; }
+  }
+</style>

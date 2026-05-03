@@ -6,6 +6,7 @@ import MutuelleSidebar from '../components/MutuelleSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
+import SinocareCTA from '../components/SinocareCTA.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder } from '../lib/partnerRouter';
 
@@ -60,6 +61,13 @@ const routeInput = {
 const partner = getPartnerForArticle(routeInput);
 const inlinePartner = oppositePartner(partner);
 const sidebarOrder = getSidebarOrder({ ...routeInput, routed: partner });
+
+// Sinocare cross-sell : afficher CTA secondaire sur pages diabète / glycémie / insuline.
+// Cible : audience qui surveille sa glycémie (besoin d'un lecteur Sinocare).
+const articleSlugLower = (articleSlug || '').toLowerCase();
+const collectionLower = (detectedCategory || '').toLowerCase();
+const showSinocare = collectionLower === 'glp1-diabete'
+  || /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2)/.test(articleSlugLower);
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
@@ -172,6 +180,7 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         {partner === 'mutuelle'
           ? <MutuelleCTA context="article" />
           : <PartnerCTA partner="annette" context="article" />}
+        {showSinocare && <SinocareCTA context={`diabete_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
