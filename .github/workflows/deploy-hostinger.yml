@@ -28,6 +28,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        # Need HEAD~1 for scope detection (compare against last commit)
+        fetch-depth: 2
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -41,12 +44,47 @@ jobs:
     - name: Build Astro site
       run: npm run astro:build
 
+    # Détecte le scope du commit pour éviter le full sync (22k pharmacies)
+    # quand aucun fichier "partagé" ou pharmacy-related n'a changé.
+    #
+    # NEEDS_FULL_SYNC=true si :
+    #   - changement dans src/pages/pharmacies/ ou public/data/pharmacies.json
+    #   - changement dans un composant/layout/style PARTAGÉ (utilisé par les pages pharmacies)
+    #   - changement de config build (astro.config, package.json)
+    #   - first commit (pas de HEAD~1) → safe fallback
+    - name: Detect deploy scope
+      id: scope
+      run: |
+        if ! git rev-parse HEAD~1 >/dev/null 2>&1; then
+          echo "First commit / shallow clone → full sync (safe)"
+          echo "needs_full=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
+        CHANGED=$(git diff --name-only HEAD~1 HEAD)
+        echo "Files changed since last deploy:"
+        echo "$CHANGED" | sed 's/^/  /'
+
+        # Patterns qui forcent le full sync (touchent les 22k pharmacies)
+        SHARED_PATTERNS='^(src/pages/pharmacies/|public/data/pharmacies\.json|scripts/pharmacy-map/|src/components/(SiteHeader|SiteFooter|AffiliateTracker|GoogleAnalytics|Hotjar|AiCoach)\.astro|src/styles/(global|homepage)\.css|src/layouts/(StaticLayout|BaseLayout|UnifiedLayout)\.astro|astro\.config\.mjs|config/astro\.config\.mjs|package(-lock)?\.json|tsconfig\.json|tailwind\.config)'
+
+        if echo "$CHANGED" | grep -qE "$SHARED_PATTERNS"; then
+          echo "→ SHARED file modified → full sync needed"
+          echo "$CHANGED" | grep -E "$SHARED_PATTERNS" | sed 's/^/  triggered by: /'
+          echo "needs_full=true" >> $GITHUB_OUTPUT
+        else
+          echo "→ Only scoped files changed → SKIP phase 2 (saves ~25 min)"
+          echo "needs_full=false" >> $GITHUB_OUTPUT
+        fi
+
     - name: Deploy via lftp (with retry)
       run: |
         sudo apt-get install -y -qq lftp > /dev/null 2>&1
+        NEEDS_FULL="${{ steps.scope.outputs.needs_full }}"
+        echo "=== Deploy mode: needs_full=$NEEDS_FULL ==="
 
         # Retry wrapper — up to 3 full attempts
-        # 2-phase deploy : pages dynamiques d'abord (priorité), puis sync complet
+        # 2-phase deploy : pages dynamiques d'abord (priorité), puis sync complet (conditionnel)
         for ATTEMPT in 1 2 3; do
           echo "=== Deploy attempt $ATTEMPT/3 ==="
 
@@ -54,6 +92,7 @@ jobs:
           # Exclut /pharmacies/* et /_astro/* pour aller vite sur le contenu modifié.
           # PAS de --ignore-time ici : on veut forcer la re-upload des HTML modifiés
           # même si la taille est identique (cas .jpg→.svg dans un même slot).
+          # --delete supprime les fichiers obsolètes (articles supprimés, redirects retirés).
           echo "--- Step 1/2: dynamic content (collections, guides, root) ---"
           lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
             set ftp:passive-mode yes;
@@ -67,9 +106,15 @@ jobs:
             set mirror:use-pget-n 1;
             set ftp:sync-mode off;
             set xfer:clobber yes;
-            mirror --reverse --verbose --no-perms --parallel=25 --only-newer --exclude-glob 'pharmacies/*' --exclude-glob '_astro/*' ./dist/ /domains/glp1-france.fr/public_html/;
+            mirror --reverse --delete --verbose --no-perms --parallel=25 --only-newer --exclude-glob 'pharmacies/*' --exclude-glob '_astro/*' ./dist/ /domains/glp1-france.fr/public_html/;
             quit
           " || echo "Step 1 had issues but continuing..."
+
+          if [ "$NEEDS_FULL" = "false" ]; then
+            echo "--- Step 2/2: SKIPPED (no shared/pharmacy file changed in this commit) ---"
+            echo "Deploy SUCCESS on attempt $ATTEMPT (scoped mode, ~5 min)"
+            exit 0
+          fi
 
           # ÉTAPE 2/2 : full sync (assets _astro + 22k pharmacies, byte-stable, skip si taille identique)
           echo "--- Step 2/2: full sync (assets + pharmacies) ---"
@@ -87,7 +132,7 @@ jobs:
             set xfer:clobber yes;
             mirror --reverse --delete --verbose --no-perms --parallel=25 --ignore-time --continue ./dist/ /domains/glp1-france.fr/public_html/;
             quit
-          " && echo "Deploy SUCCESS on attempt $ATTEMPT" && exit 0
+          " && echo "Deploy SUCCESS on attempt $ATTEMPT (full sync)" && exit 0
 
           echo "Attempt $ATTEMPT failed, waiting 15s..."
           sleep 15

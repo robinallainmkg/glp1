@@ -1,11 +1,10 @@
 ---
-// CTA Mutuelle — partenaire affiliation (Awin) pour les pages prix/remboursement.
-// Cible : visiteurs en intention "budget / faire rembourser le GLP-1".
-// CPA mutuelle : 50-150€/lead (vs 19€ Charles téléconsultation).
+// CTA Mutuelle — pointe vers le guide remboursement (article hub interne).
+// Tant qu'aucun partenaire mutuelle Awin/Effiliation n'est actif, on reste honnête :
+// le bouton dit "lire le guide", pas "voir les 6 mutuelles" (qui faisait croire à un comparateur).
 //
-// 2026-05 : pointe vers le hub article wegovy-remboursement-mutuelle (rank pos 7-9 GSC,
-// contenu riche + 6 sous-articles cluster). Quand LesFurets/Magnolia Awin validé,
-// remplacer par le deeplink Awin (clickref tracking par contexte).
+// Quand LesFurets (Awin) ou Effiliation valide → remplacer ce composant par LesFuretsCTA
+// (deeplink Awin réel) sur les pages prix/remboursement.
 
 interface Props {
   context?: string;
@@ -13,8 +12,8 @@ interface Props {
 
 const { context = "article" } = Astro.props;
 
-// Hub article mutuelle (interne) — meilleure expérience qu'un placeholder
-const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?source=cta_mutuelle_${context}`;
+// Hub article (interne) — explique calendrier Sécu, mutuelles favorables, démarches
+const guideLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?source=cta_mutuelle_${context}`;
 ---
 
 <div
@@ -30,10 +29,10 @@ const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?s
   </div>
   <div class="mutuelle-cta-content">
     <p class="mutuelle-cta-headline">
-      Trouvez la mutuelle qui rembourse le mieux votre GLP-1
+      Wegovy &amp; Mounjaro : le guide remboursement 2026
     </p>
     <p class="mutuelle-cta-lede">
-      Wegovy et Mounjaro ne sont pas remboursés par la S&eacute;curit&eacute; sociale en 2026. Heureusement, certaines mutuelles (MGEN, Harmonie, Apicil, Alan, Acheel...) prennent en charge <strong>50 &agrave; 500 &euro;/an</strong>. Comparez les offres en 2 minutes.
+      Pas remboursés par la S&eacute;cu en 2026. Mais certaines mutuelles (MGEN, Harmonie, Apicil, Alan, Acheel...) prennent en charge <strong>50 &agrave; 500 &euro;/an</strong>. On d&eacute;taille les forfaits, le calendrier HAS, et la d&eacute;marche pour faire valider.
     </p>
 
     <div class="mutuelle-cta-pricing">
@@ -43,15 +42,15 @@ const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?s
     </div>
 
     <a
-      href={comparateurLink}
+      href={guideLink}
       class="mutuelle-cta-button"
     >
-      Voir les 6 mutuelles qui remboursent le GLP-1
+      Lire le guide remboursement (5 min)
       <span aria-hidden="true">&rarr;</span>
     </a>
 
     <p class="mutuelle-cta-trust">
-      Comparateur ind&eacute;pendant &middot; Sans engagement &middot; Donn&eacute;es prot&eacute;g&eacute;es RGPD
+      Sources ANSM &middot; HAS &middot; Mis &agrave; jour 2026
     </p>
   </div>
 </div>

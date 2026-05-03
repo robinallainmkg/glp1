@@ -1,41 +1,41 @@
 ---
-// Sidebar partenaire Mutuelle — comparateur mutuelle qui rembourse les GLP-1
-// (CPA Awin estimé 50-150€/lead).
+// Sidebar partenaire Mutuelle — pointe vers le guide remboursement (hub article interne).
+// Quand un vrai partenaire mutuelle Awin (LesFurets) ou Effiliation est validé →
+// migrer vers LesFuretsSidebar avec deeplink Awin réel.
 
 interface Props {
   context?: string;
 }
 
 const { context = "sidebar" } = Astro.props;
-// Hub article mutuelle (rank pos 7-9 GSC, 6 articles cluster) — meilleure UX qu'un placeholder
-const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?source=sidebar_mutuelle_${context}`;
+const guideLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?source=sidebar_mutuelle_${context}`;
 ---
 
 <aside class="partner-sidebar partner-sidebar-mutuelle">
   <div class="partner-card">
     <div class="partner-header">
-      <span class="partner-name">Mutuelle GLP-1</span>
-      <span class="partner-badge">Comparateur</span>
+      <span class="partner-name">Remboursement</span>
+      <span class="partner-badge">Guide 2026</span>
     </div>
 
-    <p class="partner-tagline">Trouvez la mutuelle qui rembourse le mieux Wegovy, Mounjaro et Ozempic en 2026.</p>
+    <p class="partner-tagline">Wegovy, Mounjaro, Ozempic : ce que rembourse vraiment votre mutuelle en 2026.</p>
 
     <div class="partner-features">
       <div class="feature-item">
         <span class="feature-icon">&#10003;</span>
-        <span>MGEN, Harmonie, Apicil, Alan, Acheel...</span>
+        <span>Forfaits MGEN, Harmonie, Apicil, Alan, Acheel</span>
       </div>
       <div class="feature-item">
         <span class="feature-icon">&#10003;</span>
-        <span>Forfaits 50 à 500 €/an</span>
+        <span>Calendrier HAS / S&eacute;cu 2026</span>
       </div>
       <div class="feature-item">
         <span class="feature-icon">&#10003;</span>
-        <span>Comparateur indépendant 100 %</span>
+        <span>D&eacute;marche pour faire valider</span>
       </div>
       <div class="feature-item">
         <span class="feature-icon">&#10003;</span>
-        <span>Sans engagement, gratuit, RGPD</span>
+        <span>Mod&egrave;le de courrier inclus</span>
       </div>
     </div>
 
@@ -47,22 +47,18 @@ const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?s
     </div>
 
     <a
-      href={comparateurLink}
+      href={guideLink}
       class="partner-cta"
     >
-      Voir les mutuelles &rarr;
+      Lire le guide (5 min) &rarr;
     </a>
 
     <div class="partner-trust">
-      <span>Donn&eacute;es prot&eacute;g&eacute;es</span>
+      <span>Sources ANSM &middot; HAS</span>
       <span class="trust-sep">&middot;</span>
-      <span>2 min</span>
+      <span>Mis &agrave; jour 2026</span>
     </div>
   </div>
-
-  <p class="partner-disclaimer">
-    Lien d'affiliation. GLP-1 France peut recevoir une commission. Cela n'affecte pas nos recommandations &eacute;ditoriales.
-  </p>
 </aside>
 
 <style>

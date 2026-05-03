@@ -1,0 +1,174 @@
+---
+// Composant générique pour CTAs Awin — auto-gère active/inactive depuis awinPartners.ts.
+//
+// Usage :
+//   <AwinCTA
+//     partnerId="lesfurets"
+//     context="article_prix_mounjaro"
+//     headline="Comparez les mutuelles qui remboursent les GLP-1"
+//     lede="Économisez jusqu'à 1800€/an. Devis gratuit en 2 minutes."
+//     ctaLabel="Comparer les mutuelles"
+//     features={["Sans engagement", "Devis en 2min", "100% gratuit"]}
+//     fallbackHref="/collections/glp1-cout/wegovy-remboursement-mutuelle/"
+//     fallbackLabel="Lire le guide remboursement (5 min)"
+//   />
+//
+// Si le partner est `active: true` dans awinPartners.ts → CTA Awin réel avec deeplink + tracking.
+// Si `active: false` → affiche le fallback honnête (article interne) OU rien si pas de fallback.
+
+import { getAwinPartner, awinDeeplink } from '../lib/awinPartners';
+
+interface Props {
+  partnerId: string;
+  context?: string;
+  headline: string;
+  lede: string;
+  ctaLabel: string;
+  features?: string[];
+  trustLine?: string;
+  fallbackHref?: string;
+  fallbackLabel?: string;
+  // Pour différencier visuellement (ex: bleu = mutuelle, vert = prescription, rouge = pharmacie)
+  accent?: 'blue' | 'green' | 'red' | 'orange';
+}
+
+const {
+  partnerId,
+  context = 'article',
+  headline,
+  lede,
+  ctaLabel,
+  features = [],
+  trustLine,
+  fallbackHref,
+  fallbackLabel,
+  accent = 'blue',
+} = Astro.props;
+
+const partner = getAwinPartner(partnerId);
+const isActive = partner?.active === true;
+const href = isActive
+  ? awinDeeplink(partner!, context)
+  : (fallbackHref ?? null);
+const label = isActive ? ctaLabel : (fallbackLabel ?? ctaLabel);
+const dataPartner = isActive ? partnerId : `${partnerId}_pending`;
+
+// Si pas actif et pas de fallback → on ne rend rien (mieux que mentir)
+const shouldRender = !!href;
+
+// Palette par accent
+const accents = {
+  blue:   { bg: 'linear-gradient(135deg,#F0F9FF 0%,#E8F6FF 100%)', border: '#0D4F73', headline: '#0D4F73', lede: '#1B6FA0', button: '#0D4F73', buttonHover: '#083850' },
+  green:  { bg: 'linear-gradient(135deg,#F0FDF4 0%,#DCFCE7 100%)', border: '#15803D', headline: '#14532D', lede: '#166534', button: '#15803D', buttonHover: '#14532D' },
+  red:    { bg: 'linear-gradient(135deg,#FFF5F5 0%,#FFEEEE 100%)', border: '#9b1d20', headline: '#7f1d1d', lede: '#991b1b', button: '#9b1d20', buttonHover: '#7f1d1d' },
+  orange: { bg: 'linear-gradient(135deg,#FFF7ED 0%,#FED7AA 100%)', border: '#C2410C', headline: '#7C2D12', lede: '#9A3412', button: '#C2410C', buttonHover: '#7C2D12' },
+};
+const a = accents[accent];
+---
+
+{shouldRender && (
+<div
+  data-partner-block="cta"
+  data-partner={dataPartner}
+  class="awin-cta-block"
+  style={`--cta-bg:${a.bg};--cta-border:${a.border};--cta-headline:${a.headline};--cta-lede:${a.lede};--cta-button:${a.button};--cta-button-hover:${a.buttonHover};`}
+>
+  <div class="awin-cta-content">
+    <p class="awin-cta-headline">{headline}</p>
+    <p class="awin-cta-lede" set:html={lede} />
+
+    {features.length > 0 && (
+      <ul class="awin-cta-features">
+        {features.map((f) => <li>&#10003;&nbsp;{f}</li>)}
+      </ul>
+    )}
+
+    <a
+      href={href}
+      class="awin-cta-button"
+      {...(isActive ? { rel: 'noopener sponsored', target: '_blank' } : {})}
+    >
+      {label}
+      <span aria-hidden="true">&nbsp;&rarr;</span>
+    </a>
+
+    {trustLine && <p class="awin-cta-trust">{trustLine}</p>}
+  </div>
+</div>
+)}
+
+<style>
+  .awin-cta-block {
+    margin: 1.5rem 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: var(--cta-bg);
+    border: 2px solid var(--cta-border);
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+  .awin-cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .awin-cta-headline {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--cta-headline);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .awin-cta-lede {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--cta-lede);
+    line-height: 1.55;
+  }
+  .awin-cta-features {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.4rem 1rem;
+    font-size: 0.88rem;
+    color: var(--cta-lede);
+  }
+  .awin-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    align-self: flex-start;
+    background: var(--cta-button);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 0.25rem;
+  }
+  .awin-cta-button:hover {
+    background: var(--cta-button-hover);
+    transform: translateY(-1px);
+    color: #fff;
+    text-decoration: none;
+  }
+  .awin-cta-trust {
+    margin: 0.25rem 0 0;
+    font-size: 0.78rem;
+    color: var(--cta-lede);
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+  @media (max-width: 480px) {
+    .awin-cta-headline { font-size: 1.05rem; }
+    .awin-cta-button { width: 100%; justify-content: center; }
+  }
+</style>

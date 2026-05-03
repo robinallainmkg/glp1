@@ -8,7 +8,7 @@ import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
 import SinocareCTA from '../components/SinocareCTA.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
-import { getPartnerForArticle, oppositePartner, getSidebarOrder } from '../lib/partnerRouter';
+import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
 
 export interface Props {
   title?: string;
@@ -61,6 +61,16 @@ const routeInput = {
 const partner = getPartnerForArticle(routeInput);
 const inlinePartner = oppositePartner(partner);
 const sidebarOrder = getSidebarOrder({ ...routeInput, routed: partner });
+
+// Anti-self-loop : si on est SUR une page de destination d'un partenaire, on ne montre
+// PAS le CTA correspondant (ni inline, ni sidebar) — sinon le visiteur clique vers la page
+// où il est déjà. On affiche uniquement le partenaire opposé sur ces pages.
+const onDestination = isPartnerDestination(routeInput);
+const safePartners: Set<typeof partner> = new Set(['annette', 'mutuelle']);
+if (onDestination) safePartners.delete(onDestination);
+const showInlineMutuelle = inlinePartner === 'mutuelle' && safePartners.has('mutuelle');
+const showInlineAnnette = inlinePartner === 'annette' && safePartners.has('annette');
+const filteredSidebarOrder = sidebarOrder.filter((p) => safePartners.has(p));
 
 // Sinocare cross-sell : afficher CTA secondaire sur pages où l'audience est susceptible
 // d'avoir besoin d'un lecteur de glycémie : DT2 (Ozempic, Trulicity, Victoza, Rybelsus,
@@ -174,13 +184,11 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
              bottom = partenaire routé selon l'intention.
              Mai 2026 : Charles retiré (mismatch intention), remplacé par MutuelleCTA (Awin). -->
         <div id="partner-cta-template" style="display:none;">
-          {inlinePartner === 'mutuelle'
-            ? <MutuelleCTA context="article_inline" />
-            : <PartnerCTA partner="annette" context="article_inline" />}
+          {showInlineMutuelle && <MutuelleCTA context="article_inline" />}
+          {showInlineAnnette && <PartnerCTA partner="annette" context="article_inline" />}
         </div>
-        {partner === 'mutuelle'
-          ? <MutuelleCTA context="article" />
-          : <PartnerCTA partner="annette" context="article" />}
+        {partner === 'mutuelle' && safePartners.has('mutuelle') && <MutuelleCTA context="article" />}
+        {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
         {showSinocare && <SinocareCTA context={`diabete_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
@@ -188,9 +196,11 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         </div>
       </article>
 
-      <!-- Sidebars partenaires : ordre alterné par article (hash du slug) -->
+      <!-- Sidebars partenaires : ordre alterné par article (hash du slug).
+           Sur une page de destination, on filtre la sidebar du partenaire correspondant
+           (anti-self-loop). -->
       <div class="partner-sidebar-stack">
-        {sidebarOrder.map((p) => (
+        {filteredSidebarOrder.map((p) => (
           p === 'mutuelle'
             ? <MutuelleSidebar context={p === partner ? 'article' : 'article_secondary'} />
             : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />

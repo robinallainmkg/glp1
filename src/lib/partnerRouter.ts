@@ -3,9 +3,22 @@
 // Remplacé par "mutuelle" (CPA 50-150€/lead via Awin — Magnolia, Acheel, Apicil, Henner, Alan).
 //
 // annette  = accompagnement nutritionnel (CPA 50€) — pages "comprendre / suivre / régime"
-// mutuelle = comparateur mutuelle qui rembourse GLP-1 — pages "prix / remboursement / accès"
+// mutuelle = guide / comparateur mutuelle qui rembourse GLP-1 — pages "prix / remboursement / accès"
 
 export type Partner = "annette" | "mutuelle";
+
+// Slugs des "destinations" — pages vers lesquelles les CTAs partenaires pointent.
+// Si l'utilisateur est DÉJÀ sur une destination, le CTA correspondant créerait un self-loop.
+// Dans ce cas on bascule vers le partenaire opposé pour éviter de renvoyer vers la même page.
+const MUTUELLE_DESTINATION_SLUGS = new Set<string>([
+  "wegovy-remboursement-mutuelle",
+  // Ajouter ici les autres pages cibles des CTAs mutuelle si on en crée
+]);
+
+const ANNETTE_DESTINATION_SLUGS = new Set<string>([
+  // Annette = lien externe annette.care, pas de self-loop possible
+  // (laissé vide intentionnellement)
+]);
 
 const MUTUELLE_COLLECTIONS = new Set<string>([
   "glp1-cout",
@@ -78,6 +91,14 @@ export function getPartnerForArticle(input: RouteInput): Partner {
   const sl = (input.slug || "").toLowerCase();
   const p = (input.path || "").toLowerCase();
 
+  // Anti-self-loop : si on est sur une page de destination, on ne propose pas le CTA
+  // qui pointerait vers cette même page.
+  const onMutuelleDestination = MUTUELLE_DESTINATION_SLUGS.has(sl);
+  const onAnnetteDestination = ANNETTE_DESTINATION_SLUGS.has(sl);
+
+  if (onMutuelleDestination) return "annette";
+  if (onAnnetteDestination) return "mutuelle";
+
   if (MUTUELLE_COLLECTIONS.has(col)) return "mutuelle";
   if (ANNETTE_COLLECTIONS.has(col)) return "annette";
 
@@ -90,6 +111,15 @@ export function getPartnerForArticle(input: RouteInput): Partner {
 
   // Ambigu ou aucun match : fallback Annette (CPA stable, profil evergreen)
   return "annette";
+}
+
+// Indique si la page courante est une "destination" partenaire — utile pour le layout
+// pour décider de masquer la sidebar du partenaire correspondant.
+export function isPartnerDestination(input: RouteInput): Partner | null {
+  const sl = (input.slug || "").toLowerCase();
+  if (MUTUELLE_DESTINATION_SLUGS.has(sl)) return "mutuelle";
+  if (ANNETTE_DESTINATION_SLUGS.has(sl)) return "annette";
+  return null;
 }
 
 export function getPartnerForPath(pathname: string): Partner {

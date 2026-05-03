@@ -10,10 +10,19 @@ import { supabaseConfig } from '../lib/supabase.js';
   var API = supabaseUrl + '/rest/v1/affiliate_clicks';
   var KEY = supabaseAnonKey;
 
-  // Map Awin advertiser ID (awinmid) → partner name (extensible)
+  // Map Awin advertiser ID (awinmid) → partner name (extensible).
+  // SOURCE DE VÉRITÉ : src/lib/awinPartners.ts (registre central).
+  // Synchroniser cette map quand un advertiser passe ACTIVE dans le registre.
+  // Sans le mapping, les clics tombent en "awin_unknown" dans Supabase affiliate_clicks.
   var AWIN_MID_TO_PARTNER = {
     '114180': 'sinocare',
-    // Ajouter ici quand d'autres advertisers Awin sont validés (DocMorris, Filorga, etc.)
+    // EN ATTENTE VALIDATION (passer en actif dès réception email Awin) :
+    // 'TBD': 'lesfurets',     // mutuelle/comparateur
+    // 'TBD': 'doktorabc',     // téléconsultation
+    // 'TBD': 'docmorris',     // pharmacie EU
+    // 'TBD': 'redcare',       // pharmacie EU (backup)
+    // 'TBD': 'sensilab',      // compléments minceur
+    // 'TBD': 'slimeafit',     // compléments minceur
   };
 
   // Extract UTM campaign or Awin clickref from href
