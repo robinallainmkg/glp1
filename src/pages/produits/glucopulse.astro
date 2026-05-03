@@ -10,35 +10,44 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
 ---
 
 <BaseLayout
-  title="GlucoPulse — Lecteur de glycémie connecté Bluetooth | GLP-1 France"
-  description="GlucoPulse : le glucomètre connecté qui synchronise vos mesures avec votre smartphone. Pack démarrage 59€ (au lieu de 89€), livraison offerte. Marquage CE médical."
-  keywords="glucomètre connecté, lecteur glycémie Bluetooth, glycémie smartphone, GlucoPulse, suivi diabète"
+  title="Notre sélection : GlucoPulse, glucomètre connecté pour GLP-1 | GLP-1 France"
+  description="Après comparatif des principaux lecteurs de glycémie, voici celui que nous recommandons aux patients sous GLP-1. Pré-lancement S2 2026, accès anticipé sur inscription."
+  keywords="glucomètre connecté GLP-1, lecteur glycémie patients diabète, sélection GLP1 France, GlucoPulse"
 >
+  <!-- Bandeau "early access" — assume pleinement le statut pré-lancement -->
+  <div class="gp-banner">
+    <div class="gp-banner-inner">
+      <span class="gp-banner-dot"></span>
+      <span><strong>Sélection GLP1 France</strong> · Pré-lancement S2 2026 · accès anticipé sur inscription</span>
+    </div>
+  </div>
+
   <!-- ============================================ -->
   <!-- HERO                                         -->
   <!-- ============================================ -->
   <section class="gp-hero">
     <div class="gp-hero-inner">
       <div class="gp-hero-text">
-        <span class="gp-pill">Pack démarrage · stock limité</span>
+        <span class="gp-pill">Notre recommandation après comparatif</span>
         <h1 class="gp-h1">
           Le glucomètre connecté<br>
-          <span class="gp-h1-accent">qui s'occupe du reste.</span>
+          <span class="gp-h1-accent">qu'on recommande aux patients sous GLP-1.</span>
         </h1>
         <p class="gp-hero-sub">
-          Mesurez votre glycémie en <strong>5 secondes</strong>, synchronisation
-          automatique avec votre smartphone. Courbes, alertes, partage médecin —
-          sans Excel, sans cahier.
+          Après avoir testé les principaux lecteurs (Sinocare, Accu-Chek, FreeStyle),
+          on a conçu <strong>GlucoPulse</strong> pour le profil que vous nous décrivez :
+          quelqu'un sous Ozempic, Mounjaro ou Wegovy qui veut suivre sa glycémie
+          sans Excel. Sortie prévue S2 2026.
         </p>
 
         <div class="gp-hero-pricing">
           <div class="gp-price-block">
             <span class="gp-price-old">{productOldPrice}&nbsp;€</span>
             <span class="gp-price-new">{productPrice}&nbsp;€</span>
-            <span class="gp-price-discount">−{productDiscount}%</span>
+            <span class="gp-price-discount">Tarif accès anticipé</span>
           </div>
           <p class="gp-price-meta">
-            Pack démarrage : appareil + 50 bandelettes + 50 lancettes + autopiqueur + étui
+            Pack démarrage : appareil + 50 bandelettes + autopiqueur + étui · Livraison offerte
           </p>
         </div>
 
@@ -51,18 +60,18 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             data-variant="starter-pack"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+              <path d="M5 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01" transform="translate(-3 0)"/>
             </svg>
-            Ajouter au panier
+            Pré-réserver ma place
           </button>
           <a href="#features" class="gp-cta-secondary">Voir les fonctionnalités ↓</a>
         </div>
 
         <ul class="gp-trust-row">
-          <li><span class="gp-check">✓</span> Livraison offerte 48-72h</li>
-          <li><span class="gp-check">✓</span> Garantie 2 ans</li>
+          <li><span class="gp-check">✓</span> Aucun engagement, aucun paiement</li>
+          <li><span class="gp-check">✓</span> Tarif anticipé garanti</li>
           <li><span class="gp-check">✓</span> Marquage CE médical</li>
-          <li><span class="gp-check">✓</span> Support FR</li>
+          <li><span class="gp-check">✓</span> Notification dès la dispo</li>
         </ul>
       </div>
 
@@ -311,7 +320,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     <div class="gp-section-inner">
       <header class="gp-section-header">
         <span class="gp-eyebrow">Contenu du pack</span>
-        <h2 class="gp-h2">Tout ce qu'il faut pour démarrer aujourd'hui.</h2>
+        <h2 class="gp-h2">Ce qu'on inclut dans le pack démarrage.</h2>
       </header>
 
       <div class="gp-pack-grid">
@@ -440,9 +449,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
         <details class="gp-faq-item">
           <summary>Quand le produit sera-t-il disponible ?</summary>
           <p>
-            Les premiers stocks ont été pré-réservés en 48h. Le réassort arrive
-            sous <strong>2 à 3 semaines</strong>. Laissez votre email au moment
-            du checkout pour être prévenu en premier — aucun engagement.
+            Le lancement public est prévu <strong>S2 2026</strong>. La phase
+            d'accès anticipé permet aux premiers inscrits de recevoir leur appareil
+            au tarif garanti de <strong>{productPrice} €</strong> (vs {productOldPrice} € en prix public).
+            Pré-réservez votre place — aucun paiement aujourd'hui, juste votre email.
           </p>
         </details>
 
@@ -499,10 +509,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   <!-- ============================================ -->
   <section class="gp-final-cta">
     <div class="gp-final-cta-inner">
-      <h2 class="gp-final-h2">Prêt à arrêter de noter vos glycémies sur un cahier ?</h2>
+      <h2 class="gp-final-h2">Soyez parmi les premiers à le recevoir.</h2>
       <p class="gp-final-sub">
-        Pack démarrage à <strong>{productPrice} €</strong> au lieu de {productOldPrice} €.
-        Livraison offerte. Stock limité.
+        Tarif accès anticipé garanti à <strong>{productPrice} €</strong> (vs {productOldPrice} € en prix public).
+        Aucun engagement, aucun paiement aujourd'hui — juste votre email pour être prévenu(e).
       </p>
       <button
         type="button"
@@ -511,10 +521,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
         data-product={productId}
         data-variant="starter-pack"
       >
-        Ajouter au panier · {productPrice} €
+        Pré-réserver ma place
       </button>
       <p class="gp-final-meta">
-        ✓ Marquage CE médical &nbsp; ✓ Garantie 2 ans &nbsp; ✓ Retour 30 jours
+        ✓ Aucun paiement &nbsp; ✓ Tarif {productPrice} € garanti &nbsp; ✓ Désinscription à tout moment
       </p>
     </div>
   </section>
@@ -524,6 +534,36 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
 </BaseLayout>
 
 <style>
+  /* ============================================
+     BANNER (early access)
+     ============================================ */
+  .gp-banner {
+    background: linear-gradient(90deg, #14532d 0%, #15803d 100%);
+    color: #ecfdf5;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+  .gp-banner-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gp-banner-inner strong { color: #fff; font-weight: 700; }
+  .gp-banner-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #6ee7a0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(110, 231, 160, 0.25);
+  }
+
   /* ============================================
      HERO
      ============================================ */

@@ -54,11 +54,11 @@ const productUrl = `/produits/${productId}/?source=inline_${context}`;
   <div class="pc-content">
     <div class="pc-tag">
       <span class="pc-dot"></span>
-      Stock limité · disponible en réassort
+      Sélection GLP1 France · Pré-lancement S2 2026
     </div>
-    <h3 class="pc-title">{productName} — Glucomètre connecté Bluetooth</h3>
+    <h3 class="pc-title">Notre recommandation : {productName}</h3>
     <p class="pc-lede">
-      Vous suivez votre glycémie sous {context.includes('ozempic') ? 'Ozempic' : context.includes('trulicity') ? 'Trulicity' : context.includes('victoza') ? 'Victoza' : context.includes('rybelsus') ? 'Rybelsus' : 'GLP-1'}&nbsp;? Le lecteur GlucoPulse synchronise automatiquement vos mesures avec votre smartphone : courbes, alertes, partage médecin.
+      Vous suivez votre glycémie sous {context.includes('ozempic') ? 'Ozempic' : context.includes('trulicity') ? 'Trulicity' : context.includes('victoza') ? 'Victoza' : context.includes('rybelsus') ? 'Rybelsus' : 'GLP-1'}&nbsp;? Après comparatif des principaux lecteurs, on a conçu un glucomètre connecté qui synchronise automatiquement avec votre smartphone — courbes, alertes, partage médecin sans Excel.
     </p>
 
     <ul class="pc-features">
@@ -72,7 +72,7 @@ const productUrl = `/produits/${productId}/?source=inline_${context}`;
       <div class="pc-price">
         <span class="pc-price-old">{productOldPrice}&nbsp;€</span>
         <span class="pc-price-new">{productPrice}&nbsp;€</span>
-        <span class="pc-shipping">Livraison offerte</span>
+        <span class="pc-shipping">Tarif anticipé</span>
       </div>
       <button
         type="button"
@@ -81,15 +81,12 @@ const productUrl = `/produits/${productId}/?source=inline_${context}`;
         data-product={productId}
         data-variant={variant}
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
-        </svg>
-        Ajouter au panier
+        Pré-réserver ma place
       </button>
     </div>
 
     <a href={productUrl} class="pc-link">
-      Voir la fiche produit complète →
+      Voir le détail de la sélection →
     </a>
   </div>
 </div>

@@ -110,14 +110,11 @@ jobs:
             quit
           " || echo "Step 1 had issues but continuing..."
 
-          if [ "$NEEDS_FULL" = "false" ]; then
-            echo "--- Step 2/2: SKIPPED (no shared/pharmacy file changed in this commit) ---"
-            echo "Deploy SUCCESS on attempt $ATTEMPT (scoped mode, ~5 min)"
-            exit 0
-          fi
-
-          # ÉTAPE 2/2 : full sync (assets _astro + 22k pharmacies, byte-stable, skip si taille identique)
-          echo "--- Step 2/2: full sync (assets + pharmacies) ---"
+          # ÉTAPE 2/3 : assets _astro/* — TOUJOURS exécutée (les bundles CSS/JS changent
+          # à chaque build, et leurs hashes sont référencés depuis chaque HTML). Si on skip
+          # ça en mode scoped, les nouvelles pages s'affichent SANS STYLE en prod.
+          # Rapide (quelques MB de bundles), 1-2 min max. --ignore-time pour byte-comparison.
+          echo "--- Step 2/3: assets _astro/* (always run) ---"
           lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
             set ftp:passive-mode yes;
             set ftp:ssl-allow no;
@@ -130,7 +127,31 @@ jobs:
             set mirror:use-pget-n 1;
             set ftp:sync-mode off;
             set xfer:clobber yes;
-            mirror --reverse --delete --verbose --no-perms --parallel=25 --ignore-time --continue ./dist/ /domains/glp1-france.fr/public_html/;
+            mirror --reverse --verbose --no-perms --parallel=25 --ignore-time ./dist/_astro/ /domains/glp1-france.fr/public_html/_astro/;
+            quit
+          " || echo "Step 2 (_astro) had issues but continuing..."
+
+          if [ "$NEEDS_FULL" = "false" ]; then
+            echo "--- Step 3/3: SKIPPED (no shared/pharmacy file changed in this commit) ---"
+            echo "Deploy SUCCESS on attempt $ATTEMPT (scoped mode, ~3-5 min)"
+            exit 0
+          fi
+
+          # ÉTAPE 3/3 : full sync (22k pharmacies + reste, byte-stable)
+          echo "--- Step 3/3: full sync (pharmacies + everything else) ---"
+          lftp -u u403023291,${{ secrets.FTP_PASSWORD }} ftp://147.79.98.140 -e "
+            set ftp:passive-mode yes;
+            set ftp:ssl-allow no;
+            set ssl:verify-certificate no;
+            set net:timeout 60;
+            set net:max-retries 30;
+            set net:reconnect-interval-base 5;
+            set net:reconnect-interval-multiplier 2;
+            set mirror:parallel-transfer-count 25;
+            set mirror:use-pget-n 1;
+            set ftp:sync-mode off;
+            set xfer:clobber yes;
+            mirror --reverse --delete --verbose --no-perms --parallel=25 --ignore-time --continue --exclude-glob '_astro/*' ./dist/ /domains/glp1-france.fr/public_html/;
             quit
           " && echo "Deploy SUCCESS on attempt $ATTEMPT (full sync)" && exit 0
 
