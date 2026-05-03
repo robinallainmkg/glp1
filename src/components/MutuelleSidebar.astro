@@ -7,7 +7,8 @@ interface Props {
 }
 
 const { context = "sidebar" } = Astro.props;
-const comparateurLink = `/outils/comparateur-mutuelle-glp1/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=mutuelle_${context}`;
+// Hub article mutuelle (rank pos 7-9 GSC, 6 articles cluster) — meilleure UX qu'un placeholder
+const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?source=sidebar_mutuelle_${context}`;
 ---
 
 <aside class="partner-sidebar partner-sidebar-mutuelle">
@@ -47,11 +48,9 @@ const comparateurLink = `/outils/comparateur-mutuelle-glp1/?utm_source=glp1franc
 
     <a
       href={comparateurLink}
-      target="_blank"
-      rel="noopener sponsored"
       class="partner-cta"
     >
-      Comparer (gratuit) &rarr;
+      Voir les mutuelles &rarr;
     </a>
 
     <div class="partner-trust">

@@ -3,9 +3,9 @@
 // Cible : visiteurs en intention "budget / faire rembourser le GLP-1".
 // CPA mutuelle : 50-150€/lead (vs 19€ Charles téléconsultation).
 //
-// L'URL pointe vers le comparateur interne en attendant l'approbation des programmes Awin
-// (Magnolia.fr, Acheel, Apicil, Henner, Alan, Aesio, April).
-// Quand un partenaire Awin est validé → remplacer la href par le lien deeplink Awin.
+// 2026-05 : pointe vers le hub article wegovy-remboursement-mutuelle (rank pos 7-9 GSC,
+// contenu riche + 6 sous-articles cluster). Quand LesFurets/Magnolia Awin validé,
+// remplacer par le deeplink Awin (clickref tracking par contexte).
 
 interface Props {
   context?: string;
@@ -13,8 +13,8 @@ interface Props {
 
 const { context = "article" } = Astro.props;
 
-// Lien comparateur interne — sera remplacé par Awin deeplink quand programmes approuvés
-const comparateurLink = `/outils/comparateur-mutuelle-glp1/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=mutuelle_${context}`;
+// Hub article mutuelle (interne) — meilleure expérience qu'un placeholder
+const comparateurLink = `/collections/glp1-cout/wegovy-remboursement-mutuelle/?source=cta_mutuelle_${context}`;
 ---
 
 <div
@@ -44,10 +44,9 @@ const comparateurLink = `/outils/comparateur-mutuelle-glp1/?utm_source=glp1franc
 
     <a
       href={comparateurLink}
-      rel="noopener sponsored"
       class="mutuelle-cta-button"
     >
-      Comparer les mutuelles GLP-1 (gratuit)
+      Voir les 6 mutuelles qui remboursent le GLP-1
       <span aria-hidden="true">&rarr;</span>
     </a>
 

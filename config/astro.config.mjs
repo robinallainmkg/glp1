@@ -132,7 +132,24 @@ export default defineConfig({
     '/collections/medicaments-glp1': '/collections/traitements-glp1/',
     '/politique-de-confidentialite/': '/legal/politique-confidentialite/',
     '/politique-de-confidentialite': '/legal/politique-confidentialite/',
-    '/temoignages-glp1/': '/collections/temoignages/'
+    '/temoignages-glp1/': '/collections/temoignages/',
+
+    // Wildcard redirects : anciennes URLs sans /collections/ → nouvelles URLs avec /collections/
+    // Capture ~80% des 404 issus des migrations de routing 2025.
+    '/glp1-cout/[...slug]': '/collections/glp1-cout/[...slug]',
+    '/glp1-perte-de-poids/[...slug]': '/collections/glp1-perte-de-poids/[...slug]',
+    '/glp1-diabete/[...slug]': '/collections/glp1-diabete/[...slug]',
+    '/effets-secondaires-glp1/[...slug]': '/collections/effets-secondaires-glp1/[...slug]',
+    '/regime-glp1/[...slug]': '/collections/regime-glp1/[...slug]',
+    '/alternatives-glp1/[...slug]': '/collections/alternatives-glp1/[...slug]',
+    '/medecins-glp1-france/[...slug]': '/collections/medecins-glp1-france/[...slug]',
+    '/recherche-glp1/[...slug]': '/collections/recherche-glp1/[...slug]',
+    '/avant-apres-glp1/[...slug]': '/collections/avant-apres-glp1/[...slug]',
+    '/temoignages/[...slug]': '/collections/temoignages/[...slug]',
+    '/traitements-glp1/[...slug]': '/collections/traitements-glp1/[...slug]',
+
+    // Collection supprimée medicaments-glp1 → traitements-glp1 (catch-all sous-pages)
+    '/collections/medicaments-glp1/[...slug]': '/collections/traitements-glp1/[...slug]'
   },
   server: {
     port: 4321,
