@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "April", "wegovy"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-mutuelle-april.jpg"
+thumbnail: "/images/thumbnails/wegovy-mutuelle-april.svg"
 thumbnailAlt: "Illustration April mutuelle Wegovy"
 featured: false
 priority: 5

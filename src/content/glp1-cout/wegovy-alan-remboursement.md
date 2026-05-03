@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "Alan", "wegovy"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-mutuelle-alan.jpg"
+thumbnail: "/images/thumbnails/wegovy-mutuelle-alan.svg"
 thumbnailAlt: "Illustration Alan mutuelle Wegovy"
 featured: false
 priority: 5

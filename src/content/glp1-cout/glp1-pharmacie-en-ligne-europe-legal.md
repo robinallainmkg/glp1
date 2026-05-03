@@ -8,7 +8,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "europe", "pharmacie-en-ligne", "legal", "achat-transfrontalier", "prix"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/glp1-pharmacie-europe-legal-illus.jpg"
+thumbnail: "/images/thumbnails/glp1-pharmacie-europe-legal-illus.svg"
 thumbnailAlt: "Illustration achat GLP-1 en pharmacie en ligne UE — légalité 2026"
 featured: true
 priority: 3

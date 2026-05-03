@@ -8,7 +8,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "saxenda", "prix", "portugal", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/acheter-saxenda-portugal-illus.jpg"
+thumbnail: "/images/thumbnails/acheter-saxenda-portugal-illus.svg"
 thumbnailAlt: "Illustration achat Saxenda au Portugal — pharmacie et prix"
 featured: false
 priority: 5

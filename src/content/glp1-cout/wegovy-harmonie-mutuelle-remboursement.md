@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "Harmonie Mutuelle", "wegovy"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-mutuelle-harmonie.jpg"
+thumbnail: "/images/thumbnails/wegovy-mutuelle-harmonie.svg"
 thumbnailAlt: "Illustration Harmonie Mutuelle Wegovy"
 featured: false
 priority: 5

@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "comparatif", "obésité"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/mutuelle-obesite-comparatif-2026.jpg"
+thumbnail: "/images/thumbnails/mutuelle-obesite-comparatif-2026.svg"
 thumbnailAlt: "Comparatif mutuelles obésité GLP-1 2026"
 featured: false
 priority: 5

@@ -8,7 +8,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "wegovy", "prix", "allemagne", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/acheter-wegovy-allemagne-illus.jpg"
+thumbnail: "/images/thumbnails/acheter-wegovy-allemagne-illus.svg"
 thumbnailAlt: "Illustration achat Wegovy en Allemagne — pharmacie et prix"
 featured: false
 priority: 5

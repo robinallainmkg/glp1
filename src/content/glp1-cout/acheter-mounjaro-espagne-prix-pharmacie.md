@@ -8,7 +8,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "mounjaro", "prix", "espagne", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/acheter-mounjaro-espagne-illus.jpg"
+thumbnail: "/images/thumbnails/acheter-mounjaro-espagne-illus.svg"
 thumbnailAlt: "Illustration achat Mounjaro en Espagne — pharmacie et prix"
 featured: false
 priority: 5

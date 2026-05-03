@@ -8,7 +8,7 @@ author: "Julien Lefèvre"
 category: "Économie santé"
 tags: ["glp1", "ozempic", "prix", "belgique", "europe", "achat-transfrontalier"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/acheter-ozempic-belgique-illus.jpg"
+thumbnail: "/images/thumbnails/acheter-ozempic-belgique-illus.svg"
 thumbnailAlt: "Illustration achat Ozempic en Belgique — pharmacie et prix"
 featured: false
 priority: 5

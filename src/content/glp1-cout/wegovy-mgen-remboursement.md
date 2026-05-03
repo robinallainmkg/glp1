@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "MGEN", "wegovy"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-mutuelle-mgen.jpg"
+thumbnail: "/images/thumbnails/wegovy-mutuelle-mgen.svg"
 thumbnailAlt: "Illustration MGEN remboursement Wegovy"
 featured: false
 priority: 5

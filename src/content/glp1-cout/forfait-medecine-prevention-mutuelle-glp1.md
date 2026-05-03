@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "prévention", "obésité"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/forfait-medecine-prevention-mutuelle-glp1.jpg"
+thumbnail: "/images/thumbnails/forfait-medecine-prevention-mutuelle-glp1.svg"
 thumbnailAlt: "Forfait prévention obésité mutuelle GLP-1"
 featured: false
 priority: 5

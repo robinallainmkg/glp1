@@ -12,7 +12,7 @@ author: 'Dr. Marie Dubois'
 category: "Économie santé"
 tags: ["glp1", "mutuelle", "Malakoff Humanis", "wegovy"]
 collection: "glp1-cout"
-thumbnail: "/images/thumbnails/wegovy-mutuelle-malakoff-humanis.jpg"
+thumbnail: "/images/thumbnails/wegovy-mutuelle-malakoff-humanis.svg"
 thumbnailAlt: "Illustration Malakoff Humanis Wegovy"
 featured: false
 priority: 5
