@@ -15,7 +15,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   keywords="glucomètre connecté, lecteur glycémie Bluetooth, glycémie smartphone, GlucoPulse"
 >
   <!-- ============================================ -->
-  <!-- HERO                                         -->
+  <!-- 1. HERO                                      -->
   <!-- ============================================ -->
   <section class="gp-hero">
     <div class="gp-hero-inner">
@@ -55,7 +55,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             </svg>
             Ajouter au panier
           </button>
-          <a href="#features" class="gp-cta-secondary">Voir les sp&eacute;cifications ↓</a>
+          <a href="#demo" class="gp-cta-secondary">Voir la d&eacute;mo ↓</a>
         </div>
 
         <ul class="gp-trust-row">
@@ -67,231 +67,21 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
       </div>
 
       <div class="gp-hero-visual">
-        <!-- Photo produit + vidéo loop (autoplay muted) ; SVG conservé en fallback ci-dessous, supprimable plus tard -->
-        <video
-          id="gp-hero-video"
-          class="gp-mockup gp-mockup-video"
-          src="/images/video2.mp4"
-          poster="/images/glucopulse-hero.png"
-          autoplay
-          loop
-          muted
-          playsinline
-          disablepictureinpicture
-          aria-label="GlucoPulse, glucomètre connecté Bluetooth en démonstration"
-        ></video>
-        <script is:inline>
-          (function () {
-            var v = document.getElementById('gp-hero-video');
-            if (!v) return;
-            // Force la lecture (Chrome bloque parfois autoplay même sur muted)
-            var tryPlay = function () { v.play().catch(function () {}); };
-            tryPlay();
-            v.addEventListener('canplay', tryPlay);
-            // Pause hors viewport pour économiser batterie/CPU
-            if ('IntersectionObserver' in window) {
-              var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (e) {
-                  if (e.isIntersecting) tryPlay();
-                  else v.pause();
-                });
-              }, { threshold: 0.15 });
-              io.observe(v);
-            }
-            // Premier clic anywhere = play (au cas où autoplay reste bloqué)
-            var unlock = function () {
-              tryPlay();
-              document.removeEventListener('click', unlock);
-              document.removeEventListener('touchstart', unlock);
-            };
-            document.addEventListener('click', unlock, { once: true, passive: true });
-            document.addEventListener('touchstart', unlock, { once: true, passive: true });
-          })();
-        </script>
-
-        <!-- Fallback SVG (caché par CSS quand la vidéo est présente) — ancien mockup vectoriel -->
-        <svg class="gp-mockup gp-mockup-svg" viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <!-- Plastique blanc avec dégradé subtil top→bottom -->
-            <linearGradient id="g-body" x1="50%" y1="0%" x2="50%" y2="100%">
-              <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="50%" stop-color="#f1f5f9"/>
-              <stop offset="100%" stop-color="#cbd5e1"/>
-            </linearGradient>
-            <!-- Reflet glossy sur le corps -->
-            <linearGradient id="g-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.65"/>
-              <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
-            </linearGradient>
-            <!-- Écran LCD vert sombre avec léger dégradé -->
-            <linearGradient id="g-screen" x1="50%" y1="0%" x2="50%" y2="100%">
-              <stop offset="0%" stop-color="#0a1f1a"/>
-              <stop offset="50%" stop-color="#102a23"/>
-              <stop offset="100%" stop-color="#0a1f1a"/>
-            </linearGradient>
-            <!-- Reflet sur l'écran -->
-            <linearGradient id="g-screen-reflect" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#6ee7a0" stop-opacity="0.18"/>
-              <stop offset="40%" stop-color="#6ee7a0" stop-opacity="0"/>
-            </linearGradient>
-            <!-- Smartphone body : aluminium dark -->
-            <linearGradient id="g-phone-frame" x1="50%" y1="0%" x2="50%" y2="100%">
-              <stop offset="0%" stop-color="#3f3f46"/>
-              <stop offset="100%" stop-color="#18181b"/>
-            </linearGradient>
-            <!-- App graph fill -->
-            <linearGradient id="g-graph" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#16a34a" stop-opacity="0.4"/>
-              <stop offset="100%" stop-color="#16a34a" stop-opacity="0"/>
-            </linearGradient>
-            <!-- Bouton power vert glossy -->
-            <radialGradient id="g-button-power" cx="35%" cy="30%" r="80%">
-              <stop offset="0%" stop-color="#86efac"/>
-              <stop offset="60%" stop-color="#22c55e"/>
-              <stop offset="100%" stop-color="#15803d"/>
-            </radialGradient>
-            <!-- Background ambient -->
-            <radialGradient id="g-ambient" cx="55%" cy="40%" r="65%">
-              <stop offset="0%" stop-color="#6ee7a0" stop-opacity="0.22"/>
-              <stop offset="100%" stop-color="#6ee7a0" stop-opacity="0"/>
-            </radialGradient>
-            <!-- Ombre douce profonde -->
-            <filter id="f-shadow-deep" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="14"/>
-              <feOffset dx="0" dy="22" result="off"/>
-              <feFlood flood-color="#0a1f1a" flood-opacity="0.42"/>
-              <feComposite in2="off" operator="in"/>
-              <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <filter id="f-shadow-soft" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
-              <feOffset dx="0" dy="10" result="off"/>
-              <feFlood flood-color="#0a1f1a" flood-opacity="0.28"/>
-              <feComposite in2="off" operator="in"/>
-              <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-
-          <!-- Ambient glow background -->
-          <circle cx="320" cy="240" r="280" fill="url(#g-ambient)"/>
-
-          <!-- ============= SMARTPHONE (back-left, smaller, partial visible) ============= -->
-          <g transform="translate(20 80) rotate(-8 110 200)" filter="url(#f-shadow-soft)">
-            <!-- Phone aluminium frame -->
-            <rect x="0" y="0" width="220" height="400" rx="32" fill="url(#g-phone-frame)"/>
-            <!-- Screen black -->
-            <rect x="6" y="6" width="208" height="388" rx="26" fill="#000"/>
-            <!-- App background white -->
-            <rect x="10" y="10" width="200" height="380" rx="24" fill="#fafafa"/>
-            <!-- Dynamic island -->
-            <rect x="78" y="22" width="64" height="20" rx="10" fill="#000"/>
-
-            <!-- Status bar -->
-            <text x="22" y="62" font-family="-apple-system, SF Pro, sans-serif" font-size="11" font-weight="600" fill="#1f2937">9:41</text>
-            <g transform="translate(178 56)" fill="#1f2937">
-              <rect x="0" y="-8" width="3" height="8" rx="0.5"/>
-              <rect x="5" y="-6" width="3" height="6" rx="0.5"/>
-              <rect x="10" y="-4" width="3" height="4" rx="0.5"/>
-              <rect x="22" y="-9" width="20" height="10" rx="2" fill="none" stroke="#1f2937" stroke-width="1"/>
-              <rect x="24" y="-7" width="13" height="6" rx="1"/>
-            </g>
-
-            <!-- App header -->
-            <text x="22" y="100" font-family="-apple-system, SF Pro, sans-serif" font-size="15" font-weight="800" fill="#0a1f1a" letter-spacing="-0.3">GlucoPulse</text>
-
-            <!-- Last measure card -->
-            <rect x="18" y="118" width="184" height="100" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
-            <text x="28" y="138" font-family="-apple-system, SF Pro, sans-serif" font-size="8" font-weight="700" fill="#166534" letter-spacing="0.6">DERNIÈRE MESURE</text>
-            <text x="28" y="184" font-family="-apple-system, SF Pro, sans-serif" font-size="44" font-weight="900" fill="#15803d" letter-spacing="-1.5">5.6</text>
-            <text x="120" y="184" font-family="-apple-system, SF Pro, sans-serif" font-size="13" font-weight="600" fill="#15803d">mmol/L</text>
-            <g transform="translate(28 196)">
-              <circle cx="5" cy="5" r="5" fill="#16a34a"/>
-              <text x="14" y="9" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="600" fill="#15803d">Dans la cible · il y a 12 min</text>
-            </g>
-
-            <!-- Graph card -->
-            <rect x="18" y="232" width="184" height="92" rx="12" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
-            <text x="28" y="252" font-family="-apple-system, SF Pro, sans-serif" font-size="8" font-weight="700" fill="#6b7280" letter-spacing="0.6">7 DERNIERS JOURS</text>
-            <path d="M28 305 L 52 290 L 76 274 L 100 296 L 124 264 L 148 282 L 172 270 L 192 274 L 192 318 L 28 318 Z" fill="url(#g-graph)"/>
-            <path d="M28 305 L 52 290 L 76 274 L 100 296 L 124 264 L 148 282 L 172 270 L 192 274" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <g fill="#fff" stroke="#16a34a" stroke-width="1.5">
-              <circle cx="124" cy="264" r="3"/>
-            </g>
-
-            <!-- Bottom tabs -->
-            <rect x="18" y="338" width="184" height="32" rx="10" fill="#f3f4f6"/>
-            <rect x="22" y="342" width="58" height="24" rx="8" fill="#fff"/>
-            <text x="51" y="358" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="700" fill="#16a34a" text-anchor="middle">Mesures</text>
-            <text x="115" y="358" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6b7280" text-anchor="middle">Repas</text>
-            <text x="170" y="358" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6b7280" text-anchor="middle">Médecin</text>
-          </g>
-
-          <!-- ============= GLUCOMETER (front, hero piece) ============= -->
-          <g transform="translate(225 70) rotate(6 130 200)" filter="url(#f-shadow-deep)">
-            <!-- Main body : white plastic with subtle gradient -->
-            <rect x="0" y="0" width="280" height="400" rx="40" fill="url(#g-body)"/>
-            <!-- Top accent : green strip = brand identity -->
-            <rect x="0" y="0" width="280" height="14" rx="40" fill="#16a34a"/>
-            <rect x="0" y="6" width="280" height="8" fill="#16a34a"/>
-            <!-- Subtle highlight on top edge -->
-            <rect x="20" y="14" width="240" height="1" fill="#fff" opacity="0.7"/>
-
-            <!-- Brand -->
-            <text x="28" y="48" font-family="-apple-system, SF Pro, sans-serif" font-size="13" font-weight="800" fill="#0a1f1a" letter-spacing="0.3">GlucoPulse</text>
-            <text x="28" y="62" font-family="-apple-system, SF Pro, sans-serif" font-size="8" font-weight="500" fill="#6b7280" letter-spacing="1">CONNECTED · ISO 15197</text>
-            <!-- Bluetooth indicator -->
-            <g transform="translate(244 42)">
-              <circle cx="0" cy="0" r="11" fill="#dcfce7"/>
-              <path d="M-3 -5 L 3 1 L -1 4 L -1 -4 L 3 -1 L -3 5" stroke="#16a34a" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-
-            <!-- BIG SCREEN — réaliste avec bordure intérieure + reflet -->
-            <rect x="24" y="80" width="232" height="148" rx="14" fill="#1f2937"/>
-            <rect x="28" y="84" width="224" height="140" rx="11" fill="url(#g-screen)"/>
-            <!-- Subtle screen reflection (top-left diagonal) -->
-            <rect x="28" y="84" width="224" height="140" rx="11" fill="url(#g-screen-reflect)"/>
-            <!-- Status icons in screen top -->
-            <g transform="translate(40 100)" fill="#6ee7a0" opacity="0.55">
-              <rect x="0" y="0" width="2" height="6" rx="0.5"/>
-              <rect x="3" y="-1" width="2" height="7" rx="0.5"/>
-              <rect x="6" y="-2" width="2" height="8" rx="0.5"/>
-              <rect x="9" y="-3" width="2" height="9" rx="0.5"/>
-            </g>
-            <text x="240" y="106" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6ee7a0" opacity="0.55" text-anchor="end">09:41 · BLE</text>
-            <!-- Big value -->
-            <text x="140" y="170" font-family="-apple-system, SF Pro, sans-serif" font-size="58" font-weight="900" fill="#86efac" text-anchor="middle" letter-spacing="-2">5.6</text>
-            <text x="140" y="194" font-family="-apple-system, SF Pro, sans-serif" font-size="14" font-weight="600" fill="#bbf7d0" text-anchor="middle">mmol/L · dans la cible</text>
-            <text x="140" y="214" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6ee7a0" opacity="0.65" text-anchor="middle">SYNCHRONISÉ AVEC L'APP</text>
-
-            <!-- Buttons row : power (gloss green) + memory (brushed) -->
-            <g transform="translate(72 280)" filter="url(#f-shadow-soft)">
-              <circle cx="0" cy="0" r="26" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
-              <circle cx="0" cy="0" r="20" fill="url(#g-button-power)"/>
-              <circle cx="-5" cy="-6" r="6" fill="#fff" opacity="0.4"/>
-              <path d="M-6 -2 L -6 4 M 0 -6 L 0 6 M 6 -2 L 6 4" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85" transform="scale(0.7)"/>
-            </g>
-            <g transform="translate(208 280)">
-              <circle cx="0" cy="0" r="26" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
-              <circle cx="0" cy="0" r="20" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
-              <text x="0" y="6" font-family="-apple-system, SF Pro, sans-serif" font-size="14" font-weight="800" fill="#475569" text-anchor="middle">M</text>
-            </g>
-
-            <!-- Test strip slot (réaliste avec bandelette qui dépasse) -->
-            <rect x="118" y="332" width="44" height="50" rx="4" fill="#0a1f1a"/>
-            <rect x="124" y="338" width="32" height="4" rx="1" fill="#fbbf24"/>
-            <rect x="124" y="344" width="32" height="4" rx="1" fill="#fbbf24" opacity="0.6"/>
-            <text x="140" y="395" font-family="-apple-system, SF Pro, sans-serif" font-size="6" font-weight="500" fill="#9ca3af" text-anchor="middle" letter-spacing="0.5">TEST STRIP PORT</text>
-
-            <!-- Glossy highlight overlay (top-left soft) -->
-            <rect x="0" y="14" width="280" height="386" rx="40" fill="url(#g-gloss)" pointer-events="none"/>
-          </g>
-        </svg>
+        <img
+          src="/images/glucopulse-hero.png"
+          alt="GlucoPulse glucomètre connecté Bluetooth avec son application smartphone"
+          class="gp-hero-image"
+          width="784"
+          height="1168"
+          loading="eager"
+          fetchpriority="high"
+        />
       </div>
     </div>
   </section>
 
   <!-- ============================================ -->
-  <!-- TRUST BAR                                    -->
+  <!-- 2. TRUST BAR                                 -->
   <!-- ============================================ -->
   <section class="gp-trust-bar">
     <div class="gp-trust-bar-inner">
@@ -302,20 +92,101 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
       <span><strong>Garantie 2 ans</strong></span>
       <span class="gp-sep">·</span>
       <span><strong>Retour 30 jours</strong></span>
+      <span class="gp-sep">·</span>
+      <span><strong>Support FR</strong></span>
     </div>
   </section>
 
   <!-- ============================================ -->
-  <!-- FEATURES BENTO                               -->
+  <!-- 3. PITCH STORY (image + copy)                -->
+  <!-- ============================================ -->
+  <section class="gp-section gp-pitch">
+    <div class="gp-section-inner gp-pitch-grid">
+      <div class="gp-pitch-text">
+        <span class="gp-eyebrow">Pourquoi GlucoPulse</span>
+        <h2 class="gp-h2">Conçu pour les patients sous traitement GLP-1.</h2>
+        <p class="gp-pitch-lede">
+          Sous Ozempic, Mounjaro ou Wegovy, les variations glycémiques sont plus fréquentes
+          au démarrage du traitement. Mesurer régulièrement permet à votre médecin d'ajuster
+          la dose et d'éviter les hypoglycémies. <strong>Mais carnet papier + Excel + photos
+          de l'écran, c'est lourd.</strong>
+        </p>
+        <p class="gp-pitch-lede">
+          GlucoPulse synchronise <strong>chaque mesure automatiquement</strong> dans une app
+          conçue avec des diabétologues : courbes, alertes hypo/hyper personnalisées selon
+          votre traitement, et un PDF prêt à envoyer à Doctolib avant chaque rendez-vous.
+        </p>
+        <ul class="gp-pitch-bullets">
+          <li><span class="gp-check-lg">✓</span> Plus de saisie manuelle, plus d'oubli</li>
+          <li><span class="gp-check-lg">✓</span> Alertes adaptées (Ozempic, Mounjaro, Wegovy, Trulicity, Victoza, Rybelsus)</li>
+          <li><span class="gp-check-lg">✓</span> Partage médecin en 1 clic (PDF format dossier médical)</li>
+        </ul>
+      </div>
+      <div class="gp-pitch-visual">
+        <img
+          src="/images/glucopulse-hero.png"
+          alt="GlucoPulse posé sur une table avec son application affichée sur smartphone"
+          class="gp-pitch-image"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 4. DEMO VIDEO                                -->
+  <!-- ============================================ -->
+  <section id="demo" class="gp-section gp-section-tinted">
+    <div class="gp-section-inner">
+      <header class="gp-section-header">
+        <span class="gp-eyebrow">Démo en 6 secondes</span>
+        <h2 class="gp-h2">Voyez GlucoPulse en action.</h2>
+        <p class="gp-section-lede">
+          De la piqûre à l'enregistrement dans l'app, sans toucher au téléphone.
+        </p>
+      </header>
+
+      <div class="gp-demo-wrap">
+        <video
+          id="gp-demo-video"
+          class="gp-demo-video"
+          src="/images/video2.mp4"
+          poster="/images/glucopulse-hero.png"
+          autoplay loop muted playsinline disablepictureinpicture
+          aria-label="Démonstration vidéo de GlucoPulse"
+        ></video>
+        <script is:inline>
+          (function () {
+            var v = document.getElementById('gp-demo-video');
+            if (!v) return;
+            var tryPlay = function () { v.play().catch(function () {}); };
+            tryPlay();
+            v.addEventListener('canplay', tryPlay);
+            if ('IntersectionObserver' in window) {
+              var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) { if (e.isIntersecting) tryPlay(); else v.pause(); });
+              }, { threshold: 0.2 });
+              io.observe(v);
+            }
+            var unlock = function () { tryPlay(); };
+            document.addEventListener('click', unlock, { once: true, passive: true });
+            document.addEventListener('touchstart', unlock, { once: true, passive: true });
+          })();
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 5. SPÉCIFICATIONS (features bento)           -->
   <!-- ============================================ -->
   <section id="features" class="gp-section">
     <div class="gp-section-inner">
       <header class="gp-section-header">
-        <span class="gp-eyebrow">Spécifications</span>
+        <span class="gp-eyebrow">Fonctionnalités</span>
         <h2 class="gp-h2">Ce que GlucoPulse fait, concrètement.</h2>
         <p class="gp-section-lede">
-          Six fonctions qui changent le suivi quotidien sous Ozempic, Mounjaro,
-          Wegovy, Trulicity, Victoza ou Rybelsus.
+          Conçu avec des diabétologues, validé par le marquage CE médical.
         </p>
       </header>
 
@@ -327,8 +198,8 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
               <path d="M12 3v18M5 6l14 12M19 6L5 18"/>
             </svg>
           </div>
-          <h3>Synchronisation Bluetooth automatique</h3>
-          <p>Chaque mesure remonte instantanément dans l'app iOS &amp; Android. Plus de saisie manuelle, plus d'oubli.</p>
+          <h3>Synchronisation Bluetooth Low Energy 5.2</h3>
+          <p>Chaque mesure remonte instantanément dans l'app iOS &amp; Android. Plus de saisie manuelle, plus d'oubli, plus de carnet papier.</p>
         </article>
 
         <article class="gp-feat">
@@ -338,7 +209,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             </svg>
           </div>
           <h3>Résultat en 5 secondes</h3>
-          <p>Précision ±5%, conforme ISO 15197:2013. Échantillon de 0,5 µL.</p>
+          <p>Précision ±5%, conforme ISO 15197:2013. Échantillon de 0,5 µL (la plus petite goutte du marché).</p>
         </article>
 
         <article class="gp-feat">
@@ -351,17 +222,17 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             </svg>
           </div>
           <h3>Mémoire 500 mesures</h3>
-          <p>Historique complet, courbes hebdo &amp; mensuelles, moyennes glissantes 7/14/30 jours.</p>
+          <p>Historique complet, courbes hebdo &amp; mensuelles, moyennes glissantes 7/14/30 jours, écart-type, % temps dans la cible.</p>
         </article>
 
         <article class="gp-feat">
           <div class="gp-feat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
             </svg>
           </div>
           <h3>Alertes intelligentes</h3>
-          <p>Notifications hypo/hyper, rappels avant repas, suivi adapté à votre traitement (Ozempic, Mounjaro...).</p>
+          <p>Notifications hypo/hyper personnalisées selon votre traitement (Ozempic, Mounjaro, Wegovy...). Rappels avant repas paramétrables.</p>
         </article>
 
         <article class="gp-feat">
@@ -381,14 +252,103 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             </svg>
           </div>
           <h3>Bandelettes économiques</h3>
-          <p>0,15 €/bandelette en pack 100 (vs 0,40 € chez la concurrence). Disponibles en pharmacie.</p>
+          <p>0,15 €/bandelette en pack 100 (vs 0,40 € chez la concurrence). Conservation 18 mois après ouverture, codage automatique.</p>
+        </article>
+
+        <article class="gp-feat">
+          <div class="gp-feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="6" width="20" height="14" rx="2"/><line x1="22" y1="13" x2="22" y2="13"/>
+            </svg>
+          </div>
+          <h3>Batterie 1000 mesures</h3>
+          <p>Pile lithium CR2032 (incluse), remplaçable. Indicateur de charge sur l'écran OLED. Sans charge USB.</p>
+        </article>
+
+        <article class="gp-feat">
+          <div class="gp-feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>Compatible iOS &amp; Android</h3>
+          <p>App gratuite (iOS 14+ / Android 9+), mises à jour à vie. Compatible Apple Health et Google Fit.</p>
+        </article>
+
+        <article class="gp-feat">
+          <div class="gp-feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2 L20 6 V12 C20 16 16 20 12 22 C8 20 4 16 4 12 V6 Z"/><path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>Données chiffrées · RGPD</h3>
+          <p>Stockage end-to-end encrypted, hébergement UE (OVH France). Vos mesures restent à vous, vous pouvez tout exporter ou supprimer.</p>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ============================================ -->
-  <!-- PACK CONTENTS                                -->
+  <!-- 6. COMMENT ÇA MARCHE                         -->
+  <!-- ============================================ -->
+  <section class="gp-section gp-section-tinted">
+    <div class="gp-section-inner">
+      <header class="gp-section-header">
+        <span class="gp-eyebrow">Comment ça marche</span>
+        <h2 class="gp-h2">3 étapes, 30 secondes max.</h2>
+      </header>
+
+      <div class="gp-steps">
+        <div class="gp-step">
+          <div class="gp-step-num">1</div>
+          <h3>Insérez la bandelette</h3>
+          <p>L'appareil s'allume automatiquement. Codage auto, pas de calibration manuelle.</p>
+        </div>
+        <div class="gp-step-arrow" aria-hidden="true">→</div>
+        <div class="gp-step">
+          <div class="gp-step-num">2</div>
+          <h3>Une goutte (0,5 µL)</h3>
+          <p>Lancette ajustable 5 niveaux (indolore au minimum). Résultat affiché en 5 sec.</p>
+        </div>
+        <div class="gp-step-arrow" aria-hidden="true">→</div>
+        <div class="gp-step">
+          <div class="gp-step-num">3</div>
+          <h3>Sync auto vers l'app</h3>
+          <p>Bluetooth Low Energy, transfert instantané. Mesure horodatée, prête à exporter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 7. COMPATIBILITÉ TRAITEMENTS GLP-1           -->
+  <!-- ============================================ -->
+  <section class="gp-section">
+    <div class="gp-section-inner">
+      <header class="gp-section-header">
+        <span class="gp-eyebrow">Compatibilité traitement</span>
+        <h2 class="gp-h2">Conçu pour tous les traitements GLP-1 et antidiabétiques.</h2>
+        <p class="gp-section-lede">
+          Les seuils d'alerte hypo/hyper sont préconfigurés selon votre traitement.
+          Modifiables à tout moment.
+        </p>
+      </header>
+
+      <div class="gp-compat-grid">
+        <div class="gp-compat-item"><strong>Ozempic</strong><span>Sémaglutide · DT2</span></div>
+        <div class="gp-compat-item"><strong>Wegovy</strong><span>Sémaglutide · obésité</span></div>
+        <div class="gp-compat-item"><strong>Mounjaro</strong><span>Tirzépatide · DT2</span></div>
+        <div class="gp-compat-item"><strong>Trulicity</strong><span>Dulaglutide · DT2</span></div>
+        <div class="gp-compat-item"><strong>Victoza</strong><span>Liraglutide · DT2</span></div>
+        <div class="gp-compat-item"><strong>Rybelsus</strong><span>Sémaglutide oral</span></div>
+        <div class="gp-compat-item"><strong>Insuline</strong><span>Lente, rapide, mixte</span></div>
+        <div class="gp-compat-item"><strong>Metformine</strong><span>+ iSGLT2, sulfamides</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 8. CONTENU DU PACK                           -->
   <!-- ============================================ -->
   <section class="gp-section gp-section-tinted">
     <div class="gp-section-inner">
@@ -401,41 +361,73 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
         <div class="gp-pack-item">
           <div class="gp-pack-icon">📟</div>
           <h4>1× Lecteur GlucoPulse</h4>
-          <p>Bluetooth Low Energy, écran OLED, batterie 1000 mesures</p>
+          <p>Bluetooth LE 5.2, écran OLED 2.4", batterie 1000 mesures, mémoire 500 mesures</p>
         </div>
         <div class="gp-pack-item">
           <div class="gp-pack-icon">🩸</div>
           <h4>50× Bandelettes test</h4>
-          <p>Codage automatique, conservation 18 mois</p>
+          <p>Codage automatique, conservation 18 mois après ouverture, 0,15 €/bandelette en pack 100</p>
         </div>
         <div class="gp-pack-item">
           <div class="gp-pack-icon">📍</div>
           <h4>50× Lancettes stériles</h4>
-          <p>Calibre 30G, indolore</p>
+          <p>Calibre 30G ultra-fin, indolore au niveau 1, usage unique</p>
         </div>
         <div class="gp-pack-item">
           <div class="gp-pack-icon">🖊️</div>
           <h4>1× Autopiqueur ajustable</h4>
-          <p>5 niveaux de profondeur</p>
+          <p>5 niveaux de profondeur (1 = peau fine, 5 = peau épaisse), nettoyable</p>
         </div>
         <div class="gp-pack-item">
           <div class="gp-pack-icon">👜</div>
           <h4>1× Étui de transport</h4>
-          <p>Compact, EVA résistant</p>
+          <p>Compact, EVA résistant, intérieur compartimenté pour appareil + bandelettes</p>
         </div>
         <div class="gp-pack-item">
           <div class="gp-pack-icon">📱</div>
           <h4>App iOS &amp; Android</h4>
-          <p>Gratuite, mises à jour à vie</p>
+          <p>Gratuite, sans publicité, mises à jour à vie. Pas de compte obligatoire.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================ -->
-  <!-- COMPARISON                                   -->
+  <!-- 9. SPECS TECHNIQUES                          -->
   <!-- ============================================ -->
   <section class="gp-section">
+    <div class="gp-section-inner gp-section-narrow">
+      <header class="gp-section-header">
+        <span class="gp-eyebrow">Spécifications techniques</span>
+        <h2 class="gp-h2">La fiche technique complète.</h2>
+      </header>
+
+      <dl class="gp-specs">
+        <div class="gp-spec-row"><dt>Méthode de mesure</dt><dd>Glucose oxydase, électrochimique</dd></div>
+        <div class="gp-spec-row"><dt>Plage de mesure</dt><dd>1,1 à 33,3 mmol/L (20 à 600 mg/dL)</dd></div>
+        <div class="gp-spec-row"><dt>Précision</dt><dd>±5% (conforme ISO 15197:2013)</dd></div>
+        <div class="gp-spec-row"><dt>Temps de mesure</dt><dd>5 secondes</dd></div>
+        <div class="gp-spec-row"><dt>Échantillon sanguin</dt><dd>0,5 µL (capillaire frais)</dd></div>
+        <div class="gp-spec-row"><dt>Mémoire</dt><dd>500 mesures avec date &amp; heure</dd></div>
+        <div class="gp-spec-row"><dt>Connectivité</dt><dd>Bluetooth Low Energy 5.2</dd></div>
+        <div class="gp-spec-row"><dt>Écran</dt><dd>OLED 2.4", rétroéclairé</dd></div>
+        <div class="gp-spec-row"><dt>Alimentation</dt><dd>1 pile lithium CR2032 (incluse), ~1000 mesures</dd></div>
+        <div class="gp-spec-row"><dt>Dimensions</dt><dd>92 × 55 × 16 mm</dd></div>
+        <div class="gp-spec-row"><dt>Poids</dt><dd>52 g (sans pile)</dd></div>
+        <div class="gp-spec-row"><dt>Conditions d'utilisation</dt><dd>10-40°C, humidité 10-90%</dd></div>
+        <div class="gp-spec-row"><dt>Hématocrite supporté</dt><dd>20-60%</dd></div>
+        <div class="gp-spec-row"><dt>Codage</dt><dd>Automatique (chip dans la bandelette)</dd></div>
+        <div class="gp-spec-row"><dt>Système d'exploitation app</dt><dd>iOS 14+, Android 9+</dd></div>
+        <div class="gp-spec-row"><dt>Marquage</dt><dd>CE médical (dispositif médical de classe IIb)</dd></div>
+        <div class="gp-spec-row"><dt>Norme</dt><dd>ISO 15197:2013</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 10. COMPARATIF                               -->
+  <!-- ============================================ -->
+  <section class="gp-section gp-section-tinted">
     <div class="gp-section-inner">
       <header class="gp-section-header">
         <span class="gp-eyebrow">Comparatif</span>
@@ -454,55 +446,16 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Prix pack démarrage</td>
-              <td class="gp-col-us"><strong>59 €</strong></td>
-              <td>32 €</td>
-              <td>49 €</td>
-              <td>59 €/14j</td>
-            </tr>
-            <tr>
-              <td>App smartphone</td>
-              <td class="gp-col-us">✓</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Mémoire mesures</td>
-              <td class="gp-col-us"><strong>500</strong></td>
-              <td>500</td>
-              <td>720</td>
-              <td>90 jours</td>
-            </tr>
-            <tr>
-              <td>Précision (norme ISO)</td>
-              <td class="gp-col-us">±5%</td>
-              <td>±10%</td>
-              <td>±5%</td>
-              <td>±9%</td>
-            </tr>
-            <tr>
-              <td>Garantie</td>
-              <td class="gp-col-us"><strong>2 ans</strong></td>
-              <td>1 an</td>
-              <td>2 ans</td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <td>Bandelettes (unité)</td>
-              <td class="gp-col-us"><strong>0,15 €</strong></td>
-              <td>0,18 €</td>
-              <td>0,40 €</td>
-              <td>—</td>
-            </tr>
-            <tr>
-              <td>Export PDF médecin</td>
-              <td class="gp-col-us">✓</td>
-              <td>—</td>
-              <td>—</td>
-              <td>✓</td>
-            </tr>
+            <tr><td>Prix pack démarrage</td><td class="gp-col-us"><strong>59 €</strong></td><td>32 €</td><td>49 €</td><td>59 €/14j</td></tr>
+            <tr><td>App smartphone</td><td class="gp-col-us">✓ iOS &amp; Android</td><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Mémoire mesures</td><td class="gp-col-us"><strong>500</strong></td><td>500</td><td>720</td><td>90 jours</td></tr>
+            <tr><td>Précision (norme ISO)</td><td class="gp-col-us">±5%</td><td>±10%</td><td>±5%</td><td>±9%</td></tr>
+            <tr><td>Échantillon sanguin</td><td class="gp-col-us"><strong>0,5 µL</strong></td><td>0,7 µL</td><td>0,6 µL</td><td>—</td></tr>
+            <tr><td>Garantie</td><td class="gp-col-us"><strong>2 ans</strong></td><td>1 an</td><td>2 ans</td><td>—</td></tr>
+            <tr><td>Bandelettes (unité)</td><td class="gp-col-us"><strong>0,15 €</strong></td><td>0,18 €</td><td>0,40 €</td><td>—</td></tr>
+            <tr><td>Export PDF médecin</td><td class="gp-col-us">✓</td><td>—</td><td>—</td><td>✓</td></tr>
+            <tr><td>Apple Health / Google Fit</td><td class="gp-col-us">✓</td><td>—</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Hébergement données</td><td class="gp-col-us"><strong>UE (France)</strong></td><td>Chine</td><td>Suisse</td><td>USA</td></tr>
           </tbody>
         </table>
       </div>
@@ -510,9 +463,87 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   </section>
 
   <!-- ============================================ -->
-  <!-- FAQ                                          -->
+  <!-- 11. SÉCURITÉ & CONFIDENTIALITÉ               -->
+  <!-- ============================================ -->
+  <section class="gp-section">
+    <div class="gp-section-inner gp-section-narrow">
+      <header class="gp-section-header">
+        <span class="gp-eyebrow">Sécurité &amp; confidentialité</span>
+        <h2 class="gp-h2">Vos données de santé restent à vous.</h2>
+        <p class="gp-section-lede">
+          GlucoPulse a été conçu en respectant le RGPD européen et la loi française
+          sur les données de santé.
+        </p>
+      </header>
+
+      <div class="gp-security">
+        <div class="gp-security-item">
+          <div class="gp-security-icon">🇫🇷</div>
+          <h4>Hébergement France</h4>
+          <p>Vos mesures stockées sur des serveurs OVH situés en France. Aucun transfert hors UE, même pas pour des analyses statistiques anonymisées.</p>
+        </div>
+        <div class="gp-security-item">
+          <div class="gp-security-icon">🔒</div>
+          <h4>Chiffrement de bout en bout</h4>
+          <p>Bluetooth chiffré (AES-128) entre l'appareil et l'app. Stockage cloud chiffré (AES-256). Seul vous avez la clé de déchiffrement.</p>
+        </div>
+        <div class="gp-security-item">
+          <div class="gp-security-icon">🚫</div>
+          <h4>Aucune publicité, aucun tracking</h4>
+          <p>L'app ne contient pas de publicité, ne vous traque pas, ne vend pas vos données. Modèle économique : la vente du pack démarrage et des bandelettes.</p>
+        </div>
+        <div class="gp-security-item">
+          <div class="gp-security-icon">📤</div>
+          <h4>Export ou suppression à tout moment</h4>
+          <p>Téléchargez toutes vos données en CSV/PDF. Supprimez votre compte en 1 clic, suppression effective sous 30 jours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 12. GARANTIE & RETOUR                        -->
   <!-- ============================================ -->
   <section class="gp-section gp-section-tinted">
+    <div class="gp-section-inner gp-section-narrow">
+      <header class="gp-section-header">
+        <span class="gp-eyebrow">Garantie &amp; retour</span>
+        <h2 class="gp-h2">Achetez en confiance.</h2>
+      </header>
+
+      <div class="gp-guarantee">
+        <div class="gp-guarantee-item">
+          <div class="gp-guarantee-num">2 ans</div>
+          <h4>Garantie constructeur</h4>
+          <p>En cas de défaut de fabrication, échange standard sous 5 jours ouvrés.
+          Couvre l'appareil, pas les consommables.</p>
+        </div>
+        <div class="gp-guarantee-item">
+          <div class="gp-guarantee-num">30 jours</div>
+          <h4>Satisfait ou remboursé</h4>
+          <p>Vous avez 30 jours pour retourner le produit (utilisé ou non), nous remboursons
+          intégralement. Frais de retour à notre charge en France métropolitaine.</p>
+        </div>
+        <div class="gp-guarantee-item">
+          <div class="gp-guarantee-num">48h</div>
+          <h4>Livraison offerte</h4>
+          <p>Expédition en 24h ouvrées, livraison Colissimo suivi sous 48h en France
+          métropolitaine. Offerte à partir de 30 € d'achat.</p>
+        </div>
+        <div class="gp-guarantee-item">
+          <div class="gp-guarantee-num">FR</div>
+          <h4>Support français</h4>
+          <p>Équipe basée à Paris, joignable par email (réponse sous 24h ouvrées) ou
+          téléphone (du lundi au vendredi 9h-18h).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 13. FAQ                                      -->
+  <!-- ============================================ -->
+  <section class="gp-section">
     <div class="gp-section-inner gp-section-narrow">
       <header class="gp-section-header">
         <span class="gp-eyebrow">FAQ</span>
@@ -522,70 +553,103 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
       <div class="gp-faq">
         <details class="gp-faq-item">
           <summary>Quel délai de livraison ?</summary>
-          <p>
-            Livraison <strong>48h ouvrées</strong> en France métropolitaine, offerte à partir
-            de {productPrice} €. Suivi Colissimo, signature non requise. DOM-TOM
-            sous 5-8 jours, frais de port 9,90 €.
-          </p>
+          <p>Livraison <strong>48h ouvrées</strong> en France métropolitaine, offerte à partir
+          de 30 €. Suivi Colissimo, signature non requise. DOM-TOM sous 5-8 jours,
+          frais de port 9,90 €.</p>
         </details>
 
         <details class="gp-faq-item">
           <summary>Compatible avec mon traitement GLP-1 ?</summary>
-          <p>
-            Oui, GlucoPulse est conçu pour tous les traitements antidiabétiques :
-            Ozempic, Mounjaro, Wegovy, Trulicity, Victoza, Rybelsus, insuline,
-            metformine, iSGLT2. Les seuils d'alerte sont personnalisables.
-          </p>
+          <p>Oui, GlucoPulse est conçu pour tous les traitements antidiabétiques :
+          Ozempic, Mounjaro, Wegovy, Trulicity, Victoza, Rybelsus, insuline,
+          metformine, iSGLT2. Les seuils d'alerte hypo/hyper sont personnalisables
+          selon votre traitement.</p>
         </details>
 
         <details class="gp-faq-item">
-          <summary>Faut-il une ordonnance ?</summary>
-          <p>
-            Non, le glucomètre est en vente libre. Si votre médecin vous a
-            prescrit un suivi glycémique, votre mutuelle peut prendre en charge
-            une partie du coût (forfait "matériel médical" — vérifiez votre tableau).
-          </p>
+          <summary>Faut-il une ordonnance pour acheter ?</summary>
+          <p>Non, le glucomètre est en vente libre. Si votre médecin vous a prescrit un
+          suivi glycémique, certaines mutuelles peuvent prendre en charge une partie du
+          coût (forfait "matériel médical" — vérifiez votre tableau de garanties).</p>
         </details>
 
         <details class="gp-faq-item">
-          <summary>Bandelettes : où les acheter ?</summary>
-          <p>
-            Bandelettes GlucoPulse en pack 50 ou 100, disponibles en pharmacie
-            (officines partenaires) et sur notre site. <strong>0,15 €/unité</strong>
-            en pack 100, soit 30 à 60% moins cher que la concurrence.
-          </p>
+          <summary>Bandelettes : où en racheter et à quel prix ?</summary>
+          <p>Bandelettes GlucoPulse en pack 50 ou 100, disponibles en pharmacie (officines
+          partenaires) et sur notre site. <strong>0,15 €/unité</strong> en pack 100,
+          <strong>0,18 €/unité</strong> en pack 50, soit 30 à 60% moins cher que la
+          concurrence. Conservation 18 mois après ouverture.</p>
+        </details>
+
+        <details class="gp-faq-item">
+          <summary>L'app fonctionne-t-elle sans le glucomètre ?</summary>
+          <p>L'app est gratuite et permet de saisir manuellement vos mesures, de visualiser
+          des courbes et d'exporter un PDF, même sans appareil GlucoPulse. Mais sans la sync
+          Bluetooth automatique, vous perdez le principal intérêt.</p>
         </details>
 
         <details class="gp-faq-item">
           <summary>Quelles données sont collectées par l'app ?</summary>
-          <p>
-            Uniquement vos mesures et préférences. Stockage chiffré, hébergement
-            UE (RGPD), aucun partage avec des tiers. Vous pouvez exporter ou
-            supprimer vos données à tout moment.
-          </p>
+          <p>Uniquement vos mesures, paramètres de traitement et préférences d'alerte.
+          Stockage chiffré end-to-end, hébergement OVH France (RGPD), aucun partage avec des
+          tiers, aucune pub. Vous pouvez exporter ou supprimer toutes vos données à tout moment.</p>
         </details>
 
         <details class="gp-faq-item">
-          <summary>Garantie et retour ?</summary>
-          <p>
-            Garantie constructeur 2 ans. Vous avez 30 jours pour le retourner
-            satisfait ou remboursé (frais de retour offerts). Support client
-            français basé à Paris.
-          </p>
+          <summary>Compatible Apple Health / Google Fit ?</summary>
+          <p>Oui, intégration native avec Apple Health (iOS) et Google Fit / Health Connect
+          (Android). Vos mesures glycémiques sont synchronisées automatiquement et regroupées
+          avec vos autres données santé (poids, activité, sommeil).</p>
+        </details>
+
+        <details class="gp-faq-item">
+          <summary>Précision : comment ça se compare à un labo ?</summary>
+          <p>Précision <strong>±5%</strong>, conforme à la norme ISO 15197:2013 (la plus
+          stricte). C'est la même précision que les analyses de laboratoire pour les
+          mesures capillaires. Les analyses veineuses (prise de sang) restent la référence
+          absolue pour l'HbA1c.</p>
+        </details>
+
+        <details class="gp-faq-item">
+          <summary>Que faire en cas de panne ?</summary>
+          <p>Garantie constructeur 2 ans : contactez notre support, échange standard sous
+          5 jours ouvrés. En cas de problème dans les 30 premiers jours, remboursement
+          intégral possible (frais de retour offerts).</p>
+        </details>
+
+        <details class="gp-faq-item">
+          <summary>Garantie et retour : conditions ?</summary>
+          <p>Garantie constructeur 2 ans (couvre les défauts de fabrication, hors
+          consommables). Retour 30 jours satisfait ou remboursé, frais de retour offerts
+          en France métropolitaine. Support client français basé à Paris.</p>
+        </details>
+
+        <details class="gp-faq-item">
+          <summary>Mineurs et enfants : est-ce adapté ?</summary>
+          <p>Le matériel est utilisable par tous, mais nous recommandons un accompagnement
+          adulte pour les moins de 12 ans. L'app dispose d'un mode "tuteur" permettant à
+          un parent de recevoir les alertes hypo/hyper d'un enfant.</p>
+        </details>
+
+        <details class="gp-faq-item">
+          <summary>Pile : remplacement, durée ?</summary>
+          <p>Pile lithium <strong>CR2032</strong> standard (disponible partout, ~2 €).
+          Autonomie typique : 1000 mesures soit ~1 an d'usage à 3 mesures/jour.
+          Indicateur de charge sur l'écran à partir de 10% restants.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- ============================================ -->
-  <!-- FINAL CTA                                    -->
+  <!-- 14. FINAL CTA                                -->
   <!-- ============================================ -->
   <section class="gp-final-cta">
     <div class="gp-final-cta-inner">
       <h2 class="gp-final-h2">Commandez aujourd'hui, mesurez après-demain.</h2>
       <p class="gp-final-sub">
-        Pack démarrage GlucoPulse à <strong>{productPrice} €</strong> (au lieu de {productOldPrice} €,
-        soit −{productDiscount}%). Livraison 48h offerte, garantie 2 ans, retour 30 jours.
+        Pack démarrage GlucoPulse à <strong>{productPrice} €</strong> au lieu de {productOldPrice} €
+        (−{productDiscount}%). Livraison 48h offerte, garantie 2 ans, retour 30 jours.
       </p>
       <button
         type="button"
@@ -602,7 +666,6 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     </div>
   </section>
 
-  <!-- Modal out-of-stock (rendu une seule fois, déclenché par data-checkout-trigger) -->
   <OutOfStockModal />
 </BaseLayout>
 
@@ -658,9 +721,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     margin: 0 0 1.25rem;
     color: #fff;
   }
-  .gp-h1-accent {
-    color: #6ee7a0;
-  }
+  .gp-h1-accent { color: #6ee7a0; }
   .gp-hero-sub {
     font-size: 1.1rem;
     line-height: 1.55;
@@ -683,17 +744,8 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     gap: 0.85rem;
     flex-wrap: wrap;
   }
-  .gp-price-old {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.45);
-    text-decoration: line-through;
-  }
-  .gp-price-new {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: #fff;
-    letter-spacing: -0.02em;
-  }
+  .gp-price-old { font-size: 1.15rem; color: rgba(255, 255, 255, 0.45); text-decoration: line-through; }
+  .gp-price-new { font-size: 2.5rem; font-weight: 900; color: #fff; letter-spacing: -0.02em; }
   .gp-price-discount {
     background: #16a34a;
     color: #fff;
@@ -709,12 +761,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.4;
   }
-  .gp-hero-ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
+  .gp-hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
   .gp-cta-primary {
     display: inline-flex;
     align-items: center;
@@ -759,71 +806,31 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     text-decoration: none;
   }
   .gp-trust-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.75);
+    display: flex; flex-wrap: wrap; gap: 1.25rem 1.5rem;
+    list-style: none; padding: 0; margin: 0;
+    font-size: 0.85rem; color: rgba(255, 255, 255, 0.75);
   }
   .gp-trust-row li { display: flex; align-items: center; gap: 0.4rem; }
   .gp-check { color: #6ee7a0; font-weight: 800; }
 
-  .gp-hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .gp-hero-visual {
-    position: relative;
-  }
-  .gp-mockup {
+  .gp-hero-visual { display: flex; align-items: center; justify-content: center; }
+  .gp-hero-image {
     display: block;
     width: 100%;
+    max-width: 420px;
     height: auto;
-  }
-  .gp-mockup-video {
-    max-width: 380px;
-    border-radius: 18px;
+    border-radius: 20px;
     box-shadow: 0 30px 70px rgba(10, 31, 26, 0.55), 0 0 0 1px rgba(255,255,255,0.04);
-    margin: 0 auto;
-    object-fit: cover;
-    background: #0a1f1a;
-    animation: gp-float 5s ease-in-out infinite;
-  }
-  /* SVG fallback : caché quand la vidéo est présente (la vidéo précède dans le DOM) */
-  .gp-mockup-video + .gp-mockup-svg { display: none; }
-  .gp-mockup-svg {
-    max-width: 540px;
-  }
-  @keyframes gp-float {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-10px); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .gp-mockup-video { animation: none; }
   }
 
   /* ============================================
      TRUST BAR
      ============================================ */
-  .gp-trust-bar {
-    background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-    padding: 1rem 1.5rem;
-  }
+  .gp-trust-bar { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 1rem 1.5rem; }
   .gp-trust-bar-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem 1.75rem;
-    font-size: 0.82rem;
-    color: #4b5563;
+    max-width: 1200px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    gap: 0.75rem 1.75rem; font-size: 0.82rem; color: #4b5563;
   }
   .gp-trust-bar-inner strong { color: #1a3c34; }
   .gp-sep { color: #d1d5db; }
@@ -831,22 +838,11 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   /* ============================================
      SECTIONS
      ============================================ */
-  .gp-section {
-    padding: 4rem 1.5rem;
-    background: #fff;
-  }
-  .gp-section-tinted {
-    background: linear-gradient(180deg, #f8faf9 0%, #fff 100%);
-  }
-  .gp-section-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .gp-section-narrow { max-width: 780px; }
-  .gp-section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
+  .gp-section { padding: 5rem 1.5rem; background: #fff; }
+  .gp-section-tinted { background: linear-gradient(180deg, #f8faf9 0%, #fff 100%); }
+  .gp-section-inner { max-width: 1200px; margin: 0 auto; }
+  .gp-section-narrow { max-width: 820px; }
+  .gp-section-header { text-align: center; margin-bottom: 3rem; }
   .gp-eyebrow {
     display: inline-block;
     color: #16a34a;
@@ -870,6 +866,58 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     line-height: 1.55;
     max-width: 620px;
     margin: 0 auto;
+  }
+
+  /* ============================================
+     PITCH (story)
+     ============================================ */
+  .gp-pitch-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .gp-pitch-text .gp-eyebrow { margin-bottom: 0.75rem; }
+  .gp-pitch-text .gp-h2 { text-align: left; }
+  .gp-pitch-lede {
+    color: #4b5563;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin: 0 0 1.25rem;
+  }
+  .gp-pitch-bullets {
+    list-style: none; padding: 0; margin: 1.5rem 0 0;
+    display: flex; flex-direction: column; gap: 0.65rem;
+  }
+  .gp-pitch-bullets li {
+    display: flex; align-items: flex-start; gap: 0.7rem;
+    color: #1a3c34; font-size: 1rem; font-weight: 500;
+  }
+  .gp-check-lg { color: #16a34a; font-weight: 800; flex-shrink: 0; font-size: 1.1rem; }
+  .gp-pitch-image {
+    width: 100%; height: auto; border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(10, 31, 26, 0.18);
+    max-width: 460px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ============================================
+     DEMO VIDEO
+     ============================================ */
+  .gp-demo-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(10, 31, 26, 0.35);
+    background: #0a1f1a;
+  }
+  .gp-demo-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #0a1f1a;
   }
 
   /* ============================================
@@ -898,38 +946,100 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     border-color: #bbf7d0;
   }
   .gp-feat-icon {
-    width: 48px;
-    height: 48px;
+    width: 48px; height: 48px;
     border-radius: 12px;
     background: #f0fdf4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     margin-bottom: 1rem;
   }
   .gp-feat-icon svg { width: 24px; height: 24px; }
   .gp-feat h3 {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #1a3c34;
-    margin: 0 0 0.5rem;
-    line-height: 1.3;
+    font-size: 1.1rem; font-weight: 800; color: #1a3c34;
+    margin: 0 0 0.5rem; line-height: 1.3;
   }
-  .gp-feat p {
-    margin: 0;
-    color: #4b5563;
-    font-size: 0.92rem;
-    line-height: 1.55;
+  .gp-feat p { margin: 0; color: #4b5563; font-size: 0.92rem; line-height: 1.55; }
+
+  /* ============================================
+     STEPS (Comment ça marche)
+     ============================================ */
+  .gp-steps {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .gp-step {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(26, 60, 52, 0.04);
+  }
+  .gp-step-num {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: #16a34a;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+  }
+  .gp-step h3 {
+    font-size: 1.15rem; font-weight: 800; color: #1a3c34;
+    margin: 0 0 0.6rem; line-height: 1.3;
+  }
+  .gp-step p { margin: 0; color: #4b5563; font-size: 0.95rem; line-height: 1.55; }
+  .gp-step-arrow {
+    color: #16a34a;
+    font-size: 1.8rem;
+    font-weight: 700;
+    user-select: none;
+  }
+
+  /* ============================================
+     COMPATIBILITÉ TRAITEMENTS
+     ============================================ */
+  .gp-compat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.85rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .gp-compat-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .gp-compat-item:hover {
+    border-color: #16a34a;
+    transform: translateY(-2px);
+  }
+  .gp-compat-item strong {
+    color: #1a3c34;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .gp-compat-item span {
+    color: #6b7280;
+    font-size: 0.78rem;
   }
 
   /* ============================================
      PACK CONTENTS
      ============================================ */
-  .gp-pack-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
+  .gp-pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   .gp-pack-item {
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -937,21 +1047,42 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     padding: 1.5rem 1.25rem;
     text-align: left;
   }
-  .gp-pack-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
+  .gp-pack-icon { font-size: 2rem; margin-bottom: 0.75rem; }
   .gp-pack-item h4 {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #1a3c34;
+    font-size: 1rem; font-weight: 800; color: #1a3c34;
     margin: 0 0 0.35rem;
   }
-  .gp-pack-item p {
+  .gp-pack-item p { margin: 0; color: #6b7280; font-size: 0.85rem; line-height: 1.45; }
+
+  /* ============================================
+     SPECS TABLE (dl)
+     ============================================ */
+  .gp-specs {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 0.5rem 0;
     margin: 0;
+  }
+  .gp-spec-row {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+    align-items: center;
+  }
+  .gp-spec-row:last-child { border-bottom: none; }
+  .gp-spec-row dt {
     color: #6b7280;
-    font-size: 0.85rem;
-    line-height: 1.45;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .gp-spec-row dd {
+    color: #1a3c34;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
   }
 
   /* ============================================
@@ -963,29 +1094,20 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     border: 1px solid #e5e7eb;
   }
   .gp-compare-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    min-width: 720px;
+    width: 100%; border-collapse: collapse; background: #fff; min-width: 720px;
   }
-  .gp-compare-table th,
-  .gp-compare-table td {
+  .gp-compare-table th, .gp-compare-table td {
     padding: 0.85rem 1rem;
     text-align: center;
     border-bottom: 1px solid #f3f4f6;
     font-size: 0.92rem;
   }
   .gp-compare-table th {
-    background: #f8faf9;
-    color: #1a3c34;
-    font-weight: 700;
-    font-size: 0.85rem;
+    background: #f8faf9; color: #1a3c34;
+    font-weight: 700; font-size: 0.85rem;
   }
-  .gp-compare-table th:first-child,
-  .gp-compare-table td:first-child {
-    text-align: left;
-    color: #4b5563;
-    font-weight: 500;
+  .gp-compare-table th:first-child, .gp-compare-table td:first-child {
+    text-align: left; color: #4b5563; font-weight: 500;
   }
   .gp-col-us {
     background: linear-gradient(180deg, #f0fdf4 0%, rgba(240, 253, 244, 0.4) 100%);
@@ -997,8 +1119,49 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   .gp-compare-table thead .gp-col-us {
     background: #16a34a;
     color: #fff !important;
-    border-radius: 8px 8px 0 0;
   }
+
+  /* ============================================
+     SÉCURITÉ
+     ============================================ */
+  .gp-security { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .gp-security-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.5rem 1.5rem;
+  }
+  .gp-security-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+  .gp-security-item h4 {
+    font-size: 1.05rem; font-weight: 800; color: #1a3c34;
+    margin: 0 0 0.4rem;
+  }
+  .gp-security-item p { margin: 0; color: #4b5563; font-size: 0.9rem; line-height: 1.55; }
+
+  /* ============================================
+     GARANTIE
+     ============================================ */
+  .gp-guarantee { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .gp-guarantee-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+  }
+  .gp-guarantee-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #16a34a;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+  .gp-guarantee-item h4 {
+    font-size: 1.05rem; font-weight: 800; color: #1a3c34;
+    margin: 0 0 0.5rem;
+  }
+  .gp-guarantee-item p { margin: 0; color: #4b5563; font-size: 0.9rem; line-height: 1.55; }
 
   /* ============================================
      FAQ
@@ -1031,9 +1194,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     font-weight: 400;
     transition: transform 0.2s;
   }
-  .gp-faq-item[open] summary::after {
-    transform: translateY(-50%) rotate(45deg);
-  }
+  .gp-faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
   .gp-faq-item p {
     padding: 0 1.25rem 1.1rem;
     margin: 0;
@@ -1048,13 +1209,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   .gp-final-cta {
     background: linear-gradient(140deg, #0f2e27 0%, #1a3c34 100%);
     color: #fff;
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
     text-align: center;
   }
-  .gp-final-cta-inner {
-    max-width: 720px;
-    margin: 0 auto;
-  }
+  .gp-final-cta-inner { max-width: 720px; margin: 0 auto; }
   .gp-final-h2 {
     font-size: clamp(1.6rem, 3.5vw, 2.4rem);
     font-weight: 900;
@@ -1069,10 +1227,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     margin: 0 0 2rem;
     line-height: 1.55;
   }
-  .gp-cta-large {
-    padding: 1.15rem 2.25rem;
-    font-size: 1.1rem;
-  }
+  .gp-cta-large { padding: 1.15rem 2.25rem; font-size: 1.1rem; }
   .gp-final-meta {
     margin: 1.25rem 0 0;
     font-size: 0.85rem;
@@ -1082,21 +1237,29 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   /* ============================================
      RESPONSIVE
      ============================================ */
-  @media (max-width: 900px) {
+  @media (max-width: 960px) {
     .gp-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .gp-hero-visual { order: -1; max-width: 380px; margin: 0 auto; }
+    .gp-hero-visual { order: -1; max-width: 360px; margin: 0 auto; }
+    .gp-pitch-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .gp-pitch-text .gp-h2 { text-align: center; }
     .gp-features-grid { grid-template-columns: 1fr 1fr; }
     .gp-feat-large { grid-column: span 2; }
     .gp-pack-grid { grid-template-columns: 1fr 1fr; }
+    .gp-compat-grid { grid-template-columns: repeat(2, 1fr); }
+    .gp-steps { grid-template-columns: 1fr; gap: 1rem; }
+    .gp-step-arrow { transform: rotate(90deg); justify-self: center; }
+    .gp-security, .gp-guarantee { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
     .gp-hero { padding: 3rem 1rem 3.5rem; }
-    .gp-section { padding: 3rem 1rem; }
+    .gp-section { padding: 3.5rem 1rem; }
     .gp-features-grid { grid-template-columns: 1fr; }
     .gp-feat-large { grid-column: span 1; }
-    .gp-pack-grid { grid-template-columns: 1fr; }
+    .gp-pack-grid, .gp-compat-grid { grid-template-columns: 1fr; }
     .gp-hero-ctas { flex-direction: column; }
     .gp-cta-primary, .gp-cta-secondary { width: 100%; justify-content: center; }
     .gp-trust-row { gap: 0.5rem 1.25rem; font-size: 0.78rem; }
+    .gp-spec-row { grid-template-columns: 1fr; gap: 0.2rem; padding: 0.85rem 1.25rem; }
+    .gp-spec-row dt { font-size: 0.85rem; }
   }
 </style>
