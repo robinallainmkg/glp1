@@ -17,15 +17,16 @@ import { supabaseConfig } from '../lib/supabase.js';
     <div class="oos-modal-state oos-state-form" data-oos-state="form">
       <div class="oos-modal-icon">
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
       </div>
-      <h2 id="oos-title" class="oos-modal-headline">Pr&eacute;-r&eacute;servez votre place</h2>
+      <h2 id="oos-title" class="oos-modal-headline">Stock &eacute;puis&eacute;</h2>
       <p class="oos-modal-lede">
-        Le lancement public de GlucoPulse est pr&eacute;vu <strong>S2 2026</strong>.
-        Laissez votre email pour &ecirc;tre pr&eacute;venu(e) en avant-premi&egrave;re et b&eacute;n&eacute;ficier du <strong>tarif d'acc&egrave;s anticip&eacute;</strong> garanti.
-        Aucun paiement aujourd'hui.
+        Le pack d&eacute;marrage est temporairement <strong>en rupture de stock</strong>.
+        Laissez votre email et nous vous pr&eacute;viendrons en premier d&egrave;s la r&eacute;assort
+        (<strong>2 &agrave; 3 semaines</strong>). Aucun paiement aujourd'hui.
       </p>
 
       <form class="oos-modal-form" id="oos-form" novalidate>
@@ -44,7 +45,7 @@ import { supabaseConfig } from '../lib/supabase.js';
           <span>J'accepte d'&ecirc;tre pr&eacute;venu(e) par email du r&eacute;assort. Pas de spam, d&eacute;sabonnement &agrave; tout moment.</span>
         </label>
         <button type="submit" class="oos-modal-submit" id="oos-submit">
-          <span class="oos-submit-label">R&eacute;server ma place &mdash; gratuit</span>
+          <span class="oos-submit-label">Me pr&eacute;venir d&egrave;s la r&eacute;assort</span>
           <span class="oos-submit-loader" hidden>&hellip;</span>
         </button>
         <p class="oos-modal-error" id="oos-error" hidden></p>
@@ -62,8 +63,8 @@ import { supabaseConfig } from '../lib/supabase.js';
       </div>
       <h2 class="oos-modal-headline">C'est not&eacute;&nbsp;!</h2>
       <p class="oos-modal-lede">
-        Vous serez pr&eacute;venu(e) <strong>en avant-premi&egrave;re</strong> par email d&egrave;s le lancement de GlucoPulse, avec votre tarif anticip&eacute; garanti.
-        Aucun engagement, d&eacute;sinscription &agrave; tout moment.
+        Vous serez pr&eacute;venu(e) <strong>en premier</strong> par email d&egrave;s la r&eacute;assort.
+        D&eacute;sinscription &agrave; tout moment, aucune autre communication.
       </p>
       <button class="oos-modal-submit" data-oos-close>Fermer</button>
     </div>

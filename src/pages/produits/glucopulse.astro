@@ -10,44 +10,35 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
 ---
 
 <BaseLayout
-  title="Notre sélection : GlucoPulse, glucomètre connecté pour GLP-1 | GLP-1 France"
-  description="Après comparatif des principaux lecteurs de glycémie, voici celui que nous recommandons aux patients sous GLP-1. Pré-lancement S2 2026, accès anticipé sur inscription."
-  keywords="glucomètre connecté GLP-1, lecteur glycémie patients diabète, sélection GLP1 France, GlucoPulse"
+  title="GlucoPulse — Glucomètre connecté Bluetooth, pack démarrage 59€"
+  description="Lecteur de glycémie GlucoPulse : résultat 5s, sync Bluetooth iOS/Android, mémoire 500 mesures, précision ±5%. Pack démarrage 59€ (au lieu de 89€), livraison 48h offerte, garantie 2 ans."
+  keywords="glucomètre connecté, lecteur glycémie Bluetooth, glycémie smartphone, GlucoPulse"
 >
-  <!-- Bandeau "early access" — assume pleinement le statut pré-lancement -->
-  <div class="gp-banner">
-    <div class="gp-banner-inner">
-      <span class="gp-banner-dot"></span>
-      <span><strong>Sélection GLP1 France</strong> · Pré-lancement S2 2026 · accès anticipé sur inscription</span>
-    </div>
-  </div>
-
   <!-- ============================================ -->
   <!-- HERO                                         -->
   <!-- ============================================ -->
   <section class="gp-hero">
     <div class="gp-hero-inner">
       <div class="gp-hero-text">
-        <span class="gp-pill">Notre recommandation après comparatif</span>
+        <span class="gp-pill">Bluetooth · iOS &amp; Android · CE m&eacute;dical</span>
         <h1 class="gp-h1">
-          Le glucomètre connecté<br>
-          <span class="gp-h1-accent">qu'on recommande aux patients sous GLP-1.</span>
+          GlucoPulse.<br>
+          <span class="gp-h1-accent">Votre glyc&eacute;mie, dans votre poche.</span>
         </h1>
         <p class="gp-hero-sub">
-          Après avoir testé les principaux lecteurs (Sinocare, Accu-Chek, FreeStyle),
-          on a conçu <strong>GlucoPulse</strong> pour le profil que vous nous décrivez :
-          quelqu'un sous Ozempic, Mounjaro ou Wegovy qui veut suivre sa glycémie
-          sans Excel. Sortie prévue S2 2026.
+          R&eacute;sultat en <strong>5 secondes</strong>, synchronisation Bluetooth instantan&eacute;e
+          avec l'app GlucoPulse (iOS &amp; Android). M&eacute;moire 500 mesures, courbes
+          7/14/30 jours, export PDF pour votre m&eacute;decin.
         </p>
 
         <div class="gp-hero-pricing">
           <div class="gp-price-block">
             <span class="gp-price-old">{productOldPrice}&nbsp;€</span>
             <span class="gp-price-new">{productPrice}&nbsp;€</span>
-            <span class="gp-price-discount">Tarif accès anticipé</span>
+            <span class="gp-price-discount">−{productDiscount}%</span>
           </div>
           <p class="gp-price-meta">
-            Pack démarrage : appareil + 50 bandelettes + autopiqueur + étui · Livraison offerte
+            Pack d&eacute;marrage : appareil + 50 bandelettes + 50 lancettes + autopiqueur + &eacute;tui
           </p>
         </div>
 
@@ -60,156 +51,197 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
             data-variant="starter-pack"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01" transform="translate(-3 0)"/>
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
             </svg>
-            Pré-réserver ma place
+            Ajouter au panier
           </button>
-          <a href="#features" class="gp-cta-secondary">Voir les fonctionnalités ↓</a>
+          <a href="#features" class="gp-cta-secondary">Voir les sp&eacute;cifications ↓</a>
         </div>
 
         <ul class="gp-trust-row">
-          <li><span class="gp-check">✓</span> Aucun engagement, aucun paiement</li>
-          <li><span class="gp-check">✓</span> Tarif anticipé garanti</li>
-          <li><span class="gp-check">✓</span> Marquage CE médical</li>
-          <li><span class="gp-check">✓</span> Notification dès la dispo</li>
+          <li><span class="gp-check">✓</span> Livraison 48h offerte</li>
+          <li><span class="gp-check">✓</span> Garantie constructeur 2 ans</li>
+          <li><span class="gp-check">✓</span> Pr&eacute;cision &plusmn;5% (ISO 15197:2013)</li>
+          <li><span class="gp-check">✓</span> Retour 30 jours</li>
         </ul>
       </div>
 
       <div class="gp-hero-visual">
-        <!-- Mockup device + smartphone (SVG inline, scalable, zero load time) -->
-        <svg class="gp-mockup" viewBox="0 0 540 480" xmlns="http://www.w3.org/2000/svg" aria-label="GlucoPulse glucomètre connecté avec son application smartphone">
+        <!-- Mockup hero : glucomètre en front, smartphone derrière (overlap), traitement éclairage premium -->
+        <svg class="gp-mockup" viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" aria-label="GlucoPulse, lecteur de glycémie connecté Bluetooth avec son application smartphone">
           <defs>
-            <linearGradient id="gp-bg-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#6ee7a0" stop-opacity="0.4"/>
+            <!-- Plastique blanc avec dégradé subtil top→bottom -->
+            <linearGradient id="g-body" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="50%" stop-color="#f1f5f9"/>
+              <stop offset="100%" stop-color="#cbd5e1"/>
+            </linearGradient>
+            <!-- Reflet glossy sur le corps -->
+            <linearGradient id="g-gloss" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.65"/>
+              <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+            <!-- Écran LCD vert sombre avec léger dégradé -->
+            <linearGradient id="g-screen" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#0a1f1a"/>
+              <stop offset="50%" stop-color="#102a23"/>
+              <stop offset="100%" stop-color="#0a1f1a"/>
+            </linearGradient>
+            <!-- Reflet sur l'écran -->
+            <linearGradient id="g-screen-reflect" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6ee7a0" stop-opacity="0.18"/>
+              <stop offset="40%" stop-color="#6ee7a0" stop-opacity="0"/>
+            </linearGradient>
+            <!-- Smartphone body : aluminium dark -->
+            <linearGradient id="g-phone-frame" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#3f3f46"/>
+              <stop offset="100%" stop-color="#18181b"/>
+            </linearGradient>
+            <!-- App graph fill -->
+            <linearGradient id="g-graph" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#16a34a" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#16a34a" stop-opacity="0"/>
+            </linearGradient>
+            <!-- Bouton power vert glossy -->
+            <radialGradient id="g-button-power" cx="35%" cy="30%" r="80%">
+              <stop offset="0%" stop-color="#86efac"/>
+              <stop offset="60%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#15803d"/>
+            </radialGradient>
+            <!-- Background ambient -->
+            <radialGradient id="g-ambient" cx="55%" cy="40%" r="65%">
+              <stop offset="0%" stop-color="#6ee7a0" stop-opacity="0.22"/>
               <stop offset="100%" stop-color="#6ee7a0" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="gp-device-body" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#fafafa"/>
-              <stop offset="100%" stop-color="#e5e7eb"/>
-            </linearGradient>
-            <linearGradient id="gp-screen" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#0f2e27"/>
-              <stop offset="100%" stop-color="#1a3c34"/>
-            </linearGradient>
-            <linearGradient id="gp-phone-body" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#1f2937"/>
-              <stop offset="100%" stop-color="#111827"/>
-            </linearGradient>
-            <linearGradient id="gp-graph" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#16a34a" stop-opacity="0.5"/>
-              <stop offset="100%" stop-color="#16a34a" stop-opacity="0.05"/>
-            </linearGradient>
-            <filter id="gp-shadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
-              <feOffset dx="0" dy="14" result="off"/>
-              <feFlood flood-color="#0f2e27" flood-opacity="0.32"/>
+            </radialGradient>
+            <!-- Ombre douce profonde -->
+            <filter id="f-shadow-deep" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="14"/>
+              <feOffset dx="0" dy="22" result="off"/>
+              <feFlood flood-color="#0a1f1a" flood-opacity="0.42"/>
+              <feComposite in2="off" operator="in"/>
+              <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="f-shadow-soft" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+              <feOffset dx="0" dy="10" result="off"/>
+              <feFlood flood-color="#0a1f1a" flood-opacity="0.28"/>
               <feComposite in2="off" operator="in"/>
               <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
           </defs>
 
-          <!-- Background glow -->
-          <ellipse cx="270" cy="240" rx="260" ry="220" fill="url(#gp-bg-glow)"/>
+          <!-- Ambient glow background -->
+          <circle cx="320" cy="240" r="280" fill="url(#g-ambient)"/>
 
-          <!-- ============= SMARTPHONE (back-left) ============= -->
-          <g transform="translate(40 40) rotate(-6 130 220)" filter="url(#gp-shadow)">
-            <!-- Phone body -->
-            <rect x="0" y="0" width="260" height="440" rx="34" fill="url(#gp-phone-body)" stroke="#0b0f17" stroke-width="2"/>
-            <!-- Screen -->
-            <rect x="10" y="10" width="240" height="420" rx="26" fill="#fafafa"/>
-            <!-- Notch -->
-            <rect x="100" y="20" width="60" height="14" rx="7" fill="#111827"/>
+          <!-- ============= SMARTPHONE (back-left, smaller, partial visible) ============= -->
+          <g transform="translate(20 80) rotate(-8 110 200)" filter="url(#f-shadow-soft)">
+            <!-- Phone aluminium frame -->
+            <rect x="0" y="0" width="220" height="400" rx="32" fill="url(#g-phone-frame)"/>
+            <!-- Screen black -->
+            <rect x="6" y="6" width="208" height="388" rx="26" fill="#000"/>
+            <!-- App background white -->
+            <rect x="10" y="10" width="200" height="380" rx="24" fill="#fafafa"/>
+            <!-- Dynamic island -->
+            <rect x="78" y="22" width="64" height="20" rx="10" fill="#000"/>
+
             <!-- Status bar -->
-            <text x="22" y="56" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#1f2937">9:41</text>
-            <g transform="translate(210 50)" fill="#1f2937">
+            <text x="22" y="62" font-family="-apple-system, SF Pro, sans-serif" font-size="11" font-weight="600" fill="#1f2937">9:41</text>
+            <g transform="translate(178 56)" fill="#1f2937">
               <rect x="0" y="-8" width="3" height="8" rx="0.5"/>
               <rect x="5" y="-6" width="3" height="6" rx="0.5"/>
               <rect x="10" y="-4" width="3" height="4" rx="0.5"/>
-              <rect x="20" y="-9" width="22" height="11" rx="2" fill="none" stroke="#1f2937" stroke-width="1"/>
-              <rect x="22" y="-7" width="14" height="7" rx="1"/>
+              <rect x="22" y="-9" width="20" height="10" rx="2" fill="none" stroke="#1f2937" stroke-width="1"/>
+              <rect x="24" y="-7" width="13" height="6" rx="1"/>
             </g>
 
             <!-- App header -->
-            <text x="22" y="92" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#1a3c34" letter-spacing="-0.3">GlucoPulse</text>
-            <text x="22" y="110" font-family="-apple-system, sans-serif" font-size="9" font-weight="500" fill="#6b7280" letter-spacing="0.5">AUJOURD'HUI</text>
+            <text x="22" y="100" font-family="-apple-system, SF Pro, sans-serif" font-size="15" font-weight="800" fill="#0a1f1a" letter-spacing="-0.3">GlucoPulse</text>
 
-            <!-- Big number card -->
-            <rect x="20" y="124" width="220" height="120" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
-            <text x="30" y="148" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#166534" letter-spacing="0.5">DERNIÈRE MESURE</text>
-            <text x="30" y="200" font-family="-apple-system, sans-serif" font-size="56" font-weight="900" fill="#166534" letter-spacing="-2">5.6</text>
-            <text x="156" y="200" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#166534">mmol/L</text>
-            <g transform="translate(30 215)">
-              <circle cx="6" cy="6" r="6" fill="#16a34a"/>
-              <text x="18" y="10" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#15803d">Dans la cible · il y a 12 min</text>
-            </g>
-
-            <!-- Graph -->
-            <text x="22" y="272" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#6b7280" letter-spacing="0.5">7 DERNIERS JOURS</text>
-            <rect x="20" y="282" width="220" height="100" rx="10" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
-            <!-- Graph fill -->
-            <path d="M30 360 L 60 340 L 90 320 L 120 348 L 150 308 L 180 332 L 210 318 L 230 322 L 230 374 L 30 374 Z" fill="url(#gp-graph)"/>
-            <!-- Graph line -->
-            <path d="M30 360 L 60 340 L 90 320 L 120 348 L 150 308 L 180 332 L 210 318 L 230 322" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Data points -->
-            <g fill="#16a34a">
-              <circle cx="30" cy="360" r="2.4"/>
-              <circle cx="60" cy="340" r="2.4"/>
-              <circle cx="90" cy="320" r="2.4"/>
-              <circle cx="120" cy="348" r="2.4"/>
-              <circle cx="150" cy="308" r="2.4" stroke="#fff" stroke-width="1.5"/>
-              <circle cx="180" cy="332" r="2.4"/>
-              <circle cx="210" cy="318" r="2.4"/>
-              <circle cx="230" cy="322" r="2.4"/>
-            </g>
-            <!-- Axis labels -->
-            <g font-family="-apple-system, sans-serif" font-size="7" fill="#9ca3af">
-              <text x="28" y="392">L</text><text x="58" y="392">M</text><text x="88" y="392">M</text><text x="118" y="392">J</text><text x="148" y="392">V</text><text x="178" y="392">S</text><text x="208" y="392">D</text>
+            <!-- Last measure card -->
+            <rect x="18" y="118" width="184" height="100" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+            <text x="28" y="138" font-family="-apple-system, SF Pro, sans-serif" font-size="8" font-weight="700" fill="#166534" letter-spacing="0.6">DERNIÈRE MESURE</text>
+            <text x="28" y="184" font-family="-apple-system, SF Pro, sans-serif" font-size="44" font-weight="900" fill="#15803d" letter-spacing="-1.5">5.6</text>
+            <text x="120" y="184" font-family="-apple-system, SF Pro, sans-serif" font-size="13" font-weight="600" fill="#15803d">mmol/L</text>
+            <g transform="translate(28 196)">
+              <circle cx="5" cy="5" r="5" fill="#16a34a"/>
+              <text x="14" y="9" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="600" fill="#15803d">Dans la cible · il y a 12 min</text>
             </g>
 
-            <!-- Bottom: tabs -->
-            <g transform="translate(20 400)">
-              <rect x="0" y="0" width="220" height="28" rx="10" fill="#f3f4f6"/>
-              <text x="22" y="18" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#16a34a">Mesures</text>
-              <text x="92" y="18" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#6b7280">Repas</text>
-              <text x="142" y="18" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#6b7280">Médecin</text>
+            <!-- Graph card -->
+            <rect x="18" y="232" width="184" height="92" rx="12" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+            <text x="28" y="252" font-family="-apple-system, SF Pro, sans-serif" font-size="8" font-weight="700" fill="#6b7280" letter-spacing="0.6">7 DERNIERS JOURS</text>
+            <path d="M28 305 L 52 290 L 76 274 L 100 296 L 124 264 L 148 282 L 172 270 L 192 274 L 192 318 L 28 318 Z" fill="url(#g-graph)"/>
+            <path d="M28 305 L 52 290 L 76 274 L 100 296 L 124 264 L 148 282 L 172 270 L 192 274" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#fff" stroke="#16a34a" stroke-width="1.5">
+              <circle cx="124" cy="264" r="3"/>
             </g>
+
+            <!-- Bottom tabs -->
+            <rect x="18" y="338" width="184" height="32" rx="10" fill="#f3f4f6"/>
+            <rect x="22" y="342" width="58" height="24" rx="8" fill="#fff"/>
+            <text x="51" y="358" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="700" fill="#16a34a" text-anchor="middle">Mesures</text>
+            <text x="115" y="358" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6b7280" text-anchor="middle">Repas</text>
+            <text x="170" y="358" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6b7280" text-anchor="middle">Médecin</text>
           </g>
 
-          <!-- ============= GLUCOMETER (front-right) ============= -->
-          <g transform="translate(265 130) rotate(8 110 160)" filter="url(#gp-shadow)">
-            <!-- Body -->
-            <rect x="0" y="0" width="220" height="320" rx="32" fill="url(#gp-device-body)" stroke="#cbd5e1" stroke-width="1.5"/>
-            <!-- Top accent strip -->
-            <rect x="0" y="0" width="220" height="8" rx="32" fill="#16a34a"/>
-            <rect x="0" y="3" width="220" height="6" fill="#16a34a"/>
+          <!-- ============= GLUCOMETER (front, hero piece) ============= -->
+          <g transform="translate(225 70) rotate(6 130 200)" filter="url(#f-shadow-deep)">
+            <!-- Main body : white plastic with subtle gradient -->
+            <rect x="0" y="0" width="280" height="400" rx="40" fill="url(#g-body)"/>
+            <!-- Top accent : green strip = brand identity -->
+            <rect x="0" y="0" width="280" height="14" rx="40" fill="#16a34a"/>
+            <rect x="0" y="6" width="280" height="8" fill="#16a34a"/>
+            <!-- Subtle highlight on top edge -->
+            <rect x="20" y="14" width="240" height="1" fill="#fff" opacity="0.7"/>
 
             <!-- Brand -->
-            <text x="20" y="36" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#1a3c34" letter-spacing="0.5">GlucoPulse</text>
-            <!-- Bluetooth icon -->
-            <g transform="translate(190 24)" stroke="#16a34a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M0 0 L 8 8 L 4 12 L 4 -4 L 8 0 L 0 8"/>
+            <text x="28" y="48" font-family="-apple-system, SF Pro, sans-serif" font-size="13" font-weight="800" fill="#0a1f1a" letter-spacing="0.3">GlucoPulse</text>
+            <text x="28" y="62" font-family="-apple-system, SF Pro, sans-serif" font-size="8" font-weight="500" fill="#6b7280" letter-spacing="1">CONNECTED · ISO 15197</text>
+            <!-- Bluetooth indicator -->
+            <g transform="translate(244 42)">
+              <circle cx="0" cy="0" r="11" fill="#dcfce7"/>
+              <path d="M-3 -5 L 3 1 L -1 4 L -1 -4 L 3 -1 L -3 5" stroke="#16a34a" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
 
-            <!-- Big screen -->
-            <rect x="22" y="58" width="176" height="120" rx="10" fill="url(#gp-screen)"/>
-            <!-- Screen content : value -->
-            <text x="110" y="120" font-family="-apple-system, sans-serif" font-size="44" font-weight="900" fill="#6ee7a0" text-anchor="middle" letter-spacing="-1">5.6</text>
-            <text x="110" y="142" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#bbf7d0" text-anchor="middle">mmol/L</text>
-            <text x="110" y="160" font-family="-apple-system, sans-serif" font-size="8" font-weight="500" fill="#6ee7a0" opacity="0.7" text-anchor="middle">DANS LA CIBLE  ·  09:41</text>
+            <!-- BIG SCREEN — réaliste avec bordure intérieure + reflet -->
+            <rect x="24" y="80" width="232" height="148" rx="14" fill="#1f2937"/>
+            <rect x="28" y="84" width="224" height="140" rx="11" fill="url(#g-screen)"/>
+            <!-- Subtle screen reflection (top-left diagonal) -->
+            <rect x="28" y="84" width="224" height="140" rx="11" fill="url(#g-screen-reflect)"/>
+            <!-- Status icons in screen top -->
+            <g transform="translate(40 100)" fill="#6ee7a0" opacity="0.55">
+              <rect x="0" y="0" width="2" height="6" rx="0.5"/>
+              <rect x="3" y="-1" width="2" height="7" rx="0.5"/>
+              <rect x="6" y="-2" width="2" height="8" rx="0.5"/>
+              <rect x="9" y="-3" width="2" height="9" rx="0.5"/>
+            </g>
+            <text x="240" y="106" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6ee7a0" opacity="0.55" text-anchor="end">09:41 · BLE</text>
+            <!-- Big value -->
+            <text x="140" y="170" font-family="-apple-system, SF Pro, sans-serif" font-size="58" font-weight="900" fill="#86efac" text-anchor="middle" letter-spacing="-2">5.6</text>
+            <text x="140" y="194" font-family="-apple-system, SF Pro, sans-serif" font-size="14" font-weight="600" fill="#bbf7d0" text-anchor="middle">mmol/L · dans la cible</text>
+            <text x="140" y="214" font-family="-apple-system, SF Pro, sans-serif" font-size="9" font-weight="500" fill="#6ee7a0" opacity="0.65" text-anchor="middle">SYNCHRONISÉ AVEC L'APP</text>
 
-            <!-- Buttons -->
-            <circle cx="60" cy="220" r="22" fill="#fafafa" stroke="#cbd5e1" stroke-width="1"/>
-            <circle cx="60" cy="220" r="14" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
-            <circle cx="160" cy="220" r="22" fill="#fafafa" stroke="#cbd5e1" stroke-width="1"/>
-            <text x="160" y="225" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#6b7280" text-anchor="middle">M</text>
+            <!-- Buttons row : power (gloss green) + memory (brushed) -->
+            <g transform="translate(72 280)" filter="url(#f-shadow-soft)">
+              <circle cx="0" cy="0" r="26" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+              <circle cx="0" cy="0" r="20" fill="url(#g-button-power)"/>
+              <circle cx="-5" cy="-6" r="6" fill="#fff" opacity="0.4"/>
+              <path d="M-6 -2 L -6 4 M 0 -6 L 0 6 M 6 -2 L 6 4" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.85" transform="scale(0.7)"/>
+            </g>
+            <g transform="translate(208 280)">
+              <circle cx="0" cy="0" r="26" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+              <circle cx="0" cy="0" r="20" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+              <text x="0" y="6" font-family="-apple-system, SF Pro, sans-serif" font-size="14" font-weight="800" fill="#475569" text-anchor="middle">M</text>
+            </g>
 
-            <!-- Test strip slot -->
-            <rect x="84" y="270" width="52" height="42" rx="6" fill="#1a3c34"/>
-            <rect x="92" y="278" width="36" height="6" rx="2" fill="#fbbf24"/>
-            <rect x="92" y="288" width="36" height="6" rx="2" fill="#fbbf24" opacity="0.6"/>
+            <!-- Test strip slot (réaliste avec bandelette qui dépasse) -->
+            <rect x="118" y="332" width="44" height="50" rx="4" fill="#0a1f1a"/>
+            <rect x="124" y="338" width="32" height="4" rx="1" fill="#fbbf24"/>
+            <rect x="124" y="344" width="32" height="4" rx="1" fill="#fbbf24" opacity="0.6"/>
+            <text x="140" y="395" font-family="-apple-system, SF Pro, sans-serif" font-size="6" font-weight="500" fill="#9ca3af" text-anchor="middle" letter-spacing="0.5">TEST STRIP PORT</text>
 
-            <!-- Bottom shadow line -->
-            <rect x="20" y="300" width="180" height="1" fill="#cbd5e1" opacity="0.5"/>
+            <!-- Glossy highlight overlay (top-left soft) -->
+            <rect x="0" y="14" width="280" height="386" rx="40" fill="url(#g-gloss)" pointer-events="none"/>
           </g>
         </svg>
       </div>
@@ -223,11 +255,11 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     <div class="gp-trust-bar-inner">
       <span><strong>CE médical</strong> · ISO 15197:2013</span>
       <span class="gp-sep">·</span>
-      <span><strong>RGPD</strong> · données santé chiffrées</span>
+      <span><strong>RGPD</strong> · hébergement UE</span>
       <span class="gp-sep">·</span>
-      <span><strong>Conçu en UE</strong> · made in France</span>
+      <span><strong>Garantie 2 ans</strong></span>
       <span class="gp-sep">·</span>
-      <span><strong>Garantie 2 ans</strong> · retour 30 jours</span>
+      <span><strong>Retour 30 jours</strong></span>
     </div>
   </section>
 
@@ -237,11 +269,11 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   <section id="features" class="gp-section">
     <div class="gp-section-inner">
       <header class="gp-section-header">
-        <span class="gp-eyebrow">Fonctionnalités</span>
-        <h2 class="gp-h2">Tout ce qu'un patient sous GLP-1 attend d'un glucomètre.</h2>
+        <span class="gp-eyebrow">Spécifications</span>
+        <h2 class="gp-h2">Ce que GlucoPulse fait, concrètement.</h2>
         <p class="gp-section-lede">
-          Simple à utiliser, précis, et qui parle à votre smartphone. Pas besoin
-          d'être ingénieur pour suivre votre glycémie au quotidien.
+          Six fonctions qui changent le suivi quotidien sous Ozempic, Mounjaro,
+          Wegovy, Trulicity, Victoza ou Rybelsus.
         </p>
       </header>
 
@@ -319,8 +351,8 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   <section class="gp-section gp-section-tinted">
     <div class="gp-section-inner">
       <header class="gp-section-header">
-        <span class="gp-eyebrow">Contenu du pack</span>
-        <h2 class="gp-h2">Ce qu'on inclut dans le pack démarrage.</h2>
+        <span class="gp-eyebrow">Contenu du pack démarrage</span>
+        <h2 class="gp-h2">Tout est inclus, prêt à mesurer dès l'ouverture.</h2>
       </header>
 
       <div class="gp-pack-grid">
@@ -365,7 +397,7 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     <div class="gp-section-inner">
       <header class="gp-section-header">
         <span class="gp-eyebrow">Comparatif</span>
-        <h2 class="gp-h2">Comment GlucoPulse se compare aux autres.</h2>
+        <h2 class="gp-h2">GlucoPulse vs les autres lecteurs du marché.</h2>
       </header>
 
       <div class="gp-compare-wrap">
@@ -447,12 +479,11 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
 
       <div class="gp-faq">
         <details class="gp-faq-item">
-          <summary>Quand le produit sera-t-il disponible ?</summary>
+          <summary>Quel délai de livraison ?</summary>
           <p>
-            Le lancement public est prévu <strong>S2 2026</strong>. La phase
-            d'accès anticipé permet aux premiers inscrits de recevoir leur appareil
-            au tarif garanti de <strong>{productPrice} €</strong> (vs {productOldPrice} € en prix public).
-            Pré-réservez votre place — aucun paiement aujourd'hui, juste votre email.
+            Livraison <strong>48h ouvrées</strong> en France métropolitaine, offerte à partir
+            de {productPrice} €. Suivi Colissimo, signature non requise. DOM-TOM
+            sous 5-8 jours, frais de port 9,90 €.
           </p>
         </details>
 
@@ -509,10 +540,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   <!-- ============================================ -->
   <section class="gp-final-cta">
     <div class="gp-final-cta-inner">
-      <h2 class="gp-final-h2">Soyez parmi les premiers à le recevoir.</h2>
+      <h2 class="gp-final-h2">Commandez aujourd'hui, mesurez après-demain.</h2>
       <p class="gp-final-sub">
-        Tarif accès anticipé garanti à <strong>{productPrice} €</strong> (vs {productOldPrice} € en prix public).
-        Aucun engagement, aucun paiement aujourd'hui — juste votre email pour être prévenu(e).
+        Pack démarrage GlucoPulse à <strong>{productPrice} €</strong> (au lieu de {productOldPrice} €,
+        soit −{productDiscount}%). Livraison 48h offerte, garantie 2 ans, retour 30 jours.
       </p>
       <button
         type="button"
@@ -521,10 +552,10 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
         data-product={productId}
         data-variant="starter-pack"
       >
-        Pré-réserver ma place
+        Ajouter au panier · {productPrice} €
       </button>
       <p class="gp-final-meta">
-        ✓ Aucun paiement &nbsp; ✓ Tarif {productPrice} € garanti &nbsp; ✓ Désinscription à tout moment
+        ✓ Marquage CE médical &nbsp; ✓ Précision ±5% (ISO 15197:2013) &nbsp; ✓ Support FR
       </p>
     </div>
   </section>
@@ -534,36 +565,6 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
 </BaseLayout>
 
 <style>
-  /* ============================================
-     BANNER (early access)
-     ============================================ */
-  .gp-banner {
-    background: linear-gradient(90deg, #14532d 0%, #15803d 100%);
-    color: #ecfdf5;
-    padding: 0.6rem 1rem;
-    text-align: center;
-    font-size: 0.82rem;
-    font-weight: 500;
-  }
-  .gp-banner-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .gp-banner-inner strong { color: #fff; font-weight: 700; }
-  .gp-banner-dot {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    background: #6ee7a0;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(110, 231, 160, 0.25);
-  }
-
   /* ============================================
      HERO
      ============================================ */
