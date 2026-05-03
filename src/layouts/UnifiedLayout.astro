@@ -7,7 +7,6 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
-import TempTest from '../components/temp-test.astro';
 
 export interface Props {
   title: string;
@@ -186,7 +185,6 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
           {availableProducts && (
             <AdaptiveAffiliateDisplay affiliateProducts={availableProducts} config={affiliateConfig} />
           )}
-          <TempTest />
         </aside>
       </div>
     ) : (
