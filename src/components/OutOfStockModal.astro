@@ -1,0 +1,384 @@
+---
+// Modal "out-of-stock" — capture email d'intérêt sur les pages produit (fake door testing).
+// Déclenché par n'importe quel élément avec [data-checkout-trigger] (peut passer
+// product-id et variant via data-product et data-variant attributes).
+//
+// Le modal écrit dans Supabase product_interest, puis affiche un message de confirmation.
+// Loadé une seule fois par page (idempotent — l'init script vérifie un flag global).
+
+import { supabaseConfig } from '../lib/supabase.js';
+---
+
+<div id="oos-modal" class="oos-modal" hidden>
+  <div class="oos-modal-backdrop" data-oos-close></div>
+  <div class="oos-modal-card" role="dialog" aria-modal="true" aria-labelledby="oos-title">
+    <button class="oos-modal-close" data-oos-close aria-label="Fermer">&times;</button>
+
+    <div class="oos-modal-state oos-state-form" data-oos-state="form">
+      <div class="oos-modal-icon">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+        </svg>
+      </div>
+      <h2 id="oos-title" class="oos-modal-headline">Bient&ocirc;t en stock</h2>
+      <p class="oos-modal-lede">
+        Le pack d&eacute;marrage GlucoPulse a &eacute;t&eacute; lanc&eacute; en pr&eacute;commande limit&eacute;e &mdash; les premiers stocks sont &eacute;puis&eacute;s.
+        Laissez votre email et vous serez pr&eacute;venu en <strong>premier</strong> d&egrave;s la r&eacute;assort, dans 2 &agrave; 3 semaines.
+      </p>
+
+      <form class="oos-modal-form" id="oos-form" novalidate>
+        <label for="oos-email" class="oos-modal-label">Votre email</label>
+        <input
+          type="email"
+          id="oos-email"
+          name="email"
+          class="oos-modal-input"
+          placeholder="vous@email.fr"
+          required
+          autocomplete="email"
+        />
+        <label class="oos-modal-consent">
+          <input type="checkbox" id="oos-consent" name="consent" />
+          <span>J'accepte d'&ecirc;tre pr&eacute;venu(e) par email du r&eacute;assort. Pas de spam, d&eacute;sabonnement &agrave; tout moment.</span>
+        </label>
+        <button type="submit" class="oos-modal-submit" id="oos-submit">
+          <span class="oos-submit-label">Me pr&eacute;venir en premier</span>
+          <span class="oos-submit-loader" hidden>&hellip;</span>
+        </button>
+        <p class="oos-modal-error" id="oos-error" hidden></p>
+        <p class="oos-modal-trust">
+          <span aria-hidden="true">&#128274;</span> Donn&eacute;es prot&eacute;g&eacute;es RGPD &middot; aucune carte bancaire requise
+        </p>
+      </form>
+    </div>
+
+    <div class="oos-modal-state oos-state-success" data-oos-state="success" hidden>
+      <div class="oos-modal-icon oos-modal-icon-success">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <h2 class="oos-modal-headline">C'est not&eacute;&nbsp;!</h2>
+      <p class="oos-modal-lede">
+        On vous ping <strong>en premier</strong> par email d&egrave;s que GlucoPulse revient en stock.
+        En attendant, vous pouvez fermer cette fen&ecirc;tre &mdash; aucun engagement.
+      </p>
+      <button class="oos-modal-submit" data-oos-close>Fermer</button>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
+(function() {
+  if (window.__oosModalInit) return;
+  window.__oosModalInit = true;
+
+  var modal = document.getElementById('oos-modal');
+  if (!modal) return;
+  var form = document.getElementById('oos-form');
+  var emailInput = document.getElementById('oos-email');
+  var consentInput = document.getElementById('oos-consent');
+  var submitBtn = document.getElementById('oos-submit');
+  var errorEl = document.getElementById('oos-error');
+  var lastTrigger = null;
+
+  function getSessionId() {
+    var sid = localStorage.getItem('glp1_coach_session');
+    if (!sid) {
+      sid = 'anon_' + Math.random().toString(36).slice(2, 10);
+      localStorage.setItem('glp1_coach_session', sid);
+    }
+    return sid;
+  }
+
+  function getUtm() {
+    try {
+      var u = new URL(window.location.href);
+      return {
+        source: u.searchParams.get('utm_source') || null,
+        medium: u.searchParams.get('utm_medium') || null,
+        campaign: u.searchParams.get('utm_campaign') || null,
+      };
+    } catch (e) { return { source: null, medium: null, campaign: null }; }
+  }
+
+  function setState(state) {
+    var states = modal.querySelectorAll('[data-oos-state]');
+    states.forEach(function(el) {
+      el.hidden = el.getAttribute('data-oos-state') !== state;
+    });
+  }
+
+  function open(triggerEl) {
+    lastTrigger = triggerEl || null;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    setState('form');
+    if (errorEl) { errorEl.hidden = true; errorEl.textContent = ''; }
+    setTimeout(function() {
+      modal.classList.add('is-open');
+      if (emailInput) emailInput.focus();
+    }, 10);
+
+    // Track "checkout intent" event (proxy d'add-to-cart sérieux)
+    if (window.gtag) {
+      window.gtag('event', 'begin_checkout', {
+        event_category: 'product_funnel',
+        event_label: triggerEl?.getAttribute('data-product') || 'glucopulse',
+      });
+    }
+  }
+
+  function close() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(function() { modal.hidden = true; }, 220);
+  }
+
+  // Event delegation : tout élément [data-checkout-trigger] ouvre le modal
+  document.addEventListener('click', function(e) {
+    var trigger = e.target.closest('[data-checkout-trigger]');
+    if (trigger) {
+      e.preventDefault();
+      open(trigger);
+      return;
+    }
+    var closer = e.target.closest('[data-oos-close]');
+    if (closer) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
+
+  // Submit form → POST Supabase
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = emailInput.value.trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorEl.textContent = 'Merci d\'entrer un email valide.';
+        errorEl.hidden = false;
+        return;
+      }
+      errorEl.hidden = true;
+      submitBtn.disabled = true;
+      submitBtn.querySelector('.oos-submit-label').hidden = true;
+      submitBtn.querySelector('.oos-submit-loader').hidden = false;
+
+      var utm = getUtm();
+      var payload = {
+        email: email,
+        product_id: lastTrigger?.getAttribute('data-product') || 'glucopulse',
+        variant: lastTrigger?.getAttribute('data-variant') || null,
+        step: 'email_capture',
+        source_page: window.location.pathname,
+        session_id: getSessionId(),
+        utm_source: utm.source,
+        utm_medium: utm.medium,
+        utm_campaign: utm.campaign,
+        referrer: document.referrer ? document.referrer.substring(0, 500) : null,
+        user_agent: navigator.userAgent.substring(0, 300),
+        consent_marketing: !!consentInput?.checked,
+      };
+
+      fetch(supabaseUrl + '/rest/v1/product_interest', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': supabaseAnonKey,
+          'Authorization': 'Bearer ' + supabaseAnonKey,
+          'Prefer': 'return=minimal',
+        },
+        body: JSON.stringify(payload),
+      })
+      .then(function(res) {
+        submitBtn.disabled = false;
+        submitBtn.querySelector('.oos-submit-label').hidden = false;
+        submitBtn.querySelector('.oos-submit-loader').hidden = true;
+        if (!res.ok) throw new Error('insert failed (' + res.status + ')');
+        setState('success');
+        if (window.gtag) {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'product_funnel',
+            event_label: payload.product_id,
+            value: 1,
+          });
+        }
+      })
+      .catch(function(err) {
+        submitBtn.disabled = false;
+        submitBtn.querySelector('.oos-submit-label').hidden = false;
+        submitBtn.querySelector('.oos-submit-loader').hidden = true;
+        errorEl.textContent = 'Erreur d\'envoi. Réessayez ou écrivez-nous à robin@glp1-france.fr';
+        errorEl.hidden = false;
+      });
+    });
+  }
+})();
+</script>
+
+<style>
+  .oos-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .oos-modal[hidden] { display: none; }
+
+  .oos-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 46, 39, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .oos-modal.is-open .oos-modal-backdrop { opacity: 1; }
+
+  .oos-modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 2.25rem 1.75rem 1.75rem;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    transform: translateY(12px) scale(0.98);
+    opacity: 0;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  }
+  .oos-modal.is-open .oos-modal-card {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  .oos-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.85rem;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .oos-modal-close:hover { background: #f3f4f6; color: #1a3c34; }
+
+  .oos-modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    background: #ecfdf5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .oos-modal-icon-success { background: #dcfce7; }
+
+  .oos-modal-headline {
+    margin: 0 0 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a3c34;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .oos-modal-lede {
+    margin: 0 0 1.25rem;
+    text-align: center;
+    color: #4b5563;
+    line-height: 1.55;
+    font-size: 0.95rem;
+  }
+
+  .oos-modal-form { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .oos-modal-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a3c34;
+  }
+
+  .oos-modal-input {
+    padding: 0.85rem 1rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .oos-modal-input:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+  }
+
+  .oos-modal-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: #6b7280;
+    line-height: 1.45;
+    cursor: pointer;
+  }
+  .oos-modal-consent input { margin-top: 2px; flex-shrink: 0; }
+
+  .oos-modal-submit {
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 0.95rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+    margin-top: 0.25rem;
+  }
+  .oos-modal-submit:hover:not(:disabled) {
+    background: #15803d;
+    transform: translateY(-1px);
+  }
+  .oos-modal-submit:disabled { opacity: 0.6; cursor: wait; }
+
+  .oos-modal-error {
+    margin: 0;
+    padding: 0.6rem 0.85rem;
+    background: #fef2f2;
+    color: #991b1b;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    border: 1px solid #fecaca;
+  }
+
+  .oos-modal-trust {
+    margin: 0.5rem 0 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    line-height: 1.4;
+  }
+
+  .oos-state-success { text-align: center; }
+  .oos-state-success .oos-modal-submit { width: 100%; }
+</style>

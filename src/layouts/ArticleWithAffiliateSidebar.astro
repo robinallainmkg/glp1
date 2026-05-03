@@ -7,6 +7,8 @@ import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
 import SinocareCTA from '../components/SinocareCTA.astro';
+import ProductCard from '../components/ProductCard.astro';
+import OutOfStockModal from '../components/OutOfStockModal.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
 
@@ -189,6 +191,7 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         </div>
         {partner === 'mutuelle' && safePartners.has('mutuelle') && <MutuelleCTA context="article" />}
         {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
+        {showSinocare && <ProductCard productId="glucopulse" context={`diabete_${articleSlug || 'article'}`} />}
         {showSinocare && <SinocareCTA context={`diabete_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
@@ -211,6 +214,9 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
     <!-- Articles connexes -->
     <RelatedArticles currentPath={Astro.url.pathname} maxLinks={6} />
   </main>
+
+  {/* Modal "out-of-stock" — déclenché par les boutons [data-checkout-trigger] dans ProductCard */}
+  {showSinocare && <OutOfStockModal />}
 </BaseLayout>
 
 <style>

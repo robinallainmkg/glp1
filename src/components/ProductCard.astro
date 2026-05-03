@@ -1,0 +1,257 @@
+---
+// CTA inline compact pour produit GLP-1 France (vs partenaires Awin externes).
+// Utilisé dans les articles diabète (Ozempic, Trulicity, Victoza, Rybelsus, glp1-diabete).
+//
+// Le bouton "Ajouter au panier" déclenche le OutOfStockModal (capture email).
+// La page produit complète est sur /produits/<slug>/.
+
+interface Props {
+  productId?: string;
+  productName?: string;
+  variant?: string;
+  context?: string;
+}
+
+const {
+  productId = 'glucopulse',
+  productName = 'GlucoPulse',
+  variant = 'starter-pack',
+  context = 'article_inline',
+} = Astro.props;
+
+const productPrice = 59;
+const productOldPrice = 89;
+const productUrl = `/produits/${productId}/?source=inline_${context}`;
+---
+
+<div class="pc-block" data-product-block={productId}>
+  <div class="pc-visual">
+    <!-- Mini SVG mockup : device + screen -->
+    <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="pc-body" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#fafafa"/>
+          <stop offset="100%" stop-color="#e5e7eb"/>
+        </linearGradient>
+        <linearGradient id="pc-screen" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0f2e27"/>
+          <stop offset="100%" stop-color="#1a3c34"/>
+        </linearGradient>
+      </defs>
+      <rect x="20" y="14" width="100" height="138" rx="14" fill="url(#pc-body)" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="20" y="14" width="100" height="5" rx="14" fill="#16a34a"/>
+      <text x="70" y="38" font-family="-apple-system, sans-serif" font-size="6" font-weight="800" fill="#1a3c34" text-anchor="middle" letter-spacing="0.5">GlucoPulse</text>
+      <rect x="30" y="46" width="80" height="60" rx="6" fill="url(#pc-screen)"/>
+      <text x="70" y="76" font-family="-apple-system, sans-serif" font-size="22" font-weight="900" fill="#6ee7a0" text-anchor="middle" letter-spacing="-0.5">5.6</text>
+      <text x="70" y="90" font-family="-apple-system, sans-serif" font-size="6" font-weight="600" fill="#bbf7d0" text-anchor="middle">mmol/L</text>
+      <circle cx="50" cy="124" r="10" fill="#fff" stroke="#cbd5e1" stroke-width="0.8"/>
+      <circle cx="50" cy="124" r="6" fill="none" stroke="#16a34a" stroke-width="1"/>
+      <circle cx="90" cy="124" r="10" fill="#fff" stroke="#cbd5e1" stroke-width="0.8"/>
+      <text x="90" y="127" font-family="-apple-system, sans-serif" font-size="7" font-weight="700" fill="#6b7280" text-anchor="middle">M</text>
+    </svg>
+  </div>
+
+  <div class="pc-content">
+    <div class="pc-tag">
+      <span class="pc-dot"></span>
+      Stock limité · disponible en réassort
+    </div>
+    <h3 class="pc-title">{productName} — Glucomètre connecté Bluetooth</h3>
+    <p class="pc-lede">
+      Vous suivez votre glycémie sous {context.includes('ozempic') ? 'Ozempic' : context.includes('trulicity') ? 'Trulicity' : context.includes('victoza') ? 'Victoza' : context.includes('rybelsus') ? 'Rybelsus' : 'GLP-1'}&nbsp;? Le lecteur GlucoPulse synchronise automatiquement vos mesures avec votre smartphone : courbes, alertes, partage médecin.
+    </p>
+
+    <ul class="pc-features">
+      <li><span class="pc-check">✓</span> Sync auto Bluetooth, app iOS &amp; Android</li>
+      <li><span class="pc-check">✓</span> Mémoire 500 mesures · résultat 5s</li>
+      <li><span class="pc-check">✓</span> Précision ±5% · Marquage CE médical</li>
+      <li><span class="pc-check">✓</span> Pack 50 bandelettes + lancettes inclus</li>
+    </ul>
+
+    <div class="pc-pricing-row">
+      <div class="pc-price">
+        <span class="pc-price-old">{productOldPrice}&nbsp;€</span>
+        <span class="pc-price-new">{productPrice}&nbsp;€</span>
+        <span class="pc-shipping">Livraison offerte</span>
+      </div>
+      <button
+        type="button"
+        class="pc-cta"
+        data-checkout-trigger
+        data-product={productId}
+        data-variant={variant}
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+        </svg>
+        Ajouter au panier
+      </button>
+    </div>
+
+    <a href={productUrl} class="pc-link">
+      Voir la fiche produit complète →
+    </a>
+  </div>
+</div>
+
+<style>
+  .pc-block {
+    margin: 1.75rem 0;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border: 2px solid #bbf7d0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    box-shadow: 0 6px 20px rgba(22, 163, 74, 0.08);
+  }
+  .pc-visual {
+    background: #fff;
+    border-radius: 12px;
+    padding: 0.75rem;
+    border: 1px solid #d1fae5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pc-visual svg { width: 100%; height: auto; max-width: 120px; }
+
+  .pc-content { min-width: 0; }
+
+  .pc-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.6rem;
+  }
+  .pc-dot {
+    width: 6px;
+    height: 6px;
+    background: #16a34a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    animation: pc-pulse 2s ease-in-out infinite;
+  }
+  @keyframes pc-pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+  }
+
+  .pc-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #14532d;
+    margin: 0 0 0.5rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .pc-lede {
+    margin: 0 0 0.85rem;
+    font-size: 0.9rem;
+    color: #166534;
+    line-height: 1.55;
+  }
+  .pc-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem 1rem;
+    font-size: 0.85rem;
+    color: #15803d;
+  }
+  .pc-features li { display: flex; align-items: flex-start; gap: 0.35rem; }
+  .pc-check { color: #16a34a; font-weight: 800; flex-shrink: 0; }
+
+  .pc-pricing-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #d1fae5;
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .pc-price { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; }
+  .pc-price-old {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+  }
+  .pc-price-new {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #14532d;
+    letter-spacing: -0.02em;
+  }
+  .pc-shipping {
+    font-size: 0.72rem;
+    color: #16a34a;
+    font-weight: 700;
+    background: #dcfce7;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.25rem;
+  }
+
+  .pc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 9px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 3px 10px rgba(22, 163, 74, 0.25);
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .pc-cta:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(22, 163, 74, 0.35);
+  }
+
+  .pc-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #15803d;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px dashed #bbf7d0;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .pc-link:hover {
+    color: #14532d;
+    border-color: #15803d;
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .pc-block { grid-template-columns: 1fr; padding: 1.25rem; }
+    .pc-visual { max-width: 140px; margin: 0 auto; }
+    .pc-features { grid-template-columns: 1fr; }
+    .pc-pricing-row { flex-direction: column; align-items: stretch; }
+    .pc-cta { width: 100%; justify-content: center; }
+  }
+</style>
