@@ -67,8 +67,50 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
       </div>
 
       <div class="gp-hero-visual">
-        <!-- Mockup hero : glucomètre en front, smartphone derrière (overlap), traitement éclairage premium -->
-        <svg class="gp-mockup" viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" aria-label="GlucoPulse, lecteur de glycémie connecté Bluetooth avec son application smartphone">
+        <!-- Photo produit + vidéo loop (autoplay muted) ; SVG conservé en fallback ci-dessous, supprimable plus tard -->
+        <video
+          id="gp-hero-video"
+          class="gp-mockup gp-mockup-video"
+          src="/images/video2.mp4"
+          poster="/images/glucopulse-hero.png"
+          autoplay
+          loop
+          muted
+          playsinline
+          disablepictureinpicture
+          aria-label="GlucoPulse, glucomètre connecté Bluetooth en démonstration"
+        ></video>
+        <script is:inline>
+          (function () {
+            var v = document.getElementById('gp-hero-video');
+            if (!v) return;
+            // Force la lecture (Chrome bloque parfois autoplay même sur muted)
+            var tryPlay = function () { v.play().catch(function () {}); };
+            tryPlay();
+            v.addEventListener('canplay', tryPlay);
+            // Pause hors viewport pour économiser batterie/CPU
+            if ('IntersectionObserver' in window) {
+              var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                  if (e.isIntersecting) tryPlay();
+                  else v.pause();
+                });
+              }, { threshold: 0.15 });
+              io.observe(v);
+            }
+            // Premier clic anywhere = play (au cas où autoplay reste bloqué)
+            var unlock = function () {
+              tryPlay();
+              document.removeEventListener('click', unlock);
+              document.removeEventListener('touchstart', unlock);
+            };
+            document.addEventListener('click', unlock, { once: true, passive: true });
+            document.addEventListener('touchstart', unlock, { once: true, passive: true });
+          })();
+        </script>
+
+        <!-- Fallback SVG (caché par CSS quand la vidéo est présente) — ancien mockup vectoriel -->
+        <svg class="gp-mockup gp-mockup-svg" viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <!-- Plastique blanc avec dégradé subtil top→bottom -->
             <linearGradient id="g-body" x1="50%" y1="0%" x2="50%" y2="100%">
@@ -734,10 +776,34 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
     align-items: center;
     justify-content: center;
   }
+  .gp-hero-visual {
+    position: relative;
+  }
   .gp-mockup {
+    display: block;
     width: 100%;
-    max-width: 540px;
     height: auto;
+  }
+  .gp-mockup-video {
+    max-width: 380px;
+    border-radius: 18px;
+    box-shadow: 0 30px 70px rgba(10, 31, 26, 0.55), 0 0 0 1px rgba(255,255,255,0.04);
+    margin: 0 auto;
+    object-fit: cover;
+    background: #0a1f1a;
+    animation: gp-float 5s ease-in-out infinite;
+  }
+  /* SVG fallback : caché quand la vidéo est présente (la vidéo précède dans le DOM) */
+  .gp-mockup-video + .gp-mockup-svg { display: none; }
+  .gp-mockup-svg {
+    max-width: 540px;
+  }
+  @keyframes gp-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gp-mockup-video { animation: none; }
   }
 
   /* ============================================
