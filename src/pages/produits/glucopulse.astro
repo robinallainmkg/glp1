@@ -98,38 +98,28 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   </section>
 
   <!-- ============================================ -->
-  <!-- 3. PITCH STORY (image + copy)                -->
+  <!-- 3. PITCH STORY (texte centré, sans image)    -->
   <!-- ============================================ -->
   <section class="gp-section gp-pitch">
-    <div class="gp-section-inner gp-pitch-grid">
-      <div class="gp-pitch-text">
-        <span class="gp-eyebrow">Pourquoi GlucoPulse</span>
-        <h2 class="gp-h2">Conçu pour les patients sous traitement GLP-1.</h2>
-        <p class="gp-pitch-lede">
-          Sous Ozempic, Mounjaro ou Wegovy, les variations glycémiques sont plus fréquentes
-          au démarrage du traitement. Mesurer régulièrement permet à votre médecin d'ajuster
-          la dose et d'éviter les hypoglycémies. <strong>Mais carnet papier + Excel + photos
-          de l'écran, c'est lourd.</strong>
-        </p>
-        <p class="gp-pitch-lede">
-          GlucoPulse synchronise <strong>chaque mesure automatiquement</strong> dans une app
-          conçue avec des diabétologues : courbes, alertes hypo/hyper personnalisées selon
-          votre traitement, et un PDF prêt à envoyer à Doctolib avant chaque rendez-vous.
-        </p>
-        <ul class="gp-pitch-bullets">
-          <li><span class="gp-check-lg">✓</span> Plus de saisie manuelle, plus d'oubli</li>
-          <li><span class="gp-check-lg">✓</span> Alertes adaptées (Ozempic, Mounjaro, Wegovy, Trulicity, Victoza, Rybelsus)</li>
-          <li><span class="gp-check-lg">✓</span> Partage médecin en 1 clic (PDF format dossier médical)</li>
-        </ul>
-      </div>
-      <div class="gp-pitch-visual">
-        <img
-          src="/images/glucopulse-hero.png"
-          alt="GlucoPulse posé sur une table avec son application affichée sur smartphone"
-          class="gp-pitch-image"
-          loading="lazy"
-        />
-      </div>
+    <div class="gp-section-inner gp-section-narrow gp-pitch-narrow">
+      <span class="gp-eyebrow">Pourquoi GlucoPulse</span>
+      <h2 class="gp-h2 gp-pitch-h2">Conçu pour les patients sous traitement GLP-1.</h2>
+      <p class="gp-pitch-lede">
+        Sous Ozempic, Mounjaro ou Wegovy, les variations glycémiques sont plus fréquentes
+        au démarrage du traitement. Mesurer régulièrement permet à votre médecin d'ajuster
+        la dose et d'éviter les hypoglycémies. <strong>Mais carnet papier + Excel + photos
+        de l'écran, c'est lourd.</strong>
+      </p>
+      <p class="gp-pitch-lede">
+        GlucoPulse synchronise <strong>chaque mesure automatiquement</strong> dans une app
+        conçue avec des diabétologues : courbes, alertes hypo/hyper personnalisées selon
+        votre traitement, et un PDF prêt à envoyer à Doctolib avant chaque rendez-vous.
+      </p>
+      <ul class="gp-pitch-bullets">
+        <li><span class="gp-check-lg">✓</span> Plus de saisie manuelle, plus d'oubli</li>
+        <li><span class="gp-check-lg">✓</span> Alertes adaptées (Ozempic, Mounjaro, Wegovy, Trulicity, Victoza, Rybelsus)</li>
+        <li><span class="gp-check-lg">✓</span> Partage médecin en 1 clic (PDF format dossier médical)</li>
+      </ul>
     </div>
   </section>
 
@@ -869,38 +859,32 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   }
 
   /* ============================================
-     PITCH (story)
+     PITCH (story, texte centré)
      ============================================ */
-  .gp-pitch-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 4rem;
-    align-items: center;
+  .gp-pitch-narrow {
+    text-align: center;
   }
-  .gp-pitch-text .gp-eyebrow { margin-bottom: 0.75rem; }
-  .gp-pitch-text .gp-h2 { text-align: left; }
+  .gp-pitch-h2 {
+    margin-bottom: 1.5rem;
+  }
   .gp-pitch-lede {
     color: #4b5563;
-    font-size: 1.05rem;
-    line-height: 1.65;
-    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 auto 1.25rem;
+    max-width: 680px;
+    text-align: left;
   }
   .gp-pitch-bullets {
-    list-style: none; padding: 0; margin: 1.5rem 0 0;
-    display: flex; flex-direction: column; gap: 0.65rem;
+    list-style: none; padding: 0; margin: 2rem auto 0;
+    display: flex; flex-direction: column; gap: 0.75rem;
+    max-width: 580px; text-align: left;
   }
   .gp-pitch-bullets li {
     display: flex; align-items: flex-start; gap: 0.7rem;
     color: #1a3c34; font-size: 1rem; font-weight: 500;
   }
   .gp-check-lg { color: #16a34a; font-weight: 800; flex-shrink: 0; font-size: 1.1rem; }
-  .gp-pitch-image {
-    width: 100%; height: auto; border-radius: 20px;
-    box-shadow: 0 25px 60px rgba(10, 31, 26, 0.18);
-    max-width: 460px;
-    display: block;
-    margin: 0 auto;
-  }
 
   /* ============================================
      DEMO VIDEO
@@ -1240,8 +1224,6 @@ const productDiscount = Math.round(((productOldPrice - productPrice) / productOl
   @media (max-width: 960px) {
     .gp-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
     .gp-hero-visual { order: -1; max-width: 360px; margin: 0 auto; }
-    .gp-pitch-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .gp-pitch-text .gp-h2 { text-align: center; }
     .gp-features-grid { grid-template-columns: 1fr 1fr; }
     .gp-feat-large { grid-column: span 2; }
     .gp-pack-grid { grid-template-columns: 1fr 1fr; }
