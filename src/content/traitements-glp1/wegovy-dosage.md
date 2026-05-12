@@ -45,6 +45,13 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 Pour une vue d'ensemble du traitement avant d'aborder la posologie, consultez notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Conseil pratique</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Pour un suivi régulier, beaucoup de patients utilisent un appareil simple comme le Aiguilles stylo insuline Sinocare 32G 4mm — disponible dès 14,99&nbsp;€.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_insulin-needles_wegovy-dosage&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 ### 💊 **Posologie recommandée Wegovy 2025**
 
 Le dosage de Wegovy suit un protocole d'augmentation progressive sur 16 semaines pour minimiser les [effets secondaires de Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/).
@@ -204,3 +211,9 @@ Les [conditions de remboursement](/collections/glp1-cout/remboursement-glp1-2026
 Ces informations vous aident à mieux comprendre le sujet. Pour un avis personnalisé, consultez toujours un professionnel de santé qualifié.
 
 *Cet article est mis à jour régulièrement selon les dernières recommandations médicales.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_wegovy-dosage&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles 32G 4mm pour stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_bp-monitor-arm_wegovy-dosage&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Tensiomètre Sinocare bras</a> — Tensiomètre haut du bras — double mémoire <span style="color:#94a3b8;">(dès 34,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_wegovy-dosage&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>

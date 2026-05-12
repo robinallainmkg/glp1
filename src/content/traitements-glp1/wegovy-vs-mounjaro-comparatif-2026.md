@@ -45,6 +45,35 @@ Ce comparatif détaillé vous aide a y voir clair en mars 2026, avec des donnée
 | **Remboursement SS** | Non (avis HAS favorable déc. 2024) | Non (avis HAS favorable nov. 2025) |
 | **Disponible en France** | Depuis octobre 2024 | Depuis novembre 2024 |
 
+<div data-sinocare-compare style="margin:1.75rem 0;overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-family:inherit;">
+    <tbody><tr><td style="border:1px solid #e2e8f0;padding:1rem;vertical-align:top;width:33.333333333333336%;background:#fff;">
+      <div style="font-size:.7rem;color:#0369a1;font-weight:600;margin-bottom:.3rem;letter-spacing:.02em;">SINOCARE</div>
+      <h4 style="margin:0 0 .4rem 0;font-size:.95rem;color:#0f172a;line-height:1.3;">Sinocare iCan i3 CGM 15 jours</h4>
+      <p style="margin:0 0 .6rem 0;font-size:.82rem;color:#475569;line-height:1.45;">Capteur de glycémie continue 15 jours</p>
+      <div style="font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:.7rem;">Dès 49,90&nbsp;€</div>
+      <div style="font-size:.78rem;color:#475569;margin-bottom:.7rem;">★ 4.6/5</div>
+      <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_compare_ican-cgm_wegovy-vs-mounjaro-comparatif-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:6px;text-decoration:none;">Découvrir</a>
+    </td><td style="border:1px solid #e2e8f0;padding:1rem;vertical-align:top;width:33.333333333333336%;background:#fff;">
+      <div style="font-size:.7rem;color:#0369a1;font-weight:600;margin-bottom:.3rem;letter-spacing:.02em;">SINOCARE</div>
+      <h4 style="margin:0 0 .4rem 0;font-size:.95rem;color:#0f172a;line-height:1.3;">Tensiomètre Sinocare bras</h4>
+      <p style="margin:0 0 .6rem 0;font-size:.82rem;color:#475569;line-height:1.45;">Tensiomètre haut du bras — double mémoire</p>
+      <div style="font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:.7rem;">Dès 34,99&nbsp;€</div>
+      <div style="font-size:.78rem;color:#475569;margin-bottom:.7rem;">★ 4.9/5</div>
+      <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_compare_bp-monitor-arm_wegovy-vs-mounjaro-comparatif-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:6px;text-decoration:none;">Découvrir</a>
+    </td><td style="border:1px solid #e2e8f0;padding:1rem;vertical-align:top;width:33.333333333333336%;background:#fff;">
+      <div style="font-size:.7rem;color:#0369a1;font-weight:600;margin-bottom:.3rem;letter-spacing:.02em;">SINOCARE</div>
+      <h4 style="margin:0 0 .4rem 0;font-size:.95rem;color:#0f172a;line-height:1.3;">Aiguilles stylo insuline Sinocare 32G 4mm</h4>
+      <p style="margin:0 0 .6rem 0;font-size:.82rem;color:#475569;line-height:1.45;">100 aiguilles 32G 4mm pour stylos GLP-1</p>
+      <div style="font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:.7rem;">Dès 14,99&nbsp;€</div>
+      <div style="font-size:.78rem;color:#475569;margin-bottom:.7rem;">★ 5/5</div>
+      <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_compare_insulin-needles_wegovy-vs-mounjaro-comparatif-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:6px;text-decoration:none;">Découvrir</a>
+    </td></tr></tbody>
+  </table>
+  <p style="margin:.6rem 0 0 0;font-size:.78rem;color:#94a3b8;text-align:right;font-style:italic;">Liens sponsorisés &middot; Sinocare via Awin</p>
+</div>
+
+
 ## Comment fonctionnent Wegovy et Mounjaro ?
 
 ### Wegovy : un agoniste GLP-1 pur
@@ -251,3 +280,9 @@ Pour comparer les profils de tolérance, consultez notre guide complet sur les [
 ---
 
 *Cet article est fourni a titre informatif et ne remplace pas l'avis d'un professionnel de sante. Consultez toujours votre médecin avant de commencer ou de modifier un traitement medical. Derniere mise a jour : mars 2026.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_wegovy-vs-mounjaro-comparatif-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_bp-monitor-arm_wegovy-vs-mounjaro-comparatif-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Tensiomètre Sinocare bras</a> — Tensiomètre haut du bras — double mémoire <span style="color:#94a3b8;">(dès 34,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_wegovy-vs-mounjaro-comparatif-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles 32G 4mm pour stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>
