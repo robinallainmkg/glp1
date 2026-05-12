@@ -5,6 +5,7 @@ import Hotjar from '../components/Hotjar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
+import SinocareBanner from '../components/SinocareBanner.astro';
 
 export interface Props {
   title: string;
@@ -104,6 +105,9 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
   <main id="main-content">
     <slot />
   </main>
+
+  <!-- Bandeau Sinocare global -->
+  <SinocareBanner context={`page${(Astro.url.pathname || '/').replace(/\//g, '_').replace(/^_|_$/g, '') || 'home'}`} />
 
   <!-- Footer -->
   <SiteFooter />

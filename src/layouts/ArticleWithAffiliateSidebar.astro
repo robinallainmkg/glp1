@@ -7,9 +7,7 @@ import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
 import SinocareCTA from '../components/SinocareCTA.astro';
-import ProductCard from '../components/ProductCard.astro';
-import ProductSidebar from '../components/ProductSidebar.astro';
-import OutOfStockModal from '../components/OutOfStockModal.astro';
+import SinocareSidebar from '../components/SinocareSidebar.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
 
@@ -75,18 +73,15 @@ const showInlineMutuelle = inlinePartner === 'mutuelle' && safePartners.has('mut
 const showInlineAnnette = inlinePartner === 'annette' && safePartners.has('annette');
 const filteredSidebarOrder = sidebarOrder.filter((p) => safePartners.has(p));
 
-// GlucoPulse test isolé — pages où on pousse notre propre lecteur de glycémie.
+// Sinocare = SEUL CTA monétisable sur pages GLP-1 (Awin actif, advertiser ID 114180).
 // Regex large : toutes les pages prix + tous les guides GLP-1 + collection diabète.
-// Sur ces pages, GlucoPulse est le SEUL CTA (pas de Sinocare/Annette/Mutuelle) pour
-// que le test fake-door capture un signal d'intent propre.
+// GlucoPulse en PAUSE — la page existe encore mais aucun entry point depuis les articles.
 const articleSlugLower = (articleSlug || '').toLowerCase();
 const collectionLower = (detectedCategory || '').toLowerCase();
-const showGlucoPulse =
+const showSinocare =
   collectionLower === 'glp1-diabete' ||
   collectionLower === 'glp1-cout' ||
   /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2|ozempic|wegovy|mounjaro|trulicity|victoza|rybelsus|saxenda|zepbound|semaglutide|tirzepatide|liraglutide|dulaglutide)/.test(articleSlugLower);
-// Sinocare désactivé pendant le test GlucoPulse (audience identique = signal pollué).
-const showSinocare = false;
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
@@ -188,10 +183,9 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTAs : sur les pages GLP-1 (showGlucoPulse), seul ProductCard est affiché —
-             test isolé pour mesurer l'intent réel sur notre produit. Sur les autres pages,
-             logique partenaire historique (annette/mutuelle inline + bottom). -->
-        {!showGlucoPulse && (
+        <!-- CTAs : pages GLP-1 (showSinocare) → SinocareCTA seul (focus 100% Awin Sinocare).
+             Autres pages → logique partenaire historique (annette/mutuelle inline + bottom). -->
+        {!showSinocare && (
           <>
             <div id="partner-cta-template" style="display:none;">
               {showInlineMutuelle && <MutuelleCTA context="article_inline" />}
@@ -201,23 +195,23 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
             {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
           </>
         )}
-        {showGlucoPulse && (
+        {showSinocare && (
           <div id="partner-cta-template" style="display:none;">
-            <ProductCard productId="glucopulse" context={`glp1_${articleSlug || 'article'}`} />
+            <SinocareCTA context={`glp1_inline_${articleSlug || 'article'}`} />
           </div>
         )}
-        {showGlucoPulse && <ProductCard productId="glucopulse" context={`glp1_${articleSlug || 'article'}`} />}
+        {showSinocare && <SinocareCTA context={`glp1_bottom_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
         </div>
       </article>
 
-      <!-- Sidebars : sur pages GLP-1 → ProductSidebar GlucoPulse seul (test isolé).
-           Sur autres pages → logique partenaire historique (annette/mutuelle alternées). -->
+      <!-- Sidebars : pages GLP-1 → SinocareSidebar seul (focus Awin).
+           Autres pages → logique partenaire historique (annette/mutuelle alternées). -->
       <div class="partner-sidebar-stack">
-        {showGlucoPulse && <ProductSidebar productId="glucopulse" context={`glp1_${articleSlug || 'article'}`} />}
-        {!showGlucoPulse && filteredSidebarOrder.map((p) => (
+        {showSinocare && <SinocareSidebar context={`glp1_sidebar_${articleSlug || 'article'}`} />}
+        {!showSinocare && filteredSidebarOrder.length > 0 && filteredSidebarOrder.map((p) => (
           p === 'mutuelle'
             ? <MutuelleSidebar context={p === partner ? 'article' : 'article_secondary'} />
             : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />
@@ -229,8 +223,7 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
     <RelatedArticles currentPath={Astro.url.pathname} maxLinks={6} />
   </main>
 
-  {/* Modal "out-of-stock" — déclenché par tous les boutons [data-checkout-trigger] (ProductCard, ProductSidebar) */}
-  {showGlucoPulse && <OutOfStockModal />}
+  {/* Modal "out-of-stock" GlucoPulse : retiré (GlucoPulse en pause). */}
 </BaseLayout>
 
 <style>

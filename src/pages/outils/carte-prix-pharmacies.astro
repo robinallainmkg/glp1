@@ -885,8 +885,8 @@ const updatedFr = stats.updated_at
       const action = e.currentTarget.dataset.action;
       closePharmacyDrawer();
       if (action === 'external-charles') {
-        // Charles retiré 2026-05 — redirige vers notre fiche produit GlucoPulse
-        window.location.href = '/produits/glucopulse/?source=carte_drawer';
+        // Charles retiré 2026-05 + GlucoPulse en pause 2026-05 — redirige vers Sinocare (Awin actif)
+        window.open('https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_carte_drawer&ued=https%3A%2F%2Fwww.sinocare.com%2F', '_blank', 'noopener');
         return;
       }
       if (action === 'external-annette') {

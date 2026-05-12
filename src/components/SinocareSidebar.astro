@@ -1,0 +1,198 @@
+---
+// Sinocare sidebar (sticky vertical compacte) — pages GLP-1.
+// Deeplink Awin avec clickref tracking ROI par contexte.
+
+interface Props {
+  context?: string;
+}
+
+const { context = "sidebar" } = Astro.props;
+const sinocareLink = `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_${context}&ued=${encodeURIComponent("https://www.sinocare.com/")}`;
+---
+
+<aside class="sino-sidebar">
+  <a href={sinocareLink} rel="noopener sponsored" target="_blank" class="sino-image-link" aria-label="Voir l'offre Sinocare">
+    <img
+      src="/images/glucopulse-hero.png"
+      alt="Sinocare Safe AQ — lecteur de glycémie"
+      class="sino-image"
+      loading="lazy"
+      width="784"
+      height="1168"
+    />
+    <span class="sino-badge">−45%</span>
+  </a>
+
+  <div class="sino-body">
+    <span class="sino-eyebrow">Sinocare · Lecteur de glycémie</span>
+    <h3 class="sino-title">Suivez votre glycémie en 5 sec</h3>
+    <p class="sino-lede">
+      Recommandé sous Ozempic, Mounjaro, Wegovy. Lecteur fiable utilisé dans 130 pays.
+    </p>
+
+    <ul class="sino-features">
+      <li><span class="sino-check">✓</span> Précision &plusmn;5% (ISO 15197)</li>
+      <li><span class="sino-check">✓</span> Mémoire 500 mesures</li>
+      <li><span class="sino-check">✓</span> Bandelettes économiques</li>
+      <li><span class="sino-check">✓</span> Marquage CE médical</li>
+    </ul>
+
+    <div class="sino-pricing">
+      <span class="sino-from">À partir de</span>
+      <span class="sino-price">25&nbsp;€</span>
+    </div>
+
+    <a
+      href={sinocareLink}
+      rel="noopener sponsored"
+      target="_blank"
+      class="sino-cta"
+    >
+      Voir l'offre Sinocare
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+
+    <p class="sino-disclaimer">Lien sponsorisé · prix inchangé pour vous</p>
+  </div>
+</aside>
+
+<style>
+  .sino-sidebar {
+    position: sticky;
+    top: 2rem;
+    width: 320px;
+    background: #fff;
+    border: 2px solid #9b1d20;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(155, 29, 32, 0.12);
+  }
+  .sino-image-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(180deg, #0a1f1a 0%, #1a3c34 100%);
+    text-decoration: none;
+  }
+  .sino-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+  .sino-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #9b1d20;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(155, 29, 32, 0.4);
+  }
+  .sino-body {
+    padding: 1.1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .sino-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #9b1d20;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .sino-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+  .sino-lede {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  .sino-features {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: #1a1a1a;
+  }
+  .sino-features li { display: flex; align-items: flex-start; gap: 0.35rem; }
+  .sino-check { color: #9b1d20; font-weight: 800; flex-shrink: 0; }
+
+  .sino-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    background: #fff5f5;
+    border: 1px solid #f1c4c5;
+    border-radius: 10px;
+    padding: 0.6rem 0.85rem;
+    margin-top: 0.3rem;
+  }
+  .sino-from { font-size: 0.72rem; color: #6b7280; font-weight: 600; }
+  .sino-price {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #9b1d20;
+    letter-spacing: -0.02em;
+  }
+
+  .sino-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    background: #9b1d20;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(155, 29, 32, 0.3);
+    margin-top: 0.3rem;
+  }
+  .sino-cta:hover {
+    background: #7a1518;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(155, 29, 32, 0.4);
+    color: #fff;
+    text-decoration: none;
+  }
+  .sino-disclaimer {
+    margin: 0.25rem 0 0;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #8b1517;
+    font-style: italic;
+  }
+
+  @media (max-width: 1024px) {
+    .sino-sidebar {
+      position: static;
+      width: 100%;
+      max-width: 420px;
+      margin: 2rem auto 0;
+    }
+    .sino-image { height: 200px; }
+  }
+</style>

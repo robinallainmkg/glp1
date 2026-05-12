@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createServer } from 'http';
+import { createSign } from 'crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
@@ -195,10 +196,54 @@ function appendToEnv(key, value) {
 }
 
 // =============================================================================
-// OAuth2 — Get access token from refresh token
+// Auth — Service Account (preferred) ou OAuth refresh token (legacy fallback)
 // =============================================================================
 
-async function getAccessToken() {
+const SA_PATH = join(PROJECT_ROOT, 'secrets', 'ga-service-account.json');
+
+function base64UrlEncode(buf) {
+  return Buffer.from(buf)
+    .toString('base64')
+    .replace(/=+$/, '')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_');
+}
+
+async function getServiceAccountToken() {
+  const sa = JSON.parse(readFileSync(SA_PATH, 'utf-8'));
+  const now = Math.floor(Date.now() / 1000);
+  const header = { alg: 'RS256', typ: 'JWT' };
+  const payload = {
+    iss: sa.client_email,
+    scope: SCOPES,
+    aud: sa.token_uri,
+    iat: now,
+    exp: now + 3600,
+  };
+
+  const headerB64 = base64UrlEncode(JSON.stringify(header));
+  const payloadB64 = base64UrlEncode(JSON.stringify(payload));
+  const unsigned = `${headerB64}.${payloadB64}`;
+
+  const signer = createSign('RSA-SHA256');
+  signer.update(unsigned);
+  const signature = signer.sign(sa.private_key);
+  const jwt = `${unsigned}.${base64UrlEncode(signature)}`;
+
+  const r = await fetch(sa.token_uri, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: jwt,
+    }),
+  });
+  const data = await r.json();
+  if (data.error) throw new Error(`Service account auth error: ${data.error_description || data.error}`);
+  return data.access_token;
+}
+
+async function getOAuthToken() {
   const r = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -206,13 +251,22 @@ async function getAccessToken() {
       client_id: CLIENT_ID,
       client_secret: CLIENT_SECRET,
       refresh_token: REFRESH_TOKEN,
-      grant_type: 'refresh_token'
-    })
+      grant_type: 'refresh_token',
+    }),
   });
-
   const data = await r.json();
   if (data.error) throw new Error(`OAuth refresh error: ${data.error_description || data.error}`);
   return data.access_token;
+}
+
+async function getAccessToken() {
+  // Préfère service account si dispo (plus de refresh token qui expire)
+  if (existsSync(SA_PATH)) {
+    console.log('🔑 Auth via service account (secrets/ga-service-account.json)');
+    return getServiceAccountToken();
+  }
+  console.log('🔑 Auth via OAuth refresh token (legacy)');
+  return getOAuthToken();
 }
 
 // =============================================================================

@@ -6,6 +6,7 @@ import Hotjar from '../components/Hotjar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
+import SinocareBanner from '../components/SinocareBanner.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
 
 export interface Props {
@@ -191,6 +192,8 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
       <slot />
     )}
   </main>
+
+  <SinocareBanner context={`page${(Astro.url.pathname || '/').replace(/\//g, '_').replace(/^_|_$/g, '') || 'home'}`} />
 
   <SiteFooter />
   <AffiliateTracker />
