@@ -10,10 +10,12 @@ import { supabaseConfig } from '../lib/supabase.js';
   var API = supabaseUrl + '/rest/v1/affiliate_clicks';
   var KEY = supabaseAnonKey;
 
-  // Extract UTM campaign from href
+  // Extract UTM campaign / Awin clickref from href
   function getCampaign(href) {
     try {
       var url = new URL(href);
+      var cr = url.searchParams.get('clickref');
+      if (cr) return cr;
       return url.searchParams.get('utm_campaign') || 'direct';
     } catch(e) { return 'unknown'; }
   }
@@ -21,12 +23,28 @@ import { supabaseConfig } from '../lib/supabase.js';
   // Detect which partner from the URL
   function getPartner(href) {
     if (href.indexOf('annette.care') > -1) return 'annette';
+    if (href.indexOf('awin1.com') > -1) {
+      // Awin wrapper — distinguish advertisers via mid
+      if (href.indexOf('awinmid=114180') > -1) return 'sinocare';
+      return 'awin_other';
+    }
+    if (href.indexOf('sinocare.com') > -1) return 'sinocare';
     return 'other';
   }
 
   // Detect click source element
   function getElement(el) {
-    // Check parent data attributes
+    // Sinocare placements use data-sinocare-* hooks
+    var sinoEl = el.closest('[data-sinocare-card], [data-sinocare-compare], [data-sinocare-callout], [data-sinocare-bullet], [data-sinocare-footer], [data-sinocare-quote], [data-sinocare-figure], [data-sinocare-mention]');
+    if (sinoEl) {
+      var attrs = sinoEl.attributes;
+      for (var i = 0; i < attrs.length; i++) {
+        if (attrs[i].name.indexOf('data-sinocare-') === 0) {
+          return 'sinocare_' + attrs[i].name.replace('data-sinocare-', '');
+        }
+      }
+    }
+    // Check parent data attributes (legacy Annette)
     var block = el.closest('[data-partner-block]');
     if (block) return 'partner_' + block.getAttribute('data-partner-block');
     if (el.closest('.partner-sidebar')) return 'sidebar';
@@ -42,7 +60,7 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   // Listen to all clicks on affiliate links
   document.addEventListener('click', function(e) {
-    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"]');
+    var link = e.target.closest('a[rel*="sponsored"], a[href*="annette.care"], a[href*="awin1.com"]');
     if (!link) return;
 
     var href = link.href;

@@ -1,0 +1,8 @@
+---
+import { productBulletList } from '../../lib/sinocareSnippets';
+interface Props { productId: string; slug?: string; otherItems?: string[]; }
+const { productId, slug, otherItems = [] } = Astro.props;
+const slugVal = slug || Astro.url.pathname.replace(/\/$/, '').split('/').pop() || 'site';
+const html = productBulletList(productId, slugVal, otherItems);
+---
+<Fragment set:html={html} />

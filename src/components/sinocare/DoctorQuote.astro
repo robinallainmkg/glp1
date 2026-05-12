@@ -1,0 +1,10 @@
+---
+import { doctorQuote } from '../../lib/sinocareSnippets';
+interface Props { productId: string; slug?: string; quoteBody: string; }
+// quoteBody = string with [PRODUCT] placeholder where product name will be linked
+// Doit être une recommandation factuelle (pas de claim médical inventé)
+const { productId, slug, quoteBody } = Astro.props;
+const slugVal = slug || Astro.url.pathname.replace(/\/$/, '').split('/').pop() || 'site';
+const html = doctorQuote(productId, slugVal, quoteBody);
+---
+<Fragment set:html={html} />

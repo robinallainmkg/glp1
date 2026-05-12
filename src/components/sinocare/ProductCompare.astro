@@ -1,0 +1,8 @@
+---
+import { productCompare } from '../../lib/sinocareSnippets';
+interface Props { productIds: string[]; slug?: string; }
+const { productIds, slug } = Astro.props;
+const slugVal = slug || Astro.url.pathname.replace(/\/$/, '').split('/').pop() || 'site';
+const html = productCompare(productIds, slugVal);
+---
+<Fragment set:html={html} />

@@ -1,0 +1,8 @@
+---
+import { productMention } from '../../lib/sinocareSnippets';
+interface Props { productId: string; slug?: string; linkText?: string; }
+const { productId, slug, linkText } = Astro.props;
+const slugVal = slug || Astro.url.pathname.replace(/\/$/, '').split('/').pop() || 'site';
+const html = productMention(productId, slugVal, linkText);
+---
+<Fragment set:html={html} />

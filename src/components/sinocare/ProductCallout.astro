@@ -1,0 +1,8 @@
+---
+import { productCallout } from '../../lib/sinocareSnippets';
+interface Props { productId: string; slug?: string; title?: string; body?: string; }
+const { productId, slug, title, body } = Astro.props;
+const slugVal = slug || Astro.url.pathname.replace(/\/$/, '').split('/').pop() || 'site';
+const html = productCallout(productId, slugVal, title, body);
+---
+<Fragment set:html={html} />
