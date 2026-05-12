@@ -30,14 +30,34 @@ Saturer le site glp1-france.fr de mentions naturelles de produits Sinocare dans 
 
 ## Phase 1 — Catalogue produits Sinocare (jour 1, ~2h)
 
-### 1.1 Récupérer le catalogue Awin
-Demande au user de te fournir, via son dashboard Awin (programme Sinocare 114180) :
-- Liste des produits avec **deeplinks Awin individuels** (pas le générique vers sinocare.com)
-- Images officielles
-- Prix indicatifs
-- Catégorie (lecteur / bandelettes / tensiomètre / balance / oxymètre / thermomètre)
+### 1.1 Récupérer le catalogue Awin (via Claude in Chrome sur le navigateur du user)
 
-Si le user n'a pas le temps, propose des produits cibles à partir des connaissances génériques (Safe AQ Smart, Safe AQ Voice, AOJ-30A tensiomètre, AOJ-50A balance, oxymètre, thermomètre IR). Marque-les comme `awinmid_TBD` dans le code, à remplacer plus tard.
+**Le user est déjà loggé** sur son compte Awin Publisher (compte 2879557). Tu dois naviguer dans son navigateur pour récupérer les deeplinks. **N'attends pas que le user te fournisse manuellement la liste — fais-le toi-même via Claude in Chrome.**
+
+**URL exacte du Link Builder à ouvrir** :
+```
+https://ui.awin.com/link-builder/fr/awin/publisher/2879557
+```
+
+Procédure :
+1. Utilise `mcp__Claude_in_Chrome__navigate` pour ouvrir cette URL dans son navigateur
+2. Filtrer/chercher l'advertiser **Sinocare** (mid 114180)
+3. Pour chaque produit/landing page intéressant :
+   - Copier le **deeplink Awin** complet (commence par `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&ued=...`)
+   - Noter le nom du produit, prix indicatif, catégorie
+4. Sauvegarder l'image produit si dispo (clic droit → copier l'URL image, ou screenshot via `mcp__Claude_in_Chrome__computer`)
+5. Compiler tout dans `src/lib/sinocareProducts.ts`
+
+**Produits cibles minimum** (à confirmer existence dans Awin Sinocare) :
+- Safe AQ Smart (lecteur Bluetooth) — top fit DT2
+- Safe AQ Voice (lecteur audio seniors)
+- Bandelettes Safe AQ (pack 50 ou 100)
+- AOJ-30A tensiomètre poignet (audience HTA + diabète)
+- AOJ-50A balance impédancemètre Bluetooth ⭐ — top fit obésité 45% trafic
+- Oxymètre Sinocare
+- Thermomètre IR
+
+Si certains produits n'ont pas de deeplink direct dans Awin, utiliser le deeplink générique `ued=https://www.sinocare.com/...` avec la page produit Sinocare.com correspondante.
 
 ### 1.2 Créer `src/lib/sinocareProducts.ts`
 Structure :
@@ -231,9 +251,9 @@ Produit pour le user à la fin :
 ## Pour démarrer
 
 1. **Lire** `CLAUDE.md`, `MEMORY.md`, ce fichier complet
-2. **Demander au user** :
-   - L'awinmid Sensilab (si dispo, pour intégration optionnelle parallèle)
-   - Le catalogue produits Awin avec deeplinks (idéalement screenshot du Link Builder Awin)
-   - L'accord pour démarrer le Sprint 1
-3. **Setup phase 1** : créer `src/lib/sinocareProducts.ts` avec ce qu'on a (deeplinks à compléter)
+2. **Naviguer via Claude in Chrome** sur `https://ui.awin.com/link-builder/fr/awin/publisher/2879557` (le user est déjà loggé). Filtrer programme Sinocare (mid 114180). Récupérer les deeplinks individuels pour les 6-7 produits cibles. Si Claude in Chrome n'est pas dispo dans la session, demande au user de te fournir un screenshot ou la liste CSV des deeplinks.
+3. **Setup phase 1** : créer `src/lib/sinocareProducts.ts` avec le catalogue récupéré
 4. **Présenter le plan détaillé** au user pour validation avant de toucher les articles markdown
+5. **Demander à part au user (en parallèle)** :
+   - L'awinmid Sensilab (si dispo, pour intégration optionnelle parallèle)
+   - L'accord pour démarrer le Sprint 1
