@@ -1,4 +1,4 @@
-# Sprint 4 semaines — Full test monétisation Sinocare via Awin
+# Full intégration Sinocare — 1 session, tout shippé aujourd'hui
 
 Copie/colle TOUT ce qui suit dans une nouvelle session Claude Code. Le repo est dans `C:\Users\robin\glp1\glp1`. Supabase MCP, Google Service Account, Awin (advertiser ID Sinocare 114180) sont déjà configurés.
 
@@ -6,254 +6,274 @@ Copie/colle TOUT ce qui suit dans une nouvelle session Claude Code. Le repo est 
 
 ## Mission
 
-Saturer le site glp1-france.fr de mentions naturelles de produits Sinocare dans le contenu des articles, avec **8 types de placements différents** et **6-7 produits différents** mappés à l'intent de chaque article. L'objectif : remplacer le banner publicitaire (CTR 0,17%) par des **mentions contextuelles natives** qui peuvent atteindre 1-3% de CTR. Mesurer le ROI sur 4 semaines avec tracking `clickref` granulaire.
+**En UNE session aujourd'hui**, intégrer Sinocare massivement dans le site :
+- Catalogue produits avec deeplinks Awin réels (récupérés via le navigateur du user)
+- 8 composants Astro réutilisables pour 8 types de placements différents
+- Mentions naturelles dans ~30-50 articles top trafic, mixant produits × placements
+- Tracking `clickref` granulaire par placement × produit × article
+- Build OK, commit propre par batch, push sur main
 
-**Tu n'es pas un agent autonome — tu présentes ton travail, le user valide, tu commit/push.**
+**Toutes les phases d'analyse + optimisation (semaines suivantes) sont hors scope de cette session.** Tu fais le ship, le user analysera dans 2-3 semaines avec les data Awin + Supabase.
 
-## Contexte projet (lire d'abord)
+## Contexte projet (lire en premier)
 
-- `CLAUDE.md` à la racine (règles projet, stack, ne pas réintroduire Charles, etc.)
-- `MEMORY.md` dans `C:\Users\robin\.claude\projects\C--Users-robin-glp1-glp1\memory\` (état stratégique)
+- `CLAUDE.md` à la racine — règles projet, stack, garde-fous
+- `MEMORY.md` dans `C:\Users\robin\.claude\projects\C--Users-robin-glp1-glp1\memory\` — état stratégique
 
-**Stack** : Astro 4 static, Hostinger FTP, build via `npm run astro:build`. **NE PAS** changer en SSR/hybrid.
-
-**Branche unique** : `main`. Push = deploy auto via GitHub Actions (~3-5 min en scoped mode, ~30 min en full sync si fichier shared touché).
+**Stack** : Astro 4 static, Hostinger FTP, build via `npm run astro:build`. Push main → deploy auto GitHub Actions.
 
 **État monétisation actuel** :
 - **Sinocare** = seul advertiser Awin actif (mid 114180, EPC 0,17€, CR 7,12%)
-- **Annette** = lien direct (pas Awin), top performer actuel à 15 clics/10j sur pages régime/effets/perte-poids
-- **Banner Sinocare global** sur toutes les pages (BaseLayout, StaticLayout, UnifiedLayout) — CTR très bas
-- **Sidebar + inline + bottom CTAs** sur pages GLP-1 (regex large)
-- **GlucoPulse** en pause (page orpheline `/produits/glucopulse/`, ne PAS réactiver)
-- **Sensilab** validé Awin mais pas encore intégré (awinmid à venir du user)
-- **GA4** synced via service account (`scripts/sync-analytics.mjs`, voir `C:\Users\robin\.gcloud\README.md`)
+- **Annette** = top performer actuel (lien direct, ~15 clics/10j) sur pages régime/effets/perte-poids — **NE PAS TOUCHER**
+- Banner global Sinocare déjà en prod sur toutes les pages (`SinocareBanner` dans BaseLayout/StaticLayout/UnifiedLayout) → CTR 0,17% (insuffisant, on remplace par mentions naturelles)
+- Sidebar + inline + bottom Sinocare sur pages GLP-1 déjà en prod
+- **GlucoPulse** en pause, page orpheline `/produits/glucopulse/` — **NE PAS RÉACTIVER**
 
-## Phase 1 — Catalogue produits Sinocare (jour 1, ~2h)
+**Trafic actuel** : ~10 000 sessions/mois, 45% obésité GLP-1, 10% DT2, 20% pharmacies. Top pages : prix-mounjaro (622 sess/10j), prix-wegovy (349), wegovy-remboursement-mutuelle (250), prix-ozempic (230), carte-prix-pharmacies (204).
 
-### 1.1 Récupérer le catalogue Awin (via Claude in Chrome sur le navigateur du user)
+---
 
-**Le user est déjà loggé** sur son compte Awin Publisher (compte 2879557). Tu dois naviguer dans son navigateur pour récupérer les deeplinks. **N'attends pas que le user te fournisse manuellement la liste — fais-le toi-même via Claude in Chrome.**
+## Phase 1 — Catalogue Awin (30-45 min)
 
-**URL exacte du Link Builder à ouvrir** :
+**Le user est déjà loggé** sur son compte Awin Publisher (compte 2879557). Tu navigues toi-même.
+
+### URL exacte du Link Builder
 ```
 https://ui.awin.com/link-builder/fr/awin/publisher/2879557
 ```
 
-Procédure :
-1. Utilise `mcp__Claude_in_Chrome__navigate` pour ouvrir cette URL dans son navigateur
-2. Filtrer/chercher l'advertiser **Sinocare** (mid 114180)
-3. Pour chaque produit/landing page intéressant :
-   - Copier le **deeplink Awin** complet (commence par `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&ued=...`)
-   - Noter le nom du produit, prix indicatif, catégorie
-4. Sauvegarder l'image produit si dispo (clic droit → copier l'URL image, ou screenshot via `mcp__Claude_in_Chrome__computer`)
-5. Compiler tout dans `src/lib/sinocareProducts.ts`
+### Procédure (Claude in Chrome)
+1. `mcp__Claude_in_Chrome__navigate` → URL ci-dessus
+2. Filtrer/chercher advertiser **Sinocare** (mid 114180) — onglet "advertisers" ou search
+3. Pour chaque produit (Safe AQ Smart, Safe AQ Voice, Bandelettes, AOJ-30A tensiomètre, AOJ-50A balance, Oxymètre, Thermomètre IR) :
+   - Si Awin permet deeplink par URL produit : copier le **deeplink Awin complet** (commence par `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=&ued=<URL_produit_sinocare>`)
+   - Si pas dispo : utiliser deeplink générique avec ued = page produit sinocare.com correspondante
+4. Récupérer aussi : nom produit, prix indicatif, catégorie. Image : si dispo dans Awin Creative Library, screenshot via Claude in Chrome ou note l'URL d'image
 
-**Produits cibles minimum** (à confirmer existence dans Awin Sinocare) :
-- Safe AQ Smart (lecteur Bluetooth) — top fit DT2
-- Safe AQ Voice (lecteur audio seniors)
-- Bandelettes Safe AQ (pack 50 ou 100)
-- AOJ-30A tensiomètre poignet (audience HTA + diabète)
-- AOJ-50A balance impédancemètre Bluetooth ⭐ — top fit obésité 45% trafic
-- Oxymètre Sinocare
-- Thermomètre IR
-
-Si certains produits n'ont pas de deeplink direct dans Awin, utiliser le deeplink générique `ued=https://www.sinocare.com/...` avec la page produit Sinocare.com correspondante.
-
-### 1.2 Créer `src/lib/sinocareProducts.ts`
-Structure :
+### Livrable : `src/lib/sinocareProducts.ts`
 ```ts
 export interface SinocareProduct {
   id: string;
   name: string;
   shortDesc: string;
   category: 'glucometer' | 'strips' | 'bp_monitor' | 'scale' | 'oximeter' | 'thermometer';
-  imageUrl: string;          // public/images/sinocare/<id>.jpg
+  imageUrl?: string;          // URL Awin creative ou local path public/images/sinocare/
   priceEur: number;
-  awinDeeplink: string;      // URL complète Awin avec awinmid + awinaffid
-  matchSlugs: string[];      // regex partiels pour matcher articles pertinents
-  matchCollections: string[]; // 'glp1-diabete', 'glp1-perte-de-poids', etc.
+  awinUedUrl: string;         // URL Sinocare cible (le `ued` du deeplink, sans le wrapper Awin)
+  matchSlugs: string[];       // patterns à matcher dans slugs articles
+  matchCollections: string[]; // collections matchées
 }
 
 export const SINOCARE_PRODUCTS: SinocareProduct[] = [
-  { id: 'safe-aq-smart', name: 'Safe AQ Smart', category: 'glucometer',
-    matchSlugs: ['ozempic', 'trulicity', 'victoza', 'rybelsus', 'diabete', 'glycemie'],
-    matchCollections: ['glp1-diabete'],
-    /* ... */
-  },
-  // ...
+  // 6-7 produits remplis avec les vrais deeplinks
 ];
 
-// Helper : retourne les produits adaptés à un article donné
-export function getProductsForArticle(slug: string, collection?: string): SinocareProduct[];
+const AWIN_MID = '114180';
+const AWIN_AFFID = '2879557';
 
-// Helper : génère deeplink avec clickref unique
-export function buildAwinUrl(product: SinocareProduct, placement: string, slug: string): string;
+export function buildAwinUrl(productId: string, placement: string, slug: string): string {
+  const p = SINOCARE_PRODUCTS.find(x => x.id === productId);
+  if (!p) return '';
+  const clickref = `glp1france_${placement}_${productId}_${slug}`.toLowerCase().replace(/[^a-z0-9_-]/g, '');
+  return `https://www.awin1.com/cread.php?awinmid=${AWIN_MID}&awinaffid=${AWIN_AFFID}&clickref=${encodeURIComponent(clickref)}&ued=${encodeURIComponent(p.awinUedUrl)}`;
+}
+
+export function getProductsForArticle(slug: string, collection?: string): SinocareProduct[] {
+  // match slugs + collections, return top 2-3 products relevant
+}
 ```
 
-## Phase 2 — 8 composants Astro réutilisables (jour 2-3, ~1 jour)
+---
 
-Crée dans `src/components/sinocare/` (nouveau dossier) :
+## Phase 2 — 8 composants Astro (1-1h30)
+
+Crée dossier `src/components/sinocare/` avec ces 8 composants. Chacun ~80-120 lignes max, scoped CSS (pas d'inline), responsive, accessible, `rel="sponsored noopener"`, `target="_blank"`, disclosure "Lien sponsorisé" en petit.
 
 ### `ProductMention.astro`
-Mention inline dans un paragraphe (lien hyperlinké court). Pour insertion dans markdown via syntaxe MDX ou via composant import.
-```html
-<ProductMention productId="safe-aq-smart" placement="inline" />
-→ rendu : <a href="awin..." rel="sponsored">Sinocare Safe AQ Smart</a>
-```
+Hyperlinked text inline, court (1-2 mots cliquables dans un paragraphe). Pour utilisation en markdown : passer en HTML brut `<a href="..." rel="sponsored">Sinocare Safe AQ Smart</a>` via composant ou directement dans le markdown des articles.
 
 ### `ProductCard.astro`
-Carte minimaliste avec image + titre + prix + CTA bouton. Pour intégrer en bordure d'article (entre 2 paragraphes).
+Carte minimaliste 320px max : image + titre + prix + CTA bouton. Insertion entre 2 paragraphes article.
 
 ### `ProductCompare.astro`
-Encart "Comparer 3 produits" avec table (modèle / prix / specs / lien chacun).
+Table "Comparer X produits" — 2-3 colonnes (modèle / prix / specs principales / CTA chacun).
 
 ### `ProductBulletList.astro`
-Liste à puces avec produit en première ligne, link inline naturel.
+Liste à puces stylée avec premier item = produit Sinocare (hyperlink inline naturel).
 
 ### `ProductCallout.astro`
-Encart vert/orange "💡 Pratique" avec recommandation produit (style médical, factuel).
+Encart "💡 Pratique" vert pastel (style médical/conseil) avec produit recommandé.
 
 ### `ProductImageWithCaption.astro`
-Visuel produit + caption + lien (style éditorial).
+Image produit pleine largeur + caption (mode éditorial), avec lien Awin.
 
 ### `DoctorQuote.astro` ⚠️
-Citation médecin avec mention produit. **À utiliser SEULEMENT pour des produits avec recommandation médicale réelle**, pas fake. Tu peux citer le **Dr Marie Dubois** (auteure du site, voir `/auteurs/dr-marie-dubois/`) **uniquement si la recommandation est factuelle** ("le Dr. Dubois recommande à ses patients DT2 sous Trulicity un lecteur fiable comme [link]"). Pas de fausse autorité.
+Citation **Dr Marie Dubois** (auteure du site, page `/auteurs/dr-marie-dubois/`) avec mention produit. **Recommandation factuelle uniquement** ("pour le suivi sous Trulicity, j'oriente mes patients vers un lecteur fiable comme [X]"). Pas de fausse autorité ni de claim médical inventé.
 
 ### `ProductFooter.astro`
-Encart en fin d'article style "Le matériel mentionné dans cet article : [3 liens produits]". Comme une bibliographie de produits.
+Encart fin d'article style "Matériel mentionné dans cet article" → 2-3 produits cités avec liens, bibliographie de produits.
 
-**Pour chaque composant** :
-- Image + texte + lien Awin
-- `clickref` unique : `glp1france_<componentType>_<productId>_<articleSlug>`
-- Disclosure "lien sponsorisé" en petit
-- `rel="sponsored noopener"` `target="_blank"`
-- Styles scoped CSS (PAS d'inline styles, leçon du audit précédent)
-- Responsive mobile
-- Pas plus de 80-120 lignes par composant
+**Props standard pour TOUS les composants** :
+```ts
+interface Props {
+  productId: string;        // id du SINOCARE_PRODUCTS
+  placement: string;        // type placement pour clickref ('inline', 'card', 'compare', etc.)
+  slug?: string;            // slug article courant (auto-injecté si possible via Astro.url)
+}
+```
 
-## Phase 3 — Audit des 80 articles top trafic (jour 4)
+Chaque composant utilise `buildAwinUrl(productId, placement, slug)` pour générer le lien tracké.
 
-Query Supabase pour obtenir les 80 pages article les plus visitées (30 derniers jours) :
+---
+
+## Phase 3 — Audit + mapping articles (30 min)
+
+### Query Supabase pour top trafic
 ```sql
 SELECT page_path, SUM(sessions) AS sessions
 FROM ga_metrics
 WHERE date >= CURRENT_DATE - INTERVAL '30 days'
   AND page_path ~ '^/collections/'
 GROUP BY page_path
-ORDER BY sessions DESC LIMIT 80;
+ORDER BY sessions DESC LIMIT 50;
 ```
 
-Pour chaque article :
-1. Lire le markdown source (`src/content/<collection>/<slug>.md`)
-2. Identifier 2-4 emplacements naturels pour mentions produit
-3. Choisir le produit Sinocare matché via `getProductsForArticle()`
-4. Choisir le type de placement (varier les 8 types pour pouvoir comparer)
-5. Préparer un commit avec les modifications
+### Pareto : viser 30-50 articles qui font 80% du trafic article
+Probables top buckets :
+- Prix : prix-mounjaro, prix-wegovy, prix-ozempic, prix-saxenda, prix-rybelsus, prix-trulicity, prix-zepbound (7 articles)
+- Remboursement : wegovy-remboursement-mutuelle + cluster 8 mutuelles (9 articles)
+- Cross-border : 5 articles Espagne/Allemagne/Belgique/Portugal/Europe
+- Guides traitements : guide-complet-{ozempic, wegovy, mounjaro, trulicity, victoza, rybelsus, saxenda, zepbound} (8 articles)
+- Effets secondaires : effets-mounjaro, wegovy, ozempic + spécifiques (5-8 articles)
+- Perte de poids : guides perte-poids (5 articles)
+- Régime : régime-mounjaro-optimal, guides alimentation (5 articles)
 
-**Règles éditoriales (importantes)** :
-- ✅ Mention factuelle : "Beaucoup de patients utilisent un lecteur connecté type Sinocare Safe AQ Smart"
-- ✅ Contextuelle : si l'article parle d'hypoglycémie, mentionner naturellement la surveillance glycémique
-- ❌ Pas de surenchère : pas plus de 3 mentions Sinocare par article (sinon ça fait pub agressive)
-- ❌ Pas de fausses citations médicales
-- ❌ Pas de "achetez maintenant !!" — ton éditorial
-- ✅ Disclosure : footer "lien sponsorisé" sur chaque mention
+Total : ~40-50 articles top trafic.
 
-## Phase 4 — Implémentation par sprints
+### Mapping produit × placement par bucket
+| Bucket article | Produit Sinocare prioritaire | Placement type prioritaire |
+|---|---|---|
+| Prix DT2 (Ozempic, Trulicity, Victoza, Rybelsus) | Safe AQ Smart + Bandelettes | ProductCard + Callout |
+| Prix obésité (Mounjaro, Wegovy, Saxenda, Zepbound) | **AOJ-50A balance** ⭐ + Safe AQ Smart (cross-sell) | ProductCallout + Compare |
+| Remboursement / mutuelle | Safe AQ Smart (cher à long terme → suivi mutuelle) | ProductMention inline |
+| Cross-border | Pack bandelettes (cher chez l'étranger) | ProductCard + Footer |
+| Guides traitements | Lecteur adapté au traitement + Bandelettes | ProductCard + DoctorQuote |
+| Effets secondaires (hypo/hyper) | Safe AQ Voice (audio alarmes) | ProductCallout |
+| Perte de poids | **AOJ-50A balance** ⭐ + Tensiomètre AOJ-30A | ProductCompare |
+| Régime alimentaire | AOJ-50A balance + Glucomètre (suivi post-meal) | ProductBulletList |
 
-### Sprint 1 (semaine 1) — 20 articles top trafic
-Concentre sur les pages qui font le plus de sessions :
-- prix-mounjaro-france (622 sess/10j)
-- prix-wegovy-france (349)
-- prix-ozempic-france (230)
-- wegovy-remboursement-mutuelle (250)
-- carte-prix-pharmacies (204) — pas un article mais reformuler le widget partenaire
-- guide-complet-ozempic (DT2 fit fort)
-- guide-complet-trulicity, victoza, rybelsus
-- glp1-perte-de-poids/* (audience balance Sinocare AOJ-50A)
-- effets-secondaires-mounjaro
-- 10 autres
+### Règle d'or
+- **Max 3 mentions Sinocare par article** (sinon ça fait pub agressive)
+- Varier les placement types par article (test ANOVA possible)
+- Mentions naturelles, contextuelles, jamais agressives
 
-**Pour chaque article modifié** : commit message clair, message format :
+---
+
+## Phase 4 — Implémentation massive dans les articles (2-3h)
+
+**Approche** : modifier les fichiers markdown directement dans `src/content/<collection>/<slug>.md`.
+
+### Workflow par article (~3-5 min/article)
+1. Read le markdown source
+2. Identifier 2-3 emplacements naturels (entre 2 paragraphes, dans une liste, après un H2 spécifique)
+3. Choisir produit via `getProductsForArticle(slug, collection)`
+4. Insérer composant via `import` Astro + JSX, OU lien brut HTML pour mentions inline simples
+5. Vérifier que le rendu est cohérent (visuel via Claude in Chrome si doute)
+
+### Pour insérer un composant Astro dans un markdown
+Dans un .md (avec collections Astro) :
+```markdown
+---
+title: ...
+---
+
+Texte d'article...
+
+import ProductCard from '../../components/sinocare/ProductCard.astro';
+<ProductCard productId="aoj-50a-balance" placement="card" slug="prix-mounjaro-france" />
+
+Suite du texte...
 ```
-feat(content): integrate Sinocare mentions in <article-slug>
 
-- <X> placements : <list types>
-- Products mentioned: <list products>
-- Tracking : <list clickref patterns>
+OU plus simple : insérer le lien HTML directement (pas besoin de composant pour ProductMention) :
+```markdown
+Beaucoup de patients utilisent un [lecteur connecté Sinocare Safe AQ Smart](https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_inline_safe-aq-smart_prix-mounjaro&ued=...) pour suivre l'effet du traitement.
 ```
 
-### Sprint 2 (semaine 2) — Extension 40 articles
-Tous les guides traitements + articles régime + effets secondaires + DT2.
+**Préférence** : composants Astro pour ProductCard/ProductCompare/ProductCallout/etc. (visuels), liens markdown brut pour ProductMention inline (text-only).
 
-### Sprint 3 (semaine 3) — Analyse
-**Query Supabase + dashboard Awin** :
-```sql
--- Clics par placement type + produit
-SELECT 
-  campaign, -- = clickref pattern
-  COUNT(*) AS clicks,
-  COUNT(DISTINCT page_url) AS unique_pages,
-  COUNT(DISTINCT session_id) AS sessions
-FROM affiliate_clicks
-WHERE partner = 'sinocare' AND created_at >= '2026-05-12'  -- start sprint
-GROUP BY campaign
-ORDER BY clicks DESC;
+### Batches de commits
+Pour faciliter le rollback si problème, **un commit par batch de 5-10 articles** :
+- Batch 1 : 7 articles prix
+- Batch 2 : 9 articles mutuelles
+- Batch 3 : 5 articles cross-border
+- Batch 4 : 8 articles guides traitements
+- Batch 5 : 6-8 articles effets secondaires
+- Batch 6 : 5 articles perte-poids
+- Batch 7 : 5 articles régime
+
+Messages de commit format :
+```
+feat(content): integrate Sinocare mentions in <bucket> (N articles)
+
+- Products: <list>
+- Placements: <list types>
+- Tracking patterns: glp1france_<placement>_<product>_<slug>
 ```
 
-Croiser avec **Awin dashboard** (conversions, EPC, commission par `clickref`). Identifier :
-- Top 5 placement types (par clicks et par CR)
-- Top 5 products (par revenue)
-- Top 5 articles monétisés
-- Bottom 5 placements flops (à retirer)
+---
 
-### Sprint 4 (semaine 4) — Optimisation
-- Retirer les placements zéro
-- Doubler les top 3 placements sur 20 articles supplémentaires
-- A/B test wording sur les top mentions (2 variantes pour les 5 articles les plus visités)
+## Phase 5 — Build + verify + push (30 min)
 
-## Phase 5 — Livrables finaux
+1. `npm run astro:build` — vérifier 0 erreur
+2. Si la session a Claude in Chrome : ouvrir 3-5 articles sur le dev server (localhost:4327) pour vérif visuelle (no broken layout, pas de double lien, disclosure visible)
+3. Push final : `git push origin main`
+4. Wait deploy (notification GitHub Actions, ~3-5 min en scoped mode)
+5. Vérif prod sur 2-3 pages live
 
-Produit pour le user à la fin :
-- `SPRINT-SINOCARE-RAPPORT.md` à la racine : 
-  - Trafic mensuel projeté + actuel
-  - Clics Sinocare avant/pendant/après sprint
-  - Revenu généré (Awin commission)
-  - Top placements / produits / articles
-  - Recommandations pour le mois suivant
-- `src/lib/sinocareProducts.ts` configuré et maintenu à jour
-- 80 articles modifiés avec mentions produit naturelles
-- 8 composants Astro réutilisables propres
-- Documentation `src/components/sinocare/README.md` pour usage futur
+---
+
+## Phases suivantes (hors scope cette session, pour info)
+
+- **Semaine 2-3** : laisser tourner, attendre data Awin + Supabase
+- **Semaine 4** : analyse query (`affiliate_clicks` par `clickref`), identifier top placements/produits/articles, retirer les flops, doubler les gagnants, A/B test wording
+
+Le user lancera une nouvelle session pour ces phases avec un rapport demandé.
+
+---
 
 ## Garde-fous critiques
 
-- **NE JAMAIS** réactiver Charles ou réintroduire `CharlesCTA`
-- **NE JAMAIS** réactiver GlucoPulse comme produit (page orpheline OK, mais aucun entry point)
-- **PAS** de fausses citations médicales (E-E-A-T YMYL santé)
-- **TOUJOURS** disclosure "sponsorisé" sur les liens affiliés
+- **NE JAMAIS** réactiver Charles, CharlesCTA, CharlesSidebar (supprimés)
+- **NE JAMAIS** réactiver GlucoPulse (page orpheline volontaire)
+- **NE PAS** toucher à Annette (top performer actuel)
 - **NE PAS** dépasser 3 mentions Sinocare par article
-- **NE PAS** modifier la nav (SiteHeader / SiteFooter) sans demande explicite
-- **NE PAS** toucher au sync GA / service account (déjà OK)
-- **NE PAS** commiter `secrets/` ou clés
+- **PAS** de fausses citations médicales du Dr Dubois (E-E-A-T YMYL)
+- **TOUJOURS** disclosure "lien sponsorisé" visible
+- **NE PAS** modifier nav (SiteHeader/Footer) sauf demande explicite
+- **NE PAS** toucher au sync GA / service account
+- **NE PAS** commit `secrets/`, `.env`, clés
 - **NE PAS** push sans build local OK
-- **VÉRIFIER** visuellement chaque article modifié (Claude in Chrome ou preview) avant commit
-- **DEPLOYER PAR SPRINT** (1 commit par batch d'articles, pas un commit géant)
+- **Output Astro reste `static`** (PAS de SSR/hybrid)
 
 ## Tools disponibles
 
-- Tous les outils Read/Edit/Write/Glob/Grep/Bash
+- Read/Edit/Write/Glob/Grep/Bash (built-in)
 - Supabase MCP (`mcp__100191b9-c65d-4d9c-9c03-438c9d242175__execute_sql`)
-- Google Analytics via `scripts/sync-analytics.mjs --days 30`
-- Claude in Chrome pour la vérif visuelle
-- WebSearch pour vérifier specs produits Sinocare
-- WebFetch pour récupérer info Awin dashboard si dispo
+- Claude in Chrome (`mcp__Claude_in_Chrome__navigate`, `javascript_tool`, `computer`, `tabs_context_mcp`)
+- GA via `scripts/sync-analytics.mjs` (sync déjà à jour)
+- WebSearch / WebFetch
 
 ## Pour démarrer
 
-1. **Lire** `CLAUDE.md`, `MEMORY.md`, ce fichier complet
-2. **Naviguer via Claude in Chrome** sur `https://ui.awin.com/link-builder/fr/awin/publisher/2879557` (le user est déjà loggé). Filtrer programme Sinocare (mid 114180). Récupérer les deeplinks individuels pour les 6-7 produits cibles. Si Claude in Chrome n'est pas dispo dans la session, demande au user de te fournir un screenshot ou la liste CSV des deeplinks.
-3. **Setup phase 1** : créer `src/lib/sinocareProducts.ts` avec le catalogue récupéré
-4. **Présenter le plan détaillé** au user pour validation avant de toucher les articles markdown
-5. **Demander à part au user (en parallèle)** :
-   - L'awinmid Sensilab (si dispo, pour intégration optionnelle parallèle)
-   - L'accord pour démarrer le Sprint 1
+1. **Lire** `CLAUDE.md`, `MEMORY.md`, ce fichier entier
+2. **Naviguer via Claude in Chrome** sur `https://ui.awin.com/link-builder/fr/awin/publisher/2879557` (user déjà loggé). Récupérer les deeplinks Sinocare.
+3. **Setup** : `src/lib/sinocareProducts.ts` avec catalogue rempli
+4. **Build les 8 composants** Astro dans `src/components/sinocare/`
+5. **Query Supabase** pour la liste des top articles
+6. **Implémenter les mentions** dans les articles markdown, batch par batch, avec commit/push par batch
+7. **Final** : verify prod + résumé final au user
+
+**Demande au user en début** :
+- L'awinmid Sensilab si dispo (pour intégration bonus parallèle)
+- Confirmation de proceed sans validation intermédiaire (one-shot ship)
