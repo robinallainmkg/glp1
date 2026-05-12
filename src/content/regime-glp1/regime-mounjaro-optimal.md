@@ -35,6 +35,13 @@ Le **régime Mounjaro optimal** combine les effets du tirzepatide avec une alime
 - **Semaines 5-8** : Réduction de 40% avec stabilisation — adaptez selon le [dosage du Mounjaro](/collections/traitements-glp1/mounjaro-dosage/) prescrit par votre médecin
 - **Maintenance** : Portions adaptées à la satiété naturelle
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Adapter son régime via la courbe glycémique</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Sous Mounjaro, votre tolérance aux glucides change rapidement. Un capteur de glycémie continue (CGM) Sinocare iCan i3 sur 15 jours permet d'identifier les aliments qui provoquent pics et hypoglycémies, et d'ajuster en conséquence.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_ican-cgm_regime-mounjaro-optimal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 ### 2. Aliments Prioritaires
 
 #### <a href="/collections/régime-glp1/glp1-protéines/">Protéines de Qualité</a> (30-35% des calories)
@@ -195,3 +202,9 @@ Pour en savoir plus sur les conditions d'accès et le remboursement, consultez n
 ---
 
 *Ce guide est fourni à titre informatif. Consultez toujours votre médecin avant d'entreprendre un nouveau régime alimentaire, particulièrement lors d'un traitement par Mounjaro.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_regime-mounjaro-optimal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_bp-monitor-arm_regime-mounjaro-optimal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Tensiomètre Sinocare bras</a> — Tensiomètre haut du bras — double mémoire <span style="color:#94a3b8;">(dès 34,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-air_regime-mounjaro-optimal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-air-bluetooth-blood-sugar-monitor" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Air Bluetooth</a> — Lecteur Bluetooth — sync app smartphone <span style="color:#94a3b8;">(dès 22,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>
