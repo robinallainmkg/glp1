@@ -200,7 +200,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 
 ## 🛒 Ozempic Sans Ordonnance : Prix et Risques en 2026
 
-**Peut-on acheter Ozempic sans ordonnance en France ?** Non. **Ozempic est un médicament délivré uniquement sur prescription médicale** (liste I) en pharmacie. Les sites proposant **Ozempic sans ordonnance** sont **illégaux** (article L.5125-25 CSP) et exposent à des **contrefaçons dangereuses** signalées par l'ANSM. Le **prix Ozempic sans ordonnance** affiché sur ces sites (parfois 60-90€) ne couvre aucune garantie de traçabilité ni de stérilité. La voie légale : consulter un médecin (généraliste, endocrinologue) ou utiliser une **téléconsultation agréée** comme [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_article_inline) pour obtenir une ordonnance valide. Sans remboursement Sécu (hors diabète), comptez **155€/mois** au prix libre en pharmacie.
+**Peut-on acheter Ozempic sans ordonnance en France ?** Non. **Ozempic est un médicament délivré uniquement sur prescription médicale** (liste I) en pharmacie. Les sites proposant **Ozempic sans ordonnance** sont **illégaux** (article L.5125-25 CSP) et exposent à des **contrefaçons dangereuses** signalées par l'ANSM. Le **prix Ozempic sans ordonnance** affiché sur ces sites (parfois 60-90€) ne couvre aucune garantie de traçabilité ni de stérilité. La voie légale : consulter un médecin (généraliste, endocrinologue) ou une plateforme de **téléconsultation agréée** pour obtenir une ordonnance valide. Sans remboursement Sécu (hors diabète), comptez **155€/mois** au prix libre en pharmacie.
 
 ## 🛒 Acheter Ozempic en France
 

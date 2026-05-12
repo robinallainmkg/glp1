@@ -50,38 +50,20 @@ const articleContent = props.articleContent ?? article?.body ?? '';
 const availableProducts = props.availableProducts ?? props.affiliateProducts ?? [];
 const detectedCategory = props.detectedCategory ?? props.category ?? (article?.data?.collection || article?.collection) ?? null;
 
-// Routage partenaire selon l'intention (collection + slug + path)
+// SINOCARE ONLY — politique 100% Sinocare confirmée par le user (12/05/2026).
+// Plus de routing partenaire (Annette/Mutuelle/Charles désactivés au niveau layout).
+// Les inserts contextuels par article sont gérés via le sprint Sinocare (sinocareSnippets.ts).
 const articleSlug = (article?.slug as string | undefined)
   ?? (article?.data?.slug as string | undefined)
   ?? (typeof Astro.url?.pathname === 'string' ? Astro.url.pathname.split('/').filter(Boolean).pop() : undefined);
-const routeInput = {
-  collection: detectedCategory || undefined,
-  slug: articleSlug,
-  path: typeof Astro.url?.pathname === 'string' ? Astro.url.pathname : undefined,
-};
-const partner = getPartnerForArticle(routeInput);
-const inlinePartner = oppositePartner(partner);
-const sidebarOrder = getSidebarOrder({ ...routeInput, routed: partner });
 
-// Anti-self-loop : si on est SUR une page de destination d'un partenaire, on ne montre
-// PAS le CTA correspondant (ni inline, ni sidebar) — sinon le visiteur clique vers la page
-// où il est déjà. On affiche uniquement le partenaire opposé sur ces pages.
-const onDestination = isPartnerDestination(routeInput);
-const safePartners: Set<typeof partner> = new Set(['annette', 'mutuelle']);
-if (onDestination) safePartners.delete(onDestination);
-const showInlineMutuelle = inlinePartner === 'mutuelle' && safePartners.has('mutuelle');
-const showInlineAnnette = inlinePartner === 'annette' && safePartners.has('annette');
-const filteredSidebarOrder = sidebarOrder.filter((p) => safePartners.has(p));
-
-// Sinocare = SEUL CTA monétisable sur pages GLP-1 (Awin actif, advertiser ID 114180).
-// Regex large : toutes les pages prix + tous les guides GLP-1 + collection diabète.
-// GlucoPulse en PAUSE — la page existe encore mais aucun entry point depuis les articles.
-const articleSlugLower = (articleSlug || '').toLowerCase();
-const collectionLower = (detectedCategory || '').toLowerCase();
-const showSinocare =
-  collectionLower === 'glp1-diabete' ||
-  collectionLower === 'glp1-cout' ||
-  /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2|ozempic|wegovy|mounjaro|trulicity|victoza|rybelsus|saxenda|zepbound|semaglutide|tirzepatide|liraglutide|dulaglutide)/.test(articleSlugLower);
+// On force Sinocare partout — kill switch des autres partenaires côté layout.
+const showSinocare = true;
+const showInlineMutuelle = false;
+const showInlineAnnette = false;
+const partner: 'annette' | 'mutuelle' | null = null;
+const filteredSidebarOrder: Array<'annette' | 'mutuelle'> = [];
+const safePartners = new Set<'annette' | 'mutuelle'>();
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];

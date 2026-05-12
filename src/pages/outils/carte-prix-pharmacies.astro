@@ -884,13 +884,9 @@ const updatedFr = stats.updated_at
     document.getElementById('drawer-submit-btn')?.addEventListener('click', (e) => {
       const action = e.currentTarget.dataset.action;
       closePharmacyDrawer();
-      if (action === 'external-charles') {
-        // Charles retiré 2026-05 + GlucoPulse en pause 2026-05 — redirige vers Sinocare (Awin actif)
-        window.open('https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_carte_drawer&ued=https%3A%2F%2Fwww.sinocare.com%2F', '_blank', 'noopener');
-        return;
-      }
-      if (action === 'external-annette') {
-        window.open('https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=carte_cso', '_blank', 'noopener');
+      if (action === 'external-charles' || action === 'external-annette') {
+        // Sinocare-only policy (2026-05-12) : tous les anciens partners redirigent vers la fiche produit Safe AQ Smart
+        window.open('https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_carte_drawer&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer', '_blank', 'noopener');
         return;
       }
       // Default : soumission pharmacie
