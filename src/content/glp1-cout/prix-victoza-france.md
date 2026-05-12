@@ -75,6 +75,13 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 ### Tarifs selon le dosage
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Kit démarrage suivi glycémie</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Pour les patients démarrant un GLP-1 comme Victoza, un kit complet (glucomètre + bandelettes + lancettes) simplifie le démarrage de l'autosurveillance.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_safe-aq-pro-i_prix-victoza-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-pro-i-blood-glucose-meter" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 | Dosage | Prix par stylo | Prix mensuel estimé |
 |--------|----------------|-------------------|
 | 6 mg/ml (2 stylos) | ~48,42 € | ~48,42-72,63 € selon posologie |
@@ -232,3 +239,9 @@ thumbnailAlt: "Prix et coût du traitement victoza-france"
 
 
 *Prix mis à jour en janvier 2025. Les tarifs peuvent varier selon les pharmacies et régions.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-pro-i_prix-victoza-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-pro-i-blood-glucose-meter" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Pro I</a> — Kit complet glucomètre + bandelettes <span style="color:#94a3b8;">(dès 19,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_prix-victoza-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_prix-victoza-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles 32G 4mm pour stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>
