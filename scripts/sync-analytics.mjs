@@ -198,8 +198,22 @@ function appendToEnv(key, value) {
 // =============================================================================
 // Auth — Service Account (preferred) ou OAuth refresh token (legacy fallback)
 // =============================================================================
+//
+// Le service account JSON est cherché dans 3 endroits par ordre de priorité :
+//   1. $GOOGLE_APPLICATION_CREDENTIALS (variable d'env standard Google)
+//      → recommandé : un seul JSON centralisé pour tous tes projets.
+//      → set via : [Environment]::SetEnvironmentVariable('GOOGLE_APPLICATION_CREDENTIALS', '<path>', 'User')
+//      → typique : C:\Users\<user>\.gcloud\ga-service-account.json
+//   2. secrets/ga-service-account.json (local au repo, fallback portable)
+//   3. OAuth refresh token via .env (legacy, déprécié — expire dans 6 mois)
 
-const SA_PATH = join(PROJECT_ROOT, 'secrets', 'ga-service-account.json');
+function resolveServiceAccountPath() {
+  const envPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+  if (envPath && existsSync(envPath)) return envPath;
+  const localPath = join(PROJECT_ROOT, 'secrets', 'ga-service-account.json');
+  if (existsSync(localPath)) return localPath;
+  return null;
+}
 
 function base64UrlEncode(buf) {
   return Buffer.from(buf)
@@ -210,7 +224,9 @@ function base64UrlEncode(buf) {
 }
 
 async function getServiceAccountToken() {
-  const sa = JSON.parse(readFileSync(SA_PATH, 'utf-8'));
+  const saPath = resolveServiceAccountPath();
+  if (!saPath) throw new Error('Service account JSON introuvable (ni $GOOGLE_APPLICATION_CREDENTIALS ni secrets/ga-service-account.json)');
+  const sa = JSON.parse(readFileSync(saPath, 'utf-8'));
   const now = Math.floor(Date.now() / 1000);
   const header = { alg: 'RS256', typ: 'JWT' };
   const payload = {
@@ -261,8 +277,9 @@ async function getOAuthToken() {
 
 async function getAccessToken() {
   // Préfère service account si dispo (plus de refresh token qui expire)
-  if (existsSync(SA_PATH)) {
-    console.log('🔑 Auth via service account (secrets/ga-service-account.json)');
+  const saPath = resolveServiceAccountPath();
+  if (saPath) {
+    console.log(`🔑 Auth via service account (${saPath})`);
     return getServiceAccountToken();
   }
   console.log('🔑 Auth via OAuth refresh token (legacy)');
