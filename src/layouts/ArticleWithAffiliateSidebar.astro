@@ -8,6 +8,7 @@ import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
 import SinocareCTA from '../components/SinocareCTA.astro';
 import ProductCard from '../components/ProductCard.astro';
+import ProductSidebar from '../components/ProductSidebar.astro';
 import OutOfStockModal from '../components/OutOfStockModal.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
@@ -74,13 +75,18 @@ const showInlineMutuelle = inlinePartner === 'mutuelle' && safePartners.has('mut
 const showInlineAnnette = inlinePartner === 'annette' && safePartners.has('annette');
 const filteredSidebarOrder = sidebarOrder.filter((p) => safePartners.has(p));
 
-// Sinocare cross-sell : afficher CTA secondaire sur pages où l'audience est susceptible
-// d'avoir besoin d'un lecteur de glycémie : DT2 (Ozempic, Trulicity, Victoza, Rybelsus,
-// metformine, iSGLT2) + slugs explicites diabète/glycémie/insuline.
+// GlucoPulse test isolé — pages où on pousse notre propre lecteur de glycémie.
+// Regex large : toutes les pages prix + tous les guides GLP-1 + collection diabète.
+// Sur ces pages, GlucoPulse est le SEUL CTA (pas de Sinocare/Annette/Mutuelle) pour
+// que le test fake-door capture un signal d'intent propre.
 const articleSlugLower = (articleSlug || '').toLowerCase();
 const collectionLower = (detectedCategory || '').toLowerCase();
-const showSinocare = collectionLower === 'glp1-diabete'
-  || /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2|ozempic|trulicity|victoza|rybelsus)/.test(articleSlugLower);
+const showGlucoPulse =
+  collectionLower === 'glp1-diabete' ||
+  collectionLower === 'glp1-cout' ||
+  /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2|ozempic|wegovy|mounjaro|trulicity|victoza|rybelsus|saxenda|zepbound|semaglutide|tirzepatide|liraglutide|dulaglutide)/.test(articleSlugLower);
+// Sinocare désactivé pendant le test GlucoPulse (audience identique = signal pollué).
+const showSinocare = false;
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
@@ -182,28 +188,36 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTA Partenaire : inline = opposé du routé (les 2 partenaires sur la page),
-             bottom = partenaire routé selon l'intention.
-             Mai 2026 : Charles retiré (mismatch intention), remplacé par MutuelleCTA (Awin). -->
-        <div id="partner-cta-template" style="display:none;">
-          {showInlineMutuelle && <MutuelleCTA context="article_inline" />}
-          {showInlineAnnette && <PartnerCTA partner="annette" context="article_inline" />}
-        </div>
-        {partner === 'mutuelle' && safePartners.has('mutuelle') && <MutuelleCTA context="article" />}
-        {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
-        {showSinocare && <ProductCard productId="glucopulse" context={`diabete_${articleSlug || 'article'}`} />}
-        {showSinocare && <SinocareCTA context={`diabete_${articleSlug || 'article'}`} />}
+        <!-- CTAs : sur les pages GLP-1 (showGlucoPulse), seul ProductCard est affiché —
+             test isolé pour mesurer l'intent réel sur notre produit. Sur les autres pages,
+             logique partenaire historique (annette/mutuelle inline + bottom). -->
+        {!showGlucoPulse && (
+          <>
+            <div id="partner-cta-template" style="display:none;">
+              {showInlineMutuelle && <MutuelleCTA context="article_inline" />}
+              {showInlineAnnette && <PartnerCTA partner="annette" context="article_inline" />}
+            </div>
+            {partner === 'mutuelle' && safePartners.has('mutuelle') && <MutuelleCTA context="article" />}
+            {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
+          </>
+        )}
+        {showGlucoPulse && (
+          <div id="partner-cta-template" style="display:none;">
+            <ProductCard productId="glucopulse" context={`glp1_${articleSlug || 'article'}`} />
+          </div>
+        )}
+        {showGlucoPulse && <ProductCard productId="glucopulse" context={`glp1_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
         </div>
       </article>
 
-      <!-- Sidebars partenaires : ordre alterné par article (hash du slug).
-           Sur une page de destination, on filtre la sidebar du partenaire correspondant
-           (anti-self-loop). -->
+      <!-- Sidebars : sur pages GLP-1 → ProductSidebar GlucoPulse seul (test isolé).
+           Sur autres pages → logique partenaire historique (annette/mutuelle alternées). -->
       <div class="partner-sidebar-stack">
-        {filteredSidebarOrder.map((p) => (
+        {showGlucoPulse && <ProductSidebar productId="glucopulse" context={`glp1_${articleSlug || 'article'}`} />}
+        {!showGlucoPulse && filteredSidebarOrder.map((p) => (
           p === 'mutuelle'
             ? <MutuelleSidebar context={p === partner ? 'article' : 'article_secondary'} />
             : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />
@@ -215,8 +229,8 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
     <RelatedArticles currentPath={Astro.url.pathname} maxLinks={6} />
   </main>
 
-  {/* Modal "out-of-stock" — déclenché par les boutons [data-checkout-trigger] dans ProductCard */}
-  {showSinocare && <OutOfStockModal />}
+  {/* Modal "out-of-stock" — déclenché par tous les boutons [data-checkout-trigger] (ProductCard, ProductSidebar) */}
+  {showGlucoPulse && <OutOfStockModal />}
 </BaseLayout>
 
 <style>

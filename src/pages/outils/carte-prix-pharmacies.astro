@@ -885,7 +885,8 @@ const updatedFr = stats.updated_at
       const action = e.currentTarget.dataset.action;
       closePharmacyDrawer();
       if (action === 'external-charles') {
-        window.open('https://poids.charles.co/?utm_source=affiliation&utm_medium=glp1france&utm_campaign=carte_endocrinologues', '_blank', 'noopener');
+        // Charles retiré 2026-05 — redirige vers notre fiche produit GlucoPulse
+        window.location.href = '/produits/glucopulse/?source=carte_drawer';
         return;
       }
       if (action === 'external-annette') {
