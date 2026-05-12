@@ -83,7 +83,7 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,5 à -2%)
 - Perte de poids moyenne de 5-10 kg
-- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) du sémaglutide — voir aussi le [témoignage de Bernard, diabétique type 2, -18 kg sous Ozempic](/collections/témoignages/témoignage-homme-diabete-type2-ozempic-perte-poids/)
+- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) du sémaglutide — voir aussi le [témoignage de Bernard, diabétique type 2, -18 kg sous Ozempic](/collections/temoignages/témoignage-homme-diabete-type2-ozempic-perte-poids/)
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée
@@ -96,7 +96,7 @@ Dans les études cliniques, Ozempic a démontré une supériorité par rapport a
 Cependant, une perte de poids est souvent observée comme effet bénéfique chez les patients diabétiques traités par Ozempic :
 
 ### Effets sur le poids chez les patients diabétiques
-- **Perte de poids moyenne** : 5 à 10 kg chez les patients DT2 — découvrez le [témoignage de Sophie, -28 kg à 52 ans](/collections/témoignages/témoignage-sophie-transformation-glp1/)
+- **Perte de poids moyenne** : 5 à 10 kg chez les patients DT2 — découvrez le [témoignage de Sophie, -28 kg à 52 ans](/collections/temoignages/témoignage-sophie-transformation-glp1/)
 - **Amélioration des comorbidités** : Réduction de l'hypertension, amélioration du sommeil
 
 Pour les patients souhaitant un traitement spécifiquement indiqué pour l'obésité, il existe [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) (semaglutide 2,4 mg), qui contient la même molécule à une dose plus élevée et dispose d'une AMM pour la gestion du poids.
@@ -177,7 +177,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 - Metformine
 - Sulfamides hypoglycémiants
 - Inhibiteurs DPP-4
-- [Inhibiteurs SGLT2 (iSGLT2)](/collections/régime-glp1/isglt2-liste/) — souvent associés aux GLP-1 pour une protection cardiovasculaire renforcée
+- [Inhibiteurs SGLT2 (iSGLT2)](/collections/regime-glp1/isglt2-liste/) — souvent associés aux GLP-1 pour une protection cardiovasculaire renforcée
 
 ## FAQ Ozempic
 

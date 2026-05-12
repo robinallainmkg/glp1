@@ -1,0 +1,213 @@
+---
+// Sidebar produit GlucoPulse (version compacte verticale) — pages GLP-1.
+// Cohabite uniquement avec lui-même (pas d'autre partenaire sur les pages où GlucoPulse pousse).
+
+interface Props {
+  productId?: string;
+  context?: string;
+}
+
+const {
+  productId = 'glucopulse',
+  context = 'sidebar',
+} = Astro.props;
+
+const productPrice = 59;
+const productOldPrice = 89;
+const productUrl = `/produits/${productId}/?source=sidebar_${context}`;
+---
+
+<aside class="product-sidebar">
+  <a href={productUrl} class="ps-image-link" aria-label="Voir la fiche produit GlucoPulse">
+    <img
+      src="/images/glucopulse-hero.png"
+      alt="GlucoPulse — glucomètre connecté"
+      class="ps-image"
+      loading="lazy"
+      width="784"
+      height="1168"
+    />
+  </a>
+
+  <div class="ps-body">
+    <div class="ps-tag">
+      <span class="ps-dot"></span>
+      Bluetooth · iOS &amp; Android
+    </div>
+    <h3 class="ps-title">GlucoPulse</h3>
+    <p class="ps-lede">
+      Glucomètre connecté pour patients GLP-1. Résultat en 5 sec, sync auto smartphone, courbes 7/14/30j.
+    </p>
+
+    <ul class="ps-features">
+      <li><span class="ps-check">✓</span> Précision &plusmn;5% (ISO 15197)</li>
+      <li><span class="ps-check">✓</span> Mémoire 500 mesures</li>
+      <li><span class="ps-check">✓</span> Export PDF m&eacute;decin</li>
+      <li><span class="ps-check">✓</span> Pack 50 bandelettes inclus</li>
+    </ul>
+
+    <div class="ps-pricing">
+      <span class="ps-price-old">{productOldPrice}&nbsp;€</span>
+      <span class="ps-price-new">{productPrice}&nbsp;€</span>
+      <span class="ps-shipping">Livraison 48h offerte</span>
+    </div>
+
+    <button
+      type="button"
+      class="ps-cta"
+      data-checkout-trigger
+      data-product={productId}
+      data-variant="starter-pack"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+      </svg>
+      Ajouter au panier
+    </button>
+
+    <a href={productUrl} class="ps-detail-link">Voir la fiche complète →</a>
+  </div>
+</aside>
+
+<style>
+  .product-sidebar {
+    position: sticky;
+    top: 2rem;
+    width: 320px;
+    background: #fff;
+    border: 2px solid #bbf7d0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(22, 163, 74, 0.1);
+  }
+  .ps-image-link {
+    display: block;
+    width: 100%;
+    background: linear-gradient(180deg, #0a1f1a 0%, #1a3c34 100%);
+    text-decoration: none;
+  }
+  .ps-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .ps-body {
+    padding: 1.1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  .ps-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    width: fit-content;
+  }
+  .ps-dot {
+    width: 6px; height: 6px; background: #16a34a; border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    animation: ps-pulse 2s ease-in-out infinite;
+  }
+  @keyframes ps-pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2); }
+    50%      { box-shadow: 0 0 0 6px rgba(22, 163, 74, 0); }
+  }
+  .ps-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #14532d;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  .ps-lede {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #166534;
+    line-height: 1.5;
+  }
+  .ps-features {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: #15803d;
+  }
+  .ps-features li {
+    display: flex; align-items: flex-start; gap: 0.35rem;
+  }
+  .ps-check { color: #16a34a; font-weight: 800; flex-shrink: 0; }
+  .ps-pricing {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    background: #f0fdf4;
+    border: 1px solid #d1fae5;
+    border-radius: 10px;
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.3rem;
+  }
+  .ps-price-old { font-size: 0.85rem; color: #9ca3af; text-decoration: line-through; }
+  .ps-price-new { font-size: 1.5rem; font-weight: 900; color: #14532d; letter-spacing: -0.02em; }
+  .ps-shipping {
+    font-size: 0.68rem; color: #16a34a; font-weight: 700;
+    background: #dcfce7; padding: 0.1rem 0.4rem; border-radius: 4px;
+  }
+  .ps-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+    font-family: inherit;
+    margin-top: 0.25rem;
+  }
+  .ps-cta:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
+  }
+  .ps-detail-link {
+    display: block;
+    text-align: center;
+    font-size: 0.78rem;
+    color: #166534;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 0.25rem;
+  }
+  .ps-detail-link:hover { color: #14532d; text-decoration: underline; }
+
+  @media (max-width: 1024px) {
+    .product-sidebar {
+      position: static;
+      width: 100%;
+      max-width: 420px;
+      margin: 2rem auto 0;
+    }
+    .ps-image { height: 200px; }
+  }
+</style>

@@ -71,6 +71,8 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 
 ## Prix Victoza 2025 : Coût et Remboursement en France
 
+> **⚠️ IMPORTANT : Arrêt de commercialisation prévu fin 2026.** Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza en Europe d'ici fin 2026 (raisons commerciales, pas de problème de sécurité). Les médecins sont invités à envisager un traitement de remplacement par un autre analogue du GLP-1 ([Ozempic](/collections/traitements-glp1/guide-complet-ozempic/), [Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)) ou un autre antidiabétique.
+
 ## 💰 Prix Victoza en Pharmacie
 
 ### Tarifs selon le dosage
@@ -93,7 +95,7 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
 | Victoza | ~48,42 € | 65% (DT2 uniquement) |
-| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~77,60 € | 30% (DT2 uniquement) |
+| [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) | ~80,18 € | 65% (DT2 bithérapie metformine) |
 | Wegovy | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 

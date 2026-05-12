@@ -109,7 +109,7 @@ Les GLP-1 ralentissent la vidange gastrique, ce qui réduit le pic post-prandial
 
 ### Effets anti-inflammatoires sur les macrophages vasculaires
 
-Des études précliniques montrent que les GLP-1 exercent des effets anti-inflammatoires directs sur les macrophages présents dans les plaques d'athérome, réduisant [l'inflammation vasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) indépendamment des modifications du profil lipidique circulant.
+Des études précliniques montrent que les GLP-1 exercent des effets anti-inflammatoires directs sur les macrophages présents dans les plaques d'athérome, réduisant [l'inflammation vasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) indépendamment des modifications du profil lipidique circulant.
 
 ## Données cliniques : LEADER, SUSTAIN, SURMOUNT {#données}
 

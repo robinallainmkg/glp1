@@ -1,0 +1,35 @@
+---
+// FAQSchema — composant injectable pour ajouter le schema FAQPage JSON-LD
+// Usage: <FAQSchema items={[{ question: "...", answer: "..." }, ...]} />
+//
+// Si une page contient des FAQ rendues HTML, ce composant ajoute le schema
+// JSON-LD correspondant pour activer les featured snippets Google.
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+}
+
+const { items } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map((it) => ({
+    "@type": "Question",
+    "name": it.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": it.answer,
+    },
+  })),
+};
+---
+
+{items.length > 0 && (
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+)}

@@ -94,7 +94,7 @@ Les témoignages suivants refletent la diversite des experiences rapportees par 
 
 > "Apres des annees sous insuline avec un poids qui ne faisait qu'augmenter, mon diabetologue m'a propose Mounjaro en remplacement. En un an, j'ai perdu 32 kg. Mon HbA1c est passee de 8,2% a 6,1%, j'ai arrete l'insuline et mon apnee du sommeil a pratiquement disparu. Les nausées du debut etaient gerables. A 61 ans, je retrouve une mobilite que j'avais perdue depuis dix ans. C'est le traitement le plus efficace que j'aie jamais eu."
 
-**Bilan** : Perte de 32 kg (-24,6%), arret de l'insuline, resolution de l'apnee du sommeil. Ce type de transformation globale est également rapporte dans nos [témoignages de patients sous GLP-1](/collections/témoignages/témoignage-homme-diabète-type2-ozempic-perte-poids/).
+**Bilan** : Perte de 32 kg (-24,6%), arret de l'insuline, resolution de l'apnee du sommeil. Ce type de transformation globale est également rapporte dans nos [témoignages de patients sous GLP-1](/collections/temoignages/témoignage-homme-diabète-type2-ozempic-perte-poids/).
 
 ### Témoignage 5 -- Sophie, 39 ans, Nantes (note : 4/5)
 

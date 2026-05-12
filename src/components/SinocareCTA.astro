@@ -1,0 +1,254 @@
+---
+// CTA Sinocare — partenaire affiliation Awin actif (advertiser ID 114180, EPC 0,17€).
+// Design quali pour conversion : image hero + features + pricing + CTA tracking.
+// Pages cibles : tous traitements GLP-1 (Ozempic, Wegovy, Mounjaro, etc.) + diabète.
+
+interface Props {
+  context?: string;
+}
+
+const { context = "article" } = Astro.props;
+
+// Deeplink Awin Sinocare avec clickref dynamique → tracking ROI par page/placement
+const sinocareLink = `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_${context}&ued=${encodeURIComponent("https://www.sinocare.com/")}`;
+---
+
+<div
+  data-partner-block="cta"
+  data-partner="sinocare"
+  class="sino-cta"
+>
+  <div class="sino-cta-visual">
+    <img
+      src="/images/glucopulse-hero.png"
+      alt="Sinocare Safe AQ — lecteur de glycémie connecté"
+      class="sino-cta-image"
+      loading="lazy"
+      width="784"
+      height="1168"
+    />
+    <span class="sino-cta-badge">−45% sur Sinocare</span>
+  </div>
+
+  <div class="sino-cta-content">
+    <span class="sino-cta-eyebrow">Sinocare · Marque n°4 mondiale</span>
+    <h3 class="sino-cta-headline">
+      Mesurez votre glycémie en <span class="sino-cta-accent">5 secondes</span>, suivez l'effet de votre GLP-1.
+    </h3>
+    <p class="sino-cta-lede">
+      Sous Ozempic, Mounjaro ou Wegovy, le suivi glycémique régulier permet à votre médecin d'ajuster la dose et d'éviter les hypoglycémies.
+      Sinocare Safe AQ — lecteur fiable, <strong>1 milliard de tests dans 130 pays</strong>, vendu à partir de <strong>25 €</strong> en pharmacie et en ligne.
+    </p>
+
+    <ul class="sino-cta-features">
+      <li><span class="sino-check">✓</span> Précision ±5% (ISO 15197:2013)</li>
+      <li><span class="sino-check">✓</span> Résultat en 5 secondes</li>
+      <li><span class="sino-check">✓</span> Mémoire 500 mesures</li>
+      <li><span class="sino-check">✓</span> Échantillon 0,6 µL</li>
+    </ul>
+
+    <div class="sino-cta-pricing">
+      <div class="sino-cta-price">
+        <span class="sino-cta-price-from">À partir de</span>
+        <span class="sino-cta-price-value">25&nbsp;€</span>
+      </div>
+      <span class="sino-cta-price-meta">Lecteur + 50 bandelettes · livraison rapide</span>
+    </div>
+
+    <a
+      href={sinocareLink}
+      rel="noopener sponsored"
+      target="_blank"
+      class="sino-cta-button"
+    >
+      Voir l'offre Sinocare
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+
+    <p class="sino-cta-trust">
+      Marquage CE médical · ISO 15197:2013 · Lien sponsorisé (commission perçue, prix inchangé pour vous)
+    </p>
+  </div>
+</div>
+
+<style>
+  .sino-cta {
+    margin: 2rem 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeded 100%);
+    border: 2px solid #9b1d20;
+    border-radius: 18px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(155, 29, 32, 0.12);
+    align-items: stretch;
+  }
+  .sino-cta-visual {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0a1f1a 0%, #1a3c34 100%);
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sino-cta-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+  }
+  .sino-cta-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #9b1d20;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(155, 29, 32, 0.4);
+  }
+
+  .sino-cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+  .sino-cta-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #9b1d20;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  .sino-cta-headline {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+  .sino-cta-accent {
+    color: #9b1d20;
+  }
+  .sino-cta-lede {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.55;
+  }
+  .sino-cta-features {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 1rem;
+    font-size: 0.88rem;
+    color: #1a1a1a;
+  }
+  .sino-cta-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .sino-check {
+    color: #9b1d20;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .sino-cta-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #f1c4c5;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-top: 0.25rem;
+  }
+  .sino-cta-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+  .sino-cta-price-from {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 600;
+  }
+  .sino-cta-price-value {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #9b1d20;
+    letter-spacing: -0.02em;
+  }
+  .sino-cta-price-meta {
+    font-size: 0.78rem;
+    color: #6b7280;
+    line-height: 1.4;
+  }
+
+  .sino-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #9b1d20;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 6px 18px rgba(155, 29, 32, 0.35);
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+  .sino-cta-button:hover {
+    background: #7a1518;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(155, 29, 32, 0.45);
+    color: #fff;
+    text-decoration: none;
+  }
+  .sino-cta-trust {
+    margin: 0.5rem 0 0;
+    font-size: 0.72rem;
+    color: #8b1517;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  @media (max-width: 720px) {
+    .sino-cta {
+      grid-template-columns: 1fr;
+      padding: 1.25rem;
+      gap: 1.1rem;
+    }
+    .sino-cta-visual {
+      min-height: 180px;
+      max-height: 240px;
+    }
+    .sino-cta-headline { font-size: 1.15rem; }
+    .sino-cta-features { grid-template-columns: 1fr; }
+    .sino-cta-button { width: 100%; }
+  }
+</style>

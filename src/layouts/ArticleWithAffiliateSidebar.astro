@@ -2,8 +2,14 @@
 // Layout avancé avec système d'affiliation adaptatif (version sans TinaCMS)
 import BaseLayout from './BaseLayout.astro';
 import PartnerSidebar from '../components/PartnerSidebar.astro';
+import MutuelleSidebar from '../components/MutuelleSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
+import MutuelleCTA from '../components/MutuelleCTA.astro';
+import SinocareCTA from '../components/SinocareCTA.astro';
+import SinocareSidebar from '../components/SinocareSidebar.astro';
+import ArticleSchema from '../components/ArticleSchema.astro';
+import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
 
 export interface Props {
   title?: string;
@@ -44,7 +50,39 @@ const articleContent = props.articleContent ?? article?.body ?? '';
 const availableProducts = props.availableProducts ?? props.affiliateProducts ?? [];
 const detectedCategory = props.detectedCategory ?? props.category ?? (article?.data?.collection || article?.collection) ?? null;
 
-// Annette est le seul partenaire actif
+// Routage partenaire selon l'intention (collection + slug + path)
+const articleSlug = (article?.slug as string | undefined)
+  ?? (article?.data?.slug as string | undefined)
+  ?? (typeof Astro.url?.pathname === 'string' ? Astro.url.pathname.split('/').filter(Boolean).pop() : undefined);
+const routeInput = {
+  collection: detectedCategory || undefined,
+  slug: articleSlug,
+  path: typeof Astro.url?.pathname === 'string' ? Astro.url.pathname : undefined,
+};
+const partner = getPartnerForArticle(routeInput);
+const inlinePartner = oppositePartner(partner);
+const sidebarOrder = getSidebarOrder({ ...routeInput, routed: partner });
+
+// Anti-self-loop : si on est SUR une page de destination d'un partenaire, on ne montre
+// PAS le CTA correspondant (ni inline, ni sidebar) — sinon le visiteur clique vers la page
+// où il est déjà. On affiche uniquement le partenaire opposé sur ces pages.
+const onDestination = isPartnerDestination(routeInput);
+const safePartners: Set<typeof partner> = new Set(['annette', 'mutuelle']);
+if (onDestination) safePartners.delete(onDestination);
+const showInlineMutuelle = inlinePartner === 'mutuelle' && safePartners.has('mutuelle');
+const showInlineAnnette = inlinePartner === 'annette' && safePartners.has('annette');
+const filteredSidebarOrder = sidebarOrder.filter((p) => safePartners.has(p));
+
+// Sinocare = SEUL CTA monétisable sur pages GLP-1 (Awin actif, advertiser ID 114180).
+// Regex large : toutes les pages prix + tous les guides GLP-1 + collection diabète.
+// GlucoPulse en PAUSE — la page existe encore mais aucun entry point depuis les articles.
+const articleSlugLower = (articleSlug || '').toLowerCase();
+const collectionLower = (detectedCategory || '').toLowerCase();
+const showSinocare =
+  collectionLower === 'glp1-diabete' ||
+  collectionLower === 'glp1-cout' ||
+  /(diabete|glycemie|hba1c|insuline|hypoglycemie|hyperglycemie|metformine|isglt2|ozempic|wegovy|mounjaro|trulicity|victoza|rybelsus|saxenda|zepbound|semaglutide|tirzepatide|liraglutide|dulaglutide)/.test(articleSlugLower);
+
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
 const config = props.config ?? {};
@@ -54,6 +92,18 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
 ---
 
 <BaseLayout title={title} description={description}>
+  <!-- Schema.org : Article + BreadcrumbList (E-E-A-T + featured snippets) -->
+  <ArticleSchema
+    title={title}
+    description={description}
+    author={author}
+    pubDate={article?.data?.pubDate ? new Date(article.data.pubDate) : new Date()}
+    image={image}
+    url={Astro.url.pathname}
+    siteUrl={Astro.site?.toString() || 'https://glp1-france.fr/'}
+    collection={detectedCategory}
+  />
+
   <!-- Breadcrumb Navigation -->
   <nav class="breadcrumb" aria-label="Fil d'Ariane">
     <div class="breadcrumb-inner">
@@ -133,24 +183,47 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTA Partenaire Annette (inline mid-article + bottom fallback) -->
-        <div id="partner-cta-template" style="display:none;">
-          <PartnerCTA partner="annette" context="article_inline" />
-        </div>
-        <PartnerCTA partner="annette" context="article" />
+        <!-- CTAs : pages GLP-1 (showSinocare) → SinocareCTA seul (focus 100% Awin Sinocare).
+             Autres pages → logique partenaire historique (annette/mutuelle inline + bottom). -->
+        {!showSinocare && (
+          <>
+            <div id="partner-cta-template" style="display:none;">
+              {showInlineMutuelle && <MutuelleCTA context="article_inline" />}
+              {showInlineAnnette && <PartnerCTA partner="annette" context="article_inline" />}
+            </div>
+            {partner === 'mutuelle' && safePartners.has('mutuelle') && <MutuelleCTA context="article" />}
+            {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
+          </>
+        )}
+        {showSinocare && (
+          <div id="partner-cta-template" style="display:none;">
+            <SinocareCTA context={`glp1_inline_${articleSlug || 'article'}`} />
+          </div>
+        )}
+        {showSinocare && <SinocareCTA context={`glp1_bottom_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
         </div>
       </article>
 
-      <!-- Sidebar partenaire Annette -->
-      <PartnerSidebar context="article" />
+      <!-- Sidebars : pages GLP-1 → SinocareSidebar seul (focus Awin).
+           Autres pages → logique partenaire historique (annette/mutuelle alternées). -->
+      <div class="partner-sidebar-stack">
+        {showSinocare && <SinocareSidebar context={`glp1_sidebar_${articleSlug || 'article'}`} />}
+        {!showSinocare && filteredSidebarOrder.length > 0 && filteredSidebarOrder.map((p) => (
+          p === 'mutuelle'
+            ? <MutuelleSidebar context={p === partner ? 'article' : 'article_secondary'} />
+            : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />
+        ))}
+      </div>
     </div>
 
     <!-- Articles connexes -->
     <RelatedArticles currentPath={Astro.url.pathname} maxLinks={6} />
   </main>
+
+  {/* Modal "out-of-stock" GlucoPulse : retiré (GlucoPulse en pause). */}
 </BaseLayout>
 
 <style>
@@ -219,6 +292,20 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
 
 .article-wrapper.has-sidebar {
   grid-template-columns: 1fr 300px;
+}
+
+.partner-sidebar-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+/* Désactive le sticky individuel quand on empile 2 sidebars côte-à-côte */
+.partner-sidebar-stack > :global(.partner-sidebar),
+.partner-sidebar-stack > :global(.partner-sidebar-charles) {
+  position: static;
+  width: 100%;
 }
 
 .article-content {

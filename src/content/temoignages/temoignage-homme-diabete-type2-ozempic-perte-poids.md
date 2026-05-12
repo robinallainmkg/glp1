@@ -157,7 +157,7 @@ Bernard, 14 mois après le début de son traitement, partage ses recommandations
 ## Questions fréquentes des hommes diabétiques
 
 **Est-ce qu'Ozempic est différent pour les hommes et les femmes ?**
-Les mécanismes d'action sont les mêmes. Certaines études suggèrent que les hommes ont tendance à perdre légèrement plus de graisse viscérale abdominale sous GLP-1, ce qui est particulièrement bénéfique pour les risques cardiovasculaires liés au syndrome métabolique masculin. La [protection cardiaque de l'Ozempic pour les diabétiques](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) est d'ailleurs l'un des bénéfices les mieux documentés de cette classe de médicaments.
+Les mécanismes d'action sont les mêmes. Certaines études suggèrent que les hommes ont tendance à perdre légèrement plus de graisse viscérale abdominale sous GLP-1, ce qui est particulièrement bénéfique pour les risques cardiovasculaires liés au syndrome métabolique masculin. La [protection cardiaque de l'Ozempic pour les diabétiques](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) est d'ailleurs l'un des bénéfices les mieux documentés de cette classe de médicaments.
 
 **Ozempic affect-il la testostérone ou la fonction sexuelle ?**
 Les données disponibles ne montrent pas d'effet direct d'Ozempic sur la testostérone ou la fonction sexuelle. En revanche, la perte de poids associée peut améliorer les niveaux de testostérone chez les hommes en surpoids, et réduire les problèmes érectiles liés au diabète et au surpoids.

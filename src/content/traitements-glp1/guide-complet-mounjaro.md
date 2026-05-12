@@ -249,7 +249,7 @@ Mounjaro est indiqué dans le traitement du diabète de type 2 chez l'adulte, en
 
 ### Avantages dans le diabète
 - **Réduction d'HbA1c** : jusqu'à -2,4% (supérieure aux autres GLP-1)
-- **Perte de poids** : 5-15 kg en moyenne — pour [préserver la masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant cette perte, un apport protéique adapté est essentiel
+- **Perte de poids** : 5-15 kg en moyenne — pour [préserver la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant cette perte, un apport protéique adapté est essentiel
 - **Une injection hebdomadaire** : facilité d'utilisation
 - **Efficacité durable** : maintien des effets à long terme
 
@@ -268,7 +268,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 - **Échec des mesures hygiéno-diététiques**
 
 ### Résultats cliniques
-- **Perte de poids moyenne** : 15-20% du poids corporel — découvrez le [témoignage de Laurent : -35 kg en 10 mois avec Mounjaro](/collections/témoignages/témoignage-laurent-transformation-glp1/)
+- **Perte de poids moyenne** : 15-20% du poids corporel — découvrez le [témoignage de Laurent : -35 kg en 10 mois avec Mounjaro](/collections/temoignages/témoignage-laurent-transformation-glp1/)
 - **Pourcentage de patients** : 50% perdent ≥15% de leur poids
 - **Maintien du poids** : avec poursuite du traitement
 
@@ -308,7 +308,7 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
     <div class="action-card">
       <h4>🥗 3. Optimisez Votre Régime</h4>
       <p>Alimentation spéciale Mounjaro pour maximiser les résultats</p>
-      <a href="/collections/régime-glp1/glp1-protéines" class="action-button">
+      <a href="/collections/regime-glp1/glp1-protéines" class="action-button">
         Régime Mounjaro
       </a>
     </div>
@@ -417,7 +417,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="next-step-card">
     <h3>🥗 Régime Mounjaro</h3>
     <p>Le régime alimentaire optimal pour maximiser vos résultats avec Mounjaro.</p>
-    <a href="/collections/régime-glp1/régime-mounjaro-optimal" class="cta-button">
+    <a href="/collections/regime-glp1/régime-mounjaro-optimal" class="cta-button">
       Découvrir le Régime →
     </a>
   </div>
@@ -438,18 +438,18 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="link-category">
     <h4>💡 Optimisation Mounjaro</h4>
     <ul>
-      <li><a href="/collections/régime-glp1/glp1-protéines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
-      <li><a href="/collections/régime-glp1/jeune-intermittent-glp1">Jeûne Intermittent + Mounjaro</a></li>
-      <li><a href="/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/">Sport et Mounjaro : Maximiser les Résultats</a></li>
+      <li><a href="/collections/regime-glp1/glp1-protéines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
+      <li><a href="/collections/regime-glp1/jeune-intermittent-glp1">Jeûne Intermittent + Mounjaro</a></li>
+      <li><a href="/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/">Sport et Mounjaro : Maximiser les Résultats</a></li>
     </ul>
   </div>
   
   <div class="link-category">
     <h4>🎯 Témoignages et Résultats</h4>
     <ul>
-      <li><a href="/collections/témoignages/avant-après-glp1">Transformations Mounjaro : Avant/Après</a></li>
-      <li><a href="/collections/témoignages/témoignage-marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
-      <li><a href="/collections/témoignages/témoignage-sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
+      <li><a href="/collections/temoignages/avant-après-glp1">Transformations Mounjaro : Avant/Après</a></li>
+      <li><a href="/collections/temoignages/témoignage-marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
+      <li><a href="/collections/temoignages/témoignage-sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
     </ul>
   </div>
 </div>

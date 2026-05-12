@@ -1,6 +1,6 @@
 ---
-title: "Arrêt GLP-1 et Reprise de Poids : Éviter l'Effet Yoyo"
-description: "Arrêt GLP-1 et reprise de poids : données chiffrées sur l'effet yoyo, stratégies pour limiter le rebond et maintenir vos résultats durablement."
+title: "Reprise Poids Yoyo après GLP-1 : Comment l'Éviter"
+description: "Reprise poids et effet yoyo après arrêt GLP-1 : 2/3 du poids repris à 12 mois (étude STEP 1). 7 stratégies prouvées pour éviter le rebond."
 pubDate: 2026-03-16
 date: '2026-03-17'
 updatedAt: '2026-03-17'
@@ -27,7 +27,7 @@ affiliateConfig:
   inlinePositions: [3, 7, 12]
 ---
 
-C'est l'une des questions les plus fréquentes que posent les patients sous GLP-1 à leurs médecins : "Si j'arrête mon traitement, vais-je reprendre tout le poids que j'ai perdu ?" Les données scientifiques disponibles donnent une réponse nuancée mais honnête : dans la grande majorité des cas, oui, une reprise de poids survient à l'arrêt du traitement. Mais elle n'est pas inévitable dans son ampleur maximale, et des stratégies existent pour la limiter.
+**Reprise de poids et effet yoyo après l'arrêt d'un GLP-1** : c'est la question n°1 que se posent les patients sous Ozempic, Wegovy ou Mounjaro. Les données chiffrées sont claires — l'étude STEP 1 a montré qu'**à 12 mois après l'arrêt du sémaglutide, les patients récupèrent en moyenne 2/3 du poids perdu**, et l'**effet yoyo** est quasi-complet à 18-24 mois sans accompagnement. Mais cette **reprise de poids yoyo** n'est pas une fatalité : sevrage progressif, accompagnement nutritionnel, activité physique et suivi médical permettent de **limiter le rebond**. Voici les données scientifiques détaillées et les **7 stratégies prouvées** pour maintenir vos résultats durablement. Lire aussi : [reprise de poids 4 fois plus rapide après GLP-1](/collections/glp1-perte-de-poids/reprise-poids-glp1-4-fois-plus-rapide-etude-2026/) et notre [guide complet Wegovy](/collections/traitements-glp1/guide-complet-wegovy/).
 
 ## Sommaire
 
@@ -103,9 +103,9 @@ Le temps sous GLP-1 doit être utilisé comme une "fenêtre de changement". Le m
 
 - Apprendre à manger plus lentement et en pleine conscience
 - Réduire les portions sans frustration (l'appétit diminué facilite cela)
-- Augmenter la consommation de [protéines](/collections/régime-glp1/glp1-protéines) et de légumes
-- Instaurer un [programme d'exercice pour maintenir les résultats](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
-- Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
+- Augmenter la consommation de [protéines](/collections/regime-glp1/glp1-protéines) et de légumes
+- Instaurer un [programme d'exercice pour maintenir les résultats](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) — la musculation est particulièrement efficace
+- Travailler sur les comportements alimentaires émotionnels grâce à un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si nécessaire
 
 Ces changements, s'ils sont consolidés pendant 12 à 18 mois de traitement, ont plus de chances de se maintenir après l'arrêt.
 
@@ -135,7 +135,7 @@ En pratique, une réduction progressive de la dose sur 2 à 3 mois avant l'arrê
 
 ## Alternatives en cas d'arrêt forcé {#alternatives}
 
-Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis. La [préservation de la masse musculaire lors du sevrage](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un point crucial souvent négligé lors de l'arrêt.
+Si l'arrêt du traitement GLP-1 est imposé (raisons financières, contre-indication médicale, pénurie de médicament), plusieurs alternatives peuvent aider à maintenir les acquis. La [préservation de la masse musculaire lors du sevrage](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) est un point crucial souvent négligé lors de l'arrêt.
 
 ### Orlistat (Xenical)
 

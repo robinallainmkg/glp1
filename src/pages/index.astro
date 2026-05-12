@@ -1,6 +1,6 @@
 ---
 import StaticLayout from '../layouts/StaticLayout.astro';
-import PartnerComparator from '../components/PartnerComparator.astro';
+import MutuelleCTA from '../components/MutuelleCTA.astro';
 // import NewsletterCapture from '../components/NewsletterCapture.astro';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -152,30 +152,21 @@ latestArticles = latestArticles
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 1c : MARQUEE TRUST BAR               -->
+    <!-- SECTION 1c : TRUST BAR (statique, sobre)     -->
     <!-- ============================================ -->
-    <section style="background:#1a3c34;padding:.7rem 0;overflow:hidden;margin-top:1.2rem;">
-      <div style="display:flex;animation:hp-marquee 25s linear infinite;width:max-content;">
-        <div style="display:flex;gap:3rem;padding:0 1.5rem;color:rgba(255,255,255,.7);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;white-space:nowrap;">
-          <span>&#183; SOURCES ANSM, HAS, VIDAL</span>
-          <span>&#183; 50+ ARTICLES EXPERTS</span>
-          <span>&#183; 7 TRAITEMENTS COMPARÉS</span>
-          <span>&#183; DONNÉES 2026</span>
-          <span>&#183; PARTENAIRES SANTÉ CERTIFIÉS</span>
-          <span>&#183; SPÉCIALISÉ FRANCE</span>
-          <span>&#183; SOURCES ANSM, HAS, VIDAL</span>
-          <span>&#183; 50+ ARTICLES EXPERTS</span>
-          <span>&#183; 7 TRAITEMENTS COMPARÉS</span>
-          <span>&#183; DONNÉES 2026</span>
-          <span>&#183; PARTENAIRES SANTÉ CERTIFIÉS</span>
-          <span>&#183; SPÉCIALISÉ FRANCE</span>
-        </div>
+    <section style="background:#1a3c34;padding:.85rem 1.5rem;margin-top:1.2rem;">
+      <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem 2.5rem;color:rgba(255,255,255,.78);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;">
+        <span>Sources ANSM, HAS, VIDAL</span>
+        <span>&middot;</span>
+        <span>50+ articles experts</span>
+        <span>&middot;</span>
+        <span>7 traitements comparés</span>
+        <span>&middot;</span>
+        <span>Données 2026</span>
       </div>
     </section>
 
     <style>
-      @keyframes hp-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
       /* === DESKTOP HOVERS === */
       .hp-guide-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.1);border-color:#bbf7d0!important;}
       .hp-guide-card:hover img{transform:scale(1.05);}
@@ -331,7 +322,7 @@ latestArticles = latestArticles
                 <div style="padding:.5rem .7rem;">
                   <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#374151;padding:.15rem 0;"><span>Mounjaro 5mg</span><strong style="color:#1a3c34;">287€</strong></div>
                   <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#374151;padding:.15rem 0;"><span>Wegovy 1mg</span><strong style="color:#1a3c34;">186€</strong></div>
-                  <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#374151;padding:.15rem 0;"><span>Ozempic</span><strong style="color:#15803d;">77,60€</strong></div>
+                  <div style="display:flex;justify-content:space-between;font-size:.68rem;color:#374151;padding:.15rem 0;"><span>Ozempic</span><strong style="color:#15803d;">80,18€</strong></div>
                 </div>
               </div>
             </div>
@@ -375,7 +366,7 @@ latestArticles = latestArticles
             </div>
             <p style="color:#9ca3af;font-size:.8rem;margin:0 0 1rem;">Novo Nordisk -- Injection hebdomadaire</p>
             <div style="display:flex;align-items:baseline;gap:.4rem;margin-bottom:1.25rem;">
-              <span style="font-size:2.5rem;font-weight:800;color:#16a34a;line-height:1;">~77,60</span>
+              <span style="font-size:2.5rem;font-weight:800;color:#16a34a;line-height:1;">~80,18</span>
               <span style="font-size:1.1rem;font-weight:600;color:#16a34a;">&euro;</span>
               <span style="color:#9ca3af;font-size:.8rem;margin-left:.25rem;">/ stylo injecteur</span>
             </div>
@@ -482,11 +473,23 @@ latestArticles = latestArticles
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 4 : PARTENAIRES SANTÉ (comparateur)  -->
+    <!-- SECTION 4 : GUIDE REMBOURSEMENT (cluster mutuelle) -->
     <!-- ============================================ -->
-    <div id="partenaires">
-      <PartnerComparator context="homepage" />
-    </div>
+    <section id="partenaires" style="background:linear-gradient(180deg,#f8faf9 0%,#fff 100%);padding:3rem 1.5rem;border-top:1px solid #e5e7eb;">
+      <div style="max-width:780px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:1.75rem;">
+          <span style="display:inline-block;background:#E8F6FF;color:#0D4F73;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Faire baisser la facture</span>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#1a3c34;margin:0 0 .5rem 0;letter-spacing:-.03em;line-height:1.15;">
+            Wegovy et Mounjaro ne sont pas remboursés.<br>Votre mutuelle, peut-être.
+          </h2>
+          <p style="color:#6b7280;margin:0;font-size:.95rem;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.55;">
+            On a compilé les forfaits des principales mutuelles (MGEN, Harmonie, Apicil, Alan, Acheel) et la démarche pour les faire valider en 2026.
+          </p>
+        </div>
+
+        <MutuelleCTA context="homepage_banner" />
+      </div>
+    </section>
 
     <!-- ============================================ -->
     <!-- SECTION 5 : BRIDGE "Que signifie GLP-1?"     -->
@@ -740,7 +743,7 @@ latestArticles = latestArticles
                 <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
               </summary>
               <div class="px-6 pb-5 text-gray-600 leading-relaxed">
-                Ozempic coûte environ <strong>77,60 € par stylo injecteur</strong> en pharmacie (prix identique pour tous les dosages). Il est <strong>remboursé à 30%</strong> par l'Assurance Maladie, uniquement pour le <strong>diabète de type 2</strong>. En cas d'ALD (affection longue durée), la prise en charge peut atteindre 100%. Depuis février 2025, un formulaire de prescription spécifique est obligatoire.
+                Ozempic coûte environ <strong>80,18 € par stylo injecteur</strong> en pharmacie (prix CEPS identique pour tous les dosages). Il est <strong>remboursé à 65 %</strong> par l'Assurance Maladie en bithérapie avec metformine (et 30 % en trithérapie avec insuline basale), uniquement pour le <strong>diabète de type 2</strong>. En cas d'ALD (affection longue durée), la prise en charge peut atteindre 100 %. Depuis février 2025, un formulaire de prescription spécifique est obligatoire.
               </div>
             </details>
 
@@ -807,7 +810,7 @@ latestArticles = latestArticles
             "name": "Quel est le prix d'Ozempic en France ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ozempic coûte environ 77,60 € par stylo injecteur en pharmacie (prix identique tous dosages). Il est remboursé à 30% par l'Assurance Maladie, uniquement pour le diabète de type 2. En ALD, prise en charge à 100%. Depuis février 2025, un formulaire de prescription spécifique est obligatoire."
+              "text": "Ozempic coûte environ 80,18 € par stylo injecteur en pharmacie (prix CEPS identique tous dosages). Il est remboursé à 65 % par l'Assurance Maladie en bithérapie avec metformine (30 % en trithérapie avec insuline), uniquement pour le diabète de type 2. En ALD, prise en charge à 100 %. Depuis février 2025, un formulaire de prescription spécifique est obligatoire."
             }
           },
           {
@@ -847,22 +850,7 @@ latestArticles = latestArticles
       </script>
     </section>
 
-    <!-- ============================================ -->
-    <!-- SECTION 8.5 : CTA PARTENAIRES (bandeau)      -->
-    <!-- ============================================ -->
-    <section style="background:linear-gradient(135deg,#F0F9FF 0%,#E8F6FF 50%,#f0fdf4 100%);padding:3rem 1.5rem;">
-      <div style="max-width:800px;margin:0 auto;text-align:center;">
-        <h2 style="font-size:1.6rem;font-weight:900;color:#1f2937;margin-bottom:.5rem;letter-spacing:-.03em;">Besoin d'un accompagnement professionnel ?</h2>
-        <p style="color:#6b7280;margin-bottom:1.5rem;font-size:.95rem;">Notre partenaire santé certifié vous aide à optimiser votre traitement GLP-1.</p>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem;">
-          <a href="https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=partenariat_banner" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 2rem;background:#1B6FA0;color:#fff;font-weight:700;font-size:1rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 14px rgba(27,111,160,.2);">
-            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Découvrir Annette — 1er mois à 24,50€
-          </a>
-          <span style="font-size:.78rem;color:#6b7280;">Code CARE50 · Diététiciens certifiés · 2 000+ patients accompagnés</span>
-        </div>
-      </div>
-    </section>
+    <!-- SECTION 8.5 — supprimée (duplicatait section 4 dual banner) -->
 
     <!-- SECTION 9 : NEWSLETTER — désactivée -->
 

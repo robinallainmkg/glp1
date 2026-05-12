@@ -10,13 +10,13 @@ export const DRUG_REF: Record<string, {
 }> = {
   ozempic: {
     name: 'Ozempic',
-    note: 'Remboursé 30% (diabète type 2) · prix CEPS identique France entière',
+    note: 'Remboursé 65% en bithérapie metformine / 30% en trithérapie insuline (DT2) · prix CEPS identique France entière',
     fixed: true,
     doses: [
-      { dose: '0,25 mg', price: 77.60 },
-      { dose: '0,5 mg', price: 77.60 },
-      { dose: '1 mg', price: 77.60 },
-      { dose: '2 mg', price: 77.60 },
+      { dose: '0,25 mg', price: 80.18 },
+      { dose: '0,5 mg', price: 80.18 },
+      { dose: '1 mg', price: 80.18 },
+      { dose: '2 mg', price: 80.18 },
     ],
   },
   wegovy: {

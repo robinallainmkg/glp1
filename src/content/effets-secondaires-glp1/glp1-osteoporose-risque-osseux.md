@@ -105,7 +105,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Osteodensitometrie (DEXA)** : Cet examen mesure la densite minerale osseuse au niveau de la colonne lombaire et du col femoral. Il est rembourse par l'Assurance Maladie dans certaines conditions (femme menopausee avec facteurs de risque, antecedent de fracture, etc.). Un examen de référence avant le debut du traitement GLP-1 permet un suivi objectif.
 
-**Bilan biologique osseux** : Dosage de la vitamine D (25-OH-D3), du calcium, du phosphore, et eventuellement des marqueurs du remodelage osseux (CTX, P1NP). Ce bilan est simple et peu couteux. Un suivi des [carences en vitamine D et calcium sous GLP-1](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) est essentiel pour prévenir la déminéralisation osseuse.
+**Bilan biologique osseux** : Dosage de la vitamine D (25-OH-D3), du calcium, du phosphore, et eventuellement des marqueurs du remodelage osseux (CTX, P1NP). Ce bilan est simple et peu couteux. Un suivi des [carences en vitamine D et calcium sous GLP-1](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/) est essentiel pour prévenir la déminéralisation osseuse.
 
 **Dosage de l'acide urique** : Surtout si vous avez des antecedents de goutte ou de calculs renaux.
 
@@ -113,9 +113,9 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Supplementation en vitamine D et calcium** : La majorite des Francais sont carences en vitamine D, et la carence est encore plus fréquente chez les personnes en situation d'obesite. Une supplementation quotidienne en vitamine D (1 000 a 2 000 UI/jour) et un apport calcique adequat (1 000 a 1 200 mg/jour, alimentation comprise) sont recommandes.
 
-**Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liée a l'amaigrissement. Découvrez notre guide sur l'[activité physique avec mise en charge sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/) pour des conseils pratiques.
+**Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liée a l'amaigrissement. Découvrez notre guide sur l'[activité physique avec mise en charge sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) pour des conseils pratiques.
 
-**[Apport en protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/)** : Les protéines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommandé de consommer 1,2 a 1,5 g de protéines par kg de poids ideal par jour pour preserver la masse maigre.
+**[Apport en protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/)** : Les protéines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommandé de consommer 1,2 a 1,5 g de protéines par kg de poids ideal par jour pour preserver la masse maigre.
 
 **Hydratation** : Une bonne hydratation aide a eliminer l'acide urique et réduit le risque de goutte. Il est conseille de boire au moins 1,5 a 2 litres d'eau par jour.
 
@@ -125,7 +125,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 A la date de mars 2026, ni l'Agence Europeenne des Medicaments (EMA) ni l'ANSM francaise n'ont emis d'alerte spécifique sur le risque osseux des GLP-1. Les résultats de l'etude AAOS sont recents et nécessitént une confirmation par d'autres etudes independantes avant d'entrainer une modification des recommandations officielles.
 
-Cependant, les RCP (Resumes des Caracteristiques du Produit) d'Ozempic et de Wegovy mentionnent deja la [fonte musculaire sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) comme un effet possible, et les medecins prescripteurs sont invites a surveiller l'etat nutritionnel de leurs patients.
+Cependant, les RCP (Resumes des Caracteristiques du Produit) d'Ozempic et de Wegovy mentionnent deja la [fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) comme un effet possible, et les medecins prescripteurs sont invites a surveiller l'etat nutritionnel de leurs patients.
 
 ### Position des societes savantes
 

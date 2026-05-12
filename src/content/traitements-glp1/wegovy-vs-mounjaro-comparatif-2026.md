@@ -132,7 +132,7 @@ Les deux traitements apportent des améliorations metaboliques significatives :
 - **Glycemie et HbA1c** : reduction comparable, Mounjaro legerement supérieur chez les patients diabetiques
 - **Tension artérielle** : amélioration similaire avec les deux traitements
 - **Profil lipidique** : Mounjaro montre un avantage sur la reduction des triglycerides
-- **Risque cardiovasculaire** : Wegovy a démontré des [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) avec une reduction de 20% des evenements cardiovasculaires majeurs (etude SELECT), Mounjaro est en cours d'evaluation
+- **Risque cardiovasculaire** : Wegovy a démontré des [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) avec une reduction de 20% des evenements cardiovasculaires majeurs (etude SELECT), Mounjaro est en cours d'evaluation
 
 ## Effets secondaires : lequel est le mieux toléré ?
 

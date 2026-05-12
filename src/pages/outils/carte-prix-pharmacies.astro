@@ -175,7 +175,7 @@ const updatedFr = stats.updated_at
     <!-- Disclaimer -->
     <section class="map-disclaimer">
       <p>
-        <strong>Source&nbsp;:</strong> Référentiel FINESS (data.gouv.fr / Atlasanté — mis à jour bimensuel) · Prix officiels Ozempic = CEPS (77,60&nbsp;€/stylo, remboursé 30% pour diabète de type 2) · Prix Wegovy / Mounjaro / Saxenda = <strong>prix libéré</strong>, varie selon pharmacie et n'est pas remboursé.
+        <strong>Source&nbsp;:</strong> Référentiel FINESS (data.gouv.fr / Atlasanté — mis à jour bimensuel) · Prix officiels Ozempic = CEPS (80,18&nbsp;€/stylo, remboursé 65&nbsp;% en bithérapie metformine / 30&nbsp;% en trithérapie insuline pour le diabète de type 2) · Prix Wegovy / Mounjaro / Saxenda = <strong>prix libéré</strong>, varie selon pharmacie et n'est pas remboursé.
         Les prix soumis par la communauté sont modérés avant affichage. Cette page est informative et ne remplace pas un avis médical.
       </p>
     </section>
@@ -288,17 +288,17 @@ const updatedFr = stats.updated_at
     };
 
     // Prix médians marché FR — servent de base pour la synthèse par pharmacie.
-    // Ozempic = CEPS officiel (77,60€ identique partout, pas de variance).
+    // Ozempic = CEPS officiel (80,18€ identique partout, pas de variance).
     // Wegovy / Mounjaro / Saxenda = médiane fourchette marché FR avril 2026, variée par pharmacie.
     const DRUG_REF = {
       ozempic: {
         note: 'Remboursé 30% (diabète type 2) · prix CEPS identique France entière',
         fixed: true,
         doses: [
-          { dose: '0,25 mg', price: 77.60 },
-          { dose: '0,5 mg', price: 77.60 },
-          { dose: '1 mg', price: 77.60 },
-          { dose: '2 mg', price: 77.60 },
+          { dose: '0,25 mg', price: 80.18 },
+          { dose: '0,5 mg', price: 80.18 },
+          { dose: '1 mg', price: 80.18 },
+          { dose: '2 mg', price: 80.18 },
         ],
       },
       wegovy: {
@@ -885,7 +885,8 @@ const updatedFr = stats.updated_at
       const action = e.currentTarget.dataset.action;
       closePharmacyDrawer();
       if (action === 'external-charles') {
-        window.open('https://poids.charles.co/?utm_source=affiliation&utm_medium=glp1france&utm_campaign=carte_endocrinologues', '_blank', 'noopener');
+        // Charles retiré 2026-05 + GlucoPulse en pause 2026-05 — redirige vers Sinocare (Awin actif)
+        window.open('https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_carte_drawer&ued=https%3A%2F%2Fwww.sinocare.com%2F', '_blank', 'noopener');
         return;
       }
       if (action === 'external-annette') {

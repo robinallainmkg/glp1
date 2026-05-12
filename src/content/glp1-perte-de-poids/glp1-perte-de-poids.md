@@ -93,7 +93,7 @@ Cet article vous présente les informations essentielles et actualisées. Pour u
 - Perte rapide : -5% dès 12 semaines
 - Perte maximale : 52-68 semaines
 - Maintien : stable jusqu'à 104 semaines
-- Reprise modérée si arrêt : +7% à 1 an — pour limiter la [fonte musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/), l'apport en protéines est essentiel
+- Reprise modérée si arrêt : +7% à 1 an — pour limiter la [fonte musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), l'apport en protéines est essentiel
 
 ### <a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a> (Liraglutide 3 mg) - Efficacité Prouvée
 
@@ -207,7 +207,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 **Suivi pluridisciplinaire :**
 - Consultation médicale trimestrielle
 - Suivi nutritionnel personnalisé
-- [Accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si besoin
+- [Accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) si besoin
 
 ### Données de Maintien Long Terme
 
@@ -249,7 +249,7 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 
 **Patients post-ménopause :**
 - Réponse légèrement réduite
-- [Bénéfice cardiovasculaire](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/) important
+- [Bénéfice cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) important
 - Attention ostéoporose
 - Suivi hormonal parallèle
 

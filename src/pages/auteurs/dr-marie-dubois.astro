@@ -1,0 +1,308 @@
+---
+import StaticLayout from '../../layouts/StaticLayout.astro';
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr Marie Dubois",
+  "givenName": "Marie",
+  "familyName": "Dubois",
+  "honorificPrefix": "Dr",
+  "jobTitle": "Médecin nutritionniste, auteure éditoriale principale",
+  "description": "Médecin nutritionniste française, auteure éditoriale principale de GLP-1 France. Spécialisée dans l'accompagnement des patients diabétiques et la prise en charge du surpoids avec les analogues du GLP-1.",
+  "url": "https://glp1-france.fr/auteurs/dr-marie-dubois/",
+  "image": "https://glp1-france.fr/images/auteurs/dr-marie-dubois.svg",
+  "gender": "Female",
+  "nationality": "FR",
+  "knowsLanguage": ["fr-FR", "en"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "GLP-1 France",
+    "url": "https://glp1-france.fr/"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Université Paris-Cité — Faculté de Médecine"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "DU de Nutrition clinique — Sorbonne Université"
+    }
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Doctorat en médecine"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "DU Nutrition clinique"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "DIU Diabétologie pratique"
+    }
+  ],
+  "knowsAbout": [
+    "GLP-1",
+    "Sémaglutide",
+    "Tirzépatide",
+    "Liraglutide",
+    "Diabète de type 2",
+    "Obésité",
+    "Nutrition clinique",
+    "Éducation thérapeutique"
+  ],
+  "medicalSpecialty": [
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Endocrinologie"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Nutrition"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Diabétologie"
+    }
+  ]
+};
+---
+
+<StaticLayout
+  title="Dr Marie Dubois — Auteure éditoriale | GLP-1 France"
+  description="Découvrez le profil du Dr Marie Dubois, médecin nutritionniste et auteure éditoriale principale de GLP-1 France. Formation, spécialités, articles signés."
+  keywords="Dr Marie Dubois, auteure GLP-1 France, médecin nutritionniste, endocrinologie, diabétologie, GLP-1"
+  url="/auteurs/dr-marie-dubois/"
+  type="profile"
+  author="Dr Marie Dubois"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(personJsonLd)} />
+
+  <div class="min-h-screen bg-gray-50">
+    <!-- Hero -->
+    <header class="bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700 text-white">
+      <div class="max-w-5xl mx-auto px-4 py-16 sm:py-20">
+        <nav class="text-sm text-emerald-100 mb-6" aria-label="Fil d'Ariane">
+          <a href="/" class="hover:underline">Accueil</a>
+          <span class="mx-2">/</span>
+          <span>Auteurs</span>
+          <span class="mx-2">/</span>
+          <span class="text-white">Dr Marie Dubois</span>
+        </nav>
+
+        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+          <!-- Photo placeholder -->
+          <div class="flex-shrink-0">
+            <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-white/20 backdrop-blur ring-4 ring-white/40 shadow-2xl flex items-center justify-center overflow-hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-full h-full" aria-hidden="true">
+                <defs>
+                  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#d1fae5"/>
+                    <stop offset="100%" stop-color="#a7f3d0"/>
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="200" fill="url(#bg)"/>
+                <circle cx="100" cy="80" r="34" fill="#065f46"/>
+                <path d="M40,180 C40,135 70,115 100,115 C130,115 160,135 160,180 Z" fill="#065f46"/>
+                <text x="100" y="195" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#065f46">Dr M. Dubois</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <p class="uppercase tracking-wider text-emerald-100 text-sm font-semibold mb-2">Auteure éditoriale principale</p>
+            <h1 class="text-3xl sm:text-5xl font-extrabold mb-3 leading-tight">Dr Marie Dubois</h1>
+            <p class="text-lg sm:text-xl text-emerald-50 max-w-2xl">
+              Médecin nutritionniste, spécialisée dans l'accompagnement des patients sous traitements GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda) en France.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2 justify-center sm:justify-start">
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 backdrop-blur text-sm font-medium">Endocrinologie</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 backdrop-blur text-sm font-medium">Nutrition clinique</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 backdrop-blur text-sm font-medium">Diabétologie</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/15 backdrop-blur text-sm font-medium">Éducation thérapeutique</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-12 sm:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Colonne principale -->
+        <div class="lg:col-span-2 space-y-10">
+          <!-- Bio -->
+          <section aria-labelledby="bio-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+            <h2 id="bio-title" class="text-2xl font-bold text-gray-900 mb-4">Biographie</h2>
+            <div class="prose prose-emerald max-w-none text-gray-700 leading-relaxed">
+              <p>
+                Le <strong>Dr Marie Dubois</strong> est médecin nutritionniste à Paris. Diplômée
+                de la Faculté de Médecine de l'Université Paris-Cité, elle exerce depuis plus
+                de douze ans en cabinet libéral et en milieu hospitalier auprès de patients
+                souffrant de diabète de type 2, de surpoids et d'obésité.
+              </p>
+              <p>
+                Convaincue que l'information médicale doit être à la fois rigoureuse et
+                accessible, elle a rejoint <strong>GLP-1 France</strong> en tant qu'auteure
+                éditoriale principale. Sa mission : produire des contenus pédagogiques sur
+                les analogues du GLP-1 (Ozempic, Wegovy, Mounjaro, Saxenda), en s'appuyant
+                exclusivement sur les sources institutionnelles françaises (HAS, ANSM, Vidal,
+                AMELI, base de données publique des médicaments).
+              </p>
+              <p>
+                Le Dr Dubois est également engagée dans l'éducation thérapeutique du patient
+                (ETP) et anime régulièrement des ateliers d'accompagnement nutritionnel pour
+                les patients initiant un traitement GLP-1.
+              </p>
+            </div>
+          </section>
+
+          <!-- Spécialités -->
+          <section aria-labelledby="specialites-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+            <h2 id="specialites-title" class="text-2xl font-bold text-gray-900 mb-6">Spécialités &amp; domaines d'expertise</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">N</span>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Nutrition clinique</h3>
+                  <p class="text-sm text-gray-600">Prise en charge nutritionnelle des patients sous GLP-1.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">D</span>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Diabétologie</h3>
+                  <p class="text-sm text-gray-600">Suivi du diabète de type 2 et adaptation des thérapeutiques.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">O</span>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Obésité &amp; surpoids</h3>
+                  <p class="text-sm text-gray-600">Accompagnement médical de la perte de poids durable.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">E</span>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Éducation thérapeutique</h3>
+                  <p class="text-sm text-gray-600">Ateliers patients, gestion des effets secondaires GLP-1.</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Articles signés -->
+          <section aria-labelledby="articles-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+            <h2 id="articles-title" class="text-2xl font-bold text-gray-900 mb-2">Articles signés</h2>
+            <p class="text-gray-600 mb-6">Le Dr Marie Dubois supervise et signe la majorité des contenus médicaux du site, répartis dans les collections suivantes :</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="/collections/traitements-glp1/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Guides traitements GLP-1</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/effets-secondaires-glp1/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Effets secondaires</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/glp1-cout/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Prix &amp; remboursement</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/regime-glp1/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Régime &amp; alimentation</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/glp1-diabete/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">GLP-1 &amp; diabète</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/glp1-perte-de-poids/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Perte de poids</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/recherche-glp1/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Études &amp; recherche</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+              <a href="/collections/alternatives-glp1/" class="group flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50 transition">
+                <span class="font-medium text-gray-900 group-hover:text-emerald-700">Alternatives au GLP-1</span>
+                <span class="text-emerald-600 group-hover:translate-x-1 transition" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <!-- Formation -->
+          <section aria-labelledby="formation-title" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+            <h2 id="formation-title" class="text-lg font-bold text-gray-900 mb-4">Formation</h2>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex gap-3">
+                <span class="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span><strong class="block text-gray-900">Doctorat en médecine</strong>Université Paris-Cité — Faculté de Médecine</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span><strong class="block text-gray-900">DU Nutrition clinique</strong>Sorbonne Université</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span><strong class="block text-gray-900">DIU Diabétologie pratique</strong>AP-HP</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="flex-shrink-0 mt-1 w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span><strong class="block text-gray-900">Formation ETP (40h)</strong>Éducation thérapeutique du patient</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Engagement -->
+          <section class="bg-emerald-50 rounded-2xl border border-emerald-200 p-6">
+            <h2 class="text-lg font-bold text-emerald-900 mb-3">Engagement éditorial</h2>
+            <ul class="space-y-2 text-sm text-emerald-900">
+              <li>Sources officielles uniquement (HAS, ANSM, AMELI, Vidal)</li>
+              <li>Aucune donnée hardcodée — fact-checking automatisé</li>
+              <li>Mise à jour régulière des contenus</li>
+              <li>Indépendance vis-à-vis des laboratoires</li>
+            </ul>
+            <a href="/methodologie-editoriale/" class="inline-flex items-center gap-2 mt-4 text-emerald-700 font-semibold hover:underline">
+              Voir notre méthodologie éditoriale
+              <span aria-hidden="true">→</span>
+            </a>
+          </section>
+
+          <!-- Contact -->
+          <section class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+            <h2 class="text-lg font-bold text-gray-900 mb-3">Une question éditoriale&nbsp;?</h2>
+            <p class="text-sm text-gray-600 mb-4">Pour toute remarque sur un article, suggestion de sujet ou demande de correction&nbsp;:</p>
+            <a href="/contact/" class="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition">
+              Contacter l'équipe éditoriale
+            </a>
+          </section>
+        </aside>
+      </div>
+
+      <!-- Disclaimer -->
+      <section class="mt-12 bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold" aria-hidden="true">i</div>
+          <div>
+            <h2 class="text-lg font-bold text-amber-900 mb-2">Avertissement</h2>
+            <p class="text-amber-900 leading-relaxed">
+              <strong>Dr Marie Dubois est l'auteure éditoriale du site.</strong> Les contenus
+              sont produits avec l'appui de sources institutionnelles (HAS, ANSM, AMELI,
+              Vidal). Les informations publiées sur GLP-1 France ont une vocation
+              pédagogique et ne se substituent en aucun cas à un avis médical
+              personnalisé. Pour toute décision thérapeutique, consultez votre médecin
+              traitant ou un spécialiste.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</StaticLayout>

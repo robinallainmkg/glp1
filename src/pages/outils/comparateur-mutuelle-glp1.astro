@@ -1,0 +1,221 @@
+---
+import StaticLayout from '../../layouts/StaticLayout.astro';
+
+const title = "Comparateur Mutuelle GLP-1 2026 : Quelle Mutuelle Rembourse Wegovy / Mounjaro ?";
+const description = "Comparez les mutuelles qui remboursent Wegovy, Mounjaro et Ozempic en 2026 : MGEN, Harmonie, Apicil, Alan, Acheel, Malakoff, April. Forfaits 50 à 500 €/an.";
+
+// Liste des mutuelles couvertes par nos guides détaillés
+const mutuelles = [
+  {
+    name: "MGEN",
+    slug: "wegovy-mgen-remboursement",
+    forfait: "Jusqu'à 300 €/an (forfait obésité)",
+    notes: "Prescription spécialisée requise. Bonne couverture pour les fonctionnaires et leurs familles.",
+    color: "#0D4F73",
+  },
+  {
+    name: "Harmonie Mutuelle",
+    slug: "wegovy-harmonie-mutuelle-remboursement",
+    forfait: "60 % sur devis (jusqu'à 1 000 €/an)",
+    notes: "Accord préalable nécessaire. Le réseau mutualiste le plus large de France.",
+    color: "#0D4F73",
+  },
+  {
+    name: "Apicil",
+    slug: "wegovy-apicil-remboursement",
+    forfait: "200 à 400 €/an selon la gamme",
+    notes: "Forfait médecines préventives. Renforcé sur les contrats premium.",
+    color: "#0D4F73",
+  },
+  {
+    name: "Alan",
+    slug: "wegovy-alan-remboursement",
+    forfait: "Variable selon contrat employeur",
+    notes: "Mutuelle 100 % digitale. Prise en charge possible via les forfaits prévention santé.",
+    color: "#0D4F73",
+  },
+  {
+    name: "Malakoff Humanis",
+    slug: "wegovy-malakoff-humanis-remboursement",
+    forfait: "350 €/an (forfait innovation thérapeutique)",
+    notes: "Nouveau forfait 2025-2026 spécifique aux médicaments anti-obésité non remboursés.",
+    color: "#0D4F73",
+  },
+  {
+    name: "April",
+    slug: "wegovy-april-remboursement",
+    forfait: "100 à 250 €/an selon la formule",
+    notes: "Couverture variable selon la gamme. Vérifier le contrat individuel.",
+    color: "#0D4F73",
+  },
+];
+---
+
+<StaticLayout title={title} description={description}>
+  <main class="comparator-page">
+    <section class="comparator-hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Comparateur indépendant — gratuit, sans engagement</p>
+        <h1>Quelle mutuelle rembourse le mieux votre traitement GLP-1 ?</h1>
+        <p class="hero-lede">
+          Wegovy, Mounjaro et Ozempic ne sont pas (encore) intégralement remboursés par la Sécurité sociale en 2026.
+          Heureusement, certaines mutuelles prennent en charge <strong>50 à 500 €/an</strong> via des forfaits dédiés
+          (médicaments non remboursés, médecines préventives, innovation thérapeutique).
+          Comparez les <strong>6 mutuelles principales</strong> ci-dessous, ou consultez nos guides détaillés.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">6</div>
+            <div class="stat-label">mutuelles analysées</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">jusqu'à 1 800 €</div>
+            <div class="stat-label">économie/an potentielle</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">169-440 €</div>
+            <div class="stat-label">prix mensuel sans aide</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparator-table-section">
+      <div class="section-inner">
+        <h2>Comparatif rapide des 6 principales mutuelles</h2>
+        <p class="section-intro">
+          Tableau récapitulatif basé sur les forfaits publics 2025-2026. Les montants exacts dépendent de votre contrat individuel —
+          consultez votre tableau de garanties personnel pour confirmer.
+        </p>
+        <div class="table-wrapper">
+          <table class="comparator-table">
+            <thead>
+              <tr>
+                <th>Mutuelle</th>
+                <th>Forfait GLP-1 / médicaments non remboursés</th>
+                <th>Notes</th>
+                <th>Détails</th>
+              </tr>
+            </thead>
+            <tbody>
+              {mutuelles.map((m) => (
+                <tr>
+                  <td><strong>{m.name}</strong></td>
+                  <td>{m.forfait}</td>
+                  <td>{m.notes}</td>
+                  <td><a href={`/collections/glp1-cout/${m.slug}/`} class="link-detail">Voir le guide →</a></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparator-cta-section">
+      <div class="section-inner">
+        <h2>Comment trouver la meilleure mutuelle pour votre profil ?</h2>
+        <div class="cta-grid">
+          <div class="cta-card">
+            <div class="cta-num">1</div>
+            <h3>Consultez nos guides détaillés</h3>
+            <p>Chaque mutuelle a un guide dédié avec montants exacts, démarches et exemples concrets de remboursement.</p>
+            <a href="/collections/glp1-cout/wegovy-remboursement-mutuelle/" class="cta-link">Guide général →</a>
+          </div>
+          <div class="cta-card">
+            <div class="cta-num">2</div>
+            <h3>Comparez sur LesFurets</h3>
+            <p>Comparateur indépendant gratuit. Réponses sous 24h, sans engagement, vous gardez le contrôle.</p>
+            <a href="https://www.lesfurets.com/mutuelle-sante" target="_blank" rel="noopener" class="cta-link">Comparer sur LesFurets →</a>
+          </div>
+          <div class="cta-card">
+            <div class="cta-num">3</div>
+            <h3>Vérifiez votre contrat actuel</h3>
+            <p>Avant de changer, regardez votre tableau de garanties : forfait "médicaments non remboursés", "médecines préventives", "innovation thérapeutique".</p>
+            <a href="/collections/glp1-cout/forfait-medecine-prevention-mutuelle-glp1/" class="cta-link">Comprendre les forfaits →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparator-faq-section">
+      <div class="section-inner">
+        <h2>Questions fréquentes</h2>
+        <details class="faq-item">
+          <summary>Quelle mutuelle rembourse le mieux Wegovy en 2026 ?</summary>
+          <p>D'après notre analyse 2026, <strong>Malakoff Humanis</strong> (forfait innovation thérapeutique 350 €/an) et <strong>Harmonie Mutuelle</strong> (60 % sur devis, plafond 1 000 €/an) sont parmi les plus généreuses sur les médicaments anti-obésité non remboursés. Toutefois, le meilleur choix dépend de votre situation (gamme contractuelle, employeur, profil familial). Consultez nos <a href="/collections/glp1-cout/mutuelle-obesite-comparatif-2026/">comparatifs détaillés</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wegovy / Mounjaro sont-ils remboursés par la Sécurité sociale ?</summary>
+          <p><strong>Non, pas en mai 2026.</strong> Wegovy et Mounjaro ne sont pas remboursés pour l'obésité. La HAS a rendu un avis favorable en 2025, et la prise en charge est attendue au 2<sup>e</sup> semestre 2026 (négociations CEPS en cours). Ozempic, lui, est remboursé à 65 % en bithérapie metformine pour le diabète de type 2 uniquement. <a href="/collections/glp1-cout/remboursement-glp1-2026/">Lire le guide complet remboursement 2026</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Comment activer le remboursement par ma mutuelle ?</summary>
+          <p>Trois étapes : <strong>(1)</strong> Obtenir une ordonnance d'un médecin avec mention claire de l'indication (obésité IMC ≥ 30 ou comorbidités). <strong>(2)</strong> Conserver toutes les factures de pharmacie acquittées. <strong>(3)</strong> Envoyer le dossier à votre mutuelle (formulaire de demande spécifique + ordonnance + facture + courrier médical justificatif). Délai de traitement : 15 à 45 jours.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Combien puis-je économiser réellement par an ?</summary>
+          <p>Pour un patient sous Wegovy 2,4 mg (~360 €/mois soit ~4 320 €/an), un forfait mutuelle de 300 à 500 €/an couvre <strong>7 à 12 % du coût total</strong>. Un patient sous Mounjaro 15 mg (~440 €/mois, ~5 280 €/an) avec un forfait de 500 € économise ~9 %. Les contrats premium avec plafond à 1 000 € voire plus permettent une économie de <strong>jusqu'à 1 800 €/an</strong> sur les traitements les plus chers.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Faut-il changer de mutuelle pour mieux être remboursé ?</summary>
+          <p>Pas forcément. <strong>Vérifiez d'abord votre contrat actuel</strong> : un forfait "médicaments non remboursés" ou "médecines préventives" existe peut-être déjà. Sinon, demandez à monter en gamme dans votre mutuelle actuelle (souvent +10 à 30 €/mois pour un meilleur forfait obésité). Le changement de mutuelle ne se justifie que si l'économie annuelle dépasse les frais de résiliation et les délais de carence (souvent 6 à 12 mois).</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="comparator-disclaimer">
+      <div class="section-inner">
+        <p>
+          <strong>Avertissement :</strong> ce comparateur est informatif et indépendant. Les forfaits exacts varient selon les contrats individuels — vérifiez toujours votre tableau de garanties personnel avant toute décision. GLP-1 France ne reçoit aucune commission des mutuelles citées dans cet article ; les comparatifs sont basés sur les conditions générales publiques 2025-2026. Sources : sites officiels des mutuelles, HAS, Ameli, base-donnees-publique.medicaments.gouv.fr.
+        </p>
+      </div>
+    </section>
+  </main>
+</StaticLayout>
+
+<style>
+  .comparator-page { background: #f8fafc; min-height: 100vh; }
+  .comparator-hero { background: linear-gradient(135deg, #F0F9FF 0%, #E8F6FF 100%); padding: 3rem 1.5rem 2rem; border-bottom: 1px solid #c9e3f0; }
+  .hero-inner, .section-inner { max-width: 1100px; margin: 0 auto; }
+  .hero-eyebrow { color: #0D4F73; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.75rem; }
+  .comparator-hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); font-weight: 800; color: #0D4F73; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1rem; }
+  .hero-lede { font-size: 1rem; color: #1B6FA0; line-height: 1.65; max-width: 780px; margin: 0 0 1.5rem; }
+  .hero-stats { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .stat { background: #fff; border: 2px solid #0D4F73; border-radius: 12px; padding: 1rem 1.25rem; min-width: 180px; }
+  .stat-num { font-size: 1.5rem; font-weight: 800; color: #0D4F73; line-height: 1.1; letter-spacing: -0.02em; }
+  .stat-label { font-size: 0.8rem; color: #1B6FA0; margin-top: 0.25rem; }
+
+  .comparator-table-section, .comparator-cta-section, .comparator-faq-section { padding: 2.5rem 1.5rem; }
+  .comparator-table-section { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .comparator-cta-section { background: #f8fafc; border-bottom: 1px solid #e5e7eb; }
+  .comparator-faq-section { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  h2 { font-size: 1.5rem; font-weight: 800; color: #0D4F73; margin: 0 0 0.85rem; letter-spacing: -0.01em; }
+  .section-intro { color: #475569; font-size: 0.95rem; line-height: 1.6; max-width: 800px; margin: 0 0 1.5rem; }
+
+  .table-wrapper { overflow-x: auto; border-radius: 12px; border: 1px solid #e5e7eb; }
+  .comparator-table { width: 100%; border-collapse: collapse; min-width: 720px; background: #fff; }
+  .comparator-table th { background: #F0F9FF; color: #0D4F73; font-weight: 700; text-align: left; padding: 0.85rem 1rem; font-size: 0.85rem; border-bottom: 2px solid #c9e3f0; }
+  .comparator-table td { padding: 0.85rem 1rem; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; color: #374151; vertical-align: top; }
+  .comparator-table tr:last-child td { border-bottom: none; }
+  .link-detail { color: #0D4F73; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .link-detail:hover { text-decoration: underline; }
+
+  .cta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .cta-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 1.5rem; }
+  .cta-num { width: 36px; height: 36px; border-radius: 50%; background: #0D4F73; color: #fff; font-weight: 800; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 0.85rem; }
+  .cta-card h3 { font-size: 1.05rem; font-weight: 700; color: #0D4F73; margin: 0 0 0.5rem; }
+  .cta-card p { font-size: 0.88rem; color: #475569; line-height: 1.55; margin: 0 0 1rem; }
+  .cta-link { display: inline-block; background: #0D4F73; color: #fff; font-weight: 700; font-size: 0.88rem; padding: 0.6rem 1rem; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+  .cta-link:hover { background: #083850; color: #fff; }
+
+  .faq-item { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 10px; padding: 0.9rem 1.2rem; margin-bottom: 0.6rem; }
+  .faq-item summary { font-weight: 700; color: #0D4F73; cursor: pointer; font-size: 0.95rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::after { content: '+'; font-size: 1.4rem; font-weight: 300; color: #0D4F73; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { margin-top: 0.65rem; color: #475569; font-size: 0.88rem; line-height: 1.6; }
+  .faq-item a { color: #0D4F73; text-decoration: underline; }
+
+  .comparator-disclaimer { padding: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .comparator-disclaimer p { font-size: 0.78rem; color: #6b7280; line-height: 1.55; font-style: italic; margin: 0; }
+</style>

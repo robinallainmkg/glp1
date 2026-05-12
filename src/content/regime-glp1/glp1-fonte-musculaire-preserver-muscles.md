@@ -64,7 +64,7 @@ Chez les personnes de plus de 60 ans, la perte de masse musculaire liée au trai
 
 ### La restriction calorique sévère
 
-Les GLP-1 réduisent considérablement l'appétit. De nombreux patients rapportent manger 40 à 60% de moins qu'avant le traitement. Cette restriction calorique importante, si elle n'est pas compensée par un apport protéique suffisant — en respectant les [calories journalières recommandées sous GLP-1](/collections/régime-glp1/glp1-calories-journalieres/) — conduit le corps à puiser dans ses réserves musculaires pour obtenir les acides aminés nécessaires à ses fonctions vitales.
+Les GLP-1 réduisent considérablement l'appétit. De nombreux patients rapportent manger 40 à 60% de moins qu'avant le traitement. Cette restriction calorique importante, si elle n'est pas compensée par un apport protéique suffisant — en respectant les [calories journalières recommandées sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/) — conduit le corps à puiser dans ses réserves musculaires pour obtenir les acides aminés nécessaires à ses fonctions vitales.
 
 ### La perte de poids rapide
 
@@ -112,7 +112,7 @@ Les patients sous GLP-1 mangent moins. C'est le principe même du traitement. Po
 - **Fractionner les repas** : 4 à 5 petits repas riches en protéines plutôt que 2 gros repas
 - **Enrichir les plats** : ajouter du fromage blanc dans les sauces, des oeufs dans les préparations
 - **Collations protéinées** : fromage blanc, oeuf dur, poignée d'amandes entre les repas
-- **Compléments protéinés** : la whey protéine (lactosérum) est une option pratique pour atteindre ses objectifs sans volume alimentaire excessif. Consultez notre guide sur les [protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) pour des conseils détaillés.
+- **Compléments protéinés** : la whey protéine (lactosérum) est une option pratique pour atteindre ses objectifs sans volume alimentaire excessif. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) pour des conseils détaillés.
 
 ### La leucine : un acide aminé clé
 
@@ -122,7 +122,7 @@ La leucine est l'acide aminé qui déclenche la synthèse protéique musculaire.
 
 ### Pourquoi la musculation est non négociable
 
-L'exercice de résistance (musculation, bandes élastiques, poids de corps) est le stimulus le plus puissant pour signaler au corps qu'il doit conserver sa masse musculaire. Sans ce stimulus, même un apport protéique adéquat ne suffit pas à prévenir complètement la perte de muscle. Pour aller plus loin, consultez notre [guide complet sport et musculation sous GLP-1](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/).
+L'exercice de résistance (musculation, bandes élastiques, poids de corps) est le stimulus le plus puissant pour signaler au corps qu'il doit conserver sa masse musculaire. Sans ce stimulus, même un apport protéique adéquat ne suffit pas à prévenir complètement la perte de muscle. Pour aller plus loin, consultez notre [guide complet sport et musculation sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/).
 
 Une étude publiée dans *Obesity* en 2024 a montré que les patients sous sémaglutide qui pratiquaient un exercice de résistance 2 à 3 fois par semaine perdaient significativement moins de masse maigre que ceux qui ne faisaient que du cardio ou pas d'exercice du tout.
 
@@ -225,7 +225,7 @@ Oui. Une analyse de composition corporelle par impédancemétrie (disponible che
 
 ### Les personnes âgées doivent-elles être plus prudentes ?
 
-Oui. Après 60 ans, la résistance anabolique (le muscle répond moins bien aux stimuli de croissance) rend la préservation musculaire plus difficile. L'apport protéique doit être d'au moins 1,5 g/kg/jour, et l'exercice de résistance est encore plus important. En complément des protéines, les [micronutriments essentiels sous GLP-1](/collections/régime-glp1/glp1-micronutriments/) — calcium, vitamine D, magnésium — sont cruciaux pour la santé osseuse. Un suivi médical rapproché est recommandé.
+Oui. Après 60 ans, la résistance anabolique (le muscle répond moins bien aux stimuli de croissance) rend la préservation musculaire plus difficile. L'apport protéique doit être d'au moins 1,5 g/kg/jour, et l'exercice de résistance est encore plus important. En complément des protéines, les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) — calcium, vitamine D, magnésium — sont cruciaux pour la santé osseuse. Un suivi médical rapproché est recommandé.
 
 ---
 

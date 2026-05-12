@@ -75,8 +75,8 @@ Il n'existe pas de contre-indication connue à l'association d'un traitement GLP
 
 L'acupuncture peut être envisagée comme approche complémentaire dans la gestion du diabète de type 2 ou de l'obésité, avec une possible utilité pour :
 
-- **Gérer les effets secondaires digestifs** des GLP-1 ([nausées et vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/)/) — certains points d'acupuncture sont traditionnellement utilisés pour réduire les nausées, bien que leur efficacité spécifique dans le contexte GLP-1 ne soit pas étudiée
-- **Réduire l'anxiété et le stress** liés au suivi d'un régime alimentaire ou à l'initiation d'un nouveau traitement — un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) complémentaire est souvent recommandé
+- **Gérer les effets secondaires digestifs** des GLP-1 ([nausées et vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)/) — certains points d'acupuncture sont traditionnellement utilisés pour réduire les nausées, bien que leur efficacité spécifique dans le contexte GLP-1 ne soit pas étudiée
+- **Réduire l'anxiété et le stress** liés au suivi d'un régime alimentaire ou à l'initiation d'un nouveau traitement — un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) complémentaire est souvent recommandé
 - **Accompagner les douleurs de neuropathie** chez les patients diabétiques
 
 L'acupuncture peut être envisagée comme approche complémentaire dans la gestion du diabète de type 2 ou de l'obésité, mais la Haute Autorité de Santé (HAS) ne dispose pas de recommandations officielles validant son association systématique avec les traitements GLP-1. Son utilisation doit être discutée avec votre médecin au cas par cas.

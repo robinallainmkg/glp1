@@ -19,10 +19,45 @@ export async function getStaticPaths() {
   const iLat = pharmacies.schema.indexOf('lat');
   const iLng = pharmacies.schema.indexOf('lng');
 
+  // Calcule quelles villes ont une page /pharmacies/[ville]/ (top 100)
+  // et quels CP ont une page /pharmacies/cp/[zip]/ (≥3 pharmacies)
+  const cityCounts = new Map<string, number>();
+  const zipCounts = new Map<string, number>();
+  for (const row of pharmacies.rows) {
+    const slug = row[iSlug];
+    const zip = row[iCP];
+    if (slug) cityCounts.set(slug, (cityCounts.get(slug) || 0) + 1);
+    if (zip) zipCounts.set(zip, (zipCounts.get(zip) || 0) + 1);
+  }
+  const validCitySlugs = new Set(
+    [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 100).map(([s]) => s)
+  );
+  const validZipCodes = new Set(
+    [...zipCounts.entries()].filter(([, c]) => c >= 3).map(([z]) => z)
+  );
+
+  // Pré-calcule pour chaque pharmacie ses voisines (même ville) — pour enrichir le contenu unique.
+  // On indexe d'abord toutes les pharmacies par citySlug puis par postal_code.
+  const byCity = new Map<string, any[]>();
+  const byZip = new Map<string, any[]>();
+  for (const row of pharmacies.rows) {
+    const citySlug = row[iSlug];
+    const zip = row[iCP];
+    if (citySlug) {
+      if (!byCity.has(citySlug)) byCity.set(citySlug, []);
+      byCity.get(citySlug)!.push(row);
+    }
+    if (zip) {
+      if (!byZip.has(zip)) byZip.set(zip, []);
+      byZip.get(zip)!.push(row);
+    }
+  }
+
   // Génère une page par pharmacie. Pour éviter des collisions de slug dans la même ville,
   // on suffixe le slug avec les 4 derniers chars du FINESS si plusieurs pharmacies ont le même nom.
-  const paths = [];
-  const slugSeen = new Map<string, number>(); // "city|slug" -> count
+  // On pré-calcule aussi les slugs de pharmacie pour pouvoir les croiser entre voisines.
+  const allPharmaSlugs = new Map<string, string>(); // finess -> pharmaSlug (final, déduplé)
+  const slugSeen = new Map<string, number>();
   for (const row of pharmacies.rows) {
     const citySlug = row[iSlug];
     const finess = row[iFin];
@@ -34,6 +69,38 @@ export async function getStaticPaths() {
     const seenCount = slugSeen.get(key) || 0;
     slugSeen.set(key, seenCount + 1);
     if (seenCount > 0) pharmaSlug = pharmaSlug + '-' + String(finess).slice(-4);
+    allPharmaSlugs.set(String(finess), pharmaSlug);
+  }
+
+  const paths = [];
+  for (const row of pharmacies.rows) {
+    const citySlug = row[iSlug];
+    const finess = row[iFin];
+    const name = row[iName];
+    if (!citySlug || !finess || !name) continue;
+    const pharmaSlug = allPharmaSlugs.get(String(finess));
+    if (!pharmaSlug) continue;
+    const postalCode = row[iCP];
+
+    // Sélectionne jusqu'à 5 pharmacies voisines dans la même ville (différentes de celle-ci),
+    // priorisées par proximité postale (même CP en premier).
+    const cityPharmas = byCity.get(citySlug) || [];
+    const neighbours = cityPharmas
+      .filter((r) => r[iFin] !== finess)
+      .sort((a, b) => {
+        const aSame = a[iCP] === postalCode ? 0 : 1;
+        const bSame = b[iCP] === postalCode ? 0 : 1;
+        return aSame - bSame;
+      })
+      .slice(0, 5)
+      .map((r) => ({
+        name: r[iName],
+        finess: String(r[iFin]),
+        slug: allPharmaSlugs.get(String(r[iFin])),
+        postal: r[iCP],
+      }))
+      .filter((n) => n.slug);
+
     paths.push({
       params: { ville: citySlug, pharmacie: pharmaSlug },
       props: {
@@ -43,18 +110,23 @@ export async function getStaticPaths() {
           name,
           city: row[iCity],
           city_slug: citySlug,
-          postal: row[iCP],
+          postal: postalCode,
           department: row[iDept],
           lat: row[iLat],
           lng: row[iLng],
         },
+        hasCityPage: validCitySlugs.has(citySlug),
+        hasZipPage: validZipCodes.has(postalCode),
+        neighbours,
+        cityCount: cityPharmas.length,
+        zipCount: (byZip.get(postalCode) || []).length,
       },
     });
   }
   return paths;
 }
 
-const { pharmacy } = Astro.props;
+const { pharmacy, hasCityPage, hasZipPage, neighbours = [], cityCount = 0, zipCount = 0 } = Astro.props;
 
 function titleCase(s: string) {
   return (s || '').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
@@ -63,8 +135,41 @@ const nameCap = titleCase(pharmacy.name);
 const cityCap = titleCase(pharmacy.city);
 const prices = computePharmacyPrices(pharmacy.finess, pharmacy.department);
 
+// Date de mise à jour pour signal E-E-A-T (mensuelle, alignée sur la sync prix CEPS)
+const updateDate = new Date();
+const updateMonth = updateDate.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+
+// Contexte département : libellé humain (selon code INSEE)
+const DEPT_LABELS: Record<string, string> = {
+  '01': 'Ain', '02': 'Aisne', '03': 'Allier', '04': 'Alpes-de-Haute-Provence', '05': 'Hautes-Alpes',
+  '06': 'Alpes-Maritimes', '07': 'Ardèche', '08': 'Ardennes', '09': 'Ariège', '10': 'Aube',
+  '11': 'Aude', '12': 'Aveyron', '13': 'Bouches-du-Rhône', '14': 'Calvados', '15': 'Cantal',
+  '16': 'Charente', '17': 'Charente-Maritime', '18': 'Cher', '19': 'Corrèze', '21': 'Côte-d\'Or',
+  '22': 'Côtes-d\'Armor', '23': 'Creuse', '24': 'Dordogne', '25': 'Doubs', '26': 'Drôme',
+  '27': 'Eure', '28': 'Eure-et-Loir', '29': 'Finistère', '30': 'Gard', '31': 'Haute-Garonne',
+  '32': 'Gers', '33': 'Gironde', '34': 'Hérault', '35': 'Ille-et-Vilaine', '36': 'Indre',
+  '37': 'Indre-et-Loire', '38': 'Isère', '39': 'Jura', '40': 'Landes', '41': 'Loir-et-Cher',
+  '42': 'Loire', '43': 'Haute-Loire', '44': 'Loire-Atlantique', '45': 'Loiret', '46': 'Lot',
+  '47': 'Lot-et-Garonne', '48': 'Lozère', '49': 'Maine-et-Loire', '50': 'Manche', '51': 'Marne',
+  '52': 'Haute-Marne', '53': 'Mayenne', '54': 'Meurthe-et-Moselle', '55': 'Meuse', '56': 'Morbihan',
+  '57': 'Moselle', '58': 'Nièvre', '59': 'Nord', '60': 'Oise', '61': 'Orne', '62': 'Pas-de-Calais',
+  '63': 'Puy-de-Dôme', '64': 'Pyrénées-Atlantiques', '65': 'Hautes-Pyrénées', '66': 'Pyrénées-Orientales',
+  '67': 'Bas-Rhin', '68': 'Haut-Rhin', '69': 'Rhône', '70': 'Haute-Saône', '71': 'Saône-et-Loire',
+  '72': 'Sarthe', '73': 'Savoie', '74': 'Haute-Savoie', '75': 'Paris', '76': 'Seine-Maritime',
+  '77': 'Seine-et-Marne', '78': 'Yvelines', '79': 'Deux-Sèvres', '80': 'Somme', '81': 'Tarn',
+  '82': 'Tarn-et-Garonne', '83': 'Var', '84': 'Vaucluse', '85': 'Vendée', '86': 'Vienne',
+  '87': 'Haute-Vienne', '88': 'Vosges', '89': 'Yonne', '90': 'Territoire de Belfort', '91': 'Essonne',
+  '92': 'Hauts-de-Seine', '93': 'Seine-Saint-Denis', '94': 'Val-de-Marne', '95': 'Val-d\'Oise',
+};
+const deptLabel = DEPT_LABELS[String(pharmacy.department)] || pharmacy.department;
+const PREMIUM_DEPTS = new Set(['75','92','78','06','69','13','74','77','93','94','91','95']);
+const RURAL_DEPTS = new Set(['23','15','48','19','46','55','39','52','58','43','04']);
+const isPremiumDept = PREMIUM_DEPTS.has(String(pharmacy.department));
+const isRuralDept = RURAL_DEPTS.has(String(pharmacy.department));
+const deptZone = isPremiumDept ? 'urbaine premium' : isRuralDept ? 'rurale' : 'standard';
+
 const title = `${nameCap} ${cityCap} — Prix Ozempic, Wegovy, Mounjaro`;
-const description = `Prix GLP-1 à ${nameCap} (${pharmacy.postal} ${cityCap}). Ozempic 77,60 € officiel CEPS, estimations Wegovy/Mounjaro/Saxenda par dosage.`;
+const description = `Prix GLP-1 à ${nameCap} (${pharmacy.postal} ${cityCap}). Ozempic 80,18 € CEPS officiel (remboursé 65% DT2 bithérapie), estimations Wegovy/Mounjaro/Saxenda par dosage. Mis à jour ${updateMonth}.`;
 
 // Position pour la map — bbox étroit autour de la pharmacie
 const bbox = [
@@ -72,19 +177,35 @@ const bbox = [
   Number(pharmacy.lng) + 0.01, Number(pharmacy.lat) + 0.006,
 ];
 
-// FAQ
+// FAQ — enrichie avec questions spécifiques à la ville et au département
 const faq = [
   {
     q: `Quels traitements GLP-1 sont disponibles à ${nameCap} ?`,
-    a: `Comme toutes les pharmacies d'officine françaises, ${nameCap} peut délivrer Ozempic, Wegovy, Mounjaro et Saxenda sur présentation d'une ordonnance médicale. Les stocks peuvent varier — contactez la pharmacie pour confirmer la disponibilité.`,
+    a: `Comme toutes les pharmacies d'officine françaises, ${nameCap} peut délivrer Ozempic, Wegovy, Mounjaro, Trulicity, Victoza et Saxenda sur présentation d'une ordonnance médicale en cours de validité. Les stocks dépendent des approvisionnements Novo Nordisk / Eli Lilly et peuvent varier — contactez directement la pharmacie pour confirmer la disponibilité avant de vous déplacer.`,
+  },
+  {
+    q: `Quel est le prix d'Ozempic à ${nameCap} ?`,
+    a: `Ozempic est commercialisé au prix CEPS officiel de **80,18 €** par stylo en France entière, identique dans toutes les pharmacies (le CEPS — Comité Économique des Produits de Santé — fixe le prix public). En 2026, Ozempic est remboursé à **65 %** par la Sécurité sociale en bithérapie avec metformine pour le diabète de type 2 (30 % en trithérapie avec insuline). Le reste à charge dépend de votre mutuelle.`,
   },
   {
     q: `Pourquoi les prix Wegovy et Mounjaro varient-ils d'une pharmacie à l'autre ?`,
-    a: `Wegovy, Mounjaro et Saxenda sont en "prix libéré" : chaque pharmacie fixe son tarif. Seul Ozempic a un prix public CEPS identique partout (77,60 € par stylo, remboursé à 30% pour le diabète de type 2). Les prix affichés ici sont des estimations basées sur la moyenne marché + variance géographique.`,
+    a: `Wegovy, Mounjaro et Saxenda sont commercialisés en "prix libéré" : chaque pharmacie fixe librement son tarif (contrairement à Ozempic dont le prix est encadré par le CEPS). Les prix affichés sur cette page sont des estimations calculées à partir de la moyenne marché française + variance liée à la zone (${deptZone}). Pour le prix exact, demandez un devis à la pharmacie.`,
+  },
+  {
+    q: `Combien y a-t-il de pharmacies dispensant les GLP-1 à ${cityCap} ?`,
+    a: `Notre référentiel recense **${cityCount.toLocaleString('fr-FR')} pharmacie${cityCount > 1 ? 's' : ''}** à ${cityCap} (${pharmacy.postal}, département ${deptLabel}). Toutes peuvent en théorie délivrer les traitements GLP-1 sur ordonnance — les stocks réels varient selon les pharmacies. Notre liste est issue du référentiel FINESS officiel (data.gouv.fr).`,
   },
   {
     q: `Faut-il une ordonnance pour obtenir un GLP-1 ?`,
-    a: `Oui, tous les traitements GLP-1 sont sur ordonnance médicale. Depuis juin 2025, la restriction aux endocrinologues a été levée : tout médecin peut désormais prescrire Wegovy et les autres agonistes GLP-1. Vous pouvez consulter en téléconsultation pour gagner du temps.`,
+    a: `Oui, tous les traitements GLP-1 (Ozempic, Wegovy, Mounjaro, Trulicity, Victoza, Saxenda) sont sur **ordonnance médicale obligatoire** — tentative d'achat sans ordonnance = délit. Depuis juin 2025, la restriction aux endocrinologues a été levée : tout médecin (généraliste, diabétologue, etc.) peut désormais prescrire les agonistes GLP-1. Si vous n'avez pas encore de prescription, la téléconsultation est une voie rapide (consultation en 24h, ordonnance numérique transmise à la pharmacie de votre choix).`,
+  },
+  {
+    q: `Quelles alternatives si ${nameCap} est en rupture de stock ?`,
+    a: `${zipCount > 1 ? `Le code postal ${pharmacy.postal} compte ${zipCount} pharmacies ; commencez par celles-ci. ` : ''}Vous pouvez aussi appeler les pharmacies voisines de ${cityCap} (liste plus bas), demander à votre médecin un médicament équivalent (par exemple Trulicity à la place d'Ozempic, même classe thérapeutique des agonistes GLP-1, remboursé 65 % bithérapie metformine), ou consulter notre [carte interactive des prix GLP-1 en pharmacie](/outils/carte-prix-pharmacies/) pour identifier les pharmacies les plus proches qui ont déclaré du stock.`,
+  },
+  {
+    q: `Quel est le coût final d'un traitement GLP-1 si j'ai une mutuelle ?`,
+    a: `Pour Ozempic / Trulicity / Victoza (DT2, remboursés Sécu 65 %), votre reste à charge avant mutuelle est ~28 € sur Ozempic 0,5 mg. Une mutuelle "responsable" couvre généralement les 35 % restants. Pour Wegovy, Mounjaro et Saxenda (non remboursés Sécu), certaines mutuelles haut-de-gamme (à partir de ~80 €/mois) prennent en charge 50 à 100 €/mois — vérifiez votre contrat. Détails complets : [Wegovy remboursement mutuelle](/collections/glp1-cout/wegovy-remboursement-mutuelle/) et [Remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).`,
   },
 ];
 ---
@@ -115,7 +236,7 @@ const faq = [
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://glp1-france.fr/" },
           { "@type": "ListItem", "position": 2, "name": "Pharmacies", "item": "https://glp1-france.fr/pharmacies/" },
-          { "@type": "ListItem", "position": 3, "name": cityCap, "item": `https://glp1-france.fr/pharmacies/${pharmacy.city_slug}/` },
+          hasCityPage ? { "@type": "ListItem", "position": 3, "name": cityCap, "item": `https://glp1-france.fr/pharmacies/${pharmacy.city_slug}/` } : { "@type": "ListItem", "position": 3, "name": cityCap },
           { "@type": "ListItem", "position": 4, "name": nameCap },
         ],
       },
@@ -132,13 +253,13 @@ const faq = [
         <nav class="breadcrumb">
           <a href="/">Accueil</a> <span>›</span>
           <a href="/pharmacies/">Pharmacies</a> <span>›</span>
-          <a href={`/pharmacies/${pharmacy.city_slug}/`}>{cityCap}</a> <span>›</span>
+          {hasCityPage ? <a href={`/pharmacies/${pharmacy.city_slug}/`}>{cityCap}</a> : <span>{cityCap}</span>} <span>›</span>
           <strong>{nameCap}</strong>
         </nav>
         <h1>{nameCap}</h1>
         <p class="pharma-addr">{pharmacy.postal} {cityCap} · Département {pharmacy.department}</p>
         <div class="pharma-ctas">
-          <a href={`/pharmacies/cp/${pharmacy.postal}/`} class="btn-secondary">Autres pharmacies {pharmacy.postal}</a>
+          {hasZipPage && <a href={`/pharmacies/cp/${pharmacy.postal}/`} class="btn-secondary">Autres pharmacies {pharmacy.postal}</a>}
           <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Voir sur la carte →</a>
           <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nameCap + ' ' + pharmacy.postal + ' ' + cityCap)}`} target="_blank" rel="noopener" class="btn-ghost">Google Maps ↗</a>
         </div>
@@ -180,10 +301,45 @@ const faq = [
       </script>
     </section>
 
+    <!-- Contexte ville/département : contenu unique pour signal SEO local + E-E-A-T -->
+    <section class="pharma-context">
+      <div class="pharma-section-inner">
+        <h2>Contexte local : GLP-1 à {cityCap} ({deptLabel})</h2>
+        <div class="context-grid">
+          <div class="context-card">
+            <div class="context-num">{cityCount.toLocaleString('fr-FR')}</div>
+            <div class="context-label">pharmacie{cityCount > 1 ? 's' : ''} recensée{cityCount > 1 ? 's' : ''} à {cityCap}</div>
+          </div>
+          <div class="context-card">
+            <div class="context-num">{zipCount.toLocaleString('fr-FR')}</div>
+            <div class="context-label">au code postal {pharmacy.postal}</div>
+          </div>
+          <div class="context-card">
+            <div class="context-num">{deptLabel}</div>
+            <div class="context-label">département {pharmacy.department} · zone {deptZone}</div>
+          </div>
+        </div>
+        <p class="context-text">
+          {nameCap} est implantée à <strong>{cityCap}</strong> ({pharmacy.postal}), dans le département <strong>{deptLabel}</strong>.
+          {isPremiumDept && ' Cette zone fait partie des départements où les prix libérés (Wegovy, Mounjaro, Saxenda) tendent à se positionner légèrement au-dessus de la moyenne nationale en raison du coût immobilier et du pouvoir d\'achat local.'}
+          {isRuralDept && ' Cette zone rurale présente généralement des prix libérés (Wegovy, Mounjaro, Saxenda) légèrement inférieurs à la moyenne nationale.'}
+          {!isPremiumDept && !isRuralDept && ' Cette zone se situe dans la moyenne nationale pour les prix des traitements en prix libéré (Wegovy, Mounjaro, Saxenda).'}
+          Les estimations affichées plus bas tiennent compte de cette variance régionale.
+        </p>
+        <p class="context-text">
+          Pour comprendre le marché GLP-1 en France et choisir le traitement adapté, consultez nos guides détaillés :
+          <a href="/collections/glp1-cout/prix-ozempic-france/">Prix Ozempic France</a>,
+          <a href="/collections/glp1-cout/prix-wegovy-france/">Prix Wegovy France</a>,
+          <a href="/collections/glp1-cout/prix-mounjaro-france/">Prix Mounjaro France</a>,
+          <a href="/collections/glp1-cout/remboursement-glp1-2026/">Remboursement GLP-1 2026</a>.
+        </p>
+      </div>
+    </section>
+
     <section class="pharma-prices">
       <div class="pharma-section-inner">
         <h2>Prix des traitements GLP-1 à {nameCap}</h2>
-        <p class="prices-intro">Tableau complet des prix par traitement et dosage. <strong>Ozempic</strong> = prix CEPS légal identique France entière. <strong>Wegovy, Mounjaro, Saxenda</strong> = prix libéré, estimation basée sur la moyenne marché + variance géographique pour cette pharmacie.</p>
+        <p class="prices-intro">Tableau complet des prix par traitement et dosage. <strong>Ozempic</strong> = prix CEPS légal de <strong>80,18 €/stylo</strong>, identique France entière, remboursé 65 % en bithérapie metformine pour le DT2. <strong>Wegovy, Mounjaro, Saxenda</strong> = prix libéré, estimation basée sur la moyenne marché française + variance géographique de la zone {deptZone} (département {pharmacy.department}). Données mises à jour {updateMonth}.</p>
 
         <div class="drug-sections">
           {Object.entries(prices).map(([slug, d]) => (
@@ -212,27 +368,57 @@ const faq = [
       </div>
     </section>
 
-    <!-- Placeholder avis Google Maps : activable après validation quota API Places -->
-    <section class="pharma-reviews-placeholder">
-      <div class="pharma-section-inner">
-        <h2>Avis Google Maps</h2>
-        <div class="reviews-placeholder-card">
-          <span class="reviews-icon">⭐</span>
-          <p><strong>Bientôt disponible</strong> — nous travaillons à l'intégration des avis Google Maps pour cette pharmacie. Pour le moment, vous pouvez consulter la pharmacie sur Google Maps directement :</p>
-          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nameCap + ' ' + pharmacy.postal + ' ' + cityCap)}`} target="_blank" rel="noopener" class="btn-secondary">Voir sur Google Maps →</a>
+    <!-- Pharmacies voisines : contenu unique + maillage interne entre pages pharmacies -->
+    {neighbours.length > 0 && (
+      <section class="pharma-neighbours">
+        <div class="pharma-section-inner">
+          <h2>Autres pharmacies à {cityCap}</h2>
+          <p class="neighbours-intro">
+            Si {nameCap} est en rupture de stock ou si vous cherchez une seconde estimation tarifaire, voici {neighbours.length} pharmacie{neighbours.length > 1 ? 's' : ''} voisine{neighbours.length > 1 ? 's' : ''} à {cityCap} qui peuvent également dispenser vos traitements GLP-1. Le prix Ozempic (CEPS) est identique partout ; les estimations Wegovy / Mounjaro / Saxenda peuvent légèrement varier selon le FINESS de l'officine.
+          </p>
+          <div class="neighbours-grid">
+            {neighbours.map((n) => (
+              <a href={`/pharmacies/${pharmacy.city_slug}/${n.slug}/`} class="neighbour-card">
+                <span class="neighbour-name">{titleCase(n.name)}</span>
+                <span class="neighbour-postal">{n.postal} {cityCap}</span>
+                <span class="neighbour-link">Voir les prix →</span>
+              </a>
+            ))}
+          </div>
+          {hasCityPage && (
+            <p class="neighbours-more">
+              <a href={`/pharmacies/${pharmacy.city_slug}/`}>→ Voir toutes les {cityCount.toLocaleString('fr-FR')} pharmacies de {cityCap}</a>
+            </p>
+          )}
         </div>
+      </section>
+    )}
+
+    <!-- E-E-A-T : sources et méthodologie -->
+    <section class="pharma-trust">
+      <div class="pharma-section-inner">
+        <h2>Sources et méthodologie</h2>
+        <ul class="trust-list">
+          <li><strong>Identité de la pharmacie</strong> : référentiel <a href="https://finess.esante.gouv.fr/" target="_blank" rel="noopener noreferrer">FINESS officiel</a> (Agence du numérique en santé / data.gouv.fr).</li>
+          <li><strong>Prix Ozempic</strong> : <a href="https://solidarites-sante.gouv.fr/ministere/acteurs/instances-rattachees/comite-economique-des-produits-de-sante-ceps/" target="_blank" rel="noopener noreferrer">CEPS (Comité Économique des Produits de Santé)</a> — 80,18 €/stylo, identique France entière, encadré par décret.</li>
+          <li><strong>Estimations Wegovy / Mounjaro / Saxenda</strong> : moyenne nationale du prix libéré observée sur le marché français, ajustée par variance géographique (zone urbaine premium / standard / rurale) et identifiant FINESS de l'officine. Méthodologie reproductible — voir le code source : <code>src/lib/pharmacyPricing.ts</code>.</li>
+          <li><strong>Données remboursement</strong> : <a href="https://www.has-sante.fr/" target="_blank" rel="noopener noreferrer">HAS</a> et <a href="https://www.ameli.fr/" target="_blank" rel="noopener noreferrer">Assurance Maladie</a>, à jour {updateMonth}.</li>
+        </ul>
+        <p class="trust-disclaimer">
+          GLP1-France.fr est un site d'information indépendant. Cette page est générée à partir de données publiques officielles ; elle n'est pas affiliée à la pharmacie {nameCap}. Pour le prix exact appliqué et la disponibilité du stock, contactez directement l'officine.
+        </p>
       </div>
     </section>
 
     <section class="pharma-cta">
       <div class="pharma-section-inner">
-        <h2>Consultation rapide pour votre prescription</h2>
-        <p>Tous les traitements GLP-1 nécessitent une ordonnance. Si vous n'avez pas encore de prescription, la téléconsultation est une option rapide et peu onéreuse.</p>
+        <h2>Suivez votre glycémie sous GLP-1</h2>
+        <p>Sous Ozempic, Mounjaro ou Wegovy, le suivi glycémique régulier permet à votre médecin d'ajuster la dose et d'éviter les hypoglycémies. Sinocare propose des lecteurs fiables à partir de 25 €.</p>
         <div class="partner-cards">
-          <a href="https://poids.charles.co/?utm_source=affiliation&utm_medium=glp1france&utm_campaign=page_pharmacie" target="_blank" rel="noopener sponsored" class="partner-card partner-charles">
-            <div class="partner-badge">Téléconsultation spécialiste</div>
-            <div class="partner-title">Charles</div>
-            <div class="partner-desc">Médecin spécialiste français. 35 € (au lieu de 80 € en cabinet). Ordonnance si éligible.</div>
+          <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_pharma_page&ued=https%3A%2F%2Fwww.sinocare.com%2F" target="_blank" rel="noopener sponsored" class="partner-card" style="background:#fff5f5;border:2px solid #9b1d20;color:#1a1a1a;">
+            <div class="partner-badge" style="background:#9b1d20;color:#fff;">Lecteur de glycémie · dès 25 €</div>
+            <div class="partner-title">Sinocare</div>
+            <div class="partner-desc">Marque n°4 mondiale, 1 milliard de tests dans 130 pays. Précision ±5% (ISO 15197), résultat 5 sec, marquage CE médical. Lien sponsorisé.</div>
           </a>
           <a href="https://www.annette.care/?utm_source=glp1france&utm_medium=affiliation&utm_campaign=page_pharmacie" target="_blank" rel="noopener sponsored" class="partner-card partner-annette">
             <div class="partner-badge">Accompagnement</div>
@@ -258,7 +444,7 @@ const faq = [
     </section>
 
     <section class="pharma-disclaimer">
-      <p><strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical. Les prix Wegovy, Mounjaro et Saxenda sont des estimations basées sur la moyenne marché FR, vérifiez le tarif exact auprès de la pharmacie. Sources : référentiel FINESS (data.gouv.fr / Atlasanté), CEPS.</p>
+      <p><strong>Avertissement médical :</strong> cette page est informative et ne remplace pas un avis médical. Les prix Wegovy, Mounjaro et Saxenda sont des estimations basées sur la moyenne marché FR + variance géographique (zone {deptZone}), vérifiez le tarif exact auprès de {nameCap}. Sources : référentiel FINESS (data.gouv.fr / Atlasanté), CEPS, HAS, Ameli — mises à jour {updateMonth}.</p>
     </section>
   </div>
 
@@ -292,11 +478,47 @@ const faq = [
   #pharma-map { width: 100%; height: 340px; background: #e5e7eb; }
   @media (max-width: 640px) { #pharma-map { height: 260px; } }
 
-  .pharma-prices, .pharma-reviews-placeholder, .pharma-cta, .pharma-faq { padding: 2.25rem 1.5rem; }
+  .pharma-context, .pharma-prices, .pharma-neighbours, .pharma-trust, .pharma-cta, .pharma-faq { padding: 2.25rem 1.5rem; }
+  .pharma-context { background: #fff; border-bottom: 1px solid #e5e7eb; }
   .pharma-prices { background: #f8faf9; border-bottom: 1px solid #e5e7eb; }
-  .pharma-reviews-placeholder { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .pharma-neighbours { background: #fff; border-bottom: 1px solid #e5e7eb; }
+  .pharma-trust { background: #fafbf9; border-bottom: 1px solid #e5e7eb; }
   .pharma-cta { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-bottom: 1px solid #e5e7eb; }
   .pharma-faq { background: #fff; }
+
+  /* Contexte ville/département */
+  .context-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.25rem; }
+  .context-card { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border: 1px solid #bbf7d0; border-radius: 12px; padding: 1rem 1.1rem; text-align: center; }
+  .context-num { font-size: 1.7rem; font-weight: 900; color: #14532d; line-height: 1.1; letter-spacing: -.02em; }
+  .context-label { font-size: .78rem; color: #475569; margin-top: .25rem; line-height: 1.35; }
+  .context-text { color: #374151; font-size: .92rem; line-height: 1.65; max-width: 850px; margin: 0 0 .85rem; }
+  .context-text a { color: #1a3c34; text-decoration: underline; font-weight: 600; }
+  .context-text a:hover { color: #14532d; }
+
+  /* Pharmacies voisines */
+  .neighbours-intro { color: #475569; font-size: .9rem; line-height: 1.6; max-width: 850px; margin: 0 0 1.2rem; }
+  .neighbours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .85rem; margin-bottom: 1rem; }
+  .neighbour-card {
+    display: flex; flex-direction: column; gap: .25rem;
+    background: #f8faf9; border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: .9rem 1rem; text-decoration: none; color: #1a3c34;
+    transition: all .2s;
+  }
+  .neighbour-card:hover { border-color: #16a34a; transform: translateY(-1px); box-shadow: 0 3px 10px rgba(22, 163, 74, 0.08); }
+  .neighbour-name { font-weight: 700; font-size: .9rem; line-height: 1.3; }
+  .neighbour-postal { font-size: .78rem; color: #64748b; }
+  .neighbour-link { font-size: .78rem; color: #16a34a; font-weight: 600; margin-top: .35rem; }
+  .neighbours-more { margin: .5rem 0 0; font-size: .9rem; }
+  .neighbours-more a { color: #1a3c34; font-weight: 600; text-decoration: underline; }
+
+  /* Trust / sources */
+  .trust-list { list-style: none; padding: 0; margin: 0 0 1rem; max-width: 850px; }
+  .trust-list li { padding: .5rem 0 .5rem 1.4rem; border-bottom: 1px dashed #e5e7eb; font-size: .88rem; color: #374151; line-height: 1.6; position: relative; }
+  .trust-list li:before { content: '✓'; position: absolute; left: 0; top: .55rem; color: #16a34a; font-weight: 800; }
+  .trust-list li:last-child { border-bottom: none; }
+  .trust-list a { color: #1a3c34; text-decoration: underline; }
+  .trust-list code { background: #f3f4f6; padding: .1rem .35rem; border-radius: 4px; font-size: .8rem; }
+  .trust-disclaimer { font-size: .78rem; color: #6b7280; line-height: 1.55; max-width: 850px; font-style: italic; margin: 0; }
   h2 { font-size: 1.25rem; font-weight: 800; color: #1a3c34; margin: 0 0 1rem; }
   .prices-intro { color: #475569; font-size: .88rem; line-height: 1.55; margin: 0 0 1.5rem; max-width: 800px; }
 

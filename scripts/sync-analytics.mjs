@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createServer } from 'http';
+import { createSign } from 'crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
@@ -195,10 +196,70 @@ function appendToEnv(key, value) {
 }
 
 // =============================================================================
-// OAuth2 — Get access token from refresh token
+// Auth — Service Account (preferred) ou OAuth refresh token (legacy fallback)
 // =============================================================================
+//
+// Le service account JSON est cherché dans 3 endroits par ordre de priorité :
+//   1. $GOOGLE_APPLICATION_CREDENTIALS (variable d'env standard Google)
+//      → recommandé : un seul JSON centralisé pour tous tes projets.
+//      → set via : [Environment]::SetEnvironmentVariable('GOOGLE_APPLICATION_CREDENTIALS', '<path>', 'User')
+//      → typique : C:\Users\<user>\.gcloud\ga-service-account.json
+//   2. secrets/ga-service-account.json (local au repo, fallback portable)
+//   3. OAuth refresh token via .env (legacy, déprécié — expire dans 6 mois)
 
-async function getAccessToken() {
+function resolveServiceAccountPath() {
+  const envPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+  if (envPath && existsSync(envPath)) return envPath;
+  const localPath = join(PROJECT_ROOT, 'secrets', 'ga-service-account.json');
+  if (existsSync(localPath)) return localPath;
+  return null;
+}
+
+function base64UrlEncode(buf) {
+  return Buffer.from(buf)
+    .toString('base64')
+    .replace(/=+$/, '')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_');
+}
+
+async function getServiceAccountToken() {
+  const saPath = resolveServiceAccountPath();
+  if (!saPath) throw new Error('Service account JSON introuvable (ni $GOOGLE_APPLICATION_CREDENTIALS ni secrets/ga-service-account.json)');
+  const sa = JSON.parse(readFileSync(saPath, 'utf-8'));
+  const now = Math.floor(Date.now() / 1000);
+  const header = { alg: 'RS256', typ: 'JWT' };
+  const payload = {
+    iss: sa.client_email,
+    scope: SCOPES,
+    aud: sa.token_uri,
+    iat: now,
+    exp: now + 3600,
+  };
+
+  const headerB64 = base64UrlEncode(JSON.stringify(header));
+  const payloadB64 = base64UrlEncode(JSON.stringify(payload));
+  const unsigned = `${headerB64}.${payloadB64}`;
+
+  const signer = createSign('RSA-SHA256');
+  signer.update(unsigned);
+  const signature = signer.sign(sa.private_key);
+  const jwt = `${unsigned}.${base64UrlEncode(signature)}`;
+
+  const r = await fetch(sa.token_uri, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: jwt,
+    }),
+  });
+  const data = await r.json();
+  if (data.error) throw new Error(`Service account auth error: ${data.error_description || data.error}`);
+  return data.access_token;
+}
+
+async function getOAuthToken() {
   const r = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -206,13 +267,23 @@ async function getAccessToken() {
       client_id: CLIENT_ID,
       client_secret: CLIENT_SECRET,
       refresh_token: REFRESH_TOKEN,
-      grant_type: 'refresh_token'
-    })
+      grant_type: 'refresh_token',
+    }),
   });
-
   const data = await r.json();
   if (data.error) throw new Error(`OAuth refresh error: ${data.error_description || data.error}`);
   return data.access_token;
+}
+
+async function getAccessToken() {
+  // Préfère service account si dispo (plus de refresh token qui expire)
+  const saPath = resolveServiceAccountPath();
+  if (saPath) {
+    console.log(`🔑 Auth via service account (${saPath})`);
+    return getServiceAccountToken();
+  }
+  console.log('🔑 Auth via OAuth refresh token (legacy)');
+  return getOAuthToken();
 }
 
 // =============================================================================
@@ -418,7 +489,7 @@ async function fetchGSC(token, days) {
   }
 
   const data = await r.json();
-  const rows = (data.rows || []).map(row => {
+  const allRows = (data.rows || []).map(row => {
     const pagePath = new URL(row.keys[0]).pathname;
     return {
       page_path: pagePath,
@@ -433,7 +504,17 @@ async function fetchGSC(token, days) {
     };
   });
 
-  console.log(`  🔎 ${rows.length} rows fetched`);
+  // Keep only rows from the top 500 pages by impressions to limit Supabase disk IO
+  const pageImpressions = new Map();
+  for (const row of allRows) {
+    pageImpressions.set(row.page_path, (pageImpressions.get(row.page_path) || 0) + row.impressions);
+  }
+  const top500Pages = new Set(
+    [...pageImpressions.entries()].sort((a, b) => b[1] - a[1]).slice(0, 500).map(([p]) => p)
+  );
+  const rows = allRows.filter(r => top500Pages.has(r.page_path));
+
+  console.log(`  🔎 ${rows.length} rows fetched (${allRows.length} total, capped to top ${top500Pages.size} pages)`);
   return rows;
 }
 

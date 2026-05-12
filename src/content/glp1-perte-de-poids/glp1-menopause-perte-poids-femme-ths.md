@@ -160,7 +160,7 @@ Bonne nouvelle : depuis juin 2025, l'ANSM a ouvert la prescription initiale de W
 
 ### Points d'attention spécifiques à la ménopause
 
-- **Préservation de la [masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : la ménopause entraîne déjà une perte musculaire. Sous GLP-1, la réduction de l'appétit peut aggraver ce phénomène si l'[apport en protéines](/collections/régime-glp1/glp1-protéines/) est insuffisant. L'objectif est d'atteindre au moins 1,2 g de protéines par kg de poids corporel par jour, et d'associer une [activité de renforcement musculaire](/collections/régime-glp1/glp1-sport-exercice-musculation-guide/).
+- **Préservation de la [masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)** : la ménopause entraîne déjà une perte musculaire. Sous GLP-1, la réduction de l'appétit peut aggraver ce phénomène si l'[apport en protéines](/collections/regime-glp1/glp1-protéines/) est insuffisant. L'objectif est d'atteindre au moins 1,2 g de protéines par kg de poids corporel par jour, et d'associer une [activité de renforcement musculaire](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/).
 - **Surveillance osseuse** : une supplémentation en vitamine D et calcium est souvent recommandée pendant la perte de poids sous GLP-1 chez les femmes ménopausées.
 - **Interactions avec les traitements ménopausiques** : le THS (estradiol transdermal, progestérone micronisée) n'interagit pas de façon significative avec les GLP-1. La surveillance habituelle du THS reste inchangée.
 

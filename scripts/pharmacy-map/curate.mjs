@@ -248,6 +248,14 @@ async function main() {
 
   console.error(`[curate] decisions: ${summary.approved} approve · ${summary.rejected} reject · ${summary.pending} pending`);
 
+  // Skip heavy JSON export + git push if no new submissions to process
+  if (summary.total === 0) {
+    console.error('[curate] no pending submissions — skipping export + git');
+    await sendDiscord(summary, { ok: true, skipped: true, reason: 'no-pending' });
+    console.log(JSON.stringify({ ok: true, skipped: true, ...summary }));
+    process.exit(0);
+  }
+
   const exportResult = await runJsonExport();
   const gitResult = exportResult.ok ? runGit(summary) : { ok: false, error: 'export failed' };
   const discordResult = await sendDiscord(summary, gitResult);

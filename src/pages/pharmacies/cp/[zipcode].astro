@@ -35,6 +35,16 @@ export async function getStaticPaths() {
     });
   }
 
+  // Top 100 villes (même seuil que [ville].astro)
+  const cityCounts = new Map<string, number>();
+  for (const row of pharmacies.rows) {
+    const slug = row[iSlug];
+    if (slug) cityCounts.set(slug, (cityCounts.get(slug) || 0) + 1);
+  }
+  const validCitySlugs = new Set(
+    [...cityCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 100).map(([s]) => s)
+  );
+
   // Génère une page par zipcode ayant >=3 pharmacies (évite les pages 1-row sans valeur)
   const zips = Object.entries(byZip).filter(([_, list]) => list.length >= 3);
   return zips.map(([zip, pharmas]) => {
@@ -52,17 +62,17 @@ export async function getStaticPaths() {
     }
     return {
       params: { zipcode: zip },
-      props: { zip, city, citySlug, dept, pharmas, bbox: [minLng, minLat, maxLng, maxLat] },
+      props: { zip, city, citySlug, dept, pharmas, bbox: [minLng, minLat, maxLng, maxLat], hasCityPage: validCitySlugs.has(citySlug) },
     };
   });
 }
 
-const { zip, city, citySlug, dept, pharmas, bbox } = Astro.props;
+const { zip, city, citySlug, dept, pharmas, bbox, hasCityPage } = Astro.props;
 function titleCase(s) { return (s || '').toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()); }
 const cityCap = titleCase(city);
 
 const title = `Pharmacies GLP-1 ${zip} (${cityCap}) — Prix Ozempic, Wegovy, Mounjaro`;
-const description = `${pharmas.length} pharmacies au code postal ${zip} à ${cityCap}. Prix Ozempic officiel 77,60 €, prix Wegovy / Mounjaro / Saxenda estimés par pharmacie.`;
+const description = `${pharmas.length} pharmacies au code postal ${zip} à ${cityCap}. Prix Ozempic officiel 80,18 €, prix Wegovy / Mounjaro / Saxenda estimés par pharmacie.`;
 
 // Autres codes postaux de la même ville
 import fs2 from 'node:fs';
@@ -96,7 +106,7 @@ const mapPharmas = pharmas.slice(0, 500).map((p) => ({ id: p.id, name: p.name, l
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://glp1-france.fr/" },
       { "@type": "ListItem", "position": 2, "name": "Pharmacies", "item": "https://glp1-france.fr/pharmacies/" },
-      { "@type": "ListItem", "position": 3, "name": cityCap, "item": `https://glp1-france.fr/pharmacies/${citySlug}/` },
+      hasCityPage ? { "@type": "ListItem", "position": 3, "name": cityCap, "item": `https://glp1-france.fr/pharmacies/${citySlug}/` } : { "@type": "ListItem", "position": 3, "name": cityCap },
       { "@type": "ListItem", "position": 4, "name": `Code postal ${zip}`, "item": `https://glp1-france.fr/pharmacies/cp/${zip}/` },
     ],
   })} />
@@ -107,14 +117,14 @@ const mapPharmas = pharmas.slice(0, 500).map((p) => ({ id: p.id, name: p.name, l
         <nav class="breadcrumb">
           <a href="/">Accueil</a> <span>›</span>
           <a href="/pharmacies/">Pharmacies</a> <span>›</span>
-          <a href={`/pharmacies/${citySlug}/`}>{cityCap}</a> <span>›</span>
+          {hasCityPage ? <a href={`/pharmacies/${citySlug}/`}>{cityCap}</a> : <span>{cityCap}</span>} <span>›</span>
           <strong>{zip}</strong>
         </nav>
         <h1>Pharmacies code postal {zip} — {cityCap}</h1>
         <p class="zip-hero-sub"><strong>{pharmas.length} pharmacies</strong> référencées dans le secteur {zip} ({cityCap}, {dept}). Prix Ozempic officiel CEPS, estimations Wegovy/Mounjaro/Saxenda.</p>
         <div class="zip-ctas">
           <a href="/outils/carte-prix-pharmacies/" class="btn-primary">Carte interactive complète →</a>
-          <a href={`/pharmacies/${citySlug}/`} class="btn-secondary">Retour à {cityCap}</a>
+          {hasCityPage && <a href={`/pharmacies/${citySlug}/`} class="btn-secondary">Retour à {cityCap}</a>}
         </div>
       </div>
     </section>

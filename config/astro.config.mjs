@@ -128,7 +128,16 @@ export default defineConfig({
     '/mounjaro/': '/collections/traitements-glp1/guide-complet-mounjaro/',
     '/nouveaux-medicaments-perdre-poids/': '/guides/qu-est-ce-que-glp1/',
     '/medicaments-glp1': '/collections/glp1-cout/',
+    '/collections/medicaments-glp1/': '/collections/traitements-glp1/',
+    '/collections/medicaments-glp1': '/collections/traitements-glp1/',
+    '/politique-de-confidentialite/': '/legal/politique-confidentialite/',
+    '/politique-de-confidentialite': '/legal/politique-confidentialite/',
     '/temoignages-glp1/': '/collections/temoignages/'
+    // Note : les wildcard redirects [...slug] ont été retirés — Astro les interprète
+    // comme des routes dynamiques (besoin getStaticPaths()) et fail le build.
+    // Les ~80% de 404 issus des migrations 2025 doivent être traités via .htaccess
+    // côté Hostinger ou via redirections explicites par URL (voir public/_redirects
+    // généré au build pour Netlify, ou script à écrire pour générer .htaccess).
   },
   server: {
     port: 4321,

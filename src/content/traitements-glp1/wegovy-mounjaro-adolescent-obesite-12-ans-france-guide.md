@@ -84,7 +84,7 @@ Pour qu'un médecin puisse prescrire Wegovy à un adolescent, les critères suiv
 Les mêmes contre-indications que chez l'adulte s'appliquent, avec une attention particulière :
 - Les adolescentes en âge de procréer doivent utiliser une contraception efficace pendant le traitement et dans les 2 mois suivant l'arrêt
 - Le traitement n'est pas indiqué chez l'adolescent en retard pubertaire important (données insuffisantes)
-- Une évaluation de l'état nutritionnel et de la croissance est recommandée avant l'initiation, en veillant à la [préservation de la masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) tout au long du traitement
+- Une évaluation de l'état nutritionnel et de la croissance est recommandée avant l'initiation, en veillant à la [préservation de la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) tout au long du traitement
 
 ## Modalités pratiques du traitement
 
@@ -114,7 +114,7 @@ Même si tout médecin peut désormais initier le traitement, un suivi pluridisc
 
 - **Pédiatre ou endocrinologue pédiatrique** : suivi de la croissance, du développement pubertaire, et de l'efficacité du traitement
 - **Diététicien(ne) pédiatrique** : accompagnement nutritionnel adapté à l'adolescent
-- **Psychologue ou psychiatre** : évaluation et soutien des aspects comportementaux et émotionnels liés au poids — un [accompagnement psychologique](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) adapté à l'adolescent est souvent déterminant
+- **Psychologue ou psychiatre** : évaluation et soutien des aspects comportementaux et émotionnels liés au poids — un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) adapté à l'adolescent est souvent déterminant
 
 ### Les bilans réguliers
 

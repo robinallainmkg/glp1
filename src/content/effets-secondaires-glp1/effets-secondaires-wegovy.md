@@ -45,7 +45,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 **Constipation**
 - **Fréquence** : Fréquent (1-10%)
-- **Gestion** : Augmenter les fibres, activité physique. Dans de rares cas, un ralentissement digestif important peut évoquer une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/)
+- **Gestion** : Augmenter les fibres, activité physique. Dans de rares cas, un ralentissement digestif important peut évoquer une [gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/)
 - **Prévention** : Boire beaucoup d'eau
 
 ### Autres effets fréquents
@@ -67,7 +67,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 ## 🚨 Effets Secondaires Graves
 
-### [Pancréatite](/collections/effets-secondaires-glp1/glp1-pancréatite-risque-ozempic-pancreas-symptomes/)
+### [Pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/)
 
 **Signes d'alerte** :
 - Douleurs abdominales intenses
@@ -235,7 +235,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 **Données de pharmacovigilance** :
 - Signalements rares d'effets graves
-- Profil de sécurité favorable, avec des [bénéfices cardiovasculaires démontrés par l'étude SELECT](/collections/recherche-glp1/glp1-bénéfices-cardiovasculaires-coeur/)
+- Profil de sécurité favorable, avec des [bénéfices cardiovasculaires démontrés par l'étude SELECT](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
 - Bénéfice/risque positif
 
 ## 📝 Conclusion

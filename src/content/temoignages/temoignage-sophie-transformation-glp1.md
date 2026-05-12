@@ -3,7 +3,7 @@ title: "Témoignage Ozempic Perte de Poids : Sophie, -28 kg à 52 Ans"
 thumbnail: "/images/thumbnails/communaute-glp1.jpg"
 description: "Témoignage ozempic perte de poids : Sophie D., 52 ans, -28 kilos en 14 mois avec Ozempic après la ménopause. Transformation et conseils."
 author: "Sophie D."
-image: "/images/collections/témoignages/sophie29.jpg"
+image: "/images/collections/temoignages/sophie29.jpg"
 collection: "témoignages"
 category: "transformation"
 tags: ["ozempic", "sémaglutide", "perte de poids", "28 kilos", "ménopause", "52 ans", "femme"]
@@ -96,7 +96,7 @@ Sophie a dû gérer les [effets secondaires](/collections/effets-secondaires-glp
 
 ### Activité Physique
 - **Avant :** Marche occasionnelle
-- **Après :** Aquagym 2x/semaine + marche nordique pour [préserver la masse musculaire sous Ozempic](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/)
+- **Après :** Aquagym 2x/semaine + marche nordique pour [préserver la masse musculaire sous Ozempic](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/)
 
 ### Énergie
 - **Avant :** Fatigue constante, essoufflement

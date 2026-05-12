@@ -93,16 +93,16 @@ Cet article vous présente les informations essentielles et actualisées. Les do
 - **Contre-indications** : Vérification préalable obligatoire
 - **Interactions** : Attention médicaments concomitants
 - **Effets secondaires** : Surveillance symptômes
-- **[Carences](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : Bilan sanguin recommandé sous traitement GLP-1
+- **[Carences](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)** : Bilan sanguin recommandé sous traitement GLP-1
 - **Urgences** : Protocoles d'action définis
 
 ### Optimisation résultats
 - **Hygiène de vie** : Alimentation exercice complémentaires
-- **Suivi biologique** : Bilans réguliers programmés pour prévenir les [carences nutritionnelles](/collections/régime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
+- **Suivi biologique** : Bilans réguliers programmés pour prévenir les [carences nutritionnelles](/collections/regime-glp1/glp1-carences-nutritionnelles-bilan-sanguin-supplementation/)
 - **Education thérapeutique** : Formation patient essentielle
 - **Soutien psychologique** : Accompagnement si nécessaire
 
-En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/régime-glp1/glp1-protéines/) pour maintenir votre masse musculaire pendant le traitement.
+En parallèle des micronutriments, assurez-vous de couvrir vos [besoins en protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) pour maintenir votre masse musculaire pendant le traitement.
 
 ## Produits cosmétiques recommandés
 

@@ -60,7 +60,7 @@ La majorité des professionnels de santé spécialisés recommandent d'adopter u
 - **Protéines maigres** : un quart de l'assiette (poulet, poisson, œufs, légumineuses, tofu)
 - **Féculents complets** : un quart de l'assiette au maximum (riz complet, quinoa, patate douce, pain complet)
 
-Cette répartition garantit un [apport en protéines](/collections/régime-glp1/glp1-protéines/) et en [micronutriments](/collections/régime-glp1/glp1-micronutriments/) suffisants dans un volume alimentaire réduit. Les protéines sont particulièrement importantes car elles permettent de [préserver la masse musculaire](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids.
+Cette répartition garantit un [apport en protéines](/collections/regime-glp1/glp1-protéines/) et en [micronutriments](/collections/regime-glp1/glp1-micronutriments/) suffisants dans un volume alimentaire réduit. Les protéines sont particulièrement importantes car elles permettent de [préserver la masse musculaire](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/) pendant la perte de poids.
 
 ### Volumes orientatifs
 
@@ -81,7 +81,7 @@ Ces volumes sont indicatifs et doivent s'adapter à votre ressenti de satiété.
 La réduction du volume toléré par repas incite naturellement à fractionner les prises alimentaires. Cette stratégie présente plusieurs avantages :
 
 - Elle évite la distension gastrique douloureuse souvent ressentie avec de grosses portions
-- Elle répartit mieux l'[apport en protéines](/collections/régime-glp1/glp1-protéines/) sur la journée (objectif : 20-30 g de protéines par repas pour une synthèse musculaire optimale)
+- Elle répartit mieux l'[apport en protéines](/collections/regime-glp1/glp1-protéines/) sur la journée (objectif : 20-30 g de protéines par repas pour une synthèse musculaire optimale)
 - Elle maintient une glycémie plus stable, limitant les coups de fatigue
 
 **Exemple d'organisation type** :

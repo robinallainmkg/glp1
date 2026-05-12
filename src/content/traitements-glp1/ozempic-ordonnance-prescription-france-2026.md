@@ -57,7 +57,7 @@ Jusqu'en 2025, la prescription d'Ozempic et des autres agonistes GLP-1 pour la p
 - **Suivi regulier recommandé** : un suivi regulier est recommandé pendant la premiere annee de traitement, idealement tous les 3 mois.
 - **Prescription initiale limitee** : la premiere ordonnance est valable 3 mois maximum, renouvelable après reevaluation clinique.
 
-Pour en savoir plus sur ces nouvelles regles, consultez notre article dedie sur les [conditions de prescription par les généralistes](/collections/médecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/).
+Pour en savoir plus sur ces nouvelles regles, consultez notre article dedie sur les [conditions de prescription par les généralistes](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions/).
 
 **Important** : pour le diabète de type 2, Ozempic pouvait deja etre prescrit par tout médecin, y compris généraliste, avant cette reforme. Les nouvelles regles concernent spécifiquement l'elargissement de la prescription pour l'indication perte de poids/obésité.
 

@@ -58,7 +58,7 @@ Il existe donc une **boucle de rétroaction** entre microbiote et système GLP-1
 
 ### Le ralentissement du transit : une perturbation de l'écosystème
 
-L'un des effets les mieux documentés des GLP-1 sur le tube digestif est le ralentissement de la [vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparésie-vidange-gastrique-risque-symptomes/) et du transit intestinal. Ce ralentissement modifie la quantité et la nature des substrats qui arrivent dans le côlon — ce qui peut changer profondément l'environnement dans lequel vivent les bactéries intestinales.
+L'un des effets les mieux documentés des GLP-1 sur le tube digestif est le ralentissement de la [vidange gastrique](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/) et du transit intestinal. Ce ralentissement modifie la quantité et la nature des substrats qui arrivent dans le côlon — ce qui peut changer profondément l'environnement dans lequel vivent les bactéries intestinales.
 
 Les premières études sur des modèles animaux et sur des patients obèses traités par sémaglutide suggèrent plusieurs modifications du microbiote :
 
@@ -102,7 +102,7 @@ La question de l'utilisation des probiotiques pour améliorer la tolérance ou p
 
 Les prébiotiques — fibres alimentaires qui nourrissent les bactéries intestinales bénéfiques — ont un rôle potentiel complémentaire. Des aliments riches en fibres fermentescibles (inuline, fructo-oligosaccharides) comme l'artichaut, la chicorée, l'ail, la banane verte ou les légumineuses favorisent la croissance d'*Akkermansia muciniphila* et de *Bifidobacterium*, deux bactéries dont l'enrichissement est associé à de meilleurs résultats métaboliques.
 
-Des [régimes adaptés aux GLP-1](/collections/régime-glp1/glp1-protéines/) incluant des fibres prébiotiques pourraient donc synergiser avec les effets du médicament sur le microbiote — une piste intéressante mais encore à confirmer par des études cliniques.
+Des [régimes adaptés aux GLP-1](/collections/regime-glp1/glp1-protéines/) incluant des fibres prébiotiques pourraient donc synergiser avec les effets du médicament sur le microbiote — une piste intéressante mais encore à confirmer par des études cliniques.
 
 ## Implications pratiques pour les patients
 
@@ -138,13 +138,13 @@ Des recherches explorent la possibilité d'utiliser la composition du microbiome
 
 ### L'axe intestin-cerveau : un médiateur clé
 
-Le [lien entre GLP-1 et comportements alimentaires](/collections/régime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) passe aussi par l'axe intestin-cerveau. Le microbiote produit des neurotransmetteurs (sérotonine, GABA, dopamine précurseurs) et des métabolites qui communiquent avec le système nerveux central via le nerf vague. Les GLP-1 agissent aussi directement sur ce nerf vague. Cette convergence pourrait expliquer certains effets comportementaux des GLP-1 — comme la réduction des comportements compulsifs alimentaires ou des [addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) — et suggère que le microbiote pourrait amplifier ou moduler ces effets.
+Le [lien entre GLP-1 et comportements alimentaires](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) passe aussi par l'axe intestin-cerveau. Le microbiote produit des neurotransmetteurs (sérotonine, GABA, dopamine précurseurs) et des métabolites qui communiquent avec le système nerveux central via le nerf vague. Les GLP-1 agissent aussi directement sur ce nerf vague. Cette convergence pourrait expliquer certains effets comportementaux des GLP-1 — comme la réduction des comportements compulsifs alimentaires ou des [addictions](/collections/recherche-glp1/glp1-addictions-alcool-tabac-opioides/) — et suggère que le microbiote pourrait amplifier ou moduler ces effets.
 
 ## Ce qu'on retient
 
 Le microbiote intestinal n'est plus un spectateur passif des traitements GLP-1. Les premières données suggèrent que les GLP-1 modifient la composition de la flore intestinale — avec des effets potentiellement bénéfiques sur les souches associées à un meilleur profil métabolique, et des perturbations transitoires qui pourraient contribuer aux effets indésirables digestifs en début de traitement.
 
-Pour les patients, maintenir une [alimentation](/collections/régime-glp1/régime-mounjaro-optimal/) riche en fibres et en aliments fermentés pendant le traitement reste une recommandation raisonnable et bien tolérée. Les probiotiques ne sont pas déconseillés, mais les données ne permettent pas encore de recommander une souche spécifique. Ce domaine de recherche est en pleine effervescence et les prochaines années devraient apporter des réponses plus définitives.
+Pour les patients, maintenir une [alimentation](/collections/regime-glp1/régime-mounjaro-optimal/) riche en fibres et en aliments fermentés pendant le traitement reste une recommandation raisonnable et bien tolérée. Les probiotiques ne sont pas déconseillés, mais les données ne permettent pas encore de recommander une souche spécifique. Ce domaine de recherche est en pleine effervescence et les prochaines années devraient apporter des réponses plus définitives.
 
 ---
 

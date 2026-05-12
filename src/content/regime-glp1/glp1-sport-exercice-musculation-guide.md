@@ -34,7 +34,7 @@ Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-comple
 
 ### La fonte musculaire : le risque méconnu
 
-Quand on perd du poids rapidement — que ce soit grâce à un régime strict ou à un traitement GLP-1 — le corps ne perd pas uniquement de la graisse. Il puise également dans ses réserves de protéines musculaires. Pour [prévenir la fonte musculaire sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/), il est essentiel de combiner activité physique et apports protéiques suffisants. Les études cliniques sur Wegovy (semaglutide) et Mounjaro (tirzepatide) montrent que 20 à 40 % de la perte de poids totale provient de la masse maigre, principalement des muscles.
+Quand on perd du poids rapidement — que ce soit grâce à un régime strict ou à un traitement GLP-1 — le corps ne perd pas uniquement de la graisse. Il puise également dans ses réserves de protéines musculaires. Pour [prévenir la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), il est essentiel de combiner activité physique et apports protéiques suffisants. Les études cliniques sur Wegovy (semaglutide) et Mounjaro (tirzepatide) montrent que 20 à 40 % de la perte de poids totale provient de la masse maigre, principalement des muscles.
 
 Cette perte musculaire a des conséquences concrètes :
 
@@ -153,7 +153,7 @@ L'injection hebdomadaire de GLP-1 peut provoquer des nausées ou de la fatigue l
 
 ### Alimentation autour des séances
 
-Sous GLP-1, l'appétit est réduit, ce qui peut rendre la nutrition sportive plus difficile. Pour éviter les carences, consultez notre guide sur les [micronutriments essentiels pour les sportifs sous GLP-1](/collections/régime-glp1/glp1-micronutriments/). Quelques principes essentiels :
+Sous GLP-1, l'appétit est réduit, ce qui peut rendre la nutrition sportive plus difficile. Pour éviter les carences, consultez notre guide sur les [micronutriments essentiels pour les sportifs sous GLP-1](/collections/regime-glp1/glp1-micronutriments/). Quelques principes essentiels :
 
 - **Avant la séance (1-2h)** : une collation légère riche en protéines et glucides complexes (yaourt grec + fruit, ou fromage blanc + céréales). Ne vous forcez pas si vous n'avez pas faim, mais assurez-vous d'être correctement hydraté.
 - **Après la séance (dans les 30-60 min)** : c'est la fenêtre anabolique. Consommez 20-30g de protéines (shake de protéines, blanc de poulet, œufs, fromage blanc). Cette étape est cruciale pour stimuler la récupération musculaire.
@@ -167,7 +167,7 @@ Les GLP-1 modifient la digestion et peuvent affecter votre tolérance à l'effor
 
 - **Nausées à l'effort** : fréquentes en début de traitement. Réduisez l'intensité, respirez calmement, restez bien hydraté. Si elles persistent, consultez votre médecin.
 - **Hypoglycémie** : rare avec les GLP-1 seuls (ils n'abaissent la glycémie qu'en présence de glucose), mais possible si vous combinez GLP-1 avec d'autres antidiabétiques (sulfamides, insuline). Ayez du sucre à disposition.
-- **Fatigue inhabituelle** : souvent liée à une restriction calorique trop sévère. Vérifiez vos [besoins caloriques journaliers sous GLP-1](/collections/régime-glp1/glp1-calories-journalieres/).
+- **Fatigue inhabituelle** : souvent liée à une restriction calorique trop sévère. Vérifiez vos [besoins caloriques journaliers sous GLP-1](/collections/regime-glp1/glp1-calories-journalieres/).
 - **Douleurs articulaires** : la perte de poids rapide peut modifier la biomécanique et augmenter le [risque de fractures et blessures tendineuses sous GLP-1](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/). Consultez un kinésithérapeute si des douleurs apparaissent.
 
 ### Patients avec comorbidités
@@ -201,7 +201,7 @@ Oui, dans plusieurs dimensions. L'activité physique améliore la sensibilité �
 
 L'association entre traitement GLP-1 et activité physique régulière n'est pas une option, c'est une nécessité médicale pour obtenir les meilleurs résultats possibles. La musculation, en particulier, est votre meilleure protection contre la fonte musculaire — le principal effet indésirable méconnu de ces traitements. Commencez progressivement, adaptez le programme à vos capacités et consultez votre médecin et un kinésithérapeute ou un coach sportif qualifié pour un programme personnalisé.
 
-Pour aller plus loin, consultez notre guide sur [la prévention de la fonte musculaire sous GLP-1](/collections/régime-glp1/glp1-fonte-musculaire-preserver-muscles/), notre article sur les [protéines et leur rôle sous traitement GLP-1](/collections/régime-glp1/glp1-protéines/) et notre analyse sur la [performance sportive et composition corporelle](/collections/régime-glp1/glp1-sport-performance-sportif-composition-corporelle/) sous traitement.
+Pour aller plus loin, consultez notre guide sur [la prévention de la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), notre article sur les [protéines et leur rôle sous traitement GLP-1](/collections/regime-glp1/glp1-protéines/) et notre analyse sur la [performance sportive et composition corporelle](/collections/regime-glp1/glp1-sport-performance-sportif-composition-corporelle/) sous traitement.
 
 ---
 

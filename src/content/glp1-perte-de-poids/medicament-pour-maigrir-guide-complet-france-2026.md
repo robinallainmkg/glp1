@@ -236,7 +236,7 @@ Pour beneficier d'un médicament pour maigrir, vous devez remplir l'une des cond
 
 La téléconsultation est autorisee pour la prescription initiale des medicaments GLP-1 pour la perte de poids. Plusieurs plateformes de télémédecine proposent des consultations specialisees avec des médecins formes a ces traitements.
 
-Pour trouver un médecin pres de chez vous : [annuaire des médecins prescripteurs GLP-1](/collections/médecins-glp1-france/)
+Pour trouver un médecin pres de chez vous : [annuaire des médecins prescripteurs GLP-1](/collections/medecins-glp1-france/)
 
 ## Les Alternatives Non-GLP-1
 
