@@ -42,6 +42,13 @@ affiliateConfig:
 5. [Les alternatives remboursées en attendant](#alternatives)
 6. [FAQ](#faq)
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Coûts annexes : matériel d'autosurveillance</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">En attendant le remboursement, le matériel reste à votre charge. Les bandelettes Sinocare (lecteurs glycémie) offrent un rapport qualité/prix intéressant pour le suivi régulier.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_strips-100_quand-wegovy-rembourse-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 ## Où en est le remboursement de Wegovy en mars 2026 ? {#etat-des-lieux}
 
 ### L'avis favorable de la HAS
@@ -185,3 +192,9 @@ Non. Le [remboursement des GLP-1](/collections/glp1-cout/remboursement-glp1-2026
 ---
 
 *Cet article est régulièrement mis à jour en fonction de l'évolution du dossier de remboursement. Dernière mise à jour : mars 2026. Consultez votre médecin pour un avis personnalisé.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_quand-wegovy-rembourse-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-smart_quand-wegovy-rembourse-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Smart</a> — Lecteur de glycémie compact <span style="color:#94a3b8;">(dès 17,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_bp-monitor-arm_quand-wegovy-rembourse-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Tensiomètre Sinocare bras</a> — Tensiomètre haut du bras — double mémoire <span style="color:#94a3b8;">(dès 34,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>

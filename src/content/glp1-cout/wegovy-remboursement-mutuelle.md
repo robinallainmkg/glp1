@@ -41,6 +41,13 @@ Le **remboursement de Wegovy par les mutuelles** est une question centrale pour 
 
 Le Wegovy (semaglutide) représente une avancée majeure dans le traitement de l'obésité. Ce médicament, développé par Novo Nordisk, affiche une efficacité remarquable avec une perte de poids moyenne de 15% sur 68 semaines d'étude clinique.
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Consommables non remboursés : optimiser le budget</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Les bandelettes pour autosurveillance représentent un coût récurrent. Un pack 100 bandelettes Sinocare (~28&nbsp;€) sort à environ 0,28&nbsp;€/bandelette, contre 0,55-0,75&nbsp;€ en pharmacie de marque.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_strips-100_wegovy-remboursement-mutuelle&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 ### Le défi financier
 
 - **Coût mensuel** : 280€ par mois
@@ -287,3 +294,9 @@ Le paysage du remboursement du Wegovy évolue rapidement en 2025. Bien que la S�
 **⚠️ Avertissement médical :** Ces informations sont fournies à titre informatif et ne remplacent pas l'avis d'un professionnel de santé. Consultez toujours votre médecin avant de débuter un traitement par Wegovy.
 
 **📅 Dernière mise à jour :** Août 2025 - Sources : ANSM, HAS, Novo Nordisk, principales mutuelles françaises.
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_wegovy-remboursement-mutuelle&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-smart_wegovy-remboursement-mutuelle&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Smart</a> — Lecteur de glycémie compact <span style="color:#94a3b8;">(dès 17,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_bp-monitor-arm_wegovy-remboursement-mutuelle&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Tensiomètre Sinocare bras</a> — Tensiomètre haut du bras — double mémoire <span style="color:#94a3b8;">(dès 34,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>

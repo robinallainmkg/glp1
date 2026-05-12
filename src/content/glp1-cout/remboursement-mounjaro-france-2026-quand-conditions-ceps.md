@@ -48,6 +48,13 @@ Ces négociations restent confidentielles. Ni Eli Lilly ni le CEPS ne communique
 
 ### Le calendrier le plus probable
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Conseil pratique</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Pour un suivi régulier, beaucoup de patients utilisent un appareil simple comme le Sinocare iCan i3 CGM 15 jours — disponible dès 49,90&nbsp;€.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_ican-cgm_remboursement-mounjaro-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 En tenant compte des délais habituels du processus réglementaire français, voici le scénario le plus réaliste :
 
 | Étape | Date probable |
@@ -156,3 +163,9 @@ Le remboursement de Mounjaro en France est engagé : l'avis favorable de la HAS 
 ---
 
 *Sources : Haute Autorité de Santé — Avis Commission de la Transparence Mounjaro/tirzépatide pour l'obésité (décembre 2025) ; Eli Lilly — Conditions de prescription Mounjaro France (2025) ; ANSM — Pharmacovigilance GLP-1 2025. Mise à jour mars 2026.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_remboursement-mounjaro-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_remboursement-mounjaro-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_remboursement-mounjaro-france-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles 32G 4mm pour stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>

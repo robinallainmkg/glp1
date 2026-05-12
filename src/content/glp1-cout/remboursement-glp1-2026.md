@@ -34,6 +34,13 @@ Les traitements GLP-1 représentent une avancée majeure pour le [diabète de ty
 | **Mounjaro** | DT2 (avis HAS nov. 2025) | En cours (prévu 2e sem. 2026) | 230-440€ | ⏳ En négociation |
 | **[Saxenda](/collections/traitements-glp1/guide-complet-saxenda/)** | Obésité | **Non remboursé** | 240-300€ | ❌ Non remboursé |
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Réduire les coûts annexes</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">En attendant le remboursement complet, le matériel d'autosurveillance représente un poste de dépense maîtrisable. Bandelettes Sinocare 100 pcs pour environ 28&nbsp;€.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_strips-100_remboursement-glp1-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
+
 > **Mise à jour mars 2026** : La HAS a rendu un avis **favorable** au remboursement de **Mounjaro** le 19 novembre 2025 (avis CT21349) pour le diabète de type 2 et l'obésité (IMC >= 35). Les négociations de prix avec le CEPS sont en cours — le remboursement est **prévu pour le 2e semestre 2026**. En attendant, Mounjaro reste à la charge du patient. Les traitements indiqués pour l'**obésité seule** (Wegovy, Saxenda) restent non remboursés. Depuis **février 2025**, un **formulaire de demande obligatoire** est requis pour la prescription de tous les GLP-1 remboursés.
 
 ---
@@ -521,3 +528,9 @@ Mounjaro affiche une efficacité supérieure (+5% perte de poids) dans les étud
 *Dernière mise à jour : 27 décembre 2025. Les informations de remboursement sont basées sur les directives officielles de l'Assurance Maladie et de la Haute Autorité de Santé. Pour une situation personnalisée, consultez votre CPAM et votre médecin.*
 
 **📱 Restez informé des évolutions 2026** : Consultez régulièrement [ameli.fr](https://www.ameli.fr) pour les dernières mises à jour sur les remboursements GLP-1.
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_remboursement-glp1-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-smart_remboursement-glp1-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Smart</a> — Lecteur de glycémie compact <span style="color:#94a3b8;">(dès 17,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_remboursement-glp1-2026&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>
