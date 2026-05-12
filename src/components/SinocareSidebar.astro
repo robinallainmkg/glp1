@@ -7,7 +7,9 @@ interface Props {
 }
 
 const { context = "sidebar" } = Astro.props;
-const sinocareLink = `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_${context}&ued=${encodeURIComponent("https://www.sinocare.com/")}`;
+// Destination = fiche produit Safe AQ Smart (FR e-com Shopify), pas la homepage corporate
+// qui redirige vers une page chinoise sans CTA. Match la copy "lecteur de glycémie 25€".
+const sinocareLink = `https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_${context}&ued=${encodeURIComponent("https://en.sinocare.com/fr/products/safe-aq-smart-blood-glucometer")}`;
 ---
 
 <aside class="sino-sidebar">
