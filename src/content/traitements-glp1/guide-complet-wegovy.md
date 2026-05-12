@@ -33,6 +33,21 @@ mainKeyword: "wegovy guide complet france semaglutide"
 6. [Alternatives à Wegovy](#alternatives-wegovy)
 7. [FAQ Wegovy](#faq-wegovy)
 
+<aside data-sinocare-card style="margin:1.5rem auto;max-width:380px;border:1px solid #e2e8f0;border-radius:14px;padding:1.1rem;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04);box-sizing:border-box;">
+  <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;">
+    <span style="font-size:.72rem;background:#f0f9ff;color:#0369a1;padding:.2rem .55rem;border-radius:4px;font-weight:600;letter-spacing:.02em;">SINOCARE</span>
+    <span style="font-size:.78rem;color:#475569;">★ 4.9/5</span>
+  </div>
+  <h4 style="margin:0 0 .4rem 0;font-size:1.02rem;font-weight:700;color:#0f172a;line-height:1.3;">Tensiomètre Sinocare bras</h4>
+  <p style="margin:0 0 .8rem 0;font-size:.88rem;color:#475569;line-height:1.5;">Tensiomètre haut du bras — double mémoire</p>
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem;">
+    <span style="font-size:1.05rem;font-weight:700;color:#0f172a;">À partir de 34,99&nbsp;€</span>
+    <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_card_bp-monitor-arm_guide-complet-wegovy&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="background:#1B6FA0;color:#fff;font-size:.88rem;font-weight:600;padding:.55rem 1.1rem;border-radius:7px;text-decoration:none;white-space:nowrap;">Voir &rarr;</a>
+  </div>
+  <span style="font-size:.72rem;color:#94a3b8;font-style:italic;">Lien sponsorisé</span>
+</aside>
+
+
 ## Qu'est-ce que Wegovy ?
 
 Wegovy est un médicament injectable développé par Novo Nordisk, appartenant à la classe des agonistes des récepteurs GLP-1 (Glucagon-like peptide-1). Wegovy contient le même principe actif que Ozempic (semaglutide), mais à une dose plus élevée spécifiquement indiquée pour la prise en charge de l'obésité.
@@ -45,6 +60,13 @@ Wegovy est un médicament injectable développé par Novo Nordisk, appartenant �
 ## Comment fonctionne Wegovy ?
 
 Wegovy agit en mimant l'action naturelle du GLP-1, une hormone intestinale qui :
+
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Conseil pratique</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Pour un suivi régulier, beaucoup de patients utilisent un appareil simple comme le Aiguilles stylo insuline Sinocare 32G 4mm — disponible dès 14,99&nbsp;€.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_insulin-needles_guide-complet-wegovy&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
+</div>
+
 
 - **Stimule la sécrétion d'insuline** en réponse aux repas
 - **Réduit la production de glucagon** (hormone hyperglycémiante)
@@ -171,3 +193,9 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
 Pour obtenir une prescription de Wegovy, consultez notre annuaire d'[endocrinologues spécialisés en perte de poids](/collections/medecins-glp1-france/endocrinologue-pour-maigrir/).
 
 *Ce guide complet sur Wegovy est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_bp-monitor-arm_guide-complet-wegovy&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Ftensiometre-au-bras-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Tensiomètre Sinocare bras</a> — Tensiomètre haut du bras — double mémoire <span style="color:#94a3b8;">(dès 34,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_guide-complet-wegovy&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles 32G 4mm pour stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_guide-complet-wegovy&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>
