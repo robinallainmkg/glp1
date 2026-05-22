@@ -43,7 +43,7 @@ Ces négociations sont en cours depuis janvier 2026. Leur durée est habituellem
 
 - **Le prix unitaire** de Mounjaro pour l'indication obésité (distinct du prix actuel pour le diabète de type 2)
 - **Le taux de remboursement** prévisible (65 % en ALD ou 30 % hors ALD, à définir)
-- **Les conditions strictes de prescription** (médecin prescripteur, bilan préalable, suivi)
+- **Les [conditions de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)** (médecin prescripteur, bilan préalable, suivi)
 - **Les clauses de révision** en fonction des données de vie réelle
 
 ## Quel sera le prix remboursé de Mounjaro ?
@@ -111,7 +111,7 @@ Les patients qui prennent déjà Mounjaro pour leur obésité en avance de phase
 
 ### Pour les patients qui attendent
 
-Le remboursement va rendre ce traitement accessible à une population bien plus large. Actuellement, le coût de Mounjaro en pharmacie (230 à 440 €/mois selon le dosage) exclut de facto une grande partie des patients obèses qui remplissent pourtant les critères médicaux.
+Le remboursement va rendre ce traitement accessible à une population bien plus large. Actuellement, le [coût de Mounjaro en pharmacie](/collections/glp1-cout/prix-mounjaro-france/) (230 à 440 €/mois selon le dosage) exclut de facto une grande partie des patients obèses qui remplissent pourtant les critères médicaux.
 
 Avec un remboursement à 30 %, un patient sans ALD devra débourser environ 100 à 175 €/mois selon le dosage — soit moins de la moitié du coût actuel. En ALD, la prise en charge à 65 % réduirait le reste à charge à 55 à 90 €/mois.
 

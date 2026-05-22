@@ -114,14 +114,17 @@ function buildEmail(contact) {
   }
 
   // === SCAM / COMMANDE PHYSIQUE ===
+  // Physical-product & unauthorized-charge indicators. GLP1 France ne vend
+  // aucun produit physique, donc toute mention de flacons/boîtes/gélules/colis
+  // ou de prélèvements/débits non sollicités = victime d'un site frauduleux.
+  const scamKeywords = [
+    'flacon', 'commandé', 'commande', 'livraison', 'pack', 'rembours',
+    'boîte', 'boite', 'gélule', 'gelule', 'colis', 'prélèvement', 'prelevement',
+    'débit', 'debit'
+  ];
   const isScam = contact.subject === 'remboursement' ||
-    (contact.message && (
-      contact.message.toLowerCase().includes('flacon') ||
-      contact.message.toLowerCase().includes('commandé') ||
-      contact.message.toLowerCase().includes('livraison') ||
-      contact.message.toLowerCase().includes('pack') ||
-      contact.message.toLowerCase().includes('rembours')
-    ) && contact.contact_type === 'contact');
+    (contact.message && contact.contact_type === 'contact' &&
+      scamKeywords.some(kw => contact.message.toLowerCase().includes(kw)));
 
   if (isScam) {
     return {

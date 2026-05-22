@@ -192,7 +192,7 @@ La prescription médicale reste indispensable pour les GLP-1 et traitements simi
 Les études cliniques montrent une efficacité variable selon les patients et le contexte médical — voir notre [comparatif Wegovy vs Mounjaro](/collections/traitements-glp1/wegovy-vs-mounjaro-comparatif-2026/) pour une analyse détaillée. L'évaluation individuelle reste primordiale.
 
 ### Y a-t-il des contre-indications absolues ?
-Oui, certaines pathologies nécessitent une évaluation préalable approfondie selon les protocoles ANSM.
+Oui, certaines pathologies nécessitent une évaluation préalable approfondie selon les [règles de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/).
 
 ### Quel est le délai d'action attendu ?
 Les premiers effets peuvent apparaître après quelques semaines, mais l'évaluation complète nécessite généralement 3 à 6 mois.

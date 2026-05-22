@@ -316,7 +316,7 @@ Le coût mensuel d'Ozempic après remboursement dépend de votre dosage et de vo
 ✅ **Diagnostic de [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)** confirmé par analyses
 ✅ **Échec des antidiabétiques oraux** (metformine, sulfamides)
 
-**Important :** Ozempic n'est **PAS remboursé pour la perte de poids seule** (sans diabète de type 2). Le remboursement est strictement limité au diabète de type 2. Depuis **février 2025**, un formulaire de demande obligatoire doit accompagner la prescription.
+**Important :** Ozempic n'est **PAS remboursé pour la perte de poids seule** (sans diabète de type 2). Le remboursement est strictement limité au diabète de type 2. Depuis **février 2025**, un [formulaire de demande obligatoire](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) doit accompagner la prescription.
 
 ### Quelle est la différence de prix entre Ozempic et Wegovy ?
 

@@ -94,7 +94,7 @@ L'étude REDEFINE 1, publiée en 2025 dans le *New England Journal of Medicine*,
 | Réduction tour de taille | -20,4 cm | -13,9 cm | -6,5 cm |
 | Réduction HbA1c (DT2) | -2,2% | -1,7% | -0,5% |
 
-Une perte de poids moyenne de **22,7%** positionne le CagriSema au-dessus du Mounjaro (–20 à –22%) et représente la meilleure efficacité publiée pour un traitement médicamenteux de l'obésité à ce jour.
+Une perte de poids moyenne de **22,7%** positionne le CagriSema au-dessus du Mounjaro (–20 à –22%) et représente la meilleure efficacité publiée pour un [traitement médicamenteux de la perte de poids](/collections/glp1-perte-de-poids/glp1-perte-de-poids/) à ce jour.
 
 ### Statut réglementaire
 
@@ -175,7 +175,7 @@ Pour les traitements actuellement disponibles, consultez notre [guide complet re
 
 | Traitement | Prix mensuel | Remboursement |
 |-----------|-------------|---------------|
-| Ozempic (DT2) | ~59,90 €/stylo | 30% (DT2 uniquement, sous conditions de prescription depuis février 2025) |
+| Ozempic (DT2) | ~59,90 €/stylo | 30% (DT2 uniquement, sous [conditions de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) depuis février 2025) |
 | Wegovy (obésité) | 169-360 € | Non remboursé (attendu 2e sem. 2026) |
 | Mounjaro | 230-440 € | Non remboursé (attendu 2e sem. 2026) |
 | Orforglipron | Non commercialisé | — |

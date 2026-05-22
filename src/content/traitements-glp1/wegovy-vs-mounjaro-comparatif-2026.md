@@ -221,7 +221,7 @@ Le choix entre Wegovy et Mounjaro depend de plusieurs facteurs individuels. Voic
 
 ### Protocole Wegovy
 
-L'escalade de dose se fait sur **16 semaines** avant d'atteindre la dose cible :
+La [posologie de Wegovy](/collections/traitements-glp1/wegovy-dosage/) se fait sur **16 semaines** avant d'atteindre la dose cible :
 
 1. **Semaines 1-4** : 0,25 mg/semaine
 2. **Semaines 5-8** : 0,5 mg/semaine

@@ -221,7 +221,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 **Rôle du pharmacien** :
 - Conseils sur la tolérance
-- Surveillance des interactions
+- Surveillance des [interactions médicamenteuses à surveiller](/collections/effets-secondaires-glp1/glp1-interactions-medicamenteuses-ozempic-wegovy-mounjaro/)
 - Aide à la compliance
 
 ## 🔬 Données Scientifiques

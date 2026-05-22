@@ -425,6 +425,8 @@ async function main() {
     // Trafic — GA a toujours 1-2j de décalage, on compare j-2 vs j-3 (jours complets fiables)
     const gaByDate = {};
     for (const d of (gaDaily || [])) gaByDate[d.date] = d;
+    // Pages vues du dernier jour disponible (utilisé plus bas pour l'insight "trafic mais 0 diagnostic")
+    const latestPv = (Array.isArray(gaDaily) && gaDaily.length) ? (gaDaily[gaDaily.length - 1].pageviews || 0) : 0;
     const j2 = new Date(Date.now() - 2 * 86400000).toISOString().split('T')[0];
     const j3 = new Date(Date.now() - 3 * 86400000).toISOString().split('T')[0];
     const dayJ2 = gaByDate[j2], dayJ3 = gaByDate[j3];

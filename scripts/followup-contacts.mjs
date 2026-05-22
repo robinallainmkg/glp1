@@ -113,8 +113,12 @@ async function main() {
     return;
   }
 
-  // 2. Filter out newsletter-only signups (no real interaction)
-  const realContacts = contacts.filter(c => c.contact_type !== 'newsletter' && c.email);
+  // 2. Filter out newsletter-only signups (no real interaction) and own/test address
+  const realContacts = contacts.filter(c =>
+    c.contact_type !== 'newsletter' &&
+    c.email &&
+    c.email.toLowerCase() !== 'robinallainmkg@gmail.com'
+  );
 
   console.log(`Contacts eligibles: ${realContacts.length} (sur ${contacts.length} total)`);
   if (DRY_RUN) console.log('--- DRY RUN — aucun email ne sera envoyé ---\n');

@@ -175,7 +175,7 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 Oui, Wegovy contient la même molécule (semaglutide) mais à une dose maximale plus élevée (2,4 mg vs 2 mg) et est spécifiquement indiqué pour l'obésité.
 
 ### Puis-je prendre Wegovy si je n'ai pas de diabète ?
-Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète, contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) qui est **exclusivement indiqué pour le diabète de type 2** en France et ne doit pas être utilisé pour la perte de poids (contrôles ANSM renforcés depuis février 2025).
+Oui, Wegovy est spécifiquement indiqué pour l'obésité avec ou sans diabète, contrairement à [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) qui est **exclusivement indiqué pour le diabète de type 2** en France et ne doit pas être utilisé pour la perte de poids ([conditions de prescription ANSM](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/) renforcées depuis février 2025).
 
 ### Combien de temps faut-il pour voir les effets ?
 - **Perte d'appétit** : Quelques jours

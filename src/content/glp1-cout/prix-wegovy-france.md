@@ -396,7 +396,7 @@ Mais :
 ⚠️ **Risques médicaux** : Nausées sévères, vomissements, pancréatite
 ⚠️ **Contre-indications** : Antécédents de cancer thyroïdien, MEN 2
 ⚠️ **Adaptation dosage** : Nécessite escalade progressive sur 20 semaines
-⚠️ **Suivi obligatoire** : Bilan sanguin, surveillance effets secondaires
+⚠️ **Suivi obligatoire** : Bilan sanguin, surveillance [effets secondaires](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
 
 **Dangers des sites sans ordonnance :**
 - ❌ **Illégalité** : Risque de poursuites

@@ -208,7 +208,7 @@ Bien que non remboursé, Mounjaro reste un médicament soumis à prescription m�
 
 ### Perspectives de Remboursement
 
-L'avis favorable de la HAS de décembre 2025 constitue une étape importante. Le processus de fixation du prix et des conditions de remboursement est en cours. Les patients sont invités à se renseigner régulièrement auprès de leur médecin ou pharmacien sur l'évolution de la prise en charge.
+L'avis favorable de la HAS de décembre 2025 constitue une étape importante. Le processus de fixation du prix et des [conditions de remboursement de Mounjaro en 2026](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) est en cours. Les patients sont invités à se renseigner régulièrement auprès de leur médecin ou pharmacien sur l'évolution de la prise en charge.
 
 ## Couverture par les Mutuelles Complémentaires {#cout-reel}
 

@@ -138,7 +138,7 @@ Quels sont les **effets secondaires Mounjaro à long terme** ? Le tirzépatide (
 - **Éducation du patient** : Reconnaissance des signes d'alerte
 
 **Pendant le traitement**
-- **Dose progressive** : Commencer à 2,5 mg/semaine
+- **[Dose progressive](/collections/traitements-glp1/mounjaro-dosage/)** : Commencer à 2,5 mg/semaine
 - **Surveillance rapprochée** : Premiers jours/semaines
 - **[Alimentation adaptée](/collections/regime-glp1/régime-mounjaro-optimal/)** : Repas légers, fractionnés
 
