@@ -336,8 +336,7 @@ Limitez à 1-2 verres occasionnels.
 
 ---
 
-*Ce guide sur les effets secondaires de Mounjaro est informatif. En cas d'effets secondaires, consultez immédiatement votre médecin. Chaque patient est unique et la tolérance peut varier.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/effets-secondaires-glp1/effets-secondaires-mounjaro.md
+*Ce guide sur les effets secondaires de Mounjaro est informatif. En cas d'effets secondaires, consultez immédiatement votre médecin. Chaque patient est unique et la tolérance peut varier.*
 
 <aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
   <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>

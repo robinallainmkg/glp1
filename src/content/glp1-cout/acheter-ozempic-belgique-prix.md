@@ -170,6 +170,12 @@ Ozempic est **uniquement autorisé pour le diabète de type 2** en Belgique comm
 
 L'achat à l'étranger n'exonère pas du suivi médical : surveillance de la fonction pancréatique, suivi du diabète (HbA1c, glycémie), détection des effets indésirables (pancréatite, rétinopathie diabétique).
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Suivez votre glycémie sous Ozempic</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Ozempic étant réservé au diabète de type 2, une autosurveillance régulière de la glycémie aide votre médecin à ajuster la dose et à éviter les hypoglycémies. Le lecteur <strong>Sinocare Safe AQ Smart</strong> donne un résultat fiable en 5 secondes (marquage CE, ISO 15197) et reste un bon complément du suivi à distance.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_safe-aq-smart_acheter-ozempic-belgique-prix&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le lecteur Sinocare (lien sponsorisé) &rarr;</a>
+</div>
+
 ## Coût Total Réel d'un Achat Ozempic en Belgique
 
 Pour 3 mois d'Ozempic (tous dosages) :
@@ -222,3 +228,9 @@ Le principal avantage est la **disponibilité fiable** et la possibilité, pour 
 **⚠️ Avertissement médical :** Ces informations sont fournies à titre informatif et ne remplacent pas l'avis d'un professionnel de santé. Ozempic (sémaglutide) est un médicament de prescription obligatoire indiqué dans le diabète de type 2. L'usage hors-AMM (perte de poids) engage la responsabilité du prescripteur. Consultez toujours votre médecin avant tout achat ou modification de traitement.
 
 **📅 Dernière mise à jour :** Mai 2026 — Sources : INAMI, AFMPS, APB (Association Pharmaceutique Belge), ANSM, Directive 2001/83/CE, Directive 2011/24/UE, CBIP, Pharmacodel, Moustique.
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel utile pour votre suivi</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_acheter-ozempic-belgique-prix&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — Pack économique + lancettes (suivi glycémie DT2) <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_acheter-ozempic-belgique-prix&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles compatibles stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>

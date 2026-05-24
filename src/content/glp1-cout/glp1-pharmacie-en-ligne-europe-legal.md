@@ -199,6 +199,12 @@ Tous les GLP-1 doivent être **stockés entre 2 et 8°C** avant première utilis
 - Stocker immédiatement au réfrigérateur
 - Conserver la **facture européenne** (utile pour mutuelle ou contrôle douanier)
 
+<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
+  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Stylo commandé en ligne ? Pensez aux aiguilles</p>
+  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Les stylos GLP-1 (Wegovy, Ozempic, Mounjaro, Saxenda) sont presque toujours livrés <strong>sans aiguilles</strong>. Ajouter une boîte d'aiguilles 32G 4&nbsp;mm Sinocare compatibles à votre commande évite un second envoi (et une seconde rupture de chaîne du froid) tout en garantissant une injection indolore.</p>
+  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_insulin-needles_glp1-pharmacie-en-ligne-europe-legal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir les aiguilles Sinocare (lien sponsorisé) &rarr;</a>
+</div>
+
 ## Risques et Comment les Éviter
 
 ### Risque n°1 : la contrefaçon (très élevé)
@@ -310,3 +316,9 @@ Pour aller plus loin, consultez nos guides spécifiques par pays : [Mounjaro Esp
 **⚠️ Avertissement médical :** Ces informations sont fournies à titre informatif et ne remplacent pas l'avis d'un professionnel de santé. Les GLP-1 (sémaglutide, tirzepatide, liraglutide) sont des médicaments de prescription obligatoire. Consultez toujours votre médecin avant tout achat ou modification de traitement. L'achat à l'étranger ne dispense en aucun cas d'un suivi médical régulier en France. En cas d'effet indésirable, déclarez-le sur signalement.social-sante.gouv.fr.
 
 **📅 Dernière mise à jour :** Mai 2026 — Sources : ANSM, EMA, BfArM (Allemagne), AEMPS (Espagne), AFMPS (Belgique), INFARMED (Portugal), Directive 2001/83/CE, Directive 2011/24/UE, arrêt CJUE C-222/18 (2019), DocMorris, ZAVA, Apomeds, Shop Apotheke, Pharmacodel.
+
+<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
+  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel utile pour votre traitement</p>
+  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_glp1-pharmacie-en-ligne-europe-legal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles compatibles stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-200_glp1-pharmacie-en-ligne-europe-legal&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F200pcs-sinocare-glucometer-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 200 pcs</a> — Stock longue durée + lancettes (limite les réassorts) <span style="color:#94a3b8;">(dès 49,99&nbsp;€)</span></li></ul>
+  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
+</aside>

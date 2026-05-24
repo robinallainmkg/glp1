@@ -492,8 +492,7 @@ Les prix sont libres et peuvent varier selon les pharmacies. Un remboursement es
 
 ---
 
-*Dernière mise à jour : 8 mars 2026. Les prix (libres) et conditions de remboursement sont susceptibles d'évoluer. Un remboursement est envisagé au 2e semestre 2026. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et les prix actualisés.*</content>
-<parameter name="filePath">/Users/mac/Projet/glp1/src/content/collections/glp1-cout/prix-mounjaro-france.md
+*Dernière mise à jour : 8 mars 2026. Les prix (libres) et conditions de remboursement sont susceptibles d'évoluer. Un remboursement est envisagé au 2e semestre 2026. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées et les prix actualisés.*
 
 <aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
   <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
