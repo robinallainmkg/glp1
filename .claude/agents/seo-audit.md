@@ -171,8 +171,9 @@ Avant de scanner, construis la liste des pages de contenu reel :
 2. Les guides sous `/guides/` (pages autonomes)
 3. La homepage `/`
 4. Les pages outils `/outils/*`
-5. `/contact/`, `/programme/`, `/tarifs/`, `/partenaires/`
-6. Les landing pages `/annette/`, `/charles/`
+5. `/contact/`, `/tarifs/` (page abonnement Coach), `/partenaires/`
+
+> Note : les anciennes landing pages partenaires `/annette/`, `/charles/`, `/programme/` sont retirees (site coach-first) — ne les audite PAS. La page `/mon-espace/` (compte/Coach) est en noindex — ne l'audite pas non plus.
 
 **N'audite QUE ces pages.** Tout le reste est du bruit.
 

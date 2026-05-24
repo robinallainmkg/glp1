@@ -102,33 +102,29 @@ UPDATE agent_runs SET status = 'completed', completed_at = NOW(),
 WHERE id = '<run_id>';
 ```
 
-## Strategie de monetisation — Personas CPA
+## Strategie de monetisation — Coach IA (abonnement)
 
-Le site monetise via des partenariats CPA avec 2 plateformes. Les opportunites de contenu doivent **prioriser les sujets a forte intention d'achat** qui correspondent a ces personas :
+Le site ne monetise PLUS via l'affiliation (partenaires Charles.co et Annette.care retires). La monetisation repose desormais sur le **Coach IA GLP-1** : un chat gratuit (limite a quelques messages/jour) puis un abonnement **Premium a 4€/mois** (suivi personnalise selon le profil). Les opportunites de contenu doivent **prioriser les sujets qui nourrissent l'engagement avec le Coach** et amenent l'utilisateur a creer un compte puis s'abonner.
 
-### Persona CHARLES (consultation + traitement)
-- **Partenaire** : Charles.co — teleconsultation medicale + prescription GLP-1
-- **Cible** : personnes pretes a commencer un traitement, qui cherchent un medecin ou une ordonnance
-- **Requetes a forte valeur** : "comment obtenir ozempic", "teleconsultation GLP-1", "prescription mounjaro", "medecin perte de poids en ligne", "commencer traitement GLP-1", "ordonnance wegovy", "consultation obesite en ligne"
-- **Scoring** : +2 points de priorite pour tout sujet lié a la prescription, teleconsultation, ou debut de traitement
+### Intentions a forte valeur (funnel Coach)
+- **Demarrage de traitement** : "comment obtenir / commencer Ozempic, Wegovy, Mounjaro", "ordonnance", "teleconsultation", "trouver un medecin", "suis-je eligible"
+- **Suivi & accompagnement** : "suivi GLP-1", "perte de poids semaine par semaine", "gerer les effets secondaires au quotidien", "alimentation / regime sous traitement", "questions a poser a son medecin"
+- **Decision** : "quel traitement choisir", "Wegovy vs Mounjaro", "eligibilite Wegovy/Mounjaro"
 
-### Persona ANNETTE (accompagnement)
-- **Partenaire** : Annette.care — accompagnement nutritionnel et coaching perte de poids
-- **Cible** : personnes sous traitement GLP-1 qui cherchent un suivi, un coaching, ou une aide au quotidien
-- **Requetes a forte valeur** : "accompagnement GLP-1", "suivi nutritionnel ozempic", "coaching perte de poids", "programme alimentaire mounjaro", "aide perte de poids", "dieteticien GLP-1", "soutien psychologique obesite"
-- **Scoring** : +2 points de priorite pour tout sujet lié a l'accompagnement, suivi, nutrition, ou coaching
+Ce sont les sujets ou le Coach apporte le plus de valeur (reponse personnalisee) → meilleurs points d'entree vers l'abonnement.
 
 ### Priorisation
 Quand tu scores les opportunites, applique ce bonus :
-- Sujet a intention d'achat (persona Charles OU Annette) → priorite -2 (plus haute)
-- Sujet informatif pur (ex: recherche clinique) → pas de bonus
-- En cas d'egalite, favorise le contenu a intention d'achat
+- Sujet a forte intention Coach (demarrage, suivi, decision, eligibilite) → priorite -2 (plus haute)
+- Sujet informatif pur (recherche clinique, actualite molecule) → pas de bonus
+- En cas d'egalite, favorise le contenu qui peut declencher une conversation avec le Coach
+- NE PROPOSE PLUS de sujets calibres specifiquement pour Charles.co ou Annette.care (partenaires retires)
 
 ## Regles
 
 - Ne propose que des sujets pertinents pour le marche **francais**
 - Ne propose pas de sujets deja couverts par un article existant
-- Priorise les sujets a fort potentiel de trafic, faible competition, **et forte intention d'achat (personas Charles/Annette)**
+- Priorise les sujets a fort potentiel de trafic, faible competition, **et forte intention Coach (demarrage, suivi, decision, eligibilite)**
 - Maximum 10 opportunites par run
 - Ne modifie AUCUN fichier du projet
 - Ecris uniquement dans Supabase via MCP execute_sql

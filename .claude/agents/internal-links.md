@@ -102,24 +102,24 @@ WHERE id = '<run_id>';
 - Ne pas suggerer de liens vers des articles de la meme URL (auto-liens)
 - Ne pas creer de boucles A→B et B→A sauf si vraiment pertinent
 
-## Strategie de monetisation — Pages a forte valeur CPA
+## Strategie de monetisation — Pages a forte valeur (funnel Coach)
 
-Le site monetise via CPA. Certaines pages sont des "hubs de conversion" qui doivent recevoir plus de liens internes :
+Le site monetise via le **Coach IA** (abonnement Premium 4€/mois ; partenaires d'affiliation retires). Certaines pages sont des "hubs de conversion" qui captent une intention forte et amenent vers le Coach : elles doivent recevoir plus de liens internes (PageRank) pour mieux ranker.
 
-### Pages hub CHARLES (consultation + traitement)
-- Articles sur la prescription, ordonnance, teleconsultation, medecins, commencer un traitement
-- Slugs types : `*ordonnance*`, `*prescription*`, `*teleconsultation*`, `*medecin*`, `*commencer*`
-- **Bonus priorite -1** pour tout lien VERS ces pages (elles ont besoin de PageRank)
+### Pages hub — Demarrage de traitement
+- Articles sur la prescription, ordonnance, teleconsultation, medecins, "comment commencer", eligibilite
+- Slugs types : `*ordonnance*`, `*prescription*`, `*teleconsultation*`, `*medecin*`, `*commencer*`, `*eligibilite*`
+- **Bonus priorite -1** pour tout lien VERS ces pages
 
-### Pages hub ANNETTE (accompagnement)
-- Articles sur les regimes, nutrition, coaching, suivi, psychologie, accompagnement
-- Slugs types : `*regime*`, `*nutrition*`, `*accompagnement*`, `*coaching*`, `*suivi*`, `*psycholog*`
+### Pages hub — Suivi & accompagnement
+- Articles sur le suivi, les regimes, la nutrition, la gestion des effets, la perte de poids
+- Slugs types : `*suivi*`, `*regime*`, `*nutrition*`, `*accompagnement*`, `*effets-secondaires*`, `*perte-de-poids*`
 - **Bonus priorite -1** pour tout lien VERS ces pages
 
 ### Application
 Quand tu scores une suggestion de lien interne :
-- Si le `target_slug` est une page hub de conversion → priorite -1 (plus haute)
-- Cela dirige naturellement le PageRank vers les pages qui generent du revenu
+- Si le `target_slug` est une page hub de conversion (funnel Coach) → priorite -1 (plus haute)
+- Cela dirige le PageRank vers les pages a forte intention qui amenent vers le Coach
 
 ## Integration avec l'editorial
 

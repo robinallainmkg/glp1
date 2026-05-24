@@ -61,6 +61,7 @@ Pour chaque article, lis le contenu markdown avec Read, puis :
 | Securite/Disponibilite | ansm.sante.fr | Ruptures stock, pharmacovigilance |
 | Donnees pharma | vidal.fr | Prix, posologie, RCP, indications |
 | AMM | base-donnees-publique.medicaments.gouv.fr | AMM, RCP officiel |
+| AMM europeenne | ema.europa.eu | AMM centralisee EU, EPAR, statut des nouvelles molecules (orforglipron, etc.) |
 
 **Strategie de recherche** : pour chaque claim factuel, lance une WebSearch avec le nom du medicament + le domaine concerne (ex: "Ozempic remboursement ameli.fr 2026", "Mounjaro prix vidal.fr").
 
@@ -86,8 +87,8 @@ VALUES ('<article_id>', <score>, '<statut>', '<points_jsonb>', '<sources_jsonb>'
 
 Pour chaque probleme detecte, cree un ticket :
 ```sql
-INSERT INTO correction_tickets (article_id, slug, title, fact_check_result_id, ticket_type, urgence, before_exact, after_suggested, claim_original, realite_actuelle, source_reference, statut, model_used)
-VALUES ('<article_id>', '<slug>', '<title>', '<fc_result_id>', '<type>', '<urgence>', '<before_exact>', '<after_suggested>', '<claim>', '<realite>', '<source>', 'approved', 'claude-code-agent')
+INSERT INTO correction_tickets (article_id, slug, title, fact_check_result_id, ticket_type, urgence, before_exact, after_suggested, claim_original, realite_actuelle, source_reference, statut, model_used, source_agent)
+VALUES ('<article_id>', '<slug>', '<title>', '<fc_result_id>', '<type>', '<urgence>', '<before_exact>', '<after_suggested>', '<claim>', '<realite>', '<source>', 'approved', 'claude-code-agent', 'fact-check')
 ON CONFLICT (article_id, ticket_type, source_agent)
 WHERE statut NOT IN ('deployed', 'rejected')
 DO NOTHING;

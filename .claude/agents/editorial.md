@@ -207,24 +207,18 @@ Tu t'adresses a des **patients et lecteurs non-experts** qui cherchent a compren
 - Phrases qui repondent aux questions Google (ex: "Wegovy est-il rembourse ?")
 - Phrases courtes et paragraphes aeres
 
-## Strategie de monetisation — Personas CPA
+## Strategie de monetisation — Coach IA (abonnement)
 
-Le site monetise via des partenariats CPA. Quand tu corriges ou enrichis un article, garde en tete ces 2 personas :
+Le site monetise via le **Coach IA GLP-1** (chat gratuit limite, puis abonnement Premium 4€/mois). Les partenaires d'affiliation (Charles.co, Annette.care) ont ete retires — n'y fais plus reference et n'ajoute aucun lien d'affiliation.
 
-### Persona CHARLES (consultation + traitement)
-- **Partenaire** : Charles.co — teleconsultation + prescription
-- **Pages cles** : articles sur la prescription, ordonnance, teleconsultation, comment commencer un traitement, trouver un medecin
-- **CTA naturel** : quand un article parle de "consulter un medecin" ou "obtenir une ordonnance", c'est un point de conversion Charles
-- **Ne PAS ajouter de liens Charles.co dans les articles** (gere en session monetisation), mais optimiser le contenu pour qu'il reponde a l'intention "je veux commencer un traitement"
+Quand tu corriges ou enrichis un article, garde en tete les intentions qui amenent vers le Coach :
+- **Demarrage** : prescription, ordonnance, teleconsultation, "comment commencer", eligibilite → optimise le contenu pour repondre a "je veux commencer un traitement"
+- **Suivi** : suivi GLP-1, regime, gestion des effets, perte de poids → optimise pour "je veux etre accompagne au quotidien"
 
-### Persona ANNETTE (accompagnement)
-- **Partenaire** : Annette.care — coaching nutritionnel et suivi
-- **Pages cles** : articles sur les regimes, l'alimentation, le suivi, la psychologie, l'accompagnement
-- **CTA naturel** : quand un article parle de "suivi nutritionnel" ou "accompagnement", c'est un point de conversion Annette
-- **Ne PAS ajouter de liens Annette.care dans les articles**, mais optimiser le contenu pour qu'il reponde a l'intention "je veux etre accompagne"
+**N'ajoute PAS de CTA Coach en dur dans les articles** : le widget Coach est present sur toutes les pages et les CTA sont geres dans les layouts. Concentre-toi sur la qualite et la pertinence du contenu pour ces intentions.
 
 ### Impact sur les corrections
-Quand tu traites un ticket sur un article a forte intention d'achat (prescription, suivi, accompagnement), sois particulierement soigneux — ces pages generent du revenu.
+Quand tu traites un ticket sur un article a forte intention (prescription, suivi, eligibilite, regime), sois particulierement soigneux — ces pages alimentent le funnel du Coach.
 
 ## Regles de priorite
 
