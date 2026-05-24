@@ -40,21 +40,6 @@ Commencer un traitement par stylo injecteur GLP-1 peut sembler intimidant au pre
 
 ### Le stylo injecteur
 
-<aside data-sinocare-card style="margin:1.5rem auto;max-width:380px;border:1px solid #e2e8f0;border-radius:14px;padding:1.1rem;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04);box-sizing:border-box;">
-  <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;">
-    <span style="font-size:.72rem;background:#f0f9ff;color:#0369a1;padding:.2rem .55rem;border-radius:4px;font-weight:600;letter-spacing:.02em;">SINOCARE</span>
-    <span style="font-size:.78rem;color:#475569;">★ 5/5</span>
-  </div>
-  <h4 style="margin:0 0 .4rem 0;font-size:1.02rem;font-weight:700;color:#0f172a;line-height:1.3;">Aiguilles stylo insuline Sinocare 32G 4mm</h4>
-  <p style="margin:0 0 .8rem 0;font-size:.88rem;color:#475569;line-height:1.5;">100 aiguilles 32G 4mm pour stylos GLP-1</p>
-  <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem;">
-    <span style="font-size:1.05rem;font-weight:700;color:#0f172a;">À partir de 14,99&nbsp;€</span>
-    <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_card_insulin-needles_comment-s-injecter-glp1&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="background:#1B6FA0;color:#fff;font-size:.88rem;font-weight:600;padding:.55rem 1.1rem;border-radius:7px;text-decoration:none;white-space:nowrap;">Voir &rarr;</a>
-  </div>
-  <span style="font-size:.72rem;color:#94a3b8;font-style:italic;">Lien sponsorisé</span>
-</aside>
-
-
 Chaque médicament GLP-1 injectable est conditionné dans un **stylo auto-injecteur prérempli** :
 
 - **Ozempic** : stylo FlexTouch (Novo Nordisk), disponible en 0,25/0,5 mg, 1 mg et 2 mg — un [nouveau stylo Ozempic 3ml](/collections/traitements-glp1/nouveau-stylo-ozempic-3ml-2026-changement-utilisation/) est également disponible depuis 2026
@@ -178,8 +163,3 @@ L'auto-injection d'un traitement GLP-1 s'apprend facilement et devient rapidemen
 
 *Sources : Notice Ozempic (sémaglutide), Novo Nordisk, 2025 ; Notice Wegovy (sémaglutide), Novo Nordisk, 2025 ; Notice Mounjaro (tirzépatide), Eli Lilly, 2025 ; ANSM, recommandations injection sous-cutanée.*
 
-<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
-  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
-  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_comment-s-injecter-glp1&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles 32G 4mm pour stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-smart_comment-s-injecter-glp1&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Smart</a> — Lecteur de glycémie compact <span style="color:#94a3b8;">(dès 17,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_comment-s-injecter-glp1&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
-  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
-</aside>

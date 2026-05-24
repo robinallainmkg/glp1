@@ -43,12 +43,6 @@ Cet article détaille les **prix réels constatés en pharmacies espagnoles**, l
 
 Mounjaro est commercialisé en Espagne sous prescription médicale uniquement, en blisters de 4 stylos pré-remplis (un mois de traitement à raison d'une injection hebdomadaire).
 
-<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
-  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Pensez aux aiguilles compatibles pour votre stylo</p>
-  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Les stylos Mounjaro vendus à l'étranger sont généralement livrés <strong>sans aiguilles</strong> : elles s'achètent séparément. Les aiguilles fines 32G 4&nbsp;mm Sinocare (boîte de 100) s'adaptent aux stylos GLP-1 et permettent une injection quasi indolore — utile à prévoir avant un achat transfrontalier.</p>
-  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_insulin-needles_acheter-mounjaro-espagne-prix-pharmacie&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir les aiguilles Sinocare (lien sponsorisé) &rarr;</a>
-</div>
-
 ### Tarifs constatés en pharmacie espagnole
 
 | Dosage | Prix moyen pharmacie | Plage observée |
@@ -221,8 +215,3 @@ Pour optimiser votre traitement GLP-1, comparez aussi les options en France et e
 
 **📅 Dernière mise à jour :** Mai 2026 — Sources : AEMPS (Agencia Española de Medicamentos), ANSM, Directive 2001/83/CE, arrêt CJUE C-222/18, mediQuo, Clínica UCOM, ZAVA España.
 
-<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
-  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel utile pour votre traitement</p>
-  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_acheter-mounjaro-espagne-prix-pharmacie&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles compatibles stylos GLP-1 <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_acheter-mounjaro-espagne-prix-pharmacie&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — Pack économique + lancettes (suivi glycémie) <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li></ul>
-  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
-</aside>

@@ -166,7 +166,6 @@ Dès la publication au JO de l'arrêté Sécu (attendue S2 2026), le complément
 
 ---
 
-
 ---
 
 ## Voir aussi : autres mutuelles qui remboursent Wegovy

@@ -172,7 +172,6 @@ Automatiquement : dès l'inscription au JO, le complément de ticket modérateur
 
 ---
 
-
 ---
 
 ## Voir aussi : autres mutuelles qui remboursent Wegovy

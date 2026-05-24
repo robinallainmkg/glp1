@@ -162,7 +162,6 @@ Pris en charge à 65 % (bithérapie metformine) ou 30 % (trithérapie insuline) 
 
 ---
 
-
 ---
 
 ## Voir aussi : autres mutuelles qui remboursent Wegovy

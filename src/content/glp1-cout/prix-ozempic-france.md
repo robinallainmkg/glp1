@@ -106,13 +106,6 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 
 ### Conditions de remboursement
 
-<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
-  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Suivi glycémie sous Ozempic</p>
-  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Pour les patients diabétiques sous Ozempic, l'autosurveillance glycémique reste recommandée par la HAS. Un lecteur fiable et abordable comme le Sinocare Safe AQ Smart est largement utilisé.</p>
-  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_safe-aq-smart_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
-</div>
-
-
 **Ozempic est remboursé à 65% en bithérapie metformine (30% en trithérapie insuline)** par l'Assurance Maladie sous conditions :
 
 ✅ **Prescription médicale obligatoire**
@@ -153,35 +146,6 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 ## 💳 Aides Financières Disponibles
 
 ### Complémentaire Santé Solidaire (CSS, ex-CMU-C)
-
-<div data-sinocare-compare style="margin:1.75rem 0;overflow-x:auto;">
-  <table style="width:100%;border-collapse:collapse;font-family:inherit;">
-    <tbody><tr><td style="border:1px solid #e2e8f0;padding:1rem;vertical-align:top;width:33.333333333333336%;background:#fff;">
-      <div style="font-size:.7rem;color:#0369a1;font-weight:600;margin-bottom:.3rem;letter-spacing:.02em;">SINOCARE</div>
-      <h4 style="margin:0 0 .4rem 0;font-size:.95rem;color:#0f172a;line-height:1.3;">Sinocare Safe AQ Smart</h4>
-      <p style="margin:0 0 .6rem 0;font-size:.82rem;color:#475569;line-height:1.45;">Lecteur de glycémie compact</p>
-      <div style="font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:.7rem;">Dès 17,99&nbsp;€</div>
-      <div style="font-size:.78rem;color:#475569;margin-bottom:.7rem;">★ 4.8/5</div>
-      <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_compare_safe-aq-smart_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:6px;text-decoration:none;">Découvrir</a>
-    </td><td style="border:1px solid #e2e8f0;padding:1rem;vertical-align:top;width:33.333333333333336%;background:#fff;">
-      <div style="font-size:.7rem;color:#0369a1;font-weight:600;margin-bottom:.3rem;letter-spacing:.02em;">SINOCARE</div>
-      <h4 style="margin:0 0 .4rem 0;font-size:.95rem;color:#0f172a;line-height:1.3;">Sinocare Safe AQ Air Bluetooth</h4>
-      <p style="margin:0 0 .6rem 0;font-size:.82rem;color:#475569;line-height:1.45;">Lecteur Bluetooth — sync app smartphone</p>
-      <div style="font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:.7rem;">Dès 22,99&nbsp;€</div>
-      <div style="font-size:.78rem;color:#475569;margin-bottom:.7rem;">★ 4.7/5</div>
-      <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_compare_safe-aq-air_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-air-bluetooth-blood-sugar-monitor" rel="sponsored noopener" target="_blank" style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:6px;text-decoration:none;">Découvrir</a>
-    </td><td style="border:1px solid #e2e8f0;padding:1rem;vertical-align:top;width:33.333333333333336%;background:#fff;">
-      <div style="font-size:.7rem;color:#0369a1;font-weight:600;margin-bottom:.3rem;letter-spacing:.02em;">SINOCARE</div>
-      <h4 style="margin:0 0 .4rem 0;font-size:.95rem;color:#0f172a;line-height:1.3;">Sinocare iCan i3 CGM 15 jours</h4>
-      <p style="margin:0 0 .6rem 0;font-size:.82rem;color:#475569;line-height:1.45;">Capteur de glycémie continue 15 jours</p>
-      <div style="font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:.7rem;">Dès 49,90&nbsp;€</div>
-      <div style="font-size:.78rem;color:#475569;margin-bottom:.7rem;">★ 4.6/5</div>
-      <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_compare_ican-cgm_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="display:inline-block;background:#1B6FA0;color:#fff;font-size:.82rem;font-weight:600;padding:.45rem .9rem;border-radius:6px;text-decoration:none;">Découvrir</a>
-    </td></tr></tbody>
-  </table>
-  <p style="margin:.6rem 0 0 0;font-size:.78rem;color:#94a3b8;text-align:right;font-style:italic;">Liens sponsorisés &middot; Sinocare via Awin</p>
-</div>
-
 
 - **Conditions** : Revenus inférieurs au plafond CSS
 - **Montant** : Prise en charge complète des médicaments remboursés
@@ -530,8 +494,3 @@ Mais Mounjaro montre **une efficacité supérieure** dans les études cliniques 
 
 *Dernière mise à jour : mars 2026. Prix et conditions de remboursement susceptibles d'évoluer. Consultez toujours votre médecin et votre pharmacien pour des informations personnalisées.*
 
-<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
-  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
-  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-smart_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsafe-aq-smart-blood-glucometer" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Smart</a> — Lecteur de glycémie compact <span style="color:#94a3b8;">(dès 17,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_prix-ozempic-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
-  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
-</aside>

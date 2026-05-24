@@ -176,7 +176,6 @@ Dès l'inscription au JO (S2 2026 attendue), Alan applique le complément de tic
 
 ---
 
-
 ---
 
 ## Voir aussi : autres mutuelles qui remboursent Wegovy

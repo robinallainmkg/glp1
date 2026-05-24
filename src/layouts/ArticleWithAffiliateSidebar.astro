@@ -159,46 +159,17 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   )}
 
   <main class="adaptive-article-layout">
-    <div class="article-wrapper has-sidebar">
-      <!-- Contenu principal de l'article -->
+    <div class="article-wrapper">
+      <!-- Contenu principal de l'article (pleine largeur — plus de sidebar partenaire) -->
       <article class="article-content">
         <div class="article-body" id="article-content">
           <slot />
         </div>
-        <!-- CTAs : pages GLP-1 (showSinocare) → SinocareCTA seul (focus 100% Awin Sinocare).
-             Autres pages → logique partenaire historique (annette/mutuelle inline + bottom). -->
-        {!showSinocare && (
-          <>
-            <div id="partner-cta-template" style="display:none;">
-              {showInlineMutuelle && <MutuelleCTA context="article_inline" />}
-              {showInlineAnnette && <PartnerCTA partner="annette" context="article_inline" />}
-            </div>
-            {partner === 'mutuelle' && safePartners.has('mutuelle') && <MutuelleCTA context="article" />}
-            {partner === 'annette' && safePartners.has('annette') && <PartnerCTA partner="annette" context="article" />}
-          </>
-        )}
-        {showSinocare && (
-          <div id="partner-cta-template" style="display:none;">
-            <SinocareCTA context={`glp1_inline_${articleSlug || 'article'}`} />
-          </div>
-        )}
-        {showSinocare && <SinocareCTA context={`glp1_bottom_${articleSlug || 'article'}`} />}
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
         </div>
       </article>
-
-      <!-- Sidebars : pages GLP-1 → SinocareSidebar seul (focus Awin).
-           Autres pages → logique partenaire historique (annette/mutuelle alternées). -->
-      <div class="partner-sidebar-stack">
-        {showSinocare && <SinocareSidebar context={`glp1_sidebar_${articleSlug || 'article'}`} />}
-        {!showSinocare && filteredSidebarOrder.length > 0 && filteredSidebarOrder.map((p) => (
-          p === 'mutuelle'
-            ? <MutuelleSidebar context={p === partner ? 'article' : 'article_secondary'} />
-            : <PartnerSidebar context={p === partner ? 'article' : 'article_secondary'} />
-        ))}
-      </div>
     </div>
 
     <!-- Articles connexes -->

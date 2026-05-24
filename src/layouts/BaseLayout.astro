@@ -82,10 +82,6 @@ const ogImage = new URL("/og-image.svg", Astro.site).href;
     <slot />
   </main>
 
-  {/* Bandeau Sinocare global — sur toutes les pages utilisant BaseLayout.
-       Slug-based clickref ajouté au runtime par AffiliateTracker. */}
-  <SinocareBanner context={`page${(Astro.url.pathname || '/').replace(/\//g, '_').replace(/^_|_$/g, '') || 'home'}`} />
-
   <SiteFooter />
 
   <!-- Tracking clics affilies -->

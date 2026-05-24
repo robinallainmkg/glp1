@@ -52,12 +52,6 @@ Saxenda est commercialisé sous **stylos pré-remplis multi-doses** (3 mL ou 5 s
 
 Le **PVP** (Preço Venda Público) est fixé par l'INFARMED. Le **format 5 stylos** est le plus courant et couvre environ un mois de traitement à dose maximale (3 mg/jour).
 
-<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
-  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Injection quotidienne : prévoyez assez d'aiguilles</p>
-  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Contrairement aux sémaglutides hebdomadaires, Saxenda <strong>s'injecte chaque jour</strong> et consomme une aiguille par injection. Une réserve d'aiguilles fines 32G 4&nbsp;mm Sinocare (boîte de 100, compatibles stylos GLP-1) évite les ruptures, surtout en cas d'achat à l'étranger où le réassort est moins immédiat.</p>
-  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_insulin-needles_acheter-saxenda-portugal-pharmacie&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir les aiguilles Sinocare (lien sponsorisé) &rarr;</a>
-</div>
-
 ### Comparticipation SNS et statut Saxenda
 
 Le **Serviço Nacional de Saúde (SNS) portugais ne rembourse pas Saxenda** pour la perte de poids (indication non comparticipée). Pour le diabète, Saxenda n'a pas l'AMM dans cette indication (Victoza, autre nom commercial du liraglutide à dose 1,8 mg, est l'équivalent diabète).
@@ -228,8 +222,3 @@ L'intérêt principal du marché portugais est sa **fiabilité** et sa **disponi
 
 **📅 Dernière mise à jour :** Mai 2026 — Sources : INFARMED, ANSM, EMA, Directive 2001/83/CE, Directive 2011/24/UE, a Farmácia Online, Farmácia Clabel, 121doc, Novo Nordisk Portugal.
 
-<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
-  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel utile pour votre traitement</p>
-  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_insulin-needles_acheter-saxenda-portugal-pharmacie&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Faiguilles-pour-stylo-a-insuline-sinocare" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Aiguilles stylo insuline Sinocare 32G 4mm</a> — 100 aiguilles compatibles stylos GLP-1 (injection quotidienne) <span style="color:#94a3b8;">(dès 14,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_acheter-saxenda-portugal-pharmacie&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — Pack économique + lancettes (si suivi glycémie) <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li></ul>
-  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
-</aside>

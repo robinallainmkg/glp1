@@ -33,21 +33,6 @@ mainKeyword: "Rybelsus Guide Complet France"
 6. [Alternatives à Rybelsus](#alternatives-rybelsus)
 7. [FAQ Rybelsus](#faq-rybelsus)
 
-<aside data-sinocare-card style="margin:1.5rem auto;max-width:380px;border:1px solid #e2e8f0;border-radius:14px;padding:1.1rem;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04);box-sizing:border-box;">
-  <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem;">
-    <span style="font-size:.72rem;background:#f0f9ff;color:#0369a1;padding:.2rem .55rem;border-radius:4px;font-weight:600;letter-spacing:.02em;">SINOCARE</span>
-    <span style="font-size:.78rem;color:#475569;">★ 4.7/5</span>
-  </div>
-  <h4 style="margin:0 0 .4rem 0;font-size:1.02rem;font-weight:700;color:#0f172a;line-height:1.3;">Sinocare Safe AQ Air Bluetooth</h4>
-  <p style="margin:0 0 .8rem 0;font-size:.88rem;color:#475569;line-height:1.5;">Lecteur Bluetooth — sync app smartphone</p>
-  <div style="display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;margin-bottom:.5rem;">
-    <span style="font-size:1.05rem;font-weight:700;color:#0f172a;">À partir de 22,99&nbsp;€</span>
-    <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_card_safe-aq-air_guide-complet-rybelsus&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-air-bluetooth-blood-sugar-monitor" rel="sponsored noopener" target="_blank" style="background:#1B6FA0;color:#fff;font-size:.88rem;font-weight:600;padding:.55rem 1.1rem;border-radius:7px;text-decoration:none;white-space:nowrap;">Voir &rarr;</a>
-  </div>
-  <span style="font-size:.72rem;color:#94a3b8;font-style:italic;">Lien sponsorisé</span>
-</aside>
-
-
 ## Qu'est-ce que Rybelsus ?
 
 Rybelsus est le premier médicament GLP-1 administrable par voie orale, développé par Novo Nordisk. Rybelsus contient du semaglutide, le même principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), mais formulé sous forme de [sémaglutide oral en comprimé](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/) pour une absorption digestive.
@@ -186,8 +171,3 @@ Non, l'arrêt doit être progressif sous surveillance médicale.
 
 *Ce guide complet sur Rybelsus est destiné à l'information générale. Consultez toujours votre médecin pour une prescription adaptée à votre situation médicale.*
 
-<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
-  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
-  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-air_guide-complet-rybelsus&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-air-bluetooth-blood-sugar-monitor" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Air Bluetooth</a> — Lecteur Bluetooth — sync app smartphone <span style="color:#94a3b8;">(dès 22,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-100_guide-complet-rybelsus&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2F100pcs-sinocare-blood-glucose-test-strips-with-free-lancets" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 100 pcs</a> — 100 bandelettes + lancettes — pack économique <span style="color:#94a3b8;">(dès 27,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_guide-complet-rybelsus&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
-  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
-</aside>

@@ -75,13 +75,6 @@ thumbnailAlt: "Prix et coût du traitement rybelsus-france"
 
 ### Tarifs selon le dosage
 
-<div data-sinocare-callout style="margin:1.5rem 0;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-left:4px solid #14b8a6;border-radius:8px;padding:1.1rem 1.2rem;">
-  <p style="margin:0 0 .4rem 0;font-weight:700;color:#0f766e;font-size:.95rem;">💡 Suivi glycémie sous Rybelsus oral</p>
-  <p style="margin:0 0 .7rem 0;color:#134e4a;font-size:.92rem;line-height:1.55;">Rybelsus (sémaglutide oral) demande une rigueur de prise. Suivre votre glycémie via un lecteur Bluetooth permet de visualiser les tendances dans l'app.</p>
-  <a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_callout_safe-aq-air_prix-rybelsus-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-air-bluetooth-blood-sugar-monitor" rel="sponsored noopener" target="_blank" style="display:inline-block;font-size:.85rem;color:#0f766e;font-weight:600;text-decoration:underline;">Voir le produit (lien sponsorisé) &rarr;</a>
-</div>
-
-
 | Dosage | Prix par boîte | Prix mensuel estimé |
 |--------|----------------|-------------------|
 | 3 mg | 80-110 € | 80-110 € |
@@ -226,8 +219,3 @@ Rybelsus n'étant pas remboursé par la Sécurité Sociale, le mécanisme classi
 
 *Prix mis à jour en mars 2026. Les tarifs peuvent varier selon les pharmacies et régions.*
 
-<aside data-sinocare-footer style="margin:2rem 0 1rem 0;padding:1.1rem 1.3rem;border:1px solid #e2e8f0;border-radius:10px;background:#fafbfc;">
-  <p style="margin:0 0 .6rem 0;font-size:.85rem;font-weight:700;color:#475569;letter-spacing:.02em;text-transform:uppercase;">📦 Matériel mentionné dans cet article</p>
-  <ul style="margin:0;padding-left:1.2rem;"><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_safe-aq-air_prix-rybelsus-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-safe-aq-air-bluetooth-blood-sugar-monitor" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare Safe AQ Air Bluetooth</a> — Lecteur Bluetooth — sync app smartphone <span style="color:#94a3b8;">(dès 22,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_strips-50-with-lancets_prix-rybelsus-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fsinocare-blood-glucose-test-strips" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Bandelettes Sinocare 50 pcs + lancettes</a> — 50 bandelettes + lancettes gratuites <span style="color:#94a3b8;">(dès 16,99&nbsp;€)</span></li><li style="margin-bottom:.45rem;font-size:.88rem;line-height:1.5;"><a href="https://www.awin1.com/cread.php?awinmid=114180&awinaffid=2879557&clickref=glp1france_footer_ican-cgm_prix-rybelsus-france&ued=https%3A%2F%2Fen.sinocare.com%2Ffr%2Fproducts%2Fican-cgm-15-days-continuous-glucose-monitoring" rel="sponsored noopener" target="_blank" style="color:#1B6FA0;font-weight:600;">Sinocare iCan i3 CGM 15 jours</a> — Capteur de glycémie continue 15 jours <span style="color:#94a3b8;">(dès 49,90&nbsp;€)</span></li></ul>
-  <p style="margin:.7rem 0 0 0;font-size:.75rem;color:#94a3b8;font-style:italic;">Les liens ci-dessus sont sponsorisés — Sinocare est un partenaire commercial via Awin.</p>
-</aside>

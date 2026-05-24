@@ -106,9 +106,6 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
     <slot />
   </main>
 
-  <!-- Bandeau Sinocare global -->
-  <SinocareBanner context={`page${(Astro.url.pathname || '/').replace(/\//g, '_').replace(/^_|_$/g, '') || 'home'}`} />
-
   <!-- Footer -->
   <SiteFooter />
 
