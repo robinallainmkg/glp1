@@ -49,27 +49,17 @@ CONTEXTE IMPORTANT :
 - Prix approximatifs : Ozempic ~77 EUR/mois (rembourse 65% pour diabete T2), Wegovy ~300 EUR/mois (non rembourse), Mounjaro ~350 EUR/mois (non rembourse)
 - Si la personne est victime d'arnaque averee : orienter calmement vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr
 
-CONSULTER UN SPECIALISTE / TROUVER UN MEDECIN — ORIENTE VERS ANNETTE :
-Quand quelqu'un cherche un medecin, un specialiste, une prescription ou un accompagnement, ta PREMIERE reponse doit orienter vers Annette.care :
-- "Pour consulter un specialiste GLP-1, je te recommande Annette.care. Leurs medecins partenaires assurent la primo-prescription si tu es eligible, ainsi que le renouvellement d'ordonnance. En plus, tu beneficies d'un suivi dietetique complet."
-- Donne TOUJOURS le lien : [Decouvrir Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach)
-- Mentionne le code CARE50 (50% sur le 1er mois, soit 24,50 EUR).
-- Note : 4.8/5 sur Google, 2 000+ patients accompagnes.
-- Ne demande PAS le departement ou code postal. Ne propose PAS de chercher dans un annuaire. Annette est LA solution.
-- Si la personne insiste pour un medecin hors Annette (medecin traitant, CHU), oriente alors vers annuaire-sante.ameli.fr en complement.
-
-PARTENAIRE ANNETTE.CARE — QUAND MENTIONNER :
-Annette.care est notre partenaire sante. Mentionne-le naturellement dans ces cas :
-- Question sur prescription, ordonnance, eligibilite, renouvellement → medecins partenaires Annette
-- Question sur accompagnement, suivi, nutrition, regime, coaching → dieteticiens Annette
-- Question sur perte de poids, motivation, effets secondaires → programme complet Annette
-- Question sur prix/cout du traitement → mentionne que Annette aide aussi sur le parcours de soins
-- Pour les questions purement informatives (c'est quoi un GLP-1 ? effets secondaires ?), reponds d'abord factuellement, puis propose Annette si pertinent.
-- Sois naturel, pas commercial. Exemple : "Annette.care est notre partenaire de confiance pour ca" ou "Les medecins d'Annette peuvent t'aider".
+ORIENTATION MEDICALE (PRESCRIPTION / MEDECIN) :
+Quand quelqu'un cherche un medecin, un specialiste, une prescription, un renouvellement ou un accompagnement :
+- Oriente calmement vers son medecin traitant, un endocrinologue ou un medecin de l'obesite.
+- Pour trouver un praticien : annuaire-sante.ameli.fr (annuaire officiel de l'Assurance Maladie).
+- Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU.
+- Pour le suivi nutritionnel : conseille un dieteticien ou un medecin nutritionniste.
+- Tu n'orientes vers AUCUN service commercial ni partenaire prive.
 
 SEGMENTS DE VISITEURS (adapter la reponse) :
 - ~28% sont des victimes d'arnaques (ont achete de faux GLP-1 en ligne, souvent 29-80 EUR). Etre empathique, ne pas juger, proposer les recours.
-- ~16% ont une intention d'achat directe. Expliquer le parcours legal (medecin → ordonnance → pharmacie). Proposer Annette si besoin de prescription.
+- ~16% ont une intention d'achat directe. Expliquer le parcours legal (medecin → ordonnance → pharmacie) et orienter vers un medecin pour la prescription.
 - ~10% ont des questions medicales (diabete, compatibilite). Orienter vers le medecin apres information factuelle.
 - Le reste sont des curieux qui cherchent a comprendre les GLP-1.`;
 
@@ -103,7 +93,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'diet',
     pattern: /r[eé]gime|nutrition|aliment|manger|repas|prot[eé]ine/i,
-    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nPour un suivi dietetique personnalise adapte a votre traitement GLP-1, [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach) propose un accompagnement avec des dieteticiens certifies (code CARE50 : -50% le 1er mois)."
+    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nPour un suivi personnalise adapte a votre traitement, parlez-en a votre medecin ou a un dieteticien."
   },
   {
     intent: 'weight',
@@ -113,7 +103,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   {
     intent: 'prescription',
     pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir|sp[eé]cialiste/i,
-    response: "Pour consulter un specialiste GLP-1, je vous recommande [Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach) :\n\n🩺 Medecins partenaires qui assurent la primo-prescription (si eligibilite)\n🔄 Renouvellement d'ordonnance sans file d'attente\n🥗 Suivi dietetique personnalise avec dieteticiens certifies\n⭐ 4.8/5 sur Google — 2 000+ patients accompagnes\n\nAvec le code **CARE50**, le premier mois est a 24,50€ au lieu de 49€."
+    response: "Les traitements GLP-1 sont delivres uniquement sur ordonnance. Le parcours :\n\n1. Consultation avec votre medecin traitant, un endocrinologue ou un medecin de l'obesite\n2. Ordonnance si le traitement est indique medicalement\n3. Delivrance en pharmacie\n\nPour trouver un praticien pres de chez vous : annuaire-sante.ameli.fr. Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU."
   }
 ];
 
@@ -551,14 +541,11 @@ serve(async (req) => {
       let doctorContext = '';
 
       if (isDoctorSearch) {
-        // Redirect to Annette — primary action for doctor/specialist queries
-        doctorContext = `\n\n🩺 INSTRUCTION PRIORITAIRE — REDIRECTION ANNETTE :
-L'utilisateur cherche un medecin ou specialiste. Tu DOIS recommander Annette.care EN PREMIER :
-- "Pour consulter un specialiste GLP-1, je te recommande Annette.care. Leurs medecins partenaires assurent la primo-prescription si tu es eligible, et le renouvellement d'ordonnance."
-- Donne le lien : [Decouvrir Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach)
-- Mentionne : 4.8/5 Google, 2 000+ patients, code CARE50 (-50% le 1er mois).
-- Ne demande PAS le departement. Ne propose PAS d'annuaire. Annette est LA solution.
-- En complement seulement : le medecin traitant peut aussi orienter.`;
+        doctorContext = `\n\n🩺 INSTRUCTION : L'utilisateur cherche un medecin ou specialiste. Oriente-le calmement :
+- Vers son medecin traitant, un endocrinologue ou un medecin de l'obesite.
+- Pour trouver un praticien : annuaire-sante.ameli.fr (annuaire officiel de l'Assurance Maladie).
+- Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU.
+- N'oriente vers AUCUN service commercial ni partenaire prive.`;
       }
 
       // --- 4. Build messages for LLM ---

@@ -607,32 +607,48 @@ import { supabaseConfig } from '../lib/supabase.js';
     return false;
   }
 
+  // R\u00e9cup\u00e8re l'id Supabase de l'utilisateur connect\u00e9 (depuis le token d'auth en localStorage)
+  function getUserId() {
+    var keys = Object.keys(localStorage);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i].indexOf('sb-') === 0 && keys[i].indexOf('-auth-token') > -1) {
+        try {
+          var token = JSON.parse(localStorage.getItem(keys[i]));
+          if (token && token.user && token.user.id) return token.user.id;
+        } catch(e) {}
+      }
+    }
+    return null;
+  }
+
   function showSignupCTA() {
     if (ctaShown) return;
     ctaShown = true;
     localStorage.setItem('glp1_coach_cta_shown', '1');
+    if (isUserLoggedIn()) return; // les membres connect\u00e9s n'ont pas besoin de ce rappel
     var ctaDiv = document.createElement('div');
     ctaDiv.className = 'coach-cta-signup';
-    ctaDiv.style.cssText = 'background:linear-gradient(135deg,#F0F9FF,#E8F6FF);border:1px solid #A9E1FF;border-radius:12px;padding:14px;margin:8px 4px;animation:fadeIn 0.4s ease-out;';
     ctaDiv.innerHTML =
-      '<p style="color:#0D4F73;font-weight:600;margin:0 0 8px;font-size:0.82rem;line-height:1.4;">Besoin d\'un accompagnement personnalis\u00e9 avec un sp\u00e9cialiste ?</p>' +
-      '<a href="https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_cta_chat" target="_blank" rel="noopener sponsored" ' +
-        'style="display:block;text-align:center;background:#1B6FA0;color:#fff;padding:10px;border-radius:8px;font-size:0.85rem;font-weight:700;text-decoration:none;transition:background .2s;">' +
-        'D\u00e9couvrir Annette.care \u2192</a>' +
-      '<p style="font-size:0.7rem;color:#3B9FD9;margin:6px 0 0;text-align:center;">M\u00e9decins partenaires \u00b7 4.8/5 Google \u00b7 Code CARE50 : -50%</p>' +
+      '<p>Cr\u00e9e un compte gratuit pour garder l\'historique de tes \u00e9changes \u2014 et d\u00e9bloque le Coach Premium pour un suivi personnalis\u00e9 selon ton traitement.</p>' +
+      '<div class="cta-buttons">' +
+        '<a href="/mon-espace/" class="cta-btn cta-btn-primary">Compte gratuit</a>' +
+        '<a href="/tarifs/" class="cta-btn cta-btn-secondary">Voir Premium</a>' +
+      '</div>' +
       '<button class="coach-cta-dismiss" onclick="this.parentElement.remove()">Non merci</button>';
     messagesEl.appendChild(ctaDiv);
     scrollToBottom();
-
   }
 
   function showDailyLimitCTA() {
+    var loggedIn = isUserLoggedIn();
     var ctaDiv = document.createElement('div');
     ctaDiv.className = 'coach-cta-upgrade';
     ctaDiv.innerHTML =
-      '<p>Vous avez utilis\u00e9 vos messages du jour</p>' +
-      '<a href="https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_daily_limit" target="_blank" rel="noopener sponsored" class="cta-btn cta-btn-premium" style="background:#1B6FA0;">Parler \u00e0 un sp\u00e9cialiste Annette</a>' +
-      '<p class="cta-subtext">M\u00e9decins + di\u00e9t\u00e9ticiens \u2022 Code CARE50 : -50% le 1er mois</p>';
+      '<p>Tu as utilis\u00e9 tes messages gratuits du jour.</p>' +
+      '<a href="/tarifs/" class="cta-btn-premium">Passer Premium \u2014 4\u20ac/mois</a>' +
+      '<p class="cta-subtext">\u00c9changes illimit\u00e9s + coach personnalis\u00e9 selon ton traitement' +
+      (loggedIn ? '' : ' \u00b7 <a href="/mon-espace/" style="color:#92400e;text-decoration:underline;">ou cr\u00e9er un compte gratuit</a>') +
+      '</p>';
     messagesEl.appendChild(ctaDiv);
     scrollToBottom();
   }
@@ -839,7 +855,8 @@ import { supabaseConfig } from '../lib/supabase.js';
           session_id: sessionId,
           message: text,
           conversation_id: conversationId,
-          page_url: window.location.pathname
+          page_url: window.location.pathname,
+          user_id: getUserId()
         })
       });
 
