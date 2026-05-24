@@ -1,6 +1,5 @@
 ---
 import StaticLayout from '../layouts/StaticLayout.astro';
-import MutuelleCTA from '../components/MutuelleCTA.astro';
 // import NewsletterCapture from '../components/NewsletterCapture.astro';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -111,8 +110,8 @@ latestArticles = latestArticles
           <a href="/guides/quel-traitement-glp1-choisir/" style="display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;background:#fff;color:#1a3c34;padding:.6rem 1.4rem;border-radius:10px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.15);">
             Quel traitement choisir ? →
           </a>
-          <a href="#partenaires" style="display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;background:transparent;color:#fff;padding:.6rem 1.4rem;border-radius:10px;font-weight:600;font-size:.88rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .2s;">
-            Consulter un sp&eacute;cialiste ↓
+          <a href="/mon-espace/" onclick="var t=document.getElementById('coach-toggle');if(t){t.click();return false;}" style="display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;background:transparent;color:#fff;padding:.6rem 1.4rem;border-radius:10px;font-weight:600;font-size:.88rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .2s;">
+            💬 Parler au Coach GLP-1
           </a>
         </div>
         <!-- Stats row supprimé -->
@@ -473,21 +472,21 @@ latestArticles = latestArticles
     </section>
 
     <!-- ============================================ -->
-    <!-- SECTION 4 : GUIDE REMBOURSEMENT (cluster mutuelle) -->
+    <!-- SECTION 4 : COACH IA GLP-1                    -->
     <!-- ============================================ -->
-    <section id="partenaires" style="background:linear-gradient(180deg,#f8faf9 0%,#fff 100%);padding:3rem 1.5rem;border-top:1px solid #e5e7eb;">
-      <div style="max-width:780px;margin:0 auto;">
-        <div style="text-align:center;margin-bottom:1.75rem;">
-          <span style="display:inline-block;background:#E8F6FF;color:#0D4F73;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Faire baisser la facture</span>
-          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#1a3c34;margin:0 0 .5rem 0;letter-spacing:-.03em;line-height:1.15;">
-            Wegovy et Mounjaro ne sont pas remboursés.<br>Votre mutuelle, peut-être.
-          </h2>
-          <p style="color:#6b7280;margin:0;font-size:.95rem;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.55;">
-            On a compilé les forfaits des principales mutuelles (MGEN, Harmonie, Apicil, Alan, Acheel) et la démarche pour les faire valider en 2026.
-          </p>
-        </div>
-
-        <MutuelleCTA context="homepage_banner" />
+    <section id="coach" style="background:linear-gradient(180deg,#f0fdf4 0%,#fff 100%);padding:3rem 1.5rem;border-top:1px solid #e5e7eb;">
+      <div style="max-width:780px;margin:0 auto;text-align:center;">
+        <span style="display:inline-block;background:#dcfce7;color:#166534;padding:.3rem .9rem;border-radius:999px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:.8rem;">Coach IA GLP-1</span>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#1a3c34;margin:0 0 .5rem 0;letter-spacing:-.03em;line-height:1.15;">
+          Une question sur ton traitement ?<br>Le Coach GLP-1 te répond.
+        </h2>
+        <p style="color:#6b7280;margin:0 auto 1.6rem;font-size:.95rem;max-width:560px;line-height:1.55;">
+          Prix, remboursement, effets secondaires, alimentation, perte de poids… Pose ta question et obtiens une réponse claire et sourcée. Avec le Coach Premium, un suivi personnalisé selon ton traitement, ton objectif et ta progression.
+        </p>
+        <button type="button" onclick="var t=document.getElementById('coach-toggle');if(t){t.click();}else{window.location.href='/mon-espace/';}" style="display:inline-flex;align-items:center;gap:.5rem;background:#16a34a;color:#fff;padding:.85rem 1.8rem;border:none;border-radius:12px;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 6px 18px rgba(22,163,74,.3);">
+          💬 Parler au Coach GLP-1
+        </button>
+        <p style="color:#9ca3af;margin:.85rem 0 0;font-size:.78rem;">Gratuit · réponses sourcées (ANSM, HAS, Vidal) · ne remplace pas un avis médical</p>
       </div>
     </section>
 
@@ -538,7 +537,7 @@ latestArticles = latestArticles
                 <div style="width:22px;height:22px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                   <svg width="12" height="12" fill="none" stroke="#166534" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </div>
-                <span style="font-size:.9rem;color:#374151;"><strong>Partenaires certifiés</strong> — Médecins et accompagnement spécialisé</span>
+                <span style="font-size:.9rem;color:#374151;"><strong>Coach IA GLP-1</strong> — réponses personnalisées selon ton traitement</span>
               </div>
             </div>
             <a href="/guides/qu-est-ce-que-glp1/" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.6rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;">
@@ -633,8 +632,8 @@ latestArticles = latestArticles
           <a href="/collections/effets-secondaires-glp1/" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#1a3c34;color:#fff;font-weight:700;font-size:.9rem;border-radius:10px;text-decoration:none;transition:all .2s;box-shadow:0 4px 15px rgba(26,60,52,.2);">
             Guide complet des effets secondaires →
           </a>
-          <a href="#partenaires" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#f0fdf4;color:#166534;font-weight:600;font-size:.9rem;border-radius:10px;border:1.5px solid #bbf7d0;text-decoration:none;transition:all .2s;">
-            Consulter un spécialiste →
+          <a href="/mon-espace/" onclick="var t=document.getElementById('coach-toggle');if(t){t.click();return false;}" style="display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.4rem;background:#f0fdf4;color:#166534;font-weight:600;font-size:.9rem;border-radius:10px;border:1.5px solid #bbf7d0;text-decoration:none;transition:all .2s;">
+            💬 Demander au Coach GLP-1 →
           </a>
         </div>
       </div>
@@ -788,12 +787,12 @@ latestArticles = latestArticles
             </details>
           </div>
 
-          <!-- CTA partenaires après FAQ -->
+          <!-- CTA Coach après FAQ -->
           <div class="mt-8 text-center">
-            <p class="text-gray-500 text-sm mb-3">Prêt à passer à l'action ? Nos partenaires santé certifiés vous accompagnent.</p>
-            <a href="#partenaires" class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-sm" style="text-decoration:none;">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-              Voir nos partenaires santé
+            <p class="text-gray-500 text-sm mb-3">Une autre question ? Le Coach GLP-1 te répond gratuitement, 24/7.</p>
+            <a href="/mon-espace/" onclick="var t=document.getElementById('coach-toggle');if(t){t.click();return false;}" class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors text-sm" style="text-decoration:none;">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              Parler au Coach GLP-1
             </a>
           </div>
         </div>
