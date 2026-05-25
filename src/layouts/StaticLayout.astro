@@ -3,6 +3,7 @@ import '../styles/global.css';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import Hotjar from '../components/Hotjar.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import AiCoach from '../components/AiCoach.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
 import SinocareBanner from '../components/SinocareBanner.astro';
@@ -108,6 +109,7 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
 
   <!-- Footer -->
   <SiteFooter />
+  <AiCoach />
 
   <AffiliateTracker />
 
