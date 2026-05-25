@@ -619,6 +619,81 @@ import { supabaseConfig } from '../lib/supabase.js';
   }
 </style>
 
+<!-- Styles GLOBAUX (namespaces #ai-coach-widget) pour les elements crees dynamiquement en JS -->
+<style is:global>
+  #ai-coach-widget #coach-messages { scroll-behavior: smooth; }
+
+  /* Liens dans les reponses du coach */
+  #ai-coach-widget .coach-bubble a {
+    color: #15803d; font-weight: 600; text-decoration: underline;
+    text-decoration-color: #86efac; text-underline-offset: 2px; word-break: break-word;
+  }
+  #ai-coach-widget .coach-bubble a:hover { text-decoration-color: #15803d; }
+
+  /* Listes markdown dans les reponses */
+  #ai-coach-widget .coach-bubble .coach-list { margin: 8px 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  #ai-coach-widget .coach-bubble .coach-list li { position: relative; padding-left: 20px; line-height: 1.5; }
+  #ai-coach-widget .coach-bubble ul.coach-list li::before { content: "→"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+  #ai-coach-widget .coach-bubble ol.coach-list { counter-reset: coachc; }
+  #ai-coach-widget .coach-bubble ol.coach-list li { counter-increment: coachc; }
+  #ai-coach-widget .coach-bubble ol.coach-list li::before { content: counter(coachc) "."; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+
+  /* Bloc "En savoir plus" (sources) */
+  #ai-coach-widget .coach-sources {
+    width: 100%; box-sizing: border-box; margin-top: 10px;
+    display: flex; flex-direction: column; gap: 6px;
+    padding: 11px 12px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px;
+  }
+  #ai-coach-widget .coach-sources-label { font-size: 0.66rem; font-weight: 700; color: #15803d; text-transform: uppercase; letter-spacing: 0.05em; }
+  #ai-coach-widget .coach-sources a {
+    display: block; font-size: 0.8rem; color: #166534; text-decoration: none;
+    padding: 8px 10px; background: #fff; border: 1px solid #dcfce7; border-radius: 8px;
+    line-height: 1.35; word-break: break-word; transition: border-color .15s, transform .1s;
+  }
+  #ai-coach-widget .coach-sources a:hover { border-color: #16a34a; transform: translateX(2px); }
+  #ai-coach-widget .coach-sources a::before { content: "\1F4C4  "; }
+
+  /* Boutons feedback */
+  #ai-coach-widget .coach-feedback { display: flex; gap: 6px; margin-top: 8px; }
+  #ai-coach-widget .coach-feedback-btn {
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 4px 11px;
+    font-size: 0.82rem; cursor: pointer; color: #9ca3af; line-height: 1.4; transition: all .15s;
+  }
+  #ai-coach-widget .coach-feedback-btn:hover { border-color: #16a34a; color: #16a34a; background: #f0fdf4; }
+  #ai-coach-widget .coach-feedback-btn.selected { border-color: #16a34a; color: #16a34a; background: #f0fdf4; cursor: default; }
+  #ai-coach-widget .coach-feedback-btn:disabled { cursor: default; }
+
+  /* Compteur messages restants */
+  #ai-coach-widget #coach-daily-counter { text-align: center; font-size: 0.7rem; color: #9ca3af; padding: 4px 0; }
+
+  /* CTA inscription (compte gratuit / premium) */
+  #ai-coach-widget .coach-cta-signup {
+    background: linear-gradient(135deg,#f0fdf4,#ecfdf5); border: 1px solid #bbf7d0; border-radius: 14px;
+    padding: 14px; margin: 10px 0; animation: coachFadeIn .3s ease-out;
+  }
+  #ai-coach-widget .coach-cta-signup > p { font-size: 0.84rem; color: #15803d; margin: 0 0 10px; line-height: 1.45; font-weight: 500; }
+  #ai-coach-widget .coach-cta-signup .cta-buttons { display: flex; gap: 8px; }
+  #ai-coach-widget .coach-cta-signup .cta-btn { flex: 1; padding: 9px 10px; border-radius: 9px; font-size: 0.82rem; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; border: none; transition: all .2s; }
+  #ai-coach-widget .coach-cta-signup .cta-btn-primary { background: #16a34a; color: #fff; }
+  #ai-coach-widget .coach-cta-signup .cta-btn-primary:hover { background: #15803d; }
+  #ai-coach-widget .coach-cta-signup .cta-btn-secondary { background: #fff; color: #16a34a; border: 1px solid #bbf7d0; }
+  #ai-coach-widget .coach-cta-signup .cta-btn-secondary:hover { background: #f0fdf4; }
+  #ai-coach-widget .coach-cta-dismiss { display: block; width: 100%; text-align: center; font-size: 0.72rem; color: #9ca3af; margin-top: 8px; cursor: pointer; border: none; background: none; }
+  #ai-coach-widget .coach-cta-dismiss:hover { color: #6b7280; }
+
+  /* CTA limite quotidienne / upgrade premium */
+  #ai-coach-widget .coach-cta-upgrade {
+    background: linear-gradient(135deg,#ecfdf5,#d1fae5); border: 1px solid #6ee7b7; border-radius: 14px;
+    padding: 16px 14px; margin: 10px 0; text-align: center; animation: coachFadeIn .3s ease-out;
+  }
+  #ai-coach-widget .coach-cta-upgrade > p { font-size: 0.86rem; color: #065f46; margin: 0 0 10px; line-height: 1.45; font-weight: 500; }
+  #ai-coach-widget .coach-cta-upgrade .cta-btn-premium { display: inline-block; background: #16a34a; color: #fff; padding: 10px 22px; border-radius: 10px; font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: background .2s; }
+  #ai-coach-widget .coach-cta-upgrade .cta-btn-premium:hover { background: #15803d; }
+  #ai-coach-widget .coach-cta-upgrade .cta-subtext { font-size: 0.72rem; color: #047857; margin: 8px 0 0; }
+
+  @keyframes coachFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
 <script define:vars={{ supabaseUrl: supabaseConfig.url, supabaseAnonKey: supabaseConfig.anonKey }}>
 (function() {
   'use strict';
@@ -1037,12 +1112,11 @@ import { supabaseConfig } from '../lib/supabase.js';
     function tick() {
       if (i >= chars.length) {
         bubble.innerHTML = formatted;
-        // Add sources after typewriter
+        // Add sources + feedback dans la COLONNE de contenu (pas le conteneur flex en ligne)
         if (sources && sources.length > 0) {
-          addSources(div, sources);
+          addSources(content, sources);
         }
-        // Add feedback buttons
-        addFeedback(div, text);
+        addFeedback(content, text);
         scrollToBottom();
         return;
       }
