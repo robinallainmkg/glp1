@@ -6,8 +6,8 @@ import MutuelleSidebar from '../components/MutuelleSidebar.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import PartnerCTA from '../components/PartnerCTA.astro';
 import MutuelleCTA from '../components/MutuelleCTA.astro';
-import SinocareCTA from '../components/SinocareCTA.astro';
-import SinocareSidebar from '../components/SinocareSidebar.astro';
+import CoachCTA from '../components/CoachCTA.astro';
+import CoachSidebar from '../components/CoachSidebar.astro';
 import ArticleSchema from '../components/ArticleSchema.astro';
 import { getPartnerForArticle, oppositePartner, getSidebarOrder, isPartnerDestination } from '../lib/partnerRouter';
 
@@ -50,20 +50,18 @@ const articleContent = props.articleContent ?? article?.body ?? '';
 const availableProducts = props.availableProducts ?? props.affiliateProducts ?? [];
 const detectedCategory = props.detectedCategory ?? props.category ?? (article?.data?.collection || article?.collection) ?? null;
 
-// SINOCARE ONLY — politique 100% Sinocare confirmée par le user (12/05/2026).
-// Plus de routing partenaire (Annette/Mutuelle/Charles désactivés au niveau layout).
-// Les inserts contextuels par article sont gérés via le sprint Sinocare (sinocareSnippets.ts).
+// COACH-FIRST — monetisation via le Coach IA (abonnement). Plus aucun partenaire d'affiliation.
+// Promo du Coach sur chaque article : sidebar + CTA inline (mid-article) + CTA bas + widget flottant.
 const articleSlug = (article?.slug as string | undefined)
   ?? (article?.data?.slug as string | undefined)
   ?? (typeof Astro.url?.pathname === 'string' ? Astro.url.pathname.split('/').filter(Boolean).pop() : undefined);
 
-// On force Sinocare partout — kill switch des autres partenaires côté layout.
-const showSinocare = true;
-const showInlineMutuelle = false;
-const showInlineAnnette = false;
-const partner: 'annette' | 'mutuelle' | null = null;
-const filteredSidebarOrder: Array<'annette' | 'mutuelle'> = [];
-const safePartners = new Set<'annette' | 'mutuelle'>();
+// Contexte du message Coach selon la collection / le slug
+const _s = (articleSlug || '').toLowerCase();
+const coachContext = detectedCategory === 'effets-secondaires-glp1' ? 'effets'
+  : detectedCategory === 'glp1-cout' ? (/rembours/.test(_s) ? 'remboursement' : 'prix')
+  : detectedCategory === 'traitements-glp1' ? 'guide'
+  : 'general';
 
 const categoryIcon = props.categoryIcon ?? '💊';
 const relatedArticles = props.relatedArticles ?? [];
@@ -159,17 +157,28 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
   )}
 
   <main class="adaptive-article-layout">
-    <div class="article-wrapper">
-      <!-- Contenu principal de l'article (pleine largeur — plus de sidebar partenaire) -->
+    <div class="article-wrapper has-sidebar">
+      <!-- Contenu principal de l'article -->
       <article class="article-content">
         <div class="article-body" id="article-content">
           <slot />
         </div>
+        <!-- Template CTA Coach inline (clone insere avant le 3e H2 par le script en bas de page) -->
+        <div id="coach-cta-template" style="display:none;">
+          <CoachCTA context={coachContext} />
+        </div>
+        <!-- CTA Coach en bas d'article -->
+        <CoachCTA context="general" />
         <!-- Disclaimer médical -->
         <div class="medical-disclaimer" role="note" aria-label="Avertissement médical">
           <strong>Avertissement :</strong> Les informations présentes sur ce site sont fournies à titre informatif uniquement et ne constituent pas un avis médical. Consultez toujours un professionnel de santé qualifié avant de commencer, modifier ou arrêter un traitement. Sources : ANSM, HAS, VIDAL.
         </div>
       </article>
+
+      <!-- Sidebar : carte Coach IA (sticky desktop, sous l'article sur mobile) -->
+      <div class="partner-sidebar-stack">
+        <CoachSidebar context={coachContext} />
+      </div>
     </div>
 
     <!-- Articles connexes -->
@@ -632,7 +641,7 @@ const hideArticleHeader = props.hideArticleHeader ?? false;
     });
   }
 
-  var tpl = document.getElementById('partner-cta-template');
+  var tpl = document.getElementById('coach-cta-template');
   if (!body || !tpl) return;
 
   // Find all H2s in the article body

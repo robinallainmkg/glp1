@@ -1,0 +1,33 @@
+---
+// Carte Coach IA pour la sidebar des articles (sticky). Ouvre le widget de chat flottant.
+export interface Props { context?: string; }
+const { context = 'general' } = Astro.props;
+const titles: Record<string, string> = {
+  prix: 'Le bon prix pour ta situation ?',
+  remboursement: 'As-tu droit a un remboursement ?',
+  effets: 'Un effet secondaire te preoccupe ?',
+  guide: 'Une question sur ton traitement ?',
+  general: 'Une question sur les GLP-1 ?',
+};
+const title = titles[context] || titles.general;
+---
+<aside class="coach-sb">
+  <div class="coach-sb-badge"><span class="coach-sb-dot"></span> Coach GLP-1</div>
+  <h3 class="coach-sb-title">{title}</h3>
+  <p class="coach-sb-text">Pose ta question et obtiens une réponse claire et sourcée, en direct. Gratuit — et un suivi personnalisé avec le Coach Premium.</p>
+  <button type="button" class="coach-sb-btn" onclick="var t=document.getElementById('coach-toggle');if(t){t.click();}else{location.href='/mon-espace/';}">
+    💬 Parler au Coach
+  </button>
+  <span class="coach-sb-free">Gratuit · réponse immédiate · 24/7</span>
+</aside>
+<style>
+.coach-sb{position:sticky;top:1.5rem;width:300px;box-sizing:border-box;background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid #bbf7d0;border-radius:16px;padding:1.2rem;box-shadow:0 4px 16px rgba(22,163,74,.08);}
+.coach-sb-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:800;color:#15803d;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.6rem;}
+.coach-sb-dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 3px rgba(22,163,74,.2);}
+.coach-sb-title{margin:0 0 .5rem;font-size:1.05rem;font-weight:800;color:#0f172a;line-height:1.25;}
+.coach-sb-text{margin:0 0 .9rem;font-size:.86rem;color:#374151;line-height:1.5;}
+.coach-sb-btn{display:block;width:100%;background:#16a34a;color:#fff;border:none;border-radius:10px;padding:.7rem 1rem;font-size:.92rem;font-weight:700;cursor:pointer;transition:background .2s,transform .1s;font-family:inherit;}
+.coach-sb-btn:hover{background:#15803d;transform:translateY(-1px);}
+.coach-sb-free{display:block;text-align:center;margin-top:.55rem;font-size:.72rem;color:#6b7280;}
+@media (max-width:1024px){.coach-sb{position:static;width:100%;max-width:420px;margin:1.5rem auto 0;}}
+</style>

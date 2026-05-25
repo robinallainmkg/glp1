@@ -14,6 +14,12 @@ import { supabaseConfig } from '../lib/supabase.js';
     </svg>
   </button>
 
+  <!-- Bulle teaser (visibilite du Coach) -->
+  <div id="coach-teaser" class="coach-teaser" style="display:none;">
+    <button class="coach-teaser-close" aria-label="Fermer">&times;</button>
+    <span>👋 Une question sur ton traitement&nbsp;? <strong>Le Coach GLP-1 répond, gratuitement.</strong></span>
+  </div>
+
   <!-- Panel chat -->
   <div id="coach-panel" class="coach-hidden">
     <div id="coach-header">
@@ -96,6 +102,46 @@ import { supabaseConfig } from '../lib/supabase.js';
     transform: scale(1.08);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     background: var(--accent-green-dark, #15803D);
+  }
+
+  /* ===== BULLE TEASER ===== */
+  .coach-teaser {
+    position: absolute;
+    bottom: 74px;
+    right: 0;
+    width: 236px;
+    background: #fff;
+    border: 1px solid #bbf7d0;
+    border-radius: 14px;
+    border-bottom-right-radius: 4px;
+    padding: 12px 26px 12px 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: #1f2937;
+    cursor: pointer;
+    animation: coachTeaserIn 0.3s ease-out;
+  }
+  .coach-teaser strong { color: #15803d; }
+  .coach-teaser-close {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 2px;
+  }
+  .coach-teaser-close:hover { color: #4b5563; }
+  @keyframes coachTeaserIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 640px) {
+    .coach-teaser { width: 200px; font-size: 0.78rem; }
   }
 
   /* ===== PANEL CHAT ===== */
@@ -688,6 +734,23 @@ import { supabaseConfig } from '../lib/supabase.js';
 
   toggleBtn.addEventListener('click', togglePanel);
   closeBtn.addEventListener('click', togglePanel);
+
+  // ===== TEASER de visibilite (apparait apres 6s, 1x/session) =====
+  var teaserEl = document.getElementById('coach-teaser');
+  if (teaserEl && !localStorage.getItem('glp1_coach_teaser_dismissed')) {
+    var teaserClose = teaserEl.querySelector('.coach-teaser-close');
+    setTimeout(function() { if (!isOpen) teaserEl.style.display = 'flex'; }, 6000);
+    teaserEl.addEventListener('click', function(e) {
+      if (teaserClose && e.target === teaserClose) {
+        teaserEl.style.display = 'none';
+        localStorage.setItem('glp1_coach_teaser_dismissed', '1');
+        return;
+      }
+      teaserEl.style.display = 'none';
+      localStorage.setItem('glp1_coach_teaser_dismissed', '1');
+      if (!isOpen) togglePanel();
+    });
+  }
 
   // ===== CONTEXTUAL QUICK ACTIONS =====
   function buildQuickActions() {
