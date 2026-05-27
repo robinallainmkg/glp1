@@ -10,6 +10,7 @@ collection: "alternatives-glp1"
 thumbnail: "/images/thumbnails/cannelle-glp1-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Cannelle GLP-1"
 featured: false
+published: false
 priority: 5
 schema: "Article"
 mainKeyword: "cannelle GLP-1 diabète glycémie"

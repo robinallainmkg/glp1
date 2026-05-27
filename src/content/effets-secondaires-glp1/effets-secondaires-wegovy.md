@@ -125,7 +125,7 @@ mainKeyword: "effets secondaires Wegovy"
 
 ### Conseils pratiques
 
-**Pour les nausées** :
+**Pour les nausées** (voir notre [guide complet pour gérer les nausées sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/)) :
 - Prendre le médicament le soir
 - Manger des aliments froids
 - Éviter les odeurs fortes

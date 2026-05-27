@@ -184,7 +184,8 @@ Le choix entre Wegovy et Mounjaro depend de plusieurs facteurs individuels. Voic
 
 ### Dans tous les cas
 
-- **Consultez un spécialiste** (endocrinologue, diabetologue ou médecin nutritionniste) avant de choisir
+- **Consultez un spécialiste** (endocrinologue, diabetologue ou médecin nutritionniste) avant de choisir — ou suivez notre guide [comment démarrer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
+- **Vérifiez votre éligibilité** : [êtes-vous éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 - **Associez le traitement** a une alimentation equilibree et a une activite physique reguliere
 - **Prevoyez un suivi regulier** : consultations mensuelles les 3 premiers mois, puis tous les 3 mois
 

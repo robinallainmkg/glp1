@@ -10,6 +10,7 @@ collection: "alternatives-glp1"
 thumbnail: "/images/thumbnails/berberine-glp1-illus.jpg"
 thumbnailAlt: "Illustration pour l'article Berberine GLP-1"
 featured: false
+published: false
 priority: 5
 schema: "Article"
 mainKeyword: "berbérine GLP-1 glycémie perte de poids"

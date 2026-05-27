@@ -1,6 +1,6 @@
 ---
-title: "Nausées et Vomissements sous GLP-1 : Guide Pratique pour les Gérer"
-description: "Nausées et vomissements sous Ozempic, Wegovy ou Mounjaro ? Guide pratique : causes, durée, remèdes, alimentation et quand consulter."
+title: "Nausées sous GLP-1 : 10 Solutions pour les Gérer"
+description: "Nausées sous Ozempic, Wegovy ou Mounjaro ? 10 solutions concrètes : alimentation, remèdes, médicaments et quand consulter. Guide complet."
 pubDate: 2026-05-27
 date: "2026-05-27"
 updatedAt: 2026-05-27
@@ -9,11 +9,22 @@ category: "Effets secondaires"
 tags: ["nausées", "vomissements", "glp1", "effets secondaires", "ozempic", "wegovy", "mounjaro", "gestion", "conseils"]
 collection: "effets-secondaires-glp1"
 thumbnail: "/images/thumbnails/effets-secondaires-digestifs.jpg"
-thumbnailAlt: "Nausées vomissements GLP-1 guide pratique gestion conseils"
+thumbnailAlt: "Femme gérant les nausées liées au traitement GLP-1 avec des remèdes naturels"
 featured: true
 published: true
 priority: 1
 schema: "Article"
+faqSchema:
+  - question: "Les nausées sous GLP-1 finissent-elles par disparaître ?"
+    answer: "Oui. 80 à 90 % des patients voient leurs nausées diminuer significativement après 4 à 8 semaines de traitement. Le corps s'adapte progressivement au médicament."
+  - question: "Faut-il arrêter le traitement si les nausées sont trop fortes ?"
+    answer: "Non, n'arrêtez jamais sans avis médical. Votre médecin peut prolonger le palier de dose, revenir au palier précédent ou prescrire un anti-nauséeux adapté."
+  - question: "Les nausées sont-elles plus fortes avec Wegovy qu'avec Ozempic ?"
+    answer: "Oui, statistiquement. Wegovy utilise le sémaglutide à dose plus élevée (2,4 mg contre 1 mg max pour Ozempic), avec des taux de nausées de 44 % contre 20 %."
+  - question: "Peut-on prendre un anti-vomitif en vente libre ?"
+    answer: "Les anti-vomitifs à base de métopimazine (Vogalène) sont parfois utilisés ponctuellement, mais consultez votre médecin avant toute prise car certains interagissent avec les GLP-1."
+  - question: "Les nausées signifient-elles que le traitement fonctionne ?"
+    answer: "Pas nécessairement. De nombreux patients obtiennent d'excellents résultats de perte de poids sans nausées significatives. L'absence de nausées ne signifie pas que le traitement est inefficace."
 mainKeyword: "nausées vomissements GLP-1 guide pratique"
 secondaryKeywords: ["nausée ozempic combien de temps", "vomissement wegovy que faire", "anti-nausée mounjaro", "effets digestifs glp1 durée", "alimentation nausées ozempic"]
 enableAffiliation: true

@@ -96,6 +96,8 @@ Wegovy s'administre une fois par semaine, à la même heure chaque semaine. L'[e
 
 ## Comment commencer le traitement Wegovy ?
 
+Avant de démarrer, vérifiez si vous remplissez les [critères d'éligibilité au traitement GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) et consultez notre guide pour [commencer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
+
 ### Étape 1 : Consultation initiale et évaluation
 **Bilan préalable obligatoire** :
 - Consultation chez votre médecin traitant ou endocrinologue

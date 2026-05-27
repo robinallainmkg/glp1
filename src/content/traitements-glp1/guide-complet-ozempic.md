@@ -97,6 +97,8 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 
 ## Comment commencer le traitement Ozempic ?
 
+Pour un parcours détaillé applicable à tous les GLP-1, consultez notre guide [comment commencer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
+
 ### Étape 1 : Consultation initiale
 **Bilan préalable obligatoire** :
 - Consultation chez votre médecin traitant ou endocrinologue
@@ -114,7 +116,7 @@ Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 ### Étape 3 : Période d'adaptation (4-8 semaines)
 **Augmentation progressive** :
 - Semaine 5-8 : Passage à 0,5 mg
-- Surveillance des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et des [dangers et risques d'Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
+- Surveillance des [effets secondaires Ozempic](/collections/effets-secondaires-glp1/effets-secondaires-ozempic/) et des [dangers et risques d'Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/) — pour [gérer les nausées et vomissements](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/), consultez notre guide pratique
 - Ajustement selon tolérance
 - Premiers signes d'efficacité
 

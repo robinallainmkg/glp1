@@ -122,7 +122,7 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 
 ### Conseils pratiques
 
-**Pour les nausées** :
+**Pour les nausées** (voir notre [guide pratique nausées et vomissements sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/)) :
 - Prendre le médicament le soir
 - Manger des aliments froids
 - Éviter les odeurs fortes
@@ -161,10 +161,10 @@ La [pancréatite sous GLP-1](/collections/effets-secondaires-glp1/glp1-pancreati
 
 | Traitement | Nausées | Diarrhée | Maux tête | Tolérance générale |
 |------------|---------|----------|-----------|-------------------|
-| Ozempic | 20-30% | 10-15% | 10-12% | Bonne |
-| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 25-35% | 12-18% | 8-10% | Moyenne |
-| [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | 15-25% | 8-12% | 5-8% | Très bonne |
-| Trulicity | 10-20% | 5-10% | 3-5% | Excellente |
+| Ozempic | ~24% | 10-15% | 10-12% | Bonne |
+| [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | ~44% | 12-18% | 8-10% | Modérée (début) |
+| [Saxenda (liraglutide)](/collections/traitements-glp1/guide-complet-saxenda/) | ~39% | ~20% | ~14% | Modérée |
+| Trulicity | 10-20% | 5-10% | 3-5% | Bonne |
 
 Si vous souhaitez comparer avec un autre traitement de la même famille, consultez notre guide sur les [effets secondaires de Mounjaro (tirzepatide)](/collections/effets-secondaires-glp1/effets-secondaires-mounjaro/) ou les [effets secondaires de Rybelsus (sémaglutide oral)](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/). Pour connaître le coût du traitement, retrouvez le [prix Ozempic en France](/collections/glp1-cout/prix-ozempic-france/) avec le détail du remboursement Sécurité Sociale.
 
@@ -237,7 +237,7 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) présente un profil de tolérance favorable** malgré des effets secondaires fréquents mais généralement temporaires.
 
 ### Points clés :
-- **Effets fréquents** : Nausées, diarrhée (80-90% des patients)
+- **Effets fréquents** : Nausées (~24%), diarrhée (~15%) — transitoires dans la majorité des cas
 - **Effets graves** : Rares (<1%)
 - **Gestion possible** : Stratégies efficaces disponibles
 - **Suivi médical** : Essentiel pour sécurité

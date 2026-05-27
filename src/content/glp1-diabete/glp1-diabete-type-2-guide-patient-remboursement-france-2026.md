@@ -76,7 +76,7 @@ Les GLP-1 existent dans deux grandes catégories selon leur indication :
 
 | Médicament | Molécule | Indication | Remboursement (mars 2026) |
 |------------|----------|------------|--------------------------|
-| **Ozempic** | Sémaglutide 0,5/1/2 mg | Diabète type 2 | Oui, 30% (avec formulaire) |
+| **Ozempic** | Sémaglutide 0,5/1/2 mg | Diabète type 2 | Oui, 65% (avec formulaire ; 100% en ALD) |
 | **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Dulaglutide | Diabète type 2 | Oui, 65% |
 | **[Victoza](/collections/traitements-glp1/guide-complet-victoza/)*** | Liraglutide 1,2/1,8 mg | Diabète type 2 | Oui, 65% |
 | **<a href="/collections/traitements-glp1/guide-complet-rybelsus/">Rybelsus</a>** | Sémaglutide oral | Diabète type 2 | Non |
@@ -96,7 +96,7 @@ Mounjaro (tirzepatide) dispose de son côté d'une AMM à la fois pour le diabè
 
 ## Les GLP-1 remboursés pour le diabète de type 2 en France {#remboursement}
 
-### Ozempic (sémaglutide) — remboursé à 30%
+### Ozempic (sémaglutide) — remboursé à 65%
 
 [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) est l'un des médicaments les plus prescrits dans le diabète de type 2 en France. Il se présente sous forme d'injection hebdomadaire.
 
@@ -107,9 +107,10 @@ Mounjaro (tirzepatide) dispose de son côté d'une AMM à la fois pour le diabè
 - Depuis février 2025 : formulaire obligatoire de prescription
 
 **Prix remboursé** (voir le détail sur le [prix d'Ozempic en France](/collections/glp1-cout/prix-ozempic-france/)/) :
-- Prix de vente officiel : 77,60 € TTC/stylo (1 stylo = 4 injections hebdomadaires, soit 1 mois de traitement à dose stabilisée)
-- Remboursement Sécurité Sociale : 30% = environ 23,28 €
-- Reste à charge sans complémentaire : environ 54,32 €/mois
+- Prix de vente officiel : ~80,18 € TTC/stylo (1 stylo = 4 injections hebdomadaires, soit 1 mois de traitement à dose stabilisée)
+- Remboursement Sécurité Sociale : 65% = environ 52,12 €
+- Reste à charge sans complémentaire : environ 28,06 €/mois
+- En ALD (diabète) : prise en charge à 100%, pas de reste à charge
 - Avec une mutuelle couvrant le ticket modérateur : faible reste à charge
 
 **Pour plus de détails sur le remboursement**, consultez notre [guide complet remboursement Ozempic](/collections/glp1-cout/remboursement-ozempic-diabete-justificatif-prescription-guide-2026/).

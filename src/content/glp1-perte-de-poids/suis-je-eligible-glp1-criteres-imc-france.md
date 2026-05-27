@@ -1,6 +1,6 @@
 ---
-title: "Suis-je Éligible à un Traitement GLP-1 ? Critères IMC et Auto-Évaluation"
-description: "Êtes-vous éligible à un traitement GLP-1 (Ozempic, Wegovy, Mounjaro) ? Critères IMC, comorbidités, contre-indications. Auto-évaluation gratuite."
+title: "Éligibilité GLP-1 : Critères IMC et Auto-Évaluation"
+description: "Êtes-vous éligible au GLP-1 (Ozempic, Wegovy, Mounjaro) ? Critères IMC, comorbidités, contre-indications. Faites votre auto-évaluation."
 pubDate: 2026-05-27
 date: "2026-05-27"
 updatedAt: 2026-05-27
@@ -9,11 +9,22 @@ category: "Perte de poids"
 tags: ["éligibilité", "glp1", "imc", "critères", "obésité", "surpoids", "auto-évaluation", "france"]
 collection: "glp1-perte-de-poids"
 thumbnail: "/images/thumbnails/balance-imc.jpg"
-thumbnailAlt: "Éligibilité traitement GLP-1 critères IMC auto-évaluation France"
+thumbnailAlt: "Balance et mesure IMC pour vérifier l'éligibilité au traitement GLP-1"
 featured: true
 published: true
 priority: 1
 schema: "Article"
+faqSchema:
+  - question: "Peut-on prendre un GLP-1 pour perdre seulement 5 kg ?"
+    answer: "Non. Les traitements GLP-1 sont réservés aux patients en obésité (IMC ≥ 30) ou en surpoids significatif avec comorbidités (IMC ≥ 27). Pour quelques kilos de confort, des mesures hygiéno-diététiques sont recommandées."
+  - question: "Faut-il être diabétique pour avoir un GLP-1 ?"
+    answer: "Non. Wegovy et Saxenda ont une AMM spécifique pour l'obésité, indépendamment du statut diabétique. Ozempic et Trulicity sont officiellement indiqués uniquement pour le diabète de type 2."
+  - question: "Mon médecin généraliste peut-il prescrire un GLP-1 ?"
+    answer: "Oui, dans la plupart des cas. Pour les formes sévères d'obésité ou en présence de comorbidités complexes, il peut vous orienter vers un endocrinologue."
+  - question: "Les GLP-1 sont-ils remboursés en France ?"
+    answer: "Seuls les GLP-1 prescrits pour le diabète de type 2 bénéficient d'un remboursement partiel (30 %). Wegovy, Saxenda et Mounjaro pour la perte de poids ne sont pas remboursés."
+  - question: "Combien de temps dure un traitement GLP-1 ?"
+    answer: "Il n'y a pas de durée fixe. Le traitement est poursuivi tant que le bénéfice clinique est maintenu. L'arrêt s'accompagne fréquemment d'une reprise de poids."
 mainKeyword: "éligible traitement GLP-1 critères IMC"
 secondaryKeywords: ["qui peut prendre ozempic", "critères wegovy france", "imc minimum glp1", "éligibilité mounjaro", "conditions prescription glp1"]
 enableAffiliation: true

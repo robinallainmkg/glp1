@@ -103,8 +103,8 @@ Si vous êtes diabétique de type 2 et traité par un GLP-1 comme [Ozempic](/col
 
 Si vous souffrez d'obésité et souhaitez un traitement GLP-1 :
 
-- Vous pouvez désormais consulter votre médecin traitant directement, sans passer par un spécialiste
-- Votre médecin évaluera votre éligibilité (IMC, comorbidités, traitements antérieurs)
+- Vous pouvez désormais consulter votre médecin traitant directement, sans passer par un spécialiste — découvrez le [parcours complet pour commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/)
+- Votre médecin évaluera votre éligibilité (IMC, comorbidités, traitements antérieurs) — [vérifiez vos critères d'éligibilité GLP-1](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
 - Les traitements approuvés pour l'obésité sont Wegovy et Mounjaro
 - **Attention** : Wegovy et Mounjaro ne sont pas encore remboursés en France (mars 2026). Le coût reste à la charge du patient ou de sa mutuelle. Consultez nos guides sur le [prix Wegovy](/collections/glp1-cout/prix-wegovy-france/) et le [prix Mounjaro](/collections/glp1-cout/prix-mounjaro-france/)
 

@@ -120,6 +120,8 @@ Pour optimiser les résultats, certains compléments alimentaires peuvent être 
 
 ### Variables Prédictives de Succès
 
+Pour savoir si vous êtes un bon candidat, consultez notre page [êtes-vous éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
+
 **Facteurs favorables :**
 - **IMC initial 32-45 kg/m²** (zone optimale)
 - **Âge 25-55 ans** (métabolisme actif)

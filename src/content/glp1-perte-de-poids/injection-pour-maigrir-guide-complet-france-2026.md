@@ -193,6 +193,8 @@ Les injections pour maigrir ne sont pas destinees a toute personne souhaitant pe
 
 ### Criteres d'eligibilite
 
+Pour savoir si un traitement injectable vous concerne, consultez notre page [suis-je éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/)
+
 - **IMC supérieur ou égal a 30** (obésité) : les injections peuvent etre prescrites directement après evaluation medicale.
 - **IMC supérieur ou égal a 27** (surpoids) : la prescription est possible en presence d'au moins une **comorbidité liée au poids** : diabète de type 2, hypertension artérielle, dyslipidemie, syndrome d'apnee du sommeil, steatose hepatique non alcoolique, ou arthrose invalidante.
 - **Echec prealable** : le patient doit avoir tente des mesures hygieno-dietetiques (régime alimentaire structure et activite physique) pendant au moins **6 mois** sans résultat suffisant.
@@ -235,7 +237,7 @@ Comme tout médicament, les injections GLP-1 peuvent provoquer des effets second
 
 ### Effets secondaires fréquents (premiers jours a premieres semaines)
 
-- **Nausees** : L'effet secondaire le plus courant, rapporte par **20 a 45 % des patients selon la molécule et le dosage** en debut de traitement. Les nausées sont generalement legeres et disparaissent progressivement en 2 a 4 semaines a mesure que l'organisme s'adapte.
+- **Nausees** : L'effet secondaire le plus courant, rapporte par **20 a 45 % des patients selon la molécule et le dosage** en debut de traitement. Les nausées sont generalement legeres et disparaissent progressivement en 2 a 4 semaines a mesure que l'organisme s'adapte. Pour des solutions concretes, lisez notre [guide pratique nausées et vomissements sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/).
 - **Diarrhee ou constipation** : Des troubles du transit sont fréquents au debut du traitement. Ils se normalisent dans la majorite des cas.
 - **Douleurs abdominales** : Des crampes ou un inconfort abdominal peuvent survenir, en particulier lors des augmentations de dose.
 - **Maux de tete** et **fatigue** : Des symptomes generaux transitoires sont parfois rapportes.

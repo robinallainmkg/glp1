@@ -1,5 +1,6 @@
 ---
 import ArticleWithAffiliateSidebar from '../../../layouts/ArticleWithAffiliateSidebar.astro';
+import FAQSchema from '../../../components/FAQSchema.astro';
 import { getCollection } from 'astro:content';
 import { getRecommendedProducts } from '../../../lib/affiliate';
 
@@ -22,6 +23,9 @@ const collectionName = "glp1-perte-de-poids";
 // Récupérer les produits d'affiliation recommandés
 const affiliateProducts = await getRecommendedProducts(content, collectionName, 3);
 
+// FAQ Schema data from frontmatter
+const faqItems = entryAny.data.faqSchema || [];
+
 // Tina props removed (not used in production)
 ---
 
@@ -39,5 +43,6 @@ const affiliateProducts = await getRecommendedProducts(content, collectionName, 
     injectionStrategy: 'auto'
   }}
  image="/images/thumbnails/glp1-perte-de-poids.jpg">
+  {faqItems.length > 0 && <FAQSchema items={faqItems} />}
   <Content />
 </ArticleWithAffiliateSidebar>

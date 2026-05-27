@@ -219,7 +219,7 @@ Depuis **juin 2025**, les regles de prescription des medicaments GLP-1 pour l'ob
 
 ### Conditions de prescription
 
-Pour beneficier d'un médicament pour maigrir, vous devez remplir l'une des conditions suivantes :
+Pour vérifier votre éligibilité, consultez notre page [suis-je éligible à un traitement GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) Pour beneficier d'un médicament pour maigrir, vous devez remplir l'une des conditions suivantes :
 
 - **IMC supérieur ou égal a 30** (obésité) : prescription possible sans condition supplémentaire
 - **IMC supérieur ou égal a 27** (surpoids) : prescription possible si vous presentez au moins une comorbidité associee (diabète de type 2, hypertension artérielle, dyslipidemie, apnee du sommeil, steatose hepatique)
@@ -260,7 +260,7 @@ Comme tout médicament, les GLP-1 peuvent provoquer des effets secondaires. La b
 
 ### Effets secondaires fréquents (touches 20 a 45 % des patients selon la molécule)
 
-- **Nausees** : l'effet le plus courant, surtout en debut de traitement et lors des augmentations de dose. Elles diminuent generalement en 4 a 6 semaines.
+- **Nausees** : l'effet le plus courant, surtout en debut de traitement et lors des augmentations de dose. Elles diminuent generalement en 4 a 6 semaines — consultez notre [guide pratique pour gérer les nausées sous GLP-1](/collections/effets-secondaires-glp1/nausees-vomissements-glp1-guide-pratique/).
 - **Diarrhee ou constipation** : troubles du transit fréquents pendant la phase d'adaptation.
 - **Douleurs abdominales** : crampes et ballonnements, habituellement transitoires.
 - **Diminution de l'appétit** : c'est l'effet recherche, mais il peut etre tres marque chez certains patients.

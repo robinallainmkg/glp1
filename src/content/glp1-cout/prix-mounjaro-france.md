@@ -185,7 +185,7 @@ Le positionnement tarifaire de Mounjaro au sein des traitements de la famille GL
   </div>
 </div>
 
-Seul Ozempic bénéficie d'un remboursement à 30% par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
+Seul Ozempic bénéficie d'un remboursement à 65% (bithérapie metformine) par la Sécurité Sociale, et uniquement dans l'indication diabète de type 2. Pour les traitements de l'obésité (Mounjaro, Wegovy, Saxenda), le coût est intégralement à la charge du patient en mars 2026.
 
 ## Statut de Remboursement (Mars 2026) {#remboursement}
 

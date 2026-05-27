@@ -241,6 +241,9 @@ Mounjaro est indiqué dans le traitement du diabète de type 2 chez l'adulte, en
 Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obésité :
 
 ### Critères d'éligibilité
+
+Pour savoir si vous pouvez bénéficier de Mounjaro, consultez notre page [êtes-vous éligible à un traitement GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) Les critères principaux sont :
+
 - **IMC ≥ 30 kg/m²** (obésité)
 - **IMC ≥ 27 kg/m²** avec comorbidité (HTA, diabète, dyslipidémie)
 - **Échec des mesures hygiéno-diététiques**
@@ -330,6 +333,8 @@ Depuis 2023, Mounjaro est également indiqué pour la prise en charge de l'obés
 - **Stylo prérempli** : utilisation simple et intuitive
 
 ## Comment commencer le traitement Mounjaro ?
+
+Pour un parcours complet étape par étape, consultez notre guide [comment démarrer un traitement GLP-1 en France](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/).
 
 ### Consultation initiale
 - **Bilan sanguin** : glycémie, HbA1c, bilan hépatique

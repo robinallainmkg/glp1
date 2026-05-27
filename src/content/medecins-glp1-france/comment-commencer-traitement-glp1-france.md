@@ -1,6 +1,6 @@
 ---
-title: "Comment Commencer un Traitement GLP-1 en France : Guide Étape par Étape"
-description: "Comment commencer un traitement GLP-1 en France en 2026 : critères d'éligibilité, médecin à consulter, prescription, pharmacie et suivi. Parcours complet."
+title: "Commencer un Traitement GLP-1 en France : Guide 2026"
+description: "Comment commencer un traitement GLP-1 en France ? Éligibilité, médecin, prescription, pharmacie et suivi. Parcours complet en 7 étapes."
 pubDate: 2026-05-27
 date: "2026-05-27"
 updatedAt: 2026-05-27
@@ -9,11 +9,22 @@ category: "Médecins spécialisés"
 tags: ["glp1", "prescription", "parcours", "france", "médecin", "traitement", "commencer", "2026"]
 collection: "medecins-glp1-france"
 thumbnail: "/images/thumbnails/consultation-medecin.jpg"
-thumbnailAlt: "Comment commencer un traitement GLP-1 en France parcours médical"
+thumbnailAlt: "Consultation médicale pour démarrer un traitement GLP-1 en France"
 featured: true
 published: true
 priority: 1
 schema: "Article"
+faqSchema:
+  - question: "Faut-il obligatoirement passer par un spécialiste pour obtenir un GLP-1 ?"
+    answer: "Non. Depuis juin 2025, votre médecin généraliste peut prescrire les GLP-1 pour l'obésité. L'orientation vers un endocrinologue n'est nécessaire que dans les situations complexes."
+  - question: "Combien coûte un traitement GLP-1 non remboursé ?"
+    answer: "Pour Wegovy et Mounjaro (indication obésité), comptez entre 200 et 350 euros par mois en pharmacie. Certaines mutuelles proposent des prises en charge partielles."
+  - question: "Peut-on se faire prescrire un GLP-1 en téléconsultation ?"
+    answer: "Oui, la télémédecine est une voie d'accès reconnue pour la prescription des GLP-1 en France, à condition que le médecin dispose de vos examens biologiques récents."
+  - question: "Les GLP-1 sont-ils dangereux ?"
+    answer: "Les agonistes GLP-1 sont prescrits depuis plus de 15 ans. Leur profil de sécurité est bien documenté. Les effets secondaires les plus courants sont digestifs et généralement transitoires."
+  - question: "Que se passe-t-il si j'oublie une injection ?"
+    answer: "S'il reste plus de 48 heures avant la prochaine dose, faites-la dès que possible. S'il reste moins de 48 heures, sautez la dose oubliée. Ne doublez jamais la dose."
 mainKeyword: "comment commencer traitement GLP-1 France"
 secondaryKeywords: ["parcours prescription glp1", "premier rendez-vous glp1", "médecin glp1 france", "obtenir ozempic wegovy", "démarches traitement obésité"]
 enableAffiliation: true

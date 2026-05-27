@@ -53,7 +53,7 @@ Jusqu'en 2025, la prescription d'Ozempic et des autres agonistes GLP-1 pour la p
 
 **Depuis juin 2025, l'ANSM a assoupli les regles de prescription.** Desormais, tout médecin peut prescrire un traitement GLP-1, y compris les médecins généralistes, sous certaines conditions :
 
-- **Criteres d'eligibilite du patient** : IMC supérieur ou égal a 30 kg/m2, ou IMC supérieur ou égal a 27 kg/m2 avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnee du sommeil, dyslipidemia).
+- **Criteres d'eligibilite du patient** : IMC supérieur ou égal a 30 kg/m2, ou IMC supérieur ou égal a 27 kg/m2 avec au moins une comorbidité liée au poids (diabète de type 2, hypertension, apnee du sommeil, dyslipidemia). Consultez notre page [êtes-vous éligible à un GLP-1 ?](/collections/glp1-perte-de-poids/suis-je-eligible-glp1-criteres-imc-france/) pour une évaluation détaillée.
 - **Suivi regulier recommandé** : un suivi regulier est recommandé pendant la premiere annee de traitement, idealement tous les 3 mois.
 - **Prescription initiale limitee** : la premiere ordonnance est valable 3 mois maximum, renouvelable après reevaluation clinique.
 
