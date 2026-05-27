@@ -6,6 +6,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import AiCoach from '../components/AiCoach.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
+import PlatformTracker from '../components/PlatformTracker.astro';
 import SinocareBanner from '../components/SinocareBanner.astro';
 
 export interface Props {
@@ -112,6 +113,7 @@ const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).hr
   <AiCoach />
 
   <AffiliateTracker />
+  <PlatformTracker />
 
   <!-- JavaScript pour la navigation -->
   <script is:inline>

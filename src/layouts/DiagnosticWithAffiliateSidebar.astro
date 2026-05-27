@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AiCoach from '../components/AiCoach.astro';
+import PlatformTracker from '../components/PlatformTracker.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
 
 export async function getStaticPaths() {
@@ -88,6 +89,7 @@ import { generateAffiliateLink } from '../utils/affiliateLinks';
 
   <SiteFooter />
   <AiCoach />
+  <PlatformTracker />
 </body>
 </html>
 

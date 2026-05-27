@@ -7,6 +7,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AiCoach from '../components/AiCoach.astro';
 import AffiliateTracker from '../components/AffiliateTracker.astro';
+import PlatformTracker from '../components/PlatformTracker.astro';
 import SinocareBanner from '../components/SinocareBanner.astro';
 import { getAllAffiliateProducts } from '../lib/affiliate';
 
@@ -197,6 +198,7 @@ if (detectedCategory && categoryIcons[detectedCategory]) {
   <SiteFooter />
   <AiCoach />
   <AffiliateTracker />
+  <PlatformTracker />
 
   <!-- SiteHeader gère son propre JS/CSS -->
 
