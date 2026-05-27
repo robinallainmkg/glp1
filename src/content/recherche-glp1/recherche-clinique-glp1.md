@@ -1,5 +1,6 @@
 ---
 title: "Recherche Clinique GLP-1 : Essais Cliniques en France"
+published: false
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Sophie Dubois"

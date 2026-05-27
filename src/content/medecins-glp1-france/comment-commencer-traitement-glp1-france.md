@@ -192,9 +192,9 @@ La situation du remboursement des GLP-1 en France en 2026 est la suivante :
 
 | Médicament | Remboursement Sécurité sociale |
 |------------|-------------------------------|
-| **Ozempic** | Remboursé à 30 % (base LPPR) — **uniquement pour le diabète de type 2** |
-| **Trulicity** | Remboursé à 30 % — uniquement DT2 |
-| **Rybelsus** | Remboursé à 30 % — uniquement DT2 |
+| **Ozempic** | Remboursé à 65 % en bithérapie metformine (100 % en ALD) — **uniquement pour le diabète de type 2** |
+| **Trulicity** | Remboursé à 65 % — uniquement DT2 |
+| **Rybelsus** | **Non remboursé** (avis HAS défavorable) |
 | **Wegovy** | **Non remboursé** (indication obésité) |
 | **Mounjaro** | **Non remboursé** pour l'obésité ; prise en charge possible si DT2 |
 | **Saxenda** | **Non remboursé** |

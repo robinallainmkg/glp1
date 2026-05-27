@@ -148,7 +148,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 ### 4. Votre tolérance budgétaire
 
 #### Budget limité (remboursés SS pour DT2) :
-- Ozempic (~76,58€/stylo, remboursé 30% DT2)
+- Ozempic (~80,18€/stylo, remboursé 65% DT2 en bithérapie metformine)
 - Victoza (~60€/mois, remboursé 65% DT2)
 - Trulicity (~81€/mois, remboursé 65% DT2)
 - Rybelsus (80-110€/mois, non remboursé)

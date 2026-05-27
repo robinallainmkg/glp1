@@ -107,7 +107,7 @@ Le régime DASH, naturellement peu gras et bien structuré en petits repas, conv
 
 ### Ozempic (sémaglutide)
 - Prix par stylo : ~76,58 €
-- Remboursement Sécu : **30%** pour le diabète de type 2
+- Remboursement Sécu : **65%** en bithérapie metformine pour le diabète de type 2
 - **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas une ALD en France en mars 2026.
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)

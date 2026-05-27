@@ -162,7 +162,7 @@ Non, Rybelsus doit être pris à jeun, 30 minutes avant le premier repas, et il 
 Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'effets gastro-intestinaux.
 
 ### Rybelsus est-il remboursé ?
-Rybelsus **n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie en France. La Haute Autorité de Santé (HAS) a rendu un avis défavorable au remboursement, considérant que Rybelsus n'a pas de place démontrée dans la stratégie thérapeutique du diabète de type 2. Pour le détail du [prix de Rybelsus en France](/collections/glp1-cout/prix-rybelsus-france/), le coût est intégralement à la charge du patient, soit environ 80 à 110 €/mois selon le dosage. Contrairement à Ozempic, Trulicity et Victoza qui sont remboursés à 30 % (65 % en ALD diabète) pour le diabète de type 2, Rybelsus ne bénéficie d'aucun remboursement.
+Rybelsus **n'est pas [remboursé](/collections/glp1-cout/remboursement-glp1-2026/)** par l'Assurance Maladie en France. La Haute Autorité de Santé (HAS) a rendu un avis défavorable au remboursement, considérant que Rybelsus n'a pas de place démontrée dans la stratégie thérapeutique du diabète de type 2. Pour le détail du [prix de Rybelsus en France](/collections/glp1-cout/prix-rybelsus-france/), le coût est intégralement à la charge du patient, soit environ 80 à 110 €/mois selon le dosage. Contrairement à Ozempic, Trulicity et Victoza qui sont remboursés à 65 % (100 % en ALD diabète) pour le diabète de type 2, Rybelsus ne bénéficie d'aucun remboursement.
 
 ### Puis-je arrêter Rybelsus brutalement ?
 Non, l'arrêt doit être progressif sous surveillance médicale.

@@ -282,7 +282,7 @@ La question du cout est omnipresente dans les avis patients. Elle constitue souv
 
 ### Situation actuelle du remboursement
 
-- **Patients diabetiques de type 2** : Ozempic est rembourse a **30 % par la Sécurité sociale** (taux en vigueur depuis decembre 2021), avec une prise en charge complémentaire par la mutuelle. Les patients en **ALD (Affection Longue Duree)** beneficient d'un remboursement a **100 %**. Pour les autres, le reste a charge depend de la couverture mutuelle.
+- **Patients diabetiques de type 2** : Ozempic est rembourse a **65 % par la Sécurité sociale** en bithérapie metformine, avec une prise en charge complémentaire par la mutuelle. Les patients en **ALD (Affection Longue Duree)** beneficient d'un remboursement a **100 %**. Pour les autres, le reste a charge depend de la couverture mutuelle.
 - **Patients en surpoids/obésité (hors diabète)** : Ozempic est prescrit hors AMM et **n'est pas rembourse**. Le cout mensuel se situe entre **80 et 130 euros** selon le dosage et la pharmacie.
 
 ### Ce que disent les patients

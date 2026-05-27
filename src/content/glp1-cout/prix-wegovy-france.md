@@ -348,11 +348,11 @@ Le coût mensuel de Wegovy est **intégralement à la charge du patient** car il
 
 **Ozempic (sémaglutide 2 mg - diabète) :**
 - Prix pharmacie : **~77,60 €/stylo (TTC)**
-- Remboursement : **30%** (diabète de type 2 uniquement)
+- Remboursement : **65%** en bithérapie metformine (diabète de type 2 uniquement)
 - Dosage maximal : 2 mg/semaine
 - Perte de poids moyenne : **-12 à -15%**
 
-**Verdict : Ozempic est beaucoup moins cher** car remboursé à 30% pour le diabète de type 2, contre aucun remboursement pour Wegovy.
+**Verdict : Ozempic est beaucoup moins cher** car remboursé à 65% en bithérapie metformine pour le diabète de type 2, contre aucun remboursement pour Wegovy.
 
 Mais :
 - **Ozempic** est remboursé **uniquement** pour le diabète de type 2 (pas pour la perte de poids seule)

@@ -142,12 +142,12 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 | Médicament | Prix Public/mois | Remboursement SS | Prix Final/mois |
 |------------|------------------|------------------|-----------------|
-| **Ozempic** | ~76,58€/stylo | 30% DT2 | ~54€ (DT2) |
+| **Ozempic** | ~80,18€/stylo | 65% DT2 (bithérapie) | ~28€ (DT2) |
 | **Wegovy** | 169-360€ | Non remboursé | 169-360€ (à charge) |
 | **Saxenda** | 240-300€ | Non remboursé | 240-300€ (à charge) |
-| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 30% DT2 | ~57€ (DT2) |
-| **Victoza** | ~60,26€ | 30% DT2 | ~42€ (DT2) |
-| **Rybelsus** | 80-110€ | 30% DT2 | 56-77€ (DT2) |
+| **[Trulicity](/collections/traitements-glp1/guide-complet-trulicity/)** | ~81€ | 65% DT2 | ~28€ (DT2) |
+| **Victoza** | ~60,26€ | 65% DT2 | ~21€ (DT2) |
+| **Rybelsus** | 80-110€ | Non remboursé | 80-110€ (à charge) |
 
 **💰 Conseil économique :** Pour réduire le coût de votre traitement GLP-1, vérifiez d'abord votre éligibilité au remboursement diabète. Les médicaments comme Ozempic — consultez le [prix d'Ozempic](/collections/glp1-cout/prix-ozempic-france/) en détail — et Trulicity peuvent être très abordables une fois remboursés.
 

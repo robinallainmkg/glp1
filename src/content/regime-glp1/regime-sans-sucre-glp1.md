@@ -100,7 +100,7 @@ La règle simple : si les sucres dépassent **5 g pour 100 g** dans un produit, 
 
 ### Ozempic (sémaglutide pour le diabète de type 2)
 - **Prix** : ~76,58 € par stylo
-- **Remboursement** : 30% pour le diabète de type 2
+- **Remboursement** : 65% en bithérapie metformine pour le diabète de type 2
 - **ALD 30 (diabète de type 2)** : prise en charge à 100% du ticket modérateur. L'obésité seule n'est pas une ALD en France en mars 2026.
 
 ### Wegovy (sémaglutide 2,4 mg pour l'obésité)

@@ -174,7 +174,7 @@ Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, 
 
 ### Remboursement dans l'indication cardiovasculaire
 
-Ozempic est [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) à **30 %** pour le diabète de type 2 (65 % en ALD, 100 % en ALD 30). Les bénéfices cardiovasculaires font partie intégrante de l'indication remboursée, sans nécessiter de justification supplémentaire.
+Ozempic est [remboursé](/collections/glp1-cout/remboursement-glp1-2026/) à **65 %** en bithérapie metformine pour le diabète de type 2 (100 % en ALD). Les bénéfices cardiovasculaires font partie intégrante de l'indication remboursée, sans nécessiter de justification supplémentaire.
 
 Pour les patients obèses sans diabète mais à haut risque cardiovasculaire (étude SELECT), Wegovy n'est pas encore remboursé en France en mars 2026. Les données SELECT ont cependant renforcé le dossier de remboursement, attendu au 2e semestre 2026.
 

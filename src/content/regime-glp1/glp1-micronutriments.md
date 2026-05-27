@@ -1,5 +1,6 @@
 ---
 title: "Vitamines et GLP-1 : Carences et Supplémentation"
+published: false
 pubDate: 2025-08-20
 date: 2025-08-20
 author: "Dr. Sophie Dubois"

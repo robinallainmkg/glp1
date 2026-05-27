@@ -138,7 +138,7 @@ L'amycrétine est encore en **phase 3** en mars 2026. Les résultats complets so
 | Amycrétine | Novo Nordisk | Comprimé oral quotidien | Phase 3 en cours | 2028-2029 |
 
 **Rappel des traitements déjà disponibles en France (mars 2026) :**
-- [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) : sémaglutide injectable, remboursé à 30% pour le DT2
+- [Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) : sémaglutide injectable, remboursé à 65% en bithérapie metformine pour le DT2
 - [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) : sémaglutide 2,4 mg, non remboursé, pour l'obésité
 - [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) : tirzepatide, non remboursé, le plus efficace actuellement disponible
 

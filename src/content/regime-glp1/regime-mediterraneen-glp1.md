@@ -130,7 +130,7 @@ La marche rapide 30 minutes par jour est le minimum recommandé par la HAS pour 
 
 ### Ozempic (sémaglutide 0,5 à 1 mg)
 - **Prix** : ~76,58 € par stylo prérempli
-- **Remboursement** : 30% par l'Assurance Maladie pour le diabète de type 2 uniquement
+- **Remboursement** : 65% en bithérapie metformine par l'Assurance Maladie pour le diabète de type 2 uniquement
 - **ALD 30** (diabète de type 2) : prise en charge à 100% du ticket modérateur
 
 ### Wegovy (sémaglutide 2,4 mg)

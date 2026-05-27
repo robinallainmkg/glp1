@@ -133,7 +133,7 @@ affiliateConfig:
 | **Mounjaro** (tirzépatide) | 230-440€ | Non remboursé | Très élevée (-21%) |
 | **Wegovy** | 169-360€ | Non remboursé | Élevée (-15 à -20%) |
 | **Saxenda** | 240-300€ | Non remboursé | Modérée (-8%) |
-| **Ozempic** | ~76,58€/stylo | 30% (DT2 uniquement) | Élevée (-15%) |
+| **Ozempic** | ~76,58€/stylo | 65% (DT2, bithérapie metformine) | Élevée (-15%) |
 
 ### Analyse Coût-Efficacité
 - **Zepbound** : Plus cher mais plus efficace (-21% poids)

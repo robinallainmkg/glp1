@@ -1,5 +1,6 @@
 ---
 title: "Chrome diabète complément alimentaire : Guide 2026"
+published: false
 description: "Chrome diabète complément alimentaire : rôle dans la régulation de la glycémie, dosages recommandés et précautions médicales essentielles à connaître."
 pubDate: 2025-08-20
 date: 2025-08-20

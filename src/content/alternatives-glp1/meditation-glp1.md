@@ -1,5 +1,6 @@
 ---
 title: "Méditation GLP-1 gestion poids : Guide Complet 2026"
+published: false
 description: "Méditation et GLP-1 pour la gestion du poids : techniques de relaxation, réduction du stress alimentaire et impact sur la glycémie pour les patients."
 pubDate: 2025-08-20
 date: 2025-08-20

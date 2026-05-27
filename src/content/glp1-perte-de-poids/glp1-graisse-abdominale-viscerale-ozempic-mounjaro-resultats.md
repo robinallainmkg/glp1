@@ -115,7 +115,7 @@ L'étude SELECT, qui a démontré une réduction de 20% des événements cardiov
 
 Les essais SURMOUNT ont évalué le tirzépatide ([Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/) dans l'obésité. Les données d'imagerie sur la composition corporelle sont particulièrement convaincantes :
 
-**SURMOUNT-1 (86 semaines, dose maximale 15 mg)** :
+**SURMOUNT-1 (72 semaines, dose maximale 15 mg)** :
 
 | Paramètre | Tirzépatide | Placebo | Différence |
 |-----------|-------------|---------|------------|

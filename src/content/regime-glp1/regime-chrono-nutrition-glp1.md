@@ -111,7 +111,7 @@ Lors de l'initiation du traitement, les nausées peuvent perturber les habitudes
 
 | Traitement | Prix mensuel | Remboursement Sécu |
 |-----------|-------------|-------------------|
-| **Ozempic** (sémaglutide DT2) | ~77 € | 30% (DT2) à 100% (ALD 30) |
+| **Ozempic** (sémaglutide DT2) | ~80 € | 65% (DT2 bithérapie) à 100% (ALD) |
 | **Wegovy** (sémaglutide obésité) | ~270 € | Non remboursé |
 | **Mounjaro** (tirzepatide) | 230 à 440 € | Non remboursé (attendu S2 2026) |
 

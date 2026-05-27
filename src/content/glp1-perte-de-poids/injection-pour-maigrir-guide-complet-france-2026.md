@@ -267,7 +267,7 @@ Le cout des injections pour maigrir constitue un facteur important dans la déci
 
 En avril 2026, **aucune injection pour maigrir n'est integralement remboursee** par la Sécurité sociale dans l'indication de l'obésité :
 
-- **Ozempic** : Rembourse a 30% **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
+- **Ozempic** : Rembourse a 65% en bithérapie metformine **uniquement pour le diabète de type 2**. La prescription hors AMM pour la perte de poids n'ouvre aucun droit a remboursement.
 - **Wegovy, Mounjaro, Saxenda** : Non rembourses pour le traitement de l'obésité.
 
 ### Remboursement prevu au second semestre 2026

@@ -100,9 +100,9 @@ En attendant 2032-2034, plusieurs options permettent de réduire le coût du tra
 
 Son prix : environ 80-110 € par boîte de 30 comprimés selon le dosage. Sans remboursement Sécurité Sociale, cela représente un budget mensuel conséquent. Rybelsus reste toutefois une option pour les patients qui préfèrent un traitement oral au sémaglutide plutôt qu'injectable.
 
-### 2. Le remboursement Ozempic pour les diabétiques : 30 % de remboursement
+### 2. Le remboursement Ozempic pour les diabétiques : 65 % en bithérapie metformine
 
-Ozempic est **remboursé à 30 %** par l'Assurance Maladie pour le traitement du diabète de type 2, sous conditions. Cela porte le reste à charge à environ 54 € par stylo, soit environ 54 €/mois. Avec une bonne mutuelle, ce coût peut être réduit davantage.
+Ozempic est **remboursé à 65 %** en bithérapie metformine par l'Assurance Maladie pour le traitement du diabète de type 2, sous conditions (100 % en ALD diabète). Cela porte le reste à charge à environ 28 € par stylo. Avec une bonne mutuelle, ce coût peut être réduit davantage.
 
 Pour plus de détails, consultez notre guide sur le [remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
@@ -132,9 +132,9 @@ Ces différences de calendrier géographique créent une situation paradoxale : 
 
 ## Ce que le remboursement Wegovy/Mounjaro changera
 
-Si le remboursement de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour l'obésité se concrétise en France en 2026-2027 (comme attendu), le reste à charge des patients sera considérablement réduit. Un remboursement Sécurité Sociale à 30 % (comme pour Ozempic-diabète) ramènerait le coût mensuel de Wegovy de 250-360 €/mois à environ 175-250 €/mois — significatif mais encore élevé pour beaucoup.
+Si le remboursement de [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) et de [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) pour l'obésité se concrétise en France en 2026-2027 (comme attendu), le reste à charge des patients sera considérablement réduit. Un remboursement Sécurité Sociale à 30 % ramènerait le coût mensuel de Wegovy de 250-360 €/mois à environ 175-250 €/mois — significatif mais encore élevé pour beaucoup.
 
-Le remboursement intégral à 65 % (comme pour les traitements du diabète remboursés en priorité) rendrait ces traitements accessibles à une bien plus grande partie de la population. Ce débat est au cœur des négociations HAS-CEPS actuellement en cours.
+Le remboursement à 65 % (comme pour Ozempic en bithérapie metformine pour le diabète) rendrait ces traitements accessibles à une bien plus grande partie de la population. Ce débat est au cœur des négociations HAS-CEPS actuellement en cours.
 
 ## Questions fréquentes sur le générique d'Ozempic
 
@@ -142,7 +142,7 @@ Le remboursement intégral à 65 % (comme pour les traitements du diabète rembo
 Non. L'achat de médicaments non autorisés par l'EMA en France est illégal. Des sites vendent du "sémaglutide" sans prescription et sans AMM européenne : ces produits ne sont pas contrôlés et présentent des risques sérieux pour la santé.
 
 **Le Rybelsus est-il moins cher qu'Ozempic ?**
-Le prix facial est similaire (80-110 €/mois), mais contrairement à Ozempic (remboursé à 30 % pour le diabète de type 2), Rybelsus n'est pas remboursé en France (avis HAS défavorable). Pour les patients diabétiques, Ozempic est donc financièrement plus avantageux malgré l'injection.
+Le prix facial est similaire (80-110 €/mois), mais contrairement à Ozempic (remboursé à 65 % en bithérapie metformine pour le diabète de type 2), Rybelsus n'est pas remboursé en France (avis HAS défavorable). Pour les patients diabétiques, Ozempic est donc financièrement plus avantageux malgré l'injection.
 
 **Un biosimilaire sera-t-il aussi efficace qu'Ozempic ?**
 Les biosimilaires approuvés par l'EMA sont soumis à des études de comparabilité rigoureuses. Leur efficacité et leur sécurité doivent être démontrées comme équivalentes à celles de l'original. Ils ne seront pas "moins bons" — simplement fabriqués par un concurrent.

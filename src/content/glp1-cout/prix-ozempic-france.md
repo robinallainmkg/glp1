@@ -53,7 +53,7 @@ image: "/images/thumbnails/prix-ozempic-france-illus.jpg"
         "name": "Quel est le prix d'Ozempic en pharmacie en France ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le prix officiel d'Ozempic en pharmacie est de 80,18€ TTC par stylo, quel que soit le dosage (0.25 mg, 0.5 mg ou 1 mg). Après remboursement (30% Sécurité Sociale + mutuelle), le coût réel patient est de 40-55€/mois selon votre couverture."
+          "text": "Le prix officiel d'Ozempic en pharmacie est de 80,18€ TTC par stylo, quel que soit le dosage (0.25 mg, 0.5 mg ou 1 mg). Après remboursement (65% Sécurité Sociale en bithérapie metformine + mutuelle), le coût réel patient est d'environ 28€/mois selon votre couverture."
         }
       },
       {
@@ -96,7 +96,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 
 | Traitement | Prix mensuel | Remboursement |
 |------------|--------------|---------------|
-| Ozempic | 90-120 € | 30% (DT2 uniquement) |
+| Ozempic | 80-120 € | 65% (DT2 bithérapie) |
 | [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/) | 169-360 € | Non remboursé |
 | Saxenda | 240-300 € | Non remboursé |
 | <a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a> | ~81 € | 65% (DT2 uniquement) |
@@ -120,7 +120,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 1. **Ordonnance médicale** : Prescription par endocrinologue ou diabétologue
 2. **Formulaire obligatoire** : Remplir le formulaire de demande (obligatoire depuis février 2025)
 3. **Carte Vitale** : Présentation en pharmacie
-4. **Remboursement automatique** : 30% du prix réglementé
+4. **Remboursement automatique** : 65% du prix réglementé (en bithérapie metformine)
 5. **Tiers payant** : Possible selon votre mutuelle
 
 ## 🏥 Couverture Mutuelle Santé
@@ -129,10 +129,10 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 
 **Mutuelle obligatoire** pour compléter le remboursement :
 
-- **Remboursement Sécu** : 30% du tarif de base
-- **Ticket modérateur** : 70% restant
-- **Mutuelle** : Prend en charge 50-65% supplémentaire
-- **Reste à charge** : 5-20% selon votre contrat
+- **Remboursement Sécu** : 65% du tarif de base (en bithérapie metformine)
+- **Ticket modérateur** : 35% restant
+- **Mutuelle** : Prend en charge le ticket modérateur selon contrat
+- **Reste à charge** : 0-15% selon votre contrat
 
 ### Exemples de remboursement
 
@@ -221,7 +221,7 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 |---------|---------|--------|---------|
 | Prix mensuel | 90-120 € | 169-360 € | 240-300 € |
 | Perte poids moyenne | -15% | -20% | -8% |
-| Remboursement | 30% (DT2) | Non remboursé | Non remboursé |
+| Remboursement | 65% (DT2 bithérapie) | Non remboursé | Non remboursé |
 | Rapport qualité/prix | Bon (si DT2) | Coûteux | Coûteux |
 
 ## 📝 Conclusion
@@ -230,8 +230,8 @@ Le **prix Ozempic en pharmacie** en France est fixé à **80,18€ par stylo** (
 
 ### Points clés à retenir :
 - **Prix moyen** : 90-120 €/mois
-- **Remboursement Sécu** : 30%
-- **Mutuelle** : 15-30% supplémentaire
+- **Remboursement Sécu** : 65% (bithérapie metformine)
+- **Mutuelle** : complète le ticket modérateur
 - **Aides disponibles** : Pour revenus modestes
 
 **Important** : Consultez votre médecin pour une prescription adaptée à votre situation médicale et budgétaire.

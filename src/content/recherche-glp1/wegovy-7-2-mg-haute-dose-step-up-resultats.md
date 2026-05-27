@@ -137,7 +137,7 @@ Point rassurant : la dose de 7,2 mg n'a pas fait émerger de nouveau signal de s
 
 ### Wegovy 7,2 mg vs Mounjaro (tirzépatide)
 
-Le tirzépatide à sa dose maximale (15 mg) a montré des pertes de poids moyennes de 20 à 22 % dans les études SURMOUNT. Avec 18,7 %, le sémaglutide 7,2 mg se rapproche de ces résultats mais ne les égale pas tout à fait. L'avantage du tirzépatide tient à son double mécanisme d'action (agoniste GLP-1 et GIP), qui semble apporter un bénéfice supplémentaire.
+Le tirzépatide à sa dose maximale (15 mg) a montré des pertes de poids moyennes de 20 à 22 % dans les études SURMOUNT. Avec 20,7 %, le sémaglutide 7,2 mg se rapproche de ces résultats et rivalise directement. L'avantage du tirzépatide tient à son double mécanisme d'action (agoniste GLP-1 et GIP), qui semble apporter un bénéfice supplémentaire.
 
 Toutefois, la comparaison directe entre études différentes a ses limites : les populations, les critères d'inclusion et les protocoles ne sont pas identiques. Seule une étude comparative directe (head-to-head) permettrait de trancher définitivement.
 
@@ -192,7 +192,7 @@ Quelle que soit la dose, le sémaglutide reste un médicament qui s'inscrit dans
 
 ## Points clés à retenir
 
-- Le sémaglutide 7,2 mg (Wegovy haute dose) a montré une perte de poids de **18,7 %** dans l'essai STEP-UP, contre 15,6 % pour la dose actuelle de 2,4 mg.
+- Le sémaglutide 7,2 mg (Wegovy haute dose) a montré une perte de poids de **20,7 %** dans l'essai STEP-UP, contre 17,5 % pour la dose actuelle de 2,4 mg.
 - Près de **45 % des patients** sous 7,2 mg ont perdu au moins 20 % de leur poids.
 - Les effets secondaires gastro-intestinaux sont plus fréquents mais restent gérables avec une escalade de dose progressive.
 - Aucun nouveau signal de sécurité n'a été identifié par rapport à la dose de 2,4 mg.
