@@ -72,7 +72,7 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
   },
   {
     intent: 'selling',
-    pattern: /vend|achet|command|produit|stock|livr/i,
+    pattern: /vendez|achet|command[eé]|en stock|livr(aison|er)/i,
     response: "GLP-1 France est un site d'information independant, nous ne vendons aucun produit.\n\nLes traitements GLP-1 injectables sont des medicaments sur ordonnance. Le parcours :\n1. Consultation medecin traitant ou endocrinologue\n2. Ordonnance si indique medicalement\n3. Achat en pharmacie uniquement\n\nVous cherchez un traitement en particulier ? Je peux vous informer."
   },
   {
@@ -104,6 +104,16 @@ const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string
     intent: 'prescription',
     pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir|sp[eé]cialiste/i,
     response: "Les traitements GLP-1 sont delivres uniquement sur ordonnance. Le parcours :\n\n1. Consultation avec votre medecin traitant, un endocrinologue ou un medecin de l'obesite\n2. Ordonnance si le traitement est indique medicalement\n3. Delivrance en pharmacie\n\nPour trouver un praticien pres de chez vous : annuaire-sante.ameli.fr. Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU."
+  },
+  {
+    intent: 'side_effects',
+    pattern: /effet|secondaire|naus[eé]|vomis|diarrh|constip|fatigue|mal\s*(de|au)|douleur|vue|vision|cheveu|chute|peau/i,
+    response: "Les effets secondaires les plus frequents des GLP-1 sont digestifs (nausees, vomissements, diarrhee), surtout en debut de traitement ou lors des montees de dose.\n\nIls s'attenuent generalement en 2-4 semaines. Si un effet secondaire vous inquiete ou persiste, parlez-en a votre medecin — il pourra ajuster la dose ou le traitement."
+  },
+  {
+    intent: 'availability',
+    pattern: /disponible|rupture|stock|trouver|pharmacie|o[uù].*acheter|pas.*trouv/i,
+    response: "Les GLP-1 sont disponibles en pharmacie sur ordonnance. Certains traitements connaissent des tensions d'approvisionnement ponctuelles.\n\nSi votre pharmacie est en rupture, demandez-lui de verifier la disponibilite chez ses grossistes ou contactez d'autres pharmacies du secteur. Votre medecin peut aussi adapter la prescription si necessaire."
   }
 ];
 
@@ -192,7 +202,7 @@ function classifyAndRespond(message: string): { intent: string; response: string
   }
   return {
     intent: 'general',
-    response: "Je suis le Coach GLP-1, specialise dans l'information sur les traitements GLP-1 en France. Je peux vous aider sur :\n\n• Les prix et remboursements\n• Comment obtenir une ordonnance\n• Les problemes de stylo injecteur\n• L'alimentation sous GLP-1\n• La perte de poids attendue\n• Les arnaques a eviter\n\nPosez-moi votre question !"
+    response: "Je n'ai pas pu traiter votre question en detail pour le moment. Pouvez-vous la reformuler ou preciser votre situation ? Par exemple :\n\n• Quel traitement vous concerne (Ozempic, Wegovy, Mounjaro...) ?\n• S'agit-il d'un effet secondaire, d'un prix, d'une ordonnance ?\n\nJe ferai de mon mieux pour vous aider."
   };
 }
 

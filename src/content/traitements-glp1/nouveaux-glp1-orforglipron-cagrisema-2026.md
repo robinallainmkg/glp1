@@ -59,7 +59,9 @@ Ces résultats sont inférieurs à ceux des injectables comme Wegovy (–15 à �
 
 ### Statut réglementaire en Europe
 
-Eli Lilly a déposé une **demande d'autorisation de mise sur le marché (AMM)** auprès de l'Agence Européenne des Médicaments (EMA) en 2025. L'évaluation par l'EMA est en cours. Une décision est attendue courant **2026**, ce qui ouvre la voie à une commercialisation en France en **2027** au plus tôt, sous réserve des négociations de prix avec le CEPS.
+**Aux États-Unis**, la FDA a approuvé l'orforglipron en **avril 2026** sous le nom de marque **Foundayo** pour le traitement du diabète de type 2 et de l'obésité. C'est le premier GLP-1 oral approuvé sans contrainte de prise à jeun, marquant une étape historique.
+
+**En Europe**, Eli Lilly a déposé une demande d'AMM auprès de l'EMA en 2025. L'évaluation est en cours et une décision est attendue fin **2026 ou début 2027**, ouvrant la voie à une commercialisation en France en **2027** au plus tôt, sous réserve des négociations de prix avec le CEPS.
 
 ### Pourquoi l'orforglipron est-il révolutionnaire ?
 

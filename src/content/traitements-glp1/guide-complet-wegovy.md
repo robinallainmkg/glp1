@@ -72,10 +72,10 @@ Dans les études cliniques STEP, Wegovy a démontré des résultats exceptionnel
 - Dose maximale : 2,4 mg/semaine
 - Résultat : -14,9% de perte de poids vs -2,4% placebo
 
-### Dans l'étude STEP 3
-- 611 patients avec [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)
+### Dans l'étude STEP 2
+- 1 210 patients avec [diabète de type 2](/collections/glp1-diabete/glp1-diabete-type-2-guide-patient-remboursement-france-2026/)
 - Durée : 68 semaines
-- Résultat : -16,0% de perte de poids vs -5,7% placebo
+- Résultat : -9,6% de perte de poids vs -3,4% placebo (la perte de poids est moindre chez les patients diabétiques)
 
 ## Posologie et administration
 

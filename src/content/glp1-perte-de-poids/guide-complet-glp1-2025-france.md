@@ -40,7 +40,8 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 | **<a href="/collections/traitements-glp1/guide-complet-saxenda/">Saxenda</a>** | Novo Nordisk | Obésité | 0.6mg à 3mg/jour | 240-300€ | Non remboursé |
 | **<a href="/collections/traitements-glp1/guide-complet-trulicity/">Trulicity</a>** | Lilly | Diabète type 2 | 0.75mg à 4.5mg/semaine | ~81€ | 30% DT2 |
 | **<a href="/collections/traitements-glp1/guide-complet-victoza/">Victoza</a>** | Novo Nordisk | Diabète type 2 | 0.6mg à 1.8mg/jour | ~60€ | 30% DT2 |
-| **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | 30% DT2 |
+| **[Mounjaro (tirzépatide)](/collections/traitements-glp1/guide-complet-mounjaro/)** | Eli Lilly | Diabète type 2 + Obésité | 2.5mg à 15mg/semaine | 200-350€ | Non remboursé (en cours d'évaluation HAS) |
+| **Rybelsus** | Novo Nordisk | Diabète type 2 | 3mg à 14mg/jour | 80-110€ | Non remboursé en France (avis HAS défavorable) |
 
 **💡 Conseil d'expert :** Pour optimiser votre [perte de poids sous GLP-1](/collections/glp1-perte-de-poids/glp1-perte-de-poids/), combinez votre traitement avec une alimentation équilibrée et de l'activité physique régulière.
 
