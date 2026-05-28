@@ -506,6 +506,9 @@ Le dosage maximal **Wegovy 2.4 mg** est le dosage de maintenance atteint après 
 
 ---
 
+
+> **À lire aussi** : [Acheter Wegovy en France en Pharmacie](/collections/glp1-cout/acheter-wegovy-en-france/)
+
 ## 🔗 Ressources et Guides Complémentaires
 
 **Optimisez votre traitement Wegovy :**

@@ -232,6 +232,9 @@ Pensez également à surveiller les [carences nutritionnelles à surveiller sous
 - Profil de sécurité favorable
 - Bénéfice/risque positif
 
+
+> **À lire aussi** : [GLP-1 et Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/)
+
 ## 📝 Conclusion
 
 **[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) présente un profil de tolérance favorable** malgré des effets secondaires fréquents mais généralement temporaires.

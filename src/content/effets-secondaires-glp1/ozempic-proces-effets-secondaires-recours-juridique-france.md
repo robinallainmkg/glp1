@@ -145,6 +145,12 @@ Les CCI régionales sont des instances gratuites de médiation. Elles permettent
 
 Si la procédure amiable échoue ou si le préjudice est important, une action judiciaire peut être engagée devant le tribunal judiciaire. Les délais de prescription sont de **10 ans à compter de la date de consolidation du dommage** pour les accidents médicaux.
 
+
+> **À lire aussi** : [Pharmacovigilance GLP-1 en France](/collections/recherche-glp1/pharmacovigilance-glp1-france-ansm-bilan-2025-2026/)
+
+
+> **À lire aussi** : [Effets Secondaires Rybelsus Sémaglutide Oral](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/)
+
 ## Les effets secondaires graves reconnus et mentionnés dans les notices
 
 Il est important de rappeler que plusieurs des effets secondaires invoqués dans les procès américains **sont mentionnés dans les notices officielles** des médicaments commercialisés en France :

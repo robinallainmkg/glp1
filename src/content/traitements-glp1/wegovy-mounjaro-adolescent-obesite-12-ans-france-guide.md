@@ -131,6 +131,9 @@ C'est une question légitime que se posent les parents. Les données chez l'adol
 
 Cela ne signifie pas que le traitement est inutile — il offre une fenêtre thérapeutique précieuse pour améliorer les habitudes de vie, les comorbidités et l'estime de soi. La question de la durée optimale du traitement chez l'adolescent est encore en cours d'évaluation dans les études de suivi à long terme.
 
+
+> **À lire aussi** : [Effets Secondaires Wegovy](/collections/effets-secondaires-glp1/effets-secondaires-wegovy/)
+
 ## Le remboursement de Wegovy chez les adolescents
 
 ### Situation actuelle

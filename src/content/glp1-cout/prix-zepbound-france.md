@@ -257,6 +257,9 @@ R: Uniquement pharmacies françaises agréées.
 **Q: Remboursement mutuelle ?**
 R: Variable selon contrat, vérifier avec sa mutuelle.
 
+
+> **À lire aussi** : [Mounjaro Remboursement Sécurité Sociale Conditions 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
+
 ## Conclusion
 
 **Rappel important** : Zepbound n'existe pas en France. Le tirzépatide est commercialisé sous le nom **Mounjaro** (Eli Lilly) depuis novembre 2024, au [prix de 230-440€/mois](/collections/glp1-cout/prix-mounjaro-france/). Ce traitement n'est **pas remboursé** par la Sécurité Sociale.

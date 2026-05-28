@@ -135,6 +135,9 @@ Le dépistage de la stéatose hépatique repose sur une échographie abdominale 
 
 Si vous êtes déjà sous traitement GLP-1 (Ozempic, Wegovy, [Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/)/), votre foie en bénéficie déjà. Si vous n'êtes pas sous GLP-1 et présentez une MASH diagnostiquée, les mesures actuellement recommandées par la HAS restent la perte de poids par modification du mode de vie (alimentation méditerranéenne, activité physique régulière). Consultez notre guide sur l'[alimentation sous GLP-1](/collections/regime-glp1/regime-mediterraneen-glp1/) pour optimiser votre régime.
 
+
+> **À lire aussi** : [GLP-1 Alcool](/collections/recherche-glp1/glp1-alcool-reduction-consommation-essai-albatros-2025/)
+
 ## FAQ
 
 ### Les GLP-1 peuvent-ils guérir la NASH ?

@@ -139,6 +139,9 @@ Le traitement GLP-1 n'impose pas de restriction sodée en lui-même. Cependant, 
 ### Le régime DASH peut-il remplacer les médicaments antihypertenseurs ?
 Non. Le régime DASH peut réduire significativement la tension artérielle mais ne remplace pas un traitement antihypertenseur prescrit par votre médecin. Il peut permettre, dans certains cas, d'abaisser les doses médicamenteuses — mais cette décision appartient à votre médecin.
 
+
+> **À lire aussi** : [Régime méditerranéen GLP-1 alimentation santé](/collections/regime-glp1/regime-mediterraneen-glp1/)
+
 ## Conclusion
 
 Le régime DASH constitue l'un des meilleurs partenaires alimentaires d'un traitement GLP-1 chez les patients présentant une hypertension associée au diabète de type 2 ou à l'obésité. Sa richesse en potassium, fibres et calcium, combinée à la réduction sodée, agit sur des mécanismes complémentaires de ceux des GLP-1 — dont les [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) sont prouvés — pour améliorer la santé cardiométabolique globale.

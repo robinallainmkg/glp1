@@ -136,6 +136,9 @@ Non, la contrainte de prise à jeun avec peu d'eau reste obligatoire même avec 
 ### Y aura-t-il un comprimé équivalent à Mounjaro (tirzepatide) ?
 Eli Lilly travaille également sur des formulations orales de tirzepatide, mais ces développements sont moins avancés que ceux de Novo Nordisk pour le sémaglutide. Une forme orale de tirzepatide n'est pas attendue avant 2028-2029.
 
+
+> **À lire aussi** : [Effets Secondaires Rybelsus Sémaglutide Oral](/collections/effets-secondaires-glp1/effets-secondaires-rybelsus/)
+
 ## Conclusion
 
 Le sémaglutide oral haute dose représente l'évolution naturelle des traitements GLP-1 : une molécule déjà prouvée, rendue accessible sans injection. Si la contrainte de la prise à jeun persiste, elle est jugée acceptable par la majorité des patients dans les études cliniques.

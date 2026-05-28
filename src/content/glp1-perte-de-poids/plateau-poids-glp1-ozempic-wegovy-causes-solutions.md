@@ -147,6 +147,9 @@ C'est déconseillé. L'arrêt du traitement entraîne généralement une reprise
 **Le plateau est-il causé par le stress ou le manque de sommeil ?**
 Indirectement, oui. Le cortisol élevé (stress chronique) favorise la rétention de graisses viscérales et la résistance à l'insuline. Le manque de sommeil augmente la ghréline (hormone de la faim) et réduit la leptine (signal de satiété) — ce qui peut faire "tomber" partiellement l'effet anorexigène du GLP-1. Un travail sur le stress et le sommeil est souvent sous-estimé dans la [prise en charge](/collections/glp1-cout/remboursement-glp1-2026/) de l'obésité. Un [accompagnement psychologique](/collections/regime-glp1/glp1-accompagnement-psychologique-comportement-alimentaire/) pour dépasser le plateau peut également aider à identifier les comportements alimentaires qui freinent la progression.
 
+
+> **À lire aussi** : [Calories Journalières GLP-1](/collections/regime-glp1/glp1-calories-journalieres/)
+
 ## Résumé : que faire face à un plateau ?
 
 | Durée du plateau | Action recommandée |

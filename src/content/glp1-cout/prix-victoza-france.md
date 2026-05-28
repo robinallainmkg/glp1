@@ -211,6 +211,9 @@ image: "/images/thumbnails/prix-victoza-france-illus.jpg"
 | Remboursement | 65% (DT2) | 65% (DT2) | 65% (DT2) |
 | Rapport qualité/prix | Bon (prix bas) | Bon | Bon |
 
+
+> **À lire aussi** : [Mounjaro Remboursement Sécurité Sociale Conditions 2026](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
+
 ## 📝 Conclusion
 
 **Attention : Novo Nordisk a annoncé l'arrêt de la commercialisation de Victoza (liraglutide) en France et en Europe d'ici fin 2026**, pour des raisons commerciales (non liées à la sécurité du médicament). Les patients actuellement sous Victoza doivent consulter leur médecin pour envisager une alternative comme Ozempic et vérifier les conditions de [remboursement GLP-1](/collections/glp1-cout/remboursement-glp1-2026/) ou [Trulicity](/collections/glp1-cout/prix-trulicity-france/). Des pénuries intermittentes sont possibles avant l'arrêt définitif.

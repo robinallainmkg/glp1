@@ -333,6 +333,9 @@ Dépend de la gravité : effets mineurs (adaptation possible), effets graves (ar
 
 Ces ressources complémentaires vous aideront à approfondir vos connaissances sur les traitements GLP-1 en France.
 
+
+> **À lire aussi** : [GLP-1 et Gastroparésie](/collections/effets-secondaires-glp1/glp1-gastroparesie-paralysie-estomac-risque-ansm-symptomes/)
+
 ## Conclusion : Une surveillance nécessaire mais rassurante
 
 **Ozempic présente des risques rares mais documentés** nécessitant une vigilance médicale appropriée. La balance bénéfice/risque reste largement favorable pour les patients éligibles.

@@ -126,6 +126,9 @@ Les antibiotiques, qui perturbent profondément le microbiote, devraient n'être
 
 Pour les professionnels de santé, l'intérêt du microbiote dans la réponse aux GLP-1 ouvre des pistes de recherche translationnelle : pourrait-on prédire la réponse à un traitement GLP-1 à partir de la composition du microbiote d'un patient ? Pourrait-on améliorer la tolérance et l'efficacité du traitement par une modulation ciblée du microbiote avant ou pendant le traitement ? Ces questions font l'objet d'études en cours.
 
+
+> **À lire aussi** : [Ozempic Dépression et Apathie](/collections/effets-secondaires-glp1/glp1-depression-apathie-sante-mentale/)
+
 ## Les perspectives de recherche
 
 ### Des essais cliniques en cours

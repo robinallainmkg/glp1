@@ -219,6 +219,9 @@ Oui. L'étude STEP-HFpEF a démontré des bénéfices du sémaglutide 2,4 mg ([W
 **Combien de temps doit durer le traitement par Mounjaro dans l'insuffisance cardiaque ?**
 SUMMIT n'a évalué les effets que sur 52 semaines (1 an). Les données à plus long terme ne sont pas encore disponibles. En pratique, comme pour l'obésité, il s'agit probablement d'un traitement au long cours : l'arrêt risque d'entraîner une reprise de poids et une perte du bénéfice cardiaque associé.
 
+
+> **À lire aussi** : [GLP-1 et Cholestérol](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/)
+
 ## Conclusion
 
 L'étude SUMMIT marque un tournant dans la prise en charge de l'insuffisance cardiaque à fraction d'éjection préservée associée à l'obésité. En réduisant de 38% le risque d'aggravation cardiaque, le tirzepatide s'impose comme le premier traitement de l'obésité à démontrer simultanément un bénéfice majeur sur l'insuffisance cardiaque dans cette population.
