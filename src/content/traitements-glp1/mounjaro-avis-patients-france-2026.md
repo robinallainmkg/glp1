@@ -87,7 +87,7 @@ Les témoignages suivants refletent la diversite des experiences rapportees par 
 
 > "Apres des annees sous insuline avec un poids qui ne faisait qu'augmenter, mon diabetologue m'a propose Mounjaro en remplacement. En un an, j'ai perdu 32 kg. Mon HbA1c est passee de 8,2% a 6,1%, j'ai arrete l'insuline et mon apnee du sommeil a pratiquement disparu. Les nausées du debut etaient gerables. A 61 ans, je retrouve une mobilite que j'avais perdue depuis dix ans. C'est le traitement le plus efficace que j'aie jamais eu."
 
-**Bilan** : Perte de 32 kg (-24,6%), arret de l'insuline, resolution de l'apnee du sommeil. Ce type de transformation globale est également rapporte dans nos [témoignages de patients sous GLP-1](/collections/temoignages/témoignage-homme-diabète-type2-ozempic-perte-poids/).
+**Bilan** : Perte de 32 kg (-24,6%), arret de l'insuline, resolution de l'apnee du sommeil. Ce type de transformation globale est également rapporte dans nos [témoignages de patients sous GLP-1](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/).
 
 ### Témoignage 5 -- Sophie, 39 ans, Nantes (note : 4/5)
 
@@ -194,7 +194,7 @@ La plupart des patients rapportent une reduction de l'appétit des la premiere s
 
 ### Mounjaro est-il rembourse par la Sécurité sociale en 2026 ?
 
-En avril 2026, Mounjaro n'est pas encore rembourse pour l'indication perte de poids. Le remboursement est en cours d'evaluation par la HAS et est attendu au second semestre 2026, probablement sous conditions strictes d'IMC et de suivi medical. Pour les patients diabetiques de type 2, un remboursement partiel peut etre obtenu sur prescription d'un diabetologue. Suivez l'actualite sur notre page [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/).
+En avril 2026, Mounjaro n'est pas encore rembourse pour l'indication perte de poids. Le remboursement est en cours d'evaluation par la HAS et est attendu au second semestre 2026, probablement sous conditions strictes d'IMC et de suivi medical. Pour les patients diabetiques de type 2, un remboursement partiel peut etre obtenu sur prescription d'un diabetologue. Suivez l'actualite sur notre page [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/).
 
 ### Quels sont les effets secondaires les plus courants de Mounjaro ?
 
@@ -219,7 +219,7 @@ Si vous envisagez un traitement par Mounjaro, nous recommandons de :
 
 Pour approfondir votre recherche, explorez nos autres ressources :
 - [Guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) -- mecanisme d'action, posologie, acces en France
-- [Résultats avant/après GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) -- transformations documentees
+- [Résultats avant/après GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) -- transformations documentees
 - [Comparatif complet des traitements GLP-1](/collections/glp1-perte-de-poids/guide-complet-glp1-2025-france/) -- Ozempic, Wegovy, Saxenda, Trulicity
 
 <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-xl mt-8">

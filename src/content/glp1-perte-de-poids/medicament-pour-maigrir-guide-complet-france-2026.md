@@ -32,14 +32,14 @@ Ce guide complet passe en revue **tous les traitements autorisés** pour la pert
 
 ## Sommaire
 
-- [Les 4 medicaments GLP-1 autorisés pour la perte de poids](#les-4-médicaments-glp-1-autorisés-pour-la-perte-de-poids)
-- [Tableau comparatif](#tableau-comparatif-des-médicaments-pour-maigrir)
-- [Les medicaments oraux (comprimes)](#les-médicaments-oraux-comprimés)
+- [Les 4 medicaments GLP-1 autorisés pour la perte de poids](#les-4-medicaments-glp-1-autorises-pour-la-perte-de-poids)
+- [Tableau comparatif](#tableau-comparatif-des-medicaments-pour-maigrir)
+- [Les medicaments oraux (comprimes)](#les-medicaments-oraux-comprimes)
 - [Comment obtenir une prescription](#comment-obtenir-une-prescription-)
 - [Les alternatives non-GLP-1](#les-alternatives-non-glp-1)
 - [Effets secondaires](#effets-secondaires--ce-quil-faut-savoir)
 - [Prix et remboursement en 2026](#prix-et-remboursement-en-2026)
-- [FAQ](#faq--questions-fréquentes)
+- [FAQ](#faq--questions-frequentes)
 
 ## Les 4 Médicaments GLP-1 Autorisés pour la Perte de Poids
 
@@ -195,7 +195,7 @@ Le **Rybelsus** est le seul GLP-1 disponible sous forme de comprimé en France. 
 
 Le Rybelsus doit etre pris a jeun avec un demi-verre d'eau, au moins 30 minutes avant le premier repas. Cette contrainte peut etre genante au quotidien.
 
-Pour en savoir plus : [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) | [semaglutide oral en France](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/)
+Pour en savoir plus : [guide complet Rybelsus](/collections/traitements-glp1/guide-complet-rybelsus/) | [semaglutide oral en France](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/)
 
 ### Orforglipron -- La Future Pilule pour Maigrir
 
@@ -327,7 +327,7 @@ En avril 2026, **aucun médicament GLP-1 n'est rembourse par la Sécurité socia
 - Le remboursement du Wegovy et potentiellement du Mounjaro est attendu au **second semestre 2026**
 - Les conditions exactes (IMC minimum, comorbidités requises) seront definies par arrete ministeriel
 
-Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) | [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-sécurité-sociale-conditions-2026/)
+Pour en savoir plus : [remboursement des GLP-1 en 2026](/collections/glp1-cout/remboursement-glp1-2026/) | [remboursement Mounjaro](/collections/glp1-cout/mounjaro-remboursement-securite-sociale-conditions-2026/)
 
 ### Les mutuelles qui remboursent
 

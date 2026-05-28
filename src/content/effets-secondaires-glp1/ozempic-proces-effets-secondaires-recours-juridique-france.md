@@ -52,7 +52,7 @@ Les principaux griefs invoqués dans les plaintes américaines sont :
 La gastroparésie est un ralentissement sévère ou une paralysie de la vidange de l'estomac. Les GLP-1 ralentissent physiologiquement la vidange gastrique — c'est l'un des mécanismes par lesquels ils réduisent l'appétit. Mais chez certains patients, ce ralentissement serait devenu permanent ou très prolongé, même après l'arrêt du traitement. Pour en savoir plus, consultez notre article sur la [gastroparésie et les GLP-1](/collections/effets-secondaires-glp1/glp1-gastroparesie-vidange-gastrique-risque-symptomes/).
 
 **2. Occlusions intestinales**
-Des obstruction et iléus paralytiques ont été rapportés, notamment chez des patients opérés sous anesthésie générale dont le traitement GLP-1 n'avait pas été interrompu avant la chirurgie. Voir notre guide sur les [GLP-1 et la chirurgie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/).
+Des obstruction et iléus paralytiques ont été rapportés, notamment chez des patients opérés sous anesthésie générale dont le traitement GLP-1 n'avait pas été interrompu avant la chirurgie. Voir notre guide sur les [GLP-1 et la chirurgie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/).
 
 **3. Pancréatite aiguë**
 Des cas de [pancréatite](/collections/effets-secondaires-glp1/glp1-pancreatite-risque-ozempic-pancreas-symptomes/) (inflammation sévère du pancréas) ont été signalés. Ce risque est mentionné dans les notices des médicaments, mais les plaignants affirment que les patients n'en ont pas été suffisamment avertis.

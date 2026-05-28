@@ -86,7 +86,7 @@ La concurrence sera forte une fois les brevets levés, ce qui laisse espérer un
 
 À titre de comparaison, les biosimilaires de l'insuline (molécule de structure similaire) ont permis des réductions de prix de **20 à 50 %** dans les années suivant leur mise sur le marché. Les biosimilaires des anti-TNF (traitement de rhumatismes) ont quant à eux engendré des baisses de **30 à 70 %**.
 
-Pour le sémaglutide, les projections varient selon les analystes. Une réduction de **30 à 60 %** du prix actuel (76,58 € TTC/stylo Ozempic selon Vidal) est envisageable une fois la concurrence installée, soit un prix potentiel de **30 à 55 € par stylo**.
+Pour le sémaglutide, les projections varient selon les analystes. Une réduction de **30 à 60 %** du prix actuel (76,58 € PFHT/stylo Ozempic selon Vidal, environ 80,18 € TTC avec honoraires de dispensation) est envisageable une fois la concurrence installée, soit un prix potentiel de **30 à 55 € par stylo**.
 
 Cela ne rendrait Ozempic complètement "abordable" pour tous que si le remboursement Sécurité Sociale progressait en parallèle.
 

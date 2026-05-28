@@ -35,7 +35,7 @@ SYSTÈME D'AFFILIATION AUTOMATIQUE
 
 ## Wegovy Remboursement Mutuelle 2026 : Quelles Mutuelles Remboursent Wegovy ?
 
-Le **remboursement Wegovy par la mutuelle** est devenu la principale option pour alléger la facture de **169 à 360€/mois** des patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) **n'est pas encore remboursé** par la Sécurité Sociale, mais la **HAS a rendu un avis favorable le 20 février 2026** pour un remboursement attendu au S2 2026 chez les adultes IMC ≥ 35 kg/m². En attendant, plusieurs **mutuelles santé** comme MGEN, Harmonie Mutuelle, Alan ou April proposent un **forfait médicaments non remboursés** de 50 à 200€/an applicable au Wegovy. Découvrez ci-dessous la liste à jour des mutuelles favorables, les montants pris en charge et le calendrier officiel. Pour aller plus loin, comparez aussi les [prix Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) et le calendrier de [remboursement Wegovy/Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/).
+Le **remboursement Wegovy par la mutuelle** est devenu la principale option pour alléger la facture de **169 à 360€/mois** des patients traités contre l'obésité en France. En mars 2026, Wegovy (sémaglutide) **n'est pas encore remboursé** par la Sécurité Sociale, mais la **HAS a rendu un avis favorable le 20 février 2026** pour un remboursement attendu au S2 2026 chez les adultes IMC ≥ 35 kg/m². En attendant, plusieurs **mutuelles santé** comme MGEN, Harmonie Mutuelle, Alan ou April proposent un **forfait médicaments non remboursés** de 50 à 200€/an applicable au Wegovy. Découvrez ci-dessous la liste à jour des mutuelles favorables, les montants pris en charge et le calendrier officiel. Pour aller plus loin, comparez aussi les [prix Wegovy en pharmacie](/collections/glp1-cout/prix-wegovy-france/) et le calendrier de [remboursement Wegovy/Mounjaro Sécurité Sociale 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
 
 ## Wegovy : Un traitement révolutionnaire mais coûteux
 
@@ -52,7 +52,7 @@ Face à ce coût substantiel, la question du remboursement devient centrale pour
 
 ### Position officielle en 2025
 
-Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-sécurité-sociale-2026/).
+Le Wegovy n'est **pas encore remboursé par l'Assurance Maladie** en mars 2026, mais la HAS a rendu un **avis favorable au remboursement le 20 février 2026** pour les adultes avec un IMC initial >= 35 kg/m2 en cas d'échec de la prise en charge nutritionnelle bien conduite. Les négociations de prix entre Novo Nordisk et le CEPS sont en cours — pour suivre l'avancée du dossier, consultez notre article dédié au [remboursement Wegovy par la Sécurité Sociale en 2026](/collections/glp1-cout/remboursement-wegovy-mounjaro-securite-sociale-2026/).
 
 ### Critères potentiels pour un futur remboursement
 

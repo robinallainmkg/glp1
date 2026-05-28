@@ -27,7 +27,7 @@ mainKeyword: "victoza guide complet france liraglutide"
 ## Sommaire
 1. [Qu'est-ce que Victoza ?](#quest-ce-quevictoza)
 2. [Comment fonctionne Victoza ?](#comment-fonctionne-victoza)
-3. [Victoza pour le diabète de type 2](#victoza-diabète-type-2)
+3. [Victoza pour le diabète de type 2](#victoza-diabete-type-2)
 4. [Posologie et administration](#posologie-victoza)
 5. [Comment commencer le traitement Victoza ?](#comment-commencer-le-traitement-victoza)
 6. [Alternatives à Victoza](#alternatives-victoza)

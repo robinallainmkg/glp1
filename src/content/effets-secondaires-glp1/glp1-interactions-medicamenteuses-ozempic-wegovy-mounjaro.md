@@ -131,7 +131,7 @@ Les recommandations actuelles des sociétés d'anesthésie préconisent :
 - D'informer l'équipe anesthésique si l'arrêt n'a pas pu être effectué dans ces délais
 - De réaliser une échoendoscopie gastrique en préopératoire dans certains cas à risque
 
-Si vous avez une chirurgie programmée, informez **immédiatement** le chirurgien et l'anesthésiste de votre traitement GLP-1. Consultez notre guide complet sur les [précautions d'arrêt avant chirurgie et anesthésie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) pour les délais et protocoles recommandés.
+Si vous avez une chirurgie programmée, informez **immédiatement** le chirurgien et l'anesthésiste de votre traitement GLP-1. Consultez notre guide complet sur les [précautions d'arrêt avant chirurgie et anesthésie](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour les délais et protocoles recommandés.
 
 ## Déclarer une interaction suspecte
 

@@ -175,7 +175,7 @@ Les GLP-1 modifient la digestion et peuvent affecter votre tolérance à l'effor
 Avant de démarrer un programme d'entraînement, consultez votre médecin si vous présentez :
 
 - **Pathologie cardiaque ou antécédent cardiovasculaire** : un test d'effort peut être recommandé avant de commencer
-- **Arthrose avancée** : privilégiez la natation, le vélo ou les exercices en piscine — consultez aussi les [bénéfices des GLP-1 sur les douleurs articulaires](/collections/recherche-glp1/glp1-arthrose-douleurs-articulaires-bénéfices-risques/)
+- **Arthrose avancée** : privilégiez la natation, le vélo ou les exercices en piscine — consultez aussi les [bénéfices des GLP-1 sur les douleurs articulaires](/collections/recherche-glp1/glp1-arthrose-douleurs-articulaires-benefices-risques/)
 - **Neuropathie diabétique** : les exercices en décharge (natation, vélo) sont préférables à la marche prolongée
 - **Hypertension non contrôlée** : l'exercice intense doit être évité jusqu'à stabilisation
 
@@ -201,7 +201,7 @@ Oui, dans plusieurs dimensions. L'activité physique améliore la sensibilité �
 
 L'association entre traitement GLP-1 et activité physique régulière n'est pas une option, c'est une nécessité médicale pour obtenir les meilleurs résultats possibles. La musculation, en particulier, est votre meilleure protection contre la fonte musculaire — le principal effet indésirable méconnu de ces traitements. Commencez progressivement, adaptez le programme à vos capacités et consultez votre médecin et un kinésithérapeute ou un coach sportif qualifié pour un programme personnalisé.
 
-Pour aller plus loin, consultez notre guide sur [la prévention de la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), notre article sur les [protéines et leur rôle sous traitement GLP-1](/collections/regime-glp1/glp1-protéines/) et notre analyse sur la [performance sportive et composition corporelle](/collections/regime-glp1/glp1-sport-performance-sportif-composition-corporelle/) sous traitement.
+Pour aller plus loin, consultez notre guide sur [la prévention de la fonte musculaire sous GLP-1](/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/), notre article sur les [protéines et leur rôle sous traitement GLP-1](/collections/regime-glp1/glp1-proteines/) et notre analyse sur la [performance sportive et composition corporelle](/collections/regime-glp1/glp1-sport-performance-sportif-composition-corporelle/) sous traitement.
 
 ---
 

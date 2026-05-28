@@ -26,7 +26,7 @@ affiliateConfig:
 
 ## Régime Mounjaro Optimal 2026 : Guide Nutritionnel Complet
 
-Le **régime Mounjaro optimal** combine les effets du **tirzépatide** avec une **alimentation adaptée** pour maximiser la perte de poids et améliorer le contrôle glycémique. La règle d'or : **30-35% de protéines, 40-45% de légumes non-féculents, 20-25% de glucides complexes**, en réduisant progressivement les portions de 25% (S1-4) à 40% (S5-8). Cette stratégie nutritionnelle évite les nausées, préserve la masse musculaire et démultiplie les résultats du traitement. Pour comprendre en détail le fonctionnement du médicament, consultez le [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et notre dossier [protéines GLP-1](/collections/regime-glp1/glp1-protéines/). À noter : Mounjaro (tirzepatide) n'est pas remboursé en mars 2026, avec un [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) de 230 à 440 €/mois selon le dosage. La HAS a rendu un avis favorable en décembre 2025, remboursement possible au S2 2026 (IMC ≥ 35).
+Le **régime Mounjaro optimal** combine les effets du **tirzépatide** avec une **alimentation adaptée** pour maximiser la perte de poids et améliorer le contrôle glycémique. La règle d'or : **30-35% de protéines, 40-45% de légumes non-féculents, 20-25% de glucides complexes**, en réduisant progressivement les portions de 25% (S1-4) à 40% (S5-8). Cette stratégie nutritionnelle évite les nausées, préserve la masse musculaire et démultiplie les résultats du traitement. Pour comprendre en détail le fonctionnement du médicament, consultez le [guide complet Mounjaro](/collections/traitements-glp1/guide-complet-mounjaro/) et notre dossier [protéines GLP-1](/collections/regime-glp1/glp1-proteines/). À noter : Mounjaro (tirzepatide) n'est pas remboursé en mars 2026, avec un [prix de Mounjaro en France](/collections/glp1-cout/prix-mounjaro-france/) de 230 à 440 €/mois selon le dosage. La HAS a rendu un avis favorable en décembre 2025, remboursement possible au S2 2026 (IMC ≥ 35).
 
 ## Principes Fondamentaux du Régime Mounjaro
 
@@ -37,7 +37,7 @@ Le **régime Mounjaro optimal** combine les effets du **tirzépatide** avec une 
 
 ### 2. Aliments Prioritaires
 
-#### <a href="/collections/regime-glp1/glp1-protéines/">Protéines de Qualité</a> (30-35% des calories)
+#### <a href="/collections/regime-glp1/glp1-proteines/">Protéines de Qualité</a> (30-35% des calories)
 - **Viandes maigres** : Poulet, dinde, porc filet
 - **Poissons gras** : Saumon, sardines, maquereau
 - **Légumineuses** : Lentilles, haricots, pois chiches
@@ -167,7 +167,7 @@ Pour une vue complète, consultez notre guide sur les [effets secondaires de Mou
 - **Bien-être général** : Énergie, sommeil
 
 ### Adaptations Nécessaires
-- **Plateau de poids** : Révision des portions
+- **[Plateau de poids](/collections/glp1-perte-de-poids/plateau-poids-glp1-ozempic-wegovy-causes-solutions/)** : Révision des portions
 - **Effets secondaires** : Modification textures
 - **Contraintes sociales** : Flexibilité contrôlée
 

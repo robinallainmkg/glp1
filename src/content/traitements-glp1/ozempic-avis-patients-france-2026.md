@@ -26,8 +26,8 @@ Plutot que de s'appuyer uniquement sur les promesses marketing, nous avons compi
 ## Sommaire
 
 1. [Ozempic : Rappel du Traitement](#ozempic--rappel-du-traitement)
-2. [Résultats Moyens : Ce que Disent les Etudes Cliniques](#résultats-moyens--ce-que-disent-les-etudes-cliniques)
-3. [Témoignages Patients : Avis Reels](#témoignages-patients--avis-reels)
+2. [Résultats Moyens : Ce que Disent les Etudes Cliniques](#resultats-moyens--ce-que-disent-les-etudes-cliniques)
+3. [Témoignages Patients : Avis Reels](#temoignages-patients--avis-reels)
 4. [Note Globale des Patients : 4.2/5](#note-globale-des-patients--4.2-sur-5)
 5. [Ozempic vs Wegovy vs Mounjaro : Comparatif Avis](#ozempic-vs-wegovy-vs-mounjaro--comparatif-avis)
 6. [Les Effets Secondaires les Plus Cites dans les Avis](#les-effets-secondaires-les-plus-cites-dans-les-avis)

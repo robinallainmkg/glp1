@@ -67,7 +67,7 @@ Le mecanisme le plus probable n'est pas un effet direct du medicament sur l'os, 
 
 Le tissu adipeux (la graisse corporelle) joue un role protecteur pour le squelette. Il agit comme un "coussin" mecanique qui stimule la formation osseuse, et il produit des hormones — notamment les oestrogenes — qui contribuent au maintien de la densite osseuse. Lorsqu'un patient perd 15 a 20% de son poids en un an sous GLP-1, cette protection diminue rapidement.
 
-Des etudes anterieures sur la [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) avaient deja montre un phenomene similaire : les patients qui perdent beaucoup de poids rapidement presentent une diminution de la densite minerale osseuse dans les 12 a 24 mois suivant l'intervention, avec un [risque accru de fractures](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/).
+Des etudes anterieures sur la [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) avaient deja montre un phenomene similaire : les patients qui perdent beaucoup de poids rapidement presentent une diminution de la densite minerale osseuse dans les 12 a 24 mois suivant l'intervention, avec un [risque accru de fractures](/collections/effets-secondaires-glp1/glp1-risque-osseux-fractures-tendons-blessures-2026/).
 
 ### L'hypothese d'un effet direct sur le métabolisme osseux
 
@@ -115,7 +115,7 @@ Si vous etes traite par un GLP-1 et que vous appartenez a une population a risqu
 
 **Activite physique avec mise en charge** : L'exercice physique est le meilleur protecteur de l'os. La marche, la course a pied, la musculation et les activites avec impact stimulent la formation osseuse et compensent partiellement la perte liée a l'amaigrissement. Découvrez notre guide sur l'[activité physique avec mise en charge sous GLP-1](/collections/regime-glp1/glp1-sport-exercice-musculation-guide/) pour des conseils pratiques.
 
-**[Apport en protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/)** : Les protéines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommandé de consommer 1,2 a 1,5 g de protéines par kg de poids ideal par jour pour preserver la masse maigre.
+**[Apport en protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/)** : Les protéines sont essentielles pour la sante osseuse et musculaire. Pendant un traitement GLP-1, il est recommandé de consommer 1,2 a 1,5 g de protéines par kg de poids ideal par jour pour preserver la masse maigre.
 
 **Hydratation** : Une bonne hydratation aide a eliminer l'acide urique et réduit le risque de goutte. Il est conseille de boire au moins 1,5 a 2 litres d'eau par jour.
 
@@ -135,7 +135,7 @@ La Société Francaise de Rhumatologie (SFR) a publie en 2025 des recommandation
 
 ### Contextualiser les résultats
 
-Il est essentiel de replacer ces résultats dans leur contexte. L'augmentation du risque d'osteomalacie (de 0,1% a 0,2%) signifie que pour 1 000 patients traites, 1 patient supplémentaire developpe cette complication. Le risque reste donc faible en valeur absolue.
+Il est essentiel de replacer ces résultats dans leur contexte. L'augmentation du risque d'ostéomalacie (de 0,1% à 2%) signifie que pour 1 000 patients traités, environ 19 patients supplémentaires développent cette complication. Ce chiffre reste modeste en valeur absolue.
 
 Par comparaison, l'obesite elle-meme est un facteur de risque majeur de nombreuses pathologies : diabete, maladies cardiovasculaires, cancers, arthrose. Les bénéfices des GLP-1 sur ces risques depassent largement le risque osseux identifie.
 

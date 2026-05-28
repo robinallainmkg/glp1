@@ -88,7 +88,7 @@ mainKeyword: "mounjaro guide complet france tirzepatide"
   <a href="/collections/effets-secondaires-glp1/effets-secondaires-mounjaro" class="block bg-gray-600 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
     ⚠️ Effets Secondaires (TOUT Savoir)
   </a>
-  <a href="#résultats-avant-après" class="block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
+  <a href="#resultats-avant-apres" class="block bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-4 rounded-xl font-bold text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
     📸 Voir les Résultats Avant/Après
   </a>
 </div>
@@ -96,7 +96,7 @@ mainKeyword: "mounjaro guide complet france tirzepatide"
 ## 🚀 Sommaire : Votre Guide Complet Mounjaro
 1. [⚡ Pourquoi Mounjaro SURPASSE Ozempic ?](#pourquoi-mounjaro-surpasse-ozempic)
 2. [🔬 Comment Mounjaro RÉVOLUTIONNE la perte de poids ?](#comment-mounjaro-revolutionne)
-3. [📊 Résultats RÉELS : Témoignages et avant/après](#résultats-avant-après)
+3. [📊 Résultats RÉELS : Témoignages et avant/après](#resultats-avant-apres)
 4. [💉 Posologie : Le dosage OPTIMAL](#posologie-optimale)
 5. [💰 Prix France 2025 & Remboursement](#prix-france-2025)
 6. [🆚 Mounjaro vs Ozempic vs Wegovy](#comparaison-traitements)
@@ -249,7 +249,7 @@ Pour savoir si vous pouvez bénéficier de Mounjaro, consultez notre page [êtes
 - **Échec des mesures hygiéno-diététiques**
 
 ### Résultats cliniques
-- **Perte de poids moyenne** : 15-20% du poids corporel — découvrez le [témoignage de Laurent : -35 kg en 10 mois avec Mounjaro](/collections/temoignages/témoignage-laurent-transformation-glp1/)
+- **Perte de poids moyenne** : 15-20% du poids corporel — découvrez le [témoignage de Laurent : -35 kg en 10 mois avec Mounjaro](/collections/temoignages/temoignage-laurent-transformation-glp1/)
 - **Pourcentage de patients** : 50% perdent ≥15% de leur poids
 - **Maintien du poids** : avec poursuite du traitement
 
@@ -289,7 +289,7 @@ Pour savoir si vous pouvez bénéficier de Mounjaro, consultez notre page [êtes
     <div class="action-card">
       <h4>🥗 3. Optimisez Votre Régime</h4>
       <p>Alimentation spéciale Mounjaro pour maximiser les résultats</p>
-      <a href="/collections/regime-glp1/glp1-protéines" class="action-button">
+      <a href="/collections/regime-glp1/glp1-proteines" class="action-button">
         Régime Mounjaro
       </a>
     </div>
@@ -374,7 +374,7 @@ Modérément oui, mais l'alcool peut augmenter le risque d'hypoglycémie et d'ef
 **Non, Mounjaro n'est pas remboursé** par l'Assurance Maladie en France (mars 2026). Commercialisé depuis novembre 2024, son prix libre se situe entre 230 € et 440 € par mois selon le dosage. La HAS a émis un avis favorable au [remboursement](/collections/glp1-cout/remboursement-glp1-2026/) en décembre 2025 ; une prise en charge est envisagée pour le second semestre 2026, sous condition d'un IMC ≥ 35 et après échec d'une prise en charge nutritionnelle.
 
 ### Puis-je arrêter Mounjaro brutalement ?
-Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Si vous devez subir une intervention chirurgicale, consultez notre guide sur les [précautions avant chirurgie sous Mounjaro](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) pour connaître le protocole d'arrêt recommandé.
+Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une reprise de poids rapide. Si vous devez subir une intervention chirurgicale, consultez notre guide sur les [précautions avant chirurgie sous Mounjaro](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) pour connaître le protocole d'arrêt recommandé.
 
 ---
 
@@ -400,7 +400,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="next-step-card">
     <h3>🥗 Régime Mounjaro</h3>
     <p>Le régime alimentaire optimal pour maximiser vos résultats avec Mounjaro.</p>
-    <a href="/collections/regime-glp1/régime-mounjaro-optimal" class="cta-button">
+    <a href="/collections/regime-glp1/regime-mounjaro-optimal" class="cta-button">
       Découvrir le Régime →
     </a>
   </div>
@@ -421,7 +421,7 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="link-category">
     <h4>💡 Optimisation Mounjaro</h4>
     <ul>
-      <li><a href="/collections/regime-glp1/glp1-protéines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
+      <li><a href="/collections/regime-glp1/glp1-proteines">Protéines et Mounjaro : Le Combo Gagnant</a></li>
       <li><a href="/collections/regime-glp1/jeune-intermittent-glp1">Jeûne Intermittent + Mounjaro</a></li>
       <li><a href="/collections/regime-glp1/glp1-fonte-musculaire-preserver-muscles/">Sport et Mounjaro : Maximiser les Résultats</a></li>
     </ul>
@@ -430,9 +430,9 @@ Non, l'arrêt doit être progressif sous surveillance médicale pour éviter une
   <div class="link-category">
     <h4>🎯 Témoignages et Résultats</h4>
     <ul>
-      <li><a href="/collections/temoignages/avant-après-glp1">Transformations Mounjaro : Avant/Après</a></li>
-      <li><a href="/collections/temoignages/témoignage-marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
-      <li><a href="/collections/temoignages/témoignage-sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
+      <li><a href="/collections/temoignages/avant-apres-glp1">Transformations Mounjaro : Avant/Après</a></li>
+      <li><a href="/collections/temoignages/temoignage-marie-transformation-glp1/">Marie : -18 kg avec Mounjaro en 6 mois</a></li>
+      <li><a href="/collections/temoignages/temoignage-sophie-transformation-glp1/">Sophie : Témoignage de transformation avec Mounjaro</a></li>
     </ul>
   </div>
 </div>

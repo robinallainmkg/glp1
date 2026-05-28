@@ -253,7 +253,7 @@ Oui, si vous êtes diabétique de type 2 et que votre médecin remplit le formul
 La perte de poids est un effet secondaire attendu et bénéfique des GLP-1 prescrits dans le diabète. Ozempic peut entraîner une perte de 3 à 7% du poids en moyenne, ce qui est favorable pour le contrôle glycémique. Cependant, vous ne pouvez pas légalement obtenir une prescription d'Ozempic à des doses plus élevées ou hors AMM uniquement pour perdre du poids. Si vous souhaitez un traitement médicamenteux dédié à la perte de poids, Wegovy et Mounjaro sont les options approuvées.
 
 **Mon médecin généraliste peut-il prescrire mon GLP-1 pour le diabète ?**
-Oui. Les GLP-1 pour le diabète de type 2 ont toujours pu être prescrits par les [médecins généralistes](/collections/medecins-glp1-france/médecin-généraliste-prescription-wegovy-mounjaro-conditions). La restriction aux spécialistes ne s'appliquait qu'aux GLP-1 pour l'obésité (Wegovy, Mounjaro), et elle a été levée en juin 2025.
+Oui. Les GLP-1 pour le diabète de type 2 ont toujours pu être prescrits par les [médecins généralistes](/collections/medecins-glp1-france/medecin-generaliste-prescription-wegovy-mounjaro-conditions). La restriction aux spécialistes ne s'appliquait qu'aux GLP-1 pour l'obésité (Wegovy, Mounjaro), et elle a été levée en juin 2025.
 
 **J'ai raté une injection d'Ozempic cette semaine. Que faire ?**
 Si vous l'avez oublié et qu'il reste plus de 5 jours avant votre prochain jour d'injection habituel, injectez dès que vous vous en souvenez et reprenez votre calendrier habituel. Si il reste moins de 5 jours, attendez et injectez à la date prévue sans doubler la dose.

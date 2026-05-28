@@ -35,7 +35,7 @@ Depuis l'essor des traitements GLP-1, des patients traitées par [Ozempic](/coll
 1. [L'apathie sous GLP-1 : qu'est-ce que c'est vraiment ?](#apathie)
 2. [Le risque suicidaire : l'EMA a conclu](#risque-suicidaire)
 3. [Les mécanismes possibles des effets sur l'humeur](#mecanismes)
-4. [Ce que vivent les patients en pratique](#témoignages)
+4. [Ce que vivent les patients en pratique](#temoignages)
 5. [Anédonie alimentaire vs dépression vraie](#diagnostic)
 6. [Que faire si vous ressentez ces effets ?](#que-faire)
 7. [FAQ](#faq)
@@ -66,7 +66,7 @@ La distinction est capitale : les GLP-1 pourraient induire une forme d'apathie o
 
 ### Conclusion rassurante mais surveillance maintenue
 
-En décembre 2023, l'EMA a publié les conclusions de son investigation : **aucune preuve d'un lien causal entre les GLP-1 et un risque accru de pensées suicidaires ou d'automutilation** n'a été identifiée. Cette conclusion est fondée sur l'analyse de plus de 150 000 patients dans les essais cliniques et les données de pharmacovigilance mondiales.
+En avril 2024, le comité PRAC de l'EMA a publié les conclusions finales de son investigation : **aucune preuve d'un lien causal entre les GLP-1 et un risque accru de pensées suicidaires ou d'automutilation** n'a été identifiée. L'investigation avait été initiée en 2023 et une première évaluation intermédiaire communiquée fin 2023. Cette conclusion est fondée sur l'analyse de plus de 150 000 patients dans les essais cliniques et les données de pharmacovigilance mondiales.
 
 La FDA américaine est parvenue à des conclusions similaires en janvier 2024.
 
@@ -194,7 +194,7 @@ En France, le dispositif **MonPsy** permet d'accéder à 8 séances de psycholog
 ## FAQ {#faq}
 
 **Ozempic peut-il vraiment causer une dépression ?**
-L'EMA a conclu en décembre 2023 qu'il n'existait pas de preuve d'un lien causal entre les GLP-1 et un risque accru de dépression ou de pensées suicidaires. Des signalements existent, mais ils sont à mettre en perspective avec le fait que l'obésité elle-même est un facteur de risque de dépression. Une surveillance individuelle est recommandée.
+Le comité PRAC de l'EMA a conclu en avril 2024 qu'il n'existait pas de preuve d'un lien causal entre les GLP-1 et un risque accru de dépression ou de pensées suicidaires. Des signalements existent, mais ils sont à mettre en perspective avec le fait que l'obésité elle-même est un facteur de risque de dépression. Une surveillance individuelle est recommandée.
 
 **L'apathie sous GLP-1 est-elle permanente ?**
 Chez la majorité des patients qui rapportent une apathie en début de traitement, celle-ci diminue après la phase d'initiation (4 à 12 semaines). Si elle persiste, une consultation médicale est nécessaire pour évaluer si une adaptation du traitement est souhaitable.

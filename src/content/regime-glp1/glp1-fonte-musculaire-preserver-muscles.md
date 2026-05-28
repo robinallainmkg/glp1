@@ -34,7 +34,7 @@ Les traitements GLP-1 comme [Ozempic](/collections/traitements-glp1/guide-comple
 
 1. [Le problème : combien de muscle perd-on sous GLP-1 ?](#le-probleme)
 2. [Pourquoi perd-on du muscle avec les GLP-1 ?](#pourquoi)
-3. [Stratégie 1 : l'apport protéique, pilier de la préservation musculaire](#protéines)
+3. [Stratégie 1 : l'apport protéique, pilier de la préservation musculaire](#proteines)
 4. [Stratégie 2 : l'exercice de résistance, indispensable](#musculation)
 5. [Stratégie 3 : optimiser son mode de vie global](#mode-de-vie)
 6. [Programme concret semaine type](#programme)
@@ -112,7 +112,7 @@ Les patients sous GLP-1 mangent moins. C'est le principe même du traitement. Po
 - **Fractionner les repas** : 4 à 5 petits repas riches en protéines plutôt que 2 gros repas
 - **Enrichir les plats** : ajouter du fromage blanc dans les sauces, des oeufs dans les préparations
 - **Collations protéinées** : fromage blanc, oeuf dur, poignée d'amandes entre les repas
-- **Compléments protéinés** : la whey protéine (lactosérum) est une option pratique pour atteindre ses objectifs sans volume alimentaire excessif. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) pour des conseils détaillés.
+- **Compléments protéinés** : la whey protéine (lactosérum) est une option pratique pour atteindre ses objectifs sans volume alimentaire excessif. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour des conseils détaillés.
 
 ### La leucine : un acide aminé clé
 

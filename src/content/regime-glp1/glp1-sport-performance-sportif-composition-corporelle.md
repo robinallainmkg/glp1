@@ -58,7 +58,7 @@ Chez le sportif, préserver la masse musculaire sous GLP-1 nécessite une strat�
 
 **L'entraînement en résistance :** Les exercices de musculation et de résistance (squats, soulevés de terre, tractions, exercices avec bandes élastiques) envoient un signal anabolique puissant qui contrebalance la tendance catabolique de la restriction calorique induite par le GLP-1. Deux à trois séances par semaine d'entraînement en résistance suffisent pour modifier significativement la composition de la perte de poids en faveur de la graisse.
 
-**Les apports protéiques :** Les GLP-1 réduisent l'appétit de 20 à 30 %. Chez le sportif qui a des besoins en protéines plus élevés (1,6 à 2,2 g/kg/jour contre 0,8 g/kg/jour en population générale), cette réduction spontanée des apports peut rapidement créer un déficit protéique. Il est donc essentiel de surveiller activement ses apports et, si nécessaire, de se supplémenter en protéines de qualité (whey, caséine, protéines végétales complètes). Notre article sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) détaille les stratégies pratiques.
+**Les apports protéiques :** Les GLP-1 réduisent l'appétit de 20 à 30 %. Chez le sportif qui a des besoins en protéines plus élevés (1,6 à 2,2 g/kg/jour contre 0,8 g/kg/jour en population générale), cette réduction spontanée des apports peut rapidement créer un déficit protéique. Il est donc essentiel de surveiller activement ses apports et, si nécessaire, de se supplémenter en protéines de qualité (whey, caséine, protéines végétales complètes). Notre article sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) détaille les stratégies pratiques.
 
 ### Données sur la force musculaire
 

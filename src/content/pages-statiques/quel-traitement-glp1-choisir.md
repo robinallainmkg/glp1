@@ -21,15 +21,15 @@ readingTime: 15
 ## Sommaire
 
 - [Introduction aux traitements GLP-1](#introduction-aux-traitements-glp-1)
-- [Les différents médicaments GLP-1 disponibles](#les-différents-médicaments-glp-1-disponibles)
-- [Tableau comparatif détaillé](#tableau-comparatif-détaillé)
-- [Critères pour choisir son traitement](#critères-pour-choisir-son-traitement)
-- [Effets secondaires et tolérance](#effets-secondaires-et-tolérance)
+- [Les différents médicaments GLP-1 disponibles](#les-differents-medicaments-glp-1-disponibles)
+- [Tableau comparatif détaillé](#tableau-comparatif-detaille)
+- [Critères pour choisir son traitement](#criteres-pour-choisir-son-traitement)
+- [Effets secondaires et tolérance](#effets-secondaires-et-tolerance)
 - [Prix et remboursement](#prix-et-remboursement)
-- [Études et résultats cliniques](#études-et-résultats-cliniques)
-- [Conseils pratiques pour bien débuter](#conseils-pratiques-pour-bien-débuter)
+- [Études et résultats cliniques](#etudes-et-resultats-cliniques)
+- [Conseils pratiques pour bien débuter](#conseils-pratiques-pour-bien-debuter)
 - [Alternatives aux GLP-1](#alternatives-aux-glp-1)
-- [FAQ - Questions fréquentes](#faq---questions-fréquentes)
+- [FAQ - Questions fréquentes](#faq---questions-frequentes)
 
 ## Quel traitement GLP-1 choisir ? Guide complet 2025
 
@@ -55,7 +55,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 - **Perte de poids** : 5-10% du poids corporel
 - **Posologie** : 1 injection par semaine
 - **Avantages** : Efficace sur le diabète, [protection cardiovasculaire](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/)
-- **Prix** : ~76,58€/stylo (prix public 2026)
+- **Prix** : ~80,18€/stylo (prix public 2026)
 
 #### Wegovy (sémaglutide 0,25-2,4 mg)
 - **Indications** : Obésité (IMC ≥30) ou surpoids (IMC ≥27 avec comorbidité)
@@ -106,7 +106,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Molécule | Indication | Perte poids | Fréquence | Prix/mois | Remboursement |
 |------------|----------|------------|-------------|-----------|-----------|---------------|
-| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~76,58€/stylo | 30% DT2 |
+| **Ozempic** | Sémaglutide | Diabète | 5-10% | Hebdomadaire | ~80,18€/stylo | 65% DT2 |
 | **Wegovy** | Sémaglutide HD | Obésité | 10-15% | Hebdomadaire | 169-360€ | Non remboursé |
 | **Mounjaro** | Tirzépatide | Diabète + Obésité | 15-20% | Hebdomadaire | 230-440€ | Non remboursé |
 | **Trulicity** | Dulaglutide | Diabète | 3-8% | Hebdomadaire | ~81€ | 65% DT2 |
@@ -201,7 +201,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 #### Taux de remboursement :
 - **65%** pour Trulicity (dulaglutide) et Victoza (liraglutide) en diabète de type 2.
-- **30%** pour Ozempic (sémaglutide) en diabète de type 2 (SMR modéré).
+- **65%** pour Ozempic (sémaglutide) en diabète de type 2 (en bithérapie metformine).
 - **Non remboursé** : Rybelsus (avis HAS défavorable), Wegovy, Mounjaro, Saxenda.
 - **Supplément** possible selon mutuelle pour les médicaments remboursés (30-35% restants)
 
@@ -209,7 +209,7 @@ Les agonistes du récepteur GLP-1 (Glucagon-Like Peptide-1) sont une classe de m
 
 | Médicament | Prix brut/mois | Remboursement SS | Coût net estimé |
 |------------|----------------|------------------|-----------------|
-| Ozempic | ~76,58€/stylo | 30% (DT2) | ~53,61€/stylo |
+| Ozempic | ~80,18€/stylo | 65% (DT2) | ~28,06€/stylo |
 | Victoza | ~60€ | 65% (DT2) | ~21€ |
 | Trulicity | ~81€ | 65% (DT2) | ~28€ |
 | Rybelsus | 80-110€ | Non remboursé | 80-110€ (à charge) |

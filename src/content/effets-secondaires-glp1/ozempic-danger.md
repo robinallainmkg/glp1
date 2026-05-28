@@ -326,7 +326,7 @@ Dépend de la gravité : effets mineurs (adaptation possible), effets graves (ar
 4. Adrénaline si anaphylaxie
 
 - [prix Ozempic France](/collections/glp1-cout/prix-ozempic-france/)
-- [régime Ozempic](/collections/regime-glp1/régime-cetogene-glp1/)
+- [régime Ozempic](/collections/regime-glp1/regime-cetogene-glp1/)
 - [effets secondaires Ozempic](/collections/effets-secondaires-glp1/ozempic-danger/)
 - [où trouver Ozempic](/collections/glp1-cout/acheter-wegovy-en-france/)
 - [médicaments GLP-1](/collections/traitements-glp1/nouveaux-glp1-orforglipron-cagrisema-2026/)

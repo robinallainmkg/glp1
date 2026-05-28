@@ -27,7 +27,7 @@ mainKeyword: "saxenda guide complet france liraglutide"
 ## Sommaire
 1. [Qu'est-ce que Saxenda ?](#quest-ce-quesaxenda)
 2. [Comment fonctionne Saxenda ?](#comment-fonctionne-saxenda)
-3. [Saxenda pour l'obésité](#saxenda-obésité)
+3. [Saxenda pour l'obésité](#saxenda-obesite)
 4. [Posologie et administration](#posologie-saxenda)
 5. [Comment commencer le traitement Saxenda ?](#comment-commencer-le-traitement-saxenda)
 6. [Alternatives à Saxenda](#alternatives-saxenda)

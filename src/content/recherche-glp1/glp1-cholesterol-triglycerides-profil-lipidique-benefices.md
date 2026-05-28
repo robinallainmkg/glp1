@@ -36,7 +36,7 @@ Chez les patients obèses ou en surpoids, la dyslipidémie — élévation du ch
 2. [Réduction du LDL cholestérol](#ldl)
 3. [Amélioration du HDL cholestérol](#hdl)
 4. [Mécanismes d'action sur le métabolisme lipidique](#mecanismes)
-5. [Données cliniques : LEADER, SUSTAIN, SURMOUNT](#données)
+5. [Données cliniques : LEADER, SUSTAIN, SURMOUNT](#donnees)
 6. [Mounjaro vs Wegovy sur le profil lipidique](#comparatif)
 7. [Ce que cela signifie pour les patients avec dyslipidémie](#pratique)
 8. [FAQ](#faq)

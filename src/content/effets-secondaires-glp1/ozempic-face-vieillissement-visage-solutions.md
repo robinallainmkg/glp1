@@ -45,7 +45,7 @@ Perdre du poids rapidement grâce à un traitement GLP-1 comme [Wegovy](/collect
 
 L'expression "Ozempic Face" a émergé aux États-Unis vers 2023, d'abord sur les réseaux sociaux, puis dans la presse médicale. Elle décrit l'aspect vieilli que peut prendre le visage lors d'une perte de poids rapide sous GLP-1 : le visage semble avoir "dégonflé", avec des joues creuses, des pommettes moins marquées, des rides plus visibles autour de la bouche et du menton, et un aspect général de vieillissement de 5 à 10 ans.
 
-Il ne s'agit pas, à proprement parler, d'un effet secondaire direct des médicaments GLP-1 sur la peau ou les tissus faciaux. C'est une conséquence indirecte de la **perte de poids rapide**, quelle qu'en soit la cause. La même observation a été faite lors de régimes très restrictifs ou après une [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/). Les GLP-1 sont simplement devenus suffisamment populaires pour que ce phénomène soit massivement documenté.
+Il ne s'agit pas, à proprement parler, d'un effet secondaire direct des médicaments GLP-1 sur la peau ou les tissus faciaux. C'est une conséquence indirecte de la **perte de poids rapide**, quelle qu'en soit la cause. La même observation a été faite lors de régimes très restrictifs ou après une [chirurgie bariatrique](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/). Les GLP-1 sont simplement devenus suffisamment populaires pour que ce phénomène soit massivement documenté.
 
 ## Pourquoi le visage vieillit-il sous GLP-1 ? {#mecanismes}
 
@@ -116,7 +116,7 @@ Les traitements GLP-1 permettent parfois des pertes de poids très rapides, mais
 
 ### Augmenter les apports protéinés
 
-Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par kilo de poids corporel par jour — permet de préserver la masse musculaire et de soutenir la synthèse de collagène. Les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) (zinc, vitamine C, sélénium) jouent également un rôle clé dans la santé cutanée. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-protéines/) pour des conseils pratiques.
+Un apport protéiné suffisant — idéalement 1,2 à 1,6 g de protéines par kilo de poids corporel par jour — permet de préserver la masse musculaire et de soutenir la synthèse de collagène. Les [micronutriments essentiels sous GLP-1](/collections/regime-glp1/glp1-micronutriments/) (zinc, vitamine C, sélénium) jouent également un rôle clé dans la santé cutanée. Consultez notre guide sur les [protéines sous GLP-1](/collections/regime-glp1/glp1-proteines/) pour des conseils pratiques.
 
 ### Prendre soin de sa peau
 

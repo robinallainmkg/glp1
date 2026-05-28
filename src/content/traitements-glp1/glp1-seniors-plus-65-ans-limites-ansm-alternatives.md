@@ -107,7 +107,7 @@ Un suivi par un diététicien spécialisé en nutrition de la personne âgée es
 
 ### La chirurgie bariatrique : une option pour les cas sévères
 
-La chirurgie bariatrique (sleeve, bypass gastrique) n'a pas de limite d'âge absolue, mais elle implique des [précautions chirurgicales sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-précautions-arret-traitement/) spécifiques à connaître. Pour les patients de plus de 65 ans présentant une obésité sévère (IMC ≥ 40 ou ≥ 35 avec comorbidités graves) et ayant une bonne condition cardio-respiratoire, la chirurgie peut être discutée en réunion pluridisciplinaire. L'âge avancé nécessite une évaluation préopératoire très complète et un suivi postopératoire renforcé.
+La chirurgie bariatrique (sleeve, bypass gastrique) n'a pas de limite d'âge absolue, mais elle implique des [précautions chirurgicales sous GLP-1](/collections/effets-secondaires-glp1/glp1-chirurgie-anesthesie-precautions-arret-traitement/) spécifiques à connaître. Pour les patients de plus de 65 ans présentant une obésité sévère (IMC ≥ 40 ou ≥ 35 avec comorbidités graves) et ayant une bonne condition cardio-respiratoire, la chirurgie peut être discutée en réunion pluridisciplinaire. L'âge avancé nécessite une évaluation préopératoire très complète et un suivi postopératoire renforcé.
 
 ### La prise en charge psychologique
 

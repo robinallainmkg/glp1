@@ -326,7 +326,7 @@ Votre médecin traitant doit rédiger une **lettre de recommandation** mentionna
 
 ### Évolution du remboursement
 
-📅 **Décembre 2025** : La HAS a rendu un **avis favorable** au remboursement de Mounjaro pour le diabète de type 2.
+📅 **Décembre 2025** : La HAS a rendu un **avis favorable** au [remboursement de Mounjaro](/collections/glp1-cout/remboursement-mounjaro-obesite-has-ceps-calendrier-conditions-2026/) pour le diabète de type 2.
 - Des négociations de prix avec le CEPS sont en cours
 - Le remboursement à 65% est attendu pour le 2e semestre 2026
 - Critères prévisionnels : Diabète de type 2 insuffisamment contrôlé, IMC ≥ 30 kg/m²

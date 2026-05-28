@@ -140,7 +140,7 @@ Eli Lilly travaille également sur des formulations orales de tirzepatide, mais 
 
 Le sémaglutide oral haute dose représente l'évolution naturelle des traitements GLP-1 : une molécule déjà prouvée, rendue accessible sans injection. Si la contrainte de la prise à jeun persiste, elle est jugée acceptable par la majorité des patients dans les études cliniques.
 
-Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprimé-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
+Novo Nordisk travaille également sur un [Wegovy en comprimé oral](/collections/traitements-glp1/wegovy-comprime-oral-pilule-france-date-ema/), dont l'arrivée en France est prévue d'ici 2027-2028, après les procédures réglementaires européennes. En attendant, les patients éligibles peuvent déjà accéder aux formes injectables ou à Rybelsus (pour le diabète de type 2).
 
 ---
 

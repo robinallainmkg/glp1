@@ -63,7 +63,7 @@ Le risque cardiovasculaire d'un patient avec un syndrome métabolique est multip
 
 ### Action 1 : La réduction de la graisse abdominale
 
-La [graisse viscérale](/collections/glp1-perte-de-poids/glp1-graisse-abdominale-viscerale-ozempic-mounjaro-résultats/) — celle qui s'accumule autour des organes dans la cavité abdominale — est la composante centrale du syndrome métabolique. C'est elle qui est responsable de la résistance à l'insuline et qui entretient l'inflammation chronique de bas grade.
+La [graisse viscérale](/collections/glp1-perte-de-poids/glp1-graisse-abdominale-viscerale-ozempic-mounjaro-resultats/) — celle qui s'accumule autour des organes dans la cavité abdominale — est la composante centrale du syndrome métabolique. C'est elle qui est responsable de la résistance à l'insuline et qui entretient l'inflammation chronique de bas grade.
 
 Les GLP-1 réduisent préférentiellement la graisse viscérale par rapport à la graisse sous-cutanée. Dans l'étude SURMOUNT-1, le tirzépatide (Mounjaro) a réduit la graisse viscérale de **-40,1 %** versus -7,3 % dans le groupe placebo. Le sémaglutide (Wegovy) dans les études STEP montre des résultats similaires, avec une réduction marquée du tour de taille.
 

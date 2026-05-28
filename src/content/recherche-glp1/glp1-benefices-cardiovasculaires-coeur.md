@@ -118,9 +118,9 @@ SELECT est l'étude la plus importante pour les patients obèses non diabétique
 
 ### Une indication qui se confirme
 
-L'insuffisance cardiaque à fraction d'éjection préservée (IC-FEP), également appelée insuffisance cardiaque diastolique, est une pathologie où le coeur se contracte normalement mais ne se relaxe pas suffisamment. Elle est très fréquente chez les patients obèses et représentait jusqu'à récemment un domaine thérapeutique difficile. Pour les patients concernés, consultez notre guide sur les [GLP-1 et insuffisance cardiaque : contre-indications et précautions](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-précautions/).
+L'insuffisance cardiaque à fraction d'éjection préservée (IC-FEP), également appelée insuffisance cardiaque diastolique, est une pathologie où le coeur se contracte normalement mais ne se relaxe pas suffisamment. Elle est très fréquente chez les patients obèses et représentait jusqu'à récemment un domaine thérapeutique difficile. Pour les patients concernés, consultez notre guide sur les [GLP-1 et insuffisance cardiaque : contre-indications et précautions](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/).
 
-L'[étude SUMMIT sur le tirzepatide et l'insuffisance cardiaque](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-résultats-france/) a confirmé ces résultats pour le double agoniste GLP-1/GIP. L'**étude STEP-HFpEF** publiée dans le *NEJM* en 2023 a montré que le sémaglutide 2,4 mg (Wegovy) réduit de manière significative :
+L'[étude SUMMIT sur le tirzepatide et l'insuffisance cardiaque](/collections/recherche-glp1/mounjaro-tirzepatide-insuffisance-cardiaque-summit-resultats-france/) a confirmé ces résultats pour le double agoniste GLP-1/GIP. L'**étude STEP-HFpEF** publiée dans le *NEJM* en 2023 a montré que le sémaglutide 2,4 mg (Wegovy) réduit de manière significative :
 - Les symptômes d'insuffisance cardiaque (score KCCQ : +7,8 points vs +3,1 pour le placebo)
 - La distance parcourue en 6 minutes (+21,5 m vs +1,2 m)
 - Le poids corporel (–13,3% vs –2,6%)
@@ -170,7 +170,7 @@ Le mécanisme suspecté implique la réduction de l'inflammation auriculaire, la
 
 En France, les recommandations de la **Société Française de Cardiologie** (SFC) et de la **Société Francophone du Diabète** (SFD) intègrent les GLP-1 comme traitement de première ligne (après la metformine) chez les patients diabétiques de type 2 présentant une maladie cardiovasculaire établie ou un risque élevé.
 
-Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, un antécédent d'AVC, ou une [insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-précautions/)**, votre cardiologue ou diabétologue devrait discuter avec vous d'une prescription d'Ozempic ou d'un autre GLP-1 remboursé — indépendamment de votre poids.
+Concrètement, si vous avez un **diabète de type 2 + une maladie coronarienne, un antécédent d'AVC, ou une [insuffisance cardiaque](/collections/traitements-glp1/glp1-insuffisance-cardiaque-contre-indications-guide-patient-precautions/)**, votre cardiologue ou diabétologue devrait discuter avec vous d'une prescription d'Ozempic ou d'un autre GLP-1 remboursé — indépendamment de votre poids.
 
 ### Remboursement dans l'indication cardiovasculaire
 
@@ -180,7 +180,7 @@ Pour les patients obèses sans diabète mais à haut risque cardiovasculaire (é
 
 ### Consultez un cardiologue si vous avez un risque cardiovasculaire
 
-Si vous êtes sous traitement GLP-1 et que vous présentez des facteurs de risque cardiovasculaire (tabagisme, hypertension, antécédent familial d'infarctus, altération du [profil lipidique et cholestérol](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-bénéfices/)/), il est recommandé de :
+Si vous êtes sous traitement GLP-1 et que vous présentez des facteurs de risque cardiovasculaire (tabagisme, hypertension, antécédent familial d'infarctus, altération du [profil lipidique et cholestérol](/collections/recherche-glp1/glp1-cholesterol-triglycerides-profil-lipidique-benefices/)/), il est recommandé de :
 1. Demander à votre médecin un bilan cardiovasculaire complet
 2. Discuter de l'optimisation de votre traitement GLP-1 en fonction du risque cardiovasculaire
 3. Associer les mesures hygiéno-diététiques recommandées (activité physique, régime méditerranéen)
@@ -206,6 +206,6 @@ Les deux classes protègent le coeur, mais par des mécanismes différents. Les 
 
 ---
 
-La protection cardio-vasculaire des GLP-1 s'accompagne d'une [protection rénale des GLP-1](/collections/recherche-glp1/glp1-insuffisance-rénale-nephroprotetion-diabete/) documentée dans l'étude FLOW pour le sémaglutide — un bénéfice complémentaire particulièrement précieux pour les patients diabétiques avec insuffisance rénale chronique. Ces mêmes voies métaboliques expliquent également les [bénéfices du sémaglutide sur le foie gras (MASH)](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), une comorbidité fréquente chez les patients à risque cardiovasculaire.
+La protection cardio-vasculaire des GLP-1 s'accompagne d'une [protection rénale des GLP-1](/collections/recherche-glp1/glp1-insuffisance-renale-nephroprotetion-diabete/) documentée dans l'étude FLOW pour le sémaglutide — un bénéfice complémentaire particulièrement précieux pour les patients diabétiques avec insuffisance rénale chronique. Ces mêmes voies métaboliques expliquent également les [bénéfices du sémaglutide sur le foie gras (MASH)](/collections/recherche-glp1/glp1-steatose-hepatique-nash-foie/), une comorbidité fréquente chez les patients à risque cardiovasculaire.
 
 *Ces informations sont fournies à titre éducatif sur la base des données scientifiques disponibles en mars 2026. Elles ne remplacent pas l'avis d'un cardiologue ou d'un endocrinologue. Si vous avez des questions sur votre traitement, consultez votre médecin.*

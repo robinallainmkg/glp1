@@ -61,19 +61,19 @@ Découvrez tous les **médicaments GLP-1 disponibles en France** pour votre pert
 - **Laboratoire :** Novo Nordisk
 - **Indications :** Diabète type 2
 - **Posologie :** 0.6mg à 1.8mg/jour
-- **Prix :** ~60,26€/mois (remboursé 30% DT2)
+- **Prix :** ~60,26€/mois (remboursé 65% DT2)
 
 ### 6. **Rybelsus (Sémaglutide oral)**
 - **Laboratoire :** Novo Nordisk
 - **Indications :** Diabète type 2
 - **Posologie :** 3mg à 14mg/jour
-- **Prix :** 80-110€/mois (remboursé 30% DT2)
+- **Prix :** 80-110€/mois (non remboursé en France, avis HAS défavorable)
 
 ## Efficacité des GLP-1 pour la Perte de Poids
 
 ### Résultats Cliniques Prouvés
 
-**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France. Pour aller plus loin, consultez les [résultats avant/après des traitements GLP-1](/collections/avant-après-glp1/avant-après-glp1-résultats-reels/) de vrais patients.
+**Les médicaments GLP-1 offrent des résultats exceptionnels** pour la perte de poids durable. Découvrez pourquoi ces traitements révolutionnent la prise en charge de l'obésité en France. Pour aller plus loin, consultez les [résultats avant/après des traitements GLP-1](/collections/avant-apres-glp1/avant-apres-glp1-resultats-reels/) de vrais patients.
 
 - **Perte de poids moyenne :** 8-15% du poids corporel en 6-12 mois
 - **Ozempic/Wegovy :** Jusqu'à 15-20% de perte de poids (jusqu'à 15kg)
@@ -131,7 +131,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 **Le remboursement des médicaments GLP-1 dépend de votre situation médicale.** Pour toutes les conditions détaillées, consultez notre [guide complet du remboursement GLP-1 2026](/collections/glp1-cout/remboursement-glp1-2026/).
 
-- **Diabète type 2 :** 30% remboursé par la Sécurité Sociale (100% en ALD 30) — depuis février 2025, un formulaire obligatoire encadre la prescription selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
+- **Diabète type 2 :** 65% remboursé par la Sécurité Sociale en bithérapie metformine (100% en ALD 30) — depuis février 2025, un formulaire obligatoire encadre la prescription selon les [règles ANSM de prescription des GLP-1](/collections/traitements-glp1/ansm-regles-prescription-glp1-france/)
 - **Obésité (IMC ≥30) :** Wegovy, Mounjaro et Saxenda ne sont **pas remboursés** en France (mars 2026)
 - **ALD 30 (diabète de type 2) :** 100% du ticket modérateur pour Ozempic
 - **Mutuelle santé :** Peut couvrir le reste à charge selon votre contrat
@@ -190,7 +190,7 @@ Pour maximiser les résultats de votre traitement GLP-1, voici les facteurs clé
 
 **La première étape indispensable** pour [commencer un traitement GLP-1](/collections/medecins-glp1-france/comment-commencer-traitement-glp1-france/) est une consultation médicale complète avec votre médecin.
 
-- **Médecin traitant** ou **endocrinologue** spécialisé en diabète/obésité — il est aussi possible d'[obtenir une prescription GLP-1 en ligne](/collections/medecins-glp1-france/prescription-glp1-télémédecine-en-ligne-france/) via la télémédecine
+- **Médecin traitant** ou **endocrinologue** spécialisé en diabète/obésité — il est aussi possible d'[obtenir une prescription GLP-1 en ligne](/collections/medecins-glp1-france/prescription-glp1-telemedecine-en-ligne-france/) via la télémédecine
 - **Bilan sanguin complet :** Glycémie, HbA1c, cholestérol, triglycérides
 - **Évaluation IMC** et composition corporelle
 - **Recherche de comorbidités :** Hypertension, apnée du sommeil, etc.

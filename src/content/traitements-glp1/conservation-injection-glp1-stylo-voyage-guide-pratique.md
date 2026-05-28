@@ -32,7 +32,7 @@ Vous avez commencé un traitement par GLP-1 — [Ozempic](/collections/traitemen
 ## Sommaire
 
 1. [Règles de conservation générales](#conservation)
-2. [Conservation après ouverture du stylo](#après-ouverture)
+2. [Conservation après ouverture du stylo](#apres-ouverture)
 3. [Voyager avec un stylo GLP-1](#voyage)
 4. [Prendre l'avion avec son traitement](#avion)
 5. [Technique d'injection correcte](#injection)

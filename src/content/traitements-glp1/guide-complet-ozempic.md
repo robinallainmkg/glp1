@@ -27,7 +27,7 @@ mainKeyword: "ozempic guide complet france posologie prix"
 ## Sommaire
 1. [Qu'est-ce qu'Ozempic ?](#quest-ce-quozempic)
 2. [Comment fonctionne Ozempic ?](#comment-fonctionne-ozempic)
-3. [Ozempic pour le diabète de type 2](#ozempic-diabète-type-2)
+3. [Ozempic pour le diabète de type 2](#ozempic-diabete-type-2)
 4. [Ozempic pour la perte de poids](#ozempic-perte-poids)
 5. [Posologie et administration](#posologie-ozempic)
 6. [Comment commencer le traitement Ozempic ?](#comment-commencer-le-traitement-ozempic)
@@ -61,7 +61,7 @@ Ozempic est indiqué dans le traitement du diabète de type 2 chez l'adulte, en 
 ### Avantages dans le diabète
 - Réduction significative de l'HbA1c (-1,5 à -2%)
 - Perte de poids moyenne de 5-10 kg
-- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) du sémaglutide — voir aussi le [témoignage de Bernard, diabétique type 2, -18 kg sous Ozempic](/collections/temoignages/témoignage-homme-diabete-type2-ozempic-perte-poids/)
+- Réduction du risque cardiovasculaire grâce aux [bénéfices cardiovasculaires](/collections/recherche-glp1/glp1-benefices-cardiovasculaires-coeur/) du sémaglutide — voir aussi le [témoignage de Bernard, diabétique type 2, -18 kg sous Ozempic](/collections/temoignages/temoignage-homme-diabete-type2-ozempic-perte-poids/)
 - Une injection hebdomadaire seulement
 
 ### Efficacité prouvée
@@ -74,7 +74,7 @@ Dans les études cliniques, Ozempic a démontré une supériorité par rapport a
 Cependant, une perte de poids est souvent observée comme effet bénéfique chez les patients diabétiques traités par Ozempic :
 
 ### Effets sur le poids chez les patients diabétiques
-- **Perte de poids moyenne** : 5 à 10 kg chez les patients DT2 — découvrez le [témoignage de Sophie, -28 kg à 52 ans](/collections/temoignages/témoignage-sophie-transformation-glp1/)
+- **Perte de poids moyenne** : 5 à 10 kg chez les patients DT2 — découvrez le [témoignage de Sophie, -28 kg à 52 ans](/collections/temoignages/temoignage-sophie-transformation-glp1/)
 - **Amélioration des comorbidités** : Réduction de l'hypertension, amélioration du sommeil
 
 Pour les patients souhaitant un traitement spécifiquement indiqué pour l'obésité, il existe [**Wegovy**](/collections/traitements-glp1/guide-complet-wegovy/) (semaglutide 2,4 mg), qui contient la même molécule à une dose plus élevée et dispose d'une AMM pour la gestion du poids.
@@ -84,10 +84,9 @@ Pour les patients souhaitant un traitement spécifiquement indiqué pour l'obés
 ### Schéma posologique
 Ozempic s'administre une fois par semaine, à la même heure chaque semaine.
 
-**Semaine 1-4** : 0,25 mg  
-**Semaine 5-8** : 0,5 mg  
-**Semaine 9-12** : 1 mg  
-**Semaine 13+** : 2 mg (dose maximale)
+**Semaine 1-4** : 0,25 mg
+**Semaine 5-8** : 0,5 mg
+**Semaine 9+** : 1 mg (dose maximale, dose d'entretien)
 
 ### Technique d'injection
 - Injection sous-cutanée (abdomen, cuisse ou bras supérieur)
@@ -120,16 +119,11 @@ Pour un parcours détaillé applicable à tous les GLP-1, consultez notre guide 
 - Ajustement selon tolérance
 - Premiers signes d'efficacité
 
-### Étape 4 : Optimisation (8-12 semaines)
-**Atteinte de la dose efficace** :
-- Semaine 9-12 : Passage à 1 mg
+### Étape 4 : Traitement d'entretien (à partir de 9 semaines)
+**Stabilisation à la dose maximale** :
+- Semaine 9+ : Passage à 1 mg (dose maximale d'entretien)
 - Évaluation des résultats
 - Ajustement thérapeutique si nécessaire
-- Préparation à la dose d'entretien
-
-### Étape 5 : Traitement d'entretien (à partir de 12 semaines)
-**Stabilisation** :
-- Dose maximale : 2 mg/semaine
 - Contrôles réguliers trimestriels
 - Surveillance poids et glycémie
 - Réajustement si nécessaire

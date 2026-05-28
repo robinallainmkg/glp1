@@ -43,7 +43,7 @@ Les **inhibiteurs des SGLT2** (iSGLT2, ou gliflozines) représentent une classe 
 2. [Liste des iSGLT2 disponibles en France](#liste-isglt2-france)
 3. [Prix et remboursement des iSGLT2](#prix-remboursement)
 4. [iSGLT2 et GLP-1 : peut-on combiner ?](#combination-glp1)
-5. [Précautions et effets secondaires](#précautions)
+5. [Précautions et effets secondaires](#precautions)
 6. [FAQ](#faq)
 
 ## Qu'est-ce qu'un iSGLT2 ?

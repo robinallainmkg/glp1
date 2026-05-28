@@ -27,7 +27,7 @@ mainKeyword: "Rybelsus Guide Complet France"
 ## Sommaire
 1. [Qu'est-ce que Rybelsus ?](#quest-ce-querybelsus)
 2. [Comment fonctionne Rybelsus ?](#comment-fonctionne-rybelsus)
-3. [Rybelsus pour le diabète de type 2](#rybelsus-diabète-type-2)
+3. [Rybelsus pour le diabète de type 2](#rybelsus-diabete-type-2)
 4. [Posologie et administration](#posologie-rybelsus)
 5. [Comment commencer le traitement Rybelsus ?](#comment-commencer-le-traitement-rybelsus)
 6. [Alternatives à Rybelsus](#alternatives-rybelsus)
@@ -35,7 +35,7 @@ mainKeyword: "Rybelsus Guide Complet France"
 
 ## Qu'est-ce que Rybelsus ?
 
-Rybelsus est le premier médicament GLP-1 administrable par voie orale, développé par Novo Nordisk. Rybelsus contient du semaglutide, le même principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), mais formulé sous forme de [sémaglutide oral en comprimé](/collections/traitements-glp1/semaglutide-oral-comprimé-ozempic-france/) pour une absorption digestive.
+Rybelsus est le premier médicament GLP-1 administrable par voie orale, développé par Novo Nordisk. Rybelsus contient du semaglutide, le même principe actif qu'[Ozempic](/collections/traitements-glp1/guide-complet-ozempic/) et [Wegovy](/collections/traitements-glp1/guide-complet-wegovy/), mais formulé sous forme de [sémaglutide oral en comprimé](/collections/traitements-glp1/semaglutide-oral-comprime-ozempic-france/) pour une absorption digestive.
 
 **Nom générique** : Semaglutide  
 **Laboratoire** : Novo Nordisk  
