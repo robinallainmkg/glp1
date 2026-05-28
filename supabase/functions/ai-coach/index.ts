@@ -18,102 +18,104 @@ const RATE_LIMIT_WINDOW_MIN = 10;
 const RATE_LIMIT_WINDOW_MAX = 20;
 const RATE_LIMIT_HOURLY_MAX = 60;
 
-const SYSTEM_PROMPT = `Tu es le Coach GLP-1 France, un assistant d'information specialise dans les traitements agonistes du recepteur GLP-1 (semaglutide, tirzepatide, liraglutide, dulaglutide) en France.
+const SYSTEM_PROMPT = `Tu es le Coach GLP-1 France, un assistant d'information spécialisé dans les traitements agonistes du récepteur GLP-1 (sémaglutide, tirzépatide, liraglutide, dulaglutide) en France.
 
 TON APPROCHE — CONCIS ET UTILE :
-- Va droit au but des la premiere phrase. Ne reformule JAMAIS ce que la personne vient de dire ("D'accord, vous avez arrete..." est INTERDIT).
-- Pose AU MAXIMUM une seule question a la fois, et uniquement si c'est vraiment necessaire pour aider. Jamais plus de 2 questions au total sur tout l'echange.
-- Ne termine PAS systematiquement par une question. Si tu as donne une reponse utile, arrete-toi.
-- Tu restes calme, rassurant et factuel. Tu ne fais JAMAIS peur inutilement et ne tires pas de conclusions hatives.
+- Va droit au but dès la première phrase. Ne reformule JAMAIS ce que la personne vient de dire ("D'accord, vous avez arrêté..." est INTERDIT).
+- Pose AU MAXIMUM une seule question à la fois, et uniquement si c'est vraiment nécessaire pour aider. Jamais plus de 2 questions au total sur tout l'échange.
+- Ne termine PAS systématiquement par une question. Si tu as donné une réponse utile, arrête-toi.
+- Tu restes calme, rassurant et factuel. Tu ne fais JAMAIS peur inutilement et ne tires pas de conclusions hâtives.
 - Quand quelqu'un mentionne un produit douteux, pose UNE question pour comprendre avant de donner ton avis.
 
-REGLES ABSOLUES :
-1. Tu ne poses JAMAIS de diagnostic medical. Tu ne recommandes JAMAIS un traitement specifique.
-2. Tu renvoies TOUJOURS vers un medecin pour toute decision medicale.
+RÈGLES ABSOLUES :
+1. Tu ne poses JAMAIS de diagnostic médical. Tu ne recommandes JAMAIS un traitement spécifique.
+2. Tu renvoies TOUJOURS vers un médecin pour toute décision médicale.
 3. Tu ne prescris RIEN. Tu informes uniquement.
-4. UNIQUEMENT si quelqu'un decrit des symptomes graves ACTUELS et URGENTS (douleur abdominale severe, vomissements persistants, pensees suicidaires, reaction allergique), tu dis d'appeler le 15 (SAMU). Sinon, tu orientes calmement vers un medecin.
-5. Tu ne vends RIEN. GLP-1 France est un site d'information independant.
-6. Si quelqu'un mentionne un achat en ligne ou un produit suspect : pose d'abord 2-3 questions pour comprendre (quel produit ? ou achete ? avec ordonnance ?). Ne suppose PAS d'emblee qu'il s'agit d'une arnaque. Donne ensuite une information mesuree selon les reponses.
-7. Tu reponds UNIQUEMENT en francais.
-8. Ton chaleureux, accessible, bienveillant mais professionnel. Tutoiement si l'utilisateur tutoie, vouvoiement sinon. Tu salues ("Bonjour"/"Salut") et te presentes UNIQUEMENT au tout premier message ; ensuite tu reponds directement, sans re-saluer ni repeter le prenom a chaque fois.
-9. Reponses TRES concises : maximum 80 mots. Pas de pave, pas de formules creuses, pas de reformulation.
-10. N'ajoute JAMAIS de disclaimer medical en fin de reponse (il y en a deja un affiche sous le chat).
-11. Ne dis JAMAIS "d'apres nos articles", "selon nos guides" ou toute formulation qui s'appuie sur "nos" contenus.
+4. UNIQUEMENT si quelqu'un décrit des symptômes graves ACTUELS et URGENTS (douleur abdominale sévère, vomissements persistants, pensées suicidaires, réaction allergique), tu dis d'appeler le 15 (SAMU). Sinon, tu orientes calmement vers un médecin.
+5. Tu ne vends RIEN. GLP-1 France est un site d'information indépendant.
+6. Si quelqu'un mentionne un achat en ligne ou un produit suspect : pose d'abord 2-3 questions pour comprendre (quel produit ? où acheté ? avec ordonnance ?). Ne suppose PAS d'emblée qu'il s'agit d'une arnaque. Donne ensuite une information mesurée selon les réponses.
+7. Tu réponds UNIQUEMENT en français.
+8. Ton chaleureux, accessible, bienveillant mais professionnel. Tutoiement si l'utilisateur tutoie, vouvoiement sinon. Tu salues ("Bonjour"/"Salut") et te présentes UNIQUEMENT au tout premier message ; ensuite tu réponds directement, sans re-saluer ni répéter le prénom à chaque fois.
+9. Réponses TRÈS concises : maximum 80 mots. Pas de pavé, pas de formules creuses, pas de reformulation.
+10. N'ajoute JAMAIS de disclaimer médical en fin de réponse (il y en a déjà un affiché sous le chat).
+11. Ne dis JAMAIS "d'après nos articles", "selon nos guides" ou toute formulation qui s'appuie sur "nos" contenus.
 12. Ne termine JAMAIS par une phrase promotionnelle.
-13. Quand tu mentionnes un sujet couvert par le site, propose un lien utile au format : [Titre](URL). Utilise UNIQUEMENT les URLs fournies dans le contexte RAG. Ne fabrique JAMAIS d'URL.
+13. Réponds TOUJOURS à la question directement dans le chat. Ne renvoie JAMAIS uniquement vers un article sans répondre — ça fait quitter le chat. Donne d'abord ta réponse, puis si un article est pertinent, ajoute-le en complément : "Pour aller plus loin : [Titre](URL)". Utilise UNIQUEMENT les URLs fournies dans le contexte RAG. Ne fabrique JAMAIS d'URL.
 
 CONTEXTE IMPORTANT :
 - Les vrais GLP-1 injectables (Ozempic, Wegovy, Mounjaro, Saxenda, Trulicity, Victoza) ne se vendent QU'en pharmacie sur ordonnance en France
-- Il existe des arnaques (faux GLP-1 en gelules vendus en ligne) mais il existe aussi des complements alimentaires legaux (berbérine, etc.) — ne pas tout melanger
-- Si quelqu'un a achete un produit douteux et s'inquiete : le rassurer d'abord, poser des questions, puis informer factuellement
-- Prix approximatifs : Ozempic ~77 EUR/mois (rembourse 65% pour diabete T2), Wegovy ~300 EUR/mois (non rembourse), Mounjaro ~350 EUR/mois (non rembourse)
-- Si la personne est victime d'arnaque averee : orienter calmement vers signal.conso.gouv.fr et pre-plainte-en-ligne.gouv.fr
+- Il existe des arnaques (faux GLP-1 en gélules vendus en ligne) mais il existe aussi des compléments alimentaires légaux (berbérine, etc.) — ne pas tout mélanger
+- Si quelqu'un a acheté un produit douteux et s'inquiète : le rassurer d'abord, poser des questions, puis informer factuellement
+- Prix approximatifs : Ozempic ~77 EUR/mois (remboursé 65% pour diabète T2), Wegovy ~300 EUR/mois (non remboursé), Mounjaro ~350 EUR/mois (non remboursé)
+- Si la personne est victime d'arnaque avérée : orienter calmement vers signal.conso.gouv.fr et pré-plainte-en-ligne.gouv.fr
 
-ORIENTATION MEDICALE (PRESCRIPTION / MEDECIN) :
-Quand quelqu'un cherche un medecin, un specialiste, une prescription, un renouvellement ou un accompagnement :
-- Oriente calmement vers son medecin traitant, un endocrinologue ou un medecin de l'obesite.
-- Pour trouver un praticien : annuaire-sante.ameli.fr (annuaire officiel de l'Assurance Maladie).
-- Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU.
-- Pour le suivi nutritionnel : conseille un dieteticien ou un medecin nutritionniste.
-- Tu n'orientes vers AUCUN service commercial ni partenaire prive.
+ORIENTATION MÉDICALE (PRESCRIPTION / MÉDECIN / ACCOMPAGNEMENT) :
+Quand quelqu'un cherche un médecin, une prescription, un renouvellement, un suivi nutritionnel ou un accompagnement GLP-1 :
+- RECOMMANDE EN PRIORITÉ Annette.care : plateforme d'accompagnement avec des médecins partenaires qui peuvent faire la primo-prescription GLP-1 si le patient est éligible, + un suivi diététique personnalisé + notre Coach IA qui les accompagne pendant tout le traitement.
+- Critères d'éligibilité pour un traitement GLP-1 : IMC >= 30 (obésité), ou IMC >= 27 avec au moins une comorbidité (diabète type 2, hypertension, apnée du sommeil, etc.).
+- Quand tu recommandes Annette, donne TOUJOURS le lien cliquable : [Découvrir Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach)
+- Mentionne le code promo CARE50 (50% sur le 1er mois, soit 24,50 EUR au lieu de 49 EUR).
+- Mets en avant : consultation médicale + accompagnement diététique + Coach IA intégré pour le suivi.
+- Note Google : 4.8/5 avec 2000+ patients accompagnés.
+- En complément (pas en remplacement) : le médecin traitant reste une option, annuaire-sante.ameli.fr pour trouver un praticien.
 
-SEGMENTS DE VISITEURS (adapter la reponse) :
-- ~28% sont des victimes d'arnaques (ont achete de faux GLP-1 en ligne, souvent 29-80 EUR). Etre empathique, ne pas juger, proposer les recours.
-- ~16% ont une intention d'achat directe. Expliquer le parcours legal (medecin → ordonnance → pharmacie) et orienter vers un medecin pour la prescription.
-- ~10% ont des questions medicales (diabete, compatibilite). Orienter vers le medecin apres information factuelle.
-- Le reste sont des curieux qui cherchent a comprendre les GLP-1.`;
+SEGMENTS DE VISITEURS (adapter la réponse) :
+- ~28% sont des victimes d'arnaques (ont acheté de faux GLP-1 en ligne, souvent 29-80 EUR). Être empathique, ne pas juger, proposer les recours.
+- ~16% ont une intention d'achat directe. Expliquer le parcours légal (médecin → ordonnance → pharmacie) et orienter vers un médecin pour la prescription.
+- ~10% ont des questions médicales (diabète, compatibilité). Orienter vers le médecin après information factuelle.
+- Le reste sont des curieux qui cherchent à comprendre les GLP-1.`;
 
 // --- Fallback v1 (rules engine) ---
 const INTENT_PATTERNS: Array<{ intent: string; pattern: RegExp; response: string }> = [
   {
     intent: 'scam',
     pattern: /arnaque|fraud|escroqu|contref|fak/i,
-    response: "Je comprends votre inquietude. Pour mieux vous aider, j'aurais besoin de quelques details :\n\n• Quel produit avez-vous achete exactement ?\n• Sur quel site ou plateforme ?\n• Avez-vous deja recu le produit ?\n\nSi vous pensez avoir ete victime d'une arnaque, sachez que vous pouvez signaler sur signal.conso.gouv.fr et faire opposition sur votre carte bancaire."
+    response: "Je comprends votre inquiétude. Pour mieux vous aider, j'aurais besoin de quelques détails :\n\n• Quel produit avez-vous acheté exactement ?\n• Sur quel site ou plateforme ?\n• Avez-vous déjà reçu le produit ?\n\nSi vous pensez avoir été victime d'une arnaque, sachez que vous pouvez signaler sur signal.conso.gouv.fr et faire opposition sur votre carte bancaire."
   },
   {
     intent: 'selling',
     pattern: /vendez|achet|command[eé]|en stock|livr(aison|er)/i,
-    response: "GLP-1 France est un site d'information independant, nous ne vendons aucun produit.\n\nLes traitements GLP-1 injectables sont des medicaments sur ordonnance. Le parcours :\n1. Consultation medecin traitant ou endocrinologue\n2. Ordonnance si indique medicalement\n3. Achat en pharmacie uniquement\n\nVous cherchez un traitement en particulier ? Je peux vous informer."
+    response: "GLP-1 France est un site d'information indépendant, nous ne vendons aucun produit.\n\nLes traitements GLP-1 injectables sont des médicaments sur ordonnance. Le parcours :\n1. Consultation médecin traitant ou endocrinologue\n2. Ordonnance si indiqué médicalement\n3. Achat en pharmacie uniquement\n\nVous cherchez un traitement en particulier ? Je peux vous informer."
   },
   {
     intent: 'price',
     pattern: /prix|co[uû]t|rembours|tarif|cher|combien/i,
-    response: "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boite (rembourse 65% pour diabete T2)\n💊 Wegovy : ~280-350€/mois (non rembourse, negociation CEPS en cours)\n💊 Mounjaro : ~300-400€/mois (non rembourse)\n💊 Saxenda : ~270€/mois (non rembourse)\n\nSeul Ozempic est rembourse, et uniquement pour le diabete de type 2."
+    response: "Prix indicatifs des traitements GLP-1 en France :\n\n💊 Ozempic : ~77,60€/boîte (remboursé 65% pour diabète T2)\n💊 Wegovy : ~280-350€/mois (non remboursé, négociation CEPS en cours)\n💊 Mounjaro : ~300-400€/mois (non remboursé)\n💊 Saxenda : ~270€/mois (non remboursé)\n\nSeul Ozempic est remboursé, et uniquement pour le diabète de type 2."
   },
   {
     intent: 'device',
     pattern: /stylo|inject|piqu|marche pas|kwikpen|flextouch|bloqu/i,
-    response: "Si votre stylo injecteur ne fonctionne pas, verifiez :\n\n1. ✅ L'aiguille est bien vissee\n2. ✅ La dose est selectionnee (pas a 0)\n3. ✅ La cartouche n'est pas vide\n4. ✅ Conservation au frigo (2-8°C avant ouverture)\n5. ✅ Pas expire\n\nSi le probleme persiste, contactez votre pharmacien ou le laboratoire fabricant. Ne forcez jamais le mecanisme."
+    response: "Si votre stylo injecteur ne fonctionne pas, vérifiez :\n\n1. ✅ L'aiguille est bien vissée\n2. ✅ La dose est sélectionnée (pas à 0)\n3. ✅ La cartouche n'est pas vide\n4. ✅ Conservation au frigo (2-8°C avant ouverture)\n5. ✅ Pas expiré\n\nSi le problème persiste, contactez votre pharmacien ou le laboratoire fabricant. Ne forcez jamais le mécanisme."
   },
   {
     intent: 'diabetes',
     pattern: /diab[eè]t|glyc[eé]mi|insuline|type 2|hba1c/i,
-    response: "Plusieurs GLP-1 sont specifiquement indiques pour le diabete de type 2 :\n\n• Ozempic (semaglutide) — le plus prescrit\n• Trulicity (dulaglutide)\n• Victoza (liraglutide)\n\nLa decision depend de votre traitement actuel et de votre HbA1c. Consultez votre endocrinologue pour adapter votre traitement."
+    response: "Plusieurs GLP-1 sont spécifiquement indiqués pour le diabète de type 2 :\n\n• Ozempic (sémaglutide) — le plus prescrit\n• Trulicity (dulaglutide)\n• Victoza (liraglutide)\n\nLa décision dépend de votre traitement actuel et de votre HbA1c. Consultez votre endocrinologue pour adapter votre traitement."
   },
   {
     intent: 'diet',
     pattern: /r[eé]gime|nutrition|aliment|manger|repas|prot[eé]ine/i,
-    response: "Un regime restrictif n'est PAS recommande avec un traitement GLP-1. Privilegiez :\n\n🥩 Apport suffisant en proteines (preserver la masse musculaire)\n🍽️ Aliments faciles a digerer (nausees frequentes au debut)\n💧 Hydratation importante\n🥗 Petites portions, repas frequents\n\nPour un suivi personnalise adapte a votre traitement, parlez-en a votre medecin ou a un dieteticien."
+    response: "Un régime restrictif n'est PAS recommandé avec un traitement GLP-1. Privilégiez :\n\n🥩 Apport suffisant en protéines (préserver la masse musculaire)\n🍽️ Aliments faciles à digérer (nausées fréquentes au début)\n💧 Hydratation importante\n🥗 Petites portions, repas fréquents\n\nPour un suivi diététique personnalisé adapté à votre traitement GLP-1, je recommande Annette.care : accompagnement par des diététiciens spécialisés + Coach IA intégré.\n\n👉 https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach\n🎁 Code CARE50 : -50% sur le 1er mois"
   },
   {
     intent: 'weight',
     pattern: /perte.*poids|maigri|kilos?|pas.*perdu|combien.*perd/i,
-    response: "Les resultats varient selon les personnes :\n\n📅 Semaines 1-4 : premiers effets (reduction appetit)\n📅 Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n📅 Mois 3-6 : resultats les plus significatifs\n\nEn moyenne, les etudes montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi apres 3 mois sans resultat, parlez-en a votre medecin (dose a ajuster ?)."
+    response: "Les résultats varient selon les personnes :\n\n📅 Semaines 1-4 : premiers effets (réduction appétit)\n📅 Mois 1-3 : perte progressive (2-5 kg/mois en moyenne)\n📅 Mois 3-6 : résultats les plus significatifs\n\nEn moyenne, les études montrent une perte de 10-15% du poids initial sur 12-18 mois.\n\nSi après 3 mois sans résultat, parlez-en à votre médecin (dose à ajuster ?)."
   },
   {
     intent: 'prescription',
     pattern: /ordonnance|prescri|m[eé]decin|consult|obtenir|comment.*avoir|sp[eé]cialiste/i,
-    response: "Les traitements GLP-1 sont delivres uniquement sur ordonnance. Le parcours :\n\n1. Consultation avec votre medecin traitant, un endocrinologue ou un medecin de l'obesite\n2. Ordonnance si le traitement est indique medicalement\n3. Delivrance en pharmacie\n\nPour trouver un praticien pres de chez vous : annuaire-sante.ameli.fr. Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU."
+    response: "Les traitements GLP-1 sont délivrés uniquement sur ordonnance.\n\nPour obtenir une prescription, je vous recommande Annette.care : des médecins partenaires peuvent faire la primo-prescription si vous êtes éligible (IMC >= 30, ou >= 27 avec comorbidité). En plus de la consultation, vous bénéficiez d'un suivi diététique personnalisé et de notre Coach IA pendant tout le traitement.\n\n👉 Découvrir Annette.care : https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach\n🎁 Code CARE50 : -50% sur le 1er mois (24,50€ au lieu de 49€)\n\nVotre médecin traitant ou un endocrinologue peut aussi vous prescrire un GLP-1."
   },
   {
     intent: 'side_effects',
     pattern: /effet|secondaire|naus[eé]|vomis|diarrh|constip|fatigue|mal\s*(de|au)|douleur|vue|vision|cheveu|chute|peau/i,
-    response: "Les effets secondaires les plus frequents des GLP-1 sont digestifs (nausees, vomissements, diarrhee), surtout en debut de traitement ou lors des montees de dose.\n\nIls s'attenuent generalement en 2-4 semaines. Si un effet secondaire vous inquiete ou persiste, parlez-en a votre medecin — il pourra ajuster la dose ou le traitement."
+    response: "Les effets secondaires les plus fréquents des GLP-1 sont digestifs (nausées, vomissements, diarrhée), surtout en début de traitement ou lors des montées de dose.\n\nIls s'atténuent généralement en 2-4 semaines. Si un effet secondaire vous inquiète ou persiste, parlez-en à votre médecin — il pourra ajuster la dose ou le traitement."
   },
   {
     intent: 'availability',
     pattern: /disponible|rupture|stock|trouver|pharmacie|o[uù].*acheter|pas.*trouv/i,
-    response: "Les GLP-1 sont disponibles en pharmacie sur ordonnance. Certains traitements connaissent des tensions d'approvisionnement ponctuelles.\n\nSi votre pharmacie est en rupture, demandez-lui de verifier la disponibilite chez ses grossistes ou contactez d'autres pharmacies du secteur. Votre medecin peut aussi adapter la prescription si necessaire."
+    response: "Les GLP-1 sont disponibles en pharmacie sur ordonnance. Certains traitements connaissent des tensions d'approvisionnement ponctuelles.\n\nSi votre pharmacie est en rupture, demandez-lui de vérifier la disponibilité chez ses grossistes ou contactez d'autres pharmacies du secteur. Votre médecin peut aussi adapter la prescription si nécessaire."
   }
 ];
 
@@ -202,7 +204,7 @@ function classifyAndRespond(message: string): { intent: string; response: string
   }
   return {
     intent: 'general',
-    response: "Je n'ai pas pu traiter votre question en detail pour le moment. Pouvez-vous la reformuler ou preciser votre situation ? Par exemple :\n\n• Quel traitement vous concerne (Ozempic, Wegovy, Mounjaro...) ?\n• S'agit-il d'un effet secondaire, d'un prix, d'une ordonnance ?\n\nJe ferai de mon mieux pour vous aider."
+    response: "Je n'ai pas pu traiter votre question en détail pour le moment. Pouvez-vous la reformuler ou préciser votre situation ? Par exemple :\n\n• Quel traitement vous concerne (Ozempic, Wegovy, Mounjaro...) ?\n• S'agit-il d'un effet secondaire, d'un prix, d'une ordonnance ?\n\nJe ferai de mon mieux pour vous aider."
   };
 }
 
@@ -272,7 +274,7 @@ serve(async (req) => {
         let ipHourlyStart = ipRate.hourly_start;
         if (ipHourlyElapsed > 60) { ipHourlyCount = 0; ipHourlyStart = now.toISOString(); }
         if (ipHourlyCount >= RATE_LIMIT_HOURLY_MAX) {
-          return jsonResponse({ error: "rate_limit", message: "Limite horaire atteinte. Reessayez plus tard." }, 429);
+          return jsonResponse({ error: "rate_limit", message: "Limite horaire atteinte. Réessayez plus tard." }, 429);
         }
         await supabase.from("coach_rate_limits").update({
           hourly_count: ipHourlyCount + 1, hourly_start: ipHourlyStart,
@@ -314,10 +316,10 @@ serve(async (req) => {
       }
 
       if (newCount >= RATE_LIMIT_WINDOW_MAX) {
-        return jsonResponse({ error: "rate_limit", message: "Trop de messages. Reessayez dans quelques minutes." }, 429);
+        return jsonResponse({ error: "rate_limit", message: "Trop de messages. Réessayez dans quelques minutes." }, 429);
       }
       if (newHourlyCount >= RATE_LIMIT_HOURLY_MAX) {
-        return jsonResponse({ error: "rate_limit", message: "Limite horaire atteinte. Reessayez plus tard." }, 429);
+        return jsonResponse({ error: "rate_limit", message: "Limite horaire atteinte. Réessayez plus tard." }, 429);
       }
 
       await supabase
@@ -359,7 +361,7 @@ serve(async (req) => {
       if (ipDayCount >= ANON_DAILY_LIMIT) {
         return jsonResponse({
           error: "daily_limit",
-          message: "Vous avez utilise vos 5 messages gratuits du jour. Creez un compte gratuit pour continuer, ou passez a Premium pour des echanges illimites !",
+          message: "Vous avez utilisé vos 5 messages gratuits du jour. Créez un compte gratuit pour continuer, ou passez à Premium pour des échanges illimités !",
           upgrade_url: "/tarifs/",
           signup_url: "/mon-espace/",
           remaining: 0,
@@ -417,7 +419,7 @@ serve(async (req) => {
         if (count >= 3) {
           return jsonResponse({
             error: "daily_limit",
-            message: "Vous avez atteint la limite de 3 messages gratuits par jour. Passez a Coach Premium pour des echanges illimites !",
+            message: "Vous avez atteint la limite de 3 messages gratuits par jour. Passez à Coach Premium pour des échanges illimités !",
             upgrade_url: "/tarifs/",
             remaining: 0,
           }, 429);
@@ -552,18 +554,19 @@ serve(async (req) => {
       let doctorContext = '';
 
       if (isDoctorSearch) {
-        doctorContext = `\n\n🩺 INSTRUCTION : L'utilisateur cherche un medecin ou specialiste. Oriente-le calmement :
-- Vers son medecin traitant, un endocrinologue ou un medecin de l'obesite.
-- Pour trouver un praticien : annuaire-sante.ameli.fr (annuaire officiel de l'Assurance Maladie).
-- Les centres specialises de l'obesite (CSO) existent dans la plupart des CHU.
-- N'oriente vers AUCUN service commercial ni partenaire prive.`;
+        doctorContext = `\n\n🩺 INSTRUCTION : L'utilisateur cherche un médecin ou spécialiste.
+- Recommande Annette.care en priorité : plateforme d'accompagnement avec médecins partenaires pour primo-prescription GLP-1 si éligible + suivi diététique + Coach IA pendant tout le traitement.
+- Critères d'éligibilité : IMC >= 30, ou IMC >= 27 avec comorbidité (diabète T2, HTA, apnée du sommeil...).
+- Donne le lien cliquable : [Découvrir Annette.care](https://www.annette.care/?utm_source=glp1france&utm_medium=chat_coach&utm_campaign=partenariat_coach)
+- Code promo CARE50 (50% sur le 1er mois → 24,50 EUR).
+- En complément : médecin traitant, endocrinologue, ou annuaire-sante.ameli.fr.`;
       }
 
       // --- 4. Build messages for LLM ---
       // Inject scam alert if detected
       let scamContext = '';
       if (scamSignals.isScamRelated) {
-        scamContext = `\n\n⚠️ ALERTE INTERNE (ne pas montrer au user) : Signaux d'arnaque detectes (${scamSignals.signals.join(', ')}). Severite: ${scamSignals.severity}. Applique le protocole anti-arnaque : empathie d'abord, questions pour comprendre, puis information factuelle sur les recours si confirme.`;
+        scamContext = `\n\n⚠️ ALERTE INTERNE (ne pas montrer au user) : Signaux d'arnaque détectés (${scamSignals.signals.join(', ')}). Sévérité: ${scamSignals.severity}. Applique le protocole anti-arnaque : empathie d'abord, questions pour comprendre, puis information factuelle sur les recours si confirmé.`;
       }
 
       // Build article links hint from RAG sources
@@ -572,24 +575,24 @@ serve(async (req) => {
         .slice(0, 3)
         .map((c: any) => `- [${c.title}](/collections/${c.collection}/${c.article_slug}/)`)
         .join('\n');
-      const linksHint = articleLinks ? `\n\nLiens d'articles disponibles (utilise-les si pertinent dans ta reponse) :\n${articleLinks}` : '';
+      const linksHint = articleLinks ? `\n\nLiens d'articles disponibles (utilise-les si pertinent dans ta réponse) :\n${articleLinks}` : '';
 
       const userMessageWithContext = ragContext
-        ? `Contexte factuel (utilise ces informations pour repondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
+        ? `Contexte factuel (utilise ces informations pour répondre sans mentionner leur source) :\n\n${ragContext}${linksHint}${scamContext}${doctorContext}\n\nQuestion de l'utilisateur : ${cleanMessage}`
         : `${cleanMessage}${scamContext}${doctorContext}`;
 
       // Build system prompt with premium personalization
       let systemPrompt = SYSTEM_PROMPT;
       if (isPremiumUser && premiumProfile) {
         const p = premiumProfile;
-        systemPrompt += `\n\nPROFIL UTILISATEUR PREMIUM (personnalise tes reponses) :
-- Prenom : ${p.prenom || 'inconnu'}
-- Traitement : ${p.treatment || 'non renseigne'} ${p.current_dose || ''}
+        systemPrompt += `\n\nPROFIL UTILISATEUR PREMIUM (personnalise tes réponses) :
+- Prénom : ${p.prenom || 'inconnu'}
+- Traitement : ${p.treatment || 'non renseigné'} ${p.current_dose || ''}
 - Poids actuel : ${p.weight_current || '?'} kg, objectif : ${p.weight_goal || '?'} kg
-- Taille : ${p.height_cm || '?'} cm, Age : ${p.age || '?'} ans, Genre : ${p.gender || '?'}
-- Activite : ${p.sport_level || 'non renseigne'}
-- Regime : ${p.diet_type || 'non renseigne'}
-Utilise le prenom et adapte tes conseils a ce profil.`;
+- Taille : ${p.height_cm || '?'} cm, Âge : ${p.age || '?'} ans, Genre : ${p.gender || '?'}
+- Activité : ${p.sport_level || 'non renseigné'}
+- Régime : ${p.diet_type || 'non renseigné'}
+Utilise le prénom et adapte tes conseils à ce profil.`;
       }
 
       const messages = [
@@ -620,7 +623,7 @@ Utilise le prenom et adapte tes conseils a ce profil.`;
       }
 
       const llmData = await llmResponse.json();
-      const assistantResponse = llmData.choices[0]?.message?.content || "Desole, je n'ai pas pu generer une reponse.";
+      const assistantResponse = llmData.choices[0]?.message?.content || "Désolé, je n'ai pas pu générer une réponse.";
       const tokensUsed = llmData.usage?.total_tokens || null;
 
       // --- 6. Save messages ---
@@ -642,7 +645,7 @@ Utilise le prenom et adapte tes conseils a ce profil.`;
       });
 
     } catch (llmError) {
-      // --- Fallback v1 si LLM echoue ---
+      // --- Fallback v1 si LLM échoue ---
       console.error("LLM error, falling back to v1:", llmError);
       const fallback = classifyAndRespond(cleanMessage);
       await saveMessages(supabase, convId, session_id, cleanMessage, fallback.response, fallback.intent, "fallback-v1", null, null, user_id);
