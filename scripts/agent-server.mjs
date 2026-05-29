@@ -16,7 +16,8 @@ import { execSync } from 'child_process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = join(__dirname, '..');
 
-const CLAUDE_BIN = 'claude';
+const CLAUDE_BIN = process.env.CLAUDE_BIN || 'node';
+const CLAUDE_ARGS_PREFIX = process.env.CLAUDE_BIN ? [] : ['/opt/homebrew/lib/node_modules/@anthropic-ai/.claude-code-2DTsDk1V/cli.js'];
 
 // Load .env
 try {
@@ -945,6 +946,7 @@ function launchAgent(name, { allowMultiple = false, ticketCount = 0 } = {}) {
   console.log(`🚀 [${new Date().toLocaleTimeString()}] Lancement: ${instanceName}${instanceName !== baseAgent ? ` (instance ${instanceIndex + 1}/${totalInstances} de ${baseAgent})` : ''}`);
 
   const child = spawn(CLAUDE_BIN, [
+    ...CLAUDE_ARGS_PREFIX,
     '-p', '-',
     '--agent', baseAgent,
     '--output-format', 'stream-json',

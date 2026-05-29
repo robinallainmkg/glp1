@@ -1,6 +1,8 @@
 ---
 title: "Wegovy Remboursement Mutuelle 2026 : Liste Complète"
+seoTitle: "Wegovy Remboursement Mutuelle 2026 [50 à 200€/an] Liste Complète"
 description: "Wegovy remboursement mutuelle 2026 : MGEN, Harmonie, Alan… 50 à 200€/an pris en charge. Calendrier Sécu (avis HAS favorable) + dossier type."
+seoDescription: "Wegovy remboursement mutuelle 2026 : MGEN, Harmonie, Alan prennent en charge 50 à 200€/an. Calendrier remboursement Sécu + dossier type à télécharger."
 pubDate: 2025-08-23
 date: '2026-03-17'
 updatedAt: '2026-03-17'
