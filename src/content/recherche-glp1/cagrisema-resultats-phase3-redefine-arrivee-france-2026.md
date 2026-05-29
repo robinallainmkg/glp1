@@ -2,8 +2,8 @@
 title: "CagriSema : Résultats Essais Cliniques France 2026"
 description: "CagriSema résultats essais cliniques France 2026 : -22,7% dans REDEFINE 1. Dossier FDA déposé. Quand arrivera-t-il en France ? Comparatif Zepbound."
 pubDate: 2026-03-17
-date: 2026-03-17
-updatedAt: 2026-03-17
+date: 2026-05-29
+updatedAt: 2026-05-29
 author: "Dr. Julien Lefèvre"
 category: "Recherche médicale"
 tags: ["glp1", "cagrisema", "cagrilintide", "novo nordisk", "essais cliniques", "REDEFINE", "obésité", "recherche", "2026"]
@@ -115,7 +115,7 @@ La question que tout le monde se pose : CagriSema est-il vraiment meilleur que M
 | Zepbound (tirzépatide) | GLP-1 + GIP | ~22,5% | Non disponible |
 | **CagriSema** | **GLP-1 + amyline** | **~22,7%** | **Attendu 2027-2028** |
 
-Les résultats bruts sont proches. CagriSema dépasse légèrement Mounjaro/Zepbound dans les comparaisons indirectes, mais des études tête-à-tête n'ont pas encore été réalisées. Il est donc prématuré de le désigner comme "supérieur" sur le plan clinique.
+Les résultats bruts semblaient proches dans les comparaisons indirectes, mais l'étude tête-à-tête REDEFINE 4 (publiée début 2026) a montré que **Zepbound surpasse CagriSema** : -25,5 % de perte de poids pour Zepbound 15 mg contre -23,0 % pour CagriSema à 84 semaines. CagriSema n'a donc pas démontré de supériorité sur le tirzépatide.
 
 Ce qui distingue CagriSema de Mounjaro/Zepbound, c'est le mécanisme d'action. Agoniser le récepteur GIP (comme le fait le tirzépatide) versus analoguer l'amyline sont deux approches différentes. En cas d'échec ou d'effets indésirables avec un mécanisme, l'autre pourrait constituer une alternative utile.
 

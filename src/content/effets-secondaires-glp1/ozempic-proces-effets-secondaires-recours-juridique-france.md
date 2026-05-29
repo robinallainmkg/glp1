@@ -5,8 +5,8 @@ keywords: ['ozempic procès', 'effets secondaires graves ozempic', 'recours juri
 seoTitle: "Ozempic Procès et Effets Graves : Vos Droits en France 2026"
 seoDescription: "Procès Ozempic aux USA pour gastroparésie. En France, droits des patients, déclaration ANSM et recours possibles pour effets secondaires graves GLP-1."
 publishedAt: '2026-03-17'
-date: '2026-03-17'
-updatedAt: '2026-03-17'
+date: '2026-05-29'
+updatedAt: '2026-05-29'
 featured: true
 author: 'Dr. Marie Dubois'
 readingTime: 12
@@ -42,7 +42,7 @@ La popularité explosive des médicaments GLP-1 comme [Ozempic](/collections/tra
 
 ### Le contexte des class actions américaines
 
-Depuis 2023, plus de 3 400 plaintes individuelles ont été consolidées dans deux MDL (multidistrict litigation) devant les tribunaux fédéraux américains contre Novo Nordisk (Ozempic, Wegovy) et Eli Lilly (Mounjaro). Ces poursuites regroupent principalement des patients atteints de **gastroparésie** (paralysie partielle de l'estomac) après avoir pris ces médicaments.
+Depuis 2023, plus de 3 600 plaintes individuelles ont été consolidées dans le MDL 3094 (multidistrict litigation) devant le tribunal fédéral de l'Eastern District of Pennsylvania contre Novo Nordisk (Ozempic, Wegovy) et Eli Lilly (Mounjaro). Un second MDL (3163) a été créé pour les cas de neuropathie optique (NAION). Ces poursuites regroupent principalement des patients atteints de **gastroparésie** (paralysie partielle de l'estomac) après avoir pris ces médicaments.
 
 ### Les effets secondaires les plus souvent invoqués
 

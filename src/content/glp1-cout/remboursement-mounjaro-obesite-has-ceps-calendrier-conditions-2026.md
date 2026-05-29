@@ -5,8 +5,8 @@ keywords: ['remboursement mounjaro obesite', 'mounjaro remboursement has', 'moun
 seoTitle: "Remboursement Mounjaro Obésité 2026 : HAS, CEPS, Date et Conditions"
 seoDescription: "Remboursement Mounjaro obésité 2026 : avis HAS ASMR favorable décembre 2025, négociations CEPS en cours, date prévisionnelle 2e semestre 2026 et conditions précises (IMC ≥35)."
 publishedAt: '2026-03-17'
-updatedAt: '2026-03-17'
-date: 2026-03-17
+updatedAt: '2026-05-29'
+date: 2026-05-29
 featured: true
 priority: 1
 author: 'Dr. Marie Dubois'
@@ -72,7 +72,7 @@ Le processus pour aboutir à un médicament remboursé est le suivant :
 
 ### Date prévisionnelle
 
-Si les négociations CEPS se déroulent sans accroc, le remboursement de Mounjaro pour l'obésité en France devrait intervenir entre **septembre et décembre 2026**. C'est la fourchette la plus probable selon les experts du secteur.
+Le remboursement de Mounjaro pour l'obésité en France est **effectif depuis le 15 juin 2026** (arrêtés publiés au Journal Officiel le 28 mai 2026). Le taux de remboursement est de **65 %** par l'Assurance Maladie. Les prix publics TTC sont : 176,10 € (2,5 mg), 237,68 € (5 mg), 335,95 € (7,5 et 10 mg), 433,80 € (12,5 et 15 mg). La prescription initiale est réservée aux CSO, CHU, SMR nutrition/endocrinologie ou endocrinologues liés à un CSO.
 
 Des délais supplémentaires sont possibles si les négociations achoppent sur le prix, si le CEPS demande des données complémentaires, ou si des questions de sécurité émergent entre-temps.
 
